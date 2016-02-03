@@ -1,0 +1,25 @@
+---
+- :objective_uuid: d69fbf6c-2813-4018-801b-9cf47841311d
+  :objective_name: Clears the stage -- turn off/eliminate potential distractions
+  :uuid: e8e2bf84-57f8-4ee8-8b4a-d7a9129b9297
+  :question_type: text
+  :question: What does it mean to play?
+  :correct_answer: play around with it, wrestle with the concept
+- :objective_uuid: d69fbf6c-2813-4018-801b-9cf47841311d
+  :objective_name: Clears the stage -- turn off/eliminate potential distractions
+  :uuid: 1c1819b0-0e40-4c25-8640-dfb89b3144b7
+  :question_type: text
+  :question: What does it mean to set the stage?
+  :correct_answer: clear all distractions, close tabs, etc.
+- :objective_uuid: d412faa9-7cd2-41bb-8c22-9ee84b434ca3
+  :objective_name: Experiments on one piece of code at a time (baby steps)
+  :uuid: 7ba78f88-509e-44e4-beca-622699aca06f
+  :question_type: text
+  :question: What's 2+2
+  :correct_answer: '4'
+- :objective_uuid: d412faa9-7cd2-41bb-8c22-9ee84b434ca3
+  :objective_name: Experiments on one piece of code at a time (baby steps)
+  :uuid: a6896770-cbf2-4652-b78a-ffbd672a99a0
+  :question_type: text
+  :question: Experiment on how many pieces of code?
+  :correct_answer: '1'

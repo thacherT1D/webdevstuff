@@ -1,0 +1,1 @@
+The code for the rails app referenced in section 4 is here: https://github.com/gschool/classchat

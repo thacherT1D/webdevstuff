@@ -1,0 +1,1184 @@
+---
+- :uuid: 80b4fc82-accc-4712-9dce-c015519b4f49
+  :name: Action Mailer Basics
+  :github_repo: https://github.com/gSchool/actionmailer_basics
+  :response_type: project
+  :exercise_objectives:
+  - :objective_uuid: d412faa9-7cd2-41bb-8c22-9ee84b434ca3
+    :objective_name: Experiments on one piece of code at a time (baby steps)
+- :uuid: ab739365-920b-4529-a3f8-fae05aba1ca0
+  :name: Active CSV
+  :github_repo: https://github.com/gSchool/active-csv
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 16cf3ec7-6cef-480a-bacb-e90c2094d2bd
+  :name: ActiveRecord Associations
+  :github_repo: https://github.com/gSchool/activerecord_associations_from_scratch
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 07212aa3-e381-4cbf-b770-dc75398c4f54
+  :name: ActiveRecord Practice
+  :github_repo: https://github.com/gSchool/rails-active-record-practice
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: fc1961d9-6e7a-4e8d-ab51-50e3f43fdf6f
+  :name: Activity Feed
+  :github_repo: activity-feed
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: e8225711-35bd-4a0d-af7c-5dae244f8a29
+  :name: Alarm Clock
+  :github_repo: alarm-clock
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 37c82e43-e2a5-4ef2-800b-703ebbe11313
+  :name: Amusement Parks Ruby
+  :github_repo: https://github.com/gSchool/amusement-parks-ruby
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: f3512b32-d837-41ac-b87a-b07f70c1dfb4
+  :name: Angular Tip Calc
+  :github_repo: https://github.com/gSchool/g11-course-curriculum/tree/master/week11/11_exercises/angular-earnings-calc
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 85d2ba12-cde2-4b1e-a5e2-a90659795243
+  :name: Animal Brains Warmup
+  :github_repo: https://github.com/gSchool/animal-brains-warmup
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 0b52366d-3e01-4042-b1fb-c794a1a821b1
+  :name: Array Basics
+  :github_repo: array-basics
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 87836e02-f980-4501-ab24-6bb30e7ea3be
+  :name: Array HARD MODE
+  :github_repo: array-hard
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 855638f4-8242-403b-94bb-82692b7768ac
+  :name: Array Warmup with Dogs!
+  :github_repo: array-warmup-easy
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 9907df13-1a34-479d-bac6-5316d688e97f
+  :name: Arrays in ERB
+  :github_repo: https://github.com/gSchool/arrays-in-erb
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 682ad1cb-6fb4-47b5-9221-e7abaacf0f9f
+  :name: Asynchronous JS - Nested Callbacks
+  :github_repo: https://github.com/gSchool/asynchronous-js-nested-callbacks
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 38acb016-35ee-4a70-8ca1-f8438253f8a1
+  :name: Bank Balance
+  :github_repo: https://github.com/gSchool/bank-balance
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: a828f437-a1d3-4a19-abe2-ff983ffa70e4
+  :name: Basic ActiveRecord
+  :github_repo: basic-activerecord
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 4f11aa16-9491-458d-8e64-3e665fccd781
+  :name: Basic ERB
+  :github_repo: basic-erb
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: cb84ac56-a676-483f-9e00-74aa9952ef81
+  :name: Basic Git
+  :github_repo: basic-git
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: eab949f5-9523-49e7-8d00-558fa119f200
+  :name: Basic HTML
+  :github_repo: https://github.com/gSchool/basic-html
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: aec4a807-9cf6-49d6-b79c-5974dfbc37a5
+  :name: Basic HTML
+  :github_repo: basic-html
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: e6c55be2-7c6b-4258-b07f-1fe26b4c669e
+  :name: Basic HTML Structure
+  :github_repo: basic-html-structure
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 33c4c4cf-dc34-47f7-b815-05ff76097352
+  :name: Basic HTTP
+  :github_repo: basic-http
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: fbe5bed1-e2c5-4f21-ade4-679068ab2ccb
+  :name: Basic Sinatra with Auth
+  :github_repo: basic-sinatra-with-auth
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 2855baa4-6bc5-42d2-82b9-0d949854a12f
+  :name: Basic Sinatra with a Database
+  :github_repo: basic-sinatra-crud-ar
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: e3228e6f-b872-43da-a084-c6cd4e613d81
+  :name: Bike Warmup
+  :github_repo: bike-warmup
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 9e0c3539-b7d9-4edb-8202-a3c3ebbce7d8
+  :name: Bootstrap Mocks Assignment
+  :github_repo: https://github.com/gSchool/BootstrapMocksAssignment
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 488222b7-3c90-4e7b-ba41-d467ccb3ad8c
+  :name: Broken Contact App
+  :github_repo: https://github.com/gSchool/contact-us-warmup
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 9715d400-154a-47b1-a4c0-9f01f707380e
+  :name: CRM Data Challenge
+  :github_repo: crm-data-challenge
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 959e71ff-ba2a-41a3-a166-7aade7c634c7
+  :name: CRM Data Challenge w/ JSON
+  :github_repo: https://github.com/gSchool/crm-data-challenge-with-json
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: e9341859-3ab5-4644-abd4-9ccb9b32a73a
+  :name: CSS Bootstrap Exercise
+  :github_repo: http://www.pairuptocode.com/exercises/bootstrap.html
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: f6291ea3-81c9-413a-959c-081d206eaedd
+  :name: CSS Card Flip
+  :github_repo: https://github.com/gSchool/css-card-flip
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: f8e482f2-e28b-4dfc-ba0e-f11a9874f541
+  :name: CSS Exercises
+  :github_repo: https://github.com/gSchool/css-exercises
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 8d5cad43-e5b9-4a34-ae12-8792743316ab
+  :name: CSS Grid System
+  :github_repo: https://github.com/gSchool/g11-course-curriculum/tree/master/week03/03_exercises/css-grid-system
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 7b242148-ba03-4703-9aec-6e121319d914
+  :name: CSS Media Queries and Responsive Design
+  :github_repo: https://github.com/gSchool/media-query-css-exercise
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: c014b569-7f86-4a0d-935f-bc703e6b9816
+  :name: CSV-to-Markdown
+  :github_repo: https://github.com/gSchool/csv-to-markdown
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: fa27091c-18b9-4423-aea1-c96fc9e3220e
+  :name: CSV-to-tree
+  :github_repo: csv-to-tree
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: aa808cb9-1496-44cb-bd45-3eca97e4169d
+  :name: Capybara Acceptance Test Warmup
+  :github_repo: capybara-warmup
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: fc0daeb4-4ce2-4c84-9078-c9d3095c71ea
+  :name: Capybara setup
+  :github_repo: https://github.com/gSchool/rails-practice-add-rspec
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 2c065ffb-b2a7-4e50-9c5e-80e80e1d7826
+  :name: Command Line Mystery
+  :github_repo: https://github.com/veltman/clmystery
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: cdd70121-38dc-4dcd-9690-572f67be86f4
+  :name: Commute Warmup
+  :github_repo: https://github.com/gSchool/commute-warm-up
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 237b8c09-4436-4343-9ffd-031092a9264a
+  :name: Computer Setup
+  :github_repo: computer-setup
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: e15a7267-c79c-4270-9a3b-c93acb8b63cd
+  :name: Consecutive Elements
+  :github_repo: consecutive-elements
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: c64e4fdd-f581-41f5-b041-ca37ef0e0c7b
+  :name: Conspire Inspired
+  :github_repo: https://github.com/gSchool/conspire-inspired
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 219abbf2-b452-4855-8fb0-503cfa69052c
+  :name: Drawing ER Models
+  :github_repo: draw-er-models
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 50fbc1bc-615d-4342-aac0-605ef87e5f07
+  :name: Dynamic Web Site - Restaurant
+  :github_repo: dynamic_restaurant_site
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: c4d9f58c-1ad1-4a0f-a13e-3c8b21644d0c
+  :name: Employee Filter
+  :github_repo: employee-filter
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 230f1af0-63fd-47f8-92dd-940fe09eef20
+  :name: Exercism
+  :github_repo: exercism
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 4c3cfb7e-1bec-4100-a13f-261bb5f6d5a9
+  :name: Fantasy Football Workshop
+  :github_repo: https://github.com/gSchool/fantasy-football-startup-workshop
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 5a3a9daa-aa1e-4f46-b7d7-24b498ba9946
+  :name: Filtering
+  :github_repo: js-filter
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: d86092f9-de36-4e38-90a2-abf96266f467
+  :name: Fish with Sinatra
+  :github_repo: fish-with-sinatra
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: d8489eb2-dcef-4e97-b1fe-a669ddaf9349
+  :name: Form Validations
+  :github_repo: form-validation
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: ed696b7d-08ea-433b-88d4-803b3583b3a7
+  :name: G3 Assessment - Week 12
+  :github_repo: g3-assessment-week-12
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: bb006dc7-599d-4359-a50a-1cfb1c34c102
+  :name: G3 Assessment - Week 3
+  :github_repo: denver-practice-assessment
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: cd5fee52-2b04-4ac0-a7c8-87c11741a17d
+  :name: G3 Assessment - Week 4
+  :github_repo: denver-assessment-week-4
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 509eb81b-e53e-4975-b749-7ef80a0fbcfe
+  :name: G3 Assessment - Week 6
+  :github_repo: g3-assessment-week-6
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: ce488d30-7f99-4d5a-90ee-7eab6e897820
+  :name: G3 Assessment - Week 7
+  :github_repo: g3-assessment-week-7
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: b62d6ea1-2f15-4c01-8f15-1f5e162b1090
+  :name: G3 Assessment - Week 9
+  :github_repo: g3-assessment-week-9
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 0ec882aa-e50f-42f1-a8fe-6de92a59d261
+  :name: G3 Assessment Week 10
+  :github_repo: g3-assessment-week-10
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 563ca060-0c4f-46c9-abf0-add9a212b957
+  :name: G3 Assessment Week 16
+  :github_repo: g3-assessment-week-16
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 29f69f99-128b-4078-8d2f-4db0325e840f
+  :name: G3 Assessment Week 5
+  :github_repo: denver-assessment-week-5
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 043b5762-cc76-4317-9e5b-e06400c41178
+  :name: Generating HTML Strings
+  :github_repo: generating-html-strings
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: ab4ef7a6-833a-4043-b0fd-bc32ae2ab523
+  :name: Git Merge Conflict Repo
+  :github_repo: https://github.com/gSchool/haikuConflicts
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 6e4a2092-dc91-4c11-89bd-5eab2fcb0057
+  :name: Git Warmup
+  :github_repo: git-warmup
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 893c4b62-a95c-4021-a96a-adb5cc47fdf5
+  :name: Go Fundamentals
+  :github_repo: https://github.com/gschool/go-fundamentals
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 359ef8c9-fb2d-4190-8691-d0c81d8c83f9
+  :name: Goals, Anti-Goals, and Risks
+  :github_repo: goals-anti_goals-risks
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 135913ba-f174-4793-8dd6-b60e2e447bfc
+  :name: Grading JS
+  :github_repo: https://github.com/gSchool/grading-js
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: d121a491-f45b-4367-805b-bf59ddf4fb60
+  :name: Grading Ruby
+  :github_repo: https://github.com/gSchool/grading-ruby
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 7fd263b5-ec3f-4f4e-b377-08d911d74192
+  :name: Group Workflow with GitHub
+  :github_repo: group-workflow-with-github
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: f9218bfa-5fac-449d-99d5-9007eaefcfed
+  :name: HTTP with Sinatra Spike
+  :github_repo: http-with-sinatra-spike
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: f3b5e195-e95b-4fcc-96b5-42255213803a
+  :name: Hack Params
+  :github_repo: https://github.com/gSchool/rails-hack-params
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: eb04e7ae-4e49-48cb-aede-1811aa92e27a
+  :name: Hamming
+  :github_repo: hamming
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 556d67f3-3003-4374-97e2-c4f6d1ec27ed
+  :name: Hamming With RSpec
+  :github_repo: hamming-with-rspec
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: c80784bd-c24f-4b86-a127-f1ee68518d4a
+  :name: Hash 1.0
+  :github_repo: hash-1.0
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 4167905b-e561-4ed4-b85a-9b559243d30f
+  :name: Hash 2.0
+  :github_repo: hash-2.0
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: e0c44970-b75e-419c-a497-000c5c1e309b
+  :name: Hash Basics
+  :github_repo: hash-basics
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 4c00c6cc-d3fa-4527-85dc-9b59fddddf07
+  :name: Implementing Enumerables
+  :github_repo: implementing-enumerable
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 5be5cf2f-e46d-49f0-91ff-3ffefb15acf6
+  :name: Integrate SQL into Sinatra
+  :github_repo: https://github.com/gSchool/integrate_sequel_into_sinatra
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 729e25ff-b880-4892-98dc-4482cf8f18dc
+  :name: Intro to Data structures in JS
+  :github_repo: https://github.com/gSchool/data-structures-js
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 6b2ad797-78ec-4ecd-a94b-34326afe310d
+  :name: Intro to Data structures in Ruby
+  :github_repo: https://github.com/gSchool/data-structures-ruby
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: cafb6ba0-6d27-48eb-9dcf-b0c22ff9a6aa
+  :name: Intro to Environment Variables
+  :github_repo: environment-variables
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 41ea5a55-f110-468b-90e0-20d3ca667597
+  :name: Intro to Express
+  :github_repo: https://github.com/gSchool/express-introduction
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: d58e969f-6c0b-4529-8525-428d7bef0060
+  :name: Intro to Mongo
+  :github_repo: https://github.com/gSchool/mongo-intro-shell
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 974973ea-2dde-42f9-a9b0-d449f894c7fb
+  :name: Intro to Relational Databases
+  :github_repo: intro-to-relational-databases
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: b37bd367-4b4e-4dbe-8c72-c59967576c41
+  :name: Intro to TDD
+  :github_repo: https://github.com/gSchool/intro_to_tdd_assessment
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 7de1a607-e52d-4bd7-a675-42619b88cb21
+  :name: Iterating Arrays of Hashes
+  :github_repo: iterating-arrays-of-hashes
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 5f91b637-8aa3-4a2c-b464-54b6117539ee
+  :name: JS Bubble Sort
+  :github_repo: https://github.com/gSchool/js_bubble_sort
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 24f31cb7-c5dd-4d3f-8614-0e7304df9192
+  :name: JS Exercise 0
+  :github_repo: js-exercise-0
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 02332ee3-b93b-453e-96c9-8ca056b0e6cb
+  :name: JSON Dog Warmup w/ Tables
+  :github_repo: JSONDogWarmup
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: b41be620-3e31-4aa9-be24-f2af4cb845de
+  :name: JavaScript - Conditionals, Loops, Testing
+  :github_repo: https://github.com/gSchool/g11-course-curriculum/tree/master/week04/04_exercises/js-conditional-and-loop-fundamentals
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 71edc59a-e9b3-4d56-a363-fab8aa5f0956
+  :name: JavaScript - Deck of Cards
+  :github_repo: https://github.com/gSchool/g11-course-curriculum/tree/master/week03/03_exercises/js-deck-of-cards
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: ffdeb0c2-ab29-4196-bddf-8fe5ca737920
+  :name: JavaScript - Event Delegation
+  :github_repo: " https://github.com/gSchool/g11-course-curriculum/tree/master/week04/04_exercises/js-event-delegation"
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 04240a9a-5dd2-46d3-9d72-df0d188c35fe
+  :name: JavaScript - Game Library
+  :github_repo: https://github.com/gSchool/g11-course-curriculum/tree/master/week05/05_exercises/js-game-library
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 5939d982-8ae9-48f7-8a02-debab1f11545
+  :name: JavaScript - Jasmine Review
+  :github_repo: https://github.com/gSchool/g11-course-curriculum/tree/master/week05/05_exercises/js-jasmine-review
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 8b873145-bb38-480d-918a-e0d1dc4c7a2c
+  :name: JavaScript - Methods, This, Constructors
+  :github_repo: https://github.com/gSchool/g11-course-curriculum/tree/master/week05/05_exercises/js-methods-this-constructors
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: e8b95f84-26dd-45f4-bca5-3da524b71db6
+  :name: JavaScript - OOP Autoshop
+  :github_repo: https://github.com/gSchool/g11-course-curriculum/tree/master/week05/05_exercises/js-auto-shop
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 004751d6-f057-422e-9ecd-4299dd8143d2
+  :name: JavaScript - OOP Basics
+  :github_repo: https://github.com/gSchool/g11-course-curriculum/tree/master/week05/05_exercises/js-oop-basics
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: d873d906-2b77-410d-80f8-4345f6f1de9b
+  :name: JavaScript - OOP Zoo
+  :github_repo: https://github.com/gSchool/g11-course-curriculum/tree/master/week05/05_exercises/js-oop-zoo
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: ff729ec6-5ac6-4677-a83e-76d774aee527
+  :name: JavaScript - Rock, Paper, Scissors
+  :github_repo: https://github.com/gSchool/g11-course-curriculum/tree/master/week05/05_exercises/js-rock-paper-scissors
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: f03e5e99-09dc-4533-99df-05657d1530a8
+  :name: JavaScript - Tic Tac Toe
+  :github_repo: https://github.com/gSchool/g11-course-curriculum/tree/master/week05/05_exercises/js-tic-tac-toe
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 6a045626-79f0-4dfd-baaa-051a0b9e859a
+  :name: JavaScript Browser Basics
+  :github_repo: https://github.com/gSchool/javascript-browser-basics
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: a38ebefa-9e57-4163-8e48-c7a3a03fbbfb
+  :name: JavaScript Conditionals
+  :github_repo: https://github.com/gSchool/javascript-conditionals
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 60da0d25-eddf-46a4-9cfd-6514798a6393
+  :name: JavaScript Functions - part 1
+  :github_repo: https://github.com/gSchool/js-functions-part1
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 5d77c9b7-4d70-4e45-9c07-f671e2669b8c
+  :name: JavaScript Functions - part 3
+  :github_repo: https://github.com/gSchool/g11-course-curriculum/tree/master/week04/04_exercises/js-functions-part3
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 994da68d-5b75-4932-a5d9-b8197032bcb1
+  :name: JavaScript Functions part 2
+  :github_repo: https://github.com/gSchool/js-functions-part2
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: b9111139-824e-4e14-bf0d-5f499ffb0785
+  :name: JavaScript Iteration
+  :github_repo: https://github.com/gSchool/g11-course-curriculum/tree/master/week02/02_exercises/js-iteration
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: a38ee71f-68fd-4d20-a68f-6a37d0964008
+  :name: JavaScript Loops - part 1
+  :github_repo: https://github.com/gSchool/javascript-loops
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 76a31358-f279-4b4d-a55a-4fef36fb8cae
+  :name: JavaScript Loops - part 2
+  :github_repo: https://github.com/gSchool/g11-course-curriculum/tree/master/week04/04_exercises/js-loops-part2
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 233e045f-4533-4978-aa2c-b23385cb3d73
+  :name: JavaScript Loops - part 3
+  :github_repo: https://github.com/gSchool/g11-course-curriculum/tree/master/week04/04_exercises/js-loops-part3
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 8b30b4a8-bf36-4157-8029-573914326a66
+  :name: JavaScript Match Maker
+  :github_repo: https://github.com/gSchool/g11-course-curriculum/tree/master/week02/02_exercises/js-match-maker
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: ac6dd671-9e45-44f8-b454-ae9e527e429a
+  :name: JavaScript Playlist
+  :github_repo: https://github.com/gSchool/js-playlist
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 2429c606-a0ef-4365-852f-cbe41d639304
+  :name: JavaScript Playlist
+  :github_repo: https://github.com/gSchool/js-playlist
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 89b19c52-6dfc-4875-8be2-041114a0d8d0
+  :name: JavaScript to Ruby
+  :github_repo: js-warmup1
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: d73130a2-0a12-4b79-ae21-9b88ad7da964
+  :name: Javascript Tip Calculator
+  :github_repo: https://github.com/gSchool/tip-calculator-html-js
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 3d89ce34-502a-45f8-8e6b-f52c354af311
+  :name: LED Light JS
+  :github_repo: https://github.com/gSchool/led-light-js
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 57af68b6-04ef-4778-915b-4c8b833b7729
+  :name: Lifetime Value
+  :github_repo: https://github.com/gSchool/lifetime-value
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 6a587195-fa5d-48a3-a494-3d9ca3472def
+  :name: Line Breaks
+  :github_repo: line-breaks
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 441b3859-8e7e-4a3b-8d1e-0ff2a9c1ea1f
+  :name: Log File Parsing
+  :github_repo: log-file-parsing
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: d3ca2505-3db2-44cf-ad73-2c5166fe5d06
+  :name: Login Attempt warmup
+  :github_repo: https://github.com/gSchool/Login-Attempt-warmup
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: bc2db9a4-b97a-4ad3-ab9f-5ac750acd302
+  :name: Map Warmup
+  :github_repo: map-warmup
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 689fee80-52be-4a93-a3ae-8b20b664a39e
+  :name: Merge Sort
+  :github_repo: https://github.com/gSchool/js_merge_sort
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 9d468e53-f0fc-4757-a857-f0cda85960ad
+  :name: Message Roullete CRUD
+  :github_repo: message-roullete-crud
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 28fbfdb8-7e4b-44e3-8e44-3399b92adb31
+  :name: Midterm Assessment Rails
+  :github_repo: https://github.com/gSchool/g2-midterm-assessment
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: ff00d8fe-b42f-44dd-b9bd-09c89f1c64bf
+  :name: Midterm Assessment Ruby
+  :github_repo: https://github.com/gSchool/g2-mid-term-assessment-ruby
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 8a201720-9d8d-407e-9951-78f8a212ec3d
+  :name: Migrations-in-depth
+  :github_repo: https://github.com/gSchool/migrations-in-depth
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: e7c6ece3-016f-4f06-9603-902f0e13a1b2
+  :name: 'Music Player: Red, Green, Refactor'
+  :github_repo: music-player
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 5b955ca3-708a-4171-a5ca-7069d5c4aaff
+  :name: Node CSV to Markdown
+  :github_repo: https://github.com/gSchool/csv-to-markdown-js
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 0e5feb44-1f8d-4514-88d8-3140d785f1c8
+  :name: Node Countries
+  :github_repo: https://github.com/gSchool/mongoose_countries_app
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 8ca66604-9c7f-46dd-b9e9-60fc56f8a3d4
+  :name: Node Express Swig Mongo Primer
+  :github_repo: http://mherman.org/blog/2015/08/24/node-express-swig-mongo-primer/#.VeCT5NNVikp
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 72fc83a9-3341-415b-a7af-2804ae967958
+  :name: Node Form Validation
+  :github_repo: https://github.com/gSchool/g11-course-curriculum/tree/master/week07/07_exercises/node-form-validation
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 1f88c2e4-4f7b-49c9-825d-60060c07ac5f
+  :name: Node Github Contest App
+  :github_repo: https://github.com/gSchool/g11-course-curriculum/tree/master/week08/08_exercises/node-github-contest
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 9f8bf4d5-98c9-4adb-a208-3245abfaf1ae
+  :name: Node SIgnup Form
+  :github_repo: https://github.com/gSchool/g11-course-curriculum/tree/master/week07/07_exercises/node-signup-form
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 7cc26c5d-5300-4a10-ac84-19717569175c
+  :name: Node Shopping List API
+  :github_repo: https://github.com/gSchool/g11-course-curriculum/tree/master/week08/08_exercises/node-shopping-list
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 9dc65509-aa1c-48d1-8000-b1ffe8dc2324
+  :name: Node Shuffle and Chunk
+  :github_repo: https://github.com/gSchool/g11-course-curriculum/tree/master/week07/07_exercises/node-shuffle-chunk
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: be176d9f-d4f5-480e-99c6-085280474953
+  :name: Operation Parse Coordinates
+  :github_repo: operation-parse-coordinates
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 043a2ee9-76da-4cf3-97a9-a8084abd86b5
+  :name: Parsing HTTP
+  :github_repo: parsing-http
+  :response_type: project
+  :exercise_objectives:
+  - :objective_uuid: d69fbf6c-2813-4018-801b-9cf47841311d
+    :objective_name: Clears the stage -- turn off/eliminate potential distractions
+- :uuid: 77eeab41-ed58-4941-9469-0a9c9820d06b
+  :name: Puppy Love
+  :github_repo: https://github.com/gSchool/express_intro_exercise
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: fa8a9c73-e0fc-4370-960f-fa3e1688f18d
+  :name: Quizboard Javascript Assessment
+  :github_repo: https://github.com/gSchool/g3-quizboard-assessment
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 3c2133e5-c85b-403f-bf0b-49f91c9dcc54
+  :name: Rails Bug 01
+  :github_repo: https://github.com/gSchool/rails-bug-01
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 249ba5ae-3ffe-4461-b563-dbf4d30362bf
+  :name: Rails Bug 02
+  :github_repo: https://github.com/gSchool/rails-bug-02
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 655567b8-a281-47ce-a11c-1cd56af43801
+  :name: Rails Bug 03
+  :github_repo: https://github.com/gSchool/rails-bug-03
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 136fb287-5af9-4f6d-968e-a0d4e44db4b9
+  :name: Rails Bug 04
+  :github_repo: https://github.com/gSchool/rails-bug-04
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 6825a9af-b9a8-4402-b05f-2e3f309bd13a
+  :name: Rails Bug 05
+  :github_repo: https://github.com/gSchool/rails-bug-05
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 66b879c8-81a1-49f1-9c49-9116e5f292bb
+  :name: Rails Bug 06
+  :github_repo: https://github.com/gSchool/rails-bug-06
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 8a2ffca8-5105-4b83-b1cc-755033f2e573
+  :name: Rails Bug 07
+  :github_repo: https://github.com/gSchool/rails-bug-07
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: c979e611-6700-4995-b2a6-d67c04dc2886
+  :name: Rails Param Parsing Exercise
+  :github_repo: https://github.com/gSchool/rails-param-parsing
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: dd7bb169-9d56-4f48-8970-e03a55ee9ba3
+  :name: Rails Practice Add Authorization
+  :github_repo: https://github.com/gSchool/rails-practice-add-authorization
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: e4f6c741-44e9-4f0d-b6d1-687fc827b222
+  :name: Rails Practice Add RSpec
+  :github_repo: https://github.com/gSchool/rails-practice-add-rspec
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 279effb3-0924-4d90-876e-95de90397db7
+  :name: Rails Practice Collection Select
+  :github_repo: https://github.com/gSchool/rails-practice-collection-select
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 16920c78-fca6-4f31-8b84-c593b8febf1d
+  :name: Rails Practice Crud Status Updates
+  :github_repo: https://github.com/gSchool/rails-practice-crud-status-updates
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 7c871597-96e3-4ad0-aa4c-f14b516f13e1
+  :name: Rails Practice Data Migrations
+  :github_repo: https://github.com/gSchool/rails-practice-data-migrations
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 89b14f3f-d652-45ff-9e91-8824aefa0902
+  :name: Rails Practice Delete Bad Data
+  :github_repo: https://github.com/gSchool/rails-practice-delete-bad-data
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 4b98eaf1-9143-4554-acd0-2fa6c9e52f8a
+  :name: Rails Practice Dependent Destroy
+  :github_repo: https://github.com/gSchool/rails-practice-dependent-destroy
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: d3171954-2731-493f-8a7e-ca657f3f3031
+  :name: Rails Practice Events Create
+  :github_repo: https://github.com/gSchool/rails-practice-events-create
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: a7cef0fd-a79a-4d00-969b-7aff1a9ffba5
+  :name: Rails Practice Events Delete
+  :github_repo: https://github.com/gschool/rails-practice-events-delete
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 59d9b559-971c-471c-a5f0-1f5ca471ae4a
+  :name: Rails Practice Events Update
+  :github_repo: https://github.com/gSchool/rails-practice-events-update
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 03575933-b2ba-45e7-a830-c3e2b14f17a1
+  :name: Rails Practice Exceptions
+  :github_repo: https://github.com/gSchool/rails-practice-exceptions
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 47f6ea21-ea87-42d9-956a-6ee7843ac1a9
+  :name: Rails Practice Nested Resources
+  :github_repo: https://github.com/gSchool/rails-practice-nested-resources
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: c5e99989-0963-4eaf-9ecf-08bd03a0fe2a
+  :name: Rails Practice Prescriptions
+  :github_repo: rails-practice-prescriptions
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 81319b82-e0cc-4c12-aedc-bcce5934cac3
+  :name: Rails Practice Styling Forms
+  :github_repo: https://github.com/gSchool/rails-practice-styling-forms
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 33ba2b61-cd25-4742-9f28-3c9074818411
+  :name: Rails Practice TDD has_many / belongs_to and collection select
+  :github_repo: https://github.com/gSchool/rails-practice-has_many-belongs-to-collection-select-tdd
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: a9ccf1f5-9578-4168-b0b2-d7c103de7222
+  :name: Rails Practice Validations
+  :github_repo: https://github.com/gSchool/rails-practice-validations
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: dcde9da0-ab33-4d81-8092-e2d52f438e7f
+  :name: Rails Practice has_many / belongs_to
+  :github_repo: https://github.com/gSchool/rails-practice-has-many-belongs-to
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: a56765bc-9d60-4755-b550-882df44c6f67
+  :name: Rails Practice has_many :through
+  :github_repo: https://github.com/gSchool/rails-practice-has-many-through
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: a84c9d1a-3b86-44a0-a3e5-0552fe2f97d7
+  :name: 'Rails Practice: Kittens'
+  :github_repo: https://github.com/gSchool/rails-practice-kittens
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 557858e5-8ff6-47ca-bad6-4d5387a32537
+  :name: 'Rails Practice: Pair Bingo'
+  :github_repo: https://github.com/gSchool/rails-practice-pair-bingo
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: dbfa0eae-cb97-47db-89fe-2bd5b2601507
+  :name: 'Rails Practice: Staff Assignments'
+  :github_repo: https://github.com/gSchool/rails-practice-staff-assignments
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: fc029195-a4fb-4a89-99fc-a8458110f421
+  :name: 'Rails Practice: Task Lists'
+  :github_repo: https://github.com/gSchool/rails-practice-task-lists
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 2ea51ee4-b3d8-4375-ab77-995f686c7c7b
+  :name: Railsbug
+  :github_repo: https://github.com/gSchool/RailsBug
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 5eb9b2bd-fe51-4c4e-9d3b-a2bf44bc36eb
+  :name: Rake Warmup
+  :github_repo: rake-warmup
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: e903fc64-6032-408c-8dda-7ef540d6d7c2
+  :name: Randomness Bug
+  :github_repo: randomness-bug
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: c78191bc-427d-4e52-a188-a0f7e672e244
+  :name: Rantly
+  :github_repo: rantly
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 2d1ca02b-cbfb-444b-9887-c5b71214da16
+  :name: Recipe Converter
+  :github_repo: recipe-converter
+  :response_type: file
+  :exercise_objectives:
+  - :objective_uuid: 04419941-538b-4ba2-9ec9-8fea8e86b895
+    :objective_name: Explain the role of Controllers in the MVC pattern
+- :uuid: e4d1487f-fe30-49d0-a4cc-879697298e2c
+  :name: Recursion (Ruby)
+  :github_repo: https://github.com/gSchool/recursion-ruby
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: ab21c1bd-636f-4cc5-9d1b-12044a25e96f
+  :name: Reducing and Detecting Arrays
+  :github_repo: https://github.com/gSchool/reducing_and_detecting_arrays/blob/master/spec/lib/students_spec.rb
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: bd4c5d31-d05f-4380-a06b-3a062405a076
+  :name: Refactoring Warmup - Ten Thousand
+  :github_repo: metz-refactor-warmup
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: f0126833-3586-4dad-be31-b9a5e8b468a2
+  :name: Refactoring to ActiveRecord
+  :github_repo: refactoring-to-activerecord
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: d60b9c9d-afc9-4206-a940-1050368d3224
+  :name: Ruby Accumulator Practice
+  :github_repo: https://github.com/gSchool/ruby-accumulator-practice
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 6d344d28-481f-4441-b878-10415526b0ee
+  :name: Ruby Basics
+  :github_repo: ruby-basics
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 2b05281d-5e08-4877-8383-1196cb20c5db
+  :name: Ruby Data Structure Practice
+  :github_repo: https://github.com/gSchool/ruby-data-structure-practice
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: fcb3115e-5cb9-4f91-be45-420498cc1aff
+  :name: Ruby Inheritance Warmup
+  :github_repo: https://github.com/gSchool/ruby-inheritance-warmup
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 01e552cb-60a2-4ce3-9db2-3ebadaf64ad3
+  :name: Ruby Weather Forecasts
+  :github_repo: ruby-weather-forecasts
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 16cef8c8-cfb7-46a2-94bb-66f626571f07
+  :name: Ruby with bugs
+  :github_repo: https://github.com/gSchool/ruby-with-bugs
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 8b8f0080-91a3-4ad0-86bb-1141f90b54f0
+  :name: 'Ruby: Navigating Complex Hashes'
+  :github_repo: https://github.com/gSchool/ruby-navigating-complex-hashes
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 5274f86c-095f-4412-aba5-0304f15921f6
+  :name: SQL Database Exercise
+  :github_repo: https://github.com/gSchool/sql-query-exercise
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: ae0ecfa9-f22c-49ef-85eb-f7a69a654865
+  :name: SQL with Ruby
+  :github_repo: sql-with-ruby
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: def77a45-970a-4373-8bef-95746a3c88da
+  :name: Scaffold Playground
+  :github_repo: https://github.com/gSchool/scaffold-playground
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 1683f3c0-a068-469c-b47f-bab24e47e55c
+  :name: Scrabble Web
+  :github_repo: https://github.com/gSchool/scrabble-web
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 18baf4e3-fc17-49f3-9df3-ea6bae60c766
+  :name: Self-referencing Documentation
+  :github_repo: self-referencing-documentation
+  :response_type: file
+  :exercise_objectives:
+  - :objective_uuid: d69fbf6c-2813-4018-801b-9cf47841311d
+    :objective_name: Clears the stage -- turn off/eliminate potential distractions
+- :uuid: d05d10d4-a0f5-4801-953a-4b22013f1985
+  :name: Sinatra Bug 01
+  :github_repo: sinatra-bug-warmup
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 8fe6eb23-a06b-46fa-9990-be7f1f32ab6d
+  :name: Sinatra From Scratch
+  :github_repo: sinatra-from-scratch
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: bb5bdd3d-0ca9-4674-96b1-9b4434e6b2a2
+  :name: Single-Page App Two-Day Project
+  :github_repo: https://github.com/gSchool/single-page-app
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: d45d9079-a4d2-498d-a0cd-40406172fe3e
+  :name: Song that doesn't end
+  :github_repo: https://github.com/gSchool/song-that-doesnt-end
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 76ff2c93-930a-4139-9d7a-ff573e2b0d7a
+  :name: Spirals
+  :github_repo: https://github.com/gSchool/spirals
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 62ed8db1-5752-4cbf-ab13-1329f63111ff
+  :name: Static Site Deploy
+  :github_repo: static-site-deploy
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 93731473-7a9a-4e8b-be04-df354e432e61
+  :name: String Exercise - split and join
+  :github_repo: split_join_exercise
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: d96d8104-13d4-452d-974f-239974473c0b
+  :name: Taskly
+  :github_repo: taskly
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 715fd56e-b1fa-45da-82b6-54b9f3cb43a5
+  :name: Taskly-JavaScript
+  :github_repo: javascript-projects
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 115064db-88ab-4efd-9965-eb8847d97563
+  :name: Testing Introduction
+  :github_repo: testing-introduction
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 8e555a78-ca26-42dd-b1a2-5b6e1101bc10
+  :name: Testing a Sinatra App
+  :github_repo: testing-a-sinatra-app
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 30fed488-47d7-4303-afcb-ccbad17df60c
+  :name: Testing with VCR
+  :github_repo: https://github.com/gSchool/testing_with_vcr
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: d16d0fb8-0d58-4a7f-8ed9-ae6c287f407d
+  :name: Text Centering
+  :github_repo: https://github.com/gSchool/text-centering
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: a3ce3ff2-c531-490d-8a86-4e2431e597d1
+  :name: Text Tree Parser
+  :github_repo: https://github.com/gSchool/text-tree-parser
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 20161e09-3cb9-4a51-a7d2-8b081a2c07d7
+  :name: Text Tree Parser
+  :github_repo: text-tree-parser
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 37a93145-ca74-4321-99d3-3bcfe396795b
+  :name: Tip Calculator
+  :github_repo: tip-calculator
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 78c9fc38-8161-45eb-9b06-e780866273b0
+  :name: Todo App - the command line edition
+  :github_repo: https://github.com/gschool-g5/todo-cli
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 8a679f2b-2b64-4ec1-8417-faf3eee37d46
+  :name: Todoly
+  :github_repo: todo-js
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 52a9ef15-1ee5-423d-9836-71a3e75cea27
+  :name: Tracker Basics
+  :github_repo: tracker-basics
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: efce39b0-8059-46c8-a323-e490fb268103
+  :name: TrackerHub
+  :github_repo: trackerhub
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 90a7bd85-a0a5-487e-9e20-0bbe6966f097
+  :name: Web Scraper
+  :github_repo: https://github.com/gSchool/web-scraper
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: edf2b5e2-d84b-45d6-8bec-45394ddb435d
+  :name: Word Cloud
+  :github_repo: word-cloud
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 8bf48ef3-223b-4cb6-80f8-07931e8ba35a
+  :name: ageist-assessment
+  :github_repo: https://github.com/gSchool/ageist
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: d08de661-ccdb-448c-988a-06554169a44a
+  :name: array exercises
+  :github_repo: https://github.com/gschool/array-exercises
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 6213fc6a-c1e9-4070-9bb1-911d5c0a6e83
+  :name: bob
+  :github_repo: https://github.com/exercism/exercism.io
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 24914cc7-25ae-4283-a940-7aefeda34fd0
+  :name: boxes-jQuery-playground
+  :github_repo: https://github.com/gSchool/boxes-jQuery-playground
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 9cc30154-232f-4a87-9295-a871ef7e17ad
+  :name: collections-assessment
+  :github_repo: https://github.com/gSchool/collections-assessment
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: d7cf8800-5350-44a4-94c2-d9c30230c650
+  :name: expressworks
+  :github_repo: https://github.com/azat-co/expressworks
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 03a08738-8e3d-4f96-8d8e-b18f6d53c5a0
+  :name: g5 assessment ruby
+  :github_repo: https://github.com/gSchool/g5-assessment-ruby
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 1213fe94-8779-4edf-a4fc-f6f8cab2143d
+  :name: git-campaign-results
+  :github_repo: git-campaign-results
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 93b7b670-3431-4e23-a939-49c0d464f72b
+  :name: git-review
+  :github_repo: https://github.com/gschool-g5/git-review
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 570a210b-3c4a-4947-9ae5-aa0aab90890f
+  :name: hash exercises
+  :github_repo: https://github.com/gschool/hash-exercises
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 454697c0-5232-478e-9fb0-1f1ea6a42cff
+  :name: iteration-assessment
+  :github_repo: https://github.com/gSchool/iteration-assessment
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: d7f0b405-6171-444d-983c-fbf0a2480437
+  :name: jQuery Basic Starter
+  :github_repo: https://github.com/gSchool/jquery-demo
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 6cefb837-6170-47c6-ad22-fc1841406262
+  :name: 'jQuery Image Filtering '
+  :github_repo: https://github.com/gSchool/jquery-image-filtering
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 8f0194d0-e46e-44ae-8233-c351554e63af
+  :name: jQuery Selection
+  :github_repo: "/javascript-intro-resources/blob/master/js-warmup01.md"
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 3e3c262e-1d2d-445a-b4bb-87faa7614a99
+  :name: jQuery Selector Practice
+  :github_repo: https://github.com/gSchool/jQuery-selector-practice
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 92d693b8-923f-4ef7-8b2d-38bf12d46a09
+  :name: jQuery-Page-Analytics
+  :github_repo: https://github.com/gSchool/g11-course-curriculum/tree/master/week04/04_exercises/js-page-analytics
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 5e2a2d5a-c5fb-4bdc-be2c-0975f59b7632
+  :name: jquery-Calculator
+  :github_repo: https://github.com/gSchool/jquery-calculator
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 1fb90ab0-3f29-4e99-ad94-1c37a44da3e5
+  :name: learnyounode
+  :github_repo: https://github.com/workshopper/learnyounode
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 7854a3eb-a85b-4457-8ee0-e9db695e581f
+  :name: methods-assessment
+  :github_repo: https://github.com/gSchool/methods-assessment
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: dd2203ee-0277-4f9f-b172-f50388b9e4d4
+  :name: rails-practice-instance-variables
+  :github_repo: https://github.com/gSchool/rails-practice-instance-variables
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 27a384fb-db07-43e1-8ae4-f7212ea3bf19
+  :name: rails-practice-static-rendering
+  :github_repo: https://github.com/gSchool/rails-practice-static-rendering
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: f0b1031b-9486-44bc-8f11-56554f1364b0
+  :name: string-assessment
+  :github_repo: https://github.com/gSchool/string-assessment/blob/master/README.md
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 1476da3f-e0fa-48e4-9b44-b9981d9cf621
+  :name: temperature spread-assessment
+  :github_repo: https://github.com/gschool-g5/temperature_spread
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 4fda9d85-7c72-4794-9d42-8e2b6bc59583
+  :name: thoughtbot upcase week 2 models
+  :github_repo: upcase-week-2-models
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 1f2b601f-128f-43bc-b5d9-d7e1dd1dca21
+  :name: todo-cli-assessment
+  :github_repo: https://github.com/gschool-g5/todo-cli
+  :response_type: project
+  :exercise_objectives: []

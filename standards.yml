@@ -1,0 +1,1694 @@
+---
+- :uuid: 1a35fcb9-d770-4523-bf71-20e8ace14ce0
+  :name: Write Valid HTML5 Markup
+  :subject_uuid: 34798e76-3f49-4d0f-9a7d-b38762c691b9
+  :subject_name: HTML
+  :resources: "- https://developer.mozilla.org/en-US/docs/Web/HTML/Block-level_elements\r\n-
+    https://developer.mozilla.org/en-US/docs/Web/HTML/Inline_elemente\r\n- https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes"
+  :guiding_questions: "How does the structure of the document affect how it appears
+    on the page?  \r\nWhat is a Doctype?  \r\nWhat is the `head` tag used for?  \r\nDo
+    child elements in the `head` tag change the visual appearance of the page?  \r\nWhat
+    is the `body` tag used for?  \r\nWhat is the top-level element for any HTML document?
+    \ \r\nWhat is usually in the first line of every HTML document?  \r\n\r\nWhat
+    is the difference between block-level elements and inline elements?"
+  :description: ''
+  :instructor_notes: "## Assessments\r\n\r\n- All HTML documents from here on out
+    should comply with the success criteria.\r\n- XML your house (`<room>` tags, `<furniture>`
+    tags, etc stress the idea of arbitrary tags)\r\n- Profile Page Exercise (EX1 in
+    HTML LE)\r\n- Favorites List Exercise (EX2 in HTML LE)\r\n\r\n------\r\n\r\n##
+    Success Criteria:\r\n\r\n- Tags are in a logical order to match reality\r\n- Tags
+    are properly indented to show nesting visually\r\n  - Block level elements have
+    their own indentation level\r\n  - inline elements are included inline\r\n- Attributes\r\n
+    \ - ids are all unique, valid identifiers\r\n  - Classes are applied to multiple
+    elements successfully\r\n  - Boolean attributes are [syntactically correct](https://html.spec.whatwg.org/#boolean-attributes)\r\n
+    \   - no “false” or “true values\r\n    - elements like checked are represented
+    as `checked`\r\n  - Attribute names are all in lowercase, values are in lowercase\r\n-
+    HTML Structure\r\n  - Has a valid doctype declaration\r\n  - has an `<html>` tag
+    as it’s root element\r\n  - html tag has a head followed by a body\r\n  - head
+    \r\n    - contains all metadata\r\n    - has a `<title>` tag\r\n  - body contains
+    all visible elements\r\n  - tables contain appropriate opening and closing tags:`<table><th><tb><tr>`\r\n-
+    `<img>` tags used to embed images\r\n- Anchor tags\r\n  - has tags that link to
+    other places in the document\r\n  - has tags that link to other HTML resources\r\n-
+    Validates markup with the [W3C HTML Validator](https://validator.w3.org/)\r\n\r\n\r\n\r\n##
+    Legacy Objectives\r\n### HTML Syntax and Standards\r\n- Use XML syntax to create
+    HTML Elements\r\n- Write the basic structure of an HTML document from scratch\r\n-
+    Use block-level elements to arrange content in an HTML5 document\r\n- Use attributes
+    with HTML elements\r\n- Use inline elements to style or create functionality within
+    a block level element\r\n- Write comments in HTML\r\n- Write syntactically valid
+    boolean attributes\r\n- Describe what the title element is used for (tab / window
+    names, bookmarks, SEO)\r\n- Write folder and file names in lowercase with either
+    dashes or underscores instead of spaces\r\n- Explain that attributes can appear
+    in any order\r\n- Write self-closing tags without the trailing forward slash\r\n-
+    Validate HTML with the W3C validator\r\n- Check links with the W3C link checker\r\n-
+    Write properly indented and organized HTML\r\n- Use IDs in HTML\r\n- Allowing
+    anchor tags to jump to the location on a page\r\n- Explain that ids should be
+    avoided except for connecting labels or serving as anchors\r\n- Explain that ids
+    must be unique, and should not start with numbers\r\n- Explain that classes do
+    not have to be unique on the page\r\n- Write all tags, attributes, class names
+    and ids in lowercase\r\n- Use Tags and Attributes to create HTML Elements\r\n-
+    - Write valid HTML5 markup\r\n\r\nUse the XML syntax to write html elements\r\nCovers
+    tags, XML trees, attributes, self-closing tags, doctype declaration\r\n\r\nCreate
+    and HTML document that is syntactically valid and structurally valid.\r\nInclude
+    doctype, html, head, title, and body.\r\n\r\n\r\nStudents should be able to use
+    block level elements to lay out an HTML page. They should have a grasp of tags
+    that appear in the body that affect the layout of the page- this includes `div`,
+    `p`, `h1-5`, list tags like `ol` and `ul` and subordinate `li` tags. \r\n\r\nAdd
+    an attribute to a tag, using `attribute_name=\"value\"`, or `boolean_attribute=true`
+    \ \r\nName some common attributes, such as `id`, `class`, `alt`, `href`   \r\nLook
+    up additional attributes using documentation like MDN  \r\nEnsure used attributes
+    pass W3C validators  \r\n\r\nUse tags like `span`, `a`, or `img` to add features
+    or style to your page.\r\n\r\nUse HTML tags and attributes to create elements
+    that will be displayed on the page (or used as metadata, such as the title tag).\r\n\r\n###
+    Link to external resources in HTML\r\n- Include external javascript files\r\n-
+    Include inline javascript\r\n- Describe the benefits of including javascript files
+    near the end of the body\r\n- Include external stylesheets\r\n- Include inline
+    CSS\r\n- Render images\r\n- Correctly form relative paths (foo/bar and ../foo/bar)
+    and rooted paths (/foo/bar)\r\n- Correctly include urls that can match the protocol
+    by excluding “http” / “https”\r\n- Describe why rooted paths will not work when
+    running sites with the `file://` protocol\r\n- Define and describe CDN\r\n- Explain
+    how CDNs can improve page load times\r\n\r\nbecause browsers can parallelize the
+    downlo"
+  :tags:
+  - html
+- :uuid: 65247f59-5f6d-4139-937f-9603b72e7634
+  :name: Write Semantic HTML5 Markup
+  :subject_uuid: 34798e76-3f49-4d0f-9a7d-b38762c691b9
+  :subject_name: HTML
+  :resources: "- [Dive Into HTML5](http://diveintohtml5.info/semantics.html)\r\n"
+  :guiding_questions: "- What are some HTML tags that don't affect layout, yet are
+    included for semantic reasons?\r\n- How might we write pages that are easier for
+    machines to parse and read?\r\n- What are some websites that are easy for a screenreader
+    to read? What are some that are too difficult for a screenreader to read?\r\n-
+    \"Article View\" in Safari is a recent innovation that helps content be presented
+    in a standard way. How does this relate to accessibility?\r\n- Imagine you have
+    to write a program that reads webpages. What HTML tags and attributes could a
+    developer use that would make this easiest for you to accomplish?"
+  :description: "**Why?** Semantic HTML is meaningful HTML. Your pages will be friendlier
+    for both users and machines, allowing better SEO performance and better integration
+    with accessibility devices.\r\n\r\n## Resources\r\n- [MDN HTML5](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5)\r\n-
+    [HTML Spec](https://html.spec.whatwg.org/#headings-and-sections)\r\n- [Writing
+    your best code](http://learn.shayhowe.com/html-css/writing-your-best-code/)\r\n"
+  :instructor_notes: "**Notes:** Going back through a document they’ve written, or
+    going through a document that has been created for them is most similar to the
+    environment they’ll encounter at work - adding semantic markup to existing pages
+    is an ongoing effort that most companies are doing in order to improve SEO.\r\n\r\n##
+    Assessments\r\n- Markup a news article with semantic HTML5 tags\r\n- Go back and
+    make your prework (personal website) semantic\r\n- Create a landing page for your
+    favorite product\r\n  - included images\r\n  - include tables to compare with
+    similar products\r\n- Find an endangered species online. Produce a table that
+    lists the estimated population of that animal in every region in which it resides.\r\n\r\n\r\n\r\n\r\n-
+    Explain why writing semantic HTML is important\r\n- Identify and describe new
+    HTML5 tags that can be used to create semantic markup\r\n- Convert an un-semantic
+    HTML page to an semantic page\r\n\r\nStudents should be able to articulate how
+    semantic HTML relates to SEO and Accessibility \r\n"
+  :tags:
+  - html
+- :uuid: af4291aa-c39b-4cf8-b2f9-65cf2d138ee4
+  :name: Build HTML Forms and Controls
+  :subject_uuid: 34798e76-3f49-4d0f-9a7d-b38762c691b9
+  :subject_name: HTML
+  :resources: "- [Dive into HTML5 Forms](http://diveintohtml5.info/forms.html)"
+  :guiding_questions: ''
+  :description: "**Why?** HTML Forms allow you to gather input from the user. Any
+    time you’ve ever signed up for anything, you’ve used a form! The applications
+    you build at Galvanize and throughout your career will feature many, many forms
+    and form elements."
+  :instructor_notes: "## Assessments\r\n- [HTML Forms Exercise](https://github.com/gSchool/html-forms)\r\n-
+    Create a form that collects a pizza order\r\n- Create a form that allows a user
+    to create a new account\r\n- Create a form that takes feedback from a lightning
+    talk\r\n\r\n\r\nSome things to give more advanced students so you can give them
+    a 4:  \r\n\r\n- Use a pattern for a type of validation that doesn’t exist as an
+    input type\r\n- Write a blog post about something cool you haven’t seen used often
+    in the HTML5 spec\r\n- Lead a review group with your classmates in order to help
+    them make their pages more semantic\r\n"
+  :tags:
+  - html
+- :uuid: cfadccf4-d556-467a-a617-814fa04ee05b
+  :name: Target HTML elements with CSS selectors
+  :subject_uuid: 36adeb0c-c5bc-45de-ae4d-6cc6a81197cd
+  :subject_name: CSS
+  :resources: ''
+  :guiding_questions: ''
+  :description: ''
+  :instructor_notes: "Old stuff...\r\n\r\n------\r\n\r\n- `body, html`\r\n- `[name=”foo”]`\r\n-
+    `.foo.bar`\r\n- `.foo, .bar`\r\n- `.foo .bar`\r\n- `.foo > .bar`\r\n- such as
+    hover, active using pseudo-selectors\r\n- `+`\r\n- that cascading means that parent
+    styles can cascade down and more specific styles can override\r\n- that certain
+    selectors are more specific than others, and that specificity affects which styles
+    get applied\r\n- the state of an element in order to preview the CSS\r\n\r\n------------\r\n\r\n-
+    HTML Forms - https://github.com/gSchool/html-forms (Learn the basics of forms
+    by building them.)\r\n- HTML Basic - https://github.com/gSchool/basic-html (Exercise
+    is to build some static HTML/CSS based on the mockups)\r\n- Invalid HTML - https://github.com/gSchool/invalid-html
+    (Fix broken HTML by using w3's HTML validator)\r\n- Basic HTML Structure - https://github.com/gSchool/basic-html-structure
+    (building a basic structure for an HTML5 web page/landing page)\r\n- Building
+    a Grid System with CSS - https://github.com/gSchool/g11-course-curriculum/tree/master/week03/03_exercises/css-grid-system\r\n-
+    CSS Grid - https://github.com/gSchool/css-grid (Exercise that required students
+    to handroll a CSS grid system.)\r\n- CSS Exercises - https://github.com/gSchool/css-exercises
+    (Write CSS that matches the expected design.)\r\n- CSS-Nav-Challenge - https://github.com/gSchool/css-nav-challenge
+    (Build a navigation using Semantic Markup and dropdown menu)\r\n- Media Query
+    - https://github.com/gSchool/media-query-css-exercise (Learn the basics of media
+    query)\r\n- CSS-Floats - https://github.com/gSchool/css-floats-exercise (Learn
+    how floats work)\r\n- The Mystery of the CSS Float Property - http://www.smashingmagazine.com/2009/10/19/the-mystery-of-css-float-property/
+    (Resource - CSS Tricks/SMASHING)\r\n- Learn CSS Layout - http://learnlayout.com/
+    (Resource)\r\n- CSS Floats 101 - http://alistapart.com/article/css-floats-101/
+    (Resource - A List Apart --- CSS FLoat Property)\r\n- CSS Animations & JavaScript
+    Events - https://github.com/gSchool/javascript-css-material-design (Intro to CSS
+    animations - keyframes, JavaScript event listeners)\r\n- HTML/CSS Demo using Bourbon,
+    Neat, and Bitters - https://github.com/gSchool/html_css_demo (a playground for
+    students to exlpore how to integrate html/css into Rails)\r\n- CSS Assessment
+    - Answers - https://github.com/gSchool/css-assessment-answers-week-1\r\n- Front
+    end interview questions - https://github.com/kyle8285/Front-end-Developer-Interview-Questions\r\n-
+    CSS Display and Positioning Cheat Sheet - https://github.com/gSchool/g11-course-curriculum/blob/master/week03/03_lectures/css-display-and-positioning.md\r\n-
+    Front end Legos - https://vimeo.com/70115794\r\n- https://github.com/gSchool/g11-course-curriculum/tree/master/week03/03_exercises/css-positioning-primer\r\n-
+    https://github.com/gSchool/selector-demo\r\n- https://github.com/gSchool/css-card-flip\r\n-
+    https://github.com/gSchool/ui-feature-solutions\r\n- https://github.com/gSchool/css-exercises-solutions\r\n-
+    https://github.com/gSchool/bootstrappy\r\n- https://github.com/gSchool/scss-mixin\r\n\r\n-
+    https://github.com/gSchool/css-exercises\r\n- https://github.com/gSchool/css-floats-exercise\r\n-
+    https://github.com/gSchool/css-grid\r\n- https://github.com/gSchool/css-grid-building\r\n-
+    [CSS Diner](http://flukeout.github.io/)\r\n- [CSS Leveler](http://toolness.github.io/css-selector-game/)"
+  :tags:
+  - css
+- :uuid: 13287db9-51dc-4b02-9bd1-5a55401150f2
+  :name: Style HTML elements with CSS properties
+  :subject_uuid: 36adeb0c-c5bc-45de-ae4d-6cc6a81197cd
+  :subject_name: CSS
+  :resources: "- http://bitsofco.de/2015/how-z-index-works/\r\n- https://css-tricks.com/all-about-floats/\r\n-
+    https://github.com/gSchool/css-floats-exercise\r\n- [CSS on MDN](https://developer.mozilla.org/en-US/docs/Web/CSS)\r\n\r\n\r\n##
+    Legacy Objectives\r\n- Use CSS Properties to style HTML Elements\r\n- Describe
+    what CSS stands for\r\n- Add style to HTML in three different ways. (Inline, External
+    Style Sheet, Style Tag)\r\n- Explain why it is useful to separate CSS from HTML
+    (external style sheet)\r\n- Write syntactically correct CSS blocks (key-value
+    pairs, semi-colons etc…)\r\n- Write well-indented and organized CSS\r\n- Write
+    comments in CSS\r\n- Define what rem, em, % and pixel units do\r\n- Describe appropriate
+    uses for the various units\r\n- Describe the two box-sizing properties\r\n- Add
+    multiple classes to an element\r\n- Correctly calculate the width and height of
+    boxes with various box-sizing properties\r\n- Describe the box model including
+    border, margin, padding, content\r\n- List and describe the characteristics of
+    the different positions - absolute, static etc…\r\n- Use floats to position elements\r\n-
+    List and describe the various display properties - none, block, inline-block etc…\r\n-
+    Describe the difference between inline and block elements\r\n- Correctly identify
+    which common HTML elements are inline, which are block\r\n- Position a ul with
+    li’s horizontally\r\n- Write all common CSS properties"
+  :guiding_questions: ''
+  :description: ''
+  :instructor_notes: "## Assessments\r\n- Given an HTML page and a Style Guide, style
+    all of the text according to the style guide. Write up a few styleguides and have
+    them all use the same HTML\r\n"
+  :tags:
+  - css
+- :uuid: d9f2fe34-013d-47eb-bef3-b6d4725ea121
+  :name: Lay out a document with CSS properties
+  :subject_uuid: 36adeb0c-c5bc-45de-ae4d-6cc6a81197cd
+  :subject_name: CSS
+  :resources: "- [Mastering Margin Collapsing](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)\r\n-
+    [Getting Started with CSS](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Getting_started)\r\n-
+    [Box Model](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Getting_Started/Boxes)\r\n-
+    Check out [FlexBox!](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+    (but watch out for [flexbugs](https://github.com/philipwalton/flexbugs) )"
+  :guiding_questions: ''
+  :description: ''
+  :instructor_notes: "## Assessments\r\n- Create a HYPERTEXT newspaper\r\n    - Create
+    a front page that has a two column layout\r\n    - Create a few other pages with
+    a three column layout, the right-hand side of which is sticky (has navigation)\r\n
+    \   - Add a sticky footer\r\n- Create a 2-column and 3-column layout\r\n- Create
+    a 3 column layout with fixed side columns\r\n"
+  :tags:
+  - css
+- :uuid: 7d4b94e1-83b4-44ae-a8a6-57cc6504bceb
+  :name: Quickly style pages with CSS frameworks
+  :subject_uuid: 36adeb0c-c5bc-45de-ae4d-6cc6a81197cd
+  :subject_name: CSS
+  :resources: "- [Bootstrap](http://getbootstrap.com/)\r\n- [Foundation](http://foundation.zurb.com/)\r\n-
+    http://heydonworks.com/a11y_rocks/"
+  :guiding_questions: ''
+  :description: ''
+  :instructor_notes: "## Assessments\r\n- Produce a layout given a mockup\r\n  - 2
+    column layout\r\n  - 3 column layout\r\n  - 2 column layout with 3-column nested
+    in second column (shopify-style)\r\n- Make a form that contains many form controls,
+    use framework features to make it nice-looking and keyboard navigable\r\n- Customize
+    the colors, style, and some layout properties on top of a framework\r\n  - Does
+    not use framework’s class names\r\n\r\nA UX intro may be valuable here, depending
+    on time and class interest\r\n\r\n## Legacy Objectives\r\n- Explain what CSS frameworks
+    are and why they’re useful\r\n- List and describe at least 3 modern, common css
+    frameworks\r\n- Install a css framework 2 ways: CDN, and copying code locally
+    to the project without a package manager\r\n- Describe how CSS frameworks work\r\n-
+    Describe the difference between reset.css and normalize.css and list the pros
+    and cons of each\r\n- Style a web page using Bootstrap\r\n- Style a web page using
+    a framework other than Bootstrap\r\n- Use good design practices to create a user-friendly
+    and accessible page\r\n\r\nthat CSS frameworks provide pre-defined classes and
+    selectors, and that you must write markup that matches the framework’s expectations\r\n"
+  :tags:
+  - css
+- :uuid: 46499559-6583-471a-9dd6-93a799f0ddfc
+  :name: Use CSS3 and advanced browser tooling to create responsive pages
+  :subject_uuid: 36adeb0c-c5bc-45de-ae4d-6cc6a81197cd
+  :subject_name: CSS
+  :resources: "[Can I use…?](http://caniuse.com/) for Browser Compatability"
+  :guiding_questions: ''
+  :description: ''
+  :instructor_notes: "## Assessments\r\n- Write a UI that has a mobile version and
+    a desktop version on the same page\r\n- Make a layout with Flexbox instead of
+    a framework\r\n- Write your own web component\r\n"
+  :tags:
+  - css
+- :uuid: 19107d33-2d57-4d4e-a51b-ecd71264b040
+  :name: Write well organized CSS
+  :subject_uuid: 36adeb0c-c5bc-45de-ae4d-6cc6a81197cd
+  :subject_name: CSS
+  :resources: "https://perishablepress.com/obsessive-css-code-formatting-organization-comments-and-signatures/\r\n"
+  :guiding_questions: ''
+  :description: ''
+  :instructor_notes: "## Assessments\r\n* Take a messy CSS file, and clean it up by
+    grouping selectors and rules, eliminating defaults, ordering by function of selector,
+    ensuring correct spacing\r\n* Take a CSS file that has IDs that should be classes,
+    and other inappropriate uses of specificity and fix it.\r\n\r\n## Other Notes\r\nSome
+    notes on scoring them as a 4:\r\nChecks caniuse.com for browser compatability\r\n"
+  :tags:
+  - css
+- :uuid: 81f575df-eaa5-4bde-bdd9-15444f85c50d
+  :name: Navigate and manage a file system with the command line
+  :subject_uuid: 34bf8b61-2dc7-433a-8e4e-fa06582be259
+  :subject_name: The Command Line
+  :resources: ''
+  :guiding_questions: ''
+  :description: ''
+  :instructor_notes: "Resources\r\n\r\n- I/O Redirection - linuxcommand.org \r\n-
+    The Command Line Crash Course - http://cli.learncodethehardway.org/book/ (Covers
+    most of the commands students will need to know. Can be entirely self-directed.)\r\n-
+    Command Line Mystery - https://github.com/veltman/clmystery (Fun activity focusing
+    on CL basics and grep)\r\n- CL Primer for Beginners - http://lifehacker.com/5633909/who-needs-a-mouse-learn-to-use-the-command-line-for-almost-anything
+    (Lifehacker article)\r\n- Linux Command Line Flashcards - https://quizlet.com/18423046/linux-command-line-flash-cards/
+    (Review basic commands with quizlet flashcards)\r\n- CL Legacy Lecture - https://github.com/gSchool/fullstack-curriculum/blob/master/legacy/command-line.md
+    (Notes on a CL basics lecture)\r\n- Art of the Command Line - https://github.com/jlevy/the-art-of-command-line\r\n-
+    https://github.com/gSchool/warmup-command-line"
+  :tags:
+  - Command Line
+- :uuid: 6a6ef8ef-490c-4c61-8494-e932d53e45e4
+  :name: Work with and discuss and Unix Roles / Permissions
+  :subject_uuid: 34bf8b61-2dc7-433a-8e4e-fa06582be259
+  :subject_name: The Command Line
+  :resources: ''
+  :guiding_questions: ''
+  :description: ''
+  :instructor_notes: ''
+  :tags:
+  - Command Line
+- :uuid: 4b8a226c-30e7-4f99-977e-75db430fc9bf
+  :name: Discuss the function and purpose of Git
+  :subject_uuid: f902dd0d-2c93-4706-83d2-567752a31988
+  :subject_name: Version Control (Git and Github)
+  :resources: ''
+  :guiding_questions: ''
+  :description: ''
+  :instructor_notes: ''
+  :tags:
+  - git
+- :uuid: 4e289bae-8a94-4d0e-ba46-d51a9c276403
+  :name: Manage feature development with Git branches using a merge strategy
+  :subject_uuid: f902dd0d-2c93-4706-83d2-567752a31988
+  :subject_name: Version Control (Git and Github)
+  :resources: "- https://github.com/gSchool/pull-requests-exercise"
+  :guiding_questions: ''
+  :description: ''
+  :instructor_notes: ''
+  :tags:
+  - git
+  - command line
+- :uuid: b898b0aa-0632-412f-ab6d-ad37b15d590a
+  :name: Share code by pushing and pulling to a remote repository on GitHub
+  :subject_uuid: f902dd0d-2c93-4706-83d2-567752a31988
+  :subject_name: Version Control (Git and Github)
+  :resources: ''
+  :guiding_questions: ''
+  :description: "# Objectives\r\n\r\n- Create a remote repo on github\r\n- Add a remote
+    repo using ‘git remote add’\r\n- Push code to github\r\n- Pull changes from github\r\n"
+  :instructor_notes: ''
+  :tags:
+  - git
+  - command line
+- :uuid: 229b8c25-a885-4ea2-bece-1eeb9211c221
+  :name: Collaborate with other developers using clone and fork-based workflows with
+    Github
+  :subject_uuid: f902dd0d-2c93-4706-83d2-567752a31988
+  :subject_name: Version Control (Git and Github)
+  :resources: ''
+  :guiding_questions: ''
+  :description: ''
+  :instructor_notes: Describe difference between clone and fork based workflows.  It’s
+    about trust - whether devs should have access to actual repo
+  :tags:
+  - git
+- :uuid: 975ea9ed-4737-4814-beca-45e04f556c49
+  :name: Track changes over time using a basic Git workflow
+  :subject_uuid: f902dd0d-2c93-4706-83d2-567752a31988
+  :subject_name: Version Control (Git and Github)
+  :resources: "- http://www.amazon.com/Git-Pocket-Guide-Richard-Silverman/dp/1449325866\r\n-
+    Git Workshop - https://github.com/gSchool/git-workshop (Git and Github basics.)\r\n-
+    Git Intro Lecture - https://github.com/gSchool/fullstack-curriculum/blob/master/lessons/git/git-intro.instructor.md
+    (Intro Lecture)\r\n- Git Basics Lecture - https://github.com/gSchool/basic-git\r\n-
+    Try Git - https://try.github.io/levels/1/challenges/1 (Interactive Git Tutorial)\r\n-
+    Git Book - http://git-scm.com/book/en/v2\r\n- GitHug - https://github.com/gazler/githug
+    (CL based git challenges/exercises/game)\r\n- Group Workflow with Git - https://github.com/gSchool/group-workflow-with-github\r\n-
+    Fork-Clone-Branch-PullReqest - https://github.com/gSchool/fullstack-curriculum/blob/master/legacy/git-fork-clone-branch-submit-pull-request.md\r\n-
+    Branching Intro Lecture - https://github.com/gSchool/fullstack-curriculum/blob/master/lessons/git/branching-intro.instructor.md\r\n-
+    Learn Git Branching - http://pcottle.github.io/learnGitBranching/ (Interactive
+    Branching Tutorial)\r\n- Git Rocks - http://git.rocks/getting-started/\r\n- https://github.com/gSchool/git_basics_quiz\r\n-
+    https://github.com/gSchool/fork-push-pull-exercise\r\n- https://github.com/gSchool/branching-assignment\r\n-
+    https://github.com/gSchool/git-warmup\r\n- https://github.com/gSchool/branching_and_merging_lab\r\n-
+    https://github.com/gSchool/6002-project-1\r\n- https://github.com/gSchool/what-is-vcs-lesson\r\n-
+    https://github.com/gSchool/git-add-commit-assessment\r\n- [Try Git](https://try.github.io)\r\n-
+    [Learn Git Branching](http://pcottle.github.io/learnGitBranching/)\r\n"
+  :guiding_questions: ''
+  :description: ''
+  :instructor_notes: ''
+  :tags:
+  - git
+  - command line
+- :uuid: cec4ed26-77d8-4fea-a581-c6bf1fedf774
+  :name: Discuss the basic function and purpose of web sockets
+  :subject_uuid: bed922ac-3f57-45c2-b2b9-6a51b2023083
+  :subject_name: How the Web Works
+  :resources: ''
+  :guiding_questions: ''
+  :description: ''
+  :instructor_notes: "Assessments\r\n\r\nAnswer questions such as: \r\n\r\n- what
+    are sockets?\r\n- when might you want to use sockets? \r\n- what are the advantages
+    of sockets?\r\n- What’s the difference between sockets and HTTP?\r\n- What are
+    some common socket libraries / products?  Socket.io / Pusher / Firebase\r\n\r\nVocab\r\n\r\n-
+    Realtime web\r\n- Server-side push\r\n- Polling\r\n- Persistent connection\r\n-
+    Analogies like “phone call” vs “email”\r\n- Stateful protocol\r\n\r\nNotes:\r\n\r\nWe
+    don’t have to hold them to the standard of building sockets themselves.  This
+    is the horizontal part of the T-shaped individual.\r\n\r\nStudents can/will choose
+    to use Sockets in their capstone, group projects\r\n\r\nDescribe how socket.io
+    (as an example of a socket library) works: pub/sub - emitting / listening to events\r\n"
+  :tags:
+  - Web Sockets
+- :uuid: 76db66e1-fc19-44aa-ac5d-6d197ef02eeb
+  :name: Diagram and explain a URI
+  :subject_uuid: bed922ac-3f57-45c2-b2b9-6a51b2023083
+  :subject_name: How the Web Works
+  :resources: ''
+  :guiding_questions: ''
+  :description: ''
+  :instructor_notes: ''
+  :tags:
+  - how the web works
+- :uuid: 1823a6eb-6860-4ce9-a12e-622cbdcd159c
+  :name: 'Identify common protocols and explain their purpose '
+  :subject_uuid: bed922ac-3f57-45c2-b2b9-6a51b2023083
+  :subject_name: How the Web Works
+  :resources: ''
+  :guiding_questions: ''
+  :description: ''
+  :instructor_notes: "Other protocols to mention \r\n- DNS\r\n- UDP\r\n- HTTP2\r\n-
+    IP\r\n- “we could teach udp but they might not get it” - Liz (:micdrop:)\r\n"
+  :tags:
+  - how the web works
+- :uuid: 2d630965-a381-48ed-ac3c-90bc409acee8
+  :name: Discuss the semantics of common HTTP Verbs, Headers, and Response Codes
+  :subject_uuid: bed922ac-3f57-45c2-b2b9-6a51b2023083
+  :subject_name: How the Web Works
+  :resources: ''
+  :guiding_questions: ''
+  :description: ''
+  :instructor_notes: "Assessments\r\nMatch a set of headers to the appropriate response\r\nMultiple
+    choice / fill in blank \r\n\r\nTeacher Notes:\r\nHTTP Status Cats forevah\r\n"
+  :tags:
+  - how the web works
+- :uuid: e3cf505e-0f1d-4cc5-addf-bdec0ab23621
+  :name: Identify the parts of an HTTP request and response and discuss their purpose
+  :subject_uuid: bed922ac-3f57-45c2-b2b9-6a51b2023083
+  :subject_name: How the Web Works
+  :resources: ''
+  :guiding_questions: ''
+  :description: ''
+  :instructor_notes: ''
+  :tags:
+  - how the web works
+- :uuid: b274ce97-af36-46f5-9324-0ea3aa27c051
+  :name: Discuss and diagram Client-Server Model
+  :subject_uuid: bed922ac-3f57-45c2-b2b9-6a51b2023083
+  :subject_name: How the Web Works
+  :resources: "- How Does the Web Work - http://www.theodinproject.com/web-development-101/how-does-the-web-work
+    (A lesson that includes multiple resources explaining how the web works.)\r\n"
+  :guiding_questions: ''
+  :description: ''
+  :instructor_notes: "- Have students draw sequence diagrams with clients and servers
+    on whiteboards"
+  :tags:
+  - how the web works
+- :uuid: 9dbcf8f0-f4e0-4415-bb28-21e43784b764
+  :name: Use the APIs built-in to Node.js for OS specific operations
+  :subject_uuid: 7f2e3c5a-f4fe-4ec1-abf6-f57e2ef88b13
+  :subject_name: Server Side JS with Node
+  :resources: ''
+  :guiding_questions: ''
+  :description: ''
+  :instructor_notes: "Objectives\r\n\r\n- `path`\r\n- `query strings`\r\n- Write a
+    CLI\r\n"
+  :tags:
+  - Server Side JS (Node)
+- :uuid: 131f4cb1-c4e5-43b0-a122-ec0807ea609f
+  :name: Control the flow of your program using EventEmitters
+  :subject_uuid: 7f2e3c5a-f4fe-4ec1-abf6-f57e2ef88b13
+  :subject_name: Server Side JS with Node
+  :resources: ''
+  :guiding_questions: ''
+  :description: ''
+  :instructor_notes: ''
+  :tags:
+  - Server Side JS (Node)
+- :uuid: f4eb67d1-2259-41b5-99aa-af4176bf5612
+  :name: Handle errors using Node patterns
+  :subject_uuid: 7f2e3c5a-f4fe-4ec1-abf6-f57e2ef88b13
+  :subject_name: Server Side JS with Node
+  :resources: ''
+  :guiding_questions: ''
+  :description: ''
+  :instructor_notes: ''
+  :tags:
+  - Server Side JS (Node)
+- :uuid: 72542835-0321-42bb-bd9a-b50abdef3d9f
+  :name: Define and require Node modules
+  :subject_uuid: 7f2e3c5a-f4fe-4ec1-abf6-f57e2ef88b13
+  :subject_name: Server Side JS with Node
+  :resources: https://github.com/gSchool/module.exports
+  :guiding_questions: ''
+  :description: ''
+  :instructor_notes: ''
+  :tags:
+  - Server Side JS (Node)
+- :uuid: a0d0fb3d-484d-4789-a04d-33a1fe6d2f91
+  :name: Build CRUD apps in Express
+  :subject_uuid: 68c522e4-1aa5-48fa-bde9-5619ea7c7986
+  :subject_name: Server Side Frameworks with Express
+  :resources: ''
+  :guiding_questions: ''
+  :description: ''
+  :instructor_notes: "- Intro to Express - https://students.galvanize.com/cohorts/13/daily_plans/2015-06-03
+    (2nd half of page)\r\n- Express Calculator Exercise - https://students.galvanize.com/cohorts/13/daily_plans/2015-06-03
+    (Very botom of Page)\r\n- Express CRUD Intro Exercise - https://github.com/gSchool/express_intro_exercise
+    (Build a simple Puppies CRUD app with no DB)\r\n- Middleware and Method Override
+    Notes - https://students.galvanize.com/cohorts/13/daily_plans/2015-06-04 (Covers
+    bodyParser, serving static assets, and method override)\r\n- Library App Assignment
+    - https://github.com/gSchool/express_library_app (Check out solution branch)\r\n-
+    Intro to Mongo - https://students.galvanize.com/cohorts/13/daily_plans/2015-06-08
+    (Covers mongo in the console, no express)\r\n- Mongo Console Exercise - https://github.com/gSchool/mongo_console_exercises
+    (Covers CRUD in the Mongo console)\r\n- Express Basics Assessment - https://github.com/gSchool/express-basics-assessment
+    (Students need to Fix Bugs, Explain Code, and Write their own routes)\r\n- Mongoose
+    Book App - https://github.com/gSchool/mongoose_book_app (Mongoose + Express.  Branch
+    includes Author model and implements 1:M relationship.  Another branch demos the
+    Express Router)\r\n- The Song that Doesn't End - https://github.com/gSchool/song-that-doesnt-end-js
+    (Express basics exercise - routing and templates)\r\n- MonogDB intro to Queries
+    and CRUD - https://github.com/gSchool/mongodb-introduction-to-querying-and-aggregation\r\n-
+    Auth in Express Lecture - https://github.com/gSchool/fullstack-curriculum/blob/master/lessons/js-express/authentication-in-express.md\r\n-
+    Express + psql - https://github.com/gSchool/fullstack-curriculum/blob/master/lessons/js-express/express-psql-raw-sql-bootstrap.md\r\n-
+    Intro to Express Notes - https://github.com/gSchool/fullstack-curriculum/blob/master/lessons/js-express/introduction-to-express.instructor.md\r\n-
+    Library App Assignment pt. 2 - https://github.com/gSchool/express_library_app_with_request\r\n-
+    Body Parser Exercise - https://github.com/gSchool/module-exports-body-parser-practice
+    (Covers body-parser and use of module exports and require)\r\n- Mail Merge Exercise
+    - https://github.com/gSchool/mail-merge-express\r\n- Objects To Tables - https://github.com/gSchool/objects-to-tables-js\r\n-
+    Markdown Table Processor - https://github.com/gSchool/markdown-table-processor
+    (Mongo / Monk / Algorithms / Client-Side code Full Day)\r\n- Express Mongo CRUD
+    - https://github.com/gSchool/express-mongo-crud (Gradual release of responsibility,
+    Express Mongo CRUD Full Day)\r\n- Travel App - https://github.com/gSchool/placesIveTraveled
+    (A single page app - given a simple CRUD and need to make the root route a singple
+    page app that uses ajax)\r\n- Reddit Clone - https://github.com/gSchool/reddit_clone_express
+    (covers models, association and auth (solution - https://github.com/gSchool/reddit_clone_express_solution))\r\n-
+    Environment Variables - http://www.andrewsouthpaw.com/2015/02/08/environment-variables/
+    (What is an env variable? The ways in which to configure env variables.)\r\n-
+    What is Express Middleware - http://alexperry.io/javascript/2015/08/06/what-is-express-middleware.html\r\n\r\nExpress
+    repos\r\n\r\n- https://github.com/gSchool/express-higher-order-function-practice\r\n-
+    https://github.com/gSchool/express-middleware-practice\r\n- https://github.com/gSchool/express-mongo-crud\r\n-
+    https://github.com/gSchool/express-passport-linkedin\r\n- https://github.com/gSchool/express-validations-intro\r\n-
+    https://github.com/gSchool/express_itunes_guessing_game\r\n- https://github.com/gSchool/express_library_app\r\n-
+    https://github.com/gSchool/express_library_app_with_request\r\n- https://github.com/gSchool/express-cookie-basics\r\n-
+    https://github.com/gSchool/express-crud-validations\r\n- https://github.com/gSchool/express-passport-linkedin-solution\r\n-
+    https://github.com/gSchool/node_mongo_heroku_deployment\r\n- https://github.com/gSchool/song-that-doesnt-end-js\r\n-
+    https://github.com/gSchool/mail-merge-express\r\n- https://github.com/gSchool/reddit_clone_express\r\n-
+    https://github.com/gSchool/markdown-table-processor\r\n- https://github.com/gSchool/objects-to-tables-js\r\n-
+    https://github.com/gSchool/g11-course-curriculum/tree/master/week07/07_exercises/node-shuffle-chunk\r\n-
+    https://github.com/gSchool/g11-course-curriculum/tree/master/week08/08_exercises/node-shopping-list\r\n-
+    MVC Intro - https://realpython.com/blog/python/the-model-view-controller-mvc-paradigm-summarized-with-legos/\r\n-
+    https://github.com/gSchool/g11-course-curriculum/tree/master/week08/08_exercises/node-github-contest\r\n-
+    Swig Templating Primer - http://mherman.org/blog/2015/08/23/primer-on-swig-templating\r\n-
+    Node, Express, Swig, and MongoDB - Getting Started With CRUD - http://mherman.org/blog/2015/08/24/node-express-swig-mongo-primer\r\n-
+    http://adrianmejia.com/images/express-middlewares.png\r\n"
+  :tags:
+  - express
+- :uuid: 63e789e2-e488-4a1b-9e03-5bf240dc9cf9
+  :name: Describe what server-side frameworks like Express do
+  :subject_uuid: 68c522e4-1aa5-48fa-bde9-5619ea7c7986
+  :subject_name: Server Side Frameworks with Express
+  :resources: ''
+  :guiding_questions: ''
+  :description: ''
+  :instructor_notes: ''
+  :tags:
+  - express
+- :uuid: f883d2d5-c64a-4e23-9943-0d500cf4153a
+  :name: Write database queries using SQL
+  :subject_uuid: 849b1a02-191a-463f-aa3a-a4efcadeef66
+  :subject_name: Datastores
+  :resources: ''
+  :guiding_questions: ''
+  :description: ''
+  :instructor_notes: "## Assessments\r\nhttps://github.com/gSchool/sql-assessment\r\n\r\n##
+    Resources\r\nCONCAT?\r\n[Intro to Relational DBs](https://vimeo.com/142036155)\r\n"
+  :tags:
+  - datastores
+- :uuid: 16677e15-e330-4429-a0d3-e59d8e5efd7d
+  :name: Access data using an ORM / Knex
+  :subject_uuid: 849b1a02-191a-463f-aa3a-a4efcadeef66
+  :subject_name: Datastores
+  :resources: ''
+  :guiding_questions: ''
+  :description: ''
+  :instructor_notes: "## Slides\r\n* [Danny - pg](https://docs.google.com/a/galvanize.com/presentation/d/1rJgJPsk6hWjYj8Lb1Rftz8tEZWsdRG-2PkJbUdDTxag/edit?usp=sharing)"
+  :tags:
+  - datastores
+- :uuid: 2da2eb4a-630f-4c6b-abeb-e31f62f52770
+  :name: Design and implement schemas
+  :subject_uuid: 849b1a02-191a-463f-aa3a-a4efcadeef66
+  :subject_name: Datastores
+  :resources: ''
+  :guiding_questions: ''
+  :description: ''
+  :instructor_notes: "## Assessments\r\nGiven a words explanation of a data model,
+    design the schema\r\nGiven a human problem, design a data model\r\n\r\n## Resources\r\n[Entity
+    Relationship Diagrams](https://vimeo.com/142034756)\r\n"
+  :tags:
+  - datastores
+- :uuid: 3fcfb63c-6db4-4b6b-a466-0e920f695d06
+  :name: Contrast the function and purpose of non-relational and relational datastores
+  :subject_uuid: 849b1a02-191a-463f-aa3a-a4efcadeef66
+  :subject_name: Datastores
+  :resources: ''
+  :guiding_questions: ''
+  :description: ''
+  :instructor_notes: "## Objectives:\r\nWrites CRUD statements using MongoDB operations\r\nUses
+    operators for common query modifications\r\nsort\r\nlimit\r\n$in\r\n"
+  :tags:
+  - datastores
+- :uuid: 3cda6732-d0bb-46a8-b422-65bf2eff4e7e
+  :name: Access data in datastores through joins
+  :subject_uuid: 849b1a02-191a-463f-aa3a-a4efcadeef66
+  :subject_name: Datastores
+  :resources: ''
+  :guiding_questions: ''
+  :description: ''
+  :instructor_notes: ''
+  :tags:
+  - datastores
+- :uuid: 50cd25fd-a3ed-46e9-9927-8465b278c21f
+  :name: Deploy to static hosting sites and explain the function and purpose of static
+    hosting
+  :subject_uuid: 97f5bed5-418f-4ad2-b659-1aea931b36db
+  :subject_name: Deployment
+  :resources: ''
+  :guiding_questions: ''
+  :description: ''
+  :instructor_notes: ''
+  :tags:
+  - deployment
+- :uuid: 239d89b1-9502-4978-9723-c1df4a933205
+  :name: Explain the function and purpose of Continuous Deployment and Continuous
+    Integration and apply them to a project
+  :subject_uuid: 97f5bed5-418f-4ad2-b659-1aea931b36db
+  :subject_name: Deployment
+  :resources: ''
+  :guiding_questions: ''
+  :description: ''
+  :instructor_notes: ''
+  :tags:
+  - deployment
+- :uuid: c7d50112-b113-436a-a875-f119d72eb7f0
+  :name: Explain the function and purpose environment variables and use them in their
+    projects
+  :subject_uuid: 97f5bed5-418f-4ad2-b659-1aea931b36db
+  :subject_name: Deployment
+  :resources: ''
+  :guiding_questions: ''
+  :description: ''
+  :instructor_notes: ''
+  :tags:
+  - deployment
+- :uuid: 2c7ae83c-dbd5-4da8-a71f-7dc05bd54ea1
+  :name: Deploy to Heroku (a PaaS Provider)
+  :subject_uuid: 97f5bed5-418f-4ad2-b659-1aea931b36db
+  :subject_name: Deployment
+  :resources: "Objectives\r\n\r\n- Can start a database shell from the command line
+    (heroku pg:psql)\r\n- Can tail logs (heroku logs -t)\r\n- Set and read environment
+    variables (heroku config / heroku config:set)\r\n- Can run a single command (heroku
+    run)\r\n"
+  :guiding_questions: ''
+  :description: ''
+  :instructor_notes: ''
+  :tags:
+  - deployment
+- :uuid: 26378c64-cbf3-40e9-8e78-6b6924e0e996
+  :name: Deploy to Pivotal Web Services Cloud Foundry
+  :subject_uuid: 97f5bed5-418f-4ad2-b659-1aea931b36db
+  :subject_name: Deployment
+  :resources: "Rationale\r\n\r\n- Pivotal owns Cloud Foundry and is a strategic partner
+    looking to hire dozens of developers\r\n- Pivotal customers of Cloud Foundry (like
+    GE, AllState, Ford etc…) are looking to hire hundreds if not thousands of developers\r\n-
+    IBM Bluemix runs on Cloud Foundry and IBM is a strategic partner looking to hire
+    hundreds if not thousands of developers\r\n\r\nObjectives\r\n\r\n- Student has
+    a functioning app on Cloud Foundry w/ bound services\r\n- Can tail logs\r\n- Set
+    and read environment variables\r\n- Can modify the start command in order to run
+    a single command\r\n- Can cf push an app using a manifest.yml file\r\n"
+  :guiding_questions: ''
+  :description: "\r\n"
+  :instructor_notes: "- https://github.com/gSchool/bluemix_notes\r\n"
+  :tags:
+  - deployment
+- :uuid: 83a4e17a-f7cf-4fe3-a48d-291e2304d7a3
+  :name: Deploy an app to EC2 and compare and contrast the AWS core philosophy with
+    Heroku and Cloud Foundry and pre-cloud era
+  :subject_uuid: 97f5bed5-418f-4ad2-b659-1aea931b36db
+  :subject_name: Deployment
+  :resources: ''
+  :guiding_questions: ''
+  :description: ''
+  :instructor_notes: "Objectives\r\n\r\n- Provision an EC2 instance using the AWS
+    management console (command line is bonus)\r\n- Describe an AMI\r\n- Login to
+    an EC2 box with their credentials\r\n- Setup security to open sane ports\r\n-
+    Get code on the box\r\n- scp / RSync / ssh in and git pull (github deploy keys)\r\n"
+  :tags:
+  - deployment
+- :uuid: 030c0df7-eb82-4f9b-b2b9-66cd4f1d1579
+  :name: Connect to another computer using SSH
+  :subject_uuid: 97f5bed5-418f-4ad2-b659-1aea931b36db
+  :subject_name: Deployment
+  :resources: ''
+  :guiding_questions: ''
+  :description: ''
+  :instructor_notes: "Objectives\r\n\r\n- Describe public / private keys\r\n- Initiate
+    an ssh session w/ a specific key\r\n- Describe the concept of an ssh session\r\n"
+  :tags:
+  - deployment
+- :uuid: ff47fa3e-5dd6-4584-a78a-1f552b6d1d04
+  :name: Develop and deploy an app using Docker containers
+  :subject_uuid: 97f5bed5-418f-4ad2-b659-1aea931b36db
+  :subject_name: Deployment
+  :resources: ''
+  :guiding_questions: ''
+  :description: "\r\n"
+  :instructor_notes: "Objectives\r\n\r\n- Describe the concept of a container and
+    how it plays a part in large deployments\r\n- Compare and contrast docker containers
+    vs virtual machines / virtualization\r\n"
+  :tags:
+  - deployment
+- :uuid: 3df59172-202f-4537-b976-d6d284645d9b
+  :name: Discuss the role and purpose of devops
+  :subject_uuid: 97f5bed5-418f-4ad2-b659-1aea931b36db
+  :subject_name: Deployment
+  :resources: ''
+  :guiding_questions: ''
+  :description: ''
+  :instructor_notes: "Objectives\r\n\r\nDescribe the function and purpose of Chef
+    / Puppet / Salt / Ansible\r\nAttach an Analytics tool such as NewRelic / Skylight
+    / Datadog\r\nException Handling\r\nAutomated provisioning / scaling\r\n"
+  :tags:
+  - deployment
+- :uuid: b7f2901b-d749-4c06-b43f-7a1a3cc9e0b1
+  :name: Set up developer environments for applications written in an unfamiliar languages
+  :subject_uuid: 4f89155e-3e0f-4a49-a1ec-27fcd4ab2f10
+  :subject_name: Application Analysis in Unfamiliar Environment
+  :resources: ''
+  :guiding_questions: ''
+  :description: "Success Criteria\r\n\r\n- Install all necessary dependencies and
+    start attached services\r\n- Local database is created and populated\r\n- Application
+    starts and all “working” features are usable\r\n\r\n"
+  :instructor_notes: "Notes:\r\n\r\nApp should have oauth where they need to setup
+    an app, some other database, have to tweak some ENV variables\r\n\r\nLook at 7
+    languages in 7 weeks"
+  :tags:
+  - Application Analysis in Unfamiliar Environment
+- :uuid: 483b7e41-5a80-4912-9a05-50dc02a5d6da
+  :name: Analyze existing code in applications written in unfamiliar languages to
+    fulfill requirements
+  :subject_uuid: 4f89155e-3e0f-4a49-a1ec-27fcd4ab2f10
+  :subject_name: Application Analysis in Unfamiliar Environment
+  :resources: "Rails Bug Repos\r\n\r\n- https://github.com/gSchool/rails-bug-01\r\n-
+    https://github.com/gSchool/rails-bug-06\r\n- https://github.com/gSchool/rails-bug-05\r\n-
+    https://github.com/gSchool/rails-bug-03\r\n- https://github.com/gSchool/rails-bug-04"
+  :guiding_questions: ''
+  :description: "Success Criteria\r\n\r\n- Fixes bugs in existing, unfamiliar code
+    (at least 1)\r\n- Adds features to fulfill requirements (at least 1)\r\n\r\n"
+  :instructor_notes: We could run a “first-week” simulation - several days of setting
+    up dev environments and working through complex code bases.
+  :tags:
+  - Application Analysis in Unfamiliar Environment
+- :uuid: ae10af64-3516-4b58-8839-da4b10b7ab60
+  :name: Use ES2015 features to write more concise Javascript
+  :subject_uuid: bc964825-e8e8-4e2c-a46a-5108e303209c
+  :subject_name: ES2015
+  :resources: "- http://kangax.github.io/compat-table/es6/ - compatibility tables
+    for ES6\r\n- https://babeljs.io/repl/ - convert ES6 code in a browser to an ES5-safe
+    version for most features"
+  :guiding_questions: ''
+  :description: "https://github.com/gSchool/es2015-with-babeljs\r\n"
+  :instructor_notes: "There isn’t one for this, but there’s a handful of es6 / es5
+    examples in the repo. We should probably extract a set of ES5 code and ask students
+    to write out the ES6 equivalents for those. That, combined with a quiz of a few
+    questions would be sufficient for this section.\r\n"
+  :tags:
+  - ES2015
+- :uuid: 202ef59e-0ddb-4740-aa16-a0a9371ea9f2
+  :name: Identifies and explains purpose of common software architectural concepts
+  :subject_uuid: 961546f8-3186-46cf-8201-4b469068fe43
+  :subject_name: Architecture
+  :resources: ''
+  :guiding_questions: ''
+  :description: ''
+  :instructor_notes: ''
+  :tags:
+  - Architecture
+- :uuid: 3ffd03df-825f-4253-9145-b3568fad4400
+  :name: Diagram architecture of an n-tier web app
+  :subject_uuid: 961546f8-3186-46cf-8201-4b469068fe43
+  :subject_name: Architecture
+  :resources: ''
+  :guiding_questions: ''
+  :description: ''
+  :instructor_notes: ''
+  :tags:
+  - Architecture
+- :uuid: 1620a31d-8ad1-4074-a05c-212b88882d3f
+  :name: Discuss and diagram microservice architecture
+  :subject_uuid: 961546f8-3186-46cf-8201-4b469068fe43
+  :subject_name: Architecture
+  :resources: "http://12factor.net/\r\n"
+  :guiding_questions: ''
+  :description: ''
+  :instructor_notes: ''
+  :tags:
+  - Architecture
+- :uuid: eb2fd32a-cf9e-4b71-a73d-b9ac4a6feb6a
+  :name: Build a web app that separates concerns using models, views, and controllers
+  :subject_uuid: 961546f8-3186-46cf-8201-4b469068fe43
+  :subject_name: Architecture
+  :resources: ''
+  :guiding_questions: ''
+  :description: ''
+  :instructor_notes: ''
+  :tags:
+  - Architecture
+- :uuid: f42ae53f-9865-4ecd-9f07-0e90458cce06
+  :name: Approaches problems in a methodical and disciplined manner
+  :subject_uuid: 3a960bd9-34f6-442e-ac2f-c83d63726eea
+  :subject_name: Thinking Like a Developer
+  :resources: ''
+  :guiding_questions: ''
+  :description: ''
+  :instructor_notes: ''
+  :tags:
+  - Thinking Like a Developer
+- :uuid: ebbb3b4a-f161-4381-a1d3-5de8b829a6f5
+  :name: Engages in experimental problem solving
+  :subject_uuid: 3a960bd9-34f6-442e-ac2f-c83d63726eea
+  :subject_name: Thinking Like a Developer
+  :resources: ''
+  :guiding_questions: ''
+  :description: ''
+  :instructor_notes: ''
+  :tags:
+  - Thinking Like a Developer
+- :uuid: efcd7e95-21f7-468f-beb0-16406034e07f
+  :name: Uses documentation and resources effectively
+  :subject_uuid: 3a960bd9-34f6-442e-ac2f-c83d63726eea
+  :subject_name: Thinking Like a Developer
+  :resources: ''
+  :guiding_questions: ''
+  :description: "Objectives\r\n- Can formulate google queries\r\n    - for documentation\r\n
+    \   - to find out how to do something\r\n    - to debug errors\r\n"
+  :instructor_notes: ''
+  :tags:
+  - Thinking Like a Developer
+- :uuid: fbfb6e79-41d2-4f6e-a9a9-a3f4914eeb96
+  :name: Interacts with error messages
+  :subject_uuid: 3a960bd9-34f6-442e-ac2f-c83d63726eea
+  :subject_name: Thinking Like a Developer
+  :resources: ''
+  :guiding_questions: ''
+  :description: ''
+  :instructor_notes: ''
+  :tags:
+  - Thinking Like a Developer
+- :uuid: 8f069e66-5daa-43c6-9a35-1778c4212f05
+  :name: Participates productively in code reviews
+  :subject_uuid: 3a960bd9-34f6-442e-ac2f-c83d63726eea
+  :subject_name: Thinking Like a Developer
+  :resources: ''
+  :guiding_questions: ''
+  :description: ''
+  :instructor_notes: "Assessments:\r\n\r\nGiven a style guide and some code, determine
+    what’s wrong and give feedback.\r\n"
+  :tags:
+  - Thinking Like a Developer
+- :uuid: 75c3f6c1-135d-496f-a48d-80867421d7eb
+  :name: Collaborates productively with other developers
+  :subject_uuid: 3a960bd9-34f6-442e-ac2f-c83d63726eea
+  :subject_name: Thinking Like a Developer
+  :resources: ''
+  :guiding_questions: ''
+  :description: ''
+  :instructor_notes: "- Doesn’t bully in code / commits\r\n- Doesn’t tell other that
+    their code is shit\r\n- Doesn’t get too animated\r\n"
+  :tags:
+  - Thinking Like a Developer
+- :uuid: 60b4741a-2e78-4e5c-b15e-857eb27101f3
+  :name: Design and execute user tests, then implement changes based on feedback
+  :subject_uuid: 674acdc2-2bf2-4b76-9d51-aa3c3810f229
+  :subject_name: UX User Testing
+  :resources: ''
+  :guiding_questions: ''
+  :description: ''
+  :instructor_notes: ''
+  :tags:
+  - UX User Testing
+- :uuid: 0b94605b-a62d-4262-9881-5e189091883e
+  :name: Contrast statically-typed and dynamically-typed languages
+  :subject_uuid: a4f17ec8-f604-4764-98b7-ee21e53e3f5e
+  :subject_name: OOP w/ Statically Typed Language
+  :resources: ''
+  :guiding_questions: ''
+  :description: ''
+  :instructor_notes: "Objectives: \r\n\r\n- Favor classes to builtin data types\r\n-
+    Explain how the JVM works\r\n    - Identify that the JVM is a virtual machine\r\n
+    \   - Explain how the language compiles into bytecode\r\n    - Describe structure
+    of a compiled application (entry points / main in java)\r\n    - Identify other
+    languages that run on the JVM\r\n"
+  :tags:
+  - Object Oriented Programming with Statically Typed Languages
+- :uuid: 96cb5a5c-56a4-4085-95f6-5050b2dc1ec3
+  :name: Solve interview-style questions using Java
+  :subject_uuid: a4f17ec8-f604-4764-98b7-ee21e53e3f5e
+  :subject_name: OOP w/ Statically Typed Language
+  :resources: Cracking the coding interview (book)
+  :guiding_questions: ''
+  :description: ''
+  :instructor_notes: "- https://github.com/gSchool/java-challenges\r\n- https://github.com/gSchool/setting-up-java8-environment\r\n-
+    https://github.com/gSchool/amusement-parks-java\r\n- https://github.com/gSchool/java-exercise-template\r\n-
+    https://github.com/gSchool/word-cloud-java\r\n- https://github.com/gSchool/data-structures-java\r\n-
+    https://github.com/akullpp/awesome-java"
+  :tags:
+  - Object Oriented Programming with Statically Typed Languages
+- :uuid: 7b91a898-2160-42df-b7a2-0d40e045ca89
+  :name: Compare and contrast OOP and Functional Programming
+  :subject_uuid: a4f17ec8-f604-4764-98b7-ee21e53e3f5e
+  :subject_name: OOP w/ Statically Typed Language
+  :resources: ''
+  :guiding_questions: ''
+  :description: ''
+  :instructor_notes: ''
+  :tags:
+  - oo
+- :uuid: 1171fcb5-b24a-4a12-9ed2-5bbe33d38fe2
+  :name: Define and explain the significance of the major principles of Object Oriented
+    Programming
+  :subject_uuid: a4f17ec8-f604-4764-98b7-ee21e53e3f5e
+  :subject_name: OOP w/ Statically Typed Language
+  :resources: ''
+  :guiding_questions: ''
+  :description: ''
+  :instructor_notes: ''
+  :tags:
+  - Object Oriented Programming with Statically Typed Languages
+- :uuid: 4e825d10-a3ec-47ba-9b9e-0efd7baa75de
+  :name: Employ a “Cracking the Coding Interview” technique when solving brain teaser
+    problems
+  :subject_uuid: b9c01cd4-61b4-4a30-9d88-8b6d2e163c51
+  :subject_name: Data Structures / Algorithms
+  :resources: ''
+  :guiding_questions: ''
+  :description: ''
+  :instructor_notes: ''
+  :tags:
+  - Data Structures/Algorithms
+- :uuid: 506e9980-aca1-4b64-a0f1-03fc626fcd76
+  :name: Implement, evaluate, and use some common data structures
+  :subject_uuid: b9c01cd4-61b4-4a30-9d88-8b6d2e163c51
+  :subject_name: Data Structures / Algorithms
+  :resources: ''
+  :guiding_questions: ''
+  :description: ''
+  :instructor_notes: ''
+  :tags:
+  - Data Structures/Algorithms
+- :uuid: de92c646-a9e9-415e-9003-cef0af8c1b5b
+  :name: Determine the correct algorithm and data structure for interview-style problems
+    following the “Cracking the Coding Interview” process
+  :subject_uuid: b9c01cd4-61b4-4a30-9d88-8b6d2e163c51
+  :subject_name: Data Structures / Algorithms
+  :resources: "[Cracking the Coding Interview Process](https://qph.is.quoracdn.net/main-qimg-379a9cf0a7bd42f8084d137370e4bd79?convert_to_webp=true)"
+  :guiding_questions: ''
+  :description: "Examples may be: \r\n* k-means\r\n* kNN (k nearest neighbor)\r\n*
+    checksum\r\n* DFS\r\n* BFS\r\n"
+  :instructor_notes: "### Assessments\r\n* If you want to know if two files are the
+    same, which algorithm would you use? Why?"
+  :tags:
+  - Data Structures/Algorithms
+- :uuid: d99347e9-c1ca-4b96-b0b5-035a35a9eb87
+  :name: Implement common algorithms and describe more complex algorithms
+  :subject_uuid: b9c01cd4-61b4-4a30-9d88-8b6d2e163c51
+  :subject_name: Data Structures / Algorithms
+  :resources: ''
+  :guiding_questions: ''
+  :description: ''
+  :instructor_notes: ''
+  :tags:
+  - Data Structures/Algorithms
+- :uuid: 17eaabac-159a-45e7-9093-a1dab2163467
+  :name: Identify and diagram common data structures
+  :subject_uuid: b9c01cd4-61b4-4a30-9d88-8b6d2e163c51
+  :subject_name: Data Structures / Algorithms
+  :resources: ''
+  :guiding_questions: ''
+  :description: ''
+  :instructor_notes: ''
+  :tags:
+  - Data Structures/Algorithms
+- :uuid: 1faa677b-581a-420e-83c7-320771813084
+  :name: Analyze an algorithm and identify the Big O
+  :subject_uuid: b9c01cd4-61b4-4a30-9d88-8b6d2e163c51
+  :subject_name: Data Structures / Algorithms
+  :resources: http://bigocheatsheet.com/
+  :guiding_questions: ''
+  :description: ''
+  :instructor_notes: ''
+  :tags:
+  - Data Structures/Algorithms
+- :uuid: 295bde63-b71e-44e7-a761-8805918bf067
+  :name: Gracefully respond to a question you don’t know the answer to
+  :subject_uuid: 738bb9dd-4374-4c22-a4e5-e57374ad8103
+  :subject_name: Technical Interview Prep
+  :resources: ''
+  :guiding_questions: ''
+  :description: ''
+  :instructor_notes: "- Introduction to Technical Resumes - https://github.com/gSchool/fullstack-curriculum/blob/master/lessons/interviews/resumes.instructor.md
+    (Works through some sample resumes trying to highlight what a good bullet point
+    looks like)\r\n- Introduction to Cover Letters - https://github.com/gSchool/fullstack-curriculum/blob/master/lessons/interviews/cover-letters.instructor.md
+    (Student activity with actual job postings that are very different to suss out
+    what they like and don't about a given job posting)\r\n- https://github.com/gSchool/group_project_specs\r\n-
+    https://github.com/gSchool/employment-links\r\n- https://github.com/gSchool/interview-questions\r\n-
+    https://github.com/gSchool/sf-interview-questions\r\n"
+  :tags:
+  - Technical Interview Prep
+- :uuid: 2cf9eee6-b20e-40ae-9d8b-0cbbf641b3d3
+  :name: Discuss a project that you worked on knowledgeably and enthusiastically
+  :subject_uuid: 738bb9dd-4374-4c22-a4e5-e57374ad8103
+  :subject_name: Technical Interview Prep
+  :resources: ''
+  :guiding_questions: ''
+  :description: ''
+  :instructor_notes: ''
+  :tags:
+  - Technical Interview Prep
+- :uuid: ed971588-40d8-4c88-949c-50a38d5b199e
+  :name: Employ a 4-step process at a whiteboard interview
+  :subject_uuid: 738bb9dd-4374-4c22-a4e5-e57374ad8103
+  :subject_name: Technical Interview Prep
+  :resources: ''
+  :guiding_questions: ''
+  :description: ''
+  :instructor_notes: ''
+  :tags:
+  - Technical Interview Prep
+- :uuid: 313dd17a-9db9-4b1f-8033-19e75100215b
+  :name: Build a single-page CRUD application in Angular using routing, factories
+    / services and $http
+  :subject_uuid: 9f2a44df-5293-4f98-b717-637fa30e7b3f
+  :subject_name: Client Side Frameworks (Angular)
+  :resources: "- https://gist.github.com/Colt/0a029fcdc7fddd23a27e\r\n- The Basics
+    of Angular - W/S pt1 - https://github.com/gSchool/intro-to-angular-workshop (The
+    basics of Angular from initial setup)\r\n- Angular Advanced Topics - https://github.com/MartinChavez/AngularJS-Advanced-Topics\r\n-
+    Angular Patterns - https://www.youtube.com/watch?v=UlvCbnKAH3g\r\n- https://thinkster.io/a-better-way-to-learn-angularjs/\r\n\r\nVideos:\r\n\r\n<iframe
+    src=\"https://player.vimeo.com/video/136159945?byline=0&portrait=0\" width=\"500\"
+    height=\"513\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>\r\n\r\n---\r\n\r\n<iframe
+    src=\"https://player.vimeo.com/video/135991632?byline=0&portrait=0\" width=\"500\"
+    height=\"388\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>\r\n\r\n---\r\n\r\n<iframe
+    src=\"https://player.vimeo.com/video/135907781?byline=0&portrait=0\" width=\"500\"
+    height=\"456\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>\r\n\r\n---\r\n\r\n<iframe
+    src=\"https://player.vimeo.com/video/135898971?byline=0&portrait=0\" width=\"500\"
+    height=\"489\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>\r\n\r\n---\r\n\r\n<iframe
+    src=\"https://player.vimeo.com/video/135778837?byline=0&portrait=0\" width=\"500\"
+    height=\"313\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>"
+  :guiding_questions: ''
+  :description: ''
+  :instructor_notes: ''
+  :tags:
+  - Client Side Frameworks (Angular)
+- :uuid: 4745f94b-3296-4a5e-986a-33fd62e76e5b
+  :name: Implement custom-directives
+  :subject_uuid: 9f2a44df-5293-4f98-b717-637fa30e7b3f
+  :subject_name: Client Side Frameworks (Angular)
+  :resources: ''
+  :guiding_questions: ''
+  :description: ''
+  :instructor_notes: "**Objectives**  \r\nIdentify some clear use cases for creating
+    custom directives\r\n"
+  :tags:
+  - Client Side Frameworks (Angular)
+- :uuid: 33cdd327-05df-4cd7-8979-7cd094012d0a
+  :name: Explain client-side routing as it relates to server-side routing
+  :subject_uuid: 9f2a44df-5293-4f98-b717-637fa30e7b3f
+  :subject_name: Client Side Frameworks (Angular)
+  :resources: ''
+  :guiding_questions: ''
+  :description: ''
+  :instructor_notes: ''
+  :tags:
+  - Client Side Frameworks (Angular)
+- :uuid: 35f1442d-6827-4fef-972d-c75f474aee05
+  :name: Implement and diagram token based authentication between single-page apps
+    and servers
+  :subject_uuid: 9f2a44df-5293-4f98-b717-637fa30e7b3f
+  :subject_name: Client Side Frameworks (Angular)
+  :resources: ''
+  :guiding_questions: ''
+  :description: ''
+  :instructor_notes: "**Resources**   \r\n- https://github.com/auth0/angular-jwt\r\n-
+    https://github.com/auth0/express-jwt\r\n"
+  :tags:
+  - Client Side Frameworks (Angular)
+- :uuid: 81fbc464-d889-4e0c-a33e-d0d0f9c45366
+  :name: Gather and validate requirements from a user and test that user’s response
+    to a minimum testable artifact
+  :subject_uuid: e8906da2-a006-4313-ac1e-459b13d3e447
+  :subject_name: Design
+  :resources: ''
+  :guiding_questions: ''
+  :description: ''
+  :instructor_notes: "Resources\r\n\r\n- http://www.slideshare.net/intelleto/ux-lisbon2014-designingleanuxhandouts\r\n\r\nNotes\r\n\r\n-
+    We’re trying to teach rapid prototyping here. It’s okay if their minimum testable
+    artifact is a powerpoint presentation or some sketches. It doesn’t have to be
+    a working application.\r\n\r\nAssessment\r\n\r\n- Single writeup that asks questions
+    about process\r\n- A series of wireframes / v1, v2, v3 etc...\r\n"
+  :tags:
+  - design
+- :uuid: abbd6e28-c8eb-4fd5-84c7-fd7a3eb75acf
+  :name: Design applications from content inventories using wireframes
+  :subject_uuid: e8906da2-a006-4313-ac1e-459b13d3e447
+  :subject_name: Design
+  :resources: ''
+  :guiding_questions: ''
+  :description: ''
+  :instructor_notes: "Assessments\r\n\r\n- When students submit a project, they have
+    to include their design artifacts, including their content inventory.\r\n\r\nSequencing
+    Notes:\r\n\r\n- Do this early?\r\n- Enumerate content elements in README / somewhere
+    in the Q1 project\r\n"
+  :tags:
+  - design
+- :uuid: d4db2ad6-549b-486e-b338-b8a6d0875dba
+  :name: Create and apply style guides to an application
+  :subject_uuid: e8906da2-a006-4313-ac1e-459b13d3e447
+  :subject_name: Design
+  :resources: ''
+  :guiding_questions: ''
+  :description: ''
+  :instructor_notes: "Resources\r\n- https://frontify.com/styleguide they should look
+    like this\r\n- http://www.colourlovers.com/ have not terrible colors\r\n- https://color.adobe.com/\r\n"
+  :tags:
+  - design
+- :uuid: 26d69234-6bae-45bb-a4af-c82aa2bdc567
+  :name: Create and implement responsive/adaptive designs
+  :subject_uuid: e8906da2-a006-4313-ac1e-459b13d3e447
+  :subject_name: Design
+  :resources: ''
+  :guiding_questions: ''
+  :description: ''
+  :instructor_notes: ''
+  :tags:
+  - design
+- :uuid: 2324394c-2c61-42a5-8fc9-d8deb8cd84d4
+  :name: Navigate your computer swiftly using keyboard shortcuts
+  :subject_uuid: 51d9c30f-f5c5-479b-9a7d-b04b3e37c518
+  :subject_name: Dev Environment
+  :resources: ''
+  :guiding_questions: ''
+  :description: ''
+  :instructor_notes: ''
+  :tags:
+  - dev-environment
+- :uuid: e39d39a9-8b5e-4aa7-9f34-04cb9e5cb9a4
+  :name: Touch type code at least 40 WPM
+  :subject_uuid: 51d9c30f-f5c5-479b-9a7d-b04b3e37c518
+  :subject_name: Dev Environment
+  :resources: https://typing.io/
+  :guiding_questions: ''
+  :description: ''
+  :instructor_notes: ''
+  :tags:
+  - dev-environment
+- :uuid: 1629f29c-5aa2-4036-9db3-ca3cbf3ae3c5
+  :name: Use dotfiles to configure projects, environments, and tools
+  :subject_uuid: 51d9c30f-f5c5-479b-9a7d-b04b3e37c518
+  :subject_name: Dev Environment
+  :resources: ''
+  :guiding_questions: ''
+  :description: ''
+  :instructor_notes: ''
+  :tags:
+  - dev-environment
+- :uuid: 422b1926-0ce2-4e98-b045-16065b708a8c
+  :name: Debug and inspect web pages with the Chrome DevTools
+  :subject_uuid: 51d9c30f-f5c5-479b-9a7d-b04b3e37c518
+  :subject_name: Dev Environment
+  :resources: ''
+  :guiding_questions: ''
+  :description: "https://developer.chrome.com/devtools\r\n"
+  :instructor_notes: ''
+  :tags:
+  - dev-environment
+- :uuid: 55bb38a3-6480-4568-afb8-1f9af2586008
+  :name: Send HTTP requests and view HTTP responses with Postman
+  :subject_uuid: 51d9c30f-f5c5-479b-9a7d-b04b3e37c518
+  :subject_name: Dev Environment
+  :resources: ''
+  :guiding_questions: ''
+  :description: ''
+  :instructor_notes: ''
+  :tags:
+  - dev-environment
+- :uuid: 3ca4e41b-1e2c-4c81-9ed0-4b6d27ecb584
+  :name: Work with and describe testing database-driven server-side applications w/
+    Express and Postgres given a working skeleton
+  :subject_uuid: 3589276c-59e9-49bb-a78b-a4384fa5df5e
+  :subject_name: Automated Testing
+  :resources: ''
+  :guiding_questions: ''
+  :description: ''
+  :instructor_notes: ''
+  :tags:
+  - automated-testing
+- :uuid: a85ad348-f67d-4992-be3e-6262df334f4c
+  :name: Discuss the pros and cons of automated testing
+  :subject_uuid: 3589276c-59e9-49bb-a78b-a4384fa5df5e
+  :subject_name: Automated Testing
+  :resources: ''
+  :guiding_questions: ''
+  :description: "\r\n"
+  :instructor_notes: "**Objective**\r\nBDD vs. TDD - what’s the difference? vs testing
+    after the fact (flavors)\r\n\r\n**Vocabulary**\r\nExploratory testing"
+  :tags:
+  - automated-testing
+- :uuid: f8d9fdca-3224-4214-999a-35677e570bf3
+  :name: Write unit tests in a TDD style using Mocha Chai
+  :subject_uuid: 3589276c-59e9-49bb-a78b-a4384fa5df5e
+  :subject_name: Automated Testing
+  :resources: ''
+  :guiding_questions: ''
+  :description: ''
+  :instructor_notes: "Objective\r\n\r\nlist alternatives to Mocha, list alternatives
+    to Chai\r\n\r\nVocabulary\r\n\r\nRed / Green / Refactor\r\nSetup / Execution /
+    Assertion(Expectation) / Teardown"
+  :tags:
+  - automated-testing
+- :uuid: f2fe5f6b-2f0e-479a-ae9e-0819114ac261
+  :name: Discuss agile values and principles
+  :subject_uuid: 08fffa0f-b2ae-4521-b3d0-e682682a0bdc
+  :subject_name: Agile Project Management
+  :resources: "* http://agilemanifesto.org/\r\n* http://www.halfarsedagilemanifesto.org/
+    ;)"
+  :guiding_questions: "* Ask “What is agile?”,\r\n* Response should reflect/touch
+    on the principles."
+  :description: ''
+  :instructor_notes: Students don’t have to recall the principles, just talk about
+    what they mean when presented with them.
+  :tags:
+  - Agile Project Management
+- :uuid: 91239535-c2c4-465d-bf3b-ad58d3cd45dd
+  :name: Complete projects using an agile methodology
+  :subject_uuid: 08fffa0f-b2ae-4521-b3d0-e682682a0bdc
+  :subject_name: Agile Project Management
+  :resources: ''
+  :guiding_questions: ''
+  :description: ''
+  :instructor_notes: ''
+  :tags:
+  - Agile Project Management
+- :uuid: 701f8c8d-ba95-450c-b159-c74fffe514ae
+  :name: Explain the scrum process and define key terms
+  :subject_uuid: 08fffa0f-b2ae-4521-b3d0-e682682a0bdc
+  :subject_name: Agile Project Management
+  :resources: ''
+  :guiding_questions: ''
+  :description: ''
+  :instructor_notes: ''
+  :tags:
+  - Agile Project Management
+- :uuid: 3d6d31c7-8c16-4103-bda6-7633780d6884
+  :name: Make sequential asynchronous calls in separate methods and return the final
+    result with basic error handling using Promises
+  :subject_uuid: 78f9e5b5-5a89-4ce2-b993-4af17d620f27
+  :subject_name: Promises
+  :resources: ''
+  :guiding_questions: ''
+  :description: ''
+  :instructor_notes: ''
+  :tags:
+  - promises
+- :uuid: 6966190a-ec1d-4580-9411-c5a1d5efe183
+  :name: Discuss the basic function and purpose of promises
+  :subject_uuid: 78f9e5b5-5a89-4ce2-b993-4af17d620f27
+  :subject_name: Promises
+  :resources: ''
+  :guiding_questions: ''
+  :description: "Success Criteria\r\n"
+  :instructor_notes: "Assessments\r\nWriteup/discussion\r\nWhat are promises?\r\nHow
+    do promises work?\r\nWhat problems do promises solve for developers?\r\nWhen is
+    it appropriate to use promises?\r\n"
+  :tags:
+  - promises
+- :uuid: bb0bb507-913f-473e-bfc8-bde6bb9b14d8
+  :name: Make parallel requests using Promise.all
+  :subject_uuid: 78f9e5b5-5a89-4ce2-b993-4af17d620f27
+  :subject_name: Promises
+  :resources: ''
+  :guiding_questions: ''
+  :description: ''
+  :instructor_notes: ''
+  :tags:
+  - promises
+- :uuid: e5140109-2ee1-4153-b9a8-7c363d6cf450
+  :name: Design and implement a RESTful API
+  :subject_uuid: 99e95554-7938-4bb4-af1b-ffbe8b5fec3d
+  :subject_name: Designing APIs
+  :resources: ''
+  :guiding_questions: ''
+  :description: "\r\n"
+  :instructor_notes: ''
+  :tags:
+  - designing-apis
+- :uuid: 4b1a0b9e-2b09-4cb3-95ff-8827c5d86b3e
+  :name: Document an API using an automated tool
+  :subject_uuid: 99e95554-7938-4bb4-af1b-ffbe8b5fec3d
+  :subject_name: Designing APIs
+  :resources: ''
+  :guiding_questions: ''
+  :description: ''
+  :instructor_notes: ''
+  :tags:
+  - designing-apis
+- :uuid: 5cf2f108-465e-4f78-83e3-3447f2a67816
+  :name: Secure an API endpoint using token-based authentication and CORS
+  :subject_uuid: 99e95554-7938-4bb4-af1b-ffbe8b5fec3d
+  :subject_name: Designing APIs
+  :resources: ''
+  :guiding_questions: ''
+  :description: ''
+  :instructor_notes: ''
+  :tags:
+  - designing-apis
+- :uuid: 65aedb54-ed42-4394-9fd0-f490d733e5d7
+  :name: Discuss common API design concepts
+  :subject_uuid: 99e95554-7938-4bb4-af1b-ffbe8b5fec3d
+  :subject_name: Designing APIs
+  :resources: ''
+  :guiding_questions: ''
+  :description: ''
+  :instructor_notes: ''
+  :tags:
+  - designing-apis
+- :uuid: b47edce0-4cc0-44a8-bd13-604819c5c429
+  :name: Write higher order functions that accept functions as parameters
+  :subject_uuid: 8872851b-d144-4d19-80fd-14e2ca18feb9
+  :subject_name: Functional Programming with Javascript
+  :resources: ''
+  :guiding_questions: ''
+  :description: Demonstrate how higher order functions work and explain why they’re
+    useful.
+  :instructor_notes: "## Assessments\r\n\r\n- https://github.com/gSchool/javascript_timers_callbacks_exercise\r\n-
+    https://github.com/gSchool/asynchronous-js-nested-callbacks\r\n\r\n## Resources\r\n\r\n-
+    http://eloquentjavascript.net/1st_edition/chapter6.html\r\n- https://www.youtube.com/watch?v=k7-N8R0-KY4\r\n"
+  :tags:
+  - js
+  - programming
+  - functional programming
+  - functions
+- :uuid: a4bb9aed-6ce1-464f-8e79-45bf5f8d21e3
+  :name: Iterate over lists using ES5 Array Methods in a functional style
+  :subject_uuid: 8872851b-d144-4d19-80fd-14e2ca18feb9
+  :subject_name: Functional Programming with Javascript
+  :resources: ''
+  :guiding_questions: ''
+  :description: ''
+  :instructor_notes: "## Assessments\r\n\r\n- https://github.com/timoxley/functional-javascript-workshop\r\n-
+    https://github.com/gSchool/js-hof-filter-map-reduce\r\n- https://github.com/gSchool/lodash\r\n\r\n##
+    Resources\r\n\r\n- https://www.youtube.com/watch?v=BMUiFMZr7vk&list=PL0zVEGEvSaeEd9hlmCXrk5yUyqUag-n84\r\n-
+    http://code.tutsplus.com/tutorials/what-they-didnt-tell-you-about-es5s-array-extras--net-28263\r\n"
+  :tags:
+  - functional js
+- :uuid: 943433bf-6895-46d6-95d6-ec1d74ebe7a6
+  :name: Uses `this` to manipulate the current context
+  :subject_uuid: d9b6b702-189e-472d-b5bf-cfc62cd4dafe
+  :subject_name: JavaScript Object Model
+  :resources: "- https://github.com/gSchool/shapes_javascript_inheritance\r\n- http://jhusain.github.io/learnrx/\r\n-
+    https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call\r\n-
+    https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind\r\n-
+    https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply"
+  :guiding_questions: ''
+  :description: ''
+  :instructor_notes: "## Assessments\r\n\r\n- Use setTimeout and .bind() to create
+    methods that execute after a set period of time\r\n- use .call() to call the constructor
+    from a more general class\r\n"
+  :tags:
+  - js
+  - programming
+  - OOP
+- :uuid: 68df35a0-a564-4e13-856a-7840394453cc
+  :name: Creates “Classes” and Instances with JS
+  :subject_uuid: d9b6b702-189e-472d-b5bf-cfc62cd4dafe
+  :subject_name: JavaScript Object Model
+  :resources: ''
+  :guiding_questions: ''
+  :description: ''
+  :instructor_notes: "## Assessments\r\n\r\n- https://github.com/gSchool/shapes_javascript_inheritance\r\n-
+    https://github.com/gSchool/js-polymorphism-guitar-store\r\n"
+  :tags:
+  - javascript object model
+- :uuid: df684af4-c320-4fa7-9b2e-1793b474786a
+  :name: Uses Properties to store State on an Instance
+  :subject_uuid: d9b6b702-189e-472d-b5bf-cfc62cd4dafe
+  :subject_name: JavaScript Object Model
+  :resources: ''
+  :guiding_questions: ''
+  :description: ''
+  :instructor_notes: "## Assessments\r\n\r\nhttps://github.com/gSchool/js-encapsulation\r\n"
+  :tags:
+  - javascript object model
+- :uuid: ba71c3fe-ba02-464b-a36f-f2c76fe2fcdb
+  :name: Define and invoke functions as methods on objects
+  :subject_uuid: d9b6b702-189e-472d-b5bf-cfc62cd4dafe
+  :subject_name: JavaScript Object Model
+  :resources: ''
+  :guiding_questions: ''
+  :description: ''
+  :instructor_notes: "## Assessments\r\n\r\n- Write functions stored as values of
+    properties\r\n- Write functions that are stored on the prototype\r\n- Write closures
+    that hide private class data\r\n- Explain why we store methods on the prototype
+    object\r\n- https://github.com/gSchool/js-encapsulation\r\n\r\n"
+  :tags:
+  - javascript object model
+- :uuid: 9c615612-2207-4fba-a89c-2eaab42a0200
+  :name: "‘Set the Stage’ before engaging in a learning experience"
+  :subject_uuid: d66ac86f-5303-481f-b64d-f9d1894beefe
+  :subject_name: Learning to Learn
+  :resources: "Learn Anything (motivation) - https://www.youtube.com/watch?v=JC82Il2cjqA\r\nShort
+    motivating video on learning\r\n"
+  :guiding_questions: ''
+  :description: "**Why?**\r\n\r\nWe only have so much working energy and willpower
+    - wasting these precious resources on distractions that aren’t related to the
+    task at hand handicaps learning. Focused practice is the key to developing a new
+    skill.\r\n"
+  :instructor_notes: ''
+  :tags:
+  - learning-to-learn
+- :uuid: 0fe91031-ee79-4b0f-a01d-a6012876b57e
+  :name: "‘Reflect’ after engaging in a learning experience"
+  :subject_uuid: d66ac86f-5303-481f-b64d-f9d1894beefe
+  :subject_name: Learning to Learn
+  :resources: ''
+  :guiding_questions: ''
+  :description: "Why? Reflecting on your learning is one of the most powerful things
+    you can do as a student. We want students to become their own teachers and have
+    visibility into their own strengths and weaknesses. It’s all about empowering
+    oneself to obtain the interventions needed to move forward.\r\n"
+  :instructor_notes: ''
+  :tags:
+  - learning-to-learn
+- :uuid: 999b62e7-65f5-4170-b131-4821fdd899e4
+  :name: "‘Play’ while engaged in and learning experience"
+  :subject_uuid: d66ac86f-5303-481f-b64d-f9d1894beefe
+  :subject_name: Learning to Learn
+  :resources: ''
+  :guiding_questions: ''
+  :description: "**Why?**\r\n\r\nFight or flight mode shuts down the outer cortex
+    (where the learning happens!). Students will learn + retain more if they’re having
+    fun and taking risks.\r\n"
+  :instructor_notes: ''
+  :tags:
+  - learning-to-learn
+- :uuid: 3d0b7ce3-2b42-47d2-9473-4c9c6f3ca4e8
+  :name: Programming Fundamentals with Javascript
+  :subject_uuid: 
+  :subject_name: 
+  :resources: "- https://github.com/gSchool/underscore_lab\r\n- [JavaScript is Weird...And
+    AWESOME](http://www.youtube.com/playlist?list=PLoYCgNOIyGABI011EYc-avPOsk1YsMUe_)\r\n-
+    [Udacity Object Oriented Javascript Course](https://www.udacity.com/course/object-oriented-javascript--ud015)\r\n-
+    [The Definitive Guide to Object-Oriented JavaScript](https://www.youtube.com/watch?v=PMfcsYzj-9M)\r\n-
+    [You Don't Know JS](https://github.com/getify/You-Dont-Know-JS)\r\n- [JS the Right
+    Way](http://jstherightway.org/)\r\n- [JS for Cats](http://jsforcats.com/)\r\n-
+    [Human Javascript](http://humanjavascript.com/)\r\n- [Single Page App Book](http://singlepageappbook.com/)\r\n-
+    [You Can't JavaScript Under Pressure](http://games.usvsth3m.com/javascript-under-pressure/)\r\n-
+    [StackOverflow's List of Resources](http://stackoverflow.com/tags/javascript/info)\r\n-
+    [Free JavaScript Books](http://jsbooks.revolunet.com/)\r\n- [10 Articles every
+    programmer must read](http://www.javacodegeeks.com/2014/05/10-articles-every-programmer-must-read.html)\r\n-
+    [Code Tuts by Yield](http://nodetuts.com/)\r\n- [Learn all the Nodes](http://www.learnallthenodes.com/)\r\n-
+    [Sails Cast](http://irlnathan.github.io/sailscasts/blog/archives/)\r\n- [Nodeguide
+    Beginner](http://nodeguide.com/beginner.html)\r\n"
+  :guiding_questions: ''
+  :description: ''
+  :instructor_notes: "- https://github.com/gSchool/async-event-problem-solving-game-a-forest-trail"
+  :tags:
+  - js
+  - programming
+- :uuid: 65630e20-5381-4e8c-a51a-835c7db47c3a
+  :name: Explain the DOM
+  :subject_uuid: 
+  :subject_name: 
+  :resources: ''
+  :guiding_questions: ''
+  :description: ''
+  :instructor_notes: 
+  :tags:
+  - js
+  - client-side
+- :uuid: 6ee086f2-26f3-47ab-a08a-36e0c7d42608
+  :name: Find and manipulate DOM elements with raw Javascript
+  :subject_uuid: 
+  :subject_name: 
+  :resources: "- https://github.com/gSchool/DOM_Intro_Exercise\r\n- https://github.com/gSchool/air-travel-calculator\r\n-
+    https://github.com/gSchool/simple-todo-list\r\n- https://github.com/gSchool/tip-calculator-html-js\r\n-
+    https://github.com/gSchool/memory-game-lab\r\n- https://github.com/gSchool/walking-man-exercise\r\n-
+    https://github.com/gSchool/student-apis\r\n- https://github.com/gSchool/jquery-demo\r\n-
+    https://github.com/gSchool/basic-http\r\n- https://github.com/gSchool/led-light-js\r\n-
+    https://github.com/gSchool/data-structures-js\r\n- https://github.com/gSchool/grading-js\r\n-
+    https://github.com/gSchool/jQuery-selector-practice\r\n- https://github.com/gSchool/todo-js\r\n-
+    https://github.com/gSchool/taskly\r\n- https://github.com/gSchool/audio-player\r\n-
+    https://github.com/gSchool/javascript-variables\r\n- https://github.com/gSchool/jquery-exercises-solutions\r\n-
+    https://github.com/gSchool/js-music-player\r\n- https://github.com/gSchool/single-page-omdb\r\n-
+    https://github.com/gSchool/memory-refactor\r\n- https://github.com/gSchool/javascript-core\r\n-
+    https://github.com/gSchool/react-workshop\r\n- https://github.com/gSchool/javascript-variables-beginner\r\n-
+    https://github.com/gSchool/style-with-javascript\r\n- https://github.com/gSchool/js-arrays-objects-assessment\r\n-
+    https://github.com/gSchool/inbox-solutions\r\n- https://github.com/gSchool/tip-calc-js\r\n-
+    https://github.com/gSchool/pizza-shop-form-competition\r\n- https://github.com/gSchool/todo_oop_js\r\n-
+    https://github.com/gSchool/js-assessment-dom-vocabulary\r\n- https://github.com/gSchool/dom-query-function\r\n-
+    https://github.com/gSchool/js-logic-dom-review\r\n- https://github.com/gSchool/js-assessment\r\n-
+    https://github.com/gSchool/express-pg-bookshelf-fabrics\r\n- https://github.com/gSchool/node-form-post-example\r\n-
+    https://github.com/gSchool/javascript-browser-basics\r\n- https://github.com/gSchool/javascript-conditionals\r\n-
+    https://github.com/gSchool/javascript-loops\r\n- https://github.com/gSchool/g11-lectures\r\n-
+    https://github.com/gSchool/create-chunks\r\n- https://github.com/gSchool/generator-galvanize-html\r\n-
+    https://github.com/gSchool/js-shuffle-dom\r\n- https://github.com/gSchool/g11-js-cheat-sheet\r\n-
+    https://github.com/gSchool/g11-solutions\r\n- https://github.com/gSchool/async-event-problem-solving-game-a-forest-trail\r\n"
+  :guiding_questions: ''
+  :description: ''
+  :instructor_notes: ''
+  :tags:
+  - js
+  - client-side
+- :uuid: 072d7a30-7dc0-4513-9288-54f962c9da2c
+  :name: Handle events with raw JavaScript
+  :subject_uuid: 
+  :subject_name: 
+  :resources: "- https://github.com/gSchool/async-event-problem-solving-game-a-forest-trail"
+  :guiding_questions: ''
+  :description: ''
+  :instructor_notes: ''
+  :tags:
+  - js
+  - client-side
+- :uuid: cf8ec175-f475-48be-a587-88ed27efd158
+  :name: Explain the basic function and purpose of jQuery
+  :subject_uuid: 
+  :subject_name: 
+  :resources: "- XHR Refactor Axious Lib - https://github.com/gSchool/xhr-axios (Async,
+    promises, ajax, express api)\r\n- XHR - https://github.com/gSchool/xhr (Ajax,
+    xhr, express api)\r\n- Chrome Discover Dev Tools - http://discover-devtools.codeschool.com/
+    (DOM, Chrome Console, Debugging)\r\n- Reddit API JS - https://github.com/gSchool/reddit-api-js
+    (Ajax, xhr, reddit api, DOM, events)\r\n- jQuery/Rails To Do List - https://github.com/gSchool/jquery-rails-to-do-list
+    (Ajax, DOM)\r\n- jQuery UI To Do List - https://github.com/gSchool/jquery-ui-ajax-to-do-list
+    (Ajax, DOM)\r\n- Javascript Sound Board - https://github.com/gSchool/js-audio-layering
+    (setTimeout, HTML5 Audio, events)\r\n- Cabin Filtering App - https://github.com/gSchool/jquery-image-filtering
+    (Filter DOM elements)\r\n- What is the Dom? - https://css-tricks.com/dom/\r\n-
+    JavaScript and the DOM - a primer - https://github.com/gSchool/g11-course-curriculum/tree/master/week03/03_exercises/js-dom-basics\r\n-
+    jQuery with Madlibs - https://github.com/mjhea0/jquery-madlibs (A Michael Herman
+    original)\r\n- JavaScript Page Analytics - https://github.com/gSchool/g11-course-curriculum/tree/master/week04/04_exercises/js-page-analytics
+    (Hard stretch goal for learning jQuery)\r\n- jQuery Intro - https://github.com/gSchool/g11-course-curriculum/tree/master/week04/04_lectures/jquery-intro
+    (lecture, code along)\r\n- jQuery event delegation - https://github.com/gSchool/g11-course-curriculum/tree/master/week04/04_exercises/js-event-delegation\r\n-
+    DOM Event Bubbling - https://github.com/gSchool/g11-course-curriculum/blob/master/week04/04_lectures/jquery-intermediate/04_bubbling.md\r\n\r\n-
+    https://github.com/gSchool/itunes_song_guessing_game\r\n- https://github.com/gSchool/jQuery-Practice\r\n-
+    https://github.com/gSchool/jquery-calculator\r\n- https://github.com/gSchool/jquery-image-filtering\r\n-
+    https://github.com/gSchool/jquery-practice-01\r\n- https://github.com/gSchool/jquery-rails-to-do-list\r\n-
+    https://github.com/gSchool/jquery-ui-ajax-to-do-list\r\n- https://github.com/gSchool/checkerboard-exercise"
+  :guiding_questions: ''
+  :description: ''
+  :instructor_notes: 
+  :tags:
+  - js
+  - client-side
+  - jquery
+- :uuid: 4be93ac6-c26f-40f6-af89-695d91eb6720
+  :name: Select elements and traverse the DOM using jQuery
+  :subject_uuid: 
+  :subject_name: 
+  :resources: ''
+  :guiding_questions: ''
+  :description: ''
+  :instructor_notes: 
+  :tags:
+  - js
+  - client-side
+  - jquery
+- :uuid: 3b327e8f-8ced-4b8f-a62a-049c4e8526f2
+  :name: Create, read and alter DOM w/ jQuery
+  :subject_uuid: 
+  :subject_name: 
+  :resources: ''
+  :guiding_questions: ''
+  :description: ''
+  :instructor_notes: 
+  :tags:
+  - js
+  - client-side
+  - jquery
+- :uuid: 2596b490-ff76-4ba8-a088-c99d43b6acfd
+  :name: Handle and respond to DOM events with jQuery
+  :subject_uuid: 
+  :subject_name: 
+  :resources: ''
+  :guiding_questions: ''
+  :description: ''
+  :instructor_notes: 
+  :tags:
+  - js
+  - client-side
+  - jquery
+- :uuid: 149509fe-ceff-405d-a592-9f1d6751363c
+  :name: Use jQuery AJAX methods
+  :subject_uuid: 
+  :subject_name: 
+  :resources: https://github.com/gSchool/g11-course-curriculum/tree/master/week06/06_lectures/js-ajax-apis
+  :guiding_questions: ''
+  :description: to perform asynchronous HTTP requests and interact with APIs.
+  :instructor_notes: ''
+  :tags:
+  - js
+  - client-side
+  - jquery
+- :uuid: af34c1cf-3b1b-4e5a-be27-527bb11dde61
+  :name: XMLHttpRequest & AJAX
+  :subject_uuid: 
+  :subject_name: 
+  :resources: ''
+  :guiding_questions: ''
+  :description: ''
+  :instructor_notes: ''
+  :tags:
+  - js
+  - ajax
+- :uuid: eb8cc0e3-f818-4633-bb2c-f8a5598ef5c4
+  :name: Explain the function and purpose of Cookies
+  :subject_uuid: 
+  :subject_name: 
+  :resources: ''
+  :guiding_questions: ''
+  :description: ''
+  :instructor_notes: 
+  :tags:
+  - http
+- :uuid: cc9cbc10-6a34-4a66-852e-1eef339f83a8
+  :name: Work effectively with browser storage
+  :subject_uuid: 
+  :subject_name: 
+  :resources: ''
+  :guiding_questions: ''
+  :description: Store and retrieve data in the browser using local storage
+  :instructor_notes: 
+  :tags:
+  - js
+  - client-side
+- :uuid: c0a9a537-aceb-44c1-81ac-625c165d767b
+  :name: Implement Authentication bcrypt and cookie session
+  :subject_uuid: 
+  :subject_name: 
+  :resources: ''
+  :guiding_questions: ''
+  :description: ''
+  :instructor_notes: ''
+  :tags:
+  - js
+  - node
+  - express
+- :uuid: de9d6cef-5653-4d4e-91f2-05ae3f31238c
+  :name: Implement OAuth-based authentication with Passport
+  :subject_uuid: 
+  :subject_name: 
+  :resources: ''
+  :guiding_questions: ''
+  :description: ''
+  :instructor_notes: 
+  :tags:
+  - js
+  - node
+  - express
+  - oauth
+- :uuid: 357d2e34-73f2-4b11-a2f9-83bb98701f44
+  :name: Implement authorization
+  :subject_uuid: 
+  :subject_name: 
+  :resources: ''
+  :guiding_questions: ''
+  :description: ''
+  :instructor_notes: 
+  :tags:
+  - js
+  - node
+  - express
+- :uuid: 7a9152a3-cf0e-4a83-a758-fc8de2306fbb
+  :name: Interact with APIs server-side
+  :subject_uuid: 
+  :subject_name: 
+  :resources: ''
+  :guiding_questions: ''
+  :description: ''
+  :instructor_notes: 
+  :tags:
+  - js
+  - node
+  - http
+- :uuid: 8beb2759-99a5-4f11-9672-8880d0c2acfb
+  :name: Manage assets
+  :subject_uuid: 
+  :subject_name: 
+  :resources: ''
+  :guiding_questions: ''
+  :description: ''
+  :instructor_notes: ''
+  :tags:
+  - js
+  - css
+  - html
+- :uuid: 17baff40-c800-43c7-a1e8-b51d68187fe9
+  :name: Professional Behavior
+  :subject_uuid: 
+  :subject_name: 
+  :resources: ''
+  :guiding_questions: ''
+  :description: ''
+  :instructor_notes: ''
+  :tags:
+  - jobs

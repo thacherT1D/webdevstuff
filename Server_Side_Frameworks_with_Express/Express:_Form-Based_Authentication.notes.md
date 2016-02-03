@@ -1,0 +1,6 @@
+- Colt's Daily plan https://students.galvanize.com/cohorts/13/daily_plans/2015-06-15
+- Colt's prework https://students.galvanize.com/cohorts/13/daily_plans/2015-06-12
+- Cookies and sessions in rails https://students.galvanize.com/cohorts/13/daily_plans/2015-07-17
+- https://students.galvanize.com/cohorts/14/daily_plans/2015-06-24
+- https://students.galvanize.com/cohorts/14/daily_plans/2015-06-22
+- Jeff's daily plan for cookies - https://students.galvanize.com/cohorts/14/daily_plans/2015-07-08
