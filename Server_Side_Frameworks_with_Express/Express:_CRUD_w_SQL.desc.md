@@ -1,10 +1,12 @@
+<!--
 <div class="alert alert-info">
   We are currently transitioning this Learning Experience from Mongo to SQL.  Here are a few helpful links as we transition:
   
   <ul>
-  <li>https://github.com/gSchool/express-knex-api-with-joins</li>
+  <li><a href="https://github.com/gSchool/express-knex-api-with-joins">https://github.com/gSchool/express-knex-api-with-joins</a></li>
   </ul>
 </div>
+-->
 
 
 
@@ -37,7 +39,15 @@ In the following example taken from the Rails guides, the goal is to create an i
 
 On a high-level, users would need to be able to _add_ photos, _see_ the photos they have added, _update_ photos they have added, and _delete_ photos they have added. But how does something like this translate to code?
 
-![Rails Guide Routes](http://modernweb.com/wp-content/uploads/2014/05/rails-routes.png)
+| CRUD Verb | HTTP Verb | Path | Purpose |
+| --------- | --------- | ---- | ------- |
+| Read all | GET | /photos | Return a list of photos |
+| Create | POST | /photos | Create a new photo |
+| Read | GET | /photos/:id | Return a specific photo |
+| Update| PUT/PATCH | /photos/:id | Update a specific photo |
+| Delete | DELETE | /photos/:id | Delete a specific photo |
+
+<!-- ![Rails Guide Routes](http://modernweb.com/wp-content/uploads/2014/05/rails-routes.png) -->
 
 The table above defines what CRUD looks like at the HTTP-level for the `photos` resource. But this is still rather abstract. Both exercises are meant to reinforce what CRUD looks like in code.
 

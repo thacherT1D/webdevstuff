@@ -1,3 +1,7 @@
+### See restaurants-CRUD-Project for layout on how to structure Q2 
+https://coursework.galvanize.com/redirects/learning_experiences/469
+
+
 ## THE MASTER COPY IS HERE: https://github.com/gSchool/node-curriculum/blob/master/unit-2/intro-express.md
 
 The main idea here is to drive home the point that you solve interesting problems using algorithms, and package them for the web.

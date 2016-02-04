@@ -1,0 +1,1 @@
+This is a fun / hard exercise: https://github.com/gSchool/maze-solvability

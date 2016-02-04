@@ -1,3 +1,7 @@
+## Exercise
+
+https://github.com/gSchool/testing-express-with-supertest
+
 ## JavaScript Testing Basics
 
 <iframe src="https://player.vimeo.com/video/141373137?byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
@@ -45,5 +49,6 @@ Testing Angular w/ Karma
 - http://mherman.org/blog/2015/04/26/testing-angularjs-with-protractor-and-karma-part-2/#.VhIb0BNViko
 - http://mherman.org/blog/2015/04/09/testing-angularjs-with-protractor-and-karma-part-1/#.VhIcYBNViko
 
-## Coming Soon
-- Testing w/ Databases
+## Resources
+
+- http://codecept.io/

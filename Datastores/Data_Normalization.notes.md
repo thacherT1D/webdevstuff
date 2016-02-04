@@ -11,10 +11,10 @@
     * No repeating rows. Something is in 1NF if every column has one and only one entry in each row.
     * A column that has a list of colors, or a list of cities, or any kind of multiple value for a single column.
 * What is second normal form (2NF)? Give an example.
-    * No partial dependencies. Something is in 2NF if every column in a table with a compound primary key is dependent on BOTH PK columns
+    * No partial dependencies. Something is in 2NF if every is non-key column is dependent on the primary key.
     * A `Registration` table that has a `student_id`, a `class_id`, and a `student_name`. The `student_name` is only dependent on the `student_id`, so it should go to that column.
 * What is third normal form (3NF)? Give an example.
-    * No transient dependencies. Something is in 3NF if every column in a table is dependent on only the PK.
+    * No transitive dependencies. Something is in 3NF if every column in a table is dependent on only the PK directly, not via its relationship to another column.
     * A `Order` table that has `payment_type` and `payment_amount` columns. These depend on each other, but not the `id`. They should be abstracted out into a `Payment` table.
 * What is denormalization, and why would you want to do it?
     * Data that's spread across many tables is accessed with `JOIN` statements. Join statements are comparatively expensive in SQL, and lots of `JOIN` statements may unacceptably impact performance-sensistive tasks.

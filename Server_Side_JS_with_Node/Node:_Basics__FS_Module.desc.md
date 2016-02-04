@@ -46,9 +46,9 @@ Now, `touch` a new javascript file in a new folder in your projects or `src` dir
 `touch ~/src/node/examples/script.js` (you can use your own folder structure if you like)
 
 Open that file in your IDE, and put the following code in:
+
 ```javascript
 console.log("Hello World");
-
 
 ```
 
@@ -77,8 +77,8 @@ Can you think of an example of file I/O that you do on a regular basis? If you s
  
 ## Exercises
 
-[Logfile parsing exercise](/unit-1/exercises/logfile-parsing.md)  
-[Writing your own interpreter (Optional, Advanced)](/unit-1/exercises/async-text-parsing.md)  
+[Logfile parsing exercise](https://github.com/gSchool/js-node-log-file-parsing)  
+[Writing your own interpreter (Optional, Advanced)](https://github.com/gSchool/node-async-text-parsing-0)  
 
 ## Assignment
 

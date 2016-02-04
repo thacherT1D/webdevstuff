@@ -8,6 +8,8 @@ CSS: Flexbox, Media queries, transitions, transforms, and animations.
 
 Need more exercises, maybe work on flow between sections.
 
+This LE used to have tables and dls- they were the only HTML thing in this section, so they got moved to semantic HTML.
+
 
 * [Slides](https://docs.google.com/presentation/d/1omsUSz7UPV9mf-yPNMrhA99K1shQjvcxTvHN94xvu3k/edit?usp=sharing) 
 * Exercises
