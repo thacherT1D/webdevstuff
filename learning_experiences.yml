@@ -174,8 +174,6 @@
     :objective_name: Ordered lists used for ordered content
   - :objective_uuid: 89decbb0-f6fa-4efb-ba93-600dcbc23bfd
     :objective_name: Unordered lists used for unordered content
-  - :objective_uuid: 1f7f825a-f86d-4ba4-b718-e4b6e2580588
-    :objective_name: Images all have alt text
   - :objective_uuid: 9093a834-2e1d-41bf-8a21-1c2dea1acc07
     :objective_name: Headers used properly - smaller headers used to section content
       demarcated by larger headers
@@ -189,13 +187,6 @@
     :objective_name: Tags are properly indented to show nesting visually
   - :objective_uuid: 41ac54d4-4a2b-4750-915e-90886ab7fcba
     :objective_name: Writes valid HTML structure
-  - :objective_uuid: 6557ef9d-7d25-402b-a8db-bac4ae550b54
-    :objective_name: Use structural tags to create a semantic, usable form (label,
-      fieldset)
-  - :objective_uuid: 8357b7e8-1cdf-43ab-a5e9-3431ff620062
-    :objective_name: Build multiple forms that use all HTML5 controls
-  - :objective_uuid: 5c770de3-4474-4f5e-a0c3-46065d8a5781
-    :objective_name: Labels are associated with form controls
 - :subject_uuid: a7d5be0f-3937-465a-b5e9-b2555642e9d9
   :subject_name: HTML
   :uuid: dca9e810-0f2f-466d-b93f-15e36f399072

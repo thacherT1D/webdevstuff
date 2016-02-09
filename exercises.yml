@@ -89,14 +89,14 @@
   :github_repo: basic-git
   :response_type: project
   :exercise_objectives: []
-- :uuid: 63e036a1-70ba-4bac-8367-8db578be2053
-  :name: Basic HTML
-  :github_repo: https://github.com/gSchool/basic-html
-  :response_type: project
-  :exercise_objectives: []
 - :uuid: d44f3aea-891b-4859-8c99-92ff391f8ef4
   :name: Basic HTML
   :github_repo: basic-html
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: 63e036a1-70ba-4bac-8367-8db578be2053
+  :name: Basic HTML
+  :github_repo: https://github.com/gSchool/basic-html
   :response_type: project
   :exercise_objectives: []
 - :uuid: 1b0477ad-b20c-4de3-b071-98c1d60027fb
@@ -544,12 +544,12 @@
   :github_repo: https://github.com/gSchool/g11-course-curriculum/tree/master/week02/02_exercises/js-match-maker
   :response_type: project
   :exercise_objectives: []
-- :uuid: 92c0c725-9997-44b2-8755-6e2f006d7ea2
+- :uuid: 25306a0a-0082-4561-b0b5-8f0e4fdc1133
   :name: JavaScript Playlist
   :github_repo: https://github.com/gSchool/js-playlist
   :response_type: project
   :exercise_objectives: []
-- :uuid: 25306a0a-0082-4561-b0b5-8f0e4fdc1133
+- :uuid: 92c0c725-9997-44b2-8755-6e2f006d7ea2
   :name: JavaScript Playlist
   :github_repo: https://github.com/gSchool/js-playlist
   :response_type: project
@@ -944,6 +944,26 @@
   :github_repo: self-referencing-documentation
   :response_type: project
   :exercise_objectives: []
+- :uuid: de9dfa44-e781-4ee0-a9e3-b8221412067f
+  :name: Semantic HTML Exercise
+  :github_repo: https://github.com/gSchool/semantic-html-exercise/tree/g21
+  :response_type: file
+  :exercise_objectives:
+  - :objective_uuid: 89decbb0-f6fa-4efb-ba93-600dcbc23bfd
+    :objective_name: Unordered lists used for unordered content
+  - :objective_uuid: 9093a834-2e1d-41bf-8a21-1c2dea1acc07
+    :objective_name: Headers used properly - smaller headers used to section content
+      demarcated by larger headers
+  - :objective_uuid: 930f1a50-7e00-4da0-9dae-f8f48d29ee16
+    :objective_name: No tags that exist for no reason- all tags should have a purpose
+  - :objective_uuid: f2068f02-dd34-4d5f-b8e5-70ea8ed94879
+    :objective_name: Sidebars, articles, sections, etc. used in appropriate cases
+  - :objective_uuid: 21be8530-cad6-4d87-a1b6-ad4d9c65859a
+    :objective_name: Tags are in a logical order to match reality
+  - :objective_uuid: d4d044b5-f96b-4ab6-b067-e146f01d5e49
+    :objective_name: Tags are properly indented to show nesting visually
+  - :objective_uuid: 41ac54d4-4a2b-4750-915e-90886ab7fcba
+    :objective_name: Writes valid HTML structure
 - :uuid: 3ad1ad00-05df-47f5-9a74-9f59a0a1baf4
   :name: Sinatra Bug 01
   :github_repo: sinatra-bug-warmup
@@ -1009,14 +1029,14 @@
   :github_repo: https://github.com/gSchool/text-centering
   :response_type: project
   :exercise_objectives: []
-- :uuid: cca43269-d255-4ceb-b7e8-08e185a9b4fc
-  :name: Text Tree Parser
-  :github_repo: https://github.com/gSchool/text-tree-parser
-  :response_type: project
-  :exercise_objectives: []
 - :uuid: 743fe9ec-bceb-473e-8527-3b69fa3d2e7c
   :name: Text Tree Parser
   :github_repo: text-tree-parser
+  :response_type: project
+  :exercise_objectives: []
+- :uuid: cca43269-d255-4ceb-b7e8-08e185a9b4fc
+  :name: Text Tree Parser
+  :github_repo: https://github.com/gSchool/text-tree-parser
   :response_type: project
   :exercise_objectives: []
 - :uuid: 6839d519-831c-4152-8ab4-5acbec015875

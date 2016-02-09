@@ -75,8 +75,8 @@ These tags are for marking up text content within a structural element:
 
 ## Exercise: The Semantic News
 
-Fork and clone the [semantic HTML](https://github.com/gSchool/semantic-html-exercise) repository. `index.html` is a news site that's been marked up with `<div>` and `<span>` tags. Using the list of tags above, update the code with semantic tags. When you're done, add/commit/push, and then submit a pull request.
+Head over to the exercises tab above to get to the Semantic News exercise.
 
 ## Exercise: Rectifying past wrongs
 
-Go back to an exercise you completed last week without using semantic HTML (maybe something in the Intro to HTML LE). Change out the unsemantic markup with semantic tags. Share your solution with a classmate and ask for constructive criticism about the markup used.
+Go back to an exercise you completed earlier this week without using semantic HTML (maybe something in the Intro to HTML LE). Change out the unsemantic markup with semantic tags. Share your solution with a classmate and ask for constructive criticism about the markup used.
