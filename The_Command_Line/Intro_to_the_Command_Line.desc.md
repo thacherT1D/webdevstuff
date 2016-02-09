@@ -13,6 +13,10 @@ Not only that, but Web servers usually don't have graphical interfaces, so we ar
 
 ## Objectives -- You Should Learn How To:
 
+
+
+
+
 * Describe the connection between the command line and the "Graphical User Interface"
 * Use `man`, "*the only command you'll ever need*."
 * Use [www.explainshell.com](http://www.explainshell.com).
