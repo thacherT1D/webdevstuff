@@ -9,3 +9,5 @@ https://www.youtube.com/watch?v=zRZNb4GDOPI
 And check this out!  http://www.pythontutor.com/javascript.html#mode=edit
 
 It lets you step through things.
+
+Step step step it through, yo.
