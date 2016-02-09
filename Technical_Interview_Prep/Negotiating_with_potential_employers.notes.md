@@ -1,0 +1,1 @@
+TO DO: Red flags for companies- "Don't work for companies that..."

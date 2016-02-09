@@ -120,6 +120,7 @@ This image is how the above HTML can be visualized.
 
 HTML pages always have the following structure:
 
+- Doctype `<!DOCTYPE html>`
 - HTML `<html>`
  - head `<head>`
 	 - links to CSS stylesheets, some javascript links, meta-data, the `<title>` tag
@@ -159,7 +160,7 @@ Using [Mozilla Developer Network Element Reference](https://developer.mozilla.or
 
 - In the second list, make every odd number [strong](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/strong), and every even number [emphasized](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/em). (then, commit your changes!)
 
-- Finally add the following [image](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img) somewhere in the page, and give it a height and width attribute with number values: https://students.galvanize.com/assets/galvanize-logo-ac9865cc4217b77aebbce9e63670dd96.svg
+- Finally add the following [image](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img) somewhere in the page, and give it a height and width attribute with number values: https://coursework.galvanize.com/assets/galvanize-logo-ac9865cc4217b77aebbce9e63670dd96.svg
 (then, commit your changes!)
 
 - **BONUS** add audio and video to the page, find them on MDN.  Give it controls and make the video autoplay. (then, commit your changes!)

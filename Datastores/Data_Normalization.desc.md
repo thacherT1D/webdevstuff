@@ -19,6 +19,8 @@
 * [Normalization Walkthrough](http://holowczak.com/database-normalization/)
 
 ## Exercises
+* Drop your responses in this repo! Create a pull request!
+* [Repo](https://github.com/gSchool/dataModels)
 
 Normalize this product order data model:
 

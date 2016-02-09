@@ -49,11 +49,12 @@ Install Mocha globally via NPM:
   $ npm install -g mocha
   ```
 
-Create a new directory called "testBasics". CD into it, and then create a subdirectory called test:
+Create a new directory called "test-basics". CD into it, initialize a repository, and then create a subdirectory called test:
 
   ```sh
-  $ mkdir testBasics
-  $ cd testBasics
+  $ mkdir test-basics
+  $ cd test-basics
+  $ git init
   $ mkdir test
   ```
 
@@ -103,9 +104,10 @@ With the setup complete, we can now start writing some tests!
 
 ## Discussion
 
-All examples follow this three step process-
+All examples follow this four step process-
 
 1. Place the mocha tests inside of `test/test.js`.
+1. Run your tests.
 1. Add your code to test to `main.js`
 1. Run your tests.
 
@@ -115,20 +117,21 @@ Test time!
 
 Per tradition, let's start with a basic "Hello, World!"
 
-#### Function
+#### Test (in `test/test.js`)
+
+```javascript
+describe("Hello World", function() {
+  it("should say 'Hello, World!' when ran");
+});
+```
+
+#### Function (in `main.js`)
 
 ```javascript
 module.exports = {
   helloWorld: function () {
   }
 }
-```
-
-#### Test
-```javascript
-describe("Hello World", function() {
-  it("should say 'Hello, World!' when ran");
-});
 ```
 
 **What's happening here?**
@@ -138,7 +141,7 @@ it defines a single test
 
 A suite takes a string that describes what a particular suite is testing.
 
-A test takes a string that describes the functiona
+A test takes a string that describes the function
 
 #### Test!
 

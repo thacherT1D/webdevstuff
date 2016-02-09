@@ -39,8 +39,7 @@ printer.js:
 ```
 var calculator = require('./calculator'); // imports the module.exports object from calculator.js
 
-// After the above line has executed, calculator is a reference to the module.exports
-// object, which we created in calculator.js
+// After the above line has executed, calculator is a reference to the module.exports object, which we created in calculator.js
 
 result = calculator.add(1, 2); // uses the function we added to exports in calculator.js
 ```

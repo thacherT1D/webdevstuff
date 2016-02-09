@@ -1,7 +1,7 @@
 Development Environments
 ========================
 
-##Objectives, You Should Learn How To:
+## Objectives, You Should Learn How To:
 * Describe the differences between Production, staging and development environments.
 * Setup a basic development environment with:
 	* Chrome - Modern web browser (IE and Safari don't count).
@@ -11,19 +11,19 @@ Development Environments
 	* Node - JavaScript for the server
 * Briefly describe the purpose of each of the above.
 
-##Content
+## Content
 
-###Production, Staging, and Development
+### Production, Staging, and Development
 
 In most web software companies there are 3 major "environments" which host and run the companies software applications: production, staging, and development. 
 
 Production is a server (or collection of servers) that is live, on the open web, and accessible to the public. When you type [www.google.com](www.google.com) into your browser, you are making a request to Google's "production environment". Production environments are carefully configured and designed process users requests as quickly as possible.
 
-Staging is a typically a clone of the production environment. The purpose of staging is to allow developers to test their code somewhere that behaves identically to production, but isn't available to the public. These are often available within the companies local network, or gated behind a user/password authentication screen.
+Staging is typically a clone of the production environment. The purpose of staging is to allow developers to test their code somewhere that behaves identically to production, but isn't available to the public. These are often available within the companies local network, or gated behind a user/password authentication screen.
 
 Your development environment is your laptop, desktop, or whatever device you use to write code. 
 
-###The Purpose of a Development Environment
+### The Purpose of a Development Environment
 
 Unlike production and staging, this environment is optimized for humans, instead of machines. Where production and staging need to respond to requests as fast as possible, development environments should help you generate code as quickly as possible. 
 
@@ -40,14 +40,14 @@ There are 3 essential tasks that every engineer must always do. We've chosen a b
  * Editing code. 
   	* Atom: for editing source code and text (HTML/CSS/JavaScript/Ruby/...)
  * Run code. Engineers are constantly testing and using their apps
- 	* Chrome: a good webbrowser for running and debugging websites.
+ 	* Chrome: a good web browser for running and debugging websites.
  	* The Command Line: for running servers, scripts, and so much more.
  * Commit code to the master codebase. when the code works, it has to be saved.
  	* Git: a "version control" system that helps devs collaborate and save code.
 
 Finally, we're also going to have you install Homebrew, a "package manager". Frequently developers will need to install another tool or library. Package managers makes installing software much easier. Because it makes everything else so much easier, we're going to start with Homebrew.
 
-##Excercises - Install the Following Tools 
+## Excercises - Install the Following Tools 
 
 ### Homebrew
 
@@ -81,7 +81,8 @@ https://atom.io/
 
 **Using the atom alias**
 
-You can open Atom from the terminal by running `atom .`.
+Install Shell Commands: spotlight to Atom, Atom -> Install Shell Commands.
+You can now open Atom from the terminal by running `atom .`.
 
 ### Chrome	
 
@@ -112,6 +113,10 @@ In the terminal, run:
 `brew update`
 
 `brew install git`
+
+** Add SSH keys**
+
+https://help.github.com/articles/generating-an-ssh-key/
 
 ## Essential Shortcuts
 

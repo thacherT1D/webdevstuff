@@ -5,6 +5,10 @@
 
 **(I Do)**
 
+## Slides
+
+* [Wes' Slides](http://slides.com/wesleyreid/css-magic)
+
 ##Livecode
 Review HTML and set up a page, then add some CSS "on top".
 

@@ -129,30 +129,16 @@ We can keep some space between each box's border and the next box by adding a pr
 These tools may seem simple, but they are very powerful. With them we can create complex layouts and reusable code.
 
 ## **Reading** 
-- [Getting Started Guide to CSS](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Getting_started) (Make sure to do the exercises listed throughout.)
-- [The Box Model](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)  
-- [Floats](https://developer.mozilla.org/en-US/docs/Web/CSS/float)  
+- [The Box Model](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+- [Floats](https://developer.mozilla.org/en-US/docs/Web/CSS/float)
 
-## **Exercises**
 
-Work through these [exercises](https://github.com/gSchool/css-exercises), then do the [Floats Exercise](https://github.com/gSchool/css-floats-exercise )
+**Challenge** Creating A Layout From A Mockup(wireframe)
 
-**Challenge** Creating Layouts From Mockups  
-
-Create a page for the following wireframes:  
+Create a page for the following wireframe:  
 
 - https://wireframe.cc/GuRoUr
-- https://wireframe.cc/0ftEEJ
+
 
 Don't worry about them being pixel perfect, just try to produce a page that achieves the same layout.  
-
-If you finish with all of the above exercises, try these stretch goals:  
-
--  [CSS Nav Challenge](https://github.com/gSchool/css-nav-challenge)
--  [CSS Card Flip](https://github.com/gSchool/css-card-flip)
-
-## Practice
-
-- [Basic HTML/CSS Practice](https://github.com/gSchool/basic-html-practice)
-- [CSS Reading](https://github.com/gSchool/html_css_basics)
 
