@@ -1,7 +1,5 @@
 # Intermediate CSS
 
-[slides here](https://docs.google.com/presentation/d/1omsUSz7UPV9mf-yPNMrhA99K1shQjvcxTvHN94xvu3k/edit?usp=sharing)
-
 Today we will be expanding on our understanding of CSS.
 
 ## Objectives
