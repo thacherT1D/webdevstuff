@@ -3,9 +3,9 @@
 ### Objectives
 
 - Discuss the benefits of testing. How does it help developers do their job more effectively?
-- Write tests for existing code.
 - Write code to pass a given set of tests.
 - Write tests and code that passes those tests.
+- Describe and employ the tdd red / green / refactor cycle for unit tests / anatomy of a test
 
 [Slides here](https://docs.google.com/presentation/d/1E1Lskrk6hfJHzkBNwRmySg2X0m8nmKKTQN4w4tupYww/edit?usp=sharing)
 
@@ -22,7 +22,7 @@ Let's learn to test code with [Mocha](https://mochajs.org/), Mocha is a feature-
 
 *Something that is untested is broken.*
 
-If your codebase is untested then it is **very** difficult to add new features as-
+If your codebase is untested then it is **very** difficult to add new features as:
 
 - You don't know if that feature will work or not, and
 - The new feature could break your existing codebase.
