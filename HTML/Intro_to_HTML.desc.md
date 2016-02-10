@@ -1,6 +1,6 @@
 # Intro to HTML
 
-[slides](https://docs.google.com/presentation/d/1COkEIRk9CjR60wnCHEZC4JBK0MT1ptoE-CIaol6UZpc/edit?usp=sharing)
+### [Slides - (I Do)](http://slides.com/jadam/deck-1-2#/)
 
 ## Entry Ticket
 To start this, make sure you're familiar with creating files and directories in terminal. Also make sure you know how to open files on your hard drive from terminal, with the `open` command, as well as how to open files in Sublime Text 3 (or Atom) with the `subl` command (or `atom` command).
