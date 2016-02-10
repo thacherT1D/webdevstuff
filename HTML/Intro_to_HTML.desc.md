@@ -1,6 +1,6 @@
 # Intro to HTML
 
-### [Slides - (I Do)](http://slides.com/jadam/deck-1-2#/)
+### [Slides](http://slides.com/jadam/deck-1-2#/)
 
 ## Entry Ticket
 To start this, make sure you're familiar with creating files and directories in terminal. Also make sure you know how to open files on your hard drive from terminal, with the `open` command, as well as how to open files in Sublime Text 3 (or Atom) with the `subl` command (or `atom` command).
@@ -57,15 +57,15 @@ When tags are read by the browser, they form an HTML `element`. The use of `p` t
 Not all tags need a beginning and an end, some tags are self-closing and do no need to wrap content. This is because they aren't thought of as enclosing anything. Think of them as boxes that are already closed and taped up, so there's no need to close them.
 
 ```html
-<img src="foo.com/thing.png">
+<img src="foo.com/thing.png" />
 ```
 
 ```html
-<input value="Input Here!">
+<input value="Input Here!" />
 ```
 
 ```html
-<hr>
+<hr />
 ```
 
 ### Attributes
