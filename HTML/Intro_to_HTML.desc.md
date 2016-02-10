@@ -169,7 +169,7 @@ audio: https://upload.wikimedia.org/wikipedia/en/0/04/Rayman_2_music_sample.ogg
 
 video:   https://upload.wikimedia.org/wikipedia/en/2/28/Illusion_movie.ogg
 
-
+## **Exercise** 
 ### Tables
 Tables are how we display "tabular data" in HTML. What this really means is something like this:
 ![table examples](http://www.codeproject.com/KB/office/WebExcel/Excel.jpg)
@@ -182,8 +182,6 @@ Table tags:
 
 Take a look at the documentation for Tables. Keep this documentation up, and use it to find out how to use the elements you need in order to complete the exercise below.
 [Table Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table)
-
-## **Exercise** 
 
 Create a new file, call it `favorites.html`.
 `git add` the file to your repository, and commit it.
