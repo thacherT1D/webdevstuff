@@ -1,5 +1,12 @@
 # Testing with Mocha - a primer
 
+### Objectives
+
+- Discuss the benefits of testing. How does it help developers do their job more effectively?
+- Write tests for existing code.
+- Write code to pass a given set of tests.
+- Write tests and code that passes those tests.
+
 [Slides here](https://docs.google.com/presentation/d/1E1Lskrk6hfJHzkBNwRmySg2X0m8nmKKTQN4w4tupYww/edit?usp=sharing)
 
 Let's learn to test code with [Mocha](https://mochajs.org/), Mocha is a feature-rich JavaScript test framework.
@@ -23,13 +30,6 @@ If your codebase is untested then it is **very** difficult to add new features a
 Automated tests help minimize these issues, allowing you to safely update your codebase and sleep at night. Unfortunately, many developers don't understand the importance of testing until their application breaks and s/he is up all night trying to fix things.
 
 Read more [here](http://stackoverflow.com/questions/67299/is-unit-testing-worth-the-effort).
-
-### Objectives
-
-- Discuss the benefits of testing. How does it help developers do their job more effectively?
-- Write tests for existing code.
-- Write code to pass a given set of tests.
-- Write tests and code that passes those tests.
 
 ### Key terms
 
