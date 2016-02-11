@@ -72,3 +72,7 @@ These tags are for marking up text content within a structural element:
 ## Exercise: The Semantic News
 
 Head over to the exercises tab above to get to the Semantic News exercise.
+
+## Resources
+
+http://stackoverflow.com/questions/14843862/how-can-i-fix-heroku-imagecreatefromjpeg
