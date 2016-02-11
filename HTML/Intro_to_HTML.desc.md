@@ -120,6 +120,7 @@ This image is how the above HTML can be visualized.
 
 HTML pages always have the following structure:
 
+- Doctype `<!DOCTYPE html>`
 - HTML `<html>`
  - head `<head>`
 	 - links to CSS stylesheets, some javascript links, meta-data, the `<title>` tag

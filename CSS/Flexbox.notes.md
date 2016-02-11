@@ -3,7 +3,7 @@
 * https://docs.google.com/presentation/d/1qahNvqpwpnx_y7Pe0unHeZAhRvvR5ty4hQrevoDEUz0/edit?usp=sharing
 
 ## Exercises
-
+* http://flexboxfroggy.com/
 * https://github.com/gSchool/flexbox-exercises
 
 ## Other Resources

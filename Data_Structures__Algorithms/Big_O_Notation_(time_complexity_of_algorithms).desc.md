@@ -10,3 +10,4 @@ Resources:
 
 - https://github.com/gSchool/computer-science-curriculum/blob/master/Unit-2/02-big-o-notation.md
 - http://bigocheatsheet.com/
+- http://web.engr.illinois.edu/~jeffe/teaching/algorithms/

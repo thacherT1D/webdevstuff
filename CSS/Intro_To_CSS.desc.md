@@ -6,153 +6,313 @@ CSS is a style sheet language used for describing the look and formatting of a d
 
 It is used to manipulate the way elements appear on a web page, and CSS can interact with both HTML and JavaScript.
 
-### Objectives
-In this section, we'll accomplish the following: 
+## CSS - Classes and IDs
 
-* Select elements using CSS selectors
-* Apply rules to selected elements
-* Use rules to arrange elements on the page
-* Use rules to style text and images
+What's the difference between a class and an id? For today, all we need to know is that ids for an HTML element should be _unique_: no two elements should share the same id, and no element should have more than one id. Classes, however, don't have these restrictions: an element can have multiple classes, and multiple elements can share the same class.
 
-So far, we put content on our page, but nowhere did we say "use Times New Roman", or "list items should have little black circles next to them". These are the browsers default styles. Terrible, ugly default styles. Let's spiff up this page a bit.
+More info: [The Difference Between ID and Class](https://css-tricks.com/the-difference-between-id-and-class/)
 
-- Copy your `index.html` page with the `cp` command, and call it `bears.html`. 
-- Delete the contents of the `body` tag.
-- Add an `h1` tag, give it the text "Bears - the cuddliest natural predator of humans" .
-- Add 3 image tags, (<img>) and let's give it a src attribute of "http://placebear.com/500/500". 
-- Change the "500" to different values for each tag until different pictures appear for each `img` tag.
+## CSS - Width and Height 
 
-> There are lots of placeholder image providers, but my jokes will bear-ly make sense if you pick a different one, so just go with me here.
+Let's create a new `index.html` file and throw a `<div>` into it:
 
-### Writing CSS
+```
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Kicking it with some Divs</title>
+  </head>
+  <body>
+    <div id="myFirstDiv">Here's my first div!</div>
+  </body>
+</html>
+```
 
-Go to the `<head>` section of the page, we're going to tell the browser some rules to apply to the text and layout of the page. Open a new tag within `<head>` - call it `<style>`. 
+Now, create a stylesheet and link it to this HTML document! Let's add some simple styling to our div:
 
-What we put between the opening `<style>` and the closing `</style>` tags is called CSS. Usually this ends up in a different file, but we'll get to that later. First, we're going to pick a _selector_ to apply a _style_ to. It looks something like this:
-
-```css
-selector {
-	rule: value;
-	rule: value;
+```
+#myFirstDiv {
+  width: 200px;
+  height: 200px;
+  background-color: red;
 }
 ```
 
-### Styling Text
-We're going to add a rule to the `h1` tag, which will apply to _all_ `h1`s. Check it:
+What happens as you change width and height?
 
-```css
-h1 {
-	font-family: arial;
+Instead of pixel values, you can also assign with and height using percentages. What happens if you set the width to 50%? Is this what you expected? What happens if you set the height to 50%? Is this what you expected?
+
+Where'd things go? By default, width and height percentages are calculated with respect to the parent of the div. Also by default, block level elements (like divs) span the full width of their parent container, but only as much height as they need to display their content. No content implies no height.
+
+There are a couple of ways to fix this. One is to wrap your first div inside of a parent div, and give _it_ some fixed height. Another is to give `html` and `body` heights of 100%. 
+
+One last value to know about for width and height is `inherit`. If the width or height of a div is set to `inherit`, then, as the name implies, the div will inherit the width or height property from its parent.
+
+Further reading:
+
+[MDN - width](https://developer.mozilla.org/en-US/docs/Web/CSS/width)
+
+[MDN - height](https://developer.mozilla.org/en-US/docs/Web/CSS/height)
+
+[Auto width vs. 100% width](http://www.456bereastreet.com/lab/width-auto/)
+
+## CSS - Display Style
+
+Let's add a second div to our `index.html` file and update our stylesheet:
+
+```
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Kicking it with some Divs</title>
+  </head>
+  <body>
+    <div id="myFirstDiv">This is one of my divs.</div>
+    <div id="mySecondDiv">This is another one of my divs.</div>
+  </body>
+</html>
+```
+
+
+```
+#myFirstDiv {
+  width: 200px;
+  height: 200px;
+  background-color: red;
+}
+
+#mySecondDiv {
+  width: 200px;
+  height: 200px;
+  background-color: green;
 }
 ```
-Let's go ahead and add that rule to our `<style>` tag, and reload the page. 
-Looks much better, right?
 
-Probably want to add some other styles, like color. Colors in CSS are expressed in several ways, either by using a hex RGB value - `#ff00ff`, or like this - `rgba(200,200,200,0.5)`. The "a" in "rgba" refers to _alpha_, which is nerd for "transparency". 
-```css
-h1 {
-    font-family: arial;
-    color: #000088;
-    background-color: rgba(200,255,200,0.5);
+Refresh the page. What do you see?
+
+By default, `<div>`s stack on top of one another vertically. This behavior is determined by the `display` property of the div, which defaults to `display: block`. There are a few different display values (in particular, CSS3 has introduced a few new ones), but the four you'll encounter most commonly are `block`, `inline`, `inline-block`, and `none`.
+
+Of these, `none` is probably the most obvious. Change one of your divs to have `display: none` and see what happens.
+
+What if you want the divs to be side-by-side, and not stacked? `inline` sounds like a natural solution. Try setting the displays on both divs to `inline`. What happens?
+
+While inline elements don't mind sharing space horizontally, they also don't like taking up more space than they need.
+
+Now let's look at `inline-block`. Elements displayed like this don't require their own new row, so they can share horizontal space (like `inline` elements). But they also respect properties of `block` elements (like width and height). Try it out.
+
+Further reading:
+
+[List of HTML5 block elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Block-level_elements)
+[List of HTML5 inline elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Inline_elemente)
+[What's the Deal with Display: Inline-Block?](http://designshack.net/articles/css/whats-the-deal-with-display-inline-block/)
+
+## CSS - Floats
+
+There are other ways to align the divs side-by-side if you don't want to mess with the `display` property. One approach is to use the `float` property. Try to do the following:
+
+1. Remove any reference to the `display` property in your stylesheet (your divs will revert to their default styling of `display: block`.
+2. Assign `left` to the `float` property for each div.
+3. What happens if you change `float: left;` to `float: right;`?
+4. What happens if you float one of the divs, but not the other?
+
+**Clearing a Float**
+
+Float your first two divs to the left, and now add a third div: `<div id="myThirdDiv">I want to be on a new row.</div>` You should find that this third div is on the same row as the first two.
+
+But what if we want this third div to be on its own row, as you might expect from an unfloated block element? To do this, we need to _clear_ the float. Add this line to your stylesheet:
+
+```
+#myThirdDiv {
+  clear: both;
 }
 ```
-Play with those color values, see if you can make the text brown (for bears.. you know.) 
 
-The `h1` in the above code is called the `selector`. This part is what tells CSS how to go and find all of the elements it needs to apply the rules inside of the `{}` braces to. Think of the selector as the search term when you're googling something- CSS can be thought of as _querying_ the HTML for matching tags. Sometimes there is only one `h1` tag per document, but sometimes there are many- this rule would apply to _all_ of them. That means that using the tag's name as the selector is the _lowest specificity_ we can use.
+An element styled with `clear: both;` can't have any floats to the left or right of it, and so in the presence of floated elements will break into a new row.
 
-Now that we've done some basic text styling, we can start arranging those bears. First, let's start by giving all of these bears a name. Like names, each tag should be _uniquely identifiable_ by it's id, so every id should be unique. 
+## CSS - Positioning
 
-- Add an `id` to each `img` with a name- `id="doctor_von_cuddles"`
-- Put a paragraph tag under each image so that it's not just the browser that knows the name of each bear.
+A third common way to position divs is to use the `position` property. Like `display`, we're going to focus on four different values for positioning: `static`, `relative`, `absolute`, and `fixed`.
 
+Static is the default value for all elements. An element with static position will sit where it normally does, and won't have any special positioning.
 
-Now we can refer to our bears individually within our style tag. The way we do this is to use a `#`. The `id` selector is the _highest level_ of specificity we can use in CSS. We use it when we want to have rules apply to a single element only.
+If you go with one of the other three values for `position`, you can then adjust the position of your div by using the `top`, `right`, `bottom` and `left` attributes.
 
-```css
-#doctor_von_cuddles {
-    border: solid #3300ff 10px
-}
+Briefly, here are the differences between the other types of positioning:
+
+- `position: relative` positions an element relative to **where it would normally sit**.
+- `position: absolute` positions an element relative to **its nearest ancestor that isn't statically positioned**,
+- `position: fixed` positions an element relative to **the viewport, even when scrolling**.
+
+Let's explore positioning using the following HTML snippet. Here are three nested divs:
+
 ```
-
-- Give each bear image it's own [border](https://developer.mozilla.org/en-US/docs/Web/CSS/border).
-
-### Arranging Boxes with Floats
-
-Let's see if we can get these bears to line up nicely, one next to the other. Unfortunately bears can be rather territorial, so let's put them in some containers to keep them separated. We're going to wrap these bears in a `div` tag.
-
-```html
-<div>
-    <img src="http://placebear.com/300/300" id="doctor_cuddles">
-    <p>Dr. Cuddles BD.</p>
+<div id="div1">
+  <div id="div2">
+    <div id="div3"></div>
+  </div>
 </div>
 ```
 
-- Put each bear in a div, and don't forget to close it (or it will escape).
+Style them so that the first div is 400x2000 and blue, the second is 200x200 and red, and the third is 100x100 and green.
 
-Now that each bear is in it's box, we're going to line up the boxes next to each other. Rather than doing that for each box individually, we're going to treat all the boxes the same, since they're all just boxes with bears in them (even though the bears inside are all unique individuals with their own hopes and dreams).
+Next, using only the `position`, `top`, `bottom`, `left`, and `right` properties, do the following:
 
-- Add a `class` attribute, give it the value `bearbox`
+1. Nudge the green square 10px down and 10px to the right.
+2. Push the red square to the upper-right corner of the blue rectangle.
+3. Push the red square to the lower-left corner of the blue rectangle.
+4. Push the red-square to the lower-left corner of the viewport.
 
-You'll note that simply adding the class doesn't change how the page looks. Nor did adding the `div` tag. Here's where the magic happens- now we can refer to all of the boxes at once, and line them all up. Put the following in the `style` tag:
+## CSS - The Box Model
 
-```css
-.bearbox {
-    float:left;
+As you may have noticed, elements on an HTML page are rectangles. These boxes have some common CSS properties, collectively referred to as the box model. Since these are properties you'll be using all the time, let's take a moment to explore how the box model works.
+
+To keep things simple, let's return to a single 200x200 div (color choice is up to you). Let's also put some content inside of our div:
+
+```
+<div id="div1">This is a div of my favorite color.</div>
+```
+
+The box model of this (or any other) div consists of four components: margin, border, padding, and content. Content refers to the area where the (spoiler alert) content lives. Padding corresponds to space between the border and the content. The border wraps around the padding and content, and the margin clears space around the border.
+
+To see these things in action, try giving your div the following style:
+
+```
+#div1 {
+  margin: 15px;
+  border: 5px solid red;
+  padding: 10px;
 }
 ```
 
-Holy bears Batman!  Each one is in their own little box, all lined up. Beautiful. These simple rules allow you to create complex layouts, by stacking boxes either on top of, or next to each other. 
+You can also style the top, right, bottom, or left side of any of these attributes separately. For instance, if you want to push your div farther down the page, you can give it a `margin-top` of 100px.
 
-The dot in `.bearbox` is what tells CSS that it's targeting _a class_. We're saying here that we want all of the elements containing bears (`.bearbox`) to behave one way. This class wouldn't affect any other `divs` or anything else on the page, just elements with the class `bearbox`.
+Take some time to explore the following questions:
 
-### The Box Model
-Now, bears don't like to be all crushed up against each other- let's give them some room, shall we?
+1. You can set margins/border/padding by defining four values instead of one; e.g. margin: 15px 15px 15px 15px. Which number corresponds to which direction?
 
-```css
-.bearbox {
-    float:left;
-    padding: 10px 10px 10px 10px;
+2. You can set margins/border/padding by defining two values; e.g. margin: 20px 30px. Which number corresponds to which direction(s)?
+
+3. You can set margins/border/padding by defining three values; e.g. padding: 15px 10px 5px. Which number corresponds to which direction(s)?
+
+4. Can you create a dashed border? What about a dotted border?
+
+5. What does the border-radius property do?
+
+6. What happens if you set the margins on a block-level div equal to `0 auto`?
+
+A final note on the box model. Note that when you add padding or border to your div, the dimensions of the div change. If you want that to **not** happen -- e.g. if you want your div to maintain a size of 200x200 regardless of box model styling -- then the easiest thing to do is add the following line to your stylesheet for that div:
+
+```
+ box-sizing: border-box;
+```
+
+The default styling is `content-box`, in which the size of the content is what is fixed by `width` and `height`, rather than the size of content+padding+border.
+
+## CSS - Media Queries
+
+Sometimes styling isn't one-size-fits-all. How you want your page to look may depend on different factors. Let's work on a simple example:
+
+1. In a clean HTML file, create three divs. arrange them horizontally so that they each take up 1/3 of the screen. (Hint: you can define widths in terms of percentages, not just pixels!). Style them so that they're visually distinguishable from one another.
+
+Having your divs aligned in a row is probably fine on a large screen (e.g. a laptop). But what if a user comes to your site on a mobile device, with a much narrower screen? In this case, having your divs in a row may look cramped, and you might prefer to have your divs stacked vertically.
+
+In order to set different styling rules based on the viewport, we can use a **Media Query**. In this case, if you wanted to set a different rule for narrower viewports, you could add something like this to your stylesheet:
+
+```
+@media (max-width: 600px) {
+  /*insert your div ids here*/ {
+    clear: both;
+    width: 100%;
+  }
 }
 ```
-There, now they've got some breathing room. The property `padding` refers to the space between the content (the bear and it's name) and the outside of the box (the border). Think of the padding as exactly how it's named- like stuffing padding in a box for shipping things safely. 
 
-The `border` property we defined earlier can be thought of as the walls of the box. To visualize this:
+See how the styling changes based on your viewport width? Congratulations, you've completed your first foray into **responsive** design!
 
-- Add a `border` property like we have for each individual bear to the `.bearbox` class. 
+Media queries have a fair amount of built-in logic. To learn more about them, read [this](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Media_queries).
 
-You can only add one of each property to a selector, so just pick your favorite border to apply to all the bears. Now you can see the walls of the boxes the bears are contained within. The `border` is outside of the padding.
+## CSS - Tables
 
-We can keep some space between each box's border and the next box by adding a property called `margin`. It works the same as `padding`, except that it refers to the space on the outside of the `border`. 
+Let's talk briefly about styling tables in CSS, since the default styling is pretty terrible. 
 
-- Add a `margin` to the `.bearbox` selector.
+To kick things off, let's create a table in our html file with no special styling:
 
-These tools may seem simple, but they are very powerful. With them we can create complex layouts and reusable code.
+```
+<table>
+  <tbody>
+    <tr>
+      <td>Cell 1</td>
+      <td>Cell 2</td>
+    </tr>
+    <tr>
+      <td>Cell 3</td>
+      <td>Cell 4</td>
+    </tr>
+    <tr>
+      <td>Cell 5</td>
+      <td>Cell 6</td>
+    </tr>
+    <tr>
+      <td>Cell 7</td>
+      <td>Cell 8</td>
+    </tr>
+    <tr>
+      <td>Cell 9</td>
+      <td>Cell 10</td>
+    </tr>
+    <tr>
+      <td>Cell 11</td>
+      <td>Cell 12</td>
+    </tr>
+  </tbody>
+</table>
+```
 
-## **Reading** 
-- [Getting Started Guide to CSS](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Getting_started) (Make sure to do the exercises listed throughout.)
-- [The Box Model](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)  
-- [Floats](https://developer.mozilla.org/en-US/docs/Web/CSS/float)  
+Start by adding some borders and padding to the `td` cells.
 
-## **Exercises**
+That doesn't look too good, does it? Let's remove the spaces between the td cells:
 
-Work through these [exercises](https://github.com/gSchool/css-exercises), then do the [Floats Exercise](https://github.com/gSchool/css-floats-exercise )
+```
+table {
+  border-spacing: 0;
+}
+```
 
-**Challenge** Creating Layouts From Mockups  
+Better, but not quite right. Let's at one more property to our `<table>` styling: `border-collapse: collapse;`.
 
-Create a page for the following wireframes:  
+Sweet. For small tables like this, it may even be sufficient. But for large tables (e.g. tables of users), readability can become an issue. What would be nice is if we could make the table _striped_, so that rows alternated their colors. How can we do this using CSS?
 
-- https://wireframe.cc/GuRoUr
-- https://wireframe.cc/0ftEEJ
+To do this right, we'll need **pseudo-classes**. A pseudo-class lets us express more information about a given element. In this case, the pseudo-class we want is `:nth-child()`. With this psuedo-class, you can select the kth row of your table using the selector `tr:nth-child(k)`. In particular, notice that `:nth-child()` is 1-indexed, not 0-indexed: for instance, `tr:nth-child(2)` will select the second row of your table, not the third.
 
-Don't worry about them being pixel perfect, just try to produce a page that achieves the same layout.  
+Use `:nth-child` to highlight every other row of the table in some other color.
 
-If you finish with all of the above exercises, try these stretch goals:  
+One of the nice things about `nth-child` is that it accepts arguments other than whole-numbers. Try out the selector `tr:nth-child(odd)`. What about `tr:nth-child(even)`?
 
--  [CSS Nav Challenge](https://github.com/gSchool/css-nav-challenge)
--  [CSS Card Flip](https://github.com/gSchool/css-card-flip)
+Bonus 1. You can also select every mth element, starting with the kth, using the selector `tr:nth-child(mn+k)`. Try to select every third row, starting with the first row.
 
-## Practice
+Bonus 2. Color every even row one color, and every third row another color. What's the color of the 6th row, and why?
 
-- [Basic HTML/CSS Practice](https://github.com/gSchool/basic-html-practice)
-- [CSS Reading](https://github.com/gSchool/html_css_basics)
+Another thing we can do to improve the readability of a table is to highlight a row when the user mouses over it. To do this, we'll use the `:hover` psuedo-class.
+
+```
+tr:hover {
+  background-color: /* insert a color here */
+}
+```
+
+Neat, right? Related to the `:hover` psuedo-class are the `:active`, `:focus`, and `:visited` pseudo-classes. You can read all about these (and other!) pseudo-classes [here](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes).
+
+## CSS - Rock star demos
+
+We've only scratched the surface of what you can do with CSS. For inspiration, check out a sampling of some awesome things that people have built:
+
+[A Single Div](http://a.singlediv.com/)
+
+[The Simpsons](http://pattle.github.io/simpsons-in-css/)
+
+[CSS Creatures](http://bennettfeely.com/csscreatures/)
+
+[CSS Coke Can](http://www.romancortes.com/ficheros/css-coke.html)
 

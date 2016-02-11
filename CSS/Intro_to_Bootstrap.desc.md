@@ -1,36 +1,10 @@
-# CSS Frameworks / Twitter Bootstrap 
-
-If you've rendered HTML content in a browser without any CSS rules, you're well aware that it looks horrible. CSS frameworks are becoming very popular as a solution to the "ugly by default" problem. A CSS framework is large set of existing CSS rules that helps make your web applications look less ugly. 
-
-Such frameworks offload much of the CSS you might otherwise need to write into some sensible default styles, so that you can focus more on building your application and a company specific brand. 
-
-One such framework is Twitter's Bootstrap.
-
-## Objectives
-
-By the end of this lesson you should be able to:
-
-* Take components from Twitter's Bootstrap (henceforth simply Bootstrap) and apply them to your site. 
-* Understand how a css framework like Bootstrap works.
-* Make an HTML file that matches a "mockup" using Bootstrap __without using__ any CSS rules. 
-
-## Content
-
-## CSS Frameworks
-
-CSS frameworks, quite simply, are a large collection of CSS rules that play nice with each other. They make it easy for developers to worry less about the visual design of individual html elements, and more about the bigger picture of the page as a whole. CSS frameworks typically include default rules for common elements like `<div>, <span>, <ul>, <ol>, <li> ...` as well as rules for classes that can be applied to create common __layouts__ such as a grid.
-
-In the end, all CSS frameworks are simply a collection of CSS stylesheets. Such frameworks save engineers lots of time, especially when starting a brand new website. No one wants to write the same 50 rules every time they start a webpage just to prevent your site from defaulting to the hidious HTML defaults. They also provide some common language (and classes) related to layouts.
-
 ## Bootstrap Introduction
 
-[Bootstrap](http://getbootstrap.com/) is a front-end framework developed by Twitter. It's incredibly popular. New plugins and additions are added all the time. Libraries for __web frameworks__ (such as Ruby on Rails, or Python's Django) have been built to make it even easier to integrate the styles with all kinds of webservers. 
-
-Bootstrap has more than just CSS. It is packaged with plenty of JavaScript which can be used to trigger animations, create __modal dialog boxes__ and more. For now, we're going to focus __exclusively__ on the CSS aspects of Bootstrap. We'll circle back to the JS components when we're ready for it. 
+[Bootstrap](http://getbootstrap.com/) is a front-end framework that helps make your web applications look less ugly. It offloads much of the CSS you might otherwise need to write into some sensible default styles, so that you can focus more on building your application and less on technical details in your stylesheet.
 
 ## Installing Bootstrap
 
-Bootstrap's documentation offers up a number of installation options. To keep things simple, we're going to  but we're going to use the Bootstrap __CDN__.
+Bootstrap's documentation offers up a number of installation options. To keep things simple, we're going to  but we're going to use the Bootstrap CDN.
 
 **What's a CDN?**
 
@@ -57,32 +31,46 @@ As explained on the Bootstrap website, to hook in to the CDN you'll need to add 
 
 ```
 <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
 <!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 
 <!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 ```
 
 Copy and paste that code above the `</head>` tag, and that's it! You're ready to start using Bootstrap.
 
-Note: there are also a lot of Bootstrap themes that re-skin the default Bootstrap styles. This allows you to change the "look and feel" of your website, while still using the common layout language developed by Bootstrap. If you're interested, check out [http://www.bootstrapcdn.com/bootswatch/](http://www.bootstrapcdn.com/bootswatch/).
+Note: there are also a lot of Bootstrap themes that reskin the default Bootstrap styles. If you're interested, check out http://www.bootstrapcdn.com/bootswatch/.
 
-These installation options come straight from the Bootstrap folks. It's worth looking at all the other information on their ["Getting Started"](http://www.bootstrapcdn.com/bootswatch/) page, if only to realize that Bootstrap is big and powerful. 
+## Aside: Sublime Snippets
 
-## Aside: Bootstrap Templates/Snippets
+You'll be using Bootstrap on most (if not all) of your projects, and copying and pasting the CDN code from the website can be annoying. To help speed up our workflow, we can have Sublime store this piece of code -- or any other piece, really -- in what's called a snippet. Snippets allow us to save chunks of code so that we can easily reuse them within and across our applications.
 
-These plugins add snippets and autocomplete for bootstrap 3.
+Let's take a brief detour to see how snippets in Sublime Text work. Under `Tools`, scroll down to `New Snippet`. A file should open that looks like this:
 
-[Atom plugin](https://atom.io/packages/atom-bootstrap3)
+```
+<snippet>
+	<content><![CDATA[
+Hello, ${1:this} is a ${2:snippet}.
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<!-- <tabTrigger>hello</tabTrigger> -->
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>
+```
 
-[Sublime plugin](https://github.com/JasonMortonNZ/bs3-sublime-plugin)
+The only rows you need to worry about are rows 3 and 6. What goes in row 3 is the chunk of code you want to be able to reuse; in this case, replace `Hello, ${1:this} is a ${2:snippet}.` with the Bootstrap CDN code.
 
-## Back on Task, Using Bootstrap:
+Next, you need to tell Sublime Text when it should paste your snippet of code into whatever you're working on. Find the row with the code `<!-- <tabTrigger>hello</tabTrigger> -->` and replace it so that it reads:
 
-Honestly, the Bootstrap documentation is awesome. Bookmark this page [http://getbootstrap.com/css/](http://getbootstrap.com/css/). We're going to go over some things that the Bootstrap people assume web programmers already know, then we're going to turn several "mock ups" into beautifully rendered HTML using Bootstrap.
+`<tabTrigger>bootstrap</tabTrigger>`
+
+Now, save your snippet. **IMPORTANT** when you save, Sublime Text will default to the `/User/` folder. Don't save the snippet anywhere else! Also, the snippet must be saved with the extension `sublime-snippet`. For instance, `bootstrap.sublime-snippet` is probably the most reasonable name for the file you've just created.
+
+Here's where the magic happens. Go back in to your `bootstrap-sandbox.html` file, and delete out the Bootstrap code you pasted in earlier. Then, add a row in between `<title>Bootstrap Sandbox</title>` and `</head>`. In your new row, type `bootstrap` and then hit the `tab` key. Booya! 
 
 ## Containers and the Grid System
 
@@ -114,13 +102,13 @@ Let's throw some more divs into our html document to see a couple examples of Bo
     <meta charset="UTF-8">
     <title>Bootstrap Sandbox</title>
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     
     <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
     
     <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   </head>
   <body>
     <div class="container-fluid">
@@ -147,7 +135,7 @@ Let's throw some more divs into our html document to see a couple examples of Bo
 </html>
 ```
 
-Take a few minutes to play around with the grid system. Don't be afraid to make changes and break stuff, the original is always right here. Try to answer these questions through experimentation:
+Take a few minutes to play around with the grid system. Here are some questions you may want to explore:
 
 1. What's the difference between `.container-fluid` and `.container`?
 
@@ -159,10 +147,131 @@ Take a few minutes to play around with the grid system. Don't be afraid to make 
 
 5. What does offsetting do?
 
+## Tables Revisited
+
+Earlier we used CSS to style some tables to make them more readable. Bootstrap makes your lives much easier in this regard. Let's explore a simple example. Do the following:
+
+1. Put a `<table>` into your HTML document. Make sure it has at least four rows and at least two columns, and that each table cell has some text in it. Looks like garbage, right?
+
+2. Add the `.table` class to your table. A little redundant, but the end result is worth it.
+
+3. Want some borders? Add the `.table-bordered` class to your table too.
+
+4. Want the rows to be striped? Add `.table-striped`!
+
+5. What about a hover effect?
+
+6. Like with background colors, table rows and cells come with some default coloring options. Try adding one of the `.success`, `.warning`, `.danger`, or `.info` classes to one of your rows.
+
+## Forms and Buttons
+
+When it comes to forms, the `.form-control` class will be your best friend. Here's a simple example:
+
+```
+<div class="container-fluid">
+  <!-- Without Bootstrap -->
+  <div class="row">
+    <div class="col-md-12">
+      <form>
+        <div>
+          <label for="exampleName">Name</label>
+          <input type="text" name="exampleName" id="exampleName" placeholder="Name">
+        </div>
+      </form>
+    </div>
+  </div>
+  <!-- With Bootstrap -->
+  <div class="row">
+    <div class="col-md-12">
+      <form>
+        <div class="form-group">
+          <label for="exampleName">Name</label>
+          <input type="text" name="exampleName" id="exampleName" class="form-control" placeholder="Name">    
+        </div>
+      </form>
+   </div>
+</div>
+```
+
+Try out some other things with forms, comparing styling with Bootstrap and without it:
+
+1. Add another input! Suggestions: Password, Address, or Favorite Food.
+
+2. Give your form the `.form-inline` class. What happens? What happens if your window is small?
+
+3. What happens if you add `disabled` as an attribute to one of your inputs?
+
+4. Add a checkbox! Give your div wrapping the checkbox input the `checkbox` class.
+
+You can also wrap your form in the `.form-horizontal` class to make use of grid classes and align your labels and inputs in the same row:
+
+```
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12">
+      <form class="form-horizontal">
+        <div class="form-group">
+          <label class="col-sm-2 control-label" for="exampleName">Name</label>
+          <div class="col-sm-10">
+            <input type="text" name="exampleName" id="exampleName" class="form-control" placeholder="Name">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-sm-2 control-label" for="exampleEmail">Email</label>
+          <div class="col-sm-10">
+            <input type="email" name="exampleEmail" id="exampleEmail" class="form-control" placeholder="Email">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-sm-2 control-label" for="birthMonth">Birth Month</label>
+          <div class="col-sm-10">
+            <select class="form-control" name="birthMonth">
+              <option value="1">January</option>
+              <option value="2">February</option>
+              <option value="3">March</option>
+              <option value="4">April</option>
+              <option value="5">May</option>
+              <option value="6">June</option>
+              <option value="7">July</option>
+              <option value="8">August</option>
+              <option value="9">September</option>
+              <option value="10">October</option>
+              <option value="11">November</option>
+              <option value="12">December</option>
+            </select>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+```
+
+Of course, forms aren't particularly useful if you don't have any way of submitting them. Bootstrap also comes with a robust set of style rules for buttons. You can add button styling to `<a>` elements, `<input>` elements, and, unsurprisingly, `<button>` elements.
+
+Add these three elements to your html file, and then explore the questions below:
+
+```
+<a href="#">I'm a link!</a>
+<input type="button" value="I'm an input!">
+<button>I'm a button!</button>
+```
+
+1. What does adding the `.btn` class do?
+
+2. Once you've added the `.btn` class to an element, you can add other classes for addition styling. Play around with `.btn-default`, `.btn-primary`, `.btn-success`, `.btn-info`, `.btn-warning`,`.btn-danger`, and `.btn-link`. 
+
+3. What does the `.btn-block` class do when used in conjunction with `.btn`?
+
+4. What do you think the `.btn-lg` class does? Can you guess what some other button classes might be?
+
+Further reading: 
+
+[Forms in Bootstrap](http://getbootstrap.com/css/#forms)
 
 ## Glyphicons
 
-The only other feature we want to directly call your attention to is a set of icons called [Glyphicons](http://getbootstrap.com/components/#glyphicons). To use a glyphicon, just create a `<span>` element and give it the class `.glyphicon`, along with whatever class is specific to the icon you want to use. For example, if you want to display the heart icon, you would need to write:
+One other nice feature of Bootstrap is that it comes with a set of icons called [Glyphicons](http://getbootstrap.com/components/#glyphicons). To use a glyphicon, just create a `<span>` element and give it the class `.glyphicon`, along with whatever class is specific to the icon you want to use. For example, if you want to display the heart icon, you would need to write:
 
 `<span class='glyphicon glyphicon-heart'></span>`.
 
@@ -172,76 +281,48 @@ Protip #2: It is super easy to misspell the word glyphicon. Watch out.
 
 Protip #3: It's best practice to use `<button>` elements if you want to use buttons in Bootstrap. Check the [documentation](http://getbootstrap.com/css/#buttons) for more details.
 
+## Nav bars
 
-## Assessment and Excercises
+Finally, let's take a quick look at navigation bars in Bootstrap. Since nearly every website has a header and footer, nav bars are fairly universal design elements. It shouldn't be surprising, then, that Bootstrap provides us with some sensible styles.
 
-[Bootstrap Mocks Assignment 1](https://github.com/gSchool/BootstrapMocksAssignment)
+Here's the basic pattern:
 
-[Bootstrap Mocks Assignment 2](https://github.com/gSchool/bootstrap_mocks_assignment)
+```
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Here's where you put all your navigation -->
+  </div>
+</nav>
+```
 
-Homework: [Bootstrap Challenge](https://github.com/gSchool/bootstrap-challenge)
+Try your hand at adding the following design elements to your navigation bar:
 
-## Extra Resources
+1. Add a name for your site! Typically the name is wrapped in an `<a>` tag that's been given the `.navbar-header` class. To make the design more responsive, you can also wrap this entire tag inside of a `<div>` with the `.navbar-header` class.
+2. Add some links! Create an unordered list after your title and give it a couple of classes: `.nav` and `.navbar-nav`. For each `<li>` in your list, wrap the name of the link (e.g. About, Contact) in an `<a>` tag.
+3. Explore alignment! What happens if you give your list of links the `.navbar-right` class?
+4. (Bonus) Put a form in your navigation! If you run into alignment issues, try giving your `<form>` the `.navbar-form` class.
+5. (Bonus) Change one of your `<li>` links into a dropdown! Here's a template for dropdowns:
 
-For more guided practice, try the codeschool lessons! [https://www.codeschool.com/courses/blasting-off-with-bootstrap](https://www.codeschool.com/courses/blasting-off-with-bootstrap)
+```
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+  <ul class="dropdown-menu">
+    <li><a href="#">Option 1</a></li>
+    <li><a href="#">Option 2</a></li>
+    <li class="divider"></li>
+    <li><a href="#">Separated Option</a></li>
+  </ul>
+</li>
+```
 
-## <a name="bootstrapresources"></a> Bootstrap Website Resources 
+If you copy this code as-is, you may notice a problem: the dropdown isn't showing up! This is because Bootstrap dropdowns require the use of Bootstrap's javascript file, which in turn requires [jQuery](https://jquery.com/). But we haven't included jQuery in our file! To remedy this, you'll need to snag the relevant jQuery JS file. See if you can do this using the same CDN approach that we used to grab Bootstrap!
 
-### [Getting Started](http://getbootstrap.com/getting-started/)
+### Homework!
 
-[CDN/Download](http://getbootstrap.com/getting-started/#download)
+Note: these assignments, along with your weekend project, will all be due on Monday. There's nothing due on Friday, but these two assignments may take some time, so don't leave everything for Sunday night! If you can complete these by tomorrow, you'll have that much more time to work on your personal project over the weekend.
 
-[Community](http://getbootstrap.com/getting-started/#community)
+[CSS Assignment](https://github.com/gSchool/css-week-1)
 
-[Examples](http://getbootstrap.com/getting-started/#examples)
+[Bootstrap Assignment](https://github.com/gSchool/bootstrap_mocks_assignment)
 
-[Browser and Device Support](http://getbootstrap.com/getting-started/#support)
-
-### [CSS](http://getbootstrap.com/css/)
-
-#### [Grid System](http://getbootstrap.com/css/#grid)
-
-[Grid Options](http://getbootstrap.com/css/#grid-options)
-
-[Typography](http://getbootstrap.com/css/#type)
-
-[Alignment](http://getbootstrap.com/css/#type-alignment)
-
-[Addressess](http://getbootstrap.com/css/#type-addresses)
-
-[Tables](http://getbootstrap.com/css/#tables)
-
-[Forms](http://getbootstrap.com/css/#forms)
-
-[Buttons](http://getbootstrap.com/css/#buttons)
-
-### [Components](http://getbootstrap.com/components/)
-
-[Glyphicons](http://getbootstrap.com/components/#glyphicons)
-
-[Input Groups](http://getbootstrap.com/components/#input-groups)
-
-[Navs](http://getbootstrap.com/components/#nav)
-
-[Badges](http://getbootstrap.com/components/#badges)
-
-[Thumbnails](http://getbootstrap.com/components/#thumbnails)
-
-[Alerts](http://getbootstrap.com/components/#alerts)
-
-[Media Object](http://getbootstrap.com/components/#media)
-
-[List Group](http://getbootstrap.com/components/#list-group)
-
-[Panels](http://getbootstrap.com/components/#panels)
-
-### [JavaScript](http://getbootstrap.com/javascript/)
-
-[Modals](http://getbootstrap.com/javascript/#modals)
-
-[Popover](http://getbootstrap.com/javascript/#popovers)
-
-[Carousel](http://getbootstrap.com/javascript/#carousel)
-
-### [Customize](http://getbootstrap.com/customize/)
-
+[Personal Website Assignment](https://github.com/gSchool/personal_website_assignment)

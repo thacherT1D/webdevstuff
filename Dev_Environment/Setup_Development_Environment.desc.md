@@ -1,59 +1,16 @@
-Development Environments
-========================
+## Welcome to Galvanize!!!
 
-##Objectives, You Should Learn How To:
-* Describe the differences between Production, staging and development environments.
-* Setup a basic development environment with:
-	* Chrome - Modern web browser (IE and Safari don't count).
-	* Atom - text editor
-	* Homebrew - package manager
-	* Git - version control
-	* Node - JavaScript for the server
-* Briefly describe the purpose of each of the above.
+We're super excited to have you here - it's going to be an intense, but incredible 6 months! We'll be posting the majority of our notes in the daily planner, so be sure to check these each day for topics, objectives and assignments.  
 
-##Content
+Today we're going to focus on setting up our development environment so that we can hit the ground running. This will involve installing quite a few tools/technologies and learning a whole bunch of useful shortcuts!
 
-###Production, Staging, and Development
-
-In most web software companies there are 3 major "environments" which host and run the companies software applications: production, staging, and development. 
-
-Production is a server (or collection of servers) that is live, on the open web, and accessible to the public. When you type [www.google.com](www.google.com) into your browser, you are making a request to Google's "production environment". Production environments are carefully configured and designed process users requests as quickly as possible.
-
-Staging is a typically a clone of the production environment. The purpose of staging is to allow developers to test their code somewhere that behaves identically to production, but isn't available to the public. These are often available within the companies local network, or gated behind a user/password authentication screen.
-
-Your development environment is your laptop, desktop, or whatever device you use to write code. 
-
-###The Purpose of a Development Environment
-
-Unlike production and staging, this environment is optimized for humans, instead of machines. Where production and staging need to respond to requests as fast as possible, development environments should help you generate code as quickly as possible. 
-
-Creating a good development environment is a crucial step for every software engineer. There are a number of tools that you'll use every day to help you read, write, maintain, run, and navigate source code. 
-
-Picking good tools is just the start. We'll also be introducing a number of useful keyboard shortcuts and techniques. The goal of a good development environment is to maximize time spent thinking about the logic of your code, and minimize time spent worrying about how to write it.
-
-### Essential Tools
-
-We have chosen an essential toolset for the Galvanize FS program. Reasonable people often disagree about the perfect tool for any given task, but we can provide more support if you use the same tools we do.
-
-There are 3 essential tasks that every engineer must always do. We've chosen a basic toolset to help us with these tasks:
-
- * Editing code. 
-  	* Atom: for editing source code and text (HTML/CSS/JavaScript/Ruby/...)
- * Run code. Engineers are constantly testing and using their apps
- 	* Chrome: a good webbrowser for running and debugging websites.
- 	* The Command Line: for running servers, scripts, and so much more.
- * Commit code to the master codebase. when the code works, it has to be saved.
- 	* Git: a "version control" system that helps devs collaborate and save code.
-
-Finally, we're also going to have you install Homebrew, a "package manager". Frequently developers will need to install another tool or library. Package managers makes installing software much easier. Because it makes everything else so much easier, we're going to start with Homebrew.
-
-##Excercises - Install the Following Tools 
+## Essential Installations
 
 ### Homebrew
 
 **What is it? What will I be using it for?**
 
-Homebrew is a package manager (a tool that helps us install additional technologies/tools) for OSX. Throughout the course we'll be installing tools to help us with specific tasks, such as Node for run Javascript servers; or Mongo and Postgres as databases. Homebrew will significantly improve your speed and accuracy when installing these "packages" of software.
+Homebrew is a package manager (a tool that helps us install additional technologies/tools) for OSX.
 
 **How do I install it?**
 
@@ -61,49 +18,11 @@ In terminal, run:
 
 `ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
 
-You'll be prompted to install developer tools. Agree to this. When it comes time to enter your admin password, you will not see the password itself in the terminal. Just type your password in carefully and hit enter.
-
-Check your Hombrew install with:
-
-`which brew`
-You should see something like this `/usr/local/bin/brew`
-
-
-### Atom Editor
-
-**What is it? What will I be using it for?**
-
-Atom is going to be our editor of choice. There are literally hundreds of text editors to choose from but we **strongly** recommend Atom. Atom is designed for software engineering, and is very popular in the web development community.   
-
-**How do I install it?**
-
-https://atom.io/
-
-**Using the atom alias**
-
-You can open Atom from the terminal by running `atom .`.
-
-### Chrome	
-
-**What is it? What will I be using it for?**
-
-Chrome is a browser that not only offers some useful features for browsing, but it is a **MUST HAVE** for developing and debugging HTML, CSS, and JavaScript. PLEASE make chrome your default browser - we will be using it almost every day.
-
-Some browsers (IE and Safari, especially old versions) do not play nice with many modern web standards. Having a modern web browser is crucial for an effective development environment. 
-
-**How do I install it?**
-
-https://www.google.com/chrome/browser/desktop/
-
 ### Git	
 
 **What is it? What will I be using it for?**
 
-Git is a version control system that we will be using to keep track of changes in our code. It is a **MUST** know for any developer and we will be spending lots of time on it over the course. 
-
-Version control allows programmers to make changes to their code without breaking the "master" copy; roll back changes that didn't work; backup their work across many "branches"; collaborate with other programmers on the same codebase; and so much more. 
-
-There are literally no successful software companies that do not use some kind of version control. 
+Git is a version control system that we will be using to keep track of changes in our code. It is a **MUST** know for any developer and we will be spending lots of time on it over the course.
 
 **How do I install it?**
 
@@ -113,9 +32,119 @@ In the terminal, run:
 
 `brew install git`
 
-## Essential Shortcuts
+### Oh my zsh	
 
-Developers tend to become "power users" in order to efficiently move through and between the various tools they use regularly. This is a starting cheat sheet for commands that can help you navigate and use your new development environment more effectively.
+**What is it? What will I be using it for?**
+
+Right now our terminal is not very user friendly. We're going to change our shell from `bash` to `zsh` and install a plugin called `oh my zsh` to give us some very useful shortcuts and coloring.
+
+**How do I install it?**
+
+In the terminal run:
+
+`sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"`
+
+You may have to type in your password if it asks you, and when you are done with this, in the terminal, type `zsh`.
+
+### Sublime Text 3 (subl alias) / Package Manager	
+
+**What is it? What will I be using it for?**
+
+Sublime Text is going to be our editor of choice. If you are more comfortable with other text editors like Atom or Textmate you may use them but we **STRONGLY** urge you to consider using Sublime Text 3 (it's really nice).
+
+**I have Sublime Text 2....that works right?**
+
+Unfortunately not :( - although it is still in beta, Sublime Text 3 has a set of packages (we'll discuss later what those are) which are incredibly useful and are not available in Sublime Text 2. If you already have Sublime Text 2, please delete it and install Sublime Text 3. 
+
+**How do I install it?**
+
+http://www.sublimetext.com/3
+
+**Using the subl alias**
+
+It would be really nice if we could open up sublime from the terminal. To get started with that read this (we will go through this process together):
+
+http://stackoverflow.com/questions/16199581/opening-sublime-text-on-command-line-as-subl-on-mac-os
+
+**NEXT STEPS**
+
+While Sublime Text 3 comes with some nice things out of the box, there are a bunch of additional tools we want to add to our text editor (we will call those "packages"). In order to do that, we need a tool to help us install these "packages" (we call that a "package manager"). Head over to https://packagecontrol.io/installation and follow the instructions for Sublime Text 3. If you install this correctly, you should be able to type `command+shift+p` in sublime and type in `install package` and see something.
+
+### Alfred or Spotlight	
+
+**What is it? What will I be using it for?**
+
+Alfred is a wonderful tool for quickly finding files, doing quick math, searching on wikipedia and defining words.
+
+**How do I install it?**
+
+http://www.alfredapp.com/
+
+### Shiftit / Divvy	/ Spectacle
+
+**What is it? What will I be using it for?**
+
+Unfortunately, macs do not come with a great way to split windows easily. This means if we want to see two windows side by side we have to use our mouse to drag each time - that's too much work! 
+
+**How do I install it?**
+
+Shiftit - https://github.com/fikovnik/ShiftIt/releases/download/version-1.6.3/ShiftIt-1.6.3.zip
+
+Divvy - https://itunes.apple.com/us/app/divvy-window-manager/id413857545?mt=12
+
+Spectacle - http://spectacleapp.com/
+
+### Use Chrome	
+
+**What is it? What will I be using it for?**
+
+Chrome is a browser that not only offers some useful features for browsing, but it is a **MUST HAVE** for developing and debugging HTML, CSS and JavaScript. PLEASE make chrome your default browser - we will be using it almost every day.
+
+**How do I install it?**
+
+https://www.google.com/chrome/browser/desktop/
+
+### fasd	
+
+**What is it? What will I be using it for?**
+
+When you're in the command line, sometimes you can't remember where folders/files are, so you spend time searching through directories and driving yourself crazy. fasd will help preserve your sanity.
+
+https://github.com/clvv/fasd
+
+**How do I install it?**
+
+Download the zipfile here and open up the folder in terminal (you can drag the folder icon to the terminal)
+
+https://github.com/clvv/fasd/zipball/1.0.1
+
+Once you are in terminal, run the command `make install`
+
+When this is done head over to the home directory (in terminal type `~`) and then run `subl .zshrc` to open up your `.zshrc` file. Inside of here, add the following `eval "$(fasd --init auto)"` - then save and restart the terminal. Finally, type in the terminal `which z`. If you see `z: aliased to fasd_cd -d` you have done this correctly!
+
+### tree	
+
+**What is it? What will I be using it for?**
+
+Tree is a very useful tool for looking at the contents of a folder from the command line. It gives you a nice tree-like structure and shows you what files are nested where.
+
+**How do I install it?**
+
+http://brewformulas.org/Tree
+
+`brew install tree`
+
+### Mou	
+
+**What is it? What will I be using it for?**
+
+When we write readme files for our repositories, the language we use is Markdown, which is a text to HTML converter (you can read more about it here http://daringfireball.net/projects/markdown/). It's essential to understand how Markdown works as well as have a tool where we can write Markdown. Sublime Text 3 can help us with that, but there are better tools - Mou is one of them!
+
+**How do I install it?**
+
+http://25.io/mou/
+
+## Essential Shortcuts
 
 ## OSX
 `command + tab` : switch open applications
@@ -126,11 +155,11 @@ Developers tend to become "power users" in order to efficiently move through and
 
 `command + q` (while in open applications) : quit an application
 
-## Chrome / Atom / Terminal / most apps with tabs
+## Chrome / Sublime /  Bash / most apps with tabs
 
-`command + n` : create new window
+`command + n` : create new window (`shift + command + n` for Sublime)
 
-`command + t` : create new tab
+`command + t` : create new tab (`command + n` for Sublime)
 
 `command + w` : close tab or window if only one tab
 
@@ -151,7 +180,6 @@ Developers tend to become "power users" in order to efficiently move through and
 `alt + command + arrow keys` : move right or left tabs
 
 ## Chrome
-
 `command + r` : reload page
 
 `command + option + j` : open the javascript console
@@ -162,6 +190,99 @@ Developers tend to become "power users" in order to efficiently move through and
 
 `command + shift + t` : reopen last closed tab (up to 10)
 
-## Atom
+## Sublime
+`command + ctrl + f` : toggle fullscreen
 
-[Shortcut Cheatsheet](https://bugsnag.com/blog/atom-editor-cheat-sheet)
+`command + ctrl + shift + f` : toggle distraction free
+
+
+`option + arrows` : move one word at a time
+
+`command + arrows` : move to beginning and end of line
+
+`shift + above commands` : select all the text
+
+`delete + the above` : delete all the text
+
+`fn + delete` : delete forward
+
+`command + k`, command k : delete to end of line
+
+`command +  delete` : delete to beginning of line
+
+`fn + up / down` : page up / page down
+
+`fn + right / left` : beginning and end of file
+
+
+`command + z` : undo
+
+`command + shift + z` : redo
+
+`command + y` :redo
+
+`command + /` : toggle comment for line
+
+`command + ]` : shift indenting right
+
+`command + [` : shift indenting left
+
+`command + l` : select the whole line
+
+`command + c` (with selection) : copy selection
+
+`command + x` (with selection) : cut selection
+
+`command + v` : paste most recent cut or copy
+
+`command + shift + v` : paste with proper indentation
+
+`command + x` : cut the whole line
+
+`command + c` : copy the whole line
+
+`command + enter` : create new line below
+
+`command + shift` + enter : create new line above
+
+`command + shift + d` : copy current line below
+
+`command + control + arrows` : move entire line up and down
+
+`command + k, command + u` : make selection upper case
+
+`command + k, command + l` : make selection lower case
+
+`command + '` : select all within quotes
+
+`control + m` : move to beginning/end of parens and braces
+
+`command + d` : select word(s)
+
+`command + k` while selecting words : don't select word
+
+`command + ctrl + g` : select all of words
+
+`option + mouseDrag` : column select
+
+`command + mouseClick` : custom multiple cursor
+
+`command + p` : goto anything (use with :line_number, @symbol, #term)
+
+`command + r` : search all function names in current file
+
+`command + shift + p` : set syntax (and many many other things)
+
+`command + f` : find
+
+`command + shift + f` : massive find
+
+`command + k, command + b` : toggle file bar
+
+`command + option + NUMBER` : split screen
+
+`control + shift + NUMBER` : move current file to pane
+
+`command + shift + l` : multi line cursor based on selection
+
+`command + control + up/down` : move a line up or down
