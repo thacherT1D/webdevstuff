@@ -50,13 +50,12 @@ Install Mocha globally via NPM:
   $ npm install -g mocha
   ```
 
-Create a new directory called "test-basics". CD into it, initialize a repository, and then create a subdirectory called test:
+Create a new directory called "test-basics". CD into it and initialize a repository:
 
   ```sh
   $ mkdir test-basics
   $ cd test-basics
   $ git init
-  $ mkdir test
   ```
 
 Initialize npm (press return multiple times to confirm the defaults).
@@ -88,7 +87,7 @@ Try running the tests with the `mocha` command. You should see:
 
   ```
 
-Add a test file called `test.js` to the `test/` directory and add the following test setup code:
+Add a test file called `test.js` within a `test/` directory and add the following test setup code:
 
   ```javascript
   var code = require('../main');
