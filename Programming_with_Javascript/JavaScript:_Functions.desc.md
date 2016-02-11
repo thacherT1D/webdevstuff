@@ -215,3 +215,118 @@ Using the `pop()` method doesn't work, and this observation confirms our assumpt
 # Conclusion
 
 During this lesson, we've learned and wielded the immense power of functions. We can now re-use code whenever we want. We can also pass dynamic values, which is incredibly cool. Keep practicing what we've learned. Your journey to mastering JavaScript depends on your understanding of functions.
+
+
+# Function Exercises
+- Write a function that accepts two parameters and always returns a message saying the first argument is cooler.
+
+```javascript
+function whoIsCooler(me, you) {
+  // your code here...
+}
+whoIsCooler(‘Mel’, ‘Jill’);
+// ‘Mel is cooler!’
+
+```
+
+- Write a function that takes 1 single parameter and calls another function to determine if the number is even or odd. If even, it doubles and returns the number, if odd, it triples and returns the number.
+
+```javascript
+function numberMagic(num){
+  if ( evenNumber(num) ) {
+    // do something
+  } else if ( oddNumber(num) ) {
+    // do something
+  }
+}
+function evenNumber (...) {
+  // your code
+}
+function oddNumber (...) {
+  // your code
+}
+numberMagic(2);
+// 4
+
+numberMagic(3);
+// 9
+numberMagic(‘a’);
+// ‘That’s not a number!’
+
+numberMagic(8);
+// 16
+
+numberMagic(9)
+// 27
+```
+
+
+
+- Write a function that has no parameters but will return the meaning of life if invoked with the magic number of 42 => “Code like a champion!”. Otherwise it will return a random message like: “It’s a mystery...”, “Life is but a dream”, “I like cookies and milk”.
+
+```javascript
+function lifesMeaning(){
+ // your code here
+}
+lifesMeaning();
+// “It’s a mystery…”
+
+lifesMeaning(‘tell me’);
+// “Life is but a dream”
+
+lifesMeaning(42);
+// “Code like a champion!”
+
+```
+
+- Write a function without parameters that sums up all numbers and ignores everything else. It should convert number strings to numbers. So ‘9’ should be converted to 9. If no numbers are passed, it should return ‘Nothing to sum here…’. If the sum is 21, it should always return ‘blackjack’.
+
+```javascript
+function sumMagic() {
+  // your code here
+}
+sumMagic(‘a’, 1, 5);
+// 6
+
+sumMagic(‘a’, ‘c’);
+// ‘Nothing to sum here…’
+
+sumMagic(1, 3, 9);
+// 13
+
+sumMagic(‘5’, 5, ‘apple’, 11);
+// ‘blackjack’
+
+```
+- DJ Khaled what are the keys to success? Write a function that says “Another one!” waits for 1 second and says “Another one!”.
+On the (N)th time it logs “I’m DJ Khaled!” and exits execution.
+
+```javascript
+function whatIsTheKeyToSuccess(n) {
+ // your code here
+}
+whatIsTheKeyToSuccess(4);
+// “Another one!”
+// “Another one!”
+// “Another one!”
+// “I’m DJ Khaled!”
+```
+- function whoIsTaller takes 2 parameters and always returns ‘a’ is taller than ‘b’. However if ‘Beyonce” is a parameter, she will always be taller.
+
+Also if a third argument is passed, this person will always be the tallest, even if Beyonce is an argument.
+
+```javascript
+function whoIsTaller(a, b) {
+ // your code here
+}
+whoIsTaller(‘Beyonce’, ‘Bruno Mars’);
+// ‘Beyonce’
+
+whoIsTaller(‘Joe’, ‘Beyonce’, ‘Sally’);
+// ‘Sally’
+
+whoIsTaller(‘Joe’, ‘Beyonce’);
+// ‘Joe’’
+```
+
+![](https://app.box.com/embed/preview/tpr9eyi71n459kreyckmd7tkp5dgq000)
