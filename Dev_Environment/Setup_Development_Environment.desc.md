@@ -134,7 +134,9 @@ To get started, run the following command in your shell. It'll download and run 
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
-**TIP:** Be sure to agree when asked to install the **XCode CommandLine Tools**. It may take about 10 minutes to download and install.
+Be sure to agree when asked to install the **Xcode CommandLine Tools**. It may take about 10 minutes to download and install.
+
+**TIP:** If needed, you can agree to the Xcode license by running the `sudo xcodebuild -license` command. This will require your account password which **will not** appear on the screen as you type.
 
 ### Update Homebrew
 
