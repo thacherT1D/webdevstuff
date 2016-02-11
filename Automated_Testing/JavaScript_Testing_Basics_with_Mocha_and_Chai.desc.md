@@ -243,9 +243,10 @@ Follow the same steps as above to create the test.js, main.js, npm init and inst
 
 Give the following leap year rules, what kind(s) of tests can we write?
 
-1. every year whose number is perfectly divisible by four is a leap year.
-1. except for years which are both divisible by 100 and not divisible by 400.
-1. 1600 and 2000 are leap years, but the century years 1700, 1800, and 1900 are not.
+* every year whose number is perfectly divisible by four is a leap year.
+* except for years which ARE divisible by 100 and NOT divisible by 400 (divisible by 400 is still a leap year)
+  * 1600 and 2000 are still leap years
+  * 1700, 1800, and 1900 are not leap years
 
 Your function will work something like follows:
 
