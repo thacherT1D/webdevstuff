@@ -75,4 +75,4 @@ Head over to the exercises tab above to get to the Semantic News exercise.
 
 ## Resources
 
-http://stackoverflow.com/questions/14843862/how-can-i-fix-heroku-imagecreatefromjpeg
+http://html5doctor.com/downloads/h5d-sectioning-flowchart.png
