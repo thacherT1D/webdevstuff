@@ -21,7 +21,7 @@ Students will able to...
 # 1 of 15: What's a Programming Language?
 Let's start today's lesson with a question: What is a programming language?
 
-A programming language is a language that is designed to communicate instructions to a machine. During the past several decades, many programming languages have been created--Java, C++, PhP, Python, Ruby, JavaScript, etc.--to help humans achieve this task. Each of these langauges were designed, furthermore, with specific purposes in mind.You've already have been introduced to one language, Bash, which is a shell and language, that enables you to write instructions about your file system to a local machine.
+A programming language is a language that is designed to communicate instructions to a machine. During the past several decades, many programming languages have been created--Java, C++, PhP, Python, Ruby, JavaScript, etc.--to help humans achieve this task. Each of these langauges were designed, furthermore, with specific purposes in mind.You have already been introduced to one language, Bash, which is a shell and language, that enables you to write instructions about your file system to a local machine.
 
 Another example, which you haven't been formally introduced, is Ruby, a server-side langauge. As the story goes, Yukihiro "Matz" Matsumoto ("Matz") created Ruby during the mid-1990s. He felt that programmers needed a program that was designed for programmer satisfcation. He wanted "to see Ruby help every programmer in the world to be productive, [..] to enjoy programming, and to be happy." Ruby's syntax, in turn, was designed to be human friendly--concise, human-like sentences.
 
