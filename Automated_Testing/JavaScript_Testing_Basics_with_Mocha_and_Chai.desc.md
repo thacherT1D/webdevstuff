@@ -4,6 +4,7 @@
 
 - Discuss the benefits of testing. How does it help developers do their job more effectively?
 - Write code to pass a given set of tests.
+- Install a test framework
 - Write tests and code that passes those tests.
 - Describe and employ the tdd red / green / refactor cycle for unit tests
 
@@ -29,6 +30,8 @@ If your codebase is untested then it is **very** difficult to refactor or add ne
 - The new feature could break your existing codebase.
 
 Automated tests help minimize these issues, allowing you to safely update your codebase and sleep at night. Unfortunately, many developers don't understand the importance of testing until their application breaks and s/he is up all night trying to fix things.
+
+Tests also serve as executable documentation for the codebase.
 
 Read more [here](http://stackoverflow.com/questions/67299/is-unit-testing-worth-the-effort).
 
@@ -244,6 +247,13 @@ Give the following leap year rules, what kind(s) of tests can we write?
 1. except for years which are both divisible by 100 and not divisible by 400.
 1. 1600 and 2000 are leap years, but the century years 1700, 1800, and 1900 are not.
 
+Your function will work something like follows:
+
+```
+leapYear(2016)
+> true
+```
+
 ### Exercise: Taxes
 
 Create a new directory in your workspace called taxCalculator.
@@ -267,12 +277,12 @@ var expect = require('chai').expect;
 describe('Tax Calculator', function(){
 
   it('should tax 10% on the first $10', function() {
-    expect(code.calculate(1)).to.equal(0.1);
-    expect(code.calculate(10)).to.equal(1);
+    expect(code.calcTax(1)).to.equal(0.1);
+    expect(code.calcTax(10)).to.equal(1);
   });
 
   it('should tax 7% on the second $10', function(){
-    expect(code.calculate(15)).to.equal(1.35);
+    expect(code.calcTax(15)).to.equal(1.35);
   });
 
 });
