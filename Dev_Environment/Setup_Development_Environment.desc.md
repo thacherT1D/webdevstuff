@@ -1,172 +1,774 @@
-Development Environments
-========================
+## Mac OS X for Web Development
 
-## Objectives, You Should Learn How To:
-* Describe the differences between Production, staging and development environments.
-* Setup a basic development environment with:
-	* Chrome - Modern web browser (IE and Safari don't count).
-	* Atom - text editor
-	* Homebrew - package manager
-	* Git - version control
-	* Node - JavaScript for the server
-* Briefly describe the purpose of each of the above.
+This guide will help you setup a web development environment on [Mac OS X 10.11 El Capitan](https://www.apple.com/osx/) and above. By the end, your computer will be configured with the same state-of-the-art tools used by professional web developers. While this guide is mostly compatible with older versions of Mac OS X, follow along as best you can while Googling any problems that arise.
 
-## Content
+By the end of this guide, your development machine should have the following software installed and configured.
 
-### Production, Staging, and Development
+1. [Terminal](#Configure_the_Terminal)
+1. [Homebrew](#Install_Homebrew)
+1. [Chrome](#Install_and_Configure_Chrome)
+1. [Fish](#Install_and_Configure_Fish)
+1. [Atom](#Install_and_Configure_Atom)
+1. [Git](#Install_and_Configure_Git)
+1. [Node](#Install_Node)
+1. [Surge](#Install_Surge)
 
-In most web software companies there are 3 major "environments" which host and run the companies software applications: production, staging, and development. 
+After you've finished setting up your development environment, you'll be able to complete the following tasks.
 
-Production is a server (or collection of servers) that is live, on the open web, and accessible to the public. When you type [www.google.com](www.google.com) into your browser, you are making a request to Google's "production environment". Production environments are carefully configured and designed process users requests as quickly as possible.
+1. Create a tiny web page with a text editor
+1. Test the web page in a browser
+1. Commit the web page to a repository
+1. Deploy the web page to a production environment
 
-Staging is typically a clone of the production environment. The purpose of staging is to allow developers to test their code somewhere that behaves identically to production, but isn't available to the public. These are often available within the companies local network, or gated behind a user/password authentication screen.
+Additionally, this guide assumes your computer is up to the task of coding.
 
-Your development environment is your laptop, desktop, or whatever device you use to write code. 
+- Is virus and malware free
+- Uses the latest, stable, updated version of its operating system
+- Has a functioning screen, keyboard, and trackpad
+- Has plenty of free hard drive space and memory
+- Can reliably connect to wireless networks
 
-### The Purpose of a Development Environment
+### What's an environment and why is it important?
 
-Unlike production and staging, this environment is optimized for humans, instead of machines. Where production and staging need to respond to requests as fast as possible, development environments should help you generate code as quickly as possible. 
+In software, an **environment** is the place where an application is executed. An application's environment includes things like an operating system and a runtime system. Although web applications are often executed on many different environments, each with their own purpose, two environments are essential—production and development.
 
-Creating a good development environment is a crucial step for every software engineer. There are a number of tools that you'll use every day to help you read, write, maintain, run, and navigate source code. 
+A **production environment** is a server, or collection of servers, that live somewhere on the Internet and is responsible for serving the web application to the public. When you visit https://duckduckgo.com/ in the browser, for example, you're making a request to a web application's production environment. Production environments are carefully configured and designed to process user requests as quickly as possible.
 
-Picking good tools is just the start. We'll also be introducing a number of useful keyboard shortcuts and techniques. The goal of a good development environment is to maximize time spent thinking about the logic of your code, and minimize time spent worrying about how to write it.
+A **development environment** is a machine, like your laptop, that's used to create, test, commit, and deploy code to the production environment. For consistency, it's important that a development environment use the same technologies as its production counterpart. However, unlike production, a development environment is all about increasing developer productivity. As you can imagine, being able to create a development environment is a crucial skill for every developer.
 
-### Essential Tools
+### How do you create a development environment?
 
-We have chosen an essential toolset for the Galvanize FS program. Reasonable people often disagree about the perfect tool for any given task, but we can provide more support if you use the same tools we do.
+There are four essential tasks that web developers do on a daily basis.
 
-There are 3 essential tasks that every engineer must always do. We've chosen a basic toolset to help us with these tasks:
+1. Create code as efficiently as possible
+1. Test code to ensure it works as expected
+1. Commit code to a repository once it's correct
+1. Deploy code to a production environment
 
- * Editing code. 
-  	* Atom: for editing source code and text (HTML/CSS/JavaScript/Ruby/...)
- * Run code. Engineers are constantly testing and using their apps
- 	* Chrome: a good web browser for running and debugging websites.
- 	* The Command Line: for running servers, scripts, and so much more.
- * Commit code to the master codebase. when the code works, it has to be saved.
- 	* Git: a "version control" system that helps devs collaborate and save code.
+In an ideal world, developers would learn and use a single, monolithic tool to accomplish all these tasks. In practice, this ideal turns out to be problematic for developers. Picture a scenario where a significantly better way of creating code is discovered that would dramatically improve your productivity. With a monolithic tool, you're at the mercy of the tool's creators to release a new version that incorporates the new and improved technique. In some cases, that can take a very long time if it ever happens at all.
 
-Finally, we're also going to have you install Homebrew, a "package manager". Frequently developers will need to install another tool or library. Package managers makes installing software much easier. Because it makes everything else so much easier, we're going to start with Homebrew.
+That's why many developers prefer a development environment composed of multiple specialized tools rather than one monolithic tool. This approach is called the **Unix philosophy** and it emphasizes using simple, short, clear, modular, and extensible tools that can be easily maintained and repurposed by developers other than its creators. Though each tool has it's own learning curve, any one of them is easily replaceable when the need arises.
 
-## Excercises - Install the Following Tools 
+The following guide will help you install and configure a development environment so you can complete the essential tasks of a web developer using tools that adhere to the Unix philosophy. Let's get started.
 
-### Homebrew
+## Configure the Terminal
 
-**What is it? What will I be using it for?**
+Included in Mac OS X is the **Terminal**—an app that runs a Unix shell.
 
-Homebrew is a package manager (a tool that helps us install additional technologies/tools) for OSX. Throughout the course we'll be installing tools to help us with specific tasks, such as Node for run Javascript servers; or Mongo and Postgres as databases. Homebrew will significantly improve your speed and accuracy when installing these "packages" of software.
+A **Unix shell** is a command line user interface between you and your computer's operating system. You're probably most familiar with the graphical user interface of an operating system. While that's technically a shell too, most developers think of the textual, command line interface when they hear to word _shell_. Mac OS X blends both the graphical and the command line interfaces beautifully which is why it's so popular with developers.
 
-**How do I install it?**
+The first Unix shell was released in 1971 and yet developers continue to incorporate them into their workflows. That's because Unix shells are both interactive and scriptable. In other words, the same commands that control an operating system from the command line can be included in a script file. A **script file** is commonly used to automate repetitive tasks and increase developer productivity. In this guide, you'll download and run script files to speed up the installation and configuration of your development environment.
 
-In terminal, run:
+### Discover the Terminal
 
-`ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
+Let's get our hands dirty and have some fun. :paw_prints:
 
-You'll be prompted to install developer tools. Agree to this. When it comes time to enter your admin password, you will not see the password itself in the terminal. Just type your password in carefully and hit enter.
+First, use Spotlight to launch the Terminal app by pressing the `Command` + `Spacebar` keys at the same time, typing the word "terminal" into the search field, and then pressing the `Enter` key.
 
-Check your Hombrew install with:
+![](https://i.imgur.com/XQE36wU.jpg)
 
-`which brew`
-You should see something like this `/usr/local/bin/brew`
+Once launched, you'll see something like this.
 
+![](https://i.imgur.com/7d6GeeO.png)
 
-### Atom Editor
+Here's a quick break down of what you're seeing in the Terminal app.
 
-**What is it? What will I be using it for?**
+| Component             | Description                            |
+| --------------------- | -------------------------------------- |
+| `Wed Jan 28 12:06:29` | Date of your last login                |
+| `ttys008`             | Name of your last terminal session     |
+| `photon`              | Name of your computer                  |
+| `~` (home directory)  | Name of your working directory         |
+| `ryansobol`           | Name of your user account              |
+| `$`                   | Prompt symbol                          |
 
-Atom is going to be our editor of choice. There are literally hundreds of text editors to choose from but we **strongly** recommend Atom. Atom is designed for software engineering, and is very popular in the web development community.   
+Go ahead and type `uname` which is a command that will display your operating system's Unix name. Any characters you type will appear after the `$` prompt symbol. After pressing the `Enter` key, you'll see something like this.
 
-**How do I install it?**
+![](https://i.imgur.com/eGnT4NZ.png)
 
-https://atom.io/
+**TIP:** The two most common Unix operating systems are Darwin and Linux.
 
-**Using the atom alias**
+Here's what happened:
 
-Install Shell Commands: spotlight to Atom, Atom -> Install Shell Commands.
-You can now open Atom from the terminal by running `atom .`.
+1. The shell told the Terminal to display a prompt.
+1. The shell asked the Terminal to wait for you to type a command.
+1. You then typed the word `uname` which appeared after the prompt.
+1. You pressed the `Enter` key which triggered the shell to accept your input.
+1. The shell searched for a program called `uname`.
+1. Once found, the shell launched the `uname` program and handed it control over the Terminal.
+1. While running, the `uname` program told the Terminal to display the word `Darwin`.
+1. Once finished, the `uname` program exited and handed control of the Terminal back to the shell.
+1. The shell told the Terminal to display another prompt.
+1. Once displayed, the shell began waiting for your next command.
 
-### Chrome	
+This is called a read-evaluate-print loop or **REPL** for short.
 
-**What is it? What will I be using it for?**
+### Change the Terminal Profile
 
-Chrome is a browser that not only offers some useful features for browsing, but it is a **MUST HAVE** for developing and debugging HTML, CSS, and JavaScript. PLEASE make chrome your default browser - we will be using it almost every day.
+The default profile for the Terminal uses small, black text on a white background. Boring! Let's change that.
 
-Some browsers (IE and Safari, especially old versions) do not play nice with many modern web standards. Having a modern web browser is crucial for an effective development environment. 
+1. Download the [Tomorrow Night Eighties](https://raw.githubusercontent.com/ryansobol/sea-c17-ruby/master/class1/osx/Tomorrow%20Night%20Eighties.terminal) terminal profile by holding the `Option` key and left-clicking the link.
+1. Navigate to the `Downloads` folder.
+1. Install the profile by double-clicking the file.
+1. You'll see an alert explaining the file "cannot be opened because it is from an unidentified developer". **Don't panic.**
+1. Using Spotlight, open the `Security & Privacy` system preferences by pressing the `Command` + `Spacebar` keys at the same time, typing the word "security" into the search field, and then pressing the `Enter` key.
+1. Navigate to the `General` tab and then click on the `Open Anyway` button. ![](https://i.imgur.com/lOh3GAH.png)
+1. Press the `Command` + `Tab` keys at the same time to switch back to the Terminal app.
+1. Navigate to the `Terminal > Preferences` menu item by pressing the `Command` + `,` keys at the same time.
+1. In the preferences window, click the `Settings` Pane.
+1. On the left side, scroll to the bottom, select the `Tommorrow Night Eighties` profile, and click the `Default` button. ![](https://i.imgur.com/g9l91K0.png)
+1. Quit the Terminal app by pressing the `Command` + `Q` keys at the same time.
+1. Relaunch the Terminal using Spotlight like before.
 
-**How do I install it?**
+Now, every new Terminal window will look like this.
 
-https://www.google.com/chrome/browser/desktop/
+![](https://i.imgur.com/87bHvEF.png)
 
-### Git	
+## Install Homebrew
 
-**What is it? What will I be using it for?**
+Now that your Terminal is setup, it's time to install [Homebrew](http://brew.sh/), the de facto package manager for OS X. If you've never heard of a package manager, think of it as an app store for **free** command line programs.
 
-Git is a version control system that we will be using to keep track of changes in our code. It is a **MUST** know for any developer and we will be spending lots of time on it over the course. 
+To get started, run the following command in your shell. It'll download and run a script file that downloads and installs Homebrew onto your development environment. So meta! :metal:
 
-Version control allows programmers to make changes to their code without breaking the "master" copy; roll back changes that didn't work; backup their work across many "branches"; collaborate with other programmers on the same codebase; and so much more. 
+```
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
 
-There are literally no successful software companies that do not use some kind of version control. 
+**TIP:** Be sure to agree when asked to install the **XCode CommandLine Tools**. It may take about 10 minutes to download and install.
 
-**How do I install it?**
+### Update Homebrew
 
-In the terminal, run:
+If you've previously installed Homebrew, now's a good time to update it by running the following command.
 
-`brew update`
+```
+brew update
+```
 
-`brew install git`
+If it's been a while since the last update, you'll see something like this.
 
-** Add SSH keys**
+![](https://i.imgur.com/OCAX71o.png)
 
-https://help.github.com/articles/generating-an-ssh-key/
+Otherwise, you'll see something like this.
 
-## Essential Shortcuts
+![](https://i.imgur.com/JPB9Gnn.png)
 
-Developers tend to become "power users" in order to efficiently move through and between the various tools they use regularly. This is a starting cheat sheet for commands that can help you navigate and use your new development environment more effectively.
+**TIP:** Run this command periodically as Homebrew doesn't automatically update itself. :sweat:
 
-## OSX
-`command + tab` : switch open applications
+### Verify Homebrew
 
-<code>command + &#96;</code> : (when already in command + tab) switch open applications in reverse
+To verify Homebrew is installed correctly, run the following command.
 
-<code>command + &#96;</code> : goes between different windows of current program
+```
+brew doctor
+```
 
-`command + q` (while in open applications) : quit an application
+And you'll see something like this.
 
-## Chrome / Atom / Terminal / most apps with tabs
+![](https://i.imgur.com/DWfdE3D.png)
 
-`command + n` : create new window
+## Install and Configure Chrome
 
-`command + t` : create new tab
+Now it's time to install [Google Chrome](https://www.google.com/chrome/), a fast and free web browser that automatically updates itself with the latest web technologies.
 
-`command + w` : close tab or window if only one tab
+To get started, [download Chrome](https://www.google.com/chrome/browser/desktop/), open the disk image file, and drag the app icon into your `/Applications` folder.
 
-`shift + command + w` : close window with multiple open tabs
+Once installed, use Spotlight to launch Chrome by pressing the `Command` + `Spacebar` keys at the same time, typing the word "chrome" into the search field, and then pressing the `Enter` key.
 
-`command + q` : quit application
+![](https://i.imgur.com/qnONHeW.jpg)
 
-`command + shift + ]` : move right one tab
+**TIP:** I recommend allowing Chrome to become your default browser.
 
-`command + shift + [` : move left one tab
+Navigate to the `Chrome > Preferences` by pressing the `Command` + `,` keys at the same time. Scroll to the bottom of the page and click the **Show advanced settings...** link.
 
-`command + NUMBER` : move to tab number NUMBER (not in Terminal)
+![](https://i.imgur.com/O7jFfxQ.png)
 
-`fn + up` : page up
+Scroll down a bit more until you find the **Send a "Do Not Track" request with your browser traffic** and check the box.
 
-`fn + down` : page down
+![](https://i.imgur.com/NAWbEim.png)
 
-`alt + command + arrow keys` : move right or left tabs
+**TIP:** You may want to consider installing an [ad blocking extension](https://chrome.google.com/webstore/detail/adblock/gighmmpiobklfepjocnamgkkbiglidom) to Chrome.
 
-## Chrome
+## Install and Configure Fish
 
-`command + r` : reload page
+Using Homebrew, you can now install [Fish](https://fishshell.com/), a smart and user-friendly command line shell. Remember, a shell is simply the user interface between you and your computer's operating system.
 
-`command + option + j` : open the javascript console
+There are many command line shells availabe to choose from, each with their own strengths. Since it's easy to switch back and forth at any time, I recommend you give Fish a try.
 
-`command + ]` : move forward through history
+To get started, run the following command.
 
-`command + [` : move backward through history
+```
+brew install fish
+```
 
-`command + shift + t` : reopen last closed tab (up to 10)
+Run the following command to let your computer know it's safe to use Fish as your default shell.
 
-## Atom
+```
+echo '/usr/local/bin/fish' | sudo tee -a /etc/shells
+```
 
-[Shortcut Cheatsheet](https://bugsnag.com/blog/atom-editor-cheat-sheet)
+**TIP:** This will require your account password which **will not** appear on the screen as you type.
+
+Finally, run this command to make Fish your default shell.
+
+```
+chsh -s /usr/local/bin/fish
+```
+
+**TIP:** This will also require your account password which **will not** appear on the screen as you type.
+
+Now, quit the Terminal app by pressing the `Command` + `Q` keys at the same time. Then relaunch your Terminal using Spotlight and you'll see something like this.
+
+![](https://i.imgur.com/h2qvEez.png)
+
+Welcome to Fish! :tropical_fish:
+
+### Improve the prompt
+
+The prompt is the visual cornerstone of any shell, so let's change it to be both functional and glamorous. :nail_care:
+
+To download and install a better prompt, run the following command.
+
+```
+curl -fsSL https://git.io/vgqFU | ruby
+```
+
+To verify the new prompt is installed correctly, relaunch the Terminal. You'll see something like this.
+
+![](https://imgur.com/kBsLiZK.png)
+
+Here's a quick break down of what you're seeing.
+
+| Component             | Description                            |
+| --------------------- | -------------------------------------- |
+| `Wed Jan 28 08:53:47` | Date of your last login                |
+| `ttys006`             | Name of your last terminal session     |
+| `~` (home directory)  | Name of your working directory         |
+| `$`                   | Prompt symbol                          |
+
+### Update the auto-completions
+
+Fish's auto-completions enhance the user experience of most command line tools.
+
+To update fish's completions, run the following command.
+
+```
+fish_update_completions
+```
+
+And you'll see something like this.
+
+![](https://i.imgur.com/NOS48CL.png)
+
+To try out auto-completions, start typing the following command.
+
+```
+brew in
+```
+
+And press the `Tab` key and you'll see something like this.
+
+![](https://i.imgur.com/NNP06MA.png)
+
+Finish typing the following command and press the `Enter` key.
+
+```
+brew info fish
+```
+
+And you'll see something like this.
+
+![](https://i.imgur.com/ShGjo1s.png)
+
+### Leverage your history
+
+Fish keeps a record of every command you've ever run. You can use that history to your advantage.
+
+Start by typing the following command one more time.
+
+```
+brew in
+```
+
+This time you'll see an auto-suggestion based on the most recent matching command.
+
+![](https://i.imgur.com/yrOuJX9.png)
+
+To use the auto-suggestion, press the right arrow ➡ key and hit the `Enter` key.
+
+![](https://i.imgur.com/DbaBTi7.png)
+
+**TIP:** Use the up arrow ⬆ and the down arrow ⬇ keys to cycle through your entire history of commands.
+
+## Install and Configure Atom
+
+Now it's time to install [Atom](https://atom.io/), a hackable text editor for the 21st century.
+
+To get started, [download Atom](https://atom.io/download/mac), unzip the archive file, and drag the app icon into your `/Applications` folder.
+
+Once installed, use Spotlight to launch Atom by pressing the `Command` + `Spacebar` keys at the same time, typing the word "atom" into the search field, and then pressing the `Enter` key.
+
+![](https://i.imgur.com/fuVq4T5.jpg)
+
+Close all the open tabs by pressing the `Command` + `W` keys at the same time.
+
+Next, navigate to the `Atom > Preferences` menu item by pressing the `Command` + `,` keys at the same time.
+
+Under the **Settings** tab, change the following:
+
+| Name                               | Value              |
+|------------------------------------|--------------------|
+| Font Family                        | Menlo              |
+| Font Size                          | 18                 |
+| Show Indent Guide                  | :white_check_mark: |
+| Soft Wrap                          | :white_check_mark: |
+| Soft Wrap At Preferred Line Length | :white_check_mark: |
+
+Under the **Install** tab, install the following:
+
+| Name                           | Type    |
+|--------------------------------|---------|
+| file-icons                     | Package |
+| language-fish-shell            | Package |
+| tomorrow-night-eighties-syntax | Theme   |
+
+Under the **Themes** tab, choose the following:
+
+| Name                           | Type         |
+|--------------------------------|--------------|
+| Tomorrow Night Eighties        | Syntax Theme |
+
+When you're done, close the preferences tab by pressing the `Command` + `W` keys  at the same time.
+
+### Install the Shell Commands
+
+You'll find it insanely useful to open files and directories into Atom from the Terminal.
+
+To get started, select the `Atom > Install Shell Commands` menu item.
+
+To verify Atom is wired up correctly, run the following command.
+
+```
+atom ~/.config/fish/config.fish
+```
+
+And Fish's startup file will open in Atom like this.
+
+![](https://i.imgur.com/efTSZJR.png)
+
+### Discover the `EDITOR` environment variable
+
+Like most shells, Fish allows you to control the contents of its **environment variables**, which are a set of key-value pairs that can affect the way running programs behave. These environment variables are often set when a new shell starts so their contents are available throughout the entire duration of the shell's session.
+
+When executed, many command line tools look up specific environment variables and use their contents as implicit input. For example, Git uses the `EDITOR` environment variable to open your preferred text editor when you forget to include a commit message.
+
+Environment variables like `EDITOR` can be set in a shell's startup file. While Fish's startup file is handy, add the following settings.
+
+```
+# Atom
+set -x EDITOR 'atom -w'
+```
+
+**TIP:** Environment variables, like `EDITOR`, must be written in all capital letters.
+
+Save the file and you'll see something like this.
+
+![](https://i.imgur.com/0k7KvdD.png)
+
+Now, relaunch the Terminal and verify these settings with the following command.
+
+```
+echo $EDITOR
+```
+
+**TIP:** When reading the content of an environment variable, it must be prefixed with a dollar sign `$`.
+
+And you'll see something like this.
+
+![](https://i.imgur.com/TAXG4JV.png)
+
+### Discover the `PATH` environment variable
+
+Like most shells, Fish relies on the `PATH` environment variable to specify a set of directories where other commands can be found.
+
+To see the contents of the `PATH` environment variable, run the following command.
+
+```
+echo $PATH
+```
+
+**TIP:** When reading the content of an environment variable, it must be prefixed with a dollar sign `$`.
+
+And you'll see something like this.
+
+![](https://i.imgur.com/9oOQq4F.png)
+
+When you type a command that **doesn't** include a slash `/` character, these `PATH` directories are searched one after another. Once a file that matches the command is found, the searching stops and the corresponding file is run.
+
+Notice the `/usr/local/bin` directory is listed before the following directories.
+
+- `/usr/bin`
+- `/bin`
+- `/usr/sbin`
+- `/sbin`
+
+This means the `/usr/local/bin` directory has priority over all later searched directories.
+
+Since Homebrew installs new commands to the `/usr/local/bin` directory, Homebrew-installed commands will be preferred over the pre-installed ones. In upcoming sections, you'll use Homebrew to install additional commands that override the pre-installed commands that come with Mac OS X.
+
+## Install and Configure Git
+
+Using Homebrew, you can also install [Git](https://git-scm.com/), the version control system of choice among choosy developers. :neckbeard:
+
+To get started, run the following command.
+
+```
+brew install git
+```
+
+Once it finishes, run the following command.
+
+```
+git --version
+```
+
+And you'll see something like this.
+
+![](https://i.imgur.com/Gwx0LOn.png)
+
+Like artists, programmers sign their work. Let's configure Git to sign your commits with your name and email address.
+
+**WARNING:** Before running the following commands, replace `YOUR FULL NAME` and `YOUR EMAIL ADDRESS` with the name and email from [your GitHub account](https://github.com/settings/profile).
+
+```
+git config --global user.name 'YOUR FULL NAME'
+git config --global user.email 'YOUR EMAIL ADDRESS'
+```
+
+Next, run this command to download and install some awesome Git colors, handy aliases for common Git subcommands, and extra Git configuration that'll make your life easier when connecting to GitHub from the command line.
+
+```
+curl -fsSL https://git.io/vgqFH | sh
+```
+
+We'll go over these later. For now, relish in your victory of making it this far in the setup guide. :tada:
+
+## Install Node
+
+Using Homebrew, you can also install [Node](https://nodejs.org/), an open-source, cross-platform runtime system for developing applications in JavaScript. In other words, it runs JavaScript outside the browser.
+
+To get started, run the following command.
+
+```
+brew install node
+```
+
+Once it finishes, run the following command.
+
+```
+node -v
+```
+
+And you'll see something like this.
+
+![](https://i.imgur.com/s6yEpP9.png)
+
+### Discover the Node Shell
+
+The interactive **Node shell** provides a read-evaluate-print loop (REPL) for JavaScript programs.
+
+To get started, launch the Node shell by running the following command.
+
+```
+node
+```
+
+And you'll see something like this.
+
+![](https://i.imgur.com/tSVXigd.png)
+
+After the prompt `>`, you can type a line of JavaScript code and then press the `Enter` key to run it. For example, type and run the following JavaScript program.
+
+```
+1 + 2
+```
+
+And you'll see something like this.
+
+![](https://i.imgur.com/ZO8fIEw.png)
+
+The Node shell is a great tool for learning and experimenting with JavaScript.
+
+Play around with JavaScript on your own. When you're done, type `.exit` and press the `Enter` key to quit the Node shell.
+
+### Discover the Node Interpreter
+
+Given a JavaScript program stored in a file, the **Node interpreter** reads it, evaluates it, and then quits.
+
+Unlike the Node shell, the Node interpreter is _not_ interactive. In other words, the Node interpreter won't automatically print the result of each line or loop waiting for you to give it more input. It just reads and evaluates a JavaScript program file.
+
+Despite these deficiencies, you'll use the Node interpreter more frequently. Let's try it out.
+
+First, open a new JavaScript program file in Atom.
+
+```
+atom ~/Desktop/test.js
+```
+
+**TIP:** JavaScript program files end with a `.js` extension.
+
+Then type the following program into the file.
+
+```
+1 + 2;
+```
+
+Save the file and run the program using the Node interpreter.
+
+```
+node ~/Desktop/test.js
+```
+
+Weird, nothing happened. Remember, the Node interpreter won't print anything unless told. Jerk! :triumph:
+
+Change the program so it reads like this.
+
+```
+console.log(1 + 2);
+```
+
+Save the file and re-run the program.
+
+```
+node ~/Desktop/test.js
+```
+
+And you'll something like this.
+
+![](https://i.imgur.com/13wlgTe.png)
+
+Play around with JavaScript on your own. When you're done, remove the `test.js` file by running the following command.
+
+```
+rm ~/Desktop/test.js
+```
+
+## Install Surge
+
+Now, you'll deploy a tiny web page with [Surge](https://nodejs.org/), a static web publishing platform for front-end developers. To deploy to Surge, you'll use a command line program that's installed via [npm](https://www.npmjs.com/), a package manager for JavaScript software that comes with Node.
+
+To get started, run the following command.
+
+`npm install -g surge`
+
+Once it finishes, run the following command.
+
+`surge -V`
+
+**TIP:** Notice the flag uses a capital `V`.
+
+And you'll see something like this.
+
+![](https://i.imgur.com/vRRoJau.png)
+
+### Start a new project
+
+If you don't have one, make a `Projects` directory to hold all of your upcoming projects.
+
+```
+mkdir ~/Projects
+```
+
+Then change into the directory.
+
+```
+cd ~/Projects
+```
+
+Now make a `GITHUB-USERNAME.surge.sh` project directory replacing `GITHUB-USERNAME` with your actual GitHub username.
+
+```
+mkdir wcrusher.surge.sh
+```
+
+And change into the directory.
+
+```
+cd wcrusher.surge.sh
+```
+
+You should see something like this.
+
+![](https://i.imgur.com/PDDFaMu.png)
+
+**TIP:** The full name of your working directory is `~/Projects/wcrusher.surge.sh`. To save prompt space, Fish abbreviates it. This is especially handy for **deeply nested** directories.
+
+Next, initialize a new Git repository in this directory.
+
+```
+git init
+```
+
+And you should see something like this.
+
+![](https://i.imgur.com/p6Xw9eq.png)
+
+As the message suggests, an empty Git repository was initialized in your working directory. Notice the prompt changed too. You'll see this fancy prompt whenever your current working directory contains a Git repository.
+
+Here's a quick break down of what you're seeing.
+
+| Component                | Description                                   |
+|--------------------------|-----------------------------------------------|
+| `~/P/wcrusher.surge.sh`  | Abbreviated name of your working directory    |
+| `master`                 | Name of your repository's current branch      |
+| `✔`                      | Prompt symbol indicating a clean staging area |
+
+Anything typed will appear after the green `✔` prompt symbol.
+
+### Create a tiny web page
+
+Now that the project's directory contains a Git repository, let's create a tiny web page.
+
+To get started, run the following command.
+
+```
+touch index.html
+```
+
+Noticed a red `✖` has replaced your prompt symbol. It indicates your staging area is dirty. :worried:
+
+![](https://i.imgur.com/jdcHS8p.png)
+
+To find out why, open the project directory in Atom.
+
+```
+atom .
+```
+
+**TIP:** The period `.` represents the current working directory.
+
+It looks like there's a new, empty `index.html` file inside our project directory. As you can see, a Git repository's staging area becomes dirty whenever a new file is created.
+
+![](https://i.imgur.com/5wqLRFE.png)
+
+Go ahead and type the following HTML code into the `index.html` file and save it.
+
+```html
+<h1>Hello world</h1>
+```
+
+It should look like this when you're finished.
+
+![](https://i.imgur.com/F26QSWr.png)
+
+### Test your tiny web page
+
+To test your tiny web page, you'll need to open it with your browser. An easy way to open a web page from the Terminal is to run the following command.
+
+`open index.html`
+
+And your default browser should open the file.
+
+![](https://i.imgur.com/8XUgHOh.png)
+
+### Commit your tiny web page
+
+With your tiny web page working as expected, it's ready to be committed into your Git repository.
+
+First, add the `index.html` file to your repository's staging area.
+
+```
+git add index.html
+```
+
+And then commit the changes, with a message, to your repository.
+
+```
+git commit -m 'Add a tiny web page'
+```
+
+The green `✔` prompt symbol is back, indicating your staging area is clean. Phew! :relieved:
+
+![](https://i.imgur.com/QE3ks9b.png)
+
+### Prepare your tiny web page for deployment
+
+You're almost ready to deploy your tiny web page to Surge. However, Surge will ask you for a desired domain name each time you deploy. To prevent this, you can save your a domain name to a `CNAME` file so you don’t have to type it every time you deploy.
+
+To add a `CNAME` file to the project directory, run the following command.
+
+```
+touch CNAME
+```
+
+Noticed a red `✖` is back, indicating your staging area is dirty.
+
+Back in Atom, open the `CNAME` file and type in `GITHUB-USERNAME.surge.sh` replacing `GITHUB-USERNAME` with your actual GitHub username. Save the file and it should look something like this.
+
+![](https://i.imgur.com/BRuK4kA.png)
+
+Now, add the `CNAME` file to your repository's staging area.
+
+```
+git add CNAME
+```
+
+And then commit the changes, with a message, to your repository.
+
+```
+git commit -m 'Add a CNAME'
+```
+
+The green `✔` prompt symbol is back, indicating your staging area is clean.
+
+![](https://i.imgur.com/AMzOTd3.png)
+
+### Deploy your tiny web page
+
+You're finally ready to deploy your tiny web page to Surge!
+
+To get started, run the following command.
+
+```
+surge
+```
+
+You'll be asked for three pieces of information.
+
+1. An email address
+1. A password
+1. A project path
+
+Since you're probably creating a new Surge account, type in your email address and a unique, secure password. Be careful when you type in a password as the characters will **not** show up on the screen for security purposes.
+
+When asked about the project path, just press the `Enter` key to use the current working directory. When you're finished, it should look something like this.
+
+![](https://i.imgur.com/rh2I4gE.png)
+
+Before moving on, **please write down your account credentials**. If you don't currently use a password manager, now is a great time to invest in one. As a professional web developer, you're going to be responsible for hundreds, if not thousands, of passwords throughout your career.
+
+There are many password managers on the market. I use and whole-heartedly recommend [1Password](https://agilebits.com/onepassword) because its user-friendly interface makes it easy to generate and access all my account credentials on all my devices. More importantly, I trust the company behind 1Password to employ the best security practices available. While it's not a free application, there is a 30-day free trial. And if you become a satisfied customer, you can use the `MacPowerUsers` coupon code to take 20% off the price.
+
+After having written down your Surge account credentials somewhere, open your deployed tiny web page in a browser by running the following command.
+
+```
+open http://wcrusher.surge.sh
+```
+
+**TIP:** Don't forget to use your tiny web page's domain name.
+
+You should see something like this.
+
+![](https://i.imgur.com/3koEnB4.png)
+
+Bravo! :tada:
+
+### Congratulations!
+
+You've successfully setup a web development environment on Mac OS X and have completed these development tasks.
+
+1. Created a tiny web page with a text editor
+1. Tested the web page in a browser
+1. Committed the web page to a repository
+1. Deployed the web page to a production environment
+
+Now that you've finished this guide, it's time to celebrate with a frosty beverage. :beers:
