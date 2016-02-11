@@ -22,9 +22,10 @@ Let's learn to test code with [Mocha](https://mochajs.org/), Mocha is a feature-
 
 *Something that is untested is broken.*
 
-If your codebase is untested then it is **very** difficult to add new features as:
+If your codebase is untested then it is **very** difficult to refactor or add new features as:
 
-- You don't know if that feature will work or not, and
+- You don't know if all features will work or not
+- All edge cases for that feature can be difficult to remember
 - The new feature could break your existing codebase.
 
 Automated tests help minimize these issues, allowing you to safely update your codebase and sleep at night. Unfortunately, many developers don't understand the importance of testing until their application breaks and s/he is up all night trying to fix things.
@@ -87,7 +88,7 @@ Try running the tests with the `mocha` command. You should see:
 
   ```
 
-Add a test file called `test.js` to the `test/` directory and add the following code:
+Add a test file called `test.js` to the `test/` directory and add the following test setup code:
 
   ```javascript
   var code = require('../main');
@@ -98,18 +99,19 @@ Add a test file called `test.js` to the `test/` directory and add the following 
   });
   ```
 
-Finally, add a `main.js` file to the root directory.
+Finally, add a `main.js` file to the root directory to add our code.
 
 With the setup complete, we can now start writing some tests!
 
 ## Discussion
 
-All examples follow this four step process-
+All examples follow this process:
 
+1. Run your tests (Are you in a good state?)
 1. Place the mocha tests inside of `test/test.js`.
-1. Run your tests.
+1. Run your tests (Red)
 1. Add your code to test to `main.js`
-1. Run your tests.
+1. Run your tests (Green)
 
 Test time!
 
@@ -136,8 +138,8 @@ module.exports = {
 
 **What's happening here?**
 
-describe defines a test suite.
-it defines a single test
+`describe` defines a test suite.
+`it` defines a single test
 
 A suite takes a string that describes what a particular suite is testing.
 
@@ -207,7 +209,7 @@ Notice a few things:
 - AssertionError
 - Line number (6)
 
-Update the helloWorld function in main.js to return 'Hello, World!' and then run the test.
+Update the `helloWorld` function in main.js to return 'Hello, World!' and then run the test.
 
 ```js
 module.exports = {
@@ -232,12 +234,12 @@ $ mocha
 
 We now have a passing test!
 
-## Exercise
+### Exercise: Leap Year
 
 Create a new directory in your workspace called leapYear.
 Follow the same steps as above to create the test.js, main.js, npm init and install chai.
 
-Give the following tax system, what kind(s) of tests can we write?
+Give the following leap year rules, what kind(s) of tests can we write?
 
 1. every year whose number is perfectly divisible by four is a leap year.
 1. except for years which are both divisible by 100 and not divisible by 400.
