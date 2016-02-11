@@ -1,6 +1,6 @@
 #Recursion!
 
-####re·cur·sive -riˈkərsiv
+#### re·cur·sive -riˈkərsiv
 adjective
 *See definition of recursive*
 
