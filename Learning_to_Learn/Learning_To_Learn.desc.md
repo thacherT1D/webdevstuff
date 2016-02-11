@@ -1,5 +1,3 @@
-Hello!
-
 [Differentiated instruction](https://en.wikipedia.org/wiki/Differentiated_instruction): Great teachers differentiate instruction for their students - they don't provide the same exact instruction to everyone. As a student, it's important to understand that Galvanize instructors choose the best tool for the job based on data about student performance/understanding.
 
 3 stages: Setting the stage, play, reflect (learn, do, get stuck, repeat)
