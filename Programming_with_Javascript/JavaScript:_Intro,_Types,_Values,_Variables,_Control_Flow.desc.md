@@ -1,190 +1,45 @@
-# An Introduction to Programming and JavaScript: Intro, Types, Values, Variables, Control Flow
-Objectives:
-Students will able to...
+## Introduction to JavaScript
 
-- 1 of 15:  describe what's a programming language
-- 2 of 15:  share four reasons for learning JavaScript
-- 3 of 15:  name the various primitive types in JavaScript
-- 4 of 15:  use a REPL (read, evaluate, print, loop)
-- 5 of 15:  values for each primitive type.
-- 6 of 15:  use the `typeof` operator
-- 7 of 15:  use `console.log()` to log values to a console
-- 8 of 15:  create expressions with operators
-- 9 of 15:  use comparison operators
-- 10 if 15: use logical operators
-- 11 of 15: explain two reasons why variables are useful
-- 12 of 15: explain the concept of primitive types and immutability
-- 13 of 15: create control structures with conditional statement
-- 14 of 15: create control structurs with iterators
-- 15 of 15: use native properties and method for `String` and `Number`
+GOAL: what is the value of this expression: `!(typeof(9) === typeof(9.5) && (99 == "99" || !true))`
 
-# 1 of 15: What's a Programming Language?
-Let's start today's lesson with a question: What is a programming language?
+### History of Javascript
 
-A programming language is a language that is designed to communicate instructions to a machine. During the past several decades, many programming languages have been created--Java, C++, PhP, Python, Ruby, JavaScript, etc.--to help humans achieve this task. Each of these langauges were designed, furthermore, with specific purposes in mind.You have already been introduced to one language, Bash, which is a shell and language, that enables you to write instructions about your file system to a local machine.
+* Not to be confused with Java, but it is the baby child of Java syntax & Scheme principles
+* Created in 10 days in May 1995 by [Brendan Eich](http://en.wikipedia.org/wiki/Brendan_Eich)
+* It's an exciting time to learn Javascript! It's the language that enables web pages to respond to user interaction beyond the basic level.
+* The language today is viewed quite differently than how it was 10 years ago
 
-Another example, which you haven't been formally introduced, is Ruby, a server-side langauge. As the story goes, Yukihiro "Matz" Matsumoto ("Matz") created Ruby during the mid-1990s. He felt that programmers needed a program that was designed for programmer satisfcation. He wanted "to see Ruby help every programmer in the world to be productive, [..] to enjoy programming, and to be happy." Ruby's syntax, in turn, was designed to be human friendly--concise, human-like sentences.
-
-At this moment, I hope we've established that many programming languages have been created with purpose. In this context, we may have introduced into your minds a question: if there are so many languages, then why are we teaching JavaScript? Why not some other language? This is an excellent question; moreover, I have an answer :).
-
-## 2 of 15: Four Reasons for Teaching JavaScript
-There are many reasons for teaching and learning JavaScript; however, most people find the following four reasons to be the most agreeable.
-
-### i) JavaScript is the only language that can be used on every stack of a web-based application:
-Learning each stack--client-side and server-side--with JavaScript decreases the amount of time involved with human context switching. A developer can focus less time, in other words, on the different implementation details of languages and more time on desired functionality. Considering the fundamental differences between a functional language (i.e., JavaScript) and a class-based language (e.g., Ruby), the ability to decrease context switching is invaluable for new developers.
-
-### ii) JavaScript is the only dynamic language that web browsers natively support:
-Modern web browsers extend a privileged status to JavaScript: native support. This means that a developer who knows JavaScript can open a web browser and immediately write code, test code, and debug code. All of this happens without any additional installation of software.
-
-At least in the foreseeable future, Web browsers are unlikely to supplant their support of JavaScript with another language. In the world of web development, the longevity of a language is usually uncertain. We find solace in the fact that JavaScript will remain useful if you decide to learn it. The same claim cannot be made of other languages, regardless of their current popularity.
-
-### iii) JavaScript is required for adding behavior to web-based applications:
-JavaScript is the only language capable of adding behavior--responding to user-based events, such as clicking, typing, and scrolling--to web-based applications. Consider how many web-based applications include this type of behavior. You will then realize that I'm describing all modern web-based applications.
-
-This undeniable truth is the reason why many popular languages and their corresponding web application frameworks automatically include JavaScript in their source code. Ruby on Rails, a very popular framework for building web-based applications, includes JavaScript in the form of a JavaScript library called jQuery.
-
-### iv) Sustained Adoption
-Large tech companies are constantly building popular technologies with JavaScript. Facebook used JavaScript to create React; Google used JavaScript to create Angular and Polymer; And Netflix used JavaScript to create Falcor.
-
-***
-Exercise: Everyone take a moment and write, in your own words, why we're learning JavaScript.
-***
-
-# 3 of 15: An introduction to values that are primitive types
-Similar to all programming languages, JavaScript has its own syntax. At its core, this syntax is composed of statements, which are composed of expressions, which are composed of values--smallest meaningful unit of code. To gain an understanding--and eventually confidence--with JavaScript, we need to understand each of these components. Let's start with values.
-
-JavaScript has two types of values: primitive types and reference types. During this lesson, will cover the former; during the afternoon lesson, we'll cover the latter.
-
-### Primitive Types
-- `Number`
-- `String`
-- `Boolean`
-- `null`
-- `undefined`
-
-### Reference Types
-- `Array`
-- `Object`
-- `Function` (Tuesday)
-
-# 4 of 15: How to Use a REPL (read, evaluate, print, loop)
-In order to create any of these JavaScript values, we need to use a program that can interpret them and other constructs of JavaScript. There are several options we can use, such as the console in Chrome's Developer Tools. For our goals, we're going to use something that's dedicated exclusively to interpreting our JavaScript: [repl.it](https://repl.it/languages/javascript), an online REPL (read, evaluate, print, loop).
-
-# 5 of 15: Create Primitive Types
-Okay, we're ready to create each of the primitive types:
-
-- `Number`
-- `String`
-- `Boolean`
-- `null`
-- `undefined`
-
-### `Number`
-A value of type `Number` can be integers or floating points. To create an integer, all we have to do is just type the value in the left pane and then press the button labeled "execute."
-
-```javascript
-6
-```
-
-In the right pane, we see the output of `6`. We can repeat this process for creating a floating point number:
-
-```javascript
-3.14
-```
-
-### `String`
-A value of `String` is enclosed inside of quotation marks.
-
-```javascript
-"I'm a string"
-```
-
-A string can be inside of double quotations or single quotations. For the sake of consistency, we're going to use double quotations.
-
-### `Boolean`
-A Boolean has one of only two values: `true` or `false`.
-
-```javascript
-true
-```
-
-Note that all letters are lowercase. JavaScript is a type-sensitive language, and there's a difference between typing `false` and `False`.
-
-### `null`
-To create a value of `null`, we type `null` with all lowercase characters:
-
-```javascript
-null
-```
-
-Developers often use this value as a placeholder for a future object. This may sound confusing, but you shouldn't concern yourself with this for now. I'll show you an appropriate moment to use it when we talk about objects this afternoon.
-
-### `undefined`
- to create a value of type `undefined`, we type `undefined` with all lowercase characters:
-
-```javascript
-undefined
-```
-
-In JavaScript, `undefined` is assigned to variables that have been declared but not assigned a value. We'll learn more about this in a later section titled "Variables."
-
-To display the data type of a value, we can use the `typeof` operator:
-
-```javascript
-typeof [value]
-```
-
-The word `typeof` is a unary operator, which means it has one operand. This operand can be any value. We should view some code snippets to make demonstrate how this works:
+[The famous Douglas Crockford gives a thorough introduction of Javascript](https://www.youtube.com/watch?v=t7_5-XYrkqg)
 
 
-```javascript
-typeof 23         // "number"
-```
+### Why Should YOU Care About Javascript
+* Can use the same language on the front-end and the backend with Node.js
+* JS serves as a platform to host other languages as well, e.g. CoffeeScript or ClojureScript
+* Many popular libraries built with JS - jQuery, Underscore.js, Sugar
 
-```javascript
-typeof "hi"       // "string"
-```
+Javascript allows us to make our pages interactive and dynamic and awesome.   Here are some very common uses for JS on the front-end:
 
-```javascript
-typeof true       // "boolean"
-```
+* [Password Strength Meter](http://codepen.io/oscarekholm/pen/zicjg)
+* [Simple Navigation Menu](http://codepen.io/markmurray/pen/efcjp)
+* [Overlay Effects](http://tympanus.net/codrops/2014/02/06/fullscreen-overlay-effects/)
+* [Page Loading Effects](http://tympanus.net/codrops/2014/04/23/page-loading-effects/)
+* [Image Carousel](http://codepen.io/ApplePieNIceCream/pen/DkxIj)
+* [Parallax Scroll and Blur](http://codepen.io/sallar/pen/lobfp)
 
-```javascript
-typeof null       // "object"
-```
+Some other more complex uses for JS:
 
-```javascript
-typeof undefined  // "undefined"
-```
+* [Interactive Music Video](http://lights.helloenjoy.com/)
+* [Jam With Chrome](http://www.jamwithchrome.com/)
+* [Patatap](http://www.patatap.com/)
+* [Arcade Fire Reflektor Music Video](http://www.chromeexperiments.com/detail/just-a-reflektor/?f=)
+* [Walmart Website](http://www.walmart.com/)
 
-# 7 of 15: Use `console.log([value])`
-Up to this moment, we've been writing one line of code, and then we've executed that line. Notice what happens if we type two lines of code and execute it:
-
-```javascript
-typeof 23
-typeof "hi"
-
-// "string"
-```
-
-We'll receive output for just the last line of code. To change this default behavior and output both lines of code, we need to select one of three options:
-
-1. Run one line of code at a time.
-2. Wrap the first line of code inside of the parentheses of this code: `console.log(typeof 23)`
-3. Wrap each line of code inside of the parens of their own console.log().
-
-Here's the code for the third option:
-
-```javascript
-console.log(typeof 23);
-console.log(typeof "hi");
-
-// "number"
-// "string"
-```
-
-The right pane of our REPL is considered a console. Anything that we place inside of `console.log()` will display inside of the console when executed. This is very different than outputing a value. When we enter week three, we'll talk more about consoles and use other strategies for logging values.
-- Shortcut to open JS console & bring focus to console `Cmd + Opt + J`
+###Javascript Console
+- Allows you to easily interface with your app to run JS commands and display log messages for help with debugging
+- Shortcut to open JS console & bring focus to console
+  - Mac: Cmd + Opt + J
+  - Linux: Ctrl + Shift + J
+- Use Tab for autocompletion!
 
 Go to [Google](http://www.google.com) and try pasting the following code into your console:
 
@@ -195,466 +50,558 @@ logo.onclick = function () { this.src = "http://cdn.howtogeek.com/wp-content/upl
 And then try this:
 
 ```
-function makeWider() {
-  var logo = document.getElementById('hplogo');
-  logo.width += 5;
+function makeWider() { 
+  var logo = document.getElementById('hplogo'); 
+  logo.width += 5; 
 }
 
-setInterval(makeWider, 41.67);
+setInterval(makeWider, 41.67)
 ```
 
-# 8 of 15: Create expressions with operators
-On their own, values don't extend much usefulness to us. We can change this fact with the inclusion of operators, such as the addition, subtraction, multiplication, division, and remainder symbols. When we use operators, we are no longer dealing with just values, but we're also dealing with expressions: "A fragment of code that can resolve to a value is called an expression." In the following example, we have three values:
+Lastly, try this:
 
-```javascript
-2 + 4
+```
+javascript:document.body.contentEditable='true'; document.designMode='on'; void 0
 ```
 
-The value `2`, the value `4`, and the expression `2 + 4`, which resolves to the value `6`. If you're wondering what's the difference between a value and an expression, I often consider a value to be something that's already resolved; an expression has to be resolved.
+### Comments
 
-Okay, let's create a quick example using each of the most common binary operators.
+Comments come in two forms 
 
-```javascript
-2 + 2 // 4
-2 - 2 // 0
-2 * 2 // 4
-2 / 2 // 1
-2 % 2 // 0
+  * line comments
+  
+   ```
+   // descriptive stuff
+   ```
+  * multiline comments
+  
+  ```
+  /*
+    These 
+    are
+    comments on
+    many lines
+  */
+  
+  ```
+### JS Type: Numbers 
+
+Numbers are one of the *types* of **values** we want to be able to interact and play with in JS.
+
+* Integers
+
+  ```
+   ..., -1,0, 2, 3, 4, 5, ... 
+  ```
+* Floats (or Decimal numbers)
+
+  ```
+   2.718, 3.14, .5, .25, etc
+  ```
+
+In JS, these are the same **type** of object, which it calls *Numbers*. However, as of ES6, it's possible for JS to distinguish between these types of numbers, using the `Number.isInteger()` function.
+
+Examples:
+
+```
+Number.isInteger(4) // should return 'true'
+Number.isInteger(4.1) // should return 'false'
+Number.isInteger(4.0) // should return ???
 ```
 
-There are many more operators included with JavaScript, we can find (a comprehensive list of operators on Mozilla)[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators].
+### JS Type: Strings
 
-[Exercise: Create an expression using each of the operators we've used above.]
+Strings are collections of letters and symbols known as **Characters**, and we use them to deal with words and text in Javascript. Strings are just another type of **value** in Javascript.
 
-What you'll find amazing--and untrue in many other languages--is the ability to mix data types with the binary operators we just used. Try multiplying a string with a number. What are we going to see?
-
-```javascript
-"Fab" + 5 // "Fab5"
+```
+"John", "Jane"
 ```
 
-# 9 of 15: Comparison operators
-JavaScript commons with several comparison operators. Some of them may be familiar to you, such as `<`, `<=`, `>`, and `>=`. Others may be new to you, such as `==`, `!=`, `===`, and `!==`. We'll explore the latter set of operators.
+Strings have a number of built-in methods:
 
-We can compare values using the double equality operator or the triple equality operator. To gain a sense of the difference, let's first write some code to view outputs; then let's explain what's happening.
-
-```javascript
-4 == 4                 // true
-"laptop" == "laptop"   // true
-true == true           // true
-undefined == undefined // true
-null == null           // true
+```
+var name = "Matt";
+name[0]; // Returns "M"
+name.length; // Returns 4
+name.toUpperCase(); // Returns "MATT"
+name.toLowerCase(); // Returns "matt"
 ```
 
-When comparing values, the double equality operator will return a `Boolean value of `true` if both operands are equivalent in value. These results may appear to be obvious to you, but you'll find bewilderment with the following output:
+ES6 provides some new methods as well!
 
-```javascript
-4 == "4"         // ?
-"muscle" == true // ?
-"" == " "        // ?
-0 == null        // ?
+```
+name.startsWith("Ma"); // true
+name.endsWith("Q"); // false
+name.includes("t"); // true
 ```
 
-This is a good moment to mention that all values have an associated value of `true` or `false`. Often, developers refer to this as a value being `truthy` or `falsy`. There are many values that are considered `truthy`, but only a few that are considered `falsey`. For this reason, just remember that the following values are `falsy` (and everything else is `true`):
+### JS Type: Boolean
+A boolean represents logical values **true** or **false**
 
-- `null`
-- `undefined`
-- `0`
-- `""`
-- ``false`
-- `NaN` (A result of trying to use arithmetic operators with non-numbers.)
-
-Applying this knowledge, we can determine the return value of the above comparisons:
-
-```javascript
-4 == "4"         // true
-"muscle" == true // true
-"" == " "        // false
-0 == null        // true
+```
+var catsAreGreat = true;
+var dogsRule = false;
 ```
 
-To make comparisons and consider equivalent data types, we need to use the triple equality operator. Try it now:
+## Values and Expressions
+Values are the simplest components in JavaScript. ```1``` is a value, ```true``` is a value, ```"hello"``` is a value, ```function() {}``` is a value.
 
-```javascript
-4 === "4"         // false
-"muscle" === true // false
-"" === " "        // false
-0 === null        // false
+Types of values like `Number` or `String` are not very useful without being able to form **Expressions** or **Combinations**.
+
+Some common expressions you'll encounter are _mathematical expressions_, using common mathematical operations. Try these on for size:
+
+```
+  1 + 1
+  => 2
+  2 - 1
+  => 1
+  3 * 4
+  => 12
+  4 / 2
+  => 2
+```
+You can also create expressions with strings using addition
+
+```
+  "Hello, " + "world!"
+  => "Hello, world!"
 ```
 
-The `!=` and `!==` comparison operators follows the rules outlined above. But they return the opposite `Boolean` value. Observe:
+This is called **String Concatentation.**
 
-```javascript
-4 == 4         // true
-4 == "4"       // true
+Note that the meaning of `+` depends on what types of values you're working with. Be careful when you combine different meanings of `+` in the same expression: Javascript will attempt to guess at your meaning, but won't always be correct. For example, try putting this into the console:
 
-4 != 4         // false
-4 != "4"       // false
-
-4     === "4"      // false
-"mop" === true     // false
-
-4     !== "4"      // true
-"mop" !== true     // true
+```
+"The sum of " + 5 + " and " + 7 + " is " + 5 + 7
 ```
 
-# 10 of 15: Logical Operators
-There are three kinds of logical operators: `&&`, `||`, and `!`. The last logical operator--the logical NOT operator--was used in the previous section to negate a value's associated `Boolean` value. The other two operators are known as the logical AND and the logical OR operator. You'll notice the use of these operators throughout your careers as developers, so you should gain a familiarity with them as soon as possible. We're going to use the examples from Mozilla to help us understand them:
+Lastly, you can also form expressions with Booleans. Three operations you'll be using quite often are `&&` (and), `||` (or) and `!` (not).
 
+```
+var bool1 = true;
+var bool2 = false;
 
-### `&&`
-```javascript
-true  && true;     // t && t returns true
-true  && false;    // t && f returns false
-false && true;     // f && t returns false
-false && (3 == 4); // f && f returns false
-"Cat" && "Dog";    // t && t returns Dog
-false && "Cat";    // f && t returns false
-"Cat" && false;    // t && f returns false
+bool1 || bool2
+=> true
+
+bool1 && bool2
+=> false
+
+!bool1
+=> false
 ```
 
-The logical `&&` operator returns either the first `falsy` value it executes or the last `truthy` value it executes.
+### Special Number Operators
 
-### `||`
-```javascript
-true  || true;     // t || t returns true
-false || true;     // f || t returns true
-true  || false;    // t || f returns true
-false || (3 == 4); // f || f returns false
-"Cat" || "Dog";    // t || t returns Cat
-false || "Cat";    // f || t returns Cat
-"Cat" || false;    // t || f returns Cat
+Addition, subtraction, multiplication and division are probably relatively familiar to you. There's a fifth operation which may be less familiar: the **mod** operator, written using the `%` character.
+
+Let's explore the mod operator. Can you guess what it's doing?
+```
+  4 % 2
+  => 0
+  5 % 3
+  => 2
+  10 % 7
+  => 3
+  12 % 3
+  => 0
 ```
 
-The logical `&&` operator returns either the first `truthy` value it executes or the last falsy` value it executes.
+How can you use `%` to check whether or not a whole number is odd?
 
-### `!`
-```javascript
-!true;  // !t returns false
-!false; // !f returns true
-!"Cat"; // !t returns false
+Javascript can be a little cheap with the number of operations it allows you to do. For example, how is someone supposed to square a number or cube a number easily? Luckily there is a special `Math` object with some very useful methods.
+
+* Taking a number to some `power`? Then just use `Math.pow`
+
+```
+// 3^2 becomes
+Math.pow(3,2)
+=> 9
+// 2^4 becomes
+Math.pow(2,4)
+=> 16
+```
+* Taking a square root
+
+```
+// √(4) becomes
+Math.sqrt(4)
+=> 2
+```
+* Need a `random` number? Then use `Math.random`.
+
+```
+// The following only returns a random decimal
+Math.random()
+=> .229375290430
+/** 
+  The following will return a 
+  random number between 0 and 10
+*/
+Math.random()*10
 ```
 
-The logical NOT operator returns the opposite `Boolean` value of the expression.
+* Since Numbers can be **Floats** or **Integers** we often want to get rid of remaining decimal places, which can be done using `Math.floor`.
 
-# 11 of 15: Variables
-Up to this moment, we've experimented with different values of primitive types and operators. I want to draw your attention to a pattern you may have observed: We have created values, resolved or unresolved, that are never saved. We can't, in other words, re-use those values.
-
-What if one line of code contains a value that represents my friend's telephone number. Without saving it, I don't have the ability to directly re-access that telephone number. To make this point clear, this is similar to me using a calculator to derive to a number and then never saving that number. The only way I can retrieve that number is going through the entire calculation process, again.
-
-***
-Exercise: Think of your own example where it might be useful to save information.
-***
-
-Great, so we all can imagine situations where we want to save values. To do this in JavaScript, we want to use a `var` statement. Here's the syntax:
-
-```javascript
-var name = value;
+```
+// Remove the decimal
+Math.floor(3.14)
+=> 3
+Math.floor(3.9999)
+=> 3
+Number.isInteger(Math.floor(2.5))
+=> true
 ```
 
-The above syntax is considered a statement because it has to be terminated with a semicolon. Inside of this statement, you should notice two values (`name`, `value`), one expression (`var name = value;`), and one statement  (`var name = value;`). Funky, right?
+### Variables
 
-***
-Exercise: Take a couple of minutes and create a list of 10 keywords. These are words you cannot use as a name of a variable.
-***
+Having expressions is cool. Storing the values of expressions is even cooler.
 
-Let's review the syntax for the `var` statement. Similar to the `typeof` operator, `var` is considered a keyword--a word that has a special meaning in JavaScript. We can't use it to name our variables.
+To store values we use things called **variables**. 
 
-At present, we know that names of variables cannot be a keyword. What other restrictions are associated with naming variables? For the names to be a valid identifier (name), the following rules apply:
+The word 'variable' means 'can change' or 'can **vary**' and is used because variables can store many different types of values and can change their value many times. 
 
-- the name must begin with a `$`, `_` , or alphabet character.
-- after the first character, any of the above plus numeric characters.
+```
+var myNumber = 1;
+// or also
 
-After we decide on a name, we use an equality operator to assign the variable a value:
-
-```javascript
-var month = "July";
+var myString = "Greetings y'all!"
 ```
 
-The value is placed as the right operand of the equality operator. What's interesting is that a variable can be assigned another variable, which resolves to a value. This may sound confusing, so let's work with the following example:
+The main point here is that these variables should always have the `var` keyword and use `camelCase`
 
-```javascript
-var a = 1;
-var b = a;
+Variables can also store the result of any "expression".
+For example:
+
+```
+var x = 2 + 2;
+```
+or
+
+```
+var name = 'Matt';
+var compliment = name + ' is my favorite instructor';
 ```
 
-What's the value of `a`? What's the value of `b`?
+## JS Type: undefined 
 
-Now let's consider the following lines of code:
+**undefined**: Represents a value that hasn't been defined
 
-```javascript
-var a = 1;
-var b = a;
-a = 3;
+```
+var notDefinedYet;
 ```
 
-What's the value of `a`? What's the value of `b`?
+A variable that has not been assigned a value is of type undefined. A method or statement also returns undefined if the variable that is being evaluated does not have an assigned value. A function returns undefined if a value was not returned.
 
-# 12 of 15: Primitive Types are Immutable
-This is a great moment for us to describe the concept of a primitive type, which is an immutable value. In other words, once a primitive type is assigned to a variable, that variable has its own copy of that value. This statement is probably bewildering, so let's expand on it with another example:
+**null**: Represents an explicitly empty value
 
-```javascript
-var a = "Tom";
-var b = a;
-a = "Jerry";
+```
+var dogsRule = null;
 ```
 
-Since `a` is set to a primitive type and `b` is also set to a primitive type, `a` and `b` receives their own version of `"Tom".` When `a` is set to another primitive type of `"Jerry"`, this change doesn't impact `b`'s own copy of `"Tom"`.
+## Comparisons
 
-Okay, let's circle back to variables and ask ourselves why variables are important: First, they allow use to store values in memory. Second, they allow us to associate semantically meaningful information to values. The latter is especially benenficial to humans. If we name a variable, salary, age, or number of cars, for instance, we can immediate discern the meaning of the value and, potentially, its data type.
+One way to get boolean values in Javascript is by using _comparisons_. Comparisons are operators that allow us to compare two different values. For example, mathematical comparisons are comparisons:
 
-In regards to naming, it's one of the hardest things to do in programming. Fortunately, there's naming conventions and I'll share them with you during this week when it becomes relevant. Let's leverage our knowledge of variables and create the following code:
+```
+5 > 7
+=> false
+1 + 1 == 2
+=> true
+7 * 8 > 5 * 9
+=> true
+1 > 100 || true
+=> true
+4 != 5
+=> true
+```
 
-***
-Exercise: Create variables with the names `greet` and `name`; then find a way to use these variables to log the following string: `"Hello, Homer"`
-###
+## What's the deal with `=`, `==`, and `===`?
 
-# 13 of 15: Control structures with conditional statements
-I want to draw your attention to another observation you may have noticed: The code we write is always executed from the first line to the last line. What if we want only some of the lines to be executed depending on a condition? What if we want to determine how much tax we pay based on our salary. We need a way to set a variable to the correct tax bracket based on the condition of our annual salary.
+Notice that in the above example, we typed `1 + 1 == 2`, and note `1 + 1 = 2`. In fact, if you type `1 + 1 = 2` into the console, you'll get an error. So what gives?
 
-What we are describing is the usage of control structures with conditional statements. In JavaScript, we have several. Let's explore the following:
+The key understanding here is the difference between _assignment_ and _comparison_. The single equals sign in Javascript is used for assignment, e.g. assigning a variable to some value. The double equals sign is used for comparison, i.e. to check whether two values are equal. You can't assign one value to another value, but you can always check whether two values are the same.
 
-- `if`
-- `if/else`
-- `if/else if/else`
-- `switch`
+Related to the `==` comparison operator is the `===` comparison operator. `===` is a stronger operator, as it also checks whether the **type** of the values are the same, while the `==` operator will try to _coerce_ the values into being the same type before comparing. As an exercise, try to predict what boolean each of the following expressions will evaluate to:
 
-### `if`
-An `if` statement has three parts to its syntax: 1) the keyword `if`, 2) parentheses that contain a condition, and 3) curly braces that contain values, expressions, or statements. All of the code inside of the curly braces get executed if the condition contained in parentheses resolves to a `truthy` value.
+```
+"3" == 3
+=> ???
+"3" === 3
+=> ???
+false == "false"
+=> ???
+false == 0
+=> ???
+false === 0
+=> ???
+```
 
-Here's an example of an `if` statement that will resolve to a `truthy` value:
+As a general best-practice, it's better to err on the side of the stronger comparison operator.
 
-```javascript
-if ( 10 > 5) {
-  console.log("I was executed.");
+Note: You can always check something's type in Javascript using the typeof function! (More on functions later). What's `typeof(4)`? `typeof("what's up?")`?
+
+### Conditionals
+
+Conditionals control the flow of a program.  Conditionals decide which code statements gets run based on some input to the conditional.  An example from everyday life would be:
+
+```
+If you spend $100 or more, then you get 20% off, otherwise the purchase is full price
+```
+In the example above, the input to the conditional is the total amount of your purchase.
+
+### If
+
+The most basic control flow statement is the `if` statement.  Here is our example from above in code:
+
+```
+var total = 284; // Some value
+
+if ( total >= 100 ) {
+   total = total * .8;
 }
 
-if (10 < 5) {
-  console.log("I wasn't executed. You won't see this message log.");
-}
+// More code to display the total to the user
 
-console.log("I always get executed.");
+console.log("Your total is: $" + total.toFixed(2));
 ```
 
-### `if/else`
-The `if/else` statement extends the functionality of the `if` statement. If the condition of an `if` statement resolves to a `falsy` value, then the code within the curly braces of an `else` statement is exected.
+Let's practice with some other if statements!
 
-Notice in the following code examples that the `else` staement does not have a conditional associated with it. Indirectly, it's using the `if`statement's conditional:
+```
+if (1 + 1 == 2) {
+  console.log("Arithmetic is the best");
+}
 
-```javascript
-if ( 10 > 5) {
-  console.log("I was executed.");
+if (1 + 1 != 2) {
+  console.log("Math is broken.");
+}
+```
+We can also combine these two statements using `if..else`:
+
+```
+if (1 + 1 == 2) {
+  console.log("Arithmetic is the best");
 } else {
-  console.log("I wasn't executed.");
+  console.log("Math is broken");
 }
+```
 
-if (false) {
-  console.log("I never get executed.");
+(Note: Remember the parentheses!)
+
+For each of these examples, try to determine whether the console will output "A" or "B":
+
+```
+if (2 > 1) {
+  console.log("A");
 } else {
-  console.log("I always get executed.");
+  console.log("B");
 }
-```
 
-### `if/else if/else`
-The `if/else if/else` statement has three separate statements: `if`, `else if`, and `else`.  The `else if` has the same syntax as the `if` statement; moreover, it must be used after an `if` statement but before an `else` statement.
-
-Let's write an example:
-
-```javascript
-if ( 5 > 10) {
-  console.log("I wasn't executed.");
-} else if (12 > 10) {
-  console.log("I was executed.");
+if (2 > 1 && 3 > 5) {
+  console.log("A");
 } else {
-  console.log("I wasn't executed.");
+  console.log("B");
 }
 
-if ( true) {
-  console.log("I'm always executed.");
-} else if (12 > 10) {
-  console.log("I never get executed.");
+if (typeof(9) === "string" || !(7 % 4 === 3)) {
+  console.log("A");
 } else {
-  console.log("I never get executed.");
+  console.log("B");
+}
+
+if (1 == "1" && (typeof(typeof(9)) === "string" || Number.isInteger(7.3))) {
+  console.log("A");
+} else {
+  console.log("B");
 }
 ```
 
-### `switch`
-When we have too many conditions and `else if` statements in our code, it can quickly become verbose and somewhat unwieldy. This is a good moment for using the `switch` statement. The syntax  of a `switch` statement can become confusing on first galnce, so let's work with an awesome diagram found on [Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch):
+### Functions
 
-```javascript
-switch (expression) {
-  case value1:
-    //Statements executed when the result of expression matches value1
-    [break;]
-  case value2:
-    //Statements executed when the result of expression matches value2
-    [break;]
-  ...
-  case valueN:
-    //Statements executed when the result of expression matches valueN
-    [break;]
-  default:
-    //Statements executed when none of the values match the value of the expression
-    [break;]
-}
+Very broadly, a _function_ in Javascript is a chunk of code we want to reuse that performs some action or return some value. For example, since I need constant affirmation, here's a function I might call ALL THE TIME:
 
 ```
-In the above syntax, the words `switch`, `case`, and `break` are keywords. The `expression` inside of parentheses of `switch` is compared with the values--from top to bottom--adjacent to the keyword `case`. The comparison being performed is `===`. The first comparison that evaluates to `true` executes the statements inside of the `case` statement. If we want to end any further comparisons, we include the keyword `break`.
+var greatJobMatt = function() {
+  console.log("You're doing great, Matt!");
+} 
+```
 
-Here's an example from [Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch) with code:
+I can then call this function by typing `greatJobMatt();`. 
 
-```javascript
-var foo = 0;
-switch (foo) {
-  case -1:
-    console.log('negative 1');
-    break;
-  case 0: // foo is 0 so criteria met here so this block will run
-    console.log(0);
-    // NOTE: the forgotten break would have been here
-  case 1: // no break statement in 'case 0:' so this case will run as well
-    console.log(1);
-    break; // it encounters this break so will not continue into 'case 2:'
-  case 2:
-    console.log(2);
-    break;
-  default:
-    console.log('default');
+We could create other functions with similar functionality:
+
+```
+var greatJobElie = function() {
+  console.log("You're doing great, Elie!");
+}
+
+var greatJobZubair = function() {
+  console.log("You're doing great, Zubair!");
 }
 ```
 
-In the above example, the expression `foo` matches the `case` statement of `0`. So we log the value of `0`. But there's no `break` after the log. So the `switch `statement continues to execute code found in succeeding `case` statements until we reach a `break` statement. So this is the output for the above `switch` statement:
+This code works perfectly well, but it isn't very DRY. The questions we should be asking are: 
 
-```javascript
-0
-1
+  1. Did we repeat ourselves in our code?
+  2. Can we make our program simpler?
+  3. Can we make our program easier to maintain?
+
+![](http://codyburleson.com/wp-content/uploads/2014/11/dontrepeatyourself_motivator_2.jpg)
+
+### Functions with arguments
+
+Let's clean up all our code from above by consolidating our three functions into a single function:
+
+```
+var greatJob = function(name) {
+  console.log("You're doing great, " + name + "!");
+}
+
+// Try out these commands!
+
+greatJob("Matt");
+greatJob("Elie");
+greatJob("Zubair");
+
 ```
 
+What if we use `return` instead of `console.log`?
+
+We can pass multiple arguments into our functions, too! Let's generalize a step further:
+
 ```
-Exercise: Use an `if/else if/else` statement to rite code for a simplified version of FizzBuzz: If a number is divisible by `3`, log the word `Fizz`; if a number is divisible by `5`, log the word `Buzz`, and if a number is divisible by both `3` and `5`, log the word `FizzBuzz`. If a number is not divisible by any of those numbers, log the non-divisible number. Repeat this process with a `switch` statement.
+var feedback = function(quality, name) {
+  console.log("You're doing " + quality + ", " + name + "!"); 
+}
+
+feedback("terribly","Matt");
+feedback("so-so","Elie");
+feedback("super good","Zubair");
 ```
 
-# 14 of 15: Control structures with iterators
-Conditional statements are used to determine which lines of code to execute. Iterators determine how many times certain lines of code are executed. When using JavaScript, you'll find yourself frequently using two iterators:
+Note: string concatenation in Javascript can be kind of a pain, and it's super easy to make mistakes: `console.log("Hi," + " how " + " are " + "you" "?");`. In ES6, concatenation can be done slightly differently:
 
-- `for` loop
-- `while` loop.
-
-### `for` loop
-A `for` loop executes lines of code while a condition evaluates to `true`. Here's the syntax:
-
-```javascript
-for([declare variables]; [conditional]; [increment]) {
-  // all code between the curly braces get executed while the [conditional] evaluates to true;
+```
+var feedback = function(quality, name) {
+  console.log(`You're doing ${quality}, ${name}!`); 
 }
 ```
 
-The syntax is concise, but it does not reveal the order of execution it follows:
+Lastly, if you don't know someone's name, you can always **prompt** them for it:
 
-1. [declare variables]
-2. [conditional]
-3. If [conditional] resolved to true, execute all code inside of the curly braces. Use [increment] as the last statement.
-4. repeat steps 2 and 3 until step 2 resolves to a `falsy` value.
-
-Let's translate all of this information into code:
-
-```javascript
-// 1
-// 2
-// 3
-// ...
-// 10
-for(var i = 1; i <= 10; i = i + 1;) {
-  console.log(i);
+```
+var feedback = function(quality) {
+  var name = prompt("What's your name?");
+  console.log(`You're doing ${quality}, ${name}!`); 
 }
 ```
 
-***
-Exercise: Modify the above `for` loop to print all integers from 10 to 1.]
-***
+Note that in ES6, it's possible to write simple functions even more succinctly with **arrow functions**
 
-### `while` loop
-Similar to a `for` loop, a `while` loop executes all code inside of its curly braces while its [conditional] resolves to a `truthy` value. The difference between both loops is syntax:
+```
+var feedback = (quality, name) => "You're doing " + quality +", " + name + "!";
+var double = (x) => 2*x;
+```
 
-```javascript
-// Version 1 of syntax
-[declare variables]
-while ([conditional]) {
-  // code to execute
-  // [incrementer]
+### Functions and Conditionals
+
+Now let's combine functions with a little bit of _flow control_.
+
+#### Exercise
+
+Let's write a program that prompts for a users name, then says hello to the user. The program should have a special hello prompt if the user enters your name.  Here is an example input and output:
+
+```
+> Please enter your name: Chris
+
+Hello Chris.  What are you doing here?
+
+> Please enter your name: Matt
+
+Hello Meticulous Matt!! Hope you're having an AWESOME day!
+```
+
+### Multiple If Statements
+
+A program can have multiple if statements when we have multiple control flow needs.  For example, we could have a special greeting for multiple names:
+
+```
+var name = prompt("Please enter your name:");
+
+if (name === "Matt") {
+   console.log("Hi Matt! Good to see you again!");
 }
 
-// Version 2 of syntax
-[declare variable]
-while ( [decrementer]) {
-  // code to execute
+if (name === "Elie") {
+   console.log("Hi Elie! You're looking good!");
+}
+
+if (name !== "Matt" && name !== "Elie") {
+   console.log("Hello " + name + ".  What are you doing here?");
+}
+``` 
+
+Using our store discount example.  How would we express 25% off for a purchase of $300 or more and 20% off for a purchase of $100 or more?
+
+### If, else
+
+The multiple if statement code we've written so far can get a little confusing.  It is really more suited for an if else control flow statement.  If else statements work together.  Here is the basic flow and syntax:
+
+```
+if ( /*some expression */) {
+
+    // If the expression is true, run this code
+
+} else {
+
+    // If the expression was false, run this code instead.
+
 }
 ```
 
-A `while` loop has some flexibility in its design. Above, the first `while` loop resembles the same workflow a `for` loop. The second `while` loop combines the [conditional] and a [decrementer]; this latter design works if the decrementer will eventually resolve to a `falsy` value, such as `0`.
+We can string together if else statements like this:
 
-Let's view a code example for both designs:
-
-```javascript
-var i = 1;
-while (i <= 10) {
-  // code to execute
-  i = i + 1;
-}
-
-var i = 10;
-while ( i = i - 1) {
-  // code to execute
+```
+if ( /*some expression */) {
+    // run this code
+} else if ( /* some other expression */ ) {
+    // run this code only if the first expression is false and this expression is true
+} else {
+    // run this code if the first two expressions were false
 }
 ```
 
-***
-Exercise: Use a `while` loop to print every number from 10 to 100 in increments of 10.
-***
+Rewrite your code from before to use the if/else if control flow. This is an example of **refactoring**.
 
-***
-Exercise: Use a `while` loop to print every number from 100 to 10 in decrements of 10.
-***
+### Booleans and Comparison Review
 
+Let's take a minute to review booleans and comparisons.  What does the following expression evaluate to?
 
-# 15 of 15: Native properties and methods
-The last topic we'll explore in this lesson are native properties and methods--functionality available to different data types. For primitive types, this functionality is extended to only two type:
+```
+var bankAccount = 7000; // I'm rich in most cities other than SF
+var RENT = 3000;
+var CAR_INSURANCE = 250;
+var COMCAST = 115; // Way too expensive
+var CAR_PAYMENT = 120;
+var NEW_PET_COST = 3000; // An extravegent pet
+var funSpending = prompt("How much fun money are you going to spend? ");
+var areYouFinanciallyWise = prompt("Are you financially wise? ");
 
-- `String`
-- `Number`
+if (areYouFinanciallyWise === "no") {
+    areYouFinanciallyWise = false;
+} else {
+    areYouFinanciallyWise = true;
+}
 
-### `String`
-Strings come with many [properties and methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String). In this section, we'll review just two of the more popular ones. The first is property named `length`, which returns the number of characters in a string:
-
-```javascript
-var city = "Chicago";
-
-city.length;  // 7
+if ((bankAccount > RENT + CAR_INSURANCE + CAR_PAYMENT + COMCAST + funSpending) || !areYouFinanciallyWise) {
+     console.log("Buy yourself something nice. You're worth it.");
+} else {
+     console.log("You probably should save your money.");
+}
 ```
 
-The second is a method named `toLowerCase()`, which converts all uppercase characters into lowercase characters:
+### Homework
 
-```javascript
-var city = "Chicago";
-
-city.toLowerCase(); // "chicago"
-```
-
-### `Number`
-Numbers come with many [properties and methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number), too. In this section, we'll review just two of the more popular ones. The first is method named `toString()`, which converts a number to a string; the scond is a method named `parseInt()`, which converts a string into a number.
-
-```javascript
-var age = 104;
-
-age.toString(); // "104"
-```
-
-The first is method named `parseInt()`, which converts a string to a number:
-
-```javascript
-var age = "104";
-
-Number.parseInt(age); // 104
-```
-
-# Conclusion
-In this lesson, we learned about the concept of a programming language. We also learned why JavaScript is taught to students of this course. Through a lot of practice, we've gained some familiarity with the syntax of JavaScript--values, expressions, statements, conditionals, and iterators. Combined, these topics extend to you the major components of this language. Be proud of yourself, we've covered a lot.
+1. [Basic JS](https://github.com/gSchool/basic-js)
+2. Read Chapters 1 and 2 in [Eloquent Javascript](http://eloquentjavascript.net/) - we'll be covering some of Chapter 2 tomorrow, so if you don't finish it all, that's ok!
