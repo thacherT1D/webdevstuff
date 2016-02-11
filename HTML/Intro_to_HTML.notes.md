@@ -1,6 +1,7 @@
 # HTML Lecture Notes
 
-# [Slides](https://docs.google.com/presentation/d/1COkEIRk9CjR60wnCHEZC4JBK0MT1ptoE-CIaol6UZpc/edit?usp=sharing)
+### [Slides](https://docs.google.com/presentation/d/1COkEIRk9CjR60wnCHEZC4JBK0MT1ptoE-CIaol6UZpc/edit?usp=sharing)
+### [Adam's Slides - (I Do)](http://slides.com/jadam/deck-1-2#/)
 
 ## First Lecture - HTML Syntax
 **(I Do)**  

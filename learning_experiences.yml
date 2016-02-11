@@ -1,1519 +1,2616 @@
 ---
-- :subject_uuid: d66ac86f-5303-481f-b64d-f9d1894beefe
+- :subject_uuid: d6e7b41b-e251-408f-b130-ed0cdf6b4479
   :subject_name: Learning to Learn
-  :uuid: ed7d9954-a588-49ce-a9c9-7c2b2d9e1db0
+  :uuid: cdbae2d2-e1c4-42c5-b2fa-bbf616e248a2
   :name: First day, intro to Full Stack
   :description: Learning_to_Learn/First_day,_intro_to_Full_Stack.desc.md
   :instructor_notes: Learning_to_Learn/First_day,_intro_to_Full_Stack.notes.md
   :mainline: true
-  :suggested_days: 1.0
+  :suggested_days: 0.5
   :section: Q1
-  :github_repo: 
   :experience_objectives: []
-- :subject_uuid: 51d9c30f-f5c5-479b-9a7d-b04b3e37c518
+- :subject_uuid: 4298574a-4ac8-4a6b-8195-91c349a04209
   :subject_name: Dev Environment
-  :uuid: ee69d7a8-3aca-4470-b87d-fe23d2f90805
+  :uuid: ed70c6dd-7649-4311-b933-ba0ea8c22f05
   :name: Setup Development Environment
   :description: Dev_Environment/Setup_Development_Environment.desc.md
   :instructor_notes: Dev_Environment/Setup_Development_Environment.notes.md
   :mainline: true
   :suggested_days: 0.5
   :section: Q1
-  :github_repo: 
   :experience_objectives:
-  - :objective_uuid: b877ef1b-f419-4b39-94aa-d949878cbef4
+  - :objective_uuid: fd7ec03c-43d0-46b2-b8a7-1dbfe3c1ff40
     :objective_name: 'Students should always use keyboard shortcuts for common programs '
-- :subject_uuid: d66ac86f-5303-481f-b64d-f9d1894beefe
+- :subject_uuid: d6e7b41b-e251-408f-b130-ed0cdf6b4479
   :subject_name: Learning to Learn
-  :uuid: c3d91305-dcda-42a5-ad97-1b31f138c01c
+  :uuid: 8b3330ee-c4a7-497e-9bd9-7da9470471b1
   :name: Learning To Learn
   :description: Learning_to_Learn/Learning_To_Learn.desc.md
   :instructor_notes: Learning_to_Learn/Learning_To_Learn.notes.md
   :mainline: true
   :suggested_days: 0.25
   :section: Q1
-  :github_repo: 
   :experience_objectives:
-  - :objective_uuid: d69fbf6c-2813-4018-801b-9cf47841311d
+  - :objective_uuid: 924335f6-c536-4c06-9bc1-8612724c448a
     :objective_name: Clears the stage -- turn off/eliminate potential distractions
-- :subject_uuid: 34bf8b61-2dc7-433a-8e4e-fa06582be259
+  - :objective_uuid: 804d044d-9af6-45eb-8bb4-a9456bf5019f
+    :objective_name: Clarify the “what” and the “why”
+  - :objective_uuid: 3ca23483-e808-4267-b3dd-5e707d228b4b
+    :objective_name: Prioritize Process over product
+  - :objective_uuid: 0a3eb669-e449-4a7f-b20d-e11c531fdc79
+    :objective_name: Wrestles with new content
+  - :objective_uuid: 69ea24f4-b759-4098-86af-0d7e5a0fa5ec
+    :objective_name: Takes Risks
+  - :objective_uuid: f6822d58-8a3b-4444-9278-5d704572e9f0
+    :objective_name: Has fun
+  - :objective_uuid: d4035f5a-b922-4a94-8ac6-6244e68e9601
+    :objective_name: Self assesses
+  - :objective_uuid: 842272db-117e-4f3d-9ce6-e95527eaa596
+    :objective_name: Asks new questions
+- :subject_uuid: 7313b475-d281-4c72-a3b3-1167eb3b13e3
   :subject_name: The Command Line
-  :uuid: 0abbe766-c432-4357-9afc-95b67065c2c9
+  :uuid: 479e46a9-663e-4666-bac1-290343a5021b
   :name: Intro to the Command Line
   :description: The_Command_Line/Intro_to_the_Command_Line.desc.md
   :instructor_notes: The_Command_Line/Intro_to_the_Command_Line.notes.md
   :mainline: true
   :suggested_days: 0.5
   :section: Q1
-  :github_repo: 
   :experience_objectives:
-  - :objective_uuid: 055e0972-2851-46b4-8229-09bad025104b
+  - :objective_uuid: c790788d-c525-44ae-ac05-0806bdf12e1a
     :objective_name: Manage files on the command line
-  - :objective_uuid: 105c7b76-9b13-4e25-8fd5-ac9998f9a03c
+  - :objective_uuid: 313e6f16-cb6a-4146-8f1e-d7f33a7ec0d5
     :objective_name: Chain, pipe, and redirect commands to work more efficiently
-  - :objective_uuid: 9f821769-93ee-4000-8eda-cc49d5429024
+  - :objective_uuid: 9eb6aa09-0210-4e2a-b24b-f78e9515b5d8
     :objective_name: Navigate the file system using the command line
-- :subject_uuid: f902dd0d-2c93-4706-83d2-567752a31988
+  - :objective_uuid: 5406c830-283c-4260-8b72-9f94f230ee3a
+    :objective_name: Change to root while keeping shell variables (su - root / exit)
+  - :objective_uuid: 9cfca41f-27a6-4c62-9524-796a35215b2b
+    :objective_name: Describe file permission generally
+  - :objective_uuid: 4d0ca7cf-3b9e-4063-a97c-495892248811
+    :objective_name: Use chown and chmod
+  - :objective_uuid: 09145fa3-e3ed-444d-9a43-c0df3a6dd29d
+    :objective_name: Describe sudo and why it’s unwise to use with brew / npm / gems
+      etc...
+- :subject_uuid: 3f805b07-096d-4024-bce2-20b19f92199a
   :subject_name: Version Control (Git and Github)
-  :uuid: 15e79293-93a7-42ec-8fea-42bafad1ec25
+  :uuid: 953ce233-2b8c-4ec1-9e4e-4437c4629eb9
   :name: Intro to Git and Github
   :description: Version_Control_(Git_and_Github)/Intro_to_Git_and_Github.desc.md
   :instructor_notes: Version_Control_(Git_and_Github)/Intro_to_Git_and_Github.notes.md
   :mainline: true
-  :suggested_days: 1.0
+  :suggested_days: 0.5
   :section: Q1
-  :github_repo: 
   :experience_objectives:
-  - :objective_uuid: 9a2ee6ba-31ff-43ee-8239-cfa0b203b683
+  - :objective_uuid: 656cc273-e198-4e10-b939-ecd678985b1e
     :objective_name: Perform basic git commands to track changes to a project
-  - :objective_uuid: 355c2e72-27b8-4338-833c-2c6d192ed4c8
+  - :objective_uuid: 37ad0a03-44e8-47a0-9a32-ca6ac3650e09
     :objective_name: 'Write succinct, descriptive commit messages '
-  - :objective_uuid: aaae2bcc-4d0b-4288-b48f-6732a64771d9
+  - :objective_uuid: 608fcecb-ba4e-4ee7-bc74-e98d3fd6f354
     :objective_name: Discuss the purpose of Git
-  - :objective_uuid: 42625085-b95d-4e67-b3b5-a816a6fd11bb
+  - :objective_uuid: 247ca14d-34b1-440d-8d93-48f7d01f82e5
     :objective_name: Discuss the basic process of committing a file to version control
       (function of version control)
-- :subject_uuid: 34798e76-3f49-4d0f-9a7d-b38762c691b9
+- :subject_uuid: a7d5be0f-3937-465a-b5e9-b2555642e9d9
   :subject_name: HTML
-  :uuid: f51a9e56-da96-43d8-8f20-2539078bdd9b
+  :uuid: df58c95e-d616-44af-86cc-65bac3f0a87b
   :name: Intro to HTML
   :description: HTML/Intro_to_HTML.desc.md
   :instructor_notes: HTML/Intro_to_HTML.notes.md
   :mainline: true
-  :suggested_days: 1.0
+  :suggested_days: 0.5
   :section: Q1
-  :github_repo: 
   :experience_objectives:
-  - :objective_uuid: 2dd2e2e6-47aa-4dbd-b8de-cecf0e4f069a
+  - :objective_uuid: 21be8530-cad6-4d87-a1b6-ad4d9c65859a
     :objective_name: Tags are in a logical order to match reality
-  - :objective_uuid: f9e62597-c7aa-4de2-b63a-f38c3beda9ae
+  - :objective_uuid: d4d044b5-f96b-4ab6-b067-e146f01d5e49
     :objective_name: Tags are properly indented to show nesting visually
-  - :objective_uuid: 59fcb5ef-abc0-4ed2-b70e-b25eb9860f72
+  - :objective_uuid: 94966303-dc41-45c2-a320-5fdc5a30915c
     :objective_name: Attributes
-  - :objective_uuid: ce5c3deb-d070-43d7-902d-05b89688c1d6
+  - :objective_uuid: b8d3b6f4-b870-4f65-9f71-14eeaf114585
     :objective_name: "`<img>` tags used to embed images"
-  - :objective_uuid: 4b26f7a6-dfbf-484f-b630-3253b7b99f10
+  - :objective_uuid: bb1727eb-fc2d-44fe-b0ed-390a7c187f1e
     :objective_name: Anchor tags
-  - :objective_uuid: 5590aff4-8133-4e4e-b6a8-6800ac9a3947
+  - :objective_uuid: e76f21f6-ee8a-4265-9ef8-3ba962c0ce07
     :objective_name: Validates markup with the [W3C HTML Validator](https://validator.w3.org/)
-  - :objective_uuid: f58741bf-692b-42f5-a6f9-efffb0dfc90e
+  - :objective_uuid: 41ac54d4-4a2b-4750-915e-90886ab7fcba
     :objective_name: Writes valid HTML structure
-- :subject_uuid: 36adeb0c-c5bc-45de-ae4d-6cc6a81197cd
+- :subject_uuid: 0c1be570-48b4-48a8-bc98-7da27a7be512
   :subject_name: CSS
-  :uuid: d79a62ce-dac8-40ac-b336-20eb57474ed3
+  :uuid: 5e9d2680-56f4-45a5-a8ba-a396a6d69293
   :name: Intro To CSS
   :description: CSS/Intro_To_CSS.desc.md
   :instructor_notes: CSS/Intro_To_CSS.notes.md
   :mainline: true
-  :suggested_days: 2.0
+  :suggested_days: 0.5
   :section: Q1
-  :github_repo: 
   :experience_objectives:
-  - :objective_uuid: 6dfc0096-762a-46d6-b5eb-42191785e1a6
-    :objective_name: Target classes
-  - :objective_uuid: a876c660-b39c-402b-b963-f29dab63ccdc
-    :objective_name: Target IDs
-  - :objective_uuid: 63104b94-cff7-46c3-becf-93a78f2e74cb
-    :objective_name: Target attributes
-  - :objective_uuid: a22e4cce-0f01-44db-9977-22b578b7f804
-    :objective_name: Describe "cascading"
-  - :objective_uuid: 32197e77-815a-4c60-9aa4-e7b31ab64879
-    :objective_name: Describe how CSS “decides” which styles to apply
-  - :objective_uuid: a279c432-4c05-4889-b41b-42c55405f4ec
-    :objective_name: Describe selector specificity
-  - :objective_uuid: aff2de3d-4c8d-403c-9aaa-5197b73e0660
-    :objective_name: Target elements
-- :subject_uuid: 34798e76-3f49-4d0f-9a7d-b38762c691b9
+  - :objective_uuid: 3e519bc6-66d9-4616-a62d-9887d215ef0d
+    :objective_name: Target HTML elements with CSS selectors
+  - :objective_uuid: 0e29c27b-1899-46ba-a7f2-6966e3d24d11
+    :objective_name: Applies text styles
+  - :objective_uuid: af945ddf-5c65-4eaf-924d-9cd3cd8badb7
+    :objective_name: Applies background styles
+  - :objective_uuid: a1c05dfc-808f-4797-bcdd-f88579bb0485
+    :objective_name: Applies image styles
+  - :objective_uuid: 3ed39728-992e-47c8-aa29-fefccb39053f
+    :objective_name: Change default list styles
+  - :objective_uuid: 20bd8e92-d68d-4087-8147-9ef18b073987
+    :objective_name: Can apply rules to embedded media
+  - :objective_uuid: ab6c6400-dbee-4922-9f09-5671024f7507
+    :objective_name: Uses box model to dimension element
+  - :objective_uuid: a1645931-6983-41d2-8899-f6fdc76757b9
+    :objective_name: Use floats to interrupt flow content and layout block-level elements
+      on a page
+  - :objective_uuid: 032790f1-0648-4738-b408-7ada0920fae6
+    :objective_name: Creates CSS classes for groups of elements that behave similarly
+  - :objective_uuid: 75d29df7-4792-4cd8-ad22-f6c90b8fba93
+    :objective_name: Creates IDs for elements that are unique
+  - :objective_uuid: 4cf38d21-b68b-4fb3-b8a3-5ffcea744ed1
+    :objective_name: Uses semantic selector specificity
+  - :objective_uuid: 5140f9b2-2de8-49cb-b2ae-ab67b8da3db3
+    :objective_name: Selectors and rules are demarcated by usage, using comments and
+      by grouping similar functionality
+- :subject_uuid: a7d5be0f-3937-465a-b5e9-b2555642e9d9
   :subject_name: HTML
-  :uuid: b86b396d-2295-4a84-8db1-87e4eb0038ff
+  :uuid: 63856d9f-eaa7-47bf-9287-87978ae5510f
   :name: Semantic HTML
   :description: HTML/Semantic_HTML.desc.md
   :instructor_notes: HTML/Semantic_HTML.notes.md
   :mainline: true
-  :suggested_days: 1.0
+  :suggested_days: 0.5
   :section: Q1
-  :github_repo: 
   :experience_objectives:
-  - :objective_uuid: 29148a29-0971-49d1-97b1-683f35dcbdcf
+  - :objective_uuid: 30807c92-5608-42bb-a84d-731e65648a67
     :objective_name: Tables used for tabular data, not for formatting
-  - :objective_uuid: 0953118e-e12a-40a4-8fba-522f33ec7676
+  - :objective_uuid: 4b512551-581d-40b0-b996-4562c147dcd1
     :objective_name: Ordered lists used for ordered content
-  - :objective_uuid: c3b0f57f-16b0-488a-9838-5aa9cc760da2
+  - :objective_uuid: 89decbb0-f6fa-4efb-ba93-600dcbc23bfd
     :objective_name: Unordered lists used for unordered content
-  - :objective_uuid: 7e505afc-897d-4589-8e9c-0d3e0e23c0f1
+  - :objective_uuid: 1f7f825a-f86d-4ba4-b718-e4b6e2580588
     :objective_name: Images all have alt text
-  - :objective_uuid: ce21ea2b-6514-4dfa-ae36-212ca03d7667
+  - :objective_uuid: 9093a834-2e1d-41bf-8a21-1c2dea1acc07
     :objective_name: Headers used properly - smaller headers used to section content
       demarcated by larger headers
-  - :objective_uuid: 516bd416-5308-4a47-a9c8-889f5ca1dfb1
+  - :objective_uuid: 930f1a50-7e00-4da0-9dae-f8f48d29ee16
     :objective_name: No tags that exist for no reason- all tags should have a purpose
-  - :objective_uuid: d59cc8b8-28c4-4e8d-b196-26d3255c4b3f
+  - :objective_uuid: f2068f02-dd34-4d5f-b8e5-70ea8ed94879
     :objective_name: Sidebars, articles, sections, etc. used in appropriate cases
-- :subject_uuid: 34798e76-3f49-4d0f-9a7d-b38762c691b9
+  - :objective_uuid: 21be8530-cad6-4d87-a1b6-ad4d9c65859a
+    :objective_name: Tags are in a logical order to match reality
+  - :objective_uuid: d4d044b5-f96b-4ab6-b067-e146f01d5e49
+    :objective_name: Tags are properly indented to show nesting visually
+  - :objective_uuid: 41ac54d4-4a2b-4750-915e-90886ab7fcba
+    :objective_name: Writes valid HTML structure
+  - :objective_uuid: 6557ef9d-7d25-402b-a8db-bac4ae550b54
+    :objective_name: Use structural tags to create a semantic, usable form (label,
+      fieldset)
+  - :objective_uuid: 8357b7e8-1cdf-43ab-a5e9-3431ff620062
+    :objective_name: Build multiple forms that use all HTML5 controls
+  - :objective_uuid: 5c770de3-4474-4f5e-a0c3-46065d8a5781
+    :objective_name: Labels are associated with form controls
+- :subject_uuid: a7d5be0f-3937-465a-b5e9-b2555642e9d9
   :subject_name: HTML
-  :uuid: 5459f175-456b-418d-95ad-1b2f25cb24e5
-  :name: Intermediate HTML & CSS
-  :description: HTML/Intermediate_HTML_&_CSS.desc.md
-  :instructor_notes: HTML/Intermediate_HTML_&_CSS.notes.md
+  :uuid: dca9e810-0f2f-466d-b93f-15e36f399072
+  :name: Intermediate CSS
+  :description: HTML/Intermediate_CSS.desc.md
+  :instructor_notes: HTML/Intermediate_CSS.notes.md
   :mainline: true
-  :suggested_days: 2.0
+  :suggested_days: 0.5
   :section: Q1
-  :github_repo: 
   :experience_objectives:
-  - :objective_uuid: 29148a29-0971-49d1-97b1-683f35dcbdcf
+  - :objective_uuid: 30807c92-5608-42bb-a84d-731e65648a67
     :objective_name: Tables used for tabular data, not for formatting
-  - :objective_uuid: 6dfc0096-762a-46d6-b5eb-42191785e1a6
-    :objective_name: Target classes
-  - :objective_uuid: a876c660-b39c-402b-b963-f29dab63ccdc
-    :objective_name: Target IDs
-  - :objective_uuid: 63104b94-cff7-46c3-becf-93a78f2e74cb
-    :objective_name: Target attributes
-  - :objective_uuid: 5c69e00c-590b-483d-ba98-ce8b9f224905
-    :objective_name: Target elements with N attributes
-  - :objective_uuid: d042cca4-b2b4-44c0-ad01-08f4c3be7837
-    :objective_name: Target elements that have one OR another attribute
-  - :objective_uuid: 42e67da1-5a2d-478d-9f96-865917750538
-    :objective_name: Targets descendants of an element
-  - :objective_uuid: 5bde4e30-ab84-4384-8fa1-ac0179d00970
-    :objective_name: Target direct descendants
-  - :objective_uuid: d2c93d72-e930-4d26-930c-5bbb5060f9a6
-    :objective_name: Target elements using pseudo-selectors
-  - :objective_uuid: 64969b1a-6a00-4b30-bdb8-49ab6ac2b1a1
-    :objective_name: Target :after and :before selectors
-  - :objective_uuid: 70c764ef-26b8-4bc2-bb59-21fa0987085e
-    :objective_name: Target siblings
-  - :objective_uuid: ceab7074-e05e-4ff9-a7dd-ebc79a695f83
-    :objective_name: Target the nth-child and nth-of-type
-  - :objective_uuid: 1fb4a2a6-54b5-47cd-9f6a-f1333814e8b4
-    :objective_name: Describe the difference between nth-child and nth-of-type
-  - :objective_uuid: a22e4cce-0f01-44db-9977-22b578b7f804
-    :objective_name: Describe "cascading"
-  - :objective_uuid: 32197e77-815a-4c60-9aa4-e7b31ab64879
-    :objective_name: Describe how CSS “decides” which styles to apply
-  - :objective_uuid: a279c432-4c05-4889-b41b-42c55405f4ec
-    :objective_name: Describe selector specificity
-  - :objective_uuid: aff2de3d-4c8d-403c-9aaa-5197b73e0660
-    :objective_name: Target elements
-  - :objective_uuid: c7cdda20-22b3-4136-973c-7274f547742d
+  - :objective_uuid: ab6c6400-dbee-4922-9f09-5671024f7507
     :objective_name: Uses box model to dimension element
-  - :objective_uuid: bae5c3d8-c3f1-4f0e-907f-4083c86b9e7a
+  - :objective_uuid: a1645931-6983-41d2-8899-f6fdc76757b9
     :objective_name: Use floats to interrupt flow content and layout block-level elements
       on a page
-  - :objective_uuid: 834ffa83-741e-4dc5-a207-61985edf77f7
+  - :objective_uuid: a69bc44f-b1f9-4add-9619-8c73f9482bea
     :objective_name: Uses relative positioning within content to do in-block layout
-  - :objective_uuid: c389a3b5-b054-48ed-bd8c-f5d661db01e9
+  - :objective_uuid: 5193b215-610a-40ee-95e9-735f9f5b5d40
     :objective_name: Uses fixed positioning
-  - :objective_uuid: ab7b262d-e2d5-4aef-ac06-6cfa1661caa4
-    :objective_name: Resulting layout is aesthetically pleasing
-- :subject_uuid: 34798e76-3f49-4d0f-9a7d-b38762c691b9
+- :subject_uuid: a7d5be0f-3937-465a-b5e9-b2555642e9d9
   :subject_name: HTML
-  :uuid: bd79fbc4-5780-4f9c-8eea-9ff83012fe31
+  :uuid: e5092521-31df-4296-b2aa-2e371da89fcf
   :name: HTML5 Media
   :description: HTML/HTML5_Media.desc.md
   :instructor_notes: HTML/HTML5_Media.notes.md
   :mainline: true
-  :suggested_days: 1.0
+  :suggested_days: 0.5
   :section: Q1
-  :github_repo: 
-  :experience_objectives: []
-- :subject_uuid: 0cfc5800-c6b8-48d1-ac25-bf8878732af2
+  :experience_objectives:
+  - :objective_uuid: 90dfc690-41e6-4381-8890-c2f14e74f48e
+    :objective_name: Use the Audio API to play sounds, or embed media
+  - :objective_uuid: 2e0dcee0-b602-46e9-9e69-ccba72d14d0d
+    :objective_name: Embed videos using the Video API
+- :subject_uuid: ac805334-f3dd-4288-9a61-0dcef3e219d4
   :subject_name: Programming with Javascript
-  :uuid: 505284fb-de30-4acf-af94-14c0fb5ababc
+  :uuid: 243579b6-d7f9-4966-8033-07496e6de210
   :name: Intro to Programming
   :description: Programming_with_Javascript/Intro_to_Programming.desc.md
   :instructor_notes: Programming_with_Javascript/Intro_to_Programming.notes.md
   :mainline: true
   :suggested_days: 1.0
   :section: Q1
-  :github_repo: 
   :experience_objectives: []
-- :subject_uuid: 0cfc5800-c6b8-48d1-ac25-bf8878732af2
+- :subject_uuid: ac805334-f3dd-4288-9a61-0dcef3e219d4
   :subject_name: Programming with Javascript
-  :uuid: 8f0a3c17-a1aa-48f7-ba40-89547bf5b936
+  :uuid: 112f4f48-747f-4c1c-9f0b-bb0f7156e974
   :name: 'JavaScript: Intro, Types, Values, Variables, Control Flow'
   :description: Programming_with_Javascript/JavaScript:_Intro,_Types,_Values,_Variables,_Control_Flow.desc.md
   :instructor_notes: Programming_with_Javascript/JavaScript:_Intro,_Types,_Values,_Variables,_Control_Flow.notes.md
   :mainline: true
   :suggested_days: 1.0
   :section: Q1
-  :github_repo: 
-  :experience_objectives: []
-- :subject_uuid: 0cfc5800-c6b8-48d1-ac25-bf8878732af2
+  :experience_objectives:
+  - :objective_uuid: e35e103a-587f-43f8-9f6a-46e9702ea9c8
+    :objective_name: Predict the final result of an expression given the actual runtime
+      values
+  - :objective_uuid: 305d6e83-4cde-48e8-86fb-4a1bf3d9ceeb
+    :objective_name: Construct grammatical javascript statements using values (primitive
+      and reference), operators, literals, and variables
+  - :objective_uuid: 753f714c-a51d-4092-9ced-6e3dd2b05f15
+    :objective_name: Solve problems requiring conditionals and loops (such as accumulator
+      pattern) with nested/combined control-flow statements
+  - :objective_uuid: f80d8ef7-1b83-4b55-a4cf-e7a58e63e0c2
+    :objective_name: Iterate over simple data structures (arrays, objects) with loops
+- :subject_uuid: ac805334-f3dd-4288-9a61-0dcef3e219d4
   :subject_name: Programming with Javascript
-  :uuid: 4a8d8bc7-06f0-4b3b-bdbb-10a39d2edbf8
+  :uuid: ed0f7c57-5844-4870-a1ab-a7d3465948a0
   :name: 'JavaScript: Objects, Arrays, Iterations'
   :description: Programming_with_Javascript/JavaScript:_Objects,_Arrays,_Iterations.desc.md
   :instructor_notes: Programming_with_Javascript/JavaScript:_Objects,_Arrays,_Iterations.notes.md
   :mainline: true
   :suggested_days: 1.0
   :section: Q1
-  :github_repo: 
-  :experience_objectives: []
-- :subject_uuid: 0cfc5800-c6b8-48d1-ac25-bf8878732af2
+  :experience_objectives:
+  - :objective_uuid: 753f714c-a51d-4092-9ced-6e3dd2b05f15
+    :objective_name: Solve problems requiring conditionals and loops (such as accumulator
+      pattern) with nested/combined control-flow statements
+  - :objective_uuid: f80d8ef7-1b83-4b55-a4cf-e7a58e63e0c2
+    :objective_name: Iterate over simple data structures (arrays, objects) with loops
+  - :objective_uuid: c3d6815a-2d4e-4801-9a0e-2092ddc6ffa1
+    :objective_name: Store and access values using dot notation in objects
+  - :objective_uuid: 37c616c9-74ca-4d7f-98c9-5f7c82265f60
+    :objective_name: Store and access values by index in arrays
+  - :objective_uuid: aee22b32-4062-4f8d-83ee-3364817b8b0e
+    :objective_name: Store and access values by bracket notation in objects
+  - :objective_uuid: e8ded5c0-a4fe-4f59-9927-f92cd7558001
+    :objective_name: Access and modify data using common Object and Array methods
+- :subject_uuid: ac805334-f3dd-4288-9a61-0dcef3e219d4
   :subject_name: Programming with Javascript
-  :uuid: 172558c2-704d-49fd-a5d5-c02c605211d7
+  :uuid: 7b3c27e2-e11d-47b6-87f6-d8cc4b2ddb5e
   :name: Memory Diagrams
   :description: Programming_with_Javascript/Memory_Diagrams.desc.md
   :instructor_notes: Programming_with_Javascript/Memory_Diagrams.notes.md
   :mainline: true
   :suggested_days: 0.0
   :section: Q1
-  :github_repo: 
-  :experience_objectives: []
-- :subject_uuid: 0cfc5800-c6b8-48d1-ac25-bf8878732af2
+  :experience_objectives:
+  - :objective_uuid: 7d1108cf-a26d-41ed-9f03-8ec19099fa04
+    :objective_name: Contrast “passing a value” vs “passing a reference”
+  - :objective_uuid: 66ac0ed5-fe21-4f40-9a46-07eea4d615ab
+    :objective_name: Mentally parse statements that combine value and reference types
+  - :objective_uuid: 256c536c-a532-4938-8c60-5db5bfd6e725
+    :objective_name: Diagram how reference and primitive types are stored in memory
+      given an algorithm with loops / conditionals / arrays / objects
+- :subject_uuid: ac805334-f3dd-4288-9a61-0dcef3e219d4
   :subject_name: Programming with Javascript
-  :uuid: b9c005e7-d507-4bc5-b258-3a4c4b3361d9
+  :uuid: 2b95a79b-e85a-4329-8dfd-718bb63490a4
   :name: 'JavaScript: Functions'
   :description: Programming_with_Javascript/JavaScript:_Functions.desc.md
   :instructor_notes: Programming_with_Javascript/JavaScript:_Functions.notes.md
   :mainline: true
-  :suggested_days: 1.0
+  :suggested_days: 0.5
   :section: Q1
-  :github_repo: 
-  :experience_objectives: []
-- :subject_uuid: 0cfc5800-c6b8-48d1-ac25-bf8878732af2
+  :experience_objectives:
+  - :objective_uuid: 76c9025c-edc3-4fe8-a659-b4ba6e93d6ed
+    :objective_name: Formulates new functions given inputs and desired outputs
+  - :objective_uuid: 68697343-a54c-40b9-87cf-de470a939a80
+    :objective_name: Mentally evaluate expressions that use the return value of function
+      calls
+  - :objective_uuid: 687a7c89-35c4-43c6-bb3f-f1d0a8a85178
+    :objective_name: Define and give examples of “Pure functions” that do not have
+      side effects.  Define and give examples of “side effects”.
+  - :objective_uuid: 5775eb65-a9c5-47dc-97b5-245e23482e92
+    :objective_name: Can diagram the call stack
+  - :objective_uuid: 6bb08adc-9dd2-467d-a97e-c331a92ff56d
+    :objective_name: Create and use local variable scope when appropriate within Functions
+  - :objective_uuid: 2eda74c6-19ea-4dec-8a93-33bf6833a8e6
+    :objective_name: Abstracts sets of expressions into functions
+- :subject_uuid: ac805334-f3dd-4288-9a61-0dcef3e219d4
   :subject_name: Programming with Javascript
-  :uuid: 6f50914b-724b-4557-9f36-b3602d2d1517
+  :uuid: 6aae9c28-b494-4fb2-92d4-45c1ceb757d4
   :name: Scopes, Hoisting, and High Order Functions
   :description: Programming_with_Javascript/Scopes,_Hoisting,_and_High_Order_Functions.desc.md
   :instructor_notes: Programming_with_Javascript/Scopes,_Hoisting,_and_High_Order_Functions.notes.md
   :mainline: true
-  :suggested_days: 1.0
+  :suggested_days: 0.5
   :section: Q1
-  :github_repo: 
-  :experience_objectives: []
-- :subject_uuid: d9b6b702-189e-472d-b5bf-cfc62cd4dafe
+  :experience_objectives:
+  - :objective_uuid: ff5e1ccd-66ba-4ded-93ab-b5d754c7350b
+    :objective_name: Writes functions that accept functions
+  - :objective_uuid: a4e15ffa-f956-466a-9156-0811b60f5227
+    :objective_name: Can explain what a closure is
+  - :objective_uuid: aeb740a8-9358-497b-99e3-9d4a3bcb11e6
+    :objective_name: Can explain the order of execution with closures, as well as
+      multiple nested closures
+  - :objective_uuid: 6bb08adc-9dd2-467d-a97e-c331a92ff56d
+    :objective_name: Create and use local variable scope when appropriate within Functions
+- :subject_uuid: 5ddfa4d5-6194-466b-97aa-f9610b77c493
   :subject_name: JavaScript Object Model
-  :uuid: 2c412db7-0c3f-411a-b9c9-ce82ae988d10
+  :uuid: cd5ae21a-d8d1-4408-a007-ea76c489eca0
   :name: JavaScript Object Model
   :description: JavaScript_Object_Model/JavaScript_Object_Model.desc.md
   :instructor_notes: JavaScript_Object_Model/JavaScript_Object_Model.notes.md
   :mainline: true
   :suggested_days: 1.0
   :section: Q1
-  :github_repo: 
   :experience_objectives:
-  - :objective_uuid: 49a09e46-75f8-42a4-824d-875858120753
-    :objective_name: Examine JavaScript’s global objects like Array, Object etc
-  - :objective_uuid: dd6a895d-8ff4-4d75-89d9-a1cceba66f00
+  - :objective_uuid: 8ccc8ea9-1a10-44eb-88f0-755756f392d4
     :objective_name: Explicitly refers to the global scope inside of functions with
       `this`
-- :subject_uuid: 3589276c-59e9-49bb-a78b-a4384fa5df5e
+  - :objective_uuid: ecb619f9-4f1d-442c-b159-69daef26484b
+    :objective_name: Adds methods to objects that use `this` to refer to that object
+  - :objective_uuid: 95d1a3d2-39ad-4194-b1fa-2b2706c6fa32
+    :objective_name: Refers to the new instance inside of a constructor function using
+      ‘this’
+  - :objective_uuid: 1dca493d-0643-4871-905b-4c8c0502f3a6
+    :objective_name: Explicitly sets the value of `this` with call, bind and apply
+  - :objective_uuid: 1e091594-11a7-462e-861b-5c5bf6f625f9
+    :objective_name: Capitalizes variables pointing to constructor functions
+  - :objective_uuid: ede5c0bf-13a9-4860-9ae1-ec8cbfad127b
+    :objective_name: Creates instances with the `new` keyword
+  - :objective_uuid: ef016907-991f-4e5c-9157-a7fb5a0df75f
+    :objective_name: Uses accessor methods and closures to create private class variables
+  - :objective_uuid: 935289ad-295f-4ca6-8099-d4b6bf3aca61
+    :objective_name: Uses constructor function syntax to create something similar
+      to a class in Javascript
+  - :objective_uuid: c0c7f530-ac7f-460c-9fa3-d1befef42919
+    :objective_name: Uses `this` to create instance properties, as passed in through
+      the parameters
+  - :objective_uuid: 52103367-1e62-4fb7-b116-a7569410ddf5
+    :objective_name: Uses good design practices (encapsulation) to ensure “classes”
+      are responsible for appropriate state tracking
+  - :objective_uuid: 037fc405-6682-4088-80da-37bb485fd314
+    :objective_name: Able to work with objects that reference each other in a complex
+      system (such as a game)
+  - :objective_uuid: 62f74454-fb13-444e-8dea-5803e6940df4
+    :objective_name: Does not store state on the constructor function itself
+  - :objective_uuid: 60adc3d6-dfdf-4a9a-bb06-b49af1f575a3
+    :objective_name: Stores functions in properties
+  - :objective_uuid: 79931682-02af-4c27-823d-e5b9859f523f
+    :objective_name: Differentiate between functions and methods
+  - :objective_uuid: 07025e42-9055-455d-9e6b-e62a10496206
+    :objective_name: Stores instance methods on the Prototype Object
+  - :objective_uuid: 1e49857a-ad34-4269-9989-7865bfb08c47
+    :objective_name: Creates closures to hide data and create accessors
+- :subject_uuid: 40104e17-a0e4-4bc4-b499-5030c197cb81
   :subject_name: Automated Testing
-  :uuid: 4f061f3a-8d91-451f-a337-8644884f313d
+  :uuid: 5202cc59-9f54-4b0f-be5d-43703cfb82be
   :name: JavaScript Testing Basics with Mocha and Chai
   :description: Automated_Testing/JavaScript_Testing_Basics_with_Mocha_and_Chai.desc.md
   :instructor_notes: Automated_Testing/JavaScript_Testing_Basics_with_Mocha_and_Chai.notes.md
   :mainline: true
-  :suggested_days: 11.0
+  :suggested_days: 0.5
   :section: Q1
-  :github_repo: 
   :experience_objectives: []
-- :subject_uuid: d9b6b702-189e-472d-b5bf-cfc62cd4dafe
+- :subject_uuid: 5ddfa4d5-6194-466b-97aa-f9610b77c493
   :subject_name: JavaScript Object Model
-  :uuid: 8410b642-9933-4d7b-99f8-4f89140d7133
+  :uuid: fb1cd788-4ddb-4fc3-aae0-d9803227eee4
   :name: Prototypes
   :description: JavaScript_Object_Model/Prototypes.desc.md
   :instructor_notes: JavaScript_Object_Model/Prototypes.notes.md
   :mainline: true
-  :suggested_days: 1.0
+  :suggested_days: 0.5
   :section: Q1
-  :github_repo: 
-  :experience_objectives: []
-- :subject_uuid: bed922ac-3f57-45c2-b2b9-6a51b2023083
+  :experience_objectives:
+  - :objective_uuid: 07025e42-9055-455d-9e6b-e62a10496206
+    :objective_name: Stores instance methods on the Prototype Object
+- :subject_uuid: 1762e39b-4a3e-433a-ac68-c815f3ea067b
   :subject_name: How the Web Works
-  :uuid: bbd04b00-65b3-482e-a059-7aac4e176176
+  :uuid: d85f9929-ecbf-46e6-93e0-4d50f2df2f8e
   :name: How the Internet Works
   :description: How_the_Web_Works/How_the_Internet_Works.desc.md
   :instructor_notes: How_the_Web_Works/How_the_Internet_Works.notes.md
   :mainline: true
-  :suggested_days: 1.0
+  :suggested_days: 0.5
   :section: Q1
-  :github_repo: 
-  :experience_objectives: []
-- :subject_uuid: 768230b2-e624-4815-b0e7-29c398c6e59e
-  :subject_name: Javascript and the DOM
-  :uuid: a1cffce6-b47a-4dad-80d4-c82a102a26d9
+  :experience_objectives:
+  - :objective_uuid: 58c7f9d7-fdca-4891-8f6c-35c6b2936b7f
+    :objective_name: Identify the parts of a URL
+  - :objective_uuid: f6501075-3acf-461a-8825-d71b99089015
+    :objective_name: Explain the basic purpose of each part of the URL
+  - :objective_uuid: d850071f-4e4e-4ca4-8aef-e951033e2c5e
+    :objective_name: Sequence Diagram Client-Server Model
+  - :objective_uuid: fa9b0fe6-c083-45fb-8e43-a355cc39d588
+    :objective_name: Explain key ideas about how the web works
+  - :objective_uuid: 32b99e0d-a427-4ecf-ab7c-52d644b345c1
+    :objective_name: Describe what happens in a redirect scenario and diagram it
+  - :objective_uuid: 2208ffe1-f052-465f-95cd-859fd52eba17
+    :objective_name: Describe the format and purpose of HTTP Requests and Responses
+  - :objective_uuid: df0cbc61-c9b3-4e85-8492-357784355dd9
+    :objective_name: Identify the parts of a request and describe their function
+  - :objective_uuid: 44765767-6045-4257-ba31-f3b6bc973474
+    :objective_name: Identify the parts of a response and describe their function
+  - :objective_uuid: 266591ef-8696-4046-8dd4-6f7513ebfa4f
+    :objective_name: Discuss Status codes
+  - :objective_uuid: efd97052-7a48-40af-ae38-e57cbc103bf6
+    :objective_name: Discusses Verbs
+  - :objective_uuid: 40513ddb-015e-43a8-bb79-540a0e375e39
+    :objective_name: Add appropriate headers to an HTTP Response
+  - :objective_uuid: d750efcd-a878-4f92-b94c-1342d12c5d8b
+    :objective_name: Explain that protocols exist as a shared contract that helps
+      machines communicate
+  - :objective_uuid: c6e319a9-fe3e-4486-bb98-b2c409ac99c8
+    :objective_name: Identify and describe the purpose (in a sentence) of common protocols
+- :subject_uuid: bcfe422a-cd35-4fd1-8ff8-6b078c476069
+  :subject_name: Javascript and the Browser
+  :uuid: 3a50035d-8712-4516-9429-8ccde51d3a9b
   :name: AJAX, API, JSON, and XMLHttpRequests
-  :description: Javascript_and_the_DOM/AJAX,_API,_JSON,_and_XMLHttpRequests.desc.md
-  :instructor_notes: Javascript_and_the_DOM/AJAX,_API,_JSON,_and_XMLHttpRequests.notes.md
+  :description: Javascript_and_the_Browser/AJAX,_API,_JSON,_and_XMLHttpRequests.desc.md
+  :instructor_notes: Javascript_and_the_Browser/AJAX,_API,_JSON,_and_XMLHttpRequests.notes.md
   :mainline: true
-  :suggested_days: 1.0
+  :suggested_days: 0.5
   :section: Q1
-  :github_repo: 
   :experience_objectives:
-  - :objective_uuid: 6e555853-845a-47ff-941c-1fb5d154d80d
-    :objective_name: Explain what AJAX stands for
-  - :objective_uuid: f3cfa577-ed25-4305-a003-623a2c3600cd
-    :objective_name: Write code that gets JSON and does something on success
-  - :objective_uuid: 56ab74e9-5dd7-4ae6-b67d-73324f163697
-    :objective_name: Explain the XMLHTTPRequest same domain policy
-  - :objective_uuid: eed38881-8b82-4de4-a5a1-3096e7e4c109
-    :objective_name: AJAX w/o jQuery
-  - :objective_uuid: 6c01a64b-6043-4980-9aba-d20c586a3b4e
-    :objective_name: Define API
-  - :objective_uuid: 74ac0a61-316b-4fd1-9dd3-33c3a1086b32
-    :objective_name: Discuss how APIs are used to connect services across the web
-  - :objective_uuid: f662ee87-a50b-427b-89ab-02459bc64489
-    :objective_name: Use JSON.parse() to turn JSON into a javascript object
-- :subject_uuid: 768230b2-e624-4815-b0e7-29c398c6e59e
-  :subject_name: Javascript and the DOM
-  :uuid: 32927638-f997-4682-b587-f7804cb6efba
+  - :objective_uuid: 080f1cf4-a381-4b16-a4ea-9516659153f4
+    :objective_name: Uses Postman to send and receive HTTP Requests and inspect them
+      with Postman
+  - :objective_uuid: 6d6a5fe6-2cce-46bf-ac0a-36d879935a31
+    :objective_name: Fetch and send JSON using jQuery
+  - :objective_uuid: 1c1489fc-0790-4bec-938d-20feb9d1be17
+    :objective_name: Fetch and send JSON using raw javascript
+  - :objective_uuid: 32f99de2-8885-4550-83bb-66fd297a710b
+    :objective_name: Define CORS and explain why CORS restrictions exist
+  - :objective_uuid: b7fd1fcd-7e1c-4fb2-9051-f11179bb99f7
+    :objective_name: Identify what the server needs to support in order to make a
+      cross-origin request
+  - :objective_uuid: 7dc8e60a-bdb8-47b7-b1e5-64b2d9111743
+    :objective_name: Explain how JSONP can be used for services that do not support
+      CORS
+- :subject_uuid: bcfe422a-cd35-4fd1-8ff8-6b078c476069
+  :subject_name: Javascript and the Browser
+  :uuid: de6480e7-caa6-4eec-8e8a-5fe013820fcf
   :name: AJAX Extended
-  :description: Javascript_and_the_DOM/AJAX_Extended.desc.md
-  :instructor_notes: Javascript_and_the_DOM/AJAX_Extended.notes.md
+  :description: Javascript_and_the_Browser/AJAX_Extended.desc.md
+  :instructor_notes: Javascript_and_the_Browser/AJAX_Extended.notes.md
   :mainline: true
-  :suggested_days: 1.0
+  :suggested_days: 0.5
   :section: Q1
-  :github_repo: 
-  :experience_objectives: []
-- :subject_uuid: 768230b2-e624-4815-b0e7-29c398c6e59e
-  :subject_name: Javascript and the DOM
-  :uuid: 3db4eab3-d56d-4f04-ba0f-82c41e07ab6c
+  :experience_objectives:
+  - :objective_uuid: 6d6a5fe6-2cce-46bf-ac0a-36d879935a31
+    :objective_name: Fetch and send JSON using jQuery
+  - :objective_uuid: 1c1489fc-0790-4bec-938d-20feb9d1be17
+    :objective_name: Fetch and send JSON using raw javascript
+- :subject_uuid: bcfe422a-cd35-4fd1-8ff8-6b078c476069
+  :subject_name: Javascript and the Browser
+  :uuid: 5b925e42-23f5-488d-b4e4-f89e1da8521c
   :name: Intro to the DOM
-  :description: Javascript_and_the_DOM/Intro_to_the_DOM.desc.md
-  :instructor_notes: Javascript_and_the_DOM/Intro_to_the_DOM.notes.md
+  :description: Javascript_and_the_Browser/Intro_to_the_DOM.desc.md
+  :instructor_notes: Javascript_and_the_Browser/Intro_to_the_DOM.notes.md
   :mainline: true
-  :suggested_days: 1.0
+  :suggested_days: 0.5
   :section: Q1
-  :github_repo: 
   :experience_objectives:
-  - :objective_uuid: 69bae5bc-2c9d-4376-832e-44562706b13b
-    :objective_name: Define what DOM stands for
-  - :objective_uuid: 61b86046-fcf7-43fd-8cc8-6772283c0e6c
-    :objective_name: Describe that DOM is a tree made up of JS objects
-  - :objective_uuid: 6020cceb-6df9-427d-aee4-85e75bc03706
-    :objective_name: Describe the browser’s role in creating the DOM
-  - :objective_uuid: 54f414f6-5362-4fe8-872a-c5fd91456050
-    :objective_name: Describe javascript’s role in manipulating the DOM
-  - :objective_uuid: a6e3b878-6660-4ce4-a6bf-37611c9b9f08
-    :objective_name: Explain that DOM properties can be altered after initial page
-      load
-  - :objective_uuid: f15c4a0c-02d8-4933-b41d-daf0b7202610
-    :objective_name: Explain the DOM
-  - :objective_uuid: 58b79594-6643-4ae1-8e33-a9ab048d5ba8
-    :objective_name: Explain the difference between a text node and an element
-  - :objective_uuid: 20c63deb-81fb-4c3e-92a7-17d29c6a768f
-    :objective_name: Find an element by id, tagname, classname, and more advanced
-      CSS selectors
-  - :objective_uuid: ce8ec886-983f-40dd-9743-ed9fdd118acd
-    :objective_name: Set an element’s innerHTML and text
-  - :objective_uuid: 415e9834-7d12-49a5-945c-d8dd2553fc52
-    :objective_name: Construct and add simple elements to the DOM
-  - :objective_uuid: 22abb093-946d-4d03-83e8-e5310518756c
-    :objective_name: Remove elements from the dom
-  - :objective_uuid: 3658743a-72da-4f18-a38b-ff23ec31d42b
-    :objective_name: Detach and reattach DOM elements
-  - :objective_uuid: ce3af16e-8ea0-4df1-8aa6-8bf2678cb833
-    :objective_name: Access properties of DOM elements such as text, html, value
-  - :objective_uuid: f7cea960-875b-4181-af49-ebee57683e4a
-    :objective_name: Create and access data-attributes on elements
-  - :objective_uuid: 4b438e75-3bba-4b5f-8ddf-0b2669f01359
-    :objective_name: Add, update, and remove attributes on elements
-  - :objective_uuid: e26a1f06-fe36-40e1-a6ce-a52a1fb8050e
-    :objective_name: Extract values from HTML forms including text inputs and select
-      boxes
-  - :objective_uuid: 06194f8e-86a3-4cc4-8b59-8d7d9dafa360
-    :objective_name: Traverse the DOM downwards recursively using depth-first-search
-      and childNodes
-  - :objective_uuid: 0c03b592-5bb2-44f7-934c-adb303f75795
-    :objective_name: Traverse the DOM upwards with iteration and parentNode
-  - :objective_uuid: 7d8f7b94-94f9-409e-a09b-c9e1b5b56ed3
-    :objective_name: Write a limited version of jQuery(gQuery) covering element CRUD,
-      prepend, etc
-  - :objective_uuid: 7f5113f0-68a3-4a4a-a4f2-0263ddb9be80
-    :objective_name: Simple animations w/o jQuery
-- :subject_uuid: 768230b2-e624-4815-b0e7-29c398c6e59e
-  :subject_name: Javascript and the DOM
-  :uuid: 2b50624d-452a-4b6d-aa7f-e40da1b5c02f
+  - :objective_uuid: 45d5d927-54d2-4889-b17f-94f47d64faa2
+    :objective_name: Create and Return a complex Element from a Function
+  - :objective_uuid: 9bb3927a-a810-4604-b271-c089342a62d5
+    :objective_name: Can target DOM elements from a CSS Selector with the `document`
+      object
+  - :objective_uuid: c4505f92-5e5e-4792-aa25-0f5c3459437c
+    :objective_name: Can create new DOM Elements
+  - :objective_uuid: 77824877-520f-4d22-9b34-cf5ec0e488a9
+    :objective_name: Can manipulate DOM Elements
+  - :objective_uuid: 975df8fb-359f-49a1-a64f-a56112f47ab4
+    :objective_name: Perform DOM Manipulation tasks with jQuery
+  - :objective_uuid: 7576e676-615b-435d-b40a-2c8489da3dcf
+    :objective_name: Using targeted DOM nodes, add event listeners
+  - :objective_uuid: 1bb8fe0f-1f83-48a1-8e04-72acc3c4c7b1
+    :objective_name: Use jQuery to bind event listeners to DOM Elements
+  - :objective_uuid: 2d39d6d0-f54d-4453-9732-109e0d61d1fe
+    :objective_name: Add anonymous functions to event listeners
+  - :objective_uuid: 68475c04-68f9-4a23-8299-ffe05e6ef2d7
+    :objective_name: Differentiate between bubbling and capturing
+  - :objective_uuid: c408a8b5-ccdb-4112-b01b-abaeed663ca4
+    :objective_name: Add named functions to event listeners
+- :subject_uuid: bcfe422a-cd35-4fd1-8ff8-6b078c476069
+  :subject_name: Javascript and the Browser
+  :uuid: ee18f2e0-04f0-4680-bb69-c66d8dc8366e
   :name: JavaScript Events
-  :description: Javascript_and_the_DOM/JavaScript_Events.desc.md
-  :instructor_notes: Javascript_and_the_DOM/JavaScript_Events.notes.md
+  :description: Javascript_and_the_Browser/JavaScript_Events.desc.md
+  :instructor_notes: Javascript_and_the_Browser/JavaScript_Events.notes.md
   :mainline: true
-  :suggested_days: 1.0
+  :suggested_days: 0.5
   :section: Q1
-  :github_repo: 
   :experience_objectives:
-  - :objective_uuid: 064b0031-7cb4-4b0a-8923-6d09bbf706ec
-    :objective_name: Describe that the DOMContentLoaded event fires when the DOM is
-      complete enough to start taking event listeners
-  - :objective_uuid: cd502bf0-f4dd-4e7e-8e05-4eb74b6f1127
-    :objective_name: Add syntactically valid event listeners using named and anonymous
-      functions
-  - :objective_uuid: 10b01a19-9753-4d7e-8400-70bc87907dcf
-    :objective_name: Use the event object to access information about the event
-  - :objective_uuid: bb43203b-4118-441a-ad3b-a174924b7857
-    :objective_name: Describe event bubbling and event capturing
-  - :objective_uuid: 88b43ef0-3c07-42c0-a3c2-1c50f6741c03
-    :objective_name: Describe the value of `this` inside an event handler function
-  - :objective_uuid: 73c1cab0-a6a6-4e28-a9ab-343ad0b7a1fa
-    :objective_name: Prevent default actions and bubbling from occurring in event
-      listeners
-  - :objective_uuid: 9c22d022-1f94-4993-afa7-1e84fdb9dcb8
-    :objective_name: Describe event delegation - in what cases you would attach an
-      event to a parent element instead of directly to an element
-  - :objective_uuid: ff356d43-b64c-4ee5-8eeb-744de32d4c91
-    :objective_name: Use the passed in event.target to determine which dom node originated
-      an event
-  - :objective_uuid: 480c6b6e-9cef-483f-8c04-caf5784b552c
-    :objective_name: Write valid click, keypress, and form submission event listeners
-- :subject_uuid: 34798e76-3f49-4d0f-9a7d-b38762c691b9
+  - :objective_uuid: 7576e676-615b-435d-b40a-2c8489da3dcf
+    :objective_name: Using targeted DOM nodes, add event listeners
+  - :objective_uuid: 1bb8fe0f-1f83-48a1-8e04-72acc3c4c7b1
+    :objective_name: Use jQuery to bind event listeners to DOM Elements
+  - :objective_uuid: 2d39d6d0-f54d-4453-9732-109e0d61d1fe
+    :objective_name: Add anonymous functions to event listeners
+  - :objective_uuid: 68475c04-68f9-4a23-8299-ffe05e6ef2d7
+    :objective_name: Differentiate between bubbling and capturing
+  - :objective_uuid: c408a8b5-ccdb-4112-b01b-abaeed663ca4
+    :objective_name: Add named functions to event listeners
+  - :objective_uuid: 0f176ea0-3f89-4586-baaa-95cc1f0443d5
+    :objective_name: use timers to execute code at a specified interval or after a
+      delay
+- :subject_uuid: a7d5be0f-3937-465a-b5e9-b2555642e9d9
   :subject_name: HTML
-  :uuid: 1069c4cc-ade1-40db-bf95-3d52cd7554a4
+  :uuid: 3721ce48-217c-41b5-a775-e3303b023165
   :name: HTML Forms
   :description: HTML/HTML_Forms.desc.md
   :instructor_notes: HTML/HTML_Forms.notes.md
   :mainline: true
-  :suggested_days: 1.0
+  :suggested_days: 0.5
   :section: Q1
-  :github_repo: 
-  :experience_objectives: []
-- 
-- :subject_uuid: e8906da2-a006-4313-ac1e-459b13d3e447
+  :experience_objectives:
+  - :objective_uuid: 6557ef9d-7d25-402b-a8db-bac4ae550b54
+    :objective_name: Use structural tags to create a semantic, usable form (label,
+      fieldset)
+  - :objective_uuid: 8357b7e8-1cdf-43ab-a5e9-3431ff620062
+    :objective_name: Build multiple forms that use all HTML5 controls
+  - :objective_uuid: 5c770de3-4474-4f5e-a0c3-46065d8a5781
+    :objective_name: Labels are associated with form controls
+- :subject_uuid: bcfe422a-cd35-4fd1-8ff8-6b078c476069
+  :subject_name: Javascript and the Browser
+  :uuid: 183125ed-6f01-466d-b830-cb666fd7e526
+  :name: Intro to jQuery
+  :description: Javascript_and_the_Browser/Intro_to_jQuery.desc.md
+  :instructor_notes: Javascript_and_the_Browser/Intro_to_jQuery.notes.md
+  :mainline: true
+  :suggested_days: 0.5
+  :section: Q1
+  :experience_objectives:
+  - :objective_uuid: 975df8fb-359f-49a1-a64f-a56112f47ab4
+    :objective_name: Perform DOM Manipulation tasks with jQuery
+  - :objective_uuid: 1bb8fe0f-1f83-48a1-8e04-72acc3c4c7b1
+    :objective_name: Use jQuery to bind event listeners to DOM Elements
+  - :objective_uuid: b3bb3800-f575-4e3c-ab47-023de7333281
+    :objective_name: Target input and textarea elements and access their values
+  - :objective_uuid: 00c54de5-fef1-4ac0-a821-85b3efb07e8f
+    :objective_name: Target `select` elements and access their values
+  - :objective_uuid: 5cc91fc2-24d4-4aca-9629-38770d5ce4f1
+    :objective_name: Target radio button and checkboxes and access their values
+  - :objective_uuid: 391a5882-4286-434c-8304-0fbf5d42f169
+    :objective_name: Use jQuery to gather form values
+  - :objective_uuid: e5abec08-ddc1-49b6-bb6d-5ebbafcd1094
+    :objective_name: Discuss the relationship between HTML, JavaScript, the DOM API,
+      and jQuery
+- :subject_uuid: f1a3c137-21bd-4902-a745-44d5ba8f992a
   :subject_name: Design
-  :uuid: f42eabb7-434a-4f7e-81cb-83986a0847ff
+  :uuid: 7805867b-fe98-435a-8cd7-4038d2c43377
   :name: Wireframing
   :description: Design/Wireframing.desc.md
   :instructor_notes: Design/Wireframing.notes.md
   :mainline: true
-  :suggested_days: 1.0
+  :suggested_days: 0.5
   :section: Q1
-  :github_repo: 
-  :experience_objectives: []
-- :subject_uuid: 36adeb0c-c5bc-45de-ae4d-6cc6a81197cd
+  :experience_objectives:
+  - :objective_uuid: 245b66ad-20e7-4881-8d70-4153bae2cb7f
+    :objective_name: The style guide should include
+  - :objective_uuid: 4a27931b-63e6-4471-94f4-d4bfecce21f6
+    :objective_name: Work from an Exemplar Style guide
+  - :objective_uuid: 5dbe2ff3-7e5b-4997-ad52-0552d141375e
+    :objective_name: Design has responsive components (multiple views, breakpoints,
+      sensible feature parity)
+  - :objective_uuid: 8b8925a5-494c-4fd8-84a1-68ee5d42856e
+    :objective_name: Enumerates content elements (create a list)
+  - :objective_uuid: 6302f23a-2b95-4992-ba5a-232d0a3d43d6
+    :objective_name: Prioritizes content
+  - :objective_uuid: 6bcdb52b-8c8a-47f8-a5e3-821e3b79032f
+    :objective_name: Designs an application based on the priority of the content
+- :subject_uuid: 0c1be570-48b4-48a8-bc98-7da27a7be512
   :subject_name: CSS
-  :uuid: b44b3322-d091-40f8-84ac-555025f1bdcd
+  :uuid: 2054bee3-b831-4b33-aaad-a08cf1394b27
   :name: Intro to Bootstrap
   :description: CSS/Intro_to_Bootstrap.desc.md
   :instructor_notes: CSS/Intro_to_Bootstrap.notes.md
   :mainline: true
-  :suggested_days: 1.0
+  :suggested_days: 0.5
   :section: Q1
-  :github_repo: 
-  :experience_objectives: []
-- :subject_uuid: 36adeb0c-c5bc-45de-ae4d-6cc6a81197cd
+  :experience_objectives:
+  - :objective_uuid: 6a7a5594-e331-4ec7-a1ae-4cf9fd4c100e
+    :objective_name: Can use framework + semantic HTML to produce usable forms
+  - :objective_uuid: 9d5a6c2a-ad3e-4e1f-8479-ddf2733ef647
+    :objective_name: Can produce a layout from a mockup
+- :subject_uuid: 0c1be570-48b4-48a8-bc98-7da27a7be512
   :subject_name: CSS
-  :uuid: c4240bf8-91d6-4fb4-b418-1d2a06a897a4
+  :uuid: c9c9a217-f976-478e-9613-87f3e18b35aa
   :name: Intro to SASS
   :description: CSS/Intro_to_SASS.desc.md
   :instructor_notes: CSS/Intro_to_SASS.notes.md
   :mainline: true
-  :suggested_days: 1.0
+  :suggested_days: 0.5
   :section: Q1
-  :github_repo: 
-  :experience_objectives: []
+  :experience_objectives:
+  - :objective_uuid: 3e519bc6-66d9-4616-a62d-9887d215ef0d
+    :objective_name: Target HTML elements with CSS selectors
+  - :objective_uuid: 0e29c27b-1899-46ba-a7f2-6966e3d24d11
+    :objective_name: Applies text styles
+  - :objective_uuid: af945ddf-5c65-4eaf-924d-9cd3cd8badb7
+    :objective_name: Applies background styles
+  - :objective_uuid: a1c05dfc-808f-4797-bcdd-f88579bb0485
+    :objective_name: Applies image styles
+  - :objective_uuid: 3ed39728-992e-47c8-aa29-fefccb39053f
+    :objective_name: Change default list styles
+  - :objective_uuid: 20bd8e92-d68d-4087-8147-9ef18b073987
+    :objective_name: Can apply rules to embedded media
+  - :objective_uuid: 032790f1-0648-4738-b408-7ada0920fae6
+    :objective_name: Creates CSS classes for groups of elements that behave similarly
+  - :objective_uuid: 75d29df7-4792-4cd8-ad22-f6c90b8fba93
+    :objective_name: Creates IDs for elements that are unique
+  - :objective_uuid: 4cf38d21-b68b-4fb3-b8a3-5ffcea744ed1
+    :objective_name: Uses semantic selector specificity
+  - :objective_uuid: 5140f9b2-2de8-49cb-b2ae-ab67b8da3db3
+    :objective_name: Selectors and rules are demarcated by usage, using comments and
+      by grouping similar functionality
 - 
-- :subject_uuid: 08fffa0f-b2ae-4521-b3d0-e682682a0bdc
+- :subject_uuid: dfec3119-3ba1-4a14-ba2c-9f66715f4b98
   :subject_name: Agile Project Management
-  :uuid: 3394508a-5467-4498-9cd8-5b93b2f41c19
+  :uuid: 80c1c9fc-54d9-4988-9e48-5f21417f6533
   :name: Intro to Agile
   :description: Agile_Project_Management/Intro_to_Agile.desc.md
   :instructor_notes: Agile_Project_Management/Intro_to_Agile.notes.md
   :mainline: true
-  :suggested_days: 1.0
+  :suggested_days: 0.5
   :section: Q1
-  :github_repo: 
-  :experience_objectives: []
-- :subject_uuid: f902dd0d-2c93-4706-83d2-567752a31988
+  :experience_objectives:
+  - :objective_uuid: cb85f982-0091-47bc-b147-f491e2f8c855
+    :objective_name: Discuss the significance of each of the agile values
+  - :objective_uuid: 8a1dd7d3-429c-4b6c-8986-5e16135ae8f3
+    :objective_name: Student can discuss the meaning behind the 12 agile principles
+  - :objective_uuid: 9a09c9d5-b65f-4152-8af2-95b19e9f0035
+    :objective_name: 'Student can describe the steps in the scrum process, including
+      the following key words:'
+- :subject_uuid: 3f805b07-096d-4024-bce2-20b19f92199a
   :subject_name: Version Control (Git and Github)
-  :uuid: 293bd100-07d7-4d75-ad54-93770a9392b0
+  :uuid: 42b55cdc-d56b-4ba7-b3cb-55dc02945407
   :name: Feature Branch Workflow
   :description: Version_Control_(Git_and_Github)/Feature_Branch_Workflow.desc.md
   :instructor_notes: Version_Control_(Git_and_Github)/Feature_Branch_Workflow.notes.md
   :mainline: true
-  :suggested_days: 1.0
+  :suggested_days: 0.5
   :section: Q1
-  :github_repo: 
   :experience_objectives:
-  - :objective_uuid: 4e8db06e-b3c5-4c87-987c-622c48e13236
+  - :objective_uuid: 656cc273-e198-4e10-b939-ecd678985b1e
+    :objective_name: Perform basic git commands to track changes to a project
+  - :objective_uuid: 37ad0a03-44e8-47a0-9a32-ca6ac3650e09
+    :objective_name: 'Write succinct, descriptive commit messages '
+  - :objective_uuid: 5b32e58d-b4e5-4bb5-8f48-81fa1d0dfc54
+    :objective_name: Diagram and discuss a feature-branch workflow
+  - :objective_uuid: 7cd2b108-ac54-4684-bade-11acf54f0267
+    :objective_name: Build new features in branches and then merge them into master
+      when ready
+  - :objective_uuid: 38fc6d65-6688-4a27-b61e-945adcb095cb
+    :objective_name: Resolve merge conflicts
+  - :objective_uuid: b38d4b91-2a9d-4bb1-b8b3-d0d3a99cd3b7
+    :objective_name: Push and pull changes to/from github
+  - :objective_uuid: 655d1151-e962-4902-9c74-47eba767f3f2
     :objective_name: Rebase and squash commits when appropriate
-- 
-- 
-- :subject_uuid: 768230b2-e624-4815-b0e7-29c398c6e59e
-  :subject_name: Javascript and the DOM
-  :uuid: 1982d068-3188-4ee1-8d2e-eed5af374eca
-  :name: HTML / JS Form Validaton
-  :description: Javascript_and_the_DOM/HTML__JS_Form_Validaton.desc.md
-  :instructor_notes: Javascript_and_the_DOM/HTML__JS_Form_Validaton.notes.md
+  - :objective_uuid: 6cf258fe-0f60-43fe-b13b-0aea970efda3
+    :objective_name: Submit pull requests from a forked repository
+  - :objective_uuid: 51272848-0af8-4cd1-a9e7-3e9ad1efa665
+    :objective_name: Incorporate feedback from repo owners and add to pull request
+  - :objective_uuid: 66388224-725f-44d0-a01c-630854b6196b
+    :objective_name: Review and accept pull requests
+- :subject_uuid: 4298574a-4ac8-4a6b-8195-91c349a04209
+  :subject_name: Dev Environment
+  :uuid: 4aa869fd-9fcb-473c-8937-7658f82f5c16
+  :name: Asset Management
+  :description: Dev_Environment/Asset_Management.desc.md
+  :instructor_notes: Dev_Environment/Asset_Management.notes.md
   :mainline: true
-  :suggested_days: 1.0
+  :suggested_days: 0.5
   :section: Q1
-  :github_repo: 
+  :experience_objectives: []
+- :subject_uuid: bcfe422a-cd35-4fd1-8ff8-6b078c476069
+  :subject_name: Javascript and the Browser
+  :uuid: 2fa0bf0c-b6e3-4cd2-b2ad-51d6bba71f9d
+  :name: HTML / JS Form Validation
+  :description: Javascript_and_the_Browser/HTML__JS_Form_Validation.desc.md
+  :instructor_notes: Javascript_and_the_Browser/HTML__JS_Form_Validation.notes.md
+  :mainline: true
+  :suggested_days: 0.5
+  :section: Q1
   :experience_objectives:
-  - :objective_uuid: f98f127a-7d98-4d9d-a9cb-7c7296d8a541
-    :objective_name: Describe default actions on links and forms
-  - :objective_uuid: 73c1cab0-a6a6-4e28-a9ab-343ad0b7a1fa
-    :objective_name: Prevent default actions and bubbling from occurring in event
-      listeners
+  - :objective_uuid: 6557ef9d-7d25-402b-a8db-bac4ae550b54
+    :objective_name: Use structural tags to create a semantic, usable form (label,
+      fieldset)
 - 
-- :subject_uuid: 36adeb0c-c5bc-45de-ae4d-6cc6a81197cd
+- :subject_uuid: bcfe422a-cd35-4fd1-8ff8-6b078c476069
+  :subject_name: Javascript and the Browser
+  :uuid: 8378f0f4-8623-4499-bdc9-0e25b651254a
+  :name: Intro to LocalStorage
+  :description: Javascript_and_the_Browser/Intro_to_LocalStorage.desc.md
+  :instructor_notes: Javascript_and_the_Browser/Intro_to_LocalStorage.notes.md
+  :mainline: true
+  :suggested_days: 0.5
+  :section: Q1
+  :experience_objectives:
+  - :objective_uuid: 7620389e-7417-4b93-9d47-a6d1c2f2454f
+    :objective_name: Store and retrieve state with localStorage
+- :subject_uuid: 0c1be570-48b4-48a8-bc98-7da27a7be512
   :subject_name: CSS
-  :uuid: 211718b1-8e43-47d0-9384-fbd238baf7a9
+  :uuid: 61d22452-9d7f-41ce-b91e-f70d7436c1b0
   :name: CSS Media Queries
   :description: CSS/CSS_Media_Queries.desc.md
   :instructor_notes: CSS/CSS_Media_Queries.notes.md
   :mainline: true
-  :suggested_days: 1.0
+  :suggested_days: 0.5
   :section: Q1
-  :github_repo: 
-  :experience_objectives: []
-- :subject_uuid: 36adeb0c-c5bc-45de-ae4d-6cc6a81197cd
+  :experience_objectives:
+  - :objective_uuid: ce569811-9a67-4e58-8dd4-6f5ddef9f0c9
+    :objective_name: Show and hide content intended for specific screens/screen sizes
+      with media queries.
+- :subject_uuid: 0c1be570-48b4-48a8-bc98-7da27a7be512
   :subject_name: CSS
-  :uuid: 0418e891-a883-4927-8de7-8ab3fb8cba15
+  :uuid: 06289a17-79da-48ee-92c6-2052ed10880c
   :name: Flexbox
   :description: CSS/Flexbox.desc.md
   :instructor_notes: CSS/Flexbox.notes.md
   :mainline: true
-  :suggested_days: 1.0
+  :suggested_days: 0.5
   :section: Q1
-  :github_repo: 
-  :experience_objectives: []
-- :subject_uuid: 34bf8b61-2dc7-433a-8e4e-fa06582be259
+  :experience_objectives:
+  - :objective_uuid: c4484607-56e1-4d0f-a295-94e4128dca4f
+    :objective_name: Align and distribute elements in a container of an unknown/dynamic
+      size with Flexbox.
+- :subject_uuid: 7313b475-d281-4c72-a3b3-1167eb3b13e3
   :subject_name: The Command Line
-  :uuid: c71fa65b-9eb1-41f4-bb98-5e261fd8a7de
+  :uuid: 67ce2e41-8958-42e5-8d56-41c05bf4b997
   :name: Intermediate Command Line
   :description: The_Command_Line/Intermediate_Command_Line.desc.md
   :instructor_notes: The_Command_Line/Intermediate_Command_Line.notes.md
   :mainline: true
-  :suggested_days: 1.0
+  :suggested_days: 0.5
   :section: Q1
-  :github_repo: 
-  :experience_objectives: []
-- :subject_uuid: 08fffa0f-b2ae-4521-b3d0-e682682a0bdc
+  :experience_objectives:
+  - :objective_uuid: c790788d-c525-44ae-ac05-0806bdf12e1a
+    :objective_name: Manage files on the command line
+  - :objective_uuid: 9eb6aa09-0210-4e2a-b24b-f78e9515b5d8
+    :objective_name: Navigate the file system using the command line
+- :subject_uuid: 2886a5f1-92f6-44ba-8adb-185b2a161870
+  :subject_name: Deployment
+  :uuid: 872383d6-3b6f-47eb-a40d-1173e4996024
+  :name: Deploying Static Sites
+  :description: Deployment/Deploying_Static_Sites.desc.md
+  :instructor_notes: Deployment/Deploying_Static_Sites.notes.md
+  :mainline: true
+  :suggested_days: 0.5
+  :section: Q1
+  :experience_objectives:
+  - :objective_uuid: a19a4501-93b9-4ca0-afbb-8cf0defb204a
+    :objective_name: Student has a functioning static site deployed with scripts and
+      CSS files in subdirectories
+  - :objective_uuid: f5c7a5f4-29e1-4651-838e-5a1d6708c258
+    :objective_name: Can explain function and purpose of static hosting site / CDN
+- :subject_uuid: dfec3119-3ba1-4a14-ba2c-9f66715f4b98
   :subject_name: Agile Project Management
-  :uuid: d7c7c3b4-5ca3-4ee6-850a-00c1983b1455
+  :uuid: b83dc76d-e206-4722-9b1c-a30a171d87a9
   :name: Frontend Personal Project
   :description: Agile_Project_Management/Frontend_Personal_Project.desc.md
   :instructor_notes: Agile_Project_Management/Frontend_Personal_Project.notes.md
   :mainline: true
   :suggested_days: 5.0
   :section: Q1
-  :github_repo: 
   :experience_objectives:
-  - :objective_uuid: 67cc3c51-e3df-4dee-bc03-9d0949229f8d
-    :objective_name: Wrestle with new content
-- :subject_uuid: 78f9e5b5-5a89-4ce2-b993-4af17d620f27
+  - :objective_uuid: c2091153-9447-4a52-a781-0c017bc1696b
+    :objective_name: Follow agile best-practices
+  - :objective_uuid: 0a3eb669-e449-4a7f-b20d-e11c531fdc79
+    :objective_name: Wrestles with new content
+- :subject_uuid: 412ea142-dd72-4e21-8e52-2bb72ad3e09b
   :subject_name: Promises
-  :uuid: 8a2a398d-5430-4800-a245-f39398d8367a
+  :uuid: 9110f355-ca07-4be9-8065-02d22d73709d
   :name: Intro to Promises
   :description: Promises/Intro_to_Promises.desc.md
   :instructor_notes: Promises/Intro_to_Promises.notes.md
   :mainline: true
   :suggested_days: 0.5
   :section: Q1
-  :github_repo: 
-  :experience_objectives: []
-- :subject_uuid: 7f2e3c5a-f4fe-4ec1-abf6-f57e2ef88b13
-  :subject_name: Server Side JS with Node
-  :uuid: 9fd39b32-d840-4970-ac44-3ee6a54fe7cc
-  :name: 'Node: Modules'
-  :description: Server_Side_JS_with_Node/Node:_Modules.desc.md
-  :instructor_notes: Server_Side_JS_with_Node/Node:_Modules.notes.md
-  :mainline: true
-  :suggested_days: 0.5
-  :section: Q2
-  :github_repo: 
   :experience_objectives:
-  - :objective_uuid: bca34a38-99eb-49a4-ba26-d6092fbfa764
-    :objective_name: Uses NPM to install 3rd party modules
-  - :objective_uuid: 9adb6a42-7e29-4fc7-b50b-3960490c8baa
-    :objective_name: Create custom modules
-  - :objective_uuid: 800e40fe-0027-4f77-8aa3-27e21adef8ea
-    :objective_name: Require and use Node modules
-  - :objective_uuid: 24f59acc-627d-47f5-934d-6340b65a8af2
-    :objective_name: Uses NPM to manage dependencies and project metadata w/ package.json
-- :subject_uuid: 7f2e3c5a-f4fe-4ec1-abf6-f57e2ef88b13
-  :subject_name: Server Side JS with Node
-  :uuid: cab8461e-9cb0-46be-ad3c-35937b646d67
-  :name: 'Node: Basics / FS Module'
-  :description: Server_Side_JS_with_Node/Node:_Basics__FS_Module.desc.md
-  :instructor_notes: Server_Side_JS_with_Node/Node:_Basics__FS_Module.notes.md
-  :mainline: true
-  :suggested_days: 0.5
-  :section: Q2
-  :github_repo: 
-  :experience_objectives:
-  - :objective_uuid: f730faf9-087e-4a54-9973-fd240b6b684c
-    :objective_name: Compare / contrast node.js apis with web apis
-  - :objective_uuid: 00295da5-47fe-43af-9348-2f048c15248c
-    :objective_name: Read and write to the filesystem with Node's fs module
-  - :objective_uuid: 800e40fe-0027-4f77-8aa3-27e21adef8ea
-    :objective_name: Require and use Node modules
-- :subject_uuid: 7f2e3c5a-f4fe-4ec1-abf6-f57e2ef88b13
-  :subject_name: Server Side JS with Node
-  :uuid: 324b7483-42c4-4ff2-bb20-7253cdff12a9
-  :name: 'Node: Creating an HTTP Server'
-  :description: Server_Side_JS_with_Node/Node:_Creating_an_HTTP_Server.desc.md
-  :instructor_notes: Server_Side_JS_with_Node/Node:_Creating_an_HTTP_Server.notes.md
-  :mainline: true
-  :suggested_days: 1.0
-  :section: Q2
-  :github_repo: 
-  :experience_objectives:
-  - :objective_uuid: 4717d2dc-2325-43d7-bf35-106a4b59bf48
-    :objective_name: No secrets or environment-specific values are hard-coded in apps,
-      instead they are accessed via process.env
-  - :objective_uuid: 7e1fc494-4d85-4e66-98cc-af58c5de0aa7
-    :objective_name: Installed and configured dotenv, including git ignoring .env,
-      setting their local version of the value in their .env file, having a .env.example
-      file
-  - :objective_uuid: d433348f-f128-42b8-826e-2f04dd44d78e
-    :objective_name: Identify the parts of a URL
-  - :objective_uuid: 4186fbc1-e3ca-434b-92f0-9b010e5d4051
-    :objective_name: Explain the basic purpose of each part of the URL
-  - :objective_uuid: bb220521-509a-48c7-b117-a8226f4d4f20
-    :objective_name: Sequence Diagram Client-Server Model
-  - :objective_uuid: dcdce669-de38-40c9-83b0-1958b9014c7e
-    :objective_name: Explain key ideas about how the web works
-  - :objective_uuid: 011f5e01-6e29-4ee7-93e1-fc54ac06e6a3
-    :objective_name: Describe the format and purpose of HTTP Requests and Responses
-  - :objective_uuid: 83bd927a-f577-446b-8466-bfcfc03dfaca
-    :objective_name: Identify the parts of a request and describe their function
-  - :objective_uuid: 26604a59-09f3-4d62-92e6-ca70a4f0a21e
-    :objective_name: Identify the parts of a response and describe their function
-  - :objective_uuid: 03380496-1d6e-4623-876c-045c132d9b80
-    :objective_name: Discuss Status codes
-  - :objective_uuid: 69b54b0e-ae0c-44d2-83ad-c97edf6f5e17
-    :objective_name: Discusses Verbs
-  - :objective_uuid: 900da3d6-e8c4-4e81-bac9-6d29f1531400
-    :objective_name: Add appropriate headers to an HTTP Response
-  - :objective_uuid: f730faf9-087e-4a54-9973-fd240b6b684c
-    :objective_name: Compare / contrast node.js apis with web apis
-  - :objective_uuid: e98f9cb8-9808-4505-8230-71bc3e89f1d6
-    :objective_name: Listen to and handle events from `process`
-  - :objective_uuid: 62f49a2c-2ae9-4c46-84c8-6442178000db
-    :objective_name: Use Node's `http` module
-  - :objective_uuid: 00295da5-47fe-43af-9348-2f048c15248c
-    :objective_name: Read and write to the filesystem with Node's fs module
-  - :objective_uuid: f78cafb2-c02a-4be4-a15e-b002689c139e
-    :objective_name: Listen for multiple instances of a single event (like “data”
-      on HTTPRequest) and accumulate
-  - :objective_uuid: b9ccab46-f4f8-4bbe-9a2f-c0b605949e97
-    :objective_name: Use streams to process evented input
-  - :objective_uuid: 800e40fe-0027-4f77-8aa3-27e21adef8ea
-    :objective_name: Require and use Node modules
-  - :objective_uuid: a96f27e9-07ad-4447-adbc-e5ffd431094d
-    :objective_name: Throw errors upstream for breaking errors
-  - :objective_uuid: faf2a9b8-925d-41b5-a826-2b1d3a61c9a9
-    :objective_name: Identify and develop a strategy for debugging different types
-      of errors
-  - :objective_uuid: 996e8be0-34b4-4308-825a-b6517db0bd94
-    :objective_name: Handle exceptions in an application w/ node-style callbacks and
-      EventEmitters
-- :subject_uuid: 97f5bed5-418f-4ad2-b659-1aea931b36db
-  :subject_name: Deployment
-  :uuid: 8f589cc7-be84-42bf-9d7c-284166896e1c
-  :name: 'Node: Deploying to Heroku'
-  :description: Deployment/Node:_Deploying_to_Heroku.desc.md
-  :instructor_notes: Deployment/Node:_Deploying_to_Heroku.notes.md
-  :mainline: true
-  :suggested_days: 1.0
-  :section: Q2
-  :github_repo: 
-  :experience_objectives:
-  - :objective_uuid: 4717d2dc-2325-43d7-bf35-106a4b59bf48
-    :objective_name: No secrets or environment-specific values are hard-coded in apps,
-      instead they are accessed via process.env
-  - :objective_uuid: ff620584-8ad3-47b1-a361-6efa90663497
-    :objective_name: Explain that environment variables allow you to remove secrets
-      and connection strings and test environment variables from code
-  - :objective_uuid: cd5721bb-c981-4d52-9f12-7d4f801b7b36
-    :objective_name: Student has a functioning Node app up and running that has environment
-      variables and attached SQL database
-- 
-- :subject_uuid: 68c522e4-1aa5-48fa-bde9-5619ea7c7986
-  :subject_name: Server Side Frameworks with Express
-  :uuid: 131712a8-c2b1-4ac9-b837-45e1875b2a90
-  :name: 'Express: Introduction'
-  :description: Server_Side_Frameworks_with_Express/Express:_Introduction.desc.md
-  :instructor_notes: Server_Side_Frameworks_with_Express/Express:_Introduction.notes.md
-  :mainline: true
-  :suggested_days: 2.0
-  :section: Q2
-  :github_repo: 
-  :experience_objectives:
-  - :objective_uuid: 4717d2dc-2325-43d7-bf35-106a4b59bf48
-    :objective_name: No secrets or environment-specific values are hard-coded in apps,
-      instead they are accessed via process.env
-  - :objective_uuid: 7e1fc494-4d85-4e66-98cc-af58c5de0aa7
-    :objective_name: Installed and configured dotenv, including git ignoring .env,
-      setting their local version of the value in their .env file, having a .env.example
-      file
-  - :objective_uuid: 01773391-e079-46d0-92cf-7dd46da3b9d3
-    :objective_name: Install all necessary dependencies and start attached services
-  - :objective_uuid: d433348f-f128-42b8-826e-2f04dd44d78e
-    :objective_name: Identify the parts of a URL
-  - :objective_uuid: 4186fbc1-e3ca-434b-92f0-9b010e5d4051
-    :objective_name: Explain the basic purpose of each part of the URL
-  - :objective_uuid: bb220521-509a-48c7-b117-a8226f4d4f20
-    :objective_name: Sequence Diagram Client-Server Model
-  - :objective_uuid: dcdce669-de38-40c9-83b0-1958b9014c7e
-    :objective_name: Explain key ideas about how the web works
-  - :objective_uuid: bb827e61-4c8d-427c-b3ea-01012ff06182
-    :objective_name: Describe what happens in a redirect scenario and diagram it
-  - :objective_uuid: 011f5e01-6e29-4ee7-93e1-fc54ac06e6a3
-    :objective_name: Describe the format and purpose of HTTP Requests and Responses
-  - :objective_uuid: 83bd927a-f577-446b-8466-bfcfc03dfaca
-    :objective_name: Identify the parts of a request and describe their function
-  - :objective_uuid: 26604a59-09f3-4d62-92e6-ca70a4f0a21e
-    :objective_name: Identify the parts of a response and describe their function
-  - :objective_uuid: 9c847949-43c7-4b9b-beb5-074a72cbbf1f
-    :objective_name: Structure an express app using standard idioms
-  - :objective_uuid: d60ff299-ba80-42ae-9601-0dd1cca5d383
-    :objective_name: Use express static
-  - :objective_uuid: 816abce2-6da4-4c41-8878-41b4c2cc7963
-    :objective_name: Define routes and attach callback functions to those, and include
-      middleware functions
-  - :objective_uuid: aa5f410c-b167-4bab-ad1b-195d2dcdb981
-    :objective_name: Extract requests data from req, including req.params / req.body
-      / req.query
-  - :objective_uuid: c2634dbb-88d1-48c7-92fe-55e3fda39977
-    :objective_name: Describe how Express is an abstraction on top of HTTP - draw
-      parallels between express concepts and HTTP concepts
-  - :objective_uuid: 34bf6537-04bd-435c-b563-c6048b94b346
-    :objective_name: Describe what the express static middleware does
-  - :objective_uuid: 44aea781-5de4-4187-a9b6-1f9a9e3bd32b
-    :objective_name: Describe how res generates the request string
-  - :objective_uuid: ed6e0d7b-b0ab-4162-a779-a27c4cd38abc
-    :objective_name: Describes what populates req.params, req.body (body parser),
-      req.query
-  - :objective_uuid: 03380496-1d6e-4623-876c-045c132d9b80
-    :objective_name: Discuss Status codes
-  - :objective_uuid: 69b54b0e-ae0c-44d2-83ad-c97edf6f5e17
-    :objective_name: Discusses Verbs
-  - :objective_uuid: 900da3d6-e8c4-4e81-bac9-6d29f1531400
-    :objective_name: Add appropriate headers to an HTTP Response
-  - :objective_uuid: b671372b-a027-4f14-bbe7-a9fd93f9c8a7
-    :objective_name: Build a web app that separates concerns using models, views,
-      and controllers
-  - :objective_uuid: f730faf9-087e-4a54-9973-fd240b6b684c
-    :objective_name: Compare / contrast node.js apis with web apis
-  - :objective_uuid: 62f49a2c-2ae9-4c46-84c8-6442178000db
-    :objective_name: Use Node's `http` module
-  - :objective_uuid: bca34a38-99eb-49a4-ba26-d6092fbfa764
-    :objective_name: Uses NPM to install 3rd party modules
-  - :objective_uuid: 24f59acc-627d-47f5-934d-6340b65a8af2
-    :objective_name: Uses NPM to manage dependencies and project metadata w/ package.json
-  - :objective_uuid: a96f27e9-07ad-4447-adbc-e5ffd431094d
-    :objective_name: Throw errors upstream for breaking errors
-  - :objective_uuid: faf2a9b8-925d-41b5-a826-2b1d3a61c9a9
-    :objective_name: Identify and develop a strategy for debugging different types
-      of errors
-  - :objective_uuid: 996e8be0-34b4-4308-825a-b6517db0bd94
-    :objective_name: Handle exceptions in an application w/ node-style callbacks and
-      EventEmitters
-- :subject_uuid: 849b1a02-191a-463f-aa3a-a4efcadeef66
-  :subject_name: Datastores
-  :uuid: e8b8bcf6-fbc8-485c-9df9-d36ab5b6e8a8
-  :name: SQL and Relational Databases
-  :description: Datastores/SQL_and_Relational_Databases.desc.md
-  :instructor_notes: Datastores/SQL_and_Relational_Databases.notes.md
-  :mainline: true
-  :suggested_days: 3.0
-  :section: Q2
-  :github_repo: 
-  :experience_objectives:
-  - :objective_uuid: 9a4c8994-b749-4b35-a0a6-feb25ca00bd1
-    :objective_name: Uses common operators and functions for common queries
-  - :objective_uuid: e3a68dc3-1ecb-40cb-8bb6-04726b77d3c7
-    :objective_name: Writes statements to create and modify datastore structure
-  - :objective_uuid: 3bc8987f-7d83-4e2a-8353-a4e71d2df95a
-    :objective_name: Writes and runs CRUD statements using SQL
-  - :objective_uuid: 5581bcff-eeea-47e2-8354-e039275b1b3f
-    :objective_name: Uses aggregate functions to aggregate data in queries
-  - :objective_uuid: 5a584e44-4e3a-4f0d-9852-832d2774d676
-    :objective_name: Primary key / foreign key / Referential Integrity
-  - :objective_uuid: 4fdb19fe-c601-40b7-9b26-85b869aa4b09
-    :objective_name: Describe SQL relational processes (old)
-  - :objective_uuid: eb22077a-135a-456c-8a4d-75ea3f18c7a9
-    :objective_name: Uses joins for model relationships (one to one, one to many,
-      many to many)
-  - :objective_uuid: 5f4873bc-0349-41e6-a6b7-c7c1ceaf0d8e
-    :objective_name: Uses correct SQL join for given problem
-  - :objective_uuid: a2622823-6a46-4610-8ebc-86472ea1cdba
-    :objective_name: Describe the concept of a database schema
-  - :objective_uuid: 066e64d2-f755-4376-9066-89bbca217551
-    :objective_name: Explains what a data/database schema is
-  - :objective_uuid: d8bdb06c-0bad-446b-af25-981da7103ac9
-    :objective_name: Utilizes common column types
-  - :objective_uuid: 6d7c224f-da09-42fb-9ad1-0653ac3ee82c
-    :objective_name: Build a schema using SQL commands
-  - :objective_uuid: 176a468f-78cd-4e24-896b-5aab437bddbe
-    :objective_name: Models relationships using ERD
-  - :objective_uuid: d412faa9-7cd2-41bb-8c22-9ee84b434ca3
-    :objective_name: Experiments on one piece of code at a time (baby steps)
-  - :objective_uuid: 8f9c09b9-6235-4bef-981d-630641ecf488
-    :objective_name: Stays calm and positive in the face of high complexity / slow
-      progress
-  - :objective_uuid: 40de4418-8aab-4a02-b7f1-b76aa9715096
-    :objective_name: 'Takes steps to understand the problem / solution before writing:'
-  - :objective_uuid: 243a18cb-539c-485c-b888-e03cefe55d46
-    :objective_name: Reads and researches error messages
-- :subject_uuid: 68c522e4-1aa5-48fa-bde9-5619ea7c7986
-  :subject_name: Server Side Frameworks with Express
-  :uuid: 5dea62a6-f947-40b0-a42a-06842d1987d7
-  :name: 'Express: CRUD w/ SQL'
-  :description: Server_Side_Frameworks_with_Express/Express:_CRUD_w_SQL.desc.md
-  :instructor_notes: Server_Side_Frameworks_with_Express/Express:_CRUD_w_SQL.notes.md
-  :mainline: true
-  :suggested_days: 4.0
-  :section: Q2
-  :github_repo: 
-  :experience_objectives:
-  - :objective_uuid: 9bafe3e0-02b8-482a-984e-e5c00f1778ca
-    :objective_name: Use HTTP Methods semantically
-  - :objective_uuid: 605eb028-100d-4c40-b058-fbe3386c91f1
-    :objective_name: Follows naming conventions for URLs and Actions
-  - :objective_uuid: 21ce1a96-9444-483b-8d55-d6469823408c
-    :objective_name: Endpoint paths should contain nouns
-  - :objective_uuid: ee5fc099-b738-423a-a5b4-faad7a224364
-    :objective_name: Nouns are plural
-  - :objective_uuid: 8172689e-c24a-4b14-806c-1401733feea6
-    :objective_name: API responses include hypermedia
-  - :objective_uuid: 84354fbc-54de-41b0-bb53-8c557de698a2
-    :objective_name: Implements an API with multiple endpoints, each supporting multiple
-      methods
-  - :objective_uuid: 9a4c8994-b749-4b35-a0a6-feb25ca00bd1
-    :objective_name: Uses common operators and functions for common queries
-  - :objective_uuid: e3a68dc3-1ecb-40cb-8bb6-04726b77d3c7
-    :objective_name: Writes statements to create and modify datastore structure
-  - :objective_uuid: 3bc8987f-7d83-4e2a-8353-a4e71d2df95a
-    :objective_name: Writes and runs CRUD statements using SQL
-  - :objective_uuid: 5581bcff-eeea-47e2-8354-e039275b1b3f
-    :objective_name: Uses aggregate functions to aggregate data in queries
-  - :objective_uuid: 5a584e44-4e3a-4f0d-9852-832d2774d676
-    :objective_name: Primary key / foreign key / Referential Integrity
-  - :objective_uuid: eb22077a-135a-456c-8a4d-75ea3f18c7a9
-    :objective_name: Uses joins for model relationships (one to one, one to many,
-      many to many)
-  - :objective_uuid: 5f4873bc-0349-41e6-a6b7-c7c1ceaf0d8e
-    :objective_name: Uses correct SQL join for given problem
-  - :objective_uuid: a2622823-6a46-4610-8ebc-86472ea1cdba
-    :objective_name: Describe the concept of a database schema
-  - :objective_uuid: c087bf21-cbb7-4772-8995-e2b184108b9d
-    :objective_name: Creates DB users w/ permissions for specific role (such as production
-      user just having select, insert, update, delete)
-  - :objective_uuid: 6d7c224f-da09-42fb-9ad1-0653ac3ee82c
-    :objective_name: Build a schema using SQL commands
-  - :objective_uuid: fb6269b3-5952-4bab-9437-bd7cdd069c08
-    :objective_name: Protects against SQL injection
-  - :objective_uuid: 9c847949-43c7-4b9b-beb5-074a72cbbf1f
-    :objective_name: Structure an express app using standard idioms
-  - :objective_uuid: 56de8115-6781-4725-9300-ef952e60ce84
-    :objective_name: Use Correct mount points
-  - :objective_uuid: 6887dda6-8183-48aa-baa1-d2d55964a76e
-    :objective_name: Propagate errors to express’s error handling mechanism via next(err)
-  - :objective_uuid: 816abce2-6da4-4c41-8878-41b4c2cc7963
-    :objective_name: Define routes and attach callback functions to those, and include
-      middleware functions
-  - :objective_uuid: aa5f410c-b167-4bab-ad1b-195d2dcdb981
-    :objective_name: Extract requests data from req, including req.params / req.body
-      / req.query
-  - :objective_uuid: 1a65647a-3c75-4779-a52e-f30fab2df3c9
-    :objective_name: Describe server-side validations
-  - :objective_uuid: ab01ad8b-50a4-4d06-babb-da5f9465e8a0
-    :objective_name: List which standard CRUD actions should redirect (create, update,
-      delete)
-  - :objective_uuid: ed6e0d7b-b0ab-4162-a779-a27c4cd38abc
-    :objective_name: Describes what populates req.params, req.body (body parser),
-      req.query
-  - :objective_uuid: b98e3deb-401f-4582-b227-640f09e9511e
-    :objective_name: Describe and sequence diagram each CRUD action including
-  - :objective_uuid: 03380496-1d6e-4623-876c-045c132d9b80
-    :objective_name: Discuss Status codes
-  - :objective_uuid: 69b54b0e-ae0c-44d2-83ad-c97edf6f5e17
-    :objective_name: Discusses Verbs
-  - :objective_uuid: 900da3d6-e8c4-4e81-bac9-6d29f1531400
-    :objective_name: Add appropriate headers to an HTTP Response
-- :subject_uuid: 68c522e4-1aa5-48fa-bde9-5619ea7c7986
-  :subject_name: Server Side Frameworks with Express
-  :uuid: 3295ed12-d2ad-4377-8c19-5d6989730c8f
-  :name: 'Express: Validations'
-  :description: Server_Side_Frameworks_with_Express/Express:_Validations.desc.md
-  :instructor_notes: Server_Side_Frameworks_with_Express/Express:_Validations.notes.md
-  :mainline: true
-  :suggested_days: 1.0
-  :section: Q2
-  :github_repo: 
-  :experience_objectives:
-  - :objective_uuid: 9c847949-43c7-4b9b-beb5-074a72cbbf1f
-    :objective_name: Structure an express app using standard idioms
-  - :objective_uuid: 6887dda6-8183-48aa-baa1-d2d55964a76e
-    :objective_name: Propagate errors to express’s error handling mechanism via next(err)
-  - :objective_uuid: aa5f410c-b167-4bab-ad1b-195d2dcdb981
-    :objective_name: Extract requests data from req, including req.params / req.body
-      / req.query
-  - :objective_uuid: 1a65647a-3c75-4779-a52e-f30fab2df3c9
-    :objective_name: Describe server-side validations
-  - :objective_uuid: 44aea781-5de4-4187-a9b6-1f9a9e3bd32b
-    :objective_name: Describe how res generates the request string
-  - :objective_uuid: ab01ad8b-50a4-4d06-babb-da5f9465e8a0
-    :objective_name: List which standard CRUD actions should redirect (create, update,
-      delete)
-  - :objective_uuid: ed6e0d7b-b0ab-4162-a779-a27c4cd38abc
-    :objective_name: Describes what populates req.params, req.body (body parser),
-      req.query
-  - :objective_uuid: 669be821-688b-491d-a2f6-b8db5c2e31b1
-    :objective_name: Displays an experimental approach to debugging / learning code
-  - :objective_uuid: 3149a315-a164-46dd-bdb4-fa364ae6367e
-    :objective_name: Identifies the line number of error messages from a stack trace
-  - :objective_uuid: 7b61db61-152b-4764-9dc7-46f9873157c8
-    :objective_name: Resolves common JS errors by reading a stack trace and identifying
-      the cause of the error
-  - :objective_uuid: 243a18cb-539c-485c-b888-e03cefe55d46
-    :objective_name: Reads and researches error messages
-  - :objective_uuid: 6af06fad-0998-48b2-9342-fb5a695008a0
-    :objective_name: Build multiple forms that use all HTML5 controls
-- :subject_uuid: 97f5bed5-418f-4ad2-b659-1aea931b36db
-  :subject_name: Deployment
-  :uuid: 7d566544-3f4d-4497-919b-ed2076f205b9
-  :name: 'Express: Deploying a CRUD App to Heroku (w/ ENV variables) (deprecated)'
-  :description: Deployment/Express:_Deploying_a_CRUD_App_to_Heroku_(w_ENV_variables)_(deprecated).desc.md
-  :instructor_notes: Deployment/Express:_Deploying_a_CRUD_App_to_Heroku_(w_ENV_variables)_(deprecated).notes.md
-  :mainline: false
-  :suggested_days: 1.0
-  :section: Q2
-  :github_repo: 
-  :experience_objectives: []
-- :subject_uuid: 68c522e4-1aa5-48fa-bde9-5619ea7c7986
-  :subject_name: Server Side Frameworks with Express
-  :uuid: d763f27f-d832-435d-a432-dae76c941c26
-  :name: 'Express: Form-Based Authentication'
-  :description: Server_Side_Frameworks_with_Express/Express:_Form-Based_Authentication.desc.md
-  :instructor_notes: Server_Side_Frameworks_with_Express/Express:_Form-Based_Authentication.notes.md
-  :mainline: true
-  :suggested_days: 2.0
-  :section: Q2
-  :github_repo: 
-  :experience_objectives:
-  - :objective_uuid: ae5c6fbb-6efb-413f-adf3-9a078ad126d1
-    :objective_name: Describe how cookies are sent / received
-  - :objective_uuid: a8e4c7de-8c6d-47e7-b54d-a936d023a570
-    :objective_name: Describe how browsers save the cookies
-  - :objective_uuid: 80f73e79-3a17-4757-bbee-47af8a566d47
-    :objective_name: Describe session cookies
-  - :objective_uuid: 2a18a027-7327-48d7-ad50-6e20c8f57bcb
-    :objective_name: Describe secure cookies
-  - :objective_uuid: 3b670117-dcdf-4694-a197-38b45e90820c
-    :objective_name: Describe cookie domains
-  - :objective_uuid: 658a6ebb-e63a-40fc-8b5e-fc8b17e9d50c
-    :objective_name: Describe browser cookie domain contraints
-  - :objective_uuid: 2832e93c-c090-4680-91b5-42a186a3e755
-    :objective_name: Describe cookie expiration
-  - :objective_uuid: 4b3d809d-e86d-412c-b4b5-317a5500a8fa
-    :objective_name: Give an overview of the stateless nature of HTTP
-  - :objective_uuid: 4537934a-29c8-4e6d-98e7-71da7baa44a8
-    :objective_name: Describe that cookies play in integral role in most authentication
-      systems
-  - :objective_uuid: bc089e59-cfb2-4514-985d-e0b8759e2710
-    :objective_name: Explain cookies, dates, session cookies
-  - :objective_uuid: 4809e2c8-8efe-4b45-943b-adf10043019b
-    :objective_name: Set and read cookies in Express
-  - :objective_uuid: cd0a0d30-15c4-4ecd-bafc-8853e9479697
-    :objective_name: Explain why storing a password in plain text is never acceptable
-      and highly dangerous
-  - :objective_uuid: a35df0e7-a496-44dd-b6b7-c0b9f629da24
-    :objective_name: Understand what hashing and salting are
-  - :objective_uuid: e4da3ee7-5422-4b7b-84a1-eb58f3c362bd
-    :objective_name: Explain how salting protects from lookup/dictionary table attacks
-  - :objective_uuid: 8b654d15-1883-40cc-b76e-fa1a98c1bc15
-    :objective_name: Store passwords securely using the bcrypt module
-  - :objective_uuid: 54dda5d3-90f3-4168-865e-42bfea130254
-    :objective_name: Explain how sessions and cookies work, where they are stored
-      and how they are secured
-  - :objective_uuid: 5b8b0b74-2722-4dc1-825b-00e1e64688d5
-    :objective_name: Write a signin / signout flow using only signed cookies
-  - :objective_uuid: bfe03b93-c06a-43b2-949d-949528544d01
-    :objective_name: Use express session to maintain state in an application
-  - :objective_uuid: 232c8485-e788-4f0e-9c8d-e249bb0fadfa
-    :objective_name: Explain what the session secret is and what the difference between
-      a signed and unsigned cookie is
-- :subject_uuid: 68c522e4-1aa5-48fa-bde9-5619ea7c7986
-  :subject_name: Server Side Frameworks with Express
-  :uuid: 014687a2-0dc3-4cf2-ba4a-157305bb541d
-  :name: 'Express: Authorization & Middleware'
-  :description: Server_Side_Frameworks_with_Express/Express:_Authorization_&_Middleware.desc.md
-  :instructor_notes: Server_Side_Frameworks_with_Express/Express:_Authorization_&_Middleware.notes.md
-  :mainline: true
-  :suggested_days: 0.0
-  :section: Q2
-  :github_repo: 
-  :experience_objectives: []
-- 
-- :subject_uuid: 78f9e5b5-5a89-4ce2-b993-4af17d620f27
-  :subject_name: Promises
-  :uuid: 36f1eb46-5bd3-434a-b240-b00fcf976e38
-  :name: Associations and Promises
-  :description: Promises/Associations_and_Promises.desc.md
-  :instructor_notes: Promises/Associations_and_Promises.notes.md
-  :mainline: true
-  :suggested_days: 7.0
-  :section: Q2
-  :github_repo: 
-  :experience_objectives: []
-- :subject_uuid: 68c522e4-1aa5-48fa-bde9-5619ea7c7986
-  :subject_name: Server Side Frameworks with Express
-  :uuid: 6b3c8bfd-152f-4ea3-ba9b-0fa3a6de5c2a
-  :name: 'Express: Error Handling'
-  :description: Server_Side_Frameworks_with_Express/Express:_Error_Handling.desc.md
-  :instructor_notes: Server_Side_Frameworks_with_Express/Express:_Error_Handling.notes.md
-  :mainline: true
-  :suggested_days: 0.0
-  :section: Q2
-  :github_repo: 
-  :experience_objectives: []
-- 
-- :subject_uuid: 68c522e4-1aa5-48fa-bde9-5619ea7c7986
-  :subject_name: Server Side Frameworks with Express
-  :uuid: 38d7d2c5-3af2-4c4d-94c0-bfdd794212d7
-  :name: Full Stack CRUD Assessment
-  :description: Server_Side_Frameworks_with_Express/Full_Stack_CRUD_Assessment.desc.md
-  :instructor_notes: Server_Side_Frameworks_with_Express/Full_Stack_CRUD_Assessment.notes.md
-  :mainline: true
-  :suggested_days: 0.0
-  :section: Q2
-  :github_repo: 
-  :experience_objectives: []
-- :subject_uuid: 0cfc5800-c6b8-48d1-ac25-bf8878732af2
-  :subject_name: Programming with Javascript
-  :uuid: 8e9e4b67-3f5b-4ffd-bbe4-c0b55b4c8e3e
-  :name: Programming Fundamentals Assessment Part 1
-  :description: Programming_with_Javascript/Programming_Fundamentals_Assessment_Part_1.desc.md
-  :instructor_notes: Programming_with_Javascript/Programming_Fundamentals_Assessment_Part_1.notes.md
-  :mainline: true
-  :suggested_days: 0.0
-  :section: Q2
-  :github_repo: 
-  :experience_objectives:
-  - :objective_uuid: dd6a895d-8ff4-4d75-89d9-a1cceba66f00
-    :objective_name: Explicitly refers to the global scope inside of functions with
-      `this`
-  - :objective_uuid: 9f041037-0e35-45db-ba2c-cb3841aa3fb9
-    :objective_name: Refers to the new instance inside of a constructor function using
-      ‘this’
-- :subject_uuid: 08fffa0f-b2ae-4521-b3d0-e682682a0bdc
-  :subject_name: Agile Project Management
-  :uuid: 9494ec56-2aa8-4761-966c-195d242e6cf7
-  :name: Group Project
-  :description: Agile_Project_Management/Group_Project.desc.md
-  :instructor_notes: Agile_Project_Management/Group_Project.notes.md
-  :mainline: true
-  :suggested_days: 4.0
-  :section: Q2
-  :github_repo: 
-  :experience_objectives: []
-- :subject_uuid: b9c01cd4-61b4-4a30-9d88-8b6d2e163c51
-  :subject_name: Data Structures / Algorithms
-  :uuid: 78fc216b-19f3-4cfd-a2fb-0f4fc230e9ab
-  :name: Cracking the Coding Interview Warmups
-  :description: Data_Structures__Algorithms/Cracking_the_Coding_Interview_Warmups.desc.md
-  :instructor_notes: Data_Structures__Algorithms/Cracking_the_Coding_Interview_Warmups.notes.md
-  :mainline: true
-  :suggested_days: 0.0
-  :section: Q3
-  :github_repo: 
-  :experience_objectives:
-  - :objective_uuid: 793cf961-4e81-4df8-8314-ef86eba985e5
-    :objective_name: Asymptotic Notation - O
-  - :objective_uuid: 67cc3c51-e3df-4dee-bc03-9d0949229f8d
-    :objective_name: Wrestle with new content
-  - :objective_uuid: 633b8cd2-cc1e-4a01-800a-750cc7a6c5eb
-    :objective_name: Self assesses
-- :subject_uuid: 9f2a44df-5293-4f98-b717-637fa30e7b3f
-  :subject_name: Client Side Frameworks (Angular)
-  :uuid: cc8f09e7-75cd-480f-8e57-cf5f69916539
-  :name: 'Angular: Two-Way Data Binding (prework)'
-  :description: Client_Side_Frameworks_(Angular)/Angular:_Two-Way_Data_Binding_(prework).desc.md
-  :instructor_notes: Client_Side_Frameworks_(Angular)/Angular:_Two-Way_Data_Binding_(prework).notes.md
-  :mainline: true
-  :suggested_days: 0.0
-  :section: Q3
-  :github_repo: 
-  :experience_objectives: []
-- :subject_uuid: 9f2a44df-5293-4f98-b717-637fa30e7b3f
-  :subject_name: Client Side Frameworks (Angular)
-  :uuid: 254b8c76-c817-49b7-a6b1-045c2c13cc3a
-  :name: 'Angular: Part 1'
-  :description: Client_Side_Frameworks_(Angular)/Angular:_Part_1.desc.md
-  :instructor_notes: Client_Side_Frameworks_(Angular)/Angular:_Part_1.notes.md
-  :mainline: true
-  :suggested_days: 0.0
-  :section: Q3
-  :github_repo: 
-  :experience_objectives: []
-- :subject_uuid: 9f2a44df-5293-4f98-b717-637fa30e7b3f
-  :subject_name: Client Side Frameworks (Angular)
-  :uuid: 876ba832-a8a1-4a4d-bb2a-f1f5160ab94e
-  :name: 'Angular: Dependency Injection Theory'
-  :description: Client_Side_Frameworks_(Angular)/Angular:_Dependency_Injection_Theory.desc.md
-  :instructor_notes: Client_Side_Frameworks_(Angular)/Angular:_Dependency_Injection_Theory.notes.md
-  :mainline: true
-  :suggested_days: 0.0
-  :section: Q3
-  :github_repo: 
-  :experience_objectives: []
-- :subject_uuid: 9f2a44df-5293-4f98-b717-637fa30e7b3f
-  :subject_name: Client Side Frameworks (Angular)
-  :uuid: af36e0a8-9ad3-4585-8b4b-9539ab585cf4
-  :name: 'Angular: Part 2'
-  :description: Client_Side_Frameworks_(Angular)/Angular:_Part_2.desc.md
-  :instructor_notes: Client_Side_Frameworks_(Angular)/Angular:_Part_2.notes.md
-  :mainline: true
-  :suggested_days: 0.0
-  :section: Q3
-  :github_repo: 
-  :experience_objectives: []
-- 
-- :subject_uuid: 9f2a44df-5293-4f98-b717-637fa30e7b3f
-  :subject_name: Client Side Frameworks (Angular)
-  :uuid: 3086b177-665f-49d1-b4d0-478abaf415b2
-  :name: 'Angular: Introduction to Nested Views and Authentication using UI-Router'
-  :description: Client_Side_Frameworks_(Angular)/Angular:_Introduction_to_Nested_Views_and_Authentication_using_UI-Router.desc.md
-  :instructor_notes: Client_Side_Frameworks_(Angular)/Angular:_Introduction_to_Nested_Views_and_Authentication_using_UI-Router.notes.md
-  :mainline: true
-  :suggested_days: 1.0
-  :section: Q3
-  :github_repo: 
-  :experience_objectives: []
-- :subject_uuid: bed922ac-3f57-45c2-b2b9-6a51b2023083
-  :subject_name: How the Web Works
-  :uuid: 0adc6265-f1c2-4ec5-91a4-2106ef9fb452
-  :name: Working with Sockets and Socket.io
-  :description: How_the_Web_Works/Working_with_Sockets_and_Socket.io.desc.md
-  :instructor_notes: How_the_Web_Works/Working_with_Sockets_and_Socket.io.notes.md
-  :mainline: true
-  :suggested_days: 1.0
-  :section: Q3
-  :github_repo: 
-  :experience_objectives: []
-- :subject_uuid: 08fffa0f-b2ae-4521-b3d0-e682682a0bdc
-  :subject_name: Agile Project Management
-  :uuid: 476d8fd5-ff3b-4d71-9cdf-c3af9a43e010
-  :name: Capstone Full Stack Project
-  :description: Agile_Project_Management/Capstone_Full_Stack_Project.desc.md
-  :instructor_notes: Agile_Project_Management/Capstone_Full_Stack_Project.notes.md
-  :mainline: true
-  :suggested_days: 14.0
-  :section: Q4
-  :github_repo: 
-  :experience_objectives: []
-- 
-- :subject_uuid: a4f17ec8-f604-4764-98b7-ee21e53e3f5e
-  :subject_name: OOP w/ Statically Typed Language
-  :uuid: cbf97b91-3fda-4879-953a-2534d8cdde55
-  :name: Classical Object-Oriented Programming in Java
-  :description: OOP_w_Statically_Typed_Language/Classical_Object-Oriented_Programming_in_Java.desc.md
-  :instructor_notes: OOP_w_Statically_Typed_Language/Classical_Object-Oriented_Programming_in_Java.notes.md
-  :mainline: true
-  :suggested_days: 3.0
-  :section: Q4
-  :github_repo: 
-  :experience_objectives:
-  - :objective_uuid: 5275d431-7d39-435a-a4c1-c1ed85e01535
-    :objective_name: Defines return types of methods in statically typed languages
-  - :objective_uuid: 484e4034-dac7-4667-9170-2d9833363072
-    :objective_name: Declaring variables using types
-  - :objective_uuid: 3cb68797-1230-4381-b938-ab9ec6983c6d
-    :objective_name: Identifies pros and cons of each
-  - :objective_uuid: 3ad5a9ab-beb9-4e94-b29f-b1d4b4541709
-    :objective_name: Describe what it means for a language to be statically typed
-      vs. dynamically typed
-  - :objective_uuid: 3ca0db7c-7902-4bd7-88e3-b9ee692b88fb
-    :objective_name: Inheritance
-  - :objective_uuid: fd4d6e95-235c-497e-a2bf-00795aefebe0
-    :objective_name: Polymorphism
-  - :objective_uuid: 9829f624-6599-4c7d-8619-6e1ee4268586
-    :objective_name: Encapsulation
-  - :objective_uuid: 97df153b-b104-4b28-98a2-fd2924917c12
-    :objective_name: Abstraction
-  - :objective_uuid: ea3fbcb4-3b69-4f67-986b-8f58ef0ceed3
-    :objective_name: Explain how these 4 pillars encourage agile development / low
-      cost of change
-- 
-- 
-- 
-- :subject_uuid: 738bb9dd-4374-4c22-a4e5-e57374ad8103
-  :subject_name: Technical Interview Prep
-  :uuid: a3047e6c-1b6b-42ef-89e7-66a75d896b1c
-  :name: Whiteboard Interview Prep
-  :description: Technical_Interview_Prep/Whiteboard_Interview_Prep.desc.md
-  :instructor_notes: Technical_Interview_Prep/Whiteboard_Interview_Prep.notes.md
-  :mainline: true
-  :suggested_days: 0.0
-  :section: Q4
-  :github_repo: 
-  :experience_objectives:
-  - :objective_uuid: 74a76195-95da-4409-8e77-7de85b9badd3
-    :objective_name: xxx - 5 steps to solving technical questions
-  - :objective_uuid: 78b1eba7-8fe9-4d05-8029-1065eb0995f9
-    :objective_name: xxx - 5 Algorithm Approaches
-  - :objective_uuid: d15c6db4-ec89-4d5a-8c7c-c89eccc1d649
-    :objective_name: xxx - Developing solutions to coding problems with paper and
-      pencil before typing
-- 
-- 
-- 
-- 
-- 
-- :subject_uuid: b9c01cd4-61b4-4a30-9d88-8b6d2e163c51
-  :subject_name: Data Structures / Algorithms
-  :uuid: 2ef8d49f-eb09-45d2-94e5-60c3ca997709
-  :name: LinkedLists, Stacks and Queues
-  :description: Data_Structures__Algorithms/LinkedLists,_Stacks_and_Queues.desc.md
-  :instructor_notes: Data_Structures__Algorithms/LinkedLists,_Stacks_and_Queues.notes.md
-  :mainline: true
-  :suggested_days: 1.0
-  :section: Q4
-  :github_repo: 
-  :experience_objectives:
-  - :objective_uuid: 7d3f88b2-0be1-48dd-817e-c4319f1a38c8
-    :objective_name: Implement and use Stacks and Queues
-  - :objective_uuid: c7ef5876-5fa4-4099-9198-6a545525121b
-    :objective_name: Implement and use Linked Lists
-- :subject_uuid: 3589276c-59e9-49bb-a78b-a4384fa5df5e
+  - :objective_uuid: 04d5181d-14d3-475b-bce5-f4e256b12f88
+    :objective_name: Make multiple async calls and return a single data object
+  - :objective_uuid: e27d0d4a-c5bc-42dd-a14f-27b30879d890
+    :objective_name: Given an array of objects that have properties that contain URLs,
+      generate an array of promises, run them with Promise.all and do something with
+      the results.
+  - :objective_uuid: 662db462-fa64-4a45-865c-54b6826279c6
+    :objective_name: Discuss the purpose of promises
+  - :objective_uuid: 3b75d021-6c36-4612-bfeb-84ba5381fd0b
+    :objective_name: Discuss the function of Promises
+- :subject_uuid: 40104e17-a0e4-4bc4-b499-5030c197cb81
   :subject_name: Automated Testing
-  :uuid: 6f71a563-b3e4-4886-aefa-6ad5ef314713
-  :name: 'Testing: Mocha / Chai / Jasmine / Supertest'
-  :description: Automated_Testing/Testing:_Mocha__Chai__Jasmine__Supertest.desc.md
-  :instructor_notes: Automated_Testing/Testing:_Mocha__Chai__Jasmine__Supertest.notes.md
+  :uuid: 903266eb-3eec-4da0-a275-76838248aef3
+  :name: 'Testing: Introduction-to-TDD-with-Jasmine/Mocha'
+  :description: Automated_Testing/Testing:_Introduction-to-TDD-with-JasmineMocha.desc.md
+  :instructor_notes: Automated_Testing/Testing:_Introduction-to-TDD-with-JasmineMocha.notes.md
   :mainline: true
-  :suggested_days: 3.0
-  :section: Q4
-  :github_repo: 
-  :experience_objectives: []
-- 
-- :subject_uuid: 738bb9dd-4374-4c22-a4e5-e57374ad8103
-  :subject_name: Technical Interview Prep
-  :uuid: 6d63318f-36de-4900-8e15-1f73b110a046
-  :name: Negotiating with potential employers
-  :description: Technical_Interview_Prep/Negotiating_with_potential_employers.desc.md
-  :instructor_notes: Technical_Interview_Prep/Negotiating_with_potential_employers.notes.md
-  :mainline: true
-  :suggested_days: 0.0
-  :section: Q4
-  :github_repo: 
-  :experience_objectives: []
-- :subject_uuid: 768230b2-e624-4815-b0e7-29c398c6e59e
-  :subject_name: Javascript and the DOM
-  :uuid: 18c88150-f2e6-49bd-9bb2-f6bc7ec3feb4
-  :name: Canvas
-  :description: Javascript_and_the_DOM/Canvas.desc.md
-  :instructor_notes: Javascript_and_the_DOM/Canvas.notes.md
-  :mainline: false
-  :suggested_days: 2.0
+  :suggested_days: 0.5
   :section: Q1
-  :github_repo: 
-  :experience_objectives: []
+  :experience_objectives:
+  - :objective_uuid: 7f1700e4-c31e-4d92-ac61-81375d9a09e4
+    :objective_name: Describe and employ the tdd red / green / refactor cycle for
+      unit tests / anatomy of a test
+  - :objective_uuid: 1b2e927d-7180-4be8-8576-659e3a673313
+    :objective_name: Use before / after / beforeEach / afterEach in tests
+  - :objective_uuid: 4e95049f-894c-494e-ba0a-e9c6a5ea9376
+    :objective_name: Run unit tests with mocha chai
+  - :objective_uuid: b97e5112-7bf8-4b00-a33b-e1f93eb518b8
+    :objective_name: Discuss pros of automated testing
+  - :objective_uuid: b1fa2df0-3bd4-4d4a-b619-96443a28e7e9
+    :objective_name: Discuss the cons of automated testing
+  - :objective_uuid: 94676226-62ab-47c7-a733-f248e45ac89b
+    :objective_name: Talk about test pyramid (unit -> vs integration, acceptance)
 - 
-- :subject_uuid: 97f5bed5-418f-4ad2-b659-1aea931b36db
+- :subject_uuid: 2886a5f1-92f6-44ba-8adb-185b2a161870
   :subject_name: Deployment
-  :uuid: 586cb64c-3961-4916-a1a7-621339111c30
-  :name: Deploying Static Sites
-  :description: Deployment/Deploying_Static_Sites.desc.md
-  :instructor_notes: Deployment/Deploying_Static_Sites.notes.md
-  :mainline: true
-  :suggested_days: 0.0
-  :section: Q1
-  :github_repo: 
-  :experience_objectives: []
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- :subject_uuid: 961546f8-3186-46cf-8201-4b469068fe43
-  :subject_name: Architecture
-  :uuid: 33450bbb-b449-4419-8176-ab76e2c8d0ac
-  :name: Distributed Memories - Angular, CORS and Express
-  :description: Architecture/Distributed_Memories_-_Angular,_CORS_and_Express.desc.md
-  :instructor_notes: Architecture/Distributed_Memories_-_Angular,_CORS_and_Express.notes.md
-  :mainline: true
-  :suggested_days: 0.0
-  :section: Q4
-  :github_repo: 
-  :experience_objectives: []
-- :subject_uuid: 97f5bed5-418f-4ad2-b659-1aea931b36db
-  :subject_name: Deployment
-  :uuid: d9cb8210-0cb3-4cc8-83b2-db7d6c70105c
+  :uuid: d02084b6-d96e-4593-988f-40f9d45857c1
   :name: Deploy a Static WebSite to AWS S3
   :description: Deployment/Deploy_a_Static_WebSite_to_AWS_S3.desc.md
   :instructor_notes: Deployment/Deploy_a_Static_WebSite_to_AWS_S3.notes.md
   :mainline: true
-  :suggested_days: 1.0
+  :suggested_days: 0.5
   :section: Q1
-  :github_repo: 
-  :experience_objectives: []
-- :subject_uuid: 97f5bed5-418f-4ad2-b659-1aea931b36db
+  :experience_objectives:
+  - :objective_uuid: f5c7a5f4-29e1-4651-838e-5a1d6708c258
+    :objective_name: Can explain function and purpose of static hosting site / CDN
+- :subject_uuid: 2886a5f1-92f6-44ba-8adb-185b2a161870
   :subject_name: Deployment
-  :uuid: e6e15ff4-ca67-47a4-a252-f008ea464314
+  :uuid: 9560785b-7d9a-4dc6-9102-09a98406bdb9
   :name: AWS S3 bucket custom domain
   :description: Deployment/AWS_S3_bucket_custom_domain.desc.md
   :instructor_notes: Deployment/AWS_S3_bucket_custom_domain.notes.md
   :mainline: true
   :suggested_days: 0.0
   :section: Q1
-  :github_repo: 
   :experience_objectives: []
-- 
-- 
-- 
-- 
-- 
-- :subject_uuid: f902dd0d-2c93-4706-83d2-567752a31988
+- :subject_uuid: 3f805b07-096d-4024-bce2-20b19f92199a
   :subject_name: Version Control (Git and Github)
-  :uuid: eeb79ee3-f05d-41a9-90c3-16dcc88565b7
+  :uuid: c20b6dd9-83f6-4a38-992a-b78e9b1f85ae
   :name: Git for teams (branching, merging)
   :description: Version_Control_(Git_and_Github)/Git_for_teams_(branching,_merging).desc.md
   :instructor_notes: Version_Control_(Git_and_Github)/Git_for_teams_(branching,_merging).notes.md
   :mainline: true
   :suggested_days: 0.0
   :section: Q2
-  :github_repo: 
-  :experience_objectives: []
-- 
-- 
-- 
-- :subject_uuid: 7f2e3c5a-f4fe-4ec1-abf6-f57e2ef88b13
+  :experience_objectives:
+  - :objective_uuid: 5b32e58d-b4e5-4bb5-8f48-81fa1d0dfc54
+    :objective_name: Diagram and discuss a feature-branch workflow
+  - :objective_uuid: 7cd2b108-ac54-4684-bade-11acf54f0267
+    :objective_name: Build new features in branches and then merge them into master
+      when ready
+  - :objective_uuid: 38fc6d65-6688-4a27-b61e-945adcb095cb
+    :objective_name: Resolve merge conflicts
+  - :objective_uuid: 655d1151-e962-4902-9c74-47eba767f3f2
+    :objective_name: Rebase and squash commits when appropriate
+- :subject_uuid: d465e693-2e94-43a2-b99e-bb7283161bc2
   :subject_name: Server Side JS with Node
-  :uuid: 688a79de-1fe2-4819-b347-3138656729c9
+  :uuid: 2a3fbb29-4447-440d-89e8-081ea3ec4ba8
+  :name: 'Node: Modules'
+  :description: Server_Side_JS_with_Node/Node:_Modules.desc.md
+  :instructor_notes: Server_Side_JS_with_Node/Node:_Modules.notes.md
+  :mainline: true
+  :suggested_days: 0.5
+  :section: Q2
+  :experience_objectives:
+  - :objective_uuid: b1ec256a-7514-4496-94d0-d8d5540f8d1d
+    :objective_name: Uses NPM to install 3rd party modules
+  - :objective_uuid: 9cdfd035-8f71-4d74-af96-b37e050dcfef
+    :objective_name: Create custom modules
+  - :objective_uuid: ba7dc4e8-7255-40a5-94eb-083db5f47908
+    :objective_name: Require and use Node modules
+  - :objective_uuid: 3b86aead-35b3-4320-971a-d17362240a61
+    :objective_name: Uses NPM to manage dependencies and project metadata w/ package.json
+- 
+- :subject_uuid: d465e693-2e94-43a2-b99e-bb7283161bc2
+  :subject_name: Server Side JS with Node
+  :uuid: 3d1f90ab-e149-4512-8c71-c8074baab385
+  :name: 'Node: Basics / FS Module'
+  :description: Server_Side_JS_with_Node/Node:_Basics__FS_Module.desc.md
+  :instructor_notes: Server_Side_JS_with_Node/Node:_Basics__FS_Module.notes.md
+  :mainline: true
+  :suggested_days: 0.5
+  :section: Q2
+  :experience_objectives:
+  - :objective_uuid: 43dd0b3e-a13b-464a-acc5-fa4949207ec4
+    :objective_name: Describe difference between execution of client-side js and server-side
+      js
+  - :objective_uuid: 672cffcb-131c-4046-9a19-5a0df82a9c48
+    :objective_name: Compare / contrast node.js apis with web apis
+  - :objective_uuid: ce4ebdf8-6aa9-408b-bdbf-801404317654
+    :objective_name: Read and write to the filesystem with Node's fs module
+  - :objective_uuid: ba7dc4e8-7255-40a5-94eb-083db5f47908
+    :objective_name: Require and use Node modules
+- :subject_uuid: d465e693-2e94-43a2-b99e-bb7283161bc2
+  :subject_name: Server Side JS with Node
+  :uuid: e45df13c-ed11-46ce-96e4-e1a0e351d310
   :name: Stream Adventure
   :description: Server_Side_JS_with_Node/Stream_Adventure.desc.md
   :instructor_notes: Server_Side_JS_with_Node/Stream_Adventure.notes.md
   :mainline: true
-  :suggested_days: 1.0
+  :suggested_days: 0.5
   :section: Q2
-  :github_repo: 
-  :experience_objectives: []
-- :subject_uuid: 3589276c-59e9-49bb-a78b-a4384fa5df5e
-  :subject_name: Automated Testing
-  :uuid: e7f7bf2c-187a-4ab7-b25d-a57d5918b0a2
-  :name: 'Testing: Introduction-to-TDD-with-Jasmine'
-  :description: Automated_Testing/Testing:_Introduction-to-TDD-with-Jasmine.desc.md
-  :instructor_notes: Automated_Testing/Testing:_Introduction-to-TDD-with-Jasmine.notes.md
-  :mainline: true
-  :suggested_days: 1.0
-  :section: Q1
-  :github_repo: 
-  :experience_objectives: []
-- :subject_uuid: 849b1a02-191a-463f-aa3a-a4efcadeef66
-  :subject_name: Datastores
-  :uuid: 9d352be7-d13f-41d5-b76e-8b37f8d2a4e1
-  :name: Database Migrations in Node
-  :description: Datastores/Database_Migrations_in_Node.desc.md
-  :instructor_notes: Datastores/Database_Migrations_in_Node.notes.md
-  :mainline: true
-  :suggested_days: 0.0
-  :section: Q2
-  :github_repo: 
-  :experience_objectives: []
-- 
-- 
-- 
-- :subject_uuid: 97f5bed5-418f-4ad2-b659-1aea931b36db
-  :subject_name: Deployment
-  :uuid: 38ee9856-4e46-4099-bb4d-a8e507033797
-  :name: Deploying and Managing AWS EC2
-  :description: Deployment/Deploying_and_Managing_AWS_EC2.desc.md
-  :instructor_notes: Deployment/Deploying_and_Managing_AWS_EC2.notes.md
-  :mainline: true
-  :suggested_days: 0.0
-  :section: Q3
-  :github_repo: 
-  :experience_objectives: []
-- :subject_uuid: 99e95554-7938-4bb4-af1b-ffbe8b5fec3d
-  :subject_name: Designing APIs
-  :uuid: c604b255-a7d9-4da2-a92d-7fefc40eb23b
-  :name: RESTful Design
-  :description: Designing_APIs/RESTful_Design.desc.md
-  :instructor_notes: Designing_APIs/RESTful_Design.notes.md
-  :mainline: true
-  :suggested_days: 1.0
-  :section: Q4
-  :github_repo: 
-  :experience_objectives: []
-- 
-- :subject_uuid: 7f2e3c5a-f4fe-4ec1-abf6-f57e2ef88b13
+  :experience_objectives:
+  - :objective_uuid: e5e355fb-111f-4eff-9c59-36dcfc3c8b84
+    :objective_name: Listen for multiple instances of a single event (like “data”
+      on HTTPRequest) and accumulate
+  - :objective_uuid: 8858d156-10fe-4e38-89de-9e58fff69fe9
+    :objective_name: Use streams to process evented input
+- :subject_uuid: d465e693-2e94-43a2-b99e-bb7283161bc2
   :subject_name: Server Side JS with Node
-  :uuid: 991375b1-3d17-4ea8-95a0-701c8bbacd3d
+  :uuid: 22f7778e-e4e6-4ebb-a012-8243b410f594
+  :name: 'Node: Creating an HTTP Server'
+  :description: Server_Side_JS_with_Node/Node:_Creating_an_HTTP_Server.desc.md
+  :instructor_notes: Server_Side_JS_with_Node/Node:_Creating_an_HTTP_Server.notes.md
+  :mainline: true
+  :suggested_days: 0.5
+  :section: Q2
+  :experience_objectives:
+  - :objective_uuid: ffe1d184-2057-488c-be4c-3c09a32d64ec
+    :objective_name: No secrets or environment-specific values are hard-coded in apps,
+      instead they are accessed via process.env
+  - :objective_uuid: b04d696c-1465-4452-b3ae-2b31ab7d9c73
+    :objective_name: Installed and configured dotenv, including git ignoring .env,
+      setting their local version of the value in their .env file, having a .env.example
+      file
+  - :objective_uuid: 58c7f9d7-fdca-4891-8f6c-35c6b2936b7f
+    :objective_name: Identify the parts of a URL
+  - :objective_uuid: f6501075-3acf-461a-8825-d71b99089015
+    :objective_name: Explain the basic purpose of each part of the URL
+  - :objective_uuid: d850071f-4e4e-4ca4-8aef-e951033e2c5e
+    :objective_name: Sequence Diagram Client-Server Model
+  - :objective_uuid: fa9b0fe6-c083-45fb-8e43-a355cc39d588
+    :objective_name: Explain key ideas about how the web works
+  - :objective_uuid: 2208ffe1-f052-465f-95cd-859fd52eba17
+    :objective_name: Describe the format and purpose of HTTP Requests and Responses
+  - :objective_uuid: df0cbc61-c9b3-4e85-8492-357784355dd9
+    :objective_name: Identify the parts of a request and describe their function
+  - :objective_uuid: 44765767-6045-4257-ba31-f3b6bc973474
+    :objective_name: Identify the parts of a response and describe their function
+  - :objective_uuid: 266591ef-8696-4046-8dd4-6f7513ebfa4f
+    :objective_name: Discuss Status codes
+  - :objective_uuid: efd97052-7a48-40af-ae38-e57cbc103bf6
+    :objective_name: Discusses Verbs
+  - :objective_uuid: 40513ddb-015e-43a8-bb79-540a0e375e39
+    :objective_name: Add appropriate headers to an HTTP Response
+  - :objective_uuid: 672cffcb-131c-4046-9a19-5a0df82a9c48
+    :objective_name: Compare / contrast node.js apis with web apis
+  - :objective_uuid: a31a4957-bd6c-4a6a-939b-cf315424d761
+    :objective_name: Listen to and handle events from `process`
+  - :objective_uuid: 93415ab5-2b40-4448-8f2f-5d5dafe89423
+    :objective_name: Use Node's `http` module
+  - :objective_uuid: ce4ebdf8-6aa9-408b-bdbf-801404317654
+    :objective_name: Read and write to the filesystem with Node's fs module
+  - :objective_uuid: e5e355fb-111f-4eff-9c59-36dcfc3c8b84
+    :objective_name: Listen for multiple instances of a single event (like “data”
+      on HTTPRequest) and accumulate
+  - :objective_uuid: 8858d156-10fe-4e38-89de-9e58fff69fe9
+    :objective_name: Use streams to process evented input
+  - :objective_uuid: ba7dc4e8-7255-40a5-94eb-083db5f47908
+    :objective_name: Require and use Node modules
+  - :objective_uuid: 1f1196c9-d5ee-4090-a7f5-efb5e6816ef3
+    :objective_name: Throw errors upstream for breaking errors
+  - :objective_uuid: a7d00b1c-2469-446a-8eb5-d41108f0d2b6
+    :objective_name: Identify and develop a strategy for debugging different types
+      of errors
+  - :objective_uuid: 10ed86ae-a08c-4b52-bc28-f36d2790cd54
+    :objective_name: Handle exceptions in an application w/ node-style callbacks and
+      EventEmitters
+- :subject_uuid: 2886a5f1-92f6-44ba-8adb-185b2a161870
+  :subject_name: Deployment
+  :uuid: 87599005-652f-4ed2-998f-0da84a65425a
+  :name: 'Node: Deploying to Heroku'
+  :description: Deployment/Node:_Deploying_to_Heroku.desc.md
+  :instructor_notes: Deployment/Node:_Deploying_to_Heroku.notes.md
+  :mainline: true
+  :suggested_days: 0.5
+  :section: Q2
+  :experience_objectives:
+  - :objective_uuid: ffe1d184-2057-488c-be4c-3c09a32d64ec
+    :objective_name: No secrets or environment-specific values are hard-coded in apps,
+      instead they are accessed via process.env
+  - :objective_uuid: 06f1c683-f559-44f1-a2ab-333d91be03d9
+    :objective_name: Explain that environment variables allow you to remove secrets
+      and connection strings and test environment variables from code
+  - :objective_uuid: 5903bff8-8bb9-427c-ae90-7cec5233d8cd
+    :objective_name: Student has a functioning Node app up and running that has environment
+      variables and attached SQL database
+- :subject_uuid: bb388526-c903-45a9-afbf-e6dff6f501d1
+  :subject_name: Server Side Frameworks with Express
+  :uuid: 806a4d1e-77b8-424a-a1f9-c2a1bfce3ce5
+  :name: 'Express: Introduction'
+  :description: Server_Side_Frameworks_with_Express/Express:_Introduction.desc.md
+  :instructor_notes: Server_Side_Frameworks_with_Express/Express:_Introduction.notes.md
+  :mainline: true
+  :suggested_days: 2.0
+  :section: Q2
+  :experience_objectives:
+  - :objective_uuid: ffe1d184-2057-488c-be4c-3c09a32d64ec
+    :objective_name: No secrets or environment-specific values are hard-coded in apps,
+      instead they are accessed via process.env
+  - :objective_uuid: b04d696c-1465-4452-b3ae-2b31ab7d9c73
+    :objective_name: Installed and configured dotenv, including git ignoring .env,
+      setting their local version of the value in their .env file, having a .env.example
+      file
+  - :objective_uuid: 85a639d6-59b7-443f-a3ca-72d03a285048
+    :objective_name: Install all necessary dependencies and start attached services
+  - :objective_uuid: 58c7f9d7-fdca-4891-8f6c-35c6b2936b7f
+    :objective_name: Identify the parts of a URL
+  - :objective_uuid: f6501075-3acf-461a-8825-d71b99089015
+    :objective_name: Explain the basic purpose of each part of the URL
+  - :objective_uuid: d850071f-4e4e-4ca4-8aef-e951033e2c5e
+    :objective_name: Sequence Diagram Client-Server Model
+  - :objective_uuid: fa9b0fe6-c083-45fb-8e43-a355cc39d588
+    :objective_name: Explain key ideas about how the web works
+  - :objective_uuid: 32b99e0d-a427-4ecf-ab7c-52d644b345c1
+    :objective_name: Describe what happens in a redirect scenario and diagram it
+  - :objective_uuid: 2208ffe1-f052-465f-95cd-859fd52eba17
+    :objective_name: Describe the format and purpose of HTTP Requests and Responses
+  - :objective_uuid: df0cbc61-c9b3-4e85-8492-357784355dd9
+    :objective_name: Identify the parts of a request and describe their function
+  - :objective_uuid: 44765767-6045-4257-ba31-f3b6bc973474
+    :objective_name: Identify the parts of a response and describe their function
+  - :objective_uuid: 93fea93c-e26b-4f89-a430-3f3eec85ded0
+    :objective_name: Structure an express app using standard idioms
+  - :objective_uuid: 95cece3b-7899-4714-826d-03a66a400a44
+    :objective_name: Use express static
+  - :objective_uuid: 4d34910c-ef8b-4a43-a578-5bb0022a6c14
+    :objective_name: Define routes and attach callback functions to those, and include
+      middleware functions
+  - :objective_uuid: 986564f6-b874-4228-97b9-0909fe210484
+    :objective_name: Extract requests' data from req, including req.params / req.body
+      / req.query
+  - :objective_uuid: aa9158e6-b6d6-43af-8add-4768aac8ca34
+    :objective_name: Describe how Express is an abstraction on top of HTTP - draw
+      parallels between express concepts and HTTP concepts
+  - :objective_uuid: 152215ae-99b9-4d79-bea5-7dc7bb3b5b85
+    :objective_name: Describe what the express static middleware does
+  - :objective_uuid: b92ffdc1-cbe0-4e74-9a32-2b09724fa551
+    :objective_name: Describe how res generates the response string
+  - :objective_uuid: 42b1deac-5b2f-41ec-b639-1153b7732a98
+    :objective_name: Describes what populates req.params, req.body (body parser),
+      req.query
+  - :objective_uuid: 266591ef-8696-4046-8dd4-6f7513ebfa4f
+    :objective_name: Discuss Status codes
+  - :objective_uuid: efd97052-7a48-40af-ae38-e57cbc103bf6
+    :objective_name: Discusses Verbs
+  - :objective_uuid: 40513ddb-015e-43a8-bb79-540a0e375e39
+    :objective_name: Add appropriate headers to an HTTP Response
+  - :objective_uuid: b7d26d28-a8f5-4fb2-82d4-9d821cff97fa
+    :objective_name: Build a web app that separates concerns using models, views,
+      and controllers
+  - :objective_uuid: 672cffcb-131c-4046-9a19-5a0df82a9c48
+    :objective_name: Compare / contrast node.js apis with web apis
+  - :objective_uuid: 93415ab5-2b40-4448-8f2f-5d5dafe89423
+    :objective_name: Use Node's `http` module
+  - :objective_uuid: b1ec256a-7514-4496-94d0-d8d5540f8d1d
+    :objective_name: Uses NPM to install 3rd party modules
+  - :objective_uuid: 3b86aead-35b3-4320-971a-d17362240a61
+    :objective_name: Uses NPM to manage dependencies and project metadata w/ package.json
+  - :objective_uuid: 1f1196c9-d5ee-4090-a7f5-efb5e6816ef3
+    :objective_name: Throw errors upstream for breaking errors
+  - :objective_uuid: a7d00b1c-2469-446a-8eb5-d41108f0d2b6
+    :objective_name: Identify and develop a strategy for debugging different types
+      of errors
+  - :objective_uuid: 10ed86ae-a08c-4b52-bc28-f36d2790cd54
+    :objective_name: Handle exceptions in an application w/ node-style callbacks and
+      EventEmitters
+- :subject_uuid: 2886a5f1-92f6-44ba-8adb-185b2a161870
+  :subject_name: Deployment
+  :uuid: 777366c9-674b-4888-a2b0-bc76bee7d252
+  :name: 'Express: Deploying a CRUD App to Heroku (w/ ENV variables) (deprecated)'
+  :description: Deployment/Express:_Deploying_a_CRUD_App_to_Heroku_(w_ENV_variables)_(deprecated).desc.md
+  :instructor_notes: Deployment/Express:_Deploying_a_CRUD_App_to_Heroku_(w_ENV_variables)_(deprecated).notes.md
+  :mainline: false
+  :suggested_days: 1.0
+  :section: Q2
+  :experience_objectives: []
+- :subject_uuid: 2886a5f1-92f6-44ba-8adb-185b2a161870
+  :subject_name: Deployment
+  :uuid: 80f9aa12-914a-4972-aea0-5c61418688e4
+  :name: Deploying Express / Postgres Apps to Heroku using dotenv
+  :description: Deployment/Deploying_Express__Postgres_Apps_to_Heroku_using_dotenv.desc.md
+  :instructor_notes: Deployment/Deploying_Express__Postgres_Apps_to_Heroku_using_dotenv.notes.md
+  :mainline: true
+  :suggested_days: 0.5
+  :section: Q2
+  :experience_objectives:
+  - :objective_uuid: b04d696c-1465-4452-b3ae-2b31ab7d9c73
+    :objective_name: Installed and configured dotenv, including git ignoring .env,
+      setting their local version of the value in their .env file, having a .env.example
+      file
+  - :objective_uuid: 5903bff8-8bb9-427c-ae90-7cec5233d8cd
+    :objective_name: Student has a functioning Node app up and running that has environment
+      variables and attached SQL database
+- :subject_uuid: d465e693-2e94-43a2-b99e-bb7283161bc2
+  :subject_name: Server Side JS with Node
+  :uuid: 9931faab-a358-4208-aa8e-d90d3fc40f35
   :name: 'Node: Server Side Requests'
   :description: Server_Side_JS_with_Node/Node:_Server_Side_Requests.desc.md
   :instructor_notes: Server_Side_JS_with_Node/Node:_Server_Side_Requests.notes.md
   :mainline: true
   :suggested_days: 1.0
   :section: Q2
-  :github_repo: 
-  :experience_objectives: []
-- :subject_uuid: b9c01cd4-61b4-4a30-9d88-8b6d2e163c51
-  :subject_name: Data Structures / Algorithms
-  :uuid: 0ad631a7-bcf1-4dc2-81f1-1f7260724d59
-  :name: Big O Notation (time complexity of algorithms)
-  :description: Data_Structures__Algorithms/Big_O_Notation_(time_complexity_of_algorithms).desc.md
-  :instructor_notes: Data_Structures__Algorithms/Big_O_Notation_(time_complexity_of_algorithms).notes.md
-  :mainline: true
-  :suggested_days: 1.0
-  :section: Q4
-  :github_repo: 
   :experience_objectives:
-  - :objective_uuid: 793cf961-4e81-4df8-8314-ef86eba985e5
-    :objective_name: Asymptotic Notation - O
-  - :objective_uuid: 1c8e49a4-e29b-477f-942c-96bbe77af1ec
-    :objective_name: Identify the access time of common data structures
-  - :objective_uuid: 161468c8-abc5-4f24-9f88-72ca1dd8c55e
-    :objective_name: Identify the Big O of common searching algorithms
-  - :objective_uuid: 115a59ea-60db-4d17-a225-4b0c93a28fbc
-    :objective_name: Identify the Big O of common sorts
-  - :objective_uuid: 702589bc-88ae-4042-9c66-31ec69625c4c
-    :objective_name: Has practice identifying the Big O of graph searches, heaps,
-      etc
-  - :objective_uuid: c5fb115c-329b-44fb-9feb-52a34333b476
-    :objective_name: Diagram the order of growth of big o complexity levels
-- :subject_uuid: 849b1a02-191a-463f-aa3a-a4efcadeef66
+  - :objective_uuid: 4dc11e12-d234-492a-a927-7ebfe0a88082
+    :objective_name: Use HTTP Methods semantically
+  - :objective_uuid: e27d0d4a-c5bc-42dd-a14f-27b30879d890
+    :objective_name: Given an array of objects that have properties that contain URLs,
+      generate an array of promises, run them with Promise.all and do something with
+      the results.
+  - :objective_uuid: d850071f-4e4e-4ca4-8aef-e951033e2c5e
+    :objective_name: Sequence Diagram Client-Server Model
+  - :objective_uuid: 2208ffe1-f052-465f-95cd-859fd52eba17
+    :objective_name: Describe the format and purpose of HTTP Requests and Responses
+  - :objective_uuid: df0cbc61-c9b3-4e85-8492-357784355dd9
+    :objective_name: Identify the parts of a request and describe their function
+  - :objective_uuid: 44765767-6045-4257-ba31-f3b6bc973474
+    :objective_name: Identify the parts of a response and describe their function
+  - :objective_uuid: 672cffcb-131c-4046-9a19-5a0df82a9c48
+    :objective_name: Compare / contrast node.js apis with web apis
+  - :objective_uuid: 93415ab5-2b40-4448-8f2f-5d5dafe89423
+    :objective_name: Use Node's `http` module
+  - :objective_uuid: ce4ebdf8-6aa9-408b-bdbf-801404317654
+    :objective_name: Read and write to the filesystem with Node's fs module
+  - :objective_uuid: e5e355fb-111f-4eff-9c59-36dcfc3c8b84
+    :objective_name: Listen for multiple instances of a single event (like “data”
+      on HTTPRequest) and accumulate
+  - :objective_uuid: 8858d156-10fe-4e38-89de-9e58fff69fe9
+    :objective_name: Use streams to process evented input
+  - :objective_uuid: b1ec256a-7514-4496-94d0-d8d5540f8d1d
+    :objective_name: Uses NPM to install 3rd party modules
+  - :objective_uuid: ba7dc4e8-7255-40a5-94eb-083db5f47908
+    :objective_name: Require and use Node modules
+  - :objective_uuid: 45cd2745-5acc-401a-9cc7-46ab1e2ffb97
+    :objective_name: 'Takes steps to understand the problem / solution before writing:'
+  - :objective_uuid: 1f1196c9-d5ee-4090-a7f5-efb5e6816ef3
+    :objective_name: Throw errors upstream for breaking errors
+  - :objective_uuid: 10ed86ae-a08c-4b52-bc28-f36d2790cd54
+    :objective_name: Handle exceptions in an application w/ node-style callbacks and
+      EventEmitters
+  - :objective_uuid: 98fa5c5c-79ad-4370-81cb-a5e9ce9e01df
+    :objective_name: Displays an experimental approach to debugging / learning code
+- :subject_uuid: 2305e956-adeb-49e4-8b0d-2600b10ddfdc
   :subject_name: Datastores
-  :uuid: c6799257-a06d-4b5f-a4ba-a7c787219f05
-  :name: Data Normalization
-  :description: Datastores/Data_Normalization.desc.md
-  :instructor_notes: Datastores/Data_Normalization.notes.md
-  :mainline: true
-  :suggested_days: 0.5
-  :section: Q2
-  :github_repo: 
-  :experience_objectives:
-  - :objective_uuid: b55caa18-5a20-4624-b338-7857b4680308
-    :objective_name: Normalizes data to Third Normal Form
-  - :objective_uuid: 176a468f-78cd-4e24-896b-5aab437bddbe
-    :objective_name: Models relationships using ERD
-- :subject_uuid: 849b1a02-191a-463f-aa3a-a4efcadeef66
-  :subject_name: Datastores
-  :uuid: c331f8cd-a1e6-4ac0-b458-3cfb274ff9b1
-  :name: Postgres Roles
-  :description: Datastores/Postgres_Roles.desc.md
-  :instructor_notes: Datastores/Postgres_Roles.notes.md
-  :mainline: true
-  :suggested_days: 0.5
-  :section: Q2
-  :github_repo: 
-  :experience_objectives: []
-- :subject_uuid: 849b1a02-191a-463f-aa3a-a4efcadeef66
-  :subject_name: Datastores
-  :uuid: b791fb41-4fa6-4c92-8694-9d25802da47c
+  :uuid: 12a82769-539e-4cc8-8ef9-9e37f9e9b2e8
   :name: SQL DDL
   :description: Datastores/SQL_DDL.desc.md
   :instructor_notes: Datastores/SQL_DDL.notes.md
   :mainline: true
   :suggested_days: 0.5
   :section: Q2
-  :github_repo: 
-  :experience_objectives: []
-- :subject_uuid: 849b1a02-191a-463f-aa3a-a4efcadeef66
+  :experience_objectives:
+  - :objective_uuid: 752e5115-1a04-41d6-8290-b8ba98aa54d8
+    :objective_name: Uses appropriate indexes
+  - :objective_uuid: efa4c1dd-9327-401d-9c3d-99c99f1cd08c
+    :objective_name: Utilizes common column types
+  - :objective_uuid: 323bdb91-b796-4e0e-b047-782bb6d326b2
+    :objective_name: Build a schema using SQL commands
+- :subject_uuid: 2305e956-adeb-49e4-8b0d-2600b10ddfdc
   :subject_name: Datastores
-  :uuid: 5532d8d3-1c2a-4b86-bf6b-d9ff452a8150
-  :name: Intro to knex
-  :description: Datastores/Intro_to_knex.desc.md
-  :instructor_notes: Datastores/Intro_to_knex.notes.md
+  :uuid: ee6d0613-e5c7-4403-a5b3-d4fa61d04532
+  :name: SQL and Relational Databases
+  :description: Datastores/SQL_and_Relational_Databases.desc.md
+  :instructor_notes: Datastores/SQL_and_Relational_Databases.notes.md
+  :mainline: true
+  :suggested_days: 3.0
+  :section: Q2
+  :experience_objectives:
+  - :objective_uuid: ad7bbaed-05f5-4ddc-b4eb-762a9d567891
+    :objective_name: Uses common operators and functions for common queries
+  - :objective_uuid: 8e1d0b6a-e55d-4f09-92b5-501de538832a
+    :objective_name: Writes statements to create and modify datastore structure
+  - :objective_uuid: 8dd9b756-099f-490c-a5a0-81850dd175fc
+    :objective_name: Writes and runs CRUD statements using SQL
+  - :objective_uuid: eba48edd-82ca-4429-b712-ef03da63a62e
+    :objective_name: Uses aggregate functions to aggregate data in queries
+  - :objective_uuid: 23667d89-7897-4aae-8604-bc0ffd10fdcf
+    :objective_name: Describe the role of Primary keys, Foreign keys, and Referential
+      Integrity
+  - :objective_uuid: 313c1b1a-0957-4bdc-b19e-358d04b7d99c
+    :objective_name: Uses joins for model relationships (one to one, one to many,
+      many to many)
+  - :objective_uuid: 00ed3b44-dbde-41d0-91c2-b59e142bae3a
+    :objective_name: Describe the concept of a database schema
+  - :objective_uuid: 30bcc43c-fc3e-4c17-b2a9-05829c4c344f
+    :objective_name: Explains what a data/database schema is
+  - :objective_uuid: efa4c1dd-9327-401d-9c3d-99c99f1cd08c
+    :objective_name: Utilizes common column types
+  - :objective_uuid: 323bdb91-b796-4e0e-b047-782bb6d326b2
+    :objective_name: Build a schema using SQL commands
+  - :objective_uuid: ef3b6a62-e70f-4bdb-99c0-96a62e98d8ae
+    :objective_name: Models relationships using ERD
+  - :objective_uuid: ecee163c-1222-4670-b038-e31dc0d8caae
+    :objective_name: Experiments on one piece of code at a time (baby steps)
+  - :objective_uuid: 5bb2b707-f64f-46d7-8120-3bee4b067a4f
+    :objective_name: Stays calm and positive in the face of high complexity / slow
+      progress
+  - :objective_uuid: 45cd2745-5acc-401a-9cc7-46ab1e2ffb97
+    :objective_name: 'Takes steps to understand the problem / solution before writing:'
+  - :objective_uuid: 74d80dc0-3180-4729-91b5-a54e8d375cac
+    :objective_name: Reads and researches error messages
+- :subject_uuid: 2305e956-adeb-49e4-8b0d-2600b10ddfdc
+  :subject_name: Datastores
+  :uuid: b4aecc20-546c-4057-87ea-619cc6bdc208
+  :name: Postgres Roles
+  :description: Datastores/Postgres_Roles.desc.md
+  :instructor_notes: Datastores/Postgres_Roles.notes.md
+  :mainline: true
+  :suggested_days: 0.5
+  :section: Q2
+  :experience_objectives:
+  - :objective_uuid: 9952ca07-e16e-4a85-b4a3-d21b39db43cc
+    :objective_name: Creates DB users w/ permissions for specific role (such as production
+      user just having select, insert, update, delete)
+- :subject_uuid: 2305e956-adeb-49e4-8b0d-2600b10ddfdc
+  :subject_name: Datastores
+  :uuid: a8c57874-dcea-4e54-94d2-9e037c812ac3
+  :name: Data Normalization
+  :description: Datastores/Data_Normalization.desc.md
+  :instructor_notes: Datastores/Data_Normalization.notes.md
+  :mainline: true
+  :suggested_days: 0.5
+  :section: Q2
+  :experience_objectives:
+  - :objective_uuid: b139e0a6-ead1-478a-aedc-22df930b1939
+    :objective_name: Normalizes data to Third Normal Form
+  - :objective_uuid: ef3b6a62-e70f-4bdb-99c0-96a62e98d8ae
+    :objective_name: Models relationships using ERD
+- 
+- :subject_uuid: 2305e956-adeb-49e4-8b0d-2600b10ddfdc
+  :subject_name: Datastores
+  :uuid: 5317e462-55b8-4f00-8030-a0f2b243f5ce
+  :name: Intro to Knex
+  :description: Datastores/Intro_to_Knex.desc.md
+  :instructor_notes: Datastores/Intro_to_Knex.notes.md
+  :mainline: true
+  :suggested_days: 0.5
+  :section: Q2
+  :experience_objectives:
+  - :objective_uuid: 299a4c8e-b303-4b35-85f2-be3d8f457d91
+    :objective_name: Protects against SQL injection
+  - :objective_uuid: 268b0436-7779-4728-94f7-16796ed13ecd
+    :objective_name: Uses transactions to ensure data integrity
+  - :objective_uuid: 84eb8aaa-5544-413c-99bc-f4ac202be025
+    :objective_name: Build and run migrations to manage your database
+  - :objective_uuid: 54954a7d-d5a8-4c64-ae17-7928b78f426f
+    :objective_name: Fetch all the associated data before rendering your view
+  - :objective_uuid: 03596f78-8897-4f0d-8813-03ef0262b6b8
+    :objective_name: Use the ORM ‘classes’ to encapsulate business logic around your
+      data
+  - :objective_uuid: 4ba8758e-bba7-4d25-a03c-e8b54fdee25b
+    :objective_name: Build methods for handling complicated queries
+  - :objective_uuid: b5893abb-4d75-48e5-a638-73c3cf73c470
+    :objective_name: Define schemas using Knex
+- :subject_uuid: bb388526-c903-45a9-afbf-e6dff6f501d1
+  :subject_name: Server Side Frameworks with Express
+  :uuid: f6cb951f-689f-4f05-bf73-b164d4e18fd6
+  :name: 'Express: CRUD w/ SQL'
+  :description: Server_Side_Frameworks_with_Express/Express:_CRUD_w_SQL.desc.md
+  :instructor_notes: Server_Side_Frameworks_with_Express/Express:_CRUD_w_SQL.notes.md
+  :mainline: true
+  :suggested_days: 4.0
+  :section: Q2
+  :experience_objectives:
+  - :objective_uuid: 4dc11e12-d234-492a-a927-7ebfe0a88082
+    :objective_name: Use HTTP Methods semantically
+  - :objective_uuid: 0a845fb0-c76d-4858-8dc7-2305fd19e84f
+    :objective_name: Follows naming conventions for URLs and Actions
+  - :objective_uuid: 1a412f20-e0f4-431f-a4b5-42dde433befc
+    :objective_name: Endpoint paths should contain nouns
+  - :objective_uuid: 5b7f7bb0-ef41-4d27-8743-799e73147739
+    :objective_name: Nouns are plural
+  - :objective_uuid: 299a53d0-b28c-4790-8edb-b17eec274624
+    :objective_name: API responses include hypermedia
+  - :objective_uuid: 3d295430-ed77-4c64-af23-a45e3bdc1fa4
+    :objective_name: Implements an API with multiple endpoints, each supporting multiple
+      methods
+  - :objective_uuid: ad7bbaed-05f5-4ddc-b4eb-762a9d567891
+    :objective_name: Uses common operators and functions for common queries
+  - :objective_uuid: 8e1d0b6a-e55d-4f09-92b5-501de538832a
+    :objective_name: Writes statements to create and modify datastore structure
+  - :objective_uuid: 8dd9b756-099f-490c-a5a0-81850dd175fc
+    :objective_name: Writes and runs CRUD statements using SQL
+  - :objective_uuid: eba48edd-82ca-4429-b712-ef03da63a62e
+    :objective_name: Uses aggregate functions to aggregate data in queries
+  - :objective_uuid: 23667d89-7897-4aae-8604-bc0ffd10fdcf
+    :objective_name: Describe the role of Primary keys, Foreign keys, and Referential
+      Integrity
+  - :objective_uuid: 313c1b1a-0957-4bdc-b19e-358d04b7d99c
+    :objective_name: Uses joins for model relationships (one to one, one to many,
+      many to many)
+  - :objective_uuid: 00ed3b44-dbde-41d0-91c2-b59e142bae3a
+    :objective_name: Describe the concept of a database schema
+  - :objective_uuid: 9952ca07-e16e-4a85-b4a3-d21b39db43cc
+    :objective_name: Creates DB users w/ permissions for specific role (such as production
+      user just having select, insert, update, delete)
+  - :objective_uuid: 323bdb91-b796-4e0e-b047-782bb6d326b2
+    :objective_name: Build a schema using SQL commands
+  - :objective_uuid: 299a4c8e-b303-4b35-85f2-be3d8f457d91
+    :objective_name: Protects against SQL injection
+  - :objective_uuid: 93fea93c-e26b-4f89-a430-3f3eec85ded0
+    :objective_name: Structure an express app using standard idioms
+  - :objective_uuid: 597266b1-9d0f-46c6-88d9-3313824bc203
+    :objective_name: Use Correct mount points
+  - :objective_uuid: dd633cd5-097d-4ece-8618-63aaf333b3a8
+    :objective_name: Propagate errors to express’s error handling mechanism via next(err)
+  - :objective_uuid: 4d34910c-ef8b-4a43-a578-5bb0022a6c14
+    :objective_name: Define routes and attach callback functions to those, and include
+      middleware functions
+  - :objective_uuid: 986564f6-b874-4228-97b9-0909fe210484
+    :objective_name: Extract requests' data from req, including req.params / req.body
+      / req.query
+  - :objective_uuid: 83a4fefb-05cc-463b-9f7a-6eb1764270dc
+    :objective_name: Describe server-side validations
+  - :objective_uuid: be026802-09f0-466f-acca-ebad7435c973
+    :objective_name: List which standard CRUD actions should redirect (create, update,
+      delete)
+  - :objective_uuid: 42b1deac-5b2f-41ec-b639-1153b7732a98
+    :objective_name: Describes what populates req.params, req.body (body parser),
+      req.query
+  - :objective_uuid: 28e52a8f-ef06-4545-91bf-aa04ee681256
+    :objective_name: Describe and sequence diagram each CRUD action including
+  - :objective_uuid: 266591ef-8696-4046-8dd4-6f7513ebfa4f
+    :objective_name: Discuss Status codes
+  - :objective_uuid: efd97052-7a48-40af-ae38-e57cbc103bf6
+    :objective_name: Discusses Verbs
+  - :objective_uuid: 40513ddb-015e-43a8-bb79-540a0e375e39
+    :objective_name: Add appropriate headers to an HTTP Response
+- :subject_uuid: 2305e956-adeb-49e4-8b0d-2600b10ddfdc
+  :subject_name: Datastores
+  :uuid: e1850a4a-967d-4224-9075-3d90039f656f
+  :name: 'Knex Database Migrations in Node '
+  :description: Datastores/Knex_Database_Migrations_in_Node_.desc.md
+  :instructor_notes: Datastores/Knex_Database_Migrations_in_Node_.notes.md
+  :mainline: true
+  :suggested_days: 0.5
+  :section: Q2
+  :experience_objectives:
+  - :objective_uuid: 299a4c8e-b303-4b35-85f2-be3d8f457d91
+    :objective_name: Protects against SQL injection
+  - :objective_uuid: 268b0436-7779-4728-94f7-16796ed13ecd
+    :objective_name: Uses transactions to ensure data integrity
+  - :objective_uuid: 84eb8aaa-5544-413c-99bc-f4ac202be025
+    :objective_name: Build and run migrations to manage your database
+  - :objective_uuid: 54954a7d-d5a8-4c64-ae17-7928b78f426f
+    :objective_name: Fetch all the associated data before rendering your view
+  - :objective_uuid: 4ba8758e-bba7-4d25-a03c-e8b54fdee25b
+    :objective_name: Build methods for handling complicated queries
+- :subject_uuid: bb388526-c903-45a9-afbf-e6dff6f501d1
+  :subject_name: Server Side Frameworks with Express
+  :uuid: 12d4a162-2a4d-44fd-8988-acba40e08a13
+  :name: 'Express: Error Handling'
+  :description: Server_Side_Frameworks_with_Express/Express:_Error_Handling.desc.md
+  :instructor_notes: Server_Side_Frameworks_with_Express/Express:_Error_Handling.notes.md
+  :mainline: true
+  :suggested_days: 0.0
+  :section: Q2
+  :experience_objectives: []
+- :subject_uuid: bb388526-c903-45a9-afbf-e6dff6f501d1
+  :subject_name: Server Side Frameworks with Express
+  :uuid: c56f731a-6eca-4d06-a84a-f382e77c65c0
+  :name: 'Express: Validations'
+  :description: Server_Side_Frameworks_with_Express/Express:_Validations.desc.md
+  :instructor_notes: Server_Side_Frameworks_with_Express/Express:_Validations.notes.md
   :mainline: true
   :suggested_days: 1.0
   :section: Q2
-  :github_repo: 
+  :experience_objectives:
+  - :objective_uuid: 93fea93c-e26b-4f89-a430-3f3eec85ded0
+    :objective_name: Structure an express app using standard idioms
+  - :objective_uuid: dd633cd5-097d-4ece-8618-63aaf333b3a8
+    :objective_name: Propagate errors to express’s error handling mechanism via next(err)
+  - :objective_uuid: 986564f6-b874-4228-97b9-0909fe210484
+    :objective_name: Extract requests' data from req, including req.params / req.body
+      / req.query
+  - :objective_uuid: 83a4fefb-05cc-463b-9f7a-6eb1764270dc
+    :objective_name: Describe server-side validations
+  - :objective_uuid: b92ffdc1-cbe0-4e74-9a32-2b09724fa551
+    :objective_name: Describe how res generates the response string
+  - :objective_uuid: be026802-09f0-466f-acca-ebad7435c973
+    :objective_name: List which standard CRUD actions should redirect (create, update,
+      delete)
+  - :objective_uuid: 42b1deac-5b2f-41ec-b639-1153b7732a98
+    :objective_name: Describes what populates req.params, req.body (body parser),
+      req.query
+  - :objective_uuid: 98fa5c5c-79ad-4370-81cb-a5e9ce9e01df
+    :objective_name: Displays an experimental approach to debugging / learning code
+  - :objective_uuid: 1a8eb00a-1749-4f09-8078-05cf5b577f7c
+    :objective_name: Identifies the line number of error messages from a stack trace
+  - :objective_uuid: 62117906-b811-4c05-9398-95c930478104
+    :objective_name: Resolves common JS errors by reading a stack trace and identifying
+      the cause of the error
+  - :objective_uuid: 74d80dc0-3180-4729-91b5-a54e8d375cac
+    :objective_name: Reads and researches error messages
+  - :objective_uuid: 8357b7e8-1cdf-43ab-a5e9-3431ff620062
+    :objective_name: Build multiple forms that use all HTML5 controls
+- :subject_uuid: 49275f51-fb52-4c08-a691-ecbc22f6a2e9
+  :subject_name: Auth
+  :uuid: eb0d2202-594e-4fc3-8d17-2cadcc71d472
+  :name: 'Express: Form-Based Authentication'
+  :description: Auth/Express:_Form-Based_Authentication.desc.md
+  :instructor_notes: Auth/Express:_Form-Based_Authentication.notes.md
+  :mainline: true
+  :suggested_days: 2.0
+  :section: Q2
+  :experience_objectives:
+  - :objective_uuid: ffe1d184-2057-488c-be4c-3c09a32d64ec
+    :objective_name: No secrets or environment-specific values are hard-coded in apps,
+      instead they are accessed via process.env
+  - :objective_uuid: 06f1c683-f559-44f1-a2ab-333d91be03d9
+    :objective_name: Explain that environment variables allow you to remove secrets
+      and connection strings and test environment variables from code
+  - :objective_uuid: b04d696c-1465-4452-b3ae-2b31ab7d9c73
+    :objective_name: Installed and configured dotenv, including git ignoring .env,
+      setting their local version of the value in their .env file, having a .env.example
+      file
+  - :objective_uuid: 4dc11e12-d234-492a-a927-7ebfe0a88082
+    :objective_name: Use HTTP Methods semantically
+  - :objective_uuid: 0a845fb0-c76d-4858-8dc7-2305fd19e84f
+    :objective_name: Follows naming conventions for URLs and Actions
+  - :objective_uuid: 1a412f20-e0f4-431f-a4b5-42dde433befc
+    :objective_name: Endpoint paths should contain nouns
+  - :objective_uuid: 5b7f7bb0-ef41-4d27-8743-799e73147739
+    :objective_name: Nouns are plural
+  - :objective_uuid: 299a53d0-b28c-4790-8edb-b17eec274624
+    :objective_name: API responses include hypermedia
+  - :objective_uuid: 299a4c8e-b303-4b35-85f2-be3d8f457d91
+    :objective_name: Protects against SQL injection
+  - :objective_uuid: 84eb8aaa-5544-413c-99bc-f4ac202be025
+    :objective_name: Build and run migrations to manage your database
+  - :objective_uuid: 54954a7d-d5a8-4c64-ae17-7928b78f426f
+    :objective_name: Fetch all the associated data before rendering your view
+  - :objective_uuid: 93fea93c-e26b-4f89-a430-3f3eec85ded0
+    :objective_name: Structure an express app using standard idioms
+  - :objective_uuid: 597266b1-9d0f-46c6-88d9-3313824bc203
+    :objective_name: Use Correct mount points
+  - :objective_uuid: b5893abb-4d75-48e5-a638-73c3cf73c470
+    :objective_name: Define schemas using Knex
+  - :objective_uuid: 4d34910c-ef8b-4a43-a578-5bb0022a6c14
+    :objective_name: Define routes and attach callback functions to those, and include
+      middleware functions
+  - :objective_uuid: 986564f6-b874-4228-97b9-0909fe210484
+    :objective_name: Extract requests' data from req, including req.params / req.body
+      / req.query
+  - :objective_uuid: 83a4fefb-05cc-463b-9f7a-6eb1764270dc
+    :objective_name: Describe server-side validations
+  - :objective_uuid: 40294a6c-e014-4352-8ae2-4dae09cab9af
+    :objective_name: Describe why to use a redirect over a render
+  - :objective_uuid: a356a233-2d34-4140-a187-87c3bbc0f891
+    :objective_name: Use middleware to set the currentUser local globally
+  - :objective_uuid: ab8ead8a-0092-4e8c-a69e-7edc53ff2eae
+    :objective_name: Use req.session to ensure that users are logged in
+  - :objective_uuid: e6519b75-9c79-437b-b27d-30ffb34d2570
+    :objective_name: Store passwords securely using bcrypt
+  - :objective_uuid: 184c1dcb-c037-467c-8f5e-17fce941053a
+    :objective_name: Includes register, login, logout features
+  - :objective_uuid: 5c449397-c425-4fd2-bd48-babb8d805450
+    :objective_name: Protect routes using the middleware sub-stack API
+  - :objective_uuid: 47943e4d-b5fd-4969-aca2-452417b405ae
+    :objective_name: Explain why storing passwords in plain text is never acceptable
+  - :objective_uuid: 0d4bc1e0-5016-4ad7-a7ee-2ca69f3bdde9
+    :objective_name: Describe difference between authentication and authorization
+  - :objective_uuid: 2db3b2bc-cc3a-46f8-8c02-825cf09ad4aa
+    :objective_name: Explain how hashing/salting protects from lookup/dictionary attacks
+  - :objective_uuid: d497abbd-8ec2-4540-81f8-6543951cb3a1
+    :objective_name: Explain key ideas about how Cookies work
+- :subject_uuid: 49275f51-fb52-4c08-a691-ecbc22f6a2e9
+  :subject_name: Auth
+  :uuid: 4f089306-384e-4f1f-8765-e150b1b8fa5a
+  :name: 'Express: Authorization & Middleware'
+  :description: Auth/Express:_Authorization_&_Middleware.desc.md
+  :instructor_notes: Auth/Express:_Authorization_&_Middleware.notes.md
+  :mainline: true
+  :suggested_days: 0.5
+  :section: Q2
+  :experience_objectives:
+  - :objective_uuid: 28217972-19bc-4d58-a306-1650b47334cf
+    :objective_name: Endpoint secured with token-based authentication (JWT or OAuth
+      header)
+  - :objective_uuid: 2a4a3384-674c-4ab1-92a7-3300b07fdeb0
+    :objective_name: Explain how and why browsers and servers use specific headers
+      to indicate whether a particular resource is available from a web app hosted
+      on a particular domain, including what the actual headers are
+  - :objective_uuid: a356a233-2d34-4140-a187-87c3bbc0f891
+    :objective_name: Use middleware to set the currentUser local globally
+  - :objective_uuid: ab8ead8a-0092-4e8c-a69e-7edc53ff2eae
+    :objective_name: Use req.session to ensure that users are logged in
+  - :objective_uuid: e6519b75-9c79-437b-b27d-30ffb34d2570
+    :objective_name: Store passwords securely using bcrypt
+  - :objective_uuid: 184c1dcb-c037-467c-8f5e-17fce941053a
+    :objective_name: Includes register, login, logout features
+  - :objective_uuid: 5672bb09-af7e-4d04-af90-714471b23ef6
+    :objective_name: Built and shipped an app that allows users to login via OAuth
+      using Passport
+  - :objective_uuid: 5c449397-c425-4fd2-bd48-babb8d805450
+    :objective_name: Protect routes using the middleware sub-stack API
+  - :objective_uuid: 47943e4d-b5fd-4969-aca2-452417b405ae
+    :objective_name: Explain why storing passwords in plain text is never acceptable
+  - :objective_uuid: 0d4bc1e0-5016-4ad7-a7ee-2ca69f3bdde9
+    :objective_name: Describe difference between authentication and authorization
+  - :objective_uuid: c4ff99be-638f-41dc-bcea-232ebc4e954c
+    :objective_name: Describe how OAuth works
+  - :objective_uuid: 2db3b2bc-cc3a-46f8-8c02-825cf09ad4aa
+    :objective_name: Explain how hashing/salting protects from lookup/dictionary attacks
+  - :objective_uuid: d497abbd-8ec2-4540-81f8-6543951cb3a1
+    :objective_name: Explain key ideas about how Cookies work
+- :subject_uuid: 49275f51-fb52-4c08-a691-ecbc22f6a2e9
+  :subject_name: Auth
+  :uuid: 4a581b1b-2dff-400e-8e1e-a5dab039318c
+  :name: 'Express: OAuth w/ Passport'
+  :description: Auth/Express:_OAuth_w_Passport.desc.md
+  :instructor_notes: Auth/Express:_OAuth_w_Passport.notes.md
+  :mainline: true
+  :suggested_days: 1.0
+  :section: Q2
+  :experience_objectives:
+  - :objective_uuid: 4dc11e12-d234-492a-a927-7ebfe0a88082
+    :objective_name: Use HTTP Methods semantically
+  - :objective_uuid: 28217972-19bc-4d58-a306-1650b47334cf
+    :objective_name: Endpoint secured with token-based authentication (JWT or OAuth
+      header)
+  - :objective_uuid: a356a233-2d34-4140-a187-87c3bbc0f891
+    :objective_name: Use middleware to set the currentUser local globally
+  - :objective_uuid: ab8ead8a-0092-4e8c-a69e-7edc53ff2eae
+    :objective_name: Use req.session to ensure that users are logged in
+  - :objective_uuid: e6519b75-9c79-437b-b27d-30ffb34d2570
+    :objective_name: Store passwords securely using bcrypt
+  - :objective_uuid: 184c1dcb-c037-467c-8f5e-17fce941053a
+    :objective_name: Includes register, login, logout features
+  - :objective_uuid: 5672bb09-af7e-4d04-af90-714471b23ef6
+    :objective_name: Built and shipped an app that allows users to login via OAuth
+      using Passport
+  - :objective_uuid: 47943e4d-b5fd-4969-aca2-452417b405ae
+    :objective_name: Explain why storing passwords in plain text is never acceptable
+  - :objective_uuid: 0d4bc1e0-5016-4ad7-a7ee-2ca69f3bdde9
+    :objective_name: Describe difference between authentication and authorization
+  - :objective_uuid: c4ff99be-638f-41dc-bcea-232ebc4e954c
+    :objective_name: Describe how OAuth works
+  - :objective_uuid: 2db3b2bc-cc3a-46f8-8c02-825cf09ad4aa
+    :objective_name: Explain how hashing/salting protects from lookup/dictionary attacks
+  - :objective_uuid: d497abbd-8ec2-4540-81f8-6543951cb3a1
+    :objective_name: Explain key ideas about how Cookies work
+- :subject_uuid: 412ea142-dd72-4e21-8e52-2bb72ad3e09b
+  :subject_name: Promises
+  :uuid: 2415f521-7cf3-4bdf-ba34-13824673e233
+  :name: Associations and Promises
+  :description: Promises/Associations_and_Promises.desc.md
+  :instructor_notes: Promises/Associations_and_Promises.notes.md
+  :mainline: true
+  :suggested_days: 7.0
+  :section: Q2
+  :experience_objectives:
+  - :objective_uuid: 04d5181d-14d3-475b-bce5-f4e256b12f88
+    :objective_name: Make multiple async calls and return a single data object
+- 
+- :subject_uuid: ac805334-f3dd-4288-9a61-0dcef3e219d4
+  :subject_name: Programming with Javascript
+  :uuid: 5f69bb9d-50ad-4eaa-8346-c3b4732641dc
+  :name: Programming Fundamentals Assessment Part 1
+  :description: Programming_with_Javascript/Programming_Fundamentals_Assessment_Part_1.desc.md
+  :instructor_notes: Programming_with_Javascript/Programming_Fundamentals_Assessment_Part_1.notes.md
+  :mainline: false
+  :suggested_days: 0.0
+  :section: Q2
+  :experience_objectives:
+  - :objective_uuid: 8ccc8ea9-1a10-44eb-88f0-755756f392d4
+    :objective_name: Explicitly refers to the global scope inside of functions with
+      `this`
+  - :objective_uuid: 95d1a3d2-39ad-4194-b1fa-2b2706c6fa32
+    :objective_name: Refers to the new instance inside of a constructor function using
+      ‘this’
+- :subject_uuid: bb388526-c903-45a9-afbf-e6dff6f501d1
+  :subject_name: Server Side Frameworks with Express
+  :uuid: d323186b-a18f-47e5-9271-9e1960b0325e
+  :name: Full Stack CRUD Assessment
+  :description: Server_Side_Frameworks_with_Express/Full_Stack_CRUD_Assessment.desc.md
+  :instructor_notes: Server_Side_Frameworks_with_Express/Full_Stack_CRUD_Assessment.notes.md
+  :mainline: false
+  :suggested_days: 0.0
+  :section: Q2
+  :experience_objectives: []
+- :subject_uuid: d5947e67-9d70-4e02-ae2a-b3135a9c1667
+  :subject_name: Data Structures / Algorithms
+  :uuid: e22c35aa-c273-4948-a9d4-2422ae754bab
+  :name: Cracking the Coding Interview Warmups
+  :description: Data_Structures__Algorithms/Cracking_the_Coding_Interview_Warmups.desc.md
+  :instructor_notes: Data_Structures__Algorithms/Cracking_the_Coding_Interview_Warmups.notes.md
+  :mainline: true
+  :suggested_days: 0.0
+  :section: Q3
+  :experience_objectives:
+  - :objective_uuid: 0a3eb669-e449-4a7f-b20d-e11c531fdc79
+    :objective_name: Wrestles with new content
+  - :objective_uuid: d4035f5a-b922-4a94-8ac6-6244e68e9601
+    :objective_name: Self assesses
+- 
+- :subject_uuid: b7090a92-612d-4811-ac2c-8d750e5fab1d
+  :subject_name: Client Side Frameworks (Angular)
+  :uuid: e6565b21-af8f-4136-a406-ff9cbdc67683
+  :name: 'Angular: Two-Way Data Binding (prework)'
+  :description: Client_Side_Frameworks_(Angular)/Angular:_Two-Way_Data_Binding_(prework).desc.md
+  :instructor_notes: Client_Side_Frameworks_(Angular)/Angular:_Two-Way_Data_Binding_(prework).notes.md
+  :mainline: true
+  :suggested_days: 0.0
+  :section: Q3
+  :experience_objectives: []
+- :subject_uuid: b7090a92-612d-4811-ac2c-8d750e5fab1d
+  :subject_name: Client Side Frameworks (Angular)
+  :uuid: 8d634285-322f-4f65-8bc0-6887f84b9e50
+  :name: 'Angular: Part 1'
+  :description: Client_Side_Frameworks_(Angular)/Angular:_Part_1.desc.md
+  :instructor_notes: Client_Side_Frameworks_(Angular)/Angular:_Part_1.notes.md
+  :mainline: true
+  :suggested_days: 5.0
+  :section: Q3
+  :experience_objectives:
+  - :objective_uuid: 76b54c37-86a7-4a11-9497-d857dd12934d
+    :objective_name: "$http calls get back ids of resources and add them to the in-memory
+      copies"
+  - :objective_uuid: d46e91e1-1475-487e-a818-6c0da573feaf
+    :objective_name: 'Has associated resources on the same page (ex: posts w/ likes)'
+  - :objective_uuid: 38566525-59ce-4a2d-8ed8-a253072eb975
+    :objective_name: Build and deploy an SPA in Angular that uses built-in directives,
+      routes, $http, controllers, services/factories, built-in filtering / sorting,
+      and no jQuery-style code
+  - :objective_uuid: 07c11fc2-1adf-4f54-8b75-07629d2bab2f
+    :objective_name: Build a reusable Angular component (aka custom directive) that
+      appears on multiple routes
+  - :objective_uuid: c980d656-872a-4c70-aba7-467b38467cb1
+    :objective_name: Sequence diagram of how a deep-link works in an client-side routed
+      app using pushstate-style URLs including the concept of a wildcard route on
+      the server (express or superstatic)
+  - :objective_uuid: a0132e87-ea37-43d6-b9ed-b52484899f83
+    :objective_name: Build an angular app that has login/logout state
+  - :objective_uuid: b0643164-6094-4063-95db-ec4cf39b8318
+    :objective_name: 'Make a sequence diagram with angular and the api and localstorage
+      for the following scenarios: non-logged in user goes to a protected page, redirected
+      to login, logs in, redirected to resource'
+- :subject_uuid: b7090a92-612d-4811-ac2c-8d750e5fab1d
+  :subject_name: Client Side Frameworks (Angular)
+  :uuid: 7e508f31-a3ef-4413-b7b8-1e16d84d6724
+  :name: 'Angular: Dependency Injection Theory'
+  :description: Client_Side_Frameworks_(Angular)/Angular:_Dependency_Injection_Theory.desc.md
+  :instructor_notes: Client_Side_Frameworks_(Angular)/Angular:_Dependency_Injection_Theory.notes.md
+  :mainline: true
+  :suggested_days: 1.0
+  :section: Q3
+  :experience_objectives:
+  - :objective_uuid: 76b54c37-86a7-4a11-9497-d857dd12934d
+    :objective_name: "$http calls get back ids of resources and add them to the in-memory
+      copies"
+  - :objective_uuid: d46e91e1-1475-487e-a818-6c0da573feaf
+    :objective_name: 'Has associated resources on the same page (ex: posts w/ likes)'
+  - :objective_uuid: 38566525-59ce-4a2d-8ed8-a253072eb975
+    :objective_name: Build and deploy an SPA in Angular that uses built-in directives,
+      routes, $http, controllers, services/factories, built-in filtering / sorting,
+      and no jQuery-style code
+  - :objective_uuid: 07c11fc2-1adf-4f54-8b75-07629d2bab2f
+    :objective_name: Build a reusable Angular component (aka custom directive) that
+      appears on multiple routes
+  - :objective_uuid: c980d656-872a-4c70-aba7-467b38467cb1
+    :objective_name: Sequence diagram of how a deep-link works in an client-side routed
+      app using pushstate-style URLs including the concept of a wildcard route on
+      the server (express or superstatic)
+  - :objective_uuid: a0132e87-ea37-43d6-b9ed-b52484899f83
+    :objective_name: Build an angular app that has login/logout state
+  - :objective_uuid: b0643164-6094-4063-95db-ec4cf39b8318
+    :objective_name: 'Make a sequence diagram with angular and the api and localstorage
+      for the following scenarios: non-logged in user goes to a protected page, redirected
+      to login, logs in, redirected to resource'
+- 
+- :subject_uuid: b7090a92-612d-4811-ac2c-8d750e5fab1d
+  :subject_name: Client Side Frameworks (Angular)
+  :uuid: 1d7ee580-b577-471f-9ec3-d09e1fbbc0db
+  :name: 'Angular: Part 2'
+  :description: Client_Side_Frameworks_(Angular)/Angular:_Part_2.desc.md
+  :instructor_notes: Client_Side_Frameworks_(Angular)/Angular:_Part_2.notes.md
+  :mainline: true
+  :suggested_days: 6.0
+  :section: Q3
+  :experience_objectives:
+  - :objective_uuid: 76b54c37-86a7-4a11-9497-d857dd12934d
+    :objective_name: "$http calls get back ids of resources and add them to the in-memory
+      copies"
+  - :objective_uuid: d46e91e1-1475-487e-a818-6c0da573feaf
+    :objective_name: 'Has associated resources on the same page (ex: posts w/ likes)'
+  - :objective_uuid: 38566525-59ce-4a2d-8ed8-a253072eb975
+    :objective_name: Build and deploy an SPA in Angular that uses built-in directives,
+      routes, $http, controllers, services/factories, built-in filtering / sorting,
+      and no jQuery-style code
+  - :objective_uuid: 07c11fc2-1adf-4f54-8b75-07629d2bab2f
+    :objective_name: Build a reusable Angular component (aka custom directive) that
+      appears on multiple routes
+  - :objective_uuid: c980d656-872a-4c70-aba7-467b38467cb1
+    :objective_name: Sequence diagram of how a deep-link works in an client-side routed
+      app using pushstate-style URLs including the concept of a wildcard route on
+      the server (express or superstatic)
+  - :objective_uuid: a0132e87-ea37-43d6-b9ed-b52484899f83
+    :objective_name: Build an angular app that has login/logout state
+  - :objective_uuid: b0643164-6094-4063-95db-ec4cf39b8318
+    :objective_name: 'Make a sequence diagram with angular and the api and localstorage
+      for the following scenarios: non-logged in user goes to a protected page, redirected
+      to login, logs in, redirected to resource'
+- 
+- :subject_uuid: b7090a92-612d-4811-ac2c-8d750e5fab1d
+  :subject_name: Client Side Frameworks (Angular)
+  :uuid: ca3f6431-ec99-49c0-a78e-a54b7142e7ea
+  :name: 'Angular: Introduction to Nested Views and Authentication using UI-Router'
+  :description: Client_Side_Frameworks_(Angular)/Angular:_Introduction_to_Nested_Views_and_Authentication_using_UI-Router.desc.md
+  :instructor_notes: Client_Side_Frameworks_(Angular)/Angular:_Introduction_to_Nested_Views_and_Authentication_using_UI-Router.notes.md
+  :mainline: true
+  :suggested_days: 1.0
+  :section: Q3
+  :experience_objectives:
+  - :objective_uuid: 76b54c37-86a7-4a11-9497-d857dd12934d
+    :objective_name: "$http calls get back ids of resources and add them to the in-memory
+      copies"
+  - :objective_uuid: d46e91e1-1475-487e-a818-6c0da573feaf
+    :objective_name: 'Has associated resources on the same page (ex: posts w/ likes)'
+  - :objective_uuid: 38566525-59ce-4a2d-8ed8-a253072eb975
+    :objective_name: Build and deploy an SPA in Angular that uses built-in directives,
+      routes, $http, controllers, services/factories, built-in filtering / sorting,
+      and no jQuery-style code
+  - :objective_uuid: 07c11fc2-1adf-4f54-8b75-07629d2bab2f
+    :objective_name: Build a reusable Angular component (aka custom directive) that
+      appears on multiple routes
+  - :objective_uuid: c980d656-872a-4c70-aba7-467b38467cb1
+    :objective_name: Sequence diagram of how a deep-link works in an client-side routed
+      app using pushstate-style URLs including the concept of a wildcard route on
+      the server (express or superstatic)
+  - :objective_uuid: a0132e87-ea37-43d6-b9ed-b52484899f83
+    :objective_name: Build an angular app that has login/logout state
+  - :objective_uuid: b0643164-6094-4063-95db-ec4cf39b8318
+    :objective_name: 'Make a sequence diagram with angular and the api and localstorage
+      for the following scenarios: non-logged in user goes to a protected page, redirected
+      to login, logs in, redirected to resource'
+- :subject_uuid: 1762e39b-4a3e-433a-ac68-c815f3ea067b
+  :subject_name: How the Web Works
+  :uuid: afc5cc55-62b6-458c-bbf5-bed74a43070f
+  :name: Working with Sockets and Socket.io
+  :description: How_the_Web_Works/Working_with_Sockets_and_Socket.io.desc.md
+  :instructor_notes: How_the_Web_Works/Working_with_Sockets_and_Socket.io.notes.md
+  :mainline: true
+  :suggested_days: 1.0
+  :section: Q3
+  :experience_objectives:
+  - :objective_uuid: 94e3513f-c1a0-4be2-853f-ae68e6d19fa0
+    :objective_name: Identify that sockets are what enable realtime applications with
+      server-side push
+  - :objective_uuid: 66f99309-2914-4084-b476-07213c308324
+    :objective_name: Contrast sockets with HTTP requests / responses
+  - :objective_uuid: a09bec83-aaf5-47a0-9e2c-f83454446bc7
+    :objective_name: Identify apps that use sockets like Google Docs / Slack
+- 
+- :subject_uuid: 2886a5f1-92f6-44ba-8adb-185b2a161870
+  :subject_name: Deployment
+  :uuid: c9ed76e7-0a2e-4be4-a67a-d997a71dea44
+  :name: Deploying and Managing AWS EC2
+  :description: Deployment/Deploying_and_Managing_AWS_EC2.desc.md
+  :instructor_notes: Deployment/Deploying_and_Managing_AWS_EC2.notes.md
+  :mainline: true
+  :suggested_days: 0.0
+  :section: Q3
+  :experience_objectives:
+  - :objective_uuid: ca2183bd-e998-424b-9581-e2a2729df7b4
+    :objective_name: Running app on EC2 that meet the requirements
+  - :objective_uuid: 8c942ed7-bd76-4f5d-b4c9-9b29967a432b
+    :objective_name: Describe elastic IPs / elastic load balancing / elastic block
+      store (infrastructure on-demand) in comparison with other options
+  - :objective_uuid: 76ee1655-8785-4438-871d-f3b429854f77
+    :objective_name: Connect to another computer using SSH
+- 
+- :subject_uuid: e43b79ad-875a-4817-8ac0-68f7f47f3b42
+  :subject_name: OOP w/ Statically Typed Language
+  :uuid: 7db47b45-56a1-4a06-9464-c47e72b8bec0
+  :name: Classical Object-Oriented Programming in Java
+  :description: OOP_w_Statically_Typed_Language/Classical_Object-Oriented_Programming_in_Java.desc.md
+  :instructor_notes: OOP_w_Statically_Typed_Language/Classical_Object-Oriented_Programming_in_Java.notes.md
+  :mainline: true
+  :suggested_days: 3.0
+  :section: Q4
+  :experience_objectives:
+  - :objective_uuid: 1194f008-4b13-44ce-b316-f918e59baa38
+    :objective_name: Defines return types of methods in statically typed languages
+  - :objective_uuid: 6d370a95-d876-439a-b84c-70455bc63048
+    :objective_name: Declaring variables using types
+  - :objective_uuid: 5b4bfb0a-e126-4936-9469-7a908b8a6571
+    :objective_name: Identifies pros and cons of each
+  - :objective_uuid: c6af9edd-cb1e-4f2e-a81f-a23c07893aed
+    :objective_name: Describe what it means for a language to be statically typed
+      vs. dynamically typed
+  - :objective_uuid: 885726c5-2ec5-404b-b614-d98c33c3c909
+    :objective_name: Given a cracking the coding interview problem, write a solution
+      in Java
+  - :objective_uuid: bfd37c79-93a0-44b6-b58f-3fd653c7d8ab
+    :objective_name: Inheritance
+  - :objective_uuid: 9baf32dc-da66-4bbf-8cb6-6550c55b9408
+    :objective_name: Polymorphism
+  - :objective_uuid: 2f528642-84f4-4f02-87e2-f07a3a7459c0
+    :objective_name: Encapsulation
+  - :objective_uuid: a2ae800e-d4a5-4944-af91-e8af6faace4d
+    :objective_name: Abstraction
+  - :objective_uuid: 343c9687-3412-4e7a-828f-c1013f5604aa
+    :objective_name: Explain how these 4 pillars encourage agile development / low
+      cost of change
+  - :objective_uuid: efac19fb-e414-47da-bd00-c54e52a4c889
+    :objective_name: Describe OOP in relation to functional programming
+- 
+- :subject_uuid: e59bae37-553b-4c1b-8667-4dbbdeeae98d
+  :subject_name: Technical Interview Prep
+  :uuid: d74c96d8-39fc-43ce-adc2-57ae51fa9b44
+  :name: Whiteboard Interview Prep
+  :description: Technical_Interview_Prep/Whiteboard_Interview_Prep.desc.md
+  :instructor_notes: Technical_Interview_Prep/Whiteboard_Interview_Prep.notes.md
+  :mainline: true
+  :suggested_days: 1.0
+  :section: Q4
+  :experience_objectives:
+  - :objective_uuid: 885726c5-2ec5-404b-b614-d98c33c3c909
+    :objective_name: Given a cracking the coding interview problem, write a solution
+      in Java
+  - :objective_uuid: d5ef9b8d-a886-49a8-a9a6-26aca92016b5
+    :objective_name: Given a problem stated as a whiteboarding challenge, identify
+      the correct algorithm and data structure
+  - :objective_uuid: 6fca2727-0cc0-4839-a5aa-58460c6bf804
+    :objective_name: Determine the best algorithm to use given some data or criteria
+  - :objective_uuid: 424e432c-f56f-4669-a2cc-a2af9dd769cd
+    :objective_name: Uses problem solving process from “Cracking the Coding Interview”
+  - :objective_uuid: e0e83d9f-503b-4d5b-9cd4-6e0178394922
+    :objective_name: Ask about format
+  - :objective_uuid: c3f2dd35-0d7e-4fe0-890e-20a5db095342
+    :objective_name: Give sample inputs and outputs
+  - :objective_uuid: d47b2f11-273e-4289-8878-6ad2f71b775d
+    :objective_name: Narrated while talking (didn’t ‘go dark’)
+  - :objective_uuid: caf3753e-a302-45ca-bd72-b936fec36759
+    :objective_name: Diagram the flow of data through your algorithm (draw a picture)
+  - :objective_uuid: 5c9197c7-f8cd-4c88-b4fa-15dd401ace9b
+    :objective_name: Ask about inputs and outputs
+  - :objective_uuid: 3cd84888-d0c6-482c-909b-ce8b89251fc9
+    :objective_name: Write syntactically-correct code without an IDE
+  - :objective_uuid: ecee163c-1222-4670-b038-e31dc0d8caae
+    :objective_name: Experiments on one piece of code at a time (baby steps)
+  - :objective_uuid: 5bb2b707-f64f-46d7-8120-3bee4b067a4f
+    :objective_name: Stays calm and positive in the face of high complexity / slow
+      progress
+  - :objective_uuid: 45cd2745-5acc-401a-9cc7-46ab1e2ffb97
+    :objective_name: 'Takes steps to understand the problem / solution before writing:'
+  - :objective_uuid: 265c64da-2613-47be-a86e-a4dafbf3953c
+    :objective_name: Describe your problem-solving technique to approach a brain teaser
+  - :objective_uuid: e9b462ce-ec32-4556-879c-da6085095cf1
+    :objective_name: Diagram a brain teaser in order to solve it
+- 
+- :subject_uuid: d5947e67-9d70-4e02-ae2a-b3135a9c1667
+  :subject_name: Data Structures / Algorithms
+  :uuid: 80db8619-d556-40af-a60b-a11595a33315
+  :name: LinkedLists, Stacks and Queues
+  :description: Data_Structures__Algorithms/LinkedLists,_Stacks_and_Queues.desc.md
+  :instructor_notes: Data_Structures__Algorithms/LinkedLists,_Stacks_and_Queues.notes.md
+  :mainline: true
+  :suggested_days: 1.0
+  :section: Q4
+  :experience_objectives:
+  - :objective_uuid: c0617929-2366-44fc-9374-0c73b9586193
+    :objective_name: Implement and use Stacks and Queues
+  - :objective_uuid: 5409f05a-414b-4b7e-ae81-6a5fb11a9670
+    :objective_name: Implement and use Linked Lists
+- 
+- :subject_uuid: 40104e17-a0e4-4bc4-b499-5030c197cb81
+  :subject_name: Automated Testing
+  :uuid: 5ef521f0-80a2-4bdd-a18c-37d047d1c1a9
+  :name: 'Testing: Mocha / Chai / Supertest'
+  :description: Automated_Testing/Testing:_Mocha__Chai__Supertest.desc.md
+  :instructor_notes: Automated_Testing/Testing:_Mocha__Chai__Supertest.notes.md
+  :mainline: true
+  :suggested_days: 3.0
+  :section: Q4
+  :experience_objectives:
+  - :objective_uuid: 7f1700e4-c31e-4d92-ac61-81375d9a09e4
+    :objective_name: Describe and employ the tdd red / green / refactor cycle for
+      unit tests / anatomy of a test
+  - :objective_uuid: 1b2e927d-7180-4be8-8576-659e3a673313
+    :objective_name: Use before / after / beforeEach / afterEach in tests
+  - :objective_uuid: 4e95049f-894c-494e-ba0a-e9c6a5ea9376
+    :objective_name: Run unit tests with mocha chai
+  - :objective_uuid: 94676226-62ab-47c7-a733-f248e45ac89b
+    :objective_name: Talk about test pyramid (unit -> vs integration, acceptance)
+  - :objective_uuid: f29c8848-de36-4629-82fd-3f769185b91d
+    :objective_name: Write tests that require inserting records into a database before
+      making assertions
+  - :objective_uuid: 334f0472-e3bf-415b-b3c1-65de6addeb31
+    :objective_name: Describe what’s necessary to integration test an app with a database.
+- :subject_uuid: e59bae37-553b-4c1b-8667-4dbbdeeae98d
+  :subject_name: Technical Interview Prep
+  :uuid: a3f86d90-fb5e-4b82-9aac-ce1fd8aed1bf
+  :name: Negotiating with potential employers
+  :description: Technical_Interview_Prep/Negotiating_with_potential_employers.desc.md
+  :instructor_notes: Technical_Interview_Prep/Negotiating_with_potential_employers.notes.md
+  :mainline: true
+  :suggested_days: 0.0
+  :section: Q4
+  :experience_objectives: []
+- :subject_uuid: ce60c0de-9f49-423f-bbbe-7fea0c1b875c
+  :subject_name: Architecture
+  :uuid: d4b24a93-36a2-45a3-8964-d7e1d35234b7
+  :name: Distributed Memories - Angular, CORS and Express
+  :description: Architecture/Distributed_Memories_-_Angular,_CORS_and_Express.desc.md
+  :instructor_notes: Architecture/Distributed_Memories_-_Angular,_CORS_and_Express.notes.md
+  :mainline: true
+  :suggested_days: 0.0
+  :section: Q4
+  :experience_objectives: []
+- 
+- :subject_uuid: 0f6ed5e9-c172-4969-b990-f2324c91f5ad
+  :subject_name: Designing APIs
+  :uuid: 20f15106-3ee6-4544-bc57-0501ef4a089a
+  :name: RESTful Design
+  :description: Designing_APIs/RESTful_Design.desc.md
+  :instructor_notes: Designing_APIs/RESTful_Design.notes.md
+  :mainline: true
+  :suggested_days: 1.0
+  :section: Q4
+  :experience_objectives:
+  - :objective_uuid: 4dc11e12-d234-492a-a927-7ebfe0a88082
+    :objective_name: Use HTTP Methods semantically
+  - :objective_uuid: 0a845fb0-c76d-4858-8dc7-2305fd19e84f
+    :objective_name: Follows naming conventions for URLs and Actions
+  - :objective_uuid: 1a412f20-e0f4-431f-a4b5-42dde433befc
+    :objective_name: Endpoint paths should contain nouns
+  - :objective_uuid: 5b7f7bb0-ef41-4d27-8743-799e73147739
+    :objective_name: Nouns are plural
+  - :objective_uuid: 299a53d0-b28c-4790-8edb-b17eec274624
+    :objective_name: API responses include hypermedia
+  - :objective_uuid: 3d295430-ed77-4c64-af23-a45e3bdc1fa4
+    :objective_name: Implements an API with multiple endpoints, each supporting multiple
+      methods
+  - :objective_uuid: 534972bf-c5d7-486a-aec1-6c2b4d597ca2
+    :objective_name: Has documented an API using either a comment-parsing strategy
+      or a documentation tool such as Swagger
+  - :objective_uuid: 116f64fc-d57d-42d2-987c-25e675cc8eb6
+    :objective_name: Talk about hypermedia, HATEOS / JSON-API, automated docs / standardization
+- :subject_uuid: bcfe422a-cd35-4fd1-8ff8-6b078c476069
+  :subject_name: Javascript and the Browser
+  :uuid: d606e31e-87eb-4c4e-ac20-c0efeeb64075
+  :name: Canvas
+  :description: Javascript_and_the_Browser/Canvas.desc.md
+  :instructor_notes: Javascript_and_the_Browser/Canvas.notes.md
+  :mainline: false
+  :suggested_days: 2.0
+  :section: Q1
+  :experience_objectives: []
+- :subject_uuid: d5947e67-9d70-4e02-ae2a-b3135a9c1667
+  :subject_name: Data Structures / Algorithms
+  :uuid: 53391ce0-5ce2-4fc1-b0e7-362c0fd7b156
+  :name: Big O Notation (time complexity of algorithms)
+  :description: Data_Structures__Algorithms/Big_O_Notation_(time_complexity_of_algorithms).desc.md
+  :instructor_notes: Data_Structures__Algorithms/Big_O_Notation_(time_complexity_of_algorithms).notes.md
+  :mainline: true
+  :suggested_days: 1.0
+  :section: Q4
+  :experience_objectives:
+  - :objective_uuid: 6dc3d958-0572-406c-8802-70420d49c88d
+    :objective_name: Identify the access time of common data structures
+  - :objective_uuid: 65f42257-7135-4c43-9929-cc7e429b0fa1
+    :objective_name: Identify the Big O of common searching algorithms
+  - :objective_uuid: f9e8f5e6-2afb-42e8-a59d-bd2d3cb49a14
+    :objective_name: Has practice identifying the Big O of graph searches, heaps,
+      etc
+  - :objective_uuid: b02e05c2-bf60-4013-8ec3-cea62aa9fa24
+    :objective_name: Diagram the order of growth of big o complexity levels
+  - :objective_uuid: cf00abaf-b47f-4daa-bae9-d4c72f5bf797
+    :objective_name: Identify the Big O of common sorts
+- :subject_uuid: dfec3119-3ba1-4a14-ba2c-9f66715f4b98
+  :subject_name: Agile Project Management
+  :uuid: c6e1c219-e8ec-40a6-8d3c-79a1f018b688
+  :name: Capstone Full Stack Project
+  :description: Agile_Project_Management/Capstone_Full_Stack_Project.desc.md
+  :instructor_notes: Agile_Project_Management/Capstone_Full_Stack_Project.notes.md
+  :mainline: true
+  :suggested_days: 10.0
+  :section: Q4
+  :experience_objectives: []
+- 
+- :subject_uuid: 793b8c6a-a19d-4049-8183-9d454bf55028
+  :subject_name: Thinking Like a Developer
+  :uuid: 3dd5ba03-111a-4401-ad5d-87703eace205
+  :name: Typing
+  :description: Thinking_Like_a_Developer/Typing.desc.md
+  :instructor_notes: Thinking_Like_a_Developer/Typing.notes.md
+  :mainline: true
+  :suggested_days: 0.5
+  :section: Q1
+  :experience_objectives:
+  - :objective_uuid: f0155e56-bd8f-43f6-8c43-2e2d87d005d4
+    :objective_name: Students can type at least 40 WPM
+- :subject_uuid: 2886a5f1-92f6-44ba-8adb-185b2a161870
+  :subject_name: Deployment
+  :uuid: c3522d86-6dc8-4d10-bb59-bdc7e55404b0
+  :name: Deploying to Cloud Foundry (run.pivotal.io)
+  :description: Deployment/Deploying_to_Cloud_Foundry_(run.pivotal.io).desc.md
+  :instructor_notes: Deployment/Deploying_to_Cloud_Foundry_(run.pivotal.io).notes.md
+  :mainline: true
+  :suggested_days: 0.5
+  :section: Q3
+  :experience_objectives:
+  - :objective_uuid: c1cbcc04-ec0e-4dfa-a6ce-6349fdd30628
+    :objective_name: Student has a functioning app up and running that has environment
+      variables and attached services
+- 
+- :subject_uuid: 39680f2e-8004-4029-a637-1722f5b54625
+  :subject_name: UX User Testing
+  :uuid: 38ac9ff2-91e7-4ff3-9115-75bfca3b8282
+  :name: User Testing
+  :description: UX_User_Testing/User_Testing.desc.md
+  :instructor_notes: UX_User_Testing/User_Testing.notes.md
+  :mainline: true
+  :suggested_days: 0.5
+  :section: Q2
+  :experience_objectives:
+  - :objective_uuid: b48a3e7b-b87d-4cff-ae21-51d7cca8571e
+    :objective_name: Interviews users to validate requirements prior to building anything
+  - :objective_uuid: 1ba57fd0-518e-4ce0-bebe-20922e6f5303
+    :objective_name: Incorporates feedback from users into requirements
+  - :objective_uuid: bade07c2-f041-4959-aa91-7c1a7bb7fbe4
+    :objective_name: Presents testable artifact (wireframe, mockup, or working ui)
+      to users and gathers feedback
+  - :objective_uuid: c81dc4e5-b504-448b-8ace-adf1001a18ac
+    :objective_name: Iterates on feedback from users
+  - :objective_uuid: 10530e00-aa94-42f8-86cf-d67364932250
+    :objective_name: Sets a specific task, or tasks, for the user to test
+  - :objective_uuid: 32d2f8ae-0139-4cac-bb7b-8ce932753ee5
+    :objective_name: Finds someone unfamiliar with the application to test
+  - :objective_uuid: 6c721cd6-657b-48d8-a55a-e6a1f65a23f0
+    :objective_name: Takes notes while the test subject runs through the tasks
+  - :objective_uuid: 405ef565-706f-4b96-9698-c731b85ef7fe
+    :objective_name: Takes feedback once the test subject has finished the tasks
+  - :objective_uuid: 3fd9a35f-ee2a-483c-aa8e-0ba54c1bad18
+    :objective_name: Parses notes into actionable changes
+  - :objective_uuid: f6501021-44d8-45fd-aad0-e925a811c807
+    :objective_name: Implements changes from actionable feedback
+- 
+- :subject_uuid: d465e693-2e94-43a2-b99e-bb7283161bc2
+  :subject_name: Server Side JS with Node
+  :uuid: 060a99f5-4c71-4ca7-91ac-93aad5048eee
+  :name: Group CRUD Project
+  :description: Server_Side_JS_with_Node/Group_CRUD_Project.desc.md
+  :instructor_notes: Server_Side_JS_with_Node/Group_CRUD_Project.notes.md
+  :mainline: true
+  :suggested_days: 5.0
+  :section: Q2
+  :experience_objectives:
+  - :objective_uuid: c2091153-9447-4a52-a781-0c017bc1696b
+    :objective_name: Follow agile best-practices
+  - :objective_uuid: 5597bdf3-a29a-4390-aa46-b25549e03dee
+    :objective_name: 'Can operate with fair contribution (not necessarily equal contribution)
+      using specific techniques when necessary such as:'
+  - :objective_uuid: 3c691d42-6bcf-4caa-a7eb-0c0a8ecec7ec
+    :objective_name: Regularly verbalizes thought process
+  - :objective_uuid: 3a8fcb5c-063e-45b8-b564-1c085df35971
+    :objective_name: Is nice to work with
+  - :objective_uuid: 3d9a820b-99cb-4577-912a-77e32708f41f
+    :objective_name: Determine if code conforms to standards/guidelines set by the
+      team / someone else
+  - :objective_uuid: d338c482-d2af-4388-8bd2-75fa2fb547fe
+    :objective_name: Receive feedback openly and constructively
+  - :objective_uuid: 766043d9-066d-47b8-bd2b-fa3ff6b078a2
+    :objective_name: Deliver feedback that is actionable, specific, and kind.
+- :subject_uuid: bcfe422a-cd35-4fd1-8ff8-6b078c476069
+  :subject_name: Javascript and the Browser
+  :uuid: 9efe1982-6786-46da-82a5-5666bffc0b94
+  :name: Cross Browser Support
+  :description: Javascript_and_the_Browser/Cross_Browser_Support.desc.md
+  :instructor_notes: Javascript_and_the_Browser/Cross_Browser_Support.notes.md
+  :mainline: true
+  :suggested_days: 0.5
+  :section: Q3
+  :experience_objectives:
+  - :objective_uuid: 09e96d6a-4741-4739-9441-363c5bcf1b84
+    :objective_name: Ensure cross-browser compatibility with modernizr and other shims
+- 
+- :subject_uuid: 2886a5f1-92f6-44ba-8adb-185b2a161870
+  :subject_name: Deployment
+  :uuid: 60abd80c-d4bd-4a82-a389-2a1a89849f96
+  :name: Docker
+  :description: Deployment/Docker.desc.md
+  :instructor_notes: Deployment/Docker.notes.md
+  :mainline: true
+  :suggested_days: 0.5
+  :section: Q3
+  :experience_objectives:
+  - :objective_uuid: 002d9cc7-d056-4250-aa0f-12f9f6f2d0af
+    :objective_name: Written code against a docker container and pushed it a remote
+      environment
+- 
+- :subject_uuid: 2305e956-adeb-49e4-8b0d-2600b10ddfdc
+  :subject_name: Datastores
+  :uuid: 48661018-1921-470f-a2c5-9721d9bc449a
+  :name: Express with pg
+  :description: Datastores/Express_with_pg.desc.md
+  :instructor_notes: Datastores/Express_with_pg.notes.md
+  :mainline: true
+  :suggested_days: 1.0
+  :section: Q2
+  :experience_objectives:
+  - :objective_uuid: 58c7f9d7-fdca-4891-8f6c-35c6b2936b7f
+    :objective_name: Identify the parts of a URL
+  - :objective_uuid: f6501075-3acf-461a-8825-d71b99089015
+    :objective_name: Explain the basic purpose of each part of the URL
+  - :objective_uuid: 8dd9b756-099f-490c-a5a0-81850dd175fc
+    :objective_name: Writes and runs CRUD statements using SQL
+  - :objective_uuid: d850071f-4e4e-4ca4-8aef-e951033e2c5e
+    :objective_name: Sequence Diagram Client-Server Model
+  - :objective_uuid: fa9b0fe6-c083-45fb-8e43-a355cc39d588
+    :objective_name: Explain key ideas about how the web works
+  - :objective_uuid: 30bcc43c-fc3e-4c17-b2a9-05829c4c344f
+    :objective_name: Explains what a data/database schema is
+  - :objective_uuid: 299a4c8e-b303-4b35-85f2-be3d8f457d91
+    :objective_name: Protects against SQL injection
+  - :objective_uuid: 54954a7d-d5a8-4c64-ae17-7928b78f426f
+    :objective_name: Fetch all the associated data before rendering your view
+  - :objective_uuid: efd97052-7a48-40af-ae38-e57cbc103bf6
+    :objective_name: Discusses Verbs
+  - :objective_uuid: a31a4957-bd6c-4a6a-939b-cf315424d761
+    :objective_name: Listen to and handle events from `process`
+  - :objective_uuid: b1ec256a-7514-4496-94d0-d8d5540f8d1d
+    :objective_name: Uses NPM to install 3rd party modules
+  - :objective_uuid: 9cdfd035-8f71-4d74-af96-b37e050dcfef
+    :objective_name: Create custom modules
+  - :objective_uuid: ba7dc4e8-7255-40a5-94eb-083db5f47908
+    :objective_name: Require and use Node modules
+  - :objective_uuid: 3b86aead-35b3-4320-971a-d17362240a61
+    :objective_name: Uses NPM to manage dependencies and project metadata w/ package.json
+  - :objective_uuid: 1f1196c9-d5ee-4090-a7f5-efb5e6816ef3
+    :objective_name: Throw errors upstream for breaking errors
+  - :objective_uuid: 10ed86ae-a08c-4b52-bc28-f36d2790cd54
+    :objective_name: Handle exceptions in an application w/ node-style callbacks and
+      EventEmitters
+- 
+- :subject_uuid: 2305e956-adeb-49e4-8b0d-2600b10ddfdc
+  :subject_name: Datastores
+  :uuid: 31c385a3-6eea-4383-8009-04a8170a3cd0
+  :name: Transactions and Migrations
+  :description: Datastores/Transactions_and_Migrations.desc.md
+  :instructor_notes: Datastores/Transactions_and_Migrations.notes.md
+  :mainline: true
+  :suggested_days: 1.0
+  :section: Q2
+  :experience_objectives: []
+- 
+- :subject_uuid: 2305e956-adeb-49e4-8b0d-2600b10ddfdc
+  :subject_name: Datastores
+  :uuid: 38a6ce22-5965-466f-bee1-841126f377fb
+  :name: SQL operators and JOINs
+  :description: Datastores/SQL_operators_and_JOINs.desc.md
+  :instructor_notes: Datastores/SQL_operators_and_JOINs.notes.md
+  :mainline: true
+  :suggested_days: 1.0
+  :section: Q2
+  :experience_objectives:
+  - :objective_uuid: 23667d89-7897-4aae-8604-bc0ffd10fdcf
+    :objective_name: Describe the role of Primary keys, Foreign keys, and Referential
+      Integrity
+  - :objective_uuid: 313c1b1a-0957-4bdc-b19e-358d04b7d99c
+    :objective_name: Uses joins for model relationships (one to one, one to many,
+      many to many)
+  - :objective_uuid: 84472b9a-245e-492d-942b-92ab8ccac31a
+    :objective_name: 'Uses correct SQL join for given problem '
+- :subject_uuid: d5947e67-9d70-4e02-ae2a-b3135a9c1667
+  :subject_name: Data Structures / Algorithms
+  :uuid: 949a84ac-642b-4c20-bff9-8fc6d5b56c0a
+  :name: Trees / DFS / BFS
+  :description: Data_Structures__Algorithms/Trees__DFS__BFS.desc.md
+  :instructor_notes: Data_Structures__Algorithms/Trees__DFS__BFS.notes.md
+  :mainline: true
+  :suggested_days: 1.0
+  :section: Q4
+  :experience_objectives:
+  - :objective_uuid: 8278816b-b212-44fd-b472-8550b52d514d
+    :objective_name: Implement and use Trees
+  - :objective_uuid: e00b1c9c-151e-412f-bda9-14e0c106bfc8
+    :objective_name: Implement and use Graphs
+- :subject_uuid: e59bae37-553b-4c1b-8667-4dbbdeeae98d
+  :subject_name: Technical Interview Prep
+  :uuid: 42fd0480-97c4-4617-840a-41dcbbdd4a38
+  :name: Cultural Interviews
+  :description: Technical_Interview_Prep/Cultural_Interviews.desc.md
+  :instructor_notes: Technical_Interview_Prep/Cultural_Interviews.notes.md
+  :mainline: true
+  :suggested_days: 1.0
+  :section: Q4
+  :experience_objectives:
+  - :objective_uuid: 4748f8f2-949f-4fbb-bb03-f50b726d479f
+    :objective_name: Give a high level overview of the project
+  - :objective_uuid: 10a0334e-b166-425c-87f3-8c0c4d7ab952
+    :objective_name: Highlight a specific technical problem you solved
+  - :objective_uuid: 75b0ac6c-fec4-46a2-b635-a85e1b483cdf
+    :objective_name: Speaks enthusiastically
+  - :objective_uuid: def7c451-bae8-46d4-9272-7427ded9db37
+    :objective_name: Turn uncertainty into question for interviewer
+  - :objective_uuid: 5d706870-e0c1-4923-99f8-e2f294d509aa
+    :objective_name: Talk about what you did instead
+  - :objective_uuid: 1a9c70c9-724a-4f84-8b04-c8f6201ece06
+    :objective_name: 'Spews 0 bullshit '
+  - :objective_uuid: 4790197d-f3be-4922-8ac6-b5f13c3815bb
+    :objective_name: Own up to not knowing the answer
+- :subject_uuid: 2305e956-adeb-49e4-8b0d-2600b10ddfdc
+  :subject_name: Datastores
+  :uuid: 94865a80-b1ce-46c5-90c9-ef514405c514
+  :name: NoSQL
+  :description: Datastores/NoSQL.desc.md
+  :instructor_notes: Datastores/NoSQL.notes.md
+  :mainline: true
+  :suggested_days: 0.5
+  :section: Q3
+  :experience_objectives:
+  - :objective_uuid: 27aaaad5-6124-437f-b8d7-4d6aa1a31d52
+    :objective_name: Explains what collections and documents are
+  - :objective_uuid: 7deaf20c-9b9d-4dce-a7f1-1c1f0885210c
+    :objective_name: Explain difference between relational and document based data
+      stores and key-value stores
+- :subject_uuid: d5947e67-9d70-4e02-ae2a-b3135a9c1667
+  :subject_name: Data Structures / Algorithms
+  :uuid: 395bdb31-bc7e-4265-8dd0-a0041a659805
+  :name: Intro to Data Structures
+  :description: Data_Structures__Algorithms/Intro_to_Data_Structures.desc.md
+  :instructor_notes: Data_Structures__Algorithms/Intro_to_Data_Structures.notes.md
+  :mainline: true
+  :suggested_days: 1.0
+  :section: Q4
+  :experience_objectives:
+  - :objective_uuid: 566a41fc-5365-49bd-b472-654432e8a4e6
+    :objective_name: Identify and diagram an Array
+  - :objective_uuid: f0757a99-ff95-45cc-96b9-0fbaafc1a447
+    :objective_name: Identify and diagram a hash table
+  - :objective_uuid: 0e19c33c-8050-4dfb-b7cb-130ec02932ba
+    :objective_name: Identify and diagram a linked list
+  - :objective_uuid: 6fb188a6-cd6e-4a1f-820a-28d22e53043a
+    :objective_name: Identify and diagram a stack
+  - :objective_uuid: 2038e0e3-fef6-49fe-90f1-2fc32c94d726
+    :objective_name: Identify and diagram a queue
+  - :objective_uuid: d9559c72-dd79-4663-9784-25ae9b5d3b0f
+    :objective_name: Identify and diagram tries
+  - :objective_uuid: 4b8eb43c-e9cd-4dd1-ac4b-534793d44f23
+    :objective_name: Identify and diagram a tree
+  - :objective_uuid: 288d9ef2-5611-4c03-98b9-7953a678709b
+    :objective_name: Identify and diagram a graph
+  - :objective_uuid: c7e06529-d9b4-428b-9cc6-b9685eee36a0
+    :objective_name: Implement and use Hash Maps
+  - :objective_uuid: 8278816b-b212-44fd-b472-8550b52d514d
+    :objective_name: Implement and use Trees
+  - :objective_uuid: c0617929-2366-44fc-9374-0c73b9586193
+    :objective_name: Implement and use Stacks and Queues
+  - :objective_uuid: 26003645-e6f3-4a66-a402-9bd667de1124
+    :objective_name: Identify more complex data structures
+  - :objective_uuid: 5409f05a-414b-4b7e-ae81-6a5fb11a9670
+    :objective_name: Implement and use Linked Lists
+  - :objective_uuid: e00b1c9c-151e-412f-bda9-14e0c106bfc8
+    :objective_name: Implement and use Graphs
+  - :objective_uuid: c345e5cd-d9de-42cc-9565-ae438b93ed7c
+    :objective_name: Accesses data in nested structures
+  - :objective_uuid: 34d4f11d-b86b-4331-81ce-85111c8d1ab5
+    :objective_name: Employs standard data structures
+  - :objective_uuid: 2541c8fb-8bf6-43e0-9b75-b2c28811ab38
+    :objective_name: Choose the appropriate data structure to represent nouns and
+      solve problems
+- 
+- :subject_uuid: ce60c0de-9f49-423f-bbbe-7fea0c1b875c
+  :subject_name: Architecture
+  :uuid: 92f2d50c-d12d-4120-a752-27da99e4bbf2
+  :name: Intro To Application Architecture
+  :description: Architecture/Intro_To_Application_Architecture.desc.md
+  :instructor_notes: Architecture/Intro_To_Application_Architecture.notes.md
+  :mainline: true
+  :suggested_days: 1.0
+  :section: Q3
+  :experience_objectives:
+  - :objective_uuid: f914aaf8-67db-4ecf-8354-1a642a1f567c
+    :objective_name: 'Identify and explain: Route, Model, View / Template, Controller,
+      etc'
+  - :objective_uuid: 6be60589-b208-478a-83a8-1785ba7085ac
+    :objective_name: Sequence-diagram the interactions between a client, CDN, API,
+      and database
+  - :objective_uuid: 16871cb5-594c-47ec-acaa-04bb3291db37
+    :objective_name: Identify network zones in that diagram
+  - :objective_uuid: 3787fa73-e4f0-482c-8e5f-3c89bf12cefc
+    :objective_name: Compares / contrasts with monolithic application
+  - :objective_uuid: 3d220f86-91be-482c-91be-fee8e0801473
+    :objective_name: 'Explain and diagram a microservice architecture, including terms
+      such as:'
+- :subject_uuid: 2886a5f1-92f6-44ba-8adb-185b2a161870
+  :subject_name: Deployment
+  :uuid: 992c0ec1-a0c9-42ec-870b-33b1e9f7a7af
+  :name: Continuous Integration
+  :description: Deployment/Continuous_Integration.desc.md
+  :instructor_notes: Deployment/Continuous_Integration.notes.md
+  :mainline: true
+  :suggested_days: 0.5
+  :section: Q3
+  :experience_objectives:
+  - :objective_uuid: 8e3939d0-5c2b-48c4-86c8-bc576a36e69a
+    :objective_name: Draw a sequence diagram of an app that uses CI and CD
+  - :objective_uuid: b83ec78e-099d-4237-ac69-2f3b26b381cd
+    :objective_name: List common CI / CD tools / services such as Jenkins / Travis
+      Have at least one project managed with CD and CI
+  - :objective_uuid: 4158eb84-38ba-4cc5-befa-d986eec8d080
+    :objective_name: In a short paragraph describe key devops concepts
+- 
+- :subject_uuid: 2886a5f1-92f6-44ba-8adb-185b2a161870
+  :subject_name: Deployment
+  :uuid: 52607ad8-3456-47a2-8a77-fa36da3900ba
+  :name: Continuous Deployment
+  :description: Deployment/Continuous_Deployment.desc.md
+  :instructor_notes: Deployment/Continuous_Deployment.notes.md
+  :mainline: true
+  :suggested_days: 0.5
+  :section: Q3
+  :experience_objectives:
+  - :objective_uuid: 8e3939d0-5c2b-48c4-86c8-bc576a36e69a
+    :objective_name: Draw a sequence diagram of an app that uses CI and CD
+  - :objective_uuid: b83ec78e-099d-4237-ac69-2f3b26b381cd
+    :objective_name: List common CI / CD tools / services such as Jenkins / Travis
+      Have at least one project managed with CD and CI
+  - :objective_uuid: 4158eb84-38ba-4cc5-befa-d986eec8d080
+    :objective_name: In a short paragraph describe key devops concepts
+- 
+- :subject_uuid: 0bef6db4-d566-48c2-a5f5-ff09fce3b846
+  :subject_name: Application Analysis in Unfamiliar Environment
+  :uuid: fb6d80df-07c2-4fe0-894e-78e684131941
+  :name: Application Analysis in Unfamiliar Environment
+  :description: Application_Analysis_in_Unfamiliar_Environment/Application_Analysis_in_Unfamiliar_Environment.desc.md
+  :instructor_notes: Application_Analysis_in_Unfamiliar_Environment/Application_Analysis_in_Unfamiliar_Environment.notes.md
+  :mainline: true
+  :suggested_days: 1.0
+  :section: Q3
+  :experience_objectives:
+  - :objective_uuid: 85a639d6-59b7-443f-a3ca-72d03a285048
+    :objective_name: Install all necessary dependencies and start attached services
+  - :objective_uuid: df62fb5c-a29e-44aa-8821-6cd0f099ae69
+    :objective_name: Local database is created and populated
+  - :objective_uuid: 74ac37fd-da32-4a16-80e1-afb377da7030
+    :objective_name: Application starts and all “working” features are usable
+  - :objective_uuid: 529c6f29-3c5e-4ab5-9072-c16201f2f0ec
+    :objective_name: Fixes bugs in existing, unfamiliar code (at least 1)
+  - :objective_uuid: 8c241833-1366-4e84-ae77-376af6451193
+    :objective_name: Adds features to fulfill requirements (at least 1)
+  - :objective_uuid: af229e04-40e4-45cc-9daf-5e3c09cd6cf9
+    :objective_name: Can explain all copy/pasted code
+  - :objective_uuid: ab3c82ef-97af-4a62-9ca4-1c30274e5023
+    :objective_name: Reads and understands documentation to the extent that they can
+      use documentation in place of stack overflow or tutorials
+- :subject_uuid: 2dc0600d-e1f3-48ff-b241-199ce36fbe3f
+  :subject_name: Functional Programming with Javascript
+  :uuid: abb5ba41-aed3-45d2-8fac-47cb415d39a5
+  :name: Functional Programming with Javascript
+  :description: Functional_Programming_with_Javascript/Functional_Programming_with_Javascript.desc.md
+  :instructor_notes: Functional_Programming_with_Javascript/Functional_Programming_with_Javascript.notes.md
+  :mainline: true
+  :suggested_days: 1.0
+  :section: Q4
+  :experience_objectives:
+  - :objective_uuid: 2ffcf695-4756-4504-8ec9-28d998852e06
+    :objective_name: Describe Functional Programming in relation to OOP
+  - :objective_uuid: 1b7cf606-0793-49df-aa25-9c47f416e525
+    :objective_name: Uses array methods
+- :subject_uuid: d5947e67-9d70-4e02-ae2a-b3135a9c1667
+  :subject_name: Data Structures / Algorithms
+  :uuid: 06a72144-8045-4828-8f59-203fbdb9ccb5
+  :name: Algorithms
+  :description: Data_Structures__Algorithms/Algorithms.desc.md
+  :instructor_notes: Data_Structures__Algorithms/Algorithms.notes.md
+  :mainline: true
+  :suggested_days: 1.0
+  :section: Q4
+  :experience_objectives:
+  - :objective_uuid: d5ef9b8d-a886-49a8-a9a6-26aca92016b5
+    :objective_name: Given a problem stated as a whiteboarding challenge, identify
+      the correct algorithm and data structure
+  - :objective_uuid: 6fca2727-0cc0-4839-a5aa-58460c6bf804
+    :objective_name: Determine the best algorithm to use given some data or criteria
+  - :objective_uuid: 424e432c-f56f-4669-a2cc-a2af9dd769cd
+    :objective_name: Uses problem solving process from “Cracking the Coding Interview”
+  - :objective_uuid: 3f6e780d-0c55-47d6-be9a-3614d541a4f8
+    :objective_name: Implement common searches
+  - :objective_uuid: b298d629-85c1-4c24-8642-f4939f46817f
+    :objective_name: Describe more complex algorithms and data structures
+  - :objective_uuid: 8d5a2513-70bf-48f2-a39d-944a58c20474
+    :objective_name: Implement common sorts
+- :subject_uuid: a3a04645-41a3-4bb6-89e6-7c9b789a797d
+  :subject_name: ES2015
+  :uuid: 88f04503-aef8-4a3f-8857-406d79cc159f
+  :name: ES2015
+  :description: ES2015/ES2015.desc.md
+  :instructor_notes: ES2015/ES2015.notes.md
+  :mainline: true
+  :suggested_days: 0.5
+  :section: Q4
+  :experience_objectives:
+  - :objective_uuid: c6a2263c-a6d4-432d-a191-d5a06e87143b
+    :objective_name: Uses babel to transpile ES2015 code to ES5
+  - :objective_uuid: 3340a35b-4f88-4167-84ba-ff55341ce72f
+    :objective_name: Describe the new ways you can assign values when declaring object
+      literals
+  - :objective_uuid: c16b2371-cb29-4685-822e-30721c2432ae
+    :objective_name: Show how destructuring can be used to write more concise code
+  - :objective_uuid: 99c8cd65-8a4f-484a-a10e-e77dfdf1bc8a
+    :objective_name: Use a `for-of` loop to iterate over an iterable object
+  - :objective_uuid: 8837c6fd-ef6e-47db-b445-2653a1ce435d
+    :objective_name: Utilize Sets instead of Arrays when appropriate
+  - :objective_uuid: f36f7159-a342-4910-9962-03a5182e7e9d
+    :objective_name: Distinguish between a ‘specification’ and an ‘implementation’
+  - :objective_uuid: 84bb16d0-c3f6-4409-a131-3d74402fc9a3
+    :objective_name: Uses the fat arrow shortcut for writing anonymous functions
+  - :objective_uuid: d8a5109f-bef3-44a9-8835-a5b114201031
+    :objective_name: Use `let` and `const`
+  - :objective_uuid: 1d92387d-3918-4464-8387-f64754954eae
+    :objective_name: Uses the new class syntax, and `super` to call functions from
+      the parent
+  - :objective_uuid: 82fe6097-d4ba-4753-a677-e0931b744cc1
+    :objective_name: Use new features of backtick template strings
+- 
+- :subject_uuid: 7fb11472-3246-479d-a864-ede3e22c248f
+  :subject_name: Consuming Web APIs
+  :uuid: 6b9a2906-b9d9-4b7d-9a12-25b7ae1fe3d0
+  :name: Consuming APIs from a Server
+  :description: Consuming_Web_APIs/Consuming_APIs_from_a_Server.desc.md
+  :instructor_notes: Consuming_Web_APIs/Consuming_APIs_from_a_Server.notes.md
+  :mainline: true
+  :suggested_days: 0.0
+  :section: Q3
+  :experience_objectives:
+  - :objective_uuid: 50943b20-7f6c-4e25-bdae-e61ade4ce13c
+    :objective_name: Access content that is CORS protected (or you need to authenticate
+      against)
+- :subject_uuid: bb388526-c903-45a9-afbf-e6dff6f501d1
+  :subject_name: Server Side Frameworks with Express
+  :uuid: dd667299-ae58-4543-be95-64146d4329c8
+  :name: Server Side Templating
+  :description: Server_Side_Frameworks_with_Express/Server_Side_Templating.desc.md
+  :instructor_notes: Server_Side_Frameworks_with_Express/Server_Side_Templating.notes.md
+  :mainline: true
+  :suggested_days: 0.5
+  :section: Q2
+  :experience_objectives:
+  - :objective_uuid: 39b1d0ab-e970-40d8-b56d-11f16206143b
+    :objective_name: Pass data from routes to templates via locals and generate HTML
+      using a templating package including layouts and partials
+  - :objective_uuid: 442454f0-dcc2-42a4-9587-7dbf0e9d7e40
+    :objective_name: Includes client-side code
+  - :objective_uuid: 152215ae-99b9-4d79-bea5-7dc7bb3b5b85
+    :objective_name: Describe what the express static middleware does
+  - :objective_uuid: 83a4fefb-05cc-463b-9f7a-6eb1764270dc
+    :objective_name: Describe server-side validations
+  - :objective_uuid: 40294a6c-e014-4352-8ae2-4dae09cab9af
+    :objective_name: Describe why to use a redirect over a render
+  - :objective_uuid: be026802-09f0-466f-acca-ebad7435c973
+    :objective_name: List which standard CRUD actions should redirect (create, update,
+      delete)
+  - :objective_uuid: 28e52a8f-ef06-4545-91bf-aa04ee681256
+    :objective_name: Describe and sequence diagram each CRUD action including
+- :subject_uuid: ac805334-f3dd-4288-9a61-0dcef3e219d4
+  :subject_name: Programming with Javascript
+  :uuid: 121e5f4e-072d-48f5-8bfc-ce73112abb76
+  :name: JavaScript Errors
+  :description: Programming_with_Javascript/JavaScript_Errors.desc.md
+  :instructor_notes: Programming_with_Javascript/JavaScript_Errors.notes.md
+  :mainline: true
+  :suggested_days: 0.5
+  :section: Q1
+  :experience_objectives:
+  - :objective_uuid: 1a8eb00a-1749-4f09-8078-05cf5b577f7c
+    :objective_name: Identifies the line number of error messages from a stack trace
+  - :objective_uuid: 62117906-b811-4c05-9398-95c930478104
+    :objective_name: Resolves common JS errors by reading a stack trace and identifying
+      the cause of the error
+  - :objective_uuid: 74d80dc0-3180-4729-91b5-a54e8d375cac
+    :objective_name: Reads and researches error messages
+  - :objective_uuid: 3fefd7f6-38a0-431f-82bb-eb510d6dccad
+    :objective_name: Consistently incorporates Chrome Dev Tools into diagnostic process
+  - :objective_uuid: a13f339a-6635-4e26-ad91-cb019b989873
+    :objective_name: Catch exceptions using a `try...catch` block and handle them
+  - :objective_uuid: 35d3bac0-c757-444b-a463-355ac2216efa
+    :objective_name: Identify common JS errors and their causes
+- :subject_uuid: ac805334-f3dd-4288-9a61-0dcef3e219d4
+  :subject_name: Programming with Javascript
+  :uuid: cfe9d855-6d49-4600-9b70-dccd29d4c887
+  :name: Refactoring
+  :description: Programming_with_Javascript/Refactoring.desc.md
+  :instructor_notes: Programming_with_Javascript/Refactoring.notes.md
+  :mainline: true
+  :suggested_days: 0.5
+  :section: Q3
+  :experience_objectives:
+  - :objective_uuid: d1bfabbb-860e-43aa-8b7f-40a1b82c02df
+    :objective_name: Writes code that works, then refactors
+- 
+- :subject_uuid: 0c1be570-48b4-48a8-bc98-7da27a7be512
+  :subject_name: CSS
+  :uuid: cf35a8f4-cceb-422d-896d-7ef5f2842c00
+  :name: Web Components
+  :description: CSS/Web_Components.desc.md
+  :instructor_notes: CSS/Web_Components.notes.md
+  :mainline: true
+  :suggested_days: 0.5
+  :section: Q4
+  :experience_objectives:
+  - :objective_uuid: bd8a2ea3-6506-4b1f-afa0-fd9f3f4036e5
+    :objective_name: Uses web components
+- 
+- 
+- 
+- :subject_uuid: 793b8c6a-a19d-4049-8183-9d454bf55028
+  :subject_name: Thinking Like a Developer
+  :uuid: 25393c43-7ab2-425c-8d35-e8afba34ee65
+  :name: 'Debugging '
+  :description: Thinking_Like_a_Developer/Debugging_.desc.md
+  :instructor_notes: Thinking_Like_a_Developer/Debugging_.notes.md
+  :mainline: false
+  :suggested_days: 0.5
+  :section: ''
+  :experience_objectives: []
+- :subject_uuid: bb388526-c903-45a9-afbf-e6dff6f501d1
+  :subject_name: Server Side Frameworks with Express
+  :uuid: afc66ab5-2c1f-49b8-9ca7-d13657e8bc13
+  :name: Automated-CRUD-Assessment
+  :description: Server_Side_Frameworks_with_Express/Automated-CRUD-Assessment.desc.md
+  :instructor_notes: Server_Side_Frameworks_with_Express/Automated-CRUD-Assessment.notes.md
+  :mainline: false
+  :suggested_days: 1.0
+  :section: Q2
+  :experience_objectives:
+  - :objective_uuid: 5903bff8-8bb9-427c-ae90-7cec5233d8cd
+    :objective_name: Student has a functioning Node app up and running that has environment
+      variables and attached SQL database
+  - :objective_uuid: 0a845fb0-c76d-4858-8dc7-2305fd19e84f
+    :objective_name: Follows naming conventions for URLs and Actions
+  - :objective_uuid: 1a412f20-e0f4-431f-a4b5-42dde433befc
+    :objective_name: Endpoint paths should contain nouns
+  - :objective_uuid: 5b7f7bb0-ef41-4d27-8743-799e73147739
+    :objective_name: Nouns are plural
+  - :objective_uuid: 84eb8aaa-5544-413c-99bc-f4ac202be025
+    :objective_name: Build and run migrations to manage your database
+  - :objective_uuid: 54954a7d-d5a8-4c64-ae17-7928b78f426f
+    :objective_name: Fetch all the associated data before rendering your view
+  - :objective_uuid: 93fea93c-e26b-4f89-a430-3f3eec85ded0
+    :objective_name: Structure an express app using standard idioms
+  - :objective_uuid: b5893abb-4d75-48e5-a638-73c3cf73c470
+    :objective_name: Define schemas using Knex
+  - :objective_uuid: 4d34910c-ef8b-4a43-a578-5bb0022a6c14
+    :objective_name: Define routes and attach callback functions to those, and include
+      middleware functions
+  - :objective_uuid: 986564f6-b874-4228-97b9-0909fe210484
+    :objective_name: Extract requests' data from req, including req.params / req.body
+      / req.query
+- :subject_uuid: d5947e67-9d70-4e02-ae2a-b3135a9c1667
+  :subject_name: Data Structures / Algorithms
+  :uuid: 5252612d-b419-49bf-ae64-81e707dffd13
+  :name: 'Code Katas '
+  :description: Data_Structures__Algorithms/Code_Katas_.desc.md
+  :instructor_notes: Data_Structures__Algorithms/Code_Katas_.notes.md
+  :mainline: false
+  :suggested_days: 0.0
+  :section: ''
+  :experience_objectives: []
+- :subject_uuid: dfec3119-3ba1-4a14-ba2c-9f66715f4b98
+  :subject_name: Agile Project Management
+  :uuid: de3464b0-dac2-499a-a109-6334acf0eb8a
+  :name: Group New Technology Project
+  :description: Agile_Project_Management/Group_New_Technology_Project.desc.md
+  :instructor_notes: Agile_Project_Management/Group_New_Technology_Project.notes.md
+  :mainline: true
+  :suggested_days: 5.0
+  :section: Q3
+  :experience_objectives: []
+- :subject_uuid: bb388526-c903-45a9-afbf-e6dff6f501d1
+  :subject_name: Server Side Frameworks with Express
+  :uuid: 9e9e27ae-8855-4063-8c90-008badcb7f8d
+  :name: 'Restaurants CRUD Project '
+  :description: Server_Side_Frameworks_with_Express/Restaurants_CRUD_Project_.desc.md
+  :instructor_notes: Server_Side_Frameworks_with_Express/Restaurants_CRUD_Project_.notes.md
+  :mainline: false
+  :suggested_days: 4.0
+  :section: ''
   :experience_objectives: []

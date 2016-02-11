@@ -11,7 +11,7 @@ Programmers of all kinds live on the command line.  It gives us fast and reliabl
 
 Not only that, but Web servers usually don't have graphical interfaces, so we are forced to interact with them through command line and programmatic interfaces.  Once you become comfortable using the command line, staying on the keyboard will also help you keep an uninterrupted flow of work going without the disruption of shifting to the mouse.
 
-##Objectives -- You Should Learn How To:
+## Objectives -- You Should Learn How To:
 
 * Describe the connection between the command line and the "Graphical User Interface"
 * Use `man`, "*the only command you'll ever need*."
@@ -29,7 +29,7 @@ Not only that, but Web servers usually don't have graphical interfaces, so we ar
 	* systems: `ps, top, df`
 
 
-##Topics
+## Topics
 * [Introduction](#intro)
   * What is the Terminal
   * Opening the Terminal Application
@@ -53,7 +53,7 @@ Not only that, but Web servers usually don't have graphical interfaces, so we ar
   Further Reading
 
 
-#<a name="intro"></a>Introduction
+# <a name="intro"></a>Introduction
 ## What is the Terminal?
 Terminal is a modern version of an 'original' `User Interface` for unix based computers. At that time a [Text Terminal](http://en.wikipedia.org/wiki/Computer_terminal#Text_terminals) is all you would have seen, no windows, no mouse.
 
@@ -111,7 +111,7 @@ In the command `echo hello world` echo is the command, and the text "hello world
 > Read about [this command on Stack Overflow](http://stackoverflow.com/questions/17368872/how-to-move-or-copy-files-listed-by-find-command-in-unix) then try examining [that command on explain shell](http://explainshell.com/explain?cmd=find+%2Fpath%2Fto%2Fsearch%2F+-type+f+-name+%22.*smile.*%22+|+xargs+cp+-t+%2Ftarget%2Fpath%2F). The command line is very powerful. Don't worry if this command doesn't make sense yet.
 
 
-#<a name="current"></a>Current Working Directory
+# <a name="current"></a>Current Working Directory
 The file structure you see in the Terminal is the same as the one you see in the `Finder` application. Finder tends to hide some of the folders from you to keep things simple for most users, but everywhere that you go in Finder is accessible through 'Terminal'.
 
 
@@ -193,7 +193,7 @@ $ ls -l Documents/*.png
 -rw-r--r--@ 1 eschoppik  staff  6258658 Feb 27 10:57 Documents/Profile2.png
 ```
 
-##Hidden Files
+## Hidden Files
 Have you ever heard of `hidden files`? Well it's true, they are real! and we can see them by envoking the `-a` option:
 
 ```
@@ -237,14 +237,14 @@ Hidden files are hidden because their names begin with `.`
 
 > Pro-tip: `ls` las a LOT of options. Try looking at the manual entry by using `man ls`.
 
-##Mini Review - Current Working Directory
+## Mini Review - Current Working Directory
 
 * pwd
 * Home Directory
 * open .
 * ls -la
 
-#<a name="navigating"></a>Navigating Around
+# <a name="navigating"></a>Navigating Around
 
 ## The File System is a Tree
 
@@ -261,7 +261,7 @@ Your filesystem is a "tree". This is a very common data structure in computer pr
 
 In our filesystem *nodes* can be directories or files. The parent of any file or directory is the directory that contains that file or directory. There is exactly one directory in the filesystem that doesn't have a parent. This is called the __"root directory"__.
 
-##Root Directory
+## Root Directory
 Another important directory is the root directory `/`
 
 __Try This__:
@@ -284,7 +284,7 @@ $ pwd
 
 Remember, the `~` always refers to the current user's home directory, this is handy for scripts and for you, but you can use the full path just as well if you know it, `pwd` will give you the full path.
 
-##Relative Paths
+## Relative Paths
 __Try this:__
 
 ```
@@ -348,15 +348,15 @@ __Exercise: 5 minutes in Pairs__
 3. Help your partner if they are having trouble and use Tab Completion
 
 
-##Mini Review - Navigating Around
+## Mini Review - Navigating Around
 * root directory `/`
 * `../`
 * Absolute and Relative Paths
 * Tab Completion
 
-#<a name="files"></a>File Manipulation
+# <a name="files"></a>File Manipulation
 
-##mkdir
+## mkdir
 
 Now that we know how to move around, it's time to make some changes. We can make directories with the `mkdir` command.  Look at the man page by using the command `man mkdir`.  What's the format of the command for making a directory?
 
@@ -386,7 +386,7 @@ $ mkdir living_room
 
 What command can you use to see the results of your handywork?
 
-##Adding and Editing Files
+## Adding and Editing Files
 
 Let's `cd` into our new `living_room`  Look around with `ls`, and `ls -la`.  What do you see?
 
@@ -441,7 +441,7 @@ What does `less` do? Inside of your `less` window, try typing `/Mill` then hitti
 >Pro-tip: when you type `man command` you're using `less`. Try searching through man pages using the same /searchWord trick we used in `less`
 
 
-##echo and Redirection
+## echo and Redirection
 __Try This__
 
 `$ echo "This bookshelf flexes under the weight of the books it holds."`
@@ -501,7 +501,7 @@ See how we filtered out just the lines that contain Mil?  Try grepping for somet
 
 Adapted from [http://en.flossmanuals.net/command-line/piping/](http://en.flossmanuals.net/command-line/piping/)
 
-###Excercise: Using grep
+### Excercise: Using grep
 
 `grep` is a powerful command that can search through text output for matching text, or patterns of text. Use pipes, grep, and the commands we've learned about so far to do the following:
 
@@ -553,7 +553,7 @@ __Try This__
 
 >Pro-tip: `rm` does not send things to your trash can, it deletes them permanently. Be careful when using `rm`.
 
-##The "Recursive" Option
+## The "Recursive" Option
 
 By default, commands like `cp` and `rm` only apply to the file specified. We can copy and remove entire directories with the `-r` option. `-r` stands for recursive, which is a very important term in computer programming. In this context it means "follow the directory structure through sub-directories until we are at a 'leaf node' in our directory tree."
 
@@ -574,7 +574,7 @@ Now examine the contents of the directory 'study'. We copied all of our files to
 
 The study is gone. You can also use `rmdir` for this purpose.
 
-##Filename Wildcards
+## Filename Wildcards
 
 Sometimes we want to refer to a bunch of similar files, to do this we can use wildcards. The most common wildcard to use is `*` usually along with a file extension:
 __Try This__
@@ -654,7 +654,7 @@ You should be asked for your password, then the command will execute as if you a
 
 >Pro-tip: You can use `!!` as a shortcut to repeat the last command. A common idiom is to try a command, and if permission is denied to your current user, try `sudo !!` to repeat the previous command as root.
 
-##History
+## History
 
 Wow, we've done a lot of work. Remembering all these commands can be hard. Luckily our shell remembers a lot of what we've done for us! Try tapping the up arrow in your shell. What happens? We can scroll up and down through the most recent commands we've executed.
 
@@ -672,7 +672,7 @@ You can scroll up and down through all recently used commands that contain the s
 
 If you don't want to execute any of these commands, type `ctrl+c`. Control+c is a powerful command that you can use at any time to kill the currently running terminal process, or exit many terminal applications.
 
-#<a name="review"></a>Review
+# <a name="review"></a>Review
 
 ## Getting Help
 Don't forget about the command `man`! Short for __manual__, it will give a (hopefully) detailed explanation of that command.  Sometimes that explanation will be too detailed for you.  When you get lost in a man page and you want to understand it, start again from the beginning of the __man page__ and keep repeating.  Hopefully you will get further into the page each time you read it.
@@ -683,7 +683,7 @@ Many advanced commands also accept the --help, or -h option, but not all, but if
 
 `$ git --help`
 
-###Terminal Cheat Sheet
+### Terminal Cheat Sheet
 Bookmark this:
 
 * [http://bit.ly/terminalcheats](http://bit.ly/terminalcheats)

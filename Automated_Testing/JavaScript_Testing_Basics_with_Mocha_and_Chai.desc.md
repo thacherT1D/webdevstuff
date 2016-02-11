@@ -49,11 +49,11 @@ Install Mocha globally via NPM:
   $ npm install -g mocha
   ```
 
-Create a new directory called "testBasics". CD into it, and then create a subdirectory called test:
+Create a new directory called "test-basics". CD into it, and then create a subdirectory called test:
 
   ```sh
-  $ mkdir testBasics
-  $ cd testBasics
+  $ mkdir test-basics
+  $ cd test-basics
   $ mkdir test
   ```
 

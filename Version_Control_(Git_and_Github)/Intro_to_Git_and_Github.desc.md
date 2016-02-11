@@ -3,7 +3,7 @@
 ## Objectives
 
 * Discuss what a Version Control System is
-* Describe the purpose of a working directory, staging area, and repository are
+* Describe the purpose of a working directory, staging area, and repository
 * Initialize a git repository with `git init`
 * Check the status of changed files in a git repository with `git status`
 * Stage new and changed files with `git add`
@@ -20,6 +20,7 @@ Version control allows developers to revert back to a specific time and place in
 Sort of like a reset button.
 
 Version control allows developers to:
+
   * Keep track of changes to files over time
   * View previous states of your project
   * Return to a previous state of your project
@@ -28,6 +29,7 @@ Version control allows developers to:
   * Keep files together as a group
 
 There are many flavors of VCS:
+
   * Git
   * Mercurial
   * SVN
