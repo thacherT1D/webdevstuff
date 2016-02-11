@@ -112,7 +112,7 @@ Some notes on positioned (relative, absolute, or fixed) elements:
 **You Try**:
 
   - On codepen.io create a button
-  - Add a link-based psuedo-class that changes the background on hover.
+  - Add a psuedo-class that changes the background on hover.
 
 #### Text-based
 
