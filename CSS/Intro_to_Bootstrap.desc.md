@@ -38,7 +38,7 @@ Great question! A CDN (short for **C**ontent **D**elivery **N**etwork) is used t
 
 **How Can I link to the Bootstrap CDN?**
 
-Open up a new HTML file in Sublime Text; let's call it `bootstrap-sandbox.html`. Fill it up with some HTML boilerplate:
+Open up a new HTML file in your editor; let's call it `bootstrap-sandbox.html`. Fill it up with some HTML boilerplate:
 
 ```
 <!DOCTYPE html>
@@ -172,14 +172,6 @@ Protip #2: It is super easy to misspell the word glyphicon. Watch out.
 
 Protip #3: It's best practice to use `<button>` elements if you want to use buttons in Bootstrap. Check the [documentation](http://getbootstrap.com/css/#buttons) for more details.
 
-
-## Assessment and Excercises
-
-[Bootstrap Mocks Assignment 1](https://github.com/gSchool/BootstrapMocksAssignment)
-
-[Bootstrap Mocks Assignment 2](https://github.com/gSchool/bootstrap_mocks_assignment)
-
-Homework: [Bootstrap Challenge](https://github.com/gSchool/bootstrap-challenge)
 
 ## Extra Resources
 
