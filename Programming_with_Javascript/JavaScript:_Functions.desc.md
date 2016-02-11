@@ -329,4 +329,4 @@ whoIsTaller(‘Joe’, ‘Beyonce’);
 // ‘Joe’’
 ```
 
-![](https://app.box.com/embed/preview/tpr9eyi71n459kreyckmd7tkp5dgq000)
+![](https://s3-us-west-2.amazonaws.com/learning-experience-assets/Programming_with_Javascript/function-syntax.png?X-Amz-Date=20160211T175332Z&X-Amz-Expires=300&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Signature=146282046fb7a5143c74f0bcdd87a767cedd9df5071e4f2f8f881d2f74aca83a&X-Amz-Credential=ASIAJKLZWQDPQ7J4HJQA/20160211/us-west-2/s3/aws4_request&X-Amz-SignedHeaders=Host&x-amz-security-token=AQoDYXdzEBsagALI/eABw7bBP/veGKEPBKwHGJut5gb4dl6nEMjoH0yQ5ZTYGXLESeX%2BSJ8oZbv27i9wV4ArGNDetcUFtiLNZzX2tO41932t74YIATTuPf6ziz4t4iLSFgIQUZJ0L1TWF4FihVLYrjnKXASTEd6kPZwWIvjl6Zo2X0Nzwd00i%2BsKJ6fDxy4/yhAurpfD4t5U43UdweCPWYWJKlvbG20CmnQNb/uIlJdTB1TVudgPzoUlcjj2GXpf%2BkREkn6wJ/vU5x0LPGrabIKUHpHs2IyGrwXwatue%2BirSS1OMGk4Pj5GyPZUzXoFDv6rGbfMb7XoyRjcADNP7J3bRCTbwV0oWqPPJINSS87UF)
