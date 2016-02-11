@@ -5,7 +5,7 @@
 - Discuss the benefits of testing. How does it help developers do their job more effectively?
 - Write code to pass a given set of tests.
 - Write tests and code that passes those tests.
-- Describe and employ the tdd red / green / refactor cycle for unit tests / anatomy of a test
+- Describe and employ the tdd red / green / refactor cycle for unit tests
 
 [Slides here](https://docs.google.com/presentation/d/1E1Lskrk6hfJHzkBNwRmySg2X0m8nmKKTQN4w4tupYww/edit?usp=sharing)
 
