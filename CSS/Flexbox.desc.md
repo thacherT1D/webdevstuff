@@ -181,6 +181,11 @@ Wowee zowee that was fast!
 
 [codepen](http://codepen.io/dannyfritz/pen/MazLEZ?editors=110)
 
+
+### Flexbox Exercises 
+* [Flexbox Froggy](http://flexboxfroggy.com/)
+* [Exercises Repo](https://github.com/gSchool/flexbox-exercises)
+
 ### Other Layouts
 
 The layouts you can achieve with flexbox are limitless. It makes a lot of previously difficult layouts [much simplier](https://philipwalton.github.io/solved-by-flexbox/) and less error prone.

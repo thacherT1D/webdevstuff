@@ -1,5 +1,13 @@
 # Testing with Mocha - a primer
 
+### Objectives
+
+- Discuss the benefits of testing. How does it help developers do their job more effectively?
+- Write code to pass a given set of tests.
+- Install a test framework
+- Write tests and code that passes those tests.
+- Describe and employ the tdd red / green / refactor cycle for unit tests
+
 [Slides here](https://docs.google.com/presentation/d/1E1Lskrk6hfJHzkBNwRmySg2X0m8nmKKTQN4w4tupYww/edit?usp=sharing)
 
 Let's learn to test code with [Mocha](https://mochajs.org/), Mocha is a feature-rich JavaScript test framework.
@@ -15,21 +23,17 @@ Let's learn to test code with [Mocha](https://mochajs.org/), Mocha is a feature-
 
 *Something that is untested is broken.*
 
-If your codebase is untested then it is **very** difficult to add new features as-
+If your codebase is untested then it is **very** difficult to refactor or add new features as:
 
-- You don't know if that feature will work or not, and
+- You don't know if all features will work or not
+- All edge cases for that feature can be difficult to remember
 - The new feature could break your existing codebase.
 
 Automated tests help minimize these issues, allowing you to safely update your codebase and sleep at night. Unfortunately, many developers don't understand the importance of testing until their application breaks and s/he is up all night trying to fix things.
 
+Tests also serve as executable documentation for the codebase.
+
 Read more [here](http://stackoverflow.com/questions/67299/is-unit-testing-worth-the-effort).
-
-### Objectives
-
-- Discuss the benefits of testing. How does it help developers do their job more effectively?
-- Write tests for existing code.
-- Write code to pass a given set of tests.
-- Write tests and code that passes those tests.
 
 ### Key terms
 
@@ -49,12 +53,12 @@ Install Mocha globally via NPM:
   $ npm install -g mocha
   ```
 
-Create a new directory called "testBasics". CD into it, and then create a subdirectory called test:
+Create a new directory called "test-basics". CD into it and initialize a repository:
 
   ```sh
-  $ mkdir testBasics
-  $ cd testBasics
-  $ mkdir test
+  $ mkdir test-basics
+  $ cd test-basics
+  $ git init
   ```
 
 Initialize npm (press return multiple times to confirm the defaults).
@@ -86,7 +90,7 @@ Try running the tests with the `mocha` command. You should see:
 
   ```
 
-Add a test file called `test.js` to the `test/` directory and add the following code:
+Add a test file called `test.js` within a `test/` directory and add the following test setup code:
 
   ```javascript
   var code = require('../main');
@@ -97,17 +101,19 @@ Add a test file called `test.js` to the `test/` directory and add the following 
   });
   ```
 
-Finally, add a `main.js` file to the root directory.
+Finally, add a `main.js` file to the root directory to add our code.
 
 With the setup complete, we can now start writing some tests!
 
 ## Discussion
 
-All examples follow this three step process-
+All examples follow this process:
 
+1. Run your tests (Are you in a good state?)
 1. Place the mocha tests inside of `test/test.js`.
+1. Run your tests (Red)
 1. Add your code to test to `main.js`
-1. Run your tests.
+1. Run your tests (Green)
 
 Test time!
 
@@ -115,7 +121,15 @@ Test time!
 
 Per tradition, let's start with a basic "Hello, World!"
 
-#### Function
+#### Test (in `test/test.js`)
+
+```javascript
+describe("Hello World", function() {
+  it("should say 'Hello, World!' when ran");
+});
+```
+
+#### Function (in `main.js`)
 
 ```javascript
 module.exports = {
@@ -124,21 +138,14 @@ module.exports = {
 }
 ```
 
-#### Test
-```javascript
-describe("Hello World", function() {
-  it("should say 'Hello, World!' when ran");
-});
-```
-
 **What's happening here?**
 
-describe defines a test suite.
-it defines a single test
+`describe` defines a test suite.
+`it` defines a single test
 
 A suite takes a string that describes what a particular suite is testing.
 
-A test takes a string that describes the functiona
+A test takes a string that describes the function
 
 #### Test!
 
@@ -204,7 +211,7 @@ Notice a few things:
 - AssertionError
 - Line number (6)
 
-Update the helloWorld function in main.js to return 'Hello, World!' and then run the test.
+Update the `helloWorld` function in main.js to return 'Hello, World!' and then run the test.
 
 ```js
 module.exports = {
@@ -229,16 +236,23 @@ $ mocha
 
 We now have a passing test!
 
-## Exercise
+### Exercise: Leap Year
 
 Create a new directory in your workspace called leapYear.
 Follow the same steps as above to create the test.js, main.js, npm init and install chai.
 
-Give the following tax system, what kind(s) of tests can we write?
+Give the following leap year rules, what kind(s) of tests can we write?
 
 1. every year whose number is perfectly divisible by four is a leap year.
 1. except for years which are both divisible by 100 and not divisible by 400.
 1. 1600 and 2000 are leap years, but the century years 1700, 1800, and 1900 are not.
+
+Your function will work something like follows:
+
+```
+leapYear(2016)
+> true
+```
 
 ### Exercise: Taxes
 
@@ -263,12 +277,12 @@ var expect = require('chai').expect;
 describe('Tax Calculator', function(){
 
   it('should tax 10% on the first $10', function() {
-    expect(code.calculate(1)).to.equal(0.1);
-    expect(code.calculate(10)).to.equal(1);
+    expect(code.calcTax(1)).to.equal(0.1);
+    expect(code.calcTax(10)).to.equal(1);
   });
 
   it('should tax 7% on the second $10', function(){
-    expect(code.calculate(15)).to.equal(1.35);
+    expect(code.calcTax(15)).to.equal(1.35);
   });
 
 });

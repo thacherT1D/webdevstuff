@@ -26,7 +26,7 @@ These can be extended with
 
 ## UI
 
-From a UI perspective, when a user submits a form that has data that does satisfy your application's constraints, three things should happen:
+From a UI perspective, when a user submits a form that has data that does not satisfy your application's constraints, three things should happen:
 
 - The user should see the form again
 - The user should see error messages
@@ -140,6 +140,6 @@ This is only viable if your database provides unique indexes.  Many databases su
 You should make your site's UI as consistent as possible when displaying errors to users.  One way to enforce this consistency is to create an "include" (aka "partial").  So instead of duplicating error code in multiple places, you have one file that contains your markup / code for displaying errors, and you include that in multiple places.
 
 
-## Exercise
+## [EXERCISE ONE](https://github.com/gSchool/intro-to-express-validations-EXERCISE-1)
 
-https://github.com/gSchool/express-validations-intro
+## [EXERCISE TWO](https://github.com/gSchool/express-validations-exercise-2)

@@ -16,7 +16,9 @@
 <iframe src="https://player.vimeo.com/video/136582439?byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 
-## Exercises
+### EXERCISES:
+
+This is a repo of Express application exercises. 
 
 https://github.com/gSchool/express-introduction
 

@@ -19,4 +19,8 @@ SQL-specific entity relationship diagrams:
 
 Also:
 
-Write SQL driectly against the stack overflow DB (MSSQL): http://data.stackexchange.com/stackoverflow/query/new
+Write SQL directly against the stack overflow DB (MSSQL): http://data.stackexchange.com/stackoverflow/query/new
+
+## Advanced Resources:
+
+- https://modern-sql.com/use-case/literate-sql

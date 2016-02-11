@@ -12,6 +12,11 @@ Students will able to...
 - 8 of 9: know how to write a deeply nested array and object
 - 9 of 9: know how to read a deeply nested array and object
 
+- As you read through the blocks of code, write what you see in your own words, using your own values and use console.logs 	to view the output to confirm that you wrote the code correctly. Write the code in a .js file and then run the code with node. Example:
+```
+$ node app.js
+```
+
 # 1 of 9: Creating values for each reference type
 
 During [JavaScript: Intro, Types, Values, Variables, Control Flow](/redirects/learning_experiences/68), we learned about one of two types of values in JavaScript: primitive types. Now, we're going to shift our focus to the other types of values: reference types.
