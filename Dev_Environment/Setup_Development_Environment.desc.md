@@ -4,14 +4,14 @@ This guide will help you setup a web development environment on [Mac OS X 10.11 
 
 By the end of this guide, your development machine should have the following software installed and configured.
 
-1. [Terminal](#Configure_the_Terminal)
-1. [Homebrew](#Install_Homebrew)
-1. [Chrome](#Install_and_Configure_Chrome)
-1. [Fish](#Install_and_Configure_Fish)
-1. [Atom](#Install_and_Configure_Atom)
-1. [Git](#Install_and_Configure_Git)
-1. [Node](#Install_Node)
-1. [Surge](#Install_Surge)
+1. [Terminal](#configure-the-terminal)
+1. [Homebrew](#install-homebrew)
+1. [Chrome](#install-and-configure-chrome)
+1. [Fish](#install-and-configure-fish)
+1. [Atom](#install-and-configure-atom)
+1. [Git](#install-and-configure-git)
+1. [Node](#install-node)
+1. [Surge](#install-surge)
 
 After you've finished setting up your development environment, you'll be able to complete the following tasks.
 
