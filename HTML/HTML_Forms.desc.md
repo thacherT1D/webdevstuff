@@ -39,7 +39,7 @@ Forms contain a collection of __form elemenets__ which have defined behavior whe
 
 ## Building a Form
 
-Lets experiment with building forms. Clone the repo found here and complete challenge 1: [https://github.com/gSchool/html-forms](https://github.com/gSchool/html-forms)
+Lets experiment with building forms. Fork and clone the repo found here, then complete challenge 1: [https://github.com/gSchool/html-forms](https://github.com/gSchool/html-forms)
 
 ![](https://media1.giphy.com/media/YhyAJUCpno53y/200.gif)
 
