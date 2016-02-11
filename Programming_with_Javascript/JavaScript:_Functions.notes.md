@@ -51,7 +51,9 @@ var objectOfPrimitives = {
   - IWY Dissect a function and explain its anatomy:
   - CFU Cold-Calling: Instructor will point to each part of the function, provide wait time for all students to think about the answer, then cold call a student to explain the part of a function.
   - CFU Individual assignment: Student can fill in each part of the function syntax.
-  - ![](https://s3-us-west-2.amazonaws.com/learning-experience-assets/Programming_with_Javascript/function-syntax-answered.png?X-Amz-Date=20160211T175332Z&X-Amz-Expires=300&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Signature=9704b24c7655a98df1c3a2811e2ce70c6e8212d2cc44bb1e2220d227ffc09c31&X-Amz-Credential=ASIAJKLZWQDPQ7J4HJQA/20160211/us-west-2/s3/aws4_request&X-Amz-SignedHeaders=Host&x-amz-security-token=AQoDYXdzEBsagALI/eABw7bBP/veGKEPBKwHGJut5gb4dl6nEMjoH0yQ5ZTYGXLESeX%2BSJ8oZbv27i9wV4ArGNDetcUFtiLNZzX2tO41932t74YIATTuPf6ziz4t4iLSFgIQUZJ0L1TWF4FihVLYrjnKXASTEd6kPZwWIvjl6Zo2X0Nzwd00i%2BsKJ6fDxy4/yhAurpfD4t5U43UdweCPWYWJKlvbG20CmnQNb/uIlJdTB1TVudgPzoUlcjj2GXpf%2BkREkn6wJ/vU5x0LPGrabIKUHpHs2IyGrwXwatue%2BirSS1OMGk4Pj5GyPZUzXoFDv6rGbfMb7XoyRjcADNP7J3bRCTbwV0oWqPPJINSS87UF)
+
+![](https://s3-us-west-2.amazonaws.com/learning-experience-assets/Programming_with_Javascript/function-syntax-answered.png?X-Amz-Date=20160211T180210Z&X-Amz-Expires=300&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Signature=51e14bf03fa561694fc22712ab46676ccc9c3ff93f2a2b66975f5d0df6a827ef&X-Amz-Credential=ASIAJKLZWQDPQ7J4HJQA/20160211/us-west-2/s3/aws4_request&X-Amz-SignedHeaders=Host&x-amz-security-token=AQoDYXdzEBsagALI/eABw7bBP/veGKEPBKwHGJut5gb4dl6nEMjoH0yQ5ZTYGXLESeX%2BSJ8oZbv27i9wV4ArGNDetcUFtiLNZzX2tO41932t74YIATTuPf6ziz4t4iLSFgIQUZJ0L1TWF4FihVLYrjnKXASTEd6kPZwWIvjl6Zo2X0Nzwd00i%2BsKJ6fDxy4/yhAurpfD4t5U43UdweCPWYWJKlvbG20CmnQNb/uIlJdTB1TVudgPzoUlcjj2GXpf%2BkREkn6wJ/vU5x0LPGrabIKUHpHs2IyGrwXwatue%2BirSS1OMGk4Pj5GyPZUzXoFDv6rGbfMb7XoyRjcADNP7J3bRCTbwV0oWqPPJINSS87UF)
+
 - 3 of 7: create a function
   - IWY  create a function that logs their name.
   - IWY  create a function that logs a name accepted as argument.
