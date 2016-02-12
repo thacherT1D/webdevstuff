@@ -2,7 +2,7 @@
 
 This lesson will introduce you to the fundamental commands of Mac OS X. By the end, you'll be able to describe and utilize commands to manipulate the following concepts.
 
-* User accounts
+* [User accounts](#user-accounts)
 * Working directories
 * Home directories
 * Unix paths
@@ -16,17 +16,33 @@ This lesson will introduce you to the fundamental commands of Mac OS X. By the e
 
 Before we get stared, use Spotlight to launch the Terminal app by pressing the `Command` + `Spacebar` keys at the same time, typing the word "terminal" into the search field, and then pressing the `Enter` key.
 
-## The `whoami` command
+## User Accounts
 
-Displays the username of the active user.
+There are a two fundamental commands that illuminate the state of the active user.
+
+### `whoami`
+
+The `whoami` command displays the username of the shell's active user.
 
 ```
 whoami
 ```
 
+![](https://i.imgur.com/oocXBkY.png)
+
+### `groups`
+
+The `groups` command displays the groups of the shell's active user.
+
+`groups`
+
+![](https://i.imgur.com/penYt4A.png)
+
 ### Question?
 
 What's the username of your account?
+
+What are some of the groups that your account belongs to?
 
 ## The `pwd` command
 
