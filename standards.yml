@@ -139,17 +139,6 @@
     semantic\r\n"
   :tags:
   - html
-- :uuid: 2f1d22c7-b07b-4e5d-9c84-5aa989b7f36d
-  :name: Embed Rich Media using Audio & Video APIs
-  :subject_uuid: a7d5be0f-3937-465a-b5e9-b2555642e9d9
-  :subject_name: HTML
-  :resources: ''
-  :guiding_questions: ''
-  :description: ''
-  :instructor_notes: "###Assessments\r\n- [LMS Embedding Media](https://coursework.galvanize.com/assessments/64)\r\n-
-    [GH Image Map Exercise](https://github.com/gSchool/image-map-exercise)\r\n- [GH
-    Embedding Audio/Video Exercise](https://github.com/gSchool/embedding-audio-video)"
-  :tags: []
 - :uuid: 8552d31e-b5c6-4414-8a22-4e684bcd2595
   :name: Target HTML elements with CSS selectors
   :subject_uuid: 0c1be570-48b4-48a8-bc98-7da27a7be512
