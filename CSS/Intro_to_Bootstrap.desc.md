@@ -10,8 +10,7 @@ One such framework is Twitter's Bootstrap.
 
 By the end of this lesson you should be able to:
 
-* Take components from Twitter's Bootstrap (henceforth simply Bootstrap) and apply them to your site. 
-* Understand how a css framework like Bootstrap works.
+* Describe what a css framework like Bootstrap provides.
 * Make an HTML file that matches a "mockup" using Bootstrap __without using__ any CSS rules. 
 
 ## Content
