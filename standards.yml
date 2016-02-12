@@ -1710,16 +1710,6 @@
   :instructor_notes: ''
   :tags:
   - designing-apis
-- :uuid: 4655229a-33c6-4e0f-93e1-71c557c67602
-  :name: Document an API using an automated tool
-  :subject_uuid: 0f6ed5e9-c172-4969-b990-f2324c91f5ad
-  :subject_name: Designing APIs
-  :resources: ''
-  :guiding_questions: ''
-  :description: ''
-  :instructor_notes: ''
-  :tags:
-  - designing-apis
 - :uuid: cbaa4c7e-3a15-4530-ac43-bf910951db84
   :name: Secure an API endpoint using token-based authentication and CORS
   :subject_uuid: 0f6ed5e9-c172-4969-b990-f2324c91f5ad

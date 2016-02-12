@@ -1967,9 +1967,6 @@
   - :objective_uuid: 3d295430-ed77-4c64-af23-a45e3bdc1fa4
     :objective_name: Implements an API with multiple endpoints, each supporting multiple
       methods
-  - :objective_uuid: 534972bf-c5d7-486a-aec1-6c2b4d597ca2
-    :objective_name: Has documented an API using either a comment-parsing strategy
-      or a documentation tool such as Swagger
   - :objective_uuid: 116f64fc-d57d-42d2-987c-25e675cc8eb6
     :objective_name: Talk about hypermedia, HATEOS / JSON-API, automated docs / standardization
 - :subject_uuid: bcfe422a-cd35-4fd1-8ff8-6b078c476069
