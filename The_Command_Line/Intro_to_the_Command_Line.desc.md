@@ -16,11 +16,11 @@ This lesson will introduce you to the fundamental commands of Mac OS X. By the e
 
 Before we get stared, use Spotlight to launch the Terminal app by pressing the `Command` + `Spacebar` keys at the same time, typing the word "terminal" into the search field, and then pressing the `Enter` key.
 
-## User Accounts
+## User accounts
 
 There are a two fundamental commands that illuminate the state of the active user.
 
-### `whoami`
+### The `whoami` command
 
 The `whoami` command displays the username of the shell's active user.
 
@@ -30,7 +30,7 @@ whoami
 
 ![](https://i.imgur.com/oocXBkY.png)
 
-### `groups`
+### The `groups` command
 
 The `groups` command displays the groups of the shell's active user.
 
