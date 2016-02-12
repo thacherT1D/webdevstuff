@@ -1,118 +1,64 @@
-# Command Line Basics
+## Command Line Basics
 
-This lesson is an introduction to the command line.
-
-## Objectives
+This lesson will introduce you to the command line interface of the [Unix shell](http://en.wikipedia.org/wiki/Unix_shell). By the end, you'll be able to accomplish the following tasks.
 
 * Describe the connection between the command line and graphical user interfaces
-* Perform basic navigation operations on the command line
-	* `whoami`
-	* `pwd`
-	* `open`
-	* `ls`
-	* `cd`
-	* `tree`
-* Describe what the `HOME` directoriy is
-* Describe what command flags are and what they do
-* Look-up documentation with `man`
+* Navigate the file system from the command line
+* Describe the home directory
+* Describe command flags
+* Display manual pages from the command line
 * Describe the differences between absolute and relative paths
-* Perform basic file manipulation operations on the command line
-	* `touch`
-	* `mkdir`
-	* `rm`
-	* `rmdir`
-	* `cp`
-	* `mv`
-* Search a file with `grep`.
-* Chain commands and redirect output: `|, >, >>`.
-* Leverage your shell history with `history`
+* Modify the file system from the command line
+* Search a file and select lines that match one or more patterns
+* Redirect output from a command to a file or to another command
 
-## Topics
+Before we get stared, use Spotlight to launch the Terminal app by pressing the `Command` + `Spacebar` keys at the same time, typing the word "terminal" into the search field, and then pressing the `Enter` key.
 
-* [Introduction](#introduction)
-  * What is the Terminal
-  * Opening the Terminal Application
-* [Current Working Directory](#current)
-  * Current Directory
-  * Home Directory
-  * `ls`,`pwd`, commands
-* [Navigating Around](#navigating)
-  * Root Directory
-  * `cd`  
-  * Absolute and Relative Paths
-  * Tab Completion
-* [File Manipulation](#files)
-  * `mkdir`
-  * Editing Files   
-  * echo, Redirection and Piping
-  * Moving, Copying and Removing
-* [Review](#review)
-  * Getting Help
-  * Bonus Topics
-  Further Reading
+![](https://i.imgur.com/XQE36wU.jpg)
 
+## The `whoami` command
 
-# Introduction
-## What is the Terminal?
-Terminal is a modern version of an 'original' `User Interface` for unix based computers. At that time a [Text Terminal](http://en.wikipedia.org/wiki/Computer_terminal#Text_terminals) is all you would have seen, no windows, no mouse.
-
-The command line allows you to run a large collection of built in programs. These built in programs are the commands that power the operating system. Because of this history, it's very powerful but sometimes a little cryptic.
-
-Don't worry though, with a bit of practice you'll be flying around like a pro!
-
-Although they technically mean slightly different things, the following terms are synonyous with the Terminal Environment:
-
-  *  Shell
-  *  bash ('Bourne-Again shell', although I've haven't heard that used recently)
-  *  Command Line
-  *  Text Terminal
-  *  DOS Prompt (on windows machines)
-  *  SSH (on remote machines)
-  *  Bourne Shell
-  *  csh
-  *  ksh
-  *  sh
-  *  [UNIX Shell](http://en.wikipedia.org/wiki/Unix_shell)
-
-## Opening the Terminal
-__Follow Along:__
-
-1.  In the top right of the screen click the Magnifing Glass icon (or use `⌘+space`) to bring up 'Spotlight' and type 'Terminal'
-2.  Once Terminal starts locate the icon in the doc and select `Options->Keep In Dock` so that it's always handy.
-
-__Note:__ In documentation we often see a `#` or a `$` prefix before code examples, these characters are used to indicate that the example is a something which is executed in the terminal (as opposed to being a code sample) and usually these are not supposed to be entered when you execute a command. You'll see the `$` notation used throughout this learning experience.
-
-# <a name="current"></a>Current Working Directory
-The file structure you see in the Terminal is the same as the one you see in the `Finder` application. Finder tends to hide some of the folders from you to keep things simple for most users, but everywhere that you go in Finder is accessible through 'Terminal'.
-
-## Who am I?
-
-Displays the username of the currently logged in user.
+Displays the username of the active user.
 
 ```
-$ whoami
-ryansobol
+whoami
 ```
 
-## Where am I?
-Typically the shell will start in your `HOME` directory. This is a folder on the computer filesystem that belongs to you. You put your work here and configure the settings of many command line programs.
+### Question?
 
-Each user has their own `HOME` directory. In the past, it was really common for multiple people to share the same computer. Since the era of personal computing, most operating systems only have one human user account.
+What's the username of your account?
 
-At any given time a terminal shell process has one __current working directory__. Lets use the `pwd` (short for __print working directory__) command to show your current working directory:
+## The `pwd` command
 
-__Try This:__
+Typically the shell will start in your home directory. This is a folder on the computer file system that belongs to you. You put your work here and configure the settings of many command line programs.
+
+Each user has their own home directory. In the past, it was really common for multiple people to share the same computer. Since the era of personal computing, most operating systems only have one human user account.
+
+At any given time, the Unix shell has a **current working directory**. Let's use the `pwd` command to print the current working directory for your shell.
 
 ```
-$ pwd
-/Users/ryansobol
+pwd
 ```
 
-For Elie this is `/Users/ryansobol`, what is the __current working directory__ of your shell process?
+### Question?
 
->Pro-tip: the tilde character (`~`) is mapped (or ailiased) to the `HOME` directory on most Unix shells. Try: `echo ~`, is this the same as the output you got from `pwd`?
+What's the current working directory of your shell?
 
-In any computer system, a path represents a location in the filesystem. Paths are like addresses, listing a location from the general to the specific. It's a bit like addressing an envelope backwards.
+## The `echo` command
+
+The tilde `~` character represents the home directory. Try displaying the tilde `~` character with the `echo` command.
+
+```
+echo ~
+```
+
+### Question?
+
+Is the output from this command the as the output you got from the `pwd` command?
+
+## The Unix Path
+
+In any computer system, a path represents a location in the file system. Paths are like addresses, listing a location from the general to the specific. It's a bit like addressing an envelope backwards.
 
 ```
 USA
@@ -126,7 +72,7 @@ Galvanize, Inc.
 vs.
 
 ```
-/Users/ryansobol/Projects/someproject
+/Users/someuser/projects/someproject
 ```
 
 A path is **absolute** when it starts with `/`.
@@ -135,155 +81,125 @@ A path is **relative** when it does not.
 
 ### Question?
 
-Is the path returned by the pwd command absolute or relative?
+Is the path returned by the `pwd` command absolute or relative?
 
+## The `ls` command
 
-## Open
-
-Type that command into your terminal now
-
-__Try This__:
-
-`$ open .`
-
-Wherever we are, `open .`, opens a `Finder` window in the current directory, this can be handy sometimes.
-
->Pro-tip: the `.` character can be used as a reference to the __current working directory__ in the terminal.
-
-
-## Looking Around
-What can we find out about the  __current working directory__ ?
-
-One of the most useful commands is `ls`. It will list the contents of your current working directory like so.
+One of the most frequently used commands is the `ls` command which lists the contents of the current working directory.
 
 ```
-$ ls
-Applications Documents    Dropbox      Movies       Pictures     Public
-Desktop      Downloads    Library      Music        Projects
+ls
 ```
+
+### Question?
+
+In what order are the files and directories displayed?
+
+### Long format
 
 Like many shell commands, the behavior of `ls` can be modified. By default, it shows the names of items in your present working directory in alphabetical order. By providing the command with flags, we can modify that.
 
 For example, the `l` flag changes the listing shown to long format. This will display permission, ownership, and modification information about each item in the directory.
 
 ```
-$ ls -l
-total 0
-drwx------    5 ryansobol  staff   170 Feb  6 22:39 Applications
-drwx------+   3 ryansobol  staff   102 Feb  8 22:07 Desktop
-drwx------@  19 ryansobol  staff   646 Feb  5 11:10 Documents
-drwx------+ 133 ryansobol  staff  4522 Feb  5 22:19 Downloads
-drwx------@  16 ryansobol  staff   544 Feb  7 14:36 Dropbox
-drwx------+  68 ryansobol  staff  2312 Feb  8  2015 Library
-drwx------+   7 ryansobol  staff   238 Feb  7  2014 Movies
-drwx------+   6 ryansobol  staff   204 Feb  4  2014 Music
-drwx------+  16 ryansobol  staff   544 Feb  6 18:39 Pictures
-drwxr-xr-x   13 ryansobol  staff   442 Feb  9 06:20 Projects
-drwxr-xr-x+  10 ryansobol  staff   340 Sep  5  2014 Public
+ls -l
 ```
 
 Now I can see a lot more clearly what files are in my current working directory. Some of these items are files, some are directories and in my case also have a `link` which we'll deal with on another day :)
 
-The `t` flag changes the order of the listing so that the most recently modified items are first. You can supply a flag to a command with the `-` sign, like so:
+### Question?
 
-```
-$ ls -t
-Projects     Dropbox      Pictures     Documents    Public       Music
-Desktop      Applications Downloads    Library      Movies
-```
+INSERT QUESTION HERE
 
-Clearly, the ordering changes, but is it really sorting by modification time?
+### Human-friendly file sizes
 
+When used with the `-l` flag, use unit suffixes: Byte, Kilobyte, Megabyte, Gigabyte, Ter-abyte and Petabyte in order to reduce the number of digits to three or less using base 2 for sizes.
 ```
-$ ls -lt
-total 0
-drwxr-xr-x   13 ryansobol  staff   442 Feb  9 06:20 Projects
-drwx------+   3 ryansobol  staff   102 Feb  8 22:07 Desktop
-drwx------@  16 ryansobol  staff   544 Feb  7 14:36 Dropbox
-drwx------    5 ryansobol  staff   170 Feb  6 22:39 Applications
-drwx------+  16 ryansobol  staff   544 Feb  6 18:39 Pictures
-drwx------+ 133 ryansobol  staff  4522 Feb  5 22:19 Downloads
-drwx------@  19 ryansobol  staff   646 Feb  5 11:10 Documents
-drwx------+  68 ryansobol  staff  2312 Feb  8  2015 Library
-drwxr-xr-x+  10 ryansobol  staff   340 Sep  5  2014 Public
-drwx------+   7 ryansobol  staff   238 Feb  7  2014 Movies
-drwx------+   6 ryansobol  staff   204 Feb  4  2014 Music
+ls -hl
 ```
 
-What if we want to reverse the ordering?
+**TIP:** `ll`
 
-The `r` flag (note that that is a lower-case r) does this. Try using that flag by itself.
+### Question?
 
-```
-$ ls -r
-Public       Pictures     Movies       Dropbox      Documents    Applications
-Projects     Music        Library      Downloads    Desktop
-```
+INSERT QUESTION HERE
 
-Now try combining it with the `t` flag. Then try combining it both with the `l` and `t` flags.
+### Hidden Files
 
-## Hidden Files
-Have you ever heard of `hidden files`? Well it's true, they are real! and we can see them by envoking the `-a` option:
+Have you ever heard of hidden files? Well it's true, they are real! And we can see them by with the `-a` flag.
 
 ```
-$ ls -a
-.irbrc                            .ssh
-..                                .lesshst                          .subversion
-.CFUserTextEncoding               .local                            .v8flags.4.6.85.31.ryansobol.json
-.DS_Store                         .nds                              .viminfo
-.Trash                            .netrc                            .virtualenvs
-.asciinema                        .node-gyp                         .virtualfish
-.atom                             .node_repl_history                .zcompdump-photon-5.0.2
-.babel.json                       .npm                              Applications
-.bash_history                     .npmrc                            Desktop
-.cache                            .phantomjs                        Documents
-.config                           .pry_history                      Downloads
-.cups                             .psql_history                     Dropbox
-.dropbox                          .rediscli_history                 Library
-.gem                              .rnd                              Movies
-.gemrc                            .rubies                           Music
-.gitconfig                        .ruby-version                     Pictures
-.heroku                           .sqlite_history                   Projects
-.httpie                           .sqliterc                         Public
+ls -a
 ```
 
 Hidden Files are typically used by applications to store configurations and there will be a many of them in your home directory. Most users don't want to be editing these files so they don't show up in `Finder`, but you as a software developer will be editing some these for yourself later on in the course.
 
 Hidden files are hidden because their names begin with `.`
 
-## Man pages
+`ls -hal`
+
+**TIP:** `la`
+
+### Question?
+
+INSERT QUESTION HERE
+
+## The `man` command
+
 How can you know what flags may be used for a given command?
 
 Shells provide a system command called `man` (short for manual). You provide this command plus the name of another command and it'll return a manual explaining how that command works and what options it provides.
 
 Type the following command at your prompt:
 
-`$ man ls`
+```
+man ls
+```
 
 The man command provides access to the built-in manual for all unix commands. Often these manual pages include useful examples for common and advanced usage patterns.
 
-To quit the `man` systems, press the `q` key.
+To quit the `man` page and return to the shell, press the `q` key.
 
-## Practice
-__Exercise: 5 minutes__
+### Practice
 
-Use the `man` command to discover new flags for the `ls` command. Then try out different combinations of flags to see what they do. For each flag you try, make a prediction about the effect it will have. After trying it, review your prediction.
+With the `man` command, spend 3 minutes discovering new flags for the `ls` command. Try out different combinations of flags to see what they do. For each flag you try, make a prediction about the effect it will have. After trying it, review your prediction.
 
 Were you right? If not, in what way were you wrong? What happened that surprised you? These sorts of surprises are the seeds of learning. Treasure them.
 
->Pro-tip:
->[www.explainshell.com](http://explainshell.com/) is a great resource for understanding shell commands. For example, [](http://explainshell.com/explain?cmd=ls+-ltr).
+**TIP:** http://explainshell.com/ is a great resource for understanding [complex shell commands](http://explainshell.com/explain?cmd=ls+-lta).
 
+## The `open` command
 
-## Mini Review - Current Working Directory
+The file structure you see in the shell is the same as the one you see in the Finder application. Finder tends to hide some of the folders from you to keep things simple for most users, but everywhere that you go in Finder is accessible through shell.
 
-* `HOME` directory
-* `pwd`
-* Absolute vs relative paths
-* `open`
-* `ls`
-* Hidden files and directories
-* `man`
+Wherever we are, `open .`, opens a `Finder` window in the current directory, this can be handy sometimes. Type that command into your terminal now.
+
+`open .`
+
+**TIP:** The period `.` character represents the **current working directory**.
+
+### Question?
+
+INSERT QUESTION HERE
+
+## Review
+
+- What's the command for displaying the username of the active user?
+- What's the command for printing the current working directory?
+- What's a home directory?
+- What's the character that represents the home directory?
+- What's a path?
+- As a path get's longer, does it get more general or more specific?
+- What's an absolute path?
+- What's a relative path?
+- What's the command for listing the contents of a directory?
+- What's the flag for listing directories in long format?
+- What's a hidden file or directory?
+- What's the flag for listing the hidden content of a directory?
+- What's the command for display a command's manual page?
+- How do you quit a manual page and return to the shell?
+- What's the command for opening a directory in the Finder?
+- What's the character that represents the current working directory?
 
 # <a name="navigating"></a>Navigating Around
 
@@ -295,7 +211,7 @@ Install the `tree` command with Homebrew.
 brew install tree
 ```
 
-__Try This__:
+**Try This**:
 
 ```
 $ tree -L 1
@@ -315,14 +231,14 @@ $ tree -L 1
 11 directories, 0 files
 ```
 
-Your filesystem is a "tree". This is a very common data structure in computer programming. In a *tree* you have a series of __"nodes"__ that are connected to their __"parent node"__.
+Your file system is a "tree". This is a very common data structure in computer programming. In a *tree* you have a series of **"nodes"** that are connected to their **"parent node"**.
 
-In our filesystem *nodes* can be directories or files. The parent of any file or directory is the directory that contains that file or directory. There is exactly one directory in the filesystem that doesn't have a parent. This is called the __"root directory"__.
+In our file system *nodes* can be directories or files. The parent of any file or directory is the directory that contains that file or directory. There is exactly one directory in the file system that doesn't have a parent. This is called the **"root directory"**.
 
 ## Root Directory
 Another important directory is the root directory `/`
 
-__Try This__:
+**Try This**:
 
 ```
 $ cd /  
@@ -331,8 +247,8 @@ $ pwd
 
 The files on your computer are structured in a tree. The 'top' of the file system is know as the `root` directory. That may sound upside down, but in our case the root is at the top.
 
-We can move to the __root directory__ with the command `cd /`.  
-We can move back to your __home directory__ with the command `cd ~`.  
+We can move to the **root directory** with the command `cd /`.  
+We can move back to your **home directory** with the command `cd ~`.  
 
 ```
 $ cd ~  
@@ -343,7 +259,7 @@ $ pwd
 Remember, the `~` always refers to the current user's home directory, this is handy for scripts and for you, but you can use the full path just as well if you know it, `pwd` will give you the full path.
 
 ## Relative Paths
-__Try this:__
+**Try this:**
 
 ```
 cd ../
@@ -352,16 +268,16 @@ pwd
 
 What happened? Which directory are you in?
 
-In the terminal, the `.` character refers to the __current working directory__ and two dots `..` refers to the current directories __parent__ directory. What happens if you try this:
+In the terminal, the `.` character refers to the **current working directory** and two dots `..` refers to the current directories **parent** directory. What happens if you try this:
 
 ```
 $ cd /
 $ cd ..
 ```
 
-The terminal ignores `cd ..` in this case. the root directory is the only directory in your entire filesystem that does not have a parent.  
+The terminal ignores `cd ..` in this case. the root directory is the only directory in your entire file system that does not have a parent.  
 
-(`../`) is a __relative paths__ and you can use it anywhere you would use a path. What happens if we type:
+(`../`) is a **relative paths** and you can use it anywhere you would use a path. What happens if we type:
 
 ```
 $ ls -l ~/Documents/../
@@ -381,7 +297,7 @@ drwxr-xr-x+  4 Guest  _guest  136 Nov  4 10:47 Public
 
 The command means, list the contents of the parent of `~/Documents/` So it listed the contents of `~`, or the home directory.
 
-Any path starting with a `/` is said to be an __absolute path__ and it is the complete path starting from the root directory. Relative paths (ones that do not begin with a `/`) are relative to your current location.
+Any path starting with a `/` is said to be an **absolute path** and it is the complete path starting from the root directory. Relative paths (ones that do not begin with a `/`) are relative to your current location.
 
 ## Tab Completion
 Hitting `<TAB>` autocompletes.  Hit `<TAB>` constantly. Try it right now! Type:
@@ -399,7 +315,7 @@ This way you can easily see the competing outcomes of autocomplete. What happens
 The competing options for me are `Desktop/`, `Documents/`, and `Downloads/`
 
 ## Practice
-__Exercise: 5 minutes__
+**Exercise: 5 minutes**
 
 Navigate to around your computer's file system from the command line. Use a mixture of relative and absolute paths to navigate around. See what dark corners you can discover in your operating system.
 
@@ -421,7 +337,7 @@ Now that we know how to move around, it's time to make some changes. We can make
 
 >Pro-tip: WordsLikeThis are called CamelCase. Programmers frequently [argue about snake_case and CamelCase](http://programmers.stackexchange.com/questions/27264/naming-conventions-camelcase-versus-underscore-case-what-are-your-thoughts-ab)
 
-__Try This__
+**Try This**
 
 ```
 $ cd ~/Projects
@@ -435,7 +351,7 @@ What command can you use to see the results of your handywork?
 
 Let's `cd` into our new `notebook`  Look around with `ls`, and `ls -la`.  What do you see?
 
-__Exercise__
+**Exercise**
 I want my note book to have some notes.  
 
 `$ touch notes.txt`
@@ -462,7 +378,7 @@ We've created a file, so let's try removing it.
 
 `$ history > notes.txt`
 
-Using the closing angle bracket `>` in this way is called __redirection__.  Every command that we run in the shell has an input, an output, an error output, and arguments/operands.  We are saying:  "Take the output from `history` and put it in a new file called `notes.txt`"  
+Using the closing angle bracket `>` in this way is called **redirection**.  Every command that we run in the shell has an input, an output, an error output, and arguments/operands.  We are saying:  "Take the output from `history` and put it in a new file called `notes.txt`"  
 
 Try running `ls` again. What do you see that's different?
 
@@ -483,7 +399,7 @@ What does `less` do? Inside of your `less` window, try typing `/cd` then hitting
 </br>
 >Pro-tip: when you type `man command` you're using `less`. Try searching through man pages using the same /searchWord trick we used in `less`
 
-__Try This__
+**Try This**
 
 `$ history > notes.txt`
 
@@ -491,7 +407,7 @@ And then look at the file with the `less` command.
 
 `$ less notes.txt`.
 
-Our old text has been replaced with the new text. Sometimes we'll want to __append__ to the existing text instead of overwriting it. We use two angle brackets `>>` to append the string to the end of the file:
+Our old text has been replaced with the new text. Sometimes we'll want to **append** to the existing text instead of overwriting it. We use two angle brackets `>>` to append the string to the end of the file:
 
 `$ history >> notes.txt`
 
@@ -503,19 +419,19 @@ Let's look back at our books.  Read out the file.  Notice that the list of books
 
 Pipes allow us to use the output from one command as the input for another command.
 
-__Try This__
+**Try This**
 
 `$ cat notes.txt | sort`
 
 We took the output from `cat books.txt` and sent it through a pipe to `sort`.  The output of `cat books.txt` becomes the input of `sort`. The output of `sort` printed to our screen. Now lets redirect the output of `sort` to a file:
 
-__Try This__
+**Try This**
 
 `$ cat notes.txt | sort > sorted_notes.txt`
 
 There are dozens of powerful tools we can leverage using pipes.  One of the ones you'll be using the most is `grep`.
 
-__Try This__
+**Try This**
 
 `$ cat books.txt | grep Mil`
 
@@ -529,8 +445,8 @@ Adapted from [http://en.flossmanuals.net/command-line/piping/](http://en.flossma
 
 1. Using `ls` list all files in the current directory that contain the word 'book'
 2. Using `cat` list all the books in `books.txt` where the author or book title contains "John".
-3. Using `tree` find the fullpath of all the files on your filesystem which contain the string 'book'
-4. __CHALLENGE__, using `cat` again, list the books written by an author whose first or last name is John. Remember, Jack London's John Barleycorn doesn't count. Pipe the output of this to `sort`. Your output should match this:
+3. Using `tree` find the fullpath of all the files on your file system which contain the string 'book'
+4. **CHALLENGE**, using `cat` again, list the books written by an author whose first or last name is John. Remember, Jack London's John Barleycorn doesn't count. Pipe the output of this to `sort`. Your output should match this:
 
 ```
 Bartlett, John:Familiar Quotations
@@ -551,7 +467,7 @@ Milton, John:Paradise Lost
 
 Now that we have our books sorted, we really don't need our unsorted list of books.  `mv` stands for move, and that's how we move files and folders from place to place.
 
-__Try This__
+**Try This**
 
 `$ mv sorted_books.txt books.txt`
 
@@ -560,7 +476,7 @@ Examine the contents of our current directory. What has changed?
 ## Copying
 To copy files, we use the `cp` command.  Extrapolate from the way we used `mv` to copy the file `bookshelf.txt` to add a file `second_bookshelf.txt`.
 
-__Try This__
+**Try This**
 
 `$ cp bookshelf.txt second_bookshelf.txt`
 
@@ -569,7 +485,7 @@ What happend? What are the contents of second_bookshelf.txt?
 ## Removing
 `rm` is short for remove.  Use `rm` to remove the `second_bookshelf.txt` file we just created with `cp`.
 
-__Try This__
+**Try This**
 
 `$ rm second_bookshelf.txt`
 
@@ -579,7 +495,7 @@ __Try This__
 
 By default, commands like `cp` and `rm` only apply to the file specified. We can copy and remove entire directories with the `-r` option. `-r` stands for recursive, which is a very important term in computer programming. In this context it means "follow the directory structure through sub-directories until we are at a 'leaf node' in our directory tree."
 
-__Try This__
+**Try This**
 
 ```
 cd ..
@@ -599,7 +515,7 @@ The study is gone. You can also use `rmdir` for this purpose.
 ## Filename Wildcards
 
 Sometimes we want to refer to a bunch of similar files, to do this we can use wildcards. The most common wildcard to use is `*` usually along with a file extension:
-__Try This__
+**Try This**
 
 `$ ls -la *.txt`
 
@@ -666,7 +582,7 @@ This failed, because even though your user owns that file, you're not allowed to
 
 Enter `root`. Root is the administrative user. Root has all permissions. Root can do anything. You can become this "super user" to run a command using the `sudo` (super user do) command.
 
-__Try This__:
+**Try This**:
 
 ```
 sudo chown StrangeUser:staff bookshelf.txt
@@ -680,7 +596,7 @@ You should be asked for your password, then the command will execute as if you a
 
 Wow, we've done a lot of work. Remembering all these commands can be hard. Luckily our shell remembers a lot of what we've done for us! Try tapping the up arrow in your shell. What happens? We can scroll up and down through the most recent commands we've executed.
 
-__Try This__
+**Try This**
 
 `$ history`
 
@@ -697,7 +613,7 @@ If you don't want to execute any of these commands, type `ctrl+c`. Control+c is 
 # <a name="review"></a>Review
 
 ## Getting Help
-Don't forget about the command `man`! Short for __manual__, it will give a (hopefully) detailed explanation of that command.  Sometimes that explanation will be too detailed for you.  When you get lost in a man page and you want to understand it, start again from the beginning of the __man page__ and keep repeating.  Hopefully you will get further into the page each time you read it.
+Don't forget about the command `man`! Short for **manual**, it will give a (hopefully) detailed explanation of that command.  Sometimes that explanation will be too detailed for you.  When you get lost in a man page and you want to understand it, start again from the beginning of the **man page** and keep repeating.  Hopefully you will get further into the page each time you read it.
 
 >Pro-tip: when you're feeling meta, try the command `man man`
 
