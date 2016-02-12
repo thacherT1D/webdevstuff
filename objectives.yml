@@ -934,15 +934,6 @@
   :instructor_notes: 
 - :standard_uuid: 7ec77c83-b497-49c3-b08c-b729a77090b3
   :standard_name: Design and implement schemas
-  :uuid: 9952ca07-e16e-4a85-b4a3-d21b39db43cc
-  :name: Creates DB users w/ permissions for specific role (such as production user
-    just having select, insert, update, delete)
-  :description: 
-  :guiding_questions: 
-  :resources: 
-  :instructor_notes: 
-- :standard_uuid: 7ec77c83-b497-49c3-b08c-b729a77090b3
-  :standard_name: Design and implement schemas
   :uuid: 323bdb91-b796-4e0e-b047-782bb6d326b2
   :name: Build a schema using SQL commands
   :description: 
