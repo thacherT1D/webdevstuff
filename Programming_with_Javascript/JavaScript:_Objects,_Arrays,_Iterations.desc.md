@@ -1,608 +1,421 @@
-# An Introduction to Programming and JavaScript: Objects, Arrays, Iterations
-Objectives:
-Students will able to...
+## Javascript Day 1 Review
 
-- 1 of 9: create values for each of the reference types
-- 2 of 9: use `instanceof` operator with reference types
-- 3 of 9: explain the behavior of `==` and `===` with reference types
-- 4 of 9: explain how variable assignments works with reference types
-- 5 of 9: use conditional statements with an array and object
-- 6 of 9: use iterators with an array and object
-- 7 of 9: use native methods of an array and object
-- 8 of 9: know how to write a deeply nested array and object
-- 9 of 9: know how to read a deeply nested array and object
+1. What data types did we discuss?
+1. What's the value of `50 % 4 === 2 && !(typeof("9") == "number");`
+1. Write an `isOdd` function that determines whether a given integer is odd.
 
-# 1 of 9: Creating values for each reference type
+## Switch Statements
 
-During [JavaScript: Intro, Types, Values, Variables, Control Flow](/redirects/learning_experiences/68), we learned about one of two types of values in JavaScript: primitive types. Now, we're going to shift our focus to the other types of values: reference types.
-
-Let's use Node and create two of the three reference types found in JavaScript:
-- `Array`
-- `Object`
-- `Function` (on Tuesday)
-
-## Array `[]`
-
-In this section, we're going to learn how to perform CRUD (create, read, update, delete) operations with arrays.
-
-### Create elements
-
-To create an array, we type two characters: an open square bracket and a closing square bracket:
-
-```javascript
-[]
-```
-
-Similar to primitive types, we need to set our array to a variable if we want to access it at a later time. Let's rewrite the above code with a `var` statement:
-
-```javascript
-var myArray = [];
-```
-
-The syntax we're using to create our array is referred to as an array literal. To be more specific, our array literal is considered to be an empty array literal. We describe it as empty because arrays are designed to store sequences of data, which include reference types, primitives types, or both.
-
-Let's create an array literal and store four strings inside of it:
-
-```javascript
-var myArray = ["Kyle", "Danny", "CJ", "Roberto"];
-```
-
-For the syntax to be valid, each value needs to be delimited with commas.
-
-### Read Elements
-
-To access and read each element in the array, we need to use square bracket notation with an index. Indexes are typically Numbers.
-
-```javascript
-var myArray = ["Kyle", "Danny", "CJ", "Roberto"];
-
-myArray[0] // "Kyle"
-myArray[1] // "Dannyr"
-myArray[2] // "CJ"
-myArray[3] // "Roberto"
-```
-
-Notice that the index starts with `0` and then increments by `1` This sequence gives us a great mental model of an element's index. Moreover, it gives us a glimpse into how an array's elements are stored in memory--as a block.
-
-### Update elements
-
-To update a value stored at a specific index, we need to take a two step process. First, we need to access the desired element. Second, we need to set that element to a new value:
-
-```javascript
-var myArray = ["Kyle", "Danny", "CJ", "Roberto"];
-
-myArray[0] = "Ember Dude";
-// ["Ember Dude", "Danny", "CJ", "Roberto"];
-```
-
-### Delete elements
-
-To delete a value stored at a specific index, we need to use the keyword `delete` with the following syntax:
-
-```javascript
-var myArray = ["Kyle", "Danny", "CJ", "Roberto"];
-
-delete myArray[3];
-// ["Kyle", "Danny", "CJ", undefined];
-```
-
-Notice that `"Roberto"` was removed from our array, but the index for `"Roberto"` still exists. In other words, the keyword `delete` replaces a pre-existing value with `undefined`.  In a latter section, we'll learn how to implement the common task of removing the value and index.
-
-## Object `{}`
-
-Let's now transition to objects, which are created with a syntax that's very different from arrays.
-
-### Create key-value pairs
-
-We're going to declare a variable named `person` and set it to an empty object literal:
-
-```javascript
-var person = {};
-```
-
-Objects start with an open curly brace and end with a closing curly brace. Inside of these braces, we store data as key-value pairs. The key is similar to an index of an array. The value is similar to a value in an array.
-
-Note three more important differences between objects and arrays:
-
-- The key or value of an object cannot be created without a corresponding key or value.
-- The keys of an object must have an explicit and valid identifier (name).
-- The key-values of an object are not necessarily stored sequentially in memory.
-
-Here's an example of an object literal with one key-value pair:
-
-```javascript
-var person = {
-  firstName: "Bruce"
-}
-```
-
-The key-value pair is separated with a colon. The key is written as a variable and the value is written as a desired data type, such as the string `"Bruce"`.
-
-
-If we store more than one key-value pair, each pair must be separated with a comma. The value of the key-value pairs, as you'll notice, can have a value type of either primitive or reference.
-
-```javascript
-var person = {
-  firstName: "Bruce",
-  lastName: "Wayne",
-  favoriteColors: ["black", "yellow"]
- }
-```
-
-### Create key-value pairs with dot notation or square bracket notation
-
-Let me pose a scenario: Imagine that we declared a variable named `cat` and assigned it an empty object literal. How do we add key-value pairs to `cat`? We have two options: dot notation and square bracket notation.
-
-Dot notation works the following way:
-
-```javascript
-var cat = {};
-cat.firstName = "Felix";
-cat.lastName = "The Cat";
-
-cat
-// {firstName: "Felix", lastName: "The Cat"}
-```
-
-When using dot notation, the keys are placed after the dot. The corresponding values of the keys become the right operand of the equality operator. One note of caution about the keys: they must be a valid identifier. In other words, they must conform to these rules:
-
-- the name must begin with a `$`, `_`, or alphabet character
-- after the first character, any of the above plus numeric characters
-
-In the case that the key isn't a valid identifier (or it is a valid identifier), we may use square bracket notation:
-
-```javascript
-var cat = {};
-cat["first name"] = "Felix";
-cat["last name"] = "The Cat";
-
-cat
-// {'first name': 'Felix', 'last name': 'The Cat'}
-```
-
-Above, the keys are considered invalid due to the white space in their names. To circumvent this problem, we enclose the invalid identifier in quotation marks. Then, we enclose that string inside of square brackets.
-
-### Read key-value pairs
-
-To read the value of a key-value pair, we need to use dot notation or square bracket notation. Unlike above, we can omit the equality operator and the right operand:
-
-```javascript
-var cat = {};
-cat.firstName = "Felix";
-cat.lastName = "The Cat";
-
-cat
-// {firstName: "Felix", lastName: "The Cat"}
-
-cat.firstName  // "Felix"
-cat["firstName"] // "Felix"
-
-cat.lastName // "The Cat"
-cat["lastName"] // "The Cat"
-```
-
-Notice that we had to use quotation marks with the square bracket notation. If we didn't include the quotation marks, the JavaScript interpreter would mistake `firstName` and `lastName` to be variables that are not associated with the `cat` object. An example will help elaborate this point:
-
-```javascript
-var cat = {
-	firstName: 'Felix',
-	lastName: 'The Cat'
-};
-
-var firstName = "Boooo";
-
-cat.firstName  // "Felix"
-cat["firstName"]  // "Felix"
-cat[firstName] // undefined (analogous to cat["Boooo"])
-```
-
-### Update key-value pairs
-
-```javascript
-var cat = {};
-cat.firstName = "Felix";
-cat.lastName = "The Cat";
-cat
-// {firstName: 'Felix', lastName: 'The Cat'}
-cat['firstName'] = "Cat";
-cat['lastName'] = "Fritz";
-cat
-// {firstName: 'Cat', lastName: 'Fritz'}
+Switch statements are another way to express a very common structure:
 
 ```
-
-### Delete key-value pairs
-
-Following the previous example, we'll want to delete a key-value pair with the following syntax:
-
-```
-var person = {
-  firstName: "Bruce",
-  lastName: "Wayne"
-}
-
-delete person.firstName;
-
-person
-// {lastName: "Wayne"}
-```
-
-Deleting requires us to include the keyword `delete` in front of a key-value pair. This is similar to how we deleted values of an index with Arrays. Successfully deleting a pre-existing key-value pair will resolve to a Boolean value of `true`. If we delete a non-existing key-value pair, we are returned `undefined`.
-
-#  2 of 9: `instanceof` operator
-
-We now know how to use CRUD operations to create arrays and objects. We also know that both of them can store primitive and reference types. If we use the `typeof` operator, what will it return if we couple `typeof` with an array or object? Let's write some code and view the output:
-
-```javascript
-typeof [] // object
-typeof {} // object
-```
-
-That didn't work! To find out if a value is an Array, we can now use the `instanceof` operator.
-
-```javascript
-var people = [];
-people instanceof Array // true
-people instanceof Object // true
-
-var person = {}
-person instanceof Array // false
-person instanceof Object // true
-```
-
-An Array is just an object in JavaScript. It is an object that comes predefined with many methods and properties.
-
-# 3 of 9: `==` and `===` with reference types
-
-We learned that the double equality operator applies type conversion and the triple equality operator doesn't. When we work with reference types, these differences become irrelevant. There's just one rule to remember with reference types: The return value will be false unless the same reference, not two versions of the same reference, are being compared.
-
-```javascript
-// Due to the way object literals are parsed, we need to wrap them in parentheses
-[] == [] // false
-[] === [] // false
-({}) == ({}) // false
-({}) === ({}) // false
-```
-
-# Variable Assignment with Reference Types
-
-So how do we get a comparison of reference types to return `true`? This really depends on our intention. Reference types are similar to human names and social security numbers. Whenever we create a reference type, it's similar to creating a new human. A human is a human; but each human is unique, and using U.S. standards, receives a unique social security number.
-
-In the previous section, the double and triple equality operator were testing for equality of social security numbers--not humans. If we wanted to test for humans, then there are workarounds. We'll discuss them in the future; for now, let's focus on the social security problem, which is a crucial part of understanding reference types and pointers.
-
-# 4 of 9: Variable assignment with reference types
-
-Picture the following code:
-
-```javascript
-var person = {Name: "Danny"};
-var anotherPerson = person;
-
-anotherPerson.Name // "Danny"
-```
-
-We've used a `var` statement to declare a variable named `person` and set it to an object literal. Next, we used another `var` statement to declare a variable named `anotherPerson` and set it to `person`.
-
-With primitive types, each variable receives their own copy of a value. With reference types, however, they share the same value in memory (pointer). In other words, `person` and `anotherPerson` are two different variables. Since these variables are set to a reference type, they point to the same object--the same person, Danny.
-
-# Mutability of Reference Types
-
-To reinforce what we're learning about reference types, let's work with a slightly more complex code snippet:
-
-```javascript
-var person = {Name: "Daniel"};
-var anotherPerson = person;
-
-person.Name = "Danny";
-anotherPerson.Name // ?
-```
-
-What's the `Name` of `anotherPerson`? The answer is `"Danny"`. `anotherPErson` accessed our object literal and added a key-value pair on it.  When `person` wanted to read the value, it first found the object in memory, noticed that the object had a key named `Name`, and retrieved its value.
-
-# 5 of 9: Control structures with conditional statements
-
-Reference types are often used with control structures that involve conditional statements:
-
-- `if`
-- `if/else`
-- `if/else if/else`
-- `switch`
-
-Similar to the way control structures were used with primitive types, a conditional statement (e.g. `if`) gets executed if the value or expression contained in a conditional's parentheses resolves to a `truth-y` value.
-
-Let's create a scenario for using an array with an `if/else` statement: We are developers for a meetup application, and we want to prevent any emails to be sent to meetup attendees unless they allow it:
-
-```javascript
-var attendee = {
-	allowEmail: false, //I hate emails
-	name: "Danny"
-}
-
-if (attendees.allowEmail) {
-  // send email
+if () {
+} else if () {
+} else if () {
 } else {
-  // do not send email
+}
+```
+Here is the syntax for a switch statement which would replace our if, else if, else construct:
+
+```
+switch (/* our expression */ ) {
+   case /*value 1*/:
+       // some code
+       break;
+   case /*another value*/:
+       // some code
+       break;
+   default:
+       // the default code, just like the else block
+       break;
+}
+```
+Here is a code example
+
+```
+var typeOfPet = prompt("Please name an animal");
+switch (typeOfPet) {
+	case "dog":
+	   console.log(typeOfPet + " goes woof.");
+	   break;
+	case "cat":
+	   console.log(typeOfPet + " goes meow.");
+	   break;
+	case "bird":
+	   console.log(typeOfPet + " goes tweet");
+	   break;
+	case "mouse":
+	   console.log(typeOfPet + " goes squeak");
+	   break;
+	case "fox":
+	   console.log(typeOfPet + " goes Ring-ding-ding-ding-dingeringeding! Gering-ding-ding-ding-dingeringeding! Gering-ding-ding-ding-dingeringeding");
+	   break;
+	default:
+	   console.log("Sorry, I don't know what noise that animal makes.");
+	   break;
+}
+```
+## Loops
+Loops are essential to programming. They allow us to repeat an operation many times. Typically, execution of a loop lasts as long as a certain value holds true. The first type of loop we'll talk about is a for loop.
+
+### For Loops
+For loops are a concise way to express how a loop should be initialized, how long a loop should run, and what action should be taken at the end of each iteration.  The general syntax is below:
+
+```
+for (initialization; conditional; post loop increment) {
+    // Some code to run.
 }
 ```
 
-Another example would be a program that restricts content based on the user's age.
+Here is an example where we print the numbers 1 to 10:
 
-```javascript
-var user = {
-	age: 10,
-	name: 'Tator Tot'
-}
-if (user.age < 21) {
-	console.log("You are too young to consume alcohol!");
-} else {
-	console.log("What drink would you like?");
+```
+for (var i = 0; i < 10; i++) {
+   console.log(i + 1);
 }
 ```
 
-# 6 of 9: Control structures with iterators
+### Excercise
 
-Iterators extend to us the ability to iterate through the keys of an object or elements of an array. To illustrate this point, let's learn how to iterate with arrays and objects with the following iterators:
+1. Print the numbers 1 to 10 and also the number 10 to 1, side by side.  The output should look like this:
 
-- `for` loop (arrays)
-- `for-in`loop (objects)
-
-### `for` loop (arrays)
-
-Let's first view the code to iterate with arrays:
-
-```javascript
-var books = ["JavaScript: The Good Parts", "Eloquent JS", "You Don't Know JS"];
-
-for (var i = 0; i < books.length; i++) {
-	var book = books[i];
-	console.log(book);
-}
-// JavaScript: The Good Parts
-// Eloquent JS
-// You Don't Know JS
+```
+1  10
+2  9
+3  8
+4  7
+5  6
+6  5
+7  4
+8  3
+9  2
+10  1
 ```
 
-Imagine that we want to iterate through every element from our array from the first index to the last index. To achieve this goal, we essentially define a four-step process:
+2. Write a function that draws a triangle on the console. For example:
 
-1. Declare a variable that represents the first index (`i`) and set its value to the first index (`0`).
-2. Write a conditional statement that terminates when we iterated once for each element in the array.
-3. We want to increment `i` after every iteration of the `for` loop.
-4. During each iteration, we use `i` to access a element in the array.
+```
+/* triangle(3) should log:
 
-### `for-in` loop (arrays)
+#
+##
+###
 
-A `for-in` loop allows your to iterate over each key in an object. Here's the syntax for a `for-in` loop:
+*/
+```
 
-```javascript
-var person = {
-  firstName: "Homer",
-  middleName: "Jay",
-  lastName: "Simpson",
+### While loops
+
+A while loop is another way of constructing a loop.  Here is the syntax:
+
+```
+while ( /* Boolean expression */ ) {
+    Execute code
+}
+```
+
+Here is an example:
+
+```
+var timesForPhrase = 10;
+var phrase = prompt("What do you want to say " + timesForPhrase + " times?");
+
+var i = 0;
+while (i < timesForPhrase)  {
+   console.log(phrase);
+   i++;
+}
+
+```
+### Do-while loop
+
+Related to the while loop is the do-while loop. How do you think these two code blocks are similar? How are they different?
+
+```
+// log some squares
+
+var i = 1;
+while (i < 10) {
+  console.log(i*i);
+  i++;
+}
+
+// log some squares, another way
+
+var i = 1;
+do {
+  console.log(i*i);
+  i++;
+} while(i < 10);
+```
+
+### Beware of infinite loops!
+
+Sometimes, you may accidentally write a loop that will never end. This is called an **infinite loop**, and is basically terrible. Here's an example: suppose you want to log the numbers 1 through 10 to the console using a `while` loop, but you forget to increment your index at each step:
+
+```
+// Don't paste this into the browser unless you want to force quit Chrome!
+var i = 1;
+while (i <= 10) {
+  console.log(i);
+}
+```
+Why is the above code block problematic?
+
+### Exercises
+
+1. Print the numbers 1 to 10 and also the number 10 to 1, side by side.  This time make sure to use a while loop instead of a for loop.
+1. Write code to print all the odd numbers between 1 and 100.
+1. Explain what the code below is doing. Why is a `while` loop more suitable than a `for` loop in this case?
+
+```
+var headsInARow = function() {
+  var total = 0;
+  var flip = Math.random();
+  while (flip > 0.5) {
+    total++;
+    flip = Math.random();
+   }
+  return "Number of consecutive times heads came up: " + total;
+}
+```
+
+### Arrays 
+
+Arrays hold an ordered list of objects in Javascript.  Arrays can hold numbers, strings, arrays, other objects, and even functions.
+
+Here are a few examples:
+
+```
+var arr = []; // Empty array.  Does not have any data
+var arr2 = Array();  // Another way of creating an empty array.
+var numbers = [1,2,3,4];  // An array containing numbers
+var strings = ["a", "r", "r", "a", "y"];  // An array with strings
+var mixed = [1, "b", 88, -2.5, false]; // All types of types
+
+```
+### Accessing and modifying arrays
+To do more useful things with arrays, we need to be able to put data into them and get data out.  Here is how arrays are accessed:
+
+```
+var arr = [5,4,3,2,1];
+arr[0]; // Returns 5
+arr[4]; // Returns 1
+arr.length // The length of the array.  Returns 5 in this case
+
+var arrOfArrs = [ [1,2,3], [4,5,6], [7,8,9] ];
+arrOfArrs[0][0];  // Returns 1
+arrOfArrs[0];     // Returns an array, [1,2,3];
+arrOfArrs[2][0];  // Returns 7
+
+```
+Note that characters in strings can be accessed in a similar way!
+
+```
+var str = "string";
+str[0]; // Returns "s"
+str[5]; // Returns "g"
+str.length // Returns 6
+
+var arrOfStrs = ["this", "is", "a", "list", "of", "strings"];
+arrOfStrs[0][0]; // Returns "t";
+arrOfStrs[1]; // Returns "is";
+arrOfStrs[3][0]; // Returns "l";
+```
+Next, here's a few functions available to arrays for adding and removing data:
+
+```
+var arr = ['a', 'b', 'c'];
+arr.push('d');  // array is now ['a', 'b', 'c', 'd']
+arr.pop();      // Array is now back to ['a', 'b', 'c']
+
+arr.shift();    // Array is now ['b', 'c']
+arr.unshift('z');   // Array is now ['z', 'b', 'c'];
+arr.unshift('q');   // Array is now ['q', 'z', 'b', 'c'];
+```
+Here are some other common Array methods:
+
+[More on Arrays](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
+
+`concat`: concatenates two arrays. Sample usage: `[1,2,"hi"].concat([3,"bye"]);`
+
+`join`: joins elements of an array into a string. Sample usage: `[4,5,6].join(" ");
+
+`indexOf`: returns the smallest index of a given element in an array, or -1 if the element is not in the array. Sample usage: `[7,8,9].indexOf(9);`
+
+### Exercise
+
+1. Look up splice and figure out how to remove the 3rd element from an array.
+1. Write a function that takes in an array of numbers and returns an array with the squares of those numbers. For example, the function should map the array [1, 2, 3] to the array [1, 4, 9].
+1. Suppose you're in a hallway lined with 100 closed lockers. You begin by opening every locker. Then you close every second locker. Then you go to every third locker and open it (if it's closed) or close it (if it's open). Let's call this action toggling a locker. Continue toggling every nth locker on pass number n. After 100 passes, where you toggle only locker #100, which lockers are open?
+
+### Objects
+
+Objects are the building blocks of Javascript.  You can make very complex structures out of objects.  They are very similar to arrays, except that the accessor doesn't have to be a number.  Here is a simple example:
+
+```
+var myObj = {}; // Creates an empty object literal
+var myObj2 = { name : "Matt", position: "Associate Instructor", dog: "Whiskey"};
+myObj2['dog'];  // returns the string "Whiskey"
+myObj2.dog;   // Also returns the string "Whiskey"
+
+var persion = { name : "Matt", interests: ["baseball", "coding", "hiking"] };
+person.interests[1];   // What does this return?
+```
+
+`name`, `position`, `dog` are all _properties_ of `myObj2`.
+
+### Exercise
+Use the following object:
+
+```
+var players = [
+    {name: 'Bumgarner', number: '40', position: 'starting pitcher', salary: 6950000},
+    {name: 'Posey', number: '28', position: 'catcher', salary: 17277777},
+    {name: 'Belt', number: '9', position: 'first base', salary: 3600000},
+    {name: 'Panik', number: '12', position: 'second base', salary: 522500},
+    {name: 'Crawford', number: '35', position: 'shortstop', salary: 3175000},
+    {name: 'Duffy', number: '5', position: 'third base', salary: 509000},
+    {name: 'Aoki', number: '23', position: 'left field', salary: 4000000},
+    {name: 'Pagan', number: '16', position: 'center field', salary: 10250000},
+    {name: 'Pence', number: '8', position: 'right field', salary: 18500000},
+];
+```
+Write the javascript code to print the following:
+
+1. Posey's number
+2. Duffy's position
+3. The entire object that represents Bumgarner.
+4. The cost of all 9 players to the Giants organization.
+
+### Objects and Functions
+
+Objects can save primitive types like numbers, bools, strings, etc, but objects can also save functions.
+
+Just like a function can be saved to a variable:
+
+```
+var helloWorld = function() { console.log("Hello World"); };
+```
+A function can also be saved inside an object:
+
+```
+var calculator = { 
+  add: function (left, right) {
+    return left + right;
+  }
+};
+calculator.add(3, 4);    // Returns 7
+```
+In this context, `add` is referred to as a method of the calculator object. Now that calculator has been created, it's easy to add new functionality:
+
+```
+calculator.subtract = function(left, right) { return left - right };
+calculator.subtract(6, 4);  // Returns 2
+```
+
+### Exercise
+
+Create an `average` method for the calculator object that takes a sequence of numbers as an array and can find the average.
+
+### Some remarks on Scope
+
+What's the result of running the following code:
+
+```
+var scoped = function(name) {
+  var greeting = "Hello " + name + "!";
+  return greeting;
 };
 
-// "Homer"
-// "Jay"
-// "Simpson"
-for (var key in person) {
-  console.log(person[key]);
-}
-
-// firstName
-// middleName
-// lastName
-for (var key in person) {
-  console.log(key);
-}
+var hello = scoped("Matt");
+console.log(greeting);
 ```
 
-Imagine that we want to iterate through every key-value pair in an object named `person`. To achieve this goal, we essentially define a two-step process:
+###Why is variable scope important?
 
-1. Declare a variable that represents the key of an object and associate with an object using the keyword `in`.
-2. Access all values of a key using the standard syntax for accessing the values of a key: `person[key]`. If we want to access just the keys, they we can just use the variable we created to represent a key.
+Let's add to the example above to add to our discussion of variable scope.
 
-# 7 of 9: Native Methods for `Array` and `Object`
-
-## Array
-
-Every array has access to a set of default properties and methods. Instead of exploring all of them now, we're going to explore the three most frequently used:
-
- - `length`
- - `push([value])`
- - `pop()`
-
-### `length`
-
-The `length` property stores the length of an array.
-
-```javascript
-var myArray = [];
-myArray.length;  // 0
-
-myArray[0] = "Sherlock";
-myArray.length; // 1
 ```
+var greeting = "Hello Galvanize";
 
-### `push([value])`
-
-The`push([value])` method enables us to add a value to the end of an array.
-
-```javascript
-var myArray = [];
-
-myArray.push("Kyle");
-myArray
-// ["Kyle"]
-
-myArray.push("Danny");
-myArray
-// ["Kyle", "Danny"]
-```
-
-### `pop()`
-
-The`pop()` method removes the last element of the array. The return value is the item being removed.
-
-```javascript
-var myArray = ["Kyle", "Danny", "CJ", "Roberto"]
-
-myArray.pop();
-//  "Roberto"
-myArray
-// ["Kyle", "Danny", "CJ"]
-
-myArray.pop();
-//  "CJ"
-myArray
-// ["Kyle", "Danny"]
-
-myArray.pop();
-//  "Danny"
-myArray
-// ["Kyle"]
-
-myArray.pop();
-//  "Kyle"
-myArray
-// []
-```
-
-## Object
-
-Similar to arrays, objects have access to default properties and methods. Let's explore the two most frequently used:
-
-- `hasOwnProperty([key])`
-- `Object.keys([object])`
-
-### `hasOwnProperty([key])`
-
-This method accepts a string as a value and returns a Boolean value if that string is a key of an object.
-
-```javascript
-var person = {name: "Watson"};
-
-// true
-person.hasOwnProperty("name");
-
-// false
-person.hasOwnProperty("height");
-```
-
-### `Object.keys([object])`
-
-Notice the capital `O` in `Object`. The value in keys is an actual object. This method returns all the keys of an object. Until now, we lacked a convenient way to achieve this task. When used, this method will return each key of an object as an item in an array.
-
-```javascript
-var person = {
-	firstName: "Bruce",
-	lastName: "Wayne"
+var scoped = function(name) {
+  var greeting = "Hello " + name + "!";
+  return greeting;
 };
 
-Object.keys(person);
-// ["firstName", "lastName]
+var result = scoped("John Muir");
+
+console.log(result);
+console.log(greeting); // What will the output of this line be?
 ```
 
-# 8 of 9: Creating Nested Values
+###Local vs. Global Scope and the 'var' keyword
 
-In the near future, you'll find yourself working with nested reference types. This describes deeply nested values, such as an array storing objects, which store objects and arrays, which can store more arrays, etc.
+```
+var greeting = "Hello Galvanize";
 
-```js
-var people = [
-	{
-		name: {
-			first: "Danny",
-			last: "Fritz"
-		},
-		age: 26,
-		address: {
-			country: "USA",
-			state: "Colorado"
-		},
-		favoriteColors: ["blue", "orange"]
-	},
-	{
-		name: {
-			first: "Barack",
-			last: "Obama"
-		},
-		age: 54,
-		address: {
-			country: "USA",
-			state: "DC"
-		},
-		favoriteColors: ["Red", "White", "Blue"]
-	}
-]
+var scoped = function(name) {
+  greeting = "Hello " + name + "!";
+  return greeting;
+};
 
-people[1].name.first // "Barack"
-people[0].favoriteColors[1] // "orange"
-people[1].age // 54
+var result = scoped("Henry Hudson");
+
+console.log(result); 
+console.log(greeting); // What will the output of this line be?
+```
+Check out another case:
+
+```
+var greeting = "Hello Galvanize";
+
+var scoped = function(name) {
+  var greeting = "Hello " + name + "!";
+  return greeting;
+};
+
+var result = scoped("Henry Hudson");
+
+console.log(result); 
+console.log(greeting); // What will the output of this line be?
 ```
 
-# 9 of 9: Reading Nested Values
+Here's even more nesting!
 
-Reading deeply nested values is a very important technique. If you want to include tweets in one of your future web apps, daily forecasts, or most other data from a third-party source of data, you'll need to know how to read deeply nested data.
+```
+var greeting = "Hello Galvanize";
 
-For this reason, you need to gain comfort navigating and finding data anywhere in a deeply nested value.
+var scoped = function(name) {
+  var greeting = "Hello " + name + "!";
+  console.log(greeting);
+  var yetAnotherGreeting = function() {
+    var greeting = "I'm another greeting!";
+    console.log(greeting);
+  }();
+};
+```
+###Optional Arguments
 
-***
-Exercise: Take this deeply nested reference type and write the code to find the following values:
-
-1. The email of user 1.
-2. The title of user 5.
-3. The user id of the first user in the user's array.
-
-```javascript
-{
-  users:[
-    {
-      user_id: 1,
-      name: "Chris Rivers",
-      mention_name: "chris",
-      email: "chris@hipchat.com",
-      title: "Developer",
-      photo_url: "https:\/\/www.hipchat.com\/chris.png",
-      last_active: 1360031425,
-      created: 1315711352,
-      status: "away",
-      status_message: "gym, bbl",
-      is_group_admin :1,
-      is_deleted :0
-    },
-    {
-      user_id: 3,
-      name: "Peter Curley",
-      mention_name: "pete",
-      email: "pete@hipchat.com",
-      title: "Designer",
-      photo_url: "https:\/\/www.hipchat.com\/pete.png",
-      last_active: 1360031425,
-      created: 1315711352,
-      status: "offline",
-      status_message: "",
-      is_group_admin: 1,
-      is_deleted: 0
-    },
-    {
-      user_id: 5,
-      name: "Garret Heaton",
-      mention_name: "garret",
-      email: "garret@hipchat.com",
-      title: "Co-founder",
-      photo_url: "https:\/\/www.hipchat.com\/garret.png",
-      last_active: 1360031425,
-      created: 1315711352,
-      status: "available",
-      status_message: "Come see what I'm working on!",
-      is_group_admin: 1,
-      is_deleted: 0
-    }
-  ]
+```
+function power(base, exponent) {
+  var exponent = exponent || 2;
+  var result = 1;
+  for (var count = 0; count < exponent; count++)
+    result *= base;
+  return result;
 }
+
+console.log(power(4));
+// → 16
+console.log(power(4, 3));
+// → 64
+
 ```
-***
 
-# Conclusion
+What if you want your exponent to be 0? How can you fix this?
 
-We learned about reference types. Combined with our knowledge of primitive types, we now know all the data types used in JavaScript. Awesome!
+### Homework
 
-<iframe src="https://player.vimeo.com/video/145447330?byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+1. Read chapters 3 & 4 in Eloquent Javascript.
+1. [More Javascript!](https://github.com/gSchool/basic-js-part-2)
