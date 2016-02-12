@@ -1782,24 +1782,6 @@
   :guiding_questions: 
   :resources: 
   :instructor_notes: "(firewalls) - “who’s allowed to do what”"
-- :standard_uuid: 1d4c879a-8dd3-4eb0-babc-8414e7ed73ec
-  :standard_name: Discuss and diagram microservice architecture
-  :uuid: 3787fa73-e4f0-482c-8e5f-3c89bf12cefc
-  :name: Compares / contrasts with monolithic application
-  :description: 
-  :guiding_questions: 
-  :resources: 
-  :instructor_notes: Identify seams
-- :standard_uuid: 1d4c879a-8dd3-4eb0-babc-8414e7ed73ec
-  :standard_name: Discuss and diagram microservice architecture
-  :uuid: 3d220f86-91be-482c-91be-fee8e0801473
-  :name: 'Explain and diagram a microservice architecture, including terms such as:'
-  :description: "- fail-fast\r\n- circuit breakers\r\n- horizontal scalability\r\n-
-    swappability\r\n- service discovery\r\n- config management\r\n- edge/proxy caching
-    server\r\n- 12factor apps"
-  :guiding_questions: 
-  :resources: 
-  :instructor_notes: 
 - :standard_uuid: eb7d309b-c9ef-4e54-a64d-33af757b8d18
   :standard_name: Determine the correct algorithm and data structure for interview-style
     problems following the “Cracking the Coding Interview” process

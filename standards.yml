@@ -1171,16 +1171,6 @@
   :instructor_notes: ''
   :tags:
   - Architecture
-- :uuid: 1d4c879a-8dd3-4eb0-babc-8414e7ed73ec
-  :name: Discuss and diagram microservice architecture
-  :subject_uuid: ce60c0de-9f49-423f-bbbe-7fea0c1b875c
-  :subject_name: Architecture
-  :resources: "http://12factor.net/\r\n"
-  :guiding_questions: ''
-  :description: ''
-  :instructor_notes: ''
-  :tags:
-  - Architecture
 - :uuid: 06005077-158b-4cd8-903f-562b709aa071
   :name: Build a web app that separates concerns using models, views, and controllers
   :subject_uuid: ce60c0de-9f49-423f-bbbe-7fea0c1b875c

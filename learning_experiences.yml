@@ -2317,9 +2317,6 @@
     :objective_name: Identify network zones in that diagram
   - :objective_uuid: 3787fa73-e4f0-482c-8e5f-3c89bf12cefc
     :objective_name: Compares / contrasts with monolithic application
-  - :objective_uuid: 3d220f86-91be-482c-91be-fee8e0801473
-    :objective_name: 'Explain and diagram a microservice architecture, including terms
-      such as:'
 - :subject_uuid: 2886a5f1-92f6-44ba-8adb-185b2a161870
   :subject_name: Deployment
   :uuid: 992c0ec1-a0c9-42ec-870b-33b1e9f7a7af
