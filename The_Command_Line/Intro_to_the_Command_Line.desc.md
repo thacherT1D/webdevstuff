@@ -166,7 +166,7 @@ With the `man` command, spend 3 minutes discovering new flags for the `ls` comma
 
 Were you right? If not, in what way were you wrong? What happened that surprised you? These sorts of surprises are the seeds of learning. Treasure them.
 
-**TIP:** http://explainshell.com/ is a great resource for understanding [complex shell commands](http://explainshell.com/explain?cmd=ls+-lta).
+**TIP:** http://explainshell.com/ is a great resource for understanding [complex shell commands](http://explainshell.com/explain?cmd=ls+-hal).
 
 ## The `open` command
 
