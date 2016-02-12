@@ -1,22 +1,6 @@
 ## Debugging Using the Sources Tab
 
-So far we've been debugging issues using `console.log` and while that is a fine place to start, once our programs become larger and more complex, we need better tools to diagnose and fix our errors!
-
-### Understanding JavaScript Errors
-
-Before we take a look at the `sources` tab, let's make sure we have a good idea of what kind of errors we commonly encounter and why they happen. Understanding this fundamentally will make debugging faster and far less painful!
-
-### Common JavaScript Errors
-
-`TypeError` - 
-
-`SyntaxError` - this one is pretty self explanitory, something is wrong with your syntax (make sure Array brackets, curly braces, quotes and parenthasis close!)
-
-`ReferenceError`
-
-`RangeError`
-
-A big part of becoming a developer is not only learning how to code, but learning how to use valuable tools to help you build faster and more efficiently.
+So far we've been debugging issues using `console.log` and while that is a fine place to start, once our programs become larger and more complex, we need better tools to diagnose and fix our errors! But first - lets examine the tool we will be using to do this!
 
 ## Chrome Developer Tools (Elements, Console, Network, Resources)
 
@@ -43,6 +27,25 @@ In this tab you can view all of the information that has loaded on a page (image
 You are probably going to find yourself in this tab most often. In the console you can play around with JavaScript as well as any of the JS you have included on your page. You can also see AJAX calls on the page (right click to check Log XMLHttpRequests) as well as any errors your browser is reporting. The console along with the sources tab are your best spots for debugging JavaScript and learning to work with them will make your life much easier as you continue to learn JS. 
 
 If you want to learn some more about Chrome Dev Tools, check out this free tutorial on [CodeSchool](http://discover-devtools.codeschool.com/?locale=en)
+
+### Understanding JavaScript Errors
+
+Before we take a look at the `sources` tab, let's make sure we have a good idea of what kind of errors we commonly encounter and why they happen. Understanding this fundamentally will make debugging faster and far less painful!
+
+### Common JavaScript Errors
+
+`TypeError` - Creates an instance representing an error that occurs when a variable or parameter is not of a valid type. What does that mean? Well try running this code in the console `undefined()` and you will get a very common error `undefined is not a function` - this means that the built in type `undefined` can not be invoked. Try this code:
+
+```js
+var person;
+person.sayHi // what does this display?
+```
+
+`SyntaxError` - this one is pretty self explanitory, something is wrong with your syntax (make sure Array brackets, curly braces, quotes and parenthasis close!)
+
+`ReferenceError` - this happens when you try to access something that has not been declared. Type in the chrome console `testing` - what do you see?
+
+`RangeError` - when you have a recursive function (a function that calls itself) and you don't return or exit the function before too many other functions are called, the call stack will exceed and you will get a range error or a Stack Overflow!
 
 ## Debugging JS + More Essential JS Concepts
 
