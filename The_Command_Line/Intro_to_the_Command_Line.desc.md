@@ -1,20 +1,21 @@
 ## Command Line Basics
 
-This lesson will introduce you to the command line interface of the [Unix shell](http://en.wikipedia.org/wiki/Unix_shell). By the end, you'll be able to accomplish the following tasks.
+This lesson will introduce you to the command line interface of the [Unix shell](http://en.wikipedia.org/wiki/Unix_shell). By the end, you'll be able to describe and use the following command line concepts.
 
-* Describe the connection between the command line and graphical user interfaces
-* Navigate the file system from the command line
-* Describe the home directory
-* Describe command flags
-* Display manual pages from the command line
-* Describe the differences between absolute and relative paths
-* Modify the file system from the command line
-* Search a file and select lines that match one or more patterns
-* Redirect output from a command to a file or to another command
+* Operating system user accounts
+* Current working directories
+* Home directories
+* Unix paths
+* Command flags
+* Manual pages
+* Describe the link between the command line and graphical user interfaces
+* File system viewing
+* File system navigation
+* File system modification
+* File system redirection
+* File system searching
 
 Before we get stared, use Spotlight to launch the Terminal app by pressing the `Command` + `Spacebar` keys at the same time, typing the word "terminal" into the search field, and then pressing the `Enter` key.
-
-![](https://i.imgur.com/XQE36wU.jpg)
 
 ## The `whoami` command
 
@@ -43,18 +44,6 @@ pwd
 ### Question?
 
 What's the current working directory of your shell?
-
-## The `echo` command
-
-The tilde `~` character represents the home directory. Try displaying the tilde `~` character with the `echo` command.
-
-```
-echo ~
-```
-
-### Question?
-
-Is the output from this command the as the output you got from the `pwd` command?
 
 ## The Unix Path
 
@@ -199,6 +188,18 @@ INSERT QUESTION HERE
 - How do you quit a manual page and return to the shell?
 - What's the command for opening a directory in the Finder?
 - What's the character that represents the current working directory?
+
+## The `echo` command
+
+The tilde `~` character represents the home directory. Try displaying the tilde `~` character with the `echo` command.
+
+```
+echo ~
+```
+
+### Question?
+
+Is the output from this command the as the output you got from the `pwd` command?
 
 # <a name="navigating"></a>Navigating Around
 
