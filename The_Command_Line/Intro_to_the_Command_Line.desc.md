@@ -1,19 +1,18 @@
-## Command Line Basics
+## Fundamental Commands of Mac OS X
 
-This lesson will introduce you to the command line interface of the [Unix shell](http://en.wikipedia.org/wiki/Unix_shell). By the end, you'll be able to describe and use the following command line concepts.
+This lesson will introduce you to the fundamental commands of Mac OS X. By the end, you'll be able to describe and utilize commands to manipulate the following concepts.
 
-* Operating system user accounts
-* Current working directories
+* User accounts
+* Working directories
 * Home directories
 * Unix paths
 * Command flags
 * Manual pages
-* Describe the link between the command line and graphical user interfaces
-* File system viewing
+* Graphical user interfaces
+* Environment variables
+* File system management
 * File system navigation
-* File system modification
 * File system redirection
-* File system searching
 
 Before we get stared, use Spotlight to launch the Terminal app by pressing the `Command` + `Spacebar` keys at the same time, typing the word "terminal" into the search field, and then pressing the `Enter` key.
 
