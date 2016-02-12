@@ -1,4 +1,4 @@
-## Fundamental Commands of Mac OS X
+## Mac OS X Fundamental Commands
 
 This lesson will introduce you to the fundamental commands of Mac OS X. By the end, you'll be able to describe and utilize commands to manipulate the following concepts.
 
