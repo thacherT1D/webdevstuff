@@ -62,7 +62,6 @@ In any computer system, a path represents a location in the file system. Paths a
 
 ```
 USA
-98104
 Washington
 Seattle
 111 Jackson Street
@@ -72,7 +71,7 @@ Galvanize, Inc.
 vs.
 
 ```
-/Users/someuser/projects/someproject
+/Users/someuser/Projects/someproject
 ```
 
 A path is **absolute** when it starts with `/`.
