@@ -1,4 +1,6 @@
-## Javascript Day 1 Review
+# An Introduction to Programming and JavaScript: Objects, Arrays, Iterations
+Objectives:
+Students will able to see...
 
 1. What data types did we discuss?
 1. What's the value of `50 % 4 === 2 && !(typeof("9") == "number");`
@@ -180,7 +182,7 @@ var headsInARow = function() {
 }
 ```
 
-### Arrays 
+### Arrays
 
 Arrays hold an ordered list of objects in Javascript.  Arrays can hold numbers, strings, arrays, other objects, and even functions.
 
@@ -300,7 +302,7 @@ var helloWorld = function() { console.log("Hello World"); };
 A function can also be saved inside an object:
 
 ```
-var calculator = { 
+var calculator = {
   add: function (left, right) {
     return left + right;
   }
@@ -362,7 +364,7 @@ var scoped = function(name) {
 
 var result = scoped("Henry Hudson");
 
-console.log(result); 
+console.log(result);
 console.log(greeting); // What will the output of this line be?
 ```
 Check out another case:
@@ -377,7 +379,7 @@ var scoped = function(name) {
 
 var result = scoped("Henry Hudson");
 
-console.log(result); 
+console.log(result);
 console.log(greeting); // What will the output of this line be?
 ```
 
