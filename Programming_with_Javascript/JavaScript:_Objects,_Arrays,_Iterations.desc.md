@@ -1,6 +1,6 @@
 # An Introduction to Programming and JavaScript: Objects, Arrays, Iterations
 Objectives:
-Students will able to see...
+Students will able to...
 
 1. What data types did we discuss?
 1. What's the value of `50 % 4 === 2 && !(typeof("9") == "number");`
