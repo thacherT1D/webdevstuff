@@ -1,153 +1,157 @@
-##Topics
-* [AJAX](#ajax)
-* [API](#api)
-* [JSON](#json)
-* [XMLHttpRequest](#xhr)
-  * [Cross Origin HTTP Request](#cors)
 
-## <a name="ajax"></a>AJAX
+# AJAX
 
-[[Wikipedia]](https://en.wikipedia.org/wiki/Ajax_(programming))
-[[MDN]](https://developer.mozilla.org/en-US/docs/AJAX)
+__Objective__
 
-AJAX is Asynchronous JavaScript and XML. It is a collection of technologies used by the web to communicate with servers. The really interesting part of this technology is the ability to asynchronously perform requests. That means you don't have to refresh the page to get new data! :)
+* Describe what ajax is useful for when making web apps.  What does it do?
+* Get comfortable with doing ajax GET and POST requests.
 
-The two main features of AJAX:
+## AJAX basics
 
-1. Make requests to a server without reloading the page
-1. Get new data from the server
+__AJAX__ stands for asynchronous javascript and XML.  The XML part is less applicable because most apis use JSON for the data exchange format.  AJAX is a key component in modern web apps.  It lets content be dynamically loaded onto the page without a full page refresh.
 
-The uses of this are limitless, but the majority use it as a way to directly consume and modify data. The next section talks about a service that provides this.
+__Additional Reading__:
 
-## <a name="api"></a>API
+* [AJAX Getting Started](https://developer.mozilla.org/en-US/docs/AJAX/Getting_Started)
 
-[[Wikipedia]](https://en.wikipedia.org/wiki/Application_programming_interface)
-[[MDN]](https://developer.mozilla.org/en-US/docs/Glossary/API)
+### API
 
-API is an Application Programming Interface. An API is any program that has a way of interacting with another program. The API's we are interested in today are REST API's. These are API's that interact through URL's.
+__API__ Stands for application program interface.  It is a defined set methods that allow a developer to interact with some functionality.
 
-A lot of websites offer API's to interact with the data they host:
+__API Examples__:
 
-* [Twitter](https://dev.twitter.com/overview/api)
-* [Facebook](https://developers.facebook.com/docs/graph-api)
-* [Reddit](https://www.reddit.com/dev/api)
-* [Twitch.tv](http://dev.twitch.tv/)
-* [etc.](http://www.programmableweb.com/apis/directory)
+* [Twilio API](https://www.twilio.com/api)
+* [GitHub API](https://developer.github.com/v3/)
+* [iTunes API](https://www.apple.com/itunes/affiliates/resources/documentation/itunes-store-web-service-search-api.html)
 
-I checked these out, and all/most of them aren't using XML. They are using something called JSON! This isn't AJAX at all! The next section covers JSON and why you aren't seeing XML.
+#### Exercise
 
-##  <a name="json"></a>JSON
+Look at the docs for the Github user search api.  Using your browser, make a request to the search api for a user.  Try to find the ```colt.github.io``` repository.
 
-[[Official]](http://json.org/)
-[[Wikipedia]](https://en.wikipedia.org/wiki/JSON)
-[[MDN]](https://developer.mozilla.org/en-US/docs/Glossary/JSON)
+__Hints__:
 
-JSON is JavaScript Object Notation. It was created by Douglas Crockford as an alternative to XML. It benefits by being easily readable by both humans and JavaScript. These are both qualities XML doesn't tend to have.
+1. You will need to know about url encoding to put the . in the url when doing the search for the repo. 
+2. Limit the search even more by adding a specifier to the query string.  Try adding a language.  The language should be javascript
 
-JSON:
+### Basics of Browser Security
+
+* [Same Origin Policy](https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy)
+* [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS)
+* [JSONP](http://en.wikipedia.org/wiki/JSONP)
+
+### AJAX in Pure JS
+
+Below is an example of an AJAX call in pure JS.  It is verbose and somewhat error prone.
 
 ```
-{
-  "firstName": "John",
-  "lastName": "Smith",
-  "isAlive": true,
-  "age": 25,
-  "address": {
-    "city": "New York",
-    "state": "NY"
-  },
-  "favoriteColors": ["Blue", "Orange"]
-}
-```
+httpRequest = new XMLHttpRequest();
 
-XML:
-
-```
-<person>
-    <firstName>John</firstName>
-    <lastName>Smith</lastName>
-    <isAlive>true</isAlive>
-    <age>25</age>
-    <address>
-        <city>New York</city>
-        <state>NY</state>
-    </address>
-    <favoriteColors>
-        <color>Blue</color>
-        <color>Orange</color>
-    </favoriteColors>
-</person>
-```
-
-JSON looks a lot like JavaScript right? And notice how much lighter weight JSON is compared to XML. I think most of us will agree JSON is both easier to read and write. Not to mention JS can also read and write JSON natively with [JSON.parse()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse) and [JSON.stringify()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify).
-
-The 'X' in AJAX stands for XML. So why are we talking about JSON? It turns out the term AJAX wasn't chosen very well. A more accurate acronym for how people use it today would be AJAJ or Asynchronous JavaScript and JSON, but AJAJ just sounds dumb. AJAX is the term we're stuck with and can be used regardless of if you are using XML, JSON, or whatever. It is used to describe the process of communicating with a server from a website.
-
-For a really quick example of JSON, we can turn to the Reddit API:
-
-1. Choose a subreddit such as [aww](https://www.reddit.com/r/aww)
-1. Add `.json` to the end of the URL. [https://www.reddit.com/r/aww.json](https://www.reddit.com/r/aww.json)
-1. View the amazingly dense JSON :)
-
-This is all great, but how do I do it programatically? The answer is in the next section. :D
-
-##  <a name="xhr"></a>XMLHttpRequest
-
-[[Wikipedia]](https://en.wikipedia.org/wiki/XMLHttpRequest)
-[[MDN]](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest#XMLHttpRequest())
-
-XMLHttpRequest is a feature introduced to JavaScript in 2002 to bring AJAX to the web. Through XMLHttpRequest we are able to make dynamic webpages that don't need to reload to operate on vast swaths of data.
-
-The main parts of XMLHttpRequest we need to look at are:
-
-* [new XMLHttpRequest()](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest#Constructor)
-* [XMLHttpRequest.onreadystatechange](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest#Properties)
-* [XMLHttpRequest.open()](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest#open(METHOD, URL))
-* [XMLHttpRequest.send()](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest#send())
-
-Let's grab all the top posts from the aww subreddit and print them to the console:
-
-```
-// Create a new XMLHttpRequest object to start
-var awwRequest = new XMLHttpRequest();
-
-// Create a function that is called when the request status has changed
-awwRequest.onreadystatechange = function () {
-  // When the readyState is 4 that means the request has completed
-  if (this.readyState == 4 && this.status == 200) {
-    // We know the data is JSON, so let's parse it to JS
-    var awwListings = JSON.parse(this.responseText);
-    // And now we can consume the data from Reddit. :)
-    console.log(awwListings);
-    for (var i=0; i<awwListings.data.children.length; i+=1) {
-      var awwListing = awwListings.data.children[i];
-      console.log(awwListing.data.title, awwListing.data.thumbnail)
+httpRequest.onreadystatechange = function(){
+    if (httpRequest.readyState === 4) {
+       if(httpRequest.status < 400) {
+         alert(httpRequest.responseText);
+       }
     }
-  }
-}
-
-// Tell the XMLHttpRequest where you want it to go and how
-awwRequest.open('GET', 'https://www.reddit.com/r/aww.json');
-
-// Send it off! Good luck little XMLHttpRequest! :D
-awwRequest.send();
+    
+};
+httpRequest.open('GET', 'http://www.omdbapi.com/?t=Frozen&y=&plot=short&r=json');
+httpRequest.send();
 ```
 
-### <a name="cors"></a>Note: CORS
+## .ajax - AJAX in jQuery
 
-[[MDN]](https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS)
+JQuery helps make ajax calls much nicer. The same call above can be rewritten in AJAX like this:
 
-If you run across this error: `XMLHttpRequest cannot load http://example.com/. No 'Access-Control-Allow-Origin' header is present on the requested resource. Origin 'http://example.net/' is therefore not allowed access.`. That means the server you are hitting has explicitly denied access to your website! That server is a meanie! But don't fret. This keeps prying developer eyes from your bank accounts and social life! It is for your protection! As a developer it can be quite frustrating though. The server administrator has to edit their CORS headers to allow certain domains or all domains access.
+```
+$.ajax({
+  url: 'https://www.omdbapi.com/?t=Frozen&y=&plot=short&r=json',
+  method: "GET",
+  success: function(data) {
+    alert(JSON.stringify(data));
+  }
+});
+```
 
-### Exercises
+#### Exercise
 
-* https://github.com/gSchool/xhr
+Modify the request to only alert the title of the movie and the status code from the response. __HINT__ - Look at the jQuery docs for .ajax.  See what the success parameter has to offer.
 
-### Questions to Review
+There is a lot of functionality that .ajax provides.  For example, you can also handle failur cases:
 
--  What does AJAX Stand for?
--  What is an API?
--  What is JSON?
--  How is JSON used in JavaScript?
--  What is XML?
--  How do we send an AJAX request with raw JavaScript?
+```
+$.ajax({
+  url: 'https://www.omdbapi.com/fakepath/',
+  method: "GET",
+  success: function(data) {
+    console.log(JSON.stringify(data));
+  },
+  error: function(jqHXR) {
+    console.log("ERROR: ", jqHXR.status)
+  }
+});
+```
+Another way of doing the same thing is to use a promise:
+
+
+```
+$.ajax({
+  url: 'http://www.omdbapi.com/?t=Frozen&y=&plot=short&r=json',
+  method: "GET"
+})
+  .done(function(data) {
+    alert(JSON.stringify(data));
+  })
+  .fail(function(jqHXR) {
+    alert("ERROR: " + jqHXR.status);
+  });
+
+```
+
+## .get
+
+The ```.get``` jQuery method is a short hand way of making an ajax request to a server without having to write the more verbose ```.ajax``` request.
+
+#### Exercise
+Look at the docs for jQuery .get.  Also look at the docs for [omdb api](http://omdbapi.com/).  Make a __search__ request using get.  Alert the title and the year  of the first two results of the search.  I suggest searching for Sharknado.
+
+## .post
+
+The .post method is another convenience method for making a post request.  
+
+#### Exercise
+
+Open the javascript console on our [student site](https://pacific-stream-1533.herokuapp.com/).  Figure out a way to add a cookie to your browser.  Make another post request to /students using jQuery .post instead of curl. __MAKE SURE__ the data you send is a JSON string.  You will have to use __JSON.stringify__ on your data.  Why does the post request have to be on the same domain?
+
+## .getJSON
+
+Look at the jQuery [docs for getJSON](http://api.jquery.com/jquery.getjson/). What does getJSON do for you? 
+
+# AJAX Review
+
+```
+console.log("BEFORE THE AJAX")
+
+$.ajax({
+  method: "GET",
+  url: "http://omdbapi.com/?i=tt1392190"
+})
+.done(function(info) {
+    console.log("DONE")
+    console.log(info)
+  //write all my code that relies on the response data
+ })
+.fail(function(err){
+  console.log("FAIL")
+  console.log(err)
+});
+
+console.log("AFTER THE AJAX!")
+```
+-------------------------
+# JSONP
+
+Resources for JSONP:
+
+* [Same Origin Policy] (http://en.wikipedia.org/wiki/Same-origin_policy)
+
+* [JSONP] (http://en.wikipedia.org/wiki/JSONP)
