@@ -72,7 +72,7 @@ The `whoami` command displays the account name of the current user.
 whoami
 ```
 
-![](https://i.imgur.com/oocXBkY.png)
+![](https://i.imgur.com/XTah2M0.png)
 
 While the `groups` command displays the groups of the current user.
 
@@ -80,7 +80,7 @@ While the `groups` command displays the groups of the current user.
 groups
 ```
 
-![](https://i.imgur.com/penYt4A.png)
+![](https://imgur.com/TsyyfL9.ping)
 
 ### Questions?
 
