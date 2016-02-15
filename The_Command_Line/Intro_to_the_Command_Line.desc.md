@@ -14,15 +14,59 @@ This lesson will introduce you to the fundamental commands of Mac OS X. By the e
 * File system navigation
 * File system redirection
 
-Before we get stared, use Spotlight to launch the Terminal app by pressing the `Command` + `Spacebar` keys at the same time, typing the word "terminal" into the search field, and then pressing the `Enter` key.
+Before getting stared, use Spotlight to launch the `Terminal` app by pressing the `Command` + `Spacebar` keys at the same time, typing the word "terminal" into the search field, and then pressing the `Enter` key.
 
 ## User accounts
 
-There are a two fundamental commands that illuminate the state of the active user.
+Mac OS X is a multi-user operating system which means it manages one or more user accounts. Each user account on Mac OS X has a full name and an account name.
 
-### The `whoami` command
+### The full name
 
-The `whoami` command displays the username of the shell's active user.
+If automatic login is turned off, you'll see the **full name** when logging into the OS after the computer boots.
+
+![](http://i.imgur.com/a5wVWYg.png)
+
+As a professional web developer, you'll be responsible for keeping sensitive information private. Turning off automatic login is a good first step with that.
+
+If you want to turn off automatic login:
+
+1. Use Spotlight to launch the `Users & Groups` System Preferences.
+1. If the lock in the bottom left corner is closed, click on it and enter your admin account password.
+1. Click the `Login Options` tab in the sidebar on the bottom left.
+1. Select `Off` in the dropdown menu next the `Automatic login`.
+
+When finished, the window should look something like this.
+
+![](https://i.imgur.com/CwrbvzQ.png)
+
+### The account name
+
+Additionally, you'll see the **account name** when viewing your home directory, among other places.
+
+To view the home directory:
+
+1. Use Spotlight to launch the `Finder` app.
+1. Press the `Shift` + `Command` + `H` keys at the same time.
+
+![](https://i.imgur.com/ilNTZIO.png)
+
+If you don't see the home directory in your favorites sidebar:
+
+1. Open the Finder's preferences by pressing the `Command` + `,` keys.
+1. Click the `Sidebar` tab at the top of the window.
+1. Enable the checkbox next to your home directory's icon and name.
+
+When finished, the window should look something like this.
+
+![](https://i.imgur.com/UZHZ2Aw.png)
+
+### The current user
+
+Whenever you log into Mac OS X, that user account becomes the **current user**. Additionally, when you start a new shell session in the Terminal, the current user is automatically logged in to the shell.
+
+There are a two fundamental commands that display the state of the current user in th shell—the `whoami` and `groups` commands.
+
+The `whoami` command displays the account name of the current user.
 
 ```
 whoami
@@ -30,19 +74,19 @@ whoami
 
 ![](https://i.imgur.com/oocXBkY.png)
 
-### The `groups` command
+While the `groups` command displays the groups of the current user.
 
-The `groups` command displays the groups of the shell's active user.
-
-`groups`
+```
+groups
+```
 
 ![](https://i.imgur.com/penYt4A.png)
 
-### Question?
+### Questions?
 
-What's the username of your account?
+What's the account name of the current user on your computer?
 
-What are some of the groups that your account belongs to?
+What are some of the groups that your current user belongs to?
 
 ## The `pwd` command
 
@@ -187,7 +231,7 @@ INSERT QUESTION HERE
 
 ## Review
 
-- What's the command for displaying the username of the active user?
+- What's the command for displaying the username of the current user?
 - What's the command for printing the current working directory?
 - What's a home directory?
 - What's the character that represents the home directory?
