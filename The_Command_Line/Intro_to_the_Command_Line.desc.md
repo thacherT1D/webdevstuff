@@ -62,9 +62,7 @@ When finished, the window should look something like this.
 
 ### The current user
 
-Whenever you log into Mac OS X, that user account becomes the **current user**. Additionally, when you start a new shell session in the Terminal, the current user is automatically logged in to the shell.
-
-There are a two fundamental commands that display the state of the current user in th shell—the `whoami` and `groups` commands.
+Whenever you log into Mac OS X, that user account becomes the **current user**. Additionally, when you start a new shell session in the Terminal, the current user is automatically logged in to the shell. There are a two fundamental commands that display the state of the current user in th shell—the `whoami` and `groups` commands.
 
 The `whoami` command displays the account name of the current user.
 
@@ -81,6 +79,10 @@ groups
 ```
 
 ![](https://imgur.com/TsyyfL9.png)
+
+It's common for a user account to belong to a many groups. The only groups in this list that are worth mentioning are `staff` and `admin`. In Mac OS X, every user account belongs to the `staff` group, while only Administrator accounts belong to the `admin` group.
+
+**TIP:** If your user account doesn't belong to the `admin` group, it'll be difficult to manage your development machine.
 
 ### Questions?
 
