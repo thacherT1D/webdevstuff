@@ -80,7 +80,7 @@ While the `groups` command displays the groups of the current user.
 groups
 ```
 
-![](https://imgur.com/TsyyfL9.ping)
+![](https://imgur.com/TsyyfL9.png)
 
 ### Questions?
 
