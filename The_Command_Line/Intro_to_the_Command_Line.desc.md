@@ -24,7 +24,7 @@ Mac OS X is a multi-user operating system which means it manages one or more use
 
 If automatic login is turned off, you'll see the **full name** when logging into the OS after the computer boots.
 
-![](https://i.imgur.com/J6p28qk.png)
+![](https://i.imgur.com/t8AVjbq.png)
 
 As a professional web developer, you'll be responsible for keeping sensitive information private. Turning off automatic login is a good first step with that.
 
