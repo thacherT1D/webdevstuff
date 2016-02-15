@@ -80,7 +80,7 @@ groups
 
 ![](https://imgur.com/TsyyfL9.png)
 
-It's common for a user account to belong to a many groups. The only groups in this list that are worth mentioning are `staff` and `admin`. In Mac OS X, every user account belongs to the `staff` group, while only Administrator accounts belong to the `admin` group.
+It's common for a user account to belong to a many groups. The only important groups to note are `staff` and `admin`. In Mac OS X, every user account belongs to the `staff` group, while only Administrator accounts belong to the `admin` group.
 
 **TIP:** If your user account doesn't belong to the `admin` group, it'll be difficult to manage your development machine.
 
