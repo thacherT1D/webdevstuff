@@ -135,17 +135,7 @@ Let's throw some more divs into our html document to see a couple examples of Bo
 </html>
 ```
 
-Take a few minutes to play around with the grid system. Here are some questions you may want to explore:
-
-1. What's the difference between `.container-fluid` and `.container`?
-
-2. There are four families of column classes: `.col-lg-*`, `.col-md-*`, `.col-sm-*`, and `.col-xs-*`. What's the difference between them? (Hint: it may help to adjust the window dimensions as you explore!)
-
-3. What happens if the numbers in your column classes add up to more than 12?
-
-4. What happens if you try to nest a row inside of a column?
-
-5. What does offsetting do?
+Take a few minutes to play around with the grid system. Try to answer some of the questions in this learning experience around Bootstrap and the grid system.
 
 ## Tables Revisited
 
