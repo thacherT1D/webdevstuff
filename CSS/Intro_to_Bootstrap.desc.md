@@ -309,8 +309,6 @@ If you copy this code as-is, you may notice a problem: the dropdown isn't showin
 
 ### Homework!
 
-Note: these assignments, along with your weekend project, will all be due on Monday. There's nothing due on Friday, but these two assignments may take some time, so don't leave everything for Sunday night! If you can complete these by tomorrow, you'll have that much more time to work on your personal project over the weekend.
-
 [CSS Assignment](https://github.com/gSchool/css-week-1)
 
 [Bootstrap Assignment](https://github.com/gSchool/bootstrap_mocks_assignment)
