@@ -250,12 +250,12 @@ There are other ways to align the divs side-by-side if you don't want to mess wi
 
 **Clearing a Float**
 
-Float your first two divs to the left, and now add a third div: `<div id="myThirdDiv">I want to be on a new row.</div>` You should find that this third div is on the same row as the first two.
+Float your first two divs to the left, and now add a new div: `<div id="myNewDiv">I want to be on a new row.</div>` You should find that this new div is on the same row as the first two.
 
-But what if we want this third div to be on its own row, as you might expect from an unfloated block element? To do this, we need to _clear_ the float. Add this line to your stylesheet:
+But what if we want this new div to be on its own row, as you might expect from an unfloated block element? To do this, we need to _clear_ the float. Add this line to your stylesheet:
 
 ```
-#myThirdDiv {
+#myNewDiv {
   clear: both;
 }
 ```
