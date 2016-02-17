@@ -216,7 +216,7 @@
   :name: HTML5 Media
   :description: HTML/HTML5_Media.desc.md
   :instructor_notes: HTML/HTML5_Media.notes.md
-  :mainline: true
+  :mainline: false
   :suggested_days: 0.5
   :section: Q1
   :experience_objectives:

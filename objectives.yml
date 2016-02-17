@@ -2773,14 +2773,6 @@
   :guiding_questions: 
   :resources: 
   :instructor_notes: 
-- :standard_uuid: 6e0c7a9b-e85d-4f39-b7e5-fdf0dcbf6042
-  :standard_name: Style HTML elements with CSS properties
-  :uuid: 20bd8e92-d68d-4087-8147-9ef18b073987
-  :name: Can apply rules to embedded media
-  :description: 
-  :guiding_questions: 
-  :resources: 
-  :instructor_notes: 
 - :standard_uuid: 0b6f124a-f58a-4e2c-97d1-39a109703ddc
   :standard_name: Lay out a document with CSS properties
   :uuid: ab6c6400-dbee-4922-9f09-5671024f7507
@@ -3133,22 +3125,6 @@
   :name: Asks new questions
   :description: identifies what they’re curious about and what new questions have
     come about.
-  :guiding_questions: 
-  :resources: 
-  :instructor_notes: 
-- :standard_uuid: 2f1d22c7-b07b-4e5d-9c84-5aa989b7f36d
-  :standard_name: Embed Rich Media using Audio & Video APIs
-  :uuid: 90dfc690-41e6-4381-8890-c2f14e74f48e
-  :name: Use the Audio API to play sounds, or embed media
-  :description: 
-  :guiding_questions: 
-  :resources: 
-  :instructor_notes: 
-- :standard_uuid: 2f1d22c7-b07b-4e5d-9c84-5aa989b7f36d
-  :standard_name: Embed Rich Media using Audio & Video APIs
-  :uuid: 2e0dcee0-b602-46e9-9e69-ccba72d14d0d
-  :name: Embed videos using the Video API
-  :description: 
   :guiding_questions: 
   :resources: 
   :instructor_notes: 
