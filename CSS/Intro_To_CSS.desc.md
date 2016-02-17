@@ -159,23 +159,10 @@ More info: [The Difference Between ID and Class](https://css-tricks.com/the-diff
 
 ## CSS - Width and Height
 
-Now, create a stylesheet and link it to this HTML document! Let's add some simple styling to our div:
-
-```
-#myFirstDiv {
-  width: 200px;
-  height: 200px;
-  background-color: red;
-}
-```
-
-What happens as you change width and height?
-
+We've seen what happens as you change the width and height of a div in pixels.  
 Instead of pixel values, you can also assign with and height using percentages. What happens if you set the width to 50%? Is this what you expected? What happens if you set the height to 50%? Is this what you expected?
 
-Where'd things go? By default, width and height percentages are calculated with respect to the parent of the div. Also by default, block level elements (like divs) span the full width of their parent container, but only as much height as they need to display their content. No content implies no height.
-
-There are a couple of ways to fix this. One is to wrap your first div inside of a parent div, and give _it_ some fixed height. Another is to give `html` and `body` heights of 100%. 
+Here we come to an important difference between width and height. If you want to use a percentage height to work as expected, you need to make sure the parent container has an explicit height set. To learn more, check out [this Stack Overflow article](http://stackoverflow.com/questions/5657964/css-why-doesn-t-percentage-height-work).
 
 One last value to know about for width and height is `inherit`. If the width or height of a div is set to `inherit`, then, as the name implies, the div will inherit the width or height property from its parent.
 
@@ -189,40 +176,7 @@ Further reading:
 
 ## CSS - Display Style
 
-Let's add a second div to our `index.html` file and update our stylesheet:
-
-```
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>Kicking it with some Divs</title>
-  </head>
-  <body>
-    <div id="myFirstDiv">This is one of my divs.</div>
-    <div id="mySecondDiv">This is another one of my divs.</div>
-  </body>
-</html>
-```
-
-
-```
-#myFirstDiv {
-  width: 200px;
-  height: 200px;
-  background-color: red;
-}
-
-#mySecondDiv {
-  width: 200px;
-  height: 200px;
-  background-color: green;
-}
-```
-
-Refresh the page. What do you see?
-
-By default, `<div>`s stack on top of one another vertically. This behavior is determined by the `display` property of the div, which defaults to `display: block`. There are a few different display values (in particular, CSS3 has introduced a few new ones), but the four you'll encounter most commonly are `block`, `inline`, `inline-block`, and `none`.
+You've probably noticed by now that by default, `<div>`s stack on top of one another vertically. This behavior is determined by the `display` property of the div, which has a value of `block` by default. There are a few different display values (in particular, CSS3 has introduced a few new ones), but the four we're concerned with now are `block`, `inline`, `inline-block`, and `none`.
 
 Of these, `none` is probably the most obvious. Change one of your divs to have `display: none` and see what happens.
 
