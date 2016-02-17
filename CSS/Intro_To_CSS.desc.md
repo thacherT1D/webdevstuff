@@ -6,17 +6,11 @@ CSS is a style sheet language used for describing the look and formatting of a d
 
 It is used to manipulate the way elements appear on a web page, and CSS can interact with both HTML and JavaScript.
 
-## CSS - Classes and IDs
+## Adding our First Styling
 
-What's the difference between a class and an id? For today, all we need to know is that ids for an HTML element should be _unique_: no two elements should share the same id, and no element should have more than one id. Classes, however, don't have these restrictions: an element can have multiple classes, and multiple elements can share the same class.
+An easy (and heavily frowned-upon) way to add styling to an HTML element is by using the `style` attribute on the HTML element directly. As a first example, let's create a new `index.html` file and throw a `<div>` into it:
 
-More info: [The Difference Between ID and Class](https://css-tricks.com/the-difference-between-id-and-class/)
-
-## CSS - Width and Height 
-
-Let's create a new `index.html` file and throw a `<div>` into it:
-
-```
+```html
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -24,10 +18,84 @@ Let's create a new `index.html` file and throw a `<div>` into it:
     <title>Kicking it with some Divs</title>
   </head>
   <body>
-    <div id="myFirstDiv">Here's my first div!</div>
+    <div>Here's my first div!</div>
   </body>
 </html>
 ```
+
+Let's use the `style` attribute to make give that div a width of 200px, a height of 200px, and a red background. Inside the `body` tag, change the div so that it looks like this:
+
+```html
+<div style="width: 200px; height: 200px; background-color: red;">Here's my first div!</div>
+```
+
+`width`, `value`, `background-color`, are all called _properties_. Their corresponding values (200px, 200px, and red) are, conveniently enough, called _values_.
+
+Using inline styles is a bad practice, for a couple of reasons. For one, you're cluttering up your HTML, and mixing content from styling. Second, it's hard to keep your code DRY if you use inline style. If you wanted to add a second div with the same styling, you'd need to duplicate all that styling code. For example, let's add a second div to our html file:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Kicking it with some Divs</title>
+  </head>
+  <body>
+    <div style="width: 200px; height: 200px; background-color: red;">Here's my first div!</div>
+    <div style="width: 200px; height: 200px; background-color: red;">Here's my second div!</div>
+  </body>
+</html>
+```
+
+Now all that styling code has been duplicated.
+
+We can clean up this code (a.k.a. refactor it) by moving these style rules to a stylesheet. One place we can put our CSS is inside of the `head` of our HTML, as follows:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Kicking it with some Divs</title>
+    <style>
+      div {
+        width: 200px;
+        height: 200px;
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div>Here's my first div!</div>
+    <div>Here's my second div!</div>
+  </body>
+</html>
+```
+
+But, it's a better practice to move styling to an external stylesheet. Let's create a file called `style.css` and put the CSS inside of your `style` tag into that file. We can then remove the style tags from our HTML, and replacing it with a link to our external stylesheet:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Kicking it with some Divs</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <div>Here's my first div!</div>
+    <div>Here's my second div!</div>
+  </body>
+</html>
+```
+
+## CSS - Classes and IDs
+
+What's the difference between a class and an id? For today, all we need to know is that ids for an HTML element should be _unique_: no two elements should share the same id, and no element should have more than one id. Classes, however, don't have these restrictions: an element can have multiple classes, and multiple elements can share the same class.
+
+More info: [The Difference Between ID and Class](https://css-tricks.com/the-difference-between-id-and-class/)
+
+## CSS - Width and Height
 
 Now, create a stylesheet and link it to this HTML document! Let's add some simple styling to our div:
 
