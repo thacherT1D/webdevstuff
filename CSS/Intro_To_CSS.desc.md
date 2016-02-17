@@ -188,6 +188,7 @@ Now let's look at `inline-block`. Elements displayed like this don't require the
 
 Further reading:
 
+[What is the difference between display: inline and display: inline-block?](http://stackoverflow.com/questions/8969381/what-is-the-difference-between-display-inline-and-display-inline-block)
 [List of HTML5 block elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Block-level_elements)
 [List of HTML5 inline elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Inline_elemente)
 [What's the Deal with Display: Inline-Block?](http://designshack.net/articles/css/whats-the-deal-with-display-inline-block/)
@@ -400,4 +401,3 @@ We've only scratched the surface of what you can do with CSS. For inspiration, c
 [CSS Creatures](http://bennettfeely.com/csscreatures/)
 
 [CSS Coke Can](http://www.romancortes.com/ficheros/css-coke.html)
-
