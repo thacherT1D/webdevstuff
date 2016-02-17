@@ -176,6 +176,52 @@ Further reading:
 [List of HTML5 inline elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Inline_elemente)
 [What's the Deal with Display: Inline-Block?](http://designshack.net/articles/css/whats-the-deal-with-display-inline-block/)
 
+## CSS - The Box Model
+
+As you may have noticed, elements on an HTML page are rectangles. These boxes have some common CSS properties, collectively referred to as the box model. Since these are properties you'll be using all the time, let's take a moment to explore how the box model works.
+
+To keep things simple, let's return to a single 200x200 div (color choice is up to you). Let's also put some content inside of our div:
+
+```
+<div id="div1">This is a div of my favorite color.</div>
+```
+
+The box model of this (or any other) div consists of four components: margin, border, padding, and content. Content refers to the area where the (spoiler alert) content lives. Padding corresponds to space between the border and the content. The border wraps around the padding and content, and the margin clears space around the border.
+
+To see these things in action, try giving your div the following style:
+
+```
+#div1 {
+  margin: 15px;
+  border: 5px solid red;
+  padding: 10px;
+}
+```
+
+You can also style the top, right, bottom, or left side of any of these attributes separately. For instance, if you want to push your div farther down the page, you can give it a `margin-top` of 100px.
+
+Take some time to explore the following questions:
+
+1. You can set margins/border/padding by defining four values instead of one; e.g. margin: 15px 15px 15px 15px. Which number corresponds to which direction?
+
+2. You can set margins/border/padding by defining two values; e.g. margin: 20px 30px. Which number corresponds to which direction(s)?
+
+3. You can set margins/border/padding by defining three values; e.g. padding: 15px 10px 5px. Which number corresponds to which direction(s)?
+
+4. Can you create a dashed border? What about a dotted border?
+
+5. What does the border-radius property do?
+
+6. What happens if you set the margins on a block-level div equal to `0 auto`?
+
+A final note on the box model. Note that when you add padding or border to your div, the dimensions of the div change. If you want that to **not** happen -- e.g. if you want your div to maintain a size of 200x200 regardless of box model styling -- then the easiest thing to do is add the following line to your stylesheet for that div:
+
+```
+ box-sizing: border-box;
+```
+
+The default styling is `content-box`, in which the size of the content is what is fixed by `width` and `height`, rather than the size of content+padding+border.
+
 ## CSS - Floats
 
 There are other ways to align the divs side-by-side if you don't want to mess with the `display` property. One approach is to use the `float` property. Try to do the following:
@@ -232,51 +278,6 @@ Next, using only the `position`, `top`, `bottom`, `left`, and `right` properties
 3. Push the red square to the lower-left corner of the blue rectangle.
 4. Push the red-square to the lower-left corner of the viewport.
 
-## CSS - The Box Model
-
-As you may have noticed, elements on an HTML page are rectangles. These boxes have some common CSS properties, collectively referred to as the box model. Since these are properties you'll be using all the time, let's take a moment to explore how the box model works.
-
-To keep things simple, let's return to a single 200x200 div (color choice is up to you). Let's also put some content inside of our div:
-
-```
-<div id="div1">This is a div of my favorite color.</div>
-```
-
-The box model of this (or any other) div consists of four components: margin, border, padding, and content. Content refers to the area where the (spoiler alert) content lives. Padding corresponds to space between the border and the content. The border wraps around the padding and content, and the margin clears space around the border.
-
-To see these things in action, try giving your div the following style:
-
-```
-#div1 {
-  margin: 15px;
-  border: 5px solid red;
-  padding: 10px;
-}
-```
-
-You can also style the top, right, bottom, or left side of any of these attributes separately. For instance, if you want to push your div farther down the page, you can give it a `margin-top` of 100px.
-
-Take some time to explore the following questions:
-
-1. You can set margins/border/padding by defining four values instead of one; e.g. margin: 15px 15px 15px 15px. Which number corresponds to which direction?
-
-2. You can set margins/border/padding by defining two values; e.g. margin: 20px 30px. Which number corresponds to which direction(s)?
-
-3. You can set margins/border/padding by defining three values; e.g. padding: 15px 10px 5px. Which number corresponds to which direction(s)?
-
-4. Can you create a dashed border? What about a dotted border?
-
-5. What does the border-radius property do?
-
-6. What happens if you set the margins on a block-level div equal to `0 auto`?
-
-A final note on the box model. Note that when you add padding or border to your div, the dimensions of the div change. If you want that to **not** happen -- e.g. if you want your div to maintain a size of 200x200 regardless of box model styling -- then the easiest thing to do is add the following line to your stylesheet for that div:
-
-```
- box-sizing: border-box;
-```
-
-The default styling is `content-box`, in which the size of the content is what is fixed by `width` and `height`, rather than the size of content+padding+border.
 
 ## CSS - Media Queries
 
