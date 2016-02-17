@@ -89,9 +89,71 @@ But, it's a better practice to move styling to an external stylesheet. Let's cre
 </html>
 ```
 
-## CSS - Classes and IDs
+## CSS - CSS Specificity, Classes, and IDs
 
-What's the difference between a class and an id? For today, all we need to know is that ids for an HTML element should be _unique_: no two elements should share the same id, and no element should have more than one id. Classes, however, don't have these restrictions: an element can have multiple classes, and multiple elements can share the same class.
+Suppose you change your stylesheet to look like the following:
+
+```css
+div {
+  width: 200px;
+  height: 200px;
+  background-color: red;
+}
+
+div {
+  width: 300px;
+  height: 100px;
+  background-color: blue;
+}
+```
+
+Which style rules will win out?
+
+The answer is that whichever rule comes _latest_ in the stylesheet will take precedence (this is what the _Cascading_ means). However, you can overwrite this default behavior by using a more _specific_ selector.
+
+HTML Elements (`div`, `p`, `ul`, etc) are the least specific CSS selectors. The next level of specificity is provided by classes. To add a class to an element, we use a class attribute. For example, give your first HTML div a class of "red", and then change your stylesheet to look like this:
+
+```css
+.red {
+  width: 200px;
+  height: 200px;
+  background-color: red;
+}
+
+div {
+  width: 300px;
+  height: 100px;
+  background-color: blue;
+}
+```
+
+(the dot in front of "red" indicates that we're targeting a class). Now the first div should be red. Even though the styling for `.red` comes before the styling for `div`, targeting a class is more specific than targeting an element.
+
+The next level of specificty is an id. Let's add a third div with a class of red and an id of green; then change the stylesheet as follows:
+
+```css
+#green {
+  background-color: green;
+}
+
+.red {
+  width: 200px;
+  height: 200px;
+  background-color: red;
+}
+
+div {
+  width: 300px;
+  height: 100px;
+  background-color: blue;
+}
+```
+
+Even though the new div has a class of red, the id is more specific, so its background color is green. But where does its sizing come from?
+
+Aside from specificity, what's the difference between a class and an id? For today, all we need to know is that ids for an HTML element should be _unique_: no two elements should share the same id, and no element should have more than one id. Classes, however, don't have these restrictions: an element can have multiple classes, and multiple elements can share the same class.
+
+After ids, the next level of specificity is inline styling. After that is the `!important` tag. It's not a good practice to use either of these, though, so try to avoid them wherever possible.
 
 More info: [The Difference Between ID and Class](https://css-tricks.com/the-difference-between-id-and-class/)
 
