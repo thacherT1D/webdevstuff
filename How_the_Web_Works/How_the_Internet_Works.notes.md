@@ -6,7 +6,7 @@
 * make GET requests and POST requests
 * show them code snippet generator
 * show them cURL
-* make cURL requests to some pages
+* make cURL requests to at least two pages
 
 ## **(We Do)**
 
