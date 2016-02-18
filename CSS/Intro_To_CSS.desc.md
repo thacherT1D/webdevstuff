@@ -266,35 +266,71 @@ An element styled with `clear: both;` can't have any floats to the left or right
 
 A third common way to position divs is to use the `position` property. Like `display`, we're going to focus on four different values for positioning: `static`, `relative`, `absolute`, and `fixed`.
 
+[Here's](https://css-tricks.com/almanac/properties/p/position/) a great overview on positioning from CSS Tricks. To summarize...
+
 Static is the default value for all elements. An element with static position will sit where it normally does, and won't have any special positioning.
 
 If you go with one of the other three values for `position`, you can then adjust the position of your div by using the `top`, `right`, `bottom` and `left` attributes.
 
 Briefly, here are the differences between the other types of positioning:
 
-- `position: relative` positions an element relative to **where it would normally sit**.
+- `position: relative` positions an element relative to **where it would normally sit**. 
 - `position: absolute` positions an element relative to **its nearest ancestor that isn't statically positioned**,
 - `position: fixed` positions an element relative to **the viewport, even when scrolling**.
 
-Let's explore positioning using the following HTML snippet. Here are three nested divs:
+Let's explore positioning using the following HTML snippet:
 
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Kicking it with some Divs</title>
+    <style>
+      div {
+        width: 100px;
+        height: 100px;
+      }
+      #div1 {
+        width: 300px;
+        height: 300px;
+        background-color: red;
+      }
+      #div2 {
+        width: 200px;
+        height: 200px;
+        background-color: orange;
+      }
+      #div3 {
+        background-color: yellow;
+      }
+      #div4 {
+        background-color: green;
+      }
+      #div5 {
+        background-color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="div1">
+      <div id="div2">
+        <div id="div3"></div>
+      </div>
+    </div>
+    <div id="div4"></div>
+    <div id="div5"></div>
+  </body>
+</html>
 ```
-<div id="div1">
-  <div id="div2">
-    <div id="div3"></div>
-  </div>
-</div>
-```
-
-Style them so that the first div is 400x2000 and blue, the second is 200x200 and red, and the third is 100x100 and green.
 
 Next, using only the `position`, `top`, `bottom`, `left`, and `right` properties, do the following:
 
 1. Nudge the green square 10px down and 10px to the right.
-2. Push the red square to the upper-right corner of the blue rectangle.
-3. Push the red square to the lower-left corner of the blue rectangle.
-4. Push the red-square to the lower-left corner of the viewport.
-
+2. Push the yellow square to the upper-right corner of the window.
+3. Push the yellow square to the lower-right corner of the orange square.
+4. Push the yellow square to the lower-right corner of the red square, _without moving the orange square_.
+5. Push the green to the bottom-right corner of the screen.
 
 ## CSS - Media Queries
 
