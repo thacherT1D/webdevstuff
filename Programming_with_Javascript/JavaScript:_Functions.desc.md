@@ -4,31 +4,28 @@ Today, we're going to explore the fascinating world of functions. This world may
 
 ## Objectives
 
-Students will be able to...
+* Explain what a function is conceptually
+* Write a function that takes parameters
+* Write a function that returns a value
+* Describe variable scope in javascript and how it relates to functions
 
-- 1 of 7: describe the concept of a function in one sentence
-- 2 of 7: explain the syntax of a function
-- 3 of 7: create a function
-- 4 of 7: invoke a function
-- 5 of 7: use the keyword `return`
-- 6 of 7: add behavior with parameters and arguments
-- 7 of 7: use the keyword `arguments`
+### What is a Function?
 
-### 1 of 7: What's a Function?
-
-Let's start with our first objective: What's a function? In one sentence, we can say that a function is a sequence of instructions that achieve a specific task. I've always found definitions to be more meaningful when they are tied to the world around us. So let's pause for a moment and think of real-world examples that fit our definition....
+`In one sentence, we can say that a function is a sequence of instructions that achieve a specific task. I've always found definitions to be more meaningful when they are tied to the world around us. So let's pause for a moment and think of real-world examples that fit our definition....
 
 When I think about functions in the real world, I often consider a recipe (e.g., making pumpkin pie) or a manual (e.g. assembling a coffee table from IKEA).
 
 At this point, I hope that many of us can embrace our shared definition of a function--they are a sequence of instructions that achieve a specific task.
 
-### 2 of 7: The Syntax of a Function
+__EXERCISE__: What are some other examples of functions you enounter in daily life?
 
-The way we create functions in the real world is different from how we create functions in JavaScript. In the real world, a recipe has a series of bullet points with instructions. In order to create functions in JavaScript, we need to use a particular syntax:
+### Example Function
+
+Below is an example of a very simple function:
 
 ```javascript
-function [[name]] ( [[parameters]] ) {
-  [[body (i.e., statements, expressions, values)]]
+function hello(name, age) {
+  console.log("Hello, " + name + ". You are " + age + " years old".);
 }
 ```
 
@@ -39,7 +36,7 @@ There are four parts to the above code example:
 1. Parameters - a comma separated list enclosed in parenthesis
 1. Instructions - a variable number of optional instructions enclosed in curly braces
 
-### 3 of 7:  Function Creation
+### Creating and Invoking Functions
 
 We've now established the syntax of a function. Let's apply this knowledge to create a function named `greet()`, which will log to the console the string "Hello, World!":
 
@@ -62,10 +59,6 @@ greet
 // }
 // undefined
 ```
-
-Now some of you may be confused. You may have have imagined reading `"Hello, World!"` to be logged to our console--not the definition of the function. If I'm describing you, then you've got great intuition. When working with functions, there are two steps: creating and invoking. What you imagined reading (`"Hello, World!"`) happens during the invocation step of a function.
-
-### 4 of 7: Function Invocation
 
 Similar to the real world, functions consist of two processes: first, creation of the instructions; second, execution of the instructions.
 
@@ -93,95 +86,103 @@ greet();
 
 That's it! Now we can re-use the instructions of `greet` whenever we want. Above, we just invoked it 3 times. :)
 
-### 5 of 7: The keyword `return`
-
-Some of you may noticed that when we invoked `greet()`, the console logged the value `undefined`. This design points to an important part of how functions are designed. Every function returns a value. If you do not specify a return, then it will return `undefined`.
-
-So logging is similar to a chef following a recipe and shouting when he executes one of the steps of the recipe; moreover, a chef yelling each step isn’t the same as a chef creating our meal and then returning a meal to us. Imagine you order a dish and its made; but no one ever returns it to you.
-
-If you want to add instructions on what a function should return, you'll need to use the keyword `return`:
+__EXERCISE__: Write a function called `yell` that prints out a phrase 10 times in a row.  On the 10th iteration, the phrase should be in all caps and have an extra exlimation point at the end.  Example output is below:
 
 ```javascript
-function greet() {
-  console.log("Hello, World!");
-  return "You told me to return.";
-}
-
-greet()
-// "Hello, World!"
-// "You told me to return."
+yell(); // You must implement this function
+// my phrase
+// my phrase
+// my phrase
+// my phrase
+// my phrase
+// my phrase
+// my phrase
+// my phrase
+// my phrase
+// my phrase
+// MY PHRASE!
 ```
 
-Awesome, you just used the keyword `return`. Take note that `return` has special behavior associated with it. The most notable is that once a function executes a `return` statement, all code succeeding it in a function never gets executed. In other words, be careful where and when you use `return`:
+### Functions With Parameters
+
+So far we have created functions that do the same exact thing every time.  Often times, we want a function to change behavior based on a set of inputs.  Function parameters allow us to create functions with input.
+
+The function example we saw earlier has two parameters:
 
 ```javascript
-function greet() {
-  return "You'll never reach the console.log() message.";
-  console.log("Hello, World!");
+function hello(name, age) {
+  console.log("Hello, " + name + ". You are " + age + " years old".);
 }
-
-greet();
-// "You'll never reach the console.log() message."
 ```
 
-```js
-function twoReturns() {
-  return "I'm the only return that gets executed";
-  return "You told me to return.";
-  console.log("Hello, World!");
-}
+The parameters are `name` and `age`.  They are variables that are defined in the function 
 
-twoReturns()
-// "I'm the only return that gets executed";
-```
 
-### 6 of 7: Parameters and Arguments
-
-So far, we've learned how to re-use code with the aid of functions. We can define a function once, and then invoke it many times. However, during each invocation, we execute the same code with the same static values--the output never changes.
-
-This outcome is analogous to a website that greets every user whom logs into a site with the the following greeting: "Hello, user." How generic; how static! The value of that greeting would be infinitely better if every user could be greeted with their name--"Hello, Danny." To add this behavior to our code, we can include parameters and arguments to our functions.
-
-#### Parameters
-
-When we define a function, we can create variables that are local to a function and assigned during invocation. These specific variables are called parameters:
+__EXERCISE__: Create a function that takes name of a month as a parameter.  Print out every day in that month.  Assume leap years don't exist.
 
 ```javascript
-function greet(name) {
-  return "Hello, " + name;
-}
+daysInMonth("February");
+// February 1
+// February 2
+.
+.
+.
+// February 27
+// February 28
 ```
 
-Let's view what happens when we now invoke `greet`:
+### The keyword `return`
+
+We have now seen functions that take a set of inputs as parameters.  It is also often desireable to return an value from the function.  Our function examples have all been printing to the console, but in many cases we want the function to return a value for us.  For example:
 
 ```javascript
-function greet(name) {
-  return "Hello, " + name;
-}
-
-greet();
-// "Hello, undefined"
+var total = sum(5, 20);
 ```
 
-Hmmmm... Not quite what we wanted. We'll need arguments to assign values to our parameters.
+In the example above, sum is a function that takes 2 parameters.  The values are summed in the function and the result will be returned and saved in the variable `total`.
 
-#### Arguments
-
-To dynamically assign a value to `name`, we need to pass a value to `greet()` during invocation. An argument is passed by putting a variable or value in an invocation's parenthesis. The position of this argument will correspond with the position of the parameter. We'll write some example code to make this process clearer:
+The implementation of sum looks like this:
 
 ```javascript
-function greet(name) {
-  return "Hello, " + name;
+function sum(num1, num2) {
+	return num1 + num2;
 }
-
-greet("Homer");
-// "Hello, Homer"
 ```
 
-`"Homer"` is the first argument passed when invoking `greet()`. During invocation, `"Homer"` is assigned to the first parameter of `greet()`, `name`.
+Let's make another method that returns a greeting for a name.  If the name is `Tim`, return: "Hello Tim!  Your favorite color is blue."  If the name is anything other than Tim, return Hello name.
 
-### 7 of 7: The keyword `arguments`
+```javascript
+function getGreeting(name) {
+	if (name === "Tim") {
+		return "Hello Tim!  Your favorite color is blue.";
+	}
+	
+	return "Hello " + name;
+}
+``` 
 
-Awesome, there's going to be situations where we may want to quickly access information about the arguments being passed in during invocation. Some information may be reading the number of arguments; or we may want to have the ability to accept a variable number of arguments. In both of these situations, we want to utilize a keyword that exists only inside of functions: `arguments`. This keyword exhibits the following behavior:
+__EXERCISE__
+
+What is output to the console with the following function invocation?
+
+```javascript
+getGreeting("Elie");
+```
+With the following function invocation, which return statement is executed (the first, the second, or both)?
+
+```javascript
+getGreeting("Tim");
+```
+
+Write a function called average that takes an array of numbers as a parameter and returns the average of the array of numbers.
+
+```javascript
+average([2,4,6]) // Returns 4
+```
+
+### The keyword `arguments`
+
+The arguments keyword gives you an array like object of parameters to a function:
 
 * the keyword `arguments` exist only inside of a function
 * the keyword `arguments` is array-like, which means it has some functionality of an array, such as `length`, but not others.
@@ -212,6 +213,36 @@ args(1,2,3);
 
 Using the `pop()` method doesn't work, and this observation confirms our assumption that `arguments` doesn't have access to all methods of an array. So what methods or properties does it have? Let's use console.log to see! As we'll soon notice, `arguments` is an object where each argument being passed, from left to right, is assigned a numeric key starting from the integer `0`. `arguments` also has a `length` property, as we learned in an earlier example.
 
-# Conclusion
+## Scope In Javascript
 
-During this lesson, we've learned and wielded the immense power of functions. We can now re-use code whenever we want. We can also pass dynamic values, which is incredibly cool. Keep practicing what we've learned. Your journey to mastering JavaScript depends on your understanding of functions.
+Variable scope is a term that describes the duration for which a variable exists in javascript.  In javascript variables are scoped to functions.  In other words, when a variable is defined with the keyword `var`, it exists for the life span of that function:
+
+```javascript
+function scopeExample() {
+	var num1 = 5;
+	var num2 = 6;
+	num3 = 7;
+	
+	console.log(num1, num2, num3); // All 3 variables are defined here
+}
+
+console.log("No variables defined");  // num1, num2, and num3 do not exist 
+scopeExample();
+
+console.log(num3);  // Only num3 exists here.  The value is 7.
+```
+
+__EXERCISE__
+
+* When should you use the `var` keyword to declare variables?
+* What does the following code console log?
+
+```javascript
+var test = 10;
+function scopeChallenge() {
+  console.log(test);
+  var test = 99;
+}
+
+scopeChallenge();
+```
