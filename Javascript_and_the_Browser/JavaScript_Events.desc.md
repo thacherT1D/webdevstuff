@@ -6,7 +6,6 @@ By the end of this lesson you should be able to:
 * Attach event handlers to DOM elements
 * Modify the DOM in response to an event
 * Use callbacks in methods like addEventListener
-* Use callbacks in methods like `setTimeout` and `setInterval`
 
 ## Introduction
 
@@ -204,3 +203,11 @@ The bubble event will fire on each one of these elements.
 |                                 |
 -----------------------------------
 ```
+
+###Demonstration
+
+Take a look at [this codepen](http://codepen.io/Colt/pen/jPrJJe?editors=101).  Are the events bubbling or capturing?
+
+### Stoplight Exercise
+
+https://github.com/gSchool/stoplight-event-exercise
