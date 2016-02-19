@@ -11,7 +11,6 @@ GOAL: what is the value of this expression: `!(typeof(9) === typeof(9.5) && (99 
 
 [The famous Douglas Crockford gives a thorough introduction of Javascript](https://www.youtube.com/watch?v=t7_5-XYrkqg)
 
-
 ### Why Should YOU Care About Javascript
 * Can use the same language on the front-end and the backend with Node.js
 * JS serves as a platform to host other languages as well, e.g. CoffeeScript or ClojureScript
@@ -45,7 +44,7 @@ Go to [Google](http://www.google.com) and try pasting the following code into yo
 
 ```
 var logo = document.getElementById('hplogo');
-logo.onclick = function () { this.src = "http://cdn.howtogeek.com/wp-content/uploads/2010/10/DANCING_BABY.gif"}
+logo.onclick = function () { this.src = "https://media.giphy.com/media/TxjAakMUtgPN6/giphy.gif"; this.srcset=""; this.height="204"; }
 ```
 And then try this:
 
