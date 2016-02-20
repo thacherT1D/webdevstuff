@@ -366,7 +366,7 @@ As a general best-practice, it's better to err on the side of the stronger compa
 
 Note: You can always check something's type in Javascript using the typeof operator! What's `typeof 4`? `typeof "what's up?"`?
 
-### Conditionals
+## Conditionals
 
 Conditionals control the flow of a program.  Conditionals decide which code statements gets run based on some input to the conditional.  An example from everyday life would be:
 
@@ -382,7 +382,7 @@ The most basic control flow statement is the `if` statement.  Here is our exampl
 ```
 var total = 284; // Some value
 
-if ( total >= 100 ) {
+if (total >= 100 ) {
    total = total * .8;
 }
 
@@ -394,18 +394,18 @@ console.log("Your total is: $" + total.toFixed(2));
 Let's practice with some other if statements!
 
 ```
-if (1 + 1 == 2) {
+if (1 + 1 === 2) {
   console.log("Arithmetic is the best");
 }
 
-if (1 + 1 != 2) {
+if (1 + 1 !== 2) {
   console.log("Math is broken.");
 }
 ```
 We can also combine these two statements using `if..else`:
 
 ```
-if (1 + 1 == 2) {
+if (1 + 1 === 2) {
   console.log("Arithmetic is the best");
 } else {
   console.log("Math is broken");
@@ -414,7 +414,7 @@ if (1 + 1 == 2) {
 
 (Note: Remember the parentheses!)
 
-For each of these examples, try to determine whether the console will output "A" or "B":
+For each of these examples, try to determine what the console will log:
 
 ```
 if (2 > 1) {
@@ -440,35 +440,27 @@ if (1 == "1" && (typeof(typeof(9)) === "string" || Number.isInteger(7.3))) {
 } else {
   console.log("B");
 }
-```
 
-### If, else
-
-The multiple if statement code we've written so far can get a little confusing.  It is really more suited for an if else control flow statement.  If else statements work together.  Here is the basic flow and syntax:
-
-```
-if ( /*some expression */) {
-
-    // If the expression is true, run this code
-
+if (false) {
+  console.log("A");
+} else if (null) {
+  console.log("B");
 } else {
-
-    // If the expression was false, run this code instead.
-
+  console.log("C");
 }
 ```
 
-We can string together if else statements like this:
+## Type Conversion
 
-```
-if ( /*some expression */) {
-    // run this code
-} else if ( /* some other expression */ ) {
-    // run this code only if the first expression is false and this expression is true
-} else {
-    // run this code if the first two expressions were false
-}
-```
+Sometimes, you may pass in a value of one type when Javascript expects a value of a different type. In this case, rather than throwing an error, Javascript will convert the value into one that has a type that makes sense.
+
+For instance, suppose you type the following expression into your console: `1 + 'hi'`. For numbers, `+` means addition; for strings, it means concatenation. So how does JS deal with this ambiguity? It converts the number into a string, the concatenates.
+
+This type of conversion also happens when you pass values into if statements. In a block of code like `if (x) {...}`, `x` is expected to be a Boolean. If it isn't, Javascript will convert it into a Boolean.
+
+Most values in Javascript are truthy -- that is, they get coerced into `true` should the need arise. In fact, there are only six falsy values in Javascript: `false`, `null`, `undefined`, `0`, `''`, and `NaN`.
+
+## ADD OBJECTIVES (TODO)
 
 ### Further Reading
 
