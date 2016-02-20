@@ -83,9 +83,23 @@ Comments come in two forms
   */
   
   ```
-### JS Type: Numbers 
 
-Numbers are one of the *types* of **values** we want to be able to interact and play with in JS.
+## JS Primitive Data Types:
+
+What's a primitive data type? For now, you can think of a primitive data type as anything in Javascript that is not an object (we'll get to objects in just a bit).
+
+There are six primitive data types in Javascript: string, number, boolean, null, undefined, and (as of ES2015) symbol. In particular, array is not a primitive data type. We'll discuss each of these types briefly below. Oh, also, array is not a primitive data type. And while we're on the subject, do you know what is NOT a primitive data type? That's right, array!
+
+Exercise: Give an example of something that is not a primitive data type. (Hint: Say array.)
+
+References:
+
+- [Primitive](https://developer.mozilla.org/en-US/docs/Glossary/Primitive)
+- [JavaScript data types and data structures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures)
+
+### Number
+
+Numbers are, well, numbers. They come in two flavors:
 
 * Integers
 
@@ -98,7 +112,7 @@ Numbers are one of the *types* of **values** we want to be able to interact and 
    2.718, 3.14, .5, .25, etc
   ```
 
-In JS, these are the same **type** of object, which it calls *Numbers*. However, as of ES6, it's possible for JS to distinguish between these types of numbers, using the `Number.isInteger()` function.
+In JS, both integers and floats have the same data type: number. You can confirm this using the 'typeof' operator. If you want to distinguish between integers and floats, there are a couple of ways to do this. The most modern approach, as of ES2015, is to use the `Number.isInteger()` function.
 
 Examples:
 
@@ -108,15 +122,15 @@ Number.isInteger(4.1) // should return 'false'
 Number.isInteger(4.0) // should return ???
 ```
 
-### JS Type: Strings
+### String
 
-Strings are collections of letters and symbols known as **Characters**, and we use them to deal with words and text in Javascript. Strings are just another type of **value** in Javascript.
+Strings are collections of letters and symbols known as **Characters**, and we use them to deal with words and text in Javascript. 
 
 ```
 "John", "Jane"
 ```
 
-Strings have a number of built-in methods:
+There are a number of built-in properties and methods associated with strings:
 
 ```
 var name = "Matt";
@@ -126,7 +140,7 @@ name.toUpperCase(); // Returns "MATT"
 name.toLowerCase(); // Returns "matt"
 ```
 
-ES6 provides some new methods as well!
+ES2015 provides some new methods as well!
 
 ```
 name.startsWith("Ma"); // true
@@ -134,12 +148,23 @@ name.endsWith("Q"); // false
 name.includes("t"); // true
 ```
 
-### JS Type: Boolean
+###  Boolean
 A boolean represents logical values **true** or **false**
 
 ```
 var catsAreGreat = true;
 var dogsRule = false;
+```
+
+### Undefined
+
+If you declare a variable but don't assign it a value, by default its value will be the primitive `undefined`.
+
+```
+var x;
+x; // undefined
+x = 3; 
+x; // no longer undefined!
 ```
 
 ## Values and Expressions
