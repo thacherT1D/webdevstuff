@@ -10,8 +10,6 @@ Objectives
 * Explain what type conversion is
 * Name all falsy values in Javascript
 
-GOAL: what is the value of this expression: `!(typeof(9) === typeof(9.5) && (99 == "99" || !true))`
-
 ### History of Javascript
 
 * Not to be confused with Java, but it is the baby child of Java syntax & Scheme principles
