@@ -152,13 +152,13 @@ name.includes("t"); // true
 A boolean represents logical values **true** or **false**
 
 ```
-var catsAreGreat = true;
-var dogsRule = false;
+var sanFranciscoIsExpensive = true;
+var sanFranciscoIsCheap = false;
 ```
 
 ### Undefined
 
-If you declare a variable but don't assign it a value, by default its value will be the primitive `undefined`.
+`undefined` represents a value that hasn't been defined. A variable that has not been assigned a value is of type undefined. A method or statement also returns undefined if the variable that is being evaluated does not have an assigned value. A function returns undefined if a value was not returned.
 
 ```
 var x;
@@ -169,7 +169,7 @@ x; // no longer undefined!
 
 ### Null
 
-Null indicates the absence of value, but unlike undefined, it does not get set by default when to unassigned variables. If you want something to be null, you must make it so:
+Null represents an explicitly set empty value. Unlike undefined, it does not get set by default to unassigned variables, for instance. If you want something to be null, you must make it so:
 
 ```
 var x = null;
@@ -324,22 +324,6 @@ var name = 'Matt';
 var compliment = name + ' is my favorite instructor';
 ```
 
-## JS Type: undefined 
-
-**undefined**: Represents a value that hasn't been defined
-
-```
-var notDefinedYet;
-```
-
-A variable that has not been assigned a value is of type undefined. A method or statement also returns undefined if the variable that is being evaluated does not have an assigned value. A function returns undefined if a value was not returned.
-
-**null**: Represents an explicitly empty value
-
-```
-var dogsRule = null;
-```
-
 ## Comparisons
 
 One way to get boolean values in Javascript is by using _comparisons_. Comparisons are operators that allow us to compare two different values. For example, mathematical comparisons are comparisons:
@@ -380,7 +364,7 @@ false === 0
 
 As a general best-practice, it's better to err on the side of the stronger comparison operator.
 
-Note: You can always check something's type in Javascript using the typeof function! (More on functions later). What's `typeof(4)`? `typeof("what's up?")`?
+Note: You can always check something's type in Javascript using the typeof operator! What's `typeof 4`? `typeof "what's up?"`?
 
 ### Conditionals
 
@@ -458,133 +442,6 @@ if (1 == "1" && (typeof(typeof(9)) === "string" || Number.isInteger(7.3))) {
 }
 ```
 
-### Functions
-
-Very broadly, a _function_ in Javascript is a chunk of code we want to reuse that performs some action or return some value. For example, since I need constant affirmation, here's a function I might call ALL THE TIME:
-
-```
-var greatJobMatt = function() {
-  console.log("You're doing great, Matt!");
-} 
-```
-
-I can then call this function by typing `greatJobMatt();`. 
-
-We could create other functions with similar functionality:
-
-```
-var greatJobElie = function() {
-  console.log("You're doing great, Elie!");
-}
-
-var greatJobZubair = function() {
-  console.log("You're doing great, Zubair!");
-}
-```
-
-This code works perfectly well, but it isn't very DRY. The questions we should be asking are: 
-
-  1. Did we repeat ourselves in our code?
-  2. Can we make our program simpler?
-  3. Can we make our program easier to maintain?
-
-![](http://codyburleson.com/wp-content/uploads/2014/11/dontrepeatyourself_motivator_2.jpg)
-
-### Functions with arguments
-
-Let's clean up all our code from above by consolidating our three functions into a single function:
-
-```
-var greatJob = function(name) {
-  console.log("You're doing great, " + name + "!");
-}
-
-// Try out these commands!
-
-greatJob("Matt");
-greatJob("Elie");
-greatJob("Zubair");
-
-```
-
-What if we use `return` instead of `console.log`?
-
-We can pass multiple arguments into our functions, too! Let's generalize a step further:
-
-```
-var feedback = function(quality, name) {
-  console.log("You're doing " + quality + ", " + name + "!"); 
-}
-
-feedback("terribly","Matt");
-feedback("so-so","Elie");
-feedback("super good","Zubair");
-```
-
-Note: string concatenation in Javascript can be kind of a pain, and it's super easy to make mistakes: `console.log("Hi," + " how " + " are " + "you" "?");`. In ES6, concatenation can be done slightly differently:
-
-```
-var feedback = function(quality, name) {
-  console.log(`You're doing ${quality}, ${name}!`); 
-}
-```
-
-Lastly, if you don't know someone's name, you can always **prompt** them for it:
-
-```
-var feedback = function(quality) {
-  var name = prompt("What's your name?");
-  console.log(`You're doing ${quality}, ${name}!`); 
-}
-```
-
-Note that in ES6, it's possible to write simple functions even more succinctly with **arrow functions**
-
-```
-var feedback = (quality, name) => "You're doing " + quality +", " + name + "!";
-var double = (x) => 2*x;
-```
-
-### Functions and Conditionals
-
-Now let's combine functions with a little bit of _flow control_.
-
-#### Exercise
-
-Let's write a program that prompts for a users name, then says hello to the user. The program should have a special hello prompt if the user enters your name.  Here is an example input and output:
-
-```
-> Please enter your name: Chris
-
-Hello Chris.  What are you doing here?
-
-> Please enter your name: Matt
-
-Hello Meticulous Matt!! Hope you're having an AWESOME day!
-```
-
-### Multiple If Statements
-
-A program can have multiple if statements when we have multiple control flow needs.  For example, we could have a special greeting for multiple names:
-
-```
-var name = prompt("Please enter your name:");
-
-if (name === "Matt") {
-   console.log("Hi Matt! Good to see you again!");
-}
-
-if (name === "Elie") {
-   console.log("Hi Elie! You're looking good!");
-}
-
-if (name !== "Matt" && name !== "Elie") {
-   console.log("Hello " + name + ".  What are you doing here?");
-}
-``` 
-
-Using our store discount example.  How would we express 25% off for a purchase of $300 or more and 20% off for a purchase of $100 or more?
-
 ### If, else
 
 The multiple if statement code we've written so far can get a little confusing.  It is really more suited for an if else control flow statement.  If else statements work together.  Here is the basic flow and syntax:
@@ -613,36 +470,6 @@ if ( /*some expression */) {
 }
 ```
 
-Rewrite your code from before to use the if/else if control flow. This is an example of **refactoring**.
+### Further Reading
 
-### Booleans and Comparison Review
-
-Let's take a minute to review booleans and comparisons.  What does the following expression evaluate to?
-
-```
-var bankAccount = 7000; // I'm rich in most cities other than SF
-var RENT = 3000;
-var CAR_INSURANCE = 250;
-var COMCAST = 115; // Way too expensive
-var CAR_PAYMENT = 120;
-var NEW_PET_COST = 3000; // An extravegent pet
-var funSpending = prompt("How much fun money are you going to spend? ");
-var areYouFinanciallyWise = prompt("Are you financially wise? ");
-
-if (areYouFinanciallyWise === "no") {
-    areYouFinanciallyWise = false;
-} else {
-    areYouFinanciallyWise = true;
-}
-
-if ((bankAccount > RENT + CAR_INSURANCE + CAR_PAYMENT + COMCAST + funSpending) || !areYouFinanciallyWise) {
-     console.log("Buy yourself something nice. You're worth it.");
-} else {
-     console.log("You probably should save your money.");
-}
-```
-
-### Homework
-
-1. [Basic JS](https://github.com/gSchool/basic-js)
-2. Read Chapters 1 and 2 in [Eloquent Javascript](http://eloquentjavascript.net/) - we'll be covering some of Chapter 2 tomorrow, so if you don't finish it all, that's ok!
+Want to dig deeper? Read Chapters 1 and 2 in [Eloquent Javascript](http://eloquentjavascript.net/) - we'll be covering some of Chapter 2 tomorrow, so if you don't finish it all, that's ok!
