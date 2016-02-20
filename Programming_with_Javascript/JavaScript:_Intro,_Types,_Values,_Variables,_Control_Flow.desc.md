@@ -1,5 +1,15 @@
 ## Introduction to JavaScript
 
+Objectives
+
+* Name all primitive data types in Javascript
+* Define what a variable is
+* Explain the difference between a value and an expression
+* Explain the difference between `==` and `===` in Javascript
+* Implement simple control flow examples using `if` statements
+* Explain what type conversion is
+* Name all falsy values in Javascript
+
 GOAL: what is the value of this expression: `!(typeof(9) === typeof(9.5) && (99 == "99" || !true))`
 
 ### History of Javascript
@@ -33,7 +43,7 @@ Some other more complex uses for JS:
 * [Arcade Fire Reflektor Music Video](http://www.chromeexperiments.com/detail/just-a-reflektor/?f=)
 * [Walmart Website](http://www.walmart.com/)
 
-###Javascript Console
+### Javascript Console
 - Allows you to easily interface with your app to run JS commands and display log messages for help with debugging
 - Shortcut to open JS console & bring focus to console
   - Mac: Cmd + Opt + J
@@ -459,8 +469,6 @@ For instance, suppose you type the following expression into your console: `1 + 
 This type of conversion also happens when you pass values into if statements. In a block of code like `if (x) {...}`, `x` is expected to be a Boolean. If it isn't, Javascript will convert it into a Boolean.
 
 Most values in Javascript are truthy -- that is, they get coerced into `true` should the need arise. In fact, there are only six falsy values in Javascript: `false`, `null`, `undefined`, `0`, `''`, and `NaN`.
-
-## ADD OBJECTIVES (TODO)
 
 ### Further Reading
 
