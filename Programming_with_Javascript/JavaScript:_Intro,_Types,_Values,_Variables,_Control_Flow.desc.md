@@ -167,6 +167,23 @@ x = 3;
 x; // no longer undefined!
 ```
 
+### Null
+
+Null indicates the absence of value, but unlike undefined, it does not get set by default when to unassigned variables. If you want something to be null, you must make it so:
+
+```
+var x = null;
+```
+
+Further reading:
+
+- [What is the difference between null and undefined in JavaScript?](http://stackoverflow.com/questions/5076944/what-is-the-difference-between-null-and-undefined-in-javascript)
+- [Why is typeof null “object”?](http://stackoverflow.com/questions/18808226/why-is-typeof-null-object)
+
+### Symbol
+
+The last primitive data type is also the newest addition to Javascript, and is called symbol. Talking about symbols is a bit advanced for day 1 of Javascript (especially when we haven't talked about objects yet). When you're ready to learn more about them, [check out the docs!](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol)
+
 ## Values and Expressions
 Values are the simplest components in JavaScript. ```1``` is a value, ```true``` is a value, ```"hello"``` is a value, ```function() {}``` is a value.
 
