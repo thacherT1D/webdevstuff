@@ -1,94 +1,73 @@
-# An Introduction to Programming and JavaScript: Objects, Arrays, Iterations
+# An Introduction to Programming and JavaScript: Arrays, Objects, Iterations
+
 Objectives:
-Students will able to...
 
-- 1 of 9: create values for each of the reference types
-- 2 of 9: use `instanceof` operator with reference types
-- 3 of 9: explain the behavior of `==` and `===` with reference types
-- 4 of 9: explain how variable assignments works with reference types
-- 5 of 9: use conditional statements with an array and object
-- 6 of 9: use iterators with an array and object
-- 7 of 9: use native methods of an array and object
-- 8 of 9: know how to write a deeply nested array and object
-- 9 of 9: know how to read a deeply nested array and object
+(original objectives)
+* create values for each of the reference types
+* use `instanceof` operator with reference types
+* explain the behavior of `==` and `===` with reference types
+* explain how variable assignments works with reference types
+* use conditional statements with an array and object
+* use iterators with an array and object
+* use native methods of an array and object
+* know how to write a deeply nested array and object
+* know how to read a deeply nested array and object
 
-# 1 of 9: Creating values for each reference type
+Now that we've talked about primitive data types, let's discuss the last data type in Javascript: objects. Arrays, functions, and (shocker!) objects are all examples of objects. Objects are sometimes referred to as reference types (to distinguish them from the primitive types that we've seen already). Here we'll discuss arrays and objects; functions will be the subject of a later learning experience.
 
-During [JavaScript: Intro, Types, Values, Variables, Control Flow](/redirects/learning_experiences/68), we learned about one of two types of values in JavaScript: primitive types. Now, we're going to shift our focus to the other types of values: reference types.
+## Arrays 
 
-Let's use Node and create two of the three reference types found in JavaScript:
-- `Array`
-- `Object`
-- `Function` (on Tuesday)
+Arrays in Javascript are declared using square brackets. The simplest array is one with nothing in it: 
 
-## Array `[]`
-
-In this section, we're going to learn how to perform CRUD (create, read, update, delete) operations with arrays.
-
-### Create elements
-
-To create an array, we type two characters: an open square bracket and a closing square bracket:
-
-```javascript
-[]
+```
+var arr = [];
 ```
 
-Similar to primitive types, we need to set our array to a variable if we want to access it at a later time. Let's rewrite the above code with a `var` statement:
-
-```javascript
-var myArray = [];
-```
-
-The syntax we're using to create our array is referred to as an array literal. To be more specific, our array literal is considered to be an empty array literal. We describe it as empty because arrays are designed to store sequences of data, which include reference types, primitives types, or both.
+The syntax we're using to create our array is referred to as an array literal. To be more specific, our array literal is considered to be an empty array literal. We describe it as empty because arrays are designed to store sequences of data.
 
 Let's create an array literal and store four strings inside of it:
 
 ```javascript
-var myArray = ["Kyle", "Danny", "CJ", "Roberto"];
+var myArray = ["Elie", "Janey", "Matt", "Parker", "Tim"];
 ```
 
 For the syntax to be valid, each value needs to be delimited with commas.
 
-### Read Elements
-
-To access and read each element in the array, we need to use square bracket notation with an index. Indexes are typically Numbers.
+Note that the above array happened to have all strings in it, but in Javascript it's not necessary that each element in an array have the same type. This array is also perfectly valid:
 
 ```javascript
-var myArray = ["Kyle", "Danny", "CJ", "Roberto"];
-
-myArray[0] // "Kyle"
-myArray[1] // "Dannyr"
-myArray[2] // "CJ"
-myArray[3] // "Roberto"
+var randomArray = ["hi", 3, null, [1, 2, 3], true, "bye"];
 ```
 
-Notice that the index starts with `0` and then increments by `1` This sequence gives us a great mental model of an element's index. Moreover, it gives us a glimpse into how an array's elements are stored in memory--as a block.
+### Accessing Elements
 
-### Update elements
-
-To update a value stored at a specific index, we need to take a two step process. First, we need to access the desired element. Second, we need to set that element to a new value:
+To access and read each element in the array, we need to use square bracket notation with an index. Indexes are typically numbers.
 
 ```javascript
-var myArray = ["Kyle", "Danny", "CJ", "Roberto"];
+var myArray = ["Elie", "Janey", "Matt", "Parker", "Tim"];
 
-myArray[0] = "Ember Dude";
-// ["Ember Dude", "Danny", "CJ", "Roberto"];
+myArray[0] // "Elie"
+myArray[1] // "Janey"
+myArray[2] // "Matt"
+myArray[3] // "Parker"
+myArray[4] // "Tim"
 ```
 
-### Delete elements
+Notice that the index starts with `0` and then increments by `1`. We say that arrays are zero-indexed because the first element is at index 0, not at index 1.
 
-To delete a value stored at a specific index, we need to use the keyword `delete` with the following syntax:
+### Updating Elements
+
+To update a value stored at a specific index, we can simply reassign the value at that index.
 
 ```javascript
-var myArray = ["Kyle", "Danny", "CJ", "Roberto"];
+var myArray = ["Elie", "Janey", "Matt", "Parker", "Tim"];
 
-delete myArray[3];
-// ["Kyle", "Danny", "CJ", undefined];
+myArray[2] = "Mathematical Matt"
+
+// ["Elie", "Janey", "Mathematical Matt", "Parker", "Tim"];
 ```
 
-Notice that `"Roberto"` was removed from our array, but the index for `"Roberto"` still exists. In other words, the keyword `delete` replaces a pre-existing value with `undefined`.  In a latter section, we'll learn how to implement the common task of removing the value and index.
-
-## Object `{}`
+## Objects 
 
 Let's now transition to objects, which are created with a syntax that's very different from arrays.
 
