@@ -69,9 +69,9 @@ myArray[2] = "Mathematical Matt"
 
 ## Objects 
 
-Let's now transition to objects, which are created with a syntax that's very different from arrays.
+Let's now transition to objects, which are created with a different syntax.
 
-### Create key-value pairs
+### Key-value pairs
 
 We're going to declare a variable named `person` and set it to an empty object literal:
 
@@ -80,12 +80,6 @@ var person = {};
 ```
 
 Objects start with an open curly brace and end with a closing curly brace. Inside of these braces, we store data as key-value pairs. The key is similar to an index of an array. The value is similar to a value in an array.
-
-Note three more important differences between objects and arrays:
-
-- The key or value of an object cannot be created without a corresponding key or value.
-- The keys of an object must have an explicit and valid identifier (name).
-- The key-values of an object are not necessarily stored sequentially in memory.
 
 Here's an example of an object literal with one key-value pair:
 
@@ -108,9 +102,9 @@ var person = {
  }
 ```
 
-### Create key-value pairs with dot notation or square bracket notation
+### Dot notation vs. square bracket notation (Creation)
 
-Let me pose a scenario: Imagine that we declared a variable named `cat` and assigned it an empty object literal. How do we add key-value pairs to `cat`? We have two options: dot notation and square bracket notation.
+Imagine that we declared a variable named `cat` and assigned it an empty object literal. How do we add key-value pairs to `cat`? We have two options: dot notation and square bracket notation.
 
 Dot notation works the following way:
 
@@ -141,7 +135,7 @@ cat
 
 Above, the keys are considered invalid due to the white space in their names. To circumvent this problem, we enclose the invalid identifier in quotation marks. Then, we enclose that string inside of square brackets.
 
-### Read key-value pairs
+### Dot notation vs. square bracket notation (Access)
 
 To read the value of a key-value pair, we need to use dot notation or square bracket notation. Unlike above, we can omit the equality operator and the right operand:
 
@@ -164,8 +158,8 @@ Notice that we had to use quotation marks with the square bracket notation. If w
 
 ```javascript
 var cat = {
-	firstName: 'Felix',
-	lastName: 'The Cat'
+	firstName: "Felix",
+	lastName: "The Cat"
 };
 
 var firstName = "Boooo";
@@ -173,9 +167,13 @@ var firstName = "Boooo";
 cat.firstName  // "Felix"
 cat["firstName"]  // "Felix"
 cat[firstName] // undefined (analogous to cat["Boooo"])
+
+var foo = "firstName";
+cat.foo // undefined (cat has no value corresponding to the key of foo!)
+cat[foo] // "Felix"
 ```
 
-### Update key-value pairs
+### Updating key-value pairs
 
 ```javascript
 var cat = {};
@@ -192,7 +190,7 @@ cat
 
 ### Delete key-value pairs
 
-Following the previous example, we'll want to delete a key-value pair with the following syntax:
+We can delete a key-value pair with the following syntax:
 
 ```
 var person = {
@@ -206,7 +204,7 @@ person
 // {lastName: "Wayne"}
 ```
 
-Deleting requires us to include the keyword `delete` in front of a key-value pair. This is similar to how we deleted values of an index with Arrays. Successfully deleting a pre-existing key-value pair will resolve to a Boolean value of `true`. If we delete a non-existing key-value pair, we are returned `undefined`.
+Deleting requires us to include the keyword `delete` in front of a key-value pair. 
 
 #  2 of 9: `instanceof` operator
 
