@@ -222,52 +222,47 @@ Array.isArray([]) // true
 Array.isArray({}) // false
 ```
 
-# 3 of 9: `==` and `===` with reference types
+## Variable assignment and comparisons with reference types
 
-We learned that the double equality operator applies type conversion and the triple equality operator doesn't. When we work with reference types, these differences become irrelevant. There's just one rule to remember with reference types: The return value will be false unless the same reference, not two versions of the same reference, are being compared.
-
-```javascript
-// Due to the way object literals are parsed, we need to wrap them in parentheses
-[] == [] // false
-[] === [] // false
-({}) == ({}) // false
-({}) === ({}) // false
-```
-
-# Variable Assignment with Reference Types
-
-So how do we get a comparison of reference types to return `true`? This really depends on our intention. Reference types are similar to human names and social security numbers. Whenever we create a reference type, it's similar to creating a new human. A human is a human; but each human is unique, and using U.S. standards, receives a unique social security number.
-
-In the previous section, the double and triple equality operator were testing for equality of social security numbers--not humans. If we wanted to test for humans, then there are workarounds. We'll discuss them in the future; for now, let's focus on the social security problem, which is a crucial part of understanding reference types and pointers.
-
-# 4 of 9: Variable assignment with reference types
-
-Picture the following code:
+Consider the following code:
 
 ```javascript
-var person = {Name: "Danny"};
+var person = {name: "Matt"};
 var anotherPerson = person;
 
-anotherPerson.Name // "Danny"
+anotherPerson.name // "Matt"
 ```
 
 We've used a `var` statement to declare a variable named `person` and set it to an object literal. Next, we used another `var` statement to declare a variable named `anotherPerson` and set it to `person`.
 
-With primitive types, each variable receives their own copy of a value. With reference types, however, they share the same value in memory (pointer). In other words, `person` and `anotherPerson` are two different variables. Since these variables are set to a reference type, they point to the same object--the same person, Danny.
+With primitive types, each variable receives their own copy of a value. With reference types, however, they share the _same_ value in memory (pointer). In other words, `person` and `anotherPerson` are two different variables. However, since these variables are set to a reference type, they point to the same object.
 
-# Mutability of Reference Types
-
-To reinforce what we're learning about reference types, let's work with a slightly more complex code snippet:
+Note that if we make another person object, even if it has the same keys and values, it will _not_ be equal to the original `person` object:
 
 ```javascript
-var person = {Name: "Daniel"};
+var person = {name: "Matt"};
 var anotherPerson = person;
+var doppelganger = {name: "Matt"};
 
-person.Name = "Danny";
-anotherPerson.Name // ?
+person === anotherPerson // true;
+person === doppelganger // false;
 ```
 
-What's the `Name` of `anotherPerson`? The answer is `"Danny"`. `anotherPErson` accessed our object literal and added a key-value pair on it.  When `person` wanted to read the value, it first found the object in memory, noticed that the object had a key named `Name`, and retrieved its value.
+This is because `person` and `doppelganger` have pointers to different objects, even though those objects have identical key-value pairs.
+
+### Mutability of Reference Types
+
+To reinforce what we're learning about reference types, let's look at one more example.
+
+```javascript
+var person = {name: "Matthew"};
+var anotherPerson = person;
+
+person.name = "Matt";
+anotherPerson.name // ?
+```
+
+What's the `name` of `anotherPerson`? The answer is `"Matt"`. `anotherPerson` accessed our object literal and updated the `name` property on it.  When `person` wanted to read the value, it first found the object in memory, noticed that the object had a key named `name`, and retrieved its value.
 
 # 5 of 9: Control structures with conditional statements
 
