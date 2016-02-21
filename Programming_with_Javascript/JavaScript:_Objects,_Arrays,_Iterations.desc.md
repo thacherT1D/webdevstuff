@@ -2,16 +2,15 @@
 
 Objectives:
 
-(original objectives)
-* create values for each of the reference types
-* use `instanceof` operator with reference types
-* explain the behavior of `==` and `===` with reference types
-* explain how variable assignments works with reference types
-* use conditional statements with an array and object
-* use iterators with an array and object
-* use native methods of an array and object
-* know how to write a deeply nested array and object
-* know how to read a deeply nested array and object
+* Create and manipulate arrays and objects
+* Explain the difference between object dot notation and bracket notation
+* Explain how objects are stored and compared in memory 
+* Write for loops and while loops
+* Write a for loop to iterate over an array
+* Write a for-in loop to iterate over an object
+* Describe common native methods for arrays and objects
+* Write a deeply nested object
+* Read data from a deeply nested object
 
 Now that we've talked about primitive data types, let's discuss the last data type in Javascript: objects. Arrays, functions, and (shocker!) objects are all examples of objects. Objects are sometimes referred to as reference types (to distinguish them from the primitive types that we've seen already). Here we'll discuss arrays and objects; functions will be the subject of a later learning experience.
 
