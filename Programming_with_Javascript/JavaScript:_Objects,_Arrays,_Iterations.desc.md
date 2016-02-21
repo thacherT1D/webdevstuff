@@ -622,7 +622,7 @@ Exercise: Take this deeply nested reference type and write the code to find the 
 ***
 
 ***
-Exercise: How would you access the text "Access Me" from the following object? (Example courtesy of [Desmos.com](http://www.desmos.com)):
+Exercise: How would you access the text "Access me!" from the following object? (Example courtesy of [Desmos.com](http://www.desmos.com)):
 
 ```javascript
 var graphObject = {
