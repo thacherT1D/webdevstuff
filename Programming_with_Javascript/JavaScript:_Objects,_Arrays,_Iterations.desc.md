@@ -422,9 +422,9 @@ Imagine that we want to iterate through every key-value pair in an object named 
 1. Declare a variable that represents the key of an object and associate with an object using the keyword `in`.
 2. Access all values of a key using the standard syntax for accessing the values of a key: `person[key]`. If we want to access just the keys, they we can just use the variable we created to represent a key.
 
-# 7 of 9: Native Methods for `Array` and `Object`
+## Native Array and Object methods
 
-## Array
+### Array
 
 Every array has access to a set of default properties and methods. Instead of exploring all of them now, we're going to explore the three most frequently used:
 
@@ -446,18 +446,18 @@ myArray.length; // 1
 
 ### `push([value])`
 
-The`push([value])` method enables us to add a value to the end of an array.
+The`push([value])` method enables us to add a value to the end of an array. `push` returns the length of the modified array.
 
 ```javascript
 var myArray = [];
 
-myArray.push("Kyle");
+myArray.push("Matt");
 myArray
-// ["Kyle"]
+// ["Matt"]
 
-myArray.push("Danny");
+myArray.push("Elie");
 myArray
-// ["Kyle", "Danny"]
+// ["Matt", "Elie"]
 ```
 
 ### `pop()`
@@ -465,28 +465,24 @@ myArray
 The`pop()` method removes the last element of the array. The return value is the item being removed.
 
 ```javascript
-var myArray = ["Kyle", "Danny", "CJ", "Roberto"]
+var myArray = ["Elie", "Janey", "Matt", "Parker", "Tim"]
 
 myArray.pop();
-//  "Roberto"
+//  "Tim"
 myArray
-// ["Kyle", "Danny", "CJ"]
+// ["Elie", "Janey", "Matt", "Parker"]
 
 myArray.pop();
-//  "CJ"
+//  "Parker"
 myArray
-// ["Kyle", "Danny"]
-
-myArray.pop();
-//  "Danny"
-myArray
-// ["Kyle"]
-
-myArray.pop();
-//  "Kyle"
-myArray
-// []
+// ["Elie", "Janey", "Matt"]
 ```
+
+Here are some other methods that we won't discuss in detail today, but that you'll become more familiar with during your time here:
+
+- [indexOf](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf)
+- [slice](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice)
+- [splice](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice)
 
 ## Object
 
@@ -520,7 +516,7 @@ var person = {
 };
 
 Object.keys(person);
-// ["firstName", "lastName]
+// ["firstName", "lastName"]
 ```
 
 # 8 of 9: Creating Nested Values
