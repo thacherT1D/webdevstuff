@@ -264,9 +264,9 @@ anotherPerson.name // ?
 
 What's the `name` of `anotherPerson`? The answer is `"Matt"`. `anotherPerson` accessed our object literal and updated the `name` property on it.  When `person` wanted to read the value, it first found the object in memory, noticed that the object had a key named `name`, and retrieved its value.
 
-# 6 of 9: Control structures with iterators
+## An Introduction to Iterators
 
-Iterators extend to us the ability to iterate through the keys of an object or elements of an array. To illustrate this point, let's learn how to iterate with arrays and objects with the following iterators:
+Iterators let us, well, iterate through the keys of an object or elements of an array. To illustrate this point, let's learn how to iterate with arrays and objects with the following iterators:
 
 - `for` loop (arrays)
 - `for-in`loop (objects)
@@ -294,7 +294,104 @@ Imagine that we want to iterate through every element from our array from the fi
 3. We want to increment `i` after every iteration of the `for` loop.
 4. During each iteration, we use `i` to access a element in the array.
 
-### `for-in` loop (arrays)
+Of course, you don't need an array in order to write a for loop. Here's an example of a for loop that makes no mention of arrays:
+
+```javascript
+for (var i = 1; i < 10; i++) {
+  console.log(i);
+}
+
+// What will this log to the console??
+```
+
+### While loops
+
+A while loop is another way of constructing a loop.  Here is the syntax:
+
+```
+while ( /* Boolean expression */ ) {
+    Execute code
+}
+```
+
+Here is an example:
+
+```
+var timesForPhrase = 10;
+var phrase = prompt("What do you want to say " + timesForPhrase + " times?");
+
+var i = 0;
+while (i < timesForPhrase)  {
+   console.log(phrase);
+   i++;
+}
+
+```
+### Do-while loop
+
+Related to the while loop is the do-while loop. How do you think these two code blocks are similar? How are they different?
+
+```
+// log some squares
+
+var i = 1;
+while (i < 10) {
+  console.log(i*i);
+  i++;
+}
+
+// log some squares, another way
+
+var i = 1;
+do {
+  console.log(i*i);
+  i++;
+} while(i < 10);
+```
+
+### Beware of infinite loops!
+
+Sometimes, you may accidentally write a loop that will never end. This is called an **infinite loop**, and is basically terrible. Here's an example: suppose you want to log the numbers 1 through 10 to the console using a `while` loop, but you forget to increment your index at each step:
+
+```
+// Don't paste this into the browser unless you want to force quit Chrome!
+var i = 1;
+while (i <= 10) {
+  console.log(i);
+}
+```
+Why is the above code block problematic?
+
+### Exercises
+
+1. Iterate through the array [1, 2, 3, 4] to change the array to [2, 3, 4, 5].
+1. Print the numbers 1 to 10 and also the number 10 to 1, side by side.  Do this using a for loop and a while loop. Expected output:
+```javascript
+1 10
+2 9
+3 8
+4 7
+5 6
+6 5
+7 4
+8 3
+9 2
+10 1
+```
+1. Write code to print all the odd numbers between 1 and 100. Do this using a for loop and a while loop.
+1. Explain what the code below is doing. Why is a `while` loop more suitable than a `for` loop in this case?
+
+```javascript
+var total = 0;
+var flip = Math.random();
+while (flip > 0.5) {
+  total++;
+  flip = Math.random();
+ }
+console.log("Number of consecutive times heads came up: " + total);
+```
+
+### `for-in` loop (objects)
 
 A `for-in` loop allows your to iterate over each key in an object. Here's the syntax for a `for-in` loop:
 
