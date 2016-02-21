@@ -355,7 +355,7 @@ Notice that in the above example, we typed `1 + 1 == 2`, and note `1 + 1 = 2`. I
 
 The key understanding here is the difference between _assignment_ and _comparison_. The single equals sign in Javascript is used for assignment, e.g. assigning a variable to some value. The double equals sign is used for comparison, i.e. to check whether two values are equal. You can't assign one value to another value, but you can always check whether two values are the same.
 
-Related to the `==` comparison operator is the `===` comparison operator. `===` is a stronger operator, as it also checks whether the **type** of the values are the same, while the `==` operator will try to _coerce_ the values into being the same type before comparing. As an exercise, try to predict what boolean each of the following expressions will evaluate to:
+Related to the `==` comparison operator is the `===` comparison operator. `===` is a stronger operator, as it also checks whether the **type** of the values are the same, while the `==` operator will try perform some type conversion before comparing. As an exercise, try to predict what boolean each of the following expressions will evaluate to:
 
 ```
 "3" == 3
@@ -466,7 +466,7 @@ For instance, suppose you type the following expression into your console: `1 + 
 
 This type of conversion also happens when you pass values into if statements. In a block of code like `if (x) {...}`, `x` is expected to be a Boolean. If it isn't, Javascript will convert it into a Boolean.
 
-Most values in Javascript are truthy -- that is, they get coerced into `true` should the need arise. In fact, there are only six falsy values in Javascript: `false`, `null`, `undefined`, `0`, `''`, and `NaN`.
+Most values in Javascript are truthy -- that is, they get converted into `true` should the need arise. In fact, there are only six falsy values in Javascript: `false`, `null`, `undefined`, `0`, `''`, and `NaN`.
 
 ### Further Reading
 

@@ -206,28 +206,21 @@ person
 
 Deleting requires us to include the keyword `delete` in front of a key-value pair. 
 
-#  2 of 9: `instanceof` operator
+### Array checking
 
-We now know how to use CRUD operations to create arrays and objects. We also know that both of them can store primitive and reference types. If we use the `typeof` operator, what will it return if we couple `typeof` with an array or object? Let's write some code and view the output:
+Unlike with most primitive data types, the `typeof` operator isn't helpful when trying to distinguish between different objects and arrays, since both are objects in Javascript.
 
 ```javascript
 typeof [] // object
 typeof {} // object
 ```
 
-That didn't work! To find out if a value is an Array, we can now use the `instanceof` operator.
+As of ES5, there's a simple method you can use to check whether something is an array: `Array.isArray`.
 
 ```javascript
-var people = [];
-people instanceof Array // true
-people instanceof Object // true
-
-var person = {}
-person instanceof Array // false
-person instanceof Object // true
+Array.isArray([]) // true
+Array.isArray({}) // false
 ```
-
-An Array is just an object in JavaScript. It is an object that comes predefined with many methods and properties.
 
 # 3 of 9: `==` and `===` with reference types
 
