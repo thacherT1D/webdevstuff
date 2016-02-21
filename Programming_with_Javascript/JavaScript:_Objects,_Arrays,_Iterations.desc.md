@@ -519,44 +519,46 @@ Object.keys(person);
 // ["firstName", "lastName"]
 ```
 
-# 8 of 9: Creating Nested Values
+## Creating Nested Values
 
 In the near future, you'll find yourself working with nested reference types. This describes deeply nested values, such as an array storing objects, which store objects and arrays, which can store more arrays, etc.
 
 ```js
-var people = [
+var superheroes = [
 	{
-		name: {
-			first: "Danny",
-			last: "Fritz"
+    name: "Spider-Man"
+		alterEgo: {
+			first: "Peter",
+			last: "Parker"
 		},
-		age: 26,
+		age: 15,
 		address: {
 			country: "USA",
-			state: "Colorado"
+			city: "New York"
 		},
-		favoriteColors: ["blue", "orange"]
+		favoriteColors: ["blue", "red"]
 	},
 	{
-		name: {
-			first: "Barack",
-			last: "Obama"
+    name: "Batman"
+		alterEgo: {
+			first: "Bruce",
+			last: "Wayne"
 		},
-		age: 54,
+		age: 32,
 		address: {
 			country: "USA",
-			state: "DC"
+			city: "Gotham"
 		},
-		favoriteColors: ["Red", "White", "Blue"]
+		favoriteColors: ["black", "yellow"]
 	}
 ]
 
-people[1].name.first // "Barack"
-people[0].favoriteColors[1] // "orange"
-people[1].age // 54
+people[1].alterEgo.first // "Bruce"
+people[0].favoriteColors[1] // "red"
+people[1].age // 32
 ```
 
-# 9 of 9: Reading Nested Values
+## Reading Nested Values
 
 Reading deeply nested values is a very important technique. If you want to include tweets in one of your future web apps, daily forecasts, or most other data from a third-party source of data, you'll need to know how to read deeply nested data.
 
@@ -567,7 +569,7 @@ Exercise: Take this deeply nested reference type and write the code to find the 
 
 1. The email of user 1.
 2. The title of user 5.
-3. The user id of the first user in the user's array.
+3. The user id of the first user in the users array.
 
 ```javascript
 {
@@ -619,7 +621,67 @@ Exercise: Take this deeply nested reference type and write the code to find the 
 ```
 ***
 
-# Conclusion
+***
+Exercise: How would you access the text "Access Me" from the following object? (Example courtesy of [Desmos.com](http://www.desmos.com)):
+
+```javascript
+var graphObject = {
+  version:1,
+  graph:{
+    viewport:{
+      xmin:-10,
+      ymin:-3.367158671586716,
+      xmax:10,
+      ymax:3.367158671586716
+    }
+  },
+  expressions:{
+    list:[
+      {
+        id:"1",
+        type:"expression",
+        latex:"y=x",
+        domain:{
+          min:0,
+          max:1
+        },
+        hidden:false,
+        color:"#C0504D",
+        style:"normal"
+      }, {
+        id:"2",
+        type:"expression",
+        latex:"y=2x",
+        domain:{
+          min:0,
+          max:1
+        },
+        hidden:false,
+        color:"#4F81BD",
+        style:"normal"
+      }, {
+        id:"4",
+        type:"text",
+        text:"Access me!"
+      }, {
+        id:"5",
+        type:"expression",
+        latex:"",
+        domain:{
+          min:0,
+          max:1
+        },
+        hidden:false,
+        color:"#8064A2",
+        style:"normal"
+      }
+    ]
+  }
+}
+```
+***
+
+## Conclusion
 
 We learned about reference types. Combined with our knowledge of primitive types, we now know all the data types used in JavaScript. Awesome!
 
