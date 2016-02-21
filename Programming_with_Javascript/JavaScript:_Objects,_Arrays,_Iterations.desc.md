@@ -264,46 +264,6 @@ anotherPerson.name // ?
 
 What's the `name` of `anotherPerson`? The answer is `"Matt"`. `anotherPerson` accessed our object literal and updated the `name` property on it.  When `person` wanted to read the value, it first found the object in memory, noticed that the object had a key named `name`, and retrieved its value.
 
-# 5 of 9: Control structures with conditional statements
-
-Reference types are often used with control structures that involve conditional statements:
-
-- `if`
-- `if/else`
-- `if/else if/else`
-- `switch`
-
-Similar to the way control structures were used with primitive types, a conditional statement (e.g. `if`) gets executed if the value or expression contained in a conditional's parentheses resolves to a `truth-y` value.
-
-Let's create a scenario for using an array with an `if/else` statement: We are developers for a meetup application, and we want to prevent any emails to be sent to meetup attendees unless they allow it:
-
-```javascript
-var attendee = {
-	allowEmail: false, //I hate emails
-	name: "Danny"
-}
-
-if (attendees.allowEmail) {
-  // send email
-} else {
-  // do not send email
-}
-```
-
-Another example would be a program that restricts content based on the user's age.
-
-```javascript
-var user = {
-	age: 10,
-	name: 'Tator Tot'
-}
-if (user.age < 21) {
-	console.log("You are too young to consume alcohol!");
-} else {
-	console.log("What drink would you like?");
-}
-```
-
 # 6 of 9: Control structures with iterators
 
 Iterators extend to us the ability to iterate through the keys of an object or elements of an array. To illustrate this point, let's learn how to iterate with arrays and objects with the following iterators:
