@@ -324,6 +324,9 @@ Functions in JavaScript are __very powerful__ and in many ways they are more usa
 
 - http://reactivex.io/learnrx/
 
+<iframe src="https://player.vimeo.com/video/134061121" width="500" height="313" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+
 ## Exercise
 
 https://github.com/gSchool/javascript_timers_callbacks_exercise
