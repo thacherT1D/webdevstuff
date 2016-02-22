@@ -34,12 +34,13 @@ There is a parameter on our event handler functions: the event object. The event
 ```js
 var button = document.querySelector("button");
 function handleMouse (event) {
-    if (event.which == 1)
-        console.log("Left button");
-    else if (event.which == 2)
-        console.log("Middle button");
-    else if (event.which == 3)
-        console.log("Right button");
+  if (event.which == 1) {
+    console.log("Left button");
+  } else if (event.which == 2) {
+    console.log("Middle button");
+  } else if (event.which == 3) {
+    console.log("Right button");
+  }
 }
 button.addEventListener("mousedown", handleMouse);
 ```
@@ -54,7 +55,7 @@ The following code adds an event listener to the entire `window` object.  Try ty
 
 ```js
 addEventListener("click", function() {
-    console.log("You clicked!");
+  console.log("You clicked!");
 });
 ```
 
@@ -63,7 +64,7 @@ Every single DOM element also has its own `addEventListener` method:
 ```js
 var button = document.querySelector("button");
 var clickedTheButton = function(){
-    alert("SOMEONE CLICKED THE BUTTON!!");
+  alert("SOMEONE CLICKED THE BUTTON!!");
 }
 button.addEventListener("click", clickedTheButton);
 ```
@@ -86,8 +87,8 @@ What does the following code do?
 ```js
 var button = document.querySelector("button");
 function once() {
-    console.log("Done.");
-    button.removeEventListener("click", once);
+  console.log("Done.");
+  button.removeEventListener("click", once);
 }
 button.addEventListener("click", once);
 ```
@@ -108,7 +109,7 @@ Let's suppose we want to add a click listener to every `<p>` on a page. We can't
 //THIS DOES NOT WORK
 var paragraphs = document.querySelectorAll("p");
 paragraphs.addEventListener("click", function(){
- console.log("Woof!")
+  console.log("Woof!")
 })
 ```
 
@@ -119,7 +120,7 @@ var paragraphs = document.querySelectorAll('p');
 function eventHandler (event) {
   console.log('p clicked!');
 }
-for (var i=0; i<paragraphs.length; i++) {
+for (var i=0; i < paragraphs.length; i++) {
   paragraphs[i].addEventListener('click', eventHandler)
 }
 ```
