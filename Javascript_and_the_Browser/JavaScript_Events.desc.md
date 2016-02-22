@@ -62,9 +62,10 @@ Every single DOM element also has its own `addEventListener` method:
 
 ```js
 var button = document.querySelector("button");
-button.addEventListener("click", function(){
+var clickedTheButton = function(){
     alert("SOMEONE CLICKED THE BUTTON!!");
-});
+}
+button.addEventListener("click", clickedTheButton);
 ```
 
 Now we've attached an event listener to a specific DOM node, a button on the page.  Now, we will see a `"SOMEONE CLICKED THE BUTTON!!"` alert when that particular button is pressed.
@@ -73,11 +74,11 @@ Now we've attached an event listener to a specific DOM node, a button on the pag
 
 [[MDN]](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/removeEventListener)
 
-You can also remove event listeners from DOM elements if you are no longer interested in the event.
+You can also remove event listeners from DOM elements if you are no longer interested in the event. You must save a reference to the listener function to be able to do this! If you use a function literal when you're adding an event listener, you can't remove it later.
 
 ```js
 var button = document.querySelector("button");
-button.removeEventListener("click");
+button.removeEventListener("click", clickedTheButton);
 ```
 
 What does the following code do?
