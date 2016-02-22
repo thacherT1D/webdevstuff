@@ -525,7 +525,7 @@ In the near future, you'll find yourself working with nested reference types. Th
 ```js
 var superheroes = [
 	{
-    name: "Spider-Man"
+    name: "Spider-Man",
 		alterEgo: {
 			first: "Peter",
 			last: "Parker"
@@ -538,7 +538,7 @@ var superheroes = [
 		favoriteColors: ["blue", "red"]
 	},
 	{
-    name: "Batman"
+    name: "Batman",
 		alterEgo: {
 			first: "Bruce",
 			last: "Wayne"
