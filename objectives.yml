@@ -440,15 +440,6 @@
   :guiding_questions: 
   :resources: 
   :instructor_notes: 
-- :standard_uuid: 4655229a-33c6-4e0f-93e1-71c557c67602
-  :standard_name: Document an API using an automated tool
-  :uuid: 534972bf-c5d7-486a-aec1-6c2b4d597ca2
-  :name: Has documented an API using either a comment-parsing strategy or a documentation
-    tool such as Swagger
-  :description: 
-  :guiding_questions: 
-  :resources: 
-  :instructor_notes: 
 - :standard_uuid: cbaa4c7e-3a15-4530-ac43-bf910951db84
   :standard_name: Secure an API endpoint using token-based authentication and CORS
   :uuid: 28217972-19bc-4d58-a306-1650b47334cf
