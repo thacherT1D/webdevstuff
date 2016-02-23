@@ -11,7 +11,7 @@ Today, we're going to explore the fascinating world of functions. This world may
 
 ### What is a Function?
 
-`In one sentence, we can say that a function is a sequence of instructions that achieve a specific task. I've always found definitions to be more meaningful when they are tied to the world around us. So let's pause for a moment and think of real-world examples that fit our definition....
+In one sentence, we can say that a function is a sequence of instructions that achieve a specific task. I've always found definitions to be more meaningful when they are tied to the world around us. So let's pause for a moment and think of real-world examples that fit our definition....
 
 When I think about functions in the real world, I often consider a recipe (e.g., making pumpkin pie) or a manual (e.g. assembling a coffee table from IKEA).
 
@@ -163,22 +163,24 @@ function getGreeting(name) {
 
 __EXERCISE__
 
-What is output to the console with the following function invocation?
+* What is output to the console with the following function invocation?
 
 ```javascript
 getGreeting("Elie");
 ```
-With the following function invocation, which return statement is executed (the first, the second, or both)?
+* With the following function invocation, which return statement is executed (the first, the second, or both)?
 
 ```javascript
 getGreeting("Tim");
 ```
 
-Write a function called average that takes an array of numbers as a parameter and returns the average of the array of numbers.
+* Write a function called average that takes an array of numbers as a parameter and returns the average of the array of numbers.
 
 ```javascript
 average([2,4,6]) // Returns 4
 ```
+
+* Write a function called `calculate` that takes 3 arguments: `num1`, `num2`, and a string representing addition or multiplication (`'+'` or `'*'`).  Have that function decide which math operation to perform, then call another function for the appropriate operation.  For example, `calculate(4, 5, '*');` should call another function internally that looks like this `multiply(4, 5)` and returns the value `20`.
 
 ### The keyword `arguments`
 
@@ -223,13 +225,14 @@ function scopeExample() {
 	var num2 = 6;
 	num3 = 7;
 	
-	console.log(num1, num2, num3); // All 3 variables are defined here
+	console.log(num1, num2, num3, num4, "-> num1, num2, num3 and num4 are defined from inside scopeExample");
 }
 
-console.log("No variables defined");  // num1, num2, and num3 do not exist 
+num4 = 12345;
+console.log(num4, "-> Only num4 is defined at this point");  // num1, num2, and num3 do not exist 
 scopeExample();
 
-console.log(num3);  // Only num3 exists here.  The value is 7.
+console.log(num3, num4, "-> Only num3 and num4 exist now");
 ```
 
 __EXERCISE__
