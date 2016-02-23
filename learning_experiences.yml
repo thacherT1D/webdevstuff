@@ -1239,7 +1239,7 @@
   :name: Postgres Roles
   :description: Datastores/Postgres_Roles.desc.md
   :instructor_notes: Datastores/Postgres_Roles.notes.md
-  :mainline: true
+  :mainline: false
   :suggested_days: 0.5
   :section: Q2
   :experience_objectives:
