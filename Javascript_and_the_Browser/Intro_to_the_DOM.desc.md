@@ -4,11 +4,6 @@
 
 Let's look at the basics of using *vanilla* JavaScript to manipulate the DOM...
 
-## Overview
-
-- Be sure to figure out the "what" and "why" by reading through the sections slowly, really trying to answer *each* question before looking at the solution.
-- REMEMBER! It's about the process. There's no rush. Take risks, and have fun! Don't be afraid to make mistakes and try things.
-
 ### Why should you care?
 
 DOM operations form the basis of all client-side javascript, and all frameworks including jQuery and Angular ultimately just boil down to these calls. Knowing what the DOM is and how to use it is an essential skill for web developers, and many of the in-class assignments will include these DOM operations.
@@ -90,7 +85,7 @@ When we talk about "DOM Manipulation", what we're really talking about is 4 thin
 
 ### Finding Existing DOM Nodes
 
-#### `getElementbyID`
+## `getElementbyID`
 
 Add the following code to your JavaScript file:
 
@@ -107,24 +102,24 @@ Open the JavaScript console in Chrome. **What do you see?**
 
 **What does this give us?**
 
-Since we are assigning the [DOM node](https://developer.mozilla.org/en-US/docs/Web/API/Node) - `<p id="main">Just a paragraph...</p>` - to a variable, we now have a reference to it. With the node in hand, we can now its content (tags, attributes, inner text - **what are these?**), manipulate/change any part of it (attributes, inner text, etc.) after the page load, move it, or remove the node altogether. JavaScript gives us this power!
+Since we are assigning the [DOM node](https://developer.mozilla.org/en-US/docs/Web/API/Node) - `<p id="main">Just a paragraph...</p>` - to a variable, we now have a reference to it. With the node in hand, we can now access its content (tags, attributes, inner text - **what are these?**), manipulate/change any part of it (attributes, inner text, etc.), move it, or remove it altogether. JavaScript gives us this power!
 
 Any node within the [document](https://developer.mozilla.org/en-US/docs/Web/API/Document), the root node, can be accessed via JavaScript. **What if we wanted to target (or access) the list?**
 
 Without an `id` attribute, we need to use a different [method](https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByTagName)...
 
-#### `getElementsByTagName`
+## `getElementsByTagName`
 
 The [`getElementsByTagName()`](https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByTagName) method returns a collection/array of nodes. These collections are "live", which means that if you add a new HTML element to the collection, it will also be added to the DOM. You can treat the collection just like you would a normal JavaScript array.
 
 Add the following code to your JavaScript file:
 
 ```javascript
-var getAllElements = document.getElementsByTagName('ul');
-console.log(getAllElements)
+var allUnorderedLists = document.getElementsByTagName('ul');
+console.log(allUnorderedLists);
 
-var getSingleElement = document.getElementsByTagName('ul')[0];
-console.log(getSingleElement)
+var firstUnorderedList = allUnorderedLists[0];
+console.log(firstUnorderedList);
 ```
 
 Again, open your JS console. **What do you see?**
@@ -151,7 +146,8 @@ for (var i = 0; i < allListItems.length; i++) {
   console.log(allListItems[i]);
 }
 ```
-#### `getElementsByClassName`
+
+## `getElementsByClassName`
 
 The [`getElementsByClassName()`](https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByClassName) returns an array-like object of all child elements which have all of the given class names. When called on the document object, the complete document is searched, including the root node. You may also call getElementsByClassName() on any element; it will return only elements which are descendants of the specified root element with the given class names.
 
@@ -164,10 +160,10 @@ console.log(evenElements)
 var oddElements = document.getElementsByClassName('odd');
 console.log(oddElements)
 
-var firstEvenElement = document.getElementsByClassName('even')[0];
+var firstEvenElement = evenElements[0];
 console.log(firstEvenElement)
 
-var firstOddElement = document.getElementsByClassName('odd')[0];
+var firstOddElement = oddElements[0];
 console.log(firstOddElement)
 ```
 
@@ -187,10 +183,10 @@ The first two examples output the *entire* collections while the second two exam
 
 Similar to `getElementsByTagName`, the collection returned from `getElementsByClassName` can be iterated over.
 
-#### `querySelector`
+## `querySelector`
 
 The [`querySelector()`](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector
-) Returns the first element within the document that matches the specified group of selectors.
+) Returns the first element within the document that matches the specified group of selectors. The argument you pass into `querySelector` should be a valid CSS query.
 
 Add the following code to your JavaScript file:
 
@@ -214,7 +210,7 @@ Open your JS console. **What do you see?**
 <li class="odd">item 1</li>
 ```
 
-#### `querySelectorAll`
+## `querySelectorAll`
 
 The [`querySelectorAll()`](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll) Returns a list of the elements within the document that match the specified group of selectors. The object returned is a NodeList.
 
@@ -232,7 +228,7 @@ Open your JS console. **What do you see?**
 
 Both `querySelector` and `querySelectorAll` accept selectors which can be [very specific and powerful](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector#ExamplePowerful).
 
-#### Traversing the DOM
+## Traversing the DOM
 
 In the last section, you were introduced to DOM traversal, which is simply the action of traveling up and down through the DOM in order to target a specific Node.
 
@@ -272,15 +268,11 @@ console.log(allListItems);
 
 Test it out!
 
-#### `innerText` vs `innerHTML`
+## `innerText` vs `innerHTML`
 
 Research this on your own. **How would you construct the Google query to find a solution quickly?**
 
-Ideally, after you search, you should find an answer within the first three results. If not, redefine your search query, as, more often than not, the current results are *unlikely* to be relevant. This begs the question - **What constitutes a good search result?** Think about this for a minute - or two. Think about when you constructed a good search query vs. a poor search query. Which sites produced a good result? [MDN JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) is the most canonical, [StackOverflow](http://stackoverflow.com/) is written by the communty,  and [w3schools JavaScript](http://www.w3schools.com/js/) which has some good explainations, generally yield good results. Over time, you will find that as the complexity and granularity of the subject increases, the less you can rely on mainstream resources to produce quality results. Often you will have to rely on less popular areas on [StackOverflow](http://stackoverflow.com/) as well as personal blog posts. Keep this in mind. Practice. Practice. Practice.
-
-> Also, keep in mind, that the more esoteric subjects are generally ones that people are talking less about, which gives you an opportunity to participate. The more you participate, the more you will be recognized as a thought leader in the community. Thought leaders don't have to look for jobs - jobs come to them.
-
-### Manipulation
+## Manipulation
 
 Moving on from accessing nodes and traversing the DOM, let's look at manipulating elements. First off, each node can be manipulated via its properties/HTML attributes.
 
@@ -326,8 +318,7 @@ Let's add another list element to the unordered list:
 1. Add text to the `li` element
 
   ```javascript
-  var newElement = li.innerText = "another list item";
-  console.log(newElement);
+  li.innerText = "another list item";
   console.log(li);
   ```
 
@@ -336,8 +327,8 @@ Let's add another list element to the unordered list:
 1. Add child element to the list
 
   ```javascript
-  getSingleElement.appendChild(li);
-  console.log(allListItems);
+  firstUnorderedList.appendChild(li);
+  console.log(firstUnorderedList);
   ```
 
   The list should now look like:
@@ -356,8 +347,7 @@ Let's add another list element to the unordered list:
 ```javascript
 var anotherListElement = document.createElement('li');
 anotherListElement.innerText = "prepend";
-console.log(anotherListElement);
-getSingleElement.insertBefore(anotherListElement, getSingleElement.firstChild);
+firstUnorderedList.insertBefore(anotherListElement, firstUnorderedList.firstChild);
 console.log(allListItems);
 ```
 
@@ -367,39 +357,6 @@ Make sense? Prepend another element. Try removing an element with `removeChild()
  - Create a new html5 document that sources a javascript file for the project.
  - Within in the javascript file, create an object listing at least five animals and the sound they make.
  - Use DOM creation methods to create a table to list the animals. Each animal name and sound should be in its own table cell.
-
-
-# Assignment
-For reference:  [MDN HTMLElement.style](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/style)
-
-- [Style with JavaScript](https://github.com/gSchool/style-with-javascript)
-
-- [The Checkerboard Exercise](https://github.com/gSchool/checkerboard-exercise)
-
-# Stretch Assignment
-[DOM Query](https://github.com/gSchool/dom-query-function)
-
-
-## Reflect
-
-### Self-Assessment
-
-How’d you do? Go back to the "Objectives" section. Go through each one and ask yourself:
-
-- Have I completed this objective?
-- What concrete evidence do I have that I've completed the objective?
-
-Rate yourself 1 through 4 for each objective in terms of competence (4 being the highest). If you rate yourself a 2 or below, please notify an instructor for additional help.
-
-Go to the "Key Terms" section.  For each term, ask yourself:
-
-- What is my explanation for this term?
-
-If you haven't completed an objective, or you can't define a term, take a few minutes to try to fill in any gaps.
-
-### Ask new questions
-
-What new questions do you have now that you've gone through this exercise?
 
 ## Further Reading
 
