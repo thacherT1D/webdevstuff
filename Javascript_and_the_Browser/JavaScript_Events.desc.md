@@ -302,12 +302,27 @@ Note: putting your script tags at the bottom of the page can help resolve some o
 ## Event Propogation
 
 [[JavaScript.info]](http://javascript.info/tutorial/bubbling-and-capturing)
-[[quirksmode]](http://www.quirksmode.org/js/events_order.html)
-[[MDN]](https://developer.mozilla.org/en-US/docs/XUL_Event_Propagation)
 
-When an event happens. It captures down the DOM tree from `<html>` to the element where the event happened. And then bubbles back up the DOM tree until it gets back to `<html>`. Along each element it passes, it fires the event.
+Before finishing up, let's take a look at one more example. Let's return to our earlier example with a single `button`. In our Javascript file, let's add two event listeners:
 
-These 2 phases are collectively known as event propogation.
+```js
+var body = document.querySelector('body');
+var button = document.querySelector('button');
+
+body.addEventListener('click', function() {
+  alert("YOU CLICKED ON THE BODY!!!!");
+});
+
+button.addEventListener('click', function() {
+  alert("YOU'RE REALLY PUSHING MY BUTTONS!!!!!");
+});
+```
+
+Click on the button. You'll see that the button message is alerted, followed by the body message. Why is this the order, rather than the other way around? The answer has to do with _event propogation_.
+
+When an event happens. It _captures_ down the DOM tree from `<html>` to the element where the event happened. Then, it _bubbles_ back up the DOM tree until it gets back to `<html>`. Along each element it passes, it fires the event.
+
+These 2 phases -- event capturing and event bubbling -- are collectively known as event propogation.
 
 There is a third Boolean parameter of `addEventListener` that specifies if you want the handler to fire on capture or bubble. It defaults to `false`, which is bubble. But if you set it to `true`, it will fire on capture.
 
@@ -368,3 +383,20 @@ The bubble event will fire on each one of these elements.
 |                                 |
 -----------------------------------
 ```
+
+Let's return to our example, and change our event listener on the body to fire on the capture phase:
+
+```js
+var body = document.querySelector('body');
+var button = document.querySelector('button');
+
+body.addEventListener('click', function() {
+  alert("YOU CLICKED ON THE BODY!!!!");
+}, true);
+
+button.addEventListener('click', function() {
+  alert("YOU'RE REALLY PUSHING MY BUTTONS!!!!!");
+});
+```
+
+You should now see that the alert messages pop up in the opposite order!
