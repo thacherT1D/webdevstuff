@@ -1,17 +1,5 @@
 # HTML and JS Form Validation
 
-### Entry Ticket
-In order to start this Learning Experience, you need to be able to:
-
-* Write HTML Forms
-	* Use `input` tags
-	* Specify a `type` on an input tag
-	* Use a submit button and a `form` tag to submit your values to another page
-* Select form elements with Javascript (vanilla or jQuery)
-* Access properties on an object and manipulate them
-* Create new DOM elements with Javascript (vanilla or jQuery)
-
-
 ### Objectives
 Bt the end of this Learning Experience you should be able to:
 
