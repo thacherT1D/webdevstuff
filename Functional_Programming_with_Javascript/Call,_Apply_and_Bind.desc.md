@@ -131,3 +131,4 @@ function log(){
 
 As we move to more complicated code, you will see `bind` being used quite heavily with events in JavaScript as well as AJAX.
 
+
