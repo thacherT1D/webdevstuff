@@ -183,7 +183,7 @@ When the element that fires the event is the same as the element that has the ls
 
 ### Attaching Listeners to Multiple Elements
 
-Let's suppose we want to add a click listener to every `<p>` on a page. We can't simply use `querySelectorAll` and then set an `addEventListener` on that.
+Let's suppose we want to add a click listener to every `<p>` on a page. We can't simply use `querySelectorAll` and then set an `addEventListener` on that. (What type of error do you think you'll get?)
 
 ```
 <div id="container">
@@ -197,33 +197,107 @@ Let's suppose we want to add a click listener to every `<p>` on a page. We can't
 //THIS DOES NOT WORK
 var paragraphs = document.querySelectorAll("p");
 paragraphs.addEventListener("click", function(){
- console.log("Woof!")
-})
+ console.log("Woof!");
+});
 ```
 
 One option: we can set a listener on every individual element:
 
 ```js
 var paragraphs = document.querySelectorAll('p');
-function eventHandler (event) {
-  console.log('p clicked!');
+function eventHandler() {
+  console.log("Woof!");
 }
-for (var i=0; i<paragraphs.length; i++) {
-  paragraphs[i].addEventListener('click', eventHandler)
+for (var i = 0; i < paragraphs.length; i++) {
+  paragraphs[i].addEventListener('click', eventHandler);
 }
 ```
 
-Another option: we can use event bubbling and attach a single event listener to the parent:
+If inspect one of these elements in the Elements tab and look under Event Listeners, you'll see that each one of these elements has a copy of `eventHandler` attached to it, as expected. This is fine for this simple little example, but if you have hundreds of DOM elements with their own copy of the same function, that isn't very efficient.
+
+Another option: we can use event bubbling (more on this later) and attach a single event listener to the parent:
 
 ```js
 var container = document.getElementById('container');
-function eventHandler (event) {
-  console.log('p clicked!');
+function eventHandler() {
+  console.log('Woof!');
 }
-container.addEventListener('click', eventHandler)
+container.addEventListener('click', eventHandler);
 ```
 
+In this case all p tags share one copy of `eventHandler` which they get from their parent container.
+
 ### `window.onload` and `DOMContentReady`
+
+When you're using Javascript to manipulate the DOM, you need to be sure that what you're trying to manipulate is available to you. To see what this means, consider the following example:
+
+`index.html`
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Events!</title>
+  <script src="app.js"></script>
+</head>
+<body>
+  <img src="https://media.giphy.com/media/qANK09622WD5u/giphy.gif" alt="">
+</body>
+</html>
+```
+
+`app.js`
+
+```js
+var img = document.querySelector('img');
+
+function imgLog() {
+  console.log("You moused over Mega Man!");
+}
+
+img.addEventListener('mouseover', imgLog);
+```
+
+Without loading the page, you should be able to guess at what this code should do: when you mouse over the image, a message should get logged to the console.
+
+However, when you load the HTML, you should find that no message is getting logged. What's the deal???
+
+The deal is that the script is loading before the DOM has finished loading. Not convinced? Through a debugger in the first line and take a look at the `document` -- you'll see that the `body` hasn't loaded yet! Because of this, there's no `img` tag to grab with javascript, and so your `img` variable will be `null`.
+
+When manipulating the DOM, it's important that your javascript code not load until the DOM is ready. There are a couple of ways to do this. One is to use `window.onload`:
+
+```js
+function imgLog() {
+  console.log("You moused over Mega Man!");
+}
+
+window.onload = function() {
+  var img = document.querySelector('img');
+  img.addEventListener('mouseover', imgLog);
+}
+```
+
+With this syntax, the code inside of the function assigned to `window.onload` will not execute until everything on the `window` has loaded.
+
+Related to this is `DOMContentLoaded`:
+
+```js
+function imgLog() {
+  console.log("You moused over Mega Man!");
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+  var img = document.querySelector('img');
+  img.addEventListener('mouseover', imgLog);
+});
+```
+
+This event fires when the document has been loaded and parsed. This happens before all assets (e.g. images, videos, stylesheets, etc.) have completely loaded. In other words, `DOMContentLoaded` gets fired before the window finishes loading.
+
+Want to see the difference between these two in action? Check out [this example](http://web.archive.org/web/20150405114023/http://ie.microsoft.com/testdrive/HTML5/DOMContentLoaded/Default.html).
+
+Note: putting your script tags at the bottom of the page can help resolve some of these issues, but it's still probably a good idea to wrap any DOM-manipulating functionality inside of an event listener to `DOMContentLoaded`. 
 
 ## Event Propogation
 
