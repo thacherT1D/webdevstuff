@@ -57,7 +57,7 @@ button.addEventListener("click", function(){
 });
 ```
 
-Now we've attached an event listener to a specific DOM node, a button on the page.  Now, we will see a `"SOMEONE CLICKED THE BUTTON!!"` alert when that particular button is pressed.
+Now we've attached an event listener to a specific DOM node, a button on the page.  Now, we will see a `"SOMEONE CLICKED THE BUTTON!!"` alert when that particular button is pressed. The function passed into the event listener is an example of a callback; in this particular case, it's also referred to as an **event handler**.
 
 ### `removeEventListener()`
 
@@ -107,22 +107,16 @@ button.addEventListener("click", once);
 
 ## Event Object
 
-There is a parameter on our event handler functions: the event object. The event object gives us lots of information about the event. For example, we can use the [MouseEvent](https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent) object to determine which mouse button the user clicked with:
+There is a parameter that we can pass into our event handler functions: the event object. The event object gives us lots of information about the event. For example, we can use it to log some text to the console whenever a user clicks on an HTML element:
 
 ```js
 function logText(event) {
   console.log(event.target.innerText);
 }
-window.addEventListener("mousedown", logText);
+window.addEventListener("click", logText);
 ```
 
-### `event.target`
-
-Let's take a closer look at the `event` object, and on `event.target` in particular. Do the following:
-
-1. Create a new HTML file, and inside of the HTML add a button.
-2. Create a new JS file, and link it to your HTML.
-3. Inside of your JS file, add an event listener that console logs the event object AND the event.target when you click on the button.
+Let's take a closer look at the `event` object, and on `event.target` in particular. Inside of your JS file, add an event listener that console logs the event object AND the event.target when you click on the button.
 
 Once you get this working, you'll see that the `event` object has a lot of details about the click event that was fired: where was the cursor? What time was the event fired? Was the shift key held down? And so on. Meanwhile, `event.target` points to the DOM element that was (in this case) clicked. This can be helpful if you want to modify the DOM based on user interaction. 
 
@@ -130,9 +124,62 @@ Once you get this working, you'll see that the `event` object has a lot of detai
 
 ### `event.target` vs. `this`
 
-### `window.onload` and `DOMContentReady`
+Let's return to our simple HTML page from before, and add an event listener that calls the `logText` button on a button click:
 
-## Working with Events
+```js
+var button = document.querySelector("button");
+function logText(event) {
+  console.log(event.target.innerText);
+}
+button.addEventListener("click", logText);
+```
+
+We can rewrite this code so that it doesn't reference the `event` object. We can use `this` instead!
+
+```js
+var button = document.querySelector("button");
+function logText() {
+  console.log(this.innerText);
+}
+button.addEventListener("click", logText);
+```
+
+So what's the difference between `this` and `event.target`, then? To answer this question, let's modify our HTML a bit. Wrap your button in a `div` like this:
+
+```html
+<div>
+  <p>I'm a p tag!</p>	
+  <button>I'm a button!</button>
+</div>
+```
+
+Let's now add the event listener to that parent `div`. Update your javascript so that it looks like this:
+
+```js
+var div = document.querySelector("div");
+function logText() {
+  console.log(this.innerText);
+}
+div.addEventListener("click", logText);
+```
+
+Refresh the page. You should see that no matter where you click -- on the `div`, on the `p` tag, or on the `button`, the same text gets logged to the console: all of the text inside of the `div`.
+
+Now let's change our `logText` function back so that it references the `event` object again:
+
+```js
+var div = document.querySelector("div");
+function logText(event) {
+  console.log(event.target.innerText);
+}
+div.addEventListener("click", logText);
+```
+
+In this case, the text that's logged to the console depends on where you click. If you click on the `p` tag, you should see "I'm a p tag!" in the console. If you click on the `button`, you should see "I'm a button!" in the console. And if you click anywhere else in the `div`, you should see both exclamations logged to the console.
+
+The example demonstrates the difference between `this` and `event.target` in the event handler. `this` refers to the DOM element that the listener was attached to. Put another way, whenever you write `foo.addEventListener('click', someFunction)` the context of `this` inside of `someFunction` will refer to `foo`. On the other hand, `event.target` will refer to the element that caused the event to fire. For example, when you click on the button, `event.target` will refer to the button, even if the listener is not attached to the button.
+
+When the element that fires the event is the same as the element that has the lsitener on it, you should see that `this` and `event.target` are the same. But there are times when you'll want to add the event listener to an element that won't necessarily be the same as the element (or elements) that will be firing the event. Let's take a look at an example of this now.
 
 ### Attaching Listeners to Multiple Elements
 
@@ -176,6 +223,7 @@ function eventHandler (event) {
 container.addEventListener('click', eventHandler)
 ```
 
+### `window.onload` and `DOMContentReady`
 
 ## Event Propogation
 
