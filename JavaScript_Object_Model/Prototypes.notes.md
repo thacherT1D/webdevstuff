@@ -6,7 +6,11 @@
 - access a prototype with Object.create(obj)
 - access a prototype with a constructor
 
-### 1 of 6
+- Re-use of Code
+- Consistency of Code
+- Real-time updating of Code
+
+
 #### Exercise (constructor review):
 Show me in code what this example would be structured as.
 
@@ -14,25 +18,29 @@ Show me in code what this example would be structured as.
 function Librarian() {
   this.name = Math.random().toString(),
   this.library = function() {
-    books = {
+    var books = {
       dataBase: [ 'list', 'of', 1000000000000, 'books'],
       dataBaseSize: '80TB'
     }
-    return books.dataBase.join(' ') + " that's " + books.dataBaseSize;
+    return books.dataBase.join(' ') + ' that\'s ' + books.dataBaseSize;
   }
 }
 ```
 
-### 2 of 6
+### Minions
+### Implementing with an Object Literal (`{}`)
+Sample: Clues into fact that a prototype for objects is "predefined"
+
+With dev tools show where this `constructor` prop is coming from. `minionOne.__proto__`
+
+Object literal syntax is like `var minionOne = new Object`
+-> show with memory digram
 
 #### Exercise
-List of other props via proto: `foo. ` (chrome console drop down list)
+List of other props via proto: `minionOne. ` (chrome console drop down list)
 
-### 3 of 6
-Have not fully highlighted these points yet, but they will be hashed out with upcoming examples.
+***
 
-### 4 of 6
-##### Prototypical Model
 `minion...`s are instances of `Object` as seen though previous `.constructor()` example.
 
 "implementation of `sayBanana`"
@@ -44,17 +52,22 @@ Have not fully highlighted these points yet, but they will be hashed out with up
   -> set `constructor` of instance(object) to that fn
   -> set prototype of instance to the constructor fn's proto
 
-## Do 6-6 before 5-6
-### 6 of 6
 
+### Implementing with a Constructor (`[[Constructor]].prototype`)
+- When you create a fn, JS also creates a prototype Object that the fn points to.
 
-### 5 of 6
-##### Classical Model
-- When you create a fn, JS also creates a prototype object that the fn points to.
 - That prototype object is assigned the `constructor` fn that points back to the original fn you created.
+-> Show whiteboard memory diagram
+
 - newly instantiated object will point to that prototype
 
-Example
+-> After generating some instances show "Real-time updating of Code"
+-> Add to previous memory diagram
+
+### Implementing with Object's Create Method (`Object.create()`)
+
+Whiteboard memory diagram of the following:
+
 ```js
 var motorVehicle = {
   drive: function() {
@@ -75,53 +88,4 @@ fiat.drive();
 
 
 
-Revisit objectives and notes from section 2 of 6
-
-
-
-
-
-
-
-
-
-#### Cho's Notes:
-
-A simple diagram - https://drive.google.com/file/d/0B0bI_haYH48oZE5tcUs5UTBrVW8/view
-
-### 1) A Non-Code-Related Example with Customer-Support
-For this exercise, I would have students write on a mini-whiteboard and expect something similar to the conde snippet below:
-
-```javascript
-var customerSpecialist = {
-  id: 01,
-  email: 'cho.kim@galvanize.com,
-  library: function(question) {
-    // ...
-  }
-};
-```
-
-### 2) A Code-Related Example with JavaScript Objects
-For this exercise, have students create a list of properties and methods that are accessed through the prototype chain. After enough time, select five students and ask each to name a property or method on their list.
-
-### 3) Three Benefits of Inheritance
-For this exercise, have students pair and develop their own real-world example of prototypes. After enough time, select three pairs to share their example with the class.
-
-### 4) Implementing with an Object Literal (`{}`)
-For this exercise, select three to share their in-memory diagram on a white-board that's larage enough for the entire class to view. After each diagram, prompt the students if their diagram is correct and why. Add modificaitons to their diagram if necssary and explain the rationale.
-
-### 5) Implementing with Object's Create Method
-For this exercise, do the same as thing described for the exercise in 4 of 6.
-
-### 6) Implementing with a Constructor
-For this exercise, do the same as thing described for the exercise in 4 of 6.
-
-### Lab
-The repo is [prototype-zoo](https://github.com/gSchool/prototype-zoo)
-
-- Have students clone this repo.
-- The first test will be passing. Have a student explain/analyze what's happening with the passing test.
-- Work through the first test or two as a class.
-- Let students work on the rest of the repo
-- Comeback and review each other’s solutions in groups (where students show their answers on the board)
+Revisit objectives

@@ -18,8 +18,8 @@ students will be able to...
   <li>access a prototype with a constructor</li>
 </ol>
 
-## Part 1: Comprehension
-### 1 of 6: A Non-Code-Related Example
+## Comprehension
+### A Non-Code-Related Example
 Let's demonstrate the benefits of prototypes through an absurd example.
 
 Imagine that a librarian has two things: a name and a library. When a customer asks a librarian for a book, the librarian goes and finds the book in their library.
@@ -33,21 +33,27 @@ Our city would be served better if there were just one library that all the libr
 In the context of object-oriented programming, write some code that would represent the idea of a librarian with a name and a library.
 ***
 
-### 2 of 6: A Code-Related Example with JavaScript Objects
-JavaScript use prototypes to remove duplication of code. Let's demonstrate it with an example:
+# Implementation
+Every object in JavaScript can access methods and properties from a [prototype](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#Inheritance), which is an object. Our interaction with a prototype changes based on the how an object is created.
+
+### Implementing with an Object Literal (`{}`)
+Let's create two instances of an object with object literals.
 
 ```javascript
-var foo = {};
+var minionOne = {};
+var minionTwo = {};
+```
 
+```js
 // ...TypeError: undefined is not a function
-foo.speak();
+minionOne.speak()
 ```
 
 Invoking `speak()` outputs an error, which states that the method is `undefined`.Now, let's try to access a method named `constructor()`, which we haven't defined:
 
 ```javascript
 // Object {}
-foo.constructor()
+minionOne.constructor()
 ```
 
 Notice that invoking `constructor()` did not output an error! In other words, it is defined somewhere and being accessed--prototype, cough!
@@ -56,29 +62,6 @@ Notice that invoking `constructor()` did not output an error! In other words, it
 #### Exercise:
 Create a list of other properties or methods that are accessed via a prototype.
 ***
-
-### 3 of 6: Three Benefits of Prototypes
-At this moment, we've used a non-code and code related example of prototypes. Both highlight these benefits:
-
-- Re-use of Code
-- Consistency of Code
-- Real-Time Updating of Code
-
-***
-#### Exercise:
-Find a pair and discover a real-world example of prototypes.
-***
-
-# Part 2: Implementation
-Every object in JavaScript can access methods and properties from a [prototype](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#Inheritance), which is an object. Our interaction with a prototype changes based on the how an object is created.
-
-### 4 of 6: Implementing with an Object Literal (`{}`)
-Let's create two instances of an object with object literals.
-
-```javascript
-var minionOne = {};
-var minionTwo = {};
-```
 
 Minions can talk and love bananas. Lets create a method named `sayBanana` on our minions:
 
@@ -139,7 +122,52 @@ Object.prototype.sayBanana = function() {
 ```
 ***
 
-### 5 of 6: Implementing with Object's Create Method (`Object.create()`)
+
+### Implementing with a Constructor (`[[Constructor]].prototype`)
+
+```JavaScript
+function Minion() {
+}
+
+var minionOne = new Minion();
+var minionTwo = new Minion();
+```
+
+The constructor pattern is another way of creating an object. Here we must use a different approach for modifying the prototype of these objects. We need to use a constructor's property named `prototype`:
+
+```javascript
+Minion.prototype.sayBanana = function() {
+  return "banana";
+};
+
+// "banana"
+minionOne.sayBanana();
+
+// "banana"
+minionTwo.sayBanana();
+```
+
+All minions now access `sayBanana()`; moreover, our code is semantically meaningful. We aren't creating just objects; we are creating minions.
+
+***
+#### Exercise:
+Draw an in-memory diagram for the following snippet:
+
+```javascript
+function Minion() {
+}
+
+Minion.prototype.sayBanana = function() {
+  return "banana";
+};
+
+var minionOne = new Minion();
+var minionTwo = new Minion();
+```
+***
+
+
+### Implementing with Object's Create Method (`Object.create()`)
 We can use [`Object.create(obj)`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create) to limit the access to `sayBanana()`.
 
 ```javascript
@@ -172,48 +200,16 @@ var gollum = {};
 ```
 ***
 
-### 6 of 6: Implementing with a Constructor (`[[Constructor]].prototype`)
-Using `Object.create()` is reptitive. The better approach is using a constructor.
+### Three Benefits of Prototypes
+At this moment, we've used a non-code and code related example of prototypes. Both highlight these benefits:
 
-```JavaScript
-function Minion() {
-}
-
-var minionOne = new Minion();
-var minionTwo = new Minion();
-```
-
-Since this is another way of creating an object, we must use a different approach for modifying the prototype of these objects. We need to use a constructor's property named `prototype`:
-
-```javascript
-Minion.prototype.sayBanana = function() {
-  return "banana";
-};
-
-// "banana"
-minionOne.sayBanana();
-
-// "banana"
-minionTwo.sayBanana();
-```
-
-All minions now access `sayBanana()`; moreover, our code is semantically meaningful. We aren't creating just objects; we are creating minions.
+- Re-use of Code
+- Consistency of Code
+- Real-Time Updating of Code
 
 ***
 #### Exercise:
-Draw an in-memory diagram for the following snippet:
-
-```javascript
-function Minion() {
-}
-
-Minion.prototype.sayBanana = function() {
-  return "banana";
-};
-
-var minionOne = new Minion();
-var minionTwo = new Minion();
-```
+Find a pair and discover a real-world example of prototypes.
 ***
 
 # Conclusion
