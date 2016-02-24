@@ -6,7 +6,6 @@ By the end of this lesson you should be able to:
 * Attach event handlers to DOM elements
 * Modify the DOM in response to an event
 * Use callbacks in methods like addEventListener
-* Use callbacks in methods like `setTimeout` and `setInterval`
 
 ## Introduction
 
@@ -35,12 +34,13 @@ There is a parameter on our event handler functions: the event object. The event
 ```js
 var button = document.querySelector("button");
 function handleMouse (event) {
-    if (event.which == 1)
-        console.log("Left button");
-    else if (event.which == 2)
-        console.log("Middle button");
-    else if (event.which == 3)
-        console.log("Right button");
+  if (event.which == 1) {
+    console.log("Left button");
+  } else if (event.which == 2) {
+    console.log("Middle button");
+  } else if (event.which == 3) {
+    console.log("Right button");
+  }
 }
 button.addEventListener("mousedown", handleMouse);
 ```
@@ -55,7 +55,7 @@ The following code adds an event listener to the entire `window` object.  Try ty
 
 ```js
 addEventListener("click", function() {
-    console.log("You clicked!");
+  console.log("You clicked!");
 });
 ```
 
@@ -63,9 +63,10 @@ Every single DOM element also has its own `addEventListener` method:
 
 ```js
 var button = document.querySelector("button");
-button.addEventListener("click", function(){
-    alert("SOMEONE CLICKED THE BUTTON!!");
-});
+var clickedTheButton = function(){
+  alert("SOMEONE CLICKED THE BUTTON!!");
+}
+button.addEventListener("click", clickedTheButton);
 ```
 
 Now we've attached an event listener to a specific DOM node, a button on the page.  Now, we will see a `"SOMEONE CLICKED THE BUTTON!!"` alert when that particular button is pressed.
@@ -74,11 +75,11 @@ Now we've attached an event listener to a specific DOM node, a button on the pag
 
 [[MDN]](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/removeEventListener)
 
-You can also remove event listeners from DOM elements if you are no longer interested in the event.
+You can also remove event listeners from DOM elements if you are no longer interested in the event. You must save a reference to the listener function to be able to do this! If you use a function literal when you're adding an event listener, you can't remove it later.
 
 ```js
 var button = document.querySelector("button");
-button.removeEventListener("click");
+button.removeEventListener("click", clickedTheButton);
 ```
 
 What does the following code do?
@@ -86,8 +87,8 @@ What does the following code do?
 ```js
 var button = document.querySelector("button");
 function once() {
-    console.log("Done.");
-    button.removeEventListener("click", once);
+  console.log("Done.");
+  button.removeEventListener("click", once);
 }
 button.addEventListener("click", once);
 ```
@@ -108,7 +109,7 @@ Let's suppose we want to add a click listener to every `<p>` on a page. We can't
 //THIS DOES NOT WORK
 var paragraphs = document.querySelectorAll("p");
 paragraphs.addEventListener("click", function(){
- console.log("Woof!")
+  console.log("Woof!")
 })
 ```
 
@@ -119,7 +120,7 @@ var paragraphs = document.querySelectorAll('p');
 function eventHandler (event) {
   console.log('p clicked!');
 }
-for (var i=0; i<paragraphs.length; i++) {
+for (var i=0; i < paragraphs.length; i++) {
   paragraphs[i].addEventListener('click', eventHandler)
 }
 ```
@@ -204,3 +205,11 @@ The bubble event will fire on each one of these elements.
 |                                 |
 -----------------------------------
 ```
+
+###Demonstration
+
+Take a look at [this codepen](http://codepen.io/Colt/pen/jPrJJe?editors=101).  Are the events bubbling or capturing?
+
+### Stoplight Exercise
+
+https://github.com/gSchool/stoplight-event-exercise
