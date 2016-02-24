@@ -19,33 +19,35 @@ students will be able to...
 </ol>
 
 ## Part 1: Comprehension
-### 1 of 6: A Non-Code-Related Example with Customer-Support
-The benefits of prototypes can be demonstrated with customer-support specialists. Imagine that a specialist has three things: an ID, email address, and a troubleshooting library. When a customer contacts a specialists, the specialists receives a question and then finds an answer in their library.
+### 1 of 6: A Non-Code-Related Example
+Let's demonstrate the benefits of prototypes through an absurd example.
 
-Now imagine that there are 100 specialists. Pause a moment and observe the following: a specialist's ID and email address must be unique; however, the library doesn't. In other words, we 100 of the same library. This is an inefficient due to the amount of duplication. To exacerbate this problem, whenever we modify the library, we have to update each copy!
+Imagine that a librarian has two things: a name and a library. When a customer asks a librarian for a book, the librarian goes and finds the book in their library.
 
-Our specialist would be served better if there were just one library that could be accessed and updated. What we are describing is the use of a prototype!
+Now imagine there are 100 librarians. The collection of books in each of their libraries are the same, the only thing that differs are the librarian's names. You can imagine each librarian having their own library with the exact same copies of books as all other librarians. Probably not the most efficient use of city space. To exacerbate the problem, whenever a new book comes out some poor guy has to run around and add a copy of it to each of the 100 libraries around town!
+
+Our city would be served better if there were just one library that all the librarians shared. What we are describing is the idea of a prototype!
 
 ***
-#### Exercise: 
-In the context of object-oriented programming, what's a customer support specialist, an identification number, email address, and a library? How do these things translate to objects?
+#### Exercise:
+In the context of object-oriented programming, write some code that would represent the idea of a librarian with a name and a library.
 ***
 
 ### 2 of 6: A Code-Related Example with JavaScript Objects
-JavaScript use prototypes to remove duplication of code. Many of experienced the benefit of this design. Let's demonstrate it with an example:
+JavaScript use prototypes to remove duplication of code. Let's demonstrate it with an example:
 
 ```javascript
-var obj = {};
+var foo = {};
 
 // ...TypeError: undefined is not a function
-obj.speak();
+foo.speak();
 ```
 
 Invoking `speak()` outputs an error, which states that the method is `undefined`.Now, let's try to access a method named `constructor()`, which we haven't defined:
 
 ```javascript
 // Object {}
-obj.constructor()
+foo.constructor()
 ```
 
 Notice that invoking `constructor()` did not output an error! In other words, it is defined somewhere and being accessed--prototype, cough!
@@ -63,7 +65,7 @@ At this moment, we've used a non-code and code related example of prototypes. Bo
 - Real-Time Updating of Code
 
 ***
-#### Exercise: 
+#### Exercise:
 Find a pair and discover a real-world example of prototypes.
 ***
 
@@ -78,7 +80,7 @@ var minionOne = {};
 var minionTwo = {};
 ```
 
-Minions can talk and love bananas. Lets create a function named `sayBanana()`:
+Minions can talk and love bananas. Lets create a method named `sayBanana` on our minions:
 
 ```javascript
 minionOne = {
@@ -100,7 +102,7 @@ minionOne.sayBanana();
 minionTwo.sayBanana();
 ```
 
-Since the implementation of `sayBanana()` is identical for both minions, this is a moment where we would want to use a prototype. 
+Since the implementation of `sayBanana()` is identical for both minions, this is a moment where we would want to use a prototype.
 
 An object literal's prototype, however, is very restrictive and automatically points to `Object.prototype`. In this context, we have to add `sayBanana()` to `Object.prototype`. This will cause untended consequences.
 
@@ -122,7 +124,7 @@ gollum.sayBanana();
 ```
 
 ***
-#### Exercise: 
+#### Exercise:
 Draw an in-memory diagram of the following snippet:
 
 ```javascript
@@ -154,7 +156,7 @@ Now only `minionOne` and `minionTwo` can access `sayBanana()`. Notice the follow
 
 ***
 
-#### Exercise: 
+#### Exercise:
 Draw an in-memory diagram for the following snippet:
 
 ```javascript
@@ -198,7 +200,7 @@ minionTwo.sayBanana();
 All minions now access `sayBanana()`; moreover, our code is semantically meaningful. We aren't creating just objects; we are creating minions.
 
 ***
-#### Exercise: 
+#### Exercise:
 Draw an in-memory diagram for the following snippet:
 
 ```javascript
