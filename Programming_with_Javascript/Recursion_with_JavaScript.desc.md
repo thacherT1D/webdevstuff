@@ -4,13 +4,15 @@
 adjective
 *See definition of recursive*
 
-[CMU Recursion Slides](http://www.cs.cmu.edu/~15110-f12/Unit05PtA-handout.pdf)
-
 ### Recursion is HARD
 
 This is a challenging topic to wrap your head around, it's very likely that you'll leave this lecture completely confused. That's OK, we introduce recursion early because it'll come up here and there throughout the course, and it's important for interviewing. By introducing it early, we give you more opportunities to think about it and use it.
 
 This is going to be one of the hardest topics we've covered yet, so focus on playing and don't worry if it doesn't click.
+
+[CMU Recursion Slides](http://www.cs.cmu.edu/~15110-f12/Unit05PtA-handout.pdf)
+
+### Designing a recursive solution
 
 All we need are:
 
