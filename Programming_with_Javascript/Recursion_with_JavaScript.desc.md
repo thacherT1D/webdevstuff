@@ -6,7 +6,11 @@ adjective
 
 [CMU Recursion Slides](http://www.cs.cmu.edu/~15110-f12/Unit05PtA-handout.pdf)
 
-### ALWAYS remember... TRUST THE RECURSION!
+### Recursion is HARD
+
+This is a challenging topic to wrap your head around, it's very likely that you'll leave this lecture completely confused. That's OK, we introduce recursion early because it'll come up here and there throughout the course, and it's important for interviewing. By introducing it early, we give you more opportunities to think about it and use it.
+
+This is going to be one of the hardest topics we've covered yet, so focus on playing and don't worry if it doesn't click.
 
 All we need are:
 
@@ -37,12 +41,12 @@ For recursion we need both a base case and a recursive step.  The recursive step
 
 ```
 function factorialIterative(n) {
-	var result = n;
-	while(n > 1) {
-		n -= 1;
-		result *= n
-	}
-	return result;
+  var result = n;
+  while(n > 1) {
+    n -= 1;
+    result *= n;
+  }
+  return result;
 }
 ```
 
@@ -50,10 +54,10 @@ function factorialIterative(n) {
 
 ```
 function factorialRecursive(n){
-	if(n === 0){
-		return 1;
-	}
-	return(n * factorialRecursive(n-1))
+  if(n === 0){
+    return 1;
+  }
+  return(n * factorialRecursive(n-1))
 }
 ```
 
@@ -74,6 +78,7 @@ console.log(power(2, 3));
 console.log(power(4, 2));
 //=> 16
 ```
+
 * Define a function `fib` that takes an argument n and returns the fibonacci value of that position. The fibonacci sequence is  1, 1, 2, 3, 5, 8, 13, 21... So fib(5) should return 5 and fib(6) should return 8.
 
 * Define a recursive function that returns true if a string is a palindrome and false otherwise.
