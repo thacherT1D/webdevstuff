@@ -1,11 +1,5 @@
 # Introduction to AJAX
 
-## Entry Ticket
-
-Before you read this Learning Experience, you should be able to:
-
-* Install JQuery, and use it to manipulate the DOM. 
-
 ## Objectives
 
 After this lesson students should be capable of the following:
