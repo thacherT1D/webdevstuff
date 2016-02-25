@@ -67,7 +67,7 @@ function factorialRecursive(n){
 
 Attempt to write an iterative AND recursive solution to each problem:
 
-* Define a function that takes an argument n and returns the lyrics to 99 bottles of beer on the wall, starting with that number `n`.  For example, `singSong(99)` would print out the lyrics to 99 Bottles of Beer on the Wall.
+* Define a function `countdown` that takes a number, and counts down from that number, logging each value between that and 0.
 
 * Define a function `sumOfRange` that takes a number x and returns the sum of all digits between 0 and x.
 
