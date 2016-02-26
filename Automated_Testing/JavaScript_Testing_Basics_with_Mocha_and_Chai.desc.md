@@ -1,6 +1,19 @@
 # Testing with Mocha - a primer
 
-[Slides here](https://docs.google.com/presentation/d/1E1Lskrk6hfJHzkBNwRmySg2X0m8nmKKTQN4w4tupYww/edit?usp=sharing)
+### Objectives
+
+- Discuss the benefits of testing. How does it help developers do their jobs more effectively?
+- Write tests for existing code.
+- Write code to pass a given set of tests.
+- Write tests, then write code that passes those tests.
+
+### Key terms
+
+- Mocha
+- Chai
+- Test
+- Suite
+- Expectation
 
 Let's learn to test code with [Mocha](https://mochajs.org/), Mocha is a feature-rich JavaScript test framework.
 
@@ -15,7 +28,7 @@ Let's learn to test code with [Mocha](https://mochajs.org/), Mocha is a feature-
 
 *Something that is untested is broken.*
 
-If your codebase is untested then it is **very** difficult to add new features as-
+If your codebase is untested then it is **very** difficult to add new features, because
 
 - You don't know if that feature will work or not, and
 - The new feature could break your existing codebase.
@@ -23,21 +36,6 @@ If your codebase is untested then it is **very** difficult to add new features a
 Automated tests help minimize these issues, allowing you to safely update your codebase and sleep at night. Unfortunately, many developers don't understand the importance of testing until their application breaks and s/he is up all night trying to fix things.
 
 Read more [here](http://stackoverflow.com/questions/67299/is-unit-testing-worth-the-effort).
-
-### Objectives
-
-- Discuss the benefits of testing. How does it help developers do their job more effectively?
-- Write tests for existing code.
-- Write code to pass a given set of tests.
-- Write tests and code that passes those tests.
-
-### Key terms
-
-- Mocha
-- Chai
-- Test
-- Suite
-- Expectation
 
 ## Setup
 
@@ -72,7 +70,7 @@ Install the [chai](http://chaijs.com/guide/) expectation library locally:
 Add node_modules to the .gitignore file:
 
   ```sh
-  $ echo 'node_modules' >> .gitignore
+  $ echo node_modules >> .gitignore
   ```
 
 Try running the tests with the `mocha` command. You should see:
@@ -97,7 +95,9 @@ Add a test file called `test.js` to the `test/` directory and add the following 
   });
   ```
 
-Finally, add a `main.js` file to the root directory.
+If you run `mocha` again, you should see an error. What does the error message say?
+
+To resolve your error, add a `main.js` file to the root directory. Now when you run `mocha`, things should be working again. What was the problem?
 
 With the setup complete, we can now start writing some tests!
 
@@ -115,19 +115,11 @@ Test time!
 
 Per tradition, let's start with a basic "Hello, World!"
 
-#### Function
-
-```javascript
-module.exports = {
-  helloWorld: function () {
-  }
-}
-```
-
 #### Test
+
 ```javascript
 describe("Hello World", function() {
-  it("should say 'Hello, World!' when ran");
+  it("should say 'Hello, World!' when called");
 });
 ```
 
@@ -138,7 +130,7 @@ it defines a single test
 
 A suite takes a string that describes what a particular suite is testing.
 
-A test takes a string that describes the functiona
+A test takes a string that describes the specific functionality being tested.
 
 #### Test!
 
@@ -162,7 +154,7 @@ Notice a few things:
 - We have the test suite "Hello World", followed by a description.
 - 0 passing tests, and 1 pending test.
 
-In mocha, any test without a function will be marked as pending. Update to test to run your code and check the output:
+In mocha, any test without a function will be marked as pending. Update the test so that it will run your code and check the output:
 
 ```javascript
 describe("Hello World", function() {
@@ -171,6 +163,7 @@ describe("Hello World", function() {
   });
 });
 ```
+
 **What's happening here?**
 
  The test uses JavaScript to test the state of the code being tested via an expectation - test the *expected* state against the *actual* state (the output of the code being tested).
@@ -191,8 +184,8 @@ describe("Hello World", function() {
   1 failing
 
   1) Hello World says "Hello, World!" when ran:
-     AssertionError: expected undefined to equal 'Hello, World!'
-      at Context.<anonymous> (test/test.js:6:36)
+     TypeError: code.helloWorld is not a function
+      at Context.<anonymous> (test/test.js:6:17)
 
 
 
@@ -201,10 +194,31 @@ describe("Hello World", function() {
 
 Notice a few things:
 - 1 failing test
-- AssertionError
+- TypeError
 - Line number (6)
 
-Update the helloWorld function in main.js to return 'Hello, World!' and then run the test.
+The first line of our test is trying to access our code in `main.js`, but we haven't written any code yet! In fact, if you try console.logging the `code` variable, you should see that it's currently an empty object.
+
+To resolve this error, we need to actually write some Javascript in our `main.js`. Moreover, that code needs to have a certain structure:
+
+#### Function
+
+```javascript
+module.exports = {
+  helloWorld: function () {
+  }
+};
+```
+
+The object we assign to `module.exports` is what will be returned by the `require` function in our `test.js`. If you console log `code` again, you should see that it looks like this: `{ helloWorld: [Function] }`. The test itself still fails, but the error message is now different:
+
+```js
+AssertionError: expected undefined to equal 'Hello, World!'
+```
+
+In other words, the actual return value of our function is `undefined`, but the test expects the value to be `'Hello, World!'`. We told it to expect as much inside of our test, when we wrote `expect(code.helloWorld()).to.equal("Hello, World!");`.
+
+The problem should be clear: we haven't actually written the code defining `helloWorld`! Let's write that code now:
 
 ```js
 module.exports = {
@@ -227,7 +241,7 @@ $ mocha
 
 ```
 
-We now have a passing test!
+We now have a passing test! Will the test continue to pass if we `console.log` rather than `return`? Why or why not?
 
 ## Exercise
 
@@ -273,3 +287,7 @@ describe('Tax Calculator', function(){
 
 });
 ```
+
+### Further Reading
+
+[Optional slides here](https://docs.google.com/presentation/d/1E1Lskrk6hfJHzkBNwRmySg2X0m8nmKKTQN4w4tupYww/edit?usp=sharing)
