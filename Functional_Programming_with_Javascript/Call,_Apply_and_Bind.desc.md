@@ -134,4 +134,31 @@ function log(){
 
 As we move to more complicated code, you will see `bind` being used quite heavily with events in JavaScript as well as AJAX.
 
+### Closures
 
+A fantastic defintion of closure comes from the Kyle Simpson Book `You Don't Know JavaScript` - it's free on Github and I can not recommend it enough!
+
+Closure is when a function is able to remember and access its lexical scope even when that function is executing outside its lexical scope.
+
+What does that mean? Well....it's actually not that crazy - in fact, you've done it many times before!
+
+```javascript
+function outerInfo(){
+    var privateData = "Super Secret Information!";
+    function innerInfo(){
+        console.log(privateCount)
+    }
+    return innerInfo
+}
+
+var seePrivateData = outerInfo();
+seePrivateData() // returns "Super Secret Information!"
+```
+
+Notice how we can NOT access the variable `privateData` anywhere, but through using the innerInfo function we can examine it! We have just used closure to access lexical scope when we are outside of the lexical scope!
+
+Read this chapter for more information and examples:
+
+[https://github.com/getify/You-Dont-Know-JS/blob/master/scope%20%26%20closures/ch5.md
+](https://github.com/getify/You-Dont-Know-JS/blob/master/scope%20%26%20closures/ch5.md
+)
