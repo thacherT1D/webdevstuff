@@ -81,8 +81,11 @@ There's a lot of duplication going on here! We just repeated the entire definiti
 
     var person2 = {
         name: "Janey",
-        sayHi: person.sayHi.bind(person2)
     }
+
+    // what if we want to borrow the sayHi method from person to be used on person?
+
+    person.sayHi.call(person2);
 ```
 
 ### The second parameter to call/bind and apply
