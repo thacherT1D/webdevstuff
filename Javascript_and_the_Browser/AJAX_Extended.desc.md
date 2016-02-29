@@ -215,7 +215,11 @@ $.ajax({
 });
 ```
 
-Paste this into your browser, and see if the result looks familiar!
+Add the following CDN to your HTML page:
+```
+<script src="https://code.jquery.com/jquery-2.2.1.js"></script>
+```
+Now paste the $.ajax call above into your browser, and see if the result looks familiar!
 
 Once again, JQuery has made our code much more compact. We highly reccommend using JQuery or another library/framework to handle HTTP requests for you. There are innumerable pitfalls when writing vanilla JS to do AJAX. Stand on the shoulders of giants and use a library!
 
