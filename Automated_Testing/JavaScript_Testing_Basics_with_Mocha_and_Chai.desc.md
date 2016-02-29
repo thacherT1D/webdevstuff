@@ -205,12 +205,22 @@ To resolve this error, we need to actually write some Javascript in our `main.js
 
 ```javascript
 module.exports = {
-  helloWorld: function () {
-  }
+  helloWorld
 };
 ```
 
-The object we assign to `module.exports` is what will be returned by the `require` function in our `test.js`. If you console log `code` again, you should see that it looks like this: `{ helloWorld: [Function] }`. The test itself still fails, but the error message is now different:
+The object we assign to `module.exports` is what will be returned by the `require` function in our `test.js`. If you console log `code` again, you should now see a new error: `ReferenceError: helloWorld is not defined`. We've seen this type of error before! To fix it, let's declare `helloWorld` as a function:
+
+```javascript
+function helloWorld() {
+}
+
+module.exports = {
+  helloWorld
+};
+```
+
+If you `console.log(code)` again, you should see that it looks like this: `{ helloWorld: [Function: helloWorld] }`. The test itself still fails, but the error message is now different:
 
 ```js
 AssertionError: expected undefined to equal 'Hello, World!'
@@ -268,9 +278,9 @@ Let's try another example. Create a directory called `more-testing-examples`. CD
 
 Now we're ready.
 
-The goal here is to write tests for two functions. The first, called `createObject`, takes two arrays and returns an object. Elements in the first array correspond to keys in the object, and elements in the second array correspond to values in the object. For example, `createObject(['hi','boom'],[4,null])` should return `{hi: 4, boom: null}`.
+The goal here is to write tests for two functions. The first function, called `objectValues`, returns an array of all the values of an array. For example, `objectValues({hi: 4, boom: null, super: 'sweet'})` should return `[4, null, 'sweet']`.
 
-The second function, called `objectValues`, should return an array of all the values of an array. For example, `objectValues({hi: 4, boom: null, super: 'sweet'})` should return `[4, null, 'sweet']`.
+The second, called `createObject`, takes two arrays and returns an object. Elements in the first array correspond to keys in the object, and elements in the second array correspond to values in the object. For example, `createObject(['hi','boom'],[4,null])` should return `{hi: 4, boom: null}`.
 
 Before writing these functions, let's write some tests. When writing tests, here are some questions to keep in mind:
 
@@ -280,7 +290,7 @@ Before writing these functions, let's write some tests. When writing tests, here
 
 You may not be able to think of all the edge cases at the outset -- that's okay! The beauty of using tests is that once you catch an edge case you didn't previously consider, you can always add a test to catch that edge case. Then, when you modify your code to treat the edge case, you can be confident that any changes you make aren't breaking things that worked before (as long as the tests continue to pass).
 
-Let's focus first on `createObject`. Here are some simple cases we can test:
+Let's focus first on `objectValues`. Here are some simple cases we can test:
 
 ```javascript
 var code = require('../main');
@@ -358,6 +368,8 @@ describe('Tax Calculator', function(){
 
 });
 ```
+
+### Note on testing syntax
 
 ### Further Reading
 
