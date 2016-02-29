@@ -55,7 +55,7 @@ Create a new directory called "test-basics". CD into it, and then create a subdi
   $ mkdir test
   ```
 
-Initialize npm (press return multiple times to confirm the defaults).
+Initialize a new git repo, and then initialize npm (press return multiple times to confirm the defaults).
 
   ```sh
   $ npm init
@@ -242,6 +242,77 @@ $ mocha
 ```
 
 We now have a passing test! Will the test continue to pass if we `console.log` rather than `return`? Why or why not?
+
+## Second Example: More Functions!
+
+Let's try another example. Create a directory called `more-testing-examples`. CD into it and get things ready for testing. As before, you'll need to:
+
+1. `cd` into your new directory
+2. Initialize a new git repository
+3. create a `test` directory
+4. create a `test.js` file inside of your `test` directory
+5. create a `main.js` file inside of `more-testing-examples`
+6. run `npm init`
+7. install chai: `npm install --save-dev chai`
+8. add `node_modules` to your `gitignore`
+9. add this starter code to your `test.js`:
+
+  ```javascript
+  var code = require('../main');
+  var expect = require('chai').expect;
+
+  describe('', function() {
+    it('');
+  });
+  ```
+
+Now we're ready.
+
+The goal here is to write tests for two functions. The first, called `createObject`, takes two arrays and returns an object. Elements in the first array correspond to keys in the object, and elements in the second array correspond to values in the object. For example, `createObject(['hi','boom'],[4,null])` should return `{hi: 4, boom: null}`.
+
+The second function, called `objectValues`, should return an array of all the values of an array. For example, `objectValues({hi: 4, boom: null, super: 'sweet'})` should return `[4, null, 'sweet']`.
+
+Before writing these functions, let's write some tests. When writing tests, here are some questions to keep in mind:
+
+1. What should the functions return in some simple examples?
+2. What should the functions return in some more complicated examples?
+3. What are some edge cases we need to consider?
+
+You may not be able to think of all the edge cases at the outset -- that's okay! The beauty of using tests is that once you catch an edge case you didn't previously consider, you can always add a test to catch that edge case. Then, when you modify your code to treat the edge case, you can be confident that any changes you make aren't breaking things that worked before (as long as the tests continue to pass).
+
+Let's focus first on `createObject`. Here are some simple cases we can test:
+
+```javascript
+var code = require('../main');
+var expect = require('chai').expect;
+
+describe("Create Object", function() {
+  it("returns returns an object", function() {
+    expect(code.createObject(['a'], ['b'])).to.be.an('object');
+  });
+
+  it("returns returns an object with keys from the first array and values from the second", function() {
+    expect(code.createObject(['hi', 'boom'], [4, null]))
+      .to.deep.equal({hi: 4, boom: null});
+    expect(code.createObject(['need', 'more', 'cowbell'], [undefined, 10, '10']))
+      .to.deep.equal({need: undefined, more: 10, cowbell: 10});
+  });
+});
+```
+
+In terms of edge cases, here are some questions to consider:
+
+1. What should happen if you try to call `createObject` with the wrong number of arguments?
+2. What should happen if you try to call `createObject` with arrays of different lengths?
+3. What should happen if you try to call `createObject` with arguments that aren't arrays?
+4. What should happen if you try to call `createObject` with arrays of different lengths?
+
+There aren't right or wrong answers here, it's just a question of how you want your function to behave.
+
+Let's suppose we want our function to respond to these edge cases in the following ways:
+
+1. If you call `createObject` with fewer than two arguments, it should return `null`. If you call it with more than two arguments, it should ignore the extra arguments.
+2. 
 
 ## Exercise
 
