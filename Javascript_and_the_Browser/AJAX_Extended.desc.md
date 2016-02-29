@@ -6,7 +6,7 @@ After this lesson students should be capable of the following:
 
 * Recite the meaning of the acronym AJAX.
 * Use JavaScript and `XMLHttpRequest` to create an HTTP/AJAX request.
-* Use JavaScript and JQuery to create an HTTP/AJAX request. 
+* Use JavaScript and JQuery to create an HTTP/AJAX request.
 * Use a callback to handle an HTTP/AJAX response.
 * Parse a JSON string into a usable Object in JavaScript.
 * Create a __race condition__ using an AJAX request.
@@ -19,21 +19,21 @@ Asychronous:
 
 1. of or requiring a form of computer control timing protocol in which a specific operation begins upon receipt of a signal that the preceding operation has been completed.
 2. (In English) Code that does not execute until a signal is explicitly given to execute.
-3. (In our case) Code that waits until after an HTTP request recieves a response, then executes a callback. 
+3. (In our case) Code that waits until after an HTTP request recieves a response, then executes a callback.
 
 JSON: JavaScript Object Notation. This is what we use anytime we create an Object Literal in JS:
 
 ```
-{ 
+{
 	age: 9000,
-	name: { 
+	name: {
 		first: Tyler,
 		last: Bettilyon
 	}
 }
 ```
 
-XML: Extensible Markup Language. Like HTML, XML contains hierarchical data using tags and inner text data. Here is the same data as our JSON object in XML. 
+XML: Extensible Markup Language. Like HTML, XML contains hierarchical data using tags and inner text data. Here is the same data as our JSON object in XML.
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
@@ -59,7 +59,7 @@ The two main features of AJAX:
 1. Make requests to a server without reloading the page.
 1. Get new data from a server.
 
-The uses of this are limitless, but the majority use it as a way to directly consume and modify data. Consider this simple example, when you reach the bottom of the page on Facebook new stories automatically appear without you clicking on anything, or reloading the whole page! Facebook uses AJAX to ask it's server for more data when you scroll down to the bottom. 
+The uses of this are limitless, but the majority use it as a way to directly consume and modify data. Consider this simple example, when you reach the bottom of the page on Facebook new stories automatically appear without you clicking on anything, or reloading the whole page! Facebook uses AJAX to ask it's server for more data when you scroll down to the bottom.
 
 ## <a name="api"></a>APIs
 
@@ -76,7 +76,7 @@ A lot of websites offer API's to interact with the data they host:
 * [Twitch.tv](http://dev.twitch.tv/)
 * [etc.](http://www.programmableweb.com/apis/directory)
 
-I checked these out, and all/most of them aren't using XML. They are using something called JSON! This isn't AJAX at all! The next section covers JSON and why you aren't seeing XML.
+I checked these out, and all/most of them aren't using XML. They are using JSON! This isn't AJAX at all! The next section covers JSON and why you aren't seeing XML.
 
 
 ##  <a name="json"></a>JSON
@@ -122,13 +122,13 @@ XML:
 </person>
 ```
 
-JSON looks a lot like JavaScript right? And notice how much lighter weight JSON is compared to XML. I think most of us will agree JSON is both easier to read and write. Not to mention JS can also read and write JSON natively with [JSON.parse()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse) and [JSON.stringify()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify). Get familiar with these functions, as a web developer you will use them very frequently. 
+JSON looks a lot like JavaScript right? And notice how much lighter weight JSON is compared to XML. I think most of us will agree JSON is both easier to read and write. Not to mention JS can also read and write JSON natively with [JSON.parse()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse) and [JSON.stringify()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify). Get familiar with these functions, as a web developer you will use them very frequently.
 
-The 'X' in AJAX stands for XML. So why are we talking about JSON? It turns out the term AJAX wasn't chosen very well. A more accurate acronym for how people use it today would be AJAJ or Asynchronous JavaScript and JSON, but AJAJ just sounds dumb. AJAX is the term we're stuck with and can be used regardless of if you are using XML, JSON, or whatever. It is used to describe the process of communicating with a server from a website asychronously. 
+The 'X' in AJAX stands for XML. So why are we talking about JSON? It turns out the term AJAX wasn't chosen very well. A more accurate acronym for how people use it today would be AJAJ or Asynchronous JavaScript and JSON, but AJAJ just sounds silly. AJAX is the term we're stuck with and can be used regardless of if you are using XML, JSON, or whatever. It is used to describe the process of communicating with a server from a website asychronously.
 
 ## AJAX in Action
 
-Consider these two examples of AJAX. To give them a try, open your browser to a new tab. Leave it empty, we don't want to have any other scripts running or any HTML on the page when we start. 
+Consider these two examples of AJAX. To give them a try, open your browser to a new tab. Leave it empty, we don't want to have any other scripts running or any HTML on the page when we start.
 
 Open your developer tools, and try pasting each snippet into your console to run them.
 
@@ -137,7 +137,7 @@ Open your developer tools, and try pasting each snippet into your console to run
 
 To create AJAX requests in pure JS we need to use the XMLHttpRequest object. The main parts of XMLHttpRequest we need to look at are:
 
-* [Main documentation](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest). 
+* [Main documentation](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest).
 * [new XMLHttpRequest()](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest#Constructor)
 * [XMLHttpRequest.onreadystatechange](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest#Properties)
 * [XMLHttpRequest.open()](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest#open(METHOD, URL))
@@ -146,7 +146,7 @@ To create AJAX requests in pure JS we need to use the XMLHttpRequest object. The
 Below is an example of an AJAX call in pure JS.  It is verbose and somewhat error prone. Try pasting this into your console, and examining the content of the alert box.
 
 ```
-httpRequest = new XMLHttpRequest();
+var httpRequest = new XMLHttpRequest();
 
 httpRequest.onreadystatechange = function(){
     if (httpRequest.readyState === 4) {
@@ -154,7 +154,7 @@ httpRequest.onreadystatechange = function(){
          alert(httpRequest.responseText);
        }
     }
-    
+
 };
 httpRequest.open('GET', 'http://www.omdbapi.com/?t=Frozen&y=&plot=short&r=json');
 httpRequest.send();
@@ -174,7 +174,7 @@ httpRequest.onreadystatechange = function(){ ... });
 
 When an HTTP Request is made, the function we just defined is called anytime the "ready state" of that request changes. See all the values for `readyState`[here](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/readyState).
 
-Our particular callback function asks two questions about the response every time we've triggered the callback. First we ask, is this HTTP request done? the readyState value for "done" is 4. 
+Our particular callback function asks two questions about the response every time we've triggered the callback. First we ask, is this HTTP request done? the readyState value for "done" is 4.
 
 ```
 if (httpRequest.readyState === 4) { ... }
@@ -219,7 +219,7 @@ Paste this into your browser, and see if the result looks familiar!
 
 Once again, JQuery has made our code much more compact. We highly reccommend using JQuery or another library/framework to handle HTTP requests for you. There are innumerable pitfalls when writing vanilla JS to do AJAX. Stand on the shoulders of giants and use a library!
 
-This time around, it's pretty clear just from the syntax that we're going to perform an ajax requst and it's going to fetch the specified URL using the GET method. If the request is successful then the `success` callback function will execute with whatever data we recieved from the server at our URL. We can also define a callback function for errors. Try changing the URL to an invalid one, and inspecting the error information. 
+This time around, it's pretty clear just from the syntax that we're going to perform an ajax requst and it's going to fetch the specified URL using the GET method. If the request is successful then the `success` callback function will execute with whatever data we recieved from the server at our URL. We can also define a callback function for errors. Try changing the URL to an invalid one, and inspecting the error information.
 
 ```
 
@@ -236,7 +236,7 @@ $.ajax({
 });
 ```
 
-> ProTip : You can insert JQuery as a script tag into our DOM. When the script tag gets rendered, our browser will request JQuery from the URL we specified and we can use it in the console just like normal. 
+> ProTip : You can insert JQuery as a script tag into our DOM. When the script tag gets rendered, our browser will request JQuery from the URL we specified and we can use it in the console just like normal.
 
 >```
 var script = document.createElement('script');
@@ -254,7 +254,7 @@ If you run across this error: `XMLHttpRequest cannot load http://example.com/. N
 
 #### Exercise
 
-Modify the request to only alert the title of the movie and the status code from the response. 
+Modify the request to only alert the title of the movie and the status code from the response.
 
 > Pro-tip: Look at the jQuery docs for .ajax.  See what the success parameter has to offer.
 
@@ -302,11 +302,11 @@ console.log("AFTER THE AJAX!")
 [JQuery Promises with done](http://api.jquery.com/deferred.done/),
 [JQuery Promises with when](https://api.jquery.com/jquery.when/)
 
-Promises are an alternate way to use callbacks to handle asychronous requests. Promises can often be used to write cleaner code, especially when one http request relies on the results from another. Promises are a complex topic that deserves it's own complete Learning Experience, but it's easy enough to get started. The following code does the same thing we've been doing with AJAX: make a request to the OMDB API and handle success and failure separately. 
+Promises are an alternate way to use callbacks to handle asychronous requests. Promises can often be used to write cleaner code, especially when one http request relies on the results from another. Promises are a complex topic that deserves it's own complete Learning Experience, but it's easy enough to get started. The following code does the same thing we've been doing with AJAX: make a request to the OMDB API and handle success and failure separately.
 
-In JQuery, the `.done()` function is called with a callback function to be triggered on success, and `.fail` is called with a function to be called upon failure. 
+In JQuery, the `.done()` function is called with a callback function to be triggered on success, and `.fail` is called with a function to be called upon failure.
 
-In fact, the so called "promise" pattern has become so popular that JQuery deprecated the original success and error callbacks in favor of `.done()` and `.fail()` in version 1.8. 
+In fact, the so called "promise" pattern has become so popular that JQuery deprecated the original success and error callbacks in favor of `.done()` and `.fail()` in version 1.8.
 
 ```
 $.ajax({
@@ -344,5 +344,5 @@ You should be able to answer the folowing questions now:
 -  How is JSON used in JavaScript?
 -  What is XML?
 -  How do we send an AJAX request with raw JavaScript?
--  What is a "race condition"? 
--  How do you parse a JSON string into an object that you can use in JavaScript? 
+-  What is a "race condition"?
+-  How do you parse a JSON string into an object that you can use in JavaScript?
