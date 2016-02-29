@@ -215,7 +215,7 @@ $.ajax({
 });
 ```
 
-Add the following CDN to your HTML page:
+Add the following CDN to your head tag of the HTML page:
 ```
 <script src="https://code.jquery.com/jquery-2.2.1.js"></script>
 ```
