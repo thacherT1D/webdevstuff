@@ -16,3 +16,28 @@ This repo lays the groundwork for understanding Express routes.  The ability to 
 ## Resources
 
 * http://morgancarter.com.au/design-solutions/which-input-when/
+
+
+## Adam's Notes:
+
+- first exercise hint:
+-> Is the `h2` "Query Params" or `<p>` block not showing
+up? Look in the CSS. What does `display: none` do???
+
+
+## CONTROLLING FORMS:
+
+-What will form do with action left blank?
+-What will form do with action pointing at some random web site?
+-what will form do with fields matching query params for search on another site?
+-what will form do with no `method` set?
+
+```html
+<form action="http://www.imdb.com/find" method="get">
+  <input type="text" name="ref_" value="nv_sr_fn" />
+  <input type="text" name="q" value="mars" />
+  <input type="text" name="s" value="all" />
+
+  <input type="submit" />
+</form>
+```
