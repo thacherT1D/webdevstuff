@@ -128,9 +128,9 @@ The 'X' in AJAX stands for XML. So why are we talking about JSON? It turns out t
 
 ## AJAX in Action
 
-Consider these two examples of AJAX. To give them a try, open your browser to a new tab. Leave it empty, we don't want to have any other scripts running or any HTML on the page when we start.
+Consider these two examples of AJAX below. To give them a try, create a basic html page (just the doctype, html, head, and body tags are fine) and open your browser to a it. We don't want to have any other scripts running or any HTML on the page when we start.
 
-Open your developer tools, and try pasting each snippet into your console to run them.
+Open your developer tools, and try pasting each snippet (from pure JS and from jQuery) into your console to run them.
 
 
 ### AJAX in Pure JS
