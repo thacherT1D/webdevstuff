@@ -257,7 +257,7 @@ var doubleDown = function(number, index){
  return number * 2
 }
 
-console.log(doubleDown(4);
+console.log(doubleDown(4));
 var doubleNumbers = numbers.map(doubleDown);
 ```
 
