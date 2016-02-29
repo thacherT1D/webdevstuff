@@ -296,35 +296,203 @@ Let's focus first on `objectValues`. Here are some simple cases we can test:
 var code = require('../main');
 var expect = require('chai').expect;
 
-describe("Create Object", function() {
-  it("returns returns an object", function() {
-    expect(code.createObject(['a'], ['b'])).to.be.an('object');
+describe("Object Values", function() {
+  it("returns an array", function() {
+    expect(code.objectValues({a: "b"})).to.be.an('array');
   });
 
-  it("returns returns an object with keys from the first array and values from the second", function() {
-    expect(code.createObject(['hi', 'boom'], [4, null]))
-      .to.deep.equal({hi: 4, boom: null});
-    expect(code.createObject(['need', 'more', 'cowbell'], [undefined, 10, '10']))
-      .to.deep.equal({need: undefined, more: 10, cowbell: 10});
+  it("returns an array of the object's values", function() {
+    expect(code.objectValues({
+      key1: 'value1', 
+      key2: 0, 
+      key3: null, 
+      key4: undefined, 
+      key5: true
+    })).to.deep.equal(['value1', 0, null, undefined, true]);
+  });
+
+  it("works with reference types", function() {
+    expect(code.objectValues({
+      foo: [1, 2, 3],
+      bar: {nested: "object"}
+    })).to.deep.equal([
+      [1, 2, 3], 
+      {nested: "object"}
+    ]);
   });
 });
 ```
 
+Note that our expect statements are a little different than before. We're able to test a lot of different things with this syntax. For a full list of what's available to you, [check the docs](http://chaijs.com/api/bdd/)!
+
 In terms of edge cases, here are some questions to consider:
 
-1. What should happen if you try to call `createObject` with the wrong number of arguments?
-2. What should happen if you try to call `createObject` with arrays of different lengths?
-3. What should happen if you try to call `createObject` with arguments that aren't arrays?
-4. What should happen if you try to call `createObject` with arrays of different lengths?
+1. What should happen if you try to call `objectValues` with something that isn't an object?
+2. What should happen if you try to call `objectValues` on an array?
+3. What whould happen if you try to call `objectValues` on an empty object?
 
 There aren't right or wrong answers here, it's just a question of how you want your function to behave.
 
-Let's suppose we want our function to respond to these edge cases in the following ways:
+Let's suppose we want our function to respond to these cases in the following ways: it should return `null` if you try to pass in a primitive data type. If you pass in an array, it should just return that array. And if you pass in an empty object, it should return that object.
 
-1. If you call `createObject` with fewer than two arguments, it should return `null`. If you call it with more than two arguments, it should ignore the extra arguments.
-2. 
+The full set of tests might then look like this:
 
-## Exercise
+```javascript
+var code = require('../main');
+var expect = require('chai').expect;
+
+describe("Object Values", function() {
+  it("returns an array", function() {
+    expect(code.objectValues({a: "b"})).to.be.an('array');
+  });
+
+  it("returns an array of the object's values", function() {
+    expect(code.objectValues({
+      key1: 'value1', 
+      key2: 0, 
+      key3: null, 
+      key4: undefined, 
+      key5: true
+    })).to.deep.equal(['value1', 0, null, undefined, true]);
+  });
+
+  it("works with reference types", function() {
+    expect(code.objectValues({
+      foo: [1, 2, 3],
+      bar: {nested: "object"}
+    })).to.deep.equal([
+      [1, 2, 3], 
+      {nested: "object"}
+    ]);
+  });
+  
+  it("returns null if given a string, boolean, undefined, null, or number", function() {
+    ["hi",true,undefined,null,8].forEach(function(el) {
+      expect(code.objectValues(el)).to.be.null;
+    });
+  });
+
+  it("returns an array if given an array", function() {
+    expect(code.objectValues([1,"hi",true])).to.deep.equal([1,"hi",true]);
+  });
+
+  it("returns an empty array if given an empty object", function() {
+    expect(code.objectValues({})).to.deep.equal([]);
+  });
+});
+```
+
+**Exercise** Implement an `objectValues` function that makes the tests pass! Here's some starter code:
+
+```javascript
+function objectValues(obj) {
+  // write your code here
+}
+
+module.exports = {
+  objectValues
+};
+
+```
+
+**Exercise** Once you get those tests to pass, write some tests for `createObject`, then write the function! Here's some starter code for you `test.js` file and your `main.js` file:
+
+`test.js`
+
+```javascript
+var code = require('../main');
+var expect = require('chai').expect;
+
+describe("Object Values", function() {
+  it("returns an array", function() {
+    expect(code.objectValues({a: "b"})).to.be.an('array');
+  });
+
+  it("returns an array of the object's values", function() {
+    expect(code.objectValues({
+      key1: 'value1', 
+      key2: 0, 
+      key3: null, 
+      key4: undefined, 
+      key5: true
+    })).to.deep.equal(['value1', 0, null, undefined, true]);
+  });
+
+  it("works with reference types", function() {
+    expect(code.objectValues({
+      foo: [1, 2, 3],
+      bar: {nested: "object"}
+    })).to.deep.equal([
+      [1, 2, 3], 
+      {nested: "object"}
+    ]);
+  });
+  
+  it("returns null if given a string, boolean, undefined, null, or number", function() {
+    ["hi",true,undefined,null,8].forEach(function(el) {
+      expect(code.objectValues(el)).to.be.null;
+    });
+  });
+
+  it("returns an array if given an array", function() {
+    expect(code.objectValues([1,"hi",true])).to.deep.equal([1,"hi",true]);
+  });
+
+  it("returns an empty array if given an empty object", function() {
+    expect(code.objectValues({})).to.deep.equal([]);
+  });
+});
+
+describe("Create Object", function() {
+  it("returns returns an object", function() {
+  	// add code here  
+  });
+
+  // add a test for one or two simple cases
+  
+  // what are some edge cases? test for those too!
+});
+```
+
+`main.js`
+
+```javascript
+function objectValues(obj) {
+  // your code here
+}
+
+function createObject(arr1, arr2) {
+  // your code here
+}
+
+module.exports = {
+  objectValues,
+  createObject
+};
+```
+
+Protip: sick of seeing the tests for `objectValues` show up every time you run the tests? change the word `describe` in the line `describe('Object Values', function() {` to `xdescribe`, and all of those tests will be pending.
+
+### Note on testing syntax
+
+In our `main.js` file, we declared our functions up top, then exported them using `module.exports`. Another common pattern is to wrap everything in the `main` file in an object and export the entire thing. In this case, your `main.js` would look something like this: 
+
+```javascript
+module.exports = {
+  objectValues: function(obj) {
+    // your code here
+  },
+  createObject: function(arr1, arr2) {
+    // your code here
+  }
+};
+```
+
+This pattern may be slightly more confusing when you're just getting started, but it's good to know about because it is commonly used. But if you'd rather avoid it for now, that's fine.
+
+Want some more practice writing tests? Here you go!
+
+### Exercise: Leap Year
 
 Create a new directory in your workspace called leapYear.
 Follow the same steps as above to create the test.js, main.js, npm init and install chai.
@@ -368,9 +536,3 @@ describe('Tax Calculator', function(){
 
 });
 ```
-
-### Note on testing syntax
-
-### Further Reading
-
-[Optional slides here](https://docs.google.com/presentation/d/1E1Lskrk6hfJHzkBNwRmySg2X0m8nmKKTQN4w4tupYww/edit?usp=sharing)
