@@ -161,9 +161,10 @@ So now we have a function that will loop through the array and `console.log()` e
 This concept of doing something to every element in an array is a really fundamental idea that we can abstract out into a more general `each` function:
 
 ```javascript
-function each(array, action) {
-  for (var i = 0; i < array.length; i++)
-    action(array[i]);
+function each(array, callback) {
+  for (var i = 0; i < array.length; i++) {
+    callback(array[i]);
+  }
 }
 ```
 
@@ -222,19 +223,7 @@ Higher Order Functions are functions that either
 
 `forEach` is an example of a higher order function.
 
-**Exercise** Write a function called `repeat` which takes two arguments: the number of times it should repeat, and a function to call each time.
-
-```javascript
-repeat(3, function(x) {
-   console.log("HELLO!");
-})
-
-//=> "HELLO!"
-//=> "HELLO!"
-//=> "HELLO!"
-```
-
-Here's a function that creates another function:
+Here's another example of a higher order function: 
 
 ```javascript
 function greaterThan(n) {
@@ -243,10 +232,6 @@ function greaterThan(n) {
 var greaterThan10 = greaterThan(10);
 console.log(greaterThan10(11));
 ```
-
-## Map, Filter, and Reduce
-
-Test these examples...
 
 ### Map
 
@@ -263,7 +248,6 @@ for (var i = 0; i < numbers.length; i++) {
   doubleNumbers.push(numbers[i] * 2);
 };
 console.log(doubleNumbers)
-
 
 // Map callback function
 
@@ -313,18 +297,27 @@ var domesticManufacturer = function(car) {
   return car.madeInUnitedStates
 }
 
+var domesiticCars = cars.filter(domesticManufacturer);
+```
+
+Since `map` and `filter` both return arrays, they can be chained together to combine functionality. Building on our previous example:
+
+```javascript
 var singleCar = function(car){
   return car.make
 }
 
-console.log(cars.filter(domesticManufacturer).map(singleCar)[0]);
+console.log(cars.filter(domesticManufacturer).map(singleCar)[0]) // Ford
 ```
 
 ### Reduce
 
-Reduce takes 2 args (optional additional) in its callback:
+Reduce is the most confusing of the iterators we'll consider here, but it's also the post powerful. Reduce takes 2 arguments (optional additional) in its callback:
+
 1. Running Total of the reduction
 2. Current element in the array
+
+It also takes an argument after the callback, which indicates what the running total should start from.
 
 ```javascript
 var allNumbers = [2, 12, 3, 17, 233, 21];
@@ -341,6 +334,20 @@ var removeLessThanTen = function(number) {
 
 console.log('Filter: ', allNumbers.filter(removeLessThanTen))
 console.log(allNumbers.filter(removeLessThanTen).reduce(total, 0));
+```
+
+Note that reduce can return any data type, even an object! Check out this example:
+
+```javascripts
+var string = "awesomesauce";
+
+// Let's use reduce to return an object of character counts
+var obj = string.split("").reduce(function(prev,cur) {
+  prev[cur] = ++prev[cur] || 1;
+  return prev
+},{});
+
+obj // {a: 2, c: 1, e: 3, m: 1, o: 1, s: 2, u: 1, w: 1}
+```
 
 https://github.com/gSchool/js-hof-filter-map-reduce
-
