@@ -264,7 +264,7 @@ Let's try another example. Create a directory called `more-testing-examples`. CD
 5. create a `main.js` file inside of `more-testing-examples`
 6. run `npm init`
 7. install chai: `npm install --save-dev chai`
-8. add `node_modules` to your `gitignore`
+8. add `node_modules` to your `.gitignore`
 9. add this starter code to your `test.js`:
 
   ```javascript
