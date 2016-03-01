@@ -370,4 +370,10 @@ There are a couple of other iterators that we haven't considered here, but that 
 
 [some](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some)
 
+Tonight's assignment:
+
 https://github.com/gSchool/js-hof-filter-map-reduce
+
+Bonus assignment:
+
+https://github.com/gSchool-staging/movie-iterator-lab
