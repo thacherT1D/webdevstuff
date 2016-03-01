@@ -31,9 +31,9 @@ So what do we do to ensure we get good input for our programs?
 ### HTML5 Validation
 First, we need to make it easy for humans with good intentions to use our interface. We can use a number of HTML5 capabilities to do this, such as tabindex, input types, and patterns.
 
-*(Required)* [Read this article about HTML5 Forms](http://diveintohtml5.info/forms.html), focus specifically on input types and [validation](http://diveintohtml5.info/forms.html#validation).
+*(Required)* [You should have read this article last night](http://diveintohtml5.info/forms.html), so we should be ready to rock.
 
-After that, given the form below, change it to use HTML5 form validation techniques.
+Given the form below, change it to use HTML5 form validation techniques.
 Make sure:
  
  * Email fields are type="email"
@@ -43,25 +43,25 @@ Make sure:
 
 ```html
 <form>
-	<label>Name (required)</label>
-	<input type="text" name="name">
-	<label>Email (required)</label>
-	<input type="text" name="email">
-	<label>Age (required, must be older than 13)</label>
-	<input type="text" name="age"> 
+  <label>Name (required)</label>
+  <input type="text" name="name">
+  <label>Email (required)</label>
+  <input type="text" name="email">
+  <label>Age (required, must be older than 13)</label>
+  <input type="text" name="age"> 
 	
-	<label>Number of siblings</label>
-	<input type="text" name="siblings">
+  <label>Number of siblings</label>
+  <input type="text" name="siblings">
 	
-	<label>Number of rooms in your house</label>
-	<input type="text" name="rooms">
-	
-	<label>Blog url</label>
-	<input type="text" name="blog">
+  <label>Number of rooms in your house</label>
+  <input type="text" name="rooms">
 
-	<label>Twitter Username</label>
-	<input type="text" name="twitter">
-	<input type="submit">
+  <label>Blog url</label>
+  <input type="text" name="blog">
+
+  <label>Twitter Username</label>
+  <input type="text" name="twitter">
+  <input type="submit">
 </form>
 
 ```
@@ -134,7 +134,7 @@ In order to check the form when the user hits the "I'm finished filling out this
 
 ```javascript
 $("#myForm").on("submit", function(){
-	// do entire form validation here
+  // do entire form validation here
 })
 
 ```
@@ -145,7 +145,7 @@ If we want to check a field as soon as a user is done typing, we can listen to t
 
 ```javascript
 $("#myInput").on("blur", function(){
-	// do single input validation here
+  // do single input validation here
 })
 
 ```
@@ -157,16 +157,14 @@ When you bind an event handler to something that has a _default action_, the han
 
 
 ```javascript
-$("#myForm").on("submit", function(){
+$("#myForm").on("submit", function() {
+  if (some_error_condition) {
+    var errDiv = $('<div class="error">Please fix your phone number</div>')
 
-    if (some_error_condition) {
+    $("#myForm").append(errDiv);
     
-	    var errDiv = $('<div class="error">Please fix your phone number</div>')
-
-        $("#myForm").append(errDiv);
-    
-        return false; // This tells the submission not to happen
-    }
+    return false; // This tells the submission not to happen
+  }
 })
 
 
