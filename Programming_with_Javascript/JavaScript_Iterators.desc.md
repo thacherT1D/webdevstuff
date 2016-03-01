@@ -350,4 +350,24 @@ var obj = string.split("").reduce(function(prev,cur) {
 obj // {a: 2, c: 1, e: 3, m: 1, o: 1, s: 2, u: 1, w: 1}
 ```
 
+### When To Use forEach, map, filter, or reduce?
+
+One of the first questions you'll be asking yourself a lot when you first learn about these iterators is when you should be using each one. Here are some helpful guiding principles:
+
+If you're trying to transform each element in an array, and want to obtain an array of the same length, **use map**.
+
+If you're trying to get a sub-array of the original array, **use filter**.
+
+If you want to execute some code for each element in an array (say, run a test or render some HTML), but don't care about any return values, **use forEach**.
+
+If you want to do something more sophisticated, think about chaining iterators or **using reduce**.
+
+### Bonus iterators!
+
+There are a couple of other iterators that we haven't considered here, but that you may find useful. For future reference, here are some links:
+
+[every](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every)
+
+[some](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some)
+
 https://github.com/gSchool/js-hof-filter-map-reduce
