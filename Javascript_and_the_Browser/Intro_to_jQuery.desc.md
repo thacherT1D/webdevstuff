@@ -21,7 +21,7 @@ The `Math` object is a built-in library. And without it, you'd have to write you
 ```js
 document.getElementById('lion');
 document.getElementsByClassName('tigers');
-document.querySelectors('#bears');
+document.querySelector('#bears');
 ```
 
 The `document` object is a library of APIs that programs can use to access the current page's DOM. However, the implementation of some browser APIs varies across browser vendors and versions. Also, there's a lot of common DOM manipulation use cases that are awkward to accomplish with the built-in browser APIs. Because of these issues, John Resig released jQuery as a 3rd party library in 2006.
@@ -60,15 +60,16 @@ button.addEventListener('click', function() {
 #### jQuery
 
 ```js
-var $button = $('button.addTodo');
+var $button = $('#addTodo');
 
 $button.on('click', function() {
-  var $ul = $('ul.todoList');
+  var $ul = $('#todoList');
   var $li = $('<li>');
+  var content = $button.text();  // Unknown text() function
 
-  $li.text($button.text());
+  $li.text(content);
 
-  $ul.append($li);
+  $ul.prepend($li);
 });
 ```
 
