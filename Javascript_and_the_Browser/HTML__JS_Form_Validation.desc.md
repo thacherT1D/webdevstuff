@@ -8,7 +8,6 @@ Bt the end of this Learning Experience you should be able to:
 * Read the values from your form with JS
 * Check the values you've read with JS to make sure they are what they need to be
 * Listen to form events like submit, and show errors
-* Program defensively against faulty form input
 
 
 ### Key Terms
