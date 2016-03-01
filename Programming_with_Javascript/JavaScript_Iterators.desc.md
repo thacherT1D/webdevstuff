@@ -176,9 +176,6 @@ var names = ["Rusty", "Momo", "Wyatt"]
 //to alert each name
 each(names, alert)
 
-//to console.log each name
-each(names, console.log)
-
 ```
 **Question:** Why don't we add the parentheses after `alert` or `console.log`?
 
