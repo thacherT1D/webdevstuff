@@ -260,7 +260,7 @@ console.log(companyJson);  // Prints the json string that represents the array
 
 ### Exercise
 
-Go to this [student roster page](https://pacific-stream-1533.herokuapp.com/). Your job is to create a profile picture of yourself using the apis:
+Go to this [student roster page](https://shrouded-cliffs-71677.herokuapp.com/students). Your job is to create a profile picture of yourself using the apis:
 
 1. Make a `GET` request to https://shrouded-cliffs-71677.herokuapp.com/students.  If you're using `curl`, use [a JSON visualizer](http://jsonlint.com/) to see what you're working with.
 2. Make a `POST` request to https://shrouded-cliffs-71677.herokuapp.com/students.  There are some specs for the api request:
