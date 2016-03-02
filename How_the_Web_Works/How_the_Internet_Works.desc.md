@@ -25,23 +25,23 @@ Knowing how the internet works at a deeper level is essential when becoming a we
 * __1960s__ ARPANET - The beginnings of the internet
   *  Professor Leonard Kleinrock at UCLA sent the first message over a wide area network to a computer at Stanford Research Institute
   * The internet is born!
-  
+
 * __1980s__ TCP/IP standardized
    * TCP/IP is the specification that is still used on the internet today
    * It's the building blocks of HTTP and allows lower level computer to computer communication
-   
+
 * __1989__ Tim Burners-Lee invents what becomes the world wide web while at CERN
    * The idea of the internet as we know it today was derived here
    * [The first website](http://info.cern.ch/hypertext/WWW/TheProject.html)
    * Burners-Lee also found the W3C which is a standards group that still creates web standards today
-   
+
 * __1993__ Mosaic Browser (Later Netscape)
    * The first popular browser was created at UIUC by [Marc Andreessen](http://en.wikipedia.org/wiki/Marc_Andreessen)
    * After Andreessen graduated, he formed a company and created Netscape Navigator
 * __1993 - 1999__ Rapid rise in popularity of the world wide web
 * __1995__ Javascript created in 10 days by Netscape
 * __1999__ Microsoft creates the XMLHTTP ActiveX control in Internet Explorer 5, which was later adopted by Mozilla, Safari, Opera and other browsers as the XMLHttpRequest JavaScript object.
-* __2005__ The term AJAX is coined and gains tremendous popularity 
+* __2005__ The term AJAX is coined and gains tremendous popularity
 * __2009__ EMCAScript 5 is agreed upon, javascript becomes more unified
 
 
@@ -73,7 +73,7 @@ __IP__ or Internet Protocol is responsible for getting the packets to the correc
 HTTP is the protocol browsers, servers, and other programs on the internet use to issue requests to one another. Servers need to be able to read requests that are formatted in a predictable way. In the Querystring Parsing exercise, you learned to look at a string and turn it into data. Servers use a similar methodology to parse incoming text-based HTTP Requests.  A client can send a request to an HTTP server and get a response which in most cases is a web page, css file, javascript file, image, etc.
 
 #### __HTTP General Format__
-A HTTP request in general has a start line, 0 or more headers, an empty line and optionally a body.  More specifically, in a HTTP request, there is a request line (the start line): ```GET /hello.html HTTP/1.1```. And in an HTTP response, there is a status line for the start line:  ```HTTP/1.1 200 OK ``` 
+A HTTP request in general has a start line, 0 or more headers, an empty line and optionally a body.  More specifically, in a HTTP request, there is a request line (the start line): ```GET /hello.html HTTP/1.1```. And in an HTTP response, there is a status line for the start line:  ```HTTP/1.1 200 OK ```
 
 #### __HTTP Verbs__
 HTTP has several "verbs", which are standard words that help servers understand what kind of request they're getting. These verbs describe what you're trying to do.
@@ -110,7 +110,7 @@ Postman-Token: 4ce8b655-abae-8aed-af11-058633be3129
 __Sample Response__
 
 ```
-HTTP/1.1 200 OK 
+HTTP/1.1 200 OK
 alternate-protocol: 443:quic,p=1
 cache-control: private, max-age=0
 content-encoding: gzip
@@ -141,7 +141,7 @@ The program we just introduced was called cURL. It's a terminal program that can
 
 Next we are going to make some requests to a server to GET and POST data about the class.  To do that, we'll use curl.
 
-__Curl__ is a command line utility that can do pretty much anything your browser does for you to interact with a web server. 
+__Curl__ is a command line utility that can do pretty much anything your browser does for you to interact with a web server.
 
 Run these commands in your terminal, and paste each one into [Explain Shell](http://explainshell.com/) as well.
 
@@ -169,7 +169,7 @@ Curl has many parameters, for example to add a header to the request:
 curl -v -H "Accept: text/html" -X GET https://www.google.com
 ```
 
-We can even specify cookies to be sent with the request.  In the example, the name of 
+We can even specify cookies to be sent with the request.  In the example, the name of
 the cookie is cookie and the value is jar.
 
 ```
@@ -186,7 +186,7 @@ What is a POST request? Why would we use one? How does it differ from a GET requ
 
 A POST request is used in order to send data from the requestor to the server. The server can then parse the _request body_ in order to get information out of it, and often do something on the server with that information (like put it in a database).
 
-Here's how we'd put data in the body of the request using cURL. 
+Here's how we'd put data in the body of the request using cURL.
 
 ```
 curl -v --data @myfilenamewithdata.json -X POST https://www.google.com
@@ -260,14 +260,20 @@ console.log(companyJson);  // Prints the json string that represents the array
 
 ### Exercise
 
-Go to this [student roster page](https://pacific-stream-1533.herokuapp.com/). It is empty!  Your job is to create a profile picture of yourself using the apis:
+Go to this [student roster page](https://shrouded-cliffs-71677.herokuapp.com/). Your job is to add a student profile of yourself to this page. Notice that there's no web form. To add your student profile, you'll have to use Postman to communicate to the application through its **web API**.
 
-1. Using curl, make a GET request to https://pacific-stream-1533.herokuapp.com/students.  Use [a json visualizer](http://jsonlint.com/) to see what you're working with.  Make your request verbose!
-2. Make a post request to https://pacific-stream-1533.herokuapp.com/students using curl.  There are some specs for the api request:
-    * The content type of the request should be application/json
-    * The json object must contain 3 fields: __name__, __hobby__, and __avatar__.  The avatar value should be a url of a picture of you.
-    * The api has a very easily breakable form of authentication.  In order to post, your request must send a cookie.  The name of the cookie is login and the value is g9fullstack.
-3. Make another GET request to https://pacific-stream-1533.herokuapp.com/students to make sure your name got posted. Make your request verbose.
+1. To get started, send a `GET` request to https://shrouded-cliffs-71677.herokuapp.com/.
+
+1. Send another request, but this time set the request's `Accept` header to `application/json`. What's different about this response?
+
+1. Now send a `POST` request to the same URL. What's different about this response?
+
+1. Add a JSON object with the following key/value pairs to the request body.
+  * `name` - Your full name as a `String`
+  * `hobby` - Your favorite hobby as a `String`
+  * `avatar` - A URL of your profile picture as a `String`
+
+1. Switch back to `GET` and send another request. What's different about this response?
 
 ### Stretch Assignment
 
