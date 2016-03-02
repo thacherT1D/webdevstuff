@@ -4,9 +4,9 @@
 
 After this lesson students should be capable of the following:
 
-* Recite the meaning of the acronym AJAX.
-* Use JavaScript and `XMLHttpRequest` to create an HTTP/AJAX request.
-* Use JavaScript and JQuery to create an HTTP/AJAX request.
+* Recite, and explain the uses for, the acronym AJAX.
+* Use the JavaScript `XMLHttpRequest` to create an HTTP/AJAX request.
+* Use JQuery to create an HTTP/AJAX request.
 * Use a callback to handle an HTTP/AJAX response.
 * Parse a JSON string into a usable Object in JavaScript.
 * Create a __race condition__ using an AJAX request.
