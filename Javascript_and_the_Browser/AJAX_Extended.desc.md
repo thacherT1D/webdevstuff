@@ -21,7 +21,7 @@ Asychronous:
 2. (In English) Code that does not execute until a signal is explicitly given to execute.
 3. (In our case) Code that waits until after an HTTP request recieves a response, then executes a callback.
 
-JSON: JavaScript Object Notation. This is what we use anytime we create an Object Literal in JS:
+JSON: JavaScript Object Notation is a lightweight data-interchange format. It is easy for humans to read and write. It is easy for machines to parse and generate. JSON is a text format that is completely language independent but uses conventions that are familiar to programmers of the C-family of languages, including C, C++, C#, Java, JavaScript, Perl, Python, and many others. These properties make JSON an ideal data-interchange language.
 
 ```
 {
