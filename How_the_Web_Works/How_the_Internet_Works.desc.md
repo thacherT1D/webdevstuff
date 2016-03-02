@@ -260,17 +260,20 @@ console.log(companyJson);  // Prints the json string that represents the array
 
 ### Exercise
 
-Go to this [student roster page](https://shrouded-cliffs-71677.herokuapp.com/). Your job is to create a profile picture of yourself using the apis:
+Go to this [student roster page](https://shrouded-cliffs-71677.herokuapp.com/). Your job is to add a student profile of yourself to this page. Notice that there's no web form. To add your student profile, you'll have to use Postman to communicate to the application through its **web API**.
 
-1. Make a `GET` request to https://shrouded-cliffs-71677.herokuapp.com/students.  If you're using `curl`, use [a JSON visualizer](http://jsonlint.com/) to see what you're working with.
-2. Make a `POST` request to https://shrouded-cliffs-71677.herokuapp.com/students.  There are some specs for the api request:
-    * Set the request's `Accept` header to `application/json`
-    * Set the request's `Cookie` header to `login=fullstack`.
-    * The JSON object must contain 3 fields:
-      * `name` - Your full name
-      * `hobby` - Your favorite hobby
-      * `avatar` - A URL of your profile picture
-3. Make another `GET` request to https://shrouded-cliffs-71677.herokuapp.com/students to make sure your name got posted.
+1. To get started, send a `GET` request to https://shrouded-cliffs-71677.herokuapp.com/.
+
+1. Send another request, but this time set the request's `Accept` header to `application/json`. What's different about this response?
+
+1. Now send a `POST` request to the same URL. What's different about this response?
+
+1. Add a JSON object with the following key/value pairs to the request body.
+  * `name` - Your full name as a `String`
+  * `hobby` - Your favorite hobby as a `String`
+  * `avatar` - A URL of your profile picture as a `String`
+
+1. Switch back to `GET` and send another request. What's different about this response?
 
 ### Stretch Assignment
 
