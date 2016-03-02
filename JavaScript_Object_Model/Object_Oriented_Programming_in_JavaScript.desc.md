@@ -1,40 +1,105 @@
-# In Progress
+#Object Oriented Programming With Javascript
 
 
 ## Objectives
 
 By the end of this lesson, you will be able to:
 
-* Describe what Object Oriented Programming is
-* Work with properties and methods
-* Explain concepts in OOP like Encapsulation, Inheritance and Polymorphism
-* Be able to articulate the difference and benefits of adding methods to the prototype versus the constructor.
-* Articulate the difference and benefits to adding methods to the prototype vs. the constructor
-* Explain the difference between setting properties in a constructor function vs. the prototype
-* Distinguish between class (all instances of a given constructor) methods and instance methods
-* Use `call` or `apply` to mimic the functionality of `super` when creating other constructor functions
-* Contrast `call` and `apply` and how the `arguments` array-like object can be used
+* Explain encapsulation as an object oriented concept
+* Explaing abstraction as an object oriented concept
+* Articulate the difference and benefits to adding methods to the prototype vs. the constructor in Javascript
 
 ## What is Object-Oriented Programming?
 
-Object-Oriented Programming (or "OOP") is a set of techniques and philosophies that can be used for solving programming problems (a _programming paradigm_). OOP has four key concepts:
+Object-Oriented Programming (or "OOP") is a set of techniques and philosophies that can be used for solving programming problems (a _programming paradigm_).  The idea behind object oriented programing is essentially that the logic you are implementing is abstracted into a class that represents some real world thing.  For example, you might use object oriented programming to represent a view on the page, an object that saves your data, a student, an instructor, etc.  In other words, anything that you are trying to represent conceptually in your program, you can make into a class.
+
+
+OOP has _four key concepts_:
 
 * Encapsulation
-* Inheritance
 * Abstraction
+* Inheritance
 * Polymorphism
 
-Collectively these are referred to as the _Four Pillars of OOP_.
+Collectively these are referred to as the _Four Pillars of OOP_.  We will focus mainly on _Encapsulation_ and _Abstraction_.
 
-### Encapsulation
+### OOP Definitions
 
-Encapsulation means two things:
+__Encapsulation__: controlling how data and behavior is accessed.  Encapsulation also refers to hiding internal data that is not relavant to the user of a class.
 
-1. Grouping data and behavior together
-1. Controlling how data and behavior are accessed
+__Abstraction__: Grouping functions into a logical set that represents something in the real world.
 
-In practical terms, this means that objects contain both variables and functions, and have the ability to control how the rest of the program uses them. 
+__Inheritance__: Creating a new class that gets the data and behavior of a parent class.
 
+__Polymorphism__: When a parent class implements a function that is implemented differently in a child class.
+
+
+### Javascript Classes
+
+To make a class in javascript, we __could__ try using a javascript object:
+
+```javascript
+var student = {
+	name: "Tim",
+	studentId: "1050",
+	className: "Full Stack Immersive"
+};
+```
+
+The above approach for making a class has big disadvantages.  Most importantly, as the implementor of the class, I cannot easily make more than 1 student.  I would have to create another object with all of the same properties every time I want to make a new student.  
+
+To get around this problem, javascript classes are commonly implemented with functions. The function that defines how a class should be initialized is called the _constructor_.  Below is an example:
+
+```javascript
+function Student(name, studentId) {
+	this.name = name;
+	this.studentId = studentId;
+	if (studentId > 1000) {
+	  this.className = "Full Stack Immersive";
+	} else {
+	  this.className = "Data Science Immersive";
+	}
+}
+```
+
+To create an instance of the class, use the `new` keyword:
+
+```javascript
+var fsiStudent = new Student("Tim", 1050);
+var dsiStudent = new Student("Matt", 903);
+```
+
+Now we can create as many students as we like using the `new` keyword.  The constructor function also has the added benefit of allowing us to do some additional logic when a student is getting created.
+
+### this, new keywords
+
+In the example above, the `new` keyword creates a new object using the constructor function.  Each property defined on `this` in the constructor function will be created as a property for the new object.  The `new` keyword also copies the __prototype__ of the constructor function which we will discuss later on.
+
+__EXERCISE__
+
+Write a class in javascript for a dog.  Give the dog a name, a breed, an address, and an age as as properties on the class. Example usage is below: 
+
+```javascript
+var myDog = new Dog("Tiny", "Bull Mastiff", "111111111111 Market Street", 1);
+console.log(myDog.name);
+console.log(myDog.age);
+// etc
+```
+
+__EXERCISE__
+
+Implement a method on the dog class that returns the name and address in a box as a string.  Call the method, `getDogTag`.  Sample usage and output is below:
+
+```javascript
+var myDog = new Dog("Butch", "Bulldog", "123 Fake Street", 5);
+
+// The getDogTag method will return the following:
+// ###################
+// # Butch           #
+// # 123 Fake Street #
+// ###################
+console.log(myDog.getDogTag());
+```
 #### Properties & Methods
 
 A variable that's stored in an object is called a *property*, and a function that's stored in an object is called a *method*.
