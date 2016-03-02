@@ -273,6 +273,8 @@ Go to this [student roster page](https://shrouded-cliffs-71677.herokuapp.com/). 
   * `hobby` - Your favorite hobby as a `String`
   * `avatar` - A URL of your profile picture as a `String`
 
+1. Once the request body is formatted correctly, send this `POST` request. What's different about this response?
+
 1. Switch back to `GET` and send another request. What's different about this response?
 
 ### Stretch Assignment
