@@ -326,11 +326,18 @@ You'll see in this example the implementer of the class gives the caller explici
 
 ## Abstraction
 
+Abstraction is the process of modeling concepts within your program as classes.  Abstraction is a tough concept when you're first learning object oriented programming.  Here are some questions to ask yourself when you are creating a class:
 
+* Should my class know about a certain property or function (e.g. should a Dog class know how to walk itself to the store.  That is probably the job of another class).
+* Is my class getting too large?
+* Is there too much functionality in a single function?
+* What is the primary purpose of my class, and does the functionality I'm about to add fit into that primary purpose.
+
+If you continally ask yourself these types of questions when you're building your code, and you're not afraid to refactor (make some changes), then you'll likely come away with a good design.  The best way to make this concrete is to model something that is a little more complicated.
 
 __EXERCISE__
 
-In groups, conceptually design classes for a game of checkers.  What needs to be abstacted?
+In groups, conceptually design classes for a game of checkers.  What needs to be abstacted into separate classes?  How will the classes be used together?
 
 
 ## Additional Resources
