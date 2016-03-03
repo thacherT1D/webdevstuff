@@ -260,9 +260,9 @@ console.log(companyJson);  // Prints the json string that represents the array
 
 ### Exercise
 
-Go to this [student roster page](https://shrouded-cliffs-71677.herokuapp.com/). Your job is to add a student profile of yourself to this page. Notice that there's no web form. To add your student profile, you'll have to use Postman to communicate to the application through its **web API**.
+Go to this [student roster page](https://fs-student-roster.herokuapp.com/). Your job is to add a student profile of yourself to this page. Notice that there's no web form. To add your student profile, you'll have to use Postman to communicate to the application through its **web API**.
 
-1. To get started, send a `GET` request to https://shrouded-cliffs-71677.herokuapp.com/.
+1. To get started, send a `GET` request to https://fs-student-roster.herokuapp.com/.
 
 1. Send another request, but this time set the request's `Accept` header to `application/json`. What's different about this response?
 
