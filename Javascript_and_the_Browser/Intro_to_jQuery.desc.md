@@ -7,23 +7,41 @@
 ```js
 var $divs = $('div');
 $divs.css('background-color', 'red');
-$divs.click(function () {
+$divs.click(function() {
   $(this).toggleClass('active');
 });
 ```
 
-## Stats as of November 3, 2015
+## What's wrong with vanilla JS?
 
-* Downloaded on npm [34,838](https://www.npmjs.com/package/jquery) times a day
-* [36,513](https://github.com/jquery/jquery/stargazers) stargazers on GitHub
-* [66.8%](http://w3techs.com/technologies/details/js-jquery/all/all) of websites using it
+Depending on who you ask, nothing! There's nothing you can do in jQuery that you _can't_ do in plain old vanilla Javascript. And as Javascript evolves, some feel like the gap between vanilla Javascript and the enhancements of jQuery is narrowing. 
+
+But based on what you've seen so far, here are a few reasons you might like jQuery:
+
+1. The syntax is shorter. This means you can write code expressing the same functionality more efficiently. Suppose we wanted to add a click listener to a `div` with an id of `foo`. In vanilla javascript, that code would look something like this:
+
+	```javascript
+	document.getElementById('foo').addEventListener('click', callback);
+	```
+	
+	In jQuery, the same functionality looks like this:
+
+	```javascript
+	$("#foo").on('click', callback);
+	```
+	
+2. As you may have noticed, even though the return values from functions like `document.getElementsByTagName` or `document.querySelectorAll` look like arrays, they are actually array-like objects which lack much of the functionality that arrays have. Specifically, array methods like `forEach`, `map`, etc. don't exist on these array-like objects.
+
+	To address this issue, jQuery comes with an `$.each` method and a `$.map` method that lets us iterate over jQuery objects. The syntax is a bit different than with `forEach` and `map`, but we'll cross that bridge later.
+	
+3. Dealing with adding, removing, and toggling classes is a bit more streamlined in jQuery.
+
+4. AJAX with jQuery is way better than AJAX with vanilla Javascript. (More on this later this week.)	
 
 ## Installation
 
 You can [download](http://jquery.com/download/) and include jQuery with a `<script>` tag in your HTML.
 There are also [many CDN's](http://jquery.com/download/#using-jquery-with-a-cdn) available you can link to so you do not have to download the file.
-
-You can tell when jQuery is loaded correctly if `console.log($.fn.jquery)` prints out the jQuery version correctly.
 
 ## Key Features
 
@@ -204,45 +222,4 @@ the `.empty()` method will clear out the contents of any DOM Element.
 
 ```js
 $('div').empty() //clear out all divs
-```
-
-### AJAX
-
-#### .get()
-
-[[jquery]](http://api.jquery.com/jQuery.get/)
-
-You can perform an HTTP GET request with the `.get()` method.
-
-```js
-$.get("https://www.reddit.com/r/aww.json", function(data) {
-    console.log(data)
-});
-```
-
-#### .post()
-
-[[jquery]](http://api.jquery.com/jQuery.post/)
-
-Similarly, an HTTP POST request can be sent with the `.post()` method.
-
-```js
-$.post( "ajax/submit.html", function(data) {
-    console.log(data);
-});
-```
-
-#### .ajax()
-
-[[jquery]](http://api.jquery.com/jQuery.ajax/)
-
-Any other HTTP request you need can be done with the more general `.ajax()` method.
-
-```js
-$.ajax({
-  url: 'test.html',
-  method: 'GET'
-}, function(data) {
-  console.log(data)
-});
 ```
