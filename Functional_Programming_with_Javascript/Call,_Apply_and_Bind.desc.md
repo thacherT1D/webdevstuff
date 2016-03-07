@@ -146,7 +146,7 @@ What does that mean? Well....it's actually not that crazy - in fact, you've done
 function outerInfo(){
     var privateData = "Super Secret Information!";
     function innerInfo(){
-        console.log(privateCount)
+        console.log(privateData)
     }
     return innerInfo
 }
