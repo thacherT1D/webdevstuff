@@ -330,16 +330,6 @@ $.ajax({
 });
 ```
 
-
-
-## Assessments
-
-Complete the excercises here:
-
-[https://github.com/gSchool/XMLHttpRequest-exercises](https://github.com/gSchool/XMLHttpRequest-exercises)
-
-
-
 ## Questions
 
 You should be able to answer the folowing questions now:
