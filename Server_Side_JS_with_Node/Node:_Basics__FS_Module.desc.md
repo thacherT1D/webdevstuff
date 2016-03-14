@@ -1,20 +1,24 @@
-##Introduction and Setup
+## Introduction to Node.js
 
 ### Materials
-Ensure that you have:  
 
-* [Node.js Installed](https://nodejs.org/en/)
+Ensure you're laptop is using the latest version of Node.js.
+
+```shell
+brew update
+brew outdated
+brew upgrade node
+```
 
 ### Objectives
+
 By the end of this lesson you should be able to:
 
-- Discuss the history of node.
-- Explain how Node provides a JS runtime outside of the browser using the V8 engine.
-- Discuss what NPM is and what it is used for.
-- Run a javascript file with node.
-- Use `fs` to parse files and understand more about file I/O.
-- Use the File System Module (`fs`) to interact with the filesystem.
-- Explain how the event loop plays a key role in the way Node.js works.
+- Describe what Node.js is and why it's important.
+- Describe what NPM is and why it's important.
+- Run a JavaScript file using Node.js.
+- Use the `fs` module to interact with the filesystem.
+- Draw a diagram of Node's event loop.
 
 ### Key terms:
 
@@ -25,7 +29,9 @@ By the end of this lesson you should be able to:
 
 ### What is Node.js
 
-Node.js is a powerful server-side platform for executing JavaScript. In particular, its largest advantage over the "plain old" JavaScript language is that it provides access to the filesystem and network. Another way to think about this, is that Node.js is just another environment that can run JavaScript code (the Chrome Web Console is another example). The key distinction with Node.js is that it is not the browser (client), there is no DOM nor `window`; those are browser concepts. Node.js is on the other side of the coin; the server. This concept will be further explored when using Node.js in the context of the web, for now knowing this basic conceptualization is sufficient.
+Node.js is a runtime system for executing JavaScript from outside a web browser. When a JavaScript program, there's no DOM tree to read and manage and therefore no `window` object. those are browser concepts. Node.js is on the other side of the coin; the server. In other words, you can write Javascript programs that access a computer's filesystem and network.
+
+Another way to think about this, is that Node.js is just another environment that can run JavaScript code (the Chrome Web Console is another example). The key distinction with Node.js is that it is not the browser (client),  This concept will be further explored when using Node.js in the context of the web, for now knowing this basic conceptualization is sufficient.
 
 Some of the largest [companies on the planet use Node.js](https://github.com/joyent/node/wiki/projects,-applications,-and-companies-using-node) including eBay, Joyent, Klout, LinkedIn, Microsoft, and PayPal use Node.js for some part of their stack. Depending on the firm, usage may vary widely, but it is highly unlikely that any of these companies operate entirely (or even majority) in Node.js. Node.js is like anything else though, and has its [disadvantages](http://www.quora.com/What-are-the-disadvantages-of-using-Node-js) and [advantages](http://www.toptal.com/nodejs/why-the-hell-would-i-use-node-js).
 
@@ -40,7 +46,7 @@ One powerful feature of Node.js is the _REPL_; Read, Eval, Print, Loop. This is 
 
 #### Try it - REPL
 
-**Open your terminal**, and type `node`, and hit enter. You should see a `>` appear, and it is in this mode you can enter any valid javascript and it will interpret it. It's similar to the console you're used to from the browser, only we don't have access to `document` or any other browser APIs. 
+**Open your terminal**, and type `node`, and hit enter. You should see a `>` appear, and it is in this mode you can enter any valid javascript and it will interpret it. It's similar to the console you're used to from the browser, only we don't have access to `document` or any other browser APIs.
 
 Now, `touch` a new javascript file in a new folder in your projects or `src` directory. Call it `script.js`.  
 `touch ~/src/node/examples/script.js` (you can use your own folder structure if you like)
@@ -56,7 +62,7 @@ Now `cd` into that folder and run that file with `node script.js`. This is how w
 
 
 ### NPM
-What is [npm](https://en.wikipedia.org/wiki/Npm_(software))? 
+What is [npm](https://en.wikipedia.org/wiki/Npm_(software))?
 `npm` is a package manager for Node.js and JavaScript. _Packages_, or _libraries_, are bits of code that are available for reuse.
 
 One of the best features of Node.js is that it is _lightweight_; that is, Node itself provides minimal functionality. Most things are done with _modules_. NPM packages are an example of [Modules](https://en.wikipedia.org/wiki/Modular_programming), which is a concept we see across many languages and frameworks.
@@ -74,7 +80,7 @@ Why is file parsing important though? If you think about it, if you can use Java
 Although computers are able to rapidly execute instructions sent to the (CPU), it is much slower to get information that is located somewhere like a hard disk, or another computer. Getting data from somewhere other than memomry is known as _I/O_, or, input/output. In particular with Node.js, the areas of interest are file and network I/O. File I/O will involve interacting with files on the computer's _filesystem_. Because Node.js is able to do these things _asyncronously_, it does not have to stop and wait for I/O to happen. [Take a look at this table](http://www.eecs.berkeley.edu/~rcs/research/interactive_latency.html) to understand what kind of time it takes to do common I/O tasks that we currently take for granted.
 
 Can you think of an example of file I/O that you do on a regular basis? If you said `mv`, `cp`, `rm`, `touch` or any other unix command that creates/reads/modifies/deletes, etc. a file, then you are correct.
- 
+
 ## Exercises
 
 [Logfile parsing exercise](https://github.com/gSchool/js-node-log-file-parsing)  
