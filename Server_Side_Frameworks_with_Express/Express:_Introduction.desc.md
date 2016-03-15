@@ -1,6 +1,6 @@
 ## Intro Workshop
 
-**Entry ticket** is completion of node-related LE's before this one.  Don't start Express if you are still struggling with file system things / `module.exports`.  Just don't :)
+**Entry ticket** is completion of node-related LE's before this one.  Don't start Express if you are still struggling with file system things / `module.exports`!
 
 ## Data Flow in Express!
 
