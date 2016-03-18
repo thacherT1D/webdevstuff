@@ -1,7 +1,7 @@
 ## Objectives
 
 * Understand what Heroku is and how it works
-* Be able to use Heroku logs to debug 
+* Be able to use Heroku logs to debug
 * Understand what an environment variable is
 * Be able to use the `dotenv` core module
 * Be able to deploy an Node/Express app to Heroku using the CLI
@@ -10,6 +10,26 @@
 ## EXERCISE SUMMARY
 
 Included in this [REPO](https://github.com/gSchool/intro-to-deploying-express-pg-apps-to-heroku) is a CRUD app that uses a local Postgres database. Your mission will be to deploy the included repo to Heroku and connect it to a Heroku provided Postgres database.
+
+## Environment Variables
+
+When you deploy an application that depends on external resources such as databases, you need some way to tell your application _which_ database it should use.  There are several ways to do this, but one common (and awesome) way to do this is through environment variables.
+
+Environment variables in this case are used as a way to describe application-wide variables that you can configure per-_evironment_.  What's an environment?
+
+- Every developer's local machine is one environment
+- When you deploy to a staging server, that's one environment
+- When you deploy to production, that's one environment
+
+Environment variables typically look like this:
+
+```
+VARIABLE_NAME=value
+```
+
+In the next few steps you'll use environment variables to tell your application _where_ to find the database to connect to, like so:
+
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/51/postgres-environment-variables.png)
 
 ## What is Heroku?
 
