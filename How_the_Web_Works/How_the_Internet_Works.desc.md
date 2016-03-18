@@ -301,6 +301,7 @@ The TLS protocol is a newer and more secure version of SSL.
 
 ##### Still confused about TCP/IP vs HTTP? Check out these articles
 
+
 http://stackoverflow.com/questions/23157817/http-vs-tcp-ip-send-data-to-a-web-server
 http://www.differencebetween.net/technology/internet/difference-between-tcp-and-http/
 http://www.quora.com/What-is-the-difference-between-HTTP-protocol-and-TCP-protocol
