@@ -3,6 +3,7 @@
 ## Objectives
 
 * Install postgres
+* Describe what SQL is, and give examples of a few SQL-based databases
 
 ## Installation
 ------------------
