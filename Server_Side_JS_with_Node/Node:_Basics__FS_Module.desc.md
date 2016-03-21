@@ -1,15 +1,3 @@
-## Node.js - File IO
-
-### Materials
-
-Ensure you're laptop is using the latest version of Node.js.
-
-```shell
-brew update
-brew outdated
-brew upgrade node
-```
-
 ### Objectives
 
 By the end of this lesson you should be able to:
@@ -20,45 +8,89 @@ By the end of this lesson you should be able to:
 - Use the `fs` module to interact with the filesystem.
 - Draw a diagram of Node's event loop.
 
-### Key terms:
+#### How do I upgrade Node.js?
 
-- runtime
-- V8
-- event loop
-- file I/O
+Before getting started, take a moment to ensure you're laptop is using the latest version of Node.js.
 
-### What is Node.js and why is it important?
-
-Node.js is a runtime system for executing JavaScript from outside a web browser. When a JavaScript program, there's no DOM tree to read and manage and therefore no `window` object. those are browser concepts. Node.js is on the other side of the coin; the server. In other words, you can write Javascript programs that access a computer's filesystem and network.
-
-Another way to think about this, is that Node.js is just another environment that can run JavaScript code (the Chrome Web Console is another example). The key distinction with Node.js is that it is not the browser (client),  This concept will be further explored when using Node.js in the context of the web, for now knowing this basic conceptualization is sufficient.
-
-Some of the largest [companies on the planet use Node.js](https://github.com/joyent/node/wiki/projects,-applications,-and-companies-using-node) including eBay, Joyent, Klout, LinkedIn, Microsoft, and PayPal use Node.js for some part of their stack. Depending on the firm, usage may vary widely, but it is highly unlikely that any of these companies operate entirely (or even majority) in Node.js. Node.js is like anything else though, and has its [disadvantages](http://www.quora.com/What-are-the-disadvantages-of-using-Node-js) and [advantages](http://www.toptal.com/nodejs/why-the-hell-would-i-use-node-js).
-
-Node.js is important because it is a JavaScript _runtime_ for the server. A [runtime](https://en.wikipedia.org/wiki/Runtime_system) is the code that is dynamically executed during program operation. Javascript is an interpreted languaged, which means that it isn't compiled prior to running. C++, Objective-C and many other languages not based on C are put through a "compiler" that turns them into instructions that can be directly sent to the processor to be executed. An interpreted language is not compiled before it runs, but is instead compiled Just In Time (often abbreviated JIT) when the actual code is about to be run.
-
-One of the biggest changes that the V8 runtime introduces is in it's JIT compiler. It dynamically compiles and optimizes Javascript as it runs, and re-optimizes it according to the state of the program as the program runs. [Read the wikipedia entry on V8](https://en.wikipedia.org/wiki/V8_(JavaScript_engine)).
-
-  * _Challenge_: Explain what it means to say that [V8](https://developers.google.com/v8/?hl=en) provides the runtime environment for JavaScript on the server.
-  * What is the runtime in Chrome? In Firefox?
-
-One powerful feature of Node.js is the _REPL_; Read, Eval, Print, Loop. This is the `node` console, commands may be entered to be evaluated and their results will be shown (if they emit any).
-
-#### Try it - REPL
-
-**Open your terminal**, and type `node`, and hit enter. You should see a `>` appear, and it is in this mode you can enter any valid javascript and it will interpret it. It's similar to the console you're used to from the browser, only we don't have access to `document` or any other browser APIs.
-
-Now, `touch` a new javascript file in a new folder in your projects or `src` directory. Call it `script.js`.  
-`touch ~/src/node/examples/script.js` (you can use your own folder structure if you like)
-
-Open that file in your IDE, and put the following code in:
-
-```javascript
-console.log('Hello World');
-
+```shell
+brew update
+brew outdated
+brew upgrade node
 ```
 
-Now `cd` into that folder and run that file with `node script.js`. This is how we execute files with the `node` runtime.
+### What is Node.js and why is it so important?
+
+Node.js is a runtime system for executing JavaScript from outside a web browser. When a JavaScript program this way, it abandons browser concepts like a `window` object to access or a DOM tree to manage. Instead, a JavaScript program run with Node.js is only concerned with server concepts like managing a computer's filesystem and accessing it's network.
+
+Some of the [largest companies]['companies'] on the planet use Node.js for part of their technology stack. Their usage of Node.js varies widely from company to company and it's unlikely that any of one of them operates entirely in Node.js. Like everything else, Node.js has [advantages](http://www.toptal.com/nodejs/why-the-hell-would-i-use-node-js) and [disadvantages](http://www.quora.com/What-are-the-disadvantages-of-using-Node-js).
+
+Node.js is important because it is a JavaScript server-side **runtime system**. A [runtime system](https://en.wikipedia.org/wiki/Runtime_system) is the code that is dynamically executed during program operation. Javascript is an interpreted languaged, which means that it isn't compiled prior to running. C++, Objective-C and many other languages not based on C are put through a "compiler" that turns them into instructions that can be directly sent to the processor to be executed. An interpreted language is not compiled before it runs, but is instead compiled Just In Time (often abbreviated JIT) when the actual code is about to be run.
+
+One of the biggest changes that the V8 runtime introduces is in it's JIT compiler. It dynamically compiles and optimizes Javascript as it runs, and re-optimizes it according to the state of the program as the program runs. [Read the wikipedia entry on V8](https://en.wikipedia.org/wiki/V8_(JavaScript_engine).
+
+#### Challenge
+
+Explain what it means to say that [V8](https://developers.google.com/v8/?hl=en) provides the runtime environment for JavaScript on the server. What is the runtime in Chrome? In Firefox?
+
+### What is the Node.js REPL?
+
+One powerful feature of Node.js is the **REPL** which is short for read, evaluate, print, and loop. In the Node.js REPL, JavaScript code you enter will be executed in the Node.js runtime and their any results will be displayed in the Terminal.
+
+You can try it out by launching your Terminal app and running the `node` command without any arguments.
+
+```shell
+node
+```
+
+You should see a `>` prompt appear.
+
+```shell
+>
+```
+
+You can now run any valid JavaScript and it will be executed by the Node.js runtime. It's similar to the browser console you've used in the past, only you don't have access to any browser concepts like the `window` object, the `document` object, or any other browser APIs.
+
+```shell
+> 1 + 2
+3
+>
+```
+
+To leave this the Node.js REPL, run the `.exit` command.
+
+```shell
+.exit
+```
+
+Now, create a new javascript file in a new folder in your projects or `src` directory. Call it `script.js`.  
+
+```shell
+touch ~/Desktop/script.js
+```
+
+Open the file in your text editor
+
+```shell
+atom ~/Desktop/script.js
+```
+
+And write the following code.
+
+```js
+console.log('Hello world');
+```
+
+Now save the file and run it with the `node` command.
+
+```shell
+node ~/Desktop/script.js
+```
+
+This is how we execute files with the `node` runtime. You can delete this file with the `rm` command.
+
+```shell
+rm ~/Desktop/script.js
+```
 
 ### What is NPM and why is it important?
 
@@ -248,3 +280,6 @@ $ node guests.js read
 [Introduction to Node.js (video)](https://www.youtube.com/watch?v=pU9Q6oiQNd0)  
 [V8 (JavaScript Engine)](https://en.wikipedia.org/wiki/V8_(JavaScript_engine)
 [Event Driven Programming](http://en.wikipedia.org/wiki/Event-driven_programming)  
+
+
+['companies']: https://github.com/joyent/node/wiki/projects,-applications,-and-companies-using-node
