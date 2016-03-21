@@ -2,12 +2,13 @@
 
 By the end of this lesson you should be able to:
 
+- Upgrade Node.js to the latest version.
 - Describe what Node.js is and why it's important.
 - Run JavaScript code using the Node.js REPL.
 - Run JavaScript code using the Node.js interpreter.
 - Use the `fs` module to manage the file system.
 
-#### How do I upgrade Node.js?
+### How do I upgrade Node.js?
 
 Before getting started, take a moment to ensure you're laptop is using the latest version of Node.js.
 
@@ -103,7 +104,7 @@ Although computers are able to rapidly execute instructions sent to the CPU, it 
 
 Can you think of any examples of file I/O operations that developers perform on a regular basis?
 
-### Exercise
+#### Exercise
 
 Start by setting up a new project.
 
