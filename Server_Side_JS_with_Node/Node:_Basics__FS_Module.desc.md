@@ -1,92 +1,281 @@
-##Introduction and Setup
-
-### Materials
-Ensure that you have:  
-
-* [Node.js Installed](https://nodejs.org/en/)
-
 ### Objectives
+
 By the end of this lesson you should be able to:
 
-- Discuss the history of node.
-- Explain how Node provides a JS runtime outside of the browser using the V8 engine.
-- Discuss what NPM is and what it is used for.
-- Run a javascript file with node.
-- Use `fs` to parse files and understand more about file I/O.
-- Use the File System Module (`fs`) to interact with the filesystem.
-- Explain how the event loop plays a key role in the way Node.js works.
+- Upgrade Node.js to the latest version.
+- Describe what Node.js is and why it's important.
+- Run JavaScript code using the Node.js REPL.
+- Run JavaScript code using the Node.js interpreter.
+- Use the `fs` module to manage the file system.
 
-### Key terms:
+### How do I upgrade Node.js?
 
-- runtime
-- V8
-- event loop
-- file I/O
+Before getting started, take a moment to ensure you're laptop is using the latest version of Node.js.
 
-### What is Node.js
-
-Node.js is a powerful server-side platform for executing JavaScript. In particular, its largest advantage over the "plain old" JavaScript language is that it provides access to the filesystem and network. Another way to think about this, is that Node.js is just another environment that can run JavaScript code (the Chrome Web Console is another example). The key distinction with Node.js is that it is not the browser (client), there is no DOM nor `window`; those are browser concepts. Node.js is on the other side of the coin; the server. This concept will be further explored when using Node.js in the context of the web, for now knowing this basic conceptualization is sufficient.
-
-Some of the largest [companies on the planet use Node.js](https://github.com/joyent/node/wiki/projects,-applications,-and-companies-using-node) including eBay, Joyent, Klout, LinkedIn, Microsoft, and PayPal use Node.js for some part of their stack. Depending on the firm, usage may vary widely, but it is highly unlikely that any of these companies operate entirely (or even majority) in Node.js. Node.js is like anything else though, and has its [disadvantages](http://www.quora.com/What-are-the-disadvantages-of-using-Node-js) and [advantages](http://www.toptal.com/nodejs/why-the-hell-would-i-use-node-js).
-
-Node.js is important because it is a JavaScript _runtime_ for the server. A [runtime](https://en.wikipedia.org/wiki/Runtime_system) is the code that is dynamically executed during program operation. Javascript is an interpreted languaged, which means that it isn't compiled prior to running. C++, Objective-C and many other languages not based on C are put through a "compiler" that turns them into instructions that can be directly sent to the processor to be executed. An interpreted language is not compiled before it runs, but is instead compiled Just In Time (often abbreviated JIT) when the actual code is about to be run.
-
-One of the biggest changes that the V8 runtime introduces is in it's JIT compiler. It dynamically compiles and optimizes Javascript as it runs, and re-optimizes it according to the state of the program as the program runs. [Read the wikipedia entry on V8](https://en.wikipedia.org/wiki/V8_(JavaScript_engine)).
-
-  * _Challenge_: Explain what it means to say that [V8](https://developers.google.com/v8/?hl=en) provides the runtime environment for JavaScript on the server.
-  * What is the runtime in Chrome? In Firefox?
-
-One powerful feature of Node.js is the _REPL_; Read, Eval, Print, Loop. This is the `node` console, commands may be entered to be evaluated and their results will be shown (if they emit any).
-
-#### Try it - REPL
-
-**Open your terminal**, and type `node`, and hit enter. You should see a `>` appear, and it is in this mode you can enter any valid javascript and it will interpret it. It's similar to the console you're used to from the browser, only we don't have access to `document` or any other browser APIs. 
-
-Now, `touch` a new javascript file in a new folder in your projects or `src` directory. Call it `script.js`.  
-`touch ~/src/node/examples/script.js` (you can use your own folder structure if you like)
-
-Open that file in your IDE, and put the following code in:
-
-```javascript
-console.log("Hello World");
-
+```shell
+brew update
+brew outdated
+brew upgrade node
+brew cleanup
 ```
 
-Now `cd` into that folder and run that file with `node script.js`. This is how we execute files with the `node` runtime.
+You can check the version of Node.js by running the following command.
+
+```shell
+node -v
+```
+
+### What is Node.js and why is it so important?
+
+Node.js is a runtime system for executing JavaScript programs outside of a web browser. When a JavaScript program is run this way, it abandons all browser concepts such as managing a DOM tree with the `document` object. Instead, a JavaScript program that's run using Node.js is only concerned with server concepts like managing a computer's file system with the `fs` object or listening for HTTP requests with the `http` object.
+
+Some of the [largest companies]['companies'] on the planet use Node.js for part of their technology stack. Their usage of Node.js varies from company to company and it's unlikely that any of one of them operates entirely in Node.js. Like everything else, Node.js has its [advantages](http://www.toptal.com/nodejs/why-the-hell-would-i-use-node-js) and [disadvantages](http://www.quora.com/What-are-the-disadvantages-of-using-Node-js).
+
+Node.js is important because it's a server-side JavaScript **runtime system**. A runtime system is the environment for a executing program. JavaScript is an interpreted language which means that it's compiled to machine code as its executed. Languages like C, C++, Java, and many others are first put through a **compiler** that first turns their code into machine code and then sends those instructions to the CPU. An interpreted language, however, is compiled Just In Time (JIT) when the program is about to be run.
+
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/54/stack.png)
+
+### How do I run JavaScript code using the Node.js REPL?
+
+One powerful feature of Node.js is the **REPL** which is short for read, evaluate, print, and loop. In the Node.js REPL, JavaScript code you enter will be executed in the Node.js runtime and their any results will be displayed in the Terminal.
+
+You can try it out by launching your Terminal app and running the `node` command without any arguments.
+
+```shell
+node
+```
+
+You should see a `>` prompt appear.
+
+```shell
+>
+```
+
+You can now run any valid JavaScript and it will be executed by the Node.js runtime. It's similar to the browser console you've used in the past, only you don't have access to any browser concepts like the `window` object, the `document` object, or any other browser APIs.
+
+```shell
+> 1 + 2
+3
+>
+```
+
+To leave this the Node.js REPL, run the `.exit` command.
+
+```shell
+.exit
+```
+
+### How do I run JavaScript code using the Node.js intepreter?
+
+Now, create a new `hello.js` file.
+
+```shell
+touch ~/Desktop/hello.js
+```
+
+Open the file in your text editor
+
+```shell
+atom ~/Desktop/hello.js
+```
+
+And write the following code.
+
+```js
+console.log('Hello world');
+```
+
+Now save the file and run it with the `node` command.
+
+```shell
+node ~/Desktop/hello.js
+```
+
+This is how we execute files with the `node` runtime. You can delete this file with the `rm` command.
+
+```shell
+rm ~/Desktop/hello.js
+```
+
+### How do I manage the file system with Node.js?
+
+The purpose of this lesson is to create exposure to the [file system module]['fs'] or fs. The `fs` module is a built-in API for reading and writing information to and from files. This is often called File Input/Output or **File I/O** for short.
+
+Although computers are able to rapidly execute instructions sent to the CPU, it is much slower to get information that is located somewhere like a hard disk or another computer. In particular with Node.js, the areas of interest are file and network I/O. File I/O will involve interacting with files on the computer's file system. Because Node.js is able to do these things asyncronously, it does not have to stop and wait for I/O to happen. Take a look at this [latency table]['latency'] to understand what kind of time it takes to do common I/O tasks that we currently take for granted.
+
+#### Challenge
+
+Can you think of any examples of file I/O operations that developers perform on a regular basis?
+
+#### Exercise
+
+Start by setting up a new project.
+
+```shell
+mkdir party
+cd party
+echo '[]' >> guests.json
+touch guests.js
+atom .
+```
+
+Add the following code to the `guests.js` file.
+
+```js
+'use strict';
+
+var fs = require('fs');
+var path = require('path');
+var guestsPath = path.join(__dirname, 'guests.json');
+
+fs.readFile(guestsPath, 'utf8', function(err, data) {
+  if (err) {
+    throw err;
+  }
+
+  var guests = JSON.parse(data);
+
+  console.log(guests);
+});
+```
+
+Then run the program using the `node` command.
+
+```shell
+$ node guests.js
+[]
+```
+
+Now refactor the `guests.js` file to handle the `read` subcommand.
+
+```js
+'use strict';
+
+var fs = require('fs');
+var path = require('path');
+var guestsPath = path.join(__dirname, 'guests.json');
+
+var node = path.basename(process.argv[0]);
+var file = path.basename(process.argv[1]);
+var cmd = process.argv[2];
+
+if (cmd === 'read') {
+  fs.readFile(guestsPath, 'utf8', function(err, data) {
+    if (err) {
+      throw err;
+    }
+
+    var guests = JSON.parse(data);
+
+    console.log(guests);
+  });
+}
+else {
+  console.error(`Usage: ${node} ${file} read`);
+  process.exit(1);
+}
+```
+
+Then run the program using the `node` command, both with and without the `read` subcommand.
+
+```shell
+$ node guests.js
+Usage: node guests.js read
+
+$ node guests.js read
+[]
+```
+
+Now refactor the `guests.js` file to also handle the `create` subcommand.
+
+```js
+'use strict';
+
+var fs = require('fs');
+var path = require('path');
+var guestsPath = path.join(__dirname, 'guests.json');
+
+var node = path.basename(process.argv[0]);
+var file = path.basename(process.argv[1]);
+var cmd = process.argv[2];
+
+if (cmd === 'read') {
+  fs.readFile(guestsPath, 'utf8', function(err, data) {
+    if (err) {
+      throw err;
+    }
+
+    var guests = JSON.parse(data);
+
+    console.log(guests);
+  });
+}
+else if (cmd === 'create') {
+  fs.readFile(guestsPath, 'utf8', function(readErr, data) {
+    if (readErr) {
+      throw readErr;
+    }
+
+    var guests = JSON.parse(data);
+    var guest = process.argv[3];
+
+    if (!guest) {
+      console.error(`Usage: ${node} ${file} ${cmd} GUEST`);
+      process.exit(1);
+    }
+
+    guests.push(guest);
+
+    var guestsJSON = JSON.stringify(guests);
+
+    fs.writeFile(guestsPath, guestsJSON, function(writeErr) {
+      if (writeErr) {
+        throw writeErr;
+      }
+
+      console.log(guest);
+    });
+  });
+}
+else {
+  console.error(`Usage: ${node} ${file} [read | create]`);
+  process.exit(1);
+}
+```
+
+Then run the program using the `node` command, both with and without the `create` subcommand.
+
+```shell
+$ node guests.js
+Usage: node guests.js [read | create]
+
+$ node guests.js create
+Usage: node guests.js create GUEST
+
+$ node guests.js create Mary
+Mary
+
+$ node guests.js read
+[ 'Mary' ]
+
+$ node guests.js create Don
+Don
+
+$ node guests.js read
+[ 'Mary', 'Don' ]
+```
+
+### Assignment
+
+[Pet Shop: Node Filesystem](https://github.com/gSchool/fs-pet-shop)
+
+### Resources
+
+- [Introduction to Node.js (video)](https://www.youtube.com/watch?v=pU9Q6oiQNd0)
+- [V8 (JavaScript Engine)](https://en.wikipedia.org/wiki/V8_(JavaScript_engine)
+- [Event Driven Programming](http://en.wikipedia.org/wiki/Event-driven_programming)  
 
 
-### NPM
-What is [npm](https://en.wikipedia.org/wiki/Npm_(software))? 
-`npm` is a package manager for Node.js and JavaScript. _Packages_, or _libraries_, are bits of code that are available for reuse.
-
-One of the best features of Node.js is that it is _lightweight_; that is, Node itself provides minimal functionality. Most things are done with _modules_. NPM packages are an example of [Modules](https://en.wikipedia.org/wiki/Modular_programming), which is a concept we see across many languages and frameworks.
-
-An important consequence of the Node.js module system is that there is not a single _global scope_, in fact, each file defines its own scope, and then modules are _composed_ together into other modules.
-
-### Using our first module: `fs`
-
-The purpose of this lesson is to create exposure to `fs`, the filesystem module. `fs` is useful because files are a great medium for storing information, like the contents of webpages or flat data.
-
-Why is file parsing important though? If you think about it, if you can use JavaScript to "read" the contents of files (stream of characters), then you could write a programming language with JavaScript. Or, perhaps, you can take weather data from the last 30 years, parse it into JavaScript objects, and run an analysis on it. The options are endless, but all require having the rights skills/tools to do the job.
-
-##### What is I/O?
-
-Although computers are able to rapidly execute instructions sent to the (CPU), it is much slower to get information that is located somewhere like a hard disk, or another computer. Getting data from somewhere other than memomry is known as _I/O_, or, input/output. In particular with Node.js, the areas of interest are file and network I/O. File I/O will involve interacting with files on the computer's _filesystem_. Because Node.js is able to do these things _asyncronously_, it does not have to stop and wait for I/O to happen. [Take a look at this table](http://www.eecs.berkeley.edu/~rcs/research/interactive_latency.html) to understand what kind of time it takes to do common I/O tasks that we currently take for granted.
-
-Can you think of an example of file I/O that you do on a regular basis? If you said `mv`, `cp`, `rm`, `touch` or any other unix command that creates/reads/modifies/deletes, etc. a file, then you are correct.
- 
-## Exercises
-
-[Logfile parsing exercise](https://github.com/gSchool/js-node-log-file-parsing)  
-[Writing your own interpreter (Optional, Advanced)](https://github.com/gSchool/node-async-text-parsing-0)  
-
-## Assignment
-
-[Command Line To Do](https://github.com/gSchool/node-fs-todo-cli-example)
-
-
-## Resources
-
-[Introduction to Node.js (video)](https://www.youtube.com/watch?v=pU9Q6oiQNd0)  
-[V8(JavaScript Engine)](https://en.wikipedia.org/wiki/V8_(JavaScript_engine))
-[Event Driven Programming](http://en.wikipedia.org/wiki/Event-driven_programming)  
+['companies']: https://github.com/joyent/node/wiki/projects,-applications,-and-companies-using-node
+['fs']: https://nodejs.org/api/fs.html
+['latency']: http://www.eecs.berkeley.edu/~rcs/research/interactive_latency.html

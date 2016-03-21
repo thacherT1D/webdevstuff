@@ -62,7 +62,7 @@ Your web app should:
     * Include some embedded media (images, audio, video, canvas)
     * Optionally, use a templating engine
 * CSS
-    * Use either SASS or a styling framework like Bootstrap
+    * Use either SASS or a styling framework like Bootstrap, or Foundation
         * If you are using Bootstrap, please consider theming with something like bootswatch, customizing the download with SASS, or a [customizer](http://getbootstrap.com/customize/)
     * Be well-indented and clean
     * Split code into separate files where appropriate
@@ -76,11 +76,9 @@ Your web app should:
 * User Input
     * Use at least one web form
     * Validate user input
-    * Persist user data using something like LocalStorage
 * Workflow
     * Use wireframes to create your layouts before you build them
     * Use a feature-branch workflow for your user stories
-    * Do some build-tooling with something like Gulp
 
 <a id="video"></a>
 
