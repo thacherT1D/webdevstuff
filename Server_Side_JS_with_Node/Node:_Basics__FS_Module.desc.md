@@ -37,7 +37,7 @@ Node.js is important because it's a server-side JavaScript **runtime system**. A
 
 ### How do I run JavaScript code using the Node.js REPL?
 
-One powerful feature of Node.js is the **REPL** which is short for read, evaluate, print, and loop. In the Node.js REPL, JavaScript code you enter will be executed in the Node.js runtime and their any results will be displayed in the Terminal.
+One powerful feature of Node.js is the **REPL** which is short for read, evaluate, print, and loop. In the Node.js REPL, JavaScript code you enter will be executed in the Node.js runtime and then any results will be displayed in the Terminal.
 
 You can try it out by launching your Terminal app and running the `node` command without any arguments.
 
