@@ -3,10 +3,9 @@
 By the end of this lesson you should be able to:
 
 - Describe what Node.js is and why it's important.
-- Describe what NPM is and why it's important.
-- Run a JavaScript file using Node.js.
-- Use the `fs` module to interact with the filesystem.
-- Draw a diagram of Node's event loop.
+- Run JavaScript code using the Node.js REPL.
+- Run JavaScript code using the Node.js interpreter.
+- Use the `fs` module to manage the file system.
 
 #### How do I upgrade Node.js?
 
@@ -32,7 +31,7 @@ One of the biggest changes that the V8 runtime introduces is in it's JIT compile
 
 Explain what it means to say that [V8](https://developers.google.com/v8/?hl=en) provides the runtime environment for JavaScript on the server. What is the runtime in Chrome? In Firefox?
 
-### How do I run JavaScript code from the REPL?
+### How do I run JavaScript code using the Node.js REPL?
 
 One powerful feature of Node.js is the **REPL** which is short for read, evaluate, print, and loop. In the Node.js REPL, JavaScript code you enter will be executed in the Node.js runtime and their any results will be displayed in the Terminal.
 
@@ -62,7 +61,7 @@ To leave this the Node.js REPL, run the `.exit` command.
 .exit
 ```
 
-### How do I run JavaScript code in a file?
+### How do I run JavaScript code using the Node.js intepreter?
 
 Now, create a new `script.js` file.
 
