@@ -31,7 +31,7 @@ Node.js is a runtime system for executing JavaScript programs outside of a web b
 
 Some of the [largest companies]['companies'] on the planet use Node.js for part of their technology stack. Their usage of Node.js varies from company to company and it's unlikely that any of one of them operates entirely in Node.js. Like everything else, Node.js has its [advantages](http://www.toptal.com/nodejs/why-the-hell-would-i-use-node-js) and [disadvantages](http://www.quora.com/What-are-the-disadvantages-of-using-Node-js).
 
-Node.js is important because it's a server-side JavaScript **runtime system**. A runtime system is the environment for a executing program. JavaScript is an interpreted language which means that it's compiled to machine code as its executed. Languages like C, C++, Java, and many others are first put through a **compiler** that first turns their code into machine code and then sends those instructions to the CPU. An interpreted language, however, is compiled Just In Time (JIT) when the program is about to be run.
+Node.js is important because it's a server-side JavaScript **runtime system**. A runtime system is the environment for an executing program. JavaScript is an interpreted language which means that it's compiled to machine code as its executed. Languages like C, C++, Java, and many others are first put through a **compiler** that first turns their code into machine code and then sends those instructions to the CPU. An interpreted language, however, is compiled Just In Time (JIT) when the program is about to be run.
 
 ![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/54/stack.png)
 
