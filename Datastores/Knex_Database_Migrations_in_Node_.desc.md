@@ -1,9 +1,3 @@
-### Entry Ticket
-In order to get th most out of this Learning Experience, you'll need to be comfortable with the following:
-
-* [Node: Deploying to Heroku](/redirects/learning_experiences/8)
-* [Deploying Express / Postgres Apps to Heroku using dotenv](/redirects/learning_experiences/171)
-
 ### Objectives
 
 * Be able to alter database schema using migrations
