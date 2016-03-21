@@ -83,6 +83,8 @@ Can you think of an example of file I/O that you do on a regular basis? If you s
 
 ## Exercise
 
+Start by setting up a new project.
+
 ```shell
 mkdir party
 cd party
@@ -90,6 +92,8 @@ echo '[]' >> guests.json
 touch guests.js
 atom .
 ```
+
+Add the following code to the `guests.js` file.
 
 ```js
 'use strict';
@@ -109,10 +113,14 @@ fs.readFile(guestsPath, 'utf8', function(err, data) {
 });
 ```
 
+Then run the program using the `node` command.
+
 ```shell
 $ node guests.js
 []
 ```
+
+Now refactor the `guests.js` file to handle the `read` subcommand.
 
 ```js
 'use strict';
@@ -142,6 +150,8 @@ else {
 }
 ```
 
+Then run the program using the `node` command, both with and without the `read` subcommand.
+
 ```shell
 $ node guests.js
 Usage: node guests.js read
@@ -149,6 +159,8 @@ Usage: node guests.js read
 $ node guests.js read
 []
 ```
+
+Now refactor the `guests.js` file to also handle the `create` subcommand.
 
 ```js
 'use strict';
@@ -204,6 +216,8 @@ else {
   process.exit(1);
 }
 ```
+
+Then run the program using the `node` command, both with and without the `create` subcommand.
 
 ```shell
 $ node guests.js
