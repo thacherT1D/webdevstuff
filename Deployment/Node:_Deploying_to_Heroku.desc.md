@@ -3,8 +3,6 @@
 By the end of this lesson, you should be able to:
 
 - Deploy an application to Heroku from the command line w/ Docs
-- Define SSH
-- Describe what an SSH key is and how the id_rsa / id_rsa.pub work
 - Describe the role of the Procfile
 - Describe how Heroku relates to your git repository
 - Describe continuous deployment
@@ -27,7 +25,7 @@ You must have a valid *package.json* file in your app's root directory in order 
 
 ### Starting your server
 
-You have two options: 
+You have two options:
 
 - Make sure you define `scripts.start` to declare how to run your app
 - Procfile
@@ -126,7 +124,7 @@ $ heroku ps:scale web=1
 $ heroku open
 ```
 
-## CI/CD
+## Continuous Integration/Continuous Deployment
 
 Deploy from Github with: https://devcenter.heroku.com/articles/github-integration
 
