@@ -32,7 +32,7 @@ One of the biggest changes that the V8 runtime introduces is in it's JIT compile
 
 Explain what it means to say that [V8](https://developers.google.com/v8/?hl=en) provides the runtime environment for JavaScript on the server. What is the runtime in Chrome? In Firefox?
 
-### What is the Node.js REPL?
+### How do I run JavaScript code from the REPL?
 
 One powerful feature of Node.js is the **REPL** which is short for read, evaluate, print, and loop. In the Node.js REPL, JavaScript code you enter will be executed in the Node.js runtime and their any results will be displayed in the Terminal.
 
@@ -62,7 +62,9 @@ To leave this the Node.js REPL, run the `.exit` command.
 .exit
 ```
 
-Now, create a new javascript file in a new folder in your projects or `src` directory. Call it `script.js`.  
+### How do I run JavaScript code in a file?
+
+Now, create a new `script.js` file.
 
 ```shell
 touch ~/Desktop/script.js
@@ -92,28 +94,17 @@ This is how we execute files with the `node` runtime. You can delete this file w
 rm ~/Desktop/script.js
 ```
 
-### What is NPM and why is it important?
+### How do I manage the file system with Node.js?
 
-What is [npm](https://en.wikipedia.org/wiki/Npm_(software))?
-`npm` is a package manager for Node.js and JavaScript. _Packages_, or _libraries_, are bits of code that are available for reuse.
+The purpose of this lesson is to create exposure to the [file system module]['fs'] or fs. The `fs` module is a built-in API for reading and writing information to and from files. This is often called File Input/Output or **File I/O** for short.
 
-One of the best features of Node.js is that it is _lightweight_; that is, Node itself provides minimal functionality. Most things are done with _modules_. NPM packages are an example of [Modules](https://en.wikipedia.org/wiki/Modular_programming), which is a concept we see across many languages and frameworks.
+Although computers are able to rapidly execute instructions sent to the CPU, it is much slower to get information that is located somewhere like a hard disk or another computer. In particular with Node.js, the areas of interest are file and network I/O. File I/O will involve interacting with files on the computer's file system. Because Node.js is able to do these things asyncronously, it does not have to stop and wait for I/O to happen. Take a look at this [latency table]['latency'] to understand what kind of time it takes to do common I/O tasks that we currently take for granted.
 
-An important consequence of the Node.js module system is that there is not a single _global scope_, in fact, each file defines its own scope, and then modules are _composed_ together into other modules.
+#### Challenge
 
-### Using our first module: `fs`
+Can you think of any examples of file I/O operations that developers perform on a regular basis?
 
-The purpose of this lesson is to create exposure to `fs`, the filesystem module. `fs` is useful because files are a great medium for storing information, like the contents of webpages or flat data.
-
-Why is file parsing important though? If you think about it, if you can use JavaScript to "read" the contents of files (stream of characters), then you could write a programming language with JavaScript. Or, perhaps, you can take weather data from the last 30 years, parse it into JavaScript objects, and run an analysis on it. The options are endless, but all require having the rights skills/tools to do the job.
-
-##### What is I/O?
-
-Although computers are able to rapidly execute instructions sent to the (CPU), it is much slower to get information that is located somewhere like a hard disk, or another computer. Getting data from somewhere other than memomry is known as _I/O_, or, input/output. In particular with Node.js, the areas of interest are file and network I/O. File I/O will involve interacting with files on the computer's _filesystem_. Because Node.js is able to do these things _asyncronously_, it does not have to stop and wait for I/O to happen. [Take a look at this table](http://www.eecs.berkeley.edu/~rcs/research/interactive_latency.html) to understand what kind of time it takes to do common I/O tasks that we currently take for granted.
-
-Can you think of an example of file I/O that you do on a regular basis? If you said `mv`, `cp`, `rm`, `touch` or any other unix command that creates/reads/modifies/deletes, etc. a file, then you are correct.
-
-## Exercise
+### Exercise
 
 Start by setting up a new project.
 
@@ -271,15 +262,17 @@ $ node guests.js read
 [ 'Mary', 'Don' ]
 ```
 
-## Assignment
+### Assignment
 
 [Pet Shop: Node Filesystem](https://github.com/gSchool/fs-pet-shop)
 
-## Resources
+### Resources
 
-[Introduction to Node.js (video)](https://www.youtube.com/watch?v=pU9Q6oiQNd0)  
-[V8 (JavaScript Engine)](https://en.wikipedia.org/wiki/V8_(JavaScript_engine)
-[Event Driven Programming](http://en.wikipedia.org/wiki/Event-driven_programming)  
+- [Introduction to Node.js (video)](https://www.youtube.com/watch?v=pU9Q6oiQNd0)
+- [V8 (JavaScript Engine)](https://en.wikipedia.org/wiki/V8_(JavaScript_engine)
+- [Event Driven Programming](http://en.wikipedia.org/wiki/Event-driven_programming)  
 
 
 ['companies']: https://github.com/joyent/node/wiki/projects,-applications,-and-companies-using-node
+['fs']: https://nodejs.org/api/fs.html
+['latency']: http://www.eecs.berkeley.edu/~rcs/research/interactive_latency.html
