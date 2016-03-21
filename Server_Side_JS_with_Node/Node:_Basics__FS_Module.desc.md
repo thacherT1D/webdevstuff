@@ -16,21 +16,24 @@ Before getting started, take a moment to ensure you're laptop is using the lates
 brew update
 brew outdated
 brew upgrade node
+brew cleanup
+```
+
+You can check the version of Node.js by running the following command.
+
+```shell
+node -v
 ```
 
 ### What is Node.js and why is it so important?
 
-Node.js is a runtime system for executing JavaScript from outside a web browser. When a JavaScript program this way, it abandons browser concepts like a `window` object to access or a DOM tree to manage. Instead, a JavaScript program run with Node.js is only concerned with server concepts like managing a computer's filesystem and accessing it's network.
+Node.js is a runtime system for executing JavaScript programs outside of a web browser. When a JavaScript program is run this way, it abandons all browser concepts such as managing a DOM tree with the `document` object. Instead, a JavaScript program that's run using Node.js is only concerned with server concepts like managing a computer's file system with the `fs` object or listening for HTTP requests with the `http` object.
 
-Some of the [largest companies]['companies'] on the planet use Node.js for part of their technology stack. Their usage of Node.js varies widely from company to company and it's unlikely that any of one of them operates entirely in Node.js. Like everything else, Node.js has [advantages](http://www.toptal.com/nodejs/why-the-hell-would-i-use-node-js) and [disadvantages](http://www.quora.com/What-are-the-disadvantages-of-using-Node-js).
+Some of the [largest companies]['companies'] on the planet use Node.js for part of their technology stack. Their usage of Node.js varies from company to company and it's unlikely that any of one of them operates entirely in Node.js. Like everything else, Node.js has its [advantages](http://www.toptal.com/nodejs/why-the-hell-would-i-use-node-js) and [disadvantages](http://www.quora.com/What-are-the-disadvantages-of-using-Node-js).
 
-Node.js is important because it is a JavaScript server-side **runtime system**. A [runtime system](https://en.wikipedia.org/wiki/Runtime_system) is the code that is dynamically executed during program operation. Javascript is an interpreted languaged, which means that it isn't compiled prior to running. C++, Objective-C and many other languages not based on C are put through a "compiler" that turns them into instructions that can be directly sent to the processor to be executed. An interpreted language is not compiled before it runs, but is instead compiled Just In Time (often abbreviated JIT) when the actual code is about to be run.
+Node.js is important because it's a server-side JavaScript **runtime system**. A [runtime system](https://en.wikipedia.org/wiki/Runtime_system) is the environment given to a program during execution. JavaScript is an interpreted language, which means that it's compiled to machine code as it is run. Languages like C, C++, Java, and many others are first put through a **compiler** that turns them their instructions into machine code that can be directly sent to the CPU to be executed. An interpreted language is not compiled before it runs, but is instead compiled Just In Time (often abbreviated JIT) when the actual code is about to be run.
 
-One of the biggest changes that the V8 runtime introduces is in it's JIT compiler. It dynamically compiles and optimizes Javascript as it runs, and re-optimizes it according to the state of the program as the program runs. [Read the wikipedia entry on V8](https://en.wikipedia.org/wiki/V8_(JavaScript_engine).
-
-#### Challenge
-
-Explain what it means to say that [V8](https://developers.google.com/v8/?hl=en) provides the runtime environment for JavaScript on the server. What is the runtime in Chrome? In Firefox?
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/53/Group.png)
 
 ### How do I run JavaScript code using the Node.js REPL?
 
