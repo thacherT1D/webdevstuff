@@ -33,7 +33,7 @@ Some of the [largest companies]['companies'] on the planet use Node.js for part 
 
 Node.js is important because it's a server-side JavaScript **runtime system**. A runtime system is the environment for a executing program. JavaScript is an interpreted language which means that it's compiled to machine code as its executed. Languages like C, C++, Java, and many others are first put through a **compiler** that first turns their code into machine code and then sends those instructions to the CPU. An interpreted language, however, is compiled Just In Time (JIT) when the program is about to be run.
 
-![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/53/Group.png)
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/54/stack.png)
 
 ### How do I run JavaScript code using the Node.js REPL?
 
