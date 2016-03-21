@@ -147,7 +147,7 @@ This time, we're changing the value of the local variable directly, instead of c
 
 ### Issues with Memory / Module Caching
 
-In programming caching means rougly 'saving a computed value for future use'. In node.js the first time a module is required during any given run of a script, that module is cached. For example, lets say we have two files that both require the same node module called `someFile.js`. 
+In programming, caching rougly means 'saving a computed value for future use'. In node.js, the first time a module is required during any given run of a script, that module is cached. For example, lets say we have two files that both require the same node module called `someFile.js`:
 
 someFile.js:
 
