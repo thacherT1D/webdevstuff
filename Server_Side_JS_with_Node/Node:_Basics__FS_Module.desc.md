@@ -1,4 +1,4 @@
-## Introduction to Node.js
+## Node.js - File IO
 
 ### Materials
 
@@ -27,7 +27,7 @@ By the end of this lesson you should be able to:
 - event loop
 - file I/O
 
-### What is Node.js
+### What is Node.js and why is it important?
 
 Node.js is a runtime system for executing JavaScript from outside a web browser. When a JavaScript program, there's no DOM tree to read and manage and therefore no `window` object. those are browser concepts. Node.js is on the other side of the coin; the server. In other words, you can write Javascript programs that access a computer's filesystem and network.
 
@@ -54,14 +54,14 @@ Now, `touch` a new javascript file in a new folder in your projects or `src` dir
 Open that file in your IDE, and put the following code in:
 
 ```javascript
-console.log("Hello World");
+console.log('Hello World');
 
 ```
 
 Now `cd` into that folder and run that file with `node script.js`. This is how we execute files with the `node` runtime.
 
+### What is NPM and why is it important?
 
-### NPM
 What is [npm](https://en.wikipedia.org/wiki/Npm_(software))?
 `npm` is a package manager for Node.js and JavaScript. _Packages_, or _libraries_, are bits of code that are available for reuse.
 
@@ -81,18 +81,156 @@ Although computers are able to rapidly execute instructions sent to the (CPU), i
 
 Can you think of an example of file I/O that you do on a regular basis? If you said `mv`, `cp`, `rm`, `touch` or any other unix command that creates/reads/modifies/deletes, etc. a file, then you are correct.
 
-## Exercises
+## Exercise
 
-[Logfile parsing exercise](https://github.com/gSchool/js-node-log-file-parsing)  
-[Writing your own interpreter (Optional, Advanced)](https://github.com/gSchool/node-async-text-parsing-0)  
+```shell
+mkdir party
+cd party
+echo '[]' >> guests.json
+touch guests.js
+atom .
+```
+
+```js
+'use strict';
+
+var fs = require('fs');
+var path = require('path');
+var guestsPath = path.join(__dirname, 'guests.json');
+
+fs.readFile(guestsPath, 'utf8', function(err, data) {
+  if (err) {
+    throw err;
+  }
+
+  var guests = JSON.parse(data);
+
+  console.log(guests);
+});
+```
+
+```shell
+$ node guests.js
+[]
+```
+
+```js
+'use strict';
+
+var fs = require('fs');
+var path = require('path');
+var guestsPath = path.join(__dirname, 'guests.json');
+
+var node = path.basename(process.argv[0]);
+var file = path.basename(process.argv[1]);
+var cmd = process.argv[2];
+
+if (cmd === 'read') {
+  fs.readFile(guestsPath, 'utf8', function(err, data) {
+    if (err) {
+      throw err;
+    }
+
+    var guests = JSON.parse(data);
+
+    console.log(guests);
+  });
+}
+else {
+  console.error(`Usage: ${node} ${file} read`);
+  process.exit(1);
+}
+```
+
+```shell
+$ node guests.js
+Usage: node guests.js read
+
+$ node guests.js read
+[]
+```
+
+```js
+'use strict';
+
+var fs = require('fs');
+var path = require('path');
+var guestsPath = path.join(__dirname, 'guests.json');
+
+var node = path.basename(process.argv[0]);
+var file = path.basename(process.argv[1]);
+var cmd = process.argv[2];
+
+if (cmd === 'read') {
+  fs.readFile(guestsPath, 'utf8', function(err, data) {
+    if (err) {
+      throw err;
+    }
+
+    var guests = JSON.parse(data);
+
+    console.log(guests);
+  });
+}
+else if (cmd === 'create') {
+  fs.readFile(guestsPath, 'utf8', function(readErr, data) {
+    if (readErr) {
+      throw readErr;
+    }
+
+    var guests = JSON.parse(data);
+    var guest = process.argv[3];
+
+    if (!guest) {
+      console.error(`Usage: ${node} ${file} ${cmd} GUEST`);
+      process.exit(1);
+    }
+
+    guests.push(guest);
+
+    var guestsJSON = JSON.stringify(guests);
+
+    fs.writeFile(guestsPath, guestsJSON, function(writeErr) {
+      if (writeErr) {
+        throw writeErr;
+      }
+
+      console.log(guest);
+    });
+  });
+}
+else {
+  console.error(`Usage: ${node} ${file} [read | create]`);
+  process.exit(1);
+}
+```
+
+```shell
+$ node guests.js
+Usage: node guests.js [read | create]
+
+$ node guests.js create
+Usage: node guests.js create GUEST
+
+$ node guests.js create Mary
+Mary
+
+$ node guests.js read
+[ 'Mary' ]
+
+$ node guests.js create Don
+Don
+
+$ node guests.js read
+[ 'Mary', 'Don' ]
+```
 
 ## Assignment
 
-[Command Line To Do](https://github.com/gSchool/node-fs-todo-cli-example)
-
+[Pet Shop: Node Filesystem](https://github.com/gSchool/fs-pet-shop)
 
 ## Resources
 
 [Introduction to Node.js (video)](https://www.youtube.com/watch?v=pU9Q6oiQNd0)  
-[V8(JavaScript Engine)](https://en.wikipedia.org/wiki/V8_(JavaScript_engine))
+[V8 (JavaScript Engine)](https://en.wikipedia.org/wiki/V8_(JavaScript_engine)
 [Event Driven Programming](http://en.wikipedia.org/wiki/Event-driven_programming)  
