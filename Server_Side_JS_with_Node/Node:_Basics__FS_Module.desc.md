@@ -67,16 +67,16 @@ To leave this the Node.js REPL, run the `.exit` command.
 
 ### How do I run JavaScript code using the Node.js intepreter?
 
-Now, create a new `script.js` file.
+Now, create a new `hello.js` file.
 
 ```shell
-touch ~/Desktop/script.js
+touch ~/Desktop/hello.js
 ```
 
 Open the file in your text editor
 
 ```shell
-atom ~/Desktop/script.js
+atom ~/Desktop/hello.js
 ```
 
 And write the following code.
@@ -88,13 +88,13 @@ console.log('Hello world');
 Now save the file and run it with the `node` command.
 
 ```shell
-node ~/Desktop/script.js
+node ~/Desktop/hello.js
 ```
 
 This is how we execute files with the `node` runtime. You can delete this file with the `rm` command.
 
 ```shell
-rm ~/Desktop/script.js
+rm ~/Desktop/hello.js
 ```
 
 ### How do I manage the file system with Node.js?
