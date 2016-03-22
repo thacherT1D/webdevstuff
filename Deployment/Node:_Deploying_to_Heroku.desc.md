@@ -28,7 +28,7 @@ You must have a valid *package.json* file in your app's root directory in order 
 You have two options:
 
 - Make sure you define `scripts.start` to declare how to run your app
-- Procfile
+- Create a Procfile to declare how to run your app
 
 #### Start script
 
@@ -65,9 +65,9 @@ Here's an examples of `scripts.start`:
 
 ### Procfile
 
-Here's an example with a Procfile:
-
 Tradionally a *[Procfile](https://devcenter.heroku.com/articles/getting-started-with-nodejs#define-a-procfile)* had to be used in order to explicitly tell Heroku the command to use to run your app's web process:
+
+Here's an example of a Procfile:
 
 ```
 web: node ./bin/www
@@ -75,7 +75,7 @@ web: node ./bin/www
 
 #### Testing your Procfile
 
-If you decide to use a Procfile and want to test it locally, you can do so with Foreman, then run `foreman start web` which will mimic what Heroku does with your Procfile.
+If you decide to use a Procfile and want to test it locally, you can do so with Foreman (which you can install with `$ npm install -g foreman`), then run `foreman start web` which will mimic what Heroku does with your Procfile.
 
 ## Deploying from the Command Line
 
@@ -92,7 +92,7 @@ $ heroku create colorado
 You can also rename your app by running the command:
 
 ```sh
-$ heroku apps:rename
+$ heroku apps:rename NEWNAME
 ```
 
 Make sure you have a .gitignore file:
@@ -104,7 +104,7 @@ npm-debug.log
 /*.env
 ```
 
-Now you can deploy using Git:
+Now you can deploy to Heroku using Git:
 
 ```sh
 $ git add -A
