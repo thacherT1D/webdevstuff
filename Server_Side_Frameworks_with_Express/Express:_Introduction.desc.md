@@ -125,6 +125,33 @@ app.listen(3000, function () {
 });
 ```
 
+## Status Codes
+
+You can also set the status code manually if you choose. Using the code
+from above, add a new route after your `'/vegetables'` route.  We will
+use a wild card operator. This route must be placed _after_ all your
+other routes.
+
+```js
+//truncated code from above...
+
+app.get("/vegetables", function (req, res) {
+  //send all the veggies
+  res.send(vegetables.join(", "));
+});
+
+// Our new route utilizing a wild card
+app.get('/*', function (req, res) {
+  res.status(404).send('Nope! Nothing here.');
+});
+
+app.listen(3000, function () {
+  console.log("Go to localhost:3000/");
+});
+```
+
+
+
 ## URL Parameters
 
 What if we want to create an app that can dynamically say hello to anyone?
