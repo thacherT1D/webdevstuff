@@ -21,7 +21,7 @@ By the end of this lesson, you should be able to:
 
 ## Dependencies
 
-You must have a valid *package.json* file in your app's root directory in order for Heroku to know that you are a Node app.
+You must have a valid *package.json* file in your app's root directory in order for Heroku to know that you are a Node app. You can build this json using the `npm init` command.
 
 ### Starting your server
 
