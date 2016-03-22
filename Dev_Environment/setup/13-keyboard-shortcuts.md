@@ -140,3 +140,5 @@
 `command + shift + l` : multi line cursor based on selection
 
 `command + control + up/down` : move a line up or down
+
+[Shortcut Cheatsheet](https://bugsnag.com/blog/atom-editor-cheat-sheet)
