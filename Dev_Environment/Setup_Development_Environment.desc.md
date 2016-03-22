@@ -20,9 +20,7 @@ A text editor - either:
 1. Atom
 1. Sublime
 
-A way to deploy simple apps:
-
-1. Surge
+And also a way to deploy simple apps with Surge.
 
 After you've finished setting up your development environment, you'll be able to complete the following tasks.
 
