@@ -154,8 +154,6 @@ app.listen(3000, function () {
 });
 ```
 
-
-
 ## URL Parameters
 
 What if we want to create an app that can dynamically say hello to anyone?
@@ -210,7 +208,7 @@ app.get('/', function(req, res){
 
 ```
 
-Now inside of a views folder, we can create an index.ejs file and include:
+Now create a views folder, and inside of it create an index.ejs file and include:
 
 ```html
 <!DOCTYPE HTML>
