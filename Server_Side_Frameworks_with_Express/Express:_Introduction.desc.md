@@ -19,7 +19,11 @@ Need to review HTTP? Check out [this article.](http://code.tutsplus.com/tutorial
 Objectives:
 
 - Start a simple express app and review `require`  
-- Apply routing knowledge to serve dynamic content
+- Add multiple routes to an express.js app
+- Set status code on responses
+- Read URL parameters in express
+- Read query string parameters in express
+- Send dymanic files using ejs as a templating engine
 
 ##Express 
 
