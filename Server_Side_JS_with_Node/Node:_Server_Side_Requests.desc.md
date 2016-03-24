@@ -89,18 +89,11 @@ var data = {name: 'Baxster',
             hobby: 'Surviving being thrown off bridges',
             avatar: 'http://cdn.bleedingcool.net/wp-content/uploads/2013/11/baxter-600x354.jpg'};
 
-var jar = request.jar();
-var cookie = request.cookie('login=g13seattle');
-var url = 'https://fs-student-roster.herokuapp.com/';
-
-jar.setCookie(cookie, url);
 var options = {
-  uri: url, 
+  uri: 'https://fs-student-roster.herokuapp.com/',
   method: 'POST',
   json: data,
-  jar: jar
 };
-
 
 request(options, function (error, response, body) {
   if (error) {
@@ -112,7 +105,6 @@ request(options, function (error, response, body) {
     console.log('Success!');
   }
 });
-
 ```
 
 #### Exercise
@@ -134,7 +126,6 @@ app.get("/", function (req, res) {
 app.listen(3000, function () {
   console.log("Starting a server on localhost:3000");
 });
-
 ```
 
 ![](http://2.bp.blogspot.com/-ahQdpvjvBFU/UTKWQHYSYXI/AAAAAAAAILw/D2GkbOfWVWI/s1600/a+a+a+garage+sale+gal+banner+385.jpg =700x0)
@@ -160,7 +151,6 @@ app.get("/", function (req, res) {
 app.listen(3000, function () {
   console.log("Starting a server on localhost:3000");
 });
-
 ```
 
 This code is a little problematic though.  If we get a non 200 response, we never return a response to the user.  Make sure to take care of the error cases as well:
@@ -188,7 +178,6 @@ app.get("/", function (req, res) {
 app.listen(3000, function () {
   console.log("Starting a server on localhost:3000");
 });
-
 ```
 
 ## Resources
