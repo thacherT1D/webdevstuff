@@ -27,7 +27,7 @@ REST is one way of structuring client-server HTTP communication. However, it's a
 
 Imagine a RESTful HTTP server manages the persistence of the following guest resources.
 
-```js
+```javascript
 var guests = [{ name: 'Teagan' }];
 ```
 
@@ -69,7 +69,7 @@ An **idempotent** REST action is one that will produce the same result no matter
 
 Building on the **Express: Middleware** article, refactor your `server.js` file to include the following RESTful middleware.
 
-```js
+```javascript
 'use strict';
 
 var express = require('express');
@@ -149,13 +149,13 @@ app.listen(app.get('port'), function() {
 
 Now, start your Express server.
 
-```shell
+```bash
 nodemon server.js
 ```
 
 And in a new Terminal tab, send an HTTP request to your server to read all the guest resources.
 
-```shell
+```bash
 http GET localhost:5000/guests
 ```
 
@@ -178,7 +178,7 @@ ETag: W/"13-eZMtvf4MUiEAJpKhww5ZlQ"
 
 Send another HTTP request to read an individual guest resource.
 
-```shell
+```bash
 http GET localhost:5000/guests/0
 ```
 
@@ -199,7 +199,7 @@ ETag: W/"11-0KyDlj1psIN3xnEMJsjMJg"
 
 Send an HTTP request to create an individual guest resource.
 
-```shell
+```bash
 http POST localhost:5000/guests name=Mary
 ```
 
@@ -220,7 +220,7 @@ ETag: W/"f-pPOBaT8aXBbirJ2irXvIdg"
 
 Send another HTTP request to read an individual guest resource.
 
-```shell
+```bash
 http GET localhost:5000/guests/1
 ```
 
@@ -241,7 +241,7 @@ ETag: W/"f-pPOBaT8aXBbirJ2irXvIdg"
 
 Send an HTTP request to read all the guest resources.
 
-```shell
+```bash
 http GET localhost:5000/guests
 ```
 
@@ -267,7 +267,7 @@ ETag: W/"23-bh9WCahnDHTY1E+InF4FTA"
 
 Send an HTTP request to update an individual guest resource.
 
-```shell
+```bash
 http PUT localhost:5000/guests/0 name=Don
 ```
 
@@ -288,7 +288,7 @@ ETag: W/"e-GMWKG7r0SW1dvTJlsqKZRA"
 
 Send an HTTP request to update an individual guest resource.
 
-```shell
+```bash
 http GET localhost:5000/guests/0
 ```
 
@@ -309,7 +309,7 @@ ETag: W/"e-GMWKG7r0SW1dvTJlsqKZRA"
 
 Send an HTTP request to destroy an individual guest resource.
 
-```shell
+```bash
 http DELETE localhost:5000/guests/0
 ```
 
