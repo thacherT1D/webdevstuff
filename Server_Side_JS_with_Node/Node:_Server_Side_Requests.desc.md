@@ -17,6 +17,7 @@ __Questions for the class__
 * Define __Service Oriented Architecture__
 
 ### Request Module
+[NPM request](https://www.npmjs.com/package/request)
 
 The request module allows us to make server side HTTP requests.  Installing the request module into your node app is the same as always:
 
@@ -30,7 +31,7 @@ Making a get request is also straight forward:
 
 ```
 var request = require('request');
-request('https://pacific-stream-1533.herokuapp.com/', function (error, response, body) {
+request('http://stark-mesa-8417.herokuapp.com/', function (error, response, body) {
   if (error) {
 	console.log("Error!  Request failed - " + error);
   } else if (!error && response.statusCode === 200) {
@@ -43,7 +44,7 @@ This will default to making a get request to the student roster app we used befo
 
 ```
 var request = require('request');
-request.get('https://pacific-stream-1533.herokuapp.com/', function (error, response, body) {
+request.get('http://stark-mesa-8417.herokuapp.com/', function (error, response, body) {
   if (error) {
 	console.log("Error!  Request failed - " + error);
   } else if (!error && response.statusCode === 200) {
@@ -52,29 +53,46 @@ request.get('https://pacific-stream-1533.herokuapp.com/', function (error, respo
 });
 ```
 
+<hr>
+
 #### Exercise
 
 Make 2 simple apps with node:
 
-1. A app that simply makes a get request to the student roster page by default and console logs the body of the response, but if the user specifies a command line argument for a url, the app should make a request to the specified url instead.
-2. Write a node app that takes a imdb id as a command line argument and then makes a get request to the OMDB api for details about that movie.  The app should console log the title of the movie, the year, the actors, the genre, and the runtime.  Keep in mind what type of data the body of the response is.  What does the following request return:
+1. A app that simply makes a get request to the [student roster page](http://stark-mesa-8417.herokuapp.com/) by default and console logs the body of the response. However, if the user specifies a [command line argument](https://students.galvanize.com/cohorts/18/daily_plans/2015-09-01) for a url, the app should make a request to the specified url instead.
+
+
+2. Write a node app that takes a imdb id as a command line argument and then makes a get request to the [OMDB api](http://www.omdbapi.com/) for details about that movie.  
+
+The app should console log: 
+
+* title
+* year
+* actors
+* genre
+* runtime (movie length)  
+
+Keep in mind what type of data the body of the response is.  What does the following request return:
 
 ```
 node app.js tt3899796
 ```
+
+<hr>
 
 #### POST Requests
 
 The request module provides a ```.post``` convenience method as well, but the easiest way to use post and specify json data is to use an options hash as a parameter to post.  Here is an example:
 
 ```
+var request = require('request');
 var data = {name: 'Baxster',
-			hobby: 'Wearing hoodies',
-			avatar: 'http://www.happinessabounds.com/wp-content/uploads/2012/12/cute-corgi-in-hoodie.jpg'};
+			hobby: 'Surviving being thrown off bridges',
+			avatar: 'http://cdn.bleedingcool.net/wp-content/uploads/2013/11/baxter-600x354.jpg'};
 
 var jar = request.jar();
-var cookie = request.cookie('login=g9fullstack');
-var url = 'https://pacific-stream-1533.herokuapp.com/students';
+var cookie = request.cookie('login=g13seattle');
+var url = 'http://stark-mesa-8417.herokuapp.com/students';
 
 jar.setCookie(cookie, url);
 var options = {
@@ -92,7 +110,7 @@ request(options, function (error, response, body) {
 	console.log(response.statusCode);
 	console.log(body);
   } else if (!error && response.statusCode === 200) {
-	console.log('Success!);
+	console.log('Success!');
   }
 });
 
@@ -108,8 +126,9 @@ Follow the steps at the [google url shortener api docs](https://developers.googl
 What does the following express app do?
 
 ```
-var express = require('express'),
-	app = express();
+var express = require('express');
+
+app = express();
 
 app.get("/", function (req, res) {
   var responseStr = "Hello World";
@@ -127,9 +146,10 @@ The take away is that the node app does not return a response until ```res.send`
 
 
 ```
-var express = require('express'),
-	app = express(),
-	request = require('request');
+var express = require('express');
+var request = require('request');
+
+app = express();
 
 app.get("/", function (req, res) {
   request.get('http://www.omdbapi.com/?i=tt4331680&plot=short&r=json', function(error, response, body) {
@@ -150,9 +170,10 @@ app.listen(3000, function () {
 This code is a little problematic though.  If we get a non 200 response, we never return a response to the user.  Make sure to take care of the error cases as well:
 
 ```
-var express = require('express'),
-	app = express(),
-	request = require('request');
+var express = require('express');
+var request = require('request');
+
+app = express();
 
 app.get("/", function (req, res) {
   request.get('http://www.omdbapiii.com/?i=tt4331680&plot=short&r=json', function(error, response, body) {
