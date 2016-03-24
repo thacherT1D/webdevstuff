@@ -53,14 +53,13 @@ request.get('http://stark-mesa-8417.herokuapp.com/', function (error, response, 
 });
 ```
 
-<hr>
+---
 
 #### Exercise
 
 Make 2 simple apps with node:
 
-1. A app that simply makes a get request to the [student roster page](http://stark-mesa-8417.herokuapp.com/) by default and console logs the body of the response. However, if the user specifies a [command line argument](https://students.galvanize.com/cohorts/18/daily_plans/2015-09-01) for a url, the app should make a request to the specified url instead.
-
+1. A app that simply makes a get request to the [student roster page](https://fs-student-roster.herokuapp.com/) by default and console logs the body of the response. However, if the user specifies a `command line argument` for a url, the app should make a request to the specified url instead.
 
 2. Write a node app that takes a imdb id as a command line argument and then makes a get request to the [OMDB api](http://www.omdbapi.com/) for details about that movie.  
 
@@ -78,7 +77,7 @@ Keep in mind what type of data the body of the response is.  What does the follo
 node app.js tt3899796
 ```
 
-<hr>
+---
 
 #### POST Requests
 
@@ -87,12 +86,12 @@ The request module provides a ```.post``` convenience method as well, but the ea
 ```
 var request = require('request');
 var data = {name: 'Baxster',
-			hobby: 'Surviving being thrown off bridges',
-			avatar: 'http://cdn.bleedingcool.net/wp-content/uploads/2013/11/baxter-600x354.jpg'};
+            hobby: 'Surviving being thrown off bridges',
+            avatar: 'http://cdn.bleedingcool.net/wp-content/uploads/2013/11/baxter-600x354.jpg'};
 
 var jar = request.jar();
 var cookie = request.cookie('login=g13seattle');
-var url = 'http://stark-mesa-8417.herokuapp.com/students';
+var url = 'https://fs-student-roster.herokuapp.com/';
 
 jar.setCookie(cookie, url);
 var options = {
@@ -105,12 +104,12 @@ var options = {
 
 request(options, function (error, response, body) {
   if (error) {
-	console.log(error);
+    console.log(error);
   } else if (!error && response.statusCode >= 400) {
-	console.log(response.statusCode);
-	console.log(body);
+    console.log(response.statusCode);
+    console.log(body);
   } else if (!error && response.statusCode === 200) {
-	console.log('Success!');
+    console.log('Success!');
   }
 });
 
@@ -120,15 +119,13 @@ request(options, function (error, response, body) {
 
 Follow the steps at the [google url shortener api docs](https://developers.google.com/url-shortener/v1/getting_started#APIKey) to get your own api key.  Look at the docs and figure out the requirements for making a url shortening request.  Write a node app that takes a url on the command line and shortens it. The app should console log the shortened url.  Take note of what type of object the body is when you get it back.
 
-
 ## Request Module With Express
 
 What does the following express app do?
 
 ```
 var express = require('express');
-
-app = express();
+var app = express();
 
 app.get("/", function (req, res) {
   var responseStr = "Hello World";
@@ -148,16 +145,15 @@ The take away is that the node app does not return a response until ```res.send`
 ```
 var express = require('express');
 var request = require('request');
-
-app = express();
+var app = express();
 
 app.get("/", function (req, res) {
   request.get('http://www.omdbapi.com/?i=tt4331680&plot=short&r=json', function(error, response, body) {
-	if (!error && response.statusCode === 200) {
-	  var movieData = JSON.parse(body);
-	  var result = "Title: " + movieData.Title + "<br>" + "Year: " + movieData.Year + "<br>";
-	  res.send(result);
-	}
+    if (!error && response.statusCode === 200) {
+      var movieData = JSON.parse(body);
+      var result = "Title: " + movieData.Title + "<br>" + "Year: " + movieData.Year + "<br>";
+      res.send(result);
+    }
   });
 });
 
@@ -172,21 +168,20 @@ This code is a little problematic though.  If we get a non 200 response, we neve
 ```
 var express = require('express');
 var request = require('request');
-
-app = express();
+var app = express();
 
 app.get("/", function (req, res) {
   request.get('http://www.omdbapiii.com/?i=tt4331680&plot=short&r=json', function(error, response, body) {
-	if (error) {
-	  res.status(500).send("You got an error - " + error);
-	} else if (!error && response.statCode >= 300) {
-	  res.status(500).send("Something went wrong! Status: " + response.statusCode);
-	} 
-	if (!error && response.statusCode === 200) {
-	  var movieData = JSON.parse(body);
-	  var result = "Title: " + movieData.Title + "<br>" + "Year: " + movieData.Year + "<br>";
-	  res.send(result);
-	}
+    if (error) {
+      res.status(500).send("You got an error - " + error);
+    } else if (!error && response.statCode >= 300) {
+      res.status(500).send("Something went wrong! Status: " + response.statusCode);
+    } 
+    if (!error && response.statusCode === 200) {
+      var movieData = JSON.parse(body);
+      var result = "Title: " + movieData.Title + "<br>" + "Year: " + movieData.Year + "<br>";
+      res.send(result); 
+    }
   });
 });
 
