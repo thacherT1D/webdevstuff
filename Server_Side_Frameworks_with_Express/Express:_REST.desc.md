@@ -37,8 +37,8 @@ The server handles the following REST actions by mapping them to specific HTTP r
 |-------------------|----------------|-------------|--------------|
 | Read (all)        | `GET`          | `/guests`   | N/A          |
 | Read (individual) | `GET`          | `/guests/0` | N/A          |
-| Create            | `POST`         | `/guests`   | `Mary`       |
-| Update            | `PUT`          | `/guests/0` | `Don`        |
+| Create            | `POST`         | `/guests`   | `name=Mary`  |
+| Update            | `PUT`          | `/guests/0` | `name=Don`   |
 | Delete            | `DELETE`       | `/guests/0` | N/A          |
 
 The server handles each REST action by performing a unique operation on the guest resources. If the following REST actions are performed sequentially, the guest resources will look like the following after each operation.
