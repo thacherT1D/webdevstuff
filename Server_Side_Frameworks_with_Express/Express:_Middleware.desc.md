@@ -29,7 +29,7 @@ First we'll build **application-level** middleware by hand. Then, we'll replace 
 
 To get started, create a new Express project.
 
-```shell
+```bash
 cd path/to/projects
 mkdir party
 cd party
@@ -39,7 +39,7 @@ atom .
 
 Next, type out the following code into the `server.js` file.
 
-```js
+```javascript
 'use strict';
 
 var express = require('express');
@@ -68,13 +68,13 @@ app.listen(app.get('port'), function() {
 
 Then start your Express server.
 
-```shell
+```bash
 nodemon server.js
 ```
 
 In a new Terminal tab, send an HTTP request to your server.
 
-```shell
+```bash
 http GET http://localhost:5000/guests
 ```
 
@@ -86,13 +86,13 @@ GET /guests 200 2 ms
 
 This is the hand-made logging middleware you just built! Now let's replace it with `morgan`, a more powerful third-party middleware.
 
-```shell
+```bash
 npm install morgan
 ```
 
 Now refactor `server.js` with the following code.
 
-```js
+```javascript
 'use strict';
 
 var express = require('express');
@@ -117,7 +117,7 @@ app.listen(app.get('port'), function() {
 
 Now send another HTTP request to your server.
 
-```shell
+```bash
 http GET http://localhost:5000/guests
 ```
 
@@ -131,7 +131,7 @@ This is the `morgan` middleware in action!
 
 We will now add another middleware to parse the body of an HTTP POST request. Refactor your `server.js` file again.
 
-```js
+```javascript
 'use strict';
 
 var express = require('express');
@@ -177,7 +177,7 @@ app.listen(app.get('port'), function() {
 
 Now you will send another HTTP GET request to your server.
 
-```shell
+```bash
 http GET http://localhost:5000/guests
 ```
 
@@ -200,7 +200,7 @@ ETag: W/"13-eZMtvf4MUiEAJpKhww5ZlQ"
 
 Next, send an HTTP POST request, with a JSON body, to your server.
 
-```shell
+```bash
 http POST http://localhost:5000/guests name=Kate
 ```
 
@@ -221,7 +221,7 @@ ETag: W/"f-Dm6LF8ZOGzVq0Yw/A4JWYw"
 
 Finally, check to see if your guest list has been modified.
 
-```shell
+```bash
 http GET http://localhost:5000/guests
 ```
 
@@ -247,13 +247,13 @@ ETag: W/"23-BlGLuHg6XvB4VmZU6+bV3A"
 
 This is the hand-built body parsing middleware. Now we'll convert this to use the `body-parser` third-party middleware.
 
-```shell
+```bash
 npm install body-parser
 ```
 
 Refactor your `server.js` file with the following code.
 
-```js
+```javascript
 'use strict';
 
 var express = require('express');
@@ -288,7 +288,7 @@ app.listen(app.get('port'), function() {
 
 Now you will send another HTTP GET request to your server.
 
-```shell
+```bash
 http GET http://localhost:5000/guests
 ```
 
@@ -311,7 +311,7 @@ ETag: W/"13-eZMtvf4MUiEAJpKhww5ZlQ"
 
 Next, send an HTTP POST request, with a JSON body, to your server.
 
-```shell
+```bash
 http POST http://localhost:5000/guests name=Kate
 ```
 
@@ -332,7 +332,7 @@ ETag: W/"f-Dm6LF8ZOGzVq0Yw/A4JWYw"
 
 Finally, check to see if your guest list has been modified.
 
-```shell
+```bash
 http GET http://localhost:5000/guests
 ```
 
