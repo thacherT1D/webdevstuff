@@ -87,6 +87,8 @@ GET /guests 200 2 ms
 
 This is the hand-made logging middleware you just built! Now let's replace it with `morgan`, a more powerful third-party middleware.
 
+**NOTE:** Before you install `morgan`, make sure your shell's working directory is the `party` directory.
+
 ```bash
 npm install morgan
 ```
