@@ -147,13 +147,13 @@ app.listen(app.get('port'), function() {
 });
 ```
 
-Assuming your Express server is running.
+Now, start your Express server.
 
 ```shell
 nodemon server.js
 ```
 
-Send an HTTP request to your server to read all the guest resources in a new Terminal tab.
+And in a new Terminal tab, send an HTTP request to your server to read all the guest resources.
 
 ```shell
 http GET localhost:5000/guests
