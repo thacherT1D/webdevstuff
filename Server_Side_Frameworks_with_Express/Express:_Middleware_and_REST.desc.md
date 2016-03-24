@@ -1,95 +1,365 @@
-### Middleware
+# Express - Middleware
 
-[What is middleware?](http://expressjs.com/guide/using-middleware.html)
+## Objectives
 
-<img src="http://media.developeriq.in/images/nodeexpress_2_9_2015_1.png">
+- Describe what Express middleware is.
+- Explain to another student why middleware is important.
+- Use Express middleware to log the request/response cycle.
+- Use Express middleware to parse a request body.
 
-### Adding Assets
+## What is Express middleware?
 
-Let's install our first middleware. With our Express application we want to be able to serve assets **javascripts**, **stylesheets**, and **images**. By convention we generally put all these into a `public/` directory in our project.
+An Express application is essentially a series of middleware function calls. Express middleware is a callback function that has access to the request object (`req`), the response object (`res`), and sometimes the next middleware callback (`next`).
 
-`app.use(express.static(__dirname + "/public"))`
+Middleware functions **can** execute any JavaScript operation inside the callback function.
 
-Now we can make subfolders in our `public` folder for our assets.
+- Read and modify the `req` and `res` objects.
+- Read and write to a file or database.
+- Send HTTP requests to other servers.
 
-[Why use dirname?](http://stackoverflow.com/questions/16727045/node-js-express-js-relative-paths-dot-or-dirname-or-without-any-prefix)
+However, middleware **must** either end the request/response cycle with `res.send()` or call the next middleware callback with `next()`.
 
-Also, note that we've used two different methods on `app` in our js file: `app.set` and `app.use`. The former is often used to set Express application settings; the latter is used to explicitly call different pieces of middleware. You can check out the [Express documentation]() for more on the difference between the two. 
+## Why is Express middleware important?
+
+Express middleware allows an application's shared code to be organized into in a series of middleware callbacks. These callbacks can be reused in a flexible way.
+
+![middleware](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/65/middleware.png)
+
+## How does Express middleware work?
+
+First we'll build **application-level** middleware by hand. Then, we'll replace our hand-made middleware with third party middleware installed from npm.
+
+To get started, create a new Express project.
+
+```shell
+cd path/to/projects
+mkdir party
+cd party
+touch server.js
+atom .
+```
+
+Next, type out the following code into the `server.js` file.
+
+```js
+'use strict';
+
+var express = require('express');
+var app = express();
+
+var guests = [{ name: 'Teagan' }];
+
+app.disable('x-powered-by');
+app.set('port', process.env.PORT || 5000);
+
+app.use(function(req, res, next) {
+  var start = new Date();
+  next();
+  var end = new Date();
+  console.log(req.method, req.url, res.statusCode, end - start, 'ms');
+});
+
+app.get('/guests', function(req, res) {
+  res.send(guests);
+});
+
+app.listen(app.get('port'), function() {
+  console.log('Listening on', app.get('port'));
+});
+```
+
+Then start your Express server.
+
+```shell
+nodemon server.js
+```
+
+In a new Terminal tab, send an HTTP request to your server.
+
+```shell
+http GET http://localhost:5000/guests
+```
+
+Look back into your first tab, you should see:
 
 ```
-mkdir public/javascripts
-mkdir public/stylesheets
-mkdir public/images
-
-touch public/stylesheets/app.css
+GET /guests 200 2 ms
 ```
 
-Inside of our `app.css` we can add some style for the body of our app.
+This is the hand-made logging middleware you just built! Now let's replace it with `morgan`, a more powerful third-party middleware.
+
+```shell
+npm install morgan
+```
+
+Now refactor `server.js` with the following code.
+
+```js
+'use strict';
+
+var express = require('express');
+var app = express();
+
+var guests = [{ name: 'Teagan' }];
+
+app.disable('x-powered-by');
+app.set('port', process.env.PORT || 5000);
+
+var morgan = require('morgan');
+app.use(morgan('short'));
+
+app.get('/guests', function(req, res) {
+  res.send(guests);
+});
+
+app.listen(app.get('port'), function() {
+  console.log('Listening on', app.get('port'));
+});
+```
+
+Now send another HTTP request to your server.
+
+```shell
+http GET http://localhost:5000/guests
+```
+
+You should see the following server log.
 
 ```
-body {
-  background-color: red;
-  color: white;
+::1 - GET /guests HTTP/1.1 200 35 - 1.345 ms
+```
+
+This is the `morgan` middleware in action!
+
+We will now add another middleware to parse the body of an HTTP POST request. Refactor your `server.js` file again.
+
+```js
+'use strict';
+
+var express = require('express');
+var app = express();
+
+var guests = [{ name: 'Teagan' }];
+
+app.disable('x-powered-by');
+app.set('port', process.env.PORT || 5000);
+
+var morgan = require('morgan');
+app.use(morgan('short'));
+
+app.use(function(req, res, next) {
+  var body = '';
+
+  req.on('data', function(chunk) {
+    body += chunk.toString();
+  });
+
+  req.on('end', function() {
+    if (body !== '') {
+      req.body = JSON.parse(body);
+    }
+
+    next();
+  });
+});
+
+app.get('/guests', function(req, res) {
+  res.send(guests);
+});
+
+app.post('/guests', function(req, res){
+  guests.push(req.body);
+  res.send(req.body);
+});
+
+app.listen(app.get('port'), function() {
+  console.log('Listening on', app.get('port'));
+});
+```
+
+Now you will send another HTTP GET request to your server.
+
+```shell
+http GET http://localhost:5000/guests
+```
+
+You should see a similar HTTP response.
+
+```
+HTTP/1.1 200 OK
+Connection: keep-alive
+Content-Length: 19
+Content-Type: application/json; charset=utf-8
+Date: Wed, 23 Mar 2016 18:40:10 GMT
+ETag: W/"13-eZMtvf4MUiEAJpKhww5ZlQ"
+
+[
+    {
+        "name": "Teagan"
+    }
+]
+```
+
+Next, send an HTTP POST request, with a JSON body, to your server.
+
+```shell
+http POST http://localhost:5000/guests name=Kate
+```
+
+You should see a similar HTTP response.
+
+```
+HTTP/1.1 200 OK
+Connection: keep-alive
+Content-Length: 15
+Content-Type: application/json; charset=utf-8
+Date: Wed, 23 Mar 2016 18:48:07 GMT
+ETag: W/"f-Dm6LF8ZOGzVq0Yw/A4JWYw"
+
+{
+    "name": "Kate"
 }
 ```
 
+Finally, check to see if your guest list has been modified.
 
-Then we just add a `link` tag in our `view` files. 
-
-Note that without using `express.static`, your static files won't be found! If you're curious, check out the Network tab in Chrome to see what happens when you include `express.static` vs. when you don't.
-
-[How does static file serving really work?](http://stackoverflow.com/questions/18900990/express-js-node-js-how-does-static-file-serving-really-work)
-
-### PUPPIES!
-
-https://github.com/gSchool/express_intro_exercise
-
-### Body-Parser
-
-Let's install our next middleware. It's called `body-parser` and it will parse the body of a request being sent to us by the browser when a form is submitted.
-
-As we've seen, the way to capture form values using a `GET` request is through `req.query`
-
-`npm install --save body-parser`
-
-Aside: Why do we use the `--save` flag? To see what this flag does, let's check out some documentation. Type `npm help install` into the console.
-
-Next, we need to integrate it into the application. 
-
-```
-var bodyParser = require("body-parser");
-app.use(bodyParser.urlencoded({extended: true}));
+```shell
+http GET http://localhost:5000/guests
 ```
 
-The `app.use` statement is telling our application to literally use the `body-parser` library before it moves onto route the request.
-
-Now that we have the above setup we can create a `post` route to use the `body` params submitted by the form.
-
-Order matters! What happens if you put your `app.use` statement after your routing logic?
-
-### MORE PUPPIES!
-
-Refactor your puppies app so that new puppies are created with a `POST` request, not a `GET` request. 
-
-### Method Override
-
-Unfortunately, HTML forms by default will only allow us to GET and POST. What happens when we want to update or delete? In order to do that, we first need to introduce two new HTTP verbs and describe how the `method-override` middleware works.
-
-`PUT` - used for modifying a resource
-
-`DELETE` - used for removing a resouce
-
-In order to use `PUT` and `DELETE` we need to first install method override using `npm install --save method-override` and include these lines in our `app.js`
+You should see a similar HTTP response.
 
 ```
-var methodOverride = require('method-override');
-app.use(methodOverride('_method'));
+HTTP/1.1 200 OK
+Connection: keep-alive
+Content-Length: 35
+Content-Type: application/json; charset=utf-8
+Date: Wed, 23 Mar 2016 18:48:40 GMT
+ETag: W/"23-BlGLuHg6XvB4VmZU6+bV3A"
+
+[
+    {
+        "name": "Teagan"
+    },
+    {
+        "name": "Kate"
+    }
+]
 ```
 
-If we want to use a put request, we now specify it as a part of the query string in our forms:
+This is the hand-built body parsing middleware. Now we'll convert this to use the `body-parser` third-party middleware.
+
+```shell
+npm install body-parser
+```
+
+Refactor your `server.js` file with the following code.
+
+```js
+'use strict';
+
+var express = require('express');
+var app = express();
+
+var guests = [{ name: 'Teagan' }];
+
+app.disable('x-powered-by');
+app.set('port', process.env.PORT || 5000);
+
+var morgan = require('morgan');
+app.use(morgan('short'));
+
+var bodyParser = require('body-parser');
+app.use(bodyParser.json());
+
+app.get('/guests', function(req, res) {
+  res.send(guests);
+});
+
+app.post('/guests', function(req, res){
+  guests.push(req.body);
+  res.send(req.body);
+});
+
+app.listen(app.get('port'), function() {
+  console.log('Listening on', app.get('port'));
+});
+```
+
+
+
+Now you will send another HTTP GET request to your server.
+
+```shell
+http GET http://localhost:5000/guests
+```
+
+You should see a similar HTTP response.
 
 ```
-<form action="/books/<%= book.id%>?_method=put" method="POST">
+HTTP/1.1 200 OK
+Connection: keep-alive
+Content-Length: 19
+Content-Type: application/json; charset=utf-8
+Date: Wed, 23 Mar 2016 18:40:10 GMT
+ETag: W/"13-eZMtvf4MUiEAJpKhww5ZlQ"
+
+[
+    {
+        "name": "Teagan"
+    }
+]
 ```
 
-We still need to make sure we are using a method of POST in the form, and in our app.js we will need to use `app.put` or `app.delete` to ensure the correct routes are targeted. We do this since HTML forms don't accept `PUT` or `DELETE` methods by default.
+Next, send an HTTP POST request, with a JSON body, to your server.
+
+```shell
+http POST http://localhost:5000/guests name=Kate
+```
+
+You should see a similar HTTP response.
+
+```
+HTTP/1.1 200 OK
+Connection: keep-alive
+Content-Length: 15
+Content-Type: application/json; charset=utf-8
+Date: Wed, 23 Mar 2016 18:48:07 GMT
+ETag: W/"f-Dm6LF8ZOGzVq0Yw/A4JWYw"
+
+{
+    "name": "Kate"
+}
+```
+
+Finally, check to see if your guest list has been modified.
+
+```shell
+http GET http://localhost:5000/guests
+```
+
+You should see a similar HTTP response.
+
+```
+HTTP/1.1 200 OK
+Connection: keep-alive
+Content-Length: 35
+Content-Type: application/json; charset=utf-8
+Date: Wed, 23 Mar 2016 18:48:40 GMT
+ETag: W/"23-BlGLuHg6XvB4VmZU6+bV3A"
+
+[
+    {
+        "name": "Teagan"
+    },
+    {
+        "name": "Kate"
+    }
+]
+```
+
+This is the `body-parser` middleware in action!
+
+## Resources
+
+[Express - Using Middleware](http://expressjs.com/en/guide/using-middleware.html)
