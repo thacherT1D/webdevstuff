@@ -39,7 +39,7 @@ The server handles the following REST actions by mapping them to specific HTTP r
 | Read (individual) | `GET`          | `/guests/0` | N/A          |
 | Create            | `POST`         | `/guests`   | `name=Mary`  |
 | Update            | `PUT`          | `/guests/0` | `name=Don`   |
-| Delete            | `DELETE`       | `/guests/0` | N/A          |
+| Destroy           | `DELETE`       | `/guests/0` | N/A          |
 
 The server handles each REST action by performing a unique operation on the guest resources. If the following REST actions are performed sequentially, the guest resources will look like the following after each operation.
 
@@ -49,7 +49,7 @@ The server handles each REST action by performing a unique operation on the gues
 | Read (individual) | `[{ name: 'Teagan' }]`               |
 | Create            | `[{ name: 'Teagan', name: 'Mary' }]` |
 | Update            | `[{ name: 'Don', name: 'Mary' }]`    |
-| Delete            | `[{ name: 'Mary' }]`                 |
+| Destroy           | `[{ name: 'Mary' }]`                 |
 
 Once the REST action is complete, the server sends a specific HTTP response back to the client indicating the result of the operation.
 
@@ -59,7 +59,7 @@ Once the REST action is complete, the server sends a specific HTTP response back
 | Read (individual) | `200`           | `application/json`    | `{ name: 'Teagan' }`   |
 | Create            | `200`           | `application/json`    | `{ name: 'Mary' }`     |
 | Update            | `200`           | `application/json`    | `{ name: 'Don' }`      |
-| Delete            | `200`           | `application/json`    | `{ name: 'Don' }`      |
+| Destroy           | `200`           | `application/json`    | `{ name: 'Don' }`      |
 
 A **safe** REST action is one that doesn't modify a resource. Which REST actions from the above example are safe?
 
