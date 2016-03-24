@@ -21,7 +21,7 @@ However, middleware **must** either end the request/response cycle with `res.sen
 
 Express middleware allows an application's shared code to be organized into in a series of middleware callbacks. These callbacks can be reused in a flexible way.
 
-![middleware](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/66/middleware-1.png)
+![middleware](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/66/middleware-1.png =300)
 
 ## How does Express middleware work?
 
