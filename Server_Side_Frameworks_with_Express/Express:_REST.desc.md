@@ -175,5 +175,5 @@ http GET localhost:5000/guests/2
 
 ## Resources
 
-[Express 4.x - API Reference: Request](http://expressjs.com/en/4x/api.html#req)
-[Express 4.x - API Reference: Response](http://expressjs.com/en/4x/api.html#res)
+- [Express 4.x - API Reference: Request](http://expressjs.com/en/4x/api.html#req)
+- [Express 4.x - API Reference: Response](http://expressjs.com/en/4x/api.html#res)
