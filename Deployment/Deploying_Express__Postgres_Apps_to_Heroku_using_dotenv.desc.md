@@ -3,7 +3,7 @@
 * Understand what Heroku is and how it works
 * Be able to use Heroku logs to debug 
 * Understand what an environment variable is
-* Be able to use the `dotenv` core module
+* Be able to use the `dotenv` npm module
 * Be able to deploy an Node/Express app to Heroku using the CLI
 * Be able to connect your app to a postgres database on heroku
 
@@ -111,7 +111,7 @@ You should see an environment variable called `DATABASE_URL` with a value that i
 
 `add`, `commit`, `git push heroku master` and check your app again.
 
-## Using the `dotenv` core module to config environment variables
+## Using the `dotenv` npm module to config environment variables
 
 You'll need some help getting your app to talk to your environment variables, both locally as well as deployed.
 
