@@ -1,5 +1,3 @@
-
-
 ## Objectives
 
 * Describe what REST is.
