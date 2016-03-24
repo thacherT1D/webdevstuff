@@ -1,5 +1,3 @@
-# Express - Middleware
-
 ## Objectives
 
 - Describe what Express middleware is.
