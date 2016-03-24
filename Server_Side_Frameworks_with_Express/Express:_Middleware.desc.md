@@ -250,6 +250,8 @@ ETag: W/"23-BlGLuHg6XvB4VmZU6+bV3A"
 
 This is the hand-built body parsing middleware. Now we'll convert this to use the `body-parser` third-party middleware.
 
+**NOTE:** Before you install `body-parser`, make sure your shell's working directory is the `party` directory.
+
 ```bash
 npm install body-parser
 ```
