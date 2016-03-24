@@ -25,12 +25,13 @@ REST is one way of structuring client-server HTTP communication. However, it's a
 
 ## How does REST work?
 
-Imagine you need to build a server that manages the persistence of guest resources.  
+Imagine a RESTful HTTP server manages the persistence of the following guest resources.
+
 ```js
 var guests = [{ name: 'Teagan' }];
 ```
 
-You're task is to build a RESTful server that handles the following routes.
+The server handles the following REST actions by mapping them to specific HTTP requests.
 
 | REST Action       | Request Method | Request URL | Request Body |
 |-------------------|----------------|-------------|--------------|
@@ -40,6 +41,8 @@ You're task is to build a RESTful server that handles the following routes.
 | Update            | `PUT`          | `/guests/0` | `Don`        |
 | Delete            | `DELETE`       | `/guests/0` | N/A          |
 
+The server handles each REST action by performing a unique operation on the guest resources. If the following REST actions are performed sequentially, the guest resources will look like the following after each operation.
+
 | REST Action       | Guest Resources                      |
 |-------------------|--------------------------------------|
 | Read (all)        | `[{ name: 'Teagan' }]`               |
@@ -47,6 +50,8 @@ You're task is to build a RESTful server that handles the following routes.
 | Create            | `[{ name: 'Teagan', name: 'Mary' }]` |
 | Update            | `[{ name: 'Don', name: 'Mary' }]`    |
 | Delete            | `[{ name: 'Mary' }]`                 |
+
+Once the REST action is complete, the server sends a specific HTTP response back to the client indicating the result of the operation.
 
 | REST Action       | Response Status | Response Content-Type | Response Body          |
 |-------------------|-----------------|-----------------------|------------------------|
@@ -61,6 +66,8 @@ A **safe** REST action is one that doesn't modify a resource. Which REST actions
 An **idempotent** REST action is one that will produce the same result no matter how many times it is repeated. Which REST actions from the above example are idempotent?
 
 ## How do you build a RESTful Express server?
+
+Building on the **Express: Middleware** article, refactor your `server.js` file to include the following RESTful middleware.
 
 ```js
 'use strict';
@@ -130,7 +137,7 @@ app.delete('/guests/:index', function(req, res) {
     return res.sendStatus(404);
   }
 
-  var guest = guests.splice(id, 1)[0];
+  var guest = guests.splice(index, 1)[0];
 
   res.send(guest);
 });
@@ -140,33 +147,208 @@ app.listen(app.get('port'), function() {
 });
 ```
 
+Assuming your Express server is running.
+
 ```shell
 nodemon server.js
 ```
+
+Send an HTTP request to your server to read all the guest resources in a new Terminal tab.
 
 ```shell
 http GET localhost:5000/guests
 ```
 
+And you should see something like this.
+
+```
+HTTP/1.1 200 OK
+Connection: keep-alive
+Content-Length: 19
+Content-Type: application/json; charset=utf-8
+Date: Thu, 24 Mar 2016 15:43:00 GMT
+ETag: W/"13-eZMtvf4MUiEAJpKhww5ZlQ"
+
+[
+    {
+        "name": "Teagan"
+    }
+]
+```
+
+Send another HTTP request to read an individual guest resource.
+
 ```shell
 http GET localhost:5000/guests/0
+```
+
+And you should see something like this.
+
+```
+HTTP/1.1 200 OK
+Connection: keep-alive
+Content-Length: 17
+Content-Type: application/json; charset=utf-8
+Date: Thu, 24 Mar 2016 15:44:19 GMT
+ETag: W/"11-0KyDlj1psIN3xnEMJsjMJg"
+
+{
+    "name": "Teagan"
+}
+```
+
+Send an HTTP request to create an individual guest resource.
+
+```shell
+http POST localhost:5000/guests name=Mary
+```
+
+And you should see something like this.
+
+```
+HTTP/1.1 200 OK
+Connection: keep-alive
+Content-Length: 15
+Content-Type: application/json; charset=utf-8
+Date: Thu, 24 Mar 2016 15:45:05 GMT
+ETag: W/"f-pPOBaT8aXBbirJ2irXvIdg"
+
+{
+    "name": "Mary"
+}
+```
+
+Send another HTTP request to read an individual guest resource.
+
+```shell
 http GET localhost:5000/guests/1
-http GET localhost:5000/guests/2
 ```
 
-```shell
-http POST localhost:5000/guests Mary
-http GET localhost:5000/guests/2
+And you should see something like this.
+
+```
+HTTP/1.1 200 OK
+Connection: keep-alive
+Content-Length: 15
+Content-Type: application/json; charset=utf-8
+Date: Thu, 24 Mar 2016 15:45:44 GMT
+ETag: W/"f-pPOBaT8aXBbirJ2irXvIdg"
+
+{
+    "name": "Mary"
+}
 ```
 
-```shell
-http PUT localhost:5000/guests "Mary Anne"
-http GET localhost:5000/guests/2
-```
+Send an HTTP request to read all the guest resources.
 
 ```shell
-http DELETE localhost:5000/guests/2
-http GET localhost:5000/guests/2
+http GET localhost:5000/guests
+```
+
+And you should see something like this.
+
+```
+HTTP/1.1 200 OK
+Connection: keep-alive
+Content-Length: 35
+Content-Type: application/json; charset=utf-8
+Date: Thu, 24 Mar 2016 15:46:18 GMT
+ETag: W/"23-bh9WCahnDHTY1E+InF4FTA"
+
+[
+    {
+        "name": "Teagan"
+    },
+    {
+        "name": "Mary"
+    }
+]
+```
+
+Send an HTTP request to update an individual guest resource.
+
+```shell
+http PUT localhost:5000/guests/0 name=Don
+```
+
+And you should see something like this.
+
+```
+HTTP/1.1 200 OK
+Connection: keep-alive
+Content-Length: 14
+Content-Type: application/json; charset=utf-8
+Date: Thu, 24 Mar 2016 15:47:36 GMT
+ETag: W/"e-GMWKG7r0SW1dvTJlsqKZRA"
+
+{
+    "name": "Don"
+}
+```
+
+Send an HTTP request to update an individual guest resource.
+
+```shell
+http GET localhost:5000/guests/0
+```
+
+And you should see something like this.
+
+```
+HTTP/1.1 200 OK
+Connection: keep-alive
+Content-Length: 14
+Content-Type: application/json; charset=utf-8
+Date: Thu, 24 Mar 2016 15:48:25 GMT
+ETag: W/"e-GMWKG7r0SW1dvTJlsqKZRA"
+
+{
+    "name": "Don"
+}
+```
+
+Send an HTTP request to destroy an individual guest resource.
+
+```shell
+http DELETE localhost:5000/guests/0
+```
+
+And you should see something like this.
+
+```
+HTTP/1.1 200 OK
+Connection: keep-alive
+Content-Length: 14
+Content-Type: application/json; charset=utf-8
+Date: Thu, 24 Mar 2016 15:50:27 GMT
+ETag: W/"e-GMWKG7r0SW1dvTJlsqKZRA"
+
+{
+    "name": "Don"
+}
+```
+
+Send an HTTP request to read all the guest resources.
+
+```
+http GET localhost:5000/guests
+```
+
+And you should see something like this.
+
+```
+HTTP/1.1 200 OK
+Connection: keep-alive
+Content-Length: 17
+Content-Type: application/json; charset=utf-8
+Date: Thu, 24 Mar 2016 15:51:08 GMT
+ETag: W/"11-EtwezO7FYAMu6cFoRdMVCA"
+
+[
+    {
+        "name": "Mary"
+    }
+]
 ```
 
 ## Assignment
