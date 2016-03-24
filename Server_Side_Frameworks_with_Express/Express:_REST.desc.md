@@ -61,9 +61,7 @@ Once the REST action is complete, the server sends a specific HTTP response back
 | Update            | `200`           | `application/json`    | `{ name: 'Don' }`      |
 | Destroy           | `200`           | `application/json`    | `{ name: 'Don' }`      |
 
-A **safe** REST action is one that doesn't modify a resource. Which REST actions from the above example are safe?
-
-An **idempotent** REST action is one that will produce the same result no matter how many times it is repeated. Which REST actions from the above example are idempotent?
+A **safe** REST action is one that doesn't modify any resources. Which REST actions from the above example are safe?
 
 ## How do you build a RESTful Express server?
 
