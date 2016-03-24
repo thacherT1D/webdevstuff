@@ -172,3 +172,8 @@ http GET localhost:5000/guests/2
 ## Assignment
 
 [Pet Shop - RESTful Express HTTP Server](https://github.com/gSchool/fs-pet-shop/blob/master/4_rest.md)
+
+## Resources
+
+[Express 4.x - API Reference: Request](http://expressjs.com/en/4x/api.html#req)
+[Express 4.x - API Reference: Response](http://expressjs.com/en/4x/api.html#res)
