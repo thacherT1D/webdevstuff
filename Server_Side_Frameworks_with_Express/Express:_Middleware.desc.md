@@ -33,6 +33,7 @@ To get started, create a new Express project.
 cd path/to/projects
 mkdir party
 cd party
+npm install express
 touch server.js
 atom .
 ```
