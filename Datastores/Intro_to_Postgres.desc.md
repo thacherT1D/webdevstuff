@@ -36,7 +36,7 @@ SQL became an official standard in the mid-1980's and, since then, has been revi
 - Microsoft SQL Server (MSSQL)
 - SQLite
 
-Most of these relation databases follow a similar software architecture.
+Most of these relation database systems follow a similar software architecture.
 
 ![][relational-arch]
 
