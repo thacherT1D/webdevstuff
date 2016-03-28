@@ -42,7 +42,7 @@ Most of these relation database systems follow a similar software architecture.
 
 ## Why are relational databases so important?
 
-Since the 1980s, relation databases have been used to store financial records, manufacturing and logistical information, personnel data, government information, communication data, etc. By structuring data in records and tables, computers can quickly and efficiently store and retrieve insanely large amounts data.
+Since the 1970s, relation databases have been used to store financial records, manufacturing and logistical information, personnel data, government information, communication data, etc. By structuring data in records and tables, computers can quickly and efficiently store and retrieve insanely large amounts data.
 
 Imagine, for a moment, you have a database for an online store with a single `orders` table.
 
