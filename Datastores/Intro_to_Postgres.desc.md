@@ -76,11 +76,9 @@ Now, a change to a customer's last name only requires a change to one record.
 
 ## What's PostgreSQL?
 
-**PostgreSQL** is a powerful, open source object-relational database system (ORDBMS). It has been around since 1996 and has a strong reputation for reliability, data integrity, and correctness.
+**PostgreSQL** is a powerful, open source relational database system that's been around since 1996 and has a strong reputation for reliability, data integrity, and correctness. It runs on all major operating systems, including Linux, Mac OS X, and Windows. PostgreSQL is fully ACID (atomicity, consistency, isolation, durability) compliant and supports most SQL:2008 data types, including `INTEGER`, `NUMERIC`, `BOOLEAN`, `CHAR`, `VARCHAR`, `DATE`, `INTERVAL`, and `TIMESTAMP`. And it can even store large binary objects such as pictures, sounds, or video.
 
-It runs on all major operating systems, including Linux, Mac OS X, and Windows. It is fully ACID (atomicity, consistency, isolation, durability) compliant and has full support for foreign keys, joins, views, triggers, and stored procedures. It supports most SQL:2008 data types, including `INTEGER`, `NUMERIC`, `BOOLEAN`, `CHAR`, `VARCHAR`, `DATE`, `INTERVAL`, and `TIMESTAMP`. And it can even store large binary objects such as pictures, sounds, or video.
-
-PostgreSQL has native programming interfaces for C/C++, Java, .Net, Perl, Python, Ruby, and, of course, JavaScript. And it has [exceptional documentation][postgresql-docs].
+PostgreSQL has native programming interfaces for C/C++, Java, .Net, Perl, Python, Ruby, and, of course, JavaScript. And it has [exceptional documentation][postgresql-docs] too.
 
 ## How do you install and configure PostgreSQL?
 
