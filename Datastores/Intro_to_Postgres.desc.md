@@ -116,7 +116,7 @@ Now, you can connect to the default database in your PostgreSQL server through P
 psql
 ```
 
-And you'll be in an interactive PostgreSQL REPL. You can type `\q` and press `Enter` to quit.
+And you'll be in an interactive PostgreSQL REPL. To get help, type `\?` and press `Enter`. To quit, type `\q` and press `Enter`.
 
 
 [postgresql-docs]: http://www.postgresql.org/docs/manuals/
