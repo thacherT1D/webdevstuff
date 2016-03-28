@@ -341,6 +341,10 @@ We could also chain together multiple conditions like so:
 DELETE FROM movies WHERE id < 9 AND rating = 2;
 ```
 
+### Homework
+
+[Intro SQL Exercise](https://github.com/gSchool/intro_sql_exercise)
+
 ## SQL Resources
 
 * [http://www.postgresql.org/docs/](http://www.postgresql.org/docs/)  - This is your friend!
