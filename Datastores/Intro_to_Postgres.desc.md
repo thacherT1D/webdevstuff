@@ -13,13 +13,13 @@ Regarding structure, all data in a relational database is represented in terms o
 
 ![][relational-db]
 
-Most modern relation databases use a special-purpose programming language to manage its data called **Structured Query Language** (SQL). Originally based upon relational algebra and tuple relational calculus, SQL consists of three languages.
+Most modern relation databases use a special-purpose programming language to manage its data called **Structured Query Language** (SQL). Originally based upon relational algebra and tuple relational calculus, SQL consists of distinctive three languages.
 
 1. A data definition language (DDL) for structuring relations.
-1. A data manipulation language (DML) for performing CRUD actions.
+1. A data manipulation language (DML) for performing CRUD operations.
 1. A data control language (DCL) for managing permissions.
 
-For example, the CRUD actions correspond to the following SQL operations.
+For example, the CRUD operations correspond to the following SQL commands.
 
 | CRUD Action | SQL operation |
 |-------------|---------------|
