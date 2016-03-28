@@ -21,12 +21,12 @@ Most modern relation databases use a special-purpose programming language to man
 
 For example, the CRUD operations correspond to the following SQL commands.
 
-| CRUD Action | SQL commands |
-|-------------|--------------|
-| Create      | `INSERT`     |
-| Read        | `SELECT`     |
-| Update      | `UPDATE`     |
-| Destroy     | `DELETE`     |
+| CRUD operations | SQL commands |
+|-----------------|--------------|
+| Create          | `INSERT`     |
+| Read            | `SELECT`     |
+| Update          | `UPDATE`     |
+| Destroy         | `DELETE`     |
 
 SQL became an official standard in the mid-1980's and, since then, has been revised to include a growing set of features. Despite the existence of such standards, most SQL code is not completely portable among different database systems without adjustments. Popular relational database systems that implement the SQL standard include:
 
