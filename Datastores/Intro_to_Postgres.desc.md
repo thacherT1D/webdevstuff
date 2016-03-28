@@ -42,7 +42,7 @@ Most of these relation database systems follow a similar software architecture.
 
 ## Why are relational databases so important?
 
-Since the 1970s, relation databases have been used to store financial records, manufacturing and logistical information, personnel data, government information, communication data, etc. By structuring data in records and tables, computers can quickly and efficiently store and retrieve insanely large amounts data.
+Since the 1970s, relational databases have been used to store financial records, manufacturing and logistical information, personnel data, government information, communication data, etc. By structuring data in records and tables, computers can quickly and efficiently store and retrieve insanely large amounts data.
 
 Imagine, for a moment, you have a database for an online store with a single `orders` table.
 
@@ -86,33 +86,33 @@ PostgreSQL has native programming interfaces for C/C++, Java, .Net, Perl, Python
 
 You can install the latest version of PostgreSQL using Homebrew.
 
-```bash
+```sh
 brew update
 brew install postgres
 ```
 
 When it's finished, verify PostgreSQL is installed correctly.
 
-```bash
+```sh
 postgres --version
 ```
 
 Then configure your computer to auto-start a PostgreSQL server on boot.
 
-```bash
+```sh
 ln -sfv /usr/local/opt/postgresql/*.plist ~/Library/LaunchAgents
 launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist
 ```
 
 With the PostgreSQL server running, create a default database with the same name as your current user's account name.
 
-```bash
+```sh
 createdb
 ```
 
 Now, you can connect to the default database in your PostgreSQL server through PostgreSQL client.
 
-```bash
+```sh
 psql
 ```
 
