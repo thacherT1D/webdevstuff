@@ -28,25 +28,25 @@ psql -d resume_builder
 # Objectives
 
 1. Explain what join statements are in the context of SQL.
-1. Learn to alias your tables in SQL statements.
-1. Learn to make inner, right, and left join statements.
+1. Explain why joins are useful.
+1. Alias columns and tables in SQL `SELECT` statements.
+1. Write inner join statements.
 1. Build multi-line SQL statements.
-1. Be able to chain multiple SQL statements together.
+1. Chain multiple SQL statements together.
 
 ## What JOINs are and why they are useful
 
-A SQL join statement combines records from two or more tables in a relational database. It creates a set that can be saved as a table or used as it is.
+A SQL `JOIN` statement combines records from two or more tables in a relational database. It creates a set that can be saved as a new table or simply viewed.
 
-A JOIN is a means for combining fields from two tables (or more) by using values common to each. There are five types of JOINs (though this lesson will only cover the first three, feel free to learn about `OUTER JOIN` and `CROSS JOIN` on your own):
+Additionally, you can combine fields from two or more tables by using joining on values that are common to each. There are five types of joins, though in this lesson, we'll only cover the first one:
 
 - `INNER JOIN`
 - `LEFT OUTER JOIN`
 - `RIGHT OUTER JOIN`
 - `FULL OUTER JOIN`
-- and `CROSS JOIN`
+- `CROSS JOIN`
 
-
-This is useful any time you will want to access, and possibly store, data from multiple tables. You will use joins A LOT. You will do this because often it is meaningful to store different kinds of data in different tables and then later you will want to see and/or store pieces of that data together.  
+As a full stack developer, you'll save data in separate tables and then use joins to get it back together.
 
 ## Learn the data model
 
