@@ -29,7 +29,7 @@ psql -d resume_builder
 
 1. Explain what join statements are in the context of SQL.
 1. Learn to alias your tables in SQL statements.
-1. Learn to make inner, outer, right, left, and cross join statements.
+1. Learn to make inner, right, and left join statements.
 1. Build multi-line SQL statements.
 1. Be able to chain multiple SQL statements together.
 
@@ -37,13 +37,14 @@ psql -d resume_builder
 
 A SQL join statement combines records from two or more tables in a relational database. It creates a set that can be saved as a table or used as it is.
 
-A JOIN is a means for combining fields from two tables (or more) by using values common to each. There are five types of JOINs:
+A JOIN is a means for combining fields from two tables (or more) by using values common to each. There are five types of JOINs (though this lesson will only cover the first three, feel free to learn about `OUTER JOIN` and `CROSS JOIN` on your own):
 
 - `INNER JOIN`
 - `LEFT OUTER JOIN`
 - `RIGHT OUTER JOIN`
 - `FULL OUTER JOIN`
 - and `CROSS JOIN`
+
 
 This is useful any time you will want to access, and possibly store, data from multiple tables. You will use joins A LOT. You will do this because often it is meaningful to store different kinds of data in different tables and then later you will want to see and/or store pieces of that data together.  
 
@@ -176,13 +177,11 @@ In `psql` you can run the previous command by using the up arrow, or using `CTRL
 ## Join'em up!
 
 1. Select all columns from the users table, joined to all columns of the `employments` table.
-
 1. Select `first_name`, `last_name`, `title`, `organization`, `start_year`, and `end_year` from the `users` table joined to the `employments` table.
-
 1. Take the query from above and sort it by the `start_year` ascending. (hint: read this http://www.postgresql.org/docs/9.1/static/queries-order.html)
-
 1. Select `title`, `organization`, `start_year`, and `end_year` from `employments` for `resume_id = 1` (hint: `\d employments_resumes`)
 
+#### Two things to note
 - The order of side is first in the equality doens't matter
 - When there's a duplicate field name, you need to specify the table name
 
