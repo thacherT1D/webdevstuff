@@ -2,10 +2,10 @@
 
 Suppose we were building an application that allows users to build resumes. In this data model we have tables for
 
-- `users`,
-- `resumes`,
+- `users`
+- `resumes`
 - `employments`
-- `employments_resumes`.
+- `employments_resumes`
 
 Logically in our application, each user may have as many employments and resumes as they want. A resume consists of multiple of employments, for which the relationship is stored in `employments_resumes`.
 
@@ -24,6 +24,28 @@ psql -d resume_builder
 ```
 
 > `createdb` is a command line utility that was installed when you ran `brew install postgresql` and it simply creates a new postgres database.  It's the same as going into `psql` and typing `create database resume_builder`.  If you need to drop that database and start over again, you can do that with `dropdb resume_builder`.
+
+# Objectives
+
+1. Explain what join statements are in the context of SQL.
+1. Learn to alias your tables in SQL statements.
+1. Learn to make inner, outer, right, left, and cross join statements.
+1. Build multi-line SQL statements.
+1. Be able to chain multiple SQL statements together.
+
+## What JOINs are and why they are useful
+
+A SQL join statement combines records from two or more tables in a relational database. It creates a set that can be saved as a table or used as it is.
+
+A JOIN is a means for combining fields from two tables (or more) by using values common to each. There are five types of JOINs:
+
+- `INNER JOIN`
+- `LEFT OUTER JOIN`
+- `RIGHT OUTER JOIN`
+- `FULL OUTER JOIN`
+- and `CROSS JOIN`
+
+This is useful any time you will want to access, and possibly store, data from multiple tables. You will use joins A LOT. You will do this because often it is meaningful to store different kinds of data in different tables and then later you will want to see and/or store pieces of that data together.  
 
 ## Learn the data model
 
@@ -53,7 +75,7 @@ Just to get into the data model a little, and review your SQL, open the `resume_
 When joining two columns, you'll sometimes need to include two columns that have the same name.  In these cases, you'll need to specify which table it comes from, which looks like this:
 
 ```sql
-select users.id, users.first_name from users;
+SELECT users.id, users.first_name FROM users;
 ```
 
 Notice how the output does _not_ include the table name:
@@ -70,7 +92,7 @@ Notice how the output does _not_ include the table name:
 Sometimes you'll also want to rename the column, which you can do with an alias, like so:
 
 ```sql
-select users.id as user_id, users.first_name from users;
+SELECT users.id AS user_id, users.first_name FROM users;
 ```
 
 When you run that, notice that the column name in the output is `user_id`:
@@ -89,23 +111,23 @@ When you run that, notice that the column name in the output is `user_id`:
 Unlike Mongo and most document databases and key-value stores, in SQL you can easily make a single query that returns data from multiple tables.  The syntax looks like this:
 
 ```sql
-select * from users
-inner join employments on employments.user_id = users.id;
+SELECT * FROM users
+INNER JOIN employments ON employments.user_id = users.id;
 ```
 
 In SQL newlines and spacing don't matter, so the same query might look like this:
 
 ```sql
-select * from users inner join employments on employments.user_id = users.id;
+SELECT * FROM users INNER JOIN employments ON employments.user_id = users.id;
 ```
 
 or this...
 
 ```sql
-select *
-from users
-inner join employments
-  on employments.user_id = users.id;
+SELECT *
+FROM users
+INNER JOIN employments
+  ON employments.user_id = users.id;
 ```
 
 Some things in SQL are case-sensitive, like the values in your `where` clauses, but for keywords the case doesn't matter.  So you also might see that same query look like this:
@@ -167,10 +189,10 @@ In `psql` you can run the previous command by using the up arrow, or using `CTRL
 Every SQL query needs to have a `from` clause.  Once you have table in the `from` clause, you can join onto it.  And you can _also_ join onto tables that have been mentioned in joins, like so:
 
 ```sql
-select *
-from comments
-inner join articles on articles.id = comments.article_id
-inner join authors on authors.id = articles.author_id
+SELECT *
+FROM comments
+INNER JOIN articles ON articles.id = comments.article_id
+INNER JOIN authors ON authors.id = articles.author_id
 ```
 
 Knowing that, now add write a query that
