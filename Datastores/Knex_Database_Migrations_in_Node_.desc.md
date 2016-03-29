@@ -42,7 +42,7 @@ __readers__
 * last_name
 
 
-After you get everything working locally, you will deploy this CRUD app to Heroku and use your migrations to add your `readers` and `books` schemas to your production database.
+After you get everything working locally, you will deploy this CRUD app to Heroku and use your migrations to add your `readers` and `books` tables to your production database.
 
 # Get Started!
 
