@@ -181,9 +181,18 @@ In `psql` you can run the previous command by using the up arrow, or using `CTRL
 1. Take the query from above and sort it by the `start_year` ascending. (hint: read this http://www.postgresql.org/docs/9.1/static/queries-order.html)
 1. Select `title`, `organization`, `start_year`, and `end_year` from `employments` for `resume_id = 1` (hint: `\d employments_resumes`)
 
-#### Two things to note
-- The order of side is first in the equality doens't matter
-- When there's a duplicate field name, you need to specify the table name
+#### Three things to note
+- The order of the equality doesn't matter: `resumes.id = employment_resumes.resume_id` is equivalent to `employment_resumes.resume_id = resumes.id`.
+- When there's a duplicate field name, you need to specify the table name.
+- When you are displaying 2 fields with the same name and want to differentiate them in the JOIN, use aliases.
+
+An example of the last two noes:
+```sql
+SELECT users.id AS user_id, employments.id AS employments_id
+FROM users
+INNER JOIN employments
+  ON employments.user_id = users.id;
+```
 
 ## Chaining Joins
 
@@ -207,11 +216,16 @@ Knowing that, now add write a query that
 You know you have it correct when your result set looks like this:
 
 ```
- id | first_name | last_name |         name         | start_year | end_year
+id | first_name | last_name |         name         | start_year | end_year
 ----+------------+-----------+----------------------+------------+----------
-  1 | Ty         | Cobb      | First Attempt Resume |       1905 |     1926
-  2 | Ty         | Cobb      | My only              |       1927 |     1928
-  3 | Ty         | Cobb      | My Favorite Rezzy    |       1921 |     1926
-  4 | Joe        | DiMaggio  | Player Resume        |       1936 |     1942
-  5 | Joe        | DiMaggio  | Manager Resume       |       1946 |     1951
+ 1 | Ty         | Cobb      | First Attempt Resume |       1905 |     1926
+ 2 | Ty         | Cobb      | First Attempt Resume |       1927 |     1928
+ 3 | Ty         | Cobb      | First Attempt Resume |       1921 |     1926
+ 4 | Joe        | DiMaggio  | My only              |       1936 |     1942
+ 5 | Joe        | DiMaggio  | My only              |       1946 |     1951
+ 6 | Hank       | Aaron     | My Favorite Rezzy    |       1954 |     1974
+ 7 | Hank       | Aaron     | My Favorite Rezzy    |       1975 |     1976
+ 8 | Ted        | Williams  | Player Resume        |       1939 |     1942
+ 9 | Ted        | Williams  | Player Resume        |       1946 |     1960
+10 | Ted        | Williams  | Manager Resume       |       1969 |     1972
 ```
