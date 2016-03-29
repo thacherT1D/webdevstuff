@@ -7,10 +7,6 @@
 * Be able to deploy an Node/Express app to Heroku using the CLI
 * Be able to connect your app to a postgres database on heroku
 
-## EXERCISE SUMMARY
-
-Included in this [REPO](https://github.com/gSchool/intro-to-deploying-express-pg-apps-to-heroku) is a CRUD app that uses a local Postgres database. Your mission will be to deploy the included repo to Heroku and connect it to a Heroku provided Postgres database.
-
 ## What is Heroku?
 
 Google `how does heroku work` and click on the `https://devcenter.heroku.com` link. Read the documentation through __RELEASES__ and stop. Then, use the documentation to answer the following questions:
@@ -22,57 +18,6 @@ Google `how does heroku work` and click on the `https://devcenter.heroku.com` li
 1. What is a dyno?
 1. What is a config variable?
 1. What is a release?
-
-Draw a diagram that illustrates how Heroku works and incorporate the above components.
-
-## Getting Started with Heroku
-
-1. Sign up for [Heroku](https://signup.heroku.com/)
-1. Download the Heroku [Toolbelt](https://toolbelt.heroku.com/)
-1. Login - `heroku login`
-
-## Deploying to Heroku From the Command Line
-
-```sh
-$ heroku create
-```
-
-This command sets up your app, with a random name, on Heroku as well as a Git remote called `heroku`. Alertantively, you can pass in a name as a command line argument to create your own name:
-
-```sh
-$ heroku create restaurants-martha
-```
-
-You can also rename your app by running the command:
-
-```sh
-$ heroku apps:rename <name-you-want-to-use-instead>
-```
-
-## .gitignore
-
-Make sure you have a .gitignore file:
-
-```
-/node_modules
-/*.env
-```
-
-Now you can deploy using Git:
-
-```sh
-$ git add -A
-$ git commit -m "prep for deployment"
-$ git push heroku master
-```
-
-Open your Heroku deployed app using:
-
-```
-heroku open
-```
-
-Click through the app to confirm that everything is working as it should. Is it broken? If so, how can we gain insight about why the app is broken?
 
 ## Debugging Heroku
 
@@ -95,6 +40,7 @@ First, run the below command to see if you have any configured environment varia
 ```
 heroku config
 ```
+
 Ok, now run the below command to tell Heroku you want to connect a database to this app.
 
 ```
@@ -111,21 +57,6 @@ You should see an environment variable called `DATABASE_URL` with a value that i
 
 `add`, `commit`, `git push heroku master` and check your app again.
 
-## Using the `dotenv` npm module to config environment variables
-
-You'll need some help getting your app to talk to your environment variables, both locally as well as deployed.
-
-Google `npm dotenv` and read the docs to help you get up and running with a `.env` file in your Node.js app.
-
-1. add a `.env` file to your app
-1. update your database configuration to use environment variables
-
-```
-process.env.DATABASE_URL || 'postgres://localhost/library'
-```
-
-`add`, `commit`, `git push heroku master` and check your app again. OR if you think it is still broken, what other steps might still need to be taken for your app to work on Heroku?
-
 ## Getting into your Heroku database
 
 ```
@@ -133,8 +64,6 @@ heroku pg:psql
 ```
 
 This drops you into your Heroku database. You can execute raw `sql` here just as you do for your local database.
-
-Continue the debugging process until you're app is up and running as it should.
 
 ## Next Steps
 
