@@ -153,7 +153,7 @@ INNER JOIN employments ON users.id = employments.user_id;
 
 ## Inner / Left / Right Joins
 
-There are several different ways you can join data.  Three common ways are inner join, left join and right join.
+There are several different ways you can join data.  Three common ways are `INNER JOIN`, `LEFT JOIN` and `RIGHT JOIN`.
 
 Take a few minutes to search the internet for the differences between the three - joins have been around for years, so there's a plethora of great information and articles on what they are / when to use them.
 
@@ -161,7 +161,9 @@ Take a few minutes to search the internet for the differences between the three 
 
 Have you searched yet?  No really - go do that :)
 
-You're back?  Awesome - let's talk about how to use them.
+You're back?  Awesome - let's talk about how to use them. Here is an image that could be useful:
+
+![SQL JOINS](http://www.codeproject.com/KB/database/Visual_SQL_Joins/Visual_SQL_JOINS_orig.jpg)
 
 ## Multiline queries in `psql`
 
