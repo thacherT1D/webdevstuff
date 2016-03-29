@@ -1,22 +1,17 @@
 ### Objectives
 
-* Be able to alter database schema using migrations
-* Be able to alter a production database schema using migrations
-* Be able to explain why migrations are important
-* Be able to explain why migrations have unique identifying numbers
-* Be able to rollback a migration in both a development and production environement
+* Write migrations to manage your database schema
+* Explain why migrations have timestamps
+* Run and rollback migrations on Heroku
 
 ### Why you should care
 
-Migrations are a convenient way to alter your database schema over time in a consistent and easy way. Migrations reduce the opportunity for human error and allow you to automate schema creation in both development and production.
+Migrations are a convenient way to alter your database schema over time in a consistent and easy way. Migrations reduce the opportunity for human error and allow you to automate database schema creation in both development and production.
 
-You can think of each migration as being a new 'version' of the database. A schema starts off with nothing in it, and each migration modifies it to add or remove tables, columns, or entries.
-
-These migrations also provide further documentation about your database schema for you, your team, and _future you!_
+Each migration modifies the current database schema, and by running all of the migrations in order you can go from nothing to a fully defined database schema.
 
 ### Questions to be answerd by the end of this lesson:
 
-1. Why use the `--save` flag when installing npm packages? How does that affect your app when you deploy?
 1. What does the `knexfile.js` file do? Why is it important?
 1. Why is the `knex` CLI super handy for creating migration files?
 1. What is a database schema?
@@ -26,13 +21,13 @@ These migrations also provide further documentation about your database schema f
 
 ## EXERCISE OVERVIEW
 
-Included in the exercise repo is a Library CRUD app. Your mission is to add `Books` and `Readers` schemas to this app using `knex` migrations.
+Included in the [exercise repo](https://github.com/ctide/intro-to-deploying-express-pg-apps-to-heroku) is a Library CRUD app. Your mission is to add `books` and `readers` tables to this app using `knex` migrations.
 
 Before you begin, be sure and delete any existing `library` database you might have from previous exercises.
 
-#### Your Schemas Should Have:
+#### We are going to build migrations for two tables:
 
-__Books__
+__books__
 
 * id
 * author
@@ -40,20 +35,23 @@ __Books__
 * rating
 * description
 
-__Readers__
+__readers__
 
 * id
 * first_name
 * last_name
 
 
-After you get everything working locally, you will deploy this CRUD app to Heroku and use your migrations to add your `Readers` and `Books` schemas to your production database.
+After you get everything working locally, you will deploy this CRUD app to Heroku and use your migrations to add your `readers` and `books` schemas to your production database.
 
 # Get Started!
+
+Clone this [exercise repo](https://github.com/ctide/intro-to-deploying-express-pg-apps-to-heroku) and `cd` into the directory.
 
 ### Installing and setting up knex and pg npm packages
 
 ```sh
+$ npm install
 $ npm install --save pg knex  #install knex locally
 $ npm install knex -g         #install knex cli globally if you haven't before
 ```
@@ -65,7 +63,6 @@ $ npm install knex -g         #install knex cli globally if you haven't before
 
 ```js
 module.exports = {
-
   development: {
     client: 'pg',
     connection: 'postgres://localhost/library'
@@ -75,21 +72,12 @@ module.exports = {
     client: 'pg',
     connection: process.env.DATABASE_URL
   }
-
 };
 ```
 
----
-
 ### Migrations
 
-Migrations are stored as files in the migrations directory, one for each migration. The name of the file is of the form CURRENTDATETIME_create_books.js, that is to say a UTC timestamp identifying the migration, followed by an underscore, followed by the name of the migration. Knex uses this timestamp to ensure each migration is unique and helps knex keep track of what migrations have already been run.
-
-Of course, calculating timestamps is no fun, so Knex provides a generator to handle making it for you:
-
-__The migration cli is bundled with the knex global install.__
-
----
+Migrations are stored as files in the migrations directory, one for each migration. The name of the file is of the form CURRENTDATETIME_MIGRATIONNAME.js, that is to say a UTC timestamp identifying the migration, followed by an underscore, followed by the name of the migration. Knex uses this timestamp to ensure each migration is unique, to track which migrations have been run, and to ensure that migrations are all run in the proper order.
 
 ### Knex migration tool
 
@@ -98,7 +86,8 @@ Create a new migration with the name create_books
 ```sh
 knex migrate:make create_books
 ```
-__You probably got an error about not having a database? Your migration file was still created, but go ahead and use knex to create your `library` database__
+
+You probably got an error about not having a database? Your migration file was still created, but we will need to create a local database:
 
 ```sh
 $ createdb library
@@ -108,21 +97,19 @@ Update the new migration file `migrations/CURRENTDATETIME_create_books.js` accor
 
 ```js
 exports.up = function(knex, Promise) {
-  return knex.schema.createTable('books', function(table){
+  return knex.schema.createTable('books', function(table) {
     table.increments();
     table.string('author');
     table.string('title');
     table.integer('rating');
     table.text('description');
-  })
+  });
 };
 
 exports.down = function(knex, Promise) {
   return knex.schema.dropTable('books');
 };
 ```
-
----
 
 ### Run the latest migrations using the development connection string
 
@@ -134,7 +121,7 @@ $ knex migrate:latest --env development
 
 ```sh
 psql library
-select * from books;
+\d+ books;
 ```
 
 #### Where does knex store its log of what migrations have run?
@@ -143,19 +130,16 @@ If you are in your `library` database and run the describe table (`\dt`) command
 
 Go ahead and `select * from knex_migrations`. What do you see? What does this tell you about how Knex works?
 
----
-
 ### Establishing a Connection
 
 __Initializing knex only once__
 * Initializing the library should normally only ever happen once in your application
 * This creates a connection pool for the current database
-* You should use the instance returned from the initialize call throughout your library.
+* You should use the instance returned from the initialize call throughout your code.
 
----
+### Adding Knex to your Express application
 
 * Create a folder called `db`
-
 * Inside the db folder create a new file `knex.js` with the following contents:
 
 ```js
@@ -166,92 +150,56 @@ module.exports = require('knex')(config);
 
 * This initializes knex with the connection information obtained from the configuration in `knexfile.js` for the current environment
 
-__NOTE:__ What core module do you need to install to be able to use environment variables?
-
----
-
-### Use the connection in your routes file
+#### Let's start using our new database:
 
 * In your `routes/books.js` file, require the `knex.js` file you created
-
-* Create a function `Books` that returns a new knex query builder for the books table
+* Create a function `books` that returns a new knex query builder for the books table
 
 ```js
-var knex = require('../db/knex');
-function Books() {
+const knex = require('../db/knex');
+
+function books() {
   return knex('books');
 }
 ```
 
-__Using knex and migrations, get `Readers` wired up and confirm that your app is running as it should _locally_ __
+## Exercise
 
----
+Using the steps outlined above, setup the `readers` table using a migration, and add the relevant code to the `routes/readers.js` file. Assuming you built the migration correctly, and added the right code, all the `readers` routes will now be functional in your local version of this application.
 
 ### Get it working on Heroku
 
-__STEP 1__
-
-* In your `knexfile.js` you need to add two things. Can you spot them?
-
-```js
-require('dotenv').load();
-
-module.exports = {
-
-  development: {
-    client: 'pg',
-    connection: 'postgres://localhost/library'
-  },
-
-  production: {
-    client: 'pg',
-    connection: process.env.DATABASE_URL + '?ssl=true'
-  }
-};
-```
-`add`, `commit` and `push`.
-
-__STEP 2__
-
-From the command line, run the following command:
+First, we'll need to create a new heroku instance and add a postgres server to it:
 
 ```sh
-knex migrate:latest --env production
-```
-
-__Broken?__
-
-You are running your file locally and your app doesn't know what the value of your `DATABASE_URL` environment variable.
-
-__add your DATABASE_URL environment variable to `.env`__
-
-```sh
-heroku config  // to get your variable and value
-```
-
-### Helpful Notes
-
-__Connecting to a Heroku Hosted Postgres Database__
-
-```sh
+heroku create
 heroku addons:create heroku-postgresql
 ```
 
-__Using the `dotenv` core module to config environment variables__
+Now that you've created a new heroku instance, push your code with your migrations to Heroku. You should be able to load your index page of your app on heroku, but any other route will probably time out.
 
-You'll need some help getting your app to talk to your environment variables, both locally as well as deployed.
+### Running your migrations on production
 
-Google `npm dotenv` and read the docs to help you get up and running with a `.env` file in your Node.js app.
+```sh
+heroku run knex migrate:latest
+```
 
-Also, remember the __Entry Ticket__ list above? Visit the Learning Experiences listed there to review previous topics used here.
+Here we're going to tell Heroku that we need to run our migrations. You should see output that looks similar to:
 
+```sh
+Running knex migrate:latest on obscure-sierra-57141.... up, run.1276
+Using environment: production
+Batch 1 run: 2 migrations 
+/app/migrations/20160329103350_create_books.js
+/app/migrations/20160329105509_create_readers.js
+```
 
-### Knex is not the only ORM for Node and Postres. Take a minute to explore some of the other options available to developers:
+And now your app should be fully functional on Heroku!
 
-- https://github.com/robconery/massive-js
-- Links:
+### Knex is not the only way to access PostgreSQL from Node. Take a minute to explore some of the other options available to developers:
 
+- Massive JS: https://github.com/robconery/massive-js
 - Basic Driver - https://github.com/brianc/node-postgres
 - Basic Migrator - http://umigrate.readthedocs.org/projects/db-migrate/en/v0.10.x/
-- Bookshelf ORM - http://bookshelfjs.org/
+- Bookshelf ORM - http://bookshelfjs.org/ (uses Knex under the hood)
 - Sequelize ORM - http://docs.sequelizejs.com/en/latest/
