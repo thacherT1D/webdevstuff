@@ -56,7 +56,7 @@ Indexes:
     "places_pkey" PRIMARY KEY, btree (id)
 ```
 
-As you can see, PostgreSQL automatically creates indexes are for primary key constraints.
+As you can see, PostgreSQL automatically creates indexes are for primary key constraints. It's also worth mentioning that PostgreSQL do not automatically create indexes for foreign key constraints.
 
 List all the index tables to check the size of the index table.
 
