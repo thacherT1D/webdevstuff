@@ -59,7 +59,7 @@ $ npm install knex -g         #install knex cli globally if you haven't before
 
 ### knexfile.js
 
-`touch knexfile.js` and add the following.
+`touch knexfile.js` and add the following:
 
 ```js
 module.exports = {
@@ -87,7 +87,7 @@ Create a new migration with the name create_books
 knex migrate:make create_books
 ```
 
-You probably got an error about not having a database? Your migration file was still created, but we will need to create a local database:
+You probably got an error about not having a database. Your migration file was still created, but we will need to create a local database:
 
 ```sh
 $ createdb library
@@ -117,14 +117,24 @@ exports.down = function(knex, Promise) {
 $ knex migrate:latest --env development
 ```
 
-#### Confirm successful migration and proper schema
+#### Confirm successful migration:
 
 ```sh
 psql library
 \d+ books;
+                                                       Table "public.books"
+   Column    |          Type          |                     Modifiers                      | Storage  | Stats target | Description 
+-------------+------------------------+----------------------------------------------------+----------+--------------+-------------
+ id          | integer                | not null default nextval('books_id_seq'::regclass) | plain    |              | 
+ author      | character varying(255) |                                                    | extended |              | 
+ title       | character varying(255) |                                                    | extended |              | 
+ rating      | integer                |                                                    | plain    |              | 
+ description | text                   |                                                    | extended |              | 
+Indexes:
+    "books_pkey" PRIMARY KEY, btree (id)
 ```
 
-#### Where does knex store its log of what migrations have run?
+#### Where does knex store the log of what migrations have run?
 
 If you are in your `library` database and run the describe table (`\dt`) command, you should see `knex_migrations`.
 
@@ -152,8 +162,8 @@ module.exports = require('knex')(config);
 
 #### Let's start using our new database:
 
-* In your `routes/books.js` file, require the `knex.js` file you created
-* Create a function `books` that returns a new knex query builder for the books table
+* In the `routes/books.js` file, require the `knex.js` file you created
+* Create a function `books` that returns a new knex query builder for the books table:
 
 ```js
 const knex = require('../db/knex');
@@ -196,7 +206,9 @@ Batch 1 run: 2 migrations
 
 And now your app should be fully functional on Heroku!
 
-### Knex is not the only way to access PostgreSQL from Node. Take a minute to explore some of the other options available to developers:
+### Other ways to work with PostgreSQL in Node
+
+Knex is not the only way to access PostgreSQL from Node. Take a minute to explore some of the other options available to developers:
 
 - Massive JS: https://github.com/robconery/massive-js
 - Basic Driver - https://github.com/brianc/node-postgres
