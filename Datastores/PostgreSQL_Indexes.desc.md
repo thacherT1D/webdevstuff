@@ -19,7 +19,7 @@ An index helps speed up `SELECT` queries with `WHERE` clauses, but it slows down
 - Columns with many `NULL` values.
 - Columns with frequent updates.
 
-Additionally, indexes on number and timestamp columns are more effective than indexes on textual columns.
+Additionally, indexes on number and timestamp columns are generally more effective than indexes on textual columns, especially when searching for a particular word or phrase in a large amount of text.
 
 ## How do you create indexes in PostgreSQL?
 
@@ -81,6 +81,25 @@ Turn on the timing of commands.
 ```
 
 And run the following query.
+
+```sql
+SELECT COUNT(id) FROM places;
+```
+
+You'll see something like this.
+
+```
+ count
+-------
+ 86457
+(1 row)
+
+Time: 9.837 ms
+```
+
+This query can't be optimized because it doesn't have a `WHERE` clause.
+
+Now, run the following query.
 
 ```sql
 SELECT COUNT(id) FROM places WHERE parent_id = 21138;
