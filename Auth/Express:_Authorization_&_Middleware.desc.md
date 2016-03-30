@@ -5,7 +5,7 @@
 ### Entry Ticket
 In order to get the most out of this Learning Experience, you'll need to be comfortable with the following:
 
-* [Cookies](https://coursework.galvanize.com/curriculums/6/learning_experiences/21)
+* Cookies
 * [Express](http://expressjs.com/en/4x/api.html)
 * [express.Router()](http://expressjs.com/en/4x/api.html#router)
 
