@@ -1,7 +1,3 @@
-<div class="alert alert-info">
-  We are currently transitioning this Learning Experience from Mongo to SQL.  Even though these reference Mongo, we recommend using SQL.
-</div>
-
 ## Validation overview
 
 When users submit forms, sometimes they don't enter data in the format that your application requires.  Some examples of these are:
@@ -40,9 +36,9 @@ Or maybe they'll show up like this:
 
 ![](https://s3-us-west-2.amazonaws.com/lesson-plan-images/express_validation_images/validations-ui-02.png)
 
-Styles will vary depending on your site's design.  But regardless, the errors need to be clear and concise and helpful to the user.
+Styles will vary depending on your site's design. But regardless, the errors need to be clear, concise, and helpful to the user.
 
-Another important point is that form fields need to remain filled-in, even when forms are re-rendered to show errors.  In the following example, note how the user has filled in an email, so even though the form was re-rendered, the email field is remains filled-in:
+Another important point is that form fields need to remain populated, even when forms are re-rendered to show errors.  In the following example, note how the user has filled in an email, so even though the form was re-rendered, the email field remains filled-in:
 
 ![](https://s3-us-west-2.amazonaws.com/lesson-plan-images/express_validation_images/validations-ui-03.png)
 
@@ -55,18 +51,18 @@ This may seem backwards, because:
 - If the form post is _unsuccessful_ you _render_ a 200 OK
 - If the form post is _successful_ you redirect
 
-Why?  Think about the UI for a moment - you always want to re-populate fields, and you also need to pass down information about which fields are blank, and what their error messages are.
+Why? Think about the UI for a moment - you always want to re-populate fields, and you also need to pass down information about which fields are blank, and what their error messages are.
 
-In order to pass information from Express's routes into a view, you need to have the data available - in this case, it's most likely `req.body`.  Once you redirect, you lose that information.
+In order to pass information from Express' routes into a view, you need to have the data available - in this case, it's most likely `req.body`. *Once you redirect, you lose that information.*
 
-You _could_ store information like that in a cookie, or in a session object, but that adds extra unnecessary complexity.  So the rule is:
+You _could_ store information like that in a cookie, or in a session object, but that adds extra unnecessary complexity. Therefore, the rule is:
 
 - Re-render (200 OK) when the data is invalid
 - Redirect when it's valid
 
 ## Implementing
 
-The good news is that adding validations to forms doesn't require any new special knowledge - just putting together things you already know.  Here's the basic flow:
+The good news is that adding validations to forms doesn't require any new special knowledge - just putting together things you already know.Here's the basic flow:
 
 - In your routes (or in a separate module), check the data passed into `req.body` using simple `if` statements
 - If the data is valid, `res.redirect`
@@ -76,35 +72,35 @@ So in it's most basic form, it might look something like this:
 
 ```js
 router.post('/users', function (req, res) {
-  if (req.body.firstName.trim()) {
+  if (req.body.firstName && req.body.firstName.trim()) {
     User.insert({first: req.body.firstName}).then(function () {
-      res.redirect('/users')
-    })
+      res.redirect('/users');
+    });
   } else {
-    res.render('users/new', {errors: ["First name can't be blank"]})
+    res.render('users/new', {errors: ["First name can't be blank"]});
   }
-})
+});
 ```
 
 A slightly more complicated example might look like this:
 
 ```js
 router.post('/users', function (req, res) {
-  var errors = []
-  if (!req.body.firstName.trim()) {
-    errors.push("First name can't be blank")
+  var errors = [];
+  if (!(req.body.firstName && req.body.firstName.trim())) {
+    errors.push("First name can't be blank");
   }
-  if (!req.body.lastName.trim()) {
-    errors.push("Last name can't be blank")
+  if (!(req.body.lastName && req.body.lastName.trim())) {
+    errors.push("Last name can't be blank");
   }
   if (errors.length) {
-    res.render('users/new', {errors: errors})
+    res.render('users/new', {errors: errors});
   } else {
     User.insert({first: req.body.firstName}).then(function () {
-      res.redirect()
-    })
+      res.redirect();
+    });
   }
-})
+});
 ```
 
 Of course, this type of logic is more well-suited in a separate module, or as part of a model object, but the above examples demonstrate the basic point.
