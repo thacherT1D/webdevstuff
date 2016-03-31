@@ -1,6 +1,6 @@
 # Authentication Introduction
 
-# Objectives
+## Objectives
 
 * Explain why storing a password in plain text is never acceptable and highly dangerous
 * Understand what hashing and salting are	
@@ -24,10 +24,10 @@ So how do we store passwords? We encrypt them. Before we talk about how that's d
 #### bcrypt
 <a href="https://www.npmjs.com/package/bcrypt" target="_blank">Docs: bcrypt</a>
 
-The tool we use to hash passwords is called bcrypt. Bcrypt is a module based on the [blowfish cipher](https://en.wikipedia.org/wiki/Blowfish_(cipher)). To install it we use `npm install --save bcrypt` and make sure to add `const bcrypt = require('bcrypt');` when we want to use it in our code. Bcrypt provides functions for hashing, salting and comparing passwords.
+The tool we use to hash passwords is called bcrypt. Bcrypt is a module based on the [blowfish cipher][https://en.wikipedia.org/wiki/Blowfish_(cipher)]. To install it we use `npm install --save bcrypt` and make sure to add `const bcrypt = require('bcrypt');` when we want to use it in our code. Bcrypt provides functions for hashing, salting and comparing passwords.
 
 ### More on bcrypt:
-<a href="https://en.wikipedia.org/wiki/Bcrypt" target="_blank">bcrypt Wiki</a>
+[bcrypt Wiki](https://en.wikipedia.org/wiki/Bcrypt)
 
 How it works:
  
@@ -92,56 +92,69 @@ console.log(verify('nosalt2@galvanize.com', 'password'));
 
 #### Authentication
 
-One of the most important concepts in building an application is authentication - the process of ensuring that our users are valid (actually exist in our database). We only want to grant access to certain pages for users who are not logged in. Imagine if you could access a banking website and see your account without logging in....that would be pretty disasterous because anyone would have access to it. By authenticating our users, we can make sure that only the right users have access to the right pages. Another example to think about would be if other facebook users could have access to __your__ settings page...that would be quite bad.
+One of the most important concepts in building an application is authentication - the process of ensuring that our users are valid (actually exist in our database). Imagine if you could access a banking website and see your account without logging in, that would be pretty disasterous because anyone would have access to it. By authenticating our users, we can make sure that only the right users have access to the right pages.
 
 ### Adding Authentication Logic to Our Model
 
+We're going to take an example [app](https://github.com/gSchool/form-based-auth) and add some real authentication to it.
+
+Take a second to get this app setup locally, and see how it's working. It currently allows users to 'sign in', but it doesn't seem to care much whether or not it's a valid email / password. We're going to change that.
+
 ##### Step 1
-```
-var mongoose = require("mongoose");
-var bcrypt = require("bcrypt";);
-var SALT_WORK_FACTOR = 10;
-```
- 
-##### Step 2
-```
-var UserSchema = new Schema({
-  username: { 
-    type: String, 
-    required: true
-  },
-  password: { 
-    type: String, 
-    required: true 
-  }
-});
+
+First, we need to actually create users in the database. When we're doing that, we're also going to use bcrypt to safely store the user's password.
+
+We're also going to take this opportunity to decouple our _model_ logic and our _route_ logic.
+
+Let's open up the `models/users.js` file and add some things to it. We're going to add a lot of code, but really all we're doing is generating a _salt_, and _hashing_ the user's password and the salt together, and then setting the resulting value to the `password_digest` property. Then we can create our user. The end result of our file will look like this:
+
+```javascript
+const knex = require('../db/knex');
+const bcrypt = require('bcrypt');
+const SALT_WORK_FACTOR = 10;
+
+function Users() {
+  return knex('users');
+}
+
+Users.createUser = (data, callback) => {
+  bcrypt.genSalt(SALT_WORK_FACTOR, (err, salt) => {
+    if (err) {
+      callback(err);
+    }
+
+    bcrypt.hash(data.password, salt, (err, hash) => {
+      if (err) {
+        callback(err);
+      }
+
+      data.password_digest = hash;
+      delete data.password;
+      Users().insert(data, '*').then((data) => {
+        callback(undefined, data);
+      });
+    });
+  });
+}
+
+module.exports = Users;
 ```
 
-##### Step 3
-``` 
-UserSchema.pre(save, function(next) {
-  var user = this;
- 
-  // only hash the password if it has been modified (or is new)
-  if (!user.isModified('password')) return next();
- 
-  // generate a salt
-  bcrypt.genSalt(SALT_WORK_FACTOR, function(err, salt) {
-    if (err) return next(err);
- 
-    // hash the password using our new salt
-    bcrypt.hash(user.password, salt, function(err, hash) {
-      if (err) return next(err);
- 
-      // override the cleartext password with the hashed one
-      user.password = hash;
-      next();
-    });
+And now, we need to tweak our `routes/users.js` file to actually use this new function we've created:
+
+```javascript
+router.post('/', (req, res, next) => {
+  Users.createUser(req.body, (err, data) => {
+    res.send(data);
   });
 });
 ```
 
-##### Step 4
+Now, if you go to create a user in the web browser, you should see that it functions and that we're generating a `password_digest` that looks similar to how we've described it earlier.
+
+We still can't login as a user, though, so let's work on that next.
+
+##### Step 2
 
 ``` 
 UserSchema.methods.comparePassword = function(candidatePassword, cb) {
@@ -151,13 +164,6 @@ UserSchema.methods.comparePassword = function(candidatePassword, cb) {
   });
 };
 ``` 
-
-##### Step 5 
-
-```
-var User = mongoose.model('User', UserSchema);
-module.exports = User;
-```
 
 ### Understanding cookies + sessions
 
