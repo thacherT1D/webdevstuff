@@ -1,47 +1,192 @@
-<div class="alert alert-info">
-  We are currently transitioning this Learning Experience from Mongo to SQL/Knex.  Even though some videos reference Mongo, we recommend using SQL/Knex.
-</div>
+# Class Example 
 
-### Entry Ticket
-In order to get this most out of this Learning Experience, you'll need to be comfortable with the following:
+https://github.com/gSchool/mongoose_auth_example
 
-* [Express](http://expressjs.com/en/4x/api.html)
-* [express.Router()](http://expressjs.com/en/4x/api.html#router)
-* [Express Middleware](http://expressjs.com/en/4x/api.html#app.use)
-* [response.render()](http://expressjs.com/en/4x/api.html#res.render)
-* [response.redirect()](http://expressjs.com/en/4x/api.html#res.redirect)
-* [dotenv](https://www.npmjs.com/package/dotenv)
+# Authentication Introduction
 
-### Objectives
+# Objectives
 
-* Describe difference between authentication and authorization
-* Explain key ideas about how Cookies work
-* Describe how cookies are transfered
-* Read and write cookies in express
-* Authenticate a user using information from a form
-* Use best practices to secure your user's data from attackers
-* Describe common attacks targeted at insecure webapps
-* Validate input from a form on the server
-* Use sessions to keep a user authenticated
-* Keep private keys and other secure data in your `.env` file
+* Explain why storing a password in plain text is never acceptable and highly dangerous
+* Understand what hashing and salting are	
+* Explain how salting protects from lookup/dictionary table attacks
+* Store passwords securely using the bcrypt module
 
+### Key terms and technologies
 
+#### Storing passwords
 
-### Key Terms
+One of the __worst__ possible things you can do as a developer is store a password in plain text. This means that when you take a password from a form you never want it to be stored so that someone can easily see it. Imagine if someone gets access to your database and can see every single password for all of your users. On top of that, most users have the same password for multiple sites<sup id="a1">[1](#f1)</sup> so a password on one site can very possibly be the same for many other ones. So long story short - __NEVER STORE PASSWORDS IN PLAIN TEXT!__
 
-**Authentication**
+#### Basic encryption - one way vs two way.
 
-**Authorization**
+So how do we store passwords? We encrypt them. Before we talk about how that's done, let's examine different forms of encryption.
 
-**Cryptographic Hashing**
+- Two way encryption - think of something like gibberish or pig latin or even a simple code that you made up with a friend to send a secret message. The important thing here is that both parties know how to decipher a message. This is easy to use, but imagine if someone else gets access to the key or knows how to decipher the code. This is why we don't use two way encryption for passwords. The only person who should ever know their password is the person who created it, so we need a different way, so we use one way encryption.
 
-**Cookies**
+- One way encryption - this is how we store passwords. This method also known as hashing and it allows text to be deciphered __only__ by the person who knows the original text. For a password this is perfect. As developers we shouldn't know, or be able to figure out, our users' passwords. If, for some reason they forget their password, we just send a link to reset it - we never want to just give back their password in plain text. 
 
-**Session**
+#### bcrypt
+<a href="https://www.npmjs.com/package/bcrypt" target="_blank">Docs: bcrypt</a>
 
+The tool we use to hash passwords is called bcrypt. Bcrypt is a module based on the blowfish cipher. To install it we use `npm install --save bcrypt` and make sure to add `const bcrypt = require('bcrypt');` when we want to use it in our code. Bcrypt provides functions for hashing, salting and comparing passwords.
 
-### Overview
-This learning experience covers most of the basic ideas you need to understand if you want users to be able to log in to your application. 
+### More on bcrypt:
+<a href="https://en.wikipedia.org/wiki/Bcrypt" target="_blank">bcrypt Wiki</a>
+
+How it works:
+ 
+- Generate a random salt<sup id="a2">[2](#f2)</sup> (A "work" factor has been pre-configured.)
+- Collect a password.
+- Generate a hashed version of a string that is a concatenation of the salt & the password entered by a user.
+- Store the cost, salt, and cipher text. Because these three elements have a known length, it's easy to concatenate them and store them in a single field, yet be able to split them apart later.
+
+When someone tries to authenticate, retrieve the stored cost and salt. Concatenate the salt onto the user entered password. Encrypt this string using the associated cost factor. If the generated cipher text matches the stored cipher text, the password is a match.
+
+Stored in the database, a bcrypt "hash" might look something like this:
+
+`$2a$10$vI8aWBnW3fID.ZQ4/zo1G.q1lRps.9cGLcZEiGDMVr5yUP1KUOYTa`
+
+- 2a identifies the bcrypt algorithm version that was used.
+- 10 is the cost factor; 2^10 iterations of the key derivation function are used.
+- vI8aWBnW3fID.ZQ4/zo1G.q1lRps.9cGLcZEiGDMVr5yUP1KUOYTa is the salt and the cipher text, concatenated and encoded in a modified Base-64. The first 22 characters decode to a 16-byte value for the salt. The remaining characters are cipher text to be compared for authentication.
+- $ are used as delimiters for the header section of the hash.
+
+The bcrypt utility does not maintain a list of salts. Rather, salts are generated randomly and appended to the output of the function so that they are remembered later on. Put another way, the "hash" generated by bcrypt is not just the hash. Rather, it is the hash and the salt concatenated.
+
+#### Salting
+
+Not only is it important to hash a password, we need to add an additional layer of security and we do that by adding salt. Salting provides an extra hash at the end of our password which makes it much much more difficult for someone to crack our password using brute force (trying again and again) or a lookup table.
+
+You can read more about this [here](https://crackstation.net/hashing-security.htm)
+
+If you STILL want to read more about bcrypt and salting, [this](http://dustwell.com/how-to-handle-passwords-bcrypt.html) is a fantastic article.
+
+```javascript
+const md5 = require('md5');
+const u = require('underscore');
+const crypto = require('crypto');
+const users = [];
+
+function create(email, password) {
+  const salt = crypto.randomBytes(Math.ceil(10/2)).toString('hex').slice(0,10);
+  const encrypted = md5(salt + password);
+  users.push({email: email, password: encrypted + "$" + salt});
+}
+
+function createWithoutSalt(email, password) {
+  users.push({email: email, password: md5(password) + '$'})
+}
+
+function verify(email, password) {
+  const user = u.find(users, {email: email});
+  const passwordParts = user.password.split('$');
+  const salt = passwordParts[1];
+  const encryptedToken = passwordParts[0];
+  return (md5(salt + password) == encryptedToken);
+}
+
+create('chris@galvanize.com', 'password');
+createWithoutSalt('nosalt@galvanize.com', 'password');
+createWithoutSalt('nosalt2@galvanize.com', 'password');
+console.log(users);
+console.log(verify('chris@galvanize.com', 'password'));
+console.log(verify('nosalt@galvanize.com', 'password'));
+console.log(verify('nosalt2@galvanize.com', 'password'));
+```
+
+#### Authentication
+
+One of the most important concepts in building an application is authentication - the process of ensuring that our users are valid (actually exist in our database). We only want to grant access to certain pages for users who are not logged in. Imagine if you could access a banking website and see your account without logging in....that would be pretty disasterous because anyone would have access to it. By authenticating our users, we can make sure that only the right users have access to the right pages. Another example to think about would be if other facebook users could have access to __your__ settings page...that would be quite bad.
+
+### Adding Authentication Logic to Our Model
+
+##### Step 1
+```
+var mongoose = require("mongoose");
+var bcrypt = require("bcrypt";);
+var SALT_WORK_FACTOR = 10;
+```
+ 
+##### Step 2
+```
+var UserSchema = new Schema({
+  username: { 
+    type: String, 
+    required: true
+  },
+  password: { 
+    type: String, 
+    required: true 
+  }
+});
+```
+
+##### Step 3
+``` 
+UserSchema.pre(save, function(next) {
+  var user = this;
+ 
+  // only hash the password if it has been modified (or is new)
+  if (!user.isModified('password')) return next();
+ 
+  // generate a salt
+  bcrypt.genSalt(SALT_WORK_FACTOR, function(err, salt) {
+    if (err) return next(err);
+ 
+    // hash the password using our new salt
+    bcrypt.hash(user.password, salt, function(err, hash) {
+      if (err) return next(err);
+ 
+      // override the cleartext password with the hashed one
+      user.password = hash;
+      next();
+    });
+  });
+});
+```
+
+##### Step 4
+
+``` 
+UserSchema.methods.comparePassword = function(candidatePassword, cb) {
+  bcrypt.compare(candidatePassword, this.password, function(err, isMatch) {
+    if (err) return cb(err);
+    cb(null, isMatch);
+  });
+};
+``` 
+
+##### Step 5 
+
+```
+var User = mongoose.model('User', UserSchema);
+module.exports = User;
+```
+
+### Understanding cookies + sessions
+
+###What are sessions?
+
+Sessions are used to store data about a user on the server. This can be an authenticated user or a non-authenticated user. Session data is stored on the server for each person using the website and referenced using a cookie stored on the users computer. The session cookie contains a unique key that allows the server to access the correct data for each person.
+
+### What are cookies?
+
+# rewrite:
+
+Cookies are essentially small text files, given ID tags that are stored on your computer's browser directory or program data subfolders. Cookies are created when you use your browser to visit a website that uses cookies to keep track of your movements within the site, help you resume where you left off, remember your registered login, theme selection, preferences, and other customization functions. The website stores a corresponding file(with same ID tag)to the one they set in your browser and in this file they can track and keep information on your movements within the site and any information you may have voluntarily given while visiting the website, such as email address.
+
+###Why is this useful?
+
+Session data is retained between page loads so it allows sharing of data between requests without passing it in the url string. Sessions are also integral for user authentication.
+
+###Using sessions in express
+
+In express to utilize sessions we need to load the session middleware. The setup is pretty simple and very similar to setting up the body-parser middleware. We'll see this in the class example.
+
+- <span id="f1">https://lastpass.com/</span> [↩](#a1)
+- https://agilebits.com/onepassword [↩](#a1)
+- <span id="f2">https://en.wikipedia.org/wiki/Salt_(cryptography)</span> [↩](#a2)
+
 
 How often will you implement authentication from scratch in a job?  Not often, at least as a junior developer.
 
