@@ -1,7 +1,3 @@
-# Class Example 
-
-https://github.com/gSchool/mongoose_auth_example
-
 # Authentication Introduction
 
 # Objectives
@@ -28,7 +24,7 @@ So how do we store passwords? We encrypt them. Before we talk about how that's d
 #### bcrypt
 <a href="https://www.npmjs.com/package/bcrypt" target="_blank">Docs: bcrypt</a>
 
-The tool we use to hash passwords is called bcrypt. Bcrypt is a module based on the blowfish cipher. To install it we use `npm install --save bcrypt` and make sure to add `const bcrypt = require('bcrypt');` when we want to use it in our code. Bcrypt provides functions for hashing, salting and comparing passwords.
+The tool we use to hash passwords is called bcrypt. Bcrypt is a module based on the [blowfish cipher](https://en.wikipedia.org/wiki/Blowfish_(cipher)). To install it we use `npm install --save bcrypt` and make sure to add `const bcrypt = require('bcrypt');` when we want to use it in our code. Bcrypt provides functions for hashing, salting and comparing passwords.
 
 ### More on bcrypt:
 <a href="https://en.wikipedia.org/wiki/Bcrypt" target="_blank">bcrypt Wiki</a>
