@@ -7,8 +7,6 @@
 * Explain how salting protects from lookup/dictionary table attacks
 * Store passwords securely using the bcrypt module
 
-### Key terms and technologies
-
 #### Storing passwords
 
 One of the __worst__ possible things you can do as a developer is store a password in plain text. This means that when you take a password from a form you never want it to be stored so that someone can easily see it. Imagine if someone gets access to your database and can see every single password for all of your users. On top of that, most users have the same password for multiple sites<sup id="a1">[1](#f1)</sup> so a password on one site can very possibly be the same for many other ones. So long story short - __NEVER STORE PASSWORDS IN PLAIN TEXT!__
@@ -24,14 +22,14 @@ So how do we store passwords? We encrypt them. Before we talk about how that's d
 #### bcrypt
 <a href="https://www.npmjs.com/package/bcrypt" target="_blank">Docs: bcrypt</a>
 
-The tool we use to hash passwords is called bcrypt. Bcrypt is a module based on the [blowfish cipher][https://en.wikipedia.org/wiki/Blowfish_(cipher)]. To install it we use `npm install --save bcrypt` and make sure to add `const bcrypt = require('bcrypt');` when we want to use it in our code. Bcrypt provides functions for hashing, salting and comparing passwords.
+The tool we use to hash passwords is called bcrypt. Bcrypt is a module based on the <a href="https://en.wikipedia.org/wiki/Blowfish_(cipher)" target="_blank">blowfish cipher</a>. To install it we use `npm install --save bcrypt` and make sure to add `const bcrypt = require('bcrypt');` when we want to use it in our code. Bcrypt provides functions for hashing, salting and comparing passwords.
 
 ### More on bcrypt:
 [bcrypt Wiki](https://en.wikipedia.org/wiki/Bcrypt)
 
 How it works:
  
-- Generate a random salt<sup id="a2">[2](#f2)</sup> (A "work" factor has been pre-configured.)
+- Generate a random salt<sup id="a2">[2](#f2)</sup>
 - Collect a password.
 - Generate a hashed version of a string that is a concatenation of the salt & the password entered by a user.
 - Store the cost, salt, and cipher text. Because these three elements have a known length, it's easy to concatenate them and store them in a single field, yet be able to split them apart later.
@@ -53,9 +51,11 @@ The bcrypt utility does not maintain a list of salts. Rather, salts are generate
 
 Not only is it important to hash a password, we need to add an additional layer of security and we do that by adding salt. Salting provides an extra hash at the end of our password which makes it much much more difficult for someone to crack our password using brute force (trying again and again) or a lookup table.
 
-You can read more about this [here](https://crackstation.net/hashing-security.htm)
+You can read more about this here: https://crackstation.net/hashing-security.htm.
 
-If you STILL want to read more about bcrypt and salting, [this](http://dustwell.com/how-to-handle-passwords-bcrypt.html) is a fantastic article.
+If you STILL want to read more about bcrypt and salting, http://dustwell.com/how-to-handle-passwords-bcrypt.html is a fantastic article as well.
+
+Let's talk through some examples of how salting actually works:
 
 ```javascript
 const md5 = require('md5');
@@ -92,15 +92,15 @@ console.log(verify('nosalt2@galvanize.com', 'password'));
 
 #### Authentication
 
-One of the most important concepts in building an application is authentication - the process of ensuring that our users are valid (actually exist in our database). Imagine if you could access a banking website and see your account without logging in, that would be pretty disasterous because anyone would have access to it. By authenticating our users, we can make sure that only the right users have access to the right pages.
+One of the most important concepts in building an application is authentication - the process of ensuring that our users are valid (actually exist in our database, are who they say they are). Imagine if you could access a banking website and see your account without logging in, that would be pretty disasterous because anyone would have access to it. By authenticating our users, we can make sure that only the right users have access to the right pages.
 
 ### Adding Authentication Logic to Our Model
 
 We're going to take an example [app](https://github.com/gSchool/form-based-auth) and add some real authentication to it.
 
-Take a second to get this app setup locally, and see how it's working. It currently allows users to 'sign in', but it doesn't seem to care much whether or not it's a valid email / password. We're going to change that.
+Take a second to get this app setup locally, and see how it's working. It currently allows users to sign in, but it doesn't seem to care much whether or not it's a valid email / password. We're going to change that.
 
-##### Step 1
+#### Step 1
 
 First, we need to actually create users in the database. When we're doing that, we're also going to use bcrypt to safely store the user's password.
 
@@ -154,7 +154,7 @@ Now, if you go to create a user in the web browser, you should see that it funct
 
 We still can't login as a user, though, so let's work on that next.
 
-##### Step 2
+#### Step 2
 
 Let's add a function to our `models/users.js` file that let's us verify the email and password combo.
 
@@ -197,7 +197,7 @@ We should now be able to login with any user accounts we've created.
 
 ### What are sessions?
 
-Sessions are used to store data about a user on the server. This can be an authenticated user or a non-authenticated user. Session data can be stored in a database, or in the cookie itself. In the example we're working with here all the data about the session is stored directly in the cookie itself. This does mean that there is a limit to how much data we can store in the session. Cookies are limited to only 4kb (generally, it varies by browser) in total size. If you need to store more data than this in the session, then you'll need to look at storing the session in the database. [Sessionstore](https://www.npmjs.com/package/sessionstore) is an example of a piece of middleware that can be used to store the session data in the database.
+Sessions are used to store data about a user on the server. This can be an authenticated user or a non-authenticated user. Session data can be stored in a database or in the cookie itself. In the example we're working with here all the data about the session is stored directly in the cookie itself. This does mean that there is a limit to how much data we can store in the session. Cookies are limited to only 4kb (generally, it varies by browser) in total size. If you need to store more data than this in the session, then you'll need to look at storing the session in the database. [Sessionstore](https://www.npmjs.com/package/sessionstore) is an example of a piece of middleware that can be used to store the session data like that.
 
 It's important to note that even if you're storing the _session_ data in a database that it will still rely on a cookie. In this case, the cookie would just contain a unique identifier that will allow the server to fetch the session data from the database instead of from the cookie directly.
 
