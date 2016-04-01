@@ -156,170 +156,95 @@ We still can't login as a user, though, so let's work on that next.
 
 ##### Step 2
 
-``` 
-UserSchema.methods.comparePassword = function(candidatePassword, cb) {
-  bcrypt.compare(candidatePassword, this.password, function(err, isMatch) {
-    if (err) return cb(err);
-    cb(null, isMatch);
+Let's add a function to our `models/users.js` file that let's us verify the email and password combo.
+
+```javascript
+Users.authenticateUser = (email, password, callback) => {
+  Users().where({email: email}).first().then(user => {
+    if (!user) {
+      return callback("Email and password don't match");
+    }
+    bcrypt.compare(password, user.password_digest, function(err, isMatch) {
+      console.log(err);
+      if (err) {
+        return callback("Email and password don't match");
+      } else {
+        return callback(undefined, user);
+      }
+    });
   });
-};
-``` 
+}
+```
+
+Next up, we will change our `POST /signin` route to utilize this new function:
+
+```javascript
+router.post('/signin', (req, res, next) => {
+  Users.authenticateUser(req.body.email, req.body.password, (err, user) => {
+    if (err) {
+      res.render('auth/signin.ejs', {error: err});
+    } else {
+      req.session.user = user;
+      res.redirect('/');
+    }
+  });
+});
+```
+
+We should now be able to login with any user accounts we've created.
 
 ### Understanding cookies + sessions
 
-###What are sessions?
+### What are sessions?
 
-Sessions are used to store data about a user on the server. This can be an authenticated user or a non-authenticated user. Session data is stored on the server for each person using the website and referenced using a cookie stored on the users computer. The session cookie contains a unique key that allows the server to access the correct data for each person.
+Sessions are used to store data about a user on the server. This can be an authenticated user or a non-authenticated user. Session data can be stored in a database, or in the cookie itself. In the example we're working with here all the data about the session is stored directly in the cookie itself. This does mean that there is a limit to how much data we can store in the session. Cookies are limited to only 4kb (generally, it varies by browser) in total size. If you need to store more data than this in the session, then you'll need to look at storing the session in the database. [Sessionstore](https://www.npmjs.com/package/sessionstore) is an example of a piece of middleware that can be used to store the session data in the database.
+
+It's important to note that even if you're storing the _session_ data in a database that it will still rely on a cookie. In this case, the cookie would just contain a unique identifier that will allow the server to fetch the session data from the database instead of from the cookie directly.
 
 ### What are cookies?
 
-# rewrite:
+Cookies are bits of data that are key / value pairs that are (usually) set to expire at either a specific time, or when the browser is closed. These are just plain text that's readable by anyone. If you open up the chrome developer tools, you'll see a cookies tab that has information about the cookies that are being sent to this site. All cookies are associated with a `domain` so that the browser knows which websites to send cookies to. All requests to that domain will send all of the cookies that the browser has that match that domain.
 
-Cookies are essentially small text files, given ID tags that are stored on your computer's browser directory or program data subfolders. Cookies are created when you use your browser to visit a website that uses cookies to keep track of your movements within the site, help you resume where you left off, remember your registered login, theme selection, preferences, and other customization functions. The website stores a corresponding file(with same ID tag)to the one they set in your browser and in this file they can track and keep information on your movements within the site and any information you may have voluntarily given while visiting the website, such as email address.
+### Using sessions in express
 
-###Why is this useful?
+The example code we added authentication to was already setup to use sessions, but if you look over at `app.js`, you'll see the following lines:
 
-Session data is retained between page loads so it allows sharing of data between requests without passing it in the url string. Sessions are also integral for user authentication.
+```javascript
+const cookieParser = require('cookie-parser');
+const session = require('cookie-session');
 
-###Using sessions in express
+app.use(cookieParser());
+app.use(session({keys: [process.env.SESSION_KEY1, process.env.SESSION_KEY2]}));
+```
 
-In express to utilize sessions we need to load the session middleware. The setup is pretty simple and very similar to setting up the body-parser middleware. We'll see this in the class example.
+Since we're using a `cookie` to store the session in, we'll need both a cookie-parser middleware as well as a piece of middleware for the session handling itself. This will create a `req.session` object that we can use to persist data to.
+
+Like everything in Express, the order of things really matters here. You'll need to have your `cookieParser` middleware before your `session` middleware, or it won't work right. When you're modifying the `req.session` object, you need to make sure you do that before you send the response to the browser. Since we're storing all the session data in the cookie itself, we need to send that information back to the browser in the response.
 
 - <span id="f1">https://lastpass.com/</span> [↩](#a1)
 - https://agilebits.com/onepassword [↩](#a1)
 - <span id="f2">https://en.wikipedia.org/wiki/Salt_(cryptography)</span> [↩](#a2)
 
+## Videos
 
-How often will you implement authentication from scratch in a job?  Not often, at least as a junior developer.
+These videos mostly use Mongo as the database, so the code won't directly correlate to the things we've been talking about. They're a good resource if you'd like to hear another way of describing these techniques.
 
-So why do we teach it?  Because it touches on a number of *hugely* important topics and challenges you to combine them with things you already know.  Things you'll touch on while learning to implement form-based authentication are:
-
-- CRUD (creating users)
-- Validations (displaying error messages like "invalid email / password")
-- Cryptographic hashing
-- Cookies and sessions
-
-You will need to watch all of these videos in order to understand the concepts at play when we do authentication.
-
-## Video #1 - Authentication Overview
+### Video #1 - Authentication Overview
 
 <iframe src="https://player.vimeo.com/video/141225092?byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 This video is a great overview of how authentication is done in express.js. This video uses a different persistence layer, but the logic remains the same no matter what persistence layer you use. [Take a look at this example](https://github.com/gSchool/form-auth-with-express-knex-pg-bcrypt) for one using a more familiar persistence layer.
 
-#### Resources
-
-- [Form Authentication with Express, Knex, pg and Bcrypt](https://github.com/gSchool/form-auth-with-express-knex-pg-bcrypt)
-
-## Video #2 - Cryptographic Hashing
+### Video #2 - Cryptographic Hashing
 
 <iframe src="https://player.vimeo.com/video/141284905?byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 How do we secure our user data? Knowing this basic information well will put you above most developers in terms of security knowledge (unfortunately). Pay close attention to the information in this video, or you might cause your new employer to [show up on this list](https://haveibeenpwned.com/PwnedWebsites).  
 
-#### Resources
-
-- https://crackstation.net/hashing-security.htm
-- http://codahale.com/how-to-safely-store-a-password/
-- http://www.unlimitednovelty.com/2012/03/dont-use-bcrypt.html
-- https://blog.agilebits.com/2015/03/30/bcrypt-is-great-but-is-password-cracking-infeasible/
-- https://www.owasp.org/index.php/Main_Page
-
-## Video #3 - Cookies
+### Video #3 - Cookies
 
 <iframe src="https://player.vimeo.com/video/141304889?byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-
-Let's practice what we just learned. **Do this, because we're going to build on it after the next video**. 
-
-Create a new directory, and generate an express app with `express cookieExample`. Then `git init` in that folder, of course. Add `node_modules` to your `.gitignore`, and then `npm install`. Then, commit all files.  
-
-The express generator installs the `cookie-parser` module for you already, and you can find it being added to your app on **line 22**.  
-
-In your `./routes/index.js` file, we're going to set a cookie, and then read that cookie.
-
-```javascript
-router.get('/', function(req,res,next){
-	res.cookie('views',parseInt(req.cookies.views || 0) + 1);
-
-	res.render('index', { title: 'Express', views: (req.cookies.views || 0)});
-});
-
-```
-
-Then, go to your `./views/index` and add the `views` variable to your template.
-
-***Jade***
-```
-p You have been to this page #{views} times.
-```
-
-***EJS***
-```
-<p>You have been to this page <%=views%> times.</p>
-```
-
-Now, using the instructions in the video above, **do the following**:
-
-- Using `res.clearCookie()`, create a route, and link on the homepage, that clears that cookie, then redirects the user back to the homepage.
-
-- Upgrade your cookies to be more secure, by ensuring they are *signed*, *secure*, and *http only*.
-
-
-#### Resources
-
-- https://en.wikipedia.org/wiki/HTTP_cookie
-- https://www.npmjs.com/package/cookie
-
 
 ## Video #4 - Sessions
 
 <iframe src="https://player.vimeo.com/video/141306923?byline=0&portrait=0" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-
-Now we're going to use the techniques described in the above video to use sessions instead of cookies.
-
-Open up the project we generated after the Cookies video.
-
-First, `npm install cookie-session`. Then require it in your `app.js` file.
-
-* Put the `cookieSession` middleware in your app.
-* Configure the `cookieSession` middleware by giving it a `name` key, and adding some keys to the `keys` array.
-* Change all references to `req.cookies` or `res.setCookie()` to use the `req.session` object instead.
-* Get your keys from your `.env` file, instead of comitting them to your code.
-
-
-#### Resources
-
-Generating random strings in Node:
-
-```
-node -e "require('crypto').randomBytes(48, function(ex, buf) { console.log(buf.toString('hex')) });"
-```
-
-- [Cookie Sessions](https://github.com/expressjs/cookie-session)
-
-## Examples
-
-[Form-based Authentication with `pg` and `knex`](https://github.com/gSchool/form-auth-with-express-knex-pg-bcrypt/)
-
-
-## Assignment
-This assignment should take you about 2 hours to complete.  
-
-[Express Authentication with Forms](https://github.com/gSchool/authentication-in-express)
-
-## Reflect
-
-### Self-Assessment
-
-How’d you do? Go back to the "Objectives" section. Go through each one and ask yourself:
-
-- Have I completed this objective?
-- What concrete evidence do I have that I've completed the objective?
-
-Rate yourself 1 through 4 for each objective in terms of competence (4 being the highest). If you rate yourself a 2 or below, please notify an instructor for additional help.
-
-Go to the "Key Terms" section.  For each term, ask yourself:
-
-- What is my explanation for this term?
-
-If you haven't completed an objective, or you can't define a term, take a few minutes to try to fill in any gaps.
