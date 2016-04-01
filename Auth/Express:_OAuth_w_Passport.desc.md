@@ -100,6 +100,7 @@ Next, create a routes file called `auth.js` and import it in `app.js`.
 #### auth.js
 ```javascript
 var express = require('express');
+var passport = require('passport');
 var router = express.Router();
 
 router.get('/linkedin',
