@@ -10,7 +10,7 @@ First, let's learn how to instantiate a new Promise:
 
 ```javascript
 new Promise(executor);
-new Promise(function (resolve, reject) {
+new Promise((resolve, reject) => {
   // code that includes a 'resolve' and a 'reject'
 });
 ```
@@ -23,8 +23,8 @@ These two arguments are functions which tell the promise how it should branch an
 
 ```javascript
 var myNum = 10;
-var promise = new Promise(function (resolve, reject) {
-  if ( myNum % 2 === 0 ) {
+var promise = new Promise((resolve, reject) => {
+  if (myNum % 2 === 0) {
     resolve('even');
   } else {
     reject('odd');
@@ -46,24 +46,24 @@ promise;
 In the previous step, you should have gotten the following:
 
 ```javascript
-> var myNum = 10;
-> var promise = new Promise(function (resolve, reject) {
-...   if ( myNum % 2 === 0 ) {
-.....     resolve('even');
-.....   } else {
-.....     reject('odd');
-.....   }
-... });
-> promise
-Promise { 'even' }
+var myNum = 10;
+var promise = new Promise((resolve, reject) => {
+  if (myNum % 2 === 0) {
+    resolve('even');
+  } else {
+    reject('odd');
+  }
+});
+
+promise
 ```
 
 While the calculation happened correctly, the result is still a Promise. In order to return the value, we'll need to call `.then()` with the appropriate arguments. First though, let's create a function that will allow for us to dynamically set the variable we'll be checking for odd and even.
 
 ```javascript
-var evenPromise = function (num) {
-  return new Promise(function (resolve, reject) {
-    if ( num % 2 === 0 ) {
+var evenPromise = num => {
+  return new Promise((resolve, reject) => {
+    if (num % 2 === 0) {
       resolve('even');
     } else {
       reject('odd');
@@ -91,8 +91,8 @@ While we can now dynamically change the number being evaluated, it's still wrapp
 In order to get the first test inside of `spec/example.spec.js` to pass, you may have created a function like this one:
 
 ```javascript
-function simplePromise (bool) {
-  return new Promise(function (resolve, reject) {
+function simplePromise(bool) {
+  return new Promise((resolve, reject) => {
     bool ? resolve('OK') : reject('BAD');
   }).then(function (result) {
     return result;
@@ -103,12 +103,12 @@ function simplePromise (bool) {
 However, if we wanted to get the first _two_ tests to pass, we could do the following:
 
 ```javascript
-function simplePromise (bool) {
-  return new Promise(function (resolve, reject) {
+function simplePromise(bool) {
+  return new Promise((resolve, reject) => {
     bool ? resolve('OK') : reject('BAD');
-  }).then(function (result) {
+  }).then(result => {
     return result;
-  }, function (result) {
+  }, result => {
     return result;
   });
 };
@@ -119,13 +119,13 @@ In this example, `.then()` comes with two functions -- the first one gets called
 If we were to include the code from the test, the full Promise would look like this:
 
 ```javascript
-return new Promise(function (resolve, reject) {
+return new Promise((resolve, reject) => {
   bool ? resolve('OK') : reject('BAD');
-}).then(function (result) {
+}).then(result => {
   return result;
-}, function (result) {
+}, result => {
   return result;
-}).then(function (result) {
+}).then(result => {
   // expect(result).toEqual('OK');
 });
 ```
@@ -143,10 +143,10 @@ We are chaining onto our Promise!
 After the last step, you should have gotten something like the following:
 
 ```javascript
-function simplePromise (bool) {
-  return new Promise(function (resolve, reject) {
+function simplePromise(bool) {
+  return new Promise((resolve, reject) => {
     bool ? resolve('OK') : reject('BAD');
-  }).catch(function (result) {
+  }).catch(result => {
     return result;
   });
 };
@@ -157,14 +157,14 @@ Remember, the test has its own `.then()` statement that evaluates the result. In
 To visualize this process, check out this Promises visualizer, [Promisees](http://bevacqua.github.io/promisees/). Copy the following code into the editor:
 
 ```javascript
-new Promise(function (resolve, reject) {
-    // resolve('OK');
-    // reject('BAD');
-  }).catch(function (result) {
-    return result;
-  }).then(function (result) {
-    console.log(result);
-  });
+new Promise((resolve, reject) => {
+  // resolve('OK');
+  // reject('BAD');
+}).catch(result => {
+  return result;
+}).then(result => {
+  console.log(result);
+});
 ```
 
 In the editor, you should see each part of the Promise.
@@ -213,7 +213,7 @@ We're replacing the native Promise with Bluebird's Promise. Try running your tes
 How do you know we're doing anything different though? Try adding the following to the bottom of your `example.js`:
 
 ```javascript
-new Promise(function(resolve, reject) {
+new Promise((resolve, reject) => {
   console.log('A promise.');
   throw 'Boom!';
 });
@@ -255,8 +255,6 @@ We've only skimmed the surface of what is great about Promises. If you feel read
 * [Promises - In Wicked Detail](http://www.mattgreer.org/articles/promises-in-wicked-detail/)
 * [Promises/A+ Standard](https://promisesaplus.com/)
 * [We have a problem with promises](http://pouchdb.com/2015/05/18/we-have-a-problem-with-promises.html)
-
-[[Back](step-5.md)]
 
 * * *
 
