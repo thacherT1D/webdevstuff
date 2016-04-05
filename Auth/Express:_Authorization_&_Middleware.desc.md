@@ -20,6 +20,7 @@ In order to get the most out of this Learning Experience, you'll need to be comf
 
 **Authentication**  
 - This refers to the process by which a server identifies a client.
+
 **Authorization**  
 - This refers to the process by which a server decides what a client can access.
 
