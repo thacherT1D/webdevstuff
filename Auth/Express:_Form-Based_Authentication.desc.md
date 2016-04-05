@@ -165,9 +165,8 @@ Users.authenticateUser = (email, password, callback) => {
     if (!user) {
       return callback("Email and password don't match");
     }
-    bcrypt.compare(password, user.password_digest, function(err, isMatch) {
-      console.log(err);
-      if (err) {
+    bcrypt.compare(password, user.password_digest, (err, isMatch) => {
+      if (err || !isMatch) {
         return callback("Email and password don't match");
       } else {
         return callback(undefined, user);
@@ -177,7 +176,7 @@ Users.authenticateUser = (email, password, callback) => {
 }
 ```
 
-Next up, we will change our `POST /signin` route to utilize this new function:
+Next up, we will change our `POST /signin` route in the `auth.js` file to utilize this new function:
 
 ```javascript
 router.post('/signin', (req, res, next) => {
