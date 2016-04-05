@@ -17,10 +17,6 @@ https://github.com/gSchool/promise-challenges
 
 ## Videos
 
-<div class="alert alert-info">
-  We are currently transitioning this Learning Experience from Mongo to SQL.  Even though these reference Mongo, we recommend using SQL.
-</div>
-
 ### Chained / Nested Promises
 
 When you get to the part about chained promises, you may want to watch the following video several times as you learn more about promises:
