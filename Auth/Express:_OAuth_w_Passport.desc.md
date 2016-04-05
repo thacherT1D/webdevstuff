@@ -194,11 +194,45 @@ Go back to your app.  You see two lines like this:
   clientSecret: LINKEDIN_SECRET,
 ```
 
-LinkedIn just showed you two things, a Client ID and Client Secret.  Nice!  So now you should be able to get past that issue by replacing those placeholder variables with the values from LinkedIn:
+We are going to want to have some reference to those keys there, but we are good people so we know better than to hard code secret keys right into our app like that. Instead we are going to use dotenv.
+
+
+## Get dotenv setup
+
+In case you forgot, here are the steps to getting dotenv setup:
+
+```
+npm install dotenv --save
+touch .env
+echo .env >> .gitignore
+```
+
+Take your client id and client secret listed there on our Linkedin app page and move them to our `.env` file:
+
+```
+LINKEDIN_CLIENT_ID=s0m3Rand0mKey
+LINKEDIN_CLIENT_SECRET=s0m30therRand0mKey
+```
+
+So back to where we had that error that led us down this track, the LinkedInStrategy we were configuring. There we will want to change out the placeholder variables with something to reference those keys in our `.env` file. It should now look like this:
 
 ```js
-  clientID: 'xyzpdq',
-  clientSecret: '18fy34g',
+passport.use(new LinkedInStrategy({
+    clientID: process.env.LINKEDIN_CLIENT_ID,
+    clientSecret: process.env.LINKEDIN_CLIENT_SECRET,
+    callbackURL: "http://localhost:3000/auth/linkedin/callback",
+    scope: ['r_emailaddress', 'r_basicprofile']
+  },
+  function(accessToken, refreshToken, profile, done) {
+    return done(null, profile);
+  }
+));
+```
+
+One last step, and that's to require and load dotenv:
+
+```js
+require('dotenv').load()
 ```
 
 If you visit your homepge in the browser, you should see that the homepage works fine - no errors.  Sweet - cross that off your notecard.
@@ -242,8 +276,8 @@ Search your codebase (in Atom it's CMD+Shift+F to find all in project).  You sho
 
 ```js
 passport.use(new LinkedInStrategy({
-  clientID: '783kvb1wqz3qbo',
-  clientSecret: 'Lq9K44iUNXVHTiUX',
+  clientID: process.env.LINKEDIN_CLIENT_ID,
+  clientSecret: process.env.LINKEDIN_CLIENT_SECRET,
   callbackURL: "http://127.0.0.1:3000/auth/linkedin/callback",
   //...
 ```
@@ -254,8 +288,8 @@ You put `localhost:3000` there as well.  So let's update our LinkedInStrategy to
 
 ```js
 passport.use(new LinkedInStrategy({
-  clientID: '783kvb1wqz3qbo',
-  clientSecret: 'Lq9K44iUNXVHTiUX',
+  clientID: process.env.LINKEDIN_CLIENT_ID,
+  clientSecret: process.env.LINKEDIN_CLIENT_SECRET,
   callbackURL: "http://localhost:3000/auth/linkedin/callback",
   //...
 ```
@@ -352,52 +386,7 @@ We're still on "get /auth/linkedin" on the notecard - so check that again.  Did 
 
 Notice in the log (in the terminal) you see `/auth/linkedin/callback?code=AQRbRXNzQ&state=SOME+STATE 302 917.981 ms` - nice!  That looks like a success.
 
-It feels like time to commit, right?  Run a `git diff` to see all of your changes.  Scroll through with arrow keys and use `q` to quit.  What do you notice?  Anything there you don't want to commit?  Can you spot it?
-
-Yup - you have a client id and secret right in your source code.  Before committing, it's important to get rid of that.
-
-## Get dotenv setup
-
-In case you forgot, here are the steps to getting dotenv setup:
-
-```
-npm install dotenv --save
-touch .env
-echo .env >> .gitignore
-```
-
-Take your client id and client secret and move them to your `.env` file:
-
-```
-LINKEDIN_CLIENT_ID=abc123
-LINKEDIN_CLIENT_SECRET=abc123
-```
-
-Over in `app.js`, don't forget to require and load dotenv:
-
-```js
-require('dotenv').load()
-```
-
-And update your passport configuration to reference those variables:
-
-```js
-// below app.use(passport.session());...
-passport.use(new LinkedInStrategy({
-    clientID: process.env.LINKEDIN_CLIENT_ID,
-    clientSecret: process.env.LINKEDIN_CLIENT_SECRET,
-    callbackURL: "http://localhost:3000/auth/linkedin/callback",
-    scope: ['r_emailaddress', 'r_basicprofile']
-  },
-  function(accessToken, refreshToken, profile, done) {
-    done(null, {id: profile.id, displayName: profile.displayName, token: accessToken})
-  }
-));
-```
-
-Visit /auth/linkedin to make sure everything still works.
-
-Phew!  NOW you are ready to commit.  It's been a while.  Add commit and push.
+It's been a while. Add commit and push.
 
 ## We should probably deploy
 
