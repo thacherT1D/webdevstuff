@@ -3,9 +3,10 @@
 ## Objectives
 
 * Explain why storing a password in plain text is never acceptable and highly dangerous
-* Understand what hashing and salting are	
+* Describe what hashing and salting are	
 * Explain how salting protects from lookup/dictionary table attacks
 * Store passwords securely using the bcrypt module
+* Utilize sessions to persist logged in user data
 
 #### Storing passwords
 
