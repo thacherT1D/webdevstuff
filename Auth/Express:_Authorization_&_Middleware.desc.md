@@ -11,17 +11,17 @@ In order to get the most out of this Learning Experience, you'll need to be comf
 
 ### Objectives
 
-* Use application-level middleware to redirect all unauthenticated requests to all routes that appear "after" that middleware
-* Use middleware sub-stacks to redirect all unauthorized requests to all routes that use that middleware
-* Describe what Express middleware is and how next() works
-* Draw a middleware chain when given an express app (including both application-level and route-level middleware)
+1. Use application-level middleware to redirect all unauthenticated requests to all routes that appear "after" that middleware.
+1. Use middleware sub-stacks to redirect all unauthorized requests to all routes that use that middleware.
+1. Describe what Express middleware is and how next() works.
+1. Draw a middleware chain when given an express app (including both application-level and route-level middleware).
 
 ### Key Terms
 
 **Authentication**  
-This refers to the process by which a server identifies a client
+- This refers to the process by which a server identifies a client.
 **Authorization**  
-This refers to the process by which a server decides what a client can access
+- This refers to the process by which a server decides what a client can access.
 
 ### Overview
 This learning experience should prepare you to provide fine-grained access control to clients, and organize your authentication and authorization code.
@@ -252,4 +252,3 @@ router.get('/other', function f4 (req, res, next) {
 ## Resources
 
 * http://alexperry.io/javascript/2015/08/06/what-is-express-middleware.html
-
