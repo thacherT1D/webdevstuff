@@ -221,7 +221,7 @@ Try commenting out the require statement for Bluebird and re-running the file. T
   Error during the promise chain: Boom!
   ```
 1. Check out [Promise.method](http://bluebirdjs.com/docs/api/promise.method.html).
-  * Rewrite `simplePromise()` using `Promise.method`.
+  * Rewrite `simplePromise()` using `Promise.method`. Throwing an exception from a `Promise.method` will work very similarly to rejecting, it's another nice part of utilising Promise wrappers. You don't have to worry about code you call throwing errors, because it will automatically get wrapped up as a rejection.
 
 # Review
 
