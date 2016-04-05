@@ -100,7 +100,7 @@ We'll be using a LinkedIn strategy that isn't listed there.  The docs are here h
 
 In their [usage](https://github.com/auth0/passport-linkedin-oauth2#usage) section, they talk about how to configure the app.  It starts with this line:
 
-```
+```js
 var LinkedInStrategy = require('passport-linkedin-oauth2').Strategy;
 ```
 
@@ -110,11 +110,16 @@ If you've just been following these instructions, it will error out.  The error 
 
 You haven't installed the package yet.  That's easy:
 
-```
+```bash
 npm install passport-linkedin-oauth2 --save
 ```
 
-Restart `nodemon` (it doesn't automatically detect changes to package.json) and reload your page in the browser.  So far so good...
+You can remove the following commented out lines in your `app.js` file related to favicons. Once you remove those you should no longer get a `GET /favicon.ico 404` messages logged in your console.
+
+```js
+// uncomment after placing your favicon in /public
+//app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+```
 
 Back in the [usage](https://github.com/auth0/passport-linkedin-oauth2#usage) section of the 'passport-linkedin-oauth2' docs, it says to add this to your app:
 
