@@ -145,27 +145,19 @@ So go ahead and do that.  Where do you think it should go?  Put it above your ro
 
 Now if you refresh your page, BOOM!  Total blowup.  Look at the terminal - what error do you see?
 
-`ReferenceError: passport is not defined` - hmmm.  That makes sense.  We haven't installed passport.
+`ReferenceError: passport is not defined` - hmmm.  That makes sense.  We haven't defined passport anywhere in our file. Lets define passport uptop and require in the passport module.
 
-You are about to go to a different website to look at different docs.  So you don't forget what you are trying to do here, on a notecard write down "finish configuring passport-linkedin-oauth2 strategy".
-
-Go to the passport docs and see how to install.  On the documentation page, you'll soon find
-
-```
-npm install passport
+```js
+var passport = require('passport')
 ```
 
-Is that line sufficient?  You should have picked up on the fact that you need the `--save` option, so instead of copy-pasting directly, you'll actually run:
+If we look at our server logs in the terminal now we can see it's complaining about not being able to `find module 'passport'`. We can resolve that by executing the following:
 
 ```
 npm install passport --save
 ```
 
-Restart nodemon and see what happens.  `ReferenceError: passport is not defined` - you installed the package, but still need to do one more thing.  What is that?
-
-```
-var passport = require('passport')
-```
+Remember we will want to use the `--save` flag so that passport also gets added into our list of dependences in the package.json file.
 
 Check the terminal again.  You've gotten a different error!
 
