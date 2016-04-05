@@ -18,10 +18,10 @@ In order to get the most out of this Learning Experience, you'll need to be comf
 
 ### Key Terms
 
-**Authentication**  
+**Authentication** (Who are you)
 - This refers to the process by which a server identifies a client.
 
-**Authorization**  
+**Authorization** (What can you access)
 - This refers to the process by which a server decides what a client can access.
 
 ### Overview
@@ -35,9 +35,8 @@ https://github.com/gSchool/express-middleware-practice
 
 <iframe src="https://player.vimeo.com/video/137020748?byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
-Examples from the video:
 
-With Mongo:
+Mongo example from the video:
 
 ```javascript
 router.get('/articles/:id/edit', function(req, res, next){
@@ -51,7 +50,7 @@ router.get('/articles/:id/edit', function(req, res, next){
 });
 ```
 
-With Knex/Postgres:
+The same request using Knex/Postgres:
 
 ```javascript
 router.get('/articles/:id/edit', function(req, res, next){
@@ -248,7 +247,7 @@ router.get('/other', function f4 (req, res, next) {
 <iframe src="https://player.vimeo.com/video/137031433" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 ## Assignments
-* [Express Middlware Practice](https://github.com/gSchool/express-middleware-practice)
+* [Express Middleware Practice](https://github.com/gSchool/express-middleware-practice)
 
 ## Resources
 
