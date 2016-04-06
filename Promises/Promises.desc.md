@@ -177,6 +177,16 @@ Let's add another function, the `reject()` function. It should just reject with 
   * If you get an `Error: Timeout` issue, that's likely because there's no `.catch()` case. Add one so that you still return a number.
   * If you receive an error like this, great job! `Failures ... Expected 30 to equal 50.` Keep the `.then(reject)` call where it is and still get the test to pass by adding more to the chain.
 
+# `Promise.all()`
+
+One incredibly powerful tool in the promises toolkit is [Promise.all()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all). This is a great way to run a handful of asynchronous calls, and wait til they are all finished before you continue execution of your code. An example of where you'd use this is when you need to make multiple API calls to fetch data, and you want to ensure that they all finish before you process the data.
+
+`Promise.all()` accepts an array of promises as it's argument, and once they've all resolved, it will resolve itself with an array of the responses.
+
+To illustrate this point, we've setup a really simple API server that will return some Spotify data (using the Spotify API directly will hit API limits really quickly, so that's why we're doing it this way.)
+
+Pull down this node client here: https://github.com/gSchool/promise-all and let's use this to show the power of `Promise.all()`.
+
 # Bluebird
 
 Having Promises natively supported is great! But more often than not you'll be working with a library to implement Promises. Libraries come with a ton of additional functions and features and are likely faster than ES6's Promises. We're going to use the [Bluebird](http://bluebirdjs.com/docs/why-bluebird.html) Promise library which works just like ES6's Promises. In fact, using it will be a simple copy and paste job!
