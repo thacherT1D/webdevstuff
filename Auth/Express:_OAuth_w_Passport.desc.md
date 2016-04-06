@@ -114,13 +114,6 @@ You haven't installed the package yet.  That's easy:
 npm install passport-linkedin-oauth2 --save
 ```
 
-You can remove the following commented out lines in your `app.js` file related to favicons. Once you remove those you should no longer get a `GET /favicon.ico 404` messages logged in your console.
-
-```js
-// uncomment after placing your favicon in /public
-//app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
-```
-
 Back in the [usage](https://github.com/auth0/passport-linkedin-oauth2#usage) section of the 'passport-linkedin-oauth2' docs, it says to add this to your app:
 
 ```js
