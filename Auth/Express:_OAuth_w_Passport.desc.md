@@ -468,6 +468,26 @@ app.get('/auth/linkedin', passport.authenticate('linkedin'), function(req, res){
 });
 ```
 
+If we try and visit `/auth/linkedin` right now we're going to get an error about sessions: `OAuth 2.0 authentication requires session support when using state. Did you forget to use express-session middleware?`. 
+
+Looks like it wants us to use something called express-session middleware. While that would work we are going to take a different route. Instead we will use something called `cookie-session`. The difference between the two being that express-session will store session data on the server and cookie-session will store it on, well... the cookie.
+
+If we head over to the docs we can see how to set it up. First we'll require it in:
+
+```js
+var cookieSession = require('cookie-session');
+```
+
+Then we'll mount the middleware:
+
+```js
+app.use(cookieSession({
+  name: 'session',
+  keys: [process.env.SESSION_KEY]
+}));
+```
+
+You'll notice we deviate from the docs here a bit using `process.env.SESSION_KEY` rather than hard coding in the keys. Having done this you should know what the next steps here are to get that key to populate.
 
 
 ## Configure the views
