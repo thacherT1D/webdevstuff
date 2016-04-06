@@ -296,11 +296,11 @@ passport.use(new LinkedInStrategy({
 
 Where were we?  Oh right - visiting http://localhost:3000/auth/linkedin
 
-Cool!  It's a new error.  This time it's saying it's a 404 to `/auth/linkedin/callback`.  Let's see what the docs have to say about that.
+With that working now we should make it to Linkedin's authorization interface asking us if we would like to allow our app to access some of our Linkedin info, cool!  If we give it permission it then redirects us back to `localhost:3000/auth/linkedin/callback` and then some query params with a `code` key and some big long string of gibberish and also a `state` key who's value looks like what we put back in our `/auth/linkedin` route.
+
+Makes sense we're getting a 404 here as we don't have a route handling `/auth/linkedin/callback`. This error relates to a linkedin specifc route, so let's go look at the passport-linkedin-oauth2 docs. If we do a search of their docs for "/auth/linkedin/callback" our second hit shows an example of a route handler for `/auth/linkedin/callback`. Since we're getting a 404 that's probably what we're looking for.
 
 ## Configuring the callback route
-
-Over [here](https://github.com/auth0/passport-linkedin-oauth2#usage) notice that the docs show another example, like this:
 
 ```js
 app.get('/auth/linkedin/callback', passport.authenticate('linkedin', {
