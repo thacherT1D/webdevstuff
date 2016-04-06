@@ -493,6 +493,8 @@ app.use(cookieSession({
 
 You'll notice we deviate from the docs here a bit using `process.env.SESSION_KEY` rather than hard coding in the keys. Having done this you should know what the next steps here are to get that key to populate. You can set the value of that key to some random string.
 
+At this point if we try to go to `/auth/linkedin` all should be working again. This will be a good time to commit your changes.
+
 
 ## Configure the views
 
