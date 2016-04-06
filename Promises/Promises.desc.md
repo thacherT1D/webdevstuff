@@ -153,18 +153,14 @@ This can look something like this:
 
 ```javascript
   sum50: val => {
-    return new Promise((resolve, reject) => {
-      module.exports.add10Promise(0).then(val => {
-        return module.exports.add10Promise(val)
-      }).then(val => {
-        return module.exports.add10Promise(val)
-      }).then(val => {
-        return module.exports.add10Promise(val)
-      }).then(val => {
-        return module.exports.add10Promise(val)
-      }).then(val => {
-        resolve(val);
-      });
+    return module.exports.add10Promise(0).then(val => {
+      return module.exports.add10Promise(val)
+    }).then(val => {
+      return module.exports.add10Promise(val)
+    }).then(val => {
+      return module.exports.add10Promise(val)
+    }).then(val => {
+      return module.exports.add10Promise(val)
     });
   }
 ```
