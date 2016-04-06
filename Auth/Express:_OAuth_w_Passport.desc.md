@@ -714,7 +714,7 @@ You know you are successful when your LinkedIn picture appears on the screen.
 
 Name 4 places where you didn't copy/paste from documentation directly.  Notice how rarely you can just copy/paste from documentation and have it *just work*.
 
-# Reflect: Self-asses
+# Reflect: Self-assess
 
 - Check the objectives above.  Have you met each objective?  What evidence do you have of that?
 - Read through the questions at the top and answer them.  Do you feel confident in your answers?
