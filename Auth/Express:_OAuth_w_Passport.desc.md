@@ -175,7 +175,7 @@ Your app is broken right now, and you are about to go off on some other task.  T
 1. Visit https://www.linkedin.com/developer/apps and create a new app
 1. This list of options that fufull their image requirements... http://bit.ly/1UUgU1A
 1. Under website, add your Heroku URL
-1. Fill in all other required fields and submit
+1. Fill in all other required fields and click "Update"
 
 On the "Authentication" screen:
 
