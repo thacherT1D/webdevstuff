@@ -429,7 +429,7 @@ callbackURL: process.env.HOST + "/auth/linkedin/callback",
 
 Now make the necessary changes to .env and set the appropriate environment variable on Heroku.  You can figure this one out on your own :)
 
-NOTE: the HOST variable should _not_ include a trailing slash.  So `https://secure-sands-4512.herokuapp.com` instead of `https://secure-sands-4512.herokuapp.com/`
+NOTE: the HOST variable should _not_ include a trailing slash.  So `https://secure-sands-4512.herokuapp.com` instead of `https://secure-sands-4512.herokuapp.com/`. You may also need to restart your server here.
 
 If you need help, see [here](setting-host.md).
 
