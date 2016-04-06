@@ -463,11 +463,12 @@ passport.use(new LinkedInStrategy({
 and then remove the state object from the call to passport.authenticate:
 
 ```javascript
-app.get('/auth/linkedin',
-  passport.authenticate('linkedin'),
-  function(req, res){
-  });
+app.get('/auth/linkedin', passport.authenticate('linkedin'), function(req, res){
+
+});
 ```
+
+
 
 ## Configure the views
 
