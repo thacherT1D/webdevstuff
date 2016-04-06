@@ -236,6 +236,9 @@ In this first part of the lesson we've learned about basic Promise syntax with E
 We've only skimmed the surface of what is great about Promises. If you feel ready, the super effective [Pokemon API](http://pokeapi.co/) section can give you a greater challenge. For now, take a look at the following resources and exercises to make sure you understand the basics of Promises!
 
 * * *
+##### Exercise
+
+https://github.com/gSchool/promise-challenges/tree/master/01-knex-associations
 
 ##### Extra Resources
 
