@@ -493,7 +493,20 @@ app.use(cookieSession({
 
 You'll notice we deviate from the docs here a bit using `process.env.SESSION_KEY` rather than hard coding in the keys. Having done this you should know what the next steps here are to get that key to populate. You can set the value of that key to some random string. While you're setting that `SESSION_KEY` in your `.env` it would also be a good time to set it on heroku as well.
 
-At this point if we try to go to `/auth/linkedin` all should be working again. This will be a good time to commit your changes.
+At this point if we try to go to `/auth/linkedin` we will be getting a 404 error saying we can't find `/login`. Where in our code are we pointing people at `/login` to have this happen? If we look around we find it in the callback route from linkedin when we have a `failureRedirect`:
+
+```js
+app.get('/auth/linkedin/callback', passport.authenticate('linkedin', {
+  successRedirect: '/',
+  failureRedirect: '/login'
+}));
+```
+
+Two things should probably happen here. First we should probably change that path to the root page as well since that is where our login link is, and second we should realize that we are having a failure here of some sort.
+
+...
+
+All should be working again. This will be a good time to commit your changes.
 
 
 ## Configure the views
@@ -565,7 +578,7 @@ app.configure(function() {
 });
 ```
 
-You saw that before - up above.  Notice that it installs some session middleware, and also `passport.session()`.  Looks like we'll have to do that.  Since we've already used `cookie-session`, install and configure that.  Be sure to store your secrets in `.env` and set those variables on Heroku when you deploy next.
+You saw that before - up above.  Notice that it installs some session middleware, and also `passport.session()`.  Looks like we'll have to do that.
 
 Got `cookie-session` all wired up?  Is it working now?  Sadly no...
 
