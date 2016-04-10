@@ -186,7 +186,7 @@ Today we are focusing on authorization.
 Because of the way that Express manages ordering callbacks it is common to see authorization managed in 2 ways, on the router or as a sub-stack in a specific mount point.
 
 In order to show these 2 patterns, please fork and clone this repo:
-![Express-Middleware-Auth](https://github.com/gSchool/express-middleware-auth)
+[Express-Middleware-Auth](https://github.com/gSchool/express-middleware-auth)
 From the project directory you will need to run:
 
 ```bash
@@ -201,7 +201,7 @@ This should create a functional form-based authentication app that we can set up
 
 Our 3 seeded users emails are `user1@test.com`, `user2@test.com`, and `user3@test.com`. The associated passwords are simply `user1`, `user2`, and `user3`, respectively. Feel free to create your own user if you prefer.
 
-#### Pattern 1: Application- or router-level authorizations
+#### **Pattern 1: Application- and router-level authorizations**
 
 Let's begin by building a router-level authorization. This will ensure that all routes inside the specific router have been authorized. In this case we will ensure that there is a user logged in so they can see the regularStuff page of any user. Insert the following code into the `routes/stuff.js` file below the `const router = express.Router();` but above all the mount points:
 
@@ -217,7 +217,7 @@ router.use((req, res, next) => {
 
 You should find that with this in place, any user can access the stuff routes (`/:id/regularStuff` and `/:id/specialStuff`)if they are signed in.
 
-#### Pattern 2: Sub-stack authorization
+#### **Pattern 2: Sub-stack authorization**
 
 Now lets use another pattern to limit the `/:id/specialStuff` route so only the specifically signed in user can see their specialStuff page. Insert the following code into your `routes/stuff.js` file:
 
