@@ -35,15 +35,15 @@ Below are some examples of next() that you will also see in the video.
 
 ```javascript
 app.use((req, res, next) => {
-	next();
+  next();
 })
 
 app.use((req, res, next) => {
-	res.send("here");
+  res.send("here");
 })
 
 app.use((req, res, next) => {
-	res.send("not here, why not?");
+  res.send("not here, why not?");
 })
 
 ```
@@ -53,7 +53,7 @@ app.use((req, res, next) => {
 ```javascript
 // will apply to 100% of all requests and will pass on with 'next()'
 app.use((req, res, next) => {
-	next();
+  next();
 });
 
 // will only apply to requests to '/about' and will pass on with 'next()'
@@ -63,21 +63,21 @@ app.use("/about", (req, res, next) => {
 
 // will only apply to requests to '/users' and will end with 'res.send()'
 app.use("/users", (req, res) => {
-	res.send("here");
+  res.send("here");
 });
 ```
 
 ```javascript
 app.use('/about', (req, res, next) => {
-	next()
+  next()
 })
 
 app.use('/foo', (req, res, next) => {
-	res.send("not here, why not?")
+  res.send("not here, why not?")
 })
 
 app.use('/about', (req, res, next) => {
-	res.send("here");
+  res.send("here");
 });
 ```
 
@@ -86,49 +86,50 @@ app.use('/about', (req, res, next) => {
 ```javascript
 // will apply to 100% of all requests
 app.use((req, res, next) => {
-	next();
+  next();
 });
 
 // will only apply to POST requests to /about
 app.post("/about", (req, res, next) => {
-	res.send("here");
+  res.send("here");
 });
 
 // will only apply to GET requests to /users
 app.get("/users", (req, res, next) => {
-	res.send("here");
+  res.send("here");
 });
 ```
 
 ```javascript
 app.get('/about', (req, res, next) => {
-	next();
+  next();
 });
 
 app.post('/about', (req, res, next) => {
-	res.send("not here, why not?");
+  res.send("not here, why not?");
 });
 
 app.get('/about', (req, res, next) => {
-	res.send("here");
+  res.send("here");
 });
 ```
 ### Sub-stacks
 
-Each instance of middleware is referred to as a mount point. Here is an example of a mount point:
+Each instance of middleware is attached at a mount point. The mount point defines which routes the middleware is attached to:
 
 ```javascript
 app.get('/home', (req, res, next) => {
-	res.send("app.get is a mount point");
+  res.send("this middleware is mounted to GET requests to '/home'");
 });
 ```
-Each mount point contains one or more callback functions. When there is more than one callback function inside of a mount point, this is referred to as a sub-stack. Sub-stacks are called sequentially using the `next()` function. Here is an example of a sub-stack:
+
+Each mount point contains one or more callback functions. When there is more than one callback function attached at a mount point, this is referred to as a sub-stack. Sub-stacks are called sequentially using the `next()` function. Here is an example of a sub-stack:
 
 ```javascript
 app.get('/home', (req, res, next) => {
   next();
 }, (req, res, next) => {
-	res.send("this function gets called after the first callback");
+  res.send("this function gets called after the first callback");
 });
 ```
 
@@ -136,7 +137,7 @@ app.get('/home', (req, res, next) => {
 
 ```javascript
 app.get('home', (req, res, next) => {
-	next('route');
+  next('route');
 }, (req, res, next) =>{
   res.send("This callback won't be called as route passes out to the next mount path");
 });
@@ -146,22 +147,25 @@ app.get('home', (req, res, next) => {
 });
 ```
 
+_Any other argument passed to `next()` will be treated as an error. Misspelling 'route' will trigger an error, for example!_
+
 Additionally, externally defined functions can be referenced as sub-stacks. These can provide optional functionality that can be folded into multiple mount points. Here is an example:
 
 ```javascript
 var idChecker = (req, res, next) => {
-  if (req.body.id === '0') {
+  if (req.params.id === '0') {
     res.render('index');
   } else {
     next();
   }
 }
+
 app.get('/:id/home', idChecker, (req, res, next) => {
-  res.send("this function gets called after idChecker if req.body.id is not 0");
+  res.send("this function gets called after idChecker if req.params.id is not 0");
 });
 
 app.get('/:id/profile', idChecker, (req, res, next) => {
-  res.send("this function gets called after idChecker if req.body.id is not 0");
+  res.send("this function gets called after idChecker if req.params.id is not 0");
 });
 ```
 
@@ -179,7 +183,7 @@ Authorization and authentication serve very different functions, but they can be
 **Authorization** (What can you access)
 - This refers to the process by which a server decides what a client can access.
 
-Today we are focusing on authorization.
+Today, we are focusing on authorization.
 
 ### Application-level & sub-stack middleware as authorization
 
@@ -203,7 +207,7 @@ Our 3 seeded users emails are `user1@test.com`, `user2@test.com`, and `user3@tes
 
 #### **Pattern 1: Application- and router-level authorizations**
 
-Let's begin by building a router-level authorization. This will ensure that all routes inside the specific router have been authorized. In this case we will ensure that there is a user logged in so they can see the regularStuff page of any user. Insert the following code into the `routes/stuff.js` file below the `const router = express.Router();` but above all the mount points:
+Let's begin by building a router-level authorization. This will ensure that all routes inside the specific router have been authorized. In this case we will only allow signed in users to see the regularStuff page. Insert the following code into the `routes/stuff.js` file below the `const router = express.Router();` but above all the mount points:
 
 ```javascript
 router.use((req, res, next) => {
@@ -215,7 +219,7 @@ router.use((req, res, next) => {
 });
 ```
 
-You should find that with this in place, any user can access the stuff routes (`/:id/regularStuff` and `/:id/specialStuff`)if they are signed in.
+You should find that with this in place, any user can access the stuff routes (`/:id/regularStuff` and `/:id/specialStuff`) if they are signed in.
 
 #### **Pattern 2: Sub-stack authorization**
 
@@ -235,11 +239,11 @@ Then update your `specialStuff` mount point to include the `myAccountRequired` c
 
 ```javascript
 router.get('/:id/specialStuff', myAccountRequired, (req, res, next) => {
-  res.render('users/specialStuff')
+  res.render('users/specialStuff');
 });
 ```
 
-Now you should find that only the signed in user has authorized access to their specific 'specialStuff' page, while any signed in user is authorized to access any users's regularStuff page. This is the power of authorization and allows developers to provide very specific access.
+Now you should find that the signed in user has authorized access only to their specific 'specialStuff' page, while any signed in user is authorized to access any users's regularStuff page. This is the power of authorization and allows developers to provide very specific access.
 
 ### Final note: Cookies
 
