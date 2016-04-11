@@ -31,7 +31,7 @@ Making a get request is also straight forward:
 
 ```
 var request = require('request-promise');
-request({uri: 'http://stark-mesa-8417.herokuapp.com/'})
+request({uri: 'https://fs-student-roster.herokuapp.com/'})
   .then(function(data) {
     console.log(data);
   })
