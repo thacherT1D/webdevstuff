@@ -120,17 +120,15 @@ The take away is that the node app does not return a response until ```res.send`
 
 ```
 var express = require('express');
-var request = require('request');
+var request = require('request-promise');
 var app = express();
 
 app.get("/", function (req, res) {
-  request.get('http://www.omdbapi.com/?i=tt4331680&plot=short&r=json', function(error, response, body) {
-    if (!error && response.statusCode === 200) {
-      var movieData = JSON.parse(body);
+  request({uri: 'http://www.omdbapi.com/?i=tt4331680&plot=short', json: true})
+    .then(function(movieData) {
       var result = "Title: " + movieData.Title + "<br>" + "Year: " + movieData.Year + "<br>";
       res.send(result);
-    }
-  });
+    });
 });
 
 app.listen(3000, function () {
@@ -142,22 +140,18 @@ This code is a little problematic though.  If we get a non 200 response, we neve
 
 ```
 var express = require('express');
-var request = require('request');
+var request = require('request-promise');
 var app = express();
 
 app.get("/", function (req, res) {
-  request.get('http://www.omdbapiii.com/?i=tt4331680&plot=short&r=json', function(error, response, body) {
-    if (error) {
-      res.status(500).send("You got an error - " + error);
-    } else if (!error && response.statCode >= 300) {
-      res.status(500).send("Something went wrong! Status: " + response.statusCode);
-    } 
-    if (!error && response.statusCode === 200) {
-      var movieData = JSON.parse(body);
+  request({uri: 'http://www.omdbapi.com/?i=tt4331680&plot=short', json: true})
+    .then(function(movieData) {
       var result = "Title: " + movieData.Title + "<br>" + "Year: " + movieData.Year + "<br>";
-      res.send(result); 
-    }
-  });
+      res.send(result);
+    })
+    .catch(function(err) {
+      res.send('Sorry there was an error: ', err);
+    });
 });
 
 app.listen(3000, function () {
