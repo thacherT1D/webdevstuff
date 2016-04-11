@@ -4,7 +4,7 @@ This learning experience should prepare you to use middleware to provide fine-gr
 ## Objectives
 
 1. Describe what Express middleware is and how next() works.
-1. Use application-level middleware to redirect all unauthenticated requests to all routes that appear "after" that middleware.
+1. Use application-level middleware to redirect all unauthenticated and unauthorized requests to all routes that appear "after" that middleware.
 1. Use middleware sub-stacks to redirect all unauthorized requests to all routes that use that middleware.
 
 ### What is Express middleware and how does `next()` work?
