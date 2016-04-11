@@ -16,13 +16,13 @@ __Questions for the class__
 * What are some other examples of APIs that you'd prefer on the server side?
 * Define __Service Oriented Architecture__
 
-### Request Module
-[NPM request](https://www.npmjs.com/package/request)
+### Request Promise Module
+[NPM request-promise docs](https://www.npmjs.com/package/request-promise)
 
-The request module allows us to make server side HTTP requests.  Installing the request module into your node app is the same as always:
+The request-promise module allows us to make server side HTTP requests.  Installing the request-promise module into your node app is the same as always:
 
 ```
-npm install --save request
+npm install --save request-promise
 ```
 
 #### GET Requests
@@ -30,36 +30,23 @@ npm install --save request
 Making a get request is also straight forward:
 
 ```
-var request = require('request');
-request('http://stark-mesa-8417.herokuapp.com/', function (error, response, body) {
-  if (error) {
-	console.log("Error!  Request failed - " + error);
-  } else if (!error && response.statusCode === 200) {
-	console.log(body);
-  }
-});
+var request = require('request-promise');
+request({uri: 'http://stark-mesa-8417.herokuapp.com/'})
+  .then(function(data) {
+    console.log(data);
+  })
+  .catch(function(err) {
+    console.log(err);
+  });
 ```
-This will default to making a get request to the student roster app we used before.  We can also specify that the request is a get to be a little more clear.  This is preferred for readability:
-
-
-```
-var request = require('request');
-request.get('http://stark-mesa-8417.herokuapp.com/', function (error, response, body) {
-  if (error) {
-	console.log("Error!  Request failed - " + error);
-  } else if (!error && response.statusCode === 200) {
-	console.log(body);
-  }
-});
-```
-
+This will default to making a get request to the student roster app we used before. 
 ---
 
 #### Exercise
 
 Make 2 simple apps with node:
 
-1. A app that simply makes a get request to the [student roster page](https://fs-student-roster.herokuapp.com/) by default and console logs the body of the response. However, if the user specifies a `command line argument` for a url, the app should make a request to the specified url instead.
+1. An app that simply makes a get request to the [student roster page](https://fs-student-roster.herokuapp.com/) by default and console logs the body of the response. However, if the user specifies a `command line argument` for a url, the app should make a request to the specified url instead.
 
 2. Write a node app that takes a imdb id as a command line argument and then makes a get request to the [OMDB api](http://www.omdbapi.com/) for details about that movie.  
 
