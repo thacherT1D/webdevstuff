@@ -94,7 +94,7 @@ request(options)
 
 #### Exercise
 
-Follow the steps at the [google url shortener api docs](https://developers.google.com/url-shortener/v1/getting_started#APIKey) to get your own api key.  Look at the docs and figure out the requirements for making a url shortening request.  Write a node app that takes a url on the command line and shortens it. The app should console log the shortened url.  Take note of what type of object the body is when you get it back.
+Follow the steps at the [google url shortener api docs](https://developers.google.com/url-shortener/v1/getting_started#APIKey) to get your own api key. When creating an API key there will be a field for providing an IP address which you do not need to fill in.  Look at the docs and figure out the requirements for making a url shortening request.  Write a node app that takes a url on the command line and shortens it. The app should console log the shortened url.  Take note of what type of object the body is when you get it back.
 
 ## Request Module With Express
 
