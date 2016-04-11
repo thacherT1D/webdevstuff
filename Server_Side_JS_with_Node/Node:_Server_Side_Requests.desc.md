@@ -71,7 +71,7 @@ node app.js tt3899796
 The request module provides a ```.post``` convenience method as well, but the easiest way to use post and specify json data is to use an options hash as a parameter to post.  Here is an example:
 
 ```
-var request = require('request');
+var request = require('request-promise');
 var data = {name: 'Baxster',
             hobby: 'Surviving being thrown off bridges',
             avatar: 'http://cdn.bleedingcool.net/wp-content/uploads/2013/11/baxter-600x354.jpg'};
@@ -79,19 +79,17 @@ var data = {name: 'Baxster',
 var options = {
   uri: 'https://fs-student-roster.herokuapp.com/',
   method: 'POST',
-  json: data,
+  json: true,
+  body: data
 };
 
-request(options, function (error, response, body) {
-  if (error) {
-    console.log(error);
-  } else if (!error && response.statusCode >= 400) {
-    console.log(response.statusCode);
-    console.log(body);
-  } else if (!error && response.statusCode === 200) {
-    console.log('Success!');
-  }
-});
+request(options)
+  .then(function(parsedBody) {
+    console.log(parsedBody);
+  })
+  .catch(function(err) {
+    console.log(err);
+  });
 ```
 
 #### Exercise
