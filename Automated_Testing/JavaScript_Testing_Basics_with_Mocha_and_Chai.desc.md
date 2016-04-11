@@ -1,13 +1,6 @@
 # Testing with Mocha - a primer
 
-[Slides here](https://docs.google.com/presentation/d/1E1Lskrk6hfJHzkBNwRmySg2X0m8nmKKTQN4w4tupYww/edit?usp=sharing)
-
-Let's learn to test code with [Mocha](https://mochajs.org/), Mocha is a feature-rich JavaScript test framework.
-
-1. [Overview](#overview)
-1. [Setup](#setup)
-1. [Discussion](#discussion)
-1. [Reflect](#reflect)
+Let's learn to test code with [Mocha](https://mochajs.org/), Mocha is a feature-rich JavaScript test runner.
 
 ## Overview
 
@@ -27,17 +20,52 @@ Read more [here](http://stackoverflow.com/questions/67299/is-unit-testing-worth-
 ### Objectives
 
 - Discuss the benefits of testing. How does it help developers do their job more effectively?
+- Describe TDD and BDD
 - Write tests for existing code.
-- Write code to pass a given set of tests.
-- Write tests and code that passes those tests.
+- Write tests and code using a red / green / refactor workflow.
 
-### Key terms
+# Software Testing
 
-- Mocha
-- Chai
-- Test
-- Suite
-- Expectation
+## Why do we do testing?
+
+![testing](http://i.giphy.com/13HgwGsXF0aiGY.gif)
+
+**Proper testing in software development is not just about helping put out fires.**
+
+### What is Test-driven Development(TDD)?
+
+	The Test-driven development flow involves:
+	
+	Write the test
+	Watch it fail
+	Write some code
+	Watch it pass
+	Refactor your code
+	Repeat!
+	
+### What is Behavioral Driven Development(BDD)?
+
+BDD is TDD done correctly.  It means testing that the product follows behavioral specifications, and not testing low level functions that may or may not affect the overall product.
+
+You may encounter these terms on the job:
+
+ **Unit tests -**  Low level tests to check functionality of classes, methods, or functions.  So far we have been running unit tests on small examples using ***Jasmine*** or ***RSpec***. Unit tests run fast!  This is our primary focus today!
+
+ **Acceptance/Feature tests -** High level tests conducted to make sure all requirements are met.  In Rails we will use the testing tools ***RSpec*** and ***Capybara*** to run acceptance tests.  Acceptance tests run slow!
+
+**Integration / functional / service-level testing -** Testing between unit and acceptance tests.  In most cases this will involve testing RESTful APIs.  Don't worry about this one too much right now!
+
+**User Story - ** Plain English description of what the user does and why.
+
+> User stories follow formats such as:
+> As a **[role]** I want **[feature]** so that **[benefit]**
+> As an **admin** I want to be able to **modify everyone's profile** so that I can **ensure consistency**
+
+![testing pyramid](http://blog.codeclimate.com/images/posts/rails-testing-pyramid.png)
+(source:http://blog.codeclimate.com/images/posts/rails-testing-pyramid.png)
+
+
+
 
 ## Setup
 
