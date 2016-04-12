@@ -262,7 +262,7 @@ We now have a passing test!
 Create a new directory in your workspace called leapYear.
 Follow the same steps as above to create the test.js, main.js, npm init and install chai.
 
-Give the following tax system, what kind(s) of tests can we write?
+Given the following rules for leap years what kind(s) of tests can we write?
 
 1. every year whose number is perfectly divisible by four is a leap year.
 1. except for years which are both divisible by 100 and not divisible by 400.
