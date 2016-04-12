@@ -39,7 +39,9 @@ request({uri: 'https://fs-student-roster.herokuapp.com/'})
     console.log(err);
   });
 ```
+
 This will default to making a get request to the student roster app we used before. 
+
 ---
 
 #### Exercise
@@ -72,9 +74,12 @@ The request module provides a ```.post``` convenience method as well, but the ea
 
 ```
 var request = require('request-promise');
-var data = {name: 'Baxster',
-            hobby: 'Surviving being thrown off bridges',
-            avatar: 'http://cdn.bleedingcool.net/wp-content/uploads/2013/11/baxter-600x354.jpg'};
+
+var data = {
+  name: 'Baxster',
+  hobby: 'Surviving being thrown off bridges',
+  avatar: 'http://cdn.bleedingcool.net/wp-content/uploads/2013/11/baxter-600x354.jpg'
+};
 
 var options = {
   uri: 'https://fs-student-roster.herokuapp.com/',
