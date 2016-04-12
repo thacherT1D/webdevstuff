@@ -88,7 +88,7 @@ Create a new directory called "test-basics". CD into it, and then create a subdi
 Initialize npm (press return multiple times to confirm the defaults).
 
   ```sh
-  $ npm init
+  $ npm init -y
   ```
 
 Install the [chai](http://chaijs.com/guide/) expectation library locally:
@@ -273,7 +273,7 @@ Give the following tax system, what kind(s) of tests can we write?
 Create a new directory in your workspace called taxCalculator.
 Follow the same steps as above to create the test.js, main.js, npm init and install chai.
 
-Give the following tax system, what kind(s) of tests can we write?
+Given the following tax system, what kind(s) of tests can we write?
 
 1. The first $10 is taxed at 10%
 1. The second $10 is taxed at 7%
