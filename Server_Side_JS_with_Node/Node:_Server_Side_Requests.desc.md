@@ -30,8 +30,8 @@ npm install --save request-promise
 Making a get request is also straight forward:
 
 ```
-var request = require('request-promise');
-request({uri: 'https://fs-student-roster.herokuapp.com/'})
+var rp = require('request-promise');
+rp({uri: 'https://fs-student-roster.herokuapp.com/'})
   .then(function(data) {
     console.log(data);
   })
@@ -73,7 +73,7 @@ node app.js tt3899796
 The request module provides a ```.post``` convenience method as well, but the easiest way to use post and specify json data is to use an options hash as a parameter to post.  Here is an example:
 
 ```
-var request = require('request-promise');
+var rp = require('request-promise');
 
 var data = {
   name: 'Baxster',
@@ -88,7 +88,7 @@ var options = {
   body: data
 };
 
-request(options)
+rp(options)
   .then(function(parsedBody) {
     console.log(parsedBody);
   })
@@ -125,11 +125,11 @@ The take away is that the node app does not return a response until ```res.send`
 
 ```
 var express = require('express');
-var request = require('request-promise');
+var rp = require('request-promise');
 var app = express();
 
 app.get("/", function (req, res) {
-  request({uri: 'http://www.omdbapi.com/?i=tt4331680&plot=short', json: true})
+  rp({uri: 'http://www.omdbapi.com/?i=tt4331680&plot=short', json: true})
     .then(function(movieData) {
       var result = "Title: " + movieData.Title + "<br>" + "Year: " + movieData.Year + "<br>";
       res.send(result);
@@ -145,11 +145,11 @@ This code is a little problematic though.  If we get a non 200 response, we neve
 
 ```
 var express = require('express');
-var request = require('request-promise');
+var rp = require('request-promise');
 var app = express();
 
 app.get("/", function (req, res) {
-  request({uri: 'http://www.omdbapi.com/?i=tt4331680&plot=short', json: true})
+  rp({uri: 'http://www.omdbapi.com/?i=tt4331680&plot=short', json: true})
     .then(function(movieData) {
       var result = "Title: " + movieData.Title + "<br>" + "Year: " + movieData.Year + "<br>";
       res.send(result);
