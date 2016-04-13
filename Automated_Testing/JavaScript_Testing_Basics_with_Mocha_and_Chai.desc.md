@@ -191,6 +191,7 @@ describe("Hello World", () => {
   });
 });
 ```
+
 **What's happening here?**
 
  The test uses JavaScript to test the state of the code being tested via an expectation - test the *expected* state against the *actual* state (the output of the code being tested).
@@ -308,3 +309,13 @@ describe('Tax Calculator', () => {
   });
 });
 ```
+## Integration Testing
+
+Let's walk through the first test in this repository: https://github.com/gSchool/testing-express-with-supertest together, and then you will all work through the remainder of the exercise on your own.
+
+## Resources
+
+- Mocha - https://mochajs.org/
+- Chai - http://chaijs.com/
+- BDD - https://dannorth.net/introducing-bdd/
+- Test first in Express - http://www.ultrasaurus.com/2014/08/test-first-express/
