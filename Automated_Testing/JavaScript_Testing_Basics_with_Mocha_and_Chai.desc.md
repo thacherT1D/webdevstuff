@@ -34,18 +34,24 @@ Read more [here](http://stackoverflow.com/questions/67299/is-unit-testing-worth-
 
 ### What is Test-driven Development(TDD)?
 
-	The Test-driven development flow involves:
-	
-	Write the test
-	Watch it fail
-	Write some code
-	Watch it pass
-	Refactor your code
-	Repeat!
+When practicing TDD, there are a few rules you should abide by. Three, actually. And you can remember them like this:
+
+### Red, Green, Refactor
+
+__1. RED__
+* _Always_ watch a test fail first - otherwise, how do you know you wrote a working test?
+
+__2. GREEN__
+* Write the code to make the test pass
+
+__3. REFACTOR__
+* Ask yourself if you can do it better? Cleaner? If so, refactor the code and run your tests again to ensure you didn't break anything.
+
+This is what __TDD__ means. _Test Driven Development_. It means, that the code you write in your app is all in service of passing a written test. This helps us to only write the code we need, and helps us to stay out of the "rat hole" that can sometimes derail our focus. It ensures that all of your code is tested, and that you're only writing code that's testable.
 	
 ### What is Behavioral Driven Development(BDD)?
 
-BDD is TDD done correctly.  It means testing that the product follows behavioral specifications, and not testing low level functions that may or may not affect the overall product.
+It means testing that the product follows behavioral specifications, and not testing low level functions that may or may not affect the overall product. The tests should read like english descriptions of what's being tested. We'll see some examples of this shortly.
 
 You may encounter these terms on the job:
 
@@ -249,23 +255,6 @@ $ mocha
 ```
 
 We now have a passing test!
-
-# How to Run Tests
-
-When practicing TDD, there are a few rules you should abide by. Three, actually. And you can remember them like this:
-
-### Red, Green, Refactor
-
-__1. RED__
-* _Always_ watch a test fail first - otherwise, how do you know you wrote a working test?
-
-__2. GREEN__
-* Write the code to make the test pass
-
-__3. REFACTOR__
-* Ask yourself if you can do it better? Cleaner? If so, refactor the code and run your tests again to ensure you didn't break anything.
-
-This is what __TDD__ means. _Test Driven Development_. It means, that the code you write in your app is all in service of passing a written test. This helps us to only write the code we need, and helps us to stay out of the "rat hole" that can sometimes derail our focus. It ensures that all of your code is tested, and that you're only writing code that's testable.
 
 ## Exercise: Leap Years
 
