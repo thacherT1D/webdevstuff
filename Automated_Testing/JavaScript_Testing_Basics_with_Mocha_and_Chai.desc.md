@@ -13,7 +13,7 @@ If your codebase is untested then it is **very** difficult to add new features a
 - You don't know if that feature will work or not, and
 - The new feature could break your existing codebase.
 
-Automated tests help minimize these issues, allowing you to safely update your codebase and sleep at night. Unfortunately, many developers don't understand the importance of testing until their application breaks and s/he is up all night trying to fix things.
+Automated tests help minimize these issues, allowing you to safely update your codebase and sleep at night. Unfortunately, many developers don't understand the importance of testing until their application breaks and she is up all night trying to fix things.
 
 Read more [here](http://stackoverflow.com/questions/67299/is-unit-testing-worth-the-effort).
 
@@ -49,23 +49,14 @@ BDD is TDD done correctly.  It means testing that the product follows behavioral
 
 You may encounter these terms on the job:
 
- **Unit tests -**  Low level tests to check functionality of classes, methods, or functions.  So far we have been running unit tests on small examples using ***Jasmine*** or ***RSpec***. Unit tests run fast!  This is our primary focus today!
+ **Unit tests -**  Low level tests to check functionality of classes, methods, or functions.  So far we have been running unit tests on small examples using ***Jasmine*** or ***Mocha***. Unit tests run fast!  This is our primary focus today!
 
- **Acceptance/Feature tests -** High level tests conducted to make sure all requirements are met.  In Rails we will use the testing tools ***RSpec*** and ***Capybara*** to run acceptance tests.  Acceptance tests run slow!
-
-**Integration / functional / service-level testing -** Testing between unit and acceptance tests.  In most cases this will involve testing RESTful APIs.  Don't worry about this one too much right now!
-
-**User Story - ** Plain English description of what the user does and why.
-
-> User stories follow formats such as:
-> As a **[role]** I want **[feature]** so that **[benefit]**
-> As an **admin** I want to be able to **modify everyone's profile** so that I can **ensure consistency**
+ **Acceptance/Feature tests -** High level tests conducted to make sure all requirements are met. These tests are generally run against a browser (either an actual browser, or an emulated browser). Acceptance tests are slow, and tend to be fairly brittle!
+ 
+**Integration / functional / service-level testing -** Testing between unit and acceptance tests. In most cases this will involve testing RESTful APIs.
 
 ![testing pyramid](http://blog.codeclimate.com/images/posts/rails-testing-pyramid.png)
 (source:http://blog.codeclimate.com/images/posts/rails-testing-pyramid.png)
-
-
-
 
 ## Setup
 
@@ -85,7 +76,7 @@ Create a new directory called "test-basics". CD into it, and then create a subdi
   $ mkdir test
   ```
 
-Initialize npm (press return multiple times to confirm the defaults).
+Initialize npm in the `test-basics` directory.
 
   ```sh
   $ npm init -y
@@ -96,6 +87,8 @@ Install the [chai](http://chaijs.com/guide/) expectation library locally:
   ```sh
   $ npm install --save-dev chai
   ```
+  
+__aside__: What does `--save-dev` do? What's different about this vs. using `--save`?
 
 Add node_modules to the .gitignore file:
 
@@ -117,15 +110,19 @@ Try running the tests with the `mocha` command. You should see:
 Add a test file called `test.js` to the `test/` directory and add the following code:
 
   ```javascript
-  var code = require('../main');
-  var expect = require('chai').expect;
+  const code = require('../main');
+  const expect = require('chai').expect;
 
-  describe('', function() {
+  describe('', () => {
     it('');
   });
   ```
 
 Finally, add a `main.js` file to the root directory.
+
+  ```sh
+  $ touch main.js
+  ```
 
 With the setup complete, we can now start writing some tests!
 
@@ -143,30 +140,25 @@ Test time!
 
 Per tradition, let's start with a basic "Hello, World!"
 
-#### Function
-
+#### Function - main.js
 ```javascript
 module.exports = {
-  helloWorld: function () {
+  helloWorld: () => {
   }
 }
 ```
 
-#### Test
+#### Test - test/test.js
 ```javascript
-describe("Hello World", function() {
+describe("Hello World", () => {
   it("should say 'Hello, World!' when ran");
 });
 ```
 
 **What's happening here?**
 
-describe defines a test suite.
-it defines a single test
-
-A suite takes a string that describes what a particular suite is testing.
-
-A test takes a string that describes the functiona
+`describe` defines a test suite. This will help clarify which tests are being run in the output of our test runner.
+`it` defines a single test, and should read like english.
 
 #### Test!
 
@@ -193,9 +185,9 @@ Notice a few things:
 In mocha, any test without a function will be marked as pending. Update to test to run your code and check the output:
 
 ```javascript
-describe("Hello World", function() {
-  it("should say 'Hello, World!' when ran", function() {
-    expect(code.helloWorld()).to.equal("Hello, World!");
+describe("Hello World", () => {
+  it("should say 'Hello, World!' when ran", () => {
+    expect(code.helloWorld()).to.equal('Hello, World!');
   });
 });
 ```
@@ -203,7 +195,7 @@ describe("Hello World", function() {
 
  The test uses JavaScript to test the state of the code being tested via an expectation - test the *expected* state against the *actual* state (the output of the code being tested).
 
- We are using the BDD syntax to.equal More about BDD style [here](http://chaijs.com/api/bdd/);
+ We are using the BDD syntax `to.equal` More about BDD style [here](http://chaijs.com/api/bdd/);
 
  Now run the test:
 
@@ -220,7 +212,7 @@ describe("Hello World", function() {
 
   1) Hello World says "Hello, World!" when ran:
      AssertionError: expected undefined to equal 'Hello, World!'
-      at Context.<anonymous> (test/test.js:6:36)
+      at Context.<anonymous> (test/test.js:6:34)
 
 
 
@@ -236,7 +228,7 @@ Update the helloWorld function in main.js to return 'Hello, World!' and then run
 
 ```js
 module.exports = {
-  helloWorld: function () {
+  helloWorld: () => {
     return 'Hello, World!';
   }
 }
@@ -257,7 +249,7 @@ $ mocha
 
 We now have a passing test!
 
-## Exercise
+## Exercise: Leap Years
 
 Create a new directory in your workspace called leapYear.
 Follow the same steps as above to create the test.js, main.js, npm init and install chai.
@@ -285,19 +277,17 @@ Given the following tax system, what kind(s) of tests can we write?
 Here are a couple tests to get you started:
 
 ```javascript
-var code = require('../main');
-var expect = require('chai').expect;
+const code = require('../main');
+const expect = require('chai').expect;
 
-describe('Tax Calculator', function(){
-
-  it('should tax 10% on the first $10', function() {
+describe('Tax Calculator', () => {
+  it('should tax 10% on the first $10', () => {
     expect(code.calculate(1)).to.equal(0.1);
     expect(code.calculate(10)).to.equal(1);
   });
 
-  it('should tax 7% on the second $10', function(){
+  it('should tax 7% on the second $10', () => {
     expect(code.calculate(15)).to.equal(1.35);
   });
-
 });
 ```
