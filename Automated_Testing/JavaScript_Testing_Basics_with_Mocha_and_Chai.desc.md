@@ -249,6 +249,23 @@ $ mocha
 
 We now have a passing test!
 
+# How to Run Tests
+
+When practicing TDD, there are a few rules you should abide by. Three, actually. And you can remember them like this:
+
+### Red, Green, Refactor
+
+__1. RED__
+* _Always_ watch a test fail first - otherwise, how do you know you wrote a working test?
+
+__2. GREEN__
+* Write the code to make the test pass
+
+__3. REFACTOR__
+* Ask yourself if you can do it better? Cleaner? If so, refactor the code and run your tests again to ensure you didn't break anything.
+
+This is what __TDD__ means. _Test Driven Development_. It means, that the code you write in your app is all in service of passing a written test. This helps us to only write the code we need, and helps us to stay out of the "rat hole" that can sometimes derail our focus. It ensures that all of your code is tested, and that you're only writing code that's testable.
+
 ## Exercise: Leap Years
 
 Create a new directory in your workspace called leapYear.
