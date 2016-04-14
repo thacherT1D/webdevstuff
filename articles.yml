@@ -28,10 +28,10 @@
   :experience_success_criteria: []
 - :subject_uuid: d5947e67-9d70-4e02-ae2a-b3135a9c1667
   :subject_name: Data Structures / Algorithms
-  :uuid: 65df4420-13c6-4567-bbb2-9e64c317ce36
-  :name: Hash Tables
-  :description: "../tmp/curriculum-dump/Data_Structures__Algorithms/Hash_Tables.desc.md"
-  :instructor_notes: "../tmp/curriculum-dump/Data_Structures__Algorithms/Hash_Tables.notes.md"
+  :uuid: af33bee1-749f-4556-887c-339e378874b0
+  :name: Max Heap
+  :description: "../tmp/curriculum-dump/Data_Structures__Algorithms/Max_Heap.desc.md"
+  :instructor_notes: "../tmp/curriculum-dump/Data_Structures__Algorithms/Max_Heap.notes.md"
   :published: true
   :suggested_days: 0.0
   :experience_success_criteria: []
@@ -41,15 +41,6 @@
   :name: Stack and Queue
   :description: "../tmp/curriculum-dump/Data_Structures__Algorithms/Stack_and_Queue.desc.md"
   :instructor_notes: "../tmp/curriculum-dump/Data_Structures__Algorithms/Stack_and_Queue.notes.md"
-  :published: true
-  :suggested_days: 0.0
-  :experience_success_criteria: []
-- :subject_uuid: d5947e67-9d70-4e02-ae2a-b3135a9c1667
-  :subject_name: Data Structures / Algorithms
-  :uuid: da7f1ad6-e0b9-4ca0-8b96-3cb998861f11
-  :name: Depth First Search and Breadth First Search
-  :description: "../tmp/curriculum-dump/Data_Structures__Algorithms/Depth_First_Search_and_Breadth_First_Search.desc.md"
-  :instructor_notes: "../tmp/curriculum-dump/Data_Structures__Algorithms/Depth_First_Search_and_Breadth_First_Search.notes.md"
   :published: true
   :suggested_days: 0.0
   :experience_success_criteria: []
@@ -73,10 +64,28 @@
   :experience_success_criteria: []
 - :subject_uuid: d5947e67-9d70-4e02-ae2a-b3135a9c1667
   :subject_name: Data Structures / Algorithms
-  :uuid: af33bee1-749f-4556-887c-339e378874b0
-  :name: Max Heap
-  :description: "../tmp/curriculum-dump/Data_Structures__Algorithms/Max_Heap.desc.md"
-  :instructor_notes: "../tmp/curriculum-dump/Data_Structures__Algorithms/Max_Heap.notes.md"
+  :uuid: cf6d4d44-3146-48ac-81d1-44cccaa34ddf
+  :name: Quick and Merge Sort
+  :description: "../tmp/curriculum-dump/Data_Structures__Algorithms/Quick_and_Merge_Sort.desc.md"
+  :instructor_notes: "../tmp/curriculum-dump/Data_Structures__Algorithms/Quick_and_Merge_Sort.notes.md"
+  :published: true
+  :suggested_days: 0.0
+  :experience_success_criteria: []
+- :subject_uuid: d5947e67-9d70-4e02-ae2a-b3135a9c1667
+  :subject_name: Data Structures / Algorithms
+  :uuid: 74c48cd8-f527-4515-a23f-f64187860c8c
+  :name: Bubble/Selection/Insertion Sort
+  :description: "../tmp/curriculum-dump/Data_Structures__Algorithms/BubbleSelectionInsertion_Sort.desc.md"
+  :instructor_notes: "../tmp/curriculum-dump/Data_Structures__Algorithms/BubbleSelectionInsertion_Sort.notes.md"
+  :published: true
+  :suggested_days: 0.0
+  :experience_success_criteria: []
+- :subject_uuid: d5947e67-9d70-4e02-ae2a-b3135a9c1667
+  :subject_name: Data Structures / Algorithms
+  :uuid: da7f1ad6-e0b9-4ca0-8b96-3cb998861f11
+  :name: Depth First Search and Breadth First Search
+  :description: "../tmp/curriculum-dump/Data_Structures__Algorithms/Depth_First_Search_and_Breadth_First_Search.desc.md"
+  :instructor_notes: "../tmp/curriculum-dump/Data_Structures__Algorithms/Depth_First_Search_and_Breadth_First_Search.notes.md"
   :published: true
   :suggested_days: 0.0
   :experience_success_criteria: []
@@ -91,19 +100,10 @@
   :experience_success_criteria: []
 - :subject_uuid: d5947e67-9d70-4e02-ae2a-b3135a9c1667
   :subject_name: Data Structures / Algorithms
-  :uuid: cf6d4d44-3146-48ac-81d1-44cccaa34ddf
-  :name: Quick and Merge Sort
-  :description: "../tmp/curriculum-dump/Data_Structures__Algorithms/Quick_and_Merge_Sort.desc.md"
-  :instructor_notes: "../tmp/curriculum-dump/Data_Structures__Algorithms/Quick_and_Merge_Sort.notes.md"
-  :published: true
-  :suggested_days: 0.0
-  :experience_success_criteria: []
-- :subject_uuid: d5947e67-9d70-4e02-ae2a-b3135a9c1667
-  :subject_name: Data Structures / Algorithms
-  :uuid: 74c48cd8-f527-4515-a23f-f64187860c8c
-  :name: Bubble/Selection/Insertion Sort
-  :description: "../tmp/curriculum-dump/Data_Structures__Algorithms/BubbleSelectionInsertion_Sort.desc.md"
-  :instructor_notes: "../tmp/curriculum-dump/Data_Structures__Algorithms/BubbleSelectionInsertion_Sort.notes.md"
+  :uuid: 65df4420-13c6-4567-bbb2-9e64c317ce36
+  :name: Hash Tables
+  :description: "../tmp/curriculum-dump/Data_Structures__Algorithms/Hash_Tables.desc.md"
+  :instructor_notes: "../tmp/curriculum-dump/Data_Structures__Algorithms/Hash_Tables.notes.md"
   :published: true
   :suggested_days: 0.0
   :experience_success_criteria: []
