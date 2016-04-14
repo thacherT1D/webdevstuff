@@ -25,7 +25,7 @@ Let's explore a description of the syntax from the perspective of [how Googlers 
 Some parts of a URL can be understood based on an initil read, such as a query string. However, further elaboration would help with two parts: hostname (with IP address) and protocol. The latter will be discussed during the next section; the former will be discussed now.
 
 #### IP Address
-An IP address determines the location of a machine on a network. This an analogous to how a home can be gound with an address. In regards to the Internet, an IP address takes the form of `XXX.XXX.XXX.XXX`, where each grouping of `XXX` (octet) is a value that is >= `0` && <= `255`. In other words, each octet can be one of 256 values. 
+An IP address determines the location of a machine on a network. This is analogous to how a home can be found with an address. In regards to the Internet, an IP address takes the form of `XXX.XXX.XXX.XXX`, where each grouping of `XXX` (octet) is a value that is >= `0` && <= `255`. In other words, each octet can be one of 256 values. 
 
 #### Domain Name System (DNS)
 The[DNS](http://www.webopedia.com/TERM/D/DNS.html) maps domain names (e.g., `google.com`) to IP addresses (like `216.58.217.46`) for improved user experience--words are easier to remember. In very general terms, a DNS could be conceptualized as a large JavaScript object--keys are the domain names and values are the corresponding IP addresses.
@@ -61,7 +61,7 @@ function handleRequest(req, res) {
 }
 
 // Creates an instance of a server with our callback
-server = http.createServer(handleRequest);
+var server = http.createServer(handleRequest);
 
 // Binds our server to a port, host, and then logs a message
 server.listen(8080, 'localhost', function() {
@@ -69,13 +69,13 @@ server.listen(8080, 'localhost', function() {
 });
 ``` 
 
-To run our server, we need to type in a terminal the command `node` and the file name containing our code:
+To run our server, we need to type into a terminal `node` and the `file_name` containing our code:
 
 ```bash
 node index.js
 ```
 
-Now open a browser to [localhost:8080](http://localhost:8000/).
+Now open a browser to [localhost:8080](http://localhost:8080/).
 
 ##  Describe the Benefit of Routes
 At this moment, our HTTP server has one request handler that handles all incoming requests. Regardless of the URL associated with the request, every response from the server returns a string with the same content: "Cho, I'll take two packets of sugar." 
@@ -83,12 +83,17 @@ At this moment, our HTTP server has one request handler that handles all incomin
 Our web server would become more useful if we could return a response that would correspond to a particular request. We would benefit, in other words, from defining routes that handle specific requests. A route is composed of many things, such as an HTTP verb (e.g., `GET`), and an optional path (`/faq`).
 
 ## Access the components of a URL with the url module
-The infrastructure of the Internet handles the routing of our request from our browser to our server. However, we still need to handle how a request is routed relative to a URL's path and query string. To help us access this information, we can require one of Node's core modules named [`url`](https://nodejs.org/api/url.html):
+The infrastructure of the Internet handles the routing of our request from our browser to our server. However, we still need to handle how a request is routed relative to a URL's path and query string. To help us access this information, we can use our `req` (request) variable. In the code the below, you'll see that we are using `req.url` to check the url of the user request. What can you deduce about `req` based on this syntax? `req` is an object. It's a huge object with tons of information. Since we are calling the `url` property from that object, it makes sense to expect that our `req` object has a `url` property whose value is the user's requested url. Let's take a look.
+
+__NOTICE:__ We are going to `console.log` our `req` argument. You will see that print out in the terminal window where you are running your server. Search through the object and find the property `url` whose value is our request url.
+
+__YOU WILL NEED TO RESTART YOUR SERVER AND REFRESH YOUR PAGE EVERY TIME YOU MAKE CHANGES__ 
 
 ```javascript
 var http = require('http');
 
 function handleRequest(req, res) {
+  console.log(req);
   if (req.url === '/special-message') {
     res.end("You're SPECIAL?!");
   } else if (req.url === '/non-special-message') {
@@ -100,7 +105,7 @@ function handleRequest(req, res) {
 
 var server = http.createServer(handleRequest);
 
-server.listen(8000, function() {
+server.listen(8080, function() {
   console.log("Listening...")
 });
 ```
@@ -109,7 +114,7 @@ Using an `if` statement works for our two routes, but it doesn't scale well if w
 ```javascript
 // routes.js
 
-routes = {
+var routes = {
   '/special-message': function(req, res) {
     res.end("You're SPECIAL");
   },
@@ -119,30 +124,30 @@ routes = {
   }
 };
 
-modules.exports = routes;
+module.exports = routes;
 ```
 
 ```javascript
 // index.js
-var http   = require('http');
+var http = require('http');
 var routes = require('./routes');
 
-var handleRequest = function (req, res) {
+function handleRequest(req, res) {
   if(routes[req.url] === undefined) {
-    routes[req.url](req, res);
-  } else {
     res.end("404, no such route");
-  }
-};
+ } else {
+   routes[req.url](req, res);
+ }
+}
 
 var server = http.createServer(handleRequest);
 
-server.listen(8000, function() {
+server.listen(8080, function() {
   console.log("Listening...");
 });
 ```
 
-If we submit a request to either `localhost:8000/special-message` or `localhost:8000/non-special-message`, we still receive our intended response.
+If we submit a request to either `localhost:8080/special-message` or `localhost:8080/non-special-message`, we still receive our intended response.
 
 ### Exercises: 
 - [Building a simple HTTP server](https://github.com/gSchool/node-http-server-intro).

@@ -28,7 +28,7 @@ Another example, which you haven't been formally introduced, is Ruby, a server-s
 At this moment, I hope we've established that many programming languages have been created with purpose. In this context, we may have introduced into your minds a question: if there are so many languages, then why are we teaching JavaScript? Why not some other language? This is an excellent question; moreover, I have an answer :).
 
 ## 2 of 15: Four Reasons for Teaching JavaScript
-There many reasons for teaching and learning JavaScript; however, most people find the following four reasons to be the most agreeable.
+There are many reasons for teaching and learning JavaScript; however, most people find the following four reasons to be the most agreeable.
 
 ### i) JavaScript is the only language that can be used on every stack of a web-based application:
 Learning each stack--client-side and server-side--with JavaScript decreases the amount of time involved with human context switching. A developer can focus less time, in other words, on the different implementation details of languages and more time on desired functionality. Considering the fundamental differences between a functional language (i.e., JavaScript) and a class-based language (e.g., Ruby), the ability to decrease context switching is invaluable for new developers.
@@ -174,6 +174,7 @@ We'll receive output for just the last line of code. To change this default beha
 3. Wrap each line of code inside of the parens of their own console.log().
 
 Here's the code for the third option:
+
 ```javascript
 console.log(typeof 23);
 console.log(typeof "hi");
@@ -199,7 +200,7 @@ function makeWider() {
   logo.width += 5;
 }
 
-setInterval(makeWider, 41.67)
+setInterval(makeWider, 41.67);
 ```
 
 # 8 of 15: Create expressions with operators

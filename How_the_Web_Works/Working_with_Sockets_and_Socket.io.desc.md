@@ -47,6 +47,10 @@ Somewhere in client code (for example in your layout, or from Angular) add:
   var socket = io();
 </script>
 ```
+## Assignment
+[Assignment Repo](https://github.com/gSchool/web-sockets-curriculum)
+
+
 
 ## Resources
 

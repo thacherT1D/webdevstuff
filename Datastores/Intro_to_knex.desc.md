@@ -1,4 +1,3 @@
-
 <img src="http://knexjs.org/docs/images/knex.png" style="background:white;border:none;width:100%;padding:30px;"/>
 
 The "batteries included" SQL query builder.
@@ -41,7 +40,9 @@ The "batteries included" SQL query builder.
 
 ---
 
-## Examples
+# Examples
+
+---
 
 ### SELECT
 
@@ -62,6 +63,8 @@ insert into "cities" ("name") values ('Denver')
 ```js
 knex('cities').insert({name: 'Denver'})
 ```
+
+---
 
 ### UPDATE
 
@@ -85,12 +88,23 @@ knex('cities').where('id', 1).del()
 
 ---
 
+# Getting Started
+
+---
+
+# NOTE
+
+* Commands beginning with a <span style="color:red">$</span> should be executed from the command line.
+
+---
+
 ## Installing and setting up knex
 
 ```sh
-npm init
-npm install --save pg knex
-knex init
+$ npm init
+$ npm install --save pg knex    #install knex locally
+$ npm install knex -g           #install knex cli globally
+$ knex init                     #create knexfile.js
 ```
 
 ---
@@ -121,17 +135,13 @@ module.exports = {
 
 * Migrations allow for you to define sets of schema changes that modify a database schema
 
-* The migration cli is bundled with the knex install.
-
-```sh
-npm install knex -g
-```
+* The migration cli is bundled with the knex global install.
 
 ---
 
 ## knex migration tool
 
-Create a new migration
+Create a new migration with the name create_albums
 
 ```sh
 knex migrate:make create_albums
@@ -165,13 +175,12 @@ exports.down = function(knex, Promise) {
 ## Create the database
 
 ```sh
-createdb "album-demo"
+$ createdb "album-demo"
 ```
-
-## Update the database with the latest updates
+## Run the latest migrations using the development connection string
 
 ```sh
-knex migrate:latest --env development
+$ knex migrate:latest --env development
 ```
 
 ---
@@ -196,9 +205,17 @@ var config = require('../knexfile.js')[environment];
 module.exports = require('knex')(config);
 ```
 
+* This initializes knex with the connection information obtained from the configuration in knexfile.js for the current environment
+
 ---
 
 ## Use the connection in your routes file
+
+* Create a new file in the routes folder called albums.js
+
+* Require the knex.js file you created
+
+* Create a function Albums that returns a new knex query builder for the albums table
 
 ```js
 var knex = require('../db/knex');
@@ -233,6 +250,8 @@ knex.[methodName]
 ---
 
 # CRUD with knex
+
+Add the following routes to albums.js
 
 ---
 

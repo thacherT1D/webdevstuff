@@ -15,6 +15,7 @@ You must successfully complete a capstone project that adheres to the following 
 * Have some sort of API integration
   * Email, maps, stocks, text messages, physical devices etc...
   * See http://www.programmableweb.com/apis/directory for ideas
+* Incorporate a technology we didn't cover in-depth in class, i.e. reactjs, socket.io
 
 The ideal project has interesting functionality visible to non-logged-in users (easier for employers to see).
 
@@ -48,3 +49,50 @@ You will have 2 full weeks of time dedicated just to building this application (
 **Rationale**
 
 This capstone project will demonstrate your ability to build fullstack applications from start to finish in a fixed amount of time.  You will demo this application at hiring day, and feature it prominently on your resume.
+
+## Excellent Capstone Examples
+
+* My HW App - A platform for teachers and students to connect, share assignments, and track student progress.
+    * http://www.myhwapp.com/
+    * https://github.com/parkerlewis9/myHW_app
+* Death, Be Not Unknown - Access and visualized American mortality statistics from the Center for Disease Control and Prevention (CDC).
+    * http://death-be-not-unknown.herokuapp.com/
+    * https://github.com/kilbergr/MortalityApp
+* Regex.Rocks - Learn regular expressions (regex) with a Mario-esque theme.
+    * http://regex.rocks/
+* Yopics - Topic modeling on Yelp! Reviews.
+    * https://github.com/emoreno619/yelpData
+    * https://yopics.herokuapp.com/
+* Naja Parser - Quickly find the data you need in a large JSON payload.
+    * https://najaparser.herokuapp.com/#/
+* WriTone - Text analysis for teachers and students.
+    * https://writone.herokuapp.com/#/
+* ChaTension - A Chrome extension to create a chat room based on any URL.
+    * https://chatension.herokuapp.com
+
+## Honorable Mentions
+
+* Drone Flyer - Exactly as it sounds.
+    * http://droneflyer.herokuapp.com/
+* Cyber Tanks - A multiplayer game controlled via mobile phone.
+    * cybertanks.herokuapp.com
+* Stash App 
+    * https://stash-it-daily.herokuapp.com/
+    * https://github.com/horndavidg/coffee_bank
+* Endless 3D Runner
+    * https://endless3drunner.herokuapp.com/#/
+* Flashlight Duty
+    * https://flashlightduty.herokuapp.com/#/
+* Puppy Play Date - Find fellow dog owners and arrange play dates.
+    * http://puppyplaydate.co/
+    * https://github.com/roryg11/dog_play_date
+* Re-reddit - Browse Reddit and save links to boards.
+    * http://rereddit.meteor.com/
+* Gray Wolf Story - The story of the Gray Wolf migration
+    * http://graywolfstory.com/
+* Cyvasse - A web app version of a board game described in the Game of Thrones book series.
+    * http://www.cyvasse.io/
+* Congress Connection Project - An interactive network visualization linking senators to the committees on which they sit using APIs from the Sunlight Foundation.
+    * http://ccproject.herokuapp.com/
+* Scapeland - A Collaborative Drawing App
+    * http://scapeland.herokuapp.com/

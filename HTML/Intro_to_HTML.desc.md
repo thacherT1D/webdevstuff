@@ -113,13 +113,15 @@ Here's an example:
 
 You'll note that it's easier to visualize what is contained within what because we're using tabs to indent every time we open up a new tag. This isn't important for the computer to read and render the code you write, it's to make the code easier for a programmer to read and use.  
 This image is how the above HTML can be visualized.
-![credit: http://www.efishdesign.com/tutorials/javascript.php](http://www.efishdesign.com/tutorials/dom-tree.png)
+
+![credit: http://www.efishdesign.com/tutorials/javascript.php](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/1/image-1457591071966.png)
 
 
 ## **Exercise 1** - Our First Page
 
 HTML pages always have the following structure:
 
+- Doctype `<!DOCTYPE html>`
 - HTML `<html>`
  - head `<head>`
 	 - links to CSS stylesheets, some javascript links, meta-data, the `<title>` tag
