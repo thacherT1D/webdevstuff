@@ -8,6 +8,7 @@
 - Objective 2
 - Objective 3
 
+
 ### Daily Plan
 
 #### Stand Up (9:00am to 9:10am)
