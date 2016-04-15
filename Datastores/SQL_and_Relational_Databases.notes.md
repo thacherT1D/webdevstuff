@@ -4,6 +4,10 @@
 * [Danny - Postgres/psql](https://docs.google.com/presentation/d/1jlaTZqUeNDk_GvHMS5cqaoQgS03Ocj4t__jQsFHkqrs/edit?usp=sharing)
 * [Tyler - Join & Join Types](http://slides.com/tylerbettilyon/jointypes/)
 
+# Links
+
+* https://modern-sql.com/use-case/literate-sql
+
 # Exercise
 Here's one exercise for students.  Give them these instructions.
 
@@ -30,3 +34,7 @@ Insert some appearances such that:
 - with a single query show all the movies a specific actor has been in
 - show all actors who have not starred in movies
 - show all movies who have no actors associated with them
+
+
+# Resources
+- [Stack Exchange Data Explorer (sql interface for SO data)](http://data.stackexchange.com/stackoverflow/query/new)

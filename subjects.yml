@@ -1,59 +1,61 @@
 ---
-- :uuid: d66ac86f-5303-481f-b64d-f9d1894beefe
-  :name: Learning to Learn
-- :uuid: 34bf8b61-2dc7-433a-8e4e-fa06582be259
+- :uuid: 7313b475-d281-4c72-a3b3-1167eb3b13e3
   :name: The Command Line
-- :uuid: 51d9c30f-f5c5-479b-9a7d-b04b3e37c518
+- :uuid: 4298574a-4ac8-4a6b-8195-91c349a04209
   :name: Dev Environment
-- :uuid: 34798e76-3f49-4d0f-9a7d-b38762c691b9
+- :uuid: a7d5be0f-3937-465a-b5e9-b2555642e9d9
   :name: HTML
-- :uuid: 36adeb0c-c5bc-45de-ae4d-6cc6a81197cd
+- :uuid: 0c1be570-48b4-48a8-bc98-7da27a7be512
   :name: CSS
-- :uuid: f902dd0d-2c93-4706-83d2-567752a31988
+- :uuid: 3f805b07-096d-4024-bce2-20b19f92199a
   :name: Version Control (Git and Github)
-- :uuid: 0cfc5800-c6b8-48d1-ac25-bf8878732af2
+- :uuid: ac805334-f3dd-4288-9a61-0dcef3e219d4
   :name: Programming with Javascript
-- :uuid: 3a960bd9-34f6-442e-ac2f-c83d63726eea
-  :name: Thinking Like a Developer
-- :uuid: 768230b2-e624-4815-b0e7-29c398c6e59e
-  :name: Javascript and the DOM
-- :uuid: d9b6b702-189e-472d-b5bf-cfc62cd4dafe
+- :uuid: bcfe422a-cd35-4fd1-8ff8-6b078c476069
+  :name: Javascript and the Browser
+- :uuid: 5ddfa4d5-6194-466b-97aa-f9610b77c493
   :name: JavaScript Object Model
-- :uuid: 8872851b-d144-4d19-80fd-14e2ca18feb9
+- :uuid: 7fb11472-3246-479d-a864-ede3e22c248f
+  :name: Consuming Web APIs
+- :uuid: 793b8c6a-a19d-4049-8183-9d454bf55028
+  :name: Thinking Like a Developer
+- :uuid: 2dc0600d-e1f3-48ff-b241-199ce36fbe3f
   :name: Functional Programming with Javascript
-- :uuid: e8906da2-a006-4313-ac1e-459b13d3e447
+- :uuid: f1a3c137-21bd-4902-a745-44d5ba8f992a
   :name: Design
-- :uuid: bed922ac-3f57-45c2-b2b9-6a51b2023083
+- :uuid: 1762e39b-4a3e-433a-ac68-c815f3ea067b
   :name: How the Web Works
-- :uuid: 7f2e3c5a-f4fe-4ec1-abf6-f57e2ef88b13
+- :uuid: d465e693-2e94-43a2-b99e-bb7283161bc2
   :name: Server Side JS with Node
-- :uuid: 68c522e4-1aa5-48fa-bde9-5619ea7c7986
+- :uuid: bb388526-c903-45a9-afbf-e6dff6f501d1
   :name: Server Side Frameworks with Express
-- :uuid: 78f9e5b5-5a89-4ce2-b993-4af17d620f27
+- :uuid: 49275f51-fb52-4c08-a691-ecbc22f6a2e9
+  :name: Auth
+- :uuid: 412ea142-dd72-4e21-8e52-2bb72ad3e09b
   :name: Promises
-- :uuid: 849b1a02-191a-463f-aa3a-a4efcadeef66
+- :uuid: 2305e956-adeb-49e4-8b0d-2600b10ddfdc
   :name: Datastores
-- :uuid: 97f5bed5-418f-4ad2-b659-1aea931b36db
+- :uuid: 2886a5f1-92f6-44ba-8adb-185b2a161870
   :name: Deployment
-- :uuid: 961546f8-3186-46cf-8201-4b469068fe43
+- :uuid: ce60c0de-9f49-423f-bbbe-7fea0c1b875c
   :name: Architecture
-- :uuid: 674acdc2-2bf2-4b76-9d51-aa3c3810f229
+- :uuid: 39680f2e-8004-4029-a637-1722f5b54625
   :name: UX User Testing
-- :uuid: 9f2a44df-5293-4f98-b717-637fa30e7b3f
+- :uuid: b7090a92-612d-4811-ac2c-8d750e5fab1d
   :name: Client Side Frameworks (Angular)
-- :uuid: 08fffa0f-b2ae-4521-b3d0-e682682a0bdc
+- :uuid: dfec3119-3ba1-4a14-ba2c-9f66715f4b98
   :name: Agile Project Management
-- :uuid: 99e95554-7938-4bb4-af1b-ffbe8b5fec3d
+- :uuid: 0f6ed5e9-c172-4969-b990-f2324c91f5ad
   :name: Designing APIs
-- :uuid: 3589276c-59e9-49bb-a78b-a4384fa5df5e
+- :uuid: 40104e17-a0e4-4bc4-b499-5030c197cb81
   :name: Automated Testing
-- :uuid: bc964825-e8e8-4e2c-a46a-5108e303209c
+- :uuid: a3a04645-41a3-4bb6-89e6-7c9b789a797d
   :name: ES2015
-- :uuid: a4f17ec8-f604-4764-98b7-ee21e53e3f5e
+- :uuid: e43b79ad-875a-4817-8ac0-68f7f47f3b42
   :name: OOP w/ Statically Typed Language
-- :uuid: b9c01cd4-61b4-4a30-9d88-8b6d2e163c51
+- :uuid: d5947e67-9d70-4e02-ae2a-b3135a9c1667
   :name: Data Structures / Algorithms
-- :uuid: 738bb9dd-4374-4c22-a4e5-e57374ad8103
+- :uuid: e59bae37-553b-4c1b-8667-4dbbdeeae98d
   :name: Technical Interview Prep
-- :uuid: 4f89155e-3e0f-4a49-a1ec-27fcd4ab2f10
+- :uuid: 0bef6db4-d566-48c2-a5f5-ff09fce3b846
   :name: Application Analysis in Unfamiliar Environment

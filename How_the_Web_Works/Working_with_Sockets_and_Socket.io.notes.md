@@ -4,6 +4,9 @@ Talk about how sockets create persistent connections.
 
 If HTTP is like sending mail, sockets is like a phone call, where both sides can talk.
 
+## Assignment
+[Assignment Repo](https://github.com/gSchool/web-sockets-curriculum)
+
 ## Lecture on Socket.io
 
 - It has a few different strategies, such as polling and sockets

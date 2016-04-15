@@ -319,3 +319,7 @@ In this example, `printANumber` and `printHello` both act as "callback functions
 # Conclusion
 
 Functions in JavaScript are __very powerful__ and in many ways they are more usable than functions in other languages. That said, many of these topics are complex, and confusing. This high level tour of functions is meant to give you an overview of just what's possible in JavaScript. As we continue towards making real applications, we'll be finding uses for all of these different function styles. For now, make sure you're comfortable with the notion of declaring and calling functions.
+
+## Resources
+
+- http://reactivex.io/learnrx/

@@ -40,4 +40,4 @@ https://github.com/gSchool/bootstrap-challenge is Homework.
 - Angular Material
 
 ## Checks for understanding
-Being able to create a page from a mockup shows they have enough familiarity with the concepts to get a 2, finishing all the mockups shows a 3, a polished design or more is a 4.
+Being able to create a page from a mockup shows they have enough familiarity with the concepts to get a 2, finishing all the mockups shows and a polished design is 3, Using Grunt and getting into the javascript, animations etc or more is a 4.
