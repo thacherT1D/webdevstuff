@@ -76,7 +76,7 @@ This capstone project will demonstrate your ability to build fullstack applicati
     * http://droneflyer.herokuapp.com/
 * Cyber Tanks - A multiplayer game controlled via mobile phone.
     * cybertanks.herokuapp.com
-* Stash App 
+* Stash App
     * https://stash-it-daily.herokuapp.com/
     * https://github.com/horndavidg/coffee_bank
 * Endless 3D Runner
@@ -96,3 +96,13 @@ This capstone project will demonstrate your ability to build fullstack applicati
     * http://ccproject.herokuapp.com/
 * Scapeland - A Collaborative Drawing App
     * http://scapeland.herokuapp.com/
+
+## Projects from competing schools
+
+- http://kevinhamiltonsmith.com/reddit-insight-hack-reactor-group-project/
+- http://www.hackreactor.com/blog/front-page-hacker-news-remote-students-make-documentation-a-cinch
+- http://genomie.herokuapp.com/demo/#/self
+- https://github.com/erabug/wikigraph (Hackbright)
+- https://github.com/DanielleYasso/where-the-truck (Hackbright)
+- https://github.com/jmcelroy5/BikeList (Hackbright)
+- https://github.com/ThunderousFigs/Genomes (Hack Reactor)
