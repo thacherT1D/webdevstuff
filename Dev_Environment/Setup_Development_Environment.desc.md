@@ -1,4 +1,4 @@
-## Welcome to Galvanize!!!
+## Welcome to Galvanize!!
 
 We're super excited to have you here - it's going to be an intense, but incredible 6 months! We'll be posting the majority of our notes in the daily planner, so be sure to check these each day for topics, objectives and assignments.  
 
