@@ -1,145 +1,706 @@
 ---
-- :objective_uuid: 32f99de2-8885-4550-83bb-66fd297a710b
-  :objective_name: Define CORS and explain why CORS restrictions exist
+- :success_criterion_uuid: e8ded5c0-a4fe-4f59-9927-f92cd7558001
+  :success_criterion_name: Access and modify data using common Object and Array methods
+  :uuid: 68f40e3d-1dc3-4e8f-8981-c801310a74e0
+  :question_type: textarea
+  :question: Compare and contrast the push, pop, shift, and unshift methods.
+  :correct_answer: ''
+- :success_criterion_uuid: e8ded5c0-a4fe-4f59-9927-f92cd7558001
+  :success_criterion_name: Access and modify data using common Object and Array methods
+  :uuid: d12df998-2d12-42a3-a20b-f81b3ddc43ad
+  :question_type: text
+  :question: How would you add the name "Bob" to the beginning of an array of names,
+    nameArray?
+  :correct_answer: ''
+- :success_criterion_uuid: e8ded5c0-a4fe-4f59-9927-f92cd7558001
+  :success_criterion_name: Access and modify data using common Object and Array methods
+  :uuid: 48ce4010-84f3-4fae-8ff5-88f3500b00ec
+  :question_type: text
+  :question: How would you add the name "Bob" to the end of an array of names, nameArray?
+  :correct_answer: ''
+- :success_criterion_uuid: e8ded5c0-a4fe-4f59-9927-f92cd7558001
+  :success_criterion_name: Access and modify data using common Object and Array methods
+  :uuid: 2a57bd6c-d05f-47d6-aa91-1287b2e14fc4
+  :question_type: text
+  :question: 'Given the object {key1: "value1", key2: "value2"}, how could you obtain
+    an array of the object''s keys?'
+  :correct_answer: ''
+- :success_criterion_uuid: 9d5a6c2a-ad3e-4e1f-8479-ddf2733ef647
+  :success_criterion_name: Can produce a layout from a mockup
+  :uuid: b2df0f71-8f00-42c2-b18a-0a7bef080417
+  :question_type: text
+  :question: In Boostrap, how do you offset a column?
+  :correct_answer: ''
+- :success_criterion_uuid: 9d5a6c2a-ad3e-4e1f-8479-ddf2733ef647
+  :success_criterion_name: Can produce a layout from a mockup
+  :uuid: f7754e22-1aea-4418-b0fe-ccbbbf8b28a6
+  :question_type: text
+  :question: In Bootstrap, what's the difference between .container and .container-fluid?
+  :correct_answer: ''
+- :success_criterion_uuid: 9d5a6c2a-ad3e-4e1f-8479-ddf2733ef647
+  :success_criterion_name: Can produce a layout from a mockup
+  :uuid: 02d2ff21-93b0-41b8-a668-3edd152c8154
+  :question_type: text
+  :question: By default, how many columns are in Bootstrap's grid system?
+  :correct_answer: '12'
+- :success_criterion_uuid: 9d5a6c2a-ad3e-4e1f-8479-ddf2733ef647
+  :success_criterion_name: Can produce a layout from a mockup
+  :uuid: 3248b924-7966-4190-9e80-13aa8c7c9cb9
+  :question_type: text
+  :question: 'In Bootstrap, there are four families of column classes: .col-lg-*,
+    .col-md-*, .col-sm-*, and .col-xs-*. What''s the difference between them?'
+  :correct_answer: ''
+- :success_criterion_uuid: 9d5a6c2a-ad3e-4e1f-8479-ddf2733ef647
+  :success_criterion_name: Can produce a layout from a mockup
+  :uuid: b37a5027-cb4b-4fcb-8e66-697033b2a3c1
+  :question_type: text
+  :question: In Bootstrap, what happens if the numbers in your column classes add
+    up to more than the number of columns in the grid?
+  :correct_answer: ''
+- :success_criterion_uuid: 924335f6-c536-4c06-9bc1-8612724c448a
+  :success_criterion_name: Clears the stage -- turn off/eliminate potential distractions
+  :uuid: eec73492-2446-4b9d-af3e-85a7c7e8290e
+  :question_type: text
+  :question: What does it mean to 'set the stage'?
+  :correct_answer: ''
+- :success_criterion_uuid: 305d6e83-4cde-48e8-86fb-4a1bf3d9ceeb
+  :success_criterion_name: Construct grammatical javascript statements using values
+    (primitive and reference), operators, literals, and variables
+  :uuid: bfb76d84-40cf-4479-acb5-3ce307dee8d7
+  :question_type: text
+  :question: What is the value of the expression 2 == '2', and why?
+  :correct_answer: true, since 2 and '2' have the same value.
+- :success_criterion_uuid: 305d6e83-4cde-48e8-86fb-4a1bf3d9ceeb
+  :success_criterion_name: Construct grammatical javascript statements using values
+    (primitive and reference), operators, literals, and variables
+  :uuid: 3e47f40a-a03f-4c5b-9e7f-4e41dfd43d3c
+  :question_type: text
+  :question: What is the value of the expression 2 === '2', and why?
+  :correct_answer: false, since 2 and '2' have different types.
+- :success_criterion_uuid: 305d6e83-4cde-48e8-86fb-4a1bf3d9ceeb
+  :success_criterion_name: Construct grammatical javascript statements using values
+    (primitive and reference), operators, literals, and variables
+  :uuid: a0fdb121-644c-4522-b4ea-59e1d988bd0b
+  :question_type: text
+  :question: What is the value of the expression 0 === 0, and why?
+  :correct_answer: true, since 0 has the same type and value as itself.
+- :success_criterion_uuid: 305d6e83-4cde-48e8-86fb-4a1bf3d9ceeb
+  :success_criterion_name: Construct grammatical javascript statements using values
+    (primitive and reference), operators, literals, and variables
+  :uuid: fcad1ad9-d5d5-4129-9295-fe81ec7cc180
+  :question_type: text
+  :question: What is the value of the expression [] === [], and why?
+  :correct_answer: false; the left hand side is a new empty array with its own reference,
+    and the right hand side is a new empty array with its own (distinct) reference.
+- :success_criterion_uuid: 305d6e83-4cde-48e8-86fb-4a1bf3d9ceeb
+  :success_criterion_name: Construct grammatical javascript statements using values
+    (primitive and reference), operators, literals, and variables
+  :uuid: 0decabec-5047-43ff-a65e-251747d2c0b1
+  :question_type: text
+  :question: What are the primitive data types in javascript?
+  :correct_answer: number, boolean, string, null, undefined, symbol
+- :success_criterion_uuid: d587e421-d78b-4605-b0d6-e52cdebb8f9c
+  :success_criterion_name: Define CORS and explain what is a CORS restriction
   :uuid: c10629c6-b0d2-4b5f-b73d-adb62beb7262
   :question_type: text
   :question: What is CORS? What does it enable us to bypass?
   :correct_answer: ''
-- :objective_uuid: 7dc8e60a-bdb8-47b7-b1e5-64b2d9111743
-  :objective_name: Explain how JSONP can be used for services that do not support
-    CORS
-  :uuid: 270a1262-7341-4ead-a2d2-c1919ffc9f04
-  :question_type: textarea
-  :question: What is JSONP? How does it work?
-  :correct_answer: ''
-- :objective_uuid: 7dc8e60a-bdb8-47b7-b1e5-64b2d9111743
-  :objective_name: Explain how JSONP can be used for services that do not support
-    CORS
+- :success_criterion_uuid: 247ca14d-34b1-440d-8d93-48f7d01f82e5
+  :success_criterion_name: Discuss the basic process of committing a file to version
+    control (function of version control)
+  :uuid: 08d49bc2-f988-49aa-bb7b-52e650b1f357
+  :question_type: text
+  :question: How would you stage all changed files?
+  :correct_answer: git add .
+- :success_criterion_uuid: 247ca14d-34b1-440d-8d93-48f7d01f82e5
+  :success_criterion_name: Discuss the basic process of committing a file to version
+    control (function of version control)
+  :uuid: 2423a5b0-4caf-43ad-86c6-6f81c9fce925
+  :question_type: text
+  :question: How do you see what has been changed or changed and staged in a repository?
+  :correct_answer: git status
+- :success_criterion_uuid: 247ca14d-34b1-440d-8d93-48f7d01f82e5
+  :success_criterion_name: Discuss the basic process of committing a file to version
+    control (function of version control)
+  :uuid: 915c5683-68fb-407d-92da-7ed26c063844
+  :question_type: text
+  :question: How do you see a list of all your previous commits?
+  :correct_answer: git log
+- :success_criterion_uuid: 247ca14d-34b1-440d-8d93-48f7d01f82e5
+  :success_criterion_name: Discuss the basic process of committing a file to version
+    control (function of version control)
+  :uuid: 58d83d07-fe6c-431d-90bc-3cb23aa04037
+  :question_type: text
+  :question: How do you upload code in a branch called master to a remote named origin?
+  :correct_answer: git push origin master
+- :success_criterion_uuid: 247ca14d-34b1-440d-8d93-48f7d01f82e5
+  :success_criterion_name: Discuss the basic process of committing a file to version
+    control (function of version control)
+  :uuid: a5e8dc45-2e69-4ac3-a211-9dbdd9526079
+  :question_type: text
+  :question: How do you initialize a git repository (turn a folder into a git repository)?
+  :correct_answer: git init
+- :success_criterion_uuid: 247ca14d-34b1-440d-8d93-48f7d01f82e5
+  :success_criterion_name: Discuss the basic process of committing a file to version
+    control (function of version control)
+  :uuid: 271a0279-1a81-4d5b-9203-564097f85645
+  :question_type: text
+  :question: How would you add a remote name origin, with the url `git@github.com:gschool/gcamp`
+    to your existing git repository?
+  :correct_answer: git remote add origin git@github.com:gschool/gcamp
+- :success_criterion_uuid: 7dc8e60a-bdb8-47b7-b1e5-64b2d9111743
+  :success_criterion_name: Explain how JSONP can be used for services that do not
+    support CORS
   :uuid: 0f514a66-1b17-413f-9705-5ac195acac65
   :question_type: textarea
   :question: Make an AJAX request to "http://itunes.apple.com/search?term=jack+johnson"
     using JSONP
   :correct_answer: ''
-- :objective_uuid: d497abbd-8ec2-4540-81f8-6543951cb3a1
-  :objective_name: Explain key ideas about how Cookies work
-  :uuid: 81b8af5b-f26a-4094-8971-96ff67ee3ee3
-  :question_type: text
-  :question: Can the browser change cookies sent by the server?
-  :correct_answer: 'Yes'
-- :objective_uuid: d497abbd-8ec2-4540-81f8-6543951cb3a1
-  :objective_name: Explain key ideas about how Cookies work
-  :uuid: 4b23298f-5a1b-4121-8324-21dbac5fbcf4
-  :question_type: text
-  :question: What are cookies often used for?
-  :correct_answer: Authentication, or themes, or other per-user settings that affect
-    how the server sends a response
-- :objective_uuid: d497abbd-8ec2-4540-81f8-6543951cb3a1
-  :objective_name: Explain key ideas about how Cookies work
-  :uuid: fda8f5dc-b0c4-4b3f-b4ce-85fb9fd0076e
-  :question_type: text
-  :question: How do you send a cookie over HTTP only?
-  :correct_answer: "{httpOnly: true}"
-- :objective_uuid: d497abbd-8ec2-4540-81f8-6543951cb3a1
-  :objective_name: Explain key ideas about how Cookies work
-  :uuid: 87082f56-af87-404f-b107-d48af439a7ef
-  :question_type: text
-  :question: How do you secure cookies?
-  :correct_answer: "{secure: true}"
-- :objective_uuid: d497abbd-8ec2-4540-81f8-6543951cb3a1
-  :objective_name: Explain key ideas about how Cookies work
-  :uuid: 0801a5ec-aebd-47b4-8526-e3e820aaff29
-  :question_type: text
-  :question: How does a server send a cookie to the browser?
-  :correct_answer: In the header of a response
-- :objective_uuid: d497abbd-8ec2-4540-81f8-6543951cb3a1
-  :objective_name: Explain key ideas about how Cookies work
-  :uuid: ff5d4989-7a7e-45e7-90ed-401d9fc86065
-  :question_type: text
-  :question: How does express set cookies?
-  :correct_answer: Using the cookie-parser middleware, res.cookie.cookieName = expr
-- :objective_uuid: d497abbd-8ec2-4540-81f8-6543951cb3a1
-  :objective_name: Explain key ideas about how Cookies work
+- :success_criterion_uuid: 7dc8e60a-bdb8-47b7-b1e5-64b2d9111743
+  :success_criterion_name: Explain how JSONP can be used for services that do not
+    support CORS
+  :uuid: 270a1262-7341-4ead-a2d2-c1919ffc9f04
+  :question_type: textarea
+  :question: What is JSONP? How does it work?
+  :correct_answer: ''
+- :success_criterion_uuid: d497abbd-8ec2-4540-81f8-6543951cb3a1
+  :success_criterion_name: Explain key ideas about how Cookies work
   :uuid: 05f57459-4198-4399-b1de-d1f9cf68f92d
   :question_type: text
   :question: What are cookies?
   :correct_answer: Cookies allow the server to send per-client information along with
     responses, which will then be sent back for every subsequent request
-- :objective_uuid: d497abbd-8ec2-4540-81f8-6543951cb3a1
-  :objective_name: Explain key ideas about how Cookies work
-  :uuid: 9aac7ce0-98b0-4fd1-a7f9-18ea3d1a0da1
+- :success_criterion_uuid: d497abbd-8ec2-4540-81f8-6543951cb3a1
+  :success_criterion_name: Explain key ideas about how Cookies work
+  :uuid: 87082f56-af87-404f-b107-d48af439a7ef
   :question_type: text
-  :question: How does express read cookies from the browser?
-  :correct_answer: 'req.cookies.cookieName '
-- :objective_uuid: d497abbd-8ec2-4540-81f8-6543951cb3a1
-  :objective_name: Explain key ideas about how Cookies work
+  :question: How do you secure cookies?
+  :correct_answer: "{secure: true}"
+- :success_criterion_uuid: d497abbd-8ec2-4540-81f8-6543951cb3a1
+  :success_criterion_name: Explain key ideas about how Cookies work
+  :uuid: fda8f5dc-b0c4-4b3f-b4ce-85fb9fd0076e
+  :question_type: text
+  :question: How do you send a cookie over HTTP only?
+  :correct_answer: "{httpOnly: true}"
+- :success_criterion_uuid: d497abbd-8ec2-4540-81f8-6543951cb3a1
+  :success_criterion_name: Explain key ideas about how Cookies work
+  :uuid: 4b23298f-5a1b-4121-8324-21dbac5fbcf4
+  :question_type: text
+  :question: What are cookies often used for?
+  :correct_answer: Authentication, or themes, or other per-user settings that affect
+    how the server sends a response
+- :success_criterion_uuid: d497abbd-8ec2-4540-81f8-6543951cb3a1
+  :success_criterion_name: Explain key ideas about how Cookies work
+  :uuid: 81b8af5b-f26a-4094-8971-96ff67ee3ee3
+  :question_type: text
+  :question: Can the browser change cookies sent by the server?
+  :correct_answer: 'Yes'
+- :success_criterion_uuid: d497abbd-8ec2-4540-81f8-6543951cb3a1
+  :success_criterion_name: Explain key ideas about how Cookies work
   :uuid: 798f5580-7ca7-490f-bfd9-e60b2171474d
   :question_type: text
   :question: Are cookies secure by default?
   :correct_answer: 'no'
-- :objective_uuid: 6d6a5fe6-2cce-46bf-ac0a-36d879935a31
-  :objective_name: Fetch and send JSON using jQuery
+- :success_criterion_uuid: d497abbd-8ec2-4540-81f8-6543951cb3a1
+  :success_criterion_name: Explain key ideas about how Cookies work
+  :uuid: 9aac7ce0-98b0-4fd1-a7f9-18ea3d1a0da1
+  :question_type: text
+  :question: How does express read cookies from the browser?
+  :correct_answer: 'req.cookies.cookieName '
+- :success_criterion_uuid: d497abbd-8ec2-4540-81f8-6543951cb3a1
+  :success_criterion_name: Explain key ideas about how Cookies work
+  :uuid: ff5d4989-7a7e-45e7-90ed-401d9fc86065
+  :question_type: text
+  :question: How does express set cookies?
+  :correct_answer: Using the cookie-parser middleware, res.cookie.cookieName = expr
+- :success_criterion_uuid: d497abbd-8ec2-4540-81f8-6543951cb3a1
+  :success_criterion_name: Explain key ideas about how Cookies work
+  :uuid: 0801a5ec-aebd-47b4-8526-e3e820aaff29
+  :question_type: text
+  :question: How does a server send a cookie to the browser?
+  :correct_answer: In the header of a response
+- :success_criterion_uuid: c684b306-c0a1-4b71-a073-ed029fd4c4ad
+  :success_criterion_name: Fetch and send JSON
   :uuid: f852f110-3f39-4481-a6ab-f15523948089
   :question_type: textarea
   :question: 'Using $.ajax() make a PUT request to http://api.test.com/users/3 and
     send the object {username: "newUser"} to the server'
   :correct_answer: ''
-- :objective_uuid: 6d6a5fe6-2cce-46bf-ac0a-36d879935a31
-  :objective_name: Fetch and send JSON using jQuery
-  :uuid: d9e1332c-36b8-427e-a5a4-090d0af7a16f
-  :question_type: text
-  :question: What is the difference between $.get() and $.getJSON?
-  :correct_answer: "$.getJSON includes dataType: 'json'"
-- :objective_uuid: 6d6a5fe6-2cce-46bf-ac0a-36d879935a31
-  :objective_name: Fetch and send JSON using jQuery
-  :uuid: 6606362f-e832-417f-a7b6-21a15d948668
-  :question_type: textarea
-  :question: Make a POST request using AJAX to http://api.test.com/users and send
-    the object {username:"testing"} to the server
-  :correct_answer: ''
-- :objective_uuid: 1c1489fc-0790-4bec-938d-20feb9d1be17
-  :objective_name: Fetch and send JSON using raw javascript
+- :success_criterion_uuid: c684b306-c0a1-4b71-a073-ed029fd4c4ad
+  :success_criterion_name: Fetch and send JSON
   :uuid: db248d55-3824-422b-b588-e00a1ed1e012
   :question_type: textarea
   :question: Using the XHR object, make a GET request to http://api.test.com/users
     and console.log the response. Make sure you handle any errors with the request/response
   :correct_answer: ''
-- :objective_uuid: 1c1489fc-0790-4bec-938d-20feb9d1be17
-  :objective_name: Fetch and send JSON using raw javascript
+- :success_criterion_uuid: c684b306-c0a1-4b71-a073-ed029fd4c4ad
+  :success_criterion_name: Fetch and send JSON
   :uuid: f01f17c4-8436-4ef1-a993-86c2dd103995
   :question_type: text
   :question: What is the difference between XHR and AJAX?
   :correct_answer: ''
-- :objective_uuid: f6822d58-8a3b-4444-9278-5d704572e9f0
-  :objective_name: Has fun
-  :uuid: b1ae6602-e44d-4fef-b7ac-81b20c7064e2
+- :success_criterion_uuid: c684b306-c0a1-4b71-a073-ed029fd4c4ad
+  :success_criterion_name: Fetch and send JSON
+  :uuid: d9e1332c-36b8-427e-a5a4-090d0af7a16f
   :question_type: text
-  :question: What is a learning experience?
+  :question: What is the difference between $.get() and $.getJSON?
+  :correct_answer: "$.getJSON includes dataType: 'json'"
+- :success_criterion_uuid: c684b306-c0a1-4b71-a073-ed029fd4c4ad
+  :success_criterion_name: Fetch and send JSON
+  :uuid: 6606362f-e832-417f-a7b6-21a15d948668
+  :question_type: textarea
+  :question: Make a POST request using AJAX to http://api.test.com/users and send
+    the object {username:"testing"} to the server
   :correct_answer: ''
-- :objective_uuid: b7fd1fcd-7e1c-4fb2-9051-f11179bb99f7
-  :objective_name: Identify what the server needs to support in order to make a cross-origin
-    request
+- :success_criterion_uuid: b7fd1fcd-7e1c-4fb2-9051-f11179bb99f7
+  :success_criterion_name: Identify what the server needs to support in order to make
+    a cross-origin request
   :uuid: f2ef2f12-c30f-428d-a4c6-27f24ba85bb4
   :question_type: text
   :question: What does the HTTP Verb OPTIONS used for?
   :correct_answer: ''
-- :objective_uuid: b7fd1fcd-7e1c-4fb2-9051-f11179bb99f7
-  :objective_name: Identify what the server needs to support in order to make a cross-origin
-    request
-  :uuid: 02ac6e04-d27a-490e-ac23-3cee3c554e12
-  :question_type: text
-  :question: What is a preflight request?
-  :correct_answer: ''
-- :objective_uuid: b7fd1fcd-7e1c-4fb2-9051-f11179bb99f7
-  :objective_name: Identify what the server needs to support in order to make a cross-origin
-    request
+- :success_criterion_uuid: b7fd1fcd-7e1c-4fb2-9051-f11179bb99f7
+  :success_criterion_name: Identify what the server needs to support in order to make
+    a cross-origin request
   :uuid: 8f1ad7bd-b071-4fff-a59c-38faa9aea1e3
   :question_type: text
   :question: What request and response headers are necessary for CORS to work?
   :correct_answer: ''
-- :objective_uuid: b7fd1fcd-7e1c-4fb2-9051-f11179bb99f7
-  :objective_name: Identify what the server needs to support in order to make a cross-origin
-    request
+- :success_criterion_uuid: b7fd1fcd-7e1c-4fb2-9051-f11179bb99f7
+  :success_criterion_name: Identify what the server needs to support in order to make
+    a cross-origin request
   :uuid: 62e691c1-f396-4bf7-af0b-673fac63f40c
   :question_type: text
   :question: What is the same origin policy?
   :correct_answer: ''
+- :success_criterion_uuid: b7fd1fcd-7e1c-4fb2-9051-f11179bb99f7
+  :success_criterion_name: Identify what the server needs to support in order to make
+    a cross-origin request
+  :uuid: 02ac6e04-d27a-490e-ac23-3cee3c554e12
+  :question_type: text
+  :question: What is a preflight request?
+  :correct_answer: ''
+- :success_criterion_uuid: f80d8ef7-1b83-4b55-a4cf-e7a58e63e0c2
+  :success_criterion_name: Iterate over simple data structures (arrays, objects) with
+    loops
+  :uuid: a73e25d6-d6a1-41a8-a570-2087c2104417
+  :question_type: text
+  :question: What's the difference between a for loop and a for-in loop?
+  :correct_answer: 'for : array :: for-in : object'
+- :success_criterion_uuid: 266bc830-f755-425e-b352-af1e7d4c3b17
+  :success_criterion_name: Manage files and navigate the file system using the command
+    line
+  :uuid: 275dc5ed-4215-440b-ad6b-6a8e8cf91829
+  :question_type: text
+  :question: What is the difference between the chmod and chown commands?
+  :correct_answer: ''
+- :success_criterion_uuid: 266bc830-f755-425e-b352-af1e7d4c3b17
+  :success_criterion_name: Manage files and navigate the file system using the command
+    line
+  :uuid: 347d4d69-b43c-4f51-a577-1800fcb25278
+  :question_type: text
+  :question: What command is used to print the current working directory path?
+  :correct_answer: pwd
+- :success_criterion_uuid: 266bc830-f755-425e-b352-af1e7d4c3b17
+  :success_criterion_name: Manage files and navigate the file system using the command
+    line
+  :uuid: cbe58c25-3dca-4b60-a954-990204a9025c
+  :question_type: text
+  :question: What does `~` mean in `cd ~/Desktop`
+  :correct_answer: home directory
+- :success_criterion_uuid: 266bc830-f755-425e-b352-af1e7d4c3b17
+  :success_criterion_name: Manage files and navigate the file system using the command
+    line
+  :uuid: a5459802-10ed-49ef-9f49-732041e421ed
+  :question_type: text
+  :question: How would you create a new directory called `my_favorite_directory` inside
+    of your root directory?
+  :correct_answer: mkdir ~/my_favorite_directory
+- :success_criterion_uuid: 266bc830-f755-425e-b352-af1e7d4c3b17
+  :success_criterion_name: Manage files and navigate the file system using the command
+    line
+  :uuid: d0a8e815-d9a7-4637-8f7a-94acd780d8b7
+  :question_type: text
+  :question: What is the ZSH shortcut for ls -lah
+  :correct_answer: l
+- :success_criterion_uuid: 266bc830-f755-425e-b352-af1e7d4c3b17
+  :success_criterion_name: Manage files and navigate the file system using the command
+    line
+  :uuid: 26651e6a-69dd-4314-9ef8-064e0ad996d9
+  :question_type: text
+  :question: What does the -r flag do with the rm and cp commands?
+  :correct_answer: recursive
+- :success_criterion_uuid: 266bc830-f755-425e-b352-af1e7d4c3b17
+  :success_criterion_name: Manage files and navigate the file system using the command
+    line
+  :uuid: 146833c4-8e93-4e98-9eab-eab01e1e0796
+  :question_type: textarea
+  :question: What is the difference between piping and redirection?
+  :correct_answer: ''
+- :success_criterion_uuid: 266bc830-f755-425e-b352-af1e7d4c3b17
+  :success_criterion_name: Manage files and navigate the file system using the command
+    line
+  :uuid: eae27e46-44fc-4aed-99e8-cf08222d0dc3
+  :question_type: text
+  :question: How could you easily create five text files - a.txt ,b.txt ,c.txt ,d.txt
+    and e.txt
+  :correct_answer: touch {a,b,c,d,e}.txt
+- :success_criterion_uuid: 266bc830-f755-425e-b352-af1e7d4c3b17
+  :success_criterion_name: Manage files and navigate the file system using the command
+    line
+  :uuid: 97ce2af7-eb79-4483-a783-befdd9984e81
+  :question_type: text
+  :question: rom `my_favorite_directory`, how would you create your favorite new file,
+    `my_favorite.html`?
+  :correct_answer: my_favorite.html
+- :success_criterion_uuid: 266bc830-f755-425e-b352-af1e7d4c3b17
+  :success_criterion_name: Manage files and navigate the file system using the command
+    line
+  :uuid: 43db4a8e-95f4-483b-9213-cb22a395efff
+  :question_type: text
+  :question: What command would be used to copy a file called index.html to a new
+    file name index.jade?
+  :correct_answer: cp index.html index.jade
+- :success_criterion_uuid: e35e103a-587f-43f8-9f6a-46e9702ea9c8
+  :success_criterion_name: Predict the final result of an expression given the actual
+    runtime values
+  :uuid: af34092f-7184-4b47-a44d-5437dc1ed25e
+  :question_type: text
+  :question: What is the value of foo after the statement `var foo;`?
+  :correct_answer: undefined
+- :success_criterion_uuid: e35e103a-587f-43f8-9f6a-46e9702ea9c8
+  :success_criterion_name: Predict the final result of an expression given the actual
+    runtime values
+  :uuid: 19e928f0-f008-40fd-92b7-f8e952bc7a4a
+  :question_type: text
+  :question: What does `(true && false) || (true && true || false) && (false || false)`
+    evaluate to?
+  :correct_answer: 'false'
+- :success_criterion_uuid: e35e103a-587f-43f8-9f6a-46e9702ea9c8
+  :success_criterion_name: Predict the final result of an expression given the actual
+    runtime values
+  :uuid: 28987797-3cca-4b07-963e-742ef1974085
+  :question_type: text
+  :question: Write a statement that evaluates to true if a string is not empty.
+  :correct_answer: str.length > 0
+- :success_criterion_uuid: e35e103a-587f-43f8-9f6a-46e9702ea9c8
+  :success_criterion_name: Predict the final result of an expression given the actual
+    runtime values
+  :uuid: 08069eb9-03fd-46d2-bd94-102b34fae7da
+  :question_type: text
+  :question: What is the value of '2' + 1?
+  :correct_answer: '21'
+- :success_criterion_uuid: e35e103a-587f-43f8-9f6a-46e9702ea9c8
+  :success_criterion_name: Predict the final result of an expression given the actual
+    runtime values
+  :uuid: a4d33dcf-805f-457d-b484-534ac8ff96d9
+  :question_type: text
+  :question: What is the value of '2' - 1
+  :correct_answer: '1'
+- :success_criterion_uuid: e35e103a-587f-43f8-9f6a-46e9702ea9c8
+  :success_criterion_name: Predict the final result of an expression given the actual
+    runtime values
+  :uuid: 3c7fb27d-8468-4458-b0a8-7bffa0f4e992
+  :question_type: text
+  :question: What is the value of 3 + undefined?
+  :correct_answer: NaN
+- :success_criterion_uuid: e35e103a-587f-43f8-9f6a-46e9702ea9c8
+  :success_criterion_name: Predict the final result of an expression given the actual
+    runtime values
+  :uuid: b423fb13-09dd-4e0d-b61c-51dd91441d1d
+  :question_type: text
+  :question: What is the value of 3 + null?
+  :correct_answer: '3'
+- :success_criterion_uuid: e35e103a-587f-43f8-9f6a-46e9702ea9c8
+  :success_criterion_name: Predict the final result of an expression given the actual
+    runtime values
+  :uuid: c43457cb-6ee3-416f-b5d6-93c92d21365c
+  :question_type: text
+  :question: Name all of the falsy values in Javascript.
+  :correct_answer: false, null, undefined, 0, '', NaN
+- :success_criterion_uuid: e35e103a-587f-43f8-9f6a-46e9702ea9c8
+  :success_criterion_name: Predict the final result of an expression given the actual
+    runtime values
+  :uuid: 0f3de00d-9487-4204-8b23-a9861be61c6a
+  :question_type: text
+  :question: What is typeof typeof 1?
+  :correct_answer: '"string"'
+- :success_criterion_uuid: e35e103a-587f-43f8-9f6a-46e9702ea9c8
+  :success_criterion_name: Predict the final result of an expression given the actual
+    runtime values
+  :uuid: 01173fb4-b07d-496b-8e34-5d3369e64359
+  :question_type: text
+  :question: At the end of these statements, what is the value of `x`? `var x = 20;
+    var y = x; y += 5; x = y; y = 13;`
+  :correct_answer: '25'
+- :success_criterion_uuid: 753f714c-a51d-4092-9ced-6e3dd2b05f15
+  :success_criterion_name: Solve problems requiring conditionals and loops (such as
+    accumulator pattern) with nested/combined control-flow statements
+  :uuid: d9726145-42d6-40a3-a18a-712ae077f470
+  :question_type: textarea
+  :question: Use a loop to log the sequence 1, 1, 1, 2, 2, 2, 3, 3, 3, 4, 4, 4 to
+    the console.
+  :correct_answer: ''
+- :success_criterion_uuid: 753f714c-a51d-4092-9ced-6e3dd2b05f15
+  :success_criterion_name: Solve problems requiring conditionals and loops (such as
+    accumulator pattern) with nested/combined control-flow statements
+  :uuid: b3173049-aab0-45b9-845b-bf522de7a00c
+  :question_type: textarea
+  :question: Given an array of numbers, write some code that will log the largest
+    number in the array.
+  :correct_answer: ''
+- :success_criterion_uuid: 753f714c-a51d-4092-9ced-6e3dd2b05f15
+  :success_criterion_name: Solve problems requiring conditionals and loops (such as
+    accumulator pattern) with nested/combined control-flow statements
+  :uuid: c669b1b2-cc0f-4321-bda3-5592b1fd25f9
+  :question_type: textarea
+  :question: Given an array of strings, write some code that will log each string
+    to the console, provided it is at least 5 characters long.
+  :correct_answer: ''
+- :success_criterion_uuid: 753f714c-a51d-4092-9ced-6e3dd2b05f15
+  :success_criterion_name: Solve problems requiring conditionals and loops (such as
+    accumulator pattern) with nested/combined control-flow statements
+  :uuid: dd1cc356-560b-44ef-bc91-c7738be4f670
+  :question_type: textarea
+  :question: Write some code that will log all elements of the array to the console.
+  :correct_answer: ''
+- :success_criterion_uuid: 753f714c-a51d-4092-9ced-6e3dd2b05f15
+  :success_criterion_name: Solve problems requiring conditionals and loops (such as
+    accumulator pattern) with nested/combined control-flow statements
+  :uuid: c0284ceb-7848-467c-abf8-701319edb86a
+  :question_type: textarea
+  :question: Write some code that will produce an infinite loop.
+  :correct_answer: ''
+- :success_criterion_uuid: 753f714c-a51d-4092-9ced-6e3dd2b05f15
+  :success_criterion_name: Solve problems requiring conditionals and loops (such as
+    accumulator pattern) with nested/combined control-flow statements
+  :uuid: dd392248-ebf0-4149-8a4d-d3169a17c365
+  :question_type: textarea
+  :question: Write code that, given an array of numbers, will sum up all the numbers
+    in the array. E.g. if the array is [1, 2, 3, 4] your code should produce 10,
+  :correct_answer: ''
+- :success_criterion_uuid: 753f714c-a51d-4092-9ced-6e3dd2b05f15
+  :success_criterion_name: Solve problems requiring conditionals and loops (such as
+    accumulator pattern) with nested/combined control-flow statements
+  :uuid: 284d4787-3692-47a5-bb6d-008609202aa9
+  :question_type: textarea
+  :question: Write code that will log "small" to the console if some variable x is
+    between 0 and 5, "large" if x is between 5 and 100, and "really large!" if x is
+    greater than 100.
+  :correct_answer: ''
+- :success_criterion_uuid: 753f714c-a51d-4092-9ced-6e3dd2b05f15
+  :success_criterion_name: Solve problems requiring conditionals and loops (such as
+    accumulator pattern) with nested/combined control-flow statements
+  :uuid: 08d4bfa6-b921-4bb2-b025-f54c185ef34f
+  :question_type: textarea
+  :question: Write code that will log "small" to the console if some variable x is
+    between 0 and 5, "large" if x is between 5 and 100, and "really large!" if x is
+    greater than 100.
+  :correct_answer: ''
+- :success_criterion_uuid: 37c616c9-74ca-4d7f-98c9-5f7c82265f60
+  :success_criterion_name: Store and access values by index in arrays
+  :uuid: 5f86e851-c98a-411b-8cd1-1522e2929756
+  :question_type: text
+  :question: How would you change the second element in an array named arr to the
+    string "foo"?
+  :correct_answer: arr[1] = "foo"
+- :success_criterion_uuid: 37c616c9-74ca-4d7f-98c9-5f7c82265f60
+  :success_criterion_name: Store and access values by index in arrays
+  :uuid: ebc9931a-3a9d-4751-80eb-a7f1abe2c450
+  :question_type: text
+  :question: How would you access the last element in an array named arr?
+  :correct_answer: arr[arr.length - 1]
+- :success_criterion_uuid: 37c616c9-74ca-4d7f-98c9-5f7c82265f60
+  :success_criterion_name: Store and access values by index in arrays
+  :uuid: c8b33822-7494-4e66-b9b0-a74df3f0059f
+  :question_type: text
+  :question: How would you access the first element in an array named arr?
+  :correct_answer: arr[0]
+- :success_criterion_uuid: fb86a0b3-79a3-423d-90b6-7fb1a3119360
+  :success_criterion_name: Store and access values in objects
+  :uuid: 048a597f-51f1-4891-9893-2439cbad7057
+  :question_type: textarea
+  :question: When would you use bracket notation to access a value in an object?
+  :correct_answer: ''
+- :success_criterion_uuid: fb86a0b3-79a3-423d-90b6-7fb1a3119360
+  :success_criterion_name: Store and access values in objects
+  :uuid: 990a730d-cf86-4dcd-9627-ff73b6fe1a1a
+  :question_type: textarea
+  :question: When would you use dot notation to access a value in an object?
+  :correct_answer: ''
+- :success_criterion_uuid: 067071b4-a218-4b75-be57-89608f0f97c1
+  :success_criterion_name: Students should always use keyboard shortcuts for common
+    programs
+  :uuid: 2c6c84c6-568b-41ec-aa88-52ce31afed33
+  :question_type: text
+  :question: How do you open spotlight?
+  :correct_answer: cmd + space
+- :success_criterion_uuid: bbc9343c-e00e-4fae-9411-9fa44b7c434b
+  :success_criterion_name: Style HTML elements with CSS properties
+  :uuid: cb38a902-f4cd-4e62-9964-06ff92afdf20
+  :question_type: text
+  :question: Given any block-level element, how do you center the text within it?
+  :correct_answer: 'text-align: center;'
+- :success_criterion_uuid: a441cf48-c7d2-49f0-946f-ae7f5753edcd
+  :success_criterion_name: 'Target HTML elements with CSS selectors '
+  :uuid: fb5c0465-db38-4eec-af20-bf1802e2b05f
+  :question_type: text
+  :question: Write the selector for all p elements.
+  :correct_answer: p
+- :success_criterion_uuid: a441cf48-c7d2-49f0-946f-ae7f5753edcd
+  :success_criterion_name: 'Target HTML elements with CSS selectors '
+  :uuid: 75a61b30-92f2-43b6-9ff1-d22aa29d79c7
+  :question_type: text
+  :question: What does it mean for a stylesheet to "cascade"?
+  :correct_answer: ''
+- :success_criterion_uuid: a441cf48-c7d2-49f0-946f-ae7f5753edcd
+  :success_criterion_name: 'Target HTML elements with CSS selectors '
+  :uuid: 24a5841e-24e9-4c64-b871-dde73727bcf9
+  :question_type: text
+  :question: What does CSS stand for?
+  :correct_answer: ''
+- :success_criterion_uuid: a1645931-6983-41d2-8899-f6fdc76757b9
+  :success_criterion_name: Use floats to interrupt flow content and layout block-level
+    elements on a page
+  :uuid: a524dd8e-aacb-44a7-9542-d978dfea96fd
+  :question_type: text
+  :question: What's the difference between the block and inline display value?
+  :correct_answer: ''
+- :success_criterion_uuid: a1645931-6983-41d2-8899-f6fdc76757b9
+  :success_criterion_name: Use floats to interrupt flow content and layout block-level
+    elements on a page
+  :uuid: 53da0078-3882-4f10-81ee-6de9db8cf19c
+  :question_type: text
+  :question: Name at least one rule-value pair that will allow elements following
+    floated elements to return to the normal flow.
+  :correct_answer: 'clear: float and/or overflow: auto'
+- :success_criterion_uuid: f68b71a3-9d32-4406-86c9-1a0bccc0266a
+  :success_criterion_name: Use positioning to layout elements
+  :uuid: d4615f32-c2a5-4b15-b613-44f8a05783b9
+  :question_type: text
+  :question: 'Describe the difference between the following values for position: absolute,
+    relative, fixed'
+  :correct_answer: ''
+- :success_criterion_uuid: 595d43c0-0f95-402c-b346-d86fb152862b
+  :success_criterion_name: Use the box model to layout elements
+  :uuid: d163d879-1d0c-4bdb-9200-ba2981f015ce
+  :question_type: text
+  :question: 'Given {box-sizing: content-box}, if the width is set to 100px and padding
+    to 20px, what will the rendered width of the box be?'
+  :correct_answer: 140px
+- :success_criterion_uuid: 595d43c0-0f95-402c-b346-d86fb152862b
+  :success_criterion_name: Use the box model to layout elements
+  :uuid: f0c04dd3-064a-42b2-b04e-34f3c754bbe7
+  :question_type: text
+  :question: 'Given {box-sizing: border-box}, if the width is set to 100px and padding
+    to 20px, what will the rendered width of the box be?'
+  :correct_answer: 100px
+- :success_criterion_uuid: 595d43c0-0f95-402c-b346-d86fb152862b
+  :success_criterion_name: Use the box model to layout elements
+  :uuid: 01df7fce-6641-46cc-85c3-b05b10ffe6d0
+  :question_type: text
+  :question: An element's computed width is determined by the content, padding and
+    what?
+  :correct_answer: border
+- :success_criterion_uuid: 8d89172b-c512-437a-a948-a6511e5b7478
+  :success_criterion_name: Write Semantic HTML5 Markup
+  :uuid: 0aa174da-cadf-45a4-be4d-b6f3245c68a4
+  :question_type: text
+  :question: What semantic HTML tag would you use to display content that was not
+    directly related to the overall content of the page?
+  :correct_answer: aside
+- :success_criterion_uuid: 8d89172b-c512-437a-a948-a6511e5b7478
+  :success_criterion_name: Write Semantic HTML5 Markup
+  :uuid: c986369f-9399-434b-8e37-7f59e7e613ff
+  :question_type: text
+  :question: What semantic HTML tag would you use to replace div class="header"?
+  :correct_answer: header
+- :success_criterion_uuid: 93028020-6e26-4f92-8f08-2034dde81eb2
+  :success_criterion_name: Write Valid HTML5 Markup
+  :uuid: 5180dabf-6744-4bed-89ad-33d9edfcc8d3
+  :question_type: text
+  :question: What is the syntax to insert school.jpg into an HTML file if the image
+    is in the images directory and your file is in the root directory?
+  :correct_answer: <img src="/images/school.jpg">
+- :success_criterion_uuid: 93028020-6e26-4f92-8f08-2034dde81eb2
+  :success_criterion_name: Write Valid HTML5 Markup
+  :uuid: fdfa5b4d-ef08-4ea4-908f-e0c84f1a2ffa
+  :question_type: text
+  :question: Write an HTML comment
+  :correct_answer: ''
+- :success_criterion_uuid: 93028020-6e26-4f92-8f08-2034dde81eb2
+  :success_criterion_name: Write Valid HTML5 Markup
+  :uuid: d1a4ceb8-5c63-41ef-ac6f-55e2ae914599
+  :question_type: text
+  :question: Write an HTML link that goes to a file on your GitHub account that shows
+    well-formatted HTML.
+  :correct_answer: ''
+- :success_criterion_uuid: 93028020-6e26-4f92-8f08-2034dde81eb2
+  :success_criterion_name: Write Valid HTML5 Markup
+  :uuid: 72a1d169-1aaf-4af6-81e7-762fd2f181cb
+  :question_type: text
+  :question: What does an HTML attribute do?
+  :correct_answer: An attribute defines a property for an element
+- :success_criterion_uuid: 93028020-6e26-4f92-8f08-2034dde81eb2
+  :success_criterion_name: Write Valid HTML5 Markup
+  :uuid: 19d54420-4892-4c48-b111-f93753a10eea
+  :question_type: text
+  :question: What is an HTML tag for?
+  :correct_answer: Tags are used to mark the start and end of an HTML element
+- :success_criterion_uuid: 93028020-6e26-4f92-8f08-2034dde81eb2
+  :success_criterion_name: Write Valid HTML5 Markup
+  :uuid: ec8dc7b2-76bf-4ac7-84c5-726b912868e9
+  :question_type: text
+  :question: What is an HTML element (what does it consist of)?
+  :correct_answer: consists of a start tag, content, and an end tag (self-closing
+    tags excepted)
+- :success_criterion_uuid: 93028020-6e26-4f92-8f08-2034dde81eb2
+  :success_criterion_name: Write Valid HTML5 Markup
+  :uuid: ab5ad186-cb7e-4d3b-9b8c-c2a9676c0f75
+  :question_type: text
+  :question: What is the syntax for an HTML page doctype declaration?
+  :correct_answer: "<!DOCTYPE html>"
+- :success_criterion_uuid: 93028020-6e26-4f92-8f08-2034dde81eb2
+  :success_criterion_name: Write Valid HTML5 Markup
+  :uuid: dff26412-cfd1-4a8d-a894-3dce06894f1a
+  :question_type: text
+  :question: List two or more self-closing HTML tags
+  :correct_answer: img, hr, br, input, etc
+- :success_criterion_uuid: 93028020-6e26-4f92-8f08-2034dde81eb2
+  :success_criterion_name: Write Valid HTML5 Markup
+  :uuid: 9f39b6dc-4489-41d2-a6a2-2b0a56ef3670
+  :question_type: text
+  :question: What opening and closing tags does the visible content of an HTML page
+    go between?
+  :correct_answer: body
+- :success_criterion_uuid: 93028020-6e26-4f92-8f08-2034dde81eb2
+  :success_criterion_name: Write Valid HTML5 Markup
+  :uuid: 311042f8-0a0d-4a0c-af4c-df2b88f25a15
+  :question_type: text
+  :question: An HTML page starts and ends with what opening and closing tags?
+  :correct_answer: html
+- :success_criterion_uuid: 93028020-6e26-4f92-8f08-2034dde81eb2
+  :success_criterion_name: Write Valid HTML5 Markup
+  :uuid: c37802e0-a6c5-42f7-8202-8f0d6ba1548c
+  :question_type: textarea
+  :question: What is semantic html used for? Why would you use it?
+  :correct_answer: adds more meaning to your code, communication, SEO, accessibility,
+    etc
+- :success_criterion_uuid: 93028020-6e26-4f92-8f08-2034dde81eb2
+  :success_criterion_name: Write Valid HTML5 Markup
+  :uuid: 88381b7b-3213-4b2c-bac7-481d6108be67
+  :question_type: text
+  :question: What is an HTML validator?
+  :correct_answer: ''
+- :success_criterion_uuid: 80b4de80-06ae-4269-a71e-0477b2f2acf3
+  :success_criterion_name: Write well organized CSS
+  :uuid: 82084721-201f-474a-9706-5135499d01f1
+  :question_type: text
+  :question: Write the selector for a class named "header".
+  :correct_answer: ".header"
+- :success_criterion_uuid: 80b4de80-06ae-4269-a71e-0477b2f2acf3
+  :success_criterion_name: Write well organized CSS
+  :uuid: 7fb9d41f-1ae3-4b4b-888a-d6406835c3a6
+  :question_type: text
+  :question: Write the selector for an element with an ID of "logo"
+  :correct_answer: "#logo"
