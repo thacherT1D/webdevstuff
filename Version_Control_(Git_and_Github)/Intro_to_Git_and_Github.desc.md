@@ -14,7 +14,7 @@
 Version control is a class of tools that programmers use to manage software projects.
 It allows you to track changes you make to files on your machine.
 This is helpful for when you screw things up!
-And you will. :wink:
+And you will. 😉
 And that's ok.
 Version control allows developers to revert back to a specific time and place in your code.
 Sort of like a reset button.
@@ -62,7 +62,7 @@ And if GitHub goes down, we can still work on our distributed repos offline.
 
 ### A Metaphor: Git is a Rocketship, Github is Mars
 
-:rocket:
+🚀
 
 | Rocketship Version | Git Version |
 |--------------------|-------------|
@@ -228,9 +228,9 @@ $ git commit -m "Initial commit"
 #### Answer
 
 Create a GitHub repo:
-![Hit the + Icon](create-github-repo-1.png)
+![Hit the + Icon](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/86/create-github-repo-1.png)
 
-![Hit Create](create-github-repo-2.png)
+![Hit Create](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/87/create-github-repo-2.png)
 
 ```bash
 $ mkdir myProjectName
@@ -254,5 +254,5 @@ $ git push -u origin master
 * [Try Git](https://try.github.io/)
 
 
-## Git Cheatsheet 
+## Git Cheatsheet
 * [Tower Git Cheatsheet](http://www.git-tower.com/blog/git-cheat-sheet/)
