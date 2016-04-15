@@ -1,1 +1,1 @@
-# First Day Instructor Notes
+# Week 1 - Instructor Notes

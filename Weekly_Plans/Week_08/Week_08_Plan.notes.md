@@ -1,1 +1,1 @@
-# Week 8 Instructor Notes
+# Week 8 - Instructor Notes

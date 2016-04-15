@@ -1,1 +1,1 @@
-# Week 3 Instructor Notes
+# Week 3 - Instructor Notes

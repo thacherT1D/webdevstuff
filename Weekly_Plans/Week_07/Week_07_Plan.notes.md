@@ -1,1 +1,1 @@
-# Week 7 Instructor Notes
+# Week 7 - Instructor Notes
