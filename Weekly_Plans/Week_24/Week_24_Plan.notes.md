@@ -1,1 +1,1 @@
-# Week 24 - Instructor Notes
+# Week 24 - Instructor Note
