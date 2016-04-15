@@ -1,6 +1,8 @@
 Command Line Basics
 ===================
 
+My favorite command is `cowsay`
+
 [Slide Deck Option 1](https://docs.google.com/presentation/d/10THpOD-J8vSPFAGiB3dU4w8wEstZ8PkxNIOrup3cTCU/edit#slide=id.gbf37db18e_0_32)
 
 [Slide Deck Option 2](https://docs.google.com/presentation/d/1IVdWBXeh9cIDqGZzslQoMfPPxwD-xZYpl36wBS-oSuQ/edit#slide=id.p)
@@ -248,7 +250,7 @@ Hidden files are hidden because their names begin with `.`
 
 ## The File System is a Tree
 
-__Try This__: 
+__Try This__:
 
 `$ tree -L 3`
 
