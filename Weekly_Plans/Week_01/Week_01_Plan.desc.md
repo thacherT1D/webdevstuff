@@ -1,5 +1,1 @@
-# Week 1
-
-## Welcome to Galvanize!
-
-### First Day Protocols
+# Week 1 (April 25 - April 29)
