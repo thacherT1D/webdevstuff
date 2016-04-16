@@ -2,27 +2,6 @@
 - :success_criterion_uuid: 1527f6f1-dff1-45a5-b987-509d40ca1e3e
   :success_criterion_name: Describe auth concepts including form-based authentication,
     OAuth and authorization
-  :uuid: 0801a5ec-aebd-47b4-8526-e3e820aaff29
-  :question_type: text
-  :question: How does a server send a cookie to the browser?
-  :correct_answer: In the header of a response
-- :success_criterion_uuid: 1527f6f1-dff1-45a5-b987-509d40ca1e3e
-  :success_criterion_name: Describe auth concepts including form-based authentication,
-    OAuth and authorization
-  :uuid: ff5d4989-7a7e-45e7-90ed-401d9fc86065
-  :question_type: text
-  :question: How does express set cookies?
-  :correct_answer: Using the cookie-parser middleware, res.cookie.cookieName = expr
-- :success_criterion_uuid: 1527f6f1-dff1-45a5-b987-509d40ca1e3e
-  :success_criterion_name: Describe auth concepts including form-based authentication,
-    OAuth and authorization
-  :uuid: 9aac7ce0-98b0-4fd1-a7f9-18ea3d1a0da1
-  :question_type: text
-  :question: How does express read cookies from the browser?
-  :correct_answer: 'req.cookies.cookieName '
-- :success_criterion_uuid: 1527f6f1-dff1-45a5-b987-509d40ca1e3e
-  :success_criterion_name: Describe auth concepts including form-based authentication,
-    OAuth and authorization
   :uuid: 87082f56-af87-404f-b107-d48af439a7ef
   :question_type: text
   :question: How do you secure cookies?
@@ -56,6 +35,27 @@
   :question_type: text
   :question: Are cookies secure by default?
   :correct_answer: 'no'
+- :success_criterion_uuid: 1527f6f1-dff1-45a5-b987-509d40ca1e3e
+  :success_criterion_name: Describe auth concepts including form-based authentication,
+    OAuth and authorization
+  :uuid: 9aac7ce0-98b0-4fd1-a7f9-18ea3d1a0da1
+  :question_type: text
+  :question: How does express read cookies from the browser?
+  :correct_answer: 'req.cookies.cookieName '
+- :success_criterion_uuid: 1527f6f1-dff1-45a5-b987-509d40ca1e3e
+  :success_criterion_name: Describe auth concepts including form-based authentication,
+    OAuth and authorization
+  :uuid: ff5d4989-7a7e-45e7-90ed-401d9fc86065
+  :question_type: text
+  :question: How does express set cookies?
+  :correct_answer: Using the cookie-parser middleware, res.cookie.cookieName = expr
+- :success_criterion_uuid: 1527f6f1-dff1-45a5-b987-509d40ca1e3e
+  :success_criterion_name: Describe auth concepts including form-based authentication,
+    OAuth and authorization
+  :uuid: 0801a5ec-aebd-47b4-8526-e3e820aaff29
+  :question_type: text
+  :question: How does a server send a cookie to the browser?
+  :correct_answer: In the header of a response
 - :success_criterion_uuid: 1527f6f1-dff1-45a5-b987-509d40ca1e3e
   :success_criterion_name: Describe auth concepts including form-based authentication,
     OAuth and authorization
@@ -109,16 +109,16 @@
   :correct_answer: ''
 - :success_criterion_uuid: 33170def-1703-4b8d-a734-90c498882eaf
   :success_criterion_name: Fetch and send JSON with AJAX
-  :uuid: d9e1332c-36b8-427e-a5a4-090d0af7a16f
-  :question_type: text
-  :question: What is the difference between $.get() and $.getJSON?
-  :correct_answer: "$.getJSON includes dataType: 'json'"
+  :uuid: db248d55-3824-422b-b588-e00a1ed1e012
+  :question_type: textarea
+  :question: Using the XHR object, make a GET request to http://api.test.com/users
+    and console.log the response. Make sure you handle any errors with the request/response
+  :correct_answer: ''
 - :success_criterion_uuid: 33170def-1703-4b8d-a734-90c498882eaf
   :success_criterion_name: Fetch and send JSON with AJAX
-  :uuid: 6606362f-e832-417f-a7b6-21a15d948668
-  :question_type: textarea
-  :question: Make a POST request using AJAX to http://api.test.com/users and send
-    the object {username:"testing"} to the server
+  :uuid: f01f17c4-8436-4ef1-a993-86c2dd103995
+  :question_type: text
+  :question: What is the difference between XHR and AJAX?
   :correct_answer: ''
 - :success_criterion_uuid: 33170def-1703-4b8d-a734-90c498882eaf
   :success_criterion_name: Fetch and send JSON with AJAX
@@ -129,14 +129,14 @@
   :correct_answer: ''
 - :success_criterion_uuid: 33170def-1703-4b8d-a734-90c498882eaf
   :success_criterion_name: Fetch and send JSON with AJAX
-  :uuid: f01f17c4-8436-4ef1-a993-86c2dd103995
-  :question_type: text
-  :question: What is the difference between XHR and AJAX?
+  :uuid: 6606362f-e832-417f-a7b6-21a15d948668
+  :question_type: textarea
+  :question: Make a POST request using AJAX to http://api.test.com/users and send
+    the object {username:"testing"} to the server
   :correct_answer: ''
 - :success_criterion_uuid: 33170def-1703-4b8d-a734-90c498882eaf
   :success_criterion_name: Fetch and send JSON with AJAX
-  :uuid: db248d55-3824-422b-b588-e00a1ed1e012
-  :question_type: textarea
-  :question: Using the XHR object, make a GET request to http://api.test.com/users
-    and console.log the response. Make sure you handle any errors with the request/response
-  :correct_answer: ''
+  :uuid: d9e1332c-36b8-427e-a5a4-090d0af7a16f
+  :question_type: text
+  :question: What is the difference between $.get() and $.getJSON?
+  :correct_answer: "$.getJSON includes dataType: 'json'"

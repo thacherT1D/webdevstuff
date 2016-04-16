@@ -279,10 +279,8 @@
   :name: Version Control (Git and Github)
   :subject_uuid: 3f805b07-096d-4024-bce2-20b19f92199a
   :subject_name: Version Control (Git and Github)
-  :description: "# Objectives\r\n\r\n- Create a remote repo on github\r\n- Add a remote
-    repo using ‘git remote add’\r\n- Push code to github\r\n- Pull changes from github\n\n-
-    http://www.amazon.com/Git-Pocket-Guide-Richard-Silverman/dp/1449325866\r\n- Git
-    Workshop - https://github.com/gSchool/git-workshop (Git and Github basics.)\r\n-
+  :description: "- http://www.amazon.com/Git-Pocket-Guide-Richard-Silverman/dp/1449325866\r\n-
+    Git Workshop - https://github.com/gSchool/git-workshop (Git and Github basics.)\r\n-
     Git Intro Lecture - https://github.com/gSchool/fullstack-curriculum/blob/master/lessons/git/git-intro.instructor.md
     (Intro Lecture)\r\n- Git Basics Lecture - https://github.com/gSchool/basic-git\r\n-
     Try Git - https://try.github.io/levels/1/challenges/1 (Interactive Git Tutorial)\r\n-
@@ -297,11 +295,12 @@
     https://github.com/gSchool/6002-project-1\r\n- https://github.com/gSchool/what-is-vcs-lesson\r\n-
     https://github.com/gSchool/git-add-commit-assessment\r\n- [Try Git](https://try.github.io)\r\n-
     [Learn Git Branching](http://pcottle.github.io/learnGitBranching/)\n\n- https://github.com/gSchool/pull-requests-exercise\r\n-
-    https://github.com/gSchool/git-branch-collab"
+    https://github.com/gSchool/git-branch-collab\n\n\n\n# Objectives\r\n\r\n- Create
+    a remote repo on github\r\n- Add a remote repo using ‘git remote add’\r\n- Push
+    code to github\r\n- Pull changes from github"
   :instructor_notes: "##Assessments\r\n\r\n- [LMS Git Basics (Terminal)](https://coursework.galvanize.com/assessments/6)\r\n-
     [LMS Git Basics (g15 version - 2 questions on VCS)](https://coursework.galvanize.com/assessments/54)\r\n-
-    [LMS Haiku Conflicts Exercise](https://github.com/gSchool/haikuConflicts)\n\n##Assessments\r\n[GH
-    Git-Add-Commit-Assessment](https://github.com/gSchool/git-add-commit-assessment)\n\n###Assessments\r\n-
+    [LMS Haiku Conflicts Exercise](https://github.com/gSchool/haikuConflicts)\n\n###Assessments\r\n-
     [LMS Week 1 Assessment (Small Section on Git Basics)](https://coursework.galvanize.com/assessments/83)\r\n-
     [LMS Git Basics (g15 version - covers basic git commands)](https://coursework.galvanize.com/assessments/54)\r\n-
     [GH git-add-commit-assessment](https://github.com/gSchool/git-add-commit-assessment)\n\n###Assessments\r\n-
@@ -310,7 +309,7 @@
     Warmups Exercise (Git Diagrams)](https://github.com/gSchool/git-warmup)\r\n- [GH
     Git Workshop Exercises (Can be edited to test skills)](https://github.com/gSchool/git-workshop)\r\n\n\nDescribe
     difference between clone and fork based workflows.  It’s about trust - whether
-    devs should have access to actual repo"
+    devs should have access to actual repo\n\n##Assessments\r\n[GH Git-Add-Commit-Assessment](https://github.com/gSchool/git-add-commit-assessment)"
 - :uuid: ac805334-f3dd-4288-9a61-0dcef3e219d4
   :name: Programming with Javascript
   :subject_uuid: ac805334-f3dd-4288-9a61-0dcef3e219d4
@@ -501,11 +500,11 @@
   :subject_name: Thinking Like a Developer
   :description: "Objectives\r\n- Can formulate google queries\r\n    - for documentation\r\n
     \   - to find out how to do something\r\n    - to debug errors"
-  :instructor_notes: "- Doesn’t bully in code / commits\r\n- Doesn’t tell other that
-    their code is shit\r\n- Doesn’t get too animated\r\n\n\nAssessments:\r\n\r\nGiven
-    a style guide and some code, determine what’s wrong and give feedback.\r\n\n\n##Assessments\r\n[LMS
-    Clean Code Assessment](https://coursework.galvanize.com/assessments/67)\r\n[LMS
-    JS-Debugging & The DOM](https://coursework.galvanize.com/assessments/34)"
+  :instructor_notes: "Assessments:\r\n\r\nGiven a style guide and some code, determine
+    what’s wrong and give feedback.\r\n\n\n##Assessments\r\n[LMS Clean Code Assessment](https://coursework.galvanize.com/assessments/67)\r\n[LMS
+    JS-Debugging & The DOM](https://coursework.galvanize.com/assessments/34)\n\n\n\n-
+    Doesn’t bully in code / commits\r\n- Doesn’t tell other that their code is shit\r\n-
+    Doesn’t get too animated"
 - :uuid: 5ddfa4d5-6194-466b-97aa-f9610b77c493
   :name: JavaScript Object Model
   :subject_uuid: 5ddfa4d5-6194-466b-97aa-f9610b77c493
@@ -844,8 +843,8 @@
   :description: "Examples may be: \r\n* k-means\r\n* kNN (k nearest neighbor)\r\n*
     checksum\r\n* DFS\r\n* BFS\r\n\n\n\n\n[Cracking the Coding Interview Process](https://qph.is.quoracdn.net/main-qimg-379a9cf0a7bd42f8084d137370e4bd79?convert_to_webp=true)\n\n\n\n\n\n\n\n\n\nhttp://bigocheatsheet.com/"
   :instructor_notes: "### Assessments\r\n* If you want to know if two files are the
-    same, which algorithm would you use? Why?\n\n\n\n###Assessments\r\n- [LMS JS Fundamentals,
-    DOM, Iterators, CS and OOP](https://coursework.galvanize.com/assessments/38)\n\n\n\n\n\n###Assessments\r\n-
+    same, which algorithm would you use? Why?\n\n###Assessments\r\n- [LMS JS Fundamentals,
+    DOM, Iterators, CS and OOP](https://coursework.galvanize.com/assessments/38)\n\n\n\n\n\n\n\n###Assessments\r\n-
     [LMS JS Fundamentals, DOM, Iterators, CS and OOP](https://coursework.galvanize.com/assessments/38)"
 - :uuid: e59bae37-553b-4c1b-8667-4dbbdeeae98d
   :name: Technical Interview Prep

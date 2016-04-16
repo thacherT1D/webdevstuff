@@ -2128,11 +2128,11 @@
   - :success_criterion_uuid: 2f892a7c-e360-4218-9c8c-764d8f9418f7
     :success_criterion_name: Share code by pushing and pulling to a remote repository
       on GitHub
+  - :success_criterion_uuid: e8272444-8dfc-49a0-81d9-d5c92026d536
+    :success_criterion_name: Track changes over time using a basic Git workflow
   - :success_criterion_uuid: 37687853-c626-4f58-b9d2-641b1077f92b
     :success_criterion_name: Manage feature development with Git branches using a
       merge strategy
-  - :success_criterion_uuid: e8272444-8dfc-49a0-81d9-d5c92026d536
-    :success_criterion_name: Track changes over time using a basic Git workflow
   - :success_criterion_uuid: 0f22502a-68fe-4dbe-95d7-b1f4919fe1bf
     :success_criterion_name: Approaches problems in a methodical and disciplined manner
   - :success_criterion_uuid: 84bbf0ae-2d55-490b-bc84-d4ae4dc45e14
