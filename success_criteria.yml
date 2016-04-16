@@ -47,14 +47,6 @@
     changes?\n\n"
 - :standard_uuid: 4298574a-4ac8-4a6b-8195-91c349a04209
   :standard_name: Dev Environment
-  :uuid: c795cc87-dc92-4c81-918e-cd6be797a530
-  :name: Send HTTP requests and view HTTP responses with Postman
-  :description: |+
-    - Uses Postman to send and receive HTTP Requests and inspect them with Postman
-
-  :instructor_notes: ''
-- :standard_uuid: 4298574a-4ac8-4a6b-8195-91c349a04209
-  :standard_name: Dev Environment
   :uuid: 07448ee9-9e09-43de-9afd-c4acba35a6c2
   :name: Touch type code at least 40 WPM
   :description: |-
@@ -62,6 +54,14 @@
 
     In this exercise: https://typing.io/lesson/javascript/jquery/traversing.js/2
   :instructor_notes: "Using the following exercise  \r\nhttps://typing.io/lesson/javascript/jquery/traversing.js/2"
+- :standard_uuid: 4298574a-4ac8-4a6b-8195-91c349a04209
+  :standard_name: Dev Environment
+  :uuid: c795cc87-dc92-4c81-918e-cd6be797a530
+  :name: Send HTTP requests and view HTTP responses with Postman
+  :description: |+
+    - Uses Postman to send and receive HTTP Requests and inspect them with Postman
+
+  :instructor_notes: ''
 - :standard_uuid: 4298574a-4ac8-4a6b-8195-91c349a04209
   :standard_name: Dev Environment
   :uuid: 24654e75-c03f-4f7f-83a6-3487cbb6e063
@@ -398,21 +398,6 @@
 
 - :standard_uuid: 3f805b07-096d-4024-bce2-20b19f92199a
   :standard_name: Version Control (Git and Github)
-  :uuid: 37687853-c626-4f58-b9d2-641b1077f92b
-  :name: Manage feature development with Git branches using a merge strategy
-  :description: "- Resolve merge conflicts\n- Uses feature branch workflow on personal
-    and group projects\n\n- Create some merge conflicts and explain what causes them\r\n-
-    Resolve merge conflicts\n\n- Diagram and discuss a feature-branch workflow\n-
-    Build new features in branches and then merge them into master when ready\n\n-
-    create a feature branch\r\n- merge upstream changes\r\n- merge feature branch
-    to master\r\n- cleanup feature branches\n\n- branch\r\n- checkout\r\n- merge"
-  :instructor_notes: |2+
-
-
-
-
-- :standard_uuid: 3f805b07-096d-4024-bce2-20b19f92199a
-  :standard_name: Version Control (Git and Github)
   :uuid: e8272444-8dfc-49a0-81d9-d5c92026d536
   :name: Track changes over time using a basic Git workflow
   :description: "- Perform basic git commands to track changes to a project\n- Write
@@ -429,6 +414,21 @@
     to temporarily put untracked changes aside\r\n- `diff` - to show the difference
     between two hashes\n\n- Write succinct, descriptive commit messages \n\n"
   :instructor_notes: |2+
+
+
+- :standard_uuid: 3f805b07-096d-4024-bce2-20b19f92199a
+  :standard_name: Version Control (Git and Github)
+  :uuid: 37687853-c626-4f58-b9d2-641b1077f92b
+  :name: Manage feature development with Git branches using a merge strategy
+  :description: "- Resolve merge conflicts\n- Uses feature branch workflow on personal
+    and group projects\n\n- Create some merge conflicts and explain what causes them\r\n-
+    Resolve merge conflicts\n\n- Diagram and discuss a feature-branch workflow\n-
+    Build new features in branches and then merge them into master when ready\n\n-
+    create a feature branch\r\n- merge upstream changes\r\n- merge feature branch
+    to master\r\n- cleanup feature branches\n\n- branch\r\n- checkout\r\n- merge"
+  :instructor_notes: |2+
+
+
 
 
 - :standard_uuid: ac805334-f3dd-4288-9a61-0dcef3e219d4
@@ -1247,22 +1247,6 @@
     an IP address? What is DNS?"
 - :standard_uuid: 1762e39b-4a3e-433a-ac68-c815f3ea067b
   :standard_name: How the Web Works
-  :uuid: 5b704c5f-75af-4039-a691-4f2dd8ba2971
-  :name: Identify the parts of an HTTP request and response and discuss their purpose
-  :description: "- Describe what happens in a redirect scenario and diagram it\n-
-    Describe the format and purpose of HTTP Requests and Responses\n- Identify the
-    parts of a request and describe their function\n- Identify the parts of a response
-    and describe their function\n\n\n\nHTTP is the _hypertext transfer protocol_.
-    It is the _protocol_, or system of rules for communicating that enables browsers
-    to communicate over a network like the internet.\n\n- Request line\r\n  - Verb\r\n
-    \ - Path\r\n- Headers\r\n- Body\n\n- Response line\r\n- Status Code\r\n- Status
-    Messages\r\n- Headers\r\n- Body"
-  :instructor_notes: "\n\n- Like a file being sent back from a server to a client\r\n-
-    Like a file being sent to a server\n\n- Describe the 3 parts of an HTTP request
-    - request line, the headers, the body\r\n- Describe how to send url-encoded parameters
-    in the request body\r\n- Describe how to send raw JSON in the request body\n\n"
-- :standard_uuid: 1762e39b-4a3e-433a-ac68-c815f3ea067b
-  :standard_name: How the Web Works
   :uuid: ca4311e4-8013-4b29-b2c4-dd753573c30e
   :name: Diagram and explain a URI
   :description: "- Identify and explain the basic purpose of each part of a URL\n\n-
@@ -1284,6 +1268,22 @@
     provide examples of paths that would need to be url encoded\n\nExplain the purpose
     of the domain, port, and path.\n\noptional: compare to protocols in everyday life:
     mail, greetings, holidays/traditions"
+- :standard_uuid: 1762e39b-4a3e-433a-ac68-c815f3ea067b
+  :standard_name: How the Web Works
+  :uuid: 5b704c5f-75af-4039-a691-4f2dd8ba2971
+  :name: Identify the parts of an HTTP request and response and discuss their purpose
+  :description: "- Describe what happens in a redirect scenario and diagram it\n-
+    Describe the format and purpose of HTTP Requests and Responses\n- Identify the
+    parts of a request and describe their function\n- Identify the parts of a response
+    and describe their function\n\n\n\nHTTP is the _hypertext transfer protocol_.
+    It is the _protocol_, or system of rules for communicating that enables browsers
+    to communicate over a network like the internet.\n\n- Request line\r\n  - Verb\r\n
+    \ - Path\r\n- Headers\r\n- Body\n\n- Response line\r\n- Status Code\r\n- Status
+    Messages\r\n- Headers\r\n- Body"
+  :instructor_notes: "\n\n- Like a file being sent back from a server to a client\r\n-
+    Like a file being sent to a server\n\n- Describe the 3 parts of an HTTP request
+    - request line, the headers, the body\r\n- Describe how to send url-encoded parameters
+    in the request body\r\n- Describe how to send raw JSON in the request body\n\n"
 - :standard_uuid: 1762e39b-4a3e-433a-ac68-c815f3ea067b
   :standard_name: How the Web Works
   :uuid: 960362a6-e341-487b-a292-95840148c429
@@ -1683,19 +1683,19 @@
     Database connection strings\r\n- Transactions\r\n\r\nprotocol://user:password@host:port/db-name\r\n\r\npostgresql://root:897654ersdfghj@example.com:5432/products"
 - :standard_uuid: 2886a5f1-92f6-44ba-8adb-185b2a161870
   :standard_name: Deployment
-  :uuid: 4d3b234c-6e4d-4af4-9635-a939fe502ebe
-  :name: Discuss the role and purpose of devops
-  :description: "- In a short paragraph describe key devops concepts\n\nSuch as \r\n\r\n-
-    automated configuration management\r\n- automated provisioning\r\n- elastic infrastructure\r\n-
-    monitoring\r\n- mentioning tools such as Chef, Puppet, Ansible"
-  :instructor_notes: ''
-- :standard_uuid: 2886a5f1-92f6-44ba-8adb-185b2a161870
-  :standard_name: Deployment
   :uuid: 5ef7bda4-d599-4b11-a435-f518c4469be6
   :name: Connect to another computer using SSH
   :description: |+
     - Connect to another computer using SSH
 
+  :instructor_notes: ''
+- :standard_uuid: 2886a5f1-92f6-44ba-8adb-185b2a161870
+  :standard_name: Deployment
+  :uuid: 4d3b234c-6e4d-4af4-9635-a939fe502ebe
+  :name: Discuss the role and purpose of devops
+  :description: "- In a short paragraph describe key devops concepts\n\nSuch as \r\n\r\n-
+    automated configuration management\r\n- automated provisioning\r\n- elastic infrastructure\r\n-
+    monitoring\r\n- mentioning tools such as Chef, Puppet, Ansible"
   :instructor_notes: ''
 - :standard_uuid: 2886a5f1-92f6-44ba-8adb-185b2a161870
   :standard_name: Deployment
@@ -1707,14 +1707,23 @@
   :instructor_notes: ''
 - :standard_uuid: 2886a5f1-92f6-44ba-8adb-185b2a161870
   :standard_name: Deployment
-  :uuid: 14a67719-f04a-4c10-ae39-33ae7142d976
-  :name: Deploy an app to EC2 and compare and contrast the AWS core philosophy with
-    Heroku and Cloud Foundry and pre-cloud era
-  :description: "- Running app on EC2 that meet the requirements\n- Describe elastic
-    IPs / elastic load balancing / elastic block store (infrastructure on-demand)
-    in comparison with other options\n\n- A web server such as Nginx or Apache \r\n-
-    A database such as Postgres \r\n- An app server - Node / Ruby / Passenger \r\n-
-    Having started from a CentOS or Ubuntu base AMI\n\n"
+  :uuid: 8cf1f10a-fc6b-4c09-a2bc-6e4d1a901dad
+  :name: Deploy to Heroku (a PaaS Provider)
+  :description: |+
+    - Student has a functioning Node app up and running that has environment variables and attached SQL database
+
+  :instructor_notes: ''
+- :standard_uuid: 2886a5f1-92f6-44ba-8adb-185b2a161870
+  :standard_name: Deployment
+  :uuid: d183eb60-fcfc-40d1-9cae-d85f5f349fb0
+  :name: Deploy to static hosting sites and explain the function and purpose of static
+    hosting
+  :description: |+
+    - Student has a functioning site deployed to Divshot with scripts and CSS files in subdirectories
+    - Can explain function and purpose of static hosting site / CDN
+
+
+
   :instructor_notes: |2+
 
 
@@ -1734,26 +1743,17 @@
 
 - :standard_uuid: 2886a5f1-92f6-44ba-8adb-185b2a161870
   :standard_name: Deployment
-  :uuid: d183eb60-fcfc-40d1-9cae-d85f5f349fb0
-  :name: Deploy to static hosting sites and explain the function and purpose of static
-    hosting
-  :description: |+
-    - Student has a functioning site deployed to Divshot with scripts and CSS files in subdirectories
-    - Can explain function and purpose of static hosting site / CDN
-
-
-
+  :uuid: 14a67719-f04a-4c10-ae39-33ae7142d976
+  :name: Deploy an app to EC2 and compare and contrast the AWS core philosophy with
+    Heroku and Cloud Foundry and pre-cloud era
+  :description: "- Running app on EC2 that meet the requirements\n- Describe elastic
+    IPs / elastic load balancing / elastic block store (infrastructure on-demand)
+    in comparison with other options\n\n- A web server such as Nginx or Apache \r\n-
+    A database such as Postgres \r\n- An app server - Node / Ruby / Passenger \r\n-
+    Having started from a CentOS or Ubuntu base AMI\n\n"
   :instructor_notes: |2+
 
 
-- :standard_uuid: 2886a5f1-92f6-44ba-8adb-185b2a161870
-  :standard_name: Deployment
-  :uuid: 8cf1f10a-fc6b-4c09-a2bc-6e4d1a901dad
-  :name: Deploy to Heroku (a PaaS Provider)
-  :description: |+
-    - Student has a functioning Node app up and running that has environment variables and attached SQL database
-
-  :instructor_notes: ''
 - :standard_uuid: 2886a5f1-92f6-44ba-8adb-185b2a161870
   :standard_name: Deployment
   :uuid: 79030da6-cfca-479c-8ac2-31826cf70ddd
@@ -1783,14 +1783,6 @@
 
 - :standard_uuid: ce60c0de-9f49-423f-bbbe-7fea0c1b875c
   :standard_name: Architecture
-  :uuid: 06005077-158b-4cd8-903f-562b709aa071
-  :name: Build a web app that separates concerns using models, views, and controllers
-  :description: |+
-    - Build a web app that separates concerns using models, views, and controllers
-
-  :instructor_notes: ''
-- :standard_uuid: ce60c0de-9f49-423f-bbbe-7fea0c1b875c
-  :standard_name: Architecture
   :uuid: b24ecc78-5a7d-493d-8f66-3d451a9d374c
   :name: Identifies and explains purpose of common software architectural concepts
   :description: "- Identify and explain: Route, Model, View / Template, Controller,
@@ -1801,6 +1793,14 @@
     Display, state, and behavior encapsulated.\r\n- Utility / Helper - repeated procedure
     for refactoring purposes - logic extracted from a view for reusability\r\n- Worker
     - scheduled code"
+- :standard_uuid: ce60c0de-9f49-423f-bbbe-7fea0c1b875c
+  :standard_name: Architecture
+  :uuid: 06005077-158b-4cd8-903f-562b709aa071
+  :name: Build a web app that separates concerns using models, views, and controllers
+  :description: |+
+    - Build a web app that separates concerns using models, views, and controllers
+
+  :instructor_notes: ''
 - :standard_uuid: ce60c0de-9f49-423f-bbbe-7fea0c1b875c
   :standard_name: Architecture
   :uuid: 1d4c879a-8dd3-4eb0-babc-8414e7ed73ec
@@ -1934,18 +1934,6 @@
   :instructor_notes: ''
 - :standard_uuid: dfec3119-3ba1-4a14-ba2c-9f66715f4b98
   :standard_name: Agile Project Management
-  :uuid: 5a36d842-c508-4cbe-906d-f586f3b0e424
-  :name: Complete projects using an agile methodology
-  :description: "- Follow agile best-practices\n\n* Write and prioritize stories/features\r\n*
-    Complete one feature before moving on to the next\r\n* Go through an acceptance
-    process with a stakeholder\r\n* Track their progress using an agile project management
-    tool"
-  :instructor_notes: "Old success criteria\r\n\r\n- Student completes a software project
-    where they:\r\n- Write and prioritize stories/features\r\n- Complete one feature
-    before moving on to the next\r\n- Go through an acceptance process with a stakeholder\r\n-
-    Track their progress using an agile project management tool"
-- :standard_uuid: dfec3119-3ba1-4a14-ba2c-9f66715f4b98
-  :standard_name: Agile Project Management
   :uuid: 614e6ddd-49c8-459b-b79d-81265d867757
   :name: Discuss agile values and principles
   :description: "- Discuss the significance of each of the agile values\n- Student
@@ -1957,6 +1945,18 @@
   :instructor_notes: |2+
 
 
+- :standard_uuid: dfec3119-3ba1-4a14-ba2c-9f66715f4b98
+  :standard_name: Agile Project Management
+  :uuid: 5a36d842-c508-4cbe-906d-f586f3b0e424
+  :name: Complete projects using an agile methodology
+  :description: "- Follow agile best-practices\n\n* Write and prioritize stories/features\r\n*
+    Complete one feature before moving on to the next\r\n* Go through an acceptance
+    process with a stakeholder\r\n* Track their progress using an agile project management
+    tool"
+  :instructor_notes: "Old success criteria\r\n\r\n- Student completes a software project
+    where they:\r\n- Write and prioritize stories/features\r\n- Complete one feature
+    before moving on to the next\r\n- Go through an acceptance process with a stakeholder\r\n-
+    Track their progress using an agile project management tool"
 - :standard_uuid: 0f6ed5e9-c172-4969-b990-f2324c91f5ad
   :standard_name: Designing APIs
   :uuid: ec89798f-87ee-4691-abee-28f85bcb5c59
@@ -2126,6 +2126,17 @@
     compile time vs. runtime
 - :standard_uuid: e43b79ad-875a-4817-8ac0-68f7f47f3b42
   :standard_name: OOP w/ Statically Typed Language
+  :uuid: 84e30c2e-0715-411f-b39b-db22598897b1
+  :name: Compare and contrast OOP and Functional Programming
+  :description: "- Describe Functional Programming in relation to OOP\n- Describe
+    OOP in relation to functional programming\n\n- First class functions\r\n- Higher
+    order functions\r\n- Immutable data\r\n- Functions like components of an assembly
+    line\n\n- Methods operating on the state of the object\r\n- Mutable data"
+  :instructor_notes: |2+
+
+
+- :standard_uuid: e43b79ad-875a-4817-8ac0-68f7f47f3b42
+  :standard_name: OOP w/ Statically Typed Language
   :uuid: 0aa5d3c6-9b6c-4c71-a680-35500aec7773
   :name: Define and explain the significance of the major principles of Object Oriented
     Programming
@@ -2145,17 +2156,6 @@
     composition\n\n- Subclasses / classes w/ an interface have the same method signatures\r\n-
     Liskov\n\n- behavior and state contained together\r\n- public vs private vs protected\r\n-
     understand the concept of visibility\n\n- interfaces\r\n- modeling real-world\n\n"
-- :standard_uuid: e43b79ad-875a-4817-8ac0-68f7f47f3b42
-  :standard_name: OOP w/ Statically Typed Language
-  :uuid: 84e30c2e-0715-411f-b39b-db22598897b1
-  :name: Compare and contrast OOP and Functional Programming
-  :description: "- Describe Functional Programming in relation to OOP\n- Describe
-    OOP in relation to functional programming\n\n- First class functions\r\n- Higher
-    order functions\r\n- Immutable data\r\n- Functions like components of an assembly
-    line\n\n- Methods operating on the state of the object\r\n- Mutable data"
-  :instructor_notes: |2+
-
-
 - :standard_uuid: d5947e67-9d70-4e02-ae2a-b3135a9c1667
   :standard_name: Data Structures / Algorithms
   :uuid: 864fb2e5-1a7c-440d-a21d-eead8eed127e
@@ -2207,6 +2207,37 @@
   :instructor_notes: "* Depth-First Search (recursive)\r\n* Breadth-First Search (non-recursive)\n\n\n\n"
 - :standard_uuid: d5947e67-9d70-4e02-ae2a-b3135a9c1667
   :standard_name: Data Structures / Algorithms
+  :uuid: e27bebe6-5b07-428d-9400-2d8f08944076
+  :name: Identify and diagram common data structures
+  :description: |-
+    - Identify and diagram an Array
+    - Identify and diagram a hash table
+    - Identify and diagram a linked list
+    - Identify and diagram a stack
+    - Identify and diagram a queue
+    - Identify and diagram tries
+    - Identify and diagram a tree
+    - Identify and diagram a graph
+
+
+
+
+
+    Identify and diagram a linked list as a set of boxes with pointers
+
+
+
+
+
+
+
+    Identify and diagram a tree as a set of nodes with pointers to their children
+
+    Identify and diagram a graph as a as an unordered set of nodes with pointers to other nodes
+  :instructor_notes: "## Assessments\r\n\r\nGive the student an array, have them come
+    up with a diagram that looks like: [a picture goes here]\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+- :standard_uuid: d5947e67-9d70-4e02-ae2a-b3135a9c1667
+  :standard_name: Data Structures / Algorithms
   :uuid: 1430686b-e6af-48c3-be11-55c986e55148
   :name: Implement, evaluate, and use some common data structures
   :description: |+
@@ -2238,37 +2269,6 @@
 
 
 
-- :standard_uuid: d5947e67-9d70-4e02-ae2a-b3135a9c1667
-  :standard_name: Data Structures / Algorithms
-  :uuid: e27bebe6-5b07-428d-9400-2d8f08944076
-  :name: Identify and diagram common data structures
-  :description: |-
-    - Identify and diagram an Array
-    - Identify and diagram a hash table
-    - Identify and diagram a linked list
-    - Identify and diagram a stack
-    - Identify and diagram a queue
-    - Identify and diagram tries
-    - Identify and diagram a tree
-    - Identify and diagram a graph
-
-
-
-
-
-    Identify and diagram a linked list as a set of boxes with pointers
-
-
-
-
-
-
-
-    Identify and diagram a tree as a set of nodes with pointers to their children
-
-    Identify and diagram a graph as a as an unordered set of nodes with pointers to other nodes
-  :instructor_notes: "## Assessments\r\n\r\nGive the student an array, have them come
-    up with a diagram that looks like: [a picture goes here]\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
 - :standard_uuid: e59bae37-553b-4c1b-8667-4dbbdeeae98d
   :standard_name: Technical Interview Prep
   :uuid: 0fe673a0-4edf-449b-8794-cc13101d60c6
