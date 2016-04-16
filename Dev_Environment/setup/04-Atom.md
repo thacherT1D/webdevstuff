@@ -64,3 +64,4 @@ atom ~/Downloads
 And your Downloads folder will open and look like this:
 
 ![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/21/atom-example.png)
+![Uploading file...]()

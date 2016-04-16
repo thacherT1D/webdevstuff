@@ -41,3 +41,4 @@ brew doctor
 And you'll see something like this.
 
 ![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/16/brew-doctor.png)
+![Uploading file...]()

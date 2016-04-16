@@ -43,3 +43,4 @@ Now is a great time to install a [global .gitignore file](https://help.github.co
 echo .DS_Store > ~/.gitignore_global
 git config --global core.excludesfile ~/.gitignore_global
 ```
+![Uploading file...]()

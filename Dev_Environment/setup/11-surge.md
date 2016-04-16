@@ -220,3 +220,4 @@ You've successfully setup a web development environment on Mac OS X and have com
 1. Deployed the web page to a production environment
 
 Now that you've finished this guide, it's time to celebrate with a frosty beverage. :beers:
+![Uploading file...]()

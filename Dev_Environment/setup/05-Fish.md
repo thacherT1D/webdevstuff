@@ -112,3 +112,4 @@ To use the auto-suggestion, press the right arrow ➡ key and hit the `Enter` ke
 ![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/30/fish-tab-completion-2.png)
 
 **TIP:** Use the up arrow ⬆ and the down arrow ⬇ keys to cycle through your entire history of commands.
+![Uploading file...]()

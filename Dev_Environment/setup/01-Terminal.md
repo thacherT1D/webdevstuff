@@ -99,3 +99,4 @@ Every new Terminal window will look like this:
 OR
 
 ![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/13/solarized-light.png)
+![Uploading file...]()

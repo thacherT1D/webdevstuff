@@ -21,3 +21,4 @@ http://stackoverflow.com/questions/16199581/opening-sublime-text-on-command-line
 **NEXT STEPS**
 
 While Sublime Text 3 comes with some nice things out of the box, there are a bunch of additional tools we want to add to our text editor (we will call those "packages"). In order to do that, we need a tool to help us install these "packages" (we call that a "package manager"). Head over to https://packagecontrol.io/installation and follow the instructions for Sublime Text 3. If you install this correctly, you should be able to type `command+shift+p` in sublime and type in `install package` and see something.
+![Uploading file...]()

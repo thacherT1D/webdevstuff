@@ -11,3 +11,4 @@ In the terminal run:
 `sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"`
 
 You may have to type in your password if it asks you, and when you are done with this, in the terminal, type `zsh`.
+![Uploading file...]()

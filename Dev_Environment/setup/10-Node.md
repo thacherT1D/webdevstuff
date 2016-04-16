@@ -98,3 +98,4 @@ Play around with JavaScript on your own. When you're done, remove the `test.js` 
 ```
 rm ~/Desktop/test.js
 ```
+![Uploading file...]()

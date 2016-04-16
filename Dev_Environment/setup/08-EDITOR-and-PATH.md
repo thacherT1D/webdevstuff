@@ -57,3 +57,4 @@ Notice the `/usr/local/bin` directory is listed before the following directories
 This means the `/usr/local/bin` directory has priority over all later searched directories.
 
 Since Homebrew installs new commands to the `/usr/local/bin` directory, Homebrew-installed commands will be preferred over the pre-installed ones. In upcoming sections, you'll use Homebrew to install additional commands that override the pre-installed commands that come with Mac OS X.
+![Uploading file...]()

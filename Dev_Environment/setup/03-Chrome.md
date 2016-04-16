@@ -19,3 +19,4 @@ Scroll down a bit more until you find the **Send a "Do Not Track" request with y
 ![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/19/chrome-do-not-track.png)
 
 **TIP:** You may want to consider installing an [ad blocking extension](https://chrome.google.com/webstore/detail/adblock/gighmmpiobklfepjocnamgkkbiglidom) to Chrome.
+![Uploading file...]()
