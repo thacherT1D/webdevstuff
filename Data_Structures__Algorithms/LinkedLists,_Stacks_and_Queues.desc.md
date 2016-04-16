@@ -1,16 +1,19 @@
-**Hook**
+https://github.com/gSchool/computer-science-curriculum
 
-Give a really good hook.  If you are excited about them, students will be excited about them. While we don't _use_ LinkedLists in most modern web development, we study them because:
+By the end of this lesson you should be able to:
 
-- They form the basis needed to grok Graphs and Trees, and there are _tons_ of Graphs and Trees (file systems, DOM, git)
-- They force you to undertand references deeply - in a way you might not have been exposed to previously
-- They force you to think about algorithms differently - for example _needing_ to traverse a data structure with a `while` loop
-- Least of all, they may come up in interview questions
-    
-**I do**
+**Part 1**
 
-- Lecture about LinkedLists.
-- Draw the box/line diagram on the board
-- Live code some basic LinkedList implementations
-- Intro students to the test suite under exercises in the CS curriculum
+- Describe and draw a singly-linked list
+- Implement a singly linked list in JavaScript including the methods:
+    - push
+    - pop
+    - delete
+    - all by _value_
+- Describe and draw a doubly-linked list
 
+**Part 2**
+
+- Describe a stack
+- Describe a queue
+- Implement both a stack and a queue using a linked list

@@ -1,46 +1,127 @@
-#Agile Workflow
-[Agile Project Management slides and expectations ](https://docs.google.com/presentation/d/1NpKJ2XxkAimuaihdoR8278YrpEyZpGz7qdHt9depVx0/edit?usp=sharing)
+The goal of this project is to put what you've learned to use to:
 
-* http://scrumtrainingseries.com/
+* [Write a project proposal and get it approved by an instructor](#proposal)
+* [Follow an agile development workflow](#agile)
+* [Create and deploy a complete CRUD app](#create-deploy)
+* [Make a video highlighting the functionality of your app](#video)
+* [Complete a write-up of the project](#write-up)
+* [Add all three of these to an online portfolio](#portfolio)
+* [Present your work to the class](#present)
 
+<a id="proposal"></a>
 
-## Examples from previous classes 
-(some requirements may be different):
+## Write a project proposal and get it approved by an instructor
 
-* g10: Spotifize: http://spotifize.herokuapp.com/visualize
-* g10: Monopolize: https://monopolize-monopoloy.herokuapp.com/
-* g10: Telecomics: https://protected-waters-5312.herokuapp.com/
-* g15: Planit: http://app-planit.herokuapp.com/
-* g15: Trailmix: http://www.trailmix.in/
+For this project, you will be assigned into groups of four. Together, you will need to come up with a product idea, and write it as a proposal that includes:
 
-# Week 11 Project
-* Do stories the friday before week 11 and get everything set up
-* Have a reason for students to be present at the beginning and end of each day:
-    * Group warmups or a brief lecture in the morning
-    * Acceptance tests at the end of the day
-* This project is CRUCIAL for career success
-* Their projects/writeups/videos will go in the LMS
-* Emphasize that classtime is not enough to do a good job on this project
-* A class of 30 doing 5-minute presentations will take 2.5 hours. If you add in time for breaks and feedback, presentations will probably take all of Friday afternoon.
+* A project description
+    * Who uses it?
+    * What outputs do they need?
+    * What inputs are needed to generate those outputs?
+* A list of technologies that you plan to use
+* A well-defined and written-out feature list
 
-## Disasters
+There are some constraints around what technologies MUST be present in your app. Check out [Create and deploy a web app](#create-deploy) below.
 
-Ideas for real-life disaster scenarios
+## Follow Agile Workflow 
+See Slideshow 
 
-* Remove a project member for a day
-* No one is allowed to use GitHub for a day
+### Example Ideas
 
-## Added Objectives
+* Library
+* Movie Database
+* Blog
+* Retail Store
+* Student Enrollment System
+* Sports Performance Database
+* Trip Itenerary
 
-* Hashed passwords and signed cookies
+<a id="create-deploy"></a>
 
-## Removed Objectives
+## Create and deploy a complete CRUD app
+
+Your web app should:
 
 * CRUD
-    * Be proven functional in Chrome, Firefox, and IE11
+    * Allow users to create, read, update, and delete data from a form
+    * Interact with a server-side A
 * HTML
-    * Use a templating engine (Handlebars, Jade)
+    * Make good use of semantic HTML tags
+    * Be well-indented, [validated](https://validator.w3.org/nu/), etc.
+
+* CSS
+    * Be well-designed
+    * Use either SASS or a styling framework like Bootstrap
+        * If you are using Bootstrap, please consider theming with something like bootswatch, customizing the download with SASS, or a [customizer](http://getbootstrap.com/customize/)
+    * Be well-indented and clean
+    * Use at least one web font
+    * Split code into separate files where appropriate
+    * Responsive design optional but strongly encouraged
+* JavaScript
+    * Well-indented, [linted](http://www.javascriptlint.com/online_lint.php), and use excellent variable names
+    * Split code into separate files where appropriate
+    * Optionally, use a test-driven development approach
 * Workflow
-    * Use an automated tool (such as Gulp) to build and deploy your project
-* Testing
-    * Have test coverage for each API route and method (using something like [Super Test](https://www.npmjs.com/package/supertest))
+    * Use wireframes to create your layouts before you build them
+    * Use a feature-branch workflow for your user stories
+    * Squash commits and issue pull requests rather merging directly to master
+
+Your API should:
+
+* API
+    * Must have atleast 2 API integrations
+    * Use express.js
+    * Have routes for create, read, update, and delete operations on multiple routes
+    * Be designed according to RESTful principles
+    * CRUD data from/to a relational database using SQL or an ORM
+* Auth
+    * Support functionality for three role types:
+        * A non-logged in user
+        * A logged-in user with limited permissions
+        * A logged-in superuser
+    * Support login via a social network
+    * Passwords should be hashed
+    * Use signed Cookies
+* Database
+    * Use PostGres
+    * Be normalized to 3rd Normal Form
+    * Be seeded with data
+    * Have a separate user for the application
+* Workflow
+    * Use a feature-branch workflow for your user stories
+    * Use an automated tool (such as Gulp) to build, deploy, and test your project
+    * Document dependencies in a `package.json` file
+    * Squash commits and issue pull requests rather merging directly to master
+
+Note that you will end up with 3 deployments- your client-side web app, your API, and your database. The code for these should also be stored in 3 separate repositories.
+
+<a id="video"></a>
+
+## Make a video highlighting the functionality of your app
+
+* Make a 3-6 minute video explaining your project and demonstrating its features
+
+<a id="write-up"></a>
+
+## Complete a write-up of the project
+
+* Describe what the project is, the technologies you used, and some information about the workflow you followed.
+* 1-2 tight paragraphs
+
+<a id="portfolio"></a>
+
+## Add all three of these to an online portfolio
+
+* Create a portfolio on the [student portal](http://students.galvanize.com)
+* Link to your final deployed site, your video, your respositories, and your write-up
+* This will be added to your web development portfolio
+
+<a id="present"></a>
+
+## Present your work to the class
+
+* Be prepared to spend ~10 minutes presenting your work to the class.
+
+---
+
+This is a realistic approximation of what developing real products on a software team is like. You will have approximately 20-25 hours of class time to work on this. **It will not be enough time to do a good job on this project**. Plan on spending extra time outside of class, and coordinate this time with your team. This is another Big Deal Week, and you should put maximum effort into making it successful. You can and should use your teammates, classmates on other teams, and your instructors as learning resources, but this should be your own work.

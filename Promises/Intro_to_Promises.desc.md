@@ -1,57 +1,37 @@
-#Resource
+## Async
 
-[Slides](https://docs.google.com/presentation/d/1ehfrCZ9hpc601dkfXUz7TzrDpSOn_VHuKflOumTasVI/edit?usp=sharing)
+Before jumping into promises, it is very important to understand the asynchronous nature of JavaScript. Imagine if your application had to wait for one event to finish before it could start another. What kind of problems could that lead to? What would the user experience be like?
 
-## Guiding Questions
+First, watch the video at https://vimeo.com/134061121 - password is schoolhouserock
 
-* What are 3 ways to handle async behavior? What are the advantages and disadvantages of each?
-    * Callback
-        * Simple to understand
-        * Rightward drift
-        * Multiple requests simultaneous
-    * Deferred
-        * Built into jQuery
-    * Promise
-        * Better for chaining
-    * (Calling things in the global scope)
-    * (Generators)
-* What is "callback hell"?
-* What are the methods of promises?
-    * .then
-    * .catch
-* How do you run multiple async requests at the same time?
-    * Promise.all
-* How do you "promisify" a function?
-* Write a promise
-* Chain two promises together
-* Make a promise reject
+Now read throught he MDN docs at https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop
 
-## Push Questions
+This is a great video as well https://www.youtube.com/watch?v=8aGhZQkoFbQ
 
-* How do you retry a promise that you rejected?
-* How do you retain state from promise to promise?
-* What is the second argument to .then?
-* What happens if you catch a value and want to keep going?
-* Can you chain catches? Thens?
+And here is a link to the excellent tool he built for visualizing the event loop. Play around with it a little and watch how your code is executed: latentflip.com
 
-## Exercises
+Click on "Click Me" LOTS of times as quickly as you can :)
 
-* Doing an AJAX call with a promise chain
-* Doing chained AJAX calls with promise chains
-* Doing a file reads with a promise chain
-* Using settimeout with a promise chain
-* Promisifying something synchronous so you can add it to a chain
+##Promises
 
-### I do
+Promises show up pretty much everywhere in JavaScript these days, including interviews.  Having total mastery over promises will allow you to write clean and beautiful, well-factored asynchronous code.
 
-Promisify jQuery Ajax calls
-Create new Promise
+These exercises predominantly use Monk to demonstrate promises because it's so lightweight / quick and easy.  But the exact same principles and techniques would apply if you were reading files, making API calls or making any other async calls that return promises.
 
-### We Do
+## Chained / Nested Promises
 
-Add new created promise to ajax calls
+When you get to the part about chained promises, you may want to watch the following video several times as you learn more about promises:
 
-### They Do
+<iframe src="https://player.vimeo.com/video/136801594?byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
-Github repo
-https://github.com/gSchool/promise-exercise
+ERRATA: there's an error at 3:55 - the bottom function box should read "f2"
+
+## Promise.all
+
+When you get to the part about `Promise.all`, definitely watch this video to get a visual sense of what's happening.
+
+<iframe src="https://player.vimeo.com/video/136900546?byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+## Exercise
+
+[github repo](https://github.com/gSchool/promise-exercise)

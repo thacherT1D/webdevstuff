@@ -1,61 +1,79 @@
-### Workshops
+By the end of this unit, you should be able to build an app like this:
 
-**30-minute kick-off.**  The goal of this workshop is to:
+<iframe src="https://player.vimeo.com/video/135778837?byline=0&portrait=0" width="500" height="313" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
-- make sure students know which learning experience they are supposed to be working in, and can get access
-- intro the topic briefly, show excitement about it, answer basic beginner questions
-- talk about timelines, check entry tickets etc...
+Watch the video above, so as you go through the exercises you can see how you can build each portion of the project.
 
-The entry ticket for these is successful completion of the previous learning experience.  Run these as many times as needed until students have all moved through it.
+## Activity
 
-**Review**
+Work through Unit 1 of the Angular Curriculum:
 
-Run a review workshop where you can cold-call, answer questions, pose problems to students.  Run as many of these as necessary until the class has gotten it.
+https://github.com/gSchool/angular-curriculum/tree/master/Unit-1
 
-### Templates
+No need to fork/clone - just build these exercises from scratch using pure HTML / JavaScript
 
-Drop the following workshops in the daily plan (change the times accordingly)
+## Project
+
+- Complete the reddit-clone project
+- Push to a public repo
+- Deploy to S3 / Heroku / Bluemix
+
+## Chrome Extension
+
+[Batarang](https://chrome.google.com/webstore/detail/angularjs-batarang-stable/niopocochgahfkiccpjmmpchncjoapek?hl=en-US)
+
+
+## Angular Scope and ng-repeat
+
+Get this app up and running and use it to determine how scope works in ng-repeat.
 
 ```
-## 11am - Angular Intro
-
-**Entry ticket** - completed Mongo associations objectives
-
-That is, if your mongo assessment is not done, do NOT come.  Focus.  That shit is important.  Get it done.  Like, today!!
+<!DOCTYPE html>
+<html ng-app="ScopeyScope">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+    <script type="text/javascript">
+      angular.module('ScopeyScope', [])
+        .controller('OverAndOver', function ($scope) {
+          $scope.message = "I'm from the parent"
+          $scope.things = [1,2,3]
+        })
+    </script>
+  </head>
+  <body>
+    <div ng-controller="OverAndOver">
+      <h1>Instructions</h1>
+      <ul>
+        <li>Change any field in Section #1</li>
+        <li>Change one field in Section #2</li>
+        <li>Change any field in Section #1</li>
+        <li>Wat? - look at the source code</li>
+      </ul>
+      <fieldset>
+        <legend>Section #1 <small><em>NOT</em> using ng-repeat</small></legend>
+        <div>
+          <input ng-model="message">
+        </div>
+        <div>
+          <input ng-model="message">
+        </div>
+        <div>
+          <input ng-model="message">
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Section #2 <small><em>using</em> ng-repeat</small></legend>
+        <div ng-repeat="thing in things">
+          <input ng-model="message">
+        </div>
+      </fieldset>
+    </div>
+  </body>
+</html>
 ```
 
-And also:
+## Angular State Exercise
 
-```
-## 1pm Angular Review
-
-**Entry Ticket** - You must have at least made it through the lessons from Unit 1 and be working on the project.  The project does not have to be done.
-```
-
-## Cold-call / whiteboard questions:
-
-## Whiteboard
-1. What's the syntax for outputting a bound variable?
-1. What attribute do you use to bind a variable to a form field?
-1. What attribute do you add to the html element?
-1. In Angular Controllers, what's the name of the variable you need to inject in order to bind the view?
-
-## Level 1
-
-1. What does MVC stand for?
-1. What are 3 ways you can include angular's js file in your app?
-
-## Level 2
-
-1. What is two-way data-binding?
-1. How do you give an angular app a name (2 part answer)?
-
-## Level 3
-
-1. How do you display all the items in an array?
-1. When would you use angular on a project?
-
-## Lesson Ideas
-
-- Talk about ng-repeat scope using the "Angular Scope and ng-repeat" HTML in student notes of this LE
-- Talk about state in angular with "Angular State Exercise" git repo (they should pair on this)
+https://github.com/gSchool/angular-stateful-objects

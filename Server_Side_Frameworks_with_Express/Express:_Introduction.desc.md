@@ -1,16 +1,24 @@
-## THE MASTER COPY IS HERE: https://github.com/gSchool/node-curriculum/blob/master/unit-2/intro-express.md
+## Intro Workshop
 
-The main idea here is to drive home the point that you solve interesting problems using algorithms, and package them for the web.
+**Entry ticket** is completion of node-related LE's before this one.  Make sure you do not start Express if you are still struggling with file system things / `module.exports`
 
-The other main idea is to get them a ton of practice creating and pushing express apps and repos to GitHub to keep their streaks up.
+## Data Flow in Express!
 
-**Intro Workshop**
+<iframe src="https://player.vimeo.com/video/136796681?byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
-Hold multiple of them - only kick things off for people who are ready.  
 
-- Talk about how to watch the videos, how to go to the git repo.
-- How in this one you don't have to fork and clone - you should create your own repos and push them.
+## Intro to Dynamic Web App Concepts
 
-**Review Workshop**
+<iframe src="https://player.vimeo.com/video/136579022?byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
-Coming soon... links to other workshops you can run that are purely Express-based, but basically building any kind of form that processes data little, and has multiple routes is a good workshop topic.
+## Static Websites vs Dynamic Websites
+
+<iframe src="https://player.vimeo.com/video/136582439?byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+
+### EXERCISES:
+
+This is a repo of Express application exercises. 
+
+https://github.com/gSchool/express-introduction
+

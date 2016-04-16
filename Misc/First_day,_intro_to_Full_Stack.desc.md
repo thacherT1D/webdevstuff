@@ -1,7 +1,5 @@
-Ideas:
-Have them identify people by picture?
+A high-level roadmap and a walk through of programming fundamentals and different parts of the stack with visualization.
 
-To do:
-Need to get requirements, CoC, etc. copied in here
+Resources:
 
-http://slides.com/momolove/deck
+* http://akaptur.com/blog/2015/10/10/effective-learning-strategies-for-programmers/

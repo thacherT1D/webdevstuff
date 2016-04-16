@@ -1,53 +1,178 @@
-- Colt's Daily plan https://students.galvanize.com/cohorts/13/daily_plans/2015-06-15
-- Colt's prework https://students.galvanize.com/cohorts/13/daily_plans/2015-06-12
-- Cookies and sessions in rails https://students.galvanize.com/cohorts/13/daily_plans/2015-07-17
-- https://students.galvanize.com/cohorts/14/daily_plans/2015-06-24
-- https://students.galvanize.com/cohorts/14/daily_plans/2015-06-22
-- Jeff's daily plan for cookies - https://students.galvanize.com/cohorts/14/daily_plans/2015-07-08
-- 
+<div class="alert alert-info">
+  We are currently transitioning this Learning Experience from Mongo to SQL/Knex.  Even though some videos reference Mongo, we recommend using SQL/Knex.
+</div>
 
-### Cryptographic Hashing
+### Entry Ticket
+In order to get this most out of this Learning Experience, you'll need to be comfortable with the following:
 
-Something fun we did in our class (g18) was have them watch the video and then brought the class back and asked these questions: 
+* [Express](http://expressjs.com/en/4x/api.html)
+* [express.Router()](http://expressjs.com/en/4x/api.html#router)
+* [Express Middleware](http://expressjs.com/en/4x/api.html#app.use)
+* [response.render()](http://expressjs.com/en/4x/api.html#res.render)
+* [response.redirect()](http://expressjs.com/en/4x/api.html#res.redirect)
+* [dotenv](https://www.npmjs.com/package/dotenv)
 
-1. what is a hash? 
-    * hashing algorithm takes a string and outputs another string   
-    * It's one way 
-    * cannot be be reverse engineered 
-    * Two same passwords will have the same hashes
-2. Difference between an ecryption and a hash 
-    * encryptions have a key that allows you to decrypt, hashes cannot be decrypted, instead one needs a look up table of words, hash all of those and then match the hashes 
+### Objectives
 
-*Discuss the common ways of guessing passwords: 
-    1. Dictionary: words, phrases, common passwords 
-    2. Brute force: every possible combination of characters in a given length ('aaaa', 'aaab', 'aaac')
-    3. Master list someone has compiled in the dark web 
- 
-#####THEN    
-***We had this site up [hashing and bcrypt](https://github.com/gSchool/bcrypt-practice)
-AND [crack station](https://crackstation.net/)***
+* Describe difference between authentication and authorization
+* Explain key ideas about how Cookies work
+* Describe how cookies are transfered
+* Read and write cookies in express
+* Authenticate a user using information from a form
+* Use best practices to secure your user's data from attackers
+* Describe common attacks targeted at insecure webapps
+* Validate input from a form on the server
+* Use sessions to keep a user authenticated
+* Keep private keys and other secure data in your `.env` file
 
-1. We looked at the crack station site and they were appalled by how you could just download the torrent to this and how someone had compiled a mastery list of hashes to compare
-2. We used our site in the md5 section to start generating some hashes and plugged them into crackstation to show them how fast a un-salted hashed password can be found in plain text! This was AWESOME Really drove the 'WHY WE CARE" part home and got them super engaged and asking questions left and right! Here are some hashes to use if you're crunched on time: 
+
+
+### Key Terms
+
+**Authentication**
+
+**Authorization**
+
+**Cryptographic Hashing**
+
+**Cookies**
+
+**Session**
+
+
+### Overview
+This learning experience covers most of the basic ideas you need to understand if you want users to be able to log in to your application. 
+
+How often will you implement authentication from scratch in a job?  Not often, at least as a junior developer.
+
+So why do we teach it?  Because it touches on a number of *hugely* important topics and challenges you to combine them with things you already know.  Things you'll touch on while learning to implement form-based authentication are:
+
+- CRUD (creating users)
+- Validations (displaying error messages like "invalid email / password")
+- Cryptographic hashing
+- Cookies and sessions
+
+You will need to watch all of these videos in order to understand the concepts at play when we do authentication.
+
+## Video #1 - Authentication Overview
+
+<iframe src="https://player.vimeo.com/video/141225092?byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+This video is a great overview of how authentication is done in express.js. This video uses a different persistence layer, but the logic remains the same no matter what persistence layer you use. [Take a look at this example](https://github.com/gSchool/form-auth-with-express-knex-pg-bcrypt) for one using a more familiar persistence layer.
+
+#### Resources
+
+- [Form Authentication with Express, Knex, pg and Bcrypt](https://github.com/gSchool/form-auth-with-express-knex-pg-bcrypt)
+
+## Video #2 - Cryptographic Hashing
+
+<iframe src="https://player.vimeo.com/video/141284905?byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+How do we secure our user data? Knowing this basic information well will put you above most developers in terms of security knowledge (unfortunately). Pay close attention to the information in this video, or you might cause your new employer to [show up on this list](https://haveibeenpwned.com/PwnedWebsites).  
+
+#### Resources
+
+- https://crackstation.net/hashing-security.htm
+- http://codahale.com/how-to-safely-store-a-password/
+- http://www.unlimitednovelty.com/2012/03/dont-use-bcrypt.html
+- https://blog.agilebits.com/2015/03/30/bcrypt-is-great-but-is-password-cracking-infeasible/
+- https://www.owasp.org/index.php/Main_Page
+
+## Video #3 - Cookies
+
+<iframe src="https://player.vimeo.com/video/141304889?byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+Let's practice what we just learned. **Do this, because we're going to build on it after the next video**. 
+
+Create a new directory, and generate an express app with `express cookieExample`. Then `git init` in that folder, of course. Add `node_modules` to your `.gitignore`, and then `npm install`. Then, commit all files.  
+
+The express generator installs the `cookie-parser` module for you already, and you can find it being added to your app on **line 22**.  
+
+In your `./routes/index.js` file, we're going to set a cookie, and then read that cookie.
+
+```javascript
+router.get('/', function(req,res,next){
+	res.cookie('views',parseInt(req.cookies.views || 0) + 1);
+
+	res.render('index', { title: 'Express', views: (req.cookies.views || 0)});
+});
+
 ```
-c11083b4b0a7743af748c85d343dfee9fbb8b2576c05f3a7f0d632b0926aadfc
-08eac03b80adc33dc7d8fbe44b7c7b05d3a2c511166bdb43fcb710b03ba919e7
-e4ba5cbd251c98e6cd1c23f126a3b81d8d8328abc95387229850952b3ef9f904
-5206b8b8a996cf5320cb12ca91c7b790fba9f030408efe83ebb83548dc3007bd
+
+Then, go to your `./views/index` and add the `views` variable to your template.
+
+***Jade***
+```
+p You have been to this page #{views} times.
 ```
 
-#####THEN 
-That was a perfect way to lead into Salts!
+***EJS***
+```
+<p>You have been to this page <%=views%> times.</p>
+```
 
-1. What is a salt? 
-    * Randomly generated string of characters used to combine with password of user
-    * ex: salt + password, salt + salt + password, salt + 'hello' + password 
-2. What is the benefit of a slow hashing algorithm? 
-    * More resource intensive to generate 
-3. What is cryptographic hashing? 
-    * Storing passwords in a database
-    * help prevent further data breaches 
-    * slow attackers down 
+Now, using the instructions in the video above, **do the following**:
 
-_Ended With_
-Showing them both syncronous and asyncronous bcrypt code in the bcrypt repo, how it works and allowing them to break out and work that on their own! 
+- Using `res.clearCookie()`, create a route, and link on the homepage, that clears that cookie, then redirects the user back to the homepage.
+
+- Upgrade your cookies to be more secure, by ensuring they are *signed*, *secure*, and *http only*.
+
+
+#### Resources
+
+- https://en.wikipedia.org/wiki/HTTP_cookie
+- https://www.npmjs.com/package/cookie
+
+
+## Video #4 - Sessions
+
+<iframe src="https://player.vimeo.com/video/141306923?byline=0&portrait=0" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+Now we're going to use the techniques described in the above video to use sessions instead of cookies.
+
+Open up the project we generated after the Cookies video.
+
+First, `npm install cookie-session`. Then require it in your `app.js` file.
+
+* Put the `cookieSession` middleware in your app.
+* Configure the `cookieSession` middleware by giving it a `name` key, and adding some keys to the `keys` array.
+* Change all references to `req.cookies` or `res.setCookie()` to use the `req.session` object instead.
+* Get your keys from your `.env` file, instead of comitting them to your code.
+
+
+#### Resources
+
+Generating random strings in Node:
+
+```
+node -e "require('crypto').randomBytes(48, function(ex, buf) { console.log(buf.toString('hex')) });"
+```
+
+- [Cookie Sessions](https://github.com/expressjs/cookie-session)
+
+## Examples
+
+[Form-based Authentication with `pg` and `knex`](https://github.com/gSchool/form-auth-with-express-knex-pg-bcrypt/)
+
+
+## Assignment
+This assignment should take you about 2 hours to complete.  
+
+[Express Authentication with Forms](https://github.com/gSchool/authentication-in-express)
+
+## Reflect
+
+### Self-Assessment
+
+How’d you do? Go back to the "Objectives" section. Go through each one and ask yourself:
+
+- Have I completed this objective?
+- What concrete evidence do I have that I've completed the objective?
+
+Rate yourself 1 through 4 for each objective in terms of competence (4 being the highest). If you rate yourself a 2 or below, please notify an instructor for additional help.
+
+Go to the "Key Terms" section.  For each term, ask yourself:
+
+- What is my explanation for this term?
+
+If you haven't completed an objective, or you can't define a term, take a few minutes to try to fill in any gaps.

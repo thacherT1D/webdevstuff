@@ -1,0 +1,1 @@
+https://github.com/gSchool/rails-for-js-developers-curriculum

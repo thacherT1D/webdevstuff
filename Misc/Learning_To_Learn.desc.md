@@ -1,23 +1,11 @@
-* Objectives:
-1. Discuss the 3 stage learning process
-1. Identify your personal strengths and weaknesses in the 3 stage learning process
-1. Explain the concept of zone of proximal development
-1. Describe how differentiation supports students to move through their zone of proximal development
+3 stages: Setting the stage, play, reflect (learn, do, get stuck, repeat)
 
-Evan's slides available [here](http://slides.com/evanmoore/learning-to-learn#/)
+What parts of the 3 stage process are you strong on, which parts do you struggle on?
 
-Evan's video available [here](https://drive.google.com/a/galvanize.com/file/d/0B5JFrukBL_jpVVZZY3BRZERYdWM/view)
+## Slides
 
 Kim and Mat's slides [here](http://slides.com/kimschlesinger-1/learning-to-learn#/)
 
-Kyle's slides available [here](http://slides.com/kylecoberly/deck-11)
+## Micro-Lectures
 
-* Differentiated instruction
-* 3 Stage process for learning
-    * Setting the stage
-    * Play
-    * Reflect
-* Zone of proximal development
-* Bloom's taxonomy
-
-Assessment available [here](https://students.galvanize.com/assessments/51)
+L2L - Micro Lectures Collection [here](https://drive.google.com/folderview?id=0ByxeUANhENUyd0dtZDMwbE1rXzA&usp=sharing)

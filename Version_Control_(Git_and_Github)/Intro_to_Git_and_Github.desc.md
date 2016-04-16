@@ -1,155 +1,258 @@
-[Assessment](https://students.galvanize.com/assessments/54)
+# Track Changes with Git
 
-[Some More Lessons](https://github.com/gSchool/fullstack-curriculum/tree/master/lessons/git)
+## Objectives
 
-[Repo with some notes and the rocketship](https://github.com/gSchool/g15/tree/master/curriculum/01-week/lessons)
+* Discuss what a Version Control System is
+* Describe the purpose of a working directory, staging area, and repository
+* Initialize a git repository with `git init`
+* Check the status of changed files in a git repository with `git status`
+* Stage new and changed files with `git add`
+* Commit staged files to the git repository with `git commit`
 
-[Exercises](https://github.com/gSchool/g15/tree/master/curriculum/01-week/exercises)
+## Version Control System
 
-## Intro
+Version control is a class of tools that programmers use to manage software projects.
+It allows you to track changes you make to files on your machine.
+This is helpful for when you screw things up!
+And you will. :wink:
+And that's ok.
+Version control allows developers to revert back to a specific time and place in your code.
+Sort of like a reset button.
 
-* What is version control:
-    * Easy to share with others
-    * "Save points" in the code
-* Mention other VCS systems
-* Advantages
-    * Pushing to remotes
-    * Rollbacks
-* Four stages of files:
-    1. unstagged
-    2. staged
-    3. committed
-    4. pushed
-* Rocketship Metaphor:
-    * Rocketship delivers packages of work to Mars
-    * Unstaged = assembling raw materials
-    * Staged = deciding what goes on the rocketship
-    * Committed = loading onto the rocketship
-    * Pushed = Sent to Mars
+Version control allows developers to:
 
-## Excecise 1: Initalize a Repo / Build a Ship
+  * Keep track of changes to files over time
+  * View previous states of your project
+  * Return to a previous state of your project
+  * Manage changes to files from multiple people
+  * Make changes without worrying about stability
+  * Keep files together as a group
 
-0. Decide on (or create) a location for your repositories related to Galvanize.
-1. Make a directory in that location `$ mkdir gitCheatSheet`
-2. Move into the repository `$ cd gitCheatSheet`
-3. Initalize a git repository `$ git init`
+There are many flavors of VCS:
 
-* Talk about the .git directory
+  * Git
+  * Mercurial
+  * SVN
+  * Perforce
+  * TFS
+  * etc.
 
+## What is Git?
+
+[Git](https://git-scm.com/) is a free and open source software for version control.
+While there are many different version control systems, git is incredibly popular and powerful. Many companies use git, and if you understand git it will be easy to learn another version control paradigm.
+
+Any files tracked by git typically go through 3 stages:
+
+1. Unstaged
+  * These changes will not be committed in the next commit
+1. Staged
+  * These changes will be committed in the next commit
+1. Committed
+  * Changes committed in the last commit
+
+### What is GitHub?
+
+Git and GitHub are NOT the same thing.
+[Github](http://github.com/) is a web based service that hosts repositories on a server and allows developers to easily collaborate.
+Github acts as a remote backup service for git repositories.
+Once we've __pushed__ to a __remote__ such as GitHub, we know our code is safe.
+Even if our hard drives die.
+And if GitHub goes down, we can still work on our distributed repos offline.
+
+### A Metaphor: Git is a Rocketship, Github is Mars
+
+:rocket:
+
+| Rocketship Version | Git Version |
+|--------------------|-------------|
+| Package | Unstaged change |
+| Package on Launchpad | Staged change |
+| Package in Rocketship | Commited change |
+| Launch | Push |
+| Launchpad | Staging area |
+| Rocketship | Git repo |
+| Mars | GitHub |
+
+Let's say you want to deliver some packages to Mars with a rocketship. *You want to push changes to GitHub from your git repo*
+
+1. Create some packages. *Make some changes to your files*
+
+1. Choose which packages to place on the launchpad. *`git add` the changed files you want to push*
+
+1. Put the packages on the launchpad into the rocketship. *`git commit`*
+
+  * Any packages left off the launchpad and not in the rocketship will not be sent to Mars. *Any changes not staged with `git add` will not be committed and will not be pushed to GitHub*
+
+1. Repeat the create packages, move to launchpad, and pack rocketship steps for any additional packages you want to send. *Change files, `git add`, `git commit`*
+
+1. Set the rocketship coordinates for Mars. *`git remote add origin git@github.com:nasa/marooned-astronaut.git`*
+  * We'll reuse our rocketship, so you only need to do this once per rocket!
+
+1. When the rocketship is sufficiently loaded, we want to launch the rocketship to Mars. *`git push -u origin master`*
+
+1. Astronaut on Mars will recieve your rocketship and be happy with their new packages. *Check your GitHub repo to make sure the changes were pushed*
+
+### Basic Git Commands
+
+There are 4 main commands for `git`
+* init
+* status
+* add
+* commit
+
+With these 4 commands you can create a repo and start versioning your project.
+
+#### `git init`
+
+[git manual](https://git-scm.com/docs/git-init)
+
+Initialize a new git repo in the current directory with:
+```sh
+$ git init
 ```
-$ cd .git
-$ tree
-├── HEAD
-├── branches
-├── config
-├── description
-├── hooks
-│   ├── applypatch-msg.sample
-│   ├── commit-msg.sample
-│   ├── post-update.sample
-│   ├── pre-applypatch.sample
-│   ├── pre-commit.sample
-│   ├── pre-push.sample
-│   ├── pre-rebase.sample
-│   ├── prepare-commit-msg.sample
-│   └── update.sample
-├── info
-│   └── exclude
-├── objects
-│   ├── info
-│   └── pack
-└── refs
-    ├── heads
-    └── tags
+
+You can verify git was intialized by checking if a `.git` folder was created with `ls -a`.
+
+#### `git status`
+
+[git manual](https://git-scm.com/docs/git-status)
+
+When in a git repository, you can type `git status` to see any staged or unstaged changes pending.
+
+In your git repository:
+```sh
+$ git status
 ```
 
-* Users may need to `$ brew install tree`
-* .git directory [cheat sheet](http://www.gitguys.com/topics/the-git-directory/)
-* This folder is the rocketship
-* Deleting the directory deletes the rocketship
+Example Output:
+```sh
+$ git status
+On branch g15
 
-## Exercise 2: Do Some Work
+Initial commit
 
-* Make a readme for your repo
-* Explain how Github treats readmes
-* Paste in a git cheat sheet
-* Run `git status`
-* Add the file
-* Run `git status` again
-* Commit it
-* Run git log
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
 
-## Excercise 3: Make a Bad Commit, Then Rollback
+	new file:   README.md
 
-* Make a bad file
-* Add it to the repo
-* Commit it
-* Look at the log
-* Reset it
-* Look at the log
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
 
-## Excercise 4: Using a Github Remote
+	01_vcs.md
+	02_basic_git.md
+	03_github.md
+	04_github_clone.md
+	05_github_workflow.md
+```
 
-* Explain what a remote is
-* Explain SSH keys
-* [SSH Keys on Github]( https://help.github.com/articles/generating-ssh-keys/)
-* Create a remote
-* [Creating a remote on Github](https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/)
-* What is a remote?
-* Push & Pull
-* `git remote add`
+#### `git add`
 
-## Git Workflow
+[git manual](https://git-scm.com/docs/git-add)
 
-* Workflow is a protocol for loading the rocketship
-* Considerations
-    * Overhead
-    * Rollback-ability
-    * Deployability
-    * Historical granularity
-    * Control over master
+If you have any files that are brand new to the repo or have been changed, you can tell git to start tracking it with:
+```sh
+$ git add <file>
+```
 
-Example:
+To add all new files and changes in a directory:
+```sh
+$ git add .
+```
 
-1. Add a file
+After adding a file or change to the repo,
+  try running `git status` again to make sure it got staged.
+
+#### `git commit`
+
+[git manual](https://git-scm.com/docs/git-commit)
+
+After staging files with `git add`,
+  you can now commit the changes to save the current state of the project as a snapshot in time.
+
+```sh
+$ git commit -m "I fixed all of the bugs. :)"
+```
+
+This will create a commit in git that will be a snapshot of what the project currently is.
+
+#### `git push`
+
+[git manual](https://git-scm.com/docs/git-push)
+
+If you are using GitHub or collaborating with another git repo, you can push any new commits to your default remote with:
+```sh
+$ git push
+```
+
+If you have your remote pointing to GitHub, you should now be able to see any changes on your GitHub page.
+
+## Exercises
+
+Try to do these without looking at the answer first!
+
+### Basic Git Workflow
+
+1. Create a new folder
+1. Initialize a git repository
+1. Create a new file
+1. Check that the file is unstaged
+1. Add the file to the staging area
+1. Check that the file is staged
 1. Commit the file
 
-Another example:
+#### Answer
 
-1. Checkout master
-1. Fetch latest changes
-1. Rebase master
-1. Checkout a new branch
-1. Add files
-1. Commit files
-1. Rebase master again
-1. Merge the new branch into master
+```bash
+$ mkdir myProjectName
+$ cd myProjectName
+$ git init
+$ touch readme.md
+$ git status
+$ git add readme.md
+$ git status
+$ git commit -m "Initial commit"
+```
 
-## Exercise 5 - Collaborating with Github!
+### Pushing to GitHub
 
-* Partner with 2 of your classmates to make a team of 3.
-* Fill out the reset of the cheatsheet from Github
-* Suggestion: The next steps will be easier if commands are divied out in blocks. e.g. person 1 takes the first 3 commands, person 2 takes the next 3 commands, person 3 takes the last 3 commands...
-* Don't do all of them yourself
-* `git [command] --help` can help with looking up commands
-* Add/Commit/Push
+1. Create a GitHub repository and don't initialize it
+1. Create a local git repository
+1. Create a file
+1. Stage the file
+1. Commit the file
+1. Set the GitHub repo as the git remote
+1. Push to GitHub
 
----
+#### Answer
 
-* Fork/clone the repos of your partners
-* Add your commands to their file
-* Add/Commit/Push
-* Pull request
+Create a GitHub repo:
+![Hit the + Icon](create-github-repo-1.png)
 
----
+![Hit Create](create-github-repo-2.png)
 
-* Accept your PRs
+```bash
+$ mkdir myProjectName
+$ cd myProjectName
+$ git init
+$ touch readme.md
+$ git status
+$ git add readme.md
+$ git status
+$ git commit -m "Initial commit"
+$ git remote add origin git@github.com:{userName}/{repoName}.git
+$ git push -u origin master
+```
 
-## Feature-branch Workflow Warmup
+## Resources
 
-Follow the instructions in the [feature-branch workflow repo](https://github.com/gSchool/team-feature-branching-warmup)
+* [VCS on Wikipedia](https://en.wikipedia.org/wiki/Version_control)
+* [Git SCM Manual](https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control)
+* [Pro Git book](http://git-scm.com/book/en/v2)
+* [Tower Learn Version Control with Git book](https://www.git-tower.com/learn/git/ebook/command-line/introduction#start)
+* [Try Git](https://try.github.io/)
 
-## Advanced Git - Homework
 
-* Make some [aliases](http://git-scm.com/book/en/v2/Git-Basics-Git-Aliases) for git
-* `branch`, `commit`, `status`, `checkout`
+## Git Cheatsheet 
+* [Tower Git Cheatsheet](http://www.git-tower.com/blog/git-cheat-sheet/)

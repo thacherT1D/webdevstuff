@@ -5,8 +5,8 @@
   :subject_name: Programming with Javascript
   :parent_uuid: 53aa8d81-dd73-44f5-84f7-ecc37e59f9c4
   :parent_name: Week 2
-  :description_link: ''
-  :instructor_notes_link: ''
+  :description_link: Programming_with_Javascript/Intro_to_Programming.desc.md
+  :instructor_notes_link: Programming_with_Javascript/Intro_to_Programming.notes.md
   :published: true
   :suggested_days: 1.0
   :experience_success_criteria: []
@@ -16,8 +16,8 @@
   :subject_name: Javascript and the Browser
   :parent_uuid: 37a0980f-b2b1-4b4e-865f-430646101132
   :parent_name: Week 3
-  :description_link: ''
-  :instructor_notes_link: ''
+  :description_link: Javascript_and_the_Browser/JavaScript_Events.desc.md
+  :instructor_notes_link: Javascript_and_the_Browser/JavaScript_Events.notes.md
   :published: true
   :suggested_days: 1.0
   :experience_success_criteria:
@@ -31,8 +31,8 @@
   :subject_name: 
   :parent_uuid: 4a8179dd-544c-4a0b-afc7-4167c5947488
   :parent_name: Week 1
-  :description_link: ''
-  :instructor_notes_link: ''
+  :description_link: Misc/First_day,_intro_to_Full_Stack.desc.md
+  :instructor_notes_link: Misc/First_day,_intro_to_Full_Stack.notes.md
   :published: true
   :suggested_days: 1.0
   :experience_success_criteria: []
@@ -42,8 +42,8 @@
   :subject_name: 
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Misc/Q1.desc.md
+  :instructor_notes_link: Misc/Q1.notes.md
   :published: true
   :suggested_days: 0.0
   :experience_success_criteria: []
@@ -53,8 +53,8 @@
   :subject_name: Dev Environment
   :parent_uuid: 4a8179dd-544c-4a0b-afc7-4167c5947488
   :parent_name: Week 1
-  :description_link: ''
-  :instructor_notes_link: ''
+  :description_link: Dev_Environment/Setup_Development_Environment.desc.md
+  :instructor_notes_link: Dev_Environment/Setup_Development_Environment.notes.md
   :published: true
   :suggested_days: 1.0
   :experience_success_criteria:
@@ -66,8 +66,8 @@
   :subject_name: Programming with Javascript
   :parent_uuid: 53aa8d81-dd73-44f5-84f7-ecc37e59f9c4
   :parent_name: Week 2
-  :description_link: ''
-  :instructor_notes_link: ''
+  :description_link: Programming_with_Javascript/JavaScript:_Intro,_Types,_Values,_Variables,_Control_Flow.desc.md
+  :instructor_notes_link: Programming_with_Javascript/JavaScript:_Intro,_Types,_Values,_Variables,_Control_Flow.notes.md
   :published: true
   :suggested_days: 0.0
   :experience_success_criteria:
@@ -80,8 +80,8 @@
   :subject_name: Javascript and the Browser
   :parent_uuid: 37a0980f-b2b1-4b4e-865f-430646101132
   :parent_name: Week 3
-  :description_link: ''
-  :instructor_notes_link: ''
+  :description_link: Javascript_and_the_Browser/Intro_to_jQuery.desc.md
+  :instructor_notes_link: Javascript_and_the_Browser/Intro_to_jQuery.notes.md
   :published: true
   :suggested_days: 1.0
   :experience_success_criteria:
@@ -95,8 +95,8 @@
   :subject_name: Server Side JS with Node
   :parent_uuid: 
   :parent_name: 
-  :description_link: ''
-  :instructor_notes_link: ''
+  :description_link: Server_Side_JS_with_Node/Intro_to_Node.js.desc.md
+  :instructor_notes_link: Server_Side_JS_with_Node/Intro_to_Node.js.notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria:
@@ -112,8 +112,8 @@
   :subject_name: Programming with Javascript
   :parent_uuid: 53aa8d81-dd73-44f5-84f7-ecc37e59f9c4
   :parent_name: Week 2
-  :description_link: ''
-  :instructor_notes_link: ''
+  :description_link: Programming_with_Javascript/JavaScript:_Objects,_Arrays,_Iterations.desc.md
+  :instructor_notes_link: Programming_with_Javascript/JavaScript:_Objects,_Arrays,_Iterations.notes.md
   :published: true
   :suggested_days: 1.0
   :experience_success_criteria:
@@ -128,8 +128,8 @@
   :subject_name: Design
   :parent_uuid: 37a0980f-b2b1-4b4e-865f-430646101132
   :parent_name: Week 3
-  :description_link: ''
-  :instructor_notes_link: ''
+  :description_link: Design/Wireframing.desc.md
+  :instructor_notes_link: Design/Wireframing.notes.md
   :published: true
   :suggested_days: 1.0
   :experience_success_criteria:
@@ -145,8 +145,8 @@
   :subject_name: Server Side Frameworks with Express
   :parent_uuid: 
   :parent_name: 
-  :description_link: ''
-  :instructor_notes_link: ''
+  :description_link: Server_Side_Frameworks_with_Express/Intro_to_Express.js.desc.md
+  :instructor_notes_link: Server_Side_Frameworks_with_Express/Intro_to_Express.js.notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria:
@@ -160,8 +160,8 @@
   :subject_name: 
   :parent_uuid: 4a8179dd-544c-4a0b-afc7-4167c5947488
   :parent_name: Week 1
-  :description_link: ''
-  :instructor_notes_link: ''
+  :description_link: Misc/Learning_To_Learn.desc.md
+  :instructor_notes_link: Misc/Learning_To_Learn.notes.md
   :published: true
   :suggested_days: 0.0
   :experience_success_criteria: []
@@ -171,8 +171,8 @@
   :subject_name: The Command Line
   :parent_uuid: 4a8179dd-544c-4a0b-afc7-4167c5947488
   :parent_name: Week 1
-  :description_link: ''
-  :instructor_notes_link: ''
+  :description_link: The_Command_Line/Intro_to_the_Command_Line.desc.md
+  :instructor_notes_link: The_Command_Line/Intro_to_the_Command_Line.notes.md
   :published: true
   :suggested_days: 1.0
   :experience_success_criteria:
@@ -186,8 +186,8 @@
   :subject_name: HTML
   :parent_uuid: 37a0980f-b2b1-4b4e-865f-430646101132
   :parent_name: Week 3
-  :description_link: ''
-  :instructor_notes_link: ''
+  :description_link: HTML/HTML_Forms.desc.md
+  :instructor_notes_link: HTML/HTML_Forms.notes.md
   :published: true
   :suggested_days: 1.0
   :experience_success_criteria:
@@ -199,8 +199,8 @@
   :subject_name: Programming with Javascript
   :parent_uuid: 53aa8d81-dd73-44f5-84f7-ecc37e59f9c4
   :parent_name: Week 2
-  :description_link: ''
-  :instructor_notes_link: ''
+  :description_link: Programming_with_Javascript/Memory_Diagrams.desc.md
+  :instructor_notes_link: Programming_with_Javascript/Memory_Diagrams.notes.md
   :published: true
   :suggested_days: 0.0
   :experience_success_criteria:
@@ -213,8 +213,8 @@
   :subject_name: CSS
   :parent_uuid: 37a0980f-b2b1-4b4e-865f-430646101132
   :parent_name: Week 3
-  :description_link: ''
-  :instructor_notes_link: ''
+  :description_link: CSS/Intro_to_Bootstrap.desc.md
+  :instructor_notes_link: CSS/Intro_to_Bootstrap.notes.md
   :published: true
   :suggested_days: 1.0
   :experience_success_criteria:
@@ -226,8 +226,8 @@
   :subject_name: Version Control (Git and Github)
   :parent_uuid: 4a8179dd-544c-4a0b-afc7-4167c5947488
   :parent_name: Week 1
-  :description_link: ''
-  :instructor_notes_link: ''
+  :description_link: Version_Control_(Git_and_Github)/Intro_to_Git_and_Github.desc.md
+  :instructor_notes_link: Version_Control_(Git_and_Github)/Intro_to_Git_and_Github.notes.md
   :published: true
   :suggested_days: 1.0
   :experience_success_criteria:
@@ -243,8 +243,8 @@
   :subject_name: Programming with Javascript
   :parent_uuid: 53aa8d81-dd73-44f5-84f7-ecc37e59f9c4
   :parent_name: Week 2
-  :description_link: ''
-  :instructor_notes_link: ''
+  :description_link: Programming_with_Javascript/JavaScript:_Functions.desc.md
+  :instructor_notes_link: Programming_with_Javascript/JavaScript:_Functions.notes.md
   :published: true
   :suggested_days: 1.0
   :experience_success_criteria:
@@ -256,8 +256,8 @@
   :subject_name: Datastores
   :parent_uuid: 
   :parent_name: 
-  :description_link: ''
-  :instructor_notes_link: ''
+  :description_link: Datastores/SQL_and_Relational_Databases.desc.md
+  :instructor_notes_link: Datastores/SQL_and_Relational_Databases.notes.md
   :published: false
   :suggested_days: 3.0
   :experience_success_criteria:
@@ -282,8 +282,8 @@
   :subject_name: HTML
   :parent_uuid: 4a8179dd-544c-4a0b-afc7-4167c5947488
   :parent_name: Week 1
-  :description_link: ''
-  :instructor_notes_link: ''
+  :description_link: HTML/Intro_to_HTML.desc.md
+  :instructor_notes_link: HTML/Intro_to_HTML.notes.md
   :published: true
   :suggested_days: 1.0
   :experience_success_criteria:
@@ -295,8 +295,8 @@
   :subject_name: CSS
   :parent_uuid: 37a0980f-b2b1-4b4e-865f-430646101132
   :parent_name: Week 3
-  :description_link: ''
-  :instructor_notes_link: ''
+  :description_link: CSS/Intro_to_SASS.desc.md
+  :instructor_notes_link: CSS/Intro_to_SASS.notes.md
   :published: true
   :suggested_days: 1.0
   :experience_success_criteria:
@@ -312,8 +312,8 @@
   :subject_name: Programming with Javascript
   :parent_uuid: 53aa8d81-dd73-44f5-84f7-ecc37e59f9c4
   :parent_name: Week 2
-  :description_link: ''
-  :instructor_notes_link: ''
+  :description_link: Programming_with_Javascript/Scopes,_Hoisting,_High_Order_Functions_+_Timers.desc.md
+  :instructor_notes_link: Programming_with_Javascript/Scopes,_Hoisting,_High_Order_Functions_+_Timers.notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria:
@@ -328,8 +328,8 @@
   :subject_name: Thinking Like a Developer
   :parent_uuid: 
   :parent_name: 
-  :description_link: ''
-  :instructor_notes_link: ''
+  :description_link: Thinking_Like_a_Developer/Typing.desc.md
+  :instructor_notes_link: Thinking_Like_a_Developer/Typing.notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria:
@@ -341,8 +341,8 @@
   :subject_name: CSS
   :parent_uuid: 4a8179dd-544c-4a0b-afc7-4167c5947488
   :parent_name: Week 1
-  :description_link: ''
-  :instructor_notes_link: ''
+  :description_link: CSS/Intro_To_CSS.desc.md
+  :instructor_notes_link: CSS/Intro_To_CSS.notes.md
   :published: true
   :suggested_days: 1.0
   :experience_success_criteria:
@@ -360,8 +360,8 @@
   :subject_name: JavaScript Object Model
   :parent_uuid: 53aa8d81-dd73-44f5-84f7-ecc37e59f9c4
   :parent_name: Week 2
-  :description_link: ''
-  :instructor_notes_link: ''
+  :description_link: JavaScript_Object_Model/JavaScript_Object_Model.desc.md
+  :instructor_notes_link: JavaScript_Object_Model/JavaScript_Object_Model.notes.md
   :published: true
   :suggested_days: 0.0
   :experience_success_criteria:
@@ -375,8 +375,8 @@
   :subject_name: How the Web Works
   :parent_uuid: 37a0980f-b2b1-4b4e-865f-430646101132
   :parent_name: Week 3
-  :description_link: ''
-  :instructor_notes_link: ''
+  :description_link: How_the_Web_Works/How_the_Internet_Works.desc.md
+  :instructor_notes_link: How_the_Web_Works/How_the_Internet_Works.notes.md
   :published: true
   :suggested_days: 1.0
   :experience_success_criteria:
@@ -398,8 +398,8 @@
   :subject_name: Datastores
   :parent_uuid: 
   :parent_name: 
-  :description_link: ''
-  :instructor_notes_link: ''
+  :description_link: Datastores/Knex.desc.md
+  :instructor_notes_link: Datastores/Knex.notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria:
@@ -413,8 +413,8 @@
   :subject_name: HTML
   :parent_uuid: 4a8179dd-544c-4a0b-afc7-4167c5947488
   :parent_name: Week 1
-  :description_link: ''
-  :instructor_notes_link: ''
+  :description_link: HTML/Semantic_HTML.desc.md
+  :instructor_notes_link: HTML/Semantic_HTML.notes.md
   :published: true
   :suggested_days: 1.0
   :experience_success_criteria:
@@ -426,8 +426,8 @@
   :subject_name: JavaScript Object Model
   :parent_uuid: 53aa8d81-dd73-44f5-84f7-ecc37e59f9c4
   :parent_name: Week 2
-  :description_link: ''
-  :instructor_notes_link: ''
+  :description_link: JavaScript_Object_Model/Prototypes.desc.md
+  :instructor_notes_link: JavaScript_Object_Model/Prototypes.notes.md
   :published: true
   :suggested_days: 1.0
   :experience_success_criteria:
@@ -439,8 +439,8 @@
   :subject_name: Promises
   :parent_uuid: 
   :parent_name: 
-  :description_link: ''
-  :instructor_notes_link: ''
+  :description_link: Promises/Promises.desc.md
+  :instructor_notes_link: Promises/Promises.notes.md
   :published: false
   :suggested_days: 7.0
   :experience_success_criteria:
@@ -457,8 +457,8 @@
   :subject_name: 
   :parent_uuid: 37a0980f-b2b1-4b4e-865f-430646101132
   :parent_name: Week 3
-  :description_link: ''
-  :instructor_notes_link: ''
+  :description_link: Misc/APIs_for_the_FrontEnd.desc.md
+  :instructor_notes_link: Misc/APIs_for_the_FrontEnd.notes.md
   :published: true
   :suggested_days: 1.0
   :experience_success_criteria:
@@ -470,8 +470,8 @@
   :subject_name: HTML
   :parent_uuid: 4a8179dd-544c-4a0b-afc7-4167c5947488
   :parent_name: Week 1
-  :description_link: ''
-  :instructor_notes_link: ''
+  :description_link: HTML/HTML5_Media.desc.md
+  :instructor_notes_link: HTML/HTML5_Media.notes.md
   :published: true
   :suggested_days: 1.0
   :experience_success_criteria:
@@ -483,8 +483,8 @@
   :subject_name: Version Control (Git and Github)
   :parent_uuid: 37a0980f-b2b1-4b4e-865f-430646101132
   :parent_name: Week 3
-  :description_link: ''
-  :instructor_notes_link: ''
+  :description_link: Version_Control_(Git_and_Github)/Feature_Branch_Workflow.desc.md
+  :instructor_notes_link: Version_Control_(Git_and_Github)/Feature_Branch_Workflow.notes.md
   :published: true
   :suggested_days: 1.0
   :experience_success_criteria:
@@ -505,8 +505,8 @@
   :subject_name: Javascript and the Browser
   :parent_uuid: 53aa8d81-dd73-44f5-84f7-ecc37e59f9c4
   :parent_name: Week 2
-  :description_link: ''
-  :instructor_notes_link: ''
+  :description_link: Javascript_and_the_Browser/Intro_to_the_DOM.desc.md
+  :instructor_notes_link: Javascript_and_the_Browser/Intro_to_the_DOM.notes.md
   :published: true
   :suggested_days: 1.0
   :experience_success_criteria:
@@ -520,8 +520,8 @@
   :subject_name: Auth
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Auth/Express:_Form-Based_Authentication.desc.md
+  :instructor_notes_link: Auth/Express:_Form-Based_Authentication.notes.md
   :published: false
   :suggested_days: 2.0
   :experience_success_criteria:
@@ -549,8 +549,8 @@
   :subject_name: CSS
   :parent_uuid: 4a8179dd-544c-4a0b-afc7-4167c5947488
   :parent_name: Week 1
-  :description_link: ''
-  :instructor_notes_link: ''
+  :description_link: CSS/Intermediate_CSS.desc.md
+  :instructor_notes_link: CSS/Intermediate_CSS.notes.md
   :published: true
   :suggested_days: 1.0
   :experience_success_criteria:
@@ -564,8 +564,8 @@
   :subject_name: Javascript and the Browser
   :parent_uuid: 37a0980f-b2b1-4b4e-865f-430646101132
   :parent_name: Week 3
-  :description_link: ''
-  :instructor_notes_link: ''
+  :description_link: Javascript_and_the_Browser/HTML__JS_Form_Validation.desc.md
+  :instructor_notes_link: Javascript_and_the_Browser/HTML__JS_Form_Validation.notes.md
   :published: true
   :suggested_days: 1.0
   :experience_success_criteria:
@@ -577,8 +577,8 @@
   :subject_name: Automated Testing
   :parent_uuid: 53aa8d81-dd73-44f5-84f7-ecc37e59f9c4
   :parent_name: Week 2
-  :description_link: ''
-  :instructor_notes_link: ''
+  :description_link: Automated_Testing/JavaScript_Testing_Basics_with_Mocha_and_Chai.desc.md
+  :instructor_notes_link: Automated_Testing/JavaScript_Testing_Basics_with_Mocha_and_Chai.notes.md
   :published: true
   :suggested_days: 1.0
   :experience_success_criteria:
@@ -592,8 +592,8 @@
   :subject_name: Auth
   :parent_uuid: 
   :parent_name: 
-  :description_link: ''
-  :instructor_notes_link: ''
+  :description_link: Auth/Authentication_&_Authorization.desc.md
+  :instructor_notes_link: Auth/Authentication_&_Authorization.notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria:
@@ -615,8 +615,8 @@
   :subject_name: Server Side Frameworks with Express
   :parent_uuid: 
   :parent_name: 
-  :description_link: ''
-  :instructor_notes_link: ''
+  :description_link: Server_Side_Frameworks_with_Express/Testing_with_Node_and_Express.desc.md
+  :instructor_notes_link: Server_Side_Frameworks_with_Express/Testing_with_Node_and_Express.notes.md
   :published: false
   :suggested_days: 3.0
   :experience_success_criteria:
@@ -631,8 +631,8 @@
   :subject_name: React
   :parent_uuid: 
   :parent_name: 
-  :description_link: ''
-  :instructor_notes_link: ''
+  :description_link: React/React.desc.md
+  :instructor_notes_link: React/React.notes.md
   :published: false
   :suggested_days: 0.0
   :experience_success_criteria: []
@@ -642,8 +642,8 @@
   :subject_name: Deployment
   :parent_uuid: 
   :parent_name: 
-  :description_link: ''
-  :instructor_notes_link: ''
+  :description_link: Deployment/Deploying_to_Heroku.desc.md
+  :instructor_notes_link: Deployment/Deploying_to_Heroku.notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria:
@@ -658,8 +658,8 @@
   :subject_name: Server Side JS with Node
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Server_Side_JS_with_Node/Node:_Basics__FS_Module.desc.md
+  :instructor_notes_link: Server_Side_JS_with_Node/Node:_Basics__FS_Module.notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria:
@@ -675,8 +675,8 @@
   :subject_name: Server Side JS with Node
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Server_Side_JS_with_Node/Node:_Creating_an_HTTP_Server.desc.md
+  :instructor_notes_link: Server_Side_JS_with_Node/Node:_Creating_an_HTTP_Server.notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria:
@@ -707,8 +707,8 @@
   :subject_name: Server Side Frameworks with Express
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Server_Side_Frameworks_with_Express/Express:_Introduction.desc.md
+  :instructor_notes_link: Server_Side_Frameworks_with_Express/Express:_Introduction.notes.md
   :published: false
   :suggested_days: 2.0
   :experience_success_criteria:
@@ -747,8 +747,8 @@
   :subject_name: CSS
   :parent_uuid: 
   :parent_name: 
-  :description_link: ''
-  :instructor_notes_link: ''
+  :description_link: CSS/Flexbox.desc.md
+  :instructor_notes_link: CSS/Flexbox.notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria:
@@ -761,8 +761,8 @@
   :subject_name: Server Side Frameworks with Express
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Server_Side_Frameworks_with_Express/Server_Side_Templating.desc.md
+  :instructor_notes_link: Server_Side_Frameworks_with_Express/Server_Side_Templating.notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria:
@@ -776,8 +776,8 @@
   :subject_name: Server Side Frameworks with Express
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Server_Side_Frameworks_with_Express/Express:_Error_Handling.desc.md
+  :instructor_notes_link: Server_Side_Frameworks_with_Express/Express:_Error_Handling.notes.md
   :published: false
   :suggested_days: 0.0
   :experience_success_criteria: []
@@ -787,8 +787,8 @@
   :subject_name: Datastores
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Datastores/SQL_DDL.desc.md
+  :instructor_notes_link: Datastores/SQL_DDL.notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria:
@@ -800,8 +800,8 @@
   :subject_name: Datastores
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Datastores/Postgres_Roles.desc.md
+  :instructor_notes_link: Datastores/Postgres_Roles.notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria:
@@ -813,8 +813,8 @@
   :subject_name: Datastores
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Datastores/SQL_operators_and_JOINs.desc.md
+  :instructor_notes_link: Datastores/SQL_operators_and_JOINs.notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria:
@@ -826,8 +826,8 @@
   :subject_name: Datastores
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Datastores/Data_Normalization.desc.md
+  :instructor_notes_link: Datastores/Data_Normalization.notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria:
@@ -839,8 +839,8 @@
   :subject_name: Datastores
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Datastores/Transactions_and_Migrations.desc.md
+  :instructor_notes_link: Datastores/Transactions_and_Migrations.notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria: []
@@ -850,8 +850,8 @@
   :subject_name: Server Side Frameworks with Express
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Server_Side_Frameworks_with_Express/Express:_CRUD_w_SQL.desc.md
+  :instructor_notes_link: Server_Side_Frameworks_with_Express/Express:_CRUD_w_SQL.notes.md
   :published: false
   :suggested_days: 4.0
   :experience_success_criteria:
@@ -881,8 +881,8 @@
   :subject_name: Javascript and the Browser
   :parent_uuid: 
   :parent_name: 
-  :description_link: ''
-  :instructor_notes_link: ''
+  :description_link: Javascript_and_the_Browser/Debugging_In_The_Browser.desc.md
+  :instructor_notes_link: Javascript_and_the_Browser/Debugging_In_The_Browser.notes.md
   :published: false
   :suggested_days: 0.0
   :experience_success_criteria:
@@ -894,8 +894,8 @@
   :subject_name: Datastores
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Datastores/Express_with_pg.desc.md
+  :instructor_notes_link: Datastores/Express_with_pg.notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria:
@@ -924,8 +924,8 @@
   :subject_name: Datastores
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Datastores/Knex_Database_Migrations_in_Node_.desc.md
+  :instructor_notes_link: Datastores/Knex_Database_Migrations_in_Node_.notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria:
@@ -937,8 +937,8 @@
   :subject_name: Server Side JS with Node
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Server_Side_JS_with_Node/Node:_Server_Side_Requests.desc.md
+  :instructor_notes_link: Server_Side_JS_with_Node/Node:_Server_Side_Requests.notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria:
@@ -967,8 +967,8 @@
   :subject_name: Javascript and the Browser
   :parent_uuid: 
   :parent_name: 
-  :description_link: ''
-  :instructor_notes_link: ''
+  :description_link: Javascript_and_the_Browser/Intro_to_LocalStorage.desc.md
+  :instructor_notes_link: Javascript_and_the_Browser/Intro_to_LocalStorage.notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria:
@@ -980,8 +980,8 @@
   :subject_name: Server Side Frameworks with Express
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Server_Side_Frameworks_with_Express/Express:_Validations.desc.md
+  :instructor_notes_link: Server_Side_Frameworks_with_Express/Express:_Validations.notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria:
@@ -1001,8 +1001,8 @@
   :subject_name: Auth
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Auth/Express:_OAuth_w_Passport.desc.md
+  :instructor_notes_link: Auth/Express:_OAuth_w_Passport.notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria:
@@ -1024,8 +1024,8 @@
   :subject_name: Functional Programming with Javascript
   :parent_uuid: 
   :parent_name: 
-  :description_link: ''
-  :instructor_notes_link: ''
+  :description_link: Functional_Programming_with_Javascript/JavaScript_Recursion_+_Iterators.desc.md
+  :instructor_notes_link: Functional_Programming_with_Javascript/JavaScript_Recursion_+_Iterators.notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria:
@@ -1040,8 +1040,8 @@
   :subject_name: How the Web Works
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: How_the_Web_Works/Working_with_Sockets_and_Socket.io.desc.md
+  :instructor_notes_link: How_the_Web_Works/Working_with_Sockets_and_Socket.io.notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria:
@@ -1056,8 +1056,8 @@
   :subject_name: UX User Testing
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: UX_User_Testing/User_Testing.desc.md
+  :instructor_notes_link: UX_User_Testing/User_Testing.notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria:
@@ -1073,8 +1073,8 @@
   :subject_name: JavaScript Object Model
   :parent_uuid: 
   :parent_name: 
-  :description_link: ''
-  :instructor_notes_link: ''
+  :description_link: JavaScript_Object_Model/Object_Oriented_Programming_in_JavaScript.desc.md
+  :instructor_notes_link: JavaScript_Object_Model/Object_Oriented_Programming_in_JavaScript.notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria:
@@ -1092,8 +1092,8 @@
   :subject_name: Designing APIs
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Designing_APIs/RESTful_Design.desc.md
+  :instructor_notes_link: Designing_APIs/RESTful_Design.notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria:
@@ -1109,8 +1109,8 @@
   :subject_name: Version Control (Git and Github)
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Version_Control_(Git_and_Github)/Git_for_teams_(branching,_merging).desc.md
+  :instructor_notes_link: Version_Control_(Git_and_Github)/Git_for_teams_(branching,_merging).notes.md
   :published: false
   :suggested_days: 0.0
   :experience_success_criteria:
@@ -1126,8 +1126,8 @@
   :subject_name: Functional Programming with Javascript
   :parent_uuid: 
   :parent_name: 
-  :description_link: ''
-  :instructor_notes_link: ''
+  :description_link: Functional_Programming_with_Javascript/Call,_Apply,_Bind_and_Closures.desc.md
+  :instructor_notes_link: Functional_Programming_with_Javascript/Call,_Apply,_Bind_and_Closures.notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria:
@@ -1139,8 +1139,8 @@
   :subject_name: Server Side JS with Node
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Server_Side_JS_with_Node/Group_CRUD_Project.desc.md
+  :instructor_notes_link: Server_Side_JS_with_Node/Group_CRUD_Project.notes.md
   :published: false
   :suggested_days: 5.0
   :experience_success_criteria:
@@ -1156,8 +1156,8 @@
   :subject_name: Server Side Frameworks with Express
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Server_Side_Frameworks_with_Express/Full_Stack_CRUD_Assessment.desc.md
+  :instructor_notes_link: Server_Side_Frameworks_with_Express/Full_Stack_CRUD_Assessment.notes.md
   :published: false
   :suggested_days: 0.0
   :experience_success_criteria: []
@@ -1167,8 +1167,8 @@
   :subject_name: Javascript and the Browser
   :parent_uuid: 
   :parent_name: 
-  :description_link: ''
-  :instructor_notes_link: ''
+  :description_link: Javascript_and_the_Browser/AJAX.desc.md
+  :instructor_notes_link: Javascript_and_the_Browser/AJAX.notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria:
@@ -1182,8 +1182,8 @@
   :subject_name: Promises
   :parent_uuid: 
   :parent_name: 
-  :description_link: ''
-  :instructor_notes_link: ''
+  :description_link: Promises/Intro_to_Promises.desc.md
+  :instructor_notes_link: Promises/Intro_to_Promises.notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria:
@@ -1200,8 +1200,8 @@
   :subject_name: Agile Project Management
   :parent_uuid: 
   :parent_name: 
-  :description_link: ''
-  :instructor_notes_link: ''
+  :description_link: Agile_Project_Management/Intro_to_Agile.desc.md
+  :instructor_notes_link: Agile_Project_Management/Intro_to_Agile.notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria:
@@ -1215,8 +1215,8 @@
   :subject_name: Deployment
   :parent_uuid: 
   :parent_name: 
-  :description_link: ''
-  :instructor_notes_link: ''
+  :description_link: Deployment/Deploying_Static_Sites.desc.md
+  :instructor_notes_link: Deployment/Deploying_Static_Sites.notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria:
@@ -1229,8 +1229,8 @@
   :subject_name: Agile Project Management
   :parent_uuid: 
   :parent_name: 
-  :description_link: ''
-  :instructor_notes_link: ''
+  :description_link: Agile_Project_Management/Frontend_Personal_Project.desc.md
+  :instructor_notes_link: Agile_Project_Management/Frontend_Personal_Project.notes.md
   :published: false
   :suggested_days: 5.0
   :experience_success_criteria:
@@ -1242,8 +1242,8 @@
   :subject_name: 
   :parent_uuid: 
   :parent_name: 
-  :description_link: ''
-  :instructor_notes_link: ''
+  :description_link: Misc/Q2.desc.md
+  :instructor_notes_link: Misc/Q2.notes.md
   :published: false
   :suggested_days: 0.0
   :experience_success_criteria: []
@@ -1253,8 +1253,8 @@
   :subject_name: 
   :parent_uuid: 
   :parent_name: 
-  :description_link: ''
-  :instructor_notes_link: ''
+  :description_link: Misc/Q3.desc.md
+  :instructor_notes_link: Misc/Q3.notes.md
   :published: false
   :suggested_days: 0.0
   :experience_success_criteria: []
@@ -1264,8 +1264,8 @@
   :subject_name: Client Side Frameworks (Angular)
   :parent_uuid: 
   :parent_name: 
-  :description_link: ''
-  :instructor_notes_link: ''
+  :description_link: Client_Side_Frameworks_(Angular)/Angular:_Two-Way_Data_Binding_(prework).desc.md
+  :instructor_notes_link: Client_Side_Frameworks_(Angular)/Angular:_Two-Way_Data_Binding_(prework).notes.md
   :published: false
   :suggested_days: 0.0
   :experience_success_criteria: []
@@ -1275,8 +1275,8 @@
   :subject_name: Client Side Frameworks (Angular)
   :parent_uuid: 
   :parent_name: 
-  :description_link: ''
-  :instructor_notes_link: ''
+  :description_link: Client_Side_Frameworks_(Angular)/Angular:_Part_1.desc.md
+  :instructor_notes_link: Client_Side_Frameworks_(Angular)/Angular:_Part_1.notes.md
   :published: false
   :suggested_days: 5.0
   :experience_success_criteria:
@@ -1297,8 +1297,8 @@
   :subject_name: Client Side Frameworks (Angular)
   :parent_uuid: 
   :parent_name: 
-  :description_link: ''
-  :instructor_notes_link: ''
+  :description_link: Client_Side_Frameworks_(Angular)/Angular:_Part_2.desc.md
+  :instructor_notes_link: Client_Side_Frameworks_(Angular)/Angular:_Part_2.notes.md
   :published: false
   :suggested_days: 6.0
   :experience_success_criteria:
@@ -1319,8 +1319,8 @@
   :subject_name: Client Side Frameworks (Angular)
   :parent_uuid: 
   :parent_name: 
-  :description_link: ''
-  :instructor_notes_link: ''
+  :description_link: Client_Side_Frameworks_(Angular)/Angular:_Dependency_Injection_Theory.desc.md
+  :instructor_notes_link: Client_Side_Frameworks_(Angular)/Angular:_Dependency_Injection_Theory.notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria:
@@ -1341,8 +1341,8 @@
   :subject_name: Client Side Frameworks (Angular)
   :parent_uuid: 
   :parent_name: 
-  :description_link: ''
-  :instructor_notes_link: ''
+  :description_link: Client_Side_Frameworks_(Angular)/Angular:_Introduction_to_Nested_Views_and_Authentication_using_UI-Router.desc.md
+  :instructor_notes_link: Client_Side_Frameworks_(Angular)/Angular:_Introduction_to_Nested_Views_and_Authentication_using_UI-Router.notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria:
@@ -1363,8 +1363,8 @@
   :subject_name: Datastores
   :parent_uuid: 
   :parent_name: 
-  :description_link: ''
-  :instructor_notes_link: ''
+  :description_link: Datastores/NoSQL.desc.md
+  :instructor_notes_link: Datastores/NoSQL.notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria:
@@ -1377,8 +1377,8 @@
   :subject_name: Architecture
   :parent_uuid: 
   :parent_name: 
-  :description_link: ''
-  :instructor_notes_link: ''
+  :description_link: Architecture/Intro_To_Application_Architecture.desc.md
+  :instructor_notes_link: Architecture/Intro_To_Application_Architecture.notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria:
@@ -1395,8 +1395,8 @@
   :subject_name: Deployment
   :parent_uuid: 
   :parent_name: 
-  :description_link: ''
-  :instructor_notes_link: ''
+  :description_link: Deployment/Continuous_Integration.desc.md
+  :instructor_notes_link: Deployment/Continuous_Integration.notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria:
@@ -1411,8 +1411,8 @@
   :subject_name: Deployment
   :parent_uuid: 
   :parent_name: 
-  :description_link: ''
-  :instructor_notes_link: ''
+  :description_link: Deployment/Continuous_Deployment.desc.md
+  :instructor_notes_link: Deployment/Continuous_Deployment.notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria:
@@ -1427,8 +1427,8 @@
   :subject_name: Agile Project Management
   :parent_uuid: 
   :parent_name: 
-  :description_link: ''
-  :instructor_notes_link: ''
+  :description_link: Agile_Project_Management/Group_New_Technology_Project.desc.md
+  :instructor_notes_link: Agile_Project_Management/Group_New_Technology_Project.notes.md
   :published: false
   :suggested_days: 5.0
   :experience_success_criteria: []
@@ -1438,8 +1438,8 @@
   :subject_name: Application Analysis in Unfamiliar Environment
   :parent_uuid: 
   :parent_name: 
-  :description_link: ''
-  :instructor_notes_link: ''
+  :description_link: Application_Analysis_in_Unfamiliar_Environment/Application_Analysis_in_Unfamiliar_Environment.desc.md
+  :instructor_notes_link: Application_Analysis_in_Unfamiliar_Environment/Application_Analysis_in_Unfamiliar_Environment.notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria:
@@ -1457,8 +1457,8 @@
   :subject_name: 
   :parent_uuid: 
   :parent_name: 
-  :description_link: ''
-  :instructor_notes_link: ''
+  :description_link: Misc/Q4.desc.md
+  :instructor_notes_link: Misc/Q4.notes.md
   :published: false
   :suggested_days: 0.0
   :experience_success_criteria: []
@@ -1468,8 +1468,8 @@
   :subject_name: Javascript and the Browser
   :parent_uuid: 
   :parent_name: 
-  :description_link: ''
-  :instructor_notes_link: ''
+  :description_link: Javascript_and_the_Browser/Cross_Browser_Support.desc.md
+  :instructor_notes_link: Javascript_and_the_Browser/Cross_Browser_Support.notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria:
@@ -1482,8 +1482,8 @@
   :subject_name: OOP w/ Statically Typed Language
   :parent_uuid: 
   :parent_name: 
-  :description_link: ''
-  :instructor_notes_link: ''
+  :description_link: OOP_w_Statically_Typed_Language/Classical_Object-Oriented_Programming_in_Java.desc.md
+  :instructor_notes_link: OOP_w_Statically_Typed_Language/Classical_Object-Oriented_Programming_in_Java.notes.md
   :published: false
   :suggested_days: 3.0
   :experience_success_criteria:
@@ -1502,8 +1502,8 @@
   :subject_name: Data Structures / Algorithms
   :parent_uuid: 
   :parent_name: 
-  :description_link: ''
-  :instructor_notes_link: ''
+  :description_link: Data_Structures__Algorithms/Big_O_Notation_(time_complexity_of_algorithms).desc.md
+  :instructor_notes_link: Data_Structures__Algorithms/Big_O_Notation_(time_complexity_of_algorithms).notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria:
@@ -1515,8 +1515,8 @@
   :subject_name: Technical Interview Prep
   :parent_uuid: 
   :parent_name: 
-  :description_link: ''
-  :instructor_notes_link: ''
+  :description_link: Technical_Interview_Prep/Whiteboard_Interview_Prep.desc.md
+  :instructor_notes_link: Technical_Interview_Prep/Whiteboard_Interview_Prep.notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria:
@@ -1538,8 +1538,8 @@
   :subject_name: Technical Interview Prep
   :parent_uuid: 
   :parent_name: 
-  :description_link: ''
-  :instructor_notes_link: ''
+  :description_link: Technical_Interview_Prep/Negotiating_with_potential_employers.desc.md
+  :instructor_notes_link: Technical_Interview_Prep/Negotiating_with_potential_employers.notes.md
   :published: false
   :suggested_days: 0.0
   :experience_success_criteria: []
@@ -1549,8 +1549,8 @@
   :subject_name: Data Structures / Algorithms
   :parent_uuid: 
   :parent_name: 
-  :description_link: ''
-  :instructor_notes_link: ''
+  :description_link: Data_Structures__Algorithms/Intro_to_Data_Structures.desc.md
+  :instructor_notes_link: Data_Structures__Algorithms/Intro_to_Data_Structures.notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria:
@@ -1566,8 +1566,8 @@
   :subject_name: Data Structures / Algorithms
   :parent_uuid: 
   :parent_name: 
-  :description_link: ''
-  :instructor_notes_link: ''
+  :description_link: Data_Structures__Algorithms/Algorithms.desc.md
+  :instructor_notes_link: Data_Structures__Algorithms/Algorithms.notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria:
@@ -1583,8 +1583,8 @@
   :subject_name: Data Structures / Algorithms
   :parent_uuid: 
   :parent_name: 
-  :description_link: ''
-  :instructor_notes_link: ''
+  :description_link: Data_Structures__Algorithms/LinkedLists,_Stacks_and_Queues.desc.md
+  :instructor_notes_link: Data_Structures__Algorithms/LinkedLists,_Stacks_and_Queues.notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria:
@@ -1596,8 +1596,8 @@
   :subject_name: Data Structures / Algorithms
   :parent_uuid: 
   :parent_name: 
-  :description_link: ''
-  :instructor_notes_link: ''
+  :description_link: Data_Structures__Algorithms/Trees__DFS__BFS.desc.md
+  :instructor_notes_link: Data_Structures__Algorithms/Trees__DFS__BFS.notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria:
@@ -1609,8 +1609,8 @@
   :subject_name: Technical Interview Prep
   :parent_uuid: 
   :parent_name: 
-  :description_link: ''
-  :instructor_notes_link: ''
+  :description_link: Technical_Interview_Prep/Cultural_Interviews.desc.md
+  :instructor_notes_link: Technical_Interview_Prep/Cultural_Interviews.notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria:
@@ -1626,8 +1626,8 @@
   :subject_name: ES2015
   :parent_uuid: 
   :parent_name: 
-  :description_link: ''
-  :instructor_notes_link: ''
+  :description_link: ES2015/ES2015.desc.md
+  :instructor_notes_link: ES2015/ES2015.notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria:
@@ -1639,8 +1639,8 @@
   :subject_name: Agile Project Management
   :parent_uuid: 
   :parent_name: 
-  :description_link: ''
-  :instructor_notes_link: ''
+  :description_link: Agile_Project_Management/Capstone_Full_Stack_Project.desc.md
+  :instructor_notes_link: Agile_Project_Management/Capstone_Full_Stack_Project.notes.md
   :published: false
   :suggested_days: 10.0
   :experience_success_criteria: []
@@ -1650,8 +1650,8 @@
   :subject_name: CSS
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: CSS/CSS_Media_Queries.desc.md
+  :instructor_notes_link: CSS/CSS_Media_Queries.notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria:
@@ -1664,8 +1664,8 @@
   :subject_name: Programming with Javascript
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Programming_with_Javascript/Recursion_with_JavaScript.desc.md
+  :instructor_notes_link: Programming_with_Javascript/Recursion_with_JavaScript.notes.md
   :published: false
   :suggested_days: 0.0
   :experience_success_criteria: []
@@ -1675,8 +1675,8 @@
   :subject_name: 
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Misc/Clean_Code.desc.md
+  :instructor_notes_link: Misc/Clean_Code.notes.md
   :published: false
   :suggested_days: 0.0
   :experience_success_criteria: []
@@ -1686,8 +1686,8 @@
   :subject_name: Javascript and the Browser
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Javascript_and_the_Browser/AJAX,_API,_JSON,_and_XMLHttpRequests.desc.md
+  :instructor_notes_link: Javascript_and_the_Browser/AJAX,_API,_JSON,_and_XMLHttpRequests.notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria:
@@ -1703,8 +1703,8 @@
   :subject_name: Dev Environment
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Dev_Environment/Asset_Management.desc.md
+  :instructor_notes_link: Dev_Environment/Asset_Management.notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria: []
@@ -1714,8 +1714,8 @@
   :subject_name: The Command Line
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: The_Command_Line/Intermediate_Command_Line.desc.md
+  :instructor_notes_link: The_Command_Line/Intermediate_Command_Line.notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria:
@@ -1727,8 +1727,8 @@
   :subject_name: 
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Misc/Playlist_Q1_Practice_Assessment.desc.md
+  :instructor_notes_link: Misc/Playlist_Q1_Practice_Assessment.notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria: []
@@ -1738,8 +1738,8 @@
   :subject_name: Automated Testing
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Automated_Testing/Testing:_Introduction-to-TDD-with-JasmineMocha.desc.md
+  :instructor_notes_link: Automated_Testing/Testing:_Introduction-to-TDD-with-JasmineMocha.notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria:
@@ -1756,8 +1756,8 @@
   :subject_name: Deployment
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Deployment/Deploy_a_Static_WebSite_to_AWS_S3.desc.md
+  :instructor_notes_link: Deployment/Deploy_a_Static_WebSite_to_AWS_S3.notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria:
@@ -1770,8 +1770,8 @@
   :subject_name: Server Side JS with Node
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Server_Side_JS_with_Node/Stream_Adventure.desc.md
+  :instructor_notes_link: Server_Side_JS_with_Node/Stream_Adventure.notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria:
@@ -1783,8 +1783,8 @@
   :subject_name: Deployment
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Deployment/AWS_S3_bucket_custom_domain.desc.md
+  :instructor_notes_link: Deployment/AWS_S3_bucket_custom_domain.notes.md
   :published: false
   :suggested_days: 0.0
   :experience_success_criteria: []
@@ -1794,8 +1794,8 @@
   :subject_name: 
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Misc/HTTP_and_Node.js.desc.md
+  :instructor_notes_link: Misc/HTTP_and_Node.js.notes.md
   :published: false
   :suggested_days: 2.0
   :experience_success_criteria: []
@@ -1805,8 +1805,8 @@
   :subject_name: Deployment
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Deployment/Express:_Deploying_a_CRUD_App_to_Heroku_(w_ENV_variables)_(deprecated).desc.md
+  :instructor_notes_link: Deployment/Express:_Deploying_a_CRUD_App_to_Heroku_(w_ENV_variables)_(deprecated).notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria: []
@@ -1816,8 +1816,8 @@
   :subject_name: 
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Misc/MongoDB_and_CRUD.desc.md
+  :instructor_notes_link: Misc/MongoDB_and_CRUD.notes.md
   :published: false
   :suggested_days: 0.0
   :experience_success_criteria: []
@@ -1827,8 +1827,8 @@
   :subject_name: Deployment
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Deployment/Node:_Deploying_to_Heroku.desc.md
+  :instructor_notes_link: Deployment/Node:_Deploying_to_Heroku.notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria:
@@ -1843,8 +1843,8 @@
   :subject_name: Programming with Javascript
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Programming_with_Javascript/Programming_Fundamentals_Assessment_Part_1.desc.md
+  :instructor_notes_link: Programming_with_Javascript/Programming_Fundamentals_Assessment_Part_1.notes.md
   :published: false
   :suggested_days: 0.0
   :experience_success_criteria:
@@ -1858,8 +1858,8 @@
   :subject_name: 
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Misc/Angular_Part_3_-_Firebase.desc.md
+  :instructor_notes_link: Misc/Angular_Part_3_-_Firebase.notes.md
   :published: false
   :suggested_days: 0.0
   :experience_success_criteria: []
@@ -1869,8 +1869,8 @@
   :subject_name: 
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Misc/CSS_Copycat.desc.md
+  :instructor_notes_link: Misc/CSS_Copycat.notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria: []
@@ -1880,8 +1880,8 @@
   :subject_name: 
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Misc/Scribe_and_Sage.desc.md
+  :instructor_notes_link: Misc/Scribe_and_Sage.notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria: []
@@ -1891,8 +1891,8 @@
   :subject_name: 
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Misc/Extreme_Blogging.desc.md
+  :instructor_notes_link: Misc/Extreme_Blogging.notes.md
   :published: false
   :suggested_days: 0.0
   :experience_success_criteria: []
@@ -1902,8 +1902,8 @@
   :subject_name: Deployment
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Deployment/Deploying_and_Managing_AWS_EC2.desc.md
+  :instructor_notes_link: Deployment/Deploying_and_Managing_AWS_EC2.notes.md
   :published: false
   :suggested_days: 0.0
   :experience_success_criteria:
@@ -1918,8 +1918,8 @@
   :subject_name: Deployment
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Deployment/Deploying_to_Cloud_Foundry_(run.pivotal.io).desc.md
+  :instructor_notes_link: Deployment/Deploying_to_Cloud_Foundry_(run.pivotal.io).notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria:
@@ -1931,8 +1931,8 @@
   :subject_name: 
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Misc/Introduction_to_Recursion.desc.md
+  :instructor_notes_link: Misc/Introduction_to_Recursion.notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria: []
@@ -1942,8 +1942,8 @@
   :subject_name: 
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Misc/Trivia_-_geopardy!.desc.md
+  :instructor_notes_link: Misc/Trivia_-_geopardy!.notes.md
   :published: false
   :suggested_days: 0.0
   :experience_success_criteria: []
@@ -1953,8 +1953,8 @@
   :subject_name: 
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Misc/Warmups.desc.md
+  :instructor_notes_link: Misc/Warmups.notes.md
   :published: false
   :suggested_days: 0.0
   :experience_success_criteria: []
@@ -1964,8 +1964,8 @@
   :subject_name: Programming with Javascript
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Programming_with_Javascript/Refactoring.desc.md
+  :instructor_notes_link: Programming_with_Javascript/Refactoring.notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria:
@@ -1977,8 +1977,8 @@
   :subject_name: 
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Misc/Ruby_Language.desc.md
+  :instructor_notes_link: Misc/Ruby_Language.notes.md
   :published: false
   :suggested_days: 2.0
   :experience_success_criteria: []
@@ -1988,8 +1988,8 @@
   :subject_name: 
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Misc/Rails_for_JS_Developers.desc.md
+  :instructor_notes_link: Misc/Rails_for_JS_Developers.notes.md
   :published: false
   :suggested_days: 0.0
   :experience_success_criteria: []
@@ -1999,8 +1999,8 @@
   :subject_name: Consuming Web APIs
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Consuming_Web_APIs/Consuming_APIs_from_a_Server.desc.md
+  :instructor_notes_link: Consuming_Web_APIs/Consuming_APIs_from_a_Server.notes.md
   :published: false
   :suggested_days: 0.0
   :experience_success_criteria:
@@ -2012,8 +2012,8 @@
   :subject_name: Deployment
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Deployment/Docker.desc.md
+  :instructor_notes_link: Deployment/Docker.notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria:
@@ -2025,8 +2025,8 @@
   :subject_name: 
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Misc/Cloud_Native_Architecture.desc.md
+  :instructor_notes_link: Misc/Cloud_Native_Architecture.notes.md
   :published: false
   :suggested_days: 0.0
   :experience_success_criteria: []
@@ -2036,8 +2036,8 @@
   :subject_name: Javascript and the Browser
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Javascript_and_the_Browser/Canvas.desc.md
+  :instructor_notes_link: Javascript_and_the_Browser/Canvas.notes.md
   :published: false
   :suggested_days: 2.0
   :experience_success_criteria: []
@@ -2047,8 +2047,8 @@
   :subject_name: 
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Misc/Setting_up_your_AWS_Activate_Account.desc.md
+  :instructor_notes_link: Misc/Setting_up_your_AWS_Activate_Account.notes.md
   :published: false
   :suggested_days: 0.0
   :experience_success_criteria: []
@@ -2058,8 +2058,8 @@
   :subject_name: Data Structures / Algorithms
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Data_Structures__Algorithms/Cracking_the_Coding_Interview_Warmups.desc.md
+  :instructor_notes_link: Data_Structures__Algorithms/Cracking_the_Coding_Interview_Warmups.notes.md
   :published: false
   :suggested_days: 0.0
   :experience_success_criteria: []
@@ -2069,8 +2069,8 @@
   :subject_name: 
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Misc/Transitions,_Transforms,_and_Animations.desc.md
+  :instructor_notes_link: Misc/Transitions,_Transforms,_and_Animations.notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria: []
@@ -2080,8 +2080,8 @@
   :subject_name: Architecture
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Architecture/Distributed_Memories_-_Angular,_CORS_and_Express.desc.md
+  :instructor_notes_link: Architecture/Distributed_Memories_-_Angular,_CORS_and_Express.notes.md
   :published: false
   :suggested_days: 0.0
   :experience_success_criteria: []
@@ -2091,8 +2091,8 @@
   :subject_name: 
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Misc/Javascript_Resources.desc.md
+  :instructor_notes_link: Misc/Javascript_Resources.notes.md
   :published: false
   :suggested_days: 0.0
   :experience_success_criteria: []
@@ -2102,8 +2102,8 @@
   :subject_name: 
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Misc/vim.desc.md
+  :instructor_notes_link: Misc/vim.notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria: []
@@ -2113,8 +2113,8 @@
   :subject_name: 
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Misc/Testing_Randomness_in_JS.desc.md
+  :instructor_notes_link: Misc/Testing_Randomness_in_JS.notes.md
   :published: false
   :suggested_days: 0.0
   :experience_success_criteria: []
@@ -2124,8 +2124,8 @@
   :subject_name: Functional Programming with Javascript
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Functional_Programming_with_Javascript/Functional_Programming_with_Javascript.desc.md
+  :instructor_notes_link: Functional_Programming_with_Javascript/Functional_Programming_with_Javascript.notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria:
@@ -2140,8 +2140,8 @@
   :subject_name: 
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Misc/Student_WhiteboardPhone_Interviews.desc.md
+  :instructor_notes_link: Misc/Student_WhiteboardPhone_Interviews.notes.md
   :published: false
   :suggested_days: 0.0
   :experience_success_criteria: []
@@ -2151,8 +2151,8 @@
   :subject_name: 
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Misc/GKit:_building_a_CSS_Framework.desc.md
+  :instructor_notes_link: Misc/GKit:_building_a_CSS_Framework.notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria: []
@@ -2162,8 +2162,8 @@
   :subject_name: CSS
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: CSS/Web_Components.desc.md
+  :instructor_notes_link: CSS/Web_Components.notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria:
@@ -2176,8 +2176,8 @@
   :subject_name: 
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Misc/Running_Tasks_with_Gulp.desc.md
+  :instructor_notes_link: Misc/Running_Tasks_with_Gulp.notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria: []
@@ -2187,8 +2187,8 @@
   :subject_name: Programming with Javascript
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Programming_with_Javascript/JavaScript_Errors.desc.md
+  :instructor_notes_link: Programming_with_Javascript/JavaScript_Errors.notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria:
@@ -2202,8 +2202,8 @@
   :subject_name: 
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Misc/Introduction_to_JavaScript_-_Interactive_Part_1.desc.md
+  :instructor_notes_link: Misc/Introduction_to_JavaScript_-_Interactive_Part_1.notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria: []
@@ -2213,8 +2213,8 @@
   :subject_name: 
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Misc/Galvanize_Eats_Assessment.desc.md
+  :instructor_notes_link: Misc/Galvanize_Eats_Assessment.notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria: []
@@ -2224,8 +2224,8 @@
   :subject_name: 
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Misc/npm.desc.md
+  :instructor_notes_link: Misc/npm.notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria: []
@@ -2235,8 +2235,8 @@
   :subject_name: 
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Misc/History_of_the_World_Wide_Web.desc.md
+  :instructor_notes_link: Misc/History_of_the_World_Wide_Web.notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria: []
@@ -2246,8 +2246,8 @@
   :subject_name: 
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Misc/Galvanize_Reads_Assessment.desc.md
+  :instructor_notes_link: Misc/Galvanize_Reads_Assessment.notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria:
@@ -2314,8 +2314,8 @@
   :subject_name: 
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Misc/Galvanize_Gazette_Assessment.desc.md
+  :instructor_notes_link: Misc/Galvanize_Gazette_Assessment.notes.md
   :published: false
   :suggested_days: 0.0
   :experience_success_criteria: []
@@ -2325,8 +2325,8 @@
   :subject_name: Thinking Like a Developer
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Thinking_Like_a_Developer/Debugging_.desc.md
+  :instructor_notes_link: Thinking_Like_a_Developer/Debugging_.notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria: []
@@ -2336,8 +2336,8 @@
   :subject_name: Server Side Frameworks with Express
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Server_Side_Frameworks_with_Express/Automated-CRUD-Assessment.desc.md
+  :instructor_notes_link: Server_Side_Frameworks_with_Express/Automated-CRUD-Assessment.notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria:
@@ -2355,8 +2355,8 @@
   :subject_name: Data Structures / Algorithms
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Data_Structures__Algorithms/Code_Katas_.desc.md
+  :instructor_notes_link: Data_Structures__Algorithms/Code_Katas_.notes.md
   :published: false
   :suggested_days: 0.0
   :experience_success_criteria: []
@@ -2366,8 +2366,8 @@
   :subject_name: 
   :parent_uuid: badbed74-df0b-49c8-bdfb-58ee14199c22
   :parent_name: Q1
-  :description_link: ''
-  :instructor_notes_link: ''
+  :description_link: Misc/Week_1.desc.md
+  :instructor_notes_link: Misc/Week_1.notes.md
   :published: true
   :suggested_days: 0.0
   :experience_success_criteria: []
@@ -2377,8 +2377,8 @@
   :subject_name: 
   :parent_uuid: badbed74-df0b-49c8-bdfb-58ee14199c22
   :parent_name: Q1
-  :description_link: ''
-  :instructor_notes_link: ''
+  :description_link: Misc/Week_2.desc.md
+  :instructor_notes_link: Misc/Week_2.notes.md
   :published: true
   :suggested_days: 0.0
   :experience_success_criteria: []
@@ -2388,8 +2388,8 @@
   :subject_name: 
   :parent_uuid: badbed74-df0b-49c8-bdfb-58ee14199c22
   :parent_name: Q1
-  :description_link: ''
-  :instructor_notes_link: ''
+  :description_link: Misc/Week_3.desc.md
+  :instructor_notes_link: Misc/Week_3.notes.md
   :published: true
   :suggested_days: 0.0
   :experience_success_criteria: []
