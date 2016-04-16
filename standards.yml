@@ -496,7 +496,7 @@
   :description: ''
   :instructor_notes: "##Assessments\r\n[LMS Clean Code Assessment](https://coursework.galvanize.com/assessments/67)\r\n[LMS
     JS-Debugging & The DOM](https://coursework.galvanize.com/assessments/34)\n\nAssessments:\r\n\r\nGiven
-    a style guide and some code, determine what’s wrong and give feedback.\r\n\n\n-
+    a style guide and some code, determine what’s wrong and give feedback.\r\n\n\n\n\n-
     Doesn’t bully in code / commits\r\n- Doesn’t tell other that their code is shit\r\n-
     Doesn’t get too animated"
 - :uuid: 5ddfa4d5-6194-466b-97aa-f9610b77c493
@@ -591,8 +591,7 @@
   :subject_uuid: d465e693-2e94-43a2-b99e-bb7283161bc2
   :subject_name: Server Side JS with Node
   :description: https://github.com/gSchool/module.exports
-  :instructor_notes: "##Assessments\r\n[GH Node Basics (Event Emitters)](https://github.com/gSchool/node-basics-assessment)\n\n##Assessments\r\n-
-    [GH Node-JS-Routes-Assessment ](https://github.com/gSchool/node-js-routes-assessment/blob/master/readme.md)\r\n-
+  :instructor_notes: "##Assessments\r\n- [GH Node-JS-Routes-Assessment ](https://github.com/gSchool/node-js-routes-assessment/blob/master/readme.md)\r\n-
     [GH JS-npm-Assessment (installing modules)](https://github.com/gSchool/js-npm-assessment)\r\n-
     [LM NPM Assessment](https://coursework.galvanize.com/assessments/83)\r\n\n\n##Assessments\r\n[GH
     Rails Debugging](https://github.com/gSchool/rails-assessment-debugging)\n\n##Assessments\r\n[LMS
@@ -600,7 +599,8 @@
     Node HTTP Server](https://coursework.galvanize.com/assessments/80)\r\n\r\n[GH
     Node-HTTP-File-Assessment](https://github.com/gSchool/node-http-file-assessment)\r\n\r\n[GH
     Node-js-routes-Assessment](https://github.com/gSchool/node-js-routes-assessment)\r\n\r\nObjectives\r\n\r\n-
-    `path`\r\n- `query strings`\r\n- Write a CLI"
+    `path`\r\n- `query strings`\r\n- Write a CLI\r\n\n\n##Assessments\r\n[GH Node
+    Basics (Event Emitters)](https://github.com/gSchool/node-basics-assessment)"
 - :uuid: bb388526-c903-45a9-afbf-e6dff6f501d1
   :name: Server Side Frameworks with Express
   :subject_uuid: bb388526-c903-45a9-afbf-e6dff6f501d1
@@ -686,7 +686,7 @@
   :description: ''
   :instructor_notes: "## Assessments\r\nGiven a words explanation of a data model,
     design the schema\r\nGiven a human problem, design a data model\r\n\r\n## Resources\r\n[Entity
-    Relationship Diagrams](https://vimeo.com/142034756)\r\n\n\n\n\n### Assessments\r\n-
+    Relationship Diagrams](https://vimeo.com/142034756)\r\n\n\n### Assessments\r\n-
     https://github.com/gSchool/sql-assessment\r\n- [LMS Intro to SQL](https://coursework.galvanize.com/assessments/84)\r\n-
     [LMS SQL DDL ](https://coursework.galvanize.com/assessments/86)\r\n\r\n## Resources\r\nCONCAT?\r\n[Intro
     to Relational DBs](https://vimeo.com/142036155)\r\n\n\n##Assessments\r\n- [LMS
@@ -834,14 +834,12 @@
   :name: Data Structures / Algorithms
   :subject_uuid: d5947e67-9d70-4e02-ae2a-b3135a9c1667
   :subject_name: Data Structures / Algorithms
-  :description: "http://bigocheatsheet.com/\n\nExamples may be: \r\n* k-means\r\n*
-    kNN (k nearest neighbor)\r\n* checksum\r\n* DFS\r\n* BFS\r\n\n\n\n\n[Cracking
-    the Coding Interview Process](https://qph.is.quoracdn.net/main-qimg-379a9cf0a7bd42f8084d137370e4bd79?convert_to_webp=true)"
-  :instructor_notes: "###Assessments\r\n- [LMS JS Fundamentals, DOM, Iterators, CS
-    and OOP](https://coursework.galvanize.com/assessments/38)\n\n### Assessments\r\n*
-    If you want to know if two files are the same, which algorithm would you use?
-    Why?\n\n\n\n\n\n###Assessments\r\n- [LMS JS Fundamentals, DOM, Iterators, CS and
-    OOP](https://coursework.galvanize.com/assessments/38)"
+  :description: "Examples may be: \r\n* k-means\r\n* kNN (k nearest neighbor)\r\n*
+    checksum\r\n* DFS\r\n* BFS\r\n\n\n\n\n[Cracking the Coding Interview Process](https://qph.is.quoracdn.net/main-qimg-379a9cf0a7bd42f8084d137370e4bd79?convert_to_webp=true)\n\n\n\n\n\n\n\n\n\nhttp://bigocheatsheet.com/"
+  :instructor_notes: "### Assessments\r\n* If you want to know if two files are the
+    same, which algorithm would you use? Why?\n\n\n\n\n\n###Assessments\r\n- [LMS
+    JS Fundamentals, DOM, Iterators, CS and OOP](https://coursework.galvanize.com/assessments/38)\n\n\n\n###Assessments\r\n-
+    [LMS JS Fundamentals, DOM, Iterators, CS and OOP](https://coursework.galvanize.com/assessments/38)"
 - :uuid: e59bae37-553b-4c1b-8667-4dbbdeeae98d
   :name: Technical Interview Prep
   :subject_uuid: e59bae37-553b-4c1b-8667-4dbbdeeae98d

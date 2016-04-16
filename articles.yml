@@ -44,7 +44,7 @@
   :parent_uuid: 23e4f3b5-9026-4d49-b541-b218dfc51d9c
   :parent_name: Week 8
   :description_link: Datastores/Intro_to_Postgres.desc.md
-  :instructor_notes_link: ''
+  :instructor_notes_link: Datastores/PostgreSQL_-_Intro_&_Setup.notes.md
   :published: true
   :suggested_days: 0.0
   :experience_success_criteria: []
@@ -54,8 +54,8 @@
   :subject_name: 
   :parent_uuid: 0cec81ac-6b46-4d91-8325-1012ab2793c1
   :parent_name: Q2
-  :description_link: ''
-  :instructor_notes_link: ''
+  :description_link: Misc/Week_7.desc.md
+  :instructor_notes_link: Misc/Week_7.notes.md
   :published: true
   :suggested_days: 0.0
   :experience_success_criteria: []
@@ -108,31 +108,31 @@
   :parent_uuid: 23e4f3b5-9026-4d49-b541-b218dfc51d9c
   :parent_name: Week 8
   :description_link: Datastores/PostgreSQL_CRUD.desc.md
-  :instructor_notes_link: ''
+  :instructor_notes_link: Datastores/PostgreSQL_-_CRUD.notes.md
   :published: true
   :suggested_days: 0.0
   :experience_success_criteria:
   - :success_criterion_uuid: 08f64fd8-ad16-4e3a-bb92-902b8b54de07
     :success_criterion_name: Write database queries using SQL
-- :name: Week 8
-  :uuid: 23e4f3b5-9026-4d49-b541-b218dfc51d9c
-  :subject_uuid: 
-  :subject_name: 
-  :parent_uuid: 0cec81ac-6b46-4d91-8325-1012ab2793c1
-  :parent_name: Q2
-  :description_link: ''
-  :instructor_notes_link: ''
-  :published: true
-  :suggested_days: 0.0
-  :experience_success_criteria: []
 - :name: Q1
   :uuid: b3f21c0d-7aa4-46ec-990f-b39416183419
   :subject_uuid: 
   :subject_name: 
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Misc/Q1.desc.md
+  :instructor_notes_link: Misc/Q1.notes.md
+  :published: true
+  :suggested_days: 0.0
+  :experience_success_criteria: []
+- :name: Week 8
+  :uuid: 23e4f3b5-9026-4d49-b541-b218dfc51d9c
+  :subject_uuid: 
+  :subject_name: 
+  :parent_uuid: 0cec81ac-6b46-4d91-8325-1012ab2793c1
+  :parent_name: Q2
+  :description_link: Misc/Week_8.desc.md
+  :instructor_notes_link: Misc/Week_8.notes.md
   :published: true
   :suggested_days: 0.0
   :experience_success_criteria: []
@@ -149,11 +149,11 @@
   :experience_success_criteria:
   - :success_criterion_uuid: 84bbf0ae-2d55-490b-bc84-d4ae4dc45e14
     :success_criterion_name: Discuss and diagram Client-Server Model
-  - :success_criterion_uuid: ca4311e4-8013-4b29-b2c4-dd753573c30e
-    :success_criterion_name: Diagram and explain a URI
   - :success_criterion_uuid: 5b704c5f-75af-4039-a691-4f2dd8ba2971
     :success_criterion_name: Identify the parts of an HTTP request and response and
       discuss their purpose
+  - :success_criterion_uuid: ca4311e4-8013-4b29-b2c4-dd753573c30e
+    :success_criterion_name: Diagram and explain a URI
   - :success_criterion_uuid: 960362a6-e341-487b-a292-95840148c429
     :success_criterion_name: Discuss the semantics of common HTTP Verbs, Headers,
       and Status Codes
@@ -198,18 +198,7 @@
   :parent_uuid: 23e4f3b5-9026-4d49-b541-b218dfc51d9c
   :parent_name: Week 8
   :description_link: Datastores/PostgreSQL_Joins.desc.md
-  :instructor_notes_link: ''
-  :published: true
-  :suggested_days: 0.0
-  :experience_success_criteria: []
-- :name: Week 9
-  :uuid: ed0d1657-ef28-4801-8c90-d44051dd317a
-  :subject_uuid: 
-  :subject_name: 
-  :parent_uuid: 0cec81ac-6b46-4d91-8325-1012ab2793c1
-  :parent_name: Q2
-  :description_link: ''
-  :instructor_notes_link: ''
+  :instructor_notes_link: Datastores/PostgreSQL_-_Joins.notes.md
   :published: true
   :suggested_days: 0.0
   :experience_success_criteria: []
@@ -223,6 +212,17 @@
   :instructor_notes_link: Learning_to_Learn/First_day,_intro_to_Full_Stack.notes.md
   :published: true
   :suggested_days: 1.0
+  :experience_success_criteria: []
+- :name: Week 9
+  :uuid: ed0d1657-ef28-4801-8c90-d44051dd317a
+  :subject_uuid: 
+  :subject_name: 
+  :parent_uuid: 0cec81ac-6b46-4d91-8325-1012ab2793c1
+  :parent_name: Q2
+  :description_link: Misc/Week_9.desc.md
+  :instructor_notes_link: Misc/Week_9.notes.md
+  :published: true
+  :suggested_days: 0.0
   :experience_success_criteria: []
 - :name: Setup Development Environment
   :uuid: ed70c6dd-7649-4311-b933-ba0ea8c22f05
@@ -306,8 +306,8 @@
   :subject_name: 
   :parent_uuid: 0cec81ac-6b46-4d91-8325-1012ab2793c1
   :parent_name: Q2
-  :description_link: ''
-  :instructor_notes_link: ''
+  :description_link: Misc/Week_10.desc.md
+  :instructor_notes_link: Misc/Week_10.notes.md
   :published: true
   :suggested_days: 0.0
   :experience_success_criteria: []
@@ -387,8 +387,8 @@
   :subject_name: 
   :parent_uuid: 0cec81ac-6b46-4d91-8325-1012ab2793c1
   :parent_name: Q2
-  :description_link: ''
-  :instructor_notes_link: ''
+  :description_link: Misc/Week_11_-_Project_Week!.desc.md
+  :instructor_notes_link: Misc/Week_11_-_Project_Week!.notes.md
   :published: true
   :suggested_days: 0.0
   :experience_success_criteria: []
@@ -458,8 +458,8 @@
   :subject_name: 
   :parent_uuid: 0cec81ac-6b46-4d91-8325-1012ab2793c1
   :parent_name: Q2
-  :description_link: ''
-  :instructor_notes_link: ''
+  :description_link: Misc/Electives.desc.md
+  :instructor_notes_link: Misc/Electives.notes.md
   :published: true
   :suggested_days: 0.0
   :experience_success_criteria: []
@@ -600,10 +600,10 @@
     :success_criterion_name: Build CRUD apps in Express
   - :success_criterion_uuid: 349b2e45-b20a-44d1-80c8-1216e14c301f
     :success_criterion_name: Access data using an ORM / Knex
-  - :success_criterion_uuid: 7ec77c83-b497-49c3-b08c-b729a77090b3
-    :success_criterion_name: Design and implement schemas
   - :success_criterion_uuid: 7231cf4a-2dc7-401a-88f9-4159cc1c2e2f
     :success_criterion_name: Access data in datastores through joins
+  - :success_criterion_uuid: 7ec77c83-b497-49c3-b08c-b729a77090b3
+    :success_criterion_name: Design and implement schemas
   - :success_criterion_uuid: 08f64fd8-ad16-4e3a-bb92-902b8b54de07
     :success_criterion_name: Write database queries using SQL
   - :success_criterion_uuid: 99acaf90-3559-4542-a2a4-1071eda89553
@@ -1031,8 +1031,8 @@
   :subject_name: Javascript and the Browser
   :parent_uuid: b3f21c0d-7aa4-46ec-990f-b39416183419
   :parent_name: Q1
-  :description_link: ''
-  :instructor_notes_link: ''
+  :description_link: Javascript_and_the_Browser/APIs_for_the_FrontEnd.desc.md
+  :instructor_notes_link: Javascript_and_the_Browser/APIs_for_the_FrontEnd.notes.md
   :published: true
   :suggested_days: 1.0
   :experience_success_criteria:
@@ -1283,7 +1283,7 @@
   :parent_uuid: b3f21c0d-7aa4-46ec-990f-b39416183419
   :parent_name: Q1
   :description_link: JavaScript_Object_Model/this.desc.md
-  :instructor_notes_link: ''
+  :instructor_notes_link: JavaScript_Object_Model/The_keyword_'this'.notes.md
   :published: true
   :suggested_days: 1.0
   :experience_success_criteria: []
@@ -1294,7 +1294,7 @@
   :parent_uuid: b3f21c0d-7aa4-46ec-990f-b39416183419
   :parent_name: Q1
   :description_link: Programming_with_Javascript/Modules.desc.md
-  :instructor_notes_link: ''
+  :instructor_notes_link: Programming_with_Javascript/Modules.notes.md
   :published: true
   :suggested_days: 1.0
   :experience_success_criteria: []
@@ -1332,8 +1332,8 @@
   :subject_name: 
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Misc/Q2.desc.md
+  :instructor_notes_link: Misc/Q2.notes.md
   :published: true
   :suggested_days: 0.0
   :experience_success_criteria: []
@@ -1343,8 +1343,8 @@
   :subject_name: 
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Misc/Q3.desc.md
+  :instructor_notes_link: Misc/Q3.notes.md
   :published: true
   :suggested_days: 0.0
   :experience_success_criteria: []
@@ -1641,8 +1641,8 @@
   :subject_name: 
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Misc/Q4.desc.md
+  :instructor_notes_link: Misc/Q4.notes.md
   :published: true
   :suggested_days: 0.0
   :experience_success_criteria: []
@@ -1892,8 +1892,8 @@
   :subject_name: 
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Misc/Clean_Code.desc.md
+  :instructor_notes_link: Misc/Clean_Code.notes.md
   :published: false
   :suggested_days: 0.0
   :experience_success_criteria: []
@@ -1903,8 +1903,8 @@
   :subject_name: 
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Misc/Playlist_Q1_Practice_Assessment.desc.md
+  :instructor_notes_link: Misc/Playlist_Q1_Practice_Assessment.notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria: []
@@ -1914,8 +1914,8 @@
   :subject_name: 
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Misc/HTTP_and_Node.js.desc.md
+  :instructor_notes_link: Misc/HTTP_and_Node.js.notes.md
   :published: false
   :suggested_days: 2.0
   :experience_success_criteria: []
@@ -1947,8 +1947,8 @@
   :subject_name: 
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Misc/MongoDB_and_CRUD.desc.md
+  :instructor_notes_link: Misc/MongoDB_and_CRUD.notes.md
   :published: false
   :suggested_days: 0.0
   :experience_success_criteria: []
@@ -1958,8 +1958,8 @@
   :subject_name: 
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Misc/Angular_Part_3_-_Firebase.desc.md
+  :instructor_notes_link: Misc/Angular_Part_3_-_Firebase.notes.md
   :published: false
   :suggested_days: 0.0
   :experience_success_criteria: []
@@ -1969,8 +1969,8 @@
   :subject_name: 
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Misc/CSS_Copycat.desc.md
+  :instructor_notes_link: Misc/CSS_Copycat.notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria: []
@@ -1980,8 +1980,8 @@
   :subject_name: 
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Misc/Scribe_and_Sage.desc.md
+  :instructor_notes_link: Misc/Scribe_and_Sage.notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria: []
@@ -1991,8 +1991,8 @@
   :subject_name: 
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Misc/Extreme_Blogging.desc.md
+  :instructor_notes_link: Misc/Extreme_Blogging.notes.md
   :published: false
   :suggested_days: 0.0
   :experience_success_criteria: []
@@ -2002,8 +2002,8 @@
   :subject_name: 
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Misc/Introduction_to_Recursion.desc.md
+  :instructor_notes_link: Misc/Introduction_to_Recursion.notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria: []
@@ -2013,8 +2013,8 @@
   :subject_name: 
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Misc/Trivia_-_geopardy!.desc.md
+  :instructor_notes_link: Misc/Trivia_-_geopardy!.notes.md
   :published: false
   :suggested_days: 0.0
   :experience_success_criteria: []
@@ -2024,8 +2024,8 @@
   :subject_name: 
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Misc/Warmups.desc.md
+  :instructor_notes_link: Misc/Warmups.notes.md
   :published: false
   :suggested_days: 0.0
   :experience_success_criteria: []
@@ -2035,8 +2035,8 @@
   :subject_name: 
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Misc/Ruby_Language.desc.md
+  :instructor_notes_link: Misc/Ruby_Language.notes.md
   :published: false
   :suggested_days: 2.0
   :experience_success_criteria: []
@@ -2046,8 +2046,8 @@
   :subject_name: 
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Misc/Rails_for_JS_Developers.desc.md
+  :instructor_notes_link: Misc/Rails_for_JS_Developers.notes.md
   :published: false
   :suggested_days: 0.0
   :experience_success_criteria: []
@@ -2057,8 +2057,8 @@
   :subject_name: 
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Misc/Cloud_Native_Architecture.desc.md
+  :instructor_notes_link: Misc/Cloud_Native_Architecture.notes.md
   :published: false
   :suggested_days: 0.0
   :experience_success_criteria: []
@@ -2079,8 +2079,8 @@
   :subject_name: 
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Misc/Setting_up_your_AWS_Activate_Account.desc.md
+  :instructor_notes_link: Misc/Setting_up_your_AWS_Activate_Account.notes.md
   :published: false
   :suggested_days: 0.0
   :experience_success_criteria: []
@@ -2090,8 +2090,8 @@
   :subject_name: 
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Misc/Transitions,_Transforms,_and_Animations.desc.md
+  :instructor_notes_link: Misc/Transitions,_Transforms,_and_Animations.notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria: []
@@ -2101,8 +2101,8 @@
   :subject_name: 
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Misc/Javascript_Resources.desc.md
+  :instructor_notes_link: Misc/Javascript_Resources.notes.md
   :published: false
   :suggested_days: 0.0
   :experience_success_criteria: []
@@ -2112,8 +2112,8 @@
   :subject_name: 
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Misc/vim.desc.md
+  :instructor_notes_link: Misc/vim.notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria: []
@@ -2123,8 +2123,8 @@
   :subject_name: 
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Misc/Testing_Randomness_in_JS.desc.md
+  :instructor_notes_link: Misc/Testing_Randomness_in_JS.notes.md
   :published: false
   :suggested_days: 0.0
   :experience_success_criteria: []
@@ -2134,8 +2134,8 @@
   :subject_name: 
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Misc/Student_WhiteboardPhone_Interviews.desc.md
+  :instructor_notes_link: Misc/Student_WhiteboardPhone_Interviews.notes.md
   :published: false
   :suggested_days: 0.0
   :experience_success_criteria: []
@@ -2145,8 +2145,8 @@
   :subject_name: 
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Misc/GKit:_building_a_CSS_Framework.desc.md
+  :instructor_notes_link: Misc/GKit:_building_a_CSS_Framework.notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria: []
@@ -2156,8 +2156,8 @@
   :subject_name: 
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Misc/Running_Tasks_with_Gulp.desc.md
+  :instructor_notes_link: Misc/Running_Tasks_with_Gulp.notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria: []
@@ -2167,8 +2167,8 @@
   :subject_name: 
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Misc/Introduction_to_JavaScript_-_Interactive_Part_1.desc.md
+  :instructor_notes_link: Misc/Introduction_to_JavaScript_-_Interactive_Part_1.notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria: []
@@ -2178,8 +2178,8 @@
   :subject_name: 
   :parent_uuid: 
   :parent_name: 
-  :description_link: ''
-  :instructor_notes_link: ''
+  :description_link: Misc/Galvanize_Eats_Assessment.desc.md
+  :instructor_notes_link: Misc/Galvanize_Eats_Assessment.notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria: []
@@ -2189,8 +2189,8 @@
   :subject_name: 
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Misc/npm.desc.md
+  :instructor_notes_link: Misc/npm.notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria: []
@@ -2200,8 +2200,8 @@
   :subject_name: 
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Misc/History_of_the_World_Wide_Web.desc.md
+  :instructor_notes_link: Misc/History_of_the_World_Wide_Web.notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria: []
@@ -2211,8 +2211,8 @@
   :subject_name: 
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Misc/Intro_to_Express.desc.md
+  :instructor_notes_link: Misc/Intro_to_Express.notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria: []
@@ -2222,8 +2222,8 @@
   :subject_name: 
   :parent_uuid: 
   :parent_name: 
-  :description_link: ''
-  :instructor_notes_link: ''
+  :description_link: Misc/Galvanize_Reads.desc.md
+  :instructor_notes_link: Misc/Galvanize_Reads.notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria:
@@ -2290,8 +2290,8 @@
   :subject_name: 
   :parent_uuid: 
   :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :description_link: Misc/Galvanize_Gazette_Assessment.desc.md
+  :instructor_notes_link: Misc/Galvanize_Gazette_Assessment.notes.md
   :published: false
   :suggested_days: 0.0
   :experience_success_criteria: []
@@ -2376,7 +2376,7 @@
   :parent_uuid: ed0d1657-ef28-4801-8c90-d44051dd317a
   :parent_name: Week 9
   :description_link: Promises/Promises.desc.md
-  :instructor_notes_link: ''
+  :instructor_notes_link: Promises/Promises.notes.md
   :published: true
   :suggested_days: 0.0
   :experience_success_criteria: []

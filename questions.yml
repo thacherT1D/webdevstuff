@@ -9,6 +9,21 @@
 - :success_criterion_uuid: 1527f6f1-dff1-45a5-b987-509d40ca1e3e
   :success_criterion_name: Describe auth concepts including form-based authentication,
     OAuth and authorization
+  :uuid: 4b23298f-5a1b-4121-8324-21dbac5fbcf4
+  :question_type: text
+  :question: What are cookies often used for?
+  :correct_answer: Authentication, or themes, or other per-user settings that affect
+    how the server sends a response
+- :success_criterion_uuid: 1527f6f1-dff1-45a5-b987-509d40ca1e3e
+  :success_criterion_name: Describe auth concepts including form-based authentication,
+    OAuth and authorization
+  :uuid: 87082f56-af87-404f-b107-d48af439a7ef
+  :question_type: text
+  :question: How do you secure cookies?
+  :correct_answer: "{secure: true}"
+- :success_criterion_uuid: 1527f6f1-dff1-45a5-b987-509d40ca1e3e
+  :success_criterion_name: Describe auth concepts including form-based authentication,
+    OAuth and authorization
   :uuid: 81b8af5b-f26a-4094-8971-96ff67ee3ee3
   :question_type: text
   :question: Can the browser change cookies sent by the server?
@@ -49,21 +64,19 @@
   :question_type: text
   :question: How does a server send a cookie to the browser?
   :correct_answer: In the header of a response
-- :success_criterion_uuid: 1527f6f1-dff1-45a5-b987-509d40ca1e3e
-  :success_criterion_name: Describe auth concepts including form-based authentication,
-    OAuth and authorization
-  :uuid: 87082f56-af87-404f-b107-d48af439a7ef
+- :success_criterion_uuid: 1d73b1d3-0485-46fe-969a-176d328d7536
+  :success_criterion_name: Explain what CORS is and get around CORS restrictions
+  :uuid: 02ac6e04-d27a-490e-ac23-3cee3c554e12
   :question_type: text
-  :question: How do you secure cookies?
-  :correct_answer: "{secure: true}"
-- :success_criterion_uuid: 1527f6f1-dff1-45a5-b987-509d40ca1e3e
-  :success_criterion_name: Describe auth concepts including form-based authentication,
-    OAuth and authorization
-  :uuid: 4b23298f-5a1b-4121-8324-21dbac5fbcf4
-  :question_type: text
-  :question: What are cookies often used for?
-  :correct_answer: Authentication, or themes, or other per-user settings that affect
-    how the server sends a response
+  :question: What is a preflight request?
+  :correct_answer: ''
+- :success_criterion_uuid: 1d73b1d3-0485-46fe-969a-176d328d7536
+  :success_criterion_name: Explain what CORS is and get around CORS restrictions
+  :uuid: 0f514a66-1b17-413f-9705-5ac195acac65
+  :question_type: textarea
+  :question: Make an AJAX request to "http://itunes.apple.com/search?term=jack+johnson"
+    using JSONP
+  :correct_answer: ''
 - :success_criterion_uuid: 1d73b1d3-0485-46fe-969a-176d328d7536
   :success_criterion_name: Explain what CORS is and get around CORS restrictions
   :uuid: c10629c6-b0d2-4b5f-b73d-adb62beb7262
@@ -72,10 +85,9 @@
   :correct_answer: ''
 - :success_criterion_uuid: 1d73b1d3-0485-46fe-969a-176d328d7536
   :success_criterion_name: Explain what CORS is and get around CORS restrictions
-  :uuid: 0f514a66-1b17-413f-9705-5ac195acac65
+  :uuid: 270a1262-7341-4ead-a2d2-c1919ffc9f04
   :question_type: textarea
-  :question: Make an AJAX request to "http://itunes.apple.com/search?term=jack+johnson"
-    using JSONP
+  :question: What is JSONP? How does it work?
   :correct_answer: ''
 - :success_criterion_uuid: 1d73b1d3-0485-46fe-969a-176d328d7536
   :success_criterion_name: Explain what CORS is and get around CORS restrictions
@@ -94,18 +106,6 @@
   :uuid: f2ef2f12-c30f-428d-a4c6-27f24ba85bb4
   :question_type: text
   :question: What does the HTTP Verb OPTIONS used for?
-  :correct_answer: ''
-- :success_criterion_uuid: 1d73b1d3-0485-46fe-969a-176d328d7536
-  :success_criterion_name: Explain what CORS is and get around CORS restrictions
-  :uuid: 02ac6e04-d27a-490e-ac23-3cee3c554e12
-  :question_type: text
-  :question: What is a preflight request?
-  :correct_answer: ''
-- :success_criterion_uuid: 1d73b1d3-0485-46fe-969a-176d328d7536
-  :success_criterion_name: Explain what CORS is and get around CORS restrictions
-  :uuid: 270a1262-7341-4ead-a2d2-c1919ffc9f04
-  :question_type: textarea
-  :question: What is JSONP? How does it work?
   :correct_answer: ''
 - :success_criterion_uuid: 33170def-1703-4b8d-a734-90c498882eaf
   :success_criterion_name: Fetch and send JSON with AJAX
