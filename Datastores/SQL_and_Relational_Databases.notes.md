@@ -3,7 +3,7 @@
 * [Danny - SQL](https://docs.google.com/presentation/d/1DfB36GeO9nJEs-7D1QIXkgQgjc7hyo2PZ6lQA-qkZwE/edit#slide=id.gd7ac0ef0a_0_8)
 * [Danny - Postgres/psql](https://docs.google.com/presentation/d/1jlaTZqUeNDk_GvHMS5cqaoQgS03Ocj4t__jQsFHkqrs/edit?usp=sharing)
 * [Tyler - Join & Join Types](http://slides.com/tylerbettilyon/jointypes/)
-
+* [Mat & Dale - Introduction to SQL](https://docs.google.com/a/galvanize.com/presentation/d/1bgZ02fr0Z5YRIYxI9JRTtjEMdZtgRCX7vCf6dNLzeiU/edit?usp=sharing)
 # Links
 
 * https://modern-sql.com/use-case/literate-sql

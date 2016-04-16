@@ -1,3 +1,7 @@
+## Slides
+
+* [Mat - Introduction to Express](https://docs.google.com/a/galvanize.com/presentation/d/1HhAUwBwn0PhzqcYy77OcVyVsnOsNcL5Ffd8a28WO780/edit?usp=sharing)
+
 ## THE MASTER COPY IS HERE: https://github.com/gSchool/node-curriculum/blob/master/unit-2/intro-express.md
 
 The main idea here is to drive home the point that you solve interesting problems using algorithms, and package them for the web.

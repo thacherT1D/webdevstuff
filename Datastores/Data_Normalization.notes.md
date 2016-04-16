@@ -3,6 +3,10 @@
 * Normalizes data to Third Normal Form
 * Model relationships using ERD
 
+## Slides
+
+* [Mat & Dale - Data Normalization](https://docs.google.com/a/galvanize.com/presentation/d/1XQ-cst2L-g7T4Nh2OxCSHgdEGhRRMAvvzrNvAcdFIig/edit?usp=sharing)
+
 ## Guiding Questions
 
 * What is normalization, and why would you want to do it?

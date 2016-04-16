@@ -8,6 +8,10 @@
 - schedule time for one-on-one checkins
 - schedule a time for review / drills
 
+### Slides
+
+* [Mat - Node Basics](https://docs.google.com/a/galvanize.com/presentation/d/1HhAUwBwn0PhzqcYy77OcVyVsnOsNcL5Ffd8a28WO780/edit?usp=sharing)
+
 **Demo**
 
 Just so students have some idea of what's happening, demo some `fs` stuff.  Ideally this will be a video, but until then, do it in person.
