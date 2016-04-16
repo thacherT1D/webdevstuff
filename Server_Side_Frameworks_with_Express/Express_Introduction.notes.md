@@ -1,16 +1,70 @@
-## THE MASTER COPY IS HERE: https://github.com/gSchool/node-curriculum/blob/master/unit-2/intro-express.md
+[Slides](https://docs.google.com/presentation/d/1JwgJOjsMuScIJMawBYdbZvwrfTwQp81ChkW1-p2387k/edit?usp=sharing)
 
-The main idea here is to drive home the point that you solve interesting problems using algorithms, and package them for the web.
+[Installing Express](http://expressjs.com/en/starter/installing.html)
 
-The other main idea is to get them a ton of practice creating and pushing express apps and repos to GitHub to keep their streaks up.
+[Getting started: Hello world](http://expressjs.com/en/starter/hello-world.html)
 
-**Intro Workshop**
+[Getting started: Basic routing](http://expressjs.com/en/starter/basic-routing.html)
 
-Hold multiple of them - only kick things off for people who are ready.  
+[Guide: Routing](http://expressjs.com/en/guide/routing.html)
 
-- Talk about how to watch the videos, how to go to the git repo.
-- How in this one you don't have to fork and clone - you should create your own repos and push them.
+[Express API Docs](http://expressjs.com/en/4x/api.html)
 
-**Review Workshop**
+# How do you install Express?
 
-Coming soon... links to other workshops you can run that are purely Express-based, but basically building any kind of form that processes data little, and has multiple routes is a good workshop topic.
+npm install --save express
+
+
+# What is the conventional variable used for an Express application?
+
+app
+
+# How do you create an express application?
+
+Invoke the top-level express() function exported by the Express module.
+
+# What is the app.listen() method a convenience method for?
+
+app.listen = function() {
+  var server = http.createServer(this);
+  return server.listen.apply(server, arguments);
+};
+
+https://github.com/strongloop/express/blob/master/lib/application.js#L616
+
+# What is an express route?
+
+
+
+# How do you create an express route?
+
+app.METHOD
+
+# What is a route a combination of?
+
+Request Type (GET, POST etc.) and Path
+
+# What are the 2 parameters to a route callback?
+
+
+Request and Response
+
+# How do you send a response to the client?
+
+res.send(value)
+
+# What other methods does the response provide for sending data to the client?
+
+res.json, res.jsonp res.send, res.sendFile, res.render, res.sendStatus
+
+# What are 2 ways of passing data into express?
+
+URL Parameters
+Query Parameters
+
+
+PUSH
+
+# Name 2 templating engines commonly used with Express
+
+# How do you create a nested express route defined in it's own file?
