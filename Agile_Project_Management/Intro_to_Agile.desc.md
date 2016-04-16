@@ -1,3 +1,5 @@
+[Agile Project Management slides and expectations ](https://docs.google.com/presentation/d/1NpKJ2XxkAimuaihdoR8278YrpEyZpGz7qdHt9depVx0/edit?usp=sharing)
+
 ## Objectives
 
 * Distinguish agile from traditional project management
@@ -8,27 +10,96 @@
 * Size a user story
 * Setup a project in Pivotal Tracker
 
-## Agile Philosophy
+## Hook
 
-* Read the [Agile Manifesto](http://www.agilemanifesto.org/)
-* Read the [12 Principles](http://www.agilemanifesto.org/principles.html)
+* Traditional project management looks like this:
+    * Planned up front
+    * All features are developed from the start
+    * Tested at the end
+    * Shipped to the customer
+* What happens when...
+    * You only get 80% of that done?
+    * Something changes?
+* What if you did this:
+    * Planned the features that you were working on now
+    * Built and tested them
+    * Shipped them to the customer frequently
+* What happens when...
+    * You only get 80% of that done?
+    * Something changes?
 
-## Scrum
+## Agile Theory
 
-* [Scrum Overview](https://www.scrumalliance.org/why-scrum)
-* [Scrum Roles](http://www.agile42.com/en/agile-info-center/scrum-roles/)
+### The Agile Manifesto
 
-## Vocabulary
+```
+We are uncovering better ways of developing software by doing it and helping others do it. Through this work we have come to value:
 
-* [Scrum Glossary](https://www.scrum.org/Resources/Scrum-Glossary?gclid=CjwKEAiAgvyxBRDmuviAj67g-XQSJABTLMcHVBxIkJYhZYjd2CXxDxXFkfalmanY-Jkiz9pMCI9AxBoCpVjw_wcB)
+* Individuals and interactions over processes and tools
+* Working software over comprehensive documentation
+* Customer collaboration over contract negotiation
+* Responding to change over following a plan
 
-## User Stories
+That is, while there is value in the items on the right, we value the items on the left more.
+```
+
+
+## Exercise: Waterfall & Agile
+
+Describe a waterfall project that you worked on. What would have been different if it were run as an agile project? (10 Minutes)
+
+Notes:
+
+* If you weren't aware of the planning process being used, it was probably waterfall and you were probably only executing one level of the waterfall
+* Did you have to follow a lot of broken processes?
+* Did you feel any incentive to fix them?
+* Did you feel any ownership of the work?
+* Did you communicate with people before or after you in the process?
+
+### User Story Formats
 
 * (role) can (action)
 * As a (role) I want (something) so that (benefit)
-* [Sizing Stories Advice](https://blog.pivotal.io/labs/labs/great-things-come-small-sizes-writing-stories-work-team)
-* [Pivotal Tracker for Beginners](https://www.pivotaltracker.com/flash/flvplayer.swf?file=http://tracker.screencast.s3.amazonaws.com/pivotal-tracker-concepts.flv&image=https://d3jgo56a5b0my0.cloudfront.net/images/v7/application/screenshots/storyview.png&autostart=true%20*%20http://www.mountaingoatsoftware.com/agile/user-stories%20*%20https://help.rallydev.com/writing-great-user-story)
 
-## Agile Project Management Tools
+### Story Sizing
+
+* Fibonacci
+* Small, Medium, Large
+* Small, needs to be split
+
+## Exercise: Stories
+
+* In groups, write stories for a forum, email client, or search engine (15 minutes)
+    * Look for good story format
+    * User's language- nothing technical
+* Prioritize these features
+    * One person acts as product owner
+    * Asks for the teams' feedback on prioritizing, but makes the decisions
+    * _Why_ is something higher priority?
+* As the dev team, size them using planning poker (15 minutes)
+    * One person acts as Scrum Master, doesn't vote
+    * Prioritize from top to bottom
+    * Low / High numbers have to defend
+    * Drive consensus
+
+## Agile Project Management Software
 
 * [Pivotal Tracker](https://www.pivotaltracker.com)
+
+## Exercise: Pivotal Tracker
+
+* Take the stories from your group and enter them into a project on your Pivotal Tracker account (30 minutes, on own)
+    * Instructors can make Tracker accounts for the whole class in the cohort view of the LMS with `Setup` -> `Tracker Accounts`
+    * Students access their tracker accounts by resetting their passwords
+
+## Objectives
+
+Check back:
+
+* Distinguish agile from traditional project management
+* Describe the scrum process
+* Define the roles of product owner, Scrum Master, developer
+* Define story, epic, velocity, backlog, and sprint
+* Write a user story
+* Size a user story
+* Setup a project in Pivotal Tracker

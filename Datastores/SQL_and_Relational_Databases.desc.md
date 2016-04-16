@@ -1,26 +1,40 @@
-## Intro to Set Theory
-This video should help with the more theoretical aspects of SQL.  
+# Slides
 
-[Introduction to Set Theory](https://www.youtube.com/watch?v=yCwnifwVjIg)  
+* [Danny - SQL](https://docs.google.com/presentation/d/1DfB36GeO9nJEs-7D1QIXkgQgjc7hyo2PZ6lQA-qkZwE/edit#slide=id.gd7ac0ef0a_0_8)
+* [Danny - Postgres/psql](https://docs.google.com/presentation/d/1jlaTZqUeNDk_GvHMS5cqaoQgS03Ocj4t__jQsFHkqrs/edit?usp=sharing)
+* [Tyler - Join & Join Types](http://slides.com/tylerbettilyon/jointypes/)
 
-## Watch Relational Databases
+# Links
 
-<iframe src="https://player.vimeo.com/video/142036155" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+* https://modern-sql.com/use-case/literate-sql
 
-## Write some SQL!
+# Exercise
+Here's one exercise for students.  Give them these instructions.
 
-Go through https://github.com/gSchool/intro-to-relational-databases
+**Structure**
 
-## Entity Relationship Diagrams (ERD)
+- Create a table named Actors with a name and date of birth
+- Create a table named movies with a title and release year
+- Create a table named appearances with an actor_id and movie_id and their name in the movie
+- Insert 4 or 5 actors
+- Insert 4 or 5 movies
 
-SQL-specific entity relationship diagrams:
+**Seeds**
 
-<iframe src="https://player.vimeo.com/video/142034756?byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+Insert some appearances such that:
 
-Also:
+- some actors are in no movies
+- some movies have no actors
+- some actors are in more than one movie
 
-Write SQL directly against the stack overflow DB (MSSQL): http://data.stackexchange.com/stackoverflow/query/new
+**Queries**
 
-## Advanced Resources:
+- with a single query show all movies and all the actors who appeared in those movies
+- with a single query show all the actors in a specific movie
+- with a single query show all the movies a specific actor has been in
+- show all actors who have not starred in movies
+- show all movies who have no actors associated with them
 
-- https://modern-sql.com/use-case/literate-sql
+
+# Resources
+- [Stack Exchange Data Explorer (sql interface for SO data)](http://data.stackexchange.com/stackoverflow/query/new)

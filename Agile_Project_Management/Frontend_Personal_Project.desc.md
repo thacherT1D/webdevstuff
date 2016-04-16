@@ -1,4 +1,16 @@
-The goal of this project is to put what you've learned to use to:
+# Week 5 Project
+
+* Do stories the friday before week 5 and get everything set up
+* Have a reason for students to be present at the beginning and end of each day:
+    * Group warmups or a brief lecture in the morning
+    * Acceptance tests at the end of the day
+* This project is CRUCIAL for capstone project success
+* They'll do this same process with group projects later
+* Their projects/writeups/videos will go in the LMS
+* Emphasize that classtime is not enough to do a good job on this project
+* A class of 30 doing 5-minute presentations will take 2.5 hours. If you add in time for breaks and feedback, presentations will probably take all of Friday afternoon.
+
+## Project Components
 
 * [Write a project proposal and get it approved by an instructor](#proposal)
 * [Follow an agile development workflow](#agile)
@@ -12,7 +24,7 @@ The goal of this project is to put what you've learned to use to:
 
 ## Write a project proposal and get it approved by an instructor
 
-Your proposal should have
+Proposal Guidelines:
 
 * A project description
     * Who uses it?
@@ -21,43 +33,40 @@ Your proposal should have
 * A list of technologies that you plan to use
 * A well-defined and written-out feature list
 
-There are some constraints around what technologies MUST be present in your app. Check out [Create and deploy a web app](#create-deploy) below.
-
-### Example Ideas
-
-* A Tetris Game, a blackjack game, a battleship game, etc.
-* A quiz to test your JavaScript knowledge.
-* A food library, similar to the [Game Library](https://github.com/gSchool/g11-course-curriculum/tree/master/week05/05_exercises/js-game-library), to keep track of your daily caloric/nutrition intake.
-* A documentation aggregator that allows developers to easily search through documentation.
-* A flash card style interview prep tool.
-* A ping-pong scheduling/scoring system.
-* A [Sudoku Solver](http://mherman.org/sudoku-solver/).
-
 <a id="agile"></a>
 
 ## Follow an agile development workflow
 
-Every student will be assigned a Product Owner, and every student will also be the Product Owner for another student.
+Every student will be assigned a Product Owner, and every student will also be the Product Owner for another student. Don't use the randomizer, make smart pairings.
 
-* Your instructors will create a [Pivotal Tracker](http://www.pivotaltracker.com) account for you
-    * Once your account is created, do a password reset in Pivotal Tracker to gain access
-    * Create a new project in Pivotal Tracker for this assignment, and name it "GXX - Full Name" (using your cohort number and your name)
-    * Note that we will delete these projects when we're done
-* Work with your product owner to define several strong agile user stories
-* Work with your product owner to come up with a few hand-drawn wireframes
-* Add your stories to your Pivotal Tracker project
+### Creating Tracker accounts for all students
 
-Most of your day will be spent working on your user stories. At the end of each day, you will go through the acceptance process with your product owner:
+To create tracker accounts:
 
-* You will show them your **deployed** app
-* They will review your code
-* They will accept or reject your delivered story, with feedback
+1. Go to Setup > Tracker Accounts and press “Create Tracker Accounts"
+1. Have each student do a password reset in Pivotal Tracker
+1. Have them name their repos GXX - Full Name
+1. Let them know we’ll delete these later
+
+### Use CSVs to add boilerplate stories into student project trackers
+
+```
+Type,Story,Description
+chore,Create a git repository on GitHub,And wire it up locally
+chore,Deploy a simple HTML file,To divshot or S3 or Heroku
+chore,Add the production URL to your README,
+```
+
+* Make note to delete their projects when the assignment is over.
+* Their stories and wireframes will be terrible at first- make sure you've covered those ahead of time
+* Local code doesn't count as a deployed app. Product owners should go into them blind
+* A story shouldn't accepted if the code isn't refactored
 
 <a id="create-deploy"></a>
 
 ## Create and deploy a web app
 
-Your web app should:
+App Constraints:
 
 * HTML
     * Make good use of semantic HTML tags
@@ -66,7 +75,6 @@ Your web app should:
     * Optionally, use a templating engine
 * CSS
     * Use either SASS or a styling framework like Bootstrap
-        * If you are using Bootstrap, please consider theming with something like bootswatch, customizing the download with SASS, or a [customizer](http://getbootstrap.com/customize/)
     * Be well-indented and clean
     * Split code into separate files where appropriate
     * Responsive design optional but strongly encouraged
@@ -90,7 +98,7 @@ Your web app should:
 
 ## Make a video highlighting the functionality of your app
 
-* Make a 2-5 minute video explaining your project and demonstrating its features
+* 2-5 minute video explaining the project and demonstrating its features
 
 <a id="write-up"></a>
 
@@ -112,7 +120,3 @@ Your web app should:
 ## Present your work to the class
 
 * Be prepared to spend ~5 minutes presenting your work to the class.
-
----
-
-This is essentially a mini-capstone, as is a really good preview of how your final projects will go. You will have approximately 20-25 hours of class time to work on this. **It will not be enough time to do a good job on this project**. Plan on spending extra time outside of class. This is a Big Deal Week, and you should put maximum effort into making it successful. You can and should use your classmates and your instructors as learning resources, but this should be your own work.

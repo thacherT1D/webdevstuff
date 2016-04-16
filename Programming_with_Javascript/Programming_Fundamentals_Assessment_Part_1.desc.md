@@ -1,5 +1,5 @@
-## Assessment
+The repo is https://github.com/gSchool/programming-fundamentals-assessments
 
-- Instructors will administer this assessment 1-on-1.
-- Instructors will type, and you will talk.
-- The assessment will be test-driven, and you must make each of the tests pass.
+Administer https://github.com/gSchool/programming-fundamentals-assessments/tree/master/js/card-deck for this first one.
+
+<iframe src="https://player.vimeo.com/video/135392111?byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
