@@ -31,27 +31,6 @@
 - :success_criterion_uuid: 1527f6f1-dff1-45a5-b987-509d40ca1e3e
   :success_criterion_name: Describe auth concepts including form-based authentication,
     OAuth and authorization
-  :uuid: 7d35f8e7-fdcc-436b-981e-877b413d5c76
-  :question_type: textarea
-  :question: In your own words, explain what OAuth is and its role in web authentication.
-  :correct_answer: ''
-- :success_criterion_uuid: 1527f6f1-dff1-45a5-b987-509d40ca1e3e
-  :success_criterion_name: Describe auth concepts including form-based authentication,
-    OAuth and authorization
-  :uuid: 87082f56-af87-404f-b107-d48af439a7ef
-  :question_type: text
-  :question: How do you secure cookies?
-  :correct_answer: "{secure: true}"
-- :success_criterion_uuid: 1527f6f1-dff1-45a5-b987-509d40ca1e3e
-  :success_criterion_name: Describe auth concepts including form-based authentication,
-    OAuth and authorization
-  :uuid: fda8f5dc-b0c4-4b3f-b4ce-85fb9fd0076e
-  :question_type: text
-  :question: How do you send a cookie over HTTP only?
-  :correct_answer: "{httpOnly: true}"
-- :success_criterion_uuid: 1527f6f1-dff1-45a5-b987-509d40ca1e3e
-  :success_criterion_name: Describe auth concepts including form-based authentication,
-    OAuth and authorization
   :uuid: 4b23298f-5a1b-4121-8324-21dbac5fbcf4
   :question_type: text
   :question: What are cookies often used for?
@@ -100,6 +79,27 @@
   :question: What are cookies?
   :correct_answer: Cookies allow the server to send per-client information along with
     responses, which will then be sent back for every subsequent request
+- :success_criterion_uuid: 1527f6f1-dff1-45a5-b987-509d40ca1e3e
+  :success_criterion_name: Describe auth concepts including form-based authentication,
+    OAuth and authorization
+  :uuid: 87082f56-af87-404f-b107-d48af439a7ef
+  :question_type: text
+  :question: How do you secure cookies?
+  :correct_answer: "{secure: true}"
+- :success_criterion_uuid: 1527f6f1-dff1-45a5-b987-509d40ca1e3e
+  :success_criterion_name: Describe auth concepts including form-based authentication,
+    OAuth and authorization
+  :uuid: 7d35f8e7-fdcc-436b-981e-877b413d5c76
+  :question_type: textarea
+  :question: In your own words, explain what OAuth is and its role in web authentication.
+  :correct_answer: ''
+- :success_criterion_uuid: 1527f6f1-dff1-45a5-b987-509d40ca1e3e
+  :success_criterion_name: Describe auth concepts including form-based authentication,
+    OAuth and authorization
+  :uuid: fda8f5dc-b0c4-4b3f-b4ce-85fb9fd0076e
+  :question_type: text
+  :question: How do you send a cookie over HTTP only?
+  :correct_answer: "{httpOnly: true}"
 - :success_criterion_uuid: 1d73b1d3-0485-46fe-969a-176d328d7536
   :success_criterion_name: Explain what CORS is and get around CORS restrictions
   :uuid: 62e691c1-f396-4bf7-af0b-673fac63f40c
@@ -108,16 +108,9 @@
   :correct_answer: ''
 - :success_criterion_uuid: 1d73b1d3-0485-46fe-969a-176d328d7536
   :success_criterion_name: Explain what CORS is and get around CORS restrictions
-  :uuid: 0f514a66-1b17-413f-9705-5ac195acac65
-  :question_type: textarea
-  :question: Make an AJAX request to "http://itunes.apple.com/search?term=jack+johnson"
-    using JSONP
-  :correct_answer: ''
-- :success_criterion_uuid: 1d73b1d3-0485-46fe-969a-176d328d7536
-  :success_criterion_name: Explain what CORS is and get around CORS restrictions
-  :uuid: c10629c6-b0d2-4b5f-b73d-adb62beb7262
+  :uuid: 8f1ad7bd-b071-4fff-a59c-38faa9aea1e3
   :question_type: text
-  :question: What is CORS? What does it enable us to bypass?
+  :question: What request and response headers are necessary for CORS to work?
   :correct_answer: ''
 - :success_criterion_uuid: 1d73b1d3-0485-46fe-969a-176d328d7536
   :success_criterion_name: Explain what CORS is and get around CORS restrictions
@@ -133,22 +126,22 @@
   :correct_answer: ''
 - :success_criterion_uuid: 1d73b1d3-0485-46fe-969a-176d328d7536
   :success_criterion_name: Explain what CORS is and get around CORS restrictions
-  :uuid: 8f1ad7bd-b071-4fff-a59c-38faa9aea1e3
+  :uuid: c10629c6-b0d2-4b5f-b73d-adb62beb7262
   :question_type: text
-  :question: What request and response headers are necessary for CORS to work?
+  :question: What is CORS? What does it enable us to bypass?
+  :correct_answer: ''
+- :success_criterion_uuid: 1d73b1d3-0485-46fe-969a-176d328d7536
+  :success_criterion_name: Explain what CORS is and get around CORS restrictions
+  :uuid: 0f514a66-1b17-413f-9705-5ac195acac65
+  :question_type: textarea
+  :question: Make an AJAX request to "http://itunes.apple.com/search?term=jack+johnson"
+    using JSONP
   :correct_answer: ''
 - :success_criterion_uuid: 1d73b1d3-0485-46fe-969a-176d328d7536
   :success_criterion_name: Explain what CORS is and get around CORS restrictions
   :uuid: 270a1262-7341-4ead-a2d2-c1919ffc9f04
   :question_type: textarea
   :question: What is JSONP? How does it work?
-  :correct_answer: ''
-- :success_criterion_uuid: 33170def-1703-4b8d-a734-90c498882eaf
-  :success_criterion_name: Fetch and send JSON with AJAX
-  :uuid: db248d55-3824-422b-b588-e00a1ed1e012
-  :question_type: textarea
-  :question: Using the XHR object, make a GET request to http://api.test.com/users
-    and console.log the response. Make sure you handle any errors with the request/response
   :correct_answer: ''
 - :success_criterion_uuid: 33170def-1703-4b8d-a734-90c498882eaf
   :success_criterion_name: Fetch and send JSON with AJAX
@@ -176,6 +169,13 @@
   :question_type: text
   :question: What is the difference between $.get() and $.getJSON?
   :correct_answer: "$.getJSON includes dataType: 'json'"
+- :success_criterion_uuid: 33170def-1703-4b8d-a734-90c498882eaf
+  :success_criterion_name: Fetch and send JSON with AJAX
+  :uuid: db248d55-3824-422b-b588-e00a1ed1e012
+  :question_type: textarea
+  :question: Using the XHR object, make a GET request to http://api.test.com/users
+    and console.log the response. Make sure you handle any errors with the request/response
+  :correct_answer: ''
 - :success_criterion_uuid: f031b95c-fc01-450f-a53c-d1043a0313c2
   :success_criterion_name: Respond to Events with Event Listeners
   :uuid: e2a898db-8422-470f-93e5-c98e06e3773c

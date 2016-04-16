@@ -1,3 +1,0 @@
-This is a crucial piece of being able to understand how objects work.
-
-So AWESOME!
