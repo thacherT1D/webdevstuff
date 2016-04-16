@@ -6,18 +6,7 @@
   :parent_uuid: ed70c6dd-7649-4311-b933-ba0ea8c22f05
   :parent_name: Setup Development Environment
   :description_link: Dev_Environment/setup/01-Terminal.md
-  :instructor_notes_link: Misc/Terminal.desc.md
-  :published: true
-  :suggested_days: 0.0
-  :experience_success_criteria: []
-- :name: Homebrew
-  :uuid: 574f8b39-5834-4413-9e62-181c42931f53
-  :subject_uuid: 
-  :subject_name: 
-  :parent_uuid: ed70c6dd-7649-4311-b933-ba0ea8c22f05
-  :parent_name: Setup Development Environment
-  :description_link: Dev_Environment/setup/02-Homebrew.md
-  :instructor_notes_link: Misc/Homebrew.desc.md
+  :instructor_notes_link: Misc/Terminal.notes.md
   :published: true
   :suggested_days: 0.0
   :experience_success_criteria: []
@@ -28,7 +17,18 @@
   :parent_uuid: 
   :parent_name: 
   :description_link: Misc/Q1.desc.md
-  :instructor_notes_link: Misc/Q1.desc.md
+  :instructor_notes_link: Misc/Q1.notes.md
+  :published: true
+  :suggested_days: 0.0
+  :experience_success_criteria: []
+- :name: Homebrew
+  :uuid: 574f8b39-5834-4413-9e62-181c42931f53
+  :subject_uuid: 
+  :subject_name: 
+  :parent_uuid: ed70c6dd-7649-4311-b933-ba0ea8c22f05
+  :parent_name: Setup Development Environment
+  :description_link: Dev_Environment/setup/02-Homebrew.md
+  :instructor_notes_link: Misc/Homebrew.notes.md
   :published: true
   :suggested_days: 0.0
   :experience_success_criteria: []
@@ -39,7 +39,7 @@
   :parent_uuid: ed70c6dd-7649-4311-b933-ba0ea8c22f05
   :parent_name: Setup Development Environment
   :description_link: Dev_Environment/setup/03-Chrome.md
-  :instructor_notes_link: Misc/Chrome.desc.md
+  :instructor_notes_link: Misc/Chrome.notes.md
   :published: true
   :suggested_days: 0.0
   :experience_success_criteria: []
@@ -74,7 +74,7 @@
   :parent_uuid: ed70c6dd-7649-4311-b933-ba0ea8c22f05
   :parent_name: Setup Development Environment
   :description_link: Dev_Environment/setup/04-Atom.md
-  :instructor_notes_link: Misc/Editor_Option_1:_Atom.desc.md
+  :instructor_notes_link: Misc/Editor_Option_1:_Atom.notes.md
   :published: true
   :suggested_days: 0.0
   :experience_success_criteria: []
@@ -96,7 +96,7 @@
   :parent_uuid: ed70c6dd-7649-4311-b933-ba0ea8c22f05
   :parent_name: Setup Development Environment
   :description_link: Dev_Environment/setup/07-Sublime.md
-  :instructor_notes_link: Misc/Editor_Option_2:_Sublime.desc.md
+  :instructor_notes_link: Misc/Editor_Option_2:_Sublime.notes.md
   :published: true
   :suggested_days: 0.0
   :experience_success_criteria: []
@@ -122,7 +122,7 @@
   :parent_uuid: ed70c6dd-7649-4311-b933-ba0ea8c22f05
   :parent_name: Setup Development Environment
   :description_link: Dev_Environment/setup/05-Fish.md
-  :instructor_notes_link: Misc/Shell_Option_1:_Fish.desc.md
+  :instructor_notes_link: Misc/Shell_Option_1:_Fish.notes.md
   :published: true
   :suggested_days: 0.0
   :experience_success_criteria: []
@@ -150,7 +150,7 @@
   :parent_uuid: ed70c6dd-7649-4311-b933-ba0ea8c22f05
   :parent_name: Setup Development Environment
   :description_link: Dev_Environment/setup/06-ZSH.md
-  :instructor_notes_link: Misc/Shell_Option_2:_ZSH.desc.md
+  :instructor_notes_link: Misc/Shell_Option_2:_ZSH.notes.md
   :published: true
   :suggested_days: 0.0
   :experience_success_criteria: []
@@ -174,7 +174,7 @@
   :parent_uuid: ed70c6dd-7649-4311-b933-ba0ea8c22f05
   :parent_name: Setup Development Environment
   :description_link: Dev_Environment/setup/08-EDITOR-and-PATH.md
-  :instructor_notes_link: Misc/EDITOR_and_PATH.desc.md
+  :instructor_notes_link: Misc/EDITOR_and_PATH.notes.md
   :published: true
   :suggested_days: 0.0
   :experience_success_criteria: []
@@ -204,7 +204,7 @@
   :parent_uuid: ed70c6dd-7649-4311-b933-ba0ea8c22f05
   :parent_name: Setup Development Environment
   :description_link: Dev_Environment/setup/09-git.md
-  :instructor_notes_link: Misc/Git.desc.md
+  :instructor_notes_link: Misc/Git.notes.md
   :published: true
   :suggested_days: 0.0
   :experience_success_criteria: []
@@ -232,7 +232,7 @@
   :parent_uuid: ed70c6dd-7649-4311-b933-ba0ea8c22f05
   :parent_name: Setup Development Environment
   :description_link: Dev_Environment/setup/10-Node.md
-  :instructor_notes_link: Misc/Node.desc.md
+  :instructor_notes_link: Misc/Node.notes.md
   :published: true
   :suggested_days: 0.0
   :experience_success_criteria: []
@@ -258,7 +258,7 @@
   :parent_uuid: ed70c6dd-7649-4311-b933-ba0ea8c22f05
   :parent_name: Setup Development Environment
   :description_link: Dev_Environment/setup/11-surge.md
-  :instructor_notes_link: Misc/Deploying_w_Surge.desc.md
+  :instructor_notes_link: Misc/Deploying_w_Surge.notes.md
   :published: true
   :suggested_days: 0.0
   :experience_success_criteria: []
@@ -282,7 +282,7 @@
   :parent_uuid: ed70c6dd-7649-4311-b933-ba0ea8c22f05
   :parent_name: Setup Development Environment
   :description_link: Dev_Environment/setup/12-window-managers.md
-  :instructor_notes_link: Misc/Window_Managers.desc.md
+  :instructor_notes_link: Misc/Window_Managers.notes.md
   :published: true
   :suggested_days: 0.0
   :experience_success_criteria: []
@@ -304,7 +304,7 @@
   :parent_uuid: ed70c6dd-7649-4311-b933-ba0ea8c22f05
   :parent_name: Setup Development Environment
   :description_link: Dev_Environment/setup/13-keyboard-shortcuts.md
-  :instructor_notes_link: Misc/Keyboard_Shortcuts.desc.md
+  :instructor_notes_link: Misc/Keyboard_Shortcuts.notes.md
   :published: true
   :suggested_days: 0.0
   :experience_success_criteria: []
@@ -332,7 +332,7 @@
   :parent_uuid: ed70c6dd-7649-4311-b933-ba0ea8c22f05
   :parent_name: Setup Development Environment
   :description_link: Dev_Environment/setup/14-extras.md
-  :instructor_notes_link: Misc/Extras.desc.md
+  :instructor_notes_link: Misc/Extras.notes.md
   :published: true
   :suggested_days: 0.0
   :experience_success_criteria: []
@@ -605,7 +605,7 @@
   :parent_uuid: 72a3bc58-ff73-48e1-9fac-53f4b485d23f
   :parent_name: Q1
   :description_link: Misc/APIs_for_the_FrontEnd.desc.md
-  :instructor_notes_link: Misc/APIs_for_the_FrontEnd.desc.md
+  :instructor_notes_link: Misc/APIs_for_the_FrontEnd.notes.md
   :published: true
   :suggested_days: 1.0
   :experience_success_criteria:
@@ -643,11 +643,11 @@
   - :success_criterion_uuid: 3e7127ec-a7a6-417d-b505-16fd9a5909f0
     :success_criterion_name: Collaborate with other developers using clone and fork-based
       workflows with Github
-  - :success_criterion_uuid: e8272444-8dfc-49a0-81d9-d5c92026d536
-    :success_criterion_name: Track changes over time using a basic Git workflow
   - :success_criterion_uuid: 37687853-c626-4f58-b9d2-641b1077f92b
     :success_criterion_name: Manage feature development with Git branches using a
       merge strategy
+  - :success_criterion_uuid: e8272444-8dfc-49a0-81d9-d5c92026d536
+    :success_criterion_name: Track changes over time using a basic Git workflow
 - :name: Asset Management
   :uuid: 4aa869fd-9fcb-473c-8937-7658f82f5c16
   :subject_uuid: 4298574a-4ac8-4a6b-8195-91c349a04209
@@ -852,7 +852,7 @@
   :parent_uuid: 
   :parent_name: 
   :description_link: Misc/Q2.desc.md
-  :instructor_notes_link: Misc/Q2.desc.md
+  :instructor_notes_link: Misc/Q2.notes.md
   :published: true
   :suggested_days: 0.0
   :experience_success_criteria: []
@@ -929,11 +929,11 @@
   :experience_success_criteria:
   - :success_criterion_uuid: 84bbf0ae-2d55-490b-bc84-d4ae4dc45e14
     :success_criterion_name: Discuss and diagram Client-Server Model
+  - :success_criterion_uuid: ca4311e4-8013-4b29-b2c4-dd753573c30e
+    :success_criterion_name: Diagram and explain a URI
   - :success_criterion_uuid: 5b704c5f-75af-4039-a691-4f2dd8ba2971
     :success_criterion_name: Identify the parts of an HTTP request and response and
       discuss their purpose
-  - :success_criterion_uuid: ca4311e4-8013-4b29-b2c4-dd753573c30e
-    :success_criterion_name: Diagram and explain a URI
   - :success_criterion_uuid: 960362a6-e341-487b-a292-95840148c429
     :success_criterion_name: Discuss the semantics of common HTTP Verbs, Headers,
       and Status Codes
@@ -1148,10 +1148,10 @@
     :success_criterion_name: Build CRUD apps in Express
   - :success_criterion_uuid: 349b2e45-b20a-44d1-80c8-1216e14c301f
     :success_criterion_name: Access data using an ORM / Knex
-  - :success_criterion_uuid: 7ec77c83-b497-49c3-b08c-b729a77090b3
-    :success_criterion_name: Design and implement schemas
   - :success_criterion_uuid: 7231cf4a-2dc7-401a-88f9-4159cc1c2e2f
     :success_criterion_name: Access data in datastores through joins
+  - :success_criterion_uuid: 7ec77c83-b497-49c3-b08c-b729a77090b3
+    :success_criterion_name: Design and implement schemas
   - :success_criterion_uuid: 08f64fd8-ad16-4e3a-bb92-902b8b54de07
     :success_criterion_name: Write database queries using SQL
   - :success_criterion_uuid: 99acaf90-3559-4542-a2a4-1071eda89553
@@ -1403,7 +1403,7 @@
   :parent_uuid: 
   :parent_name: 
   :description_link: Misc/Q3.desc.md
-  :instructor_notes_link: Misc/Q3.desc.md
+  :instructor_notes_link: Misc/Q3.notes.md
   :published: true
   :suggested_days: 0.0
   :experience_success_criteria: []
@@ -1713,7 +1713,7 @@
   :parent_uuid: 
   :parent_name: 
   :description_link: Misc/Q4.desc.md
-  :instructor_notes_link: Misc/Q4.desc.md
+  :instructor_notes_link: Misc/Q4.notes.md
   :published: true
   :suggested_days: 0.0
   :experience_success_criteria: []
@@ -1732,11 +1732,11 @@
     :success_criterion_name: Solve interview-style questions using Java
   - :success_criterion_uuid: b5a931dd-84f2-45fe-9fd0-e254a2c6f806
     :success_criterion_name: Contrast statically-typed and dynamically-typed languages
-  - :success_criterion_uuid: 84e30c2e-0715-411f-b39b-db22598897b1
-    :success_criterion_name: Compare and contrast OOP and Functional Programming
   - :success_criterion_uuid: 0aa5d3c6-9b6c-4c71-a680-35500aec7773
     :success_criterion_name: Define and explain the significance of the major principles
       of Object Oriented Programming
+  - :success_criterion_uuid: 84e30c2e-0715-411f-b39b-db22598897b1
+    :success_criterion_name: Compare and contrast OOP and Functional Programming
 - :name: Whiteboard Interview Prep
   :uuid: d74c96d8-39fc-43ce-adc2-57ae51fa9b44
   :subject_uuid: e59bae37-553b-4c1b-8667-4dbbdeeae98d
@@ -1965,7 +1965,7 @@
   :parent_uuid: 
   :parent_name: 
   :description_link: Misc/Clean_Code.desc.md
-  :instructor_notes_link: Misc/Clean_Code.desc.md
+  :instructor_notes_link: Misc/Clean_Code.notes.md
   :published: false
   :suggested_days: 0.0
   :experience_success_criteria: []
@@ -1976,7 +1976,7 @@
   :parent_uuid: 
   :parent_name: 
   :description_link: Misc/Playlist_Q1_Practice_Assessment.desc.md
-  :instructor_notes_link: Misc/Playlist_Q1_Practice_Assessment.desc.md
+  :instructor_notes_link: Misc/Playlist_Q1_Practice_Assessment.notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria: []
@@ -1987,7 +1987,7 @@
   :parent_uuid: 
   :parent_name: 
   :description_link: Misc/HTTP_and_Node.js.desc.md
-  :instructor_notes_link: Misc/HTTP_and_Node.js.desc.md
+  :instructor_notes_link: Misc/HTTP_and_Node.js.notes.md
   :published: false
   :suggested_days: 2.0
   :experience_success_criteria: []
@@ -2009,7 +2009,7 @@
   :parent_uuid: 
   :parent_name: 
   :description_link: Misc/MongoDB_and_CRUD.desc.md
-  :instructor_notes_link: Misc/MongoDB_and_CRUD.desc.md
+  :instructor_notes_link: Misc/MongoDB_and_CRUD.notes.md
   :published: false
   :suggested_days: 0.0
   :experience_success_criteria: []
@@ -2020,7 +2020,7 @@
   :parent_uuid: 
   :parent_name: 
   :description_link: Misc/Angular_Part_3_-_Firebase.desc.md
-  :instructor_notes_link: Misc/Angular_Part_3_-_Firebase.desc.md
+  :instructor_notes_link: Misc/Angular_Part_3_-_Firebase.notes.md
   :published: false
   :suggested_days: 0.0
   :experience_success_criteria: []
@@ -2055,7 +2055,7 @@
   :parent_uuid: 
   :parent_name: 
   :description_link: Misc/CSS_Copycat.desc.md
-  :instructor_notes_link: Misc/CSS_Copycat.desc.md
+  :instructor_notes_link: Misc/CSS_Copycat.notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria: []
@@ -2066,7 +2066,7 @@
   :parent_uuid: 
   :parent_name: 
   :description_link: Misc/Scribe_and_Sage.desc.md
-  :instructor_notes_link: Misc/Scribe_and_Sage.desc.md
+  :instructor_notes_link: Misc/Scribe_and_Sage.notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria: []
@@ -2077,7 +2077,7 @@
   :parent_uuid: 
   :parent_name: 
   :description_link: Misc/Extreme_Blogging.desc.md
-  :instructor_notes_link: Misc/Extreme_Blogging.desc.md
+  :instructor_notes_link: Misc/Extreme_Blogging.notes.md
   :published: false
   :suggested_days: 0.0
   :experience_success_criteria: []
@@ -2088,7 +2088,7 @@
   :parent_uuid: 
   :parent_name: 
   :description_link: Misc/Introduction_to_Recursion.desc.md
-  :instructor_notes_link: Misc/Introduction_to_Recursion.desc.md
+  :instructor_notes_link: Misc/Introduction_to_Recursion.notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria: []
@@ -2099,7 +2099,7 @@
   :parent_uuid: 
   :parent_name: 
   :description_link: Misc/Trivia_-_geopardy!.desc.md
-  :instructor_notes_link: Misc/Trivia_-_geopardy!.desc.md
+  :instructor_notes_link: Misc/Trivia_-_geopardy!.notes.md
   :published: false
   :suggested_days: 0.0
   :experience_success_criteria: []
@@ -2110,7 +2110,7 @@
   :parent_uuid: 
   :parent_name: 
   :description_link: Misc/Warmups.desc.md
-  :instructor_notes_link: Misc/Warmups.desc.md
+  :instructor_notes_link: Misc/Warmups.notes.md
   :published: false
   :suggested_days: 0.0
   :experience_success_criteria: []
@@ -2121,7 +2121,7 @@
   :parent_uuid: 
   :parent_name: 
   :description_link: Misc/Ruby_Language.desc.md
-  :instructor_notes_link: Misc/Ruby_Language.desc.md
+  :instructor_notes_link: Misc/Ruby_Language.notes.md
   :published: false
   :suggested_days: 2.0
   :experience_success_criteria: []
@@ -2132,7 +2132,7 @@
   :parent_uuid: 
   :parent_name: 
   :description_link: Misc/Rails_for_JS_Developers.desc.md
-  :instructor_notes_link: Misc/Rails_for_JS_Developers.desc.md
+  :instructor_notes_link: Misc/Rails_for_JS_Developers.notes.md
   :published: false
   :suggested_days: 0.0
   :experience_success_criteria: []
@@ -2143,7 +2143,7 @@
   :parent_uuid: 
   :parent_name: 
   :description_link: Misc/Cloud_Native_Architecture.desc.md
-  :instructor_notes_link: Misc/Cloud_Native_Architecture.desc.md
+  :instructor_notes_link: Misc/Cloud_Native_Architecture.notes.md
   :published: false
   :suggested_days: 0.0
   :experience_success_criteria: []
@@ -2165,7 +2165,7 @@
   :parent_uuid: 
   :parent_name: 
   :description_link: Misc/Setting_up_your_AWS_Activate_Account.desc.md
-  :instructor_notes_link: Misc/Setting_up_your_AWS_Activate_Account.desc.md
+  :instructor_notes_link: Misc/Setting_up_your_AWS_Activate_Account.notes.md
   :published: false
   :suggested_days: 0.0
   :experience_success_criteria: []
@@ -2176,7 +2176,7 @@
   :parent_uuid: 
   :parent_name: 
   :description_link: Misc/Transitions,_Transforms,_and_Animations.desc.md
-  :instructor_notes_link: Misc/Transitions,_Transforms,_and_Animations.desc.md
+  :instructor_notes_link: Misc/Transitions,_Transforms,_and_Animations.notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria: []
@@ -2187,7 +2187,7 @@
   :parent_uuid: 
   :parent_name: 
   :description_link: Misc/Javascript_Resources.desc.md
-  :instructor_notes_link: Misc/Javascript_Resources.desc.md
+  :instructor_notes_link: Misc/Javascript_Resources.notes.md
   :published: false
   :suggested_days: 0.0
   :experience_success_criteria: []
@@ -2198,7 +2198,7 @@
   :parent_uuid: 
   :parent_name: 
   :description_link: Misc/vim.desc.md
-  :instructor_notes_link: Misc/vim.desc.md
+  :instructor_notes_link: Misc/vim.notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria: []
@@ -2209,7 +2209,7 @@
   :parent_uuid: 
   :parent_name: 
   :description_link: Misc/Testing_Randomness_in_JS.desc.md
-  :instructor_notes_link: Misc/Testing_Randomness_in_JS.desc.md
+  :instructor_notes_link: Misc/Testing_Randomness_in_JS.notes.md
   :published: false
   :suggested_days: 0.0
   :experience_success_criteria: []
@@ -2220,7 +2220,7 @@
   :parent_uuid: 
   :parent_name: 
   :description_link: Misc/Student_WhiteboardPhone_Interviews.desc.md
-  :instructor_notes_link: Misc/Student_WhiteboardPhone_Interviews.desc.md
+  :instructor_notes_link: Misc/Student_WhiteboardPhone_Interviews.notes.md
   :published: false
   :suggested_days: 0.0
   :experience_success_criteria: []
@@ -2231,7 +2231,7 @@
   :parent_uuid: 
   :parent_name: 
   :description_link: Misc/GKit:_building_a_CSS_Framework.desc.md
-  :instructor_notes_link: Misc/GKit:_building_a_CSS_Framework.desc.md
+  :instructor_notes_link: Misc/GKit:_building_a_CSS_Framework.notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria: []
@@ -2242,7 +2242,7 @@
   :parent_uuid: 
   :parent_name: 
   :description_link: Misc/Running_Tasks_with_Gulp.desc.md
-  :instructor_notes_link: Misc/Running_Tasks_with_Gulp.desc.md
+  :instructor_notes_link: Misc/Running_Tasks_with_Gulp.notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria: []
@@ -2253,7 +2253,7 @@
   :parent_uuid: 
   :parent_name: 
   :description_link: Misc/Introduction_to_JavaScript_-_Interactive_Part_1.desc.md
-  :instructor_notes_link: Misc/Introduction_to_JavaScript_-_Interactive_Part_1.desc.md
+  :instructor_notes_link: Misc/Introduction_to_JavaScript_-_Interactive_Part_1.notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria: []
@@ -2264,7 +2264,7 @@
   :parent_uuid: 
   :parent_name: 
   :description_link: Misc/Galvanize_Eats_Assessment.desc.md
-  :instructor_notes_link: Misc/Galvanize_Eats_Assessment.desc.md
+  :instructor_notes_link: Misc/Galvanize_Eats_Assessment.notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria: []
@@ -2275,7 +2275,7 @@
   :parent_uuid: 
   :parent_name: 
   :description_link: Misc/npm.desc.md
-  :instructor_notes_link: Misc/npm.desc.md
+  :instructor_notes_link: Misc/npm.notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria: []
@@ -2286,7 +2286,7 @@
   :parent_uuid: 
   :parent_name: 
   :description_link: Misc/History_of_the_World_Wide_Web.desc.md
-  :instructor_notes_link: Misc/History_of_the_World_Wide_Web.desc.md
+  :instructor_notes_link: Misc/History_of_the_World_Wide_Web.notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria: []
@@ -2297,7 +2297,7 @@
   :parent_uuid: 
   :parent_name: 
   :description_link: Misc/Intro_to_Express.desc.md
-  :instructor_notes_link: Misc/Intro_to_Express.desc.md
+  :instructor_notes_link: Misc/Intro_to_Express.notes.md
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria: []
@@ -2308,7 +2308,7 @@
   :parent_uuid: 
   :parent_name: 
   :description_link: Misc/Galvanize_Reads_Assessment.desc.md
-  :instructor_notes_link: Misc/Galvanize_Reads_Assessment.desc.md
+  :instructor_notes_link: Misc/Galvanize_Reads_Assessment.notes.md
   :published: false
   :suggested_days: 2.0
   :experience_success_criteria:
@@ -2318,11 +2318,11 @@
   - :success_criterion_uuid: 2f892a7c-e360-4218-9c8c-764d8f9418f7
     :success_criterion_name: Share code by pushing and pulling to a remote repository
       on GitHub
+  - :success_criterion_uuid: e8272444-8dfc-49a0-81d9-d5c92026d536
+    :success_criterion_name: Track changes over time using a basic Git workflow
   - :success_criterion_uuid: 37687853-c626-4f58-b9d2-641b1077f92b
     :success_criterion_name: Manage feature development with Git branches using a
       merge strategy
-  - :success_criterion_uuid: e8272444-8dfc-49a0-81d9-d5c92026d536
-    :success_criterion_name: Track changes over time using a basic Git workflow
   - :success_criterion_uuid: 0f22502a-68fe-4dbe-95d7-b1f4919fe1bf
     :success_criterion_name: Approaches problems in a methodical and disciplined manner
   - :success_criterion_uuid: 84bbf0ae-2d55-490b-bc84-d4ae4dc45e14
@@ -2352,10 +2352,10 @@
       OAuth and authorization
   - :success_criterion_uuid: 349b2e45-b20a-44d1-80c8-1216e14c301f
     :success_criterion_name: Access data using an ORM / Knex
-  - :success_criterion_uuid: 7231cf4a-2dc7-401a-88f9-4159cc1c2e2f
-    :success_criterion_name: Access data in datastores through joins
   - :success_criterion_uuid: 7ec77c83-b497-49c3-b08c-b729a77090b3
     :success_criterion_name: Design and implement schemas
+  - :success_criterion_uuid: 7231cf4a-2dc7-401a-88f9-4159cc1c2e2f
+    :success_criterion_name: Access data in datastores through joins
   - :success_criterion_uuid: 08f64fd8-ad16-4e3a-bb92-902b8b54de07
     :success_criterion_name: Write database queries using SQL
   - :success_criterion_uuid: 8cf1f10a-fc6b-4c09-a2bc-6e4d1a901dad
@@ -2377,7 +2377,7 @@
   :parent_uuid: 
   :parent_name: 
   :description_link: Misc/Galvanize_Gazette_Assessment.desc.md
-  :instructor_notes_link: Misc/Galvanize_Gazette_Assessment.desc.md
+  :instructor_notes_link: Misc/Galvanize_Gazette_Assessment.notes.md
   :published: false
   :suggested_days: 0.0
   :experience_success_criteria: []

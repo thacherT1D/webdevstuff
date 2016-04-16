@@ -11,39 +11,68 @@
 
 ## Why `vim`?
 
-* Modality
-* Command Composibility
-* Ubiquity
+![Editor Learning Curves](http://www.terminally-incoherent.com/blog/wp-content/uploads/2006/08/curves.jpg)
+
+### Modality
+
+`vim` is a modal text editor, meaning that you can switch between different modes which give your keystrokes different meaning, from entering text, to running programs, to highlighting text, to writing out commands- all without your hands leaving the keyboard.
+
+### Command Composibility
+
+Command composability means that when you can combine small commands into bigger one. Rather memorizing the key command for "delete word", you memorizing the commands for "delete" and "word" and combine them. When you want to instead "change word" or "delete line", you already know half of the command.
+
+### Ubiquity
+
+One of the advantages of learning `vim` is that something like it is installed on just about every Unix machine (operating systems without `vim` installed by default will usually have an older version called `vi`). So, when you're logging into servers that may not have your favorite text editor installed and don't have a windowing system, you can still work on the text files directly.
+
 
 ## Setting up `vim`
 
-* Edit ~/.vimrc
-* Talk about modes
-* `vim` starts in normal mode
-* `i` gets you to insert mode
-
-Add this to `~/.vimrc`
+`vim` is configured with the `~/.vimrc` file, which may or may not already exist on your system. Let's edit it with `vim`:
 
 ```
-:imap jj <Esc>
+vim ~/.vimrc
+```
+
+If you've already done some configuring, you'll see all of your options here. Otherwise, you'll see a blank file. `vim` is a _modal text editor_, which means that it has different operating modes:
+
+* In *insert mode*, you can enter text just like you do in any other text editor
+* In *normal mode*, every key on your keyboard is capable of executing a program
+* In *visual mode*, you can highlight characters, lines, and shapes of text to execute commands on
+
+`vim` starts in *normal mode*. There are a lot of ways to switch into *insert mode*, but for right now, press `i`, and then enter this:
+
+```
+inoremap jj <Esc>
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 ```
 
-* Remap caps lock to control
+The full syntax for configuring a `.vimrc` file is beyond the scope of this lesson. What this does let you go into *normal mode* by pressing `jj` in *insert mode*, and use j/k/l/h to navigate split panes. Press `ZZ` to save and quit this file.
+
+Additionally, you would be well-advised to map `Caps Lock` (which is prime keyboard real estate and rarely used) to something that sees a lot of action, like `Control`. To do this on OSX:
+
+> Apple Menu -> System Preferences... -> Keyboard -> Keyboard Tab -> Modifier Keys and select Control for Caps Lock
 
 ## Basic Navigation
+
+These are the basic navigation commands:
 
 * `h` = Left
 * `j` = Down
 * `k` = Up
 * `l` = Right
+
+---
+
 * `w`ord = Beginning of next word
 * `e`nd = End of current word
 * `b`ack = Back a word
 * `B`eginning = Beginning of the current word
+
+Let's practice those by playing `vim` Adventures.
 
 ## Exercise: Navigation
 
@@ -51,7 +80,7 @@ Play through the first three levels of [`vim` Adventures](http://vim-adventures.
 
 ## Working With Files
 
-* `ex` mode
+You can enter a mode called *ex mode* by typing `:` while in *normal mode*. Rather than immediately executing commands, *ex mode* will wait for you to hit `enter` before executing the command. When the command executes, you will be returned to *normal mode*. File commands all happen in *ex mode*.
 
 `:e`= edit a file
 `:E`= open a file tree
@@ -59,6 +88,8 @@ Play through the first three levels of [`vim` Adventures](http://vim-adventures.
 `:q`= quit a file
 `:q!`= quit a file without saving
 `:wq` or `ZZ`= write and quit a file
+
+The tree that comes up when you type `:E` is particularly useful. This is a program called `netrw`, and can be navigated using all of your standard `vim` commands.
 
 ## Files Exercise
 
@@ -78,6 +109,8 @@ Play through the first three levels of [`vim` Adventures](http://vim-adventures.
 
 ## Basic Editing
 
+These are the basic editing commands:
+
 * `x` = delete the character under the cursor
 * `r` = replace the character under the cursor with the next character you type
 
@@ -92,7 +125,11 @@ Play through the first three levels of [`vim` Adventures](http://vim-adventures.
 
 ### Command Structure
 
+One of the most powerful features in `vim` is the ability to specificy *repetition* and a *target* when you're entering a command. The structure of a `vim` command is:
+
 > [number of times to repeat] command [target]
+
+For example, `3dw` `d`eletes the next `3` `w`ords.
 
 ## Exercise: Editing
 
@@ -133,14 +170,13 @@ On a command line, type `vimtutor`, which will open up the `vim` tutorial. Note 
 
 ---
 
-* Mention the `vim` Wiki
+There are hundreds and hundreds of `vim` commands, tips, and tricks. The best place to look for them is the [`vim` Wiki](http://vim.wikia.com/wiki/Vim_Tips_Wiki). Of particular interest may be the [getting started section](http://vim.wikia.com/wiki/Category:Getting_started).
 
 ## Panes
 
-* Horizontal split
-* Vertical split
-* Navigating panes
-* Changing the file being edited
+Panes are an incredibly powerful feature in `vim` that allow you to work with multiple files. To create a horizontal split, type `:split` in *normal mode*. To create a vertical split, type `:vsplit`.
+
+Navigate to each pane using `control` + `h`/`j`/`k`/`l`. Close a pane just like you would a `vim` window- `:q`, `wq`, or `ZZ`. You can also change the file being displayed with `:E`.
 
 ## Exercise: Panes
 
@@ -154,16 +190,19 @@ Make a change in each, save, and close each pane.
 
 ## `tmux`
 
-* Terminal multiplexer
-* Run multiple terminals
-* Good for servers
-* Attach/Detach
+`tmux` is a _terminal multiplexer_. That means it's a way to run multiple virtual terminals inside of one actual terminal. In practice, this means being able to run a server, text editor, and a shell in one terminal. This is especially useful if you're logging in remotely to a server. You can also run multiple `tmux` sessions, and _attach_ and _detach_ from them.
 
 ### Installation and Configuration
 
-* `brew install tmux`
-* `vim ~/.tmux.conf`
-* `set -g prefix C-Space
+To install `tmux` on OSX:
+
+`brew install tmux`
+
+The initial config we'll run on `tmux` is to map its main key command from `control`+`b` to `control`+`space`. Edit the `tmux` configuration file with `vim ~/.tmux.conf`, and add the following line:
+
+```
+set -g prefix C-Space
+```
 
 ### Overview
 
@@ -201,3 +240,11 @@ To start a new `tmux` session, use the `tmux` command.
 12. Note that you can still use your app in the browser, as all the programs from your panes are still running
 13. Reattach to your terminal
 14. Close all your processes and panes
+
+## Additional Resources
+
+* `vimtutor` lessons 4-7
+* [openvim Tutorial](http://www.openvim.com/)
+* [VIM Adventures Lessons 4+ (paid)](http://vim-adventures.com/)
+* [`vim` Tips Wiki](http://vim.wikia.com/wiki/Vim_Tips_Wiki)
+* [`tmux` Crash Course](https://robots.thoughtbot.com/a-tmux-crash-course)

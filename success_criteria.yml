@@ -48,6 +48,14 @@
     changes?\n\n"
 - :standard_uuid: 4298574a-4ac8-4a6b-8195-91c349a04209
   :standard_name: Dev Environment
+  :uuid: c795cc87-dc92-4c81-918e-cd6be797a530
+  :name: Send HTTP requests and view HTTP responses with Postman
+  :description: |+
+    - Uses Postman to send and receive HTTP Requests and inspect them with Postman
+
+  :instructor_notes: ''
+- :standard_uuid: 4298574a-4ac8-4a6b-8195-91c349a04209
+  :standard_name: Dev Environment
   :uuid: 07448ee9-9e09-43de-9afd-c4acba35a6c2
   :name: Touch type code at least 40 WPM
   :description: |-
@@ -55,14 +63,6 @@
 
     In this exercise: https://typing.io/lesson/javascript/jquery/traversing.js/2
   :instructor_notes: "Using the following exercise  \r\nhttps://typing.io/lesson/javascript/jquery/traversing.js/2"
-- :standard_uuid: 4298574a-4ac8-4a6b-8195-91c349a04209
-  :standard_name: Dev Environment
-  :uuid: c795cc87-dc92-4c81-918e-cd6be797a530
-  :name: Send HTTP requests and view HTTP responses with Postman
-  :description: |+
-    - Uses Postman to send and receive HTTP Requests and inspect them with Postman
-
-  :instructor_notes: ''
 - :standard_uuid: 4298574a-4ac8-4a6b-8195-91c349a04209
   :standard_name: Dev Environment
   :uuid: 24654e75-c03f-4f7f-83a6-3487cbb6e063
@@ -428,6 +428,21 @@
 
 - :standard_uuid: 3f805b07-096d-4024-bce2-20b19f92199a
   :standard_name: Version Control (Git and Github)
+  :uuid: 37687853-c626-4f58-b9d2-641b1077f92b
+  :name: Manage feature development with Git branches using a merge strategy
+  :description: "- Resolve merge conflicts\n- Uses feature branch workflow on personal
+    and group projects\n\n- Create some merge conflicts and explain what causes them\r\n-
+    Resolve merge conflicts\n\n- Diagram and discuss a feature-branch workflow\n-
+    Build new features in branches and then merge them into master when ready\n\n-
+    create a feature branch\r\n- merge upstream changes\r\n- merge feature branch
+    to master\r\n- cleanup feature branches\n\n- branch\r\n- checkout\r\n- merge"
+  :instructor_notes: |2+
+
+
+
+
+- :standard_uuid: 3f805b07-096d-4024-bce2-20b19f92199a
+  :standard_name: Version Control (Git and Github)
   :uuid: e8272444-8dfc-49a0-81d9-d5c92026d536
   :name: Track changes over time using a basic Git workflow
   :description: "- Perform basic git commands to track changes to a project\n- Write
@@ -444,21 +459,6 @@
     to temporarily put untracked changes aside\r\n- `diff` - to show the difference
     between two hashes\n\n- Write succinct, descriptive commit messages \n\n"
   :instructor_notes: |2+
-
-
-- :standard_uuid: 3f805b07-096d-4024-bce2-20b19f92199a
-  :standard_name: Version Control (Git and Github)
-  :uuid: 37687853-c626-4f58-b9d2-641b1077f92b
-  :name: Manage feature development with Git branches using a merge strategy
-  :description: "- Resolve merge conflicts\n- Uses feature branch workflow on personal
-    and group projects\n\n- Create some merge conflicts and explain what causes them\r\n-
-    Resolve merge conflicts\n\n- Diagram and discuss a feature-branch workflow\n-
-    Build new features in branches and then merge them into master when ready\n\n-
-    create a feature branch\r\n- merge upstream changes\r\n- merge feature branch
-    to master\r\n- cleanup feature branches\n\n- branch\r\n- checkout\r\n- merge"
-  :instructor_notes: |2+
-
-
 
 
 - :standard_uuid: ac805334-f3dd-4288-9a61-0dcef3e219d4
@@ -630,54 +630,6 @@
     to objects"
 - :standard_uuid: ac805334-f3dd-4288-9a61-0dcef3e219d4
   :standard_name: Programming with Javascript
-  :uuid: 6754eeea-a10b-4033-a598-a0e081257f60
-  :name: Encapsulate reusable code in functions
-  :description: "- Formulates new functions given inputs and desired outputs\n- Define
-    and give examples of “Pure functions” that do not have side effects. Define and
-    give examples of “side effects”.\n\n- Formulates new functions given inputs and
-    desired outputs\n- Mentally evaluate expressions that use the return value of
-    function calls\n\n\n\n- like add(add(5,6), add(6,7))\r\n- like add(5,6) + add(6,7)\r\n-
-    join(“”).filter()...\r\n- document.querySelectorAll(“#foo”)[0];\n\n- Define and
-    give examples of “Pure functions” that do not have side effects.  Define and give
-    examples of “side effects”.\n- Can diagram the call stack\n- Create and use local
-    variable scope when appropriate within Functions\n- Abstracts sets of expressions
-    into functions\n\n\n\nDiagrams the call stack as a series of boxes within boxes\n\n-
-    All data is either:\r\n    - created within the function with `var`\r\n    - passed
-    in through parameters\r\n    - accessible via a closure\r\n- Returns any data
-    needed from the function with the `return` keyword\r\n- Can diagram the effect
-    of a function operating on an object passed into the function as a reference\n\n\n\n[Closures](https://www.youtube.com/watch?v=CQqwU2Ixu-U&list=PL0zVEGEvSaeEd9hlmCXrk5yUyqUag-n84&index=5)\n\n-
-    [Javascript Call Stack](https://vimeo.com/134061121)\r\n- https://github.com/gSchool/js-accumulator-assessment\r\n-
-    https://github.com/gSchool/js-encapsulation\r\n- https://github.com/gSchool/js-hof-filter-map-reduce\r\n-
-    https://github.com/gSchool/js-iteration\r\n- https://github.com/gSchool/js-methods-this-constructors\r\n-
-    https://github.com/gSchool/js-node-log-file-parsing\r\n- https://github.com/gSchool/js_oop_exercise"
-  :instructor_notes: "\n\n\n\n\n\n\n\n## Assessments\r\n* https://github.com/gSchool/functions-objects-js-homework\r\n*
-    https://github.com/gSchool/js-functions-part2\n\n## Assessments\r\n* https://github.com/gSchool/js-functions-part1\r\n*
-    http://eloquentjavascript.net/1st_edition/chapter6.html \r\n* Write simple functions
-    given the function signature and a behavioral description\r\n* Write simple functions
-    to solve a problem without the function signature\r\n* Write recursive functions\r\n\r\nWhat
-    does it mean for a function to have a side effects?\r\n\r\n\r\n### Legacy Objectives\r\n-
-    Define what a function is\r\n- Explain what a function is and how it works using
-    analogies . (comparing it to a machine, black box, factory, etc.)\r\n- Define
-    functions using declarations and expressions, and explain the difference between
-    them\r\n- Articulate the difference between defining and invoking a function\r\n-
-    Describe how data flows into a function (by passing in arguments)\r\n- Describe
-    how data flows out of functions (by using the `return` keyword)\r\n- Describe
-    the difference between function expressions, named and anonymous functions\r\n-
-    Write named functions and anonymous functions that take 0, 1 and many arguments\r\n-
-    Explain how functions handle arguments\r\n- Can access all arguments using array-like
-    `arguments` object\r\n- Can take more arguments than specified in the parameters\r\n-
-    Parameters that aren’t specified when the function is invoked are set to ‘undefined’\r\n-
-    Explain that functions are values and that they can be stored in variables just
-    like any other value\r\n- Call functions from above, below and in separate files
-    from function definition\r\n- Write functions that return values\r\n- Write functions
-    that have side effects, such as manipulating dom\r\n- Explain what recursion is
-    and write a functions that call themselves recursively\r\n- Explain the relationship
-    between functions and scope\r\n- Write and invoke functions as methods on objects\r\n-
-    Use built-in Javascript methods to perform common tasks on objects\r\n\r\n(loosely:
-    “a function is a set of instructions that can take 0 or more inputs, perform calculations
-    and either return values or cause changes to occur”)"
-- :standard_uuid: ac805334-f3dd-4288-9a61-0dcef3e219d4
-  :standard_name: Programming with Javascript
   :uuid: 861bcda5-c1ed-470c-9389-fafcf80c2399
   :name: Control the flow of a program using conditionals and loops
   :description: "- Solve problems requiring conditionals and loops (such as accumulator
@@ -766,6 +718,54 @@
     ask them to change the code so that it only prints 5 numbers (using return)\r\n\r\n```\r\nvar
     run = function () {\r\n  for (var i = 0; i < 10; i++) {\r\n    console.log(i);\r\n
     \   if (i === 5) {\r\n      return\r\n    }\r\n  }\r\n}\r\n\r\nrun()\r\n```"
+- :standard_uuid: ac805334-f3dd-4288-9a61-0dcef3e219d4
+  :standard_name: Programming with Javascript
+  :uuid: 6754eeea-a10b-4033-a598-a0e081257f60
+  :name: Encapsulate reusable code in functions
+  :description: "- Formulates new functions given inputs and desired outputs\n- Define
+    and give examples of “Pure functions” that do not have side effects. Define and
+    give examples of “side effects”.\n\n- Formulates new functions given inputs and
+    desired outputs\n- Mentally evaluate expressions that use the return value of
+    function calls\n\n\n\n- like add(add(5,6), add(6,7))\r\n- like add(5,6) + add(6,7)\r\n-
+    join(“”).filter()...\r\n- document.querySelectorAll(“#foo”)[0];\n\n- Define and
+    give examples of “Pure functions” that do not have side effects.  Define and give
+    examples of “side effects”.\n- Can diagram the call stack\n- Create and use local
+    variable scope when appropriate within Functions\n- Abstracts sets of expressions
+    into functions\n\n\n\nDiagrams the call stack as a series of boxes within boxes\n\n-
+    All data is either:\r\n    - created within the function with `var`\r\n    - passed
+    in through parameters\r\n    - accessible via a closure\r\n- Returns any data
+    needed from the function with the `return` keyword\r\n- Can diagram the effect
+    of a function operating on an object passed into the function as a reference\n\n\n\n[Closures](https://www.youtube.com/watch?v=CQqwU2Ixu-U&list=PL0zVEGEvSaeEd9hlmCXrk5yUyqUag-n84&index=5)\n\n-
+    [Javascript Call Stack](https://vimeo.com/134061121)\r\n- https://github.com/gSchool/js-accumulator-assessment\r\n-
+    https://github.com/gSchool/js-encapsulation\r\n- https://github.com/gSchool/js-hof-filter-map-reduce\r\n-
+    https://github.com/gSchool/js-iteration\r\n- https://github.com/gSchool/js-methods-this-constructors\r\n-
+    https://github.com/gSchool/js-node-log-file-parsing\r\n- https://github.com/gSchool/js_oop_exercise"
+  :instructor_notes: "\n\n\n\n\n\n\n\n## Assessments\r\n* https://github.com/gSchool/functions-objects-js-homework\r\n*
+    https://github.com/gSchool/js-functions-part2\n\n## Assessments\r\n* https://github.com/gSchool/js-functions-part1\r\n*
+    http://eloquentjavascript.net/1st_edition/chapter6.html \r\n* Write simple functions
+    given the function signature and a behavioral description\r\n* Write simple functions
+    to solve a problem without the function signature\r\n* Write recursive functions\r\n\r\nWhat
+    does it mean for a function to have a side effects?\r\n\r\n\r\n### Legacy Objectives\r\n-
+    Define what a function is\r\n- Explain what a function is and how it works using
+    analogies . (comparing it to a machine, black box, factory, etc.)\r\n- Define
+    functions using declarations and expressions, and explain the difference between
+    them\r\n- Articulate the difference between defining and invoking a function\r\n-
+    Describe how data flows into a function (by passing in arguments)\r\n- Describe
+    how data flows out of functions (by using the `return` keyword)\r\n- Describe
+    the difference between function expressions, named and anonymous functions\r\n-
+    Write named functions and anonymous functions that take 0, 1 and many arguments\r\n-
+    Explain how functions handle arguments\r\n- Can access all arguments using array-like
+    `arguments` object\r\n- Can take more arguments than specified in the parameters\r\n-
+    Parameters that aren’t specified when the function is invoked are set to ‘undefined’\r\n-
+    Explain that functions are values and that they can be stored in variables just
+    like any other value\r\n- Call functions from above, below and in separate files
+    from function definition\r\n- Write functions that return values\r\n- Write functions
+    that have side effects, such as manipulating dom\r\n- Explain what recursion is
+    and write a functions that call themselves recursively\r\n- Explain the relationship
+    between functions and scope\r\n- Write and invoke functions as methods on objects\r\n-
+    Use built-in Javascript methods to perform common tasks on objects\r\n\r\n(loosely:
+    “a function is a set of instructions that can take 0 or more inputs, perform calculations
+    and either return values or cause changes to occur”)"
 - :standard_uuid: bcfe422a-cd35-4fd1-8ff8-6b078c476069
   :standard_name: Javascript and the Browser
   :uuid: f14777bc-e9f0-4088-b4c3-19a81cbd22ce
@@ -1049,20 +1049,6 @@
 
 - :standard_uuid: 793b8c6a-a19d-4049-8183-9d454bf55028
   :standard_name: Thinking Like a Developer
-  :uuid: 96596d80-98aa-42c7-b280-768b2b52adb7
-  :name: Collaborates productively with other developers
-  :description: "- Can operate with fair contribution (not necessarily equal contribution),
-    regularly verbalizes thought process, and is nice to work with\n\n- Can operate
-    with fair contribution (not necessarily equal contribution) using specific techniques
-    when necessary such as:\n- Regularly verbalizes thought process\n- Is nice to
-    work with\n\n- Ping pong\r\n- Driver / Navigator\r\n- Chess timers\n\n\n\n"
-  :instructor_notes: |2+
-
-
-
-
-- :standard_uuid: 793b8c6a-a19d-4049-8183-9d454bf55028
-  :standard_name: Thinking Like a Developer
   :uuid: 0f22502a-68fe-4dbe-95d7-b1f4919fe1bf
   :name: Approaches problems in a methodical and disciplined manner
   :description: "- Breaks down complex problems into smaller steps.\n\n- Experiments
@@ -1087,6 +1073,20 @@
 
 
 
+
+
+
+
+- :standard_uuid: 793b8c6a-a19d-4049-8183-9d454bf55028
+  :standard_name: Thinking Like a Developer
+  :uuid: 96596d80-98aa-42c7-b280-768b2b52adb7
+  :name: Collaborates productively with other developers
+  :description: "- Can operate with fair contribution (not necessarily equal contribution),
+    regularly verbalizes thought process, and is nice to work with\n\n- Can operate
+    with fair contribution (not necessarily equal contribution) using specific techniques
+    when necessary such as:\n- Regularly verbalizes thought process\n- Is nice to
+    work with\n\n- Ping pong\r\n- Driver / Navigator\r\n- Chess timers\n\n\n\n"
+  :instructor_notes: |2+
 
 
 
@@ -1249,22 +1249,6 @@
     an IP address? What is DNS?"
 - :standard_uuid: 1762e39b-4a3e-433a-ac68-c815f3ea067b
   :standard_name: How the Web Works
-  :uuid: 5b704c5f-75af-4039-a691-4f2dd8ba2971
-  :name: Identify the parts of an HTTP request and response and discuss their purpose
-  :description: "- Describe what happens in a redirect scenario and diagram it\n-
-    Describe the format and purpose of HTTP Requests and Responses\n- Identify the
-    parts of a request and describe their function\n- Identify the parts of a response
-    and describe their function\n\n\n\nHTTP is the _hypertext transfer protocol_.
-    It is the _protocol_, or system of rules for communicating that enables browsers
-    to communicate over a network like the internet.\n\n- Request line\r\n  - Verb\r\n
-    \ - Path\r\n- Headers\r\n- Body\n\n- Response line\r\n- Status Code\r\n- Status
-    Messages\r\n- Headers\r\n- Body"
-  :instructor_notes: "\n\n- Like a file being sent back from a server to a client\r\n-
-    Like a file being sent to a server\n\n- Describe the 3 parts of an HTTP request
-    - request line, the headers, the body\r\n- Describe how to send url-encoded parameters
-    in the request body\r\n- Describe how to send raw JSON in the request body\n\n"
-- :standard_uuid: 1762e39b-4a3e-433a-ac68-c815f3ea067b
-  :standard_name: How the Web Works
   :uuid: ca4311e4-8013-4b29-b2c4-dd753573c30e
   :name: Diagram and explain a URI
   :description: "- Identify and explain the basic purpose of each part of a URL\n\n-
@@ -1286,6 +1270,22 @@
     provide examples of paths that would need to be url encoded\n\nExplain the purpose
     of the domain, port, and path.\n\noptional: compare to protocols in everyday life:
     mail, greetings, holidays/traditions"
+- :standard_uuid: 1762e39b-4a3e-433a-ac68-c815f3ea067b
+  :standard_name: How the Web Works
+  :uuid: 5b704c5f-75af-4039-a691-4f2dd8ba2971
+  :name: Identify the parts of an HTTP request and response and discuss their purpose
+  :description: "- Describe what happens in a redirect scenario and diagram it\n-
+    Describe the format and purpose of HTTP Requests and Responses\n- Identify the
+    parts of a request and describe their function\n- Identify the parts of a response
+    and describe their function\n\n\n\nHTTP is the _hypertext transfer protocol_.
+    It is the _protocol_, or system of rules for communicating that enables browsers
+    to communicate over a network like the internet.\n\n- Request line\r\n  - Verb\r\n
+    \ - Path\r\n- Headers\r\n- Body\n\n- Response line\r\n- Status Code\r\n- Status
+    Messages\r\n- Headers\r\n- Body"
+  :instructor_notes: "\n\n- Like a file being sent back from a server to a client\r\n-
+    Like a file being sent to a server\n\n- Describe the 3 parts of an HTTP request
+    - request line, the headers, the body\r\n- Describe how to send url-encoded parameters
+    in the request body\r\n- Describe how to send raw JSON in the request body\n\n"
 - :standard_uuid: 1762e39b-4a3e-433a-ac68-c815f3ea067b
   :standard_name: How the Web Works
   :uuid: 960362a6-e341-487b-a292-95840148c429
@@ -1623,6 +1623,19 @@
 
 - :standard_uuid: 2305e956-adeb-49e4-8b0d-2600b10ddfdc
   :standard_name: Datastores
+  :uuid: 7231cf4a-2dc7-401a-88f9-4159cc1c2e2f
+  :name: Access data in datastores through joins
+  :description: "- Describe the role of Primary keys, Foreign keys, and Referential
+    Integrity\n- Uses joins for model relationships (one to one, one to many, many
+    to many)\n- Uses correct SQL join for given problem \n\n\n\n* Inner , left, right,
+    full\r\n* Concept of inner and outer\r\n* Joining multiple tables\n\n- Uses correct
+    SQL join for given problem"
+  :instructor_notes: "\n\n\n\n\r\n\r\nStudents should be given several use cases where
+    they need to choose the right join to get the right data set. \r\ne.g. \" Show
+    me pertinent information of all of our people and all of their respective managers
+    where some people might not have managers\""
+- :standard_uuid: 2305e956-adeb-49e4-8b0d-2600b10ddfdc
+  :standard_name: Datastores
   :uuid: 7ec77c83-b497-49c3-b08c-b729a77090b3
   :name: Design and implement schemas
   :description: "- Explains what a data/database schema is\n- Normalizes data to Third
@@ -1644,19 +1657,6 @@
 
 
 
-- :standard_uuid: 2305e956-adeb-49e4-8b0d-2600b10ddfdc
-  :standard_name: Datastores
-  :uuid: 7231cf4a-2dc7-401a-88f9-4159cc1c2e2f
-  :name: Access data in datastores through joins
-  :description: "- Describe the role of Primary keys, Foreign keys, and Referential
-    Integrity\n- Uses joins for model relationships (one to one, one to many, many
-    to many)\n- Uses correct SQL join for given problem \n\n\n\n* Inner , left, right,
-    full\r\n* Concept of inner and outer\r\n* Joining multiple tables\n\n- Uses correct
-    SQL join for given problem"
-  :instructor_notes: "\n\n\n\n\r\n\r\nStudents should be given several use cases where
-    they need to choose the right join to get the right data set. \r\ne.g. \" Show
-    me pertinent information of all of our people and all of their respective managers
-    where some people might not have managers\""
 - :standard_uuid: 2305e956-adeb-49e4-8b0d-2600b10ddfdc
   :standard_name: Datastores
   :uuid: 08f64fd8-ad16-4e3a-bb92-902b8b54de07
@@ -1863,18 +1863,18 @@
 
 - :standard_uuid: b7090a92-612d-4811-ac2c-8d750e5fab1d
   :standard_name: Client Side Frameworks (Angular)
-  :uuid: 2601933b-c305-45d8-9527-42cda918507c
-  :name: Explain client-side routing as it relates to server-side routing
-  :description: |+
-    - Sequence diagram of how a deep-link works in an client-side routed app using pushstate-style URLs including the concept of a wildcard route on the server (express or superstatic)
-
-  :instructor_notes: ''
-- :standard_uuid: b7090a92-612d-4811-ac2c-8d750e5fab1d
-  :standard_name: Client Side Frameworks (Angular)
   :uuid: 4794e677-7800-4e74-991e-b2ec21f40c5a
   :name: Implement custom-directives
   :description: |+
     - Build a reusable Angular component (aka custom directive) that appears on multiple routes
+
+  :instructor_notes: ''
+- :standard_uuid: b7090a92-612d-4811-ac2c-8d750e5fab1d
+  :standard_name: Client Side Frameworks (Angular)
+  :uuid: 2601933b-c305-45d8-9527-42cda918507c
+  :name: Explain client-side routing as it relates to server-side routing
+  :description: |+
+    - Sequence diagram of how a deep-link works in an client-side routed app using pushstate-style URLs including the concept of a wildcard route on the server (express or superstatic)
 
   :instructor_notes: ''
 - :standard_uuid: b7090a92-612d-4811-ac2c-8d750e5fab1d
@@ -1961,18 +1961,18 @@
     Track their progress using an agile project management tool"
 - :standard_uuid: 0f6ed5e9-c172-4969-b990-f2324c91f5ad
   :standard_name: Designing APIs
-  :uuid: ec89798f-87ee-4691-abee-28f85bcb5c59
-  :name: Discuss common API design concepts
-  :description: |+
-    - Talk about hypermedia, HATEOS / JSON-API, automated docs / standardization
-
-  :instructor_notes: ''
-- :standard_uuid: 0f6ed5e9-c172-4969-b990-f2324c91f5ad
-  :standard_name: Designing APIs
   :uuid: 4655229a-33c6-4e0f-93e1-71c557c67602
   :name: Document an API using an automated tool
   :description: |+
     - Has documented an API using either a comment-parsing strategy or a documentation tool such as Swagger
+
+  :instructor_notes: ''
+- :standard_uuid: 0f6ed5e9-c172-4969-b990-f2324c91f5ad
+  :standard_name: Designing APIs
+  :uuid: ec89798f-87ee-4691-abee-28f85bcb5c59
+  :name: Discuss common API design concepts
+  :description: |+
+    - Talk about hypermedia, HATEOS / JSON-API, automated docs / standardization
 
   :instructor_notes: ''
 - :standard_uuid: 0f6ed5e9-c172-4969-b990-f2324c91f5ad
@@ -2209,6 +2209,37 @@
   :instructor_notes: "* Depth-First Search (recursive)\r\n* Breadth-First Search (non-recursive)\n\n\n\n"
 - :standard_uuid: d5947e67-9d70-4e02-ae2a-b3135a9c1667
   :standard_name: Data Structures / Algorithms
+  :uuid: e27bebe6-5b07-428d-9400-2d8f08944076
+  :name: Identify and diagram common data structures
+  :description: |-
+    - Identify and diagram an Array
+    - Identify and diagram a hash table
+    - Identify and diagram a linked list
+    - Identify and diagram a stack
+    - Identify and diagram a queue
+    - Identify and diagram tries
+    - Identify and diagram a tree
+    - Identify and diagram a graph
+
+
+
+
+
+    Identify and diagram a linked list as a set of boxes with pointers
+
+
+
+
+
+
+
+    Identify and diagram a tree as a set of nodes with pointers to their children
+
+    Identify and diagram a graph as a as an unordered set of nodes with pointers to other nodes
+  :instructor_notes: "## Assessments\r\n\r\nGive the student an array, have them come
+    up with a diagram that looks like: [a picture goes here]\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+- :standard_uuid: d5947e67-9d70-4e02-ae2a-b3135a9c1667
+  :standard_name: Data Structures / Algorithms
   :uuid: 1430686b-e6af-48c3-be11-55c986e55148
   :name: Implement, evaluate, and use some common data structures
   :description: |+
@@ -2240,37 +2271,6 @@
 
 
 
-- :standard_uuid: d5947e67-9d70-4e02-ae2a-b3135a9c1667
-  :standard_name: Data Structures / Algorithms
-  :uuid: e27bebe6-5b07-428d-9400-2d8f08944076
-  :name: Identify and diagram common data structures
-  :description: |-
-    - Identify and diagram an Array
-    - Identify and diagram a hash table
-    - Identify and diagram a linked list
-    - Identify and diagram a stack
-    - Identify and diagram a queue
-    - Identify and diagram tries
-    - Identify and diagram a tree
-    - Identify and diagram a graph
-
-
-
-
-
-    Identify and diagram a linked list as a set of boxes with pointers
-
-
-
-
-
-
-
-    Identify and diagram a tree as a set of nodes with pointers to their children
-
-    Identify and diagram a graph as a as an unordered set of nodes with pointers to other nodes
-  :instructor_notes: "## Assessments\r\n\r\nGive the student an array, have them come
-    up with a diagram that looks like: [a picture goes here]\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
 - :standard_uuid: e59bae37-553b-4c1b-8667-4dbbdeeae98d
   :standard_name: Technical Interview Prep
   :uuid: 0fe673a0-4edf-449b-8794-cc13101d60c6
