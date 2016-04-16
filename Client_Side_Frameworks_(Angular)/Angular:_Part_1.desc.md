@@ -4,6 +4,8 @@ By the end of this unit, you should be able to build an app like this:
 
 Watch the video above, so as you go through the exercises you can see how you can build each portion of the project.
 
+Fork/clone the Angular Curriculum and make a new folder inside called `reddit-clone`. Work on your app inside of there and then make a Pull Request.
+
 ## Activity
 
 Work through Unit 1 of the Angular Curriculum:

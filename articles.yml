@@ -1,0 +1,2247 @@
+---
+- :name: Q1
+  :uuid: 49266d65-66c0-459f-9a7f-3b8a4a7c0aab
+  :subject_uuid: 
+  :subject_name: 
+  :parent_uuid: 
+  :parent_name: 
+  :description_link: Misc/Q1.desc.md
+  :instructor_notes_link: Misc/Q1.desc.md
+  :published: true
+  :suggested_days: 0.0
+  :experience_success_criteria: []
+- :name: First day, intro to Full Stack
+  :uuid: cdbae2d2-e1c4-42c5-b2fa-bbf616e248a2
+  :subject_uuid: 
+  :subject_name: 
+  :parent_uuid: 49266d65-66c0-459f-9a7f-3b8a4a7c0aab
+  :parent_name: Q1
+  :description_link: Learning_to_Learn/First_day,_intro_to_Full_Stack.desc.md
+  :instructor_notes_link: Learning_to_Learn/First_day,_intro_to_Full_Stack.notes.md
+  :published: true
+  :suggested_days: 1.0
+  :experience_success_criteria: []
+- :name: Setup Development Environment
+  :uuid: ed70c6dd-7649-4311-b933-ba0ea8c22f05
+  :subject_uuid: 4298574a-4ac8-4a6b-8195-91c349a04209
+  :subject_name: Dev Environment
+  :parent_uuid: 49266d65-66c0-459f-9a7f-3b8a4a7c0aab
+  :parent_name: Q1
+  :description_link: Dev_Environment/Setup_Development_Environment.desc.md
+  :instructor_notes_link: Dev_Environment/Setup_Development_Environment.notes.md
+  :published: true
+  :suggested_days: 1.0
+  :experience_success_criteria:
+  - :success_criterion_uuid: 16b2ea59-6c8d-4cfa-8542-ff0fffee2982
+    :success_criterion_name: Navigate your computer swiftly using keyboard shortcuts
+- :name: Learning To Learn
+  :uuid: 8b3330ee-c4a7-497e-9bd9-7da9470471b1
+  :subject_uuid: 
+  :subject_name: 
+  :parent_uuid: 49266d65-66c0-459f-9a7f-3b8a4a7c0aab
+  :parent_name: Q1
+  :description_link: Learning_to_Learn/Learning_To_Learn.desc.md
+  :instructor_notes_link: Learning_to_Learn/Learning_To_Learn.notes.md
+  :published: true
+  :suggested_days: 0.0
+  :experience_success_criteria: []
+- :name: Intro to the Command Line
+  :uuid: 479e46a9-663e-4666-bac1-290343a5021b
+  :subject_uuid: 7313b475-d281-4c72-a3b3-1167eb3b13e3
+  :subject_name: The Command Line
+  :parent_uuid: 49266d65-66c0-459f-9a7f-3b8a4a7c0aab
+  :parent_name: Q1
+  :description_link: The_Command_Line/Intro_to_the_Command_Line.desc.md
+  :instructor_notes_link: The_Command_Line/Intro_to_the_Command_Line.notes.md
+  :published: true
+  :suggested_days: 1.0
+  :experience_success_criteria:
+  - :success_criterion_uuid: 5e594f94-9089-4b2e-a0cf-f424ecd278b1
+    :success_criterion_name: Work with and discuss and Unix Roles / Permissions
+  - :success_criterion_uuid: 5dea00ce-dbb3-43e9-91b9-dead371d37c4
+    :success_criterion_name: Navigate and manage a file system with the command line
+- :name: Intro to Git and Github
+  :uuid: 953ce233-2b8c-4ec1-9e4e-4437c4629eb9
+  :subject_uuid: 3f805b07-096d-4024-bce2-20b19f92199a
+  :subject_name: Version Control (Git and Github)
+  :parent_uuid: 49266d65-66c0-459f-9a7f-3b8a4a7c0aab
+  :parent_name: Q1
+  :description_link: Version_Control_(Git_and_Github)/Intro_to_Git_and_Github.desc.md
+  :instructor_notes_link: Version_Control_(Git_and_Github)/Intro_to_Git_and_Github.notes.md
+  :published: true
+  :suggested_days: 1.0
+  :experience_success_criteria:
+  - :success_criterion_uuid: f0dd4b1a-bc2d-46b8-934d-822074a2efbe
+    :success_criterion_name: Discuss the function and purpose of Git
+  - :success_criterion_uuid: e8272444-8dfc-49a0-81d9-d5c92026d536
+    :success_criterion_name: Track changes over time using a basic Git workflow
+- :name: Intro to HTML
+  :uuid: df58c95e-d616-44af-86cc-65bac3f0a87b
+  :subject_uuid: a7d5be0f-3937-465a-b5e9-b2555642e9d9
+  :subject_name: HTML
+  :parent_uuid: 49266d65-66c0-459f-9a7f-3b8a4a7c0aab
+  :parent_name: Q1
+  :description_link: HTML/Intro_to_HTML.desc.md
+  :instructor_notes_link: HTML/Intro_to_HTML.notes.md
+  :published: true
+  :suggested_days: 1.0
+  :experience_success_criteria:
+  - :success_criterion_uuid: 90141122-0edb-4c14-ac77-a63e7c3a8ce0
+    :success_criterion_name: Write Valid HTML5 Markup
+- :name: Intro To CSS
+  :uuid: 5e9d2680-56f4-45a5-a8ba-a396a6d69293
+  :subject_uuid: 0c1be570-48b4-48a8-bc98-7da27a7be512
+  :subject_name: CSS
+  :parent_uuid: 49266d65-66c0-459f-9a7f-3b8a4a7c0aab
+  :parent_name: Q1
+  :description_link: CSS/Intro_To_CSS.desc.md
+  :instructor_notes_link: CSS/Intro_To_CSS.notes.md
+  :published: true
+  :suggested_days: 1.0
+  :experience_success_criteria:
+  - :success_criterion_uuid: 0b6f124a-f58a-4e2c-97d1-39a109703ddc
+    :success_criterion_name: Lay out a document with CSS properties
+  - :success_criterion_uuid: 6e0c7a9b-e85d-4f39-b7e5-fdf0dcbf6042
+    :success_criterion_name: Style HTML elements with CSS properties
+  - :success_criterion_uuid: 8552d31e-b5c6-4414-8a22-4e684bcd2595
+    :success_criterion_name: Target HTML elements with CSS selectors
+  - :success_criterion_uuid: f0dd4b1a-bc2d-46b8-934d-822074a2efbe
+    :success_criterion_name: Discuss the function and purpose of Git
+- :name: Semantic HTML
+  :uuid: 63856d9f-eaa7-47bf-9287-87978ae5510f
+  :subject_uuid: a7d5be0f-3937-465a-b5e9-b2555642e9d9
+  :subject_name: HTML
+  :parent_uuid: 49266d65-66c0-459f-9a7f-3b8a4a7c0aab
+  :parent_name: Q1
+  :description_link: HTML/Semantic_HTML.desc.md
+  :instructor_notes_link: HTML/Semantic_HTML.notes.md
+  :published: true
+  :suggested_days: 1.0
+  :experience_success_criteria:
+  - :success_criterion_uuid: 6fdb2116-c6b2-45e8-884d-5f51d05836d4
+    :success_criterion_name: Write Semantic HTML5 Markup
+  - :success_criterion_uuid: 90141122-0edb-4c14-ac77-a63e7c3a8ce0
+    :success_criterion_name: Write Valid HTML5 Markup
+  - :success_criterion_uuid: d5a4c20f-4922-43e4-a7bb-388438235f40
+    :success_criterion_name: Build HTML Forms and Controls
+- :name: Intermediate CSS
+  :uuid: dca9e810-0f2f-466d-b93f-15e36f399072
+  :subject_uuid: a7d5be0f-3937-465a-b5e9-b2555642e9d9
+  :subject_name: HTML
+  :parent_uuid: 49266d65-66c0-459f-9a7f-3b8a4a7c0aab
+  :parent_name: Q1
+  :description_link: HTML/Intermediate_CSS.desc.md
+  :instructor_notes_link: HTML/Intermediate_CSS.notes.md
+  :published: true
+  :suggested_days: 1.0
+  :experience_success_criteria:
+  - :success_criterion_uuid: 6fdb2116-c6b2-45e8-884d-5f51d05836d4
+    :success_criterion_name: Write Semantic HTML5 Markup
+  - :success_criterion_uuid: 0b6f124a-f58a-4e2c-97d1-39a109703ddc
+    :success_criterion_name: Lay out a document with CSS properties
+- :name: HTML5 Media
+  :uuid: e5092521-31df-4296-b2aa-2e371da89fcf
+  :subject_uuid: a7d5be0f-3937-465a-b5e9-b2555642e9d9
+  :subject_name: HTML
+  :parent_uuid: 49266d65-66c0-459f-9a7f-3b8a4a7c0aab
+  :parent_name: Q1
+  :description_link: HTML/HTML5_Media.desc.md
+  :instructor_notes_link: HTML/HTML5_Media.notes.md
+  :published: true
+  :suggested_days: 1.0
+  :experience_success_criteria:
+  - :success_criterion_uuid: 2f1d22c7-b07b-4e5d-9c84-5aa989b7f36d
+    :success_criterion_name: Embed Rich Media using Audio & Video APIs
+- :name: Intro to Programming
+  :uuid: 243579b6-d7f9-4966-8033-07496e6de210
+  :subject_uuid: ac805334-f3dd-4288-9a61-0dcef3e219d4
+  :subject_name: Programming with Javascript
+  :parent_uuid: 49266d65-66c0-459f-9a7f-3b8a4a7c0aab
+  :parent_name: Q1
+  :description_link: Programming_with_Javascript/Intro_to_Programming.desc.md
+  :instructor_notes_link: Programming_with_Javascript/Intro_to_Programming.notes.md
+  :published: true
+  :suggested_days: 1.0
+  :experience_success_criteria: []
+- :name: 'JavaScript: Intro, Types, Values, Variables, Control Flow'
+  :uuid: 112f4f48-747f-4c1c-9f0b-bb0f7156e974
+  :subject_uuid: ac805334-f3dd-4288-9a61-0dcef3e219d4
+  :subject_name: Programming with Javascript
+  :parent_uuid: 49266d65-66c0-459f-9a7f-3b8a4a7c0aab
+  :parent_name: Q1
+  :description_link: Programming_with_Javascript/JavaScript:_Intro,_Types,_Values,_Variables,_Control_Flow.desc.md
+  :instructor_notes_link: Programming_with_Javascript/JavaScript:_Intro,_Types,_Values,_Variables,_Control_Flow.notes.md
+  :published: true
+  :suggested_days: 1.0
+  :experience_success_criteria:
+  - :success_criterion_uuid: 5b55eed8-5a07-4540-92fe-cb4d824b51b7
+    :success_criterion_name: Write, mentally evaluate, and store the result of JS
+      expressions
+  - :success_criterion_uuid: 861bcda5-c1ed-470c-9389-fafcf80c2399
+    :success_criterion_name: Control the flow of a program using conditionals and
+      loops
+- :name: 'JavaScript: Objects, Arrays, Iterations'
+  :uuid: ed0f7c57-5844-4870-a1ab-a7d3465948a0
+  :subject_uuid: ac805334-f3dd-4288-9a61-0dcef3e219d4
+  :subject_name: Programming with Javascript
+  :parent_uuid: 49266d65-66c0-459f-9a7f-3b8a4a7c0aab
+  :parent_name: Q1
+  :description_link: Programming_with_Javascript/JavaScript:_Objects,_Arrays,_Iterations.desc.md
+  :instructor_notes_link: Programming_with_Javascript/JavaScript:_Objects,_Arrays,_Iterations.notes.md
+  :published: true
+  :suggested_days: 1.0
+  :experience_success_criteria:
+  - :success_criterion_uuid: 7f7577f7-4224-442d-aa17-dc44c4fd21c7
+    :success_criterion_name: Store and Access values in Arrays and Objects
+  - :success_criterion_uuid: 861bcda5-c1ed-470c-9389-fafcf80c2399
+    :success_criterion_name: Control the flow of a program using conditionals and
+      loops
+- :name: 'JavaScript: Functions'
+  :uuid: 2b95a79b-e85a-4329-8dfd-718bb63490a4
+  :subject_uuid: ac805334-f3dd-4288-9a61-0dcef3e219d4
+  :subject_name: Programming with Javascript
+  :parent_uuid: 49266d65-66c0-459f-9a7f-3b8a4a7c0aab
+  :parent_name: Q1
+  :description_link: Programming_with_Javascript/JavaScript:_Functions.desc.md
+  :instructor_notes_link: Programming_with_Javascript/JavaScript:_Functions.notes.md
+  :published: true
+  :suggested_days: 1.0
+  :experience_success_criteria:
+  - :success_criterion_uuid: 6754eeea-a10b-4033-a598-a0e081257f60
+    :success_criterion_name: Encapsulate reusable code in functions
+- :name: Scopes, Hoisting, and High Order Functions
+  :uuid: 6aae9c28-b494-4fb2-92d4-45c1ceb757d4
+  :subject_uuid: ac805334-f3dd-4288-9a61-0dcef3e219d4
+  :subject_name: Programming with Javascript
+  :parent_uuid: 49266d65-66c0-459f-9a7f-3b8a4a7c0aab
+  :parent_name: Q1
+  :description_link: Programming_with_Javascript/Scopes,_Hoisting,_and_High_Order_Functions.desc.md
+  :instructor_notes_link: Programming_with_Javascript/Scopes,_Hoisting,_and_High_Order_Functions.notes.md
+  :published: true
+  :suggested_days: 1.0
+  :experience_success_criteria:
+  - :success_criterion_uuid: 6754eeea-a10b-4033-a598-a0e081257f60
+    :success_criterion_name: Encapsulate reusable code in functions
+  - :success_criterion_uuid: 7b523c6a-95b7-423a-b3e4-bd7366346911
+    :success_criterion_name: Write higher order functions that accept functions as
+      parameters
+- :name: JavaScript Object Model
+  :uuid: cd5ae21a-d8d1-4408-a007-ea76c489eca0
+  :subject_uuid: 5ddfa4d5-6194-466b-97aa-f9610b77c493
+  :subject_name: JavaScript Object Model
+  :parent_uuid: 49266d65-66c0-459f-9a7f-3b8a4a7c0aab
+  :parent_name: Q1
+  :description_link: JavaScript_Object_Model/JavaScript_Object_Model.desc.md
+  :instructor_notes_link: JavaScript_Object_Model/JavaScript_Object_Model.notes.md
+  :published: true
+  :suggested_days: 1.0
+  :experience_success_criteria:
+  - :success_criterion_uuid: 0b60b9c0-f189-48f3-84d0-f6622dd66971
+    :success_criterion_name: Target, create and manipulate DOM Elements
+  - :success_criterion_uuid: 774786f3-e071-4479-afa8-48d5a0401e7d
+    :success_criterion_name: Uses `this` to manipulate the current context
+  - :success_criterion_uuid: 39933c54-ba41-44c7-bc56-716fadaf486b
+    :success_criterion_name: Uses Properties to store State on an Instance
+  - :success_criterion_uuid: 1549dee5-0e63-4def-ab15-1414a65f77f9
+    :success_criterion_name: Creates “Classes” and Instances with JS
+  - :success_criterion_uuid: f5964586-8847-4ca3-a7f2-4968a041660f
+    :success_criterion_name: Define and invoke functions as methods on objects
+- :name: JavaScript Testing Basics with Mocha and Chai
+  :uuid: 5202cc59-9f54-4b0f-be5d-43703cfb82be
+  :subject_uuid: 40104e17-a0e4-4bc4-b499-5030c197cb81
+  :subject_name: Automated Testing
+  :parent_uuid: 49266d65-66c0-459f-9a7f-3b8a4a7c0aab
+  :parent_name: Q1
+  :description_link: Automated_Testing/JavaScript_Testing_Basics_with_Mocha_and_Chai.desc.md
+  :instructor_notes_link: Automated_Testing/JavaScript_Testing_Basics_with_Mocha_and_Chai.notes.md
+  :published: true
+  :suggested_days: 1.0
+  :experience_success_criteria: []
+- :name: Prototypes
+  :uuid: fb1cd788-4ddb-4fc3-aae0-d9803227eee4
+  :subject_uuid: 5ddfa4d5-6194-466b-97aa-f9610b77c493
+  :subject_name: JavaScript Object Model
+  :parent_uuid: 49266d65-66c0-459f-9a7f-3b8a4a7c0aab
+  :parent_name: Q1
+  :description_link: JavaScript_Object_Model/Prototypes.desc.md
+  :instructor_notes_link: JavaScript_Object_Model/Prototypes.notes.md
+  :published: true
+  :suggested_days: 1.0
+  :experience_success_criteria:
+  - :success_criterion_uuid: f5964586-8847-4ca3-a7f2-4968a041660f
+    :success_criterion_name: Define and invoke functions as methods on objects
+- :name: How the Internet Works
+  :uuid: d85f9929-ecbf-46e6-93e0-4d50f2df2f8e
+  :subject_uuid: 1762e39b-4a3e-433a-ac68-c815f3ea067b
+  :subject_name: How the Web Works
+  :parent_uuid: 49266d65-66c0-459f-9a7f-3b8a4a7c0aab
+  :parent_name: Q1
+  :description_link: How_the_Web_Works/How_the_Internet_Works.desc.md
+  :instructor_notes_link: How_the_Web_Works/How_the_Internet_Works.notes.md
+  :published: true
+  :suggested_days: 1.0
+  :experience_success_criteria:
+  - :success_criterion_uuid: d62923ca-e93e-46c3-bbcb-454411233ed9
+    :success_criterion_name: 'Identify common protocols and explain their purpose '
+  - :success_criterion_uuid: 84bbf0ae-2d55-490b-bc84-d4ae4dc45e14
+    :success_criterion_name: Discuss and diagram Client-Server Model
+  - :success_criterion_uuid: 5b704c5f-75af-4039-a691-4f2dd8ba2971
+    :success_criterion_name: Identify the parts of an HTTP request and response and
+      discuss their purpose
+  - :success_criterion_uuid: 960362a6-e341-487b-a292-95840148c429
+    :success_criterion_name: Discuss the semantics of common HTTP Verbs, Headers,
+      and Status Codes
+- :name: AJAX, API, JSON, and XMLHttpRequests
+  :uuid: 3a50035d-8712-4516-9429-8ccde51d3a9b
+  :subject_uuid: bcfe422a-cd35-4fd1-8ff8-6b078c476069
+  :subject_name: Javascript and the Browser
+  :parent_uuid: 49266d65-66c0-459f-9a7f-3b8a4a7c0aab
+  :parent_name: Q1
+  :description_link: Javascript_and_the_Browser/AJAX,_API,_JSON,_and_XMLHttpRequests.desc.md
+  :instructor_notes_link: Javascript_and_the_Browser/AJAX,_API,_JSON,_and_XMLHttpRequests.notes.md
+  :published: true
+  :suggested_days: 1.0
+  :experience_success_criteria:
+  - :success_criterion_uuid: c795cc87-dc92-4c81-918e-cd6be797a530
+    :success_criterion_name: Send HTTP requests and view HTTP responses with Postman
+  - :success_criterion_uuid: 1d73b1d3-0485-46fe-969a-176d328d7536
+    :success_criterion_name: Explain what CORS is and get around CORS restrictions
+  - :success_criterion_uuid: 33170def-1703-4b8d-a734-90c498882eaf
+    :success_criterion_name: Fetch and send JSON with AJAX
+- :name: AJAX Extended
+  :uuid: de6480e7-caa6-4eec-8e8a-5fe013820fcf
+  :subject_uuid: bcfe422a-cd35-4fd1-8ff8-6b078c476069
+  :subject_name: Javascript and the Browser
+  :parent_uuid: 49266d65-66c0-459f-9a7f-3b8a4a7c0aab
+  :parent_name: Q1
+  :description_link: Javascript_and_the_Browser/AJAX_Extended.desc.md
+  :instructor_notes_link: Javascript_and_the_Browser/AJAX_Extended.notes.md
+  :published: true
+  :suggested_days: 1.0
+  :experience_success_criteria:
+  - :success_criterion_uuid: 33170def-1703-4b8d-a734-90c498882eaf
+    :success_criterion_name: Fetch and send JSON with AJAX
+- :name: Intro to the DOM
+  :uuid: 5b925e42-23f5-488d-b4e4-f89e1da8521c
+  :subject_uuid: bcfe422a-cd35-4fd1-8ff8-6b078c476069
+  :subject_name: Javascript and the Browser
+  :parent_uuid: 49266d65-66c0-459f-9a7f-3b8a4a7c0aab
+  :parent_name: Q1
+  :description_link: Javascript_and_the_Browser/Intro_to_the_DOM.desc.md
+  :instructor_notes_link: Javascript_and_the_Browser/Intro_to_the_DOM.notes.md
+  :published: true
+  :suggested_days: 1.0
+  :experience_success_criteria:
+  - :success_criterion_uuid: f031b95c-fc01-450f-a53c-d1043a0313c2
+    :success_criterion_name: Respond to Events with Event Listeners
+  - :success_criterion_uuid: 0b60b9c0-f189-48f3-84d0-f6622dd66971
+    :success_criterion_name: Target, create and manipulate DOM Elements
+- :name: JavaScript Events
+  :uuid: ee18f2e0-04f0-4680-bb69-c66d8dc8366e
+  :subject_uuid: bcfe422a-cd35-4fd1-8ff8-6b078c476069
+  :subject_name: Javascript and the Browser
+  :parent_uuid: 49266d65-66c0-459f-9a7f-3b8a4a7c0aab
+  :parent_name: Q1
+  :description_link: Javascript_and_the_Browser/JavaScript_Events.desc.md
+  :instructor_notes_link: Javascript_and_the_Browser/JavaScript_Events.notes.md
+  :published: true
+  :suggested_days: 1.0
+  :experience_success_criteria:
+  - :success_criterion_uuid: f031b95c-fc01-450f-a53c-d1043a0313c2
+    :success_criterion_name: Respond to Events with Event Listeners
+- :name: HTML Forms
+  :uuid: 3721ce48-217c-41b5-a775-e3303b023165
+  :subject_uuid: a7d5be0f-3937-465a-b5e9-b2555642e9d9
+  :subject_name: HTML
+  :parent_uuid: 49266d65-66c0-459f-9a7f-3b8a4a7c0aab
+  :parent_name: Q1
+  :description_link: HTML/HTML_Forms.desc.md
+  :instructor_notes_link: HTML/HTML_Forms.notes.md
+  :published: true
+  :suggested_days: 1.0
+  :experience_success_criteria:
+  - :success_criterion_uuid: d5a4c20f-4922-43e4-a7bb-388438235f40
+    :success_criterion_name: Build HTML Forms and Controls
+- :name: Intro to jQuery
+  :uuid: 183125ed-6f01-466d-b830-cb666fd7e526
+  :subject_uuid: bcfe422a-cd35-4fd1-8ff8-6b078c476069
+  :subject_name: Javascript and the Browser
+  :parent_uuid: 49266d65-66c0-459f-9a7f-3b8a4a7c0aab
+  :parent_name: Q1
+  :description_link: Javascript_and_the_Browser/Intro_to_jQuery.desc.md
+  :instructor_notes_link: Javascript_and_the_Browser/Intro_to_jQuery.notes.md
+  :published: true
+  :suggested_days: 1.0
+  :experience_success_criteria:
+  - :success_criterion_uuid: f031b95c-fc01-450f-a53c-d1043a0313c2
+    :success_criterion_name: Respond to Events with Event Listeners
+  - :success_criterion_uuid: 0b60b9c0-f189-48f3-84d0-f6622dd66971
+    :success_criterion_name: Target, create and manipulate DOM Elements
+- :name: Wireframing
+  :uuid: 7805867b-fe98-435a-8cd7-4038d2c43377
+  :subject_uuid: f1a3c137-21bd-4902-a745-44d5ba8f992a
+  :subject_name: Design
+  :parent_uuid: 49266d65-66c0-459f-9a7f-3b8a4a7c0aab
+  :parent_name: Q1
+  :description_link: Design/Wireframing.desc.md
+  :instructor_notes_link: Design/Wireframing.notes.md
+  :published: true
+  :suggested_days: 1.0
+  :experience_success_criteria:
+  - :success_criterion_uuid: d23f95bc-1fe6-4cf6-9627-98c704bfeae4
+    :success_criterion_name: Create and implement responsive/adaptive designs
+  - :success_criterion_uuid: c5ceb050-621f-4df2-8cda-18cce44f91de
+    :success_criterion_name: Create and apply style guides to an application
+  - :success_criterion_uuid: 6b77f6b4-326a-4b3c-897e-083cca8c4a4c
+    :success_criterion_name: Design applications from content inventories using wireframes
+- :name: Intro to Bootstrap
+  :uuid: 2054bee3-b831-4b33-aaad-a08cf1394b27
+  :subject_uuid: 0c1be570-48b4-48a8-bc98-7da27a7be512
+  :subject_name: CSS
+  :parent_uuid: 49266d65-66c0-459f-9a7f-3b8a4a7c0aab
+  :parent_name: Q1
+  :description_link: CSS/Intro_to_Bootstrap.desc.md
+  :instructor_notes_link: CSS/Intro_to_Bootstrap.notes.md
+  :published: true
+  :suggested_days: 1.0
+  :experience_success_criteria:
+  - :success_criterion_uuid: 1b7a90d1-4b10-4a5a-9475-5391378047ce
+    :success_criterion_name: Quickly style pages with CSS frameworks
+- :name: Intro to SASS
+  :uuid: c9c9a217-f976-478e-9613-87f3e18b35aa
+  :subject_uuid: 0c1be570-48b4-48a8-bc98-7da27a7be512
+  :subject_name: CSS
+  :parent_uuid: 49266d65-66c0-459f-9a7f-3b8a4a7c0aab
+  :parent_name: Q1
+  :description_link: CSS/Intro_to_SASS.desc.md
+  :instructor_notes_link: CSS/Intro_to_SASS.notes.md
+  :published: true
+  :suggested_days: 1.0
+  :experience_success_criteria:
+  - :success_criterion_uuid: 6e0c7a9b-e85d-4f39-b7e5-fdf0dcbf6042
+    :success_criterion_name: Style HTML elements with CSS properties
+  - :success_criterion_uuid: 8552d31e-b5c6-4414-8a22-4e684bcd2595
+    :success_criterion_name: Target HTML elements with CSS selectors
+  - :success_criterion_uuid: f0dd4b1a-bc2d-46b8-934d-822074a2efbe
+    :success_criterion_name: Discuss the function and purpose of Git
+- :name: APIs for the FrontEnd
+  :uuid: 10b4f089-a578-4abf-b613-0714f01ecf07
+  :subject_uuid: 
+  :subject_name: 
+  :parent_uuid: 49266d65-66c0-459f-9a7f-3b8a4a7c0aab
+  :parent_name: Q1
+  :description_link: Misc/APIs_for_the_FrontEnd.desc.md
+  :instructor_notes_link: Misc/APIs_for_the_FrontEnd.desc.md
+  :published: true
+  :suggested_days: 1.0
+  :experience_success_criteria:
+  - :success_criterion_uuid: 33170def-1703-4b8d-a734-90c498882eaf
+    :success_criterion_name: Fetch and send JSON with AJAX
+- :name: Intro to Agile
+  :uuid: 80c1c9fc-54d9-4988-9e48-5f21417f6533
+  :subject_uuid: dfec3119-3ba1-4a14-ba2c-9f66715f4b98
+  :subject_name: Agile Project Management
+  :parent_uuid: 49266d65-66c0-459f-9a7f-3b8a4a7c0aab
+  :parent_name: Q1
+  :description_link: Agile_Project_Management/Intro_to_Agile.desc.md
+  :instructor_notes_link: Agile_Project_Management/Intro_to_Agile.notes.md
+  :published: true
+  :suggested_days: 1.0
+  :experience_success_criteria:
+  - :success_criterion_uuid: 52699761-1945-4c26-aeb7-dd2f3ea2f960
+    :success_criterion_name: Explain the scrum process and define key terms
+  - :success_criterion_uuid: 614e6ddd-49c8-459b-b79d-81265d867757
+    :success_criterion_name: Discuss agile values and principles
+- :name: Feature Branch Workflow
+  :uuid: 42b55cdc-d56b-4ba7-b3cb-55dc02945407
+  :subject_uuid: 3f805b07-096d-4024-bce2-20b19f92199a
+  :subject_name: Version Control (Git and Github)
+  :parent_uuid: 49266d65-66c0-459f-9a7f-3b8a4a7c0aab
+  :parent_name: Q1
+  :description_link: Version_Control_(Git_and_Github)/Feature_Branch_Workflow.desc.md
+  :instructor_notes_link: Version_Control_(Git_and_Github)/Feature_Branch_Workflow.notes.md
+  :published: true
+  :suggested_days: 1.0
+  :experience_success_criteria:
+  - :success_criterion_uuid: 2f892a7c-e360-4218-9c8c-764d8f9418f7
+    :success_criterion_name: Share code by pushing and pulling to a remote repository
+      on GitHub
+  - :success_criterion_uuid: 3e7127ec-a7a6-417d-b505-16fd9a5909f0
+    :success_criterion_name: Collaborate with other developers using clone and fork-based
+      workflows with Github
+  - :success_criterion_uuid: e8272444-8dfc-49a0-81d9-d5c92026d536
+    :success_criterion_name: Track changes over time using a basic Git workflow
+  - :success_criterion_uuid: 37687853-c626-4f58-b9d2-641b1077f92b
+    :success_criterion_name: Manage feature development with Git branches using a
+      merge strategy
+- :name: Asset Management
+  :uuid: 4aa869fd-9fcb-473c-8937-7658f82f5c16
+  :subject_uuid: 4298574a-4ac8-4a6b-8195-91c349a04209
+  :subject_name: Dev Environment
+  :parent_uuid: 49266d65-66c0-459f-9a7f-3b8a4a7c0aab
+  :parent_name: Q1
+  :description_link: Dev_Environment/Asset_Management.desc.md
+  :instructor_notes_link: Dev_Environment/Asset_Management.notes.md
+  :published: true
+  :suggested_days: 1.0
+  :experience_success_criteria: []
+- :name: HTML / JS Form Validation
+  :uuid: 2fa0bf0c-b6e3-4cd2-b2ad-51d6bba71f9d
+  :subject_uuid: bcfe422a-cd35-4fd1-8ff8-6b078c476069
+  :subject_name: Javascript and the Browser
+  :parent_uuid: 49266d65-66c0-459f-9a7f-3b8a4a7c0aab
+  :parent_name: Q1
+  :description_link: Javascript_and_the_Browser/HTML__JS_Form_Validation.desc.md
+  :instructor_notes_link: Javascript_and_the_Browser/HTML__JS_Form_Validation.notes.md
+  :published: true
+  :suggested_days: 1.0
+  :experience_success_criteria:
+  - :success_criterion_uuid: d5a4c20f-4922-43e4-a7bb-388438235f40
+    :success_criterion_name: Build HTML Forms and Controls
+- :name: Intro to LocalStorage
+  :uuid: 8378f0f4-8623-4499-bdc9-0e25b651254a
+  :subject_uuid: bcfe422a-cd35-4fd1-8ff8-6b078c476069
+  :subject_name: Javascript and the Browser
+  :parent_uuid: 49266d65-66c0-459f-9a7f-3b8a4a7c0aab
+  :parent_name: Q1
+  :description_link: Javascript_and_the_Browser/Intro_to_LocalStorage.desc.md
+  :instructor_notes_link: Javascript_and_the_Browser/Intro_to_LocalStorage.notes.md
+  :published: true
+  :suggested_days: 1.0
+  :experience_success_criteria:
+  - :success_criterion_uuid: f14777bc-e9f0-4088-b4c3-19a81cbd22ce
+    :success_criterion_name: Store program state Client-side with localStorage
+- :name: CSS Media Queries
+  :uuid: 61d22452-9d7f-41ce-b91e-f70d7436c1b0
+  :subject_uuid: 0c1be570-48b4-48a8-bc98-7da27a7be512
+  :subject_name: CSS
+  :parent_uuid: 49266d65-66c0-459f-9a7f-3b8a4a7c0aab
+  :parent_name: Q1
+  :description_link: CSS/CSS_Media_Queries.desc.md
+  :instructor_notes_link: CSS/CSS_Media_Queries.notes.md
+  :published: true
+  :suggested_days: 1.0
+  :experience_success_criteria:
+  - :success_criterion_uuid: 0e8bdbe9-9592-4704-9ddf-46159d7a11d8
+    :success_criterion_name: Use CSS3 and advanced browser tooling to create responsive
+      pages
+- :name: Intermediate Command Line
+  :uuid: 67ce2e41-8958-42e5-8d56-41c05bf4b997
+  :subject_uuid: 7313b475-d281-4c72-a3b3-1167eb3b13e3
+  :subject_name: The Command Line
+  :parent_uuid: 49266d65-66c0-459f-9a7f-3b8a4a7c0aab
+  :parent_name: Q1
+  :description_link: The_Command_Line/Intermediate_Command_Line.desc.md
+  :instructor_notes_link: The_Command_Line/Intermediate_Command_Line.notes.md
+  :published: true
+  :suggested_days: 1.0
+  :experience_success_criteria:
+  - :success_criterion_uuid: 5dea00ce-dbb3-43e9-91b9-dead371d37c4
+    :success_criterion_name: Navigate and manage a file system with the command line
+- :name: Deploying Static Sites
+  :uuid: 872383d6-3b6f-47eb-a40d-1173e4996024
+  :subject_uuid: 2886a5f1-92f6-44ba-8adb-185b2a161870
+  :subject_name: Deployment
+  :parent_uuid: 49266d65-66c0-459f-9a7f-3b8a4a7c0aab
+  :parent_name: Q1
+  :description_link: Deployment/Deploying_Static_Sites.desc.md
+  :instructor_notes_link: Deployment/Deploying_Static_Sites.notes.md
+  :published: true
+  :suggested_days: 1.0
+  :experience_success_criteria:
+  - :success_criterion_uuid: d183eb60-fcfc-40d1-9cae-d85f5f349fb0
+    :success_criterion_name: Deploy to static hosting sites and explain the function
+      and purpose of static hosting
+- :name: Frontend Personal Project
+  :uuid: b83dc76d-e206-4722-9b1c-a30a171d87a9
+  :subject_uuid: dfec3119-3ba1-4a14-ba2c-9f66715f4b98
+  :subject_name: Agile Project Management
+  :parent_uuid: 49266d65-66c0-459f-9a7f-3b8a4a7c0aab
+  :parent_name: Q1
+  :description_link: Agile_Project_Management/Frontend_Personal_Project.desc.md
+  :instructor_notes_link: Agile_Project_Management/Frontend_Personal_Project.notes.md
+  :published: true
+  :suggested_days: 5.0
+  :experience_success_criteria:
+  - :success_criterion_uuid: 5a36d842-c508-4cbe-906d-f586f3b0e424
+    :success_criterion_name: Complete projects using an agile methodology
+- :name: Intro to Promises
+  :uuid: 9110f355-ca07-4be9-8065-02d22d73709d
+  :subject_uuid: 412ea142-dd72-4e21-8e52-2bb72ad3e09b
+  :subject_name: Promises
+  :parent_uuid: 49266d65-66c0-459f-9a7f-3b8a4a7c0aab
+  :parent_name: Q1
+  :description_link: Promises/Intro_to_Promises.desc.md
+  :instructor_notes_link: Promises/Intro_to_Promises.notes.md
+  :published: true
+  :suggested_days: 1.0
+  :experience_success_criteria:
+  - :success_criterion_uuid: 3204ce0a-ae01-48c4-af83-5461f8ee7264
+    :success_criterion_name: Make parallel requests using Promise.all
+  - :success_criterion_uuid: fb851076-a3a8-40f6-9544-5ef14803bdee
+    :success_criterion_name: Discuss the basic function and purpose of promises
+  - :success_criterion_uuid: 427bd950-e449-4341-ba01-3e41f552b4bb
+    :success_criterion_name: Make sequential asynchronous calls in separate methods
+      and return the final result with basic error handling using Promises
+- :name: 'Testing: Introduction-to-TDD-with-Jasmine/Mocha'
+  :uuid: 903266eb-3eec-4da0-a275-76838248aef3
+  :subject_uuid: 40104e17-a0e4-4bc4-b499-5030c197cb81
+  :subject_name: Automated Testing
+  :parent_uuid: 49266d65-66c0-459f-9a7f-3b8a4a7c0aab
+  :parent_name: Q1
+  :description_link: Automated_Testing/Testing:_Introduction-to-TDD-with-JasmineMocha.desc.md
+  :instructor_notes_link: Automated_Testing/Testing:_Introduction-to-TDD-with-JasmineMocha.notes.md
+  :published: true
+  :suggested_days: 1.0
+  :experience_success_criteria:
+  - :success_criterion_uuid: d43c1a6e-7ff9-40cc-8f3d-e23c2c8bc498
+    :success_criterion_name: Discuss the pros and cons of automated testing
+  - :success_criterion_uuid: ea7dac47-4782-4657-91bb-da94ca145915
+    :success_criterion_name: Work with and describe testing database-driven server-side
+      applications w/ Express and Postgres given a working skeleton
+  - :success_criterion_uuid: ee92cc73-7bbc-41a3-af38-719c2195be72
+    :success_criterion_name: Write unit tests in a TDD style using Mocha Chai
+- :name: Deploy a Static WebSite to AWS S3
+  :uuid: d02084b6-d96e-4593-988f-40f9d45857c1
+  :subject_uuid: 2886a5f1-92f6-44ba-8adb-185b2a161870
+  :subject_name: Deployment
+  :parent_uuid: 49266d65-66c0-459f-9a7f-3b8a4a7c0aab
+  :parent_name: Q1
+  :description_link: Deployment/Deploy_a_Static_WebSite_to_AWS_S3.desc.md
+  :instructor_notes_link: Deployment/Deploy_a_Static_WebSite_to_AWS_S3.notes.md
+  :published: true
+  :suggested_days: 1.0
+  :experience_success_criteria:
+  - :success_criterion_uuid: d183eb60-fcfc-40d1-9cae-d85f5f349fb0
+    :success_criterion_name: Deploy to static hosting sites and explain the function
+      and purpose of static hosting
+- :name: AWS S3 bucket custom domain
+  :uuid: 9560785b-7d9a-4dc6-9102-09a98406bdb9
+  :subject_uuid: 2886a5f1-92f6-44ba-8adb-185b2a161870
+  :subject_name: Deployment
+  :parent_uuid: 49266d65-66c0-459f-9a7f-3b8a4a7c0aab
+  :parent_name: Q1
+  :description_link: Deployment/AWS_S3_bucket_custom_domain.desc.md
+  :instructor_notes_link: Deployment/AWS_S3_bucket_custom_domain.notes.md
+  :published: true
+  :suggested_days: 0.0
+  :experience_success_criteria: []
+- :name: Typing
+  :uuid: 3dd5ba03-111a-4401-ad5d-87703eace205
+  :subject_uuid: 793b8c6a-a19d-4049-8183-9d454bf55028
+  :subject_name: Thinking Like a Developer
+  :parent_uuid: 49266d65-66c0-459f-9a7f-3b8a4a7c0aab
+  :parent_name: Q1
+  :description_link: Thinking_Like_a_Developer/Typing.desc.md
+  :instructor_notes_link: Thinking_Like_a_Developer/Typing.notes.md
+  :published: true
+  :suggested_days: 1.0
+  :experience_success_criteria:
+  - :success_criterion_uuid: 07448ee9-9e09-43de-9afd-c4acba35a6c2
+    :success_criterion_name: Touch type code at least 40 WPM
+- :name: JavaScript Errors
+  :uuid: 121e5f4e-072d-48f5-8bfc-ce73112abb76
+  :subject_uuid: ac805334-f3dd-4288-9a61-0dcef3e219d4
+  :subject_name: Programming with Javascript
+  :parent_uuid: 49266d65-66c0-459f-9a7f-3b8a4a7c0aab
+  :parent_name: Q1
+  :description_link: Programming_with_Javascript/JavaScript_Errors.desc.md
+  :instructor_notes_link: Programming_with_Javascript/JavaScript_Errors.notes.md
+  :published: true
+  :suggested_days: 1.0
+  :experience_success_criteria:
+  - :success_criterion_uuid: 4ff0b45a-b12f-416e-a130-64ad30dfb133
+    :success_criterion_name: Identify and fix common JS Errors
+  - :success_criterion_uuid: 42c0aaa9-3c36-4d71-bfc5-d0657eea857c
+    :success_criterion_name: Interacts with error messages
+- :name: Q2
+  :uuid: 4bb248e1-9320-4d89-95d9-23fcafedbd47
+  :subject_uuid: 
+  :subject_name: 
+  :parent_uuid: 
+  :parent_name: 
+  :description_link: Misc/Q2.desc.md
+  :instructor_notes_link: Misc/Q2.desc.md
+  :published: true
+  :suggested_days: 0.0
+  :experience_success_criteria: []
+- :name: Flexbox
+  :uuid: 06289a17-79da-48ee-92c6-2052ed10880c
+  :subject_uuid: 0c1be570-48b4-48a8-bc98-7da27a7be512
+  :subject_name: CSS
+  :parent_uuid: 4bb248e1-9320-4d89-95d9-23fcafedbd47
+  :parent_name: Q2
+  :description_link: CSS/Flexbox.desc.md
+  :instructor_notes_link: CSS/Flexbox.notes.md
+  :published: true
+  :suggested_days: 1.0
+  :experience_success_criteria:
+  - :success_criterion_uuid: 0e8bdbe9-9592-4704-9ddf-46159d7a11d8
+    :success_criterion_name: Use CSS3 and advanced browser tooling to create responsive
+      pages
+- :name: Git for teams (branching, merging)
+  :uuid: c20b6dd9-83f6-4a38-992a-b78e9b1f85ae
+  :subject_uuid: 3f805b07-096d-4024-bce2-20b19f92199a
+  :subject_name: Version Control (Git and Github)
+  :parent_uuid: 4bb248e1-9320-4d89-95d9-23fcafedbd47
+  :parent_name: Q2
+  :description_link: Version_Control_(Git_and_Github)/Git_for_teams_(branching,_merging).desc.md
+  :instructor_notes_link: Version_Control_(Git_and_Github)/Git_for_teams_(branching,_merging).notes.md
+  :published: true
+  :suggested_days: 0.0
+  :experience_success_criteria:
+  - :success_criterion_uuid: 3e7127ec-a7a6-417d-b505-16fd9a5909f0
+    :success_criterion_name: Collaborate with other developers using clone and fork-based
+      workflows with Github
+  - :success_criterion_uuid: 37687853-c626-4f58-b9d2-641b1077f92b
+    :success_criterion_name: Manage feature development with Git branches using a
+      merge strategy
+- :name: 'Node: Modules'
+  :uuid: 2a3fbb29-4447-440d-89e8-081ea3ec4ba8
+  :subject_uuid: d465e693-2e94-43a2-b99e-bb7283161bc2
+  :subject_name: Server Side JS with Node
+  :parent_uuid: 4bb248e1-9320-4d89-95d9-23fcafedbd47
+  :parent_name: Q2
+  :description_link: Server_Side_JS_with_Node/Node:_Modules.desc.md
+  :instructor_notes_link: Server_Side_JS_with_Node/Node:_Modules.notes.md
+  :published: true
+  :suggested_days: 1.0
+  :experience_success_criteria:
+  - :success_criterion_uuid: 7470e677-6614-4f54-ae3f-0e916cfa4968
+    :success_criterion_name: Define and require Node modules
+- :name: 'Node: Basics / FS Module'
+  :uuid: 3d1f90ab-e149-4512-8c71-c8074baab385
+  :subject_uuid: d465e693-2e94-43a2-b99e-bb7283161bc2
+  :subject_name: Server Side JS with Node
+  :parent_uuid: 4bb248e1-9320-4d89-95d9-23fcafedbd47
+  :parent_name: Q2
+  :description_link: Server_Side_JS_with_Node/Node:_Basics__FS_Module.desc.md
+  :instructor_notes_link: Server_Side_JS_with_Node/Node:_Basics__FS_Module.notes.md
+  :published: true
+  :suggested_days: 1.0
+  :experience_success_criteria:
+  - :success_criterion_uuid: cc31174c-7920-44ce-803a-0136d0a26ee3
+    :success_criterion_name: Use the APIs built-in to Node.js for OS specific operations
+  - :success_criterion_uuid: 7470e677-6614-4f54-ae3f-0e916cfa4968
+    :success_criterion_name: Define and require Node modules
+  - :success_criterion_uuid: 20e0212e-c577-465c-906f-5f3491a6fdfe
+    :success_criterion_name: Describe what server-side frameworks like Express do
+- :name: Stream Adventure
+  :uuid: e45df13c-ed11-46ce-96e4-e1a0e351d310
+  :subject_uuid: d465e693-2e94-43a2-b99e-bb7283161bc2
+  :subject_name: Server Side JS with Node
+  :parent_uuid: 4bb248e1-9320-4d89-95d9-23fcafedbd47
+  :parent_name: Q2
+  :description_link: Server_Side_JS_with_Node/Stream_Adventure.desc.md
+  :instructor_notes_link: Server_Side_JS_with_Node/Stream_Adventure.notes.md
+  :published: true
+  :suggested_days: 1.0
+  :experience_success_criteria:
+  - :success_criterion_uuid: 1ebe7d45-7bcb-4979-ab85-f3760f0c52cf
+    :success_criterion_name: Control the flow of your program using EventEmitters
+- :name: 'Node: Creating an HTTP Server'
+  :uuid: 22f7778e-e4e6-4ebb-a012-8243b410f594
+  :subject_uuid: d465e693-2e94-43a2-b99e-bb7283161bc2
+  :subject_name: Server Side JS with Node
+  :parent_uuid: 4bb248e1-9320-4d89-95d9-23fcafedbd47
+  :parent_name: Q2
+  :description_link: Server_Side_JS_with_Node/Node:_Creating_an_HTTP_Server.desc.md
+  :instructor_notes_link: Server_Side_JS_with_Node/Node:_Creating_an_HTTP_Server.notes.md
+  :published: true
+  :suggested_days: 1.0
+  :experience_success_criteria:
+  - :success_criterion_uuid: d62923ca-e93e-46c3-bbcb-454411233ed9
+    :success_criterion_name: 'Identify common protocols and explain their purpose '
+  - :success_criterion_uuid: 84bbf0ae-2d55-490b-bc84-d4ae4dc45e14
+    :success_criterion_name: Discuss and diagram Client-Server Model
+  - :success_criterion_uuid: 5b704c5f-75af-4039-a691-4f2dd8ba2971
+    :success_criterion_name: Identify the parts of an HTTP request and response and
+      discuss their purpose
+  - :success_criterion_uuid: 960362a6-e341-487b-a292-95840148c429
+    :success_criterion_name: Discuss the semantics of common HTTP Verbs, Headers,
+      and Status Codes
+  - :success_criterion_uuid: 1ebe7d45-7bcb-4979-ab85-f3760f0c52cf
+    :success_criterion_name: Control the flow of your program using EventEmitters
+  - :success_criterion_uuid: be9709cc-957a-4652-ab52-4730113e11f7
+    :success_criterion_name: Handle errors using Node patterns
+  - :success_criterion_uuid: cc31174c-7920-44ce-803a-0136d0a26ee3
+    :success_criterion_name: Use the APIs built-in to Node.js for OS specific operations
+  - :success_criterion_uuid: 7470e677-6614-4f54-ae3f-0e916cfa4968
+    :success_criterion_name: Define and require Node modules
+  - :success_criterion_uuid: 8bfec408-1579-4ecd-80cd-d95de9c1c0ac
+    :success_criterion_name: Explain the function and purpose environment variables
+      and use them in their projects
+- :name: 'Node: Deploying to Heroku'
+  :uuid: 87599005-652f-4ed2-998f-0da84a65425a
+  :subject_uuid: 2886a5f1-92f6-44ba-8adb-185b2a161870
+  :subject_name: Deployment
+  :parent_uuid: 4bb248e1-9320-4d89-95d9-23fcafedbd47
+  :parent_name: Q2
+  :description_link: Deployment/Node:_Deploying_to_Heroku.desc.md
+  :instructor_notes_link: Deployment/Node:_Deploying_to_Heroku.notes.md
+  :published: true
+  :suggested_days: 1.0
+  :experience_success_criteria:
+  - :success_criterion_uuid: 8cf1f10a-fc6b-4c09-a2bc-6e4d1a901dad
+    :success_criterion_name: Deploy to Heroku (a PaaS Provider)
+  - :success_criterion_uuid: 8bfec408-1579-4ecd-80cd-d95de9c1c0ac
+    :success_criterion_name: Explain the function and purpose environment variables
+      and use them in their projects
+- :name: 'Express: Introduction'
+  :uuid: 806a4d1e-77b8-424a-a1f9-c2a1bfce3ce5
+  :subject_uuid: bb388526-c903-45a9-afbf-e6dff6f501d1
+  :subject_name: Server Side Frameworks with Express
+  :parent_uuid: 4bb248e1-9320-4d89-95d9-23fcafedbd47
+  :parent_name: Q2
+  :description_link: Server_Side_Frameworks_with_Express/Express:_Introduction.desc.md
+  :instructor_notes_link: Server_Side_Frameworks_with_Express/Express:_Introduction.notes.md
+  :published: true
+  :suggested_days: 2.0
+  :experience_success_criteria:
+  - :success_criterion_uuid: d62923ca-e93e-46c3-bbcb-454411233ed9
+    :success_criterion_name: 'Identify common protocols and explain their purpose '
+  - :success_criterion_uuid: 84bbf0ae-2d55-490b-bc84-d4ae4dc45e14
+    :success_criterion_name: Discuss and diagram Client-Server Model
+  - :success_criterion_uuid: 5b704c5f-75af-4039-a691-4f2dd8ba2971
+    :success_criterion_name: Identify the parts of an HTTP request and response and
+      discuss their purpose
+  - :success_criterion_uuid: 960362a6-e341-487b-a292-95840148c429
+    :success_criterion_name: Discuss the semantics of common HTTP Verbs, Headers,
+      and Status Codes
+  - :success_criterion_uuid: be9709cc-957a-4652-ab52-4730113e11f7
+    :success_criterion_name: Handle errors using Node patterns
+  - :success_criterion_uuid: cc31174c-7920-44ce-803a-0136d0a26ee3
+    :success_criterion_name: Use the APIs built-in to Node.js for OS specific operations
+  - :success_criterion_uuid: 7470e677-6614-4f54-ae3f-0e916cfa4968
+    :success_criterion_name: Define and require Node modules
+  - :success_criterion_uuid: 20e0212e-c577-465c-906f-5f3491a6fdfe
+    :success_criterion_name: Describe what server-side frameworks like Express do
+  - :success_criterion_uuid: ef7e9988-6893-46ef-a88f-069a4298a5cc
+    :success_criterion_name: Build CRUD apps in Express
+  - :success_criterion_uuid: 8bfec408-1579-4ecd-80cd-d95de9c1c0ac
+    :success_criterion_name: Explain the function and purpose environment variables
+      and use them in their projects
+  - :success_criterion_uuid: 06005077-158b-4cd8-903f-562b709aa071
+    :success_criterion_name: Build a web app that separates concerns using models,
+      views, and controllers
+  - :success_criterion_uuid: 107c626b-4b43-4357-90a3-093a48c0c8c5
+    :success_criterion_name: Set up developer environments for applications written
+      in an unfamiliar languages
+- :name: Deploying Express / Postgres Apps to Heroku using dotenv
+  :uuid: 80f9aa12-914a-4972-aea0-5c61418688e4
+  :subject_uuid: 2886a5f1-92f6-44ba-8adb-185b2a161870
+  :subject_name: Deployment
+  :parent_uuid: 4bb248e1-9320-4d89-95d9-23fcafedbd47
+  :parent_name: Q2
+  :description_link: Deployment/Deploying_Express__Postgres_Apps_to_Heroku_using_dotenv.desc.md
+  :instructor_notes_link: Deployment/Deploying_Express__Postgres_Apps_to_Heroku_using_dotenv.notes.md
+  :published: true
+  :suggested_days: 1.0
+  :experience_success_criteria:
+  - :success_criterion_uuid: 8cf1f10a-fc6b-4c09-a2bc-6e4d1a901dad
+    :success_criterion_name: Deploy to Heroku (a PaaS Provider)
+  - :success_criterion_uuid: 8bfec408-1579-4ecd-80cd-d95de9c1c0ac
+    :success_criterion_name: Explain the function and purpose environment variables
+      and use them in their projects
+- :name: 'Node: Server Side Requests'
+  :uuid: 9931faab-a358-4208-aa8e-d90d3fc40f35
+  :subject_uuid: d465e693-2e94-43a2-b99e-bb7283161bc2
+  :subject_name: Server Side JS with Node
+  :parent_uuid: 4bb248e1-9320-4d89-95d9-23fcafedbd47
+  :parent_name: Q2
+  :description_link: Server_Side_JS_with_Node/Node:_Server_Side_Requests.desc.md
+  :instructor_notes_link: Server_Side_JS_with_Node/Node:_Server_Side_Requests.notes.md
+  :published: true
+  :suggested_days: 1.0
+  :experience_success_criteria:
+  - :success_criterion_uuid: 0f22502a-68fe-4dbe-95d7-b1f4919fe1bf
+    :success_criterion_name: Approaches problems in a methodical and disciplined manner
+  - :success_criterion_uuid: 84bbf0ae-2d55-490b-bc84-d4ae4dc45e14
+    :success_criterion_name: Discuss and diagram Client-Server Model
+  - :success_criterion_uuid: 5b704c5f-75af-4039-a691-4f2dd8ba2971
+    :success_criterion_name: Identify the parts of an HTTP request and response and
+      discuss their purpose
+  - :success_criterion_uuid: 1ebe7d45-7bcb-4979-ab85-f3760f0c52cf
+    :success_criterion_name: Control the flow of your program using EventEmitters
+  - :success_criterion_uuid: be9709cc-957a-4652-ab52-4730113e11f7
+    :success_criterion_name: Handle errors using Node patterns
+  - :success_criterion_uuid: cc31174c-7920-44ce-803a-0136d0a26ee3
+    :success_criterion_name: Use the APIs built-in to Node.js for OS specific operations
+  - :success_criterion_uuid: 7470e677-6614-4f54-ae3f-0e916cfa4968
+    :success_criterion_name: Define and require Node modules
+  - :success_criterion_uuid: 3204ce0a-ae01-48c4-af83-5461f8ee7264
+    :success_criterion_name: Make parallel requests using Promise.all
+  - :success_criterion_uuid: bea6617d-30e3-4bb2-81a4-1ab48d37498e
+    :success_criterion_name: Design and implement a RESTful API
+- :name: SQL DDL
+  :uuid: 12a82769-539e-4cc8-8ef9-9e37f9e9b2e8
+  :subject_uuid: 2305e956-adeb-49e4-8b0d-2600b10ddfdc
+  :subject_name: Datastores
+  :parent_uuid: 4bb248e1-9320-4d89-95d9-23fcafedbd47
+  :parent_name: Q2
+  :description_link: Datastores/SQL_DDL.desc.md
+  :instructor_notes_link: Datastores/SQL_DDL.notes.md
+  :published: true
+  :suggested_days: 1.0
+  :experience_success_criteria:
+  - :success_criterion_uuid: 7ec77c83-b497-49c3-b08c-b729a77090b3
+    :success_criterion_name: Design and implement schemas
+- :name: SQL and Relational Databases
+  :uuid: ee6d0613-e5c7-4403-a5b3-d4fa61d04532
+  :subject_uuid: 2305e956-adeb-49e4-8b0d-2600b10ddfdc
+  :subject_name: Datastores
+  :parent_uuid: 4bb248e1-9320-4d89-95d9-23fcafedbd47
+  :parent_name: Q2
+  :description_link: Datastores/SQL_and_Relational_Databases.desc.md
+  :instructor_notes_link: Datastores/SQL_and_Relational_Databases.notes.md
+  :published: true
+  :suggested_days: 3.0
+  :experience_success_criteria:
+  - :success_criterion_uuid: 42c0aaa9-3c36-4d71-bfc5-d0657eea857c
+    :success_criterion_name: Interacts with error messages
+  - :success_criterion_uuid: 0f22502a-68fe-4dbe-95d7-b1f4919fe1bf
+    :success_criterion_name: Approaches problems in a methodical and disciplined manner
+  - :success_criterion_uuid: 7ec77c83-b497-49c3-b08c-b729a77090b3
+    :success_criterion_name: Design and implement schemas
+  - :success_criterion_uuid: 7231cf4a-2dc7-401a-88f9-4159cc1c2e2f
+    :success_criterion_name: Access data in datastores through joins
+  - :success_criterion_uuid: 08f64fd8-ad16-4e3a-bb92-902b8b54de07
+    :success_criterion_name: Write database queries using SQL
+  - :success_criterion_uuid: 99acaf90-3559-4542-a2a4-1071eda89553
+    :success_criterion_name: Contrast the function and purpose of non-relational and
+      relational datastores
+- :name: Data Normalization
+  :uuid: a8c57874-dcea-4e54-94d2-9e037c812ac3
+  :subject_uuid: 2305e956-adeb-49e4-8b0d-2600b10ddfdc
+  :subject_name: Datastores
+  :parent_uuid: 4bb248e1-9320-4d89-95d9-23fcafedbd47
+  :parent_name: Q2
+  :description_link: Datastores/Data_Normalization.desc.md
+  :instructor_notes_link: Datastores/Data_Normalization.notes.md
+  :published: true
+  :suggested_days: 1.0
+  :experience_success_criteria:
+  - :success_criterion_uuid: 7ec77c83-b497-49c3-b08c-b729a77090b3
+    :success_criterion_name: Design and implement schemas
+- :name: Intro to Knex
+  :uuid: 5317e462-55b8-4f00-8030-a0f2b243f5ce
+  :subject_uuid: 2305e956-adeb-49e4-8b0d-2600b10ddfdc
+  :subject_name: Datastores
+  :parent_uuid: 4bb248e1-9320-4d89-95d9-23fcafedbd47
+  :parent_name: Q2
+  :description_link: Datastores/Intro_to_Knex.desc.md
+  :instructor_notes_link: Datastores/Intro_to_Knex.notes.md
+  :published: true
+  :suggested_days: 1.0
+  :experience_success_criteria:
+  - :success_criterion_uuid: ef7e9988-6893-46ef-a88f-069a4298a5cc
+    :success_criterion_name: Build CRUD apps in Express
+  - :success_criterion_uuid: 349b2e45-b20a-44d1-80c8-1216e14c301f
+    :success_criterion_name: Access data using an ORM / Knex
+- :name: 'Express: CRUD w/ SQL'
+  :uuid: f6cb951f-689f-4f05-bf73-b164d4e18fd6
+  :subject_uuid: bb388526-c903-45a9-afbf-e6dff6f501d1
+  :subject_name: Server Side Frameworks with Express
+  :parent_uuid: 4bb248e1-9320-4d89-95d9-23fcafedbd47
+  :parent_name: Q2
+  :description_link: Server_Side_Frameworks_with_Express/Express:_CRUD_w_SQL.desc.md
+  :instructor_notes_link: Server_Side_Frameworks_with_Express/Express:_CRUD_w_SQL.notes.md
+  :published: true
+  :suggested_days: 4.0
+  :experience_success_criteria:
+  - :success_criterion_uuid: 960362a6-e341-487b-a292-95840148c429
+    :success_criterion_name: Discuss the semantics of common HTTP Verbs, Headers,
+      and Status Codes
+  - :success_criterion_uuid: 20e0212e-c577-465c-906f-5f3491a6fdfe
+    :success_criterion_name: Describe what server-side frameworks like Express do
+  - :success_criterion_uuid: ef7e9988-6893-46ef-a88f-069a4298a5cc
+    :success_criterion_name: Build CRUD apps in Express
+  - :success_criterion_uuid: 349b2e45-b20a-44d1-80c8-1216e14c301f
+    :success_criterion_name: Access data using an ORM / Knex
+  - :success_criterion_uuid: 7231cf4a-2dc7-401a-88f9-4159cc1c2e2f
+    :success_criterion_name: Access data in datastores through joins
+  - :success_criterion_uuid: 7ec77c83-b497-49c3-b08c-b729a77090b3
+    :success_criterion_name: Design and implement schemas
+  - :success_criterion_uuid: 08f64fd8-ad16-4e3a-bb92-902b8b54de07
+    :success_criterion_name: Write database queries using SQL
+  - :success_criterion_uuid: 99acaf90-3559-4542-a2a4-1071eda89553
+    :success_criterion_name: Contrast the function and purpose of non-relational and
+      relational datastores
+  - :success_criterion_uuid: bea6617d-30e3-4bb2-81a4-1ab48d37498e
+    :success_criterion_name: Design and implement a RESTful API
+- :name: 'Knex Database Migrations in Node '
+  :uuid: e1850a4a-967d-4224-9075-3d90039f656f
+  :subject_uuid: 2305e956-adeb-49e4-8b0d-2600b10ddfdc
+  :subject_name: Datastores
+  :parent_uuid: 4bb248e1-9320-4d89-95d9-23fcafedbd47
+  :parent_name: Q2
+  :description_link: Datastores/Knex_Database_Migrations_in_Node_.desc.md
+  :instructor_notes_link: Datastores/Knex_Database_Migrations_in_Node_.notes.md
+  :published: true
+  :suggested_days: 1.0
+  :experience_success_criteria:
+  - :success_criterion_uuid: 349b2e45-b20a-44d1-80c8-1216e14c301f
+    :success_criterion_name: Access data using an ORM / Knex
+- :name: 'Express: Error Handling'
+  :uuid: 12d4a162-2a4d-44fd-8988-acba40e08a13
+  :subject_uuid: bb388526-c903-45a9-afbf-e6dff6f501d1
+  :subject_name: Server Side Frameworks with Express
+  :parent_uuid: 4bb248e1-9320-4d89-95d9-23fcafedbd47
+  :parent_name: Q2
+  :description_link: Server_Side_Frameworks_with_Express/Express:_Error_Handling.desc.md
+  :instructor_notes_link: Server_Side_Frameworks_with_Express/Express:_Error_Handling.notes.md
+  :published: true
+  :suggested_days: 0.0
+  :experience_success_criteria: []
+- :name: 'Express: Validations'
+  :uuid: c56f731a-6eca-4d06-a84a-f382e77c65c0
+  :subject_uuid: bb388526-c903-45a9-afbf-e6dff6f501d1
+  :subject_name: Server Side Frameworks with Express
+  :parent_uuid: 4bb248e1-9320-4d89-95d9-23fcafedbd47
+  :parent_name: Q2
+  :description_link: Server_Side_Frameworks_with_Express/Express:_Validations.desc.md
+  :instructor_notes_link: Server_Side_Frameworks_with_Express/Express:_Validations.notes.md
+  :published: true
+  :suggested_days: 1.0
+  :experience_success_criteria:
+  - :success_criterion_uuid: d5a4c20f-4922-43e4-a7bb-388438235f40
+    :success_criterion_name: Build HTML Forms and Controls
+  - :success_criterion_uuid: 42c0aaa9-3c36-4d71-bfc5-d0657eea857c
+    :success_criterion_name: Interacts with error messages
+  - :success_criterion_uuid: 0f22502a-68fe-4dbe-95d7-b1f4919fe1bf
+    :success_criterion_name: Approaches problems in a methodical and disciplined manner
+  - :success_criterion_uuid: 20e0212e-c577-465c-906f-5f3491a6fdfe
+    :success_criterion_name: Describe what server-side frameworks like Express do
+  - :success_criterion_uuid: ef7e9988-6893-46ef-a88f-069a4298a5cc
+    :success_criterion_name: Build CRUD apps in Express
+- :name: 'Express: Form-Based Authentication'
+  :uuid: eb0d2202-594e-4fc3-8d17-2cadcc71d472
+  :subject_uuid: 49275f51-fb52-4c08-a691-ecbc22f6a2e9
+  :subject_name: Auth
+  :parent_uuid: 4bb248e1-9320-4d89-95d9-23fcafedbd47
+  :parent_name: Q2
+  :description_link: Auth/Express:_Form-Based_Authentication.desc.md
+  :instructor_notes_link: Auth/Express:_Form-Based_Authentication.notes.md
+  :published: true
+  :suggested_days: 2.0
+  :experience_success_criteria:
+  - :success_criterion_uuid: 20e0212e-c577-465c-906f-5f3491a6fdfe
+    :success_criterion_name: Describe what server-side frameworks like Express do
+  - :success_criterion_uuid: ef7e9988-6893-46ef-a88f-069a4298a5cc
+    :success_criterion_name: Build CRUD apps in Express
+  - :success_criterion_uuid: 8ab48f11-82c3-4f7f-ad09-efdae6180aea
+    :success_criterion_name: Build form-based authentication in Express using cookie-session
+  - :success_criterion_uuid: 1527f6f1-dff1-45a5-b987-509d40ca1e3e
+    :success_criterion_name: Describe auth concepts including form-based authentication,
+      OAuth and authorization
+  - :success_criterion_uuid: 8bfec408-1579-4ecd-80cd-d95de9c1c0ac
+    :success_criterion_name: Explain the function and purpose environment variables
+      and use them in their projects
+- :name: 'Express: Authorization & Middleware'
+  :uuid: 4f089306-384e-4f1f-8765-e150b1b8fa5a
+  :subject_uuid: 49275f51-fb52-4c08-a691-ecbc22f6a2e9
+  :subject_name: Auth
+  :parent_uuid: 4bb248e1-9320-4d89-95d9-23fcafedbd47
+  :parent_name: Q2
+  :description_link: Auth/Express:_Authorization_&_Middleware.desc.md
+  :instructor_notes_link: Auth/Express:_Authorization_&_Middleware.notes.md
+  :published: true
+  :suggested_days: 1.0
+  :experience_success_criteria:
+  - :success_criterion_uuid: 3f1fd6fd-be9b-4ced-9683-d17105fcc3ec
+    :success_criterion_name: Build OAuth user login in Express using Passport
+  - :success_criterion_uuid: df58e25f-7716-4325-a90e-4f41846cc7cb
+    :success_criterion_name: Protect content in Express using middleware substacks
+  - :success_criterion_uuid: 8ab48f11-82c3-4f7f-ad09-efdae6180aea
+    :success_criterion_name: Build form-based authentication in Express using cookie-session
+  - :success_criterion_uuid: 1527f6f1-dff1-45a5-b987-509d40ca1e3e
+    :success_criterion_name: Describe auth concepts including form-based authentication,
+      OAuth and authorization
+  - :success_criterion_uuid: cbaa4c7e-3a15-4530-ac43-bf910951db84
+    :success_criterion_name: Secure an API endpoint using token-based authentication
+      and CORS
+- :name: 'Express: OAuth w/ Passport'
+  :uuid: 4a581b1b-2dff-400e-8e1e-a5dab039318c
+  :subject_uuid: 49275f51-fb52-4c08-a691-ecbc22f6a2e9
+  :subject_name: Auth
+  :parent_uuid: 4bb248e1-9320-4d89-95d9-23fcafedbd47
+  :parent_name: Q2
+  :description_link: Auth/Express:_OAuth_w_Passport.desc.md
+  :instructor_notes_link: Auth/Express:_OAuth_w_Passport.notes.md
+  :published: true
+  :suggested_days: 1.0
+  :experience_success_criteria:
+  - :success_criterion_uuid: 3f1fd6fd-be9b-4ced-9683-d17105fcc3ec
+    :success_criterion_name: Build OAuth user login in Express using Passport
+  - :success_criterion_uuid: 8ab48f11-82c3-4f7f-ad09-efdae6180aea
+    :success_criterion_name: Build form-based authentication in Express using cookie-session
+  - :success_criterion_uuid: 1527f6f1-dff1-45a5-b987-509d40ca1e3e
+    :success_criterion_name: Describe auth concepts including form-based authentication,
+      OAuth and authorization
+  - :success_criterion_uuid: cbaa4c7e-3a15-4530-ac43-bf910951db84
+    :success_criterion_name: Secure an API endpoint using token-based authentication
+      and CORS
+  - :success_criterion_uuid: bea6617d-30e3-4bb2-81a4-1ab48d37498e
+    :success_criterion_name: Design and implement a RESTful API
+- :name: Associations and Promises
+  :uuid: 2415f521-7cf3-4bdf-ba34-13824673e233
+  :subject_uuid: 412ea142-dd72-4e21-8e52-2bb72ad3e09b
+  :subject_name: Promises
+  :parent_uuid: 4bb248e1-9320-4d89-95d9-23fcafedbd47
+  :parent_name: Q2
+  :description_link: Promises/Associations_and_Promises.desc.md
+  :instructor_notes_link: Promises/Associations_and_Promises.notes.md
+  :published: true
+  :suggested_days: 7.0
+  :experience_success_criteria:
+  - :success_criterion_uuid: 427bd950-e449-4341-ba01-3e41f552b4bb
+    :success_criterion_name: Make sequential asynchronous calls in separate methods
+      and return the final result with basic error handling using Promises
+- :name: Programming Fundamentals Assessment Part 1
+  :uuid: 5f69bb9d-50ad-4eaa-8346-c3b4732641dc
+  :subject_uuid: ac805334-f3dd-4288-9a61-0dcef3e219d4
+  :subject_name: Programming with Javascript
+  :parent_uuid: 4bb248e1-9320-4d89-95d9-23fcafedbd47
+  :parent_name: Q2
+  :description_link: Programming_with_Javascript/Programming_Fundamentals_Assessment_Part_1.desc.md
+  :instructor_notes_link: Programming_with_Javascript/Programming_Fundamentals_Assessment_Part_1.notes.md
+  :published: true
+  :suggested_days: 0.0
+  :experience_success_criteria:
+  - :success_criterion_uuid: 0b60b9c0-f189-48f3-84d0-f6622dd66971
+    :success_criterion_name: Target, create and manipulate DOM Elements
+  - :success_criterion_uuid: 774786f3-e071-4479-afa8-48d5a0401e7d
+    :success_criterion_name: Uses `this` to manipulate the current context
+- :name: Full Stack CRUD Assessment
+  :uuid: d323186b-a18f-47e5-9271-9e1960b0325e
+  :subject_uuid: bb388526-c903-45a9-afbf-e6dff6f501d1
+  :subject_name: Server Side Frameworks with Express
+  :parent_uuid: 4bb248e1-9320-4d89-95d9-23fcafedbd47
+  :parent_name: Q2
+  :description_link: Server_Side_Frameworks_with_Express/Full_Stack_CRUD_Assessment.desc.md
+  :instructor_notes_link: Server_Side_Frameworks_with_Express/Full_Stack_CRUD_Assessment.notes.md
+  :published: true
+  :suggested_days: 0.0
+  :experience_success_criteria: []
+- :name: User Testing
+  :uuid: 38ac9ff2-91e7-4ff3-9115-75bfca3b8282
+  :subject_uuid: 39680f2e-8004-4029-a637-1722f5b54625
+  :subject_name: UX User Testing
+  :parent_uuid: 4bb248e1-9320-4d89-95d9-23fcafedbd47
+  :parent_name: Q2
+  :description_link: UX_User_Testing/User_Testing.desc.md
+  :instructor_notes_link: UX_User_Testing/User_Testing.notes.md
+  :published: true
+  :suggested_days: 1.0
+  :experience_success_criteria:
+  - :success_criterion_uuid: 35d1d1ae-ceba-436f-9f41-32944b8e1028
+    :success_criterion_name: Gather and validate requirements from a user and test
+      that user’s response to a minimum testable artifact
+  - :success_criterion_uuid: a8e5b3db-eefd-41c3-aa94-ad2fbe7e8634
+    :success_criterion_name: Design and execute user tests, then implement changes
+      based on feedback
+- :name: Group CRUD Project
+  :uuid: 060a99f5-4c71-4ca7-91ac-93aad5048eee
+  :subject_uuid: d465e693-2e94-43a2-b99e-bb7283161bc2
+  :subject_name: Server Side JS with Node
+  :parent_uuid: 4bb248e1-9320-4d89-95d9-23fcafedbd47
+  :parent_name: Q2
+  :description_link: Server_Side_JS_with_Node/Group_CRUD_Project.desc.md
+  :instructor_notes_link: Server_Side_JS_with_Node/Group_CRUD_Project.notes.md
+  :published: true
+  :suggested_days: 5.0
+  :experience_success_criteria:
+  - :success_criterion_uuid: 0958889f-c375-4cd0-bcf4-11521a47ac7e
+    :success_criterion_name: Participates productively in code reviews
+  - :success_criterion_uuid: 96596d80-98aa-42c7-b280-768b2b52adb7
+    :success_criterion_name: Collaborates productively with other developers
+  - :success_criterion_uuid: 5a36d842-c508-4cbe-906d-f586f3b0e424
+    :success_criterion_name: Complete projects using an agile methodology
+- :name: Express with pg
+  :uuid: 48661018-1921-470f-a2c5-9721d9bc449a
+  :subject_uuid: 2305e956-adeb-49e4-8b0d-2600b10ddfdc
+  :subject_name: Datastores
+  :parent_uuid: 4bb248e1-9320-4d89-95d9-23fcafedbd47
+  :parent_name: Q2
+  :description_link: Datastores/Express_with_pg.desc.md
+  :instructor_notes_link: Datastores/Express_with_pg.notes.md
+  :published: true
+  :suggested_days: 1.0
+  :experience_success_criteria:
+  - :success_criterion_uuid: 84bbf0ae-2d55-490b-bc84-d4ae4dc45e14
+    :success_criterion_name: Discuss and diagram Client-Server Model
+  - :success_criterion_uuid: d62923ca-e93e-46c3-bbcb-454411233ed9
+    :success_criterion_name: 'Identify common protocols and explain their purpose '
+  - :success_criterion_uuid: 960362a6-e341-487b-a292-95840148c429
+    :success_criterion_name: Discuss the semantics of common HTTP Verbs, Headers,
+      and Status Codes
+  - :success_criterion_uuid: be9709cc-957a-4652-ab52-4730113e11f7
+    :success_criterion_name: Handle errors using Node patterns
+  - :success_criterion_uuid: cc31174c-7920-44ce-803a-0136d0a26ee3
+    :success_criterion_name: Use the APIs built-in to Node.js for OS specific operations
+  - :success_criterion_uuid: 7470e677-6614-4f54-ae3f-0e916cfa4968
+    :success_criterion_name: Define and require Node modules
+  - :success_criterion_uuid: 349b2e45-b20a-44d1-80c8-1216e14c301f
+    :success_criterion_name: Access data using an ORM / Knex
+  - :success_criterion_uuid: 7ec77c83-b497-49c3-b08c-b729a77090b3
+    :success_criterion_name: Design and implement schemas
+  - :success_criterion_uuid: 08f64fd8-ad16-4e3a-bb92-902b8b54de07
+    :success_criterion_name: Write database queries using SQL
+- :name: SQL operators and JOINs
+  :uuid: 38a6ce22-5965-466f-bee1-841126f377fb
+  :subject_uuid: 2305e956-adeb-49e4-8b0d-2600b10ddfdc
+  :subject_name: Datastores
+  :parent_uuid: 4bb248e1-9320-4d89-95d9-23fcafedbd47
+  :parent_name: Q2
+  :description_link: Datastores/SQL_operators_and_JOINs.desc.md
+  :instructor_notes_link: Datastores/SQL_operators_and_JOINs.notes.md
+  :published: true
+  :suggested_days: 1.0
+  :experience_success_criteria:
+  - :success_criterion_uuid: 7231cf4a-2dc7-401a-88f9-4159cc1c2e2f
+    :success_criterion_name: Access data in datastores through joins
+- :name: Server Side Templating
+  :uuid: dd667299-ae58-4543-be95-64146d4329c8
+  :subject_uuid: bb388526-c903-45a9-afbf-e6dff6f501d1
+  :subject_name: Server Side Frameworks with Express
+  :parent_uuid: 4bb248e1-9320-4d89-95d9-23fcafedbd47
+  :parent_name: Q2
+  :description_link: Server_Side_Frameworks_with_Express/Server_Side_Templating.desc.md
+  :instructor_notes_link: Server_Side_Frameworks_with_Express/Server_Side_Templating.notes.md
+  :published: true
+  :suggested_days: 1.0
+  :experience_success_criteria:
+  - :success_criterion_uuid: 20e0212e-c577-465c-906f-5f3491a6fdfe
+    :success_criterion_name: Describe what server-side frameworks like Express do
+  - :success_criterion_uuid: ef7e9988-6893-46ef-a88f-069a4298a5cc
+    :success_criterion_name: Build CRUD apps in Express
+- :name: Q3
+  :uuid: 7b8c929f-f4a5-4a8d-98d7-ed37d9887c95
+  :subject_uuid: 
+  :subject_name: 
+  :parent_uuid: 
+  :parent_name: 
+  :description_link: Misc/Q3.desc.md
+  :instructor_notes_link: Misc/Q3.desc.md
+  :published: true
+  :suggested_days: 0.0
+  :experience_success_criteria: []
+- :name: Cracking the Coding Interview Warmups
+  :uuid: e22c35aa-c273-4948-a9d4-2422ae754bab
+  :subject_uuid: d5947e67-9d70-4e02-ae2a-b3135a9c1667
+  :subject_name: Data Structures / Algorithms
+  :parent_uuid: 7b8c929f-f4a5-4a8d-98d7-ed37d9887c95
+  :parent_name: Q3
+  :description_link: Data_Structures__Algorithms/Cracking_the_Coding_Interview_Warmups.desc.md
+  :instructor_notes_link: Data_Structures__Algorithms/Cracking_the_Coding_Interview_Warmups.notes.md
+  :published: true
+  :suggested_days: 0.0
+  :experience_success_criteria: []
+- :name: 'Angular: Two-Way Data Binding (prework)'
+  :uuid: e6565b21-af8f-4136-a406-ff9cbdc67683
+  :subject_uuid: b7090a92-612d-4811-ac2c-8d750e5fab1d
+  :subject_name: Client Side Frameworks (Angular)
+  :parent_uuid: 7b8c929f-f4a5-4a8d-98d7-ed37d9887c95
+  :parent_name: Q3
+  :description_link: Client_Side_Frameworks_(Angular)/Angular:_Two-Way_Data_Binding_(prework).desc.md
+  :instructor_notes_link: Client_Side_Frameworks_(Angular)/Angular:_Two-Way_Data_Binding_(prework).notes.md
+  :published: true
+  :suggested_days: 0.0
+  :experience_success_criteria: []
+- :name: 'Angular: Part 1'
+  :uuid: 8d634285-322f-4f65-8bc0-6887f84b9e50
+  :subject_uuid: b7090a92-612d-4811-ac2c-8d750e5fab1d
+  :subject_name: Client Side Frameworks (Angular)
+  :parent_uuid: 7b8c929f-f4a5-4a8d-98d7-ed37d9887c95
+  :parent_name: Q3
+  :description_link: Client_Side_Frameworks_(Angular)/Angular:_Part_1.desc.md
+  :instructor_notes_link: Client_Side_Frameworks_(Angular)/Angular:_Part_1.notes.md
+  :published: true
+  :suggested_days: 5.0
+  :experience_success_criteria:
+  - :success_criterion_uuid: 2601933b-c305-45d8-9527-42cda918507c
+    :success_criterion_name: Explain client-side routing as it relates to server-side
+      routing
+  - :success_criterion_uuid: 4794e677-7800-4e74-991e-b2ec21f40c5a
+    :success_criterion_name: Implement custom-directives
+  - :success_criterion_uuid: 7620b2f5-136a-455f-bbf3-a62ab718ea59
+    :success_criterion_name: Implement and diagram JWT-based authentication between
+      single-page apps and servers
+  - :success_criterion_uuid: c8baa104-1646-4d20-ac5d-40fe886d3bd8
+    :success_criterion_name: Build a single-page CRUD application in Angular using
+      routing, factories / services and $http
+- :name: 'Angular: Dependency Injection Theory'
+  :uuid: 7e508f31-a3ef-4413-b7b8-1e16d84d6724
+  :subject_uuid: b7090a92-612d-4811-ac2c-8d750e5fab1d
+  :subject_name: Client Side Frameworks (Angular)
+  :parent_uuid: 7b8c929f-f4a5-4a8d-98d7-ed37d9887c95
+  :parent_name: Q3
+  :description_link: Client_Side_Frameworks_(Angular)/Angular:_Dependency_Injection_Theory.desc.md
+  :instructor_notes_link: Client_Side_Frameworks_(Angular)/Angular:_Dependency_Injection_Theory.notes.md
+  :published: true
+  :suggested_days: 1.0
+  :experience_success_criteria:
+  - :success_criterion_uuid: 2601933b-c305-45d8-9527-42cda918507c
+    :success_criterion_name: Explain client-side routing as it relates to server-side
+      routing
+  - :success_criterion_uuid: 4794e677-7800-4e74-991e-b2ec21f40c5a
+    :success_criterion_name: Implement custom-directives
+  - :success_criterion_uuid: 7620b2f5-136a-455f-bbf3-a62ab718ea59
+    :success_criterion_name: Implement and diagram JWT-based authentication between
+      single-page apps and servers
+  - :success_criterion_uuid: c8baa104-1646-4d20-ac5d-40fe886d3bd8
+    :success_criterion_name: Build a single-page CRUD application in Angular using
+      routing, factories / services and $http
+- :name: 'Angular: Part 2'
+  :uuid: 1d7ee580-b577-471f-9ec3-d09e1fbbc0db
+  :subject_uuid: b7090a92-612d-4811-ac2c-8d750e5fab1d
+  :subject_name: Client Side Frameworks (Angular)
+  :parent_uuid: 7b8c929f-f4a5-4a8d-98d7-ed37d9887c95
+  :parent_name: Q3
+  :description_link: Client_Side_Frameworks_(Angular)/Angular:_Part_2.desc.md
+  :instructor_notes_link: Client_Side_Frameworks_(Angular)/Angular:_Part_2.notes.md
+  :published: true
+  :suggested_days: 6.0
+  :experience_success_criteria:
+  - :success_criterion_uuid: 2601933b-c305-45d8-9527-42cda918507c
+    :success_criterion_name: Explain client-side routing as it relates to server-side
+      routing
+  - :success_criterion_uuid: 4794e677-7800-4e74-991e-b2ec21f40c5a
+    :success_criterion_name: Implement custom-directives
+  - :success_criterion_uuid: 7620b2f5-136a-455f-bbf3-a62ab718ea59
+    :success_criterion_name: Implement and diagram JWT-based authentication between
+      single-page apps and servers
+  - :success_criterion_uuid: c8baa104-1646-4d20-ac5d-40fe886d3bd8
+    :success_criterion_name: Build a single-page CRUD application in Angular using
+      routing, factories / services and $http
+- :name: 'Angular: Introduction to Nested Views and Authentication using UI-Router'
+  :uuid: ca3f6431-ec99-49c0-a78e-a54b7142e7ea
+  :subject_uuid: b7090a92-612d-4811-ac2c-8d750e5fab1d
+  :subject_name: Client Side Frameworks (Angular)
+  :parent_uuid: 7b8c929f-f4a5-4a8d-98d7-ed37d9887c95
+  :parent_name: Q3
+  :description_link: Client_Side_Frameworks_(Angular)/Angular:_Introduction_to_Nested_Views_and_Authentication_using_UI-Router.desc.md
+  :instructor_notes_link: Client_Side_Frameworks_(Angular)/Angular:_Introduction_to_Nested_Views_and_Authentication_using_UI-Router.notes.md
+  :published: true
+  :suggested_days: 1.0
+  :experience_success_criteria:
+  - :success_criterion_uuid: 2601933b-c305-45d8-9527-42cda918507c
+    :success_criterion_name: Explain client-side routing as it relates to server-side
+      routing
+  - :success_criterion_uuid: 4794e677-7800-4e74-991e-b2ec21f40c5a
+    :success_criterion_name: Implement custom-directives
+  - :success_criterion_uuid: 7620b2f5-136a-455f-bbf3-a62ab718ea59
+    :success_criterion_name: Implement and diagram JWT-based authentication between
+      single-page apps and servers
+  - :success_criterion_uuid: c8baa104-1646-4d20-ac5d-40fe886d3bd8
+    :success_criterion_name: Build a single-page CRUD application in Angular using
+      routing, factories / services and $http
+- :name: Working with Sockets and Socket.io
+  :uuid: afc5cc55-62b6-458c-bbf5-bed74a43070f
+  :subject_uuid: 1762e39b-4a3e-433a-ac68-c815f3ea067b
+  :subject_name: How the Web Works
+  :parent_uuid: 7b8c929f-f4a5-4a8d-98d7-ed37d9887c95
+  :parent_name: Q3
+  :description_link: How_the_Web_Works/Working_with_Sockets_and_Socket.io.desc.md
+  :instructor_notes_link: How_the_Web_Works/Working_with_Sockets_and_Socket.io.notes.md
+  :published: true
+  :suggested_days: 1.0
+  :experience_success_criteria:
+  - :success_criterion_uuid: 7b523c6a-95b7-423a-b3e4-bd7366346911
+    :success_criterion_name: Write higher order functions that accept functions as
+      parameters
+  - :success_criterion_uuid: 97b70126-a21d-4f83-a7cd-09855c9fa748
+    :success_criterion_name: Discuss the basic function and purpose of web sockets
+- :name: Deploying and Managing AWS EC2
+  :uuid: c9ed76e7-0a2e-4be4-a67a-d997a71dea44
+  :subject_uuid: 2886a5f1-92f6-44ba-8adb-185b2a161870
+  :subject_name: Deployment
+  :parent_uuid: 7b8c929f-f4a5-4a8d-98d7-ed37d9887c95
+  :parent_name: Q3
+  :description_link: Deployment/Deploying_and_Managing_AWS_EC2.desc.md
+  :instructor_notes_link: Deployment/Deploying_and_Managing_AWS_EC2.notes.md
+  :published: true
+  :suggested_days: 0.0
+  :experience_success_criteria:
+  - :success_criterion_uuid: 5ef7bda4-d599-4b11-a435-f518c4469be6
+    :success_criterion_name: Connect to another computer using SSH
+  - :success_criterion_uuid: 14a67719-f04a-4c10-ae39-33ae7142d976
+    :success_criterion_name: Deploy an app to EC2 and compare and contrast the AWS
+      core philosophy with Heroku and Cloud Foundry and pre-cloud era
+- :name: Deploying to Cloud Foundry (run.pivotal.io)
+  :uuid: c3522d86-6dc8-4d10-bb59-bdc7e55404b0
+  :subject_uuid: 2886a5f1-92f6-44ba-8adb-185b2a161870
+  :subject_name: Deployment
+  :parent_uuid: 7b8c929f-f4a5-4a8d-98d7-ed37d9887c95
+  :parent_name: Q3
+  :description_link: Deployment/Deploying_to_Cloud_Foundry_(run.pivotal.io).desc.md
+  :instructor_notes_link: Deployment/Deploying_to_Cloud_Foundry_(run.pivotal.io).notes.md
+  :published: true
+  :suggested_days: 1.0
+  :experience_success_criteria:
+  - :success_criterion_uuid: 79030da6-cfca-479c-8ac2-31826cf70ddd
+    :success_criterion_name: Deploy to Pivotal Web Services Cloud Foundry
+- :name: Cross Browser Support
+  :uuid: 9efe1982-6786-46da-82a5-5666bffc0b94
+  :subject_uuid: bcfe422a-cd35-4fd1-8ff8-6b078c476069
+  :subject_name: Javascript and the Browser
+  :parent_uuid: 7b8c929f-f4a5-4a8d-98d7-ed37d9887c95
+  :parent_name: Q3
+  :description_link: Javascript_and_the_Browser/Cross_Browser_Support.desc.md
+  :instructor_notes_link: Javascript_and_the_Browser/Cross_Browser_Support.notes.md
+  :published: true
+  :suggested_days: 1.0
+  :experience_success_criteria:
+  - :success_criterion_uuid: 0e8bdbe9-9592-4704-9ddf-46159d7a11d8
+    :success_criterion_name: Use CSS3 and advanced browser tooling to create responsive
+      pages
+- :name: Docker
+  :uuid: 60abd80c-d4bd-4a82-a389-2a1a89849f96
+  :subject_uuid: 2886a5f1-92f6-44ba-8adb-185b2a161870
+  :subject_name: Deployment
+  :parent_uuid: 7b8c929f-f4a5-4a8d-98d7-ed37d9887c95
+  :parent_name: Q3
+  :description_link: Deployment/Docker.desc.md
+  :instructor_notes_link: Deployment/Docker.notes.md
+  :published: true
+  :suggested_days: 1.0
+  :experience_success_criteria:
+  - :success_criterion_uuid: 6a02b407-69d9-453b-a747-c8b87950cb2b
+    :success_criterion_name: Develop and deploy an app using Docker containers
+- :name: NoSQL
+  :uuid: 94865a80-b1ce-46c5-90c9-ef514405c514
+  :subject_uuid: 2305e956-adeb-49e4-8b0d-2600b10ddfdc
+  :subject_name: Datastores
+  :parent_uuid: 7b8c929f-f4a5-4a8d-98d7-ed37d9887c95
+  :parent_name: Q3
+  :description_link: Datastores/NoSQL.desc.md
+  :instructor_notes_link: Datastores/NoSQL.notes.md
+  :published: true
+  :suggested_days: 1.0
+  :experience_success_criteria:
+  - :success_criterion_uuid: 99acaf90-3559-4542-a2a4-1071eda89553
+    :success_criterion_name: Contrast the function and purpose of non-relational and
+      relational datastores
+- :name: Intro To Application Architecture
+  :uuid: 92f2d50c-d12d-4120-a752-27da99e4bbf2
+  :subject_uuid: ce60c0de-9f49-423f-bbbe-7fea0c1b875c
+  :subject_name: Architecture
+  :parent_uuid: 7b8c929f-f4a5-4a8d-98d7-ed37d9887c95
+  :parent_name: Q3
+  :description_link: Architecture/Intro_To_Application_Architecture.desc.md
+  :instructor_notes_link: Architecture/Intro_To_Application_Architecture.notes.md
+  :published: true
+  :suggested_days: 1.0
+  :experience_success_criteria:
+  - :success_criterion_uuid: b24ecc78-5a7d-493d-8f66-3d451a9d374c
+    :success_criterion_name: Identifies and explains purpose of common software architectural
+      concepts
+  - :success_criterion_uuid: 1d4c879a-8dd3-4eb0-babc-8414e7ed73ec
+    :success_criterion_name: Discuss and diagram microservice architecture
+  - :success_criterion_uuid: 4f82519b-1fc7-4007-9357-66a94ee520a7
+    :success_criterion_name: Diagram architecture of an n-tier web app
+- :name: Continuous Integration
+  :uuid: 992c0ec1-a0c9-42ec-870b-33b1e9f7a7af
+  :subject_uuid: 2886a5f1-92f6-44ba-8adb-185b2a161870
+  :subject_name: Deployment
+  :parent_uuid: 7b8c929f-f4a5-4a8d-98d7-ed37d9887c95
+  :parent_name: Q3
+  :description_link: Deployment/Continuous_Integration.desc.md
+  :instructor_notes_link: Deployment/Continuous_Integration.notes.md
+  :published: true
+  :suggested_days: 1.0
+  :experience_success_criteria:
+  - :success_criterion_uuid: 4d3b234c-6e4d-4af4-9635-a939fe502ebe
+    :success_criterion_name: Discuss the role and purpose of devops
+  - :success_criterion_uuid: b1e49494-ae23-4e78-9f4a-fa52572b2978
+    :success_criterion_name: Explain the function and purpose of Continuous Deployment
+      and Continuous Integration and apply them to a project
+- :name: Continuous Deployment
+  :uuid: 52607ad8-3456-47a2-8a77-fa36da3900ba
+  :subject_uuid: 2886a5f1-92f6-44ba-8adb-185b2a161870
+  :subject_name: Deployment
+  :parent_uuid: 7b8c929f-f4a5-4a8d-98d7-ed37d9887c95
+  :parent_name: Q3
+  :description_link: Deployment/Continuous_Deployment.desc.md
+  :instructor_notes_link: Deployment/Continuous_Deployment.notes.md
+  :published: true
+  :suggested_days: 1.0
+  :experience_success_criteria:
+  - :success_criterion_uuid: 4d3b234c-6e4d-4af4-9635-a939fe502ebe
+    :success_criterion_name: Discuss the role and purpose of devops
+  - :success_criterion_uuid: b1e49494-ae23-4e78-9f4a-fa52572b2978
+    :success_criterion_name: Explain the function and purpose of Continuous Deployment
+      and Continuous Integration and apply them to a project
+- :name: Application Analysis in Unfamiliar Environment
+  :uuid: fb6d80df-07c2-4fe0-894e-78e684131941
+  :subject_uuid: 0bef6db4-d566-48c2-a5f5-ff09fce3b846
+  :subject_name: Application Analysis in Unfamiliar Environment
+  :parent_uuid: 7b8c929f-f4a5-4a8d-98d7-ed37d9887c95
+  :parent_name: Q3
+  :description_link: Application_Analysis_in_Unfamiliar_Environment/Application_Analysis_in_Unfamiliar_Environment.desc.md
+  :instructor_notes_link: Application_Analysis_in_Unfamiliar_Environment/Application_Analysis_in_Unfamiliar_Environment.notes.md
+  :published: true
+  :suggested_days: 1.0
+  :experience_success_criteria:
+  - :success_criterion_uuid: 0f22502a-68fe-4dbe-95d7-b1f4919fe1bf
+    :success_criterion_name: Approaches problems in a methodical and disciplined manner
+  - :success_criterion_uuid: a0adcfbc-995f-4a6e-bd75-41584ab54a9e
+    :success_criterion_name: Analyze existing code in applications written in unfamiliar
+      languages to fulfill requirements
+  - :success_criterion_uuid: 107c626b-4b43-4357-90a3-093a48c0c8c5
+    :success_criterion_name: Set up developer environments for applications written
+      in an unfamiliar languages
+- :name: Consuming APIs from a Server
+  :uuid: 6b9a2906-b9d9-4b7d-9a12-25b7ae1fe3d0
+  :subject_uuid: 7fb11472-3246-479d-a864-ede3e22c248f
+  :subject_name: Consuming Web APIs
+  :parent_uuid: 7b8c929f-f4a5-4a8d-98d7-ed37d9887c95
+  :parent_name: Q3
+  :description_link: Consuming_Web_APIs/Consuming_APIs_from_a_Server.desc.md
+  :instructor_notes_link: Consuming_Web_APIs/Consuming_APIs_from_a_Server.notes.md
+  :published: true
+  :suggested_days: 0.0
+  :experience_success_criteria:
+  - :success_criterion_uuid: 6a1bc29f-3c91-4665-ac97-b6562cd6ee3b
+    :success_criterion_name: Fetch and send JSON from a server side app
+- :name: Refactoring
+  :uuid: cfe9d855-6d49-4600-9b70-dccd29d4c887
+  :subject_uuid: ac805334-f3dd-4288-9a61-0dcef3e219d4
+  :subject_name: Programming with Javascript
+  :parent_uuid: 7b8c929f-f4a5-4a8d-98d7-ed37d9887c95
+  :parent_name: Q3
+  :description_link: Programming_with_Javascript/Refactoring.desc.md
+  :instructor_notes_link: Programming_with_Javascript/Refactoring.notes.md
+  :published: true
+  :suggested_days: 1.0
+  :experience_success_criteria:
+  - :success_criterion_uuid: 0f22502a-68fe-4dbe-95d7-b1f4919fe1bf
+    :success_criterion_name: Approaches problems in a methodical and disciplined manner
+- :name: Group New Technology Project
+  :uuid: de3464b0-dac2-499a-a109-6334acf0eb8a
+  :subject_uuid: dfec3119-3ba1-4a14-ba2c-9f66715f4b98
+  :subject_name: Agile Project Management
+  :parent_uuid: 7b8c929f-f4a5-4a8d-98d7-ed37d9887c95
+  :parent_name: Q3
+  :description_link: Agile_Project_Management/Group_New_Technology_Project.desc.md
+  :instructor_notes_link: Agile_Project_Management/Group_New_Technology_Project.notes.md
+  :published: true
+  :suggested_days: 5.0
+  :experience_success_criteria: []
+- :name: Q4
+  :uuid: 493f091c-f5d1-4ec3-819a-cdd76d0422cb
+  :subject_uuid: 
+  :subject_name: 
+  :parent_uuid: 
+  :parent_name: 
+  :description_link: Misc/Q4.desc.md
+  :instructor_notes_link: Misc/Q4.desc.md
+  :published: true
+  :suggested_days: 0.0
+  :experience_success_criteria: []
+- :name: Memory Diagrams
+  :uuid: 7b3c27e2-e11d-47b6-87f6-d8cc4b2ddb5e
+  :subject_uuid: ac805334-f3dd-4288-9a61-0dcef3e219d4
+  :subject_name: Programming with Javascript
+  :parent_uuid: 493f091c-f5d1-4ec3-819a-cdd76d0422cb
+  :parent_name: Q4
+  :description_link: Programming_with_Javascript/Memory_Diagrams.desc.md
+  :instructor_notes_link: Programming_with_Javascript/Memory_Diagrams.notes.md
+  :published: true
+  :suggested_days: 0.0
+  :experience_success_criteria:
+  - :success_criterion_uuid: 5767bdd1-0679-43f5-9e7e-addeb2d8c1a4
+    :success_criterion_name: Diagram and explain how reference and primitive types
+      are stored in memory and how they are passed around
+- :name: Classical Object-Oriented Programming in Java
+  :uuid: 7db47b45-56a1-4a06-9464-c47e72b8bec0
+  :subject_uuid: e43b79ad-875a-4817-8ac0-68f7f47f3b42
+  :subject_name: OOP w/ Statically Typed Language
+  :parent_uuid: 493f091c-f5d1-4ec3-819a-cdd76d0422cb
+  :parent_name: Q4
+  :description_link: OOP_w_Statically_Typed_Language/Classical_Object-Oriented_Programming_in_Java.desc.md
+  :instructor_notes_link: OOP_w_Statically_Typed_Language/Classical_Object-Oriented_Programming_in_Java.notes.md
+  :published: true
+  :suggested_days: 3.0
+  :experience_success_criteria:
+  - :success_criterion_uuid: edf5be91-67e1-4e8b-a6ee-ec5b9fc16e09
+    :success_criterion_name: Solve interview-style questions using Java
+  - :success_criterion_uuid: b5a931dd-84f2-45fe-9fd0-e254a2c6f806
+    :success_criterion_name: Contrast statically-typed and dynamically-typed languages
+  - :success_criterion_uuid: 84e30c2e-0715-411f-b39b-db22598897b1
+    :success_criterion_name: Compare and contrast OOP and Functional Programming
+  - :success_criterion_uuid: 0aa5d3c6-9b6c-4c71-a680-35500aec7773
+    :success_criterion_name: Define and explain the significance of the major principles
+      of Object Oriented Programming
+- :name: Whiteboard Interview Prep
+  :uuid: d74c96d8-39fc-43ce-adc2-57ae51fa9b44
+  :subject_uuid: e59bae37-553b-4c1b-8667-4dbbdeeae98d
+  :subject_name: Technical Interview Prep
+  :parent_uuid: 493f091c-f5d1-4ec3-819a-cdd76d0422cb
+  :parent_name: Q4
+  :description_link: Technical_Interview_Prep/Whiteboard_Interview_Prep.desc.md
+  :instructor_notes_link: Technical_Interview_Prep/Whiteboard_Interview_Prep.notes.md
+  :published: true
+  :suggested_days: 1.0
+  :experience_success_criteria:
+  - :success_criterion_uuid: 0f22502a-68fe-4dbe-95d7-b1f4919fe1bf
+    :success_criterion_name: Approaches problems in a methodical and disciplined manner
+  - :success_criterion_uuid: edf5be91-67e1-4e8b-a6ee-ec5b9fc16e09
+    :success_criterion_name: Solve interview-style questions using Java
+  - :success_criterion_uuid: 864fb2e5-1a7c-440d-a21d-eead8eed127e
+    :success_criterion_name: Employ a “Cracking the Coding Interview” technique when
+      solving brain teaser problems
+  - :success_criterion_uuid: eb7d309b-c9ef-4e54-a64d-33af757b8d18
+    :success_criterion_name: Determine the correct algorithm and data structure for
+      interview-style problems following the “Cracking the Coding Interview” process
+  - :success_criterion_uuid: 747da4b3-7b9d-4dee-8209-311ebdb0c588
+    :success_criterion_name: Employ a 4-step process at a whiteboard interview
+- :name: LinkedLists, Stacks and Queues
+  :uuid: 80db8619-d556-40af-a60b-a11595a33315
+  :subject_uuid: d5947e67-9d70-4e02-ae2a-b3135a9c1667
+  :subject_name: Data Structures / Algorithms
+  :parent_uuid: 493f091c-f5d1-4ec3-819a-cdd76d0422cb
+  :parent_name: Q4
+  :description_link: Data_Structures__Algorithms/LinkedLists,_Stacks_and_Queues.desc.md
+  :instructor_notes_link: Data_Structures__Algorithms/LinkedLists,_Stacks_and_Queues.notes.md
+  :published: true
+  :suggested_days: 1.0
+  :experience_success_criteria:
+  - :success_criterion_uuid: 1430686b-e6af-48c3-be11-55c986e55148
+    :success_criterion_name: Implement, evaluate, and use some common data structures
+- :name: 'Testing: Mocha / Chai / Supertest'
+  :uuid: 5ef521f0-80a2-4bdd-a18c-37d047d1c1a9
+  :subject_uuid: 40104e17-a0e4-4bc4-b499-5030c197cb81
+  :subject_name: Automated Testing
+  :parent_uuid: 493f091c-f5d1-4ec3-819a-cdd76d0422cb
+  :parent_name: Q4
+  :description_link: Automated_Testing/Testing:_Mocha__Chai__Supertest.desc.md
+  :instructor_notes_link: Automated_Testing/Testing:_Mocha__Chai__Supertest.notes.md
+  :published: true
+  :suggested_days: 3.0
+  :experience_success_criteria:
+  - :success_criterion_uuid: ea7dac47-4782-4657-91bb-da94ca145915
+    :success_criterion_name: Work with and describe testing database-driven server-side
+      applications w/ Express and Postgres given a working skeleton
+  - :success_criterion_uuid: ee92cc73-7bbc-41a3-af38-719c2195be72
+    :success_criterion_name: Write unit tests in a TDD style using Mocha Chai
+- :name: Negotiating with potential employers
+  :uuid: a3f86d90-fb5e-4b82-9aac-ce1fd8aed1bf
+  :subject_uuid: e59bae37-553b-4c1b-8667-4dbbdeeae98d
+  :subject_name: Technical Interview Prep
+  :parent_uuid: 493f091c-f5d1-4ec3-819a-cdd76d0422cb
+  :parent_name: Q4
+  :description_link: Technical_Interview_Prep/Negotiating_with_potential_employers.desc.md
+  :instructor_notes_link: Technical_Interview_Prep/Negotiating_with_potential_employers.notes.md
+  :published: true
+  :suggested_days: 0.0
+  :experience_success_criteria: []
+- :name: Distributed Memories - Angular, CORS and Express
+  :uuid: d4b24a93-36a2-45a3-8964-d7e1d35234b7
+  :subject_uuid: ce60c0de-9f49-423f-bbbe-7fea0c1b875c
+  :subject_name: Architecture
+  :parent_uuid: 493f091c-f5d1-4ec3-819a-cdd76d0422cb
+  :parent_name: Q4
+  :description_link: Architecture/Distributed_Memories_-_Angular,_CORS_and_Express.desc.md
+  :instructor_notes_link: Architecture/Distributed_Memories_-_Angular,_CORS_and_Express.notes.md
+  :published: true
+  :suggested_days: 0.0
+  :experience_success_criteria: []
+- :name: RESTful Design
+  :uuid: 20f15106-3ee6-4544-bc57-0501ef4a089a
+  :subject_uuid: 0f6ed5e9-c172-4969-b990-f2324c91f5ad
+  :subject_name: Designing APIs
+  :parent_uuid: 493f091c-f5d1-4ec3-819a-cdd76d0422cb
+  :parent_name: Q4
+  :description_link: Designing_APIs/RESTful_Design.desc.md
+  :instructor_notes_link: Designing_APIs/RESTful_Design.notes.md
+  :published: true
+  :suggested_days: 1.0
+  :experience_success_criteria:
+  - :success_criterion_uuid: ec89798f-87ee-4691-abee-28f85bcb5c59
+    :success_criterion_name: Discuss common API design concepts
+  - :success_criterion_uuid: 4655229a-33c6-4e0f-93e1-71c557c67602
+    :success_criterion_name: Document an API using an automated tool
+  - :success_criterion_uuid: bea6617d-30e3-4bb2-81a4-1ab48d37498e
+    :success_criterion_name: Design and implement a RESTful API
+- :name: Big O Notation (time complexity of algorithms)
+  :uuid: 53391ce0-5ce2-4fc1-b0e7-362c0fd7b156
+  :subject_uuid: d5947e67-9d70-4e02-ae2a-b3135a9c1667
+  :subject_name: Data Structures / Algorithms
+  :parent_uuid: 493f091c-f5d1-4ec3-819a-cdd76d0422cb
+  :parent_name: Q4
+  :description_link: Data_Structures__Algorithms/Big_O_Notation_(time_complexity_of_algorithms).desc.md
+  :instructor_notes_link: Data_Structures__Algorithms/Big_O_Notation_(time_complexity_of_algorithms).notes.md
+  :published: true
+  :suggested_days: 1.0
+  :experience_success_criteria:
+  - :success_criterion_uuid: 53e74cc9-53b0-4976-afda-93eebd722088
+    :success_criterion_name: Analyze an algorithm and identify the Big O
+- :name: Capstone Full Stack Project
+  :uuid: c6e1c219-e8ec-40a6-8d3c-79a1f018b688
+  :subject_uuid: dfec3119-3ba1-4a14-ba2c-9f66715f4b98
+  :subject_name: Agile Project Management
+  :parent_uuid: 493f091c-f5d1-4ec3-819a-cdd76d0422cb
+  :parent_name: Q4
+  :description_link: Agile_Project_Management/Capstone_Full_Stack_Project.desc.md
+  :instructor_notes_link: Agile_Project_Management/Capstone_Full_Stack_Project.notes.md
+  :published: true
+  :suggested_days: 10.0
+  :experience_success_criteria: []
+- :name: Trees / DFS / BFS
+  :uuid: 949a84ac-642b-4c20-bff9-8fc6d5b56c0a
+  :subject_uuid: d5947e67-9d70-4e02-ae2a-b3135a9c1667
+  :subject_name: Data Structures / Algorithms
+  :parent_uuid: 493f091c-f5d1-4ec3-819a-cdd76d0422cb
+  :parent_name: Q4
+  :description_link: Data_Structures__Algorithms/Trees__DFS__BFS.desc.md
+  :instructor_notes_link: Data_Structures__Algorithms/Trees__DFS__BFS.notes.md
+  :published: true
+  :suggested_days: 1.0
+  :experience_success_criteria:
+  - :success_criterion_uuid: 1430686b-e6af-48c3-be11-55c986e55148
+    :success_criterion_name: Implement, evaluate, and use some common data structures
+- :name: Cultural Interviews
+  :uuid: 42fd0480-97c4-4617-840a-41dcbbdd4a38
+  :subject_uuid: e59bae37-553b-4c1b-8667-4dbbdeeae98d
+  :subject_name: Technical Interview Prep
+  :parent_uuid: 493f091c-f5d1-4ec3-819a-cdd76d0422cb
+  :parent_name: Q4
+  :description_link: Technical_Interview_Prep/Cultural_Interviews.desc.md
+  :instructor_notes_link: Technical_Interview_Prep/Cultural_Interviews.notes.md
+  :published: true
+  :suggested_days: 1.0
+  :experience_success_criteria:
+  - :success_criterion_uuid: 0fe673a0-4edf-449b-8794-cc13101d60c6
+    :success_criterion_name: Discuss a project that you worked on knowledgeably and
+      enthusiastically
+  - :success_criterion_uuid: 31672d5d-e1ad-40a8-9f18-c9d3134cab5a
+    :success_criterion_name: Gracefully respond to a question you don’t know the answer
+      to
+- :name: Intro to Data Structures
+  :uuid: 395bdb31-bc7e-4265-8dd0-a0041a659805
+  :subject_uuid: d5947e67-9d70-4e02-ae2a-b3135a9c1667
+  :subject_name: Data Structures / Algorithms
+  :parent_uuid: 493f091c-f5d1-4ec3-819a-cdd76d0422cb
+  :parent_name: Q4
+  :description_link: Data_Structures__Algorithms/Intro_to_Data_Structures.desc.md
+  :instructor_notes_link: Data_Structures__Algorithms/Intro_to_Data_Structures.notes.md
+  :published: true
+  :suggested_days: 1.0
+  :experience_success_criteria:
+  - :success_criterion_uuid: 78dcc2e4-dcb2-4b29-9333-fe4e6091063c
+    :success_criterion_name: Create and access complex nested data structures
+  - :success_criterion_uuid: e27bebe6-5b07-428d-9400-2d8f08944076
+    :success_criterion_name: Identify and diagram common data structures
+  - :success_criterion_uuid: 1430686b-e6af-48c3-be11-55c986e55148
+    :success_criterion_name: Implement, evaluate, and use some common data structures
+- :name: Functional Programming with Javascript
+  :uuid: abb5ba41-aed3-45d2-8fac-47cb415d39a5
+  :subject_uuid: 2dc0600d-e1f3-48ff-b241-199ce36fbe3f
+  :subject_name: Functional Programming with Javascript
+  :parent_uuid: 493f091c-f5d1-4ec3-819a-cdd76d0422cb
+  :parent_name: Q4
+  :description_link: Functional_Programming_with_Javascript/Functional_Programming_with_Javascript.desc.md
+  :instructor_notes_link: Functional_Programming_with_Javascript/Functional_Programming_with_Javascript.notes.md
+  :published: true
+  :suggested_days: 1.0
+  :experience_success_criteria:
+  - :success_criterion_uuid: 7b523c6a-95b7-423a-b3e4-bd7366346911
+    :success_criterion_name: Write higher order functions that accept functions as
+      parameters
+  - :success_criterion_uuid: 84e30c2e-0715-411f-b39b-db22598897b1
+    :success_criterion_name: Compare and contrast OOP and Functional Programming
+- :name: Algorithms
+  :uuid: 06a72144-8045-4828-8f59-203fbdb9ccb5
+  :subject_uuid: d5947e67-9d70-4e02-ae2a-b3135a9c1667
+  :subject_name: Data Structures / Algorithms
+  :parent_uuid: 493f091c-f5d1-4ec3-819a-cdd76d0422cb
+  :parent_name: Q4
+  :description_link: Data_Structures__Algorithms/Algorithms.desc.md
+  :instructor_notes_link: Data_Structures__Algorithms/Algorithms.notes.md
+  :published: true
+  :suggested_days: 1.0
+  :experience_success_criteria:
+  - :success_criterion_uuid: eb7d309b-c9ef-4e54-a64d-33af757b8d18
+    :success_criterion_name: Determine the correct algorithm and data structure for
+      interview-style problems following the “Cracking the Coding Interview” process
+  - :success_criterion_uuid: 95508d61-d96d-4d70-80c6-3f00bdf52308
+    :success_criterion_name: Implement common algorithms and describe more complex
+      algorithms
+- :name: ES2015
+  :uuid: 88f04503-aef8-4a3f-8857-406d79cc159f
+  :subject_uuid: a3a04645-41a3-4bb6-89e6-7c9b789a797d
+  :subject_name: ES2015
+  :parent_uuid: 493f091c-f5d1-4ec3-819a-cdd76d0422cb
+  :parent_name: Q4
+  :description_link: ES2015/ES2015.desc.md
+  :instructor_notes_link: ES2015/ES2015.notes.md
+  :published: true
+  :suggested_days: 1.0
+  :experience_success_criteria:
+  - :success_criterion_uuid: 25678b07-1b08-42a4-b666-2cfe2d5527e0
+    :success_criterion_name: Use ES2015 features to write more concise Javascript
+- :name: Web Components
+  :uuid: cf35a8f4-cceb-422d-896d-7ef5f2842c00
+  :subject_uuid: 0c1be570-48b4-48a8-bc98-7da27a7be512
+  :subject_name: CSS
+  :parent_uuid: 493f091c-f5d1-4ec3-819a-cdd76d0422cb
+  :parent_name: Q4
+  :description_link: CSS/Web_Components.desc.md
+  :instructor_notes_link: CSS/Web_Components.notes.md
+  :published: true
+  :suggested_days: 1.0
+  :experience_success_criteria:
+  - :success_criterion_uuid: 0e8bdbe9-9592-4704-9ddf-46159d7a11d8
+    :success_criterion_name: Use CSS3 and advanced browser tooling to create responsive
+      pages
+- :name: Clean Code
+  :uuid: 239213c6-2239-4b23-ba56-b065920d0386
+  :subject_uuid: 
+  :subject_name: 
+  :parent_uuid: 
+  :parent_name: 
+  :description_link: Misc/Clean_Code.desc.md
+  :instructor_notes_link: Misc/Clean_Code.desc.md
+  :published: false
+  :suggested_days: 0.0
+  :experience_success_criteria: []
+- :name: Playlist Q1 Practice Assessment
+  :uuid: 9c73c1f0-6369-447a-bc18-01a3ae1af729
+  :subject_uuid: 
+  :subject_name: 
+  :parent_uuid: 
+  :parent_name: 
+  :description_link: Misc/Playlist_Q1_Practice_Assessment.desc.md
+  :instructor_notes_link: Misc/Playlist_Q1_Practice_Assessment.desc.md
+  :published: false
+  :suggested_days: 1.0
+  :experience_success_criteria: []
+- :name: HTTP and Node.js
+  :uuid: 829c5f34-0309-47b9-9baa-049e1ef5636b
+  :subject_uuid: 
+  :subject_name: 
+  :parent_uuid: 
+  :parent_name: 
+  :description_link: Misc/HTTP_and_Node.js.desc.md
+  :instructor_notes_link: Misc/HTTP_and_Node.js.desc.md
+  :published: false
+  :suggested_days: 2.0
+  :experience_success_criteria: []
+- :name: 'Express: Deploying a CRUD App to Heroku (w/ ENV variables) (deprecated)'
+  :uuid: 777366c9-674b-4888-a2b0-bc76bee7d252
+  :subject_uuid: 2886a5f1-92f6-44ba-8adb-185b2a161870
+  :subject_name: Deployment
+  :parent_uuid: 
+  :parent_name: 
+  :description_link: Deployment/Express:_Deploying_a_CRUD_App_to_Heroku_(w_ENV_variables)_(deprecated).desc.md
+  :instructor_notes_link: Deployment/Express:_Deploying_a_CRUD_App_to_Heroku_(w_ENV_variables)_(deprecated).notes.md
+  :published: false
+  :suggested_days: 1.0
+  :experience_success_criteria: []
+- :name: MongoDB and CRUD
+  :uuid: 030e63e3-1c5d-4221-988b-fa15d7733759
+  :subject_uuid: 
+  :subject_name: 
+  :parent_uuid: 
+  :parent_name: 
+  :description_link: Misc/MongoDB_and_CRUD.desc.md
+  :instructor_notes_link: Misc/MongoDB_and_CRUD.desc.md
+  :published: false
+  :suggested_days: 0.0
+  :experience_success_criteria: []
+- :name: Angular Part 3 - Firebase
+  :uuid: 82becad8-46e6-49b0-ac1c-03ce07c5bfda
+  :subject_uuid: 
+  :subject_name: 
+  :parent_uuid: 
+  :parent_name: 
+  :description_link: Misc/Angular_Part_3_-_Firebase.desc.md
+  :instructor_notes_link: Misc/Angular_Part_3_-_Firebase.desc.md
+  :published: false
+  :suggested_days: 0.0
+  :experience_success_criteria: []
+- :name: CSS Copycat
+  :uuid: eab1e2c7-ac34-48bb-924b-0e284b6f26a0
+  :subject_uuid: 
+  :subject_name: 
+  :parent_uuid: 
+  :parent_name: 
+  :description_link: Misc/CSS_Copycat.desc.md
+  :instructor_notes_link: Misc/CSS_Copycat.desc.md
+  :published: false
+  :suggested_days: 1.0
+  :experience_success_criteria: []
+- :name: Scribe and Sage
+  :uuid: 3b2a3e73-03d9-4e33-b4ce-ef7129200ce3
+  :subject_uuid: 
+  :subject_name: 
+  :parent_uuid: 
+  :parent_name: 
+  :description_link: Misc/Scribe_and_Sage.desc.md
+  :instructor_notes_link: Misc/Scribe_and_Sage.desc.md
+  :published: false
+  :suggested_days: 1.0
+  :experience_success_criteria: []
+- :name: Extreme Blogging
+  :uuid: cb9667af-5bf0-4baa-91ad-0ea0c236a12c
+  :subject_uuid: 
+  :subject_name: 
+  :parent_uuid: 
+  :parent_name: 
+  :description_link: Misc/Extreme_Blogging.desc.md
+  :instructor_notes_link: Misc/Extreme_Blogging.desc.md
+  :published: false
+  :suggested_days: 0.0
+  :experience_success_criteria: []
+- :name: Introduction to Recursion
+  :uuid: 8f332c48-e625-4634-b8eb-17c81d3b4a38
+  :subject_uuid: 
+  :subject_name: 
+  :parent_uuid: 
+  :parent_name: 
+  :description_link: Misc/Introduction_to_Recursion.desc.md
+  :instructor_notes_link: Misc/Introduction_to_Recursion.desc.md
+  :published: false
+  :suggested_days: 1.0
+  :experience_success_criteria: []
+- :name: Trivia - geopardy!
+  :uuid: d634380b-4e3d-4849-a72f-d1be82360324
+  :subject_uuid: 
+  :subject_name: 
+  :parent_uuid: 
+  :parent_name: 
+  :description_link: Misc/Trivia_-_geopardy!.desc.md
+  :instructor_notes_link: Misc/Trivia_-_geopardy!.desc.md
+  :published: false
+  :suggested_days: 0.0
+  :experience_success_criteria: []
+- :name: Warmups
+  :uuid: c82036c0-a63d-48cc-af4b-93ee97ff9c7c
+  :subject_uuid: 
+  :subject_name: 
+  :parent_uuid: 
+  :parent_name: 
+  :description_link: Misc/Warmups.desc.md
+  :instructor_notes_link: Misc/Warmups.desc.md
+  :published: false
+  :suggested_days: 0.0
+  :experience_success_criteria: []
+- :name: Ruby Language
+  :uuid: a94452e7-5247-4020-b1eb-7b6f73e66dc9
+  :subject_uuid: 
+  :subject_name: 
+  :parent_uuid: 
+  :parent_name: 
+  :description_link: Misc/Ruby_Language.desc.md
+  :instructor_notes_link: Misc/Ruby_Language.desc.md
+  :published: false
+  :suggested_days: 2.0
+  :experience_success_criteria: []
+- :name: Rails for JS Developers
+  :uuid: 54ef4232-6118-46b7-9bba-aea81b019f86
+  :subject_uuid: 
+  :subject_name: 
+  :parent_uuid: 
+  :parent_name: 
+  :description_link: Misc/Rails_for_JS_Developers.desc.md
+  :instructor_notes_link: Misc/Rails_for_JS_Developers.desc.md
+  :published: false
+  :suggested_days: 0.0
+  :experience_success_criteria: []
+- :name: Cloud Native Architecture
+  :uuid: 5e4bfc81-e749-4686-a262-6708aaffde8e
+  :subject_uuid: 
+  :subject_name: 
+  :parent_uuid: 
+  :parent_name: 
+  :description_link: Misc/Cloud_Native_Architecture.desc.md
+  :instructor_notes_link: Misc/Cloud_Native_Architecture.desc.md
+  :published: false
+  :suggested_days: 0.0
+  :experience_success_criteria: []
+- :name: Canvas
+  :uuid: d606e31e-87eb-4c4e-ac20-c0efeeb64075
+  :subject_uuid: bcfe422a-cd35-4fd1-8ff8-6b078c476069
+  :subject_name: Javascript and the Browser
+  :parent_uuid: 
+  :parent_name: 
+  :description_link: Javascript_and_the_Browser/Canvas.desc.md
+  :instructor_notes_link: Javascript_and_the_Browser/Canvas.notes.md
+  :published: false
+  :suggested_days: 2.0
+  :experience_success_criteria: []
+- :name: Setting up your AWS Activate Account
+  :uuid: a1f60a23-daaf-49e8-830e-4f261d71bb5a
+  :subject_uuid: 
+  :subject_name: 
+  :parent_uuid: 
+  :parent_name: 
+  :description_link: Misc/Setting_up_your_AWS_Activate_Account.desc.md
+  :instructor_notes_link: Misc/Setting_up_your_AWS_Activate_Account.desc.md
+  :published: false
+  :suggested_days: 0.0
+  :experience_success_criteria: []
+- :name: Transitions, Transforms, and Animations
+  :uuid: 03a70936-fdad-428c-91c3-1d8c5ca6c2bd
+  :subject_uuid: 
+  :subject_name: 
+  :parent_uuid: 
+  :parent_name: 
+  :description_link: Misc/Transitions,_Transforms,_and_Animations.desc.md
+  :instructor_notes_link: Misc/Transitions,_Transforms,_and_Animations.desc.md
+  :published: false
+  :suggested_days: 1.0
+  :experience_success_criteria: []
+- :name: Javascript Resources
+  :uuid: 5ac4322d-cf8a-425d-aed2-4da2b046f99a
+  :subject_uuid: 
+  :subject_name: 
+  :parent_uuid: 
+  :parent_name: 
+  :description_link: Misc/Javascript_Resources.desc.md
+  :instructor_notes_link: Misc/Javascript_Resources.desc.md
+  :published: false
+  :suggested_days: 0.0
+  :experience_success_criteria: []
+- :name: vim
+  :uuid: 8baab7c0-623c-4d96-a349-e10318fb4384
+  :subject_uuid: 
+  :subject_name: 
+  :parent_uuid: 
+  :parent_name: 
+  :description_link: Misc/vim.desc.md
+  :instructor_notes_link: Misc/vim.desc.md
+  :published: false
+  :suggested_days: 1.0
+  :experience_success_criteria: []
+- :name: Testing Randomness in JS
+  :uuid: 468adc9a-f064-4eb1-b6ce-6f2aa51d490f
+  :subject_uuid: 
+  :subject_name: 
+  :parent_uuid: 
+  :parent_name: 
+  :description_link: Misc/Testing_Randomness_in_JS.desc.md
+  :instructor_notes_link: Misc/Testing_Randomness_in_JS.desc.md
+  :published: false
+  :suggested_days: 0.0
+  :experience_success_criteria: []
+- :name: Student Whiteboard/Phone Interviews
+  :uuid: 2364b200-e0f7-4bf9-925f-b02216f8fdb0
+  :subject_uuid: 
+  :subject_name: 
+  :parent_uuid: 
+  :parent_name: 
+  :description_link: Misc/Student_WhiteboardPhone_Interviews.desc.md
+  :instructor_notes_link: Misc/Student_WhiteboardPhone_Interviews.desc.md
+  :published: false
+  :suggested_days: 0.0
+  :experience_success_criteria: []
+- :name: 'GKit: building a CSS Framework'
+  :uuid: e17e7182-ea53-40b8-a071-9c17858f99c0
+  :subject_uuid: 
+  :subject_name: 
+  :parent_uuid: 
+  :parent_name: 
+  :description_link: Misc/GKit:_building_a_CSS_Framework.desc.md
+  :instructor_notes_link: Misc/GKit:_building_a_CSS_Framework.desc.md
+  :published: false
+  :suggested_days: 1.0
+  :experience_success_criteria: []
+- :name: Running Tasks with Gulp
+  :uuid: d6722fa8-bf38-499a-9ab5-8bda2a63d370
+  :subject_uuid: 
+  :subject_name: 
+  :parent_uuid: 
+  :parent_name: 
+  :description_link: Misc/Running_Tasks_with_Gulp.desc.md
+  :instructor_notes_link: Misc/Running_Tasks_with_Gulp.desc.md
+  :published: false
+  :suggested_days: 1.0
+  :experience_success_criteria: []
+- :name: Introduction to JavaScript - Interactive Part 1
+  :uuid: ad7b5ed6-45c8-49bb-bd68-6797af7251f0
+  :subject_uuid: 
+  :subject_name: 
+  :parent_uuid: 
+  :parent_name: 
+  :description_link: Misc/Introduction_to_JavaScript_-_Interactive_Part_1.desc.md
+  :instructor_notes_link: Misc/Introduction_to_JavaScript_-_Interactive_Part_1.desc.md
+  :published: false
+  :suggested_days: 1.0
+  :experience_success_criteria: []
+- :name: Galvanize Eats Assessment
+  :uuid: c7035ae1-37bc-4dae-803a-079782d09ff5
+  :subject_uuid: 
+  :subject_name: 
+  :parent_uuid: 
+  :parent_name: 
+  :description_link: Misc/Galvanize_Eats_Assessment.desc.md
+  :instructor_notes_link: Misc/Galvanize_Eats_Assessment.desc.md
+  :published: false
+  :suggested_days: 1.0
+  :experience_success_criteria: []
+- :name: npm
+  :uuid: 2916e937-f0d5-4b01-b65e-d964839a6e77
+  :subject_uuid: 
+  :subject_name: 
+  :parent_uuid: 
+  :parent_name: 
+  :description_link: Misc/npm.desc.md
+  :instructor_notes_link: Misc/npm.desc.md
+  :published: false
+  :suggested_days: 1.0
+  :experience_success_criteria: []
+- :name: History of the World Wide Web
+  :uuid: be25aea8-f81d-41e6-8452-83e3b0f2faf0
+  :subject_uuid: 
+  :subject_name: 
+  :parent_uuid: 
+  :parent_name: 
+  :description_link: Misc/History_of_the_World_Wide_Web.desc.md
+  :instructor_notes_link: Misc/History_of_the_World_Wide_Web.desc.md
+  :published: false
+  :suggested_days: 1.0
+  :experience_success_criteria: []
+- :name: Intro to Express
+  :uuid: f25ffc1e-3bd4-4ac7-a5ad-4c0508f6f03d
+  :subject_uuid: 
+  :subject_name: 
+  :parent_uuid: 
+  :parent_name: 
+  :description_link: Misc/Intro_to_Express.desc.md
+  :instructor_notes_link: Misc/Intro_to_Express.desc.md
+  :published: false
+  :suggested_days: 1.0
+  :experience_success_criteria: []
+- :name: Galvanize Reads Assessment
+  :uuid: 2ab83446-7629-41cf-a827-33bbaf3fa853
+  :subject_uuid: 
+  :subject_name: 
+  :parent_uuid: 
+  :parent_name: 
+  :description_link: Misc/Galvanize_Reads_Assessment.desc.md
+  :instructor_notes_link: Misc/Galvanize_Reads_Assessment.desc.md
+  :published: false
+  :suggested_days: 1.0
+  :experience_success_criteria:
+  - :success_criterion_uuid: 2f892a7c-e360-4218-9c8c-764d8f9418f7
+    :success_criterion_name: Share code by pushing and pulling to a remote repository
+      on GitHub
+  - :success_criterion_uuid: 37687853-c626-4f58-b9d2-641b1077f92b
+    :success_criterion_name: Manage feature development with Git branches using a
+      merge strategy
+  - :success_criterion_uuid: e8272444-8dfc-49a0-81d9-d5c92026d536
+    :success_criterion_name: Track changes over time using a basic Git workflow
+  - :success_criterion_uuid: 0f22502a-68fe-4dbe-95d7-b1f4919fe1bf
+    :success_criterion_name: Approaches problems in a methodical and disciplined manner
+  - :success_criterion_uuid: 84bbf0ae-2d55-490b-bc84-d4ae4dc45e14
+    :success_criterion_name: Discuss and diagram Client-Server Model
+  - :success_criterion_uuid: 5b704c5f-75af-4039-a691-4f2dd8ba2971
+    :success_criterion_name: Identify the parts of an HTTP request and response and
+      discuss their purpose
+  - :success_criterion_uuid: 960362a6-e341-487b-a292-95840148c429
+    :success_criterion_name: Discuss the semantics of common HTTP Verbs, Headers,
+      and Status Codes
+  - :success_criterion_uuid: be9709cc-957a-4652-ab52-4730113e11f7
+    :success_criterion_name: Handle errors using Node patterns
+  - :success_criterion_uuid: cc31174c-7920-44ce-803a-0136d0a26ee3
+    :success_criterion_name: Use the APIs built-in to Node.js for OS specific operations
+  - :success_criterion_uuid: 7470e677-6614-4f54-ae3f-0e916cfa4968
+    :success_criterion_name: Define and require Node modules
+  - :success_criterion_uuid: 20e0212e-c577-465c-906f-5f3491a6fdfe
+    :success_criterion_name: Describe what server-side frameworks like Express do
+  - :success_criterion_uuid: ef7e9988-6893-46ef-a88f-069a4298a5cc
+    :success_criterion_name: Build CRUD apps in Express
+  - :success_criterion_uuid: 3f1fd6fd-be9b-4ced-9683-d17105fcc3ec
+    :success_criterion_name: Build OAuth user login in Express using Passport
+  - :success_criterion_uuid: df58e25f-7716-4325-a90e-4f41846cc7cb
+    :success_criterion_name: Protect content in Express using middleware substacks
+  - :success_criterion_uuid: 8ab48f11-82c3-4f7f-ad09-efdae6180aea
+    :success_criterion_name: Build form-based authentication in Express using cookie-session
+  - :success_criterion_uuid: 1527f6f1-dff1-45a5-b987-509d40ca1e3e
+    :success_criterion_name: Describe auth concepts including form-based authentication,
+      OAuth and authorization
+  - :success_criterion_uuid: 349b2e45-b20a-44d1-80c8-1216e14c301f
+    :success_criterion_name: Access data using an ORM / Knex
+  - :success_criterion_uuid: 7231cf4a-2dc7-401a-88f9-4159cc1c2e2f
+    :success_criterion_name: Access data in datastores through joins
+  - :success_criterion_uuid: 7ec77c83-b497-49c3-b08c-b729a77090b3
+    :success_criterion_name: Design and implement schemas
+  - :success_criterion_uuid: 08f64fd8-ad16-4e3a-bb92-902b8b54de07
+    :success_criterion_name: Write database queries using SQL
+  - :success_criterion_uuid: 8cf1f10a-fc6b-4c09-a2bc-6e4d1a901dad
+    :success_criterion_name: Deploy to Heroku (a PaaS Provider)
+  - :success_criterion_uuid: 8bfec408-1579-4ecd-80cd-d95de9c1c0ac
+    :success_criterion_name: Explain the function and purpose environment variables
+      and use them in their projects
+  - :success_criterion_uuid: b24ecc78-5a7d-493d-8f66-3d451a9d374c
+    :success_criterion_name: Identifies and explains purpose of common software architectural
+      concepts
+  - :success_criterion_uuid: 4f82519b-1fc7-4007-9357-66a94ee520a7
+    :success_criterion_name: Diagram architecture of an n-tier web app
+  - :success_criterion_uuid: bea6617d-30e3-4bb2-81a4-1ab48d37498e
+    :success_criterion_name: Design and implement a RESTful API
+- :name: Galvanize Gazette Assessment
+  :uuid: 826abe57-3cfd-4857-b8ba-76267f36f425
+  :subject_uuid: 
+  :subject_name: 
+  :parent_uuid: 
+  :parent_name: 
+  :description_link: Misc/Galvanize_Gazette_Assessment.desc.md
+  :instructor_notes_link: Misc/Galvanize_Gazette_Assessment.desc.md
+  :published: false
+  :suggested_days: 0.0
+  :experience_success_criteria: []
+- :name: 'Debugging '
+  :uuid: 25393c43-7ab2-425c-8d35-e8afba34ee65
+  :subject_uuid: 793b8c6a-a19d-4049-8183-9d454bf55028
+  :subject_name: Thinking Like a Developer
+  :parent_uuid: 
+  :parent_name: 
+  :description_link: Thinking_Like_a_Developer/Debugging_.desc.md
+  :instructor_notes_link: Thinking_Like_a_Developer/Debugging_.notes.md
+  :published: false
+  :suggested_days: 1.0
+  :experience_success_criteria: []
+- :name: Automated-CRUD-Assessment
+  :uuid: afc66ab5-2c1f-49b8-9ca7-d13657e8bc13
+  :subject_uuid: bb388526-c903-45a9-afbf-e6dff6f501d1
+  :subject_name: Server Side Frameworks with Express
+  :parent_uuid: 
+  :parent_name: 
+  :description_link: Server_Side_Frameworks_with_Express/Automated-CRUD-Assessment.desc.md
+  :instructor_notes_link: Server_Side_Frameworks_with_Express/Automated-CRUD-Assessment.notes.md
+  :published: false
+  :suggested_days: 1.0
+  :experience_success_criteria:
+  - :success_criterion_uuid: ef7e9988-6893-46ef-a88f-069a4298a5cc
+    :success_criterion_name: Build CRUD apps in Express
+  - :success_criterion_uuid: 349b2e45-b20a-44d1-80c8-1216e14c301f
+    :success_criterion_name: Access data using an ORM / Knex
+  - :success_criterion_uuid: 8cf1f10a-fc6b-4c09-a2bc-6e4d1a901dad
+    :success_criterion_name: Deploy to Heroku (a PaaS Provider)
+  - :success_criterion_uuid: bea6617d-30e3-4bb2-81a4-1ab48d37498e
+    :success_criterion_name: Design and implement a RESTful API
+- :name: 'Code Katas '
+  :uuid: 5252612d-b419-49bf-ae64-81e707dffd13
+  :subject_uuid: d5947e67-9d70-4e02-ae2a-b3135a9c1667
+  :subject_name: Data Structures / Algorithms
+  :parent_uuid: 
+  :parent_name: 
+  :description_link: Data_Structures__Algorithms/Code_Katas_.desc.md
+  :instructor_notes_link: Data_Structures__Algorithms/Code_Katas_.notes.md
+  :published: false
+  :suggested_days: 0.0
+  :experience_success_criteria: []
+- :name: 'Restaurants CRUD Project '
+  :uuid: 9e9e27ae-8855-4063-8c90-008badcb7f8d
+  :subject_uuid: bb388526-c903-45a9-afbf-e6dff6f501d1
+  :subject_name: Server Side Frameworks with Express
+  :parent_uuid: 
+  :parent_name: 
+  :description_link: Server_Side_Frameworks_with_Express/Restaurants_CRUD_Project_.desc.md
+  :instructor_notes_link: Server_Side_Frameworks_with_Express/Restaurants_CRUD_Project_.notes.md
+  :published: false
+  :suggested_days: 4.0
+  :experience_success_criteria: []

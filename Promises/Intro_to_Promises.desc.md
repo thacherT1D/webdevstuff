@@ -34,4 +34,4 @@ When you get to the part about `Promise.all`, definitely watch this video to get
 
 ## Exercise
 
-[github repo](https://github.com/gSchool/promise-exercise)
+[github repo](https://github.com/gSchool/promises-es6)

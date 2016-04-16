@@ -84,3 +84,86 @@ Here are some definitions/uses for specific tags that may not be clear:
 * address (contact information for an article)
 * details (hideable)
 * summary (header for details tag)
+
+---
+
+### Taken from the old intermediate HTML LE: Description Tables
+
+#### Objectives
+
+  Students should be able to:
+
+  - Understand the difference between `table` and `dl`
+
+### Tables
+
+There are two basics types of tables: multi-dimensional data tables (`<table>`), and description lists (`dl`).
+
+#### Standard Tables
+
+Tables often feature table captions, headers, bodies, rows, columns, and footers. The general structure is like this:
+
+```html
+<table>
+    <caption>The Title of my table</caption>
+    <thead>
+        <tr>
+            <th>Header One</th>
+            <th>Header Two</th>
+            <th>Header Three</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Column one data</td>
+            <td>Column two data</td>
+            <td>Column three data</td>
+        </tr>
+        <tr>
+            <td>Column one data</td>
+            <td colspan="2">Spans column one AND two</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td>Summary of column one</td>
+            <td>Summary of column two</td>
+            <td>Summary of column three</td>
+        </tr>
+    </tfoot>
+</table>
+```
+
+Note for memorization: `<tr>` means "table row", `<th>` means "table header", and `<td>` means table data.
+
+In olden times long gone, HTML tables were used to layout a site. This is a capital crime in modern web development! Don't do it! DO NOT DO IT! Seriously, please. Use tags semantically and manage layouts with CSS.
+
+**You Try**:
+
+  - Create a table with a header row, 3 rows and 4 columns
+  - Label fill the row headers with rock, paper, scissors.
+  - Fill the first column with rock, paper, scissors
+  - Fill the grid with a W (win), L(lose), T(tie).
+
+#### Description Lists
+
+Description lists are for key-value pairs of information, like glossaries.
+
+```html
+<dl>
+    <dt>HTML</dt>
+    <dd>Hypertext Markup Language</dd>
+    <dt>CSS</dt>
+    <dd>Cascading Style Sheets</dd>
+    <dt>JS</dt>
+    <dd>JavaScript</dd>
+</dl>
+```
+
+Note for memorization: `<dl>` means "description list", `<dt>` means "description term", and `<dd>` means "description definition".
+
+**You Try**:
+
+  - Create a description list
+  - Create the terms rock, paper, scissors
+  - Create the definitions for each term, an example would be "Rock beats scissors"
