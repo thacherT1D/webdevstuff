@@ -270,6 +270,23 @@
 
 - :standard_uuid: 0c1be570-48b4-48a8-bc98-7da27a7be512
   :standard_name: CSS
+  :uuid: 0b6f124a-f58a-4e2c-97d1-39a109703ddc
+  :name: Lay out a document with CSS properties
+  :description: "- Use floats to interrupt flow content and layout block-level elements
+    on a page\n- Use the box model to layout elements\n- Use positioning to layout
+    elements\n\n\n\n- Uses box model to dimension element\n\n- Uses margin for outside
+    the box\r\n- Padding for inside the box\r\n- Border elements for visible border
+    only\r\n- Content box sizing is only determined by content, or height property\n\n-
+    Uses relative positioning within content to do in-block layout\n- Uses fixed positioning\n\n\n\n"
+  :instructor_notes: |2+
+
+
+
+
+
+
+- :standard_uuid: 0c1be570-48b4-48a8-bc98-7da27a7be512
+  :standard_name: CSS
   :uuid: 4014347b-eb0e-447e-a78f-77b0317a46a4
   :name: Write well organized CSS
   :description: "- Write well organized CSS\n\n- Creates CSS classes for groups of
@@ -283,23 +300,6 @@
   :instructor_notes: |2+
 
 
-
-
-
-
-
-
-- :standard_uuid: 0c1be570-48b4-48a8-bc98-7da27a7be512
-  :standard_name: CSS
-  :uuid: 0b6f124a-f58a-4e2c-97d1-39a109703ddc
-  :name: Lay out a document with CSS properties
-  :description: "- Use floats to interrupt flow content and layout block-level elements
-    on a page\n- Use the box model to layout elements\n- Use positioning to layout
-    elements\n\n\n\n- Uses box model to dimension element\n\n- Uses margin for outside
-    the box\r\n- Padding for inside the box\r\n- Border elements for visible border
-    only\r\n- Content box sizing is only determined by content, or height property\n\n-
-    Uses relative positioning within content to do in-block layout\n- Uses fixed positioning\n\n\n\n"
-  :instructor_notes: |2+
 
 
 
@@ -600,6 +600,54 @@
     to objects"
 - :standard_uuid: ac805334-f3dd-4288-9a61-0dcef3e219d4
   :standard_name: Programming with Javascript
+  :uuid: 6754eeea-a10b-4033-a598-a0e081257f60
+  :name: Encapsulate reusable code in functions
+  :description: "- Formulates new functions given inputs and desired outputs\n- Define
+    and give examples of “Pure functions” that do not have side effects. Define and
+    give examples of “side effects”.\n\n- Formulates new functions given inputs and
+    desired outputs\n- Mentally evaluate expressions that use the return value of
+    function calls\n\n\n\n- like add(add(5,6), add(6,7))\r\n- like add(5,6) + add(6,7)\r\n-
+    join(“”).filter()...\r\n- document.querySelectorAll(“#foo”)[0];\n\n- Define and
+    give examples of “Pure functions” that do not have side effects.  Define and give
+    examples of “side effects”.\n- Can diagram the call stack\n- Create and use local
+    variable scope when appropriate within Functions\n- Abstracts sets of expressions
+    into functions\n\n\n\nDiagrams the call stack as a series of boxes within boxes\n\n-
+    All data is either:\r\n    - created within the function with `var`\r\n    - passed
+    in through parameters\r\n    - accessible via a closure\r\n- Returns any data
+    needed from the function with the `return` keyword\r\n- Can diagram the effect
+    of a function operating on an object passed into the function as a reference\n\n\n\n[Closures](https://www.youtube.com/watch?v=CQqwU2Ixu-U&list=PL0zVEGEvSaeEd9hlmCXrk5yUyqUag-n84&index=5)\n\n-
+    [Javascript Call Stack](https://vimeo.com/134061121)\r\n- https://github.com/gSchool/js-accumulator-assessment\r\n-
+    https://github.com/gSchool/js-encapsulation\r\n- https://github.com/gSchool/js-hof-filter-map-reduce\r\n-
+    https://github.com/gSchool/js-iteration\r\n- https://github.com/gSchool/js-methods-this-constructors\r\n-
+    https://github.com/gSchool/js-node-log-file-parsing\r\n- https://github.com/gSchool/js_oop_exercise"
+  :instructor_notes: "\n\n\n\n\n\n\n\n## Assessments\r\n* https://github.com/gSchool/functions-objects-js-homework\r\n*
+    https://github.com/gSchool/js-functions-part2\n\n## Assessments\r\n* https://github.com/gSchool/js-functions-part1\r\n*
+    http://eloquentjavascript.net/1st_edition/chapter6.html \r\n* Write simple functions
+    given the function signature and a behavioral description\r\n* Write simple functions
+    to solve a problem without the function signature\r\n* Write recursive functions\r\n\r\nWhat
+    does it mean for a function to have a side effects?\r\n\r\n\r\n### Legacy Objectives\r\n-
+    Define what a function is\r\n- Explain what a function is and how it works using
+    analogies . (comparing it to a machine, black box, factory, etc.)\r\n- Define
+    functions using declarations and expressions, and explain the difference between
+    them\r\n- Articulate the difference between defining and invoking a function\r\n-
+    Describe how data flows into a function (by passing in arguments)\r\n- Describe
+    how data flows out of functions (by using the `return` keyword)\r\n- Describe
+    the difference between function expressions, named and anonymous functions\r\n-
+    Write named functions and anonymous functions that take 0, 1 and many arguments\r\n-
+    Explain how functions handle arguments\r\n- Can access all arguments using array-like
+    `arguments` object\r\n- Can take more arguments than specified in the parameters\r\n-
+    Parameters that aren’t specified when the function is invoked are set to ‘undefined’\r\n-
+    Explain that functions are values and that they can be stored in variables just
+    like any other value\r\n- Call functions from above, below and in separate files
+    from function definition\r\n- Write functions that return values\r\n- Write functions
+    that have side effects, such as manipulating dom\r\n- Explain what recursion is
+    and write a functions that call themselves recursively\r\n- Explain the relationship
+    between functions and scope\r\n- Write and invoke functions as methods on objects\r\n-
+    Use built-in Javascript methods to perform common tasks on objects\r\n\r\n(loosely:
+    “a function is a set of instructions that can take 0 or more inputs, perform calculations
+    and either return values or cause changes to occur”)"
+- :standard_uuid: ac805334-f3dd-4288-9a61-0dcef3e219d4
+  :standard_name: Programming with Javascript
   :uuid: 861bcda5-c1ed-470c-9389-fafcf80c2399
   :name: Control the flow of a program using conditionals and loops
   :description: "- Solve problems requiring conditionals and loops (such as accumulator
@@ -688,54 +736,6 @@
     ask them to change the code so that it only prints 5 numbers (using return)\r\n\r\n```\r\nvar
     run = function () {\r\n  for (var i = 0; i < 10; i++) {\r\n    console.log(i);\r\n
     \   if (i === 5) {\r\n      return\r\n    }\r\n  }\r\n}\r\n\r\nrun()\r\n```"
-- :standard_uuid: ac805334-f3dd-4288-9a61-0dcef3e219d4
-  :standard_name: Programming with Javascript
-  :uuid: 6754eeea-a10b-4033-a598-a0e081257f60
-  :name: Encapsulate reusable code in functions
-  :description: "- Formulates new functions given inputs and desired outputs\n- Define
-    and give examples of “Pure functions” that do not have side effects. Define and
-    give examples of “side effects”.\n\n- Formulates new functions given inputs and
-    desired outputs\n- Mentally evaluate expressions that use the return value of
-    function calls\n\n\n\n- like add(add(5,6), add(6,7))\r\n- like add(5,6) + add(6,7)\r\n-
-    join(“”).filter()...\r\n- document.querySelectorAll(“#foo”)[0];\n\n- Define and
-    give examples of “Pure functions” that do not have side effects.  Define and give
-    examples of “side effects”.\n- Can diagram the call stack\n- Create and use local
-    variable scope when appropriate within Functions\n- Abstracts sets of expressions
-    into functions\n\n\n\nDiagrams the call stack as a series of boxes within boxes\n\n-
-    All data is either:\r\n    - created within the function with `var`\r\n    - passed
-    in through parameters\r\n    - accessible via a closure\r\n- Returns any data
-    needed from the function with the `return` keyword\r\n- Can diagram the effect
-    of a function operating on an object passed into the function as a reference\n\n\n\n[Closures](https://www.youtube.com/watch?v=CQqwU2Ixu-U&list=PL0zVEGEvSaeEd9hlmCXrk5yUyqUag-n84&index=5)\n\n-
-    [Javascript Call Stack](https://vimeo.com/134061121)\r\n- https://github.com/gSchool/js-accumulator-assessment\r\n-
-    https://github.com/gSchool/js-encapsulation\r\n- https://github.com/gSchool/js-hof-filter-map-reduce\r\n-
-    https://github.com/gSchool/js-iteration\r\n- https://github.com/gSchool/js-methods-this-constructors\r\n-
-    https://github.com/gSchool/js-node-log-file-parsing\r\n- https://github.com/gSchool/js_oop_exercise"
-  :instructor_notes: "\n\n\n\n\n\n\n\n## Assessments\r\n* https://github.com/gSchool/functions-objects-js-homework\r\n*
-    https://github.com/gSchool/js-functions-part2\n\n## Assessments\r\n* https://github.com/gSchool/js-functions-part1\r\n*
-    http://eloquentjavascript.net/1st_edition/chapter6.html \r\n* Write simple functions
-    given the function signature and a behavioral description\r\n* Write simple functions
-    to solve a problem without the function signature\r\n* Write recursive functions\r\n\r\nWhat
-    does it mean for a function to have a side effects?\r\n\r\n\r\n### Legacy Objectives\r\n-
-    Define what a function is\r\n- Explain what a function is and how it works using
-    analogies . (comparing it to a machine, black box, factory, etc.)\r\n- Define
-    functions using declarations and expressions, and explain the difference between
-    them\r\n- Articulate the difference between defining and invoking a function\r\n-
-    Describe how data flows into a function (by passing in arguments)\r\n- Describe
-    how data flows out of functions (by using the `return` keyword)\r\n- Describe
-    the difference between function expressions, named and anonymous functions\r\n-
-    Write named functions and anonymous functions that take 0, 1 and many arguments\r\n-
-    Explain how functions handle arguments\r\n- Can access all arguments using array-like
-    `arguments` object\r\n- Can take more arguments than specified in the parameters\r\n-
-    Parameters that aren’t specified when the function is invoked are set to ‘undefined’\r\n-
-    Explain that functions are values and that they can be stored in variables just
-    like any other value\r\n- Call functions from above, below and in separate files
-    from function definition\r\n- Write functions that return values\r\n- Write functions
-    that have side effects, such as manipulating dom\r\n- Explain what recursion is
-    and write a functions that call themselves recursively\r\n- Explain the relationship
-    between functions and scope\r\n- Write and invoke functions as methods on objects\r\n-
-    Use built-in Javascript methods to perform common tasks on objects\r\n\r\n(loosely:
-    “a function is a set of instructions that can take 0 or more inputs, perform calculations
-    and either return values or cause changes to occur”)"
 - :standard_uuid: bcfe422a-cd35-4fd1-8ff8-6b078c476069
   :standard_name: Javascript and the Browser
   :uuid: f14777bc-e9f0-4088-b4c3-19a81cbd22ce
@@ -1683,6 +1683,14 @@
     Database connection strings\r\n- Transactions\r\n\r\nprotocol://user:password@host:port/db-name\r\n\r\npostgresql://root:897654ersdfghj@example.com:5432/products"
 - :standard_uuid: 2886a5f1-92f6-44ba-8adb-185b2a161870
   :standard_name: Deployment
+  :uuid: 6a02b407-69d9-453b-a747-c8b87950cb2b
+  :name: Develop and deploy an app using Docker containers
+  :description: |+
+    - Written code against a docker container and pushed it a remote environment
+
+  :instructor_notes: ''
+- :standard_uuid: 2886a5f1-92f6-44ba-8adb-185b2a161870
+  :standard_name: Deployment
   :uuid: 4d3b234c-6e4d-4af4-9635-a939fe502ebe
   :name: Discuss the role and purpose of devops
   :description: "- In a short paragraph describe key devops concepts\n\nSuch as \r\n\r\n-
@@ -1699,12 +1707,17 @@
   :instructor_notes: ''
 - :standard_uuid: 2886a5f1-92f6-44ba-8adb-185b2a161870
   :standard_name: Deployment
-  :uuid: 6a02b407-69d9-453b-a747-c8b87950cb2b
-  :name: Develop and deploy an app using Docker containers
-  :description: |+
-    - Written code against a docker container and pushed it a remote environment
+  :uuid: 14a67719-f04a-4c10-ae39-33ae7142d976
+  :name: Deploy an app to EC2 and compare and contrast the AWS core philosophy with
+    Heroku and Cloud Foundry and pre-cloud era
+  :description: "- Running app on EC2 that meet the requirements\n- Describe elastic
+    IPs / elastic load balancing / elastic block store (infrastructure on-demand)
+    in comparison with other options\n\n- A web server such as Nginx or Apache \r\n-
+    A database such as Postgres \r\n- An app server - Node / Ruby / Passenger \r\n-
+    Having started from a CentOS or Ubuntu base AMI\n\n"
+  :instructor_notes: |2+
 
-  :instructor_notes: ''
+
 - :standard_uuid: 2886a5f1-92f6-44ba-8adb-185b2a161870
   :standard_name: Deployment
   :uuid: b1e49494-ae23-4e78-9f4a-fa52572b2978
@@ -1721,14 +1734,6 @@
 
 - :standard_uuid: 2886a5f1-92f6-44ba-8adb-185b2a161870
   :standard_name: Deployment
-  :uuid: 8cf1f10a-fc6b-4c09-a2bc-6e4d1a901dad
-  :name: Deploy to Heroku (a PaaS Provider)
-  :description: |+
-    - Student has a functioning Node app up and running that has environment variables and attached SQL database
-
-  :instructor_notes: ''
-- :standard_uuid: 2886a5f1-92f6-44ba-8adb-185b2a161870
-  :standard_name: Deployment
   :uuid: d183eb60-fcfc-40d1-9cae-d85f5f349fb0
   :name: Deploy to static hosting sites and explain the function and purpose of static
     hosting
@@ -1743,17 +1748,12 @@
 
 - :standard_uuid: 2886a5f1-92f6-44ba-8adb-185b2a161870
   :standard_name: Deployment
-  :uuid: 14a67719-f04a-4c10-ae39-33ae7142d976
-  :name: Deploy an app to EC2 and compare and contrast the AWS core philosophy with
-    Heroku and Cloud Foundry and pre-cloud era
-  :description: "- Running app on EC2 that meet the requirements\n- Describe elastic
-    IPs / elastic load balancing / elastic block store (infrastructure on-demand)
-    in comparison with other options\n\n- A web server such as Nginx or Apache \r\n-
-    A database such as Postgres \r\n- An app server - Node / Ruby / Passenger \r\n-
-    Having started from a CentOS or Ubuntu base AMI\n\n"
-  :instructor_notes: |2+
+  :uuid: 8cf1f10a-fc6b-4c09-a2bc-6e4d1a901dad
+  :name: Deploy to Heroku (a PaaS Provider)
+  :description: |+
+    - Student has a functioning Node app up and running that has environment variables and attached SQL database
 
-
+  :instructor_notes: ''
 - :standard_uuid: 2886a5f1-92f6-44ba-8adb-185b2a161870
   :standard_name: Deployment
   :uuid: 79030da6-cfca-479c-8ac2-31826cf70ddd
@@ -1803,17 +1803,6 @@
     - scheduled code"
 - :standard_uuid: ce60c0de-9f49-423f-bbbe-7fea0c1b875c
   :standard_name: Architecture
-  :uuid: 1d4c879a-8dd3-4eb0-babc-8414e7ed73ec
-  :name: Discuss and diagram microservice architecture
-  :description: "- Compares / contrasts with monolithic application\n- Explain and
-    diagram a microservice architecture, including terms such as:\n\n\n\n- fail-fast\r\n-
-    circuit breakers\r\n- horizontal scalability\r\n- swappability\r\n- service discovery\r\n-
-    config management\r\n- edge/proxy caching server\r\n- 12factor apps"
-  :instructor_notes: |+
-    Identify seams
-
-- :standard_uuid: ce60c0de-9f49-423f-bbbe-7fea0c1b875c
-  :standard_name: Architecture
   :uuid: 4f82519b-1fc7-4007-9357-66a94ee520a7
   :name: Diagram architecture of an n-tier web app
   :description: |+
@@ -1826,6 +1815,17 @@
 
 
     (firewalls) - “who’s allowed to do what”
+- :standard_uuid: ce60c0de-9f49-423f-bbbe-7fea0c1b875c
+  :standard_name: Architecture
+  :uuid: 1d4c879a-8dd3-4eb0-babc-8414e7ed73ec
+  :name: Discuss and diagram microservice architecture
+  :description: "- Compares / contrasts with monolithic application\n- Explain and
+    diagram a microservice architecture, including terms such as:\n\n\n\n- fail-fast\r\n-
+    circuit breakers\r\n- horizontal scalability\r\n- swappability\r\n- service discovery\r\n-
+    config management\r\n- edge/proxy caching server\r\n- 12factor apps"
+  :instructor_notes: |+
+    Identify seams
+
 - :standard_uuid: 39680f2e-8004-4029-a637-1722f5b54625
   :standard_name: UX User Testing
   :uuid: a8e5b3db-eefd-41c3-aa94-ad2fbe7e8634
@@ -1861,18 +1861,18 @@
 
 - :standard_uuid: b7090a92-612d-4811-ac2c-8d750e5fab1d
   :standard_name: Client Side Frameworks (Angular)
-  :uuid: 2601933b-c305-45d8-9527-42cda918507c
-  :name: Explain client-side routing as it relates to server-side routing
-  :description: |+
-    - Sequence diagram of how a deep-link works in an client-side routed app using pushstate-style URLs including the concept of a wildcard route on the server (express or superstatic)
-
-  :instructor_notes: ''
-- :standard_uuid: b7090a92-612d-4811-ac2c-8d750e5fab1d
-  :standard_name: Client Side Frameworks (Angular)
   :uuid: 4794e677-7800-4e74-991e-b2ec21f40c5a
   :name: Implement custom-directives
   :description: |+
     - Build a reusable Angular component (aka custom directive) that appears on multiple routes
+
+  :instructor_notes: ''
+- :standard_uuid: b7090a92-612d-4811-ac2c-8d750e5fab1d
+  :standard_name: Client Side Frameworks (Angular)
+  :uuid: 2601933b-c305-45d8-9527-42cda918507c
+  :name: Explain client-side routing as it relates to server-side routing
+  :description: |+
+    - Sequence diagram of how a deep-link works in an client-side routed app using pushstate-style URLs including the concept of a wildcard route on the server (express or superstatic)
 
   :instructor_notes: ''
 - :standard_uuid: b7090a92-612d-4811-ac2c-8d750e5fab1d
@@ -1934,6 +1934,18 @@
   :instructor_notes: ''
 - :standard_uuid: dfec3119-3ba1-4a14-ba2c-9f66715f4b98
   :standard_name: Agile Project Management
+  :uuid: 5a36d842-c508-4cbe-906d-f586f3b0e424
+  :name: Complete projects using an agile methodology
+  :description: "- Follow agile best-practices\n\n* Write and prioritize stories/features\r\n*
+    Complete one feature before moving on to the next\r\n* Go through an acceptance
+    process with a stakeholder\r\n* Track their progress using an agile project management
+    tool"
+  :instructor_notes: "Old success criteria\r\n\r\n- Student completes a software project
+    where they:\r\n- Write and prioritize stories/features\r\n- Complete one feature
+    before moving on to the next\r\n- Go through an acceptance process with a stakeholder\r\n-
+    Track their progress using an agile project management tool"
+- :standard_uuid: dfec3119-3ba1-4a14-ba2c-9f66715f4b98
+  :standard_name: Agile Project Management
   :uuid: 614e6ddd-49c8-459b-b79d-81265d867757
   :name: Discuss agile values and principles
   :description: "- Discuss the significance of each of the agile values\n- Student
@@ -1945,18 +1957,6 @@
   :instructor_notes: |2+
 
 
-- :standard_uuid: dfec3119-3ba1-4a14-ba2c-9f66715f4b98
-  :standard_name: Agile Project Management
-  :uuid: 5a36d842-c508-4cbe-906d-f586f3b0e424
-  :name: Complete projects using an agile methodology
-  :description: "- Follow agile best-practices\n\n* Write and prioritize stories/features\r\n*
-    Complete one feature before moving on to the next\r\n* Go through an acceptance
-    process with a stakeholder\r\n* Track their progress using an agile project management
-    tool"
-  :instructor_notes: "Old success criteria\r\n\r\n- Student completes a software project
-    where they:\r\n- Write and prioritize stories/features\r\n- Complete one feature
-    before moving on to the next\r\n- Go through an acceptance process with a stakeholder\r\n-
-    Track their progress using an agile project management tool"
 - :standard_uuid: 0f6ed5e9-c172-4969-b990-f2324c91f5ad
   :standard_name: Designing APIs
   :uuid: 4655229a-33c6-4e0f-93e1-71c557c67602
@@ -2126,6 +2126,17 @@
     compile time vs. runtime
 - :standard_uuid: e43b79ad-875a-4817-8ac0-68f7f47f3b42
   :standard_name: OOP w/ Statically Typed Language
+  :uuid: 84e30c2e-0715-411f-b39b-db22598897b1
+  :name: Compare and contrast OOP and Functional Programming
+  :description: "- Describe Functional Programming in relation to OOP\n- Describe
+    OOP in relation to functional programming\n\n- First class functions\r\n- Higher
+    order functions\r\n- Immutable data\r\n- Functions like components of an assembly
+    line\n\n- Methods operating on the state of the object\r\n- Mutable data"
+  :instructor_notes: |2+
+
+
+- :standard_uuid: e43b79ad-875a-4817-8ac0-68f7f47f3b42
+  :standard_name: OOP w/ Statically Typed Language
   :uuid: 0aa5d3c6-9b6c-4c71-a680-35500aec7773
   :name: Define and explain the significance of the major principles of Object Oriented
     Programming
@@ -2145,17 +2156,6 @@
     composition\n\n- Subclasses / classes w/ an interface have the same method signatures\r\n-
     Liskov\n\n- behavior and state contained together\r\n- public vs private vs protected\r\n-
     understand the concept of visibility\n\n- interfaces\r\n- modeling real-world\n\n"
-- :standard_uuid: e43b79ad-875a-4817-8ac0-68f7f47f3b42
-  :standard_name: OOP w/ Statically Typed Language
-  :uuid: 84e30c2e-0715-411f-b39b-db22598897b1
-  :name: Compare and contrast OOP and Functional Programming
-  :description: "- Describe Functional Programming in relation to OOP\n- Describe
-    OOP in relation to functional programming\n\n- First class functions\r\n- Higher
-    order functions\r\n- Immutable data\r\n- Functions like components of an assembly
-    line\n\n- Methods operating on the state of the object\r\n- Mutable data"
-  :instructor_notes: |2+
-
-
 - :standard_uuid: d5947e67-9d70-4e02-ae2a-b3135a9c1667
   :standard_name: Data Structures / Algorithms
   :uuid: 864fb2e5-1a7c-440d-a21d-eead8eed127e

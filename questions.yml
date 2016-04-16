@@ -616,6 +616,12 @@
   :correct_answer: '3'
 - :success_criterion_uuid: 5b55eed8-5a07-4540-92fe-cb4d824b51b7
   :success_criterion_name: Write, mentally evaluate, and store the result of JS expressions
+  :uuid: 3c7fb27d-8468-4458-b0a8-7bffa0f4e992
+  :question_type: text
+  :question: What is the value of 3 + undefined?
+  :correct_answer: NaN
+- :success_criterion_uuid: 5b55eed8-5a07-4540-92fe-cb4d824b51b7
+  :success_criterion_name: Write, mentally evaluate, and store the result of JS expressions
   :uuid: 19e928f0-f008-40fd-92b7-f8e952bc7a4a
   :question_type: text
   :question: What does `(true && false) || (true && true || false) && (false || false)`
@@ -629,16 +635,10 @@
   :correct_answer: str.length > 0
 - :success_criterion_uuid: 5b55eed8-5a07-4540-92fe-cb4d824b51b7
   :success_criterion_name: Write, mentally evaluate, and store the result of JS expressions
-  :uuid: 08069eb9-03fd-46d2-bd94-102b34fae7da
+  :uuid: a4d33dcf-805f-457d-b484-534ac8ff96d9
   :question_type: text
-  :question: What is the value of '2' + 1?
-  :correct_answer: '21'
-- :success_criterion_uuid: 5b55eed8-5a07-4540-92fe-cb4d824b51b7
-  :success_criterion_name: Write, mentally evaluate, and store the result of JS expressions
-  :uuid: 3c7fb27d-8468-4458-b0a8-7bffa0f4e992
-  :question_type: text
-  :question: What is the value of 3 + undefined?
-  :correct_answer: NaN
+  :question: What is the value of '2' - 1
+  :correct_answer: '1'
 - :success_criterion_uuid: 5b55eed8-5a07-4540-92fe-cb4d824b51b7
   :success_criterion_name: Write, mentally evaluate, and store the result of JS expressions
   :uuid: fcad1ad9-d5d5-4129-9295-fe81ec7cc180
@@ -648,10 +648,10 @@
     and the right hand side is a new empty array with its own (distinct) reference.
 - :success_criterion_uuid: 5b55eed8-5a07-4540-92fe-cb4d824b51b7
   :success_criterion_name: Write, mentally evaluate, and store the result of JS expressions
-  :uuid: a4d33dcf-805f-457d-b484-534ac8ff96d9
+  :uuid: 08069eb9-03fd-46d2-bd94-102b34fae7da
   :question_type: text
-  :question: What is the value of '2' - 1
-  :correct_answer: '1'
+  :question: What is the value of '2' + 1?
+  :correct_answer: '21'
 - :success_criterion_uuid: 5b55eed8-5a07-4540-92fe-cb4d824b51b7
   :success_criterion_name: Write, mentally evaluate, and store the result of JS expressions
   :uuid: a0fdb121-644c-4522-b4ea-59e1d988bd0b
