@@ -170,34 +170,24 @@
   :standard_name: HTML
   :uuid: 90141122-0edb-4c14-ac77-a63e7c3a8ce0
   :name: Write Valid HTML5 Markup
-  :description: "- Tags are in a logical order to match reality\n- Tags are properly
-    indented to show nesting visually\n- Attributes\n- `<img>` tags used to embed
-    images\n- Anchor tags\n- Validates markup with the [W3C HTML Validator](https://validator.w3.org/)\n-
-    Writes valid HTML structure\n\n\n\n- Block level elements have their own indentation
-    level\r\n- inline elements are included inline\n\n- ids are all unique, valid
-    identifiers\r\n- Classes are applied to multiple elements successfully\r\n- Boolean
-    attributes are [syntactically correct](https://html.spec.whatwg.org/#boolean-attributes)\r\n
-    \   - no “false” or “true values\r\n    - elements like checked are represented
-    as `checked`\r\n- Attribute names are all in lowercase, values are in lowercase\n\n\n\n-
-    has tags that link to other places in the document\r\n- has tags that link to
-    other HTML resources\n\n\n\n- Has a valid doctype declaration\r\n- has an `<html>`
-    tag as it’s root element\r\n- html tag has a head followed by a body\r\n- head
-    \r\n    - contains all metadata\r\n    - has a `<title>` tag\r\n- body contains
-    all visible elements\r\n- tables contain appropriate opening and closing tags:`<table><th><tb><tr>`\r\n\r\n\r\n\r\n-
-    \r\n- \r\n- \r\n- \r\n-"
-  :instructor_notes: |2+
-
-
-
-
-
-
-
-
-
-
-
-
+  :description: "- Has a valid doctype declaration\r\n- has an `<html>` tag as it’s
+    root element\r\n- Writes valid HTML structure\r\n\t- Validates markup with the
+    [W3C HTML Validator](https://validator.w3.org/)\r\n    \r\n  ---\r\n  \r\n- `<html>`
+    tag contains a `<head>` followed by a `<body>`\r\n- `<head>` \r\n    - contains
+    all metadata\r\n    - has a `<title>` tag\r\n- `<body>`\r\n\t- contains all visible
+    elements\r\n\r\n  ---\r\n\r\n- Tags are in a logical order to match reality\r\n-
+    Tags are properly indented to show nesting visually\r\n\t- Block level elements
+    have their own indentation level\r\n\t- inline elements are included inline\r\n\r\n
+    \ ---\r\n\r\n- Attributes\r\n\t- Attribute names are all in lowercase, values
+    are in lowercase\r\n    - Boolean attributes are [syntactically correct](https://html.spec.whatwg.org/#boolean-attributes)\r\n
+    \   \t- no `“false”` or `“true\"` values\r\n    \t- elements like checked are
+    represented as `checked`\r\n- ID's are all unique, valid identifiers\r\n- Classes
+    are applied to multiple elements\r\n\r\n  ---\r\n- `<img>` Image tags used to
+    embed images\r\n- `<a>` Anchor tags used to link\r\n\t- to other places in the
+    document\r\n\t- to other HTML resources\r\n- `<div>` Div tags divide content\r\n-
+    `<span>` Span tags section content\r\n- `<table>` Table tags contain appropriate
+    tags\r\n\t- `<table><th><tr><td>`\r\n\r\n"
+  :instructor_notes: "\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n"
 - :standard_uuid: a7d5be0f-3937-465a-b5e9-b2555642e9d9
   :standard_name: HTML
   :uuid: d5a4c20f-4922-43e4-a7bb-388438235f40
@@ -245,6 +235,22 @@
 
 - :standard_uuid: 0c1be570-48b4-48a8-bc98-7da27a7be512
   :standard_name: CSS
+  :uuid: 0b6f124a-f58a-4e2c-97d1-39a109703ddc
+  :name: Lay out a document with CSS properties
+  :description: "- Uses box model to dimension element\n- Use floats to interrupt
+    flow content and layout block-level elements on a page\n- Uses relative positioning
+    within content to do in-block layout\n- Uses fixed positioning\n\n- Uses margin
+    for outside the box\r\n- Padding for inside the box\r\n- Border elements for visible
+    border only\r\n- Content box sizing is only determined by content, or height property\n\n\n\n\n\n"
+  :instructor_notes: |2+
+
+
+
+
+
+
+- :standard_uuid: 0c1be570-48b4-48a8-bc98-7da27a7be512
+  :standard_name: CSS
   :uuid: 0e8bdbe9-9592-4704-9ddf-46159d7a11d8
   :name: Use CSS3 and advanced browser tooling to create responsive pages
   :description: |+
@@ -259,22 +265,6 @@
 
 
 
-  :instructor_notes: |2+
-
-
-
-
-
-
-- :standard_uuid: 0c1be570-48b4-48a8-bc98-7da27a7be512
-  :standard_name: CSS
-  :uuid: 0b6f124a-f58a-4e2c-97d1-39a109703ddc
-  :name: Lay out a document with CSS properties
-  :description: "- Uses box model to dimension element\n- Use floats to interrupt
-    flow content and layout block-level elements on a page\n- Uses relative positioning
-    within content to do in-block layout\n- Uses fixed positioning\n\n- Uses margin
-    for outside the box\r\n- Padding for inside the box\r\n- Border elements for visible
-    border only\r\n- Content box sizing is only determined by content, or height property\n\n\n\n\n\n"
   :instructor_notes: |2+
 
 
@@ -439,6 +429,20 @@
 
 - :standard_uuid: 3f805b07-096d-4024-bce2-20b19f92199a
   :standard_name: Version Control (Git and Github)
+  :uuid: 37687853-c626-4f58-b9d2-641b1077f92b
+  :name: Manage feature development with Git branches using a merge strategy
+  :description: "- Diagram and discuss a feature-branch workflow\n- Build new features
+    in branches and then merge them into master when ready\n- Resolve merge conflicts\n\n-
+    create a feature branch\r\n- merge upstream changes\r\n- merge feature branch
+    to master\r\n- cleanup feature branches\n\n- branch\r\n- checkout\r\n- merge\n\n-
+    Create some merge conflicts and explain what causes them\r\n- Resolve merge conflicts"
+  :instructor_notes: |2+
+
+
+
+
+- :standard_uuid: 3f805b07-096d-4024-bce2-20b19f92199a
+  :standard_name: Version Control (Git and Github)
   :uuid: e8272444-8dfc-49a0-81d9-d5c92026d536
   :name: Track changes over time using a basic Git workflow
   :description: "- Perform basic git commands to track changes to a project\n- Write
@@ -455,20 +459,6 @@
     to temporarily put untracked changes aside\r\n- `diff` - to show the difference
     between two hashes\n\n"
   :instructor_notes: |2+
-
-
-- :standard_uuid: 3f805b07-096d-4024-bce2-20b19f92199a
-  :standard_name: Version Control (Git and Github)
-  :uuid: 37687853-c626-4f58-b9d2-641b1077f92b
-  :name: Manage feature development with Git branches using a merge strategy
-  :description: "- Diagram and discuss a feature-branch workflow\n- Build new features
-    in branches and then merge them into master when ready\n- Resolve merge conflicts\n\n-
-    create a feature branch\r\n- merge upstream changes\r\n- merge feature branch
-    to master\r\n- cleanup feature branches\n\n- branch\r\n- checkout\r\n- merge\n\n-
-    Create some merge conflicts and explain what causes them\r\n- Resolve merge conflicts"
-  :instructor_notes: |2+
-
-
 
 
 - :standard_uuid: ac805334-f3dd-4288-9a61-0dcef3e219d4
@@ -608,6 +598,33 @@
     Model a list of sports teams with players, and stats about the players\n\n"
 - :standard_uuid: ac805334-f3dd-4288-9a61-0dcef3e219d4
   :standard_name: Programming with Javascript
+  :uuid: 5767bdd1-0679-43f5-9e7e-addeb2d8c1a4
+  :name: Diagram and explain how reference and primitive types are stored in memory
+    and how they are passed around
+  :description: "- Contrast “passing a value” vs “passing a reference”\n- Mentally
+    parse statements that combine value and reference types\n- Diagram how reference
+    and primitive types are stored in memory given an algorithm with loops / conditionals
+    / arrays / objects\n\n\n\n\n\n- Shows a table of names and values, with arrows
+    between them\r\n- Shows arrays as a strip of boxes\r\n- Shows objects as a table
+    of keys and pointers to values\r\n- Shows references to objects as pointers pointing
+    to the object\r\n- Shows the prototype as a nested object inside of an object\r\n-
+    Shows functions as reference types\n\n\n\nhttp://www.pythontutor.com/javascript.html#mode=edit"
+  :instructor_notes: "\n\n\n\n- Diagram how reference and primitive types are stored
+    in memory given an algorithm with loops / conditionals / arrays / objects\r\n-
+    Diagram and explain how reference and primitive types are stored in memory\r\n\r\n\r\n##
+    Success Criteria\r\n* Shows that primitive types are immutable\r\n* Shows a table
+    of names and values, with arrows between them\r\n* Shows arrays as a table of
+    indexes with pointers to values\r\n* Shows objects as a table of keys and pointers
+    to values\r\n* Shows references to objects as pointers pointing to the object\r\n*
+    Shows the prototype as a nested object inside of an object\r\n* Shows functions
+    as reference types\r\n\r\n### Legacy Objectives\r\n- Diagrams\r\n- Diagram and
+    explain how reference and primitive types are stored in memory\r\n\r\n- Represent
+    variables visually\r\n- Draw arrays and objects similarly\r\n- Draw functions
+    as objects\r\n- Draw prototype properties and prototypes differently\r\n- Draw
+    links between arrays/objects and their values\r\n\r\nDraw variables as pointers
+    to objects"
+- :standard_uuid: ac805334-f3dd-4288-9a61-0dcef3e219d4
+  :standard_name: Programming with Javascript
   :uuid: 6754eeea-a10b-4033-a598-a0e081257f60
   :name: Encapsulate reusable code in functions
   :description: "- Formulates new functions given inputs and desired outputs\n- Mentally
@@ -652,33 +669,6 @@
     Use built-in Javascript methods to perform common tasks on objects\r\n\r\n(loosely:
     “a function is a set of instructions that can take 0 or more inputs, perform calculations
     and either return values or cause changes to occur”)"
-- :standard_uuid: ac805334-f3dd-4288-9a61-0dcef3e219d4
-  :standard_name: Programming with Javascript
-  :uuid: 5767bdd1-0679-43f5-9e7e-addeb2d8c1a4
-  :name: Diagram and explain how reference and primitive types are stored in memory
-    and how they are passed around
-  :description: "- Contrast “passing a value” vs “passing a reference”\n- Mentally
-    parse statements that combine value and reference types\n- Diagram how reference
-    and primitive types are stored in memory given an algorithm with loops / conditionals
-    / arrays / objects\n\n\n\n\n\n- Shows a table of names and values, with arrows
-    between them\r\n- Shows arrays as a strip of boxes\r\n- Shows objects as a table
-    of keys and pointers to values\r\n- Shows references to objects as pointers pointing
-    to the object\r\n- Shows the prototype as a nested object inside of an object\r\n-
-    Shows functions as reference types\n\n\n\nhttp://www.pythontutor.com/javascript.html#mode=edit"
-  :instructor_notes: "\n\n\n\n- Diagram how reference and primitive types are stored
-    in memory given an algorithm with loops / conditionals / arrays / objects\r\n-
-    Diagram and explain how reference and primitive types are stored in memory\r\n\r\n\r\n##
-    Success Criteria\r\n* Shows that primitive types are immutable\r\n* Shows a table
-    of names and values, with arrows between them\r\n* Shows arrays as a table of
-    indexes with pointers to values\r\n* Shows objects as a table of keys and pointers
-    to values\r\n* Shows references to objects as pointers pointing to the object\r\n*
-    Shows the prototype as a nested object inside of an object\r\n* Shows functions
-    as reference types\r\n\r\n### Legacy Objectives\r\n- Diagrams\r\n- Diagram and
-    explain how reference and primitive types are stored in memory\r\n\r\n- Represent
-    variables visually\r\n- Draw arrays and objects similarly\r\n- Draw functions
-    as objects\r\n- Draw prototype properties and prototypes differently\r\n- Draw
-    links between arrays/objects and their values\r\n\r\nDraw variables as pointers
-    to objects"
 - :standard_uuid: ac805334-f3dd-4288-9a61-0dcef3e219d4
   :standard_name: Programming with Javascript
   :uuid: 861bcda5-c1ed-470c-9389-fafcf80c2399
@@ -1669,6 +1659,14 @@
     Database connection strings\r\n- Transactions\r\n\r\nprotocol://user:password@host:port/db-name\r\n\r\npostgresql://root:897654ersdfghj@example.com:5432/products"
 - :standard_uuid: 2886a5f1-92f6-44ba-8adb-185b2a161870
   :standard_name: Deployment
+  :uuid: 4d3b234c-6e4d-4af4-9635-a939fe502ebe
+  :name: Discuss the role and purpose of devops
+  :description: "- In a short paragraph describe key devops concepts\n\nSuch as \r\n\r\n-
+    automated configuration management\r\n- automated provisioning\r\n- elastic infrastructure\r\n-
+    monitoring\r\n- mentioning tools such as Chef, Puppet, Ansible"
+  :instructor_notes: ''
+- :standard_uuid: 2886a5f1-92f6-44ba-8adb-185b2a161870
+  :standard_name: Deployment
   :uuid: 5ef7bda4-d599-4b11-a435-f518c4469be6
   :name: Connect to another computer using SSH
   :description: |+
@@ -1685,20 +1683,17 @@
   :instructor_notes: ''
 - :standard_uuid: 2886a5f1-92f6-44ba-8adb-185b2a161870
   :standard_name: Deployment
-  :uuid: 4d3b234c-6e4d-4af4-9635-a939fe502ebe
-  :name: Discuss the role and purpose of devops
-  :description: "- In a short paragraph describe key devops concepts\n\nSuch as \r\n\r\n-
-    automated configuration management\r\n- automated provisioning\r\n- elastic infrastructure\r\n-
-    monitoring\r\n- mentioning tools such as Chef, Puppet, Ansible"
-  :instructor_notes: ''
-- :standard_uuid: 2886a5f1-92f6-44ba-8adb-185b2a161870
-  :standard_name: Deployment
-  :uuid: 8cf1f10a-fc6b-4c09-a2bc-6e4d1a901dad
-  :name: Deploy to Heroku (a PaaS Provider)
-  :description: |+
-    - Student has a functioning Node app up and running that has environment variables and attached SQL database
+  :uuid: 14a67719-f04a-4c10-ae39-33ae7142d976
+  :name: Deploy an app to EC2 and compare and contrast the AWS core philosophy with
+    Heroku and Cloud Foundry and pre-cloud era
+  :description: "- Running app on EC2 that meet the requirements\n- Describe elastic
+    IPs / elastic load balancing / elastic block store (infrastructure on-demand)
+    in comparison with other options\n\n- A web server such as Nginx or Apache \r\n-
+    A database such as Postgres \r\n- An app server - Node / Ruby / Passenger \r\n-
+    Having started from a CentOS or Ubuntu base AMI\n\n"
+  :instructor_notes: |2+
 
-  :instructor_notes: ''
+
 - :standard_uuid: 2886a5f1-92f6-44ba-8adb-185b2a161870
   :standard_name: Deployment
   :uuid: d183eb60-fcfc-40d1-9cae-d85f5f349fb0
@@ -1715,17 +1710,12 @@
 
 - :standard_uuid: 2886a5f1-92f6-44ba-8adb-185b2a161870
   :standard_name: Deployment
-  :uuid: 14a67719-f04a-4c10-ae39-33ae7142d976
-  :name: Deploy an app to EC2 and compare and contrast the AWS core philosophy with
-    Heroku and Cloud Foundry and pre-cloud era
-  :description: "- Running app on EC2 that meet the requirements\n- Describe elastic
-    IPs / elastic load balancing / elastic block store (infrastructure on-demand)
-    in comparison with other options\n\n- A web server such as Nginx or Apache \r\n-
-    A database such as Postgres \r\n- An app server - Node / Ruby / Passenger \r\n-
-    Having started from a CentOS or Ubuntu base AMI\n\n"
-  :instructor_notes: |2+
+  :uuid: 8cf1f10a-fc6b-4c09-a2bc-6e4d1a901dad
+  :name: Deploy to Heroku (a PaaS Provider)
+  :description: |+
+    - Student has a functioning Node app up and running that has environment variables and attached SQL database
 
-
+  :instructor_notes: ''
 - :standard_uuid: 2886a5f1-92f6-44ba-8adb-185b2a161870
   :standard_name: Deployment
   :uuid: b1e49494-ae23-4e78-9f4a-fa52572b2978
@@ -1769,6 +1759,14 @@
 
 - :standard_uuid: ce60c0de-9f49-423f-bbbe-7fea0c1b875c
   :standard_name: Architecture
+  :uuid: 06005077-158b-4cd8-903f-562b709aa071
+  :name: Build a web app that separates concerns using models, views, and controllers
+  :description: |+
+    - Build a web app that separates concerns using models, views, and controllers
+
+  :instructor_notes: ''
+- :standard_uuid: ce60c0de-9f49-423f-bbbe-7fea0c1b875c
+  :standard_name: Architecture
   :uuid: b24ecc78-5a7d-493d-8f66-3d451a9d374c
   :name: Identifies and explains purpose of common software architectural concepts
   :description: "- Identify and explain: Route, Model, View / Template, Controller,
@@ -1781,12 +1779,15 @@
     - scheduled code"
 - :standard_uuid: ce60c0de-9f49-423f-bbbe-7fea0c1b875c
   :standard_name: Architecture
-  :uuid: 06005077-158b-4cd8-903f-562b709aa071
-  :name: Build a web app that separates concerns using models, views, and controllers
-  :description: |+
-    - Build a web app that separates concerns using models, views, and controllers
+  :uuid: 1d4c879a-8dd3-4eb0-babc-8414e7ed73ec
+  :name: Discuss and diagram microservice architecture
+  :description: "- Compares / contrasts with monolithic application\n- Explain and
+    diagram a microservice architecture, including terms such as:\n\n\n\n- fail-fast\r\n-
+    circuit breakers\r\n- horizontal scalability\r\n- swappability\r\n- service discovery\r\n-
+    config management\r\n- edge/proxy caching server\r\n- 12factor apps"
+  :instructor_notes: |+
+    Identify seams
 
-  :instructor_notes: ''
 - :standard_uuid: ce60c0de-9f49-423f-bbbe-7fea0c1b875c
   :standard_name: Architecture
   :uuid: 4f82519b-1fc7-4007-9357-66a94ee520a7
@@ -1801,17 +1802,6 @@
 
 
     (firewalls) - “who’s allowed to do what”
-- :standard_uuid: ce60c0de-9f49-423f-bbbe-7fea0c1b875c
-  :standard_name: Architecture
-  :uuid: 1d4c879a-8dd3-4eb0-babc-8414e7ed73ec
-  :name: Discuss and diagram microservice architecture
-  :description: "- Compares / contrasts with monolithic application\n- Explain and
-    diagram a microservice architecture, including terms such as:\n\n\n\n- fail-fast\r\n-
-    circuit breakers\r\n- horizontal scalability\r\n- swappability\r\n- service discovery\r\n-
-    config management\r\n- edge/proxy caching server\r\n- 12factor apps"
-  :instructor_notes: |+
-    Identify seams
-
 - :standard_uuid: 39680f2e-8004-4029-a637-1722f5b54625
   :standard_name: UX User Testing
   :uuid: a8e5b3db-eefd-41c3-aa94-ad2fbe7e8634
@@ -1847,18 +1837,18 @@
 
 - :standard_uuid: b7090a92-612d-4811-ac2c-8d750e5fab1d
   :standard_name: Client Side Frameworks (Angular)
-  :uuid: 4794e677-7800-4e74-991e-b2ec21f40c5a
-  :name: Implement custom-directives
-  :description: |+
-    - Build a reusable Angular component (aka custom directive) that appears on multiple routes
-
-  :instructor_notes: ''
-- :standard_uuid: b7090a92-612d-4811-ac2c-8d750e5fab1d
-  :standard_name: Client Side Frameworks (Angular)
   :uuid: 2601933b-c305-45d8-9527-42cda918507c
   :name: Explain client-side routing as it relates to server-side routing
   :description: |+
     - Sequence diagram of how a deep-link works in an client-side routed app using pushstate-style URLs including the concept of a wildcard route on the server (express or superstatic)
+
+  :instructor_notes: ''
+- :standard_uuid: b7090a92-612d-4811-ac2c-8d750e5fab1d
+  :standard_name: Client Side Frameworks (Angular)
+  :uuid: 4794e677-7800-4e74-991e-b2ec21f40c5a
+  :name: Implement custom-directives
+  :description: |+
+    - Build a reusable Angular component (aka custom directive) that appears on multiple routes
 
   :instructor_notes: ''
 - :standard_uuid: b7090a92-612d-4811-ac2c-8d750e5fab1d
@@ -1945,18 +1935,18 @@
 
 - :standard_uuid: 0f6ed5e9-c172-4969-b990-f2324c91f5ad
   :standard_name: Designing APIs
-  :uuid: ec89798f-87ee-4691-abee-28f85bcb5c59
-  :name: Discuss common API design concepts
-  :description: |+
-    - Talk about hypermedia, HATEOS / JSON-API, automated docs / standardization
-
-  :instructor_notes: ''
-- :standard_uuid: 0f6ed5e9-c172-4969-b990-f2324c91f5ad
-  :standard_name: Designing APIs
   :uuid: 4655229a-33c6-4e0f-93e1-71c557c67602
   :name: Document an API using an automated tool
   :description: |+
     - Has documented an API using either a comment-parsing strategy or a documentation tool such as Swagger
+
+  :instructor_notes: ''
+- :standard_uuid: 0f6ed5e9-c172-4969-b990-f2324c91f5ad
+  :standard_name: Designing APIs
+  :uuid: ec89798f-87ee-4691-abee-28f85bcb5c59
+  :name: Discuss common API design concepts
+  :description: |+
+    - Talk about hypermedia, HATEOS / JSON-API, automated docs / standardization
 
   :instructor_notes: ''
 - :standard_uuid: 0f6ed5e9-c172-4969-b990-f2324c91f5ad
@@ -2112,6 +2102,17 @@
     compile time vs. runtime
 - :standard_uuid: e43b79ad-875a-4817-8ac0-68f7f47f3b42
   :standard_name: OOP w/ Statically Typed Language
+  :uuid: 84e30c2e-0715-411f-b39b-db22598897b1
+  :name: Compare and contrast OOP and Functional Programming
+  :description: "- Describe Functional Programming in relation to OOP\n- Describe
+    OOP in relation to functional programming\n\n- First class functions\r\n- Higher
+    order functions\r\n- Immutable data\r\n- Functions like components of an assembly
+    line\n\n- Methods operating on the state of the object\r\n- Mutable data"
+  :instructor_notes: |2+
+
+
+- :standard_uuid: e43b79ad-875a-4817-8ac0-68f7f47f3b42
+  :standard_name: OOP w/ Statically Typed Language
   :uuid: 0aa5d3c6-9b6c-4c71-a680-35500aec7773
   :name: Define and explain the significance of the major principles of Object Oriented
     Programming
@@ -2131,17 +2132,6 @@
     composition\n\n- Subclasses / classes w/ an interface have the same method signatures\r\n-
     Liskov\n\n- behavior and state contained together\r\n- public vs private vs protected\r\n-
     understand the concept of visibility\n\n- interfaces\r\n- modeling real-world\n\n"
-- :standard_uuid: e43b79ad-875a-4817-8ac0-68f7f47f3b42
-  :standard_name: OOP w/ Statically Typed Language
-  :uuid: 84e30c2e-0715-411f-b39b-db22598897b1
-  :name: Compare and contrast OOP and Functional Programming
-  :description: "- Describe Functional Programming in relation to OOP\n- Describe
-    OOP in relation to functional programming\n\n- First class functions\r\n- Higher
-    order functions\r\n- Immutable data\r\n- Functions like components of an assembly
-    line\n\n- Methods operating on the state of the object\r\n- Mutable data"
-  :instructor_notes: |2+
-
-
 - :standard_uuid: d5947e67-9d70-4e02-ae2a-b3135a9c1667
   :standard_name: Data Structures / Algorithms
   :uuid: 864fb2e5-1a7c-440d-a21d-eead8eed127e
