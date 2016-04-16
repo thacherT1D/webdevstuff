@@ -47,14 +47,6 @@
     changes?\n\n"
 - :standard_uuid: 4298574a-4ac8-4a6b-8195-91c349a04209
   :standard_name: Dev Environment
-  :uuid: c795cc87-dc92-4c81-918e-cd6be797a530
-  :name: Send HTTP requests and view HTTP responses with Postman
-  :description: |+
-    - Uses Postman to send and receive HTTP Requests and inspect them with Postman
-
-  :instructor_notes: ''
-- :standard_uuid: 4298574a-4ac8-4a6b-8195-91c349a04209
-  :standard_name: Dev Environment
   :uuid: 07448ee9-9e09-43de-9afd-c4acba35a6c2
   :name: Touch type code at least 40 WPM
   :description: |-
@@ -62,6 +54,14 @@
 
     In this exercise: https://typing.io/lesson/javascript/jquery/traversing.js/2
   :instructor_notes: "Using the following exercise  \r\nhttps://typing.io/lesson/javascript/jquery/traversing.js/2"
+- :standard_uuid: 4298574a-4ac8-4a6b-8195-91c349a04209
+  :standard_name: Dev Environment
+  :uuid: c795cc87-dc92-4c81-918e-cd6be797a530
+  :name: Send HTTP requests and view HTTP responses with Postman
+  :description: |+
+    - Uses Postman to send and receive HTTP Requests and inspect them with Postman
+
+  :instructor_notes: ''
 - :standard_uuid: 4298574a-4ac8-4a6b-8195-91c349a04209
   :standard_name: Dev Environment
   :uuid: 24654e75-c03f-4f7f-83a6-3487cbb6e063
@@ -1691,14 +1691,6 @@
   :instructor_notes: ''
 - :standard_uuid: 2886a5f1-92f6-44ba-8adb-185b2a161870
   :standard_name: Deployment
-  :uuid: 4d3b234c-6e4d-4af4-9635-a939fe502ebe
-  :name: Discuss the role and purpose of devops
-  :description: "- In a short paragraph describe key devops concepts\n\nSuch as \r\n\r\n-
-    automated configuration management\r\n- automated provisioning\r\n- elastic infrastructure\r\n-
-    monitoring\r\n- mentioning tools such as Chef, Puppet, Ansible"
-  :instructor_notes: ''
-- :standard_uuid: 2886a5f1-92f6-44ba-8adb-185b2a161870
-  :standard_name: Deployment
   :uuid: 6a02b407-69d9-453b-a747-c8b87950cb2b
   :name: Develop and deploy an app using Docker containers
   :description: |+
@@ -1707,17 +1699,12 @@
   :instructor_notes: ''
 - :standard_uuid: 2886a5f1-92f6-44ba-8adb-185b2a161870
   :standard_name: Deployment
-  :uuid: 14a67719-f04a-4c10-ae39-33ae7142d976
-  :name: Deploy an app to EC2 and compare and contrast the AWS core philosophy with
-    Heroku and Cloud Foundry and pre-cloud era
-  :description: "- Running app on EC2 that meet the requirements\n- Describe elastic
-    IPs / elastic load balancing / elastic block store (infrastructure on-demand)
-    in comparison with other options\n\n- A web server such as Nginx or Apache \r\n-
-    A database such as Postgres \r\n- An app server - Node / Ruby / Passenger \r\n-
-    Having started from a CentOS or Ubuntu base AMI\n\n"
-  :instructor_notes: |2+
-
-
+  :uuid: 4d3b234c-6e4d-4af4-9635-a939fe502ebe
+  :name: Discuss the role and purpose of devops
+  :description: "- In a short paragraph describe key devops concepts\n\nSuch as \r\n\r\n-
+    automated configuration management\r\n- automated provisioning\r\n- elastic infrastructure\r\n-
+    monitoring\r\n- mentioning tools such as Chef, Puppet, Ansible"
+  :instructor_notes: ''
 - :standard_uuid: 2886a5f1-92f6-44ba-8adb-185b2a161870
   :standard_name: Deployment
   :uuid: b1e49494-ae23-4e78-9f4a-fa52572b2978
@@ -1756,6 +1743,19 @@
   :instructor_notes: ''
 - :standard_uuid: 2886a5f1-92f6-44ba-8adb-185b2a161870
   :standard_name: Deployment
+  :uuid: 14a67719-f04a-4c10-ae39-33ae7142d976
+  :name: Deploy an app to EC2 and compare and contrast the AWS core philosophy with
+    Heroku and Cloud Foundry and pre-cloud era
+  :description: "- Running app on EC2 that meet the requirements\n- Describe elastic
+    IPs / elastic load balancing / elastic block store (infrastructure on-demand)
+    in comparison with other options\n\n- A web server such as Nginx or Apache \r\n-
+    A database such as Postgres \r\n- An app server - Node / Ruby / Passenger \r\n-
+    Having started from a CentOS or Ubuntu base AMI\n\n"
+  :instructor_notes: |2+
+
+
+- :standard_uuid: 2886a5f1-92f6-44ba-8adb-185b2a161870
+  :standard_name: Deployment
   :uuid: 79030da6-cfca-479c-8ac2-31826cf70ddd
   :name: Deploy to Pivotal Web Services Cloud Foundry
   :description: |+
@@ -1783,14 +1783,6 @@
 
 - :standard_uuid: ce60c0de-9f49-423f-bbbe-7fea0c1b875c
   :standard_name: Architecture
-  :uuid: 06005077-158b-4cd8-903f-562b709aa071
-  :name: Build a web app that separates concerns using models, views, and controllers
-  :description: |+
-    - Build a web app that separates concerns using models, views, and controllers
-
-  :instructor_notes: ''
-- :standard_uuid: ce60c0de-9f49-423f-bbbe-7fea0c1b875c
-  :standard_name: Architecture
   :uuid: b24ecc78-5a7d-493d-8f66-3d451a9d374c
   :name: Identifies and explains purpose of common software architectural concepts
   :description: "- Identify and explain: Route, Model, View / Template, Controller,
@@ -1801,6 +1793,14 @@
     Display, state, and behavior encapsulated.\r\n- Utility / Helper - repeated procedure
     for refactoring purposes - logic extracted from a view for reusability\r\n- Worker
     - scheduled code"
+- :standard_uuid: ce60c0de-9f49-423f-bbbe-7fea0c1b875c
+  :standard_name: Architecture
+  :uuid: 06005077-158b-4cd8-903f-562b709aa071
+  :name: Build a web app that separates concerns using models, views, and controllers
+  :description: |+
+    - Build a web app that separates concerns using models, views, and controllers
+
+  :instructor_notes: ''
 - :standard_uuid: ce60c0de-9f49-423f-bbbe-7fea0c1b875c
   :standard_name: Architecture
   :uuid: 1d4c879a-8dd3-4eb0-babc-8414e7ed73ec
@@ -1861,18 +1861,18 @@
 
 - :standard_uuid: b7090a92-612d-4811-ac2c-8d750e5fab1d
   :standard_name: Client Side Frameworks (Angular)
-  :uuid: 2601933b-c305-45d8-9527-42cda918507c
-  :name: Explain client-side routing as it relates to server-side routing
-  :description: |+
-    - Sequence diagram of how a deep-link works in an client-side routed app using pushstate-style URLs including the concept of a wildcard route on the server (express or superstatic)
-
-  :instructor_notes: ''
-- :standard_uuid: b7090a92-612d-4811-ac2c-8d750e5fab1d
-  :standard_name: Client Side Frameworks (Angular)
   :uuid: 4794e677-7800-4e74-991e-b2ec21f40c5a
   :name: Implement custom-directives
   :description: |+
     - Build a reusable Angular component (aka custom directive) that appears on multiple routes
+
+  :instructor_notes: ''
+- :standard_uuid: b7090a92-612d-4811-ac2c-8d750e5fab1d
+  :standard_name: Client Side Frameworks (Angular)
+  :uuid: 2601933b-c305-45d8-9527-42cda918507c
+  :name: Explain client-side routing as it relates to server-side routing
+  :description: |+
+    - Sequence diagram of how a deep-link works in an client-side routed app using pushstate-style URLs including the concept of a wildcard route on the server (express or superstatic)
 
   :instructor_notes: ''
 - :standard_uuid: b7090a92-612d-4811-ac2c-8d750e5fab1d
@@ -1934,18 +1934,6 @@
   :instructor_notes: ''
 - :standard_uuid: dfec3119-3ba1-4a14-ba2c-9f66715f4b98
   :standard_name: Agile Project Management
-  :uuid: 5a36d842-c508-4cbe-906d-f586f3b0e424
-  :name: Complete projects using an agile methodology
-  :description: "- Follow agile best-practices\n\n* Write and prioritize stories/features\r\n*
-    Complete one feature before moving on to the next\r\n* Go through an acceptance
-    process with a stakeholder\r\n* Track their progress using an agile project management
-    tool"
-  :instructor_notes: "Old success criteria\r\n\r\n- Student completes a software project
-    where they:\r\n- Write and prioritize stories/features\r\n- Complete one feature
-    before moving on to the next\r\n- Go through an acceptance process with a stakeholder\r\n-
-    Track their progress using an agile project management tool"
-- :standard_uuid: dfec3119-3ba1-4a14-ba2c-9f66715f4b98
-  :standard_name: Agile Project Management
   :uuid: 614e6ddd-49c8-459b-b79d-81265d867757
   :name: Discuss agile values and principles
   :description: "- Discuss the significance of each of the agile values\n- Student
@@ -1957,20 +1945,32 @@
   :instructor_notes: |2+
 
 
-- :standard_uuid: 0f6ed5e9-c172-4969-b990-f2324c91f5ad
-  :standard_name: Designing APIs
-  :uuid: 4655229a-33c6-4e0f-93e1-71c557c67602
-  :name: Document an API using an automated tool
-  :description: |+
-    - Has documented an API using either a comment-parsing strategy or a documentation tool such as Swagger
-
-  :instructor_notes: ''
+- :standard_uuid: dfec3119-3ba1-4a14-ba2c-9f66715f4b98
+  :standard_name: Agile Project Management
+  :uuid: 5a36d842-c508-4cbe-906d-f586f3b0e424
+  :name: Complete projects using an agile methodology
+  :description: "- Follow agile best-practices\n\n* Write and prioritize stories/features\r\n*
+    Complete one feature before moving on to the next\r\n* Go through an acceptance
+    process with a stakeholder\r\n* Track their progress using an agile project management
+    tool"
+  :instructor_notes: "Old success criteria\r\n\r\n- Student completes a software project
+    where they:\r\n- Write and prioritize stories/features\r\n- Complete one feature
+    before moving on to the next\r\n- Go through an acceptance process with a stakeholder\r\n-
+    Track their progress using an agile project management tool"
 - :standard_uuid: 0f6ed5e9-c172-4969-b990-f2324c91f5ad
   :standard_name: Designing APIs
   :uuid: ec89798f-87ee-4691-abee-28f85bcb5c59
   :name: Discuss common API design concepts
   :description: |+
     - Talk about hypermedia, HATEOS / JSON-API, automated docs / standardization
+
+  :instructor_notes: ''
+- :standard_uuid: 0f6ed5e9-c172-4969-b990-f2324c91f5ad
+  :standard_name: Designing APIs
+  :uuid: 4655229a-33c6-4e0f-93e1-71c557c67602
+  :name: Document an API using an automated tool
+  :description: |+
+    - Has documented an API using either a comment-parsing strategy or a documentation tool such as Swagger
 
   :instructor_notes: ''
 - :standard_uuid: 0f6ed5e9-c172-4969-b990-f2324c91f5ad
@@ -2126,6 +2126,17 @@
     compile time vs. runtime
 - :standard_uuid: e43b79ad-875a-4817-8ac0-68f7f47f3b42
   :standard_name: OOP w/ Statically Typed Language
+  :uuid: 84e30c2e-0715-411f-b39b-db22598897b1
+  :name: Compare and contrast OOP and Functional Programming
+  :description: "- Describe Functional Programming in relation to OOP\n- Describe
+    OOP in relation to functional programming\n\n- First class functions\r\n- Higher
+    order functions\r\n- Immutable data\r\n- Functions like components of an assembly
+    line\n\n- Methods operating on the state of the object\r\n- Mutable data"
+  :instructor_notes: |2+
+
+
+- :standard_uuid: e43b79ad-875a-4817-8ac0-68f7f47f3b42
+  :standard_name: OOP w/ Statically Typed Language
   :uuid: 0aa5d3c6-9b6c-4c71-a680-35500aec7773
   :name: Define and explain the significance of the major principles of Object Oriented
     Programming
@@ -2145,17 +2156,6 @@
     composition\n\n- Subclasses / classes w/ an interface have the same method signatures\r\n-
     Liskov\n\n- behavior and state contained together\r\n- public vs private vs protected\r\n-
     understand the concept of visibility\n\n- interfaces\r\n- modeling real-world\n\n"
-- :standard_uuid: e43b79ad-875a-4817-8ac0-68f7f47f3b42
-  :standard_name: OOP w/ Statically Typed Language
-  :uuid: 84e30c2e-0715-411f-b39b-db22598897b1
-  :name: Compare and contrast OOP and Functional Programming
-  :description: "- Describe Functional Programming in relation to OOP\n- Describe
-    OOP in relation to functional programming\n\n- First class functions\r\n- Higher
-    order functions\r\n- Immutable data\r\n- Functions like components of an assembly
-    line\n\n- Methods operating on the state of the object\r\n- Mutable data"
-  :instructor_notes: |2+
-
-
 - :standard_uuid: d5947e67-9d70-4e02-ae2a-b3135a9c1667
   :standard_name: Data Structures / Algorithms
   :uuid: 864fb2e5-1a7c-440d-a21d-eead8eed127e

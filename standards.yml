@@ -317,23 +317,18 @@
   :subject_uuid: ac805334-f3dd-4288-9a61-0dcef3e219d4
   :subject_name: Programming with Javascript
   :description: ''
-  :instructor_notes: "## Assessments\r\n\r\nGive them an implemented algorithm and
-    ask what the resulting data structure is\r\nExample:\r\n\r\n- give an algorithm
-    that indexes an array of object\r\n- give an algorithm that counts the number
-    of occurrences\r\n\r\nGive students fun problems like:\r\n\r\n```\r\nvar obj =
-    {}\r\nvar other = {}\r\nobj.foo = other\r\nother.bar = “hello”\r\n// what is obj.foo.bar?\r\n```\r\n\r\n**Resources:**\r\n\r\n-
-    http://www.pythontutor.com/javascript.html#mode=edit\n\n**Notes:** Students should
-    display the ability to think like a computer- they need to understand the order
-    in which an interpreter looks at each statement and be able to accurately mentally
-    evaluate those statements. \r\n\r\n## Assessments\r\n\r\n- Evaluate the following
-    statement, expression by expression. What does result evaluate to?\r\n    - `var
-    result = (true && false) || (true && true || false) && (false || false)`\r\n-
-    Write a statement that evaluates to `true` if a phone number is valid\r\n- Write
-    a statement that evaluates to `true` if a string is not empty\r\n- String and
-    numbers\r\n- Concatenate two strings that contain (only) numbers\r\n- Subtract
-    two strings that contain (only) numbers\r\n- https://github.com/gSchool/javascript-variables-beginner\r\n-
-    [LMS Javascript Variables Assessment](https://coursework.galvanize.com/assessments/23)\r\n-
-    [LMS JS Fundamentals - Evaluation of Expressions](https://coursework.galvanize.com/assessments/2)\r\n-
+  :instructor_notes: "**Notes:** Students should display the ability to think like
+    a computer- they need to understand the order in which an interpreter looks at
+    each statement and be able to accurately mentally evaluate those statements. \r\n\r\n##
+    Assessments\r\n\r\n- Evaluate the following statement, expression by expression.
+    What does result evaluate to?\r\n    - `var result = (true && false) || (true
+    && true || false) && (false || false)`\r\n- Write a statement that evaluates to
+    `true` if a phone number is valid\r\n- Write a statement that evaluates to `true`
+    if a string is not empty\r\n- String and numbers\r\n- Concatenate two strings
+    that contain (only) numbers\r\n- Subtract two strings that contain (only) numbers\r\n-
+    https://github.com/gSchool/javascript-variables-beginner\r\n- [LMS Javascript
+    Variables Assessment](https://coursework.galvanize.com/assessments/23)\r\n- [LMS
+    JS Fundamentals - Evaluation of Expressions](https://coursework.galvanize.com/assessments/2)\r\n-
     [LMS Eloquent JS Assessment](https://coursework.galvanize.com/assessments/18)\r\n-
     [LMS Week 1 Assessment (Small Section on JS values & local vs. global scope)](https://coursework.galvanize.com/assessments/83)\r\n-
     [LMS JavaScript: types, variables, control flow, operators](https://coursework.galvanize.com/assessments/58)\r\n-
@@ -374,8 +369,14 @@
     [LMS JS-Conditional](https://github.com/gSchool/javascript-conditionals)\r\n-
     [LMS JS Functions - Part 3](https://github.com/gSchool/g11-course-curriculum/tree/master/week04/04_exercises/js-functions-part3)\r\n\r\n##
     Resources\r\n\r\n- http://archive.oreilly.com/pub/a/server-administration/excerpts/even-faster-websites/writing-efficient-javascript.html#fast_loops\r\n-
-    (Fast Conditionals)[http://archive.oreilly.com/pub/a/server-administration/excerpts/even-faster-websites/writing-efficient-javascript.html#fast_conditionals]\r\n\n\n###Assessments\r\n-
-    [LMS JavaScript: arrays, objects](https://coursework.galvanize.com/assessments/59)\r\n-
+    (Fast Conditionals)[http://archive.oreilly.com/pub/a/server-administration/excerpts/even-faster-websites/writing-efficient-javascript.html#fast_conditionals]\r\n\n\n##
+    Assessments\r\n\r\nGive them an implemented algorithm and ask what the resulting
+    data structure is\r\nExample:\r\n\r\n- give an algorithm that indexes an array
+    of object\r\n- give an algorithm that counts the number of occurrences\r\n\r\nGive
+    students fun problems like:\r\n\r\n```\r\nvar obj = {}\r\nvar other = {}\r\nobj.foo
+    = other\r\nother.bar = “hello”\r\n// what is obj.foo.bar?\r\n```\r\n\r\n**Resources:**\r\n\r\n-
+    http://www.pythontutor.com/javascript.html#mode=edit\n\n###Assessments\r\n- [LMS
+    JavaScript: arrays, objects](https://coursework.galvanize.com/assessments/59)\r\n-
     [LMS Strings, Arrays, Variables - Basic](https://coursework.galvanize.com/assessments/75)\r\n-
     [GH Simple Object Access Exercise](https://github.com/gSchool/simple-object-access-exercises/blob/master/object_array_access.md)\r\n-
     [GH Functions & Objects Exercise (Passing Objects as arguments and accessing values)](https://github.com/gSchool/functions-objects-js-homework)\r\n-
@@ -496,11 +497,11 @@
   :subject_uuid: 793b8c6a-a19d-4049-8183-9d454bf55028
   :subject_name: Thinking Like a Developer
   :description: ''
-  :instructor_notes: "- Doesn’t bully in code / commits\r\n- Doesn’t tell other that
-    their code is shit\r\n- Doesn’t get too animated\r\n\n\nAssessments:\r\n\r\nGiven
-    a style guide and some code, determine what’s wrong and give feedback.\r\n\n\n##Assessments\r\n[LMS
-    Clean Code Assessment](https://coursework.galvanize.com/assessments/67)\r\n[LMS
-    JS-Debugging & The DOM](https://coursework.galvanize.com/assessments/34)"
+  :instructor_notes: "Assessments:\r\n\r\nGiven a style guide and some code, determine
+    what’s wrong and give feedback.\r\n\n\n##Assessments\r\n[LMS Clean Code Assessment](https://coursework.galvanize.com/assessments/67)\r\n[LMS
+    JS-Debugging & The DOM](https://coursework.galvanize.com/assessments/34)\n\n\n\n-
+    Doesn’t bully in code / commits\r\n- Doesn’t tell other that their code is shit\r\n-
+    Doesn’t get too animated"
 - :uuid: 5ddfa4d5-6194-466b-97aa-f9610b77c493
   :name: JavaScript Object Model
   :subject_uuid: 5ddfa4d5-6194-466b-97aa-f9610b77c493
@@ -545,12 +546,12 @@
   :subject_uuid: f1a3c137-21bd-4902-a745-44d5ba8f992a
   :subject_name: Design
   :description: ''
-  :instructor_notes: "Assessments\r\n\r\n- When students submit a project, they have
-    to include their design artifacts, including their content inventory.\r\n\r\nSequencing
-    Notes:\r\n\r\n- Do this early?\r\n- Enumerate content elements in README / somewhere
-    in the Q1 project\r\n\n\n## Resources\r\n\r\n* https://frontify.com/styleguide
-    they should look like this\r\n* [Example Style Guide](https://brand.frontify.com/d/qAiubNBytHKf/style-guide)\r\n*
-    http://www.colourlovers.com/ have not terrible colors\r\n* https://color.adobe.com/\r\n\n\n\n\nResources\r\n\r\n-
+  :instructor_notes: "## Resources\r\n\r\n* https://frontify.com/styleguide they should
+    look like this\r\n* [Example Style Guide](https://brand.frontify.com/d/qAiubNBytHKf/style-guide)\r\n*
+    http://www.colourlovers.com/ have not terrible colors\r\n* https://color.adobe.com/\r\n\n\nAssessments\r\n\r\n-
+    When students submit a project, they have to include their design artifacts, including
+    their content inventory.\r\n\r\nSequencing Notes:\r\n\r\n- Do this early?\r\n-
+    Enumerate content elements in README / somewhere in the Q1 project\r\n\n\n\n\nResources\r\n\r\n-
     http://www.slideshare.net/intelleto/ux-lisbon2014-designingleanuxhandouts\r\n\r\nNotes\r\n\r\n-
     We’re trying to teach rapid prototyping here. It’s okay if their minimum testable
     artifact is a powerpoint presentation or some sketches. It doesn’t have to be
@@ -837,10 +838,10 @@
   :subject_uuid: d5947e67-9d70-4e02-ae2a-b3135a9c1667
   :subject_name: Data Structures / Algorithms
   :description: "Examples may be: \r\n* k-means\r\n* kNN (k nearest neighbor)\r\n*
-    checksum\r\n* DFS\r\n* BFS\r\n\n\n\n\n[Cracking the Coding Interview Process](https://qph.is.quoracdn.net/main-qimg-379a9cf0a7bd42f8084d137370e4bd79?convert_to_webp=true)\n\n\n\n\n\n\n\nhttp://bigocheatsheet.com/"
+    checksum\r\n* DFS\r\n* BFS\r\n\n\n\n\n[Cracking the Coding Interview Process](https://qph.is.quoracdn.net/main-qimg-379a9cf0a7bd42f8084d137370e4bd79?convert_to_webp=true)\n\n\n\n\n\n\n\n\n\nhttp://bigocheatsheet.com/"
   :instructor_notes: "### Assessments\r\n* If you want to know if two files are the
     same, which algorithm would you use? Why?\n\n\n\n\n\n###Assessments\r\n- [LMS
-    JS Fundamentals, DOM, Iterators, CS and OOP](https://coursework.galvanize.com/assessments/38)\n\n###Assessments\r\n-
+    JS Fundamentals, DOM, Iterators, CS and OOP](https://coursework.galvanize.com/assessments/38)\n\n\n\n###Assessments\r\n-
     [LMS JS Fundamentals, DOM, Iterators, CS and OOP](https://coursework.galvanize.com/assessments/38)"
 - :uuid: e59bae37-553b-4c1b-8667-4dbbdeeae98d
   :name: Technical Interview Prep
