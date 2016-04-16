@@ -1,6 +1,4 @@
 ---
-- :uuid: d6e7b41b-e251-408f-b130-ed0cdf6b4479
-  :name: Learning to Learn
 - :uuid: 7313b475-d281-4c72-a3b3-1167eb3b13e3
   :name: The Command Line
 - :uuid: 4298574a-4ac8-4a6b-8195-91c349a04209
@@ -61,3 +59,5 @@
   :name: Technical Interview Prep
 - :uuid: 0bef6db4-d566-48c2-a5f5-ff09fce3b846
   :name: Application Analysis in Unfamiliar Environment
+- :uuid: 00e0974b-22f9-4aef-808c-383e1fbf784d
+  :name: React

@@ -1,97 +1,8 @@
 ---
-- :uuid: bd060210-950b-40d5-b02d-c861cfc93242
-  :name: "‘Set the Stage’ before engaging in a learning experience"
-  :subject_uuid: d6e7b41b-e251-408f-b130-ed0cdf6b4479
-  :subject_name: Learning to Learn
-  :resources: "Learn Anything (motivation) - https://www.youtube.com/watch?v=JC82Il2cjqA\r\nShort
-    motivating video on learning\r\n"
-  :guiding_questions: ''
-  :description: "**Why?**\r\n\r\nWe only have so much working energy and willpower
-    - wasting these precious resources on distractions that aren’t related to the
-    task at hand handicaps learning. Focused practice is the key to developing a new
-    skill.\r\n"
-  :instructor_notes: "##Assessments\r\nThis is a ‘process standard’ - something you
-    constantly reinforce throughout the course. Every time students engage with a
-    content standard, they should also be applying these habits/skills. Students should
-    reflect on these habits/skills frequently (at least weekly) to self-assess and
-    develop strategies for improvement.\r\n\r\n### Evidence of Mastery\r\n  * Clears
-    the stage\r\n  *Students have apps in full-screen mode and aren’t trying to move
-    windows around all the time.\r\n  * When observing a student, you don’t see any
-    notifications pop up\r\n  * When students alt+tab through applications, the only
-    apps that are open are the ones that they need at the current time.\r\n  * Student
-    uses a todo list and calendar to remember tasks and appointments (aren’t trying
-    to hold them in their working memory)\r\n* Clarify the “what” and the “why”\r\n
-    \ * If you ask a student what they’re currently working on, they phrase it in
-    terms of a specific outcome they’re working towards. (NOT: “I’m learning Javascript!”
-    YES: “I’m working on being able to describe the javascript object model.”)\r\n
-    \ * Student is able to explain why what they’re working on is important/meaningful
-    (the ‘why’) and how it relates to the big picture.\r\n* Prioritize Process over
-    Product\r\n  * ‘Winning’ for students is time on task/focused practice. They spend
-    LOTS of time practicing what’s in their zone of proximal development. (** this
-    is arguably the MOST IMPORTANT ‘lead measure’ for student success in the long-run
-    **)\r\n  * Students don’t beat themselves up if they don’t complete a project
-    or reach the same heights as other students. \r\n  * Student doesn’t take shortcuts
-    or cheat to finish the product at the expense of deep learning.\r\n  * Students
-    time-box their work, separating planning from doing. They choose a task, and then
-    work on it for a specified amount of time without getting distracted.\r\n"
-  :tags:
-  - learning-to-learn
-- :uuid: be21cf5e-5011-4a42-82cc-2fb90171df14
-  :name: "‘Play’ while engaged in and learning experience"
-  :subject_uuid: d6e7b41b-e251-408f-b130-ed0cdf6b4479
-  :subject_name: Learning to Learn
-  :resources: ''
-  :guiding_questions: ''
-  :description: "**Why?**\r\n\r\nFight or flight mode shuts down the outer cortex
-    (where the learning happens!). Students will learn + retain more if they’re having
-    fun and taking risks.\r\n"
-  :instructor_notes: "###Assessments\r\nThis is a ‘process standard’ - something you
-    constantly reinforce throughout the course. Every time students engage with a
-    content standard, they should also be applying these habits/skills. Students should
-    reflect on these habits/skills frequently (at least weekly) to self-assess and
-    develop strategies for improvement.\r\n\r\n\r\n#### Evidence of Mastery\r\n* Wrestle
-    with new content\r\n  * Student doesn’t settle for comprehension, rather, they
-    strive for fluency! They work the knowledge/skill/process into their long-term
-    memory through lots of practice and exposure.\r\n  * Student activity seeks out
-    external resources/practice (not just relying on proprietary Galvanize resources)\r\n*
-    Takes Risks (Growth Mindset)\r\n  * Student does not hide weaknesses from instructors
-    or other students. \r\n  * Student eagerly engages in difficult tasks. Not afraid
-    to take on assignments projects that seem insurmountable.\r\n* Has fun\r\n  *
-    Smiles!\r\n  * When student finds themselves in ‘fight or flight’ mode, they take
-    steps to return to a joyful/relaxed state (deep breaths, walk, stretch, play a
-    game, change the activity/context, refocus on the ‘why’)\r\n"
-  :tags:
-  - learning-to-learn
-- :uuid: cedea3d7-9ba9-426e-a473-46916497b002
-  :name: "‘Reflect’ after engaging in a learning experience"
-  :subject_uuid: d6e7b41b-e251-408f-b130-ed0cdf6b4479
-  :subject_name: Learning to Learn
-  :resources: ''
-  :guiding_questions: ''
-  :description: "Why? Reflecting on your learning is one of the most powerful things
-    you can do as a student. We want students to become their own teachers and have
-    visibility into their own strengths and weaknesses. It’s all about empowering
-    oneself to obtain the interventions needed to move forward.\r\n"
-  :instructor_notes: "###Assessment\r\nThis is a ‘process standard’ - something you
-    constantly reinforce throughout the course. Every time students engage with a
-    content standard, they should also be applying these habits/skills. Students should
-    reflect on these habits/skills frequently (at least weekly) to self-assess and
-    develop strategies for improvement.\r\n\r\n#### Evidence of Mastery\r\n* Self
-    assesses\r\n  * The student takes time to pause and reflect on the learning experience
-    they just completed\r\n  * The student can articulate what new knowledge or skills
-    they were exposed to/learned during the process\r\n  * The student can articulate
-    their strengths and areas for growth\r\n  * The student makes a plan for how to
-    strengthen their strengths, and improve the knowledge and skills they haven’t
-    yet mastered \r\n* Asks new Questions \r\n  * Student express curiosity by asking
-    questions that push their learning further."
-  :tags:
-  - learning-to-learn
-- :uuid: 5dea00ce-dbb3-43e9-91b9-dead371d37c4
-  :name: Navigate and manage a file system with the command line
+- :uuid: 7313b475-d281-4c72-a3b3-1167eb3b13e3
+  :name: The Command Line
   :subject_uuid: 7313b475-d281-4c72-a3b3-1167eb3b13e3
   :subject_name: The Command Line
-  :resources: ''
-  :guiding_questions: ''
   :description: ''
   :instructor_notes: "##Assessments\r\n- [LMS Navigating File System](https://coursework.galvanize.com/assessments/50)\r\n-
     [LMS CL, HTML, Git Basics](https://coursework.galvanize.com/assessments/31)\r\n-
@@ -106,96 +17,83 @@
     (Lifehacker article)\r\n- Linux Command Line Flashcards - https://quizlet.com/18423046/linux-command-line-flash-cards/
     (Review basic commands with quizlet flashcards)\r\n- CL Legacy Lecture - https://github.com/gSchool/fullstack-curriculum/blob/master/legacy/command-line.md
     (Notes on a CL basics lecture)\r\n- Art of the Command Line - https://github.com/jlevy/the-art-of-command-line\r\n-
-    https://github.com/gSchool/warmup-command-line"
-  :tags:
-  - Command Line
-- :uuid: 5e594f94-9089-4b2e-a0cf-f424ecd278b1
-  :name: Work with and discuss and Unix Roles / Permissions
-  :subject_uuid: 7313b475-d281-4c72-a3b3-1167eb3b13e3
-  :subject_name: The Command Line
-  :resources: ''
-  :guiding_questions: ''
-  :description: ''
-  :instructor_notes: "###Assessments\r\n"
-  :tags:
-  - Command Line
-- :uuid: 16b2ea59-6c8d-4cfa-8542-ff0fffee2982
-  :name: Navigate your computer swiftly using keyboard shortcuts
+    https://github.com/gSchool/warmup-command-line\n\n###Assessments"
+- :uuid: 4298574a-4ac8-4a6b-8195-91c349a04209
+  :name: Dev Environment
   :subject_uuid: 4298574a-4ac8-4a6b-8195-91c349a04209
   :subject_name: Dev Environment
-  :resources: ''
-  :guiding_questions: ''
-  :description: ''
-  :instructor_notes: "###Assessments\r\n\r\n- Instructors should evaluate whether
-    or not students are regularly taking advantage of shortcuts in different programs/tools.\r\n"
-  :tags:
-  - dev-environment
-- :uuid: 07448ee9-9e09-43de-9afd-c4acba35a6c2
-  :name: Touch type code at least 40 WPM
-  :subject_uuid: 4298574a-4ac8-4a6b-8195-91c349a04209
-  :subject_name: Dev Environment
-  :resources: https://typing.io/
-  :guiding_questions: ''
-  :description: ''
-  :instructor_notes: ''
-  :tags:
-  - dev-environment
-- :uuid: 24654e75-c03f-4f7f-83a6-3487cbb6e063
-  :name: Use dotfiles to configure projects, environments, and tools
-  :subject_uuid: 4298574a-4ac8-4a6b-8195-91c349a04209
-  :subject_name: Dev Environment
-  :resources: ''
-  :guiding_questions: ''
-  :description: ''
-  :instructor_notes: ''
-  :tags:
-  - dev-environment
-- :uuid: aa21f7d6-9878-4462-81c5-fef0af905875
-  :name: Debug and inspect web pages with the Chrome DevTools
-  :subject_uuid: 4298574a-4ac8-4a6b-8195-91c349a04209
-  :subject_name: Dev Environment
-  :resources: ''
-  :guiding_questions: ''
-  :description: "https://developer.chrome.com/devtools\r\n"
+  :description: |-
+    https://developer.chrome.com/devtools
+
+
+
+
+
+    https://typing.io/
   :instructor_notes: "##Assessments\r\n[LMS JS Debugging & DOM](https://coursework.galvanize.com/assessments/34)\r\n[GH
-    Find the Bugs Warmup](https://github.com/gSchool/findTheBugs-warmup)\r\n[GH JS-Bug-Sync](https://github.com/gSchool/js-bug-sync)"
-  :tags:
-  - dev-environment
-- :uuid: c795cc87-dc92-4c81-918e-cd6be797a530
-  :name: Send HTTP requests and view HTTP responses with Postman
-  :subject_uuid: 4298574a-4ac8-4a6b-8195-91c349a04209
-  :subject_name: Dev Environment
-  :resources: ''
-  :guiding_questions: ''
-  :description: ''
-  :instructor_notes: ''
-  :tags:
-  - dev-environment
-- :uuid: 90141122-0edb-4c14-ac77-a63e7c3a8ce0
-  :name: Write Valid HTML5 Markup
+    Find the Bugs Warmup](https://github.com/gSchool/findTheBugs-warmup)\r\n[GH JS-Bug-Sync](https://github.com/gSchool/js-bug-sync)\n\n\n\n###Assessments\r\n\r\n-
+    Instructors should evaluate whether or not students are regularly taking advantage
+    of shortcuts in different programs/tools."
+- :uuid: a7d5be0f-3937-465a-b5e9-b2555642e9d9
+  :name: HTML
   :subject_uuid: a7d5be0f-3937-465a-b5e9-b2555642e9d9
   :subject_name: HTML
-  :resources: "- https://developer.mozilla.org/en-US/docs/Web/HTML/Block-level_elements\r\n-
-    https://developer.mozilla.org/en-US/docs/Web/HTML/Inline_elemente\r\n- https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes"
-  :guiding_questions: "How does the structure of the document affect how it appears
-    on the page?  \r\nWhat is a Doctype?  \r\nWhat is the `head` tag used for?  \r\nDo
-    child elements in the `head` tag change the visual appearance of the page?  \r\nWhat
-    is the `body` tag used for?  \r\nWhat is the top-level element for any HTML document?
-    \ \r\nWhat is usually in the first line of every HTML document?  \r\n\r\nWhat
-    is the difference between block-level elements and inline elements?"
-  :description: ''
-  :instructor_notes: "## Assessments\r\n\r\n- All HTML documents from here on out
-    should comply with the success criteria.\r\n- XML your house (`<room>` tags, `<furniture>`
-    tags, etc stress the idea of arbitrary tags)\r\n- Profile Page Exercise (EX1 in
-    HTML LE)\r\n- Favorites List Exercise (EX2 in HTML LE)\r\n- [LMS HTML | Git |
-    GitHub - Level 1 (Basic HTML)](https://coursework.galvanize.com/assessments/72)\r\n-
-    [LMS HTML & Forms](https://coursework.galvanize.com/assessments/24)\r\n- [LMS
-    HTML Assessmet (BASICS)](https://coursework.galvanize.com/assessments/53)\r\n-
-    [Basic-HTML Exercise (HTML/CSS)](https://github.com/gSchool/basic-html)\r\n- [GH
-    Broken HTML](https://github.com/gSchool/invalid-html)\r\n------\r\n\r\n## Success
-    Criteria:\r\n\r\n- Tags are in a logical order to match reality\r\n- Tags are
-    properly indented to show nesting visually\r\n  - Block level elements have their
-    own indentation level\r\n  - inline elements are included inline\r\n- Attributes\r\n
+  :description: "**Why?** Semantic HTML is meaningful HTML. Your pages will be friendlier
+    for both users and machines, allowing better SEO performance and better integration
+    with accessibility devices.\r\n\r\n## Resources\r\n- [MDN HTML5](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5)\r\n-
+    [HTML Spec](https://html.spec.whatwg.org/#headings-and-sections)\r\n- [Writing
+    your best code](http://learn.shayhowe.com/html-css/writing-your-best-code/)\r\n\n\n-
+    What are some HTML tags that don't affect layout, yet are included for semantic
+    reasons?\r\n- How might we write pages that are easier for machines to parse and
+    read?\r\n- What are some websites that are easy for a screenreader to read? What
+    are some that are too difficult for a screenreader to read?\r\n- \"Article View\"
+    in Safari is a recent innovation that helps content be presented in a standard
+    way. How does this relate to accessibility?\r\n- Imagine you have to write a program
+    that reads webpages. What HTML tags and attributes could a developer use that
+    would make this easiest for you to accomplish?\n\n- [Dive Into HTML5](http://diveintohtml5.info/semantics.html)\n\n\n\nHow
+    does the structure of the document affect how it appears on the page?  \r\nWhat
+    is a Doctype?  \r\nWhat is the `head` tag used for?  \r\nDo child elements in
+    the `head` tag change the visual appearance of the page?  \r\nWhat is the `body`
+    tag used for?  \r\nWhat is the top-level element for any HTML document?  \r\nWhat
+    is usually in the first line of every HTML document?  \r\n\r\nWhat is the difference
+    between block-level elements and inline elements?\n\n- https://developer.mozilla.org/en-US/docs/Web/HTML/Block-level_elements\r\n-
+    https://developer.mozilla.org/en-US/docs/Web/HTML/Inline_elemente\r\n- https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes\n\n**Why?**
+    HTML Forms allow you to gather input from the user. Any time you’ve ever signed
+    up for anything, you’ve used a form! The applications you build at Galvanize and
+    throughout your career will feature many, many forms and form elements.\n\n\n\n-
+    [Dive into HTML5 Forms](http://diveintohtml5.info/forms.html)"
+  :instructor_notes: "**Notes:** Going back through a document they’ve written, or
+    going through a document that has been created for them is most similar to the
+    environment they’ll encounter at work - adding semantic markup to existing pages
+    is an ongoing effort that most companies are doing in order to improve SEO.\r\n\r\n##
+    Assessments\r\n- Markup a news article with semantic HTML5 tags\r\n- Go back and
+    make your prework (personal website) semantic\r\n- Create a landing page for your
+    favorite product\r\n  - included images\r\n  - include tables to compare with
+    similar products\r\n- Find an endangered species online. Produce a table that
+    lists the estimated population of that animal in every region in which it resides.\r\n-
+    [LMS CSS|Semantic HTML level One (Small section on Semantic HTML)](https://coursework.galvanize.com/assessments/73)\r\n-
+    [Basic-HTML exercise](https://github.com/gSchool/basic-html)\r\n- [GH HTML from
+    Scratch Exercise](https://github.com/gSchool/html-from-scratch-warmup)\r\n- [GH
+    Semantic Markup Exercise](https://github.com/gSchool/semantic-html-exercise)\r\n-
+    [GH Semantic HTML Scavenger Hunt (Doens't necessarily convey understanding)](https://github.com/gSchool/g18-semantic-html-scavenger-hunt-submissions)\r\n\r\n\r\n\r\n\r\n-
+    Explain why writing semantic HTML is important\r\n- Identify and describe new
+    HTML5 tags that can be used to create semantic markup\r\n- Convert an un-semantic
+    HTML page to an semantic page\r\n\r\nStudents should be able to articulate how
+    semantic HTML relates to SEO and Accessibility \r\n\n\n###Assessments\r\n- [LMS
+    Embedding Media](https://coursework.galvanize.com/assessments/64)\r\n- [GH Image
+    Map Exercise](https://github.com/gSchool/image-map-exercise)\r\n- [GH Embedding
+    Audio/Video Exercise](https://github.com/gSchool/embedding-audio-video)\n\n##
+    Assessments\r\n\r\n- All HTML documents from here on out should comply with the
+    success criteria.\r\n- XML your house (`<room>` tags, `<furniture>` tags, etc
+    stress the idea of arbitrary tags)\r\n- Profile Page Exercise (EX1 in HTML LE)\r\n-
+    Favorites List Exercise (EX2 in HTML LE)\r\n- [LMS HTML | Git | GitHub - Level
+    1 (Basic HTML)](https://coursework.galvanize.com/assessments/72)\r\n- [LMS HTML
+    & Forms](https://coursework.galvanize.com/assessments/24)\r\n- [LMS HTML Assessmet
+    (BASICS)](https://coursework.galvanize.com/assessments/53)\r\n- [Basic-HTML Exercise
+    (HTML/CSS)](https://github.com/gSchool/basic-html)\r\n- [GH Broken HTML](https://github.com/gSchool/invalid-html)\r\n------\r\n\r\n##
+    Success Criteria:\r\n\r\n- Tags are in a logical order to match reality\r\n- Tags
+    are properly indented to show nesting visually\r\n  - Block level elements have
+    their own indentation level\r\n  - inline elements are included inline\r\n- Attributes\r\n
     \ - ids are all unique, valid identifiers\r\n  - Classes are applied to multiple
     elements successfully\r\n  - Boolean attributes are [syntactically correct](https://html.spec.whatwg.org/#boolean-attributes)\r\n
     \   - no “false” or “true values\r\n    - elements like checked are represented
@@ -244,58 +142,7 @@
     by excluding “http” / “https”\r\n- Describe why rooted paths will not work when
     running sites with the `file://` protocol\r\n- Define and describe CDN\r\n- Explain
     how CDNs can improve page load times\r\n\r\nbecause browsers can parallelize the
-    downlo"
-  :tags:
-  - html
-- :uuid: 6fdb2116-c6b2-45e8-884d-5f51d05836d4
-  :name: Write Semantic HTML5 Markup
-  :subject_uuid: a7d5be0f-3937-465a-b5e9-b2555642e9d9
-  :subject_name: HTML
-  :resources: "- [Dive Into HTML5](http://diveintohtml5.info/semantics.html)\r\n"
-  :guiding_questions: "- What are some HTML tags that don't affect layout, yet are
-    included for semantic reasons?\r\n- How might we write pages that are easier for
-    machines to parse and read?\r\n- What are some websites that are easy for a screenreader
-    to read? What are some that are too difficult for a screenreader to read?\r\n-
-    \"Article View\" in Safari is a recent innovation that helps content be presented
-    in a standard way. How does this relate to accessibility?\r\n- Imagine you have
-    to write a program that reads webpages. What HTML tags and attributes could a
-    developer use that would make this easiest for you to accomplish?"
-  :description: "**Why?** Semantic HTML is meaningful HTML. Your pages will be friendlier
-    for both users and machines, allowing better SEO performance and better integration
-    with accessibility devices.\r\n\r\n## Resources\r\n- [MDN HTML5](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5)\r\n-
-    [HTML Spec](https://html.spec.whatwg.org/#headings-and-sections)\r\n- [Writing
-    your best code](http://learn.shayhowe.com/html-css/writing-your-best-code/)\r\n"
-  :instructor_notes: "**Notes:** Going back through a document they’ve written, or
-    going through a document that has been created for them is most similar to the
-    environment they’ll encounter at work - adding semantic markup to existing pages
-    is an ongoing effort that most companies are doing in order to improve SEO.\r\n\r\n##
-    Assessments\r\n- Markup a news article with semantic HTML5 tags\r\n- Go back and
-    make your prework (personal website) semantic\r\n- Create a landing page for your
-    favorite product\r\n  - included images\r\n  - include tables to compare with
-    similar products\r\n- Find an endangered species online. Produce a table that
-    lists the estimated population of that animal in every region in which it resides.\r\n-
-    [LMS CSS|Semantic HTML level One (Small section on Semantic HTML)](https://coursework.galvanize.com/assessments/73)\r\n-
-    [Basic-HTML exercise](https://github.com/gSchool/basic-html)\r\n- [GH HTML from
-    Scratch Exercise](https://github.com/gSchool/html-from-scratch-warmup)\r\n- [GH
-    Semantic Markup Exercise](https://github.com/gSchool/semantic-html-exercise)\r\n-
-    [GH Semantic HTML Scavenger Hunt (Doens't necessarily convey understanding)](https://github.com/gSchool/g18-semantic-html-scavenger-hunt-submissions)\r\n\r\n\r\n\r\n\r\n-
-    Explain why writing semantic HTML is important\r\n- Identify and describe new
-    HTML5 tags that can be used to create semantic markup\r\n- Convert an un-semantic
-    HTML page to an semantic page\r\n\r\nStudents should be able to articulate how
-    semantic HTML relates to SEO and Accessibility \r\n"
-  :tags:
-  - html
-- :uuid: d5a4c20f-4922-43e4-a7bb-388438235f40
-  :name: Build HTML Forms and Controls
-  :subject_uuid: a7d5be0f-3937-465a-b5e9-b2555642e9d9
-  :subject_name: HTML
-  :resources: "- [Dive into HTML5 Forms](http://diveintohtml5.info/forms.html)"
-  :guiding_questions: ''
-  :description: "**Why?** HTML Forms allow you to gather input from the user. Any
-    time you’ve ever signed up for anything, you’ve used a form! The applications
-    you build at Galvanize and throughout your career will feature many, many forms
-    and form elements."
-  :instructor_notes: "## Assessments\r\n- [HTML Forms Exercise](https://github.com/gSchool/html-forms)\r\n-
+    downlo\n\n## Assessments\r\n- [HTML Forms Exercise](https://github.com/gSchool/html-forms)\r\n-
     Create a form that collects a pizza order\r\n- Create a form that allows a user
     to create a new account\r\n- Create a form that takes feedback from a lightning
     talk\r\n- [LMS Week 4 Assessment (contains questions pertaining to forms)](https://coursework.galvanize.com/assessments/26)\r\n-
@@ -308,28 +155,44 @@
     for a type of validation that doesn’t exist as an input type\r\n- Write a blog
     post about something cool you haven’t seen used often in the HTML5 spec\r\n- Lead
     a review group with your classmates in order to help them make their pages more
-    semantic\r\n"
-  :tags:
-  - html
-- :uuid: 2f1d22c7-b07b-4e5d-9c84-5aa989b7f36d
-  :name: Embed Rich Media using Audio & Video APIs
-  :subject_uuid: a7d5be0f-3937-465a-b5e9-b2555642e9d9
-  :subject_name: HTML
-  :resources: ''
-  :guiding_questions: ''
-  :description: ''
-  :instructor_notes: "###Assessments\r\n- [LMS Embedding Media](https://coursework.galvanize.com/assessments/64)\r\n-
-    [GH Image Map Exercise](https://github.com/gSchool/image-map-exercise)\r\n- [GH
-    Embedding Audio/Video Exercise](https://github.com/gSchool/embedding-audio-video)"
-  :tags: []
-- :uuid: 8552d31e-b5c6-4414-8a22-4e684bcd2595
-  :name: Target HTML elements with CSS selectors
+    semantic"
+- :uuid: 0c1be570-48b4-48a8-bc98-7da27a7be512
+  :name: CSS
   :subject_uuid: 0c1be570-48b4-48a8-bc98-7da27a7be512
   :subject_name: CSS
-  :resources: ''
-  :guiding_questions: ''
-  :description: ''
-  :instructor_notes: "##Assessments\r\n- [LMS CSS Assessment](https://coursework.galvanize.com/assessments/3)\r\n-
+  :description: "https://perishablepress.com/obsessive-css-code-formatting-organization-comments-and-signatures/\n\n\n\n-
+    http://bitsofco.de/2015/how-z-index-works/\r\n- https://css-tricks.com/all-about-floats/\r\n-
+    https://github.com/gSchool/css-floats-exercise\r\n- [CSS on MDN](https://developer.mozilla.org/en-US/docs/Web/CSS)\r\n\r\n\r\n\r\n##
+    Legacy Objectives\r\n- Use CSS Properties to style HTML Elements\r\n- Describe
+    what CSS stands for\r\n- Add style to HTML in three different ways. (Inline, External
+    Style Sheet, Style Tag)\r\n- Explain why it is useful to separate CSS from HTML
+    (external style sheet)\r\n- Write syntactically correct CSS blocks (key-value
+    pairs, semi-colons etc…)\r\n- Write well-indented and organized CSS\r\n- Write
+    comments in CSS\r\n- Define what rem, em, % and pixel units do\r\n- Describe appropriate
+    uses for the various units\r\n- Describe the two box-sizing properties\r\n- Add
+    multiple classes to an element\r\n- Correctly calculate the width and height of
+    boxes with various box-sizing properties\r\n- Describe the box model including
+    border, margin, padding, content\r\n- List and describe the characteristics of
+    the different positions - absolute, static etc…\r\n- Use floats to position elements\r\n-
+    List and describe the various display properties - none, block, inline-block etc…\r\n-
+    Describe the difference between inline and block elements\r\n- Correctly identify
+    which common HTML elements are inline, which are block\r\n- Position a ul with
+    li’s horizontally\r\n- Write all common CSS properties\n\n- [Mastering Margin
+    Collapsing](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)\r\n-
+    [Getting Started with CSS](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Getting_started)\r\n-
+    [Box Model](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Getting_Started/Boxes)\r\n-
+    Check out [FlexBox!](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+    (but watch out for [flexbugs](https://github.com/philipwalton/flexbugs) )\n\n-
+    [Bootstrap](http://getbootstrap.com/)\r\n- [Foundation](http://foundation.zurb.com/)\r\n-
+    http://heydonworks.com/a11y_rocks/\n\n[Can I use…?](http://caniuse.com/) for Browser
+    Compatability"
+  :instructor_notes: "## Assessments\r\n* Take a messy CSS file, and clean it up by
+    grouping selectors and rules, eliminating defaults, ordering by function of selector,
+    ensuring correct spacing\r\n* Take a CSS file that has IDs that should be classes,
+    and other inappropriate uses of specificity and fix it.\r\n* [GH Gkit exercise
+    (framework creation)](https://github.com/gSchool/gkit-review-css-by-creating-a-framework)\r\n\r\n##
+    Other Notes\r\nSome notes on scoring them as a 4:\r\nChecks caniuse.com for browser
+    compatability\r\n\n\n##Assessments\r\n- [LMS CSS Assessment](https://coursework.galvanize.com/assessments/3)\r\n-
     [GH CSS-Card-Flip Exercise](https://github.com/gSchool/css-card-flip)\r\n- [GH
     CSS-Exercises - 00Selectors](https://github.com/gSchool/css-exercises/tree/master/000-Selectors)\r\n-
     [CSS Diner](http://flukeout.github.io/) has great exercises for selector practice.
@@ -369,77 +232,29 @@
     https://github.com/gSchool/bootstrappy\r\n- https://github.com/gSchool/scss-mixin\r\n\r\n-
     https://github.com/gSchool/css-exercises\r\n- https://github.com/gSchool/css-floats-exercise\r\n-
     https://github.com/gSchool/css-grid\r\n- https://github.com/gSchool/css-grid-building\r\n-
-    [CSS Diner](http://flukeout.github.io/)\r\n- [CSS Leveler](http://toolness.github.io/css-selector-game/)"
-  :tags:
-  - css
-- :uuid: 6e0c7a9b-e85d-4f39-b7e5-fdf0dcbf6042
-  :name: Style HTML elements with CSS properties
-  :subject_uuid: 0c1be570-48b4-48a8-bc98-7da27a7be512
-  :subject_name: CSS
-  :resources: "- http://bitsofco.de/2015/how-z-index-works/\r\n- https://css-tricks.com/all-about-floats/\r\n-
-    https://github.com/gSchool/css-floats-exercise\r\n- [CSS on MDN](https://developer.mozilla.org/en-US/docs/Web/CSS)\r\n\r\n\r\n\r\n##
-    Legacy Objectives\r\n- Use CSS Properties to style HTML Elements\r\n- Describe
-    what CSS stands for\r\n- Add style to HTML in three different ways. (Inline, External
-    Style Sheet, Style Tag)\r\n- Explain why it is useful to separate CSS from HTML
-    (external style sheet)\r\n- Write syntactically correct CSS blocks (key-value
-    pairs, semi-colons etc…)\r\n- Write well-indented and organized CSS\r\n- Write
-    comments in CSS\r\n- Define what rem, em, % and pixel units do\r\n- Describe appropriate
-    uses for the various units\r\n- Describe the two box-sizing properties\r\n- Add
-    multiple classes to an element\r\n- Correctly calculate the width and height of
-    boxes with various box-sizing properties\r\n- Describe the box model including
-    border, margin, padding, content\r\n- List and describe the characteristics of
-    the different positions - absolute, static etc…\r\n- Use floats to position elements\r\n-
-    List and describe the various display properties - none, block, inline-block etc…\r\n-
-    Describe the difference between inline and block elements\r\n- Correctly identify
-    which common HTML elements are inline, which are block\r\n- Position a ul with
-    li’s horizontally\r\n- Write all common CSS properties"
-  :guiding_questions: ''
-  :description: ''
-  :instructor_notes: "## Assessments\r\n- Given an HTML page and a Style Guide, style
-    all of the text according to the style guide. Write up a few styleguides and have
-    them all use the same HTML\r\n- [LMS Intro to CSS Assessment (g15 - coverage of
-    selectors)](https://coursework.galvanize.com/assessments/57)\r\n- [GH html_css_basics](https://github.com/gSchool/html_css_basics)\r\n-
-    [GH CSS Exercises](https://github.com/gSchool/css-exercises)\r\n- [GH basic-html
-    (basic css styling)](https://github.com/gSchool/basic-html)\r\n"
-  :tags:
-  - css
-- :uuid: 0b6f124a-f58a-4e2c-97d1-39a109703ddc
-  :name: Lay out a document with CSS properties
-  :subject_uuid: 0c1be570-48b4-48a8-bc98-7da27a7be512
-  :subject_name: CSS
-  :resources: "- [Mastering Margin Collapsing](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)\r\n-
-    [Getting Started with CSS](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Getting_started)\r\n-
-    [Box Model](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Getting_Started/Boxes)\r\n-
-    Check out [FlexBox!](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
-    (but watch out for [flexbugs](https://github.com/philipwalton/flexbugs) )"
-  :guiding_questions: ''
-  :description: ''
-  :instructor_notes: "## Assessments\r\n- Create a HYPERTEXT newspaper\r\n    - Create
-    a front page that has a two column layout\r\n    - Create a few other pages with
-    a three column layout, the right-hand side of which is sticky (has navigation)\r\n
-    \   - Add a sticky footer\r\n- Create a 2-column and 3-column layout\r\n- Create
-    a 3 column layout with fixed side columns\r\n- [LMS CSS Assessment](https://coursework.galvanize.com/assessments/3)\r\n-
-    [GH Building Grid CSS Exercise](https://github.com/gSchool/g11-course-curriculum/tree/master/week03/03_exercises/css-grid-system)\r\n-
+    [CSS Diner](http://flukeout.github.io/)\r\n- [CSS Leveler](http://toolness.github.io/css-selector-game/)\n\n##
+    Assessments\r\n- Given an HTML page and a Style Guide, style all of the text according
+    to the style guide. Write up a few styleguides and have them all use the same
+    HTML\r\n- [LMS Intro to CSS Assessment (g15 - coverage of selectors)](https://coursework.galvanize.com/assessments/57)\r\n-
+    [GH html_css_basics](https://github.com/gSchool/html_css_basics)\r\n- [GH CSS
+    Exercises](https://github.com/gSchool/css-exercises)\r\n- [GH basic-html (basic
+    css styling)](https://github.com/gSchool/basic-html)\r\n\n\n## Assessments\r\n-
+    Create a HYPERTEXT newspaper\r\n    - Create a front page that has a two column
+    layout\r\n    - Create a few other pages with a three column layout, the right-hand
+    side of which is sticky (has navigation)\r\n    - Add a sticky footer\r\n- Create
+    a 2-column and 3-column layout\r\n- Create a 3 column layout with fixed side columns\r\n-
+    [LMS CSS Assessment](https://coursework.galvanize.com/assessments/3)\r\n- [GH
+    Building Grid CSS Exercise](https://github.com/gSchool/g11-course-curriculum/tree/master/week03/03_exercises/css-grid-system)\r\n-
     [GH CSS Exercises](https://github.com/gSchool/css-exercises)\r\n- [GH CSS Floats
     Exercise](https://github.com/gSchool/css-floats-exercise)\r\n- [GH CSS Layout
     Exercise](https://github.com/gSchool/g17-css-layout-exercises)\r\n- [GH Gkit exercise
-    (framework creation)](https://github.com/gSchool/gkit-review-css-by-creating-a-framework)"
-  :tags:
-  - css
-- :uuid: 1b7a90d1-4b10-4a5a-9475-5391378047ce
-  :name: Quickly style pages with CSS frameworks
-  :subject_uuid: 0c1be570-48b4-48a8-bc98-7da27a7be512
-  :subject_name: CSS
-  :resources: "- [Bootstrap](http://getbootstrap.com/)\r\n- [Foundation](http://foundation.zurb.com/)\r\n-
-    http://heydonworks.com/a11y_rocks/"
-  :guiding_questions: ''
-  :description: ''
-  :instructor_notes: "## Assessments\r\n- Produce a layout given a mockup\r\n  - 2
-    column layout\r\n  - 3 column layout\r\n  - 2 column layout with 3-column nested
-    in second column (shopify-style)\r\n- Make a form that contains many form controls,
-    use framework features to make it nice-looking and keyboard navigable\r\n- Customize
-    the colors, style, and some layout properties on top of a framework\r\n  - Does
-    not use framework’s class names\r\n- [Bootstrap Exercise](http://www.pairuptocode.com/exercises/bootstrap.html)\r\n-
+    (framework creation)](https://github.com/gSchool/gkit-review-css-by-creating-a-framework)\n\n##
+    Assessments\r\n- Produce a layout given a mockup\r\n  - 2 column layout\r\n  -
+    3 column layout\r\n  - 2 column layout with 3-column nested in second column (shopify-style)\r\n-
+    Make a form that contains many form controls, use framework features to make it
+    nice-looking and keyboard navigable\r\n- Customize the colors, style, and some
+    layout properties on top of a framework\r\n  - Does not use framework’s class
+    names\r\n- [Bootstrap Exercise](http://www.pairuptocode.com/exercises/bootstrap.html)\r\n-
     [GH CSS Grid Building Exercise](https://github.com/gSchool/css-grid-building)\r\n-
     [GH JS Material Design Exercise](https://github.com/gSchool/javascript-css-material-design)\r\n-
     [GH CSS Navigation Challenge](https://github.com/gSchool/css-nav-challenge)\r\n-
@@ -455,95 +270,17 @@
     page using Bootstrap\r\n- Style a web page using a framework other than Bootstrap\r\n-
     Use good design practices to create a user-friendly and accessible page\r\n\r\nthat
     CSS frameworks provide pre-defined classes and selectors, and that you must write
-    markup that matches the framework’s expectations\r\n"
-  :tags:
-  - css
-- :uuid: 0e8bdbe9-9592-4704-9ddf-46159d7a11d8
-  :name: Use CSS3 and advanced browser tooling to create responsive pages
-  :subject_uuid: 0c1be570-48b4-48a8-bc98-7da27a7be512
-  :subject_name: CSS
-  :resources: "[Can I use…?](http://caniuse.com/) for Browser Compatability"
-  :guiding_questions: ''
-  :description: ''
-  :instructor_notes: "## Assessments\r\n- Write a UI that has a mobile version and
-    a desktop version on the same page\r\n- Make a layout with Flexbox instead of
-    a framework\r\n- Write your own web component\r\n- [GH Media Queries & Responsive
-    Design Exercise](https://github.com/gSchool/media-query-css-exercise)\r\n- [GH
-    CSS-Exercises - Responsive Blog](https://github.com/gSchool/css-exercises/tree/master/015-rwd)\r\n[GH
+    markup that matches the framework’s expectations\r\n\n\n## Assessments\r\n- Write
+    a UI that has a mobile version and a desktop version on the same page\r\n- Make
+    a layout with Flexbox instead of a framework\r\n- Write your own web component\r\n-
+    [GH Media Queries & Responsive Design Exercise](https://github.com/gSchool/media-query-css-exercise)\r\n-
+    [GH CSS-Exercises - Responsive Blog](https://github.com/gSchool/css-exercises/tree/master/015-rwd)\r\n[GH
     JS-CSS-Material Design](https://github.com/gSchool/javascript-css-material-design)"
-  :tags:
-  - css
-- :uuid: 4014347b-eb0e-447e-a78f-77b0317a46a4
-  :name: Write well organized CSS
-  :subject_uuid: 0c1be570-48b4-48a8-bc98-7da27a7be512
-  :subject_name: CSS
-  :resources: "https://perishablepress.com/obsessive-css-code-formatting-organization-comments-and-signatures/\r\n"
-  :guiding_questions: ''
-  :description: ''
-  :instructor_notes: "## Assessments\r\n* Take a messy CSS file, and clean it up by
-    grouping selectors and rules, eliminating defaults, ordering by function of selector,
-    ensuring correct spacing\r\n* Take a CSS file that has IDs that should be classes,
-    and other inappropriate uses of specificity and fix it.\r\n* [GH Gkit exercise
-    (framework creation)](https://github.com/gSchool/gkit-review-css-by-creating-a-framework)\r\n\r\n##
-    Other Notes\r\nSome notes on scoring them as a 4:\r\nChecks caniuse.com for browser
-    compatability\r\n"
-  :tags:
-  - css
-- :uuid: f0dd4b1a-bc2d-46b8-934d-822074a2efbe
-  :name: Discuss the function and purpose of Git
+- :uuid: 3f805b07-096d-4024-bce2-20b19f92199a
+  :name: Version Control (Git and Github)
   :subject_uuid: 3f805b07-096d-4024-bce2-20b19f92199a
   :subject_name: Version Control (Git and Github)
-  :resources: ''
-  :guiding_questions: ''
-  :description: ''
-  :instructor_notes: "##Assessments\r\n\r\n- [LMS Git Basics (Terminal)](https://coursework.galvanize.com/assessments/6)\r\n-
-    [LMS Git Basics (g15 version - 2 questions on VCS)](https://coursework.galvanize.com/assessments/54)\r\n-
-    [LMS Haiku Conflicts Exercise](https://github.com/gSchool/haikuConflicts)"
-  :tags:
-  - git
-- :uuid: 37687853-c626-4f58-b9d2-641b1077f92b
-  :name: Manage feature development with Git branches using a merge strategy
-  :subject_uuid: 3f805b07-096d-4024-bce2-20b19f92199a
-  :subject_name: Version Control (Git and Github)
-  :resources: "- https://github.com/gSchool/pull-requests-exercise\r\n- https://github.com/gSchool/git-branch-collab"
-  :guiding_questions: ''
-  :description: ''
-  :instructor_notes: "###Assessments\r\n- [HTML | Git | GitHub - Level 1 (Covers Branching
-    & PRs](https://coursework.galvanize.com/assessments/72)\r\n- [LMS Haiku Conflicts](https://github.com/gSchool/haikuConflicts)\r\n-
-    [LMS Git Warmups Exercise (Git Diagrams)](https://github.com/gSchool/git-warmup)\r\n-
-    [GH Git Workshop Exercises (Can be edited to test skills)](https://github.com/gSchool/git-workshop)\r\n"
-  :tags:
-  - git
-  - command line
-- :uuid: 2f892a7c-e360-4218-9c8c-764d8f9418f7
-  :name: Share code by pushing and pulling to a remote repository on GitHub
-  :subject_uuid: 3f805b07-096d-4024-bce2-20b19f92199a
-  :subject_name: Version Control (Git and Github)
-  :resources: ''
-  :guiding_questions: ''
-  :description: "# Objectives\r\n\r\n- Create a remote repo on github\r\n- Add a remote
-    repo using ‘git remote add’\r\n- Push code to github\r\n- Pull changes from github\r\n"
-  :instructor_notes: "##Assessments\r\n[GH Git-Add-Commit-Assessment](https://github.com/gSchool/git-add-commit-assessment)"
-  :tags:
-  - git
-  - command line
-- :uuid: 3e7127ec-a7a6-417d-b505-16fd9a5909f0
-  :name: Collaborate with other developers using clone and fork-based workflows with
-    Github
-  :subject_uuid: 3f805b07-096d-4024-bce2-20b19f92199a
-  :subject_name: Version Control (Git and Github)
-  :resources: ''
-  :guiding_questions: ''
-  :description: ''
-  :instructor_notes: Describe difference between clone and fork based workflows.  It’s
-    about trust - whether devs should have access to actual repo
-  :tags:
-  - git
-- :uuid: e8272444-8dfc-49a0-81d9-d5c92026d536
-  :name: Track changes over time using a basic Git workflow
-  :subject_uuid: 3f805b07-096d-4024-bce2-20b19f92199a
-  :subject_name: Version Control (Git and Github)
-  :resources: "- http://www.amazon.com/Git-Pocket-Guide-Richard-Silverman/dp/1449325866\r\n-
+  :description: "- http://www.amazon.com/Git-Pocket-Guide-Richard-Silverman/dp/1449325866\r\n-
     Git Workshop - https://github.com/gSchool/git-workshop (Git and Github basics.)\r\n-
     Git Intro Lecture - https://github.com/gSchool/fullstack-curriculum/blob/master/lessons/git/git-intro.instructor.md
     (Intro Lecture)\r\n- Git Basics Lecture - https://github.com/gSchool/basic-git\r\n-
@@ -558,35 +295,45 @@
     https://github.com/gSchool/git-warmup\r\n- https://github.com/gSchool/branching_and_merging_lab\r\n-
     https://github.com/gSchool/6002-project-1\r\n- https://github.com/gSchool/what-is-vcs-lesson\r\n-
     https://github.com/gSchool/git-add-commit-assessment\r\n- [Try Git](https://try.github.io)\r\n-
-    [Learn Git Branching](http://pcottle.github.io/learnGitBranching/)\r\n"
-  :guiding_questions: ''
-  :description: ''
-  :instructor_notes: "###Assessments\r\n- [LMS Week 1 Assessment (Small Section on
-    Git Basics)](https://coursework.galvanize.com/assessments/83)\r\n- [LMS Git Basics
-    (g15 version - covers basic git commands)](https://coursework.galvanize.com/assessments/54)\r\n-
-    [GH git-add-commit-assessment](https://github.com/gSchool/git-add-commit-assessment)"
-  :tags:
-  - git
-  - command line
-- :uuid: 5b55eed8-5a07-4540-92fe-cb4d824b51b7
-  :name: Write, mentally evaluate, and store the result of JS expressions
+    [Learn Git Branching](http://pcottle.github.io/learnGitBranching/)\n\n- https://github.com/gSchool/pull-requests-exercise\r\n-
+    https://github.com/gSchool/git-branch-collab\n\n# Objectives\r\n\r\n- Create a
+    remote repo on github\r\n- Add a remote repo using ‘git remote add’\r\n- Push
+    code to github\r\n- Pull changes from github"
+  :instructor_notes: "##Assessments\r\n\r\n- [LMS Git Basics (Terminal)](https://coursework.galvanize.com/assessments/6)\r\n-
+    [LMS Git Basics (g15 version - 2 questions on VCS)](https://coursework.galvanize.com/assessments/54)\r\n-
+    [LMS Haiku Conflicts Exercise](https://github.com/gSchool/haikuConflicts)\n\n###Assessments\r\n-
+    [LMS Week 1 Assessment (Small Section on Git Basics)](https://coursework.galvanize.com/assessments/83)\r\n-
+    [LMS Git Basics (g15 version - covers basic git commands)](https://coursework.galvanize.com/assessments/54)\r\n-
+    [GH git-add-commit-assessment](https://github.com/gSchool/git-add-commit-assessment)\n\n###Assessments\r\n-
+    [HTML | Git | GitHub - Level 1 (Covers Branching & PRs](https://coursework.galvanize.com/assessments/72)\r\n-
+    [LMS Haiku Conflicts](https://github.com/gSchool/haikuConflicts)\r\n- [LMS Git
+    Warmups Exercise (Git Diagrams)](https://github.com/gSchool/git-warmup)\r\n- [GH
+    Git Workshop Exercises (Can be edited to test skills)](https://github.com/gSchool/git-workshop)\r\n\n\n##Assessments\r\n[GH
+    Git-Add-Commit-Assessment](https://github.com/gSchool/git-add-commit-assessment)\n\nDescribe
+    difference between clone and fork based workflows.  It’s about trust - whether
+    devs should have access to actual repo"
+- :uuid: ac805334-f3dd-4288-9a61-0dcef3e219d4
+  :name: Programming with Javascript
   :subject_uuid: ac805334-f3dd-4288-9a61-0dcef3e219d4
   :subject_name: Programming with Javascript
-  :resources: ''
-  :guiding_questions: ''
   :description: ''
-  :instructor_notes: "**Notes:** Students should display the ability to think like
-    a computer- they need to understand the order in which an interpreter looks at
-    each statement and be able to accurately mentally evaluate those statements. \r\n\r\n##
-    Assessments\r\n\r\n- Evaluate the following statement, expression by expression.
-    What does result evaluate to?\r\n    - `var result = (true && false) || (true
-    && true || false) && (false || false)`\r\n- Write a statement that evaluates to
-    `true` if a phone number is valid\r\n- Write a statement that evaluates to `true`
-    if a string is not empty\r\n- String and numbers\r\n- Concatenate two strings
-    that contain (only) numbers\r\n- Subtract two strings that contain (only) numbers\r\n-
-    https://github.com/gSchool/javascript-variables-beginner\r\n- [LMS Javascript
-    Variables Assessment](https://coursework.galvanize.com/assessments/23)\r\n- [LMS
-    JS Fundamentals - Evaluation of Expressions](https://coursework.galvanize.com/assessments/2)\r\n-
+  :instructor_notes: "## Assessments\r\n\r\nGive them an implemented algorithm and
+    ask what the resulting data structure is\r\nExample:\r\n\r\n- give an algorithm
+    that indexes an array of object\r\n- give an algorithm that counts the number
+    of occurrences\r\n\r\nGive students fun problems like:\r\n\r\n```\r\nvar obj =
+    {}\r\nvar other = {}\r\nobj.foo = other\r\nother.bar = “hello”\r\n// what is obj.foo.bar?\r\n```\r\n\r\n**Resources:**\r\n\r\n-
+    http://www.pythontutor.com/javascript.html#mode=edit\n\n**Notes:** Students should
+    display the ability to think like a computer- they need to understand the order
+    in which an interpreter looks at each statement and be able to accurately mentally
+    evaluate those statements. \r\n\r\n## Assessments\r\n\r\n- Evaluate the following
+    statement, expression by expression. What does result evaluate to?\r\n    - `var
+    result = (true && false) || (true && true || false) && (false || false)`\r\n-
+    Write a statement that evaluates to `true` if a phone number is valid\r\n- Write
+    a statement that evaluates to `true` if a string is not empty\r\n- String and
+    numbers\r\n- Concatenate two strings that contain (only) numbers\r\n- Subtract
+    two strings that contain (only) numbers\r\n- https://github.com/gSchool/javascript-variables-beginner\r\n-
+    [LMS Javascript Variables Assessment](https://coursework.galvanize.com/assessments/23)\r\n-
+    [LMS JS Fundamentals - Evaluation of Expressions](https://coursework.galvanize.com/assessments/2)\r\n-
     [LMS Eloquent JS Assessment](https://coursework.galvanize.com/assessments/18)\r\n-
     [LMS Week 1 Assessment (Small Section on JS values & local vs. global scope)](https://coursework.galvanize.com/assessments/83)\r\n-
     [LMS JavaScript: types, variables, control flow, operators](https://coursework.galvanize.com/assessments/58)\r\n-
@@ -610,17 +357,9 @@
     programmer must read](http://www.javacodegeeks.com/2014/05/10-articles-every-programmer-must-read.html)\r\n-
     [Code Tuts by Yield](http://nodetuts.com/)\r\n- [Learn all the Nodes](http://www.learnallthenodes.com/)\r\n-
     [Sails Cast](http://irlnathan.github.io/sailscasts/blog/archives/)\r\n- [Nodeguide
-    Beginner](http://nodeguide.com/beginner.html)\r\n- https://github.com/gSchool/async-event-problem-solving-game-a-forest-trail"
-  :tags: []
-- :uuid: 861bcda5-c1ed-470c-9389-fafcf80c2399
-  :name: Control the flow of a program using conditionals and loops
-  :subject_uuid: ac805334-f3dd-4288-9a61-0dcef3e219d4
-  :subject_name: Programming with Javascript
-  :resources: ''
-  :guiding_questions: ''
-  :description: ''
-  :instructor_notes: "## Assessments\r\n\r\n- https://github.com/gSchool/grading-js\r\n-
-    “Whether something goes in the loop or out the loop” etc...\r\n- https://github.com/gSchool/js-arrays-objects-assessment\r\n-
+    Beginner](http://nodeguide.com/beginner.html)\r\n- https://github.com/gSchool/async-event-problem-solving-game-a-forest-trail\n\n##
+    Assessments\r\n\r\n- https://github.com/gSchool/grading-js\r\n- “Whether something
+    goes in the loop or out the loop” etc...\r\n- https://github.com/gSchool/js-arrays-objects-assessment\r\n-
     \"Loop over datastructures and returning the right value\"\r\n- https://github.com/gSchool/iteration-and-object-assessment\r\n-
     \"Manipulating array data, has tests.\"\r\n- https://github.com/gSchool/js-accumulator-assessment\r\n-
     \"Accumulator Pattern assessment with Test\"\r\n- [LMS JavaScript: types, variables,
@@ -635,31 +374,8 @@
     [LMS JS-Conditional](https://github.com/gSchool/javascript-conditionals)\r\n-
     [LMS JS Functions - Part 3](https://github.com/gSchool/g11-course-curriculum/tree/master/week04/04_exercises/js-functions-part3)\r\n\r\n##
     Resources\r\n\r\n- http://archive.oreilly.com/pub/a/server-administration/excerpts/even-faster-websites/writing-efficient-javascript.html#fast_loops\r\n-
-    (Fast Conditionals)[http://archive.oreilly.com/pub/a/server-administration/excerpts/even-faster-websites/writing-efficient-javascript.html#fast_conditionals]\r\n"
-  :tags: []
-- :uuid: 5767bdd1-0679-43f5-9e7e-addeb2d8c1a4
-  :name: Diagram and explain how reference and primitive types are stored in memory
-    and how they are passed around
-  :subject_uuid: ac805334-f3dd-4288-9a61-0dcef3e219d4
-  :subject_name: Programming with Javascript
-  :resources: ''
-  :guiding_questions: ''
-  :description: ''
-  :instructor_notes: "## Assessments\r\n\r\nGive them an implemented algorithm and
-    ask what the resulting data structure is\r\nExample:\r\n\r\n- give an algorithm
-    that indexes an array of object\r\n- give an algorithm that counts the number
-    of occurrences\r\n\r\nGive students fun problems like:\r\n\r\n```\r\nvar obj =
-    {}\r\nvar other = {}\r\nobj.foo = other\r\nother.bar = “hello”\r\n// what is obj.foo.bar?\r\n```\r\n\r\n**Resources:**\r\n\r\n-
-    http://www.pythontutor.com/javascript.html#mode=edit"
-  :tags: []
-- :uuid: 7f7577f7-4224-442d-aa17-dc44c4fd21c7
-  :name: Store and Access values in Arrays and Objects
-  :subject_uuid: ac805334-f3dd-4288-9a61-0dcef3e219d4
-  :subject_name: Programming with Javascript
-  :resources: ''
-  :guiding_questions: ''
-  :description: ''
-  :instructor_notes: "###Assessments\r\n- [LMS JavaScript: arrays, objects](https://coursework.galvanize.com/assessments/59)\r\n-
+    (Fast Conditionals)[http://archive.oreilly.com/pub/a/server-administration/excerpts/even-faster-websites/writing-efficient-javascript.html#fast_conditionals]\r\n\n\n###Assessments\r\n-
+    [LMS JavaScript: arrays, objects](https://coursework.galvanize.com/assessments/59)\r\n-
     [LMS Strings, Arrays, Variables - Basic](https://coursework.galvanize.com/assessments/75)\r\n-
     [GH Simple Object Access Exercise](https://github.com/gSchool/simple-object-access-exercises/blob/master/object_array_access.md)\r\n-
     [GH Functions & Objects Exercise (Passing Objects as arguments and accessing values)](https://github.com/gSchool/functions-objects-js-homework)\r\n-
@@ -668,16 +384,8 @@
     [GH JS-Accumulator Assessment - HAS TEST](https://github.com/gSchool/js-accumulator-assessment/tree/master/spec)\r\n-
     [GH JS-Objects-Arrays-Warmup](https://github.com/gSchool/js-objects-arrays-warmup)\r\n-
     [GH JS-Arrays-Objects-Assessment](https://github.com/gSchool/js-arrays-objects-assessment)\r\n-
-    [GH CCF-Data Structures](https://github.com/gSchool/ccf-data-structures)"
-  :tags: []
-- :uuid: 78dcc2e4-dcb2-4b29-9333-fe4e6091063c
-  :name: Create and access complex nested data structures
-  :subject_uuid: ac805334-f3dd-4288-9a61-0dcef3e219d4
-  :subject_name: Programming with Javascript
-  :resources: ''
-  :guiding_questions: ''
-  :description: ''
-  :instructor_notes: "## Assessments\r\n\r\n- https://github.com/gSchool/simple-object-access-exercises\r\n-
+    [GH CCF-Data Structures](https://github.com/gSchool/ccf-data-structures)\n\n##
+    Assessments\r\n\r\n- https://github.com/gSchool/simple-object-access-exercises\r\n-
     https://github.com/gSchool/ccf-data-structures\r\n- Model a list of books with
     author and publisher data\r\n- Model a list of students with classes\r\n- Model
     a list of sports teams with players, and stats about the players\r\n- Given an
@@ -685,20 +393,11 @@
     \   - OMDB\r\n    - iTunes\r\n    - giffy\r\n    - github\r\n\r\n## Notes\r\n\r\nCome
     up with a bank of these, and every time we introduce a new one (HTML, javascript
     objects, javascript constructors, ERD)\r\n\r\n## Resources\r\n\r\n- [JS Execution
-    Visualizer](http://www.pythontutor.com/javascript.html#mode=display)\r\n"
-  :tags: []
-- :uuid: 6754eeea-a10b-4033-a598-a0e081257f60
-  :name: Encapsulate reusable code in functions
-  :subject_uuid: ac805334-f3dd-4288-9a61-0dcef3e219d4
-  :subject_name: Programming with Javascript
-  :resources: ''
-  :guiding_questions: ''
-  :description: ''
-  :instructor_notes: "## Assessments\r\n\r\n- https://github.com/gSchool/js-functions-part1\r\n-
-    http://eloquentjavascript.net/1st_edition/chapter6.html \r\n- Write simple functions
-    given the function signature and a behavioral description\r\n- Write simple functions
-    to solve a problem without the function signature\r\n- Write recursive functions\r\n-
-    [LMS Function Declarations and Expressions](https://coursework.galvanize.com/assessments/30)\r\n-
+    Visualizer](http://www.pythontutor.com/javascript.html#mode=display)\r\n\n\n##
+    Assessments\r\n\r\n- https://github.com/gSchool/js-functions-part1\r\n- http://eloquentjavascript.net/1st_edition/chapter6.html
+    \r\n- Write simple functions given the function signature and a behavioral description\r\n-
+    Write simple functions to solve a problem without the function signature\r\n-
+    Write recursive functions\r\n- [LMS Function Declarations and Expressions](https://coursework.galvanize.com/assessments/30)\r\n-
     [GH Function-Assessment-JS](https://github.com/gSchool/function-assessment-js)\r\n-
     [LMS Week 1 Assessment (Small Section on JS functions)](https://coursework.galvanize.com/assessments/83)\r\n-
     [LMS Javascript Functions](https://coursework.galvanize.com/assessments/61)\r\n-
@@ -707,37 +406,13 @@
     Notes\r\n\r\nThe “call stack” success criteria is intended to help students understand
     recursion, diagnose “call stack exceeded” messages, and to help them visualize
     the function lifecycle (aka, when does a context open up, when does it close and
-    deallocate memory)\r\n"
-  :tags: []
-- :uuid: 4ff0b45a-b12f-416e-a130-64ad30dfb133
-  :name: Identify and fix common JS Errors
-  :subject_uuid: ac805334-f3dd-4288-9a61-0dcef3e219d4
-  :subject_name: Programming with Javascript
-  :resources: ''
-  :guiding_questions: ''
-  :description: ''
-  :instructor_notes: "###Assessments\r\n- [GH Error Handling in  Node ](https://github.com/gSchool/error-handling-in-node-express-promises)
+    deallocate memory)\r\n\n\n###Assessments\r\n- [GH Error Handling in  Node ](https://github.com/gSchool/error-handling-in-node-express-promises)
     (*Note* Assessment could be used in multiple standards)"
-  :tags: []
-- :uuid: d81b8151-89b1-4816-9284-0c9a730993c3
-  :name: Execute code at a specified interval or after a delay using timers
-  :subject_uuid: ac805334-f3dd-4288-9a61-0dcef3e219d4
-  :subject_name: Programming with Javascript
-  :resources: ''
-  :guiding_questions: ''
-  :description: ''
-  :instructor_notes: "## Assessments\r\n\r\n- [javascript_timers_callbacks_exercise](https://github.com/gSchool/javascript_timers_callbacks_exercise)\r\n-
-    Show animation \r\n- [GH Walking Man Exercise](https://github.com/gSchool/walking-man-exercise)\r\n\r\n##
-    Resources\r\n\r\n## Notes\r\n\r\nMake sure students understand the relationship
-    between timers and the event loop\r\n"
-  :tags: []
-- :uuid: 0b60b9c0-f189-48f3-84d0-f6622dd66971
-  :name: Target, create and manipulate DOM Elements
+- :uuid: bcfe422a-cd35-4fd1-8ff8-6b078c476069
+  :name: Javascript and the Browser
   :subject_uuid: bcfe422a-cd35-4fd1-8ff8-6b078c476069
   :subject_name: Javascript and the Browser
-  :resources: ''
-  :guiding_questions: ''
-  :description: ''
+  :description: "[GH Event-Exercises - INTRO to Events & the DOM](https://github.com/gSchool/event-exercises)"
   :instructor_notes: "##Assessments\r\n\r\n- [HTML Builder Assessment w/ test](https://github.com/gSchool/programming-fundamentals-assessments/tree/master/js/html-builder)\r\n-
     [Written Dom Assessment - Vocabulary](https://github.com/gSchool/js-assessment-dom-vocabulary)\r\n-
     [LMS JQuery Assessment](https://coursework.galvanize.com/assessments/16)\r\n-
@@ -790,16 +465,8 @@
     https://github.com/gSchool/itunes_song_guessing_game\r\n- https://github.com/gSchool/jQuery-Practice\r\n-
     https://github.com/gSchool/jquery-calculator\r\n- https://github.com/gSchool/jquery-image-filtering\r\n-
     https://github.com/gSchool/jquery-practice-01\r\n- https://github.com/gSchool/jquery-rails-to-do-list\r\n-
-    https://github.com/gSchool/jquery-ui-ajax-to-do-list\r\n- https://github.com/gSchool/checkerboard-exercise"
-  :tags: []
-- :uuid: f031b95c-fc01-450f-a53c-d1043a0313c2
-  :name: Respond to Events with Event Listeners
-  :subject_uuid: bcfe422a-cd35-4fd1-8ff8-6b078c476069
-  :subject_name: Javascript and the Browser
-  :resources: "[GH Event-Exercises - INTRO to Events & the DOM](https://github.com/gSchool/event-exercises)"
-  :guiding_questions: ''
-  :description: ''
-  :instructor_notes: "### Assessments\r\n- [GH Tip-Calculator-HTML-js Exercise](https://github.com/gSchool/tip-calculator-html-js)\r\n-
+    https://github.com/gSchool/jquery-ui-ajax-to-do-list\r\n- https://github.com/gSchool/checkerboard-exercise\n\n###
+    Assessments\r\n- [GH Tip-Calculator-HTML-js Exercise](https://github.com/gSchool/tip-calculator-html-js)\r\n-
     [GH Boxes-jQuery-Playground Exercise](https://github.com/gSchool/boxes-jQuery-playground)\r\n-
     [GH Stoplight-Event-Exercise](https://github.com/gSchool/stoplight-event-exercise)\r\n-
     [GH Async Forest Trail Game - Exercise](https://github.com/gSchool/async-event-problem-solving-game-a-forest-trail)\r\n-
@@ -811,401 +478,134 @@
     node and attach it to the DOM, and have the event listener respond by modifying
     the correct node.\r\n- https://github.com/gSchool/event-exercises\r\n- https://github.com/gSchool/pixel-art-maker\r\n-
     https://github.com/gSchool/async-event-problem-solving-game-a-forest-trail\r\n-
-    [LMS Week 4 Assessment (contains questions pertaining handling events with jquery)](https://coursework.galvanize.com/assessments/26)"
-  :tags: []
-- :uuid: 156396cb-111a-4f7c-9806-9cc9d32623da
-  :name: Gather values from a form with Javascript
-  :subject_uuid: bcfe422a-cd35-4fd1-8ff8-6b078c476069
-  :subject_name: Javascript and the Browser
-  :resources: ''
-  :guiding_questions: ''
-  :description: ''
-  :instructor_notes: "###Assessments\r\n- [GH html-forms-sf](https://github.com/gSchool/html-forms-sf)\r\n-
-    [GH Pizza Form](https://github.com/gSchool/pizza-shop-form-competition)\r\n- [GH
-    Tip Calculator](https://github.com/gSchool/tip-calculator-html-js) \r\n- No explicit
-    exercise using jQuery to access form data\r\n\r\nhttps://github.com/gSchool/form_validation/blob/master/README.md"
-  :tags: []
-- :uuid: f5319b8d-4068-4518-b2ed-418df3349b2d
-  :name: Discuss the relationship between JavaScript, the DOM API, and jQuery
-  :subject_uuid: bcfe422a-cd35-4fd1-8ff8-6b078c476069
-  :subject_name: Javascript and the Browser
-  :resources: ''
-  :guiding_questions: ''
-  :description: ''
-  :instructor_notes: "###Assessments\r\n[GH JS-Logic-DOM-Review](https://github.com/gSchool/js-logic-dom-review)"
-  :tags: []
-- :uuid: f14777bc-e9f0-4088-b4c3-19a81cbd22ce
-  :name: Store program state Client-side with localStorage
-  :subject_uuid: bcfe422a-cd35-4fd1-8ff8-6b078c476069
-  :subject_name: Javascript and the Browser
-  :resources: ''
-  :guiding_questions: ''
-  :description: ''
-  :instructor_notes: "##Assessments\r\n- [LMS Local Storage](https://coursework.galvanize.com/assessments/71)\r\n-
-    [GH localstorage-exercises](https://github.com/gSchool/localstorage-exercises)"
-  :tags: []
-- :uuid: 33170def-1703-4b8d-a734-90c498882eaf
-  :name: Fetch and send JSON with AJAX
+    [LMS Week 4 Assessment (contains questions pertaining handling events with jquery)](https://coursework.galvanize.com/assessments/26)\n\n###Assessments\r\n-
+    [GH html-forms-sf](https://github.com/gSchool/html-forms-sf)\r\n- [GH Pizza Form](https://github.com/gSchool/pizza-shop-form-competition)\r\n-
+    [GH Tip Calculator](https://github.com/gSchool/tip-calculator-html-js) \r\n- No
+    explicit exercise using jQuery to access form data\r\n\r\nhttps://github.com/gSchool/form_validation/blob/master/README.md\n\n##Assessments\r\n-
+    [LMS Local Storage](https://coursework.galvanize.com/assessments/71)\r\n- [GH
+    localstorage-exercises](https://github.com/gSchool/localstorage-exercises)"
+- :uuid: 7fb11472-3246-479d-a864-ede3e22c248f
+  :name: Consuming Web APIs
   :subject_uuid: 7fb11472-3246-479d-a864-ede3e22c248f
   :subject_name: Consuming Web APIs
-  :resources: ''
-  :guiding_questions: ''
   :description: ''
   :instructor_notes: "###Assessments\r\n- [LMS AJAX, API, XHR, JSON Assessment (Basic
     knowledge questions)](https://coursework.galvanize.com/assessments/62)\r\n\r\nhttps://github.com/gSchool/g11-course-curriculum/tree/master/week06/06_lectures/js-ajax-apis"
-  :tags: []
-- :uuid: 1d73b1d3-0485-46fe-969a-176d328d7536
-  :name: Explain what CORS is and get around CORS restrictions
-  :subject_uuid: 7fb11472-3246-479d-a864-ede3e22c248f
-  :subject_name: Consuming Web APIs
-  :resources: ''
-  :guiding_questions: ''
-  :description: ''
-  :instructor_notes: ''
-  :tags: []
-- :uuid: 6a1bc29f-3c91-4665-ac97-b6562cd6ee3b
-  :name: Fetch and send JSON from a server side app
-  :subject_uuid: 7fb11472-3246-479d-a864-ede3e22c248f
-  :subject_name: Consuming Web APIs
-  :resources: ''
-  :guiding_questions: ''
-  :description: ''
-  :instructor_notes: ''
-  :tags: []
-- :uuid: 0f22502a-68fe-4dbe-95d7-b1f4919fe1bf
-  :name: Approaches problems in a methodical and disciplined manner
+- :uuid: 793b8c6a-a19d-4049-8183-9d454bf55028
+  :name: Thinking Like a Developer
   :subject_uuid: 793b8c6a-a19d-4049-8183-9d454bf55028
   :subject_name: Thinking Like a Developer
-  :resources: ''
-  :guiding_questions: ''
-  :description: ''
-  :instructor_notes: ''
-  :tags:
-  - Thinking Like a Developer
-- :uuid: 78c706ae-8c0d-4d64-99f3-a6a3d998bc65
-  :name: Engages in experimental problem solving
-  :subject_uuid: 793b8c6a-a19d-4049-8183-9d454bf55028
-  :subject_name: Thinking Like a Developer
-  :resources: ''
-  :guiding_questions: ''
-  :description: ''
-  :instructor_notes: "##Assessments\r\n[LMS Clean Code Assessment](https://coursework.galvanize.com/assessments/67)\r\n[LMS
-    JS-Debugging & The DOM](https://coursework.galvanize.com/assessments/34)"
-  :tags:
-  - Thinking Like a Developer
-- :uuid: daa8d869-353b-42b4-9462-22594335c26d
-  :name: Uses documentation and resources effectively
-  :subject_uuid: 793b8c6a-a19d-4049-8183-9d454bf55028
-  :subject_name: Thinking Like a Developer
-  :resources: ''
-  :guiding_questions: ''
-  :description: "Objectives\r\n- Can formulate google queries\r\n    - for documentation\r\n
-    \   - to find out how to do something\r\n    - to debug errors\r\n"
-  :instructor_notes: ''
-  :tags:
-  - Thinking Like a Developer
-- :uuid: 42c0aaa9-3c36-4d71-bfc5-d0657eea857c
-  :name: Interacts with error messages
-  :subject_uuid: 793b8c6a-a19d-4049-8183-9d454bf55028
-  :subject_name: Thinking Like a Developer
-  :resources: ''
-  :guiding_questions: ''
-  :description: ''
-  :instructor_notes: ''
-  :tags:
-  - Thinking Like a Developer
-- :uuid: 0958889f-c375-4cd0-bcf4-11521a47ac7e
-  :name: Participates productively in code reviews
-  :subject_uuid: 793b8c6a-a19d-4049-8183-9d454bf55028
-  :subject_name: Thinking Like a Developer
-  :resources: ''
-  :guiding_questions: ''
-  :description: ''
-  :instructor_notes: "Assessments:\r\n\r\nGiven a style guide and some code, determine
-    what’s wrong and give feedback.\r\n"
-  :tags:
-  - Thinking Like a Developer
-- :uuid: 96596d80-98aa-42c7-b280-768b2b52adb7
-  :name: Collaborates productively with other developers
-  :subject_uuid: 793b8c6a-a19d-4049-8183-9d454bf55028
-  :subject_name: Thinking Like a Developer
-  :resources: ''
-  :guiding_questions: ''
   :description: ''
   :instructor_notes: "- Doesn’t bully in code / commits\r\n- Doesn’t tell other that
-    their code is shit\r\n- Doesn’t get too animated\r\n"
-  :tags:
-  - Thinking Like a Developer
-- :uuid: 774786f3-e071-4479-afa8-48d5a0401e7d
-  :name: Uses `this` to manipulate the current context
+    their code is shit\r\n- Doesn’t get too animated\r\n\n\nAssessments:\r\n\r\nGiven
+    a style guide and some code, determine what’s wrong and give feedback.\r\n\n\n##Assessments\r\n[LMS
+    Clean Code Assessment](https://coursework.galvanize.com/assessments/67)\r\n[LMS
+    JS-Debugging & The DOM](https://coursework.galvanize.com/assessments/34)"
+- :uuid: 5ddfa4d5-6194-466b-97aa-f9610b77c493
+  :name: JavaScript Object Model
   :subject_uuid: 5ddfa4d5-6194-466b-97aa-f9610b77c493
   :subject_name: JavaScript Object Model
-  :resources: "- https://github.com/gSchool/shapes_javascript_inheritance\r\n- http://jhusain.github.io/learnrx/\r\n-
+  :description: "- https://github.com/gSchool/shapes_javascript_inheritance\r\n- http://jhusain.github.io/learnrx/\r\n-
     https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call\r\n-
     https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind\r\n-
-    https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply\r\n"
-  :guiding_questions: ''
-  :description: ''
-  :instructor_notes: "## Assessments\r\n- [LMS Calling JS Functions (call & apply
-    `this`)](https://coursework.galvanize.com/assessments/4)\r\n- [LMS js-methods-this-constructors
-    exercises](https://github.com/gSchool/g11-course-curriculum/tree/master/week05/05_exercises/js-methods-this-constructors)\r\n-
-    Use setTimeout and .bind() to create methods that execute after a set period of
-    time\r\n- use .call() to call the constructor from a more general class\r\n- https://github.com/gSchool/programming-fundamentals-assessments\r\n\r\n"
-  :tags:
-  - js
-  - programming
-  - OOP
-- :uuid: 1549dee5-0e63-4def-ab15-1414a65f77f9
-  :name: Creates “Classes” and Instances with JS
-  :subject_uuid: 5ddfa4d5-6194-466b-97aa-f9610b77c493
-  :subject_name: JavaScript Object Model
-  :resources: ''
-  :guiding_questions: ''
-  :description: ''
+    https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply"
   :instructor_notes: "## Assessments\r\n\r\n- https://github.com/gSchool/shapes_javascript_inheritance\r\n-
     https://github.com/gSchool/js-polymorphism-guitar-store\r\n-[LMS Anatomy of a
-    Class (Ruby)](https://coursework.galvanize.com/assessments/9)\r\n- https://github.com/gSchool/programming-fundamentals-assessments"
-  :tags:
-  - javascript object model
-- :uuid: 39933c54-ba41-44c7-bc56-716fadaf486b
-  :name: Uses Properties to store State on an Instance
-  :subject_uuid: 5ddfa4d5-6194-466b-97aa-f9610b77c493
-  :subject_name: JavaScript Object Model
-  :resources: ''
-  :guiding_questions: ''
-  :description: ''
-  :instructor_notes: "## Assessments\r\n\r\n- https://github.com/gSchool/js-encapsulation\r\n-
-    https://github.com/gSchool/programming-fundamentals-assessments/tree/master/js\r\n"
-  :tags:
-  - javascript object model
-- :uuid: f5964586-8847-4ca3-a7f2-4968a041660f
-  :name: Define and invoke functions as methods on objects
-  :subject_uuid: 5ddfa4d5-6194-466b-97aa-f9610b77c493
-  :subject_name: JavaScript Object Model
-  :resources: ''
-  :guiding_questions: ''
-  :description: ''
-  :instructor_notes: "## Assessments\r\n\r\n- Write functions stored as values of
-    properties\r\n- Write functions that are stored on the prototype\r\n- Write closures
-    that hide private class data\r\n- Explain why we store methods on the prototype
-    object\r\n- https://github.com/gSchool/js-encapsulation\r\n- https://github.com/gSchool/programming-fundamentals-assessments\r\n"
-  :tags:
-  - javascript object model
-- :uuid: 7b523c6a-95b7-423a-b3e4-bd7366346911
-  :name: Write higher order functions that accept functions as parameters
+    Class (Ruby)](https://coursework.galvanize.com/assessments/9)\r\n- https://github.com/gSchool/programming-fundamentals-assessments\n\n##
+    Assessments\r\n\r\n- https://github.com/gSchool/js-encapsulation\r\n- https://github.com/gSchool/programming-fundamentals-assessments/tree/master/js\r\n\n\n##
+    Assessments\r\n\r\n- Write functions stored as values of properties\r\n- Write
+    functions that are stored on the prototype\r\n- Write closures that hide private
+    class data\r\n- Explain why we store methods on the prototype object\r\n- https://github.com/gSchool/js-encapsulation\r\n-
+    https://github.com/gSchool/programming-fundamentals-assessments\r\n\n\n## Assessments\r\n-
+    [LMS Calling JS Functions (call & apply `this`)](https://coursework.galvanize.com/assessments/4)\r\n-
+    [LMS js-methods-this-constructors exercises](https://github.com/gSchool/g11-course-curriculum/tree/master/week05/05_exercises/js-methods-this-constructors)\r\n-
+    Use setTimeout and .bind() to create methods that execute after a set period of
+    time\r\n- use .call() to call the constructor from a more general class\r\n- https://github.com/gSchool/programming-fundamentals-assessments"
+- :uuid: 2dc0600d-e1f3-48ff-b241-199ce36fbe3f
+  :name: Functional Programming with Javascript
   :subject_uuid: 2dc0600d-e1f3-48ff-b241-199ce36fbe3f
   :subject_name: Functional Programming with Javascript
-  :resources: "- https://drboolean.gitbooks.io/mostly-adequate-guide/content/ch1.html"
-  :guiding_questions: ''
-  :description: Demonstrate how higher order functions work and explain why they’re
-    useful.
-  :instructor_notes: "## Assessments\r\n\r\n- https://github.com/gSchool/javascript_timers_callbacks_exercise\r\n-
-    https://github.com/gSchool/asynchronous-js-nested-callbacks\r\n- [LMS - JavaScript
-    Scope, Hoisting, Closures, and Higher Order Functions](https://coursework.galvanize.com/assessments/78)\r\n\r\n##
-    Resources\r\n\r\n- http://eloquentjavascript.net/1st_edition/chapter6.html\r\n-
-    https://www.youtube.com/watch?v=k7-N8R0-KY4\r\n"
-  :tags:
-  - js
-  - programming
-  - functional programming
-  - functions
-- :uuid: e105e37c-adf1-4930-8648-aa9664153a55
-  :name: Iterate over lists using ES5 Array Methods in a functional style
-  :subject_uuid: 2dc0600d-e1f3-48ff-b241-199ce36fbe3f
-  :subject_name: Functional Programming with Javascript
-  :resources: ''
-  :guiding_questions: ''
-  :description: ''
+  :description: |-
+    Demonstrate how higher order functions work and explain why they’re useful.
+
+
+
+    - https://drboolean.gitbooks.io/mostly-adequate-guide/content/ch1.html
   :instructor_notes: "## Assessments\r\n\r\n- https://github.com/timoxley/functional-javascript-workshop\r\n-
     https://github.com/gSchool/js-hof-filter-map-reduce\r\n- https://github.com/gSchool/lodash\r\n\r\n##
     Resources\r\n\r\n- https://www.youtube.com/watch?v=BMUiFMZr7vk&list=PL0zVEGEvSaeEd9hlmCXrk5yUyqUag-n84\r\n-
-    http://code.tutsplus.com/tutorials/what-they-didnt-tell-you-about-es5s-array-extras--net-28263\r\n"
-  :tags:
-  - functional js
-- :uuid: 35d1d1ae-ceba-436f-9f41-32944b8e1028
-  :name: Gather and validate requirements from a user and test that user’s response
-    to a minimum testable artifact
+    http://code.tutsplus.com/tutorials/what-they-didnt-tell-you-about-es5s-array-extras--net-28263\r\n\n\n##
+    Assessments\r\n\r\n- https://github.com/gSchool/javascript_timers_callbacks_exercise\r\n-
+    https://github.com/gSchool/asynchronous-js-nested-callbacks\r\n- [LMS - JavaScript
+    Scope, Hoisting, Closures, and Higher Order Functions](https://coursework.galvanize.com/assessments/78)\r\n\r\n##
+    Resources\r\n\r\n- http://eloquentjavascript.net/1st_edition/chapter6.html\r\n-
+    https://www.youtube.com/watch?v=k7-N8R0-KY4"
+- :uuid: f1a3c137-21bd-4902-a745-44d5ba8f992a
+  :name: Design
   :subject_uuid: f1a3c137-21bd-4902-a745-44d5ba8f992a
   :subject_name: Design
-  :resources: ''
-  :guiding_questions: ''
-  :description: ''
-  :instructor_notes: "Resources\r\n\r\n- http://www.slideshare.net/intelleto/ux-lisbon2014-designingleanuxhandouts\r\n\r\nNotes\r\n\r\n-
-    We’re trying to teach rapid prototyping here. It’s okay if their minimum testable
-    artifact is a powerpoint presentation or some sketches. It doesn’t have to be
-    a working application.\r\n\r\nAssessment\r\n\r\n- Single writeup that asks questions
-    about process\r\n- A series of wireframes / v1, v2, v3 etc...\r\n"
-  :tags:
-  - design
-- :uuid: 6b77f6b4-326a-4b3c-897e-083cca8c4a4c
-  :name: Design applications from content inventories using wireframes
-  :subject_uuid: f1a3c137-21bd-4902-a745-44d5ba8f992a
-  :subject_name: Design
-  :resources: ''
-  :guiding_questions: ''
   :description: ''
   :instructor_notes: "Assessments\r\n\r\n- When students submit a project, they have
     to include their design artifacts, including their content inventory.\r\n\r\nSequencing
     Notes:\r\n\r\n- Do this early?\r\n- Enumerate content elements in README / somewhere
-    in the Q1 project\r\n"
-  :tags:
-  - design
-- :uuid: c5ceb050-621f-4df2-8cda-18cce44f91de
-  :name: Create and apply style guides to an application
-  :subject_uuid: f1a3c137-21bd-4902-a745-44d5ba8f992a
-  :subject_name: Design
-  :resources: ''
-  :guiding_questions: ''
-  :description: ''
-  :instructor_notes: "## Resources\r\n\r\n* https://frontify.com/styleguide they should
-    look like this\r\n* [Example Style Guide](https://brand.frontify.com/d/qAiubNBytHKf/style-guide)\r\n*
-    http://www.colourlovers.com/ have not terrible colors\r\n* https://color.adobe.com/\r\n"
-  :tags:
-  - design
-- :uuid: d23f95bc-1fe6-4cf6-9627-98c704bfeae4
-  :name: Create and implement responsive/adaptive designs
-  :subject_uuid: f1a3c137-21bd-4902-a745-44d5ba8f992a
-  :subject_name: Design
-  :resources: ''
-  :guiding_questions: ''
-  :description: ''
-  :instructor_notes: ''
-  :tags:
-  - design
-- :uuid: 97b70126-a21d-4f83-a7cd-09855c9fa748
-  :name: Discuss the basic function and purpose of web sockets
+    in the Q1 project\r\n\n\n## Resources\r\n\r\n* https://frontify.com/styleguide
+    they should look like this\r\n* [Example Style Guide](https://brand.frontify.com/d/qAiubNBytHKf/style-guide)\r\n*
+    http://www.colourlovers.com/ have not terrible colors\r\n* https://color.adobe.com/\r\n\n\n\n\nResources\r\n\r\n-
+    http://www.slideshare.net/intelleto/ux-lisbon2014-designingleanuxhandouts\r\n\r\nNotes\r\n\r\n-
+    We’re trying to teach rapid prototyping here. It’s okay if their minimum testable
+    artifact is a powerpoint presentation or some sketches. It doesn’t have to be
+    a working application.\r\n\r\nAssessment\r\n\r\n- Single writeup that asks questions
+    about process\r\n- A series of wireframes / v1, v2, v3 etc..."
+- :uuid: 1762e39b-4a3e-433a-ac68-c815f3ea067b
+  :name: How the Web Works
   :subject_uuid: 1762e39b-4a3e-433a-ac68-c815f3ea067b
   :subject_name: How the Web Works
-  :resources: ''
-  :guiding_questions: ''
-  :description: ''
-  :instructor_notes: "# Assessments\r\n\r\nAnswer questions such as: \r\n\r\n- what
-    are sockets?\r\n- when might you want to use sockets? \r\n- what are the advantages
-    of sockets?\r\n- What’s the difference between sockets and HTTP?\r\n- What are
-    some common socket libraries / products?  Socket.io / Pusher / Firebase\r\n\r\nVocab\r\n\r\n-
-    Realtime web\r\n- Server-side push\r\n- Polling\r\n- Persistent connection\r\n-
-    Analogies like “phone call” vs “email”\r\n- Stateful protocol\r\n\r\nNotes:\r\n\r\nWe
-    don’t have to hold them to the standard of building sockets themselves.  This
-    is the horizontal part of the T-shaped individual.\r\n\r\nStudents can/will choose
-    to use Sockets in their capstone, group projects\r\n\r\nDescribe how socket.io
-    (as an example of a socket library) works: pub/sub - emitting / listening to events\r\n"
-  :tags:
-  - Web Sockets
-- :uuid: ca4311e4-8013-4b29-b2c4-dd753573c30e
-  :name: Diagram and explain a URI
-  :subject_uuid: 1762e39b-4a3e-433a-ac68-c815f3ea067b
-  :subject_name: How the Web Works
-  :resources: ''
-  :guiding_questions: ''
-  :description: ''
-  :instructor_notes: "## Assessment\r\n\r\n* https://coursework.galvanize.com/assessments/88"
-  :tags:
-  - how the web works
-- :uuid: d62923ca-e93e-46c3-bbcb-454411233ed9
-  :name: 'Identify common protocols and explain their purpose '
-  :subject_uuid: 1762e39b-4a3e-433a-ac68-c815f3ea067b
-  :subject_name: How the Web Works
-  :resources: ''
-  :guiding_questions: ''
-  :description: ''
-  :instructor_notes: "## Assessments\r\n\r\n- [LMS Common Protocols Assessment](https://coursework.galvanize.com/assessments/63)\r\n\r\nOther
-    protocols to mention \r\n\r\n* HTTP2\r\n* DNS\r\n* UDP,TCP,IP"
-  :tags:
-  - how the web works
-- :uuid: 960362a6-e341-487b-a292-95840148c429
-  :name: Discuss the semantics of common HTTP Verbs, Headers, and Status Codes
-  :subject_uuid: 1762e39b-4a3e-433a-ac68-c815f3ea067b
-  :subject_name: How the Web Works
-  :resources: ''
-  :guiding_questions: ''
-  :description: ''
-  :instructor_notes: "###Assessments\r\n- Match a set of headers to the appropriate
-    response\r\n- Multiple choice / fill in blank \r\n- [LMS HTTP Assessment (Verbs,
-    Status Codes, Headers)](https://coursework.galvanize.com/assessments/81)\r\n\r\nTeacher
-    Notes:\r\nHTTP Status Cats forevah\r\n"
-  :tags:
-  - how the web works
-- :uuid: 84bbf0ae-2d55-490b-bc84-d4ae4dc45e14
-  :name: Discuss and diagram Client-Server Model
-  :subject_uuid: 1762e39b-4a3e-433a-ac68-c815f3ea067b
-  :subject_name: How the Web Works
-  :resources: "- How Does the Web Work - http://www.theodinproject.com/web-development-101/how-does-the-web-work
+  :description: "- How Does the Web Work - http://www.theodinproject.com/web-development-101/how-does-the-web-work
     (A lesson that includes multiple resources explaining how the web works.)\r\n\r\n*
     Sequence Diagramming Language: http://knsv.github.io/mermaid/#sequence-diagrams"
-  :guiding_questions: ''
-  :description: ''
-  :instructor_notes: "- Have students draw sequence diagrams with clients and servers
-    on whiteboards\r\n\r\n## Assessments\r\n\r\nFor these assessments, use either
-    the [Mermaid](http://knsv.github.io/mermaid/#sequence-diagrams) markup language
-    or a whiteboard.\r\n\r\n* Do a sequence diagram for a server-side templated express
-    server with postgres that:\r\n  * `HTTP GET /students`\r\n  * `HTTP GET /students/new`
-    followed by `HTTP POST /students` followed by a redirect to `HTTP GET /students/:id`"
-  :tags:
-  - how the web works
-- :uuid: 5b704c5f-75af-4039-a691-4f2dd8ba2971
-  :name: Identify the parts of an HTTP request and response and discuss their purpose
-  :subject_uuid: 1762e39b-4a3e-433a-ac68-c815f3ea067b
-  :subject_name: How the Web Works
-  :resources: ''
-  :guiding_questions: ''
-  :description: ''
   :instructor_notes: "## Assessments\r\n\r\n* [LMS HTTP Request & Response](https://coursework.galvanize.com/assessments/89)\r\n*
     Show the student a request and response in the network tab in Chrome Dev Tools
-    and ask them to identify various parts of it."
-  :tags:
-  - how the web works
-- :uuid: cc31174c-7920-44ce-803a-0136d0a26ee3
-  :name: Use the APIs built-in to Node.js for OS specific operations
+    and ask them to identify various parts of it.\n\n###Assessments\r\n- Match a set
+    of headers to the appropriate response\r\n- Multiple choice / fill in blank \r\n-
+    [LMS HTTP Assessment (Verbs, Status Codes, Headers)](https://coursework.galvanize.com/assessments/81)\r\n\r\nTeacher
+    Notes:\r\nHTTP Status Cats forevah\r\n\n\n## Assessment\r\n\r\n* https://coursework.galvanize.com/assessments/88\n\n##
+    Assessments\r\n\r\n- [LMS Common Protocols Assessment](https://coursework.galvanize.com/assessments/63)\r\n\r\nOther
+    protocols to mention \r\n\r\n* HTTP2\r\n* DNS\r\n* UDP,TCP,IP\n\n# Assessments\r\n\r\nAnswer
+    questions such as: \r\n\r\n- what are sockets?\r\n- when might you want to use
+    sockets? \r\n- what are the advantages of sockets?\r\n- What’s the difference
+    between sockets and HTTP?\r\n- What are some common socket libraries / products?
+    \ Socket.io / Pusher / Firebase\r\n\r\nVocab\r\n\r\n- Realtime web\r\n- Server-side
+    push\r\n- Polling\r\n- Persistent connection\r\n- Analogies like “phone call”
+    vs “email”\r\n- Stateful protocol\r\n\r\nNotes:\r\n\r\nWe don’t have to hold them
+    to the standard of building sockets themselves.  This is the horizontal part of
+    the T-shaped individual.\r\n\r\nStudents can/will choose to use Sockets in their
+    capstone, group projects\r\n\r\nDescribe how socket.io (as an example of a socket
+    library) works: pub/sub - emitting / listening to events\r\n\n\n- Have students
+    draw sequence diagrams with clients and servers on whiteboards\r\n\r\n## Assessments\r\n\r\nFor
+    these assessments, use either the [Mermaid](http://knsv.github.io/mermaid/#sequence-diagrams)
+    markup language or a whiteboard.\r\n\r\n* Do a sequence diagram for a server-side
+    templated express server with postgres that:\r\n  * `HTTP GET /students`\r\n  *
+    `HTTP GET /students/new` followed by `HTTP POST /students` followed by a redirect
+    to `HTTP GET /students/:id`"
+- :uuid: d465e693-2e94-43a2-b99e-bb7283161bc2
+  :name: Server Side JS with Node
   :subject_uuid: d465e693-2e94-43a2-b99e-bb7283161bc2
   :subject_name: Server Side JS with Node
-  :resources: ''
-  :guiding_questions: ''
-  :description: ''
-  :instructor_notes: "##Assessments\r\n[LMS Intro to Node Assessment](https://coursework.galvanize.com/assessments/79)\r\n\r\n[LMS
+  :description: https://github.com/gSchool/module.exports
+  :instructor_notes: "##Assessments\r\n- [GH Node-JS-Routes-Assessment ](https://github.com/gSchool/node-js-routes-assessment/blob/master/readme.md)\r\n-
+    [GH JS-npm-Assessment (installing modules)](https://github.com/gSchool/js-npm-assessment)\r\n-
+    [LM NPM Assessment](https://coursework.galvanize.com/assessments/83)\r\n\n\n##Assessments\r\n[GH
+    Rails Debugging](https://github.com/gSchool/rails-assessment-debugging)\n\n##Assessments\r\n[LMS
+    Intro to Node Assessment](https://coursework.galvanize.com/assessments/79)\r\n\r\n[LMS
     Node HTTP Server](https://coursework.galvanize.com/assessments/80)\r\n\r\n[GH
     Node-HTTP-File-Assessment](https://github.com/gSchool/node-http-file-assessment)\r\n\r\n[GH
     Node-js-routes-Assessment](https://github.com/gSchool/node-js-routes-assessment)\r\n\r\nObjectives\r\n\r\n-
-    `path`\r\n- `query strings`\r\n- Write a CLI\r\n"
-  :tags:
-  - Server Side JS (Node)
-- :uuid: 1ebe7d45-7bcb-4979-ab85-f3760f0c52cf
-  :name: Control the flow of your program using EventEmitters
-  :subject_uuid: d465e693-2e94-43a2-b99e-bb7283161bc2
-  :subject_name: Server Side JS with Node
-  :resources: ''
-  :guiding_questions: ''
-  :description: ''
-  :instructor_notes: "##Assessments\r\n[GH Node Basics (Event Emitters)](https://github.com/gSchool/node-basics-assessment)"
-  :tags:
-  - Server Side JS (Node)
-- :uuid: be9709cc-957a-4652-ab52-4730113e11f7
-  :name: Handle errors using Node patterns
-  :subject_uuid: d465e693-2e94-43a2-b99e-bb7283161bc2
-  :subject_name: Server Side JS with Node
-  :resources: ''
-  :guiding_questions: ''
-  :description: ''
-  :instructor_notes: "##Assessments\r\n[GH Rails Debugging](https://github.com/gSchool/rails-assessment-debugging)"
-  :tags:
-  - Server Side JS (Node)
-- :uuid: 7470e677-6614-4f54-ae3f-0e916cfa4968
-  :name: Define and require Node modules
-  :subject_uuid: d465e693-2e94-43a2-b99e-bb7283161bc2
-  :subject_name: Server Side JS with Node
-  :resources: https://github.com/gSchool/module.exports
-  :guiding_questions: ''
-  :description: ''
-  :instructor_notes: "##Assessments\r\n- [GH Node-JS-Routes-Assessment ](https://github.com/gSchool/node-js-routes-assessment/blob/master/readme.md)\r\n-
-    [GH JS-npm-Assessment (installing modules)](https://github.com/gSchool/js-npm-assessment)\r\n-
-    [LM NPM Assessment](https://coursework.galvanize.com/assessments/83)\r\n"
-  :tags:
-  - Server Side JS (Node)
-- :uuid: ef7e9988-6893-46ef-a88f-069a4298a5cc
-  :name: Build CRUD apps in Express
+    `path`\r\n- `query strings`\r\n- Write a CLI\r\n\n\n##Assessments\r\n[GH Node
+    Basics (Event Emitters)](https://github.com/gSchool/node-basics-assessment)"
+- :uuid: bb388526-c903-45a9-afbf-e6dff6f501d1
+  :name: Server Side Frameworks with Express
   :subject_uuid: bb388526-c903-45a9-afbf-e6dff6f501d1
   :subject_name: Server Side Frameworks with Express
-  :resources: ''
-  :guiding_questions: ''
   :description: ''
   :instructor_notes: "##Assessments\r\n\r\n- Intro to Express - https://students.galvanize.com/cohorts/13/daily_plans/2015-06-03
     (2nd half of page)\r\n- Express Calculator Exercise - https://students.galvanize.com/cohorts/13/daily_plans/2015-06-03
@@ -1261,323 +661,89 @@
     https://github.com/gSchool/g11-course-curriculum/tree/master/week08/08_exercises/node-github-contest\r\n-
     Swig Templating Primer - http://mherman.org/blog/2015/08/23/primer-on-swig-templating\r\n-
     Node, Express, Swig, and MongoDB - Getting Started With CRUD - http://mherman.org/blog/2015/08/24/node-express-swig-mongo-primer\r\n-
-    http://adrianmejia.com/images/express-middlewares.png\r\n"
-  :tags:
-  - express
-- :uuid: 20e0212e-c577-465c-906f-5f3491a6fdfe
-  :name: Describe what server-side frameworks like Express do
-  :subject_uuid: bb388526-c903-45a9-afbf-e6dff6f501d1
-  :subject_name: Server Side Frameworks with Express
-  :resources: ''
-  :guiding_questions: ''
-  :description: ''
-  :instructor_notes: "##Assessments\r\n- [LMS Query Params](https://coursework.galvanize.com/assessments/8)\r\n-
-    [LMS Node/Express Intro](https://coursework.galvanize.com/assessments/41)\r\n-
-    [LMS Express/Middleware](https://coursework.galvanize.com/assessments/82)\r\n"
-  :tags:
-  - express
-- :uuid: 8ab48f11-82c3-4f7f-ad09-efdae6180aea
-  :name: Build form-based authentication in Express using cookie-session
+    http://adrianmejia.com/images/express-middlewares.png\r\n\n\n##Assessments\r\n-
+    [LMS Query Params](https://coursework.galvanize.com/assessments/8)\r\n- [LMS Node/Express
+    Intro](https://coursework.galvanize.com/assessments/41)\r\n- [LMS Express/Middleware](https://coursework.galvanize.com/assessments/82)"
+- :uuid: 49275f51-fb52-4c08-a691-ecbc22f6a2e9
+  :name: Auth
   :subject_uuid: 49275f51-fb52-4c08-a691-ecbc22f6a2e9
   :subject_name: Auth
-  :resources: ''
-  :guiding_questions: ''
   :description: ''
   :instructor_notes: "Implementing post-login redirects using cookies / session would
-    be a 4\r\nIn lessons cover the difference between hashing and encryption\r\n"
-  :tags: []
-- :uuid: 3f1fd6fd-be9b-4ced-9683-d17105fcc3ec
-  :name: Build OAuth user login in Express using Passport
-  :subject_uuid: 49275f51-fb52-4c08-a691-ecbc22f6a2e9
-  :subject_name: Auth
-  :resources: ''
-  :guiding_questions: ''
-  :description: ''
-  :instructor_notes: Having done it once is enough - they don’t need to memorize the
-    setup steps
-  :tags: []
-- :uuid: df58e25f-7716-4325-a90e-4f41846cc7cb
-  :name: Protect content in Express using middleware substacks
-  :subject_uuid: 49275f51-fb52-4c08-a691-ecbc22f6a2e9
-  :subject_name: Auth
-  :resources: ''
-  :guiding_questions: ''
-  :description: ''
-  :instructor_notes: ''
-  :tags: []
-- :uuid: 1527f6f1-dff1-45a5-b987-509d40ca1e3e
-  :name: Describe auth concepts including form-based authentication, OAuth and authorization
-  :subject_uuid: 49275f51-fb52-4c08-a691-ecbc22f6a2e9
-  :subject_name: Auth
-  :resources: ''
-  :guiding_questions: ''
-  :description: ''
-  :instructor_notes: ''
-  :tags: []
-- :uuid: 427bd950-e449-4341-ba01-3e41f552b4bb
-  :name: Make sequential asynchronous calls in separate methods and return the final
-    result with basic error handling using Promises
+    be a 4\r\nIn lessons cover the difference between hashing and encryption\r\n\n\nHaving
+    done it once is enough - they don’t need to memorize the setup steps"
+- :uuid: 412ea142-dd72-4e21-8e52-2bb72ad3e09b
+  :name: Promises
   :subject_uuid: 412ea142-dd72-4e21-8e52-2bb72ad3e09b
   :subject_name: Promises
-  :resources: ''
-  :guiding_questions: ''
-  :description: ''
-  :instructor_notes: ''
-  :tags:
-  - promises
-- :uuid: fb851076-a3a8-40f6-9544-5ef14803bdee
-  :name: Discuss the basic function and purpose of promises
-  :subject_uuid: 412ea142-dd72-4e21-8e52-2bb72ad3e09b
-  :subject_name: Promises
-  :resources: ''
-  :guiding_questions: ''
-  :description: "Success Criteria\r\n"
+  :description: Success Criteria
   :instructor_notes: "Assessments\r\nWriteup/discussion\r\nWhat are promises?\r\nHow
     do promises work?\r\nWhat problems do promises solve for developers?\r\nWhen is
-    it appropriate to use promises?\r\n"
-  :tags:
-  - promises
-- :uuid: 3204ce0a-ae01-48c4-af83-5461f8ee7264
-  :name: Make parallel requests using Promise.all
-  :subject_uuid: 412ea142-dd72-4e21-8e52-2bb72ad3e09b
-  :subject_name: Promises
-  :resources: ''
-  :guiding_questions: ''
-  :description: ''
-  :instructor_notes: ''
-  :tags:
-  - promises
-- :uuid: 08f64fd8-ad16-4e3a-bb92-902b8b54de07
-  :name: Write database queries using SQL
+    it appropriate to use promises?"
+- :uuid: 2305e956-adeb-49e4-8b0d-2600b10ddfdc
+  :name: Datastores
   :subject_uuid: 2305e956-adeb-49e4-8b0d-2600b10ddfdc
   :subject_name: Datastores
-  :resources: ''
-  :guiding_questions: ''
   :description: ''
   :instructor_notes: "### Assessments\r\n- https://github.com/gSchool/sql-assessment\r\n-
     [LMS Intro to SQL](https://coursework.galvanize.com/assessments/84)\r\n- [LMS
     SQL DDL ](https://coursework.galvanize.com/assessments/86)\r\n\r\n## Resources\r\nCONCAT?\r\n[Intro
-    to Relational DBs](https://vimeo.com/142036155)\r\n"
-  :tags:
-  - datastores
-- :uuid: 349b2e45-b20a-44d1-80c8-1216e14c301f
-  :name: Access data using an ORM / Knex
-  :subject_uuid: 2305e956-adeb-49e4-8b0d-2600b10ddfdc
-  :subject_name: Datastores
-  :resources: ''
-  :guiding_questions: ''
-  :description: ''
-  :instructor_notes: "##Assessments\r\n- [LMS PG assessment](https://coursework.galvanize.com/assessments/85)\r\n##
+    to Relational DBs](https://vimeo.com/142036155)\r\n\n\n##Assessments\r\n- [LMS
+    Ruby, SQL, Rails, Rspec assessment (contains SQL questions about pertaining to
+    this standard) ](https://coursework.galvanize.com/assessments/49)\r\n\r\n## Objectives:\r\nWrites
+    CRUD statements using MongoDB operations\r\nUses operators for common query modifications\r\nsort\r\nlimit\r\n$in\r\n\n\n##
+    Assessments\r\nGiven a words explanation of a data model, design the schema\r\nGiven
+    a human problem, design a data model\r\n\r\n## Resources\r\n[Entity Relationship
+    Diagrams](https://vimeo.com/142034756)\r\n\n\n##Assessments\r\n- [LMS PG assessment](https://coursework.galvanize.com/assessments/85)\r\n##
     Slides\r\n* [Danny - pg](https://docs.google.com/a/galvanize.com/presentation/d/1rJgJPsk6hWjYj8Lb1Rftz8tEZWsdRG-2PkJbUdDTxag/edit?usp=sharing)"
-  :tags:
-  - datastores
-- :uuid: 7ec77c83-b497-49c3-b08c-b729a77090b3
-  :name: Design and implement schemas
-  :subject_uuid: 2305e956-adeb-49e4-8b0d-2600b10ddfdc
-  :subject_name: Datastores
-  :resources: ''
-  :guiding_questions: ''
-  :description: ''
-  :instructor_notes: "## Assessments\r\nGiven a words explanation of a data model,
-    design the schema\r\nGiven a human problem, design a data model\r\n\r\n## Resources\r\n[Entity
-    Relationship Diagrams](https://vimeo.com/142034756)\r\n"
-  :tags:
-  - datastores
-- :uuid: 99acaf90-3559-4542-a2a4-1071eda89553
-  :name: Contrast the function and purpose of non-relational and relational datastores
-  :subject_uuid: 2305e956-adeb-49e4-8b0d-2600b10ddfdc
-  :subject_name: Datastores
-  :resources: ''
-  :guiding_questions: ''
-  :description: ''
-  :instructor_notes: "##Assessments\r\n- [LMS Ruby, SQL, Rails, Rspec assessment (contains
-    SQL questions about pertaining to this standard) ](https://coursework.galvanize.com/assessments/49)\r\n\r\n##
-    Objectives:\r\nWrites CRUD statements using MongoDB operations\r\nUses operators
-    for common query modifications\r\nsort\r\nlimit\r\n$in\r\n"
-  :tags:
-  - datastores
-- :uuid: 7231cf4a-2dc7-401a-88f9-4159cc1c2e2f
-  :name: Access data in datastores through joins
-  :subject_uuid: 2305e956-adeb-49e4-8b0d-2600b10ddfdc
-  :subject_name: Datastores
-  :resources: ''
-  :guiding_questions: ''
-  :description: ''
-  :instructor_notes: ''
-  :tags:
-  - datastores
-- :uuid: d183eb60-fcfc-40d1-9cae-d85f5f349fb0
-  :name: Deploy to static hosting sites and explain the function and purpose of static
-    hosting
+- :uuid: 2886a5f1-92f6-44ba-8adb-185b2a161870
+  :name: Deployment
   :subject_uuid: 2886a5f1-92f6-44ba-8adb-185b2a161870
   :subject_name: Deployment
-  :resources: ''
-  :guiding_questions: ''
-  :description: ''
-  :instructor_notes: "##Assessments\r\n- [LMS Deployment Assessment (Key Terms)](https://coursework.galvanize.com/assessments/68)"
-  :tags:
-  - deployment
-- :uuid: b1e49494-ae23-4e78-9f4a-fa52572b2978
-  :name: Explain the function and purpose of Continuous Deployment and Continuous
-    Integration and apply them to a project
-  :subject_uuid: 2886a5f1-92f6-44ba-8adb-185b2a161870
-  :subject_name: Deployment
-  :resources: ''
-  :guiding_questions: ''
-  :description: ''
-  :instructor_notes: ''
-  :tags:
-  - deployment
-- :uuid: 8bfec408-1579-4ecd-80cd-d95de9c1c0ac
-  :name: Explain the function and purpose environment variables and use them in their
-    projects
-  :subject_uuid: 2886a5f1-92f6-44ba-8adb-185b2a161870
-  :subject_name: Deployment
-  :resources: ''
-  :guiding_questions: ''
-  :description: ''
-  :instructor_notes: ''
-  :tags:
-  - deployment
-- :uuid: 8cf1f10a-fc6b-4c09-a2bc-6e4d1a901dad
-  :name: Deploy to Heroku (a PaaS Provider)
-  :subject_uuid: 2886a5f1-92f6-44ba-8adb-185b2a161870
-  :subject_name: Deployment
-  :resources: "Objectives\r\n\r\n- Can start a database shell from the command line
+  :description: "Objectives\r\n\r\n- Can start a database shell from the command line
     (heroku pg:psql)\r\n- Can tail logs (heroku logs -t)\r\n- Set and read environment
     variables (heroku config / heroku config:set)\r\n- Can run a single command (heroku
-    run)\r\n"
-  :guiding_questions: ''
-  :description: ''
-  :instructor_notes: ''
-  :tags:
-  - deployment
-- :uuid: 79030da6-cfca-479c-8ac2-31826cf70ddd
-  :name: Deploy to Pivotal Web Services Cloud Foundry
-  :subject_uuid: 2886a5f1-92f6-44ba-8adb-185b2a161870
-  :subject_name: Deployment
-  :resources: "Rationale\r\n\r\n- Pivotal owns Cloud Foundry and is a strategic partner
+    run)\n\nRationale\r\n\r\n- Pivotal owns Cloud Foundry and is a strategic partner
     looking to hire dozens of developers\r\n- Pivotal customers of Cloud Foundry (like
     GE, AllState, Ford etc…) are looking to hire hundreds if not thousands of developers\r\n-
     IBM Bluemix runs on Cloud Foundry and IBM is a strategic partner looking to hire
     hundreds if not thousands of developers\r\n\r\nObjectives\r\n\r\n- Student has
     a functioning app on Cloud Foundry w/ bound services\r\n- Can tail logs\r\n- Set
     and read environment variables\r\n- Can modify the start command in order to run
-    a single command\r\n- Can cf push an app using a manifest.yml file\r\n"
-  :guiding_questions: ''
-  :description: "\r\n"
-  :instructor_notes: "- https://github.com/gSchool/bluemix_notes\r\n"
-  :tags:
-  - deployment
-- :uuid: 14a67719-f04a-4c10-ae39-33ae7142d976
-  :name: Deploy an app to EC2 and compare and contrast the AWS core philosophy with
-    Heroku and Cloud Foundry and pre-cloud era
-  :subject_uuid: 2886a5f1-92f6-44ba-8adb-185b2a161870
-  :subject_name: Deployment
-  :resources: ''
-  :guiding_questions: ''
-  :description: ''
-  :instructor_notes: "Objectives\r\n\r\n- Provision an EC2 instance using the AWS
-    management console (command line is bonus)\r\n- Describe an AMI\r\n- Login to
-    an EC2 box with their credentials\r\n- Setup security to open sane ports\r\n-
-    Get code on the box\r\n- scp / RSync / ssh in and git pull (github deploy keys)\r\n"
-  :tags:
-  - deployment
-- :uuid: 5ef7bda4-d599-4b11-a435-f518c4469be6
-  :name: Connect to another computer using SSH
-  :subject_uuid: 2886a5f1-92f6-44ba-8adb-185b2a161870
-  :subject_name: Deployment
-  :resources: ''
-  :guiding_questions: ''
-  :description: ''
-  :instructor_notes: "Objectives\r\n\r\n- Describe public / private keys\r\n- Initiate
-    an ssh session w/ a specific key\r\n- Describe the concept of an ssh session\r\n"
-  :tags:
-  - deployment
-- :uuid: 6a02b407-69d9-453b-a747-c8b87950cb2b
-  :name: Develop and deploy an app using Docker containers
-  :subject_uuid: 2886a5f1-92f6-44ba-8adb-185b2a161870
-  :subject_name: Deployment
-  :resources: ''
-  :guiding_questions: ''
-  :description: "\r\n"
-  :instructor_notes: "Objectives\r\n\r\n- Describe the concept of a container and
-    how it plays a part in large deployments\r\n- Compare and contrast docker containers
-    vs virtual machines / virtualization\r\n"
-  :tags:
-  - deployment
-- :uuid: 4d3b234c-6e4d-4af4-9635-a939fe502ebe
-  :name: Discuss the role and purpose of devops
-  :subject_uuid: 2886a5f1-92f6-44ba-8adb-185b2a161870
-  :subject_name: Deployment
-  :resources: ''
-  :guiding_questions: ''
-  :description: ''
-  :instructor_notes: "Objectives\r\n\r\nDescribe the function and purpose of Chef
-    / Puppet / Salt / Ansible\r\nAttach an Analytics tool such as NewRelic / Skylight
-    / Datadog\r\nException Handling\r\nAutomated provisioning / scaling\r\n"
-  :tags:
-  - deployment
-- :uuid: b24ecc78-5a7d-493d-8f66-3d451a9d374c
-  :name: Identifies and explains purpose of common software architectural concepts
+    a single command\r\n- Can cf push an app using a manifest.yml file"
+  :instructor_notes: "##Assessments\r\n- [LMS Deployment Assessment (Key Terms)](https://coursework.galvanize.com/assessments/68)\n\n\n\nObjectives\r\n\r\n-
+    Describe the concept of a container and how it plays a part in large deployments\r\n-
+    Compare and contrast docker containers vs virtual machines / virtualization\r\n\n\n\n\n-
+    https://github.com/gSchool/bluemix_notes\r\n\n\nObjectives\r\n\r\n- Provision
+    an EC2 instance using the AWS management console (command line is bonus)\r\n-
+    Describe an AMI\r\n- Login to an EC2 box with their credentials\r\n- Setup security
+    to open sane ports\r\n- Get code on the box\r\n- scp / RSync / ssh in and git
+    pull (github deploy keys)\r\n\n\nObjectives\r\n\r\n- Describe public / private
+    keys\r\n- Initiate an ssh session w/ a specific key\r\n- Describe the concept
+    of an ssh session\r\n\n\nObjectives\r\n\r\nDescribe the function and purpose of
+    Chef / Puppet / Salt / Ansible\r\nAttach an Analytics tool such as NewRelic /
+    Skylight / Datadog\r\nException Handling\r\nAutomated provisioning / scaling"
+- :uuid: ce60c0de-9f49-423f-bbbe-7fea0c1b875c
+  :name: Architecture
   :subject_uuid: ce60c0de-9f49-423f-bbbe-7fea0c1b875c
   :subject_name: Architecture
-  :resources: ''
-  :guiding_questions: ''
-  :description: ''
+  :description: http://12factor.net/
   :instructor_notes: ''
-  :tags:
-  - Architecture
-- :uuid: 4f82519b-1fc7-4007-9357-66a94ee520a7
-  :name: Diagram architecture of an n-tier web app
-  :subject_uuid: ce60c0de-9f49-423f-bbbe-7fea0c1b875c
-  :subject_name: Architecture
-  :resources: ''
-  :guiding_questions: ''
-  :description: ''
-  :instructor_notes: ''
-  :tags:
-  - Architecture
-- :uuid: 1d4c879a-8dd3-4eb0-babc-8414e7ed73ec
-  :name: Discuss and diagram microservice architecture
-  :subject_uuid: ce60c0de-9f49-423f-bbbe-7fea0c1b875c
-  :subject_name: Architecture
-  :resources: "http://12factor.net/\r\n"
-  :guiding_questions: ''
-  :description: ''
-  :instructor_notes: ''
-  :tags:
-  - Architecture
-- :uuid: 06005077-158b-4cd8-903f-562b709aa071
-  :name: Build a web app that separates concerns using models, views, and controllers
-  :subject_uuid: ce60c0de-9f49-423f-bbbe-7fea0c1b875c
-  :subject_name: Architecture
-  :resources: ''
-  :guiding_questions: ''
-  :description: ''
-  :instructor_notes: ''
-  :tags:
-  - Architecture
-- :uuid: a8e5b3db-eefd-41c3-aa94-ad2fbe7e8634
-  :name: Design and execute user tests, then implement changes based on feedback
+- :uuid: 39680f2e-8004-4029-a637-1722f5b54625
+  :name: UX User Testing
   :subject_uuid: 39680f2e-8004-4029-a637-1722f5b54625
   :subject_name: UX User Testing
-  :resources: ''
-  :guiding_questions: ''
   :description: ''
   :instructor_notes: "## Exercise\r\n\r\nTake a project you have done in the past.
     Could be a quarter project.\r\nPair up the students. Have the students take turns
     doing usability testing.\r\nThe person doing the testing needs to give the user
     a task to do, watch them, take notes, and not help them.\r\n\r\n## Assessment\r\n\r\n*
     [LMS User Testing Assessment](https://coursework.galvanize.com/assessments/90)"
-  :tags:
-  - UX User Testing
-- :uuid: c8baa104-1646-4d20-ac5d-40fe886d3bd8
-  :name: Build a single-page CRUD application in Angular using routing, factories
-    / services and $http
+- :uuid: b7090a92-612d-4811-ac2c-8d750e5fab1d
+  :name: Client Side Frameworks (Angular)
   :subject_uuid: b7090a92-612d-4811-ac2c-8d750e5fab1d
   :subject_name: Client Side Frameworks (Angular)
-  :resources: "- https://gist.github.com/Colt/0a029fcdc7fddd23a27e\r\n- The Basics
+  :description: "- https://gist.github.com/Colt/0a029fcdc7fddd23a27e\r\n- The Basics
     of Angular - W/S pt1 - https://github.com/gSchool/intro-to-angular-workshop (The
     basics of Angular from initial setup)\r\n- Angular Advanced Topics - https://github.com/MartinChavez/AngularJS-Advanced-Topics\r\n-
     Angular Patterns - https://www.youtube.com/watch?v=UlvCbnKAH3g\r\n- https://thinkster.io/a-better-way-to-learn-angularjs/\r\n-
@@ -1593,158 +759,32 @@
     height=\"489\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>\r\n\r\n---\r\n\r\n<iframe
     src=\"https://player.vimeo.com/video/135778837?byline=0&portrait=0\" width=\"500\"
     height=\"313\" frameborder=\"0\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>"
-  :guiding_questions: ''
-  :description: ''
   :instructor_notes: "###Assessments\r\n- [LMS Angular Unit 1](https://coursework.galvanize.com/assessments/69)\r\n-
     [GH React Assessment](https://github.com/gSchool/react-assessment)\r\n- [GH g10-angular-assessment](https://github.com/gSchool/g10-angular-assessment)\r\n-
-    [GH Angular Practice Assessment (practically same as above)](https://github.com/gSchool/angular-practice-assessment)"
-  :tags:
-  - Client Side Frameworks (Angular)
-- :uuid: 4794e677-7800-4e74-991e-b2ec21f40c5a
-  :name: Implement custom-directives
-  :subject_uuid: b7090a92-612d-4811-ac2c-8d750e5fab1d
-  :subject_name: Client Side Frameworks (Angular)
-  :resources: ''
-  :guiding_questions: ''
-  :description: ''
-  :instructor_notes: "**Objectives**  \r\nIdentify some clear use cases for creating
-    custom directives\r\n\r\n"
-  :tags:
-  - Client Side Frameworks (Angular)
-- :uuid: 2601933b-c305-45d8-9527-42cda918507c
-  :name: Explain client-side routing as it relates to server-side routing
-  :subject_uuid: b7090a92-612d-4811-ac2c-8d750e5fab1d
-  :subject_name: Client Side Frameworks (Angular)
-  :resources: ''
-  :guiding_questions: ''
-  :description: ''
-  :instructor_notes: ''
-  :tags:
-  - Client Side Frameworks (Angular)
-- :uuid: 7620b2f5-136a-455f-bbf3-a62ab718ea59
-  :name: Implement and diagram JWT-based authentication between single-page apps and
-    servers
-  :subject_uuid: b7090a92-612d-4811-ac2c-8d750e5fab1d
-  :subject_name: Client Side Frameworks (Angular)
-  :resources: ''
-  :guiding_questions: ''
-  :description: ''
-  :instructor_notes: "**Resources**   \r\n- https://github.com/auth0/angular-jwt\r\n-
-    https://github.com/auth0/express-jwt\r\n- https://github.com/gSchool/angular-curriculum/blob/master/Unit-3/examples/auth_example\r\n"
-  :tags:
-  - Client Side Frameworks (Angular)
-- :uuid: 614e6ddd-49c8-459b-b79d-81265d867757
-  :name: Discuss agile values and principles
+    [GH Angular Practice Assessment (practically same as above)](https://github.com/gSchool/angular-practice-assessment)\n\n**Objectives**
+    \ \r\nIdentify some clear use cases for creating custom directives\r\n\r\n\n\n**Resources**
+    \  \r\n- https://github.com/auth0/angular-jwt\r\n- https://github.com/auth0/express-jwt\r\n-
+    https://github.com/gSchool/angular-curriculum/blob/master/Unit-3/examples/auth_example"
+- :uuid: dfec3119-3ba1-4a14-ba2c-9f66715f4b98
+  :name: Agile Project Management
   :subject_uuid: dfec3119-3ba1-4a14-ba2c-9f66715f4b98
   :subject_name: Agile Project Management
-  :resources: "* http://agilemanifesto.org/\r\n* http://www.halfarsedagilemanifesto.org/
+  :description: "* Ask “What is agile?”,\r\n* Response should reflect/touch on the
+    principles.\n\n* http://agilemanifesto.org/\r\n* http://www.halfarsedagilemanifesto.org/
     ;)"
-  :guiding_questions: "* Ask “What is agile?”,\r\n* Response should reflect/touch
-    on the principles."
-  :description: ''
   :instructor_notes: Students don’t have to recall the principles, just talk about
     what they mean when presented with them.
-  :tags:
-  - Agile Project Management
-- :uuid: 5a36d842-c508-4cbe-906d-f586f3b0e424
-  :name: Complete projects using an agile methodology
-  :subject_uuid: dfec3119-3ba1-4a14-ba2c-9f66715f4b98
-  :subject_name: Agile Project Management
-  :resources: ''
-  :guiding_questions: ''
-  :description: ''
-  :instructor_notes: ''
-  :tags:
-  - Agile Project Management
-- :uuid: 52699761-1945-4c26-aeb7-dd2f3ea2f960
-  :name: Explain the scrum process and define key terms
-  :subject_uuid: dfec3119-3ba1-4a14-ba2c-9f66715f4b98
-  :subject_name: Agile Project Management
-  :resources: ''
-  :guiding_questions: ''
-  :description: ''
-  :instructor_notes: ''
-  :tags:
-  - Agile Project Management
-- :uuid: bea6617d-30e3-4bb2-81a4-1ab48d37498e
-  :name: Design and implement a RESTful API
+- :uuid: 0f6ed5e9-c172-4969-b990-f2324c91f5ad
+  :name: Designing APIs
   :subject_uuid: 0f6ed5e9-c172-4969-b990-f2324c91f5ad
   :subject_name: Designing APIs
-  :resources: ''
-  :guiding_questions: ''
-  :description: "\r\n"
-  :instructor_notes: ''
-  :tags:
-  - designing-apis
-- :uuid: 4655229a-33c6-4e0f-93e1-71c557c67602
-  :name: Document an API using an automated tool
-  :subject_uuid: 0f6ed5e9-c172-4969-b990-f2324c91f5ad
-  :subject_name: Designing APIs
-  :resources: ''
-  :guiding_questions: ''
   :description: ''
   :instructor_notes: ''
-  :tags:
-  - designing-apis
-- :uuid: cbaa4c7e-3a15-4530-ac43-bf910951db84
-  :name: Secure an API endpoint using token-based authentication and CORS
-  :subject_uuid: 0f6ed5e9-c172-4969-b990-f2324c91f5ad
-  :subject_name: Designing APIs
-  :resources: ''
-  :guiding_questions: ''
-  :description: ''
-  :instructor_notes: ''
-  :tags:
-  - designing-apis
-- :uuid: ec89798f-87ee-4691-abee-28f85bcb5c59
-  :name: Discuss common API design concepts
-  :subject_uuid: 0f6ed5e9-c172-4969-b990-f2324c91f5ad
-  :subject_name: Designing APIs
-  :resources: ''
-  :guiding_questions: ''
-  :description: ''
-  :instructor_notes: ''
-  :tags:
-  - designing-apis
-- :uuid: ea7dac47-4782-4657-91bb-da94ca145915
-  :name: Work with and describe testing database-driven server-side applications w/
-    Express and Postgres given a working skeleton
+- :uuid: 40104e17-a0e4-4bc4-b499-5030c197cb81
+  :name: Automated Testing
   :subject_uuid: 40104e17-a0e4-4bc4-b499-5030c197cb81
   :subject_name: Automated Testing
-  :resources: ''
-  :guiding_questions: ''
-  :description: ''
-  :instructor_notes: ''
-  :tags:
-  - automated-testing
-- :uuid: d43c1a6e-7ff9-40cc-8f3d-e23c2c8bc498
-  :name: Discuss the pros and cons of automated testing
-  :subject_uuid: 40104e17-a0e4-4bc4-b499-5030c197cb81
-  :subject_name: Automated Testing
-  :resources: ''
-  :guiding_questions: ''
-  :description: "\r\n"
-  :instructor_notes: "###Assessments\r\n- Group and Class Discussions on Pros and
-    Cons\r\n- [LMS Automated Testing Basics Assessment](https://coursework.galvanize.com/assessments/87)
-    (Covers pros and cons listed below. Suggest assigning the assessment, and allowing
-    the students to pair/discuss/defend their reasons. Then reviewing together as
-    a class).\r\n    * Pros\r\n        * Lower Bug Count\r\n        * Faster Pace
-    of Change\r\n        * Executable Documentation\r\n        * Higher Confidence
-    Deploys\r\n        * Reduced Cost over time\r\n        * Easily repeatable for
-    team\r\n    * Cons \r\n        * Huge investmet of time initially\r\n        *
-    Complex Cases\r\n        * Design Impacts\r\n        * Continous Tweaking of Tests\r\n
-    \       * Testing the wrong thing\r\n\r\n\r\n\r\n**Objective**\r\nBDD vs. TDD
-    - what’s the difference? vs testing after the fact (flavors)\r\n\r\n**Vocabulary**\r\nExploratory
-    testing"
-  :tags:
-  - automated-testing
-- :uuid: ee92cc73-7bbc-41a3-af38-719c2195be72
-  :name: Write unit tests in a TDD style using Mocha Chai
-  :subject_uuid: 40104e17-a0e4-4bc4-b499-5030c197cb81
-  :subject_name: Automated Testing
-  :resources: "[Student-Test-Reporters](https://github.com/gSchool/student-test-reporters)"
-  :guiding_questions: ''
-  :description: ''
+  :description: "[Student-Test-Reporters](https://github.com/gSchool/student-test-reporters)"
   :instructor_notes: "###Assessments\r\n- Red,Green,Refactor should be observed when
     working on the following exercises and assessment.\r\n- [LMS JavaScript Testing
     Basics with Mocha and Chai](https://coursework.galvanize.com/assessments/60)\r\n-
@@ -1752,147 +792,60 @@
     [GH Express-API-TDD w/supertest and mocha](https://github.com/gSchool/express-api-tdd-supertest-mocha)\r\n-
     Tests may not require `before`, `beforeAll`, `after`, and `afterAll`\r\n\r\nObjective\r\n\r\nlist
     alternatives to Mocha, list alternatives to Chai\r\n\r\nVocabulary\r\n\r\nRed
-    / Green / Refactor\r\nSetup / Execution / Assertion(Expectation) / Teardown"
-  :tags:
-  - automated-testing
-- :uuid: 25678b07-1b08-42a4-b666-2cfe2d5527e0
-  :name: Use ES2015 features to write more concise Javascript
+    / Green / Refactor\r\nSetup / Execution / Assertion(Expectation) / Teardown\n\n###Assessments\r\n-
+    Group and Class Discussions on Pros and Cons\r\n- [LMS Automated Testing Basics
+    Assessment](https://coursework.galvanize.com/assessments/87) (Covers pros and
+    cons listed below. Suggest assigning the assessment, and allowing the students
+    to pair/discuss/defend their reasons. Then reviewing together as a class).\r\n
+    \   * Pros\r\n        * Lower Bug Count\r\n        * Faster Pace of Change\r\n
+    \       * Executable Documentation\r\n        * Higher Confidence Deploys\r\n
+    \       * Reduced Cost over time\r\n        * Easily repeatable for team\r\n    *
+    Cons \r\n        * Huge investmet of time initially\r\n        * Complex Cases\r\n
+    \       * Design Impacts\r\n        * Continous Tweaking of Tests\r\n        *
+    Testing the wrong thing\r\n\r\n\r\n\r\n**Objective**\r\nBDD vs. TDD - what’s the
+    difference? vs testing after the fact (flavors)\r\n\r\n**Vocabulary**\r\nExploratory
+    testing"
+- :uuid: a3a04645-41a3-4bb6-89e6-7c9b789a797d
+  :name: ES2015
   :subject_uuid: a3a04645-41a3-4bb6-89e6-7c9b789a797d
   :subject_name: ES2015
-  :resources: "- http://kangax.github.io/compat-table/es6/ - compatibility tables
-    for ES6\r\n- https://babeljs.io/repl/ - convert ES6 code in a browser to an ES5-safe
-    version for most features\r\n- https://leanpub.com/javascriptallongesix/read"
-  :guiding_questions: ''
-  :description: "https://github.com/gSchool/es2015-with-babeljs\r\n"
-  :instructor_notes: "There isn’t one for this, but there’s a handful of es6 / es5
+  :description: "https://github.com/gSchool/es2015-with-babeljs\r\n\n\n\n\n- http://kangax.github.io/compat-table/es6/
+    - compatibility tables for ES6\r\n- https://babeljs.io/repl/ - convert ES6 code
+    in a browser to an ES5-safe version for most features\r\n- https://leanpub.com/javascriptallongesix/read"
+  :instructor_notes: There isn’t one for this, but there’s a handful of es6 / es5
     examples in the repo. We should probably extract a set of ES5 code and ask students
     to write out the ES6 equivalents for those. That, combined with a quiz of a few
-    questions would be sufficient for this section.\r\n"
-  :tags:
-  - ES2015
-- :uuid: b5a931dd-84f2-45fe-9fd0-e254a2c6f806
-  :name: Contrast statically-typed and dynamically-typed languages
+    questions would be sufficient for this section.
+- :uuid: e43b79ad-875a-4817-8ac0-68f7f47f3b42
+  :name: OOP w/ Statically Typed Language
   :subject_uuid: e43b79ad-875a-4817-8ac0-68f7f47f3b42
   :subject_name: OOP w/ Statically Typed Language
-  :resources: ''
-  :guiding_questions: ''
-  :description: ''
+  :description: Cracking the coding interview (book)
   :instructor_notes: "Objectives: \r\n\r\n- Favor classes to builtin data types\r\n-
     Explain how the JVM works\r\n    - Identify that the JVM is a virtual machine\r\n
     \   - Explain how the language compiles into bytecode\r\n    - Describe structure
     of a compiled application (entry points / main in java)\r\n    - Identify other
-    languages that run on the JVM\r\n"
-  :tags:
-  - Object Oriented Programming with Statically Typed Languages
-- :uuid: edf5be91-67e1-4e8b-a6ee-ec5b9fc16e09
-  :name: Solve interview-style questions using Java
-  :subject_uuid: e43b79ad-875a-4817-8ac0-68f7f47f3b42
-  :subject_name: OOP w/ Statically Typed Language
-  :resources: Cracking the coding interview (book)
-  :guiding_questions: ''
-  :description: ''
-  :instructor_notes: "- https://github.com/gSchool/java-challenges\r\n- https://github.com/gSchool/setting-up-java8-environment\r\n-
-    https://github.com/gSchool/amusement-parks-java\r\n- https://github.com/gSchool/java-exercise-template\r\n-
-    https://github.com/gSchool/word-cloud-java\r\n- https://github.com/gSchool/data-structures-java\r\n-
-    https://github.com/akullpp/awesome-java"
-  :tags:
-  - Object Oriented Programming with Statically Typed Languages
-- :uuid: 84e30c2e-0715-411f-b39b-db22598897b1
-  :name: Compare and contrast OOP and Functional Programming
-  :subject_uuid: e43b79ad-875a-4817-8ac0-68f7f47f3b42
-  :subject_name: OOP w/ Statically Typed Language
-  :resources: ''
-  :guiding_questions: ''
-  :description: ''
-  :instructor_notes: ''
-  :tags:
-  - oo
-- :uuid: 0aa5d3c6-9b6c-4c71-a680-35500aec7773
-  :name: Define and explain the significance of the major principles of Object Oriented
-    Programming
-  :subject_uuid: e43b79ad-875a-4817-8ac0-68f7f47f3b42
-  :subject_name: OOP w/ Statically Typed Language
-  :resources: ''
-  :guiding_questions: ''
-  :description: ''
-  :instructor_notes: "###Assessments\r\n- [LMS Week 4 Assessment (contains questions
-    pertaining JS inheritance)](https://coursework.galvanize.com/assessments/26)\r\n-
+    languages that run on the JVM\r\n\n\n- https://github.com/gSchool/java-challenges\r\n-
+    https://github.com/gSchool/setting-up-java8-environment\r\n- https://github.com/gSchool/amusement-parks-java\r\n-
+    https://github.com/gSchool/java-exercise-template\r\n- https://github.com/gSchool/word-cloud-java\r\n-
+    https://github.com/gSchool/data-structures-java\r\n- https://github.com/akullpp/awesome-java\n\n###Assessments\r\n-
+    [LMS Week 4 Assessment (contains questions pertaining JS inheritance)](https://coursework.galvanize.com/assessments/26)\r\n-
     [LMS Classical Object-Oriented Programming in Java: Part 1](https://coursework.galvanize.com/assessments/77)\r\n-
     [LMS Classical Object-Oriented Programming Basics](https://coursework.galvanize.com/assessments/76)"
-  :tags:
-  - Object Oriented Programming with Statically Typed Languages
-- :uuid: 864fb2e5-1a7c-440d-a21d-eead8eed127e
-  :name: Employ a “Cracking the Coding Interview” technique when solving brain teaser
-    problems
+- :uuid: d5947e67-9d70-4e02-ae2a-b3135a9c1667
+  :name: Data Structures / Algorithms
   :subject_uuid: d5947e67-9d70-4e02-ae2a-b3135a9c1667
   :subject_name: Data Structures / Algorithms
-  :resources: ''
-  :guiding_questions: ''
-  :description: ''
-  :instructor_notes: ''
-  :tags:
-  - Data Structures/Algorithms
-- :uuid: 1430686b-e6af-48c3-be11-55c986e55148
-  :name: Implement, evaluate, and use some common data structures
-  :subject_uuid: d5947e67-9d70-4e02-ae2a-b3135a9c1667
-  :subject_name: Data Structures / Algorithms
-  :resources: ''
-  :guiding_questions: ''
-  :description: ''
-  :instructor_notes: ''
-  :tags:
-  - Data Structures/Algorithms
-- :uuid: eb7d309b-c9ef-4e54-a64d-33af757b8d18
-  :name: Determine the correct algorithm and data structure for interview-style problems
-    following the “Cracking the Coding Interview” process
-  :subject_uuid: d5947e67-9d70-4e02-ae2a-b3135a9c1667
-  :subject_name: Data Structures / Algorithms
-  :resources: "[Cracking the Coding Interview Process](https://qph.is.quoracdn.net/main-qimg-379a9cf0a7bd42f8084d137370e4bd79?convert_to_webp=true)"
-  :guiding_questions: ''
   :description: "Examples may be: \r\n* k-means\r\n* kNN (k nearest neighbor)\r\n*
-    checksum\r\n* DFS\r\n* BFS\r\n"
+    checksum\r\n* DFS\r\n* BFS\r\n\n\n\n\n[Cracking the Coding Interview Process](https://qph.is.quoracdn.net/main-qimg-379a9cf0a7bd42f8084d137370e4bd79?convert_to_webp=true)\n\n\n\n\n\n\n\nhttp://bigocheatsheet.com/"
   :instructor_notes: "### Assessments\r\n* If you want to know if two files are the
-    same, which algorithm would you use? Why?"
-  :tags:
-  - Data Structures/Algorithms
-- :uuid: 95508d61-d96d-4d70-80c6-3f00bdf52308
-  :name: Implement common algorithms and describe more complex algorithms
-  :subject_uuid: d5947e67-9d70-4e02-ae2a-b3135a9c1667
-  :subject_name: Data Structures / Algorithms
-  :resources: ''
-  :guiding_questions: ''
-  :description: ''
-  :instructor_notes: ''
-  :tags:
-  - Data Structures/Algorithms
-- :uuid: e27bebe6-5b07-428d-9400-2d8f08944076
-  :name: Identify and diagram common data structures
-  :subject_uuid: d5947e67-9d70-4e02-ae2a-b3135a9c1667
-  :subject_name: Data Structures / Algorithms
-  :resources: ''
-  :guiding_questions: ''
-  :description: ''
-  :instructor_notes: "###Assessments\r\n- [LMS JS Fundamentals, DOM, Iterators, CS
-    and OOP](https://coursework.galvanize.com/assessments/38)"
-  :tags:
-  - Data Structures/Algorithms
-- :uuid: 53e74cc9-53b0-4976-afda-93eebd722088
-  :name: Analyze an algorithm and identify the Big O
-  :subject_uuid: d5947e67-9d70-4e02-ae2a-b3135a9c1667
-  :subject_name: Data Structures / Algorithms
-  :resources: http://bigocheatsheet.com/
-  :guiding_questions: ''
-  :description: ''
-  :instructor_notes: "###Assessments\r\n- [LMS JS Fundamentals, DOM, Iterators, CS
-    and OOP](https://coursework.galvanize.com/assessments/38)"
-  :tags:
-  - Data Structures/Algorithms
-- :uuid: 31672d5d-e1ad-40a8-9f18-c9d3134cab5a
-  :name: Gracefully respond to a question you don’t know the answer to
+    same, which algorithm would you use? Why?\n\n\n\n\n\n###Assessments\r\n- [LMS
+    JS Fundamentals, DOM, Iterators, CS and OOP](https://coursework.galvanize.com/assessments/38)\n\n###Assessments\r\n-
+    [LMS JS Fundamentals, DOM, Iterators, CS and OOP](https://coursework.galvanize.com/assessments/38)"
+- :uuid: e59bae37-553b-4c1b-8667-4dbbdeeae98d
+  :name: Technical Interview Prep
   :subject_uuid: e59bae37-553b-4c1b-8667-4dbbdeeae98d
   :subject_name: Technical Interview Prep
-  :resources: ''
-  :guiding_questions: ''
   :description: ''
   :instructor_notes: "- Introduction to Technical Resumes - https://github.com/gSchool/fullstack-curriculum/blob/master/lessons/interviews/resumes.instructor.md
     (Works through some sample resumes trying to highlight what a good bullet point
@@ -1900,55 +853,20 @@
     (Student activity with actual job postings that are very different to suss out
     what they like and don't about a given job posting)\r\n- https://github.com/gSchool/group_project_specs\r\n-
     https://github.com/gSchool/employment-links\r\n- https://github.com/gSchool/interview-questions\r\n-
-    https://github.com/gSchool/sf-interview-questions\r\n"
-  :tags:
-  - Technical Interview Prep
-- :uuid: 0fe673a0-4edf-449b-8794-cc13101d60c6
-  :name: Discuss a project that you worked on knowledgeably and enthusiastically
-  :subject_uuid: e59bae37-553b-4c1b-8667-4dbbdeeae98d
-  :subject_name: Technical Interview Prep
-  :resources: ''
-  :guiding_questions: ''
-  :description: ''
-  :instructor_notes: ''
-  :tags:
-  - Technical Interview Prep
-- :uuid: 747da4b3-7b9d-4dee-8209-311ebdb0c588
-  :name: Employ a 4-step process at a whiteboard interview
-  :subject_uuid: e59bae37-553b-4c1b-8667-4dbbdeeae98d
-  :subject_name: Technical Interview Prep
-  :resources: ''
-  :guiding_questions: ''
-  :description: ''
-  :instructor_notes: ''
-  :tags:
-  - Technical Interview Prep
-- :uuid: 107c626b-4b43-4357-90a3-093a48c0c8c5
-  :name: Set up developer environments for applications written in an unfamiliar languages
+    https://github.com/gSchool/sf-interview-questions"
+- :uuid: 0bef6db4-d566-48c2-a5f5-ff09fce3b846
+  :name: Application Analysis in Unfamiliar Environment
   :subject_uuid: 0bef6db4-d566-48c2-a5f5-ff09fce3b846
   :subject_name: Application Analysis in Unfamiliar Environment
-  :resources: ''
-  :guiding_questions: ''
-  :description: "Success Criteria\r\n\r\n- Install all necessary dependencies and
-    start attached services\r\n- Local database is created and populated\r\n- Application
-    starts and all “working” features are usable\r\n\r\n"
-  :instructor_notes: "Notes:\r\n\r\nApp should have oauth where they need to setup
-    an app, some other database, have to tweak some ENV variables\r\n\r\nLook at 7
-    languages in 7 weeks"
-  :tags:
-  - Application Analysis in Unfamiliar Environment
-- :uuid: a0adcfbc-995f-4a6e-bd75-41584ab54a9e
-  :name: Analyze existing code in applications written in unfamiliar languages to
-    fulfill requirements
-  :subject_uuid: 0bef6db4-d566-48c2-a5f5-ff09fce3b846
-  :subject_name: Application Analysis in Unfamiliar Environment
-  :resources: "Rails Bug Repos\r\n\r\n- https://github.com/gSchool/rails-bug-01\r\n-
-    https://github.com/gSchool/rails-bug-06\r\n- https://github.com/gSchool/rails-bug-05\r\n-
-    https://github.com/gSchool/rails-bug-03\r\n- https://github.com/gSchool/rails-bug-04\r\n\r\n##
-    Good Repos for Beginners\r\n- https://github.com/MunGell/awesome-for-beginners"
-  :guiding_questions: ''
   :description: "Success Criteria\r\n\r\n- Fixes bugs in existing, unfamiliar code
-    (at least 1)\r\n- Adds features to fulfill requirements (at least 1)\r\n\r\n"
+    (at least 1)\r\n- Adds features to fulfill requirements (at least 1)\r\n\r\n\n\n\n\nRails
+    Bug Repos\r\n\r\n- https://github.com/gSchool/rails-bug-01\r\n- https://github.com/gSchool/rails-bug-06\r\n-
+    https://github.com/gSchool/rails-bug-05\r\n- https://github.com/gSchool/rails-bug-03\r\n-
+    https://github.com/gSchool/rails-bug-04\r\n\r\n## Good Repos for Beginners\r\n-
+    https://github.com/MunGell/awesome-for-beginners\n\nSuccess Criteria\r\n\r\n-
+    Install all necessary dependencies and start attached services\r\n- Local database
+    is created and populated\r\n- Application starts and all “working” features are
+    usable"
   :instructor_notes: "We could run a “first-week” simulation - several days of setting
     up dev environments and working through complex code bases.\r\n\r\n###Assessments\r\n-
     [LMS Params Ruby](https://coursework.galvanize.com/assessments/15)\r\n- [GH Rails
@@ -1976,6 +894,6 @@
     [GH g7-rails-assessment-07](https://github.com/gSchool/g7-rails-assessment-01)\r\n-
     [GH g2-midterm-assessment-rails](https://github.com/gSchool/g2-midterm-assessment-rails)\r\n-
     [GH g2-midterm-assessment-ruby](https://github.com/gSchool/g2-mid-term-assessment-ruby)\r\n-
-    [GH denver-practice-assessment-week-3 (RUBY)](https://github.com/gSchool/denver-practice-assessment-week-3)"
-  :tags:
-  - Application Analysis in Unfamiliar Environment
+    [GH denver-practice-assessment-week-3 (RUBY)](https://github.com/gSchool/denver-practice-assessment-week-3)\n\nNotes:\r\n\r\nApp
+    should have oauth where they need to setup an app, some other database, have to
+    tweak some ENV variables\r\n\r\nLook at 7 languages in 7 weeks"
