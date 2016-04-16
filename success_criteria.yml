@@ -1,0 +1,2388 @@
+---
+- :standard_uuid: 7313b475-d281-4c72-a3b3-1167eb3b13e3
+  :standard_name: The Command Line
+  :uuid: 5e594f94-9089-4b2e-a0cf-f424ecd278b1
+  :name: Work with and discuss and Unix Roles / Permissions
+  :description: "- Inspect and change file permissions\n\n- Change to root while keeping
+    shell variables (su - root / exit)\n- Describe file permission generally\n- Use
+    chown\n- Describe sudo and why it’s evil for brew / npm / gems etc...\n\n\n\n\n\n-
+    Change file permissions in the ugo+rwx style\r\n- Change file / folder owners\n\n"
+  :instructor_notes: |2+
+
+
+
+
+
+
+- :standard_uuid: 7313b475-d281-4c72-a3b3-1167eb3b13e3
+  :standard_name: The Command Line
+  :uuid: 5dea00ce-dbb3-43e9-91b9-dead371d37c4
+  :name: Navigate and manage a file system with the command line
+  :description: "- Chain, pipe, and redirect commands to work more efficiently\n-
+    Manage files and navigate the file system using the command line\n\n- `<` to redirect
+    standard input from a file\r\n- `>` to redirect standard output to a file (overwrite)\r\n-
+    `>>` to redirect standard output to a file (append)\r\n- `|` to redirect the standard
+    output of one command into the standard input of another command\r\n- `&&` to
+    chain a series of commands (only continues if the previous command executes successfully)\r\n-
+    `;` to chain a series of commands\r\n- `$()` or `...` for command substitution\r\n-
+    Pipe input through grep to filter\r\n\r\nUnix philosophy: small programs that
+    do one thing well, can be chained together.\r\n\r\n(eg. ps aux | grep ruby)\n\n-
+    Manage files on the command line\n- Navigate the file system using the command
+    line\n\n- mv for moving and renaming files\r\n- cp for copying files\r\n- touch
+    to create files\r\n- rm to remove files and directories\r\n    - -f to force\r\n
+    \   - -r for directories\r\n- cat to show file contents\r\n- grep to search and
+    filter file contents\r\n- less to read file contents\n\n- use cd to change working
+    directory\r\n- pwd to print working directory\r\n- ls to list files in a directory\r\n
+    \   - -a flag to show hidden files\r\n    - -l flag to see file details\r\n- .
+    and .. to refer to the current directory and  parent directory\r\n- ~ to refer
+    to the home directory\r\n- use both absolute and relative paths\r\n- use TAB for
+    Autocompletion\r\n- store folders in your $PATH so you can execute files contained
+    in them from anywhere"
+  :instructor_notes: "\n\nLess\r\n\r\nHow do you?\r\n\r\n- exit `less`?\r\n- move
+    up and down by line?\r\n- move up and down by page?\r\n- search?\r\n\r\nVIM\r\n\r\nHow
+    do you?\r\n\r\n- enter INSERT mode?\r\n- exit INSERT mode?\r\n- save a file?\r\n-
+    move around in a file?\r\n- delete a line?\r\n- cut and paste a line?\r\n- move
+    to the beginning / end of a line?\r\n- move to the beginning / end of a file?\r\n\r\nTail\r\n\r\nHow
+    do you:\r\n\r\n- watch a single file for changes?\r\n- watch multiple files for
+    changes?\n\n"
+- :standard_uuid: 4298574a-4ac8-4a6b-8195-91c349a04209
+  :standard_name: Dev Environment
+  :uuid: 07448ee9-9e09-43de-9afd-c4acba35a6c2
+  :name: Touch type code at least 40 WPM
+  :description: |-
+    - Students can type at least 40 WPM
+
+    In this exercise: https://typing.io/lesson/javascript/jquery/traversing.js/2
+  :instructor_notes: "Using the following exercise  \r\nhttps://typing.io/lesson/javascript/jquery/traversing.js/2"
+- :standard_uuid: 4298574a-4ac8-4a6b-8195-91c349a04209
+  :standard_name: Dev Environment
+  :uuid: c795cc87-dc92-4c81-918e-cd6be797a530
+  :name: Send HTTP requests and view HTTP responses with Postman
+  :description: |+
+    - Uses Postman to send and receive HTTP Requests and inspect them with Postman
+
+  :instructor_notes: ''
+- :standard_uuid: 4298574a-4ac8-4a6b-8195-91c349a04209
+  :standard_name: Dev Environment
+  :uuid: 24654e75-c03f-4f7f-83a6-3487cbb6e063
+  :name: Use dotfiles to configure projects, environments, and tools
+  :description: "- Use dotfiles to configure projects, environments, and tools\n\n-
+    View Dotfiles using ls -la\n- Use dotfiles to encapsulate environment variables
+    for a project\n- Use dotfiles to configure tools like bash\n- Consistently incorporates
+    Chrome Dev Tools into diagnostic process\n\n\n\n\n\n\n\n- Test small pieces of
+    JS code and view JS errors in the console \r\n- Use the console to look for errors
+    in javascript included on the page\r\n- Diagnose AJAX and File errors with the
+    network tab.\r\n- Inspect the current state of the DOM with the elements tab.\r\n-
+    Inspect and modify CSS properties with the elements tab\r\n- Inspect JS with the
+    sources tab"
+  :instructor_notes: "\n\n\n\n\n\n- View and delete cookies in Chrome\r\n- Uses chrome
+    web inspector to test and debug styling\r\n- Set and clear local and session storage
+    values from the Chrome web inspector\r\n- Use chrome web inspector to alter styles"
+- :standard_uuid: 4298574a-4ac8-4a6b-8195-91c349a04209
+  :standard_name: Dev Environment
+  :uuid: 16b2ea59-6c8d-4cfa-8542-ff0fffee2982
+  :name: Navigate your computer swiftly using keyboard shortcuts
+  :description: "- Students should always use keyboard shortcuts for common programs\n\n-
+    Students should always use keyboard shortcuts for common programs \n\n* Mac\r\n\t*
+    open programs with spotlight (cmd + space)\r\n\t* access settings (cmd + ,) \r\n\t*
+    switch between open applications (cmd + tab)\r\n\t* close windows (cmd + w)\r\n\t*
+    quit programs (cmd + q)\r\n* Browser\r\n\t* switching tabs\r\n\t* creating tabs\r\n\t*
+    moving to the location bar\r\n\t* opening windows\r\n\t* reloading the page\r\n\t*
+    open the javascript console\r\n\t* open the developer tools\r\n\t* inspect element
+    (cmd + shift + c)\r\n* Terminal\r\n\t* new tab\r\n\t* new split (vertical and
+    horizontal) \r\n\t* new window\r\n\t* move to beginning of the line (ctrl + a)\r\n\t*
+    move to the end of the line (ctrl + e)\r\n\t* clear the current line (ctrl + u)\r\n\t*
+    halt last command (ctrl + c)\r\n\t* clear the screen (ctrl + l)\r\n* Atom/Sublime\r\n\t*
+    New line\r\n\t* move lines up and down\r\n\t* new tab\r\n\t* open files\r\n\t*
+    new split\r\n\t* switch between tabs\r\n\t* opens with `subl`\r\n* Window Manager
+    (Moom, spectacle, etc.)\r\n\t* resize and position windows\n\n- What is a package
+    manager?\r\n- Why do package managers exist?\r\n- How do you make your window
+    full-width / full-height without using full-screen?\r\n- How do you make your
+    window half-width (on both the left and the right)?\r\n\r\nHow do you:\r\n\r\n-
+    change between apps?\r\n- change between windows in the same app?\r\n- switch
+    between tabs?\r\n- close tabs?\r\n- create new tabs?\r\n- search for / open an
+    app?\r\n\r\nHow do you:\r\n\r\n- move to the beginning of a line without arrow
+    keys?\r\n- move to the end of a line without arrow keys?\r\n- move forward or
+    backward by whole words using arrow keys?\r\n- move to the top of a document?\r\n-
+    move to the bottom of a document?\r\n- select all text from the cursor to the
+    beginning of the line?\r\n- select all text from the cursor to the end of the
+    line?\r\n- select all text from the cursor to the beginning of the document?\r\n-
+    select all text from the cursor to the end of the document?\r\n- copy and paste
+    text?\r\n- undo and redo changes?\r\n\r\nHow do you:\r\n\r\n- highlight the url?\r\n-
+    open a new incognito window?\r\n- refresh the browser?\r\n- refresh the browser
+    and clear the cache (hard refresh)?\r\n- submit forms?  And submit forms when
+    you are in a textarea?\r\n- how do you find on a page?  How do you cycle through
+    found results?  How to you close the find box?\r\n\r\nHow do you:\r\n\r\n- move
+    a line up or down?\r\n- edit multiple lines at the same time?\r\n- find and replace
+    in a file?\r\n- find and replace across the entire project?\r\n- open a project
+    from the command line?\r\n- add and manage packages / plugins?\r\n- create new
+    files?\r\n- rename / move files?\r\n- create new folders?\r\n- capitalize or lowercase
+    text?\r\n- jump to the matching brace?\r\n- jump to a specific line?\r\n- find
+    / open a file?\r\n- autocomplete?\r\n- use snippets to save typing?\r\n\r\nHow
+    do you:\r\n\r\n- navigate history without arrow keys?\r\n- navigate file system
+    with tab completion?\n\n[Brew](http://brew.sh/)  \r\n[Explain Shell](http://explainshell.com/)
+    \ \r\n[Atom](https://atom.io/)  \r\n\r\n- https://support.apple.com/kb/PH18686?locale=en_US\r\n-
+    https://support.apple.com/kb/PH18688?locale=en_US\r\n\r\nChoose one of the following
+    for window management:  \r\n\r\n- https://github.com/fikovnik/ShiftIt/releases\r\n-
+    https://itunes.apple.com/us/app/moom/id419330170?mt=12\r\n- http://spectacleapp.com/\r\n-
+    https://itunes.apple.com/us/app/divvy-window-manager/id413857545?mt=12"
+  :instructor_notes: ''
+- :standard_uuid: a7d5be0f-3937-465a-b5e9-b2555642e9d9
+  :standard_name: HTML
+  :uuid: 2f1d22c7-b07b-4e5d-9c84-5aa989b7f36d
+  :name: Embed Rich Media using Audio & Video APIs
+  :description: |+
+    - Use the Audio API to play sounds, or embed media
+    - Embed videos using the Video API
+
+
+
+  :instructor_notes: |2+
+
+
+- :standard_uuid: a7d5be0f-3937-465a-b5e9-b2555642e9d9
+  :standard_name: HTML
+  :uuid: 6fdb2116-c6b2-45e8-884d-5f51d05836d4
+  :name: Write Semantic HTML5 Markup
+  :description: "- Write Semantic HTML5 Markup\n\n- Tables used for tabular data,
+    not for formatting\n- Ordered lists used for ordered content\n- Unordered lists
+    used for unordered content\n- Images all have alt text\n- Headers used properly
+    - smaller headers used to section content demarcated by larger headers\n- No tags
+    that exist for no reason- all tags should have a purpose\n- Sidebars, articles,
+    sections, etc. used in appropriate cases\n\n\n\n\n\n\n\n\n\n- One h1 per page\r\n-
+    h2s used to demarcate large sections of the page\r\n- h3-6 used for subsections\r\n-
+    Examples : https://html.spec.whatwg.org/#headings-and-sections\n\n\n\n- Sidebars,
+    articles, sections, etc. used in appropriate cases\r\n- Write Semantic HTML5 Markup"
+  :instructor_notes: |2+
+
+
+
+
+
+
+
+
+
+
+
+
+- :standard_uuid: a7d5be0f-3937-465a-b5e9-b2555642e9d9
+  :standard_name: HTML
+  :uuid: 90141122-0edb-4c14-ac77-a63e7c3a8ce0
+  :name: Write Valid HTML5 Markup
+  :description: "- Write Valid HTML5 Markup\n\n- Tags are in a logical order to match
+    reality\n- Tags are properly indented to show nesting visually\n- Attributes\n-
+    `<img>` tags used to embed images\n- Anchor tags\n- Validates markup with the
+    [W3C HTML Validator](https://validator.w3.org/)\n- Writes valid HTML structure\n\n\n\n-
+    Block level elements have their own indentation level\r\n- inline elements are
+    included inline\n\n- ids are all unique, valid identifiers\r\n- Classes are applied
+    to multiple elements successfully\r\n- Boolean attributes are [syntactically correct](https://html.spec.whatwg.org/#boolean-attributes)\r\n
+    \   - no “false” or “true values\r\n    - elements like checked are represented
+    as `checked`\r\n- Attribute names are all in lowercase, values are in lowercase\n\n\n\n-
+    has tags that link to other places in the document\r\n- has tags that link to
+    other HTML resources\n\n\n\n- Has a valid doctype declaration\r\n- has an `<html>`
+    tag as it’s root element\r\n- html tag has a head followed by a body\r\n- head
+    \r\n    - contains all metadata\r\n    - has a `<title>` tag\r\n- body contains
+    all visible elements\r\n- tables contain appropriate opening and closing tags:`<table><th><tb><tr>`\r\n\r\n\r\n\r\n-
+    \r\n- \r\n- \r\n- \r\n-"
+  :instructor_notes: |2+
+
+
+
+
+
+
+
+
+
+
+
+
+- :standard_uuid: a7d5be0f-3937-465a-b5e9-b2555642e9d9
+  :standard_name: HTML
+  :uuid: d5a4c20f-4922-43e4-a7bb-388438235f40
+  :name: Build HTML Forms and Controls
+  :description: "- Build HTML Forms and Controls\n\n- Use structural tags to create
+    a semantic, usable form (label, fieldset)\n- Build multiple forms that use all
+    HTML5 controls\n- Labels are associated with form controls\n\n\n\n- in their relevant
+    places\r\n- all relevant attributes (disabled, checked, selected, autofocus, required)\r\n-
+    a method and action attribute on the form tag\n\n- Associate labels with controls
+    by the “for” attribute\r\n- Associate labels with controls by wrapping the control"
+  :instructor_notes: "\n\n## Exercises\r\n[The pizza ordering one]\r\n[The class favorite
+    music survey] \r\n\r\n## Automated Tests\r\n[A link to a script that will check
+    a bunch of github repos that are named in a standard way for the existence of
+    those elements]\r\n\r\nRubric :  \r\n\r\n- Did they use a text input for their
+    text fields?  \r\n- Did they use an optiongroup?  \r\n- Did they use a checkbox?
+    \ \r\n- Write syntactically valid forms \r\n- Explain the function and purpose
+    of the action attribute  \r\n- Explain the function and purpose of the method
+    attribute  \r\n- Describe that the name attribute forms the key in the params
+    when sent to the server\r\n- Describe the the value of inputs, and contents of
+    textareas, for the value of the params sent to the server\r\n- Describe that unchecked
+    checkboxes and radio buttons do not get sent to the server\r\n- Describe how forms
+    and controls interact (that submitting a form serializes the controls associated
+    with it)\r\n- Write syntactically valid boolean attributes (checked, selected,
+    disabled)  \r\n- Write syntactically valid select / option controls  \r\n- Write
+    syntactically valid radio buttons (same name, different values) \r\n- Write syntactically
+    valid textareas (setting contents instead of value attribute) \r\n- Write syntactically
+    valid input elements  \r\n- Write fieldsets with legends\r\n- Build valid forms,
+    showcasing the action and method attribute on the form tag\r\n- Describe how the
+    data is extracted from the controls on the page when you submit a form, showing
+    the differences between types of elements\r\n- Write syntactically valid form
+    elements (select, radio, checkbox, input, textarea)\r\n- Build multiple forms
+    that use all HTML5 controls\n\n"
+- :standard_uuid: 0c1be570-48b4-48a8-bc98-7da27a7be512
+  :standard_name: CSS
+  :uuid: 1b7a90d1-4b10-4a5a-9475-5391378047ce
+  :name: Quickly style pages with CSS frameworks
+  :description: |+
+    - Can use framework + semantic HTML to produce usable forms
+    - Can produce a layout from a mockup
+
+
+
+  :instructor_notes: |2+
+
+
+- :standard_uuid: 0c1be570-48b4-48a8-bc98-7da27a7be512
+  :standard_name: CSS
+  :uuid: 0e8bdbe9-9592-4704-9ddf-46159d7a11d8
+  :name: Use CSS3 and advanced browser tooling to create responsive pages
+  :description: |+
+    - Show and hide content intended for specific screens/screen sizes with media queries.
+    - Align and distribute elements in a container of an unknown/dynamic size with Flexbox.
+
+
+
+    - Align and distribute elements in a container of an unknown/dynamic size with Flexbox.
+    - Uses web components
+    - Ensure cross-browser compatibility with modernizr and other shims
+
+
+
+
+
+  :instructor_notes: |2+
+
+
+
+
+
+
+- :standard_uuid: 0c1be570-48b4-48a8-bc98-7da27a7be512
+  :standard_name: CSS
+  :uuid: 6e0c7a9b-e85d-4f39-b7e5-fdf0dcbf6042
+  :name: Style HTML elements with CSS properties
+  :description: |+
+    - Style HTML elements with CSS properties
+
+    - Applies text styles
+    - Applies background styles
+    - Applies image styles
+    - Change default list styles
+
+
+
+
+
+    Using CSS properties on `<img>` tags. Properties such as `width`, `height`, `object-fit`
+
+  :instructor_notes: |2+
+
+
+
+
+
+
+- :standard_uuid: 0c1be570-48b4-48a8-bc98-7da27a7be512
+  :standard_name: CSS
+  :uuid: 4014347b-eb0e-447e-a78f-77b0317a46a4
+  :name: Write well organized CSS
+  :description: "- Write well organized CSS\n\n- Creates CSS classes for groups of
+    elements that behave similarly\n- Creates IDs for elements that are unique\n-
+    Uses semantic selector specificity\n- Selectors and rules are demarcated by usage,
+    using comments and by grouping similar functionality\n- Discuss the purpose of
+    Git\n\n\n\n\n\n\n\n\n\n- Describe the function and purpose of version control\r\n-
+    Distinguish between Git and Github\r\n- Describe the problem that version control
+    solves for developers - how it makes their lives easier/better.\r\n- Aides collaboration\r\n-
+    “Safety-net” for making mistakes\r\n- Feature development"
+  :instructor_notes: |2+
+
+
+
+
+
+
+
+
+- :standard_uuid: 0c1be570-48b4-48a8-bc98-7da27a7be512
+  :standard_name: CSS
+  :uuid: 0b6f124a-f58a-4e2c-97d1-39a109703ddc
+  :name: Lay out a document with CSS properties
+  :description: "- Use floats to interrupt flow content and layout block-level elements
+    on a page\n- Use the box model to layout elements\n- Use positioning to layout
+    elements\n\n\n\n- Uses box model to dimension element\n\n- Uses margin for outside
+    the box\r\n- Padding for inside the box\r\n- Border elements for visible border
+    only\r\n- Content box sizing is only determined by content, or height property\n\n-
+    Uses relative positioning within content to do in-block layout\n- Uses fixed positioning\n\n\n\n"
+  :instructor_notes: |2+
+
+
+
+
+
+
+- :standard_uuid: 0c1be570-48b4-48a8-bc98-7da27a7be512
+  :standard_name: CSS
+  :uuid: 8552d31e-b5c6-4414-8a22-4e684bcd2595
+  :name: Target HTML elements with CSS selectors
+  :description: "- Target HTML elements with CSS selectors \n\n- Target HTML elements
+    with CSS selectors\n\n- Target classes\n- Target IDs\n- Target attributes\n- Target
+    elements with N attributes\n- Target elements that have one OR another attribute\n-
+    Targets descendants of an element\n- Target direct descendants\n- Target elements
+    using pseudo-selectors\n- Target :after and :before selectors\n- Target siblings\n-
+    Target the nth-child and nth-of-type\n- Describe the difference between nth-child
+    and nth-of-type\n- Describe \"cascading\"\n- Describe how CSS “decides” which
+    styles to apply\n- Describe selector specificity\n- Target elements"
+  :instructor_notes: |2+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+- :standard_uuid: 3f805b07-096d-4024-bce2-20b19f92199a
+  :standard_name: Version Control (Git and Github)
+  :uuid: f0dd4b1a-bc2d-46b8-934d-822074a2efbe
+  :name: Discuss the function and purpose of Git
+  :description: "- Discuss the basic process of committing a file to version control
+    (function of version control)\n\n- Untracked - hasn’t been added to version control\r\n-
+    Tracked - version control is watching the state of these files\r\n- Staged - ready
+    to be committed\r\n- Committed - commit is like a snapshot of the project state\r\n-
+    Pushed - project has been sent to another computer"
+  :instructor_notes: ''
+- :standard_uuid: 3f805b07-096d-4024-bce2-20b19f92199a
+  :standard_name: Version Control (Git and Github)
+  :uuid: 2f892a7c-e360-4218-9c8c-764d8f9418f7
+  :name: Share code by pushing and pulling to a remote repository on GitHub
+  :description: "- Push and pull changes to/from github\n\n- Explain what a remote
+    repository is\r\n- Discuss why web developers use GitHub as a remote repository
+    service\r\n- Initialize a remote repo on Github\r\n- Push to a remote repository
+    and explain + diagram what happened\r\n- Pull from a remote repository and explain
+    + diagram what happened"
+  :instructor_notes: ''
+- :standard_uuid: 3f805b07-096d-4024-bce2-20b19f92199a
+  :standard_name: Version Control (Git and Github)
+  :uuid: 3e7127ec-a7a6-417d-b505-16fd9a5909f0
+  :name: Collaborate with other developers using clone and fork-based workflows with
+    Github
+  :description: |+
+    - Review and accept pull requests
+    - Rebase and squash commits when appropriate
+
+
+
+    - Rebase and squash commits when appropriate
+    - Submit pull requests from a forked repository
+    - Incorporate feedback from repo owners and add to pull request
+
+
+
+
+
+  :instructor_notes: |2+
+
+
+
+
+
+
+- :standard_uuid: 3f805b07-096d-4024-bce2-20b19f92199a
+  :standard_name: Version Control (Git and Github)
+  :uuid: e8272444-8dfc-49a0-81d9-d5c92026d536
+  :name: Track changes over time using a basic Git workflow
+  :description: "- Perform basic git commands to track changes to a project\n- Write
+    succinct, descriptive commit messages\n\n- `init` to create a git repo\r\n- `status`
+    to check the status of a repo\r\n- `add` to add changes to the staging area\r\n-
+    `-A` to add all changes\r\n- `-p` to select changes one at a time \r\n- `commit`\r\n
+    \   - `-m` to add the commit message inline\r\n- `push` - to sent commits to a
+    remote repo\r\n- `pull` - to fetch and merge remote commits\r\n- `log` to review
+    the commit history\r\n    - --oneline to make it easier to read\r\n    - --graph
+    to see a visual representation of branches\r\n    - --all to see every branch\r\n-
+    `clone` - to clone a remote repo locally\r\n- `checkout` to revert to a previous
+    commit \r\n- `reset` - to reset the current HEAD to a specified state\r\n    -
+    --hard to blow away changes\r\n    - --soft to uncommit changes\r\n- `stash` -
+    to temporarily put untracked changes aside\r\n- `diff` - to show the difference
+    between two hashes\n\n- Write succinct, descriptive commit messages \n\n"
+  :instructor_notes: |2+
+
+
+- :standard_uuid: 3f805b07-096d-4024-bce2-20b19f92199a
+  :standard_name: Version Control (Git and Github)
+  :uuid: 37687853-c626-4f58-b9d2-641b1077f92b
+  :name: Manage feature development with Git branches using a merge strategy
+  :description: "- Resolve merge conflicts\n- Uses feature branch workflow on personal
+    and group projects\n\n- Create some merge conflicts and explain what causes them\r\n-
+    Resolve merge conflicts\n\n- Diagram and discuss a feature-branch workflow\n-
+    Build new features in branches and then merge them into master when ready\n\n-
+    create a feature branch\r\n- merge upstream changes\r\n- merge feature branch
+    to master\r\n- cleanup feature branches\n\n- branch\r\n- checkout\r\n- merge"
+  :instructor_notes: |2+
+
+
+
+
+- :standard_uuid: ac805334-f3dd-4288-9a61-0dcef3e219d4
+  :standard_name: Programming with Javascript
+  :uuid: 5b55eed8-5a07-4540-92fe-cb4d824b51b7
+  :name: Write, mentally evaluate, and store the result of JS expressions
+  :description: "- Predict the final result of an expression given the actual runtime
+    values\n- Construct grammatical javascript statements using values (primitive
+    and reference), operators, literals, and variables\n\n\n\nStudents should display
+    the ability to think like a computer- they need to understand the order in which
+    an interpreter looks at each statement and be able to accurately mentally evaluate
+    those statements.\n\n* What is a \"literal\", how does it differ from a constructor?\r\n*
+    Show some examples of literals\r\n* Write and label each literal type\n\n- [JS
+    Execution Visualizer](http://www.pythontutor.com/javascript.html#mode=display)\r\n-
+    [Intro to Javascript Part 1](https://vimeo.com/141864271)\r\n- [Variables and
+    Expressions](https://vimeo.com/142087926)\r\n- [MDN Javascript Guide: Literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_types#Literals)"
+  :instructor_notes: "\n\n## Assessments\r\n* Evaluate the following statement, expression
+    by expression. What does result evaluate to?\r\n* var result = (true && false)
+    || (true && true || false) && (false || false)\r\n* Write a statement that evaluates
+    to `true` if a phone number is valid\r\n* Write a statement that evaluates to
+    `true` if a string is not empty\r\n* String and numbers\r\n    * Concatenate two
+    strings that contain (only) numbers\r\n    * Subtract two strings that contain
+    (only) numbers\r\n* [JS Variables Exercise](https://github.com/gSchool/javascript-variables-beginner)\r\n\r\n\r\n##
+    Legacy Objectives\r\n\r\n- Write single and multi-line comments in JS (//, /**/)\r\n-
+    List and describe each of the primitive data types (number, string, boolean, null,
+    undefined, symbols (es6))\r\n- Declare variables and assign them values. Explain
+    what’s happening\r\n- Write syntactically valid `var` declarations \r\n- Explain
+    what a variable is and how it works using the terms: “keyword, identifier, value,
+    assign”\r\n- Explain variable assignment\r\n- Mentally evaluate primitive variable
+    expressions\r\n- Write code that concatenates two strings together\r\n- Describe
+    why `foo + bar` is different from `foo += bar` (that strings are immutable)\r\n-
+    Write syntactically valid strings that contain newline characters, escaped quotes
+    etc..\r\n- Write syntactically valid multiline strings with slashes\r\n- Define
+    ‘expression’. Give examples\r\n- Define ‘statement’. Give examples\r\n- Mentally
+    evaluate statements that contain variables and primitive data types\r\n- List
+    and describe the special values Infinity, -Infinity, NaN, Undefined, null. Write
+    and evaluate code that produces each one\r\n- Explain the difference between null
+    and undefined\r\n- Define ‘type coercion’ and write code that demonstrates the
+    cases in which it occurs\r\n- Write and evaluate expressions using the arithmetic
+    operators: +, -, *, /, %\r\n- Determine how a computer processes compound expressions
+    (operator precedence)\r\n- Identify all of the truthy and falsy values in JS and
+    explain what it means to be “truthy” and “falsy”\r\n- Write and evaluate expressions
+    with logical operators (&&, ||, <, >, <=, >=, ===)\r\n- Explain the difference
+    between == and ===. Give examples\r\n- Explain what “short-circuit evaluation”
+    is and what the return values from such statements are\r\n- Explain the difference
+    between and give examples of Unary and Binary Operators\r\n- Explain why you must
+    use `var`\r\n\r\nand identify identifiers that would not be valid.\r\nIt gets
+    assigned to the value of the variable (and not the variable itself)\r\nShow what
+    happens when you don’t. (scope/hoisting!)\r\n\r\n```\r\nvar foo = \"This is a
+    really long \\\r\nstring\"\r\n```\r\n\r\n\r\n## Legacy Objectives\r\n- Write an
+    Object literal\r\n- Write an Array literal\r\n\r\n```js\r\nvar person = {\r\n
+    \ name: 'Fred'\r\n};\r\n```\r\n\r\n```js\r\nvar people = [];\r\n```\r\n\r\n- Construct
+    grammatical javascript statements using values (primitive and reference), operators,
+    literals, and variables 2\r\n- Use Literals to create primitives or data structures
+    in place\r\n- Write, evaluate, and store the result of JS expressions\r\n- Construct
+    grammatical javascript statements using values (primitive and reference), operators,
+    literals, and variables\r\n\r\n## Success Criteria\r\n* Uses numerical, and string
+    types\r\n    * Uses numerical operators\r\n    * Uses string concatenation\r\n
+    \   * Uses string methods\r\n* Uses Logical and Comparison Operators\r\n    *
+    evaluates a non-boolean value for Truthy vs Falsey value\r\n    * uses logical
+    operators that produce boolean values (&&, || )\r\n    * uses boolean literals\r\n
+    \   * uses comparison operators (==, ===, !=, !==)\r\n    * uses short-circuiting
+    to conditionally return a value\r\n* Can recognize NaN and its causes\r\n* Appropriately
+    uses Empty Values\r\n    * undefined prior to definition\r\n    * null is for
+    explicitly empty values\r\n    * “” for string types that are empty or start empty\r\n
+    \   * 0 for numerical value initialization\r\n* Can evaluate statements by order
+    of evaluation\r\n* Can store the result of an evaluated expression in a variable\r\n*
+    Can accurately predict the final result of an expression given the actual runtime
+    values\r\n* Can generalize a specific expression (from `2 + 2` to `x + y`) \r\n\r\n##
+    Success Criteria\r\n* Use and identify a string literal\r\n* Use and identify
+    a number literal\r\n* Use and identify a boolean literal\r\n* Use and identify
+    an object literal\r\n* Use and identify an array literal\r\n* Use and identify
+    a function literal"
+- :standard_uuid: ac805334-f3dd-4288-9a61-0dcef3e219d4
+  :standard_name: Programming with Javascript
+  :uuid: 4ff0b45a-b12f-416e-a130-64ad30dfb133
+  :name: Identify and fix common JS Errors
+  :description: "- Catch exceptions using a `try...catch` block and handle them\n-
+    Identify common JS errors and their causes\n\n\n\n- Identify common JS errors
+    and their causes\n- use timers to execute code at a specified interval or after
+    a delay\n\n- SyntaxError\r\n- TypeError\r\n- ReferenceError\r\n- RangeError\r\n*
+    Identifies the line number of error messages from a stack trace\r\n* Resolves
+    common JS errors by reading a stack trace and identifying the cause of the error\n\n-
+    use setTimeout() to execute code after a delay\r\n- use setInterval() to execute
+    code every interval\r\n- store a timer ID\r\n- use a stored timer ID to clear
+    a timer"
+  :instructor_notes: "\n\n\n\n## Assessments\r\n* https://github.com/gSchool/javascript_timers_callbacks_exercise\r\n\r\n\r\nMake
+    sure students understand the relationship between timers and the event loop"
+- :standard_uuid: ac805334-f3dd-4288-9a61-0dcef3e219d4
+  :standard_name: Programming with Javascript
+  :uuid: 7f7577f7-4224-442d-aa17-dc44c4fd21c7
+  :name: Store and Access values in Arrays and Objects
+  :description: "- Store and access values by index in arrays\n- Access and modify
+    data using common Object and Array methods\n- Store and access values in objects\n\n-
+    by typing a number\r\n- by using a variable\r\n- by using the result of an expression\n\n-
+    Access list of keys using Object.keys()\r\n- Find the position of an element using
+    .indexOf()\r\n- Use .slice() to get a subset of an array\r\n- Use .splice() to
+    modify an array in place\r\n- Use .push(), .pop(), .unshift(), .shift(), .join()
+    to work on arrays, and use their return values\n\n\n\nhttps://gist.github.com/mjhea0/7c34346e4a5dac4f1e42\n\n-
+    Store and access values using dot notation in objects\n- Store and access values
+    by bracket notation in objects\n\n\n\n- by typing a string\r\n- by using a variable\r\n-
+    by using the result of an expression"
+  :instructor_notes: "## Success Criteria\r\n* Access values by index in arrays\r\n\t*
+    by typing a number\r\n\t* by using a variable\r\n\t* by using the result of an
+    expression\r\n* Access values by bracket notation in objects\r\n\t* by typing
+    a string\r\n\t* by using a variable\r\n\t* by using the result of an expression\r\n*
+    Access values using dot notation in objects\r\n* Access list of keys using Object.keys()\r\n*
+    Find the position of an element using .indexOf()\r\n* Use .slice() to get a subset
+    of an array\r\n* Use .splice() to modify an array in place\r\n* Use .push(), .pop(),
+    .unshift(), .shift(), .join() to work on arrays, and use their return values\r\n\r\n\r\n##
+    Assessments\r\n* https://github.com/gSchool/simple-object-access-exercises/blob/master/object_array_access.md\r\n\r\n##
+    Legacy Objectives\r\n- Access an Object using . notation\r\n- Access an Array
+    using array[]\n\n- Access and modify data using common Object and Array methods
+    such as\r\n- Examine JavaScript’s global objects like Array, Object etc\r\n- and
+    differentiate between instance methods like .push()/.pop() and global object methods
+    like .isArray()\n\n\n\n## Success Criteria\r\n* Store a natural list of primitive
+    values\r\n* Generate an array from an algorithm, then access that array\r\n* Use
+    objects as hashmaps\r\n* Converts array-like objects into arrays using Array.prototype.slice.call(array_like_object)\r\n\r\n\r\n##
+    Assessments\r\nhttps://github.com/gSchool/simple-object-access-exercises/blob/master/object_array_access.md"
+- :standard_uuid: ac805334-f3dd-4288-9a61-0dcef3e219d4
+  :standard_name: Programming with Javascript
+  :uuid: 78dcc2e4-dcb2-4b29-9333-fe4e6091063c
+  :name: Create and access complex nested data structures
+  :description: "- Accesses data in nested structures\n\n- Accesses data in nested
+    structures\n- Employes standard data structures\n- Choose the appropriate data
+    structure to represent nouns and solve problems\n\n[JS Execution Visualizer](http://www.pythontutor.com/javascript.html#mode=display)\n\n-
+    Given a list of objects (in plain English), decide to use an array\r\n- Represent
+    a stateful piece of data as an object\r\n- Given a complex object (such as a book
+    with author data and publisher data), represent it as a series of nested objects\n\n"
+  :instructor_notes: "## Success Criteria\r\n* Can access values inside of Objects
+    that contain Arrays\r\n* Can access values inside of Arrays that contain Objects\r\n*
+    Use a loop to parse a large, complex data structure\r\n* Use nested loops to parse
+    a complex a multidimensional data structure\r\n\r\n\r\n## Assessments\r\n* Given
+    an API response, parse the JSON and display it\r\n\t* Suggested APIs\r\n\t\t*
+    Reddit\r\n\t\t* OMDB\r\n\t\t* iTunes\r\n\t\t* giffy\r\n\t\t* github\r\n* https://github.com/gSchool/simple-object-access-exercises\n\n##
+    Success Criteria\r\n* Given a list of objects (in plain English), decide to use
+    an array\r\n* Represent a stateful piece of data as an object\r\n* Given a complex
+    object (such as a book with author data and publisher data), represent it as a
+    series of nested objects\r\n\r\n\r\n\r\n## Assessments\r\n* Model a list of books
+    with author and publisher data\r\n* Model a list of students with classes\r\n*
+    Model a list of sports teams with players, and stats about the players\n\n"
+- :standard_uuid: ac805334-f3dd-4288-9a61-0dcef3e219d4
+  :standard_name: Programming with Javascript
+  :uuid: 5767bdd1-0679-43f5-9e7e-addeb2d8c1a4
+  :name: Diagram and explain how reference and primitive types are stored in memory
+    and how they are passed around
+  :description: "- Diagram and explain how reference and primitive types are stored
+    in memory and how they are passed around\n\n- Contrast “passing a value” vs “passing
+    a reference”\n- Mentally parse statements that combine value and reference types\n-
+    Diagram how reference and primitive types are stored in memory given an algorithm
+    with loops / conditionals / arrays / objects\n\n\n\n\n\n- Shows a table of names
+    and values, with arrows between them\r\n- Shows arrays as a strip of boxes\r\n-
+    Shows objects as a table of keys and pointers to values\r\n- Shows references
+    to objects as pointers pointing to the object\r\n- Shows the prototype as a nested
+    object inside of an object\r\n- Shows functions as reference types\n\n\n\nhttp://www.pythontutor.com/javascript.html#mode=edit"
+  :instructor_notes: "\n\n\n\n- Diagram how reference and primitive types are stored
+    in memory given an algorithm with loops / conditionals / arrays / objects\r\n-
+    Diagram and explain how reference and primitive types are stored in memory\r\n\r\n\r\n##
+    Success Criteria\r\n* Shows that primitive types are immutable\r\n* Shows a table
+    of names and values, with arrows between them\r\n* Shows arrays as a table of
+    indexes with pointers to values\r\n* Shows objects as a table of keys and pointers
+    to values\r\n* Shows references to objects as pointers pointing to the object\r\n*
+    Shows the prototype as a nested object inside of an object\r\n* Shows functions
+    as reference types\r\n\r\n### Legacy Objectives\r\n- Diagrams\r\n- Diagram and
+    explain how reference and primitive types are stored in memory\r\n\r\n- Represent
+    variables visually\r\n- Draw arrays and objects similarly\r\n- Draw functions
+    as objects\r\n- Draw prototype properties and prototypes differently\r\n- Draw
+    links between arrays/objects and their values\r\n\r\nDraw variables as pointers
+    to objects"
+- :standard_uuid: ac805334-f3dd-4288-9a61-0dcef3e219d4
+  :standard_name: Programming with Javascript
+  :uuid: 861bcda5-c1ed-470c-9389-fafcf80c2399
+  :name: Control the flow of a program using conditionals and loops
+  :description: "- Solve problems requiring conditionals and loops (such as accumulator
+    pattern) with nested/combined control-flow statements\n- Iterate over simple data
+    structures (arrays, objects) with loops\n\n\n\n* Write loops that iterate over
+    arrays of primitive values\r\n* Write loops that use for..in to access the keys
+    and values of an object\n\n\n\nhttps://github.com/gSchool/grading-js\r\n\r\n\r\n-
+    JS Basics Part 1 Lecture - https://github.com/gSchool/fullstack-curriculum/blob/master/lessons/js-language/js-basics-part-1.instructor.md
+    (Values, Variables, Boolean Logic)\r\n- JS Basics Part 2 Lecture - https://github.com/gSchool/fullstack-curriculum/blob/master/lessons/js-language/js-basics-part-2.instructor.md
+    (Conditionals, Loops)\r\n- Fundamentals Review - https://github.com/gSchool/fullstack-curriculum/blob/master/lessons/js-language/fundamentals-review.instructor.md
+    (Variables, Functions, Objects, Arrays)\r\n- Functions Part 1 Lecture - https://github.com/gSchool/fullstack-curriculum/blob/master/lessons/js-language/js-functions-part-1.instructor.md
+    (Basic Functions and Scope)\r\n- Functions Part  2 Lecture - https://github.com/gSchool/fullstack-curriculum/blob/master/lessons/js-language/js-functions-part-2.instructor.md
+    (Closures, More Scope, Environments)\r\n- Higher Order Functions Lecture - https://www.google.com/url?q=https%3A%2F%2Fgithub.com%2FgSchool%2Ffullstack-curriculum%2Fblob%2Fmaster%2Flessons%2Fjs-language%2Fjs-functions-higher-order.instructor.md&sa=D&sntz=1&usg=AFQjCNE-GTAjWP6Bw8HYIQ3tUEK8M9XVXg
+    (Callbacks, Returning Functions, Iterators)\r\n- Underscore Lab - https://github.com/gSchool/underscore_lab
+    (Functions, Iterators, Objects, Arrays.  Part 2 is focused on Higher Order Functions)\r\n-
+    Lodash TDD - https://github.com/gSchool/lodash-tdd (Jasmine, Functions, Iterators,
+    Objects, Arrays.)\r\n- HTTP Parser - https://github.com/gSchool/http-parser-js\r\n-
+    Polymorphism with JavaScript - https://github.com/gSchool/fullstack-curriculum/blob/master/lessons/js-language/js-polymorphism.instructor.md
+    (Using design-by-contract style polymorphism)\r\n- Polymorphism with Prototypal
+    Inheritance - https://github.com/gSchool/fullstack-curriculum/blob/master/lessons/js-language/polymorphism-with-prototypal-inheritance.md
+    (Polymorphism based on inheritance rather than design by contract)\r\n- OOP Encapsulation
+    - https://github.com/gSchool/fullstack-curriculum/blob/master/lessons/js-language/oop-encapsulation.instructor.md
+    (Introduction to Encapsulation and data hiding)\r\n- Methods, this, constructors
+    - https://github.com/gSchool/fullstack-curriculum/blob/master/lessons/js-language/methods-this-constructors.instructor.md\r\n-
+    Guitar Store Runtime Polymorphism - https://github.com/gSchool/js-polymorphism-guitar-store
+    (Fun exercise with building a fake AI for a guitar store)\r\n- Encapsulation Exercise
+    using a Grade Book - https://github.com/gSchool/js-encapsulation\r\n- JavaScript
+    Challenges - https://github.com/gSchool/javascript-challenges (Long Running series
+    of exercises to learn JavaScript)\r\n- JavaScript For Cats - http://jsforcats.com/
+    (Intro Resource to JavaScript)\r\n- NodeSchool JavaScripting - https://github.com/sethvincent/javascripting
+    (JS Fundamentals Exercises through Node CLI)\r\n- JavaScript Pre-Ember Exercises
+    - https://github.com/gSchool/g4-javascript-prework (Exericeses and resources for
+    prerparing for a JS MVC (also has Ruby resources))\r\n- Reddit API Single Page
+    App - https://github.com/gSchool/reddit-api-js (Covers Local Storage, DOM Traversal)\r\n-
+    JS Coding challenges & Interview Qs - https://github.com/kolodny/exercises (Some
+    basic javascript coding challenges and interview questions)\r\n- Password reset
+    in Express - http://sahatyalkabov.com/how-to-implement-password-reset-in-nodejs/
+    (Step-by-step and awesome.  We could run a class on it.)\r\n- JavaScript Deck
+    of Cards - https://github.com/gSchool/g11-course-curriculum/tree/master/week03/03-exercises/js-deck-of-cards\r\n-
+    Testing with Jasmine - a primer - https://github.com/gSchool/g11-course-curriculum/tree/master/week04/04_exercises/js-jasmine-primer\r\n-
+    \ - https://github.com/gSchool/js-iteration\r\n- Functional Programming with JavaScript
+    - http://jhusain.github.io/learnrx/\r\n- JS Functional Programming - https://github.com/gSchool/g11-course-curriculum/tree/master/week04/04_lectures/js-functional-programming\r\n-
+    JS Loops Part 2 - https://github.com/gSchool/g11-course-curriculum/tree/master/week04/04_exercises/js-loops-part2\r\n-
+    JS Loops Part 3 - https://github.com/gSchool/g11-course-curriculum/tree/master/week04/04_exercises/js-loops-part3
+    (JS, loops, functional programming)\r\n- JS Functions Part 3 - https://github.com/gSchool/g11-course-curriculum/tree/master/week04/04_exercises/js-functions-part3\r\n-
+    Statements vs Expressions - https://github.com/gSchool/g11-course-curriculum/blob/master/week05/05_lectures/js-statements-vs-expression.md\r\n-
+    JavaScript Rock Paper Scissors - https://github.com/gSchool/g11-course-curriculum/tree/master/week05/05_exercises/js-rock-paper-scissors\r\n-
+    JavaScript OOP Basics - https://github.com/gSchool/g11-course-curriculum/tree/master/week05/05_exercises/js-oop-basics\r\n-
+    JS - Methods, This, Constructors - https://github.com/gSchool/g11-course-curriculum/tree/master/week05/05_exercises/js-methods-this-constructors\r\n-
+    JS - Rock, Paper, Scissors - https://github.com/gSchool/g11-course-curriculum/tree/master/week05/05_exercises/js-rock-paper-scissors\r\n-
+    JS - Autoshop - https://github.com/gSchool/g11-course-curriculum/tree/master/week05/05_exercises/js-auto-shop\r\n-
+    JS - OOP Zoo - https://github.com/gSchool/g11-course-curriculum/tree/master/week05/05_exercises/js-oop-zoo\r\n-
+    JS - Tic Tac Toe - https://github.com/gSchool/g11-course-curriculum/tree/master/week05/05_exercises/js-tic-tac-toe\r\n-
+    Pragmatic Guide to JavaScript Testing - https://github.com/alexanderGugel/pragmatic-testing\r\n-
+    JS - Jasmine Review - https://github.com/gSchool/g11-course-curriculum/tree/master/week05/05_exercises/js-jasmine-review\r\n-
+    JS - Game Library - https://github.com/gSchool/g11-course-curriculum/tree/master/week05/05_exercises/js-game-library\r\n-
+    https://github.com/gSchool/iteration-and-object-assessment\r\n- https://github.com/gSchool/intro-to-objects-js\r\n-
+    https://github.com/gSchool/jasmine_basics_assessment\r\n- https://github.com/gSchool/javascript-challenges\r\n-
+    https://github.com/gSchool/javascript-rails-email-interface\r\n- https://github.com/gSchool/what-is-this\r\n-
+    https://github.com/gSchool/csv-to-markdown-js\r\n\r\n\r\n(Fast Conditionals)[http://archive.oreilly.com/pub/a/server-administration/excerpts/even-faster-websites/writing-efficient-javascript.html#fast_conditionals]"
+  :instructor_notes: "\n\n- Iterate over simple data structures (arrays, objects)
+    with loops\r\n- Repeat a block of statements with `for` and `while` loops\r\n-
+    Iterate over a simple data structure (array, object) with loops 2\r\n\r\n## Success
+    Criteria\r\n* Uses loops to repeat statements\r\n    * for loops for known iteration
+    counts\r\n    * while loops for conditional iteration counts\r\n* Uses `break`
+    to stop a loop prior to a loop’s end\r\n* Uses `continue` to stop loop iteration
+    from continuing \r\n- Control the flow of a program using `if` and `switch` statements\r\n-
+    Iterate over a simple data structure (array, object) with loops\r\n\r\n## Success
+    Criteria\r\n* Uses the if statement when:\r\n\t* There are no more than two discrete
+    values for which to test.\r\n\t* There are a large number of values that can be
+    easily separated into ranges.\r\n* Uses the switch statement when:\r\n\t* There
+    are more than two but fewer than 10 discrete values for which to test.\r\n\t*
+    There are no ranges for conditions because the values are nonlinear.\r\n* Properly
+    make use of `break` and `default`\r\n* Properly nests if statements\r\n* Uses
+    else cases only when necessary\r\n* Simplifies conditionals to truthy and falsy
+    values when appropriate\r\n* Can write complex grouped conditionals\r\n\r\n##
+    Assessments\r\nhttps://github.com/gSchool/grading-js\r\n\r\n## Resources\r\nhttp://archive.oreilly.com/pub/a/server-administration/excerpts/even-faster-websites/writing-efficient-javascript.html#fast_loops\r\n\r\n##
+    Legacy Objectives and Notes\r\n- Write a for loop\r\n- Identify the need for iteration\r\n-
+    Write code that returns from a for loop\r\n- Write basic accumulators with strings\r\n-
+    Write basic accumulators with arrays\r\n- Implement simple iteration algorithms
+    with `for`\r\n- Write a basic accumulator setting object properties dynamically\r\n\r\nsuch
+    as filter, map, sum, min, max, find, findLast, all, none, some, reverse, join\r\nHave
+    students implement:\r\n\r\n- find\r\n- all (every)\r\n- none\r\n\r\nGive a student
+    the following snippet:\r\n\r\n```\r\nvar run = function () {\r\n  for (var i =
+    0; i < 10; i++) {\r\n    console.log(i);\r\n  }\r\n}\r\n\r\nrun()\r\n```\r\n\r\nAnd
+    ask them to change the code so that it only prints 5 numbers (using return)\r\n\r\n```\r\nvar
+    run = function () {\r\n  for (var i = 0; i < 10; i++) {\r\n    console.log(i);\r\n
+    \   if (i === 5) {\r\n      return\r\n    }\r\n  }\r\n}\r\n\r\nrun()\r\n```"
+- :standard_uuid: ac805334-f3dd-4288-9a61-0dcef3e219d4
+  :standard_name: Programming with Javascript
+  :uuid: 6754eeea-a10b-4033-a598-a0e081257f60
+  :name: Encapsulate reusable code in functions
+  :description: "- Formulates new functions given inputs and desired outputs\n- Define
+    and give examples of “Pure functions” that do not have side effects. Define and
+    give examples of “side effects”.\n\n- Formulates new functions given inputs and
+    desired outputs\n- Mentally evaluate expressions that use the return value of
+    function calls\n\n\n\n- like add(add(5,6), add(6,7))\r\n- like add(5,6) + add(6,7)\r\n-
+    join(“”).filter()...\r\n- document.querySelectorAll(“#foo”)[0];\n\n- Define and
+    give examples of “Pure functions” that do not have side effects.  Define and give
+    examples of “side effects”.\n- Can diagram the call stack\n- Create and use local
+    variable scope when appropriate within Functions\n- Abstracts sets of expressions
+    into functions\n\n\n\nDiagrams the call stack as a series of boxes within boxes\n\n-
+    All data is either:\r\n    - created within the function with `var`\r\n    - passed
+    in through parameters\r\n    - accessible via a closure\r\n- Returns any data
+    needed from the function with the `return` keyword\r\n- Can diagram the effect
+    of a function operating on an object passed into the function as a reference\n\n\n\n[Closures](https://www.youtube.com/watch?v=CQqwU2Ixu-U&list=PL0zVEGEvSaeEd9hlmCXrk5yUyqUag-n84&index=5)\n\n-
+    [Javascript Call Stack](https://vimeo.com/134061121)\r\n- https://github.com/gSchool/js-accumulator-assessment\r\n-
+    https://github.com/gSchool/js-encapsulation\r\n- https://github.com/gSchool/js-hof-filter-map-reduce\r\n-
+    https://github.com/gSchool/js-iteration\r\n- https://github.com/gSchool/js-methods-this-constructors\r\n-
+    https://github.com/gSchool/js-node-log-file-parsing\r\n- https://github.com/gSchool/js_oop_exercise"
+  :instructor_notes: "\n\n\n\n\n\n\n\n## Assessments\r\n* https://github.com/gSchool/functions-objects-js-homework\r\n*
+    https://github.com/gSchool/js-functions-part2\n\n## Assessments\r\n* https://github.com/gSchool/js-functions-part1\r\n*
+    http://eloquentjavascript.net/1st_edition/chapter6.html \r\n* Write simple functions
+    given the function signature and a behavioral description\r\n* Write simple functions
+    to solve a problem without the function signature\r\n* Write recursive functions\r\n\r\nWhat
+    does it mean for a function to have a side effects?\r\n\r\n\r\n### Legacy Objectives\r\n-
+    Define what a function is\r\n- Explain what a function is and how it works using
+    analogies . (comparing it to a machine, black box, factory, etc.)\r\n- Define
+    functions using declarations and expressions, and explain the difference between
+    them\r\n- Articulate the difference between defining and invoking a function\r\n-
+    Describe how data flows into a function (by passing in arguments)\r\n- Describe
+    how data flows out of functions (by using the `return` keyword)\r\n- Describe
+    the difference between function expressions, named and anonymous functions\r\n-
+    Write named functions and anonymous functions that take 0, 1 and many arguments\r\n-
+    Explain how functions handle arguments\r\n- Can access all arguments using array-like
+    `arguments` object\r\n- Can take more arguments than specified in the parameters\r\n-
+    Parameters that aren’t specified when the function is invoked are set to ‘undefined’\r\n-
+    Explain that functions are values and that they can be stored in variables just
+    like any other value\r\n- Call functions from above, below and in separate files
+    from function definition\r\n- Write functions that return values\r\n- Write functions
+    that have side effects, such as manipulating dom\r\n- Explain what recursion is
+    and write a functions that call themselves recursively\r\n- Explain the relationship
+    between functions and scope\r\n- Write and invoke functions as methods on objects\r\n-
+    Use built-in Javascript methods to perform common tasks on objects\r\n\r\n(loosely:
+    “a function is a set of instructions that can take 0 or more inputs, perform calculations
+    and either return values or cause changes to occur”)"
+- :standard_uuid: bcfe422a-cd35-4fd1-8ff8-6b078c476069
+  :standard_name: Javascript and the Browser
+  :uuid: f14777bc-e9f0-4088-b4c3-19a81cbd22ce
+  :name: Store program state Client-side with localStorage
+  :description: |+
+    - Store and retrieve state with localStorage
+
+  :instructor_notes: "- Write code that gets and sets an items from localStorage\r\n-
+    Articulate key / value string storage (what other data structure is similar? How
+    is it different?)\r\n- Store and retrieve state with localStorage\r\n- Use JSON.stringify
+    and JSON.parse to store nested objects in localStorage\r\n- Prove that localStorage
+    persists between tabs and sessions\r\n- Write code that sets an item in localStorage\r\n-
+    Write code that gets and sets items from sessionStorage\r\n- Write code that sets
+    an item in sessionStorage\r\n- Prove that localStorage persists after browsers
+    are closed\r\n- Describe that sessionStorage is only visible to the _tab_ that
+    set it, and expires when the tab is closed\r\n- Create items in localStorage that
+    store data such as user selections or form data.\r\n- Retrieve items from localStorage
+    and use that data to modify the behavior of something on the page.\r\n- Remove
+    items from localStorage.\r\n- Edit items from localStorage, store mutable items.\r\n-
+    Stringify and parse data."
+- :standard_uuid: bcfe422a-cd35-4fd1-8ff8-6b078c476069
+  :standard_name: Javascript and the Browser
+  :uuid: f031b95c-fc01-450f-a53c-d1043a0313c2
+  :name: Respond to Events with Event Listeners
+  :description: "- Using targeted DOM nodes, add event listeners\n- Use jQuery to
+    bind event listeners to DOM Elements\n\n- click\r\n- keydown\r\n- hover\r\n- at
+    least one more event\n\n- Use jQuery to bind event listeners to DOM Elements\n-
+    Add anonymous functions to event listeners\n- Differentiate between bubbling and
+    capturing\n- Add named functions to event listeners\n\n\n\n\n\n\n\n- https://github.com/gSchool/fullstack-curriculum/blob/master/lessons/js-language/intro-async.instructor.md\r\n-
+    http://bytearcher.com/articles/event-loop-10-000ft/"
+  :instructor_notes: "- Using targeted DOM nodes, add event listeners\r\n- Use the
+    event object to access information about the event\r\n- Describe event bubbling
+    and event capturing\r\n- Use the passed in event.target to determine which dom
+    node originated an event\r\n- Write valid click, keypress, and form submission
+    event listeners\r\n- Describe the value of `this` inside an event handler function\r\n-
+    Describe default actions on links and forms\n\n- Use jQuery to bind event listeners
+    to DOM Elements\r\n- Write syntactically valid event handlers using “on” - $(...).on(‘click’,
+    fn)\r\n- Write syntactically valid event handlers directly on jQuery objects $(..).click(fn)\r\n-
+    Describe that the DOMContentLoaded event fires when the DOM is complete enough
+    to start taking event listeners\r\n- Describe the advantages that jQuery events
+    have over raw DOM event handlers\r\n- Write code that wraps `e.target` in a jQuery
+    object\r\n- Write syntactically valid delegated event handlers using “on” on parent
+    elements - $(...).on(‘click’, ‘child selector, fn)\r\n- Describe what `this` is
+    set to inside a jQuery event handler\n\n\n\n- Differentiate between bubbling and
+    capturing \r\n- Explain what bubbling is and identify cases when it occurs\r\n-
+    Write code that prevents bubbling and defaults with `return false` in the handler\r\n-
+    Prevent default actions and bubbling from occurring in event listeners\r\n- Describe
+    event delegation - in what cases you would attach an event to a parent element
+    instead of directly to an element\n\n- Explain what the event loop is. How does
+    it work? How does it relate to asynchronous programming?"
+- :standard_uuid: bcfe422a-cd35-4fd1-8ff8-6b078c476069
+  :standard_name: Javascript and the Browser
+  :uuid: 0b60b9c0-f189-48f3-84d0-f6622dd66971
+  :name: Target, create and manipulate DOM Elements
+  :description: "- Gather values from a form with Javascript\n- Target, create and
+    manipulate DOM Elements\n\n- Gather values from a form with Javascript\n\n- Target
+    input and textarea elements and access their values\n- Target `select` elements
+    and access their values\n- Target radio button and checkboxes and access their
+    values\n- Use jQuery to gather form values\n- Discuss the relationship between
+    HTML, JavaScript, the DOM API, and jQuery\n- Explicitly refers to the global scope
+    inside of functions with `this`\n\n\n\n\n\n\n\n\n\n\n\n\n\n- Can target DOM elements
+    from a CSS Selector with the `document` object\n- Create DOM Elements and Return
+    elements from a function\n- Manipulate DOM Elements\n\n- by ID\r\n- by Class\r\n-
+    by Tagname\r\n- Using advanced, composite selectors\r\n- using pseudoselectors\n\n-
+    Create and Return a complex Element from a Function\n- Can create new DOM Elements\n\n\n\n\n\n-
+    Can manipulate DOM Elements\n- Perform DOM Manipulation tasks with jQuery\n\nby
+    \r\n\r\n- Editing their attributes\r\n- Modifying their contents\r\n- Adding or
+    modifying `style`\n\n"
+  :instructor_notes: "\n\n\n\n\n\n\n\n- Define what DOM stands for\r\n- Discuss the
+    relationship between HTML, JavaScript, the DOM API, and jQuery\r\n- Describe that
+    DOM is a tree made up of JS objects\r\n- Describe the browser’s role in creating
+    the DOM\r\n- Describe javascript’s role in manipulating the DOM\r\n- Explain that
+    DOM properties can be altered after initial page load\r\n- Explain the DOM\r\n-
+    Explain the difference between a text node and an element\r\n- jQuery Explain\r\n-
+    describe that DOM is an in-memory representation of web page elements\r\n- Explain
+    that the DOM is a programming interface for HTML documents\r\n- Explain that JavaScript
+    can manipulate the DOM\r\n- Explain that jQuery is a library written in JS that
+    was designed to handle browser incompatibility issues and makes interacting with
+    the DOM easier\r\n- (reading HTML, creating DOM, rendering graphically)\r\n- that
+    it provides a way for programs to change the structure, style, and content on
+    a page dynamically\r\n- Describe the difference between javascript and jQuery\r\n-
+    Include jquery from Bower or by another source local to the project\r\n- Include
+    jQuery from a CDN\r\n- Describe that $ is a function that returns a jQuery object\r\n-
+    Describe what a jQuery object is\r\n- Describe why jQuery exists, including normalizing
+    browser inconsistencies / saving developers time\r\n- Describe the arguments for
+    and against using jQuery on a project\r\n- Wrap a DOM element in jQuery\r\n- Describe
+    the difference between a raw DOM element and a jQuery-wrapped element\r\n- Unwrap
+    a jQuery object with `.get()` and `[]`\r\n- Write syntactically valid document
+    ready statements\r\n- Explain what $(fn) / $(document).ready(fn) does and why
+    it’s useful\r\n- Describe that jQuery is an expensive function call, and that
+    care should be taken to minimize how many times you “re-jQueryify” the same element\r\n-
+    that a jQuery object is a javascript object that contains an array of dom elements
+    and also has utility methods that can act on those elements\n\n\n\n- Can target
+    DOM elements from a CSS Selector with the `document` object\r\n- Find an element
+    by id, tagname, classname, and more advanced CSS selectors\r\n- Traverse the DOM
+    downwards recursively using depth-first-search and childNodes\r\n- Traverse the
+    DOM upwards with iteration and parentNode\r\n- Extract values from HTML forms
+    including text inputs and select boxes\r\n- Create and access data-attributes
+    on elements\n\n\n\n\n\n- Can manipulate DOM Elements\r\n- Access properties of
+    DOM elements such as text, html, value\r\n- Set an element’s innerHTML and text\r\n-
+    Remove elements from the dom\r\n- Add, update, and remove attributes on elements\r\n-
+    Detach and reattach DOM elements\n\n- jQuery DOM\r\n- jQuery Traverse\r\n- Write
+    a limited version of jQuery(gQuery) covering element CRUD, prepend, etc\r\n- Simple
+    animations w/o jQuery\r\n- Create in-memory DOM elements from strings\r\n- Append
+    jQuery objects, strings & elements to the DOM\r\n- Remove elements with `remove()`\r\n-
+    Add, remove and toggle classes\r\n- Set properties such as checked, style with
+    `prop`\r\n- Get the value of properties with `prop`\r\n- Manipulate css with the
+    `.css` method\r\n- Get attributes with `attr`\r\n- Set attributes with `attr`\r\n-
+    Use .val() to access input values\r\n- Copy an element with `clone()`\r\n- Describe
+    that `prop` is appropriate for boolean attributes, whereas `attr` is appropriate
+    for everything else\r\n- Use the `data()` method\r\n- Describe why using data
+    is preferable to `attr(‘data-behavior’)` for brevity and type coercion\r\n- Replace
+    elements using `replaceWith`\r\n- Return the element’s `html()` and `text()`\r\n-
+    Set an element’s `html(...)` and `text(...)`\r\n- Describe how many jQuery methods
+    like `html()` and `text()` function as getters and setters\r\n- Pull template
+    text from a script tag with a type of text/x-template\r\n- Use `show()` and `hide()`
+    to...show and hide elements\r\n- Use `fadeIn` and `fadeOut`, as well as other
+    built-in effects like `slideUp()`\r\n- Create custom effects with `animate()`\r\n-
+    with `$(‘<div class=”foo”>’)`\r\n- with `append`, `appendTo`, `insertAfter`, `after`,
+    `before` etc…\r\n- attributes set with HTML data attributes in two ways - $(...).data(‘some-thing’)
+    / $(...).data().someThing;\r\n- Select elements by CSS selector\r\n- Use jQuery’s
+    each method to iterate over a selection\r\n- Describe jQuery’s implicit iteration
+    and the equivalent vanilla JS code.  For example: $( 'div' ).html( 'New Stuff'
+    );\r\n- Find child elements of a jQuery object with $(...).find(‘child selector’)\r\n-
+    Find all form controls using pseudo-selectors such as :text, :input, :checkbox
+    etc…\r\n- Describe that jQuery adds pseudo-selectors that CSS3 does not contain\r\n-
+    Find elements that are not a given selector with :not(...)\r\n- Find the closest
+    matching element with `$(...).closest(‘tr’)`\r\n- Determine whether a given jQuery
+    object matches a selector with `is` - is(‘:checked’)\r\n- Determine whether a
+    given jQuery object’s elements have a certain class with `hasClass`\r\n- Explain
+    that parent / child / sibling traversal can be brittle\r\n- Write jQuery selectors
+    that target multiple different selectors with $(.., …) using a comma\r\n- Write
+    chained jQuery methods\r\n- Filter jQuery objects with `filter`\r\n- , and that
+    combinations of `closest` and `find` can be more robust"
+- :standard_uuid: 5ddfa4d5-6194-466b-97aa-f9610b77c493
+  :standard_name: JavaScript Object Model
+  :uuid: 774786f3-e071-4479-afa8-48d5a0401e7d
+  :name: Uses `this` to manipulate the current context
+  :description: |+
+    - Adds methods to objects that use `this` to refer to that object
+    - Refers to the new instance inside of a constructor function using ‘this’
+
+
+
+  :instructor_notes: |2+
+
+
+- :standard_uuid: 5ddfa4d5-6194-466b-97aa-f9610b77c493
+  :standard_name: JavaScript Object Model
+  :uuid: 39933c54-ba41-44c7-bc56-716fadaf486b
+  :name: Uses Properties to store State on an Instance
+  :description: |+
+    - Able to work with objects that reference each other in a complex system (such as a game)
+    - Does not store state on the constructor function itself
+    - Uses `this` to create instance properties, as passed in through the parameters
+
+
+
+    So `function Person(){this.name = “Joe”}` over `Person.name=”Joe”`
+
+    - Uses `this` to create instance properties, as passed in through the parameters
+    - Uses good design practices (encapsulation) to ensure “classes” are responsible for appropriate state tracking
+
+
+
+  :instructor_notes: |2+
+
+
+
+
+
+
+- :standard_uuid: 5ddfa4d5-6194-466b-97aa-f9610b77c493
+  :standard_name: JavaScript Object Model
+  :uuid: 1549dee5-0e63-4def-ab15-1414a65f77f9
+  :name: Creates “Classes” and Instances with JS
+  :description: "- Uses accessor methods and closures to create private class variables\n-
+    Uses constructor function syntax to create something similar to a class in Javascript\n-
+    Explicitly sets the value of `this` with call, bind and apply \n\n\n\n```\r\nvar
+    Class = function(params) { this.params = params };\r\n```\n\n- Capitalizes variables
+    pointing to constructor functions\n- Creates instances with the `new` keyword\n-
+    Explicitly sets the value of `this` with call, bind and apply\n\n\n\n\n\n- Uses
+    .call() to chain constructors when inheriting (mimics ‘super’)\r\n- Uses .bind()
+    to set calling context (such as in setTimeout or setInterval or using jQuery event
+    handlers)\r\n- Uses .apply() to manually set\n\n\n\nhttps://github.com/gSchool/g11-course-curriculum/blob/master/week06/06_lectures/js-call-apply/js/main.js\r\n\r\nhttps://github.com/gSchool/g11-course-curriculum/blob/master/week06/06_lectures/js-call-apply/js/main.js"
+  :instructor_notes: "\n\nWhat is a constructor?\r\n\r\n- Distinguish between class
+    methods and instance methods\n\n\n\n\n\nBegin by asking student to create a constructor
+    for a `Vehicle` with `make` and `model` parameters. Once student has completed
+    this, ask them to create a constructor for `Car` that has `make`, `model`, and
+    `numberOfWheels` parameters, this constructor should not duplicate code with `Vehicle`
+    and instead should use `call` or `apply`."
+- :standard_uuid: 5ddfa4d5-6194-466b-97aa-f9610b77c493
+  :standard_name: JavaScript Object Model
+  :uuid: f5964586-8847-4ca3-a7f2-4968a041660f
+  :name: Define and invoke functions as methods on objects
+  :description: "- Stores functions in properties\n- Differentiate between functions
+    and methods\n- Stores instance methods on the Prototype Object\n\n\n\n\n\n- Stores
+    instance methods on the Prototype Object\n- Creates closures to hide data and
+    create accessors\n\n`function Person{}; Person.prototype.foo = function(){}`\n\n1.
+    Provide an example illustrating the difference between adding a method to the
+    constructor and adding a method to the prototype.\r\n1. What is the difference
+    between adding a method to the constructor and adding a method to the prototype?\n\n#####
+    External Resources\r\n\r\n* [Advantages of using prototype methods versus defining
+    methods in the constructor](http://stackoverflow.com/questions/4508313/advantages-of-using-prototype-vs-defining-methods-straight-in-the-constructor)\r\n*
+    [Methods within the constructor versus prototype in JavaScript](http://thecodeship.com/web-development/methods-within-constructor-vs-prototype-in-javascript/)\n\n`function
+    Person{var text = “”; this.getText = function(){return text;}}`\n\n\n\nExternal
+    Resources\r\n\r\n* [Setting properties on the constructor versus the prototype
+    for that constructor](http://stackoverflow.com/questions/15748521/javascript-set-properties-in-the-constructor-or-constructors-prototype-proper)"
+  :instructor_notes: |2+
+
+
+
+
+
+
+- :standard_uuid: 7fb11472-3246-479d-a864-ede3e22c248f
+  :standard_name: Consuming Web APIs
+  :uuid: 6a1bc29f-3c91-4665-ac97-b6562cd6ee3b
+  :name: Fetch and send JSON from a server side app
+  :description: |+
+    - Access content that is CORS protected (or you need to authenticate against)
+
+  :instructor_notes: "- Make simple requests using node’s http.get\r\n- Make complex
+    requests using node’s http.request and async accumulator\r\n- Display results
+    from apps that require app-wide keys (like Tracker)\r\n- Display results from
+    apps that require per-user keys (OAuth-style)"
+- :standard_uuid: 7fb11472-3246-479d-a864-ede3e22c248f
+  :standard_name: Consuming Web APIs
+  :uuid: 1d73b1d3-0485-46fe-969a-176d328d7536
+  :name: Explain what CORS is and get around CORS restrictions
+  :description: |+
+    - Identify what the server needs to support in order to make a cross-origin request
+    - Explain how JSONP can be used for services that do not support CORS
+    - Define CORS and explain what is a CORS restriction
+
+    options calls, Access Control headers
+
+
+
+    - Define CORS and explain why CORS restrictions exist
+
+  :instructor_notes: "\n\n- Explain how JSONP can be used for services that don’t
+    support CORS\r\n- Bonus: explain the JSONP workaround to the same domain policy\r\n-
+    Bonus: specify a jsonp callback parameter in an ajax request\n\n"
+- :standard_uuid: 7fb11472-3246-479d-a864-ede3e22c248f
+  :standard_name: Consuming Web APIs
+  :uuid: 33170def-1703-4b8d-a734-90c498882eaf
+  :name: Fetch and send JSON with AJAX
+  :description: "- Fetch and send JSON\n\n- Fetch and send JSON using jQuery\n- Fetch
+    and send JSON using raw javascript\n\n- $.get() & $.getJSON()\r\n- $.post() -
+    Stringify a JavaScript object into JSON and POST it to a server\r\n- $.ajax()\n\n-
+    new XMLHttpRequest()\r\n- XMLHttpRequest.onreadystatechange\r\n- XMLHttpRequest.open(METHOD,
+    URL)\r\n- XMLHttpRequest.send()\n\n\n\n- https://github.com/gSchool/githubProfileClone\r\n-
+    https://github.com/gSchool/placesIveTraveled"
+  :instructor_notes: "- Fetch and send JSON using jquery\r\n- Write syntactically
+    valid ajax calls using `$.ajax ` as well as the shortcut `get()` and `post()`\r\n-
+    Describe what is happening when $.ajax is invoked\r\n- Use the `context` option
+    in $.ajax\r\n- Discuss how APIs are used to connect services across the web\r\n-
+    Define and describe JSON\r\n- Explain the formatting rules for JSON. (strings,
+    no trailing commas)\r\n- Use JSON.parse() to turn JSON into a javascript object\r\n-
+    Use jQuery AJAX methods to hit an api and use the returned JSON to populate information
+    on an web page\r\n\r\nthat it takes an object as an argument, that it makes an
+    HTTP request, that the `then` functions fire on a 200 response, that the error
+    functions fire on non-2xx responses\r\n\r\nto set the value of `this` in callbacks\n\n-
+    Explain what AJAX stands for\r\n- Write code that gets JSON and does something
+    on success\r\n- Fetch and send JSON using raw javascript\r\n- Make AJAX calls
+    to local API endpoints and modify DOM\r\n- Write ajax calls that send form parameters
+    from an object\r\n- Write ajax calls that send the request body as JSON\r\n- Describe
+    common Single Page App patterns\r\n- Write ajax calls that set the accept header
+    and content types\r\n- Explain the XMLHTTPRequest same domain policy\r\n- AJAX
+    w/o jQuery\r\n- Define API\r\n- such as: send url-encoded data, get JSON back,
+    send JSON, get JSON back, send JSON, get HTML back"
+- :standard_uuid: 793b8c6a-a19d-4049-8183-9d454bf55028
+  :standard_name: Thinking Like a Developer
+  :uuid: 0958889f-c375-4cd0-bcf4-11521a47ac7e
+  :name: Participates productively in code reviews
+  :description: |+
+    - Determine if code conforms to standards/guidelines set by the team / someone else
+    - Receive feedback openly and constructively
+    - Deliver feedback that is actionable, specific, and kind.
+
+
+
+
+
+  :instructor_notes: |2+
+
+
+
+
+- :standard_uuid: 793b8c6a-a19d-4049-8183-9d454bf55028
+  :standard_name: Thinking Like a Developer
+  :uuid: 96596d80-98aa-42c7-b280-768b2b52adb7
+  :name: Collaborates productively with other developers
+  :description: "- Can operate with fair contribution (not necessarily equal contribution),
+    regularly verbalizes thought process, and is nice to work with\n\n- Can operate
+    with fair contribution (not necessarily equal contribution) using specific techniques
+    when necessary such as:\n- Regularly verbalizes thought process\n- Is nice to
+    work with\n\n- Ping pong\r\n- Driver / Navigator\r\n- Chess timers\n\n\n\n"
+  :instructor_notes: |2+
+
+
+
+
+- :standard_uuid: 793b8c6a-a19d-4049-8183-9d454bf55028
+  :standard_name: Thinking Like a Developer
+  :uuid: 42c0aaa9-3c36-4d71-bfc5-d0657eea857c
+  :name: Interacts with error messages
+  :description: |+
+    - Resolves common JS errors by reading a stack trace and identifying the cause of the error
+
+    - Identifies the line number of error messages from a stack trace
+    - Resolves common JS errors by reading a stack trace and identifying the cause of the error
+    - Reads and researches error messages
+
+
+
+
+
+  :instructor_notes: |2+
+
+
+
+
+- :standard_uuid: 793b8c6a-a19d-4049-8183-9d454bf55028
+  :standard_name: Thinking Like a Developer
+  :uuid: 0f22502a-68fe-4dbe-95d7-b1f4919fe1bf
+  :name: Approaches problems in a methodical and disciplined manner
+  :description: "- Approaches problems in a methodical and disciplined manner\n- Engages
+    in experimental problem solving\n\n- Breaks down complex problems into smaller
+    steps.\n\n- Experiments on one piece of code at a time (baby steps)\n- Stays calm
+    and positive in the face of high complexity / slow progress\n- Takes steps to
+    understand the problem / solution before writing:\n- Can explain all copy/pasted
+    code\n- Reads and understands documentation to the extent that they can use documentation
+    in place of stack overflow or tutorials\n- Writes code that works, then refactors\n-
+    Displays an experimental approach to debugging / learning code\n\n\n\n\n\n- Whiteboarding
+    problems\r\n- Writes psuedocode in comments before beginning\r\n- Stepping away
+    from the code to think more abstractly\r\n- Reviews problem solving process (reflect)\n\n\n\n\n\n\n\n-
+    Formulates experiments to verify function of code\r\n- Readily experiments with
+    code that has unknown function\r\n- Readily postulates syntax to accomplish tasks\r\n-
+    Can use simple log statements to verify hypotheses\r\n- Identifies and tests their
+    hypothesis\n\n- Breaks down complex problems into smaller steps.\n\n- Writes code
+    that works, then refactors\n- Displays an experimental approach to debugging /
+    learning code\n- Experiments on one piece of code at a time (baby steps)\n- Stays
+    calm and positive in the face of high complexity / slow progress\n- Takes steps
+    to understand the problem / solution before writing:\n- Can explain all copy/pasted
+    code\n- Reads and understands documentation to the extent that they can use documentation
+    in place of stack overflow or tutorials\n\n\n\n- Formulates experiments to verify
+    function of code\r\n- Readily experiments with code that has unknown function\r\n-
+    Readily postulates syntax to accomplish tasks\r\n- Can use simple log statements
+    to verify hypotheses\r\n- Identifies and tests their hypothesis\n\n\n\n\n\n- Whiteboarding
+    problems\r\n- Writes psuedocode in comments before beginning\r\n- Stepping away
+    from the code to think more abstractly\r\n- Reviews problem solving process (reflect)\n\n\n\n"
+  :instructor_notes: |2+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+- :standard_uuid: 2dc0600d-e1f3-48ff-b241-199ce36fbe3f
+  :standard_name: Functional Programming with Javascript
+  :uuid: 7b523c6a-95b7-423a-b3e4-bd7366346911
+  :name: Write higher order functions that accept functions as parameters
+  :description: "- Iterate over lists using ES5 Array Methods in a functional style\n-
+    Write higher order functions that accept functions as parameters\n\n- Uses array
+    methods\n\n- Uses array methods\n- Identify that sockets are what enable realtime
+    applications with server-side push\n\n- map\r\n- forEach\r\n- filter\r\n- reduce
+    (r and l)\r\n- some\r\n- every\r\n- lodash/underscore methods\n\n\n\n- Writes
+    functions that accept functions\n- Can explain what a closure is, the order of
+    execution with closures, as well as multiple nested closures\n\n- Writes functions
+    that accept functions\n- Can explain what a closure is\n\n\n\n\n\n- Can explain
+    the order of execution with closures, as well as multiple nested closures\n\n"
+  :instructor_notes: "Implement `Array.prototype.map` with a modified signature so
+    that it is `map(array, callback)` using `Array.prototype.forEach`.\n\n\n\n- Define
+    a higher order function as a function that takes at least one function as an argument
+    and/or returns a function\r\n- Distinguish between examples of first-order and
+    higher-order functions\r\n- Implement simple algorithms with `forEach`\r\n- Invoke
+    functions that are passed as a function, passing arguments\r\n- Define functions
+    that take multiple other functions\r\n- Invoke functions, passing them multiple
+    functions\r\n- Inline and extract / go between anonymous functions and named /
+    function variables\r\n- Use functions that return functions to another function
+    as an argument\n\n\n\n"
+- :standard_uuid: f1a3c137-21bd-4902-a745-44d5ba8f992a
+  :standard_name: Design
+  :uuid: d23f95bc-1fe6-4cf6-9627-98c704bfeae4
+  :name: Create and implement responsive/adaptive designs
+  :description: "- Design has responsive components (multiple views, breakpoints,
+    sensible feature parity)\n\n- at least two break points\r\n- desktop and mobile
+    views (mobile views are touch based)\r\n- sensible feature parity in both desktop
+    and mobile views"
+  :instructor_notes: ''
+- :standard_uuid: f1a3c137-21bd-4902-a745-44d5ba8f992a
+  :standard_name: Design
+  :uuid: c5ceb050-621f-4df2-8cda-18cce44f91de
+  :name: Create and apply style guides to an application
+  :description: "- The style guide should include\n- Work from an Exemplar Style guide\n\n-
+    Typography\r\n- Audience\r\n- Proportions\r\n- Composition\r\n- Visual hierarchy\r\n-
+    Color choices\n\n"
+  :instructor_notes: |2+
+
+
+- :standard_uuid: f1a3c137-21bd-4902-a745-44d5ba8f992a
+  :standard_name: Design
+  :uuid: 6b77f6b4-326a-4b3c-897e-083cca8c4a4c
+  :name: Design applications from content inventories using wireframes
+  :description: |+
+    - Enumerates content elements (create a list)
+    - Prioritizes content
+    - Designs an application based on the priority of the content
+
+
+
+
+
+  :instructor_notes: |2+
+
+
+
+
+- :standard_uuid: f1a3c137-21bd-4902-a745-44d5ba8f992a
+  :standard_name: Design
+  :uuid: 35d1d1ae-ceba-436f-9f41-32944b8e1028
+  :name: Gather and validate requirements from a user and test that user’s response
+    to a minimum testable artifact
+  :description: |+
+    - Interviews users to validate requirements prior to building anything
+    - Incorporates feedback from users into requirements
+    - Presents testable artifact (wireframe, mockup, or working ui) to users and gathers feedback
+    - Iterates on feedback from users
+
+
+
+
+
+
+
+  :instructor_notes: |2+
+
+
+
+
+
+
+- :standard_uuid: 1762e39b-4a3e-433a-ac68-c815f3ea067b
+  :standard_name: How the Web Works
+  :uuid: 97b70126-a21d-4f83-a7cd-09855c9fa748
+  :name: Discuss the basic function and purpose of web sockets
+  :description: |+
+    - Contrast sockets with HTTP requests / responses
+    - Identify apps that use sockets like Google Docs / Slack
+
+    request and response vs persistent connections
+
+  :instructor_notes: |2+
+
+
+- :standard_uuid: 1762e39b-4a3e-433a-ac68-c815f3ea067b
+  :standard_name: How the Web Works
+  :uuid: d62923ca-e93e-46c3-bbcb-454411233ed9
+  :name: 'Identify common protocols and explain their purpose '
+  :description: "- Identify and describe the purpose (in a sentence) of common protocols\n\n-
+    FTP\r\n- HTTP/S\r\n- TCP\r\n- SMTP\r\n- SSH"
+  :instructor_notes: "- Describe that HTTP requests are not encrypted\r\n- and give
+    examples of common protocols\r\n- that HTTPS requests are encrypted with an SSL
+    certificate and served from port 443 by default\r\n- and are served from port
+    80 by default\r\n- FTP - (insert agreed-upon definitions)\r\n- HTTP/S - \r\n-
+    TCP - \r\n- SMTP - \r\n- SSH -"
+- :standard_uuid: 1762e39b-4a3e-433a-ac68-c815f3ea067b
+  :standard_name: How the Web Works
+  :uuid: 84bbf0ae-2d55-490b-bc84-d4ae4dc45e14
+  :name: Discuss and diagram Client-Server Model
+  :description: "- Sequence Diagram Client-Server Model\n\n- Sequence Diagram Client-Server
+    Model\n- Explain key ideas about how the web works\n\nIncluding...\r\n\r\n- Client\r\n-
+    Server\r\n- Database\r\n- Communication events (represented by arrows)\n\n- just
+    computers talking to each other\r\n- Explain that client and server communication
+    is peer communication\r\n- distinguish which part of an app runs on the client
+    or server\r\n- recognize client / server roles depend on communication relationship\r\n-
+    give an example of when this is the case"
+  :instructor_notes: "\n\n- Explain what is and isn't under our control as a web developer.\r\n-
+    Describe the history of the web.\r\n- Explain key ideas about how the web works\r\n-
+    Explain the role that DNS plays \r\n- Explain key ideas\r\n- Define and describe
+    DNS and IP address\r\n- Describe how servers/redirects interact\r\n- when requesting
+    a web page, including resolving the domain name into an IP address\r\n\r\nExplain
+    these key ideas:\r\n\r\ngiven that most sites are load-balanced, the server that
+    serves the initial request may be different than the server that serves the second
+    request, and as such the server cannot store any information in memory about the
+    previous request and expect it to be read on subsequent requests\r\n\r\nWhat is
+    an IP address? What is DNS?"
+- :standard_uuid: 1762e39b-4a3e-433a-ac68-c815f3ea067b
+  :standard_name: How the Web Works
+  :uuid: ca4311e4-8013-4b29-b2c4-dd753573c30e
+  :name: Diagram and explain a URI
+  :description: "- Identify and explain the basic purpose of each part of a URL\n\n-
+    Identify the parts of a URL\n- Explain the basic purpose of each part of the URL\n-
+    Explain that protocols exist as a shared contract that helps machines communicate\n\nIncludes:\r\n\r\n-
+    protocol\r\n- the subdomains, domain and TLD - things used to determine IP address\r\n-
+    the port - a way to further “divide” a subdomain/domain/tld into separate apps?\r\n-
+    the path - the part of a URL that a routing framework uses to figure out what
+    to return\r\n- the query string\n\n\n\n"
+  :instructor_notes: "For asking students to dissect a URL use this:\r\n\r\n`http://www.google.com:3000/stuffz?foo=bar&baz=square#Header`\r\n\r\nHow
+    would you extract the path from the request string? Use `url.parse`.\r\n\r\nWhat
+    is URL encoding?\r\n\r\n- Identify the parts of a url\r\n- Describe what a path
+    is and how one would extract it from the request string\r\n- Expand incomplete
+    URLs\r\n- Describe how to send query parameters in a URL (?foo=bar&baz=foo)\r\n-
+    Describe URL encoding\r\n\r\nincluding: protocol, the subdomains, domain and TLD,
+    the port, the path, the query string (optionally the basic authentication username
+    / password)\r\n\r\nExplain that if you leave off the protocol and domain, the
+    browser will use the current page’s protocol and domain\r\n\r\nwhat it means and
+    provide examples of paths that would need to be url encoded\n\nExplain the purpose
+    of the domain, port, and path.\n\noptional: compare to protocols in everyday life:
+    mail, greetings, holidays/traditions"
+- :standard_uuid: 1762e39b-4a3e-433a-ac68-c815f3ea067b
+  :standard_name: How the Web Works
+  :uuid: 5b704c5f-75af-4039-a691-4f2dd8ba2971
+  :name: Identify the parts of an HTTP request and response and discuss their purpose
+  :description: "- Describe what happens in a redirect scenario and diagram it\n-
+    Describe the format and purpose of HTTP Requests and Responses\n- Identify the
+    parts of a request and describe their function\n- Identify the parts of a response
+    and describe their function\n\n\n\nHTTP is the _hypertext transfer protocol_.
+    It is the _protocol_, or system of rules for communicating that enables browsers
+    to communicate over a network like the internet.\n\n- Request line\r\n  - Verb\r\n
+    \ - Path\r\n- Headers\r\n- Body\n\n- Response line\r\n- Status Code\r\n- Status
+    Messages\r\n- Headers\r\n- Body"
+  :instructor_notes: "\n\n- Like a file being sent back from a server to a client\r\n-
+    Like a file being sent to a server\n\n- Describe the 3 parts of an HTTP request
+    - request line, the headers, the body\r\n- Describe how to send url-encoded parameters
+    in the request body\r\n- Describe how to send raw JSON in the request body\n\n"
+- :standard_uuid: 1762e39b-4a3e-433a-ac68-c815f3ea067b
+  :standard_name: How the Web Works
+  :uuid: 960362a6-e341-487b-a292-95840148c429
+  :name: Discuss the semantics of common HTTP Verbs, Headers, and Status Codes
+  :description: "- Correctly implements common HTTP verbs\n- Correctly implements
+    common status codes\n- Add appropriate request headers to an HTTP Response\n\n-
+    Discuss Status codes\n\nsuch as 200, 404, 500 etc…\n\n- Discusses Verbs\n\nVerbs:\r\n-
+    GET\r\n- POST\r\n- PATCH/PUT\r\n- DELETE\n\n- Add appropriate headers to an HTTP
+    Response\n\n- https://github.com/gSchool/sequence-diagrams"
+  :instructor_notes: "Provide an example of an HTTP status code (not 200). What is
+    the usefulness of this?\r\n\r\nStatus codes\r\n- 10x - Informational\r\n- 20x
+    - Success\r\n- 30x - Redirection\r\n- 40x - Client Error\r\n- 50x - Server Error\n\n\n\nAdd
+    appropriate headers to an HTTP Response\r\n- Cache\r\n- Content-type\r\n- Content-length\r\n-
+    x-types - description as nonstandard is enough\r\n\r\nOther things:\r\n\r\n- Draw
+    a sequence diagram of a redirect that shows two separate requests / responses
+    and how it instruct the client how to render the response body\r\n- Add appropriate
+    headers to an HTTP Response\r\n- Explain content-type header\r\n- Describe how
+    a client asks for a specific return mime-type with the Accept header\r\n- Describe
+    how a client specifies the mime-type of the body with the content-type header"
+- :standard_uuid: d465e693-2e94-43a2-b99e-bb7283161bc2
+  :standard_name: Server Side JS with Node
+  :uuid: 1ebe7d45-7bcb-4979-ab85-f3760f0c52cf
+  :name: Control the flow of your program using EventEmitters
+  :description: |+
+    - Listen for multiple instances of a single event (like “data” on HTTPRequest) and accumulate
+    - Use streams to process evented input
+
+
+
+  :instructor_notes: |2+
+
+
+- :standard_uuid: d465e693-2e94-43a2-b99e-bb7283161bc2
+  :standard_name: Server Side JS with Node
+  :uuid: be9709cc-957a-4652-ab52-4730113e11f7
+  :name: Handle errors using Node patterns
+  :description: |-
+    - Throw errors upstream for breaking errors
+    - Identify and develop a strategy for debugging different types of errors
+    - Handle exceptions in an application w/ node-style callbacks and EventEmitters
+
+
+
+
+
+    Event emitters, throwing, `err` parameters
+  :instructor_notes: "\n\nWas:\r\n\r\n- Identify and develop a strategy for debugging
+    different types of errors\r\n- Describe the difference between programmer error
+    and transactional errors\r\n- Describe how to pair node’s 3 error-handling techniques
+    to handle either programmer errors or transactional errors\n\nWas:\r\n\r\n- Describe
+    the 3 most common error-handling patterns in node\r\n- Handle exceptions in an
+    application w/ node-style callbacks and EventEmitters\r\n- Write syntactically
+    correct calls to async functions that invoke callbacks with `err` as the first
+    argument"
+- :standard_uuid: d465e693-2e94-43a2-b99e-bb7283161bc2
+  :standard_name: Server Side JS with Node
+  :uuid: cc31174c-7920-44ce-803a-0136d0a26ee3
+  :name: Use the APIs built-in to Node.js for OS specific operations
+  :description: "- Compare / contrast node.js apis with web apis\n- Listen to and
+    handle events from `process`\n- Use Node's `http` module\n- Read and write to
+    the filesystem with Node's fs module\n\n- Window, document not available in node\r\n-
+    Global object in node similar to Window\r\n- CommonJS require built into node,
+    can use browserify, webpack in browser for similar functionality\r\n- In node
+    _everything_ is a module, in the browser modules are not mandatory\n\n```js\r\n//
+    https://nodejs.org/api/process.html\r\n// Available events:\r\n// beforeExit,
+    exit, message, rejectionHandled, uncaughtException, unhandledRejection\r\n\r\nprocess.on('uncaughtException',
+    function (err) {\r\n  console.error((new Date).toUTCString() + ' uncaughtException:',
+    err.message)\r\n  console.error(err.stack)\r\n  process.exit(1)\r\n})\r\n\r\n//
+    https://nodejs.org/api/process.html#process_exit_codes\r\nprocess.on('exit', function(code)
+    {\r\n    console.log('Exiting with code:', code)\r\n    console.log('Goodbye World!')\r\n})\r\n```\n\nUse
+    `http` to\r\n\r\n- bind to a port\r\n- receive requests\r\n- send responses\r\n-
+    send requests\r\n- receive responses\n\n"
+  :instructor_notes: |2+
+
+
+
+
+    Examine code for this [exercise](https://github.com/gSchool/node-http-server-intro) that is in the appropriate [Learning Experience](https://students.galvanize.com/curriculums/6/learning_experiences/13)
+
+- :standard_uuid: d465e693-2e94-43a2-b99e-bb7283161bc2
+  :standard_name: Server Side JS with Node
+  :uuid: 7470e677-6614-4f54-ae3f-0e916cfa4968
+  :name: Define and require Node modules
+  :description: |+
+    - Uses NPM to install 3rd party modules
+    - Create custom modules
+    - Require and use Node modules
+    - Uses NPM to manage dependencies and project metadata w/ package.json
+
+
+
+
+
+    - If you only had to choose 1 thing to learn (`exports` vs `module.exports`), which would you learn and why?
+
+    - http://www.hacksparrow.com/node-js-exports-vs-module-exports.html
+
+  :instructor_notes: "\n\n\n\n- Require and use modules\r\n- Write syntactically correct
+    `module.exports` to export a function\r\n- Write syntactically correct `module.exports`
+    to export an object\r\n- Write syntactically correct require statement that requires
+    a function\r\n- Write a syntactically correct require statement that requires
+    an object\r\n- Explain variable naming in module.exports/require\r\n- Explain
+    that no functions or variables from the module will be available to the caller
+    unless explicitly exported\r\n- Write valid require statements for relative paths\r\n-
+    Write valid require statements for npm modules / builtin modules\r\n- Explain
+    the idiosyncrasies of `exports` and `module.exports` (??)\r\n\r\nthat the variable
+    used when requiring does not have to match either the filename being required
+    or any variable within the required module\n\n- Uses NPM to manage dependencies
+    and project metadata\r\n- Discuss what NPM is and what it is used for\r\n- Use
+    NPM to install, uninstall, manage versions, and other tasks r\r\n- Describe how
+    to initialize a node project and what the package.json file is\r\n- Install modules
+    using npm and understand what the --save, --save-dev and -g flags do"
+- :standard_uuid: bb388526-c903-45a9-afbf-e6dff6f501d1
+  :standard_name: Server Side Frameworks with Express
+  :uuid: 20e0212e-c577-465c-906f-5f3491a6fdfe
+  :name: Describe what server-side frameworks like Express do
+  :description: "- Describe how Express is an abstraction on top of HTTP - draw parallels
+    between express concepts and HTTP concepts\n- Describe what the express static
+    middleware does\n- Describe server-side validations\n- Describe how res generates
+    the response string\n- Describe why to use a redirect over a render\n- List which
+    standard CRUD actions should redirect (create, update, delete)\n- Describe difference
+    between execution of client-side js and server-side js\n- Describes what populates
+    req.params, req.body (body parser), req.query\n- Describe and sequence diagram
+    each CRUD action including\n\n\n\n\n\n\n\nThe difference between calling `res.render`,
+    `res.send`, `res.end`, `res.json`, `res.sendFile`\n\nincluding mention of the
+    browser refresh functionality / “resubmit this form?”\n\n\n\n\n\nhttps://github.com/gSchool/g11-course-curriculum/tree/master/week07/07_exercises/node-signup-form\n\n-
+    Describe all 7 routes, their verbs, paths etc..\r\n- Sequence diagram each CRUD
+    action including\r\n    - Browser\r\n    - Database\r\n    - Routes\r\n    - Templates"
+  :instructor_notes: |2+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+- :standard_uuid: bb388526-c903-45a9-afbf-e6dff6f501d1
+  :standard_name: Server Side Frameworks with Express
+  :uuid: ef7e9988-6893-46ef-a88f-069a4298a5cc
+  :name: Build CRUD apps in Express
+  :description: "- Structure an express app using standard idioms\n- Use Correct mount
+    points\n- Propagate errors to express’s error handling mechanism via next(err)\n-
+    Define schemas using Knex\n- Use express static\n- Pass data from routes to templates
+    via locals and generate HTML using a templating package including layouts and
+    partials\n- Includes client-side code\n- Define routes and attach callback functions
+    to those, and include middleware functions\n- Extract requests' data from req,
+    including req.params / req.body / req.query\n\n\n\n\n\n\n\n\n\n\n\n- setting locals
+    in middleware\r\n- using layouts to remove duplication\n\n\n\nExamples: finding
+    parent resources, authorization, currentUser etc...\n\n"
+  :instructor_notes: "At least a routes folder, maybe also a controllers folder\r\nWhen
+    models are introduced, they exist in their own folder\r\nFavor having index.js
+    files\n\n\n\n\n\n----------\r\n\r\nOld stuff\r\n\r\n- Introduction to MongoDB
+    - https://github.com/gSchool/fullstack-curriculum/blob/master/lessons/db/mongodb-introduction.instructor.md
+    (May require some minor sequening because it talks about relational databases
+    as well)\r\n- Querying and Aggregation in MongoDB - https://github.com/gSchool/mongodb-introduction-to-querying-and-aggregation
+    (Exercises to work with queries, similar to AR challenge)\r\n- Cheat Sheet - https://blog.codecentric.de/files/2012/12/MongoDB-CheatSheet-v1_0.pdf
+    (Good comparisons w/ SQL)\r\n- Guide to NoSQL - http://blog.nahurst.com/visual-guide-to-nosql-systems
+    (NoSQL Overview)\r\n- https://github.com/gSchool/mongo_console_exercises\r\n-
+    https://github.com/gSchool/mongo_zoo_assocations_app\r\n- https://github.com/gSchool/mongodb-bookstore/\r\n-
+    https://github.com/gSchool/mongodb-introduction-to-querying-and-aggregation\r\n-
+    https://github.com/gSchool/mongoose-choose-your-own-resource\r\n- https://github.com/gSchool/mongoose-one-to-many\r\n-
+    https://github.com/gSchool/mongoose_countries_app\n\n\n\nUsed to be:\r\n\r\n-
+    Re-render templates w/ error messages if input is invalid server-side (old)\r\n-
+    Define routes that render templates (old)\r\n- Render partials (old)\r\n- Write
+    valid template syntax including nesting, loops and conditionals (old)\r\n- Explain
+    layouts (old)\r\n- Pass data from routes to templates via locals and generate
+    HTML using a templating package including layouts and partials\r\n- Render pre-populated
+    form controls with a templating language (jade, swig, etc) (old)\r\n- Install
+    custom template languages like Handlebars (old)\r\n- Use layouts effectively (old)\n\nUsed
+    to be:\r\n\r\n- Include script tags in layouts (old)\r\n- Use HTML5 attributes
+    to validate user input client-side (old)\r\n- Explain the difference between client-side
+    and server-side code (old)\r\n- Includes client-side code\n\n\n\n"
+- :standard_uuid: 49275f51-fb52-4c08-a691-ecbc22f6a2e9
+  :standard_name: Auth
+  :uuid: 3f1fd6fd-be9b-4ced-9683-d17105fcc3ec
+  :name: Build OAuth user login in Express using Passport
+  :description: |+
+    - Built and shipped an app that allows users to login via OAuth using Passport
+
+  :instructor_notes: ''
+- :standard_uuid: 49275f51-fb52-4c08-a691-ecbc22f6a2e9
+  :standard_name: Auth
+  :uuid: df58e25f-7716-4325-a90e-4f41846cc7cb
+  :name: Protect content in Express using middleware substacks
+  :description: |+
+    - Protect routes using the middleware sub-stack API
+
+  :instructor_notes: ''
+- :standard_uuid: 49275f51-fb52-4c08-a691-ecbc22f6a2e9
+  :standard_name: Auth
+  :uuid: 8ab48f11-82c3-4f7f-ad09-efdae6180aea
+  :name: Build form-based authentication in Express using cookie-session
+  :description: |+
+    - Use middleware to set the currentUser local globally
+    - Use req.session to ensure that users are logged in
+    - Store passwords securely using bcrypt
+    - Includes register, login, logout features
+
+
+
+
+
+
+
+  :instructor_notes: |2+
+
+
+
+
+
+
+- :standard_uuid: 49275f51-fb52-4c08-a691-ecbc22f6a2e9
+  :standard_name: Auth
+  :uuid: 1527f6f1-dff1-45a5-b987-509d40ca1e3e
+  :name: Describe auth concepts including form-based authentication, OAuth and authorization
+  :description: "- Explain why storing passwords in plain text is never acceptable\n-
+    Describe difference between authentication and authorization\n- Describe how OAuth
+    works\n- Explain how hashing/salting protects from lookup/dictionary attacks\n-
+    Explain key ideas about how Cookies work\n\n\n\n\n\n- Draw a sequence diagram
+    how OAuth works at the level of “user goes to 3rd party site, 3rd party site authenticates,
+    redirects to predefined url in your app”\n\n\n\nIncluding concepts such as:\r\n\r\n-
+    The fact that they are passed in headers\r\n- Expiration / session cookies\n\n-
+    What header are cookies sent up to the server in?\r\n- What header are cookies
+    sent down to the client in?"
+  :instructor_notes: "\n\n\n\n\n\n- Explain why storing a password in plain text is
+    never acceptable and highly dangerous\r\n- Understand what hashing and salting
+    are\r\n- Explain how salting protects from lookup/dictionary table attacks\n\n-
+    Explain how sessions and cookies work, where they are stored and how they are
+    secured\r\n- Explain what the session secret is and what the difference between
+    a signed and unsigned cookie is\r\n- Explain cookies, dates, session cookies\r\n-
+    Describe how cookies are sent / received\r\n- Describe how browsers save the cookies\r\n-
+    Describe session cookies\r\n- Describe secure cookies\r\n- Explain cookies\r\n-
+    Describe cookie domains\r\n- Describe browser cookie domain contraints\r\n- Describe
+    cookie expiration\r\n- Give an overview of the stateless nature of HTTP\r\n- Describe
+    that cookies play in integral role in most authentication systems\r\n- that cookies
+    can have specific subdomains associated with them so that they can be shared across
+    sites like www.example.com and app.example.com\r\n- that browsers will only send
+    cookies back to the domains allowed in the cookie definition\r\n- that cookies
+    have expiration dates, and that browsers respect these, and describe that cookies
+    typically contain small numbers or strings that servers can use to match with
+    a record in a database on the server\r\n- that cookies are just properly formatted
+    strings that are sent with each request and response from each response and send
+    those same cookies back with each request, thus allowing servers to control what
+    data is saved in the browser \r\n- that cookies can be session cookies which expire
+    when the browser is closed\r\n- that cookies can specify that they will only be
+    sent over HTTPS"
+- :standard_uuid: 412ea142-dd72-4e21-8e52-2bb72ad3e09b
+  :standard_name: Promises
+  :uuid: 3204ce0a-ae01-48c4-af83-5461f8ee7264
+  :name: Make parallel requests using Promise.all
+  :description: |+
+    - Given an array of objects that have properties that contain URLs, generate an array of promises, run them with Promise.all and do something with the results.
+
+  :instructor_notes: ''
+- :standard_uuid: 412ea142-dd72-4e21-8e52-2bb72ad3e09b
+  :standard_name: Promises
+  :uuid: fb851076-a3a8-40f6-9544-5ef14803bdee
+  :name: Discuss the basic function and purpose of promises
+  :description: "- Discuss the purpose of promises\n- Discuss the function of Promises\n\nPurpose:\r\nIdentify
+    that promises are used for deferred and asynchronous functions\r\nSolve the problem
+    of “callback hell” (the “pyramid of death”) - decrease the cost of change by making
+    it easier to refactor code out into separate methods while keeping code readable\r\nIdentify
+    common use cases for promises:\r\nanything asynchronous!\r\nsequelize, knex, jquery,
+    angular - all have promises built in\n\nFunction:\r\nExplain that a Promise represents
+    an operation that hasn’t completed yet but is expected to in the future\r\nExplain
+    that promises have 3 states:\r\npending\r\nfulfilled\r\nrejected\r\nIdentify that
+    promises can be chained"
+  :instructor_notes: |2+
+
+
+- :standard_uuid: 412ea142-dd72-4e21-8e52-2bb72ad3e09b
+  :standard_name: Promises
+  :uuid: 427bd950-e449-4341-ba01-3e41f552b4bb
+  :name: Make sequential asynchronous calls in separate methods and return the final
+    result with basic error handling using Promises
+  :description: |+
+    - Make multiple async calls and return a single data object
+
+  :instructor_notes: "that includes a `.then(null, fn)` or a `.catch` in the method,
+    and code that calls that function from another module\r\n\r\n\r\nNotes\r\n“Make
+    multiple async calls” - such as “find a user, then find their posts, then find
+    the comments for those posts”\r\n“Return a single data object” - such as a user
+    object with a posts property\r\nOne example is making multiple chained HTTP calls
+    from an Angular service and then consuming that from an Angular controller\r\nAnother
+    example is making database calls / API calls server side from a module in `lib`
+    and then calling those methods from routes\r\n\r\nThis would be acceptable:\r\n\r\n```\r\nfunction
+    doStuff(){\r\n  var result = {}\r\n\r\n  $.getJSON(‘/me’).then(function(user){\r\n
+    \   result = user;\r\n    return $.getJSON(user.posts_url);\r\n  }).then(function(posts){\r\n
+    \   result.posts = posts;\r\n    return $.getJSON(result.comments_url + “?post_ids=”
+    + result.posts.map((post)=> post.id).join(“,”)\r\n  }).then(function(comments){\r\n
+    \   result.comments = comments;\r\n    return results;\r\n  })\r\n}\r\n\r\n//
+    somewhere else\r\ndoStuff().then(function(userWithPostAndComments){\r\n  // handle
+    success\r\n}).catch(function(){\r\n  // handle errors\r\n});\r\n```"
+- :standard_uuid: 2305e956-adeb-49e4-8b0d-2600b10ddfdc
+  :standard_name: Datastores
+  :uuid: 349b2e45-b20a-44d1-80c8-1216e14c301f
+  :name: Access data using an ORM / Knex
+  :description: |+
+    - Protects against SQL injection
+    - Uses transactions to ensure data integrity
+    - Build and run migrations to manage your database
+    - Fetch all the associated data before rendering your view
+    - Use the ORM ‘classes’ to encapsulate business logic around your data
+    - Build methods for handling complicated queries
+
+
+
+
+
+
+
+
+
+
+
+  :instructor_notes: |2+
+
+
+
+
+
+
+
+
+
+
+- :standard_uuid: 2305e956-adeb-49e4-8b0d-2600b10ddfdc
+  :standard_name: Datastores
+  :uuid: 7ec77c83-b497-49c3-b08c-b729a77090b3
+  :name: Design and implement schemas
+  :description: "- Explains what a data/database schema is\n- Normalizes data to Third
+    Normal Form\n- Uses appropriate indexes\n- Utilizes common column types\n- Build
+    a schema using SQL commands\n- Models relationships using ERD\n\n\n\n\n\nforeign
+    keys / unique indexes\n\n- VARCHAR\r\n- INT\r\n- CHAR\r\n- SERIAL\r\n- DATETIME\r\n-
+    BOOLEAN\r\n- TEXT\n\n\n\n"
+  :instructor_notes: |2+
+
+
+
+
+
+
+
+
+
+
+- :standard_uuid: 2305e956-adeb-49e4-8b0d-2600b10ddfdc
+  :standard_name: Datastores
+  :uuid: 7231cf4a-2dc7-401a-88f9-4159cc1c2e2f
+  :name: Access data in datastores through joins
+  :description: "- Describe the role of Primary keys, Foreign keys, and Referential
+    Integrity\n- Uses joins for model relationships (one to one, one to many, many
+    to many)\n- Uses correct SQL join for given problem \n\n\n\n* Inner , left, right,
+    full\r\n* Concept of inner and outer\r\n* Joining multiple tables\n\n- Uses correct
+    SQL join for given problem"
+  :instructor_notes: "\n\n\n\n\r\n\r\nStudents should be given several use cases where
+    they need to choose the right join to get the right data set. \r\ne.g. \" Show
+    me pertinent information of all of our people and all of their respective managers
+    where some people might not have managers\""
+- :standard_uuid: 2305e956-adeb-49e4-8b0d-2600b10ddfdc
+  :standard_name: Datastores
+  :uuid: 08f64fd8-ad16-4e3a-bb92-902b8b54de07
+  :name: Write database queries using SQL
+  :description: "- Uses common operators and functions for common queries\n- Writes
+    statements to create and modify datastore structure\n- Writes and runs CRUD statements
+    using SQL\n- Uses aggregate functions to aggregate data in queries\n\n- WHERE\r\n-
+    BETWEEN\r\n- LIKE\r\n- ORDER BY\r\n- LIMIT\r\n- IN\n\n\n\n* Insert\r\n* Update\r\n*
+    Delete \r\n* Select\n\n* Group by \r\n* Count\r\n* Min / Max\r\n* Sum"
+  :instructor_notes: "\n\n\n\n- Execute SQL through psql or files\r\n\r\n* connect
+    to a database\r\n* change databases\r\n* execute queries\r\n* quit\r\n* execute
+    imports\n\n"
+- :standard_uuid: 2305e956-adeb-49e4-8b0d-2600b10ddfdc
+  :standard_name: Datastores
+  :uuid: 99acaf90-3559-4542-a2a4-1071eda89553
+  :name: Contrast the function and purpose of non-relational and relational datastores
+  :description: "- Describe the concept of a database schema\n- Explains what collections
+    and documents are\n- Explain difference between relational and document based
+    data stores and key-value stores\n\nDescribe what a database schema is and the
+    process of creating the schema\n\n* What are database schemas for ?   \r\n* What
+    are some examples of schema modification statements? \r\n* Compare and contrast
+    SQL databases and Mongo\n\n\n\n"
+  :instructor_notes: "schema modification statements = things like add column, drop
+    table, modify , etc. \r\n\r\nDescribe the concept of a database schema  = describe
+    tables and columns and data types\n\n\n\n- Users\r\n- Roles\r\n- Permissions (grants)\r\n-
+    Database connection strings\r\n- Transactions\r\n\r\nprotocol://user:password@host:port/db-name\r\n\r\npostgresql://root:897654ersdfghj@example.com:5432/products"
+- :standard_uuid: 2886a5f1-92f6-44ba-8adb-185b2a161870
+  :standard_name: Deployment
+  :uuid: 6a02b407-69d9-453b-a747-c8b87950cb2b
+  :name: Develop and deploy an app using Docker containers
+  :description: |+
+    - Written code against a docker container and pushed it a remote environment
+
+  :instructor_notes: ''
+- :standard_uuid: 2886a5f1-92f6-44ba-8adb-185b2a161870
+  :standard_name: Deployment
+  :uuid: 4d3b234c-6e4d-4af4-9635-a939fe502ebe
+  :name: Discuss the role and purpose of devops
+  :description: "- In a short paragraph describe key devops concepts\n\nSuch as \r\n\r\n-
+    automated configuration management\r\n- automated provisioning\r\n- elastic infrastructure\r\n-
+    monitoring\r\n- mentioning tools such as Chef, Puppet, Ansible"
+  :instructor_notes: ''
+- :standard_uuid: 2886a5f1-92f6-44ba-8adb-185b2a161870
+  :standard_name: Deployment
+  :uuid: 5ef7bda4-d599-4b11-a435-f518c4469be6
+  :name: Connect to another computer using SSH
+  :description: |+
+    - Connect to another computer using SSH
+
+  :instructor_notes: ''
+- :standard_uuid: 2886a5f1-92f6-44ba-8adb-185b2a161870
+  :standard_name: Deployment
+  :uuid: 14a67719-f04a-4c10-ae39-33ae7142d976
+  :name: Deploy an app to EC2 and compare and contrast the AWS core philosophy with
+    Heroku and Cloud Foundry and pre-cloud era
+  :description: "- Running app on EC2 that meet the requirements\n- Describe elastic
+    IPs / elastic load balancing / elastic block store (infrastructure on-demand)
+    in comparison with other options\n\n- A web server such as Nginx or Apache \r\n-
+    A database such as Postgres \r\n- An app server - Node / Ruby / Passenger \r\n-
+    Having started from a CentOS or Ubuntu base AMI\n\n"
+  :instructor_notes: |2+
+
+
+- :standard_uuid: 2886a5f1-92f6-44ba-8adb-185b2a161870
+  :standard_name: Deployment
+  :uuid: d183eb60-fcfc-40d1-9cae-d85f5f349fb0
+  :name: Deploy to static hosting sites and explain the function and purpose of static
+    hosting
+  :description: |+
+    - Student has a functioning site deployed to Divshot with scripts and CSS files in subdirectories
+    - Can explain function and purpose of static hosting site / CDN
+
+
+
+  :instructor_notes: |2+
+
+
+- :standard_uuid: 2886a5f1-92f6-44ba-8adb-185b2a161870
+  :standard_name: Deployment
+  :uuid: b1e49494-ae23-4e78-9f4a-fa52572b2978
+  :name: Explain the function and purpose of Continuous Deployment and Continuous
+    Integration and apply them to a project
+  :description: |+
+    - Draw a sequence diagram of an app that uses CI and CD
+    - List common CI / CD tools / services such as Jenkins / Travis Have at least one project managed with CD and CI
+
+
+
+  :instructor_notes: |2+
+
+
+- :standard_uuid: 2886a5f1-92f6-44ba-8adb-185b2a161870
+  :standard_name: Deployment
+  :uuid: 8cf1f10a-fc6b-4c09-a2bc-6e4d1a901dad
+  :name: Deploy to Heroku (a PaaS Provider)
+  :description: |+
+    - Student has a functioning Node app up and running that has environment variables and attached SQL database
+
+  :instructor_notes: ''
+- :standard_uuid: 2886a5f1-92f6-44ba-8adb-185b2a161870
+  :standard_name: Deployment
+  :uuid: 79030da6-cfca-479c-8ac2-31826cf70ddd
+  :name: Deploy to Pivotal Web Services Cloud Foundry
+  :description: |+
+    - Student has a functioning app up and running that has environment variables and attached services
+
+  :instructor_notes: ''
+- :standard_uuid: 2886a5f1-92f6-44ba-8adb-185b2a161870
+  :standard_name: Deployment
+  :uuid: 8bfec408-1579-4ecd-80cd-d95de9c1c0ac
+  :name: Explain the function and purpose environment variables and use them in their
+    projects
+  :description: |+
+    - No secrets or environment-specific values are hard-coded in apps, instead they are accessed via process.env
+    - Explain that environment variables allow you to remove secrets and connection strings and test environment variables from code
+    - Installed and configured dotenv, including git ignoring .env, setting their local version of the value in their .env file, having a .env.example file
+
+
+
+
+
+  :instructor_notes: |2+
+
+
+
+
+- :standard_uuid: ce60c0de-9f49-423f-bbbe-7fea0c1b875c
+  :standard_name: Architecture
+  :uuid: b24ecc78-5a7d-493d-8f66-3d451a9d374c
+  :name: Identifies and explains purpose of common software architectural concepts
+  :description: "- Identify and explain: Route, Model, View / Template, Controller,
+    etc\n\n- Route\r\n- Model\r\n- View / Template\r\n- Layout / Partial\r\n- Controller\r\n-
+    Component\r\n- Utility / Helper\r\n- Worker"
+  :instructor_notes: "- Route\r\n- Model\r\n- View / Template\r\n- Layout / Partial\r\n-
+    Controller\r\n- Component - In client-side code, view and controller together.
+    Display, state, and behavior encapsulated.\r\n- Utility / Helper - repeated procedure
+    for refactoring purposes - logic extracted from a view for reusability\r\n- Worker
+    - scheduled code"
+- :standard_uuid: ce60c0de-9f49-423f-bbbe-7fea0c1b875c
+  :standard_name: Architecture
+  :uuid: 06005077-158b-4cd8-903f-562b709aa071
+  :name: Build a web app that separates concerns using models, views, and controllers
+  :description: |+
+    - Build a web app that separates concerns using models, views, and controllers
+
+  :instructor_notes: ''
+- :standard_uuid: ce60c0de-9f49-423f-bbbe-7fea0c1b875c
+  :standard_name: Architecture
+  :uuid: 4f82519b-1fc7-4007-9357-66a94ee520a7
+  :name: Diagram architecture of an n-tier web app
+  :description: |+
+    - Sequence-diagram the interactions between a client, CDN, API, and database
+    - Identify network zones in that diagram
+
+
+
+  :instructor_notes: |2-
+
+
+    (firewalls) - “who’s allowed to do what”
+- :standard_uuid: ce60c0de-9f49-423f-bbbe-7fea0c1b875c
+  :standard_name: Architecture
+  :uuid: 1d4c879a-8dd3-4eb0-babc-8414e7ed73ec
+  :name: Discuss and diagram microservice architecture
+  :description: "- Compares / contrasts with monolithic application\n- Explain and
+    diagram a microservice architecture, including terms such as:\n\n\n\n- fail-fast\r\n-
+    circuit breakers\r\n- horizontal scalability\r\n- swappability\r\n- service discovery\r\n-
+    config management\r\n- edge/proxy caching server\r\n- 12factor apps"
+  :instructor_notes: |+
+    Identify seams
+
+- :standard_uuid: 39680f2e-8004-4029-a637-1722f5b54625
+  :standard_name: UX User Testing
+  :uuid: a8e5b3db-eefd-41c3-aa94-ad2fbe7e8634
+  :name: Design and execute user tests, then implement changes based on feedback
+  :description: |+
+    - Sets a specific task, or tasks, for the user to test
+    - Finds someone unfamiliar with the application to test
+    - Takes notes while the test subject runs through the tasks
+    - Takes feedback once the test subject has finished the tasks
+    - Parses notes into actionable changes
+    - Implements changes from actionable feedback
+
+
+
+
+
+
+
+
+
+
+
+  :instructor_notes: |2+
+
+
+
+
+
+
+
+
+
+
+- :standard_uuid: b7090a92-612d-4811-ac2c-8d750e5fab1d
+  :standard_name: Client Side Frameworks (Angular)
+  :uuid: 2601933b-c305-45d8-9527-42cda918507c
+  :name: Explain client-side routing as it relates to server-side routing
+  :description: |+
+    - Sequence diagram of how a deep-link works in an client-side routed app using pushstate-style URLs including the concept of a wildcard route on the server (express or superstatic)
+
+  :instructor_notes: ''
+- :standard_uuid: b7090a92-612d-4811-ac2c-8d750e5fab1d
+  :standard_name: Client Side Frameworks (Angular)
+  :uuid: 4794e677-7800-4e74-991e-b2ec21f40c5a
+  :name: Implement custom-directives
+  :description: |+
+    - Build a reusable Angular component (aka custom directive) that appears on multiple routes
+
+  :instructor_notes: ''
+- :standard_uuid: b7090a92-612d-4811-ac2c-8d750e5fab1d
+  :standard_name: Client Side Frameworks (Angular)
+  :uuid: 7620b2f5-136a-455f-bbf3-a62ab718ea59
+  :name: Implement and diagram JWT-based authentication between single-page apps and
+    servers
+  :description: |+
+    - Build an angular app that has login/logout state
+    - Make a sequence diagram with angular and the api and localstorage for the following scenarios: non-logged in user goes to a protected page, redirected to login, logs in, redirected to resource
+
+
+
+  :instructor_notes: |2+
+
+
+- :standard_uuid: b7090a92-612d-4811-ac2c-8d750e5fab1d
+  :standard_name: Client Side Frameworks (Angular)
+  :uuid: c8baa104-1646-4d20-ac5d-40fe886d3bd8
+  :name: Build a single-page CRUD application in Angular using routing, factories
+    / services and $http
+  :description: "- $http calls get back ids of resources and add them to the in-memory
+    copies\n- Has associated resources on the same page (ex: posts w/ likes)\n- Build
+    and deploy an SPA in Angular that uses built-in directives, routes, $http, controllers,
+    services/factories, built-in filtering / sorting, and no jQuery-style code\n\n\n\n\n\n-
+    For network calls feel free to use:\r\n    - `$http`\r\n    - https://docs.angularjs.org/api/ngResource\r\n
+    \   - https://github.com/mgonto/restangular\r\n- For routers, consider using https://github.com/angular-ui/ui-router\n\n\n\n-
+    https://chrome.google.com/webstore/detail/angularjs-batarang/ighdmehidhipcmcojjgiloacoafjmpfk"
+  :instructor_notes: "\n\n\n\n------------\r\n\r\nUsed to be...\r\n\r\n- Explain the
+    purpose of Angular (1) (orig)\r\n- Build and deploy an SPA in Angular that uses
+    built-in directives, routes, $http, controllers, services/factories, built-in
+    filtering / sorting, and no jQuery-style code\r\n- Compare Angular to other JS
+    frameworks (1) (orig)\r\n- Correctly setup a simple Angular app (1) (orig)\r\n-
+    Explain the concept of 2-way data binding (2) (orig)\r\n- Use ng-model to bind
+    data to the scope (2) (orig)\r\n- Compare and contrast Angular expressions to
+    ERB or EJS  (3) (orig)\r\n- Use filters and bound inputs in expressions  (3) (orig)\r\n-
+    Explain the role of Angular filters (3) (orig)\r\n- List 4 built-in filters (3)
+    (orig)\r\n- Explain client-side MVC (4) (orig)\r\n- Define scope in Angular (4)
+    (orig)\r\n- Explain the role of controllers in Angular (4) (orig)\r\n- Define
+    Angular modules (4) (orig)\r\n- Explain the purpose of the ng-controller directive
+    (4) (orig)\r\n- Use $scope to output values calculated in a controller (4) (orig)\r\n-
+    Debug AngularJS apps with Batarang (orig)"
+- :standard_uuid: dfec3119-3ba1-4a14-ba2c-9f66715f4b98
+  :standard_name: Agile Project Management
+  :uuid: 52699761-1945-4c26-aeb7-dd2f3ea2f960
+  :name: Explain the scrum process and define key terms
+  :description: "- Student can describe the steps in the scrum process, including
+    the following key words:\n\nStudent can describe the steps in the scrum process,
+    including the following key words:\r\n\r\n* sprint / iteration\r\n* story\r\n*
+    epic\r\n* story point\r\n* velocity\r\n* stand-up\r\n* backlog\r\n* retrospective\r\n*
+    Scrum Master\r\n* product owner\n\nWrite a paragraph connecting the terms above.\r\n\r\nExample:
+    “At the beginning of each 2-week sprint on a project, the product owner grooms
+    the backlog, and selects a number of stories based on the velocity the team achieved
+    on the previous sprint. Every day, the Scrum Master runs a brief stand-up where
+    they articulate what they did the day before, what they plan to do today, and
+    what they’re blocked on. At the end of the sprint, the team reviews and delivers
+    their completed work to the customer, and then the Scrum Master does a retrospective
+    with the team."
+  :instructor_notes: ''
+- :standard_uuid: dfec3119-3ba1-4a14-ba2c-9f66715f4b98
+  :standard_name: Agile Project Management
+  :uuid: 5a36d842-c508-4cbe-906d-f586f3b0e424
+  :name: Complete projects using an agile methodology
+  :description: "- Follow agile best-practices\n\n* Write and prioritize stories/features\r\n*
+    Complete one feature before moving on to the next\r\n* Go through an acceptance
+    process with a stakeholder\r\n* Track their progress using an agile project management
+    tool"
+  :instructor_notes: "Old success criteria\r\n\r\n- Student completes a software project
+    where they:\r\n- Write and prioritize stories/features\r\n- Complete one feature
+    before moving on to the next\r\n- Go through an acceptance process with a stakeholder\r\n-
+    Track their progress using an agile project management tool"
+- :standard_uuid: dfec3119-3ba1-4a14-ba2c-9f66715f4b98
+  :standard_name: Agile Project Management
+  :uuid: 614e6ddd-49c8-459b-b79d-81265d867757
+  :name: Discuss agile values and principles
+  :description: "- Discuss the significance of each of the agile values\n- Student
+    can discuss the meaning behind the 12 agile principles\n\nStudent can discuss
+    the significance of each of the agile values:\r\n\r\n* Individuals and interactions
+    over processes and tools\r\n* Working software over comprehensive documentation\r\n*
+    Customer collaboration over contract negotiation\r\n* Responding to change over
+    following a plan\n\n"
+  :instructor_notes: |2+
+
+
+- :standard_uuid: 0f6ed5e9-c172-4969-b990-f2324c91f5ad
+  :standard_name: Designing APIs
+  :uuid: ec89798f-87ee-4691-abee-28f85bcb5c59
+  :name: Discuss common API design concepts
+  :description: |+
+    - Talk about hypermedia, HATEOS / JSON-API, automated docs / standardization
+
+  :instructor_notes: ''
+- :standard_uuid: 0f6ed5e9-c172-4969-b990-f2324c91f5ad
+  :standard_name: Designing APIs
+  :uuid: 4655229a-33c6-4e0f-93e1-71c557c67602
+  :name: Document an API using an automated tool
+  :description: |+
+    - Has documented an API using either a comment-parsing strategy or a documentation tool such as Swagger
+
+  :instructor_notes: ''
+- :standard_uuid: 0f6ed5e9-c172-4969-b990-f2324c91f5ad
+  :standard_name: Designing APIs
+  :uuid: cbaa4c7e-3a15-4530-ac43-bf910951db84
+  :name: Secure an API endpoint using token-based authentication and CORS
+  :description: |+
+    - Endpoint secured with token-based authentication (JWT or OAuth header)
+    - Explain how and why browsers and servers use specific headers to indicate whether a particular resource is available from a web app hosted on a particular domain, including what the actual headers are
+
+
+
+  :instructor_notes: |2+
+
+
+- :standard_uuid: 0f6ed5e9-c172-4969-b990-f2324c91f5ad
+  :standard_name: Designing APIs
+  :uuid: bea6617d-30e3-4bb2-81a4-1ab48d37498e
+  :name: Design and implement a RESTful API
+  :description: |+
+    - Use HTTP Methods semantically
+    - Follows naming conventions for URLs and Actions
+    - Endpoint paths should contain nouns
+    - Nouns are plural
+    - API responses include hypermedia
+    - Implements an API with multiple endpoints, each supporting multiple methods
+
+
+
+
+
+
+
+
+
+    A consumer of your API shouldn't have to do any string concatenation.
+
+  :instructor_notes: "\n\n\n\n\n\n\n\nThis would be OK:\r\n\r\n```\r\n[\r\n {id: 1,\r\n
+    name: \"Jeff\",\r\n url: \"http://blah.com/users/1\"\r\n]\r\n```\n\n"
+- :standard_uuid: 40104e17-a0e4-4bc4-b499-5030c197cb81
+  :standard_name: Automated Testing
+  :uuid: d43c1a6e-7ff9-40cc-8f3d-e23c2c8bc498
+  :name: Discuss the pros and cons of automated testing
+  :description: "- Discuss pros of automated testing\n- Discuss the cons of automated
+    testing\n\n- lower bug count, \r\n- faster pace of change, \r\n- executable documentation,
+    \r\n- higher confidence deploys, \r\n- more even development over time\n\n"
+  :instructor_notes: "\n\n- added complexity, \r\n- added costs, \r\n- difficulty
+    testing truly complex systems, \r\n- unvalidated business hypothesis"
+- :standard_uuid: 40104e17-a0e4-4bc4-b499-5030c197cb81
+  :standard_name: Automated Testing
+  :uuid: ea7dac47-4782-4657-91bb-da94ca145915
+  :name: Work with and describe testing database-driven server-side applications w/
+    Express and Postgres given a working skeleton
+  :description: |+
+    - Talk about test pyramid (unit -> vs integration, acceptance)
+    - Write tests that require inserting records into a database before making assertions
+    - Describe what’s necessary to integration test an app with a database.
+
+
+
+
+
+  :instructor_notes: "\n\n\n\n- test database w/ a matching a matching schema\r\n-
+    clearing data before running tests"
+- :standard_uuid: 40104e17-a0e4-4bc4-b499-5030c197cb81
+  :standard_name: Automated Testing
+  :uuid: ee92cc73-7bbc-41a3-af38-719c2195be72
+  :name: Write unit tests in a TDD style using Mocha Chai
+  :description: |-
+    - Describe and employ the tdd red / green / refactor cycle for unit tests / anatomy of a test
+    - Use before / after / beforeEach / afterEach in tests
+    - Run unit tests with mocha chai
+
+
+
+
+
+    And ideally jasmine
+  :instructor_notes: |2+
+
+
+
+
+- :standard_uuid: a3a04645-41a3-4bb6-89e6-7c9b789a797d
+  :standard_name: ES2015
+  :uuid: 25678b07-1b08-42a4-b666-2cfe2d5527e0
+  :name: Use ES2015 features to write more concise Javascript
+  :description: |+
+    - Uses babel to transpile ES2015 code to ES5
+    - Describe the new ways you can assign values when declaring object literals
+    - Show how destructuring can be used to write more concise code
+    - Use a `for-of` loop to iterate over an iterable object
+    - Utilize Sets instead of Arrays when appropriate
+    - Distinguish between a ‘specification’ and an ‘implementation’
+    - Uses the fat arrow shortcut for writing anonymous functions
+    - Use `let` and `const`
+    - Uses the new class syntax, and `super` to call functions from the parent
+    - Use new features of backtick template strings
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  :instructor_notes: "\n\n- {[2+2]: 4}\r\n- var name = ‘hi’; {name}\n\nNot currently
+    in node\r\n\r\n[a, b] = [1, 2];\n\n\n\n\n\nStandards: ESHarmony, ES2015, ES5,
+    ES6\r\n\r\nImplementations: V8, Webkit, etc\n\n\n\n\n\n\n\n`Hello ${a} ${b}` instead
+    of ‘Hello ’ + a + ‘ ‘ + b"
+- :standard_uuid: e43b79ad-875a-4817-8ac0-68f7f47f3b42
+  :standard_name: OOP w/ Statically Typed Language
+  :uuid: edf5be91-67e1-4e8b-a6ee-ec5b9fc16e09
+  :name: Solve interview-style questions using Java
+  :description: |+
+    - Given a cracking the coding interview problem, write a solution in Java
+
+  :instructor_notes: ''
+- :standard_uuid: e43b79ad-875a-4817-8ac0-68f7f47f3b42
+  :standard_name: OOP w/ Statically Typed Language
+  :uuid: b5a931dd-84f2-45fe-9fd0-e254a2c6f806
+  :name: Contrast statically-typed and dynamically-typed languages
+  :description: |+
+    - Defines return types of methods in statically typed languages
+    - Declaring variables using types
+    - Identifies pros and cons of each
+    - Describe what it means for a language to be statically typed vs. dynamically typed
+
+
+
+
+
+
+
+  :instructor_notes: |-
+    method signatures
+
+
+
+    Statically typed languages need less testing
+
+    compile time vs. runtime
+- :standard_uuid: e43b79ad-875a-4817-8ac0-68f7f47f3b42
+  :standard_name: OOP w/ Statically Typed Language
+  :uuid: 84e30c2e-0715-411f-b39b-db22598897b1
+  :name: Compare and contrast OOP and Functional Programming
+  :description: "- Describe Functional Programming in relation to OOP\n- Describe
+    OOP in relation to functional programming\n\n- First class functions\r\n- Higher
+    order functions\r\n- Immutable data\r\n- Functions like components of an assembly
+    line\n\n- Methods operating on the state of the object\r\n- Mutable data"
+  :instructor_notes: |2+
+
+
+- :standard_uuid: e43b79ad-875a-4817-8ac0-68f7f47f3b42
+  :standard_name: OOP w/ Statically Typed Language
+  :uuid: 0aa5d3c6-9b6c-4c71-a680-35500aec7773
+  :name: Define and explain the significance of the major principles of Object Oriented
+    Programming
+  :description: "- Inheritance\n- Polymorphism\n- Encapsulation\n- Abstraction\n-
+    Explain how these 4 pillars encourage agile development / low cost of change\n\n\n\n\n\n\n\n\n\n-
+    Summarize the three core OO principles (Encapsulation, Inheritance, Polymorphism,
+    Abstraction) in your own words\r\n- Explain how these 4 pillars encourage agile
+    development / low cost of change\n\n1. What is Object Oriented Programming?\r\n1.
+    In your own words, explain what encapsulation is. Provide an example.\r\n1. In
+    your own words, explain what inheritance is. Provide an example.\r\n1. In your
+    own words, explain what polymorphism is. Provide an example.\n\n##### External
+    Resources\r\n\r\n* [Encapsulation in JavaScript](http://www.intertech.com/Blog/encapsulation-in-javascript/)\r\n*
+    [Inheritance and the Prototype chain](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)\r\n\r\n#####
+    Exercises\r\n\r\n1. [Encapsulation](https://github.com/gSchool/js-encapsulation)\r\n1.
+    [Polymorphism with Node.js](https://github.com/gSchool/js-polymorphism-guitar-store)"
+  :instructor_notes: "- using super\r\n- overloading methods\r\n- overriding methods\r\n-
+    composition\n\n- Subclasses / classes w/ an interface have the same method signatures\r\n-
+    Liskov\n\n- behavior and state contained together\r\n- public vs private vs protected\r\n-
+    understand the concept of visibility\n\n- interfaces\r\n- modeling real-world\n\n"
+- :standard_uuid: d5947e67-9d70-4e02-ae2a-b3135a9c1667
+  :standard_name: Data Structures / Algorithms
+  :uuid: 864fb2e5-1a7c-440d-a21d-eead8eed127e
+  :name: Employ a “Cracking the Coding Interview” technique when solving brain teaser
+    problems
+  :description: |+
+    - Describe your problem-solving technique to approach a brain teaser
+    - Diagram a brain teaser in order to solve it
+
+
+
+  :instructor_notes: |2+
+
+
+- :standard_uuid: d5947e67-9d70-4e02-ae2a-b3135a9c1667
+  :standard_name: Data Structures / Algorithms
+  :uuid: eb7d309b-c9ef-4e54-a64d-33af757b8d18
+  :name: Determine the correct algorithm and data structure for interview-style problems
+    following the “Cracking the Coding Interview” process
+  :description: "- Given a problem stated as a whiteboarding challenge, identify the
+    correct algorithm and data structure\n- Determine the best algorithm to use given
+    some data or criteria\n- Uses problem solving process from “Cracking the Coding
+    Interview”\n\n\n\n\n\n* Listen\r\n* Example\r\n* Brute Force\r\n* Optimize\r\n*
+    Walk Through\r\n* Implement\r\n* Test"
+  :instructor_notes: |2+
+
+
+
+
+- :standard_uuid: d5947e67-9d70-4e02-ae2a-b3135a9c1667
+  :standard_name: Data Structures / Algorithms
+  :uuid: 53e74cc9-53b0-4976-afda-93eebd722088
+  :name: Analyze an algorithm and identify the Big O
+  :description: "- Identify the access time of common data structures\n- Identify
+    the Big O of common searching algorithms\n- Has practice identifying the Big O
+    of graph searches, heaps, etc\n- Diagram the order of growth of big o complexity
+    levels\n- Identify the Big O of common sorts\n\n\n\n- Bubble sort / insertion
+    sort / selection sort\r\n- Merge sort\r\n- Quick sort \"average\" (bonus points
+    for worst-case)\r\n-\n\n\n\n\n\n"
+  :instructor_notes: "\n\n\n\n\n\n\n\n\r\n\r\n"
+- :standard_uuid: d5947e67-9d70-4e02-ae2a-b3135a9c1667
+  :standard_name: Data Structures / Algorithms
+  :uuid: 95508d61-d96d-4d70-80c6-3f00bdf52308
+  :name: Implement common algorithms and describe more complex algorithms
+  :description: "- Implement common searches\n- Describe more complex algorithms and
+    data structures\n- Implement common sorts\n\n* Depth-First Search\r\n* Breadth-First
+    Search\n\n* Quick Sort\r\n* Insertion Sort\r\n* Red-Black Trees\n\n* Bubble Sort\r\n*
+    Merge Sort"
+  :instructor_notes: "* Depth-First Search (recursive)\r\n* Breadth-First Search (non-recursive)\n\n\n\n"
+- :standard_uuid: d5947e67-9d70-4e02-ae2a-b3135a9c1667
+  :standard_name: Data Structures / Algorithms
+  :uuid: 1430686b-e6af-48c3-be11-55c986e55148
+  :name: Implement, evaluate, and use some common data structures
+  :description: |+
+    - Implement and use Hash Maps
+    - Implement and use Trees
+    - Implement and use Stacks and Queues
+    - Identify more complex data structures
+    - Implement and use Linked Lists
+    - Implement and use Graphs
+
+
+
+
+
+    Differentiate between stacks and queues, use the acronyms FIFO and LIFO to describe stacks and queues.
+
+    Such as Tries, and Vectors
+
+    https://github.com/gSchool/linked_list_practice
+
+  :instructor_notes: |2+
+
+
+
+
+
+
+
+
+
+
+- :standard_uuid: d5947e67-9d70-4e02-ae2a-b3135a9c1667
+  :standard_name: Data Structures / Algorithms
+  :uuid: e27bebe6-5b07-428d-9400-2d8f08944076
+  :name: Identify and diagram common data structures
+  :description: |-
+    - Identify and diagram an Array
+    - Identify and diagram a hash table
+    - Identify and diagram a linked list
+    - Identify and diagram a stack
+    - Identify and diagram a queue
+    - Identify and diagram tries
+    - Identify and diagram a tree
+    - Identify and diagram a graph
+
+
+
+
+
+    Identify and diagram a linked list as a set of boxes with pointers
+
+
+
+
+
+
+
+    Identify and diagram a tree as a set of nodes with pointers to their children
+
+    Identify and diagram a graph as a as an unordered set of nodes with pointers to other nodes
+  :instructor_notes: "## Assessments\r\n\r\nGive the student an array, have them come
+    up with a diagram that looks like: [a picture goes here]\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+- :standard_uuid: e59bae37-553b-4c1b-8667-4dbbdeeae98d
+  :standard_name: Technical Interview Prep
+  :uuid: 0fe673a0-4edf-449b-8794-cc13101d60c6
+  :name: Discuss a project that you worked on knowledgeably and enthusiastically
+  :description: |+
+    - Give a high level overview of the project
+    - Highlight a specific technical problem you solved
+    - Speaks enthusiastically
+
+
+
+
+
+  :instructor_notes: |2+
+
+
+
+
+- :standard_uuid: e59bae37-553b-4c1b-8667-4dbbdeeae98d
+  :standard_name: Technical Interview Prep
+  :uuid: 31672d5d-e1ad-40a8-9f18-c9d3134cab5a
+  :name: Gracefully respond to a question you don’t know the answer to
+  :description: "- Turn uncertainty into question for interviewer\n- Talk about what
+    you did instead\n- Spews 0 bullshit \n- Own up to not knowing the answer\n\n\n\n\n\n\n\n"
+  :instructor_notes: |2+
+
+
+
+
+
+
+- :standard_uuid: e59bae37-553b-4c1b-8667-4dbbdeeae98d
+  :standard_name: Technical Interview Prep
+  :uuid: 747da4b3-7b9d-4dee-8209-311ebdb0c588
+  :name: Employ a 4-step process at a whiteboard interview
+  :description: |+
+    - Ask about format
+    - Give sample inputs and outputs
+    - Narrated while talking (didn’t ‘go dark’)
+    - Diagram the flow of data through your algorithm (draw a picture)
+    - Ask about inputs and outputs
+    - Write syntactically-correct code without an IDE
+
+
+
+
+
+
+
+
+
+
+
+  :instructor_notes: |2+
+
+
+
+
+
+
+
+
+
+
+- :standard_uuid: 0bef6db4-d566-48c2-a5f5-ff09fce3b846
+  :standard_name: Application Analysis in Unfamiliar Environment
+  :uuid: a0adcfbc-995f-4a6e-bd75-41584ab54a9e
+  :name: Analyze existing code in applications written in unfamiliar languages to
+    fulfill requirements
+  :description: |+
+    - Fixes bugs in existing, unfamiliar code (at least 1)
+    - Adds features to fulfill requirements (at least 1)
+
+
+
+  :instructor_notes: |2+
+
+
+- :standard_uuid: 0bef6db4-d566-48c2-a5f5-ff09fce3b846
+  :standard_name: Application Analysis in Unfamiliar Environment
+  :uuid: 107c626b-4b43-4357-90a3-093a48c0c8c5
+  :name: Set up developer environments for applications written in an unfamiliar languages
+  :description: |+
+    - Install all necessary dependencies and start attached services
+    - Local database is created and populated
+    - Application starts and all “working” features are usable
+
+
+
+
+
+  :instructor_notes: |2+
+
+
+
+

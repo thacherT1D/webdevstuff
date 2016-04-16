@@ -105,7 +105,7 @@ Here's what happened:
 1. The Shell told the Terminal to display another prompt.
 1. The Shell told the Terminal to wait for the User to type a command.
 
-This sequence of events is known as a read-evaluate-print loop or **REPL** for short. This is just one example of a larger concept called the **Request-Response Cycle**. The cycle of sending a request and processing a response is at the core of web development.
+This sequence of events is known as a read-evaluate-print loop or **REPL** for short. This is just one example of a larger concept called the **Request-Response Cycle**. You'll study the cycle of sending a request and processing a response throughout this course as it's at the core of web development.
 
 ### Change the Terminal Profile
 
