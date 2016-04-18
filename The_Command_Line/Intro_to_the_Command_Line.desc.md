@@ -78,7 +78,7 @@ Although they technically mean slightly different things, the following terms ar
 ## Opening the Terminal
 __Follow Along:__
 
-1.  In the top right of the screen click the Magnifing Glass icon (or use `⌘+space`) to bring up 'Spotlight' and type 'Terminal'
+1.  In the top right of the screen click the Magnifying Glass icon (or use `⌘+space`) to bring up 'Spotlight' and type 'Terminal'
 2.  Once Terminal starts locate the icon in the doc and select `Options->Keep In Dock` so that it's always handy.
 
 __Note:__ In documentation we often see a `#` or a `$` prefix before code examples, these characters are used to indicate that the example is a something which is executed in the terminal (as opposed to being a code sample) and usually these are not supposed to be entered when you execute a command. You'll see the `$` notation used throughout this learning experience.
@@ -126,7 +126,7 @@ $ pwd
 ```
 For Elie this is `Users/eschoppik`, what is the __current working directory__ of your shell process?
 
->Pro-tip: the tilde character (`~`) is mapped (or ailiased) to the `HOME` directory on most *nix shells. Try: `echo ~`, is this the same as the output you got from `pwd`?
+>Pro-tip: the tilde character (`~`) is mapped (or aliased) to the `HOME` directory on most *nix shells. Try: `echo ~`, is this the same as the output you got from `pwd`?
 
 __Try This__:
 
@@ -458,7 +458,7 @@ __Try This__
 
 `$ echo "Hmmm" > bookshelf.txt`
 
-Now `cat booshelf.txt` again. Our old text has been replaced with the new text "Hmmm". Sometimes we'll want to __append__ to the existing text instead of overwriting it. We use two angle brackets `>>` to append the string to the end of the file:
+Now `cat bookshelf.txt` again. Our old text has been replaced with the new text "Hmmm". Sometimes we'll want to __append__ to the existing text instead of overwriting it. We use two angle brackets `>>` to append the string to the end of the file:
 
 __Try This__
 
@@ -501,7 +501,7 @@ See how we filtered out just the lines that contain Mil?  Try grepping for somet
 
 Adapted from [http://en.flossmanuals.net/command-line/piping/](http://en.flossmanuals.net/command-line/piping/)
 
-### Excercise: Using grep
+### Exercise: Using grep
 
 `grep` is a powerful command that can search through text output for matching text, or patterns of text. Use pipes, grep, and the commands we've learned about so far to do the following:
 
@@ -542,7 +542,7 @@ __Try This__
 
 `$ cp bookshelf.txt second_bookshelf.txt`
 
-What happend? What are the contents of second_bookshelf.txt?
+What happened? What are the contents of second_bookshelf.txt?
 
 ## Removing
 `rm` is short for remove.  Use `rm` to remove the `second_bookshelf.txt` file we just created with `cp`.
@@ -585,7 +585,7 @@ __Try This__
 
 For more ideas go here: [How to Use Wildcards](http://www.linfo.org/wildcard.html)
 
-## Mini Review - File Maniuplation
+## Mini Review - File Manipulation
 
 * `mkdir`
 * editing files
