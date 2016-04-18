@@ -41,35 +41,13 @@ Some other more complex uses for JS:
 * [Arcade Fire Reflektor Music Video](http://www.chromeexperiments.com/detail/just-a-reflektor/?f=)
 * [Walmart Website](http://www.walmart.com/)
 
-### Javascript Console
-- Allows you to easily interface with your app to run JS commands and display log messages for help with debugging
-- Shortcut to open JS console & bring focus to console
-  - Mac: Cmd + Opt + J
-  - Linux: Ctrl + Shift + J
-- Use Tab for autocompletion!
+# Using a REPL
+In order to create any of these JavaScript values, we need to use a program that can interpret them and other constructs of JavaScript. There are several options we can use, such as the console in Chrome's Developer Tools. We're going to use something that's dedicated exclusively to interpreting our JavaScript: Node. We installed it on the first day, and you can run it by typing `node` in your terminal. If you type `node` by itself, it will open up what's called a REPL. If you type `node myFile.js` (provided you have a file in that folder called myFile.js), it will run the contents of the file, as though you had typed it into the REPL.
 
-Go to [Google](http://www.google.com) and try pasting the following code into your console:
+### Do This
+Open a REPL in your command line (type `node`, hit enter).
 
-```
-var logo = document.getElementById('hplogo');
-logo.onclick = function () { this.src = "https://media.giphy.com/media/TxjAakMUtgPN6/giphy.gif"; this.srcset=""; this.height="204"; }
-```
-And then try this:
-
-```
-function makeWider() { 
-  var logo = document.getElementById('hplogo'); 
-  logo.width += 5; 
-}
-
-setInterval(makeWider, 41.67)
-```
-
-Lastly, try this:
-
-```
-javascript:document.body.contentEditable='true'; document.designMode='on'; void 0
-```
+Now, you can type JavaScript code directly into your terminal. If you type `node myFile.js`, node will execute all of the lines of code in a `.js` file, as though you'd typed them into your terminal.
 
 ### Comments
 
