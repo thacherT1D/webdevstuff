@@ -55,5 +55,3 @@ That's the biggest weakness right now.
 It's hella messy right now.  But like any problem, we'll solve it incrementally, iteratively and with a _ton_ of face-to-face communication and problem solving.
 
 The best way to contribute right now is to try all kinds of experiments, and let lots of people know what works and what doesn't in constructive and helpful ways.
-
-test
