@@ -29,4 +29,4 @@ Our goal is to have you typing code at 40 words per minute or more. Here are som
 
 ## Exercise
 
-- Click on the exercise tab to view the exercise.
+**You Do:** Click on the exercise tab and complete the exercise.
