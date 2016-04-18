@@ -67,8 +67,9 @@ Announcements:
 
 Code Crush Friday: [CCF](https://workbook.galvanize.com/cohorts/68/student_dashboard)
 
-
 Homework: [Homework](https://workbook.galvanize.com/cohorts/68/student_dashboard)
+
+Lightning Talks:
 
 Announcements:
 - Announcement 1
