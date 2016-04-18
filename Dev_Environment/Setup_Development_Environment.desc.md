@@ -13,13 +13,9 @@ As developers, our computers are both a tool and a workspace. Ensuring we have t
 
 The first tool we are going to install is [Homebrew](http://brew.sh/), a program that allows us to install and update programs using the command line. This kind of tool is known as a [package manager](https://en.wikipedia.org/wiki/Package_manager).
 
-#### Step One:
+**Step One:** Open up a terminal by pressing `cmd` + `space` and typing `terminal` then pressing `return`.
 
-Open up a terminal by pressing `cmd` + `space` and typing `terminal` then pressing `return`.
-<br/>
-#### Step Two:
-
-Copy and paste the following command into your terminal:
+**Step Two:** Copy and paste the following command into your terminal:
 
 ```bash
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
