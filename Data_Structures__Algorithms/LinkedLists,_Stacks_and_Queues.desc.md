@@ -1,4 +1,5 @@
-https://github.com/gSchool/computer-science-curriculum
+- (Official CS Repo)[https://github.com/gSchool/computer-science-curriculum]
+- (Jordan's workshop g17:)[https://gist.github.com/JordanMajd/4a777d79624bedcbaa10d4665a65b5c3]
 
 By the end of this lesson you should be able to:
 
