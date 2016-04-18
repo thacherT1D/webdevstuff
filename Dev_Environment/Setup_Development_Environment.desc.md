@@ -1,288 +1,306 @@
-## Welcome to Galvanize!!
+# Objectives
 
-We're super excited to have you here - it's going to be an intense, but incredible 6 months! We'll be posting the majority of our notes in the daily planner, so be sure to check these each day for topics, objectives and assignments.  
+By the end of this article you will have:
 
-Today we're going to focus on setting up our development environment so that we can hit the ground running. This will involve installing quite a few tools/technologies and learning a whole bunch of useful shortcuts!
+- Installed and configured all required software.
+- Established an organized workspace for notes and projects.
 
-## Essential Installations
+# Computer Setup
 
-### Homebrew
+As developers, our computers are both a tool and a workspace. Ensuring we have the right tools and a well organized workspace will set us up for success. We're going to walk through creating a directory to keep all of our code, notes and projects. Further, we are going to install and configure all the software we need.
 
-**What is it? What will I be using it for?**
+## Homebrew
 
-Homebrew is a package manager (a tool that helps us install additional technologies/tools) for OSX.
+The first tool we are going to install is [Homebrew](http://brew.sh/), a program that allows us to install and update programs using the command line. This kind of tool is known as a [package manager](https://en.wikipedia.org/wiki/Package_manager).
 
-**How do I install it?**
+**Step One:** Open up a terminal by pressing `cmd` + `space` and typing `terminal` then pressing `return`.
 
-In terminal, run:
+**Step Two:** Copy and paste the following command into your terminal:
 
-`ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
+```bash
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
 
-### Git	
+This will download and install Homebrew to your computer.
 
-**What is it? What will I be using it for?**
+**Step Three:** Brew keeps a list of programs and where to download them from, we should always update that list before installing anything:
 
-Git is a version control system that we will be using to keep track of changes in our code. It is a **MUST** know for any developer and we will be spending lots of time on it over the course.
+```bash
+brew update
+```
 
-**How do I install it?**
+**Step Four:** We can now install programs by typing `brew install <name of program>`, for example if we wanted to install [wget](https://www.gnu.org/software/wget/) (a tool for downloading files) we would type:
 
-In the terminal, run:
+```bash
+brew install wget
+```
 
-`brew update`
+Finally, if we want to update a program we installed using Homebrew, there is the `upgrade` command:
 
-`brew install git`
+```bash
+brew upgrade wget
+```
 
-### Oh my zsh	
+Alternatively, we can upgrade all the programs installed:
 
-**What is it? What will I be using it for?**
+```bash
+brew upgrade
+```
 
-Right now our terminal is not very user friendly. We're going to change our shell from `bash` to `zsh` and install a plugin called `oh my zsh` to give us some very useful shortcuts and coloring.
+**Resources:**
+- [Homebrew](http://brew.sh/)
 
-**How do I install it?**
+## Cask
 
-In the terminal run:
+Installing programs on macs can be obnoxious. Thankfully, there is a tool that extends Homebrew that allows us to install programs without dragging and dropping. Instead, we can just use the command line to install about anything. This tool is known as [Cask](https://caskroom.github.io/). Their website has a searchable list of all programs that you can install using cask.
 
-`sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"`
+**Step One:** Open up a terminal and type the following to install Cask:
 
-You may have to type in your password if it asks you, and when you are done with this, in the terminal, type `zsh`.
+```bash
+brew tap caskroom/cask
+```
 
-### Sublime Text 3 (subl alias) / Package Manager	
+Cask works just like Homebrew, to install we would type `brew cask install <name of program>`.
 
-**What is it? What will I be using it for?**
+**Resources:**
+- [Cask](https://caskroom.github.io/)
 
-Sublime Text is going to be our editor of choice. If you are more comfortable with other text editors like Atom or Textmate you may use them but we **STRONGLY** urge you to consider using Sublime Text 3 (it's really nice).
+## iTerm2
 
-**I have Sublime Text 2....that works right?**
+[iTerm2](https://www.iterm2.com/) is a highly configurable terminal program that has many improvements on the terminal that comes with your mac.
 
-Unfortunately not :( - although it is still in beta, Sublime Text 3 has a set of packages (we'll discuss later what those are) which are incredibly useful and are not available in Sublime Text 2. If you already have Sublime Text 2, please delete it and install Sublime Text 3. 
+**Step One:** Use Cask to install iterm2:
 
-**How do I install it?**
+```bash
+brew cask install iTerm2
+```
 
-http://www.sublimetext.com/3
+**Step Two:** Open iTerm by typing `cmd` + `space` and typing `iterm` and pressing `return`.
 
-**Using the subl alias**
+**Resources:**
+- [iTerm2](https://www.iterm2.com/)
 
-It would be really nice if we could open up sublime from the terminal. To get started with that read this (we will go through this process together):
+## Command Line Tools
 
-http://stackoverflow.com/questions/16199581/opening-sublime-text-on-command-line-as-subl-on-mac-os
+X-Code is an IDE for OSX, it is needed to install Command Line Tools. These tools can be used to compile code. Some of the software we use will need Command Line Tools.
 
-**NEXT STEPS**
 
-While Sublime Text 3 comes with some nice things out of the box, there are a bunch of additional tools we want to add to our text editor (we will call those "packages"). In order to do that, we need a tool to help us install these "packages" (we call that a "package manager"). Head over to https://packagecontrol.io/installation and follow the instructions for Sublime Text 3. If you install this correctly, you should be able to type `command+shift+p` in sublime and type in `install package` and see something.
+**Step One:**  Open up iTerm2 and run the following command to install the Command Line Tools:
 
-### Alfred or Spotlight	
+```bash
+#xcode-select --install
+```
 
-**What is it? What will I be using it for?**
+**Step Two:** Follow the prompts, and accept the terms of service.
 
-Alfred is a wonderful tool for quickly finding files, doing quick math, searching on wikipedia and defining words.
+## Atom
 
-**How do I install it?**
+[Atom](https://atom.io/) is an extensible and configurable text editor built using HTML, CSS and Javascript. By default, it doesn't have too many features. However, there are plenty of packages that provide additional features. If there isn't a package for what you need, it is very easy to make one.
 
-http://www.alfredapp.com/
+For the next 6 months, we will be using Atom as our `IDE`, or `integrated development environment` - just a fancy way of saying we'll be using it to write all of our code.
 
-### Shiftit / Divvy	/ Spectacle
+**Step One:** Use Cask to install Atom:
 
-**What is it? What will I be using it for?**
+```bash
+brew cask install atom
+```
 
-Unfortunately, macs do not come with a great way to split windows easily. This means if we want to see two windows side by side we have to use our mouse to drag each time - that's too much work! 
+**Step Two:** Open Atom using Spotlight:
 
-**How do I install it?**
+`cmd` + `space` then type `Atom` and press `return`.
 
-Shiftit - https://github.com/fikovnik/ShiftIt/releases/download/version-1.6.3/ShiftIt-1.6.3.zip
+**Resources:**
+- [Atom](https://atom.io/)
 
-Divvy - https://itunes.apple.com/us/app/divvy-window-manager/id413857545?mt=12
+## Atom Packages
 
-Spectacle - http://spectacleapp.com/
+There are two ways to install a package, using Atom or using the terminal.
 
-### Use Chrome	
+**To install** a package via Atom:
 
-**What is it? What will I be using it for?**
+1. Open up the settings panel with the shortcut `cmd` + `,`.
+2. On the left navbar click `Install`.
+3. Search for the package you would like and click install.
 
-Chrome is a browser that not only offers some useful features for browsing, but it is a **MUST HAVE** for developing and debugging HTML, CSS and JavaScript. PLEASE make chrome your default browser - we will be using it almost every day.
+**To install** a package via terminal, use the `Atom Package Manager` command:
 
-**How do I install it?**
+```bash
+apm install <package-name>
+```
 
-https://www.google.com/chrome/browser/desktop/
+You can quickly search for packages [here](https://atom.io/packages).
 
-### fasd	
+**Step One:** Install the following plugins:
 
-**What is it? What will I be using it for?**
+- [atom-beautify](https://atom.io/packages/atom-beautify) - this package allows us to rapidly format our code using the shortcut `cmd` + `option` + `b`.
+- [linter](https://atom.io/packages/linter) - a linter is a tool that checks for potential errors. This package is required for all the other `linter-` packages we will install.
+- [linter-jshint](https://atom.io/packages/linter-jshint) - **NOT**`linter-jslint`. Lints all `.js` files.
+- [linter-htmlhint](https://atom.io/packages/linter-htmlhint) - Lints all `.html` files.
+- [linter-csslint](https://atom.io/packages/linter-csslint) - Lints all `.css` files and css in `.html` files.
+- [linter-jsonlint](https://atom.io/packages/linter-jsonlint) - Lints all `.json` files.
 
-When you're in the command line, sometimes you can't remember where folders/files are, so you spend time searching through directories and driving yourself crazy. fasd will help preserve your sanity.
 
-https://github.com/clvv/fasd
+**Step Two:** Some of our linters need configuration as well.
 
-**How do I install it?**
+`linter-jshint` and `linter-htmlhint` rely on having configuration files to define rules for what the linter considers good or bad. Let's save some configs in our home directory:
 
-Download the zipfile here and open up the folder in terminal (you can drag the folder icon to the terminal)
+```bash
+cd
+wget path/to/.jshintrc
+wget path/to/.htmlhintrc
+```
 
-https://github.com/clvv/fasd/zipball/1.0.1
+**Step Three:** In order for the linter to read the config files, Atom must be restarted : `ctrl` + `option` + `cmd` + `l`.
 
-Once you are in terminal, run the command `make install`
+**Resources:**
+- [Atom Packages](https://atom.io/packages)
 
-When this is done head over to the home directory (in terminal type `~`) and then run `subl .zshrc` to open up your `.zshrc` file. Inside of here, add the following `eval "$(fasd --init auto)"` - then save and restart the terminal. Finally, type in the terminal `which z`. If you see `z: aliased to fasd_cd -d` you have done this correctly!
+# Git
 
-### tree	
+Git is a [version control](https://en.wikipedia.org/wiki/Version_control) program and an essential tool for any software developer. It keeps a timeline of all the changes made to a project, allows developers to switch between different versions of a project and allows multiple developers collaborate on the same code.
 
-**What is it? What will I be using it for?**
+**Step One:**
 
-Tree is a very useful tool for looking at the contents of a folder from the command line. It gives you a nice tree-like structure and shows you what files are nested where.
+```bash
+brew install git
+```
 
-**How do I install it?**
+**Step Two:** To configure run the following commands, replace 'YOUR FULL NAME' & 'YOUR EMAIL ADDRESS' with the information used on your Github account:
 
-http://brewformulas.org/Tree
+```
+git config --global user.name 'YOUR FULL NAME'
+git config --global user.email 'YOUR EMAIL ADDRESS'
+```
 
-`brew install tree`
+**Resources:**
+- [git](https://git-scm.com/)
 
-### Mou	
+## SSH Keys
 
-**What is it? What will I be using it for?**
+SSH Keys are a pair of public and private keys. These keys can be used to cryptographically sign and encrypt data. We can use it as a way to identify and authorize ourself with other people and computers. We will be using SSH to authorize ourselves with Github.
 
-When we write readme files for our repositories, the language we use is Markdown, which is a text to HTML converter (you can read more about it here http://daringfireball.net/projects/markdown/). It's essential to understand how Markdown works as well as have a tool where we can write Markdown. Sublime Text 3 can help us with that, but there are better tools - Mou is one of them!
+**Step One:** Follow [these instructions](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/) to:
+- Generate a new SSH Keys
+- Add it to the `ssh-agent`
+- Add the keys to your github account
+- Test the SSH connection.
 
-**How do I install it?**
+Now when we clone repositories we can use SSH instead of HTTPS by using `git@` instead of `https://`
 
-http://25.io/mou/
+Example (Do not run):
 
-## Essential Shortcuts
+```bash
+git clone git@github.com:USERNAME/OTHERREPOSITORY.git
+```
 
-## OSX
-`command + tab` : switch open applications
+instead of
 
-<code>command + &#96;</code> : (when already in command + tab) switch open applications in reverse
+```bash
+git clone https://github.com:USERNAME/OTHERREPOSITORY.git
+```
 
-<code>command + &#96;</code> : goes between different windows of current program
+## Browsers
 
-`command + q` (while in open applications) : quit an application
+We will be writing a lot of code that will run in web browsers, so it is important to have several browsers to test, debug and run our code in.
 
-## Chrome / Sublime /  Bash / most apps with tabs
+**Step One:** Use Cask to install Firefox and Chrome:
 
-`command + n` : create new window (`shift + command + n` for Sublime)
+```bash
+brew cask install firefox
+brew cask install chrome
+```
 
-`command + t` : create new tab (`command + n` for Sublime)
+- [Firefox](https://www.mozilla.org/en-US/firefox/products/)
+- [Chrome](https://www.google.com/chrome/)
 
-`command + w` : close tab or window if only one tab
+## Postman
 
-`shift + command + w` : close window with multiple open tabs
+[Postman](https://www.getpostman.com/) is a graphical tool for sending data over a network. This is really useful for testing HTTP, server and API code.
 
-`command + q` : quit application
+**Step One:** Use Cask to install:
 
-`command + shift + ]` : move right one tab
+```bash
+brew cask install postman
+```
 
-`command + shift + [` : move left one tab
+- [Postman](https://www.getpostman.com/)
 
-`command + NUMBER` : move to tab number NUMBER (not in Terminal)
+## Node
 
-`fn + up` : page up
+[Node](https://nodejs.org/en/) is a program that allows us to run applications written in JavaScript outside of the browser. This means we can run Javascript on any computer we can install Node.
 
-`fn + down` : page down
+**Step One:** Use Homebrew to install:
 
-`alt + command + arrow keys` : move right or left tabs
+```bash
+brew install node
+```
 
-## Chrome
-`command + r` : reload page
+**Step Two:** Test it installed properly:
 
-`command + option + j` : open the javascript console
+```bash
+node -v
+```
 
-`command + ]` : move forward through history
+**Resources:**
+- [Nodejs.org](https://nodejs.org/en/)
 
-`command + [` : move backward through history
+## Node Packages
 
-`command + shift + t` : reopen last closed tab (up to 10)
+Node comes with a tool called [NPM](http://npmjs.com/) or `Node Package Manager`. It is a [package manager](https://en.wikipedia.org/wiki/Package_manager) for Javascript applications, tools and modules. [NPM's website](http://npmjs.com/) can be used to search for packages.
 
-## Sublime
-`command + ctrl + f` : toggle fullscreen
+**Step One:** Install a basic HTTP Server to host and test web pages:
 
-`command + ctrl + shift + f` : toggle distraction free
+```bash
+npm install -g http-server
+```
 
+**Step Two:** Start the server up:
 
-`option + arrows` : move one word at a time
+```bash
+http-server
+```
 
-`command + arrows` : move to beginning and end of line
+**Step Three:** Open up your browser and navigate to `localhost:3000`.
 
-`shift + above commands` : select all the text
+**Step Four:** In the terminal, press `ctrl` + `c` to terminate the server.
 
-`delete + the above` : delete all the text
+**Resources:**
+- [npmjs.com](http://npmjs.com/)
+- [http-server](https://www.npmjs.com/package/http-server)
 
-`fn + delete` : delete forward
+## Workspace
 
-`command + k`, command k : delete to end of line
+It is very important to have a consistent and well organized workspace. Let's create a folder to keep all of our notes, warmups and class projects. Ultimately, how you arrange and organize your projects is up to you.
 
-`command +  delete` : delete to beginning of line
+**Step One:** Create a `workspace` directory in your user home, here we will keep all of our files:
 
-`fn + up / down` : page up / page down
+```bash
+mkdir ~/workspace
+```
 
-`fn + right / left` : beginning and end of file
+Here is a directory structure that might work for you:
 
+- workspace
+  - q1
+    - notes
+    - warmups
+    - projects
+  - q2
+    - ...
+  - q3
+    - ...
+  - q4
+    - ...
 
-`command + z` : undo
+Alternatively, instead of by quarter you could organize by week:
 
-`command + shift + z` : redo
-
-`command + y` :redo
-
-`command + /` : toggle comment for line
-
-`command + ]` : shift indenting right
-
-`command + [` : shift indenting left
-
-`command + l` : select the whole line
-
-`command + c` (with selection) : copy selection
-
-`command + x` (with selection) : cut selection
-
-`command + v` : paste most recent cut or copy
-
-`command + shift + v` : paste with proper indentation
-
-`command + x` : cut the whole line
-
-`command + c` : copy the whole line
-
-`command + enter` : create new line below
-
-`command + shift` + enter : create new line above
-
-`command + shift + d` : copy current line below
-
-`command + control + arrows` : move entire line up and down
-
-`command + k, command + u` : make selection upper case
-
-`command + k, command + l` : make selection lower case
-
-`command + '` : select all within quotes
-
-`control + m` : move to beginning/end of parens and braces
-
-`command + d` : select word(s)
-
-`command + k` while selecting words : don't select word
-
-`command + ctrl + g` : select all of words
-
-`option + mouseDrag` : column select
-
-`command + mouseClick` : custom multiple cursor
-
-`command + p` : goto anything (use with :line_number, @symbol, #term)
-
-`command + r` : search all function names in current file
-
-`command + shift + p` : set syntax (and many many other things)
-
-`command + f` : find
-
-`command + shift + f` : massive find
-
-`command + k, command + b` : toggle file bar
-
-`command + option + NUMBER` : split screen
-
-`control + shift + NUMBER` : move current file to pane
-
-`command + shift + l` : multi line cursor based on selection
-
-`command + control + up/down` : move a line up or down
+- workspace
+  - week1
+    - notes
+    - warmups
+    - projects
+  - week2
+    - ...
+  - week3
+    - ...
+  - ...
