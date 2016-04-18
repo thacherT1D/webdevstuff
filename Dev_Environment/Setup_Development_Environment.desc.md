@@ -16,7 +16,7 @@ The first tool we are going to install is [Homebrew](http://brew.sh/), a program
 #### Step One:
 
 Open up a terminal by pressing `cmd` + `space` and typing `terminal` then pressing `return`.
-
+<br/>
 #### Step Two:
 
 Copy and paste the following command into your terminal:
