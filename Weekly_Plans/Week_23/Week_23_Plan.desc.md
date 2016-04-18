@@ -77,7 +77,6 @@ Warmup: [Biweekly Survey](https://docs.google.com/forms/d/1XsnxPufkGL24Bnsa_8Ixc
 
 Code Crush Friday: [CCF](https://workbook.galvanize.com/cohorts/68/student_dashboard)
 
-
 Homework: [Homework](https://workbook.galvanize.com/cohorts/68/student_dashboard)
 
 Announcements:

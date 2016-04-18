@@ -77,7 +77,6 @@ Warmup: [Exit Survey](LinkToSurvey)
 
 Code Crush Friday: [CCF](https://workbook.galvanize.com/cohorts/68/student_dashboard)
 
-
 Homework: [Homework](https://workbook.galvanize.com/cohorts/68/student_dashboard)
 
 Announcements:
