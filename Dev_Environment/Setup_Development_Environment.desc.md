@@ -1,3 +1,16 @@
+<link rel="stylesheet" href="https://raw.githubusercontent.com/sindresorhus/github-markdown-css/gh-pages/github-markdown.css">
+
+<style>
+.markdown-body {
+  box-sizing: border-box;
+  min-width: 200px;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 45px;
+}
+</style>
+<article class="markdown-body">
+
 # Objectives
 
 By the end of this article you will have:
@@ -84,7 +97,6 @@ brew cask install iTerm2
 
 X-Code is an IDE for OSX, it is needed to install Command Line Tools. These tools can be used to compile code. Some of the software we use will need Command Line Tools.
 
-
 **Step One:**  Open up iTerm2 and run the following command to install the Command Line Tools:
 
 ```bash
@@ -138,7 +150,6 @@ You can quickly search for packages [here](https://atom.io/packages).
 - [linter-htmlhint](https://atom.io/packages/linter-htmlhint) - Lints all `.html` files.
 - [linter-csslint](https://atom.io/packages/linter-csslint) - Lints all `.css` files and css in `.html` files.
 - [linter-jsonlint](https://atom.io/packages/linter-jsonlint) - Lints all `.json` files.
-
 
 **Step Two:** Some of our linters need configuration as well.
 
@@ -304,3 +315,5 @@ Alternatively, instead of by quarter you could organize by week:
   - week3
     - ...
   - ...
+
+</article>
