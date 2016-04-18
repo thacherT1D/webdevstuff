@@ -1,5 +1,3 @@
-<link rel="stylesheet" href="https://raw.githubusercontent.com/sindresorhus/github-markdown-css/gh-pages/github-markdown.css">
-
 <style>
 .markdown-body {
   box-sizing: border-box;
