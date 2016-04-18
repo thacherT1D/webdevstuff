@@ -1,5 +1,3 @@
-<link rel="stylesheet" href="https://raw.githubusercontent.com/sindresorhus/github-markdown-css/gh-pages/github-markdown.css">
-
 # Objectives
 
 By the end of this article you will have:
@@ -89,7 +87,7 @@ X-Code is an IDE for OSX, it is needed to install Command Line Tools. These tool
 **Step One:**  Open up iTerm2 and run the following command to install the Command Line Tools:
 
 ```bash
-#xcode-select --install
+xcode-select --install
 ```
 
 **Step Two:** Follow the prompts, and accept the terms of service.
@@ -304,5 +302,3 @@ Alternatively, instead of by quarter you could organize by week:
   - week3
     - ...
   - ...
-
-</article>
