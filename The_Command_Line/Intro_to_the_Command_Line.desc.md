@@ -61,7 +61,7 @@ The command line allows you to run a large collection of built in programs. Thes
 
 Don't worry though, with a bit of practice you'll be flying around like a pro!
 
-Although they technically mean slightly different things, the following terms are synonyous with the Terminal Environment:
+Although they technically mean slightly different things, the following terms are synonymous with the Terminal Environment:
 
   *  Shell
   *  bash ('Bourne-Again shell', although I've haven't heard that used recently)
