@@ -2245,3 +2245,22 @@
   :published: false
   :suggested_days: 4.0
   :experience_success_criteria: []
+- :name: gDating App
+  :uuid: 743cd8b7-4c86-4793-9cdf-4703288fe0ab
+  :subject_uuid: 
+  :subject_name: 
+  :parent_uuid: 
+  :parent_name: 
+  :description_link: assessments/gdating.desc.md
+  :instructor_notes_link: assessments/gdating.notes.md
+  :published: false
+  :suggested_days: 3.0
+  :experience_success_criteria:
+  - :success_criterion_uuid: 4794e677-7800-4e74-991e-b2ec21f40c5a
+    :success_criterion_name: Implement custom-directives
+  - :success_criterion_uuid: 7620b2f5-136a-455f-bbf3-a62ab718ea59
+    :success_criterion_name: Implement and diagram JWT-based authentication between
+      single-page apps and servers
+  - :success_criterion_uuid: c8baa104-1646-4d20-ac5d-40fe886d3bd8
+    :success_criterion_name: Build a single-page CRUD application in Angular using
+      routing, factories / services and $http

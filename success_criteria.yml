@@ -47,14 +47,6 @@
     changes?\n\n"
 - :standard_uuid: 4298574a-4ac8-4a6b-8195-91c349a04209
   :standard_name: Dev Environment
-  :uuid: c795cc87-dc92-4c81-918e-cd6be797a530
-  :name: Send HTTP requests and view HTTP responses with Postman
-  :description: |+
-    - Uses Postman to send and receive HTTP Requests and inspect them with Postman
-
-  :instructor_notes: ''
-- :standard_uuid: 4298574a-4ac8-4a6b-8195-91c349a04209
-  :standard_name: Dev Environment
   :uuid: 07448ee9-9e09-43de-9afd-c4acba35a6c2
   :name: Touch type code at least 40 WPM
   :description: |-
@@ -62,6 +54,14 @@
 
     In this exercise: https://typing.io/lesson/javascript/jquery/traversing.js/2
   :instructor_notes: "Using the following exercise  \r\nhttps://typing.io/lesson/javascript/jquery/traversing.js/2"
+- :standard_uuid: 4298574a-4ac8-4a6b-8195-91c349a04209
+  :standard_name: Dev Environment
+  :uuid: c795cc87-dc92-4c81-918e-cd6be797a530
+  :name: Send HTTP requests and view HTTP responses with Postman
+  :description: |+
+    - Uses Postman to send and receive HTTP Requests and inspect them with Postman
+
+  :instructor_notes: ''
 - :standard_uuid: 4298574a-4ac8-4a6b-8195-91c349a04209
   :standard_name: Dev Environment
   :uuid: 24654e75-c03f-4f7f-83a6-3487cbb6e063
@@ -1255,27 +1255,6 @@
 
 - :standard_uuid: 1762e39b-4a3e-433a-ac68-c815f3ea067b
   :standard_name: How the Web Works
-  :uuid: 84bbf0ae-2d55-490b-bc84-d4ae4dc45e14
-  :name: Discuss and diagram Client-Server Model
-  :description: "- Sequence Diagram Client-Server Model\n\n- Sequence Diagram Client-Server
-    Model\n- Explain key ideas about how the web works\n\nIncluding...\r\n\r\n- Client\r\n-
-    Server\r\n- Database\r\n- Communication events (represented by arrows)\n\n- just
-    computers talking to each other\r\n- Explain that client and server communication
-    is peer communication\r\n- distinguish which part of an app runs on the client
-    or server\r\n- recognize client / server roles depend on communication relationship\r\n-
-    give an example of when this is the case"
-  :instructor_notes: "\n\n- Explain what is and isn't under our control as a web developer.\r\n-
-    Describe the history of the web.\r\n- Explain key ideas about how the web works\r\n-
-    Explain the role that DNS plays \r\n- Explain key ideas\r\n- Define and describe
-    DNS and IP address\r\n- Describe how servers/redirects interact\r\n- when requesting
-    a web page, including resolving the domain name into an IP address\r\n\r\nExplain
-    these key ideas:\r\n\r\ngiven that most sites are load-balanced, the server that
-    serves the initial request may be different than the server that serves the second
-    request, and as such the server cannot store any information in memory about the
-    previous request and expect it to be read on subsequent requests\r\n\r\nWhat is
-    an IP address? What is DNS?"
-- :standard_uuid: 1762e39b-4a3e-433a-ac68-c815f3ea067b
-  :standard_name: How the Web Works
   :uuid: d62923ca-e93e-46c3-bbcb-454411233ed9
   :name: 'Identify common protocols and explain their purpose '
   :description: "- Identify and describe the purpose (in a sentence) of common protocols\n-
@@ -1306,20 +1285,25 @@
     of the domain, port, and path."
 - :standard_uuid: 1762e39b-4a3e-433a-ac68-c815f3ea067b
   :standard_name: How the Web Works
-  :uuid: 5b704c5f-75af-4039-a691-4f2dd8ba2971
-  :name: Identify the parts of an HTTP request and response and discuss their purpose
-  :description: "- Describe what happens in a redirect scenario and diagram it\n-
-    Describe the format and purpose of HTTP Requests and Responses\n- Identify the
-    parts of a request and describe their function\n- Identify the parts of a response
-    and describe their function\n\n\n\nHTTP is the _hypertext transfer protocol_.
-    It is the _protocol_, or system of rules for communicating that enables browsers
-    to communicate over a network like the internet.\n\n- Request line\r\n  - Verb\r\n
-    \ - Path\r\n- Headers\r\n- Body\n\n- Response line\r\n- Status Code\r\n- Status
-    Messages\r\n- Headers\r\n- Body"
-  :instructor_notes: "\n\n- Like a file being sent back from a server to a client\r\n-
-    Like a file being sent to a server\n\n- Describe the 3 parts of an HTTP request
-    - request line, the headers, the body\r\n- Describe how to send url-encoded parameters
-    in the request body\r\n- Describe how to send raw JSON in the request body\n\n"
+  :uuid: 84bbf0ae-2d55-490b-bc84-d4ae4dc45e14
+  :name: Discuss and diagram Client-Server Model
+  :description: "- Sequence Diagram Client-Server Model\n\n- Sequence Diagram Client-Server
+    Model\n- Explain key ideas about how the web works\n\nIncluding...\r\n\r\n- Client\r\n-
+    Server\r\n- Database\r\n- Communication events (represented by arrows)\n\n- just
+    computers talking to each other\r\n- Explain that client and server communication
+    is peer communication\r\n- distinguish which part of an app runs on the client
+    or server\r\n- recognize client / server roles depend on communication relationship\r\n-
+    give an example of when this is the case"
+  :instructor_notes: "\n\n- Explain what is and isn't under our control as a web developer.\r\n-
+    Describe the history of the web.\r\n- Explain key ideas about how the web works\r\n-
+    Explain the role that DNS plays \r\n- Explain key ideas\r\n- Define and describe
+    DNS and IP address\r\n- Describe how servers/redirects interact\r\n- when requesting
+    a web page, including resolving the domain name into an IP address\r\n\r\nExplain
+    these key ideas:\r\n\r\ngiven that most sites are load-balanced, the server that
+    serves the initial request may be different than the server that serves the second
+    request, and as such the server cannot store any information in memory about the
+    previous request and expect it to be read on subsequent requests\r\n\r\nWhat is
+    an IP address? What is DNS?"
 - :standard_uuid: 1762e39b-4a3e-433a-ac68-c815f3ea067b
   :standard_name: How the Web Works
   :uuid: ca4311e4-8013-4b29-b2c4-dd753573c30e
@@ -1343,6 +1327,22 @@
     provide examples of paths that would need to be url encoded\n\nExplain the purpose
     of the domain, port, and path.\n\noptional: compare to protocols in everyday life:
     mail, greetings, holidays/traditions"
+- :standard_uuid: 1762e39b-4a3e-433a-ac68-c815f3ea067b
+  :standard_name: How the Web Works
+  :uuid: 5b704c5f-75af-4039-a691-4f2dd8ba2971
+  :name: Identify the parts of an HTTP request and response and discuss their purpose
+  :description: "- Describe what happens in a redirect scenario and diagram it\n-
+    Describe the format and purpose of HTTP Requests and Responses\n- Identify the
+    parts of a request and describe their function\n- Identify the parts of a response
+    and describe their function\n\n\n\nHTTP is the _hypertext transfer protocol_.
+    It is the _protocol_, or system of rules for communicating that enables browsers
+    to communicate over a network like the internet.\n\n- Request line\r\n  - Verb\r\n
+    \ - Path\r\n- Headers\r\n- Body\n\n- Response line\r\n- Status Code\r\n- Status
+    Messages\r\n- Headers\r\n- Body"
+  :instructor_notes: "\n\n- Like a file being sent back from a server to a client\r\n-
+    Like a file being sent to a server\n\n- Describe the 3 parts of an HTTP request
+    - request line, the headers, the body\r\n- Describe how to send url-encoded parameters
+    in the request body\r\n- Describe how to send raw JSON in the request body\n\n"
 - :standard_uuid: 1762e39b-4a3e-433a-ac68-c815f3ea067b
   :standard_name: How the Web Works
   :uuid: 960362a6-e341-487b-a292-95840148c429
@@ -1680,6 +1680,19 @@
 
 - :standard_uuid: 2305e956-adeb-49e4-8b0d-2600b10ddfdc
   :standard_name: Datastores
+  :uuid: 7231cf4a-2dc7-401a-88f9-4159cc1c2e2f
+  :name: Access data in datastores through joins
+  :description: "- Describe the role of Primary keys, Foreign keys, and Referential
+    Integrity\n- Uses joins for model relationships (one to one, one to many, many
+    to many)\n- Uses correct SQL join for given problem \n\n\n\n* Inner , left, right,
+    full\r\n* Concept of inner and outer\r\n* Joining multiple tables\n\n- Uses correct
+    SQL join for given problem"
+  :instructor_notes: "\n\n\n\n\r\n\r\nStudents should be given several use cases where
+    they need to choose the right join to get the right data set. \r\ne.g. \" Show
+    me pertinent information of all of our people and all of their respective managers
+    where some people might not have managers\""
+- :standard_uuid: 2305e956-adeb-49e4-8b0d-2600b10ddfdc
+  :standard_name: Datastores
   :uuid: 7ec77c83-b497-49c3-b08c-b729a77090b3
   :name: Design and implement schemas
   :description: "- Explains what a data/database schema is\n- Normalizes data to Third
@@ -1701,19 +1714,6 @@
 
 
 
-- :standard_uuid: 2305e956-adeb-49e4-8b0d-2600b10ddfdc
-  :standard_name: Datastores
-  :uuid: 7231cf4a-2dc7-401a-88f9-4159cc1c2e2f
-  :name: Access data in datastores through joins
-  :description: "- Describe the role of Primary keys, Foreign keys, and Referential
-    Integrity\n- Uses joins for model relationships (one to one, one to many, many
-    to many)\n- Uses correct SQL join for given problem \n\n\n\n* Inner , left, right,
-    full\r\n* Concept of inner and outer\r\n* Joining multiple tables\n\n- Uses correct
-    SQL join for given problem"
-  :instructor_notes: "\n\n\n\n\r\n\r\nStudents should be given several use cases where
-    they need to choose the right join to get the right data set. \r\ne.g. \" Show
-    me pertinent information of all of our people and all of their respective managers
-    where some people might not have managers\""
 - :standard_uuid: 2305e956-adeb-49e4-8b0d-2600b10ddfdc
   :standard_name: Datastores
   :uuid: 08f64fd8-ad16-4e3a-bb92-902b8b54de07
@@ -1742,11 +1742,11 @@
     Database connection strings\r\n- Transactions\r\n\r\nprotocol://user:password@host:port/db-name\r\n\r\npostgresql://root:897654ersdfghj@example.com:5432/products"
 - :standard_uuid: 2886a5f1-92f6-44ba-8adb-185b2a161870
   :standard_name: Deployment
-  :uuid: 5ef7bda4-d599-4b11-a435-f518c4469be6
-  :name: Connect to another computer using SSH
-  :description: |+
-    - Connect to another computer using SSH
-
+  :uuid: 4d3b234c-6e4d-4af4-9635-a939fe502ebe
+  :name: Discuss the role and purpose of devops
+  :description: "- In a short paragraph describe key devops concepts\n\nSuch as \r\n\r\n-
+    automated configuration management\r\n- automated provisioning\r\n- elastic infrastructure\r\n-
+    monitoring\r\n- mentioning tools such as Chef, Puppet, Ansible"
   :instructor_notes: ''
 - :standard_uuid: 2886a5f1-92f6-44ba-8adb-185b2a161870
   :standard_name: Deployment
@@ -1758,11 +1758,11 @@
   :instructor_notes: ''
 - :standard_uuid: 2886a5f1-92f6-44ba-8adb-185b2a161870
   :standard_name: Deployment
-  :uuid: 4d3b234c-6e4d-4af4-9635-a939fe502ebe
-  :name: Discuss the role and purpose of devops
-  :description: "- In a short paragraph describe key devops concepts\n\nSuch as \r\n\r\n-
-    automated configuration management\r\n- automated provisioning\r\n- elastic infrastructure\r\n-
-    monitoring\r\n- mentioning tools such as Chef, Puppet, Ansible"
+  :uuid: 5ef7bda4-d599-4b11-a435-f518c4469be6
+  :name: Connect to another computer using SSH
+  :description: |+
+    - Connect to another computer using SSH
+
   :instructor_notes: ''
 - :standard_uuid: 2886a5f1-92f6-44ba-8adb-185b2a161870
   :standard_name: Deployment
@@ -1772,20 +1772,6 @@
   :description: |+
     - Student has a functioning static site deployed with scripts and CSS files in subdirectories
     - Can explain function and purpose of static hosting site / CDN
-
-
-
-  :instructor_notes: |2+
-
-
-- :standard_uuid: 2886a5f1-92f6-44ba-8adb-185b2a161870
-  :standard_name: Deployment
-  :uuid: b1e49494-ae23-4e78-9f4a-fa52572b2978
-  :name: Explain the function and purpose of Continuous Deployment and Continuous
-    Integration and apply them to a project
-  :description: |+
-    - Draw a sequence diagram of an app that uses CI and CD
-    - List common CI / CD tools / services such as Jenkins / Travis Have at least one project managed with CD and CI
 
 
 
@@ -1815,6 +1801,20 @@
   :instructor_notes: ''
 - :standard_uuid: 2886a5f1-92f6-44ba-8adb-185b2a161870
   :standard_name: Deployment
+  :uuid: b1e49494-ae23-4e78-9f4a-fa52572b2978
+  :name: Explain the function and purpose of Continuous Deployment and Continuous
+    Integration and apply them to a project
+  :description: |+
+    - Draw a sequence diagram of an app that uses CI and CD
+    - List common CI / CD tools / services such as Jenkins / Travis Have at least one project managed with CD and CI
+
+
+
+  :instructor_notes: |2+
+
+
+- :standard_uuid: 2886a5f1-92f6-44ba-8adb-185b2a161870
+  :standard_name: Deployment
   :uuid: 79030da6-cfca-479c-8ac2-31826cf70ddd
   :name: Deploy to Pivotal Web Services Cloud Foundry
   :description: |+
@@ -1842,14 +1842,6 @@
 
 - :standard_uuid: ce60c0de-9f49-423f-bbbe-7fea0c1b875c
   :standard_name: Architecture
-  :uuid: 06005077-158b-4cd8-903f-562b709aa071
-  :name: Build a web app that separates concerns using models, views, and controllers
-  :description: |+
-    - Build a web app that separates concerns using models, views, and controllers
-
-  :instructor_notes: ''
-- :standard_uuid: ce60c0de-9f49-423f-bbbe-7fea0c1b875c
-  :standard_name: Architecture
   :uuid: b24ecc78-5a7d-493d-8f66-3d451a9d374c
   :name: Identifies and explains purpose of common software architectural concepts
   :description: "- Identify and explain: Route, Model, View / Template, Controller,
@@ -1860,6 +1852,14 @@
     Display, state, and behavior encapsulated.\r\n- Utility / Helper - repeated procedure
     for refactoring purposes - logic extracted from a view for reusability\r\n- Worker
     - scheduled code"
+- :standard_uuid: ce60c0de-9f49-423f-bbbe-7fea0c1b875c
+  :standard_name: Architecture
+  :uuid: 06005077-158b-4cd8-903f-562b709aa071
+  :name: Build a web app that separates concerns using models, views, and controllers
+  :description: |+
+    - Build a web app that separates concerns using models, views, and controllers
+
+  :instructor_notes: ''
 - :standard_uuid: ce60c0de-9f49-423f-bbbe-7fea0c1b875c
   :standard_name: Architecture
   :uuid: 4f82519b-1fc7-4007-9357-66a94ee520a7
@@ -1993,18 +1993,6 @@
   :instructor_notes: ''
 - :standard_uuid: dfec3119-3ba1-4a14-ba2c-9f66715f4b98
   :standard_name: Agile Project Management
-  :uuid: 5a36d842-c508-4cbe-906d-f586f3b0e424
-  :name: Complete projects using an agile methodology
-  :description: "- Follow agile best-practices\n\n* Write and prioritize stories/features\r\n*
-    Complete one feature before moving on to the next\r\n* Go through an acceptance
-    process with a stakeholder\r\n* Track their progress using an agile project management
-    tool"
-  :instructor_notes: "Old success criteria\r\n\r\n- Student completes a software project
-    where they:\r\n- Write and prioritize stories/features\r\n- Complete one feature
-    before moving on to the next\r\n- Go through an acceptance process with a stakeholder\r\n-
-    Track their progress using an agile project management tool"
-- :standard_uuid: dfec3119-3ba1-4a14-ba2c-9f66715f4b98
-  :standard_name: Agile Project Management
   :uuid: 614e6ddd-49c8-459b-b79d-81265d867757
   :name: Discuss agile values and principles
   :description: "- Discuss the significance of each of the agile values\n- Student
@@ -2016,6 +2004,18 @@
   :instructor_notes: |2+
 
 
+- :standard_uuid: dfec3119-3ba1-4a14-ba2c-9f66715f4b98
+  :standard_name: Agile Project Management
+  :uuid: 5a36d842-c508-4cbe-906d-f586f3b0e424
+  :name: Complete projects using an agile methodology
+  :description: "- Follow agile best-practices\n\n* Write and prioritize stories/features\r\n*
+    Complete one feature before moving on to the next\r\n* Go through an acceptance
+    process with a stakeholder\r\n* Track their progress using an agile project management
+    tool"
+  :instructor_notes: "Old success criteria\r\n\r\n- Student completes a software project
+    where they:\r\n- Write and prioritize stories/features\r\n- Complete one feature
+    before moving on to the next\r\n- Go through an acceptance process with a stakeholder\r\n-
+    Track their progress using an agile project management tool"
 - :standard_uuid: 0f6ed5e9-c172-4969-b990-f2324c91f5ad
   :standard_name: Designing APIs
   :uuid: 4655229a-33c6-4e0f-93e1-71c557c67602
@@ -2185,6 +2185,17 @@
     compile time vs. runtime
 - :standard_uuid: e43b79ad-875a-4817-8ac0-68f7f47f3b42
   :standard_name: OOP w/ Statically Typed Language
+  :uuid: 84e30c2e-0715-411f-b39b-db22598897b1
+  :name: Compare and contrast OOP and Functional Programming
+  :description: "- Describe Functional Programming in relation to OOP\n- Describe
+    OOP in relation to functional programming\n\n- First class functions\r\n- Higher
+    order functions\r\n- Immutable data\r\n- Functions like components of an assembly
+    line\n\n- Methods operating on the state of the object\r\n- Mutable data"
+  :instructor_notes: |2+
+
+
+- :standard_uuid: e43b79ad-875a-4817-8ac0-68f7f47f3b42
+  :standard_name: OOP w/ Statically Typed Language
   :uuid: 0aa5d3c6-9b6c-4c71-a680-35500aec7773
   :name: Define and explain the significance of the major principles of Object Oriented
     Programming
@@ -2204,17 +2215,6 @@
     composition\n\n- Subclasses / classes w/ an interface have the same method signatures\r\n-
     Liskov\n\n- behavior and state contained together\r\n- public vs private vs protected\r\n-
     understand the concept of visibility\n\n- interfaces\r\n- modeling real-world\n\n"
-- :standard_uuid: e43b79ad-875a-4817-8ac0-68f7f47f3b42
-  :standard_name: OOP w/ Statically Typed Language
-  :uuid: 84e30c2e-0715-411f-b39b-db22598897b1
-  :name: Compare and contrast OOP and Functional Programming
-  :description: "- Describe Functional Programming in relation to OOP\n- Describe
-    OOP in relation to functional programming\n\n- First class functions\r\n- Higher
-    order functions\r\n- Immutable data\r\n- Functions like components of an assembly
-    line\n\n- Methods operating on the state of the object\r\n- Mutable data"
-  :instructor_notes: |2+
-
-
 - :standard_uuid: d5947e67-9d70-4e02-ae2a-b3135a9c1667
   :standard_name: Data Structures / Algorithms
   :uuid: 864fb2e5-1a7c-440d-a21d-eead8eed127e
@@ -2266,37 +2266,6 @@
   :instructor_notes: "* Depth-First Search (recursive)\r\n* Breadth-First Search (non-recursive)\n\n\n\n"
 - :standard_uuid: d5947e67-9d70-4e02-ae2a-b3135a9c1667
   :standard_name: Data Structures / Algorithms
-  :uuid: e27bebe6-5b07-428d-9400-2d8f08944076
-  :name: Identify and diagram common data structures
-  :description: |-
-    - Identify and diagram an Array
-    - Identify and diagram a hash table
-    - Identify and diagram a linked list
-    - Identify and diagram a stack
-    - Identify and diagram a queue
-    - Identify and diagram tries
-    - Identify and diagram a tree
-    - Identify and diagram a graph
-
-
-
-
-
-    Identify and diagram a linked list as a set of boxes with pointers
-
-
-
-
-
-
-
-    Identify and diagram a tree as a set of nodes with pointers to their children
-
-    Identify and diagram a graph as a as an unordered set of nodes with pointers to other nodes
-  :instructor_notes: "## Assessments\r\n\r\nGive the student an array, have them come
-    up with a diagram that looks like: [a picture goes here]\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
-- :standard_uuid: d5947e67-9d70-4e02-ae2a-b3135a9c1667
-  :standard_name: Data Structures / Algorithms
   :uuid: 1430686b-e6af-48c3-be11-55c986e55148
   :name: Implement, evaluate, and use some common data structures
   :description: |+
@@ -2328,6 +2297,37 @@
 
 
 
+- :standard_uuid: d5947e67-9d70-4e02-ae2a-b3135a9c1667
+  :standard_name: Data Structures / Algorithms
+  :uuid: e27bebe6-5b07-428d-9400-2d8f08944076
+  :name: Identify and diagram common data structures
+  :description: |-
+    - Identify and diagram an Array
+    - Identify and diagram a hash table
+    - Identify and diagram a linked list
+    - Identify and diagram a stack
+    - Identify and diagram a queue
+    - Identify and diagram tries
+    - Identify and diagram a tree
+    - Identify and diagram a graph
+
+
+
+
+
+    Identify and diagram a linked list as a set of boxes with pointers
+
+
+
+
+
+
+
+    Identify and diagram a tree as a set of nodes with pointers to their children
+
+    Identify and diagram a graph as a as an unordered set of nodes with pointers to other nodes
+  :instructor_notes: "## Assessments\r\n\r\nGive the student an array, have them come
+    up with a diagram that looks like: [a picture goes here]\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
 - :standard_uuid: e59bae37-553b-4c1b-8667-4dbbdeeae98d
   :standard_name: Technical Interview Prep
   :uuid: 0fe673a0-4edf-449b-8794-cc13101d60c6
