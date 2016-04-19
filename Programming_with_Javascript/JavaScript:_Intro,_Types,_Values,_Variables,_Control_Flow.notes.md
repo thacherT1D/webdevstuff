@@ -1,3 +1,5 @@
+Slides: http://slides.com/lizh/intro-to-javascript#/
+
 ### 1 of 15: What's a Programming Langauge?
 Students Share: Ask students student to define the purpose of a programming language. Then have some of these students share their definition.
 
@@ -8,7 +10,7 @@ Students Write: The value in learning JavaScript?
 Mini-white boards: List the name of the different primitive types. [[Answer: `Number`, `String`, `Boolean`, `undefined`, `null`]]
 
 ### 4 of 15: How to Use a REPL (read, evaluate, print, loop)
-Instructor: Take a few minutes to describe the user interface of [repl.it](https://repl.it/languages/javascript)
+Instructor: Take a few minutes to describe the user interface of `node`
 
 ### 5 of 15: Create Primitive Types
 Mini-whiteboards: What's the data type of this value: `5` [[Answer: `Number`.]]
