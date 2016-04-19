@@ -1,5 +1,7 @@
 (this LE actually takes ~2 hours)
 
+[Slides](https://docs.google.com/presentation/d/1CPwESaDcaiN06Rgie4sctVpfQ-wPCOT2d5nV4kskrYs/edit#slide=id.g12bbca21b1_0_107)
+
 ## Lecture:
 
 ### Semantic Markup
@@ -7,7 +9,7 @@
 #### What & Why (~20 mins)
 
 * Define semantics. Maybe start with a group conversation about when they've heard the word or what it's used for. Official definition is "of, relating to, or arising from the meaning of words and symbols".
-* Relate this to HTML - semantic tags can imbue more meaning in the markup itself. Using classes or ids doesn't help imbue meaning because those aren't standardized, regular. Classes and such should just be used for CSS - for styling content. 
+* Relate this to HTML - semantic tags can imbue more meaning in the markup itself. Using classes or ids doesn't help imbue meaning because those aren't standardized, regular. Classes and such should just be used for CSS - for styling content.
 * Talk about specific reasons for using semantic markup:
     * Readability
     * Accessibility
