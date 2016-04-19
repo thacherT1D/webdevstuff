@@ -18,6 +18,7 @@
 
 #### Homeworks
 * Read Eloquent JS Ch1, 2, 3 -> http://eloquentjavascript.net/
+* Create an EloquentJavascript repo, and put any exercises from those chapters in that repo.
 * https://workbook.galvanize.com/cohorts/67/articles/2595
 
 ### Wednesday
