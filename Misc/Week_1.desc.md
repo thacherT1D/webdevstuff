@@ -18,6 +18,8 @@
 
 #### Homeworks
 * Read Eloquent JS Ch1, 2, 3 -> http://eloquentjavascript.net/
+* Do the exercises in [Chapter 2](http://eloquentjavascript.net/02_program_structure.html#h_TcUD2vzyMe)
+* Do the exercises in [Chapter 3](http://eloquentjavascript.net/03_functions.html#h_TcUD2vzyMe)
 * [Fork this repo](https://github.com/gSchool/EloquentJavascript) and put your exercise solutions in the corresponding chapter folder.
 * Watch the videos in https://workbook.galvanize.com/cohorts/67/articles/2595
 
