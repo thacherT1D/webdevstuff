@@ -132,7 +132,7 @@ cat
 // {'first name': 'Felix', 'last name': 'The Cat'}
 ```
 
-Above, the keys are considered invalid due to the white space in their names. To circumvent this problem, we enclose the invalid identifier in quotation marks. Then, we enclose that string inside of square brackets.
+Above, the keys are considered invalid due to the white space in their names. To circumvent this problem, we enclose the invalid identifier in quotation marks. Then, we enclose that string inside of square brackets. Similarly, if you need to use numbers as keys, you'll want to use square bracket notation.
 
 ### Dot notation vs. square bracket notation (Access)
 
@@ -552,9 +552,9 @@ var superheroes = [
 	}
 ]
 
-people[1].alterEgo.first // "Bruce"
-people[0].favoriteColors[1] // "red"
-people[1].age // 32
+superheroes[1].alterEgo.first // "Bruce"
+superheroes[0].favoriteColors[1] // "red"
+superheroes[1].age // 32
 ```
 
 ## Reading Nested Values
