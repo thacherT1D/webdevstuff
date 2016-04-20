@@ -46,5 +46,7 @@
 * Assessment / Review - JS Intro
 
 #### Homeworks
-* Read Eloquent JS 4 & 5 ->http://eloquentjavascript.net/			
+* Read Eloquent JS 4 & 5 ->http://eloquentjavascript.net/
+* Read [this article on Scope](http://dailyjs.com/2012/07/22/js101-scope/)
+* Read [this article on Call, Apply and Bind](http://dailyjs.com/2012/06/24/this-binding/) - these are tricky concepts, this review will really help you on Monday.
 			
