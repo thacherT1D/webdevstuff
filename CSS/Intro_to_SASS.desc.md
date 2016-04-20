@@ -443,3 +443,5 @@ Want to learn more?
 <script>
    document.querySelector('.col-md-6').className = '';
 </script>
+
+[Lecture Example](https://github.com/ghost-/SassLectureExample)
