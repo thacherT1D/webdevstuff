@@ -446,5 +446,3 @@ Want to learn more?
 
 
 [Lecture Example](https://github.com/ghost-/SassLectureExample)
-
-Test
