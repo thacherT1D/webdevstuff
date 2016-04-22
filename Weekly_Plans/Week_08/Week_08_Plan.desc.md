@@ -73,7 +73,7 @@ Announcements:
 
 # Friday, June 17
 
-Code Crush Friday: [CCF](https://workbook.galvanize.com/cohorts/68/student_dashboard)
+Crush Code Friday: [CCF](https://workbook.galvanize.com/cohorts/68/student_dashboard)
 
 Homework: [Homework](https://workbook.galvanize.com/cohorts/68/student_dashboard)
 

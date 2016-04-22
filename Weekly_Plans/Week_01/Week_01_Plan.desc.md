@@ -12,7 +12,7 @@
 Warmup: [Link to Warmup](http://github.com/gSchool)
 
 Lessons:
-- [Lesson](https://workbook.galvanize.com/cohorts/68/student_dashboard)
+- [Computer Setup](https://workbook.galvanize.com/cohorts/68/articles/3052)
 - [Lesson](https://workbook.galvanize.com/cohorts/68/student_dashboard)
 
 Homework: [Homework](https://workbook.galvanize.com/cohorts/68/student_dashboard)
@@ -25,11 +25,12 @@ Announcements:
 
 # Tuesday, April 26
 
-Warmup: [Link to Warmup](http://github.com/gSchool)
+Warmup: [Values Writeup]()
 
 Lessons:
-- [Lesson](https://workbook.galvanize.com/cohorts/68/student_dashboard)
-- [Lesson](https://workbook.galvanize.com/cohorts/68/student_dashboard)
+- [Norms and Expectations]()
+- [Intro to the Command Line](https://workbook.galvanize.com/cohorts/68/articles/3057)
+- [Intro to Git and Github](https://workbook.galvanize.com/cohorts/68/articles/3060)
 
 Homework: [Homework](https://workbook.galvanize.com/cohorts/68/student_dashboard)
 
@@ -44,8 +45,9 @@ Announcements:
 Warmup: [Link to Warmup](http://github.com/gSchool)
 
 Lessons:
-- [Lesson](https://workbook.galvanize.com/cohorts/68/student_dashboard)
-- [Lesson](https://workbook.galvanize.com/cohorts/68/student_dashboard)
+- [Intro to HTML](https://workbook.galvanize.com/cohorts/68/articles/3063)
+- [Intro to CSS](https://workbook.galvanize.com/cohorts/68/articles/3070)
+- [Learning to Learn](https://workbook.galvanize.com/cohorts/68/articles/3055)
 
 Homework: [Homework](https://workbook.galvanize.com/cohorts/68/student_dashboard)
 
@@ -57,11 +59,11 @@ Announcements:
 
 # Thursday, April 28
 
-Warmup: [Link to Warmup](http://github.com/gSchool)
+Warmup: [Touch Typing](https://workbook.galvanize.com/cohorts/68/articles/3053)
 
 Lessons:
-- [Lesson](https://workbook.galvanize.com/cohorts/68/student_dashboard)
-- [Lesson](https://workbook.galvanize.com/cohorts/68/student_dashboard)
+- [Intermediate CSS](https://workbook.galvanize.com/cohorts/68/articles/3071)
+- [Deploying Static Sites](https://workbook.galvanize.com/cohorts/68/articles/3117)
 
 Homework: [Homework](https://workbook.galvanize.com/cohorts/68/student_dashboard)
 
@@ -73,7 +75,7 @@ Announcements:
 
 # Friday, April 29
 
-Code Crush Friday: [CCF](https://workbook.galvanize.com/cohorts/68/student_dashboard)
+Crush Code Friday: [CCF](https://workbook.galvanize.com/cohorts/68/student_dashboard)
 
 Homework: [Homework](https://workbook.galvanize.com/cohorts/68/student_dashboard)
 
