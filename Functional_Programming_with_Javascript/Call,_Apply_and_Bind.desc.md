@@ -17,6 +17,11 @@ Further reading from external sources, dig into them if you need more help!
 * [Functions](http://dailyjs.com/2012/07/01/function)
 * [The Function Constructor](http://dailyjs.com/2012/07/08/function-2)
 
+### Definitions
+
+* **Execution Context** - This is a way of talking about whatever object is enclosing a function. All functions have an object that they're called from inside. The default calling context is `window` or `global`. 
+* **Invoked** - to "call" a function- to make the code inside run. `()` is sometimes called the "invocation operator"
+
 
 One of the more conceptually challenging concepts in JavaScript is the idea of `this`, and setting the value of the keyword `this`.
 
