@@ -1,12 +1,20 @@
-## Call, Apply and Bind
+## `this`, Call, Apply and Bind
 
-One of the more conceptually challenging concepts in JavaScript is the idea of setting the context of the keyword `this`.
+### Objectives
+
+* Explain what `this` means, inside of a function
+* Describe the 4 ways `this` gets set
+* Use `call()` to explicitly set `this` and map the following parameters onto a function's parameters
+* Use `apply()` to explicitly set `this` and map `arguments` onto a function's parameters
+* Use `bind()` to explicitly set `this`
+
+One of the more conceptually challenging concepts in JavaScript is the idea of `this`, and setting the value of the keyword `this`.
 
 Call, Apply and Bind are three methods on `Function.prototype` that enable you to invoke a function (or store the result of that function) and set the context of the keyword `this`
 
-### A quick review of the keyword `this`
+### A quick overview of the keyword `this`, and `arguments`
 
-In JavaScript, every time that a function is invoked, two special keywords are created (that live in the scope of that function). 
+In JavaScript, every time that a function is invoked, two special keywords are created that live in the scope of that function. 
 
 1. `arguments` - the keyword arguments is an array-like object (does not have native array methods like push/pop/forEach/map) which represents each argument passed to the function.
 
@@ -46,7 +54,7 @@ In this example, the keyword `this` refers to the `person` object (sometimes it'
     hello(); // what does this function return?
 ```
 
-So what happens when we call a function without explicitly defining its parent object? It returns the window object! This actually makes a lot of sense, because everything that we define in the global scope (in the browser) is attached to the window object (we could invoke this function by using `window.hello()`)
+So what happens when we call a function without explicitly defining its parent object? It returns the `window` object! This actually makes a lot of sense, because everything that we define in the global scope (in the browser) is attached to the `window` object. We could actually invoke this function by using `window.hello()`.
 
 ### Changing the value of `this` using call or apply
 
