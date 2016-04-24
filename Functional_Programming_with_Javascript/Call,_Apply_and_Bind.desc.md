@@ -7,6 +7,16 @@
 * Use `call()` to explicitly set `this` and map the following parameters onto a function's parameters
 * Use `apply()` to explicitly set `this` and map `arguments` onto a function's parameters
 * Use `bind()` to explicitly set `this`
+ 
+### Resources
+Further reading from external sources, dig into them if you need more help!
+
+* [Working with `this`](http://dailyjs.com/2012/06/17/js101-this/)
+* [Call, Apply, Bind](http://dailyjs.com/2012/06/24/this-binding/)
+* [Scope](http://dailyjs.com/2012/07/22/js101-scope/)
+* [Functions](http://dailyjs.com/2012/07/01/function)
+* [The Function Constructor](http://dailyjs.com/2012/07/08/function-2)
+
 
 One of the more conceptually challenging concepts in JavaScript is the idea of `this`, and setting the value of the keyword `this`.
 
