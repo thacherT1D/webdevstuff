@@ -1,25 +1,23 @@
 # Week 1 (April 25 - April 29)
 ## Weekly Objective
 
-- Objective 1
-- Objective 2
-- Objective 3
+By the end of this week you will:
+
+- use git to manage your projects.
+- be able to create web pages using HTML
+- be able to style web pages using CSS
+- use the command line to navigate the filesystem.
 
 ---
 
 # Monday, April 25
 
-Warmup: [Link to Warmup](http://github.com/gSchool)
+Warmup: No warmup.
 
 Lessons:
 - [Computer Setup](https://workbook.galvanize.com/cohorts/68/articles/3052)
-- [Lesson](https://workbook.galvanize.com/cohorts/68/student_dashboard)
 
-Homework: [Homework](https://workbook.galvanize.com/cohorts/68/student_dashboard)
-
-Announcements:
-- Announcement 1
-- Announcement 2
+Homework: No Homework.
 
 ---
 
