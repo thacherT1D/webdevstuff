@@ -15,7 +15,7 @@ Today we will be expanding on our understanding of CSS.
   - Explain the 4 CSS positions.
   - Use an attribute selector.
   - Understand what a psuedo-class does.
-  - Be able to manipulate fonts
+  - Be able to manipulate fonts.
   - Understand the different types of colors.
 
 
