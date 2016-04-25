@@ -143,9 +143,9 @@ You can quickly search for packages [here](https://atom.io/packages).
 `linter-jshint` and `linter-htmlhint` rely on having configuration files to define rules for what the linter considers good or bad. Let's save some configs in our home directory:
 
 ```bash
-cd
-curl https://gist.github.com/JordanMajd/9452f438cb48def55a647f7e48e1bdf9 > .jshintrc
-curl https://gist.github.com/JordanMajd/122409a4e130f7e45c34a59cfc668dd7 > .jshintrc
+cd #navigate to home directory
+curl https://gist.githubusercontent.com/JordanMajd/9452f438cb48def55a647f7e48e1bdf9/raw/1fd88bd866e359a369ad61cbbcffbcec22c4c22c/.jshintrc > .jshintrc #download and save .jshintrc
+curl https://gist.githubusercontent.com/JordanMajd/122409a4e130f7e45c34a59cfc668dd7/raw/00ff634c3c66204056ee448d0ee85b3c6072e6e6/.htmlhintrc > .htmlhintrc #download and save .htmlhintrc
 ```
 
 **Step Three:** In order for the linter to read the config files, Atom must be restarted : `ctrl` + `option` + `cmd` + `l`.
