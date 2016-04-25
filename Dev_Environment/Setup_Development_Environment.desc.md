@@ -144,8 +144,8 @@ You can quickly search for packages [here](https://atom.io/packages).
 
 ```bash
 cd
-wget path/to/.jshintrc
-wget path/to/.htmlhintrc
+wget https://gist.github.com/JordanMajd/9452f438cb48def55a647f7e48e1bdf9
+wget https://gist.github.com/JordanMajd/122409a4e130f7e45c34a59cfc668dd7
 ```
 
 **Step Three:** In order for the linter to read the config files, Atom must be restarted : `ctrl` + `option` + `cmd` + `l`.
