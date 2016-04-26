@@ -53,7 +53,7 @@ Any files tracked by git typically go through 3 stages:
 
 ## What is GitHub?
 
-Git and GitHub are NOT the same thing.
+Git and GitHub are **NOT** the same thing.
 [Github](http://github.com/) is a web based service that hosts repositories on a server and allows developers to easily collaborate.
 Github acts as a remote backup service for git repositories.
 Once we've __pushed__ to a __remote__ such as GitHub, we know our code is safe.
@@ -105,7 +105,7 @@ There are 4 main commands for `git`
 With these 4 commands you can create a repo and start versioning your project.
 
 ### <a name="init"></a>git init
-[git manual](https://git-scm.com/docs/git-init)
+* [git manual](https://git-scm.com/docs/git-init)
 
 Initialize a new git repo in the current directory with:
 ```sh
@@ -116,7 +116,7 @@ You can verify git was initialized by checking if a `.git` folder was created wi
 
 
 ### <a name="status"></a>git status
-[git manual](https://git-scm.com/docs/git-status)
+* [git manual](https://git-scm.com/docs/git-status)
 
 
 When in a git repository, you can type `git status` to see any staged or unstaged changes pending.
@@ -149,7 +149,7 @@ Untracked files:
 ```
 
 ### <a name="add"></a>git add
-[git manual](https://git-scm.com/docs/git-add)
+* [git manual](https://git-scm.com/docs/git-add)
 
 
 If you have any files that are brand new to the repo or have been changed, you can tell git to start tracking it with:
@@ -167,7 +167,7 @@ After adding a file or change to the repo,
 
 
 ### <a name="commit"></a> git commit
-[git manual](https://git-scm.com/docs/git-commit)
+* [git manual](https://git-scm.com/docs/git-commit)
 
 
 After staging files with `git add`,
@@ -181,7 +181,7 @@ This will create a commit in git that will be a snapshot of what the project cur
 
 
 ### <a name="push"></a>git push
-[git manual](https://git-scm.com/docs/git-push)
+* [git manual](https://git-scm.com/docs/git-push)
 
 If you are using GitHub or collaborating with another git repo, you can push any new commits to your default remote with:
 ```sh
@@ -224,7 +224,7 @@ $ git commit -m "Initial commit"
 1. Create a file
 1. Stage the file
 1. Commit the file
-1. Set the GitHub repo as the git remote
+1. Set the GitHub repo as the git remote: `remote add origin git@github.com:{userName}/{repoName}.git`
 1. Push to GitHub
 
 #### Answer
