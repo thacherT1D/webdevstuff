@@ -1,16 +1,6 @@
 Command Line Basics
 ===================
 
-[Slide Deck Option 1](https://docs.google.com/presentation/d/10THpOD-J8vSPFAGiB3dU4w8wEstZ8PkxNIOrup3cTCU/edit#slide=id.gbf37db18e_0_32)
-
-[Slide Deck Option 2](https://docs.google.com/presentation/d/1IVdWBXeh9cIDqGZzslQoMfPPxwD-xZYpl36wBS-oSuQ/edit#slide=id.p)
-
-This lesson is meant to provide students with an introduction to the command line.
-
-Programmers of all kinds live on the command line.  It gives us fast and reliable control over computers. the CLI (command line interface) has become a sort of lingua franca of computer programming. Because so many developers spend so much time in the CLI there are an abundance of commands that programmers have developed to make programming easier.
-
-Not only that, but Web servers usually don't have graphical interfaces, so we are forced to interact with them through command line and programmatic interfaces.  Once you become comfortable using the command line, staying on the keyboard will also help you keep an uninterrupted flow of work going without the disruption of shifting to the mouse.
-
 ## Objectives -- You Should Learn How To:
 
 * Describe the connection between the command line and the "Graphical User Interface"
@@ -27,6 +17,16 @@ Not only that, but Web servers usually don't have graphical interfaces, so we ar
 * Explore interesting, but non-essential commands on your own:
 	* networks: `ping, curl, wget, traceroute`
 	* systems: `ps, top, df`
+
+
+- [Slide Deck Option 1](https://docs.google.com/presentation/d/10THpOD-J8vSPFAGiB3dU4w8wEstZ8PkxNIOrup3cTCU/edit#slide=id.gbf37db18e_0_32)
+- [Slide Deck Option 2](https://docs.google.com/presentation/d/1IVdWBXeh9cIDqGZzslQoMfPPxwD-xZYpl36wBS-oSuQ/edit#slide=id.p)
+
+This lesson is meant to provide students with an introduction to the command line.
+
+Programmers of all kinds live on the command line.  It gives us fast and reliable control over computers. the CLI (command line interface) has become a sort of lingua franca of computer programming. Because so many developers spend so much time in the CLI there are an abundance of commands that programmers have developed to make programming easier.
+
+Not only that, but Web servers usually don't have graphical interfaces, so we are forced to interact with them through command line and programmatic interfaces.  Once you become comfortable using the command line, staying on the keyboard will also help you keep an uninterrupted flow of work going without the disruption of shifting to the mouse.
 
 
 ## Topics
@@ -66,19 +66,13 @@ Although they technically mean slightly different things, the following terms ar
   *  Shell
   *  bash ('Bourne-Again shell', although I've haven't heard that used recently)
   *  Command Line
-  *  Text Terminal
-  *  DOS Prompt (on windows machines)
-  *  SSH (on remote machines)
-  *  Bourne Shell
-  *  csh
-  *  ksh
-  *  sh
-  *  [UNIX Shell](http://en.wikipedia.org/wiki/Unix_shell)
+  *  Terminal
+  *  DOS/Command Prompt (on windows machines)
 
 ## Opening the Terminal
 __Follow Along:__
 
-1.  In the top right of the screen click the Magnifying Glass icon (or use `⌘+space`) to bring up 'Spotlight' and type 'Terminal'
+1.  In the top right of the screen click the Magnifying Glass icon (or use `⌘+space`) to bring up 'Spotlight' and type 'iTerm' or 'terminal'
 2.  Once Terminal starts locate the icon in the doc and select `Options->Keep In Dock` so that it's always handy.
 
 __Note:__ In documentation we often see a `#` or a `$` prefix before code examples, these characters are used to indicate that the example is a something which is executed in the terminal (as opposed to being a code sample) and usually these are not supposed to be entered when you execute a command. You'll see the `$` notation used throughout this learning experience.
@@ -118,7 +112,7 @@ The file structure you see in the Terminal is the same as the one you see in the
 ## Where am I?
 Typically the shell will start in your `HOME` directory, each user has their own `HOME` directory, but on your computer it is common for you to be the only real user. At any given time a terminal shell process has one __current working directory__. Lets use the pwd (short for __print working directory__) command to show your current working directory:
 
-__Try This:__
+**You Do:**
 
 ```
 $ pwd
@@ -128,7 +122,7 @@ For Elie this is `Users/eschoppik`, what is the __current working directory__ of
 
 >Pro-tip: the tilde character (`~`) is mapped (or aliased) to the `HOME` directory on most *nix shells. Try: `echo ~`, is this the same as the output you got from `pwd`?
 
-__Try This__:
+**You Do:**:
 
 `$ open .`
 
@@ -248,7 +242,7 @@ Hidden files are hidden because their names begin with `.`
 
 ## The File System is a Tree
 
-__Try This__: 
+**You Do:**:
 
 `$ tree -L 3`
 
@@ -264,7 +258,7 @@ In our filesystem *nodes* can be directories or files. The parent of any file or
 ## Root Directory
 Another important directory is the root directory `/`
 
-__Try This__:
+**You Do:**:
 
 ```
 $ cd /  
@@ -285,7 +279,7 @@ $ pwd
 Remember, the `~` always refers to the current user's home directory, this is handy for scripts and for you, but you can use the full path just as well if you know it, `pwd` will give you the full path.
 
 ## Relative Paths
-__Try this:__
+**You Do:**
 
 ```
 cd ../
@@ -376,7 +370,7 @@ __Operands__ (or arguments or parameters) are what comes after a command, so we 
 
 >Pro-tip: WordsLikeThis are called CamelCase. Programmers frequently [argue about snake_case and CamelCase](http://programmers.stackexchange.com/questions/27264/naming-conventions-camelcase-versus-underscore-case-what-are-your-thoughts-ab)
 
-__Try This__
+**You Do:**
 
 ```
 $ cd ~
@@ -442,25 +436,25 @@ What does `less` do? Inside of your `less` window, try typing `/Mill` then hitti
 
 
 ## echo and Redirection
-__Try This__
+**You Do:**
 
 `$ echo "This bookshelf flexes under the weight of the books it holds."`
 
 Recall that `echo` just echoes (outputs) what we give to it as arguments (same as operands).  Now we want to put that line in a file called `bookshelf.txt`.
 
-__Try This__
+**You Do:**
 
 `$ echo "This bookshelf flexes under the weight of the books it holds" > bookshelf.txt`
 
 Using the closing angle bracket `>` in this way is called __redirection__.  Every command that we run in the shell has an input, an output, an error output, and arguments/operands.  We are saying:  "Run `echo` with this string as an operand, and take the output and put it in a new file called bookshelf.txt"  Try running `ls` again, and `cat` our new file.
 
-__Try This__
+**You Do:**
 
 `$ echo "Hmmm" > bookshelf.txt`
 
 Now `cat bookshelf.txt` again. Our old text has been replaced with the new text "Hmmm". Sometimes we'll want to __append__ to the existing text instead of overwriting it. We use two angle brackets `>>` to append the string to the end of the file:
 
-__Try This__
+**You Do:**
 
 `$ echo "This bookshelf flexes under the weight of the books it holds" > bookshelf.txt`  
 `$ echo "It does not break, it does its job admirably" >> bookshelf.txt`
@@ -481,19 +475,19 @@ Let's look back at our books.  Read out the file.  Notice that the list of books
 
 Pipes allow us to use the output from one command as the input for another command.
 
-__Try This__
+**You Do:**
 
 `$ cat books.txt | sort`
 
 We took the output from `cat books.txt` and sent it through a pipe to `sort`.  The output of `cat books.txt` becomes the input of `sort`. The output of `sort` printed to our screen. Now lets redirect the output of `sort` to a file:
 
-__Try This__
+**You Do:**
 
 `$ cat books.txt | sort > sorted_books.txt`
 
 There are dozens of powerful tools we can leverage using pipes.  One of the ones you'll be using the most is `grep`.
 
-__Try This__
+**You Do:**
 
 `$ cat books.txt | grep Mil`
 
@@ -529,7 +523,7 @@ Milton, John:Paradise Lost
 
 Now that we have our books sorted, we really don't need our unsorted list of books.  `mv` stands for move, and that's how we move files and folders from place to place.
 
-__Try This__
+**You Do:**
 
 `$ mv sorted_books.txt books.txt`
 
@@ -538,7 +532,7 @@ Examine the contents of our current directory. What has changed?
 ## Copying
 To copy files, we use the `cp` command.  Extrapolate from the way we used `mv` to copy the file `bookshelf.txt` to add a file `second_bookshelf.txt`.
 
-__Try This__
+**You Do:**
 
 `$ cp bookshelf.txt second_bookshelf.txt`
 
@@ -547,7 +541,7 @@ What happened? What are the contents of second_bookshelf.txt?
 ## Removing
 `rm` is short for remove.  Use `rm` to remove the `second_bookshelf.txt` file we just created with `cp`.
 
-__Try This__
+**You Do:**
 
 `$ rm second_bookshelf.txt`
 
@@ -557,7 +551,7 @@ __Try This__
 
 By default, commands like `cp` and `rm` only apply to the file specified. We can copy and remove entire directories with the `-r` option. `-r` stands for recursive, which is a very important term in computer programming. In this context it means "follow the directory structure through sub-directories until we are at a 'leaf node' in our directory tree."
 
-__Try This__
+**You Do:**
 
 ```
 cd ..
@@ -577,7 +571,7 @@ The study is gone. You can also use `rmdir` for this purpose.
 ## Filename Wildcards
 
 Sometimes we want to refer to a bunch of similar files, to do this we can use wildcards. The most common wildcard to use is `*` usually along with a file extension:
-__Try This__
+**You Do:**
 
 `$ ls -la *.txt`
 
@@ -644,7 +638,7 @@ This failed, because even though your user owns that file, you're not allowed to
 
 Enter `root`. Root is the administrative user. Root has all permissions. Root can do anything. You can become this "super user" to run a command using the `sudo` (super user do) command.
 
-__Try This__:
+**You Do:**:
 
 ```
 sudo chown StrangeUser:staff bookshelf.txt
@@ -658,7 +652,7 @@ You should be asked for your password, then the command will execute as if you a
 
 Wow, we've done a lot of work. Remembering all these commands can be hard. Luckily our shell remembers a lot of what we've done for us! Try tapping the up arrow in your shell. What happens? We can scroll up and down through the most recent commands we've executed.
 
-__Try This__
+**You Do:**
 
 `$ history`
 
@@ -688,7 +682,7 @@ Bookmark this:
 
 * [http://bit.ly/terminalcheats](http://bit.ly/terminalcheats)
 
-### Homework!
+### Exercise:
 
 Solve the [Command Line Murder Mystery](https://github.com/veltman/clmystery). To get started, fork and clone the repo to your local machine. Further instructions can be found in the README for the mystery. Good luck!
 
