@@ -74,7 +74,7 @@ Although they technically mean slightly different things, the following terms ar
 ## Opening the Terminal
 __Follow Along:__
 
-1.  Press`⌘+space` to bring up 'Spotlight' and type 'iTerm'.
+1.  Press `⌘+space` to bring up 'Spotlight' and type `iterm` and press `return`.
 1.  Once the terminal starts locate the icon in the doc and select `Options->Keep In Dock` so that it's always handy.
 
 __Note:__ In documentation we often see a `#` or a `$` prefix before code examples, these characters are used to indicate that the example is a something which is executed in the terminal (as opposed to being a code sample) and usually these are not supposed to be entered when you execute a command. You'll see the `$` notation used throughout this learning experience.
@@ -83,7 +83,7 @@ __Note:__ In documentation we often see a `#` or a `$` prefix before code exampl
 
 The most important command in all of terminal life is `man`. Short for manual, the man command gives you information about how to use any given command. Whenever you encounter a new command, try looking at the manual entry.
 
-Try typing the following into your command line:
+**You Do:** type the following into your command line:
 
 ```bash
 $ man echo
@@ -93,7 +93,7 @@ What do you see? Is it clear what `echo` does?
 
 `echo` simply prints whatever **arguments** you provided back to the terminals **standard output stream**. Type q to exit the manual.
 
-Try this:
+**You Do:**
 
 ```bash
 $ echo hello world
