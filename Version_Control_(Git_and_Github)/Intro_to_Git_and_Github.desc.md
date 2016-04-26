@@ -178,6 +178,7 @@ $ git commit -m "I fixed all of the bugs. :)"
 This will create a commit in git that will be a snapshot of what the project currently is.
 
 ### git push
+---
 
 [git manual](https://git-scm.com/docs/git-push)
 
