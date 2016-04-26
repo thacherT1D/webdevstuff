@@ -182,3 +182,132 @@ Define these terms and answer these questions in 1-3 sentences (some will requir
 
 * [MongoDB Manual](http://docs.mongodb.org/manual/)
 * [Mongoose guide](http://mongoosejs.com/docs/guide.html)
+* 
+#Mongoose
+
+> The best thing about Mongoose for MongoDB is the fact that you can have built-in automatic validation of the data which you are inserting/updating. Mongoose also gives you the ability to pre-define events to happen, say, before a document gets saved. This is very powerful because it consolidates the code you would have to write, and it places that code where it should be next to the document logic and not in the application logic.
+
+> Knowing a defined schema beforehand can be handy, because then you can make assumptions that you otherwise might not be able to. For example, if I have a Post schema, then I can assume that it has a body field and use it as a String without checking its existence.
+
+[Mongoose Docs](http://mongoosejs.com/docs/)
+
+
+##Mongoose on its own(without Express)
+
+###Setup
+```
+var mongoose = require("mongoose");
+mongoose.connect("mongodb://localhost/dog_park");
+mongoose.set('debug', true);
+```
+
+###Defining Schema and Model
+
+```
+var dogSchema = new mongoose.Schema({
+	name: String,
+ 	breed: String,
+	age: Number
+});
+
+var Dog =  mongoose.model("Dog", dogSchema);
+```
+
+###Do Something!
+
+To create a new dog:
+
+```
+Dog.create(
+	{
+		name: "Momo",
+		breed: "Miniature American Eskimo",
+		age: 1
+	}, 
+	function(err, dog){
+		if (err) {
+			console.log(err);
+		} else {
+			console.log(dog);
+		}
+	}
+)
+
+```
+
+####Exercise - Create 3 dogs:
+
+* Charlie - 2 year old Lab
+* Wyatt - 11 Year old Lab
+* Sitka - 2 year old Malamute
+
+
+
+To retrieve records:
+
+```
+//Find all Dogs
+Dog.find({}, function(err, dogs) { console.log(dogs); });
+//Find all 1 year old dogs(puppies)
+Dog.find( { age: 1}, function(err, dogs) { console.log(dogs); });
+```
+
+####Exercise
+ 
+ * Find all the dogs, store them in an array called `dogPack`, and then loop through `dogPack` and make each dog bark by printing out "insertDogNamehere says Woof!"
+ * Find all labs and console.log() each one
+ 
+ **Think Async**
+
+
+To Update a Record:
+
+```
+Dog.update({name: "Momo"}, {age:100}, function(err, dog){
+	if(err){
+		console.log(err)
+	} else {
+		console.log(dog)
+	}
+})
+```
+
+To Delete a Record:
+
+```
+Dog.remove({name: "Rusty"}, function(err, dog){
+	if(err){
+		console.log(err)
+	} else {
+		console.log(dog)
+	}
+})
+```
+
+####Exercise
+* Your dog had a new litter of 4 puppies! You decided on names already: `["Tater", "Garfunkel", "Luna", "Remus"]`  Loop through this array of names and create a new Dog for each one.  Set age to 0 and breed to Mutt
+* OH NO!!! Garfunkel's mom accidentally stepped on him and crushed him :(  Remove him from the database
+* It's the new litter's first birthday!  Find all dogs that are 0 years old and update them to be 1!
+
+##Mongoose with Express
+
+We're going to add Mongo/Mongoose to our library app assignment.  
+
+* Clone [this repo](https://github.com/gSchool/express_library_app) if you aren't caught up with the basic non-bonus functionality, otherwise keep building on your own version.
+* Checkout the `mongoose_starter` branch
+* Install dependencies
+* Install Mongoose
+
+### The methods we will need:
+
+* `find`
+* `create`
+* `findById`
+* `findByIdAndUpdate`
+* `findByIdAndRemove`
+
+## Homework
+
+https://github.com/gSchool/mongoose_countries_app
+
+Reading: http://docs.mongodb.org/manual/core/aggregation-introduction/ & http://docs.mongodb.org/manual/reference/operator/aggregation/group/
