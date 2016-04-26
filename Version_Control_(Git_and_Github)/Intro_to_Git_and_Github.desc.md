@@ -112,7 +112,7 @@ Initialize a new git repo in the current directory with:
 $ git init
 ```
 
-You can verify git was intialized by checking if a `.git` folder was created with `ls -a`.
+You can verify git was initialized by checking if a `.git` folder was created with `ls -a`.
 
 #### `git status`
 
