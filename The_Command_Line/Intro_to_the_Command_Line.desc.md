@@ -26,7 +26,7 @@ After this lesson, you will be able to:
 
 This lesson is meant to provide students with an introduction to the command line.
 
-Programmers of all kinds live on the command line.  It gives us fast and reliable control over computers. the CLI (command line interface) has become a sort of lingua franca of computer programming. Because so many developers spend so much time in the CLI there are an abundance of commands that programmers have developed to make programming easier.
+Programmers of all kinds live on the command line. It gives us fast and reliable control over computers. the CLI (command line interface) has become a sort of lingua franca of computer programming. Because so many developers spend so much time in the CLI there are an abundance of commands that programmers have developed to make programming easier.
 
 Not only that, but Web servers usually don't have graphical interfaces, so we are forced to interact with them through command line and programmatic interfaces.  Once you become comfortable using the command line, staying on the keyboard will also help you keep an uninterrupted flow of work going without the disruption of shifting to the mouse.
 
@@ -74,8 +74,8 @@ Although they technically mean slightly different things, the following terms ar
 ## Opening the Terminal
 __Follow Along:__
 
-1.  In the top right of the screen click the Magnifying Glass icon (or use `⌘+space`) to bring up 'Spotlight' and type 'iTerm' or 'terminal'
-2.  Once Terminal starts locate the icon in the doc and select `Options->Keep In Dock` so that it's always handy.
+1.  Press`⌘+space` to bring up 'Spotlight' and type 'iTerm'.
+1.  Once the terminal starts locate the icon in the doc and select `Options->Keep In Dock` so that it's always handy.
 
 __Note:__ In documentation we often see a `#` or a `$` prefix before code examples, these characters are used to indicate that the example is a something which is executed in the terminal (as opposed to being a code sample) and usually these are not supposed to be entered when you execute a command. You'll see the `$` notation used throughout this learning experience.
 
@@ -85,7 +85,9 @@ The most important command in all of terminal life is `man`. Short for manual, t
 
 Try typing the following into your command line:
 
-`$ man echo`
+```bash
+$ man echo
+```
 
 What do you see? Is it clear what `echo` does?
 
@@ -93,7 +95,9 @@ What do you see? Is it clear what `echo` does?
 
 Try this:
 
-`$ echo hello world`
+```bash
+$ echo hello world
+```
 
 In the command `man echo`, `man` is the command and `echo` is the argument.
 
@@ -138,7 +142,9 @@ What can we find out about the  __current working directory__ ?
 
 One of the most useful commands is:
 
-`$ ls`
+```bash
+$ ls
+```
 
 Which lists the files and directories in the current working directory. Personally I find this a little difficult to read so I use the long form by envoking the `-l` option:
 
@@ -246,7 +252,9 @@ Hidden files are hidden because their names begin with `.`
 
 **You Do:**
 
-`$ tree -L 3`
+```bash
+$ tree -L 3
+```
 
 > Pro-Tip: If you see "command not found" try `brew install tree`
 
@@ -324,15 +332,21 @@ Any path starting with a `/` is said to be an __absolute path__ and it is the co
 ## Tab Completion
 Hitting `<TAB>` autocompletes.  Hit `<TAB>` constantly. Try it right now! Type:
 
-`$ cd ~/L` THEN HIT TAB!
+```bash
+$ cd ~/L #THEN HIT TAB!
+```
 
 This trick will save you so much time. Here's another trick, type:
 
-`$ cd ~/` now DOUBLE TAP TAB. What happened?
+```bash
+$ cd ~/ #now DOUBLE TAP TAB. What happened?
+```
 
 This way you can easily see the competing outcomes of autocomplete. What happens if you type:
 
-`$ cd ~/D` then double tap tab?
+```bash
+$ cd ~/D #then double tap tab?
+```
 
 The competing options for me are `Desktop/`, `Documents/`, and `Downloads/`
 
