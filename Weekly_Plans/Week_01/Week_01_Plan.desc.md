@@ -23,18 +23,12 @@ Homework: No Homework.
 
 # Tuesday, April 26
 
-Warmup: [Values Writeup]()
+Warmup: [Values Writeup](https://github.com/gSchool/values_writeup)
 
 Lessons:
 - [Norms and Expectations]()
 - [Intro to the Command Line](https://workbook.galvanize.com/cohorts/68/articles/3057)
 - [Intro to Git and Github](https://workbook.galvanize.com/cohorts/68/articles/3060)
-
-Homework: [Homework](https://workbook.galvanize.com/cohorts/68/student_dashboard)
-
-Announcements:
-- Announcement 1
-- Announcement 2
 
 ---
 
