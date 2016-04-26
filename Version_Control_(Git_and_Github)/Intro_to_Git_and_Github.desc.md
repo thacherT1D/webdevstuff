@@ -112,7 +112,7 @@ Initialize a new git repo in the current directory with:
 $ git init
 ```
 
-You can verify git was intialized by checking if a `.git` folder was created with `ls -a`.
+You can verify git was initialized by checking if a `.git` folder was created with `ls -a`.
 
 #### `git status`
 
@@ -254,5 +254,5 @@ $ git push -u origin master
 * [Try Git](https://try.github.io/)
 
 
-## Git Cheatsheet 
+## Git Cheatsheet
 * [Tower Git Cheatsheet](http://www.git-tower.com/blog/git-cheat-sheet/)
