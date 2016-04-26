@@ -194,7 +194,7 @@ If you have your remote pointing to GitHub, you should now be able to see any ch
 
 Try to do these without looking at the answer first!
 
-### Basic Git Workflow
+### Exercise One: Basic Git Workflow
 
 1. Create a new folder
 1. Initialize a git repository
@@ -204,7 +204,19 @@ Try to do these without looking at the answer first!
 1. Check that the file is staged
 1. Commit the file
 
-#### Answer
+### Exercise Two: Pushing to GitHub
+
+1. Create a GitHub repository and don't initialize it
+1. Create a local git repository
+1. Create a file
+1. Stage the file
+1. Commit the file
+1. Set the GitHub repo as the git remote: `remote add origin git@github.com:{userName}/{repoName}.git`
+1. Push to GitHub
+
+## Answers
+
+### Exercise One: Answer
 
 ```bash
 $ mkdir myProjectName
@@ -217,17 +229,7 @@ $ git status
 $ git commit -m "Initial commit"
 ```
 
-### Pushing to GitHub
-
-1. Create a GitHub repository and don't initialize it
-1. Create a local git repository
-1. Create a file
-1. Stage the file
-1. Commit the file
-1. Set the GitHub repo as the git remote: `remote add origin git@github.com:{userName}/{repoName}.git`
-1. Push to GitHub
-
-#### Answer
+### Exercise Two: Answer
 
 Create a GitHub repo:
 ![Hit the + Icon](create-github-repo-1.png)
