@@ -1,7 +1,9 @@
 Command Line Basics
 ===================
 
-## Objectives -- You Should Learn How To:
+## Objectives
+
+After this lesson, you will be able to:
 
 * Describe the connection between the command line and the "Graphical User Interface"
 * Use `man`, "*the only command you'll ever need*."
@@ -13,11 +15,11 @@ Command Line Basics
 * Search your bash history with `history | grep` and `ctrl+r`.
 * Describe permissions and change them.
 	* Use `sudo, chmod, chown`
-
 * Explore interesting, but non-essential commands on your own:
 	* networks: `ping, curl, wget, traceroute`
 	* systems: `ps, top, df`
 
+## Command Line Basics
 
 - [Slide Deck Option 1](https://docs.google.com/presentation/d/10THpOD-J8vSPFAGiB3dU4w8wEstZ8PkxNIOrup3cTCU/edit#slide=id.gbf37db18e_0_32)
 - [Slide Deck Option 2](https://docs.google.com/presentation/d/1IVdWBXeh9cIDqGZzslQoMfPPxwD-xZYpl36wBS-oSuQ/edit#slide=id.p)
