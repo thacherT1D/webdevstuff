@@ -103,7 +103,7 @@ There are 4 main commands for `git`
 
 With these 4 commands you can create a repo and start versioning your project.
 
-### `git init`
+### git init
 
 [git manual](https://git-scm.com/docs/git-init)
 
@@ -114,7 +114,7 @@ $ git init
 
 You can verify git was initialized by checking if a `.git` folder was created with `ls -a`.
 
-### `git status`
+### git status
 
 [git manual](https://git-scm.com/docs/git-status)
 
@@ -147,7 +147,7 @@ Untracked files:
 	05_github_workflow.md
 ```
 
-### `git add`
+### git add
 
 [git manual](https://git-scm.com/docs/git-add)
 
@@ -164,7 +164,7 @@ $ git add .
 After adding a file or change to the repo,
   try running `git status` again to make sure it got staged.
 
-### `git commit`
+### git commit
 
 [git manual](https://git-scm.com/docs/git-commit)
 
@@ -177,7 +177,7 @@ $ git commit -m "I fixed all of the bugs. :)"
 
 This will create a commit in git that will be a snapshot of what the project currently is.
 
-### `git push`
+### git push
 
 [git manual](https://git-scm.com/docs/git-push)
 
