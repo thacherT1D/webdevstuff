@@ -32,6 +32,8 @@ Lessons:
 - [Intro to the Command Line](https://workbook.galvanize.com/cohorts/68/articles/3057)
 - [Intro to Git and Github](https://workbook.galvanize.com/cohorts/68/articles/3060)
 
+Homework: [Command Line Murder Mystery](https://github.com/veltman/clmystery)
+
 ---
 
 # Wednesday, April 27
