@@ -116,7 +116,7 @@ Typically the shell will start in your `HOME` directory, each user has their own
 
 **You Do:**
 
-```
+```bash
 $ pwd
 /Users/eschoppik
 ```
@@ -244,7 +244,7 @@ Hidden files are hidden because their names begin with `.`
 
 ## The File System is a Tree
 
-**You Do:**:
+**You Do:**
 
 `$ tree -L 3`
 
@@ -260,7 +260,7 @@ In our filesystem *nodes* can be directories or files. The parent of any file or
 ## Root Directory
 Another important directory is the root directory `/`
 
-**You Do:**:
+**You Do:**
 
 ```bash
 $ cd /  
@@ -375,9 +375,8 @@ __Operands__ (or arguments or parameters) are what comes after a command, so we 
 **You Do:**
 
 ```bash
-$ cd ~
-
-$ mkdir living_room
+$ cd ~ #navigate to home directory
+$ mkdir living_room #create a directory named living_room
 ```
 
 What command can you use to see the results of your handywork?
@@ -389,13 +388,17 @@ Let's `cd` into our new `living_room`  Look around with `ls`, and `ls -la`.  Wha
 __Exercise__
 I want my living room to have a bookshelf full of books.  Let's make a file that lists all of our books. Try this:
 
-`$ touch books.txt`
+```bash
+$ touch books.txt
+```
 
 Now try listing the contents of your current directory. What did the command `touch` do? You can use `touch` to do more than just create files. Try reading the man page for touch!
 
 We've created a file, lets try editing text with the command line! Type:
 
-`$ nano books.txt`
+```bash
+$ nano books.txt
+```
 
 >If you get an error like `bash: nano: command not found` then try installing `nano` with homebrew by running the command `brew install nano`
 
@@ -421,13 +424,17 @@ When you're done, exit nano by hitting `ctrl+x`. Nano will ask if you want to sa
 
 Now try `ls -la` again.  Do you see the `books.txt` file?  Look at the contents with:
 
-`$ cat books.txt`
+```bash
+$ cat books.txt
+```
 
 What does `cat` do?
 
 There are other ways to view text files as well. Try
 
-`$ less books.txt`
+```bash
+$ less books.txt
+```
 
 What does `less` do? Inside of your `less` window, try typing `/Mill` then hitting enter, what happened?
 
@@ -440,26 +447,34 @@ What does `less` do? Inside of your `less` window, try typing `/Mill` then hitti
 ## echo and Redirection
 **You Do:**
 
-`$ echo "This bookshelf flexes under the weight of the books it holds."`
+```bash
+$ echo "This bookshelf flexes under the weight of the books it holds."
+```
 
 Recall that `echo` just echoes (outputs) what we give to it as arguments (same as operands).  Now we want to put that line in a file called `bookshelf.txt`.
 
 **You Do:**
 
-`$ echo "This bookshelf flexes under the weight of the books it holds" > bookshelf.txt`
+```bash
+$ echo "This bookshelf flexes under the weight of the books it holds" > bookshelf.txt
+```
 
 Using the closing angle bracket `>` in this way is called __redirection__.  Every command that we run in the shell has an input, an output, an error output, and arguments/operands.  We are saying:  "Run `echo` with this string as an operand, and take the output and put it in a new file called bookshelf.txt"  Try running `ls` again, and `cat` our new file.
 
 **You Do:**
 
-`$ echo "Hmmm" > bookshelf.txt`
+```bash
+$ echo "Hmmm" > bookshelf.txt
+```
 
 Now `cat bookshelf.txt` again. Our old text has been replaced with the new text "Hmmm". Sometimes we'll want to __append__ to the existing text instead of overwriting it. We use two angle brackets `>>` to append the string to the end of the file:
 
 **You Do:**
 
-`$ echo "This bookshelf flexes under the weight of the books it holds" > bookshelf.txt`  
-`$ echo "It does not break, it does its job admirably" >> bookshelf.txt`
+```bash
+$ echo "This bookshelf flexes under the weight of the books it holds" > bookshelf.txt
+$ echo "It does not break, it does its job admirably" >> bookshelf.txt
+```
 
 Try `cat bookshelf.txt` to see the result. The first command replaced "Hmm" with "This bookshelf flexes under the weight of the books it holds", the second command appended "It does not break, it does its job admirably" after the existing text.
 
@@ -479,19 +494,25 @@ Pipes allow us to use the output from one command as the input for another comma
 
 **You Do:**
 
-`$ cat books.txt | sort`
+```bash
+$ cat books.txt | sort
+```
 
 We took the output from `cat books.txt` and sent it through a pipe to `sort`.  The output of `cat books.txt` becomes the input of `sort`. The output of `sort` printed to our screen. Now lets redirect the output of `sort` to a file:
 
 **You Do:**
 
-`$ cat books.txt | sort > sorted_books.txt`
+```bash
+$ cat books.txt | sort > sorted_books.txt
+```
 
 There are dozens of powerful tools we can leverage using pipes.  One of the ones you'll be using the most is `grep`.
 
 **You Do:**
 
-`$ cat books.txt | grep Mil`
+```bash
+$ cat books.txt | grep Mil
+```
 
 See how we filtered out just the lines that contain Mil?  Try grepping for something else.
 
@@ -527,7 +548,9 @@ Now that we have our books sorted, we really don't need our unsorted list of boo
 
 **You Do:**
 
-`$ mv sorted_books.txt books.txt`
+```bash
+$ mv sorted_books.txt books.txt
+```
 
 Examine the contents of our current directory. What has changed?
 
@@ -536,7 +559,9 @@ To copy files, we use the `cp` command.  Extrapolate from the way we used `mv` t
 
 **You Do:**
 
-`$ cp bookshelf.txt second_bookshelf.txt`
+```bash
+$ cp bookshelf.txt second_bookshelf.txt
+```
 
 What happened? What are the contents of second_bookshelf.txt?
 
@@ -545,7 +570,9 @@ What happened? What are the contents of second_bookshelf.txt?
 
 **You Do:**
 
-`$ rm second_bookshelf.txt`
+```bash
+$ rm second_bookshelf.txt
+```
 
 >Pro-tip: `rm` does not send things to your trash can, it deletes them permanently. Be careful when using `rm`.
 
@@ -562,11 +589,15 @@ cp living_room study
 
 We get an error: `cp: study/ is a directory (not copied).` To copy directories, we need to use `-r`:
 
-`cp -r living_room study`
+```bash
+cp -r living_room study
+```
 
 Now examine the contents of the directory 'study'. We copied all of our files to the new directory! Just like `cp`, `rm` will not work by default on a directory. Try `rm study` and you'll get the same error. Try this instead:
 
-`$ rm -r study`
+```bash
+$ rm -r study
+```
 
 The study is gone. You can also use `rmdir` for this purpose.
 
@@ -575,7 +606,9 @@ The study is gone. You can also use `rmdir` for this purpose.
 Sometimes we want to refer to a bunch of similar files, to do this we can use wildcards. The most common wildcard to use is `*` usually along with a file extension:
 **You Do:**
 
-`$ ls -la *.txt`
+```bash
+$ ls -la *.txt
+```
 
 >Pro-tip: This is basically the same as `ls -la | grep .txt`. Can you think of a time when piping to `grep` would be preferable to a simple wildcard?
 
@@ -595,11 +628,13 @@ For more ideas go here: [How to Use Wildcards](http://www.linfo.org/wildcard.htm
 
 Lets examine our current working directory to discuss permissions.
 
-`$ ls -l`
+```bash
+$ ls -l
+```
 
 I'll cherry pick one line to describe permissions:
 
-```
+```bash
 -rwxrw-r--  1 Tyler  staff  413 Oct 15 11:22 books.txt
 ```
 
@@ -656,11 +691,15 @@ Wow, we've done a lot of work. Remembering all these commands can be hard. Lucki
 
 **You Do:**
 
-`$ history`
+```bash
+$ history
+```
 
 and
 
-`$ history | grep cd`
+```bash
+$ history | grep cd
+```
 
 Searching through history can be very useful if you know you've done something, but can't remember exactly how you did it. You can also combine the power of `history` with auto-complete. Try hitting `ctrl+r` then typing `ls`.  What happens?
 
@@ -677,7 +716,9 @@ Don't forget about the command `man`! Short for __manual__, it will give a (hope
 
 Many advanced commands also accept the --help, or -h option, but not all, but if you get stuck it can be worth a try. Most of the commands covered in this simple overview do not support this feature
 
-`$ git --help`
+```bash
+$ git --help
+```
 
 ### Terminal Cheat Sheet
 Bookmark this:
