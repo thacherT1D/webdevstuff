@@ -104,10 +104,8 @@ There are 4 main commands for `git`
 
 With these 4 commands you can create a repo and start versioning your project.
 
----
 ### <a name="init"></a>git init
 [git manual](https://git-scm.com/docs/git-init)
----
 
 Initialize a new git repo in the current directory with:
 ```sh
@@ -116,10 +114,9 @@ $ git init
 
 You can verify git was initialized by checking if a `.git` folder was created with `ls -a`.
 
----
+
 ### <a name="status"></a>git status
 [git manual](https://git-scm.com/docs/git-status)
----
 
 
 When in a git repository, you can type `git status` to see any staged or unstaged changes pending.
@@ -151,10 +148,8 @@ Untracked files:
 	05_github_workflow.md
 ```
 
----
 ### <a name="add"></a>git add
 [git manual](https://git-scm.com/docs/git-add)
----
 
 
 If you have any files that are brand new to the repo or have been changed, you can tell git to start tracking it with:
@@ -170,11 +165,9 @@ $ git add .
 After adding a file or change to the repo,
   try running `git status` again to make sure it got staged.
 
----
 
 ### <a name="commit"></a> git commit
 [git manual](https://git-scm.com/docs/git-commit)
----
 
 
 After staging files with `git add`,
@@ -186,10 +179,9 @@ $ git commit -m "I fixed all of the bugs. :)"
 
 This will create a commit in git that will be a snapshot of what the project currently is.
 
----
+
 ### <a name="push"></a>git push
 [git manual](https://git-scm.com/docs/git-push)
----
 
 If you are using GitHub or collaborating with another git repo, you can push any new commits to your default remote with:
 ```sh
