@@ -1,4 +1,4 @@
-# Intro to Databases + MongoDB
+# Intro to MongoDB
 
 ### What is MongoDB?
 
@@ -15,6 +15,7 @@ Have more questions about thist stuff? Head over here! [http://docs.mongodb.org/
 - Flexible Schemas / Less Restriction
 - Multiple writes + clusters 
 - Full Text Search
+- Because lots of companies have decided to use it with Angular and Express
 
 ### Installing MongoDB
 
