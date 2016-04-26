@@ -140,7 +140,7 @@ One of the most useful commands is:
 
 Which lists the files and directories in the current working directory. Personally I find this a little difficult to read so I use the long form by envoking the `-l` option:
 
-```
+```bash
 $ ls -l
 
   total 48
@@ -169,7 +169,7 @@ Now I can see a lot more clearly what files are in my current working directory.
 
 The `ls` command can take a directory as an argument. This lists the content of the provided directory:
 
-```
+```bash
 $ ls -l Documents/
 
   total 40360
@@ -180,7 +180,7 @@ $ ls -l Documents/
 
 The ls command can also take a wildcard (`*`) as an argument. This only lists items in Documents/ that end with .png
 
-```
+```bash
 $ ls -l Documents/*.png
 
 -rw-r--r--@ 1 eschoppik  staff  8154896 Feb 27 10:57 Documents/Profile.png
@@ -190,7 +190,7 @@ $ ls -l Documents/*.png
 ## Hidden Files
 Have you ever heard of `hidden files`? Well it's true, they are real! and we can see them by envoking the `-a` option:
 
-```
+```bash
 $ ls -la
 
 total 368
@@ -260,7 +260,7 @@ Another important directory is the root directory `/`
 
 **You Do:**:
 
-```
+```bash
 $ cd /  
 $ pwd
 ```
@@ -270,7 +270,7 @@ The files on your computer are structured in a tree. The 'top' of the file syste
 We can move to the __root directory__ with the command `cd /`.  
 We can move back to your __home directory__ with the command `cd ~`.  
 
-```
+```bash
 $ cd ~  
 $ pwd
 /Users/eschoppik
@@ -281,7 +281,7 @@ Remember, the `~` always refers to the current user's home directory, this is ha
 ## Relative Paths
 **You Do:**
 
-```
+```bash
 cd ../
 pwd
 ```
@@ -290,7 +290,7 @@ What happened? Which directory are you in?
 
 In the terminal, the `.` character refers to the __current working directory__ and two dots `..` refers to the current directories __parent__ directory. What happens if you try this:
 
-```
+```bash
 $ cd /
 $ cd ..
 ```
@@ -299,7 +299,7 @@ The terminal ignores `cd ..` in this case. the root directory is the only direct
 
 (`../`) is a __relative paths__ and you can use it anywhere you would use a path. What happens if we type:
 
-```
+```bash
 $ ls -l ~/Documents/../
 
 total 0
@@ -372,7 +372,7 @@ __Operands__ (or arguments or parameters) are what comes after a command, so we 
 
 **You Do:**
 
-```
+```bash
 $ cd ~
 
 $ mkdir living_room
@@ -399,13 +399,13 @@ We've created a file, lets try editing text with the command line! Type:
 
 Lets add some books to our text file. Copy and paste the section below so we all have some books in common, and save the file. Add some books of your own choosing as well! Make sure the books you add are in the same format:  `<author_given_name>, <author_last_name>:<title>`.
 
-```
+```bash
 Carroll, Lewis:Through the Looking-Glass
 Shakespeare, William:Hamlet
 Bartlett, John:Familiar Quotations
 Mill, John :On Nature
 London, Jack:John Barleycorn
-Bunyan, John:Pilgrim's Progress, The
+Bunyan, John:Pilgrim\'s Progress, The
 Defoe, Daniel:Robinson Crusoe
 Mill, John Stuart:System of Logic, A
 Milton, John:Paradise Lost
@@ -463,7 +463,7 @@ Try `cat bookshelf.txt` to see the result. The first command replaced "Hmm" with
 
 >Pro-tip: You can use `&&` to execute another command if the first command succeeds. Try this single command version of what we just did:
 
-```
+```bash
 $ echo "This bookshelf flexes under the weight of the books it holds" > bookshelf.txt && echo "It does not break, it does its job admirably" >> bookshelf.txt
 ```
 
@@ -504,9 +504,9 @@ Adapted from [http://en.flossmanuals.net/command-line/piping/](http://en.flossma
 3. Using `tree` find the fullpath of all the files on your filesystem which contain the string 'book'
 4. __CHALLENGE__, using `cat` again, list the books written by an author whose first or last name is John. Remember, Jack London's John Barleycorn doesn't count. Pipe the output of this to `sort`. Your output should match this:
 
-```
+```bash
 Bartlett, John:Familiar Quotations
-Bunyan, John:Pilgrim's Progress, The
+Bunyan, John:Pilgrim\'s Progress, The
 Bunyan, John:Saved by Grace
 Johnson, Samuel:Lives of the Poets
 Mill, John :On Nature
@@ -553,7 +553,7 @@ By default, commands like `cp` and `rm` only apply to the file specified. We can
 
 **You Do:**
 
-```
+```bash
 cd ..
 cp living_room study
 ```
@@ -619,7 +619,7 @@ You can change permissions with `chmod` (short for change mode) and you can chan
 
 You can also look at the man pages for `chown` and `chmod`. Lets try changing the permissions and ownership of our bookshelf!
 
-```
+```bash
 $ chmod 400 bookshelf.txt
 $ ls -l bookshelf.txt
 -r--------  1 Tyler   staff  106 Oct 15 13:40 bookshelf.txt
@@ -629,7 +629,7 @@ Now only the owner has permission to do anything, and all they can do is read th
 
 Lets try changing the ownership of the file:
 
-```
+```bash
 $ chown StrangeUser:staff bookshelf.txt
 chown: bookshelf.txt: Operation not permitted
 ```
@@ -640,7 +640,7 @@ Enter `root`. Root is the administrative user. Root has all permissions. Root ca
 
 **You Do:**:
 
-```
+```bash
 sudo chown StrangeUser:staff bookshelf.txt
 ```
 
