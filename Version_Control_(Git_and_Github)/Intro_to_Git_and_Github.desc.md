@@ -51,7 +51,7 @@ Any files tracked by git typically go through 3 stages:
 1. Committed
   * Changes committed in the last commit
 
-### What is GitHub?
+## What is GitHub?
 
 Git and GitHub are NOT the same thing.
 [Github](http://github.com/) is a web based service that hosts repositories on a server and allows developers to easily collaborate.
@@ -60,7 +60,7 @@ Once we've __pushed__ to a __remote__ such as GitHub, we know our code is safe.
 Even if our hard drives die.
 And if GitHub goes down, we can still work on our distributed repos offline.
 
-### A Metaphor: Git is a Rocketship, Github is Mars
+## A Metaphor: Git is a Rocketship, Github is Mars
 
 :rocket:
 
@@ -93,7 +93,7 @@ Let's say you want to deliver some packages to Mars with a rocketship. *You want
 
 1. Astronaut on Mars will recieve your rocketship and be happy with their new packages. *Check your GitHub repo to make sure the changes were pushed*
 
-### Basic Git Commands
+## Basic Git Commands
 
 There are 4 main commands for `git`
 * init
@@ -103,7 +103,7 @@ There are 4 main commands for `git`
 
 With these 4 commands you can create a repo and start versioning your project.
 
-#### `git init`
+### `git init`
 
 [git manual](https://git-scm.com/docs/git-init)
 
@@ -114,7 +114,7 @@ $ git init
 
 You can verify git was initialized by checking if a `.git` folder was created with `ls -a`.
 
-#### `git status`
+### `git status`
 
 [git manual](https://git-scm.com/docs/git-status)
 
@@ -147,7 +147,7 @@ Untracked files:
 	05_github_workflow.md
 ```
 
-#### `git add`
+### `git add`
 
 [git manual](https://git-scm.com/docs/git-add)
 
@@ -164,7 +164,7 @@ $ git add .
 After adding a file or change to the repo,
   try running `git status` again to make sure it got staged.
 
-#### `git commit`
+### `git commit`
 
 [git manual](https://git-scm.com/docs/git-commit)
 
@@ -177,7 +177,7 @@ $ git commit -m "I fixed all of the bugs. :)"
 
 This will create a commit in git that will be a snapshot of what the project currently is.
 
-#### `git push`
+### `git push`
 
 [git manual](https://git-scm.com/docs/git-push)
 
