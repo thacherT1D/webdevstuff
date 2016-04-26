@@ -15,6 +15,7 @@ By the end of this week you will:
 Warmup: No warmup.
 
 Lessons:
+
 - [Computer Setup](https://workbook.galvanize.com/cohorts/68/articles/3052)
 
 Homework: No Homework.
@@ -26,6 +27,7 @@ Homework: No Homework.
 Warmup: [Values Writeup](https://github.com/gSchool/values_writeup)
 
 Lessons:
+
 - [Norms and Expectations]()
 - [Intro to the Command Line](https://workbook.galvanize.com/cohorts/68/articles/3057)
 - [Intro to Git and Github](https://workbook.galvanize.com/cohorts/68/articles/3060)
@@ -37,6 +39,7 @@ Lessons:
 Warmup: [Link to Warmup](http://github.com/gSchool)
 
 Lessons:
+
 - [Intro to HTML](https://workbook.galvanize.com/cohorts/68/articles/3063)
 - [Intro to CSS](https://workbook.galvanize.com/cohorts/68/articles/3070)
 - [Learning to Learn](https://workbook.galvanize.com/cohorts/68/articles/3055)
@@ -54,6 +57,7 @@ Announcements:
 Warmup: [Touch Typing](https://workbook.galvanize.com/cohorts/68/articles/3053)
 
 Lessons:
+
 - [Intermediate CSS](https://workbook.galvanize.com/cohorts/68/articles/3071)
 - [Deploying Static Sites](https://workbook.galvanize.com/cohorts/68/articles/3117)
 
@@ -72,6 +76,7 @@ Crush Code Friday: [CCF](https://workbook.galvanize.com/cohorts/68/student_dashb
 Homework: [Homework](https://workbook.galvanize.com/cohorts/68/student_dashboard)
 
 Lightning Talks:
+
 - Logan
 - Jordan
 - Roger
