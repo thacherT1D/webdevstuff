@@ -152,8 +152,6 @@ Table tags:
 Take a look at the documentation for Tables. There are very good examples on how to utilize `<table>`. Keep this documentation up, and use it to find out how to use the elements you need in order to complete the exercise below.
 [Table Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table)
 
-#### Intro to HtML - Exercise 2
-
 
 ### Tables
 Tables are how we display "tabular data" in HTML. What this really means is something like this:
@@ -167,5 +165,3 @@ Table tags:
 
 Take a look at the documentation for Tables. Keep this documentation up, and use it to find out how to use the elements you need in order to complete the exercise below.
 [Table Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table)
-
-#### Exercise 2
