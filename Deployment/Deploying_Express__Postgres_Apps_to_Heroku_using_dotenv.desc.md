@@ -31,6 +31,16 @@ Draw a diagram that illustrates how Heroku works and incorporate the above compo
 1. Download the Heroku [Toolbelt](https://toolbelt.heroku.com/)
 1. Login - `heroku login`
 
+## Defining a Procfile
+
+A `Procfile` is a file that you must create in the root of your application to tell heroku how to run your app.  If you have a file called `app.js` in the root of your project and `app.js` is how you run your application, the following will work as a `Procfile`:
+
+```
+web: node app.js
+```
+
+Save your `Procfile` and commit the changes to github.
+
 ## Deploying to Heroku From the Command Line
 
 ```sh
@@ -48,6 +58,14 @@ You can also rename your app by running the command:
 ```sh
 $ heroku apps:rename <name-you-want-to-use-instead>
 ```
+
+Once you ahve created your app and named it appropriately, deploy your code to heroku by doing the following:
+
+```sh
+$ git push heroku master
+```
+
+Here, `heroku` is just another remote repository that you are pushing your code to.  All  you have to do is push to heroku to do your deployment.
 
 ## .gitignore
 
@@ -81,6 +99,14 @@ For starters, _always_ confirm that your app is working locally as it should. Th
 Come up with a theory about why your app might be broken. As quickly as you can, gather evidence to prove or disprove this theory. Repeat this process until your app is fixed.
 
 Since your local server logs and the console won't be any help for debugging Heroku, where can you go to get more information?
+
+First, you can try running your app locally exactly like heroku runs it in production.  To do this, run:
+
+```
+heroku local web
+```
+
+If you notice an error here, try to fix it locally and push the change to heroku.  If there are still problems, move on to the next step.
 
 The below command will print out a log of your application's launch process. Sift through it and look for clues about what's going wrong. When you spot a line that looks helpful, grab it a throw it into Google to help you decipher the error.
 
@@ -118,7 +144,7 @@ You'll need some help getting your app to talk to your environment variables, bo
 Google `npm dotenv` and read the docs to help you get up and running with a `.env` file in your Node.js app.
 
 1. add a `.env` file to your app
-1. update your database configuration to use environment variables
+1. update your database configuration in your node application to use environment variables
 
 ```
 process.env.DATABASE_URL || 'postgres://localhost/library'
