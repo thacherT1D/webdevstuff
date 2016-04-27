@@ -147,21 +147,23 @@ Google `npm dotenv` and read the docs to help you get up and running with a `.en
 npm install --save-dev dotenv
 ```
 
-1. add a `.env` file to your app
-1. update your database configuration in your node application to use environment variables
+Make sure to only load the dotenv npm module in development.  For example:
 
 ```
-process.env.DATABASE_URL || 'postgres://localhost/library'
+if (app.get('env') === 'development') {
+	require('dotenv').load();
+}
 ```
+
+1. add a `.env` file to your app
+1. update your database configuration in your node application to use environment variables
 
 If you are using knex with NodeJS, you will need a configuration (`knexfile.js`)like the following:
 
 ```
   production: {
     client: 'postgresql',
-    connection: {
-      database: process.env.DATABASE_URL
-    },
+    connection: process.env.DATABASE_URL,
     pool: {
       min: 2,
       max: 10
@@ -188,6 +190,16 @@ Now in your code, your session setup should look like this:
 app.use(session({secret: process.env.SESSION_SECRET }));
 ```
 
+You will also need to change your code so that the proper port will be used:
+
+```javascript
+var port = process.env.PORT || 3000;
+app.listen(port, function() {
+	console.log(`Listening on port ${port}`);
+}
+```
+
+`process.env.PORT` will be set by heroku, so you don't need to set it yourself.
 
 ## Getting into your Heroku database
 
