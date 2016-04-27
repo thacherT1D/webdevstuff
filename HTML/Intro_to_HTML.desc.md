@@ -4,9 +4,6 @@
 To start this, make sure you're familiar with creating files and directories in terminal. Also make sure you know how to open files on your hard drive from terminal, with the `open` command, as well as how to open files in Atom with the `atom` command.
 
 # Materials
-Slides for this lesson:
-
-* [slides](https://docs.google.com/presentation/d/1COkEIRk9CjR60wnCHEZC4JBK0MT1ptoE-CIaol6UZpc/edit?usp=sharing)
 
 For this learning experience, you'll need to have the following installed:
 
