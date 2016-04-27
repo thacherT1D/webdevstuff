@@ -12,10 +12,6 @@ You may be realizing at this point that within the HTML `<body>`, you could just
 * **SEO**. Search engines use semantic markup to map your site and identify content. Poor markup can result in down-ranking.
 * **Separation of Concerns**.  HTML is primarily concerned with *content*, while CSS is primarily concerned with *presentation* (JavaScript is concerned with *behavior*). While it is possible to dictate appearance with HTML, manipulate content with CSS, and do just about anything with JavaScript, each of them specializes in one thing. By "separating concerns", you allow each technology to stick with what it's good at.
 
-## Exercise: Semantic Scavenger Hunt
-
-Spend the next 30 minutes finding examples of semantic tags being used "in the wild", aka on live websites. For each tag, use MDN to help you write a definition of the semantic use of the tag, then find a live example, record the url for the website where the tag is used and write a sentence about (Is the tag is being used appropriately? Why or why not? You don't need to find an example for every tag, just do as many as you can. We'll share examples of uses found after completing.
-
 Here are the various semantic tags to define and look for on the internet:
 
 ### Structural
@@ -76,7 +72,3 @@ These tags are for marking up text content within a structural element:
 ## Exercise: The Semantic News
 
 Fork and clone the [semantic HTML](https://github.com/gSchool/semantic-html-exercise) repository. `index.html` is a news site that's been marked up with `<div>` and `<span>` tags. Using the list of tags above, update the code with semantic tags. When you're done, add/commit/push, and then submit a pull request.
-
-## Exercise: Rectifying past wrongs
-
-Go back to an exercise you completed last week without using semantic HTML (maybe something in the Intro to HTML LE). Change out the unsemantic markup with semantic tags. Share your solution with a classmate and ask for constructive criticism about the markup used.
