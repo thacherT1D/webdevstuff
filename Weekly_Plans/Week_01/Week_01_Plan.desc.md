@@ -36,21 +36,16 @@ Homework: [Command Line Murder Mystery](https://github.com/veltman/clmystery)
 
 ---
 
-# Wednesday, April 27
+# Wednesday, April 27 - Roger
 
-Warmup: [Link to Warmup](http://github.com/gSchool)
+Warmup: [Link to Warmup](https://github.com/gSchool/semantic-html-scavanger-hunt)
 
 Lessons:
 
 - [Intro to HTML](https://workbook.galvanize.com/cohorts/68/articles/3063)
+- [Semantic HTML](https://workbook.galvanize.com/cohorts/68/articles/3066)
 - [Intro to CSS](https://workbook.galvanize.com/cohorts/68/articles/3070)
 - [Learning to Learn](https://workbook.galvanize.com/cohorts/68/articles/3055)
-
-Homework: [Homework](https://workbook.galvanize.com/cohorts/68/student_dashboard)
-
-Announcements:
-- Announcement 1
-- Announcement 2
 
 ---
 
