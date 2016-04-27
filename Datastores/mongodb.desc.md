@@ -191,7 +191,6 @@ Define these terms and answer these questions in 1-3 sentences (some will requir
 
 [Mongoose Docs](http://mongoosejs.com/docs/)
 
-
 ##Mongoose on its own(without Express)
 
 ###Setup
@@ -205,9 +204,9 @@ mongoose.set('debug', true);
 
 ```
 var dogSchema = new mongoose.Schema({
-	name: String,
- 	breed: String,
-	age: Number
+  name: String,
+  breed: String,
+  age: Number
 });
 
 var Dog =  mongoose.model("Dog", dogSchema);
@@ -218,21 +217,17 @@ var Dog =  mongoose.model("Dog", dogSchema);
 To create a new dog:
 
 ```
-Dog.create(
-	{
-		name: "Momo",
-		breed: "Miniature American Eskimo",
-		age: 1
-	}, 
-	function(err, dog){
-		if (err) {
-			console.log(err);
-		} else {
-			console.log(dog);
-		}
-	}
-)
-
+Dog.create({
+  name: "Momo",
+  breed: "Miniature American Eskimo",
+  age: 1
+}, function(err, dog) {
+  if (err) {
+    console.log(err);
+  } else {
+    console.log(dog);
+  }
+});
 ```
 
 ####Exercise - Create 3 dogs:
@@ -241,15 +236,13 @@ Dog.create(
 * Wyatt - 11 Year old Lab
 * Sitka - 2 year old Malamute
 
-
-
 To retrieve records:
 
 ```
-//Find all Dogs
+// Find all Dogs
 Dog.find({}, function(err, dogs) { console.log(dogs); });
-//Find all 1 year old dogs(puppies)
-Dog.find( { age: 1}, function(err, dogs) { console.log(dogs); });
+// Find all 1 year old dogs(puppies)
+Dog.find({ age: 1}, function(err, dogs) { console.log(dogs); });
 ```
 
 ####Exercise
@@ -259,29 +252,28 @@ Dog.find( { age: 1}, function(err, dogs) { console.log(dogs); });
  
  **Think Async**
 
-
 To Update a Record:
 
 ```
 Dog.update({name: "Momo"}, {age:100}, function(err, dog){
-	if(err){
-		console.log(err)
-	} else {
-		console.log(dog)
-	}
-})
+  if (err) {
+    console.log(err);
+  } else {
+    console.log(dog);
+  }
+});
 ```
 
 To Delete a Record:
 
 ```
-Dog.remove({name: "Rusty"}, function(err, dog){
-	if(err){
-		console.log(err)
-	} else {
-		console.log(dog)
-	}
-})
+Dog.remove({name: "Rusty"}, function(err, dog) {
+  if (err) {
+    console.log(err);
+  } else {
+    console.log(dog);
+  }
+});
 ```
 
 ####Exercise
