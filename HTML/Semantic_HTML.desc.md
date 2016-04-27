@@ -68,7 +68,3 @@ These tags are for marking up text content within a structural element:
 * li
 * details
 * summary
-
-## Exercise: The Semantic News
-
-Fork and clone the [semantic HTML](https://github.com/gSchool/semantic-html-exercise) repository. `index.html` is a news site that's been marked up with `<div>` and `<span>` tags. Using the list of tags above, update the code with semantic tags. When you're done, add/commit/push, and then submit a pull request.
