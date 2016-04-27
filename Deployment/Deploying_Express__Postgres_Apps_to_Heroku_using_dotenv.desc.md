@@ -141,7 +141,11 @@ You should see an environment variable called `DATABASE_URL` with a value that i
 
 You'll need some help getting your app to talk to your environment variables, both locally as well as deployed.
 
-Google `npm dotenv` and read the docs to help you get up and running with a `.env` file in your Node.js app.
+Google `npm dotenv` and read the docs to help you get up and running with a `.env` file in your Node.js app.  Install dotenv by doing the following:
+
+```
+npm install --save-dev dotenv
+```
 
 1. add a `.env` file to your app
 1. update your database configuration in your node application to use environment variables
@@ -150,7 +154,40 @@ Google `npm dotenv` and read the docs to help you get up and running with a `.en
 process.env.DATABASE_URL || 'postgres://localhost/library'
 ```
 
+If you are using knex with NodeJS, you will need a configuration (`knexfile.js`)like the following:
+
+```
+  production: {
+    client: 'postgresql',
+    connection: {
+      database: process.env.DATABASE_URL
+    },
+    pool: {
+      min: 2,
+      max: 10
+    },
+    migrations: {
+      tableName: 'knex_migrations'
+    }
+  }
+```
+
 `add`, `commit`, `git push heroku master` and check your app again. OR if you think it is still broken, what other steps might still need to be taken for your app to work on Heroku?
+
+## Setting Env in Heroku
+
+You will need to set your own environment variables in Heroku as well.  The `dotenv` npm module will only be used in your development environment locally, but you want those values to be used in production as well.  To set an environment variable in heroku, do the following:
+
+```
+heroku config:set SESSION_SECRET=supersecretpassword
+```
+
+Now in your code, your session setup should look like this:
+
+```javascript
+app.use(session({secret: process.env.SESSION_SECRET }));
+```
+
 
 ## Getting into your Heroku database
 
