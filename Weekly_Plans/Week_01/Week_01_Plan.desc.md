@@ -38,7 +38,7 @@ Homework: [Command Line Murder Mystery](https://github.com/veltman/clmystery)
 
 # Wednesday, April 27 - Roger
 
-Warmup: [Link to Warmup](https://github.com/gSchool/semantic-html-scavanger-hunt)
+Warmup: [Semantic HTML Scavenger Hunt](https://github.com/gSchool/semantic-html-scavanger-hunt)
 
 Lessons:
 
