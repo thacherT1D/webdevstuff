@@ -49,24 +49,21 @@ Lessons:
 
 ---
 
-# Thursday, April 28
+# Thursday, April 28 - Jordan
 
 Warmup: [Touch Typing](https://workbook.galvanize.com/cohorts/68/articles/3053)
 
 Lessons:
-
-- [Intermediate CSS](https://workbook.galvanize.com/cohorts/68/articles/3071)
+- Homework Review
 - [Deploying Static Sites](https://workbook.galvanize.com/cohorts/68/articles/3117)
+- [Intro to CSS](https://workbook.galvanize.com/cohorts/68/articles/3070)
+- [Intermediate CSS](https://workbook.galvanize.com/cohorts/68/articles/3071)
 
 Homework: [Homework](https://workbook.galvanize.com/cohorts/68/student_dashboard)
 
-Announcements:
-- Announcement 1
-- Announcement 2
-
 ---
 
-# Friday, April 29
+# Friday, April 29 - Jordan
 
 Crush Code Friday: [CCF](https://workbook.galvanize.com/cohorts/68/student_dashboard)
 
