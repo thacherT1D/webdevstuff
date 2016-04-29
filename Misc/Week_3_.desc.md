@@ -14,8 +14,8 @@
 * [Call, Apply, Bind](https://workbook.galvanize.com/cohorts/67/articles/2623)
 
 #### Homeworks
-Finish [HTML Forms](https://github.com/gSchool/html-forms)
-[https://workbook.galvanize.com/cohorts/67/articles/2623]
+* Finish [HTML Forms](https://github.com/gSchool/html-forms)
+* [Call, Apply, Bind](https://github.com/gSchool/cab_closure_exercises)
 
 ### Tuesday
 
