@@ -28,7 +28,7 @@ Warmup: [Values Writeup](https://github.com/gSchool/values_writeup)
 
 Lessons:
 
-- [Norms and Expectations]()
+- Norms and Expectations
 - [Intro to the Command Line](https://workbook.galvanize.com/cohorts/68/articles/3057)
 - [Intro to Git and Github](https://workbook.galvanize.com/cohorts/68/articles/3060)
 
@@ -59,13 +59,13 @@ Lessons:
 - [Intro to CSS](https://workbook.galvanize.com/cohorts/68/articles/3070)
 - [Intermediate CSS](https://workbook.galvanize.com/cohorts/68/articles/3071)
 
-Homework: [Homework](https://workbook.galvanize.com/cohorts/68/student_dashboard)
-
 ---
 
 # Friday, April 29 - Jordan
 
-Crush Code Friday: [CCF](https://workbook.galvanize.com/cohorts/68/student_dashboard)
+Warmup: [Week 1 Blog Post](https://github.com/gSchool/blog_writing_prompts)
+
+Crush Code Friday: [CCF](https://github.com/gSchool/css-layout-exercises)
 
 Homework: [Homework](https://workbook.galvanize.com/cohorts/68/student_dashboard)
 
@@ -73,9 +73,4 @@ Lightning Talks:
 
 - Logan
 - Jordan
-- Roger
 - Micah
-
-Announcements:
-- Announcement 1
-- Announcement 2
