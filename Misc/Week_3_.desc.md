@@ -26,27 +26,32 @@ Electronic Life is DUE!
 * [Intermediate CSS](https://workbook.galvanize.com/cohorts/67/articles/2589)
 * [Intro to Bootstrap](https://workbook.galvanize.com/cohorts/67/articles/2593)
 
-
 #### Homeworks
 * [Bootstrap Mocks](https://github.com/gSchool/bootstrap_mocks_assignment)
 
 ### Wednesday
 
+Call, Apply, Bind is Due!  
+HTML Forms is Due!  
+
 #### Lessons
-* [Intro to the Document Object Model](https://workbook.galvanize.com/cohorts/67/articles/2610)
-* [Debugging in the Browser](https://workbook.galvanize.com/cohorts/67/articles/2606)
+* [Intro to the Document Object Model](https://workbook.galvanize.com/cohorts/67/articles/2610)  
+* [Debugging in the Browser](https://workbook.galvanize.com/cohorts/67/articles/2606)  
 
 #### Homeworks
 
+* [Finish Checkerboard](https://github.com/gSchool/checkerboard-exercise)  
 
 ### Thursday
 
+Boostrap Mocks is Due!  
+
 #### Lessons
-* [JS Events](https://workbook.galvanize.com/cohorts/67/articles/2612)
-* [Debugging in the Browser](https://workbook.galvanize.com/cohorts/67/articles/2606)
+* [JS Events](https://workbook.galvanize.com/cohorts/67/articles/2612)  
+* [Debugging in the Browser](https://workbook.galvanize.com/cohorts/67/articles/2606)  
 
 #### Homeworks
-* [Pixel Art Maker](https://github.com/gSchool/pixel-art-maker)
+* [Pixel Art Maker](https://github.com/gSchool/pixel-art-maker)  
 
 ### Friday
 
