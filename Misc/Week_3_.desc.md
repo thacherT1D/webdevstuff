@@ -28,7 +28,7 @@ Electronic Life is DUE!
 
 
 #### Homeworks
-[Bootstrap Mocks](https://github.com/gSchool/bootstrap_mocks_assignment)
+* [Bootstrap Mocks](https://github.com/gSchool/bootstrap_mocks_assignment)
 
 ### Wednesday
 
