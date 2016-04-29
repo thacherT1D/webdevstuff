@@ -73,7 +73,7 @@ Lightning Talks:
 - Jordan
 - Micah
 
-Homework: [You Don't Know JS; Chapter 1](https://github.com/getify/You-Dont-Know-JS/blob/master/up & going/ch1.md) Read until "Operators". As you're reading, answer these guiding questions:
+Homework: [You Don't Know JS; Chapter 1](https://github.com/getify/You-Dont-Know-JS/blob/master/up & going/ch1.md) Read through "Operators". As you're reading, answer these guiding questions:
 
 - What is a statement?
 - What is an operator?
