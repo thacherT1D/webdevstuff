@@ -67,7 +67,13 @@ Warmup: [Week 1 Blog Post](https://github.com/gSchool/blog_writing_prompts)
 
 Crush Code Friday: [CCF](https://github.com/gSchool/css-layout-exercises)
 
-Homework: [Homework](https://workbook.galvanize.com/cohorts/68/student_dashboard)
+Homework: [You Don't Know JS; Chapter 1](https://workbook.galvanize.com/cohorts/68/student_dashboard) Read until "Operators". As you're reading, answer these guiding questions:
+
+- What is a statement?
+- What is an operator?
+- What is an expression?
+- What are two ways I can print out values in the browser?
+- What is one way that I can take user input in the browser?
 
 Lightning Talks:
 
