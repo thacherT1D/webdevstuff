@@ -1,6 +1,6 @@
 # JavaScript and the DOM - Level 1
 
-[slides here](https://docs.google.com/a/galvanize.com/presentation/d/1dW_VJ9HgqKfDKekYIhNZewaC_bNHe2iSEvLiSkzwpFs/edit?usp=sharing)
+[Slides Link](http://slides.com/lizh/the-document-object-model)
 
 Let's look at the basics of using *vanilla* JavaScript to manipulate the DOM...
 
@@ -13,34 +13,33 @@ DOM operations form the basis of all client-side javascript, and all frameworks 
 By the end of this lesson you should be able to:
 
 - describe javascript’s role in manipulating the DOM
-- explain that HTML attributes are default (initial) values for DOM properties
-- explain that DOM properties can be altered after initial page load
-- explain that the DOM provides a way for programs to change the structure, style, and content on a page dynamically
-- explain the difference between a text node and an element
+- explain what the Document Object Model is
 - find an element by id, tagname, classname, and more advanced CSS selectors
-- set an element’s innerHTML and text
 - construct and add simple elements to the DOM
 - remove elements from the dom
-- detach and reattach DOM elements
 - access properties of DOM elements such as text, html, value
 
 ### Key terms
 
 1. DOM Querying
-1. DOM Manipulation
+2. DOM Manipulation
 
-## Setup
+## Set the Stage
 
+0. Close other browser tabs and programs, minimize distractions!
 1. Create a new local project directory called "js-dom-basics".
-1. Add a local git repository.
-1. Create a remote repository on Github.
-1. Add a *main.js* file.
-1. Add a simple `console.log("sanity check!")` in *main.js* to verify that it's included correctly. **How do you test this?**
-1. Finally, add/commit to your local git repo, and then push your changes to Github.
+2. Add a local git repository.
+3. Create a remote repository on Github.
+4. Add an `index.html` file
+5. Add a `main.js` file
+6. Add a simple `console.log("sanity check!")` in `main.js` to verify that it's included correctly. **How do you test this?**
+7. Finally, add/commit to your local git repo, and then push your changes to Github.
 
 ## Discussion
 
-Look over the *index.html* file before starting...
+Paste this code into `index.html`, then open it in Chrome. Open up your Chrome Dev Tools and make sure the sanity check appears.  
+
+**ProTip**: did you know you can type `open index.html` when in terminal, and it will open in your default browser?
 
 ```html
 <!DOCTYPE html>
@@ -85,7 +84,7 @@ When we talk about "DOM Manipulation", what we're really talking about is 4 thin
 
 ### Finding Existing DOM Nodes
 
-## `getElementbyID`
+## `document.getElementbyID()`
 
 Add the following code to your JavaScript file:
 
@@ -104,13 +103,13 @@ Open the JavaScript console in Chrome. **What do you see?**
 
 Since we are assigning the [DOM node](https://developer.mozilla.org/en-US/docs/Web/API/Node) - `<p id="main">Just a paragraph...</p>` - to a variable, we now have a reference to it. With the node in hand, we can now access its content (tags, attributes, inner text - **what are these?**), manipulate/change any part of it (attributes, inner text, etc.), move it, or remove it altogether. JavaScript gives us this power!
 
+**ProTip**: Try hovering over the paragraph in the console- notice how it's highlighted on the page!  
+
 Any node within the [document](https://developer.mozilla.org/en-US/docs/Web/API/Document), the root node, can be accessed via JavaScript. **What if we wanted to target (or access) the list?**
 
 Without an `id` attribute, we need to use a different [method](https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByTagName)...
 
 ## `getElementsByTagName`
-
-The [`getElementsByTagName()`](https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByTagName) method returns a collection/array of nodes. These collections are "live", which means that if you add a new HTML element to the collection, it will also be added to the DOM. You can treat the collection just like you would a normal JavaScript array.
 
 Add the following code to your JavaScript file:
 
@@ -147,9 +146,12 @@ for (var i = 0; i < allListItems.length; i++) {
 }
 ```
 
-## `getElementsByClassName`
+The [`document.getElementsByTagName()`](https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByTagName) returns an `HTMLCollection` of elements with the given tag name. The complete `document` is searched, including the root node. The returned `HTMLCollection` is "live", which means that if you add a new HTML element to the DOM it updates itself automatically to stay in sync with the DOM tree without having to call `document.getElementsByTagName()` again. 
 
-The [`getElementsByClassName()`](https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByClassName) returns an array-like object of all child elements which have all of the given class names. When called on the document object, the complete document is searched, including the root node. You may also call getElementsByClassName() on any element; it will return only elements which are descendants of the specified root element with the given class names.
+
+## `getElementsByClassName()`
+
+`document.getElementsByClassName` **gets you elements via their `class` attribute**. It searches the DOM, and then returns an HTMLCollection similar to the one `getElementsByTagName` returns, which can be iterated over.
 
 Add the following code to your JavaScript file:
 
@@ -180,13 +182,12 @@ Again, open your JS console. **What do you see?**
 ```
 
 The first two examples output the *entire* collections while the second two examples output the *first* element in the collection.
+[`document.getElementsByClassName()`](https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByClassName) returns an array of all child elements which have all of the given class name (or names). When called on the document object, the complete document is searched, including the root node. You may also call getElementsByClassName() on any element; it will return only elements which are descendants of the specified root element with the given class names. 
 
-Similar to `getElementsByTagName`, the collection returned from `getElementsByClassName` can be iterated over.
+## `document.querySelector`
 
-## `querySelector`
-
-The [`querySelector()`](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector
-) Returns the first element within the document that matches the specified group of selectors. The argument you pass into `querySelector` should be a valid CSS query.
+The [`document.querySelector()`](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector
+) Returns the **first element** within the document that matches the specified group of selectors. The argument you pass into `querySelector` should be a valid CSS query.
 
 Add the following code to your JavaScript file:
 
@@ -210,9 +211,9 @@ Open your JS console. **What do you see?**
 <li class="odd">item 1</li>
 ```
 
-## `querySelectorAll`
+## `document.querySelectorAll`
 
-The [`querySelectorAll()`](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll) Returns a list of the elements within the document that match the specified group of selectors. The object returned is a NodeList.
+The [`querySelectorAll()`](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll) Returns **a list** of the elements within the document that match the specified group of selectors. The object returned is a NodeList. It's different from an HTMLCollection in that it's not "live", merely reflective of the elements that existed when it got called.
 
 Add the following code to your JavaScript file:
 
