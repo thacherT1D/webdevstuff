@@ -1,8 +1,8 @@
 ## Mac OS X for Web Development
 
-This guide will help you setup a web development environment on [Mac OS X 10.11 El Capitan](https://www.apple.com/osx/) and above. By the end, your computer will be configured with the same state-of-the-art tools used by professional web developers. While this guide is mostly compatible with older versions of Mac OS X, follow along as best you can while Googling any problems that arise.
+This article will help you setup a web development environment on [Mac OS X 10.11 El Capitan](https://www.apple.com/osx/) and above. By the end, your computer will be configured with the same state-of-the-art tools used by professional web developers. While this article is mostly compatible with older versions of Mac OS X, follow along as best you can while Googling any problems that arise.
 
-By the end of this guide, your development machine should have the following software installed and configured.
+By the end of this article, your development machine should have the following software installed and configured.
 
 1. [Terminal](#configure-the-terminal)
 1. [Homebrew](#install-homebrew)
@@ -20,10 +20,10 @@ After you've finished setting up your development environment, you'll be able to
 1. Commit the web page to a repository
 1. Deploy the web page to a production environment
 
-Additionally, this guide assumes your computer is up to the task of coding.
+Additionally, this article assumes your computer is up to the task of coding.
 
 - Is virus and malware free
-- Uses the latest, stable, updated version of its operating system
+- Uses the latest, stable version of its operating system
 - Has a functioning screen, keyboard, and trackpad
 - Has plenty of free hard drive space and memory
 - Can reliably connect to wireless networks
@@ -49,7 +49,7 @@ In an ideal world, developers would learn and use a single, monolithic tool to a
 
 That's why many developers prefer a development environment composed of multiple specialized tools rather than one monolithic tool. This approach is called the **Unix philosophy** and it emphasizes using simple, short, clear, modular, and extensible tools that can be easily maintained and repurposed by developers other than its creators. Though each tool has it's own learning curve, any one of them is easily replaceable when the need arises.
 
-The following guide will help you install and configure a development environment so you can complete the essential tasks of a web developer using tools that adhere to the Unix philosophy. Let's get started.
+The following instructions will help you install and configure a development environment so you can complete the essential tasks of a web developer using tools that adhere to the Unix philosophy. Let's get started.
 
 ## Configure the Terminal
 
@@ -57,7 +57,7 @@ Included in Mac OS X is the **Terminal**—an app that runs a Unix shell.
 
 A **Unix shell** is a command line user interface between you and your computer's operating system. You're probably most familiar with the graphical user interface of an operating system. While that's technically a shell too, most developers think of the textual, command line interface when they hear to word _shell_. Mac OS X blends both the graphical and the command line interfaces beautifully which is why it's so popular with developers.
 
-The first Unix shell was released in 1971 and yet developers continue to incorporate them into their workflows. That's because Unix shells are both interactive and scriptable. In other words, the same commands that control an operating system from the command line can be included in a script file. A **script file** is commonly used to automate repetitive tasks and increase developer productivity. In this guide, you'll download and run script files to speed up the installation and configuration of your development environment.
+The first Unix shell was released in 1971 and yet developers continue to incorporate them into their workflows. That's because Unix shells are both interactive and scriptable. In other words, the same commands that control an operating system from the command line can be included in a script file. A **script file** is commonly used to automate repetitive tasks and increase developer productivity. In this article, you'll download and run script files to speed up the installation and configuration of your development environment.
 
 ### Discover the Terminal
 
@@ -496,7 +496,7 @@ Next, run this command to download and install some awesome Git colors, handy al
 curl -fsSL https://git.io/vgqFH | sh
 ```
 
-We'll go over these later. For now, relish in your victory of making it this far in the setup guide. :tada:
+We'll go over these later. For now, relish in your victory of making it this far. :tada:
 
 ## Install Node
 
@@ -819,4 +819,4 @@ You've successfully setup a web development environment on Mac OS X and have com
 1. Committed the web page to a repository
 1. Deployed the web page to a production environment
 
-Now that you've finished this guide, it's time to celebrate with a frosty beverage. :beers:
+Now that you've finished this article, it's time to celebrate with a frosty beverage. :beers:
