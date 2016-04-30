@@ -128,6 +128,42 @@ Now, every new Terminal window will look like this.
 
 ![](https://i.imgur.com/87bHvEF.png)
 
+### Add Universal Keyboard Shortcuts
+
+Keyboard shortcuts on Mac OS X typically consist of one or more of the following keys.
+
+| Key         | Symbol |
+|-------------|--------|
+| `Command`   | ⌘      |
+| `Option`    | ⌥      |
+| `Control`   | ⌃      |
+| `Function`  | fn     |
+| `Shift`     | ⇧      |
+| `Caps Lock` | ⇪      |
+
+Unsurprisingly, Mac OS X has a bunch of built-in keyboard shortcuts that are universal to all applications. For example, `Command` + `T` is the universal keyboard shortcut for creating a new application tab. Though there are keyboard shortcuts for switching between an application's tabs, you might be surprised to learn that these not universal for all applications.
+
+Since you'll be switching between tabs in applications like the Terminal, Google Chrome, and Atom all the time, let's add a few universal keyboard shortcuts for this.
+
+1. Using Spotlight, open the `Keyboard` system preferences by pressing the `Command` + `Spacebar` keys at the same time, typing the word "keyboard" into the search field, and then pressing the `Enter` key.
+1. Navigate to the `Shortcuts` tab, select `App Shortcuts` from the left pane, and then click on the `+` button. ![](https://i.imgur.com/tFgUgSk.png)
+1. In the panel that slides down, add the following keyboard shortcuts to **All Applications**.
+
+| Menu Title          | Keyboard Shortcut          | Symbols |
+|---------------------|----------------------------|---------|
+| Select Next Tab     | `Option` + `Command` + `→` | ⌥⌘→     |
+| Select Previous Tab | `Option` + `Command` + `←` | ⌥⌘←     |
+| Show Next Tab       | `Option` + `Command` + `→` | ⌥⌘→     |
+| Show Previous Tab   | `Option` + `Command` + `←` | ⌥⌘←     |
+
+By adding a keyboard shortcut, you're associating it with a possible menu title for all applications. The reason for the duplicate shortcuts is because different applications have differently named menu titles to switch between the next and previous tab.
+
+When you're done, it should look like this.
+
+![](https://i.imgur.com/wzhNmHr.png)
+
+You may also be surprised to learn that there are no universal keyboard shortcuts to quickly and neatly arrange application windows on the screen. For this, you'll need a tool called a window manager. There are many window managers on the market, but the one I use and whole-heartedly recommend is called [Magnet](https://itunes.apple.com/us/app/magnet/id441258766?mt=12). I like Magnet because its adds several universal keyboard shortcuts that are compatible with the ones you just created. If you're comfortable spending a couple of dollars on the Mac App Store, give it a try. Otherwise, feel free to use any window manager you want.
+
 ## Install Homebrew
 
 Now that your Terminal is setup, it's time to install [Homebrew](http://brew.sh/), the de facto package manager for OS X. If you've never heard of a package manager, think of it as an app store for **free** command line programs.
