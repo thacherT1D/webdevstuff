@@ -62,57 +62,36 @@ JavaScript allows web developers to make web pages interactive, dynamic, and awe
 
 What are some websites you frequently use? Revisit them and try to figure out which parts are using JavaScript. Once you have a few examples, show a partner and explain why JavaScript is important for these websites.
 
-### JavaScript Console
+## How do you write JavaScript?
 
-- Allows you to easily interface with your app to run JS commands and display log messages for help with debugging
-- Shortcut to open JS console & bring focus to console
-  - Mac: Cmd + Opt + J
-  - Linux: Ctrl + Shift + J
-- Use Tab for autocompletion!
-
-Go to [Google](http://www.google.com) and try pasting the following code into your console:
-
-```
-var logo = document.getElementById('hplogo');
-logo.onclick = function () { this.src = "https://media.giphy.com/media/TxjAakMUtgPN6/giphy.gif"; this.srcset=""; this.height="204"; }
-```
-And then try this:
-
-```
-function makeWider() {
-  var logo = document.getElementById('hplogo');
-  logo.width += 5;
-}
-
-setInterval(makeWider, 41.67)
-```
-
-Lastly, try this:
-
-```
-javascript:document.body.contentEditable='true'; document.designMode='on'; void 0
-```
+Launch Atom so we can play with JavaScript's syntax.
 
 ### Comments
 
-Comments come in two forms
+Comments are used to add hints, notes, suggestions, or warnings to JavaScript code. This can make it easier to read and understand. They can also be used to disable code to prevent it from being executed which can be a valuable debugging tool. JavaScript has two ways of creating comments in code.
 
-  * line comments
+The first way is with the `//` style. This makes all text following it on the same line into a comment.
 
-   ```
-   // descriptive stuff
-   ```
-  * multiline comments
+```javascript
+// This is a one line JavaScript comment
+```
 
-  ```
-  /*
-    These
-    are
-    comments on
-    many lines
-  */
+The second way is the `/* */` style, which is more flexible. For example, you can use it on a single line.
 
-  ```
+```javascript
+/* This is a one line JavaScript comment */
+```
+
+Or you can use it to make multiple line comments.
+
+```javascript
+/* This comment spans multiple lines. Notice
+   that we don't need to end the comment until we're done. */
+```
+
+Most of the time, you'll use the `//` style because Atom can toggle a line to be commented or not using the `Command` + `/` keyboard shortcut. Go ahead, try it out!
+
+For more information on comments, see the [Mozilla Documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Comments).
 
 ## JS Primitive Data Types:
 
@@ -238,7 +217,7 @@ You can also create expressions with strings using addition
   => "Hello, world!"
 ```
 
-This is called **String Concatentation.**
+This is called **String Concatenation.**
 
 Note that the meaning of `+` depends on what types of values you're working with. Be careful when you combine different meanings of `+` in the same expression: JavaScript will attempt to guess at your meaning, but won't always be correct. For example, try putting this into the console:
 
