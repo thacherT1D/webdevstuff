@@ -166,33 +166,46 @@ Number.isNaN(200) // false
 Number.isNaN(NaN) // true
 ```
 
-See the [number type](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type) on the Mozilla Developer Network for more information.
+See the [number type](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type) and [`Number` global object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number) on the Mozilla Developer Network for more information.
 
 ### String
 
-Strings are collections of letters and symbols known as **Characters**, and we use them to deal with words and text in JavaScript.
+JavaScript's string type is used to represent textual data. To create a string, simply append and prepend a series of characters with either single or double quotation marks. Which quotations you use is a matter of style preference. Just make sure the both opening and closing quotations are the same otherwise JavaScript will throw an error.
 
-```
-"John", "Jane"
-```
-
-There are a number of built-in properties and methods associated with strings:
-
-```
-var name = "Matt";
-name[0]; // Returns "M"
-name.length; // Returns 4
-name.toUpperCase(); // Returns "MATT"
-name.toLowerCase(); // Returns "matt"
+```javascript
+'Jane'
+"John"
 ```
 
-ES2015 provides some new methods as well!
+Each element in the string occupies a position in the String. The first element is at index 0, the next at index 1, and so on. The length of a String is the number of elements in it.
 
+```javascript
+'melissa'.length        // 6
+'melissa'[0]            // 'm'
+'melissa'.substr(1)     // 'elissa'
+'melissa'.substr(1, 2)  // 'el'
 ```
-name.startsWith("Ma"); // true
-name.endsWith("Q"); // false
-name.includes("t"); // true
+
+There are a number of built-in methods associated with strings, some of which are new additions as of ES6.
+
+```javascript
+'matt'.toUpperCase() // 'MATT'
+'MATT'.toLowerCase() // 'matt'
+
+'Matt'.indexOf('a')   // 1
+'Matt'.indexOf('at')  // 1
+'Matt'.indexOf('ab')  // -1
+
+'Matt'.indexOf('t')     // 2
+'Matt'.lastIndexOf('t') // 3
+
+// ES6
+'Matt'.startsWith('Ma') // true
+'Matt'.endsWith('q')    // false
+'Matt'.includes('t')    // true
 ```
+
+See the [string type](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type) and [`String` global object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) on the Mozilla Developer Network for more information.
 
 ### Undefined
 
