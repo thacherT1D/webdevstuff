@@ -211,11 +211,13 @@ See the [string type](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Da
 
 ### Variables
 
-In JavaScript, variables lets you give a name to a value. Think of a variable as a bucket that you can store one thing inside of it. To create a new variable, use the `var` keyword followed by the name of the variable. A **keyword** is a word that has special meaning and is reserved by JavaScript.
+In JavaScript, variables lets you give a name to a value. Think of a variable as a bucket that you can store one thing inside of it. To create a new variable, use the `var` keyword followed by the name of the variable.
 
 ```javascript
 var person;
 ```
+
+A **keyword** is a word that has special meaning and is [reserved by the ECMAScript standard](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords).
 
 The word variable means 'can change' or 'can vary'. In JavaScript, the value inside a variable can vary over time. Additionally, a JavaScript variable can store many different types of values. However, if you put a new value in a variable, the old one goes away.
 
