@@ -101,8 +101,8 @@ The latest ECMAScript standard defines seven data types:
   - Boolean
   - Number
   - String
-  - Null
   - Undefined
+  - Null
   - Symbol (new in ECMAScript 6)
 - and Object
 
@@ -121,6 +121,8 @@ true
 // Seattle is cheap
 false
 ```
+
+See the [boolean type](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type) and [`Boolean` global object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean) on the Mozilla Developer Network for more information.
 
 ### Number
 
@@ -207,37 +209,84 @@ There are a number of built-in methods associated with strings, some of which ar
 
 See the [string type](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type) and [`String` global object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) on the Mozilla Developer Network for more information.
 
+### Variables
+
+In JavaScript, variables lets you give a name to a value. Think of a variable as a bucket that you can store one thing inside of it. To create a new variable, use the `var` keyword followed by the name of the variable. A **keyword** is a word that has special meaning and is reserved by JavaScript.
+
+```javascript
+var person;
+```
+
+The word variable means 'can change' or 'can vary'. In JavaScript, the value inside a variable can vary over time. Additionally, a JavaScript variable can store many different types of values. However, if you put a new value in a variable, the old one goes away.
+
+**TIP:** Remember, a variable only needs to be declared once using the `var` keyword.
+
+```javascript
+var name = 'Casey';
+name = 'Francis';
+name = 42;
+```
+
+Variable names in JavaScript can't contain spaces. The standard practice is to have variables start with a lowercase letter and capitalize each word except for the first one. This is called camel-case.
+
+```javascript
+var firstName = 'Paula';
+```
+
+Be careful with your variable names because it's easy to misspell them. Even if you just get the capitalization wrong, the JavaScript interpreter won't know what you mean.
+
+```javascript
+var lastName = 'Dean';
+lastname // ReferenceError
+```
+
+Variable names also can't start with numbers. If needed, it's common to prepend numbers at the end of a variable name.
+
+```javascript
+var person1;
+var person2;
+```
+
+Variables can also store the result of any expression.
+
+```javascript
+var result = 2 + 2;
+var greeting = 'Hello' + ' Matt';
+```
+
 ### Undefined
 
-`undefined` represents a value that hasn't been defined. A variable that has not been assigned a value is of type undefined. A method or statement also returns undefined if the variable that is being evaluated does not have an assigned value. A function returns undefined if a value was not returned.
+`undefined` represents a value that hasn't been defined. A variable that has not been assigned a value is of type `undefined`. A function returns `undefined` if a value was not returned which is the default.
 
-```
+```javascript
 var x;
 x; // undefined
+
 x = 3;
 x; // no longer undefined!
 ```
 
 ### Null
 
-The value `null` represents the intentional absence of any object value.
+The value `null` represents the intentional absence of any value. Unlike `undefined`, it's not explicitly set by default to unassigned variables. If you want something to be `null`, you must make it so.
 
-Null represents an explicitly set empty value. Unlike undefined, it does not get set by default to unassigned variables, for instance. If you want something to be null, you must make it so:
-
-```
+```javascript
 var x = null;
 ```
 
 Further reading:
 
 - [What is the difference between null and undefined in JavaScript?](http://stackoverflow.com/questions/5076944/what-is-the-difference-between-null-and-undefined-in-javascript)
-- [Why is typeof null “object”?](http://stackoverflow.com/questions/18808226/why-is-typeof-null-object)
+- [Why is typeof null "object"?](http://stackoverflow.com/questions/18808226/why-is-typeof-null-object)
 
 ### Symbol
 
-The last primitive data type is also the newest addition to JavaScript, and is called symbol. Talking about symbols is a bit advanced for day 1 of JavaScript (especially when we haven't talked about objects yet). When you're ready to learn more about them, [check out the docs!](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol)
+Symbol is the newest primitive data type to be added to JavaScript. Talking about symbols is a bit advanced for the first day of JavaScript, especially since we haven't talked about objects yet.
+
+When you're ready to learn more about them, [check out the docs!](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol)
 
 ## Values and Expressions
+
 Values are the simplest components in JavaScript. ```1``` is a value, ```true``` is a value, ```"hello"``` is a value, ```function() {}``` is a value.
 
 Types of values like `Number` or `String` are not very useful without being able to form **Expressions** or **Combinations**.
@@ -345,36 +394,6 @@ Math.floor(3.9999)
 => 3
 Number.isInteger(Math.floor(2.5))
 => true
-```
-
-### Variables
-
-Having expressions is cool. Storing the values of expressions is even cooler.
-
-To store values we use things called **variables**.
-
-The word 'variable' means 'can change' or 'can **vary**' and is used because variables can store many different types of values and can change their value many times.
-
-```
-var myNumber = 1;
-// or also
-
-var myString = "Greetings y'all!"
-```
-
-The main point here is that these variables should always have the `var` keyword and use `camelCase`
-
-Variables can also store the result of any "expression".
-For example:
-
-```
-var x = 2 + 2;
-```
-or
-
-```
-var name = 'Matt';
-var compliment = name + ' is my favorite instructor';
 ```
 
 ## Comparisons
