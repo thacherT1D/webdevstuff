@@ -118,7 +118,7 @@ When you find yourself not having fun, take a deep breath, step outside, go for 
 
 ### Exercise
 
-Imagine that same friend from earlier asks you, "Hey, what's this play business about? Why is that important? How do you do that?" Take a few moments to think about what you'd say to your friend. When you've decided what to say, turn and talk to a partner and share with them your thoughts. Since you've been sitting for a while, feel free to stand up and stretch your legs too.
+Imagine that same friend from earlier asks you, "Hey, what's this play business about? Why is that important? How do you do that?" Take a few moments to think about what you'd say to your friend. When you've decided what to say, turn and talk to a partner and share your thoughts with them. Since you've been sitting for a while, feel free to stand up and stretch your legs too.
 
 ## Reflect
 
