@@ -60,7 +60,7 @@ The why is the meaning or motivation behind the learning. Being human is to be d
 
 ### Prioritize process over product
 
-The last part of setting the stage is about prioritizing process over product. In other words, defining success as simply spending time doing focused and deliberate practice. This program is going to be very difficult at times. You may not fully understand some of the concepts right on the first try. And you may not reach your end goal in the period of time that you set out to do your work. This is perfectly fine so long as you're challenging yourself to get better in the [zone of proximal development](https://en.wikipedia.org/wiki/Zone_of_proximal_development).
+The last part of setting the stage is about prioritizing process over product. In other words, defining success as simply spending time doing focused and deliberate practice. This program is going to be very difficult at times. You may not fully understand some of the concepts on the first try. And you may not reach your end goal in the period of time that you set out to do your work. This is perfectly fine so long as you're challenging yourself to get better while in the [zone of proximal development](https://en.wikipedia.org/wiki/Zone_of_proximal_development).
 
 ![](https://i.imgur.com/st9ILOw.png)
 
@@ -68,7 +68,7 @@ While in the zone of proximal development, doing focused and deliberate practice
 
 ### Exercise
 
-Imagine that their friend came to Galvanize and asks you, "Hey everyone is talking about setting the stage. What does that mean? Why is that important? How do you do that?" Take a few moments to think about what you'd say to your friend. When you've decided what to say, turn and talk to a partner and share with them your thoughts.
+Imagine that a friend came to Galvanize and asked you, "Hey everyone is talking about setting the stage. What does that mean? Why is that important? How do you do that?" Take a few moments to think about what you'd say to your friend. When you've decided what to say, turn and talk to a partner and share with them your thoughts.
 
 ## Play
 
