@@ -82,11 +82,11 @@ Like setting the stage, this step of the process consists of three sub-steps as 
 
 ### Wrestle with it
 
-The first part of play is to take any new information you receive and wrestle with it. In other words, think about it from different perspectives. Never been satisfied with exposing yourself to new information only once. Ask yourself questions about it, dive in, try to learn as much as you can about it.
+The first part of play is to take any new information you receive and wrestle with it. In other words, think about it from different perspectives. Never be satisfied with exposing yourself to new information only once. Ask yourself questions about it, dive in, try to learn as much as you can about it.
 
-Pick up an object that's close by, preferred something light and not too expensive. Go ahead, we'll wait.
+Pick up an object that's close by, preferably something light and not too expensive. Go ahead, we'll wait.
 
-If you look at this object just once from and from one angle, then you'll have a very two-dimensional perspective of it. It would be hard to claim that you full understand it. But if you turn it around and look at it from different angles, smell it, taste it, rub your fingers across it, you gain familiarity and build fluency with it.
+If you look at this object just once from and from one angle, then you'll have a very two-dimensional perspective of it. It would be hard to claim that you fully understand it. But if you turn it around and look at it from different angles, smell it, taste it, rub your fingers across it, you gain familiarity and build fluency with it.
 
 This is the goal with everything you'll learn here at Galvanize. To gain familiarity, build fluency, and eventually become intuitive with programming. Just exposing yourself to something once will never be enough. So read about it, write notes about it, write code about it, write blogs about it, talk about it, and listen about it. Do everything you can to perceive new information from as many different angles as possible so it's massaged into your long term memory.
 
@@ -94,11 +94,11 @@ This is the goal with everything you'll learn here at Galvanize. To gain familia
 
 While you're playing, take risks. Be willing to make mistakes. Be willing to do something you don't know how to do yet with the understanding that it may not work out like you intend.
 
-You've probably heard a bunch of sayings about this already.
+You've probably heard a bunch of common sayings about this already.
 
-- Fortune favors the bold.
-- You miss 100% of the shots you don't take.
-- If you never swing the bat, you'll never hit a home run.
+- "Fortune favors the bold."
+- "You miss 100% of the shots you don't take."
+- "If you never swing the bat, you'll never hit a home run."
 
 When it comes to learning through play, it's the effort, and not the intelligence, that makes the biggest difference. There's been plenty of research around fixed mindset versus growth mindset.
 
