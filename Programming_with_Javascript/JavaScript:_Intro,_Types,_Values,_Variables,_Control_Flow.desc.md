@@ -98,9 +98,9 @@ For more information on comments, see the [Mozilla Documentation](https://develo
 The latest ECMAScript standard defines seven data types:
 
 - Six data types that are primitives:
+  - Boolean
   - Number
   - String
-  - Boolean
   - Null
   - Undefined
   - Symbol (new in ECMAScript 6)
@@ -111,6 +111,18 @@ A **primitive** is data that is not an object, has no methods, and cannot be cha
 For more information on data types, see the [Mozilla Documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Data_types).
 
 For more information on primitives, see the [Mozilla Documentation](https://developer.mozilla.org/en-US/docs/Glossary/Primitive).
+
+### Boolean
+
+Boolean represents a logical entity and can have two values: `true` and `false`.
+
+```javascript
+// San Francisco is expensive
+true
+
+// Seattle is cheap
+false
+```
 
 ### Number
 
@@ -135,25 +147,25 @@ According to the ECMAScript standard, there's only one number type. And it repre
 199.99
 ```
 
-In addition, the number type has three symbolic values: `+Infinity`, `-Infinity`, and `NaN` (not-a-number).
-
-In JS, both integers and floats have the same data type: number. You can confirm this using the 'typeof' operator. If you want to distinguish between integers and floats, there are a couple of ways to do this. The most modern approach, as of ES2015, is to use the `Number.isInteger()` function.
-
-Examples:
-
-```
-Number.isInteger(4) // should return 'true'
-Number.isInteger(4.1) // should return 'false'
-Number.isInteger(4.0) // should return ???
-```
-
-### Boolean
-
-Boolean represents a logical entity and can have two values: `true`, and `false`.
+If you want to distinguish between integers and floats, there are a couple of ways to do this. The most modern approach, as of ES6, is to use the `Number.isInteger()` function.
 
 ```javascript
-var sanFranciscoIsExpensive = true;
-var seattleIsCheap = false;
+Number.isInteger(4)   // true
+Number.isInteger(4.1) // false
+Number.isInteger(4.0) // true
+```
+
+Additionally, the number type has three symbolic values: `Infinity`, `-Infinity`, and `NaN` (not-a-number). To determine if a number is finite or not-a-number, use the `Number.isFinite()` and `Number.isNaN()` functions respectively.
+
+**TIP:** Both n's of `NaN` must be uppercase otherwise JavaScript will throw an error.
+
+```javascript
+Number.isFinite(100)        // true
+Number.isFinite(Infinity)   // false
+Number.isFinite(-Infinity)  // false
+
+Number.isNaN(200) // false
+Number.isNaN(NaN) // true
 ```
 
 ### String
