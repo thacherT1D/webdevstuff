@@ -98,11 +98,11 @@ For more information on comments, see the [Mozilla Documentation](https://develo
 The latest ECMAScript standard defines seven data types:
 
 - Six data types that are primitives:
+  - Number
+  - String
   - Boolean
   - Null
   - Undefined
-  - Number
-  - String
   - Symbol (new in ECMAScript 6)
 - and Object
 
@@ -112,29 +112,30 @@ For more information on data types, see the [Mozilla Documentation](https://deve
 
 For more information on primitives, see the [Mozilla Documentation](https://developer.mozilla.org/en-US/docs/Glossary/Primitive).
 
-### Boolean
-
-Boolean represents a logical entity and can have two values: `true`, and `false`.
-
-```javascript
-var sanFranciscoIsExpensive = true;
-var seattleIsCheap = false;
-```
-
 ### Number
 
-Numbers are, well, numbers. They come in two flavors:
+According to the ECMAScript standard, there's only one number type. And it represents both integer and floating-point (i.e. decimal) numbers between -(2⁵³ - 1) and 2⁵³ - 1).
 
-* Integers
+```javascript
+// integer numbers
+-3
+-2
+-1
+0
+1
+2
+3
 
-  ```
-   ..., -1,0, 2, 3, 4, 5, ...
-  ```
-* Floats (or Decimal numbers)
+// floating-point (i.e. decimal) numbers
+-42.42
+-2.718
+-0.25
+.66666667
+3.14
+199.99
+```
 
-  ```
-   2.718, 3.14, .5, .25, etc
-  ```
+In addition, the number type has three symbolic values: `+Infinity`, `-Infinity`, and `NaN` (not-a-number).
 
 In JS, both integers and floats have the same data type: number. You can confirm this using the 'typeof' operator. If you want to distinguish between integers and floats, there are a couple of ways to do this. The most modern approach, as of ES2015, is to use the `Number.isInteger()` function.
 
@@ -144,6 +145,15 @@ Examples:
 Number.isInteger(4) // should return 'true'
 Number.isInteger(4.1) // should return 'false'
 Number.isInteger(4.0) // should return ???
+```
+
+### Boolean
+
+Boolean represents a logical entity and can have two values: `true`, and `false`.
+
+```javascript
+var sanFranciscoIsExpensive = true;
+var seattleIsCheap = false;
 ```
 
 ### String
@@ -485,6 +495,6 @@ Want to dig deeper? Read Chapters 1 and 2 in [Eloquent JavaScript](http://eloque
 ## Resources
 
 - [Quick history of JavaScript by Douglas Crockford](https://www.youtube.com/watch?v=t7_5-XYrkqg)
-- [Wikipedia: Ajax (programming)](https://en.wikipedia.org/wiki/Ajax_(programming))
+- [Wikipedia: Ajax (programming)](https://en.wikipedia.org/wiki/Ajax_(programming)
 - [Wikipedia: ECMAScript](https://en.wikipedia.org/wiki/ECMAScript)
 - [Wikipedia: JavaScript](https://en.wikipedia.org/wiki/JavaScript)
