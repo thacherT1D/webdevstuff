@@ -104,7 +104,7 @@ When it comes to learning through play, it's the effort, and not the intelligenc
 
 ![](https://i.imgur.com/jO19KKD.png)
 
-Training your mind with a growth mindset can be very difficult. But the reward for your persistence is being able to drink more and more from the firehose. Here are some things you can say to yourself that'll help train your mind.
+Training your mind with a growth mindset can be very difficult. But the reward for your persistence is being able to drink more and more from the firehose every day. Here are some things you can say to yourself that'll help train your mind to be more growth oriented.
 
 ![](https://i.imgur.com/HiEOCHw.jpg)
 
