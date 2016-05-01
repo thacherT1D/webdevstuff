@@ -118,13 +118,15 @@ When you find yourself not having fun, take a deep breath, step outside, go for 
 
 ### Exercise
 
-Imagine that same friend from earlier asks you, "Hey, what's this play business about? Why is that important? How do you do that?" Take a few moments to think about what you'd say to your friend. When you've decided what to say, turn and talk to a partner and share your thoughts with them. Since you've been sitting for a while, feel free to stand up and stretch your legs too.
+Imagine that same friend from earlier asks you, "Hey, what's this play business all about? Why is that important? How do you do that?" Take a few moments to think about what you'd say to your friend. When you've decided what to say, turn and talk to a partner and share your thoughts with them. Since you've been sitting for a while, feel free to stand up and stretch your legs too.
 
 ## Reflect
 
-The third and final major step is to becoming a better learner is reflect. So you've set the stage by clearing out all the distractions, clarifying the what and the why, and prioritizing process over product. And you're gotten yourself ready to play by wrestling with new information, taking risks, and having fun. Whenever the learning period is done, it's time to reflect on what happened.
+The third and final major step to becoming a better learner is reflect.
 
-Like setting the stage and play, this step of the process consists of three sub-steps as well.
+So you've set the stage by clearing out all the distractions, clarifying the what and the why, and prioritizing process over product. And you've gotten yourself ready to play by wrestling with new information, taking risks, and having fun. Whenever the learning period is done, it's time to reflect on what happened.
+
+Like setting the stage and play, this step of the process consists of three sub-steps.
 
 1. Self assess
 1. Ask new questions
