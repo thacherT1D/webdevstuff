@@ -52,20 +52,11 @@ Turn to a partner and describe what ECMAScript is in your own words.
 
 JavaScript allows web developers to make web pages interactive, dynamic, and awesome. Here are some very common uses for JavaScript on the front-end.
 
-* [Password Strength Meter](http://codepen.io/oscarekholm/pen/zicjg)
-* [Simple Navigation Menu](http://codepen.io/markmurray/pen/efcjp)
-* [Overlay Effects](http://tympanus.net/codrops/2014/02/06/fullscreen-overlay-effects/)
-* [Page Loading Effects](http://tympanus.net/codrops/2014/04/23/page-loading-effects/)
-* [Image Carousel](http://codepen.io/ApplePieNIceCream/pen/DkxIj)
-* [Parallax Scroll and Blur](http://codepen.io/sallar/pen/lobfp)
-
-Some other more complex uses for JS:
-
-* [Interactive Music Video](http://lights.helloenjoy.com/)
-* [Jam With Chrome](http://www.jamwithchrome.com/)
-* [Patatap](http://www.patatap.com/)
-* [Arcade Fire Reflektor Music Video](http://www.chromeexperiments.com/detail/just-a-reflektor/?f=)
-* [Walmart Website](http://www.walmart.com/)
+- [Password Strength Meter](http://codepen.io/pankajparashar/details/bFhyf/)
+- [Fullscreen Overlay Effects](http://tympanus.net/Development/FullscreenOverlayStyles/index3.html)
+- [Page Loading Effects](http://tympanus.net/Development/PageLoadingEffects/index2.html)
+- [Image Grid Effects](http://tympanus.net/Development/ImageGridEffects/index2.html)
+- [Animated Map Path for Interactive Storytelling](http://tympanus.net/Development/StorytellingMap/)
 
 ### JavaScript Console
 
