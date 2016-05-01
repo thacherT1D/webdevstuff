@@ -239,7 +239,7 @@ Be careful with your variable names because it's easy to misspell them. Even if 
 
 ```javascript
 var lastName = 'Dean';
-lastname // ReferenceError
+lastname; // ReferenceError
 ```
 
 Variable names also can't start with numbers. If needed, it's common to prepend numbers at the end of a variable name.
@@ -288,7 +288,7 @@ Further reading:
 
 Symbol is the newest primitive data type to be added to JavaScript. Talking about symbols is a bit advanced for the first day of JavaScript, especially since we haven't talked about objects yet. If want a sneak peak, see the [`Symbol` global object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol) on the Mozilla Developer Network for more information.
 
-###
+### Number operations
 
 Data types are not very useful without being able to form **expressions**. Some common expressions you'll encounter are mathematical expressions, using common mathematical operations.
 
@@ -298,6 +298,61 @@ Data types are not very useful without being able to form **expressions**. Some 
 3 * 4;  // 12
 4 / 2;  // 2
 ```
+
+Addition, subtraction, multiplication and division are probably relatively familiar to you. There's a fifth operation which may be less familiar: the **mod** operator, written using the `%` character.
+
+Let's explore the mod operator. Can you guess what it's doing?
+
+```javascript
+4 % 2;  // 0
+5 % 3;  // 2
+10 % 7; // 3
+12 % 3; // 0
+```
+
+How can you use `%` to check whether or not a whole number is odd?
+
+### Math operations
+
+JavaScript can be a little cheap with the number of operations it allows you to do. For example, how is someone supposed to square a number or cube a number easily? Luckily there is a special `Math` object with some very useful methods.
+
+* Taking a number to some `power`? Then just use `Math.pow` * Taking a square root
+
+```javascript
+// 2⁴
+Math.pow(2, 4); // 16
+
+// √4
+Math.sqrt(4); // 2
+```
+
+* Need a `random` number? Then use `Math.random`.
+
+```javascript
+// Generate a random number from 0 up to but not including 1
+Math.random();  // .229375290430
+
+// Generate a random number from 0 up to but not including 10
+Math.random() * 10; // 7.133676137309521
+```
+
+* Since Numbers can be **Floats** or **Integers** we often want to get rid of remaining decimal places, which can be done using `Math.floor`.
+
+```javascript
+// Round down to an integer
+Math.floor(3.14); // 3
+Math.floor(3.99); // 3
+
+// Round up to an integer
+Math.ceil(5.10);  // 6
+Math.ceil(5.99);  // 6
+
+// Round to the nearest integer
+Math.round(7.25); // 7
+Math.round(7.99); // 8
+```
+
+### String operations
 
 You can also create expressions with strings using addition. This is called **string concatenation**.
 
@@ -311,6 +366,8 @@ Notice that the meaning of the `+` operation depends on what data types are bein
 'The sum of ' + 5 + ' and ' + 7 + ' is ' + 5 + 7
 ```
 
+### Boolean operations
+
 Lastly, you can form expressions using boolean operations: `&&` (and), `||` (or) and `!` (not).
 
 ```javascript
@@ -322,83 +379,16 @@ bool1 && bool2; // false
 !bool1;         // false
 ```
 
-### Special Number Operators
-
-Addition, subtraction, multiplication and division are probably relatively familiar to you. There's a fifth operation which may be less familiar: the **mod** operator, written using the `%` character.
-
-Let's explore the mod operator. Can you guess what it's doing?
-```
-4 % 2
-=> 0
-5 % 3
-=> 2
-10 % 7
-=> 3
-12 % 3
-=> 0
-```
-
-How can you use `%` to check whether or not a whole number is odd?
-
-JavaScript can be a little cheap with the number of operations it allows you to do. For example, how is someone supposed to square a number or cube a number easily? Luckily there is a special `Math` object with some very useful methods.
-
-* Taking a number to some `power`? Then just use `Math.pow`
-
-```
-// 3^2 becomes
-Math.pow(3,2)
-=> 9
-// 2^4 becomes
-Math.pow(2,4)
-=> 16
-```
-* Taking a square root
-
-```
-// √(4) becomes
-Math.sqrt(4)
-=> 2
-```
-* Need a `random` number? Then use `Math.random`.
-
-```
-// The following only returns a random decimal
-Math.random()
-=> .229375290430
-/**
-  The following will return a
-  random number between 0 and 10
-*/
-Math.random()*10
-```
-
-* Since Numbers can be **Floats** or **Integers** we often want to get rid of remaining decimal places, which can be done using `Math.floor`.
-
-```
-// Remove the decimal
-Math.floor(3.14)
-=> 3
-Math.floor(3.9999)
-=> 3
-Number.isInteger(Math.floor(2.5))
-=> true
-```
-
 ## Comparisons
 
 One way to get boolean values in JavaScript is by using _comparisons_. Comparisons are operators that allow us to compare two different values. For example, mathematical comparisons are comparisons:
 
-```
-5 > 7
-=> false
-1 + 1 == 2
-=> true
-7 * 8 > 5 * 9
-=> true
-1 > 100 || true
-=> true
-4 != 5
-=> true
+```javascript
+5 > 7;            // false
+1 + 1 == 2;       // true
+7 * 8 > 5 * 9;    // true
+1 > 100 || true;  // true
+4 != 5;           // true
 ```
 
 ## What's the deal with `=`, `==`, and `===`?
@@ -409,7 +399,7 @@ The key understanding here is the difference between _assignment_ and _compariso
 
 Related to the `==` comparison operator is the `===` comparison operator. `===` is a stronger operator, as it also checks whether the **type** of the values are the same, while the `==` operator will try perform some type conversion before comparing. As an exercise, try to predict what boolean each of the following expressions will evaluate to:
 
-```
+```javascript
 "3" == 3
 => ???
 "3" === 3
@@ -430,30 +420,28 @@ Note: You can always check something's type in JavaScript using the typeof opera
 
 Conditionals control the flow of a program.  Conditionals decide which code statements gets run based on some input to the conditional.  An example from everyday life would be:
 
-```
-If you spend $100 or more, then you get 20% off, otherwise the purchase is full price
-```
+> If you spend $100 or more, then you get 20% off, otherwise the purchase is full price
+
 In the example above, the input to the conditional is the total amount of your purchase.
 
 ### If
 
 The most basic control flow statement is the `if` statement.  Here is our example from above in code:
 
-```
+```javascript
 var total = 284; // Some value
 
-if (total >= 100 ) {
-   total = total * .8;
+if (total >= 100) {
+  total = total * .8;
 }
 
 // More code to display the total to the user
-
 console.log("Your total is: $" + total.toFixed(2));
 ```
 
 Let's practice with some other if statements!
 
-```
+```javascript
 if (1 + 1 === 2) {
   console.log("Arithmetic is the best");
 }
@@ -462,9 +450,10 @@ if (1 + 1 !== 2) {
   console.log("Math is broken.");
 }
 ```
+
 We can also combine these two statements using `if..else`:
 
-```
+```javascript
 if (1 + 1 === 2) {
   console.log("Arithmetic is the best");
 } else {
@@ -476,7 +465,7 @@ if (1 + 1 === 2) {
 
 For each of these examples, try to determine what the console will log:
 
-```
+```javascript
 if (2 > 1) {
   console.log("A");
 } else {
