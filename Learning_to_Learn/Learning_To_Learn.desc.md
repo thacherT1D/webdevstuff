@@ -2,9 +2,9 @@ Being a student in this program is like drinking from a firehose. It's going to 
 
 ### Objectives
 
-- Describe a three step process for optimizing your learning potential
-- Explain each of the steps of the process at a high level
-- Identify a few personal strengths and at least one personal weakness regarding this process
+- Describe why becoming a better learner is important.
+- Explain how to become a better learner using a three step process.
+- Identify a few personal strengths and at least one personal weakness regarding this process.
 
 ### Why is becoming a better learner important?
 
@@ -160,7 +160,7 @@ Picture someone who's struggling with a part of this process, maybe with clearin
 
 When you're finished, find someone new who you haven't talked with yet and act like this struggling student. Your partner will then pretend to be a doctor by diagnosing the issue and prescribe a concrete step that you can do stop the bleeding. Once you've been diagnosed and prescribed, switch roles with your partner.
 
-### Conclusion
+### Identify personal strengths and weaknesses
 
 As a final task, make sure you've written down the following.
 
