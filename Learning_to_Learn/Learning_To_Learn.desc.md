@@ -112,9 +112,9 @@ Training your mind with a growth mindset can be very difficult. But the reward f
 
 And the last, but equally important part of play is to have fun. If you find your jaw clenched, your shoulders tight, or your breath panicked while you're wrestling and taking risks, you're probably not having much fun. And if you're not having fun, then you're really not playing.
 
-Having fun is not just because to feel good, but the outer cortex of your brain actually shuts down when you go into fight, flight, or freeze mode. This often happens when you're afraid to show vulnerability or mistakes. When your outer cortex is shut down, the part that makes you the most human and allows you to think critically, you're not in an optimal state for receiving information.
+Having fun is not about feeling good either. When the outer cortex of your brain shuts down, we enter into fight, flight, or freeze mode. This often happens when we're afraid to show vulnerability or mistakes. When our outer cortex is shut down, the part that makes us the most human and allows us to think critically is down and we're not in an optimal state for receiving information.
 
-When you find yourself not having fun, take a deep breath, step outside, go for a walk, do whatever you need to do to regain focus on the why. Remember, programming is just about the coolest thing you can do in this world! If that's not how you feel when you're in this program, then something is missing.
+When you find yourself not having fun, take a deep breath, step outside, go for a walk, do whatever you need to do to regain focus on the why. Remember, programming is just about the coolest thing you can do in this world! If that's not how you feel when you're in this program, it's time for a break.
 
 ### Exercise
 
