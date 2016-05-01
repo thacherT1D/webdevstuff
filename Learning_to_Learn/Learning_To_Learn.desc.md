@@ -160,11 +160,11 @@ The third and final step of reflection is to repeat this whole cycle. As mention
 
 Picture someone who's struggling with a part of this process, maybe with clearing the stage or taking risks or self assessment. Imagine what it would look like and sound like to watch and hear someone struggling. Take a moment visualize this and then write down your thoughts.
 
-When you're finished, find someone new who you haven't talked with yet and act like this struggling student. Your partner will then pretend to be a doctor by diagnosing the issue and prescribe a concrete step that you can do stop the bleeding. Once you've been diagnosed and prescribed, switch roles with your partner.
+When you're finished, find someone new who you haven't talked with yet and act like this struggling student. Your partner will then pretend to be a doctor by diagnosing the issue and prescribing a concrete step that you can do get healthy again. Once you've been diagnosed and prescribed, switch roles with your partner.
 
 ## Identify personal strengths and weaknesses
 
-As a final task, make sure you've written down the following.
+As a final exercise, make sure you've written down the following.
 
 1. A summary each of the three major steps of this learning process.
 1. One or two things that you feel like you can do well.
