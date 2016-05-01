@@ -1,30 +1,56 @@
-## Introduction to JavaScript
+## Objectives
 
-Objectives
+- Describe what JavaScript is.
+- Describe what ECMAScript is.
+- Explain why JavaScript is important.
+- Name all primitive data types in JavaScript
+- Define what a variable is
+- Explain the difference between a value and an expression
+- Explain the difference between `==` and `===` in JavaScript
+- Implement simple control flow examples using `if` statements
+- Explain what type conversion is
+- Name all falsy values in JavaScript
 
-* Name all primitive data types in Javascript
-* Define what a variable is
-* Explain the difference between a value and an expression
-* Explain the difference between `==` and `===` in Javascript
-* Implement simple control flow examples using `if` statements
-* Explain what type conversion is
-* Name all falsy values in Javascript
+## What's JavaScript?
 
-### History of Javascript
+**JavaScript** is a high-level, dynamic, untyped, and interpreted programming language that's primarily used to change how a website looks and behaves when a user interacts with it. For this reason, JavaScript is an essential technology for web developers and, therefore, the central focus of our in-person training.
 
-* Not to be confused with Java, but it is the baby child of Java syntax & Scheme principles
-* Created in 10 days in May 1995 by [Brendan Eich](http://en.wikipedia.org/wiki/Brendan_Eich)
-* It's an exciting time to learn Javascript! It's the language that enables web pages to respond to user interaction beyond the basic level.
-* The language today is viewed quite differently than how it was 10 years ago
+JavaScript was developed at the Netscape Communication Corporation by [Brendan Eich](http://en.wikipedia.org/wiki/Brendan_Eich) in 10 days and was first released in May 1995. Despite the name, JavaScript is essentially unrelated to Java, a programming language created by James Gosling of Sun Microsystems. JavaScript was originally named "LiveScript" but was renamed in a co-marketing deal between Netscape and Sun. In exchange for the "Java" trademark, Netscape bundled Sun's Java runtime within their then-dominant browser Netscape Navigator. In actuality, the two languages are about as similar as "car" and "carpet".
 
-[The famous Douglas Crockford gives a thorough introduction of Javascript](https://www.youtube.com/watch?v=t7_5-XYrkqg)
+Since the mid 90s, JavaScript has become one of the most popular programming languages on the Web. Initially, however, many professional programmers criticized the language because its target audience consisted of web masters and other "amateurs". The advent of something called Ajax, which became a standard in 2006, returned JavaScript to the spotlight and brought it more professional programming attention. The result has been a proliferation of comprehensive frameworks and libraries, improved JavaScript programming practices, and increased usage of JavaScript outside of web browsers as seen by server-side platforms like Node.js.
 
-### Why Should YOU Care About Javascript
-* Can use the same language on the front-end and the backend with Node.js
-* JS serves as a platform to host other languages as well, e.g. CoffeeScript or ClojureScript
-* Many popular libraries built with JS - jQuery, Underscore.js, Sugar
+### Exercise
 
-Javascript allows us to make our pages interactive and dynamic and awesome.   Here are some very common uses for JS on the front-end:
+Turn to a partner and describe what JavaScript is in your own words.
+
+## What's ECMAScript?
+
+**ECMAScript** is a standardized specification of JavaScript. Because of the widespread success of JavaScript as a client-side scripting language, Microsoft developed a compatible dialect of the language naming it JScript to avoid trademark issues. JScript added new date methods to alleviate the Y2K bug and was included in Internet Explorer 3.0 which was released in August 1996.
+
+In response, Netscape delivered JavaScript to Ecma International for standardization. Work on standardization began in November 1996 and the first edition of ECMAScript was adopted in June 1997. Several editions of the language standard have been published since then. The name ECMAScript was a compromise between the organizations involved in the standardization process, especially Netscape and Microsoft whose disputes dominated the early standards sessions. Brendan Eich once commented that "ECMAScript was always an unwanted trade name that sounds like a skin disease."
+
+There are six editions of ECMAScript published. Work on version 6 of the standard, codenamed "Harmony", was finalized in June 2015. You'll commonly see version 6 called both ES6 and ES2015 for short.
+
+| Edition |	Date published                         |
+|---------|----------------------------------------|
+| 1       |	June 1997	                             |
+| 2       |	June 1998                              |
+| 3       |	December 1999                          |
+| 4	      | Abandoned due to political differences |
+| 5       |	December 2009                          |
+| 5.1	    | June 2011                              |
+| 6	      | June 2015                              |
+| 7	      | Work in progress	                     |
+
+To see what kind of support your browser has of the ECMAScript standard, check out this [compatibility table](http://kangax.github.io/compat-table/es6/).
+
+### Exercise
+
+Turn to a partner and describe what ECMAScript is in your own words.
+
+## Why is JavaScript important?
+
+JavaScript allows web developers to make web pages interactive, dynamic, and awesome. Here are some very common uses for JavaScript on the front-end.
 
 * [Password Strength Meter](http://codepen.io/oscarekholm/pen/zicjg)
 * [Simple Navigation Menu](http://codepen.io/markmurray/pen/efcjp)
@@ -41,7 +67,8 @@ Some other more complex uses for JS:
 * [Arcade Fire Reflektor Music Video](http://www.chromeexperiments.com/detail/just-a-reflektor/?f=)
 * [Walmart Website](http://www.walmart.com/)
 
-### Javascript Console
+### JavaScript Console
+
 - Allows you to easily interface with your app to run JS commands and display log messages for help with debugging
 - Shortcut to open JS console & bring focus to console
   - Mac: Cmd + Opt + J
@@ -57,9 +84,9 @@ logo.onclick = function () { this.src = "https://media.giphy.com/media/TxjAakMUt
 And then try this:
 
 ```
-function makeWider() { 
-  var logo = document.getElementById('hplogo'); 
-  logo.width += 5; 
+function makeWider() {
+  var logo = document.getElementById('hplogo');
+  logo.width += 5;
 }
 
 setInterval(makeWider, 41.67)
@@ -73,30 +100,30 @@ javascript:document.body.contentEditable='true'; document.designMode='on'; void 
 
 ### Comments
 
-Comments come in two forms 
+Comments come in two forms
 
   * line comments
-  
+
    ```
    // descriptive stuff
    ```
   * multiline comments
-  
+
   ```
   /*
-    These 
+    These
     are
     comments on
     many lines
   */
-  
+
   ```
 
 ## JS Primitive Data Types:
 
-What's a primitive data type? For now, you can think of a primitive data type as anything in Javascript that is not an object (we'll get to objects in just a bit).
+What's a primitive data type? For now, you can think of a primitive data type as anything in JavaScript that is not an object (we'll get to objects in just a bit).
 
-There are six primitive data types in Javascript: string, number, boolean, null, undefined, and (as of ES2015) symbol. In particular, array is not a primitive data type. We'll discuss each of these types briefly below. Oh, also, array is not a primitive data type. And while we're on the subject, do you know what is NOT a primitive data type? That's right, array!
+There are six primitive data types in JavaScript: string, number, boolean, null, undefined, and (as of ES2015) symbol. In particular, array is not a primitive data type. We'll discuss each of these types briefly below. Oh, also, array is not a primitive data type. And while we're on the subject, do you know what is NOT a primitive data type? That's right, array!
 
 Exercise: Give an example of something that is not a primitive data type. (Hint: Say array.)
 
@@ -112,7 +139,7 @@ Numbers are, well, numbers. They come in two flavors:
 * Integers
 
   ```
-   ..., -1,0, 2, 3, 4, 5, ... 
+   ..., -1,0, 2, 3, 4, 5, ...
   ```
 * Floats (or Decimal numbers)
 
@@ -132,7 +159,7 @@ Number.isInteger(4.0) // should return ???
 
 ### String
 
-Strings are collections of letters and symbols known as **Characters**, and we use them to deal with words and text in Javascript. 
+Strings are collections of letters and symbols known as **Characters**, and we use them to deal with words and text in JavaScript.
 
 ```
 "John", "Jane"
@@ -171,7 +198,7 @@ var sanFranciscoIsCheap = false;
 ```
 var x;
 x; // undefined
-x = 3; 
+x = 3;
 x; // no longer undefined!
 ```
 
@@ -190,7 +217,7 @@ Further reading:
 
 ### Symbol
 
-The last primitive data type is also the newest addition to Javascript, and is called symbol. Talking about symbols is a bit advanced for day 1 of Javascript (especially when we haven't talked about objects yet). When you're ready to learn more about them, [check out the docs!](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol)
+The last primitive data type is also the newest addition to JavaScript, and is called symbol. Talking about symbols is a bit advanced for day 1 of JavaScript (especially when we haven't talked about objects yet). When you're ready to learn more about them, [check out the docs!](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol)
 
 ## Values and Expressions
 Values are the simplest components in JavaScript. ```1``` is a value, ```true``` is a value, ```"hello"``` is a value, ```function() {}``` is a value.
@@ -218,7 +245,7 @@ You can also create expressions with strings using addition
 
 This is called **String Concatentation.**
 
-Note that the meaning of `+` depends on what types of values you're working with. Be careful when you combine different meanings of `+` in the same expression: Javascript will attempt to guess at your meaning, but won't always be correct. For example, try putting this into the console:
+Note that the meaning of `+` depends on what types of values you're working with. Be careful when you combine different meanings of `+` in the same expression: JavaScript will attempt to guess at your meaning, but won't always be correct. For example, try putting this into the console:
 
 ```
 "The sum of " + 5 + " and " + 7 + " is " + 5 + 7
@@ -258,7 +285,7 @@ Let's explore the mod operator. Can you guess what it's doing?
 
 How can you use `%` to check whether or not a whole number is odd?
 
-Javascript can be a little cheap with the number of operations it allows you to do. For example, how is someone supposed to square a number or cube a number easily? Luckily there is a special `Math` object with some very useful methods.
+JavaScript can be a little cheap with the number of operations it allows you to do. For example, how is someone supposed to square a number or cube a number easily? Luckily there is a special `Math` object with some very useful methods.
 
 * Taking a number to some `power`? Then just use `Math.pow`
 
@@ -283,8 +310,8 @@ Math.sqrt(4)
 // The following only returns a random decimal
 Math.random()
 => .229375290430
-/** 
-  The following will return a 
+/**
+  The following will return a
   random number between 0 and 10
 */
 Math.random()*10
@@ -306,9 +333,9 @@ Number.isInteger(Math.floor(2.5))
 
 Having expressions is cool. Storing the values of expressions is even cooler.
 
-To store values we use things called **variables**. 
+To store values we use things called **variables**.
 
-The word 'variable' means 'can change' or 'can **vary**' and is used because variables can store many different types of values and can change their value many times. 
+The word 'variable' means 'can change' or 'can **vary**' and is used because variables can store many different types of values and can change their value many times.
 
 ```
 var myNumber = 1;
@@ -334,7 +361,7 @@ var compliment = name + ' is my favorite instructor';
 
 ## Comparisons
 
-One way to get boolean values in Javascript is by using _comparisons_. Comparisons are operators that allow us to compare two different values. For example, mathematical comparisons are comparisons:
+One way to get boolean values in JavaScript is by using _comparisons_. Comparisons are operators that allow us to compare two different values. For example, mathematical comparisons are comparisons:
 
 ```
 5 > 7
@@ -353,7 +380,7 @@ One way to get boolean values in Javascript is by using _comparisons_. Compariso
 
 Notice that in the above example, we typed `1 + 1 == 2`, and note `1 + 1 = 2`. In fact, if you type `1 + 1 = 2` into the console, you'll get an error. So what gives?
 
-The key understanding here is the difference between _assignment_ and _comparison_. The single equals sign in Javascript is used for assignment, e.g. assigning a variable to some value. The double equals sign is used for comparison, i.e. to check whether two values are equal. You can't assign one value to another value, but you can always check whether two values are the same.
+The key understanding here is the difference between _assignment_ and _comparison_. The single equals sign in JavaScript is used for assignment, e.g. assigning a variable to some value. The double equals sign is used for comparison, i.e. to check whether two values are equal. You can't assign one value to another value, but you can always check whether two values are the same.
 
 Related to the `==` comparison operator is the `===` comparison operator. `===` is a stronger operator, as it also checks whether the **type** of the values are the same, while the `==` operator will try perform some type conversion before comparing. As an exercise, try to predict what boolean each of the following expressions will evaluate to:
 
@@ -372,7 +399,7 @@ false === 0
 
 As a general best-practice, it's better to err on the side of the stronger comparison operator.
 
-Note: You can always check something's type in Javascript using the typeof operator! What's `typeof 4`? `typeof "what's up?"`?
+Note: You can always check something's type in JavaScript using the typeof operator! What's `typeof 4`? `typeof "what's up?"`?
 
 ## Conditionals
 
@@ -460,14 +487,18 @@ if (false) {
 
 ## Type Conversion
 
-Sometimes, you may pass in a value of one type when Javascript expects a value of a different type. In this case, rather than throwing an error, Javascript will convert the value into one that has a type that makes sense.
+Sometimes, you may pass in a value of one type when JavaScript expects a value of a different type. In this case, rather than throwing an error, JavaScript will convert the value into one that has a type that makes sense.
 
 For instance, suppose you type the following expression into your console: `1 + 'hi'`. For numbers, `+` means addition; for strings, it means concatenation. So how does JS deal with this ambiguity? It converts the number into a string, the concatenates.
 
-This type of conversion also happens when you pass values into if statements. In a block of code like `if (x) {...}`, `x` is expected to be a Boolean. If it isn't, Javascript will convert it into a Boolean.
+This type of conversion also happens when you pass values into if statements. In a block of code like `if (x) {...}`, `x` is expected to be a Boolean. If it isn't, JavaScript will convert it into a Boolean.
 
-Most values in Javascript are truthy -- that is, they get converted into `true` should the need arise. In fact, there are only six falsy values in Javascript: `false`, `null`, `undefined`, `0`, `''`, and `NaN`.
+Most values in JavaScript are truthy -- that is, they get converted into `true` should the need arise. In fact, there are only six falsy values in JavaScript: `false`, `null`, `undefined`, `0`, `''`, and `NaN`.
 
 ### Further Reading
 
-Want to dig deeper? Read Chapters 1 and 2 in [Eloquent Javascript](http://eloquentjavascript.net/) - we'll be covering some of Chapter 2 tomorrow, so if you don't finish it all, that's ok!
+Want to dig deeper? Read Chapters 1 and 2 in [Eloquent JavaScript](http://eloquentjavascript.net/) - we'll be covering some of Chapter 2 tomorrow, so if you don't finish it all, that's ok!
+
+## Resources
+
+[The famous Douglas Crockford gives a thorough introduction of JavaScript](https://www.youtube.com/watch?v=t7_5-XYrkqg)
