@@ -108,9 +108,7 @@ The latest ECMAScript standard defines seven data types:
 
 A **primitive** is data that is not an object, has no methods, and cannot be changed.
 
-For more information on data types, see the [Mozilla Documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Data_types).
-
-For more information on primitives, see the [Mozilla Documentation](https://developer.mozilla.org/en-US/docs/Glossary/Primitive).
+See [data types](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Data_types) and [primitives](https://developer.mozilla.org/en-US/docs/Glossary/Primitive) on the Mozilla Developer Network for more information.
 
 ### Boolean
 
@@ -167,6 +165,8 @@ Number.isFinite(-Infinity)  // false
 Number.isNaN(200) // false
 Number.isNaN(NaN) // true
 ```
+
+See the [number type](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type) on the Mozilla Developer Network for more information.
 
 ### String
 
