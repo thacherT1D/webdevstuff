@@ -68,7 +68,7 @@ While in the zone of proximal development, doing focused and deliberate practice
 
 ### Exercise
 
-Imagine that a friend came to Galvanize and asked you, "Hey everyone is talking about setting the stage. What does that mean? Why is that important? How do you do that?" Take a few moments to think about what you'd say to your friend. When you've decided what to say, turn and talk to a partner and share with them your thoughts.
+Imagine that a friend came to Galvanize and asked you, "Hey everyone is talking about setting the stage. What does that mean? Why is that important? How do you do that?" Take a few moments to think about what you'd say to your friend. When you've decided what to say, turn and talk to a partner and share your thoughts with them.
 
 ## Play
 
