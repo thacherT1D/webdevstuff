@@ -86,7 +86,7 @@ Or you can use it to make multiple line comments.
 
 ```javascript
 /* This comment spans multiple lines. Notice
-   that we don't need to end the comment until we're done. */
+   that we don't need to end the comment on the first line. */
 ```
 
 Most of the time, you'll use the `//` style because Atom can toggle a line to be commented or not using the `Command` + `/` keyboard shortcut. Go ahead, try it out!
