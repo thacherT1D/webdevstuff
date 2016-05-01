@@ -8,7 +8,7 @@ Being a student in this program is like drinking from a firehose. It's going to 
 
 ### Why is becoming a better learner important?
 
-Learning is essential to being a programmer. It's a huge field with new technologies and methodologies being discovered every day. Becoming a better learner will prepare you for a long and successful career. Additionally, we want Galvanize to be a transformative experience for you. That means we want to help grow your habits and mindsets, not just your skills and knowledge.
+Learning is essential to being a programmer. It's a huge field with new technologies and methodologies being discovered every day. Becoming a better learner will prepare you for a long and successful career. Also, we want Galvanize to be a transformative experience for you. In addition to programming skills and knowledge, we want to help grow your habits and mindsets.
 
 ![](https://i.imgur.com/n3oUe01.png)
 
