@@ -42,7 +42,7 @@ There are six editions of ECMAScript published. Work on version 6 of the standar
 | 6	      | June 2015                              |
 | 7	      | Work in progress	                     |
 
-To see what kind of support your browser has of the ECMAScript standard, check out this [compatibility table](http://kangax.github.io/compat-table/es6/).
+To see what kind of support your browser has of the ECMAScript standard, check out this [compatibility table](http://kangax.github.io/compat-table/es6/). Which browser has the best support? Which browser has the worst support?
 
 ### Exercise
 
@@ -93,18 +93,33 @@ Most of the time, you'll use the `//` style because Atom can toggle a line to be
 
 For more information on comments, see the [Mozilla Documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Comments).
 
-## JS Primitive Data Types:
+### Data types
 
-What's a primitive data type? For now, you can think of a primitive data type as anything in JavaScript that is not an object (we'll get to objects in just a bit).
+The latest ECMAScript standard defines seven data types:
 
-There are six primitive data types in JavaScript: string, number, boolean, null, undefined, and (as of ES2015) symbol. In particular, array is not a primitive data type. We'll discuss each of these types briefly below. Oh, also, array is not a primitive data type. And while we're on the subject, do you know what is NOT a primitive data type? That's right, array!
+- Six data types that are primitives:
+  - Boolean
+  - Null
+  - Undefined
+  - Number
+  - String
+  - Symbol (new in ECMAScript 6)
+- and Object
 
-Exercise: Give an example of something that is not a primitive data type. (Hint: Say array.)
+A **primitive** is data that is not an object, has no methods, and cannot be changed.
 
-References:
+For more information on data types, see the [Mozilla Documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Data_types).
 
-- [Primitive](https://developer.mozilla.org/en-US/docs/Glossary/Primitive)
-- [JavaScript data types and data structures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures)
+For more information on primitives, see the [Mozilla Documentation](https://developer.mozilla.org/en-US/docs/Glossary/Primitive).
+
+### Boolean
+
+Boolean represents a logical entity and can have two values: `true`, and `false`.
+
+```javascript
+var sanFranciscoIsExpensive = true;
+var seattleIsCheap = false;
+```
 
 ### Number
 
@@ -157,14 +172,6 @@ name.endsWith("Q"); // false
 name.includes("t"); // true
 ```
 
-###  Boolean
-A boolean represents logical values **true** or **false**
-
-```
-var sanFranciscoIsExpensive = true;
-var sanFranciscoIsCheap = false;
-```
-
 ### Undefined
 
 `undefined` represents a value that hasn't been defined. A variable that has not been assigned a value is of type undefined. A method or statement also returns undefined if the variable that is being evaluated does not have an assigned value. A function returns undefined if a value was not returned.
@@ -177,6 +184,8 @@ x; // no longer undefined!
 ```
 
 ### Null
+
+The value `null` represents the intentional absence of any object value.
 
 Null represents an explicitly set empty value. Unlike undefined, it does not get set by default to unassigned variables, for instance. If you want something to be null, you must make it so:
 
