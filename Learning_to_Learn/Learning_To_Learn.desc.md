@@ -124,7 +124,7 @@ Imagine that same friend from earlier asks you, "Hey, what's this play business 
 
 The third and final major step to becoming a better learner is reflect.
 
-So you've set the stage by clearing out all the distractions, clarifying the what and the why, and prioritizing process over product. And you've gotten yourself ready to play by wrestling with new information, taking risks, and having fun. Whenever the learning period is done, it's time to reflect on what happened.
+So you've set the stage by clearing out all the distractions, clarifying the what and the why, and prioritizing process over product. And you've spent a good long while in play mode by wrestling with new information, taking risks, and having fun. Whenever the learning period is done, it's time to reflect on what happened.
 
 Like setting the stage and play, this step of the process consists of three sub-steps.
 
