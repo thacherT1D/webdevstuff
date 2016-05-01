@@ -136,13 +136,13 @@ Like setting the stage and play, this step of the process consists of three sub-
 
 The first part of reflection is to self assess by asking yourself the following.
 
-- What were your objectives?
-- How far did you get?
+- What were my objectives?
+- How far did I get?
 - How much is left?
 - How was the process?
 - Did I set the stage well?
 - Did I play well?
-- What can you do better next time?
+- What can I do better next time?
 
 These are some of the most high value questions you can ask yourself. If you can do that for yourself at the end of each day, you'll multiply your ability to learn. This is one of the secrets as to why students who come through Galvanize leave transformed. They learn how to think about their own thought process and provide themselves feedback.
 
