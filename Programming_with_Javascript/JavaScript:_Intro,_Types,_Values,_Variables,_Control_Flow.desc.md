@@ -116,10 +116,10 @@ Boolean represents a logical entity and can have two values: `true` and `false`.
 
 ```javascript
 // San Francisco is expensive
-true
+true;
 
 // Seattle is cheap
-false
+false;
 ```
 
 See the [boolean type](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type) and [`Boolean` global object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean) on the Mozilla Developer Network for more information.
@@ -130,29 +130,29 @@ According to the ECMAScript standard, there's only one number type. And it repre
 
 ```javascript
 // integer numbers
--3
--2
--1
-0
-1
-2
-3
+-3;
+-2;
+-1;
+0;
+1;
+2;
+3;
 
 // floating-point (i.e. decimal) numbers
--42.42
--2.718
--0.25
-.66666667
-3.14
-199.99
+-42.42;
+-2.718;
+-0.25;
+.66666667;
+3.14;
+199.99;
 ```
 
 If you want to distinguish between integers and floats, there are a couple of ways to do this. The most modern approach, as of ES6, is to use the `Number.isInteger()` function.
 
 ```javascript
-Number.isInteger(4)   // true
-Number.isInteger(4.1) // false
-Number.isInteger(4.0) // true
+Number.isInteger(4);    // true
+Number.isInteger(4.1);  // false
+Number.isInteger(4.0);   // true
 ```
 
 Additionally, the number type has three symbolic values: `Infinity`, `-Infinity`, and `NaN` (not-a-number). To determine if a number is finite or not-a-number, use the `Number.isFinite()` and `Number.isNaN()` functions respectively.
@@ -160,12 +160,12 @@ Additionally, the number type has three symbolic values: `Infinity`, `-Infinity`
 **TIP:** Both n's of `NaN` must be uppercase otherwise JavaScript will throw an error.
 
 ```javascript
-Number.isFinite(100)        // true
-Number.isFinite(Infinity)   // false
-Number.isFinite(-Infinity)  // false
+Number.isFinite(100);       // true
+Number.isFinite(Infinity);  // false
+Number.isFinite(-Infinity); // false
 
-Number.isNaN(200) // false
-Number.isNaN(NaN) // true
+Number.isNaN(200);  // false
+Number.isNaN(NaN);  // true
 ```
 
 See the [number type](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type) and [`Number` global object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number) on the Mozilla Developer Network for more information.
@@ -175,36 +175,36 @@ See the [number type](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Da
 JavaScript's string type is used to represent textual data. To create a string, simply append and prepend a series of characters with either single or double quotation marks. Which quotations you use is a matter of style preference. Just make sure the both opening and closing quotations are the same otherwise JavaScript will throw an error.
 
 ```javascript
-'Jane'
-"John"
+'Jane';
+"John";
 ```
 
 Each element in the string occupies a position in the String. The first element is at index 0, the next at index 1, and so on. The length of a String is the number of elements in it.
 
 ```javascript
-'melissa'.length        // 6
-'melissa'[0]            // 'm'
-'melissa'.substr(1)     // 'elissa'
-'melissa'.substr(1, 2)  // 'el'
+'melissa'.length;       // 6
+'melissa'[0];           // 'm'
+'melissa'.substr(1);    // 'elissa'
+'melissa'.substr(1, 2); // 'el'
 ```
 
 There are a number of built-in methods associated with strings, some of which are new additions as of ES6.
 
 ```javascript
-'matt'.toUpperCase() // 'MATT'
-'MATT'.toLowerCase() // 'matt'
+'matt'.toUpperCase(); // 'MATT'
+'MATT'.toLowerCase(); // 'matt'
 
-'Matt'.indexOf('a')   // 1
-'Matt'.indexOf('at')  // 1
-'Matt'.indexOf('ab')  // -1
+'Matt'.indexOf('a');  // 1
+'Matt'.indexOf('at'); // 1
+'Matt'.indexOf('ab'); // -1
 
-'Matt'.indexOf('t')     // 2
-'Matt'.lastIndexOf('t') // 3
+'Matt'.indexOf('t');      // 2
+'Matt'.lastIndexOf('t');  // 3
 
 // ES6
-'Matt'.startsWith('Ma') // true
-'Matt'.endsWith('q')    // false
-'Matt'.includes('t')    // true
+'Matt'.startsWith('Ma');  // true
+'Matt'.endsWith('q');    // false
+'Matt'.includes('t');    // true
 ```
 
 See the [string type](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type) and [`String` global object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) on the Mozilla Developer Network for more information.
@@ -253,7 +253,6 @@ Variables can also store the result of any expression.
 
 ```javascript
 var result = 2 + 2;
-var greeting = 'Hello' + ' Pete';
 ```
 
 ### Undefined
@@ -268,6 +267,8 @@ x = 3;
 x; // no longer undefined!
 ```
 
+See the [`undefined` global property](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined) on the Mozilla Developer Network for more information.
+
 ### Null
 
 The value `null` represents the intentional absence of any value. Unlike `undefined`, it's not explicitly set by default to unassigned variables. If you want something to be `null`, you must make it so.
@@ -275,6 +276,8 @@ The value `null` represents the intentional absence of any value. Unlike `undefi
 ```javascript
 var x = null;
 ```
+
+See the [`null` value](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null) on the Mozilla Developer Network for more information.
 
 Further reading:
 
@@ -285,53 +288,38 @@ Further reading:
 
 Symbol is the newest primitive data type to be added to JavaScript. Talking about symbols is a bit advanced for the first day of JavaScript, especially since we haven't talked about objects yet. If want a sneak peak, see the [`Symbol` global object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol) on the Mozilla Developer Network for more information.
 
-### Values and Expressions
+###
 
-Values are the simplest components in JavaScript. ```1``` is a value, ```true``` is a value, ```"hello"``` is a value, ```function() {}``` is a value.
+Data types are not very useful without being able to form **expressions**. Some common expressions you'll encounter are mathematical expressions, using common mathematical operations.
 
-Types of values like `Number` or `String` are not very useful without being able to form **Expressions** or **Combinations**.
-
-Some common expressions you'll encounter are _mathematical expressions_, using common mathematical operations. Try these on for size:
-
-```
-  1 + 1
-  => 2
-  2 - 1
-  => 1
-  3 * 4
-  => 12
-  4 / 2
-  => 2
-```
-You can also create expressions with strings using addition
-
-```
-  "Hello, " + "world!"
-  => "Hello, world!"
+```javascript
+1 + 1;  // 2
+2 - 1;  // 1
+3 * 4;  // 12
+4 / 2;  // 2
 ```
 
-This is called **String Concatenation.**
+You can also create expressions with strings using addition. This is called **string concatenation**.
 
-Note that the meaning of `+` depends on what types of values you're working with. Be careful when you combine different meanings of `+` in the same expression: JavaScript will attempt to guess at your meaning, but won't always be correct. For example, try putting this into the console:
-
-```
-"The sum of " + 5 + " and " + 7 + " is " + 5 + 7
+```javascript
+'Hello ' + 'world!'  // 'Hello world!'
 ```
 
-Lastly, you can also form expressions with Booleans. Three operations you'll be using quite often are `&&` (and), `||` (or) and `!` (not).
+Notice that the meaning of the `+` operation depends on what data types are being operated on. Be careful when you combine different meanings of `+` in the same expression. JavaScript will attempt to guess at your meaning, but won't always be correct.
 
+```javascript
+'The sum of ' + 5 + ' and ' + 7 + ' is ' + 5 + 7
 ```
+
+Lastly, you can form expressions using boolean operations: `&&` (and), `||` (or) and `!` (not).
+
+```javascript
 var bool1 = true;
 var bool2 = false;
 
-bool1 || bool2
-=> true
-
-bool1 && bool2
-=> false
-
-!bool1
-=> false
+bool1 || bool2; // true
+bool1 && bool2; // false
+!bool1;         // false
 ```
 
 ### Special Number Operators
@@ -340,14 +328,14 @@ Addition, subtraction, multiplication and division are probably relatively famil
 
 Let's explore the mod operator. Can you guess what it's doing?
 ```
-  4 % 2
-  => 0
-  5 % 3
-  => 2
-  10 % 7
-  => 3
-  12 % 3
-  => 0
+4 % 2
+=> 0
+5 % 3
+=> 2
+10 % 7
+=> 3
+12 % 3
+=> 0
 ```
 
 How can you use `%` to check whether or not a whole number is odd?
