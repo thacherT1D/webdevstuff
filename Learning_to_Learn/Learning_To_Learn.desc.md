@@ -34,7 +34,7 @@ Also write down anything that resonates with you. In the final exercise, you'll 
 
 ## Set the stage
 
-So the first major step to becoming a better learner is to set the stage. This step of the process is about priming your brain and consists of three sub-steps.
+The first major step to becoming a better learner is to set the stage. This step of the process is about priming your brain and consists of three sub-steps.
 
 1. Clear the stage
 1. Clarify the what and the why
