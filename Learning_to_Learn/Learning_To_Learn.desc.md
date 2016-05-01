@@ -1,4 +1,4 @@
-Being a student in this program is like drinking from a firehose. It's going to feel like information is just gushing out of your instructors on a daily basis with no way to control the flow. Since it's probably been a while since you've been a student, this article will prepare you on how to be a sponge and retain as much of that information as possible.
+Being a student in this program is like drinking from a firehose. It's going to feel like information is just gushing out of your instructors on a daily basis with no way to control the flow. Since you probably haven't been a student, this article will help prepare you on how to be a sponge and retain as much of that information as possible.
 
 ### Objectives
 
