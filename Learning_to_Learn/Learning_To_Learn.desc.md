@@ -20,7 +20,7 @@ This difference in learning speed before and after the program is what it means 
 
 ## How do I become a better learner?
 
-In the process of optimizing your learning potential, there are three steps in which you can start to think about.
+To become a better learner, we recommend this three step learning process which you can start thinking about and working on today.
 
 1. Set the stage
 1. Play
@@ -28,9 +28,9 @@ In the process of optimizing your learning potential, there are three steps in w
 
 ### Exercise
 
-Time to take out a notebook. When you encounter a keyword in bold, write it down. Don't worry, there's not a lot to write so you can still pay attention to the lecture. But it's important that you understand these keywords and share in their meaning.
+Time to take out a notebook. When you encounter one of these steps and its sub-steps, write it down. Don't worry, there's not a lot to write so you can still pay attention to the lecture. But it's important that you understand these keywords and share in their meaning.
 
-Also write down anything that resonates with you. In upcoming exercises, you'll be asked to share it. But it'll also help you really understand why it feels so relatable to you.
+Also write down anything that resonates with you. In the final exercise, you'll be asked to share it. Writing it down may also help you really understand why it feels so relatable to you.
 
 ## Set the stage
 
