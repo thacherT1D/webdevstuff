@@ -14,7 +14,7 @@ Learning is essential to being a programmer. It's a huge field with new technolo
 
 At an average college or code school, you'd learn a lot, but you'd probably fall back into the same habits and mindsets you had before you started. Yes, you'd be better off for having gone back to school, but you wouldn't really have been transformed.
 
-With our strong instructional team and a great curriculum, you can learn two to three times as much at Galvanize given the right instructional techniques and the right environment. But because we operate on habits and mindsets, with the intention of helping you become a better learner, you can continue to grow at an accelerated rate even after the Galvanize program is over. Maybe not as much as when you're in school, but certainly at much faster rate than when you started.
+With our strong instructional team, teaching techniques, curriculum, and environment, you can learn two to three times as much at Galvanize. But because we operate on habits and mindsets, with the intention of helping you become a better learner, you can continue to grow at an accelerated rate even after the Galvanize program is over. Maybe not as much as when you're in school, but certainly at much faster rate than when you started.
 
 This difference in learning speed before and after the program is what it means to be transformed and to become a new person.
 
