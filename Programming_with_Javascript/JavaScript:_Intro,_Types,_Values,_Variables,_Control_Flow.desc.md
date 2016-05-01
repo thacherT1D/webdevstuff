@@ -501,4 +501,7 @@ Want to dig deeper? Read Chapters 1 and 2 in [Eloquent JavaScript](http://eloque
 
 ## Resources
 
-[The famous Douglas Crockford gives a thorough introduction of JavaScript](https://www.youtube.com/watch?v=t7_5-XYrkqg)
+- [Quick history of JavaScript by Douglas Crockford](https://www.youtube.com/watch?v=t7_5-XYrkqg)
+- [Wikipedia: Ajax (programming)](https://en.wikipedia.org/wiki/Ajax_(programming))
+- [Wikipedia: ECMAScript](https://en.wikipedia.org/wiki/ECMAScript)
+- [Wikipedia: JavaScript](https://en.wikipedia.org/wiki/JavaScript)
