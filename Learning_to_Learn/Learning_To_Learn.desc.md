@@ -100,7 +100,7 @@ You've probably heard a bunch of common sayings about this already.
 - "You miss 100% of the shots you don't take."
 - "If you never swing the bat, you'll never hit a home run."
 
-When it comes to learning through play, it's the effort, and not the intelligence, that makes the biggest difference. There's been plenty of research around fixed mindset versus growth mindset.
+When it comes to learning through play, it's the effort, and not the intelligence, that makes the biggest difference. This aligns with the research done around fixed mindset versus growth mindset.
 
 ![](https://i.imgur.com/jO19KKD.png)
 
