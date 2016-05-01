@@ -229,7 +229,7 @@ name = 'Francis';
 name = 42;
 ```
 
-Variable names in JavaScript can't contain spaces. The standard practice is to have variables start with a lowercase letter and capitalize each word except for the first one. This is called camel-case.
+Variable names in JavaScript can't contain spaces. The standard practice is to have variables start with a lowercase letter and capitalize each word except for the first one. This is called camelcase.
 
 ```javascript
 var firstName = 'Paula';
@@ -253,7 +253,7 @@ Variables can also store the result of any expression.
 
 ```javascript
 var result = 2 + 2;
-var greeting = 'Hello' + ' Matt';
+var greeting = 'Hello' + ' Pete';
 ```
 
 ### Undefined
