@@ -50,13 +50,17 @@ Turn to a partner and describe what ECMAScript is in your own words.
 
 ## Why is JavaScript important?
 
-JavaScript allows web developers to make web pages interactive, dynamic, and awesome. Here are some very common uses for JavaScript on the front-end.
+JavaScript allows web developers to make web pages interactive, dynamic, and awesome. Here are some really cool examples of JavaScript in the wild.
 
 - [Password Strength Meter](http://codepen.io/pankajparashar/details/bFhyf/)
 - [Fullscreen Overlay Effects](http://tympanus.net/Development/FullscreenOverlayStyles/index3.html)
 - [Page Loading Effects](http://tympanus.net/Development/PageLoadingEffects/index2.html)
 - [Image Grid Effects](http://tympanus.net/Development/ImageGridEffects/index2.html)
 - [Animated Map Path for Interactive Storytelling](http://tympanus.net/Development/StorytellingMap/)
+
+### Exercise
+
+What are some websites you frequently use? Revisit them and try to figure out which parts are using JavaScript. Once you have a few examples, show a partner and explain why JavaScript is important for these websites.
 
 ### JavaScript Console
 
