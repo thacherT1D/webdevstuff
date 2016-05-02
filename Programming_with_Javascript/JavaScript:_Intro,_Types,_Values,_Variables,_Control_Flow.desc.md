@@ -290,7 +290,7 @@ Symbol is the newest primitive data type to be added to JavaScript. Talking abou
 
 ### Arithmetic operators
 
-JavaScript lets you perform basic mathematical operations like addition, subtraction, multiplication, and division using the operator symbols `+`, `-`, `*`, and `/` respectively. The basic arithmetic rules and order of operations apply to these operators.
+JavaScript lets you perform basic arithmetic operations like addition, subtraction, multiplication, and division using the `+`, `-`, `*`, and `/` operators respectively. The arithmetic rules and order of operations apply as expected.
 
 ```javascript
 1 + 1;  // 2
@@ -426,11 +426,6 @@ Relational operators are used to compare the values of two strings as well.
 'a' >= 'b'; // false
 'b' > 'a';  // true
 'b' >= 'a'; // true
-
-'a' < 'b';  // true
-'a' >= 'b'; // true
-'b' < 'a';  // false
-'b' <= 'a'; // false
 ```
 
 See the [relational operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Relational_operators) on the Mozilla Developer Network for more information.
@@ -444,19 +439,35 @@ The key understanding here is the difference between _assignment_ and _compariso
 Related to the `==` comparison operator is the `===` comparison operator. `===` is a stronger operator, as it also checks whether the **type** of the values are the same, while the `==` operator will try perform some type conversion before comparing. As an exercise, try to predict what boolean each of the following expressions will evaluate to:
 
 ```javascript
-"3" == 3
-=> ???
-"3" === 3
-=> ???
-false == "false"
-=> ???
-false == 0
-=> ???
-false === 0
-=> ???
+4 === 3   // false
+3 === 3   // true
+3 === '3' // false
+
+4 !== 3   // true
+3 !== 3   // false
+3 !== '3' // true
+```
+
+```javascript
+4 == 3    // false
+3 == 3    // true
+3 == '3'  // true
+
+4 != 3    // true
+3 != 3    // false
+3 != '3'  // false
+```
+
+```javascript
+true === 'true' // false
+true == 'true'  // false
+true !== 'true' // true
+true != 'true'  // true
 ```
 
 As a general best-practice, it's better to err on the side of the stronger comparison operator.
+
+https://dorey.github.io/JavaScript-Equality-Table/
 
 Note: You can always check something's type in JavaScript using the typeof operator! What's `typeof 4`? `typeof "what's up?"`?
 
@@ -468,7 +479,7 @@ Conditionals control the flow of a program.  Conditionals decide which code stat
 
 In the example above, the input to the conditional is the total amount of your purchase.
 
-### If
+### If statements
 
 The most basic control flow statement is the `if` statement.  Here is our example from above in code:
 
