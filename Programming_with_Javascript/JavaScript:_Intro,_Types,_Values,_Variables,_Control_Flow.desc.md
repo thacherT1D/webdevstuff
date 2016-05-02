@@ -203,8 +203,8 @@ There are a number of built-in methods associated with strings, some of which ar
 
 // ES6
 'Matt'.startsWith('Ma');  // true
-'Matt'.endsWith('q');    // false
-'Matt'.includes('t');    // true
+'Matt'.endsWith('q');     // false
+'Matt'.includes('t');     // true
 ```
 
 See the [string type](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type) and [`String` global object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) on the Mozilla Developer Network for more information.
@@ -288,7 +288,7 @@ Further reading:
 
 Symbol is the newest primitive data type to be added to JavaScript. Talking about symbols is a bit advanced for the first day of JavaScript, especially since we haven't talked about objects yet. If want a sneak peak, see the [`Symbol` global object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol) on the Mozilla Developer Network for more information.
 
-### Number operators
+### Arithmetic operators
 
 JavaScript lets you perform basic mathematical operations like addition, subtraction, multiplication, and division using the operator symbols `+`, `-`, `*`, and `/` respectively. The basic arithmetic rules and order of operations apply to these operators.
 
@@ -299,7 +299,7 @@ JavaScript lets you perform basic mathematical operations like addition, subtrac
 5 / 2;  // 2.5
 ```
 
-In JavaScript, the modulo `%` operator finds the remainder after division of one number by another.
+In JavaScript, the `%` operator finds the remainder after division of one number by another.
 
 ```javascript
 4 % 2;  // 0
@@ -308,7 +308,21 @@ In JavaScript, the modulo `%` operator finds the remainder after division of one
 12 % 3; // 0
 ```
 
-**Question:** How can you use `%` to check whether or not an integer is even or odd?
+**Question:** How can you use the `%` operator to check whether or not an integer is even or odd?
+
+The `+` operator can also be used for **string concatenation**.
+
+```javascript
+'Hello ' + 'world!';  // 'Hello world!'
+```
+
+Notice that the meaning of the `+` operator depends on what data types of the operands. Be careful when you combine different meanings of `+` in the same expression. JavaScript will attempt to guess the meaning, but won't always be correct.
+
+```javascript
+'The sum of ' + 5 + ' and ' + 7 + ' is ' + 5 + 7
+```
+
+See the [arithmetic operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators) on the Mozilla Developer Network for more information.
 
 ### Number methods
 
@@ -361,46 +375,67 @@ Math.random() * 10; // 7.133676137309521
 
 See the [`Math` global object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math) on the Mozilla Developer Network for more information.
 
-### String operators
+### Logical operators
 
-You can also create expressions with strings using addition. This is called **string concatenation**.
-
-```javascript
-'Hello ' + 'world!';  // 'Hello world!'
-```
-
-Notice that the meaning of the `+` operation depends on what data types are being operated on. Be careful when you combine different meanings of `+` in the same expression. JavaScript will attempt to guess at your meaning, but won't always be correct.
+Logical operators `&&` (and), `||` (or) and `!` (not) are typically used with boolean (logical) values. When they are, they return a boolean value.
 
 ```javascript
-'The sum of ' + 5 + ' and ' + 7 + ' is ' + 5 + 7
+true && true;   // true
+true && false;  // false
+false && true;  // false
+false && false; // false
+
+true || true;   // true
+true || false;  // true
+false || true;  // true
+false || false; // false
+
+!true;          // false
+!false;         // true
 ```
 
-### Boolean operations
-
-Lastly, you can form expressions using boolean operations: `&&` (and), `||` (or) and `!` (not).
+As logical expressions are evaluated left to right, they are tested for possible "short-circuit" evaluation using the following rules.
 
 ```javascript
-var bool1 = true;
-var bool2 = false;
-
-bool1 || bool2; // true
-bool1 && bool2; // false
-!bool1;         // false
+false && (anything);  // Short-circuit evaluated to false
+true || (anything);   // Short-circuit evaluated to true
 ```
 
-## Comparisons
+See the [logical operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators) on the Mozilla Developer Network for more information.
 
-One way to get boolean values in JavaScript is by using _comparisons_. Comparisons are operators that allow us to compare two different values. For example, mathematical comparisons are comparisons:
+### Relational operators
+
+Relational operators `>` (greater than), `>=` (greater than or equal to), `<` (less than), and `<=` (less than or equal to) are used to compare the values of two numbers.
 
 ```javascript
-5 > 7;            // false
-1 + 1 == 2;       // true
-7 * 8 > 5 * 9;    // true
-1 > 100 || true;  // true
-4 != 5;           // true
+7 > 7;  // false
+7 >= 7; // true
+4 < 4;  // false
+4 <= 4; // true
 ```
 
-## What's the deal with `=`, `==`, and `===`?
+Relational operators are used to compare the values of two strings as well.
+
+```javascript
+'a' > 'a';  // false
+'a' >= 'a'; // true
+'a' < 'a';  // false
+'a' <= 'a'; // true
+
+'a' > 'b';  // false
+'a' >= 'b'; // false
+'b' > 'a';  // true
+'b' >= 'a'; // true
+
+'a' < 'b';  // true
+'a' >= 'b'; // true
+'b' < 'a';  // false
+'b' <= 'a'; // false
+```
+
+See the [relational operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Relational_operators) on the Mozilla Developer Network for more information.
+
+### Equality operators
 
 Notice that in the above example, we typed `1 + 1 == 2`, and note `1 + 1 = 2`. In fact, if you type `1 + 1 = 2` into the console, you'll get an error. So what gives?
 
@@ -425,7 +460,7 @@ As a general best-practice, it's better to err on the side of the stronger compa
 
 Note: You can always check something's type in JavaScript using the typeof operator! What's `typeof 4`? `typeof "what's up?"`?
 
-## Conditionals
+### Conditionals
 
 Conditionals control the flow of a program.  Conditionals decide which code statements gets run based on some input to the conditional.  An example from everyday life would be:
 
@@ -508,7 +543,7 @@ if (false) {
 }
 ```
 
-## Type Conversion
+### Type Conversion
 
 Sometimes, you may pass in a value of one type when JavaScript expects a value of a different type. In this case, rather than throwing an error, JavaScript will convert the value into one that has a type that makes sense.
 
