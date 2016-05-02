@@ -35,7 +35,7 @@ Also write down anything that resonates with you. In the final exercise, you'll 
 
 ## Set the stage
 
-The first major step to becoming a better learner is to set the stage. This step of the process is about priming your brain and consists of three sub-steps.
+The first major step to becoming a better learner is to set the stage. This step of the process is about priming your brain to receive new information. Setting the stage consists of three sub-steps.
 
 1. Clear the stage
 1. Clarify the what and the why
@@ -155,7 +155,7 @@ Additionally, by writing down these questions, you can go back and review them a
 
 ### Repeat
 
-The third and final step of reflection is to repeat this whole cycle. As mentioned earlier, learning never stops for programmers as there's always something new to master. The best part about mastering this learning process is that the more you practice it, that faster and easier you'll retain new information.
+The third and final step of reflection is to repeat this whole cycle. As mentioned earlier, learning never stops for programmers as there's always something new to master. The best part about mastering this learning process is that the more you practice it, the faster and easier you'll retain new information.
 
 ### Exercise
 
