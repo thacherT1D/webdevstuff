@@ -2,12 +2,20 @@
 
 By the end of this article you will have:
 
-- Installed and configured all required software.
-- Established an organized workspace for notes and projects.
+- Installed and configured the following software:
+  - Homebrew
+  - Cask
+  - iTerm2
+  - Git
+  - Postman
+  - Atom
+  - Chrome
+  - Node
+- Established an organized file structure / workspace for your notes and projects.
 
 # Computer Setup
 
-As developers, our computers are both a tool and a workspace. Ensuring we have the right tools and a well organized workspace will set us up for success. We're going to walk through creating a directory to keep all of our code, notes and projects. Further, we are going to install and configure all the software we need.
+As developers, our computers are both a tool and a workspace. Ensuring we have the right tools and a well organized workspace will set us up for success. We are going to install and configure all the software we need. Further, we're going to walk through creating a directory to keep all of our code, notes and projects.
 
 ## Homebrew
 
