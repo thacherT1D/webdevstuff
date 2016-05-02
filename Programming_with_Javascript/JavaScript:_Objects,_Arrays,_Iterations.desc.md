@@ -4,7 +4,7 @@ Objectives:
 
 * Create and manipulate arrays and objects
 * Explain the difference between object dot notation and bracket notation
-* Explain how objects are stored and compared in memory 
+* Explain how objects are stored and compared in memory
 * Write for loops and while loops
 * Write a for loop to iterate over an array
 * Write a for-in loop to iterate over an object
@@ -14,9 +14,13 @@ Objectives:
 
 Now that we've talked about primitive data types, let's discuss the last data type in Javascript: objects. Arrays, functions, and (shocker!) objects are all examples of objects. Objects are sometimes referred to as reference types (to distinguish them from the primitive types that we've seen already). Here we'll discuss arrays and objects; functions will be the subject of a later learning experience.
 
-## Arrays 
+- [Arrays](/JavaScript:_Arrays.desc.md)
+- [Objects](/JavaScript:_Objects.desc.md)
+- [Iterations](/JavaScript:_Iterations.desc.md)
 
-Arrays in Javascript are declared using square brackets. The simplest array is one with nothing in it: 
+## Arrays
+
+Arrays in Javascript are declared using square brackets. The simplest array is one with nothing in it:
 
 ```
 var arr = [];
@@ -66,7 +70,7 @@ myArray[2] = "Mathematical Matt"
 // ["Elie", "Janey", "Mathematical Matt", "Parker", "Tim"];
 ```
 
-## Objects 
+## Objects
 
 Let's now transition to objects, which are created with a different syntax.
 
@@ -203,7 +207,7 @@ person
 // {lastName: "Wayne"}
 ```
 
-Deleting requires us to include the keyword `delete` in front of a key-value pair. 
+Deleting requires us to include the keyword `delete` in front of a key-value pair.
 
 ### Array checking
 
