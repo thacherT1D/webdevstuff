@@ -91,7 +91,7 @@ Or you can use it to make multiple line comments.
 
 Most of the time, you'll use the `//` style because Atom can toggle a line to be commented or not using the `Command` + `/` keyboard shortcut. Go ahead, try it out!
 
-For more information on comments, see the [Mozilla Documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Comments).
+See the [comments](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Comments) documentation on the Mozilla Developer Network for more information.
 
 ### Data types
 
@@ -288,20 +288,18 @@ Further reading:
 
 Symbol is the newest primitive data type to be added to JavaScript. Talking about symbols is a bit advanced for the first day of JavaScript, especially since we haven't talked about objects yet. If want a sneak peak, see the [`Symbol` global object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol) on the Mozilla Developer Network for more information.
 
-### Number operations
+### Number operators
 
-Data types are not very useful without being able to form **expressions**. Some common expressions you'll encounter are mathematical expressions, using common mathematical operations.
+JavaScript lets you perform basic mathematical operations like addition, subtraction, multiplication, and division using the operator symbols `+`, `-`, `*`, and `/` respectively. The basic arithmetic rules and order of operations apply to these operators.
 
 ```javascript
 1 + 1;  // 2
-2 - 1;  // 1
+4 - 8;  // -4
 3 * 4;  // 12
-4 / 2;  // 2
+5 / 2;  // 2.5
 ```
 
-Addition, subtraction, multiplication and division are probably relatively familiar to you. There's a fifth operation which may be less familiar: the **mod** operator, written using the `%` character.
-
-Let's explore the mod operator. Can you guess what it's doing?
+In JavaScript, the modulo `%` operator finds the remainder after division of one number by another.
 
 ```javascript
 4 % 2;  // 0
@@ -310,35 +308,34 @@ Let's explore the mod operator. Can you guess what it's doing?
 12 % 3; // 0
 ```
 
-How can you use `%` to check whether or not a whole number is odd?
+**Question:** How can you use `%` to check whether or not an integer is even or odd?
 
-### Math operations
+### Number methods
 
-JavaScript can be a little cheap with the number of operations it allows you to do. For example, how is someone supposed to square a number or cube a number easily? Luckily there is a special `Math` object with some very useful methods.
-
-* Taking a number to some `power`? Then just use `Math.pow` * Taking a square root
+To convert a string to a number, use the following parsing methods.
 
 ```javascript
+Number.parseInt('42');        // 42
+Number.parseFloat('3.14');    // 3.14
+Number.parseInt('forty two'); // NaN
+```
+
+See the [`Number` global object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number) on the Mozilla Developer Network for more information.
+
+### Math methods
+
+JavaScript has a `Math` global object that has properties and methods for mathematical constants and functions.
+
+```javascript
+// pi
+Math.PI;  // 3.141592653589793
+
 // 2⁴
 Math.pow(2, 4); // 16
 
 // √4
 Math.sqrt(4); // 2
-```
 
-* Need a `random` number? Then use `Math.random`.
-
-```javascript
-// Generate a random number from 0 up to but not including 1
-Math.random();  // .229375290430
-
-// Generate a random number from 0 up to but not including 10
-Math.random() * 10; // 7.133676137309521
-```
-
-* Since Numbers can be **Floats** or **Integers** we often want to get rid of remaining decimal places, which can be done using `Math.floor`.
-
-```javascript
 // Round down to an integer
 Math.floor(3.14); // 3
 Math.floor(3.99); // 3
@@ -350,9 +347,17 @@ Math.ceil(5.99);  // 6
 // Round to the nearest integer
 Math.round(7.25); // 7
 Math.round(7.99); // 8
+
+// Generate a random number from 0 up to but not including 1
+Math.random();  // .229375290430
+
+// Generate a random number from 0 up to but not including 10
+Math.random() * 10; // 7.133676137309521
 ```
 
-### String operations
+See the [`Math` global object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math) on the Mozilla Developer Network for more information.
+
+### String operators
 
 You can also create expressions with strings using addition. This is called **string concatenation**.
 
