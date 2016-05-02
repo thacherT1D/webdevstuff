@@ -303,7 +303,7 @@ In JavaScript, the modulo `%` operator finds the remainder after division of one
 
 ```javascript
 4 % 2;  // 0
-5 % 3;  // 2
+4 % 3;  // 1
 10 % 7; // 3
 12 % 3; // 0
 ```
@@ -347,7 +347,11 @@ Math.ceil(5.99);  // 6
 // Round to the nearest integer
 Math.round(7.25); // 7
 Math.round(7.99); // 8
+```
 
+You can also use the `Math` object to generate random numbers.
+
+```javascript
 // Generate a random number from 0 up to but not including 1
 Math.random();  // .229375290430
 
@@ -362,7 +366,7 @@ See the [`Math` global object](https://developer.mozilla.org/en-US/docs/Web/Java
 You can also create expressions with strings using addition. This is called **string concatenation**.
 
 ```javascript
-'Hello ' + 'world!'  // 'Hello world!'
+'Hello ' + 'world!';  // 'Hello world!'
 ```
 
 Notice that the meaning of the `+` operation depends on what data types are being operated on. Be careful when you combine different meanings of `+` in the same expression. JavaScript will attempt to guess at your meaning, but won't always be correct.
