@@ -64,7 +64,7 @@ What are some websites you frequently use? Revisit them and try to figure out wh
 
 ## How do you write JavaScript?
 
-Launch Atom so we can play with JavaScript's syntax.
+Most of this will be a review of the precourse, so we'll be going over this fairly quickly. However, go ahead and launch Atom so you can play with JavaScript's syntax.
 
 ### Comments
 
