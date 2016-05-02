@@ -431,21 +431,28 @@ See the [relational operators](https://developer.mozilla.org/en-US/docs/Web/Java
 
 ### Equality operators
 
-Notice that in the above example, we typed `1 + 1 == 2`, and note `1 + 1 = 2`. In fact, if you type `1 + 1 = 2` into the console, you'll get an error. So what gives?
-
-The key understanding here is the difference between _assignment_ and _comparison_. The single equals sign in JavaScript is used for assignment, e.g. assigning a variable to some value. The double equals sign is used for comparison, i.e. to check whether two values are equal. You can't assign one value to another value, but you can always check whether two values are the same.
-
-Related to the `==` comparison operator is the `===` comparison operator. `===` is a stronger operator, as it also checks whether the **type** of the values are the same, while the `==` operator will try perform some type conversion before comparing. As an exercise, try to predict what boolean each of the following expressions will evaluate to:
+The triple equals `===` operator compares two values to see if they're exactly the same or "strictly equal" to one another. The operator returns `true` if the values are equal and are the same type.
 
 ```javascript
 4 === 3   // false
 3 === 3   // true
 3 === '3' // false
+```
 
+Conversely, the `!==` operator returns `true` if the values are not equal and/or are not the same type.
+
+```javascript
 4 !== 3   // true
 3 !== 3   // false
 3 !== '3' // true
 ```
+
+Be careful not to confuse the `===` operator with the single equal `=` operator. The `===` operator asks "Are these two values strictly equal?" which the `=` operator means "Assign the value on the right to the variable on the left." In short, the `===` operator is used for **comparison** and the `=` operator is used for **assignment**.
+
+Remember, when you use the `=` operator, a variable name _must_ be on the left and the value you want to assign to that variable _must_ be on the right. Since the `===` operator is compares two values to see if they're strictly equal, it doesn't matter which value is on which side.
+
+Related to the `===` and `!==` operators are the `==` and `!=` operators. `===` is a stronger operator, as it also checks whether the **type** of the values are the same, while the `==` operator will try perform some type conversion before comparing. As an exercise, try to predict what boolean each of the following expressions will evaluate to:
+
 
 ```javascript
 4 == 3    // false
