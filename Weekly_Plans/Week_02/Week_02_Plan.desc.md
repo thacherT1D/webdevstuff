@@ -1,25 +1,20 @@
 # Week 2 (May 2 - May 6)
 ## Weekly Objective
 
-- Objective 1
-- Objective 2
-- Objective 3
+- Introduction to Javascript
+- Javascript array and objects
+- Javascript iterators
+- Javascript functions
+- Problem solving strategies
 
 ---
 
-# Monday, May 2
+# Monday, May 2 - Roger
 
-Warmup: [Link to Warmup](http://github.com/gSchool)
+Warmup: [CSS Selector Practice](http://flukeout.github.io/) - Roger
 
 Lessons:
-- [Lesson](https://workbook.galvanize.com/cohorts/68/student_dashboard)
-- [Lesson](https://workbook.galvanize.com/cohorts/68/student_dashboard)
-
-Homework: [Homework](https://workbook.galvanize.com/cohorts/68/student_dashboard)
-
-Announcements:
-- Announcement 1
-- Announcement 2
+- [Intro to Javascript](https://workbook.galvanize.com/cohorts/68/articles/3082)
 
 ---
 
