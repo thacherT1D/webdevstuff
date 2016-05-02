@@ -39,7 +39,7 @@ Per table: have them come up with a test plan to see where does modules fall in 
 Write expression and expected result where everyone can see. Have them each test each expression.
 
 ### String methods
-Per student: search for string methods. have the students pick one and implement it.
+Per student: search for string methods. have the students pick one and implement it. Should present to each other at their table.
 
 ### 9: Comparison operators
 Mini-whitebards: What's the Boolean value of this expression: `5 != "5"`. [[Answer: `false`]]

@@ -57,9 +57,9 @@ logo.onclick = function () { this.src = "https://media.giphy.com/media/TxjAakMUt
 And then try this:
 
 ```
-function makeWider() { 
-  var logo = document.getElementById('hplogo'); 
-  logo.width += 5; 
+function makeWider() {
+  var logo = document.getElementById('hplogo');
+  logo.width += 5;
 }
 
 setInterval(makeWider, 41.67)
@@ -73,23 +73,23 @@ javascript:document.body.contentEditable='true'; document.designMode='on'; void 
 
 ### Comments
 
-Comments come in two forms 
+Comments come in two forms
 
   * line comments
-  
+
    ```
    // descriptive stuff
    ```
   * multiline comments
-  
+
   ```
   /*
-    These 
+    These
     are
     comments on
     many lines
   */
-  
+
   ```
 
 ## JS Primitive Data Types:
@@ -112,7 +112,7 @@ Numbers are, well, numbers. They come in two flavors:
 * Integers
 
   ```
-   ..., -1,0, 2, 3, 4, 5, ... 
+   ..., -1,0, 2, 3, 4, 5, ...
   ```
 * Floats (or Decimal numbers)
 
@@ -132,7 +132,7 @@ Number.isInteger(4.0) // should return ???
 
 ### String
 
-Strings are collections of letters and symbols known as **Characters**, and we use them to deal with words and text in Javascript. 
+Strings are collections of letters and symbols known as **Characters**, and we use them to deal with words and text in Javascript.
 
 ```
 "John", "Jane"
@@ -171,7 +171,7 @@ var sanFranciscoIsCheap = false;
 ```
 var x;
 x; // undefined
-x = 3; 
+x = 3;
 x; // no longer undefined!
 ```
 
@@ -283,8 +283,8 @@ Math.sqrt(4)
 // The following only returns a random decimal
 Math.random()
 => .229375290430
-/** 
-  The following will return a 
+/**
+  The following will return a
   random number between 0 and 10
 */
 Math.random()*10
@@ -306,9 +306,9 @@ Number.isInteger(Math.floor(2.5))
 
 Having expressions is cool. Storing the values of expressions is even cooler.
 
-To store values we use things called **variables**. 
+To store values we use things called **variables**.
 
-The word 'variable' means 'can change' or 'can **vary**' and is used because variables can store many different types of values and can change their value many times. 
+The word 'variable' means 'can change' or 'can **vary**' and is used because variables can store many different types of values and can change their value many times.
 
 ```
 var myNumber = 1;
@@ -470,4 +470,4 @@ Most values in Javascript are truthy -- that is, they get converted into `true` 
 
 ### Further Reading
 
-Want to dig deeper? Read Chapters 1 and 2 in [Eloquent Javascript](http://eloquentjavascript.net/) - we'll be covering some of Chapter 2 tomorrow, so if you don't finish it all, that's ok!
+Want to dig deeper? Read Chapters 1 and 2 in [Eloquent Javascript](http://eloquentjavascript.net/)
