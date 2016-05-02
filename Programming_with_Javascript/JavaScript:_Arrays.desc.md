@@ -144,7 +144,7 @@ In Javascript, **arrays** are:
 - Arrays **are zero-indexed**. The first item in the array is at index `0` instead of `1`.
 
 
-## Exercise
+## Exercises
 
 ## Resources
 
