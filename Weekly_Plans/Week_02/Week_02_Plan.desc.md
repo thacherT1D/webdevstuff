@@ -17,6 +17,8 @@ Lessons:
 - [Intro to Javascript](https://workbook.galvanize.com/cohorts/68/articles/3082)
 - [Javascript Exercises](https://github.com/gSchool/javascript-basic-exercises)
 
+[Lightning Talks Schedule](https://docs.google.com/a/galvanize.com/spreadsheets/d/1AcdS91njmg8ETT0wwCUynC-jHQ-c0gW51qq76siGA9Q)
+
 ---
 
 # Tuesday, May 3
