@@ -17,6 +17,10 @@ Lessons:
 - [Intro to Javascript](https://workbook.galvanize.com/cohorts/68/articles/3082)
 - [Javascript Exercises](https://github.com/gSchool/javascript-basic-exercises)
 
+Resources:
+- [Javascript for Cats](http://jsforcats.com/)
+- [Eloquent Javascript](http://eloquentjavascript.net/)
+
 ---
 
 # Tuesday, May 3
