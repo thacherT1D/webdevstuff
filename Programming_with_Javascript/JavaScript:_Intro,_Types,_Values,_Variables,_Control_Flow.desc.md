@@ -264,7 +264,7 @@ var x;
 x; // undefined
 
 x = 3;
-x; // no longer undefined!
+x; // no longer undefined
 ```
 
 See the [`undefined` global property](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined) on the Mozilla Developer Network for more information.
@@ -419,11 +419,10 @@ Relational operators are used to compare the values of two strings as well.
 ```javascript
 'a' > 'a';  // false
 'a' >= 'a'; // true
-'a' < 'a';  // false
-'a' <= 'a'; // true
 
 'a' > 'b';  // false
 'a' >= 'b'; // false
+
 'b' > 'a';  // true
 'b' >= 'a'; // true
 ```
