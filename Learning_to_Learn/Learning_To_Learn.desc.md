@@ -4,7 +4,8 @@ Being a student in this program is like drinking from a firehose. It's going to 
 
 - Describe why becoming a better learner is important.
 - Explain how to become a better learner using a three step process.
-- Identify a few personal strengths and at least one personal weakness regarding this process.
+- Identify a few personal strengths regarding this process.
+- Identify at least one personal weakness regarding this process.
 
 ## Why is becoming a better learner important?
 
@@ -164,8 +165,4 @@ When you're finished, find someone new who you haven't talked with yet and act l
 
 ## Final exercise
 
-As a final exercise, make sure you've written down the following.
-
-1. A summary each of the three major steps of this learning process.
-1. One or two things that you feel like you can do well.
-1. One area for you to improve upon.
+As a final exercise, please complete a short series of questions by scrolling to the top of this page, clicking the 'Questions' tab, and then writing down your thoughts.
