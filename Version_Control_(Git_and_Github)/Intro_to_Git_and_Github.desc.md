@@ -206,7 +206,7 @@ Try to do these without looking at the answer first!
 
 ### Exercise Two: Pushing to GitHub
 
-1. Create a GitHub repository and don't initialize it
+1. Create a GitHub repository and don't initialize a README or other files.
 1. Create a local git repository
 1. Create a file
 1. Stage the file

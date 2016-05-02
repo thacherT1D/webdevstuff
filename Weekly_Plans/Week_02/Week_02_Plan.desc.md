@@ -17,9 +17,14 @@ Lessons:
 - [Intro to Javascript](https://workbook.galvanize.com/cohorts/68/articles/3082)
 - [Javascript Exercises](https://github.com/gSchool/javascript-basic-exercises)
 
+
 Resources:
 - [Javascript for Cats](http://jsforcats.com/)
 - [Eloquent Javascript](http://eloquentjavascript.net/)
+
+
+=======
+[Lightning Talks Schedule](https://docs.google.com/a/galvanize.com/spreadsheets/d/1AcdS91njmg8ETT0wwCUynC-jHQ-c0gW51qq76siGA9Q)
 
 ---
 
