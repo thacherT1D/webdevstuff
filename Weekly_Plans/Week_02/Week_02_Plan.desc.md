@@ -11,7 +11,7 @@
 
 # Monday, May 2 - Roger
 
-Warmup: [CSS Selector Practice](http://flukeout.github.io/) - Roger
+Warmup: [CSS Selector Practice](http://flukeout.github.io/)
 
 Lessons:
 - [Intro to Javascript](https://workbook.galvanize.com/cohorts/68/articles/3082)
