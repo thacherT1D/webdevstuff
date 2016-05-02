@@ -449,7 +449,7 @@ Conversely, the `!==` operator returns `true` if the values are not equal and/or
 
 Be careful not to confuse the `===` operator with the single equal `=` operator. The `===` operator asks "Are these two values strictly equal?" which the `=` operator means "Assign the value on the right to the variable on the left." In short, the `===` operator is used for **comparison** and the `=` operator is used for **assignment**.
 
-Remember, when you use the `=` operator, a variable name _must_ be on the left and the value you want to assign to that variable _must_ be on the right. Since the `===` operator is compares two values to see if they're strictly equal, it doesn't matter which value is on which side.
+Remember, when you use the `=` operator, a variable name _must_ be on the left and the value you want to assign to that variable _must_ be on the right. Since the `===` operator compares two values to see if they're strictly equal, it doesn't matter which value is on which side.
 
 Related to the `===` and `!==` operators are the `==` and `!=` operators. `===` is a stronger operator, as it also checks whether the **type** of the values are the same, while the `==` operator will try perform some type conversion before comparing. As an exercise, try to predict what boolean each of the following expressions will evaluate to:
 
@@ -476,6 +476,8 @@ As a general best-practice, it's better to err on the side of the stronger compa
 https://dorey.github.io/JavaScript-Equality-Table/
 
 Note: You can always check something's type in JavaScript using the typeof operator! What's `typeof 4`? `typeof "what's up?"`?
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Equality_operators
 
 ### Conditionals
 
@@ -532,25 +534,33 @@ if (2 > 1) {
 } else {
   console.log("B");
 }
+```
 
+```javascript
 if (2 > 1 && 3 > 5) {
   console.log("A");
 } else {
   console.log("B");
 }
+```
 
+```javascript
 if (typeof(9) === "string" || !(7 % 4 === 3)) {
   console.log("A");
 } else {
   console.log("B");
 }
+```
 
+```javascript
 if (1 == "1" && (typeof(typeof(9)) === "string" || Number.isInteger(7.3))) {
   console.log("A");
 } else {
   console.log("B");
 }
+```
 
+```javascript
 if (false) {
   console.log("A");
 } else if (null) {
@@ -568,7 +578,17 @@ For instance, suppose you type the following expression into your console: `1 + 
 
 This type of conversion also happens when you pass values into if statements. In a block of code like `if (x) {...}`, `x` is expected to be a Boolean. If it isn't, JavaScript will convert it into a Boolean.
 
-Most values in JavaScript are truthy -- that is, they get converted into `true` should the need arise. In fact, there are only six falsy values in JavaScript: `false`, `null`, `undefined`, `0`, `''`, and `NaN`.
+Most values in JavaScript are truthy -- that is, they get converted into `true` should the need arise. In fact, there are only six falsy values in JavaScript:
+
+1. `false`
+1. `null`
+1. `undefined`
+1. `0`
+1. `''`
+1. `NaN`
+
+https://developer.mozilla.org/en-US/docs/Glossary/Falsy
+https://developer.mozilla.org/en-US/docs/Glossary/Truthy
 
 ### Further Reading
 
