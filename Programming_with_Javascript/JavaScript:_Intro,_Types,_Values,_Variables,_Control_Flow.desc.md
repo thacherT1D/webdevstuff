@@ -3,13 +3,13 @@
 - Describe what JavaScript is.
 - Describe what ECMAScript is.
 - Explain why JavaScript is important.
-- Name all primitive data types in JavaScript
-- Define what a variable is
+- Name all primitive data types in JavaScript.
+- Explain what a variable is.
 - Explain the difference between a value and an expression
-- Explain the difference between `==` and `===` in JavaScript
+- Explain the difference between `=`, `==`, and `===` in JavaScript.
 - Implement simple control flow examples using `if` statements
 - Explain what type conversion is
-- Name all falsy values in JavaScript
+- Name all the "falsy" values in JavaScript
 
 ## What's JavaScript?
 
