@@ -72,7 +72,7 @@ Cask works just like Homebrew, to install we would type `brew cask install <name
 **Step One:** Use Cask to install iterm2:
 
 ```bash
-brew cask install iTerm2
+brew cask install iterm2
 ```
 
 **Step Two:** Open iTerm by typing `cmd` + `space` and typing `iterm` and pressing `return`.
@@ -83,6 +83,8 @@ brew cask install iTerm2
 ## Command Line Tools
 
 X-Code is an IDE for OSX, it is needed to install Command Line Tools. These tools can be used to compile code. Some of the software we use will need Command Line Tools.
+
+>**NOTE:** depending on your OSX install, you may already have this installed. This is ok.
 
 **Step One:**  Open up iTerm2 and run the following command to install the Command Line Tools:
 
@@ -127,12 +129,13 @@ There are two ways to install a package, using Atom or using the terminal.
 apm install <package-name>
 ```
 
+>**NOTE:** depending on how you previously installed Atom, you may need to add the `apm` command to your path in order to use it.
+
 You can quickly search for packages [here](https://atom.io/packages).
 
 **Step One:** Install the following plugins:
 
 - [atom-beautify](https://atom.io/packages/atom-beautify) - this package allows us to rapidly format our code using the shortcut `cmd` + `option` + `b`.
-- [linter](https://atom.io/packages/linter) - a linter is a tool that checks for potential errors. This package is required for all the other `linter-` packages we will install.
 - [linter-jshint](https://atom.io/packages/linter-jshint) - **NOT**`linter-jslint`. Lints all `.js` files.
 - [linter-htmlhint](https://atom.io/packages/linter-htmlhint) - Lints all `.html` files.
 - [linter-csslint](https://atom.io/packages/linter-csslint) - Lints all `.css` files and css in `.html` files.
@@ -177,11 +180,15 @@ git config --global user.email 'YOUR EMAIL ADDRESS'
 
 SSH Keys are a pair of public and private keys. These keys can be used to cryptographically sign and encrypt data. We can use it as a way to identify and authorize ourself with other people and computers. We will be using SSH to authorize ourselves with Github.
 
+>**Note:** You may have set this up during your prework, if you have skip to Step Two to ensure it works.
+
 **Step One:** Follow [these instructions](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/) to:
 - Generate a new SSH Keys
 - Add it to the `ssh-agent`
 - Add the keys to your github account
-- Test the SSH connection.
+
+**Step Two:** Verify everything is set up correctly:
+- [Test the SSH connection.](https://help.github.com/articles/testing-your-ssh-connection/)
 
 Now when we clone repositories we can use SSH instead of HTTPS by using `git@` instead of `https://`
 
@@ -258,7 +265,7 @@ npm install -g http-server
 http-server
 ```
 
-**Step Three:** Open up your browser and navigate to `localhost:3000`.
+**Step Three:** Open up your browser and navigate to `localhost:8080`.
 
 **Step Four:** In the terminal, press `ctrl` + `c` to terminate the server.
 
