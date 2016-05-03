@@ -3,7 +3,7 @@ This lesson will introduce you to the fundamental commands of Mac OS X. By the e
 * [User accounts](#user-accounts)
 * [Working directories](#working-directories)
 * [File system paths](#file-system-paths)
-* Command flags
+* [Command flags](#command-flags)
 * Manual pages
 * Graphical user interfaces
 * Environment variables
