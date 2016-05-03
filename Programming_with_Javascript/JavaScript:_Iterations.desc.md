@@ -274,6 +274,13 @@ By the end of this lesson you will be able to:
   }
 ```
 
+## Stretch:
+  https://projecteuler.net/problem=3
+  > You will have to use a nested loop to solve this. Feel free to research what a prime factor is if you aren't sure.
+  ```javascript
+  The prime factors of 13195 are 5, 7, 13 and 29.
+  What is the largest prime factor of the number 600851475143 ?
+  ```
 
 ## Resources:
   https://workbook.galvanize.com/cohorts/68/articles/3083
