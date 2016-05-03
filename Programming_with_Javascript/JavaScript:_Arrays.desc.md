@@ -1,5 +1,7 @@
 # Programming and JavaScript: Arrays
 
+***
+
 ## Objectives
 
 By the end of this lesson you will be able:
@@ -9,6 +11,8 @@ By the end of this lesson you will be able:
 - Retrieve items from an array.
 - Use common array methods.
 
+***
+
 ## What is an Array?
 
 An array is a special type of object that used to store items in sequential order. They can store any type, from numbers to strings to objects to functions. An item stored in an array is known as an element.
@@ -17,8 +21,9 @@ An array is a special type of object that used to store items in sequential orde
 
 - Write down your answer: do you think an array can store other arrays and why?
 
+An array can be created using square brackets, `[]`, this is known as an `array literal`.
 
-An array can be created using square brackets, `[]`, this is known as an `array literal`,
+Elements in an array are separated by commas, `,`.
 
 ```javascript
 [] //an empty array literal
@@ -120,6 +125,24 @@ Remember, arrays are a specific type of objects and behave as such:
   - `Array.isArray([])`
 - Now answer the question: how can we tell the difference between an array and an object?
 
+***
+
+## When to Use an Array
+
+Arrays are useful for when data is a list of things.
+
+> Example: a list of blogPost objects.
+
+Arrays are useful when data needs to be in a given order.
+
+> Example: a list of comment objects in order of the date they were created.
+
+Arrays are useful for when data doesn't need to be named.
+
+> Example: an array filled with category strings: `['javascript', 'node', 'react', 'coding', 'programming']`.
+
+
+***
 
 ## Array Methods and Properties
 
@@ -127,7 +150,9 @@ Remember, arrays are a specific type of objects and behave as such:
 
 Arrays come with a lot of useful functions that can be used to get things done quickly and in a readable manner.
 
-#### length
+***
+
+#### `length`
 
 - [length MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/length)
 
@@ -135,45 +160,107 @@ The `length` property lets us know how many elements are in an array:
 
 ```javascript
 var myArry = ['foo', 'bar', 'fizz', 'buzz'];
-myArry.length; //4
+myArry.length; // 4
 ```
 
-#### push
+***
+
+#### `push(elem)`
 
 - [push MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push)
 
 The `push` function adds an element to the end of an array.
 
-#### pop
+```javascript
+var myArry = ['foo', 'bar', 'fizz', 'buzz'];
+myArry.push('zazz');
+
+myArry; // ['foo', 'bar', 'fizz', 'buzz', 'zazz'];
+```
+
+***
+
+#### `pop()`
 
 - [pop MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop)
 
-The `pop` function removes an element from the end of an array.
+The `pop` function removes and returns an element from the end of an array.
 
-#### shift
+```javascript
+var myArry = ['foo', 'bar', 'fizz', 'buzz'];
+var elem = myArry.pop();
 
-- [shift MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift)
+elem;   // buzz
+myArry; // ['foo', 'bar', 'fizz']
+```
 
-The `shift` function removes an element from the start of an array.
+***
 
-#### unshift
+#### `unshift(elem)`
 
 - [unshift MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift)
 
 The `unshift` function adds an element to the start of an array.
 
-#### indexOf
+```javascript
+var myArry = ['foo', 'bar', 'fizz', 'buzz'];
+myArry.unshift('zazz');
+
+myArry; // ['zazz', 'foo', 'bar', 'fizz', 'buzz']
+```
+
+***
+
+#### `shift()`
+
+- [shift MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift)
+
+The `shift` function removes and returns an element from the start of an array.
+
+```javascript
+var myArry = ['foo', 'bar', 'fizz', 'buzz'];
+var elem = myArry.shift();
+
+elem;   // foo
+myArry; // ['bar', 'fizz', 'buzz']
+```
+
+***
+
+#### `indexOf(elem)`
 
 - [indexOf MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexof)
 
-The `indexOf` function searches an array for the element and returns the index of it.
+The `indexOf` function searches an array for the element and returns the index of the element. If the element exists more than once, it returns the index of the first instance. If the element doesn't exist it returns `-1`.
 
-#### slice
+```javascript
+var myArry = ['foo', 'bar', 'fizz', 'buzz', 'buzz', 'buzz'];
 
-- [Slice MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice)
+myArry.indexOf('bar'); // 1
 
-The `slice` function returns an array with the with the elements in the original array starting at the start index and ending with the element before the end index;
+myArry.indexOf('buzz') // 3
 
+myArry.indexOf('zazz') // -1
+```
+
+***
+
+#### `slice(startIndex, endIndex)`
+
+- [slice MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice)
+
+The `slice` function returns a new array containing a range of elements from the original array. The new array starts and includes the element at the startIndex. The new array ends at, but does not include, the element at the endIndex.
+
+`slice` also supports using negative values for indices. For those curious, check out the documentation to find out what this does.
+
+```javascript
+var myArry = ['foo', 'bar', 'fizz', 'buzz'];
+var newArry = myArry.slice(1, 3);
+
+newArry; // ['bar', 'fiz']
+```
+
+***
 
 ## Review:
 
@@ -184,6 +271,11 @@ In Javascript, **arrays** are:
 - Arrays **are ordered**. Items stay in the order they are put in the array.
 - Arrays **are zero-indexed**. The first item in the array is at index `0` instead of `1`.
 
+Arrays are useful for:
+
+- Arrays are useful for when data is a list of things.
+- Arrays are useful when data needs to be in a given order.
+- Arrays are useful for when data doesn't need to be named.
 
 ## Resources
 

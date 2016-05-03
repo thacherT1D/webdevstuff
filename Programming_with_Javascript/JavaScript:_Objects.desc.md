@@ -266,7 +266,7 @@ var beer = {
 
 In the near future, you'll find yourself working with nested reference types. This describes deeply nested values, such as an array storing objects, which store objects and arrays, which can store more arrays, etc.
 
-```js
+```javascript
 var superheroes = [
 	{
     name: "Spider-Man",
@@ -425,7 +425,6 @@ var graphObject = {
   }
 };
 ```
-
 
 ***
 
