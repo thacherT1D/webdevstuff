@@ -1,8 +1,7 @@
 This lesson will introduce you to the fundamental commands of Mac OS X. By the end, you'll be able to describe and utilize commands to manipulate the following concepts.
 
 * [User accounts](#user-accounts)
-* Working directories
-* Home directories
+* [Working directories](#working-directories)
 * Unix paths
 * Command flags
 * Manual pages
@@ -88,17 +87,27 @@ It's common for a user account to belong to a many groups. The only important gr
 
 Find out the account name and groups of the current user of your computer.
 
-## The `pwd` command
+## The current working directory
 
-At any given time, the Unix shell has a **current working directory**. Typically, a new shell session will set current working directory to your user account's home directory when it starts.
+At any given time, the Unix shell has a **current working directory**. By convention, the current working directory is displayed in your shell's prompt. That way, you know where you are in the your computer's file system hierarchy at all times.
 
-The **home directory** is a special folder on the computer file system that belongs to only your user account. This is where you'll store your documents, downloads, music, projects, etc. as well as store the configuration settings of many command line programs. Each user has their own home directory. Prior to the personal computer revolution in the 1980's, it was really common for multiple people to share the same computer. Nowadays, most operating systems only have one human user account.
+From the command line, you can reference the current working directory with the period `.` symbol. You'll get to play around with that in a minute. Typically, a new shell session will set current working directory to your user account's home directory when it starts.
+
+### The home directory
+
+The **home directory** is a special folder in your computer's file system that belongs to only your user account. This is where you'll store your documents, downloads, music, projects, etc. as well as store the configuration settings of many command line programs.
+
+Each user has their own home directory. Prior to the personal computer revolution in the 1980's, it was really common for multiple people to share the same computer. Thus operating systems' with multiple accounts, and therefore home directories, was commonplace. Nowadays, most operating systems only have one human user account.
+
+### The `pwd` command
 
 Let's use the `pwd` command to print the current working directory for your shell.
 
 ```
 pwd
 ```
+
+![](https://i.imgur.com/s6Xqtmn.png)
 
 ### Exercise
 
