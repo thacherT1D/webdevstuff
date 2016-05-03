@@ -1,5 +1,3 @@
-## Mac OS X Fundamental Commands
-
 This lesson will introduce you to the fundamental commands of Mac OS X. By the end, you'll be able to describe and utilize commands to manipulate the following concepts.
 
 * [User accounts](#user-accounts)
@@ -14,7 +12,7 @@ This lesson will introduce you to the fundamental commands of Mac OS X. By the e
 * File system navigation
 * File system redirection
 
-Before getting stared, use Spotlight to launch the `Terminal` app by pressing the `Command` + `Spacebar` keys at the same time, typing the word "terminal" into the search field, and then pressing the `Enter` key.
+Before getting stared, use Spotlight to launch the `Terminal` app.
 
 ## User accounts
 
