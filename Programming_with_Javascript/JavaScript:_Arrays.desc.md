@@ -154,13 +154,13 @@ The `pop` function removes an element from the end of an array.
 
 - [shift MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift)
 
-The `shift` function adds an element to the start of an array.
+The `shift` function removes an element from the start of an array.
 
 #### unshift
 
 - [unshift MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift)
 
-The `unshift` function removes an element from the start of an array.
+The `unshift` function adds an element to the start of an array.
 
 #### indexOf
 
