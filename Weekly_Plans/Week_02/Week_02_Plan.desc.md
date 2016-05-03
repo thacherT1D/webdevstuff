@@ -33,19 +33,15 @@ Resources:
 
 ---
 
-# Tuesday, May 3
+# Tuesday, May 3 - Jordan
 
-Warmup: [Link to Warmup](http://github.com/gSchool)
+Warmup: [Project Euler: Problem 1](https://projecteuler.net/problem=1)
+
 
 Lessons:
-- [Lesson](https://workbook.galvanize.com/cohorts/68/student_dashboard)
-- [Lesson](https://workbook.galvanize.com/cohorts/68/student_dashboard)
-
-Homework: [Homework](https://workbook.galvanize.com/cohorts/68/student_dashboard)
-
-Announcements:
-- Announcement 1
-- Announcement 2
+- [Objects](https://coursework.galvanize.com/curriculums/56/articles/3570)
+- [Arrays](https://coursework.galvanize.com/curriculums/56/articles/3569)
+- [Iterations](https://coursework.galvanize.com/curriculums/56/articles/3571)
 
 ---
 
