@@ -208,11 +208,11 @@ Many programs have configuration settings that they want stored out of plain sig
 
 ## Manual pages
 
+A **manual page** (or man page) is a form of documentation that explains how a command works. It includes what the command does, the specifics of how you run it, and what arguments and flags it accepts. Some man pages are a little hard to get your head around. But they're fairly consistent in their structure, so once you get the hang of it it's not too bad. You can access a man page by using the `man` command.
+
 ### The `man` command
 
-How can you know what flags may be used for a given command?
-
-Shells provide a system command called `man` (short for manual). You provide this command plus the name of another command and it'll return a manual explaining how that command works and what options it provides.
+How can you know what flags may be used for a given command? Shells provide a system command called `man` (short for manual). You provide this command plus the name of another command and it'll return a manual explaining how that command works and what options it provides.
 
 Type the following command at your prompt:
 
