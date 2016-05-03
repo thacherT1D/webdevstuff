@@ -123,6 +123,8 @@ Remember, arrays are a specific type of objects and behave as such:
 
 ## Array Methods and Properties
 
+- [Array MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/array)
+
 Arrays come with a lot of useful functions that can be used to get things done quickly and in a readable manner.
 
 #### length
