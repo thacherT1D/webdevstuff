@@ -163,6 +163,18 @@ person
 
 Deleting requires us to include the keyword `delete` in front of a key-value pair.
 
+**You Do:**
+
+- Write the code to delete the password property from the following object:
+
+```javascript
+var user = {
+  username: 'billymayes',
+  email: 'billymayes@here.com',
+  password: 'oxiclean123'
+};
+```
+
 ## Object Methods
 
 - [Object MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/)
@@ -188,11 +200,28 @@ person.hasOwnProperty("name");
 person.hasOwnProperty("height");
 ```
 
+**You Do:**
+
+- Check each of the following objects to see if they have the property `area`
+
+```javascript
+var square = {
+  width: 5,
+  height: 5,
+  area: 25
+};
+
+var elephant = {
+  weight: 2000,
+  age: 12
+};
+```
+
 ### `Object.keys([object])`
 
 - [keys MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys)
 
-Notice the capital `O` in `Object`. The value in keys is an actual object. This method returns all the keys of an object. Until now, we lacked a convenient way to achieve this task. When used, this method will return each key of an object as an item in an array.
+This method returns an `array` containing all the keys of an object.
 
 ```javascript
 var person = {
@@ -202,6 +231,18 @@ var person = {
 
 Object.keys(person);
 // ["firstName", "lastName"]
+```
+
+**You Do:**
+
+- log the keys of the following object:
+
+```javascript
+var beer = {
+  name: 'Dales\' Pale Ale',
+  type: 'Pale Ale',
+  delicious: true
+};
 ```
 
 ## Creating Nested Values
@@ -307,7 +348,9 @@ Exercise: Take this deeply nested reference type and write the code to find the 
 ***
 
 ***
-Exercise: How would you access the text "Access me!" from the following object? (Example courtesy of [Desmos.com](http://www.desmos.com)):
+**You Do:**
+
+- How would you access the text "Access me!" from the following object? (Example courtesy of [Desmos.com](http://www.desmos.com)):
 
 ```javascript
 var graphObject = {
@@ -424,12 +467,6 @@ Javascript **Objects** are:
 - Objects are **unordered**. Items are not guaranteed to be in any order.
 - Objects are **key-value pairs**.
   - A key is used to access and set a value.
-
-
-
-Reference types are:
-
--
 
 ## Resources
 
