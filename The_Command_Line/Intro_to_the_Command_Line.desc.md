@@ -212,17 +212,15 @@ A **manual page** (or man page) is a form of documentation that explains how a c
 
 ### The `man` command
 
-How can you know what flags may be used for a given command? Shells provide a system command called `man` (short for manual). You provide this command plus the name of another command and it'll return a manual explaining how that command works and what options it provides.
-
-Type the following command at your prompt:
+Let's use the `man` command to display the man page for the `ls` command.
 
 ```
 man ls
 ```
 
-The man command provides access to the built-in manual for all unix commands. Often these manual pages include useful examples for common and advanced usage patterns.
+![](https://i.imgur.com/CdYtnkQ.png)
 
-To quit the `man` page and return to the shell, press the `q` key.
+Use the down arrow `↓` key to scroll down and the up arrow `↑` key to scroll up. To quit a `man` page and return to the shell, press the `q` key.
 
 ### Exercise
 
