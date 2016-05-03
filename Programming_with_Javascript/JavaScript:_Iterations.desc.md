@@ -31,7 +31,6 @@ By the end of this lesson you will be able to:
 
 
 ## Loops
-
   Loops are essential to programming.
   They allow us to repeat an operation many times.
   Typically, execution of a loop lasts as long as a certain value holds true.
@@ -41,7 +40,7 @@ By the end of this lesson you will be able to:
     - While
     - Do While
     - For In
-####  Why are each these useful?
+####  Why are each these useful? Why have 4(or more) kinds of loops?
     -
     -
     -
@@ -50,15 +49,15 @@ By the end of this lesson you will be able to:
 
 
   - I DO: Explain basic FOR loop structure.
-  ```javascript
+```javascript
   for (initialization; conditional; post loop increment) {
       // Some code to run.
   }
-  ```
+```
 
   - We DO: Build a for loop to print the numbers 1-10
   - You DO: Build a for loop that prints the numbers 1 to 10 and also the number 10 to 1, side by side.
-  ```javascript
+```javascript
   The output should look like this:
   1  10
   2  9
@@ -70,7 +69,7 @@ By the end of this lesson you will be able to:
   8  3
   9  2
   10  1
-  ```
+```
 
 
 
@@ -78,17 +77,17 @@ By the end of this lesson you will be able to:
   Sometimes, you may accidentally write a loop that will never end. This is called an infinite loop, and is basically terrible. Example: suppose you want to log the numbers 1 through 10 to the console using a while loop, but you forget to increment your index at each step... what happens?
 
   - I DO: Explain basic WHILE loop structure.
-  ```javascript
+```javascript
   while(condition)
   {
     //Do code
     //usually iterate an item that can change the condition.
   }
-  ```
+```
 
   - We DO: Build a while loop to print the numbers 1-10
   - You DO: Build a while loop that prints the numbers 1 to 10 and also the number 10 to 1, side by side.
-  ```javascript
+```javascript
   The output should look like this:
   1  10
   2  9
@@ -100,17 +99,17 @@ By the end of this lesson you will be able to:
   8  3
   9  2
   10  1
-  ```
+```
 
   - Stretch: Change your loop to only print out the pairs where the first number is odd.
-  ```javascript
+```javascript
   The output should look like this:
   1  10
   3  8
   5  6
   7  4
   9  2
-  ```
+```
 
 
   - I DO: Explain a DO-WHILE loop structure
@@ -121,9 +120,9 @@ By the end of this lesson you will be able to:
 
 
 ## Looping Through Arrays:
-  ```javascript
+```javascript
   var nameArray = ['Jordan', 'Logan', 'Micah', 'Roger', 'Jeff'];
-  ```
+```
   - Pick a loop style (While or For) and attempt to loop through the above array outputting it's contents in order.
   - Hint: look up array properties that may help you tell when an array ends (Or look at this morning's lesson).
   - Once you're done, attempt to do the same with the other kind of looping structure (if you used a while, now try with a for etc..)
@@ -135,17 +134,17 @@ By the end of this lesson you will be able to:
 
 ## Strings:
   - You can loop through each character of a string just like it was an array.
-  ```javascript
+```javascript
   var myStr = "My cars are AWESOME!";
-  ```
-  - WE DO: Loop through the above string and output each character separately.
-  - YOU DO: Loop through the above string in reverse, and concatenate each character into a new string, then output that string.
+```
+- WE DO: Loop through the above string and output each character separately.
+- YOU DO: Loop through the above string in reverse, and concatenate each character into a new string, then output that string.
 
 
 
 
 ## Looping through Objects:
-  ```javascript
+```javascript
   var myCars = {
     'Jordan' : 'Mustang',
     'Logan' : 'GTO',
@@ -153,30 +152,31 @@ By the end of this lesson you will be able to:
     'Roger' : 'Charger',
     'Jeff' : 'Lamborghini'
   };
-  ```
+```
   - Review how to access items within an object.
   - How is looping through an object different than looping through an array?
 
-  - I DO: Explain the Object.keys() option.
-  - WE DO: See if you can use the Object.keys() function to access all the cars in the myCars object using a single loop.
+- I DO: Explain the Object.keys() option.
+- WE DO: See if you can use the Object.keys() function to access all the cars in the myCars object using a single loop.
   https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys
 
-  - I DO: Explain the FOR IN loop structure.
-  - YOU DO: Loop through the myCars object using a FOR IN loop, outputting all of it's contents.
+- I DO: Explain the FOR IN loop structure.
+- YOU DO: Loop through the myCars object using a FOR IN loop, outputting all of it's contents.
+```javascript
   Should look like:
     Mustang
     GTO
     Lancer Evolution
     Charger
     Lamborghini
-
+```
 
 
 
 ## Nested Loops:
   - I DO: Explain the idea of a nested loop.
   - YOU DO: Using your FOR IN loop, add a nested loop which outputs each character in each of the car-type strings (EXCEPT the first character of each string).
-  ```javascript
+```javascript
   Output should look like:
     Mustang
     u
@@ -199,7 +199,7 @@ By the end of this lesson you will be able to:
     v
     o
   .... etc
-  ```
+```
   - I DO: Briefly explain .hasOwnPropery()
   - WE DO: Implement .hasOwnPropery() to validate each key actually exists in myCars before you try to output it.
 
@@ -220,7 +220,7 @@ By the end of this lesson you will be able to:
   - YOU DO: Separate the output of each user with a bunch of dashes (-) to make it more readable.
   - YOU DO: Change your code to output only the user_id, name, age, email, title, and photo_url of each user.
   - YOU DO: Find the average age of all of the users in the object.
-  ```javascript
+```javascript
   var infoObj = {
     users:[
       {
