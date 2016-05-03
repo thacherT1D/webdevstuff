@@ -33,7 +33,7 @@ Here's an example of an object literal with one key-value pair:
 ```javascript
 var person = {
   firstName: "Bruce"
-}
+};
 ```
 
 The key-value pair is separated with a colon. The key is written as a variable and the value is written as a desired data type, such as the string `"Bruce"`.
@@ -46,7 +46,7 @@ var person = {
   firstName: "Bruce",
   lastName: "Wayne",
   favoriteColors: ["black", "yellow"]
- }
+};
 ```
 
 ***
@@ -62,7 +62,7 @@ var cat = {};
 cat.firstName = "Felix";
 cat.lastName = "The Cat";
 
-cat
+cat;
 // {firstName: "Felix", lastName: "The Cat"}
 ```
 
@@ -78,7 +78,7 @@ var cat = {};
 cat["first name"] = "Felix";
 cat["last name"] = "The Cat";
 
-cat
+cat;
 // {'first name': 'Felix', 'last name': 'The Cat'}
 ```
 
@@ -95,14 +95,14 @@ var cat = {};
 cat.firstName = "Felix";
 cat.lastName = "The Cat";
 
-cat
+cat;
 // {firstName: "Felix", lastName: "The Cat"}
 
-cat.firstName  // "Felix"
-cat["firstName"] // "Felix"
+cat.firstName;    // "Felix"
+cat["firstName"]; // "Felix"
 
-cat.lastName // "The Cat"
-cat["lastName"] // "The Cat"
+cat.lastName;     // "The Cat"
+cat["lastName"];  // "The Cat"
 ```
 
 Notice that we had to use quotation marks with the square bracket notation. If we didn't include the quotation marks, the JavaScript interpreter would mistake `firstName` and `lastName` to be variables that are not associated with the `cat` object. An example will help elaborate this point:
@@ -120,8 +120,8 @@ cat["firstName"]  // "Felix"
 cat[firstName] // undefined (analogous to cat["Boooo"])
 
 var foo = "firstName";
-cat.foo // undefined (cat has no value corresponding to the key of foo!)
-cat[foo] // "Felix"
+cat.foo; // undefined (cat has no value corresponding to the key of foo!)
+cat[foo]; // "Felix"
 ```
 
 ***
@@ -162,11 +162,11 @@ We can delete a key-value pair with the following syntax:
 var person = {
   firstName: "Bruce",
   lastName: "Wayne"
-}
+};
 
 delete person.firstName;
 
-person
+person;
 // {lastName: "Wayne"}
 ```
 
@@ -296,9 +296,9 @@ var superheroes = [
 	}
 ];
 
-superheroes[1].alterEgo.first // "Bruce"
-superheroes[0].favoriteColors[1] // "red"
-superheroes[1].age // 32
+superheroes[1].alterEgo.first; // "Bruce"
+superheroes[0].favoriteColors[1]; // "red"
+superheroes[1].age; // 32
 ```
 
 ***
@@ -437,6 +437,7 @@ Javascript **Objects** are:
 - Objects are **unordered**. Items are not guaranteed to be in any order.
 - Objects are **key-value pairs**.
   - A key is used to access and set a value.
+
 
 ***
 
