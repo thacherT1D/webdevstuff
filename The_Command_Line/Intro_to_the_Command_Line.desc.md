@@ -6,8 +6,8 @@ This lesson will introduce you to the fundamental commands of Mac OS X. By the e
 * [Command flags](#command-flags)
 * [Manual pages](#manual-pages)
 * [Graphical user interfaces](#graphical-user-interfaces)
-* File system management
 * File system navigation
+* File system management
 * File system redirection
 
 Before getting stared, use Spotlight to launch the `Terminal` app.
