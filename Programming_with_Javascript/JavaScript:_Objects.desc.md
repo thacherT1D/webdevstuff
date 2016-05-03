@@ -1,6 +1,13 @@
 # Javascript: Objects
 
-Let's now transition to objects, which are created with a different syntax.
+## Objectives:
+
+By the end of this lesson you will be able to:
+
+- Create objects.
+- Access, set and mutate properties using bracket and dot notation.
+- Explain how objects are stored in memory.
+- Write and read data from deeply nested objects.
 
 ### Key-value pairs
 
@@ -137,22 +144,6 @@ person
 
 Deleting requires us to include the keyword `delete` in front of a key-value pair.
 
-### Array checking
-
-Unlike with most primitive data types, the `typeof` operator isn't helpful when trying to distinguish between different objects and arrays, since both are objects in Javascript.
-
-```javascript
-typeof [] // object
-typeof {} // object
-```
-
-As of ES5, there's a simple method you can use to check whether something is an array: `Array.isArray`.
-
-```javascript
-Array.isArray([]) // true
-Array.isArray({}) // false
-```
-
 ## Variable assignment and comparisons with reference types
 
 Consider the following code:
@@ -195,8 +186,14 @@ anotherPerson.name // ?
 
 What's the `name` of `anotherPerson`? The answer is `"Matt"`. `anotherPerson` accessed our object literal and updated the `name` property on it.  When `person` wanted to read the value, it first found the object in memory, noticed that the object had a key named `name`, and retrieved its value.
 
+**You Do:**
 
-## Object
+- Run the examples provided above comparing reference types to value in the [JS visualizer](http://www.pythontutor.com/javascript.html#mode=edit)
+- What differences do you see between reference and value types?
+- Play around and try some other snippets of code!
+
+
+## Object Methods
 
 Similar to arrays, objects have access to default properties and methods. Let's explore the two most frequently used:
 

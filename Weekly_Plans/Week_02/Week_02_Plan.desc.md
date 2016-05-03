@@ -36,6 +36,7 @@ Resources:
 # Tuesday, May 3 - Jordan
 
 Warmup: [Project Euler: Problem 1](https://projecteuler.net/problem=1)
+Stretch Warmup: [Project Euler: Problem 2](https://projecteuler.net/problem=2)
 
 
 Lessons:
