@@ -262,7 +262,27 @@ var beer = {
 
 ***
 
-## Creating Nested Values
+## Review
+
+Javascript **Objects** are:
+
+- A reference type.
+- Used to **store items**. Where an item can be *anything*: a number, a string, an object, a function or even another object.
+- Objects are **unordered**. Items are not guaranteed to be in any order.
+- Objects are **key-value pairs**.
+  - A key is used to access and set a value.
+
+***
+
+## Resources
+
+- [MDN Working with Objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects)
+- [MDN Object Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)
+- [Javascript Visualizer](http://www.pythontutor.com/javascript.html#mode=edit)
+
+
+
+## Deeply Nested Objects / Arrays
 
 In the near future, you'll find yourself working with nested reference types. This describes deeply nested values, such as an array storing objects, which store objects and arrays, which can store more arrays, etc.
 
@@ -294,22 +314,20 @@ var superheroes = [
 		},
 		favoriteColors: ["black", "yellow"]
 	}
-]
+];
 
-people[1].alterEgo.first // "Bruce"
-people[0].favoriteColors[1] // "red"
-people[1].age // 32
+superheroes[1].alterEgo.first // "Bruce"
+superheroes[0].favoriteColors[1] // "red"
+superheroes[1].age // 32
 ```
 
 ***
 
-## Reading Nested Values
+## Exercises
 
 Reading deeply nested values is a very important technique. If you want to include tweets in one of your future web apps, daily forecasts, or most other data from a third-party source of data, you'll need to know how to read deeply nested data.
 
 For this reason, you need to gain comfort navigating and finding data anywhere in a deeply nested value.
-
-***
 
 **You Do:**
 
@@ -365,11 +383,9 @@ For this reason, you need to gain comfort navigating and finding data anywhere i
       is_deleted: 0
     }
   ]
-}
+};
 ```
-***
 
-***
 **You Do:**
 
 - How would you access the text "Access me!" from the following object? (Example courtesy of [Desmos.com](http://www.desmos.com)):
@@ -427,25 +443,5 @@ var graphObject = {
       }
     ]
   }
-}
+};
 ```
-
-***
-
-## Review
-
-Javascript **Objects** are:
-
-- A reference type.
-- Used to **store items**. Where an item can be *anything*: a number, a string, an object, a function or even another object.
-- Objects are **unordered**. Items are not guaranteed to be in any order.
-- Objects are **key-value pairs**.
-  - A key is used to access and set a value.
-
-***
-
-## Resources
-
-- [MDN Working with Objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects)
-- [MDN Object Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)
-- [Javascript Visualizer](http://www.pythontutor.com/javascript.html#mode=edit)
