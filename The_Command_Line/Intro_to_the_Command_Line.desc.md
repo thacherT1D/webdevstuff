@@ -6,7 +6,6 @@ This lesson will introduce you to the fundamental commands of Mac OS X. By the e
 * [Command flags](#command-flags)
 * [Manual pages](#manual-pages)
 * Graphical user interfaces
-* Environment variables
 * File system management
 * File system navigation
 * File system redirection
@@ -651,19 +650,11 @@ You can scroll up and down through all recently used commands that contain the s
 
 If you don't want to execute any of these commands, type `ctrl+c`. Control+c is a powerful command that you can use at any time to kill the currently running terminal process, or exit many terminal applications.
 
-## Review
+## Homework
 
-### Terminal Cheat Sheet
+Solve the [Command Line Murder Mystery](https://github.com/ryansobol/clmystery). To get started, clone the repo to your local machine. Further instructions can be found in the `README` for the mystery. Good luck!
 
-Bookmark this:
+## Resources
 
-* [http://bit.ly/terminalcheats](http://bit.ly/terminalcheats)
-
-### Homework!
-
-Solve the [Command Line Murder Mystery](https://github.com/veltman/clmystery). To get started, fork and clone the repo to your local machine. Further instructions can be found in the README for the mystery. Good luck!
-
-### Additional Resources
-
-Learn the Command Line the Hard Way is a great book for learning the command line. Check it out!
-http://cli.learncodethehardway.org/book/
+- [Learn the Command Line the Hard Way](http://cli.learncodethehardway.org/book/)
+- [http://bit.ly/terminalcheats](http://bit.ly/terminalcheats)
