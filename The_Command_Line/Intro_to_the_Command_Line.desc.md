@@ -115,7 +115,7 @@ What's the current working directory of your shell?
 
 ## File system paths
 
-In any computer system, a path represents a location in the file system. Paths are similar to addresses in the physical world, except they list a location from the general to the specific. It's a bit like addressing an envelope backwards.
+In any computer system, a **path** represents a location in the file system. Paths are similar to addresses in the physical world except they list a location from the general to the specific. It's a bit like addressing an envelope backwards.
 
 ```
 USA
@@ -125,7 +125,7 @@ Seattle
 Galvanize, Inc.
 ```
 
-Is similar to:
+Is similar to
 
 ```
 /Users/wcrusher/Projects/nanites
@@ -135,11 +135,11 @@ A path is **absolute** when it starts with `/`.
 
 A path is **relative** when it does not.
 
-### Question?
+### Exercise
 
 Is the path returned by the `pwd` command absolute or relative?
 
-## The `ls` command
+### The `ls` command
 
 One of the most frequently used commands is the `ls` command which lists the contents of the current working directory.
 
@@ -147,7 +147,9 @@ One of the most frequently used commands is the `ls` command which lists the con
 ls
 ```
 
-### Question?
+![](https://i.imgur.com/tivSrqi.png)
+
+### Exercise
 
 In what order are the files and directories displayed?
 
