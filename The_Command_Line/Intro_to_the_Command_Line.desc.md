@@ -270,7 +270,7 @@ Why can't you see any hidden files and directories in the Finder?
 - How do you quit a manual page and return to the shell?
 - What's the command for opening a directory in the Finder?
 
-## The `echo` command
+### The `echo` command
 
 The tilde `~` character represents the home directory. Try displaying the tilde `~` character with the `echo` command.
 
@@ -278,13 +278,13 @@ The tilde `~` character represents the home directory. Try displaying the tilde 
 echo ~
 ```
 
-### Question?
+### Exercise
 
 Is the output from this command the as the output you got from the `pwd` command?
 
-# <a name="navigating"></a>Navigating Around
+## File system navigation
 
-## The File System is a Tree
+### The File System is a Tree
 
 Install the `tree` command with Homebrew.
 
@@ -316,7 +316,8 @@ Your file system is a "tree". This is a very common data structure in computer p
 
 In our file system *nodes* can be directories or files. The parent of any file or directory is the directory that contains that file or directory. There is exactly one directory in the file system that doesn't have a parent. This is called the **"root directory"**.
 
-## Root Directory
+### Root Directory
+
 Another important directory is the root directory `/`
 
 **Try This**:
@@ -339,7 +340,7 @@ $ pwd
 
 Remember, the `~` always refers to the current user's home directory, this is handy for scripts and for you, but you can use the full path just as well if you know it, `pwd` will give you the full path.
 
-## Relative Paths
+### Parent directories
 
 **Try this:**
 
@@ -350,7 +351,7 @@ pwd
 
 What happened? Which directory are you in?
 
-In the terminal, the `.` character refers to the **current working directory** and two dots `..` refers to the current directories **parent** directory. What happens if you try this:
+In the terminal, the `.` character refers to the current working directory and two dots `..` refers to the current directories **parent directory**. What happens if you try this:
 
 ```
 $ cd /
@@ -359,7 +360,7 @@ $ cd ..
 
 The terminal ignores `cd ..` in this case. the root directory is the only directory in your entire file system that does not have a parent.  
 
-(`../`) is a **relative paths** and you can use it anywhere you would use a path. What happens if we type:
+(`../`) is a relative path you can use it anywhere you would use a path. What happens if we type:
 
 ```
 $ ls -l ~/Documents/../
@@ -379,7 +380,7 @@ drwxr-xr-x+  4 Guest  _guest  136 Nov  4 10:47 Public
 
 The command means, list the contents of the parent of `~/Documents/` So it listed the contents of `~`, or the home directory.
 
-Any path starting with a `/` is said to be an **absolute path** and it is the complete path starting from the root directory. Relative paths (ones that do not begin with a `/`) are relative to your current location.
+Any path starting with a `/` is said to be an absolute path and it is the complete path starting from the root directory. Relative paths (ones that do not begin with a `/`) are relative to your current location.
 
 ## Tab Completion
 
@@ -401,7 +402,7 @@ The competing options for me are `Desktop/`, `Documents/`, and `Downloads/`
 
 Spend three minutes navigating around your computer's file system from the command line. Use a mixture of relative and absolute paths to navigate around. See what dark corners you can discover in your operating system.
 
-## Mini Review - Navigating Around
+## Review
 
 * `tree`
 * Root directory
@@ -411,9 +412,9 @@ Spend three minutes navigating around your computer's file system from the comma
 * `cd relative/path`
 * Tab Completion
 
-## File Manipulation
+## File system manipulation
 
-## mkdir
+### The `mkdir` command
 
 Now that we know how to move around, it's time to make some changes. We can make directories with the `mkdir` command.  
 
@@ -429,7 +430,7 @@ $ mkdir notebook
 
 What command can you use to see the results of your handywork?
 
-## Adding Files
+### Adding Files
 
 Let's `cd` into our new `notebook`  Look around with `ls`, and `ls -la`.  What do you see?
 
@@ -447,13 +448,13 @@ What did the command `touch` do? You can use `touch` to do more than just create
 
 `$ cat notes.txt`
 
-## Removing files
+### Removing files
 
 We've created a file, so let's try removing it.
 
 `$ rm notes.txt`
 
-## Creating some notes
+### Creating some notes
 
 `$ history`
 
@@ -492,7 +493,7 @@ Our old text has been replaced with the new text. Sometimes we'll want to **appe
 
 `$ history >> notes.txt`
 
-## Piping
+### Piping
 
 The Unix Philosophy is "do one thing, and do it well." Complex problems are solved by using small and simple modules, and chaining them together. This is a great way to think about software, and in terminal programming we chain commands using the `|` or pipe character.
 
@@ -541,8 +542,6 @@ Milton, John:Paradise Lost
 ```
 
 > hint: you will need to use the `.*` wildcard to complete this challenge. In grep `.` means 'match any single character" and `.*` means match any number of any character. `.*:` means match any number of any character until we find a colon. `.*F` means match any number of any characters until we find a capital F.
-
-
 
 ## Moving
 
@@ -604,7 +603,7 @@ Sometimes we want to refer to a bunch of similar files, to do this we can use wi
 
 For more ideas go here: [How to Use Wildcards](http://www.linfo.org/wildcard.html)
 
-## Mini Review - File Maniuplation
+## Review
 
 * `mkdir`
 * editing files
