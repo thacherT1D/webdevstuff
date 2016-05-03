@@ -49,7 +49,8 @@ Lessons:
 
 Homework:
 
-- Complete the exercises at the bottom of the [Objects Article](https://workbook.galvanize.com/cohorts/68/articles/3570)
+- Read the [Objects section](https://github.com/getify/You-Dont-Know-JS/blob/master/up%20&%20going/ch2.md#objects) of YDKJ: Up and Going, Chapter 2
+- Read the [Arrays section](https://github.com/getify/You-Dont-Know-JS/blob/master/up%20&%20going/ch2.md#arrays) of YDKJ: Up and Going, Chapter 2
 
 ---
 
@@ -58,6 +59,7 @@ Homework:
 Warmup: [Link to Warmup](http://github.com/gSchool)
 
 Lessons:
+
 - [Reference Types](https://workbook.galvanize.com/cohorts/68/articles/3572)
 - [Drawing Objects in Memory](https://workbook.galvanize.com/cohorts/68/articles/3080)
 
