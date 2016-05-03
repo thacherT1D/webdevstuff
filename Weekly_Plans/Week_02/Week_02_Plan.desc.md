@@ -49,7 +49,7 @@ Lessons:
 
 Homework:
 
-- Finish the exercises that we didn't do today the end of the [Objects article](https://workbook.galvanize.com/cohorts/68/articles/3570)
+- Finish the exercises in the [Iterations article](https://workbook.galvanize.com/cohorts/68/articles/3571)
 - Read the [Objects section](https://github.com/getify/You-Dont-Know-JS/blob/master/up%20&%20going/ch2.md#objects) of YDKJ: Up and Going, Chapter 2
 - Read the [Arrays section](https://github.com/getify/You-Dont-Know-JS/blob/master/up%20&%20going/ch2.md#arrays) of YDKJ: Up and Going, Chapter 2
 
