@@ -35,7 +35,7 @@ By the end of this lesson you will be able to:
   They allow us to repeat an operation many times.
   Typically, execution of a loop lasts as long as a certain value holds true.
 
-####  What kinds of loops are there?
+####  Kinds of loops:
     - For
     - While
     - Do While
@@ -137,8 +137,8 @@ By the end of this lesson you will be able to:
 ```javascript
   var myStr = "My cars are AWESOME!";
 ```
-- WE DO: Loop through the above string and output each character separately.
-- YOU DO: Loop through the above string in reverse, and concatenate each character into a new string, then output that string.
+  - WE DO: Loop through the above string and output each character separately.
+  - YOU DO: Use a loop to create a reverse copy of the string above. like: `!EMOSEWA era srac yM`
 
 
 
@@ -156,12 +156,12 @@ By the end of this lesson you will be able to:
   - Review how to access items within an object.
   - How is looping through an object different than looping through an array?
 
-- I DO: Explain the Object.keys() option.
-- WE DO: See if you can use the Object.keys() function to access all the cars in the myCars object using a single loop.
+  - I DO: Explain the Object.keys() option.
+  - WE DO: See if you can use the Object.keys() function to access all the cars in the myCars object using a single loop.
   https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys
 
-- I DO: Explain the FOR IN loop structure.
-- YOU DO: Loop through the myCars object using a FOR IN loop, outputting all of it's contents.
+  - I DO: Explain the FOR IN loop structure.
+  - YOU DO: Loop through the myCars object using a FOR IN loop, outputting all of it's contents.
 ```javascript
   Should look like:
     Mustang
