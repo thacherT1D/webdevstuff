@@ -1,4 +1,4 @@
-# An Intro to Programming and JavaScript Pt. I: Arrays
+# Programming and JavaScript: Arrays
 
 ## Objectives
 
