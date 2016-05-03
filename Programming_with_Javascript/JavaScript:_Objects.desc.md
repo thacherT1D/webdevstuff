@@ -289,7 +289,10 @@ Reading deeply nested values is a very important technique. If you want to inclu
 For this reason, you need to gain comfort navigating and finding data anywhere in a deeply nested value.
 
 ***
-Exercise: Take this deeply nested reference type and write the code to find the following values:
+
+**You Do:**
+
+- Take this deeply nested reference type and write the code to find the following values:
 
 1. The email of user 1.
 2. The title of user 5.
@@ -405,6 +408,7 @@ var graphObject = {
   }
 }
 ```
+
 ***
 
 ## Review
@@ -422,8 +426,3 @@ Javascript **Objects** are:
 - [MDN Working with Objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects)
 - [MDN Object Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)
 - [Javascript Visualizer](http://www.pythontutor.com/javascript.html#mode=edit)
-
-
-Drawing JS Objects in Memory:
-
-<iframe src="https://player.vimeo.com/video/145447330?byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
