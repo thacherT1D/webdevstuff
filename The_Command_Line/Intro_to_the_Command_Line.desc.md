@@ -20,7 +20,7 @@ Mac OS X is a multi-user operating system which means it manages one or more use
 
 ### The full name
 
-If automatic login is turned off, you'll see your account's full name when logging into the OS after the computer boots.
+If automatic login is turned off, you'll see your account's full name when logging into the operating system after the computer boots up.
 
 ![](https://i.imgur.com/t8AVjbq.png)
 
@@ -29,17 +29,17 @@ As a professional web developer, you'll be responsible for keeping sensitive inf
 If you want to turn off automatic login:
 
 1. Use Spotlight to launch the `Users & Groups` System Preferences.
-1. If the lock in the bottom left corner is closed, click on it and enter your admin account password.
+1. If the lock in the bottom left corner is closed, click on it and enter your account password in the window that pops up.
 1. Click the `Login Options` tab in the sidebar on the bottom left.
 1. Select `Off` in the dropdown menu next the `Automatic login`.
 
-When finished, the window should look something like this.
+When finished, your System Preferences should look something like this.
 
 ![](https://i.imgur.com/CwrbvzQ.png)
 
 ### The account name
 
-Additionally, you'll see the account name when viewing your home directory, among other places.
+Additionally, you'll see your account's name when viewing your home directory, among other places.
 
 To view the home directory:
 
@@ -54,13 +54,15 @@ If you don't see the home directory in your favorites sidebar:
 1. Click the `Sidebar` tab at the top of the window.
 1. Enable the checkbox next to your home directory's icon and name.
 
-When finished, the window should look something like this.
+When finished, the Finder Preferences should look something like this.
 
 ![](https://i.imgur.com/UZHZ2Aw.png)
 
 ### The current user
 
-Whenever you log into Mac OS X, that user account becomes the **current user**. Additionally, when you start a new shell session in the Terminal, the current user is automatically logged in to the shell. There are a two fundamental commands that display the state of the current user in th shell—the `whoami` and `groups` commands.
+Whenever you log into Mac OS X, that user account becomes the **current user**. Additionally, when you start a new shell session in the Terminal, the current user is automatically logged in to the shell.
+
+There are a two fundamental commands that display the state of the current user from within the shell—the `whoami` and `groups` commands.
 
 The `whoami` command displays the account name of the current user.
 
@@ -78,7 +80,7 @@ groups
 
 ![](https://imgur.com/TsyyfL9.png)
 
-It's common for a user account to belong to a many groups. The only important groups to note are `staff` and `admin`. In Mac OS X, every user account belongs to the `staff` group, while only Administrator accounts belong to the `admin` group.
+It's common for a user account to belong to a many groups. The only important groups to mention are `staff` and `admin`. In Mac OS X, every user account belongs to the `staff` group, while only administrator accounts belong to the `admin` group.
 
 **TIP:** If your user account doesn't belong to the `admin` group, it'll be difficult to manage your development machine.
 
@@ -88,17 +90,17 @@ Find out the account name and groups of the current user of your computer.
 
 ## The `pwd` command
 
-Typically the shell will start in your home directory. This is a folder on the computer file system that belongs to you. You put your work here and configure the settings of many command line programs.
+At any given time, the Unix shell has a **current working directory**. Typically, a new shell session will set current working directory to your user account's home directory when it starts.
 
-Each user has their own home directory. In the past, it was really common for multiple people to share the same computer. Since the era of personal computing, most operating systems only have one human user account.
+The **home directory** is a special folder on the computer file system that belongs to only your user account. This is where you'll store your documents, downloads, music, projects, etc. as well as store the configuration settings of many command line programs. Each user has their own home directory. Prior to the personal computer revolution in the 1980's, it was really common for multiple people to share the same computer. Nowadays, most operating systems only have one human user account.
 
-At any given time, the Unix shell has a **current working directory**. Let's use the `pwd` command to print the current working directory for your shell.
+Let's use the `pwd` command to print the current working directory for your shell.
 
 ```
 pwd
 ```
 
-### Question?
+### Exercise
 
 What's the current working directory of your shell?
 
