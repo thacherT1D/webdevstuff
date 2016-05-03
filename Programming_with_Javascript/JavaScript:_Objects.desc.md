@@ -7,9 +7,14 @@ By the end of this lesson you will be able to:
 - Create objects.
 - Access, set and mutate properties using bracket and dot notation.
 - Explain how objects are stored in memory.
+- Explain the difference between reference types and primitive types.
 - Write and read data from deeply nested objects.
 
-### Key-value pairs
+### Objects are key-value pairs
+
+We've gone over `primitive` types now let's go over `reference` types.
+
+Objects are a `reference` type.  We'll talk more about what that means towards the end of the lesson.
 
 Objects start with an open curly brace and end with a closing curly brace, this is known as an `object literal`.
 
@@ -19,7 +24,7 @@ We're going to declare a variable named `person` and set it to an empty object l
 var person = {};
 ```
 
-Inside of these braces, we store data as key-value pairs. 
+Inside of these braces, we store data as key-value pairs.
 
 Here's an example of an object literal with one key-value pair:
 
@@ -146,56 +151,9 @@ person
 
 Deleting requires us to include the keyword `delete` in front of a key-value pair.
 
-## Variable assignment and comparisons with reference types
-
-Consider the following code:
-
-```javascript
-var person = {name: "Matt"};
-var anotherPerson = person;
-
-anotherPerson.name // "Matt"
-```
-
-We've used a `var` statement to declare a variable named `person` and set it to an object literal. Next, we used another `var` statement to declare a variable named `anotherPerson` and set it to `person`.
-
-With primitive types, each variable receives their own copy of a value. With reference types, however, they share the _same_ value in memory (pointer). In other words, `person` and `anotherPerson` are two different variables. However, since these variables are set to a reference type, they point to the same object.
-
-Note that if we make another person object, even if it has the same keys and values, it will _not_ be equal to the original `person` object:
-
-```javascript
-var person = {name: "Matt"};
-var anotherPerson = person;
-var doppelganger = {name: "Matt"};
-
-person === anotherPerson // true;
-person === doppelganger // false;
-```
-
-This is because `person` and `doppelganger` have pointers to different objects, even though those objects have identical key-value pairs.
-
-### Mutability of Reference Types
-
-To reinforce what we're learning about reference types, let's look at one more example.
-
-```javascript
-var person = {name: "Matthew"};
-var anotherPerson = person;
-
-person.name = "Matt";
-anotherPerson.name // ?
-```
-
-What's the `name` of `anotherPerson`? The answer is `"Matt"`. `anotherPerson` accessed our object literal and updated the `name` property on it.  When `person` wanted to read the value, it first found the object in memory, noticed that the object had a key named `name`, and retrieved its value.
-
-**You Do:**
-
-- Run the examples provided above comparing reference types to value in the [JS visualizer](http://www.pythontutor.com/javascript.html#mode=edit)
-- What differences do you see between reference and value types?
-- Play around and try some other snippets of code!
-
-
 ## Object Methods
+
+- [Object MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/)
 
 Similar to arrays, objects have access to default properties and methods. Let's explore the two most frequently used:
 
@@ -203,6 +161,8 @@ Similar to arrays, objects have access to default properties and methods. Let's 
 - `Object.keys([object])`
 
 ### `hasOwnProperty([key])`
+
+- [hasOwnProperty MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasownproperty)
 
 This method accepts a string as a value and returns a Boolean value if that string is a key of an object.
 
@@ -217,6 +177,8 @@ person.hasOwnProperty("height");
 ```
 
 ### `Object.keys([object])`
+
+- [keys MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys)
 
 Notice the capital `O` in `Object`. The value in keys is an actual object. This method returns all the keys of an object. Until now, we lacked a convenient way to achieve this task. When used, this method will return each key of an object as an item in an array.
 
@@ -392,6 +354,78 @@ var graphObject = {
 ```
 ***
 
-## Conclusion
+## Reference Types: variable assignment and comparisons with reference types
 
-We learned about reference types. Combined with our knowledge of primitive types, we now know all the data types used in JavaScript. Awesome!
+Consider the following code:
+
+```javascript
+var person = {name: "Matt"};
+var anotherPerson = person;
+
+anotherPerson.name // "Matt"
+```
+
+We've used a `var` statement to declare a variable named `person` and set it to an object literal. Next, we used another `var` statement to declare a variable named `anotherPerson` and set it to `person`.
+
+With primitive types, each variable receives their own copy of a value. With reference types, however, they share the _same_ value in memory (pointer). In other words, `person` and `anotherPerson` are two different variables. However, since these variables are set to a reference type, they point to the same object.
+
+Note that if we make another person object, even if it has the same keys and values, it will _not_ be equal to the original `person` object:
+
+```javascript
+var person = {name: "Matt"};
+var anotherPerson = person;
+var doppelganger = {name: "Matt"};
+
+person === anotherPerson // true;
+person === doppelganger // false;
+```
+
+This is because `person` and `doppelganger` have pointers to different objects, even though those objects have identical key-value pairs.
+
+## Reference Types:  Mutability
+
+To reinforce what we're learning about reference types, let's look at one more example.
+
+```javascript
+var person = {name: "Matthew"};
+var anotherPerson = person;
+
+person.name = "Matt";
+anotherPerson.name // ?
+```
+
+What's the `name` of `anotherPerson`? The answer is `"Matt"`. `anotherPerson` accessed our object literal and updated the `name` property on it.  When `person` wanted to read the value, it first found the object in memory, noticed that the object had a key named `name`, and retrieved its value.
+
+**You Do:**
+
+- Run the examples provided above comparing reference types to value in the [JS visualizer](http://www.pythontutor.com/javascript.html#mode=edit)
+- What differences do you see between reference and value types?
+- Play around and try some other snippets of code!
+
+
+## Review
+
+Javascript **Objects** are:
+
+- A reference type.
+- Used to **store items**. Where an item can be *anything*: a number, a string, an object, a function or even another object.
+- Objects are **unordered**. Items are not guaranteed to be in any order.
+- Objects are **key-value pairs**.
+  - A key is used to access and set a value.
+
+
+
+Reference types are:
+
+-
+
+## Resources
+
+- [MDN Working with Objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects)
+- [MDN Object Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)
+- [Javascript Visualizer](http://www.pythontutor.com/javascript.html#mode=edit)
+
+
+Drawing JS Objects in Memory:
+
+<iframe src="https://player.vimeo.com/video/145447330?byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
