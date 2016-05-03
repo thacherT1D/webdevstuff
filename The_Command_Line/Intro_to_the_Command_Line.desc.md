@@ -167,11 +167,11 @@ ls -l
 
 ### Exercise
 
-How can you tell of an item is a file or directory? Hint: look at it's permissions.
+How can you tell if an item is a file or directory? **Hint:** look at its permissions.
 
 ### Human-friendly sizes
 
-When using the `-l` flag with the `ls` command, the size of each item is displayed in bytes. To sizes in a more human-friendly manner, you can use the `-h` flag and it'll add one of the following suffixes.
+When using the `-l` flag with the `ls` command, the size of each item is displayed in bytes. To display sizes in a more human-friendly manner, you can use the `-h` flag and it'll add one of the following suffixes.
 
 | Suffix | Meaning  |
 |--------|----------|
@@ -188,7 +188,7 @@ ls -hl
 
 ![](https://i.imgur.com/oUiKGx6.png)
 
-**TIP:** In fish, `ls -hl` is the same as using the `ll` command.
+**TIP:** In fish, the `ll` command is the same as using `ls -hl` only faster to type.
 
 ### Hidden Files
 
