@@ -14,6 +14,7 @@ By the end of this lesson you will be able:
 An array is a special type of object that used to store items in sequential order. They can store any type, from numbers to strings to objects to functions. An item stored in an array is known as an element.
 
 **You Do:**
+
 - Write down your answer: do you think an array can store other arrays and why?
 
 
@@ -34,6 +35,7 @@ var emptyArray = []; //assign variable emptyArray the array literal []
 ```
 
 **You Do:**
+
 - In your browser console:
   - create an array containing the first 12 characters of the alphabet and assign it to a variable named `alpha`.
   - log the value of `alpha`
@@ -58,6 +60,7 @@ var myArry = ['foo', 'bar', 'fizz', 'buzz'];
 
 
 **You Do:**
+
 - What is the element at index 5 in the following array: `['hello','javascript','i','am','an','array']`
 
 
@@ -96,6 +99,7 @@ console.log( myArry[4] ); //fuzz
 ```
 
 **You Do:**
+
 - In your browser console:
   - Create an array with at least 10 elements and assign it to a variable.
   - Log the element at index 5 of the array.
@@ -106,6 +110,7 @@ console.log( myArry[4] ); //fuzz
 Remember, arrays are a specific type of objects and behave as such:
 
 **You Do:**
+
 - In your browser console execute the following:
   - `typeof {}`
   - `typeof []`
@@ -128,9 +133,12 @@ myArry.length; //4
 ```
 
 The `push` function adds an element to the end of an array.
+
+
 The `pop` function removes an element from the end of an array.
 
 The `shift` function adds an element to the start of an array.
+
 The `unshift` function removes an element from the start of an array.
 
 
@@ -138,6 +146,7 @@ The `unshift` function removes an element from the start of an array.
 ### Review:
 
 In Javascript, **arrays** are:
+
 - Arrays are list-like **objects**.
 - Arrays are used to **store items**. Where an item can be *anything*: a number, a string, an object, a function or even another array.
 - Arrays **are ordered**. Items stay in the order they are put in the array.
