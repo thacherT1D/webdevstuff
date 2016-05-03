@@ -417,10 +417,15 @@ Javascript **Objects** are:
 
 Reference types are:
 
-- 
+-
 
 ## Resources
 
 - [MDN Working with Objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects)
 - [MDN Object Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)
 - [Javascript Visualizer](http://www.pythontutor.com/javascript.html#mode=edit)
+
+
+Drawing JS Objects in Memory:
+
+<iframe src="https://player.vimeo.com/video/145447330?byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
