@@ -45,6 +45,7 @@ Lessons:
 - [Objects](https://workbook.galvanize.com/cohorts/68/articles/3570)
 - [Arrays](https://workbook.galvanize.com/cohorts/68/articles/3569)
 - [Reference Types](https://workbook.galvanize.com/cohorts/68/articles/3572)
+- [Drawing Objects in Memory](https://workbook.galvanize.com/cohorts/68/articles/3080)
 - [Iterations](https://workbook.galvanize.com/cohorts/68/articles/3571)
 
 Exercises: Coming Soon to a Webpage Near You.

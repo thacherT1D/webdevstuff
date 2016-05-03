@@ -70,3 +70,6 @@ What's the `name` of `anotherPerson`? The answer is `"Matt"`. `anotherPerson` ac
   - If multiple variables store the same reference, updating one effects all the others.
 
 ## Resources
+
+- [JS visualizer](http://www.pythontutor.com/javascript.html#mode=edit)
+- [Drawing JS Objects in Memory](https://workbook.galvanize.com/cohorts/68/articles/3080)
