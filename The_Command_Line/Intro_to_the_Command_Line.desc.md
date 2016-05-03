@@ -2,7 +2,7 @@ This lesson will introduce you to the fundamental commands of Mac OS X. By the e
 
 * [User accounts](#user-accounts)
 * [Working directories](#working-directories)
-* [Unix paths](#unix-paths)
+* [File system paths](#file-system-paths)
 * Command flags
 * Manual pages
 * Graphical user interfaces
@@ -113,9 +113,9 @@ pwd
 
 What's the current working directory of your shell?
 
-## Unix Paths
+## File system paths
 
-In any computer system, a path represents a location in the file system. Paths are like addresses, listing a location from the general to the specific. It's a bit like addressing an envelope backwards.
+In any computer system, a path represents a location in the file system. Paths are similar to addresses in the physical world, except they list a location from the general to the specific. It's a bit like addressing an envelope backwards.
 
 ```
 USA
@@ -125,10 +125,10 @@ Seattle
 Galvanize, Inc.
 ```
 
-vs.
+Is similar to:
 
 ```
-/Users/someuser/Projects/someproject
+/Users/wcrusher/Projects/nanites
 ```
 
 A path is **absolute** when it starts with `/`.
