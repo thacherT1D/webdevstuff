@@ -124,20 +124,32 @@ cat[foo] // "Felix"
 var cat = {};
 cat.firstName = "Felix";
 cat.lastName = "The Cat";
-cat
+cat;
 // {firstName: 'Felix', lastName: 'The Cat'}
 cat['firstName'] = "Cat";
 cat['lastName'] = "Fritz";
-cat
+cat;
 // {firstName: 'Cat', lastName: 'Fritz'}
-
 ```
+
+**You Do:**
+
+1. Build an object that represents the person across from you using only an object literal
+​
+1. Build an object that represents the person next to you using only dot notation
+​
+1. Build an object that represents the person catty-corner from you using only bracket notation
+​
+4. Swap the names of person 1 with person 2 using dot notation
+​
+5. Swap the names of person 2 with person 3 using bracket notation
+
 
 ### Delete key-value pairs
 
 We can delete a key-value pair with the following syntax:
 
-```
+```javascript
 var person = {
   firstName: "Bruce",
   lastName: "Wayne"
