@@ -5,7 +5,7 @@ This lesson will introduce you to the fundamental commands of Mac OS X. By the e
 * [File system paths](#file-system-paths)
 * [Command flags](#command-flags)
 * [Manual pages](#manual-pages)
-* Graphical user interfaces
+* [Graphical user interfaces](#graphical-user-interfaces)
 * File system management
 * File system navigation
 * File system redirection
@@ -90,7 +90,7 @@ Find out the account name and groups of the current user of your computer.
 
 At any given time, the Unix shell has a **current working directory**. By convention, the current working directory is displayed in your shell's prompt. That way, you know where you are in the your computer's file system hierarchy at all times.
 
-From the command line, you can reference the current working directory with the period `.` symbol. You'll get to play around with this in a minute. Typically, a new shell session will set the current working directory to your user account's home directory when it starts.
+From the command line, you can reference the current working directory with the period `.` character. You'll get to play around with this in a minute. Typically, a new shell session will set the current working directory to your user account's home directory when it starts.
 
 ### The home directory
 
@@ -229,19 +229,27 @@ Were you right? If not, in what way were you wrong? What happened that surprised
 
 **TIP:** http://explainshell.com/ is a great resource for understanding [complex shell commands](http://explainshell.com/explain?cmd=ls+-hal).
 
-## The `open` command
+## Graphical user interfaces
 
-The file structure you see in the shell is the same as the one you see in the Finder application. Finder tends to hide some of the folders from you to keep things simple for most users, but everywhere that you go in Finder is accessible through shell.
+The file structure you see in the textual command line interface is the same as the one you see in the graphical interface via the Finder application. The only difference is the Finder tends to hide some of the files and directories to keep things simple for most users.
 
-Wherever we are, `open .`, opens a `Finder` window in the current directory, this can be handy sometimes. Type that command into your terminal now.
+**TIP:** The Finder on Mac OS X is equivalent to the Explorer on Windows.
 
-`open .`
+### The `open` command
 
-**TIP:** The period `.` character represents the **current working directory**.
+The `open` command opens a directory in the Finder which can be really handy. Let's give that a try right now.
 
-### Question?
+```
+open .
+```
 
-INSERT QUESTION HERE
+![](https://i.imgur.com/ckQDqNp.png)
+
+**TIP:** Remember, the period `.` character represents the current working directory.
+
+### Exercise
+
+Why can't you see any hidden files and directories in the Finder?
 
 ## Review
 
