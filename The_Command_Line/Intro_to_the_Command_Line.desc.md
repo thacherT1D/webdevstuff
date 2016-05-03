@@ -255,6 +255,7 @@ Why can't you see any hidden files and directories in the Finder?
 
 - What's the command for displaying the username of the current user?
 - What's the command for printing the current working directory?
+- What's the character that represents the current working directory?
 - What's a home directory?
 - What's the character that represents the home directory?
 - What's a path?
@@ -268,7 +269,6 @@ Why can't you see any hidden files and directories in the Finder?
 - What's the command for displaying a command's manual page?
 - How do you quit a manual page and return to the shell?
 - What's the command for opening a directory in the Finder?
-- What's the character that represents the current working directory?
 
 ## The `echo` command
 
