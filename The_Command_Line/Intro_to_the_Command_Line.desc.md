@@ -2,7 +2,7 @@ This lesson will introduce you to the fundamental commands of Mac OS X. By the e
 
 * [User accounts](#user-accounts)
 * [Working directories](#working-directories)
-* Unix paths
+* [Unix paths](#unix-paths)
 * Command flags
 * Manual pages
 * Graphical user interfaces
@@ -87,21 +87,21 @@ It's common for a user account to belong to a many groups. The only important gr
 
 Find out the account name and groups of the current user of your computer.
 
-## The current working directory
+## Working directories
 
 At any given time, the Unix shell has a **current working directory**. By convention, the current working directory is displayed in your shell's prompt. That way, you know where you are in the your computer's file system hierarchy at all times.
 
-From the command line, you can reference the current working directory with the period `.` symbol. You'll get to play around with that in a minute. Typically, a new shell session will set current working directory to your user account's home directory when it starts.
+From the command line, you can reference the current working directory with the period `.` symbol. You'll get to play around with this in a minute. Typically, a new shell session will set the current working directory to your user account's home directory when it starts.
 
 ### The home directory
 
 The **home directory** is a special folder in your computer's file system that belongs to only your user account. This is where you'll store your documents, downloads, music, projects, etc. as well as store the configuration settings of many command line programs.
 
-Each user has their own home directory. Prior to the personal computer revolution in the 1980's, it was really common for multiple people to share the same computer. Thus operating systems' with multiple accounts, and therefore home directories, was commonplace. Nowadays, most operating systems only have one human user account.
+Each user has their own home directory. Prior to the personal computer revolution in the 1980's, many people frequently shared the same computer because they were so relatively expensive. Thus operating systems' with multiple accounts, and therefore home directories, was commonplace. Since computers are relatively cheaper nowadays, most operating systems only have one human user account.
 
 ### The `pwd` command
 
-Let's use the `pwd` command to print the current working directory for your shell.
+Let's use the `pwd` command to print the current working directory of your shell session.
 
 ```
 pwd
@@ -113,7 +113,7 @@ pwd
 
 What's the current working directory of your shell?
 
-## The Unix Path
+## Unix Paths
 
 In any computer system, a path represents a location in the file system. Paths are like addresses, listing a location from the general to the specific. It's a bit like addressing an envelope backwards.
 
