@@ -665,4 +665,4 @@ Solve the [Command Line Murder Mystery](https://github.com/ryansobol/clmystery).
 ## Resources
 
 - [Learn the Command Line the Hard Way](http://cli.learncodethehardway.org/book/)
-- [http://bit.ly/terminalcheats](http://bit.ly/terminalcheats)
+- [Terminal Cheatsheet for Mac](http://bit.ly/terminalcheats)
