@@ -11,13 +11,15 @@ By the end of this lesson you will be able to:
 
 ### Key-value pairs
 
+Objects start with an open curly brace and end with a closing curly brace, this is known as an `object literal`.
+
 We're going to declare a variable named `person` and set it to an empty object literal:
 
 ```javascript
 var person = {};
 ```
 
-Objects start with an open curly brace and end with a closing curly brace. Inside of these braces, we store data as key-value pairs. The key is similar to an index of an array. The value is similar to a value in an array.
+Inside of these braces, we store data as key-value pairs. 
 
 Here's an example of an object literal with one key-value pair:
 

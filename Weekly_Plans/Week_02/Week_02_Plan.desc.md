@@ -44,6 +44,8 @@ Lessons:
 - [Arrays](https://coursework.galvanize.com/curriculums/56/articles/3569)
 - [Iterations](https://coursework.galvanize.com/curriculums/56/articles/3571)
 
+Exercises: Coming Soon to a Webpage Near You.
+
 ---
 
 # Wednesday, May 4

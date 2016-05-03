@@ -134,12 +134,13 @@ myArry.length; //4
 
 The `push` function adds an element to the end of an array.
 
-
 The `pop` function removes an element from the end of an array.
 
 The `shift` function adds an element to the start of an array.
 
 The `unshift` function removes an element from the start of an array.
+
+The `indexOf` function searches an array for the element and returns the index of it.
 
 
 
