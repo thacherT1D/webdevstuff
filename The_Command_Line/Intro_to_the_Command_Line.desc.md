@@ -202,7 +202,7 @@ You may not realize it, but there are **hidden files and directories** scattered
 
 ![](https://i.imgur.com/AIKsLux.png)
 
-Many programs have configuration settings that they want stored out of plain sight from users. Traditionally, these settings are stored in hidden files and directories in your home directory. As a professional web developer, you'll want to be able to access and modify these settings. And throughout this course, you'll be doing just that.
+Many programs have configuration settings that they want stored out of plain sight from users. Traditionally, these settings are stored in hidden files and directories in your home directory. As a professional web developer, you'll want to access and modify these settings and, throughout this course, you'll be doing just that.
 
 **TIP:** In fish, the `la` command is the same as `ls -hal` only faster to type.
 
