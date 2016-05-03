@@ -42,9 +42,9 @@ Warmup:
 
 
 Lessons:
-- [Objects](https://workbook.galvanize.com/curriculums/56/articles/3570)
-- [Arrays](https://workbook.galvanize.com/curriculums/56/articles/3569)
-- [Iterations](https://workbook.galvanize.com/curriculums/56/articles/3571)
+- [Objects](https://workbook.galvanize.com/cohorts/68/articles/3570)
+- [Arrays](https://workbook.galvanize.com/cohorts/68/articles/3569)
+- [Iterations](https://workbook.galvanize.com/cohorts/68/articles/3571)
 
 Exercises: Coming Soon to a Webpage Near You.
 
