@@ -1,5 +1,7 @@
 # Javascript: Objects
 
+***
+
 ## Objectives:
 
 By the end of this lesson you will be able to:
@@ -7,6 +9,8 @@ By the end of this lesson you will be able to:
 - Create objects.
 - Access, set and mutate properties using bracket and dot notation.
 - Write and read data from deeply nested objects.
+
+***
 
 ### Objects are key-value pairs
 
@@ -45,6 +49,8 @@ var person = {
  }
 ```
 
+***
+
 ### Dot notation vs. square bracket notation (Creation)
 
 Imagine that we declared a variable named `cat` and assigned it an empty object literal. How do we add key-value pairs to `cat`? We have two options: dot notation and square bracket notation.
@@ -77,6 +83,8 @@ cat
 ```
 
 Above, the keys are considered invalid due to the white space in their names. To circumvent this problem, we enclose the invalid identifier in quotation marks. Then, we enclose that string inside of square brackets.
+
+***
 
 ### Dot notation vs. square bracket notation (Access)
 
@@ -116,6 +124,8 @@ cat.foo // undefined (cat has no value corresponding to the key of foo!)
 cat[foo] // "Felix"
 ```
 
+***
+
 ### Updating key-value pairs
 
 ```javascript
@@ -142,6 +152,7 @@ cat;
 ​
 5. Swap the names of person 2 with person 3 using bracket notation
 
+***
 
 ### Delete key-value pairs
 
@@ -173,6 +184,8 @@ var user = {
 };
 ```
 
+***
+
 ## Object Methods
 
 - [Object MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/)
@@ -181,6 +194,8 @@ Similar to arrays, objects have access to default properties and methods. Let's 
 
 - `hasOwnProperty([key])`
 - `Object.keys([object])`
+
+***
 
 ### `hasOwnProperty([key])`
 
@@ -215,6 +230,8 @@ var elephant = {
 };
 ```
 
+***
+
 ### `Object.keys([object])`
 
 - [keys MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys)
@@ -242,6 +259,8 @@ var beer = {
   delicious: true
 };
 ```
+
+***
 
 ## Creating Nested Values
 
@@ -281,6 +300,8 @@ people[1].alterEgo.first // "Bruce"
 people[0].favoriteColors[1] // "red"
 people[1].age // 32
 ```
+
+***
 
 ## Reading Nested Values
 
@@ -420,6 +441,8 @@ Javascript **Objects** are:
 - Objects are **unordered**. Items are not guaranteed to be in any order.
 - Objects are **key-value pairs**.
   - A key is used to access and set a value.
+
+***
 
 ## Resources
 
