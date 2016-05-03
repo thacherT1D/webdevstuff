@@ -333,6 +333,7 @@ $ pwd
 Remember, the `~` always refers to the current user's home directory, this is handy for scripts and for you, but you can use the full path just as well if you know it, `pwd` will give you the full path.
 
 ## Relative Paths
+
 **Try this:**
 
 ```
@@ -374,6 +375,7 @@ The command means, list the contents of the parent of `~/Documents/` So it liste
 Any path starting with a `/` is said to be an **absolute path** and it is the complete path starting from the root directory. Relative paths (ones that do not begin with a `/`) are relative to your current location.
 
 ## Tab Completion
+
 Hitting `<TAB>` autocompletes.  Hit `<TAB>` constantly. Try it right now! Type:
 
 `$ cd ~/L` THEN HIT TAB!
@@ -388,13 +390,12 @@ This way you can easily see the competing outcomes of autocomplete. What happens
 
 The competing options for me are `Desktop/`, `Documents/`, and `Downloads/`
 
-## Practice
-**Exercise: 5 minutes**
+### Exercise
 
-Navigate to around your computer's file system from the command line. Use a mixture of relative and absolute paths to navigate around. See what dark corners you can discover in your operating system.
-
+Spend three minutes navigating around your computer's file system from the command line. Use a mixture of relative and absolute paths to navigate around. See what dark corners you can discover in your operating system.
 
 ## Mini Review - Navigating Around
+
 * `tree`
 * Root directory
 * `cd /`
@@ -403,7 +404,7 @@ Navigate to around your computer's file system from the command line. Use a mixt
 * `cd relative/path`
 * Tab Completion
 
-# <a name="files"></a>File Manipulation
+## File Manipulation
 
 ## mkdir
 
@@ -425,7 +426,8 @@ What command can you use to see the results of your handywork?
 
 Let's `cd` into our new `notebook`  Look around with `ls`, and `ls -la`.  What do you see?
 
-**Exercise**
+### Exercise
+
 I want my note book to have some notes.  
 
 `$ touch notes.txt`
@@ -437,8 +439,6 @@ Now try listing the contents of your current directory.
 What did the command `touch` do? You can use `touch` to do more than just create files. Try reading the man page for touch!
 
 `$ cat notes.txt`
-
-
 
 ## Removing files
 
@@ -513,7 +513,7 @@ See how we filtered out just the lines that contain Mil?  Try grepping for somet
 
 Adapted from [http://en.flossmanuals.net/command-line/piping/](http://en.flossmanuals.net/command-line/piping/)
 
-### Excercise: Using grep
+### Exercise: Using grep
 
 `grep` is a powerful command that can search through text output for matching text, or patterns of text. Use pipes, grep, and the commands we've learned about so far to do the following:
 
@@ -633,39 +633,6 @@ The next 9 characters are one of 4 characters, and refer to what can be done to 
 
 After that we see `1 Tyler  staff  413 Oct 15 11:22 books.txt`. This line tells that Tyler owns this file; the file belongs to the staff group; its size is 413 bytes; it was last modified Oct 15th at 11:22 and the name of the file is books.txt. The 1 at the start refers to how many files a directory contains, it is always 1 for regular files but might be larger for directories.  
 
-You can change permissions with `chmod` (short for change mode) and you can change file ownership with `chown` (short for change owner). For now we'll leave permissions at that if you're interested in more this is a nice tutorial: [http://en.flossmanuals.net/command-line/permissions/](http://en.flossmanuals.net/command-line/permissions/)
-
-You can also look at the man pages for `chown` and `chmod`. Lets try changing the permissions and ownership of our bookshelf!
-
-```
-$ chmod 400 bookshelf.txt
-$ ls -l bookshelf.txt
--r--------  1 Tyler   staff  106 Oct 15 13:40 bookshelf.txt
-
-```
-Now only the owner has permission to do anything, and all they can do is read the file. If you try to edit that file with nano, and save, what happens?
-
-Lets try changing the ownership of the file:
-
-```
-$ chown StrangeUser:staff bookshelf.txt
-chown: bookshelf.txt: Operation not permitted
-```
-
-This failed, because even though your user owns that file, you're not allowed to write to it! So, this begs the question -- if no one is allowed to write to this file, can we ever change or delete it?!
-
-Enter `root`. Root is the administrative user. Root has all permissions. Root can do anything. You can become this "super user" to run a command using the `sudo` (super user do) command.
-
-**Try This**:
-
-```
-sudo chown StrangeUser:staff bookshelf.txt
-```
-
-You should be asked for your password, then the command will execute as if you are `root`. Root has all permissions for all things. Running commands as `root` can be dangerous, and unless you know what you're doing and know why you need to be root, I suggest not using `sudo`.
-
->Pro-tip: You can use `!!` as a shortcut to repeat the last command. A common idiom is to try a command, and if permission is denied to your current user, try `sudo !!` to repeat the previous command as root.
-
 ## History
 
 Wow, we've done a lot of work. Remembering all these commands can be hard. Luckily our shell remembers a lot of what we've done for us! Try tapping the up arrow in your shell. What happens? We can scroll up and down through the most recent commands we've executed.
@@ -684,18 +651,10 @@ You can scroll up and down through all recently used commands that contain the s
 
 If you don't want to execute any of these commands, type `ctrl+c`. Control+c is a powerful command that you can use at any time to kill the currently running terminal process, or exit many terminal applications.
 
-# <a name="review"></a>Review
-
-## Getting Help
-Don't forget about the command `man`! Short for **manual**, it will give a (hopefully) detailed explanation of that command.  Sometimes that explanation will be too detailed for you.  When you get lost in a man page and you want to understand it, start again from the beginning of the **man page** and keep repeating.  Hopefully you will get further into the page each time you read it.
-
->Pro-tip: when you're feeling meta, try the command `man man`
-
-Many advanced commands also accept the --help, or -h option, but not all, but if you get stuck it can be worth a try. Most of the commands covered in this simple overview do not support this feature
-
-`$ git --help`
+## Review
 
 ### Terminal Cheat Sheet
+
 Bookmark this:
 
 * [http://bit.ly/terminalcheats](http://bit.ly/terminalcheats)
