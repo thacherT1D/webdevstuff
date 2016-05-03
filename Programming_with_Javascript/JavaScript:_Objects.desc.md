@@ -32,20 +32,20 @@ Here's an example of an object literal with one key-value pair:
 
 ```javascript
 var person = {
-  firstName: "Bruce"
+  firstName: 'Bruce'
 };
 ```
 
-The key-value pair is separated with a colon. The key is written as a variable and the value is written as a desired data type, such as the string `"Bruce"`.
+The key-value pair is separated with a colon. The key is written as a variable and the value is written as a desired data type, such as the string `'Bruce'`.
 
 
 If we store more than one key-value pair, each pair must be separated with a comma. The value of the key-value pairs, as you'll notice, can have a value type of either primitive or reference.
 
 ```javascript
 var person = {
-  firstName: "Bruce",
-  lastName: "Wayne",
-  favoriteColors: ["black", "yellow"]
+  firstName: 'Bruce',
+  lastName: 'Wayne',
+  favoriteColors: ['black', 'yellow']
 };
 ```
 
@@ -59,11 +59,11 @@ Dot notation works the following way:
 
 ```javascript
 var cat = {};
-cat.firstName = "Felix";
-cat.lastName = "The Cat";
+cat.firstName = 'Felix';
+cat.lastName = 'The Cat';
 
 cat;
-// {firstName: "Felix", lastName: "The Cat"}
+// {firstName: 'Felix', lastName: 'The Cat'}
 ```
 
 When using dot notation, the keys are placed after the dot. The corresponding values of the keys become the right operand of the equality operator. One note of caution about the keys: they must be a valid identifier. In other words, they must conform to these rules:
@@ -75,8 +75,8 @@ In the case that the key isn't a valid identifier (or it is a valid identifier),
 
 ```javascript
 var cat = {};
-cat["first name"] = "Felix";
-cat["last name"] = "The Cat";
+cat['first name'] = 'Felix';
+cat['last name'] = 'The Cat';
 
 cat;
 // {'first name': 'Felix', 'last name': 'The Cat'}
@@ -92,36 +92,36 @@ To read the value of a key-value pair, we need to use dot notation or square bra
 
 ```javascript
 var cat = {};
-cat.firstName = "Felix";
-cat.lastName = "The Cat";
+cat.firstName = 'Felix';
+cat.lastName = 'The Cat';
 
 cat;
-// {firstName: "Felix", lastName: "The Cat"}
+// {firstName: 'Felix', lastName: 'The Cat'}
 
-cat.firstName;    // "Felix"
-cat["firstName"]; // "Felix"
+cat.firstName;    // 'Felix'
+cat['firstName']; // 'Felix'
 
-cat.lastName;     // "The Cat"
-cat["lastName"];  // "The Cat"
+cat.lastName;     // 'The Cat'
+cat['lastName'];  // 'The Cat'
 ```
 
 Notice that we had to use quotation marks with the square bracket notation. If we didn't include the quotation marks, the JavaScript interpreter would mistake `firstName` and `lastName` to be variables that are not associated with the `cat` object. An example will help elaborate this point:
 
 ```javascript
 var cat = {
-	firstName: "Felix",
-	lastName: "The Cat"
+	firstName: 'Felix',
+	lastName: 'The Cat'
 };
 
-var firstName = "Boooo";
+var firstName = 'Boooo';
 
-cat.firstName  // "Felix"
-cat["firstName"]  // "Felix"
-cat[firstName] // undefined (analogous to cat["Boooo"])
+cat.firstName  // 'Felix'
+cat['firstName']  // 'Felix'
+cat[firstName] // undefined (analogous to cat['Boooo'])
 
-var foo = "firstName";
+var foo = 'firstName';
 cat.foo; // undefined (cat has no value corresponding to the key of foo!)
-cat[foo]; // "Felix"
+cat[foo]; // 'Felix'
 ```
 
 ***
@@ -130,12 +130,12 @@ cat[foo]; // "Felix"
 
 ```javascript
 var cat = {};
-cat.firstName = "Felix";
-cat.lastName = "The Cat";
+cat.firstName = 'Felix';
+cat.lastName = 'The Cat';
 cat;
 // {firstName: 'Felix', lastName: 'The Cat'}
-cat['firstName'] = "Cat";
-cat['lastName'] = "Fritz";
+cat['firstName'] = 'Cat';
+cat['lastName'] = 'Fritz';
 cat;
 // {firstName: 'Cat', lastName: 'Fritz'}
 ```
@@ -160,14 +160,14 @@ We can delete a key-value pair with the following syntax:
 
 ```javascript
 var person = {
-  firstName: "Bruce",
-  lastName: "Wayne"
+  firstName: 'Bruce',
+  lastName: 'Wayne'
 };
 
 delete person.firstName;
 
 person;
-// {lastName: "Wayne"}
+// {lastName: 'Wayne'}
 ```
 
 Deleting requires us to include the keyword `delete` in front of a key-value pair.
@@ -204,13 +204,13 @@ Similar to arrays, objects have access to default properties and methods. Let's 
 This method accepts a string as a value and returns a Boolean value if that string is a key of an object.
 
 ```javascript
-var person = {name: "Watson"};
+var person = {name: 'Watson'};
 
 // true
-person.hasOwnProperty("name");
+person.hasOwnProperty('name');
 
 // false
-person.hasOwnProperty("height");
+person.hasOwnProperty('height');
 ```
 
 **You Do:**
@@ -240,12 +240,12 @@ This method returns an `array` containing all the keys of an object.
 
 ```javascript
 var person = {
-	firstName: "Bruce",
-	lastName: "Wayne"
+	firstName: 'Bruce',
+	lastName: 'Wayne'
 };
 
 Object.keys(person);
-// ["firstName", "lastName"]
+// ['firstName', 'lastName']
 ```
 
 **You Do:**
@@ -269,35 +269,35 @@ In the near future, you'll find yourself working with nested reference types. Th
 ```javascript
 var superheroes = [
 	{
-    name: "Spider-Man",
+    name: 'Spider-Man',
 		alterEgo: {
-			first: "Peter",
-			last: "Parker"
+			first: 'Peter',
+			last: 'Parker'
 		},
 		age: 15,
 		address: {
-			country: "USA",
-			city: "New York"
+			country: 'USA',
+			city: 'New York'
 		},
-		favoriteColors: ["blue", "red"]
+		favoriteColors: ['blue', 'red']
 	},
 	{
-    name: "Batman",
+    name: 'Batman',
 		alterEgo: {
-			first: "Bruce",
-			last: "Wayne"
+			first: 'Bruce',
+			last: 'Wayne'
 		},
 		age: 32,
 		address: {
-			country: "USA",
-			city: "Gotham"
+			country: 'USA',
+			city: 'Gotham'
 		},
-		favoriteColors: ["black", "yellow"]
+		favoriteColors: ['black', 'yellow']
 	}
 ];
 
-superheroes[1].alterEgo.first; // "Bruce"
-superheroes[0].favoriteColors[1]; // "red"
+superheroes[1].alterEgo.first; // 'Bruce'
+superheroes[0].favoriteColors[1]; // 'red'
 superheroes[1].age; // 32
 ```
 
@@ -322,53 +322,55 @@ For this reason, you need to gain comfort navigating and finding data anywhere i
   users:[
     {
       user_id: 1,
-      name: "Chris Rivers",
-      mention_name: "chris",
-      email: "chris@hipchat.com",
-      title: "Developer",
-      photo_url: "https:\/\/www.hipchat.com\/chris.png",
+      name: 'Chris Rivers',
+      mention_name: 'chris',
+      email: 'chris@hipchat.com',
+      title: 'Developer',
+      photo_url: 'https:\/\/www.hipchat.com\/chris.png',
       last_active: 1360031425,
       created: 1315711352,
-      status: "away",
-      status_message: "gym, bbl",
+      status: 'away',
+      status_message: 'gym, bbl',
       is_group_admin :1,
       is_deleted :0
     },
     {
       user_id: 3,
-      name: "Peter Curley",
-      mention_name: "pete",
-      email: "pete@hipchat.com",
-      title: "Designer",
-      photo_url: "https:\/\/www.hipchat.com\/pete.png",
+      name: 'Peter Curley',
+      mention_name: 'pete',
+      email: 'pete@hipchat.com',
+      title: 'Designer',
+      photo_url: 'https:\/\/www.hipchat.com\/pete.png',
       last_active: 1360031425,
       created: 1315711352,
-      status: "offline",
-      status_message: "",
+      status: 'offline',
+      status_message: '',
       is_group_admin: 1,
       is_deleted: 0
     },
     {
       user_id: 5,
-      name: "Garret Heaton",
-      mention_name: "garret",
-      email: "garret@hipchat.com",
-      title: "Co-founder",
-      photo_url: "https:\/\/www.hipchat.com\/garret.png",
+      name: 'Garret Heaton',
+      mention_name: 'garret',
+      email: 'garret@hipchat.com',
+      title: 'Co-founder',
+      photo_url: 'https:\/\/www.hipchat.com\/garret.png',
       last_active: 1360031425,
       created: 1315711352,
-      status: "available",
-      status_message: "Come see what I'm working on!",
+      status: 'available',
+      status_message: 'Come see what I\'m working on!',
       is_group_admin: 1,
       is_deleted: 0
     }
   ]
 };
 ```
+***
 
 **You Do:**
 
-- How would you access the text "Access me!" from the following object? (Example courtesy of [Desmos.com](http://www.desmos.com)):
+- How would you access the text `Access me!` from the following object?
+  - [Source: desmos.com](http://www.desmos.com)
 
 ```javascript
 var graphObject = {
@@ -384,42 +386,42 @@ var graphObject = {
   expressions:{
     list:[
       {
-        id:"1",
-        type:"expression",
-        latex:"y=x",
+        id:'1',
+        type:'expression',
+        latex:'y=x',
         domain:{
           min:0,
           max:1
         },
         hidden:false,
-        color:"#C0504D",
-        style:"normal"
+        color:'#C0504D',
+        style:'normal'
       }, {
-        id:"2",
-        type:"expression",
-        latex:"y=2x",
+        id:'2',
+        type:'expression',
+        latex:'y=2x',
         domain:{
           min:0,
           max:1
         },
         hidden:false,
-        color:"#4F81BD",
-        style:"normal"
+        color:'#4F81BD',
+        style:'normal'
       }, {
-        id:"4",
-        type:"text",
-        text:"Access me!"
+        id:'4',
+        type:'text',
+        text:'Access me!'
       }, {
-        id:"5",
-        type:"expression",
-        latex:"",
+        id:'5',
+        type:'expression',
+        latex:'',
         domain:{
           min:0,
           max:1
         },
         hidden:false,
-        color:"#8064A2",
-        style:"normal"
+        color:'#8064A2',
+        style:'normal'
       }
     ]
   }
@@ -437,7 +439,6 @@ Javascript **Objects** are:
 - Objects are **unordered**. Items are not guaranteed to be in any order.
 - Objects are **key-value pairs**.
   - A key is used to access and set a value.
-
 
 ***
 

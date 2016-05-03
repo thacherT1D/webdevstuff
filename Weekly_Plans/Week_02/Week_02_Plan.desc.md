@@ -42,11 +42,12 @@ Warmup:
 
 
 Lessons:
+
 - [Objects](https://workbook.galvanize.com/cohorts/68/articles/3570)
 - [Arrays](https://workbook.galvanize.com/cohorts/68/articles/3569)
 - [Iterations](https://workbook.galvanize.com/cohorts/68/articles/3571)
 
-Exercises:
+Homework:
 
 - Complete the exercises at the bottom of the [Objects Article](https://workbook.galvanize.com/cohorts/68/articles/3570)
 
