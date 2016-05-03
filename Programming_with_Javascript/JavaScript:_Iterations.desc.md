@@ -210,13 +210,15 @@ By the end of this lesson you will be able to:
 
 ## Nested Loops (Cont..)
   - WE DO: Review how to access things shown in this exercise:
+  ```javascript
   Exercise: Take this deeply nested reference type and write the code to find the following values:
 
   The email of user 1.
   The title of user 5.
-  The user id of the first user in the user's array.
+  The user id of the first user in the users array.
+  ```
 
-  - YOU DO: (Maybe flex-time): *Using nested loops*, traverse through this entire object, outputting all of the keys, and values for each user in this format: ( key : value ).
+  - YOU DO: *Using nested loops*, traverse through this entire object, outputting all of the keys, and values for each user in this format: ( key : value ).
   - YOU DO: Separate the output of each user with a bunch of dashes (-) to make it more readable.
   - YOU DO: Change your code to output only the user_id, name, age, email, title, and photo_url of each user.
   - YOU DO: Find the average age of all of the users in the object.
