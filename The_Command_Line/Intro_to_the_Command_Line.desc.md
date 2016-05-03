@@ -188,23 +188,19 @@ ls -hl
 
 ![](https://i.imgur.com/oUiKGx6.png)
 
-**TIP:** In fish, the `ll` command is the same as using `ls -hl` only faster to type.
+**TIP:** In fish, the `ll` command is the same as `ls -hl` only faster to type.
 
-### Hidden Files
+### Hidden files and directories
 
-Have you ever heard of hidden files? Well it's true, they are real! And we can see them by with the `-a` flag.
-
-```
-ls -a
-```
-
-Hidden Files are typically used by applications to store configurations and there will be a many of them in your home directory. Most users don't want to be editing these files so they don't show up in `Finder`, but you as a software developer will be editing some these for yourself later on in the course.
-
-Hidden files are hidden because their names begin with `.`
+You may not realize it, but there are **hidden files and directories** scattered throughout your computer's operating system. All it takes to hide a file or directory is to start its name with period `.` prefix. Hidden items can be revealed by using the `-a` flag with the `ls` command.
 
 `ls -hal`
 
-**TIP:** `la`
+![](https://i.imgur.com/AIKsLux.png)
+
+Hidden files and directories are typically used by programs to store configurations settings out of sight from users. As a professional web developer, you'll have many of them in your home directory. Since most users don't want to be editing these files so they don't show up in `Finder`, but you as a software developer will be editing some these for yourself later on in the course.
+
+**TIP:** In fish, the `la` command is the same as `ls -hal` only faster to type.
 
 ### Question?
 
