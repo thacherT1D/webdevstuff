@@ -4,7 +4,7 @@ This lesson will introduce you to the fundamental commands of Mac OS X. By the e
 * [Working directories](#working-directories)
 * [File system paths](#file-system-paths)
 * [Command flags](#command-flags)
-* Manual pages
+* [Manual pages](#manual-pages)
 * Graphical user interfaces
 * Environment variables
 * File system management
@@ -202,15 +202,13 @@ You may not realize it, but there are **hidden files and directories** scattered
 
 ![](https://i.imgur.com/AIKsLux.png)
 
-Hidden files and directories are typically used by programs to store configurations settings out of sight from users. As a professional web developer, you'll have many of them in your home directory. Since most users don't want to be editing these files so they don't show up in `Finder`, but you as a software developer will be editing some these for yourself later on in the course.
+Many programs have configuration settings that they want stored out of plain sight from users. Traditionally, these settings are stored in hidden files and directories mostly in your home directory. However, as a professional web developer, you'll want to be able to modify these settings. Throughout this course, you'll be doing just that.
 
 **TIP:** In fish, the `la` command is the same as `ls -hal` only faster to type.
 
-### Question?
+## Manual pages
 
-INSERT QUESTION HERE
-
-## The `man` command
+### The `man` command
 
 How can you know what flags may be used for a given command?
 
@@ -226,11 +224,11 @@ The man command provides access to the built-in manual for all unix commands. Of
 
 To quit the `man` page and return to the shell, press the `q` key.
 
-### Practice
+### Exercise
 
-With the `man` command, spend 3 minutes discovering new flags for the `ls` command. Try out different combinations of flags to see what they do. For each flag you try, make a prediction about the effect it will have. After trying it, review your prediction.
+With the `man` command, spend three minutes discovering new flags for the `ls` command. Try out different combinations of flags to see what they do. For each flag you try, make a prediction about the effect it will have. After trying it, review your prediction.
 
-Were you right? If not, in what way were you wrong? What happened that surprised you? These sorts of surprises are the seeds of learning. Treasure them.
+Were you right? If not, in what way were you wrong? What happened that surprised you? These sorts of surprises are the seeds of learning so treasure them.
 
 **TIP:** http://explainshell.com/ is a great resource for understanding [complex shell commands](http://explainshell.com/explain?cmd=ls+-hal).
 
