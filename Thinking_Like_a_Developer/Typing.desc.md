@@ -1,5 +1,3 @@
-Becoming proficient with your text editor will yield huge dividends in all of your work. To that end, typing is even more critical. If you can't touch type, it's officially time to learn. If you can't touch type the symbol keys, time to grow your typing muscles.
+**Touch typing** is typing without using the sense of sight to find the keys and is crucial to being a productive web developer. If you can't touch type well, it's officially time to learn.
 
-Do the following exercises and get some sharp typing skills fast.
-
-* [Typing.io](https://typing.io/lesson/javascript/jquery/traversing.js/1)
+Try out [Typing.io](https://typing.io/lesson/javascript/jquery/traversing.js/1) and see how fast you can touch type. Don't worry if you're not very good at it today. You'll be getting lots of practice throughout the course.
