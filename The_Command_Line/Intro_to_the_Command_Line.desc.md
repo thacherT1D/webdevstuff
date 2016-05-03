@@ -16,11 +16,11 @@ Before getting stared, use Spotlight to launch the `Terminal` app.
 
 ## User accounts
 
-Mac OS X is a multi-user operating system which means it manages one or more user accounts. Each user account on Mac OS X has a full name and an account name.
+Mac OS X is a multi-user operating system which means it manages one or more user accounts. Each user account on Mac OS X has a **full name** and an **account name**.
 
 ### The full name
 
-If automatic login is turned off, you'll see the **full name** when logging into the OS after the computer boots.
+If automatic login is turned off, you'll see your account's full name when logging into the OS after the computer boots.
 
 ![](https://i.imgur.com/t8AVjbq.png)
 
@@ -39,7 +39,7 @@ When finished, the window should look something like this.
 
 ### The account name
 
-Additionally, you'll see the **account name** when viewing your home directory, among other places.
+Additionally, you'll see the account name when viewing your home directory, among other places.
 
 To view the home directory:
 
@@ -82,11 +82,9 @@ It's common for a user account to belong to a many groups. The only important gr
 
 **TIP:** If your user account doesn't belong to the `admin` group, it'll be difficult to manage your development machine.
 
-### Questions?
+### Exercise
 
-What's the account name of the current user on your computer?
-
-What are some of the groups that your current user belongs to?
+Find out the account name and groups of the current user of your computer.
 
 ## The `pwd` command
 
