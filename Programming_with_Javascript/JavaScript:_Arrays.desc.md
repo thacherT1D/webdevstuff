@@ -125,6 +125,10 @@ Remember, arrays are a specific type of objects and behave as such:
 
 Arrays come with a lot of useful functions that can be used to get things done quickly and in a readable manner.
 
+#### length
+
+- [length MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/length)
+
 The `length` property lets us know how many elements are in an array:
 
 ```javascript
@@ -132,19 +136,44 @@ var myArry = ['foo', 'bar', 'fizz', 'buzz'];
 myArry.length; //4
 ```
 
+#### push
+
+- [push MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push)
+
 The `push` function adds an element to the end of an array.
+
+#### pop
+
+- [pop MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop)
 
 The `pop` function removes an element from the end of an array.
 
+#### shift
+
+- [shift MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift)
+
 The `shift` function adds an element to the start of an array.
+
+#### unshift
+
+- [unshift MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift)
 
 The `unshift` function removes an element from the start of an array.
 
+#### indexOf
+
+- [indexOf MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexof)
+
 The `indexOf` function searches an array for the element and returns the index of it.
 
+#### slice
+
+- [Slice MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice)
+
+The `slice` function returns an array with the with the elements in the original array starting at the start index and ending with the element before the end index;
 
 
-### Review:
+## Review:
 
 In Javascript, **arrays** are:
 
@@ -153,8 +182,6 @@ In Javascript, **arrays** are:
 - Arrays **are ordered**. Items stay in the order they are put in the array.
 - Arrays **are zero-indexed**. The first item in the array is at index `0` instead of `1`.
 
-
-## Exercises
 
 ## Resources
 

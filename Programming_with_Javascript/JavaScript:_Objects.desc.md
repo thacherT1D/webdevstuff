@@ -19,7 +19,7 @@ We're going to declare a variable named `person` and set it to an empty object l
 var person = {};
 ```
 
-Inside of these braces, we store data as key-value pairs. 
+Inside of these braces, we store data as key-value pairs.
 
 Here's an example of an object literal with one key-value pair:
 
@@ -197,12 +197,16 @@ What's the `name` of `anotherPerson`? The answer is `"Matt"`. `anotherPerson` ac
 
 ## Object Methods
 
+- [Object MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/)
+
 Similar to arrays, objects have access to default properties and methods. Let's explore the two most frequently used:
 
 - `hasOwnProperty([key])`
 - `Object.keys([object])`
 
 ### `hasOwnProperty([key])`
+
+- [hasOwnProperty MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasownproperty)
 
 This method accepts a string as a value and returns a Boolean value if that string is a key of an object.
 
@@ -217,6 +221,8 @@ person.hasOwnProperty("height");
 ```
 
 ### `Object.keys([object])`
+
+- [keys MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys)
 
 Notice the capital `O` in `Object`. The value in keys is an actual object. This method returns all the keys of an object. Until now, we lacked a convenient way to achieve this task. When used, this method will return each key of an object as an item in an array.
 
@@ -395,3 +401,8 @@ var graphObject = {
 ## Conclusion
 
 We learned about reference types. Combined with our knowledge of primitive types, we now know all the data types used in JavaScript. Awesome!
+
+## Resources
+
+- [MDN Working with Objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects)
+- [MDN Object Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)
