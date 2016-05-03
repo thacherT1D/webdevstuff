@@ -2,8 +2,9 @@
 
 ## Objectives:
 
+- Explain the difference between a reference type and a primitive type.
+
 - Explain how objects are stored in memory.
-- Explain the difference between reference types and primitive types.
 
 ## What is a Reference Type?
 
@@ -60,7 +61,12 @@ What's the `name` of `anotherPerson`? The answer is `"Matt"`. `anotherPerson` ac
 - Play around and try some other snippets of code!
 
 
-
 ## Review
+
+- Primitive Types: a variable stores the actual value.
+  - If multiple variables store the same value, updating one has no effect on the others.
+
+- Reference Types: a variable stores a `reference` to the actual item.
+  - If multiple variables store the same reference, updating one effects all the others.
 
 ## Resources
