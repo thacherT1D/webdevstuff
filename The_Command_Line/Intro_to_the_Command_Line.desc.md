@@ -155,32 +155,40 @@ In what order are the files and directories displayed?
 
 ### Long format
 
-Like many shell commands, the behavior of `ls` can be modified. By default, it shows the names of items in your present working directory in alphabetical order. By providing the command with flags, we can modify that.
+Like many shell commands, the behavior of `ls` can be modified. By default, it displays the files and directories in your current working directory in alphabetical order spread over multiple columns. However, you can modify that behavior by providing the command with one or more flags.
 
-For example, the `l` flag changes the listing shown to long format. This will display permission, ownership, and modification information about each item in the directory.
+For example, the `l` flag changes the behavior of `ls` to display the items in a long format. So in addition to the file and directories names, it'll display permission, ownership, size, and the last modification time of each item in the directory.
 
 ```
 ls -l
 ```
 
-Now I can see a lot more clearly what files are in my current working directory. Some of these items are files, some are directories and in my case also have a `link` which we'll deal with on another day :)
+![](https://i.imgur.com/TzK8I2m.png)
 
-### Question?
+### Exercise
 
-INSERT QUESTION HERE
+How can you tell of an item is a file or directory? Hint: look at it's permissions.
 
-### Human-friendly file sizes
+### Human-friendly sizes
 
-When used with the `-l` flag, use unit suffixes: Byte, Kilobyte, Megabyte, Gigabyte, Ter-abyte and Petabyte in order to reduce the number of digits to three or less using base 2 for sizes.
+When using the `-l` flag with the `ls` command, the size of each item is displayed in bytes. To sizes in a more human-friendly manner, you can use the `-h` flag and it'll add one of the following suffixes.
+
+| Suffix | Meaning  |
+|--------|----------|
+| `B`    | byte     |
+| `K`    | kilobyte |
+| `M`    | megabyte |
+| `G`    | gigabyte |
+| `T`    | terabyte |
+| `P`    | petabyte |
+
 ```
 ls -hl
 ```
 
-**TIP:** `ll`
+![](https://i.imgur.com/oUiKGx6.png)
 
-### Question?
-
-INSERT QUESTION HERE
+**TIP:** In fish, `ls -hl` is the same as using the `ll` command.
 
 ### Hidden Files
 
