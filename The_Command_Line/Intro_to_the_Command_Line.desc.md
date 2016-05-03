@@ -153,11 +153,15 @@ ls
 
 In what order are the files and directories displayed?
 
+## Command flags
+
+**Command flags** are a common way to specify options for command line programs. If a command allows a command flag to be specified, it typically is a single dash `-` or double dash `--` immediately followed by a letter, number, symbol, or word. Some commands even accept multiple command flags to be specified at the same time. You'll see some examples of this shortly.
+
 ### Long format
 
-Like many shell commands, the behavior of `ls` can be modified. By default, it displays the files and directories in your current working directory in alphabetical order spread over multiple columns. However, you can modify that behavior by providing the command with one or more flags.
+Like many shell commands, the behavior of `ls` can be modified. By default, it displays the files and directories in your current working directory in alphabetical order spread over multiple columns. However, you can modify that behavior by providing one or more command flags.
 
-For example, the `l` flag changes the behavior of `ls` to display the items in a long format. So in addition to the file and directories names, it'll display permission, ownership, size, and the last modification time of each item in the directory.
+The `l` flag changes the behavior of `ls` to display the items in a long format. So in addition to the file and directories names, it'll display permission, ownership, size, and the last modification time of each item in the directory.
 
 ```
 ls -l
