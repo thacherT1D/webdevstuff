@@ -262,26 +262,6 @@ var beer = {
 
 ***
 
-## Review
-
-Javascript **Objects** are:
-
-- A reference type.
-- Used to **store items**. Where an item can be *anything*: a number, a string, an object, a function or even another object.
-- Objects are **unordered**. Items are not guaranteed to be in any order.
-- Objects are **key-value pairs**.
-  - A key is used to access and set a value.
-
-***
-
-## Resources
-
-- [MDN Working with Objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects)
-- [MDN Object Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)
-- [Javascript Visualizer](http://www.pythontutor.com/javascript.html#mode=edit)
-
-
-
 ## Deeply Nested Objects / Arrays
 
 In the near future, you'll find yourself working with nested reference types. This describes deeply nested values, such as an array storing objects, which store objects and arrays, which can store more arrays, etc.
@@ -445,3 +425,24 @@ var graphObject = {
   }
 };
 ```
+
+
+***
+
+## Review
+
+Javascript **Objects** are:
+
+- A reference type.
+- Used to **store items**. Where an item can be *anything*: a number, a string, an object, a function or even another object.
+- Objects are **unordered**. Items are not guaranteed to be in any order.
+- Objects are **key-value pairs**.
+  - A key is used to access and set a value.
+
+***
+
+## Resources
+
+- [MDN Working with Objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects)
+- [MDN Object Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)
+- [Javascript Visualizer](http://www.pythontutor.com/javascript.html#mode=edit)
