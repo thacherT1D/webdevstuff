@@ -94,7 +94,7 @@ From the command line, you can reference the current working directory with the 
 
 ### The home directory
 
-The **home directory** is a special folder in your computer's file system that belongs to only your user account. This is where you'll store your documents, downloads, music, projects, etc. as well as store the configuration settings of many command line programs.
+The **home directory** is a special folder in your computer's file system that belongs to only your user account. This is where you'll store your documents, downloads, music, projects, etc. as well as store the configuration settings of many command line programs. In the Unix shell, the tilde `~` character represents the home directory.
 
 Each user has their own home directory. Prior to the personal computer revolution in the 1980's, many people frequently shared the same computer because they were so relatively expensive. Thus operating systems' with multiple accounts, and therefore home directories, was commonplace. Since computers are relatively cheaper nowadays, most operating systems only have one human user account.
 
@@ -265,7 +265,7 @@ Why can't you see any hidden files and directories in the Finder?
 - What's the flag for listing directories in long format?
 - What's a hidden file or directory?
 - What's the flag for listing the hidden content of a directory?
-- What's the command for display a command's manual page?
+- What's the command for displaying a command's manual page?
 - How do you quit a manual page and return to the shell?
 - What's the command for opening a directory in the Finder?
 - What's the character that represents the current working directory?
