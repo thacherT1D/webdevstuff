@@ -120,9 +120,10 @@ Sometimes, you may accidentally write a loop that will never end. This is called
 
 
 ## Looping Through Arrays:
-```javascript
-  var nameArray = ['Jordan', 'Logan', 'Micah', 'Roger', 'Jeff'];
-```
+
+  ```javascript
+    var nameArray = ['Jordan', 'Logan', 'Micah', 'Roger', 'Jeff'];
+  ```
   - Pick a loop style (While or For) and attempt to loop through the above array outputting it's contents in order.
   - Hint: look up array properties that may help you tell when an array ends (Or look at this morning's lesson).
   - Once you're done, attempt to do the same with the other kind of looping structure (if you used a while, now try with a for etc..)
@@ -144,15 +145,16 @@ Sometimes, you may accidentally write a loop that will never end. This is called
 
 
 ## Looping through Objects:
-```javascript
-  var myCars = {
-    'Jordan' : 'Mustang',
-    'Logan' : 'GTO',
-    'Micah' : 'Lancer Evolution',
-    'Roger' : 'Charger',
-    'Jeff' : 'Lamborghini'
-  };
-```
+
+  ```javascript
+    var myCars = {
+      'Jordan' : 'Mustang',
+      'Logan' : 'GTO',
+      'Micah' : 'Lancer Evolution',
+      'Roger' : 'Charger',
+      'Jeff' : 'Lamborghini'
+    };
+  ```
   - Review how to access items within an object.
   - How is looping through an object different than looping through an array?
 
