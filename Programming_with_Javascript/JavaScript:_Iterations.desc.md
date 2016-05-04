@@ -70,6 +70,12 @@ Typically, execution of a loop lasts as long as a certain value holds true.
   9  2
   10  1
 ```
+>! Spoiler ```javascript
+  for(var i=0; i < 10; i++)
+  {
+    console.log((i+1) + ' ' + (10-i));
+  }
+  ```
 
 
 
