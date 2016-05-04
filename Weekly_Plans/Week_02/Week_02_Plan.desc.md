@@ -70,9 +70,6 @@ Lessons:
 
 Homework: [Homework](https://workbook.galvanize.com/cohorts/68/student_dashboard)
 
-Announcements:
-- Announcement 1
-- Announcement 2
 
 ---
 

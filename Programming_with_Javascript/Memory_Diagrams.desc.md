@@ -1,11 +1,25 @@
-https://github.com/gSchool/memory-diagrams
+# Drawing Objects in Memory
 
-Once you are done, and want to learn more about scope, check this out:
+## Objectives
 
-https://www.youtube.com/watch?v=zRZNb4GDOPI
+By the end of this lesson you will be able to:
 
+- Diagram and explain how primitive types are stored in memory.
+- Diagram and explain how reference types are stored in memory.
+
+## About Memory Diagrams
+
+This lesson will be a whiteboard lecture.
+
+## Resources
+
+Other lessons:
+
+- Video Lesson:
 <iframe src="https://player.vimeo.com/video/145447330?byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+- [Github Lesson](https://github.com/gSchool/memory-diagrams)
 
-And check this out!  http://www.pythontutor.com/javascript.html#mode=edit
+Other resources:
 
-It lets you step through things.
+- [A video about scope](https://www.youtube.com/watch?v=zRZNb4GDOPI)
+- [JS Visualizer](http://www.pythontutor.com/javascript.html#mode=edit)
