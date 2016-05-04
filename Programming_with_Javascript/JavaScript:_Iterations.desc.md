@@ -70,12 +70,13 @@ Typically, execution of a loop lasts as long as a certain value holds true.
   9  2
   10  1
 ```
->! Spoiler ```javascript
+```javascript
+  //Example:
   for(var i=0; i < 10; i++)
   {
-    console.log((i+1) + ' ' + (10-i));
+    console.log(i+1);
   }
-  ```
+```
 
 
 
@@ -106,6 +107,15 @@ Sometimes, you may accidentally write a loop that will never end. This is called
   9  2
   10  1
 ```
+```javascript
+  //Example:
+  var i=0;
+  while(i < 10)
+  {
+    console.log(i+1);
+    i++;
+  }
+```
 
   - Stretch: Change your loop to only print out the pairs where the first number is odd.
 ```javascript
@@ -120,6 +130,15 @@ Sometimes, you may accidentally write a loop that will never end. This is called
 
   - I DO: Explain a DO-WHILE loop structure
   - YOU DO: Modify your WHILE loop to use a DO-WHILE structure
+```javascript
+  //Example:
+  var i=0;
+  do
+  {
+    console.log(i+1);
+    i++;
+  }while(i < 10)
+```
 
 ## Breaks
 A Break allows you to immediately stop the execution of a loop, step out of it, and continue with the rest of the code. Be careful using breaks too often, as they can make your code very difficult to follow when debugging a larger code base.
