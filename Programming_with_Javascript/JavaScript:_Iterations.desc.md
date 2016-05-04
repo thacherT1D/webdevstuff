@@ -21,7 +21,7 @@ By the end of this lesson you will be able to:
 
 ## Review IF statements:
 
-  If you spend $100 or more, then you get 15% off, otherwise the purchase is full price
+If you spend $100 or more, then you get 15% off, otherwise the purchase is full price
 
   - WE DO: Walk through building the above IF statement
   - YOU DO: Add on to the IF statement we wrote to allow people to get 35% off if they spend more than $200.
@@ -31,20 +31,20 @@ By the end of this lesson you will be able to:
 
 
 ## Loops
-  Loops are essential to programming.
-  They allow us to repeat an operation many times.
-  Typically, execution of a loop lasts as long as a certain value holds true.
+Loops are essential to programming.
+They allow us to repeat an operation many times.
+Typically, execution of a loop lasts as long as a certain value holds true.
 
 ####  Kinds of loops:
-    - For
-    - While
-    - Do While
-    - For In
+  - For
+  - While
+  - Do While
+  - For In
 ####  Why are each these useful? Why have 4(or more) kinds of loops?
-    -
-    -
-    -
-    -
+  -
+  -
+  -
+  -
 
 
 
@@ -73,8 +73,8 @@ By the end of this lesson you will be able to:
 
 
 
-  Beware of infinite loops!
-  Sometimes, you may accidentally write a loop that will never end. This is called an infinite loop, and is basically terrible. Example: suppose you want to log the numbers 1 through 10 to the console using a while loop, but you forget to increment your index at each step... what happens?
+Beware of infinite loops!
+Sometimes, you may accidentally write a loop that will never end. This is called an infinite loop, and is basically terrible. Example: suppose you want to log the numbers 1 through 10 to the console using a while loop, but you forget to increment your index at each step... what happens?
 
   - I DO: Explain basic WHILE loop structure.
 ```javascript
@@ -275,16 +275,16 @@ By the end of this lesson you will be able to:
 ```
 
 ## Stretch:
-  https://projecteuler.net/problem=3
-  > You will have to use a nested loop to solve this. Feel free to research what a prime factor is if you aren't sure.
+https://projecteuler.net/problem=3
+> You will have to use a nested loop to solve this. Feel free to research what a prime factor is if you aren't sure.
   ```javascript
   The prime factors of 13195 are 5, 7, 13 and 29.
   What is the largest prime factor of the number 600851475143 ?
   ```
 
 ## Resources:
-  https://workbook.galvanize.com/cohorts/68/articles/3083
-  > Start at: An Introduction to Iterators ~half-way down.
+https://workbook.galvanize.com/cohorts/68/articles/3083
+> Start at: An Introduction to Iterators ~half-way down.
 
-  http://www.pythontutor.com/javascript.html
-  > Use this to go through your code step by step to examine variables and see where/when they change.
+http://www.pythontutor.com/javascript.html
+> Use this to go through your code step by step to examine variables and see where/when they change.
