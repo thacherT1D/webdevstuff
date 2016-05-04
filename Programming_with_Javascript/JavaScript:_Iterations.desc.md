@@ -115,7 +115,14 @@ Sometimes, you may accidentally write a loop that will never end. This is called
   - I DO: Explain a DO-WHILE loop structure
   - YOU DO: Modify your WHILE loop to use a DO-WHILE structure
 
+## Breaks
+A Break allows you to immediately stop the execution of a loop, step out of it, and continue with the rest of the code. Be careful using breaks too often, as they can make your code very difficult to follow when debugging a larger code base.
 
+  - WE DO: Using a break, stop the execution of your loop after you print out a pair where the second number is: 6.
+
+Another way of handling this kind of scenario without breaks, is to flip a boolean variable which is a condition of the loop's continued iteration.
+
+  - WE DO: Walk through the boolean option instead of using a break.
 
 
 
