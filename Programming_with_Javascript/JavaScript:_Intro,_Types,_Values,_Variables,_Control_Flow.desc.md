@@ -172,7 +172,7 @@ See the [number type](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Da
 
 ### String
 
-JavaScript's string type is used to represent textual data. To create a string, simply append and prepend a series of characters with either single or double quotation marks. Which quotations you use is a matter of style preference. Just make sure the both opening and closing quotations are the same otherwise JavaScript will throw an error.
+JavaScript's string type is used to represent textual data. To create a string, simply append and prepend a series of characters with either single or double quotation marks. Which quotations you use is a matter of style preference. Just make sure that both opening and closing quotations are the same otherwise JavaScript will throw an error.
 
 ```javascript
 'Jane';
@@ -211,7 +211,7 @@ See the [string type](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Da
 
 ### Variables
 
-In JavaScript, variables lets you give a name to a value. Think of a variable as a bucket that you can store one thing inside of it. To create a new variable, use the `var` keyword followed by the name of the variable.
+In JavaScript, variables lets you give a name to a value. Think of a variable as a bucket that can store one thing inside of it. To create a new variable, use the `var` keyword followed by the name of the variable.
 
 ```javascript
 var person;
@@ -257,7 +257,7 @@ var result = 2 + 2;
 
 ### Undefined
 
-`undefined` represents a value that hasn't been defined. A variable that has not been assigned a value is of type `undefined`. A function returns `undefined` if a value was not returned which is the default.
+`undefined` represents a value that hasn't been defined. A variable that has not been assigned a value is of type `undefined`. A function returns `undefined` if a value is not returned, which is the default.
 
 ```javascript
 var x;
@@ -316,7 +316,7 @@ The `+` operator can also be used for **string concatenation**.
 'Hello ' + 'world!';  // 'Hello world!'
 ```
 
-Notice that the meaning of the `+` operator depends on what data types of the operands. Be careful when you combine different meanings of `+` in the same expression. JavaScript will attempt to guess the meaning, but won't always be correct.
+Notice that the meaning of the `+` operator depends on the data types of the operands. Be careful when you combine different meanings of `+` in the same expression. JavaScript will attempt to guess the meaning, but won't always be correct.
 
 ```javascript
 'The sum of ' + 5 + ' and ' + 7 + ' is ' + 5 + 7
