@@ -7,9 +7,9 @@
 - Explain what a variable is.
 - Explain the difference between a value and an expression
 - Explain the difference between `=`, `==`, and `===` in JavaScript.
-- Implement simple control flow examples using `if` statements
-- Explain what type conversion is
-- Name all the "falsy" values in JavaScript
+- Explain simple control flow examples using `if` statements.
+- Explain what type conversion is.
+- Name all the "falsy" values in JavaScript.
 
 ## What's JavaScript?
 
