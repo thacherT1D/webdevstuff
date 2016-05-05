@@ -179,7 +179,7 @@ JavaScript's string type is used to represent textual data. To create a string, 
 "John";
 ```
 
-Each element in the string occupies a position in the String. The first element is at index 0, the next at index 1, and so on. The length of a String is the number of elements in it.
+Each character in the string occupies a position in the String. The first character is at index 0, the next at index 1, and so on. The length of a String is the number of characters in it.
 
 ```javascript
 'melissa'.length;       // 6
