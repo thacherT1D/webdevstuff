@@ -185,7 +185,7 @@ Each character in the string occupies a position in the String. The first charac
 'melissa'.length;       // 6
 'melissa'[0];           // 'm'
 'melissa'.substr(1);    // 'elissa'
-'melissa'.substr(1, 2); // 'el'
+'melissa'.substr(2, 2); // 'li'
 ```
 
 There are a number of built-in methods associated with strings, some of which are new additions as of ES6.
