@@ -550,8 +550,10 @@ if (2 > 1 && 5 <= 3) {
 
 if (7 % 2 === 0 || !Number.isInteger(7.3)) {
   console.log('E');
-} else {
+} else if (6 <= Math.floor(5.8)) {
   console.log('F');
+} else {
+  console.log('G');
 }
 ```
 
