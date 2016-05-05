@@ -94,6 +94,7 @@ Resources:
 
 - [Chrome Console API Docs](https://developer.chrome.com/devtools/docs/console-api)
 - [Polya's Problem Solving Techniques](https://math.berkeley.edu/~gmelvin/polya.pdf)
+- [SO discussion about reading docs](http://stackoverflow.com/questions/10925478/how-to-read-api-documentation-for-newbs) - checkout the highest rated answer.
 
 ---
 
