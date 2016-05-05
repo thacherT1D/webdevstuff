@@ -535,29 +535,23 @@ if (2 > 1) {
 } else {
   console.log('B');
 }
-```
 
-```javascript
 if (2 > 1 && 3 > 5) {
-  console.log('A');
+  console.log('C');
 } else {
-  console.log('B');
+  console.log('D');
 }
-```
 
-```javascript
 if (7 % 2 === 0) {
-  console.log('A');
+  console.log('E');
 } else {
-  console.log('B');
+  console.log('F');
 }
-```
 
-```javascript
 if (1 == '1' || Number.isInteger(7.3)) {
-  console.log('A');
+  console.log('G');
 } else {
-  console.log('B');
+  console.log('H');
 }
 ```
 
