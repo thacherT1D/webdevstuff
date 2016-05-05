@@ -91,7 +91,7 @@ Lessons:
 
 Warmup: [Biweekly Survey](https://docs.google.com/forms/d/1XsnxPufkGL24Bnsa_8IxcyJT6-VudP4QC9VqbTbctAw/viewform?usp=send_form)
 
-Crush Code Friday: [CCF](https://github.com/gSchool/ccf-data-structures)
+Crush Code Friday: [Candy Crush](https://github.com/gSchool/ccf-data-structures)
 
 Lightning Talks:
 - Roger Schmidt
