@@ -478,9 +478,9 @@ When JavaScript compares two values with the `==` operator, it first converts th
 
 Because of [this and other strangeness](https://dorey.github.io/JavaScript-Equality-Table/), it's probably safest to just stick with `===` for now.
 
-Note: You can always check something's type in JavaScript using the typeof operator! What's `typeof 4`? `typeof "what's up?"`?
+**Note:** You can always check something's type in JavaScript using the `typeof` operator! What's `typeof 42` and `typeof "hello world"`?
 
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Equality_operators
+See the [equality operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Equality_operators) on the Mozilla Developer Network for more information.
 
 ### Conditionals
 
