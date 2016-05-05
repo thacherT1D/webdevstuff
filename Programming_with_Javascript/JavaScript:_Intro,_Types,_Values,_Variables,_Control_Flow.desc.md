@@ -447,33 +447,36 @@ Conversely, the `!==` operator returns `true` if the values are not equal and/or
 3 !== '3' // true
 ```
 
-Be careful not to confuse the `===` operator with the single equal `=` operator. The `===` operator asks "Are these two values strictly equal?" which the `=` operator means "Assign the value on the right to the variable on the left." In short, the `===` operator is used for **comparison** and the `=` operator is used for **assignment**.
+Be careful not to confuse the `===` operator with the single equal `=` operator. The `===` operator asks "Are these two values strictly equal?" while the `=` operator means "Assign the value on the right to the variable on the left." In short, the `===` operator is used for **comparison** and the `=` operator is used for **assignment**.
 
-Remember, when you use the `=` operator, a variable name _must_ be on the left and the value you want to assign to that variable _must_ be on the right. Since the `===` operator compares two values to see if they're strictly equal, it doesn't matter which value is on which side.
+Remember, when you use the `=` operator, a variable name _must_ be on the left and the value you want to assign to that variable _must_ be on the right. On the other hand, since the `===` operator compares two values to see if they're strictly equal, it doesn't matter which value is on which side.
 
-Related to the `===` and `!==` operators are the `==` and `!=` operators. `===` is a stronger operator, as it also checks whether the **type** of the values are the same, while the `==` operator will try perform some type conversion before comparing. As an exercise, try to predict what boolean each of the following expressions will evaluate to:
-
+Related to the `===` and `!==` operators are the `==` and `!=` operators respectively. The double equals `==` operator compares two values to see if they're equal-ish or "loosely equal" to one another. The operator returns `true` if the values are equal even if they're not the same type.
 
 ```javascript
 4 == 3    // false
 3 == 3    // true
 3 == '3'  // true
+```
 
+Conversely, the `!=` operator returns `true` if the values are not equal even if they're not the same type.
+
+```javascript
 4 != 3    // true
 3 != 3    // false
 3 != '3'  // false
 ```
 
+At first it might seem much easier to use the `==` operator instead of the `===` operator. However, the `==` operator in JavaScript often produces some unexpected results.
+
 ```javascript
-true === 'true' // false
+true == 1       // true
 true == 'true'  // false
-true !== 'true' // true
-true != 'true'  // true
 ```
 
-As a general best-practice, it's better to err on the side of the stronger comparison operator.
+When JavaScript compares two values with the `==` operator, it first converts them to the same type. In the first example, it converts the boolean `true` into the number `1` which is why `true == 1` is true. In the second example, it converts the boolean `true` into the number `1` _and_ the string `'true'` into the number `NaN` which is why `true == 'true'` is false.
 
-https://dorey.github.io/JavaScript-Equality-Table/
+Because of [this and other strangeness](https://dorey.github.io/JavaScript-Equality-Table/), it's probably safest to just stick with `===` for now.
 
 Note: You can always check something's type in JavaScript using the typeof operator! What's `typeof 4`? `typeof "what's up?"`?
 
@@ -592,7 +595,7 @@ https://developer.mozilla.org/en-US/docs/Glossary/Truthy
 
 ### Further Reading
 
-Want to dig deeper? Read Chapters 1 and 2 in [Eloquent JavaScript](http://eloquentjavascript.net/) - we'll be covering some of Chapter 2 tomorrow, so if you don't finish it all, that's ok!
+Want to dig deeper? Read chapters 1 and 2 in [Eloquent JavaScript](http://eloquentjavascript.net/). A word of caution though: this book is great but not very beginner friendly.
 
 ## Resources
 
