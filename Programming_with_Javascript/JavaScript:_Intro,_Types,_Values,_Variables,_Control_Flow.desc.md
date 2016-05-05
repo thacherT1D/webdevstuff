@@ -478,8 +478,6 @@ When JavaScript compares two values with the `==` operator, it first converts th
 
 Because of [this and other strangeness](https://dorey.github.io/JavaScript-Equality-Table/), it's probably safest to just stick with `===` for now.
 
-**Note:** You can always check something's type in JavaScript using the `typeof` operator! What's `typeof 42` and `typeof "hello world"`?
-
 See the [equality operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Equality_operators) on the Mozilla Developer Network for more information.
 
 ### Conditionals
@@ -590,8 +588,17 @@ Most values in JavaScript are truthy -- that is, they get converted into `true` 
 1. `''`
 1. `NaN`
 
-https://developer.mozilla.org/en-US/docs/Glossary/Falsy
-https://developer.mozilla.org/en-US/docs/Glossary/Truthy
+See the [falsey](https://developer.mozilla.org/en-US/docs/Glossary/Falsy) and [truthy](https://developer.mozilla.org/en-US/docs/Glossary/Truthy) documentation on the Mozilla Developer Network for more information.
+
+You can always check something's type in JavaScript using the `typeof` operator.
+
+```javascript
+typeof true // 'boolean'
+typeof 42   // 'number'
+typeof 'hi' // 'string'
+```
+
+See the [typeof operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof) on the Mozilla Developer Network for more information.
 
 ### Further Reading
 
