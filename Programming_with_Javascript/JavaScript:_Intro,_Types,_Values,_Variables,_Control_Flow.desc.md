@@ -316,7 +316,7 @@ The `+` operator can also be used for **string concatenation**.
 'Hello ' + 'world!';  // 'Hello world!'
 ```
 
-Notice that the meaning of the `+` operator depends on the data types of the operands. Be careful when you combine different meanings of `+` in the same expression. JavaScript will attempt to guess the meaning, but won't always be correct. This is because JavaScript adheres to arithmetic's **order of operations**.
+Notice that the meaning of the `+` operator depends on the data types of the operands. Be careful when you combine different meanings of `+` in the same expression because JavaScript adheres to arithmetic's **order of operations**.
 
 ```javascript
 'The sum of ' + 5 + ' and ' + 7 + ' is ' + 5 + 7;
