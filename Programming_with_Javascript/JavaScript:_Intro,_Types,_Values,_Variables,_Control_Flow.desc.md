@@ -542,7 +542,7 @@ if (2 > 1 && 5 <= 3) {
   console.log('D');
 }
 
-if (7 % 2 === 0 || Number.isInteger(7.3)) {
+if (7 % 2 === 0 || !Number.isInteger(7.3)) {
   console.log('E');
 } else {
   console.log('F');
