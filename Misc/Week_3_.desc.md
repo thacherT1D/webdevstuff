@@ -40,11 +40,11 @@ HTML Forms is Due!
 
 #### Homeworks
 
-* [Finish Checkerboard](https://github.com/gSchool/checkerboard-exercise)  
+* [Finish JS-Dom](https://github.com/gSchool/js-dom)  
 
 ### Thursday
 
-Boostrap Mocks is Due!  
+JS Dom is Due!  
 
 #### Lessons
 * [JS Events](https://workbook.galvanize.com/cohorts/67/articles/2612)  

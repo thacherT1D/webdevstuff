@@ -2,6 +2,10 @@
 
 # [Slides](https://docs.google.com/presentation/d/1COkEIRk9CjR60wnCHEZC4JBK0MT1ptoE-CIaol6UZpc/edit?usp=sharing)
 
+
+# Intro Lecture
+If students didn't complete the pre-work, or this is the first time some of them are seeing HTML, run the below lecture.
+
 ## First Lecture - HTML Syntax
 **(I Do)**  
 
@@ -63,3 +67,45 @@ If they're absorbing material quick enough without prompting, the warm-up exerci
  
 [Assessment](https://students.galvanize.com/assessments/55)
 [Slide Deck](https://docs.google.com/presentation/d/1COkEIRk9CjR60wnCHEZC4JBK0MT1ptoE-CIaol6UZpc/edit#slide=id.p)
+
+
+
+## HTML Review
+These are notes for doing an alternate, review-style lecture, where HTML, Semantic HTML, and Forms are all combined into one. This is suitable if everyone completed the pre-work, and it's not the first time they've seen HTML.
+
+HTML
+
+	* HTML Vocabulary Words
+		* Tagname
+		* Attributes
+		* Classes
+	* Forms
+		* Special structrual element
+		* Input types
+			- Text
+			- Number
+			- tel
+			- radio
+			- checkbox
+			- select / option
+
+	* Modern HTML5 stuff
+		- autofocus
+		- placeholder
+		- required
+	* https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input
+	* Let's look at the Input Element
+	* MDN Element Reference - https://developer.mozilla.org/en-US/docs/Web/HTML/Element
+	* W3C Validator - http://validator.w3.org/
+	* Semantic HTML - https://developer.mozilla.org/en-US/docs/Web/HTML/Element/article
+
+
+Objectives:
+	* Review HTML Terminology
+	* Create HTML Forms
+	* Use many kinds of Inputs
+	* Use new HTML5 attributes
+	* Use MDN
+	* Use the W3C Validator to check your HTML
+	* Use Semantic HTML Tags to help assistive and search technology understand your markup
+
