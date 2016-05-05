@@ -12,13 +12,13 @@ Objectives:
 * Write a deeply nested object
 * Read data from a deeply nested object
 
-Now that we've talked about primitive data types, let's discuss the last data type in Javascript: objects. Arrays, functions, and (shocker!) objects are all examples of objects. Objects are sometimes referred to as reference types (to distinguish them from the primitive types that we've seen already). Here we'll discuss arrays and objects; functions will be the subject of a later learning experience.
+Now that we've talked about primitive data types, let's discuss the last data type in Javascript: objects. Arrays, functions, and (shocker!) objects are all examples of objects. Objects are sometimes referred to as reference types (to distinguish them from the primitive types that we've seen already). Here we'll discuss arrays and objects as well as delve deeper into functions.
 
 ## Arrays 
 
-Arrays in Javascript are declared using square brackets. The simplest array is one with nothing in it: 
+Arrays describe a set of elements in a particular order. Arrays in Javascript are declared using square brackets. The simplest array is one with nothing in it:
 
-```
+```javascript
 var arr = [];
 ```
 
@@ -38,6 +38,12 @@ Note that the above array happened to have all strings in it, but in Javascript 
 var randomArray = ["hi", 3, null, [1, 2, 3], true, "bye"];
 ```
 
+**Question**: What are the types of elements in `randomArray` above?
+
+**Question**: Write the array of the names of the people in your group.
+
+**Question**: Write the array of the alliterations of the people in your group.
+
 ### Accessing Elements
 
 To access and read each element in the array, we need to use square bracket notation with an index. Indexes are typically numbers.
@@ -54,6 +60,31 @@ myArray[4] // "Tim"
 
 Notice that the index starts with `0` and then increments by `1`. We say that arrays are zero-indexed because the first element is at index 0, not at index 1.
 
+**Question**: What will the following code produce?
+
+```javascript
+var myArray = ["Elie", "Janey", "Matt", "Parker", "Tim"];
+var index = 3;
+
+myArray[3]
+```
+
+**Question**: What would happen if I specify `myArray[100]`?
+
+**Question**: What would happen if I specify `myArray[-1]`?
+
+### `length` property
+
+Every array has a `length` property. The `length` property stores the length of an array.
+
+```javascript
+var myArray = [];
+myArray.length;  // 0
+
+myArray[0] = "Sherlock";
+myArray.length; // 1
+```
+
 ### Updating Elements
 
 To update a value stored at a specific index, we can simply reassign the value at that index.
@@ -63,8 +94,64 @@ var myArray = ["Elie", "Janey", "Matt", "Parker", "Tim"];
 
 myArray[2] = "Mathematical Matt"
 
-// ["Elie", "Janey", "Mathematical Matt", "Parker", "Tim"];
+// ["Elie", "Janey", "Mathematical Matt", "Parker", "Tim"]
 ```
+
+### Iterating over an array
+
+One of the most common things we want to do with an array is iterate over it so that we can look at and use each element in an array. We commonly use a for loop to iterate over an array.
+
+#### `for` loop
+
+Let's first view the code to iterate with arrays:
+
+```javascript
+var books = ["JavaScript: The Good Parts", "Eloquent JS", "You Don't Know JS"];
+
+for (var i = 0; i < books.length; i++) {
+	var book = books[i];
+	console.log(book);
+}
+// JavaScript: The Good Parts
+// Eloquent JS
+// You Don't Know JS
+```
+
+Imagine that we want to iterate through every element from our array from the first index to the last index. To achieve this goal, we essentially define a four-step process:
+
+1. Declare a variable that represents the first index (`i`) and set its value to the first index (`0`).
+2. Write a conditional statement that terminates when we iterated once for each element in the array.
+3. We want to increment `i` after every iteration of the `for` loop.
+4. During each iteration, we use `i` to access a element in the array.
+
+**Question** Write a loop that iterates over the array [1, 2, 3, 4], doubles each element, and stores in back. `[2, 4, 6, 8]` (who do we appreciate?)
+
+**Question** Adele is having trouble remembering her own song lyrics. For some reason, all she knows is the word "Hello". Let's help her out.
+
+```
+var lines = [
+	'It's me.',
+	'Can you hear me?',
+	'from the other side',
+	'from the outside'
+];
+```
+
+Write a loop that logs to the screen each of her lines with the word "Hello" in front of it.
+
+#### Not just for arrays
+
+You don't need an array in order to write a for loop. Here's an example of a for loop that makes no mention of arrays:
+
+```javascript
+for (var i = 1; i < 10; i++) {
+  console.log(i);
+}
+
+// What will this log to the console??
+```
+
+**Question** When might we want to iterate between two numbers?
 
 ## Objects 
 
@@ -89,7 +176,6 @@ var person = {
 ```
 
 The key-value pair is separated with a colon. The key is written as a variable and the value is written as a desired data type, such as the string `"Bruce"`.
-
 
 If we store more than one key-value pair, each pair must be separated with a comma. The value of the key-value pairs, as you'll notice, can have a value type of either primitive or reference.
 
@@ -136,7 +222,7 @@ Above, the keys are considered invalid due to the white space in their names. To
 
 ### Dot notation vs. square bracket notation (Access)
 
-To read the value of a key-value pair, we need to use dot notation or square bracket notation. Unlike above, we can omit the equality operator and the right operand:
+To read the value of a key-value pair, we need to use dot notation or square bracket notation:
 
 ```javascript
 var cat = {};
@@ -430,18 +516,6 @@ Every array has access to a set of default properties and methods. Instead of ex
  - `length`
  - `push([value])`
  - `pop()`
-
-### `length`
-
-The `length` property stores the length of an array.
-
-```javascript
-var myArray = [];
-myArray.length;  // 0
-
-myArray[0] = "Sherlock";
-myArray.length; // 1
-```
 
 ### `push([value])`
 
