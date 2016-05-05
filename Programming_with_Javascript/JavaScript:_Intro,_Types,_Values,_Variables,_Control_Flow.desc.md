@@ -551,13 +551,13 @@ if (7 % 2 === 0 || !Number.isInteger(7.3)) {
 
 ### Type Conversion
 
-Sometimes, you may pass in a value of one type when JavaScript expects a value of a different type. In this case, rather than throwing an error, JavaScript will convert the value into one that has a type that makes sense.
+Sometimes, your code uses a value of one type when JavaScript expects a value of a different type. In this case, rather than throwing an error, JavaScript will convert the value into a type that makes sense.
 
-For instance, suppose you type the following expression into your console: `1 + 'hi'`. For numbers, `+` means addition; for strings, it means concatenation. So how does JS deal with this ambiguity? It converts the number into a string, the concatenates.
+For example, suppose you type the expression `1 + 'hi'`. For numbers, the `+` operator means addition; but for strings, it means concatenation. So how does JavaScript deal with this ambiguity? It converts the number into a string and then concatenates.
 
-This type of conversion also happens when you pass values into if statements. In a block of code like `if (x) {...}`, `x` is expected to be a Boolean. If it isn't, JavaScript will convert it into a Boolean.
+This **type conversion** also happens when you pass values into `if` statements. In a block of code like `if (x) {...}`, the `x` variable is expected to be a boolean. But if it's not, JavaScript will convert it to a boolean.
 
-Most values in JavaScript are truthy -- that is, they get converted into `true` should the need arise. In fact, there are only six falsy values in JavaScript:
+Most values in JavaScript are "truthy". That is, they get converted into `true` should the need arise. In fact, there are only six "falsy" values in JavaScript.
 
 1. `false`
 1. `null`
