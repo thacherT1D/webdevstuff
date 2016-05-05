@@ -557,6 +557,8 @@ if (7 % 2 === 0 || !Number.isInteger(7.3)) {
 }
 ```
 
+See the [operator precedence](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence) documentation on the Mozilla Developer Network for more information.
+
 ### Type Conversion
 
 Sometimes, your code uses a value of one type when JavaScript expects a value of a different type. In this case, rather than throwing an error, JavaScript will convert the value into a type that makes sense.
