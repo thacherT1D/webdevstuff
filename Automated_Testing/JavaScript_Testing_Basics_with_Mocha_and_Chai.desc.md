@@ -5,7 +5,8 @@
 - Discuss the benefits of testing. How does it help developers do their jobs more effectively?
 - Write tests for existing code.
 - Write code to pass a given set of tests.
-- Write tests, then write code that passes those tests.
+- Write tests and code using a red / green / refactor workflow.
+- Describe TDD and BDD.
 
 ### Key terms
 
@@ -16,11 +17,6 @@
 - Expectation
 
 Let's learn to test code with [Mocha](https://mochajs.org/), Mocha is a feature-rich JavaScript test framework.
-
-1. [Overview](#overview)
-1. [Setup](#setup)
-1. [Discussion](#discussion)
-1. [Reflect](#reflect)
 
 ## Overview
 
@@ -33,9 +29,59 @@ If your codebase is untested then it is **very** difficult to add new features, 
 - You don't know if that feature will work or not, and
 - The new feature could break your existing codebase.
 
-Automated tests help minimize these issues, allowing you to safely update your codebase and sleep at night. Unfortunately, many developers don't understand the importance of testing until their application breaks and s/he is up all night trying to fix things.
+Automated tests help minimize these issues, allowing you to safely update your codebase and sleep at night. Unfortunately, many developers don't understand the importance of testing until their application breaks and she is up all night trying to fix things.
 
 Read more [here](http://stackoverflow.com/questions/67299/is-unit-testing-worth-the-effort).
+
+
+# Software Testing
+
+## Why do we do testing?
+
+![testing](http://i.giphy.com/13HgwGsXF0aiGY.gif)
+
+**Proper testing in software development is not just about helping put out fires.**
+
+### What is Test-driven Development(TDD)?
+
+When practicing TDD, there are a few rules you should abide by. Three, actually. And you can remember them like this:
+
+### Red, Green, Refactor
+
+__1. RED__
+* _Always_ watch a test fail first - otherwise, how do you know you wrote a working test?
+
+__2. GREEN__
+* Write the code to make the test pass
+
+__3. REFACTOR__
+* Ask yourself if you can do it better? Cleaner? If so, refactor the code and run your tests again to ensure you didn't break anything.
+
+This is what __TDD__ means. _Test Driven Development_. It means, that the code you write in your app is all in service of passing a written test. This helps us to only write the code we need, and helps us to stay out of the "rat hole" that can sometimes derail our focus. It ensures that all of your code is tested, and that you're only writing code that's testable.
+	
+### What is Behavioral Driven Development(BDD)?
+
+It means testing that the product follows behavioral specifications, and not testing low level functions that may or may not affect the overall product. The tests should read like english descriptions of what's being tested. We'll see some examples of this shortly.
+
+You may encounter these terms on the job:
+
+ **Unit tests -**  Low level tests to check functionality of classes, methods, or functions.  So far we have been running unit tests on small examples using ***Jasmine*** or ***RSpec***. Unit tests run fast!  This is our primary focus today!
+
+ **Acceptance/Feature tests -** High level tests conducted to make sure all requirements are met.  In Rails we will use the testing tools ***RSpec*** and ***Capybara*** to run acceptance tests.  Acceptance tests run slow!
+
+**Integration / functional / service-level testing -** Testing between unit and acceptance tests.  In most cases this will involve testing RESTful APIs.  Don't worry about this one too much right now!
+
+**User Story -** Plain English description of what the user does and why.
+
+> User stories follow formats such as:
+> As a **[role]** I want **[feature]** so that **[benefit]**
+> As an **admin** I want to be able to **modify everyone's profile** so that I can **ensure consistency**
+
+![testing pyramid](http://blog.codeclimate.com/images/posts/rails-testing-pyramid.png)
+(source:http://blog.codeclimate.com/images/posts/rails-testing-pyramid.png)
+
+
+
 
 ## Setup
 
@@ -55,10 +101,10 @@ Create a new directory called "test-basics". CD into it, and then create a subdi
   $ mkdir test
   ```
 
-Initialize a new git repo, and then initialize npm (press return multiple times to confirm the defaults).
+Initialize npm in the `test-basics` directory.
 
   ```sh
-  $ npm init
+  $ npm init -y
   ```
 
 Install the [chai](http://chaijs.com/guide/) expectation library locally:
@@ -66,11 +112,13 @@ Install the [chai](http://chaijs.com/guide/) expectation library locally:
   ```sh
   $ npm install --save-dev chai
   ```
+  
+__aside__: What does `--save-dev` do? What's different about this vs. using `--save`?
 
 Add node_modules to the .gitignore file:
 
   ```sh
-  $ echo node_modules >> .gitignore
+  $ echo 'node_modules' >> .gitignore
   ```
 
 Try running the tests with the `mocha` command. You should see:
@@ -87,8 +135,8 @@ Try running the tests with the `mocha` command. You should see:
 Add a test file called `test.js` to the `test/` directory and add the following code:
 
   ```javascript
-  var code = require('../main');
-  var expect = require('chai').expect;
+  const code = require('../main');
+  const expect = require('chai').expect;
 
   describe('', function() {
     it('');
@@ -98,6 +146,10 @@ Add a test file called `test.js` to the `test/` directory and add the following 
 If you run `mocha` again, you should see an error. What does the error message say?
 
 To resolve your error, add a `main.js` file to the root directory. Now when you run `mocha`, things should be working again. What was the problem?
+
+  ```sh
+  $ touch main.js
+  ```
 
 With the setup complete, we can now start writing some tests!
 
@@ -115,22 +167,25 @@ Test time!
 
 Per tradition, let's start with a basic "Hello, World!"
 
-#### Test
+#### Function - main.js
+```javascript
+module.exports = {
+  helloWorld: function () {
+  }
+}
+```
 
+#### Test - test/test.js
 ```javascript
 describe("Hello World", function() {
-  it("should say 'Hello, World!' when called");
+  it("should say 'Hello, World!' when ran");
 });
 ```
 
 **What's happening here?**
 
-describe defines a test suite.
-it defines a single test
-
-A suite takes a string that describes what a particular suite is testing.
-
-A test takes a string that describes the specific functionality being tested.
+`describe` defines a test suite. A test suite is a series of tests against a single feature or function.
+`it` defines a single test, and should read like english. Each `it` should describe one requirement for the function `it` is `describing`.
 
 #### Test!
 
@@ -168,7 +223,7 @@ describe("Hello World", function() {
 
  The test uses JavaScript to test the state of the code being tested via an expectation - test the *expected* state against the *actual* state (the output of the code being tested).
 
- We are using the BDD syntax to.equal More about BDD style [here](http://chaijs.com/api/bdd/);
+ We are using the BDD syntax `to.equal` More about BDD style [here](http://chaijs.com/api/bdd/);
 
  Now run the test:
 
@@ -184,8 +239,8 @@ describe("Hello World", function() {
   1 failing
 
   1) Hello World says "Hello, World!" when ran:
-     TypeError: code.helloWorld is not a function
-      at Context.<anonymous> (test/test.js:6:17)
+     AssertionError: expected undefined to equal 'Hello, World!'
+      at Context.<anonymous> (test/test.js:6:36)
 
 
 
@@ -201,7 +256,7 @@ The first line of our test is trying to access our code in `main.js`, but we hav
 
 To resolve this error, we need to actually write some Javascript in our `main.js`. Moreover, that code needs to have a certain structure:
 
-#### Function
+#### Function - main.js
 
 ```javascript
 module.exports = {
@@ -252,6 +307,7 @@ $ mocha
 ```
 
 We now have a passing test! Will the test continue to pass if we `console.log` rather than `return`? Why or why not?
+
 
 ## Second Example: More Functions!
 
@@ -491,13 +547,12 @@ module.exports = {
 This pattern may be slightly more confusing when you're just getting started, but it's good to know about because it is commonly used. But if you'd rather avoid it for now, that's fine.
 
 Want some more practice writing tests? Here you go!
-
-### Exercise: Leap Year
+## Exercise: Leap Years
 
 Create a new directory in your workspace called leapYear.
 Follow the same steps as above to create the test.js, main.js, npm init and install chai.
 
-Give the following tax system, what kind(s) of tests can we write?
+Given the following rules for leap years what kind(s) of tests can we write?
 
 1. every year whose number is perfectly divisible by four is a leap year.
 1. except for years which are both divisible by 100 and not divisible by 400.
@@ -520,8 +575,8 @@ Give the following tax system, what kind(s) of tests can we write?
 Here are a couple tests to get you started:
 
 ```javascript
-var code = require('../main');
-var expect = require('chai').expect;
+const code = require('../main');
+const expect = require('chai').expect;
 
 describe('Tax Calculator', function(){
 
@@ -533,6 +588,15 @@ describe('Tax Calculator', function(){
   it('should tax 7% on the second $10', function(){
     expect(code.calculate(15)).to.equal(1.35);
   });
-
 });
 ```
+## Integration Testing
+
+Let's walk through the first test in this repository: https://github.com/gSchool/testing-express-with-supertest together, and then you will all work through the remainder of the exercise on your own.
+
+## Resources
+
+- Mocha - https://mochajs.org/
+- Chai - http://chaijs.com/
+- BDD - https://dannorth.net/introducing-bdd/
+- Test first in Express - http://www.ultrasaurus.com/2014/08/test-first-express/
