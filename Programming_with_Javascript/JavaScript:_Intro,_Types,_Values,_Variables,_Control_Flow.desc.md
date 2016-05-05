@@ -316,11 +316,13 @@ The `+` operator can also be used for **string concatenation**.
 'Hello ' + 'world!';  // 'Hello world!'
 ```
 
-Notice that the meaning of the `+` operator depends on the data types of the operands. Be careful when you combine different meanings of `+` in the same expression. JavaScript will attempt to guess the meaning, but won't always be correct.
+Notice that the meaning of the `+` operator depends on the data types of the operands. Be careful when you combine different meanings of `+` in the same expression. JavaScript will attempt to guess the meaning, but won't always be correct. This is because JavaScript adheres to arithmetic's **order of operations**.
 
 ```javascript
-'The sum of ' + 5 + ' and ' + 7 + ' is ' + 5 + 7
+'The sum of ' + 5 + ' and ' + 7 + ' is ' + 5 + 7;
 ```
+
+**Question:** How might you fix the above expression so it evaluates correctly?
 
 See the [arithmetic operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators) on the Mozilla Developer Network for more information.
 
