@@ -493,25 +493,25 @@ In the example above, the input to the conditional is the total amount of your p
 The most basic control flow statement is the `if` statement.  Here is our example from above in code:
 
 ```javascript
-var total = 284; // Some value
+var total = 284;
 
 if (total >= 100) {
   total = total * .8;
 }
 
-// More code to display the total to the user
-console.log("Your total is: $" + total.toFixed(2));
+// Display the total to the user
+console.log('Your total is: $' + total.toFixed(2));
 ```
 
 Let's practice with some other if statements!
 
 ```javascript
 if (1 + 1 === 2) {
-  console.log("Arithmetic is the best");
+  console.log('Arithmetic is the best');
 }
 
 if (1 + 1 !== 2) {
-  console.log("Math is broken.");
+  console.log('Math is broken.');
 }
 ```
 
@@ -519,55 +519,45 @@ We can also combine these two statements using `if..else`:
 
 ```javascript
 if (1 + 1 === 2) {
-  console.log("Arithmetic is the best");
+  console.log('Arithmetic is the best');
 } else {
-  console.log("Math is broken");
+  console.log('Math is broken');
 }
 ```
 
-(Note: Remember the parentheses!)
+**Note:** Remember the parentheses!
 
 For each of these examples, try to determine what the console will log:
 
 ```javascript
 if (2 > 1) {
-  console.log("A");
+  console.log('A');
 } else {
-  console.log("B");
+  console.log('B');
 }
 ```
 
 ```javascript
 if (2 > 1 && 3 > 5) {
-  console.log("A");
+  console.log('A');
 } else {
-  console.log("B");
+  console.log('B');
 }
 ```
 
 ```javascript
-if (typeof(9) === "string" || !(7 % 4 === 3)) {
-  console.log("A");
+if (7 % 2 === 0) {
+  console.log('A');
 } else {
-  console.log("B");
+  console.log('B');
 }
 ```
 
 ```javascript
-if (1 == "1" && (typeof(typeof(9)) === "string" || Number.isInteger(7.3))) {
-  console.log("A");
+if (1 == '1' || Number.isInteger(7.3)) {
+  console.log('A');
 } else {
-  console.log("B");
-}
-```
-
-```javascript
-if (false) {
-  console.log("A");
-} else if (null) {
-  console.log("B");
-} else {
-  console.log("C");
+  console.log('B');
 }
 ```
 
