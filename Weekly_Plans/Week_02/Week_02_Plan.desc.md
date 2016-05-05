@@ -75,7 +75,11 @@ Homework: [Homework](https://workbook.galvanize.com/cohorts/68/student_dashboard
 
 # Thursday, May 5
 
-Warmup: [Palindrome](http://www.codewars.com/kata/palindrome-for-your-dome)
+Warmup:
+
+- Solve the following problem: [palindrome](http://www.codewars.com/kata/palindrome-for-your-dome)
+  - be sure to `Submit` it on code wars. There are a lot of extra test cases they will run your solution against to be sure that it works.
+- Stretch: Put your code to the test with [the world's longest palindrome](http://www.dailydot.com/technology/worlds-longest-palindrome-sentence/)
 
 Lessons:
 
@@ -83,8 +87,7 @@ Lessons:
   - Reading Documentation
   - Using Developer Tools
   - Reading Stack Traces
-
-- In the afternoon Logan will hold a review session.
+- In the afternoon, Logan will hold a review session.
 
 
 Resources:
