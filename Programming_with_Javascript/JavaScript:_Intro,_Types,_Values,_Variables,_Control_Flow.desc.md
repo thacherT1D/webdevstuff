@@ -416,10 +416,8 @@ See the [logical operators](https://developer.mozilla.org/en-US/docs/Web/JavaScr
 Relational operators `>` (greater than), `>=` (greater than or equal to), `<` (less than), and `<=` (less than or equal to) are used to compare the values of two numbers.
 
 ```javascript
-7 > 7;  // false
-7 >= 7; // true
-4 < 4;  // false
-4 <= 4; // true
+7 < 7;  // false
+7 <= 7; // true
 ```
 
 Relational operators are used to compare the values of two strings as well.
