@@ -373,6 +373,12 @@ Math.random();  // .229375290430
 
 // Generate a random number from 0 up to but not including 10
 Math.random() * 10; // 7.133676137309521
+
+// Generate a random number from 1 up to but not including 11
+Math.random() * 10 + 1; // 3.390042587649077
+
+// Generate a random number from 1 and 10
+Math.floor(Math.random() * 10 + 1); // 8
 ```
 
 See the [`Math` global object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math) on the Mozilla Developer Network for more information.
