@@ -75,17 +75,15 @@ Homework: [Homework](https://workbook.galvanize.com/cohorts/68/student_dashboard
 
 # Thursday, May 5
 
-Warmup: [Link to Warmup](http://github.com/gSchool)
+Warmup: [Palindrome](http://www.codewars.com/kata/palindrome-for-your-dome)
 
 Lessons:
-- [Lesson](https://workbook.galvanize.com/cohorts/68/student_dashboard)
-- [Lesson](https://workbook.galvanize.com/cohorts/68/student_dashboard)
 
-Homework: [Homework](https://workbook.galvanize.com/cohorts/68/student_dashboard)
+- Today I will be talking about:
+  - Reading Documentation
+  - Using Developer Tools
+  - Reading Stack Traces
 
-Announcements:
-- Announcement 1
-- Announcement 2
 
 ---
 
