@@ -536,22 +536,16 @@ if (2 > 1) {
   console.log('B');
 }
 
-if (2 > 1 && 3 > 5) {
+if (2 > 1 && 5 <= 3) {
   console.log('C');
 } else {
   console.log('D');
 }
 
-if (7 % 2 === 0) {
+if (7 % 2 === 0 || Number.isInteger(7.3)) {
   console.log('E');
 } else {
   console.log('F');
-}
-
-if (1 == '1' || Number.isInteger(7.3)) {
-  console.log('G');
-} else {
-  console.log('H');
 }
 ```
 
