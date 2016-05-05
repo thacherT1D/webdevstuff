@@ -84,6 +84,13 @@ Lessons:
   - Using Developer Tools
   - Reading Stack Traces
 
+- In the afternoon Logan will hold a review session.
+
+
+Resources:
+
+- [Chrome Console API Docs](https://developer.chrome.com/devtools/docs/console-api)
+- [Polya's Problem Solving Techniques](https://math.berkeley.edu/~gmelvin/polya.pdf)
 
 ---
 
