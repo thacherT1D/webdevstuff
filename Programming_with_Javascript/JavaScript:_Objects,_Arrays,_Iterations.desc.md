@@ -12,13 +12,13 @@ Objectives:
 * Write a deeply nested object
 * Read data from a deeply nested object
 
-Now that we've talked about primitive data types, let's discuss the last data type in Javascript: objects. Arrays, functions, and (shocker!) objects are all examples of objects. Objects are sometimes referred to as reference types (to distinguish them from the primitive types that we've seen already). Here we'll discuss arrays and objects; functions will be the subject of a later learning experience.
+Now that we've talked about primitive data types, let's discuss the last data type in Javascript: objects. Arrays, functions, and (shocker!) objects are all examples of objects. Objects are sometimes referred to as reference types (to distinguish them from the primitive types that we've seen already). Here we'll discuss arrays and objects as well as delve deeper into functions.
 
 ## Arrays 
 
-Arrays in Javascript are declared using square brackets. The simplest array is one with nothing in it: 
+Arrays describe a set of elements in a particular order. Arrays in Javascript are declared using square brackets. The simplest array is one with nothing in it:
 
-```
+```javascript
 var arr = [];
 ```
 
@@ -38,6 +38,10 @@ Note that the above array happened to have all strings in it, but in Javascript 
 var randomArray = ["hi", 3, null, [1, 2, 3], true, "bye"];
 ```
 
+**Question**: What are the types of elements in `randomArray` above?
+
+**Question**: Write the array of the names of the people in your group.
+
 ### Accessing Elements
 
 To access and read each element in the array, we need to use square bracket notation with an index. Indexes are typically numbers.
@@ -54,6 +58,31 @@ myArray[4] // "Tim"
 
 Notice that the index starts with `0` and then increments by `1`. We say that arrays are zero-indexed because the first element is at index 0, not at index 1.
 
+**Question**: What will the following code produce?
+
+```javascript
+var myArray = ["Elie", "Janey", "Matt", "Parker", "Tim"];
+var index = 3;
+
+myArray[3]
+```
+
+**Question**: What would happen if I specify `myArray[100]`?
+
+**Question**: What would happen if I specify `myArray[-1]`?
+
+### `length` property
+
+Every array has a `length` property. The `length` property stores the length of an array.
+
+```javascript
+var myArray = [];
+myArray.length;  // 0
+
+myArray[0] = "Sherlock";
+myArray.length; // 1
+```
+
 ### Updating Elements
 
 To update a value stored at a specific index, we can simply reassign the value at that index.
@@ -63,8 +92,64 @@ var myArray = ["Elie", "Janey", "Matt", "Parker", "Tim"];
 
 myArray[2] = "Mathematical Matt"
 
-// ["Elie", "Janey", "Mathematical Matt", "Parker", "Tim"];
+// ["Elie", "Janey", "Mathematical Matt", "Parker", "Tim"]
 ```
+
+### Iterating over an array
+
+One of the most common things we want to do with an array is iterate over it so that we can look at and use each element in an array. We commonly use a for loop to iterate over an array.
+
+#### `for` loop
+
+Let's first view the code to iterate with arrays:
+
+```javascript
+var books = ["JavaScript: The Good Parts", "Eloquent JS", "You Don't Know JS"];
+
+for (var i = 0; i < books.length; i++) {
+	var book = books[i];
+	console.log(book);
+}
+// JavaScript: The Good Parts
+// Eloquent JS
+// You Don't Know JS
+```
+
+Imagine that we want to iterate through every element from our array from the first index to the last index. To achieve this goal, we essentially define a four-step process:
+
+1. Declare a variable that represents the first index (`i`) and set its value to the first index (`0`).
+2. Write a conditional statement that terminates when we iterated once for each element in the array.
+3. We want to increment `i` after every iteration of the `for` loop.
+4. During each iteration, we use `i` to access a element in the array.
+
+**Exercise** Write a loop that iterates over the array [1, 2, 3, 4], doubles each element, and stores in back. `[2, 4, 6, 8]` (who do we appreciate?)
+
+**Exercise** Adele is having trouble remembering her own song lyrics. For some reason, all she knows is the word "Hello". Let's help her out.
+
+```
+var lines = [
+	'It's me.',
+	'Can you hear me?',
+	'from the other side',
+	'from the outside'
+];
+```
+
+Write a loop that logs to the screen each of her lines with the word "Hello" in front of it.
+
+#### Not just for arrays
+
+You don't need an array in order to write a for loop. Here's an example of a for loop that makes no mention of arrays:
+
+```javascript
+for (var i = 1; i < 5; i++) {
+  console.log(i);
+}
+
+// What will this log to the console??
+```
+
+**Question** When might we want to iterate between two numbers?
 
 ## Objects 
 
@@ -90,7 +175,6 @@ var person = {
 
 The key-value pair is separated with a colon. The key is written as a variable and the value is written as a desired data type, such as the string `"Bruce"`.
 
-
 If we store more than one key-value pair, each pair must be separated with a comma. The value of the key-value pairs, as you'll notice, can have a value type of either primitive or reference.
 
 ```javascript
@@ -100,6 +184,8 @@ var person = {
   favoriteColors: ["black", "yellow"]
  }
 ```
+
+**Exercise** Create your person object.
 
 ### Dot notation vs. square bracket notation (Creation)
 
@@ -136,7 +222,7 @@ Above, the keys are considered invalid due to the white space in their names. To
 
 ### Dot notation vs. square bracket notation (Access)
 
-To read the value of a key-value pair, we need to use dot notation or square bracket notation. Unlike above, we can omit the equality operator and the right operand:
+To read the value of a key-value pair, we need to use dot notation or square bracket notation:
 
 ```javascript
 var cat = {};
@@ -172,6 +258,8 @@ cat.foo // undefined (cat has no value corresponding to the key of foo!)
 cat[foo] // "Felix"
 ```
 
+**Question** How can we get Bruce Wayne's second favorite color?
+
 ### Updating key-value pairs
 
 ```javascript
@@ -184,8 +272,8 @@ cat['firstName'] = "Cat";
 cat['lastName'] = "Fritz";
 cat
 // {firstName: 'Cat', lastName: 'Fritz'}
-
 ```
+**Question** How can we update Bruce Wayne's second favorite color to pink?
 
 ### Delete key-value pairs
 
@@ -203,7 +291,7 @@ person
 // {lastName: "Wayne"}
 ```
 
-Deleting requires us to include the keyword `delete` in front of a key-value pair. 
+Deleting requires us to include the keyword `delete` in front of a key-value pair.
 
 ### Array checking
 
@@ -221,87 +309,38 @@ Array.isArray([]) // true
 Array.isArray({}) // false
 ```
 
-## Variable assignment and comparisons with reference types
+### `for-in` loop
 
-Consider the following code:
-
-```javascript
-var person = {name: "Matt"};
-var anotherPerson = person;
-
-anotherPerson.name // "Matt"
-```
-
-We've used a `var` statement to declare a variable named `person` and set it to an object literal. Next, we used another `var` statement to declare a variable named `anotherPerson` and set it to `person`.
-
-With primitive types, each variable receives their own copy of a value. With reference types, however, they share the _same_ value in memory (pointer). In other words, `person` and `anotherPerson` are two different variables. However, since these variables are set to a reference type, they point to the same object.
-
-Note that if we make another person object, even if it has the same keys and values, it will _not_ be equal to the original `person` object:
+A `for-in` loop allows your to iterate over each key in an object. Here's the syntax for a `for-in` loop:
 
 ```javascript
-var person = {name: "Matt"};
-var anotherPerson = person;
-var doppelganger = {name: "Matt"};
+var person = {
+  firstName: "Homer",
+  middleName: "Jay",
+  lastName: "Simpson",
+};
 
-person === anotherPerson // true;
-person === doppelganger // false;
-```
-
-This is because `person` and `doppelganger` have pointers to different objects, even though those objects have identical key-value pairs.
-
-### Mutability of Reference Types
-
-To reinforce what we're learning about reference types, let's look at one more example.
-
-```javascript
-var person = {name: "Matthew"};
-var anotherPerson = person;
-
-person.name = "Matt";
-anotherPerson.name // ?
-```
-
-What's the `name` of `anotherPerson`? The answer is `"Matt"`. `anotherPerson` accessed our object literal and updated the `name` property on it.  When `person` wanted to read the value, it first found the object in memory, noticed that the object had a key named `name`, and retrieved its value.
-
-## An Introduction to Iterators
-
-Iterators let us, well, iterate through the keys of an object or elements of an array. To illustrate this point, let's learn how to iterate with arrays and objects with the following iterators:
-
-- `for` loop (arrays)
-- `for-in`loop (objects)
-
-### `for` loop (arrays)
-
-Let's first view the code to iterate with arrays:
-
-```javascript
-var books = ["JavaScript: The Good Parts", "Eloquent JS", "You Don't Know JS"];
-
-for (var i = 0; i < books.length; i++) {
-	var book = books[i];
-	console.log(book);
-}
-// JavaScript: The Good Parts
-// Eloquent JS
-// You Don't Know JS
-```
-
-Imagine that we want to iterate through every element from our array from the first index to the last index. To achieve this goal, we essentially define a four-step process:
-
-1. Declare a variable that represents the first index (`i`) and set its value to the first index (`0`).
-2. Write a conditional statement that terminates when we iterated once for each element in the array.
-3. We want to increment `i` after every iteration of the `for` loop.
-4. During each iteration, we use `i` to access a element in the array.
-
-Of course, you don't need an array in order to write a for loop. Here's an example of a for loop that makes no mention of arrays:
-
-```javascript
-for (var i = 1; i < 10; i++) {
-  console.log(i);
+// "Homer"
+// "Jay"
+// "Simpson"
+for (var key in person) {
+  console.log(person[key]);
 }
 
-// What will this log to the console??
+// firstName
+// middleName
+// lastName
+for (var key in person) {
+  console.log(key);
+}
 ```
+
+Imagine that we want to iterate through every key-value pair in an object named `person`. To achieve this goal, we essentially define a two-step process:
+
+1. Declare a variable that represents the key of an object and associate with an object using the keyword `in`.
+2. Access all values of a key using the standard syntax for accessing the values of a key: `person[key]`. If we want to access just the keys, they we can just use the variable we created to represent a key.
+
+## Other Loops
 
 ### While loops
 
@@ -365,6 +404,7 @@ Why is the above code block problematic?
 
 1. Iterate through the array [1, 2, 3, 4] to change the array to [2, 3, 4, 5].
 1. Print the numbers 1 to 10 and also the number 10 to 1, side by side.  Do this using a for loop and a while loop. Expected output:
+
 ```javascript
 1 10
 2 9
@@ -390,36 +430,59 @@ while (flip > 0.5) {
 console.log("Number of consecutive times heads came up: " + total);
 ```
 
-### `for-in` loop (objects)
+## Variable assignment and comparisons with reference types
 
-A `for-in` loop allows your to iterate over each key in an object. Here's the syntax for a `for-in` loop:
+Consider the following code:
 
 ```javascript
-var person = {
-  firstName: "Homer",
-  middleName: "Jay",
-  lastName: "Simpson",
-};
+var person = {name: "Matt"};
+var anotherPerson = person;
 
-// "Homer"
-// "Jay"
-// "Simpson"
-for (var key in person) {
-  console.log(person[key]);
-}
-
-// firstName
-// middleName
-// lastName
-for (var key in person) {
-  console.log(key);
-}
+anotherPerson.name // "Matt"
 ```
 
-Imagine that we want to iterate through every key-value pair in an object named `person`. To achieve this goal, we essentially define a two-step process:
+We've used a `var` statement to declare a variable named `person` and set it to an object literal. Next, we used another `var` statement to declare a variable named `anotherPerson` and set it to `person`.
 
-1. Declare a variable that represents the key of an object and associate with an object using the keyword `in`.
-2. Access all values of a key using the standard syntax for accessing the values of a key: `person[key]`. If we want to access just the keys, they we can just use the variable we created to represent a key.
+With primitive types, each variable receives their own copy of a value. With reference types, however, they share the _same_ value in memory (pointer). In other words, `person` and `anotherPerson` are two different variables. However, since these variables are set to a reference type, they point to the same object.
+
+Note that if we make another person object, even if it has the same keys and values, it will _not_ be equal to the original `person` object:
+
+```javascript
+var person = {name: "Matt"};
+var anotherPerson = person;
+var doppelganger = {name: "Matt"};
+
+person === anotherPerson // true;
+person === doppelganger // false;
+```
+
+This is because `person` and `doppelganger` have pointers to different objects, even though those objects have identical key-value pairs.
+
+### Mutability of Reference Types
+
+To reinforce what we're learning about reference types, let's look at one more example.
+
+```javascript
+var person = {name: "Matthew"};
+var anotherPerson = person;
+
+person.name = "Matt";
+anotherPerson.name // ?
+```
+
+What's the `name` of `anotherPerson`? The answer is `"Matt"`. `anotherPerson` accessed our object literal and updated the `name` property on it.  When `person` wanted to read the value, it first found the object in memory, noticed that the object had a key named `name`, and retrieved its value.
+
+**Question** Do you think changing an object or array passed into a function remain changed once the function completes?
+
+```javascript
+function foo(arr) {
+  arr[0] = 1;
+}
+
+var arr = []
+foo(arr);
+console.log(foo);
+```
 
 ## Native Array and Object methods
 
@@ -430,18 +493,6 @@ Every array has access to a set of default properties and methods. Instead of ex
  - `length`
  - `push([value])`
  - `pop()`
-
-### `length`
-
-The `length` property stores the length of an array.
-
-```javascript
-var myArray = [];
-myArray.length;  // 0
-
-myArray[0] = "Sherlock";
-myArray.length; // 1
-```
 
 ### `push([value])`
 
