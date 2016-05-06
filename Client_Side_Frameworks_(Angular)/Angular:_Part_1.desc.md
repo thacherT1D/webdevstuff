@@ -1,5 +1,5 @@
-# Angular Curriculum
-
+# Angular Curriculum 
+ 
 [https://github.com/gSchool/angular-curriculum](https://github.com/gSchool/angular-curriculum)
 By the end of part 1:
 
