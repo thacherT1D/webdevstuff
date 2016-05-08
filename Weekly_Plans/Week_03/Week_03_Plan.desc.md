@@ -15,7 +15,7 @@ By the end of the week you should be able to:
 
 # Monday, May 9 - Roger
 
-Warmup: [Link to Warmup](http://github.com/gSchool)
+Warmup: [Code Wars: Unique in Order](http://www.codewars.com/kata/unique-in-order)
 
 Lessons:
 - [Intro to Node and Test Driven Development](https://workbook.galvanize.com/cohorts/68/student_dashboard)
