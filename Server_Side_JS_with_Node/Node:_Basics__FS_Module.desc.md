@@ -29,7 +29,7 @@ Node.js is a powerful server-side platform for executing JavaScript. In particul
 
 Some of the largest [companies on the planet use Node.js](https://github.com/joyent/node/wiki/projects,-applications,-and-companies-using-node) including eBay, Joyent, Klout, LinkedIn, Microsoft, and PayPal use Node.js for some part of their stack. Depending on the firm, usage may vary widely, but it is highly unlikely that any of these companies operate entirely (or even majority) in Node.js. Node.js is like anything else though, and has its [disadvantages](http://www.quora.com/What-are-the-disadvantages-of-using-Node-js) and [advantages](http://www.toptal.com/nodejs/why-the-hell-would-i-use-node-js).
 
-Node.js is important because it is a JavaScript _runtime_ for the server. A [runtime](https://en.wikipedia.org/wiki/Runtime_system) is the code that is dynamically executed during program operation. Javascript is an interpreted languaged, which means that it isn't compiled prior to running. C++, Objective-C and many other languages not based on C are put through a "compiler" that turns them into instructions that can be directly sent to the processor to be executed. An interpreted language is not compiled before it runs, but is instead compiled Just In Time (often abbreviated JIT) when the actual code is about to be run.
+Node.js is important because it is a JavaScript _runtime_ for the server. A [runtime](https://en.wikipedia.org/wiki/Runtime_system) is the code that is dynamically executed during program operation. Javascript is an interpreted language, which means that it isn't compiled prior to running. C++, Objective-C and many other languages not based on C are put through a "compiler" that turns them into instructions that can be directly sent to the processor to be executed. An interpreted language is not compiled before it runs, but is instead compiled Just In Time (often abbreviated JIT) when the actual code is about to be run.
 
 One of the biggest changes that the V8 runtime introduces is in it's JIT compiler. It dynamically compiles and optimizes Javascript as it runs, and re-optimizes it according to the state of the program as the program runs. [Read the wikipedia entry on V8](https://en.wikipedia.org/wiki/V8_(JavaScript_engine)).
 
@@ -40,7 +40,7 @@ One powerful feature of Node.js is the _REPL_; Read, Eval, Print, Loop. This is 
 
 #### Try it - REPL
 
-**Open your terminal**, and type `node`, and hit enter. You should see a `>` appear, and it is in this mode you can enter any valid javascript and it will interpret it. It's similar to the console you're used to from the browser, only we don't have access to `document` or any other browser APIs. 
+**Open your terminal**, and type `node`, and hit enter. You should see a `>` appear, and it is in this mode you can enter any valid javascript and it will interpret it. It's similar to the console you're used to from the browser, only we don't have access to `document` or any other browser APIs.
 
 Now, `touch` a new javascript file in a new folder in your projects or `src` directory. Call it `script.js`.  
 `touch ~/src/node/examples/script.js` (you can use your own folder structure if you like)
@@ -56,7 +56,7 @@ Now `cd` into that folder and run that file with `node script.js`. This is how w
 
 
 ### NPM
-What is [npm](https://en.wikipedia.org/wiki/Npm_(software))? 
+What is [npm](https://en.wikipedia.org/wiki/Npm_(software))?
 `npm` is a package manager for Node.js and JavaScript. _Packages_, or _libraries_, are bits of code that are available for reuse.
 
 One of the best features of Node.js is that it is _lightweight_; that is, Node itself provides minimal functionality. Most things are done with _modules_. NPM packages are an example of [Modules](https://en.wikipedia.org/wiki/Modular_programming), which is a concept we see across many languages and frameworks.
@@ -74,7 +74,7 @@ Why is file parsing important though? If you think about it, if you can use Java
 Although computers are able to rapidly execute instructions sent to the (CPU), it is much slower to get information that is located somewhere like a hard disk, or another computer. Getting data from somewhere other than memomry is known as _I/O_, or, input/output. In particular with Node.js, the areas of interest are file and network I/O. File I/O will involve interacting with files on the computer's _filesystem_. Because Node.js is able to do these things _asyncronously_, it does not have to stop and wait for I/O to happen. [Take a look at this table](http://www.eecs.berkeley.edu/~rcs/research/interactive_latency.html) to understand what kind of time it takes to do common I/O tasks that we currently take for granted.
 
 Can you think of an example of file I/O that you do on a regular basis? If you said `mv`, `cp`, `rm`, `touch` or any other unix command that creates/reads/modifies/deletes, etc. a file, then you are correct.
- 
+
 ## Exercises
 
 [Logfile parsing exercise](https://github.com/gSchool/js-node-log-file-parsing)  
