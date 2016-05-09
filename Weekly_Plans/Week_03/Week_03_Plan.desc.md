@@ -19,8 +19,8 @@ Warmup: [Code Wars: Unique in Order](http://www.codewars.com/kata/unique-in-orde
 
 Lessons:
 
-- [Node Package Manager](https://coursework.galvanize.com/curriculums/56/articles/3747)
-- [Node Modules](https://coursework.galvanize.com/curriculums/56/articles/3746)
+- [Node Package Manager](https://workbook.galvanize.com/cohorts/68/articles/3747)
+- [Node Modules](https://workbook.galvanize.com/cohorts/68/articles/3746)
 - [Test Driven Development](https://workbook.galvanize.com/cohorts/68/articles/3097)
 - [HMTL Forms](https://workbook.galvanize.com/cohorts/68/student_dashboard)
 
