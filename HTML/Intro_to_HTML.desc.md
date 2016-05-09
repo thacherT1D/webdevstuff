@@ -235,7 +235,37 @@ Create a new file, call it `favorites.html`.
 * Create a row of table headers for `First Name`, `Last Name`, `Favorite Animal` 
 * Create a table body with one row and three columns 
 * Enter your first name, last name, and favorite animal in the corresponding columns (then, commit your changes!)
-* Create a link from your `index.html` page to your `favorites.html` page.
+
+
+## Links
+
+We are going to now create a link from your `index.html` page to your `favorites.html` page.
+
+For this we use the _anchor_ (`<a>`) link has a hypertext reference (`href`) attribute. The reference tells the link tag where to take you when clicked.
+
+```html
+<a href="anotherpage.html">Another Page</a>
+```
+
+Above is a link with a _relative_ path. You can tell it is relative path because it does not include a full website address. (A full website address includes http://www.). The server will look in the same directory as the webpage with the link for that file. An absolute link will include the full website address.
+
+```html
+<a href="http://www.google.com">Google</a>
+```
+
+Links have a lot of similar features that you see when navigating the file system in your shell. For example: Where will be looking for the following link?
+
+```html
+<a href="../anotherpage.html">Another Page</a>
+```
+
+It will look into the parent directory. How about this?
+
+```html
+<a href="/folder/subfolder/anotherpage.html">Another Page</a>
+```
+
+Notice we are starting with a slash. This is the root directory of your website.
 
 ## Semantic Markup
 
