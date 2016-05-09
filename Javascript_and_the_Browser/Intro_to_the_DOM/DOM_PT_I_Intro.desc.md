@@ -1,4 +1,13 @@
-# JavaScript and the DOM - Level 1
+# Intro to the DOM Part I: Introduction
+
+## Objectives
+
+## An Introduction to the DOM
+
+## Exercises
+
+## Resources
+
 
 [slides here](https://docs.google.com/a/galvanize.com/presentation/d/1dW_VJ9HgqKfDKekYIhNZewaC_bNHe2iSEvLiSkzwpFs/edit?usp=sharing)
 
