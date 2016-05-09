@@ -33,8 +33,9 @@ Warmup: [CSS Fizz Buzz](todo)
 Lessons:
 
 
-- [Intro to the DOM](https://workbook.galvanize.com/cohorts/68/articles/3092)
-- [Traversing the DOM](todo)
+- [Intro to the DOM Part I: Introduction](https://workbook.galvanize.com/cohorts/68/articles/3092)
+- [Intro to the DOM Part II: Traversal](https://workbook.galvanize.com/cohorts/68/articles/3748)
+- [Intro to the DOM Part III: Manipulation](https://workbook.galvanize.com/cohorts/68/articles/3749)
 - [Getting SASSY w/ Micah](todo)
 
 Homework: [Homework](todo)
