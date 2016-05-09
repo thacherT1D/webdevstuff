@@ -222,6 +222,31 @@ Any time you have something that would be good in a spreadsheet, Tables are the 
 Table tags: 
 `<table>,<thead>,<th>,<tbody>,<td>,<tr>,<tfoot>`
 
+Example:
+
+```html
+<table>
+  <thead>
+    <tr>
+      <th>Header content 1</th>
+      <th>Header content 2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Body content 1</td>
+      <td>Body content 2</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td>Footer content 1</td>
+      <td>Footer content 2</td>
+    </tr>
+  </tfoot>
+</table>
+```
+
 Take a look at the documentation for Tables. Keep this documentation up, and use it to find out how to use the elements you need in order to complete the exercise below.
 [Table Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table)
 
@@ -235,7 +260,6 @@ Create a new file, call it `favorites.html`.
 * Create a row of table headers for `First Name`, `Last Name`, `Favorite Animal` 
 * Create a table body with one row and three columns 
 * Enter your first name, last name, and favorite animal in the corresponding columns (then, commit your changes!)
-
 
 ## Links
 
@@ -352,6 +376,4 @@ These tags are for marking up text content within a structural element:
 
 Fork and clone the [semantic HTML](https://github.com/gSchool/semantic-html-exercise) repository. `index.html` is a news site that's been marked up with `<div>` and `<span>` tags. Using the list of tags above, update the code with semantic tags. When you're done, add/commit/push, and then submit a pull request.
 
-## Exercise: Rectifying past wrongs
-
-Go back to an exercise you completed last week without using semantic HTML (maybe something in the Intro to HTML LE). Change out the unsemantic markup with semantic tags. Share your solution with a classmate and ask for constructive criticism about the markup used.
+> Fun fact: Facebook has implemented something called [Instant Articles](https://instantarticles.fb.com) to help news sources have their articles be more friendly with Facebook. Their docs stress the use of [semantic tags and specific formats](https://developers.facebook.com/docs/instant-articles).
