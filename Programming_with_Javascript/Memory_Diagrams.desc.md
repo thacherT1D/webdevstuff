@@ -1,10 +1,8 @@
-
+Visualizing how the JavaScript interpreter runs and organizes your code is an essential step toward becoming a web development. To that end, watch this short video on drawing JavaScript objects in memory and then, afterwards, complete an exercise on diagraming memory in JavaScript.
 
 <iframe src="https://player.vimeo.com/video/145447330?byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
-
-
-https://github.com/gSchool/memory-diagrams
+[Exercise - Memory Diagram Practice](https://github.com/gSchool/memory-diagrams/blob/master/exercises.md)
 
 ## Resources
 
