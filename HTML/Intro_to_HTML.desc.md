@@ -182,6 +182,33 @@ audio: https://upload.wikimedia.org/wikipedia/en/0/04/Rayman_2_music_sample.ogg
 
 video:   https://upload.wikimedia.org/wikipedia/en/2/28/Illusion_movie.ogg
 
+## Block-level vs. Inline
+
+Elements are usually either "block-level" elements or "inline" elements. 
+
+Block-Level elements:
+
+* occupy the entire space of its parent element (container), thereby creating a "block."
+* may appear only within a <body> element.
+* Begin on new lines (by default)
+
+Here's a [list of the Block-level Elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Block-level_elements#Elements).
+
+Inline elements:
+
+* occupy only the space bounded by the tags that define the inline element.
+* can start anywhere on a page.
+
+Here's a [list of the Inline Elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Inline_elements).
+
+**Question** Which tags are block-level and which are inline?
+
+```html
+<h1>My Heading Here</h1>
+<p>Here is an example paragraph with some <strong>really</strong> important content. <img src="image.png" alt="It's an image">
+</p>
+```
+
 
 ### Tables
 
