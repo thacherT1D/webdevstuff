@@ -256,7 +256,7 @@ $ mocha
 
 We now have a passing test!
 
-## Exercise: Leap Years
+### Exercise: Leap Years
 
 Create a new directory in your workspace called leapYear.
 Follow the same steps as above to create the test.js, main.js, npm init and install chai.
@@ -298,13 +298,21 @@ describe('Tax Calculator', () => {
   });
 });
 ```
-## Integration Testing
 
-Let's walk through the first test in this repository: https://github.com/gSchool/testing-express-with-supertest together, and then you will all work through the remainder of the exercise on your own.
+### Exercise: Math Library
+
+Create an object that provides the following basic mathematical methods.
+
+- Addition,
+- Subtraction,
+- Multiplication,
+- Division, (if it's division by zero, return null),
+- Power,
+- Square root
+
+Follow the red/green/refactor pattern when coding the tests.
 
 ## Resources
 
 - Mocha - https://mochajs.org/
 - Chai - http://chaijs.com/
-- BDD - https://dannorth.net/introducing-bdd/
-- Test first in Express - http://www.ultrasaurus.com/2014/08/test-first-express/
