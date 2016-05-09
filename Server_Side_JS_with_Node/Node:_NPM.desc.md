@@ -70,7 +70,7 @@ Sometimes there are packages that are very useful while developing an applicatio
 
 Lets install a testing tool that is very useful for development, but should not be deployed. [Mocha](https://mochajs.org/) is a testing framework.
 
-To install Mocha as a development dependency, run the following command `npm install --save-dev mocha`. After the installation, the package.json looks as follows:
+To install Mocha as a development dependency, run the following command `npm install --save-dev chai`. After the installation, the package.json looks as follows:
 
 ```
 {
@@ -87,7 +87,7 @@ To install Mocha as a development dependency, run the following command `npm ins
     "pad": "^1.0.0"
   },
   "devDependencies": {
-    "mocha": "^2.4.5"
+    "chai": "^2.4.5"
   }
 }
 ```

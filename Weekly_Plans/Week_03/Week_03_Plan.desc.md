@@ -22,7 +22,7 @@ Lessons:
 - [Node Package Manager](https://workbook.galvanize.com/cohorts/68/articles/3747)
 - [Node Modules](https://workbook.galvanize.com/cohorts/68/articles/3746)
 - [Test Driven Development](https://workbook.galvanize.com/cohorts/68/articles/3097)
-- [HMTL Forms](https://workbook.galvanize.com/cohorts/68/student_dashboard)
+- [HMTL Forms](https://workbook.galvanize.com/cohorts/68/articles/3067)
 
 ---
 

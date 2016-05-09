@@ -106,3 +106,10 @@ There are 3 kinds of modules in the node.js ecosystem:
 
 
 <iframe src="https://player.vimeo.com/video/142099942?byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+
+### Exercise: Cleaning up Candy Crush
+
+Move the store objects into their own separate file, and use the `module.exports` pattern to export the objects.
+
+On the file where all your code now resides, use the `require()` pattern to import the store objects. Make sure that your code works as expected.
