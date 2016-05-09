@@ -1,8 +1,6 @@
 # Intro to HTML
 
-[slides](https://docs.google.com/presentation/d/1COkEIRk9CjR60wnCHEZC4JBK0MT1ptoE-CIaol6UZpc/edit?usp=sharing)
-
-# Objectives
+## Objectives
 
 By the end of this lesson you should be able to:
 
@@ -17,7 +15,7 @@ By the end of this lesson you should be able to:
 
 In other words...create a document you can put on the web and share with others!
 
-# What is HTML?
+## What is HTML?
 
 HyperText Markup Language (HTML) is the standard language to create webpages. It is a subset of a language called XML. Anytime you see a webpage in a browser, HTML is the language telling the browser what content to put on the screen.
 
@@ -26,9 +24,9 @@ HyperText Markup Language (HTML) is the standard language to create webpages. It
 
 It included presentation and appearance cues into the webpage, but these features are now deprecated in favor of Cascading Style Sheets (CSS). Both the HTML and CSS standard is maintained by The World Wide Web Consortium (W3C). 
 
-# Syntax
+## Syntax
 
-## Tags Make Elements
+### Tags Make Elements
 
 You've probably run into tags before if you've ever used the Internet. You've seen paragraph tags - `<p>`, or you've run into `<span>` or `<div>`. You may have used `<a href="http://example.com">Click here</a>`
 before to link to something. 
@@ -46,7 +44,7 @@ The _opening tag_ is the `<p>`, and the _closing tag_ is the `</p>`. These are t
 
 When tags are read by the browser, they form an HTML `element`. The use of `p` tags surrounding text above creates an HTML element.
 
-## Self-closing tags
+### Self-closing tags
 
 Not all tags need a beginning and an end, some tags are self-closing and do no need to wrap content. This is because they aren't thought of as enclosing anything. Think of them as boxes that are already closed and taped up, so there's no need to close them.
 
@@ -62,7 +60,7 @@ Not all tags need a beginning and an end, some tags are self-closing and do no n
 <hr>
 ```
 
-## Attributes
+### Attributes
 
 The above examples contain _attributes_, which are more information attached to an _element_. These attributes are usually to generate content or to act as a reference for other technologies like CSS & JS.
 
