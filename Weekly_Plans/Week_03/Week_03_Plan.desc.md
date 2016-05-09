@@ -21,8 +21,8 @@ Lessons:
 
 - [Node Package Manager](https://workbook.galvanize.com/cohorts/68/articles/3747)
 - [Node Modules](https://workbook.galvanize.com/cohorts/68/articles/3746)
+- [Afternoon Warmup](https://github.com/gSchool/g27-warmup-strings)
 - [Test Driven Development](https://workbook.galvanize.com/cohorts/68/articles/3097)
-- [HMTL Forms](https://workbook.galvanize.com/cohorts/68/articles/3067)
 
 ---
 
