@@ -18,8 +18,10 @@ By the end of the week you should be able to:
 Warmup: [Code Wars: Unique in Order](http://www.codewars.com/kata/unique-in-order)
 
 Lessons:
-- [Intro to Node and Test Driven Development](https://workbook.galvanize.com/cohorts/68/student_dashboard)
 
+- [Node Package Manager](https://coursework.galvanize.com/curriculums/56/articles/3747)
+- [Node Modules](https://coursework.galvanize.com/curriculums/56/articles/3746)
+- [Test Driven Development]()
 - [HMTL Forms](https://workbook.galvanize.com/cohorts/68/student_dashboard)
 
 ---
@@ -29,12 +31,14 @@ Lessons:
 Warmup: [Link to Warmup](http://github.com/gSchool)
 
 Lessons:
+
 - [Lesson](https://workbook.galvanize.com/cohorts/68/student_dashboard)
 - [Lesson](https://workbook.galvanize.com/cohorts/68/student_dashboard)
 
 Homework: [Homework](https://workbook.galvanize.com/cohorts/68/student_dashboard)
 
 Announcements:
+
 - Announcement 1
 - Announcement 2
 
@@ -45,12 +49,14 @@ Announcements:
 Warmup: [Link to Warmup](http://github.com/gSchool)
 
 Lessons:
+
 - [Lesson](https://workbook.galvanize.com/cohorts/68/student_dashboard)
 - [Lesson](https://workbook.galvanize.com/cohorts/68/student_dashboard)
 
 Homework: [Homework](https://workbook.galvanize.com/cohorts/68/student_dashboard)
 
 Announcements:
+
 - Announcement 1
 - Announcement 2
 
@@ -61,12 +67,14 @@ Announcements:
 Warmup: [Link to Warmup](http://github.com/gSchool)
 
 Lessons:
+
 - [Lesson](https://workbook.galvanize.com/cohorts/68/student_dashboard)
 - [Lesson](https://workbook.galvanize.com/cohorts/68/student_dashboard)
 
 Homework: [Homework](https://workbook.galvanize.com/cohorts/68/student_dashboard)
 
 Announcements:
+
 - Announcement 1
 - Announcement 2
 
@@ -81,5 +89,6 @@ Homework: [Homework](https://workbook.galvanize.com/cohorts/68/student_dashboard
 Lightning Talks:
 
 Announcements:
+
 - Announcement 1
 - Announcement 2
