@@ -267,6 +267,12 @@ It will look into the parent directory. How about this?
 
 Notice we are starting with a slash. This is the root directory of your website.
 
+## `<div>` and `<span>` tags
+
+HTML provides generic tags for us that help us style the page. The `<div>` [tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div) is a block-level element that helps group other elements together. The `<span>` [tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/span) is very similar to a `<div>`, but it is an inline element.
+
+These tags are heavily used on web pages with CSS to help add style to the page. We'll talk more about them then.
+
 ## Semantic Markup
 
 You may have been using various tags to help you style your content. `<h1>` text is larger than `<p>` text, and `<strong>` makes something bold. While on its own this is usually fine, HTML was not designed to style content, but to "mark up" its distinct components *semantically*.
