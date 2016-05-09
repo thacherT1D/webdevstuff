@@ -1,8 +1,38 @@
+# Resources:
 * [sass website](http://sass-lang.com/)
 * [sass getting started guide](http://sass-lang.com/guide)
 * [sass docs](http://sass-lang.com/documentation/file.SASS_REFERENCE.html)
+* [GSchool: Sass-Practice](https://github.com/gSchool/sass-practice)
 
-# Below notes credit to [blackfalcon](https://gist.github.com/blackfalcon/5480140)
+
+
+# Objectives:
+
+- Install and use Atom plugin to auto-compile SASS
+- Use variables to save modifiable / repeated state
+- Use nested styles to work with styling hierarchy
+- Use common / awesome functions like calc, mix, etc
+- Use mixins to extend elements styles (stretch)
+
+#SASS/SCSS
+
+## Installing plugins on Atom
+[Check out this image for help.](./atom-sass.png)
+
+
+- 'sass-autocompile'
+- 'linter-sass-lint'
+
+- 'color-picker' (Optional, but awesome!)
+> If you install the color-picker, you will need to modify the sass-autocompile
+hotkeys file to be able to use cmd+shift+c with the color picker as it's also a keybind for the auto-compiler.
+<
+
+The auto-compile plugin will allow you to automatically compile SASS and SCSS code every time you save your file.
+The linter will help with syntax and errors just like jshint for javascript.
+
+
+## Below notes credit to [blackfalcon](https://gist.github.com/blackfalcon/5480140)
 
 Sass is a powerhouse language that is adding new features all the time. For this introduction we will go over the basics of the language and see how they all tie together. We will discuss nesting, parent selector definitions, variables, Sass math, @extends, and @mixins.
 
@@ -36,6 +66,90 @@ This is the primary HTML style
 */
 html {
 font-size: 0.75em; }
+```
+
+Using variables
+---
+Where CSS really fails is it's total lack of reuse. Colors for example are the worst. Not only do we have to use weird things like hexadecimal or HSL values, even RGBa is a little off for me, but we can't reuse them once we declared them.
+
+Sass again comes to the rescue with variables. Let's say that we are defining all the border lines in our CSS. We would write something like the following.
+
+CSS
+
+```css
+.box {
+border: 1px solid #ccc;
+}
+```
+
+This line of CSS gets repeated X number of times in your CSS. Then one day your designer comes up and says that they need to make all the borders `#999`. You now need to go through all the CSS looking for the property of border and change the value from `#ccc` to `#999`. What a pain.
+
+Using Sass we would look at that color as a reusable value and make it a variable like so.
+
+SCSS
+
+```scss
+$border-color: #ccc;
+
+.box {
+  border: 1px solid $border-color;
+}
+```
+
+CSS
+
+```css
+.box {
+border: 1px solid #cccccc; }
+```
+
+Using the variable feature and this technique we have made our lives so much simpler. When we get the color update, we now say, "Sweet!" and simply update the value of the `$border-color` variable and we are done.
+
+Sass math
+---
+Let's face it, sometimes doing math in CSS is hard to keep track of. There are many math functions in Sass, but for this example we will address the issues of calculating ems. Again, Sass to the rescue. Following a popular pattern, we will reset the font size from the default browser size to the size that you want to use on the site.
+
+SCSS
+
+```scss
+html {
+  font-size: (12 / 16) * 1em;
+}
+```
+
+CSS
+
+```css
+html {
+font-size: 0.75em; }
+```
+
+What just happened there? To calculate an em, the formula is to divide the target by it's context, so within the parenthesis we can place the first calculation. To get the final em value we take the result of the first calculation and multiply that by 1em. Sass has the power to recognize this value and return the proper response.  
+
+So you don't use ems, you use percents? Ok, Sass can do that too. Using the same formula, but adjusting the multiplier we get a different return.
+
+SCSS
+
+```scss
+html {
+  font-size: (12 / 16) * 100%;
+}
+```
+
+CSS
+
+```css
+html {
+font-size: 75%; }
+```
+
+Awesome tools: mix, calc, etc..
+---
+You can leverage many very cool functions built into SASS, one of my favorites is 'mix'.
+mix allows you to specify two colors to mix together (the first two params, and a weight% to give the first color) In this example, it's taking 35% of $color1, and filling the rest (65%) with $color2.
+SASS
+```scss
+mix($color1, $color2, 35%);
 ```
 
 Nesting your selectors
@@ -217,80 +331,6 @@ background: orange; }
 
 This Sass technique is invaluable when having to use fallbacks and alternative solutions for different feature support. We can keep all our style declarations under the namespace of the same selector. Code maintenance For The WIN!
 
-Using variables
----
-Where CSS really fails is it's total lack of reuse. Colors for example are the worst. Not only do we have to use weird things like hexadecimal or HSL values, even RGBa is a little off for me, but we can't reuse them once we declared them.
-
-Sass again comes to the rescue with variables. Let's say that we are defining all the border lines in our CSS. We would write something like the following.
-
-CSS
-
-```css
-.box {
-border: 1px solid #ccc;
-}
-```
-
-This line of CSS gets repeated X number of times in your CSS. Then one day your designer comes up and says that they need to make all the borders `#999`. You now need to go through all the CSS looking for the property of border and change the value from `#ccc` to `#999`. What a pain.
-
-Using Sass we would look at that color as a reusable value and make it a variable like so.
-
-SCSS
-
-```scss
-$border-color: #ccc;
-
-.box {
-  border: 1px solid $border-color;
-}
-```
-
-CSS
-
-```css
-.box {
-border: 1px solid #cccccc; }
-```
-
-Using the variable feature and this technique we have made our lives so much simpler. When we get the color update, we now say, "Sweet!" and simply update the value of the `$border-color` variable and we are done.
-
-Sass math
----
-Let's face it, sometimes doing math in CSS is hard to keep track of. There are many math functions in Sass, but for this example we will address the issues of calculating ems. Again, Sass to the rescue. Following a popular pattern, we will reset the font size from the default browser size to the size that you want to use on the site.
-
-SCSS
-
-```scss
-html {
-  font-size: (12 / 16) * 1em;
-}
-```
-
-CSS
-
-```css
-html {
-font-size: 0.75em; }
-```
-
-What just happened there? To calculate an em, the formula is to divide the target by it's context, so within the parenthesis we can place the first calculation. To get the final em value we take the result of the first calculation and multiply that by 1em. Sass has the power to recognize this value and return the proper response.  
-
-So you don't use ems, you use percents? Ok, Sass can do that too. Using the same formula, but adjusting the multiplier we get a different return.
-
-SCSS
-
-```scss
-html {
-  font-size: (12 / 16) * 100%;
-}
-```
-
-CSS
-
-```css
-html {
-font-size: 75%; }
-```
 
 Extending classes
 ---
