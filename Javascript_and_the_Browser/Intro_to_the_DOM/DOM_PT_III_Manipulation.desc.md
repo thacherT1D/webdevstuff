@@ -7,3 +7,5 @@
 ## Exercises
 
 ## Resources
+
+- [The Basics of Javascript DOM Manipluation](http://callmenick.com/post/basics-javascript-dom-manipulation)
