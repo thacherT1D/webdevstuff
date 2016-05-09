@@ -377,3 +377,7 @@ These tags are for marking up text content within a structural element:
 Fork and clone the [semantic HTML](https://github.com/gSchool/semantic-html-exercise) repository. `index.html` is a news site that's been marked up with `<div>` and `<span>` tags. Using the list of tags above, update the code with semantic tags. When you're done, add/commit/push, and then submit a pull request.
 
 > Fun fact: Facebook has implemented something called [Instant Articles](https://instantarticles.fb.com) to help news sources have their articles be more friendly with Facebook. Their docs stress the use of [semantic tags and specific formats](https://developers.facebook.com/docs/instant-articles).
+
+## HTML 5 Cheat Sheet
+
+![HTML 5 Cheat Sheet](http://www.inmotionhosting.com/img/infographics/html5_cheat_sheet_tags.png)
