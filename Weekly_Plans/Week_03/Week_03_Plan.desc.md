@@ -19,6 +19,7 @@ Warmup: [Code Wars: Unique in Order](http://www.codewars.com/kata/unique-in-orde
 
 Lessons:
 - [Intro to Node and Test Driven Development](https://workbook.galvanize.com/cohorts/68/student_dashboard)
+
 - [HMTL Forms](https://workbook.galvanize.com/cohorts/68/student_dashboard)
 
 ---
