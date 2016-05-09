@@ -26,7 +26,22 @@ Lessons:
 
 ---
 
-# Tuesday, May 10
+# Tuesday, May 10 - Jordan
+
+Warmup: [CSS Fizz Buzz](todo)
+
+Lessons:
+
+
+- [Intro to the DOM](https://workbook.galvanize.com/cohorts/68/articles/3092)
+- [Traversing the DOM](todo)
+- [Getting SASSY w/ Micah](todo)
+
+Homework: [Homework](todo)
+
+---
+
+# Wednesday, May 11 - Logan
 
 Warmup: [Link to Warmup](http://github.com/gSchool)
 
@@ -44,7 +59,7 @@ Announcements:
 
 ---
 
-# Wednesday, May 11
+# Thursday, May 12 - Jordan
 
 Warmup: [Link to Warmup](http://github.com/gSchool)
 
@@ -62,25 +77,7 @@ Announcements:
 
 ---
 
-# Thursday, May 12
-
-Warmup: [Link to Warmup](http://github.com/gSchool)
-
-Lessons:
-
-- [Lesson](https://workbook.galvanize.com/cohorts/68/student_dashboard)
-- [Lesson](https://workbook.galvanize.com/cohorts/68/student_dashboard)
-
-Homework: [Homework](https://workbook.galvanize.com/cohorts/68/student_dashboard)
-
-Announcements:
-
-- Announcement 1
-- Announcement 2
-
----
-
-# Friday, May 13
+# Friday, May 13 - Roger
 
 Crush Code Friday: [CCF](https://workbook.galvanize.com/cohorts/68/student_dashboard)
 
