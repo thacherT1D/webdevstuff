@@ -45,7 +45,12 @@ Lessons:
 - [Intro to the DOM Part III: Manipulation](https://workbook.galvanize.com/cohorts/68/articles/3749)
 
 
-Homework: [Homework](todo)
+Homework:
+1. Create a directory named `dom_exercise` or something similar.
+1. Download the [html here](https://gist.github.com/JordanMajd/ab6cf05df868f4fcfa1cb0f28f1b71e3) and save it in a file called `index.html` in the directory you just created.
+1. in your terminal to the directory and use `http-server` command to serve the file.
+1. open your browser to `localhost:8080`
+1. read the instruct
 
 ---
 

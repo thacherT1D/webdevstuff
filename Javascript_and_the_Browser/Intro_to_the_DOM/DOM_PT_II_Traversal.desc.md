@@ -35,11 +35,11 @@ Querying the document works the same way, we can use `selectors` to query for el
 For all of the following lessons:
 
 **You Do:**
-1. Open your favorite development browser to [developer.mozzila.org](https://developer.mozilla.org/en-US/).
+1. Open your favorite development browser to [developer.mozilla.org](https://developer.mozilla.org/en-US/).
 1. Open up the console using `cmd` + `option` + `I`.
 1. Prepare to type!
 
-#### `getElementbyID(id)`
+#### `getElementbyId(id)`
 [MDN: getElementById](https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById)
 ***
 
@@ -129,7 +129,7 @@ Cool we can access an element's attributes, `homeSearch` isn't just any element 
 1. In the console, type `homeSearch.value`. Cool!
 
 
-### Traversing the DOM
+### Traversing the DOM / Exercise
 
 ***
 

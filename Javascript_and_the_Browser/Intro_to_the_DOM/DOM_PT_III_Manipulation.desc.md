@@ -33,8 +33,8 @@ document.querySelector('input[name="btnK"]').value = 'Ask Jeeves'.
 **You Do:**
 
 1. Open up [google.com](https://google.com)
-1. In the browser console query the dom for the viewport div.
-1. Change the `backgroundColor` property to `black`;
+1. In the browser console query the DOM for the viewport div.
+1. set the `style` properties `backgroundColor` property to `black`.
 1. What happens when you refresh the page?
 
 > Notice how we used a CSS property name in camelCase (`backgroundColor`), rather than in dash-case (`background-color`), so that they are accessible within the JavaScript file.
@@ -64,16 +64,6 @@ document.querySelector('input[name="btnK"]').value = 'Ask Jeeves'.
 
 1. On npmjs.com select the parent of the element with the class `h4 type-npm-pastel-3`
 1. Change the class from `col-md-6` to `col-md-3` without removing or changing the other classes (`col-md-offset-3`)
-
-
-## Exercise
-
-***
-
-- Create a new html5 document that sources a javascript file for the project.
-- Within in the javascript file, create an object listing at least five animals and the sound they make. Ex: `cow moo`.
-- Use DOM creation methods to create a table to list the animals. Each animal name and sound should be in its own table cell.
-
 
 ## Resources
 
