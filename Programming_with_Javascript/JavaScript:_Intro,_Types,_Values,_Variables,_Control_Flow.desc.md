@@ -60,7 +60,7 @@ JavaScript allows web developers to make web pages interactive, dynamic, and awe
 
 ### Exercise
 
-What are some websites you frequently use? Revisit them and try to figure out which parts are using JavaScript. Once you have a few examples, show a partner and explain why JavaScript is important for these websites.
+What are some websites you frequently use? Revisit them and try to figure out which parts are using JavaScript. Once you've selected a favorite, show it to a partner and explain why JavaScript is important this website.
 
 ## How do you write JavaScript?
 
@@ -89,7 +89,7 @@ Or you can use it to make multiple line comments.
    that we don't need to end the comment on the first line. */
 ```
 
-Most of the time, you'll use the `//` style because Atom can toggle a line to be commented or not using the `Command` + `/` keyboard shortcut. Go ahead, try it out!
+Most of the time, you'll use the `//` style because Atom can toggle a line to be commented or not using the `Command + /` keyboard shortcut. Go ahead, try it out!
 
 See the [comments](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Comments) documentation on the Mozilla Developer Network for more information.
 
@@ -106,7 +106,9 @@ The latest ECMAScript standard defines seven data types:
   - Symbol (new in ECMAScript 6)
 - and Object
 
-A **primitive** is data that is not an object, has no methods, and cannot be changed.
+A **primitive** is data that's immutable. In other words, it cannot be changed.
+
+For example, the number `42` in JavaScript is a primitive. That means it can never be anything other than `42`. Adding `1` to it doesn't change the value, but instead, results in the number `43`, a completely different and unchangeable number. This may sound a bit confusing and obvious, but it'll make more sense when you learn about changeable data called objects.
 
 See [data types](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Data_types) and [primitives](https://developer.mozilla.org/en-US/docs/Glossary/Primitive) on the Mozilla Developer Network for more information.
 
