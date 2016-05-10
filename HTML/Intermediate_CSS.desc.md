@@ -229,11 +229,12 @@ Some notes on positioned (relative, absolute, or fixed) elements:
 ## Colors
 
 * Hexadecimal / Hex `#FFBBCC`
-  - Short for hexadecimal, a base 16 number system
-  - In hexadecimal each byte is represented by characters 0-9 and A-F (A=10,F = 16)
-  - The first two bytes `FF` is the red value
-  - The second two bytes `BB` is the green value
-  - The third two bytes `CC` is the blue value
+  - Short for hexadecimal, a base 16 number system. A hexadecimal character is represented with 0-9 and A-F (A=10,F = 16).
+  - A hexadecimal color is composed of three bytes.
+  - Each byte is represented by two hexadecimal characters.
+  - The first byte `FF` is the red value
+  - The second byte `BB` is the green value
+  - The third byte `CC` is the blue value
   - 0 For all values is black
   - F for all values is white
 
