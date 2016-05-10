@@ -592,6 +592,10 @@ See the [typeof operator](https://developer.mozilla.org/en-US/docs/Web/JavaScrip
 
 Want to dig deeper? Read chapters 1 and 2 in [Eloquent JavaScript](http://eloquentjavascript.net/). A word of caution though: this book is great but not very beginner friendly.
 
+## Assessment
+
+https://github.com/gSchool/wd-javascript-fundamentals
+
 ## Resources
 
 - [Quick history of JavaScript by Douglas Crockford](https://www.youtube.com/watch?v=t7_5-XYrkqg)
