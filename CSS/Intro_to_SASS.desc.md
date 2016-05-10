@@ -11,7 +11,7 @@
 - Install and use Atom plugin to auto-compile SASS
 - Use variables to save modifiable / repeated state
 - Use nested styles to work with styling hierarchy
-- Use common / awesome functions like calc, mix, etc
+- Use common / awesome functions like mix etc..
 - Use mixins to extend elements styles (stretch)
 
 #SASS/SCSS
