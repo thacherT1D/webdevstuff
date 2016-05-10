@@ -328,9 +328,9 @@ Notice that the meaning of the `+` operator depends on the data types of the ope
 
 See the [arithmetic operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators) on the Mozilla Developer Network for more information.
 
-### Number methods
+### The Number global object
 
-To convert a string to a number, use the following parsing methods.
+Using the following methods in the `Number` global object, you can convert a string to a number.
 
 ```javascript
 Number.parseInt('42');        // 42
@@ -340,9 +340,9 @@ Number.parseInt('forty two'); // NaN
 
 See the [`Number` global object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number) on the Mozilla Developer Network for more information.
 
-### Math methods
+### The Math global object
 
-JavaScript has a `Math` global object that has properties and methods for mathematical constants and functions.
+JavaScript also has a `Math` global object that has properties and methods for mathematical constants and functions.
 
 ```javascript
 // pi
