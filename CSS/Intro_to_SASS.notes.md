@@ -4,15 +4,32 @@
   * http://alistapart.com/article/mixing-color-for-the-web-with-sass
   * [GSchool: Sass-Practice](https://github.com/gSchool/sass-practice)
 
+## Walk through installing atom SASS plugins.
+
+## >Read through 'Variables' (Up to Sass Math)
+Whiteboards:
+- How to set a color variable.
+- How to use a color variable to set the background-color of a class.
 
 
-## Nesting Selectors
+
+## >Read through 'Sass Math' & Awesome tools (Up to Nesting Selectors)
+Talk to each-other for a couple minutes about good uses for sass-math and the 'mix' function.
+
+Whiteboards:
+- How to set all divs to exactly 1/3 width.
+- How to set a new color variable using a 'mix' of two other colors.
+
+
+
+
+## >Read through Nesting Selectors (Up to Extends)
 
 Whiteboards:
 ALL in a single nested item:
 - If you had the below HTML, using SCSS/SASS, how would you apply an orange background to all the articles inside anything with a class of 'mainBlock'?
 - How would you apply a black border to all of the articles with a class of 'first'?
-- How would you apply white text to all of 'p' elements under an article with a class of 'second'?
+- How would you apply white text to all of the 'p' elements under an article with a class of 'second'?
 ```html
 <html>
 <body>
@@ -45,3 +62,11 @@ ALL in a single nested item:
 </body>
 </html>
 ```
+
+
+
+## If you're confident in the concept, read further into the article through Extends and Mixins
+## If you need more practice, go through the Gschool Sass-practice exercise. (Step one - only need to rename file)
+  * [GSchool: Sass-Practice](https://github.com/gSchool/sass-practice)
+
+## If you finish either of the above items, circle back and do the other one, they're both very useful.

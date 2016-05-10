@@ -19,14 +19,14 @@
 ## Installing plugins on Atom
 [Check out this image for help.](./atom-sass.png)
 
+First: `npm install node-sass -g`
 
-- 'sass-autocompile'
+- ['sass-autocompile'](https://atom.io/packages/sass-autocompile)
 - 'linter-sass-lint'
-
 - 'color-picker' (Optional, but awesome!)
 > If you install the color-picker, you will need to modify the sass-autocompile
 hotkeys file to be able to use cmd+shift+c with the color picker as it's also a keybind for the auto-compiler.
-<
+
 
 The auto-compile plugin will allow you to automatically compile SASS and SCSS code every time you save your file.
 The linter will help with syntax and errors just like jshint for javascript.
@@ -72,7 +72,7 @@ Using variables
 ---
 Where CSS really fails is it's total lack of reuse. Colors for example are the worst. Not only do we have to use weird things like hexadecimal or HSL values, even RGBa is a little off for me, but we can't reuse them once we declared them.
 
-Sass again comes to the rescue with variables. Let's say that we are defining all the border lines in our CSS. We would write something like the following.
+Sass comes to the rescue with variables. Let's say that we are defining all the border lines in our CSS. We would write something like the following.
 
 CSS
 
@@ -146,17 +146,21 @@ font-size: 75%; }
 Awesome tools: mix, calc, etc..
 ---
 You can leverage many very cool functions built into SASS, one of my favorites is 'mix'.
-mix allows you to specify two colors to mix together (the first two params, and a weight% to give the first color) In this example, it's taking 35% of $color1, and filling the rest (65%) with $color2.
+Mix allows you to specify two colors to mix together (the first two params, and a weight% to give the first color) In this example, it's taking 35% of $color1, and filling the rest (65%) with $color2.
+
 SASS
 ```scss
-mix($color1, $color2, 35%);
+  $myColor : mix($color1, $color2, 35%);
+div{
+  background-color: $myColor;
+}
 ```
 
 Nesting your selectors
 ---
 Let's get into some really meaty Sass concepts. The one feature that stands out quickly with Sass is the ability to nest selectors without having to repeat it's parent selectors.
 
-In the following CSS example, indentation is used for readability and selectors are repeated in order to show nesting. I don't know about you, but this is my biggest issue with vanilla CSS. As we start creating more complex selectors this becomes a real issue. I stated many times, "*I wish there was a way that I could just return + tab and not copy + paste!*" Little did I know, there were others in the world that felt the same way.
+In the following CSS example, indentation is used for readability and selectors are repeated in order to show nesting. I don't know about you, but this is my biggest issue with vanilla CSS. As we start creating more complex selectors this becomes a real issue.
 
 CSS
 
