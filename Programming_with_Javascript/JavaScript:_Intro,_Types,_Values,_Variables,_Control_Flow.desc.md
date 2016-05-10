@@ -437,7 +437,7 @@ See the [relational operators](https://developer.mozilla.org/en-US/docs/Web/Java
 
 ### Equality operators
 
-The triple equals `===` operator compares two values to see if they're exactly the same or "strictly equal" to one another. The operator returns `true` if the values are equal and are the same type.
+The triple equals `===` operator compares two values to see if they're exactly the same or "strictly equal" to one another. The operator evaluates to `true` if the values are equal and are the same type.
 
 ```javascript
 4 === 3   // false
@@ -445,7 +445,7 @@ The triple equals `===` operator compares two values to see if they're exactly t
 3 === '3' // false
 ```
 
-Conversely, the `!==` operator returns `true` if the values are not equal and/or are not the same type.
+Conversely, the `!==` operator evaluates to `true` if the values are not equal and/or are not the same type.
 
 ```javascript
 4 !== 3   // true
@@ -457,7 +457,7 @@ Be careful not to confuse the `===` operator with the single equal `=` operator.
 
 Remember, when you use the `=` operator, a variable name _must_ be on the left and the value you want to assign to that variable _must_ be on the right. On the other hand, since the `===` operator compares two values to see if they're strictly equal, it doesn't matter which value is on which side.
 
-Related to the `===` and `!==` operators are the `==` and `!=` operators respectively. The double equals `==` operator compares two values to see if they're equal-ish or "loosely equal" to one another. The operator returns `true` if the values are equal even if they're not the same type.
+Related to the `===` and `!==` operators are the `==` and `!=` operators respectively. The double equals `==` operator compares two values to see if they're equal-ish or "loosely equal" to one another. The operator evaluates to `true` if the values are equal even if they're not the same type.
 
 ```javascript
 4 == 3    // false
@@ -465,7 +465,7 @@ Related to the `===` and `!==` operators are the `==` and `!=` operators respect
 3 == '3'  // true
 ```
 
-Conversely, the `!=` operator returns `true` if the values are not equal even if they're not the same type.
+Conversely, the `!=` operator evaluates to `true` if the values are not equal even if they're not the same type.
 
 ```javascript
 4 != 3    // true
@@ -521,7 +521,7 @@ if (1 + 1 !== 2) {
 }
 ```
 
-We can also combine these two statements using `if..else`:
+We can also combine these two statements using `if...else`:
 
 ```javascript
 if (1 + 1 === 2) {
@@ -531,7 +531,7 @@ if (1 + 1 === 2) {
 }
 ```
 
-**Note:** Remember the parentheses!
+**NOTE:** Remember the parentheses!
 
 For each of these examples, try to determine what the console will log:
 
@@ -548,7 +548,7 @@ if (2 > 1 && 5 <= 3) {
   console.log('D');
 }
 
-if (7 % 2 === 0 || !Number.isInteger(7.3)) {
+if (7 % 2 === 0 || Number.isInteger(3.4)) {
   console.log('E');
 } else if (6 <= Math.floor(5.8)) {
   console.log('F');
