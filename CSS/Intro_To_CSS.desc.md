@@ -160,7 +160,7 @@ More info: [The Difference Between ID and Class](https://css-tricks.com/the-diff
 ## CSS - Width and Height
 
 We've seen what happens as you change the width and height of a div in pixels.  
-Instead of pixel values, you can also assign with and height using percentages. What happens if you set the width to 50%? Is this what you expected? What happens if you set the height to 50%? Is this what you expected?
+Instead of pixel values, you can also assign width and height using percentages. What happens if you set the width to 50%? Is this what you expected? What happens if you set the height to 50%? Is this what you expected?
 
 Here we come to an important difference between width and height. If you want to use a percentage height to work as expected, you need to make sure the parent container has an explicit height set. To learn more, check out [this Stack Overflow article](http://stackoverflow.com/questions/5657964/css-why-doesn-t-percentage-height-work).
 
@@ -274,7 +274,7 @@ If you go with one of the other three values for `position`, you can then adjust
 
 Briefly, here are the differences between the other types of positioning:
 
-- `position: relative` positions an element relative to **where it would normally sit**. 
+- `position: relative` positions an element relative to **where it would normally sit**.
 - `position: absolute` positions an element relative to **its nearest ancestor that isn't statically positioned**,
 - `position: fixed` positions an element relative to **the viewport, even when scrolling**.
 
@@ -357,7 +357,7 @@ Media queries have a fair amount of built-in logic. To learn more about them, re
 
 ## CSS - Tables
 
-Let's talk briefly about styling tables in CSS, since the default styling is pretty terrible. 
+Let's talk briefly about styling tables in CSS, since the default styling is pretty terrible.
 
 To kick things off, let's create a table in our html file with no special styling:
 
@@ -402,7 +402,7 @@ table {
 }
 ```
 
-Better, but not quite right. Let's at one more property to our `<table>` styling: `border-collapse: collapse;`.
+Better, but not quite right. Let's add one more property to our `<table>` styling: `border-collapse: collapse;`.
 
 Sweet. For small tables like this, it may even be sufficient. But for large tables (e.g. tables of users), readability can become an issue. What would be nice is if we could make the table _striped_, so that rows alternated their colors. How can we do this using CSS?
 
