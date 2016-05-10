@@ -4,7 +4,8 @@
 
 ***
 
-By the end of this lesson you should be able to:
+By the end of this article you should be able to:
+
 - Query the the DOM for nodes using CSS selectors.
 - Traverse the DOM using parent, sibling and children nodes.
 - Access the values of HTML attributes and the `innerText` of a node.
@@ -74,7 +75,7 @@ We passed in a string containing the tag of the elements to `document.getElement
 **You Do:**
 1. In the console type `document.querySelector('.callout-learn')`.
 1. What was the output?
-1. In the console type `document.querySelector("input[name='q']")`.
+1. In the console type `document.querySelector('input[name="q"]')`.
 1. What was the output?
 
 This method returns a single [Element object](https://developer.mozilla.org/en-US/docs/Web/API/Element) just like `getElementById`.
