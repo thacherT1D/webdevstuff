@@ -6,10 +6,54 @@
 
 ## Walk through installing atom SASS plugins.
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## >Read through 'Variables' (Up to Sass Math)
 Whiteboards:
 - How to set a color variable.
 - How to use a color variable to set the background-color of a class.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -19,6 +63,28 @@ Talk to each-other for a couple minutes about good uses for sass-math and the 'm
 Whiteboards:
 - How to set all divs to exactly 1/3 width.
 - How to set a new color variable using a 'mix' of two other colors.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -66,7 +132,7 @@ ALL in a single nested item:
 
 
 ## If you're confident in the concept, read further into the article through Extends and Mixins
-## If you need more practice, go through the Gschool Sass-practice exercise. (Step one - only need to rename file)
+## If you need more practice, go through the Gschool Sass-practice exercise (Fork and clone). (Step one - only need to rename the file, then use atom to compile)
   * [GSchool: Sass-Practice](https://github.com/gSchool/sass-practice)
 
 ## If you finish either of the above items, circle back and do the other one, they're both very useful.

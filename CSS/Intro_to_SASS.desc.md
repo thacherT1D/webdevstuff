@@ -21,6 +21,8 @@
 
 First: `npm install node-sass -g`
 
+Next: Open atom -> Preferences -> Install -> (install the below packages)
+
 - ['sass-autocompile'](https://atom.io/packages/sass-autocompile)
 - 'linter-sass-lint'
 - 'color-picker' (Optional, but awesome!)
@@ -32,7 +34,7 @@ The auto-compile plugin will allow you to automatically compile SASS and SCSS co
 The linter will help with syntax and errors just like jshint for javascript.
 
 
-## Below notes credit to [blackfalcon](https://gist.github.com/blackfalcon/5480140)
+> Below notes credit to [blackfalcon](https://gist.github.com/blackfalcon/5480140)
 
 Sass is a powerhouse language that is adding new features all the time. For this introduction we will go over the basics of the language and see how they all tie together. We will discuss nesting, parent selector definitions, variables, Sass math, @extends, and @mixins.
 
