@@ -35,7 +35,7 @@ A normalizer maintains some default styling, but keeps it consistent between bro
 
 ### Resets
 
-A CSS reset removes all default styling from a browser, maintaining only the distinctions between inline and block elements. This means `<h1>` will look example like `<code>` or `<p>` and nothing will have any padding or margins unless you explicitly write something otherwise. The most popular CSS reset is the [Meyer reset](http://meyerweb.com/eric/tools/css/reset/).
+A CSS reset removes all default styling from a browser, maintaining only the distinctions between inline and block elements. This means `<h1>` will look exactly like `<code>` or `<p>` and nothing will have any padding or margins unless you explicitly write something otherwise. The most popular CSS reset is the [Meyer reset](http://meyerweb.com/eric/tools/css/reset/).
 
 Most projects should use one of these, but not both. It is up to you to decide whether "useful defaults" or "completely unstyled" is more useful to your project. Either way, they should be `<link>`ed to before any of your other stylesheets, so that any overrides you make will take precedence.
 
@@ -249,6 +249,7 @@ Some notes on positioned (relative, absolute, or fixed) elements:
   - second number is a percentage of saturation
   - third number is a percentage of brightness
   - If using HSLA the last number is Alpha (transparency) values 0-1
+  - https://www.w3.org/Talks/2013/0516-CSS-WWW2013/color-wheel.png - HSL color wheel
 
 ## CSS Inheritance Notes
 
@@ -262,4 +263,9 @@ Most properties, such as fonts, will be inherited by children. The following pro
 
 ## Resources
 
+- http://hipsum.co/ - hipster lipsum
+- http://www.colors.commutercreative.com/grid/ - Standard CSS colors
+- http://overapi.com/css - CSS cheatsheet
+- https://www.fontsquirrel.com/tools/webfont-generator - webfont generator
+- https://css-tricks.com/snippets/css/a-guide-to-flexbox/ - flexbox guide
 - http://flexboxfroggy.com/ - fun flexbox game
