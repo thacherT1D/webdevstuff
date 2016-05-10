@@ -30,8 +30,12 @@ Lessons:
 
 Warmup: [JS Arrays Challenge](https://github.com/gSchool/javascript-challenges)
 
+
 1. Clone Repo
+1. `npm install -g jasmine` to globally install jasmine.
+1. CD into the repo and then the dir `03_arrays`.
 1. For every test in `03_arrays/spec/spec.js` write a function in `03_arrays/src.js` that provides the expected output for given input.
+1. Every time you want to run a test just type `jasmine`
 
 Lessons:
 
