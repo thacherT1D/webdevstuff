@@ -17,7 +17,6 @@
 #SASS/SCSS
 
 ## Installing plugins on Atom
-[Check out this image for help.](./atom-sass.png)
 
 First: `npm install node-sass -g`
 
