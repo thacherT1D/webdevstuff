@@ -263,7 +263,8 @@ Most properties, such as fonts, will be inherited by children. The following pro
 
 ## Resources
 
-- http://hipsum.co/ - hipster lipsum
+- http://flukeout.github.io/ - CSS diner
+- http://www.mezzoblue.com/zengarden/alldesigns/ - CSS zen garden
 - http://www.colors.commutercreative.com/grid/ - Standard CSS colors
 - http://overapi.com/css - CSS cheatsheet
 - https://www.fontsquirrel.com/tools/webfont-generator - webfont generator
