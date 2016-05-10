@@ -48,9 +48,10 @@ Lessons:
 Homework:
 1. Create a directory named `dom_exercise` or something similar.
 1. Download the [html here](https://gist.github.com/JordanMajd/ab6cf05df868f4fcfa1cb0f28f1b71e3) and save it in a file called `index.html` in the directory you just created.
-1. in your terminal to the directory and use `http-server` command to serve the file.
+1. In your terminal navigate to the directory and use `http-server` command to serve the file.
 1. open your browser to `localhost:8080`
-1. read the instruct
+1. read the instructions on the web page.
+1. open up `index.html` in your text editor and code up your solution!
 
 ---
 
