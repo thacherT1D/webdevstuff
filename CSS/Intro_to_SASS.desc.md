@@ -28,14 +28,19 @@ Next: Open atom -> Preferences -> Install -> (install the below packages)
 > If you install the color-picker, you will need to modify the sass-autocompile
 hotkeys file to be able to use cmd+shift+c with the color picker as it's also a keybind for the auto-compiler.
 
+> You might need to re-load your atom.
 
 The auto-compile plugin will allow you to automatically compile SASS and SCSS code every time you save your file.
 The linter will help with syntax and errors just like jshint for javascript.
 
 
-> Below notes credit to [blackfalcon](https://gist.github.com/blackfalcon/5480140)
 
-Sass is a powerhouse language that is adding new features all the time. For this introduction we will go over the basics of the language and see how they all tie together. We will discuss nesting, parent selector definitions, variables, Sass math, @extends, and @mixins.
+
+
+## SASS and SCSS
+- Syntactically Awesome Style Sheets / Sassy CSS
+
+Sass is a powerhouse language that is adding new features all the time. For this introduction we will go over the basics of the language and see how they all tie together. We will discuss nesting, parent selector definitions, variables, Sass math, Built-in functions, @extends, and @mixins.
 
 Code comments
 ---
@@ -144,18 +149,22 @@ html {
 font-size: 75%; }
 ```
 
-Awesome tools: mix, calc, etc..
+Awesome tools: mix etc..
 ---
 You can leverage many very cool functions built into SASS, one of my favorites is 'mix'.
 Mix allows you to specify two colors to mix together (the first two params, and a weight% to give the first color) In this example, it's taking 35% of $color1, and filling the rest (65%) with $color2.
 
 SASS
 ```scss
-  $myColor : mix($color1, $color2, 35%);
+$myColor : mix($color1, $color2, 35%);
+
 div{
   background-color: $myColor;
 }
 ```
+
+There are ALOT of available functions, check out more of them here:
+>http://sass-lang.com/documentation/Sass/Script/Functions.html#mix-instance_method
 
 Nesting your selectors
 ---
@@ -337,6 +346,19 @@ background: orange; }
 This Sass technique is invaluable when having to use fallbacks and alternative solutions for different feature support. We can keep all our style declarations under the namespace of the same selector. Code maintenance For The WIN!
 
 
+---
+
+####If you're confident in the concept, read further into the article through Extending Classes and Mixins
+####If you need more practice, go through the Gschool Sass-practice exercise (Fork and clone). (Step one - only need to rename the file, then use atom to compile)
+  * [GSchool: Sass-Practice](https://github.com/gSchool/sass-practice)
+
+####If you finish either of the above items, circle back and do the other one, they're both very useful.
+
+---
+
+
+
+
 Extending classes
 ---
 Any good CSS author will tell you that when you reuse the declaration(s) of another class you 'should' extend the previous class. I say 'should' because many CSS developers do not do this, but why? Simply because with vanilla CSS over time selectors can get a out of hand and it becomes very difficult to see what can be extended. Sass helps with the `@extend` function. We can create a new style rule, extend a previous one and update with new values all without having to update the previous rule.
@@ -480,11 +502,10 @@ Sass in summary
 ---
 As you hopefully have seen in this review, Sass has some small hurdles to overcome but the basics are achievable. Starting out with simple concepts like nesting, parent selector definitions and variables will amount to a whole lot of WIN. Then working your way up to Sass math, @extends and @mixins you will soon be a Sass Master.
 
+
+> Credit for much of the content to [blackfalcon](https://gist.github.com/blackfalcon/5480140)
 Want to learn more?
 ---
+1. [GSchool: Sass-Practice](https://github.com/gSchool/sass-practice)
 1. [SpeakerDeck](https://speakerdeck.com/anotheruiguy/sass-101-a-newbs-guide)
 1. [CodeRecipez](http://coderecipez.roughdraft.io/)
-
-<script>
-   document.querySelector('.col-md-6').className = '';
-</script>
