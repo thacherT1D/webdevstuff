@@ -106,9 +106,9 @@ The latest ECMAScript standard defines seven data types:
   - Symbol (new in ECMAScript 6)
 - and Object
 
-A **primitive** is data that's immutable. In other words, it cannot be changed.
+A **primitive** is data that's immutable. In other words, data that can't be changed.
 
-For example, the number `42` in JavaScript is a primitive. That means it can never be anything other than `42`. Adding `1` to it doesn't change the value, but instead, results in the number `43`, a completely different and unchangeable number. This may sound a bit confusing and obvious, but it'll make more sense when you learn about changeable data called objects.
+For example, the number `42` in JavaScript is a primitive. That means it can never be anything other than `42`. Adding `1` to it doesn't change it's value, but instead, results in the number `43`, a completely new and equally unchangeable number. This may sound a bit confusing and obvious, but it'll make more sense when you learn about changeable data called objects.
 
 See [data types](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Data_types) and [primitives](https://developer.mozilla.org/en-US/docs/Glossary/Primitive) on the Mozilla Developer Network for more information.
 
