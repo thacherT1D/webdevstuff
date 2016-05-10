@@ -48,6 +48,8 @@ document.querySelector('input[name="btnK"]').value = 'Ask Jeeves'.
 
 1. Change the `src` of the Google logo's image to a picture from [placekitten.com](https://placekitten.com/)
 
+**Note:** if you are on https://google you need to load https://placekitten. If you are on http://google you need your placekitten url to be http://placekitten.
+
 **You Do:**
 
 1. Select an element using the class `fbar`.
