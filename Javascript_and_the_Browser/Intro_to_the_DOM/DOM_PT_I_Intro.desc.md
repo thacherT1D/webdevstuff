@@ -14,7 +14,6 @@ By the end of this article you should be able to:
 
 ## An Introduction to the DOM
 
-***
 
 ### What is the DOM
 

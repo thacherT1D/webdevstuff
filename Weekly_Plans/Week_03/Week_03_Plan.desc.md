@@ -28,7 +28,10 @@ Lessons:
 
 # Tuesday, May 10 - Jordan
 
-Warmup: [CSS Fizz Buzz](todo)
+Warmup: [JS Arrays Challenge](https://github.com/gSchool/javascript-challenges)
+
+1. Clone Repo
+1. For every test in `03_arrays/spec/spec.js` write a function in `03_arrays/src.js` that provides the expected output for given input.
 
 Lessons:
 
