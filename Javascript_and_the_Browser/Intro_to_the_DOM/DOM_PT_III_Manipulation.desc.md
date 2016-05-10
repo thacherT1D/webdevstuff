@@ -53,7 +53,17 @@ document.querySelector('input[name="btnK"]').value = 'Ask Jeeves'.
 1. Select an element using the class `fbar`.
 1. Try removing all classes from the element. If you don't know what property to manipulate try searching the documentation!
 1. Now try adding the `fbar` class to it.
-1. What if we want to append a class without removing existing classes?
+
+**You Do:**
+
+1. Open up [npmjs.com](https://www.npmjs.com/).
+1. Select the link at the bottom of the page that says `npm loves you`.
+1. Change the link to go to [nodejs.org](https://www.nodejs.org/).
+
+**You Do:**
+
+1. On npmjs.com select the parent of the element with the class `h4 type-npm-pastel-3`
+1. Change the class from `col-md-6` to `col-md-3` without removing or changing the other classes (`col-md-offset-3`)
 
 
 ## Exercise
