@@ -6,10 +6,54 @@
 
 ## Walk through installing atom SASS plugins.
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## >Read through 'Variables' (Up to Sass Math)
 Whiteboards:
 - How to set a color variable.
 - How to use a color variable to set the background-color of a class.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -23,9 +67,31 @@ Whiteboards:
 
 
 
-## >Read through Nesting Selectors (Up to Extends)
 
-Whiteboards:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## >Read through Nesting Selectors (Up to Extending Classes)
+
+Collaborate with the person next to you, write this on your table:
 ALL in a single nested item:
 - If you had the below HTML, using SCSS/SASS, how would you apply an orange background to all the articles inside anything with a class of 'mainBlock'?
 - How would you apply a black border to all of the articles with a class of 'first'?
@@ -66,7 +132,7 @@ ALL in a single nested item:
 
 
 ## If you're confident in the concept, read further into the article through Extends and Mixins
-## If you need more practice, go through the Gschool Sass-practice exercise. (Step one - only need to rename file)
+## If you need more practice, go through the Gschool Sass-practice exercise (Fork and clone). (Step one - only need to rename the file, then use atom to compile)
   * [GSchool: Sass-Practice](https://github.com/gSchool/sass-practice)
 
 ## If you finish either of the above items, circle back and do the other one, they're both very useful.
