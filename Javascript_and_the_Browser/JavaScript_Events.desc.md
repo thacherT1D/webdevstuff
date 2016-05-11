@@ -179,7 +179,7 @@ In this case, the text that's logged to the console depends on where you click. 
 
 The example demonstrates the difference between `this` and `event.target` in the event handler. `this` refers to the DOM element that the listener was attached to. Put another way, whenever you write `foo.addEventListener('click', someFunction)` the context of `this` inside of `someFunction` will refer to `foo`. On the other hand, `event.target` will refer to the element that caused the event to fire. For example, when you click on the button, `event.target` will refer to the button, even if the listener is not attached to the button.
 
-When the element that fires the event is the same as the element that has the lsitener on it, you should see that `this` and `event.target` are the same. But there are times when you'll want to add the event listener to an element that won't necessarily be the same as the element (or elements) that will be firing the event. Let's take a look at an example of this now.
+When the element that fires the event is the same as the element that has the listener on it, you should see that `this` and `event.target` are the same. But there are times when you'll want to add the event listener to an element that won't necessarily be the same as the element (or elements) that will be firing the event. Let's take a look at an example of this now.
 
 ### Attaching Listeners to Multiple Elements
 
@@ -213,7 +213,7 @@ for (var i = 0; i < paragraphs.length; i++) {
 }
 ```
 
-If inspect one of these elements in the Elements tab and look under Event Listeners, you'll see that each one of these elements has a copy of `eventHandler` attached to it, as expected. This is fine for this simple little example, but if you have hundreds of DOM elements with their own copy of the same function, that isn't very efficient.
+If you inspect one of these elements in the Elements tab and look under Event Listeners, you'll see that each one of these elements has a copy of `eventHandler` attached to it, as expected. This is fine for this simple little example, but if you have hundreds of DOM elements with their own copy of the same function, that isn't very efficient.
 
 Another option: we can use event bubbling (more on this later) and attach a single event listener to the parent:
 
@@ -299,7 +299,7 @@ Want to see the difference between these two in action? Check out [this example]
 
 Note: putting your script tags at the bottom of the page can help resolve some of these issues, but it's still probably a good idea to wrap any DOM-manipulating functionality inside of an event listener to `DOMContentLoaded`. 
 
-## Event Propogation
+## Event Propagation
 
 [[JavaScript.info]](http://javascript.info/tutorial/bubbling-and-capturing)
 
@@ -318,11 +318,11 @@ button.addEventListener('click', function() {
 });
 ```
 
-Click on the button. You'll see that the button message is alerted, followed by the body message. Why is this the order, rather than the other way around? The answer has to do with _event propogation_.
+Click on the button. You'll see that the button message is alerted, followed by the body message. Why is this the order, rather than the other way around? The answer has to do with _event propagation_.
 
 When an event happens. It _captures_ down the DOM tree from `<html>` to the element where the event happened. Then, it _bubbles_ back up the DOM tree until it gets back to `<html>`. Along each element it passes, it fires the event.
 
-These 2 phases -- event capturing and event bubbling -- are collectively known as event propogation.
+These 2 phases -- event capturing and event bubbling -- are collectively known as event propagation.
 
 There is a third Boolean parameter of `addEventListener` that specifies if you want the handler to fire on capture or bubble. It defaults to `false`, which is bubble. But if you set it to `true`, it will fire on capture.
 
