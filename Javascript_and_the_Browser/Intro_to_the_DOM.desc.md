@@ -1,78 +1,157 @@
-# JavaScript and the DOM - Level 1
+# JavaScript and the DOM
 
-[slides here](https://docs.google.com/a/galvanize.com/presentation/d/1dW_VJ9HgqKfDKekYIhNZewaC_bNHe2iSEvLiSkzwpFs/edit?usp=sharing)
-
-Let's look at the basics of using *vanilla* JavaScript to manipulate the DOM...
-
-### Why should you care?
-
-DOM operations form the basis of all client-side javascript, and all frameworks including jQuery and Angular ultimately just boil down to these calls. Knowing what the DOM is and how to use it is an essential skill for web developers, and many of the in-class assignments will include these DOM operations.
-
-### Objectives
+## Objectives
 
 By the end of this lesson you should be able to:
 
-- describe javascript’s role in manipulating the DOM
-- explain that HTML attributes are default (initial) values for DOM properties
-- explain that DOM properties can be altered after initial page load
-- explain that the DOM provides a way for programs to change the structure, style, and content on a page dynamically
-- explain the difference between a text node and an element
-- find an element by id, tagname, classname, and more advanced CSS selectors
-- set an element’s innerHTML and text
-- construct and add simple elements to the DOM
-- remove elements from the dom
-- detach and reattach DOM elements
-- access properties of DOM elements such as text, html, value
+- Describe javascript’s role in manipulating the DOM
+- Explain that HTML attributes are default (initial) values for DOM properties
+- Explain that DOM properties can be altered after initial page load
+- Explain that the DOM provides a way for programs to change the structure, style, and content on a page dynamically
+- Explain the difference between a text node and an element
+- Find an element by id, tagname, classname, and more advanced CSS selectors
+- Set an element’s innerHTML and text
+- Construct and add simple elements to the DOM
+- Remove elements from the dom
+- Detach and reattach DOM elements
+- Access properties of DOM elements such as text, html, value
 
-### Key terms
+## What is the DOM?
 
-1. DOM Querying
-1. DOM Manipulation
+The Document Object Model (DOM) is a cross-platform convention for representing and interacting with HTML. Originally, Netscape Navigator and Internet Explorer competed for the browser and invented their own version of a DOM. It was then standardized by the W3C about one year after ECMAScript 1.0 was released.
+
+JavaScript has a way of accessing the DOM. This allows us to link HTML and JavaScript together and create dynamic web pages.
+
+DOM operations form the basis of all client-side javascript, and all frameworks including jQuery and Angular ultimately just boil down to these calls. Knowing what the DOM is and how to use it is an essential skill for web developers, and many of the in-class assignments will include these DOM operations.
+
+### Fun Fact: Browser Wars
+
+The two main competitors during the early browsers were Netscape Navigator and Internet Explorer. Since then more browsers have entered the market compete on some level. Here is a map highlighting countries and their most popular browser.
+
+![Browser Map](https://upload.wikimedia.org/wikipedia/commons/b/ba/Browser_Market_Map_June_2015.svg)
+Source: StatCounter https://en.wikipedia.org/wiki/Browser_wars June 2015
+
+## Recall that HTML is a Tree
+
+Recall in our Introduction to HTML article that HTML can be thought of as a tree structure. Each element has a _parent_, it sometimes has _siblings_ and it also may have _children_.
+
+![HTML Tree](http://www.webstepbook.com/supplements/slides/images/dom_tree.gif)
+
+**Exercise** Look at the code below. Can you give examples of parent-child relationships and sibling relationships?
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JavaScript and the DOM - a primer</title>
+  </head>
+  <body>
+
+    <section>
+
+      <h1>Just a header</h1>
+
+      <p id="main">Just a paragraph...</p>
+
+      <ul>
+        <li class="odd">item 1</li>
+        <li class="even">item 2</li>
+        <li class="odd">item 3</li>
+        <li class="even">item 4</li>
+        <li class="odd">item 5</li>
+      </ul>
+
+      <button id="main-button">Just a button</button>
+
+    </section>
+
+    <script type="text/javascript" src="main.js"></script>
+
+  </body>
+</html>
+```
 
 ## Setup
 
 1. Create a new local project directory called "js-dom-basics".
 1. Add a local git repository.
-1. Create a remote repository on Github.
-1. Add a *main.js* file.
-1. Add a simple `console.log("sanity check!")` in *main.js* to verify that it's included correctly. **How do you test this?**
-1. Finally, add/commit to your local git repo, and then push your changes to Github.
+1. Add an *index.html* file.
+1. Finally, add/commit to your local git repo
 
-## Discussion
-
-Look over the *index.html* file before starting...
+Let's start with a simple HTML boilerplate.
 
 ```html
 <!DOCTYPE html>
 <html>
-<head>
-  <title>JavaScript and the DOM - a primer</title>
-</head>
-<body>
-
-  <section>
-
-    <h1>Just a header</h1>
-
-    <p id="main">Just a paragraph...</p>
-
-    <ul>
-      <li class="odd">item 1</li>
-      <li class="even">item 2</li>
-      <li class="odd">item 3</li>
-      <li class="even">item 4</li>
-      <li class="odd">item 5</li>
-    </ul>
-
-    <button id="main-button">Just a button</button>
-
-  </section>
-
-  <script type="text/javascript" src="main.js"></script>
-
-</body>
+  <head>
+    <title>JavaScript and the DOM</title>
+  </head>
+  <body>
+  </body>
 </html>
 ```
+
+## `document` object
+
+Open up the inspector by pressing Command + Option + I. In the console, type in the following.
+
+`document`
+
+The document is the root access point to all of the HTML. It even includes the DocType. You can access the root `<html>` node by calling `document.documentElement` or `document.childNodes[1]`.
+
+**Exercise** What type is `document`?
+
+## Node Interface
+
+The document and each HTML element (tag) inherits a Node interface. The MDN provides a [comprehensive overview](https://developer.mozilla.org/en-US/docs/Web/API/Node) of what you can do with a node. We'll touch on a few instances here.
+
+### `childNodes`
+
+You can access a node in the `childNodes` property. It is an array-like object.
+
+**Exercise** Can you remember of another array-like object we talked about?
+
+It's _**important to note**_ that the these properties are _live_. This means that _changes in the DOM affect the array_.
+
+#### More Children
+
+There are multiple shortcuts in accessing children.
+
+* `firstChild`
+* `lastChild`
+
+### `parentNode` vs `parentElement`
+
+You can access your parent by using the `parentNode` property. `parentNode` and `parentElement` almost always return the same thing as almost all nodes are also elements. There's one notable exception.
+
+```javascript
+document.documentElement.parentNode     // Document
+document.documentElement.parentElement  // null
+```
+
+The parent node can be null for a couple reasons:
+
+* You are in the root document node.
+* The node you are looking at has not been added to the document and is the topmost node.
+
+### Siblings
+
+Within a Node, you can access its siblings. Siblings share the same parent node.
+
+* `nextSibling`
+* `previousSibling`
+
+### Node Name/Tag Name
+
+You can access the node name using `nodeName`. For HTML elements, this is the tag name (a, p, h1, div, etc.). HTML elements can also access the tag name with `tagName`. The tag name will be in upper case form.
+
+### Text Content
+
+You can retrieve the text content between the opening and closing tag using the `textContent` property.
+
+#### Comparison to `innerText`
+
+You may often see code using the `innerText` property. `innerText` takes into account the layout which leads to poor performance and it is not a standard.  We would recommending not using `innerText` unless specifically needed.
 
 ## DOM Querying and Traversal
 
