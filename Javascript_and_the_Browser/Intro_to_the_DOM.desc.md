@@ -14,9 +14,7 @@ By the end of this lesson you should be able to:
 
 ## What is the DOM?
 
-The Document Object Model (DOM) is a cross-platform convention for representing and interacting with HTML. Originally, Netscape Navigator and Internet Explorer competed for the browser and invented their own version of a DOM. It was then standardized by the W3C about one year after ECMAScript 1.0 was released.
-
-JavaScript has a way of accessing the DOM. This allows us to link HTML and JavaScript together and create dynamic web pages.
+The Document Object Model (DOM) is a cross-platform convention for representing and interacting with HTML. Originally, Netscape Navigator and Internet Explorer competed for the browser and invented their own version of a DOM. It was then standardized by the W3C about one year after ECMAScript 1.0 was released. JavaScript has a way of accessing the DOM. This allows us to combine HTML and JavaScript together and create dynamic web pages.
 
 DOM operations form the basis of all client-side javascript, and all frameworks including jQuery and Angular ultimately just boil down to these calls. Knowing what the DOM is and how to use it is an essential skill for web developers, and many of the in-class assignments will include these DOM operations.
 
@@ -104,7 +102,7 @@ The document and each HTML element (tag) inherits a Node interface. The MDN prov
 
 ### `childNodes`
 
-You can access a node in the `childNodes` property. It is an array-like object. This means that you can access its elements by index and has a `length` property, but you do not have any built in Array functions.
+You can access a node in the `childNodes` property. It is an array-like object. This means that you can access its elements by index and use the provided `length` property, but you do not have any built in Array functions.
 
 **Exercise** Can you remember of another array-like object we talked about?
 
@@ -126,7 +124,7 @@ document.documentElement.parentNode     // Document
 document.documentElement.parentElement  // null
 ```
 
-The parent node can be null for a couple reasons:
+The parent node can be `null` for a couple reasons:
 
 * You are in the root document node.
 * The node you are looking at has not been added to the document and is the topmost node.
