@@ -51,19 +51,13 @@ Homework: [Where's Waldo](https://github.com/gSchool/wheres-waldo)
 
 # Wednesday, May 11 - Logan
 
-Warmup: [Link to Warmup](http://github.com/gSchool)
+Warmup: [Lychrel Numbers](https://github.com/gSchool/challenges/blob/master/Programming/196.md)
 
 Lessons:
 
-- [Lesson](https://workbook.galvanize.com/cohorts/68/student_dashboard)
-- [Lesson](https://workbook.galvanize.com/cohorts/68/student_dashboard)
+- [Intro to the DOM part IV: Creation and Deletion](https://workbook.galvanize.com/cohorts/68/articles/3754)
+- [Javascript Events](https://workbook.galvanize.com/cohorts/68/articles/3094)
 
-Homework: [Homework](https://workbook.galvanize.com/cohorts/68/student_dashboard)
-
-Announcements:
-
-- Announcement 1
-- Announcement 2
 
 ---
 

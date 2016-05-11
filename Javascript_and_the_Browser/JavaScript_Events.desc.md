@@ -10,6 +10,7 @@ By the end of this lesson you should be able to:
 * Explain the difference between `window.onload` and `DOMContentLoaded`, and use these to add event listeners
 
 ## Introduction
+Up until now, we've been manually mworking with the DOM to retrieve values and make changes. How can we make our pages more interactive and respond to the user? Events.
 
 Events are one of the most important underlying concepts in modern Javascript. Events add interactivity to a webpage and let us do all sorts of fun stuff!
 
@@ -19,15 +20,18 @@ Events are all over the place before we even write a line of code.  We can use t
 monitorEvents(window)
 ```
 
+Move your mouse around over the website and click around. Press some keys on your keyboard. Resize your window. If you have a motion sensor in your device move your device around. Try a bunch of things and see if JavaScript events show up.
+
+
 ## Types
 
 Some common event types in your browser:
 
 * click
 * keypress
-* focus
-* blur
-* [lots more](https://developer.mozilla.org/en-US/docs/Web/Events)
+* input focus
+* input blur (unfocus)
+* [and lots more](https://developer.mozilla.org/en-US/docs/Web/Events)
 
 ## Event Listeners
 
@@ -58,6 +62,11 @@ button.addEventListener("click", function(){
 ```
 
 Now we've attached an event listener to a specific DOM node, a button on the page.  Now, we will see a `"SOMEONE CLICKED THE BUTTON!!"` alert when that particular button is pressed. The function passed into the event listener is an example of a callback; in this particular case, it's also referred to as an **event handler**.
+
+### __EXERCISE__
+
+* Add another event listener to the previous page that listens for when a number key is pressed and adds that number into a paragraph of the html body.
+
 
 ### `removeEventListener()`
 
@@ -92,7 +101,8 @@ Now you should be able to remove the event listener in the console with the foll
 button.removeEventListener("click", clickAlert);
 ```
 
-**Exercise** What does the following code do?
+### __EXERCISES__
+* What does the following code do?
 
 ```js
 var button = document.querySelector("button");
@@ -104,6 +114,8 @@ function once() {
 
 button.addEventListener("click", once);
 ```
+
+* Create a button that toggles the number typing event from before. Clicking the button should enable and disable the behavior.
 
 ## Event Object
 
@@ -120,7 +132,8 @@ Let's take a closer look at the `event` object, and on `event.target` in particu
 
 Once you get this working, you'll see that the `event` object has a lot of details about the click event that was fired: where was the cursor? What time was the event fired? Was the shift key held down? And so on. Meanwhile, `event.target` points to the DOM element that was (in this case) clicked. This can be helpful if you want to modify the DOM based on user interaction. 
 
-**Exercise**: Create a variable called `clickCount` in your `js` file, and set it equal to 0. Modify your event listener so that every time you click on the button, the clickCount increments, and the button text changes to show the user how many times the button has been clicked.
+### __EXERCISE__
+* Create a variable called `clickCount` in your `js` file, and set it equal to 0. Modify your event listener so that every time you click on the button, the clickCount increments, and the button text changes to show the user how many times the button has been clicked.
 
 ### `event.target` vs. `this`
 
