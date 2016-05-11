@@ -2,9 +2,9 @@
 
 ## Objectives
 
-- Move an existing DOM element
 - Create brand new DOM elements
 - Manipulate DOM elements in-memory
+- Move an existing DOM element
 - Remove elements from the DOM
 
 ## Intro
