@@ -4,17 +4,13 @@
 
 By the end of this lesson you should be able to:
 
-- Describe javascript’s role in manipulating the DOM
-- Explain that HTML attributes are default (initial) values for DOM properties
-- Explain that DOM properties can be altered after initial page load
-- Explain that the DOM provides a way for programs to change the structure, style, and content on a page dynamically
-- Explain the difference between a text node and an element
-- Find an element by id, tagname, classname, and more advanced CSS selectors
-- Set an element’s innerHTML and text
-- Construct and add simple elements to the DOM
+- Describe what the DOM is and JavaScript’s role in manipulating the DOM
+- Alter DOM properties after initial page load
+- Find an element by id, tag name, class name, and more advanced CSS selectors
+- Set an element’s text content.
+- Construct and add elements to the DOM
 - Remove elements from the dom
 - Detach and reattach DOM elements
-- Access properties of DOM elements such as text, html, value
 
 ## What is the DOM?
 
@@ -108,7 +104,7 @@ The document and each HTML element (tag) inherits a Node interface. The MDN prov
 
 ### `childNodes`
 
-You can access a node in the `childNodes` property. It is an array-like object.
+You can access a node in the `childNodes` property. It is an array-like object. This means that you can access its elements by index and has a `length` property, but you do not have any built in Array functions.
 
 **Exercise** Can you remember of another array-like object we talked about?
 
@@ -154,6 +150,10 @@ You can retrieve the text content between the opening and closing tag using the 
 
 You may often see code using the `innerText` property. `innerText` takes into account the layout which leads to poor performance and it is not a standard.  We would recommending not using `innerText` unless specifically needed.
 
+### Attributes
+
+You can access an HTML tag's attributes with [`getAttribute`](https://developer.mozilla.org/en-US/docs/Web/API/Element/getAttribute) and [`setAttribute`](https://developer.mozilla.org/en-US/docs/Web/API/Element/getAttribute) functions. You can also read from the [`attributes`](https://developer.mozilla.org/en-US/docs/Web/API/Element/attributes) property.
+
 ## DOM Querying and Traversal
 
 When we talk about "DOM Manipulation", what we're really talking about is 4 things:
@@ -163,9 +163,9 @@ When we talk about "DOM Manipulation", what we're really talking about is 4 thin
 * Changing DOM Nodes that we've found or created
 * Moving or Adding DOM Nodes on the DOM Tree
 
-### Finding Existing DOM Nodes
+## Finding Existing DOM Nodes
 
-## `getElementbyID`
+### `getElementbyID`
 
 Add the following code to your JavaScript file:
 
@@ -182,15 +182,15 @@ Open the JavaScript console in Chrome. **What do you see?**
 
 **What does this give us?**
 
-Since we are assigning the [DOM node](https://developer.mozilla.org/en-US/docs/Web/API/Node) - `<p id="main">Just a paragraph...</p>` - to a variable, we now have a reference to it. With the node in hand, we can now access its content (tags, attributes, inner text - **what are these?**), manipulate/change any part of it (attributes, inner text, etc.), move it, or remove it altogether. JavaScript gives us this power!
+Since we are assigning the [DOM node](https://developer.mozilla.org/en-US/docs/Web/API/Node) - `<p id="main">Just a paragraph...</p>` - to a variable, we now have a reference to it. With the node in hand, we can now access its content (tags, attributes, text content), manipulate/change any part of it (attributes, text content, etc.), move it, or remove it altogether. JavaScript gives us this power!
 
-Any node within the [document](https://developer.mozilla.org/en-US/docs/Web/API/Document), the root node, can be accessed via JavaScript. **What if we wanted to target (or access) the list?**
+Any node within the [document](https://developer.mozilla.org/en-US/docs/Web/API/Document), the root node, can be accessed via JavaScript.
 
 Without an `id` attribute, we need to use a different [method](https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByTagName)...
 
 ## `getElementsByTagName`
 
-The [`getElementsByTagName()`](https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByTagName) method returns a collection/array of nodes. These collections are "live", which means that if you add a new HTML element to the collection, it will also be added to the DOM. You can treat the collection just like you would a normal JavaScript array.
+The [`getElementsByTagName()`](https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByTagName) method returns a collection/array of nodes. These collections are "live", which means that if you add a new HTML element to the collection, it will also be added to the DOM.
 
 Add the following code to your JavaScript file:
 
@@ -227,7 +227,7 @@ for (var i = 0; i < allListItems.length; i++) {
 }
 ```
 
-## `getElementsByClassName`
+### `getElementsByClassName`
 
 The [`getElementsByClassName()`](https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByClassName) returns an array-like object of all child elements which have all of the given class names. When called on the document object, the complete document is searched, including the root node. You may also call getElementsByClassName() on any element; it will return only elements which are descendants of the specified root element with the given class names.
 
@@ -263,7 +263,7 @@ The first two examples output the *entire* collections while the second two exam
 
 Similar to `getElementsByTagName`, the collection returned from `getElementsByClassName` can be iterated over.
 
-## `querySelector`
+### `querySelector`
 
 The [`querySelector()`](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector
 ) Returns the first element within the document that matches the specified group of selectors. The argument you pass into `querySelector` should be a valid CSS query.
@@ -290,7 +290,7 @@ Open your JS console. **What do you see?**
 <li class="odd">item 1</li>
 ```
 
-## `querySelectorAll`
+### `querySelectorAll`
 
 The [`querySelectorAll()`](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll) Returns a list of the elements within the document that match the specified group of selectors. The object returned is a NodeList.
 
@@ -308,21 +308,6 @@ Open your JS console. **What do you see?**
 
 Both `querySelector` and `querySelectorAll` accept selectors which can be [very specific and powerful](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector#ExamplePowerful).
 
-## Traversing the DOM
-
-In the last section, you were introduced to DOM traversal, which is simply the action of traveling up and down through the DOM in order to target a specific Node.
-
-Read about traversing the DOM [here](http://javascript.info/tutorial/traversing-dom). Once done, make sure you understand, conceptually, what the following properties do:
-
-1. `childNodes` - targets all child nodes, returning a collection
-1. `firstChild` - targets the first child node
-1. `lastChild` - targets the last child node
-1. `parentNode` - targets the parent node from the current node
-1. `nextSibling` - targets the next node at the same level as the current node
-1. `previousSibling` - targets the previous node at the same level as the current node
-
-Now, go back and experiment with each first in the console before you update the *main.js* file.
-
 ## Modifying DOM Nodes
 
 Now that we know how to find DOM Nodes, we need to know how to actually do something to them. We actually have complete power over the entire HTML document- we can change anything we want! We can modify the CSS properties of every element individually, or we can assign them classes or IDs using Javascript. We can also alter the contents of the elements.
@@ -332,7 +317,7 @@ Let's look at this snippet of code, using the array of nodes we found before- **
 
 ```javascript
 for (var i = 0; i < allListItems.length; i++) {
-  console.log(allListItems[i].innerText);
+  console.log(allListItems[i].textContent);
 }
 ```
 
@@ -341,16 +326,12 @@ for (var i = 0; i < allListItems.length; i++) {
 
 ```javascript
 for (var i = 0; i < allListItems.length; i++) {
-  console.log(allListItems[i].innerText = i);
+  console.log(allListItems[i].textContent = i);
 }
 console.log(allListItems);
 ```
 
 Test it out!
-
-## `innerText` vs `innerHTML`
-
-Research this on your own. **How would you construct the Google query to find a solution quickly?**
 
 ## Manipulation
 
@@ -398,7 +379,7 @@ Let's add another list element to the unordered list:
 1. Add text to the `li` element
 
   ```javascript
-  li.innerText = "another list item";
+  li.textContent = "another list item";
   console.log(li);
   ```
 
@@ -433,10 +414,10 @@ console.log(allListItems);
 
 Make sense? Prepend another element. Try removing an element with `removeChild()`. Once done, show an instructor.
 
-### Practice
- - Create a new html5 document that sources a javascript file for the project.
- - Within in the javascript file, create an object listing at least five animals and the sound they make.
- - Use DOM creation methods to create a table to list the animals. Each animal name and sound should be in its own table cell.
+## Practice
+
+See [https://github.com/gSchool/js-dom-tests](https://github.com/gSchool/js-dom-tests).
+
 
 ## Further Reading
 
