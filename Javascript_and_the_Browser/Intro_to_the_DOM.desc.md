@@ -29,6 +29,7 @@ DOM operations form the basis of all client-side javascript, and all frameworks 
 The two main competitors during the early browsers were Netscape Navigator and Internet Explorer. Since then more browsers have entered the market compete on some level. Here is a map highlighting countries and their most popular browser.
 
 ![Browser Map](https://upload.wikimedia.org/wikipedia/commons/b/ba/Browser_Market_Map_June_2015.svg)
+
 Source: StatCounter https://en.wikipedia.org/wiki/Browser_wars June 2015
 
 ## Recall that HTML is a Tree
