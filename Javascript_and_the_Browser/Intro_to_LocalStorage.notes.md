@@ -24,7 +24,7 @@ White boards:
 - Talk to your table and come up with three things you think localStorage would be useful for.
 
 
-## Slide Deck Here >>
+## Slide Deck Here >> (When you hit API, Stop!)
 * https://docs.google.com/presentation/d/1rIiTwVHrah5BZXnrYZp_GVTE60Uir82PLxOpm6EKWDs/edit?usp=sharing
 
 ## Read the rest.
@@ -32,6 +32,12 @@ Whiteboards:
 - How would you put the key-value pair: 'dog' : 'bark' in your local storage?
 - How would you change the value of 'dog' to be 'growl' instead of 'bark'?
 - How would you delete the key 'dog'?
+
+
+## Slide Deck Here >> (Continue from API)
+* https://docs.google.com/presentation/d/1rIiTwVHrah5BZXnrYZp_GVTE60Uir82PLxOpm6EKWDs/edit?usp=sharing
+
+
 
 
 

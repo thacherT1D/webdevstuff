@@ -117,7 +117,7 @@ Follow the instructions in each section by viewing the HTML in each section:
 (Do not do #4 - we haven't covered a concept used here.)
 
 
-## Walkthrough Exercise: Background Preferences
+## Second Exercise: Background Preferences
 
 Let's make a simple page that stores the users preference for a web page background color for each day of the week.  A user should be able to visit the site, enter a hex color for each day of the week, and the page's background color should reflect that input.  Furthermore, when the user closes the browser and revists the page, the background color should still be the same as the colors that were previously entered, and NOT the default blank color.
 
