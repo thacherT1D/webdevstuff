@@ -21,18 +21,17 @@ You should be able to:
 
 ## Read introduction (up to Using Local Storage)
 White boards:
-- List two things you think Local storage would be useful for.
+- Talk to your table and come up with three things you think localStorage would be useful for.
 
 
 ## Slide Deck Here >>
-
+* https://docs.google.com/presentation/d/1rIiTwVHrah5BZXnrYZp_GVTE60Uir82PLxOpm6EKWDs/edit?usp=sharing
 
 ## Read the rest.
 Whiteboards:
 - How would you put the key-value pair: 'dog' : 'bark' in your local storage?
 - How would you change the value of 'dog' to be 'growl' instead of 'bark'?
 - How would you delete the key 'dog'?
-- How
 
 
 
