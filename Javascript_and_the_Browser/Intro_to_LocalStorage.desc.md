@@ -98,13 +98,18 @@ Let's say we want to update the pen in our local storage to have "Super" at the 
 
 https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage
 
-sessionStorage is very similar to localStorage, and is also a child of the Storage object.
+SessionStorage is very similar to localStorage, and is also a child of the Storage object.
+
+It even has the same functions:
 - setItem()
 - getItem()
 - removeItem()
+- clear()
 
 Differences:
 - It is window/tab specific.
+> You can navigate away from the page, and come back in the same tab, but your data wont be available in another tab on the same website.
+
 - If you close the window or tab, you will lose any sessionStorage data.
 
 
