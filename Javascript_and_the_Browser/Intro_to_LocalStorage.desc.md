@@ -13,22 +13,23 @@
 
 ## Objectives
 
-Leveraging localStorage object means being able to persist, access, and manipulate data.
+Leveraging the localStorage object means being able to persist, access, and manipulate data.
 
 You should be able to:
 
-* Create items in localStorage that store data such as user selections or form data.
-* Retrieve items from localStorage and use that data to modify the behavior of something on the page.
-* Remove items from localStorage.
-* Edit items from localStorage, store mutable items.
-* Stringify and parse data.
+- Discuss what types of values are useful to store in local storage
+- Create items in localStorage that store data such as user settings.
+- Retrieve items from localStorage and use that data to modify the behavior of something on the page.
+- Remove items from localStorage.
+- Stringify and parse objects to store larger datasets.
+- Compare and contrast local storage with session storage
 
 
 ## Key Terms
 
 * Persisting data
 * localObject
-* Stringifyng
+* Stringifying
 * Parsing
 
 # Coursework
@@ -47,7 +48,7 @@ By contrast, information that is not persisted will be destroyed when the user c
 
 To take advantage of Local Storage, we access what is called the `localStorage` object.  It allows you to store data locally into the browser via `Storage` objects. LocalStorage stores data that is essential from page to page, request to request, howevever, `localStorage` can only be accessed on the client side. Additionally, `localStorage` can store up to 5MB of data, and only gets cleared through JavaScript or manually clearing through the browser.
 
-As a general rule, it is not a great idea to store sensitive data into `localStorage`. Even though `localStorage` is _not_ sent with every request, and is instead sent only when asked for, storing sensitive data is usually better left to encrypted Cookies.
+As a general rule, it is not a great idea to store sensitive data into `localStorage`. Even though `localStorage` is _not_ sent with every request, and is instead sent only when asked for, storing sensitive data is usually better left to encrypted cookies or other methods.
 
 Read the following article to get an idea of _when_ and _where_ `localStorage` is used: https://css-tricks.com/localstorage-examples/
 
@@ -92,20 +93,28 @@ Let's say we want to update the pen in our local storage to have "Super" at the 
 
 [![https://gyazo.com/c8c69a9073423c02c1cc21bac19bec9f](https://i.gyazo.com/c8c69a9073423c02c1cc21bac19bec9f.png)](https://gyazo.com/c8c69a9073423c02c1cc21bac19bec9f)
 
+## First Exercise:
+Fork, then clone this repo:
+>https://github.com/gSchool/localstorage-exercises
+
+Follow the instructions in each section by viewing the HTML in each section:
+(Do not do #4 - we haven't covered a concept used here.)
+
 
 ## Walkthrough Exercise: Background Preferences
 
 Let's make a simple page that stores the users preference for a web page background color for each day of the week.  A user should be able to visit the site, enter a hex color for each day of the week, and the page's background color should reflect that input.  Furthermore, when the user closes the browser and revists the page, the background color should still be the same as the colors that were previously entered, and NOT the default blank color.
 
-**[(CLONE ME) Walkthrough Exercise Repo](https://github.com/gSchool/localstorage-walkthrough/tree/exercise)
-** using this git command: `git clone git@github.com:gSchool/localstorage-walkthrough.git -b exercise`
+
+** Get the exercise here:
+
+ `git clone git@github.com:gSchool/localstorage-walkthrough.git -b exercise`
 
 
 [![https://gyazo.com/fad0401a938c959594f362bdd114715f](https://i.gyazo.com/fad0401a938c959594f362bdd114715f.png)](https://gyazo.com/fad0401a938c959594f362bdd114715f)
 
 
-### Reading
+### Reading (optional)
 
 [Diving in To Local Storage](http://diveintohtml5.info/storage.html)
 (*Using Local Storage, solid examples in javascript:*)
-

@@ -34,7 +34,7 @@ The auto-compile plugin will allow you to automatically compile SASS and SCSS co
 The linter will help with syntax and errors just like jshint for javascript.
 
 
-
+- Once you think you have all the pieces installed, create a file with the .scss extension (like style.scss)
 
 
 ## SASS and SCSS

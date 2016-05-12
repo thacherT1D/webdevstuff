@@ -94,8 +94,8 @@ Whiteboards:
 Collaborate with the person next to you, write this on your table:
 ALL in a single nested item:
 - If you had the below HTML, using SCSS/SASS, how would you apply an orange background to all the articles inside anything with a class of 'mainBlock'?
-- How would you apply a black border to all of the articles with a class of 'first'?
-- How would you apply white text to all of the 'p' elements under an article with a class of 'second'?
+- Apply a black border to all of the articles with a class of 'first'?
+- Apply white text to all of the 'p' elements under an article with a class of 'second'?
 ```html
 <html>
 <body>
