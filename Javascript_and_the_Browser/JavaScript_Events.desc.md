@@ -1,13 +1,12 @@
-# Events
-
 ## Objectives
+
 By the end of this lesson you should be able to:
 
 * Attach event handlers to DOM elements
 * Modify the DOM in response to an event
 * Use callbacks in methods like addEventListener
 * Explain the difference between `this` and `event.target` in event listeners
-* Explain the difference between `window.onload` and `DOMContentLoaded`, and use these to add event listeners
+* Respond to the event `DOMContentLoaded` event
 
 ## Introduction
 
@@ -240,7 +239,7 @@ container.addEventListener('click', eventHandler);
 
 In this case all p tags share one copy of `eventHandler` which they get from their parent container.
 
-### `window.onload` and `DOMContentReady`
+### `DOMContentReady`
 
 When you're using Javascript to manipulate the DOM, you need to be sure that what you're trying to manipulate is available to you. To see what this means, consider the following example:
 
@@ -278,22 +277,7 @@ However, when you load the HTML, you should find that no message is getting logg
 
 The deal is that the script is loading before the DOM has finished loading. Not convinced? Through a debugger in the first line and take a look at the `document` -- you'll see that the `body` hasn't loaded yet! Because of this, there's no `img` tag to grab with javascript, and so your `img` variable will be `null`.
 
-When manipulating the DOM, it's important that your javascript code not load until the DOM is ready. There are a couple of ways to do this. One is to use `window.onload`:
-
-```javascript
-var imgLog = function() {
-  console.log("You moused over Mega Man!");
-}
-
-window.onload = function() {
-  var img = document.querySelector('img');
-  img.addEventListener('mouseover', imgLog);
-}
-```
-
-With this syntax, the code inside of the function assigned to `window.onload` will not execute until everything on the `window` has loaded.
-
-Related to this is `DOMContentLoaded`:
+When manipulating the DOM, it's important that your javascript code not load until the DOM is ready. There are a couple of ways to do this. The most common way is to use the `DOMContentLoaded` event:
 
 ```javascript
 var imgLog = function() {
@@ -308,7 +292,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 This event fires when the document has been loaded and parsed. This happens before all assets (e.g. images, videos, stylesheets, etc.) have completely loaded. In other words, `DOMContentLoaded` gets fired before the window finishes loading.
 
-Want to see the difference between these two in action? Check out [this example](http://web.archive.org/web/20150405114023/http://ie.microsoft.com/testdrive/HTML5/DOMContentLoaded/Default.html).
+Want to see the difference between `DOMContentLoaded` and `window.onload`? Check out [this example](http://web.archive.org/web/20150405114023/http://ie.microsoft.com/testdrive/HTML5/DOMContentLoaded/Default.html).
 
 Note: putting your script tags at the bottom of the page can help resolve some of these issues, but it's still probably a good idea to wrap any DOM-manipulating functionality inside of an event listener to `DOMContentLoaded`.
 
