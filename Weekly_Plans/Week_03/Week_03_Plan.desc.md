@@ -1,19 +1,18 @@
 # Week 3 (May 9 - May 13)
-## Weekly Objective
+## Weekly Objectives
 
 By the end of the week you should be able to:
 
 - Use node.js
 - Install and Manage npm packages
-- Use test driven development.
-- Create HTML Forms
+- Use test driven development
 - Use SASS
 - Navigate and manipulate the DOM
 - Use Javascript Events
 
 ---
 
-# Monday, May 9 - Roger
+# Monday, May 9
 
 Warmup: [Code Wars: Unique in Order](http://www.codewars.com/kata/unique-in-order)
 
@@ -26,7 +25,7 @@ Lessons:
 
 ---
 
-# Tuesday, May 10 - Jordan
+# Tuesday, May 10
 
 Warmup: [JS Arrays Challenge](https://github.com/gSchool/javascript-challenges)
 
@@ -49,7 +48,7 @@ Homework: [Where's Waldo](https://github.com/gSchool/wheres-waldo)
 
 ---
 
-# Wednesday, May 11 - Logan
+# Wednesday, May 11
 
 Warmup: [Lychrel Numbers](https://github.com/gSchool/challenges/blob/master/Programming/196.md)
 
@@ -61,33 +60,27 @@ Lessons:
 
 ---
 
-# Thursday, May 12 - Jordan
+# Thursday, May 12
 
-Warmup: [Link to Warmup](http://github.com/gSchool)
+Warmup: Intersection. Write a function called intersection that takes two arrays as arguments and returns an array of the items that are in both input arrays. For example => intersection([1,2,3], [1,3,5]) should return [1,3]. Write tests!
 
 Lessons:
 
-- [Lesson](https://workbook.galvanize.com/cohorts/68/student_dashboard)
-- [Lesson](https://workbook.galvanize.com/cohorts/68/student_dashboard)
-
-Homework: [Homework](https://workbook.galvanize.com/cohorts/68/student_dashboard)
+- [Javascript Events](https://workbook.galvanize.com/cohorts/68/articles/3094)
+- [Intro to Local Storage](https://workbook.galvanize.com/cohorts/68/articles/3096)
 
 Announcements:
 
-- Announcement 1
-- Announcement 2
+- [You can sign up for a 1:1 with Charisse](http://charissebowen.youcanbook.me/)
 
 ---
 
-# Friday, May 13 - Roger
+# Friday, May 13
 
-Crush Code Friday: [CCF](https://workbook.galvanize.com/cohorts/68/student_dashboard)
-
-Homework: [Homework](https://workbook.galvanize.com/cohorts/68/student_dashboard)
+Crush Code Friday: [CCF - Pixel Painter](https://github.com/gSchool/pixel-art-maker)
 
 Lightning Talks:
 
-Announcements:
-
-- Announcement 1
-- Announcement 2
+- Roy
+- Jeremy
+- Tara

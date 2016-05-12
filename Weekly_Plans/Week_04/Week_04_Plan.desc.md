@@ -81,6 +81,9 @@ Homework: [Homework](https://workbook.galvanize.com/cohorts/68/student_dashboard
 
 Lightning Talks:
 
+- Kristen
+- Vy
+- Jimmy
+
 Announcements:
-- Announcement 1
-- Announcement 2
+- g17 Panel - Lunch & Learn
