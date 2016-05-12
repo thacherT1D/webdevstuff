@@ -111,14 +111,14 @@ There is a parameter that we can pass into our event handler functions: the even
 
 ```js
 function logText(event) {
-  console.log(event.target.innerText);
+  console.log(event.target.textContent);
 }
 window.addEventListener("click", logText);
 ```
 
 Let's take a closer look at the `event` object, and on `event.target` in particular. Inside of your JS file, add an event listener that console logs the event object AND the event.target when you click on the button.
 
-Once you get this working, you'll see that the `event` object has a lot of details about the click event that was fired: where was the cursor? What time was the event fired? Was the shift key held down? And so on. Meanwhile, `event.target` points to the DOM element that was (in this case) clicked. This can be helpful if you want to modify the DOM based on user interaction. 
+Once you get this working, you'll see that the `event` object has a lot of details about the click event that was fired: where was the cursor? What time was the event fired? Was the shift key held down? And so on. Meanwhile, `event.target` points to the DOM element that was (in this case) clicked. This can be helpful if you want to modify the DOM based on user interaction.
 
 **Exercise**: Create a variable called `clickCount` in your `js` file, and set it equal to 0. Modify your event listener so that every time you click on the button, the clickCount increments, and the button text changes to show the user how many times the button has been clicked.
 
@@ -129,7 +129,7 @@ Let's return to our simple HTML page from before, and add an event listener that
 ```js
 var button = document.querySelector("button");
 function logText(event) {
-  console.log(event.target.innerText);
+  console.log(event.target.textContent);
 }
 button.addEventListener("click", logText);
 ```
@@ -139,7 +139,7 @@ We can rewrite this code so that it doesn't reference the `event` object. We can
 ```js
 var button = document.querySelector("button");
 function logText() {
-  console.log(this.innerText);
+  console.log(this.textContent);
 }
 button.addEventListener("click", logText);
 ```
@@ -148,7 +148,7 @@ So what's the difference between `this` and `event.target`, then? To answer this
 
 ```html
 <div>
-  <p>I'm a p tag!</p>	
+  <p>I'm a p tag!</p>
   <button>I'm a button!</button>
 </div>
 ```
@@ -158,7 +158,7 @@ Let's now add the event listener to that parent `div`. Update your javascript so
 ```js
 var div = document.querySelector("div");
 function logText() {
-  console.log(this.innerText);
+  console.log(this.textContent);
 }
 div.addEventListener("click", logText);
 ```
@@ -170,7 +170,7 @@ Now let's change our `logText` function back so that it references the `event` o
 ```js
 var div = document.querySelector("div");
 function logText(event) {
-  console.log(event.target.innerText);
+  console.log(event.target.textContent);
 }
 div.addEventListener("click", logText);
 ```
@@ -297,7 +297,7 @@ This event fires when the document has been loaded and parsed. This happens befo
 
 Want to see the difference between these two in action? Check out [this example](http://web.archive.org/web/20150405114023/http://ie.microsoft.com/testdrive/HTML5/DOMContentLoaded/Default.html).
 
-Note: putting your script tags at the bottom of the page can help resolve some of these issues, but it's still probably a good idea to wrap any DOM-manipulating functionality inside of an event listener to `DOMContentLoaded`. 
+Note: putting your script tags at the bottom of the page can help resolve some of these issues, but it's still probably a good idea to wrap any DOM-manipulating functionality inside of an event listener to `DOMContentLoaded`.
 
 ## Event Propagation
 
