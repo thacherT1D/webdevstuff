@@ -43,8 +43,8 @@ In order to explore event listeners, we need some HTML! To kick things off, do t
 The following code adds an event listener to the entire `window` object.  Try typing it into your js file and then click anywhere on the webpage!
 
 ```javascript
-addEventListener("click", function() {
-    alert("You clicked on the page!");
+window.addEventListener("click", function() {
+  alert("You clicked on the page!");
 });
 ```
 
@@ -52,8 +52,9 @@ Every single DOM element also has its own `addEventListener` method:
 
 ```javascript
 var button = document.querySelector("button");
+
 button.addEventListener("click", function(){
-    alert("SOMEONE CLICKED THE BUTTON!!");
+  alert("SOMEONE CLICKED THE BUTTON!!");
 });
 ```
 
@@ -67,6 +68,7 @@ You can also remove event listeners from DOM elements if you are no longer inter
 
 ```javascript
 var button = document.querySelector("button");
+
 button.removeEventListener("click");
 ```
 
@@ -79,7 +81,7 @@ Try rewriting your `addEventListener` as follows:
 ```javascript
 var button = document.querySelector("button");
 
-function clickAlert() {
+var clickAlert = function() {
 	alert("SOMEONE CLICKED THE BUTTON!!");
 }
 
@@ -97,9 +99,9 @@ button.removeEventListener("click", clickAlert);
 ```javascript
 var button = document.querySelector("button");
 
-function once() {
-    console.log("Done.");
-    button.removeEventListener("click", once);
+var once = function() {
+  console.log("Done.");
+  button.removeEventListener("click", once);
 }
 
 button.addEventListener("click", once);
@@ -110,9 +112,10 @@ button.addEventListener("click", once);
 There is a parameter that we can pass into our event handler functions: the event object. The event object gives us lots of information about the event. For example, we can use it to log some text to the console whenever a user clicks on an HTML element:
 
 ```javascript
-function logText(event) {
+var logText = function(event) {
   console.log(event.target.textContent);
 }
+
 window.addEventListener("click", logText);
 ```
 
@@ -128,9 +131,11 @@ Let's return to our simple HTML page from before, and add an event listener that
 
 ```javascript
 var button = document.querySelector("button");
-function logText(event) {
+
+var logText = function(event) {
   console.log(event.target.textContent);
 }
+
 button.addEventListener("click", logText);
 ```
 
@@ -138,7 +143,8 @@ We can rewrite this code so that it doesn't reference the `event` object. We can
 
 ```javascript
 var button = document.querySelector("button");
-function logText() {
+
+var logText = function() {
   console.log(this.textContent);
 }
 button.addEventListener("click", logText);
@@ -157,9 +163,11 @@ Let's now add the event listener to that parent `div`. Update your javascript so
 
 ```javascript
 var div = document.querySelector("div");
-function logText() {
+
+var logText = function() {
   console.log(this.textContent);
 }
+
 div.addEventListener("click", logText);
 ```
 
@@ -169,9 +177,11 @@ Now let's change our `logText` function back so that it references the `event` o
 
 ```javascript
 var div = document.querySelector("div");
-function logText(event) {
+
+var logText = function(event) {
   console.log(event.target.textContent);
 }
+
 div.addEventListener("click", logText);
 ```
 
@@ -196,7 +206,8 @@ Let's suppose we want to add a click listener to every `<p>` on a page. We can't
 ```javascript
 //THIS DOES NOT WORK
 var paragraphs = document.querySelectorAll("p");
-paragraphs.addEventListener("click", function(){
+
+paragraphs.addEventListener("click", function() {
  console.log("Woof!");
 });
 ```
@@ -205,7 +216,8 @@ One option: we can set a listener on every individual element:
 
 ```javascript
 var paragraphs = document.querySelectorAll('p');
-function eventHandler() {
+
+var eventHandler = function() {
   console.log("Woof!");
 }
 for (var i = 0; i < paragraphs.length; i++) {
@@ -219,7 +231,8 @@ Another option: we can use event bubbling (more on this later) and attach a sing
 
 ```javascript
 var container = document.getElementById('container');
-function eventHandler() {
+
+var eventHandler = function() {
   console.log('Woof!');
 }
 container.addEventListener('click', eventHandler);
@@ -252,7 +265,7 @@ When you're using Javascript to manipulate the DOM, you need to be sure that wha
 ```javascript
 var img = document.querySelector('img');
 
-function imgLog() {
+var imgLog = function() {
   console.log("You moused over Mega Man!");
 }
 
@@ -268,7 +281,7 @@ The deal is that the script is loading before the DOM has finished loading. Not 
 When manipulating the DOM, it's important that your javascript code not load until the DOM is ready. There are a couple of ways to do this. One is to use `window.onload`:
 
 ```javascript
-function imgLog() {
+var imgLog = function() {
   console.log("You moused over Mega Man!");
 }
 
@@ -283,7 +296,7 @@ With this syntax, the code inside of the function assigned to `window.onload` wi
 Related to this is `DOMContentLoaded`:
 
 ```javascript
-function imgLog() {
+var imgLog = function() {
   console.log("You moused over Mega Man!");
 }
 
