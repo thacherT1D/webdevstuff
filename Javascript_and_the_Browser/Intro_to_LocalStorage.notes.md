@@ -36,7 +36,7 @@ Whiteboards:
 
 
 ## Something... Something... sessionStorage
-
+Demo sessionStorage
 
 ## Then : https://github.com/gSchool/localstorage-exercises
 ^^ When you're done with the first set of exercises, have me check it before going on.

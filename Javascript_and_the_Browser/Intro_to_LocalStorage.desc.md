@@ -97,6 +97,7 @@ Let's say we want to update the pen in our local storage to have "Super" at the 
 ## Session Storage
 
 https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage
+
 sessionStorage is very similar to localStorage, and is also a child of the Storage object.
 - setItem()
 - getItem()
