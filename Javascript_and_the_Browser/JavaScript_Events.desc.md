@@ -15,7 +15,7 @@ Events are one of the most important underlying concepts in modern Javascript. E
 
 Events are all over the place before we even write a line of code.  We can use the following code in the Chrome Dev Tools to see events as they happen:
 
-```js
+```javascript
 monitorEvents(window)
 ```
 
@@ -42,7 +42,7 @@ In order to explore event listeners, we need some HTML! To kick things off, do t
 
 The following code adds an event listener to the entire `window` object.  Try typing it into your js file and then click anywhere on the webpage!
 
-```js
+```javascript
 addEventListener("click", function() {
     alert("You clicked on the page!");
 });
@@ -50,7 +50,7 @@ addEventListener("click", function() {
 
 Every single DOM element also has its own `addEventListener` method:
 
-```js
+```javascript
 var button = document.querySelector("button");
 button.addEventListener("click", function(){
     alert("SOMEONE CLICKED THE BUTTON!!");
@@ -65,7 +65,7 @@ Now we've attached an event listener to a specific DOM node, a button on the pag
 
 You can also remove event listeners from DOM elements if you are no longer interested in the event. Let's return to our example from the previous section. After adding the event listener to the button, maybe you realize that alert messages are terrible, and decide to remove it. It may be tempting to write something like this in the JS console:
 
-```js
+```javascript
 var button = document.querySelector("button");
 button.removeEventListener("click");
 ```
@@ -76,7 +76,7 @@ Therefore, when you're adding a callback function that you might need to remove 
 
 Try rewriting your `addEventListener` as follows:
 
-```js
+```javascript
 var button = document.querySelector("button");
 
 function clickAlert() {
@@ -94,7 +94,7 @@ button.removeEventListener("click", clickAlert);
 
 **Exercise** What does the following code do?
 
-```js
+```javascript
 var button = document.querySelector("button");
 
 function once() {
@@ -109,7 +109,7 @@ button.addEventListener("click", once);
 
 There is a parameter that we can pass into our event handler functions: the event object. The event object gives us lots of information about the event. For example, we can use it to log some text to the console whenever a user clicks on an HTML element:
 
-```js
+```javascript
 function logText(event) {
   console.log(event.target.textContent);
 }
@@ -126,7 +126,7 @@ Once you get this working, you'll see that the `event` object has a lot of detai
 
 Let's return to our simple HTML page from before, and add an event listener that calls the `logText` button on a button click:
 
-```js
+```javascript
 var button = document.querySelector("button");
 function logText(event) {
   console.log(event.target.textContent);
@@ -136,7 +136,7 @@ button.addEventListener("click", logText);
 
 We can rewrite this code so that it doesn't reference the `event` object. We can use `this` instead!
 
-```js
+```javascript
 var button = document.querySelector("button");
 function logText() {
   console.log(this.textContent);
@@ -155,7 +155,7 @@ So what's the difference between `this` and `event.target`, then? To answer this
 
 Let's now add the event listener to that parent `div`. Update your javascript so that it looks like this:
 
-```js
+```javascript
 var div = document.querySelector("div");
 function logText() {
   console.log(this.textContent);
@@ -167,7 +167,7 @@ Refresh the page. You should see that no matter where you click -- on the `div`,
 
 Now let's change our `logText` function back so that it references the `event` object again:
 
-```js
+```javascript
 var div = document.querySelector("div");
 function logText(event) {
   console.log(event.target.textContent);
@@ -193,7 +193,7 @@ Let's suppose we want to add a click listener to every `<p>` on a page. We can't
 </div>
 ```
 
-```js
+```javascript
 //THIS DOES NOT WORK
 var paragraphs = document.querySelectorAll("p");
 paragraphs.addEventListener("click", function(){
@@ -203,7 +203,7 @@ paragraphs.addEventListener("click", function(){
 
 One option: we can set a listener on every individual element:
 
-```js
+```javascript
 var paragraphs = document.querySelectorAll('p');
 function eventHandler() {
   console.log("Woof!");
@@ -217,7 +217,7 @@ If you inspect one of these elements in the Elements tab and look under Event Li
 
 Another option: we can use event bubbling (more on this later) and attach a single event listener to the parent:
 
-```js
+```javascript
 var container = document.getElementById('container');
 function eventHandler() {
   console.log('Woof!');
@@ -249,7 +249,7 @@ When you're using Javascript to manipulate the DOM, you need to be sure that wha
 
 `app.js`
 
-```js
+```javascript
 var img = document.querySelector('img');
 
 function imgLog() {
@@ -267,7 +267,7 @@ The deal is that the script is loading before the DOM has finished loading. Not 
 
 When manipulating the DOM, it's important that your javascript code not load until the DOM is ready. There are a couple of ways to do this. One is to use `window.onload`:
 
-```js
+```javascript
 function imgLog() {
   console.log("You moused over Mega Man!");
 }
@@ -282,7 +282,7 @@ With this syntax, the code inside of the function assigned to `window.onload` wi
 
 Related to this is `DOMContentLoaded`:
 
-```js
+```javascript
 function imgLog() {
   console.log("You moused over Mega Man!");
 }
@@ -305,7 +305,7 @@ Note: putting your script tags at the bottom of the page can help resolve some o
 
 Before finishing up, let's take a look at one more example. Let's return to our earlier example with a single `button`. In our Javascript file, let's add two event listeners:
 
-```js
+```javascript
 var body = document.querySelector('body');
 var button = document.querySelector('button');
 
@@ -386,7 +386,7 @@ The bubble event will fire on each one of these elements.
 
 Let's return to our example, and change our event listener on the body to fire on the capture phase:
 
-```js
+```javascript
 var body = document.querySelector('body');
 var button = document.querySelector('button');
 
