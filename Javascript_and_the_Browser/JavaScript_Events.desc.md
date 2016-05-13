@@ -239,7 +239,7 @@ container.addEventListener('click', eventHandler);
 
 In this case all p tags share one copy of `eventHandler` which they get from their parent container.
 
-### `DOMContentReady`
+### `DOMContentLoaded`
 
 When you're using Javascript to manipulate the DOM, you need to be sure that what you're trying to manipulate is available to you. To see what this means, consider the following example:
 
