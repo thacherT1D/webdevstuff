@@ -77,7 +77,8 @@ Announcements:
 
 # Friday, May 13
 
-Crush Code Friday: [CCF - Pixel Painter](https://github.com/gSchool/pixel-art-maker)
+- [Intro to Local Storage](https://workbook.galvanize.com/cohorts/68/articles/3096)
+- Crush Code Friday: [CCF - Pixel Painter](https://github.com/gSchool/pixel-art-maker)
 
 Lightning Talks:
 
