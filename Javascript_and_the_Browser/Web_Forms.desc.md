@@ -46,7 +46,7 @@ Keep in mind that there are [a huge number](https://developer.mozilla.org/en-US/
 
 The most common and versatile input type is a standard field for the user to enter text. **_Whenever browser does not recognize a type, it will default to a text type._**
 
-### Semantic Input
+### Semantic HTML Revisited
 
 Remember when we talked about Semantic HTML? We also have semantic input types to help _describe_ what the input is looking for with some additional benefits.
 
@@ -90,30 +90,11 @@ You can also use the `for` attribute with an id of the input element like so.
 
 ## And many more...
 
-The rest of the challenges in our repo ([https://github.com/gSchool/html-forms](https://github.com/gSchool/html-forms)) will have you experiment with other input types including `checkbox`, `hidden`, `radio button`, and more. Knowing what types of inputs are available is essential too designing a form that is simple and easy to use. When you encounter a new type ask yourself "what would I use this for?"
-
-```
-<form action="index.html" method="get">
-  <fieldset>
-    <legend>Size</legend>
-    <label>For text</label>
-    <input id="1"/>
-
-    <label>For Second Text</label>
-    <input id="2" name="secondText" type="text"/>
-
-    <label>For textarea</label>
-    <textarea id="textArea1" name="textArea1"></textarea>
-
-    <label>For Second Text Area</label>
-    <textarea id="textArea2" name="preFilledTA"></textarea>
-  </fieldset>
-  <label>For Email</label>
-  <input id="3" name="email" type="email"/>
-</form>
-```
+There are more challenges in our repo ([https://github.com/gSchool/html-forms](https://github.com/gSchool/html-forms)) that will have you experiment with other input types including `checkbox`, `hidden`, `radio button`, and more. Knowing what types of inputs are available is essential to designing a form that is simple and easy to use. When you encounter a new type ask yourself "what would I use this for?"
 
 ## Common Attributes
+
+With inputs, there are a variety of attributes available to use. Many vary by input and a lot of them are nonstandard but _recommended_.
 
 * autocomplete
 * autofocus
