@@ -1,10 +1,8 @@
-# HTML Forms
-
 Forms are ubiqutous in web development. They are used in a wide variety of situations, but always to collect input from a user. If you've ever entered your credit card information to a website, performed a search on Google, or logged into Facebook then you've used forms.
 
 Forms are far and away the most common method of getting information from your user into your programs. Sometimes this information never leaves the browser, and sometimes it is sent to a webserver.
 
-## Objectives -- You Should Learn How To
+## Objectives
 
 * Create a form in HTML using the `<form>` tag.
 * Use and overwrite default form behaviors.
@@ -44,9 +42,42 @@ Forms contain a collection of __form elements__ which have defined behavior when
 
 ## Form Types
 
-The rest of the challenges in our repo ([https://github.com/gSchool/html-forms](https://github.com/gSchool/html-forms)) will have you experiment with other input types including `checkbox`, `hidden`, `radio button`, and more. Knowing what types of inputs are available is essential too designing a form that is simple and easy to use. When you encounter a new type ask yourself "what would I use this for?"
+Keep in mind that there are [a huge number](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input) of input types, especially for browsers with HTML5 support.
 
-Also, keep in mind that there are [a huge number](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input) of input types, especially for browsers with HTML5 support. For additional design flexibility, try using the `<fieldset>` and `<legend>`. For example, how does this render?
+### Text
+
+The most common and versatile input type is a standard field for the user to enter text.
+
+**_Whenever browser does not recognize a type, it will default to a text type._**
+
+#### Semantic Input
+
+Remember when we talked about Semantic HTML? We also have semantic input types to help _describe_ what the input is looking for with some additional benefits.
+
+* Provides some basic validation (ie. verifying the input is in the correct format).
+* Some special JavaScript properties to access the input in a reliable format.
+* Some special Operating System considerations when adding input. (eg. iOS keyboards for email, url, etc.)
+
+There are multiple text inputs that boil down to a very similar visual. They include:
+
+* email (special keyboards, basic email validation, etc)
+* password (hides characters entered, etc)
+* url (special keyboards, basic url validation, etc)
+* tel (cleans content, etc)
+
+### Select Boxes
+
+### Radio and Checkboxes
+
+### Hidden Input Elements?
+
+### Buttons
+
+#### Submit vs Reset
+
+### And many more...
+
+The rest of the challenges in our repo ([https://github.com/gSchool/html-forms](https://github.com/gSchool/html-forms)) will have you experiment with other input types including `checkbox`, `hidden`, `radio button`, and more. Knowing what types of inputs are available is essential too designing a form that is simple and easy to use. When you encounter a new type ask yourself "what would I use this for?"
 
 ```
  <form action="index.html" method="get">
@@ -68,7 +99,26 @@ Also, keep in mind that there are [a huge number](https://developer.mozilla.org/
       <input id="3" name="email" type="email"/>
 ```
 
-## Building a Form
+## Common Attributes
+
+* autocomplete
+* autofocus
+* maxlength
+* name
+* placeholder
+* pattern
+* required
+* readonly
+* size
+* spellcheck
+* tabindex
+* value
+
+## Materialize Forms
+
+Let's start with the Materialize [http://materializecss.com/forms.html](documentation) on forms specifically. Materialize includes some simple ways to make your forms look awesome.
+
+## Form Action and Method
 
 Lets experiment with building forms. Clone the repo found here and complete challenge 1: [https://github.com/gSchool/html-forms](https://github.com/gSchool/html-forms)
 
@@ -165,13 +215,13 @@ We're also validating our form input because our programs can't work without pro
 
 So what do we do to ensure we get good input for our programs?
 
-## Form Validation
+# Form Validation
 
-### HTML5 Validation
+## HTML5 Validation
 
 First, we need to make it easy for humans with good intentions to use our interface. We can use a number of HTML5 capabilities to do this, such as tabindex, input types, and patterns.
 
-*(Required)* [Read this article about HTML5 Forms](http://diveintohtml5.info/forms.html), focus specifically on input types and [validation](http://diveintohtml5.info/forms.html#validation).
+[Read this article about HTML5 Forms](http://diveintohtml5.info/forms.html), focus specifically on input types and [validation](http://diveintohtml5.info/forms.html#validation).
 
 After that, given the form below, change it to use HTML5 form validation techniques.
 Make sure:
@@ -208,11 +258,12 @@ Make sure:
 
 ***Bonus*** If you know regex, use the `pattern` property to ensure users include an @ sign in front of their twitter username.
 
-### JS Validation
+## JS Validation
 
 Now that we've done some validation with HTML5, it's time to use JS to finish up the job.
 
-#### Accessing values
+### Accessing values
+
 Not every form can be checked with a simple "type" field. Also, [not every browser](http://caniuse.com/#search=type%3D) can use every type. So, we need to do some validation using jQuery.
 
 There are a number of validation libraries that we can use, that will allow us to validate our forms using code someone else has written. Rather than doing that, however, we need to understand how these libraries go about doing what they do, which we'll do by doing some implementation.
@@ -238,13 +289,13 @@ Take a look at the code below for how to access other kinds of form input throug
 var form = document.querySelector('#some-form');
 var input = document.querySelector('#some-input');
 
-document.forms; // Get all forms on a page
-form.elements; // Get all form elements
+document.forms;           // Get all forms on a page
+form.elements;            // Get all form elements
 input.type.toLowerCase(); // Get input type (radio, checkbox, text, etc.)
-input.value; // Get input value
-input.name; // Get input name
-input.checked; // Get the checked status of a checkbox or radio button
-input.disabled; // Get input disabled status
+input.value;              // Get input value
+input.name;               // Get input name
+input.checked;            // Get the checked status of a checkbox or radio button
+input.disabled;           // Get input disabled status
 ```
 
 [source: gomakestuff](http://gomakethings.com/ditching-jquery/#working-with-forms)
@@ -265,7 +316,8 @@ input[0].disabled; // Get input disabled status
 [(why we're using .checked)](https://jsperf.com/prop-vs-ischecked/5)
 
 
-#### When to access values
+### When to access values
+
 Now that we know how to access values, we need to know when to access them. If we were to use the above code when the page loads, we would only see blank or placeholder values. Why? Because we need to wait to check these until the user tries to submit the form, or until the user is done filling out the field.
 
 **.on("submit")**  
@@ -291,6 +343,7 @@ $("#myInput").on("blur", function(){
 ```
 
 #### What do I do if there's an error?
+
 A typical pattern is to display either next to the incorrectly filled out element, or a the top of the form, a new DOM element that lists the error in question. Try to be descriptive, tell the user what they did wrong- did they miss filling out the field, or did they just forget to put dashes in their phone number?
 
 When you bind an event handler to something that has a _default action_, the handler will fire and then the default action will happen. A default action is something like a form's submission to the location that's in the action property, or the navigation that happens when you click a link. In order to render errors, you have to stop the default action. One way is to use `event.preventDefault();`, but simply calling `return false` from within a jQuery event handler will stop the default event from occuring.
@@ -298,50 +351,29 @@ When you bind an event handler to something that has a _default action_, the han
 
 ```javascript
 $("#myForm").on("submit", function(){
-
     if (some_error_condition) {
-
-	    var errDiv = $('<div class="error">Please fix your phone number</div>')
-
+	    var errDiv = $('<div class="error">Please fix your phone number</div>');
         $("#myForm").append(errDiv);
-
         return false; // This tells the submission not to happen
     }
 })
-
-
 ```
 
+## Displaying Validation with Materialize
 
-### Exercise
-This should take you about 1.5 hours to complete.  
+The [dialogs](http://materializecss.com/dialogs.html) documentation page offers many helpful tools to help you properly display validation errors.
 
-https://github.com/gSchool/form_validation/blob/master/README.md
+## Questions
 
-
-## Reflect
-Let's reflect on what we've learned.
-
-### Self-Assessment
-
-How’d you do? Go back to the "Objectives" section. Go through each one and ask yourself:
-
-- Have I completed this objective?
-- What concrete evidence do I have that I've completed the objective?
-
-Rate yourself 1 through 4 for each objective in terms of competence (4 being the highest). If you rate yourself a 2 or below, please notify an instructor for additional help.
-
-If you haven't completed an objective, or you can't define a term, take a few minutes to try to fill in any gaps.
-
-### Questions
 * Why do we need to do form validation inside an event listener?
 * What is a better experience for the user- using the `required` attribute, or using JS to ensure all required fields are checked?
 * Why might browser validation not be enough?
 * What would happen if someone used console Javascript to submit their form, bypassing your validation?
 
-##Additional Resources on Forms
+## Additional Resources on Forms
 
 - https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms/My_first_HTML_form
 - https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms
 - https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Input
 - http://diveintohtml5.info/forms.html
+- http://www.wufoo.com/html5/
