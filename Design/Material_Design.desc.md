@@ -8,7 +8,9 @@
 
 **Material Design** is a visual language, developed by Google, inspired by the study of paper and ink. It uses typography, grids, space, scale, depth, color, and motion to form a user interface that gives hierarchy, meaning, and focus to content.
 
-Watch this video on [Material Design by Google](https://www.youtube.com/watch?v=Q8TXgCzxEnw)
+To see it in action, watch this video on [Material Design by Google](https://www.youtube.com/watch?v=Q8TXgCzxEnw)
+
+To learn more details, check out the [documentation on Material Design](https://www.google.com/design/spec/what-is-material/environment.html)
 
 ### What is Material Design useful?
 
