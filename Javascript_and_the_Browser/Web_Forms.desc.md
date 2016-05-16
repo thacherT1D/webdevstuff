@@ -1,22 +1,20 @@
-Forms are ubiqutous in web development. They are used in a wide variety of situations, but always to collect input from a user. If you've ever entered your credit card information to a website, performed a search on Google, or logged into Facebook then you've used forms.
+# Objectives
 
-Forms are far and away the most common method of getting information from your user into your programs. Sometimes this information never leaves the browser, and sometimes it is sent to a webserver.
-
-## Objectives
-
-* Create a form in HTML using the `<form>` tag.
-* Use and overwrite default form behaviors.
-	* `action`, `method`, and event JS binding.
-* Use `<label>` tags to add labels to form elements.
 * Use form input tags:
 	* `<input>, <textarea>, <button>`
 * Use multiple `types` of the `<input>` tag.
+* Use `<label>` tags to add labels to form elements.
+* Create a form in HTML using the `<form>` tag.
+* Use and overwrite default form behaviors.
+	* `action`, `method`, and event JS binding.
 * Use HTML5 input types as a first-line validation technique
 * Use other HTML5 techniques to validate input
 * Read the values from your form with JS
 * Check the values you've read with JS to make sure they are what they need to be
 * Listen to form events like submit, and show errors
 * Program defensively against faulty form input
+
+If you've ever entered your credit card information to a website, performed a search on Google, or logged into Facebook then you've used forms. Forms are far and away the most common method of getting information from your user into your programs. Sometimes this information never leaves the browser, and sometimes it is sent to a web server.
 
 # HTML forms and form elements
 
@@ -46,9 +44,7 @@ Keep in mind that there are [a huge number](https://developer.mozilla.org/en-US/
 
 ## Text
 
-The most common and versatile input type is a standard field for the user to enter text.
-
-**_Whenever browser does not recognize a type, it will default to a text type._**
+The most common and versatile input type is a standard field for the user to enter text. **_Whenever browser does not recognize a type, it will default to a text type._**
 
 ### Semantic Input
 
@@ -65,11 +61,28 @@ There are multiple text inputs that boil down to a very similar visual. They inc
 * url (special keyboards, basic url validation, etc)
 * tel (cleans content, etc)
 
+#### Label Element
+
+Each form element will usually have some sort of caption that instructs the user on what the input is looking for. For example, next to a text box with a caption "Name", you are then expected to type your name in. We use the `<label>` element to specify the text that describes the expected input. For example:
+
+```html
+<label>Name
+  <input type="text">
+</label>
+```
+
+You can also use the `for` attribute with an id of the input element like so.
+
+```html
+<label for="name-field">Name</label>
+<input type="text" id="name-field">
+```
+
 ## Select Boxes
 
 ## Radio and Checkboxes
 
-## Hidden Input Elements?
+## Hidden
 
 ## Buttons
 
@@ -333,13 +346,16 @@ When you bind an event handler to something that has a _default action_, the han
 
 
 ```javascript
-$("#myForm").on("submit", function(){
-    if (some_error_condition) {
-	    var errDiv = $('<div class="error">Please fix your phone number</div>');
-        $("#myForm").append(errDiv);
-        return false; // This tells the submission not to happen
-    }
-})
+var myForm = document.getElementById('myForm');
+myForm.addEventListener('submit', function() {
+  if (some_error_condition) {
+    var errDiv = document.createElement('div');
+    errDiv.className = 'error';
+    errDiv.textContent = 'Please fix your phone number';
+    myForm.appendChild(errDiv);
+    return false; 			// This tells the submission not to happen
+  }
+});
 ```
 
 ## Displaying Validation with Materialize
