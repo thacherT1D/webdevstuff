@@ -1,6 +1,17 @@
 ## Objectives
 
-- Stuff
+- Explain what is Material Design
+- Explain why Material Design is useful
+- Use Material Design through the Materialize framework
+
+### What is Material Design?
+
+
+### What is Material Design useful?
+
+
+### How do you use the Materialize framework?
+
 
 ## Exercise
 
