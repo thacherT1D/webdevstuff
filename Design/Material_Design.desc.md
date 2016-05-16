@@ -4,7 +4,7 @@
 - Explain why Material Design is useful.
 - Use Material Design through the Materialize framework.
 
-### What is Material Design?
+## What is Material Design?
 
 **Material Design** is a visual language, developed by Google, inspired by the study of paper and ink. It uses typography, grids, space, scale, depth, color, and motion to form a user interface that gives hierarchy, meaning, and focus to content.
 
@@ -12,13 +12,21 @@ To see it in action, watch this video on [Material Design by Google](https://www
 
 To learn more details, check out the [documentation on Material Design](https://www.google.com/design/spec/what-is-material/environment.html)
 
-### What is Material Design useful?
+### Exercise
+
+After having explored the above resources, turn to a partner and explain what Material Design is in your own words.
+
+## What is Material Design useful?
 
 Not only can web developers use Material Design to create a stunning, unified experience across platforms and device sizes, they can use it help close the gap between their taste versus their abilities.
 
-Watch this video on [The Gap by Ira Glass](https://www.youtube.com/watch?v=3ResTHKVxf4)
+To learn more about it, watch this video on [The Gap by Ira Glass](https://www.youtube.com/watch?v=3ResTHKVxf4)
 
-### How do you use the Materialize framework?
+### Exercise
+
+After having explored the above resource, take a moment and write down your thoughts on how you've been perceiving your own gap.
+
+## How do you use the Materialize framework?
 
 
 ## Exercise
