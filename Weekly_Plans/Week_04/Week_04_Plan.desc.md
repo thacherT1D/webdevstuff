@@ -1,15 +1,14 @@
 # Week 4 (May 16 - May 20)
 ## Weekly Objective
 
-- Objective 1
-- Objective 2
-- Objective 3
+- Explain how the Web works
+- Build HTML Forms and Controls
 
 ---
 
 # Monday, May 16
 
-Warmup: [Link to Warmup](http://github.com/gSchool)
+Warmup: [CSS Wireframe Warmup](https://github.com/gSchool/cssWireframeWarmup)
 
 Lessons:
 - [Intro to the Web](https://workbook.galvanize.com/cohorts/68/articles/3111)
