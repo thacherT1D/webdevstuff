@@ -12,8 +12,8 @@
 Warmup: [Link to Warmup](http://github.com/gSchool)
 
 Lessons:
-- [Intro to the Web](https://workbook.galvanize.com/cohorts/68/student_dashboard)
-- [HTML Forms](https://workbook.galvanize.com/cohorts/68/student_dashboard)
+- [Intro to the Web](https://workbook.galvanize.com/cohorts/68/articles/3111)
+- [HTML Forms](https://workbook.galvanize.com/cohorts/68/articles/3067)
 
 
 ---
