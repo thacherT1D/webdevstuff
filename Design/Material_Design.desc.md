@@ -6,9 +6,13 @@
 
 ### What is Material Design?
 
+**Material Design** is a visual language, developed by Google, inspired by the study of paper and ink. It uses typography, grids, space, scale, depth, color, and motion to form a user interface that gives hierarchy, meaning, and focus to content.
+
+[Watch this video on Material Design](https://www.youtube.com/watch?v=Q8TXgCzxEnw)
 
 ### What is Material Design useful?
 
+Web developers can use Material Design to create a stunning unified experience across platforms and device sizes.
 
 ### How do you use the Materialize framework?
 
