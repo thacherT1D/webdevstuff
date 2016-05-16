@@ -53,7 +53,7 @@ In short, Materialize will help you produce better looking sites faster. And as 
 
 ## How do you use the Materialize framework?
 
-We'll use Materialize's [official documentation](http://materializecss.com/getting-started.html) to get started.
+We'll use Materialize's [official documentation](http://materializecss.com/getting-started.html) to create a style guide that you can reference at any time.
 
 ## Assessment
 
