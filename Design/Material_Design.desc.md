@@ -3,6 +3,7 @@
 - Explain what Material Design is.
 - Explain why Material Design is useful.
 - Explain what the Materialize framework is.
+- Explain why the Materialize framework is useful.
 - Use the Materialize framework to implement Material Design.
 
 ## What's Material Design?
@@ -29,11 +30,20 @@ After having explored the above resource, take a moment and write down your thou
 
 ## What's the Material framework?
 
+A **framework** is software that provides a generic template of functionality which can be selectively changed and enhanced by writing additional code. **Materialize** is a modern, responsive, front-end framework based on Material Design. In short, Materialize has done most of the heavy lifting for you in terms of a cohesive visual language. Materialize provides a default set of stylized components that you can incorporate into your own application and tweak as necessary.
+
+To see it in action, check out some of these [Materialize web sites](http://materializecss.com/showcase.html).
+
+### Exercise
+
+
+## Why is the Materialize framework useful?
+
 
 ## How do you use the Materialize framework?
 
 
-## Exercise
+## Assessment
 
 [Galvanize Delivers](https://github.com/gSchool/galvanize-delivers/)
 
