@@ -39,7 +39,7 @@ To see it in action, check out some of these components.
 - [Navbar](http://materializecss.com/navbar.html)
 - [Footer](http://materializecss.com/footer.html)
 
-To see a few examples, check out this [showcase of user-submitted Materialize web sites](http://materializecss.com/showcase.html).
+To see a few examples of Materialize, check out this [showcase of user submitted web sites](http://materializecss.com/showcase.html).
 
 ### Exercise
 
