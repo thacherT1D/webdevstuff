@@ -3,7 +3,7 @@
 - Explain what Material Design is.
 - Explain why Material Design is useful.
 - Explain what the Materialize framework is.
-- Explain why the Materialize framework is useful.
+- Explain how the Materialize framework compares against its competition.
 - Use the Materialize framework to implement Material Design.
 
 ## What's Material Design?
@@ -45,11 +45,15 @@ To see a few examples, check out some of these [Materialize web sites](http://ma
 
 After having explored the above resources, turn to a partner and explain what Materialize is in your own words.
 
-## Why is the Materialize framework useful?
+## How does the Materialize framework compare against its competition?
 
+Having received nearly 20,000 stars in GitHub, Materialize fairs quite well when evaluated against its hundreds of rival competitors. Although, Materialize definitely takes a back seat when compared to Bootstrap and Foundation, the two largest and most popular front-end frameworks. These two frameworks are famous for providing everything plus the kitchen sink. However, this is a double-edged sword as they both have a steep learning curves. They also both require significant amounts of additional code to get their sites looking not-so drab out of the box.
+
+In short, Materialize will help you produce better looking sites faster. And as bonus, the skills you pick up while learning Materialize will help you figure out other front-end frameworks faster as well.
 
 ## How do you use the Materialize framework?
 
+We'll use Materialize's [official documentation](http://materializecss.com/getting-started.html) to get started.
 
 ## Assessment
 
