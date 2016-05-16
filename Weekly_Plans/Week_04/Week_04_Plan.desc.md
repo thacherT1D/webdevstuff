@@ -17,19 +17,13 @@ Lessons:
 
 ---
 
-# Tuesday, May 17
+# Tuesday, May 17 - Jordan
 
 Warmup: [Link to Warmup](http://github.com/gSchool)
 
 Lessons:
-- [Lesson](https://workbook.galvanize.com/cohorts/68/student_dashboard)
-- [Lesson](https://workbook.galvanize.com/cohorts/68/student_dashboard)
-
-Homework: [Homework](https://workbook.galvanize.com/cohorts/68/student_dashboard)
-
-Announcements:
-- Announcement 1
-- Announcement 2
+- [Agile Workflow](https://coursework.galvanize.com/curriculums/56/articles/3116)
+- [AJAX](https://coursework.galvanize.com/curriculums/56/articles/3112)
 
 ---
 
