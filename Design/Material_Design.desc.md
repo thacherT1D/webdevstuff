@@ -8,7 +8,7 @@
 
 ## What's Material Design?
 
-**Material Design** is a visual language, developed by Google, inspired by the study of paper and ink. It uses typography, grids, space, scale, depth, color, and motion to form a user interface that gives hierarchy, meaning, and focus to content.
+**Material Design** is a visual language developed by Google that's inspired by the study of paper and ink. It uses typography, grids, space, scale, depth, color, and motion to form a user interface that gives hierarchy, meaning, and focus to content.
 
 To see it in action, watch this video on [Material Design by Google](https://www.youtube.com/watch?v=Q8TXgCzxEnw)
 
@@ -26,7 +26,7 @@ To learn more about it, watch this video on [The Gap by Ira Glass](https://www.y
 
 ### Exercise
 
-After having explored the above resource, take a moment and write down your thoughts on how you've been perceiving your own gap.
+After having explored the above resource, take a moment and write down your thoughts on how you've been feeling about your own gap.
 
 ## What's the Material framework?
 
@@ -39,7 +39,7 @@ To see it in action, check out some of these components.
 - [Navbar](http://materializecss.com/navbar.html)
 - [Footer](http://materializecss.com/footer.html)
 
-To see a few examples, check out some of these [Materialize web sites](http://materializecss.com/showcase.html).
+To see a few examples, check out this [showcase of user-submitted Materialize web sites](http://materializecss.com/showcase.html).
 
 ### Exercise
 
