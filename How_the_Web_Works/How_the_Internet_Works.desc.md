@@ -26,23 +26,23 @@ Knowing how the internet works at a deeper level is essential when becoming a we
 * __1960s__ ARPANET - The beginnings of the internet
   *  Professor Leonard Kleinrock at UCLA sent the first message over a wide area network to a computer at Stanford Research Institute
   * The internet is born!
-  
+
 * __1980s__ TCP/IP standardized
    * TCP/IP is the specification that is still used on the internet today
    * It's the building blocks of HTTP and allows lower level computer to computer communication
-   
+
 * __1989__ Tim Burners-Lee invents what becomes the world wide web while at CERN
    * The idea of the internet as we know it today was derived here
    * [The first website](http://info.cern.ch/hypertext/WWW/TheProject.html)
-   * Burners-Lee also found the W3C which is a standards group that still creates web standards today
-   
+   * Burners-Lee also founded the W3C which is a standards group that still creates web standards today
+
 * __1993__ Mosaic Browser (Later Netscape)
    * The first popular browser was created at UIUC by [Marc Andreessen](http://en.wikipedia.org/wiki/Marc_Andreessen)
    * After Andreessen graduated, he formed a company and created Netscape Navigator
 * __1993 - 1999__ Rapid rise in popularity of the world wide web
 * __1995__ Javascript created in 10 days by Netscape
 * __1999__ Microsoft creates the XMLHTTP ActiveX control in Internet Explorer 5, which was later adopted by Mozilla, Safari, Opera and other browsers as the XMLHttpRequest JavaScript object.
-* __2005__ The term AJAX is coined and gains tremendous popularity 
+* __2005__ The term AJAX is coined and gains tremendous popularity
 * __2009__ EMCAScript 5 is agreed upon, javascript becomes more unified
 
 
@@ -109,13 +109,13 @@ __EXERCISE__
 2. Find at least 5 urls and identify all of the pieces of the url.  Try to find all of the different components of a url in your urls (note: finding a url with a different port will be hard).
 
 ### __HTTP Request Format__
-A HTTP request in general has a start line, 0 or more headers, an empty line and optionally a body.  More specifically, in a HTTP request, there is a request line (the start line): ```GET /hello.html HTTP/1.1```. And in an HTTP response, there is a status line for the start line:  ```HTTP/1.1 200 OK ``` 
+A HTTP request in general has a start line, 0 or more headers, an empty line and optionally a body.  More specifically, in a HTTP request, there is a request line (the start line): ```GET /hello.html HTTP/1.1```. And in an HTTP response, there is a status line for the start line:  ```HTTP/1.1 200 OK ```
 
 #### __HTTP Verbs__
 HTTP has several "verbs", which are standard words that help servers understand what kind of request they're getting. These verbs describe what you're trying to do.
 Mainly, you'll be doing GET and POST requests, but you may do some PUT and DELETE requests as well.
 
-**GET** is used when you want to get a resource, like a webpage. When you open up a url in your browser, you're issuing a GET request. An important point about _GET_ requests is that they must be idempotent.  In other words, if a get request is made many times in a row, it does not change any state on the server. 
+**GET** is used when you want to get a resource, like a webpage. When you open up a url in your browser, you're issuing a GET request. An important point about _GET_ requests is that they must be idempotent.  In other words, if a get request is made many times in a row, it does not change any state on the server.
 
 **POST** is used when you want to send the server some information.  Unlike _GET_ requests, _POST_ requests are not typically idempotent. When you submit a form to a webserver, often you're using a POST request to do it. A POST submission of a form in HTML is different in that you don't see the form values in the URL, they are instead inside the _request body_.  
 
@@ -254,7 +254,7 @@ Postman-Token: 4ce8b655-abae-8aed-af11-058633be3129
 __Sample Response__
 
 ```
-HTTP/1.1 200 OK 
+HTTP/1.1 200 OK
 alternate-protocol: 443:quic,p=1
 cache-control: private, max-age=0
 content-encoding: gzip
@@ -285,7 +285,7 @@ The program we just introduced was called cURL. It's a terminal program that can
 
 Next we are going to make some requests to a server to GET and POST data about the class.  To do that, we'll use curl.
 
-__Curl__ is a command line utility that can do pretty much anything your browser does for you to interact with a web server. 
+__Curl__ is a command line utility that can do pretty much anything your browser does for you to interact with a web server.
 
 Run these commands in your terminal, and paste each one into [Explain Shell](http://explainshell.com/) as well.
 
@@ -313,7 +313,7 @@ Curl has many parameters, for example to add a header to the request:
 curl -v -H "Accept: text/html" -X GET https://www.google.com
 ```
 
-We can even specify cookies to be sent with the request.  In the example, the name of 
+We can even specify cookies to be sent with the request.  In the example, the name of
 the cookie is cookie and the value is jar.
 
 ```
@@ -330,7 +330,7 @@ What is a POST request? Why would we use one? How does it differ from a GET requ
 
 A POST request is used in order to send data from the requestor to the server. The server can then parse the _request body_ in order to get information out of it, and often do something on the server with that information (like put it in a database).
 
-Here's how we'd put data in the body of the request using cURL. 
+Here's how we'd put data in the body of the request using cURL.
 
 ```
 curl -v --data @myfilenamewithdata.json -X POST https://www.google.com
@@ -359,7 +359,7 @@ Go to this [student roster page](https://g22-students.herokuapp.com/). It is emp
     * The json object must contain 3 fields: __name__, __hobby__, and __avatar__.  The avatar value should be a url of a picture of you.
     * Look at the response you get.  Make note of the id that was returned.
 3. Make another GET request to [https://g22-students.herokuapp.com/students](https://g22-students.herokuapp.com/students) to make sure your name got posted. Make your request verbose.
-4. Now that you've seen your name on the website, make a http DELETE request to remove your name.  The delete request must be sent to 
+4. Now that you've seen your name on the website, make a http DELETE request to remove your name.  The delete request must be sent to
 
 ### Stretch Assignment
 
