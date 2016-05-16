@@ -40,17 +40,17 @@ Without CSS our version looks a little sad, but it can collect information  all 
 
 Forms contain a collection of __form elements__ which have defined behavior when wrapped inside of a `<form>` tag. While it's perfectly vaild to use form elements like `<button>` and `<input>` outside of a form they behave in convienent and useful ways when combined with `<form>`.
 
-## Form Types
+# Form Types
 
 Keep in mind that there are [a huge number](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input) of input types, especially for browsers with HTML5 support.
 
-### Text
+## Text
 
 The most common and versatile input type is a standard field for the user to enter text.
 
 **_Whenever browser does not recognize a type, it will default to a text type._**
 
-#### Semantic Input
+### Semantic Input
 
 Remember when we talked about Semantic HTML? We also have semantic input types to help _describe_ what the input is looking for with some additional benefits.
 
@@ -65,38 +65,39 @@ There are multiple text inputs that boil down to a very similar visual. They inc
 * url (special keyboards, basic url validation, etc)
 * tel (cleans content, etc)
 
-### Select Boxes
+## Select Boxes
 
-### Radio and Checkboxes
+## Radio and Checkboxes
 
-### Hidden Input Elements?
+## Hidden Input Elements?
 
-### Buttons
+## Buttons
 
-#### Submit vs Reset
+### Submit vs Reset
 
-### And many more...
+## And many more...
 
 The rest of the challenges in our repo ([https://github.com/gSchool/html-forms](https://github.com/gSchool/html-forms)) will have you experiment with other input types including `checkbox`, `hidden`, `radio button`, and more. Knowing what types of inputs are available is essential too designing a form that is simple and easy to use. When you encounter a new type ask yourself "what would I use this for?"
 
 ```
- <form action="index.html" method="get">
-      <fieldset>
-        <legend>Size</legend>
-        <label>For text</label>
-        <input id="1"/>
+<form action="index.html" method="get">
+  <fieldset>
+    <legend>Size</legend>
+    <label>For text</label>
+    <input id="1"/>
 
-        <label>For Second Text</label>
-        <input id="2" name="secondText" type="text"/>
+    <label>For Second Text</label>
+    <input id="2" name="secondText" type="text"/>
 
-        <label>For textarea</label>
-        <textarea id="textArea1" name="textArea1"></textarea>
+    <label>For textarea</label>
+    <textarea id="textArea1" name="textArea1"></textarea>
 
-        <label>For Second Text Area</label>
-        <textarea id="textArea2" name="preFilledTA"></textarea>
-      </fieldset>
-      <label>For Email</label>
-      <input id="3" name="email" type="email"/>
+    <label>For Second Text Area</label>
+    <textarea id="textArea2" name="preFilledTA"></textarea>
+  </fieldset>
+  <label>For Email</label>
+  <input id="3" name="email" type="email"/>
+</form>
 ```
 
 ## Common Attributes
@@ -114,11 +115,11 @@ The rest of the challenges in our repo ([https://github.com/gSchool/html-forms](
 * tabindex
 * value
 
-## Materialize Forms
+# Materialize Forms
 
 Let's start with the Materialize [http://materializecss.com/forms.html](documentation) on forms specifically. Materialize includes some simple ways to make your forms look awesome.
 
-## Form Action and Method
+# Form Action and Method
 
 Lets experiment with building forms. Clone the repo found here and complete challenge 1: [https://github.com/gSchool/html-forms](https://github.com/gSchool/html-forms)
 
@@ -158,7 +159,7 @@ For each input element, I have a query parameter corresponding to the name prope
 
 The `name` property is essential in the use of forms. Remember that `id` and `name` serve different purposes in forms. `id` is still used to uniquely identify an element anywhere on the page, but `name` is used to track data within the forms.
 
-### What About that Table?
+## What About that Table?
 
 How did we extract the information sent in query params and put it in a table? Try looking at the file js/app.js in the cloned repo. Here is the most important snippet from that code:
 
@@ -171,7 +172,7 @@ var pairs = queryString.split('&').map(function (pair) {
 
 We've used JavaScript and the `document.location` object to extract the query parameters. Challenge yourself to understand how this code works!
 
-## Controlling Forms
+# Controlling Forms
 
 The final piece of forms is controlling their behavior. As we've seen, it's simple enough to cobble together a form that accepts a wide range of inputs. It's also easy to use those inputs as query parameters for a simple HTTP GET request to the current URL. What if we want to do something different with that information?
 
@@ -264,8 +265,6 @@ Now that we've done some validation with HTML5, it's time to use JS to finish up
 
 ### Accessing values
 
-Not every form can be checked with a simple "type" field. Also, [not every browser](http://caniuse.com/#search=type%3D) can use every type. So, we need to do some validation using jQuery.
-
 There are a number of validation libraries that we can use, that will allow us to validate our forms using code someone else has written. Rather than doing that, however, we need to understand how these libraries go about doing what they do, which we'll do by doing some implementation.
 
 First, let's look at how to go about getting the values of the form:
@@ -275,15 +274,12 @@ First, let's look at how to go about getting the values of the form:
 Given: `<input type="phone" name="phone" id="phone">`
 
 ```javascript
-//jQuery
-var phoneValue = $("#phone").val();
-//Vanilla
-var phoneValue = document.getElementById("phone").
+var phoneValue = document.getElementById("phone").value;
 ```
 
 Using either of these techniques, we can access the current value of any `input` element. This also works for `textarea` elements as well.
 
-Take a look at the code below for how to access other kinds of form input through **vanilla javascript**.
+Take a look at the code below for how to access other kinds of form input through the DOM.
 
 ```javascript
 var form = document.querySelector('#some-form');
@@ -300,19 +296,6 @@ input.disabled;           // Get input disabled status
 
 [source: gomakestuff](http://gomakethings.com/ditching-jquery/#working-with-forms)
 
-
-**jQuery Version**
-
-```javascript
-var form = $('#some-form');
-var input = $('#some-input');
-
-input.val(); // Get input value
-input.getAttr("name"); // Get input name
-input[0].checked; // Get the checked status of a checkbox or radio button
-input[0].disabled; // Get input disabled status
-```
-
 [(why we're using .checked)](https://jsperf.com/prop-vs-ischecked/5)
 
 
@@ -320,26 +303,26 @@ input[0].disabled; // Get input disabled status
 
 Now that we know how to access values, we need to know when to access them. If we were to use the above code when the page loads, we would only see blank or placeholder values. Why? Because we need to wait to check these until the user tries to submit the form, or until the user is done filling out the field.
 
-**.on("submit")**  
+**submit event**  
 
 In order to check the form when the user hits the "I'm finished filling out this form button", we need to listen for the "submit" action on the form. *Remember, we need to select the form, not the submit button.* This is for when you want to validate the entire form at once.
 
 ```javascript
-$("#myForm").on("submit", function(){
+var myForm = document.getElementById('myForm');
+myForm.addEventListener('submit', function () {
 	// do entire form validation here
-})
-
+});
 ```
 
-**.on("blur")**  
+**blur event**  
 
 If we want to check a field as soon as a user is done typing, we can listen to the "blur" event. The blur event fires as soon as a field loses focus.
 
 ```javascript
-$("#myInput").on("blur", function(){
+var myForm = document.getElementById('myForm');
+myForm.addEventListener('blur', function () {
 	// do single input validation here
-})
-
+});
 ```
 
 #### What do I do if there's an error?
