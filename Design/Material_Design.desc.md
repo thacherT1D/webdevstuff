@@ -47,7 +47,7 @@ After having explored the above resources, turn to a partner and explain what Ma
 
 ## How does the Materialize framework compare against its competition?
 
-Having received nearly 20,000 stars in GitHub, Materialize fairs quite well when evaluated against its hundreds of rival competitors. Although, Materialize definitely takes a back seat when compared to Bootstrap and Foundation, the two largest and most popular front-end frameworks. These two frameworks are famous for providing everything plus the kitchen sink. However, this is a double-edged sword as they both have a steep learning curves. They also both require significant amounts of additional code to get their sites looking not-so drab out of the box.
+Having received over [18,000 stars on GitHub](https://github.com/Dogfalo/materialize), Materialize fairs quite well when evaluated against its hundreds of rival competitors. Although, Materialize definitely takes a back seat when compared to Bootstrap and Foundation, the two largest and most popular front-end frameworks. These two frameworks are famous for providing everything plus the kitchen sink. However, this is a double-edged sword as they both have a steep learning curves. They also both require significant amounts of additional code to get their sites looking not-so drab out of the box.
 
 In short, Materialize will help you produce better looking sites faster. And as a bonus, the skills you pick up while learning Materialize will help you figure out other front-end frameworks faster as well.
 
