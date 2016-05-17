@@ -82,7 +82,7 @@ Here's the list of visuals we'll go over together at a glance.
 
 ## Assessment
 
-[Galvanize Delivers](https://github.com/gSchool/galvanize-delivers/)
+Work on the landing page for [Galvanize Delivers](https://github.com/gSchool/galvanize-delivers/).
 
 ### Resources
 
