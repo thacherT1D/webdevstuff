@@ -1,27 +1,26 @@
-# Objectives
+## Objectives
 
-* Use the `<input>`, `<select>`, and `<button>` form tags.
-* Use multiple types of `<input>` tags.
-* Add labels using the `<label>` tag.
-* Create a form using the `<form>` tag.
-* Use HTML5 form validation.
-* Use other HTML5 techniques to validate input.
-* Read the values from your form with JavaScript.
-* Validate user data in JavaScript.
-* Listen to form submission and show errors.
-* Program defensively against faulty user data.
+* Explain what a web form is.
+* Explain what control tags are.
+* Build interactive controls with the `<input>`, `<select>`, and `<textarea>` tags.
+* Add labels to these controls with the `<label>` tag.
+* Create forms using the `<form>` tag.
+* Verify user data with the built-in HTML5 form validation.
+* Verify user data with other types of form validation.
 
-If you've ever entered your credit card information to a website, performed a search on Google, or logged into Facebook then you've used forms. Forms are far and away the most common method of getting information from your user into your programs. Sometimes this information never leaves the browser, and sometimes it is sent to a web server.
+## What's a web form?
 
-## HTML forms
+If you've ever given your credit card information to a website, performed a search on Google, or logged into Facebook then you've used a web form. **Web forms** (or just forms) are the main way of getting information from your user into your application. Sometimes this information never leaves the browser and sometimes it's sent to a web server.
 
-At it's core www.google.com is a simple form with one input and two buttons. With a little CSS we could recreate what we see on Google with some dead simple HTML.
+At it's core, Google's search page is a simple web form with one input and two buttons.
 
 ![](http://i.imgur.com/hcP92bJ.png)
 
+With a little code, we can easily recreate their form.
+
 ```html
 <form>
-	<input type="text"/>
+	<input type="text">
 
 	<div>
 		<button>Google Search</button>
@@ -30,19 +29,26 @@ At it's core www.google.com is a simple form with one input and two buttons. Wit
 </form>
 ```
 
-Without CSS our version looks a little sad, but it can collect information all the same.
+Like all forms, this one contains a few control tags.
 
-![](http://i.imgur.com/vqOjeBe.png)
+## What's a control tag?
 
-Forms contain a collection of **form elements** which have predefined behavior when nested inside of a `<form>` tag. While it's perfectly valid to use form elements like `<button>` and `<input>` outside of a form, they behave in convenient and useful ways when combined with `<form>`.
+The following HTML tags are **control tags**—tags that build elements which a user can control to give information.
 
-## Form Types
+- `<input>`
+- `<select>`
+- `<textarea>`
+- `<button>`
 
-Keep in mind that there are [a huge number](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input) of input types, especially for browsers with HTML5 support.
+Before the rise of JavaScript, control tags were always nested within a `<form>` tag. That's because control tags have a predefined behavior when nested inside of a `<form>` tag. Nowadays, the `<form>` element isn't needed anymore. Fortunately for you, we'll be teaching you both techniques.
+
+## The `<input>` tag
+
+There are [many ways](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input) the `<input>` tag can be used. Let's study a few now.
 
 ### Text
 
-The most common and versatile input type is a standard field for the user to enter text. **_Whenever browser does not recognize a type, it will default to a text type._**
+The most common and versatile input type is a standard field for the user to enter text. **Whenever browser does not recognize a type, it will default to a text type.**
 
 ### Semantic HTML Revisited
 
