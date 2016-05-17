@@ -75,15 +75,9 @@ Additionally, there are the following non-textual controls.
 The `<input>` control also has a `radio` and `checkbox` type for displaying both radio buttons and checkboxes respectively. Both of these types allow the user to select options from a set of choices. The key difference is that radio buttons only allow one choice.
 
 ```html
-<input type="radio" name="dairy" value="Milk"> Milk
-<input type="radio" name="dairy" value="Butter" checked> Butter
-<input type="radio" name="dairy" value="Cheese"> Cheese
-
-<hr>
-
-<input type="radio" name="flower" value="Daisy"> Daisy
-<input type="radio" name="flower" value="Lily"> Lily
-<input type="radio" name="flower" value="Rose" checked> Rose
+<input type="radio" name="rappers" value="Biggie"> Biggie
+<input type="radio" name="rappers" value="Dre"> Dre
+<input type="radio" name="rappers" value="Snoop" checked> Snoop
 ```
 
 As you can see, each radio button must belong to a **group** which is defined by setting the `name` attribute to the same value. This forces one radio button to be selected per group.
@@ -91,9 +85,9 @@ As you can see, each radio button must belong to a **group** which is defined by
 On the other hand, checkboxes use `type="checkbox"` and it's `name` must be different per `<input>` control.
 
 ```html
-<input type="checkbox" name="option1" value="Milk"> Milk
-<input type="checkbox" name="option2" value="Butter" checked> Butter
-<input type="checkbox" name="option3" value="Cheese"> Cheese
+<input type="checkbox" name="rapper1" value="Ice Cube"> Ice Cube
+<input type="checkbox" name="rapper2" value="Kanye" checked> Kanye
+<input type="checkbox" name="rapper3" value="Eminem"> Eminem
 ```
 
 ### Hidden fields
