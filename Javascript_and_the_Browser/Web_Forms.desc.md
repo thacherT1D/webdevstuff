@@ -67,7 +67,6 @@ There are multiple text inputs that boil down to a very similar visual. They inc
 <input type="email">
 <input type="password">
 <input type="url">
-<input type="url">
 ```
 
 ### Radios and Checkboxes
