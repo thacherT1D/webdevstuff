@@ -168,7 +168,7 @@ Buttons contain a `type` attribute with three options.
 
 ## And many more...
 
-There are more challenges in our repo ([https://github.com/gSchool/html-forms](https://github.com/gSchool/html-forms)) that will have you experiment with other input types including `image`, `file `, `date`, and more. Knowing what types of inputs are available is essential to designing a form that is simple and easy to use. When you encounter a new type ask yourself "what would I use this for?"
+There are more challenges in [this repository](https://github.com/gSchool/html-forms) where you can experiment with the basic control tags. Knowing what types of inputs are available is essential to designing a form that is simple and easy to use. When you encounter a new type ask yourself "what would I use this for?"
 
 ## Common Attributes
 
