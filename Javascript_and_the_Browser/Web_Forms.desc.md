@@ -123,9 +123,9 @@ You can create select boxes that allow the user to choose from a set of options.
 ```html
 <!-- The second option will be initially selected. -->
 <select>
-  <option value="Banana">Banana</option>
-  <option value="Cherry" selected>Cherry</option>
-  <option value="Lemon">Lemon</option>
+  <option value="basketball_wives_la">Basketball Wives LA</option>
+	<option value="get_rich_or_die_tryin" selected>Get Rich or Die Tryin'</option>
+  <option value="black_ink_crew">Black Ink Crew</option>
 </select>
 ```
 
@@ -134,9 +134,9 @@ Multiple choice select boxes.
 ```html
 <!-- The second and third option will be initially selected. -->
 <select multiple>
-  <option value="Banana">Banana</option>
-  <option value="Cherry" selected>Cherry</option>
-  <option value="Lemon" selected>Lemon</option>
+	<option value="the_jame_foxx_show">The Jamie Foxx Show</option>
+	<option value="fresh_prince_of_bel_air" selected>Fresh Prince of Bel-Air</option>
+  <option value="love_and_hip_hop_atlanta">Love and Hip Hop Atlanta</option>
 </select>
 ```
 
