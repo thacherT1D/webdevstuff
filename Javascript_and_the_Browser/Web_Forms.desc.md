@@ -39,22 +39,21 @@ The following HTML tags are **control tags**—tags that build elements which a 
 - `<select>`
 - `<textarea>`
 - `<button>`
+- `<label>`
 
 Before the rise of JavaScript, control tags were always nested within a `<form>` tag. That's because control tags have a predefined behavior when nested inside of a `<form>` tag. Nowadays, the `<form>` element isn't needed anymore. Fortunately for you, we'll be teaching you both techniques.
 
 ## The `<input>` tag
 
-There are [many ways](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input) the `<input>` tag can be used. Let's study a few now.
+There are [many ways](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input) the `<input>` control tag can be used. But the most common (and default) way is as a single-line text field.
 
-### Text
-
-The most common and versatile input type is a standard field for the user to enter text. **Whenever browser does not recognize a type, it will default to a text type.**
-
-### Semantic HTML Revisited
+```html
+<input type="text">
+```
 
 Remember when we talked about Semantic HTML? We also have semantic input types to help _describe_ what the input is looking for with some additional benefits.
 
-* Provides some basic validation (ie. verifying the input is in the correct format).
+* Provides some basic validation (i.e. verifying the input is in the correct format).
 * Some special JavaScript properties to access the input in a reliable format.
 * Some special Operating System considerations when adding input. (eg. iOS keyboards for email, url, etc.)
 
@@ -65,7 +64,14 @@ There are multiple text inputs that boil down to a very similar visual. They inc
 * url (special keyboards, basic url validation, etc)
 * tel (cleans content, etc)
 
-#### Label Element
+```html
+<input type="email">
+<input type="password">
+<input type="url">
+<input type="url">
+```
+
+## The `<label>` tag
 
 Each form element will usually have some sort of caption that instructs the user on what the input is looking for. For example, next to a text box with a caption "Name", you are then expected to type your name in. We use the `<label>` element to specify the text that describes the expected input. For example:
 
