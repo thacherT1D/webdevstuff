@@ -161,17 +161,9 @@ Buttons contain a `type` attribute with three options.
 * `reset`
 
 ```html
-<button type="button">
-    This an <br><strong>anonymous button</strong>
-</button>
-
-<button type="submit">
-    This a <br><strong>submit button</strong>
-</button>
-
-<button type="reset">
-    This a <br><strong>reset button</strong>
-</button>
+<button type="button">This an anonymous button</button>
+<button type="submit">This a submit button</button>
+<button type="reset">This a reset button</button>
 ```
 
 ## And many more...
