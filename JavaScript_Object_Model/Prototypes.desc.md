@@ -27,12 +27,12 @@ Now imagine that there are 100 specialists. Pause a moment and observe the follo
 Our specialist would be served better if there were just one library that could be accessed and updated. What we are describing is the use of a prototype!
 
 ***
-#### Exercise: 
+#### Exercise:
 In the context of object-oriented programming, what's a customer support specialist, an identification number, email address, and a library? How do these things translate to objects?
 ***
 
 ### 2 of 6: A Code-Related Example with JavaScript Objects
-JavaScript use prototypes to remove duplication of code. Many of experienced the benefit of this design. Let's demonstrate it with an example:
+JavaScript use prototypes to remove duplication of code. Many of you have experienced the benefit of this design. Let's demonstrate it with an example:
 
 ```javascript
 var obj = {};
@@ -63,7 +63,7 @@ At this moment, we've used a non-code and code related example of prototypes. Bo
 - Real-Time Updating of Code
 
 ***
-#### Exercise: 
+#### Exercise:
 Find a pair and discover a real-world example of prototypes.
 ***
 
@@ -100,7 +100,7 @@ minionOne.sayBanana();
 minionTwo.sayBanana();
 ```
 
-Since the implementation of `sayBanana()` is identical for both minions, this is a moment where we would want to use a prototype. 
+Since the implementation of `sayBanana()` is identical for both minions, this is a moment where we would want to use a prototype.
 
 An object literal's prototype, however, is very restrictive and automatically points to `Object.prototype`. In this context, we have to add `sayBanana()` to `Object.prototype`. This will cause untended consequences.
 
@@ -122,7 +122,7 @@ gollum.sayBanana();
 ```
 
 ***
-#### Exercise: 
+#### Exercise:
 Draw an in-memory diagram of the following snippet:
 
 ```javascript
@@ -154,7 +154,7 @@ Now only `minionOne` and `minionTwo` can access `sayBanana()`. Notice the follow
 
 ***
 
-#### Exercise: 
+#### Exercise:
 Draw an in-memory diagram for the following snippet:
 
 ```javascript
@@ -198,7 +198,7 @@ minionTwo.sayBanana();
 All minions now access `sayBanana()`; moreover, our code is semantically meaningful. We aren't creating just objects; we are creating minions.
 
 ***
-#### Exercise: 
+#### Exercise:
 Draw an in-memory diagram for the following snippet:
 
 ```javascript
