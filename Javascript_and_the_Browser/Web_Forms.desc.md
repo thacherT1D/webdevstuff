@@ -39,7 +39,6 @@ The following HTML tags are **control tags**—tags that build elements which a 
 - `<select>`
 - `<textarea>`
 - `<button>`
-- `<label>`
 
 Before the rise of JavaScript, control tags were always nested within a `<form>` tag. That's because control tags have a predefined behavior when nested inside of a `<form>` tag. Nowadays, the `<form>` element isn't needed anymore. Fortunately for you, we'll be teaching you both techniques.
 
@@ -71,61 +70,79 @@ There are multiple text inputs that boil down to a very similar visual. They inc
 <input type="url">
 ```
 
-## The `<label>` tag
-
-Each form element will usually have some sort of caption that instructs the user on what the input is looking for. For example, next to a text box with a caption "Name", you are then expected to type your name in. We use the `<label>` element to specify the text that describes the expected input. For example:
-
-```html
-<label>Name
-  <input type="text">
-</label>
-```
-
-You can also use the `for` attribute with an id of the input element like so.
-
-```html
-<label for="name-field">Name</label>
-<input type="text" id="name-field">
-```
-
-## Select Boxes
-
-You can create select boxes that allow the user to choose from a set of options. You have the ability to allow users to select multiple options by using the `multiple` attribute.
-
-```html
-<!-- The second value will be selected initially -->
-<select name="select">
-  <option value="value1">Value 1</option>
-  <option value="value2" selected>Value 2</option>
-  <option value="value3">Value 3</option>
-</select>
-```
-
-## Radio and Checkboxes
+### Radios and Checkboxes
 
 Both radio buttons and checkboxes allow the user to select options from a set. The key difference is that radio buttons will only allow one choice.
 
 ```html
-<label><input type="radio" name="group1" value="Milk"> Milk</label><br>
-<label><input type="radio" name="group1" value="Butter" checked> Butter</label><br>
-<label><input type="radio" name="group1" value="Cheese"> Cheese</label><br>
+<input type="radio" name="dairy" value="Milk"> Milk
+<input type="radio" name="dairy" value="Butter" checked> Butter
+<input type="radio" name="dairy" value="Cheese"> Cheese
+
 <hr>
-<label><input type="radio" name="group2" value="Water"> Water</label><br>
-<label><input type="radio" name="group2" value="Beer"> Beer</label><br>
-<label><input type="radio" name="group2" value="Wine" checked> Wine</label><br>
+
+<input type="radio" name="flower" value="Daisy"> Daisy
+<input type="radio" name="flower" value="Lily"> Lily
+<input type="radio" name="flower" value="Rose" checked> Rose
 ```
 
 Notice the `name` attribute. Each radio button belongs to a group with the same `name`. This allows us to have multiple sets of radio buttons where the user can select an option from each group.
 
 ```html
-<label><input type="checkbox" name="option1" value="Milk"> Milk</label><br>
-<label><input type="checkbox" name="option2" value="Butter" checked> Butter</label><br>
-<label><input type="checkbox" name="option3" value="Cheese"> Cheese</label><br>
+<input type="checkbox" name="option1" value="Milk"> Milk
+<input type="checkbox" name="option2" value="Butter" checked> Butter
+<input type="checkbox" name="option3" value="Cheese"> Cheese
 ```
 
-## Hidden
+### Hidden fields
 
 Hidden fields are what as described, hidden. There is no visual for the user to see. These have been quite useful in passing data in through the form that the user does not need to enter specifically (eg. An item ID).
+
+```html
+<input type="hidden" name="secret" value="Tupac is alive">
+```
+
+## The `<label>` tag
+
+Each control tag will usually have some sort of caption that instructs the user on what type of input to give. For example, next to a text box with a caption "Name", you are then expected to type your name in. We use the `<label>` element to specify the text that describes the expected input. For example:
+
+```html
+<label>
+	Name
+  <input type="text">
+</label>
+```
+
+You can also connect a `<label>` tag to an `<input>` tag with the `for` and `id` attributes respectively.
+
+```html
+<label for="name">Name</label>
+<input id="name" type="text">
+```
+
+## The `<select>` tag
+
+You can create select boxes that allow the user to choose from a set of options. You have the ability to allow users to select multiple options by using the `multiple` attribute.
+
+```html
+<!-- The second option will be initially selected. -->
+<select>
+  <option value="Banana">Banana</option>
+  <option value="Cherry" selected>Cherry</option>
+  <option value="Lemon">Lemon</option>
+</select>
+```
+
+Multiple choice select boxes.
+
+```html
+<!-- The second and third option will be initially selected. -->
+<select multiple>
+	<option value="Banana">Banana</option>
+  <option value="Cherry" selected>Cherry</option>
+  <option value="Lemon" selected>Lemon</option>
+</select>
+```
 
 ## Buttons
 
@@ -135,15 +152,25 @@ We've seen plenty of buttons before, but let's dig a little bit deeper.
 <button name="button">Belly</button>
 ```
 
-### Submit vs Reset
-
 Buttons contain a `type` attribute with three options.
 
-* button (default)
-* submit (default when in a form)
-* reset
+* `button` (default)
+* `submit` (default when in a form)
+* `reset`
 
-Buttons when in a form, do nothing. They require some hooking up with JavaScript to do anything meaningful. The `submit` type sends the data in the form to a server that you specify. The `reset` type resets all the controls in the form to their default state.
+```html
+<button type="button">
+    This an <br><strong>anonymous button</strong>
+</button>
+
+<button type="submit">
+    This a <br><strong>submit button</strong>
+</button>
+
+<button type="reset">
+    This a <br><strong>reset button</strong>
+</button>
+```
 
 ## And many more...
 
@@ -166,11 +193,11 @@ With inputs, there are a variety of attributes available to use. Many vary by in
 * tabindex
 * value
 
-# Materialize Forms
+## Materialize Forms
 
 Let's start with the Materialize [http://materializecss.com/forms.html](documentation) on forms specifically. Materialize includes some simple ways to make your forms look awesome.
 
-# HTML and JS Form Validation
+## HTML and JS Form Validation
 
 ## Why?
 
@@ -180,9 +207,9 @@ We're also validating our form input because our programs can't work without pro
 
 So what do we do to ensure we get good input for our programs?
 
-# Form Validation
+## Form Validation
 
-## HTML5 Validation
+### HTML5 Validation
 
 First, we need to make it easy for humans with good intentions to use our interface. We can use a number of HTML5 capabilities to do this, such as tabindex, input types, and patterns.
 
