@@ -1,28 +1,28 @@
 # Objectives
 
-* Use form input tags:
-	* `<input>, <select>, <button>`
-* Use multiple `types` of the `<input>` tag.
-* Use `<label>` tags to add labels to form elements.
-* Create a form in HTML using the `<form>` tag.
-* Use HTML5 input types as a first-line validation technique.
+* Use the `<input>`, `<select>`, and `<button>` form tags.
+* Use multiple types of `<input>` tags.
+* Add labels using the `<label>` tag.
+* Create a form using the `<form>` tag.
+* Use HTML5 form validation.
 * Use other HTML5 techniques to validate input.
-* Read the values from your form with JS.
-* Check the values you've read with JS to make sure they are what they need to be.
-* Listen to form events like submit, and show errors.
-* Program defensively against faulty form input.
+* Read the values from your form with JavaScript.
+* Validate user data in JavaScript.
+* Listen to form submission and show errors.
+* Program defensively against faulty user data.
 
 If you've ever entered your credit card information to a website, performed a search on Google, or logged into Facebook then you've used forms. Forms are far and away the most common method of getting information from your user into your programs. Sometimes this information never leaves the browser, and sometimes it is sent to a web server.
 
-# HTML forms and form elements
+## HTML forms
 
-At it's core www.google.com is a simple form with 1 input and 2 buttons. With a little CSS we could recreate what we see on Google with some dead simple HTML:
+At it's core www.google.com is a simple form with one input and two buttons. With a little CSS we could recreate what we see on Google with some dead simple HTML.
 
 ![](http://i.imgur.com/hcP92bJ.png)
 
-```
+```html
 <form>
 	<input type="text"/>
+
 	<div>
 		<button>Google Search</button>
 		<button>I'm Feeling Lucky</button>
@@ -30,17 +30,17 @@ At it's core www.google.com is a simple form with 1 input and 2 buttons. With a 
 </form>
 ```
 
-Without CSS our version looks a little sad, but it can collect information  all the same.
+Without CSS our version looks a little sad, but it can collect information all the same.
 
 ![](http://i.imgur.com/vqOjeBe.png)
 
-Forms contain a collection of __form elements__ which have defined behavior when wrapped inside of a `<form>` tag. While it's perfectly vaild to use form elements like `<button>` and `<input>` outside of a form they behave in convienent and useful ways when combined with `<form>`.
+Forms contain a collection of **form elements** which have predefined behavior when nested inside of a `<form>` tag. While it's perfectly valid to use form elements like `<button>` and `<input>` outside of a form, they behave in convenient and useful ways when combined with `<form>`.
 
-# Form Types
+## Form Types
 
 Keep in mind that there are [a huge number](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input) of input types, especially for browsers with HTML5 support.
 
-## Text
+### Text
 
 The most common and versatile input type is a standard field for the user to enter text. **_Whenever browser does not recognize a type, it will default to a text type._**
 
@@ -83,7 +83,7 @@ You can create select boxes that allow the user to choose from a set of options.
 ```html
 <!-- The second value will be selected initially -->
 <select name="select">
-  <option value="value1">Value 1</option> 
+  <option value="value1">Value 1</option>
   <option value="value2" selected>Value 2</option>
   <option value="value3">Value 3</option>
 </select>
