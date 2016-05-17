@@ -48,23 +48,25 @@ There are [many ways](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/
 <input type="text">
 ```
 
-Remember when we talked about Semantic HTML? We also have semantic input types to help _describe_ what the input is looking for with some additional benefits.
-
-* Provides some basic validation (i.e. verifying the input is in the correct format).
-* Some special JavaScript properties to access the input in a reliable format.
-* Some special Operating System considerations when adding input. (eg. iOS keyboards for email, url, etc.)
-
-There are multiple text inputs that boil down to a very similar visual. They include:
-
-* email (special keyboards, basic email validation, etc)
-* password (hides characters entered, etc)
-* url (special keyboards, basic url validation, etc)
-* tel (cleans content, etc)
+Remember when we talked about semantic HTML? We also have semantic `<input>` types that help describe the kind nature of the input. Aside from `type="text"`, there's also the following textual controls.
 
 ```html
 <input type="email">
+<input type="search">
 <input type="password">
+<input type="tel">
 <input type="url">
+```
+
+These control types provides some basic input validation, data formatting, and/or special keyboard types on mobile.
+
+Additionally, there are the following non-textual controls.
+
+```html
+<input type="color">
+<input type="date">
+<input type="file">
+<input type="range">
 ```
 
 ### Radios and Checkboxes
