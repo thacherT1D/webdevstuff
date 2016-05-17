@@ -104,16 +104,16 @@ Each control tag will usually have some sort of caption that instructs the user 
 
 ```html
 <label>
-	Name
-  <input type="text">
+	Album
+  <input type="text" name="album">
 </label>
 ```
 
 You can also connect a `<label>` tag to an `<input>` tag with the `for` and `id` attributes respectively.
 
 ```html
-<label for="name">Name</label>
-<input id="name" type="text">
+<label for="album">Album</label>
+<input id="album" type="text" name="album">
 ```
 
 ## The `<select>` tag
