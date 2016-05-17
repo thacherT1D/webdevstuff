@@ -19,11 +19,16 @@ Lessons:
 
 # Tuesday, May 17 - Jordan
 
-Warmup: [Link to Warmup](http://github.com/gSchool)
+Warmup:
+Write a function that takes a string and returns an object with the vowels in that string as keys and their value is how many times they occurred in the string. The counter function should not care about case. The keys in the object should all be lowercase.
+
+ Ex: countVowels('aAbcdade') -> {a:3,e:1}
+
+Please use Test Driven Development.
 
 Lessons:
-- [Agile Workflow](https://coursework.galvanize.com/curriculums/56/articles/3116)
-- [AJAX](https://coursework.galvanize.com/curriculums/56/articles/3112)
+- [Agile Workflow](https://workbook.galvanize.com/cohorts/68/articles/3116)
+- [AJAX](https://workbook.galvanize.com/cohorts/68/articles/3112)
 
 ---
 
