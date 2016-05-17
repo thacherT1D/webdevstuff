@@ -165,8 +165,11 @@ If you run across this error: `XMLHttpRequest cannot load http://example.com/. N
 -  What is XML?
 -  How do we send an AJAX request with raw JavaScript?
 
+## Primary Exercise
 
-## Assessments / Exercises
+- [OMDB XHR Exercise](https://github.com/gSchool/xhr-omdb-exercise)
+
+## Other Exercises
 
 - [Spotify API Usage](https://github.com/gSchool/spotify-albums-and-tracks)
 - [XHR](https://github.com/gSchool/xhr)
