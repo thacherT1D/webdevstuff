@@ -179,15 +179,7 @@ Here are some other exercises:
 - [XHR Exercise](https://github.com/gSchool/xhr)
 - [OMDB](https://github.com/gSchool/omdb_ajax_exercise/tree/12822be5bdde61a2329f90c7033ee50923f5099e)
 
-## Resources
-
-Here are some vanilla JS and jQuery examples and resources:
-
-- [AJAX API Examples](https://github.com/gSchool/front-end-api-examples/)
-- [OMDB Example](https://github.com/gSchool/single-page-omdb)
-- [Old Galvanize Article on AJAX](https://github.com/gSchool/g11-course-curriculum/blob/c400a5988a276b47e7f5f296d550dbcddc8058de/week06/06_lectures/js-ajax-apis/README.md)
-
-## Fun APIs
+## Practice / Public APIs
 
 Here are some great simple starter APIs that are open and easy to use:
 
@@ -196,3 +188,11 @@ Here are some great simple starter APIs that are open and easy to use:
 - [Pokemon API, pokeapi.co](https://pokeapi.co)
 - [List of public APIs](https://github.com/toddmotto/public-apis)
 - [Galvanize APIs](https://github.com/Galvanize-IT/galvanize-apis)
+
+## Resources & Examples
+
+Here are some vanilla JS and jQuery examples and resources:
+
+- [AJAX API Examples](https://github.com/gSchool/front-end-api-examples/)
+- [OMDB Example](https://github.com/gSchool/single-page-omdb)
+- [Old Galvanize Article on AJAX](https://github.com/gSchool/g11-course-curriculum/blob/c400a5988a276b47e7f5f296d550dbcddc8058de/week06/06_lectures/js-ajax-apis/README.md)
