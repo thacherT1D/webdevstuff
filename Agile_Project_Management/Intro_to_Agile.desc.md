@@ -50,8 +50,13 @@ What is Scrum?
 
 What is a user story?
 
+Examples:
+
 - (role) can (action)
 - As a (role) I want (something) so that (benefit)
+
+Resources:
+
 - [Sizing Stories Advice](https://blog.pivotal.io/labs/labs/great-things-come-small-sizes-writing-stories-work-team)
 - [Pivotal Tracker for Beginners](https://www.pivotaltracker.com/flash/flvplayer.swf?file=http://tracker.screencast.s3.amazonaws.com/pivotal-tracker-concepts.flv&image=https://d3jgo56a5b0my0.cloudfront.net/images/v7/application/screenshots/storyview.png&autostart=true%20-%20http://www.mountaingoatsoftware.com/agile/user-stories%20-%20https://help.rallydev.com/writing-great-user-story)
 
