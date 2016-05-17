@@ -13,7 +13,7 @@ Have more questions about thist stuff? Head over here! [http://docs.mongodb.org/
 ### When to use MongoDB
 
 - Flexible Schemas / Less Restriction
-- Multiple writes + clusters 
+- Multiple writes + clusters
 - Full Text Search
 - Because lots of companies have decided to use it with Angular and Express
 
@@ -30,21 +30,15 @@ Have more questions about thist stuff? Head over here! [http://docs.mongodb.org/
   brew install mongodb
   ```
 
-* Then we'll need a directory for **MongoDB** to save data.
+* Then start the mongo service.
 
   ```
-  sudo mkdir -p /data/db
-  ```
-
-  * Finally we'll want to make sure we have permission to read and write to this directory.
-
-  ```
-  sudo chown -R $USER /data/db
+  brew services start mongo
   ```
 
 ### CRUD in Mongo
 
-CRUD? Huh? 
+CRUD? Huh?
 
 - **C** - Create
 - **R** - Read (any kind of finding)
@@ -57,7 +51,7 @@ CRUD? Huh?
 - anywhere in the terminal start a mongo server using `mongod`
 - With the mongo server running, create a new tab in terminal and run `mongo` to start up a mongo shell
 
-To create records 
+To create records
 
 ```
 db.users.insert({name: 'Elie',
@@ -77,7 +71,7 @@ db.users.insert({test: 'foo',
 
 In the mongo shell, the primary method for the read operation is the db.collection.find() method. This method queries a collection and returns a cursor to the returning documents.
 
-What is a cursor? **A pointer to the result set of a query.** 
+What is a cursor? **A pointer to the result set of a query.**
 
 
 ### Specific Finds
@@ -150,11 +144,11 @@ db.users.remove({name:"Elie"})
 
 ### Things to think about
 
-Unlike relational databases, mongo does not provide a built in way to validate our data. We also have yet to examine what relationships look like between our collections! 
+Unlike relational databases, mongo does not provide a built in way to validate our data. We also have yet to examine what relationships look like between our collections!
 
 Also, some of these mongo methods are a bit tedious to work with - how do we just find a single record by ID, and are there easier ways to delete and update? Thankfully there are and we will examine a <s>wonderful</s> tool that we use on top of mongo called `mongoose` which we will examine after the weekend.
 
-## Mongo Concepts 
+## Mongo Concepts
 
 Define these terms and answer these questions in 1-3 sentences (some will require a bit of googling)
 
@@ -163,8 +157,8 @@ Define these terms and answer these questions in 1-3 sentences (some will requir
 * Database
 * Collection
 * Document
-* Cursor 
-* Field 
+* Cursor
+* Field
 * CRUD
 * Relational Database
 * Non-Relational Database
@@ -182,7 +176,7 @@ Define these terms and answer these questions in 1-3 sentences (some will requir
 
 * [MongoDB Manual](http://docs.mongodb.org/manual/)
 * [Mongoose guide](http://mongoosejs.com/docs/guide.html)
-* 
+*
 #Mongoose
 
 > The best thing about Mongoose for MongoDB is the fact that you can have built-in automatic validation of the data which you are inserting/updating. Mongoose also gives you the ability to pre-define events to happen, say, before a document gets saved. This is very powerful because it consolidates the code you would have to write, and it places that code where it should be next to the document logic and not in the application logic.
@@ -246,10 +240,10 @@ Dog.find({ age: 1}, function(err, dogs) { console.log(dogs); });
 ```
 
 ####Exercise
- 
+
  * Find all the dogs, store them in an array called `dogPack`, and then loop through `dogPack` and make each dog bark by printing out "insertDogNamehere says Woof!"
  * Find all labs and console.log() each one
- 
+
  **Think Async**
 
 To Update a Record:
