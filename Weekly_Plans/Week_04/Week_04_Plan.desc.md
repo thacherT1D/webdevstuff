@@ -27,8 +27,8 @@ Write a function that takes a string and returns an object with the vowels in th
 Please use Test Driven Development.
 
 Lessons:
-- [Agile Workflow](https://coursework.galvanize.com/curriculums/56/articles/3116)
-- [AJAX](https://coursework.galvanize.com/curriculums/56/articles/3112)
+- [Agile Workflow](https://workbook.galvanize.com/cohorts/68/articles/3116)
+- [AJAX](https://workbook.galvanize.com/cohorts/68/articles/3112)
 
 ---
 
