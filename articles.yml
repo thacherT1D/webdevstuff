@@ -37,8 +37,8 @@
   :experience_success_criteria: []
 - :name: Learning To Learn
   :uuid: 8b3330ee-c4a7-497e-9bd9-7da9470471b1
-  :subject_uuid: 
-  :subject_name: 
+  :subject_uuid:
+  :subject_name:
   :parent_uuid: e9ff6a3d-8993-4f15-8a1f-3f45035f129f
   :parent_name: Week 1
   :description_link: Learning_to_Learn/Learning_To_Learn.desc.md
@@ -48,8 +48,8 @@
   :experience_success_criteria: []
 - :name: Week 1
   :uuid: e9ff6a3d-8993-4f15-8a1f-3f45035f129f
-  :subject_uuid: 
-  :subject_name: 
+  :subject_uuid:
+  :subject_name:
   :parent_uuid: badbed74-df0b-49c8-bdfb-58ee14199c22
   :parent_name: Q1
   :description_link: ''
@@ -125,19 +125,19 @@
   :experience_success_criteria: []
 - :name: Q1
   :uuid: badbed74-df0b-49c8-bdfb-58ee14199c22
-  :subject_uuid: 
-  :subject_name: 
-  :parent_uuid: 
-  :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :subject_uuid:
+  :subject_name:
+  :parent_uuid:
+  :parent_name:
+  :description_link:
+  :instructor_notes_link:
   :published: true
   :suggested_days: 0.0
   :experience_success_criteria: []
 - :name: Week 2
   :uuid: eaf89ffb-b5ae-4c58-8c29-f139e91b5ed9
-  :subject_uuid: 
-  :subject_name: 
+  :subject_uuid:
+  :subject_name:
   :parent_uuid: badbed74-df0b-49c8-bdfb-58ee14199c22
   :parent_name: Q1
   :description_link: ''
@@ -204,8 +204,8 @@
   :experience_success_criteria: []
 - :name: 'Week 3 '
   :uuid: 049712cf-576f-4836-853a-6742d4c285e1
-  :subject_uuid: 
-  :subject_name: 
+  :subject_uuid:
+  :subject_name:
   :parent_uuid: badbed74-df0b-49c8-bdfb-58ee14199c22
   :parent_name: Q1
   :description_link: ''
@@ -276,8 +276,8 @@
   :experience_success_criteria: []
 - :name: Week 4
   :uuid: c21e8dff-2a0e-4901-8d4d-f4c40cc07a13
-  :subject_uuid: 
-  :subject_name: 
+  :subject_uuid:
+  :subject_name:
   :parent_uuid: badbed74-df0b-49c8-bdfb-58ee14199c22
   :parent_name: Q1
   :description_link: ''
@@ -349,8 +349,8 @@
   :experience_success_criteria: []
 - :name: Week 5
   :uuid: ee2f68b6-8f81-40fa-a372-338c6339f77a
-  :subject_uuid: 
-  :subject_name: 
+  :subject_uuid:
+  :subject_name:
   :parent_uuid: badbed74-df0b-49c8-bdfb-58ee14199c22
   :parent_name: Q1
   :description_link: ''
@@ -404,8 +404,8 @@
   :experience_success_criteria: []
 - :name: APIs for the FrontEnd
   :uuid: 10b4f089-a578-4abf-b613-0714f01ecf07
-  :subject_uuid: 
-  :subject_name: 
+  :subject_uuid:
+  :subject_name:
   :parent_uuid: c21e8dff-2a0e-4901-8d4d-f4c40cc07a13
   :parent_name: Week 4
   :description_link: ''
@@ -415,8 +415,8 @@
   :experience_success_criteria: []
 - :name: Week 6
   :uuid: 5787862e-a4ca-433d-88e9-71225ac45a3f
-  :subject_uuid: 
-  :subject_name: 
+  :subject_uuid:
+  :subject_name:
   :parent_uuid: badbed74-df0b-49c8-bdfb-58ee14199c22
   :parent_name: Q1
   :description_link: ''
@@ -573,7 +573,7 @@
   :subject_uuid: ac805334-f3dd-4288-9a61-0dcef3e219d4
   :subject_name: Programming with Javascript
   :parent_uuid: e9ff6a3d-8993-4f15-8a1f-3f45035f129f
-  :parent_name: Week 1
+  :parent_name: Week 2
   :description_link: Programming_with_Javascript/Memory_Diagrams.desc.md
   :instructor_notes_link: Programming_with_Javascript/Memory_Diagrams.notes.md
   :published: true
@@ -892,23 +892,23 @@
   :experience_success_criteria: []
 - :name: Q2
   :uuid: 6683ccb1-1a45-427f-a6ee-61194033a520
-  :subject_uuid: 
-  :subject_name: 
-  :parent_uuid: 
-  :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :subject_uuid:
+  :subject_name:
+  :parent_uuid:
+  :parent_name:
+  :description_link:
+  :instructor_notes_link:
   :published: true
   :suggested_days: 0.0
   :experience_success_criteria: []
 - :name: Q3
   :uuid: 0ae3bfcd-93dd-4c4a-a28c-5fbb29802e55
-  :subject_uuid: 
-  :subject_name: 
-  :parent_uuid: 
-  :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :subject_uuid:
+  :subject_name:
+  :parent_uuid:
+  :parent_name:
+  :description_link:
+  :instructor_notes_link:
   :published: true
   :suggested_days: 0.0
   :experience_success_criteria: []
@@ -1035,12 +1035,12 @@
   :experience_success_criteria: []
 - :name: Q4
   :uuid: 567d0b14-6cd0-43e1-88b8-2c582f7124ad
-  :subject_uuid: 
-  :subject_name: 
-  :parent_uuid: 
-  :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :subject_uuid:
+  :subject_name:
+  :parent_uuid:
+  :parent_name:
+  :description_link:
+  :instructor_notes_link:
   :published: true
   :suggested_days: 0.0
   :experience_success_criteria: []
@@ -1178,10 +1178,10 @@
   :experience_success_criteria: []
 - :name: First day, intro to Full Stack
   :uuid: cdbae2d2-e1c4-42c5-b2fa-bbf616e248a2
-  :subject_uuid: 
-  :subject_name: 
-  :parent_uuid: 
-  :parent_name: 
+  :subject_uuid:
+  :subject_name:
+  :parent_uuid:
+  :parent_name:
   :description_link: Learning_to_Learn/First_day,_intro_to_Full_Stack.desc.md
   :instructor_notes_link: Learning_to_Learn/First_day,_intro_to_Full_Stack.notes.md
   :published: false
@@ -1191,8 +1191,8 @@
   :uuid: e5092521-31df-4296-b2aa-2e371da89fcf
   :subject_uuid: a7d5be0f-3937-465a-b5e9-b2555642e9d9
   :subject_name: HTML
-  :parent_uuid: 
-  :parent_name: 
+  :parent_uuid:
+  :parent_name:
   :description_link: HTML/HTML5_Media.desc.md
   :instructor_notes_link: HTML/HTML5_Media.notes.md
   :published: false
@@ -1202,8 +1202,8 @@
   :uuid: 61d22452-9d7f-41ce-b91e-f70d7436c1b0
   :subject_uuid: 0c1be570-48b4-48a8-bc98-7da27a7be512
   :subject_name: CSS
-  :parent_uuid: 
-  :parent_name: 
+  :parent_uuid:
+  :parent_name:
   :description_link: CSS/CSS_Media_Queries.desc.md
   :instructor_notes_link: CSS/CSS_Media_Queries.notes.md
   :published: false
@@ -1213,8 +1213,8 @@
   :uuid: 4a4b193f-1068-451c-b040-dfe7a9fc1089
   :subject_uuid: ac805334-f3dd-4288-9a61-0dcef3e219d4
   :subject_name: Programming with Javascript
-  :parent_uuid: 
-  :parent_name: 
+  :parent_uuid:
+  :parent_name:
   :description_link: Programming_with_Javascript/Recursion_with_JavaScript.desc.md
   :instructor_notes_link: Programming_with_Javascript/Recursion_with_JavaScript.notes.md
   :published: false
@@ -1224,8 +1224,8 @@
   :uuid: c9c9a217-f976-478e-9613-87f3e18b35aa
   :subject_uuid: 0c1be570-48b4-48a8-bc98-7da27a7be512
   :subject_name: CSS
-  :parent_uuid: 
-  :parent_name: 
+  :parent_uuid:
+  :parent_name:
   :description_link: CSS/Intro_to_SASS.desc.md
   :instructor_notes_link: CSS/Intro_to_SASS.notes.md
   :published: false
@@ -1233,12 +1233,12 @@
   :experience_success_criteria: []
 - :name: Clean Code
   :uuid: 239213c6-2239-4b23-ba56-b065920d0386
-  :subject_uuid: 
-  :subject_name: 
-  :parent_uuid: 
-  :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :subject_uuid:
+  :subject_name:
+  :parent_uuid:
+  :parent_name:
+  :description_link:
+  :instructor_notes_link:
   :published: false
   :suggested_days: 0.0
   :experience_success_criteria: []
@@ -1246,8 +1246,8 @@
   :uuid: 3a50035d-8712-4516-9429-8ccde51d3a9b
   :subject_uuid: bcfe422a-cd35-4fd1-8ff8-6b078c476069
   :subject_name: Javascript and the Browser
-  :parent_uuid: 
-  :parent_name: 
+  :parent_uuid:
+  :parent_name:
   :description_link: Javascript_and_the_Browser/AJAX,_API,_JSON,_and_XMLHttpRequests.desc.md
   :instructor_notes_link: Javascript_and_the_Browser/AJAX,_API,_JSON,_and_XMLHttpRequests.notes.md
   :published: false
@@ -1257,8 +1257,8 @@
   :uuid: 4aa869fd-9fcb-473c-8937-7658f82f5c16
   :subject_uuid: 4298574a-4ac8-4a6b-8195-91c349a04209
   :subject_name: Dev Environment
-  :parent_uuid: 
-  :parent_name: 
+  :parent_uuid:
+  :parent_name:
   :description_link: Dev_Environment/Asset_Management.desc.md
   :instructor_notes_link: Dev_Environment/Asset_Management.notes.md
   :published: false
@@ -1268,8 +1268,8 @@
   :uuid: 67ce2e41-8958-42e5-8d56-41c05bf4b997
   :subject_uuid: 7313b475-d281-4c72-a3b3-1167eb3b13e3
   :subject_name: The Command Line
-  :parent_uuid: 
-  :parent_name: 
+  :parent_uuid:
+  :parent_name:
   :description_link: The_Command_Line/Intermediate_Command_Line.desc.md
   :instructor_notes_link: The_Command_Line/Intermediate_Command_Line.notes.md
   :published: false
@@ -1277,12 +1277,12 @@
   :experience_success_criteria: []
 - :name: Playlist Q1 Practice Assessment
   :uuid: 9c73c1f0-6369-447a-bc18-01a3ae1af729
-  :subject_uuid: 
-  :subject_name: 
-  :parent_uuid: 
-  :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :subject_uuid:
+  :subject_name:
+  :parent_uuid:
+  :parent_name:
+  :description_link:
+  :instructor_notes_link:
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria: []
@@ -1290,8 +1290,8 @@
   :uuid: 903266eb-3eec-4da0-a275-76838248aef3
   :subject_uuid: 40104e17-a0e4-4bc4-b499-5030c197cb81
   :subject_name: Automated Testing
-  :parent_uuid: 
-  :parent_name: 
+  :parent_uuid:
+  :parent_name:
   :description_link: Automated_Testing/Testing:_Introduction-to-TDD-with-JasmineMocha.desc.md
   :instructor_notes_link: Automated_Testing/Testing:_Introduction-to-TDD-with-JasmineMocha.notes.md
   :published: false
@@ -1301,8 +1301,8 @@
   :uuid: d02084b6-d96e-4593-988f-40f9d45857c1
   :subject_uuid: 2886a5f1-92f6-44ba-8adb-185b2a161870
   :subject_name: Deployment
-  :parent_uuid: 
-  :parent_name: 
+  :parent_uuid:
+  :parent_name:
   :description_link: Deployment/Deploy_a_Static_WebSite_to_AWS_S3.desc.md
   :instructor_notes_link: Deployment/Deploy_a_Static_WebSite_to_AWS_S3.notes.md
   :published: false
@@ -1312,8 +1312,8 @@
   :uuid: e45df13c-ed11-46ce-96e4-e1a0e351d310
   :subject_uuid: d465e693-2e94-43a2-b99e-bb7283161bc2
   :subject_name: Server Side JS with Node
-  :parent_uuid: 
-  :parent_name: 
+  :parent_uuid:
+  :parent_name:
   :description_link: Server_Side_JS_with_Node/Stream_Adventure.desc.md
   :instructor_notes_link: Server_Side_JS_with_Node/Stream_Adventure.notes.md
   :published: false
@@ -1323,8 +1323,8 @@
   :uuid: 9560785b-7d9a-4dc6-9102-09a98406bdb9
   :subject_uuid: 2886a5f1-92f6-44ba-8adb-185b2a161870
   :subject_name: Deployment
-  :parent_uuid: 
-  :parent_name: 
+  :parent_uuid:
+  :parent_name:
   :description_link: Deployment/AWS_S3_bucket_custom_domain.desc.md
   :instructor_notes_link: Deployment/AWS_S3_bucket_custom_domain.notes.md
   :published: false
@@ -1332,12 +1332,12 @@
   :experience_success_criteria: []
 - :name: HTTP and Node.js
   :uuid: 829c5f34-0309-47b9-9baa-049e1ef5636b
-  :subject_uuid: 
-  :subject_name: 
-  :parent_uuid: 
-  :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :subject_uuid:
+  :subject_name:
+  :parent_uuid:
+  :parent_name:
+  :description_link:
+  :instructor_notes_link:
   :published: false
   :suggested_days: 2.0
   :experience_success_criteria: []
@@ -1345,8 +1345,8 @@
   :uuid: 777366c9-674b-4888-a2b0-bc76bee7d252
   :subject_uuid: 2886a5f1-92f6-44ba-8adb-185b2a161870
   :subject_name: Deployment
-  :parent_uuid: 
-  :parent_name: 
+  :parent_uuid:
+  :parent_name:
   :description_link: Deployment/Express:_Deploying_a_CRUD_App_to_Heroku_(w_ENV_variables)_(deprecated).desc.md
   :instructor_notes_link: Deployment/Express:_Deploying_a_CRUD_App_to_Heroku_(w_ENV_variables)_(deprecated).notes.md
   :published: false
@@ -1354,12 +1354,12 @@
   :experience_success_criteria: []
 - :name: MongoDB and CRUD
   :uuid: 030e63e3-1c5d-4221-988b-fa15d7733759
-  :subject_uuid: 
-  :subject_name: 
-  :parent_uuid: 
-  :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :subject_uuid:
+  :subject_name:
+  :parent_uuid:
+  :parent_name:
+  :description_link:
+  :instructor_notes_link:
   :published: false
   :suggested_days: 0.0
   :experience_success_criteria: []
@@ -1367,8 +1367,8 @@
   :uuid: 87599005-652f-4ed2-998f-0da84a65425a
   :subject_uuid: 2886a5f1-92f6-44ba-8adb-185b2a161870
   :subject_name: Deployment
-  :parent_uuid: 
-  :parent_name: 
+  :parent_uuid:
+  :parent_name:
   :description_link: Deployment/Node:_Deploying_to_Heroku.desc.md
   :instructor_notes_link: Deployment/Node:_Deploying_to_Heroku.notes.md
   :published: false
@@ -1378,8 +1378,8 @@
   :uuid: 5f69bb9d-50ad-4eaa-8346-c3b4732641dc
   :subject_uuid: ac805334-f3dd-4288-9a61-0dcef3e219d4
   :subject_name: Programming with Javascript
-  :parent_uuid: 
-  :parent_name: 
+  :parent_uuid:
+  :parent_name:
   :description_link: Programming_with_Javascript/Programming_Fundamentals_Assessment_Part_1.desc.md
   :instructor_notes_link: Programming_with_Javascript/Programming_Fundamentals_Assessment_Part_1.notes.md
   :published: false
@@ -1387,45 +1387,45 @@
   :experience_success_criteria: []
 - :name: Angular Part 3 - Firebase
   :uuid: 82becad8-46e6-49b0-ac1c-03ce07c5bfda
-  :subject_uuid: 
-  :subject_name: 
-  :parent_uuid: 
-  :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :subject_uuid:
+  :subject_name:
+  :parent_uuid:
+  :parent_name:
+  :description_link:
+  :instructor_notes_link:
   :published: false
   :suggested_days: 0.0
   :experience_success_criteria: []
 - :name: CSS Copycat
   :uuid: eab1e2c7-ac34-48bb-924b-0e284b6f26a0
-  :subject_uuid: 
-  :subject_name: 
-  :parent_uuid: 
-  :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :subject_uuid:
+  :subject_name:
+  :parent_uuid:
+  :parent_name:
+  :description_link:
+  :instructor_notes_link:
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria: []
 - :name: Scribe and Sage
   :uuid: 3b2a3e73-03d9-4e33-b4ce-ef7129200ce3
-  :subject_uuid: 
-  :subject_name: 
-  :parent_uuid: 
-  :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :subject_uuid:
+  :subject_name:
+  :parent_uuid:
+  :parent_name:
+  :description_link:
+  :instructor_notes_link:
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria: []
 - :name: Extreme Blogging
   :uuid: cb9667af-5bf0-4baa-91ad-0ea0c236a12c
-  :subject_uuid: 
-  :subject_name: 
-  :parent_uuid: 
-  :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :subject_uuid:
+  :subject_name:
+  :parent_uuid:
+  :parent_name:
+  :description_link:
+  :instructor_notes_link:
   :published: false
   :suggested_days: 0.0
   :experience_success_criteria: []
@@ -1433,8 +1433,8 @@
   :uuid: c9ed76e7-0a2e-4be4-a67a-d997a71dea44
   :subject_uuid: 2886a5f1-92f6-44ba-8adb-185b2a161870
   :subject_name: Deployment
-  :parent_uuid: 
-  :parent_name: 
+  :parent_uuid:
+  :parent_name:
   :description_link: Deployment/Deploying_and_Managing_AWS_EC2.desc.md
   :instructor_notes_link: Deployment/Deploying_and_Managing_AWS_EC2.notes.md
   :published: false
@@ -1444,8 +1444,8 @@
   :uuid: c3522d86-6dc8-4d10-bb59-bdc7e55404b0
   :subject_uuid: 2886a5f1-92f6-44ba-8adb-185b2a161870
   :subject_name: Deployment
-  :parent_uuid: 
-  :parent_name: 
+  :parent_uuid:
+  :parent_name:
   :description_link: Deployment/Deploying_to_Cloud_Foundry_(run.pivotal.io).desc.md
   :instructor_notes_link: Deployment/Deploying_to_Cloud_Foundry_(run.pivotal.io).notes.md
   :published: false
@@ -1453,34 +1453,34 @@
   :experience_success_criteria: []
 - :name: Introduction to Recursion
   :uuid: 8f332c48-e625-4634-b8eb-17c81d3b4a38
-  :subject_uuid: 
-  :subject_name: 
-  :parent_uuid: 
-  :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :subject_uuid:
+  :subject_name:
+  :parent_uuid:
+  :parent_name:
+  :description_link:
+  :instructor_notes_link:
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria: []
 - :name: Trivia - geopardy!
   :uuid: d634380b-4e3d-4849-a72f-d1be82360324
-  :subject_uuid: 
-  :subject_name: 
-  :parent_uuid: 
-  :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :subject_uuid:
+  :subject_name:
+  :parent_uuid:
+  :parent_name:
+  :description_link:
+  :instructor_notes_link:
   :published: false
   :suggested_days: 0.0
   :experience_success_criteria: []
 - :name: Warmups
   :uuid: c82036c0-a63d-48cc-af4b-93ee97ff9c7c
-  :subject_uuid: 
-  :subject_name: 
-  :parent_uuid: 
-  :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :subject_uuid:
+  :subject_name:
+  :parent_uuid:
+  :parent_name:
+  :description_link:
+  :instructor_notes_link:
   :published: false
   :suggested_days: 0.0
   :experience_success_criteria: []
@@ -1488,8 +1488,8 @@
   :uuid: cfe9d855-6d49-4600-9b70-dccd29d4c887
   :subject_uuid: ac805334-f3dd-4288-9a61-0dcef3e219d4
   :subject_name: Programming with Javascript
-  :parent_uuid: 
-  :parent_name: 
+  :parent_uuid:
+  :parent_name:
   :description_link: Programming_with_Javascript/Refactoring.desc.md
   :instructor_notes_link: Programming_with_Javascript/Refactoring.notes.md
   :published: false
@@ -1497,23 +1497,23 @@
   :experience_success_criteria: []
 - :name: Ruby Language
   :uuid: a94452e7-5247-4020-b1eb-7b6f73e66dc9
-  :subject_uuid: 
-  :subject_name: 
-  :parent_uuid: 
-  :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :subject_uuid:
+  :subject_name:
+  :parent_uuid:
+  :parent_name:
+  :description_link:
+  :instructor_notes_link:
   :published: false
   :suggested_days: 2.0
   :experience_success_criteria: []
 - :name: Rails for JS Developers
   :uuid: 54ef4232-6118-46b7-9bba-aea81b019f86
-  :subject_uuid: 
-  :subject_name: 
-  :parent_uuid: 
-  :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :subject_uuid:
+  :subject_name:
+  :parent_uuid:
+  :parent_name:
+  :description_link:
+  :instructor_notes_link:
   :published: false
   :suggested_days: 0.0
   :experience_success_criteria: []
@@ -1521,8 +1521,8 @@
   :uuid: 6b9a2906-b9d9-4b7d-9a12-25b7ae1fe3d0
   :subject_uuid: 7fb11472-3246-479d-a864-ede3e22c248f
   :subject_name: Consuming Web APIs
-  :parent_uuid: 
-  :parent_name: 
+  :parent_uuid:
+  :parent_name:
   :description_link: Consuming_Web_APIs/Consuming_APIs_from_a_Server.desc.md
   :instructor_notes_link: Consuming_Web_APIs/Consuming_APIs_from_a_Server.notes.md
   :published: false
@@ -1532,8 +1532,8 @@
   :uuid: 60abd80c-d4bd-4a82-a389-2a1a89849f96
   :subject_uuid: 2886a5f1-92f6-44ba-8adb-185b2a161870
   :subject_name: Deployment
-  :parent_uuid: 
-  :parent_name: 
+  :parent_uuid:
+  :parent_name:
   :description_link: Deployment/Docker.desc.md
   :instructor_notes_link: Deployment/Docker.notes.md
   :published: false
@@ -1541,12 +1541,12 @@
   :experience_success_criteria: []
 - :name: Cloud Native Architecture
   :uuid: 5e4bfc81-e749-4686-a262-6708aaffde8e
-  :subject_uuid: 
-  :subject_name: 
-  :parent_uuid: 
-  :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :subject_uuid:
+  :subject_name:
+  :parent_uuid:
+  :parent_name:
+  :description_link:
+  :instructor_notes_link:
   :published: false
   :suggested_days: 0.0
   :experience_success_criteria: []
@@ -1554,8 +1554,8 @@
   :uuid: d606e31e-87eb-4c4e-ac20-c0efeeb64075
   :subject_uuid: bcfe422a-cd35-4fd1-8ff8-6b078c476069
   :subject_name: Javascript and the Browser
-  :parent_uuid: 
-  :parent_name: 
+  :parent_uuid:
+  :parent_name:
   :description_link: Javascript_and_the_Browser/Canvas.desc.md
   :instructor_notes_link: Javascript_and_the_Browser/Canvas.notes.md
   :published: false
@@ -1563,12 +1563,12 @@
   :experience_success_criteria: []
 - :name: Setting up your AWS Activate Account
   :uuid: a1f60a23-daaf-49e8-830e-4f261d71bb5a
-  :subject_uuid: 
-  :subject_name: 
-  :parent_uuid: 
-  :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :subject_uuid:
+  :subject_name:
+  :parent_uuid:
+  :parent_name:
+  :description_link:
+  :instructor_notes_link:
   :published: false
   :suggested_days: 0.0
   :experience_success_criteria: []
@@ -1576,8 +1576,8 @@
   :uuid: e22c35aa-c273-4948-a9d4-2422ae754bab
   :subject_uuid: d5947e67-9d70-4e02-ae2a-b3135a9c1667
   :subject_name: Data Structures / Algorithms
-  :parent_uuid: 
-  :parent_name: 
+  :parent_uuid:
+  :parent_name:
   :description_link: Data_Structures__Algorithms/Cracking_the_Coding_Interview_Warmups.desc.md
   :instructor_notes_link: Data_Structures__Algorithms/Cracking_the_Coding_Interview_Warmups.notes.md
   :published: false
@@ -1585,12 +1585,12 @@
   :experience_success_criteria: []
 - :name: Transitions, Transforms, and Animations
   :uuid: 03a70936-fdad-428c-91c3-1d8c5ca6c2bd
-  :subject_uuid: 
-  :subject_name: 
-  :parent_uuid: 
-  :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :subject_uuid:
+  :subject_name:
+  :parent_uuid:
+  :parent_name:
+  :description_link:
+  :instructor_notes_link:
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria: []
@@ -1598,8 +1598,8 @@
   :uuid: d4b24a93-36a2-45a3-8964-d7e1d35234b7
   :subject_uuid: ce60c0de-9f49-423f-bbbe-7fea0c1b875c
   :subject_name: Architecture
-  :parent_uuid: 
-  :parent_name: 
+  :parent_uuid:
+  :parent_name:
   :description_link: Architecture/Distributed_Memories_-_Angular,_CORS_and_Express.desc.md
   :instructor_notes_link: Architecture/Distributed_Memories_-_Angular,_CORS_and_Express.notes.md
   :published: false
@@ -1607,34 +1607,34 @@
   :experience_success_criteria: []
 - :name: Javascript Resources
   :uuid: 5ac4322d-cf8a-425d-aed2-4da2b046f99a
-  :subject_uuid: 
-  :subject_name: 
-  :parent_uuid: 
-  :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :subject_uuid:
+  :subject_name:
+  :parent_uuid:
+  :parent_name:
+  :description_link:
+  :instructor_notes_link:
   :published: false
   :suggested_days: 0.0
   :experience_success_criteria: []
 - :name: vim
   :uuid: 8baab7c0-623c-4d96-a349-e10318fb4384
-  :subject_uuid: 
-  :subject_name: 
-  :parent_uuid: 
-  :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :subject_uuid:
+  :subject_name:
+  :parent_uuid:
+  :parent_name:
+  :description_link:
+  :instructor_notes_link:
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria: []
 - :name: Testing Randomness in JS
   :uuid: 468adc9a-f064-4eb1-b6ce-6f2aa51d490f
-  :subject_uuid: 
-  :subject_name: 
-  :parent_uuid: 
-  :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :subject_uuid:
+  :subject_name:
+  :parent_uuid:
+  :parent_name:
+  :description_link:
+  :instructor_notes_link:
   :published: false
   :suggested_days: 0.0
   :experience_success_criteria: []
@@ -1642,8 +1642,8 @@
   :uuid: abb5ba41-aed3-45d2-8fac-47cb415d39a5
   :subject_uuid: 2dc0600d-e1f3-48ff-b241-199ce36fbe3f
   :subject_name: Functional Programming with Javascript
-  :parent_uuid: 
-  :parent_name: 
+  :parent_uuid:
+  :parent_name:
   :description_link: Functional_Programming_with_Javascript/Functional_Programming_with_Javascript.desc.md
   :instructor_notes_link: Functional_Programming_with_Javascript/Functional_Programming_with_Javascript.notes.md
   :published: false
@@ -1651,23 +1651,23 @@
   :experience_success_criteria: []
 - :name: Student Whiteboard/Phone Interviews
   :uuid: 2364b200-e0f7-4bf9-925f-b02216f8fdb0
-  :subject_uuid: 
-  :subject_name: 
-  :parent_uuid: 
-  :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :subject_uuid:
+  :subject_name:
+  :parent_uuid:
+  :parent_name:
+  :description_link:
+  :instructor_notes_link:
   :published: false
   :suggested_days: 0.0
   :experience_success_criteria: []
 - :name: 'GKit: building a CSS Framework'
   :uuid: e17e7182-ea53-40b8-a071-9c17858f99c0
-  :subject_uuid: 
-  :subject_name: 
-  :parent_uuid: 
-  :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :subject_uuid:
+  :subject_name:
+  :parent_uuid:
+  :parent_name:
+  :description_link:
+  :instructor_notes_link:
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria: []
@@ -1675,8 +1675,8 @@
   :uuid: cf35a8f4-cceb-422d-896d-7ef5f2842c00
   :subject_uuid: 0c1be570-48b4-48a8-bc98-7da27a7be512
   :subject_name: CSS
-  :parent_uuid: 
-  :parent_name: 
+  :parent_uuid:
+  :parent_name:
   :description_link: CSS/Web_Components.desc.md
   :instructor_notes_link: CSS/Web_Components.notes.md
   :published: false
@@ -1684,12 +1684,12 @@
   :experience_success_criteria: []
 - :name: Running Tasks with Gulp
   :uuid: d6722fa8-bf38-499a-9ab5-8bda2a63d370
-  :subject_uuid: 
-  :subject_name: 
-  :parent_uuid: 
-  :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :subject_uuid:
+  :subject_name:
+  :parent_uuid:
+  :parent_name:
+  :description_link:
+  :instructor_notes_link:
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria: []
@@ -1697,8 +1697,8 @@
   :uuid: 121e5f4e-072d-48f5-8bfc-ce73112abb76
   :subject_uuid: ac805334-f3dd-4288-9a61-0dcef3e219d4
   :subject_name: Programming with Javascript
-  :parent_uuid: 
-  :parent_name: 
+  :parent_uuid:
+  :parent_name:
   :description_link: Programming_with_Javascript/JavaScript_Errors.desc.md
   :instructor_notes_link: Programming_with_Javascript/JavaScript_Errors.notes.md
   :published: false
@@ -1706,67 +1706,67 @@
   :experience_success_criteria: []
 - :name: Introduction to JavaScript - Interactive Part 1
   :uuid: ad7b5ed6-45c8-49bb-bd68-6797af7251f0
-  :subject_uuid: 
-  :subject_name: 
-  :parent_uuid: 
-  :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :subject_uuid:
+  :subject_name:
+  :parent_uuid:
+  :parent_name:
+  :description_link:
+  :instructor_notes_link:
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria: []
 - :name: Galvanize Eats Assessment
   :uuid: c7035ae1-37bc-4dae-803a-079782d09ff5
-  :subject_uuid: 
-  :subject_name: 
-  :parent_uuid: 
-  :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :subject_uuid:
+  :subject_name:
+  :parent_uuid:
+  :parent_name:
+  :description_link:
+  :instructor_notes_link:
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria: []
 - :name: npm
   :uuid: 2916e937-f0d5-4b01-b65e-d964839a6e77
-  :subject_uuid: 
-  :subject_name: 
-  :parent_uuid: 
-  :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :subject_uuid:
+  :subject_name:
+  :parent_uuid:
+  :parent_name:
+  :description_link:
+  :instructor_notes_link:
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria: []
 - :name: History of the World Wide Web
   :uuid: be25aea8-f81d-41e6-8452-83e3b0f2faf0
-  :subject_uuid: 
-  :subject_name: 
-  :parent_uuid: 
-  :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :subject_uuid:
+  :subject_name:
+  :parent_uuid:
+  :parent_name:
+  :description_link:
+  :instructor_notes_link:
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria: []
 - :name: Galvanize Reads Assessment
   :uuid: 2ab83446-7629-41cf-a827-33bbaf3fa853
-  :subject_uuid: 
-  :subject_name: 
-  :parent_uuid: 
-  :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :subject_uuid:
+  :subject_name:
+  :parent_uuid:
+  :parent_name:
+  :description_link:
+  :instructor_notes_link:
   :published: false
   :suggested_days: 1.0
   :experience_success_criteria: []
 - :name: Galvanize Gazette Assessment
   :uuid: 826abe57-3cfd-4857-b8ba-76267f36f425
-  :subject_uuid: 
-  :subject_name: 
-  :parent_uuid: 
-  :parent_name: 
-  :description_link: 
-  :instructor_notes_link: 
+  :subject_uuid:
+  :subject_name:
+  :parent_uuid:
+  :parent_name:
+  :description_link:
+  :instructor_notes_link:
   :published: false
   :suggested_days: 0.0
   :experience_success_criteria: []
@@ -1774,8 +1774,8 @@
   :uuid: 25393c43-7ab2-425c-8d35-e8afba34ee65
   :subject_uuid: 793b8c6a-a19d-4049-8183-9d454bf55028
   :subject_name: Thinking Like a Developer
-  :parent_uuid: 
-  :parent_name: 
+  :parent_uuid:
+  :parent_name:
   :description_link: Thinking_Like_a_Developer/Debugging_.desc.md
   :instructor_notes_link: Thinking_Like_a_Developer/Debugging_.notes.md
   :published: false
@@ -1785,8 +1785,8 @@
   :uuid: afc66ab5-2c1f-49b8-9ca7-d13657e8bc13
   :subject_uuid: bb388526-c903-45a9-afbf-e6dff6f501d1
   :subject_name: Server Side Frameworks with Express
-  :parent_uuid: 
-  :parent_name: 
+  :parent_uuid:
+  :parent_name:
   :description_link: Server_Side_Frameworks_with_Express/Automated-CRUD-Assessment.desc.md
   :instructor_notes_link: Server_Side_Frameworks_with_Express/Automated-CRUD-Assessment.notes.md
   :published: false
@@ -1796,8 +1796,8 @@
   :uuid: 5252612d-b419-49bf-ae64-81e707dffd13
   :subject_uuid: d5947e67-9d70-4e02-ae2a-b3135a9c1667
   :subject_name: Data Structures / Algorithms
-  :parent_uuid: 
-  :parent_name: 
+  :parent_uuid:
+  :parent_name:
   :description_link: Data_Structures__Algorithms/Code_Katas_.desc.md
   :instructor_notes_link: Data_Structures__Algorithms/Code_Katas_.notes.md
   :published: false
