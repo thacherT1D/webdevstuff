@@ -48,7 +48,7 @@ There are [many ways](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/
 <input type="text">
 ```
 
-Remember when we talked about semantic HTML? We also have semantic `<input>` types that help describe the kind nature of the input. Aside from `type="text"`, there's also the following textual controls.
+Remember when we talked about semantic HTML? We also have semantic `<input>` types that help describe the nature of the input. Aside from `type="text"`, there's also the following textual controls.
 
 ```html
 <input type="email">
