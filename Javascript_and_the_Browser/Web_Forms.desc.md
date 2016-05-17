@@ -188,7 +188,7 @@ With control tags, there are a variety of attributes available. Many attributes 
 
 ## Materialize Forms
 
-Let's start with the Materialize [http://materializecss.com/forms.html](documentation) on forms specifically. Materialize includes some simple ways to make your forms look awesome.
+Let's start with the Materialize [documentation](http://materializecss.com/forms.html) on forms specifically. Materialize includes some simple ways to make your forms look awesome.
 
 ## HTML and JS Form Validation
 
