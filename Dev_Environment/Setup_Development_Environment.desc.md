@@ -18,21 +18,7 @@ In terminal, run:
 
 `ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
 
-### Git	
-
-**What is it? What will I be using it for?**
-
-Git is a version control system that we will be using to keep track of changes in our code. It is a **MUST** know for any developer and we will be spending lots of time on it over the course.
-
-**How do I install it?**
-
-In the terminal, run:
-
-`brew update`
-
-`brew install git`
-
-### Oh my zsh	
+### Oh my zsh
 
 **What is it? What will I be using it for?**
 
@@ -46,55 +32,35 @@ In the terminal run:
 
 You may have to type in your password if it asks you, and when you are done with this, in the terminal, type `zsh`.
 
-### Sublime Text 3 (subl alias) / Package Manager	
+### Atom text editor
 
 **What is it? What will I be using it for?**
 
-Sublime Text is going to be our editor of choice. If you are more comfortable with other text editors like Atom or Textmate you may use them but we **STRONGLY** urge you to consider using Sublime Text 3 (it's really nice).
-
-**I have Sublime Text 2....that works right?**
-
-Unfortunately not :( - although it is still in beta, Sublime Text 3 has a set of packages (we'll discuss later what those are) which are incredibly useful and are not available in Sublime Text 2. If you already have Sublime Text 2, please delete it and install Sublime Text 3. 
+Atom is going to be our editor of choice. If you are more comfortable with other text editors like Sublime Text or Textmate you may use them but we **STRONGLY** urge you to consider using Atom (its really nice).
 
 **How do I install it?**
 
-http://www.sublimetext.com/3
+https://atom.io
 
-**Using the subl alias**
+**Using the atom alias**
 
-It would be really nice if we could open up sublime from the terminal. To get started with that read this (we will go through this process together):
+It would be really nice if we could open up atom from the terminal.
 
-http://stackoverflow.com/questions/16199581/opening-sublime-text-on-command-line-as-subl-on-mac-os
+1. Start Atom
+1. In the top menu bar, click Atom -> Install Shell Commands
+1. You should see a pop up window saying that the shell commands have been installed.
 
-**NEXT STEPS**
-
-While Sublime Text 3 comes with some nice things out of the box, there are a bunch of additional tools we want to add to our text editor (we will call those "packages"). In order to do that, we need a tool to help us install these "packages" (we call that a "package manager"). Head over to https://packagecontrol.io/installation and follow the instructions for Sublime Text 3. If you install this correctly, you should be able to type `command+shift+p` in sublime and type in `install package` and see something.
-
-### Alfred or Spotlight	
+### Spectacle
 
 **What is it? What will I be using it for?**
 
-Alfred is a wonderful tool for quickly finding files, doing quick math, searching on wikipedia and defining words.
+Unfortunately, macs do not come with a great way to split windows easily. This means if we want to see two windows side by side we have to use our mouse to drag each time - that's too much work!
 
 **How do I install it?**
-
-http://www.alfredapp.com/
-
-### Shiftit / Divvy	/ Spectacle
-
-**What is it? What will I be using it for?**
-
-Unfortunately, macs do not come with a great way to split windows easily. This means if we want to see two windows side by side we have to use our mouse to drag each time - that's too much work! 
-
-**How do I install it?**
-
-Shiftit - https://github.com/fikovnik/ShiftIt/releases/download/version-1.6.3/ShiftIt-1.6.3.zip
-
-Divvy - https://itunes.apple.com/us/app/divvy-window-manager/id413857545?mt=12
 
 Spectacle - http://spectacleapp.com/
 
-### Use Chrome	
+### Use Chrome
 
 **What is it? What will I be using it for?**
 
@@ -104,25 +70,7 @@ Chrome is a browser that not only offers some useful features for browsing, but 
 
 https://www.google.com/chrome/browser/desktop/
 
-### fasd	
-
-**What is it? What will I be using it for?**
-
-When you're in the command line, sometimes you can't remember where folders/files are, so you spend time searching through directories and driving yourself crazy. fasd will help preserve your sanity.
-
-https://github.com/clvv/fasd
-
-**How do I install it?**
-
-Download the zipfile here and open up the folder in terminal (you can drag the folder icon to the terminal)
-
-https://github.com/clvv/fasd/zipball/1.0.1
-
-Once you are in terminal, run the command `make install`
-
-When this is done head over to the home directory (in terminal type `~`) and then run `subl .zshrc` to open up your `.zshrc` file. Inside of here, add the following `eval "$(fasd --init auto)"` - then save and restart the terminal. Finally, type in the terminal `which z`. If you see `z: aliased to fasd_cd -d` you have done this correctly!
-
-### tree	
+### tree
 
 **What is it? What will I be using it for?**
 
@@ -134,15 +82,53 @@ http://brewformulas.org/Tree
 
 `brew install tree`
 
-### Mou	
+### Anki
 
-**What is it? What will I be using it for?**
+We will be using Anki to create flashcards to help us memorize the fundamentals. You can install Anki at
 
-When we write readme files for our repositories, the language we use is Markdown, which is a text to HTML converter (you can read more about it here http://daringfireball.net/projects/markdown/). It's essential to understand how Markdown works as well as have a tool where we can write Markdown. Sublime Text 3 can help us with that, but there are better tools - Mou is one of them!
+http://ankisrs.net/
 
-**How do I install it?**
+### Dash
 
-http://25.io/mou/
+Dash is a great documentation application available on the app store. It is a paid for app that has an unlimited trial license. It will bug you to pay for an account but will not stop you from using it for free.
+
+https://itunes.apple.com/us/app/dash-3-api-docs-snippets./id449589707?mt=12
+
+### Slack
+
+We use slack for all formal communication. It is highly recommended that you use the desktop app instead of just using the web app. Note there is also a phone app available for you as well.
+
+https://itunes.apple.com/us/app/slack/id803453959?mt=12
+
+### NVM
+
+We will be using Node Version Manager to install and manage Node.js on our Macs. Run the following command to install NVM.
+
+```bash
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.1/install.sh | bash
+```
+
+### Node.js
+
+We will be using NVM to install Node.js. The first thing that we need to do is find out what the latest version of Node.js is. You can do this with the command
+
+```bash
+nvm install node
+```
+
+We can set up nvm to install and use the latest version of node with the following commands. You can copy-paste them into the terminal.
+
+```bash
+echo >> ~/.zshrc
+echo '# setting up nvm to use the latest version of node.js' >> ~/.zshrc
+echo 'nvm use node' >> ~/.zshrc
+```
+
+### Xcode
+
+Apple Xcode will install command line tools, along with the only IDE (Integrated Development Environment) that can be used for Mac and iOS development. This download is very long, so we suggest that you download and install Xcode while at home or after 5pm (if you on campus).
+
+https://itunes.apple.com/us/app/xcode/id497799835?mt=12
 
 ## Essential Shortcuts
 
