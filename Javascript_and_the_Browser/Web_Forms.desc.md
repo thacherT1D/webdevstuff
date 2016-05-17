@@ -2,11 +2,9 @@
 
 * Explain what a web form is.
 * Explain what control tags are.
-* Build interactive controls with the `<input>`, `<select>`, and `<textarea>` tags.
-* Add labels to these controls with the `<label>` tag.
-* Create forms using the `<form>` tag.
+* Build a web form with various controls tags.
 * Verify user data with the built-in HTML5 form validation.
-* Verify user data with other types of form validation.
+* Verify user data with JavaScript-based form validation.
 
 ## What's a web form?
 
