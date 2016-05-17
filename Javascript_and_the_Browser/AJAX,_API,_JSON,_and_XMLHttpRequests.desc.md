@@ -171,14 +171,28 @@ If you run across this error: `XMLHttpRequest cannot load http://example.com/. N
 
 ## Other Exercises
 
+Here are some other exercises:
+
+> Note: some are written for jQuery, instead, just accomplish the same result using vanilla Javascript.
+
 - [Spotify API Usage](https://github.com/gSchool/spotify-albums-and-tracks)
-- [XHR](https://github.com/gSchool/xhr)
+- [XHR Exercise](https://github.com/gSchool/xhr)
 - [OMDB](https://github.com/gSchool/omdb_ajax_exercise/tree/12822be5bdde61a2329f90c7033ee50923f5099e)
-- [iTunes Guessing Game](https://github.com/gSchool/itunes_song_guessing_game)
 
 ## Resources
+
+Here are some vanilla JS and jQuery examples and resources:
 
 - [AJAX API Examples](https://github.com/gSchool/front-end-api-examples/)
 - [OMDB Example](https://github.com/gSchool/single-page-omdb)
 - [Old Galvanize Article on AJAX](https://github.com/gSchool/g11-course-curriculum/blob/c400a5988a276b47e7f5f296d550dbcddc8058de/week06/06_lectures/js-ajax-apis/README.md)
-- [PokeAPI](https://pokeapi.co)
+
+## Fun APIs
+
+Here are some great simple starter APIs that are open and easy to use:
+
+- [Star Wars API, swapi.co](https://swapi.co/)
+- [Movie API, omdapi.com](http://www.omdbapi.com/)
+- [Pokemon API, pokeapi.co](https://pokeapi.co)
+- [List of public APIs](https://github.com/toddmotto/public-apis)
+- [Galvanize APIs](https://github.com/Galvanize-IT/galvanize-apis)
