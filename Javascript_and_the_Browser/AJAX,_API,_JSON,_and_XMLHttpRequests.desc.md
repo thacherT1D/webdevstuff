@@ -154,15 +154,28 @@ awwRequest.send();
 
 If you run across this error: `XMLHttpRequest cannot load http://example.com/. No 'Access-Control-Allow-Origin' header is present on the requested resource. Origin 'http://example.net/' is therefore not allowed access.`. That means the server you are hitting has explicitly denied access to your website! That server is a meanie! But don't fret. This keeps prying developer eyes from your bank accounts and social life! It is for your protection! As a developer it can be quite frustrating though. The server administrator has to edit their CORS headers to allow certain domains or all domains access.
 
-### Exercises
-
-* https://github.com/gSchool/xhr
 
 ### Questions to Review
 
 -  What does AJAX Stand for?
 -  What is an API?
+- What is an API you __wish__ you had access to?
 -  What is JSON?
 -  How is JSON used in JavaScript?
 -  What is XML?
 -  How do we send an AJAX request with raw JavaScript?
+
+
+## Assessments / Exercises
+
+- [Spotify API Usage](https://github.com/gSchool/spotify-albums-and-tracks)
+- [XHR](https://github.com/gSchool/xhr)
+- [OMDB](https://github.com/gSchool/omdb_ajax_exercise/tree/12822be5bdde61a2329f90c7033ee50923f5099e)
+- [iTunes Guessing Game](https://github.com/gSchool/itunes_song_guessing_game)
+
+## Resources
+
+- [AJAX API Examples](https://github.com/gSchool/front-end-api-examples/)
+- [OMDB Example](https://github.com/gSchool/single-page-omdb)
+- [Old Galvanize Article on AJAX](https://github.com/gSchool/g11-course-curriculum/blob/c400a5988a276b47e7f5f296d550dbcddc8058de/week06/06_lectures/js-ajax-apis/README.md)
+- [PokeAPI](https://pokeapi.co)
