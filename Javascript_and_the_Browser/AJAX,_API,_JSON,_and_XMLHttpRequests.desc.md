@@ -1,6 +1,5 @@
 # Intro to Ajax
 
-
 ## Objectives
 
 By the end of this lesson you will be able to:
