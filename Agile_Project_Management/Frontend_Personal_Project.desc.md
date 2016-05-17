@@ -103,7 +103,7 @@ Your web app should:
 
 ## Add all three of these to an online portfolio
 
-* Create a portfolio on the [student portal](http://students.galvanize.com)
+* Create a portfolio on [Flyt](http://students.galvanize.com)
 * Link to your final deployed site, your video, and your write-up
 * This will be the start of your portfolio as a web developer
 
