@@ -172,20 +172,25 @@ There are more challenges in [this repository](https://github.com/gSchool/html-f
 
 ## Common Attributes
 
-With inputs, there are a variety of attributes available to use. Many vary by input and a lot of them are nonstandard but _recommended_. Take a look at [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input) and let's discuss.
+With control tags, there are a variety of attributes available. Many attributes vary by tag and some are nonstandard but highly recommended. Take a look at [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input) and let's discuss.
 
-* autocomplete
-* autofocus
-* maxlength
-* name
-* placeholder
-* pattern
-* required
-* readonly
-* size
-* spellcheck
-* tabindex
-* value
+- autocapitalize
+- autocomplete
+- autofocus
+- checked
+- disabled
+- maxlength
+- minlength
+- multiple
+- name
+- placeholder
+- pattern
+- required
+- readonly
+- size
+- spellcheck
+- tabindex
+- value
 
 ## Materialize Forms
 
