@@ -1,18 +1,16 @@
 # Objectives
 
 * Use form input tags:
-	* `<input>, <textarea>, <button>`
+	* `<input>, <select>, <button>`
 * Use multiple `types` of the `<input>` tag.
 * Use `<label>` tags to add labels to form elements.
 * Create a form in HTML using the `<form>` tag.
-* Use and overwrite default form behaviors.
-	* `action`, `method`, and event JS binding.
-* Use HTML5 input types as a first-line validation technique
-* Use other HTML5 techniques to validate input
-* Read the values from your form with JS
-* Check the values you've read with JS to make sure they are what they need to be
-* Listen to form events like submit, and show errors
-* Program defensively against faulty form input
+* Use HTML5 input types as a first-line validation technique.
+* Use other HTML5 techniques to validate input.
+* Read the values from your form with JS.
+* Check the values you've read with JS to make sure they are what they need to be.
+* Listen to form events like submit, and show errors.
+* Program defensively against faulty form input.
 
 If you've ever entered your credit card information to a website, performed a search on Google, or logged into Facebook then you've used forms. Forms are far and away the most common method of getting information from your user into your programs. Sometimes this information never leaves the browser, and sometimes it is sent to a web server.
 
@@ -80,21 +78,68 @@ You can also use the `for` attribute with an id of the input element like so.
 
 ## Select Boxes
 
+You can create select boxes that allow the user to choose from a set of options. You have the ability to allow users to select multiple options by using the `multiple` attribute.
+
+```html
+<!-- The second value will be selected initially -->
+<select name="select">
+  <option value="value1">Value 1</option> 
+  <option value="value2" selected>Value 2</option>
+  <option value="value3">Value 3</option>
+</select>
+```
+
 ## Radio and Checkboxes
+
+Both radio buttons and checkboxes allow the user to select options from a set. The key difference is that radio buttons will only allow one choice.
+
+```html
+<label><input type="radio" name="group1" value="Milk"> Milk</label><br>
+<label><input type="radio" name="group1" value="Butter" checked> Butter</label><br>
+<label><input type="radio" name="group1" value="Cheese"> Cheese</label><br>
+<hr>
+<label><input type="radio" name="group2" value="Water"> Water</label><br>
+<label><input type="radio" name="group2" value="Beer"> Beer</label><br>
+<label><input type="radio" name="group2" value="Wine" checked> Wine</label><br>
+```
+
+Notice the `name` attribute. Each radio button belongs to a group with the same `name`. This allows us to have multiple sets of radio buttons where the user can select an option from each group.
+
+```html
+<label><input type="checkbox" name="option1" value="Milk"> Milk</label><br>
+<label><input type="checkbox" name="option2" value="Butter" checked> Butter</label><br>
+<label><input type="checkbox" name="option3" value="Cheese"> Cheese</label><br>
+```
 
 ## Hidden
 
+Hidden fields are what as described, hidden. There is no visual for the user to see. These have been quite useful in passing data in through the form that the user does not need to enter specifically (eg. An item ID).
+
 ## Buttons
+
+We've seen plenty of buttons before, but let's dig a little bit deeper.
+
+```html
+<button name="button">Belly</button>
+```
 
 ### Submit vs Reset
 
+Buttons contain a `type` attribute with three options.
+
+* button (default)
+* submit (default when in a form)
+* reset
+
+Buttons when in a form, do nothing. They require some hooking up with JavaScript to do anything meaningful. The `submit` type sends the data in the form to a server that you specify. The `reset` type resets all the controls in the form to their default state.
+
 ## And many more...
 
-There are more challenges in our repo ([https://github.com/gSchool/html-forms](https://github.com/gSchool/html-forms)) that will have you experiment with other input types including `checkbox`, `hidden`, `radio button`, and more. Knowing what types of inputs are available is essential to designing a form that is simple and easy to use. When you encounter a new type ask yourself "what would I use this for?"
+There are more challenges in our repo ([https://github.com/gSchool/html-forms](https://github.com/gSchool/html-forms)) that will have you experiment with other input types including `image`, `file `, `date`, and more. Knowing what types of inputs are available is essential to designing a form that is simple and easy to use. When you encounter a new type ask yourself "what would I use this for?"
 
 ## Common Attributes
 
-With inputs, there are a variety of attributes available to use. Many vary by input and a lot of them are nonstandard but _recommended_.
+With inputs, there are a variety of attributes available to use. Many vary by input and a lot of them are nonstandard but _recommended_. Take a look at [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input) and let's discuss.
 
 * autocomplete
 * autofocus
@@ -113,93 +158,6 @@ With inputs, there are a variety of attributes available to use. Many vary by in
 
 Let's start with the Materialize [http://materializecss.com/forms.html](documentation) on forms specifically. Materialize includes some simple ways to make your forms look awesome.
 
-# Form Action and Method
-
-Lets experiment with building forms. Clone the repo found here and complete challenge 1: [https://github.com/gSchool/html-forms](https://github.com/gSchool/html-forms)
-
-![](https://media1.giphy.com/media/YhyAJUCpno53y/200.gif)
-
-Once you've completed the first challenge, try to answer the question "What is happening when we click the submit button?". If you get stuck try looking at the URL before and after you click submit, does anything stand out?
-
-Here is what my URL was before submitting:
-`file:///Users/Tyler/GalvanizeProjects/g16/temp/html-forms/index.html`
-
-And after, it has become massive:
-
-```
-file:///Users/Tyler/GalvanizeProjects/g16/temp/html-forms/index.html?firstText=Tyler&secondText=someArbitraryValue&textArea1=This+is+what+I+wrote+personally!&preFilledTA=This+text+should+be+inside+a+text+area!&email=fake%40faking.it&date=12%2F12%2F2012&number=4&file=Screen+Shot+2015-11-04+at+9.39.13+AM.png
-```
-
-The default behavior for an `<input type="submit">` is to send an HTTP GET request to the current URL with __query parameters__ for each item in the form. In a URL, a query parameter is anything that occurs after the ? character. These query parameters can be chained using the & symbol. Lets break down the URL above:
-
-```
-file:///Users/Tyler/GalvanizeProjects/g16/temp/html-forms/index.html?
-firstText=Tyler
-&secondText=someArbitraryValue
-&textArea1=This+is+what+I+wrote+personally!
-&preFilledTA=This+text+should+be+inside+a+text+area!
-&email=fake%40faking.it
-&date=12%2F12%2F2012&number=4
-&file=Screen+Shot+2015-11-04+at+9.39.13+AM.png
-```
-
-Notice that after `index.html` there is a `?`. This starts the query parameters. The first one for me is `firstText` which corresponds to this input element:
-
-```
-<input id="1" name="firstText" type="text"/>
-```
-
-For each input element, I have a query parameter corresponding to the name property. Try removing the name property from your first input. Does it still show up in our query parameters? What about the table?
-
-The `name` property is essential in the use of forms. Remember that `id` and `name` serve different purposes in forms. `id` is still used to uniquely identify an element anywhere on the page, but `name` is used to track data within the forms.
-
-## What About that Table?
-
-How did we extract the information sent in query params and put it in a table? Try looking at the file js/app.js in the cloned repo. Here is the most important snippet from that code:
-
-```
-var queryString = document.location.search.replace('?', '');
-var pairs = queryString.split('&').map(function (pair) {
-      return pair.split('=');
-    });
-```
-
-We've used JavaScript and the `document.location` object to extract the query parameters. Challenge yourself to understand how this code works!
-
-# Controlling Forms
-
-The final piece of forms is controlling their behavior. As we've seen, it's simple enough to cobble together a form that accepts a wide range of inputs. It's also easy to use those inputs as query parameters for a simple HTTP GET request to the current URL. What if we want to do something different with that information?
-
-Lets take the form we created in Challenge 1, and paste it into a new HTML page called `example_1.html`. You can use this template for example_1.html
-
-```
-<!doctype>
-<html>
-  <head>
-    <title>HTML Forms</title>
-    <link rel="stylesheet" href="css/app.css" />
-  </head>
-  <body>
-    <h1>Form Fields: Example 1</h1>
-	<--! Paste your form here -->
-  </body>
-</html>
-```
-
-![](http://www.animatedgif.net/computers/a_10mailput_e0.gif)
-
-In `example_1.html` we can tell our form to send our query parameters to a different page, instead of the current URL. On the `<form>` element, lets add an `action` and `method` properties.
-
-```
-<form action="index.html" method="get">
-```
-
-Now when we click submit we will be sending a GET request to the page `index.html`. Click submit and notice that the table is filled out with the information we sent from our form in `example_1.html`. If we changed the `name` properties in `example_1.html` how would the table change?
-
-Using action and method, we can send all kinds of HTTP requests to any URL we want.
-
-Now that you've got the basics, go through the rest of the challenges at [https://github.com/gSchool/html-forms](https://github.com/gSchool/html-forms).
-
 # HTML and JS Form Validation
 
 ## Why?
@@ -215,8 +173,6 @@ So what do we do to ensure we get good input for our programs?
 ## HTML5 Validation
 
 First, we need to make it easy for humans with good intentions to use our interface. We can use a number of HTML5 capabilities to do this, such as tabindex, input types, and patterns.
-
-[Read this article about HTML5 Forms](http://diveintohtml5.info/forms.html), focus specifically on input types and [validation](http://diveintohtml5.info/forms.html#validation).
 
 After that, given the form below, change it to use HTML5 form validation techniques.
 Make sure:
@@ -252,6 +208,13 @@ Make sure:
 ```
 
 ***Bonus*** If you know regex, use the `pattern` property to ensure users include an @ sign in front of their twitter username.
+
+### What will HTML5 do?
+
+When an element is invalid, two things occur:
+
+* The element will now match a special CSS pseudo-class called :invalid. This allows you to stylize your invalid elements. Similarly, valid elements match the :valid pseudo-class.
+* The browser will try to block the user from submitting the form.
 
 ## JS Validation
 
