@@ -66,12 +66,13 @@ Additionally, there are the following non-textual controls.
 <input type="color">
 <input type="date">
 <input type="file">
+<input type="number">
 <input type="range">
 ```
 
 ### Radios and Checkboxes
 
-Both radio buttons and checkboxes allow the user to select options from a set. The key difference is that radio buttons will only allow one choice.
+The `<input>` control also has a `radio` and `checkbox` type for displaying both radio buttons and checkboxes respectively. Both of these types allow the user to select options from a set of choices. The key difference is that radio buttons only allow one choice.
 
 ```html
 <input type="radio" name="dairy" value="Milk"> Milk
@@ -85,7 +86,9 @@ Both radio buttons and checkboxes allow the user to select options from a set. T
 <input type="radio" name="flower" value="Rose" checked> Rose
 ```
 
-Notice the `name` attribute. Each radio button belongs to a group with the same `name`. This allows us to have multiple sets of radio buttons where the user can select an option from each group.
+As you can see, each radio button must belong to a **group** which is defined by setting the `name` attribute to the same value. This forces one radio button to be selected per group.
+
+On the other hand, checkboxes use `type="checkbox"` and it's `name` must be different per `<input>` control.
 
 ```html
 <input type="checkbox" name="option1" value="Milk"> Milk
