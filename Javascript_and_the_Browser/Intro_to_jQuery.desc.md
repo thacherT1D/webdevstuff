@@ -75,6 +75,8 @@ var $boxes = $('.box')
 
 There are [tons more](http://api.jquery.com/category/selectors/) selectors you can use and chain to find exactly the nodes you need.
 
+![HTML Tree](http://www.webstepbook.com/supplements/slides/images/dom_tree.gif)
+
 ### DOM Creation
 
 [[jquery]](https://api.jquery.com/jQuery/#jQuery-html-ownerDocument)
@@ -274,45 +276,86 @@ Use `.eq()` with an index to get an item out of the jQuery collection that is a 
 ### .parent(), .parents()
 
 [[jquery]](http://api.jquery.com/parent/)
+
+Use `.parent()` to get the parent element.
+
 [[jquery]](http://api.jquery.com/parents/)
+
+Use `.parents()` to get all the parents element to a particular element.
 
 ### .children()
 
 [[jquery]](http://api.jquery.com/children/)
 
+Use `.children()` to get the children of an element. It goes only one level deep.
+
 ### .first(), .last()
 
 [[jquery]](http://api.jquery.com/first/)
 
+Use `.first()` to get the first child.
+
 [[jquery]](http://api.jquery.com/last/)
+
+Use `.last()` to get the first child.
 
 ### .find()
 
 [[jquery]](http://api.jquery.com/find/)
 
+Use `.find()` to search through the children of an element. It goes all the way into the tree.
+
 ### .next(), .nextAll(), .prev(), .prevAll(), .siblings()
 
 [[jquery]](http://api.jquery.com/next/)
+
+Use `next()` to get the next sibling.
+
 [[jquery]](http://api.jquery.com/nextAll/)
+
+Use `nextAll()` to get all the siblings after the element.
+
 [[jquery]](http://api.jquery.com/prev/)
+
+Use `prev()` to get the previous sibling.
+
 [[jquery]](http://api.jquery.com/prevAll/)
+
+Use `prevAll()` to get all the siblings before the element.
+
 [[jquery]](http://api.jquery.com/siblings/)
+
+Use `siblings()` to get all the siblings of an element.
 
 ### .has()
 
 [[jquery]](http://api.jquery.com/has/)
 
+Use `.has()` to filter the set by a selector.
+
+### .is()
+
+[[jquery]](http://api.jquery.com/is/)
+
+Use `.is()` to check if the matched set matches a specific selector.
+
 ### .not()
 
 [[jquery]](http://api.jquery.com/not/)
+
+Use `.not()` to remove items from the set of match elements by a selector or function.
+
+### .filter()
+
+[[jquery]](http://api.jquery.com/filter/)
+
+Use `.filter()` to only include items from the set of match elements by a selector or function.
 
 ### .closest()
 
 [[jquery]](http://api.jquery.com/closest/)
 
-### .filter()
-
-[[jquery]](http://api.jquery.com/filter/)
+Use `.closest()` to get the closest element by checking itself and all of its ancestors.
 
 ## Other awesome Methods
 
