@@ -1,42 +1,42 @@
-# Introduction to jQuery
+## Objectives
+
+* Download and include jQuery into an HTML document.
+* Find an element by id, tag name, class name, and more advanced selectors using jQuery.
+* Set an element’s text content and attributes using jQuery.
+* Set an element's CSS styles using jQuery.
+* Construct and add elements to the DOM using jQuery.
+* Remove and elements from the DOM using jQuery.
+* Traverse the DOM using jQuery.
 
 > jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use API that works across a multitude of browsers. With a combination of versatility and extensibility, jQuery has changed the way that millions of people write JavaScript.
 
 [jQuery](http://jquery.com/) is a widely popular library for manipulating the DOM in a browser.
 
-```js
-var $divs = $('div');
-$divs.css('background-color', 'red');
-$divs.click(function() {
-  $(this).toggleClass('active');
-});
-```
-
 ## What's wrong with vanilla JS?
 
-Depending on who you ask, nothing! There's nothing you can do in jQuery that you _can't_ do in plain old vanilla Javascript. And as Javascript evolves, some feel like the gap between vanilla Javascript and the enhancements of jQuery is narrowing. 
+Depending on who you ask, nothing! There's nothing you can do in jQuery that you _can't_ do in plain old vanilla JavaScript. And as Javascript evolves, some feel like the gap between vanilla JavaScript and the enhancements of jQuery is narrowing. 
 
 But based on what you've seen so far, here are a few reasons you might like jQuery:
 
-1. The syntax is shorter. This means you can write code expressing the same functionality more efficiently. Suppose we wanted to add a click listener to a `div` with an id of `foo`. In vanilla javascript, that code would look something like this:
+1. The syntax is shorter. This means you can write code expressing the same functionality more efficiently. Suppose we wanted to add a click listener to a `div` with an id of `foo`. In vanilla JavaScript, that code would look something like this:
 
 	```javascript
-	document.getElementById('foo').addEventListener('click', callback);
+	document.getElementById('foo').setAttribute('attribute', 'value');
 	```
 	
 	In jQuery, the same functionality looks like this:
 
 	```javascript
-	$("#foo").on('click', callback);
+	$("#foo").attr('attribute', 'value');
 	```
 	
-2. As you may have noticed, even though the return values from functions like `document.getElementsByTagName` or `document.querySelectorAll` look like arrays, they are actually array-like objects which lack much of the functionality that arrays have. Specifically, array methods like `forEach`, `map`, etc. don't exist on these array-like objects.
+2. Return values from functions like `document.getElementsByTagName` or `document.querySelectorAll` are NodeLists, which are array-like objects which lack much of the functionality that arrays have. Specifically, array methods like `push`, `slice`, etc. don't exist on these.
 
 	To address this issue, jQuery comes with an `$.each` method and a `$.map` method that lets us iterate over jQuery objects. The syntax is a bit different than with `forEach` and `map`, but we'll cross that bridge later.
 	
 3. Dealing with adding, removing, and toggling classes is a bit more streamlined in jQuery.
 
-4. AJAX with jQuery is way better than AJAX with vanilla Javascript. (More on this later this week.)	
+4. AJAX with jQuery is way better than AJAX with vanilla JavaScript. (More on this later this week.)	
 
 ## Installation
 
@@ -343,7 +343,7 @@ $(function() {
 });
 ```
 
-Note that unlike with vanilla javascript, in this case, even though we attached the event listener to the container, `this` inside of the callback refers to the specific div that was clicked. In this case, how do you think `event.target` and `this` compare?
+Note that unlike with vanilla javaScript, in this case, even though we attached the event listener to the container, `this` inside of the callback refers to the specific div that was clicked. In this case, how do you think `event.target` and `this` compare?
 
 Further reading:
 
