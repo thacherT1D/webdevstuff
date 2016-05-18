@@ -84,17 +84,11 @@ XHR questions:
 
 # Thursday, May 19
 
-Warmup: [Link to Warmup](http://github.com/gSchool)
+Warmup: [Currency Converter](https://github.com/gSchool/ajax_warmup)
 
 Lessons:
-- [Lesson](https://workbook.galvanize.com/cohorts/68/student_dashboard)
-- [Lesson](https://workbook.galvanize.com/cohorts/68/student_dashboard)
-
-Homework: [Homework](https://workbook.galvanize.com/cohorts/68/student_dashboard)
-
-Announcements:
-- Announcement 1
-- Announcement 2
+- [Javascript Scope, Hoisting, Closures, and Higher Order Functions](https://workbook.galvanize.com/cohorts/68/articles/3090)
+- [CSS Frameworks](https://workbook.galvanize.com/cohorts/68/articles/3075)
 
 ---
 
