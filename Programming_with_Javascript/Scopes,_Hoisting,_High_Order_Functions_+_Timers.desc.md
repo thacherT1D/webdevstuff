@@ -4,26 +4,26 @@ In this lesson, we're going to expand our understanding functions.
 ## Objectives
 Students will be able to...
 
-- 1 of 6: describe the concept of scopes
-- 2 of 6: know how to create a new scope
-- 3 of 6: explain hoisting
-- 4 of 6: name the two types of high-order functions
-- 5 of 6: describe and create a closure
-- 6 of 6: describe and create a callback
+- 1: describe the concept of scopes
+- 2: know how to create a new scope
+- 3: explain hoisting
+- 4: name the two types of high-order functions
+- 5: describe and create a closure
+- 6: describe and create a callback
 
-### 1 of 6: What's Scope
-In the most simpliest of terms, scope is about variable accessibility. Depending on which scope a variable is defined, it may be accessible or inaccessible in another scope. The key to understanding scope with JavaScript is functions. A scope should be thought of as the list of variables and functions the program has access to at any given moment. Depending on the scope that the current line is being executed within, a different set of variables and functions could be available in that scope. 
+### 1: What's Scope?
+In the most simpliest of terms, scope is about variable accessibility. Depending on which scope a variable is defined, it may be accessible or inaccessible in another scope. The key to understanding scope with JavaScript is functions. A scope should be thought of as the list of variables and functions the program has access to at any given moment. Depending on the scope that the current line is being executed within, a different set of variables and functions could be available in that scope.
 
-There are two classes of scope in JavaScript: 
+There are two classes of scope in JavaScript:
 
 1. Global scope
 2. Local scope, or "function scope"
 
-Anything in "global scope" is always available, anywhere else in the program. Whenever your browser is running, there is a global variable called "window" in global scope. 
-  
+Anything in "global scope" is always available, anywhere else in the program. Whenever your browser is running, there is a global variable called "window" in global scope.
 
-### 2 of 6: Creating Scope
-A global exists outside the context of any function, and therefore is accessable from every function. A local scope, in turn, is created *inside* of each function. Let's view an example with both: 
+
+### 2: Creating Scope
+A global exists outside the context of any function, and therefore is accessible from every function. A local scope, in turn, is created *inside* of each function. Let's view an example with both:
 
 ```javascript
 var globalScope = "I'm outside of any function and can be accessed in any scope";
@@ -33,7 +33,7 @@ function localScope() {
   console.log("This is a local scope, but I can still access globalScope");
 
   // This works here inside of local
-  console.log(globalScope); 
+  console.log(globalScope);
 }
 
 // Works here as well
@@ -48,9 +48,9 @@ localScope
 A rule of thumb is that every variable should be as local as possible. Unless you absolutely need to share some piece of information across may different functions, then you should use a local variable. Here are two good reasons:
 
 1. Global Scope things can be changed anytime, anywhere, by any code. This makes reasoning about (and debugging changes in) such variables difficult.
-2. "Garbage Collection" is what allows JavaScript to clean up the memory it's using. Variables in global scope cannot be "garbage collected". This means that global scope can pollute your memory with things that are no longer being used, which may cause your program to crash if too much information gets stored. 
+2. "Garbage Collection" is what allows JavaScript to clean up the memory it's using. Variables in global scope cannot be "garbage collected". This means that global scope can pollute your memory with things that are no longer being used, which may cause your program to crash if too much information gets stored.
 
-That said, there are good examples of things that belong on global scope. Take the 'window' object in any browser for example. Window is a collection of functions and variables related to the current 'window' of your browser. In a modern browser, every tab has it's own "global scope" and as a result, it's own `window` object. 
+That said, there are good examples of things that belong on global scope. Take the 'window' object in any browser for example. Window is a collection of functions and variables related to the current 'window' of your browser. In a modern browser, every tab has it's own "global scope" and as a result, it's own `window` object.
 
 Open your developer console and try the following:
 
@@ -93,11 +93,11 @@ test();
 console.log(globalVariable);
 ```
 
-This time, we overwrote the global variable from within our function and so printed "The impostor" twice. 
+This time, we overwrote the global variable from within our function and so printed "The impostor" twice.
 
 
-### 3 of 6: What's Hoisting
-Regardless of where variables are defined, they are always hoisted to the top of their scope. This is often described as a two step process: declaration and assignment. Lets look at a simple block of code, and examine how "hoisting" changes the code. 
+### 3: What's Hoisting
+Regardless of where variables are defined, they are always hoisted to the top of their scope. This is often described as a two step process: declaration and assignment. Lets look at a simple block of code, and examine how "hoisting" changes the code.
 
 ```javascript
 console.log(myFirstFunction);
@@ -133,26 +133,26 @@ undefined
 some filler statement
 secondFunction
 50
-/Users/Tyler/Desktop/tmp.js:22
+/Users/Roger/Desktop/tmp.js:22
 console.log(unknownVariable);
             ^
 
 ReferenceError: unknownVariable is not defined
 ```
 
-We were able to call `myFirstFunction` before it's function definition, but `mySecondFunction` was undefined at the same moment. If we tried to call `mySecondFucntion` instead of using `console.log` it would throw an error. 
+We were able to call `myFirstFunction` before it's function definition, but `mySecondFunction` was undefined at the same moment. If we tried to call `mySecondFucntion` instead of using `console.log` it would throw an error.
 
-Not only that, but we were allowed to reference `myFirstVariable` before it's definition and it's value was undefined. The log statement after it's creation printed `50`! Finally, the `unknownVariable` threw an error even though `myFirstVariable` did not do the same thing prior to it's creation. 
+Not only that, but we were allowed to reference `myFirstVariable` before it's definition and it's value was undefined. The log statement after it's creation printed `50`! Finally, the `unknownVariable` threw an error even though `myFirstVariable` did not do the same thing prior to it's creation.
 
-This is because of "Hoisting". When JavaScript enters a new scope, it preprocesses that scope in two stages. 
+This is because of "Hoisting". When JavaScript enters a new scope, it preprocesses that scope in two stages.
 
 #### Function Hoisting
 
-First, function declarations are hoisted to the very top of the file. Function declarations are any statement that starts with the keyword function. `function myFirstFunction(){}` is such a declaration, but `var mySecondFunction = function(){}` is __not__. The second statement starts with the keyword `var`. When functions declarations are hoisted, their definition is __also__ hoisted. This is in contrast to the second phrase of hoisting.
+First, function declarations are hoisted to the very top of the file. Function declarations are any statement that starts with the keyword function. `function myFirstFunction(){}` is such a declaration, but `var mySecondFunction = function(){}` is __not__. The second statement starts with the keyword `var`. When functions declarations are hoisted, their definition is __also__ hoisted. This is in contrast to the second phase of hoisting.
 
 #### Variable Hoisting
 
-After all the function declarations are hoisted, the variable __declaration__ but not definition is hoisted. This means that any statement starting with the keyword `var` is at least partially hoisted. For example the statement `var myVariable;` is hoisted in it's entierty, but the statement `var myVaraible = 50` is shortened to `var myVariable;` then hoisted. The value assignment statement changes to `myVariable = 50` and stays where it is. Lets look at the previous code __after__ hoisting has happened:
+After all the function declarations are hoisted, the variable __declaration__ but not definition is hoisted. This means that any statement starting with the keyword `var` is at least partially hoisted. For example the statement `var myVariable;` is hoisted in it's entirety, but the statement `var myVariable = 50` is shortened to `var myVariable;` then hoisted. The value assignment statement changes to `myVariable = 50` and stays where it is. Lets look at the previous code __after__ hoisting has happened:
 
 ```
 // HOISTING SECTION ONE: Function Declarations pulled all the way up
@@ -183,18 +183,18 @@ console.log(myFirstVariable);
 console.log(unknownVariable);
 ```
 
-Note that running this code produces identical output to the code above -- that's because as far as JS is concenred, it IS the same code. Further note that all the `var` keywords have been removed from final section of the code. The declarations have been hoisted and so we do not need to declare them a second time.
+Note that running this code produces identical output to the code above -- that's because as far as JS is concerned, it IS the same code. Further note that all the `var` keywords have been removed from final section of the code. The declarations have been hoisted and so we do not need to declare them a second time.
 
 The most important thing you could learn about hoisting, is that there is a significant difference between the following to statements:
 
 ```
 function myFirstFunction() {};
-var secondFucntion = function(){};
+var secondFunction = function(){};
 ```
 
 The first is a function which will be put onto global scope. The second is a variable whose value has been assigned to a function.
 
-### 4 of 6: Two types of high-order functions
+### 4: Two types of high-order functions
 Higher-order functions describe functions that meet one of two criteria:
 
 1. A function that returns a function
@@ -202,7 +202,7 @@ Higher-order functions describe functions that meet one of two criteria:
 
 The concept of "High Order Functions" has it's roots in mathematics (specifcally [lambda calculus](https://en.wikipedia.org/wiki/Lambda_calculus)). These types functions are very common in JavaScript, but are often a tricky concept when first approached. The crucial lesson is that in JavaScript, variables can contain a function. Functions are just like Number, String, or other datatypes in this way. Try using this simple high order function which returns a function:
 
-```
+```javascript
 function returnAFunction() {
 	return function(){
 		console.log("I'm an inner function!");
@@ -216,14 +216,14 @@ returnedFunction();
 returnAFunction()();
 ```
 
-### 5 of 6: Closures
+### 5: Closures
 
-Closures are a feature of high order functions. To understand closures, lets revist our previous example of a high order function, but make one modification:
+Closures are a feature of high order functions. To understand closures, lets revisit our previous example of a high order function, but make one modification:
 
 ```javascript
 function returnAFunction() {
 	var closedOver = "This information is closed over";
-	
+
 	return function(){
 		console.log(closedOver);
 	}
@@ -277,9 +277,9 @@ Our Output is:
 3
 ```
 
-As we can see, __each__ of the returned functions have closed over their own environment. The returned functions each have a unique scope that was closed over. The `var count` inside of `secondCounter` is not the same `var count` inside of `counter`. 
+As we can see, __each__ of the returned functions have closed over their own environment. The returned functions each have a unique scope that was closed over. The `var count` inside of `secondCounter` is not the same `var count` inside of `counter`.
 
-### 6 of 6: Callback Functions
+### 6: Callback Functions
 
 The most common usage of a high order function in JavaScript is a pattern called a "callback" function. A callback function in JavaScript is any function that is passed in as a parameter to another function and is called at the end of that function. This is in contrast our previous high order functions, which returned functions. Instead of returning a function, we call a function that is passed in.
 
@@ -323,9 +323,6 @@ Functions in JavaScript are __very powerful__ and in many ways they are more usa
 ## Resources
 
 - http://reactivex.io/learnrx/
-
-<iframe src="https://player.vimeo.com/video/134061121" width="500" height="313" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-
 
 ## Exercise
 
