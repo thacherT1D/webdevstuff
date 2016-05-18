@@ -71,6 +71,15 @@ Lessons:
 - [Wireframing](https://workbook.galvanize.com/cohorts/68/student_dashboard)
 - [Javascript Scope, Hoisting, Closures, and Higher Order Functions](https://workbook.galvanize.com/cohorts/68/articles/3090)
 
+
+XHR questions:
+
+- Whole process from scratch
+- How you GET specific information
+- How to access data when API is not well "developed".
+- Recognize error states/messages, Allow-Cross-Origin
+
+
 ---
 
 # Thursday, May 19
