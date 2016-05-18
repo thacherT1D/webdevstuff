@@ -27,30 +27,42 @@ Objective 1: Discuss the 3 stage learning process
 
 ### 1. Set the Stage
 #### Clear the Stage
-In order to engage in deep work, we have to eliminate distractions. Although there is some debate among neuroscientists, our working memory has a limited number of slots-- [4 or fewer](http://news.mit.edu/2011/miller-memory-0623). Therefore, you have to clear out those slots to make room for new information. Here's how you can clear the stage: 
+In order to engage in deep work, we have to eliminate distractions. Although there is some debate among neuroscientists, our working memory has a limited number of slots-- [4 or fewer](http://news.mit.edu/2011/miller-memory-0623).  That means you have to get rid of everything in your working memory that's not relevant to the task at hand. We have very limited space in our working memory, just like the RAM in a computer. Therefore, if you hope to learn as much as possible and to think as critically as possible, you need to get those things out of your head. Here's how you can clear the stage:
 * Have an 'I will think about this later' list where you record ideas or tasks that you need to be address, but not while you're working
 * Close tabs that aren’t directly related to your work
 * [Disable notifications](https://www.youtube.com/watch?v=JbhQQ298-dQ) on your laptop
 * Turn off, or silence your phone
 * Consider a time blocking method like [The Pomodoro Technique](http://pomodorotechnique.com/)
 
+#### Check for Understanding:
+Write a summary of the first stage of the learning process.
+
 
 #### Clarify the _what_ and the _why_
+The second part of setting the stage is clarifying that _what_ and the _why_.The _what_ is your objective, your goal, or whatever you're trying to achieve when you're setting out to learn. In our lessons, your instructors will explicitly say what the objectives are. But when you're off learning on your own, come up with an objective of sorts to help you clarify and distill what you hope to achieve at the end of your session.Here are some tips to clarify the _what_:
+* [Replace Your Purpose with an Objective](http://onelightpoints.blogspot.com/2013/02/practice-perfect-digest-rule-5-replace.html) from [Practice Perfect](http://practiceperfectthebook.com/) by Doug Lemov
+* Use [SMART Goals](http://charlesduhigg.com/infographic-tackle-your-to-do-list/) to build your to do list
+* Charles Duhigg on how to [Build a Better To Do List](http://charlesduhigg.com/video-build-a-better-to-do-list/)
 
-Know exactly what piece of knowledge or skill you are trying to master (use learning objectives to help you!)
-Ask and answer for yourself:  “Why is it important for me to learn this fact or skill?”
+
+The _why_ is the meaning or motivation behind the learning. Being human is to be driven by meaning and narrative. If you can frame something you're about to do in terms that motivate you, your brain will be better primed to retain the information that's presented. No matter the topic, have a clear understanding of _why_ the topic is important, how it'll help, or how it relates to the bigger picture. Your instructors have a responsibility to clarify the why for you as well. So if you're ever unsure about why they're teaching you something, just ask.
+
+#### Check for Understanding:
+Write a summary of the second stage of the learning process.
 
 
 #### Prioritize process over product
 Focused practice is the key
 Your goal is to move information from your working memory to your long term memory
 
-#### Check for Understanding:
-Write in your own words the first stage of the learning process.
+
 
 ### 2. Play
 
 ### 3. Reflect
+
+### Recommended Resources
+[Freakonomics Radio: How to be More Productive](http://freakonomics.com/podcast/how-to-be-more-productive/)
 
 
 ## Exercise
