@@ -3,6 +3,9 @@
 
 - Explain how the Web works
 - Build HTML Forms and Controls
+- Describe javascript Scope
+- Explain and us javascript Closures
+- Describe javascript Hoisting
 
 ---
 
