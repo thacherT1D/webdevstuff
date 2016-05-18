@@ -68,7 +68,7 @@ countCharacters('aAbcdaDe',['c','d','z'],true) -> {a:3,b:1,e:1}
 Please use Test Driven Development.
 
 Lessons:
-- [Wireframing](https://workbook.galvanize.com/cohorts/68/student_dashboard)
+- [Wireframing](https://workbook.galvanize.com/cohorts/68/articles/3115)
 - [Javascript Scope, Hoisting, Closures, and Higher Order Functions](https://workbook.galvanize.com/cohorts/68/articles/3090)
 
 
