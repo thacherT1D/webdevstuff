@@ -155,32 +155,59 @@ $('input[type="checkbox"]').prop('checked', true);
 ### .height(), .innerHeight(), .outerHeight()
 
 [[jquery]](http://api.jquery.com/height/)
+
+Use `.height()` to get the height of the content area.
+
 [[jquery]](http://api.jquery.com/innerHeight/)
+
+Use `.innerHeight()` to get the height of the content area including the padding.
+
 [[jquery]](http://api.jquery.com/outerHeight/)
+
+Use `.outerHeight()` to get the height of the content area including the padding and border (the margin is optional).
 
 ### .width(), .innerWidth(), .outerWidth()
 
 [[jquery]](http://api.jquery.com/width/)
+
+Use `.width()` to get the height of the content area.
+
+
 [[jquery]](http://api.jquery.com/innerWidth/)
+
+Use `.innerWidth()` to get the height of the content area including the padding.
+
 [[jquery]](http://api.jquery.com/outerWidth/)
+
+Use `.outerWidth()` to get the height of the content area including the padding and border (the margin is optional).
 
 ### .offset()
 
 [[jquery]](http://api.jquery.com/offset/)
 
+Use `.offset()` to get the `left` and `top` coordinates (in pixels) of an element in relation to the _document_.
+
 ### .position()
 
 [[jquery]](http://api.jquery.com/position/)
+
+Use `.position()` to get the `left` and `top` coordinates (in pixels) of an element in relation to the _offset parent_, that is, the parent that is closest positioned element (that is with a `position` CSS property equal to `relative`, `absolute`, or `fixed`).
 
 ### .offsetParent()
 
 [[jquery]](http://api.jquery.com/offsetParent/)
 
+Use `.offsetParent()` to get the offset parent of an element. This is useful in identifying the element for which `position()` is based off of.
+
 ### .scrollTop(), .scrollLeft()
 
 [[jquery]](http://api.jquery.com/scrollTop/)
+
+Use `scrollTop()` to get the number of pixels we have scrolled from the top.
+
 [[jquery]](http://api.jquery.com/scrollLeft/)
 
+Similarly, `scrollLeft()` produces the number of pixels we have scrolled from the left.
 
 ## DOM Manipulation
 
@@ -222,22 +249,36 @@ $('div').empty() //clear out all divs
 
 ### .replaceAll(), .replaceWith()
 
-[[jquery]](http://api.jquery.com/replaceAll/)
 [[jquery]](http://api.jquery.com/replaceWith/)
 
+Use `replaceWith` to replace a source element _with_ a target element.
+
+[[jquery]](http://api.jquery.com/replaceAll/)
+
+Use `replaceAll` to replace all the target elements _with_ a source element.
+
 ## DOM Traversing
-
-### .eq()
-
-[[jquery]](http://api.jquery.com/eq/)
 
 ### .get()
 
 [[jquery]](http://api.jquery.com/get/)
 
-### .filter()
+Use `.get()` with an index to get an item out of the jQuery collection that is the native DOM element.
 
-[[jquery]](http://api.jquery.com/filter/)
+### .eq()
+
+[[jquery]](http://api.jquery.com/eq/)
+
+Use `.eq()` with an index to get an item out of the jQuery collection that is a jQuery object.
+
+### .parent(), .parents()
+
+[[jquery]](http://api.jquery.com/parent/)
+[[jquery]](http://api.jquery.com/parents/)
+
+### .children()
+
+[[jquery]](http://api.jquery.com/children/)
 
 ### .first(), .last()
 
@@ -245,25 +286,9 @@ $('div').empty() //clear out all divs
 
 [[jquery]](http://api.jquery.com/last/)
 
-### .has()
-
-[[jquery]](http://api.jquery.com/has/)
-
-### .not()
-
-[[jquery]](http://api.jquery.com/not/)
-
-### .children()
-
-[[jquery]](http://api.jquery.com/children/)
-
 ### .find()
 
 [[jquery]](http://api.jquery.com/find/)
-
-### .closest()
-
-[[jquery]](http://api.jquery.com/closest/)
 
 ### .next(), .nextAll(), .prev(), .prevAll(), .siblings()
 
@@ -273,19 +298,51 @@ $('div').empty() //clear out all divs
 [[jquery]](http://api.jquery.com/prevAll/)
 [[jquery]](http://api.jquery.com/siblings/)
 
-### .parent(), .parents()
+### .has()
 
-[[jquery]](http://api.jquery.com/parent/)
-[[jquery]](http://api.jquery.com/parents/)
+[[jquery]](http://api.jquery.com/has/)
 
+### .not()
+
+[[jquery]](http://api.jquery.com/not/)
+
+### .closest()
+
+[[jquery]](http://api.jquery.com/closest/)
+
+### .filter()
+
+[[jquery]](http://api.jquery.com/filter/)
+
+## Other awesome Methods
+
+### .show(), .hide(), .toggle()
+
+[[jquery]](http://api.jquery.com/show/)
+[[jquery]](http://api.jquery.com/hide/)
+[[jquery]](http://api.jquery.com/toggle/)
+
+### .animate()
+
+[[jquery]](http://api.jquery.com/animate/)
+
+### .fadeIn(), .fadeOut()
+
+[[jquery]](http://api.jquery.com/fadeIn/)
+[[jquery]](http://api.jquery.com/fadeOut/)
+
+### .slideDown(), .slideUp()
+
+[[jquery]](http://api.jquery.com/slideDown/)
+[[jquery]](http://api.jquery.com/slideUp/)
 
 
 ## Further reading
 
 [jQuery docs](https://api.jquery.com/)
 
-[You might not need jQuery](http://youmightnotneedjquery.com/)
+[jQuery CheatSheet](https://oscarotero.com/jquery/)
 
-In-class lab:
+[You might not need jQuery](http://youmightnotneedjquery.com/)
 
 [jQuery Playground](https://github.com/gSchool/boxes-jQuery-playground)
