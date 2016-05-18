@@ -50,7 +50,6 @@ Warmup:
 
 Write a function that takes a string and an array, and returns an object with the characters in the array that are contained in the string as keys and their value is how many times they occurred in the string. If a character is contained in the array but not in the string, have the returned object contain a key for that character, but the count should be 0. The counter function should not care about case. The keys in the object should all be lowercase.
 
- Ex: countVowels('aAbcdade') -> {a:3,e:1}
 
  Ex: countCharacters('aAbcdaDe',['c','d','z']) -> {c:1,d:2,z:0}
 
