@@ -53,8 +53,14 @@ Warmup:
 
 Write a function that takes a string and an array, and returns an object with the characters in the array that are contained in the string as keys and their value is how many times they occurred in the string. If a character is contained in the array but not in the string, have the returned object contain a key for that character, but the count should be 0. The counter function should not care about case. The keys in the object should all be lowercase.
 
-
  Ex: countCharacters('aAbcdaDe',['c','d','z']) -> {c:1,d:2,z:0}
+
+ Stretch goals:
+
+* Count the number of substrings (2 characters or more) that are passed in an array.
+
+* Add an optional argument to your function that if it is set to true, it returns the count of all but the characters/substrings in the array.
+
 
 Please use Test Driven Development.
 
