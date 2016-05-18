@@ -4,7 +4,7 @@ In this lesson, we're going to expand our understanding functions.
 ## Objectives
 Students will be able to...
 
-- 1: describe the concept of scopes
+- 1: describe the concept of scope
 - 2: know how to create a new scope
 - 3: explain hoisting
 - 4: name the two types of high-order functions
@@ -12,7 +12,7 @@ Students will be able to...
 - 6: describe and create a callback
 
 ### 1: What's Scope?
-In the most simpliest of terms, scope is about variable accessibility. Depending on which scope a variable is defined, it may be accessible or inaccessible in another scope. The key to understanding scope with JavaScript is functions. A scope should be thought of as the list of variables and functions the program has access to at any given moment. Depending on the scope that the current line is being executed within, a different set of variables and functions could be available in that scope.
+In the most simplest of terms, scope is about variable accessibility. Depending on which scope a variable is defined, it may be accessible or inaccessible in another scope. The key to understanding scope with JavaScript is functions. A scope should be thought of as the list of variables and functions the program has access to at any given moment. Depending on the scope that the current line is being executed within, a different set of variables and functions could be available in that scope.
 
 There are two classes of scope in JavaScript:
 
@@ -20,6 +20,9 @@ There are two classes of scope in JavaScript:
 2. Local scope, or "function scope"
 
 Anything in "global scope" is always available, anywhere else in the program. Whenever your browser is running, there is a global variable called "window" in global scope.
+
+#### Exercise:
+Per table: Come up with an analogy for scope.
 
 
 ### 2: Creating Scope
@@ -95,6 +98,32 @@ console.log(globalVariable);
 
 This time, we overwrote the global variable from within our function and so printed "The impostor" twice.
 
+
+#### Exercises
+What is the output of the following 2 snippets of code
+```
+var counter = 0;
+
+function test() {
+    var counter = 1;
+    console.log(counter++);
+}
+
+test();
+console.log(counter);
+```
+
+```
+var counter = 0;
+
+function test() {
+    counter = 1;
+    console.log(counter++);
+}
+
+test();
+console.log(counter);
+```
 
 ### 3: What's Hoisting
 Regardless of where variables are defined, they are always hoisted to the top of their scope. This is often described as a two step process: declaration and assignment. Lets look at a simple block of code, and examine how "hoisting" changes the code.
@@ -216,6 +245,9 @@ returnedFunction();
 returnAFunction()();
 ```
 
+#### Exercise
+What examples have you come across that that take a function as an argument.
+
 ### 5: Closures
 
 Closures are a feature of high order functions. To understand closures, lets revisit our previous example of a high order function, but make one modification:
@@ -278,6 +310,24 @@ Our Output is:
 ```
 
 As we can see, __each__ of the returned functions have closed over their own environment. The returned functions each have a unique scope that was closed over. The `var count` inside of `secondCounter` is not the same `var count` inside of `counter`.
+
+#### Exercises
+
+* Increment
+* Decrement
+* greeting
+* Multiply
+* less than
+* greater than
+* equal
+* pass equality operator
+
+---
+
+* characterCheck
+* xhr
+
+
 
 ### 6: Callback Functions
 
