@@ -39,19 +39,16 @@ There are some constraints around what technologies MUST be present in your app.
 
 Every student will be assigned a Product Owner, and every student will also be the Product Owner for another student.
 
-* Your instructors will create a [Pivotal Tracker](http://www.pivotaltracker.com) account for you
-    * Once your account is created, do a password reset in Pivotal Tracker to gain access
-    * Create a new project in Pivotal Tracker for this assignment, and name it "GXX - Full Name" (using your cohort number and your name)
-    * Note that we will delete these projects when we're done
+* You are going to manage the agile process using github issues, so you'll create a repository for your project and that's where the stories will exist.
 * Work with your product owner to define several strong agile user stories
 * Work with your product owner to come up with a few hand-drawn wireframes
-* Add your stories to your Pivotal Tracker project
+* Create issues in github for these
 
 Most of your day will be spent working on your user stories. At the end of each day, you will go through the acceptance process with your product owner:
 
 * You will show them your **deployed** app
 * They will review your code
-* They will accept or reject your delivered story, with feedback
+* They will close the issue, or tell you what they think it needs to do to be considered done
 
 <a id="create-deploy"></a>
 
@@ -65,7 +62,7 @@ Your web app should:
     * Include some embedded media (images, audio, video, canvas)
     * Optionally, use a templating engine
 * CSS
-    * Use either SASS or a styling framework like Bootstrap
+    * Use either SASS or a styling framework like Bootstrap, or Foundation
         * If you are using Bootstrap, please consider theming with something like bootswatch, customizing the download with SASS, or a [customizer](http://getbootstrap.com/customize/)
     * Be well-indented and clean
     * Split code into separate files where appropriate
@@ -74,17 +71,14 @@ Your web app should:
     * DOM manipulation via JavaScript or jQuery
     * Integration with some external API via XHR or AJAX
     * Response to some user-initiated events
-    * Well-indented, [linted](http://www.javascriptlint.com/online_lint.php), and use excellent variable names
+    * Well-indented, [linted](http://eslint.org/), and use excellent variable names
     * Split code into separate files where appropriate
-    * Optionally, use a test-driven development approach
 * User Input
     * Use at least one web form
     * Validate user input
-    * Persist user data using something like LocalStorage
 * Workflow
     * Use wireframes to create your layouts before you build them
     * Use a feature-branch workflow for your user stories
-    * Do some build-tooling with something like Gulp
 
 <a id="video"></a>
 
