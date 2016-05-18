@@ -6,7 +6,7 @@
 
 ---
 
-# Monday, May 16
+# Monday, May 16 - Roger
 
 Warmup: [CSS Wireframe Warmup](https://github.com/gSchool/cssWireframeWarmup)
 
@@ -44,19 +44,21 @@ Guiding Questions
 
 ---
 
-# Wednesday, May 18
+# Wednesday, May 18 - Roger
 
-Warmup: [Link to Warmup](http://github.com/gSchool)
+Warmup:
+
+Write a function that takes a string and an array, and returns an object with the characters in the array that are contained in the string as keys and their value is how many times they occurred in the string. If a character is contained in the array but not in the string, have the returned object contain a key for that character, but the count should be 0. The counter function should not care about case. The keys in the object should all be lowercase.
+
+ Ex: countVowels('aAbcdade') -> {a:3,e:1}
+
+ Ex: countCharacters('aAbcdaDe',['c','d','z']) -> {c:1,d:2,z:0}
+
+Please use Test Driven Development.
 
 Lessons:
-- [Lesson](https://workbook.galvanize.com/cohorts/68/student_dashboard)
-- [Lesson](https://workbook.galvanize.com/cohorts/68/student_dashboard)
-
-Homework: [Homework](https://workbook.galvanize.com/cohorts/68/student_dashboard)
-
-Announcements:
-- Announcement 1
-- Announcement 2
+- [Wireframing](https://workbook.galvanize.com/cohorts/68/student_dashboard)
+- [Javascript Scope, Hoisting, Closures, and Higher Order Functions](https://workbook.galvanize.com/cohorts/68/articles/3090)
 
 ---
 
