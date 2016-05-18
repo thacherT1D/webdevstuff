@@ -85,11 +85,11 @@ Creating DOM Elements with jQuery is super easy! Just insert a tag into the `$` 
 var myDiv = $('<div class="active">');
 ```
 
-## Dom Manipulation
+## Attributes/CSS/Display
 
 Modifying a DOM Element can be difficult at times using native functions. jQuery offers a [plethora of methods](http://api.jquery.com/category/manipulation/) to make modifying the DOM super simple.
 
-#### .toggleClass()
+### .toggleClass()
 
 [[jquery]](http://api.jquery.com/toggleClass/)
 
@@ -101,7 +101,7 @@ $('#myButton').click(function () {
 })
 ```
 
-#### .attr()
+### .attr()
 
 [[jquery]](http://api.jquery.com/attr/)
 
@@ -112,25 +112,25 @@ console.log($('img').attr('title')) // print out the first img's title
 $('img').attr('title', 'image hover text for the win!'); // set the title text on all images
 ```
 
-#### .text()
+### .text()
 
 [[jquery]](http://api.jquery.com/text/)
 
 The `.text()` function to get and set the text content on the element.
 
-#### .val()
+### .val()
 
 [[jquery]](http://api.jquery.com/val/)
 
 The `.val()` function to get and set the value on the element (usually used for an input's `value` property).
 
-#### .html()
+### .html()
 
 [[jquery]](http://api.jquery.com/html/)
 
 The `.html()` function to get and set the html inside an element. This is useful when making a change inside an element that's composed of multiple elements.
 
-#### .css()
+### .css()
 
 [[jquery]](http://api.jquery.com/css/)
 
@@ -141,7 +141,7 @@ var color = $('div').css('background-color'); //get the first div background-col
 $('div').css('background-color', 'red'); //set all div's background colors
 ```
 
-#### .prop()
+### .prop()
 
 [[jquery]](http://api.jquery.com/prop/)
 
@@ -152,7 +152,39 @@ var isChecked = $('input[type="checkbox"]').prop('checked');
 $('input[type="checkbox"]').prop('checked', true);
 ```
 
-#### .prepend() .append() .insertBefore() .insertAfter() .before() .after()
+### .height(), .innerHeight(), .outerHeight()
+
+[[jquery]](http://api.jquery.com/height/)
+[[jquery]](http://api.jquery.com/innerHeight/)
+[[jquery]](http://api.jquery.com/outerHeight/)
+
+### .width(), .innerWidth(), .outerWidth()
+
+[[jquery]](http://api.jquery.com/width/)
+[[jquery]](http://api.jquery.com/innerWidth/)
+[[jquery]](http://api.jquery.com/outerWidth/)
+
+### .offset()
+
+[[jquery]](http://api.jquery.com/offset/)
+
+### .position()
+
+[[jquery]](http://api.jquery.com/position/)
+
+### .offsetParent()
+
+[[jquery]](http://api.jquery.com/offsetParent/)
+
+### .scrollTop(), .scrollLeft()
+
+[[jquery]](http://api.jquery.com/scrollTop/)
+[[jquery]](http://api.jquery.com/scrollLeft/)
+
+
+## DOM Manipulation
+
+### .prepend() .append() .insertBefore() .insertAfter() .before() .after()
 
 All of these methods are used for inserting a DOM Element into the DOM at various spots.
 
@@ -162,7 +194,7 @@ All of these methods are used for inserting a DOM Element into the DOM at variou
 
 [`.before()`](http://api.jquery.com/before/) and [`.after()`](http://api.jquery.com/after/) are the same as `.insertBefore()` and `.insertAfter()`.
 
-#### .remove(), .detach()
+### .remove(), .detach()
 
 [[jquery]](http://api.jquery.com/remove/)
 
@@ -172,13 +204,13 @@ The `.remove()` function removes a DOM element from the DOM.
 
 The `.detach()` function is very similar to `.remove()`, but it returns the removed jQuery object that you can use later.
 
-#### .clone()
+### .clone()
 
 [[jquery]](http://api.jquery.com/clone/)
 
 The `.clone()` function makes a deep copy clone of the selected DOM Element.
 
-#### .empty()
+### .empty()
 
 [[jquery]](http://api.jquery.com/empty/)
 
@@ -187,6 +219,66 @@ the `.empty()` method will clear out the contents of any DOM Element.
 ```js
 $('div').empty() //clear out all divs
 ```
+
+### .replaceAll(), .replaceWith()
+
+[[jquery]](http://api.jquery.com/replaceAll/)
+[[jquery]](http://api.jquery.com/replaceWith/)
+
+## DOM Traversing
+
+### .eq()
+
+[[jquery]](http://api.jquery.com/eq/)
+
+### .get()
+
+[[jquery]](http://api.jquery.com/get/)
+
+### .filter()
+
+[[jquery]](http://api.jquery.com/filter/)
+
+### .first(), .last()
+
+[[jquery]](http://api.jquery.com/first/)
+
+[[jquery]](http://api.jquery.com/last/)
+
+### .has()
+
+[[jquery]](http://api.jquery.com/has/)
+
+### .not()
+
+[[jquery]](http://api.jquery.com/not/)
+
+### .children()
+
+[[jquery]](http://api.jquery.com/children/)
+
+### .find()
+
+[[jquery]](http://api.jquery.com/find/)
+
+### .closest()
+
+[[jquery]](http://api.jquery.com/closest/)
+
+### .next(), .nextAll(), .prev(), .prevAll(), .siblings()
+
+[[jquery]](http://api.jquery.com/next/)
+[[jquery]](http://api.jquery.com/nextAll/)
+[[jquery]](http://api.jquery.com/prev/)
+[[jquery]](http://api.jquery.com/prevAll/)
+[[jquery]](http://api.jquery.com/siblings/)
+
+### .parent(), .parents()
+
+[[jquery]](http://api.jquery.com/parent/)
+[[jquery]](http://api.jquery.com/parents/)
+
+
 
 ## Further reading
 
