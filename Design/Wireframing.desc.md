@@ -1,7 +1,7 @@
 ## Objectives
 - Create thumbnail sketches for quick prototyping lots of ideas
 - Describe content inventories and use them to support wireframing
-- Understand common wireframe conventions (lorem ipsum, boxes with x's for images, callout notes, etc)
+- Understand common wireframe conventions (lorem ipsum, boxes with x's for images, [callout notes](http://uxmovement.com/wireframes/why-its-important-to-annotate-your-wireframes/), etc)
 - Create wireframes to help guide application development
 
 ## What is a wireframe?
@@ -38,9 +38,10 @@
 
 * Placeholders
 * Relationships
-* Micro-interactions
+* Micro-interactions (how the user interacts with your content, and how their interactions affect the page.)
 
 ## Grids
+https://css-tricks.com/dont-overthink-it-grids/
 
 * 12-column grids
 * Gutters
@@ -51,9 +52,7 @@
 
 * Design for flow
 * Ignore the vertical
-* Consider breakpoints
 * "Mobile First"
-* Design library
 
 ## Markup
 
@@ -69,10 +68,10 @@
 ## Exercise
 BlueWing Real Estate is looking to create a web application for home buyers. They want users to be able to register, search for houses and save them to their dashboards. You will need to create several wireframes. Follow this process to create a landing page wireframe:
 
-Create 10 quick sketches (on paper or whiteboard)
-Pick 2 to make into wireframes
-For those 2, write a content inventory
-Create both wireframes using your choice of wire-framing tool.
+1.  Write a content inventory
+2.  Create 10 quick sketches (on paper or whiteboard)
+3.  Pick 2 to make into wireframes
+4.  Create both wireframes using your choice of wire-framing tool.
 
 ## Tools
 * [Wireframe.cc (free)](https://wireframe.cc)

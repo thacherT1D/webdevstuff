@@ -22,6 +22,7 @@
 * One of the tools for capturing requirements
 
 ## Information Architecture
+>Lets step through this together, wireframing a front page that....
 
 ### Content Inventories
 
