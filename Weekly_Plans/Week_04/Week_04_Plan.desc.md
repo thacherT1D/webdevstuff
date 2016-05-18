@@ -30,6 +30,18 @@ Lessons:
 - [Agile Workflow](https://workbook.galvanize.com/cohorts/68/articles/3116)
 - [AJAX](https://workbook.galvanize.com/cohorts/68/articles/3112)
 
+
+### Readings for tomorrow!!!
+
+[Eloquent Javascript Functions](http://eloquentjavascript.net/03_functions.html)
+
+Guiding Questions
+* What is an example of a function declaration?
+* What happens you pass too many arguments to a Javascript function?
+* what about too few?
+* Define closure.
+
+
 ---
 
 # Wednesday, May 18
