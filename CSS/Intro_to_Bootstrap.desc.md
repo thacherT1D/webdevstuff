@@ -12,7 +12,7 @@ Great question! A CDN (short for **C**ontent **D**elivery **N**etwork) is used t
 
 **How Can I link to the Bootstrap CDN?**
 
-Open up a new HTML file in Sublime Text; let's call it `bootstrap-sandbox.html`. Fill it up with some HTML boilerplate:
+Open up a new HTML file in your editor; let's call it `bootstrap-sandbox.html`. Fill it up with some HTML boilerplate:
 
 ```
 <!DOCTYPE html>
@@ -44,33 +44,11 @@ Copy and paste that code above the `</head>` tag, and that's it! You're ready to
 
 Note: there are also a lot of Bootstrap themes that reskin the default Bootstrap styles. If you're interested, check out http://www.bootstrapcdn.com/bootswatch/.
 
-## Aside: Sublime Snippets
+## Aside: Atom Snippets
 
-You'll be using Bootstrap on most (if not all) of your projects, and copying and pasting the CDN code from the website can be annoying. To help speed up our workflow, we can have Sublime store this piece of code -- or any other piece, really -- in what's called a snippet. Snippets allow us to save chunks of code so that we can easily reuse them within and across our applications.
+Recommended bootstrap plugin for atom: 'atom-bootstrap3'
 
-Let's take a brief detour to see how snippets in Sublime Text work. Under `Tools`, scroll down to `New Snippet`. A file should open that looks like this:
-
-```
-<snippet>
-	<content><![CDATA[
-Hello, ${1:this} is a ${2:snippet}.
-]]></content>
-	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-	<!-- <tabTrigger>hello</tabTrigger> -->
-	<!-- Optional: Set a scope to limit where the snippet will trigger -->
-	<!-- <scope>source.python</scope> -->
-</snippet>
-```
-
-The only rows you need to worry about are rows 3 and 6. What goes in row 3 is the chunk of code you want to be able to reuse; in this case, replace `Hello, ${1:this} is a ${2:snippet}.` with the Bootstrap CDN code.
-
-Next, you need to tell Sublime Text when it should paste your snippet of code into whatever you're working on. Find the row with the code `<!-- <tabTrigger>hello</tabTrigger> -->` and replace it so that it reads:
-
-`<tabTrigger>bootstrap</tabTrigger>`
-
-Now, save your snippet. **IMPORTANT** when you save, Sublime Text will default to the `/User/` folder. Don't save the snippet anywhere else! Also, the snippet must be saved with the extension `sublime-snippet`. For instance, `bootstrap.sublime-snippet` is probably the most reasonable name for the file you've just created.
-
-Here's where the magic happens. Go back in to your `bootstrap-sandbox.html` file, and delete out the Bootstrap code you pasted in earlier. Then, add a row in between `<title>Bootstrap Sandbox</title>` and `</head>`. In your new row, type `bootstrap` and then hit the `tab` key. Booya! 
+http://code-maven.com/add-code-snippets-to-atom
 
 ## Containers and the Grid System
 
@@ -103,10 +81,10 @@ Let's throw some more divs into our html document to see a couple examples of Bo
     <title>Bootstrap Sandbox</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    
+
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
-    
+
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   </head>
@@ -249,13 +227,13 @@ Add these three elements to your html file, and then explore the questions below
 
 1. What does adding the `.btn` class do?
 
-2. Once you've added the `.btn` class to an element, you can add other classes for addition styling. Play around with `.btn-default`, `.btn-primary`, `.btn-success`, `.btn-info`, `.btn-warning`,`.btn-danger`, and `.btn-link`. 
+2. Once you've added the `.btn` class to an element, you can add other classes for addition styling. Play around with `.btn-default`, `.btn-primary`, `.btn-success`, `.btn-info`, `.btn-warning`,`.btn-danger`, and `.btn-link`.
 
 3. What does the `.btn-block` class do when used in conjunction with `.btn`?
 
 4. What do you think the `.btn-lg` class does? Can you guess what some other button classes might be?
 
-Further reading: 
+Further reading:
 
 [Forms in Bootstrap](http://getbootstrap.com/css/#forms)
 
