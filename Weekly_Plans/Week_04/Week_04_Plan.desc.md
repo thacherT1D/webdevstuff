@@ -59,8 +59,11 @@ Write a function that takes a string and an array, and returns an object with th
 
 * Count the number of substrings (2 characters or more) that are passed in an array.
 
+Ex: countCharacters('aAbcdaDe',['a','cd','de']) -> {a:3,cd:1,de:a}
+
 * Add an optional argument to your function that if it is set to true, it returns the count of all but the characters/substrings in the array.
 
+countCharacters('aAbcdaDe',['c','d','z'],true) -> {a:3,b:1,e:1}
 
 Please use Test Driven Development.
 
