@@ -91,6 +91,10 @@ Try typing the following into your command line:
 
 `$ man echo`
 
+>Pro-tip:
+>You can use the arrow keys to scroll up and down through the manual
+>Press `q` to exit the `man` command.
+
 What do you see? Is it clear what `echo` does?
 
 `echo` simply prints whatever **arguments** you provided back to the terminals **standard output stream**. Type q to exit the manual.
