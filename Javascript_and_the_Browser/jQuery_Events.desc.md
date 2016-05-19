@@ -259,122 +259,55 @@ The *current* DOM element in the event bubbling phase, typically equal to `this`
 
 Prevents the event from bubbling up the DOM tree, preventing any parent handlers from being notified of the event.
 
-## Event Delegation
+### Event Delegation
 
 Event delegation is an important topic for DOM manipulation in general. Now that we've talked a bit about jQuery, let's explore how jQuery handles it.
 
-Suppose you want to build the following: you've got a button on the page that generates a div with a random color. Click on the div, and it gets removed from the DOM. Let's imagine that to begin, you've got the button and a few sample divs. Your page might look something like the following (for simplicity, we've just put styling info in the head):
+Suppose you've got a button on the page that generates a `div` with a random Pokémon name. Click on the div, and it gets removed from the DOM. Let's imagine that to begin, you've got the button and a few sample divs. Your page might look something like the following (for simplicity, we've just put styling info in the head):
 
 ```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Event Delegation Example</title>
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <style>
+<button id="add-pokemon">Add a random Pokémon!</button>
 
-    .btn {
-      margin: 20px 0;
-    }
-
-    .random {
-      width: 150px;
-      height: 150px;
-      background-color: #4898CE;
-      display: inline-block;
-      margin: 3px;
-    }
-
-    .random:hover {
-      cursor: pointer;
-      background-color: #DA4141;
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4 col-md-offset-4">
-        <button id="add-div" class="btn btn-default btn-block">Add a div!</button>
-      </div>
-    </div>
-    <div class="row">
-      <div id="div-area" class="col-md-12">
-        <div class="random"></div>
-        <div class="random"></div>
-        <div class="random"></div>
-        <div class="random"></div>
-      </div>
-    </div>
-  </div>
-  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-  <script src="script.js"></script>
-</body>
-</html>
+<section>
+  <div class="pokemon">Pikachu</div>
+  <!-- Append Pokémon here -->
+</section>
 ```
 
-Since we're loading `jQuery` at the bottom, let's put it to good use! Here's how our `script.js` might look:
+And some JavaScript code like this.
 
 ```javascript
-$(document).ready(function() {
-  var $addDiv = $("#add-div");
-  var $divArea = $("#div-area");
-  var $random = $(".random");
+var names = ['Charizard', 'Bulbasaur', 'Onyx', 'Mewtwo', 'Chansey'];
+var $section = $('section');
 
-  $addDiv.on('click', function() {
-    var $newDiv = $("<div class='random'></div>");
-    $divArea.append($newDiv);
-  });
+$('#add-pokemon').on('click', function() {
+  var name = names[Math.floor(Math.random() * monsters.length)];
+  var $div = $(`<div class="pokemon">${name}</div>`);
+  $section.append($div);
+});
 
-  $random.on('click', function() {
-    $(this).remove();
-    console.log("Buh-bye!");
-  });
+$('.pokemon').on('click', function(event) {
+  var $target = $(event.target);
+  $target.remove();
+  console.log(`Buh-bye, ${$target.text()}!`);
 });
 ```
 
-Before moving forward, make sure you understand what each line is doing. Once you feel like you've got a solid understanding, open the page and try removing some divs.
+Try removing the `<div>` tag for Pikachu. If everything is wired up correctly, that should work as expected. Now, try adding a random Pokémon by clicking on the `<button>` tag. That should work too. But, what happens when you try to remove a `<div>` added by the `<button>`? Try clicking on one of the new `<div>` tags and that should not work.
 
-Looks good, right? Everything should be working as expected.
+The problem here is that when we added the event listener to `<div>` tags with the `pokemon` class, those listeners were only added to the `<div>` tags that were present when the page loaded. In other words, the JavaScript code to add the event listener only executes once—when the script loads.
 
-Now try adding a div by clicking on the button. That should work too.
+There are a couple of ways we can fix this problem. We could add an event listener to each `$div` that's created. But a better way is to add the listener to the parent `<section>` tag and then delegate the event handler (e.g. the callback) to a more specific child using a selector.
 
-BUT... what happens when you try to remove a div that you added with the button? Click on a newly added button, and you should see that nothing happens.
+In fact, the second parameter to the `.on()` method doesn't need to be the event handler. Instead, it can be a child selector to which you want to delegate the event handler.
 
-The problem here is that when we added the event listener to divs with the `random` class, those listeners were only added to the divs that were present _when the page loaded_. The code
-
-```javascript
-$random.on('click', function() {
-  $(this).remove();
-  console.log("Buh-bye!");
-});
-```
-
-only executes once, when the script loads. It doesn't load again when we add a new div with the class of `random`.
-
-There are a couple of ways we can fix this problem. We could add a copy of the event listener to `$newDiv` each time we create it, but that isn't very DRY. A better approach is to add the listener to the parent, and then delegate the event handler (e.g. the callback) to more specific child selectors.
-
-In fact, the second parameter to the `.on` method doesn't need to be the event handler; instead, it can be a child selector to which you want to delegate the event handler.
-
-In this example, we could refactor our code to look like this:
+For example, we could refactor our code to look like this.
 
 ```javascript
-$(document).ready(function() {
-  var $addDiv = $("#add-div");
-  var $divArea = $("#div-area");
-  var $container = $(".container");
-
-  $addDiv.on('click', function() {
-    var $newDiv = $("<div class='random'></div>");
-    $divArea.append($newDiv);
-  });
-
-  $container.on('click', '.random', function() {
-    $(this).remove();
-    console.log("Buh-bye!");
-  });
+$('section').on('click', '.pokemon', function(event) {
+  var $target = $(event.target);
+  $target.remove();
+  console.log(`Buh-bye, ${$target.text()}!`);
 });
 ```
 
