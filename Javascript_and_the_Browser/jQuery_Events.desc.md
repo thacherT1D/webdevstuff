@@ -28,7 +28,7 @@ $('p').on('click', function() {
 
 ## Why are jQuery events useful?
 
-At first glance, it appears that jQuery's `on()` function is just than syntactic sugar for the DOM's `addEventListener()` function. However, like many parts of jQuery, it's event system smooths over inconsistent cross-browser behavior. Only until you go back to handling events with vanilla JavaScript is it clear just how much work jQuery does under the hood to create the pleasurable experience for web developers. For example, the `focus` and `blur` events, as specified by the [World Wide Web Consortium](https://en.wikipedia.org/wiki/World_Wide_Web_Consortium) (W3C), don't bubble. However, jQuery fixes this by defining cross-browser events named `focusin` and `focusout` that do.
+At first glance, it appears that jQuery's `on()` function is just than syntactic sugar for the DOM API's `addEventListener()` function. However, like many parts of jQuery, it's event system smooths over annoying and inconsistent cross-browser behavior. For example, the `focus` and `blur` events, as specified by the [World Wide Web Consortium](https://en.wikipedia.org/wiki/World_Wide_Web_Consortium) (W3C), don't bubble. However, jQuery fixes this by defining cross-browser events named `focusin` and `focusout` that do. Only until you go back to handling events with vanilla JavaScript is it clear just how much work jQuery does under the hood to create the pleasurable experience for web developers. 
 
 ## How do you use jQuery events to respond to user interaction?
 
