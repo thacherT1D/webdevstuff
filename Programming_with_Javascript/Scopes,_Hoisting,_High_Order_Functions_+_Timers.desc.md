@@ -320,7 +320,7 @@ As we can see, __each__ of the returned functions have closed over their own env
 * less than
 * greater than
 * equal
-* pass equality operator
+* pass comparison operator
 
 ---
 
