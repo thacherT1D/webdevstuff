@@ -156,7 +156,6 @@ Write down your answer to the following questions:
 
 1. What strategies will you use to 'set the stage'?
 1. What strategies will you use to 'play'?
-Your answer
 1. What strategies will you use to 'reflect'?
 
 ## Review Learning Objectives
@@ -167,7 +166,7 @@ By the end of this article, you will be able to
 1. Explain the 3 stage learning process
 1. Identify strategies you will use during each stage of the 3 stage learning process
 
-Do you have all of these things written down? Can you explain the ideas someone else? If not, go back and review. Otherwise, happy learning! 
+Do you have all of these things written down? Can you explain the ideas someone else? If not, go back and review. Otherwise, happy learning!
 
 
 ### Recommended Reading and Viewing
