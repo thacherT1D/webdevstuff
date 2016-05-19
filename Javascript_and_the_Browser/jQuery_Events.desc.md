@@ -1,8 +1,36 @@
-# jQuery Events
+## Objectives
 
-> One of the most powerful features of jQuery is how easy it becomes to manage events handlers on DOM Elements. Although there are some cases where vanilla JS could be more performant, the benefits of using jQuery's built in event handlers make development much faster and produces code that works on a variety of browsers.
+- Explain what jQuery events are.
+- Explain why jQuery events are useful.
+- Use jQuery events to respond to user interaction.
 
-*Remove if Ken covers this* - It's also used in over 70% of the top 1 million sites (by traffic). See [jQuery Usage Stats](http://trends.builtwith.com/javascript/jQuery)
+## What are jQuery events?
+
+A few days ago, we used JavaScript to respond to user interaction.
+
+```javascript
+var paragraphs = document.querySelectorAll('p');
+
+for (var i = 0; i < paragraphs.length; i++) {
+  paragraphs[i].addEventListener('click', function() {
+    console.log('A paragraph was clicked!');
+  });
+}
+```
+
+One of the most powerful features of jQuery is how easy it is to do the exact same thing.
+
+```javascript
+$('p').on('click', function() {
+  console.log('<p> clicked!');
+});
+```
+
+jQuery's `.on()` function makes adding event listeners to DOM elements a breeze.
+
+## Why are jQuery events useful?
+
+At first glance, it appears that jQuery's `on()` function is no more than syntactic sugar for the `addEventListener()` function. However, like many parts of jQuery, it's event system smooths over inconsistent cross-browser behavior. Only until you go back to handling events with vanilla JavaScript is it clear just how much work jQuery is doing under the hood. For example, the `focus` and `blur` events, as specified by the [World Wide Web Consortium](https://en.wikipedia.org/wiki/World_Wide_Web_Consortium) (W3C), don't bubble. However, jQuery fixes this by defining cross-browser events named `focusin` and `focusout` that do.
 
 ## Document Loading
 
@@ -65,7 +93,7 @@ var logText = function(event) {
 };
 $('div').on('mouseenter', logText);
 $('div').on('mouseleave', logText);
-$('div').on('click', logText); 
+$('div').on('click', logText);
 
 // remove all listeners
 $('div').off();
@@ -73,7 +101,7 @@ $('div').off();
 
 ## Mouse and Keyboard Event Shortcuts
 
-> Instead of using `.on()` to create all event listeners, jQuery provides many shortcut event methods that have a shorter syntax and can be more meaningful than what is already implied with the word "on" - See [[jQuery Events]](http://api.jquery.com/category/events/) 
+> Instead of using `.on()` to create all event listeners, jQuery provides many shortcut event methods that have a shorter syntax and can be more meaningful than what is already implied with the word "on" - See [[jQuery Events]](http://api.jquery.com/category/events/)
 
 #### .click()
 
@@ -153,7 +181,7 @@ An example of the base HTML of a simple form:
     <input type="text">
     <input type="submit" value="Google Search">
   </form>
-  
+
   <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
   <script src="app.js"></script>
 </body>
