@@ -28,13 +28,15 @@ $('p').on('click', function() {
 
 ## Why are jQuery events useful?
 
-At first glance, it appears that jQuery's `on()` function is just than syntactic sugar for the DOM API's `addEventListener()` function. However, like many parts of jQuery, it's event system smooths over annoying and inconsistent cross-browser behavior. For example, the `focus` and `blur` events, as specified by the [World Wide Web Consortium](https://en.wikipedia.org/wiki/World_Wide_Web_Consortium) (W3C), don't bubble. However, jQuery fixes this by defining cross-browser events named `focusin` and `focusout` that do. Only until you go back to handling events with vanilla JavaScript is it clear just how much work jQuery does under the hood to create the pleasurable experience for web developers. 
+At first glance, it appears that jQuery's `on()` function is just than syntactic sugar for the DOM API's `addEventListener()` function. However, like many parts of jQuery, it's event system smooths over annoying and inconsistent cross-browser behavior. For example, the `focus` and `blur` events, as specified by the [World Wide Web Consortium](https://en.wikipedia.org/wiki/World_Wide_Web_Consortium) (W3C), don't bubble. However, jQuery fixes this by defining cross-browser events named `focusin` and `focusout` that do. Only until you go back to handling events with vanilla JavaScript is it clear just how much work jQuery does under the hood to create the pleasurable experience for web developers.
 
 ## How do you use jQuery events to respond to user interaction?
 
 ### The `ready()` function
 
-When a page includes a `<script>` tag in its `<head>` tag, the corresponding JavaScript file won't have access to the `<body>` tag or any of its children. If the script file must be loaded in the `<head>`, the workaround is to listen for a `DOMContentLoaded` event before trying to access the DOM. Of course, jQuery provides a `.ready()` function to do just this.
+When a page includes a `<script>` tag in its `<head>` tag, the corresponding JavaScript file won't have access to the `<body>` tag or any of its children. If the script file must be loaded in the `<head>`, the workaround is to listen for a `DOMContentLoaded` event before trying to access the DOM.
+
+jQuery provides a `.ready()` function that makes this really convenient.
 
 ```javascript
 $(document).ready(function() {
@@ -42,7 +44,7 @@ $(document).ready(function() {
 });
 ```
 
-Because the tends to be so common with web developers, jQuery has a shortcut for the exact same thing.
+This tends to be so common with web developers that jQuery has a shortcut this.
 
 ```javascript
 $(function() {
