@@ -151,37 +151,54 @@ $('p').hover(function() {
 
 [jQuery API - .hover()](http://api.jquery.com/hover/)
 
-#### .keypress() or .keydown() - What's the Difference?
+### The `keypress()`, `keydown()`, and `keyup()` functions
 
-[[jQuery]](http://api.jquery.com/keypress/)
+When a user presses a key _and_ a character is inserted into a focusable control, the `keypress` event will fire. The `keypress` event will fire repeatedly as long as the key is pressed down and a character is inserted. Keys like Escape, Shift, Control, and Alt can't be inserted into a control. To handle these key presses, you'll need to use the `keydown` event instead.
 
-- .keydown() is shorthand for `$().on('keydown', handler);`
+```javascript
+$('input[type="text"]').on('keypress', function() {
+  console.log('A key was pressed and inserted into a focusable control.');
+});
 
-- .keypress() is shorthand for `$().on('keypress', handler);`
+$('input[type="text"]').on('keydown', function() {
+  console.log('A key was pressed an possibly inserted into a focusable control.');
+});
+```
 
-The `keydown` event is fired when the browser registers any keyboard input. The `keypress` event fires in a very similar manner, but does not fire when any of the modifier or non-printing keys are pressed (`shift`, `option`, `command`, etc.)
+It's common to handle different key presses in different ways. For that, you'll need compare the value of `event.which` with an expected code. When the `keydown` and `keyup` events are fired, `event.which` contains a **key code** number which represents an actual key on the keyboard. When the `keypress` event is fired, `event.which` contains a **character code** number which represents the key's UTF-8 character.
 
+Here's a table that explains the difference between a key code and a character code.
 
-##### Typing "a"
+| Key    | Key code | Character code |
+|--------|----------|----------------|
+| a      | 65       | 97             |
+| A      | 65       | 65             |
+| Return | 13       | 13             |
+| Escape | 27       | N/A            |
 
-- `keydown` fires
-- *then* `keypress` fires
+```javascript
+$('input[type="text"]').on('keydown', function(event) {
+  if (event.which === 27) {
+    // Handle the Escape key press
+  }
+});
+```
 
-##### Typing "A"
+Here's a table to help you quickly remember which event does what.
 
-- `keydown` fires for shift
-- `keydown` fires for a
-- *then* `keypress` fires for A
+| Event      | Trigger(s)                                  | `event.which`  |
+|------------|---------------------------------------------|----------------|
+| `keydown`  | When pressed down. Repeats while holding.   | Key code       |
+| `keypress` | When inserted. Repeats while inserting.     | Character code |
+| `keyup`    | When released up.                           | Key code       |
 
-Basically, `keypress` will fire separate events when you type lowercase `a` and uppercase `A`, and `keydown` is fired for each key that is pressed, when you type "a" *and* "shift" *and* "a" again.
+**NOTE:** The `keypress` event's behavior may differ across browsers as there's no official specification for it.
 
-> **GOTCHA:** the `keypress` event's behavior may differ across browsers - no official specification
+[jQuery API - .keydown()](http://api.jquery.com/keydown/)
+[jQuery API - .keypress()](http://api.jquery.com/keypress/)
+[jQuery API - .keyup()](http://api.jquery.com/keyup/)
 
-## Form Events
-
-Like the shortcuts for `mouse` and `keyboard` events, jQuery also provides a number of shortcut methods that can listen for HTML form events.
-
-#### .submit()
+### The `submit()` function
 
 Shorthand for `$('form').on('submit', handler);`
 
@@ -220,7 +237,7 @@ There are also shortcuts for `.blur()`, `.focus()`, and `.select()` as well. Can
 
 > **QUESTION:** Since these methods are all shorthand for `$().on(event, handler)`, how do you think you can remove any of these listeners?
 
-## Event Object
+### Event Object
 
 #### event.target
 
