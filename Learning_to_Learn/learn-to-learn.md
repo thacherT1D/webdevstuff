@@ -23,7 +23,7 @@ This difference in learning speed before and after the program is what it means 
 In order to help you develop these new habits and mindsets, we will show you how to utilize the 3 Stage Learn to Learn process.
 
 ## 3 Stage Learning Process
-Objective 1: Discuss the 3 stage learning process
+*Objective 1: Discuss the 3 stage learning process*
 
 ### 1. Set the Stage
 #### Clear the Stage
@@ -34,9 +34,8 @@ In order to engage in deep work, we have to eliminate distractions. We have very
 * Turn off, or silence your phone
 * Consider a time blocking method like [The Pomodoro Technique](http://pomodorotechnique.com/)
 
-#### Check for Understanding:
-Write a summary of the first stage of the learning process.
-
+#### Check Your Understanding:
+Take a moment to practice turning on and off your notifications.
 
 #### Clarify the _what_ and the _why_
 The second part of setting the stage is clarifying that _what_ and the _why_.The _what_ is your objective, your goal, or whatever you're trying to achieve when you're setting out to learn. In our lessons, your instructors will explicitly say what the objectives are. But when you're off learning on your own, come up with your own objectives to help you clarify and distill what you hope to achieve at the end of your session. Here are some tips to clarify the _what_:
@@ -44,15 +43,14 @@ The second part of setting the stage is clarifying that _what_ and the _why_.The
 * Use [SMART Goals](http://charlesduhigg.com/infographic-tackle-your-to-do-list/) to build your to do list
 * [Build a Better To Do List](http://charlesduhigg.com/video-build-a-better-to-do-list/) with advice from Charles Duhigg
 
+#### Check Your Understanding:
+Rewrite this statement of purpose into 3-4 objectives: By the end of my practice session, I want to learn more about the command line.  
+
 
 The _why_ is the meaning or motivation behind the learning. Being human is to be driven by meaning and narrative. If you can frame something you're about to do in terms that motivate you, your brain will be better primed to retain the information that's presented. No matter the topic, have a clear understanding of _why_ the topic is important, how it'll help, or how it relates to the bigger picture. Your instructors have a responsibility to clarify the why for you as well. So if you're ever unsure about why they're teaching you something, just ask. If you're lacking motivation, check out these articles:
 
 * [5 Priceless Lessons In Collaboration, Risk Taking, And Motivation](http://www.fastcompany.com/3056177/lessons-learned/5-priceless-lessons-in-collaboration-risk-taking-and-motivation)
 * [13 Tricks to Motivate Yourself](http://www.lifehack.org/articles/featured/thirteen-tricks-to-motivate-yourself.html)
-
-#### Check for Understanding:
-Write a summary of the second stage of the learning process.
-
 
 #### Prioritize process over product
 The last part of setting the stage is about prioritizing process over product. In other words, defining success as simply spending time doing focused and deliberate practice. This program is going to be very difficult at times. You may not fully understand some of the concepts on the first try. And you may not reach your end goal in the period of time that you set out to do your work. This is perfectly fine so long as you're challenging yourself to get better while in the [zone of proximal development](https://en.wikipedia.org/wiki/Zone_of_proximal_development).
@@ -61,7 +59,8 @@ The last part of setting the stage is about prioritizing process over product. I
 
 While in the zone of proximal development, doing focused and deliberate practice while learning and doing will produce far more quality results in the long run. If you flip the prioritization—prioritizing product over process—you're much more likely to take shortcuts, to cheat, or to do something that benefits you in the short term but harms you in the long run. Remember, top performers do what's hard, not what they're good at.
 
-
+#### Exercise:
+Imagine that a friend came to Galvanize and asked you, "Hey everyone is talking about setting the stage. What does that mean? Why is that important? How do you do that?" Take a few moments to think about what you'd say to your friend. When you've decided what to say, write it down.
 
 #### 2. Play
 The second step to becoming a better learner is to play. This word is chosen very carefully as children learn at much faster rate than adults and neurological research suggests that play has a big part of it. When you think about it, it makes sense too. Children just have different attitudes when it comes to what they're trying learn and why they're doing it.
@@ -108,6 +107,9 @@ Having fun is not about feeling good either. When the outer cortex of your brain
 
 When you find yourself not having fun, take a deep breath, step outside, go for a walk, do whatever you need to do to regain focus on the why. Remember, programming is just about the coolest thing you can do in this world! If that's not how you feel when you're in this program, it's time for a break.
 
+### Exercise:
+Imagine that same friend from earlier asks you, "Hey, what's this play business all about? Why is that important? How do you do that?" Take a few moments to think about what you'd say to your friend, and then write it down.
+
 ### 3. Reflect
 
 The third and final major step to becoming a better learner is to reflect.
@@ -144,8 +146,29 @@ Additionally, by writing down these questions, you can go back and review them a
 
 The third and final step of reflection is to repeat this whole cycle. As mentioned earlier, learning never stops for programmers as there's always something new to master. The best part about mastering this learning process is that the more you practice it, the faster and easier you'll retain new information.
 
-## Exercise
-Objective 2: Identify strategies you will use during each stage of the 3 stage learning process
+#### Exercise:
+Picture someone who's struggling with a part of this process, maybe with clearing the stage or taking risks or self assessment. Imagine what it would look like and sound like to watch and hear someone struggling. Take a moment visualize this and then write down your thoughts.
+
+## Objective 2 Exercise
+*Objective 2: Identify strategies you will use during each stage of the 3 stage learning process*
+
+Write down your answer to the following questions:
+
+1. What strategies will you use to 'set the stage'?
+1. What strategies will you use to 'play'?
+Your answer
+1. What strategies will you use to 'reflect'?
+
+## Review Learning Objectives
+Remember our original learning objectives?
+
+By the end of this article, you will be able to
+
+1. Explain the 3 stage learning process
+1. Identify strategies you will use during each stage of the 3 stage learning process
+
+Do you have all of these things written down? Can you explain the ideas someone else? If not, go back and review. Otherwise, happy learning! 
+
 
 ### Recommended Reading and Viewing
 * Freakonomics Radio [How to be More Productive](http://freakonomics.com/podcast/how-to-be-more-productive/)
@@ -153,3 +176,5 @@ Objective 2: Identify strategies you will use during each stage of the 3 stage l
 * Cal Newport's [Study Hacks Blog](http://calnewport.com/blog/)
 * [Practice Perfect](http://practiceperfectthebook.com/) by Doug Lemov
 * [Mindset](https://www.amazon.com/Mindset-Psychology-Success-Carol-Dweck-ebook/dp/B000FCKPHG?ie=UTF8&btkr=1&redirect=true&ref_=dp-kindle-redirect) by Dr. Carol Dweck
+* [Learning How to Learn](https://www.coursera.org/learn/learning-how-to-learn)
+* [A Mind for Numbers](https://www.amazon.com/Mind-Numbers-Science-Flunked-Algebra-ebook/dp/B00G3L19ZU) by Dr. Barbara Oakley
