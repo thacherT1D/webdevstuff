@@ -66,8 +66,8 @@ $('button').on('click', function() {
 });
 ```
 
-[jQuery API - .on()](http://api.jquery.com/on/)
-[jQuery API - Event Object](https://api.jquery.com/category/events/event-object/)
+- [jQuery API - .on()](http://api.jquery.com/on/)
+- [jQuery API - Event Object](https://api.jquery.com/category/events/event-object/)
 
 ### The `off()` function
 
@@ -194,9 +194,9 @@ Here's a table to help you quickly remember which event does what.
 
 **NOTE:** The `keypress` event's behavior may differ across browsers as there's no official specification for it.
 
-[jQuery API - .keydown()](http://api.jquery.com/keydown/)
-[jQuery API - .keypress()](http://api.jquery.com/keypress/)
-[jQuery API - .keyup()](http://api.jquery.com/keyup/)
+- [jQuery API - .keydown()](http://api.jquery.com/keydown/)
+- [jQuery API - .keypress()](http://api.jquery.com/keypress/)
+- [jQuery API - .keyup()](http://api.jquery.com/keyup/)
 
 ### The `submit()` function
 
