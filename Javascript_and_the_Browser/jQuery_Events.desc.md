@@ -66,7 +66,7 @@ $('button').on('click', function(event) {
 });
 ```
 
-Using the `on()` function binds an event handler callback to a target DOM element. This means the value of the `this` variable inside inside a callback is the DOM element target.
+Using the `on()` function binds a callback to a target DOM element. This means the value of the `this` variable inside the callback is the targeted DOM element.
 
 ```javascript
 $('button').on('click', function() {
@@ -81,30 +81,30 @@ $('button').on('click', function() {
 
 ### The `off()` function
 
-Since you know the `on()` function adds event listeners, I bet you can guess what the `off()` function does. Spoiler alert, think `removeEventListener()` function from vanilla JavaScript.
+Now that you've seen that the `on()` function adds an event listener, can you can guess what the `off()` function does? Yep, it removes an event listener just like the DOM API's `removeEventListener()` function.
 
 ```javascript
-var turtleMessage = function() {
+var logMessage = function() {
   console.log('I like turtles.');
 };
 
-$('button').on('click', turtleMessage);
+$('button').on('click', logMessage);
 
-$('button').off('click', turtleMessage);
+$('button').off('click', logMessage);
 ```
 
-Like the `removeEventListener()` function, the `off()` function must be given the same event type and callback function to remove it's respective listener from the DOM element.
+Like the `removeEventListener()` function, the `off()` function must be given the same event type and callback function to remove it's respective listener from a target DOM element.
 
-Unlike the `removeEventListener()` function, the `off()` function removes all listeners from an element when given no arguments at all.
+Unlike the `removeEventListener()` function, the `off()` function removes all listeners from a target DOM element when given no arguments at all.
 
 ```javascript
 var logEventType = function(event) {
   console.log(event.type);
 };
 
+$('div').on('click', logEventType);
 $('div').on('mouseenter', logEventType);
 $('div').on('mouseleave', logEventType);
-$('div').on('click', logEventType);
 
 $('div').off();
 ```
@@ -128,6 +128,8 @@ $('p').click(function() {
   $(this).toggleClass('active');
 });
 ```
+
+jQuery provides convenient functions for all event types.
 
 [jQuery API - .click()](http://api.jquery.com/click/)
 
