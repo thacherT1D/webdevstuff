@@ -315,7 +315,7 @@ As we can see, __each__ of the returned functions have closed over their own env
 
 * Increment
 * Decrement
-* greeting
+* Greeting
 * Multiply
 * less than
 * greater than
@@ -364,6 +364,19 @@ printing a number
 ```
 
 In this example, `printANumber` and `printHello` both act as "callback functions". On the last two lines, we call `highOrderFunction`, and each time the second parameter is a variable whose value is a function. The last line of `highOrderFunction` invokes these "callback" functions. Callbacks are tricky, but incredibly common in JavaScript. Take a minute and create a couple of functions that use callbacks!
+
+### Exercise
+
+* Write a higher order that will run the passed function n number of times. This function should take 2 parameters, the number of times it should run, and the function to run.
+
+* Write a higher order function that performs an "if statement like" control flow, this function should take three parameters, condition, function if condition is true, function if condition is false.
+
+* Write a higher order function that implements the control flow "unless". This functions should take a conditional test, and the function that it runs when appropriate.
+
+* Create a higher order function that will loop across an array and perform the function that is passed in.
+
+
+
 
 
 # Conclusion
