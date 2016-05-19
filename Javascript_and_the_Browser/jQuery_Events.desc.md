@@ -311,5 +311,4 @@ $('section').on('click', '.pokemon', function(event) {
 });
 ```
 
-Note that unlike with vanilla javascript, in this case, even though we attached the event listener to the container, `this` inside of the callback refers to the specific div that was clicked. In this case, how do you think `event.target` and `this` compare?
-I
+**TIP:** What would happen if you used `this` instead of `event.target`? Try it out!
