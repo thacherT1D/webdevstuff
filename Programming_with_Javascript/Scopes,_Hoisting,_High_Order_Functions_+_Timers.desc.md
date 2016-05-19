@@ -373,7 +373,7 @@ In this example, `printANumber` and `printHello` both act as "callback functions
 
 * Write a higher order function that implements the control flow "unless". This functions should take a conditional test, and the function that it runs when appropriate.
 
-* Create a higher order function that will loop across an array and perform the function that is passed in.
+* Create a higher order function that will loop across an array and perform the function that is passed in, have the current value of the array available for use.
 
 
 
