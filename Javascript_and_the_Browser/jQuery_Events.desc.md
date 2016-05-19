@@ -6,7 +6,7 @@
 
 ## What are jQuery events?
 
-A few days ago, we used JavaScript to respond to user interaction.
+A few days ago, we learned how to use JavaScript to respond to user interaction like `click` events.
 
 ```javascript
 var paragraphs = document.querySelectorAll('p');
@@ -18,7 +18,7 @@ for (var i = 0; i < paragraphs.length; i++) {
 }
 ```
 
-One of the most powerful features of jQuery is how easy it is to do the exact same thing.
+With the **jQuery events** system, it's way easier to do the exact same thing. jQuery's `.on()` function makes adding event listeners to DOM elements a breeze.
 
 ```javascript
 $('p').on('click', function() {
@@ -26,110 +26,130 @@ $('p').on('click', function() {
 });
 ```
 
-jQuery's `.on()` function makes adding event listeners to DOM elements a breeze.
-
 ## Why are jQuery events useful?
 
-At first glance, it appears that jQuery's `on()` function is no more than syntactic sugar for the `addEventListener()` function. However, like many parts of jQuery, it's event system smooths over inconsistent cross-browser behavior. Only until you go back to handling events with vanilla JavaScript is it clear just how much work jQuery is doing under the hood. For example, the `focus` and `blur` events, as specified by the [World Wide Web Consortium](https://en.wikipedia.org/wiki/World_Wide_Web_Consortium) (W3C), don't bubble. However, jQuery fixes this by defining cross-browser events named `focusin` and `focusout` that do.
+At first glance, it appears that jQuery's `on()` function is no more than syntactic sugar for the `addEventListener()` function. However, like many parts of jQuery, it's event system smooths over inconsistent cross-browser behavior. Only until you go back to handling events with vanilla JavaScript is it clear just how much work jQuery does under the hood to create the pleasurable experience for web developers. For example, the `focus` and `blur` events, as specified by the [World Wide Web Consortium](https://en.wikipedia.org/wiki/World_Wide_Web_Consortium) (W3C), don't bubble. However, jQuery fixes this by defining cross-browser events named `focusin` and `focusout` that do.
 
-## Document Loading
+## How do you use jQuery events to respond to user interaction?
 
-#### .ready()
+### The `ready()` function
 
-[[jQuery]](http://api.jquery.com/ready/)
+When a page includes a `<script>` tag in its `<head>` tag, the corresponding JavaScript file won't have access to the `<body>` tag or any of its children. If the script file must be loaded in the `<head>`, the workaround is to listen for a `DOMContentLoaded` event before trying to access the DOM. Of course, jQuery provides a `.ready()` function to do just this.
 
-
-If you include your `<script>` tags in the `<head>` tag, you will not have access to the `<body>` tag because it hasn't been parsed by the browser yet. One way around it is to wait for a `load` event. And of course, jQuery provides a `.ready()` shorthand method to do this:
-
-```js
-// Wait for the document to be loaded before trying to modify the <body>
-$( document ).ready(function() {
-  // Handler for .ready() called only when the document is done loading.
+```javascript
+$(document).ready(function() {
+  $('p').text('Hello world');
 });
 ```
 
-## jQuery Event Handlers
+[jQuery API - .ready()](http://api.jquery.com/ready/)
 
-#### .on()
+### The `on()` function
 
-[[jQuery]](http://api.jquery.com/on/)
+As we've seen, the `.on()` function makes adding event listeners a breeze. Just like the `addEventListener()` function, it takes an event handler callback that's invoked when the matching event is fired on the target DOM element. The callback can optionally specify an `event` parameter to accept a reference to the corresponding `Event` object.
 
-The `.on()` function makes adding event listeners a breeze. It is the most similar of the event functions to `addEventListener`.
+```javascript
+$('button').on('click', function(event) {
+  var $target = $(event.target);
 
-```js
-// console.log "<p> clicked!" when you click a <p>
-$('p').on('click', function () {
-  console.log('<p> clicked!')
-})
+  $target.attr('disabled', true);
+});
 ```
 
-All events are bound to the element that was targeted. This means that `this` inside of all your event handlers will be the DOM Element the event is triggering on. To turn that into a jQuery object you can perform `$(this)`.
+Using the `on()` function binds an event handler callback to a target DOM element. This means the value of the `this` variable inside inside a callback is the DOM element target.
 
-#### .off()
+```javascript
+$('button').on('click', function() {
+  var $this = $(this);
 
-[[jQuery]](http://api.jquery.com/off)
+  $this.attr('disabled', true);
+});
+```
 
-While the `.on()` function can add listeners, I bet you can guess what `.off()` does. Similar to `removeEventListener` in vanilla JS, the `.off()` function makes removing listeners simple as well.
+[jQuery API - .on()](http://api.jquery.com/on/)
+[jQuery API - Event Object](https://api.jquery.com/category/events/event-object/)
 
-```js
-// console.log "I like turtles." when you click a <button>
+### The `off()` function
+
+Since you know the `on()` function adds event listeners, I bet you can guess what the `off()` function does. Spoiler alert, think `removeEventListener()` function from vanilla JavaScript.
+
+```javascript
 var turtleMessage = function() {
   console.log('I like turtles.');
 };
+
 $('button').on('click', turtleMessage);
 
-// remove listener
 $('button').off('click', turtleMessage);
 ```
 
-You must pass in the same event and callback function in order to remove a specific listener from an element.
+Like the `removeEventListener()` function, the `off()` function must be given the same event type and callback function to remove it's respective listener from the DOM element.
 
-Unlike `removeEventListener,` the `.off()` function allows us to remove all listeners on an element by not passing in any arguments when invoked.
+Unlike the `removeEventListener()` function, the `off()` function removes all listeners from an element when given no arguments at all.
 
-```js
-// console.log the event type when it fires
-var logText = function(event) {
+```javascript
+var logEventType = function(event) {
   console.log(event.type);
 };
-$('div').on('mouseenter', logText);
-$('div').on('mouseleave', logText);
-$('div').on('click', logText);
 
-// remove all listeners
+$('div').on('mouseenter', logEventType);
+$('div').on('mouseleave', logEventType);
+$('div').on('click', logEventType);
+
 $('div').off();
 ```
 
-## Mouse and Keyboard Event Shortcuts
+[jQuery API - .off()](http://api.jquery.com/off)
 
-> Instead of using `.on()` to create all event listeners, jQuery provides many shortcut event methods that have a shorter syntax and can be more meaningful than what is already implied with the word "on" - See [[jQuery Events]](http://api.jquery.com/category/events/)
+### The `click()` function
 
-#### .click()
+The `click()` function is a convenient shortcut for adding an `click` event listener. Instead of writing this.
 
-[[jQuery]](http://api.jquery.com/click/)
-
-The `click` handler is a shortcut for `$().on('click', handler)`.
-
-```js
-// Toggle the 'active' class on <p> tags when clicked.
-$('p').click(function () {
-    $(this).toggleClass('active');
-})
-```
-
-#### .hover()
-
-[[jQuery]](http://api.jquery.com/hover/)
-
-.hover() is a shorthand method for binding both the events `mouseenter` and `mouseleave`
-
-```js
-// Make all <p> have a class of 'active' when hovering with the mouse
-$('p').hover(function () {
-    $(this).addClass('active')
-}, function () {
-    $(this).removeClass('active')
+```javascript
+$('p').on('click', function() {
+  $(this).toggleClass('active');
 });
 ```
+
+You can write it like this.
+
+```javascript
+$('p').click(function() {
+  $(this).toggleClass('active');
+});
+```
+
+[jQuery API - .click()](http://api.jquery.com/click/)
+
+### The `hover()` function
+
+The `hover()` function is a convenient shorthand for binding both the `mouseenter` and `mouseleave` events.
+
+So instead of writing this.
+
+```javascript
+var $p = $('p');
+
+$p.on('mouseenter', function() {
+  $(this).addClass('active')
+});
+
+$p.on('mouseleave', function() {
+  $(this).removeClass('active')
+});
+```
+
+You can write this.
+
+```javascript
+$('p').hover(function() {
+  $(this).addClass('active')
+}, function() {
+  $(this).removeClass('active')
+});
+```
+
+[jQuery API - .hover()](http://api.jquery.com/hover/)
 
 #### .keypress() or .keydown() - What's the Difference?
 
@@ -190,7 +210,7 @@ An example of the base HTML of a simple form:
 
 What the `app.js` file could look like using `.submit()`:
 
-```js
+```javascript
 $('#searchForm').submit(function() {
   console.log('Search Google now...');
 });
