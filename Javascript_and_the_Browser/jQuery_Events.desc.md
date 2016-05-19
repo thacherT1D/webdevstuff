@@ -18,7 +18,7 @@ for (var i = 0; i < paragraphs.length; i++) {
 }
 ```
 
-With the **jQuery events** system, it's way easier to do the exact same thing. jQuery's `.on()` function makes adding event listeners to DOM elements a breeze.
+With the **jQuery events** system, it's way easier to do the exact same thing.
 
 ```javascript
 $('p').on('click', function() {
