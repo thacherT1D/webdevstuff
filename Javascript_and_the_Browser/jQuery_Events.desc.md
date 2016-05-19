@@ -42,6 +42,14 @@ $(document).ready(function() {
 });
 ```
 
+Because the tends to be so common with web developers, jQuery has a shortcut for the exact same thing.
+
+```javascript
+$(function() {
+  $('p').text('Hello world');
+});
+```
+
 [jQuery API - .ready()](http://api.jquery.com/ready/)
 
 ### The `on()` function
@@ -310,7 +318,7 @@ Suppose you want to build the following: you've got a button on the page that ge
 Since we're loading `jQuery` at the bottom, let's put it to good use! Here's how our `script.js` might look:
 
 ```javascript
-$(function() {
+$(document).ready(function() {
   var $addDiv = $("#add-div");
   var $divArea = $("#div-area");
   var $random = $(".random");
@@ -353,7 +361,7 @@ In fact, the second parameter to the `.on` method doesn't need to be the event h
 In this example, we could refactor our code to look like this:
 
 ```javascript
-$(function() {
+$(document).ready(function() {
   var $addDiv = $("#add-div");
   var $divArea = $("#div-area");
   var $container = $(".container");
