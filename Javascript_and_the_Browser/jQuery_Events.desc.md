@@ -18,7 +18,7 @@ for (var i = 0; i < paragraphs.length; i++) {
 }
 ```
 
-With the **jQuery events** system, it's way easier to do the exact same thing.
+Using **jQuery events**, it's way easier to do the exact same thing.
 
 ```javascript
 $('p').on('click', function() {
@@ -249,7 +249,7 @@ Prevents the event from bubbling up the DOM tree, preventing any parent handlers
 
 #### `event.preventDefault()`
 
-If this method is called, the default action of the event will not be triggered. For example, clicked anchor tags and submitted forms will not take the browser to a new URL. 
+If this method is called, the default action of the event will not be triggered. For example, clicked anchor tags and submitted forms will not take the browser to a new URL.
 
 ### Event Delegation
 
