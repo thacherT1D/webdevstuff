@@ -239,13 +239,17 @@ $('form').submit(function() {
 
 The DOM element that initiated the event. The target property can refer to the element attached to a listener or a descendent of it.
 
-#### `event.currentElement`
+#### `event.currentTarget`
 
-The *current* DOM element in the event bubbling phase, typically equal to `this` in a function.
+The current DOM element in the event bubbling phase, typically equal to `this` in a function.
 
 #### `event.stopPropagation()`
 
 Prevents the event from bubbling up the DOM tree, preventing any parent handlers from being notified of the event.
+
+#### `event.preventDefault()`
+
+If this method is called, the default action of the event will not be triggered. For example, clicked anchor tags and submitted forms will not take the browser to a new URL. 
 
 ### Event Delegation
 
