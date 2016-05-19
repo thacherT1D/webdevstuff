@@ -138,11 +138,11 @@ So instead of writing this.
 ```javascript
 var $p = $('p');
 
-$p.on('mouseenter', function() {
+$p.mouseenter(function() {
   $(this).addClass('active')
 });
 
-$p.on('mouseleave', function() {
+$p.mouseleave(function() {
   $(this).removeClass('active')
 });
 ```
@@ -164,11 +164,11 @@ $('p').hover(function() {
 When a user presses a key _and_ a character is inserted into a focusable control, the `keypress` event will fire. The `keypress` event will fire repeatedly as long as the key is pressed down and a character is inserted. Keys like Escape, Shift, Control, and Alt can't be inserted into a control. To handle these key presses, you'll need to use the `keydown` event instead.
 
 ```javascript
-$('input[type="text"]').on('keypress', function() {
+$('input[type="text"]').keypress(function() {
   console.log('A key was pressed and inserted into a focusable control.');
 });
 
-$('input[type="text"]').on('keydown', function() {
+$('input[type="text"]').keydown(function() {
   console.log('A key was pressed an possibly inserted into a focusable control.');
 });
 ```
@@ -185,7 +185,7 @@ Here's a table that explains the difference between a key code and a character c
 | Escape | 27       | N/A            |
 
 ```javascript
-$('input[type="text"]').on('keydown', function(event) {
+$('input[type="text"]').keydown(function(event) {
   if (event.which === 27) {
     // Handle the Escape key press
   }
@@ -208,54 +208,42 @@ Here's a table to help you quickly remember which event does what.
 
 ### The `submit()` function
 
-Shorthand for `$('form').on('submit', handler);`
+The `submit` event is fired when a user attempts to submit a `<form>` tag. Forms can be submitted in the following ways.
 
-The `submit` event is fired when a user attempts to submit a form and can only be attached to form elements. Forms can be submitted by clicking an `<input type="submit">`,`<button type="submit">`, or by pressing `Enter`
+- Click a `<button type="submit">` tag
+- Click an `<input type="submit">` tag
+- Press `Enter` in a textfield like a `<input type="text">` tag
 
-An example of the base HTML of a simple form:
+Here's an example of an HTML search form.
 
 ```html
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <title>Form Submission</title>
-</head>
-<body>
-  <form id="searchForm">
-    <input type="text">
-    <input type="submit" value="Google Search">
-  </form>
-
-  <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
-  <script src="app.js"></script>
-</body>
-</html>
+<form>
+  <input type="text" name="keywords">
+  <button type="submit">Search</button>
+</form>
 ```
 
-What the `app.js` file could look like using `.submit()`:
+With the corresponding JavaScript code.
 
 ```javascript
-$('#searchForm').submit(function() {
-  console.log('Search Google now...');
+$('form').submit(function() {
+  console.log('Searching...');
 });
 ```
 
-There are also shortcuts for `.blur()`, `.focus()`, and `.select()` as well. Can you guess the syntax and events for each of these methods?
-
-> **QUESTION:** Since these methods are all shorthand for `$().on(event, handler)`, how do you think you can remove any of these listeners?
+[jQuery API - .submit()](http://api.jquery.com/submit/)
 
 ### Event Object
 
-#### event.target
+#### `event.target`
 
 The DOM element that initiated the event. The target property can refer to the element attached to a listener or a descendent of it.
 
-#### event.currentElement
+#### `event.currentElement`
 
 The *current* DOM element in the event bubbling phase, typically equal to `this` in a function.
 
-#### event.stopPropagation
+#### `event.stopPropagation()`
 
 Prevents the event from bubbling up the DOM tree, preventing any parent handlers from being notified of the event.
 
@@ -311,4 +299,4 @@ $('section').on('click', '.pokemon', function(event) {
 });
 ```
 
-**TIP:** What would happen if you used `this` instead of `event.target`? Try it out!
+**NOTE:** Try using `this` instead of `event.target` and see if there's any difference.
