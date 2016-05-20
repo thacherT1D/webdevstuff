@@ -96,7 +96,11 @@ Lessons:
 
 Warmup: [Biweekly Survey](https://docs.google.com/forms/d/1XsnxPufkGL24Bnsa_8IxcyJT6-VudP4QC9VqbTbctAw/viewform?usp=send_form)
 
-Crush Code Friday: [Galvanize Personnel](https://github.com/gSchool/galvanize-personnel)
+Crush Code Friday:
+
+[Galvanize Personnel](https://github.com/gSchool/galvanize-personnel)
+
+[AJAX Functions](https://gist.github.com/loganking/4be8161ea628fba57437f490c22e2b39)
 
 Lightning Talks:
 
