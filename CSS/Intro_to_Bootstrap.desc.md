@@ -294,6 +294,8 @@ If you copy this code as-is, you may notice a problem: the dropdown isn't showin
 
 ### Exercises!
 
-[CSS Assignment - try some of these, but use bootstrap!](https://github.com/gSchool/css-week-1)
-
 [Bootstrap Assignment](https://github.com/gSchool/bootstrap_mocks_assignment)
+
+[Bootstrap Challenge](https://github.com/gSchool/bootstrap-challenge)
+
+[(Optional) Old CSS Assignment - try some of these, but use bootstrap!](https://github.com/gSchool/css-week-1)

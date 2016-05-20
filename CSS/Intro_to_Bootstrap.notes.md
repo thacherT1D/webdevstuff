@@ -7,7 +7,9 @@
 * Why does bootstrap exist
 * What does bootstrap do
 * Show the documentation
-* Talk about grid systems (from the grid system exercise)
+> Students read and do the 'installing section'
+
+* Talk about grid systems (from the grid system exercise) Demo with link >>
 * https://wireframe.cc/GuRoUr
 * Livecode outline
 	* Create a blank HTML page
@@ -15,7 +17,7 @@
         * Show grids of various sizes
         * Show utility classes
         * Livecode a mockup from earlier exercises
-        * Show how to approach a mockup- problem solving strategies. 
+        * Show how to approach a mockup- problem solving strategies.
         * Make a list of everything you see, start with the "biggest" or easiest thing you can think to do. Then build from there. Show also drawing boxes around a mockup.
 	* Explain the Grid System
         * Explain style resetting
@@ -29,7 +31,7 @@ Students should go through the walkthrough and install their own copy of bootstr
 
 
 **(They Do)**  
-They'll be creating pages from mocks, starting with https://github.com/gSchool/bootstrap_mocks_assignment. They should finish this as their assignment. 
+They'll be creating pages from mocks, starting with https://github.com/gSchool/bootstrap_mocks_assignment. They should finish this as their assignment.
 https://github.com/gSchool/bootstrap-challenge is Homework.
 
 **Mention other CSS frameworks
