@@ -4,7 +4,7 @@
 
 ## Installing Bootstrap
 
-Bootstrap's documentation offers up a number of installation options. To keep things simple, we're going to  but we're going to use the Bootstrap CDN.
+Bootstrap's documentation offers up a number of installation options. To keep things simple though, we're going to use the Bootstrap CDN.
 
 **What's a CDN?**
 
@@ -285,10 +285,8 @@ Try your hand at adding the following design elements to your navigation bar:
 
 If you copy this code as-is, you may notice a problem: the dropdown isn't showing up! This is because Bootstrap dropdowns require the use of Bootstrap's javascript file, which in turn requires [jQuery](https://jquery.com/). But we haven't included jQuery in our file! To remedy this, you'll need to snag the relevant jQuery JS file. See if you can do this using the same CDN approach that we used to grab Bootstrap!
 
-### Homework!
+### Exercises!
 
-[CSS Assignment](https://github.com/gSchool/css-week-1)
+[CSS Assignment - try some of these, but use bootstrap!](https://github.com/gSchool/css-week-1)
 
 [Bootstrap Assignment](https://github.com/gSchool/bootstrap_mocks_assignment)
-
-[Personal Website Assignment](https://github.com/gSchool/personal_website_assignment)
