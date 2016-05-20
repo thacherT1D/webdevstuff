@@ -23,6 +23,8 @@ Your proposal should have
 
 There are some constraints around what technologies MUST be present in your app. Check out [Create and deploy a web app](#create-deploy) below.
 
+Submit your proposal with a pull-request of [this repo](https://github.com/gSchool/individual-project-proposals).
+
 ### Example Ideas
 
 * A Tetris Game, a blackjack game, a battleship game, etc.
@@ -80,11 +82,11 @@ Your web app should:
 * User Input
     * Use at least one web form
     * Validate user input
-    * Persist user data using something like LocalStorage
+    * Optionally, persist user data using something like LocalStorage
 * Workflow
     * Use wireframes to create your layouts before you build them
-    * Use a feature-branch workflow for your user stories
-    * Do some build-tooling with something like Gulp
+    * Optionally, use a feature-branch workflow for your user stories
+    * Optionally, do some build-tooling with something like Gulp
 
 <a id="video"></a>
 
