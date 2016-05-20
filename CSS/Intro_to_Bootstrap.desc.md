@@ -1,3 +1,10 @@
+## Objectives:
+
+- Explain what a CSS framework does/handles
+- List common CSS frameworks (Bootstrap, foundation, UI Kit, Pure, etc)
+- Use a CSS framework to quickly produce a layout from a mockup
+
+
 ## Bootstrap Introduction
 
 [Bootstrap](http://getbootstrap.com/) is a front-end framework that helps make your web applications look less ugly. It offloads much of the CSS you might otherwise need to write into some sensible default styles, so that you can focus more on building your application and less on technical details in your stylesheet.
