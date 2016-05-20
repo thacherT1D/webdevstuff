@@ -23,7 +23,7 @@ This difference in learning speed before and after the program is what it means 
 In order to help you develop these new habits and mindsets, we will show you how to utilize the 3 Stage Learn to Learn process.
 
 ## 3 Stage Learning Process
-*Objective 1: Discuss the 3 stage learning process*
+*Objective 1: Explain the 3 stage learning process*
 
 ### 1. Set the Stage
 #### Clear the Stage
