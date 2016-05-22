@@ -11,9 +11,9 @@
 
 ## What's HTTP?
 
-HyperText Transfer Protocol, or **HTTP**, is the protocol browsers, servers, and other programs on the Internet use to send requests and responses to one another.
+**Hypertext** is text that uses hyperlinks to connect the reader to other files that contain hypertext. The most popular hypertext format is, of course, the Hypertext Markup Language, better known as HTML. As you've become well aware in this course, HTML is the underlying representation of shareable information on the World Wide Web.
 
-Knowing how the internet works at a deeper level is essential when becoming a web developer. The goal of the lesson is to be able to describe clearly what happens from typing a website domain, all the way to displaying a web page.
+What you probably aren't super familiar with is the Hypertext Transfer Protocol (**HTTP**) which transfers hypertext, as well as other data formats, from one machine to another across the Web. Knowing how HTTP works is essential to being a web developer.
 
 A client sends the request for information and a server need to be able to read requests that are formatted in a predictable way. In the Querystring Parsing exercise, you learned to look at a string and turn it into data. Servers use a similar methodology to parse incoming text-based HTTP Requests.  A client can send a request to an HTTP server and get a response which in most cases is a web page, css file, javascript file, image, etc.
 
@@ -418,6 +418,7 @@ Try searching for a few of your favorite movies using the OMDB API and Postman!
 
 - [The Open Movie Database](http://omdbapi.com/)
 - [Wikipedia - Application Programming Interface](https://en.wikipedia.org/wiki/Application_programming_interface)
+- [Wikipedia - Hypertext](https://en.wikipedia.org/wiki/Hypertext)
 - [Wikipedia - Hypertext Transfer Protocol](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol)
 - [Youtube - History of the Internet](https://www.youtube.com/watch?v=9hIQjrMHTv4)
 - [Youtube - How The Internet Works](https://www.youtube.com/watch?v=7_LPdttKXPc)
