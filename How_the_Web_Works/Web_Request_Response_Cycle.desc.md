@@ -80,7 +80,7 @@ brew install httpie
 ```
 
 ```
-http -v GET http://hello.surge.sh
+http -v GET https://fs-student-roster.herokuapp.com
 ```
 
 ```
@@ -88,23 +88,48 @@ GET / HTTP/1.1
 Accept: */*
 Accept-Encoding: gzip, deflate
 Connection: keep-alive
-Host: hello.surge.sh
+Host: fs-student-roster.herokuapp.com
 User-Agent: HTTPie/0.9.3
 
 
 
 HTTP/1.1 200 OK
-Accept-Ranges: bytes
-Cache-Control: public, max-age=31536000, no-cache
-Content-Length: 2
-Content-Type: text/html; charset=UTF-8
-Date: Sun, 22 May 2016 22:00:49 GMT
-ETag: "8f0d73882229b1f472cf172ee2f66ad8"
-Response-Time: 1ms
-Server: SurgeCDN/0.12.2
-Vary: Accept-Encoding
+Access-Control-Allow-Origin: *
+Connection: keep-alive
+Content-Length: 631
+Content-Type: text/html; charset=utf-8
+Date: Sun, 22 May 2016 22:54:23 GMT
+Etag: W/"277-ENWB837FwX/qicQv2cu/qA"
+Server: Cowboy
+Vary: Accept
+Via: 1.1 vegur
 
-:D
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/style.css">
+    <title>Student Roster</title>
+  </head>
+  <body>
+    <main>
+      <h1>Student Roster</h1>
+
+        <section>
+          <h3>Daenerys Targaryen</h3>
+          <h4>Hobby: Motherhood</h4>
+          <img src="https://i.imgur.com/KlycRG5.jpg" alt="Daenerys Targaryen" />
+        </section>
+
+        <section>
+          <h3>Tyrion Lannister</h3>
+          <h4>Hobby: Traveling</h4>
+          <img src="https://i.imgur.com/fFMusdC.png" alt="Tyrion Lannister" />
+        </section>
+
+    </main>
+  </body>
+</html>
 ```
 
 #### Curl
