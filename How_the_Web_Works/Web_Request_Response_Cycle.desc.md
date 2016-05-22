@@ -315,13 +315,6 @@ Go to this [student roster page](https://fs-student-roster.herokuapp.com/). Your
 
 1. Switch back to `GET` and send another request. What's different about this response?
 
-### Stretch Assignment
-
-[HTTP Header Parser](https://github.com/gSchool/http-parser-js)
-
-* [Online Movie Database API documentation](http://omdbapi.com/)
-
-
 ## What's a web API?
 
 An application programming interface, or **API**, is a broad term used to describe any set of protocols for interacting with a computer program. These protocols can be thought of as a contract between two programs the __client__ program and the __server__ program. An API allows the client program to send requests to the server program, and the contract defines how the server will respond to that request.
@@ -422,6 +415,7 @@ Any client (web browser, curl, Postman ...) can make the same request and reciev
 
 ## Resources
 
+- [The Open Movie Database](http://omdbapi.com/)
 - [Wikipeida - Application Programming Interface](https://en.wikipedia.org/wiki/Application_programming_interface)
 - [Youtube - History of the Internet](https://www.youtube.com/watch?v=9hIQjrMHTv4)
 - [Youtube - How The Internet Works](https://www.youtube.com/watch?v=7_LPdttKXPc)
