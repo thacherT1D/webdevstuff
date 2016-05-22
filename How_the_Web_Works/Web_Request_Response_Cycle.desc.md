@@ -416,25 +416,6 @@ In RESTful services the server does not care about user interface, it is only co
 
 Any client (web browser, curl, Postman ...) can make the same request and recieve an identical response from the server. There can never be context outside of the request itself. This means RESTful servers don't deal with cookies, sessions, or anything that is not a part of the HTTP request being served.
 
-## More Examples
-
-Go to this github repository and look at the code in app.js. There you will find more examples of using different APIs.
-
-[https://github.com/gSchool/front-end-api-examples/](https://github.com/gSchool/front-end-api-examples/)
-
-Clone the repo and run the code
-
-```
-$ git clone git@github.com:gSchool/front-end-api-examples.git
-$ cd front-end-api-examples
-$ python -m SimpleHTTPServer
-```
-In your browser navigate to [http://localhost:8000](http://localhost:8000) to see the code run.
-
-[https://github.com/gSchool/front-end-api-examples/](https://github.com/gSchool/front-end-api-examples/)
-
-Try changing the parameters of the API requests. How does the data change?
-
 ## Assessments / Exercises
 
 [Spotify API Usage](https://github.com/gSchool/spotify-albums-and-tracks)
