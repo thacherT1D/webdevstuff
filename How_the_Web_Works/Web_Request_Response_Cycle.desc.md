@@ -59,12 +59,15 @@ Vary: Accept-Encoding
 
 And in an HTTP response, there is a status line for the start line:  `HTTP/1.1 200 OK`.
 
-HTTP has a number of codes that you might receive as a response. They're meant for computers to easily parse what has happened. They're three-digit numbers that tend to fall into this pattern:  
-**5XX** : Some kind of error has happened  
-**4XX** : I couldn't give you what you asked for, but there wasn't an error on my end  
-**3XX** : You have to go somewhere else to get what you want  
-**2XX** : You got what you want in some form  
-**1XX** : You're in the process of getting what you want, keep going  
+HTTP has a number of codes that you might receive as a response. They're meant for computers to easily parse what has happened. They're three-digit numbers that tend to fall into this pattern:
+
+| Status Code Class | Description                                             |
+|-------------------|---------------------------------------------------------|
+| `1XX`             | Request accepted, ready for the next one.               |
+| `2XX`             | Request accepted, the server's work is complete.        |
+| `3XX`             | Request accepted, but additional client work is needed. |
+| `4XX`             | Request accepted, but there was an error on the client. |
+| `5XX`             | Request accepted, but there was an error on the server. |
 
 - [HTTP Status Cats](https://http.cat/)
 - [HTTP Status Dogs](https://httpstatusdogs.com/)
