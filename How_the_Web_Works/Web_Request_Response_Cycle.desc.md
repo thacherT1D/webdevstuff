@@ -17,6 +17,14 @@ Knowing how the internet works at a deeper level is essential when becoming a we
 
 A client sends the request for information and a server need to be able to read requests that are formatted in a predictable way. In the Querystring Parsing exercise, you learned to look at a string and turn it into data. Servers use a similar methodology to parse incoming text-based HTTP Requests.  A client can send a request to an HTTP server and get a response which in most cases is a web page, css file, javascript file, image, etc.
 
+Client and Server Have Separate Concerns
+
+In RESTful services the server does not care about user interface, it is only concerned with raw data. A truly RESTful service will never encode information about __how__ to display something, it will only tell you what something is.
+
+Requests are Stateless
+
+Any client (web browser, curl, Postman ...) can make the same request and recieve an identical response from the server. There can never be context outside of the request itself. This means RESTful servers don't deal with cookies, sessions, or anything that is not a part of the HTTP request being served.
+
 ## What does an HTTP request look like?
 
 This is what an HTTP request looks like.
@@ -401,14 +409,6 @@ X-Powered-By: ASP.NET
 ```
 
 Try searching for a few of your favorite movies using the OMDB API and Postman!
-
-#### Client and Server Have Separate Concerns
-
-In RESTful services the server does not care about user interface, it is only concerned with raw data. A truly RESTful service will never encode information about __how__ to display something, it will only tell you what something is.
-
-#### Requests are Stateless
-
-Any client (web browser, curl, Postman ...) can make the same request and recieve an identical response from the server. There can never be context outside of the request itself. This means RESTful servers don't deal with cookies, sessions, or anything that is not a part of the HTTP request being served.
 
 ## Assessments / Exercises
 
