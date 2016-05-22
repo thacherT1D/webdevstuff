@@ -417,6 +417,7 @@ Try searching for a few of your favorite movies using the OMDB API and Postman!
 ## Resources
 
 - [The Open Movie Database](http://omdbapi.com/)
-- [Wikipeida - Application Programming Interface](https://en.wikipedia.org/wiki/Application_programming_interface)
+- [Wikipedia - Application Programming Interface](https://en.wikipedia.org/wiki/Application_programming_interface)
+- [Wikipedia - Hypertext Transfer Protocol](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol)
 - [Youtube - History of the Internet](https://www.youtube.com/watch?v=9hIQjrMHTv4)
 - [Youtube - How The Internet Works](https://www.youtube.com/watch?v=7_LPdttKXPc)
