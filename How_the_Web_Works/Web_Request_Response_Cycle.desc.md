@@ -11,7 +11,7 @@
 
 ## What's HTTP?
 
-**Hypertext** is text that uses hyperlinks to connect the reader to other files that contain hypertext. The most popular hypertext format is, of course, the Hypertext Markup Language, better known as HTML. As you've become well aware in this course, HTML is the underlying representation of shareable information on the World Wide Web.
+**Hypertext** is text that uses hyperlinks to connect the reader to other files that contain hypertext. The most popular hypertext format is, of course, the Hypertext Markup Language, better known as HTML. The approximately 4.6 billion HTML pages, all connected together via hyperlinks, form the underlying structure of the known World Wide Web.
 
 What you probably aren't super familiar with is the Hypertext Transfer Protocol (**HTTP**) which transfers hypertext, as well as other data formats, from one machine to another across the Web. Knowing how HTTP works is essential to being a web developer.
 
@@ -420,5 +420,6 @@ Try searching for a few of your favorite movies using the OMDB API and Postman!
 - [Wikipedia - Application Programming Interface](https://en.wikipedia.org/wiki/Application_programming_interface)
 - [Wikipedia - Hypertext](https://en.wikipedia.org/wiki/Hypertext)
 - [Wikipedia - Hypertext Transfer Protocol](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol)
+- [World Wide Web Size](http://www.worldwidewebsize.com/)
 - [Youtube - History of the Internet](https://www.youtube.com/watch?v=9hIQjrMHTv4)
 - [Youtube - How The Internet Works](https://www.youtube.com/watch?v=7_LPdttKXPc)
