@@ -1,25 +1,13 @@
 # Week 5 (May 23 - May 27)
 ## Weekly Objective
 
-- Objective 1
-- Objective 2
-- Objective 3
+- CRUSH CODE
 
 ---
 
 # Monday, May 23
 
-Warmup: [Link to Warmup](http://github.com/gSchool)
-
-Lessons:
-- [Lesson](https://workbook.galvanize.com/cohorts/68/student_dashboard)
-- [Lesson](https://workbook.galvanize.com/cohorts/68/student_dashboard)
-
-Homework: [Homework](https://workbook.galvanize.com/cohorts/68/student_dashboard)
-
-Announcements:
-- Announcement 1
-- Announcement 2
+- [Personal Project](https://workbook.galvanize.com/cohorts/68/articles/3118)
 
 ---
 
@@ -27,15 +15,7 @@ Announcements:
 
 Warmup: [Link to Warmup](http://github.com/gSchool)
 
-Lessons:
-- [Lesson](https://workbook.galvanize.com/cohorts/68/student_dashboard)
-- [Lesson](https://workbook.galvanize.com/cohorts/68/student_dashboard)
-
-Homework: [Homework](https://workbook.galvanize.com/cohorts/68/student_dashboard)
-
-Announcements:
-- Announcement 1
-- Announcement 2
+- [Personal Project](https://workbook.galvanize.com/cohorts/68/articles/3118)
 
 ---
 
@@ -43,15 +23,7 @@ Announcements:
 
 Warmup: [Link to Warmup](http://github.com/gSchool)
 
-Lessons:
-- [Lesson](https://workbook.galvanize.com/cohorts/68/student_dashboard)
-- [Lesson](https://workbook.galvanize.com/cohorts/68/student_dashboard)
-
-Homework: [Homework](https://workbook.galvanize.com/cohorts/68/student_dashboard)
-
-Announcements:
-- Announcement 1
-- Announcement 2
+- [Personal Project](https://workbook.galvanize.com/cohorts/68/articles/3118)
 
 ---
 
@@ -59,26 +31,13 @@ Announcements:
 
 Warmup: [Link to Warmup](http://github.com/gSchool)
 
-Lessons:
-- [Lesson](https://workbook.galvanize.com/cohorts/68/student_dashboard)
-- [Lesson](https://workbook.galvanize.com/cohorts/68/student_dashboard)
-
-Homework: [Homework](https://workbook.galvanize.com/cohorts/68/student_dashboard)
-
-Announcements:
-- Announcement 1
-- Announcement 2
+- [Personal Project](https://workbook.galvanize.com/cohorts/68/articles/3118)
 
 ---
 
 # Friday, May 27
 
-Crush Code Friday: [CCF](https://workbook.galvanize.com/cohorts/68/student_dashboard)
 
-Homework: [Homework](https://workbook.galvanize.com/cohorts/68/student_dashboard)
+Project Presentations
 
 Lightning Talks:
-
-Announcements:
-- Announcement 1
-- Announcement 2
