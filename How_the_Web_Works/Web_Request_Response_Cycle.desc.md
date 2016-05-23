@@ -11,9 +11,13 @@
 
 ## What's HTTP?
 
-**Hypertext** is text that uses hyperlinks to connect the reader to other files that contains hypertext. The most popular hypertext format is, of course, the Hypertext Markup Language, better known as HTML. The approximately 4.6 billion HTML pages interconnected via hyperlinks form the structure known as the **World Wide Web**, or Web for short.
+**Hypertext** is text that uses hyperlinks to connect the reader to other files that contain hypertext. The most popular hypertext format is, of course, the Hypertext Markup Language, better known as HTML. The approximately 4.6 billion HTML pages, interconnected via hyperlinks, form the structure known as the **World Wide Web**, or Web for short.
 
-HTML files are transferred across the Internet using a communication protocol. A **protocol** a system of rules that allows two or more devices on a computer network to transmit information. The protocol of the Web is called the Hypertext Transfer Protocol (**HTTP**) and its job, as you might expect, is to transmit hypertext on a computer network. As it turns out, HTTP is quite flexible and is used to transmit other non-hypertext file formats as well. Tim Berners-Lee and his team at CERN are credited with inventing both HTTP and HTML.
+HTML files are transferred across the Internet using a communication protocol. A **protocol** is a system of rules that allow two or more devices on a computer network to transmit information. The protocol of the Web is called the Hypertext Transfer Protocol (**HTTP**) and its job, as you might expect, is to transmit hypertext over a computer network. As it turns out, HTTP is quite flexible and is also used to transmit non-hypertext data as well. Tim Berners-Lee and his team at CERN are credited with inventing HTTP in 1989 and then HTML in 1990.
+
+HTTP is request–response protocol between a client and a server. A web browser, for example, may be the client and an application running on a computer hosting a web site may be the server. The client submits an HTTP request to the server. The server, which provides resources such as HTML files and other content, returns a response to the client. The response contains completion status information about the request and may also contain requested content in its message body.
+
+A web browser is an example of a user agent (UA). Other types of user agent include the indexing software used by search providers (web crawlers), voice browsers, mobile apps, and other software that accesses, consumes, or displays web content.
 
 A client sends the request for information and a server need to be able to read requests that are formatted in a predictable way. In the Querystring Parsing exercise, you learned to look at a string and turn it into data. Servers use a similar methodology to parse incoming text-based HTTP Requests.  A client can send a request to an HTTP server and get a response which in most cases is a web page, css file, javascript file, image, etc.
 
