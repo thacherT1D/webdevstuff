@@ -136,7 +136,7 @@ While an HTTP response can only contain a one status code, there are many differ
 
 ## How do you send HTTP requests and receive HTTP responses?
 
-cURL is a command that sends HTTP requests to servers and outputs their raw HTTP response to the Terminal screen. In other words, it can do pretty much anything your web browser can do except render the HTTP response body as a pretty picture.
+cURL is a command that sends HTTP requests to servers and outputs their raw HTTP response to the Terminal screen. In other words, it can do pretty much anything your web browser can do except render the HTTP response body as a pretty picture. cURL is often used for testing and debugging HTTP server responses.
 
 Try running the following command.
 
@@ -198,7 +198,7 @@ You should see something like this.
 * Connection #0 to host fs-student-roster.herokuapp.com left intact
 ```
 
-cURL is a very useful command and pre-installed on most Unix operating systems. However, I prefer another program called [HTTPie](https://github.com/jkbrzt/httpie). Like cURL, HTTPie is a command line HTTP client. But its goal is to make command line interaction with a web server as human-friendly as possible.
+cURL is a very useful command and pre-installed on most Unix operating systems. However, I prefer another program called [HTTPie](https://github.com/jkbrzt/httpie). Like cURL, HTTPie is a command line HTTP client. But its goal is to make command line interaction with a web server as human-friendly as possible. Also like cURL, HTTPie is used for testing and debugging HTTP server responses.
 
 To install HTTPie, run the following command.
 
