@@ -10,7 +10,7 @@ In order to get the most out of this Learning Experience, you'll need to be comf
 * Be able to alter a production database schema using migrations
 * Be able to explain why migrations are important
 * Be able to explain why migrations have unique identifying numbers
-* Be able to rollback a migration in both a development and production environement
+* Be able to rollback a migration in both a development and production environment
 
 ### Why you should care
 
@@ -26,7 +26,7 @@ These migrations also provide further documentation about your database schema f
 1. What does the `knexfile.js` file do? Why is it important?
 1. Why is the `knex` CLI super handy for creating migration files?
 1. What is a database schema?
-1. Why do migration file names start wtih a UTC timestamp?
+1. Why do migration file names start with a UTC timestamp?
 1. Why is it important to use the `knex` CLI `rollback` function to undo a migration?
 1. Why does `knex` add an `exports.down` function to your migrations?
 
