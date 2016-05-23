@@ -49,7 +49,7 @@ Host: fs-student-roster.herokuapp.com
 User-Agent: HTTPie/0.9.3
 ```
 
-**EXERCISE:** Looking at the above message, can you identify the parts of an HTTP request?
+**QUESTION:** Looking at the above message, can you identify the parts of an HTTP request?
 
 While an HTTP request can only contain one method, there are several different methods that a client can choose from. Each method instructs a server on how to process the request. Without the use of Ajax, web browsers are only capable of sending HTTP requests with the following methods.
 
@@ -58,7 +58,7 @@ While an HTTP request can only contain one method, there are several different m
 | `GET`  | Used retrieve a resource, like an HTML file, from a server. |
 | `POST` | Used send information, like user input, to a server.        |
 
-**EXERCISE:** When does a web browser make `GET` requests? When does it make `POST` requests?
+**QUESTION:** When does a web browser make `GET` requests? When does it make `POST` requests?
 
 ## What's an HTTP response?
 
@@ -113,7 +113,7 @@ Via: 1.1 vegur
 </html>
 ```
 
-**EXERCISE:** Looking at the above message, can you identify the parts of an HTTP response?
+**QUESTION:** Looking at the above message, can you identify the parts of an HTTP response?
 
 While an HTTP response can only contain one status code, there are many different codes that a server can choose from. Each status code explains to the client how the server interpreted the request. Status codes are three-digit numbers that are grouped into the following categories.
 
@@ -129,7 +129,7 @@ While an HTTP response can only contain one status code, there are many differen
 - [HTTP Status Dogs](https://httpstatusdogs.com/)
 - [Wikipedia - List of HTTP status codes](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes)
 
-**EXERCISE:** The most common status codes are `200`, `302`, `304`, `404`, and `500`. Can you figure out why?
+**QUESTION:** The most common status codes are `200`, `302`, `304`, `404`, and `500`. Can you figure out why?
 
 ## How do you diagram the HTTP request-response cycle?
 
@@ -395,7 +395,7 @@ Via: 1.1 vegur
 ]
 ```
 
-**EXERCISE:** What are some of the differences in the HTTP request and response when requesting JSON?
+**QUESTION:** What are some of the differences in the HTTP request and response when requesting JSON?
 
 A POST request is used in order to send data from the requestor to the server. The server can then parse the _request body_ in order to get information out of it, and often do something on the server with that information (like put it in a database).
 
@@ -438,11 +438,9 @@ Via: 1.1 vegur
 }
 ```
 
-### Exercise
+Go to this [student roster page](https://fs-student-roster.herokuapp.com/). How can you add a student profile to this page without web form? With the server's **web API**, of course!
 
-Go to this [student roster page](https://fs-student-roster.herokuapp.com/). Your job is to add a student profile of yourself to this page. Notice there's no web form on the page. To add your student profile, you'll have to use a different user agent to communicate to the application through its **web API**.
-
-Add a JSON object with the following key/value pairs to the request body.
+To do that, you'll need to add a JSON object with the following key/value pairs to the HTTP request.
 
 | Key     | Value                                     |
 |---------|-------------------------------------------|
@@ -450,9 +448,55 @@ Add a JSON object with the following key/value pairs to the request body.
 | `hobby` | Your favorite hobby as a string           |
 | `avatar`| A URL of your profile picture as a string |
 
-Once the request body is formatted correctly, send this `POST` request. What's different about this response?
+Try running this command, but replacing the values with your own information.
 
-Switch back to `GET` and send another request. What's different about this response?
+```
+http -vj POST http://fs-student-roster.herokuapp.com name='Philip J. Fry' hobby='Time travel' avatar='http://i.imgur.com/F48J2Ij.jpg'
+```
+
+You should see something like this.
+
+```
+POST / HTTP/1.1
+Accept: application/json
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+Content-Length: 93
+Content-Type: application/json
+Host: fs-student-roster.herokuapp.com
+User-Agent: HTTPie/0.9.3
+
+{
+    "avatar": "http://i.imgur.com/F48J2Ij.jpg",
+    "hobby": "Time travel",
+    "name": "Philip J. Fry"
+}
+
+HTTP/1.1 200 OK
+Access-Control-Allow-Origin: *
+Connection: keep-alive
+Content-Length: 33
+Content-Type: application/json; charset=utf-8
+Date: Mon, 23 May 2016 19:44:19 GMT
+Etag: W/"21-ZUo1a34ZIx+AEtYefXTYkw"
+Server: Cowboy
+Vary: Accept
+Via: 1.1 vegur
+
+{
+    "success": "New student created"
+}
+```
+
+**QUESTION:** What's different about this HTTP request and response?
+
+Try sending another `GET` request to the server.
+
+```
+http -vj GET http://fs-student-roster.herokuapp.com
+```
+
+**QUESTION:** What's different about this response?
 
 ## What's a web API?
 
