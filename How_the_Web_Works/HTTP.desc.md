@@ -16,6 +16,8 @@ HTML files are transferred across the Internet using a communication protocol. A
 
 HTTP is request–response protocol between two programs called a client and a server. Typically, a **web browser** acts as the client and an application hosting a web site, known as a **web server**, acts as the server.
 
+![](http://i.imgur.com/VbuGgIn.png)
+
 ## What's an HTTP Request?
 
 The client (or user agent) sends a plain-text message called an **HTTP request** to a server on behalf of the user. Aside from web browsers, other common user agents include web crawlers, native apps, and mobile apps.
@@ -351,7 +353,6 @@ In web development, more often than not, the client program is a web browser run
 
 With the growing popularity of JavaScript and dynamic websites, there has been an increased need for __client__ applications to request and manipulate data directly. In the 1990's version of the internet, communication between browsers and web servers was largely limited to HTML & CSS. If the HTML needed to have any information from the webserver's database that information would be encoded to the HTML before the page rendered.
 
-![](http://i.imgur.com/VbuGgIn.png)
 
 If the user needed to get any new information, the browser would request a new page, and the server would encode that information into the HTML for that page. Imagine clicking "next page" on a search engine - the page reloads after the webserver fetches the paginated results.
 
