@@ -22,10 +22,11 @@
 * One of the tools for capturing requirements
 
 ## Information Architecture
+>Lets step through this together, wireframing a front page that....
 
 ### Content Inventories
 
-* Make a list of all of the things your site your site should have
+* Make a list of all of the things your site should have
     * Images
     * Text
     * Navigation
