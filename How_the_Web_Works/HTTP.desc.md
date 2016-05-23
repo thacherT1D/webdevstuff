@@ -1,10 +1,11 @@
 ## Objectives
 
 - Explain what HTTP is.
+- Explain why HTTP is useful?
 - Explain what an HTTP request is.
 - Explain what an HTTP response is.
-- Diagram HTTP request-response cycle
-- Send HTTP requests and receive HTTP responses via Terminal.
+- Diagram HTTP request-response cycle.
+- Send HTTP requests and receive HTTP responses.
 - Explain what JSON is.
 - Explain why JSON is useful.
 
@@ -17,6 +18,10 @@ HTML files are transferred across the Internet using a communication protocol. A
 HTTP is request–response protocol between two programs called a client and a server. Typically, a **web browser** acts as the client and an application hosting a web site, known as a **web server**, acts as the server.
 
 ![](http://i.imgur.com/VbuGgIn.png)
+
+## Why is HTTP useful?
+
+It allows the client to only focus on presentation and the server to only focus on managing data.
 
 ## What's an HTTP Request?
 
@@ -58,15 +63,6 @@ While an HTTP request can only contain a single method, there are several differ
 
 The server sends a response back to the client.
 
-Client and Server Have Separate Concerns
-
-In RESTful services the server does not care about user interface, it is only concerned with raw data. A truly RESTful service will never encode information about __how__ to display something, it will only tell you what something is.
-
-Requests are Stateless
-
-Any client (web browser, curl, Postman ...) can make the same request and recieve an identical response from the server. There can never be context outside of the request itself. This means RESTful servers don't deal with cookies, sessions, or anything that is not a part of the HTTP request being served.
-
-## What does an HTTP response look like?
 
 This is what an HTTP response looks like.
 
@@ -126,7 +122,7 @@ HTTP has a number of codes that you might receive as a response. They're meant f
 - [HTTP Status Dogs](https://httpstatusdogs.com/)
 - [Wikipedia - List of HTTP status codes](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes)
 
-### Let's make our first HTTP Request
+## How do you send HTTP requests and receive HTTP responses?
 
 ```
 brew install httpie
