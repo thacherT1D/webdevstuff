@@ -136,7 +136,7 @@ While an HTTP response can only contain a one status code, there are many differ
 
 ## How do you send HTTP requests and receive HTTP responses?
 
-cURL is a command that sends HTTP requests to servers and outputs their raw HTTP response to the Terminal screen. In other words, it can do pretty much anything your web browser can do except render the HTTP response body as a pretty picture. cURL is often used for testing and debugging HTTP server responses.
+cURL is a command line program that sends HTTP requests to servers and outputs their raw HTTP response to the Terminal. In other words, it can do pretty much anything your web browser can do except render the HTTP response body as a pretty picture. cURL is often used for testing and debugging HTTP requests and responses.
 
 Try running the following command.
 
@@ -198,7 +198,7 @@ You should see something like this.
 * Connection #0 to host fs-student-roster.herokuapp.com left intact
 ```
 
-cURL is a very useful command and pre-installed on most Unix operating systems. However, I prefer another program called [HTTPie](https://github.com/jkbrzt/httpie). Like cURL, HTTPie is a command line HTTP client. But its goal is to make command line interaction with a web server as human-friendly as possible. Also like cURL, HTTPie is used for testing and debugging HTTP server responses.
+cURL is a very useful command and pre-installed on most Unix operating systems. However, I prefer another program called [HTTPie](https://github.com/jkbrzt/httpie). Like cURL, HTTPie is a command line HTTP client. But its goal is to make command line interaction with a web server as human-friendly as possible. Also like cURL, HTTPie is used for testing and debugging HTTP requests and responses.
 
 To install HTTPie, run the following command.
 
@@ -281,71 +281,71 @@ What did you get back when you made that request?  What went wrong?
 
 #### JSON
 
-__JSON is JavaScript Object Notation__. It is the de facto data exchange format of the web.  The structure of JSON is a key value pair hash, very similar to object notation in Javascript.  It is important to keep in mind that JSON data is only a string that represents objects like arrays and objects.  The JSON data must be parsed in order for it to have meaning in a program.
+JavaScript Object Notation (**JSON**) is the de facto data exchange format of the Web. JSON is a string that looks very similar to a native objects and arrays. That means JSON must be parsed in order for it to have meaning in a program.
 
-#### JSON Examples
-
-__Empty JSON__
+**Empty Object**
 
 ```json
 { }
 ```
 
-__Map__
+**Object**
 
 ```json
-{ "company" : "Github", "age": 7, "categories" : "Services,Internet,Software"}
-```
-
-__Array__
-
-```json
-["Github", "Airbnb", "Square", "Dropbox"]
-```
-
-__Complex JSON__
-
-```json
-{ "Companies":
-	[
-		{
-			"company": "Github",
-			"age": 7,
-			"categories": "Services,Internet,Software"
-		}, {
-			"company": "Airbnb",
-			"age": 6,
-			"categories": "Hotels,Travel"
-		}, {
-			"company": "Square",
-			"age": 7,
-			"categories": "FinTech,Hardware + Software,Finance"
-		}, {
-			"company": "Dropbox",
-			"age": 11,
-			"categories": "Cloud Data Services,Storage,Web Hosting"
-		}
-	]
+{
+  "avatar": "https://i.imgur.com/KlycRG5.jpg",
+  "hobby": "Motherhood",
+  "name": "Daenerys Targaryen"
 }
+```
+
+**Array of Objects**
+
+```json
+[
+  {
+    "avatar": "https://i.imgur.com/KlycRG5.jpg",
+    "hobby": "Motherhood",
+    "name": "Daenerys Targaryen"
+  },
+  {
+    "avatar": "https://i.imgur.com/fFMusdC.png",
+    "hobby": "Traveling",
+    "name": "Tyrion Lannister"
+  }
+]
 ```
 
 #### Parsing JSON
 
 JSON's design was made with javascript in mind, so parsing JSON in javascript is easy.
 
-__From JSON string to Javascript object__:
+**From JSON string to Javascript object**:
 
 ```javascript
-var companyArr = JSON.parse('["Github", "Airbnb", "Square", "Dropbox"]');
-console.log(companyArr[0]);  // Prints Github to the console
+var characterJSON = '{
+  "avatar": "https://i.imgur.com/KlycRG5.jpg",
+  "hobby": "Motherhood",
+  "name": "Daenerys Targaryen"
+}';
+
+var character = JSON.parse(characterJSON);
+
+console.log(character.name);  // Daenerys Targaryen
 ```
 
-__From javascript object to JSON string__:
+**From javascript object to JSON string**:
 
 ```javascript
-var comanyArr = ["Github", "Airbnb", "Square", "Dropbox"];
-var companyJson = JSON.stringify(companyArr);
-console.log(companyJson);  // Prints the json string that represents the array
+var character = {
+  avatar: 'https://i.imgur.com/KlycRG5.jpg',
+  hobby: 'Motherhood',
+  name: 'Daenerys Targaryen'
+};
+
+var characterJSON = JSON.stringify(character);
+
+console.log(character.name);  // Prints the JSON string
 ```
 
 ### Exercise
@@ -369,13 +369,13 @@ Go to this [student roster page](https://fs-student-roster.herokuapp.com/). Your
 
 ## What's a web API?
 
-An application programming interface, or **API**, is a broad term used to describe any set of protocols for interacting with a computer program. These protocols can be thought of as a contract between two programs the __client__ program and the __server__ program. An API allows the client program to send requests to the server program, and the contract defines how the server will respond to that request.
+An application programming interface, or **API**, is a broad term used to describe any set of protocols for interacting with a computer program. These protocols can be thought of as a contract between two programs the **client** program and the **server** program. An API allows the client program to send requests to the server program, and the contract defines how the server will respond to that request.
 
 In web development, more often than not, the client program is a web browser running a JavaScript application and the server program is a web server. Furthermore, the term API is frequently used by web developers to refer to a specific type of API. One which provides raw data based on the request parameters of an HTTP request.
 
 ### APIs and the Dynamic Web
 
-With the growing popularity of JavaScript and dynamic websites, there has been an increased need for __client__ applications to request and manipulate data directly. In the 1990's version of the internet, communication between browsers and web servers was largely limited to HTML & CSS. If the HTML needed to have any information from the webserver's database that information would be encoded to the HTML before the page rendered.
+With the growing popularity of JavaScript and dynamic websites, there has been an increased need for **client** applications to request and manipulate data directly. In the 1990's version of the internet, communication between browsers and web servers was largely limited to HTML & CSS. If the HTML needed to have any information from the webserver's database that information would be encoded to the HTML before the page rendered.
 
 
 If the user needed to get any new information, the browser would request a new page, and the server would encode that information into the HTML for that page. Imagine clicking "next page" on a search engine - the page reloads after the webserver fetches the paginated results.
@@ -388,7 +388,7 @@ Not only do API's allow us to fetch data from our own webserver (as in Facebook'
 
 ### An Example Request - OMDB API
 
-One fantastic API is the OMDB API. The __contract__ for this API is defined in the [OMBD API documentation](http://omdbapi.com/). After reading the documentation, we determine that we can use the query parameter `t` to search the database for movies with a specific title. Lets search IMDB for Game of Thrones:
+One fantastic API is the OMDB API. The **contract** for this API is defined in the [OMBD API documentation](http://omdbapi.com/). After reading the documentation, we determine that we can use the query parameter `t` to search the database for movies with a specific title. Lets search IMDB for Game of Thrones:
 
 [http://www.omdbapi.com/?t=Game of Thrones](http://www.omdbapi.com/?t=Game of Thrones)
 
