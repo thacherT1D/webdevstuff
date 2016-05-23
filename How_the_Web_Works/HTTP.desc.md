@@ -21,7 +21,7 @@ HTTP is request–response protocol between two programs called a client and a s
 
 ## Why is HTTP useful?
 
-HTTP provides a consistent, uniform interface that separates clients from servers. This separation of concerns means that, for example, clients can focus on presenting the user interface and not on managing resources. On the other hand, servers can focus on managing resources and not on presenting the user interface. In practice, both clients and servers can be much simpler and more scalable. Additionally, clients and servers can be replaced and developed independently, so long as the HTTP interface between them is not altered.
+HTTP provides a consistent, uniform interface that separates clients from servers. This separation of concerns means that, for example, clients can focus on presenting the user interface instead of managing resources. On the other hand, servers can focus on managing resources instead of presenting the user interface. This allows both clients and servers to be much simpler and more scalable. Additionally, clients and servers can be replaced and developed independently so long as the HTTP interface between them is not altered.
 
 ## What's an HTTP Request?
 
@@ -61,7 +61,7 @@ While an HTTP request can only contain a one method, there are several different
 
 ## What's an HTTP response?
 
-The server receives an HTTP request, attempts to process it, and sends an **HTTP response** back to the client. Popular web servers include Apache, Nginx, Node.js, and Python's built-in `SimpleHTTPServer`.
+The server receives an HTTP request, attempts to process it, and sends a plain-text message called an **HTTP response** back to the client. Popular web servers include Apache, Nginx, Node.js, and Python's built-in `SimpleHTTPServer`.
 
 An HTTP response is composed of the following parts.
 
