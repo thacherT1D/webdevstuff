@@ -9,6 +9,27 @@
 
 - [Personal Project](https://workbook.galvanize.com/cohorts/68/articles/3118)
 
+
+- Jordan:
+  - Charles Stafford
+  - Daniel Dwyer
+  - Gabriel Thexton
+  - Jamie Thorson
+  - Jeremy Kaffrey
+  - Jessica Morris
+- Roger:
+  - Kristen Foster-Marks
+  - Michael Hottman
+  - Michael Mesereau
+  - Philip Reitz
+  - Roy Chase
+  - Ryan Mackey
+- Micah:
+  - Samuel Cooksey
+  - Stephanie Ogburn
+  - Tara Mason
+  - Vy Nguyen
+
 ---
 
 # Tuesday, May 24
