@@ -351,9 +351,13 @@ In other words, JSON is what allows two programs to transfer data to each other 
 
 ## How do you send HTTP requests and receive HTTP responses for JSON?
 
+In addition to HTML, the server in charge of our student roster can accept HTTP requests for JSON. Try running the following command.
+
 ```
 http -vj GET http://fs-student-roster.herokuapp.com
 ```
+
+You should see something like this.
 
 ```
 GET / HTTP/1.1
@@ -391,41 +395,64 @@ Via: 1.1 vegur
 ]
 ```
 
+**EXERCISE:** What are some of the differences in the HTTP request and response when requesting JSON?
+
 A POST request is used in order to send data from the requestor to the server. The server can then parse the _request body_ in order to get information out of it, and often do something on the server with that information (like put it in a database).
 
 Here's how we'd put data in the body of the request using cURL.
 
-```
-curl -v --data @myfilenamewithdata.json -X POST https://www.google.com
-```
-
 When you specify data in a POST request, it is a good idea to tell the server the type of the data in the request:
 
 ```
-curl -v -H "Content-Type: application/json" --data @myfilenamewithdata.json -X POST https://www.google.com
+http -vj POST http://fs-student-roster.herokuapp.com
 ```
+You should see something like this.
 
-What did you get back when you made that request?  What went wrong?
+```
+POST / HTTP/1.1
+Accept: application/json
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+Content-Length: 0
+Content-Type: application/json
+Host: fs-student-roster.herokuapp.com
+User-Agent: HTTPie/0.9.3
 
+
+
+HTTP/1.1 400 Bad Request
+Access-Control-Allow-Origin: *
+Connection: keep-alive
+Content-Length: 129
+Content-Type: application/json; charset=utf-8
+Date: Mon, 23 May 2016 19:34:17 GMT
+Etag: W/"81-UYxtgaXWHAmNTFCDu0HMMw"
+Server: Cowboy
+Vary: Accept
+Via: 1.1 vegur
+
+{
+    "error": "Invalid JSON Body",
+    "fix": "Needs name, hobby, and avatar key/value String pairs",
+    "see": "GET / Accept: application/json"
+}
+```
 
 ### Exercise
 
-Go to this [student roster page](https://fs-student-roster.herokuapp.com/). Your job is to add a student profile of yourself to this page. Notice that there's no web form. To add your student profile, you'll have to use Postman to communicate to the application through its **web API**.
+Go to this [student roster page](https://fs-student-roster.herokuapp.com/). Your job is to add a student profile of yourself to this page. Notice there's no web form on the page. To add your student profile, you'll have to use a different user agent to communicate to the application through its **web API**.
 
-1. To get started, send a `GET` request to https://fs-student-roster.herokuapp.com/.
+Add a JSON object with the following key/value pairs to the request body.
 
-1. Send another request, but this time set the request's `Accept` header to `application/json`. What's different about this response?
+| Key     | Value                                     |
+|---------|-------------------------------------------|
+| `name`  | Your full name as a string                |
+| `hobby` | Your favorite hobby as a string           |
+| `avatar`| A URL of your profile picture as a string |
 
-1. Now send a `POST` request to the same URL. What's different about this response?
+Once the request body is formatted correctly, send this `POST` request. What's different about this response?
 
-1. Add a JSON object with the following key/value pairs to the request body.
-  * `name` - Your full name as a `String`
-  * `hobby` - Your favorite hobby as a `String`
-  * `avatar` - A URL of your profile picture as a `String`
-
-1. Once the request body is formatted correctly, send this `POST` request. What's different about this response?
-
-1. Switch back to `GET` and send another request. What's different about this response?
+Switch back to `GET` and send another request. What's different about this response?
 
 ## What's a web API?
 
