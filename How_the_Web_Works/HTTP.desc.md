@@ -117,7 +117,7 @@ Via: 1.1 vegur
 
 While an HTTP response can only contain one status code, there are many different codes that a server can choose from. Each status code explains to the client how the server interpreted the request. Status codes are three-digit numbers that are grouped into the following categories.
 
-| Status Code Class | Description                                             |
+| Status Code Group | Description                                             |
 |-------------------|---------------------------------------------------------|
 | `1XX`             | Request accepted, ready for the next one.               |
 | `2XX`             | Request accepted, the server's work is complete.        |
