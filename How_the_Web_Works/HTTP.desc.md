@@ -45,7 +45,7 @@ User-Agent: HTTPie/0.9.3
 
 **EXERCISE:** Looking at the above message, identify the parts of an HTTP request.
 
-While an HTTP request can only contain a single method, HTTP defines several different method types. Each method type instructs a web server on how to process the request. Without the use of Ajax, web browsers are only capable of sending HTTP requests with the following method types.
+While an HTTP request can only contain a single method, there are several different method types it can choose from. Each method type instructs a web server on how to process the request. Without the use of Ajax, web browsers are only capable of sending HTTP requests with the following method types.
 
 | Method Type | Description                                                   |
 |-------------|---------------------------------------------------------------|
