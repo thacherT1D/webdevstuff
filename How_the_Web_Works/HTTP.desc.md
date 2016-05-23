@@ -21,7 +21,7 @@ HTTP is request–response protocol between two programs called a client and a s
 
 ## Why is HTTP useful?
 
-It allows the client to only focus on presentation and the server to only focus on managing data.
+HTTP provides a consistent, uniform interface that separates clients from servers. This separation of concerns means that, for example, clients can focus on presenting the user interface and not on managing resources. On the other hand, servers can focus on managing resources and not on presenting the user interface. In practice, both clients and servers can be much simpler and more scalable. Additionally, clients and servers can be replaced and developed independently, so long as the HTTP interface between them is not altered.
 
 ## What's an HTTP Request?
 
