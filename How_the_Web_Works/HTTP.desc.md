@@ -282,6 +282,8 @@ Here's an example of an empty JSON object.
 
 Here's an example of a non-empty JSON object.
 
+**NOTE:** Both JSON strings and JSON object keys **must** be wrapped in double quotes `"`.
+
 ```json
 {
   "avatar": "https://i.imgur.com/KlycRG5.jpg",
