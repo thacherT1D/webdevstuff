@@ -397,15 +397,14 @@ Via: 1.1 vegur
 
 **QUESTION:** What are some of the differences in the HTTP request and response when requesting JSON?
 
-A POST request is used in order to send data from the requestor to the server. The server can then parse the _request body_ in order to get information out of it, and often do something on the server with that information (like put it in a database).
+Go to this [student roster page](https://fs-student-roster.herokuapp.com/). How can you add a student profile to this page without web form? With the server's **web API**, of course!
 
-Here's how we'd put data in the body of the request using cURL.
-
-When you specify data in a POST request, it is a good idea to tell the server the type of the data in the request:
+Try running the following command.
 
 ```
 http -vj POST http://fs-student-roster.herokuapp.com
 ```
+
 You should see something like this.
 
 ```
@@ -438,9 +437,7 @@ Via: 1.1 vegur
 }
 ```
 
-Go to this [student roster page](https://fs-student-roster.herokuapp.com/). How can you add a student profile to this page without web form? With the server's **web API**, of course!
-
-To do that, you'll need to add a JSON object with the following key/value pairs to the HTTP request.
+Well, that didn't work as expected. It looks like to make a `POST` request to this server, the HTTP request needs to include a JSON object with the following key/value pairs.
 
 | Key     | Value                                     |
 |---------|-------------------------------------------|
@@ -500,26 +497,11 @@ http -vj GET http://fs-student-roster.herokuapp.com
 
 ## What's a web API?
 
-An application programming interface, or **API**, is a broad term used to describe any set of protocols for interacting with a computer program. These protocols can be thought of as a contract between two programs the **client** program and the **server** program. An API allows the client program to send requests to the server program, and the contract defines how the server will respond to that request.
+An application programming interface, or **API**, is a broad term used to describe any set of protocols for interacting with a computer program. A web API is a contract between a client and a server. According to the contract, a web API allows a client to send specific HTTP requests to a server and the server will send specific HTTP responses back.
 
-In web development, more often than not, the client program is a web browser running a JavaScript application and the server program is a web server. Furthermore, the term API is frequently used by web developers to refer to a specific type of API. One which provides raw data based on the request parameters of an HTTP request.
+## How do you use a web API?
 
-### APIs and the Dynamic Web
-
-With the growing popularity of JavaScript and dynamic websites, there has been an increased need for **client** applications to request and manipulate data directly. In the 1990's version of the internet, communication between browsers and web servers was largely limited to HTML & CSS. If the HTML needed to have any information from the webserver's database that information would be encoded to the HTML before the page rendered.
-
-
-If the user needed to get any new information, the browser would request a new page, and the server would encode that information into the HTML for that page. Imagine clicking "next page" on a search engine - the page reloads after the webserver fetches the paginated results.
-
-With JavaScript, an API, and AJAX we can allow our user to stay on the page, and request the new data. This time imagine Facebook's infinite scroll feature. When we get to the bottom of the page, Facebook's JavaScript triggers an API request, and dynamically inserts HTML for that data into the page!
-
-### Multiple Data Sources
-
-Not only do API's allow us to fetch data from our own webserver (as in Facebook's infinite scroll) but it's also possible to use multiple APIs in a single page. Say we wanted to gather information from OMDB, Spotify, and Facebook all onto our web application. We could use the OMDB API, Facebook API, and Spotify API in conjunction to create an experience using data from all of these sources.
-
-### An Example Request - OMDB API
-
-One fantastic API is the OMDB API. The **contract** for this API is defined in the [OMBD API documentation](http://omdbapi.com/). After reading the documentation, we determine that we can use the query parameter `t` to search the database for movies with a specific title. Lets search IMDB for Game of Thrones:
+One fantastic web API is the OMDB API. The contract for this API is defined at the [OMBD API documentation](http://omdbapi.com/). After reading the documentation, we determine that we can use the query parameter `t` to search the database for movies with a specific title. Lets search OMDB for Game of Thrones.
 
 [http://www.omdbapi.com/?t=Game of Thrones](http://www.omdbapi.com/?t=Game of Thrones)
 
@@ -581,11 +563,9 @@ X-Powered-By: ASP.NET
 }
 ```
 
-Try searching for a few of your favorite movies using the OMDB API and Postman!
+## Exercise
 
-## Assessments / Exercises
-
-[Spotify API Usage](https://github.com/gSchool/spotify-albums-and-tracks)
+Try searching for a few of your favorite movies using the OMDB API.
 
 ## Resources
 
