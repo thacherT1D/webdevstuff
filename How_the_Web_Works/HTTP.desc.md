@@ -5,9 +5,10 @@
 - Explain what an HTTP request is.
 - Explain what an HTTP response is.
 - Diagram HTTP request-response cycle.
-- Send HTTP requests and receive HTTP responses.
+- Send HTTP requests and receive HTTP responses for HTML.
 - Explain what JSON is.
 - Explain why JSON is useful.
+- Send HTTP requests and receive HTTP responses for JSON.
 
 ## What's HTTP?
 
@@ -136,6 +137,12 @@ While an HTTP response can only contain a one status code, there are many differ
 
 ## How do you send HTTP requests and receive HTTP responses?
 
+[INSERT EXAMPLE OF CLASSIC WEB SITE SERVED BY PYTHON'S SIMPLEHTTPSERVER]
+
+[TALK ABOUT INITIAL PAGE TRANSMISSION, ASSET TRANSMISSION, ANCHOR TAG HYPERLINKS, AND FORM SUBMISSION]
+
+[INSERT SCREENSHOTS OF CHROME'S NETWORK TAB]
+
 cURL is a command line program that sends HTTP requests to servers and outputs their raw HTTP response to the Terminal. In other words, it can do pretty much anything your web browser can do except render the HTTP response body as a pretty picture. cURL is often used for testing and debugging HTTP requests and responses.
 
 Try running the following command.
@@ -263,22 +270,6 @@ Via: 1.1 vegur
 </html>
 ```
 
-A POST request is used in order to send data from the requestor to the server. The server can then parse the _request body_ in order to get information out of it, and often do something on the server with that information (like put it in a database).
-
-Here's how we'd put data in the body of the request using cURL.
-
-```
-curl -v --data @myfilenamewithdata.json -X POST https://www.google.com
-```
-
-When you specify data in a POST request, it is a good idea to tell the server the type of the data in the request:
-
-```
-curl -v -H "Content-Type: application/json" --data @myfilenamewithdata.json -X POST https://www.google.com
-```
-
-What did you get back when you made that request?  What went wrong?
-
 #### JSON
 
 JavaScript Object Notation (**JSON**) is the de facto data exchange format of the Web. JSON is a string that looks very similar to a native objects and arrays. That means JSON must be parsed in order for it to have meaning in a program.
@@ -347,6 +338,65 @@ var characterJSON = JSON.stringify(character);
 
 console.log(character.name);  // Prints the JSON string
 ```
+
+### How do you send and receive JSON data?
+
+```
+http -vj GET http://fs-student-roster.herokuapp.com
+```
+
+```
+GET / HTTP/1.1
+Accept: application/json
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+Content-Type: application/json
+Host: fs-student-roster.herokuapp.com
+User-Agent: HTTPie/0.9.3
+
+
+
+HTTP/1.1 200 OK
+Access-Control-Allow-Origin: *
+Connection: keep-alive
+Content-Length: 186
+Content-Type: application/json; charset=utf-8
+Date: Mon, 23 May 2016 16:41:06 GMT
+Etag: W/"ba-5jN/E7c/BNAIQrvxBntdMg"
+Server: Cowboy
+Vary: Accept
+Via: 1.1 vegur
+
+[
+    {
+        "avatar": "https://i.imgur.com/KlycRG5.jpg",
+        "hobby": "Motherhood",
+        "name": "Daenerys Targaryen"
+    },
+    {
+        "avatar": "https://i.imgur.com/fFMusdC.png",
+        "hobby": "Traveling",
+        "name": "Tyrion Lannister"
+    }
+]
+```
+
+A POST request is used in order to send data from the requestor to the server. The server can then parse the _request body_ in order to get information out of it, and often do something on the server with that information (like put it in a database).
+
+Here's how we'd put data in the body of the request using cURL.
+
+```
+curl -v --data @myfilenamewithdata.json -X POST https://www.google.com
+```
+
+When you specify data in a POST request, it is a good idea to tell the server the type of the data in the request:
+
+```
+curl -v -H "Content-Type: application/json" --data @myfilenamewithdata.json -X POST https://www.google.com
+```
+
+What did you get back when you made that request?  What went wrong?
+
 
 ### Exercise
 
