@@ -15,7 +15,9 @@
 
 HTML files are transferred across the Internet using a communication protocol. A **protocol** is a system of rules that allow two or more devices on a computer network to transmit information. The protocol of the Web is called the Hypertext Transfer Protocol (**HTTP**) and its job, as you might expect, is to transmit hypertext over a computer network. As it turns out, HTTP is quite flexible and is also used to transmit non-hypertext data as well. Tim Berners-Lee and his team at CERN are credited with inventing HTTP in 1989 and then HTML in 1990.
 
-HTTP is request–response protocol between two programs called a client and a server. Typically, a **web browser** acts as the client and an application hosting a web site, known as a **web server**, acts as the server.
+HTTP is request–response protocol. In other words, it sends messages between two programs called a client and a server. Typically, a **web browser** acts as the client and an application hosting a web site, known as a **web server**, acts as the server.
+
+**NOTE:** The term "server" here is referring to software and _not_ a physical machine which is often called a server as well.
 
 ![](http://i.imgur.com/VbuGgIn.png)
 
@@ -44,18 +46,16 @@ Accept-Encoding: gzip, deflate
 Connection: keep-alive
 Host: fs-student-roster.herokuapp.com
 User-Agent: HTTPie/0.9.3
-
-
 ```
 
-**EXERCISE:** Looking at the above message, identify the parts of an HTTP request.
+**EXERCISE:** Looking at the above message, can you identify the parts of an HTTP request?
 
-While an HTTP request can only contain a one method, there are several different method types that a client can choose from. Each method type instructs a server on how to process the request. Without the use of Ajax, web browsers are only capable of sending HTTP requests with the following method types.
+While an HTTP request can only contain a one method, there are several different methods that a client can choose from. Each method instructs a server on how to process the request. Without the use of Ajax, web browsers are only capable of sending HTTP requests with the following methods.
 
-| Method Type | Description                                                   |
-|-------------|---------------------------------------------------------------|
-| `GET`       | Used retrieve a resource, like an HTML file, from the server. |
-| `POST`      | Used send information, like user input, to the server.        |
+| Method | Description                                                   |
+|--------|---------------------------------------------------------------|
+| `GET`  | Used retrieve a resource, like an HTML file, from the server. |
+| `POST` | Used send information, like user input, to the server.        |
 
 **EXERCISE:** When does a web browser make `GET` requests? When does it make `POST` requests?
 
@@ -112,7 +112,7 @@ Via: 1.1 vegur
 </html>
 ```
 
-**EXERCISE:** Looking at the above message, identify the parts of an HTTP response.
+**EXERCISE:** Looking at the above message, can you identify the parts of an HTTP response?
 
 While an HTTP response can only contain a one status code, there are many different codes that a server can choose from. Each status code explains to the client how the server interpreted the request. Status codes are three-digit numbers that are grouped into the following categories.
 
