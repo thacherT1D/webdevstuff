@@ -128,6 +128,10 @@ While an HTTP response can only contain a one status code, there are many differ
 
 **EXERCISE:** The most common status codes are `200`, `302`, `404`, and `500`. Can you figure out why?
 
+## How do you diagram the HTTP request-response cycle?
+
+[SEE WHITEBOARD]
+
 ## How do you send HTTP requests and receive HTTP responses?
 
 cURL is a command that sends HTTP requests to servers and outputs their raw HTTP response to the Terminal screen. In other words, it can do pretty much anything your web browser can do except render the HTTP response body as a pretty picture.
