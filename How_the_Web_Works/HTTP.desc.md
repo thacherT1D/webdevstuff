@@ -51,7 +51,7 @@ User-Agent: HTTPie/0.9.3
 
 **EXERCISE:** Looking at the above message, can you identify the parts of an HTTP request?
 
-While an HTTP request can only contain a one method, there are several different methods that a client can choose from. Each method instructs a server on how to process the request. Without the use of Ajax, web browsers are only capable of sending HTTP requests with the following methods.
+While an HTTP request can only contain one method, there are several different methods that a client can choose from. Each method instructs a server on how to process the request. Without the use of Ajax, web browsers are only capable of sending HTTP requests with the following methods.
 
 | Method | Description                                                 |
 |--------|-------------------------------------------------------------|
@@ -115,7 +115,7 @@ Via: 1.1 vegur
 
 **EXERCISE:** Looking at the above message, can you identify the parts of an HTTP response?
 
-While an HTTP response can only contain a one status code, there are many different codes that a server can choose from. Each status code explains to the client how the server interpreted the request. Status codes are three-digit numbers that are grouped into the following categories.
+While an HTTP response can only contain one status code, there are many different codes that a server can choose from. Each status code explains to the client how the server interpreted the request. Status codes are three-digit numbers that are grouped into the following categories.
 
 | Status Code Class | Description                                             |
 |-------------------|---------------------------------------------------------|
@@ -129,7 +129,7 @@ While an HTTP response can only contain a one status code, there are many differ
 - [HTTP Status Dogs](https://httpstatusdogs.com/)
 - [Wikipedia - List of HTTP status codes](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes)
 
-**EXERCISE:** The most common status codes are `200`, `302`, `404`, and `500`. Can you figure out why?
+**EXERCISE:** The most common status codes are `200`, `302`, `304`, `404`, and `500`. Can you figure out why?
 
 ## How do you diagram the HTTP request-response cycle?
 
