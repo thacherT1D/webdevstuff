@@ -318,29 +318,29 @@ Here's an example of an JSON array of objects.
 Here's how you parse JSON strings into native objects in JavaScript.
 
 ```javascript
-var characterJSON = '{
+var queenJSON = '{
   "avatar": "https://i.imgur.com/KlycRG5.jpg",
   "hobby": "Motherhood",
   "name": "Daenerys Targaryen"
 }';
 
-var character = JSON.parse(characterJSON);
+var queen = JSON.parse(queenJSON);
 
-console.log(character.name);  // Daenerys Targaryen
+console.log(queen.name);  // Daenerys Targaryen
 ```
 
 Here's how you translating native JavaScript objects and arrays into JSON strings.
 
 ```javascript
-var character = {
+var queen = {
   avatar: 'https://i.imgur.com/KlycRG5.jpg',
   hobby: 'Motherhood',
   name: 'Daenerys Targaryen'
 };
 
-var characterJSON = JSON.stringify(character);
+var queenJSON = JSON.stringify(queen);
 
-console.log(character.name);  // Prints the JSON string
+console.log(queenJSON);  // Prints the JSON string
 ```
 
 ## Why is JSON useful?
