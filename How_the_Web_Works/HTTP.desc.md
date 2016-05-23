@@ -15,23 +15,19 @@
 
 HTML files are transferred across the Internet using a communication protocol. A **protocol** is a system of rules that allow two or more devices on a computer network to transmit information. The protocol of the Web is called the Hypertext Transfer Protocol (**HTTP**) and its job, as you might expect, is to transmit hypertext over a computer network. As it turns out, HTTP is quite flexible and is also used to transmit non-hypertext data as well. Tim Berners-Lee and his team at CERN are credited with inventing HTTP in 1989 and then HTML in 1990.
 
-HTTP is request–response protocol between a client and a server. A web browser, for example, may be the client and an application running on a computer hosting a web site may be the server. The client submits an HTTP request to the server. The server, which provides resources such as HTML files and other content, returns a response to the client. The response contains completion status information about the request and may also contain requested content in its message body.
+HTTP is request–response protocol between two programs called a client and a server. Typically, a **web browser** acts as the client and an application hosting a web site, known as a **web server**, acts as the server.
 
-A web browser is an example of a user agent (UA). Other types of user agent include the indexing software used by search providers (web crawlers), voice browsers, mobile apps, and other software that accesses, consumes, or displays web content.
+The client (or user agent) sends a plain-text message called an **HTTP request** to a server on behalf of the user. Aside from web browsers, other common user agents include web crawlers, native apps, and mobile apps.
 
-A client sends the request for information and a server need to be able to read requests that are formatted in a predictable way. In the Querystring Parsing exercise, you learned to look at a string and turn it into data. Servers use a similar methodology to parse incoming text-based HTTP Requests.  A client can send a request to an HTTP server and get a response which in most cases is a web page, css file, javascript file, image, etc.
+An HTTP request is composed of the following parts.
 
-Client and Server Have Separate Concerns
+1. A method (or verb)
+1. A path
+1. An HTTP version
+1. Key-value pairs called **headers**
+1. An optional body
 
-In RESTful services the server does not care about user interface, it is only concerned with raw data. A truly RESTful service will never encode information about __how__ to display something, it will only tell you what something is.
-
-Requests are Stateless
-
-Any client (web browser, curl, Postman ...) can make the same request and recieve an identical response from the server. There can never be context outside of the request itself. This means RESTful servers don't deal with cookies, sessions, or anything that is not a part of the HTTP request being served.
-
-## What does an HTTP request look like?
-
-This is what an HTTP request looks like.
+Here's an example of what an HTTP request looks like.
 
 ```
 GET / HTTP/1.1
@@ -44,12 +40,28 @@ User-Agent: HTTPie/0.9.3
 
 ```
 
-A HTTP request in general has a start line, 0 or more headers, an empty line and optionally a body.  More specifically, in a HTTP request, there is a request line (the start line): `GET / HTTP/1.1`.
+**EXERCISE:** Looking at the above message, identify the parts of an HTTP request.
 
-HTTP has several "verbs", which are standard words that help servers understand what kind of request they're getting. These verbs describe what you're trying to do.
-Mainly, you'll be doing GET and POST requests, but you may do some PUT and DELETE requests as well.
-**GET** is used when you want to get a resource, like a webpage. When you open up a url in your browser, you're issuing a GET request.  
-**POST** is used when you want to send the server some information. When you submit a form to a webserver, often you're using a POST request to do it. A POST submission of a form in HTML is different in that you don't see the form values in the URL, they are instead inside the _request body_.  
+While an HTTP request can only contain a single method, HTTP defines several different method types. Each method type instructs a web server on how to process the request. Without the use of Ajax, web browsers are only capable of sending HTTP requests with the following method types.
+
+| Method Type | Description                                                   |
+|-------------|---------------------------------------------------------------|
+| `GET`       | Used retrieve a resource, like an HTML file, from the server. |
+| `POST`      | Used send information, like user input, to the server.        |
+
+
+**EXERCISE:** When does a web browser make `GET` requests? When does it make `POST` requests?
+
+
+The server sends a response back to the client.
+
+Client and Server Have Separate Concerns
+
+In RESTful services the server does not care about user interface, it is only concerned with raw data. A truly RESTful service will never encode information about __how__ to display something, it will only tell you what something is.
+
+Requests are Stateless
+
+Any client (web browser, curl, Postman ...) can make the same request and recieve an identical response from the server. There can never be context outside of the request itself. This means RESTful servers don't deal with cookies, sessions, or anything that is not a part of the HTTP request being served.
 
 ## What does an HTTP response look like?
 
