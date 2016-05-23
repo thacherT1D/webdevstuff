@@ -61,7 +61,7 @@ While an HTTP request can only contain a one method, there are several different
 
 ## What's an HTTP response?
 
-The server receives an HTTP request, attempts to process it, and sends a **HTTP response** back to the client.
+The server receives an HTTP request, attempts to process it, and sends an **HTTP response** back to the client. Popular web servers include Apache, Nginx, Node.js, and Python's built-in `SimpleHTTPServer`.
 
 An HTTP response is composed of the following parts.
 
