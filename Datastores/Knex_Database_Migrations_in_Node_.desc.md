@@ -1,5 +1,5 @@
 ### Entry Ticket
-In order to get th most out of this Learning Experience, you'll need to be comfortable with the following:
+In order to get the most out of this Learning Experience, you'll need to be comfortable with the following:
 
 * [Node: Deploying to Heroku](/redirects/learning_experiences/8)
 * [Deploying Express / Postgres Apps to Heroku using dotenv](/redirects/learning_experiences/171)
@@ -20,7 +20,7 @@ You can think of each migration as being a new 'version' of the database. A sche
 
 These migrations also provide further documentation about your database schema for you, your team, and _future you!_
 
-### Questions to be answerd by the end of this lesson:
+### Questions to be answered by the end of this lesson:
 
 1. Why use the `--save` flag when installing npm packages? How does that affect your app when you deploy?
 1. What does the `knexfile.js` file do? Why is it important?
