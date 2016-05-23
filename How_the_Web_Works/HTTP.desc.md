@@ -112,6 +112,8 @@ Via: 1.1 vegur
 </html>
 ```
 
+**EXERCISE:** Looking at the above message, identify the parts of an HTTP response.
+
 While an HTTP response can only contain a one status code, there are many different codes that a server can choose from. Each status code explains to the client how the server interpreted the request. Status codes are three-digit numbers that are grouped into the following categories.
 
 | Status Code Class | Description                                             |
