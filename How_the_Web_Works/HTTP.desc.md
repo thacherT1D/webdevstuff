@@ -52,10 +52,10 @@ User-Agent: HTTPie/0.9.3
 
 While an HTTP request can only contain a one method, there are several different methods that a client can choose from. Each method instructs a server on how to process the request. Without the use of Ajax, web browsers are only capable of sending HTTP requests with the following methods.
 
-| Method | Description                                                   |
-|--------|---------------------------------------------------------------|
-| `GET`  | Used retrieve a resource, like an HTML file, from the server. |
-| `POST` | Used send information, like user input, to the server.        |
+| Method | Description                                                 |
+|--------|-------------------------------------------------------------|
+| `GET`  | Used retrieve a resource, like an HTML file, from a server. |
+| `POST` | Used send information, like user input, to a server.        |
 
 **EXERCISE:** When does a web browser make `GET` requests? When does it make `POST` requests?
 
