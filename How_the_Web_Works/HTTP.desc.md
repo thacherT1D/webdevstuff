@@ -33,7 +33,7 @@ An HTTP request is composed of the following parts.
 1. A path
 1. An HTTP version
 1. Key-value pairs called **headers**
-1. An optional body
+1. And an optional body
 
 Here's an example of what an HTTP request looks like.
 
@@ -50,7 +50,7 @@ User-Agent: HTTPie/0.9.3
 
 **EXERCISE:** Looking at the above message, identify the parts of an HTTP request.
 
-While an HTTP request can only contain a single method, there are several different method types it can choose from. Each method type instructs a web server on how to process the request. Without the use of Ajax, web browsers are only capable of sending HTTP requests with the following method types.
+While an HTTP request can only contain a one method, there are several different method types that a client can choose from. Each method type instructs a server on how to process the request. Without the use of Ajax, web browsers are only capable of sending HTTP requests with the following method types.
 
 | Method Type | Description                                                   |
 |-------------|---------------------------------------------------------------|
@@ -61,10 +61,16 @@ While an HTTP request can only contain a single method, there are several differ
 
 ## What's an HTTP response?
 
-The server sends a response back to the client.
+The server receives an HTTP request, attempts to process it, and sends a **HTTP response** back to the client.
 
+An HTTP response is composed of the following parts.
 
-This is what an HTTP response looks like.
+1. An HTTP version
+1. A status code
+1. Key-value headers
+1. And an optional body
+
+Here's an example of what an HTTP response looks like.
 
 ```
 HTTP/1.1 200 OK
@@ -106,9 +112,7 @@ Via: 1.1 vegur
 </html>
 ```
 
-And in an HTTP response, there is a status line for the start line:  `HTTP/1.1 200 OK`.
-
-HTTP has a number of codes that you might receive as a response. They're meant for computers to easily parse what has happened. They're three-digit numbers that tend to fall into this pattern:
+While an HTTP response can only contain a one status code, there are many different codes that a server can choose from. Each status code explains to the client how the server interpreted the request. Status codes are three-digit numbers that are grouped into the following categories.
 
 | Status Code Class | Description                                             |
 |-------------------|---------------------------------------------------------|
@@ -122,15 +126,87 @@ HTTP has a number of codes that you might receive as a response. They're meant f
 - [HTTP Status Dogs](https://httpstatusdogs.com/)
 - [Wikipedia - List of HTTP status codes](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes)
 
+**EXERCISE:** The most common status codes are `200`, `302`, `404`, and `500`. Can you figure out why?
+
 ## How do you send HTTP requests and receive HTTP responses?
+
+cURL is a command that sends HTTP requests to servers and outputs their raw HTTP response to the Terminal screen. In other words, it can do pretty much anything your web browser can do except render the HTTP response body as a pretty picture.
+
+Try running the following command.
+
+```
+curl -v -X GET https://fs-student-roster.herokuapp.com/
+```
+
+You should see something like this.
+
+```
+*   Trying 54.225.74.127...
+* Connected to fs-student-roster.herokuapp.com (54.225.74.127) port 443 (#0)
+* TLS 1.2 connection using TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+* Server certificate: *.herokuapp.com
+* Server certificate: DigiCert SHA2 High Assurance Server CA
+* Server certificate: DigiCert High Assurance EV Root CA
+> GET / HTTP/1.1
+> Host: fs-student-roster.herokuapp.com
+> User-Agent: curl/7.43.0
+> Accept: */*
+>
+< HTTP/1.1 200 OK
+< Server: Cowboy
+< Connection: keep-alive
+< Access-Control-Allow-Origin: *
+< Vary: Accept
+< Content-Type: text/html; charset=utf-8
+< Content-Length: 631
+< Etag: W/"277-ENWB837FwX/qicQv2cu/qA"
+< Date: Mon, 23 May 2016 14:42:19 GMT
+< Via: 1.1 vegur
+<
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/style.css">
+    <title>Student Roster</title>
+  </head>
+  <body>
+    <main>
+      <h1>Student Roster</h1>
+
+        <section>
+          <h3>Daenerys Targaryen</h3>
+          <h4>Hobby: Motherhood</h4>
+          <img src="https://i.imgur.com/KlycRG5.jpg" alt="Daenerys Targaryen" />
+        </section>
+
+        <section>
+          <h3>Tyrion Lannister</h3>
+          <h4>Hobby: Traveling</h4>
+          <img src="https://i.imgur.com/fFMusdC.png" alt="Tyrion Lannister" />
+        </section>
+
+    </main>
+  </body>
+</html>
+* Connection #0 to host fs-student-roster.herokuapp.com left intact
+```
+
+cURL is a very useful command and pre-installed on most Unix operating systems. However, I prefer another program called [HTTPie](https://github.com/jkbrzt/httpie). Like cURL, HTTPie is a command line HTTP client. But its goal is to make command line interaction with a web server as human-friendly as possible.
+
+To install HTTPie, run the following command.
 
 ```
 brew install httpie
 ```
 
+The try out the exact some cURL command as above in HTTPie.
+
 ```
 http -v GET https://fs-student-roster.herokuapp.com
 ```
+
+You should see something like this.
 
 ```
 GET / HTTP/1.1
@@ -181,55 +257,6 @@ Via: 1.1 vegur
 </html>
 ```
 
-#### Curl
-
-The program we just introduced was called cURL. It's a terminal program that can do one of the most important functions of your browser- it can send requests to webservers, and show responses. It doesn't render them nicely like your browser does, but it does show you the response.
-
-Next we are going to make some requests to a server to GET and POST data about the class.  To do that, we'll use curl.
-
-__Curl__ is a command line utility that can do pretty much anything your browser does for you to interact with a web server.
-
-Run these commands in your terminal, and paste each one into [Explain Shell](http://explainshell.com/) as well.
-
-Gets the html page at the path / for google.com
-
-```
-curl -X GET https://www.google.com
-```
-
-Gets the html page at the path / for google.com.  Also adds the verbose flag to tell us what the request and response looks like.
-
-```
-curl -v -X GET https://www.google.com
-```
-
-Gets the html page at the path / for google.com.  Adds trace ascii to see the details of the request and response.
-
-```
-curl --trace-ascii /dev/stdout -X GET https://www.google.com
-```
-
-Curl has many parameters, for example to add a header to the request:
-
-```
-curl -v -H "Accept: text/html" -X GET https://www.google.com
-```
-
-We can even specify cookies to be sent with the request.  In the example, the name of
-the cookie is cookie and the value is jar.
-
-```
-curl  -v -H "Accept: text/html" --cookie "cookie=jar" -X GET https://www.google.com
-```
-
-We could also do a post request with cURL:
-
-```
-curl -v -X POST https://www.google.com
-```
-
-What is a POST request? Why would we use one? How does it differ from a GET request?
-
 A POST request is used in order to send data from the requestor to the server. The server can then parse the _request body_ in order to get information out of it, and often do something on the server with that information (like put it in a database).
 
 Here's how we'd put data in the body of the request using cURL.
@@ -237,19 +264,14 @@ Here's how we'd put data in the body of the request using cURL.
 ```
 curl -v --data @myfilenamewithdata.json -X POST https://www.google.com
 ```
-(For this to work, you have to specify a file with JSON inside.)
 
-Can you work out how to do this in Postman?
-
-When you specify data in a POST request, it is a good idea to tell the server the type of the
-data in the request:
+When you specify data in a POST request, it is a good idea to tell the server the type of the data in the request:
 
 ```
 curl -v -H "Content-Type: application/json" --data @myfilenamewithdata.json -X POST https://www.google.com
 ```
 
 What did you get back when you made that request?  What went wrong?
-
 
 #### JSON
 
