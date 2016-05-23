@@ -135,7 +135,7 @@ While an HTTP response can only contain a one status code, there are many differ
 
 [SEE WHITEBOARD]
 
-## How do you send HTTP requests and receive HTTP responses?
+## How do you send HTTP requests and receive HTTP responses for HTML?
 
 [INSERT EXAMPLE OF CLASSIC WEB SITE SERVED BY PYTHON'S SIMPLEHTTPSERVER]
 
@@ -270,17 +270,17 @@ Via: 1.1 vegur
 </html>
 ```
 
-#### JSON
+## What's JSON?
 
 JavaScript Object Notation (**JSON**) is the de facto data exchange format of the Web. JSON is a string that looks very similar to a native objects and arrays. That means JSON must be parsed in order for it to have meaning in a program.
 
-**Empty Object**
+Here's an example of an empty JSON object.
 
 ```json
 { }
 ```
 
-**Object**
+Here's an example of a non-empty JSON object.
 
 ```json
 {
@@ -290,7 +290,13 @@ JavaScript Object Notation (**JSON**) is the de facto data exchange format of th
 }
 ```
 
-**Array of Objects**
+Here's an example of an JSON array.
+
+```json
+["Daenerys Targaryen", "Tyrion Lannister"]
+```
+
+Here's an example of an JSON array of objects.
 
 ```json
 [
@@ -307,11 +313,7 @@ JavaScript Object Notation (**JSON**) is the de facto data exchange format of th
 ]
 ```
 
-#### Parsing JSON
-
-JSON's design was made with javascript in mind, so parsing JSON in javascript is easy.
-
-**From JSON string to Javascript object**:
+Here's how you parse JSON strings into native objects in JavaScript.
 
 ```javascript
 var characterJSON = '{
@@ -325,7 +327,7 @@ var character = JSON.parse(characterJSON);
 console.log(character.name);  // Daenerys Targaryen
 ```
 
-**From javascript object to JSON string**:
+Here's how you translating native JavaScript objects and arrays into JSON strings.
 
 ```javascript
 var character = {
@@ -339,7 +341,15 @@ var characterJSON = JSON.stringify(character);
 console.log(character.name);  // Prints the JSON string
 ```
 
-### How do you send and receive JSON data?
+## Why is JSON useful?
+
+**Serialization** is the process of translating a programming language's native data into a string. This string can then be stored to a file, inserted into a database, or transmitted across a computer network. At some point in the future, the string is retrieved and the native data is reconstructed in the same or different programming language.
+
+JSON is a data format for serialization. JavaScript objects, arrays, numbers, strings, booleans, and null are all translated into a JSON string. This string can then be stored or transmitted across a computer network. At some point in the future, the string is retrieved and the data is reconstructed into the same native JavaScript objects, arrays, numbers, booleans, and null.
+
+In other words, JSON is what allows two programs to transfer data to each other and guarantee the data remains the same on both sides.
+
+## How do you send HTTP requests and receive HTTP responses for HTML?
 
 ```
 http -vj GET http://fs-student-roster.herokuapp.com
