@@ -349,7 +349,7 @@ JSON is a data format for serialization. JavaScript objects, arrays, numbers, st
 
 In other words, JSON is what allows two programs to transfer data to each other and guarantee the data remains the same on both sides.
 
-## How do you send HTTP requests and receive HTTP responses for HTML?
+## How do you send HTTP requests and receive HTTP responses for JSON?
 
 ```
 http -vj GET http://fs-student-roster.herokuapp.com
