@@ -315,7 +315,25 @@ Here's an example of an JSON array of objects.
 ]
 ```
 
-Here's how you parse JSON strings into native objects in JavaScript.
+## Why is JSON useful?
+
+**Serialization** is the process of translating a program's data to and from a string. Data that's been serialized to a string can be stored in a file, inserted into a database, or transmitted across a computer network. At some point in the future, a program retrieves the string and the data is reconstructed. The programs involved in the serialization process can be completely different and even written in completely different languages. The key to serialization is the data remains unchanged from end to end.
+
+JSON is a serialization format. JavaScript objects, arrays, numbers, strings, booleans, and null are all translated into a JSON string. Here's an example of translating a JavaScript object into a JSON string.
+
+```javascript
+var queen = {
+  avatar: 'https://i.imgur.com/KlycRG5.jpg',
+  hobby: 'Motherhood',
+  name: 'Daenerys Targaryen'
+};
+
+var queenJSON = JSON.stringify(queen);
+
+// Store or transmit the JSON string
+```
+
+This JSON string can now be stored or transmitted across a computer network. At some point in the future, a program retrieves the string and the data is reconstructed into the same JavaScript objects, arrays, numbers, booleans, and null. Here's an example of translating a JSON string back to JavaScript object.
 
 ```javascript
 var queenJSON = '{
@@ -328,26 +346,6 @@ var queen = JSON.parse(queenJSON);
 
 console.log(queen.name);  // Daenerys Targaryen
 ```
-
-Here's how you translating native JavaScript objects and arrays into JSON strings.
-
-```javascript
-var queen = {
-  avatar: 'https://i.imgur.com/KlycRG5.jpg',
-  hobby: 'Motherhood',
-  name: 'Daenerys Targaryen'
-};
-
-var queenJSON = JSON.stringify(queen);
-
-console.log(queenJSON);  // Prints the JSON string
-```
-
-## Why is JSON useful?
-
-**Serialization** is the process of translating a programming language's native data into a string. This string can then be stored to a file, inserted into a database, or transmitted across a computer network. At some point in the future, the string is retrieved and the native data is reconstructed in the same or different programming language.
-
-JSON is a data format for serialization. JavaScript objects, arrays, numbers, strings, booleans, and null are all translated into a JSON string. This string can then be stored or transmitted across a computer network. At some point in the future, the string is retrieved and the data is reconstructed into the same native JavaScript objects, arrays, numbers, booleans, and null.
 
 In other words, JSON is what allows two programs to transfer data to each other and guarantee the data remains the same on both sides.
 
