@@ -172,6 +172,6 @@ AFTER THE AJAX
 - [MDN - Ajax: Getting Started](https://developer.mozilla.org/en-US/docs/AJAX/Getting_Started)
 - [MDN - JSON](https://developer.mozilla.org/en-US/docs/Glossary/JSON)
 - [MDN - XMLHttpRequest](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest)
-- [Wikipedia - Ajax](https://en.wikipedia.org/wiki/Ajax_(programming))
+- [Wikipedia - Ajax](https://en.wikipedia.org/wiki/Ajax_(programming)
 - [Wikipedia - JSON](https://en.wikipedia.org/wiki/JSON)
 - [Wikipedia - Same Origin Policy](http://en.wikipedia.org/wiki/Same-origin_policy)
