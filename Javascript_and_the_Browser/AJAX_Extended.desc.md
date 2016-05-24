@@ -99,9 +99,9 @@ Once again, jQuery has made our code much more compact. We highly recommend usin
 The `$xhr` object is a special object called a promise. A **promise** is a like an event listener except:
 
 - A promise can only succeed or fail once. It cannot succeed or fail twice, neither can it switch from success to failure or vice versa.
-- If a promise has succeeded or failed and you later add a success/failure callback, the correct callback will be called, even though the event took place earlier.
+- If a promise has succeeded or failed and you later add a success or failure callback, the correct callback will be called, even though the event took place earlier.
 
-Promises are extremely useful for async success/failure because you're less interested in the exact time something became available and more interested in reacting to the outcome. We'll be talking more about promises later in this course.
+Promises are extremely useful for asynchronous success or failure because you're less interested in the exact time something became available and more interested in reacting to the outcome. We'll be talking more about promises later in this course.
 
 The `$xhr` object has the `done()` function handles the success scenario of sending an HTTP request to a working URL. Unsurprisingly, it also has a `fail()` function that handles the failure scenario of sending an HTTP request to a broken URL.
 
