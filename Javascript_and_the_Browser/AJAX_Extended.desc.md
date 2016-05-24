@@ -19,7 +19,7 @@ With Ajax, the possibilities are limitless. For example, think of when you reach
 
 ## Why does Ajax primarily transfer JSON data now?
 
-The 'X' in Ajax stands for XML. But it turns out the term Ajax wasn't chosen very well as most web applications transmit JSON these days. JSON was created by Douglas Crockford in 2001 as an alternative to XML. The primary advantage of JSON is that it's easily readable by both humans and computers, something XML often lacks.
+The "X" in Ajax stands for XML. But it turns out the term Ajax wasn't chosen very well as most web applications transmit JSON these days. JSON was created by Douglas Crockford in 2001 as an alternative to XML. The primary advantage of JSON is that it's easily readable by both humans and computers, something XML often lacks.
 
 Here's some data about a fictitious person represented in XML.
 
