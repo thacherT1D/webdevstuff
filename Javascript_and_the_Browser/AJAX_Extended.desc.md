@@ -117,36 +117,20 @@ $xhr.done(function(data) {
 
 $xhr.fail(function(err) {
 	console.log(err);
-})
+});
 ```
 
-### CORS - Web Security
+### Exercise
+
+Modify the above code to only log the title of the movie and the status code from the response.
+
+## CORS - Web Security
 
 * [[MDN]](https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS)
 * [Same Origin Policy] (http://en.wikipedia.org/wiki/Same-origin_policy)
 * [JSONP] (http://en.wikipedia.org/wiki/JSONP)
 
 If you run across this error: `XMLHttpRequest cannot load http://example.com/. No 'Access-Control-Allow-Origin' header is present on the requested resource. Origin 'http://example.net/' is therefore not allowed access.`. That means the server you are hitting has explicitly denied access to your website - that server is a meanie! But don't fret. This keeps prying developer eyes from your bank accounts and social life! It is for your protection! As a developer it can be quite frustrating though. The server administrator has to edit their CORS headers to allow certain domains or all domains access.
-
-#### Exercise
-
-Modify the request to only alert the title of the movie and the status code from the response.
-
-> Pro-tip: Look at the jQuery docs for .ajax.  See what the success parameter has to offer.
-
-
-```javascript
-$.ajax({
-  url: 'https://www.omdbapi.com/fakepath/',
-  method: "GET",
-  success: function(data) {
-    console.log(JSON.stringify(data));
-  },
-  error: function(jqHXR) {
-    console.log("ERROR: ", jqHXR.status)
-  }
-});
-```
 
 ### Race Conditions
 
