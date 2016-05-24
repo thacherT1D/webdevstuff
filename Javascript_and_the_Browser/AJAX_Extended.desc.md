@@ -176,7 +176,7 @@ AFTER THE AJAX
 
 - [JSON.org](http://json.org/)
 - [jQuery.getJSON()](https://api.jquery.com/jQuery.getJSON/)
-- [MDN - Access Control CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS)
+- [MDN - HTTP access control (CORS)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS)
 - [MDN - Ajax: Getting Started](https://developer.mozilla.org/en-US/docs/AJAX/Getting_Started)
 - [MDN - JSON](https://developer.mozilla.org/en-US/docs/Glossary/JSON)
 - [MDN - XMLHttpRequest](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest)
