@@ -10,7 +10,7 @@
 
 Asynchronous JavaScript and XML (**Ajax**) is a technique that allows web applications to send and receive data in the background without interfering with the display and behavior of the existing page. In other words, Ajax allows web applications to dynamically load content from a server without doing a full page refresh. The XML part is less applicable today because most web APIs use JSON for the data exchange format.
 
-With Ajax, the possibilities are limitless. For example, think of when you reach the bottom of the page on Facebook or Twitter. How do new stories and tweets magically automatically appear at the bottom without you clicking on anything or reloading the whole page? Ajax.
+With Ajax, the possibilities are limitless. For example, think of when you reach the bottom of the page on Facebook or Twitter. How do new stories and tweets magically appear at the bottom without you clicking on anything or reloading the whole page? Ajax.
 
 ## Why does Ajax primarily transfer JSON data now?
 
@@ -132,10 +132,6 @@ Year: 2013
 
 ## How do you handle CORS issues caused by Ajax requests?
 
-* [[MDN]](https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS)
-* [Same Origin Policy] (http://en.wikipedia.org/wiki/Same-origin_policy)
-* [JSONP] (http://en.wikipedia.org/wiki/JSONP)
-
 If you run across this error: `XMLHttpRequest cannot load http://example.com/. No 'Access-Control-Allow-Origin' header is present on the requested resource. Origin 'http://example.net/' is therefore not allowed access.`. That means the server you are hitting has explicitly denied access to your website - that server is a meanie! But don't fret. This keeps prying developer eyes from your bank accounts and social life! It is for your protection! As a developer it can be quite frustrating though. The server administrator has to edit their CORS headers to allow certain domains or all domains access.
 
 ## How do you handle race conditions caused by Ajax requests?
@@ -181,3 +177,7 @@ AFTER THE AJAX
 [[MDN]](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise),
 [jQuery Promises with done](http://api.jquery.com/deferred.done/),
 [jQuery Promises with when](https://api.jquery.com/jquery.when/)
+
+* [[MDN]](https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS)
+* [Same Origin Policy] (http://en.wikipedia.org/wiki/Same-origin_policy)
+* [JSONP] (http://en.wikipedia.org/wiki/JSONP)
