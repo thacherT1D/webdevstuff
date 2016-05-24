@@ -3,7 +3,7 @@
 After this lesson students should be capable of the following:
 
 - Explain what Ajax is.
-- Explain why Ajax primarily transfers JSON now.
+- Explain why Ajax primarily transfers JSON data now.
 - Use Ajax to retrieve data from a server.
 - Use JavaScript and `XMLHttpRequest` to create an HTTP/AJAX request.
 - Use JavaScript and JQuery to create an HTTP/AJAX request.
@@ -17,7 +17,7 @@ Asynchronous JavaScript and XML (**Ajax**) is a technique that allows web applic
 
 With Ajax, the possibilities are limitless. For example, think of when you reach the bottom of the page on Facebook or Twitter. How do new stories and tweets magically automatically appear at the bottom without you clicking on anything or reloading the whole page? Ajax.
 
-## Why does Ajax primarily transfers JSON now?
+## Why does Ajax primarily transfer JSON data now?
 
 The 'X' in Ajax stands for XML. But it turns out the term Ajax wasn't chosen very well as most web applications transmit JSON these days. JSON was created by Douglas Crockford in 2001 as an alternative to XML. The primary advantage of JSON is that it's easily readable by both humans and computers, something XML often lacks.
 
