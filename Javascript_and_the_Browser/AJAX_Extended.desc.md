@@ -130,7 +130,7 @@ Title: Frozen
 Year: 2013
 ```
 
-## CORS - Web Security
+## How do you handle CORS issues caused by Ajax requests?
 
 * [[MDN]](https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS)
 * [Same Origin Policy] (http://en.wikipedia.org/wiki/Same-origin_policy)
@@ -138,7 +138,7 @@ Year: 2013
 
 If you run across this error: `XMLHttpRequest cannot load http://example.com/. No 'Access-Control-Allow-Origin' header is present on the requested resource. Origin 'http://example.net/' is therefore not allowed access.`. That means the server you are hitting has explicitly denied access to your website - that server is a meanie! But don't fret. This keeps prying developer eyes from your bank accounts and social life! It is for your protection! As a developer it can be quite frustrating though. The server administrator has to edit their CORS headers to allow certain domains or all domains access.
 
-### Handle race conditions caused by Ajax requests.
+## How do you handle race conditions caused by Ajax requests?
 
 A **race condition** is a term used to refer to any code that relies on some other snippet of code having completed. For example, run the following in your browser. In what order to the console.log statements run?
 
@@ -152,24 +152,21 @@ $xhr.done(function(data) {
 		return;
 	}
 
-	console.log(data);
+	console.log(data.Title);
 });
 
-console.log('AFTER THE AJAX!')
+console.log('AFTER THE AJAX')
 ```
 
-## Questions
+### Exercise
 
-You should be able to answer the following questions now:
+Fix the above the code so the race condition is correctly handled. The output should be the following.
 
--  What does AJAX Stand for?
--  What is an API?
--  What is JSON?
--  How is JSON used in JavaScript?
--  What is XML?
--  How do we send an AJAX request with raw JavaScript?
--  What is a "race condition"?
--  How do you parse a JSON string into an object that you can use in JavaScript?
+```
+BEFORE THE AJAX
+Frozen
+AFTER THE AJAX
+```
 
 ## Resources
 
