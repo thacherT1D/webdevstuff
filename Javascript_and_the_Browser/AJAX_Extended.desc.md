@@ -71,11 +71,13 @@ Browsers have a built-in `XMLHttpRequest` global object that's used to create Aj
 var xhr = new XMLHttpRequest();
 
 xhr.addEventListener('load', function() {
-	if (xhr.status === 200) {
-		var data = JSON.parse(xhr.responseText);
-
-		console.log(data);
+	if (xhr.status !== 200) {
+		return;
 	}
+
+	var data = JSON.parse(xhr.responseText);
+
+	console.log(data);
 });
 
 xhr.open('GET', 'http://www.omdbapi.com/?t=Frozen');
@@ -89,9 +91,11 @@ Since using the `XMLHttpRequest` object produces verbose and somewhat error pron
 var $xhr = $.getJSON('http://www.omdbapi.com/?t=Frozen');
 
 $xhr.done(function(data) {
-	if ($xhr.status === 200) {
-		console.log(data);
+	if ($xhr.status !== 200) {
+		return;
 	}
+
+	console.log(data);
 });
 ```
 
@@ -110,9 +114,11 @@ The `$xhr` object has the `done()` function handles the success scenario of send
 var $xhr = $.getJSON('http://www.omdbapi.cooooooom/?t=Frozen');
 
 $xhr.done(function(data) {
-	if ($xhr.status === 200) {
-		console.log(data);
+	if ($xhr.status !== 200) {
+		return;
 	}
+
+	console.log(data);
 });
 
 $xhr.fail(function(err) {
@@ -122,7 +128,12 @@ $xhr.fail(function(err) {
 
 ### Exercise
 
-Modify the above code to only log the title of the movie and the status code from the response.
+Modify the above code to only log the movie's title and year it was released, each on a separate line. For example, with Frozen, the output would be the following.
+
+```
+Title: Frozen
+Year: 2013
+```
 
 ## CORS - Web Security
 
