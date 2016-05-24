@@ -6,7 +6,7 @@ After this lesson students should be capable of the following:
 - Explain why Ajax primarily transfers JSON data now.
 - Use Ajax to retrieve data from a server.
 - Use JavaScript and `XMLHttpRequest` to create an HTTP/AJAX request.
-- Use JavaScript and JQuery to create an HTTP/AJAX request.
+- Use JavaScript and jQuery to create an HTTP/AJAX request.
 - Use a callback to handle an HTTP/AJAX response.
 - Parse a JSON string into a usable Object in JavaScript.
 - Create a __race condition__ using an AJAX request.
@@ -65,114 +65,65 @@ A more accurate acronym for how people use this technique today would be Ajaj or
 
 ## How do you retrieve data from a server using Ajax?
 
-To create AJAX requests in pure JS we need to use the XMLHttpRequest object. The main parts of XMLHttpRequest we need to look at are:
+Browsers have a built-in `XMLHttpRequest` global object that's used to create Ajax requests. Here's an example of how it's used.
 
-* [Main documentation](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest).
-* [new XMLHttpRequest()](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest#Constructor)
-* [XMLHttpRequest.onreadystatechange](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest#Properties)
-* [XMLHttpRequest.open()](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest#open(METHOD, URL))
-* [XMLHttpRequest.send()](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest#send())
+```javascript
+var xhr = new XMLHttpRequest();
 
-Below is an example of an AJAX call in pure JS.  It is verbose and somewhat error prone. Try pasting this into your console, and examining the content of the alert box.
+xhr.addEventListener('load', function() {
+	if (xhr.status === 200) {
+		var data = JSON.parse(xhr.responseText);
 
-```
-httpRequest = new XMLHttpRequest();
+		console.log(data);
+	}
+});
 
-httpRequest.onreadystatechange = function(){
-    if (httpRequest.readyState === 4) {
-       if(httpRequest.status < 400) {
-         alert(httpRequest.responseText);
-       }
-    }
+xhr.open('GET', 'http://www.omdbapi.com/?t=Frozen');
 
-};
-httpRequest.open('GET', 'http://www.omdbapi.com/?t=Frozen&y=&plot=short&r=json');
-httpRequest.send();
+xhr.send();
 ```
 
-Lets break down the above code. First we create a new object with a type of XMLHttpRequest.
+Because the code for `XMLHttpRequest` objects is verbose and somewhat error prone, jQuery has a number of methods that make creating Ajax requests much nicer. The same call above can be rewritten in AJAX like this:
 
-```
-httpRequest = new XMLHttpRequest();
-```
+```javascript
+var $xhr = $.getJSON('http://www.omdbapi.com/?t=Frozen');
 
-Then, we give our object a callback to handle the response. We have to use the property `onreadystatechange` for this:
-
-```
-httpRequest.onreadystatechange = function(){ ... });
-```
-
-When an HTTP Request is made, the function we just defined is called anytime the "ready state" of that request changes. See all the values for `readyState`[here](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/readyState).
-
-Our particular callback function asks two questions about the response every time we've triggered the callback. First we ask, is this HTTP request done? the readyState value for "done" is 4.
-
-```
-if (httpRequest.readyState === 4) { ... }
-```
-
-If so, we ask the additional question was this request a "success". We ask this question using what we know about [HTTP status codes](http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html). Specifically, that all status codes less than 400 is a 'success' to some degree:
-
-```
-if(httpRequest.status < 400) { ... }
-```
-
-Finally if the request is finished AND it was a success, we alert the `responseText`:
-
-```
-alert(httpRequest.responseText);
-```
-
-With our callback defined, and assigned to the `onreadystatechange` property we can finish creating and sending the response. First we use `httpRequest.open()` to setup the request values, especailly the HTTP Method and the URL we want to request. Then we use `send()` to actually push the request out to the internet:
-
-```
-httpRequest.open('GET', 'http://www.omdbapi.com/?t=Frozen&y=&plot=short&r=json');
-httpRequest.send();
-```
-
-
-### .ajax - AJAX in jQuery
-
-JQuery helps make ajax calls much nicer. The same call above can be rewritten in AJAX like this:
-
-```
-
-$.ajax({
-  url: 'https://www.omdbapi.com/?t=Frozen&y=&plot=short&r=json',
-  method: "GET",
-  success: function(data) {
-    alert(JSON.stringify(data));
-  }
+$xhr.done(function(data) {
+	if ($xhr.status === 200) {
+		console.log(data);
+	}
 });
 ```
 
 Paste this into your browser, and see if the result looks familiar!
 
-Once again, JQuery has made our code much more compact. We highly reccommend using JQuery or another library/framework to handle HTTP requests for you. There are innumerable pitfalls when writing vanilla JS to do AJAX. Stand on the shoulders of giants and use a library!
+Once again, jQuery has made our code much more compact. We highly recommend using jQuery to handle HTTP requests for you. There are innumerable pitfalls when using the built-in `XMLHttpRequest` object.
 
 This time around, it's pretty clear just from the syntax that we're going to perform an ajax requst and it's going to fetch the specified URL using the GET method. If the request is successful then the `success` callback function will execute with whatever data we recieved from the server at our URL. We can also define a callback function for errors. Try changing the URL to an invalid one, and inspecting the error information.
 
-```
+```javascript
+var $xhr = $.getJSON('http://www.omdbapi.com/?t=Frozen');
 
-$.ajax({
-  url: 'https://www.omdbapixxxhfksu.com/?t=Frozen&y=&plot=short&r=json',
-  method: "GET",
-  success: function(data) {
-    alert(JSON.stringify(data));
-  },
-  error: function(errorObject, textStatus) {
-  	console.log(errorObject);
-  	console.log(textStatus);
-  }
+$xhr.done(function(data) {
+	if ($xhr.status === 200) {
+		console.log(data);
+	}
 });
+
+$xhr.fail(function(err) {
+	console.log(err);
+})
 ```
 
-> ProTip : You can insert JQuery as a script tag into our DOM. When the script tag gets rendered, our browser will request JQuery from the URL we specified and we can use it in the console just like normal.
+[[MDN]](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise),
+[jQuery Promises with done](http://api.jquery.com/deferred.done/),
+[jQuery Promises with when](https://api.jquery.com/jquery.when/)
 
->```
-var script = document.createElement('script');
-script.src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js";
-document.getElementsByTagName('head')[0].appendChild(script);
-```
+Promises are an alternate way to use callbacks to handle asychronous requests. Promises can often be used to write cleaner code, especially when one http request relies on the results from another. Promises are a complex topic that deserves it's own complete Learning Experience, but it's easy enough to get started. The following code does the same thing we've been doing with AJAX: make a request to the OMDB API and handle success and failure separately.
+
+In jQuery, the `.done()` function is called with a callback function to be triggered on success, and `.fail` is called with a function to be called upon failure.
+
+In fact, the so called "promise" pattern has become so popular that jQuery deprecated the original success and error callbacks in favor of `.done()` and `.fail()` in version 1.8.
 
 ### CORS - Web Security
 
@@ -189,7 +140,7 @@ Modify the request to only alert the title of the movie and the status code from
 > Pro-tip: Look at the jQuery docs for .ajax.  See what the success parameter has to offer.
 
 
-```
+```javascript
 $.ajax({
   url: 'https://www.omdbapi.com/fakepath/',
   method: "GET",
@@ -206,7 +157,7 @@ $.ajax({
 
 A "Race Condition" is a term used to refer to any code that relies on some other snippet of code having completed. For example, run the following in your browser. In what order to the console.log statements run?
 
-```
+```javascript
 console.log("BEFORE THE AJAX")
 
 $.ajax({
@@ -224,34 +175,6 @@ $.ajax({
 });
 
 console.log("AFTER THE AJAX!")
-```
-
-### Promises
-
-[[MDN]](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise),
-[JQuery Promises with done](http://api.jquery.com/deferred.done/),
-[JQuery Promises with when](https://api.jquery.com/jquery.when/)
-
-Promises are an alternate way to use callbacks to handle asychronous requests. Promises can often be used to write cleaner code, especially when one http request relies on the results from another. Promises are a complex topic that deserves it's own complete Learning Experience, but it's easy enough to get started. The following code does the same thing we've been doing with AJAX: make a request to the OMDB API and handle success and failure separately.
-
-In JQuery, the `.done()` function is called with a callback function to be triggered on success, and `.fail` is called with a function to be called upon failure.
-
-In fact, the so called "promise" pattern has become so popular that JQuery deprecated the original success and error callbacks in favor of `.done()` and `.fail()` in version 1.8.
-
-```
-$.ajax({
-  method: "GET",
-  url: "http://omdbapi.com/?i=tt1392190"
-})
-.done(function(info) {
-    console.log("DONE")
-    console.log(info)
-  //write all my code that relies on the response data
- })
-.fail(function(err){
-  console.log("FAIL")
-  console.log(err)
-});
 ```
 
 ## Questions
@@ -272,5 +195,6 @@ You should be able to answer the folowing questions now:
 - [JSON.org](http://json.org/)
 - [MDN - Ajax: Getting Started](https://developer.mozilla.org/en-US/docs/AJAX/Getting_Started)
 - [MDN - JSON](https://developer.mozilla.org/en-US/docs/Glossary/JSON)
+- [MDN - XMLHttpRequest](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest).
 - [Wikipedia - Ajax](https://en.wikipedia.org/wiki/Ajax_(programming))
 - [Wikipedia - JSON](https://en.wikipedia.org/wiki/JSON)
