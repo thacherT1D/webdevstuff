@@ -57,7 +57,9 @@ And here's the same person data represented in JSON.
 ```
 
 
-JSON looks a lot like JavaScriptm right? And notice how much lighter weight JSON is compared to XML. JSON tends to be both easier to read and write. Not to mention, JavaScript can easily read and write JSON natively with the [`JSON.parse()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse) and [`JSON.stringify()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) functions.
+JSON looks like JavaScript, right? Remember, that JSON is just a data format and _not_ actual code.
+
+Also notice how lightweight JSON is compared to XML. JSON tends to be both easier to read and to write for web developers as well as for JavaScript programs using the [`JSON.parse()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse) and [`JSON.stringify()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) functions.
 
 A more accurate acronym for how people use Ajax today would be Ajaj or Asynchronous JavaScript and JSON. But Ajaj sounds dumb, we're stuck with Ajax regardless if you're use XML, JSON, or whatever. Whenever you think of Ajax, just think about dynamically loading content from a server without doing a full page refresh.
 
