@@ -147,7 +147,7 @@ As a developer it can be quite frustrating though. The server administrator has 
 A **race condition** is a term used to refer to any code that relies on some other snippet of code having completed. For example, run the following in your browser. In what order to the console.log statements run?
 
 ```javascript
-console.log('BEFORE THE AJAX')
+console.log('BEFORE THE AJAX');
 
 var $xhr = $.getJSON('http://www.omdbapi.com/?t=Frozen');
 
@@ -159,7 +159,7 @@ $xhr.done(function(data) {
 	console.log(data.Title);
 });
 
-console.log('AFTER THE AJAX')
+console.log('AFTER THE AJAX');
 ```
 
 ### Exercise
