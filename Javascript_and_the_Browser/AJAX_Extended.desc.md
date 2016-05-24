@@ -83,7 +83,7 @@ xhr.open('GET', 'http://www.omdbapi.com/?t=Frozen');
 xhr.send();
 ```
 
-Because the code for `XMLHttpRequest` objects is verbose and somewhat error prone, jQuery has a number of methods that make creating Ajax requests much nicer. The same call above can be rewritten in AJAX like this:
+Since using the `XMLHttpRequest` object produces verbose and somewhat error prone code, jQuery has a handful of methods that make creating Ajax requests much easier. The same call as above can be rewritten in jQuery like this.
 
 ```javascript
 var $xhr = $.getJSON('http://www.omdbapi.com/?t=Frozen');
@@ -95,14 +95,19 @@ $xhr.done(function(data) {
 });
 ```
 
-Paste this into your browser, and see if the result looks familiar!
+Once again, jQuery has made our code much more compact. We highly recommend using jQuery to handle HTTP requests for you.
 
-Once again, jQuery has made our code much more compact. We highly recommend using jQuery to handle HTTP requests for you. There are innumerable pitfalls when using the built-in `XMLHttpRequest` object.
+The `$xhr` object is a special object called a promise. A **promise** is a like an event listener except:
 
-This time around, it's pretty clear just from the syntax that we're going to perform an ajax requst and it's going to fetch the specified URL using the GET method. If the request is successful then the `success` callback function will execute with whatever data we recieved from the server at our URL. We can also define a callback function for errors. Try changing the URL to an invalid one, and inspecting the error information.
+- A promise can only succeed or fail once. It cannot succeed or fail twice, neither can it switch from success to failure or vice versa.
+- If a promise has succeeded or failed and you later add a success/failure callback, the correct callback will be called, even though the event took place earlier.
+
+Promises are extremely useful for async success/failure because you're less interested in the exact time something became available and more interested in reacting to the outcome. We'll be talking more about promises later in this course.
+
+The `$xhr` object has the `done()` function handles the success scenario of sending an HTTP request to a working URL. Unsurprisingly, it also has a `fail()` function that handles the failure scenario of sending an HTTP request to a broken URL.
 
 ```javascript
-var $xhr = $.getJSON('http://www.omdbapi.com/?t=Frozen');
+var $xhr = $.getJSON('http://www.omdbapi.cooooooom/?t=Frozen');
 
 $xhr.done(function(data) {
 	if ($xhr.status === 200) {
@@ -114,16 +119,6 @@ $xhr.fail(function(err) {
 	console.log(err);
 })
 ```
-
-[[MDN]](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise),
-[jQuery Promises with done](http://api.jquery.com/deferred.done/),
-[jQuery Promises with when](https://api.jquery.com/jquery.when/)
-
-Promises are an alternate way to use callbacks to handle asychronous requests. Promises can often be used to write cleaner code, especially when one http request relies on the results from another. Promises are a complex topic that deserves it's own complete Learning Experience, but it's easy enough to get started. The following code does the same thing we've been doing with AJAX: make a request to the OMDB API and handle success and failure separately.
-
-In jQuery, the `.done()` function is called with a callback function to be triggered on success, and `.fail` is called with a function to be called upon failure.
-
-In fact, the so called "promise" pattern has become so popular that jQuery deprecated the original success and error callbacks in favor of `.done()` and `.fail()` in version 1.8.
 
 ### CORS - Web Security
 
@@ -198,3 +193,8 @@ You should be able to answer the folowing questions now:
 - [MDN - XMLHttpRequest](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest).
 - [Wikipedia - Ajax](https://en.wikipedia.org/wiki/Ajax_(programming))
 - [Wikipedia - JSON](https://en.wikipedia.org/wiki/JSON)
+
+
+[[MDN]](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise),
+[jQuery Promises with done](http://api.jquery.com/deferred.done/),
+[jQuery Promises with when](https://api.jquery.com/jquery.when/)
