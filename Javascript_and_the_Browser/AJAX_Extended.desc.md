@@ -132,7 +132,15 @@ Year: 2013
 
 ## How do you handle CORS issues caused by Ajax requests?
 
-If you run across this error: `XMLHttpRequest cannot load http://example.com/. No 'Access-Control-Allow-Origin' header is present on the requested resource. Origin 'http://example.net/' is therefore not allowed access.`. That means the server you are hitting has explicitly denied access to your website - that server is a meanie! But don't fret. This keeps prying developer eyes from your bank accounts and social life! It is for your protection! As a developer it can be quite frustrating though. The server administrator has to edit their CORS headers to allow certain domains or all domains access.
+You may run into the following error from time to time.
+
+```
+XMLHttpRequest cannot load http://example.com/. No 'Access-Control-Allow-Origin' header is present on the requested resource. Origin 'http://example.net/' is therefore not allowed access.
+```
+
+This error means the server handling the HTTP request has explicitly denied access to your website. Meanie! But don't fret, this keeps hackers from your bank accounts and social life.
+
+As a developer it can be quite frustrating though. The server administrator has to edit their CORS headers to allow certain domains or all domains access.
 
 ## How do you handle race conditions caused by Ajax requests?
 
