@@ -13,7 +13,9 @@ After this lesson students should be capable of the following:
 
 ## What's Ajax?
 
-Asynchronous JavaScript and XML (**Ajax**) is a technique that allows web applications to send and receive data in the background without interfering with the display and behavior of the existing page. In other words, Ajax allows web applications to dynamically load content from a server without doing a full page refresh. The XML part is less applicable today because most web APIs use JSON for the data exchange format. The uses of Ajax are limitless. For example, when you reach the bottom of the page on Facebook or Twitter, how do new stories and tweets magically automatically appear at the bottom without you clicking on anything or reloading the whole page? Ajax.
+Asynchronous JavaScript and XML (**Ajax**) is a technique that allows web applications to send and receive data in the background without interfering with the display and behavior of the existing page. In other words, Ajax allows web applications to dynamically load content from a server without doing a full page refresh. The XML part is less applicable today because most web APIs use JSON for the data exchange format.
+
+With Ajax, the possibilities are limitless. For example, think of when you reach the bottom of the page on Facebook or Twitter. How do new stories and tweets magically automatically appear at the bottom without you clicking on anything or reloading the whole page? Ajax.
 
 ## Why does Ajax primarily transfers JSON now?
 
