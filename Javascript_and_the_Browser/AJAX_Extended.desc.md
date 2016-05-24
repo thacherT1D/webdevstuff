@@ -167,17 +167,11 @@ AFTER THE AJAX
 ## Resources
 
 - [JSON.org](http://json.org/)
+- [jQuery.getJSON()](https://api.jquery.com/jQuery.getJSON/)
+- [MDN - Access Control CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS)
 - [MDN - Ajax: Getting Started](https://developer.mozilla.org/en-US/docs/AJAX/Getting_Started)
 - [MDN - JSON](https://developer.mozilla.org/en-US/docs/Glossary/JSON)
-- [MDN - XMLHttpRequest](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest).
+- [MDN - XMLHttpRequest](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest)
 - [Wikipedia - Ajax](https://en.wikipedia.org/wiki/Ajax_(programming))
 - [Wikipedia - JSON](https://en.wikipedia.org/wiki/JSON)
-
-
-[[MDN]](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise),
-[jQuery Promises with done](http://api.jquery.com/deferred.done/),
-[jQuery Promises with when](https://api.jquery.com/jquery.when/)
-
-* [[MDN]](https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS)
-* [Same Origin Policy] (http://en.wikipedia.org/wiki/Same-origin_policy)
-* [JSONP] (http://en.wikipedia.org/wiki/JSONP)
+- [Wikipedia - Same Origin Policy](http://en.wikipedia.org/wiki/Same-origin_policy)
