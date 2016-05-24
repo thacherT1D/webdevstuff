@@ -61,7 +61,7 @@ JSON looks like JavaScript, right? Remember, that JSON is just a data format and
 
 Also notice how lightweight JSON is compared to XML. JSON tends to be both easier to read and to write for web developers as well as for JavaScript programs using the [`JSON.parse()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse) and [`JSON.stringify()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) functions.
 
-A more accurate acronym for how people use Ajax today would be Ajaj or Asynchronous JavaScript and JSON. But Ajaj sounds dumb, we're stuck with Ajax regardless if you're use XML, JSON, or whatever. Whenever you think of Ajax, just think about dynamically loading content from a server without doing a full page refresh.
+A more accurate acronym for how people use this technique today would be Ajaj or Asynchronous JavaScript and JSON. But Ajaj sounds dumb, so we're stuck with Ajax regardless if web applications use XML, JSON, or whatever. Whenever you think of Ajax, just think about dynamically loading content from a server without doing a full page refresh.
 
 ## How do you retrieve data from a server using Ajax?
 
