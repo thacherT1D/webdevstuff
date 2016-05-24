@@ -1,15 +1,9 @@
 ## Objectives
 
-After this lesson students should be capable of the following:
-
 - Explain what Ajax is.
 - Explain why Ajax primarily transfers JSON data now.
 - Use Ajax to retrieve data from a server.
-- Use JavaScript and `XMLHttpRequest` to create an HTTP/AJAX request.
-- Use JavaScript and jQuery to create an HTTP/AJAX request.
-- Use a callback to handle an HTTP/AJAX response.
-- Parse a JSON string into a usable Object in JavaScript.
-- Create a __race condition__ using an AJAX request.
+- Handle race conditions caused by Ajax requests.
 
 ## What's Ajax?
 
@@ -145,31 +139,27 @@ If you run across this error: `XMLHttpRequest cannot load http://example.com/. N
 
 ### Race Conditions
 
-A "Race Condition" is a term used to refer to any code that relies on some other snippet of code having completed. For example, run the following in your browser. In what order to the console.log statements run?
+A **race condition** is a term used to refer to any code that relies on some other snippet of code having completed. For example, run the following in your browser. In what order to the console.log statements run?
 
 ```javascript
-console.log("BEFORE THE AJAX")
+console.log('BEFORE THE AJAX')
 
-$.ajax({
-  method: "GET",
-  url: "http://omdbapi.com/?i=tt1392190",
-  success: function(info) {
-    console.log("DONE")
-    console.log(info)
-    //write all my code that relies on the response data
-  },
-  error: function(err){
-    console.log("FAIL")
-    console.log(err)
-  }
+var $xhr = $.getJSON('http://www.omdbapi.com/?t=Frozen');
+
+$xhr.done(function(data) {
+	if ($xhr.status !== 200) {
+		return;
+	}
+
+	console.log(data);
 });
 
-console.log("AFTER THE AJAX!")
+console.log('AFTER THE AJAX!')
 ```
 
 ## Questions
 
-You should be able to answer the folowing questions now:
+You should be able to answer the following questions now:
 
 -  What does AJAX Stand for?
 -  What is an API?
