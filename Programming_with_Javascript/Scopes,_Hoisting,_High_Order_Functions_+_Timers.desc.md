@@ -4,7 +4,7 @@
 - Use the `call` and `apply` methods to invoke a function.
 - Explain the three types of scope.
 - Explain what hoisting is.
-- Use Immediately Invoked Functional Expressions (IIFEs) to introduce scope.
+- Use do IIFEs to introduce scope.
 - Define the following:
   - First Class Function
   - Higher Order Function
@@ -117,7 +117,7 @@ var person2 = {
 person1.sayHi.call(person2);
 ```
 
-## What are the two types of scope?
+## What are the three types of scope?
 
 A **scope** is a list of variables and functions available for use on the current line of execution. There are three types of scope in JavaScript.
 
@@ -217,53 +217,55 @@ There are a few reasons why it's important to know this. First, it's essential t
 
 Until you absolutely need to share data across may different functions, then we recommend that you declare variables as local as possible. Since variables in the global scope can be changed from anywhere, it's hard to reason about how these variables change as the program executes overtime.
 
-## Immediately Invoked Functional Expressions (IIFEs)
+## How do IIFEs to introduce scope?
 
-One of the ways we can introduce scope is by creating an **Immediately Invoked Functional Expression** (IIFE). With IIFEs, we are wrapping code in a function, creating a new scope, and invoking that function immediately when created.
-
-Ever wondered why you have seen entire files wrapped in an IIFE?
+One of the ways we can introduce scope is by creating an immediately invoked functional expression (**IIFE**). With IIFEs, code is wrapped in a function, creating a new scope, and then invoked immediately.
 
 ```javascript
-(function () {
+(function() {
   // ...All Code Here...
 })();
 ```
 
-By wrapping the entire file in an IIFE, we are removing every variable declared from the global scope.
+Ever wondered why you've seen entire JavaScript files wrapped in an IIFE? By using an IIFE, variables are no longer declared in the global scope.
 
-We can use IIFEs with arguments as well. Consider the following code. What do you think the final output will be?
+IIFEs can beu sed with arguments as well. Consider the following code. What do you think the final output will be?
 
 ```javascript
 var arr = [];
-for(var i = 0; i < 5; i++) {
+
+for(var i = 0; i < 3; i++) {
   arr.push(function() {
     console.log(i);
   });
 }
-for(func of arr) {
+
+for(var func of arr) {
   func();
 }
 ```
 
-Because functions are not executed immediately, they will output the number 5 multiple times. We need to maintain the value of `i` at the moment in each iteration of the loop. We can solve this with an IIFE.
+Because functions are not executed immediately, they'll output the final value of `i` multiple times. To maintain each value of `i`, the `for` loop's body can be wrapped in an IIFE.
 
 ```javascript
 var arr = [];
+
 for(var i = 0; i < 5; i++) {
-  (function (j) {
+  (function(j) {
     arr.push(function() {
       console.log(j);
     });
   })(i);
 }
-for(func of arr) {
+
+for(var func of arr) {
   func();
 }
 ```
 
-By creating an IIFE with one parameter and invoking it with the value of `i`, we are placing a copy of it (as an argument into a new function scope. This scope maintains the value as `i` keeps iterating.
+By creating an IIFE with one parameter and invoking it with the value of `i`, a copy of `i` is stored in the parameter `j`.
 
-# Higher Order Functions
+## Higher Order Functions
 
 Higher-order functions describe functions that meet one of two criteria:
 
