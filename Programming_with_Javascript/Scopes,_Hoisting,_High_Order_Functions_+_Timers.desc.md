@@ -103,7 +103,7 @@ function myFunction() {
 myFunction();
 ```
 
-This is an example of what _not_ to do. There are a few reasons why it's important to know this. First, it's essential to understand why building a language in 10 days is a bad idea. More importantly, you can't make any assumptions that a JavaScript variable is global or will throw an `Unreferenced error` without first checking if its declared somewhere inside a function. Remember, all declared variables start out as `undefined` even if its hoisted from way down in the function body. For these reasons, we recommend declaring all variables at the top of a function, with the exception of variables used in `for` statements.
+This is an example of what _not_ to do and there are a few reasons why it's important to know this. First, it's essential to understand why building a language in 10 days is a bad idea. More importantly, you can't make any assumptions that a JavaScript variable is global or will throw an `Unreferenced error` without first checking if its declared somewhere inside a function. Remember, all declared variables start out as `undefined` even if its hoisted from way down in the function body. For these reasons, we recommend declaring all variables at the top of a function, with the exception of variables used in `for` statements.
 
 ```javascript
 var array = [1, 2, 3, 4];
