@@ -2,7 +2,7 @@
 
 - Explain the three types of scope.
 - Explain what hoisting is.
-- Explain what a higher order function is.
+- Explain what a higher-order function is.
 - Use the `map`, `filter`, and `reduce` methods on arrays.
 - Explain what a closure is.
 - Use IIFEs to enclose scope.
@@ -119,11 +119,11 @@ for (var element of iterable) {
 
 Until you absolutely need to share data across may different functions, then we recommend that you declare variables as local as possible. Since variables in the global scope can be changed from anywhere, it's hard to reason about how these variables change over time as the program executes.
 
-## What's higher order function?
+## What's higher-order function?
 
-A **higher order function** either accepts a function as an argument or returns a function. The concept of higher order functions is rooted in mathematics, specifically [lambda calculus](https://en.wikipedia.org/wiki/Lambda_calculus).
+A **higher-order function** either accepts a function as an argument or returns a function. The concept of higher-order functions is rooted in mathematics, specifically [lambda calculus](https://en.wikipedia.org/wiki/Lambda_calculus).
 
-As you've probably seen, higher order functions are very common in JavaScript, but are tricky to wrap your brain around at first. Just remember, in JavaScript, variables can contain a function in the same way they contain a number, string, or other datatype.
+As you've probably seen, higher-order functions are very common in JavaScript, but are tricky to wrap your brain around at first. Just remember, in JavaScript, variables can contain a function in the same way they contain a number, string, or other datatype.
 
 ```javascript
 function returnAFunction() {
@@ -139,7 +139,7 @@ returnedFunction(); //I'm a returned function!
 returnAFunction()();
 ```
 
-There are four common higher order functions for arrays—`forEach`, `map`, `filter`, and `reduce`.
+There are four common higher-order functions for arrays—`forEach`, `map`, `filter`, and `reduce`.
 
 ### `forEach`
 
@@ -205,7 +205,7 @@ See the [`Array.prototype.map` method](https://developer.mozilla.org/en-US/docs/
 
 ### `filter`
 
-After `map`, the `filter` method is probably the second most commonly used higher order function. The `filter` method invokes a callback function for each element of an array, but allows each element to be filtered out of a new array. In other words, the `filter` method:
+After `map`, the `filter` method is probably the second most commonly used higher-order function. The `filter` method invokes a callback function for each element of an array, but allows each element to be filtered out of a new array. In other words, the `filter` method:
 
 - Creates a new array that's no larger than the original array.
 - Applies a callback function to each element of the original array.
@@ -306,7 +306,7 @@ Then write a function named `flatten` that takes in one argument, `arr`, (array 
 
 ## What's a closure?
 
-A **closure** is a function that encloses the scope that exists when its created. To understand closures, lets revisit the original example of a high order function, but make one modification.
+A **closure** is a function that encloses the scope that exists when its created. To understand closures, lets revisit the original example of a higher-order function, but make one modification.
 
 ```javascript
 function createClosure() {
