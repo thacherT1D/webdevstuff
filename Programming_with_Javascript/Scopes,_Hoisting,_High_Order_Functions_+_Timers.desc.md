@@ -11,7 +11,7 @@
 - Use the `map`, `filter`, and `reduce` methods on arrays.
 - Explain what is a closure.
 
-## What are functions again?
+## How do you use the methods `call` and `apply` on functions?
 
 When we first started talking about data types, we mentioned many primitive types (like strings, numbers, booleans, null, etc) and reference types (objects and arrays). Functions seem like this magical third type that we think of as a programming construct (like loops and if statements). In reality, functions is actually another example of a reference type. We can assign functions to variables using a function expressions.
 
@@ -21,25 +21,13 @@ var myFunction = function() {
 };
 ```
 
-We also have passed a function to other functions (as a callback).
+As you can see, functions behave exactly like any of the other types. What makes a function different that other types is the ability to invoke its executable code. The vast majority of the time, functions are invoked using the parentheses `()` operator, passing in an optional set of arguments.
 
 ```javascript
-button.addEventListener('click', function(event) {
-  // Do some stuff
-});
+myFunction(arg1, arg2, arg3);
 ```
 
-In these cases, functions behave *exactly* like any of the other types. What makes a function different is our ability to _invoke_ a function, which allows it to execute code.
-
-## Other ways to invoke functions
-
-We invoked functions most commonly using parentheses after the name of the function with a set of arguments.
-
-```javascript
-myFunctionName(arg1, arg2, arg3);
-```
-
-There are a couple more ways we can invoke a function using the methods `call`, and `apply`. Both are very similar in purpose but has a slightly different input.
+But there are a couple more ways we can invoke a function using the methods `call`, and `apply`. Both are very similar in purpose but has a slightly different input.
 
 - `apply` takes a `this` context as well as an array of arguments to the function. For example: `myFunctionName.apply(null, [arg1, arg2, arg3])`
 - `call` takes a `this` context as well as the arguments immediately after. `myFunctionName.apply.call(null, arg1, arg2, arg3)`
@@ -50,7 +38,7 @@ So far, we have only used the varible `this` in our event listeners. In JavaScri
 
 1. `arguments` - the keyword arguments is an array-like object (does not have native array methods like push/pop/forEach/map) which represents each argument passed to the function.
 
-```js
+```javascript
     function logArgs(a,b,c) {
         return arguments;
     }
@@ -60,7 +48,7 @@ So far, we have only used the varible `this` in our event listeners. In JavaScri
 
 2. `this` - the keyword `this` refers to the parent object in which the function has been called. What does that mean? Simply think whatever the execution context is of that function. Is it a function that is attached to an object? Is it a function that is attached to the `window`? Let's see some examples:
 
-```js
+```javascript
     var person = {
         name: "Elie",
         sayHi: function() {
@@ -76,7 +64,7 @@ So far, we have only used the varible `this` in our event listeners. In JavaScri
 
 In this example, the keyword `this` refers to the `person` object (sometimes it's easier to just think, what is the function I am calling attached to?). Let's see what happens when we use the keyword `this` without explicitly defining a parent object.
 
-```js
+```javascript
     function hello() {
         return this;
     }
@@ -90,7 +78,7 @@ So what happens when we call a function without explicitly defining its parent o
 
 So in these past examples we know with 100% certainty what the value of the keyword `this` is - so why would we ever want to change it? Well, in these examples we wouldn't, but what about something like this:
 
-```js
+```javascript
      var person = {
         name: "Elie",
         sayHi: function() {
@@ -109,7 +97,7 @@ So in these past examples we know with 100% certainty what the value of the keyw
 There's a lot of duplication going on here! We just repeated the entire definition of sayHi allover again! So how can we borrow the sayHi function from person but instead of `this.name` referring to "Elie", we want it to refer to "Janey". Call/Apply to the rescue!
 
 
-```js
+```javascript
      var person = {
         name: "Elie",
         sayHi: function() {
