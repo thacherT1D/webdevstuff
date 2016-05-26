@@ -313,7 +313,7 @@ See the [`Array.prototype.forEach` method](https://developer.mozilla.org/en-US/d
 
 ## `map`
 
-The `map` method invokes a callback function for each element of an array, but allows the element to be transformed and pushed to a new array. In other words, the `map` method:
+The `map` method invokes a callback function for each element of an array, but allows each element to be transformed and pushed to a new array. In other words, the `map` method:
 
 - Creates a new array that's the same size as the original array.
 - Applies a callback function to each element of the original array.
@@ -351,7 +351,13 @@ See the [`Array.prototype.map` method](https://developer.mozilla.org/en-US/docs/
 
 ## `filter`
 
-After `map`, `filter` (MDN) is probably the second most commonly used higher order function. It allows us to filter out items in our array by some test (a function!). It will always return a new array. Each element gets tested with that function (often called a _predicate_). If the predicate returns true, the item remains in the set. Otherwise, it will not be included.
+After `map`, the `filter` method is probably the second most commonly used higher order function. The `filter` method invokes a callback function for each element of an array, but allows each element to be filtered out of a new array. In other words, the `filter` method:
+
+- Creates a new array that's no larger than the original array.
+- Applies a callback function to each element of the original array.
+- Pushes the element into the new array if the callback returns `true`.
+
+The callback function passed to the `filter` method is called a **predicate**.
 
 ```javascript
 var arr = [1, 2, 3, 4];
@@ -379,7 +385,9 @@ for (var element of arr) {
 console.log(odds); // [1, 3]
 ```
 
-**Exercise** How would we filter the movies in the search results from OMDB with an ratings that are kid-friendly (G or PG)?
+See the [`Array.prototype.filter` method](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) documentation on the Mozilla Developer Network.
+
+**EXERCISE:** How would you filter the movies in the search results from OMDB with an ratings that are kid-friendly (G or PG)?
 
 ## `reduce`
 
