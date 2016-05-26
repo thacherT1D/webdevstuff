@@ -365,14 +365,14 @@ Our Output is:
 
 As we can see, __each__ of the returned functions have closed over their own environment. The returned functions each have a unique scope that was closed over. The `var count` inside of `secondCounter` is not the same `var count` inside of `counter`.
 
-# Conclusion
+## Conclusion
 
 Functions in JavaScript are __very powerful__ and in many ways they are more usable than functions in other languages. That said, many of these topics are complex, and confusing. This high level tour of functions is meant to give you an overview of just what's possible in JavaScript. As we continue towards making real applications, we'll be finding uses for all of these different function styles. For now, make sure you're comfortable with the notion of declaring and calling functions.
 
-# Resources
+## Exercise
+
+[Function Tests](https://github.com/gSchool/function-tests)
+
+## Resources
 
 - [http://reactivex.io/learnrx/](http://reactivex.io/learnrx/)
-
-# Exercise
-
-[https://github.com/gSchool/function-tests](https://github.com/gSchool/function-tests)
