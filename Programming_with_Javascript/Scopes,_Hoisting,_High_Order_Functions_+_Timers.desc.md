@@ -241,7 +241,7 @@ One of the ways we can introduce scope is by creating an immediately invoked fun
 
 Ever wondered why you've seen entire JavaScript files wrapped in an IIFE? By using an IIFE, variables are no longer declared in the global scope.
 
-IIFEs can beu sed with arguments as well. Consider the following code. What do you think the final output will be?
+IIFEs can be used with arguments as well. Consider the following code. What do you think the final output will be?
 
 ```javascript
 var arr = [];
