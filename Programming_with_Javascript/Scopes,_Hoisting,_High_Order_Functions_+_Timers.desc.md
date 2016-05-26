@@ -13,10 +13,10 @@
 
 ## What are functions again?
 
-When we first started talking about data types, we mentioned many primitive types (like strings, numbers, booleans, null, etc) and reference types (objects and arrays). Functions seem like this magical third type that we think of as a programming construct (like loops and if statements). In reality, functions is actually another example of a reference type. We can assign functions to variables using a functional expressions.
+When we first started talking about data types, we mentioned many primitive types (like strings, numbers, booleans, null, etc) and reference types (objects and arrays). Functions seem like this magical third type that we think of as a programming construct (like loops and if statements). In reality, functions is actually another example of a reference type. We can assign functions to variables using a function expressions.
 
 ```javascript
-var myFunction = function () {
+var myFunction = function() {
   // Do some stuff
 };
 ```
@@ -24,7 +24,7 @@ var myFunction = function () {
 We also have passed a function to other functions (as a callback).
 
 ```javascript
-button.addEventListener('click', function (event) {
+button.addEventListener('click', function(event) {
   // Do some stuff
 });
 ```
