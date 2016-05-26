@@ -403,25 +403,27 @@ See the [`Array.prototype.filter` method](https://developer.mozilla.org/en-US/do
 
 ## `reduce`
 
-The `reduce` method ([MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)) has a lot to offer and can be thought of as a swiss army knife. The use of `reduce` is best described through a couple examples of similar problems. Let's look at two problems, summing all of the numbers in an array and multiplying all the numbers in an array.
+The `reduce` method has a lot to offer and can be thought of as a swiss army knife. The use of `reduce` is best described through a couple examples of similar problems. Let's look at two problems, summing all of the numbers in an array and multiplying all the numbers in an array.
 
 ```javascript
-// Add all the numbers in an array. If the array is empty, the sum is 0.
 var arr = [1, 2, 3, 4];
+
 var result = 0;
-for (num of arr) {
-  result = result + num;
+
+for (var num of arr) {
+  result += num;
 }
 
-console.log(result);   // 10
+console.log(result); // 10
 ```
 
 ```javascript
-// Multiply all the numbers in an array. If the array is empty, the product is 1.
 var arr = [1, 2, 3, 4];
+
 var result = 1;
-for (num of arr) {
-  result = result * num;
+
+for (var num of arr) {
+  result *= num;
 }
 
 console.log(result); // 24
@@ -429,10 +431,10 @@ console.log(result); // 24
 
 Can you spot the differences? They are incredibly similar, but they differ by 2 pieces:
 
-* The initial value of `result` (`0` for sum, `1` for product)
-* The operation (`+` for sum, `*` for product)
+* The initial value of `result` is `0` for addition and `1` for multiplication.
+* The operation is `+` for addition, `*` for multiplication.
 
-`reduce` makes these differences parameters that you can specify. Although you cannot pass an operator like `+` or `*`, you can pass in something that takes in two values and produces the sum or product (A FUNCTION!).
+The `reduce` method makes these differences parameters that you can specify. Although you cannot pass an operator like `+` or `*`, you can pass in something that takes in two values and produces the sum or product (A FUNCTION!).
 
 ```javascript
 var arr = [1, 2, 3, 4];
@@ -452,6 +454,8 @@ There are many situations when you are coding of keeping that running total (or 
 **NOTE** Notice the order of the parameters in the function passed into `reduce`. We pass in the running total `result` first and then the item in the array we are currently working with.
 
 While our examples have been with numbers, this can work for many data types as well.
+
+See the [`Array.prototype.reduce` method](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce) documentation on the Mozilla Developer Network.
 
 **Exercise** Write a function named `concatenate` that takes in one argument, arr, (an array of strings) and returns the concatenation of all the strings in the array.
 
