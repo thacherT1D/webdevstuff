@@ -2,7 +2,7 @@
 
 - Use the `arguments` and `this` keywords inside an invoked function.
 - Use the `call` and `apply` methods to invoke a function.
-- Explain the two types of scope.
+- Explain the three types of scope.
 - Explain what hoisting is.
 - Use Immediately Invoked Functional Expressions (IIFEs) to introduce scope.
 - Define the following:
