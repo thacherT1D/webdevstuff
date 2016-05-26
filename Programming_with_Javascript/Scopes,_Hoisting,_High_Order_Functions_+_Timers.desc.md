@@ -13,7 +13,7 @@
 
 ## How do you use the `call` and `apply` methods to invoke a function?
 
-When we first started talking about data types, we mentioned many primitive types (like strings, numbers, booleans, null, etc) and reference types (objects and arrays). Functions seem like this magical third type that we think of as a programming construct (like loops and if statements). In reality, functions is actually another example of a reference type. We can assign functions to variables using a function expressions.
+When you first studied data types, you learned about the primitive types (i.e. booleans, numbers, strings, null, undefined, and symbols) and the reference types (i.e. objects and arrays). At first, functions seem like a built-in programming construct like `for` loops and `if` statements. In reality, functions are another example of a reference type. That's why functions can be assigned to variables using a **function expression**.
 
 ```javascript
 var myFunction = function() {
@@ -21,58 +21,68 @@ var myFunction = function() {
 };
 ```
 
-As you can see, functions behave exactly like any of the other types. What makes a function different that other types is the ability to invoke its executable code. The vast majority of the time, functions are invoked using the parentheses `()` operator, passing in an optional set of arguments.
+As you can see, functions behave exactly like any other data type. What makes a function different than the other types is the ability to invoke its executable code.
+
+The vast majority of the time, functions are invoked using the parentheses `()` operator, passing in an optional set of arguments.
 
 ```javascript
 myFunction(arg1, arg2, arg3);
 ```
 
-But there are a couple more ways we can invoke a function using the methods `call`, and `apply`. Both are very similar in purpose but has a slightly different input.
+But a function can also be invoked with the `call`, and `apply` methods. Both are very similar in purpose, but have a slightly different input.
 
-- `apply` takes a `this` context as well as an array of arguments to the function. For example: `myFunctionName.apply(null, [arg1, arg2, arg3])`
-- `call` takes a `this` context as well as the arguments immediately after. `myFunctionName.apply.call(null, arg1, arg2, arg3)`
-
-### What is `this`?
-
-So far, we have only used the varible `this` in our event listeners. In JavaScript, every time that a function is invoked, two special keywords are created (that live in the scope of that function).
-
-1. `arguments` - the keyword arguments is an array-like object (does not have native array methods like push/pop/forEach/map) which represents each argument passed to the function.
+The `call` method takes a `this` context as well as the arguments immediately after.
 
 ```javascript
-    function logArgs(a,b,c) {
-        return arguments;
-    }
-
-    logArgs(1,2,3) // returns [1,2,3]
+myFunction.apply.call(null, arg1, arg2, arg3);
 ```
 
-2. `this` - the keyword `this` refers to the parent object in which the function has been called. What does that mean? Simply think whatever the execution context is of that function. Is it a function that is attached to an object? Is it a function that is attached to the `window`? Let's see some examples:
+While the `apply` method takes a `this` context as well as an array of arguments to the function.
 
 ```javascript
-    var person = {
-        name: "Elie",
-        sayHi: function() {
-            return `${this.name} says hi!`
-        }
-    };
-
-    // the keyword `this` has a parent object called `person`
-    // so we are going to access the parent object's property of name
-    person.sayHi(); // returns "Elie says hi!"
-
+myFunction.apply(null, [arg1, arg2, arg3]);
 ```
 
-In this example, the keyword `this` refers to the `person` object (sometimes it's easier to just think, what is the function I am calling attached to?). Let's see what happens when we use the keyword `this` without explicitly defining a parent object.
+So far, we have only used the variable `this` in our event listeners. In JavaScript, every time that a function is invoked, two special keywords are created that live in the scope of that function—`arguments` and `this`.
+
+The `arguments` keyword is an array-like object that holds each argument passed into the function. The `arguments` keyword is array-like because it has a brackets `[]` operator, but doesn't have native array methods like `push` and `pop`.
 
 ```javascript
-    function hello() {
-        return this;
-    }
+function logArguments(a, b, c) {
+  console.log(arguments); // [1, 2, 3]
+}
 
-    hello(); // what does this function return?
+logArguments(1, 2, 3)
 ```
 
-So what happens when we call a function without explicitly defining its parent object? It returns the window object! This actually makes a lot of sense, because everything that we define in the global scope (in the browser) is attached to the window object (we could invoke this function by using `window.hello()`)
+Additionally, the `this` keyword is set to the **execution context** on which the function was invoked. In other words, if a function is attached to a property of an object and later invoked, the `this` keyword inside the function will be set to the thing left of the dot `.` operator.
+
+```javascript
+var person = {
+  name: 'Elie',
+  sayHi: function() {
+    console.log(`${this.name} says hi!`);
+  }
+};
+
+person.sayHi(); // 'Elie says hi!'
+```
+
+In this example, the `this` keyword inside the `sayHi` method refers to the `person` object, or the thing left of the dot.
+
+### Exercise
+
+What happens to the `this` keyword inside a function that's not explicitly invoked with an execution context? Once you think you have the answer, try turning on strict mode with `use strict`.
+
+```javascript
+var name = 'Elie';
+
+var sayHi = function() {
+  console.log(`${this.name} says hi!`); // 'Elie says hi!'
+}
+
+sayHi();
+```
 
 ### Changing the value of `this` using call or apply
 
