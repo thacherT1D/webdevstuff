@@ -118,42 +118,46 @@ var person2 = {
 person1.sayHi.call(person2);
 ```
 
-## What is scope?
+## What are the two types of scope?
 
-In the most simpliest of terms, scope is about variable accessibility. Depending on which scope a variable is defined, it may be accessible or inaccessible in another scope. The key to understanding scope with JavaScript is functions. A scope should be thought of as the list of variables and functions the program has access to at any given moment. Depending on the scope that the current line is being executed within, a different set of variables and functions could be available in that scope.
+Simply put, **scope** is about variable accessibility. Depending on which scope a variable is defined, it may be accessible or inaccessible in another scope. The key to understanding scope in JavaScript is with functions. A scope can be thought of as the list of variables and functions the program has access to at any given moment. Depending on the scope of the current line of execution, a specific set of variables and functions are available for use.
 
-There are two classes of scope in JavaScript:
+There are two types of scope in ECMAScript 5.
 
 1. Global scope
-2. Local scope, or "function scope"
+2. Function scope
 
-Anything in "global scope" is always available, anywhere else in the program. Whenever your browser is running, there is a global variable called "window" in global scope.
-
-A global exists outside the context of any function, and therefore is accessable from every function. A local scope, in turn, is created *inside* of each function. Let's view an example with both:
+Any variable or function defined in the global scope is available for use anywhere in the program. In the browser, the `window` global object refers to the global scope.
 
 ```javascript
-var globalScope = "I'm outside of any function and can be accessed in any scope";
+var name = 'Mary';
 
-function localScope() {
-	var localScope = "I'm inside of a function, so I'm in a local scope."
-  console.log("This is a local scope, but I can still access globalScope");
-
-  // This works here inside of local
-  console.log(globalScope);
-}
-
-// Works here as well
-console.log(globalScope);
-
-// Uncaught ReferenceError: localScope is not defined
-localScope
+console.log(window);
 ```
 
-## Name Collisions
+On the other hand, the a local, function scope is created is created when it's invoked.
+
+```javascript
+var a = 'outer';
+
+function functionScope() {
+	var b = 'inner';
+
+  console.log(a); // outer
+  console.log(b); // inner
+}
+
+functionScope();
+
+console.log(a); // outer
+console.log(b); // Uncaught ReferenceError: b is not defined
+```
+
+### Name Collisions
 
 It's possible to have two variables named the same thing, but on different scopes. It's considered a bad habit to write code this way because it becomes very confusing, but it's good to know that the following is perfectly legal:
 
-```
+```javascript
 var globalVariable = "The global version";
 
 function test() {
@@ -167,7 +171,7 @@ console.log(globalVariable);
 
 When we run this code, when we call the function `test` then "The impostor" is printed to our screen. When we `console.log(globalVariable);` then "the global version" was printed. Is this what you expected?  In JavaScript, the most local version of a variable is used naturally by the interpreter. What will happen when we run this code?
 
-```
+```javascript
 var globalVariable = "The global version";
 
 function test() {
@@ -181,7 +185,7 @@ console.log(globalVariable);
 
 This time, we overwrote the global variable from within our function and so printed "The impostor" twice.
 
-## Declaring variables in a function
+### Declaring variables in a function
 
 JavaScript has this "feature" called variable hoisting. When it reads a function, it first processes variable declarations (just the declarations, not assignments). It then runs the function. This means that variables can actually be assigned before they are actually declared (:facepalm:).
 
@@ -204,7 +208,7 @@ What does this mean? There are a few reasons why it's important to know this.
 
 ES6 has provided a better mechanism for declaring variables and scope called `let`. The [documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let) on MDN explains the differences.
 
-## When to use scope
+### When to use scope
 
 A rule of thumb is that every variable should be as local as possible. Unless you absolutely need to share some piece of information across may different functions, then you should use a local variable. Here are two good reasons:
 
@@ -223,7 +227,7 @@ window.screen            // This is a bunch of information about the screen size
 
 This information makes sense for any Javascript program running to have access to. You may want to know the screen size, or something about the HTML from any point in your JavaScript code.
 
-### Immediately Invoked Functional Expressions (IIFEs)
+## Immediately Invoked Functional Expressions (IIFEs)
 
 One of the ways we can introduce scope is by creating an **Immediately Invoked Functional Expression** (IIFE). With IIFEs, we are wrapping code in a function, creating a new scope, and invoking that function immediately when created.
 
