@@ -2,10 +2,10 @@
 
 - Explain the three types of scope.
 - Explain what hoisting is.
-- Use do IIFEs to introduce scope.
 - Explain what a higher order function is.
 - Use the `map`, `filter`, and `reduce` methods on arrays.
 - Explain what a closure is.
+- Use do IIFEs to enclose scope.
 
 ## What are the three types of scope?
 
@@ -118,54 +118,6 @@ for (var element of iterable) {
 ```
 
 Until you absolutely need to share data across may different functions, then we recommend that you declare variables as local as possible. Since variables in the global scope can be changed from anywhere, it's hard to reason about how these variables change as the program executes overtime.
-
-## How do IIFEs to introduce scope?
-
-One of the ways we can introduce scope is by creating an immediately invoked functional expression (**IIFE**). With IIFEs, code is wrapped in a function, creating a new scope, and then invoked immediately.
-
-```javascript
-(function() {
-  // ALL CODE HERE
-})();
-```
-
-Ever wondered why you've seen entire JavaScript files wrapped in an IIFE? By using an IIFE, variables are no longer declared in the global scope.
-
-IIFEs can be invoked with arguments as well. Consider the following code. What do you think the final output will be?
-
-```javascript
-var arr = [];
-
-for(var i = 0; i < 3; i++) {
-  arr.push(function() {
-    console.log(i);
-  });
-}
-
-for(var func of arr) {
-  func();
-}
-```
-
-Because these callback functions are not executed immediately, they'll output the final value of `i` multiple times. To maintain each value of `i`, the `for` loop's body can be wrapped in an IIFE.
-
-```javascript
-var arr = [];
-
-for(var i = 0; i < 3; i++) {
-  (function(j) {
-    arr.push(function() {
-      console.log(j);
-    });
-  })(i);
-}
-
-for(var func of arr) {
-  func();
-}
-```
-
-By creating an IIFE with one parameter and invoking it with the value of `i`, the value of `i` is stored in the parameter `j`.
 
 ## Higher Order Functions
 
@@ -402,6 +354,54 @@ console.log(closure2());  // ???
 console.log(closure2());  // ???
 console.log(closure2());  // ???
 ```
+
+## How do IIFEs to enclose scope?
+
+One of the ways to enclose scope is by creating an immediately invoked functional expression (**IIFE**). With IIFEs, code is wrapped in a function, creating a new scope, and then invoked immediately.
+
+```javascript
+(function() {
+  // ALL CODE HERE
+})();
+```
+
+Ever wondered why you've seen entire JavaScript files wrapped in an IIFE? By using an IIFE, variables are no longer declared in the global scope.
+
+IIFEs can be invoked with arguments as well. Consider the following code. What do you think the final output will be?
+
+```javascript
+var arr = [];
+
+for(var i = 0; i < 3; i++) {
+  arr.push(function() {
+    console.log(i);
+  });
+}
+
+for(var func of arr) {
+  func();
+}
+```
+
+Because these callback functions are not executed immediately, they'll output the final value of `i` multiple times. To maintain each value of `i`, the `for` loop's body can be wrapped in an IIFE.
+
+```javascript
+var arr = [];
+
+for(var i = 0; i < 3; i++) {
+  (function(j) {
+    arr.push(function() {
+      console.log(j);
+    });
+  })(i);
+}
+
+for(var func of arr) {
+  func();
+}
+```
+
+By creating an IIFE with one parameter and invoking it with the value of `i`, the value of `i` is stored in the parameter `j`.
 
 ## Conclusion
 
