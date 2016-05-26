@@ -5,7 +5,7 @@
 - Explain what a higher order function is.
 - Use the `map`, `filter`, and `reduce` methods on arrays.
 - Explain what a closure is.
-- Use do IIFEs to enclose scope.
+- Use IIFEs to enclose scope.
 
 ## What are the three types of scope?
 
