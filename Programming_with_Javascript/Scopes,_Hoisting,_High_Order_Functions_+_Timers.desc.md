@@ -21,9 +21,7 @@ var myFunction = function() {
 };
 ```
 
-As you can see, functions behave exactly like any other data type. What makes a function different than the other types is the ability to invoke its executable code.
-
-The vast majority of the time, functions are invoked using the parentheses `()` operator, passing in an optional set of arguments.
+As you can see, functions behave exactly like any other data type. What makes a function different than the other types is the ability to invoke its executable code. The vast majority of the time, functions are invoked using the parentheses `()` operator, passing in an optional set of arguments.
 
 ```javascript
 myFunction(arg1, arg2, arg3);
