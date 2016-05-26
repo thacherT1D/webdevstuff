@@ -346,9 +346,9 @@ console.log(product); // 24
 
 See the [`Array.prototype.reduce` method](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce) documentation on the Mozilla Developer Network.
 
-While our examples have been with numbers, this can work for many data types as well.
-
 ### Exercise
+
+While our examples have been with numbers, this can work for many data types as well.
 
 Write a function named `concatenate` that takes in one argument, `arr`, (array of strings) and returns the concatenation of all the strings in the array.
 
