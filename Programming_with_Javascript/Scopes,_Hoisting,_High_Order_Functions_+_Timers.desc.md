@@ -83,7 +83,7 @@ While the `apply` method takes a `this` context as well as an array of arguments
 add.apply(null, [1, 2]); // 3
 ```
 
-Imagine a scenario where you have two objects that are nearly identical except for their `name` property.
+But when would these techniques be useful? Well, imagine a scenario where you have two objects that are nearly identical except for their `name` property.
 
 ```javascript
 var person1 = {
