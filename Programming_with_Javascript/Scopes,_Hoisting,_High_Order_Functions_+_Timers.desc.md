@@ -141,7 +141,7 @@ returnAFunction()();
 
 There are four common higher order functions for arrays—`forEach`, `map`, `filter`, and `reduce`.
 
-## `forEach`
+### `forEach`
 
 The `forEach` method invokes a callback function for each element of an array.
 
@@ -165,7 +165,7 @@ for (var element of arr) {
 
 See the [`Array.prototype.forEach` method](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) documentation on the Mozilla Developer Network.
 
-## `map`
+### `map`
 
 The `map` method invokes a callback function for each element of an array, but allows each element to be transformed and pushed to a new array. In other words, the `map` method:
 
@@ -203,7 +203,7 @@ See the [`Array.prototype.map` method](https://developer.mozilla.org/en-US/docs/
 
 **EXERCISE:** How would you get the IMDB rating as a number from a search request?
 
-## `filter`
+### `filter`
 
 After `map`, the `filter` method is probably the second most commonly used higher order function. The `filter` method invokes a callback function for each element of an array, but allows each element to be filtered out of a new array. In other words, the `filter` method:
 
@@ -243,7 +243,7 @@ See the [`Array.prototype.filter` method](https://developer.mozilla.org/en-US/do
 
 **EXERCISE:** How would you filter the movies in the search results from OMDB with an ratings that are kid-friendly (G or PG)?
 
-## `reduce`
+### `reduce`
 
 The `reduce` method has a lot to offer and can be thought of as a swiss army knife. The use of `reduce` is best described through a couple examples of similar problems. Let's look at two problems, summing all of the numbers in an array and multiplying all the numbers in an array.
 
@@ -298,9 +298,7 @@ console.log(product); // 24
 
 See the [`Array.prototype.reduce` method](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce) documentation on the Mozilla Developer Network.
 
-### Exercise
-
-While our examples have been with numbers, this can work for many data types as well.
+**EXERCISE:** While our examples have been with numbers, this can work for many data types as well.
 
 Write a function named `concatenate` that takes in one argument, `arr`, (array of strings) and returns the concatenation of all the strings in the array.
 
