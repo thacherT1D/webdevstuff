@@ -341,29 +341,28 @@ console.log(sum);     // 10
 console.log(product); // 24
 ```
 
-There are many situations when you are coding of keeping that running total (or `result`) and performing some operation. This may be a great place to use the reduce method.  
+**NOTE:** Notice the order of the parameters in the function passed into `reduce`. First, the running total is passed into the `result` parameter and  each element in the array is passed into the `element` parameter second.
 
-**NOTE** Notice the order of the parameters in the function passed into `reduce`. We pass in the running total `result` first and then the item in the array we are currently working with.
-
-While our examples have been with numbers, this can work for many data types as well.
 
 See the [`Array.prototype.reduce` method](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce) documentation on the Mozilla Developer Network.
 
-**Exercise** Write a function named `concatenate` that takes in one argument, arr, (an array of strings) and returns the concatenation of all the strings in the array.
+While our examples have been with numbers, this can work for many data types as well.
 
-**Exercise** Write a function named `flatten` that takes in one argument, arr, (an array of arrays). Return a new array that combines all of elements of each inner array. For example, given `[[1], [2, 3], [4]]`, then return `[1, 2, 3, 4]`.
+### Exercise
 
-Looking for even more `reduce` fun? You can write the `map` method, and the `filter` method using `reduce`! Try it out!
+Write a function named `concatenate` that takes in one argument, `arr`, (array of strings) and returns the concatenation of all the strings in the array.
 
-# The magic of closures
+Then write a function named `flatten` that takes in one argument, `arr`, (array of arrays) and returns a new array that combines all of elements of each inner array. For example, given `[[1], [2, 3], [4]]`, then return `[1, 2, 3, 4]`.
 
-Closures are a feature of high order functions. To understand closures, lets revist our previous example of a high order function, but make one modification:
+## What's a closure?
+
+A **closure** is a function that encloses the scope that exists when its created. To understand closures, lets revisit the original example of a high order function, but make one modification.
 
 ```javascript
 function returnAFunction() {
   var closedOver = "This information is closed over";
 
-  return function(){
+  return function() {
     console.log(closedOver);
   }
 }
@@ -378,7 +377,7 @@ returnAFunction()();
 console.log(closedOver);
 ```
 
-This is called a __closure__ because the function that is returned (`returnedFunction`) also contains information that was in its scope. When the function was created at the `return` statement, the variable `closedOver` had a value. That value is said to be "closed over" because the inner function retains a reference to it. Lets look at another example of a closure:
+The returned function contains `closedOver` variable that was declared in its scope. When the function was created at the `return` statement, the variable `closedOver` had a value. That value is said to be "closed over" because the inner function retains a reference to it. Lets look at another example of a closure:
 
 ```javascript
 function closeMe() {
