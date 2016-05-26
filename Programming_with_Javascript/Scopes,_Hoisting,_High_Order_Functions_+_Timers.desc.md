@@ -48,7 +48,7 @@ What happens to the `this` keyword inside a function that's not explicitly invok
 var name = 'Elie';
 
 var sayHi = function() {
-  console.log(`${this.name} says hi!`); // 'Elie says hi!'
+  console.log(`${this.name} says hi!`); // ???
 }
 
 sayHi();
