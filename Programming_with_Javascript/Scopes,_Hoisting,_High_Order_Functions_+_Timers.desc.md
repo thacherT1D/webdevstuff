@@ -58,7 +58,7 @@ sayHi();
 
 When you first studied data types, you learned about the primitive types (i.e. booleans, numbers, strings, null, undefined, and symbols) and the reference types (i.e. objects and arrays). At first, functions seem like a built-in programming construct like `for` loops and `if` statements.
 
-In reality, functions are another example of a reference type. That's why functions can be assigned to variables using a **function expression**. What makes a function different than the other types is the ability to invoke its executable code. The vast majority of the time, functions are invoked using the parentheses `()` operator, passing in an optional set of arguments.
+In reality, functions are another example of a reference type. That's why functions can be assigned to variables and object properties. What makes a function different than the other types is the ability to invoke its executable code. The vast majority of the time, functions are invoked using the parentheses `()` operator, passing in an optional set of arguments.
 
 ```javascript
 var add = function(a, b) {
