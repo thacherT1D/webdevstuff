@@ -5,7 +5,6 @@
 - Explain variable hoisting.
 - Use Immediately Invoked Functional Expressions (IIFEs) to introduce scope.
 - Define the following:
-  - Pure Function
   - First Class Function
   - Higher Order Function
 - Use the `map`, `filter`, and `reduce` methods on arrays.
@@ -255,11 +254,11 @@ for(var i = 0; i < 5; i++) {
 	});
 }
 for(func of arr) {
-	arr();
+	func();
 }
 ```
 
-We can solve this with an IIFE.
+Because functions are not executed immediately, they will output the number 5 multiple times. We need to maintain the value of `i` at the moment in each iteration of the loop. We can solve this with an IIFE.
 
 ```javascript
 var arr = [];
@@ -271,9 +270,11 @@ for(var i = 0; i < 5; i++) {
 	})(i);
 }
 for(func of arr) {
-	arr();
+	func();
 }
 ```
+
+By creating an IIFE with one parameter and invoking it with the value of `i`, we are placing a copy of it (as an argument into a new function scope. This scope maintains the value as `i` keeps iterating.
 
 # Higher Order Functions
 
@@ -302,11 +303,143 @@ There are four major functions that get often used are `forEach`, `map`, `filter
 
 ## `forEach`
 
+The `forEach` method ([MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)) allows us to apply a function on each element of an array.
+
+```javascript
+var arr = ['a', 'b', 'c', 'd'];
+arr.forEach(function(element) {
+	console.log(element);
+});
+```
+
+Its behavior is very much similar to a `for` and `for of`  loop.
+
+```javascript
+var arr = ['a', 'b', 'c', 'd'];
+for (element of arr) {
+	console.log(element);
+};
+```
+
 ## `map`
+
+The `map` method ([MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)) is very powerful as it simply transforms an array using a function. In particular, it does the following:
+
+* Creates a new array of the same size as the original array.
+* Applies a function on each element of the original array.
+* Places the returned value of the function in its corresponding place in the new array.
+
+```javascript
+var arr = [1, 2, 3, 4];
+var squares = arr.map(function(num) {
+  return num * num;
+});
+
+console.log(squares); // 1,4,9,16
+```
+
+By comparison, how would we do this with a loop?
+
+```javascript
+var arr = [1, 2, 3, 4];
+var squares = [];
+for (num of arr) {
+	squares.push(num * num);
+}
+
+console.log(squares); // 1,4,9,16
+```
+
+This is really useful when grabbing information from your API responses and changing it in some way.
+
+**Exercise** How would we get the IMDB rating as a number from a search request?
 
 ## `filter`
 
+After `map`, `filter` (MDN) is probably the second most commonly used higher order function. It allows us to filter out items in our array by some test (a function!). It will always return a new array. Each element gets tested with that function (often called a _predicate_). If the predicate returns true, the item remains in the set. Otherwise, it will not be included.
+
+```javascript
+var arr = [1, 2, 3, 4];
+var onlyOdds = arr.filter(function(num) {
+  return num % 2 !== 0;
+});
+
+console.log(onlyOdds); // 1,3
+```
+
+By comparison, how would we do this with a loop?
+
+```javascript
+var arr = [1, 2, 3, 4];
+var onlyOdds = [];
+for (num of arr) {
+	if (num % 2 !== 0) {
+		onlyOdds.push(num);
+	}
+}
+
+console.log(onlyOdds); // 1,3
+```
+
+**Exercise** How would we filter the movies in the search results from OMDB with an ratings that are kid-friendly (G or PG)?
+
 ## `reduce`
+
+The `reduce` method ([MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)) has a lot to offer and can be thought of as a swiss army knife. The use of `reduce` is best described through a couple examples of similar problems. Let's look at two problems, summing all of the numbers in an array and multiplying all the numbers in an array.
+
+```javascript
+// Add all the numbers in an array. If the array is empty, the sum is 0.
+var arr = [1, 2, 3, 4];
+var result = 0;
+for (num of arr) {
+  result = result + num;
+}
+
+console.log(result);   // 10
+```
+
+```javascript
+// Multiply all the numbers in an array. If the array is empty, the product is 1.
+var arr = [1, 2, 3, 4];
+var result = 1;
+for (num of arr) {
+  result = result * num;
+}
+
+console.log(result); // 24
+```
+
+Can you spot the differences? They are incredibly similar, but they differ by 2 pieces:
+
+* The initial value of `result` (`0` for sum, `1` for product)
+* The operation (`+` for sum, `*` for product)
+
+`reduce` makes these differences parameters that you can specify. Although you cannot pass an operator like `+` or `*`, you can pass in something that takes in two values and produces the sum or product (A FUNCTION!).
+
+```javascript
+var arr = [1, 2, 3, 4];
+var sum = arr.reduce(function(result, num) {
+  return result + sum;
+}, 0);
+var product = arr.reduce(function(result, num) {
+  return result * sum;
+}, 1);
+
+console.log(sum);      // 10
+console.log(product);  // 24
+```
+
+There are many situations when you are coding of keeping that running total (or `result`) and performing some operation. This may be a great place to use the reduce method.  
+
+**NOTE** Notice the order of the parameters in the function passed into `reduce`. We pass in the running total `result` first and then the item in the array we are currently working with.
+
+While our examples have been with numbers, this can work for many data types as well.
+
+**Exercise** Write a function named `concatenate` that takes in one argument, arr, (an array of strings) and returns the concatenation of all the strings in the array.
+
+**Exercise** Write a function named `flatten` that takes in one argument, arr, (an array of arrays). Return a new array that combines all of elements of each inner array. For example, given `[[1], [2, 3], [4]]`, then return `[1, 2, 3, 4]`.
+
+Looking for even more `reduce` fun? You can write the `map` method, and the `filter` method using `reduce`! Try it out!
 
 # The magic of closures
 
@@ -377,6 +510,7 @@ Functions in JavaScript are __very powerful__ and in many ways they are more usa
 
 # Resources
 
+- [http://ryanguill.com/functional/higher-order-functions/2016/05/18/higher-order-functions.html](http://ryanguill.com/functional/higher-order-functions/2016/05/18/higher-order-functions.html)
 - [http://reactivex.io/learnrx/](http://reactivex.io/learnrx/)
 
 # Exercise
