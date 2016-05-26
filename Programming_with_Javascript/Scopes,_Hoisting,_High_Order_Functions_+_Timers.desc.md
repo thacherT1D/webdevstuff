@@ -1,4 +1,4 @@
-# Objectives
+## Objectives
 
 - Use the methods `call` and `apply` on functions.
 - Describe the two types of scope.
@@ -11,7 +11,7 @@
 - Use the `map`, `filter`, and `reduce` methods on arrays.
 - Explain what is a closure.
 
-# What are functions again?
+## What are functions again?
 
 When we first started talking about data types, we mentioned many primitive types (like strings, numbers, booleans, null, etc) and reference types (objects and arrays). Functions seem like this magical third type that we think of as a programming construct (like loops and if statements). In reality, functions is actually another example of a reference type. We can assign functions to variables using a functional expressions.
 
@@ -46,7 +46,7 @@ There are a couple more ways we can invoke a function using the methods `call`, 
 
 ### What is `this`?
 
-So far, we have only used the varible `this` in our event listeners. In JavaScript, every time that a function is invoked, two special keywords are created (that live in the scope of that function). 
+So far, we have only used the varible `this` in our event listeners. In JavaScript, every time that a function is invoked, two special keywords are created (that live in the scope of that function).
 
 1. `arguments` - the keyword arguments is an array-like object (does not have native array methods like push/pop/forEach/map) which represents each argument passed to the function.
 
@@ -128,16 +128,16 @@ There's a lot of duplication going on here! We just repeated the entire definiti
 
 # What is scope?
 
-In the most simpliest of terms, scope is about variable accessibility. Depending on which scope a variable is defined, it may be accessible or inaccessible in another scope. The key to understanding scope with JavaScript is functions. A scope should be thought of as the list of variables and functions the program has access to at any given moment. Depending on the scope that the current line is being executed within, a different set of variables and functions could be available in that scope. 
+In the most simpliest of terms, scope is about variable accessibility. Depending on which scope a variable is defined, it may be accessible or inaccessible in another scope. The key to understanding scope with JavaScript is functions. A scope should be thought of as the list of variables and functions the program has access to at any given moment. Depending on the scope that the current line is being executed within, a different set of variables and functions could be available in that scope.
 
-There are two classes of scope in JavaScript: 
+There are two classes of scope in JavaScript:
 
 1. Global scope
 2. Local scope, or "function scope"
 
 Anything in "global scope" is always available, anywhere else in the program. Whenever your browser is running, there is a global variable called "window" in global scope.
 
-A global exists outside the context of any function, and therefore is accessable from every function. A local scope, in turn, is created *inside* of each function. Let's view an example with both: 
+A global exists outside the context of any function, and therefore is accessable from every function. A local scope, in turn, is created *inside* of each function. Let's view an example with both:
 
 ```javascript
 var globalScope = "I'm outside of any function and can be accessed in any scope";
@@ -147,7 +147,7 @@ function localScope() {
   console.log("This is a local scope, but I can still access globalScope");
 
   // This works here inside of local
-  console.log(globalScope); 
+  console.log(globalScope);
 }
 
 // Works here as well
@@ -217,9 +217,9 @@ ES6 has provided a better mechanism for declaring variables and scope called `le
 A rule of thumb is that every variable should be as local as possible. Unless you absolutely need to share some piece of information across may different functions, then you should use a local variable. Here are two good reasons:
 
 1. Global Scope things can be changed anytime, anywhere, by any code. This makes reasoning about (and debugging changes in) such variables difficult.
-2. "Garbage Collection" is what allows JavaScript to clean up the memory it's using. Variables in global scope cannot be "garbage collected". This means that global scope can pollute your memory with things that are no longer being used, which may cause your program to crash if too much information gets stored. 
+2. "Garbage Collection" is what allows JavaScript to clean up the memory it's using. Variables in global scope cannot be "garbage collected". This means that global scope can pollute your memory with things that are no longer being used, which may cause your program to crash if too much information gets stored.
 
-That said, there are good examples of things that belong on global scope. Take the 'window' object in any browser for example. Window is a collection of functions and variables related to the current 'window' of your browser. In a modern browser, every tab has it's own "global scope" and as a result, it's own `window` object. 
+That said, there are good examples of things that belong on global scope. Take the 'window' object in any browser for example. Window is a collection of functions and variables related to the current 'window' of your browser. In a modern browser, every tab has it's own "global scope" and as a result, it's own `window` object.
 
 Open your developer console and try the following:
 
@@ -315,7 +315,7 @@ Closures are a feature of high order functions. To understand closures, lets rev
 ```javascript
 function returnAFunction() {
 	var closedOver = "This information is closed over";
-	
+
 	return function(){
 		console.log(closedOver);
 	}
@@ -369,7 +369,7 @@ Our Output is:
 3
 ```
 
-As we can see, __each__ of the returned functions have closed over their own environment. The returned functions each have a unique scope that was closed over. The `var count` inside of `secondCounter` is not the same `var count` inside of `counter`. 
+As we can see, __each__ of the returned functions have closed over their own environment. The returned functions each have a unique scope that was closed over. The `var count` inside of `secondCounter` is not the same `var count` inside of `counter`.
 
 # Conclusion
 
