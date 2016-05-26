@@ -199,9 +199,9 @@ JavaScript has this "feature" called **hoisting**. When a function is invoked, t
 
 ```javascript
 function myFunction() {
-	console.log(num);
+  console.log(num);
 
-	num = 2;
+  num = 2;
 
   console.log(num);
 
