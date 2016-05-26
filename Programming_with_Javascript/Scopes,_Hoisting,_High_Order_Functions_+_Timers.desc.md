@@ -120,7 +120,7 @@ person1.sayHi.call(person2);
 
 ## What are the two types of scope?
 
-Simply put, **scope** is about variable accessibility. Depending on which scope a variable is defined, it may be accessible or inaccessible in another scope. The key to understanding scope in JavaScript is with functions. A scope can be thought of as the list of variables and functions the program has access to at any given moment. Depending on the scope of the current line of execution, a specific set of variables and functions are available for use.
+A **scope** is a list of variables and functions the current line of execution can access. Depending on what scopes are available to the current line of execution, a specific set of variables and functions are possible To use. The key to understanding scope in JavaScript is with functions. 
 
 There are two types of scope in ECMAScript 5.
 
