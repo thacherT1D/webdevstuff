@@ -128,9 +128,9 @@ A **scope** is a list of variables and functions available for use on the curren
 Any variable or function defined in the global scope is available for use anywhere in the program. In the browser, the `window` global object refers to the global scope. The `window` object is a collection of variables and functions related to the current `window` of your browser. In a modern browser, every tab has its own global scope and, as a result, its own `window` object.
 
 ```javascript
-console.log(window.location); // The host of whatever website you're on.
-console.log(window.document); // Reference to the HTML document
-console.log(window.screen);   // Information about the browser's screen size
+console.log(window.document); // An object that references the current DOM
+console.log(window.location); // An object with properties on the window's URL
+console.log(window.screen);   // An object with properties on the window's screen
 
 var name = 'Mary';
 console.log(window);
