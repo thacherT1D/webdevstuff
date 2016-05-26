@@ -119,16 +119,20 @@ person1.sayHi.call(person2);
 
 ## What are the two types of scope?
 
-A **scope** is a list of variables and functions available for use on the current line of execution. There are two types of scope in ECMAScript 5.
+A **scope** is a list of variables and functions available for use on the current line of execution. There are three types of scope in JavaScript.
 
 1. Global scope
 2. Function scope
+3. Block scope (new in ES6)
 
-Any variable or function defined in the global scope is available for use anywhere in the program. In the browser, the `window` global object refers to the global scope.
+Any variable or function defined in the global scope is available for use anywhere in the program. In the browser, the `window` global object refers to the global scope. The `window` object is a collection of variables and functions related to the current `window` of your browser. In a modern browser, every tab has its own global scope and, as a result, its own `window` object.
 
 ```javascript
-var name = 'Mary';
+console.log(window.location); // The host of whatever website you're on.
+console.log(window.document); // Reference to the HTML document
+console.log(window.screen);   // Information about the browser's screen size
 
+var name = 'Mary';
 console.log(window);
 ```
 
@@ -167,6 +171,11 @@ console.log(a); // outer
 
 Is this what you expected? In JavaScript, the most local version of a variable is accessed by the interpreter first.
 
+To learn about block scope, see the following articles on the Mozilla Developer Network.
+
+- [`let` statement](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Statements/let)
+- [`const` statement](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Statements/const)
+
 ### Exercise
 
 What will happen when this code is run?
@@ -186,7 +195,7 @@ console.log(a); // ???
 
 ## What's hoisting?
 
-JavaScript has this "feature" called **hoisting**. When a function is invoked, the interpreter first processes variable declarations (Just the declarations, not the assignments. Then, the function body is executed. As a result, you can write code that assigns a value to a variable before it's declared. :facepalm:
+JavaScript has this "feature" called **hoisting**. When a function is invoked, the interpreter first processes variable declarations. Just the declarations, not the assignments. Afterwards, the function's body is executed. As a result, it's possible to write code that assigns a value to a variable before it's declared. :facepalm:
 
 ```javascript
 function myFunction() {
@@ -204,34 +213,9 @@ function myFunction() {
 myFunction();
 ```
 
-What does this mean? There are a few reasons why it's important to know this.
+There are a few reasons why it's important to know this. First, it's essential to understand why building a language in 10 days is a bad idea. More importantly, you can't make any assumptions that a JavaScript variable is global or will throw an `Unreferenced error` without first checking if its declared somewhere inside a function. Remember, all declared variables start out as `undefined` even if its hoisted from way down in the function body. For these reasons, we recommend declaring all variables at the top of a function, with the exception of variables used in `for` loops.
 
-* It's important and understand why a programming language (in this case JavaScript) sucks.
-* We cannot make an assumption that a variable is global without checking for variable declarations inside the function. (For this reason, many professionals recommend declaring all variables at the top of the function).
-* We cannot expect an error to be thrown on an unreferenced variable. The variable will be `undefined` if it is declared below.
-
-### ES6 to the rescue.
-
-ES6 has provided a better mechanism for declaring variables and scope called `let`. The [documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let) on MDN explains the differences.
-
-### When to use scope
-
-A rule of thumb is that every variable should be as local as possible. Unless you absolutely need to share some piece of information across may different functions, then you should use a local variable. Here are two good reasons:
-
-1. Global Scope things can be changed anytime, anywhere, by any code. This makes reasoning about (and debugging changes in) such variables difficult.
-2. "Garbage Collection" is what allows JavaScript to clean up the memory it's using. Variables in global scope cannot be "garbage collected". This means that global scope can pollute your memory with things that are no longer being used, which may cause your program to crash if too much information gets stored.
-
-That said, there are good examples of things that belong on global scope. Take the 'window' object in any browser for example. Window is a collection of functions and variables related to the current 'window' of your browser. In a modern browser, every tab has it's own "global scope" and as a result, it's own `window` object.
-
-Open your developer console and try the following:
-
-```
-window.location.hostname // This prints the host of whatever website you're on.
-window.document          // This is a reference to the HTML document in JavaScript
-window.screen            // This is a bunch of information about the screen size of our browser
-```
-
-This information makes sense for any Javascript program running to have access to. You may want to know the screen size, or something about the HTML from any point in your JavaScript code.
+Until you absolutely need to share data across may different functions, then we recommend that you declare variables as local as possible. Since variables in the global scope can be changed from anywhere, it's hard to reason about how these variables change as the program executes overtime.
 
 ## Immediately Invoked Functional Expressions (IIFEs)
 
