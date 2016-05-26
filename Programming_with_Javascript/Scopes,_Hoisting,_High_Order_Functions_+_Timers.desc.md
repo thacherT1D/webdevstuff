@@ -262,7 +262,7 @@ Because these callback functions are not executed immediately, they'll output th
 ```javascript
 var arr = [];
 
-for(var i = 0; i < 5; i++) {
+for(var i = 0; i < 3; i++) {
   (function(j) {
     arr.push(function() {
       console.log(j);
