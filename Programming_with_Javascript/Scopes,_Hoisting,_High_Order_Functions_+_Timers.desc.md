@@ -313,7 +313,7 @@ var arr = [1, 2, 3, 4];
 var result = 1;
 
 for (var num of arr) {
-  result = result + num;
+  result = result * num;
 }
 
 console.log(result); // 24
@@ -414,11 +414,13 @@ Closure 2
 2
 ```
 
-As we can see, each of the returned functions have closed over their own environment. The returned functions each have a unique scope that was closed over. The `var count` inside of `secondCounter` is not the same `var count` inside of `counter`.
+As you can see, each of the closures can access their parent's scope. The closures each have a unique parent scope that was closed over.
 
 ## Conclusion
 
-Functions in JavaScript are __very powerful__ and in many ways they are more usable than functions in other languages. That said, many of these topics are complex, and confusing. This high level tour of functions is meant to give you an overview of just what's possible in JavaScript. As we continue towards making real applications, we'll be finding uses for all of these different function styles. For now, make sure you're comfortable with the notion of declaring and calling functions.
+Functions in JavaScript are _very_ powerful. In many ways, they are more powerful than functions in other languages. That said, this power can be complex and confusing.
+
+This tour of the hidden power of JavaScript functions is more of an overview of what's possible. As you continue building JavaScript applications, you'll find more use cases these techniques. For now, use the tools you're comfortable with and try experimenting with new ones from time to time.
 
 ## Exercise
 
@@ -428,3 +430,4 @@ Functions in JavaScript are __very powerful__ and in many ways they are more usa
 
 - [http://ryanguill.com/functional/higher-order-functions/2016/05/18/higher-order-functions.html](http://ryanguill.com/functional/higher-order-functions/2016/05/18/higher-order-functions.html)
 - [http://reactivex.io/learnrx/](http://reactivex.io/learnrx/)
+- [Youtube - JavaScript Scope Chains and Closures](https://www.youtube.com/watch?v=zRZNb4GDOPI&t=422)
