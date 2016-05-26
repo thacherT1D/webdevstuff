@@ -245,7 +245,7 @@ for(var func of arr) {
 }
 ```
 
-Because functions are not executed immediately, they'll output the final value of `i` multiple times. To maintain each value of `i`, the `for` loop's body can be wrapped in an IIFE.
+Because callback functions are not executed immediately, they'll output the final value of `i` multiple times. To maintain each value of `i`, the `for` loop's body can be wrapped in an IIFE.
 
 ```javascript
 var arr = [];
