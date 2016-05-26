@@ -411,7 +411,7 @@ var arr = [1, 2, 3, 4];
 var result = 0;
 
 for (var num of arr) {
-  result += num;
+  result = result + num;
 }
 
 console.log(result); // 10
@@ -423,7 +423,7 @@ var arr = [1, 2, 3, 4];
 var result = 1;
 
 for (var num of arr) {
-  result *= num;
+  result = result + num;
 }
 
 console.log(result); // 24
@@ -438,15 +438,17 @@ The `reduce` method makes these differences parameters that you can specify. Alt
 
 ```javascript
 var arr = [1, 2, 3, 4];
-var sum = arr.reduce(function(result, num) {
-  return result + sum;
+
+var sum = arr.reduce(function(result, element) {
+  return result + element;
 }, 0);
-var product = arr.reduce(function(result, num) {
-  return result * sum;
+
+var product = arr.reduce(function(result, element) {
+  return result * element;
 }, 1);
 
-console.log(sum);      // 10
-console.log(product);  // 24
+console.log(sum);     // 10
+console.log(product); // 24
 ```
 
 There are many situations when you are coding of keeping that running total (or `result`) and performing some operation. This may be a great place to use the reduce method.  
