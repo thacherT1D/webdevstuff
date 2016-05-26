@@ -428,6 +428,6 @@ This tour of the hidden power of JavaScript functions is more of an overview of 
 
 ## Resources
 
-- [http://ryanguill.com/functional/higher-order-functions/2016/05/18/higher-order-functions.html](http://ryanguill.com/functional/higher-order-functions/2016/05/18/higher-order-functions.html)
-- [http://reactivex.io/learnrx/](http://reactivex.io/learnrx/)
+- [Functional Programming in Javascript](http://reactivex.io/learnrx/)
+- [Map, Reduce and other Higher Order Functions by Ryan Guill](http://ryanguill.com/functional/higher-order-functions/2016/05/18/higher-order-functions.html)
 - [Youtube - JavaScript Scope Chains and Closures](https://www.youtube.com/watch?v=zRZNb4GDOPI&t=422)
