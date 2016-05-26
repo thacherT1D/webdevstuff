@@ -119,7 +119,7 @@ for (var element of iterable) {
 
 Until you absolutely need to share data across may different functions, then we recommend that you declare variables as local as possible. Since variables in the global scope can be changed from anywhere, it's hard to reason about how these variables change over time as the program executes.
 
-## What's higher-order function?
+## What's a higher-order function?
 
 A **higher-order function** either accepts a function as an argument or returns a function. The concept of higher-order functions is rooted in mathematics, specifically [lambda calculus](https://en.wikipedia.org/wiki/Lambda_calculus).
 
