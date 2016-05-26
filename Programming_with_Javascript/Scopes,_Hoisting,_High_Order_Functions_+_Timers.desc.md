@@ -120,9 +120,7 @@ person1.sayHi.call(person2);
 
 ## What are the two types of scope?
 
-A **scope** is a list of variables and functions the current line of execution can access. Depending on what scopes are available to the current line of execution, a specific set of variables and functions are possible To use. The key to understanding scope in JavaScript is with functions. 
-
-There are two types of scope in ECMAScript 5.
+A **scope** is a list of variables and functions available for use on the current line of execution. There are two types of scope in ECMAScript 5.
 
 1. Global scope
 2. Function scope
@@ -135,19 +133,19 @@ var name = 'Mary';
 console.log(window);
 ```
 
-On the other hand, the a local, function scope is created is created when it's invoked.
+In addition, when a function is invoked, an isolated function scope is created just for that invocation.
 
 ```javascript
 var a = 'outer';
 
-function functionScope() {
+function myFunction() {
 	var b = 'inner';
 
   console.log(a); // outer
   console.log(b); // inner
 }
 
-functionScope();
+myFunction();
 
 console.log(a); // outer
 console.log(b); // Uncaught ReferenceError: b is not defined
