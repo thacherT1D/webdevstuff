@@ -1,7 +1,7 @@
 ## Objectives
 
-- Use the `call` and `apply` methods to invoke a function.
 - Use the `arguments` and `this` keywords inside an invoked function.
+- Use the `call` and `apply` methods to invoke a function.
 - Describe the two types of scope.
 - Explain variable hoisting.
 - Use Immediately Invoked Functional Expressions (IIFEs) to introduce scope.
@@ -11,36 +11,6 @@
   - Higher Order Function
 - Use the `map`, `filter`, and `reduce` methods on arrays.
 - Explain what is a closure.
-
-## How do you use the `call` and `apply` methods to invoke a function?
-
-When you first studied data types, you learned about the primitive types (i.e. booleans, numbers, strings, null, undefined, and symbols) and the reference types (i.e. objects and arrays). At first, functions seem like a built-in programming construct like `for` loops and `if` statements. In reality, functions are another example of a reference type. That's why functions can be assigned to variables using a **function expression**.
-
-```javascript
-var myFunction = function() {
-  // Do some stuff
-};
-```
-
-As you can see, functions behave exactly like any other data type. What makes a function different than the other types is the ability to invoke its executable code. The vast majority of the time, functions are invoked using the parentheses `()` operator, passing in an optional set of arguments.
-
-```javascript
-myFunction(arg1, arg2, arg3);
-```
-
-But a function can also be invoked with the `call`, and `apply` methods. Both are very similar in purpose, but have a slightly different input.
-
-The `call` method takes a `this` context as well as the arguments immediately after.
-
-```javascript
-myFunction.apply.call(null, arg1, arg2, arg3);
-```
-
-While the `apply` method takes a `this` context as well as an array of arguments to the function.
-
-```javascript
-myFunction.apply(null, [arg1, arg2, arg3]);
-```
 
 ## How do you use the `arguments` and `this` keywords inside an invoked function?
 
@@ -85,7 +55,35 @@ var sayHi = function() {
 sayHi();
 ```
 
-### Changing the value of `this` using call or apply
+## How do you use the `call` and `apply` methods to invoke a function?
+
+When you first studied data types, you learned about the primitive types (i.e. booleans, numbers, strings, null, undefined, and symbols) and the reference types (i.e. objects and arrays). At first, functions seem like a built-in programming construct like `for` loops and `if` statements. In reality, functions are another example of a reference type. That's why functions can be assigned to variables using a **function expression**.
+
+```javascript
+var myFunction = function() {
+  // Do some stuff
+};
+```
+
+As you can see, functions behave exactly like any other data type. What makes a function different than the other types is the ability to invoke its executable code. The vast majority of the time, functions are invoked using the parentheses `()` operator, passing in an optional set of arguments.
+
+```javascript
+myFunction(arg1, arg2, arg3);
+```
+
+But a function can also be invoked with the `call`, and `apply` methods. Both are very similar in purpose, but have a slightly different input.
+
+The `call` method takes a `this` context as well as the arguments immediately after.
+
+```javascript
+myFunction.apply.call(null, arg1, arg2, arg3);
+```
+
+While the `apply` method takes a `this` context as well as an array of arguments to the function.
+
+```javascript
+myFunction.apply(null, [arg1, arg2, arg3]);
+```
 
 Imagine a scenario where you have two objects that are nearly identical except for their `name` property.
 
