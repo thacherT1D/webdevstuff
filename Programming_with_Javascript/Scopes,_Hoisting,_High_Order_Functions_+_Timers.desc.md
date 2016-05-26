@@ -326,22 +326,24 @@ var squares = arr.map(function(element) {
   return element * element;
 });
 
-console.log(squares); // 1,4,9,16
+console.log(squares); // [1, 4, 9, 16]
 ```
 
-By comparison, how would we do this with a loop?
+By comparison, how would you do this with a loop?
 
 ```javascript
 var arr = [1, 2, 3, 4];
+
 var squares = [];
-for (num of arr) {
-  squares.push(num * num);
+
+for (var element of arr) {
+  squares.push(element * element);
 }
 
-console.log(squares); // 1,4,9,16
+console.log(squares); // [1, 4, 9, 16]
 ```
 
-This is really useful when grabbing information from your API responses and changing it in some way.
+This is really useful when grabbing information from an HTTP response and transforming the data in some way.
 
 See the [`Array.prototype.map` method](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) documentation on the Mozilla Developer Network.
 
@@ -353,25 +355,28 @@ After `map`, `filter` (MDN) is probably the second most commonly used higher ord
 
 ```javascript
 var arr = [1, 2, 3, 4];
-var onlyOdds = arr.filter(function(num) {
-  return num % 2 !== 0;
+
+var odds = arr.filter(function(element) {
+  return element % 2 !== 0;
 });
 
-console.log(onlyOdds); // 1,3
+console.log(odds); // [1, 3]
 ```
 
-By comparison, how would we do this with a loop?
+By comparison, how would you do this with a loop?
 
 ```javascript
 var arr = [1, 2, 3, 4];
-var onlyOdds = [];
-for (num of arr) {
+
+var odds = [];
+
+for (var element of arr) {
   if (num % 2 !== 0) {
-    onlyOdds.push(num);
+    odds.push(element);
   }
 }
 
-console.log(onlyOdds); // 1,3
+console.log(odds); // [1, 3]
 ```
 
 **Exercise** How would we filter the movies in the search results from OMDB with an ratings that are kid-friendly (G or PG)?
