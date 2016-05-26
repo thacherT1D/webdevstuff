@@ -117,7 +117,7 @@ for (var element of iterable) {
 }
 ```
 
-Until you absolutely need to share data across may different functions, then we recommend that you declare variables as local as possible. Since variables in the global scope can be changed from anywhere, it's hard to reason about how these variables change as the program executes overtime.
+Until you absolutely need to share data across may different functions, then we recommend that you declare variables as local as possible. Since variables in the global scope can be changed from anywhere, it's hard to reason about how these variables change over time as the program executes.
 
 ## Higher Order Functions
 
