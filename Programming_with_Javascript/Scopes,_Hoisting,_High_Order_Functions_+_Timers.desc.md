@@ -3,9 +3,7 @@
 - Explain the three types of scope.
 - Explain what hoisting is.
 - Use do IIFEs to introduce scope.
-- Define the following:
-  - Higher Order Function
-  - First Class Function
+- Explain what a higher order function is.
 - Use the `map`, `filter`, and `reduce` methods on arrays.
 - Explain what a closure is.
 
