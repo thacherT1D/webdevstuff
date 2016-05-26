@@ -2,8 +2,8 @@
 
 - Use the `arguments` and `this` keywords inside an invoked function.
 - Use the `call` and `apply` methods to invoke a function.
-- Describe the two types of scope.
-- Explain variable hoisting.
+- Explain the two types of scope.
+- Explain what hoisting is.
 - Use Immediately Invoked Functional Expressions (IIFEs) to introduce scope.
 - Define the following:
   - First Class Function
@@ -150,49 +150,58 @@ console.log(a); // outer
 console.log(b); // Uncaught ReferenceError: b is not defined
 ```
 
-### Name Collisions
-
-It's possible to have two variables named the same thing, but on different scopes. It's considered a bad habit to write code this way because it becomes very confusing, but it's good to know that the following is perfectly legal:
+It's possible to have two variables named the same thing, but on different scopes. It's considered a bad habit to write code this way because it becomes very confusing, but it's good to know that the following is perfectly legal.
 
 ```javascript
-var globalVariable = "The global version";
+var a = 'outer';
 
-function test() {
-    var globalVariable = "The impostor";
-    console.log(globalVariable);
+function myFunction() {
+  var a = 'inner';
+  console.log(a); // inner
 }
 
-test();
-console.log(globalVariable);
+myFunction();
+
+console.log(a); // outer
 ```
 
-When we run this code, when we call the function `test` then "The impostor" is printed to our screen. When we `console.log(globalVariable);` then "the global version" was printed. Is this what you expected?  In JavaScript, the most local version of a variable is used naturally by the interpreter. What will happen when we run this code?
+Is this what you expected? In JavaScript, the most local version of a variable is accessed by the interpreter first.
+
+### Exercise
+
+What will happen when this code is run?
 
 ```javascript
-var globalVariable = "The global version";
+var a = 'outer';
 
-function test() {
-    globalVariable = "The impostor";
-    console.log(globalVariable);
+function myFunction() {
+  a = 'inner';
+  console.log(a); // ???
 }
 
-test();
-console.log(globalVariable);
+myFunction();
+
+console.log(a); // ???
 ```
 
-This time, we overwrote the global variable from within our function and so printed "The impostor" twice.
+## What's hoisting?
 
-### Declaring variables in a function
-
-JavaScript has this "feature" called variable hoisting. When it reads a function, it first processes variable declarations (just the declarations, not assignments). It then runs the function. This means that variables can actually be assigned before they are actually declared (:facepalm:).
+JavaScript has this "feature" called **hoisting**. When it reads a function, it first processes variable declarations (just the declarations, not assignments). It then runs the function. This means that variables can actually be assigned before they are actually declared (:facepalm:).
 
 ```javascript
 function myFunction() {
-  console.log(amILocal);
-  amILocal = 'maybe';
-  // Any code here
-  var amILocal = 'oh wait...yes I am.';
+	console.log(num);
+
+	num = 2;
+
+  console.log(num);
+
+  var num = 1;
+
+  console.log(num);
 }
+
+myFunction();
 ```
 
 What does this mean? There are a few reasons why it's important to know this.
