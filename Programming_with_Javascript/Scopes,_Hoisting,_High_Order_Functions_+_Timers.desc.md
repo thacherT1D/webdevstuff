@@ -319,10 +319,10 @@ for (var num of arr) {
 console.log(result); // 24
 ```
 
-Can you spot the differences? They are incredibly similar, but they differ by 2 pieces:
+Can you spot the differences? They are incredibly similar, but they differ by 2 pieces.
 
-* The initial value of `result` is `0` for addition and `1` for multiplication.
-* The operation is `+` for addition, `*` for multiplication.
+- The initial value of `result` is `0` for addition and `1` for multiplication.
+- The operation is `+` for addition and `*` for multiplication.
 
 The `reduce` method makes these differences parameters that you can specify. Although you cannot pass an operator like `+` or `*`, you can pass in something that takes in two values and produces the sum or product (A FUNCTION!).
 
