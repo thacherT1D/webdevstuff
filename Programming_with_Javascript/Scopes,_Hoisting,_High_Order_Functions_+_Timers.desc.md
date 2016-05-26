@@ -324,7 +324,7 @@ Can you spot the differences? They are incredibly similar, but they differ by 2 
 - The initial value of `result` is `0` for addition and `1` for multiplication.
 - The operation is `+` for addition and `*` for multiplication.
 
-The `reduce` method makes these differences parameters that you can specify. Although you cannot pass an operator like `+` or `*`, you can pass in something that takes in two values and produces the sum or product (A FUNCTION!).
+The `reduce` method takes these differences as arguments that you can specify. Although you cannot pass an operator like `+` or `*`, you can pass in something that takes in two values and produces the sum or product. A function!
 
 ```javascript
 var arr = [1, 2, 3, 4];
