@@ -138,7 +138,7 @@ In addition, when a function is invoked, an isolated function scope is created j
 var a = 'outer';
 
 function myFunction() {
-	var b = 'inner';
+  var b = 'inner';
 
   console.log(a); // outer
   console.log(b); // inner
@@ -188,10 +188,10 @@ JavaScript has this "feature" called variable hoisting. When it reads a function
 
 ```javascript
 function myFunction() {
-	console.log(amILocal);
-	amILocal = 'maybe';
-	// Any code here
-	var amILocal = 'oh wait...yes I am.';
+  console.log(amILocal);
+  amILocal = 'maybe';
+  // Any code here
+  var amILocal = 'oh wait...yes I am.';
 }
 ```
 
@@ -232,7 +232,7 @@ Ever wondered why you have seen entire files wrapped in an IIFE?
 
 ```javascript
 (function () {
-	// ...All Code Here...
+  // ...All Code Here...
 })();
 ```
 
@@ -243,12 +243,12 @@ We can use IIFEs with arguments as well. Consider the following code. What do yo
 ```javascript
 var arr = [];
 for(var i = 0; i < 5; i++) {
-	arr.push(function() {
-	  console.log(i);
-	});
+  arr.push(function() {
+    console.log(i);
+  });
 }
 for(func of arr) {
-	func();
+  func();
 }
 ```
 
@@ -257,14 +257,14 @@ Because functions are not executed immediately, they will output the number 5 mu
 ```javascript
 var arr = [];
 for(var i = 0; i < 5; i++) {
-	(function (j) {
-		arr.push(function() {
-		  console.log(j);
-		});
-	})(i);
+  (function (j) {
+    arr.push(function() {
+      console.log(j);
+    });
+  })(i);
 }
 for(func of arr) {
-	func();
+  func();
 }
 ```
 
@@ -281,9 +281,9 @@ The concept of "High Order Functions" has it's roots in mathematics (specifcally
 
 ```
 function returnAFunction() {
-	return function(){
-		console.log("I'm an inner function!");
-	}
+  return function(){
+    console.log("I'm an inner function!");
+  }
 }
 
 var returnedFunction = returnAFunction();
@@ -302,7 +302,7 @@ The `forEach` method ([MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScr
 ```javascript
 var arr = ['a', 'b', 'c', 'd'];
 arr.forEach(function(element) {
-	console.log(element);
+  console.log(element);
 });
 ```
 
@@ -311,7 +311,7 @@ Its behavior is very much similar to a `for` and `for of`  loop.
 ```javascript
 var arr = ['a', 'b', 'c', 'd'];
 for (element of arr) {
-	console.log(element);
+  console.log(element);
 };
 ```
 
@@ -338,7 +338,7 @@ By comparison, how would we do this with a loop?
 var arr = [1, 2, 3, 4];
 var squares = [];
 for (num of arr) {
-	squares.push(num * num);
+  squares.push(num * num);
 }
 
 console.log(squares); // 1,4,9,16
@@ -367,9 +367,9 @@ By comparison, how would we do this with a loop?
 var arr = [1, 2, 3, 4];
 var onlyOdds = [];
 for (num of arr) {
-	if (num % 2 !== 0) {
-		onlyOdds.push(num);
-	}
+  if (num % 2 !== 0) {
+    onlyOdds.push(num);
+  }
 }
 
 console.log(onlyOdds); // 1,3
@@ -441,11 +441,11 @@ Closures are a feature of high order functions. To understand closures, lets rev
 
 ```javascript
 function returnAFunction() {
-	var closedOver = "This information is closed over";
+  var closedOver = "This information is closed over";
 
-	return function(){
-		console.log(closedOver);
-	}
+  return function(){
+    console.log(closedOver);
+  }
 }
 
 var returnedFunction = returnAFunction();
@@ -464,9 +464,9 @@ This is called a __closure__ because the function that is returned (`returnedFun
 function closeMe() {
   var count = 0;
 
-	return function() {
-	   return count++;
-	}
+  return function() {
+     return count++;
+  }
 }
 
 var counter = closeMe();
