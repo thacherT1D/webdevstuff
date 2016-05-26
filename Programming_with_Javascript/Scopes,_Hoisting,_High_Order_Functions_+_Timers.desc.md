@@ -57,18 +57,16 @@ sayHi();
 
 ## How do you use the `call` and `apply` methods to invoke a function?
 
-When you first studied data types, you learned about the primitive types (i.e. booleans, numbers, strings, null, undefined, and symbols) and the reference types (i.e. objects and arrays). At first, functions seem like a built-in programming construct like `for` loops and `if` statements. In reality, functions are another example of a reference type. That's why functions can be assigned to variables using a **function expression**.
+When you first studied data types, you learned about the primitive types (i.e. booleans, numbers, strings, null, undefined, and symbols) and the reference types (i.e. objects and arrays). At first, functions seem like a built-in programming construct like `for` loops and `if` statements.
+
+In reality, functions are another example of a reference type. That's why functions can be assigned to variables using a **function expression**. What makes a function different than the other types is the ability to invoke its executable code. The vast majority of the time, functions are invoked using the parentheses `()` operator, passing in an optional set of arguments.
 
 ```javascript
-var myFunction = function() {
-  // Do some stuff
+var add = function(a, b) {
+  return a + b;
 };
-```
 
-As you can see, functions behave exactly like any other data type. What makes a function different than the other types is the ability to invoke its executable code. The vast majority of the time, functions are invoked using the parentheses `()` operator, passing in an optional set of arguments.
-
-```javascript
-myFunction(arg1, arg2, arg3);
+add(1, 2); // 3
 ```
 
 But a function can also be invoked with the `call`, and `apply` methods. Both are very similar in purpose, but have a slightly different input.
@@ -76,13 +74,13 @@ But a function can also be invoked with the `call`, and `apply` methods. Both ar
 The `call` method takes a `this` context as well as the arguments immediately after.
 
 ```javascript
-myFunction.apply.call(null, arg1, arg2, arg3);
+add.apply.call(null, 1, 2);
 ```
 
 While the `apply` method takes a `this` context as well as an array of arguments to the function.
 
 ```javascript
-myFunction.apply(null, [arg1, arg2, arg3]);
+add.apply(null, [1, 2]);
 ```
 
 Imagine a scenario where you have two objects that are nearly identical except for their `name` property.
