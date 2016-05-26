@@ -223,7 +223,7 @@ One of the ways we can introduce scope is by creating an immediately invoked fun
 
 ```javascript
 (function() {
-  // ...All Code Here...
+  // ALL CODE HERE
 })();
 ```
 
