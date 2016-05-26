@@ -66,7 +66,7 @@ var add = function(a, b) {
   return a + b;
 };
 
-add(1, 2); // 3
+add(1, 2);  // 3
 ```
 
 But a function can also be invoked with the `call`, and `apply` methods. Both are very similar in purpose, but have a slightly different input.
@@ -74,13 +74,13 @@ But a function can also be invoked with the `call`, and `apply` methods. Both ar
 The `call` method takes a `this` context as well as the arguments immediately after.
 
 ```javascript
-add.apply.call(null, 1, 2);
+add.apply.call(null, 1, 2); // 3
 ```
 
 While the `apply` method takes a `this` context as well as an array of arguments to the function.
 
 ```javascript
-add.apply(null, [1, 2]);
+add.apply(null, [1, 2]);  // 3
 ```
 
 Imagine a scenario where you have two objects that are nearly identical except for their `name` property.
