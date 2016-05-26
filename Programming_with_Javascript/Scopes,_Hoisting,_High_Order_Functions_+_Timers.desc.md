@@ -85,7 +85,7 @@ console.log(a); // ???
 
 ## What's hoisting?
 
-JavaScript has this "feature" called **hoisting**. When a function is invoked, the interpreter first processes variable declarations. Just the declarations, not the assignments. Afterwards, the function's body is executed. As a result, it's possible to write code that assigns a value to a variable before it's declared. :facepalm:
+JavaScript has this "feature" called **hoisting**. When a function is invoked, the interpreter first adding variables declared with the `var` keyword to the current scope. Afterwards, the function's body is executed and values are eventually assigned to these variables. As a result, it's possible to write code to assign a value to a variable before it's declared. :facepalm:
 
 ```javascript
 function myFunction() {
