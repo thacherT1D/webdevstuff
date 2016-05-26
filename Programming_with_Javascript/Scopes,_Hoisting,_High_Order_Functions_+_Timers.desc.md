@@ -274,7 +274,7 @@ Higher-order functions describe functions that meet one of two criteria:
 
 The concept of "High Order Functions" has it's roots in mathematics (specifcally [lambda calculus](https://en.wikipedia.org/wiki/Lambda_calculus)). These types functions are very common in JavaScript, but are often a tricky concept when first approached. The crucial lesson is that in JavaScript, variables can contain a function. Functions are just like Number, String, or other datatypes in this way. Try using this simple high order function which returns a function:
 
-```
+```javascript
 function returnAFunction() {
   return function(){
     console.log("I'm an inner function!");
