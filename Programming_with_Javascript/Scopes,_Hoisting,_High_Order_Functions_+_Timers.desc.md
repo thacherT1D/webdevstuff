@@ -275,7 +275,7 @@ for(var func of arr) {
 }
 ```
 
-By creating an IIFE with one parameter and invoking it with the value of `i`, the value of `i` is stored in the parameter `j`. This works because the value of `i` is _not_ a reference type.
+By creating an IIFE with one parameter and invoking it with the value of `i`, the value of `i` is stored in the parameter `j`.
 
 ## Higher Order Functions
 
