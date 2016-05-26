@@ -1,6 +1,6 @@
 ## Objectives
 
-- Use the methods `call` and `apply` to invoke a function.
+- Use the `call` and `apply` methods to invoke a function.
 - Describe the two types of scope.
 - Explain variable hoisting.
 - Use Immediately Invoked Functional Expressions (IIFEs) to introduce scope.
@@ -11,7 +11,7 @@
 - Use the `map`, `filter`, and `reduce` methods on arrays.
 - Explain what is a closure.
 
-## How do you use the methods `call` and `apply` to invoke a function?
+## How do you use the `call` and `apply` methods to invoke a function?
 
 When we first started talking about data types, we mentioned many primitive types (like strings, numbers, booleans, null, etc) and reference types (objects and arrays). Functions seem like this magical third type that we think of as a programming construct (like loops and if statements). In reality, functions is actually another example of a reference type. We can assign functions to variables using a function expressions.
 
