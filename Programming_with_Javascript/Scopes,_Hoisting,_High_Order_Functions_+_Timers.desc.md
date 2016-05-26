@@ -245,7 +245,7 @@ for(var func of arr) {
 }
 ```
 
-Because callback functions are not executed immediately, they'll output the final value of `i` multiple times. To maintain each value of `i`, the `for` loop's body can be wrapped in an IIFE.
+Because these callback functions are not executed immediately, they'll output the final value of `i` multiple times. To maintain each value of `i`, the `for` loop's body can be wrapped in an IIFE.
 
 ```javascript
 var arr = [];
@@ -263,28 +263,25 @@ for(var func of arr) {
 }
 ```
 
-By creating an IIFE with one parameter and invoking it with the value of `i`, a copy of `i` is stored in the parameter `j`.
+By creating an IIFE with one parameter and invoking it with the value of `i`, the value of `i` is stored in the parameter `j`. This works because the value of `i` is _not_ a reference type.
 
 ## Higher Order Functions
 
-Higher-order functions describe functions that meet one of two criteria:
+A **higher order function** either accepts a function as an argument or returns a function. The concept of higher order functions is rooted in mathematics, specifically [lambda calculus](https://en.wikipedia.org/wiki/Lambda_calculus).
 
-1. A function that returns a function
-2. A function that accepts a function as an argument
-
-The concept of "High Order Functions" has it's roots in mathematics (specifcally [lambda calculus](https://en.wikipedia.org/wiki/Lambda_calculus)). These types functions are very common in JavaScript, but are often a tricky concept when first approached. The crucial lesson is that in JavaScript, variables can contain a function. Functions are just like Number, String, or other datatypes in this way. Try using this simple high order function which returns a function:
+As you've seen, higher order functions are very common in JavaScript, but are often a tricky concept to wrap your brain around. The key to higher order functions is that, in JavaScript, variables can contain a function. Functions are just like number, string, or other datatypes in this way. Try using this simple high order function which returns a function.
 
 ```javascript
 function returnAFunction() {
-  return function(){
-    console.log("I'm an inner function!");
+  return function() {
+    console.log("I'm a returned function!");
   }
 }
 
 var returnedFunction = returnAFunction();
-returnedFunction();
+returnedFunction(); //I'm a returned function!
 
-// Similarly, you can do
+// Similarly, you can invoke the returned function like this.
 returnAFunction()();
 ```
 
