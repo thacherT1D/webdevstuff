@@ -376,7 +376,9 @@ createClosure()();
 
 In the `createClosure` function scope, a `message` variable is declared and assigned a value. Then a new function is created and given a reference to the `createClosure` function scope. This newly created function is then returned and stored in the `closure` variable. This function is a closure because, when invoked, it can reference variables inside its parent scope.
 
-Here's another example of a closure.
+### Exercise
+
+What does this code output?
 
 ```javascript
 function createClosure() {
@@ -400,21 +402,6 @@ console.log(closure2());  // ???
 console.log(closure2());  // ???
 console.log(closure2());  // ???
 ```
-
-When run, the output is be.
-
-```
-Closure 1
-0
-1
-2
-Closure 2
-0
-1
-2
-```
-
-As you can see, each of the closures can access their parent's scope. The closures each have a unique parent scope that was closed over.
 
 ## Conclusion
 
