@@ -74,7 +74,7 @@ But a function can also be invoked with the `call`, and `apply` methods. Both ar
 The `call` method takes a `this` context as well as the arguments immediately after.
 
 ```javascript
-add.apply.call(null, 1, 2); // 3
+add.call(null, 1, 2); // 3
 ```
 
 While the `apply` method takes a `this` context as well as an array of arguments to the function.
