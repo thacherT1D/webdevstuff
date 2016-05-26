@@ -359,25 +359,25 @@ Then write a function named `flatten` that takes in one argument, `arr`, (array 
 A **closure** is a function that encloses the scope that exists when its created. To understand closures, lets revisit the original example of a high order function, but make one modification.
 
 ```javascript
-function returnAFunction() {
-  var closedOver = "This information is closed over";
+function createClosure() {
+  var message = 'This information is enclosed with the returned function.';
 
   return function() {
-    console.log(closedOver);
+    console.log(message);
   }
 }
 
-var returnedFunction = returnAFunction();
-returnedFunction();
+var closure = createClosure();
+closure();
 
 // Similarly, you can do
-returnAFunction()();
-
-// This however, breaks
-console.log(closedOver);
+createClosure()();
 ```
 
-The returned function contains `closedOver` variable that was declared in its scope. When the function was created at the `return` statement, the variable `closedOver` had a value. That value is said to be "closed over" because the inner function retains a reference to it. Lets look at another example of a closure:
+In the `createClosure` function scope, a `message` variable is declared and assigned a value. Then a new function is created and given a reference to the `createClosure` function scope. This newly created function is a closure because, when invoked, it can reference variables inside the parent scope.
+
+
+ Lets look at another example of a closure:
 
 ```javascript
 function closeMe() {
