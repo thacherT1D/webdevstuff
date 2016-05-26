@@ -101,7 +101,7 @@ var person2 = {
 };
 ```
 
-Looks like the definition of the `sayHi` method duplicated twice. So is it possible to borrow the `sayHi` method from `person1`, but instead of `this.name` referring to Elie, have it refer to Janey? It sure is with the help of the `call` method!
+Looks like the definition of the `sayHi` method duplicated twice. Is it possible to borrow the `sayHi` method from `person1`, but instead of `this.name` referring to Elie, have it refer to Janey? It sure is, with the help of the `call` method!
 
 ```javascript
 var person1 = {
