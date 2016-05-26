@@ -1,6 +1,7 @@
 ## Objectives
 
 - Use the `call` and `apply` methods to invoke a function.
+- Use the `arguments` and `this` keywords inside an invoked function.
 - Describe the two types of scope.
 - Explain variable hoisting.
 - Use Immediately Invoked Functional Expressions (IIFEs) to introduce scope.
@@ -41,7 +42,9 @@ While the `apply` method takes a `this` context as well as an array of arguments
 myFunction.apply(null, [arg1, arg2, arg3]);
 ```
 
-So far, we have only used the variable `this` in our event listeners. In JavaScript, every time that a function is invoked, two special keywords are created that live in the scope of that function—`arguments` and `this`.
+## How do you use the `arguments` and `this` keywords inside an invoked function?
+
+So far, we've only used the `this` keyword in an event listener. In JavaScript, every time a function is invoked, two special keywords are created that live in the scope of that function—`arguments` and `this`.
 
 The `arguments` keyword is an array-like object that holds each argument passed into the function. The `arguments` keyword is array-like because it has a brackets `[]` operator, but doesn't have native array methods like `push` and `pop`.
 
@@ -84,45 +87,42 @@ sayHi();
 
 ### Changing the value of `this` using call or apply
 
-So in these past examples we know with 100% certainty what the value of the keyword `this` is - so why would we ever want to change it? Well, in these examples we wouldn't, but what about something like this:
+Imagine a scenario where you have two objects that are nearly identical except for their `name` property.
 
 ```javascript
-     var person = {
-        name: "Elie",
-        sayHi: function() {
-            return `${this.name} says hi!`
-        }
-    };
+var person1 = {
+  name: 'Elie',
+  sayHi: function() {
+    console.log(`${this.name} says hi!`);
+  }
+};
 
-    var person2 = {
-        name: "Janey",
-        sayHi: function() {
-            return `${this.name} says hi!`
-        }
-    }
+var person2 = {
+  name: 'Janey',
+  sayHi: function() {
+    console.log(`${this.name} says hi!`);
+  }
+};
 ```
 
-There's a lot of duplication going on here! We just repeated the entire definition of sayHi allover again! So how can we borrow the sayHi function from person but instead of `this.name` referring to "Elie", we want it to refer to "Janey". Call/Apply to the rescue!
-
+Looks like the definition of the `sayHi` method duplicated twice. So is it possible to borrow the `sayHi` method from `person1`, but instead of `this.name` referring to Elie, have it refer to Janey? It sure is with the help of the `call` method!
 
 ```javascript
-     var person = {
-        name: "Elie",
-        sayHi: function() {
-            return `${this.name} says hi!`
-        }
-    };
+var person1 = {
+  name: 'Elie',
+  sayHi: function() {
+    console.log(`${this.name} says hi!`);
+  }
+};
 
-    var person2 = {
-        name: "Janey",
-    }
+var person2 = {
+  name: 'Janey'
+}
 
-    // what if we want to borrow the sayHi method from person to be used on person?
-
-    person.sayHi.call(person2);
+person1.sayHi.call(person2);
 ```
 
-# What is scope?
+## What is scope?
 
 In the most simpliest of terms, scope is about variable accessibility. Depending on which scope a variable is defined, it may be accessible or inaccessible in another scope. The key to understanding scope with JavaScript is functions. A scope should be thought of as the list of variables and functions the program has access to at any given moment. Depending on the scope that the current line is being executed within, a different set of variables and functions could be available in that scope.
 
