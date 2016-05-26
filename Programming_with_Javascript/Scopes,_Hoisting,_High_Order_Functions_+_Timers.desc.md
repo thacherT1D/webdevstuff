@@ -374,13 +374,12 @@ closure();
 createClosure()();
 ```
 
-In the `createClosure` function scope, a `message` variable is declared and assigned a value. Then a new function is created and given a reference to the `createClosure` function scope. This newly created function is a closure because, when invoked, it can reference variables inside the parent scope.
+In the `createClosure` function scope, a `message` variable is declared and assigned a value. Then a new function is created and given a reference to the `createClosure` function scope. This newly created function is then returned and stored in the `closure` variable. This function is a closure because, when invoked, it can reference variables inside its parent scope.
 
-
- Lets look at another example of a closure:
+Here's another example of a closure.
 
 ```javascript
-function closeMe() {
+function createClosure() {
   var count = 0;
 
   return function() {
@@ -388,34 +387,34 @@ function closeMe() {
   }
 }
 
-var counter = closeMe();
-var secondCounter = closeMe();
+var closure1 = createClosure();
+var closure2 = createClosure();
 
-console.log(counter());                 // ?
-console.log(counter());                 // ?
-console.log(counter());                 // ?
-console.log(counter());                 // ?
-console.log("=========");
-console.log(secondCounter());           // ?
-console.log(secondCounter());           // ?
-console.log(secondCounter());           // ?
-console.log(secondCounter());           // ?
+console.log('Closure 1');
+console.log(closure1());  // ???
+console.log(closure1());  // ???
+console.log(closure1());  // ???
+
+console.log('Closure 2');
+console.log(closure2());  // ???
+console.log(closure2());  // ???
+console.log(closure2());  // ???
 ```
-Our Output is:
+
+When run, the output is be.
 
 ```
+Closure 1
 0
 1
 2
-3
-=========
+Closure 2
 0
 1
 2
-3
 ```
 
-As we can see, __each__ of the returned functions have closed over their own environment. The returned functions each have a unique scope that was closed over. The `var count` inside of `secondCounter` is not the same `var count` inside of `counter`.
+As we can see, each of the returned functions have closed over their own environment. The returned functions each have a unique scope that was closed over. The `var count` inside of `secondCounter` is not the same `var count` inside of `counter`.
 
 ## Conclusion
 
