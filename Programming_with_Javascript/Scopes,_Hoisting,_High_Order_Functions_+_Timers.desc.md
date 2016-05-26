@@ -353,7 +353,7 @@ console.log(closure2());  // ???
 console.log(closure2());  // ???
 ```
 
-## How do IIFEs to enclose scope?
+## How do you use IIFEs to enclose scope?
 
 One of the ways to enclose scope is by creating an immediately invoked functional expression (**IIFE**). With IIFEs, code is wrapped in a function, creating a new scope, and then invoked immediately.
 
