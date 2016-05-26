@@ -269,7 +269,7 @@ By creating an IIFE with one parameter and invoking it with the value of `i`, th
 
 A **higher order function** either accepts a function as an argument or returns a function. The concept of higher order functions is rooted in mathematics, specifically [lambda calculus](https://en.wikipedia.org/wiki/Lambda_calculus).
 
-As you've seen, higher order functions are very common in JavaScript, but are often a tricky concept to wrap your brain around. The key to higher order functions is that, in JavaScript, variables can contain a function. Functions are just like number, string, or other datatypes in this way. Try using this simple high order function which returns a function.
+As you've probably seen, higher order functions are very common in JavaScript, but are tricky to wrap your brain around at first. Just remember, in JavaScript, variables can contain a function in the same way they contain a number, string, or other datatype.
 
 ```javascript
 function returnAFunction() {
@@ -285,40 +285,45 @@ returnedFunction(); //I'm a returned function!
 returnAFunction()();
 ```
 
-There are four major functions that get often used are `forEach`, `map`, `filter`, and `reduce`.
+There are four common higher order functions for arrays—`forEach`, `map`, `filter`, and `reduce`.
 
 ## `forEach`
 
-The `forEach` method ([MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)) allows us to apply a function on each element of an array.
+The `forEach` method invokes a callback function for each element of an array.
 
 ```javascript
-var arr = ['a', 'b', 'c', 'd'];
+var arr = [1, 2, 3, 4];
+
 arr.forEach(function(element) {
   console.log(element);
 });
 ```
 
-Its behavior is very much similar to a `for` and `for of`  loop.
+Which is very much similar to `for` loops.
 
 ```javascript
-var arr = ['a', 'b', 'c', 'd'];
-for (element of arr) {
+var arr = [1, 2, 3, 4];
+
+for (var element of arr) {
   console.log(element);
 };
 ```
 
+See the [`Array.prototype.forEach` method](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) documentation on the Mozilla Developer Network.
+
 ## `map`
 
-The `map` method ([MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)) is very powerful as it simply transforms an array using a function. In particular, it does the following:
+The `map` method invokes a callback function for each element of an array, but allows the element to be transformed and pushed to a new array. In other words, the `map` method:
 
-* Creates a new array of the same size as the original array.
-* Applies a function on each element of the original array.
-* Places the returned value of the function in its corresponding place in the new array.
+- Creates a new array that's the same size as the original array.
+- Applies a callback function to each element of the original array.
+- Pushes the return value of the callback function into the new array.
 
 ```javascript
 var arr = [1, 2, 3, 4];
-var squares = arr.map(function(num) {
-  return num * num;
+
+var squares = arr.map(function(element) {
+  return element * element;
 });
 
 console.log(squares); // 1,4,9,16
@@ -338,7 +343,9 @@ console.log(squares); // 1,4,9,16
 
 This is really useful when grabbing information from your API responses and changing it in some way.
 
-**Exercise** How would we get the IMDB rating as a number from a search request?
+See the [`Array.prototype.map` method](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) documentation on the Mozilla Developer Network.
+
+**EXERCISE:** How would you get the IMDB rating as a number from a search request?
 
 ## `filter`
 
