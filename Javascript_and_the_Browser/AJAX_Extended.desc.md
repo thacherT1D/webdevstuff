@@ -174,6 +174,7 @@ AFTER THE AJAX
 
 ## Resources
 
+- [CORS Anywhere](https://cors-anywhere.herokuapp.com/)
 - [JSON.org](http://json.org/)
 - [jQuery.getJSON()](https://api.jquery.com/jQuery.getJSON/)
 - [MDN - HTTP access control (CORS)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS)
