@@ -126,17 +126,17 @@ A **higher-order function** either accepts a function as an argument or returns 
 As you've probably seen, higher-order functions are very common in JavaScript, but are tricky to wrap your brain around at first. Just remember, in JavaScript, variables can contain a function in the same way they contain a number, string, or other datatype.
 
 ```javascript
-function returnAFunction() {
+function higherOrder() {
   return function() {
     console.log("I'm a returned function!");
   }
 }
 
-var returnedFunction = returnAFunction();
-returnedFunction(); //I'm a returned function!
+var returnedFunction = higherOrder();
+returnedFunction(); // I'm a returned function!
 
 // Similarly, you can invoke the returned function like this.
-returnAFunction()();
+higherOrder()();
 ```
 
 There are four common higher-order functions for arrays—`forEach`, `map`, `filter`, and `reduce`.
