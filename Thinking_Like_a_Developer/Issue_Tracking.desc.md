@@ -3,8 +3,8 @@
 - Explain what issue tracking is.
 - Explain why issue tracking is useful.
 - Explain how issue tracking works.
-- Use GitHub to track issues.
 - Write user stories for tracked issues.
+- Use GitHub to track issues.
 
 ## Resources
 
