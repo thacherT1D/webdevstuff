@@ -34,7 +34,7 @@ A **breakpoint** tells the JavaScript interpreter to pause a running JavaScript 
 
 ## When do you use logging vs debugging?
 
-So far, you've probably used logging way more than debugging for your own programs. Logging is great tool for finding and fixing bugs in smaller programs. But once your programs become larger and more complex, you may want to reach for debugging as it'll help you find and fix bugs faster with complicated logic.
+So far, you've probably used logging way more than debugging for your own programs. Logging is great tool for finding and fixing bugs in smaller programs. But once your programs become larger and more complex, you may want to reach for debugging as it'll help you how scope changes over time.
 
 ## How do you use Chrome's debugger to visualize your code?
 
