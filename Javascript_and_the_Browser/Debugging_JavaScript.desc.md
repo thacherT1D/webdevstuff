@@ -11,9 +11,9 @@ There are many ways to find and resolve bugs in a computer program, but the two
 
 **Logging** is the act of keeping records of the events or computed values that occur within a program. In the simplest case, these records are displayed in the console or persisted to a log file. When your program uses the `console.log()` function, it's logging.
 
-**Debugging** is the act of using a dedicated tool, called a debugger, to pause and step through a running program and inspect its behavior. A debugger is a powerful tool that helps developers visualize how a running program executes.
+**Debugging** is the act of using a dedicated tool, called a debugger, to pause and step through a running program and inspect its behavior. A debugger is a powerful tool that helps developers visualize how a running program executes. And in this lesson, you'll use Chrome's [built-in debugger](https://developer.chrome.com/devtools/docs/javascript-debugging).
 
-In this lesson, you'll use Chrome and its [built-in debugger](https://developer.chrome.com/devtools/docs/javascript-debugging) to pause and inspect a running program. For example, create an `lunch.html` file and add the following code to it.
+For example, create an `lunch.html` file and add the following code to it.
 
 ```html
 <script>
