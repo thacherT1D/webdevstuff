@@ -27,7 +27,7 @@ And then step through the following instructions to see Chrome's [built-in debug
 1. Open the Chrome Developer Tools by pressing `Command + Option + I`.
 1. Click on the Sources tab.
 1. Select the `lunch.html` file from the file tree on the left.
-1. Add a breakpoint by clicking on the first line's number in the gutter.
+1. Add a breakpoint to line 1 by clicking on the line number in the gutter.
 1. Refresh the page the engage the debugger.
 
 A **breakpoint** tells the JavaScript interpreter to pause a running JavaScript program at that line number. Once a program is paused, you can inspect the variables inside the program's scope at that moment in time. You can also step through the program and watch how the variables change when each line is executed.
