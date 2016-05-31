@@ -1,18 +1,92 @@
-## Debugging Using the Sources Tab
+## Objectives
 
-So far we've been debugging issues using `console.log` and while that is a fine place to start, once our programs become larger and more complex, we need better tools to diagnose and fix our errors! But first - lets examine the tool we will be using to do this!
+- Explain what logging vs debugging is.
+- Explain when you use logging vs debugging.
+- Use Chrome's built-in debugger to visualize your code.
 
-## Chrome Developer Tools (Elements, Console, Network, Resources)
+## What's logging vs debugging?
 
-In short, Chrome Developer Tools are freaking sweet. Here is a brief walkthrough of some of the most useful features of the Developer Tools that you will be using with almost every single thing you build in WDI.
+There are many ways to find and resolve bugs in a computer program, but the two most common techniques are logging and debugging.
 
-### The Elements Tab
+**Logging** is the act of keeping records of the events or computed values that occur within a program. In the simplest case, these records are displayed in the console or persisted to a log file. When your program uses the `console.log()` function, it's logging.
 
-This tab is extremely useful for looking at the DOM, and seeing your CSS styling. You can also use it to make changes to your HTML and CSS in real time, which is awesome when you are designing your pages.
+**Debugging** is the act of using a dedicated tool, called a debugger, to stop a running program and inspect its behavior. A debugger is a powerful tool that helps developers visualize how a running program executes within a runtime system.
 
-### The Network Tab
+For example:
 
-This tab is an excellent resource for seeing if HTML, CSS, Fonts, JavaScript and other goodies on your page have loaded. You can also use this tab to see responses from a server (SUPER useful when we start doing back-end development and AJAX) and file paths which will help you debug issues of content not being loaded. You can also view how long these files take to load to help when focusing on page load performance.
+## When do you use logging vs debugging?
+
+So far, you've probably used logging way more than debugging for your own programs. Logging is great tool for finding and fix bugs in smaller programs. But once your programs become larger and more complex, you may want to reach for debugging as it'll help you find and fix bugs faster in sophisticated logic.
+
+## How do you use Chrome's built-in debugger to visualize your code?
+
+In this lesson, we'll be using Chrome and its [built-in debugger](https://developer.chrome.com/devtools/docs/javascript-debugging) to create and debug solutions to the following popular JavaScript technical interview questions.
+
+### The `reverse()` function
+
+Write a function called `reverse` that accepts a string as an argument and returns a new string with all characters reversed. For example:
+
+```js
+reverse('abcdef'); // 'fedcba'
+```
+
+Start off by creating an `reverse.html` file with the following code template.
+
+```html
+<script>
+  var reverse = function(input) {
+    // Solution here
+  };
+
+  reverse('a');
+</script>
+```
+
+Once the file is saved, open it inside a new tab in Chrome and toggle the Chrome Dev Tools by pressing the `Command + Shift + I` keys. Next, click the `Sources` panel and select the HTML file from the file tree on the left. You should see something like this.
+
+![](https://i.imgur.com/xSIMANs.png)
+
+### The `isPalindrome()` function
+
+Write a function called `isPalindrome` that accepts a string as an argument and returns `true` if the string is a palindrome otherwise `false`. For example:
+
+```js
+isPalindrome('tacocat');  // true
+isPalindrome('abcdef');   // false
+```
+
+Start off by creating an `is_palindrome.html` file with the following code template.
+
+```html
+<script>
+  var isPalindrome = function(input) {
+    // Solution here
+  };
+
+  isPalindrome('a');
+</script>
+```
+
+### The `uniq()` function
+
+Write a function called `uniq` that accepts an array as an argument and returns a new array with all duplicate elements removed. For example:
+
+```js
+uniq(['a', 'b', 'c', 'a']);  // ['a', 'b', 'c']
+```
+
+Start off by creating an `uniq.html` file with the following code template.
+
+```html
+<script>
+  var uniq = function(input) {
+    // Solution here
+  };
+
+  uniq(['a']);
+</script>
+```
+
 
 ### The Sources Tab
 
@@ -78,100 +152,3 @@ https://developer.chrome.com/devtools/docs/javascript-debugging
 
 More about the sources tab - http://commandlinefanatic.com/cgi-bin/showarticle.cgi?article=art035
 Keyboard shortcuts for the developer tools, check this out - https://developer.chrome.com/devtools/docs/shortcuts
-
-
-
-## Debugging JavaScript
-
-There are many ways to find and resolve bugs in a computer program, but the two most common techniques are logging and debugging.
-
-**Logging** is the act of keeping records of the events or computed values that occur within a program. In the simplest case, these records are displayed in the console or persisted to a log file. When your program uses the `console.log()` function, it's logging.
-
-**Debugging** is the act of using a dedicated tool, called a debugger, to stop a running program and inspect its behavior. A debugger is a powerful tool that helps developers visualize how a running program executes within a runtime system.
-
-In this lesson, we'll be using Chrome and its [built-in debugger](https://developer.chrome.com/devtools/docs/javascript-debugging) to create and debug solutions to the following popular JavaScript technical interview questions.
-
-### The `reverse()` function
-
-**Problem:** Write a function called `reverse` that accepts a string as an argument and returns a new string with all characters reversed. For example:
-
-```js
-reverse('abcdef'); // 'fedcba'
-```
-
-Start off by creating an `reverse.html` file with the following code template.
-
-```html
-<script>
-  var reverse = function(input) {
-    // Solution here
-  };
-
-  reverse('a');
-</script>
-```
-
-Once the file is saved, open it inside a new tab in Chrome and toggle the Chrome Dev Tools by pressing the `Command` + `Shift` + `I` keys. Next, click the `Sources` panel and select the HTML file from the file tree on the left. You should see something like this.
-
-![](https://i.imgur.com/xSIMANs.png)
-
-### The `isPalindrome()` function
-
-**Problem:** Write a function called `isPalindrome` that accepts a string as an argument and returns true if the string is a palindrome otherwise false. For example:
-
-```js
-isPalindrome('tacocat');  // true
-isPalindrome('abcdef');   // false
-```
-
-Start off by creating an `is_palindrome.html` file with the following code template.
-
-```html
-<script>
-  var isPalindrome = function(input) {
-    // Solution here
-  };
-
-  isPalindrome('a');
-</script>
-```
-
-### The `uniq()` function
-
-**Problem:** Write a function called `uniq` that accepts an array as an argument and returns a new array with all duplicate elements removed. For example:
-
-```js
-uniq(['a', 'b', 'c', 'a']);  // ['a', 'b', 'c']
-```
-
-Start off by creating an `uniq.html` file with the following code template.
-
-```html
-<script>
-  var uniq = function(input) {
-    // Solution here
-  };
-
-  uniq(['a']);
-</script>
-```
-
-### The `flatten()` function
-
-**Problem:** Write a function called `flatten` that accepts an array as an argument and returns a new array with all elements flattened. For example:
-
-```js
-flatten(['a', ['b'], [['c', 'd']]]);  // ['a', 'b', 'c', 'd']
-```
-
-Start off by creating an `flatten.html` file with the following code template.
-
-```html
-<script>
-  var flatten = function(input) {
-    // Solution here
-  };
-
-  flatten(['a']);
-</script>
-```
