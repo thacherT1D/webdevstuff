@@ -2,7 +2,7 @@
 
 - Explain what logging vs debugging is.
 - Explain when you use logging vs debugging.
-- Use Chrome's built-in debugger to visualize your code.
+- Use Chrome's debugger to visualize your code.
 - Debug a JavaScript program that throws an error.
 
 ## What's logging vs debugging?
@@ -36,20 +36,20 @@ A **breakpoint** tells the JavaScript interpreter to pause a running JavaScript 
 
 So far, you've probably used logging way more than debugging for your own programs. Logging is great tool for finding and fixing bugs in smaller programs. But once your programs become larger and more complex, you may want to reach for debugging as it'll help you find and fix bugs faster with complicated logic.
 
-## How do you use Chrome's built-in debugger to visualize your code?
+## How do you use Chrome's debugger to visualize your code?
 
-To the following popular JavaScript technical interview questions.
+Inside the Chrome Developer Tools, the Sources tab has six icons that'll help you debug your code and visualize what's going on. From the left to the right:
 
-Inside the Sources tab, there are six icons that'll help you debug your code and visualize what's going on. From the left to the right:
-
-1. Pause/Resume - resume execution of the entire page until the next breakpoint (if there is)
-2. Step over - run highlighted line and then step over to the next line of code
-3. Step into - go down into whatever function is being called
+1. Pause/Resume - resume execution of the entire page until the next breakpoint.
+2. Step over - execute the current line and then pause on next line.
+3. Step into - go down into whatever function is being called.
 4. Step out - return from the current function and go to its caller
 5. Deactivate all breakpoints - remove all breakpoints in the code
 6. Pause on exceptions
 
 When you have paused the code, you can hover over variables and see their values and inherited properties and methods.
+
+To the following popular JavaScript technical interview questions.
 
 ### The `reverse()` function
 
