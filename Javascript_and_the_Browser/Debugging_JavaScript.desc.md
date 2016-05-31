@@ -161,7 +161,7 @@ factorial(9999999);
 
 **NOTE:** A `RangeError` is also known as a stack overflow.
 
-Check out all the [error types](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error) on the Mozilla Developer Network.
+You can check out all the JavaScript [error types](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error) on the Mozilla Developer Network.
 
 ## Resources
 
