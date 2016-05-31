@@ -22,6 +22,8 @@ So far, you've probably used logging way more than debugging for your own progr
 
 In this lesson, we'll be using Chrome and its [built-in debugger](https://developer.chrome.com/devtools/docs/javascript-debugging) to create and debug solutions to the following popular JavaScript technical interview questions.
 
+Open the Chrome Developer Tools by pressing `Command + Option + I` and then clicking on the Sources tab. Here, you can view the JavaScript code loaded by your web page. You can also add a breakpoint by clicking on a line number. A **breakpoint** tells the JavaScript interpreter to pause a running JavaScript program at that line number. Once a program is paused, you can do things like inspect the variables that live inside the program's scope at that moment in time.
+
 ### The `reverse()` function
 
 Write a function called `reverse` that accepts a string as an argument and returns a new string with all characters reversed. For example:
