@@ -23,7 +23,7 @@ There are many ways to find and resolve bugs in a computer program, but the two
 
 And then step through the following instructions to see Chrome's [built-in debugger](https://developer.chrome.com/devtools/docs/javascript-debugging) in action.
 
-1. Open `lunch.html` in Chrome.
+1. Open the `lunch.html` file in Chrome.
 1. Open the Chrome Developer Tools by pressing `Command + Option + I`
 1. Click on the Sources tab.
 1. Select the `lunch.html` file from the file tree on the left.
