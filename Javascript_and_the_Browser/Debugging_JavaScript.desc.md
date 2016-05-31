@@ -21,7 +21,7 @@ There are many ways to find and resolve bugs in a computer program, but the two
 </script>
 ```
 
-Then use the following instructions to see Chrome's [built-in debugger](https://developer.chrome.com/devtools/docs/javascript-debugging) in action.
+And then step through the following instructions to see Chrome's [built-in debugger](https://developer.chrome.com/devtools/docs/javascript-debugging) in action.
 
 1. Open `lunch.html` in Chrome.
 1. Open the Chrome Developer Tools by pressing `Command + Option + I`
