@@ -28,7 +28,7 @@ Open the Chrome Developer Tools by pressing `Command + Option + I` and then clic
 
 Write a function called `reverse` that accepts a string as an argument and returns a new string with all characters reversed. For example:
 
-```js
+```javascript
 reverse('abcdef'); // 'fedcba'
 ```
 
@@ -52,7 +52,7 @@ Once the file is saved, open it inside a new tab in Chrome and toggle the Chrome
 
 Write a function called `isPalindrome` that accepts a string as an argument and returns `true` if the string is a palindrome otherwise `false`. For example:
 
-```js
+```javascript
 isPalindrome('tacocat');  // true
 isPalindrome('abcdef');   // false
 ```
@@ -73,7 +73,7 @@ Start off by creating an `is_palindrome.html` file with the following code templ
 
 Write a function called `uniq` that accepts an array as an argument and returns a new array with all duplicate elements removed. For example:
 
-```js
+```javascript
 uniq(['a', 'b', 'c', 'a']);  // ['a', 'b', 'c']
 ```
 
@@ -88,15 +88,6 @@ Start off by creating an `uniq.html` file with the following code template.
   uniq(['a']);
 </script>
 ```
-
-
-### The Sources Tab
-
-In this tab you can view the JavaScript your page is loading and make any changes to it. You can also add break points to stop the code and jump into any part of the code to see what your variables and any other data looks like. We will cover this more when we focus on JavaScript in the browser, but know this is one of the best resources for debugging your JS.
-
-### The Resources Tab
-
-In this tab you can view all of the information that has loaded on a page (images, scripts, stylesheets etc) as well as information about cookies, sessions and local storage (all things we will cover later in the course)
 
 ### The Console
 
