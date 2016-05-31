@@ -9,7 +9,7 @@
 
 There are many ways to find and resolve bugs in a computer program, but the two most common techniques are logging and debugging.
 
-**Logging** is the act of recording events or computed values that occur within a program. In the simplest case, these records are displayed in the console or persisted to a log file. When your program uses the `console.log()` function, it's logging.
+**Logging** is the act of recording events or computed values that occur within a program. In the browser, these records can be displayed in the console using the `console.log()` function.
 
 **Debugging** is the act of using a dedicated tool, called a debugger, to pause and step through a running program and inspect its behavior. A debugger is a powerful tool that helps developers visualize how a running program executes. For example, create an `lunch.html` file and add the following code to it.
 
