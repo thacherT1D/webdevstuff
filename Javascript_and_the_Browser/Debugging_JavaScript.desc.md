@@ -151,14 +151,18 @@ wishfulThinking(); // Uncaught ReferenceError: wishfulThinking is not defined
 
 ### `RangeError`
 
-Thrown when the maximum call stack size is exceeded. Like when a function that calls itself too many times without returning. This kind of function is called a **recursive** function. For example:
+Thrown when the maximum call stack size is exceeded. Like when a recursive function calls itself too many times. For example:
 
 ```javascript
 var factorial = function(n) { // Uncaught RangeError: Maximum call stack size exceeded
-  n * factorial(n - 1);
+  if (n === 1) {
+    return 1;
+  }
+
+  return n * factorial(n - 1);
 }
 
-factorial(9999999);
+factorial(30000);
 ```
 
 **NOTE:** A `RangeError` is also known as a stack overflow.
