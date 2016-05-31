@@ -32,22 +32,24 @@ And then step through the following instructions to see Chrome's [built-in debug
 
 A **breakpoint** tells the JavaScript interpreter to pause a running JavaScript program at that line number. Once a program is paused, you can inspect the variables inside the program's scope at that moment in time. You can also step through the program and watch how the variables change when each line is executed.
 
+**NOTE:** When paused, you can hover over a variable to see the value it contains.
+
 ## When do you use logging vs debugging?
 
 So far, you've probably used logging way more than debugging for your own programs. Logging is great tool for finding and fixing bugs in smaller programs. But once your programs become larger and more complex, you may want to reach for debugging as it'll help you visualize how scope changes over time.
 
 ## How do you use Chrome's debugger to visualize your code?
 
-Inside the Chrome Developer Tools, the Sources tab has six clickable icons that'll help you visualize scope changes.
+Inside the Chrome Developer Tools, the Sources tab has six clickable action icons that'll help you visualize scope changes.
 
-1. Pause/Resume - pause or resume execution until the next breakpoint.
-2. Step over - execute the current line and then pause on next line.
-3. Step into - jump into the function about to be invoked.
-4. Step out - execute the rest of the current function and return to where it was invoked.
-5. Deactivate/active all breakpoints - disable or enable all breakpoints you've set.
-6. Pause on exceptions - toggle's whether or not to engage the debugger when the program throws an error.
-
-When you have paused the code, you can hover over variables and see their values and inherited properties and methods.
+| Action Icon | Description                                                    |
+|-------------|----------------------------------------------------------------|
+| Resume      | Resume execution until the next breakpoint.                    |
+| Step over   | Execute the current line and then pause on next line.          |
+| Step into   | Jump into the function about to be invoked.                    |
+| Step out    | Execute the current function and pause where it was invoked.   |
+| Breakpoints | Disable or enable all set breakpoints.                         |
+| Exceptions  | Toggle engaging the debugger when the program throws an error. |
 
 To the following popular JavaScript technical interview questions.
 
