@@ -51,6 +51,22 @@ Inside the Chrome Developer Tools, the Sources tab has six clickable icons that 
 | Breakpoints | Disable or enable all set breakpoints.                         |
 | Exceptions  | Toggle engaging the debugger when the program throws an error. |
 
+Update your `lunch.html` with the following code and play around with the various debugger actions.
+
+```html
+<script>
+  var food = 'sandwich';
+
+  var lunchTime = function(yumyum) {
+    return "I'm having a " + yumyum + " for lunch."
+  };
+
+  var result = lunchTime(food);
+
+  alert(result);
+</script>
+```
+
 Using these debugger actions, we'll solve a few common JavaScript technical interview questions.
 
 ### The `reverse()` function
@@ -92,27 +108,9 @@ Start off by creating an `is_palindrome.html` file with the following code templ
     // Solution here
   };
 
-  isPalindrome('a');
-</script>
-```
+  var result = isPalindrome('a');
 
-### The `uniq()` function
-
-Write a function called `uniq` that accepts an array as an argument and returns a new array with all duplicate elements removed. For example:
-
-```javascript
-uniq(['a', 'b', 'c', 'a']);  // ['a', 'b', 'c']
-```
-
-Start off by creating an `uniq.html` file with the following code template.
-
-```html
-<script>
-  var uniq = function(input) {
-    // Solution here
-  };
-
-  uniq(['a']);
+  console.log(result);
 </script>
 ```
 
