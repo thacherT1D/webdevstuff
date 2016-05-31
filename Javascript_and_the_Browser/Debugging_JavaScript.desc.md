@@ -116,9 +116,9 @@ Start off by creating an `uniq.html` file with the following code template.
 
 ## How do you debug a JavaScript program that throws an error?
 
-When a JavaScript program throws an error, the browser will display information about it in the Console tab. To start addressing the error, the most important thing to do is **read it**. Look at the type of error, the error message, and the line number where the error occurred. Then take a step back and think about what might have caused the error. The more thinking you can do before jumping in and trying to debug the error, the faster you'll be able to fix it.
+When a JavaScript program throws an error, the browser will display information about it in the Console tab. To start addressing the error, the most important thing to do is **read it**. Look at the error's type, message, and line number where it occurred. Then, take a step back and think about what might have caused the error. The more thinking you do before jumping in, the faster you'll be able to fix it.
 
-Here are the kinds of errors you'll likely encounter and why they happen.
+Here are the kinds of errors you'll likely encounter and a brief explanation as to why they're thrown.
 
 ### `TypeError`
 
