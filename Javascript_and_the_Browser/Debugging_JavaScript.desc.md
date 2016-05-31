@@ -34,18 +34,18 @@ A **breakpoint** tells the JavaScript interpreter to pause a running JavaScript 
 
 ## When do you use logging vs debugging?
 
-So far, you've probably used logging way more than debugging for your own programs. Logging is great tool for finding and fixing bugs in smaller programs. But once your programs become larger and more complex, you may want to reach for debugging as it'll help you how scope changes over time.
+So far, you've probably used logging way more than debugging for your own programs. Logging is great tool for finding and fixing bugs in smaller programs. But once your programs become larger and more complex, you may want to reach for debugging as it'll help you visualize how scope changes over time.
 
 ## How do you use Chrome's debugger to visualize your code?
 
-Inside the Chrome Developer Tools, the Sources tab has six icons that'll help you debug your code and visualize what's going on. From the left to the right:
+Inside the Chrome Developer Tools, the Sources tab has six clickable icons that'll help you visualize scope changes.
 
-1. Pause/Resume - resume execution of the entire page until the next breakpoint.
+1. Pause/Resume - pause or resume execution until the next breakpoint.
 2. Step over - execute the current line and then pause on next line.
-3. Step into - go down into whatever function is being called.
-4. Step out - return from the current function and go to its caller
-5. Deactivate all breakpoints - remove all breakpoints in the code
-6. Pause on exceptions
+3. Step into - jump into the function about to be invoked.
+4. Step out - execute the rest of the current function and return to where it was invoked.
+5. Deactivate/active all breakpoints - disable or enable all breakpoints you've set.
+6. Pause on exceptions - toggle's whether or not to engage the debugger when the program throws an error.
 
 When you have paused the code, you can hover over variables and see their values and inherited properties and methods.
 
