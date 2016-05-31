@@ -3,6 +3,7 @@
 - Explain what logging vs debugging is.
 - Explain when you use logging vs debugging.
 - Use Chrome's built-in debugger to visualize your code.
+- Debug a JavaScript program that throws an error.
 
 ## What's logging vs debugging?
 
@@ -23,6 +24,17 @@ So far, you've probably used logging way more than debugging for your own progr
 In this lesson, we'll be using Chrome and its [built-in debugger](https://developer.chrome.com/devtools/docs/javascript-debugging) to create and debug solutions to the following popular JavaScript technical interview questions.
 
 Open the Chrome Developer Tools by pressing `Command + Option + I` and then clicking on the Sources tab. Here, you can view the JavaScript code loaded by your web page. You can also add a breakpoint by clicking on a line number. A **breakpoint** tells the JavaScript interpreter to pause a running JavaScript program at that line number. Once a program is paused, you can do things like inspect the variables that live inside the program's scope at that moment in time.
+
+Inside the Sources tab, there are six icons that'll help you debug your code and visualize what's going on. From the left to the right:
+
+1. Pause/Resume - resume execution of the entire page until the next breakpoint (if there is)
+2. Step over - run highlighted line and then step over to the next line of code
+3. Step into - go down into whatever function is being called
+4. Step out - return from the current function and go to its caller
+5. Deactivate all breakpoints - remove all breakpoints in the code
+6. Pause on exceptions
+
+When you have paused the code, you can hover over variables and see their values and inherited properties and methods.
 
 ### The `reverse()` function
 
@@ -95,53 +107,38 @@ You are probably going to find yourself in this tab most often. In the console y
 
 If you want to learn some more about Chrome Dev Tools, check out this free tutorial on [CodeSchool](http://discover-devtools.codeschool.com/?locale=en)
 
-### Understanding JavaScript Errors
+## How do you debug a JavaScript program that throws an error?
 
-Before we take a look at the `sources` tab, let's make sure we have a good idea of what kind of errors we commonly encounter and why they happen. Understanding this fundamentally will make debugging faster and far less painful!
+The most important thing to start doing once is to **read the error**. This means looking at the type of the error, reading the error message, seeing what line the error is occurring on, and then taking a step back to think what the problem is. The more thinking you can do before jumping in and trying to fix things, the better off you will be.
 
-### Common JavaScript Errors
+Let's make sure we have a good idea of the kinds of errors we commonly encounter and why they happen. Understanding this fundamentally will make debugging faster and far less painful!
 
-`TypeError` - Creates an instance representing an error that occurs when a variable or parameter is not of a valid type. What does that mean? Well try running this code in the console `undefined()` and you will get a very common error `undefined is not a function` - this means that the built in type `undefined` can not be invoked. Try this code:
+### `TypeError`
+
+Creates an instance representing an error that occurs when a variable or parameter is not of a valid type. What does that mean? Well try running this code in the console `undefined()` and you will get a very common error `undefined is not a function` - this means that the built in type `undefined` can not be invoked. Try this code:
 
 ```js
 var person;
 person.sayHi // what does this display?
 ```
 
-`SyntaxError` - this one is pretty self explanitory, something is wrong with your syntax (make sure Array brackets, curly braces, quotes and parenthasis close!)
+### `SyntaxError`
 
-`ReferenceError` - this happens when you try to access something that has not been declared. Type in the chrome console `testing` - what do you see?
+This one is pretty self explanatory, something is wrong with your syntax (make sure Array brackets, curly braces, quotes and parenthesis close!)
 
-`RangeError` - when you have a recursive function (a function that calls itself) and you don't return or exit the function before too many other functions are called, the call stack will exceed and you will get a range error or a Stack Overflow!
+### `ReferenceError`
 
-## Debugging JS + More Essential JS Concepts
+This happens when you try to access something that has not been declared. Type in the chrome console `testing` - what do you see?
 
-As programmers we are all going to make mistakes. If you want some inspiration/understanding (or nostalgia) you can learn more here - https://www.youtube.com/watch?v=dQ7tIfWD_FM.
+### `RangeError`
 
-The most important thing to start doing once we make mistakes is to **READ THE ERROR**. This means looking at the type of the error (is it a RangeError? TypeError? ReferenceError?), reading the error message, seeing what line the error is occurring on and then taking a step back to think what the problem is. The more thinking you can do before jumping in and trying to fix things, the better off you will be - especially when you first start programming.
+When you have a recursive function (a function that calls itself) and you don't return or exit the function before too many other functions are called, the call stack will exceed and you will get a range error or a Stack Overflow!
 
 You can learn more about JS error types [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error).
 
-### How do we debug?
+## Resources
 
-There are many ways of debugging our code, the simplest ones involve trying to figure out what things are by placing `console.log`s throughout the code. While this can be effective for smaller pieces of code - this becomes incredibly challenging when there are multiple files with hundreds if not thousands of lines.
-
-The tool that we are going to be using, which is one of the most commonly used professional debugging tools is the `sources` tab, which is part of the `chrome` developer tools. Let's head over to the sources tab in the developer tools (open with `command + option + j`). Inside the sources tab, we have 6 icons that help us debug our code and see what's going on. From the left to the right:
-
-1. Pause/Resume - resume execution of the entire page until the next breakpoint (if there is)
-2. Step over - run highlighted line and then step over to the next line of code
-3. Step into - go down into whatever function is being called
-4. Step out - return from the current function and go to its caller
-5. Deactivate all breakpoints - remove all breakpoints in the code
-6. Pause on exceptions
-
-When you have paused the code, you can hover over variables and see their values and inherited properties and methods.
-
-http://discover-devtools.codeschool.com/
-
-https://developer.chrome.com/devtools/docs/javascript-debugging
-
-#### Additional Reading
-
-More about the sources tab - http://commandlinefanatic.com/cgi-bin/showarticle.cgi?article=art035
-Keyboard shortcuts for the developer tools, check this out - https://developer.chrome.com/devtools/docs/shortcuts
+- https://developer.chrome.com/devtools/docs/javascript-debugging
+- http://discover-devtools.codeschool.com/
+- http://commandlinefanatic.com/cgi-bin/showarticle.cgi?article=art035
+- https://developer.chrome.com/devtools/docs/shortcuts
