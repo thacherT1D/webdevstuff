@@ -11,19 +11,36 @@ There are many ways to find and resolve bugs in a computer program, but the two
 
 **Logging** is the act of keeping records of the events or computed values that occur within a program. In the simplest case, these records are displayed in the console or persisted to a log file. When your program uses the `console.log()` function, it's logging.
 
-**Debugging** is the act of using a dedicated tool, called a debugger, to stop a running program and inspect its behavior. A debugger is a powerful tool that helps developers visualize how a running program executes within a runtime system.
+**Debugging** is the act of using a dedicated tool, called a debugger, to pause and step through a running program and inspect its behavior. A debugger is a powerful tool that helps developers visualize how a running program executes.
 
-For example:
+In this lesson, you'll use Chrome and its [built-in debugger](https://developer.chrome.com/devtools/docs/javascript-debugging) to pause and inspect a running program. For example, create an `lunch.html` file and add the following code to it.
+
+```html
+<script>
+  var food = 'sandwich';
+
+  alert("I'm having a " + food + " for lunch.");
+</script>
+```
+
+Then use the following these instructions to see a debugger in action.
+
+1. Open `lunch.html` in Chrome.
+1. Open the Chrome Developer Tools by pressing `Command + Option + I`
+1. Click on the Sources tab.
+1. Select the `lunch.html` file from the file tree on the left.
+1. Add a breakpoint by clicking on the first line's number in the gutter.
+1. Refresh the page the engage the debugger.
+
+A **breakpoint** tells the JavaScript interpreter to pause a running JavaScript program at that line number. Once a program is paused, you can inspect the variables inside the program's scope at that moment in time. You can also step through the program and watch how the variables change when each line is executed.
 
 ## When do you use logging vs debugging?
 
-So far, you've probably used logging way more than debugging for your own programs. Logging is great tool for finding and fix bugs in smaller programs. But once your programs become larger and more complex, you may want to reach for debugging as it'll help you find and fix bugs faster in sophisticated logic.
+So far, you've probably used logging way more than debugging for your own programs. Logging is great tool for finding and fixing bugs in smaller programs. But once your programs become larger and more complex, you may want to reach for debugging as it'll help you find and fix bugs faster with complicated logic.
 
 ## How do you use Chrome's built-in debugger to visualize your code?
 
-In this lesson, we'll be using Chrome and its [built-in debugger](https://developer.chrome.com/devtools/docs/javascript-debugging) to create and debug solutions to the following popular JavaScript technical interview questions.
-
-Open the Chrome Developer Tools by pressing `Command + Option + I` and then clicking on the Sources tab. Here, you can view the JavaScript code loaded by your web page. You can also add a breakpoint by clicking on a line number. A **breakpoint** tells the JavaScript interpreter to pause a running JavaScript program at that line number. Once a program is paused, you can do things like inspect the variables that live inside the program's scope at that moment in time.
+To the following popular JavaScript technical interview questions.
 
 Inside the Sources tab, there are six icons that'll help you debug your code and visualize what's going on. From the left to the right:
 
