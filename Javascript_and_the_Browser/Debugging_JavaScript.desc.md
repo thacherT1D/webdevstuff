@@ -126,7 +126,7 @@ Thrown when a variable or parameter is not of a valid type. For example:
 
 ```javascript
 var person;
-person.name;
+person.name; // Uncaught TypeError: Cannot read property 'name' of undefined
 ```
 
 ### `SyntaxError`
@@ -134,7 +134,7 @@ person.name;
 Thrown when the JavaScript syntax is wrong. For example:
 
 ```javascript
-var greet = function {
+var greet = function { // Uncaught SyntaxError: Unexpected token {
   console.log('Hello world');
 };
 ```
@@ -144,22 +144,22 @@ var greet = function {
 Thrown when attempting to access something that has not been declared. For example:
 
 ```javascript
-wishfulThinking();
+wishfulThinking(); // Uncaught ReferenceError: wishfulThinking is not defined
 ```
 
 ### `RangeError`
 
-Thrown when a recursive function—a function that calls itself—call itself too many times without returning. For example:
+Thrown when the maximum call stack size is exceeded. Like when a function that calls itself too many times without returning. This kind of function is called a **recursive** function. For example:
 
 ```javascript
-var factorial = function(n) {
+var factorial = function(n) { // Uncaught RangeError: Maximum call stack size exceeded
   n * factorial(n - 1);
 }
 
 factorial(9999999);
 ```
 
-**NOTE:** This is often referred to as a stack overflow.
+**NOTE:** A `RangeError` is also known as a stack overflow.
 
 Check out all the [error types](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error) on the Mozilla Developer Network.
 
