@@ -40,9 +40,9 @@ So far, you've probably used logging way more than debugging for your own progr
 
 ## How do you use Chrome's debugger to visualize your code?
 
-Inside the Chrome Developer Tools, the Sources tab has six clickable action icons that'll help you visualize scope changes.
+Inside the Chrome Developer Tools, the Sources tab has six clickable icons that represent the different actions the debugger can take.
 
-| Action Icon | Description                                                    |
+| Action      | Description                                                    |
 |-------------|----------------------------------------------------------------|
 | Resume      | Resume execution until the next breakpoint.                    |
 | Step over   | Execute the current line and then pause on next line.          |
@@ -51,7 +51,7 @@ Inside the Chrome Developer Tools, the Sources tab has six clickable action icon
 | Breakpoints | Disable or enable all set breakpoints.                         |
 | Exceptions  | Toggle engaging the debugger when the program throws an error. |
 
-To the following popular JavaScript technical interview questions.
+Using these debugger actions, we'll solve a few common JavaScript technical interview questions.
 
 ### The `reverse()` function
 
