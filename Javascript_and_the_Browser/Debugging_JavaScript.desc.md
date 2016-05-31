@@ -32,7 +32,7 @@ And then step through the following instructions to see Chrome's [built-in debug
 
 A **breakpoint** tells the JavaScript interpreter to pause a running JavaScript program at that line number. Once a program is paused, you can inspect the variables inside the program's scope at that moment in time. You can also step through the program and watch how the variables change when each line is executed.
 
-**NOTE:** When paused, you can hover over a variable to see the value it contains.
+**NOTE:** When paused, you can hover over a variable to see what it contains.
 
 ## When do you use logging vs debugging?
 
