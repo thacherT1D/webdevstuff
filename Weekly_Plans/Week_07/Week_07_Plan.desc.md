@@ -1,26 +1,18 @@
 # Week 7 (June 6 - June 10)
+
 ## Weekly Objective
 
-- Objective 1
-- Objective 2
-- Objective 3
+- Review Q1
+- Understand how to read and manipulate files using Node
+- Understand how to make, receive and respond to HTTP requests using Node
 
 ---
 
 # Monday, June 6
 
-[test](/cohorts/68/articles/3118)
 Warmup: [Link to Warmup](http://github.com/gSchool)
 
-Lessons:
-- [Lesson](/cohorts/68/student_dashboard)
-- [Lesson](/cohorts/68/student_dashboard)
-
-Homework: [Homework](/cohorts/68/student_dashboard)
-
-Announcements:
-- Announcement 1
-- Announcement 2
+- [Galvanize Eats: Q1 Assessment](/curriculums/56/articles/3194)
 
 ---
 
@@ -29,14 +21,16 @@ Announcements:
 Warmup: [Link to Warmup](http://github.com/gSchool)
 
 Lessons:
-- [Lesson](/cohorts/68/student_dashboard)
-- [Lesson](/cohorts/68/student_dashboard)
+
+- [jQuery](/cohorts/68/student_dashboard)
+
+Workshops:
+
+- [Bootstrap]()
+- [Functions]()
+- [Events]()
 
 Homework: [Homework](/cohorts/68/student_dashboard)
-
-Announcements:
-- Announcement 1
-- Announcement 2
 
 ---
 
@@ -44,15 +38,14 @@ Announcements:
 
 Warmup: [Link to Warmup](http://github.com/gSchool)
 
+Welcome to Q2
+
 Lessons:
-- [Lesson](/cohorts/68/student_dashboard)
-- [Lesson](/cohorts/68/student_dashboard)
+
+- [Intro to Node]()
+- [Node's FS Module]()
 
 Homework: [Homework](/cohorts/68/student_dashboard)
-
-Announcements:
-- Announcement 1
-- Announcement 2
 
 ---
 
@@ -61,14 +54,11 @@ Announcements:
 Warmup: [Link to Warmup](http://github.com/gSchool)
 
 Lessons:
-- [Lesson](/cohorts/68/student_dashboard)
-- [Lesson](/cohorts/68/student_dashboard)
+
+- [Node's HTTP Module Pt. I]()
+- [Node's HTTP Module Pt. II]()
 
 Homework: [Homework](/cohorts/68/student_dashboard)
-
-Announcements:
-- Announcement 1
-- Announcement 2
 
 ---
 
@@ -81,7 +71,3 @@ Crush Code Friday: [CCF](/cohorts/68/student_dashboard)
 Homework: [Homework](/cohorts/68/student_dashboard)
 
 Lightning Talks:
-
-Announcements:
-- Announcement 1
-- Announcement 2
