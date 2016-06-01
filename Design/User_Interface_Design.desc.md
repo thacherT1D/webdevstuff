@@ -1,18 +1,14 @@
 ## Objectives
 
-After this lesson, students should be capable of the following:
+- Define interface and User Interface Design
+- Explain why UI is important as a developer
+- Explain why UI is important to a user
+- Use common interface elements
+- Understand the basics of UI design
 
-* Define interface and User Interface Design
-* Explain why UI is important as a developer
-* Explain why UI is important to a user
-* Use common interface elements
-* Understand the basics of UI design
+## What's interface and User Interface Design?
 
-### Keywords
-
-#### Interface
-
-*A shared boundary across which two separate entities exchange information.*
+An *interface** is a shared boundary across which two separate entities exchange information.
 
 ![Interface](https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.sentios.co.uk%2Fnews%2Fwp-content%2Fuploads%2F2012%2F03%2Finteractive-user-interface.jpg&f=1)
 
