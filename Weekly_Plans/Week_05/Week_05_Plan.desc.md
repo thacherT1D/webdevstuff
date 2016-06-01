@@ -10,6 +10,8 @@
 - [Personal Project](https://workbook.galvanize.com/cohorts/68/articles/3118)
 
 
+Product Owners:
+
 - Jordan:
   - Charles Stafford
   - Daniel Dwyer
