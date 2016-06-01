@@ -9,6 +9,7 @@
 
 # Monday, June 6
 
+[test](/cohorts/68/articles/3118)
 Warmup: [Link to Warmup](http://github.com/gSchool)
 
 Lessons:
