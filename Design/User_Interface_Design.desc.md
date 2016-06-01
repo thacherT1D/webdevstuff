@@ -8,17 +8,11 @@
 
 ## What's interface and User Interface Design?
 
-An *interface** is a shared boundary across which two separate entities exchange information.
+An **interface** is a shared boundary across which two separate entities exchange information. In computing, an interface is the bridge between the immaterial world that exists in code and the material world that we physically interact with. We provide input to the immaterial world through a keyboard or mouse or trackpad or touch screen.
 
 ![Interface](https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.sentios.co.uk%2Fnews%2Fwp-content%2Fuploads%2F2012%2F03%2Finteractive-user-interface.jpg&f=1)
 
-In computing, an interface is the "bridge" between the abstract world existing in code and the physical world in which we interact with, providing input through key or mouse events, increasingly on a touchpad or screen.
-
-#### User Interface Design
-
-*The implementation of machine interfaces with a focus on user experience.*
-
-The end goal is to make the user's interactions as efficient as possible. Combining concepts from visual design, interaction design, and information architecture, UI Design focuses on what any given user might need to do.
+**User interface design** is the implementation of these interfaces with a focus on user experience. The end goal of user interface design is to make the user's interactions as efficient as possible. UI Design combines concepts from various fields such as visual design, interaction design, and information architecture to focus on what any given user might need to do.
 
 ![Responsive User Interface Design](http://www.webfuel.com/blog/responsive-design-1.png)
 
