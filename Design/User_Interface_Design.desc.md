@@ -1,13 +1,13 @@
 ## Objectives
 
-- Define interface and user interface design.
+- Define user interface and user interface design.
 - Explain why UI design is important to both users and developers.
-- Use common interface elements.
+- Use common user interface elements.
 - Understand the basics of UI design.
 
 ## What's interface and User Interface Design?
 
-An **interface** is a shared boundary across which two separate entities exchange information. In computing, an interface is the bridge between the immaterial world that exists in code and the material world that we physically interact with. We provide input to the immaterial world through devices like a keyboard, mouse, trackpad, or touch screen.
+A **user interface** is a shared boundary across which a user exchanges information with another entity. Often in computing, a user interface is the bridge between the immaterial world that exists in code and the material world that we physically interact with. Users provide input to the immaterial world through devices like a keyboard, mouse, trackpad, or touch screen.
 
 ![Interface](https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.sentios.co.uk%2Fnews%2Fwp-content%2Fuploads%2F2012%2F03%2Finteractive-user-interface.jpg&f=1)
 
@@ -25,7 +25,9 @@ In your own words, write down what UI design entails. While you're writing, thin
 
 [CLASS DISCUSSION]
 
-## How do you use common interface elements?
+## How do you use common UI elements?
+
+Here are some examples of common user interface elements.
 
 ![Interface Elements](http://ui-cloud.com/res/Vladimir%20Kudinov/Futurico/previews/FuturicoUI_2.jpg)
 
