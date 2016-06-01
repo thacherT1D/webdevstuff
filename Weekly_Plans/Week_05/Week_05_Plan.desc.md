@@ -64,3 +64,6 @@ Warmup: [Link to Warmup](http://github.com/gSchool)
 Project Presentations
 
 Lightning Talks:
+
+- Samuel Cooksey	
+- Philip Reitz
