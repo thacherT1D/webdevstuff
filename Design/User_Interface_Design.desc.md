@@ -12,7 +12,7 @@ An **interface** is a shared boundary across which two separate entities exchang
 
 ![Interface](https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.sentios.co.uk%2Fnews%2Fwp-content%2Fuploads%2F2012%2F03%2Finteractive-user-interface.jpg&f=1)
 
-**User interface design** is the implementation of these interfaces with a focus on user experience. The end goal of user interface design is to make the user's interactions as efficient as possible. UI Design combines concepts from various fields such as visual design, interaction design, and information architecture to focus on what any given user might need to do.
+**User interface design** is the implementation of these interfaces with a focus on user experience. The end goal of user interface design is to make the user's interactions as efficient as possible. UI design combines concepts from various fields such as visual design, interaction design, and information architecture.
 
 ![Responsive User Interface Design](http://www.webfuel.com/blog/responsive-design-1.png)
 
