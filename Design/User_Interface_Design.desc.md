@@ -1,10 +1,9 @@
 ## Objectives
 
-- Define interface and User Interface Design
-- Explain why UI is important as a developer
-- Explain why UI is important to a user
-- Use common interface elements
-- Understand the basics of UI design
+- Define interface and user interface design.
+- Explain why UI design is important to both users and developers.
+- Use common interface elements.
+- Understand the basics of UI design.
 
 ## What's interface and User Interface Design?
 
@@ -22,7 +21,11 @@ With UI design, simplicity and clarity are paramount. A good interface is invisi
 
 In your own words, write down what UI design entails. While you're writing, think about what's involved when designing good UI and write down some of the keywords that come to mind.
 
-## Interface Elements
+## Why is UI design important to both users and developers?
+
+[CLASS DISCUSSION]
+
+## How do you use common interface elements?
 
 ![Interface Elements](http://ui-cloud.com/res/Vladimir%20Kudinov/Futurico/previews/FuturicoUI_2.jpg)
 
