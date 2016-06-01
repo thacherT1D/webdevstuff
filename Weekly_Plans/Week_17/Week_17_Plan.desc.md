@@ -12,10 +12,10 @@
 Warmup: [Link to Warmup](http://github.com/gSchool)
 
 Lessons:
-- [Lesson](https://workbook.galvanize.com/cohorts/68/student_dashboard)
-- [Lesson](https://workbook.galvanize.com/cohorts/68/student_dashboard)
+- [Lesson](/cohorts/68/student_dashboard)
+- [Lesson](/cohorts/68/student_dashboard)
 
-Homework: [Homework](https://workbook.galvanize.com/cohorts/68/student_dashboard)
+Homework: [Homework](/cohorts/68/student_dashboard)
 
 Announcements:
 - Announcement 1
@@ -28,10 +28,10 @@ Announcements:
 Warmup: [Link to Warmup](http://github.com/gSchool)
 
 Lessons:
-- [Lesson](https://workbook.galvanize.com/cohorts/68/student_dashboard)
-- [Lesson](https://workbook.galvanize.com/cohorts/68/student_dashboard)
+- [Lesson](/cohorts/68/student_dashboard)
+- [Lesson](/cohorts/68/student_dashboard)
 
-Homework: [Homework](https://workbook.galvanize.com/cohorts/68/student_dashboard)
+Homework: [Homework](/cohorts/68/student_dashboard)
 
 Announcements:
 - Announcement 1
@@ -44,10 +44,10 @@ Announcements:
 Warmup: [Link to Warmup](http://github.com/gSchool)
 
 Lessons:
-- [Lesson](https://workbook.galvanize.com/cohorts/68/student_dashboard)
-- [Lesson](https://workbook.galvanize.com/cohorts/68/student_dashboard)
+- [Lesson](/cohorts/68/student_dashboard)
+- [Lesson](/cohorts/68/student_dashboard)
 
-Homework: [Homework](https://workbook.galvanize.com/cohorts/68/student_dashboard)
+Homework: [Homework](/cohorts/68/student_dashboard)
 
 Announcements:
 - Announcement 1
@@ -60,10 +60,10 @@ Announcements:
 Warmup: [Link to Warmup](http://github.com/gSchool)
 
 Lessons:
-- [Lesson](https://workbook.galvanize.com/cohorts/68/student_dashboard)
-- [Lesson](https://workbook.galvanize.com/cohorts/68/student_dashboard)
+- [Lesson](/cohorts/68/student_dashboard)
+- [Lesson](/cohorts/68/student_dashboard)
 
-Homework: [Homework](https://workbook.galvanize.com/cohorts/68/student_dashboard)
+Homework: [Homework](/cohorts/68/student_dashboard)
 
 Announcements:
 - Announcement 1
@@ -73,9 +73,9 @@ Announcements:
 
 # Friday, August 19
 
-Crush Code Friday: [CCF](https://workbook.galvanize.com/cohorts/68/student_dashboard)
+Crush Code Friday: [CCF](/cohorts/68/student_dashboard)
 
-Homework: [Homework](https://workbook.galvanize.com/cohorts/68/student_dashboard)
+Homework: [Homework](/cohorts/68/student_dashboard)
 
 Lightning Talks:
 

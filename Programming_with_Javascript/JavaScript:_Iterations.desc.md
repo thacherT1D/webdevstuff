@@ -317,7 +317,7 @@ https://projecteuler.net/problem=3
   ```
 
 ## Resources:
-https://workbook.galvanize.com/cohorts/68/articles/3083
+/cohorts/68/articles/3083
 > Start at: An Introduction to Iterators ~half-way down.
 
 http://www.pythontutor.com/javascript.html

@@ -7,7 +7,7 @@
 
 # Monday, May 23
 
-- [Personal Project](https://workbook.galvanize.com/cohorts/68/articles/3118)
+- [Personal Project](/cohorts/68/articles/3118)
 
 
 Product Owners:
@@ -38,7 +38,7 @@ Product Owners:
 
 Warmup: [Link to Warmup](http://github.com/gSchool)
 
-- [Personal Project](https://workbook.galvanize.com/cohorts/68/articles/3118)
+- [Personal Project](/cohorts/68/articles/3118)
 
 ---
 
@@ -46,7 +46,7 @@ Warmup: [Link to Warmup](http://github.com/gSchool)
 
 Warmup: [Link to Warmup](http://github.com/gSchool)
 
-- [Personal Project](https://workbook.galvanize.com/cohorts/68/articles/3118)
+- [Personal Project](/cohorts/68/articles/3118)
 
 ---
 
@@ -54,7 +54,7 @@ Warmup: [Link to Warmup](http://github.com/gSchool)
 
 Warmup: [Link to Warmup](http://github.com/gSchool)
 
-- [Personal Project](https://workbook.galvanize.com/cohorts/68/articles/3118)
+- [Personal Project](/cohorts/68/articles/3118)
 
 ---
 

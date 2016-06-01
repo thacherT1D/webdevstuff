@@ -16,7 +16,7 @@ Warmup: No warmup.
 
 Lessons:
 
-- [Computer Setup](https://workbook.galvanize.com/cohorts/68/articles/3052)
+- [Computer Setup](/cohorts/68/articles/3052)
 
 Homework: No Homework.
 
@@ -29,8 +29,8 @@ Warmup: [Values Writeup](https://github.com/gSchool/values_writeup)
 Lessons:
 
 - Norms and Expectations
-- [Intro to the Command Line](https://workbook.galvanize.com/cohorts/68/articles/3057)
-- [Intro to Git and Github](https://workbook.galvanize.com/cohorts/68/articles/3060)
+- [Intro to the Command Line](/cohorts/68/articles/3057)
+- [Intro to Git and Github](/cohorts/68/articles/3060)
 
 Homework: [Command Line Murder Mystery](https://github.com/veltman/clmystery)
 
@@ -42,22 +42,22 @@ Warmup: [Semantic HTML Scavenger Hunt](https://github.com/gSchool/semantic-html-
 
 Lessons:
 
-- [Intro to HTML](https://workbook.galvanize.com/cohorts/68/articles/3063)
-- [Semantic HTML](https://workbook.galvanize.com/cohorts/68/articles/3066)
-- [Intro to CSS](https://workbook.galvanize.com/cohorts/68/articles/3070)
-- [Learning to Learn](https://workbook.galvanize.com/cohorts/68/articles/3055)
+- [Intro to HTML](/cohorts/68/articles/3063)
+- [Semantic HTML](/cohorts/68/articles/3066)
+- [Intro to CSS](/cohorts/68/articles/3070)
+- [Learning to Learn](/cohorts/68/articles/3055)
 
 ---
 
 # Thursday, April 28 - Jordan
 
-Warmup: [Touch Typing](https://workbook.galvanize.com/cohorts/68/articles/3053)
+Warmup: [Touch Typing](/cohorts/68/articles/3053)
 
 Lessons:
 - Homework Review
-- [Deploying Static Sites](https://workbook.galvanize.com/cohorts/68/articles/3117)
-- [Intro to CSS](https://workbook.galvanize.com/cohorts/68/articles/3070)
-- [Intermediate CSS](https://workbook.galvanize.com/cohorts/68/articles/3071)
+- [Deploying Static Sites](/cohorts/68/articles/3117)
+- [Intro to CSS](/cohorts/68/articles/3070)
+- [Intermediate CSS](/cohorts/68/articles/3071)
 
 ---
 

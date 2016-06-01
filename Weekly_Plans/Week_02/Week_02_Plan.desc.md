@@ -14,7 +14,7 @@
 Warmup: [CSS Selector Practice](http://flukeout.github.io/)
 
 Lessons:
-- [Intro to Javascript](https://workbook.galvanize.com/cohorts/68/articles/3082)
+- [Intro to Javascript](/cohorts/68/articles/3082)
 - [Javascript Exercises](https://github.com/gSchool/javascript-basic-exercises)
 
 Homework: [You Don't Know JS; Chapter 1](https://github.com/getify/You-Dont-Know-JS/blob/master/up & going/ch1.md) Read from "Values & Types" through "Conditionals". As you're reading, answer these guiding questions:
@@ -43,13 +43,13 @@ Warmup:
 
 Lessons:
 
-- [Objects](https://workbook.galvanize.com/cohorts/68/articles/3570)
-- [Arrays](https://workbook.galvanize.com/cohorts/68/articles/3569)
-- [Iterations](https://workbook.galvanize.com/cohorts/68/articles/3571)
+- [Objects](/cohorts/68/articles/3570)
+- [Arrays](/cohorts/68/articles/3569)
+- [Iterations](/cohorts/68/articles/3571)
 
 Homework:
 
-- Finish the exercises in the [Iterations article](https://workbook.galvanize.com/cohorts/68/articles/3571)
+- Finish the exercises in the [Iterations article](/cohorts/68/articles/3571)
 - Read the [Objects section](https://github.com/getify/You-Dont-Know-JS/blob/master/up%20&%20going/ch2.md#objects) of YDKJ: Up and Going, Chapter 2
 - Read the [Arrays section](https://github.com/getify/You-Dont-Know-JS/blob/master/up%20&%20going/ch2.md#arrays) of YDKJ: Up and Going, Chapter 2
 
@@ -65,10 +65,10 @@ What is the largest prime factor of the number 600851475143 ?
 
 Lessons:
 
-- [Reference Types](https://workbook.galvanize.com/cohorts/68/articles/3572)
-- [Drawing Objects in Memory](https://workbook.galvanize.com/cohorts/68/articles/3080)
+- [Reference Types](/cohorts/68/articles/3572)
+- [Drawing Objects in Memory](/cohorts/68/articles/3080)
 
-Homework: [Homework](https://workbook.galvanize.com/cohorts/68/student_dashboard)
+Homework: [Homework](/cohorts/68/student_dashboard)
 
 
 ---

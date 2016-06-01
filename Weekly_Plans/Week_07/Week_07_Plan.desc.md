@@ -13,10 +13,10 @@
 Warmup: [Link to Warmup](http://github.com/gSchool)
 
 Lessons:
-- [Lesson](https://workbook.galvanize.com/cohorts/68/student_dashboard)
-- [Lesson](https://workbook.galvanize.com/cohorts/68/student_dashboard)
+- [Lesson](/cohorts/68/student_dashboard)
+- [Lesson](/cohorts/68/student_dashboard)
 
-Homework: [Homework](https://workbook.galvanize.com/cohorts/68/student_dashboard)
+Homework: [Homework](/cohorts/68/student_dashboard)
 
 Announcements:
 - Announcement 1
@@ -29,10 +29,10 @@ Announcements:
 Warmup: [Link to Warmup](http://github.com/gSchool)
 
 Lessons:
-- [Lesson](https://workbook.galvanize.com/cohorts/68/student_dashboard)
-- [Lesson](https://workbook.galvanize.com/cohorts/68/student_dashboard)
+- [Lesson](/cohorts/68/student_dashboard)
+- [Lesson](/cohorts/68/student_dashboard)
 
-Homework: [Homework](https://workbook.galvanize.com/cohorts/68/student_dashboard)
+Homework: [Homework](/cohorts/68/student_dashboard)
 
 Announcements:
 - Announcement 1
@@ -45,10 +45,10 @@ Announcements:
 Warmup: [Link to Warmup](http://github.com/gSchool)
 
 Lessons:
-- [Lesson](https://workbook.galvanize.com/cohorts/68/student_dashboard)
-- [Lesson](https://workbook.galvanize.com/cohorts/68/student_dashboard)
+- [Lesson](/cohorts/68/student_dashboard)
+- [Lesson](/cohorts/68/student_dashboard)
 
-Homework: [Homework](https://workbook.galvanize.com/cohorts/68/student_dashboard)
+Homework: [Homework](/cohorts/68/student_dashboard)
 
 Announcements:
 - Announcement 1
@@ -61,10 +61,10 @@ Announcements:
 Warmup: [Link to Warmup](http://github.com/gSchool)
 
 Lessons:
-- [Lesson](https://workbook.galvanize.com/cohorts/68/student_dashboard)
-- [Lesson](https://workbook.galvanize.com/cohorts/68/student_dashboard)
+- [Lesson](/cohorts/68/student_dashboard)
+- [Lesson](/cohorts/68/student_dashboard)
 
-Homework: [Homework](https://workbook.galvanize.com/cohorts/68/student_dashboard)
+Homework: [Homework](/cohorts/68/student_dashboard)
 
 Announcements:
 - Announcement 1
@@ -76,9 +76,9 @@ Announcements:
 
 Warmup: [Biweekly Survey](https://docs.google.com/forms/d/1XsnxPufkGL24Bnsa_8IxcyJT6-VudP4QC9VqbTbctAw/viewform?usp=send_form)
 
-Crush Code Friday: [CCF](https://workbook.galvanize.com/cohorts/68/student_dashboard)
+Crush Code Friday: [CCF](/cohorts/68/student_dashboard)
 
-Homework: [Homework](https://workbook.galvanize.com/cohorts/68/student_dashboard)
+Homework: [Homework](/cohorts/68/student_dashboard)
 
 Lightning Talks:
 

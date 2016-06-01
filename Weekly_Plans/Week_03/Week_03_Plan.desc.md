@@ -18,10 +18,10 @@ Warmup: [Code Wars: Unique in Order](http://www.codewars.com/kata/unique-in-orde
 
 Lessons:
 
-- [Node Package Manager](https://workbook.galvanize.com/cohorts/68/articles/3747)
-- [Node Modules](https://workbook.galvanize.com/cohorts/68/articles/3746)
+- [Node Package Manager](/cohorts/68/articles/3747)
+- [Node Modules](/cohorts/68/articles/3746)
 - [Afternoon Warmup](https://github.com/gSchool/g27-warmup-strings)
-- [Test Driven Development](https://workbook.galvanize.com/cohorts/68/articles/3097)
+- [Test Driven Development](/cohorts/68/articles/3097)
 
 ---
 
@@ -38,10 +38,10 @@ Warmup: [JS Arrays Challenge](https://github.com/gSchool/javascript-challenges)
 
 Lessons:
 
-- [Getting SASSY w/ Micah](https://workbook.galvanize.com/cohorts/68/articles/3149)
-- [Intro to the DOM Part I: Introduction](https://workbook.galvanize.com/cohorts/68/articles/3092)
-- [Intro to the DOM Part II: Traversal](https://workbook.galvanize.com/cohorts/68/articles/3748)
-- [Intro to the DOM Part III: Manipulation](https://workbook.galvanize.com/cohorts/68/articles/3749)
+- [Getting SASSY w/ Micah](/cohorts/68/articles/3149)
+- [Intro to the DOM Part I: Introduction](/cohorts/68/articles/3092)
+- [Intro to the DOM Part II: Traversal](/cohorts/68/articles/3748)
+- [Intro to the DOM Part III: Manipulation](/cohorts/68/articles/3749)
 
 
 Homework: [Where's Waldo](https://github.com/gSchool/wheres-waldo)
@@ -54,8 +54,8 @@ Warmup: [Lychrel Numbers](https://github.com/gSchool/challenges/blob/master/Prog
 
 Lessons:
 
-- [Intro to the DOM part IV: Creation and Deletion](https://workbook.galvanize.com/cohorts/68/articles/3754)
-- [Javascript Events](https://workbook.galvanize.com/cohorts/68/articles/3094)
+- [Intro to the DOM part IV: Creation and Deletion](/cohorts/68/articles/3754)
+- [Javascript Events](/cohorts/68/articles/3094)
 
 
 ---
@@ -66,8 +66,8 @@ Warmup: Intersection. Write a function called intersection that takes two arrays
 
 Lessons:
 
-- [Javascript Events](https://workbook.galvanize.com/cohorts/68/articles/3094)
-- [Intro to Local Storage](https://workbook.galvanize.com/cohorts/68/articles/3096)
+- [Javascript Events](/cohorts/68/articles/3094)
+- [Intro to Local Storage](/cohorts/68/articles/3096)
 
 Announcements:
 
@@ -79,7 +79,7 @@ Announcements:
 
 Warm up: Blog post reflecting on your journey so far.
 
-- [Intro to Local Storage](https://workbook.galvanize.com/cohorts/68/articles/3096)
+- [Intro to Local Storage](/cohorts/68/articles/3096)
 - Crush Code Friday: [CCF - Pixel Painter](https://github.com/gSchool/pixel-art-maker)
 
 Lightning Talks:

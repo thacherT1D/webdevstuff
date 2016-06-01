@@ -80,4 +80,4 @@ What's the `name` of `anotherPerson`? The answer is `'Matt'`. `anotherPerson` ac
 ## Resources
 
 - [JS visualizer](http://www.pythontutor.com/javascript.html#mode=edit)
-- [Drawing JS Objects in Memory](https://workbook.galvanize.com/cohorts/68/articles/3080)
+- [Drawing JS Objects in Memory](/cohorts/68/articles/3080)

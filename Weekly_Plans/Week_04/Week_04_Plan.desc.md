@@ -14,8 +14,8 @@
 Warmup: [CSS Wireframe Warmup](https://github.com/gSchool/cssWireframeWarmup)
 
 Lessons:
-- [Intro to the Web](https://workbook.galvanize.com/cohorts/68/articles/3111)
-- [HTML Forms](https://workbook.galvanize.com/cohorts/68/articles/3067)
+- [Intro to the Web](/cohorts/68/articles/3111)
+- [HTML Forms](/cohorts/68/articles/3067)
 
 
 ---
@@ -30,8 +30,8 @@ Write a function that takes a string and returns an object with the vowels in th
 Please use Test Driven Development.
 
 Lessons:
-- [Agile Workflow](https://workbook.galvanize.com/cohorts/68/articles/3116)
-- [AJAX](https://workbook.galvanize.com/cohorts/68/articles/3112)
+- [Agile Workflow](/cohorts/68/articles/3116)
+- [AJAX](/cohorts/68/articles/3112)
 
 
 ### Readings for tomorrow!!!
@@ -68,8 +68,8 @@ countCharacters('aAbcdaDe',['c','d','z'],true) -> {a:3,b:1,e:1}
 Please use Test Driven Development.
 
 Lessons:
-- [Wireframing](https://workbook.galvanize.com/cohorts/68/articles/3115)
-- [Javascript Scope, Hoisting, Closures, and Higher Order Functions](https://workbook.galvanize.com/cohorts/68/articles/3090)
+- [Wireframing](/cohorts/68/articles/3115)
+- [Javascript Scope, Hoisting, Closures, and Higher Order Functions](/cohorts/68/articles/3090)
 
 
 XHR questions:
@@ -87,8 +87,8 @@ XHR questions:
 Warmup: [Currency Converter](https://github.com/gSchool/ajax_warmup)
 
 Lessons:
-- [Javascript Scope, Hoisting, Closures, and Higher Order Functions](https://workbook.galvanize.com/cohorts/68/articles/3090)
-- [CSS Frameworks](https://workbook.galvanize.com/cohorts/68/articles/3075)
+- [Javascript Scope, Hoisting, Closures, and Higher Order Functions](/cohorts/68/articles/3090)
+- [CSS Frameworks](/cohorts/68/articles/3075)
 
 ---
 
