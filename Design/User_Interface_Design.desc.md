@@ -2,7 +2,7 @@
 
 - Define user interface and user interface design.
 - Explain why UI design is important to both users and developers.
-- Use common user interface elements.
+- Style common user interface elements.
 - Understand the basics of UI design.
 
 ## What's interface and User Interface Design?
@@ -23,35 +23,35 @@ In your own words, write down what UI design entails. While you're writing, thin
 
 ## Why is UI design important to both users and developers?
 
-[CLASS DISCUSSION]
+When the UI elements of a web application are well-styled, they all have a similar visual look and feel. This allows a user to leverage their experience with past UI elements to learn new ones quickly. For example, finalizing a shopping card by providing credit card information is a potential risk for identity theft. A user will feel more confident and are more likely to complete that interaction if they've already used a similar looking web form from a previous page.
 
-## How do you use common UI elements?
+In short, when you're design a user interface, try to make it look as consistent as possible.
+
+## How do you style common UI elements?
 
 Here are some examples of common user interface elements.
 
 ![Interface Elements](http://ui-cloud.com/res/Vladimir%20Kudinov/Futurico/previews/FuturicoUI_2.jpg)
 
-Once a user is familiar to elements on one page or section, they should be able to use any of the other interface components with ease. Over time, most users have also become accustomed to how certain elements interact and behave.
-
-There are many common visual elements that help form an interface, including but not limited to:
-
-#### Input Elements
+### Input elements
 
 A good interface has consistent usage and appearance of input and control elements. Some examples include the HTML5 form elements `<button>`, `<input>`, `<textarea>`, `<select>`, etc.
 
-#### Navigation
+### Navigation
 
 A well designed interface employs common design patterns for navigation that are intuitive or are already familiar to the user. Is the main navigation on the top or bottom, left or right? Is it centered or aligned? Does it change to an icon on mobile? Does the appearance change if a user is logged in?
 
-#### Informational Elements
+### Informational Elements
 
 Elements such as tool tips, notifications, modals, error/alert messages, etc. help display useful information and can reduce frustration and effectively communicate status.
 
-> Exercise: What are some other common interface components or patterns?
+### Exercise
 
-### Simple Interface Principles
+What are some other common interface components or patterns?
 
-#### Layout
+## Simple Interface Principles
+
+### Layout
 
 The layout of a page or application should be intentional and logically arranged. Separation of concerns also applies to the visual aspect of an interface and aids in readability.
 
@@ -59,21 +59,19 @@ Consider the spatial relationships between items to help inform your structural 
 
 ![Responsive design](https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fquintagroup.com%2Fservices%2Fweb-design%2Fresponsive-website-design.png&f=1)
 
-#### Color and/or Texture
+### Color and/or Texture
 
 Attention can be directed/redirected with an effective usage of color, contrast, texture, pattern, etc. Use contrasting colors for important information or calls to action.
 
 ![Colors](http://cdn1.tnwcdn.com/wp-content/blogs.dir/1/files/2015/04/colortheory.jpg)
 
-#### Hierarchical Typography
+### Hierarchical Typography
 
 As with color choices, type choices should be meaningful and logical as well. A large range of fonts can be created by varying size, style, weight, typeface, color, arrangement, etc.
 
 Not only does this create a pleasing aesthetic but it also helps with overall readability and consistency.
 
-> Pro Tip: Most designers typically follow a general rule of using a maximum of two typefaces on a given project. Using only two typefaces doesn't mean you only have access to two fonts though.
-
->The variance of *typeface*, *style*, and *size* is what creates a unique font.
+**TIP:** Most designers typically follow a general rule of using a maximum of two typefaces on a given project. Using only two typefaces doesn't mean you only have access to two fonts though. The variance of *typeface*, *style*, and *size* is what creates a unique font.
 
 ### 7 Takeaways (Best Practices)
 
