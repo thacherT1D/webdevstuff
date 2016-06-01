@@ -16,13 +16,13 @@ An **interface** is a shared boundary across which two separate entities exchang
 
 ![Responsive User Interface Design](http://www.webfuel.com/blog/responsive-design-1.png)
 
-Simple is better. A good interface is essentially invisible to the user, in the way that the user doesn't have to waste time searching for controls or dealing with unhelpful error messages.
+With UI design, simplicity and clarity are paramount. A good interface is invisible to the user. In other words, a good interface doesn't waste the user's time by searching for controls or dealing with unhelpful error messages. Likewise, good interfaces maintain consistency and predictability. All user interactions are evaluated not only on their efficiency by also the satisfaction gained by the user while performing the task.
 
-Maintaining consistency and predictability for any given user will increase overall task completion, satisfaction, and efficiency.
+### Exercise
 
-> Exercise: Ask the students to define in their own words what they think User Interface Design entails. What are some UI design buzzwords?
+In your own words, write down what UI design entails. While you're writing, think about what's involved when designing good UI and write down some of the keywords that come to mind.
 
-### Interface Elements
+## Interface Elements
 
 ![Interface Elements](http://ui-cloud.com/res/Vladimir%20Kudinov/Futurico/previews/FuturicoUI_2.jpg)
 
