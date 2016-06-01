@@ -3,7 +3,7 @@
 - Define user interface and user interface design.
 - Explain why UI design is important to both users and developers.
 - Style common user interface elements.
-- Understand the basics of UI design.
+- Explain the how layout, color, and typography are the foundation of good UI.
 
 ## What's interface and User Interface Design?
 
@@ -33,29 +33,32 @@ Here are some examples of common user interface elements.
 
 ![Interface Elements](http://ui-cloud.com/res/Vladimir%20Kudinov/Futurico/previews/FuturicoUI_2.jpg)
 
-### Input elements
+### Form controls
 
-A good interface has consistent usage and appearance of input and control elements. Some examples include the HTML5 form elements `<button>`, `<input>`, `<textarea>`, `<select>`, etc.
+A good user interface has consistent usage and appearance of form controls. Some examples include the `<button>`, `<input>`, `<textarea>`, and `<select>` tags.
 
 ### Navigation
 
-A well designed interface employs common design patterns for navigation that are intuitive or are already familiar to the user. Is the main navigation on the top or bottom, left or right? Is it centered or aligned? Does it change to an icon on mobile? Does the appearance change if a user is logged in?
+A well designed user interface employs common design patterns for navigation that are intuitive to the user. Navigation can be presented to the user in many forms. Here are a few things to consider when design navigation.
+
+- Is the main navigation on the top or bottom, left or right?
+- Is it centered or aligned?
+- Does it change to an icon on mobile?
+- Does the appearance change if a user is logged in?
 
 ### Informational Elements
 
-Elements such as tool tips, notifications, modals, error/alert messages, etc. help display useful information and can reduce frustration and effectively communicate status.
+Elements such as tooltips, popovers, toasts, notifications, modals, and error messages all provide feedback and feedforward to the user. Displaying key information at the right time can alleviate frustration and communicate the current state of the product to the user.
 
 ### Exercise
 
 What are some other common interface components or patterns?
 
-## Simple Interface Principles
+## How are layout, color, and typography the foundation of good UI?
 
 ### Layout
 
-The layout of a page or application should be intentional and logically arranged. Separation of concerns also applies to the visual aspect of an interface and aids in readability.
-
-Consider the spatial relationships between items to help inform your structural decisions. The hierarchy of information and grouping should remain similar and fluid when designing for responsiveness.
+When laying out a page or application, be intentional and arrange UI elements logically. Separation of concerns also applies to the visual aspect of an user interface and aids in readability. For example, on a news site, the most important story is often placed at the of the top and consumes the most screen real-estate. Secondary stories are then often group together and placed off to the side. Consider the spatial relationships between UI elements to help inform your users as to what's most important. When designing for responsiveness, maintain a similar hierarchy of information and grouping.
 
 ![Responsive design](https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fquintagroup.com%2Fservices%2Fweb-design%2Fresponsive-website-design.png&f=1)
 
