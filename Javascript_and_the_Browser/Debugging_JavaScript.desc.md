@@ -169,7 +169,7 @@ You can check out all the JavaScript [error types](https://developer.mozilla.org
 
 ## Resources
 
-- https://developer.chrome.com/devtools/docs/javascript-debugging
-- http://discover-devtools.codeschool.com/
-- http://commandlinefanatic.com/cgi-bin/showarticle.cgi?article=art035
-- https://developer.chrome.com/devtools/docs/shortcuts
+- [Code School - Explore and Master Chrome DevTools](http://discover-devtools.codeschool.com/)
+- [Command Line Fanatic - Using the Chrome Debugger Tools, part 3: The Sources Tab](http://commandlinefanatic.com/cgi-bin/showarticle.cgi?article=art035)
+- [Google Chrome - Debugging JavaScript](https://developer.chrome.com/devtools/docs/javascript-debugging)
+- [Google Chrome - Keyboard Shortcuts](https://developer.chrome.com/devtools/docs/shortcuts)
