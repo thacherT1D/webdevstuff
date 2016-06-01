@@ -3,7 +3,7 @@
 - Define user interface and user interface design.
 - Explain why UI design is important to both users and developers.
 - Style common user interface elements.
-- Explain the how layout, color, and typography are the foundation of good UI.
+- Explain the how layout, color, texture, and typography are the foundation of good UI.
 
 ## What's interface and User Interface Design?
 
@@ -62,11 +62,15 @@ When laying out a page or application, be intentional and arrange UI elements lo
 
 ![Responsive design](https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fquintagroup.com%2Fservices%2Fweb-design%2Fresponsive-website-design.png&f=1)
 
-### Color and/or Texture
+### Color and Texture
 
-Attention can be directed/redirected with an effective usage of color, contrast, texture, pattern, etc. Use contrasting colors for important information or calls to action.
+Attention can be directed or redirected with effective usage of color and texture. Use contrasting colors for to call out important information.
 
 ![Colors](http://cdn1.tnwcdn.com/wp-content/blogs.dir/1/files/2015/04/colortheory.jpg)
+
+Likewise, subtle use of texture and patterns can add dimension to a background or containing element.
+
+![Texture](https://canielewicz.files.wordpress.com/2008/02/texture-sample-large.jpg)
 
 ### Hierarchical Typography
 
