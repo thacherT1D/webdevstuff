@@ -23,9 +23,9 @@ In your own words, write down what UI design entails. While you're writing, thin
 
 ## Why is UI design important to both users and developers?
 
-When the UI elements of a web application are well-styled, they all have a similar visual look and feel. This allows a user to leverage their experience with past UI elements to learn new ones quickly. For example, finalizing a shopping card by providing credit card information is a potential risk for identity theft. A user will feel more confident and are more likely to complete that interaction if they've already used a similar looking web form from a previous page.
+When the UI elements of a web application are well-styled, they all have a similar visual look and feel. This allows a user to leverage their experience with past UI elements to learn new ones quickly. For example, providing credit card information when checking out a shopping cart is a potential risk for identity theft. A user will feel more confident and are more likely to complete that interaction if they've already used a similar looking web form from a previous page.
 
-In short, when you're design a user interface, try to make it look as consistent as possible.
+In short, when you design a user interface, try to make it look as consistent as possible.
 
 ## How do you style common UI elements?
 
