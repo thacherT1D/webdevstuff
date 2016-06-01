@@ -8,7 +8,7 @@
 
 ## What's interface and User Interface Design?
 
-An **interface** is a shared boundary across which two separate entities exchange information. In computing, an interface is the bridge between the immaterial world that exists in code and the material world that we physically interact with. We provide input to the immaterial world through a keyboard or mouse or trackpad or touch screen.
+An **interface** is a shared boundary across which two separate entities exchange information. In computing, an interface is the bridge between the immaterial world that exists in code and the material world that we physically interact with. We provide input to the immaterial world through devices like a keyboard, mouse, trackpad, or touch screen.
 
 ![Interface](https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.sentios.co.uk%2Fnews%2Fwp-content%2Fuploads%2F2012%2F03%2Finteractive-user-interface.jpg&f=1)
 
