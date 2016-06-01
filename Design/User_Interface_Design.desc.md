@@ -1,11 +1,11 @@
 ## Objectives
 
-- Define user interface and user interface design.
+- Define what user interface design is.
 - Explain why UI design is important to both users and developers.
 - Style common user interface elements.
 - Explain the how layout, color, texture, and typography are the foundation of good UI.
 
-## What's interface and User Interface Design?
+## What's user interface design?
 
 A **user interface** is a shared boundary across which a user exchanges information with another entity. Often in computing, a user interface is the bridge between the immaterial world that exists in code and the material world that we physically interact with. Users provide input to the immaterial world through devices like a keyboard, mouse, trackpad, or touch screen.
 
@@ -23,7 +23,7 @@ In your own words, write down what UI design entails. While you're writing, thin
 
 ## Why is UI design important to both users and developers?
 
-When the UI elements of a web application are well-styled, they all have a similar visual look and feel. This allows a user to leverage their experience with past UI elements to learn new ones quickly. For example, providing credit card information when checking out a shopping cart is a potential risk for identity theft. A user will feel more confident and are more likely to complete that interaction if they've already used a similar looking web form from a previous page.
+When the UI elements of a web application are well-styled, they all have a similar visual look and feel. This allows a user to leverage their experience with past UI elements to learn new ones quickly. For example, providing credit card information when checking out a shopping cart is a potential risk for identity theft. A user will feel more confident and be more likely to complete that interaction if they've already used a similar looking web form from a previous page.
 
 In short, when you design a user interface, try to make it look as consistent as possible.
 
@@ -39,7 +39,7 @@ A good user interface has consistent usage and appearance of form controls. Some
 
 ### Navigation
 
-A well designed user interface employs common design patterns for navigation that are intuitive to the user. Navigation can be presented to the user in many forms. Here are a few things to consider when design navigation.
+A well designed user interface employs common design patterns for navigation that are intuitive to the user. Navigation can be presented to the user in many forms. Here are a few things to consider when designing navigation.
 
 - Is the main navigation on the top or bottom, left or right?
 - Is it centered or aligned?
@@ -58,7 +58,7 @@ What are some other common interface components or patterns?
 
 ### Layout
 
-When laying out a page or application, be intentional and arrange UI elements logically. Separation of concerns also applies to the visual aspect of an user interface and aids in readability. For example, on a news site, the most important story is often placed at the of the top and consumes the most screen real-estate. Secondary stories are then often group together and placed off to the side. Consider the spatial relationships between UI elements to help inform your users as to what's most important. When designing for responsiveness, maintain a similar hierarchy of information and grouping.
+When laying out a page or application, be intentional and arrange UI elements logically. Separation of concerns also applies to the visual aspect of an user interface and aids in readability. For example, on a news site, the most important story is often placed at the of the top and consumes the most screen real-estate. Secondary stories are often grouped together and placed off to the side. Consider the spatial relationships between UI elements to help inform your users as to what's most important. When designing for responsiveness, maintain a similar hierarchy of information and grouping.
 
 ![Responsive design](https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fquintagroup.com%2Fservices%2Fweb-design%2Fresponsive-website-design.png&f=1)
 
