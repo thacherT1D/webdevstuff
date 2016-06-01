@@ -10,17 +10,21 @@ After this lesson, students should be capable of the following:
 
 ### Keywords
 
-###### Interface
+#### Interface
 
 *A shared boundary across which two separate entities exchange information.*
 
+![Interface](https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.sentios.co.uk%2Fnews%2Fwp-content%2Fuploads%2F2012%2F03%2Finteractive-user-interface.jpg&f=1)
+
 In computing, an interface is the "bridge" between the abstract world existing in code and the physical world in which we interact with, providing input through key or mouse events, increasingly on a touchpad or screen.
 
-###### User Interface Design
+#### User Interface Design
 
 *The implementation of machine interfaces with a focus on user experience.*
 
 The end goal is to make the user's interactions as efficient as possible. Combining concepts from visual design, interaction design, and information architecture, UI Design focuses on what any given user might need to do.
+
+![Responsive User Interface Design](http://www.webfuel.com/blog/responsive-design-1.png)
 
 Simple is better. A good interface is essentially invisible to the user, in the way that the user doesn't have to waste time searching for controls or dealing with unhelpful error messages.
 
@@ -30,19 +34,21 @@ Maintaining consistency and predictability for any given user will increase over
 
 ### Interface Elements
 
+![Interface Elements](http://ui-cloud.com/res/Vladimir%20Kudinov/Futurico/previews/FuturicoUI_2.jpg)
+
 Once a user is familiar to elements on one page or section, they should be able to use any of the other interface components with ease. Over time, most users have also become accustomed to how certain elements interact and behave.
 
 There are many common visual elements that help form an interface, including but not limited to:
 
-###### Input Elements
+#### Input Elements
 
 A good interface has consistent usage and appearance of input and control elements. Some examples include the HTML5 form elements `<button>`, `<input>`, `<textarea>`, `<select>`, etc.
 
-###### Navigation
+#### Navigation
 
 A well designed interface employs common design patterns for navigation that are intuitive or are already familiar to the user. Is the main navigation on the top or bottom, left or right? Is it centered or aligned? Does it change to an icon on mobile? Does the appearance change if a user is logged in?
 
-###### Informational Elements
+#### Informational Elements
 
 Elements such as tool tips, notifications, modals, error/alert messages, etc. help display useful information and can reduce frustration and effectively communicate status.
 
@@ -50,17 +56,21 @@ Elements such as tool tips, notifications, modals, error/alert messages, etc. he
 
 ### Simple Interface Principles
 
-###### Layout
+#### Layout
 
 The layout of a page or application should be intentional and logically arranged. Separation of concerns also applies to the visual aspect of an interface and aids in readability.
 
-Consider the spatial relationships between items to help inform your structural decisions.
+Consider the spatial relationships between items to help inform your structural decisions. The hierarchy of information and grouping should remain similar and fluid when designing for responsiveness.
 
-###### Color and/or Texture
+![Responsive design](https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fquintagroup.com%2Fservices%2Fweb-design%2Fresponsive-website-design.png&f=1)
+
+#### Color and/or Texture
 
 Attention can be directed/redirected with an effective usage of color, contrast, texture, pattern, etc. Use contrasting colors for important information or calls to action.
 
-###### Hierarchical Typography
+![Colors](http://cdn1.tnwcdn.com/wp-content/blogs.dir/1/files/2015/04/colortheory.jpg)
+
+#### Hierarchical Typography
 
 As with color choices, type choices should be meaningful and logical as well. A large range of fonts can be created by varying size, style, weight, typeface, color, arrangement, etc.
 
@@ -95,5 +105,6 @@ Not only does this create a pleasing aesthetic but it also helps with overall re
 * [Schneiderman's 8 Golden Rules](http://faculty.washington.edu/jtenenbg/courses/360/f04/sessions/schneidermanGoldenRules.html)
 * [UI Design Fundamentals](http://blog.teamtreehouse.com/10-user-interface-design-fundamentals)
 * [UI Cheat Sheet](https://assets.entrepreneur.com/article/1432156956_the-10-commandments-of-user-interface-design.png?_ga=1.85473438.665435448.1464732240)
+* [Color Theory Cheat Sheet](http://d3g1nhkm1kwlws.cloudfront.net/blog/wp-content/uploads/2014/05/Color-Theory-Infographic.jpg)
 * [Productive Design Critiques](http://www.fastcodesign.com/3019674/9-rules-for-running-a-productive-design-critique)
 * [Stylish Styleguide Guidelines](https://www.smashingmagazine.com/2010/07/designing-style-guidelines-for-brands-and-websites/)
