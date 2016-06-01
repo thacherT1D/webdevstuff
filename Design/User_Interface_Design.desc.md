@@ -72,39 +72,38 @@ Likewise, subtle use of texture and patterns can add dimension to a background o
 
 ![Texture](https://canielewicz.files.wordpress.com/2008/02/texture-sample-large.jpg)
 
-### Hierarchical Typography
+### Typography
 
-As with color choices, type choices should be meaningful and logical as well. A large range of fonts can be created by varying size, style, weight, typeface, color, arrangement, etc.
+As with color, be meaningful and logical with your typographical choices. A large range of fonts can be used by varying size, style, weight, typeface, color, and arrangement. Not only does this create a pleasing aesthetic but it also helps with overall readability and consistency.
 
-Not only does this create a pleasing aesthetic but it also helps with overall readability and consistency.
+![Typography](https://media.licdn.com/mpr/mpr/shrinknp_800_800/AAEAAQAAAAAAAAV-AAAAJDY1MzllNDhlLTZmNzctNDk2ZC05YmQ3LWZkZGVjOTQ1ODEzZA.png)
 
-**TIP:** Most designers typically follow a general rule of using a maximum of two typefaces on a given project. Using only two typefaces doesn't mean you only have access to two fonts though. The variance of *typeface*, *style*, and *size* is what creates a unique font.
+A **font** is composed of the following characteristics.
 
-### 7 Takeaways (Best Practices)
+- Font family (or typeface)
+- Font style
+- Font size
 
-1. Simple is better
-2. Consistency through common visual elements
-3. Page layout with a purpose
-4. Strategic color, texture, and patterns
-5. Clear typographic hierarchy
-6. Smart System Communication
-7. Anticipation of user goals
+Here are some examples of different fonts.
 
-### Questions
+| Font family | Font style | Font size |
+|-------------|------------|-----------|
+| Avenir Next | Normal     | 18 pixels |
+| Avenir Next | Normal     | 15 pixels |
+| Avenir Next | Bold       | 18 pixels |
+| Helvetica   | Normal     | 18 pixels |
 
-* What is an interface?
-* What is User Interface Design?
-* Why is UI important to developers? users?
-* What are some common interface elements?
-* What are some recommended practices of UI design?
+**TIP:** Most designers typically follow a general rule of using a maximum of two font families on a given project.
 
-> Exercise: Students participate in classroom design critique
+## Exercise
 
-### Resources
+Students participate in classroom design critique.
 
-* [Schneiderman's 8 Golden Rules](http://faculty.washington.edu/jtenenbg/courses/360/f04/sessions/schneidermanGoldenRules.html)
-* [UI Design Fundamentals](http://blog.teamtreehouse.com/10-user-interface-design-fundamentals)
-* [UI Cheat Sheet](https://assets.entrepreneur.com/article/1432156956_the-10-commandments-of-user-interface-design.png?_ga=1.85473438.665435448.1464732240)
-* [Color Theory Cheat Sheet](http://d3g1nhkm1kwlws.cloudfront.net/blog/wp-content/uploads/2014/05/Color-Theory-Infographic.jpg)
-* [Productive Design Critiques](http://www.fastcodesign.com/3019674/9-rules-for-running-a-productive-design-critique)
-* [Stylish Styleguide Guidelines](https://www.smashingmagazine.com/2010/07/designing-style-guidelines-for-brands-and-websites/)
+## Resources
+
+- [Schneiderman's 8 Golden Rules](http://faculty.washington.edu/jtenenbg/courses/360/f04/sessions/schneidermanGoldenRules.html)
+- [UI Design Fundamentals](http://blog.teamtreehouse.com/10-user-interface-design-fundamentals)
+- [UI Cheat Sheet](https://assets.entrepreneur.com/article/1432156956_the-10-commandments-of-user-interface-design.png?_ga=1.85473438.665435448.1464732240)
+- [Color Theory Cheat Sheet](http://d3g1nhkm1kwlws.cloudfront.net/blog/wp-content/uploads/2014/05/Color-Theory-Infographic.jpg)
+- [Productive Design Critiques](http://www.fastcodesign.com/3019674/9-rules-for-running-a-productive-design-critique)
+- [Stylish Styleguide Guidelines](https://www.smashingmagazine.com/2010/07/designing-style-guidelines-for-brands-and-websites/)
