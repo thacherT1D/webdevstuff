@@ -1,0 +1,2 @@
+- https://www.gitbook.com/book/drboolean/mostly-adequate-guide/details
+- https://drboolean.gitbooks.io/mostly-adequate-guide/content/ch1.html
