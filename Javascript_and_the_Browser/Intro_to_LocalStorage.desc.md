@@ -203,4 +203,3 @@ Let's make a simple page that stores the users preference for a web page backgro
 (*Using Local Storage, solid examples in javascript:*)
 
 [localStorage Examples](https://css-tricks.com/localstorage-examples/) - offers more insight on _when_ and _where_ `localStorage` is used.
-
