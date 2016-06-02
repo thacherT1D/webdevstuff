@@ -62,6 +62,7 @@ The technical requirements for your project are as follows.
 - [COLOURlovers](http://www.colourlovers.com/api)
 - [Crunchbase](https://data.crunchbase.com/v3/docs/using-the-api)
 - [data.seattle.gov](https://data.seattle.gov/)
+- [Discogs](https://www.discogs.com/developers/)
 - [Etsy](https://www.etsy.com/developers/documentation)
 - [Firebase](https://firebase.google.com/docs/web/setup)
 - [Flickr](https://www.flickr.com/services/api/)
@@ -87,6 +88,7 @@ The technical requirements for your project are as follows.
 - [(Hacker)Space](http://spaceapi.net/)
 - [Stripe](https://stripe.com/docs/api#intro)
 - [SF OpenData](https://data.sfgov.org/)
+- [TextBelt](http://textbelt.com/)
 - [theguardian](http://open-platform.theguardian.com/)
 - [Transitland](https://transit.land/documentation/)
 - [Tumblr](https://www.tumblr.com/docs/en/api/v2)
@@ -96,6 +98,7 @@ The technical requirements for your project are as follows.
 - [Wolfram Alpha](http://products.wolframalpha.com/api/)
 - [Wordnik](http://developer.wordnik.com/docs.html)
 - [xkcd](https://xkcd.com/json.html)
+- [Yandex Translate](https://tech.yandex.com/translate/)
 - [Youtube](https://developers.google.com/youtube/v3/getting-started)
 
 Or browse the [ProgrammableWeb's API repository](http://www.programmableweb.com/apis/directory). You'll want to avoid calling web API endpoints that require [OAuth](https://en.wikipedia.org/wiki/OAuth) for authorization, a technique you'll study later in this course.
