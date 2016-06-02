@@ -81,6 +81,7 @@ The technical requirements for your project are as follows.
 - [Markit](http://dev.markitondemand.com/MODApis/)
 - [OpenTok](https://tokbox.com/developer/rest/)
 - [OpenWeatherMap](http://openweathermap.org/api)
+- [PoetryDB](http://poetrydb.org/)
 - [Reddit](https://www.reddit.com/dev/api)
 - [Rotten Tomatoes](http://developer.rottentomatoes.com/docs/read/JSON)
 - [Snooth Wine](http://api.snooth.com/)
