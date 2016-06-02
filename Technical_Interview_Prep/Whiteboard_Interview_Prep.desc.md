@@ -1,41 +1,29 @@
-## Warmup
+# Whiteboard Interview Prep (groups)
 
-Find the error in this code by whiteboarding out the values of each variable at each iteration.
+## Format
 
-The output of the `sumPairs` method should be `[3,5,7,9,11,13]`.  What's wrong?
+You will be assigned a group, and that group will remain constant through Q4.  The group is meant to be somewhat random, and it's OK if you are all at highly varying technical abilities.
 
-```
-static int[] sumPairs() {
-int[] numbers = {1,2,3,4,5,6,7};
-int[] result = new int[10];
-for (int i = 0; i < numbers.length; i++) {
-  result[i] = numbers[i] + numbers[i + 1];
-}
-return result;
-}
-```
+Your group will meet at regular intervals according to the schedule.  There will be 4-6 people in each group.
 
-The output of the `countOccurences` method should be a HashMap with the following keys / values:
+Every time you meet, you will repeat the same process for running whiteboard interviews.  One person will practice taking an interview, then rotate and another person will take the interview.  Your group will have the following roles:
 
-- 1 => 3
-- 2 => 2
-- 3 => 2
+- One person is the interviewee - they are the ones who write on the whiteboard / solve the problem
+- One person is the interviewer - they state the problem and answer questions
+- One person is the observer and fills out [this form](https://docs.google.com/document/d/1i7sMJ5FmuE6pNreOOc_vVFUQx0UhIPfDxaj6b7UwaUQ/edit)
+- One person is the fact checker and types the code character-for-character to see if it works
+- The others take notes / provide feedback that is ASK (actionable, specific and kind)
 
-```
-static HashMap<Integer,Integer> countOccurences() {
-int[] numbers = {1,2,3,3,2,1,1};
-HashMap<Integer,Integer> result = new HashMap<Integer,Integer>();
-for (int i = 0; i < numbers.length; i++) {
-  result.put(numbers[i], result.get(numbers[i]) + 1);
-}
-return result;
-}
-```
+Each interview must take no longer than 20 minutes.
 
+### After the Interview
 
-## How to succeed at a whiteboard interview
+- The observer should hand the paper feedback form to the interviewee
+- The interviewee should enter it into their Journal so they can track their progress
 
-When going to an interview you want to:
+### The Interviewee
+
+When you are interviewing, be sure to:
 
 - Ask questions to start off
   - which language?
@@ -49,14 +37,48 @@ When going to an interview you want to:
   - Trace it through the code
   - Write down the values at each step if necessary
   - Freely admit your mistakes
+- Thank the interviewer
 
-## Exercise
+### The Observer
 
-Interview each other!
+The observer needs to carefully pay attention to and record the following things:
 
-- In pairs or groups of three
-- Find a problem your partner has not done from Cracking the Coding Interview
-- Ask your pair the question, work through it with them
-- Verbally evaluate them on how they did on each of the steps above.  Make your feedback Actionable / Specific / Kind.  For example:
+- Interviewee name / date
+- Start / end and total time
+- Did the code compile? (ask the fact checker)
+- Did the code solve the problem? (get group feedback, check with the fact checker)
+- How many questions did they ask?
+- How many long pauses did they have? (where long pauses are subjective, but 10 seconds of inactivity / talking is long)
+- Overall Communication (on a scale of 1-4):
+  - Did they ask basic questions (language, compile or pseudo code)?
+  - Did they clarify inputs / outputs with examples?
+  - Did they explain their thought process as they worked? (i.e. not "going dark")
+  - Did they check their work by actually interpreting the code / running inputs through?
+  - Did they thank the interviewer and shake hands?
 
-> "Joe, you started off with questions in the beginning which was great.  You didn't ask if I wanted pseudo-code or real code.  You also moved straight to writing code, and never discussed the trade offs.  Next time, make sure to check which language to write it, and as you approach the problem discuss the tradeoffs.  When you tested your solution, you were thorough and caught an error in your code, which was great!"
+### The fact-checker
+
+Transcribe the code exactly as-is - down to the space and semi-colon.  At the end, run sample input through, and see if you get the expected output.  Show the group if you have any questions.  You'll be asked by the Observer for your findings.
+
+### The interviewer
+
+Your role is to:
+
+- Choose a problem that's appropriate (we'll have a bank of them for you, and also Cracking the Coding interview)
+- Explain the problem (ideally leaving out a detail or two that'll come out in questions)
+- Answer questions they have
+- Try to help them get unstuck without giving away the answer with things like:
+  - "what's the value of this variable here...?"
+  - "what would you like your array to look like after this first loop?"
+  - etc...
+- Keep track of time and call time when it's 20 minutes
+
+### Other observers
+
+Watch carefully.  Take notes.  Make guesses as to whether the code would run and see if you are correct when the fact-checker finishes.  Try to solve the problem ahead of the interviewee, but in your head or on a piece of paper (silently, that is :)
+
+Please refrain from jumping in, helping, ooohing or aaaahhhing etc...
+
+### Rotation
+
+Setup a rotation in your group so that everyone places each role on a rotating basis.  The idea is to give each person as much interaction / exposure as possible to this process.
