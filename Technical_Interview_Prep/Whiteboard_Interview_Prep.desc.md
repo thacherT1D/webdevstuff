@@ -73,6 +73,12 @@ Your role is to:
   - etc...
 - Keep track of time and call time when it's 20 minutes
 
+_If_ the interviewee goes through the answer very quickly, here are some fun ways to keep the interview going:
+
+- Ask them what the runtime of the function is, and also the memory complexity (Big O)
+- If they have a loop, ask them to do it without a loop, or with recursion
+- If they have lots of variables, ask them to do it with no variables (often requires lots of tiny functions, so may not be appropriate)
+
 ### Other observers
 
 Watch carefully.  Take notes.  Make guesses as to whether the code would run and see if you are correct when the fact-checker finishes.  Try to solve the problem ahead of the interviewee, but in your head or on a piece of paper (silently, that is :)

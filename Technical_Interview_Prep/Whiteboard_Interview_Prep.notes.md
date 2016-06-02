@@ -1,148 +1,103 @@
-# Warmup Answers
+Each whiteboard interview prep session is an hour-long, and you should do 4-5 per week through Q4.
 
-See below...
+## Day 1
 
-## Lecture (I do)
+Day 1 is all about learning the drill.  Each student should have a chance to play each role, and rotate.
 
-- Talk about techniques listed in their notes
-- Demo some good questions / answers
+### Before the lesson:
 
-## Activity (We do)
+- Print out 7 problems (accounting for a big group)
+- Print out 1 sheet of instructions per role per group.  If you have 7 groups, print out 7 sheets
+- Make sure you have one whiteboard per group.  If not, schedule groups in a staggered way.  Groups of 6 are probably as big as you want to go.
 
-Give students a _printed_ version of this handout: https://docs.google.com/document/d/1evrXd9KqV-Q94J9-Ssw-MJtKzkxh-miSneI0d9Z7B4A/edit
+### Intro
 
-Then have them interview / rate each other.
+Talk about how important whiteboard interviews are, and how they relate to the mission (learn how to code well enough to _get_ and _keep_ a job).
 
-## Notes
+Talk about how it's a different skill than programming because there's no interpreter.
 
-You can run this workshop multiple times.  If students need extra algorithms
+Talk about how communication and process are important in addition to knowing how to code.  In some cases, they keep asking questions until you get to the point they don't know.
 
-- come up with some off the top of your head
-- have them go to careercup.com
-- pick a problem from CodeWars or a similar kata site
+Talk about how today they are learning the structure, and how they'll do this every day.  The goal today is to quickly rotate and learn the drill.  Tomorrow we start learning the content.
 
-## Assessment / Feedback / Wrap up
+### Here are the problems for day 1
 
-- Collect all papers
-- See who needs more practice
+Print these out on strips of paper beforehand so you can hand them out.
 
-## Good sized problems to give for this workshop
+- Write a function that takes three arguments, sums all three and returns the result
+- Write a function that takes a string and returns the uppercase version of that string along with an "!"
+- Write a function that takes 2 arguments and returns the bigger of the two
+- Print the numbers from 1 to 10 using a `for` loop
+- Print the numbers from 10 to 1 using a `while` loop
+- Write a function that prints the numbers 1 to 10 using a `while` loop
+- Write a function that calculates how many seconds there are in a day
+
+Walk around and check for rotation, check for the fact checkers, check for the observers, check for the small things like the handshakes at the end.
+
+The idea for day one is to get through everyone.  This means that each interview must take 45min/<group size>, or roughly 5 minutes each for the whole thing.
+
+Again, the objective is to _learn the drill_, not to solve a complex problem.
+
+## Round 2
+
+Question - should they practice the whiteboard algorithm as well?
+
+Each group may not get through each person during session two, and that's OK.  Prep them for that.  There's a lot of value in getting through the whole interview.  Shoot for at least 50% in the second session.
+
+Round two is about how to communicate well as the interviewee.  The problems are a little harder, and require more questions regarding input.
+
+### Introduction
+
+Talk about how one important aspect of interviews is asking questions about inputs and how to handle edge cases.  This demonstrates that you would be able to think critically about larger programming problems that you would solve on the job.
+
+Demo this question:
+
+```
+- Write a function that takes an array of objects, return the sum of their `age` properties
+```
+
+Ask the class to write down what questions they might have about these inputs. Look for the questions:
+
+- "what if the age property is null or undefined on an object?"
+- "what should we return if the array is empty?"
+- "should we handle the case where the array is undefined or null?"
+
+### Prep
+
+Print these out on separate strips of paper and distribute a stack to each group.  They should go through as many of these as they can together.
+
+QUESTION: should each _pair_ of people get these?  Is this a smaller exercise??
+
+- Write a function that takes an array, and sums the array from the outside in.
+  - Look for the question: "what happens with an array of an odd length"
+  - Answer: just include that number in the output, no alteration necessary
+- Write a function that takes an array and returns true if every element equals 42
+  - Look for the question: "what happens with an empty array - true or false?"
+  - Answer: for this exercise, make it return false
+- Write a function that takes two numbers and returns a percentage (so fn(5,20) would return `25`)
+  - Look for the question: "what happens when the denominator is 0?"
+  - Answer: for this exercise, make it return -1
+- Write a function that takes a string representing a name with spaces, and return an object with first_name, last_name
+  - Look for the question: "what happens when there are more than two words?"
+  - Answer: for this exercise, append those to the first_name
+- Write a function that takes an array and a number, find the element of the array at that index, and return that value multiplied by itself
+  - Look for the question: "what if the number is out of bounds of the array?"
+  - Answer: return Infinity
+- Write a function that takes a start time and an end time and calculates the milliseconds between them
+  - Look for the question: "what if the end time is before the start time"
+  - Answer: return 0
+- Write a function that takes an array returns an array with the sums of each item.  So [1,2,5,6] becomes [3,11] (because 1+2 = 3, and 5 + 6 = 11)
+  - Look for the question: "what if there are an odd number of elements in the array?"
+  - Answer: don't include the last number if it's odd.  So [1,2,8] becomes [3] (the 8 is ignored)
+- Write a function that takes a number and returns the string "You are `<number>` years old!!"
+  - Look for the question: "what happens if the number is 1 - should it still say `years`?"
+  - Answer: Yes - if it's 1, it should say "1 year old" (singular)
+  - Look for the question: "what if it's a negative number?"
+  - Answer: return null
+
 
 Given an object like the one below, write a function that takes an array of objects and a property name, and returns an object indexed by that property.
 
 Input: [ {id: 1, name: ‘Arapahoe’}, {id: 2, name: ‘Canyon’}, {id: 3, name: ‘Walnut’} ]
 
 Output: {1: {id: 1, name: ‘Arapahoe’}, 2: {id: 2, name: ‘Canyon’}, 3: {id: 3, name: ‘Walnut’}
-
--------
-
-Given an object like the one below, write a function that takes an array of objects and a property name, and returns an object grouped by that property.
-
--------
-
-## Warmup Answers
-
-Write a function that reverses an array in-place.
-
-```
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Iterator;
-import java.util.Set;
-
-class ErrorExample {
-
-  static int[] sumPairs() {
-    int[] numbers = {1,2,3,4,5,6,7};
-    int[] result = new int[10];
-    for (int i = 0; i < numbers.length - 1; i++) {
-      result[i] = numbers[i] + numbers[i + 1];
-    }
-    return result;
-  }
-
-  static HashMap<Integer,Integer> countOccurences() {
-    int[] numbers = {1,2,3,3,2,1,1};
-    HashMap<Integer,Integer> result = new HashMap<Integer,Integer>();
-    for (int i = 0; i < numbers.length; i++) {
-      result.put(numbers[i], result.getOrDefault(numbers[i], 0) + 1);
-    }
-    return result;
-  }
-
-  public static void main(String[] args) {
-    HashMap<Integer,Integer> hmap = countOccurences();
-    Set set = hmap.entrySet();
-    Iterator iterator = set.iterator();
-    while(iterator.hasNext()) {
-       Map.Entry mentry = (Map.Entry)iterator.next();
-       System.out.print("key is: "+ mentry.getKey() + " & Value is: ");
-       System.out.println(mentry.getValue());
-    }
-  }
-
-}
-```
-
-------------
-
-Find the error in this code by whiteboarding out the values of each variable at each iteration.
-
-The output of the `sumPairs` method should be `[3,5,7,9,11,13]`.  What's wrong?
-
-```
-static int[] sumPairs() {
-int[] numbers = {1,2,3,4,5,6,7};
-int[] result = new int[10];
-for (int i = 0; i < numbers.length; i++) {
-  result[i] = numbers[i] + numbers[i + 1];
-}
-return result;
-}
-```
-
-The output of the `countOccurences` method should be a HashMap with the following keys / values:
-
-- 1 => 3
-- 2 => 2
-- 3 => 2
-
-```
-static HashMap<Integer,Integer> countOccurences() {
-int[] numbers = {1,2,3,3,2,1,1};
-HashMap<Integer,Integer> result = new HashMap<Integer,Integer>();
-for (int i = 0; i < numbers.length; i++) {
-  result.put(numbers[i], result.get(numbers[i]) + 1);
-}
-return result;
-}
-```
-
-
-## How to succeed at a whiteboard interview
-
-When going to an interview you want to:
-
-- Ask questions to start off
-  - which language?
-  - real or pseudo-code?
-  - ask about the types of input you'll get (nulls?  edge cases?)
-- Constantly narrate (don't "go dark")
-- Discuss tradeoffs / approach ("I'm going to use a nested loop, which is slow, but will allow me to see the problem better...")
-- Write code
-- Test your code (check your work)
-  - Put a variable in
-  - Trace it through the code
-  - Write down the values at each step if necessary
-  - Freely admit your mistakes
-
-## Exercise
-
-Interview each other!
-
-- In pairs or groups of three
-- Find a problem your partner has not done from Cracking the Coding Interview
-- Ask your pair the question, work through it with them
-- Verbally evaluate them on how they did on each of the steps above.  Make your feedback Actionable / Specific / Kind.  For example:
-
-> "Joe, you started off with questions in the beginning which was great.  You didn't ask if I wanted pseudo-code or real code.  You also moved straight to writing code, and never discussed the trade offs.  Next time, make sure to check which language to write it, and as you approach the problem discuss the tradeoffs.  When you tested your solution, you were thorough and caught an error in your code, which was great!"

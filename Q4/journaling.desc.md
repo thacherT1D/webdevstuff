@@ -20,9 +20,10 @@ At the end of every block of time, record the following information:
 
 Field | Value
 ------|------
-Activity | A brief description of the problem you were working on
+Activity | A brief description of the problem you were working on, or your goal for the next day
 Time | How long you spent on that activity
 ZPD | Was it 1) too easy, 2) just right (hard, but you persevered) or 3) so hard that you were unsuccessful and/or stressed
+Technique | Did you do pomodoro?  Or "heads down"?  Did you watch videos first _then_ code?  Vice versa??
 Outcome | Did you finish the thing you were working on?  Or did you leave to come back later?
 Notes | Anything that struck you about this session, positive or negative.
 
