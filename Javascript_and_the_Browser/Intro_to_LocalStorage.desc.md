@@ -116,7 +116,7 @@ That being said, what type of things would we want to do with coordinates? We ma
 
 ### Consider the future (but only consider)
 
-As software developers, we consider software as never finished. As the business evolves, often the software needs new features to adjust to new needs or leverage a new technology (think about how software changed after the iPhone). That being said, we are never good at predicting the future (who would've expected the iPhone?), and we should not add complexity to our model for the sake of future-proofing. That being said, it helps to look on some future features that you hope.
+As software developers, we consider software as never finished. As the business evolves, often the software needs new features to adjust to new needs or leverage a new technology (think about how software changed after the iPhone). That being said, we are never good at predicting the future (who would've expected the iPhone?), and we should not add complexity to our model for the sake of future-proofing. That being said, it helps to look on some future features that might help define what the data definition should be.
 
 **Exercise** Your apple business is expanding internationally to other countries. How might you want to represent the price of your apples?
 
