@@ -27,21 +27,21 @@ Complete these two:
 
 Complete this exercise:
 
-https://github.com/gSchool/crm-data-challenge-with-json
+- https://github.com/gSchool/crm-data-challenge-with-json
 
-<span style="font-size=36px">🕗</span> You should be able to solve all challenges in under 2 hours.
+🕗You should be able to solve all challenges in under 2 hours.
 
 <div class="alert alert-warning">
-**Further Practice**
+  <p><strong>Further Practice</strong></p>
 
-<ul>
-  <li>https://github.com/gSchool/word-cloud-js</li>
-  <li>https://github.com/gSchool/amusement-parks-objects-arrays-js</li>
-</ul>
+  <ul>
+    <li>https://github.com/gSchool/word-cloud-js</li>
+    <li>https://github.com/gSchool/amusement-parks-objects-arrays-js</li>
+  </ul>
 
-<p>Your goal here is fluency - these exercises should seem _easy_ and _quick_.</p>
+  <p>Your goal here is fluency - these exercises should seem _easy_ and _quick_.</p>
 
-<p>Burn them down and do it again until you feel fluent.</p>
+  <p>Burn them down and do it again until you feel fluent.</p>
 </div>
 
 ## Do some more complicated loops
@@ -50,17 +50,17 @@ Complete this exercise:
 
 - https://github.com/gSchool/csv-to-markdown-js
 
-<span style="font-size=36px">🕗</span> You should be able to solve the main challenge in under 2 hours.
+🕗You should be able to solve the main challenge in under 2 hours.
 
 <div class="alert alert-warning">
-**Further Practice**
+  <p><strong>Further Practice</strong></p>
 
-<ul>
-<li>https://github.com/gSchool/javascript-challenges/tree/master/11_matrices</li>
-<li>https://github.com/gSchool/javascript-challenges/tree/master/50_multiplication_tables</li>
-</ul>
+  <ul>
+    <li>https://github.com/gSchool/javascript-challenges/tree/master/11_matrices</li>
+    <li>https://github.com/gSchool/javascript-challenges/tree/master/50_multiplication_tables</li>
+  </ul>
 
-<p>Your goal here is fluency - these exercises should seem _easy_ and _quick_.</p>
+  <p>Your goal here is fluency - these exercises should seem _easy_ and _quick_.</p>
 
-<p>Burn them down and do it again until you feel</p> fluent.
+  <p>Burn them down and do it again until you feel fluent.</p>
 </div>
