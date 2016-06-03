@@ -62,6 +62,7 @@ The technical requirements for your project are as follows.
 - [COLOURlovers](http://www.colourlovers.com/api)
 - [Crunchbase](https://data.crunchbase.com/v3/docs/using-the-api)
 - [data.seattle.gov](https://data.seattle.gov/)
+- [Deck of Cards](http://deckofcardsapi.com/)
 - [Discogs](https://www.discogs.com/developers/)
 - [Etsy](https://www.etsy.com/developers/documentation)
 - [Firebase](https://firebase.google.com/docs/web/setup)
