@@ -34,4 +34,5 @@ When you get to the part about `Promise.all`, definitely watch this video to get
 
 ## Exercise
 
-[github repo](https://github.com/gSchool/promise-exercise)
+- [github repo](https://github.com/gSchool/promise-exercise)
+- Review [Promises](https://docs.google.com/presentation/d/1VRj9jwkr12sTQTlOE-9PAqNBmNAWvQ4AXGtN60Uy1lU/edit?usp=sharing)
