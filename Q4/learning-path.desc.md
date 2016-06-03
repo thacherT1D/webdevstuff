@@ -25,13 +25,17 @@ The overall path looks like this:
   - Tries
   - Hash Tables
 
+## How to Submit Your Code
+
+In order for us to provide more timely feedback, please paste your solutions into the "Exercises" tab of each article.
+
 ## 3 Parts to "The Learning Path"
 
 There are 3 parts to the path:
 
-**Mainline Activities**
+**★ Required Activities**
 
-These are the activities that everyone should do.  In most cases, we advise that after finishing, you take a break, burn it down, and do it again.  You want fluency and automaticity here, so redoing exercises is a great use of time.  Chances are they are so complex you can't memorize / regurgitate the answer - you'll have to figure it out again :)
+Required activities are indicated by a ★.  These are the activities that everyone should do.  
 
 **Further Practice**
 
@@ -41,6 +45,8 @@ At times we provide alternate exercises for further practice if you want other o
 
 These are generally pretty hard.  Only do them if you pretty much crushed the other stuff, and feel like you can still cover the material coming up in time.
 
-## Timing
+## 🕗 Timing
 
-Whenever there is individual work on the calendar, The Learning Path should be your first priority.
+Where applicable you'll see a 🕗 to indicate that there's a expectation of time involved.  This happens mostly in the earlier parts of the path, where you are building fundamental skills that you will need to build on in future exercises.
+
+If you didn't finish it within that timeframe on your first try, **burn it down** and do it again.  If there's a time icon, it means that this is something you should be fluent in.  Solving them should be **automatic**.
