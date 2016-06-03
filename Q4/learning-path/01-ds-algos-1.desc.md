@@ -25,7 +25,7 @@ If you can't meet the time requirements, consider doing the exercises in the sec
 
 If you have met the Standard, and want an extra challenge, consider doing the exercise marked "Stretch".
 
-## Linked Lists
+### Linked Lists
 
 - Read https://github.com/gSchool/computer-science-curriculum/blob/master/Unit-2/02-linked-lists-intro.md
 - ★ Do https://github.com/gSchool/computer-science-curriculum/tree/master/Exercises/test/linked-list
@@ -64,7 +64,7 @@ If you have met the Standard, and want an extra challenge, consider doing the ex
   <p>NOTE: this was a _real interview question_ for a remote phone screen with Google.</p>
 </div>
 
-## Stacks and Queues
+### Stacks and Queues
 
 - Read: https://github.com/gSchool/computer-science-curriculum/blob/master/Unit-2/03-stacks-and-queues.md
 - ★ Do: https://github.com/gSchool/computer-science-curriculum/blob/master/Exercises/test/queue.test.js
