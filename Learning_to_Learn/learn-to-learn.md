@@ -170,6 +170,7 @@ Do you have all of these things written down? Can you explain the ideas someone 
 
 
 ### Recommended Reading and Viewing
+* Quick Left Blog: [How to Learn Best as a Developer] (https://quickleft.com/blog/learn-best-developer/)
 * Freakonomics Radio [How to be More Productive](http://freakonomics.com/podcast/how-to-be-more-productive/)
 * [Smarter, Better Faster: The Secrets of Being Productive in Life and Business](http://charlesduhigg.com/books/smarter-faster-better/) by Charles Duhigg
 * Cal Newport's [Study Hacks Blog](http://calnewport.com/blog/)
