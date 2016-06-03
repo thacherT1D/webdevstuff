@@ -79,6 +79,7 @@ The technical requirements for your project are as follows.
 - [Lob](https://lob.com/docs)
 - [Mapbox](https://www.mapbox.com/api-documentation/)
 - [Markit](http://dev.markitondemand.com/MODApis/)
+- [MyJSON](http://myjson.com/)
 - [OpenTok](https://tokbox.com/developer/rest/)
 - [OpenWeatherMap](http://openweathermap.org/api)
 - [PoetryDB](http://poetrydb.org/)
