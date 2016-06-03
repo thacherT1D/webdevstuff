@@ -35,8 +35,8 @@ Complete this exercise:
   <p><strong>Further Practice</strong></p>
 
   <ul>
-    <li>https://github.com/gSchool/word-cloud-js</li>
-    <li>https://github.com/gSchool/amusement-parks-objects-arrays-js</li>
+    <li>➡️ https://github.com/gSchool/word-cloud-js</li>
+    <li>➡️ https://github.com/gSchool/amusement-parks-objects-arrays-js</li>
   </ul>
 
   <p>Your goal here is fluency - these exercises should seem _easy_ and _quick_.</p>
