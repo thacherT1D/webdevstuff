@@ -16,18 +16,26 @@ When you dig into more complicated algorithms and data structures you want to be
 
 So while we've covered these standards before, the objective for this is **automaticity**.
 
-## Get warmed up
+## Exercises
+
+Do all of the exercises marked with a ★.
+
+If you can't meet the time requirements, consider doing the exercises in the sections marked "Further Practice".
+
+If you have met the Standard, and want an extra challenge, consider doing the exercise marked "Stretch".
+
+### Get warmed up
 
 Complete these two:
 
-- https://github.com/gSchool/grading-js
-- https://github.com/gSchool/round-robin-js
+- ★ https://github.com/gSchool/grading-js
+- ★ https://github.com/gSchool/round-robin-js
 
-## Work with objects and arrays
+### Work with objects and arrays
 
 Complete this exercise:
 
-- https://github.com/gSchool/crm-data-challenge-with-json
+- ★ https://github.com/gSchool/crm-data-challenge-with-json
 
 🕗You should be able to solve all challenges in under 2 hours.
 
@@ -35,8 +43,8 @@ Complete this exercise:
   <p><strong>Further Practice</strong></p>
 
   <ul>
-    <li>➡️ https://github.com/gSchool/word-cloud-js</li>
-    <li>➡️ https://github.com/gSchool/amusement-parks-objects-arrays-js</li>
+    <li>https://github.com/gSchool/word-cloud-js</li>
+    <li>https://github.com/gSchool/amusement-parks-objects-arrays-js</li>
   </ul>
 
   <p>Your goal here is fluency - these exercises should seem _easy_ and _quick_.</p>
@@ -44,11 +52,11 @@ Complete this exercise:
   <p>Burn them down and do it again until you feel fluent.</p>
 </div>
 
-## Do some more complicated loops
+### Do some more complicated loops
 
 Complete this exercise:
 
-- https://github.com/gSchool/csv-to-markdown-js
+- ★ https://github.com/gSchool/csv-to-markdown-js
 
 🕗You should be able to solve the main challenge in under 2 hours.
 
