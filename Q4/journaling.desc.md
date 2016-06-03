@@ -6,7 +6,7 @@ https://docs.google.com/spreadsheets/d/1YkYU2570VbCPCe5soHsuWqBVQlmixcVXFMac_AgX
 
 ## What's the point?
 
-The goal behind journaling is to **give yourself the data you need to make better practice decisions**.
+The goal behind journaling is to **give yourself the data you need to make better practice decisions**.  If you develop good [metacognition](https://quickleft.com/blog/learn-best-developer/) about how you learn best, you will set yourself up for a lifetime of success in programming!
 
 Learning more complicated algorithms, data structures and object-oriented programming can feel hard.  If you are doing it right, you'll constantly be pushing your boundaries and it may be hard to maintain perspective and/or motivation.  You may stubbornly stay in a rathole (way past your zone of proximal development) for hours, or you may avoid hard problems and just do things you are good at all day.
 
