@@ -38,7 +38,7 @@ The idea for day one is to get through everyone.  This means that each interview
 
 Again, the objective is to _learn the drill_, not to solve a complex problem.
 
-## Round 2
+## Session 2: Trollboarding 👹
 
 Question - should they practice the whiteboard algorithm as well?
 
