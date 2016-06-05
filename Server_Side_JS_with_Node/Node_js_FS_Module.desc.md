@@ -37,7 +37,7 @@ In your own words, think about what Node.js means to you and write it down.
 
 Node.js is commonly used to build HTTP servers. An **HTTP server** is a program that runs in an infinite loop, accepting HTTP requests from a client and sending HTTP responses back to it. Inside those responses, Node.js HTTP servers often include HTML, CSS, JavaScript, JSON, and other data formats.
 
-**EXERCISE:** Think back to your Q1 project. If you could've designed your own custom JSON web API, what would it have looked like? Take a moment to write it down.
+**EXERCISE:** Think back to your Q1 project. If you could've designed your own custom web API, what would've the JSON response looked like? Take a moment to write it down.
 
 Because of this capability, Node.js is similar to other runtime systems that execute Go, Java, PHP, Python, or Ruby programs. One of the advantages Node.js has over these other runtimes is that it allows front-end web developers to leverage their fluency in JavaScript to build back-end web applications. This is also a big reason why smart companies are interested in hiring JavaScript developers. If an developer gets bored and starts looking for new challenges, they can switch their role and focus on the opposite side of the HTTP divide.
 
