@@ -60,7 +60,7 @@ node -v
 
 ## How do you run JavaScript code using the Node.js REPL?
 
-Now that your laptop has the latest version of Node.js, let's learn about the various ways it can execute JavaScript code. One convenient way to play around with JavaScript in Node.js is through its **REPL**, which is short for read, evaluate, print, and loop. In the Node.js REPL, JavaScript code you enter will be executed in the Node.js runtime and then any results will be displayed in the Terminal.
+Now that your laptop has the latest version of Node.js, let's learn about the various ways it can execute JavaScript code. Conveniently, Node.js comes with a built-in **REPL** which is short for read, evaluate, print, and loop. In the Node.js REPL, you're given a prompt where you can type JavaScript code. In order to execute it in the Node.js runtime, just press the `Enter` key and any results will be immediately displayed in the Terminal. The Node.JS REPY is a handy way to play around with JavaScript before you commit your ideas to a file.
 
 You can try it out by launching your Terminal app and running the `node` command without any arguments.
 
@@ -74,7 +74,7 @@ You should see a `>` prompt appear.
 >
 ```
 
-You can now run any valid JavaScript and it will be executed by the Node.js runtime. It's similar to the browser console you've used in the past, only you don't have access to any browser concepts like the `window` object, the `document` object, or any other browser APIs.
+You can now type any valid JavaScript and it will be executed by the Node.js runtime. It's similar to the browser console you've used in the past, only you don't have access to any browser concepts like the `window` object, the `document` object, or any other browser APIs.
 
 ```shell
 > 1 + 2
