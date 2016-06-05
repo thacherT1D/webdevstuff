@@ -5,6 +5,7 @@
 - Upgrade Node.js to the latest version.
 - Run JavaScript code using the Node.js REPL.
 - Run JavaScript code using the Node.js interpreter.
+- Describe what I/O is.
 - Use the `fs` module to manage the file system.
 
 ## What's Node.js?
@@ -126,9 +127,32 @@ rm ~/Desktop/addition.js
 
 What happens if you try to execute the expression `1 + 2` without the `console.log()` function using the Node.js interpreter?
 
-## How do you manage the file system with Node.js?
+## What's I/O?
 
-Now that you've played around with the two ways to execute JavaScript code in Node.js, let's play around with the [file system module]['fs'] (`fs`). The `fs` module is a built-in Node.js API for reading and writing information to and from files. This is often called File Input/Output or **File I/O** for short.
+Input/Output (**I/O**) is the communication between a program and the outside world, possibly with a human or another program. Inputs are the data received by the program and outputs are the data sent from it. When performing I/O, the program is receiving and/or sending data to and from an I/O device.
+
+When a program communicates with a human, some possible input devices include:
+
+- Keyboards
+- Mice
+- Trackpads
+- Gamepads
+- Touch screens
+- Microphones
+
+And some possible output devices include things like:
+
+- Screens
+- Speakers
+- Printers
+- Haptic motors
+
+I/O devices can also include things like:
+
+- Files
+- Signals
+- Pipes
+- Sockets
 
 The biggest difference between Node.js and these languages is that most functions in these languages block until completion. In other words, expressions execute only after previous expression has completed. However, functions in Node.js are designed to be non-blocking. In other words, commands execute in parallel and use callbacks to signal completion or failure.
 
@@ -136,13 +160,13 @@ The biggest difference between Node.js and these languages is that most function
 
 Although computers are able to rapidly execute instructions sent to the CPU, it is much slower to get information that is located somewhere like a hard disk or another computer. In particular with Node.js, the areas of interest are file and network I/O. File I/O will involve interacting with files on the computer's file system. Because Node.js is able to do these things asynchronously, it does not have to stop and wait for I/O to happen. Take a look at this [latency table]['latency'] to understand what kind of time it takes to do common I/O tasks that we currently take for granted.
 
-#### Challenge
+### Exercise
 
-Can you think of any examples of file I/O operations that developers perform on a regular basis?
+Can you think of any other input or output devices that you use on a daily basis?
 
-#### Exercise
+## How do you manage the file system with Node.js?
 
-Start by setting up a new project.
+Now that you've played around with the two ways to execute JavaScript code in Node.js, let's play around with the [file system module]['fs'] (`fs`). The `fs` module is a built-in Node.js API for reading and writing information to and from files. Start by setting up a new project.
 
 ```shell
 mkdir party
