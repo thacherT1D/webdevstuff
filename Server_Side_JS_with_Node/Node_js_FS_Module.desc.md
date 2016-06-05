@@ -39,7 +39,7 @@ Node.js is commonly used to build HTTP servers. An **HTTP server** is a program 
 
 **EXERCISE:** Think back to your Q1 project. If you could've designed your own custom web API, what would've the JSON response looked like? Take a moment to write it down.
 
-Because of this capability, Node.js is similar to other runtime systems that execute Go, Java, PHP, Python, or Ruby programs. One of the advantages Node.js has over these other runtimes is that it allows front-end web developers to leverage their fluency in JavaScript to build back-end web applications. This is also a big reason why smart companies are interested in hiring JavaScript developers. If an developer gets bored and starts looking for new challenges, they can switch their role and focus on the opposite side of the HTTP divide.
+Because of this capability, Node.js is similar to other runtime systems that execute HTTP server written in languages like Go, Java, PHP, Python, and Ruby. One of the advantages Node.js has over these other runtimes is that it allows front-end web developers to leverage their fluency in JavaScript to build back-end web applications. This is also a big reason why smart companies are interested in hiring JavaScript developers. If an developer gets bored and starts looking for new challenges, they can switch their role and focus on the opposite side of the HTTP divide.
 
 ## How do you upgrade Node.js?
 
