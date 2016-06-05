@@ -102,7 +102,7 @@ atom ~/Desktop/hello.js
 
 And write the following code.
 
-```js
+```javascript
 console.log('Hello world');
 ```
 
@@ -142,7 +142,7 @@ atom .
 
 Add the following code to the `guests.js` file.
 
-```js
+```javascript
 'use strict';
 
 var fs = require('fs');
@@ -169,7 +169,7 @@ $ node guests.js
 
 Now refactor the `guests.js` file to handle the `read` subcommand.
 
-```js
+```javascript
 'use strict';
 
 var fs = require('fs');
@@ -209,7 +209,7 @@ $ node guests.js read
 
 Now refactor the `guests.js` file to also handle the `create` subcommand.
 
-```js
+```javascript
 'use strict';
 
 var fs = require('fs');
