@@ -60,7 +60,7 @@ node -v
 
 ## How do you run JavaScript code using the Node.js REPL?
 
-Now that your laptop has the latest version of Node.js, let's learn about the various ways it can execute JavaScript code. Conveniently, Node.js comes with a built-in **REPL** which is short for read, evaluate, print, and loop. The Node.js REPL gives you a prompt where you can type any valid JavaScript code. In order to execute it in the Node.js runtime, just press the `Enter` key and any results will be immediately displayed in the Terminal. The Node.JS REPL is a handy way to play around with JavaScript before you commit your ideas to a file. It's similar to the browser console only you don't have access to any browser concepts like a `window` object, a `document` object, and any other browser APIs.
+Now that your laptop has the latest version of Node.js, let's learn about the various ways it can execute JavaScript code. Conveniently, Node.js comes with a built-in **REPL** which is short for read, evaluate, print, and loop. The Node.js REPL gives you a prompt where you can type JavaScript code. In order to execute it in the Node.js runtime, just press the `Enter` key and the results will be immediately displayed in the Terminal.
 
 You can try it out by launching your Terminal app and running the `node` command without any arguments.
 
@@ -68,25 +68,25 @@ You can try it out by launching your Terminal app and running the `node` command
 node
 ```
 
-You should see a `>` prompt appear.
+You should see a greater than `>` symbol appear. This is the prompt symbol for the Node.js REPL.
 
-```shell
->
-```
+![](https://i.imgur.com/LLdtQUl.png)
 
-Type in `1 + 2`, press enter, and verify Node.js can do basic arithmetic.
+Type in `1 + 2`, press the `Enter`, and verify Node.js can do basic arithmetic.
 
-```shell
-> 1 + 2
-3
->
-```
+![](https://i.imgur.com/2unMiSC.png)
 
 To leave this the Node.js REPL, run the `.exit` command.
 
 ```shell
 .exit
 ```
+
+The Node.JS REPL is a handy way to play around with JavaScript before you commit your ideas to a file. It's similar to the browser console only you don't have access to any browser concepts like a `window` object, a `document` object, or any other browser APIs.
+
+### Exercise
+
+How can you tell when your Terminal is running the Node.js REPL? How can you tell when it's running your default shell?
 
 ### How do I run JavaScript code using the Node.js intepreter?
 
