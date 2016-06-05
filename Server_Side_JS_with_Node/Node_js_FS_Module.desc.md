@@ -9,7 +9,7 @@
 
 ## What's Node.js?
 
-A **runtime system** is the environment for an executing program. When JavaScript was released in 1995, its only runtime system was the web browser. That all changed in 2009, when Ryan Dahl created **Node.js**, a runtime system for executing JavaScript programs outside a web browser. By using Node.js, developers can write JavaScript programs that run directly on an operating system like Linux, Mac OS X, or Windows.
+A **runtime system** is the environment for an executing program. When JavaScript was released in 1995, its only runtime system was the web browser. That all changed in 2009, when Ryan Dahl created **Node.js**, a runtime system for executing JavaScript programs outside a web browser. By using Node.js, developers can write JavaScript programs that run directly on an operating system like Linux, Mac OS X, and Windows.
 
 When a JavaScript program runs using Node.js, it abandons all browser concerns like the following.
 
@@ -27,7 +27,7 @@ Instead, Node.js programs are only concerned with operating system tasks using f
 - `http.createServer()`
 - `server.listen()`
 
-Some of the [largest companies]['companies'] on the planet use Node.js as part of their technology stack. Their usage of Node.js varies from company to company and it's unlikely that any of one of them operates entirely in Node.js. And like everything, Node.js has its [advantages](http://www.toptal.com/nodejs/why-the-hell-would-i-use-node-js) and [disadvantages](http://www.quora.com/What-are-the-disadvantages-of-using-Node-js).
+Some of the [largest companies]['companies'] on the planet use Node.js as part of their technology stack. Their usage of Node.js varies from company to company and it's unlikely that any of one of them operates entirely in Node.js. Just like everything, Node.js has its [advantages](http://www.toptal.com/nodejs/why-the-hell-would-i-use-node-js) and [disadvantages](http://www.quora.com/What-are-the-disadvantages-of-using-Node-js).
 
 ### Exercise
 
@@ -35,11 +35,13 @@ In your own words, think about what Node.js means to you and write it down.
 
 ## Why is Node.js so important?
 
-Node.js is primarily used to build HTTP servers, making it similar to languages like Go, PHP, Python, and Ruby. The biggest difference between Node.js and these languages is that most functions in these languages block until completion. In other words, expressions execute only after previous expression has completed. However, functions in Node.js are designed to be non-blocking. In other words, commands execute in parallel and use callbacks to signal completion or failure.
+Node.js is commonly used to build HTTP servers. An **HTTP server** is a program that runs in an infinite loop, accepting HTTP requests from a client and sending HTTP responses back to it. Inside those responses, Node.js HTTP servers often include HTML, CSS, JavaScript, JSON, and other data formats.
 
-![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/54/stack.png)
+**EXERCISE:** Think back to your Q1 project. If you could've designed your own custom JSON web API, what would it have looked like? Take a moment to write it down.
 
-## How do I upgrade Node.js?
+Because of this capability, Node.js is similar to other runtime systems that execute Go, Java, PHP, Python, or Ruby programs. One of the advantages Node.js has over these other runtimes is that it allows front-end web developers to leverage their fluency in JavaScript to build back-end web applications. This is also a big reason why smart companies are interested in hiring JavaScript developers. If an developer gets bored and starts looking for new challenges, they can switch their role and focus on the opposite side of the HTTP divide.
+
+## How do you upgrade Node.js?
 
 Before getting started, take a moment to ensure you're laptop is using the latest version of Node.js.
 
@@ -56,7 +58,7 @@ You can check the version of Node.js by running the following command.
 node -v
 ```
 
-### How do I run JavaScript code using the Node.js REPL?
+## How do you run JavaScript code using the Node.js REPL?
 
 One powerful feature of Node.js is the **REPL** which is short for read, evaluate, print, and loop. In the Node.js REPL, JavaScript code you enter will be executed in the Node.js runtime and then any results will be displayed in the Terminal.
 
@@ -122,7 +124,11 @@ rm ~/Desktop/hello.js
 
 The purpose of this lesson is to create exposure to the [file system module]['fs'] (`fs`). The `fs` module is a built-in API for reading and writing information to and from files. This is often called File Input/Output or **File I/O** for short.
 
-Although computers are able to rapidly execute instructions sent to the CPU, it is much slower to get information that is located somewhere like a hard disk or another computer. In particular with Node.js, the areas of interest are file and network I/O. File I/O will involve interacting with files on the computer's file system. Because Node.js is able to do these things asyncronously, it does not have to stop and wait for I/O to happen. Take a look at this [latency table]['latency'] to understand what kind of time it takes to do common I/O tasks that we currently take for granted.
+The biggest difference between Node.js and these languages is that most functions in these languages block until completion. In other words, expressions execute only after previous expression has completed. However, functions in Node.js are designed to be non-blocking. In other words, commands execute in parallel and use callbacks to signal completion or failure.
+
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/54/stack.png)
+
+Although computers are able to rapidly execute instructions sent to the CPU, it is much slower to get information that is located somewhere like a hard disk or another computer. In particular with Node.js, the areas of interest are file and network I/O. File I/O will involve interacting with files on the computer's file system. Because Node.js is able to do these things asynchronously, it does not have to stop and wait for I/O to happen. Take a look at this [latency table]['latency'] to understand what kind of time it takes to do common I/O tasks that we currently take for granted.
 
 #### Challenge
 
