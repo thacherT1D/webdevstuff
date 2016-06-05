@@ -128,7 +128,7 @@ What happens if you try to execute the expression `1 + 2` without the `console.l
 
 ## How do you manage the file system with Node.js?
 
-The purpose of this lesson is to create exposure to the [file system module]['fs'] (`fs`). The `fs` module is a built-in API for reading and writing information to and from files. This is often called File Input/Output or **File I/O** for short.
+Now that you've played around with the two ways to execute JavaScript code in Node.js, let's play around with the [file system module]['fs'] (`fs`). The `fs` module is a built-in Node.js API for reading and writing information to and from files. This is often called File Input/Output or **File I/O** for short.
 
 The biggest difference between Node.js and these languages is that most functions in these languages block until completion. In other words, expressions execute only after previous expression has completed. However, functions in Node.js are designed to be non-blocking. In other words, commands execute in parallel and use callbacks to signal completion or failure.
 
