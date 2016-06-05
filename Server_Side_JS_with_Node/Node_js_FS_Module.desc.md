@@ -39,11 +39,11 @@ Node.js is commonly used to build HTTP servers. An **HTTP server** is a program 
 
 **EXERCISE:** Think back to your Q1 project. If you could've designed your own custom web API, what would've the JSON response looked like? Take a moment to write it down.
 
-Because of this capability, Node.js is similar to other runtime systems that execute HTTP server written in languages like Go, Java, PHP, Python, and Ruby. One of the advantages Node.js has over these other runtimes is that it allows front-end web developers to leverage their fluency in JavaScript to build back-end web applications. This is also a big reason why smart companies are interested in hiring JavaScript developers. If an developer gets bored and starts looking for new challenges, they can switch their role and focus on the opposite side of the HTTP divide.
+Because of this capability, Node.js is similar to other runtime systems that execute HTTP servers written in languages like Go, Java, PHP, Python, and Ruby. One of the advantages Node.js has over these other runtimes is that it allows front-end web developers to leverage their fluency in JavaScript to build back-end web applications. This is also a big reason why smart companies are interested in hiring JavaScript developers. If an developer gets bored and starts looking for new challenges, they can switch their role and focus on the opposite side of the HTTP divide.
 
 ## How do you upgrade Node.js?
 
-Before getting started, take a moment to ensure you're laptop is using the latest version of Node.js.
+Before you start building your own HTTP server with Node.js, let's ensure you're laptop is using the latest version of Node.js.
 
 ```shell
 brew update
@@ -60,7 +60,7 @@ node -v
 
 ## How do you run JavaScript code using the Node.js REPL?
 
-One powerful feature of Node.js is the **REPL** which is short for read, evaluate, print, and loop. In the Node.js REPL, JavaScript code you enter will be executed in the Node.js runtime and then any results will be displayed in the Terminal.
+Now that your laptop has the latest version of Node.js, let's learn about the various ways it can execute JavaScript code. One convenient way to play around with JavaScript in Node.js is through its **REPL**, which is short for read, evaluate, print, and loop. In the Node.js REPL, JavaScript code you enter will be executed in the Node.js runtime and then any results will be displayed in the Terminal.
 
 You can try it out by launching your Terminal app and running the `node` command without any arguments.
 
