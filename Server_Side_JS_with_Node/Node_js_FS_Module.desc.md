@@ -11,7 +11,7 @@
 
 A **runtime system** is the environment for an executing program. When JavaScript was released in 1995, its only runtime system was the web browser. That all changed in 2009, when Ryan Dahl created **Node.js**, a runtime system for executing JavaScript programs outside a web browser. By using Node.js, developers can write JavaScript programs that run directly on an operating system like Linux, Mac OS X, or Windows.
 
-When a JavaScript program runs using Node.js, it abandons all browser concepts such as managing a DOM tree with functions like:
+When a JavaScript program runs using Node.js, it abandons all browser concerns like the following.
 
 - `document.querySelector()`
 - `document.createElement()`
@@ -19,7 +19,7 @@ When a JavaScript program runs using Node.js, it abandons all browser concepts s
 - `element.appendChild()`
 - `element.removeChild()`
 
-Instead, Node.js programs are only concerned with operating system tasks using functions like:
+Instead, Node.js programs are only concerned with operating system tasks using functions like the following.
 
 - `fs.readFile()`
 - `fs.writeFile()`
@@ -31,7 +31,7 @@ Some of the [largest companies]['companies'] on the planet use Node.js as part o
 
 ## Why is Node.js so important?
 
-JavaScript is an interpreted language which means that it's compiled to machine code as its executed. Languages like C, C++, Java, and many others are first put through a **compiler** that first turns their code into machine code and then sends those instructions to the CPU. An interpreted language, however, is compiled Just In Time (JIT) when the program is about to be run.
+Node.js is primarily used to build HTTP servers, making it similar to languages like Go, PHP, Python, and Ruby. The biggest difference between Node.js and these languages is that most functions in these languages block until completion. In other words, expressions execute only after previous expression has completed. However, functions in Node.js are designed to be non-blocking. In other words, commands execute in parallel and use callbacks to signal completion or failure.
 
 ![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/54/stack.png)
 
