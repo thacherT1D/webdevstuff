@@ -88,7 +88,7 @@ The Node.JS REPL is a handy way to play around with JavaScript before you commit
 
 How can you tell when your Terminal is running the Node.js REPL? How can you tell when it's running your default shell?
 
-### How do you run JavaScript code using the Node.js intepreter?
+### How do you run JavaScript code using the Node.js interpreter?
 
 Additionally, the Node.js interpreter can run JavaScript code that lives in a file. An **interpreter** is a program that translates source code that lives in a file into executable code and then immediately runs it. Most of the time, you'll be interacting with the Node.js runtime using its interpreter.
 
@@ -110,9 +110,7 @@ And write the following code.
 console.log(1 + 2);
 ```
 
-Now save the file and run it with the Node.js interpreter using the same `node` command.
-
-**NOTE:** By specifying a file path, the `node` command will start the interpreter. Otherwise, it'll start the REPL.
+Now save the file and run it with the Node.js interpreter using the same `node` command. By specifying a file path, the `node` command will start the interpreter.
 
 ```shell
 node ~/Desktop/addition.js
