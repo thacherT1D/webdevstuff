@@ -29,6 +29,10 @@ Instead, Node.js programs are only concerned with operating system tasks using f
 
 Some of the [largest companies]['companies'] on the planet use Node.js as part of their technology stack. Their usage of Node.js varies from company to company and it's unlikely that any of one of them operates entirely in Node.js. And like everything, Node.js has its [advantages](http://www.toptal.com/nodejs/why-the-hell-would-i-use-node-js) and [disadvantages](http://www.quora.com/What-are-the-disadvantages-of-using-Node-js).
 
+### Exercise
+
+In your own words, think about what Node.js means to you and write it down.
+
 ## Why is Node.js so important?
 
 Node.js is primarily used to build HTTP servers, making it similar to languages like Go, PHP, Python, and Ruby. The biggest difference between Node.js and these languages is that most functions in these languages block until completion. In other words, expressions execute only after previous expression has completed. However, functions in Node.js are designed to be non-blocking. In other words, commands execute in parallel and use callbacks to signal completion or failure.
