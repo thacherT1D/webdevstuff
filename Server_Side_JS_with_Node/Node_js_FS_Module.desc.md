@@ -72,7 +72,7 @@ You should see a greater than `>` symbol appear. This is the prompt symbol for t
 
 ![](https://i.imgur.com/LLdtQUl.png)
 
-Type in `1 + 2`, press the `Enter`, and verify Node.js can do basic arithmetic.
+Type in `1 + 2`, press the `Enter` key, and verify Node.js can do basic arithmetic.
 
 ![](https://i.imgur.com/2unMiSC.png)
 
@@ -88,39 +88,47 @@ The Node.JS REPL is a handy way to play around with JavaScript before you commit
 
 How can you tell when your Terminal is running the Node.js REPL? How can you tell when it's running your default shell?
 
-### How do I run JavaScript code using the Node.js intepreter?
+### How do you run JavaScript code using the Node.js intepreter?
 
-Now, create a new `hello.js` file.
+Additionally, the Node.js interpreter can run JavaScript code that lives in a file. An **interpreter** is a program that translates source code that lives in a file into executable code and then immediately runs it. Most of the time, you'll be interacting with the Node.js runtime using its interpreter.
+
+First, create a new `addition.js` file.
 
 ```shell
-touch ~/Desktop/hello.js
+touch ~/Desktop/addition.js
 ```
 
 Open the file in your text editor
 
 ```shell
-atom ~/Desktop/hello.js
+atom ~/Desktop/addition.js
 ```
 
 And write the following code.
 
 ```javascript
-console.log('Hello world');
+console.log(1 + 2);
 ```
 
-Now save the file and run it with the `node` command.
+Now save the file and run it with the Node.js interpreter using the same `node` command.
+
+**NOTE:** By specifying a file path, the `node` command will start the interpreter. Otherwise, it'll start the REPL.
 
 ```shell
-node ~/Desktop/hello.js
+node ~/Desktop/addition.js
 ```
 
-This is how we execute files with the `node` runtime. You can delete this file with the `rm` command.
+When you're ready, you can delete this file with the `rm` command.
 
 ```shell
-rm ~/Desktop/hello.js
+rm ~/Desktop/addition.js
 ```
 
-### How do I manage the file system with Node.js?
+### Exercise
+
+What happens if you try to execute the expression `1 + 2` without the `console.log()` function using the Node.js interpreter?
+
+## How do you manage the file system with Node.js?
 
 The purpose of this lesson is to create exposure to the [file system module]['fs'] (`fs`). The `fs` module is a built-in API for reading and writing information to and from files. This is often called File Input/Output or **File I/O** for short.
 
