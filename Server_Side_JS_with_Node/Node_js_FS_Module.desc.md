@@ -11,7 +11,7 @@
 
 A **runtime system** is the environment for an executing program. When JavaScript was released in 1995, its only runtime system was the web browser. That all changed in 2009, when Ryan Dahl created **Node.js**, a runtime system for executing JavaScript programs outside a web browser. By using Node.js, developers can write JavaScript programs that run directly on an operating system like Linux, Mac OS X, or Windows.
 
-When a JavaScript program runs using Node.js, it abandons all browser concepts such as managing a DOM tree with the `document` object. In other words, there's no `document.querySelector()` or `document.addEventListener()` functions. Instead, Node.js programs are only concerned with operating system concepts like managing a computer's file system with the `fs` object or listening for HTTP requests with the `http` object.
+When a JavaScript program runs using Node.js, it abandons all browser concepts such as managing a DOM tree with functions like `document.querySelector()` and `document.addEventListener()`. Instead, Node.js programs are only concerned with operating system concepts like managing a computer's file system with the `fs` object or listening for HTTP requests with the `http` object.
 
 Some of the [largest companies]['companies'] on the planet use Node.js as part of their technology stack. Their usage of Node.js varies from company to company and it's unlikely that any of one of them operates entirely in Node.js. And like everything, Node.js has its [advantages](http://www.toptal.com/nodejs/why-the-hell-would-i-use-node-js) and [disadvantages](http://www.quora.com/What-are-the-disadvantages-of-using-Node-js).
 
