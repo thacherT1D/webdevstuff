@@ -14,7 +14,7 @@ By the end of these exercises you should be able to execute the standards above 
 
 When you dig into more complicated algorithms and data structures you want to be able to let your brain focus on the task at hand, not basic arrays / objects / loops / indices etc...
 
-So while we've covered these standards before, the objective for this is **automaticity**.
+So while we've covered these standards before, the objective for this is **automaticity** and **fluency**.
 
 ## Exercises
 
