@@ -12,7 +12,6 @@
 
 Warmup: [Typing Practice](https://typing.io/)
 
-
 - [Galvanize Eats: Q1 Assessment](/curriculums/56/articles/3194)
 
 ---
