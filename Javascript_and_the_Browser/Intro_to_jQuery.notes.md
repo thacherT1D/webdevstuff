@@ -32,7 +32,32 @@
 
 1.  Have the students read up to "Dom Manipulation."
 - Questions (All using jQuery of course!):
-    - How would you select something with the ID 'cat', and store it in a variable?
-    - How would you select everything with the class 'dog', and store it in a variable in jQuery?
+    - How would you select something with the ID 'cat'?
+    - How would you select everything with the class 'dog', and store it in a variable?
     - How can you create a DOM element of type 'div' with a class of 'monkey' in a single line?
-    - 
+    - How would I put a click event listener on every <p> element on a page?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2.  

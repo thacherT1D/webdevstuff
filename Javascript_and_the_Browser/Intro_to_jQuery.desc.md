@@ -354,4 +354,8 @@ Further reading:
 In-class lab:
 
 [jQuery Playground](https://github.com/gSchool/boxes-jQuery-playground)
+
 [Optional Ajax Github API Exercise](http://blog.teamtreehouse.com/code-a-simple-github-api-webapp-using-jquery-ajax)
+
+[Stretch: OMDB API](http://www.omdbapi.com/)
+> Try to use the jQuery AJAX function and dom manipulation functions to access the OMDB API and display search results.
