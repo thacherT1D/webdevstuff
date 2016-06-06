@@ -64,8 +64,10 @@ Complete this exercise:
   <p><strong>Further Practice</strong></p>
 
   <ul>
-    <li>https://github.com/gSchool/javascript-challenges/tree/master/11_matrices</li>
-    <li>https://github.com/gSchool/javascript-challenges/tree/master/50_multiplication_tables</li>
+    <li>https://github.com/gSchool/javascript-challenges/tree/master/test/11_matrices</li>
+    <li>https://github.com/gSchool/javascript-challenges/tree/master/test/50_multiplication_tables</li>
+    <li>https://github.com/gSchool/javascript-challenges/tree/master/test/06_join_for_loop</li>
+    <li>https://github.com/gSchool/javascript-challenges/tree/master/test/10_maths</li>
   </ul>
 
   <p>Your goal here is fluency - these exercises should seem _easy_ and _quick_.</p>

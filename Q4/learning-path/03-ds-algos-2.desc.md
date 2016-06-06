@@ -49,7 +49,7 @@ So in order to make sure you know those things, complete this exercise:
   <p><strong>Further Practice</strong></p>
 
   <ul>
-    <li>https://github.com/gSchool/javascript-challenges/tree/master/09_recursion</li>
+    <li>https://github.com/gSchool/computer-science-curriculum/blob/master/Exercises/src/recursion.js</li>
   </ul>
 </div>
 
@@ -70,7 +70,7 @@ So in order to make sure you know those things, complete this exercise:
 ## Other trees
 
 - Read all of https://github.com/gSchool/computer-science-curriculum/blob/master/Unit-2/06-trees.md
-- ★ Do https://github.com/gSchool/javascript-challenges/tree/master/56_trees_and_recursion
+- ★ Do all of https://github.com/gSchool/computer-science-curriculum/tree/master/Exercises/src/trees
 
 <div class="alert alert-success">
   <p><strong>Stretch</strong></p>
