@@ -24,7 +24,7 @@ If you can't meet the time requirements, consider doing the exercises in the sec
 
 If you have met the Standard, and want an extra challenge, consider doing the exercise marked "Stretch".
 
-NOTE: there' a time associated with the exercises below.  Create each solution on a branch, and then burn-and-build in order to get your time faster.
+NOTE: there' a time associated with the exercises below.  Create each solution on a branch, and then burn-and-build in order to get your time faster.  Repetition is the key to **fluency**
 
 ### Get warmed up
 
