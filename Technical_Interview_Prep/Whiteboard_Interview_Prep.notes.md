@@ -20,6 +20,12 @@ Talk about how communication and process are important in addition to knowing ho
 
 Talk about how today they are learning the structure, and how they'll do this every day.  The goal today is to quickly rotate and learn the drill.  Tomorrow we start learning the content.
 
+## First Lesson
+
+- Give yourself 1.5 hours
+- Fishbowl it
+- Split into groups
+
 ### Here are the problems for day 1
 
 Print these out on strips of paper beforehand so you can hand them out.
