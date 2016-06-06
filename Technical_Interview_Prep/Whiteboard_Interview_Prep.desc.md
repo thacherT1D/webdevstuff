@@ -1,5 +1,17 @@
 # Whiteboard Interview Prep (groups)
 
+## Standard
+
+## Objectives
+
+By the end of these workshops you should feel comfortable with the _format_ of a whiteboard interview and you should be able to perform equally well at the whiteboard as you do at the computer.
+
+## Why is this so important?
+
+Ask Google.  Here's a description of their hiring format:
+
+[Interviewing___Google_Boulder__1_](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/194/Interviewing___Google_Boulder__1_.pdf)
+
 ## Format
 
 You will be assigned a group, and that group will remain constant through Q4.  The group is meant to be somewhat random, and it's OK if you are all at highly varying technical abilities.
