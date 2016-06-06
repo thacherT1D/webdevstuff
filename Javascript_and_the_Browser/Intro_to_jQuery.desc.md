@@ -14,7 +14,7 @@ $divs.click(function() {
 
 ## What's wrong with vanilla JS?
 
-Depending on who you ask, nothing! There's nothing you can do in jQuery that you _can't_ do in plain old vanilla Javascript. And as Javascript evolves, some feel like the gap between vanilla Javascript and the enhancements of jQuery is narrowing. 
+Depending on who you ask, nothing! There's nothing you can do in jQuery that you _can't_ do in plain old vanilla Javascript. And as Javascript evolves, some feel like the gap between vanilla Javascript and the enhancements of jQuery is narrowing.
 
 But based on what you've seen so far, here are a few reasons you might like jQuery:
 
@@ -23,20 +23,20 @@ But based on what you've seen so far, here are a few reasons you might like jQue
 	```javascript
 	document.getElementById('foo').addEventListener('click', callback);
 	```
-	
+
 	In jQuery, the same functionality looks like this:
 
 	```javascript
 	$("#foo").on('click', callback);
 	```
-	
+
 2. As you may have noticed, even though the return values from functions like `document.getElementsByTagName` or `document.querySelectorAll` look like arrays, they are actually array-like objects which lack much of the functionality that arrays have. Specifically, array methods like `forEach`, `map`, etc. don't exist on these array-like objects.
 
 	To address this issue, jQuery comes with an `$.each` method and a `$.map` method that lets us iterate over jQuery objects. The syntax is a bit different than with `forEach` and `map`, but we'll cross that bridge later.
-	
+
 3. Dealing with adding, removing, and toggling classes is a bit more streamlined in jQuery.
 
-4. AJAX with jQuery is way better than AJAX with vanilla Javascript. (More on this later this week.)	
+4. AJAX with jQuery is way better than AJAX with vanilla Javascript. (More on this later this week.)
 
 ## Installation
 
@@ -308,7 +308,7 @@ Now try adding a div by clicking on the button. That should work too.
 
 BUT... what happens when you try to remove a div that you added with the button? Click on a newly added button, and you should see that nothing happens.
 
-The problem here is that when we added the event listener to divs with the `random` class, those listeners were only added to the divs that were present _when the page loaded_. The code 
+The problem here is that when we added the event listener to divs with the `random` class, those listeners were only added to the divs that were present _when the page loaded_. The code
 
 ```javascript
 $random.on('click', function() {
@@ -323,7 +323,7 @@ There are a couple of ways we can fix this problem. We could add a copy of the e
 
 In fact, the second parameter to the `.on` method doesn't need to be the event handler; instead, it can be a child selector to which you want to delegate the event handler.
 
-In this example, we could refactor our code to look like this: 
+In this example, we could refactor our code to look like this:
 
 ```javascript
 $(function() {
@@ -354,3 +354,4 @@ Further reading:
 In-class lab:
 
 [jQuery Playground](https://github.com/gSchool/boxes-jQuery-playground)
+[Optional Ajax Github API Exercise](http://blog.teamtreehouse.com/code-a-simple-github-api-webapp-using-jquery-ajax)

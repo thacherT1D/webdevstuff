@@ -16,3 +16,23 @@
 * http://howto.galvanize.com/tutorials/2015-05-27-javascript-weather-app/
 * https://github.com/gSchool/itunes_song_guessing_game
 * https://github.com/gSchool/githubProfileClone
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1.  Have the students read up to "Dom Manipulation."
+- Questions (All using jQuery of course!):
+    - How would you select something with the ID 'cat', and store it in a variable?
+    - How would you select everything with the class 'dog', and store it in a variable in jQuery?
+    - How can you create a DOM element of type 'div' with a class of 'monkey' in a single line?
+    - 
