@@ -57,8 +57,8 @@ Warmup: [Link to Warmup](http://github.com/gSchool)
 
 Lessons:
 
-- [Node's HTTP Module Pt. I]()
-- [Node's HTTP Module Pt. II]()
+- [Node's HTTP Module Pt. I](https://learn.galvanize.com/curriculums/56/articles/3159)
+- [Node's HTTP Module Pt. II](https://learn.galvanize.com/curriculums/56/articles/3159)
 
 Homework: [Homework](/cohorts/68/student_dashboard)
 
