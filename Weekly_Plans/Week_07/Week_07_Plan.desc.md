@@ -45,7 +45,7 @@ Welcome to Q2
 Lessons:
 
 - [Intro to Node]()
-- [Node's FS Module]()
+- [Node's FS Module](/redirects/articles/3213)
 
 Homework: [Homework](/cohorts/68/student_dashboard)
 

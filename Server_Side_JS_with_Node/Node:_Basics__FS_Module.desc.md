@@ -20,10 +20,10 @@ By the end of this lesson you should be able to:
 
 ## Key terms:
 
-- runtime
+- Runtime
 - V8
-- event loop
-- file I/O
+- Event loop
+- File I/O
 
 ## What is Node.js
 
