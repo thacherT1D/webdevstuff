@@ -12,8 +12,11 @@
 
 Warmup: [Typing Practice](https://typing.io/)
 
+Workshops:
 
-- [Galvanize Eats: Q1 Assessment](/curriculums/56/articles/3194)
+- [Bootstrap]()
+- [Functions]()
+- [Events]()
 
 ---
 
@@ -23,15 +26,7 @@ Warmup: [Link to Warmup](http://github.com/gSchool)
 
 Lessons:
 
-- [jQuery](/cohorts/68/student_dashboard)
-
-Workshops:
-
-- [Bootstrap]()
-- [Functions]()
-- [Events]()
-
-Homework: [Homework](/cohorts/68/student_dashboard)
+- [Galvanize Eats: Q1 Assessment](/curriculums/56/articles/3194)
 
 ---
 
