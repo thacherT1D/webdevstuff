@@ -22,7 +22,13 @@ Workshops:
 
 # Tuesday, June 7
 
-Warmup: [Link to Warmup](http://github.com/gSchool)
+Warmup: Write down 20 problems that you want to solve.
+
+The following link has useful brainstorming techniques.
+
+http://personalexcellence.co/blog/brainstorming-techniques/
+
+
 
 Lessons:
 
