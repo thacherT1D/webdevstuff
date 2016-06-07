@@ -32,7 +32,7 @@ http://personalexcellence.co/blog/brainstorming-techniques/
 
 Lessons:
 
-- [Galvanize Eats: Q1 Assessment](/cohort/68/articles/3194)
+- [Galvanize Eats: Q1 Assessment](/cohorts/68/articles/3194)
 
 ---
 
