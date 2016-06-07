@@ -4,10 +4,10 @@
 
 ## Objectives
 
-*Describe the differences between a static and dynamic web site.
-*Explain why static sites may be faster for your users.
-*Use Firebase Command Line Tools to deploy web sites
-*Explain why setting the deployment region correctly is so important
+*   Describe the differences between a static and dynamic web site.
+*   Explain why static sites may be faster for your users.
+*   Use Firebase Command Line Tools to deploy web sites
+*   Explain why setting the deployment region correctly is so important
 
 ## Why is this important?
 
@@ -33,9 +33,9 @@ Static sites are often faster for browsers to load because all parts of the site
 
 Before moving on to the next section, answer the following questions.
 
-*What is the difference between a static site and a dynamic site?
-*Think back to your last assignment, is it a static or dynamic site?
-*Are dynamic or static sites faster for the user? Why?
+*   What is the difference between a static site and a dynamic site?
+*   Think back to your last assignment, is it a static or dynamic site?
+*   Are dynamic or static sites faster for the user? Why?
 
 ## Introducing Firebase
 
