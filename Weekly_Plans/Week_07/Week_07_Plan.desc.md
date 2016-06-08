@@ -44,8 +44,7 @@ Welcome to Q2
 
 Lessons:
 
-- [Intro to Node](/redirects/articles/3213)
-- [Node's FS Module](/redirects/articles/3213)
+- [Intro to Node (again) & the FS Module](https://gist.github.com/JordanMajd/de32b9dffe7bafbc62f7f1495f7777d7)
 
 ---
 
