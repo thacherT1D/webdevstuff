@@ -38,16 +38,14 @@ Lessons:
 
 # Wednesday, June 8
 
-Warmup: [Link to Warmup](http://github.com/gSchool)
+Warmup: [Link to Warmup](http://www.codewars.com/kata/bingo-card)
 
 Welcome to Q2
 
 Lessons:
 
-- [Intro to Node]()
+- [Intro to Node](/redirects/articles/3213)
 - [Node's FS Module](/redirects/articles/3213)
-
-Homework: [Homework](/cohorts/68/student_dashboard)
 
 ---
 
