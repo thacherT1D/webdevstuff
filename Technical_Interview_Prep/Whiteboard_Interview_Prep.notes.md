@@ -1,5 +1,22 @@
 Each whiteboard interview prep session is an hour-long, and you should do 4-5 per week through Q4.
 
+
+# Overview
+
+Objectives:
+
+- Day 1
+  - learn the drill
+- Day 2
+  - Confirm 2-3 sample inputs / outputs with the interviewer
+  - Write sandwich code for an accumulator pattern
+- Day 3
+  - Run through the code with actual values, checking at every iteration
+- Day 4
+  - Verbalizing the approach / technique to the problem before solving
+
+---
+
 ## Day 1
 
 Day 1 is all about learning the drill.  Each student should have a chance to play each role, and rotate.
@@ -43,6 +60,10 @@ Walk around and check for rotation, check for the fact checkers, check for the o
 The idea for day one is to get through everyone.  This means that each interview must take 45min/<group size>, or roughly 5 minutes each for the whole thing.
 
 Again, the objective is to _learn the drill_, not to solve a complex problem.
+
+## Day 2
+
+https://docs.google.com/document/d/12GVRhp0v52Oh4I8Lfm2J1xRnDjF489FwxEe92PkAsEg/edit
 
 ## Session 2: Trollboarding 👹
 

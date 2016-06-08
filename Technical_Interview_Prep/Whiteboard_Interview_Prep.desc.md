@@ -79,6 +79,14 @@ _If_ the interviewee goes through the answer very quickly, here are some fun way
 - If they have a loop, ask them to do it without a loop, or with recursion
 - If they have lots of variables, ask them to do it with no variables (often requires lots of tiny functions, so may not be appropriate)
 
+### The videographer
+
+Phones / space / noise permitting, one additional observer can take the interviewee's phone and video tape the interview, so the interviewee can watch it later an reflect on the feedback.
+
+Look only for the objectives mentioned that day.
+
+You might even watch this video during reflection / journaling at 4:30
+
 ### Other observers
 
 Watch carefully.  Take notes.  Make guesses as to whether the code would run and see if you are correct when the fact-checker finishes.  Try to solve the problem ahead of the interviewee, but in your head or on a piece of paper (silently, that is :)
