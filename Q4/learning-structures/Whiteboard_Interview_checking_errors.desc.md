@@ -45,7 +45,7 @@ Input:  array = ["hello", "world"], delim = "-"
 Expected result: "hello-world"
 ```
 
-So at the end, you can just write:
+So at the end, you could write:
 
 ```
 result = ""
@@ -59,6 +59,16 @@ result = "hello-world-"
 ---------------   ^
 i = 2             |
 return -----------
+```
+
+Or you could write:
+
+```
+l | i | result
+--------------
+2 | 0 | "hello-"
+2 | 1 | "hello-world-"
+2 | 2
 ```
 
 Write the values **at the end of the iteration**.
