@@ -494,3 +494,7 @@ function rightPad(string, maxLength, padString) {
 };
 
 ```
+
+### Write things in another language
+
+If you are feeling strong, another way to stretch is to not write in JS at all, but to try these examples in Python, Java, PHP, C# etc...
