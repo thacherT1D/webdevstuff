@@ -54,10 +54,7 @@ Warmup: [Node, the file system, palindromes and you](https://github.com/gSchool/
 
 Lessons:
 
-- [Node's HTTP Module Pt. I](https://learn.galvanize.com/curriculums/56/articles/3159)
-- [Node's HTTP Module Pt. II](https://learn.galvanize.com/curriculums/56/articles/3159)
-
-Homework: [Homework](/cohorts/68/student_dashboard)
+- [Node's HTTP Module Pt. I](https://learn.galvanize.com/cohorts/68/articles/3159)
 
 ---
 
