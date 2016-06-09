@@ -38,16 +38,13 @@ Lessons:
 
 # Wednesday, June 8
 
-Warmup: [Link to Warmup](http://github.com/gSchool)
+Warmup: [Link to Warmup](http://www.codewars.com/kata/bingo-card)
 
 Welcome to Q2
 
 Lessons:
 
-- [Intro to Node]()
-- [Node's FS Module]()
-
-Homework: [Homework](/cohorts/68/student_dashboard)
+- [Intro to Node (again) & the FS Module](https://gist.github.com/JordanMajd/de32b9dffe7bafbc62f7f1495f7777d7)
 
 ---
 
@@ -57,8 +54,8 @@ Warmup: [Node, the file system, palindromes and you](https://github.com/gSchool/
 
 Lessons:
 
-- [Node's HTTP Module Pt. I]()
-- [Node's HTTP Module Pt. II]()
+- [Node's HTTP Module Pt. I](https://learn.galvanize.com/curriculums/56/articles/3159)
+- [Node's HTTP Module Pt. II](https://learn.galvanize.com/curriculums/56/articles/3159)
 
 Homework: [Homework](/cohorts/68/student_dashboard)
 
