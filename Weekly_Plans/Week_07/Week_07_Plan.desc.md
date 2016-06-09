@@ -53,7 +53,7 @@ Homework: [Homework](/cohorts/68/student_dashboard)
 
 # Thursday, June 9
 
-Warmup: [Link to Warmup](http://github.com/gSchool)
+Warmup: [Node, the file system, palindromes and you](https://github.com/gSchool/node-fs-palindrome-warmup)
 
 Lessons:
 
