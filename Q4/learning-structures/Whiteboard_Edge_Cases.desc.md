@@ -25,7 +25,7 @@ In real life product managers / project managers may not give you all of the edg
 
 In an interview, often times interviewers will test this skill by not giving you the full story.  For example they might say: "build a chess board with such-and-such characteristics..." and you might ask "Will the chess board always be 8x8 or is that a parameter my function should take?"
 
-### Look for 1-2 edge cases
+### Ask a few "what if" questions
 
 Here are a few things to look out for:
 
@@ -37,7 +37,7 @@ Here are a few things to look out for:
 
 Generally speaking there won't be a minefield of edge cases, so don't take the whole interview worrying about this.  But _assume_ there is a hidden requirement until you've confirmed you are good.
 
-### Propose solutions to those edge cases
+### Propose a few solutions
 
 Every time you ask "what happens when..." be prepared to follow up immediately with a few options, and then be able to choose one option and explain why.
 
@@ -64,6 +64,8 @@ _after confirming some sample inputs..._
 **Interviewer**
 
 > For now don't even worry about it.  Just assume you get well-formed input.
+
+### Stake a claim
 
 The example above demonstrates:
 
