@@ -8,8 +8,7 @@ Employ a methodical process at a whiteboard interview
 
 By the end of this training, you should be able to
 
-- find 1 or more edge cases relating to either input or output
-- propose reasonable solutions to those edge cases
+- ask 1 or more "What if" questions, propose 2 or more solutions, and pick one
 
 ## Rationale
 
@@ -70,6 +69,7 @@ The example above demonstrates:
 
 - showing multiple possibilities
 - staking a claim with a reason
+- doing nothing is always an option
 
 ### (sometimes) ask if there's anything you've missed
 
