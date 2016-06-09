@@ -8,11 +8,15 @@ Employ a methodical process at a whiteboard interview
 
 By the end of this training, you should be able to
 
-- ask 1 or more "What if" questions, propose 2 or more solutions, and pick one
+- Ask one or more "What if" questions about edge cases
+- Propose 2 or more solutions
+- "Stake your claim" - choose one solution to recommend, along with why
 
 ## Rationale
 
 A _good_ whiteboard interviewer is looking for your problem solving skills.  In the real world, problems often have ill-defined or complex inputs (data from a web form, data from files in the file system etc...), and knowing what to do with those inputs is key to being able to write high quality, robust software.
+
+This exercise is a microcosm of real world processes of turning words into software.
 
 ## How it works
 
@@ -83,3 +87,18 @@ It's not a bad idea to quickly confirm if there's anything you've missed before 
 1. The interviewer will give you a scenario
 1. Perform the first step of creating a few sample inputs / outputs
 1. Perform today's objective - think more deeply about edge cases that might not be obvious
+
+<div class="alert alert-success">
+  <p>
+    **Do always propose solutions/options** when talking about what you could do.  For example: "what would happen if you passed in an empty array?  Would it just..."  Or "It seems like we should cover the case where x is greater than y, is it OK if I just throw an error there?"
+  </p>
+</div>
+
+<div class="alert alert-danger">
+  <p>
+    **Avoid Menial Type Checking**: Try to avoid lots of _menial_ data validation code.  For example, if I say "write a function that takes an array and returns the sum of elements one and two", try to avoid questions like "what if you don't pass anything to the function?" and "what if you pass a number to the function instead of an array".
+  </p>
+  <p>
+    **Avoid asking an interviewer what to do** - Interviewers want to know how _you_ think, so asking them to provide answers (as opposed to proposing your own solutions) acts counter to the point of the interview.
+  </p>
+</div>
