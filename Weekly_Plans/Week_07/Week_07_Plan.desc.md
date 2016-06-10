@@ -62,8 +62,8 @@ Lessons:
 
 Warmup: [Biweekly Survey](https://docs.google.com/forms/d/1XsnxPufkGL24Bnsa_8IxcyJT6-VudP4QC9VqbTbctAw/viewform?usp=send_form)
 
-Crush Code Friday: [CCF](/cohorts/68/student_dashboard)
+Crush Code Friday: [Frenchpress Todo](https://github.com/gSchool/CCF-Frenchpress-Todo)
 
-Homework: [Homework](/cohorts/68/student_dashboard)
+Homework: [TBA]()
 
 Lightning Talks:
