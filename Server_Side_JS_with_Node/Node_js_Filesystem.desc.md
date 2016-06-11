@@ -95,7 +95,7 @@ node -v
 
 Now that your laptop has the latest version of Node.js, let's learn about the various ways it can execute JavaScript code. Conveniently, Node.js comes with a built-in **REPL** which is short for read, evaluate, print, and loop. The Node.js REPL gives you a prompt where you can type JavaScript code. In order to execute it in the Node.js runtime, just press the `Enter` key and the results will be immediately displayed in the Terminal.
 
-You can try it out by launching your Terminal app and running the `node` command without any arguments.
+You can try out the REPL by launching your Terminal app and running the `node` command without any arguments.
 
 ```shell
 node
@@ -109,7 +109,7 @@ Type in `1 + 2`, press the `Enter` key, and verify Node.js can do basic arithmet
 
 ![](https://i.imgur.com/2unMiSC.png)
 
-To leave this the Node.js REPL, run the `.exit` command.
+To quit the Node.js REPL, run the `.exit` command.
 
 ```shell
 .exit
