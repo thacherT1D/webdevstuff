@@ -12,7 +12,7 @@
 
 A **runtime system** is the environment that enables a program to be executed. When JavaScript was released in 1995, its only runtime system was inside a web browser. That all changed in 2009, when Ryan Dahl created **Node.js**, a runtime system for executing JavaScript programs outside a web browser. By using Node.js, developers can write JavaScript programs that run directly on an operating system like Linux, Mac OS X, and Windows.
 
-When a JavaScript program runs inside a web browser, it's only concerned with browser related tasks using functions like the following.
+When a JavaScript program runs inside a web browser, it's only concerned with browser related tasks and has access to functions like the following.
 
 - `document.querySelector()`
 - `document.createElement()`
@@ -20,7 +20,7 @@ When a JavaScript program runs inside a web browser, it's only concerned with br
 - `element.appendChild()`
 - `element.removeChild()`
 
-However, when a JavaScript program runs outside a web browser with Node.js, it's only concerned with operating system tasks using functions like the following.
+However, when a JavaScript program runs outside a web browser with Node.js, it's not concerned with any browser related tasks and has no access to the above functions. Instead, it's only concerned with operating system tasks and, instead, has access to the following functions.
 
 - `fs.readFile()`
 - `fs.writeFile()`
@@ -28,7 +28,33 @@ However, when a JavaScript program runs outside a web browser with Node.js, it's
 - `http.createServer()`
 - `server.listen()`
 
-Some of the [largest companies]['companies'] on the planet use Node.js as part of their technology stack. Their usage of Node.js varies from company to company and it's unlikely that any of one of them operates entirely in Node.js. Just like everything, Node.js has its [advantages](http://www.toptal.com/nodejs/why-the-hell-would-i-use-node-js) and [disadvantages](http://www.quora.com/What-are-the-disadvantages-of-using-Node-js).
+In Node.js, most built-in functions are organized into modules. A **module** is a collection of functions that can be imported into a file using the `require()` function. For example, the `fs` module is one of the most popular ones because it provides developers the ability to access and modify the filesystem.
+
+Create a `readPaths.js` file somewhere and type in the following code.
+
+**NOTE:** There's no need to wrap JavaScript in an IIFE as each file has its own scope when executed by Node.js.
+
+```javascript
+'use strict';
+
+var fs = require('fs');
+
+fs.readFile('/etc/paths', function(err, data) {
+  if (err) {
+    throw err;
+  }
+
+  console.log(data);
+});
+```
+
+Then, run the file with the Node.js runtime system.
+
+```shell
+node readPaths.js
+```
+
+The program only needs to require one module—the `fs` module—to import the filesystem functionality. Because the `readPaths.js` file is executed in its own scope, this functionality lives inside the local `fs` variable and doesn't pollute the global scope.
 
 ### Exercise
 
@@ -41,6 +67,11 @@ Node.js is commonly used to build HTTP servers. An **HTTP server** is a program 
 **EXERCISE:** Think back to your Q1 project. If you could've designed your own custom web API, what would've the JSON response looked like? Take a moment to write it down.
 
 Because of this capability, Node.js is similar to other runtime systems that execute HTTP servers written in languages like Go, Java, PHP, Python, and Ruby. One of the advantages Node.js has over these other runtimes is that it allows front-end web developers to leverage their fluency in JavaScript to build back-end web applications. This is also a big reason why smart companies are interested in hiring JavaScript developers. If a web developer gets bored and starts looking for new challenges, they can switch their role at the company and focus on the opposite side of the HTTP divide.
+
+TODO talk about other server-side runtimes (i.e. Go, Haskel, Java, Lisp, Perl, PHP, Ruby)
+
+Some of the [largest companies]['companies'] on the planet use Node.js as part of their technology stack. Their usage of Node.js varies from company to company and it's unlikely that any of one of them operates entirely in Node.js. Just like everything, Node.js has its [advantages](http://www.toptal.com/nodejs/why-the-hell-would-i-use-node-js) and [disadvantages](http://www.quora.com/What-are-the-disadvantages-of-using-Node-js).
+
 
 ## How do you upgrade Node.js?
 
