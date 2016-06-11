@@ -115,13 +115,13 @@ To quit the Node.js REPL, run the `.exit` command.
 .exit
 ```
 
-The Node.JS REPL is a handy way to play around with JavaScript before you commit your ideas to a file. It's similar to the browser console only you don't have access to any browser concepts like a `window` object, a `document` object, or any other browser APIs.
+The Node.JS REPL is a handy way to play around with JavaScript before you commit your ideas to a file. In a way, it's similar to the browser console except that you can only access Node.js functions.
 
 ### Exercise
 
 How can you tell when your Terminal is running the Node.js REPL? How can you tell when it's running your default shell?
 
-### How do you run JavaScript code using the Node.js interpreter?
+## How do you run JavaScript code using the Node.js interpreter?
 
 Additionally, the Node.js interpreter can run JavaScript code that lives in a file. An **interpreter** is a program that translates source code that lives in a file into executable code and then immediately runs it. Most of the time, you'll be interacting with the Node.js runtime using its interpreter.
 
