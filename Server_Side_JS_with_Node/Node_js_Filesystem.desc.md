@@ -197,7 +197,7 @@ In a moment, you'll get some more practice performing I/O with files. But first,
 
 ## What are the two ways to handle I/O?
 
-Operations using an I/O device can be extremely slow compared to the operations using a CPU. Many I/O devices incorporate mechanical components that must physically move, such as a hard drive seeking a track to read or write. Moving a mechanical component is often orders of magnitude slower than the switching of an electric current. For example, during a disk operation that takes 10ms to perform, a processor that is clocked at one gigahertz could have performed ten million instruction-processing cycles.
+Operations that use an I/O device can be extremely slow compared to the operations that use a CPU. Many I/O devices incorporate mechanical components that must physically move, such as a hard drive seeking a track to read or write. Moving a mechanical component is often orders of magnitude slower than the switching of an electric current. For example, during a hard disk operation that takes 10ms to perform, a 1 GHz CPU would have performed ten million instruction-processing cycles.
 
 A simple approach to I/O would be to start the operation and then wait for it to complete. This is called **synchronous** or **blocking** I/O because it blocks the progress of a program while the I/O operation is in progress. In other words, the program is stuck waiting for the I/O operation to complete leaving the CPU to idle. When a program makes many synchronous I/O operations, the CPU could spend almost all of its time waiting for the operations to complete.
 
@@ -214,7 +214,7 @@ console.log(1 + 2);
 console.log(data);
 ```
 
-Alternatively, it's possible to start an I/O operation and then perform CPU processing that doesn't require the I/O be completed. This approach is called **asynchronous** or **non-blocking** I/O. Any task that depends on the I/O having completed, still needs to wait for the I/O operation to complete and thus is still blocked. But other processing that does not have a dependency on the I/O operation can continue.
+Alternatively, it's possible to start an I/O operation and then continue with the other operations that don't require the I/O to be completed. This approach is called **asynchronous** or **non-blocking** I/O. Any tasks that depend on the I/O operation to be completed still need to wait and are thus blocked. But other operations that don't not have a dependency on the I/O operation can continue.
 
 Here's an example of a JavaScript program performing asynchronous I/O using Node.js.
 
@@ -236,7 +236,7 @@ console.log(1 + 2);
 
 ### Exercise
 
-What kind of programs would prefer asynchronous I/O? What kind of programs would prefer asynchronous I/O?
+What kind of programs do you think would prefer asynchronous I/O? What kind of programs would prefer synchronous I/O?
 
 ## How do you manage the file system with Node.js?
 
