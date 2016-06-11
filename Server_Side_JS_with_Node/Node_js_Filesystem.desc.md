@@ -12,7 +12,7 @@
 
 A **runtime system** is the environment that enables a program to be executed. When JavaScript was released in 1995, its only runtime system was inside a web browser. That all changed in 2009 when Ryan Dahl created **Node.js**, a runtime system for executing JavaScript programs outside a web browser. By using Node.js, developers can write JavaScript programs that run directly on an operating system like Linux, Mac OS X, and Windows.
 
-When a JavaScript program runs inside a web browser, it's only concerned with browser related tasks and has access to functions like the following.
+When a JavaScript program runs inside a web browser, it's only concerned with browser related tasks. As you've seen, JavaScript programs written for the browser have access to the following functions.
 
 - `document.querySelector()`
 - `document.createElement()`
@@ -20,7 +20,7 @@ When a JavaScript program runs inside a web browser, it's only concerned with br
 - `element.appendChild()`
 - `element.removeChild()`
 
-However, when a JavaScript program runs outside a web browser with Node.js, it's not concerned with browser related tasks at all and has no access to the above functions. Instead, it's only concerned with operating system tasks and, instead, has access to the following functions.
+However, when a JavaScript program runs outside a web browser with Node.js, it's not concerned with browser related tasks at all and has no access to the above functions. JavaScript programs written for Node.js are only concerned with operating system tasks and, instead, have access to the following functions.
 
 - `fs.readFile()`
 - `fs.writeFile()`
@@ -28,11 +28,11 @@ However, when a JavaScript program runs outside a web browser with Node.js, it's
 - `http.createServer()`
 - `server.listen()`
 
-In Node.js, most built-in functions are organized into modules. A **module** is a collection of functions that can be imported into a file using the `require()` function. For example, the `fs` module is one of the most popular ones because it provides developers the ability to access and modify the filesystem.
+In Node.js, most built-in functions are organized into modules. A **module** is a collection of functions that can be imported into a file using the `require()` function. For example, the `fs` module is one of the most popular modules because it allows JavaScript programs the ability to access and modify the filesystem.
 
 Create a `readPaths.js` file somewhere and type in the following code.
 
-**NOTE:** There's no need to wrap JavaScript in an IIFE as each file has its own scope when executed by Node.js.
+**NOTE:** There's no need to wrap the code in an IIFE as each file has its own scope when executed by Node.js.
 
 ```javascript
 'use strict';
@@ -66,7 +66,7 @@ Node.js is commonly used to build HTTP servers. An **HTTP server** is a program 
 
 Because of this capability, Node.js is similar to other runtime systems that execute HTTP servers written in languages like Go, Haskel, Java, Lisp, Perl, PHP, Python, and Ruby just to name a few. One of the advantages Node.js has over these other runtimes is that it allows front-end web developers to leverage their fluency in JavaScript to build back-end web applications.
 
-This is a big reason why smart companies of all sizes are interested in hiring JavaScript developers. Because of the hiring gap, companies are incentivized to keep developers engaged with the company for as long as possible. If a JavaScript developer gets bored and starts looking for new challenges, Node.js allows him or her to switch roles at the company and focus on the opposite side of the HTTP divide. 
+This is a big reason why smart companies of all sizes are interested in hiring JavaScript developers. Because of the hiring gap, companies are incentivized to keep developers engaged with the company for as long as possible. If a JavaScript developer gets bored and starts looking for new challenges, Node.js allows him or her to switch roles at the company and focus on the opposite side of the HTTP divide.
 
 Usage of Node.js varies from company to company and it's unlikely that any company operates solely on Node.js. Just like everything, Node.js has its [advantages](http://www.toptal.com/nodejs/why-the-hell-would-i-use-node-js) and [disadvantages](http://www.quora.com/What-are-the-disadvantages-of-using-Node-js) which you can read about on your own.
 
