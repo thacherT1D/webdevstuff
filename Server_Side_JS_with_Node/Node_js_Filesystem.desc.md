@@ -36,7 +36,13 @@ Create a `readPaths.js` file on the Desktop.
 touch ~/Desktop/readPaths.js
 ```
 
-Now, type in the following code. There's no need to wrap this code in an IIFE as each file has its own scope when executed by Node.js.
+Open the `readPaths.js` file in your text editor.
+
+```shell
+atom ~/Desktop/readPaths.js
+```
+
+And type in the following code. There's no need to wrap this code in an IIFE as each file has its own scope when executed by Node.js.
 
 ```javascript
 'use strict';
@@ -52,7 +58,7 @@ fs.readFile('/etc/paths', function(err, data) {
 });
 ```
 
-Then, run the `readPaths.js` file with the Node.js runtime system.
+Now, save the `readPaths.js` file and run it with the Node.js runtime system.
 
 ```shell
 node ~/Desktop/readPaths.js
@@ -135,28 +141,24 @@ First, create a new `addition.js` file.
 touch ~/Desktop/addition.js
 ```
 
-Open the file in your text editor
+Open the `addition.js` file in your text editor.
 
 ```shell
 atom ~/Desktop/addition.js
 ```
 
-And write the following code.
+And type in the following code. Again, there's no need to wrap this code in an IIFE as each file has its own scope when executed by Node.js.
 
 ```javascript
+'use strict';
+
 console.log(1 + 2);
 ```
 
-Now save the file and run it with the Node.js interpreter using the same `node` command. By specifying a file path, the `node` command will start the interpreter.
+Now, save the `addition.js` file and run it with the Node.js interpreter using the same `node` command. By specifying a file path, the `node` command will start the interpreter.
 
 ```shell
 node ~/Desktop/addition.js
-```
-
-When you're ready, you can delete this file with the `rm` command.
-
-```shell
-rm ~/Desktop/addition.js
 ```
 
 ### Exercise
