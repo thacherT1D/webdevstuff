@@ -234,6 +234,8 @@ fs.readFile('/etc/paths', 'utf8', function(err, data) {
 console.log(1 + 2);
 ```
 
+The vast majority of this program will focus on teaching you how to build programs capable of asynchronous I/O.
+
 ### Exercise
 
 What kind of programs do you think would prefer asynchronous I/O? What kind of programs would prefer synchronous I/O?
