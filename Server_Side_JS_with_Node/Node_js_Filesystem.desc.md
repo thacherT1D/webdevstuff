@@ -30,9 +30,13 @@ However, when a JavaScript program runs outside a web browser with Node.js, it's
 
 In Node.js, most built-in functions are organized into modules. A **module** is a collection of functions that can be imported into a file using the `require()` function. For example, the `fs` module is one of the most popular modules because it allows JavaScript programs the ability to access and modify the filesystem.
 
-Create a `readPaths.js` file somewhere and type in the following code.
+Create a `readPaths.js` file on the Desktop.
 
-**NOTE:** There's no need to wrap the code in an IIFE as each file has its own scope when executed by Node.js.
+```shell
+touch ~/Desktop/readPaths.js
+```
+
+Now, type in the following code. There's no need to wrap this code in an IIFE as each file has its own scope when executed by Node.js.
 
 ```javascript
 'use strict';
@@ -48,10 +52,10 @@ fs.readFile('/etc/paths', function(err, data) {
 });
 ```
 
-Then, run the file with the Node.js runtime system.
+Then, run the `readPaths.js` file with the Node.js runtime system.
 
 ```shell
-node readPaths.js
+node ~/Desktop/readPaths.js
 ```
 
 The program only needs to require one module—the `fs` module—to import the filesystem functionality. And because the `readPaths.js` file is executed in its own scope, this functionality lives inside the local `fs` variable and doesn't pollute the global scope.
