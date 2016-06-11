@@ -62,16 +62,17 @@ In your own words, think about what Node.js means to you and write it down.
 
 ## Why is Node.js so important?
 
-Node.js is commonly used to build HTTP servers. An **HTTP server** is a program that runs in an infinite loop, accepting HTTP requests from a client and sending HTTP responses back to it. Inside those responses, Node.js HTTP servers often include HTML, CSS, JavaScript, JSON, and other data formats.
+Node.js is commonly used to build HTTP servers. An **HTTP server** is a program that runs in an infinite loop, accepting HTTP requests from a client and sending HTTP responses back to it. Inside those responses, HTTP servers often include data like HTML, CSS, JavaScript, and JSON amongst other formats. Throughout the second quarter of this program, you'll be building custom HTTP servers in Node.js that'll accept HTTP requests and send back HTTP responses with JSON data.
 
-**EXERCISE:** Think back to your Q1 project. If you could've designed your own custom web API, what would've the JSON response looked like? Take a moment to write it down.
+Because of this capability, Node.js is similar to other runtime systems that execute HTTP servers written in languages like Go, Haskel, Java, Lisp, Perl, PHP, Python, and Ruby just to name a few. One of the advantages Node.js has over these other runtimes is that it allows front-end web developers to leverage their fluency in JavaScript to build back-end web applications.
 
-Because of this capability, Node.js is similar to other runtime systems that execute HTTP servers written in languages like Go, Java, PHP, Python, and Ruby. One of the advantages Node.js has over these other runtimes is that it allows front-end web developers to leverage their fluency in JavaScript to build back-end web applications. This is also a big reason why smart companies are interested in hiring JavaScript developers. If a web developer gets bored and starts looking for new challenges, they can switch their role at the company and focus on the opposite side of the HTTP divide.
+This is a big reason why smart companies of all sizes are interested in hiring JavaScript developers. Because of the hiring gap, companies are incentivized to keep developers engaged with the company for as long as possible. If a JavaScript developer gets bored and starts looking for new challenges, Node.js allows him or her to switch roles at the company and focus on the opposite side of the HTTP divide. 
 
-TODO talk about other server-side runtimes (i.e. Go, Haskel, Java, Lisp, Perl, PHP, Ruby)
+Usage of Node.js varies from company to company and it's unlikely that any company operates solely on Node.js. Just like everything, Node.js has its [advantages](http://www.toptal.com/nodejs/why-the-hell-would-i-use-node-js) and [disadvantages](http://www.quora.com/What-are-the-disadvantages-of-using-Node-js) which you can read about on your own.
 
-Some of the [largest companies]['companies'] on the planet use Node.js as part of their technology stack. Their usage of Node.js varies from company to company and it's unlikely that any of one of them operates entirely in Node.js. Just like everything, Node.js has its [advantages](http://www.toptal.com/nodejs/why-the-hell-would-i-use-node-js) and [disadvantages](http://www.quora.com/What-are-the-disadvantages-of-using-Node-js).
+### Exercise
 
+Think back to your Q1 project. If you were designing your own custom JSON API for it, what would the response look like? Take a few moments to write it down.
 
 ## How do you upgrade Node.js?
 
