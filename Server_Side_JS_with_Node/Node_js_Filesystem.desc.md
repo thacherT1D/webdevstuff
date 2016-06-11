@@ -34,7 +34,7 @@ Create a `readPaths.js` file somewhere and type in the following code.
 
 **NOTE:** There's no need to wrap JavaScript in an IIFE as each file has its own scope when executed by Node.js.
 
-```javascript
+```js
 'use strict';
 
 var fs = require('fs');
