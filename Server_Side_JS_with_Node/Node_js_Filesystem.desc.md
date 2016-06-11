@@ -214,7 +214,7 @@ console.log(data);
 console.log(1 + 2);
 ```
 
-Alternatively, it's possible to start an I/O operation and then continue with the other operations that don't require the I/O to be completed. This approach is called **asynchronous** or **non-blocking** I/O. Any tasks that depend on the I/O operation to be completed still need to wait and are thus blocked. But other operations that don't not have a dependency on the I/O operation can continue.
+Alternatively, it's possible to start an I/O operation and then continue with the other operations that don't require the I/O to be completed. This approach is called **asynchronous** or **non-blocking** I/O. Any tasks that depend on the I/O operation to be completed still need to wait and are thus blocked. But other operations that don't have a dependency on the I/O operation can continue.
 
 Here's an example of a JavaScript program performing asynchronous I/O using Node.js.
 
