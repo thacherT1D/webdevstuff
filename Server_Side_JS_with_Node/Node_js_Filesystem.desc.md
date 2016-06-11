@@ -54,7 +54,7 @@ Then, run the file with the Node.js runtime system.
 node readPaths.js
 ```
 
-The program only needs to require one module—the `fs` module—to import the filesystem functionality. Because the `readPaths.js` file is executed in its own scope, this functionality lives inside the local `fs` variable and doesn't pollute the global scope.
+The program only needs to require one module—the `fs` module—to import the filesystem functionality. And because the `readPaths.js` file is executed in its own scope, this functionality lives inside the local `fs` variable and doesn't pollute the global scope.
 
 ### Exercise
 
