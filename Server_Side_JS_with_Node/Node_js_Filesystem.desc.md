@@ -6,7 +6,7 @@
 - Run JavaScript code using the Node.js REPL.
 - Run JavaScript code using the Node.js interpreter.
 - Describe what I/O is.
-- Describe what the two ways to handle I/O are.
+- Describe what the two ways to perform I/O are.
 - Use the `fs` module to manage the file system.
 
 ## What's Node.js?
@@ -193,9 +193,9 @@ Additionally, programs can perform I/O with "devices" such as:
 - Pipes
 - Sockets
 
-In a moment, you'll get some more practice performing I/O with files. But first, you should know about the two ways to handle I/O.
+In a moment, you'll get some more practice performing I/O with files. But first, you should know about the two ways to perform I/O.
 
-## What are the two ways to handle I/O?
+## What are the two ways to perform I/O?
 
 Operations that use an I/O device can be extremely slow compared to the operations that use a CPU. Many I/O devices incorporate mechanical components that must physically move, such as a hard drive seeking a track to read or write. Moving a mechanical component is often orders of magnitude slower than the switching of an electric current. For example, during a hard disk operation that takes 10ms to perform, a 1 GHz CPU would have performed ten million instruction-processing cycles.
 
@@ -242,17 +242,26 @@ What kind of programs do you think would prefer asynchronous I/O? What kind of p
 
 ## How do you manage the file system with Node.js?
 
-Now that you've played around with the two ways to execute JavaScript code in Node.js, let's play around with the [file system module](https://nodejs.org/api/fs.html) (`fs`). The `fs` module is a built-in Node.js API for reading and writing information to and from files. Start by setting up a new project.
+Now that you've played around with the two ways to perform I/O, let's play around with the `fs` module some more. The `fs` module is a built-in Node.js API for managing a computer's filesystem.
+
+To get started, create a new project.
 
 ```shell
 mkdir party
 cd party
 echo '[]' >> guests.json
 touch guests.js
+git init
+git commit -m 'Initial commit'
+```
+
+Open the `party` project in your text editor.
+
+```shell
 atom .
 ```
 
-Add the following code to the `guests.js` file.
+And type in the following code to the `guests.js` file.
 
 ```javascript
 'use strict';
@@ -272,14 +281,21 @@ fs.readFile(guestsPath, 'utf8', function(err, data) {
 });
 ```
 
-Then run the program using the `node` command.
+Now, run the program using the `node` command.
 
 ```shell
 $ node guests.js
 []
 ```
 
-Now refactor the `guests.js` file to handle the `read` subcommand.
+Then, add and commit the latest changes to the `party` project's repository.
+
+```shell
+git add .
+git commit -m 'Add the basic scaffold'
+```
+
+Next, refactor the `guests.js` file by adding a `read` subcommand.
 
 ```javascript
 'use strict';
@@ -309,7 +325,7 @@ else {
 }
 ```
 
-Then run the program using the `node` command, both with and without the `read` subcommand.
+Now, run the program using the `node` command, both with and without the `read` subcommand.
 
 ```shell
 $ node guests.js
@@ -319,7 +335,14 @@ $ node guests.js read
 []
 ```
 
-Now refactor the `guests.js` file to also handle the `create` subcommand.
+Then, add and commit the latest changes to the `party` project's repository.
+
+```shell
+git add .
+git commit -m 'Add the read subcommand'
+```
+
+Next, refactor the `guests.js` file by adding a `create` subcommand as well.
 
 ```javascript
 'use strict';
@@ -376,7 +399,7 @@ else {
 }
 ```
 
-Then run the program using the `node` command, both with and without the `create` subcommand.
+Now, run the program using the `node` command, both with and without the `create` subcommand.
 
 ```shell
 $ node guests.js
@@ -397,6 +420,15 @@ Don
 $ node guests.js read
 [ 'Mary', 'Don' ]
 ```
+
+Finally, add and commit the latest changes to the `party` project's repository.
+
+```shell
+git add .
+git commit -m 'Add the create subcommand'
+```
+
+And there you have it! You just built a small Node.js program to read and create party guests to a file-based database.
 
 ### Assignment
 
