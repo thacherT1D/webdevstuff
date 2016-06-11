@@ -66,7 +66,7 @@ Node.js is commonly used to build HTTP servers. An **HTTP server** is a program 
 
 Because of this capability, Node.js is similar to other runtime systems that execute HTTP servers written in languages like Go, Haskel, Java, Lisp, Perl, PHP, Python, and Ruby just to name a few. One of the advantages Node.js has over these other runtimes is that it allows front-end web developers to leverage their fluency in JavaScript to build back-end web applications.
 
-This is a big reason why smart companies of all sizes are interested in hiring JavaScript developers. Because of the hiring gap, companies are incentivized to keep developers engaged with the company for as long as possible. If a JavaScript developer gets bored and starts looking for new challenges, Node.js allows him or her to switch roles at the company and focus on the opposite side of the HTTP divide.
+As a developer, switching back and forth across the HTTP divide makes you more valuable for a company that builds client-server products. And as a company, allowing your JavaScript developers to switch roles is valuable because it's expensive to find, interview, hire, and onboard skilled developers. Long story short, Node.js has been beneficial for both web developers and companies alike.
 
 Usage of Node.js varies from company to company and it's unlikely that any company operates solely on Node.js. Just like everything, Node.js has its [advantages](http://www.toptal.com/nodejs/why-the-hell-would-i-use-node-js) and [disadvantages](http://www.quora.com/What-are-the-disadvantages-of-using-Node-js) which you can read about on your own.
 
