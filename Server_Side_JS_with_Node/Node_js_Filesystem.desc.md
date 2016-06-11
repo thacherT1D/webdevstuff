@@ -210,8 +210,8 @@ var fs = require('fs');
 
 var data = fs.readFileSync('/etc/paths', 'utf8');
 
-console.log(1 + 2);
 console.log(data);
+console.log(1 + 2);
 ```
 
 Alternatively, it's possible to start an I/O operation and then continue with the other operations that don't require the I/O to be completed. This approach is called **asynchronous** or **non-blocking** I/O. Any tasks that depend on the I/O operation to be completed still need to wait and are thus blocked. But other operations that don't not have a dependency on the I/O operation can continue.
