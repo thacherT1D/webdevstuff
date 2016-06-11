@@ -6,6 +6,7 @@
 - Run JavaScript code using the Node.js REPL.
 - Run JavaScript code using the Node.js interpreter.
 - Describe what I/O is.
+- Describe what the two ways to handle I/O are.
 - Use the `fs` module to manage the file system.
 
 ## What's Node.js?
@@ -49,7 +50,7 @@ And type in the following code. There's no need to wrap this code in an IIFE as 
 
 var fs = require('fs');
 
-fs.readFile('/etc/paths', function(err, data) {
+fs.readFile('/etc/paths', 'utf8', function(err, data) {
   if (err) {
     throw err;
   }
@@ -133,9 +134,9 @@ How can you tell when your Terminal is running the Node.js REPL? How can you tel
 
 ## How do you run JavaScript code using the Node.js interpreter?
 
-Additionally, the Node.js interpreter can run JavaScript code that lives in a file. An **interpreter** is a program that translates source code that lives in a file into executable code and then immediately runs it. Most of the time, you'll be interacting with the Node.js runtime using its interpreter.
+Additionally, the Node.js interpreter can run JavaScript code that lives in a file. An **interpreter** is a program that translates source code that lives in a file into executable code and then immediately runs it. Most of the time, you'll be interacting with the Node.js runtime using its interpreter. This was how you executed the `readPaths.js` file earlier.
 
-First, create a new `addition.js` file.
+Let's make another JavaScript program for the Node.js interpreter. Create a `addition.js` file on the Desktop.
 
 ```shell
 touch ~/Desktop/addition.js
@@ -167,9 +168,9 @@ What happens if you try to execute the expression `1 + 2` without the `console.l
 
 ## What's I/O?
 
-Input/Output (**I/O**) is the communication between a program and the outside world, possibly with a human or another program. Inputs are the data received by the program and outputs are the data sent from it. When performing I/O, the program is receiving and/or sending data to and from an I/O device.
+Input/Output (**I/O**) is the communication between a program and its outside world. Inputs are data received by the program and outputs are data sent from it.
 
-When a program communicates with a human, some possible input devices include:
+Possible input devices include:
 
 - Keyboards
 - Mice
@@ -178,33 +179,68 @@ When a program communicates with a human, some possible input devices include:
 - Touch screens
 - Microphones
 
-And some possible output devices include things like:
+And possible output devices include:
 
 - Screens
 - Speakers
 - Printers
-- Haptic motors
+- Haptic motors (i.e. vibration motors)
 
-I/O devices can also include things like:
+Additionally, programs can perform I/O with "devices" such as:
 
 - Files
 - Signals
 - Pipes
 - Sockets
 
-The biggest difference between Node.js and these languages is that most functions in these languages block until completion. In other words, expressions execute only after previous expression has completed. However, functions in Node.js are designed to be non-blocking. In other words, commands execute in parallel and use callbacks to signal completion or failure.
+In a moment, you'll get some more practice performing I/O with files. But first, you should know about the two ways to handle I/O.
 
-![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/54/stack.png)
+## What are the two ways to handle I/O?
 
-Although computers are able to rapidly execute instructions sent to the CPU, it is much slower to get information that is located somewhere like a hard disk or another computer. In particular with Node.js, the areas of interest are file and network I/O. File I/O will involve interacting with files on the computer's file system. Because Node.js is able to do these things asynchronously, it does not have to stop and wait for I/O to happen. Take a look at this [latency table]['latency'] to understand what kind of time it takes to do common I/O tasks that we currently take for granted.
+Operations using an I/O device can be extremely slow compared to the operations using a CPU. Many I/O devices incorporate mechanical components that must physically move, such as a hard drive seeking a track to read or write. Moving a mechanical component is often orders of magnitude slower than the switching of an electric current. For example, during a disk operation that takes 10ms to perform, a processor that is clocked at one gigahertz could have performed ten million instruction-processing cycles.
+
+A simple approach to I/O would be to start the operation and then wait for it to complete. This is called **synchronous** or **blocking** I/O because it blocks the progress of a program while the I/O operation is in progress. In other words, the program is stuck waiting for the I/O operation to complete leaving the CPU to idle. When a program makes many synchronous I/O operations, the CPU could spend almost all of its time waiting for the operations to complete.
+
+Here's an example of a JavaScript program performing synchronous I/O using Node.js.
+
+```javascript
+'use strict';
+
+var fs = require('fs');
+
+var data = fs.readFileSync('/etc/paths', 'utf8');
+
+console.log(1 + 2);
+console.log(data);
+```
+
+Alternatively, it's possible to start an I/O operation and then perform CPU processing that doesn't require the I/O be completed. This approach is called **asynchronous** or **non-blocking** I/O. Any task that depends on the I/O having completed, still needs to wait for the I/O operation to complete and thus is still blocked. But other processing that does not have a dependency on the I/O operation can continue.
+
+Here's an example of a JavaScript program performing asynchronous I/O using Node.js.
+
+```javascript
+'use strict';
+
+var fs = require('fs');
+
+fs.readFile('/etc/paths', 'utf8', function(err, data) {
+  if (err) {
+    throw err;
+  }
+
+  console.log(data);
+});
+
+console.log(1 + 2);
+```
 
 ### Exercise
 
-Can you think of any other input or output devices that you use on a daily basis?
+What kind of programs would prefer asynchronous I/O? What kind of programs would prefer asynchronous I/O?
 
 ## How do you manage the file system with Node.js?
 
-Now that you've played around with the two ways to execute JavaScript code in Node.js, let's play around with the [file system module]['fs'] (`fs`). The `fs` module is a built-in Node.js API for reading and writing information to and from files. Start by setting up a new project.
+Now that you've played around with the two ways to execute JavaScript code in Node.js, let's play around with the [file system module](https://nodejs.org/api/fs.html) (`fs`). The `fs` module is a built-in Node.js API for reading and writing information to and from files. Start by setting up a new project.
 
 ```shell
 mkdir party
@@ -369,8 +405,3 @@ $ node guests.js read
 - [Introduction to Node.js (video)](https://www.youtube.com/watch?v=pU9Q6oiQNd0)
 - [V8 (JavaScript Engine)](https://en.wikipedia.org/wiki/V8_(JavaScript_engine)
 - [Event Driven Programming](http://en.wikipedia.org/wiki/Event-driven_programming)  
-
-
-['companies']: https://github.com/joyent/node/wiki/projects,-applications,-and-companies-using-node
-['fs']: https://nodejs.org/api/fs.html
-['latency']: http://www.eecs.berkeley.edu/~rcs/research/interactive_latency.html
