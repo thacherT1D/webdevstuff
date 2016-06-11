@@ -1,6 +1,6 @@
 ## Objectives
 
-- Describe what Node.js is
+- Describe what Node.js is.
 - Explain why Node.js is important.
 - Upgrade Node.js to the latest version.
 - Run JavaScript code using the Node.js REPL.
@@ -10,9 +10,9 @@
 
 ## What's Node.js?
 
-A **runtime system** is the environment for an executing program. When JavaScript was released in 1995, its only runtime system was the web browser. That all changed in 2009, when Ryan Dahl created **Node.js**, a runtime system for executing JavaScript programs outside a web browser. By using Node.js, developers can write JavaScript programs that run directly on an operating system like Linux, Mac OS X, and Windows.
+A **runtime system** is the environment that enables a program to be executed. When JavaScript was released in 1995, its only runtime system was inside a web browser. That all changed in 2009, when Ryan Dahl created **Node.js**, a runtime system for executing JavaScript programs outside a web browser. By using Node.js, developers can write JavaScript programs that run directly on an operating system like Linux, Mac OS X, and Windows.
 
-When a JavaScript program runs using Node.js, it abandons all browser concerns like the following.
+When a JavaScript program runs inside a web browser, it's only concerned with browser related tasks using functions like the following.
 
 - `document.querySelector()`
 - `document.createElement()`
@@ -20,7 +20,7 @@ When a JavaScript program runs using Node.js, it abandons all browser concerns l
 - `element.appendChild()`
 - `element.removeChild()`
 
-Instead, Node.js programs are only concerned with operating system tasks using functions like the following.
+However, when a JavaScript program runs outside a web browser with Node.js, it's only concerned with operating system tasks using functions like the following.
 
 - `fs.readFile()`
 - `fs.writeFile()`
