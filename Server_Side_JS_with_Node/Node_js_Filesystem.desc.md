@@ -400,7 +400,7 @@ $ node guests.js read
 
 ### Assignment
 
-[Pet Shop: Node Filesystem](https://github.com/gSchool/fs-pet-shop)
+- [Pet Shop: Node Filesystem](https://github.com/gSchool/fs-pet-shop)
 
 ### Resources
 
