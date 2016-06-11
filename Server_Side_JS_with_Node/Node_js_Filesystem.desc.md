@@ -62,7 +62,7 @@ In your own words, think about what Node.js means to you and write it down.
 
 ## Why is Node.js so important?
 
-Node.js is commonly used to build HTTP servers. An **HTTP server** is a program that runs in an infinite loop, accepting HTTP requests from a client and sending HTTP responses back to it. Inside those responses, HTTP servers often include data like HTML, CSS, JavaScript, and JSON amongst other formats. Throughout the second quarter of this program, you'll be building custom HTTP servers in Node.js that'll accept HTTP requests and send back HTTP responses with JSON data.
+Node.js is commonly used to build HTTP servers. An **HTTP server** is a program that runs in an infinite loop, accepting HTTP requests from a client and sending HTTP responses back to it. Inside those responses, HTTP servers often include data like HTML, CSS, JavaScript, and JSON among other formats. Throughout the second quarter of this program, you'll be building custom HTTP servers in Node.js that'll accept HTTP requests and send back HTTP responses with JSON data.
 
 Because of this capability, Node.js is similar to other runtime systems that execute HTTP servers written in languages like Go, Haskel, Java, Lisp, Perl, PHP, Python, and Ruby just to name a few. One of the advantages Node.js has over these other runtimes is that it allows front-end web developers to leverage their fluency in JavaScript to build back-end web applications.
 
