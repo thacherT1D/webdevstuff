@@ -13,6 +13,33 @@ Before browsers, before JavaScript, and believe it or not, before HTML, the Inte
 
 The Internet that we now use is built on this foundation. The methods, however, have evolved. Instead of a terminal being the primary client, most users now use a web browser. The request for a resource, such as a file, is submitted as a URL in a web browser and forwarded to a web server. The URL `https://www.yahoo.com/index.html`, for instance, would search for a server with the host name of `www.yahoo.com` and a file named `/index.html` would be returned if found.
 
+1. Create a listening socket that's bound to a specific port number
+1. Periodically poll the listening socket to see if a new network connection is ready to be established
+1. Accept an incoming network connection request on the listening socket which creates a new socket to the client
+1. Send the HTTP request from the client to the server over the new socket
+1. Process the HTTP request on the server and send an HTTP response back to the client
+1. Optionally the client tells the server to close the socket
+1. The server goes back to polling the listening socket
+
+```javascript
+'use strict';
+
+var http = require('http');
+var port = 5000;
+
+var server = http.createServer(function(req, res) {
+  var guests = ['Mary', 'Don'];
+  var guestsJSON = JSON.stringify(guests);
+
+  res.setHeader('Content-Type', 'application/json');
+  res.end(guestsJSON);
+});
+
+server.listen(port, 'localhost', function() {
+  console.log(`Listening on port ${port}`);
+});
+```
+
 ## HTTP
 
 The most important component of a web URL is arguably the protocol: A set of rules that define the communication between a client and a server. For websites, the protocol is often [HTTP](https://en.wikipedia.org/wiki/Hypertext). Many of you may have noticed this protocol being used when you visit your favorite websites. There's a lot to learn about HTTP, but we'll focus our attention on HTTP's use of a request and response model.
