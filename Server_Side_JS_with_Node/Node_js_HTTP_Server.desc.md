@@ -13,15 +13,6 @@ Before browsers, before JavaScript, and believe it or not, before HTML, the Inte
 
 The Internet that we now use is built on this foundation. The methods, however, have evolved. Instead of a terminal being the primary client, most users now use a web browser. The request for a resource, such as a file, is submitted as a URL in a web browser and forwarded to a web server. The URL `https://www.yahoo.com/index.html`, for instance, would search for a server with the host name of `www.yahoo.com` and a file named `/index.html` would be returned if found.
 
-1. Create a listening socket that's bound to a specific port number
-1. Periodically poll the listening socket to see if a new network connection is ready to be established
-1. Accept an incoming network connection request on the listening socket which creates a new socket to the client
-1. Send the HTTP request from the client to the server over the new socket
-1. Process the HTTP request on the server and send an HTTP response back to the client
-1. After the server sends the HTTP response, it goes back to polling the listening socket.
-1. After the client processes the HTTP response, it can either send another HTTP request over the same socket or tell the server to close the socket.
-1. If the server hasn't received any new HTTP requests in 2 minutes, the server closes the socket.
-
 ```javascript
 'use strict';
 
@@ -37,6 +28,17 @@ server.listen(port, function() {
   console.log(`Listening on port ${port}`);
 });
 ```
+
+## How does a Node.js HTTP server work?
+
+1. Create a listening socket that's bound to a specific port number
+1. Periodically poll the listening socket to see if a new network connection is ready to be established
+1. Accept an incoming network connection request on the listening socket which creates a new socket to the client
+1. Send the HTTP request from the client to the server over the new socket
+1. Process the HTTP request on the server and send an HTTP response back to the client
+1. After the server sends the HTTP response, it goes back to polling the listening socket.
+1. After the client processes the HTTP response, it can either send another HTTP request over the same socket or tell the server to close the socket.
+1. If the server hasn't received any new HTTP requests in 2 minutes, the server closes the socket.
 
 ## HTTP
 
