@@ -78,47 +78,32 @@ Open the `party` project in your text editor.
 atom .
 ```
 
-And type in the following code to the `guests.js` file.
-
-```javascript
-'use strict';
-
-var fs = require('fs');
-var path = require('path');
-var guestsPath = path.join(__dirname, 'guests.json');
-
-fs.readFile(guestsPath, 'utf8', function(err, data) {
-  if (err) {
-    throw err;
-  }
-
-  var guests = JSON.parse(data);
-
-  console.log(guests);
-});
-```
-
-Node includes a module for creating an HTTP server:
+And type in the following code to the `server.js` file.
 
 ```javascript
 'use strict';
 
 var http = require('http');
+var port = 5000;
 
 var server = http.createServer(function(req, res) {
   res.setHeader('Content-Type', 'text/plain');
-  res.end("Hi, I'll take two packets of sugar.");
+  res.end('Hello world');
 });
 
-server.listen(8000, 'localhost', function() {
-  console.log('Listening on port 8000');
+server.listen(port, 'localhost', function() {
+  console.log(`Listening on port ${port}`);
 });
 ```
 
-To run our server, we need to type in a terminal the command `node` and the file name containing our code:
+To run the `server.js` file, use the `node` and command the file name containing our code:
 
 ```shell
 node server.js
+```
+
+```shell
+http GET localhost:5000/
 ```
 
 ```shell
@@ -129,7 +114,82 @@ npm install -g nodemon
 nodemon server.js
 ```
 
-Now open a browser to [localhost:8080](http://localhost:8080/).
+```shell
+http GET localhost:5000/
+```
+
+```javascript
+'use strict';
+
+var http = require('http');
+var port = 5000;
+
+var server = http.createServer(function(req, res) {
+  if (req.method === 'GET' && req.url === '/guests') {
+    res.setHeader('Content-Type', 'text/plain');
+    res.end('Hello world');
+  }
+  else {
+    res.statusCode = 404;
+    res.setHeader('Content-Type', 'text/plain');
+    res.end('Not found');
+  }
+});
+
+server.listen(port, 'localhost', function() {
+  console.log(`Listening on port ${port}`);
+});
+```
+
+```shell
+http GET localhost:5000/
+```
+
+```shell
+http GET localhost:5000/guests
+```
+
+```shell
+echo '["Mary", "Don"]' > guests.json
+```
+
+```javascript
+'use strict';
+
+var path = require('path');
+var guestsPath = path.join(__dirname, 'guests.json');
+
+var http = require('http');
+var port = 5000;
+
+var fs = require('fs');
+
+var server = http.createServer(function(req, res) {
+  if (req.method === 'GET' && req.url === '/guests') {
+    fs.readFile(guestsPath, 'utf8', function(err, data) {
+      if (err) {
+        throw err;
+      }
+
+      res.setHeader('Content-Type', 'application/json');
+      res.end(data);
+    });
+  }
+  else {
+    res.statusCode = 404;
+    res.setHeader('Content-Type', 'text/plain');
+    res.end('Not found');
+  }
+});
+
+server.listen(port, function() {
+  console.log('Listening on port', port);
+});
+```
+
+```shell
+http GET localhost:5000/guests
+```
 
 ##  Describe the Benefit of Routes
 
