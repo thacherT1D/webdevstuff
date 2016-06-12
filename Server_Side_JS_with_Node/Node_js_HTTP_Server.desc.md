@@ -60,12 +60,6 @@ cd party
 git checkout -b node_server
 ```
 
-Then, reset the `guests.json` file to an empty
-
-```shell
-echo '[]' >> guests.json
-```
-
 Create a `server.js` file.
 
 ```shell
@@ -87,8 +81,11 @@ var http = require('http');
 var port = 5000;
 
 var server = http.createServer(function(req, res) {
-  res.setHeader('Content-Type', 'text/plain');
-  res.end('Hello world');
+  var guests = ['Mary', 'Don'];
+  var guestsJSON = JSON.stringify(guests);
+
+  res.setHeader('Content-Type', 'application/json');
+  res.end(guestsJSON);
 });
 
 server.listen(port, 'localhost', function() {
@@ -126,8 +123,11 @@ var port = 5000;
 
 var server = http.createServer(function(req, res) {
   if (req.method === 'GET' && req.url === '/guests') {
-    res.setHeader('Content-Type', 'text/plain');
-    res.end('Hello world');
+    var guests = ['Mary', 'Don'];
+    var guestsJSON = JSON.stringify(guests);
+
+    res.setHeader('Content-Type', 'application/json');
+    res.end(guestsJSON);
   }
   else {
     res.statusCode = 404;
@@ -213,7 +213,7 @@ var server = http.createServer(function(req, res) {
       res.end(data);
     });
   }
-  else if(req.method === 'GET' && req.url === '/guests/0') {
+  else if (req.method === 'GET' && req.url === '/guests/0') {
     fs.readFile(guestsPath, 'utf8', function(err, data) {
       if (err) {
         throw err;
@@ -226,7 +226,7 @@ var server = http.createServer(function(req, res) {
       res.end(guestJSON);
     });
   }
-  else if(req.method === 'GET' && req.url === '/guests/1') {
+  else if (req.method === 'GET' && req.url === '/guests/1') {
     fs.readFile(guestsPath, 'utf8', function(err, data) {
       if (err) {
         throw err;
