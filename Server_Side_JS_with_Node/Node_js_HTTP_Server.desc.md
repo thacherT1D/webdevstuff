@@ -18,8 +18,9 @@ The Internet that we now use is built on this foundation. The methods, however, 
 1. Accept an incoming network connection request on the listening socket which creates a new socket to the client
 1. Send the HTTP request from the client to the server over the new socket
 1. Process the HTTP request on the server and send an HTTP response back to the client
-1. Optionally the client tells the server to close the socket
-1. The server goes back to polling the listening socket
+1. After the server sends the HTTP response, it goes back to polling the listening socket.
+1. After the client processes the HTTP response, it can either send another HTTP request over the same socket or tell the server to close the socket.
+1. If the server hasn't received any new HTTP requests in 2 minutes, the server closes the socket.
 
 ```javascript
 'use strict';
