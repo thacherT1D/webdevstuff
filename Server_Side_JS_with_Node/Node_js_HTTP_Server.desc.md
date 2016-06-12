@@ -53,6 +53,51 @@ In turn, a request will return a response with three components:
 
 ## How do you create an HTTP server with Node.js?
 
+To get started, return to the `party` project from yesterday and create a new branch.
+
+```shell
+cd party
+git checkout -b node_server
+```
+
+Then, reset the `guests.json` file to an empty
+
+```shell
+echo '[]' >> guests.json
+```
+
+Create a `server.js` file.
+
+```shell
+touch server.js
+```
+
+Open the `party` project in your text editor.
+
+```shell
+atom .
+```
+
+And type in the following code to the `guests.js` file.
+
+```javascript
+'use strict';
+
+var fs = require('fs');
+var path = require('path');
+var guestsPath = path.join(__dirname, 'guests.json');
+
+fs.readFile(guestsPath, 'utf8', function(err, data) {
+  if (err) {
+    throw err;
+  }
+
+  var guests = JSON.parse(data);
+
+  console.log(guests);
+});
+```
+
 Node includes a module for creating an HTTP server:
 
 ```javascript
@@ -72,8 +117,16 @@ server.listen(8000, 'localhost', function() {
 
 To run our server, we need to type in a terminal the command `node` and the file name containing our code:
 
-```bash
-node index.js
+```shell
+node server.js
+```
+
+```shell
+npm install -g nodemon
+```
+
+```shell
+nodemon server.js
 ```
 
 Now open a browser to [localhost:8080](http://localhost:8080/).
@@ -89,72 +142,115 @@ Our web server would become more useful if we could return a response that would
 The infrastructure of the Internet handles the routing of our request from our browser to our server. However, we still need to handle how a request is routed relative to a URL's path and query string. To help us access this information, we can require one of Node's core modules named [`url`](https://nodejs.org/api/url.html):
 
 ```javascript
+'use strict';
+
+var path = require('path');
+var guestsPath = path.join(__dirname, 'guests.json');
+
 var http = require('http');
+var port = 5000;
 
-function handleRequest(req, res) {
-  if (req.url === '/special-message') {
-    res.end("You're SPECIAL?!");
-  } else if (req.url === '/non-special-message') {
-    res.end("You're boring!");
-  } else {
-    res.end(req.url);  
+var fs = require('fs');
+
+var server = http.createServer(function(req, res) {
+  var guestRegExp = /^\/guests\/(.*)$/;
+
+  if (req.method === 'GET' && req.url === '/guests') {
+    fs.readFile(guestsPath, 'utf8', function(err, data) {
+      if (err) {
+        throw err;
+      }
+
+      res.setHeader('Content-Type', 'application/json');
+      res.end(data);
+    });
   }
-};
+  else if (req.method === 'GET' && guestRegExp.test(req.url)) {
+    fs.readFile(guestsPath, 'utf8', function(err, data) {
+      if (err) {
+        throw err;
+      }
 
-var server = http.createServer(handleRequest);
+      var matches = req.url.match(guestRegExp);
+      var id = Number.parseInt(matches[1]);
+      var guests = JSON.parse(data);
 
-server.listen(8080, function() {
-  console.log("Listening...")
+      if (id < 0 || id >= guests.length || Number.isNaN(id)) {
+        res.statusCode = 404;
+        res.setHeader('Content-Type', 'text/plain');
+        res.end('Not found');
+
+        return;
+      }
+
+      var guestJSON = JSON.stringify(guests[id]);
+
+      res.setHeader('Content-Type', 'application/json');
+      res.end(guestJSON);
+    });
+  }
+  else if (req.method === 'POST' && req.url === '/guests') {
+    var bodyJSON = '';
+
+    req.on('data', (chunk) => {
+      bodyJSON += chunk.toString();
+    });
+
+    req.on('end', () => {
+      // eslint-disable-next-line max-statements
+      fs.readFile(guestsPath, 'utf8', function(readErr, data) {
+        if (readErr) {
+          throw readErr;
+        }
+
+        var body = JSON.parse(bodyJSON);
+        var guests = JSON.parse(data);
+        var guest = body.guest;
+
+        if (!guest) {
+          res.statusCode = 400;
+          res.setHeader('Content-Type', 'text/plain');
+          res.end('Bad Request');
+
+          return;
+        }
+
+        guests.push(guest);
+
+        var guestJSON = JSON.stringify(guest);
+        var guestsJSON = JSON.stringify(guests);
+
+        fs.writeFile(guestsPath, guestsJSON, function(writeErr) {
+          if (writeErr) {
+            throw writeErr;
+          }
+
+          res.setHeader('Content-Type', 'application/json');
+          res.end(guestJSON);
+        });
+      });
+    });
+  }
+  else {
+    res.statusCode = 404;
+    res.setHeader('Content-Type', 'text/plain');
+    res.end('Not found');
+  }
 });
-```
 
-Using an `if` statement works for our two routes, but it doesn't scale well if we have many routes. Instead, we can create a file named `routes.js` and use an object to define routes in a more scalable way.
-
-```javascript
-// routes.js
-
-routes = {
-  '/special-message': function(req, res) {
-    res.end("You're SPECIAL");
-  },
-
-  '/non-special-message': function(req, res) {
-    res.end("You're boring!");
-  }
-};
-
-module.exports = routes;
-```
-
-```javascript
-// index.js
-var http   = require('http');
-var routes = require('./routes');
-
-var handleRequest = function (req, res) {
-  if(routes[req.url]) {
-    routes[req.url](req, res);
-  } else {
-    res.end("404, no such route");
-  }
-};
-
-var server = http.createServer(handleRequest);
-
-server.listen(8080, function() {
-  console.log("Listening...");
+server.listen(port, () => {
+  // eslint-disable-next-line no-console
+  console.log('Listening on port', port);
 });
 ```
 
 If we submit a request to either `localhost:8080/special-message` or `localhost:8080/non-special-message`, we still receive our intended response.
 
-### Exercises:
-- [Building a simple HTTP server](https://github.com/gSchool/node-http-server-intro).
+## Assignment
 
-- [Parsing query strings](https://github.com/gSchool/node-query-string-parsing).
+- [Pet Shop - Node.js HTTP Server](https://github.com/gSchool/fs-pet-shop/blob/master/2_http.md)
 
-### Reading
-[The difference between the Web and Internet](http://www.webopedia.com/DidYouKnow/Internet/Web_vs_Internet.asp)
+## Resources
 
-### Video
-[How does the Internet work?](https://www.youtube.com/watch?v=e4S8zfLdLgQ)
+- [Youtube - How does the Internet work?](https://www.youtube.com/watch?v=e4S8zfLdLgQ)
+- [The difference between the Web and Internet](http://www.webopedia.com/DidYouKnow/Internet/Web_vs_Internet.asp)
