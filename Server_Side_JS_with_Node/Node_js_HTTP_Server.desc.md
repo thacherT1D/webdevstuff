@@ -2,6 +2,8 @@
 
 - Explain what an HTTP server is.
 - Explain why an HTTP server is useful.
+- Explain what an HTTP request is.
+- Explain what an HTTP response is.
 - Describe the parts of a URL
 - Identify the components of a request and response
 - Create an HTTP server with Node's `http` module
@@ -62,27 +64,80 @@ And you should see something like this.
 
 The Internet that we now use is built on this foundation. The methods, however, have evolved. Instead of a terminal being the primary client, most users now use a web browser. The request for a resource, such as a file, is submitted as a URL in a web browser and forwarded to a web server. The URL `https://www.yahoo.com/index.html`, for instance, would search for a server with the host name of `www.yahoo.com` and a file named `/index.html` would be returned if found.
 
-##
+## What's an HTTP Request?
 
-A client sends an HTTP request in many ways, including entering a URL in an address bar of a web browser, submitting a form, or clicking a hyperlink. When any of these three events occur, a browser submits a request with three components:
+The client (or user agent) sends a plain-text message called an **HTTP request** to a server on behalf of the user. Aside from web browsers, other common user agents include web crawlers, native apps, and mobile apps.
 
-- request line (includes a method)
-- headers
-- body
+An HTTP request is composed of the following parts.
 
-All resource on the Internet is associated with a global identifer: a Uniform Resource Locator (URL). Each URL, furthmore, [conforms to a particular syntax](https://en.wikipedia.org/wiki/Uniform_Resource_Locator#Syntax)
+1. A method (or verb)
+1. A path
+1. An HTTP version
+1. Key-value pairs called **headers**
+1. And an optional body
 
-Let's explore a description of the syntax from the perspective of [how Googlers talk about parts of a URL](https://www.mattcutts.com/blog/seo-glossary-url-definitions/).
+Here's an example of what an HTTP request looks like.
 
-Some parts of a URL can be understood based on an initial read, such as a query string. However, further elaboration would help with two parts: hostname (with IP address) and protocol. The latter will be discussed during the next section; the former will be discussed now.
+```
+GET / HTTP/1.1
+Accept: */*
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+Host: localhost:8000
+User-Agent: HTTPie/0.9.3
+```
 
-### HTTP Response
+**QUESTION:** Looking at the above message, can you identify the parts of an HTTP request?
 
-In turn, a request will return a response with three components:
+While an HTTP request can only contain one method, there are several different methods that a client can choose from. Each method instructs a server on how to process the request. Without the use of Ajax, web browsers are only capable of sending HTTP requests with the following methods.
 
-- response line (includes a [status code](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes))
-- headers
-- body
+| Method | Description                                                 |
+|--------|-------------------------------------------------------------|
+| `GET`  | Used retrieve a resource, like an HTML file, from a server. |
+| `POST` | Used send information, like user input, to a server.        |
+
+**QUESTION:** When does a web browser make `GET` requests? When does it make `POST` requests?
+
+## What's an HTTP response?
+
+The server receives an HTTP request, attempts to process it, and sends a plain-text message called an **HTTP response** back to the client. Popular web servers include Apache, Nginx, Node.js, and Python's built-in `SimpleHTTPServer`.
+
+An HTTP response is composed of the following parts.
+
+1. An HTTP version
+1. A status code
+1. Key-value headers
+1. And an optional body
+
+Here's an example of what an HTTP response looks like.
+
+```
+HTTP/1.1 200 OK
+Connection: keep-alive
+Content-Length: 11
+Content-Type: text/plain
+Date: Mon, 13 Jun 2016 04:28:36 GMT
+
+Hello world
+```
+
+**QUESTION:** Looking at the above message, can you identify the parts of an HTTP response?
+
+While an HTTP response can only contain one status code, there are many different codes that a server can choose from. Each status code explains to the client how the server interpreted the request. Status codes are three-digit numbers that are grouped into the following categories.
+
+| Status Code Group | Description                                             |
+|-------------------|---------------------------------------------------------|
+| `1XX`             | Request accepted, ready for the next one.               |
+| `2XX`             | Request accepted, the server's work is complete.        |
+| `3XX`             | Request accepted, but additional client work is needed. |
+| `4XX`             | Request accepted, but there was an error on the client. |
+| `5XX`             | Request accepted, but there was an error on the server. |
+
+- [HTTP Status Cats](https://http.cat/)
+- [HTTP Status Dogs](https://httpstatusdogs.com/)
+- [Wikipedia - List of HTTP status codes](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes)
+
+**QUESTION:** The most common status codes are `200`, `302`, `304`, `404`, and `500`. Can you figure out why?
 
 ## How do you create an HTTP server with Node.js?
 
