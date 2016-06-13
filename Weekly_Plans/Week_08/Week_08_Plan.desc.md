@@ -12,14 +12,17 @@
 Warmup: [Log File Parsing](https://github.com/gSchool/js-node-log-file-parsing)
 
 Lessons:
-- [Lesson](/cohorts/68/student_dashboard)
-- [Lesson](/cohorts/68/student_dashboard)
+- [Intro to Express](/cohorts/68/articles/3049)
+- [Deploying to Heroku](/cohorts/68/articles/3065)
 
-Homework: [Homework](/cohorts/68/student_dashboard)
+Homework: [Homework](https://math.berkeley.edu/~gmelvin/polya.pdf)
+
+Guiding questions:
+- Question 1
+- Question 2
 
 Announcements:
-- Announcement 1
-- Announcement 2
+- Welcome back Logan!
 
 ---
 
