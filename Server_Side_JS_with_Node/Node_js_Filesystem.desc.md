@@ -201,7 +201,19 @@ Operations that use an I/O device can be extremely slow compared to the operatio
 
 A simple approach to I/O would be to start the operation and then wait for it to complete. This is called **synchronous** or **blocking** I/O because it blocks the progress of a program while the I/O operation is in progress. In other words, the program is stuck waiting for the I/O operation to complete leaving the CPU to idle. When a program makes many synchronous I/O operations, the CPU could spend almost all of its time waiting for the operations to complete.
 
-Here's an example of a JavaScript program performing synchronous I/O using Node.js.
+To see an example of a JavaScript program performing synchronous I/O using Node.js, create a `syncIO.js` file on the Desktop.
+
+```shell
+touch ~/Desktop/syncIO.js
+```
+
+Open the `syncIO.js` file in your text editor.
+
+```shell
+atom ~/Desktop/syncIO.js
+```
+
+And type in the following code.
 
 ```javascript
 'use strict';
@@ -214,9 +226,31 @@ console.log(data);
 console.log(1 + 2);
 ```
 
+Now, run the `syncIO.js` file using the `node` command.
+
+```shell
+node ~/Desktop/syncIO.js
+```
+
+And you should see something like this.
+
+![](https://i.imgur.com/zevFggD.png)
+
 Alternatively, it's possible to start an I/O operation and then continue with the other operations that don't require the I/O to be completed. This approach is called **asynchronous** or **non-blocking** I/O. Any tasks that depend on the I/O operation to be completed still need to wait and are thus blocked. But other operations that don't have a dependency on the I/O operation can continue.
 
-Here's an example of a JavaScript program performing asynchronous I/O using Node.js.
+To see an example of a JavaScript program performing asynchronous I/O using Node.js, create a `asyncIO.js` file on the Desktop.
+
+```shell
+touch ~/Desktop/asyncIO.js
+```
+
+Open the `asyncIO.js` file in your text editor.
+
+```shell
+atom ~/Desktop/asyncIO.js
+```
+
+And type in the following code.
 
 ```javascript
 'use strict';
@@ -234,7 +268,17 @@ fs.readFile('/etc/paths', 'utf8', function(err, data) {
 console.log(1 + 2);
 ```
 
-The vast majority of this program will focus on teaching you how to build programs capable of asynchronous I/O.
+Now, run the `asyncIO.js` file using the `node` command.
+
+```shell
+node ~/Desktop/asyncIO.js
+```
+
+And you should see something like this.
+
+![](https://i.imgur.com/23SC9st.png)
+
+The vast majority of this course will focus on teaching you how to build programs capable of asynchronous I/O.
 
 ### Exercise
 
