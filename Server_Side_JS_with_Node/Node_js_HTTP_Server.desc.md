@@ -13,11 +13,25 @@ Before browsers, before JavaScript, and believe it or not, before HTML, the Inte
 
 The Internet that we now use is built on this foundation. The methods, however, have evolved. Instead of a terminal being the primary client, most users now use a web browser. The request for a resource, such as a file, is submitted as a URL in a web browser and forwarded to a web server. The URL `https://www.yahoo.com/index.html`, for instance, would search for a server with the host name of `www.yahoo.com` and a file named `/index.html` would be returned if found.
 
+Create a `helloServer.js` file on the Desktop.
+
+```shell
+touch ~/Desktop/helloServer.js
+```
+
+Open the `helloServer.js` file in your text editor.
+
+```shell
+atom ~/Desktop/helloServer.js
+```
+
+And type in the following code.
+
 ```javascript
 'use strict';
 
 var http = require('http');
-var port = 5000;
+var port = 8000;
 
 var server = http.createServer(function(req, res) {
   res.setHeader('Content-Type', 'text/plain');
@@ -29,16 +43,21 @@ server.listen(port, function() {
 });
 ```
 
-## How does a Node.js HTTP server work?
+Now, save the `helloServer.js` file and run it with Node.js.
 
-1. Create a listening socket that's bound to a specific port number
-1. Periodically poll the listening socket to see if a new network connection is ready to be established
-1. Accept an incoming network connection request on the listening socket which creates a new socket to the client
-1. Send the HTTP request from the client to the server over the new socket
-1. Process the HTTP request on the server and send an HTTP response back to the client
-1. After the server sends the HTTP response, it goes back to polling the listening socket.
-1. After the client processes the HTTP response, it can either send another HTTP request over the same socket or tell the server to close the socket.
-1. If the server hasn't received any new HTTP requests in 2 minutes, the server closes the socket.
+```shell
+node ~/Desktop/helloServer.js
+```
+
+In a new Terminal tab, send an HTTP request to the server.
+
+```shell
+http GET localhost:8000/
+```
+
+And you should see something like this.
+
+![](https://i.imgur.com/UKpsNwY.png)
 
 ## HTTP
 
@@ -93,7 +112,7 @@ And type in the following code to the `server.js` file.
 'use strict';
 
 var http = require('http');
-var port = 5000;
+var port = 8000;
 
 var server = http.createServer(function(req, res) {
   var guests = ['Mary', 'Don'];
@@ -115,7 +134,7 @@ node server.js
 ```
 
 ```shell
-http GET localhost:5000/
+http GET localhost:8000/
 ```
 
 ```shell
@@ -127,7 +146,7 @@ nodemon server.js
 ```
 
 ```shell
-http GET localhost:5000/
+http GET localhost:8000/
 ```
 
 At this moment, our HTTP server has one request handler that handles all incoming requests. Regardless of the URL associated with the request, every response from the server returns a string with the same content: "Hi, I'll take two packets of sugar."
@@ -140,7 +159,7 @@ The infrastructure of the Internet handles the routing of our request from our b
 'use strict';
 
 var http = require('http');
-var port = 5000;
+var port = 8000;
 
 var server = http.createServer(function(req, res) {
   if (req.method === 'GET' && req.url === '/guests') {
@@ -163,11 +182,11 @@ server.listen(port, function() {
 ```
 
 ```shell
-http GET localhost:5000/
+http GET localhost:8000/
 ```
 
 ```shell
-http GET localhost:5000/guests
+http GET localhost:8000/guests
 ```
 
 ```shell
@@ -181,7 +200,7 @@ var path = require('path');
 var guestsPath = path.join(__dirname, 'guests.json');
 
 var http = require('http');
-var port = 5000;
+var port = 8000;
 
 var fs = require('fs');
 
@@ -209,7 +228,7 @@ server.listen(port, function() {
 ```
 
 ```shell
-http GET localhost:5000/guests
+http GET localhost:8000/guests
 ```
 
 ```javascript
@@ -219,7 +238,7 @@ var path = require('path');
 var guestsPath = path.join(__dirname, 'guests.json');
 
 var http = require('http');
-var port = 5000;
+var port = 8000;
 
 var fs = require('fs');
 
@@ -273,11 +292,11 @@ server.listen(port, function() {
 ```
 
 ```shell
-http GET localhost:5000/guests/0
+http GET localhost:8000/guests/0
 ```
 
 ```shell
-http GET localhost:5000/guests/1
+http GET localhost:8000/guests/1
 ```
 
 ## Assignment
