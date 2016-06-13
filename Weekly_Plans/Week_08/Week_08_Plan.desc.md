@@ -8,7 +8,7 @@
 
 # Monday, June 13
 
-Warmup: [Log File Parsing](https://github.com/gSchool/js-node-log-file-parsing)
+Warmup: [A is for Apple](https://www.codewars.com/kata/a-for-apple)
 
 Lessons:
 - [Intro to Express](/cohorts/68/articles/3049)
@@ -21,7 +21,7 @@ Announcements:
 
 # Tuesday, June 14
 
-Warmup: [Link to Warmup](http://github.com/gSchool)
+Warmup: [Log File Parsing](https://github.com/gSchool/js-node-log-file-parsing)
 
 Lessons:
 - [Lesson](/cohorts/68/student_dashboard)
