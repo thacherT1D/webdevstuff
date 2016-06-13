@@ -4,11 +4,7 @@
 - Explain why an HTTP server is useful.
 - Explain what an HTTP request is.
 - Explain what an HTTP response is.
-- Describe the parts of a URL
-- Identify the components of a request and response
 - Create an HTTP server with Node's `http` module
-- Identify the two parts of a route (method and path)
-- Access the parts of a URL with the url module
 
 ## What's an HTTP server?
 
