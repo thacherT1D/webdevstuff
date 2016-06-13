@@ -9,7 +9,7 @@
 
 # Monday, June 13
 
-Warmup: [Log File Parsing]https://github.com/gSchool/js-node-log-file-parsing)
+Warmup: [Log File Parsing](https://github.com/gSchool/js-node-log-file-parsing)
 
 Lessons:
 - [Lesson](/cohorts/68/student_dashboard)
