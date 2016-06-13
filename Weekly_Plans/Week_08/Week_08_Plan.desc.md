@@ -1,9 +1,8 @@
 # Week 8 (June 13 - June 17)
 ## Weekly Objective
 
-- Objective 1
-- Objective 2
-- Objective 3
+- Use express to quickly get started on web applications
+- Deploy web applications using heroku.
 
 ---
 
