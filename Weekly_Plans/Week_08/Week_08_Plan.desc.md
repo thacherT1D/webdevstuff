@@ -14,12 +14,6 @@ Lessons:
 - [Intro to Express](/cohorts/68/articles/3049)
 - [Deploying to Heroku](/cohorts/68/articles/3065)
 
-Homework: [Homework](https://math.berkeley.edu/~gmelvin/polya.pdf)
-
-Guiding questions:
-- Question 1
-- Question 2
-
 Announcements:
 - Welcome back Logan!
 
