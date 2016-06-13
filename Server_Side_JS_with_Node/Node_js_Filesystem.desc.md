@@ -293,9 +293,10 @@ To get started, create a new project.
 ```shell
 mkdir party
 cd party
-echo '[]' >> guests.json
+echo '[]' > guests.json
 touch guests.js
 git init
+git add .
 git commit -m 'Initial commit'
 ```
 
