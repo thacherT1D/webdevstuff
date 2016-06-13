@@ -3,6 +3,8 @@
 
 - Use express to quickly get started on web applications
 - Deploy web applications using heroku.
+- Implement Server Side templating.
+- Model data.
 
 ---
 
