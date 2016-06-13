@@ -278,7 +278,7 @@ And you should see something like this.
 
 ![](https://i.imgur.com/23SC9st.png)
 
-The vast majority of this course will focus on teaching you how to build programs capable of asynchronous I/O.
+In this course, the vast majority of the JavaScript programs you build will perform asynchronous I/O.
 
 ### Exercise
 
