@@ -1,35 +1,21 @@
-## Intro Workshop
-
-**Entry ticket** is completion of node-related LE's before this one.  Make sure you do not start Express if you are still struggling with file system things / `module.exports`
-
-## Data Flow in Express!
-
-<iframe src="https://player.vimeo.com/video/136796681?byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-
-
-## Intro to Dynamic Web App Concepts
-
-<iframe src="https://player.vimeo.com/video/136579022?byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-
-## Static Websites vs Dynamic Websites
-
-<iframe src="https://player.vimeo.com/video/136582439?byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-
-
-### EXERCISES:
-
-This is a repo of Express application exercises.
-
-https://github.com/gSchool/express-introduction
-
 # Intro to Express.js
 
 ## Objectives:
 
-- Describe in detail what the request/response cycle is
-- Explain the different parts of a URL
-- Start a simple express app and review require
-- Be able to load pages
+By the end of this lesson you will be able to use Express to:
+
+- Serve static files.
+- Serve dynamic files.
+- Route and respond to requests.
+- Parse query strings.
+
+## Leading Questions:
+
+- What does Express abstract?
+- How are Express routes different than the routes we've been writing with just the http module?
+- What other built-in modules does Express make use of?
+- What's a view? How does Express simplify creation of dynamic views?
+- What are three ways we can pass user data into an application? Make sure to know both where the data originates and how to access it in a route. (Feel free to use express-specific language.)
 
 ## Express
 
@@ -61,8 +47,10 @@ npm install --save express
 Let's now write some code:
 
 ```javascript
-// requirements
+// imports
 var express = require('express');
+
+// initialize express app
 var app = express();
 
 // a "GET" request to "/" will run the function below
@@ -71,7 +59,7 @@ app.get("/", function (req, res) {
   res.send("Hello World");
 });
 
-// start the server
+// start the server, bind on port 3000
 app.listen(3000, function () {
   console.log("Starting a server on localhost:3000");
 });
@@ -85,12 +73,14 @@ nodemon index.js
 
 ## Routing
 
-Building an application will require us to have a firm grasp of something we call routing. Each route is a combination of:
+Routing is used to control the flow of an application. A route is composed of a request method (ex 'GET', 'POST', 'DELETE', etc...) and a path (ex '/hello/world'). Routing lets us execute code depending on the the route is.
 
-- Request Type
-- Path.
+Example:
 
-Let's build these into our application:
+A `GET` request  made to `/user` could be routed to a function which return a users profile.
+A `POST` request made to `/user` could be routed to a function which creates a new user.
+
+Let's practice creating a route:
 
 ```javascript
 var express = require('express');
@@ -102,6 +92,12 @@ var vegetables = [
   "Peas"
 ];
 
+var fruits = [
+  "Oranges",
+  "Apples",
+  "Pears"
+];
+
 app.get("/", function (req, res) {
   res.send("Hello World");
 });
@@ -111,10 +107,16 @@ app.get("/vegetables", function (req, res) {
   res.send(vegetables.join(", "));
 });
 
+app.post("/fruits", function(req, res){
+  res.send(fruits.join(", "));
+});
+
 app.listen(3000, function () {
   console.log("Go to localhost:3000/");
 });
 ```
+
+Test your code code out by opening it up in a browser, test the post request using postman.
 
 ## URL Parameters
 
@@ -148,10 +150,38 @@ app.get("/hi", function (req, res) {
 });
 ```
 
-Reset your server and go to localhost:3000/hi?name=elie. Note that we define parameters in the url after a ?.
-Sending dynamic files
+Reset your server and go to `localhost:3000/hi?name=elie`. Note that we define parameters in the url after a `?`.
 
-Sometimes there are static HTML files you want to send as a response. There are ways to send files using Express including res.sendFile, but if we want to send dynamic content, we will need to use something different.
+## Static files
+
+We can use express to serve static files out of a directory.
+
+Lets set up a `public` directory:
+
+```bash
+mkdir public
+echo "<html><body><h1>Hello Express</h1></body></html>" > public/index.html
+```
+
+Replace the route:
+
+```javascript
+app.get("/", function (req, res) {
+  res.send("Hello World");
+});
+```
+
+With:
+
+```javascript
+app.use('/', express.static('public'));
+```
+
+Now navigate to `localhost:3000/`.
+
+## Sending dynamic files
+
+Sometimes there are static HTML files you want to send as a response. There are ways to send files using Express including `res.sendFile`, but if we want to send dynamic content, we will need to use something different.
 
 Right now we have been using res.send to display information to our user, but if we want to render a dynamic page we will use res.render. Not only will we use this method, we will render templates using an engine called ejs. This requires us to run `npm install --save ejs` as well as including the line `app.set("view engine", "ejs")` inside of our `index.js`
 
@@ -189,8 +219,26 @@ Create a simple calculator app using Express.
 - When a user visits `/mult/9/3`, it should display 27
 - When a user visits `/div/9/3`, it should display 3
 
-#### Stretch Gaols
+#### Stretch Goals
 
 - Refactor your code to use a single route, rather than 4 separate routes.
 - Add support to handle decimals.
 - Style the page. Figure out how to add a stylesheet to an express app.
+
+## More Resources
+
+- [Express Docs](http://expressjs.com/en/api.html)
+- [Express Curriculum](https://github.com/gSchool/express-curriculum)
+
+
+#### Data flow in Express:
+
+<iframe src="https://player.vimeo.com/video/136796681?byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+#### Intro to Dynamic Web App Concepts
+
+<iframe src="https://player.vimeo.com/video/136579022?byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+#### Static Websites vs Dynamic Websites
+
+<iframe src="https://player.vimeo.com/video/136582439?byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
