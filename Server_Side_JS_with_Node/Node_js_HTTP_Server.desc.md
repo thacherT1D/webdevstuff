@@ -1,6 +1,7 @@
 ## Objectives
 
 - Explain what an HTTP server is.
+- Explain why an HTTP server is useful.
 - Describe the parts of a URL
 - Identify the components of a request and response
 - Create an HTTP server with Node's `http` module
@@ -10,8 +11,6 @@
 ## What's an HTTP server?
 
 Before browsers, before JavaScript, and believe it or not, before HTML, the Internet was originally designed as a file server. When a user wanted a file, they would use a terminal to submit a request, which included the location of the file—IP address and name of desired file—on a remote computer.
-
-The Internet that we now use is built on this foundation. The methods, however, have evolved. Instead of a terminal being the primary client, most users now use a web browser. The request for a resource, such as a file, is submitted as a URL in a web browser and forwarded to a web server. The URL `https://www.yahoo.com/index.html`, for instance, would search for a server with the host name of `www.yahoo.com` and a file named `/index.html` would be returned if found.
 
 Create a `helloServer.js` file on the Desktop.
 
@@ -59,11 +58,11 @@ And you should see something like this.
 
 ![](https://i.imgur.com/UKpsNwY.png)
 
-## HTTP
+## Why is an HTTP server useful?
 
-The most important component of a web URL is arguably the protocol: A set of rules that define the communication between a client and a server. For websites, the protocol is often [HTTP](https://en.wikipedia.org/wiki/Hypertext). Many of you may have noticed this protocol being used when you visit your favorite websites. There's a lot to learn about HTTP, but we'll focus our attention on HTTP's use of a request and response model.
+The Internet that we now use is built on this foundation. The methods, however, have evolved. Instead of a terminal being the primary client, most users now use a web browser. The request for a resource, such as a file, is submitted as a URL in a web browser and forwarded to a web server. The URL `https://www.yahoo.com/index.html`, for instance, would search for a server with the host name of `www.yahoo.com` and a file named `/index.html` would be returned if found.
 
-### HTTP Request
+##
 
 A client sends an HTTP request in many ways, including entering a URL in an address bar of a web browser, submitting a form, or clicking a hyperlink. When any of these three events occur, a browser submits a request with three components:
 
