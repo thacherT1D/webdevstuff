@@ -43,6 +43,9 @@ Lessons:
 - [Server Side Templating](https://github.com/gSchool/server-side-templating)
 - [Data Modeling](/cohorts/68/student_dashboard)
 
+## resources
+- [draw.io](https://www.draw.io/)
+
 ---
 
 # Wednesday, June 15
