@@ -40,7 +40,7 @@ server.listen(port, function() {
 });
 ```
 
-Now, save the `helloServer.js` file and run it with Node.js.
+Now, save the `helloServer.js` file and run it with the `node` command.
 
 ```shell
 node ~/Desktop/helloServer.js
@@ -155,14 +155,18 @@ And, of course, there's boring-old Wikipedia when you need the official, textual
 
 ## How do you create an HTTP server with Node.js?
 
-To get started, return to the `party` project from yesterday and create a new branch.
+Now that you've learned about HTTP requests and responses, let's play around with the `http` module in Node.js. Remember that party you're throwing? Well, imagine that you want your guests to be able to manage the party's guest list over HTTP. You've got some smart friends!
+
+To do that, you'll need to create a Node.js HTTP server to handle HTTP requests and send back HTTP responses. The HTTP requests will be commands that create and read records in a database, which will be the same JSON-formatted `guests.json` file from before. Once the HTTP request is correctly handled, the HTTP server will send an appropriate HTTP response back.
+
+To get started, return to the `party` project from yesterday and create a new `node_server` branch.
 
 ```shell
 cd party
 git checkout -b node_server
 ```
 
-Create a `server.js` file.
+Next, create a `server.js` file.
 
 ```shell
 touch server.js
@@ -195,31 +199,25 @@ server.listen(port, function() {
 });
 ```
 
-To run the `server.js` file, use the `node` and command the file name containing our code:
+Now, save the `server.js` file and run it with the `node` command.
 
 ```shell
 node server.js
 ```
 
-```shell
-http GET localhost:8000/
-```
-
-```shell
-npm install -g nodemon
-```
-
-```shell
-nodemon server.js
-```
+In a separate Terminal tab, send an HTTP request to the server.
 
 ```shell
 http GET localhost:8000/
 ```
 
-At this moment, our HTTP server has one request handler that handles all incoming requests. Regardless of the URL associated with the request, every response from the server returns a string with the same content: "Hi, I'll take two packets of sugar."
+And you should see something like this.
 
-Our web server would become more useful if we could return a response that would correspond to a particular request. We would benefit, in other words, from defining routes that handle specific requests. A route is composed of many things, such as an HTTP verb (e.g., `GET`), and an optional path (`/faq`).
+![](https://i.imgur.com/CbkIni2.png)
+
+A Node.js HTTP `server` is created with one request handler to process each HTTP request that arrives. As it stands, your HTTP `server` handles every HTTP request the same way, regardless of the request's method and path.
+
+Your HTTP server would become more useful if we could return a response that would correspond to a particular request. We would benefit, in other words, from defining routes that handle specific requests. A route is composed of many things, such as an HTTP verb (e.g., `GET`), and an optional path (`/faq`).
 
 The infrastructure of the Internet handles the routing of our request from our browser to our server. However, we still need to handle how a request is routed relative to a URL's path and query string. To help us access this information, we can require one of Node's core modules named [`url`](https://nodejs.org/api/url.html) API.
 
@@ -250,6 +248,10 @@ server.listen(port, function() {
 ```
 
 ```shell
+node server.js
+```
+
+```shell
 http GET localhost:8000/
 ```
 
@@ -259,6 +261,18 @@ http GET localhost:8000/guests
 
 ```shell
 echo '["Mary", "Don"]' > guests.json
+```
+
+```shell
+npm install -g nodemon
+```
+
+```shell
+nodemon server.js
+```
+
+```shell
+http GET localhost:8000/
 ```
 
 ```javascript
