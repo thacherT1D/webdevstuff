@@ -50,7 +50,7 @@ Lessons:
 
 # Wednesday, June 15
 
-Warmup: [Link to Warmup](http://github.com/gSchool)
+Warmup: [Hack Calculator](https://github.com/gSchool/challenges/tree/master/Node/hack-calculator)
 
 Lessons:
 - [Lesson](/cohorts/68/student_dashboard)
