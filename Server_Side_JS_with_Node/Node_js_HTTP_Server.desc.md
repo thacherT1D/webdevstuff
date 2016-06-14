@@ -216,7 +216,7 @@ And you should see something like this.
 
 ![](http://i.imgur.com/xoaBsw1.png)
 
-In a separate Terminal tab, send an HTTP request to the server.
+In a separate Terminal tab, send the following HTTP request to the server.
 
 ```shell
 http GET localhost:8000/
@@ -226,7 +226,7 @@ And you should see something like this.
 
 ![](https://i.imgur.com/CbkIni2.png)
 
-Right now, your HTTP server handles every HTTP request the same way, regardless of the request's method or path. It would be much more useful if your HTTP server could respond differently to different HTTP requests.
+Right now, your HTTP server handles every HTTP request the same way, regardless of the request's method or path. It would be much more useful if your HTTP server could send back different HTTP responses based on the information inside the HTTP requests.
 
 Let's fix that by refactoring the `server.js` file with the following code.
 
@@ -256,7 +256,7 @@ server.listen(port, function() {
 });
 ```
 
-Now, save the `server.js` file, terminate the existing server with `Ctrl + C`, and run it again with the same `node` command.
+Now, save the `server.js` file, terminate the existing server with `Ctrl + C`, and run it again with the `node` command.
 
 ```shell
 node server.js
@@ -266,7 +266,7 @@ And you should see something like this.
 
 ![](http://i.imgur.com/xoaBsw1.png)
 
-In a separate Terminal tab, send an HTTP request to the server.
+In a separate Terminal tab, send the following HTTP request to the server.
 
 ```shell
 http GET localhost:8000/
@@ -276,7 +276,7 @@ And you should see something like this.
 
 ![](https://i.imgur.com/DZShb9I.png)
 
-In a separate Terminal tab, send an HTTP request to the server.
+In a separate Terminal tab, send the following HTTP request to the server.
 
 ```shell
 http GET localhost:8000/guests
@@ -302,7 +302,7 @@ And you should see something like this.
 
 ![](http://i.imgur.com/NWN2Jdg.png)
 
-Send another HTTP request to the server to verify everything works the same.
+Send the following HTTP request to the server to verify everything works the same.
 
 ```shell
 http GET localhost:8000/guests
@@ -352,7 +352,7 @@ Now, save the `server.js` file and the following data to the `guests.json` file.
 echo '["Mary", "Don"]' > guests.json
 ```
 
-Send an HTTP request to the server.
+Send the following HTTP request to the server.
 
 ```shell
 http GET localhost:8000/guests
