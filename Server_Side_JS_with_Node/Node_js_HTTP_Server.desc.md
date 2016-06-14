@@ -155,7 +155,7 @@ And, of course, there's boring-old Wikipedia when you need the official, textual
 
 ## How do you create an HTTP server with Node.js?
 
-Now that you've learned about HTTP requests and responses, let's play around with the `http` module in Node.js. Remember that party you're throwing? Well, imagine that you want your guests to be able to manage the party's guest list over HTTP. You've got some smart friends!
+Now that you've learned about HTTP requests and responses, let's play around with the `http` module in Node.js. Remember that party you're throwing? Well, imagine that your guests want to manage the party's guest list themselves over HTTP. You've got some smart friends!
 
 To do that, you'll need to create a Node.js HTTP server to handle HTTP requests and send back HTTP responses. The HTTP requests will be commands that create and read records in a database, which will be the same JSON-formatted `guests.json` file from before. Once the HTTP request is correctly handled, the HTTP server will send an appropriate HTTP response back.
 
