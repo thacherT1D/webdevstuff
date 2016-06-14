@@ -61,7 +61,7 @@ And you should see something like this.
 
 In 1989, Tim Berners-Lee proposed a new project to his employer CERN. The goal of this project was to ease the exchange of information between scientists by using a hypertext system. In 1990, the project resulted in two programs—the world's first HTTP client and server.
 
-Because exchanging information over HTTP is so effective, there are countless HTTP clients and servers in existence today. The most effective of these servers are able to handle [thousands of requests per second](https://www.techempower.com/benchmarks/) enabling millions of clients to access the same information per day. Without HTTP servers, the Internet as we know it would not exist.
+Because exchanging information over HTTP is so effective, there are countless HTTP clients and servers in existence today. The most effective of these servers are able to handle [thousands of requests per second](https://www.techempower.com/benchmarks/) thus giving millions of people around the world the ability to access and exchange information every day. Without HTTP servers, the rapid and global exchange of information over the Internet not exist.
 
 ## What's an HTTP Request?
 
