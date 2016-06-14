@@ -215,11 +215,11 @@ And you should see something like this.
 
 ![](https://i.imgur.com/CbkIni2.png)
 
-A Node.js HTTP `server` is created with one request handler to process each HTTP request that arrives. As it stands, your HTTP `server` handles every HTTP request the same way, regardless of the request's method and path.
+As you can see, a Node.js HTTP server is created with one callback. For each HTTP request that arrives, the callback is invoked with two arguments—`req` and `res`. The incoming HTTP request object is passed into the callback's first `req` argument. And an empty outgoing HTTP response object is passed into the callback's second `res` argument. The goal of the callback is to correctly build out the `res` object using the information in `req` object.
 
-Your HTTP server would become more useful if we could return a response that would correspond to a particular request. We would benefit, in other words, from defining routes that handle specific requests. A route is composed of many things, such as an HTTP verb (e.g., `GET`), and an optional path (`/faq`).
+Right now, your HTTP `server` handles every HTTP request the same way, regardless of the request's method or path. It would be much more useful if your HTTP server could respond differently to different HTTP requests.
 
-The infrastructure of the Internet handles the routing of our request from our browser to our server. However, we still need to handle how a request is routed relative to a URL's path and query string. To help us access this information, we can require one of Node's core modules named [`url`](https://nodejs.org/api/url.html) API.
+Let's fix that by refactoring the `server.js` file with the following code.
 
 ```javascript
 'use strict';
@@ -247,32 +247,52 @@ server.listen(port, function() {
 });
 ```
 
+Now, save the `server.js` file, terminate the existing server with `Ctrl + C`, and run it again with the same `node` command.
+
 ```shell
 node server.js
 ```
 
+In a separate Terminal tab, send an HTTP request to the server.
+
 ```shell
 http GET localhost:8000/
 ```
+
+And you should see something like this.
+
+![](https://i.imgur.com/DZShb9I.png)
+
+In a separate Terminal tab, send an HTTP request to the server.
 
 ```shell
 http GET localhost:8000/guests
 ```
 
-```shell
-echo '["Mary", "Don"]' > guests.json
-```
+And you should see something like this.
+
+![](https://i.imgur.com/MM0aAYD.png)
+
+Manually restart a Node.js HTTP server gets old fast. To speed up your development workflow, install the `nodemon` package with NPM.
 
 ```shell
 npm install -g nodemon
 ```
 
+Terminate the existing server with `Ctrl + C` and this time run it with the `nodemon` command.
+
 ```shell
 nodemon server.js
 ```
 
+And you should see something like this.
+
+![](http://i.imgur.com/NWN2Jdg.png)
+
+Send another HTTP request to the server to verify everything works the same.
+
 ```shell
-http GET localhost:8000/
+http GET localhost:8000/guests
 ```
 
 ```javascript
@@ -307,6 +327,10 @@ var server = http.createServer(function(req, res) {
 server.listen(port, function() {
   console.log('Listening on port', port);
 });
+```
+
+```shell
+echo '["Mary", "Don"]' > guests.json
 ```
 
 ```shell
