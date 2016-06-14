@@ -540,6 +540,19 @@ git add .
 git commit -m 'Prepare for deployment to Heroku'
 ```
 
+To merge, the commits from the `heroku` branch to the `master` branch, run the following commands.
+
+```shell
+git checkout master
+git merge heroku
+```
+
+With the commits merged in, it's safe to delete the `heroku` branch.
+
+```shell
+git br -d heroku
+```
+
 After you've signed up for [Heroku](https://signup.heroku.com/), install the `heroku` package with Homebrew.
 
 ```shell
