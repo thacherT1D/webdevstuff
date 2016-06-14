@@ -501,14 +501,6 @@ To get started, create a new `heroku` feature branch.
 git checkout -b heroku
 ```
 
-Then, create a `.gitignore` file for your project.
-
-```shell
-echo '.DS_Store' >> .gitignore
-echo 'node_modules' >> .gitignore
-echo 'npm-debug.log' >> .gitignore
-```
-
 Next, create a `package.json` file for your project using NPM. This lets Heroku know that this project uses Node.js.
 
 ```shell
