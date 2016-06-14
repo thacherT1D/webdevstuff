@@ -199,6 +199,13 @@ server.listen(port, function() {
 });
 ```
 
+As you can see, a Node.js HTTP server is created with one callback. For each HTTP request that arrives, the callback is invoked with two arguments—`req` and `res`. The callback's first `req` argument will contain the incoming HTTP request as an `http.IncomingMessage` object. The callback's second `res` argument will contain an empty outgoing HTTP response as an `http.ServerResponse` object. The goal of the callback is to correctly fill in the `res` object based on the information in `req` object.
+
+See the Node.js API documentation to learn what properties and methods are available for each object type.
+
+- [Node.js API Documentation - `http.IncomingMessage`](https://nodejs.org/dist/latest-v6.x/docs/api/http.html#http_class_http_incomingmessage)
+- [Node.js API Documentation - `http.ServerResponse`](https://nodejs.org/dist/latest-v6.x/docs/api/http.html#http_class_http_serverresponse)
+
 Now, save the `server.js` file and run it with the `node` command.
 
 ```shell
@@ -218,8 +225,6 @@ http GET localhost:8000/
 And you should see something like this.
 
 ![](https://i.imgur.com/CbkIni2.png)
-
-As you can see, a Node.js HTTP server is created with one callback. For each HTTP request that arrives, the callback is invoked with two arguments—`req` and `res`. The incoming HTTP request object is passed into the callback's first `req` argument. And an empty outgoing HTTP response object is passed into the callback's second `res` argument. The goal of the callback is to correctly build out the `res` object using the information in `req` object.
 
 Right now, your HTTP `server` handles every HTTP request the same way, regardless of the request's method or path. It would be much more useful if your HTTP server could respond differently to different HTTP requests.
 
