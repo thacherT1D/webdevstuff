@@ -40,7 +40,7 @@ Announcements:
 Warmup: [Log File Parsing](https://github.com/gSchool/js-node-log-file-parsing)
 
 Lessons:
-- [Server Side Templating](/cohorts/68/student_dashboard)
+- [Server Side Templating](https://github.com/gSchool/server-side-templating)
 - [Data Modeling](/cohorts/68/student_dashboard)
 
 ---
