@@ -226,7 +226,7 @@ And you should see something like this.
 
 ![](https://i.imgur.com/CbkIni2.png)
 
-Right now, your HTTP `server` handles every HTTP request the same way, regardless of the request's method or path. It would be much more useful if your HTTP server could respond differently to different HTTP requests.
+Right now, your HTTP server handles every HTTP request the same way, regardless of the request's method or path. It would be much more useful if your HTTP server could respond differently to different HTTP requests.
 
 Let's fix that by refactoring the `server.js` file with the following code.
 
@@ -308,7 +308,7 @@ Send another HTTP request to the server to verify everything works the same.
 http GET localhost:8000/guests
 ```
 
-Right now, your HTTP `server` sends hardcoded data with the HTTP response. It would be much more useful if your HTTP server could send data that's read from the JSON-formatted `guests.json` file.
+Right now, your HTTP server sends hardcoded data with the HTTP response. It would be much more useful if your HTTP server could send data that's read from the JSON-formatted `guests.json` file.
 
 Let's fix that by refactoring the `server.js` file with the following code.
 
@@ -362,7 +362,7 @@ And you should see something like this.
 
 ![](https://i.imgur.com/MM0aAYD.png)
 
-Right now, your HTTP `server` can only send back all the records from the database. It would be much more useful if your HTTP server could send back individual records as well.
+Right now, your HTTP server can only send back all the records from the database. It would be much more useful if your HTTP server could send back individual records as well.
 
 Let's fix that by refactoring the `server.js` file with the following code.
 
