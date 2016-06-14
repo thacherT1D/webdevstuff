@@ -151,7 +151,7 @@ Now that you've learned about HTTP requests and responses, let's play around wit
 
 To do that, you'll need to create a Node.js HTTP server to handle HTTP requests and send back HTTP responses. The HTTP requests will be commands that read the records in a database, which will be the same JSON-formatted `guests.json` file from before. Once the HTTP request is correctly handled, the HTTP server will send an appropriate HTTP response back.
 
-To get started, return to the `party` project from yesterday and create a new `node_server` branch.
+To get started, return to the `party` project from yesterday and create a new `node_server` feature branch.
 
 ```shell
 cd party
@@ -493,7 +493,15 @@ git br -d node_server
 
 ## How do you deploy a Node.js HTTP server to Heroku?
 
-Make sure you have a `.gitignore` file.
+**Heroku** is a cloud platform that lets you deploy, monitor, and scale HTTP servers. Getting HTTP servers onto the Internet easily and iterating on them quickly can make or break a product. Heroku's claim to fame is their relentless focus on the developer experience around HTTP servers. Heroku enables developers to focus on the backend applications that rely on HTTP servers without having to focus on building and maintaining the production environment.
+
+To get started, create a new `heroku` feature branch.
+
+```shell
+git checkout -b heroku
+```
+
+Then, create a `.gitignore` file for your project.
 
 ```shell
 echo '.DS_Store' >> .gitignore
@@ -501,23 +509,31 @@ echo 'node_modules' >> .gitignore
 echo 'npm-debug.log' >> .gitignore
 ```
 
-You must have a valid `package.json` file in your app's root directory in order for Heroku to know that you are a Node app. You can build this json using the `npm init` command.
+Next, create a `package.json` file for your project using NPM. This lets Heroku know that this project uses Node.js.
 
 ```shell
 npm init
 ```
 
+After you completed the short wizard, create a `Procfile` for your project. This lets Heroku know how to start your HTTP server.
+
 ```
 echo 'web: node server.js' > Procfile
 ```
+
+To see how Heroku will run your HTTP server, install the `foreman` package using NPM.
 
 ```shell
 npm install -g foreman
 ```
 
+And use the `nf` command to start the HTTP server using the command inside the `Procfile`.
+
 ```shell
 nf start
 ```
+
+Finally, commit these changes to your repository
 
 ```shell
 git add .
