@@ -77,7 +77,7 @@ An HTTP request is composed of the following parts.
 
 Here's an example of what an HTTP request looks like.
 
-```
+```text
 GET / HTTP/1.1
 Accept: */*
 Accept-Encoding: gzip, deflate
