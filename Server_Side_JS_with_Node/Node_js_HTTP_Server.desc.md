@@ -567,6 +567,8 @@ heroku login
 
 After logging in, you can use the `heroku` command the create an empty application on Heroku.
 
+**NOTE:** Replace `USERNAME` with your GitHub username.
+
 ```shell
 heroku apps:create USERNAME-party
 ```
@@ -584,6 +586,8 @@ git push heroku master
 ```
 
 Finally, you can send a request to the server running on the production environment.
+
+**NOTE:** Replace `USERNAME` with your GitHub username.
 
 ```shell
 http GET USERNAME-party.herokuapp.com/guests
