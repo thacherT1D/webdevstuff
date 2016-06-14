@@ -1,16 +1,6 @@
-# Intro Videos
+## Objectives
 
-
-## Static Websites vs Dynamic Websites
-
-<iframe src="https://player.vimeo.com/video/136582439?byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-
-Need to review HTTP? Check out [this article.](http://code.tutsplus.com/tutorials/http-the-protocol-every-web-developer-must-know-part-1--net-31177)
-
-# Intro to Express.js
-
-Objectives:
-
+- Explain what Express.js is.
 - Start a simple express app and review `require`  
 - Add multiple routes to an express.js app
 - Set status code on responses
@@ -18,11 +8,9 @@ Objectives:
 - Read query string parameters in express
 - Send dymanic files using ejs as a templating engine
 
-##Express
+### What's Express.js?
 
-### What is it?
-
-We have used Node a bit to run JavaScript outside the browser and we have even seen how to use Node to start a server. It's totally feasible to build an application using Node alone but some tasks, like starting a server, serving files, and many others are not trivial on their own. To make many of these tasks simpler, we use frameworks! The most commonly used framework with node.js is express.js. It is known as a 'minimalist' framework because it does not give us a TON of functionality out of the box (like rails for example).
+We have used Node.js a bit to run JavaScript outside the browser and we have even seen how to use Node to start a server. It's totally feasible to build an application using Node alone but some tasks, like starting a server, serving files, and many others are not trivial on their own. To make many of these tasks simpler, we use frameworks! The most commonly used framework with node.js is express.js. It is known as a 'minimalist' framework because it does not give us a TON of functionality out of the box (like rails for example).
 
 ### Getting Started
 
@@ -587,4 +575,5 @@ This is the `body-parser` middleware in action!
 
 ## Resources
 
+[Envato - HTTP: The Protocol Every Web Developer Must Know - Part 1](http://code.tutsplus.com/tutorials/http-the-protocol-every-web-developer-must-know-part-1--net-31177)
 [Express - Using Middleware](http://expressjs.com/en/guide/using-middleware.html)
