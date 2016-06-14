@@ -4,7 +4,8 @@
 - Explain why an HTTP server is useful.
 - Explain what an HTTP request is.
 - Explain what an HTTP response is.
-- Create an HTTP server with Node's `http` module
+- Create a Node.js HTTP server with the `http` module.
+- Deploy a Node.js HTTP server to Heroku.
 
 ## What's an HTTP server?
 
@@ -28,7 +29,7 @@ And type in the following code.
 'use strict';
 
 var http = require('http');
-var port = 8000;
+var port = process.env.PORT || 8000;
 
 var server = http.createServer(function(req, res) {
   res.setHeader('Content-Type', 'text/plain');
@@ -153,7 +154,7 @@ And, of course, there's boring-old Wikipedia when you need the official, textual
 
 **QUESTION:** The most common status codes are `200`, `302`, `304`, `404`, and `500`. Can you figure out why?
 
-## How do you create an HTTP server with Node.js?
+## How do you create a Node.js HTTP server with the `http` module?
 
 Now that you've learned about HTTP requests and responses, let's play around with the `http` module in Node.js. Remember that party you're throwing? Well, imagine that your guests want to see the party's guest list over HTTP. You've got some smart friends!
 
@@ -184,7 +185,7 @@ And type in the following code to the `server.js` file.
 'use strict';
 
 var http = require('http');
-var port = 8000;
+var port = process.env.PORT || 8000;
 
 var server = http.createServer(function(req, res) {
   var guests = ['Mary', 'Don'];
@@ -241,7 +242,7 @@ Let's fix that by refactoring the `server.js` file with the following code.
 'use strict';
 
 var http = require('http');
-var port = 8000;
+var port = process.env.PORT || 8000;
 
 var server = http.createServer(function(req, res) {
   if (req.method === 'GET' && req.url === '/guests') {
@@ -335,7 +336,7 @@ var path = require('path');
 var guestsPath = path.join(__dirname, 'guests.json');
 
 var http = require('http');
-var port = 8000;
+var port = process.env.PORT || 8000;
 
 var fs = require('fs');
 
@@ -396,7 +397,7 @@ var path = require('path');
 var guestsPath = path.join(__dirname, 'guests.json');
 
 var http = require('http');
-var port = 8000;
+var port = process.env.PORT || 8000;
 
 var fs = require('fs');
 
@@ -499,12 +500,79 @@ With the commits merged in, it's safe to delete the `node_server` branch.
 git br -d node_server
 ```
 
+## How do you deploy a Node.js HTTP server to Heroku?
+
+Make sure you have a `.gitignore` file.
+
+```shell
+echo '.DS_Store' >> .gitignore
+echo 'node_modules' >> .gitignore
+echo 'npm-debug.log' >> .gitignore
+```
+
+You must have a valid `package.json` file in your app's root directory in order for Heroku to know that you are a Node app. You can build this json using the `npm init` command.
+
+```shell
+npm init
+```
+
+```
+echo 'web: node server.js' > Procfile
+```
+
+```shell
+npm install -g foreman
+```
+
+```shell
+nf start
+```
+
+```shell
+git add .
+git commit -m 'Prepare for deployment to Heroku'
+```
+
+After you've signed up for [Heroku](https://signup.heroku.com/), install the `heroku` package with Homebrew.
+
+```shell
+brew install heroku
+```
+
+Then use the `heroku` command to login to your account.
+
+```shell
+heroku login
+```
+
+```shell
+heroku apps:create USERNAME-petshep
+```
+
+Now you can deploy to Heroku using Git:
+
+```shell
+git push heroku master
+```
+
+Make sure at least one web dyno is running.
+
+```shell
+heroku ps:scale web=1
+```
+
+```shell
+heroku open
+```
+
 ## Assignment
 
 - [Pet Shop - Node.js HTTP Server](https://github.com/gSchool/fs-pet-shop/blob/master/2_http.md)
 
 ## Resources
 
+- [Heroku Dev Center- Deploy from GitHub](https://devcenter.heroku.com/articles/github-integration)
+- [Heroku Dev Center - Getting Started with Node.js](https://devcenter.heroku.com/articles/getting-started-with-nodejs#introduction)
 - [Node.js API Documentation - `http.IncomingMessage`](https://nodejs.org/dist/latest-v6.x/docs/api/http.html#http_class_http_incomingmessage)
 - [Node.js API Documentation - `http.ServerResponse`](https://nodejs.org/dist/latest-v6.x/docs/api/http.html#http_class_http_serverresponse)
 - [Webopedia - The Difference Between the Internet and World Wide Web](http://www.webopedia.com/DidYouKnow/Internet/Web_vs_Internet.asp)
