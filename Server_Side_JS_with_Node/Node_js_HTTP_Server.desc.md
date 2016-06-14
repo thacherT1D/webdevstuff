@@ -159,6 +159,8 @@ git branch http
 git checkout http
 ```
 
+**NOTE:** You can also use `git checkout -b http` to create a new branch and check it out in one step.
+
 Next, create a `server.js` file.
 
 ```shell
