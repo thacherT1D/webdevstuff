@@ -151,11 +151,11 @@ Now that you've learned about HTTP requests and responses, let's play around wit
 
 To do that, you'll need to create a Node.js HTTP server to handle HTTP requests and send back HTTP responses. The HTTP requests will be commands that read the records in a database, which will be the same JSON-formatted `guests.json` file from before. Once the HTTP request is correctly handled, the HTTP server will send an appropriate HTTP response back.
 
-To get started, return to the `party` project from yesterday and create a new `node_server` feature branch.
+To get started, return to the `party` project from yesterday and create a new `http_server` feature branch.
 
 ```shell
 cd party
-git checkout -b node_server
+git checkout -b http_server
 ```
 
 Next, create a `server.js` file.
@@ -218,7 +218,7 @@ And you should see something like this.
 
 ![](https://i.imgur.com/CbkIni2.png)
 
-Next, add and commit the latest changes to the `party` project's `node_server` branch.
+Next, add and commit the latest changes to the `party` project's `http_server` branch.
 
 ```shell
 git add .
@@ -285,7 +285,7 @@ And you should see something like this.
 
 ![](https://i.imgur.com/MM0aAYD.png)
 
-Next, add and commit the latest changes to the `party` project's `node_server` branch.
+Next, add and commit the latest changes to the `party` project's `http_server` branch.
 
 ```shell
 git add .
@@ -370,7 +370,7 @@ And you should see something like this.
 
 ![](https://i.imgur.com/MM0aAYD.png)
 
-Next, add and commit the latest changes to the `party` project's `node_server` branch.
+Next, add and commit the latest changes to the `party` project's `http_server` branch.
 
 ```shell
 git add .
@@ -471,24 +471,24 @@ And you should see something like this.
 
 ![](https://i.imgur.com/omCorko.png)
 
-Next, add and commit the latest changes to the `party` project's `node_server` branch.
+Next, add and commit the latest changes to the `party` project's `http_server` branch.
 
 ```shell
 git add .
 git commit -m 'Send individual guest records from the database'
 ```
 
-To merge, the commits from the `node_server` branch to the `master` branch, run the following commands.
+To merge, the commits from the `http_server` branch to the `master` branch, run the following commands.
 
 ```shell
 git checkout master
-git merge node_server
+git merge http_server
 ```
 
-With the commits merged in, it's safe to delete the `node_server` branch.
+With the commits merged in, it's safe to delete the `http_server` branch.
 
 ```shell
-git br -d node_server
+git br -d http_server
 ```
 
 ## How do you deploy a Node.js HTTP server to Heroku?
