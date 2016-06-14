@@ -41,7 +41,7 @@ Warmup: [Log File Parsing](https://github.com/gSchool/js-node-log-file-parsing)
 
 Lessons:
 - [Server Side Templating](https://github.com/gSchool/server-side-templating)
-- [Data Modeling](/cohorts/68/student_dashboard)
+- [Data Modeling](https://github.com/rogerwschmidt/data-modeling)
 
 ## resources
 - [draw.io](https://www.draw.io/)
