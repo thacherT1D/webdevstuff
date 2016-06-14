@@ -112,7 +112,7 @@ An HTTP response is composed of the following parts.
 
 Here's an example of what an HTTP response looks like.
 
-```
+```text
 HTTP/1.1 200 OK
 Connection: keep-alive
 Content-Length: 11
