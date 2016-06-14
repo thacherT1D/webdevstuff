@@ -8,7 +8,7 @@
 
 ## What's an HTTP server?
 
-Before browsers, before JavaScript, and believe it or not, before HTML, the Internet was originally designed as a file server. When a user wanted a file, they would use a terminal to submit a request, which included the location of the file—IP address and name of desired file—on a remote computer.
+Node.js is commonly used to build HTTP servers. An **HTTP server** is a program that runs in an infinite loop, accepting HTTP requests from a client and sending HTTP responses back to it. Inside those responses, HTTP servers often include data like HTML, CSS, JavaScript, and JSON among other formats. Throughout the second quarter of this program, you'll be building custom HTTP servers in Node.js that'll accept HTTP requests and send back HTTP responses containing JSON data.
 
 Create a `helloServer.js` file on the Desktop.
 
@@ -58,7 +58,18 @@ And you should see something like this.
 
 ## Why is an HTTP server useful?
 
-The Internet that we now use is built on this foundation. The methods, however, have evolved. Instead of a terminal being the primary client, most users now use a web browser. The request for a resource, such as a file, is submitted as a URL in a web browser and forwarded to a web server. The URL `https://www.yahoo.com/index.html`, for instance, would search for a server with the host name of `www.yahoo.com` and a file named `/index.html` would be returned if found.
+In 1989, Tim Berners-Lee proposed a new project to his employer CERN with the goal of easing the exchange of information between scientists by using a hypertext system. The project resulted in Tim Berners-Lee writing two programs in 1990—the world's first HTTP client and server.
+
+Between 1991 and 1994, the simplicity and effectiveness of exchanging data over HTTP caused developers to build and port HTTP clients and servers for many different operating systems, spreading their use among scientific organizations, universities, and industry.
+
+Fast forward to today and HTTP clients and servers are everywhere.
+
+to handle HTTP requests and send HTTP responses to [thousands of requests per second](https://www.techempower.com/benchmarks/).
+
+
+Without HTTP servers, the Internet would not exist. The web hosting industry is simply used to lease out web servers, providing average business owners and individuals with the opportunity to use high-tech servers that make it possible to expand their outreach to the entire world. Without rental web servers the internet would be a fraction of the size it is today, as most web site owners can afford to buy their own web server in cash.
+
+Web servers are the gateway between the average individual and the world wide web, yet surprisingly web hosting plans start at only a couple of dollars per month. Now that you’re familiar with web servers you can begin shopping for a quality web hosting plan without the usual confusion that most novices experience.
 
 ## What's an HTTP Request?
 
@@ -69,7 +80,7 @@ An HTTP request is composed of the following parts.
 1. A method (or verb)
 1. A path
 1. An HTTP version
-1. Key-value pairs called **headers**
+1. Key-value headers
 1. And an optional body
 
 Here's an example of what an HTTP request looks like.
@@ -129,8 +140,13 @@ While an HTTP response can only contain one status code, there are many differen
 | `4XX`             | Request accepted, but there was an error on the client. |
 | `5XX`             | Request accepted, but there was an error on the server. |
 
+Here are a few websites that explain the official HTTP status codes through cute pictures of animals.
+
 - [HTTP Status Cats](https://http.cat/)
 - [HTTP Status Dogs](https://httpstatusdogs.com/)
+
+And, of course, there's boring-old Wikipedia when you need the official, textual explanation.
+
 - [Wikipedia - List of HTTP status codes](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes)
 
 **QUESTION:** The most common status codes are `200`, `302`, `304`, `404`, and `500`. Can you figure out why?
