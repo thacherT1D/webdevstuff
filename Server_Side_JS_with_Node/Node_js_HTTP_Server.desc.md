@@ -61,7 +61,7 @@ And you should see something like this.
 
 In 1989, Tim Berners-Lee proposed a new project to his employer CERN. The goal of this project was to ease the exchange of information between scientists by using a hypertext system. In 1990, the project resulted in two programs—the world's first HTTP client and server.
 
-Because exchanging information over HTTP is so effective, there are countless HTTP clients and servers in existence today. The most effective of these servers are able to handle [thousands of requests per second](https://www.techempower.com/benchmarks/), thus giving millions of people around the world the ability to access and exchange information every day. Without HTTP servers, the rapid and global exchange of information over the Internet not exist.
+Because exchanging information over HTTP is so effective, there are countless HTTP clients and servers in existence today. The most effective of these servers are able to handle [thousands of requests per second](https://www.techempower.com/benchmarks/), thus giving millions of people around the world the ability to access and exchange information every day. Without HTTP servers, the rapid and global exchange of information over the Internet would not exist.
 
 ## What's an HTTP Request?
 
@@ -493,7 +493,7 @@ git br -d http
 
 ## How do you deploy a Node.js HTTP server to Heroku?
 
-**Heroku** is a cloud platform that lets you deploy, monitor, and scale HTTP servers. Getting HTTP servers onto the Internet easily and iterating on them quickly can make or break a product. Heroku's claim to fame is their relentless focus on the developer experience around HTTP servers. Heroku enables developers to focus on the backend applications that rely on HTTP servers without having to focus on building and maintaining the production environment.
+**Heroku** is a cloud platform that lets you deploy, monitor, and scale HTTP servers. Getting HTTP servers onto the Internet easily and iterating on them quickly can make or break a product. Heroku focuses on providing an excellent developer experience around managing HTTP servers on a production environment. That way, developers can focus on writing server-side applications without having to build and maintain the production environment themselves.
 
 To get started, create a new `heroku` feature branch.
 
@@ -515,19 +515,19 @@ Next, create a `package.json` file for your project using NPM. This lets Heroku 
 npm init
 ```
 
-After you completed the short wizard, create a `Procfile` for your project. This lets Heroku know how to start your HTTP server.
+After you complete the short wizard, create a `Procfile` for your project. This lets Heroku know how to start your HTTP server.
 
 ```
 echo 'web: node server.js' > Procfile
 ```
 
-To see how Heroku will run your HTTP server, install the `foreman` package using NPM.
+To see how Heroku will run your HTTP server, you can install the `foreman` package using NPM.
 
 ```shell
 npm install -g foreman
 ```
 
-And use the `nf` command to start the HTTP server using the command inside the `Procfile`.
+Then use the `nf` command to start the HTTP server using by running the command inside the `Procfile`.
 
 ```shell
 nf start
@@ -565,24 +565,28 @@ Then use the `heroku` command to login to your account.
 heroku login
 ```
 
+After logging in, you can use the `heroku` command the create an empty application on Heroku.
+
 ```shell
-heroku apps:create USERNAME-petshep
+heroku apps:create USERNAME-party
 ```
 
-Now you can deploy to Heroku using Git:
+This will automatically create a new remote called `heroku`.
+
+```shell
+git remote -v
+```
+
+Now, you can deploy your server by pushing the `master` branch to the `heroku` remote.
 
 ```shell
 git push heroku master
 ```
 
-Make sure at least one web dyno is running.
+Finally, you can send a request to the server running on the production environment.
 
 ```shell
-heroku ps:scale web=1
-```
-
-```shell
-heroku open
+http GET USERNAME-party.herokuapp.com/guests
 ```
 
 ## Assignment
