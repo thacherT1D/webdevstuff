@@ -295,6 +295,10 @@ Send another HTTP request to the server to verify everything works the same.
 http GET localhost:8000/guests
 ```
 
+Right now, your HTTP `server` sends hardcoded data with the HTTP response. It would be much more useful if your HTTP server could send data that's read from the JSON-formatted `guests.json` file.
+
+Let's fix that by refactoring the `server.js` file with the following code.
+
 ```javascript
 'use strict';
 
@@ -329,13 +333,25 @@ server.listen(port, function() {
 });
 ```
 
+Now, save the `server.js` file and the following data to the `guests.json` file.
+
 ```shell
 echo '["Mary", "Don"]' > guests.json
 ```
 
+Send an HTTP request to the server.
+
 ```shell
 http GET localhost:8000/guests
 ```
+
+And you should see something like this.
+
+![](https://i.imgur.com/MM0aAYD.png)
+
+Right now, your HTTP `server` can only send back all the records from the database. It would be much more useful if your HTTP server could send back individual records as well.
+
+Let's fix that by refactoring the `server.js` file with the following code.
 
 ```javascript
 'use strict';
@@ -397,13 +413,35 @@ server.listen(port, function() {
 });
 ```
 
+Now, save the `server.js` file and send the following HTTP request to the server.
+
+```shell
+http GET localhost:8000/guests
+```
+
+And you should see something like this.
+
+![](https://i.imgur.com/MM0aAYD.png)
+
+Now, send the following HTTP request to the server.
+
 ```shell
 http GET localhost:8000/guests/0
 ```
 
+And you should see something like this.
+
+![](https://i.imgur.com/loK2cj9.png)
+
+Finally, send the following HTTP request to the server.
+
 ```shell
 http GET localhost:8000/guests/1
 ```
+
+And you should see something like this.
+
+![](https://i.imgur.com/omCorko.png)
 
 ## Assignment
 
