@@ -286,13 +286,15 @@ And you should see something like this.
 
 ![](https://i.imgur.com/MM0aAYD.png)
 
-Manually restart a Node.js HTTP server gets old fast. To speed up your development workflow, install the `nodemon` package with NPM.
+Manually restarting a Node.js HTTP server gets old fast. Plus, it's easy to forgot to do it every time you refactor your code. To speed up your development workflow, let's use [Nodemon](http://nodemon.io/)—a command-line utility that'll run your server with Node.js and monitor for any changes in its code. When it detects a change, Nodemon will automatically restart the server.
+
+To get started, use use NPM to install the `nodemon` package globally.
 
 ```shell
 npm install -g nodemon
 ```
 
-Terminate the existing server with `Ctrl + C` and this time run it with the `nodemon` command.
+Terminate the existing server with `Ctrl + C`, but this time run it with the `nodemon` command.
 
 ```shell
 nodemon server.js
