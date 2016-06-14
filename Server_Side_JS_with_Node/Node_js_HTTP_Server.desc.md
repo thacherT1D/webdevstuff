@@ -103,11 +103,13 @@ While an HTTP request can only contain one method, there are several different m
 | `GET`  | Used retrieve a resource, like an HTML file, from a server. |
 | `POST` | Used send information, like user input, to a server.        |
 
+You'll learn about additional HTTP methods, like `PUT`, `PATCH`, and `DELETE`, when we encounter RESTful HTTP servers later in the course.
+
 **QUESTION:** When does a web browser make `GET` requests? When does it make `POST` requests?
 
 ## What's an HTTP response?
 
-The server receives an HTTP request, attempts to process it, and sends a plain-text message called an **HTTP response** back to the client. Popular web servers include Apache, Nginx, Node.js, and Python's built-in `SimpleHTTPServer`.
+When the server receives an HTTP request, its job is to process the request and sends a plain-text message, called an **HTTP response**, back to the client. In addition to Node.js, popular HTTP servers include Apache, Nginx, and Python's built-in `SimpleHTTPServer`.
 
 An HTTP response is composed of the following parts.
 
@@ -140,7 +142,7 @@ While an HTTP response can only contain one status code, there are many differen
 | `4XX`             | Request accepted, but there was an error on the client. |
 | `5XX`             | Request accepted, but there was an error on the server. |
 
-Here are a few websites that explain the official HTTP status codes through cute pictures of animals.
+Here are a few websites that list the possible HTTP status codes and their meaning through cute photos of animals.
 
 - [HTTP Status Cats](https://http.cat/)
 - [HTTP Status Dogs](https://httpstatusdogs.com/)
