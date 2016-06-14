@@ -600,3 +600,5 @@ http GET USERNAME-party.herokuapp.com/guests
 - [Node.js API Documentation - `http.ServerResponse`](https://nodejs.org/dist/latest-v6.x/docs/api/http.html#http_class_http_serverresponse)
 - [Webopedia - The Difference Between the Internet and World Wide Web](http://www.webopedia.com/DidYouKnow/Internet/Web_vs_Internet.asp)
 - [Youtube - How does the Internet work?](https://www.youtube.com/watch?v=e4S8zfLdLgQ)
+
+<iframe src="https://player.vimeo.com/video/136579022?byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
