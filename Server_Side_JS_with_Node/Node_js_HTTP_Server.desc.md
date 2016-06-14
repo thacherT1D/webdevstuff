@@ -59,18 +59,9 @@ And you should see something like this.
 
 ## Why is an HTTP server useful?
 
-In 1989, Tim Berners-Lee proposed a new project to his employer CERN with the goal of easing the exchange of information between scientists by using a hypertext system. The project resulted in Tim Berners-Lee writing two programs in 1990—the world's first HTTP client and server.
+In 1989, Tim Berners-Lee proposed a new project to his employer CERN. The goal of this project was to ease the exchange of information between scientists by using a hypertext system. In 1990, the project resulted in two programs—the world's first HTTP client and server.
 
-Between 1991 and 1994, the simplicity and effectiveness of exchanging data over HTTP caused developers to build and port HTTP clients and servers for many different operating systems, spreading their use among scientific organizations, universities, and industry.
-
-Fast forward to today and HTTP clients and servers are everywhere.
-
-to handle HTTP requests and send HTTP responses to [thousands of requests per second](https://www.techempower.com/benchmarks/).
-
-
-Without HTTP servers, the Internet would not exist. The web hosting industry is simply used to lease out web servers, providing average business owners and individuals with the opportunity to use high-tech servers that make it possible to expand their outreach to the entire world. Without rental web servers the internet would be a fraction of the size it is today, as most web site owners can afford to buy their own web server in cash.
-
-Web servers are the gateway between the average individual and the world wide web, yet surprisingly web hosting plans start at only a couple of dollars per month. Now that you’re familiar with web servers you can begin shopping for a quality web hosting plan without the usual confusion that most novices experience.
+Because exchanging information over HTTP is so effective, there are countless HTTP clients and servers in existence today. The most effective of these servers are able to handle [thousands of requests per second](https://www.techempower.com/benchmarks/) enabling millions of clients to access the same information per day. Without HTTP servers, the Internet as we know it would not exist.
 
 ## What's an HTTP Request?
 
