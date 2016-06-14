@@ -226,6 +226,13 @@ And you should see something like this.
 
 ![](https://i.imgur.com/CbkIni2.png)
 
+Next, add and commit the latest changes to the `party` project's `node_server` branch.
+
+```shell
+git add .
+git commit -m 'Add the basic HTTP server'
+```
+
 Right now, your HTTP server handles every HTTP request the same way, regardless of the request's method or path. It would be much more useful if your HTTP server could send back different HTTP responses based on the information inside the HTTP requests.
 
 Let's fix that by refactoring the `server.js` file with the following code.
@@ -285,6 +292,13 @@ http GET localhost:8000/guests
 And you should see something like this.
 
 ![](https://i.imgur.com/MM0aAYD.png)
+
+Next, add and commit the latest changes to the `party` project's `node_server` branch.
+
+```shell
+git add .
+git commit -m 'Refactor HTTP server to send different responses'
+```
 
 Manually restarting a Node.js HTTP server gets old fast. Plus, it's easy to forgot to do it every time you refactor your code. To speed up your development workflow, let's use a command-line utility, called [Nodemon](http://nodemon.io/), that'll run your server with Node.js and automatically restart it when the code changes.
 
@@ -348,7 +362,7 @@ server.listen(port, function() {
 });
 ```
 
-Now, save the `server.js` file and the following data to the `guests.json` file.
+Now, save the `server.js` file and add the following data to the `guests.json` file.
 
 ```shell
 echo '["Mary", "Don"]' > guests.json
@@ -363,6 +377,13 @@ http GET localhost:8000/guests
 And you should see something like this.
 
 ![](https://i.imgur.com/MM0aAYD.png)
+
+Next, add and commit the latest changes to the `party` project's `node_server` branch.
+
+```shell
+git add .
+git commit -m 'Send all guest records from the database'
+```
 
 Right now, your HTTP server can only send back all the records from the database. It would be much more useful if your HTTP server could send back individual records as well.
 
@@ -457,6 +478,26 @@ http GET localhost:8000/guests/1
 And you should see something like this.
 
 ![](https://i.imgur.com/omCorko.png)
+
+Next, add and commit the latest changes to the `party` project's `node_server` branch.
+
+```shell
+git add .
+git commit -m 'Send individual guest records from the database'
+```
+
+To merge, the commits from the `node_server` branch to the `master` branch, run the following commands.
+
+```shell
+git checkout master
+git merge node_server
+```
+
+With the commits merged in, it's safe to delete the `node_server` branch.
+
+```shell
+git br -d node_server
+```
 
 ## Assignment
 
