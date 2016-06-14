@@ -155,7 +155,8 @@ To get started, return to the `party` project from yesterday and create a new `h
 
 ```shell
 cd party
-git checkout -b http
+git branch http
+git checkout http
 ```
 
 Next, create a `server.js` file.
