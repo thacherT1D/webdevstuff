@@ -336,13 +336,13 @@ var fs = require('fs');
 
 var server = http.createServer(function(req, res) {
   if (req.method === 'GET' && req.url === '/guests') {
-    fs.readFile(guestsPath, 'utf8', function(err, data) {
+    fs.readFile(guestsPath, 'utf8', function(err, guestsJSON) {
       if (err) {
         throw err;
       }
 
       res.setHeader('Content-Type', 'application/json');
-      res.end(data);
+      res.end(guestsJSON);
     });
   }
   else {
@@ -397,22 +397,22 @@ var fs = require('fs');
 
 var server = http.createServer(function(req, res) {
   if (req.method === 'GET' && req.url === '/guests') {
-    fs.readFile(guestsPath, 'utf8', function(err, data) {
+    fs.readFile(guestsPath, 'utf8', function(err, guestsJSON) {
       if (err) {
         throw err;
       }
 
       res.setHeader('Content-Type', 'application/json');
-      res.end(data);
+      res.end(guestsJSON);
     });
   }
   else if (req.method === 'GET' && req.url === '/guests/0') {
-    fs.readFile(guestsPath, 'utf8', function(err, data) {
+    fs.readFile(guestsPath, 'utf8', function(err, guestsJSON) {
       if (err) {
         throw err;
       }
 
-      var guests = JSON.parse(data);
+      var guests = JSON.parse(guestsJSON);
       var guestJSON = JSON.stringify(guests[0]);
 
       res.setHeader('Content-Type', 'application/json');
@@ -420,12 +420,12 @@ var server = http.createServer(function(req, res) {
     });
   }
   else if (req.method === 'GET' && req.url === '/guests/1') {
-    fs.readFile(guestsPath, 'utf8', function(err, data) {
+    fs.readFile(guestsPath, 'utf8', function(err, guestsJSON) {
       if (err) {
         throw err;
       }
 
-      var guests = JSON.parse(data);
+      var guests = JSON.parse(guestsJSON);
       var guestJSON = JSON.stringify(guests[1]);
 
       res.setHeader('Content-Type', 'application/json');

@@ -1,6 +1,6 @@
 ## Objectives
 
-- Explain what Express.js is.
+- Explain what Express is.
 - Start a simple express app and review `require`  
 - Add multiple routes to an express.js app
 - Set status code on responses
@@ -8,7 +8,9 @@
 - Read query string parameters in express
 - Send dymanic files using ejs as a templating engine
 
-### What's Express.js?
+### What's Express?
+
+**Express** is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications.
 
 We have used Node.js a bit to run JavaScript outside the browser and we have even seen how to use Node to start a server. It's totally feasible to build an application using Node alone but some tasks, like starting a server, serving files, and many others are not trivial on their own. To make many of these tasks simpler, we use frameworks! The most commonly used framework with node.js is express.js. It is known as a 'minimalist' framework because it does not give us a TON of functionality out of the box (like rails for example).
 
