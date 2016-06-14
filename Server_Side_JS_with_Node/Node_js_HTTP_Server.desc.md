@@ -310,7 +310,7 @@ Send the following HTTP request to the server to verify everything works the sam
 http GET localhost:8000/guests
 ```
 
-Right now, your HTTP server sends hardcoded data with the HTTP response. It would be much more useful if your HTTP server could send data that's read from the JSON-formatted `guests.json` file.
+Right now, your HTTP server sends a hardcoded guest list in the HTTP response. It would be much more useful if your HTTP server could send guest list that's read from the JSON-formatted `guests.json` file.
 
 Let's fix that by refactoring the `server.js` file with the following code.
 
