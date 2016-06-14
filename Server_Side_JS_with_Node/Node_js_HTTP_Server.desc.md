@@ -203,8 +203,8 @@ As you can see, a Node.js HTTP server is created with one callback. For each HTT
 
 See the Node.js API documentation to learn what properties and methods are available for each object type.
 
-- [Node.js API Documentation - `http.IncomingMessage`](https://nodejs.org/dist/latest-v6.x/docs/api/http.html#http_class_http_incomingmessage)
-- [Node.js API Documentation - `http.ServerResponse`](https://nodejs.org/dist/latest-v6.x/docs/api/http.html#http_class_http_serverresponse)
+- [`http.IncomingMessage`](https://nodejs.org/dist/latest-v6.x/docs/api/http.html#http_class_http_incomingmessage)
+- [`http.ServerResponse`](https://nodejs.org/dist/latest-v6.x/docs/api/http.html#http_class_http_serverresponse)
 
 Now, save the `server.js` file and run it with the `node` command.
 
@@ -462,5 +462,7 @@ And you should see something like this.
 
 ## Resources
 
+- [Node.js API Documentation - `http.IncomingMessage`](https://nodejs.org/dist/latest-v6.x/docs/api/http.html#http_class_http_incomingmessage)
+- [Node.js API Documentation - `http.ServerResponse`](https://nodejs.org/dist/latest-v6.x/docs/api/http.html#http_class_http_serverresponse)
+- [Webopedia - The Difference Between the Internet and World Wide Web](http://www.webopedia.com/DidYouKnow/Internet/Web_vs_Internet.asp)
 - [Youtube - How does the Internet work?](https://www.youtube.com/watch?v=e4S8zfLdLgQ)
-- [The difference between the Web and Internet](http://www.webopedia.com/DidYouKnow/Internet/Web_vs_Internet.asp)
