@@ -205,6 +205,10 @@ Now, save the `server.js` file and run it with the `node` command.
 node server.js
 ```
 
+And you should see something like this.
+
+![](http://i.imgur.com/xoaBsw1.png)
+
 In a separate Terminal tab, send an HTTP request to the server.
 
 ```shell
@@ -252,6 +256,10 @@ Now, save the `server.js` file, terminate the existing server with `Ctrl + C`, a
 ```shell
 node server.js
 ```
+
+And you should see something like this.
+
+![](http://i.imgur.com/xoaBsw1.png)
 
 In a separate Terminal tab, send an HTTP request to the server.
 
