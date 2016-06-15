@@ -10,7 +10,7 @@
 
 ## What's an Express HTTP server?
 
-For small HTTP servers, it's totally feasible to use the `http` module in Node.js. But as you've already seen, it takes quite a bit of code to build even a modest server. For building larger, more sophisticated HTTP servers, there's  **Express**, a framework that provides a minimal, flexible, and performant set of features that are fundamental for web application development.
+For small HTTP servers, it's totally feasible to just use the `http` module in Node.js. But as you've already seen, it takes quite a bit of code to build even a modest server. For building larger, more sophisticated HTTP servers, there's  **Express**, a framework that provides a minimal, flexible, and performant set of features that are fundamental for web application development.
 
 To get started, create a new `hello_express` project.
 
