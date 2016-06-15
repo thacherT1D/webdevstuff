@@ -10,30 +10,34 @@
 
 ## What's an Express HTTP server?
 
-**Express** is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications.
+For small Node.js HTTP servers, it's totally feasible to use the `http` module alone. But as you've already seen, it takes quite a bit of code to build even the a modest server. **Express** is a minimal and flexible framework that provides a robust set of features that are useful for building larger, more sophisticated HTTP servers.
 
-We have used Node.js a bit to run JavaScript outside the browser and we have even seen how to use Node to start a server. It's totally feasible to build an application using Node alone but some tasks, like starting a server, serving files, and many others are not trivial on their own. To make many of these tasks simpler, we use frameworks! The most commonly used framework with node.js is express.js. It is known as a 'minimalist' framework because it does not give us a TON of functionality out of the box (like rails for example).
-
-```shell
-mkdir helloExpress
-cd helloExpress
-```
+To get started, create a new `hello_express` project.
 
 ```shell
-npm init
+mkdir hello_express
+cd hello_express
 ```
 
-```shell
-npm install -s express
-```
-
-Create a `server.js` file on the Desktop.
+Then, create a `server.js` file for the project.
 
 ```shell
 touch server.js
 ```
 
-Open the `server.js` file in your text editor.
+Next, use NPM to initialize a `package.json` file for the project.
+
+```shell
+npm init
+```
+
+Then, use NPM to install the `express` module locally and save it as dependency for the project.
+
+```shell
+npm install --save express
+```
+
+Next, open the `server.js` file in your text editor.
 
 ```shell
 atom server.js
@@ -57,17 +61,21 @@ app.listen(port, function() {
 });
 ```
 
-Now, save the `server.js` file and run it with the `node` command.
+Save the `server.js` file and run it with the `nodemon` command.
 
 ```shell
 nodemon server.js
 ```
 
-In a new Terminal tab, send an HTTP request to the server.
+In a separate Terminal tab, send an HTTP request to the server.
 
 ```shell
 http GET localhost:8000/
 ```
+
+And you should see something like this.
+
+![](https://i.imgur.com/OuxwwyS.png)
 
 ## Why is an HTTP server useful?
 
