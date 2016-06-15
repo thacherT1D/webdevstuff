@@ -507,7 +507,7 @@ app.listen(port, function() {
 In a separate Terminal tab, send an HTTP request to your server.
 
 ```shell
-http GET http://localhost:5000/guests
+http GET http://localhost:8000/guests
 ```
 
 Look back into the tab running the Express server, you should see the following.
@@ -583,7 +583,7 @@ app.listen(port, function() {
 Now send another HTTP request to your server.
 
 ```shell
-http GET http://localhost:5000/guests
+http GET http://localhost:8000/guests
 ```
 
 You should see the following server log.
@@ -674,7 +674,7 @@ app.listen(port, function() {
 Now you will send another HTTP GET request to your server.
 
 ```shell
-http GET http://localhost:5000/guests
+http GET http://localhost:8000/guests
 ```
 
 You should see a similar HTTP response.
@@ -697,7 +697,7 @@ ETag: W/"13-eZMtvf4MUiEAJpKhww5ZlQ"
 Next, send an HTTP POST request, with a JSON body, to your server.
 
 ```shell
-http POST http://localhost:5000/guests name=Kate
+http POST http://localhost:8000/guests name=Kate
 ```
 
 You should see a similar HTTP response.
@@ -718,7 +718,7 @@ ETag: W/"f-Dm6LF8ZOGzVq0Yw/A4JWYw"
 Finally, check to see if your guest list has been modified.
 
 ```shell
-http GET http://localhost:5000/guests
+http GET http://localhost:8000/guests
 ```
 
 You should see a similar HTTP response.
@@ -816,7 +816,7 @@ app.listen(port, function() {
 Now you will send another HTTP GET request to your server.
 
 ```shell
-http GET http://localhost:5000/guests
+http GET http://localhost:8000/guests
 ```
 
 You should see a similar HTTP response.
@@ -839,7 +839,7 @@ ETag: W/"13-eZMtvf4MUiEAJpKhww5ZlQ"
 Next, send an HTTP POST request, with a JSON body, to your server.
 
 ```shell
-http POST http://localhost:5000/guests name=Kate
+http POST http://localhost:8000/guests name=Kate
 ```
 
 You should see a similar HTTP response.
@@ -860,7 +860,7 @@ ETag: W/"f-Dm6LF8ZOGzVq0Yw/A4JWYw"
 Finally, check to see if your guest list has been modified.
 
 ```shell
-http GET http://localhost:5000/guests
+http GET http://localhost:8000/guests
 ```
 
 You should see a similar HTTP response.
