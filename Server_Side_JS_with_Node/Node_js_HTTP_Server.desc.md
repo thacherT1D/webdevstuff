@@ -519,6 +519,14 @@ Next, create a `package.json` file for your project using NPM. This lets Heroku 
 npm init
 ```
 
+Then, in the `package.json` file, specify the version of Node.js for Heroku to use in production. It's a good idea to use the same version as your development environment.
+
+```text
+"engines": {
+  "node": "6.2.1"
+}
+```
+
 After you complete the short wizard, create a `Procfile` for your project. This lets Heroku know how to start your HTTP server.
 
 ```
