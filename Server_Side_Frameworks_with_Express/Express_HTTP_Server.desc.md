@@ -175,7 +175,7 @@ var port = process.env.PORT || 8000;
 
 app.disable('x-powered-by');
 
-app.get('/', function(req, res) {
+app.get('/guests', function(req, res) {
   var guests = ['Mary', 'Don'];
   res.send(guests);
 });
@@ -189,17 +189,7 @@ app.listen(port, function() {
 });
 ```
 
-Now, save the `serverExpress.js` file, terminate the existing server with `Ctrl + C`, and run it again with the `node` command.
-
-```shell
-nodemon serverExpress.js
-```
-
-And you should see something like this.
-
-![](http://i.imgur.com/xoaBsw1.png)
-
-In a separate Terminal tab, send the following HTTP request to the server.
+Save the `serverExpress.js` file and send the following HTTP request to the server.
 
 ```shell
 http GET localhost:8000/
@@ -207,7 +197,7 @@ http GET localhost:8000/
 
 And you should see something like this.
 
-![](https://i.imgur.com/DZShb9I.png)
+![](https://i.imgur.com/88z1b6W.png)
 
 In a separate Terminal tab, send the following HTTP request to the server.
 
@@ -217,7 +207,7 @@ http GET localhost:8000/guests
 
 And you should see something like this.
 
-![](https://i.imgur.com/MM0aAYD.png)
+![](https://i.imgur.com/1BHV6c7.png)
 
 Next, add and commit the latest changes to the `party` project's `express` branch.
 
