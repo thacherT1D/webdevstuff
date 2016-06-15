@@ -420,23 +420,23 @@ git br -d express
 
 An Express application is essentially a series of middleware function calls. Express middleware is a callback function that has access to the request object (`req`), the response object (`res`), and sometimes the next middleware callback (`next`).
 
-Middleware functions _can_ execute any JavaScript operation inside the callback function.
+Middleware functions can execute any JavaScript operation inside the callback function.
 
 - Read and modify the `req` and `res` objects.
 - Read and write to a file or database.
 - Send HTTP requests to other servers.
 
-However, middleware _must_ either end the request/response cycle with `res.send()` or call the next middleware callback with `next()`.
+However, middleware _must_ either end the request/response cycle with a function like `res.send()` or call the next middleware callback with `next()`.
 
 ## Why is Express middleware useful?
 
-Express middleware allows an application's shared code to be organized into in a series of middleware callbacks. These callbacks can be reused in a flexible way.
+Express middleware allows an application's code to be organized into in a series of middleware callbacks. These callbacks can be reused in a flexible way.
 
 ![middleware](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/66/middleware-1.png)
 
 ## How does Express middleware work?
 
-First we'll build **application-level** middleware by hand. Then, we'll replace our hand-made middleware with third party middleware installed from npm.
+First we'll build **application level** middleware by hand. Then, we'll replace our hand-made middleware with third party middleware installed from npm.
 
 To get started, create a new `middleware` branch.
 
