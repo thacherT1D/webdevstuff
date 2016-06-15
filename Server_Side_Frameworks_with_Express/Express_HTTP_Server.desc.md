@@ -91,7 +91,7 @@ There are many server-side web application frameworks for Node.js that you can d
 
 ## How do you create an HTTP server with the `express` module?
 
-Now that you've learned about Express, let's play around with the `express` modules. Let's convert the guest list Node.js HTTP server into an Express HTTP server.
+Now that you've learned a little bit about Express and web applications, let's convert the guest list Node.js HTTP server you built with the `http` module into an Express HTTP server using the `express` module.
 
 To get started, return to the `party` project from yesterday and create a new `express` feature branch.
 
