@@ -79,8 +79,7 @@ And you should see something like this.
 
 ### Exercise
 
-Take a moment and think about how would you describe Express in your own words.
-Then turn to a partner and share your thoughts about the similarities and differences you noticed about using the `express` module versus the `http` module.
+Turn to a partner and share your thoughts about the similarities and differences you noticed about using the `express` module versus the `http` module.
 
 ## Why is an HTTP server useful?
 
