@@ -258,7 +258,7 @@ Query for the name of the todo list with id of 1:
 SELECT name FROM todo_list where id = 1;
 ```
 
-Now select all `tasks`
+Now select all `tasks`.
 
 Now insert a task with a name of `query me` and then write a query statement to select it.
 
