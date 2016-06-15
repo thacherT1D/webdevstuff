@@ -19,19 +19,19 @@ mkdir hello_express
 cd hello_express
 ```
 
-Then, create a `server.js` file for the project.
+Then, create a `server.js` file.
 
 ```shell
 touch server.js
 ```
 
-Next, use NPM to initialize a `package.json` file for the project.
+Next, use NPM to initialize a `package.json` file.
 
 ```shell
 npm init
 ```
 
-Then, use NPM to install the `express` module locally and save it as dependency for the project.
+Then, use NPM to install the `express` module locally and save it as dependency in the `package.json` file.
 
 ```shell
 npm install --save express
