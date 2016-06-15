@@ -87,7 +87,7 @@ Turn to a partner and share your thoughts about the similarities and differences
 
 ## Why is Express useful?
 
-There are many server-side web application frameworks for Node.js that you can download with NPM. However, Express is currently the most popular server-side because it's easy to learn and has a large community of plugins.
+There are many server-side web application frameworks for Node.js that you can download with NPM. For example, Express, hapi, koa.js, Nodal, Sails.js, and Meteor just to name a few. With over 6 million downloads per month, Express is the one of the most popular frameworks because it's fast, unopinionated, and minimalist. Additionally, Express has [good documentation](http://expressjs.com/en/4x/api.html), has a large community of plugins, and is used by both large and small companies.
 
 ## How do you create an HTTP server with the `express` module?
 
