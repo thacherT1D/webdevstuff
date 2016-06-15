@@ -50,17 +50,10 @@ Lessons:
 
 # Wednesday, June 15
 
-Warmup: [Link to Warmup](http://github.com/gSchool)
+Warmup: [Hack Calculator](https://github.com/gSchool/challenges/tree/master/Node/hack-calculator)
 
 Lessons:
-- [Lesson](/cohorts/68/student_dashboard)
-- [Lesson](/cohorts/68/student_dashboard)
-
-Homework: [Homework](/cohorts/68/student_dashboard)
-
-Announcements:
-- Announcement 1
-- Announcement 2
+- [SQL Part One](/redirects/articles/4326)/curriculums/56/articles/4326
 
 ---
 
