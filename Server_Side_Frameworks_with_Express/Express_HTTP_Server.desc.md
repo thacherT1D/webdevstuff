@@ -1,7 +1,7 @@
 ## Objectives
 
-- Explain what an Express HTTP server is.
-- Explain why an Express HTTP servers is useful.
+- Explain what Express is.
+- Explain why Express is useful.
 - Create an HTTP server with the `express` module.
 - Explain what Express middleware is.
 - Explain why Express middleware is useful.
@@ -81,23 +81,19 @@ And you should see something like this.
 
 Turn to a partner and share your thoughts about the similarities and differences you noticed about using the `express` module versus the `http` module. Afterwards, talk about how would you describe Express in your own words.
 
-## Why is an HTTP server useful?
+## Why is Express useful?
+
+[TODO]
 
 ## How do you create an HTTP server with the `express` module?
 
-Now that you've learned about Express HTTP servers, let's play around with the `express` modules. Remember that party you're throwing? Well, imagine that your guests want to see the party's guest list over HTTP. You've got some smart friends!
+Now that you've learned about Express, let's play around with the `express` modules. Let's convert the guest list Node.js HTTP server into an Express HTTP server.
 
-To do that, you'll need to create a Node.js HTTP server to handle HTTP requests and send back HTTP responses. The HTTP requests will be commands that read the records in a database, which will be the same JSON-formatted `guests.json` file from before. Once the HTTP request is correctly handled, the HTTP server will send an appropriate HTTP response back.
-
-To get started, return to the `party` project from yesterday and create a new `http` feature branch.
+To get started, return to the `party` project from yesterday and create a new `express` feature branch.
 
 ```shell
 cd party
 git checkout -b express
-```
-
-```shell
-mv server.js serverHTTP.js
 ```
 
 Next, create a `serverExpress.js` file.
@@ -106,7 +102,7 @@ Next, create a `serverExpress.js` file.
 touch serverExpress.js
 ```
 
-Open the `party` project in your text editor.
+Then, open the `party` project in your text editor.
 
 ```shell
 atom .
@@ -120,6 +116,8 @@ And type in the following code to the `serverExpress.js` file.
 var express = require('express');
 var app = express();
 var port = process.env.PORT || 8000;
+
+app.disable('x-powered-by');
 
 app.use(function(req, res) {
   var guests = ['Mary', 'Don'];
@@ -177,6 +175,8 @@ Let's fix that by refactoring the `serverExpress.js` file with the following cod
 var express = require('express');
 var app = express();
 var port = process.env.PORT || 8000;
+
+app.disable('x-powered-by');
 
 app.get('/', function(req, res) {
   var guests = ['Mary', 'Don'];
@@ -241,13 +241,15 @@ Let's fix that by refactoring the `serverExpress.js` file with the following cod
 ```javascript
 'use strict';
 
+var path = require('path');
+var guestsPath = path.join(__dirname, 'guests.json');
+var fs = require('fs');
+
 var express = require('express');
 var app = express();
 var port = process.env.PORT || 8000;
 
-var path = require('path');
-var guestsPath = path.join(__dirname, 'guests.json');
-var fs = require('fs');
+app.disable('x-powered-by');
 
 app.get('/', function(req, res) {
   fs.readFile(guestsPath, 'utf8', function(err, guestsJSON) {
@@ -300,13 +302,15 @@ Let's fix that by refactoring the `serverExpress.js` file with the following cod
 ```javascript
 'use strict';
 
+var path = require('path');
+var guestsPath = path.join(__dirname, 'guests.json');
+var fs = require('fs');
+
 var express = require('express');
 var app = express();
 var port = process.env.PORT || 8000;
 
-var path = require('path');
-var guestsPath = path.join(__dirname, 'guests.json');
-var fs = require('fs');
+app.disable('x-powered-by');
 
 app.get('/', function(req, res) {
   fs.readFile(guestsPath, 'utf8', function(err, guestsJSON) {
