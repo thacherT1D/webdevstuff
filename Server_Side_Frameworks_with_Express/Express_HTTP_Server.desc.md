@@ -77,6 +77,10 @@ And you should see something like this.
 
 ![](https://i.imgur.com/OuxwwyS.png)
 
+### Exercise
+
+How would you describe Express in your own words? What are some of the similarities and differences you noticed about using the `http` module versus `express` module?
+
 ## Why is an HTTP server useful?
 
 ## How do you create an HTTP server with the `express` module?
