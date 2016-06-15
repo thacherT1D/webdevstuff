@@ -216,7 +216,7 @@ git add .
 git commit -m 'Refactor Express server to send different responses'
 ```
 
-Right now, your HTTP server sends a hardcoded guest list in the HTTP response. It would be much more useful if your HTTP server could send guest list that's read from the JSON-formatted `guests.json` file.
+Right now, your Express server sends a hardcoded guest list in the response. It would be much more useful if your Express server could send guest list that's read from the JSON-formatted `guests.json` file.
 
 Let's fix that by refactoring the `serverExpress.js` file with the following code.
 
@@ -233,7 +233,7 @@ var port = process.env.PORT || 8000;
 
 app.disable('x-powered-by');
 
-app.get('/', function(req, res) {
+app.get('/guests', function(req, res) {
   fs.readFile(guestsPath, 'utf8', function(err, guestsJSON) {
     if (err) {
       throw err;
@@ -254,7 +254,7 @@ app.listen(port, function() {
 });
 ```
 
-Now, save the `server.js` file and add the following data to the `guests.json` file.
+Now, save the `serverExpress.js` file and add the following data to the `guests.json` file.
 
 ```shell
 echo '["Mary", "Don"]' > guests.json
@@ -332,7 +332,7 @@ app.listen(port, function() {
 });
 ```
 
-Now, save the `server.js` file and send the following HTTP request to the server.
+Now, save the `serverExpress.js` file and send the following HTTP request to the server.
 
 ```shell
 http GET localhost:8000/guests
