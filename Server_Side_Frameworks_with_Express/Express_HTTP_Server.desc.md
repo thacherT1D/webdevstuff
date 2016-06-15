@@ -153,7 +153,7 @@ http GET localhost:8000/
 
 And you should see something like this.
 
-![](https://i.imgur.com/CbkIni2.png)
+![](https://i.imgur.com/Y6TeBbO.png)
 
 Next, add and commit the latest changes to the `party` project's `express` branch.
 
@@ -162,7 +162,7 @@ git add .
 git commit -m 'Add an Express HTTP server'
 ```
 
-Right now, your HTTP server handles every HTTP request the same way, regardless of the request's method or path. It would be much more useful if your HTTP server could send back different HTTP responses based on the information inside the HTTP requests.
+Right now, your Express server handles every request the same way, regardless of the request's method or path. It would be much more useful if your server could send back different responses based on the information inside the requests.
 
 Let's fix that by refactoring the `serverExpress.js` file with the following code.
 
