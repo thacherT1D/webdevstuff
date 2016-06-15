@@ -416,13 +416,13 @@ git br -d express
 
 An Express application is essentially a series of middleware function calls. Express middleware is a callback function that has access to the request object (`req`), the response object (`res`), and sometimes the next middleware callback (`next`).
 
-Middleware functions **can** execute any JavaScript operation inside the callback function.
+Middleware functions _can_ execute any JavaScript operation inside the callback function.
 
 - Read and modify the `req` and `res` objects.
 - Read and write to a file or database.
 - Send HTTP requests to other servers.
 
-However, middleware **must** either end the request/response cycle with `res.send()` or call the next middleware callback with `next()`.
+However, middleware _must_ either end the request/response cycle with `res.send()` or call the next middleware callback with `next()`.
 
 ## Why is Express middleware useful?
 
@@ -434,29 +434,26 @@ Express middleware allows an application's shared code to be organized into in a
 
 First we'll build **application-level** middleware by hand. Then, we'll replace our hand-made middleware with third party middleware installed from npm.
 
-To get started, create a new Express project.
+To get started, create a new `middleware` branch.
 
-```bash
-cd path/to/projects
-mkdir party
-cd party
-npm install express
-touch server.js
-atom .
+```shell
+git checkout -b middleware
 ```
 
-Next, type out the following code into the `server.js` file.
+Next, type out the following code into the `serverExpress.js` file.
 
 ```javascript
 'use strict';
 
+var path = require('path');
+var guestsPath = path.join(__dirname, 'guests.json');
+var fs = require('fs');
+
 var express = require('express');
 var app = express();
-
-var guests = [{ name: 'Teagan' }];
+var port = process.env.PORT || 8000;
 
 app.disable('x-powered-by');
-app.set('port', process.env.PORT || 5000);
 
 app.use(function(req, res, next) {
   var start = new Date();
@@ -466,29 +463,52 @@ app.use(function(req, res, next) {
 });
 
 app.get('/guests', function(req, res) {
-  res.send(guests);
+  fs.readFile(guestsPath, 'utf8', function(err, guestsJSON) {
+    if (err) {
+      throw err;
+    }
+
+    var guests = JSON.parse(guestsJSON);
+
+    res.send(guests);
+  });
 });
 
-app.listen(app.get('port'), function() {
-  console.log('Listening on', app.get('port'));
+app.get('/guests/:id', function(req, res) {
+  fs.readFile(guestsPath, 'utf8', (err, data) => {
+    if (err) {
+      throw err;
+    }
+
+    var id = Number.parseInt(req.params.id);
+    var guests = JSON.parse(data);
+
+    if (id < 0 || id >= guests.length || Number.isNaN(id)) {
+      return res.sendStatus(404);
+    }
+
+    res.send(guests[id]);
+  });
+});
+
+app.use(function(req, res) {
+  res.sendStatus(404);
+});
+
+app.listen(port, function() {
+  console.log('Listening on port', port);
 });
 ```
 
-Then start your Express server.
+In a separate Terminal tab, send an HTTP request to your server.
 
-```bash
-nodemon server.js
-```
-
-In a new Terminal tab, send an HTTP request to your server.
-
-```bash
+```shell
 http GET http://localhost:5000/guests
 ```
 
-Look back into your first tab, you should see:
+Look back into the tab running the Express server, you should see the following.
 
-```
+```text
 GET /guests 200 2 ms
 ```
 
@@ -496,44 +516,75 @@ This is the hand-made logging middleware you just built! Now let's replace it wi
 
 **NOTE:** Before you install `morgan`, make sure your shell's working directory is the `party` directory.
 
-```bash
-npm install morgan
+```shell
+npm install --save morgan
 ```
 
-Now refactor `server.js` with the following code.
+Now refactor `serverExpresss.js` with the following code.
 
 ```javascript
 'use strict';
 
+var path = require('path');
+var guestsPath = path.join(__dirname, 'guests.json');
+var fs = require('fs');
+
 var express = require('express');
 var app = express();
-
-var guests = [{ name: 'Teagan' }];
+var port = process.env.PORT || 8000;
 
 app.disable('x-powered-by');
-app.set('port', process.env.PORT || 5000);
 
 var morgan = require('morgan');
 app.use(morgan('short'));
 
 app.get('/guests', function(req, res) {
-  res.send(guests);
+  fs.readFile(guestsPath, 'utf8', function(err, guestsJSON) {
+    if (err) {
+      throw err;
+    }
+
+    var guests = JSON.parse(guestsJSON);
+
+    res.send(guests);
+  });
 });
 
-app.listen(app.get('port'), function() {
-  console.log('Listening on', app.get('port'));
+app.get('/guests/:id', function(req, res) {
+  fs.readFile(guestsPath, 'utf8', (err, data) => {
+    if (err) {
+      throw err;
+    }
+
+    var id = Number.parseInt(req.params.id);
+    var guests = JSON.parse(data);
+
+    if (id < 0 || id >= guests.length || Number.isNaN(id)) {
+      return res.sendStatus(404);
+    }
+
+    res.send(guests[id]);
+  });
+});
+
+app.use(function(req, res) {
+  res.sendStatus(404);
+});
+
+app.listen(port, function() {
+  console.log('Listening on port', port);
 });
 ```
 
 Now send another HTTP request to your server.
 
-```bash
+```shell
 http GET http://localhost:5000/guests
 ```
 
 You should see the following server log.
 
-```
+```text
 ::1 - GET /guests HTTP/1.1 200 35 - 1.345 ms
 ```
 
@@ -544,13 +595,15 @@ We will now add another middleware to parse the body of an HTTP POST request. Re
 ```javascript
 'use strict';
 
+var path = require('path');
+var guestsPath = path.join(__dirname, 'guests.json');
+var fs = require('fs');
+
 var express = require('express');
 var app = express();
-
-var guests = [{ name: 'Teagan' }];
+var port = process.env.PORT || 8000;
 
 app.disable('x-powered-by');
-app.set('port', process.env.PORT || 5000);
 
 var morgan = require('morgan');
 app.use(morgan('short'));
@@ -572,28 +625,57 @@ app.use(function(req, res, next) {
 });
 
 app.get('/guests', function(req, res) {
-  res.send(guests);
+  fs.readFile(guestsPath, 'utf8', function(err, guestsJSON) {
+    if (err) {
+      throw err;
+    }
+
+    var guests = JSON.parse(guestsJSON);
+
+    res.send(guests);
+  });
 });
 
-app.post('/guests', function(req, res){
+app.post('/guests', function(req, res) {
   guests.push(req.body);
   res.send(req.body);
 });
 
-app.listen(app.get('port'), function() {
-  console.log('Listening on', app.get('port'));
+app.get('/guests/:id', function(req, res) {
+  fs.readFile(guestsPath, 'utf8', (err, data) => {
+    if (err) {
+      throw err;
+    }
+
+    var id = Number.parseInt(req.params.id);
+    var guests = JSON.parse(data);
+
+    if (id < 0 || id >= guests.length || Number.isNaN(id)) {
+      return res.sendStatus(404);
+    }
+
+    res.send(guests[id]);
+  });
+});
+
+app.use(function(req, res) {
+  res.sendStatus(404);
+});
+
+app.listen(port, function() {
+  console.log('Listening on port', port);
 });
 ```
 
 Now you will send another HTTP GET request to your server.
 
-```bash
+```shell
 http GET http://localhost:5000/guests
 ```
 
 You should see a similar HTTP response.
 
-```
+```text
 HTTP/1.1 200 OK
 Connection: keep-alive
 Content-Length: 19
@@ -610,13 +692,13 @@ ETag: W/"13-eZMtvf4MUiEAJpKhww5ZlQ"
 
 Next, send an HTTP POST request, with a JSON body, to your server.
 
-```bash
+```shell
 http POST http://localhost:5000/guests name=Kate
 ```
 
 You should see a similar HTTP response.
 
-```
+```text
 HTTP/1.1 200 OK
 Connection: keep-alive
 Content-Length: 15
@@ -631,13 +713,13 @@ ETag: W/"f-Dm6LF8ZOGzVq0Yw/A4JWYw"
 
 Finally, check to see if your guest list has been modified.
 
-```bash
+```shell
 http GET http://localhost:5000/guests
 ```
 
 You should see a similar HTTP response.
 
-```
+```text
 HTTP/1.1 200 OK
 Connection: keep-alive
 Content-Length: 35
@@ -659,22 +741,24 @@ This is the hand-built body parsing middleware. Now we'll convert this to use th
 
 **NOTE:** Before you install `body-parser`, make sure your shell's working directory is the `party` directory.
 
-```bash
-npm install body-parser
+```shell
+npm install --save body-parser
 ```
 
-Refactor your `server.js` file with the following code.
+Refactor your `serverExpress.js` file with the following code.
 
 ```javascript
 'use strict';
 
+var path = require('path');
+var guestsPath = path.join(__dirname, 'guests.json');
+var fs = require('fs');
+
 var express = require('express');
 var app = express();
-
-var guests = [{ name: 'Teagan' }];
+var port = process.env.PORT || 8000;
 
 app.disable('x-powered-by');
-app.set('port', process.env.PORT || 5000);
 
 var morgan = require('morgan');
 app.use(morgan('short'));
@@ -683,30 +767,57 @@ var bodyParser = require('body-parser');
 app.use(bodyParser.json());
 
 app.get('/guests', function(req, res) {
-  res.send(guests);
+  fs.readFile(guestsPath, 'utf8', function(err, guestsJSON) {
+    if (err) {
+      throw err;
+    }
+
+    var guests = JSON.parse(guestsJSON);
+
+    res.send(guests);
+  });
 });
 
-app.post('/guests', function(req, res){
+app.post('/guests', function(req, res) {
   guests.push(req.body);
   res.send(req.body);
 });
 
-app.listen(app.get('port'), function() {
-  console.log('Listening on', app.get('port'));
+app.get('/guests/:id', function(req, res) {
+  fs.readFile(guestsPath, 'utf8', (err, data) => {
+    if (err) {
+      throw err;
+    }
+
+    var id = Number.parseInt(req.params.id);
+    var guests = JSON.parse(data);
+
+    if (id < 0 || id >= guests.length || Number.isNaN(id)) {
+      return res.sendStatus(404);
+    }
+
+    res.send(guests[id]);
+  });
+});
+
+app.use(function(req, res) {
+  res.sendStatus(404);
+});
+
+app.listen(port, function() {
+  console.log('Listening on port', port);
 });
 ```
 
-
-
 Now you will send another HTTP GET request to your server.
 
-```bash
+```shell
 http GET http://localhost:5000/guests
 ```
 
 You should see a similar HTTP response.
 
-```
+```text
 HTTP/1.1 200 OK
 Connection: keep-alive
 Content-Length: 19
@@ -723,13 +834,13 @@ ETag: W/"13-eZMtvf4MUiEAJpKhww5ZlQ"
 
 Next, send an HTTP POST request, with a JSON body, to your server.
 
-```bash
+```shell
 http POST http://localhost:5000/guests name=Kate
 ```
 
 You should see a similar HTTP response.
 
-```
+```text
 HTTP/1.1 200 OK
 Connection: keep-alive
 Content-Length: 15
@@ -744,13 +855,13 @@ ETag: W/"f-Dm6LF8ZOGzVq0Yw/A4JWYw"
 
 Finally, check to see if your guest list has been modified.
 
-```bash
+```shell
 http GET http://localhost:5000/guests
 ```
 
 You should see a similar HTTP response.
 
-```
+```text
 HTTP/1.1 200 OK
 Connection: keep-alive
 Content-Length: 35
