@@ -102,6 +102,12 @@ Next, create a `serverExpress.js` file.
 touch serverExpress.js
 ```
 
+Then, use NPM to install the `express` module locally and save it as dependency in the `package.json` file.
+
+```shell
+npm install --save express
+```
+
 Then, open the `party` project in your text editor.
 
 ```shell
@@ -129,14 +135,7 @@ app.listen(port, function() {
 });
 ```
 
-When it comes to HTTP servers, a **route** is a combination of a method and path. As you can see, an Express HTTP server is created with at least one callback. For each HTTP request that arrives, the callback is invoked with two arguments—`req` and `res`. The callback's first `req` argument will contain the incoming request as an `http.IncomingMessage` object. The callback's second `res` argument will contain an empty outgoing HTTP response as an `http.ServerResponse` object. The goal of the callback is to correctly fill in the `res` object based on the information in `req` object.
-
-See the Node.js API documentation to learn what properties and methods are available for each object type.
-
-- [Express Request](http://expressjs.com/en/4x/api.html#req)
-- [Express Request](http://expressjs.com/en/4x/api.html#res)
-
-Now, save the `serverExpress.js` file and run it with the `nodemon` command.
+Save the `serverExpress.js` file and run it with the `nodemon` command.
 
 ```shell
 nodemon serverExpress.js
@@ -144,7 +143,7 @@ nodemon serverExpress.js
 
 And you should see something like this.
 
-![]()
+![](https://i.imgur.com/m7dVeU8.png)
 
 In a separate Terminal tab, send the following HTTP request to the server.
 
@@ -773,4 +772,6 @@ This is the `body-parser` middleware in action!
 ## Resources
 
 [Envato - HTTP: The Protocol Every Web Developer Must Know - Part 1](http://code.tutsplus.com/tutorials/http-the-protocol-every-web-developer-must-know-part-1--net-31177)
-[Express - Using Middleware](http://expressjs.com/en/guide/using-middleware.html)
+- [Express - Request](http://expressjs.com/en/4x/api.html#req)
+- [Express - Response](http://expressjs.com/en/4x/api.html#res)
+- [Express - Using Middleware](http://expressjs.com/en/guide/using-middleware.html)
