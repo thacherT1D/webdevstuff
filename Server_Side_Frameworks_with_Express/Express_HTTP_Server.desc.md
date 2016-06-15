@@ -512,9 +512,7 @@ http GET http://localhost:8000/guests
 
 Look back into the tab running the Express server, you should see the following.
 
-```text
-GET /guests 200 2 ms
-```
+![](https://i.imgur.com/xHGcjJa.png)
 
 This is the hand-made logging middleware you just built! Now let's replace it with `morgan`, a more powerful third-party middleware.
 
@@ -588,9 +586,7 @@ http GET http://localhost:8000/guests
 
 You should see the following server log.
 
-```text
-::1 - GET /guests HTTP/1.1 200 35 - 1.345 ms
-```
+![](https://i.imgur.com/m8cmiGI.png)
 
 This is the `morgan` middleware in action!
 
@@ -641,8 +637,30 @@ app.get('/guests', function(req, res) {
 });
 
 app.post('/guests', function(req, res) {
-  guests.push(req.body);
-  res.send(req.body);
+  fs.readFile(guestsPath, 'utf8', (readErr, data) => {
+    if (readErr) {
+      return next(readErr);
+    }
+
+    var guests = JSON.parse(data);
+    var guest = req.body.name;
+
+    if (!guest) {
+      return res.sendStatus(400);
+    }
+
+    guests.push(guest);
+
+    var guestsJSON = JSON.stringify(guests);
+
+    fs.writeFile(guestsPath, guestsJSON, (writeErr) => {
+      if (writeErr) {
+        return next(writeErr);
+      }
+
+      res.send(guest);
+    });
+  });
 });
 
 app.get('/guests/:id', function(req, res) {
@@ -679,20 +697,7 @@ http GET http://localhost:8000/guests
 
 You should see a similar HTTP response.
 
-```text
-HTTP/1.1 200 OK
-Connection: keep-alive
-Content-Length: 19
-Content-Type: application/json; charset=utf-8
-Date: Wed, 23 Mar 2016 18:40:10 GMT
-ETag: W/"13-eZMtvf4MUiEAJpKhww5ZlQ"
-
-[
-    {
-        "name": "Teagan"
-    }
-]
-```
+![](https://i.imgur.com/TxC5tYS.png)
 
 Next, send an HTTP POST request, with a JSON body, to your server.
 
@@ -702,18 +707,7 @@ http POST http://localhost:8000/guests name=Kate
 
 You should see a similar HTTP response.
 
-```text
-HTTP/1.1 200 OK
-Connection: keep-alive
-Content-Length: 15
-Content-Type: application/json; charset=utf-8
-Date: Wed, 23 Mar 2016 18:48:07 GMT
-ETag: W/"f-Dm6LF8ZOGzVq0Yw/A4JWYw"
-
-{
-    "name": "Kate"
-}
-```
+![](https://i.imgur.com/4G1cu7K.png)
 
 Finally, check to see if your guest list has been modified.
 
@@ -723,23 +717,7 @@ http GET http://localhost:8000/guests
 
 You should see a similar HTTP response.
 
-```text
-HTTP/1.1 200 OK
-Connection: keep-alive
-Content-Length: 35
-Content-Type: application/json; charset=utf-8
-Date: Wed, 23 Mar 2016 18:48:40 GMT
-ETag: W/"23-BlGLuHg6XvB4VmZU6+bV3A"
-
-[
-    {
-        "name": "Teagan"
-    },
-    {
-        "name": "Kate"
-    }
-]
-```
+![](https://i.imgur.com/ySdlgI9.png)
 
 This is the hand-built body parsing middleware. Now we'll convert this to use the `body-parser` third-party middleware.
 
