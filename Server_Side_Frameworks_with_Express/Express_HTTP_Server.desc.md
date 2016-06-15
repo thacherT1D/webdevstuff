@@ -189,11 +189,6 @@ app.listen(port, function() {
 });
 ```
 
-You can also set the status code manually if you choose. Using the code
-from above, add a new route after your `'/vegetables'` route.  We will
-use a wild card operator. This route must be placed _after_ all your
-other routes.
-
 Now, save the `serverExpress.js` file, terminate the existing server with `Ctrl + C`, and run it again with the `node` command.
 
 ```shell
