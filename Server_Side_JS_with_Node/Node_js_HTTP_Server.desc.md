@@ -337,7 +337,10 @@ var server = http.createServer(function(req, res) {
   if (req.method === 'GET' && req.url === '/guests') {
     fs.readFile(guestsPath, 'utf8', function(err, guestsJSON) {
       if (err) {
-        throw err;
+        console.error(err.stack);
+        res.statusCode = 500;
+        res.setHeader('Content-Type', 'text/plain');
+        return res.end('Internal Server Error');
       }
 
       res.setHeader('Content-Type', 'application/json');
@@ -397,7 +400,10 @@ var server = http.createServer(function(req, res) {
   if (req.method === 'GET' && req.url === '/guests') {
     fs.readFile(guestsPath, 'utf8', function(err, guestsJSON) {
       if (err) {
-        throw err;
+        console.error(err.stack);
+        res.statusCode = 500;
+        res.setHeader('Content-Type', 'text/plain');
+        return res.end('Internal Server Error');
       }
 
       res.setHeader('Content-Type', 'application/json');
@@ -407,7 +413,10 @@ var server = http.createServer(function(req, res) {
   else if (req.method === 'GET' && req.url === '/guests/0') {
     fs.readFile(guestsPath, 'utf8', function(err, guestsJSON) {
       if (err) {
-        throw err;
+        console.error(err.stack);
+        res.statusCode = 500;
+        res.setHeader('Content-Type', 'text/plain');
+        return res.end('Internal Server Error');
       }
 
       var guests = JSON.parse(guestsJSON);
@@ -420,7 +429,10 @@ var server = http.createServer(function(req, res) {
   else if (req.method === 'GET' && req.url === '/guests/1') {
     fs.readFile(guestsPath, 'utf8', function(err, guestsJSON) {
       if (err) {
-        throw err;
+        console.error(err.stack);
+        res.statusCode = 500;
+        res.setHeader('Content-Type', 'text/plain');
+        return res.end('Internal Server Error');
       }
 
       var guests = JSON.parse(guestsJSON);

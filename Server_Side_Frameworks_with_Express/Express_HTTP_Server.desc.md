@@ -241,9 +241,7 @@ app.get('/guests', function(req, res) {
   fs.readFile(guestsPath, 'utf8', function(err, guestsJSON) {
     if (err) {
       console.error(err.stack);
-      res.status(500);
-      res.set('Content-Type', 'text/plain');
-      return res.send('Internal Server Error');
+      return res.sendStatus(500);
     }
 
     var guests = JSON.parse(guestsJSON);
@@ -305,9 +303,7 @@ app.get('/guests', function(req, res) {
   fs.readFile(guestsPath, 'utf8', function(err, guestsJSON) {
     if (err) {
       console.error(err.stack);
-      res.status(500);
-      res.set('Content-Type', 'text/plain');
-      return res.send('Internal Server Error');
+      return res.sendStatus(500);
     }
 
     var guests = JSON.parse(guestsJSON);
@@ -320,9 +316,7 @@ app.get('/guests/:id', function(req, res) {
   fs.readFile(guestsPath, 'utf8', function(err, data8000
     if (err) {
       console.error(err.stack);
-      res.status(500);
-      res.set('Content-Type', 'text/plain');
-      return res.send('Internal Server Error');
+      return res.sendStatus(500);
     }
 
     var id = Number.parseInt(req.params.id);
@@ -479,9 +473,7 @@ app.get('/guests', function(req, res) {
   fs.readFile(guestsPath, 'utf8', function(err, guestsJSON) {
     if (err) {
       console.error(err.stack);
-      res.status(500);
-      res.set('Content-Type', 'text/plain');
-      return res.send('Internal Server Error');
+      return res.sendStatus(500);
     }
 
     var guests = JSON.parse(guestsJSON);
@@ -494,9 +486,7 @@ app.get('/guests/:id', function(req, res) {
   fs.readFile(guestsPath, 'utf8', function(err, data) {
     if (err) {
       console.error(err.stack);
-      res.status(500);
-      res.set('Content-Type', 'text/plain');
-      return res.send('Internal Server Error');
+      return res.sendStatus(500);
     }
 
     var id = Number.parseInt(req.params.id);
@@ -559,9 +549,7 @@ app.get('/guests', function(req, res) {
   fs.readFile(guestsPath, 'utf8', function(err, guestsJSON) {
     if (err) {
       console.error(err.stack);
-      res.status(500);
-      res.set('Content-Type', 'text/plain');
-      return res.send('Internal Server Error');
+      return res.sendStatus(500);
     }
 
     var guests = JSON.parse(guestsJSON);
@@ -574,9 +562,7 @@ app.get('/guests/:id', function(req, res) {
   fs.readFile(guestsPath, 'utf8', function(err, data) {
     if (err) {
       console.error(err.stack);
-      res.status(500);
-      res.set('Content-Type', 'text/plain');
-      return res.send('Internal Server Error');
+      return res.sendStatus(500);
     }
 
     var id = Number.parseInt(req.params.id);
@@ -649,9 +635,7 @@ app.get('/guests', function(req, res) {
   fs.readFile(guestsPath, 'utf8', function(err, guestsJSON) {
     if (err) {
       console.error(err.stack);
-      res.status(500);
-      res.set('Content-Type', 'text/plain');
-      return res.send('Internal Server Error');
+      return res.sendStatus(500);
     }
 
     var guests = JSON.parse(guestsJSON);
@@ -691,9 +675,7 @@ app.get('/guests/:id', function(req, res) {
   fs.readFile(guestsPath, 'utf8', function(err, data) {
     if (err) {
       console.error(err.stack);
-      res.status(500);
-      res.set('Content-Type', 'text/plain');
-      return res.send('Internal Server Error');
+      return res.sendStatus(500);
     }
 
     var id = Number.parseInt(req.params.id);
@@ -779,9 +761,7 @@ app.get('/guests', function(req, res) {
   fs.readFile(guestsPath, 'utf8', function(err, guestsJSON) {
     if (err) {
       console.error(err.stack);
-      res.status(500);
-      res.set('Content-Type', 'text/plain');
-      return res.send('Internal Server Error');
+      return res.sendStatus(500);
     }
 
     var guests = JSON.parse(guestsJSON);
@@ -821,9 +801,7 @@ app.get('/guests/:id', function(req, res) {
   fs.readFile(guestsPath, 'utf8', function(err, data) {
     if (err) {
       console.error(err.stack);
-      res.status(500);
-      res.set('Content-Type', 'text/plain');
-      return res.send('Internal Server Error');
+      return res.sendStatus(500);
     }
 
     var id = Number.parseInt(req.params.id);
