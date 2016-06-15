@@ -277,7 +277,7 @@ git add .
 git commit -m 'Send all guest records from the database'
 ```
 
-Right now, your HTTP server can only send back all the records from the database. It would be much more useful if your HTTP server could send back individual records as well.
+Right now, your Express server can only send back all the records from the database. It would be much more useful if your Express server could send back individual records as well.
 
 Let's fix that by refactoring the `serverExpress.js` file with the following code.
 
@@ -294,7 +294,7 @@ var port = process.env.PORT || 8000;
 
 app.disable('x-powered-by');
 
-app.get('/', function(req, res) {
+app.get('/guests', function(req, res) {
   fs.readFile(guestsPath, 'utf8', function(err, guestsJSON) {
     if (err) {
       throw err;
