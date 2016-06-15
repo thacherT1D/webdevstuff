@@ -504,6 +504,15 @@ To get started, create a new `heroku` feature branch.
 git checkout -b heroku
 ```
 
+Then, configure NPM to use your name and email address when creating a `package.json` file.
+
+**NOTE:** Replace `YOUR NAME` and `YOUR EMAIL ADDRESS` with your real name and public email address.
+
+```shell
+npm config set init-author-name 'YOUR NAME'
+npm config set init-author-email 'YOUR EMAIL ADDRESS'
+```
+
 Next, create a `package.json` file for your project using NPM. This lets Heroku know that this project uses Node.js.
 
 ```shell

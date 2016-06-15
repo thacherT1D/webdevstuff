@@ -83,7 +83,7 @@ And you should see something like this.
 
 ### Exercise
 
-Turn to a partner and share your thoughts about the similarities and differences you noticed about using the `express` module versus the `http` module. Afterwards, talk about how would you describe Express in your own words.
+Turn to a partner and share your thoughts about the similarities and differences you noticed about using the `express` module versus the `http` module. Afterwards, come up with a definitely of Express in your own words.
 
 ## Why is Express useful?
 
