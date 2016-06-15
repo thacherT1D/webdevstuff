@@ -1,4 +1,4 @@
-## Objectives
+## Objectives 
 
 - Describe what REST is.
 - Explain why REST is important.
