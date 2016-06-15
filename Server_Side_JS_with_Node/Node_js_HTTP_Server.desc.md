@@ -37,7 +37,7 @@ var server = http.createServer(function(req, res) {
 });
 
 server.listen(port, function() {
-  console.log(`Listening on port ${port}`);
+  console.log('Listening on port', port);
 });
 ```
 
@@ -190,7 +190,7 @@ var server = http.createServer(function(req, res) {
 });
 
 server.listen(port, function() {
-  console.log(`Listening on port ${port}`);
+  console.log('Listening on port', port);
 });
 ```
 
@@ -254,7 +254,7 @@ var server = http.createServer(function(req, res) {
 });
 
 server.listen(port, function() {
-  console.log(`Listening on port ${port}`);
+  console.log('Listening on port', port);
 });
 ```
 

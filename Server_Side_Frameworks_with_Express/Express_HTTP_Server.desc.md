@@ -1,140 +1,225 @@
 ## Objectives
 
-- Explain what Express is.
-- Start a simple express app and review `require`  
-- Add multiple routes to an express.js app
-- Set status code on responses
-- Read URL parameters in express
-- Read query string parameters in express
-- Send dymanic files using ejs as a templating engine
+- Explain what an Express HTTP server is.
+- Explain why an Express HTTP servers is useful.
+- Create an HTTP server with the `express` module.
+- Explain what Express middleware is.
+- Explain why Express middleware is useful.
+- Use Express middleware to log the request/response cycle.
+- Use Express middleware to parse a request body.
 
-### What's Express?
+## What's an Express HTTP server?
 
 **Express** is a minimal and flexible Node.js web application framework that provides a robust set of features for web and mobile applications.
 
 We have used Node.js a bit to run JavaScript outside the browser and we have even seen how to use Node to start a server. It's totally feasible to build an application using Node alone but some tasks, like starting a server, serving files, and many others are not trivial on their own. To make many of these tasks simpler, we use frameworks! The most commonly used framework with node.js is express.js. It is known as a 'minimalist' framework because it does not give us a TON of functionality out of the box (like rails for example).
 
-### Getting Started
-
-Let's start with a simple **Express** application.
-
-* Make a directory and `app.js`  
-
+```shell
+mkdir helloExpress
+cd helloExpress
 ```
-mkdir learn_express
-cd learn_express
-touch app.js
+
+```shell
 npm init
-git init
-echo "node_modules" > .gitignore
+```
+
+```shell
+npm install -s express
+```
+
+Create a `server.js` file on the Desktop.
+
+```shell
+touch server.js
+```
+
+Open the `server.js` file in your text editor.
+
+```shell
+atom server.js
+```
+
+And type in the following code.
+
+```javascript
+'use strict';
+
+var express = require('express');
+var app = express();
+var port = process.env.PORT || 8000;
+
+app.use(function(req, res) {
+  res.send('Hello World');
+});
+
+app.listen(port, function() {
+  console.log('Listening on port', port);
+});
+```
+
+Now, save the `server.js` file and run it with the `node` command.
+
+```shell
+nodemon server.js
+```
+
+In a new Terminal tab, send an HTTP request to the server.
+
+```shell
+http GET localhost:8000/
+```
+
+## Why is an HTTP server useful?
+
+## How do you create an HTTP server with the `express` module?
+
+Now that you've learned about Express HTTP servers, let's play around with the `express` modules. Remember that party you're throwing? Well, imagine that your guests want to see the party's guest list over HTTP. You've got some smart friends!
+
+To do that, you'll need to create a Node.js HTTP server to handle HTTP requests and send back HTTP responses. The HTTP requests will be commands that read the records in a database, which will be the same JSON-formatted `guests.json` file from before. Once the HTTP request is correctly handled, the HTTP server will send an appropriate HTTP response back.
+
+To get started, return to the `party` project from yesterday and create a new `http` feature branch.
+
+```shell
+cd party
+git checkout -b express
+```
+
+```shell
+mv server.js serverHTTP.js
+```
+
+Next, create a `serverExpress.js` file.
+
+```shell
+touch serverExpress.js
+```
+
+Open the `party` project in your text editor.
+
+```shell
+atom .
+```
+
+And type in the following code to the `serverExpress.js` file.
+
+```javascript
+'use strict';
+
+var express = require('express');
+var app = express();
+var port = process.env.PORT || 8000;
+
+app.use(function(req, res) {
+  var guests = ['Mary', 'Don'];
+  res.send(guests);
+});
+
+app.listen(port, function() {
+  console.log('Listening on port', port);
+});
+```
+
+Building an application will require us to have a firm grasp of something we call routes. When it comes to HTTP servers, a **route** is a combination of a method and path.
+
+As you can see, a Node.js HTTP server is created with one callback. For each HTTP request that arrives, the callback is invoked with two arguments—`req` and `res`. The callback's first `req` argument will contain the incoming HTTP request as an `http.IncomingMessage` object. The callback's second `res` argument will contain an empty outgoing HTTP response as an `http.ServerResponse` object. The goal of the callback is to correctly fill in the `res` object based on the information in `req` object.
+
+See the Node.js API documentation to learn what properties and methods are available for each object type.
+
+- [`http.IncomingMessage` object](https://nodejs.org/dist/latest-v6.x/docs/api/http.html#http_class_http_incomingmessage)
+- [`http.ServerResponse` object](https://nodejs.org/dist/latest-v6.x/docs/api/http.html#http_class_http_serverresponse)
+
+Now, save the `serverExpress.js` file and run it with the `nodemon` command.
+
+```shell
+nodemon serverExpress.js
+```
+
+And you should see something like this.
+
+![]()
+
+In a separate Terminal tab, send the following HTTP request to the server.
+
+```shell
+http GET localhost:8000/
+```
+
+And you should see something like this.
+
+![](https://i.imgur.com/CbkIni2.png)
+
+Next, add and commit the latest changes to the `party` project's `http` branch.
+
+```shell
 git add .
-git commit -m "initial commit"
+git commit -m 'Add an Express HTTP server'
 ```
 
-Now you can install the packages you need running
+Right now, your HTTP server handles every HTTP request the same way, regardless of the request's method or path. It would be much more useful if your HTTP server could send back different HTTP responses based on the information inside the HTTP requests.
 
-```
-npm install --save express
-```
-
-Now we need write some code for our simple application. Here's some sample starter code:
+Let's fix that by refactoring the `serverExpress.js` file with the following code.
 
 ```javascript
-// requirements
+'use strict';
+
 var express = require('express');
 var app = express();
+var port = process.env.PORT || 8000;
 
-// a "GET" request to "/" will run the function below
-app.get("/", function(req, res) {
-  // send back the response: 'Hello World'
-  res.send("Hello World");
+app.get('/', function(req, res) {
+  var guests = ['Mary', 'Don'];
+  res.send(guests);
 });
 
-// start the server
-app.listen(3000, function() {
-  console.log("Starting a server on localhost:3000");
+app.use(function(req, res) {
+  res.sendStatus(404);
 });
-```
 
-Next, you can start the server using the following command:
-
-`node app.js`
-
-### Let's add a second route!
-
-In your `app.js`, add the following second route below your first route:
-
-```javascript
-app.get("/new", function(req, res) {
-  res.send("Congratulations on creating a new route!");
+app.listen(port, function() {
+  console.log('Listening on port', port);
 });
 ```
-
-Save your file and head over to `localhost:3000/new`. What do you see?
-
-Well, what you DON'T see is any sort of congratulatory message. The problem is that once the server starts, it doesn't know when changes have been made to `app.js`. In order for the server to see those changes, you need to go into the terminal, kill your server, and restart it again.
-
-As you can imagine, when you're developing even a relatively small application, remembering to restart your server after every change to your server code can be a total pain. Fortunately, there's a better way...
-
-### Let's keep that server running with nodemon!
-
-Anywhere in the terminal, run `npm install -g nodemon` and then type in `nodemon` instead of `node app.js` to start your server and keep it alive!
-
-## Routing
-
-Building an application will require us to have a firm grasp of something we call **routing**.  Each **route** is a combination of a **Request Type** and **Path**.
-
-Let's build these into our application:
-
-`app.js`
-
-```javascript
-var express = require('express');
-var app = express();
-
-var vegetables = [
-  "Carrots",
-  "Cucumber",
-  "Peas"
-];
-
-app.get("/", function (req, res) {
-  res.send("Hello World");
-});
-
-app.get("/vegetables", function (req, res) {
-  //send all the veggies  
-  res.send(vegetables.join(", "));
-});
-
-app.listen(3000, function () {
-  console.log("Go to localhost:3000/");
-});
-```
-
-## Status Codes
 
 You can also set the status code manually if you choose. Using the code
 from above, add a new route after your `'/vegetables'` route.  We will
 use a wild card operator. This route must be placed _after_ all your
 other routes.
 
-```js
-//truncated code from above...
+Now, save the `serverExpress.js` file, terminate the existing server with `Ctrl + C`, and run it again with the `node` command.
 
-app.get("/vegetables", function (req, res) {
-  //send all the veggies
-  res.send(vegetables.join(", "));
-});
+```shell
+nodemon serverExpress.js
+```
 
-// Our new route utilizing a wild card
-app.get('/*', function (req, res) {
-  res.status(404).send('Nope! Nothing here.');
-});
+And you should see something like this.
 
-app.listen(3000, function () {
-  console.log("Go to localhost:3000/");
-});
+![](http://i.imgur.com/xoaBsw1.png)
+
+In a separate Terminal tab, send the following HTTP request to the server.
+
+```shell
+http GET localhost:8000/
+```
+
+And you should see something like this.
+
+![](https://i.imgur.com/DZShb9I.png)
+
+In a separate Terminal tab, send the following HTTP request to the server.
+
+```shell
+http GET localhost:8000/guests
+```
+
+And you should see something like this.
+
+![](https://i.imgur.com/MM0aAYD.png)
+
+Next, add and commit the latest changes to the `party` project's `http` branch.
+
+```shell
+git add .
+git commit -m 'Refactor HTTP server to send different responses'
 ```
 
 ## URL Parameters
@@ -151,73 +236,7 @@ app.get("/hello/:name", function (req, res) {
 
 Here we are seeing the first introduction to parameters that the application can identify. In the following route `:name` is considered a route parameter. We can access it using `req.params.name`.
 
-## Query Parameters
-
-Generally, you don't want to cram everything into a route. Just imagine when there are multiple parameters in route. Maybe we don't care about getting the order of the parameters correct. To solve this problem, we can use **query parameters** with each request.
-
-Let's see query params in action. Go to [https://google.com/search?q=puppies](https://google.com/search?q=puppies)
-
-* `?` denotes the beginning of the query parameters
-* `=` indicates an assignment; anything to the left is the key, while the right represents the value
-* `&` allows for the input of multiple parameters, separating each key / value pair
-
-Let's add our first route to practice query params.
-
-```javascript
-app.get("/hi", function (req, res) {
-  var name = req.query.name;
-  res.send("Hello, " + name);
-});
-```
-
-Reset your server and go to [localhost:3000/hi?name=elie](localhost:3000/hi?name=elie). Note that we define parameters in the url after a `?`.
-
-## Sending dynamic files
-
-Sometimes there are static HTML files you want to send as a response. There are ways to send files using Express including `res.sendFile`, but if we want to send dynamic content, we will need to use something different.
-
-Right now we have been using res.send to display information to our user, but if we want to render a dynamic page we will use `res.render`. Not only will we use this method, we will render templates using an engine called `ejs`. This requires us to run `npm install --save ejs` as well as including the line `app.set("view engine", "ejs")` inside of our `app.js`
-
-```javascript
-var express = require('express');
-var app = express();
-
-app.set('view engine', 'ejs');
-
-app.get('/', function(req, res){
-  // use res.render
-  res.render('index', {name: "Elie"});
-});
-
-```
-
-Now create a views folder, and inside of it create an index.ejs file and include:
-
-```html
-<!DOCTYPE HTML>
-
-<html>
-  <head>
-  </head>
-  <body>
-    Hello, <%= name %>!
-  </body>
-</html>
-```
-
-# In-class Assignment
-
-[Express Calculator](https://github.com/gSchool/express-introduction/tree/master/01-calculator)
-
-
-## Objectives
-
-- Describe what Express middleware is.
-- Explain to another student why middleware is important.
-- Use Express middleware to log the request/response cycle.
-- Use Express middleware to parse a request body.
-
-## What is Express middleware?
+## What's Express middleware?
 
 An Express application is essentially a series of middleware function calls. Express middleware is a callback function that has access to the request object (`req`), the response object (`res`), and sometimes the next middleware callback (`next`).
 
@@ -229,7 +248,7 @@ Middleware functions **can** execute any JavaScript operation inside the callbac
 
 However, middleware **must** either end the request/response cycle with `res.send()` or call the next middleware callback with `next()`.
 
-## Why is Express middleware important?
+## Why is Express middleware useful?
 
 Express middleware allows an application's shared code to be organized into in a series of middleware callbacks. These callbacks can be reused in a flexible way.
 
