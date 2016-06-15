@@ -41,7 +41,7 @@ Warmup: [Log File Parsing](https://github.com/gSchool/js-node-log-file-parsing)
 
 Lessons:
 - [Server Side Templating](https://github.com/gSchool/server-side-templating)
-- [Data Modeling](/cohorts/68/student_dashboard)
+- [Data Modeling](https://github.com/rogerwschmidt/data-modeling)
 
 ## resources
 - [draw.io](https://www.draw.io/)
@@ -53,7 +53,7 @@ Lessons:
 Warmup: [Hack Calculator](https://github.com/gSchool/challenges/tree/master/Node/hack-calculator)
 
 Lessons:
-- [SQL Part One](/redirects/articles/4326)/curriculums/56/articles/4326
+- [SQL Part One](/redirects/articles/4326)
 
 ---
 
@@ -62,14 +62,8 @@ Lessons:
 Warmup: [Link to Warmup](http://github.com/gSchool)
 
 Lessons:
-- [Lesson](/cohorts/68/student_dashboard)
-- [Lesson](/cohorts/68/student_dashboard)
-
-Homework: [Homework](/cohorts/68/student_dashboard)
-
-Announcements:
-- Announcement 1
-- Announcement 2
+- [Express Middleware](/cohorts/68/student_dashboard)
+- [Integration Testing with Supertest](/cohorts/68/student_dashboard)
 
 ---
 
