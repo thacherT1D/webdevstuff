@@ -887,7 +887,7 @@ This is the `body-parser` middleware in action!
 
 ## Resources
 
-[Envato - HTTP: The Protocol Every Web Developer Must Know - Part 1](http://code.tutsplus.com/tutorials/http-the-protocol-every-web-developer-must-know-part-1--net-31177)
+- [Envato - HTTP: The Protocol Every Web Developer Must Know - Part 1](http://code.tutsplus.com/tutorials/http-the-protocol-every-web-developer-must-know-part-1--net-31177)
 - [Express - Request](http://expressjs.com/en/4x/api.html#req)
 - [Express - Response](http://expressjs.com/en/4x/api.html#res)
 - [Express - Using Middleware](http://expressjs.com/en/guide/using-middleware.html)
