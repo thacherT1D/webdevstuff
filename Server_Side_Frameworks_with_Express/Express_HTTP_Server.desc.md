@@ -227,9 +227,9 @@ Let's fix that by refactoring the `serverExpress.js` file with the following cod
 ```javascript
 'use strict';
 
+var fs = require('fs');
 var path = require('path');
 var guestsPath = path.join(__dirname, 'guests.json');
-var fs = require('fs');
 
 var express = require('express');
 var app = express();
@@ -288,9 +288,9 @@ Let's fix that by refactoring the `serverExpress.js` file with the following cod
 ```javascript
 'use strict';
 
+var fs = require('fs');
 var path = require('path');
 var guestsPath = path.join(__dirname, 'guests.json');
-var fs = require('fs');
 
 var express = require('express');
 var app = express();
@@ -449,9 +449,9 @@ Next, type out the following code into the `serverExpress.js` file.
 ```javascript
 'use strict';
 
+var fs = require('fs');
 var path = require('path');
 var guestsPath = path.join(__dirname, 'guests.json');
-var fs = require('fs');
 
 var express = require('express');
 var app = express();
@@ -527,9 +527,9 @@ Now refactor `serverExpresss.js` with the following code.
 ```javascript
 'use strict';
 
+var fs = require('fs');
 var path = require('path');
 var guestsPath = path.join(__dirname, 'guests.json');
-var fs = require('fs');
 
 var express = require('express');
 var app = express();
@@ -595,9 +595,9 @@ We will now add another middleware to parse the body of an HTTP POST request. Re
 ```javascript
 'use strict';
 
+var fs = require('fs');
 var path = require('path');
 var guestsPath = path.join(__dirname, 'guests.json');
-var fs = require('fs');
 
 var express = require('express');
 var app = express();
@@ -732,9 +732,9 @@ Refactor your `serverExpress.js` file with the following code.
 ```javascript
 'use strict';
 
+var fs = require('fs');
 var path = require('path');
 var guestsPath = path.join(__dirname, 'guests.json');
-var fs = require('fs');
 
 var express = require('express');
 var app = express();

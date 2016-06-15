@@ -326,13 +326,12 @@ Let's fix that by refactoring the `server.js` file with the following code.
 ```javascript
 'use strict';
 
+var fs = require('fs');
 var path = require('path');
 var guestsPath = path.join(__dirname, 'guests.json');
 
 var http = require('http');
 var port = process.env.PORT || 8000;
-
-var fs = require('fs');
 
 var server = http.createServer(function(req, res) {
   if (req.method === 'GET' && req.url === '/guests') {
@@ -387,13 +386,12 @@ Let's fix that by refactoring the `server.js` file with the following code.
 ```javascript
 'use strict';
 
+var fs = require('fs');
 var path = require('path');
 var guestsPath = path.join(__dirname, 'guests.json');
 
 var http = require('http');
 var port = process.env.PORT || 8000;
-
-var fs = require('fs');
 
 var server = http.createServer(function(req, res) {
   if (req.method === 'GET' && req.url === '/guests') {
