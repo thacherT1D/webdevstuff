@@ -1,13 +1,14 @@
 # Intro to SQL: Structured Query Language
 
+This is a follow along lesson. Please execute the commands listed as we execute them.
+
 ## Objectives
 
 By the end of this article you will be able to:
 
-
-- Use PSQL and node.js to query a PostgreSQL database.
+- Use `psql` and node.js to query a PostgreSQL database.
 - Use data definition language (DDL) to create a schema based on an ERD.
-- Use data modeling language to perform CRUD operations on a database.
+- Use data modeling language (DML) to perform CRUD operations on a database.
 
 
 ## Part One: RDBMS?
@@ -27,7 +28,7 @@ An RDBMS is comprised of:
   - A database, which can hold multiple tables, indexes and foreign key relationships (among other things)
   - A table, which is comprised of columns and rows
 - A client
-  - psql is a client
+  - `psql` is a client
   - your Node app will be a client as well
 
 Clients make requests to servers using a special language, SQL (structured query language), and servers return responses - typically called result sets - that clients then parse.
@@ -76,11 +77,11 @@ What's the difference between `varchar` and `text`?  `varchar` is for strings (f
 
 Whereas DDL affects the _schema_ of the database, DML _interacts with the data._  That is to say, DML affects tables / column definitions, and DML affects _rows_.
 
-- Select
-- Update
-- Delete
-- Insert
-- Join
+- Insert (Create)
+- Select (Retrieve)
+- Update (Update)
+- Delete (Delete)
+
 
 ## Part Three: Installing PostgreSQL
 
@@ -116,19 +117,19 @@ psql --version
 
 PSQL is command line client used to communicate with the PostgresSQL server. In this section we will be using PSQL to create a database and a schema.
 
-Type PSQL to launch the psql client. It will connect to your Postgres server that is running in the background. By default, it connects to your default database, a database which is named after your user name.
+Type `psql` to launch the `psql` client. It will connect to your Postgres server that is running in the background. By default, it connects to your default database, a database which is named after your user name.
 
 ```bash
 $ psql
 ```
 
-You can tell you are in the PSQL shell because you should no longer have a `$` but instead a `#` at the prompt.
+You can tell you are in the `psql` shell because you should no longer have a `$` but instead a `#` at the prompt.
 
 
 #### Create Database
 
- - [Create Database Docs](https://www.postgresql.org/docs/current/static/sql-createdatabase.html)
- - [CreateDB Docs](https://www.postgresql.org/docs/current/static/app-createdb.html)
+- [Create Database Docs](https://www.postgresql.org/docs/current/static/sql-createdatabase.html)
+- [CreateDB Docs](https://www.postgresql.org/docs/current/static/app-createdb.html)
 
 
 Lets create our first database, and in the Galvanize tradition we will use it to build a TODO App.
@@ -234,9 +235,10 @@ Create a todo list in our `todo_list`:
 INSERT INTO todo_list VALUES(default, 'Things To Learn');
 ```
 
-Now, insert 2 more todo lists.
+**YOU DO**
 
-Figure out how to insert 5 tasks for the todo list with ID 1.
+- insert 2 more rows into `todo_list`
+- insert 5 tasks for the with a `todo_list_id` of 1
 
 #### Querying a table:
 
@@ -255,23 +257,23 @@ SELECT name FROM todo_list;
 Query for the name of the todo list with id of 1:
 
 ```sql
-SELECT name FROM todo_list where id = 1;
+SELECT name FROM todo_list WHERE id = 1;
 ```
 
-Now select all `tasks`.
 
-Now insert a task with a name of `query me` and then write a query statement to select it.
+**YOU DO:**
 
-Now query for all tasks which have a `todo_list_id` of 0.
-
-Now query for all tasks `description` which have a `todo_list_id` of 0.
+- select all `tasks`
+- insert a task with a `name` of `query me`, then write a query statement to select the inserted task.
+- query for all tasks which have a `todo_list_id` of 1
+- query for all tasks `description` column which have a `todo_list_id` of 1
 
 #### Updating values in a table:
 
-Update the name of the todo list with id of 0
+Update the name of the todo list with id of 1
 
 ```sql
-UPDATE todo_list SET name = 'Things to See' WHERE id = 0;
+UPDATE todo_list SET name = 'Things to See' WHERE id = 1;
 ```
 
 Now update the description of all tasks to say update me:
@@ -282,7 +284,7 @@ UPDATE task SET description = 'Update Me';
 
 #### Deleting values from a table:
 
-Now lets delete a todo list we dont use anymore:
+Now lets delete a todo list we don't use anymore:
 
 ```
 DELETE FROM todo_list WHERE id = 2;
@@ -293,7 +295,7 @@ DELETE FROM todo_list WHERE id = 2;
 
 Recreate the following ERD and populate each table with at least 10 pieces of data:
 
-![](/Datastores/erd.png)
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/202/erd.png)
 
 ## Resources
 
