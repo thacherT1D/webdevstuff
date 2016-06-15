@@ -14,9 +14,9 @@ When you're looking to build a small Node.js HTTP server with only a few routes 
 
 **Express** is a framework, built in top of the `http` module, that provides a minimal, flexible, and performant set of features that are fundamental to server-side web application development. A **server-side web application** is the class of programs that run on the backend, routing incoming HTTP requests to route handlers, and sending back HTTP responses that usually contain dynamic content from a database.
 
-When you think of a database-driven, server-side application, think of products like GitHub. When an user logs into GitHub, he or she will see their own personal timeline on the [landing page](https://github.com/). Or when a user visits a repository, he or she will either see the [repository](https://github.com/expressjs/express) if they have permission or a 404 page if they don't. In order to accomplish this, a product like GitHub uses a server-side web application to handle each incoming request and respond with dynamic content for each user. In fact, GitHub uses a fleet of server-side web applications, all running at simultaneously, to handle the volume of traffic that it receives every day.
+When you think of a database-driven, server-side application, think of products like GitHub. When an user logs into GitHub, he or she will see their own personal timeline on the [landing page](https://github.com/). Or when a user visits a repository, he or she will either see the [repository](https://github.com/expressjs/express) if they have permission or a 404 page if they don't. In order to accomplish this, a product like GitHub uses a server-side web application to handle each incoming request and respond with dynamic content depending on who made the request. In fact, GitHub uses a fleet of server-side web applications, all running simultaneously, to handle the volume of traffic that it receives every day.
 
-Before you go off building large server-side web applications like GitHub, let's show you how Express works first. To get started, create a new `hello_express` project.
+In this course, you'll learn how to develop large database-driven, server-side web applications like GitHub. But first, let's learn how Express works. To get started, create a new `hello_express` project.
 
 ```shell
 mkdir hello_express
