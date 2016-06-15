@@ -8,7 +8,7 @@
 - Use Express middleware to log the request/response cycle.
 - Use Express middleware to parse a request body.
 
-## What's an Express HTTP server?
+## What's Express?
 
 For small HTTP servers, it's totally feasible to just use the `http` module in Node.js. But as you've already seen, it takes quite a bit of code to build even a modest server. For large, sophisticated HTTP servers, there's **Express**, a Node.js framework with a minimal, flexible, and performant set of features that are fundamental for web application development.
 
