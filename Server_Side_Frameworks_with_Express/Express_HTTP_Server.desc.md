@@ -10,9 +10,13 @@
 
 ## What's Express?
 
-For small HTTP servers, it's totally feasible to just use the `http` module in Node.js. But as you've already seen, it takes quite a bit of code to build even a modest server. For large, sophisticated HTTP servers, there's **Express**, a Node.js framework with a minimal, flexible, and performant set of features that are fundamental for web application development.
+When you're looking to build a small Node.js HTTP server with only a few routes handlers, nothing is simpler or faster than the `http` module. But as you've seen, it takes quite a bit of code to build even a modest server. When you're looking to build a larger server with many route handlers, then it's a good idea to reach for a tool like Express.
 
-To get started, create a new `hello_express` project.
+**Express** is a framework, built in top of the `http` module, that provides a minimal, flexible, and performant set of features that are fundamental to server-side web application development. A **server-side web application** is another name for the kind a program that runs on the backend, routing incoming HTTP requests to route handlers, and sending back HTTP responses that usually contain dynamic content from a database.
+
+When you think of a database-driven, server-side application, think of products like GitHub. When an user logs into GitHub, he or she will see their own personal timeline on the [landing page](https://github.com/). Or when a user visits a repository, he or she will either see the [repository](https://github.com/expressjs/express) if they have permission or a 404 page if they don't. In order to accomplish this, a product like GitHub uses a server-side web application to handle each incoming request and respond with dynamic content for each user. In fact, GitHub uses a fleet of server-side web applications, all running at simultaneously, to handle the volume of traffic that it receives every day.
+
+Before you go off building large server-side web applications like GitHub, let's show you how Express works first. To get started, create a new `hello_express` project.
 
 ```shell
 mkdir hello_express
@@ -83,7 +87,7 @@ Turn to a partner and share your thoughts about the similarities and differences
 
 ## Why is Express useful?
 
-[TODO]
+There are many server-side web application frameworks for Node.js that you can download with NPM. However, Express is currently the most popular server-side because it's easy to learn and has a large community of plugins.
 
 ## How do you create an HTTP server with the `express` module?
 
