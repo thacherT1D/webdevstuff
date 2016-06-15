@@ -148,7 +148,7 @@ And you should see something like this.
 
 ![](https://i.imgur.com/CbkIni2.png)
 
-Next, add and commit the latest changes to the `party` project's `http` branch.
+Next, add and commit the latest changes to the `party` project's `express` branch.
 
 ```shell
 git add .
@@ -215,11 +215,173 @@ And you should see something like this.
 
 ![](https://i.imgur.com/MM0aAYD.png)
 
-Next, add and commit the latest changes to the `party` project's `http` branch.
+Next, add and commit the latest changes to the `party` project's `express` branch.
 
 ```shell
 git add .
-git commit -m 'Refactor HTTP server to send different responses'
+git commit -m 'Refactor Express server to send different responses'
+```
+
+Right now, your HTTP server sends a hardcoded guest list in the HTTP response. It would be much more useful if your HTTP server could send guest list that's read from the JSON-formatted `guests.json` file.
+
+Let's fix that by refactoring the `serverExpress.js` file with the following code.
+
+```javascript
+'use strict';
+
+var express = require('express');
+var app = express();
+var port = process.env.PORT || 8000;
+
+var path = require('path');
+var guestsPath = path.join(__dirname, 'guests.json');
+var fs = require('fs');
+
+app.get('/', function(req, res) {
+  fs.readFile(guestsPath, 'utf8', function(err, guestsJSON) {
+    if (err) {
+      throw err;
+    }
+
+    var guests = JSON.parse(guestsJSON);
+
+    res.send(guests);
+  });
+});
+
+app.use(function(req, res) {
+  res.sendStatus(404);
+});
+
+app.listen(port, function() {
+  console.log('Listening on port', port);
+});
+```
+
+Now, save the `server.js` file and add the following data to the `guests.json` file.
+
+```shell
+echo '["Mary", "Don"]' > guests.json
+```
+
+Send the following HTTP request to the server.
+
+```shell
+http GET localhost:8000/guests
+```
+
+And you should see something like this.
+
+![](https://i.imgur.com/MM0aAYD.png)
+
+Next, add and commit the latest changes to the `party` project's `express` branch.
+
+```shell
+git add .
+git commit -m 'Send all guest records from the database'
+```
+
+Right now, your HTTP server can only send back all the records from the database. It would be much more useful if your HTTP server could send back individual records as well.
+
+Let's fix that by refactoring the `serverExpress.js` file with the following code.
+
+```javascript
+'use strict';
+
+var express = require('express');
+var app = express();
+var port = process.env.PORT || 8000;
+
+var path = require('path');
+var guestsPath = path.join(__dirname, 'guests.json');
+var fs = require('fs');
+
+app.get('/', function(req, res) {
+  fs.readFile(guestsPath, 'utf8', function(err, guestsJSON) {
+    if (err) {
+      throw err;
+    }
+
+    var guests = JSON.parse(guestsJSON);
+
+    res.send(guests);
+  });
+});
+
+app.get('/guests/:id', function(req, res) {
+  fs.readFile(guestsPath, 'utf8', (err, data) => {
+    if (err) {
+      throw err;
+    }
+
+    var id = Number.parseInt(req.params.id);
+    var guests = JSON.parse(data);
+
+    if (id < 0 || id >= guests.length || Number.isNaN(id)) {
+      return res.sendStatus(404);
+    }
+
+    res.send(guests[id]);
+  });
+});
+
+app.use(function(req, res) {
+  res.sendStatus(404);
+});
+
+app.listen(port, function() {
+  console.log('Listening on port', port);
+});
+```
+
+Now, save the `server.js` file and send the following HTTP request to the server.
+
+```shell
+http GET localhost:8000/guests
+```
+
+And you should see something like this.
+
+![](https://i.imgur.com/MM0aAYD.png)
+
+Now, send the following HTTP request to the server.
+
+```shell
+http GET localhost:8000/guests/0
+```
+
+And you should see something like this.
+
+![](https://i.imgur.com/loK2cj9.png)
+
+Finally, send the following HTTP request to the server.
+
+```shell
+http GET localhost:8000/guests/1
+```
+
+And you should see something like this.
+
+![](https://i.imgur.com/omCorko.png)
+
+Next, add and commit the latest changes to the `party` project's `express` branch.
+
+```shell
+git add .
+git commit -m 'Send individual guest records from the database'
+```
+
+To merge, the commits from the `express` branch to the `master` branch, run the following commands.
+
+```shell
+git checkout master
+git merge http
+```
+
+With the commits merged in, it's safe to delete the `express` branch.
+
+```shell
+git br -d http
 ```
 
 ## URL Parameters
