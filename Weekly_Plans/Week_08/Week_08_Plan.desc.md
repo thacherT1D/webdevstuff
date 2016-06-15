@@ -53,7 +53,7 @@ Lessons:
 Warmup: [Hack Calculator](https://github.com/gSchool/challenges/tree/master/Node/hack-calculator)
 
 Lessons:
-- [SQL Part One](/redirects/articles/4326)/curriculums/56/articles/4326
+- [SQL Part One](/redirects/articles/4326)
 
 ---
 
