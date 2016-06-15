@@ -129,14 +129,12 @@ app.listen(port, function() {
 });
 ```
 
-Building an application will require us to have a firm grasp of something we call routes. When it comes to HTTP servers, a **route** is a combination of a method and path.
-
-As you can see, a Node.js HTTP server is created with one callback. For each HTTP request that arrives, the callback is invoked with two arguments—`req` and `res`. The callback's first `req` argument will contain the incoming HTTP request as an `http.IncomingMessage` object. The callback's second `res` argument will contain an empty outgoing HTTP response as an `http.ServerResponse` object. The goal of the callback is to correctly fill in the `res` object based on the information in `req` object.
+When it comes to HTTP servers, a **route** is a combination of a method and path. As you can see, an Express HTTP server is created with at least one callback. For each HTTP request that arrives, the callback is invoked with two arguments—`req` and `res`. The callback's first `req` argument will contain the incoming request as an `http.IncomingMessage` object. The callback's second `res` argument will contain an empty outgoing HTTP response as an `http.ServerResponse` object. The goal of the callback is to correctly fill in the `res` object based on the information in `req` object.
 
 See the Node.js API documentation to learn what properties and methods are available for each object type.
 
-- [`http.IncomingMessage` object](https://nodejs.org/dist/latest-v6.x/docs/api/http.html#http_class_http_incomingmessage)
-- [`http.ServerResponse` object](https://nodejs.org/dist/latest-v6.x/docs/api/http.html#http_class_http_serverresponse)
+- [Express Request](http://expressjs.com/en/4x/api.html#req)
+- [Express Request](http://expressjs.com/en/4x/api.html#res)
 
 Now, save the `serverExpress.js` file and run it with the `nodemon` command.
 
