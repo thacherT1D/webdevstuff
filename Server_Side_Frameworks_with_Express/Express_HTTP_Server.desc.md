@@ -313,14 +313,14 @@ app.get('/guests', function(req, res) {
 });
 
 app.get('/guests/:id', function(req, res) {
-  fs.readFile(guestsPath, 'utf8', function(err, data8000
+  fs.readFile(guestsPath, 'utf8', function(err, guestsJSON)
     if (err) {
       console.error(err.stack);
       return res.sendStatus(500);
     }
 
     var id = Number.parseInt(req.params.id);
-    var guests = JSON.parse(data);
+    var guests = JSON.parse(guestsJSON);
 
     if (id < 0 || id >= guests.length || Number.isNaN(id)) {
       return res.sendStatus(404);
@@ -483,14 +483,14 @@ app.get('/guests', function(req, res) {
 });
 
 app.get('/guests/:id', function(req, res) {
-  fs.readFile(guestsPath, 'utf8', function(err, data) {
+  fs.readFile(guestsPath, 'utf8', function(err, guestsJSON) {
     if (err) {
       console.error(err.stack);
       return res.sendStatus(500);
     }
 
     var id = Number.parseInt(req.params.id);
-    var guests = JSON.parse(data);
+    var guests = JSON.parse(guestsJSON);
 
     if (id < 0 || id >= guests.length || Number.isNaN(id)) {
       return res.sendStatus(404);
@@ -559,14 +559,14 @@ app.get('/guests', function(req, res) {
 });
 
 app.get('/guests/:id', function(req, res) {
-  fs.readFile(guestsPath, 'utf8', function(err, data) {
+  fs.readFile(guestsPath, 'utf8', function(err, guestsJSON) {
     if (err) {
       console.error(err.stack);
       return res.sendStatus(500);
     }
 
     var id = Number.parseInt(req.params.id);
-    var guests = JSON.parse(data);
+    var guests = JSON.parse(guestsJSON);
 
     if (id < 0 || id >= guests.length || Number.isNaN(id)) {
       return res.sendStatus(404);
@@ -616,16 +616,20 @@ var morgan = require('morgan');
 app.use(morgan('short'));
 
 app.use(function(req, res, next) {
-  var body = '';
+  var bodyJSON = '';
 
   req.on('data', function(chunk) {
-    body += chunk.toString();
+    bodyJSON += chunk.toString();
   });
 
   req.on('end', function() {
-    if (body !== '') {
-      req.body = JSON.parse(body);
+    var body;
+
+    if (bodyJSON !== '') {
+      body = JSON.parse(bodyJSON);
     }
+
+    req.body = body;
 
     next();
   });
@@ -645,12 +649,12 @@ app.get('/guests', function(req, res) {
 });
 
 app.post('/guests', function(req, res) {
-  fs.readFile(guestsPath, 'utf8', function(readErr, data) {
+  fs.readFile(guestsPath, 'utf8', function(readErr, guestsJSON) {
     if (readErr) {
       return next(readErr);
     }
 
-    var guests = JSON.parse(data);
+    var guests = JSON.parse(guestsJSON);
     var guest = req.body.name;
 
     if (!guest) {
@@ -659,9 +663,9 @@ app.post('/guests', function(req, res) {
 
     guests.push(guest);
 
-    var guestsJSON = JSON.stringify(guests);
+    var newGuestsJSON = JSON.stringify(guests);
 
-    fs.writeFile(guestsPath, guestsJSON, function(writeErr) {
+    fs.writeFile(guestsPath, newGuestsJSON, function(writeErr) {
       if (writeErr) {
         return next(writeErr);
       }
@@ -672,14 +676,14 @@ app.post('/guests', function(req, res) {
 });
 
 app.get('/guests/:id', function(req, res) {
-  fs.readFile(guestsPath, 'utf8', function(err, data) {
+  fs.readFile(guestsPath, 'utf8', function(err, guestsJSON) {
     if (err) {
       console.error(err.stack);
       return res.sendStatus(500);
     }
 
     var id = Number.parseInt(req.params.id);
-    var guests = JSON.parse(data);
+    var guests = JSON.parse(guestsJSON);
 
     if (id < 0 || id >= guests.length || Number.isNaN(id)) {
       return res.sendStatus(404);
@@ -771,12 +775,12 @@ app.get('/guests', function(req, res) {
 });
 
 app.post('/guests', function(req, res) {
-  fs.readFile(guestsPath, 'utf8', function(readErr, data) {
+  fs.readFile(guestsPath, 'utf8', function(readErr, guestsJSON) {
     if (readErr) {
       return next(readErr);
     }
 
-    var guests = JSON.parse(data);
+    var guests = JSON.parse(guestsJSON);
     var guest = req.body.name;
 
     if (!guest) {
@@ -785,9 +789,9 @@ app.post('/guests', function(req, res) {
 
     guests.push(guest);
 
-    var guestsJSON = JSON.stringify(guests);
+    var newGuestsJSON = JSON.stringify(guests);
 
-    fs.writeFile(guestsPath, guestsJSON, function(writeErr) {
+    fs.writeFile(guestsPath, newGuestsJSON, function(writeErr) {
       if (writeErr) {
         return next(writeErr);
       }
@@ -798,14 +802,14 @@ app.post('/guests', function(req, res) {
 });
 
 app.get('/guests/:id', function(req, res) {
-  fs.readFile(guestsPath, 'utf8', function(err, data) {
+  fs.readFile(guestsPath, 'utf8', function(err, newGuestsJSON) {
     if (err) {
       console.error(err.stack);
       return res.sendStatus(500);
     }
 
     var id = Number.parseInt(req.params.id);
-    var guests = JSON.parse(data);
+    var guests = JSON.parse(newGuestsJSON);
 
     if (id < 0 || id >= guests.length || Number.isNaN(id)) {
       return res.sendStatus(404);
