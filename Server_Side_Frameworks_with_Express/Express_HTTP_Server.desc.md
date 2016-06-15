@@ -311,7 +311,7 @@ app.get('/guests', function(req, res) {
 });
 
 app.get('/guests/:id', function(req, res) {
-  fs.readFile(guestsPath, 'utf8', (err, data) => {
+  fs.readFile(guestsPath, 'utf8', function(err, data8000
     if (err) {
       throw err;
     }
@@ -479,7 +479,7 @@ app.get('/guests', function(req, res) {
 });
 
 app.get('/guests/:id', function(req, res) {
-  fs.readFile(guestsPath, 'utf8', (err, data) => {
+  fs.readFile(guestsPath, 'utf8', function(err, data) {
     if (err) {
       throw err;
     }
@@ -553,7 +553,7 @@ app.get('/guests', function(req, res) {
 });
 
 app.get('/guests/:id', function(req, res) {
-  fs.readFile(guestsPath, 'utf8', (err, data) => {
+  fs.readFile(guestsPath, 'utf8', function(err, data) {
     if (err) {
       throw err;
     }
@@ -637,7 +637,7 @@ app.get('/guests', function(req, res) {
 });
 
 app.post('/guests', function(req, res) {
-  fs.readFile(guestsPath, 'utf8', (readErr, data) => {
+  fs.readFile(guestsPath, 'utf8', function(readErr, data) {
     if (readErr) {
       return next(readErr);
     }
@@ -653,7 +653,7 @@ app.post('/guests', function(req, res) {
 
     var guestsJSON = JSON.stringify(guests);
 
-    fs.writeFile(guestsPath, guestsJSON, (writeErr) => {
+    fs.writeFile(guestsPath, guestsJSON, function(writeErr) {
       if (writeErr) {
         return next(writeErr);
       }
@@ -664,7 +664,7 @@ app.post('/guests', function(req, res) {
 });
 
 app.get('/guests/:id', function(req, res) {
-  fs.readFile(guestsPath, 'utf8', (err, data) => {
+  fs.readFile(guestsPath, 'utf8', function(err, data) {
     if (err) {
       throw err;
     }
@@ -761,7 +761,7 @@ app.get('/guests', function(req, res) {
 });
 
 app.post('/guests', function(req, res) {
-  fs.readFile(guestsPath, 'utf8', (readErr, data) => {
+  fs.readFile(guestsPath, 'utf8', function(readErr, data) {
     if (readErr) {
       return next(readErr);
     }
@@ -777,7 +777,7 @@ app.post('/guests', function(req, res) {
 
     var guestsJSON = JSON.stringify(guests);
 
-    fs.writeFile(guestsPath, guestsJSON, (writeErr) => {
+    fs.writeFile(guestsPath, guestsJSON, function(writeErr) {
       if (writeErr) {
         return next(writeErr);
       }
@@ -788,7 +788,7 @@ app.post('/guests', function(req, res) {
 });
 
 app.get('/guests/:id', function(req, res) {
-  fs.readFile(guestsPath, 'utf8', (err, data) => {
+  fs.readFile(guestsPath, 'utf8', function(err, data) {
     if (err) {
       throw err;
     }
