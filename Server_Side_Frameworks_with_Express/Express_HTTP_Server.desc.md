@@ -761,8 +761,30 @@ app.get('/guests', function(req, res) {
 });
 
 app.post('/guests', function(req, res) {
-  guests.push(req.body);
-  res.send(req.body);
+  fs.readFile(guestsPath, 'utf8', (readErr, data) => {
+    if (readErr) {
+      return next(readErr);
+    }
+
+    var guests = JSON.parse(data);
+    var guest = req.body.name;
+
+    if (!guest) {
+      return res.sendStatus(400);
+    }
+
+    guests.push(guest);
+
+    var guestsJSON = JSON.stringify(guests);
+
+    fs.writeFile(guestsPath, guestsJSON, (writeErr) => {
+      if (writeErr) {
+        return next(writeErr);
+      }
+
+      res.send(guest);
+    });
+  });
 });
 
 app.get('/guests/:id', function(req, res) {
@@ -799,41 +821,17 @@ http GET http://localhost:8000/guests
 
 You should see a similar HTTP response.
 
-```text
-HTTP/1.1 200 OK
-Connection: keep-alive
-Content-Length: 19
-Content-Type: application/json; charset=utf-8
-Date: Wed, 23 Mar 2016 18:40:10 GMT
-ETag: W/"13-eZMtvf4MUiEAJpKhww5ZlQ"
-
-[
-    {
-        "name": "Teagan"
-    }
-]
-```
+![](https://i.imgur.com/ySdlgI9.png)
 
 Next, send an HTTP POST request, with a JSON body, to your server.
 
 ```shell
-http POST http://localhost:8000/guests name=Kate
+http POST http://localhost:8000/guests name=Teagan
 ```
 
 You should see a similar HTTP response.
 
-```text
-HTTP/1.1 200 OK
-Connection: keep-alive
-Content-Length: 15
-Content-Type: application/json; charset=utf-8
-Date: Wed, 23 Mar 2016 18:48:07 GMT
-ETag: W/"f-Dm6LF8ZOGzVq0Yw/A4JWYw"
-
-{
-    "name": "Kate"
-}
-```
+![](https://i.imgur.com/mRXnhQu.png)
 
 Finally, check to see if your guest list has been modified.
 
@@ -843,23 +841,7 @@ http GET http://localhost:8000/guests
 
 You should see a similar HTTP response.
 
-```text
-HTTP/1.1 200 OK
-Connection: keep-alive
-Content-Length: 35
-Content-Type: application/json; charset=utf-8
-Date: Wed, 23 Mar 2016 18:48:40 GMT
-ETag: W/"23-BlGLuHg6XvB4VmZU6+bV3A"
-
-[
-    {
-        "name": "Teagan"
-    },
-    {
-        "name": "Kate"
-    }
-]
-```
+![](https://i.imgur.com/00buBZP.png)
 
 This is the `body-parser` middleware in action!
 
