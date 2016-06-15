@@ -268,7 +268,7 @@ http GET localhost:8000/guests
 
 And you should see something like this.
 
-![](https://i.imgur.com/MM0aAYD.png)
+![](https://i.imgur.com/IgYJzHW.png)
 
 Next, add and commit the latest changes to the `party` project's `express` branch.
 
@@ -340,7 +340,7 @@ http GET localhost:8000/guests
 
 And you should see something like this.
 
-![](https://i.imgur.com/MM0aAYD.png)
+![](https://i.imgur.com/IgYJzHW.png)
 
 Now, send the following HTTP request to the server.
 
@@ -350,9 +350,9 @@ http GET localhost:8000/guests/0
 
 And you should see something like this.
 
-![](https://i.imgur.com/loK2cj9.png)
+![](https://i.imgur.com/BAUNQqV.png)
 
-Finally, send the following HTTP request to the server.
+Next, send the following HTTP request to the server.
 
 ```shell
 http GET localhost:8000/guests/1
@@ -360,7 +360,37 @@ http GET localhost:8000/guests/1
 
 And you should see something like this.
 
-![](https://i.imgur.com/omCorko.png)
+![](https://i.imgur.com/HY5rw6x.png)
+
+Next, send the following HTTP request to the server.
+
+```shell
+http GET localhost:8000/guests/3
+```
+
+And you should see something like this.
+
+![](https://i.imgur.com/eGXNGd6.png)
+
+Next, send the following HTTP request to the server.
+
+```shell
+http GET localhost:8000/guests/-1
+```
+
+And you should see something like this.
+
+![](https://i.imgur.com/sRxSQtW.png)
+
+Finally, send the following HTTP request to the server.
+
+```shell
+http GET localhost:8000/guests/abracadabra
+```
+
+And you should see something like this.
+
+![](https://i.imgur.com/xHGcjJa.png)
 
 Next, add and commit the latest changes to the `party` project's `express` branch.
 
@@ -373,28 +403,14 @@ To merge, the commits from the `express` branch to the `master` branch, run the 
 
 ```shell
 git checkout master
-git merge http
+git merge express
 ```
 
 With the commits merged in, it's safe to delete the `express` branch.
 
 ```shell
-git br -d http
+git br -d express
 ```
-
-## URL Parameters
-
-What if we want to create an app that can dynamically say hello to anyone?
-
-* Using **url parameters**, add a dynamic route to the application. This is indicated by `:` and the variable name you want to use. We'll use `:name` for the example below:
-
-```javascript
-app.get("/hello/:name", function (req, res) {
-  res.send( "Hello, " + req.params.name );
-});
-```
-
-Here we are seeing the first introduction to parameters that the application can identify. In the following route `:name` is considered a route parameter. We can access it using `req.params.name`.
 
 ## What's Express middleware?
 
