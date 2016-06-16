@@ -682,6 +682,7 @@ app.post('/guests', function(req, res) {
         return res.sendStatus(500);
       }
 
+      res.set('Content-Type', 'text/plain');
       res.send(guest);
     });
   });
@@ -810,6 +811,7 @@ app.post('/guests', function(req, res) {
         return res.sendStatus(500);
       }
 
+      res.set('Content-Type', 'text/plain');
       res.send(guest);
     });
   });

@@ -252,16 +252,7 @@ http GET localhost:8000/guests/0
 
 And you should see something like this.
 
-```
-HTTP/1.1 200 OK
-Connection: keep-alive
-Content-Length: 17
-Content-Type: application/json; charset=utf-8
-Date: Thu, 24 Mar 2016 15:44:19 GMT
-ETag: W/"11-0KyDlj1psIN3xnEMJsjMJg"
-
-"Mary"
-```
+![](https://i.imgur.com/lbndUXb.png)
 
 Send an HTTP request to create an individual guest resource.
 
