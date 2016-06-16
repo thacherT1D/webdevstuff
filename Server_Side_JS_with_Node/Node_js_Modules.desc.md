@@ -257,8 +257,6 @@ resultTwo.ms = "foo" // Now, even for results in myFile.js, the value of ms is "
 
 - [Module Caching Example](https://github.com/gSchool/module-caching-example)
 
-##
-
 ## Resources
 
 <iframe src="https://player.vimeo.com/video/142099942?byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
