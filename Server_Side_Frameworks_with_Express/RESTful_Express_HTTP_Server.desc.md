@@ -220,7 +220,7 @@ app.listen(port, function() {
 Now, save the `serverExpress.js` file and add the following data to the `guests.json` file.
 
 ```shell
-echo '["Mary", "Don"]' > guests.json
+echo '["Mary"]' > guests.json
 ```
 
 
@@ -267,15 +267,13 @@ Content-Type: application/json; charset=utf-8
 Date: Thu, 24 Mar 2016 15:44:19 GMT
 ETag: W/"11-0KyDlj1psIN3xnEMJsjMJg"
 
-{
-    "name": "Teagan"
-}
+"Mary"
 ```
 
 Send an HTTP request to create an individual guest resource.
 
 ```shell
-http POST localhost:8000/guests name=Mary
+http POST localhost:8000/guests name=Don
 ```
 
 And you should see something like this.
@@ -288,9 +286,7 @@ Content-Type: application/json; charset=utf-8
 Date: Thu, 24 Mar 2016 15:45:05 GMT
 ETag: W/"f-pPOBaT8aXBbirJ2irXvIdg"
 
-{
-    "name": "Mary"
-}
+"Don"
 ```
 
 Send another HTTP request to read an individual guest resource.
@@ -309,9 +305,7 @@ Content-Type: application/json; charset=utf-8
 Date: Thu, 24 Mar 2016 15:45:44 GMT
 ETag: W/"f-pPOBaT8aXBbirJ2irXvIdg"
 
-{
-    "name": "Mary"
-}
+"Don"
 ```
 
 Send an HTTP request to read all the guest resources.
@@ -331,19 +325,15 @@ Date: Thu, 24 Mar 2016 15:46:18 GMT
 ETag: W/"23-bh9WCahnDHTY1E+InF4FTA"
 
 [
-    {
-        "name": "Teagan"
-    },
-    {
-        "name": "Mary"
-    }
+    "Mary",
+    "Don"
 ]
 ```
 
 Send an HTTP request to update an individual guest resource.
 
 ```shell
-http PUT localhost:8000/guests/0 name=Don
+http PUT localhost:8000/guests/0 name=Kate
 ```
 
 And you should see something like this.
@@ -356,9 +346,7 @@ Content-Type: application/json; charset=utf-8
 Date: Thu, 24 Mar 2016 15:47:36 GMT
 ETag: W/"e-GMWKG7r0SW1dvTJlsqKZRA"
 
-{
-    "name": "Don"
-}
+"Kate"
 ```
 
 Send an HTTP request to update an individual guest resource.
@@ -377,9 +365,7 @@ Content-Type: application/json; charset=utf-8
 Date: Thu, 24 Mar 2016 15:48:25 GMT
 ETag: W/"e-GMWKG7r0SW1dvTJlsqKZRA"
 
-{
-    "name": "Don"
-}
+"Kate"
 ```
 
 Send an HTTP request to destroy an individual guest resource.
@@ -398,9 +384,7 @@ Content-Type: application/json; charset=utf-8
 Date: Thu, 24 Mar 2016 15:50:27 GMT
 ETag: W/"e-GMWKG7r0SW1dvTJlsqKZRA"
 
-{
-    "name": "Don"
-}
+"Kate"
 ```
 
 Send an HTTP request to read all the guest resources.
@@ -420,9 +404,7 @@ Date: Thu, 24 Mar 2016 15:51:08 GMT
 ETag: W/"11-EtwezO7FYAMu6cFoRdMVCA"
 
 [
-    {
-        "name": "Mary"
-    }
+    "Don"
 ]
 ```
 
