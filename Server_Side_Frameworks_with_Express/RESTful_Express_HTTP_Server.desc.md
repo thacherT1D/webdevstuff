@@ -66,7 +66,7 @@ Think about what scenarios would cause you to add or remove a RESTful client or 
 
 ## How do you build a RESTful Express server?
 
-Thinking back to the guest list Express server from yesterday, you've already incorporated the read (all), read (individual), and create REST actions for the guest resources. To complete the RESTful Express server, all you need to add is the remaining update and destry REST actions.
+Thinking back to the guest list Express server from yesterday, you've already incorporated the read all, read individual, and create REST actions for the guest resources. To complete the RESTful Express server, all you need to add is the remaining update and destry REST actions.
 
 To get started, return to the `party` project from yesterday and create a new `rest` feature branch.
 
