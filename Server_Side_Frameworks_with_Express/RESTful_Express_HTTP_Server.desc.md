@@ -510,10 +510,22 @@ git add .
 git commit -m 'Switch Procfile to serverExpress.js'
 ```
 
-Finally, push your local `master` branch to Heroku's master branch.
+Now, deploy your project by pushing your local `master` branch to Heroku's `master` branch.
 
 ```shell
 git push heroku master
+```
+
+Finally, you can send a RESTful HTTP requests to the server running on the production environment.
+
+**NOTE:** Replace `USERNAME` with your GitHub username.
+
+```shell
+http GET USERNAME-party.herokuapp.com/guests
+http GET USERNAME-party.herokuapp.com/guests/0
+http POST USERNAME-party.herokuapp.com/guests name=Don
+http PUT USERNAME-party.herokuapp.com/guests/0 name=Kate
+http DELETE USERNAME-party.herokuapp.com/guests/0
 ```
 
 ## Assignment
