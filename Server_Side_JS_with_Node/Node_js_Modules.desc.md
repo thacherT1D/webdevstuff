@@ -132,16 +132,7 @@ exports.add = function(a, b) {
 };
 ```
 
-Each of the above versions of `arithmetic.js` are equivalent. However, be aware that you can't assign a value directly to the `exports` global variable.
-
-```javascript
-'use strict';
-
-// does not work
-exports = function(a, b) {
-	return a + b;
-};
-```
+Each of the above versions of `arithmetic.js` are equivalent.
 
 ## What are the three kinds of modules?
 
