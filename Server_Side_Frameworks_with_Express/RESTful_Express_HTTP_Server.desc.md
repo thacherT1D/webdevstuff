@@ -16,22 +16,13 @@
 -  Clients send HTTP requests to create, read, update, and destroy resources.
 -  Servers send HTTP responses to indicate the result of these operations.
 
-## Why is REST so important?
-
-REST is one way of structuring client-server HTTP communication. However, it's a very popular structure because it leads to a **separation of concerns** between clients and servers. Since the goals of clients and servers are well-defined, it's easy to develop and evolve clients and servers independently. In other words, you can easily:
-
-1. Add and remove additional clients. (e.g. web and mobile)
-1. Add and remove additional servers. (e.g. scale and replace)
-
-## How does REST work?
-
-Imagine a RESTful HTTP server manages the persistence of the following guest resources.
+For example, imagine a RESTful HTTP server manages the persistence of the following guest resources.
 
 ```javascript
 var guests = ['Mary'];
 ```
 
-The server handles the following RESTful actions by mapping them to specific HTTP requests. In other words, each RESTful action performs a unique operation on the guest resources.
+A RESTful server would handle the following HTTP requests by mapping them to a specific REST action.
 
 | REST Action       | Request Method | Request URL | Request Body |
 |-------------------|----------------|-------------|--------------|
@@ -41,7 +32,7 @@ The server handles the following RESTful actions by mapping them to specific HTT
 | Update            | `PUT`          | `/guests/0` | `name=Kate`  |
 | Destroy           | `DELETE`       | `/guests/0` | N/A          |
 
-If the above RESTful actions are performed sequentially, the guest resources will look like this after each operation.
+Each REST action performs a unique operation. If the above RESTful actions were performed sequentially, the operations would leave the guest resources looking like this.
 
 | REST Action       | Guest Resources   |
 |-------------------|-------------------|
@@ -51,7 +42,7 @@ If the above RESTful actions are performed sequentially, the guest resources wil
 | Update            | `['Kate', 'Don']` |
 | Destroy           | `['Don']`         |
 
-Once the RESTful action is complete, the server sends a specific HTTP response back to the client indicating the result of the operation.
+Once the operation is complete, the RESTful server would send a specific HTTP response back to the client indicating the result of the operation.
 
 | REST Action       | Response Status | Response Content-Type | Response Body |
 |-------------------|-----------------|-----------------------|---------------|
@@ -61,7 +52,17 @@ Once the RESTful action is complete, the server sends a specific HTTP response b
 | Update            | `200`           | `application/json`    | `'Kate'`      |
 | Destroy           | `200`           | `application/json`    | `'Kate'`      |
 
-A **safe** REST action is one that doesn't modify any resources. Which REST actions from the above example are safe?
+### Exercise
+
+A **safe** REST action is one that doesn't modify any resources. Turn to a partner and see you can determine which REST actions from the above example are safe. Afterwards, explain what REST is to your partner in your own words.
+
+## Why is REST so important?
+
+REST is one way of structuring client-server HTTP communication. However, it's a very popular structure because it leads to a **separation of concerns** between clients and servers. Since the goals of clients and servers are well-defined, it's easy to develop and evolve clients and servers independently. In other words, you can easily add and remove RESTful clients or servers.
+
+### Exercise
+
+Think about what scenarios would cause you to add or remove a RESTful client or server. After ten seconds, I'll cold call on a few of you for an answer.
 
 ## How do you build a RESTful Express server?
 
