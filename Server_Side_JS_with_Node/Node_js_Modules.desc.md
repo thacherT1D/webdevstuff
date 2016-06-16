@@ -8,15 +8,15 @@
 
 ## What are Node.js modules?
 
-As far as the Node.js is concerned, you could write all of your JavaScript code in one file. But to humans, it's a totally different story. Imagine that you wanted to reuse a piece of code, but it was buried on line 25,436 of some file. Your only recourse would be to copy that code to some file. But modules solve this problem.
+As far as the Node.js is concerned, you could write all of your JavaScript code in one file. But to humans, it's a totally different story. Imagine that you wanted to reuse a piece of code in another project, but it was buried on line 25,436 of some file. Your only recourse would be to copy that code and paste it to another file. Modules are an elegant solution to this problem.
 
-In Node.js, a **module** is a file. Modules allow you to take pieces of code, split them out into different files, and easily package them and reuse them. At it's core, the Node.js module system requires more than one file. For example, imagine you have a `printer.js` module and a `calculator.js` module. In this example, the `printer.js` module will require some functionality from the `calculator.js` module.
+In Node.js, a **module** is a file. Modules allow you to take pieces of code, split them out into different files, and easily package and reuse them. For example, imagine you have a `printer.js` module and a `calculator.js` module. In this example, the `printer.js` module will require some functionality from the `calculator.js` module.
 
 ```javascript
 'use strict';
 
-var calculate = require('./calculator');
-var result = calculate(1, 2);
+var add = require('./calculator');
+var result = add(1, 2);
 
 console.log(result);
 ```
@@ -31,7 +31,7 @@ module.exports = function(a, b) {
 };
 ```
 
-The function that's exported effectively replaces the `require` expression. Another way to thinks of this would be, the `calculate` variable is assigned the value of the `module.exports` object.
+The function that's exported effectively replaces the `require` expression. Another way to thinks of this would be, the `add` variable is assigned the value of the `module.exports` object.
 
 ## How do you extract a module from existing code?
 
