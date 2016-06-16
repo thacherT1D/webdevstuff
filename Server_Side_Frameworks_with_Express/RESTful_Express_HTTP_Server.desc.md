@@ -68,7 +68,20 @@ Think about what scenarios would cause you to add or remove a RESTful client or 
 
 Thinking back to the guest list Express server from yesterday, you've already incorporated the read (all), read (individual), and create REST actions for the guest resources. To complete the RESTful Express server, all you need to add is the remaining update and delete REST actions.
 
-Start by opening the `serverExpress.js` file and adding the update REST action.
+To get started, return to the `party` project from yesterday and create a new `rest` feature branch.
+
+```shell
+cd party
+git checkout -b rest
+```
+
+Next, open the `party` project in your text editor.
+
+```shell
+atom .
+```
+
+And add the following update REST action to the `serverExpress.js` file.
 
 ```javascript
 'use strict';
@@ -172,9 +185,9 @@ app.put('/guests/:id', function(req, res) {
 
     guests[id] = guest;
 
-    const newGuestsJSON = JSON.stringify(guests);
+    var newGuestsJSON = JSON.stringify(guests);
 
-    fs.writeFile(guestsPath, newGuestsJSON, (writeErr) => {
+    fs.writeFile(guestsPath, newGuestsJSON, function(writeErr) {
       if (writeErr) {
         console.error(err.stack);
         return res.sendStatus(500);
@@ -231,7 +244,7 @@ And you should see something like this.
 
 ![](https://i.imgur.com/lbndUXb.png)
 
-Send an HTTP request to create an individual guest resource.
+Send an HTTP request to create a guest resource.
 
 ```shell
 http POST localhost:8000/guests name=Don
@@ -261,7 +274,7 @@ And you should see something like this.
 
 ![](https://i.imgur.com/naVKros.png)
 
-Send an HTTP request to update an individual guest resource.
+Send an HTTP request to update a guest resource.
 
 ```shell
 http PUT localhost:8000/guests/0 name=Kate
@@ -281,10 +294,14 @@ And you should see something like this.
 
 ![](https://i.imgur.com/GFK6Zvv.png)
 
+Next, add and commit the latest changes to the `party` project's `rest` branch.
+
 ```shell
 git add .
-git commit -m 'Add PUT /guests/:id middleware'
+git commit -m 'Add update REST action'
 ```
+
+Now, add the following delete REST action to the `serverExpress.js` file.
 
 ```javascript
 'use strict';
@@ -388,9 +405,9 @@ app.put('/guests/:id', function(req, res) {
 
     guests[id] = guest;
 
-    const newGuestsJSON = JSON.stringify(guests);
+    var newGuestsJSON = JSON.stringify(guests);
 
-    fs.writeFile(guestsPath, newGuestsJSON, (writeErr) => {
+    fs.writeFile(guestsPath, newGuestsJSON, function(writeErr) {
       if (writeErr) {
         console.error(err.stack);
         return res.sendStatus(500);
@@ -419,7 +436,7 @@ app.delete('/guests/:id', function(req, res) {
     var guest = guests.splice(id, 1)[0];
     var newGuestsJSON = JSON.stringify(guests);
 
-    fs.writeFile(guestsPath, newGuestsJSON, (writeErr) => {
+    fs.writeFile(guestsPath, newGuestsJSON, function(writeErr) {
       if (writeErr) {
         console.error(err.stack);
         return res.sendStatus(500);
@@ -440,7 +457,7 @@ app.listen(port, function() {
 });
 ```
 
-Send an HTTP request to destroy an individual guest resource.
+Send an HTTP request to destroy a guest resource.
 
 ```shell
 http DELETE localhost:8000/guests/0
@@ -460,24 +477,40 @@ And you should see something like this.
 
 ![](https://i.imgur.com/TJCRysx.png)
 
+Next, add and commit the latest changes to the `party` project's `rest` branch.
+
 ```shell
 git add .
-git commit -m 'Add DELETE /guests/:id middleware'
+git commit -m 'Add delete REST action'
 ```
+
+Finally, merge the commits from the `rest` branch to the `master` branch, run the following commands.
 
 ```shell
 git checkout master
-git merge middleware
+git merge rest
 ```
+
+With the commits merged in, it's safe to delete the `rest` branch.
+
+```shell
+git br -d rest
+```
+
+To deploy the RESTful Express server to Heroku, update the `Procfile` so it runs the correct server.
 
 ```shell
 web: node serverExpress.js
 ```
 
+Next, add and commit the latest changes to the `party` project's `master` branch.
+
 ```shell
 git add .
 git commit -m 'Switch Procfile to serverExpress.js'
 ```
+
+Finally, push your local `master` branch to Heroku's master branch.
 
 ```shell
 git push heroku master
