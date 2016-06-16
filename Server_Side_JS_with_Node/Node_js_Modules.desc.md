@@ -164,10 +164,6 @@ var bodyParser = require('body-parser');
 
 Remember, the above require statements won't work until after you've installed these NPM modules with `npm install`.
 
-## Assignment
-
-- [Module Caching Example](https://github.com/gSchool/module-caching-example)
-
 ## Resources
 
 ### Node.js Modules Part 1
