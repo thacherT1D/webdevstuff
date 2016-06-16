@@ -112,6 +112,7 @@ app.get('/guests/:id', function(req, res) {
       return res.sendStatus(404);
     }
 
+    res.set('Content-Type', 'text/plain');
     res.send(guests[id]);
   });
 });
