@@ -597,6 +597,13 @@ You should see the following server log.
 
 This is the `morgan` middleware in action!
 
+Next, add and commit the latest changes to the `party` project's `middleware` branch.
+
+```shell
+git add .
+git commit -m 'Add morgan middlware'
+```
+
 We will now add another middleware to parse the body of an HTTP POST request. Refactor your `server.js` file again.
 
 ```javascript
@@ -862,6 +869,26 @@ You should see a similar HTTP response.
 ![](https://i.imgur.com/00buBZP.png)
 
 This is the `body-parser` middleware in action!
+
+Next, add and commit the latest changes to the `party` project's `middleware` branch.
+
+```shell
+git add .
+git commit -m 'Add body-parser middleware'
+```
+
+Finally, merge the commits from the `middleware` branch to the `master` branch, run the following commands.
+
+```shell
+git checkout master
+git merge middleware
+```
+
+With the commits merged in, it's safe to delete the `middleware` branch.
+
+```shell
+git br -d middleware
+```
 
 ## Resources
 
