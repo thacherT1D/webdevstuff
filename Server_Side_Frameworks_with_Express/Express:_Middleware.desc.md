@@ -5,7 +5,7 @@
 - Describe what middleware is and its role in Express
 - List the three parameters that every piece of middleware is passed
 - List two examples of middleware
-- Use Body Parser to handle POST request
+- Use Body Parser to handle POST requests
 
 
 ##[What is middleware?](http://expressjs.com/guide/using-middleware.html)
