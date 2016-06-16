@@ -28,7 +28,7 @@ REST is one way of structuring client-server HTTP communication. However, it's a
 Imagine a RESTful HTTP server manages the persistence of the following guest resources.
 
 ```javascript
-var guests = [{ name: 'Mary' }];
+var guests = ['Mary'];
 ```
 
 The server handles the following RESTful actions by mapping them to specific HTTP requests. In other words, each RESTful action performs a unique operation on the guest resources.
@@ -43,23 +43,23 @@ The server handles the following RESTful actions by mapping them to specific HTT
 
 If the above RESTful actions are performed sequentially, the guest resources will look like this after each operation.
 
-| REST Action       | Guest Resources                   |
-|-------------------|-----------------------------------|
-| Read (all)        | `[{ name: 'Mary' }]`              |
-| Read (individual) | `[{ name: 'Mary' }]`              |
-| Create            | `[{ name: 'Mary', name: 'Don' }]` |
-| Update            | `[{ name: 'Kate', name: 'Don' }]` |
-| Destroy           | `[{ name: 'Kate' }]`              |
+| REST Action       | Guest Resources   |
+|-------------------|-------------------|
+| Read (all)        | `['Mary']`        |
+| Read (individual) | `['Mary']`        |
+| Create            | `['Mary', 'Don']` |
+| Update            | `['Kate', 'Don']` |
+| Destroy           | `['Don']`         |
 
 Once the RESTful action is complete, the server sends a specific HTTP response back to the client indicating the result of the operation.
 
-| REST Action       | Response Status | Response Content-Type | Response Body          |
-|-------------------|-----------------|-----------------------|------------------------|
-| Read (all)        | `200`           | `application/json`    | `[{ name: '`Mary`' }]` |
-| Read (individual) | `200`           | `application/json`    | `{ name: 'Mary' }`     |
-| Create            | `200`           | `application/json`    | `{ name: 'Don' }`      |
-| Update            | `200`           | `application/json`    | `{ name: 'Kate' }`     |
-| Destroy           | `200`           | `application/json`    | `{ name: 'Kate' }`     |
+| REST Action       | Response Status | Response Content-Type | Response Body |
+|-------------------|-----------------|-----------------------|---------------|
+| Read (all)        | `200`           | `application/json`    | `['Mary']`    |
+| Read (individual) | `200`           | `application/json`    | `'Mary'`      |
+| Create            | `200`           | `application/json`    | `'Don'        |
+| Update            | `200`           | `application/json`    | `'Kate'       |
+| Destroy           | `200`           | `application/json`    | `'Kate'       |
 
 A **safe** REST action is one that doesn't modify any resources. Which REST actions from the above example are safe?
 
@@ -217,7 +217,14 @@ app.listen(port, function() {
 });
 ```
 
-Now, start your Express server.
+Now, save the `serverExpress.js` file and add the following data to the `guests.json` file.
+
+```shell
+echo '["Mary", "Don"]' > guests.json
+```
+
+
+And start your Express server.
 
 ```shell
 nodemon server.js
@@ -240,9 +247,7 @@ Date: Thu, 24 Mar 2016 15:43:00 GMT
 ETag: W/"13-eZMtvf4MUiEAJpKhww5ZlQ"
 
 [
-    {
-        "name": "Teagan"
-    }
+    "Mary"
 ]
 ```
 
