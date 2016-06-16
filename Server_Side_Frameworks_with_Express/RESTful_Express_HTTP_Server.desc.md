@@ -413,7 +413,7 @@ app.delete('/guests/:id', function(req, res) {
       return res.sendStatus(404);
     }
 
-    var guest = guests.splice(index, 1)[0];
+    var guest = guests.splice(id, 1)[0];
     var newGuestsJSON = JSON.stringify(guests);
 
     fs.writeFile(guestsPath, newGuestsJSON, (writeErr) => {
@@ -445,16 +445,7 @@ http DELETE localhost:8000/guests/0
 
 And you should see something like this.
 
-```
-HTTP/1.1 200 OK
-Connection: keep-alive
-Content-Length: 14
-Content-Type: application/json; charset=utf-8
-Date: Thu, 24 Mar 2016 15:50:27 GMT
-ETag: W/"e-GMWKG7r0SW1dvTJlsqKZRA"
-
-"Kate"
-```
+![](https://i.imgur.com/7bxUHqT.png)
 
 Send an HTTP request to read all the guest resources.
 
@@ -464,18 +455,7 @@ http GET localhost:8000/guests
 
 And you should see something like this.
 
-```
-HTTP/1.1 200 OK
-Connection: keep-alive
-Content-Length: 17
-Content-Type: application/json; charset=utf-8
-Date: Thu, 24 Mar 2016 15:51:08 GMT
-ETag: W/"11-EtwezO7FYAMu6cFoRdMVCA"
-
-[
-    "Don"
-]
-```
+![](https://i.imgur.com/TJCRysx.png)
 
 ```shell
 git add .
