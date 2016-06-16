@@ -278,6 +278,11 @@ And you should see something like this.
 
 ![](https://i.imgur.com/GFK6Zvv.png)
 
+```shell
+git add .
+git commit -m 'Add PUT /guests/:id middleware'
+```
+
 ```javascript
 'use strict';
 
@@ -470,6 +475,16 @@ ETag: W/"11-EtwezO7FYAMu6cFoRdMVCA"
 [
     "Don"
 ]
+```
+
+```shell
+git add .
+git commit -m 'Add DELETE /guests/:id middleware'
+```
+
+```shell
+git checkout master
+git merge middleware
 ```
 
 ## Assignment
