@@ -185,7 +185,9 @@ var myModule3 = require('../myModule3'); // parent path of the current module
 
 ## What's the Express router?
 
-An **Express router** is an mini-application that you can use for attaching groups of middleware. For example, imagine you have two modules—`greet.js` and `server.js`. The `greet.js` module uses an Express router to attach a group of greeting middleware.
+An **Express router** is an mini-application that you can use for attaching groups of middleware. For example, imagine you have two modules—`greet.js` and `server.js`.
+
+The `greet.js` module uses an Express router to attach a group of greeting middleware.
 
 ```javascript
 'use strict';
