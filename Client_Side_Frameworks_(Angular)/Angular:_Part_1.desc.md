@@ -8,7 +8,7 @@ Watch the video above, so as you go through the exercises you can see how you ca
 
 Work through Unit 1 of the Angular Curriculum:
 
-https://github.com/gSchool/angular-curriculum/tree/master/Unit-1
+https://github.com/gSchool/angular-curriculum
 
 No need to fork/clone - just build these exercises from scratch using pure HTML / JavaScript
 
