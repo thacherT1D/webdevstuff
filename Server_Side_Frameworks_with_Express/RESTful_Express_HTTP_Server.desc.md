@@ -141,6 +141,7 @@ app.post('/guests', function(req, res) {
         return res.sendStatus(500);
       }
 
+      res.set('Content-Type', 'text/plain');
       res.send(guest);
     });
   });
@@ -176,6 +177,7 @@ app.put('/guests/:id', function(req, res) {
         return res.sendStatus(500);
       }
 
+      res.set('Content-Type', 'text/plain');
       res.send(guest);
     });
   });
@@ -204,6 +206,7 @@ app.delete('/guests/:id', function(req, res) {
         return res.sendStatus(500);
       }
 
+      res.set('Content-Type', 'text/plain');
       res.send(guest);
     });
   });
