@@ -142,9 +142,9 @@ var path = require('path');
 These are modules that you've created on your own, such as the `calculator.js` module. When creating a file module, you add values to the `module.exports` object. When you using a file module, you require it into another module by its path to the file module, minus the `.js` extension. These require strings must start with `./`, `../`, or `/`.
 
 ```javascript
-var myModule = require('./myModule');  // same directory of the current module
-var myModule = require('../myModule'); // parent directory of the current module
-var myModule = require('/filename');   // absolute directory on the computer
+var myModule1 = require('./myModule1');  // same directory of the current module
+var myModule2 = require('../myModule2'); // parent directory of the current module
+var myModule3 = require('/myModule3');   // absolute directory on the computer
 ```
 
 ### NPM modules
