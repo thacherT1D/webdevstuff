@@ -2,9 +2,10 @@
 
 ### Objectives
 
-* Create RESTful routes with the Express Router
-* Use Routers to effectively organize related code
-* Map proper HTTP Verbs to CRUD operations
+* Describe RESTful principles
+* List the seven conventional RESTful routes for a resource
+* Use method-override to implement put and delete routes
+* Use Express routers to effectively organize code
 
 ### Key Terms
 
@@ -257,7 +258,7 @@ In other words, `app.get('/puppies', ...` becomes `router.get('/', ...`.
 
 __EXERCISE__
 
-What should the following routes be changed to in oreder to use the router?
+What should the following routes be changed to in order to use the router?
 
 * `app.get('/puppies', ...`
 * `app.get('/puppies/new',  ...`
@@ -347,7 +348,7 @@ You may have noticed in the router solution, that all of the router code for pup
 
 First, create a new directory in the route of your project called `routes`.
 
-Next, create a file in routes directory called `puppies.js`.  Cut and past all of the code associated with the puppies routes into the `puppies.js` file.  Now we need to add a few things to this file.  First, we need to require express and create a new router.  Then, at the bottom of the file we need to use module.exports to export the router we just created.  Your code should look like this for `puppies.js`:
+Next, create a file in routes directory called `puppies.js`.  Move all of the code associated with the puppies routes into the `puppies.js` file.  Now we need to add a few things to this file.  First, we need to require express and create a new router.  Then, at the bottom of the file we need to use module.exports to export the router we just created.  Your code should look like this for `puppies.js`:
 
 ```javascript
 var express = require('express'),
@@ -417,5 +418,5 @@ app.listen(3000, function() {
 
 __EXERCISE__
 
-Add another route for kittens.  Give the kittens a kitten specific property, like indoor or outdoor.  Add the cat routes to your animal app.  Make to create a separate module for kittens.
+Add another router module for kittens.  Give the kittens a kitten specific property, like indoor or outdoor.  Add the cat routes to your animal app.  Make to create a separate module for kittens.
 

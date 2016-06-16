@@ -59,11 +59,13 @@ Lessons:
 
 # Thursday, June 16
 
-Warmup: [Link to Warmup](http://github.com/gSchool)
+Warmup:
+
+Use draw.io to create an entity relationship diagram for a recipe sharing website. At minimum, the ERD should have entities for users, recipes, and comments. Make sure to list the data type for each field after its name.
 
 Lessons:
-- [Express Middleware](/cohorts/68/student_dashboard)
-- [Integration Testing with Supertest](/cohorts/68/student_dashboard)
+- [Express Middleware](/cohorts/68/articles/4328)
+- [Express Router](/cohorts/68/articles/4329)
 
 ---
 
