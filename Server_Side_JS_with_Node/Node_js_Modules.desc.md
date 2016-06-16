@@ -185,6 +185,71 @@ var myModule3 = require('../myModule3'); // parent path of the current module
 
 ## What's the Express router?
 
+An **Express router** is an mini-application that you can use for attaching groups of middleware. For example, imagine you have two modules—`greet.js` and `server.js`. The `greet.js` module uses an Express router to attach a group of greeting middleware.
+
+```javascript
+'use strict';
+
+var express = require('express');
+var router = express.Router();
+
+router.get('/english', function(req, res) {
+  res.send('Hello world');
+});
+
+router.get('/spanish', function(req, res) {
+  res.send('Hola mundo');
+});
+
+module.exports = router;
+```
+
+After the middleware has been attached, the `greet.js` module exports the `router`. Inside the `server.js` module, the `greet.js` module is required and the router is attached to an Express application.
+
+```javascript
+'use strict';
+
+var express = require('express');
+var app = express();
+var port = process.env.PORT || 8000;
+
+var greet = require('./greet');
+
+app.use(greet);
+
+app.listen(port, function() {
+  console.log('Listening on port', port);
+});
+```
+
+An Express router behaves like middleware itself, so you can use it as an argument to the `app.use()` method.
+
+Save both modules and run the server with the `nodemon` command.
+
+```shell
+nodemon server.js
+```
+
+In a separate Terminal tab, send an HTTP request to the server.
+
+```shell
+http GET localhost:8000/english
+```
+
+And you should see something like this.
+
+![]()
+
+In a separate Terminal tab, send an HTTP request to the server.
+
+```shell
+http GET localhost:8000/spanish
+```
+
+And you should see something like this.
+
+![]()
+
 ## How do you use the Express router?
 
 ```javascript
