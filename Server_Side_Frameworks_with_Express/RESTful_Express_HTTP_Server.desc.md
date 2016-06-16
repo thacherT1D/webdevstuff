@@ -166,7 +166,7 @@ app.post('/guests', function(req, res) {
 app.put('/guests/:id', function(req, res) {
   fs.readFile(guestsPath, 'utf8', function(readErr, guestsJSON) {
     if (readErr) {
-      console.error(err.stack);
+      console.error(readErr.stack);
       return res.sendStatus(500);
     }
 
@@ -189,7 +189,7 @@ app.put('/guests/:id', function(req, res) {
 
     fs.writeFile(guestsPath, newGuestsJSON, function(writeErr) {
       if (writeErr) {
-        console.error(err.stack);
+        console.error(writeErr.stack);
         return res.sendStatus(500);
       }
 
@@ -217,7 +217,7 @@ echo '["Mary"]' > guests.json
 And start your Express server.
 
 ```shell
-nodemon server.js
+nodemon serverExpress.js
 ```
 
 And you should see something like this.
@@ -438,7 +438,7 @@ app.delete('/guests/:id', function(req, res) {
 
     fs.writeFile(guestsPath, newGuestsJSON, function(writeErr) {
       if (writeErr) {
-        console.error(err.stack);
+        console.error(writeErr.stack);
         return res.sendStatus(500);
       }
 
@@ -556,3 +556,5 @@ http DELETE USERNAME-party.herokuapp.com/guests/0
 
 - [Express 4.x - API Reference: Request](http://expressjs.com/en/4x/api.html#req)
 - [Express 4.x - API Reference: Response](http://expressjs.com/en/4x/api.html#res)
+- [API handyman - Do you really know why you prefer REST over RPC?](https://apihandyman.io/do-you-really-know-why-you-prefer-rest-over-rpc/) - Comparing REST to RPC
+- [Startifact - GraphQL and REST](http://blog.startifact.com/posts/graphql-and-rest.html) - Comparing REST to GraphQL

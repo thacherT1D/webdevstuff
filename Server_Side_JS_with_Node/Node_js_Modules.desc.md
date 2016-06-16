@@ -213,7 +213,7 @@ router.get('/guests/:id', function(req, res) {
 router.post('/guests', function(req, res) {
   fs.readFile(guestsPath, 'utf8', function(readErr, guestsJSON) {
     if (readErr) {
-      console.error(err.stack);
+      console.error(readErr.stack);
       return res.sendStatus(500);
     }
 
@@ -243,7 +243,7 @@ router.post('/guests', function(req, res) {
 router.put('/guests/:id', function(req, res) {
   fs.readFile(guestsPath, 'utf8', function(readErr, guestsJSON) {
     if (readErr) {
-      console.error(err.stack);
+      console.error(readErr.stack);
       return res.sendStatus(500);
     }
 
@@ -266,7 +266,7 @@ router.put('/guests/:id', function(req, res) {
 
     fs.writeFile(guestsPath, newGuestsJSON, function(writeErr) {
       if (writeErr) {
-        console.error(err.stack);
+        console.error(writeErr.stack);
         return res.sendStatus(500);
       }
 
@@ -279,7 +279,7 @@ router.put('/guests/:id', function(req, res) {
 router.delete('/guests/:id', function(req, res) {
   fs.readFile(guestsPath, 'utf8', function(readErr, guestsJSON) {
     if (readErr) {
-      console.error(err.stack);
+      console.error(readErr.stack);
       return res.sendStatus(500);
     }
 
@@ -295,7 +295,7 @@ router.delete('/guests/:id', function(req, res) {
 
     fs.writeFile(guestsPath, newGuestsJSON, function(writeErr) {
       if (writeErr) {
-        console.error(err.stack);
+        console.error(writeErr.stack);
         return res.sendStatus(500);
       }
 
