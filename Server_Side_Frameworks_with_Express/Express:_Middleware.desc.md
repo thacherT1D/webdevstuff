@@ -8,7 +8,8 @@
 - Use Body Parser to handle POST request
 
 
-[What is middleware?](http://expressjs.com/guide/using-middleware.html)
+##[What is middleware?](http://expressjs.com/guide/using-middleware.html)
+> "Express is a routing and middleware web framework that has minimal functionality of its own: An Express application is essentially a series of middleware function calls.""
 
 <img src="http://media.developeriq.in/images/nodeexpress_2_9_2015_1.png">
 
@@ -57,4 +58,5 @@ Order matters! What happens if you put your `app.use` statement after your routi
 ## Exercises
 
 [Express Middleware](https://github.com/micah-eberhard/middleware_exercise)
+
 Reading (Optional): [Resource Naming](http://www.restapitutorial.com/lessons/restfulresourcenaming.html)
