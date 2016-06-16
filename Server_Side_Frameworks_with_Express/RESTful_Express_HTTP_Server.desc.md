@@ -467,6 +467,19 @@ git checkout master
 git merge middleware
 ```
 
+```shell
+web: node serverExpress.js
+```
+
+```shell
+git add .
+git commit -m 'Switch Procfile to serverExpress.js'
+```
+
+```shell
+git push heroku master
+```
+
 ## Assignment
 
 [Pet Shop - RESTful Express HTTP Server](https://github.com/gSchool/fs-pet-shop/blob/master/4_rest.md)
