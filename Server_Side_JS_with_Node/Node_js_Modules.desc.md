@@ -1,18 +1,9 @@
-## Understand Node Modules
+## Objectives
 
-**Part 1**
+
+## What are modules?
 
 <iframe src="https://player.vimeo.com/video/142099942?byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-
-**Part 2**
-
-Dig deep into the memory model of modules.
-
-<iframe src="https://player.vimeo.com/video/142102383?byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-
-# Textual Recap and Reference
-
-## What You Learned in Part 1
 
 ### Modules
 
@@ -97,7 +88,11 @@ There are 3 kinds of modules in the node.js ecosystem:
 	* Example Syntax: `var express = require('express');`
 	* The above require statement won't work until after you've run `$ npm install express` in the directory of the file that requires express.
 
-## What You Learned in Part 2
+## What's the memory model of modules?
+
+Dig deep into the memory model of modules.
+
+<iframe src="https://player.vimeo.com/video/142102383?byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 ### Issues with memory / exports Shorthand
 
@@ -181,4 +176,6 @@ var resultTwo = require('./someFile');
 resultTwo.ms = "foo" // Now, even for results in myFile.js, the value of ms is "foo"
 ```
 
-Give it a try -- [https://github.com/gSchool/module-caching-example](https://github.com/gSchool/module-caching-example)
+## Assignment
+
+- [Module Caching Example](https://github.com/gSchool/module-caching-example)
