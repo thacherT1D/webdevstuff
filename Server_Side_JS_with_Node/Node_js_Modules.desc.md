@@ -138,6 +138,10 @@ Each of the above versions of `arithmetic.js` are equivalent.
 
 There are three kinds of modules in the Node.js.
 
+1. Core modules
+1. NPM modules
+1. File modules
+
 ### Core modules
 
 These are the built-in modules in Node.js like `fs`, `http`, and `path`. You require these modules by their name only.
@@ -148,26 +152,16 @@ var http = require('http');
 var path = require('path');
 ```
 
-### File modules
-
-These are modules that you've created on your own, such as the `arithmetic.js` module. When creating a file module, you add values to the `module.exports` object. When you using a file module, you require it into another module by its path to the file module, minus the `.js` extension. These require strings must start with `/`, `./`, or `../` to indicate where on the filesystem Node.js can find that file.
-
-```javascript
-var myModule1 = require('/myModule1');   // absolute directory on the computer
-var myModule2 = require('./myModule2');  // same directory of the current module
-var myModule3 = require('../myModule3'); // parent directory of the current module
-```
-
 ### NPM modules
 
-These are modules from NPM that are installed via the `npm install` command. To see where NPM modules are installed, run the following commands.
+These are modules inside packages that can be downloaded from the [NPM registry](https://npmjs.org) using the `npm install` command. To see where NPM modules are installed, run the following commands.
 
 ```shell
 npm -g root
 npm root
 ```
 
-NPM modules are required into a module without an explicit path, much like the core modules.
+NPM modules are required just like core modules.
 
 ```javascript
 var express = require('express');
@@ -175,7 +169,19 @@ var morgan = require('morgan');
 var bodyParser = require('body-parser');
 ```
 
-Remember, the above require statements won't work until after you've installed these NPM modules with `npm install`.
+Remember, the above `require()` expressions won't work until after you've installed these NPM modules globally with `npm install -g` or locally with `npm install`.
+
+### File modules
+
+These are modules that you've created on your own, such as the `arithmetic.js` module. When creating a file module, you add values to a `module.exports` object using one of the above techniques.
+
+When requiring a file module, you provide a path to the module, minus the `.js` extension. These paths must start with `/`, `./`, or `../` to indicate where on the filesystem Node.js can find the file module.
+
+```javascript
+var myModule1 = require('/myModule1');   // absolute path
+var myModule2 = require('./myModule2');  // same path as the current module
+var myModule3 = require('../myModule3'); // parent path of the current module
+```
 
 ## What's the Express router?
 
