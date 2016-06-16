@@ -1,27 +1,28 @@
 ## Objectives
 
-- Explain what Node.js modules are.
-- Describe how the `module.exports` object works.
-- Describe how the `require()` function works.
+- Explain what a Node.js module is.
+- Split existing code into two modules.
 - Export and require a function.
 - Export and require an object.
+- Explain what the three kinds of modules are.
+- Explain what the Express router is.
 
-## What are Node.js modules?
+## What's a Node.js module?
 
-As far as the Node.js is concerned, you could write all of your JavaScript code in one file. But to humans, it's a totally different story. Imagine that you wanted to reuse a piece of code in another project, but it was buried on line 25,436 of some file. Your only recourse would be to copy that code and paste it to another file. Modules are an elegant solution to this problem.
+As far as the Node.js is concerned, you could write all of your JavaScript code in one file. But to humans, it's really hard to manage thousands of lines of code in a single file. For example, imagine you wanted to reuse a piece of code in another project, but it was buried on line 25,436 of some file. Your only recourse would be to copy that code and paste it into the other project's file. Modules are an elegant solution to this problem.
 
-In Node.js, a **module** is a file. Modules allow you to take pieces of code, split them out into different files, and easily package and reuse them. For example, imagine you have a `printer.js` module and a `calculator.js` module. In this example, the `printer.js` module will require some functionality from the `calculator.js` module.
+In Node.js, a **module** is just a file that contains JavaScript code. And the module system in Node.js allows you to take pieces of code, split them out into separate files, and easily reuse them in different places. For example, imagine you have a `main.js` module and an `arithmetic.js` module. In this example, the `main.js` module will require some functionality from the `arithmetic.js` module.
 
 ```javascript
 'use strict';
 
-var add = require('./calculator');
+var add = require('./arithmetic');
 var result = add(1, 2);
 
 console.log(result);
 ```
 
-And the `calculator.js` module will export the functionality back to the `printer.js` module.
+And the `arithmetic.js` module will export some functionality back to the `main.js` module.
 
 ```javascript
 'use strict';
@@ -31,37 +32,43 @@ module.exports = function(a, b) {
 };
 ```
 
-The function that's exported effectively replaces the `require` expression. Another way to thinks of this would be, the `add` variable is assigned the value of the `module.exports` object.
+The function that's exported effectively replaces the `require()` function. Another way to think of this is that the `add` variable is assigned the value of the `module.exports` object.
 
-## How do you extract a module from existing code?
+### Exercise
 
-If you wanted to extract a module from existing code, here are the steps.
+Turn to a partner and, in your own words, explain what a Node.js module is. Explain to each other how the `module.exports` object works and how the `require()` function works.
+
+## How do you split existing code into two modules?
+
+Here are the steps to split existing code into two modules.
 
 1. Identify which piece of code to export.
 1. Create a new module.
 1. Move that code to the new module.
 1. Assign that code to the `module.exports` object.
-1. Require the new module using the `require()` function.
+1. Require the new module in the original module using the `require()` function.
 
-Modules can export any value, such as a function, a object, a string, a number, a boolean—anything.
+Modules can export any value such as a function, an object, a string, a number, a boolean—anything.
 
-### Exporting a function
+### Export a function
 
-To export a function, you simply assign the function to the `module.exports` object. This is exactly what you did in the previous example.
+To export a function, you simply assign the function to the `module.exports` object. This is exactly what you did in the first example.
 
-Because the `require()` function that just returns a value, and the `calculator.js` module exports a function, you can immediately invoke that function in the `printer.js` module like this.
+Because the `require()` function just returns a value, and the `arithmetic.js` module exports a function, you could immediately invoke that function in the `main.js` module like this.
+
+**NOTE:** Sometimes this is handy and sometimes this makes the code hard to read.
 
 ```javascript
 'use strict';
 
-var result = require('./calculator')(1, 2);
+var result = require('./arithmetic')(1, 2);
 
 console.log(result);
 ```
 
-### Exporting an object
+### Export an object
 
-Exporting an object is very similar. You simply assign the object to the `module.exports` object. Here's an updated `calculator.js` module that exports an object.
+To export an object, you simply assign the object to the `module.exports` object. Here's an updated `arithmetic.js` module that exports an object that contains an `add()` method.
 
 ```javascript
 'use strict';
@@ -73,20 +80,20 @@ module.exports = {
 };
 ```
 
-When requiring the module, you assign the required object to a variable and then access its properties. Here's an updated `printer.js` module that requires the above `calculator.js` module.
+When requiring the module, you assign the required object to a variable and then access its properties. Here's an updated `main.js` module that requires the above `arithmetic.js` module.
 
 ```javascript
 'use strict';
 
-var calculator = require('./calculator');
-var result = calculator.add(1, 2);
+var arithmetic = require('./arithmetic');
+var result = arithmetic.add(1, 2);
 
 console.log(result);
 ```
 
-Here, the `calculator` variable references the entire object that's being exported. And so the `add()` method, references the function that's part of the object being exported.
+Here, the `arithmetic` variable references the entire object that's being exported. And so the `add()` method references the function that's part of the object being exported.
 
-When you're exporting objects, there are three ways you can go about it. Each of the following versions of `calculator.js` are equivalent.
+When you're exporting objects, there are three ways you can go about it. The first way is to assign a new object to the `module.exports` property.
 
 ```javascript
 'use strict';
@@ -99,7 +106,7 @@ module.exports = {
 };
 ```
 
-Because `module.exports` is an object by default, you can assign a value directly to an object property.
+Because `module.exports` is an object by default, the second way is to assign a value directly to one of its properties.
 
 ```javascript
 'use strict';
@@ -110,7 +117,7 @@ module.exports.add = function(a, b) {
 };
 ```
 
-And because `exports` as a shorthand for `module.exports`, you can use the following syntax.
+And because `exports` as a shorthand for `module.exports`, the third way is to assign a value directly to one of its properties.
 
 ```javascript
 'use strict';
@@ -120,6 +127,8 @@ exports.add = function(a, b) {
 	return a + b;
 };
 ```
+
+Each of the above versions of `arithmetic.js` are equivalent.
 
 ## What are the three kinds of modules?
 
@@ -137,7 +146,7 @@ var path = require('path');
 
 ### File modules
 
-These are modules that you've created on your own, such as the `calculator.js` module. When creating a file module, you add values to the `module.exports` object. When you using a file module, you require it into another module by its path to the file module, minus the `.js` extension. These require strings must start with `/`, `./`, or `../` to indicate where on the filesystem Node.js can find that file.
+These are modules that you've created on your own, such as the `arithmetic.js` module. When creating a file module, you add values to the `module.exports` object. When you using a file module, you require it into another module by its path to the file module, minus the `.js` extension. These require strings must start with `/`, `./`, or `../` to indicate where on the filesystem Node.js can find that file.
 
 ```javascript
 var myModule1 = require('/myModule1');   // absolute directory on the computer
