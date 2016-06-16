@@ -66,7 +66,9 @@ Think about what scenarios would cause you to add or remove a RESTful client or 
 
 ## How do you build a RESTful Express server?
 
-Building on the guest list Express server, refactor your `serverExpress.js` file to include the following RESTful middleware.
+Thinking back to the guest list Express server from yesterday, you've already incorporated the read (all), read (individual), and create REST actions for the guest resources. To complete the RESTful Express server, all you need to add is the remaining update and delete REST actions.
+
+Start by opening the `serverExpress.js` file and adding the update REST action.
 
 ```javascript
 'use strict';
