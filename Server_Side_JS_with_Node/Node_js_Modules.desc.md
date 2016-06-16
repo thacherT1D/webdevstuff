@@ -1,7 +1,7 @@
 ## Objectives
 
 - Explain what Node.js modules are.
-- Describe how the `module.exports` property works.
+- Describe how the `module.exports` object works.
 - Describe how the `require()` function works.
 - Export and require a function.
 - Export and require an object.
@@ -33,7 +33,7 @@ module.exports = function(a, b) {
 };
 ```
 
-The function that's exported effectively replaces the `require` expression. Another way to thinks of this would be, the `calculate` variable is assigned the value of the `module.exports` property.
+The function that's exported effectively replaces the `require` expression. Another way to thinks of this would be, the `calculate` variable is assigned the value of the `module.exports` object.
 
 ## How do you extract a module from existing code?
 
@@ -42,14 +42,14 @@ If you wanted to extract a module from existing code, here are the steps.
 1. Identify which piece of code to export.
 1. Create a new module.
 1. Move that code to the new module.
-1. Assign that code to the `module.exports` property.
+1. Assign that code to the `module.exports` object.
 1. Require the new module using the `require()` function.
 
 Modules can export any value, such as a function, a object, a string, a number, a boolean—anything.
 
 ### Exporting a function
 
-To export a function, you simply assign the function to the `module.exports` property. This is exactly what you did in the previous example.
+To export a function, you simply assign the function to the `module.exports` object. This is exactly what you did in the previous example.
 
 Because the `require()` function that just returns a value, and the `calculator.js` module exports a function, you can immediately invoke that function in the `printer.js` module like this.
 
@@ -63,7 +63,7 @@ console.log(result);
 
 ### Exporting an object
 
-Exporting an object is very similar. You simply assign the object to the `module.exports` property. Here's an updated `calculator.js` module that exports an object.
+Exporting an object is very similar. You simply assign the object to the `module.exports` object. Here's an updated `calculator.js` module that exports an object.
 
 ```javascript
 'use strict';
@@ -101,7 +101,7 @@ module.exports = {
 };
 ```
 
-Because `module.exports` is an object by default, you can assign a value directly to a property.
+Because `module.exports` is an object by default, you can assign a value directly to an object property.
 
 ```javascript
 'use strict';
@@ -129,27 +129,43 @@ There are three kinds of modules in the Node.js.
 
 ### Core modules
 
-* These are always built in to node.js. Anytime you run your code with the terminal command `$ node myCode.js` then you can require these modules by their name only
-* Abstract syntax: `var whatever = require('moduleName');`
-* Example modules: `'fs'`, `'http'`
-* Example syntax: `var http = require('http');`
+These are the built-in modules in Node.js like `fs`, `http`, and `path`. You require these modules by their name only.
+
+```javascript
+var fs = require('fs');
+var http = require('http');
+var path = require('path');
+```
 
 ### File modules
 
-*  These are built by you, in our example `calculator.js` is one such module.
-*  You must add the functions and data you want to the `module.exports` object in the file for the module to be properly exported (see the 3 versions of export syntax above).
-*  When you import file modules, you use the path to the file (without the .js filetype) instead of the module name.
-*  These require strings must start with one of `./`, `/`, or `../`:
-	*  `var myModule = require('./filename');` for same directory as the file requireing the module.
-	*  `var myModule = require('/filename');` for an absolute path (meaning relative to your computer's root directory)
-	*  `var myModule = require('../filename');` for relative to the parent folder of the file requiring the module
+These are modules that you've created on your own, such as the `calculator.js` module. When creating a file module, you add values to the `module.exports` object. When you using a file module, you require it into another module by its path to the file module, minus the `.js` extension. These require strings must start with `./`, `../`, or `/`.
+
+```javascript
+var myModule = require('./myModule');  // same directory of the current module
+var myModule = require('../myModule'); // parent directory of the current module
+var myModule = require('/filename');   // absolute directory on the computer
+```
 
 ### NPM modules
 
-* Any module installed using `$ npm install moduleName` is saved in a folder called `node_modules`
-* Such modules can be required much like the Core Modules, without the filepath being made explicit.
-* Example Syntax: `var express = require('express');`
-* The above require statement won't work until after you've run `$ npm install express` in the directory of the file that requires express.
+These are modules from NPM that are installed via the `npm install` command. To see where NPM modules are installed, run the following commands.
+
+```shell
+npm -g root
+npm root
+```
+
+NPM modules are required into a module without an explicit path, much like the core modules.
+
+```javascript
+var express = require('express');
+var morgan = require('morgan');
+var bodyParser = require('body-parser');
+```
+
+Remember, the above require statements won't work until after you've installed these NPM modules with `npm install`.
+
 
 ## What's the memory model of modules?
 
