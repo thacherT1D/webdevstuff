@@ -8,8 +8,6 @@
 
 ## What are Node.js modules?
 
-<iframe src="https://player.vimeo.com/video/142099942?byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-
 As far as the Node.js is concerned, you could write all of your JavaScript code in one file. But to humans, it's a totally different story. Imagine that you wanted to reuse a piece of code, but it was buried on line 25,436 of some file. Your only recourse would be to copy that code to some file. But modules solve this problem.
 
 In Node.js, a **module** is a file. Modules allow you to take pieces of code, split them out into different files, and easily package them and reuse them. At it's core, the Node.js module system requires more than one file. For example, imagine you have a `printer.js` module and a `calculator.js` module. In this example, the `printer.js` module will require some functionality from the `calculator.js` module.
@@ -139,7 +137,7 @@ var path = require('path');
 
 ### File modules
 
-These are modules that you've created on your own, such as the `calculator.js` module. When creating a file module, you add values to the `module.exports` object. When you using a file module, you require it into another module by its path to the file module, minus the `.js` extension. These require strings must start with `/`, `./`, or `../`.
+These are modules that you've created on your own, such as the `calculator.js` module. When creating a file module, you add values to the `module.exports` object. When you using a file module, you require it into another module by its path to the file module, minus the `.js` extension. These require strings must start with `/`, `./`, or `../` to indicate where on the filesystem Node.js can find that file.
 
 ```javascript
 var myModule1 = require('/myModule1');   // absolute directory on the computer
@@ -258,3 +256,9 @@ resultTwo.ms = "foo" // Now, even for results in myFile.js, the value of ms is "
 ## Assignment
 
 - [Module Caching Example](https://github.com/gSchool/module-caching-example)
+
+##
+
+## Resources
+
+<iframe src="https://player.vimeo.com/video/142099942?byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
