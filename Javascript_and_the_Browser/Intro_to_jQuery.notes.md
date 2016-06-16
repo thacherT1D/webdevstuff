@@ -19,18 +19,24 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 1.  Have the students read up to "Dom Manipulation."
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 - Questions (All using jQuery of course!):
     - How would you select something with the ID 'cat'?
     - How would you select everything with the class 'dog', and store it in a variable?
@@ -60,4 +66,7 @@
 
 
 
-2.  
+
+>   Slides
+
+2.  Read through the rest of the article, and begin working on the jQuery Playground.
