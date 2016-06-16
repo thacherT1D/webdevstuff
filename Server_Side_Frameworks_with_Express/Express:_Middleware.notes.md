@@ -29,9 +29,10 @@
 #Direction >>
 
 1.   Explain the idea of middleware. It allows you to chain many possible actions onto specified requests.
-> Have them read through the top part of the middleware docs
+> 5 Minutes! - Have them read through the top part of the middleware docs
 
 2.   Have students talk with their tables and come up with two examples of middleware we've already used.
+
 3.   Explain that almost everything in express is actually middleware. All the routes etc... Order matters.
 > Live code a small example. "Watch this because you're all going to be writing one of these for me in a minute."
 

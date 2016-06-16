@@ -36,6 +36,7 @@ Note that without using `express.static`, your static files won't be found! If y
 
 ### Body-Parser
 
+[docs](https://www.npmjs.com/package/body-parser)
 Let's install our next middleware. It's called `body-parser` and it will parse the body of a request being sent to us by the browser when a form is submitted.
 
 As we've seen, the way to capture form values using a `GET` request is through `req.query`
