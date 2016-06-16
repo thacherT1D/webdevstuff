@@ -540,9 +540,9 @@ var express = require('express');
 var app = express();
 var port = process.env.PORT || 8000;
 
-app.disable('x-powered-by');
-
 var morgan = require('morgan');
+
+app.disable('x-powered-by');
 app.use(morgan('short'));
 
 app.get('/guests', function(req, res) {
@@ -610,9 +610,9 @@ var express = require('express');
 var app = express();
 var port = process.env.PORT || 8000;
 
-app.disable('x-powered-by');
-
 var morgan = require('morgan');
+
+app.disable('x-powered-by');
 app.use(morgan('short'));
 
 app.use(function(req, res, next) {
@@ -651,7 +651,8 @@ app.get('/guests', function(req, res) {
 app.post('/guests', function(req, res) {
   fs.readFile(guestsPath, 'utf8', function(readErr, guestsJSON) {
     if (readErr) {
-      return next(readErr);
+      console.error(readErr.stack);
+      return res.sendStatus(500);
     }
 
     var guests = JSON.parse(guestsJSON);
@@ -667,7 +668,8 @@ app.post('/guests', function(req, res) {
 
     fs.writeFile(guestsPath, newGuestsJSON, function(writeErr) {
       if (writeErr) {
-        return next(writeErr);
+        console.error(writeErr.stack);
+        return res.sendStatus(500);
       }
 
       res.send(guest);
@@ -753,12 +755,11 @@ var express = require('express');
 var app = express();
 var port = process.env.PORT || 8000;
 
-app.disable('x-powered-by');
-
 var morgan = require('morgan');
-app.use(morgan('short'));
-
 var bodyParser = require('body-parser');
+
+app.disable('x-powered-by');
+app.use(morgan('short'));
 app.use(bodyParser.json());
 
 app.get('/guests', function(req, res) {
@@ -777,7 +778,8 @@ app.get('/guests', function(req, res) {
 app.post('/guests', function(req, res) {
   fs.readFile(guestsPath, 'utf8', function(readErr, guestsJSON) {
     if (readErr) {
-      return next(readErr);
+      console.error(readErr.stack);
+      return res.sendStatus(500);
     }
 
     var guests = JSON.parse(guestsJSON);
@@ -793,7 +795,8 @@ app.post('/guests', function(req, res) {
 
     fs.writeFile(guestsPath, newGuestsJSON, function(writeErr) {
       if (writeErr) {
-        return next(writeErr);
+        console.error(writeErr.stack);
+        return res.sendStatus(500);
       }
 
       res.send(guest);

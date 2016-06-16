@@ -3,7 +3,7 @@
 - Describe what REST is.
 - Explain why REST is important.
 - Explain how REST works.
-- Build a RESTful Express server.
+- Create a RESTful Express server.
 
 ## What's REST?
 
@@ -11,7 +11,7 @@
 
 -  Clients are concerned with user interface.
 -  Servers are concerned with data persistence.
--  Clients and servers communicate over a uniform HTTP interface.
+-  Clients and servers communicate over a well-defined HTTP interface.
 -  Clients and servers think about data in terms of resources.
 -  Clients send HTTP requests to create, read, update, and destroy resources.
 -  Servers send HTTP responses to indicate the result of these operations.
@@ -28,133 +28,205 @@ REST is one way of structuring client-server HTTP communication. However, it's a
 Imagine a RESTful HTTP server manages the persistence of the following guest resources.
 
 ```javascript
-var guests = [{ name: 'Teagan' }];
+var guests = [{ name: 'Mary' }];
 ```
 
-The server handles the following REST actions by mapping them to specific HTTP requests.
+The server handles the following RESTful actions by mapping them to specific HTTP requests. In other words, each RESTful action performs a unique operation on the guest resources.
 
 | REST Action       | Request Method | Request URL | Request Body |
 |-------------------|----------------|-------------|--------------|
 | Read (all)        | `GET`          | `/guests`   | N/A          |
 | Read (individual) | `GET`          | `/guests/0` | N/A          |
-| Create            | `POST`         | `/guests`   | `name=Mary`  |
-| Update            | `PUT`          | `/guests/0` | `name=Don`   |
+| Create            | `POST`         | `/guests`   | `name=Don`   |
+| Update            | `PUT`          | `/guests/0` | `name=Kate`  |
 | Destroy           | `DELETE`       | `/guests/0` | N/A          |
 
-The server handles each REST action by performing a unique operation on the guest resources. If the following REST actions are performed sequentially, the guest resources will look like the following after each operation.
+If the above RESTful actions are performed sequentially, the guest resources will look like this after each operation.
 
-| REST Action       | Guest Resources                      |
-|-------------------|--------------------------------------|
-| Read (all)        | `[{ name: 'Teagan' }]`               |
-| Read (individual) | `[{ name: 'Teagan' }]`               |
-| Create            | `[{ name: 'Teagan', name: 'Mary' }]` |
-| Update            | `[{ name: 'Don', name: 'Mary' }]`    |
-| Destroy           | `[{ name: 'Mary' }]`                 |
+| REST Action       | Guest Resources                   |
+|-------------------|-----------------------------------|
+| Read (all)        | `[{ name: 'Mary' }]`              |
+| Read (individual) | `[{ name: 'Mary' }]`              |
+| Create            | `[{ name: 'Mary', name: 'Don' }]` |
+| Update            | `[{ name: 'Kate', name: 'Don' }]` |
+| Destroy           | `[{ name: 'Kate' }]`              |
 
-Once the REST action is complete, the server sends a specific HTTP response back to the client indicating the result of the operation.
+Once the RESTful action is complete, the server sends a specific HTTP response back to the client indicating the result of the operation.
 
 | REST Action       | Response Status | Response Content-Type | Response Body          |
 |-------------------|-----------------|-----------------------|------------------------|
-| Read (all)        | `200`           | `application/json`    | `[{ name: 'Teagan' }]` |
-| Read (individual) | `200`           | `application/json`    | `{ name: 'Teagan' }`   |
-| Create            | `200`           | `application/json`    | `{ name: 'Mary' }`     |
-| Update            | `200`           | `application/json`    | `{ name: 'Don' }`      |
-| Destroy           | `200`           | `application/json`    | `{ name: 'Don' }`      |
+| Read (all)        | `200`           | `application/json`    | `[{ name: '`Mary`' }]` |
+| Read (individual) | `200`           | `application/json`    | `{ name: 'Mary' }`     |
+| Create            | `200`           | `application/json`    | `{ name: 'Don' }`      |
+| Update            | `200`           | `application/json`    | `{ name: 'Kate' }`     |
+| Destroy           | `200`           | `application/json`    | `{ name: 'Kate' }`     |
 
 A **safe** REST action is one that doesn't modify any resources. Which REST actions from the above example are safe?
 
 ## How do you build a RESTful Express server?
 
-Building on the **Express: Middleware** article, refactor your `server.js` file to include the following RESTful middleware.
+Building on the guest list Express server, refactor your `serverExpress.js` file to include the following RESTful middleware.
 
 ```javascript
 'use strict';
 
+var fs = require('fs');
+var path = require('path');
+var guestsPath = path.join(__dirname, 'guests.json');
+
 var express = require('express');
 var app = express();
-
-var guests = [{ name: 'Teagan' }];
-
-app.disable('x-powered-by');
-app.set('port', process.env.PORT || 5000);
+var port = process.env.PORT || 8000;
 
 var morgan = require('morgan');
-app.use(morgan('short'));
-
 var bodyParser = require('body-parser');
+
+app.disable('x-powered-by');
+app.use(morgan('short'));
 app.use(bodyParser.json());
 
 app.get('/guests', function(req, res) {
-  res.send(guests);
+  fs.readFile(guestsPath, 'utf8', function(err, guestsJSON) {
+    if (err) {
+      console.error(err.stack);
+      return res.sendStatus(500);
+    }
+
+    var guests = JSON.parse(guestsJSON);
+
+    res.send(guests);
+  });
 });
 
-app.get('/guests/:index', function(req, res) {
-  var index = Number.parseInt(req.params.index);
+app.get('/guests/:id', function(req, res) {
+  fs.readFile(guestsPath, 'utf8', function(err, newGuestsJSON) {
+    if (err) {
+      console.error(err.stack);
+      return res.sendStatus(500);
+    }
 
-  if (Number.isNaN(index) || index < 0 || index >= guests.length) {
-    return res.sendStatus(404);
-  }
+    var id = Number.parseInt(req.params.id);
+    var guests = JSON.parse(newGuestsJSON);
 
-  res.send(guests[index]);
+    if (id < 0 || id >= guests.length || Number.isNaN(id)) {
+      return res.sendStatus(404);
+    }
+
+    res.send(guests[id]);
+  });
 });
 
 app.post('/guests', function(req, res) {
-  var guest = req.body;
+  fs.readFile(guestsPath, 'utf8', function(readErr, guestsJSON) {
+    if (readErr) {
+      console.error(err.stack);
+      return res.sendStatus(500);
+    }
 
-  if (!guest) {
-    return res.sendStatus(400);
-  }
+    var guests = JSON.parse(guestsJSON);
+    var guest = req.body.name;
 
-  guests.push(guest);
+    if (!guest) {
+      return res.sendStatus(400);
+    }
 
-  res.send(guest);
+    guests.push(guest);
+
+    var newGuestsJSON = JSON.stringify(guests);
+
+    fs.writeFile(guestsPath, newGuestsJSON, function(writeErr) {
+      if (writeErr) {
+        console.error(writeErr.stack);
+        return res.sendStatus(500);
+      }
+
+      res.send(guest);
+    });
+  });
 });
 
-app.put('/guests/:index', function(req, res) {
-  var index = Number.parseInt(req.params.index);
+app.put('/guests/:id', function(req, res) {
+  fs.readFile(guestsPath, 'utf8', function(readErr, guestsJSON) {
+    if (readErr) {
+      console.error(err.stack);
+      return res.sendStatus(500);
+    }
 
-  if (Number.isNaN(index) || index < 0 || index >= guests.length) {
-    return res.sendStatus(404);
-  }
+    var id = Number.parseInt(req.params.id);
+    var guests = JSON.parse(guestsJSON);
 
-  var guest = req.body;
+    if (id < 0 || id >= guests.length || Number.isNaN(id)) {
+      return res.sendStatus(404);
+    }
 
-  if (!guest) {
-    return res.sendStatus(400);
-  }
+    var guest = req.body.name;
 
-  guests[index] = guest;
+    if (!guest) {
+      return res.sendStatus(400);
+    }
 
-  res.send(guest);
+    guests[id] = guest;
+
+    const newGuestsJSON = JSON.stringify(guests);
+
+    fs.writeFile(guestsPath, newGuestsJSON, (writeErr) => {
+      if (writeErr) {
+        console.error(err.stack);
+        return res.sendStatus(500);
+      }
+
+      res.send(guest);
+    });
+  });
 });
 
-app.delete('/guests/:index', function(req, res) {
-  var index = Number.parseInt(req.params.index);
+app.delete('/guests/:id', function(req, res) {
+  fs.readFile(guestsPath, 'utf8', function(readErr, guestsJSON) {
+    if (readErr) {
+      console.error(err.stack);
+      return res.sendStatus(500);
+    }
 
-  if (Number.isNaN(index) || index < 0 || index >= guests.length) {
-    return res.sendStatus(404);
-  }
+    var id = Number.parseInt(req.params.id);
+    var guests = JSON.parse(guestsJSON);
 
-  var guest = guests.splice(index, 1)[0];
+    if (id < 0 || id >= guests.length || Number.isNaN(id) ) {
+      return res.sendStatus(404);
+    }
 
-  res.send(guest);
+    var guest = guests.splice(index, 1)[0];
+    var newGuestsJSON = JSON.stringify(guests);
+
+    fs.writeFile(guestsPath, newGuestsJSON, (writeErr) => {
+      if (writeErr) {
+        console.error(err.stack);
+        return res.sendStatus(500);
+      }
+
+      res.send(guest);
+    });
+  });
 });
 
-app.listen(app.get('port'), function() {
-  console.log('Listening on', app.get('port'));
+app.use(function(req, res) {
+  res.sendStatus(404);
+});
+
+app.listen(port, function() {
+  console.log('Listening on port', port);
 });
 ```
 
 Now, start your Express server.
 
-```bash
+```shell
 nodemon server.js
 ```
 
-And in a new Terminal tab, send an HTTP request to your server to read all the guest resources.
+And in a separate Terminal tab, send an HTTP request to your server to read all the guest resources.
 
-```bash
-http GET localhost:5000/guests
+```shell
+http GET localhost:8000/guests
 ```
 
 And you should see something like this.
@@ -176,8 +248,8 @@ ETag: W/"13-eZMtvf4MUiEAJpKhww5ZlQ"
 
 Send another HTTP request to read an individual guest resource.
 
-```bash
-http GET localhost:5000/guests/0
+```shell
+http GET localhost:8000/guests/0
 ```
 
 And you should see something like this.
@@ -197,8 +269,8 @@ ETag: W/"11-0KyDlj1psIN3xnEMJsjMJg"
 
 Send an HTTP request to create an individual guest resource.
 
-```bash
-http POST localhost:5000/guests name=Mary
+```shell
+http POST localhost:8000/guests name=Mary
 ```
 
 And you should see something like this.
@@ -218,8 +290,8 @@ ETag: W/"f-pPOBaT8aXBbirJ2irXvIdg"
 
 Send another HTTP request to read an individual guest resource.
 
-```bash
-http GET localhost:5000/guests/1
+```shell
+http GET localhost:8000/guests/1
 ```
 
 And you should see something like this.
@@ -239,8 +311,8 @@ ETag: W/"f-pPOBaT8aXBbirJ2irXvIdg"
 
 Send an HTTP request to read all the guest resources.
 
-```bash
-http GET localhost:5000/guests
+```shell
+http GET localhost:8000/guests
 ```
 
 And you should see something like this.
@@ -265,8 +337,8 @@ ETag: W/"23-bh9WCahnDHTY1E+InF4FTA"
 
 Send an HTTP request to update an individual guest resource.
 
-```bash
-http PUT localhost:5000/guests/0 name=Don
+```shell
+http PUT localhost:8000/guests/0 name=Don
 ```
 
 And you should see something like this.
@@ -286,8 +358,8 @@ ETag: W/"e-GMWKG7r0SW1dvTJlsqKZRA"
 
 Send an HTTP request to update an individual guest resource.
 
-```bash
-http GET localhost:5000/guests/0
+```shell
+http GET localhost:8000/guests/0
 ```
 
 And you should see something like this.
@@ -307,8 +379,8 @@ ETag: W/"e-GMWKG7r0SW1dvTJlsqKZRA"
 
 Send an HTTP request to destroy an individual guest resource.
 
-```bash
-http DELETE localhost:5000/guests/0
+```shell
+http DELETE localhost:8000/guests/0
 ```
 
 And you should see something like this.
@@ -329,7 +401,7 @@ ETag: W/"e-GMWKG7r0SW1dvTJlsqKZRA"
 Send an HTTP request to read all the guest resources.
 
 ```
-http GET localhost:5000/guests
+http GET localhost:8000/guests
 ```
 
 And you should see something like this.
