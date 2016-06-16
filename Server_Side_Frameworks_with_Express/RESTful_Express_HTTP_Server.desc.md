@@ -268,7 +268,7 @@ And you should see something like this.
 
 ![](https://i.imgur.com/T7WeKdo.png)
 
-Send an HTTP request to update an individual guest resource.
+Send an HTTP request to read an individual guest resource.
 
 ```shell
 http GET localhost:8000/guests/0
@@ -449,7 +449,7 @@ And you should see something like this.
 
 Send an HTTP request to read all the guest resources.
 
-```
+```shell
 http GET localhost:8000/guests
 ```
 
