@@ -529,11 +529,11 @@ Next, create a `package.json` file for your project using NPM. This lets Heroku 
 npm init
 ```
 
-Then, in the `package.json` file, specify the version of Node.js for Heroku to use in production. It's a good idea to use the same version as your development environment.
+Then, in the `package.json` file, specify the version of Node.js for Heroku to use in production. It's a good idea to use the same version as your development environment. To find out what version is on your development environment, run the `node -v` command.
 
 ```text
 "engines": {
-  "node": "6.2.1"
+  "node": "YOUR DEV ENV NODE VERSION"
 }
 ```
 
