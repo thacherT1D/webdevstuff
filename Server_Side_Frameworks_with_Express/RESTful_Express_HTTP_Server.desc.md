@@ -223,12 +223,15 @@ Now, save the `serverExpress.js` file and add the following data to the `guests.
 echo '["Mary"]' > guests.json
 ```
 
-
 And start your Express server.
 
 ```shell
 nodemon server.js
 ```
+
+And you should see something like this.
+
+![](https://i.imgur.com/sd4WnE5.png)
 
 And in a separate Terminal tab, send an HTTP request to your server to read all the guest resources.
 
@@ -238,18 +241,7 @@ http GET localhost:8000/guests
 
 And you should see something like this.
 
-```
-HTTP/1.1 200 OK
-Connection: keep-alive
-Content-Length: 19
-Content-Type: application/json; charset=utf-8
-Date: Thu, 24 Mar 2016 15:43:00 GMT
-ETag: W/"13-eZMtvf4MUiEAJpKhww5ZlQ"
-
-[
-    "Mary"
-]
-```
+![](https://i.imgur.com/vcxcJ7J.png)
 
 Send another HTTP request to read an individual guest resource.
 
