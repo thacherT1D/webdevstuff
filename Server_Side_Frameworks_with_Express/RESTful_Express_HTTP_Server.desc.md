@@ -516,9 +516,7 @@ Now, deploy your project by pushing your local `master` branch to Heroku's `mast
 git push heroku master
 ```
 
-Finally, you can send a RESTful HTTP requests to the server running on the production environment.
-
-**NOTE:** Remember to replace `USERNAME` with your GitHub username.
+Finally, you can send a RESTful HTTP requests to the server running on the production environment. Remember to replace `USERNAME` with your GitHub username.
 
 To read all guest resources, send the following RESTful HTTP request.
 
