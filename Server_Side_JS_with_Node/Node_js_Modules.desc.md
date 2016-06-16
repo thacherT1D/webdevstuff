@@ -164,99 +164,16 @@ var bodyParser = require('body-parser');
 
 Remember, the above require statements won't work until after you've installed these NPM modules with `npm install`.
 
-
-## What's the memory model of modules?
-
-Dig deep into the memory model of modules.
-
-<iframe src="https://player.vimeo.com/video/142102383?byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-
-### Issues with memory / exports Shorthand
-
-Even though we learned that `exports` is a short hand for `module.exports` in the last video, we learned in this video that `exports = 42;` will not work, but `module.exports = 42` will work.  This is because the __value__ of the __exports property__ of the __module object__ is wha's __returned__ from require.
-
-Consider these two versions of a very short file, printer.js:
-
-```
-module.exports = 42;
-```
-
-vs
-
-```
-exports = 42;
-```
-
-Because of the way node.js works, the local variable `exports` begins as a reference to an object on the variable `module`. This snippet of code would create such a situation:
-
-```
-var module = {};
-module.exports = {};
-var exports = module.exports;
-```
-
-Remember, objects are reference types, so the local variable exports is a pointer to the object in memory. The object was created one line above, so now module.exports and exports are the same variable. Now, say we want to change the value of module.exports, that code might look like:
-
-```
-var module = {};
-module.exports = {};
-var exports = module.exports;
-
-module.exports = 42; // Module is a reference type, so this changes the object in memory that module points to
-```
-
-Alternately we might do:
-
-```
-var module = {};
-module.exports = {};
-var exports = module.exports;
-
-exports = 42;
-```
-
-This time, we're changing the value of the local variable directly, instead of changing object in memory __that module points to__. This time module.exports is still an empty object, and the local variable exports is the value 42.
-
-### Issues with Memory / Module Caching
-
-In programming, caching rougly means 'saving a computed value for future use'. In node.js, the first time a module is required during any given run of a script, that module is cached. For example, lets say we have two files that both require the same node module called `someFile.js`:
-
-someFile.js:
-
-```
-module.exports.ms = 500;
-```
-
-myFile.js:
-
-```
-var result = require('./someFile');
-
-// result now points to an object in memory with a single property ms which is 500 (for now)
-console.log(result.ms); // logs 500
-
-require('./alternate-file');
-
-// Now, even though we did not use result = require('./alternate-file'); the value of result.ms
-// has been changed, due to node.js and module caching.
-
-console.log(result.ms);
-```
-
-alternate-file.js:
-
-```
-var resultTwo = require('./someFile');
-
-// resultTwo points to the same object that result (in myFile.js) points to.
-
-resultTwo.ms = "foo" // Now, even for results in myFile.js, the value of ms is "foo"
-```
-
 ## Assignment
 
 - [Module Caching Example](https://github.com/gSchool/module-caching-example)
 
 ## Resources
 
+### Node.js Modules - Part 1
+
 <iframe src="https://player.vimeo.com/video/142099942?byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+### Node.js Modules - Part 2
+
+<iframe src="https://player.vimeo.com/video/142102383?byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
