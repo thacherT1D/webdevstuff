@@ -522,9 +522,13 @@ Finally, you can send a RESTful HTTP requests to the server running on the produ
 
 ```shell
 http GET USERNAME-party.herokuapp.com/guests
+
 http GET USERNAME-party.herokuapp.com/guests/0
+
 http POST USERNAME-party.herokuapp.com/guests name=Don
+
 http PUT USERNAME-party.herokuapp.com/guests/0 name=Kate
+
 http DELETE USERNAME-party.herokuapp.com/guests/0
 ```
 
