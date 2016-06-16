@@ -11,7 +11,7 @@
 
 -  Clients are concerned with user interface.
 -  Servers are concerned with data persistence.
--  Clients and servers communicate over a well-defined HTTP interface.
+-  Clients and servers communicate over a well-defined HTTP contract.
 -  Clients and servers think about data in terms of resources.
 -  Clients send HTTP requests to create, read, update, and destroy resources.
 -  Servers send HTTP responses to indicate the result of these operations.
