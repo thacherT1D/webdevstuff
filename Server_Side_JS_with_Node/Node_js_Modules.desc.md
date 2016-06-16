@@ -24,6 +24,8 @@ console.log(result);
 
 And the `arithmetic.js` module will export some functionality back to the `main.js` module.
 
+**NOTE:** In Node.js, `module` is a global variable with a `exports` property that references an empty object by default.
+
 ```javascript
 'use strict';
 
@@ -119,6 +121,8 @@ module.exports.add = function(a, b) {
 
 And because `exports` as a shorthand for `module.exports`, the third way is to assign a value directly to one of its properties.
 
+**NOTE:** In Node.js, `export` is a global variable that references the `module.export` object by default.
+
 ```javascript
 'use strict';
 
@@ -128,7 +132,16 @@ exports.add = function(a, b) {
 };
 ```
 
-Each of the above versions of `arithmetic.js` are equivalent.
+Each of the above versions of `arithmetic.js` are equivalent. However, be aware that you can't assign a value directly to the `exports` global variable.
+
+```javascript
+'use strict';
+
+// does not work
+exports = function(a, b) {
+	return a + b;
+};
+```
 
 ## What are the three kinds of modules?
 
