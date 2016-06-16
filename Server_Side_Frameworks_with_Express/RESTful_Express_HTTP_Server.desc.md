@@ -57,9 +57,9 @@ Once the RESTful action is complete, the server sends a specific HTTP response b
 |-------------------|-----------------|-----------------------|---------------|
 | Read (all)        | `200`           | `application/json`    | `['Mary']`    |
 | Read (individual) | `200`           | `application/json`    | `'Mary'`      |
-| Create            | `200`           | `application/json`    | `'Don'        |
-| Update            | `200`           | `application/json`    | `'Kate'       |
-| Destroy           | `200`           | `application/json`    | `'Kate'       |
+| Create            | `200`           | `application/json`    | `'Don'`       |
+| Update            | `200`           | `application/json`    | `'Kate'`      |
+| Destroy           | `200`           | `application/json`    | `'Kate'`      |
 
 A **safe** REST action is one that doesn't modify any resources. Which REST actions from the above example are safe?
 
