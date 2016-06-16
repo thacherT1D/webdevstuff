@@ -53,7 +53,7 @@ Before we start writing the application logic, let's setup our database. First c
 
 ```
 CREATE TABLE puppies (id serial, name varchar(255));
-INSERT INTO puppies (name, breed) VALUES ('george'), ('max'), ('bob');
+INSERT INTO puppies (name) VALUES ('george'), ('max'), ('bob');
 ```
 
 Now create an animals db and import the seed data:
