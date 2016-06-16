@@ -66,7 +66,7 @@ Think about what scenarios would cause you to add or remove a RESTful client or 
 
 ## How do you build a RESTful Express server?
 
-Thinking back to the guest list Express server from yesterday, you've already incorporated the read (all), read (individual), and create REST actions for the guest resources. To complete the RESTful Express server, all you need to add is the remaining update and delete REST actions.
+Thinking back to the guest list Express server from yesterday, you've already incorporated the read (all), read (individual), and create REST actions for the guest resources. To complete the RESTful Express server, all you need to add is the remaining update and destry REST actions.
 
 To get started, return to the `party` project from yesterday and create a new `rest` feature branch.
 
@@ -301,7 +301,7 @@ git add .
 git commit -m 'Add update REST action'
 ```
 
-Now, add the following delete REST action to the `serverExpress.js` file.
+Now, add the following destry REST action to the `serverExpress.js` file.
 
 ```javascript
 'use strict';
@@ -481,7 +481,7 @@ Next, add and commit the latest changes to the `party` project's `rest` branch.
 
 ```shell
 git add .
-git commit -m 'Add delete REST action'
+git commit -m 'Add destroy REST action'
 ```
 
 Finally, merge the commits from the `rest` branch to the `master` branch, run the following commands.
@@ -518,23 +518,33 @@ git push heroku master
 
 Finally, you can send a RESTful HTTP requests to the server running on the production environment.
 
-**NOTE:** Replace `USERNAME` with your GitHub username.
+**NOTE:** Remember to replace `USERNAME` with your GitHub username.
+
+To read all guest resources, send the following RESTful HTTP request.
 
 ```shell
 http GET USERNAME-party.herokuapp.com/guests
 ```
 
+To read an individual guest resource, send the following RESTful HTTP request.
+
 ```shell
 http GET USERNAME-party.herokuapp.com/guests/0
 ```
+
+To create a guest resource, send the following RESTful HTTP request.
 
 ```shell
 http POST USERNAME-party.herokuapp.com/guests name=Don
 ```
 
+To update a guest resource, send the following RESTful HTTP request.
+
 ```shell
 http PUT USERNAME-party.herokuapp.com/guests/0 name=Kate
 ```
+
+To destroy a guest resource, send the following RESTful HTTP request.
 
 ```shell
 http DELETE USERNAME-party.herokuapp.com/guests/0
