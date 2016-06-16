@@ -170,10 +170,10 @@ Remember, the above require statements won't work until after you've installed t
 
 ## Resources
 
-### Node.js Modules - Part 1
+### Node.js Modules Part 1
 
 <iframe src="https://player.vimeo.com/video/142099942?byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
-### Node.js Modules - Part 2
+### Node.js Modules Part 2
 
 <iframe src="https://player.vimeo.com/video/142102383?byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
