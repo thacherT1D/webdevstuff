@@ -71,7 +71,7 @@ Lessons:
 
 # Friday, June 17
 
-Warmup: [Typing.io](typing.io)
+Warmup: [Typing.io](http://www.typing.io)
 
 
 Crush Code Friday: [CCF](/cohorts/68/student_dashboard)
