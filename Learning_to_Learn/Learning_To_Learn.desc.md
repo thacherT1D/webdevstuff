@@ -9,7 +9,7 @@ Being a student in this program is like drinking from a firehose. It's going to 
 
 ---
 
-#### Why is becoming a better learner important?
+## Why is becoming a better learner important?
 
 Learning is essential to being a programmer. It's a huge field with new technologies and methodologies being discovered every day. Becoming a better learner will prepare you for a long and successful career. Also, we want Galvanize to be a transformative experience for you. In addition to programming skills and knowledge, we want to help grow your habits and mindsets.
 
@@ -21,7 +21,7 @@ With our strong instructional team, teaching techniques, curriculum, and environ
 
 This difference in learning speed before and after the program is what it means to be transformed and to become a new person.
 
-#### How do I become a better learner?
+## How do I become a better learner?
 
 To become a better learner, we recommend this three step learning process which you can start thinking about and working on today.
 
@@ -42,7 +42,7 @@ To become a better learner, we recommend this three step learning process which 
 
 ---
 
-#### Set the stage
+## Set the stage
 
 The first major step to becoming a better learner is to set the stage. This step of the process is about priming your brain to receive new information. Setting the stage consists of three sub-steps.
 
@@ -50,7 +50,7 @@ The first major step to becoming a better learner is to set the stage. This step
 1. Clarify the what and the why
 1. Prioritize process over product
 
-##### Clear the stage
+### Clear the stage
 
 The first part of setting the stage is clearing it. That means you have to get rid of everything in your working memory that's not relevant to the task at hand. We have very limited space in our working memory, just like the RAM in a computer. Therefore, if you hope to learn as much as possible and to think as critically as possible, you need to get those things out of your head.
 
@@ -60,7 +60,7 @@ Another key component of clearing the stage is turning off all distractions and 
 
 If you haven't already done so, take a moment to turn off all the distractions that are around you right now.
 
-##### Clarify the what and the why
+### Clarify the what and the why
 
 The second part of setting the stage is clarifying that what and the why.
 
@@ -68,7 +68,7 @@ The what is your objective, your goal, or whatever you're trying to achieve when
 
 The why is the meaning or motivation behind the learning. Being human is to be driven by meaning and narrative. If you can frame something you're about to do in terms that motivate you, your brain will be better primed to retain the information that's presented. No matter the topic, have a clear understanding of why the topic is important, how it'll help, or how it relates to the bigger picture. Your instructors have a responsibility to clarify the why for you as well. So if you're ever unsure about why they're teaching you something, just ask.
 
-##### Prioritize process over product
+### Prioritize process over product
 
 The last part of setting the stage is about prioritizing process over product. In other words, defining success as simply spending time doing focused and deliberate practice. This program is going to be very difficult at times. You may not fully understand some of the concepts on the first try. And you may not reach your end goal in the period of time that you set out to do your work. This is perfectly fine so long as you're challenging yourself to get better while in the [zone of proximal development](https://en.wikipedia.org/wiki/Zone_of_proximal_development).
 
@@ -78,7 +78,7 @@ While in the zone of proximal development, doing focused and deliberate practice
 
 ---
 
-#### Play
+## Play
 
 So the second major step to becoming a better learner is to play. This word is chosen very carefully as children learn at much faster rate than adults and neurological research suggests that play has a big part of it. When you think about it, it makes sense too. Children just have different attitudes when it comes to what they're trying learn and why they're doing it.
 
@@ -88,7 +88,7 @@ Like setting the stage, this step of the process consists of three sub-steps as 
 1. Take risks
 1. Have fun!
 
-##### Wrestle with it
+### Wrestle with it
 
 The first part of play is to take any new information you receive and wrestle with it. In other words, think about it from different perspectives. Never be satisfied with exposing yourself to new information only once. Ask yourself questions about it, dive in, try to learn as much as you can about it.
 
@@ -98,7 +98,7 @@ If you look at this object just once from and from one angle, then you'll have a
 
 This is the goal with everything you'll learn here at Galvanize. To gain familiarity, build fluency, and eventually become intuitive with programming. Just exposing yourself to something once will never be enough. So read about it, write notes about it, write code about it, write blogs about it, talk about it, and listen about it. Do everything you can to perceive new information from as many different angles as possible so it's massaged into your long term memory.
 
-##### Take risks
+### Take risks
 
 While you're playing, take risks. Be willing to make mistakes. Be willing to do something you don't know how to do yet with the understanding that it may not work out like you intend.
 
@@ -116,7 +116,7 @@ Training your mind with a growth mindset can be very difficult. But the reward f
 
 <img src="https://i.imgur.com/HiEOCHw.jpg" height='50%' width='50%' style="display: block; margin: 0 auto; padding: 25px;">
 
-##### Have fun!
+### Have fun!
 
 And the last, but equally important part of play is to have fun. If you find your jaw clenched, your shoulders tight, or your breath panicked while you're wrestling and taking risks, you're probably not having much fun. And if you're not having fun, then you're really not playing.
 
@@ -126,7 +126,7 @@ When you find yourself not having fun, take a deep breath, step outside, go for 
 
 ---
 
-#### Reflect
+## Reflect
 
 The third and final major step to becoming a better learner is reflect.
 
@@ -138,7 +138,7 @@ Like setting the stage and play, this step of the process consists of three sub-
 1. Ask new questions
 1. Repeat
 
-##### Self assess
+### Self assess
 
 The first part of reflection is to self assess by asking yourself the following.
 
@@ -152,12 +152,12 @@ The first part of reflection is to self assess by asking yourself the following.
 
 These are some of the most high value questions you can ask yourself. If you can do that for yourself at the end of each day, you'll multiply your ability to learn. This is one of the secrets as to why students who come through Galvanize leave transformed. They learn how to think about their own thought process and provide themselves feedback.
 
-##### Ask new questions
+### Ask new questions
 
 The second part of reflection is to ask yourself new questions about the information you just learned. This is a powerful learning technique that helps you solidify what you know, what you still don't know, and what's most important to learn next. Forming new questions also primes you to start the cycle again by providing the motivation to keep learning. Nothing is better than a really juicy question that you're just dying to solve.
 
 Additionally, by writing down these questions, you can go back and review them at some point down the road. Even if you don't answer them, you'll realize how far you've come based on the questions you were asking yourself earlier in your career. It's a great way to reflect on how much you've grown and the process you've gone through.
 
-##### Repeat
+### Repeat
 
 The third and final step of reflection is to repeat this whole cycle. As mentioned earlier, learning never stops for programmers as there's always something new to master. The best part about mastering this learning process is that the more you practice it, the faster and easier you'll retain new information.
