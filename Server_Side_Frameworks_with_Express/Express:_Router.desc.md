@@ -86,11 +86,15 @@ app.use(methodOverride('_method'));
 app.get('/puppies', function(req, res) {
   pg.connect(db_url, function(err, client, done){
     if(err) {
-      return console.error('error fetching client from pool', err);
+      if (client) done(client);
+      console.error('error fetching client from pool', err);
+      res.send('error fetching client from pool');
     }
     client.query('SELECT * FROM puppies', function(err, data){
+      done();
       if(err) {
-        return console.error('error querying database', err);
+        console.error('error querying database', err);
+        res.send('error querying database');
       }
       res.render('puppies/index', {puppies: data.rows});
     });
@@ -104,11 +108,15 @@ app.get('/puppies/new', function(req, res) {
 app.get('/puppies/:id', function(req, res) {
   pg.connect(db_url, function(err, client, done){
     if(err) {
-      return console.error('error fetching client from pool', err);
+      if (client) done(client);
+      console.error('error fetching client from pool', err);
+      res.send('error fetching client from pool');
     }
     client.query('SELECT * FROM puppies WHERE id = $1', [req.params.id], function(err, data){
+      done();
       if(err) {
-        return console.error('error querying database', err);
+        console.error('error querying database', err);
+        res.send('error querying database');
       }
       var puppy = data.rows[0];
       if (!puppy) {
@@ -122,11 +130,15 @@ app.get('/puppies/:id', function(req, res) {
 app.get('/puppies/:id/edit', function(req, res) {
   pg.connect(db_url, function(err, client, done){
     if(err) {
-      return console.error('error fetching client from pool', err);
+      if (client) done(client);
+      console.error('error fetching client from pool', err);
+      res.send('error fetching client from pool');
     }
     client.query('SELECT * FROM puppies WHERE id = $1', [req.params.id], function(err, data){
+      done();
       if(err) {
-        return console.error('error querying database', err);
+        console.error('error querying database', err);
+        res.send('error querying database');
       }
       var puppy = data.rows[0];
       if (!puppy) {
@@ -140,11 +152,15 @@ app.get('/puppies/:id/edit', function(req, res) {
 app.put('/puppies/:id', function(req, res) {
   pg.connect(db_url, function(err, client, done){
     if(err) {
-      return console.error('error fetching client from pool', err);
+      if (client) done(client);
+      console.error('error fetching client from pool', err);
+      res.send('error fetching client from pool');
     }
     client.query('UPDATE puppies SET name = $1 WHERE id = $2', [req.body.puppy.name, req.params.id], function(err, data){
+      done();
       if(err) {
-        return console.error('error querying database', err);
+        console.error('error querying database', err);
+        res.send('error querying database');
       }
       res.redirect('/puppies');
     });
@@ -154,11 +170,15 @@ app.put('/puppies/:id', function(req, res) {
 app.post('/puppies', function(req, res) {
   pg.connect(db_url, function(err, client, done){
     if(err) {
-      return console.error('error fetching client from pool', err);
+      if (client) done(client);
+      console.error('error fetching client from pool', err);
+      res.send('error fetching client from pool');
     }
     client.query('INSERT INTO puppies (name) VALUES ($1)', [req.body.puppy.name], function(err, data){
+      done();
       if(err) {
-        return console.error('error querying database', err);
+        console.error('error querying database', err);
+        res.send('error querying database');
       }
       res.redirect('/puppies');
     });
@@ -168,11 +188,15 @@ app.post('/puppies', function(req, res) {
 app.delete('/puppies/:id', function(req, res){
   pg.connect(db_url, function(err, client, done){
     if(err) {
-      return console.error('error fetching client from pool', err);
+      if (client) done(client);
+      console.error('error fetching client from pool', err);
+      res.send('error fetching client from pool');
     }
     client.query('DELETE FROM puppies WHERE id = $1', [req.params.id], function(err, data){
+      done();
       if(err) {
-        return console.error('error querying database', err);
+        console.error('error querying database', err);
+        res.send('error querying database');
       }
       res.redirect('/puppies');
     });
@@ -405,11 +429,15 @@ app.use(methodOverride('_method'));
 router.get('/puppies', function(req, res) {
   pg.connect(db_url, function(err, client, done){
     if(err) {
-      return console.error('error fetching client from pool', err);
+      if (client) done(client);
+      console.error('error fetching client from pool', err);
+      res.send('error fetching client from pool');
     }
     client.query('SELECT * FROM puppies', function(err, data){
+      done();
       if(err) {
-        return console.error('error querying database', err);
+        console.error('error querying database', err);
+        res.send('error querying database');
       }
       res.render('puppies/index', {puppies: data.rows});
     });
@@ -423,11 +451,15 @@ router.get('/puppies/new', function(req, res) {
 router.get('/puppies/:id', function(req, res) {
   pg.connect(db_url, function(err, client, done){
     if(err) {
-      return console.error('error fetching client from pool', err);
+      if (client) done(client);
+      console.error('error fetching client from pool', err);
+      res.send('error fetching client from pool');
     }
     client.query('SELECT * FROM puppies WHERE id = $1', [req.params.id], function(err, data){
+      done();
       if(err) {
-        return console.error('error querying database', err);
+        console.error('error querying database', err);
+        res.send('error querying database');
       }
       var puppy = data.rows[0];
       if (!puppy) {
@@ -441,11 +473,15 @@ router.get('/puppies/:id', function(req, res) {
 router.get('/puppies/:id/edit', function(req, res) {
   pg.connect(db_url, function(err, client, done){
     if(err) {
-      return console.error('error fetching client from pool', err);
+      if (client) done(client);
+      console.error('error fetching client from pool', err);
+      res.send('error fetching client from pool');
     }
     client.query('SELECT * FROM puppies WHERE id = $1', [req.params.id], function(err, data){
+      done();
       if(err) {
-        return console.error('error querying database', err);
+        console.error('error querying database', err);
+        res.send('error querying database');
       }
       var puppy = data.rows[0];
       if (!puppy) {
@@ -459,11 +495,15 @@ router.get('/puppies/:id/edit', function(req, res) {
 router.put('/puppies/:id', function(req, res) {
   pg.connect(db_url, function(err, client, done){
     if(err) {
-      return console.error('error fetching client from pool', err);
+      if (client) done(client);
+      console.error('error fetching client from pool', err);
+      res.send('error fetching client from pool');
     }
     client.query('UPDATE puppies SET name = $1 WHERE id = $2', [req.body.puppy.name, req.params.id], function(err, data){
+      done();
       if(err) {
-        return console.error('error querying database', err);
+        console.error('error querying database', err);
+        res.send('error querying database');
       }
       res.redirect('/puppies');
     });
@@ -473,11 +513,15 @@ router.put('/puppies/:id', function(req, res) {
 router.post('/puppies', function(req, res) {
   pg.connect(db_url, function(err, client, done){
     if(err) {
-      return console.error('error fetching client from pool', err);
+      if (client) done(client);
+      console.error('error fetching client from pool', err);
+      res.send('error fetching client from pool');
     }
     client.query('INSERT INTO puppies (name) VALUES ($1)', [req.body.puppy.name], function(err, data){
+      done();
       if(err) {
-        return console.error('error querying database', err);
+        console.error('error querying database', err);
+        res.send('error querying database');
       }
       res.redirect('/puppies');
     });
@@ -487,11 +531,15 @@ router.post('/puppies', function(req, res) {
 router.delete('/puppies/:id', function(req, res){
   pg.connect(db_url, function(err, client, done){
     if(err) {
-      return console.error('error fetching client from pool', err);
+      if (client) done(client);
+      console.error('error fetching client from pool', err);
+      res.send('error fetching client from pool');
     }
     client.query('DELETE FROM puppies WHERE id = $1', [req.params.id], function(err, data){
+      done();
       if(err) {
-        return console.error('error querying database', err);
+        console.error('error querying database', err);
+        res.send('error querying database');
       }
       res.redirect('/puppies');
     });
@@ -520,11 +568,15 @@ var express = require('express'),
 router.get('/', function(req, res) {
   pg.connect(db_url, function(err, client, done){
     if(err) {
-      return console.error('error fetching client from pool', err);
+      if (client) done(client);
+      console.error('error fetching client from pool', err);
+      res.send('error fetching client from pool');
     }
     client.query('SELECT * FROM puppies', function(err, data){
+      done();
       if(err) {
-        return console.error('error querying database', err);
+        console.error('error querying database', err);
+        res.send('error querying database');
       }
       res.render('puppies/index', {puppies: data.rows});
     });
@@ -538,11 +590,15 @@ router.get('/new', function(req, res) {
 router.get('/:id', function(req, res) {
   pg.connect(db_url, function(err, client, done){
     if(err) {
-      return console.error('error fetching client from pool', err);
+      if (client) done(client);
+      console.error('error fetching client from pool', err);
+      res.send('error fetching client from pool');
     }
     client.query('SELECT * FROM puppies WHERE id = $1', [req.params.id], function(err, data){
+      done();
       if(err) {
-        return console.error('error querying database', err);
+        console.error('error querying database', err);
+        res.send('error querying database');
       }
       var puppy = data.rows[0];
       if (!puppy) {
@@ -556,11 +612,15 @@ router.get('/:id', function(req, res) {
 router.get('/:id/edit', function(req, res) {
   pg.connect(db_url, function(err, client, done){
     if(err) {
-      return console.error('error fetching client from pool', err);
+      if (client) done(client);
+      console.error('error fetching client from pool', err);
+      res.send('error fetching client from pool');
     }
     client.query('SELECT * FROM puppies WHERE id = $1', [req.params.id], function(err, data){
+      done();
       if(err) {
-        return console.error('error querying database', err);
+        console.error('error querying database', err);
+        res.send('error querying database');
       }
       var puppy = data.rows[0];
       if (!puppy) {
@@ -574,11 +634,15 @@ router.get('/:id/edit', function(req, res) {
 router.put('/:id', function(req, res) {
   pg.connect(db_url, function(err, client, done){
     if(err) {
-      return console.error('error fetching client from pool', err);
+      if (client) done(client);
+      console.error('error fetching client from pool', err);
+      res.send('error fetching client from pool');
     }
     client.query('UPDATE puppies SET name = $1 WHERE id = $2', [req.body.puppy.name, req.params.id], function(err, data){
+      done();
       if(err) {
-        return console.error('error querying database', err);
+        console.error('error querying database', err);
+        res.send('error querying database');
       }
       res.redirect('/puppies');
     });
@@ -588,11 +652,15 @@ router.put('/:id', function(req, res) {
 router.post('/', function(req, res) {
   pg.connect(db_url, function(err, client, done){
     if(err) {
-      return console.error('error fetching client from pool', err);
+      if (client) done(client);
+      console.error('error fetching client from pool', err);
+      res.send('error fetching client from pool');
     }
     client.query('INSERT INTO puppies (name) VALUES ($1)', [req.body.puppy.name], function(err, data){
+      done();
       if(err) {
-        return console.error('error querying database', err);
+        console.error('error querying database', err);
+        res.send('error querying database');
       }
       res.redirect('/puppies');
     });
@@ -602,11 +670,15 @@ router.post('/', function(req, res) {
 router.delete('/:id', function(req, res){
   pg.connect(db_url, function(err, client, done){
     if(err) {
-      return console.error('error fetching client from pool', err);
+      if (client) done(client);
+      console.error('error fetching client from pool', err);
+      res.send('error fetching client from pool');
     }
     client.query('DELETE FROM puppies WHERE id = $1', [req.params.id], function(err, data){
+      done();
       if(err) {
-        return console.error('error querying database', err);
+        console.error('error querying database', err);
+        res.send('error querying database');
       }
       res.redirect('/puppies');
     });
