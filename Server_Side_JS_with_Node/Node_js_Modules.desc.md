@@ -6,6 +6,7 @@
 - Export and require an object.
 - Explain what the three kinds of modules are.
 - Explain what an Express router is.
+- Explain why an Express router is useful.
 
 ## What's a Node.js module?
 
