@@ -334,6 +334,7 @@ var port = process.env.PORT || 8000;
 var morgan = require('morgan');
 var bodyParser = require('body-parser');
 
+app.disable('x-powered-by');
 app.use(morgan('short'));
 app.use(bodyParser.json());
 
@@ -541,11 +542,11 @@ var port = process.env.PORT || 8000;
 var morgan = require('morgan');
 var bodyParser = require('body-parser');
 
-var guests = require('./routes/guests');
-
 app.disable('x-powered-by');
 app.use(morgan('short'));
 app.use(bodyParser.json());
+
+var guests = require('./routes/guests');
 
 app.use(guests);
 
