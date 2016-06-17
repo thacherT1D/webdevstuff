@@ -1,9 +1,4 @@
 ---
-- :uuid: 31a0195e-bfc7-40e5-87d2-f3a7f57e37ad
-  :name: Action Mailer Basics
-  :github_repo: https://github.com/gSchool/actionmailer_basics
-  :response_type: project
-  :exercise_success_criteria: []
 - :uuid: cf403254-8754-46b5-aea2-1e43f911f73c
   :name: Active CSV
   :github_repo: https://github.com/gSchool/active-csv
