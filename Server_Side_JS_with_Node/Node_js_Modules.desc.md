@@ -286,6 +286,28 @@ And you should see something like this.
 
 ![](https://i.imgur.com/K2k51I2.png)
 
+## Why is an Express router useful?
+
+Because it allows you to organize RESTful routes into modules, split them up by resource.
+
+```text
+├── routes
+│   ├── activities.js
+│   ├── drinks.js
+│   ├── foods.js
+│   ├── guests.js
+│   └── prizes.js
+└── server.js
+```
+
+| Routes        | Module                 |
+|---------------|------------------------|
+| `/activities` | `routes/activities.js` |
+| `/drinks`     | `routes/drinks.js`     |
+| `/foods`      | `routes/foods.js`      |
+| `/guests`     | `routes/guests.js`     |
+| `/prizes`     | `routes/prizes.js`     |
+
 ## How do you use the Express router?
 
 ```javascript
