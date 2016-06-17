@@ -5,7 +5,7 @@
 - Export and require a function.
 - Export and require an object.
 - Explain what the three kinds of modules are.
-- Explain what the Express router is.
+- Explain what an Express router is.
 
 ## What's a Node.js module?
 
@@ -154,7 +154,7 @@ var path = require('path');
 
 ### NPM modules
 
-These are modules inside packages that can be downloaded from the [NPM registry](https://npmjs.org) using the `npm install` command. To see where NPM modules are installed, run the following commands.
+These are modules inside packages that can be downloaded from the [NPM registry](https://npmjs.org) using the `npm install` command. To see where NPM modules are installed, run the following commands in the Terminal.
 
 ```shell
 npm -g root
@@ -169,11 +169,11 @@ var morgan = require('morgan');
 var bodyParser = require('body-parser');
 ```
 
-Remember, the above `require()` expressions won't work until after you've installed these NPM modules globally with `npm install -g` or locally with `npm install`.
+Remember, the above `require()` expressions won't work unless you've installed these NPM modules globally with `npm install -g` or locally with `npm install`.
 
 ### File modules
 
-These are modules that you've created on your own, such as the `arithmetic.js` module. When creating a file module, you add values to a `module.exports` object using one of the above techniques.
+These are modules that you've created on your own, such as the `arithmetic.js` module. When creating a file module, you add values to a `module.exports` object using one of the above mentioned techniques.
 
 When requiring a file module, you provide a path to the module, minus the `.js` extension. These paths must start with `/`, `./`, or `../` to indicate where on the filesystem Node.js can find the file module.
 
@@ -183,11 +183,43 @@ var myModule2 = require('./myModule2');  // same path as the current module
 var myModule3 = require('../myModule3'); // parent path of the current module
 ```
 
-## What's the Express router?
+## What's an Express `router`?
 
-An **Express router** is an mini-application that you can use for attaching groups of middleware. For example, imagine you have two modules—`greet.js` and `server.js`.
+An **Express router** is a proxy that you can use for attaching groups of middleware. Once middleware has been attached to the router, it can be attached to an Express application itself.
 
-The `greet.js` module uses an Express router to attach a group of greeting middleware.
+To get see an Express router in action, create a new `hello_router` project.
+
+```shell
+mkdir hello_router
+cd hello_router
+```
+
+Then, create a `greet.js` module and `server.js` module.
+
+```shell
+touch greet.js
+touch server.js
+```
+
+Next, use NPM to initialize a `package.json` file.
+
+```shell
+npm init
+```
+
+Then, use NPM to install the `express` module locally and save it as dependency in the `package.json` file.
+
+```shell
+npm install --save express
+```
+
+Next, open the project in your text editor.
+
+```shell
+atom .
+```
+
+In the `greet.js` module, use an Express router to attach a group of greeting middleware. After the middleware has been attached, export the Express router.
 
 ```javascript
 'use strict';
@@ -206,7 +238,7 @@ router.get('/spanish', function(req, res) {
 module.exports = router;
 ```
 
-After the middleware has been attached, the `greet.js` module exports the `router`. Inside the `server.js` module, the `greet.js` module is required and the router is attached to an Express application.
+Inside the `server.js` module, require the `greet.js` module and attach the router to an Express application. An Express router behaves like middleware itself, so you can use it as an argument to the `app.use()` method.
 
 ```javascript
 'use strict';
@@ -224,13 +256,15 @@ app.listen(port, function() {
 });
 ```
 
-An Express router behaves like middleware itself, so you can use it as an argument to the `app.use()` method.
-
 Save both modules and run the server with the `nodemon` command.
 
 ```shell
 nodemon server.js
 ```
+
+And you should see something like this.
+
+![](https://i.imgur.com/6WPuMIc.png)
 
 In a separate Terminal tab, send an HTTP request to the server.
 
@@ -240,9 +274,9 @@ http GET localhost:8000/english
 
 And you should see something like this.
 
-![]()
+![](https://i.imgur.com/lZ3a5ei.png)
 
-In a separate Terminal tab, send an HTTP request to the server.
+Then, send another HTTP request to the server.
 
 ```shell
 http GET localhost:8000/spanish
@@ -250,7 +284,7 @@ http GET localhost:8000/spanish
 
 And you should see something like this.
 
-![]()
+![](https://i.imgur.com/K2k51I2.png)
 
 ## How do you use the Express router?
 
