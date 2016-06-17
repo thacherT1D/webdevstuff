@@ -76,7 +76,6 @@ Crush Code Friday: [CCF](/cohorts/68/student_dashboard)
 Homework: [Homework](/cohorts/68/student_dashboard)
 
 Lightning Talks:
-
-Announcements:
-- Announcement 1
-- Announcement 2
+- Ryan Mackey
+- Stephanie Ogburn
+- Jessica Morris
