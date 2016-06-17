@@ -362,6 +362,8 @@ app.listen(port, function() {
 });
 ```
 
+This kind of project structure can help developers understand and maintain a correct middleware chain while reducing the risk for accidental bugs and duplicate code.
+
 ## How do you use the Express router?
 
 ```javascript
