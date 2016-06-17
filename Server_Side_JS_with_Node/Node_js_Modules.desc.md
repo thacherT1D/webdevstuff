@@ -321,7 +321,7 @@ Each route-based file module would define the RESTful routes for their respectiv
 | `/guests`      | `routes/guests.js`     |
 | `/prizes`      | `routes/prizes.js`     |
 
-And the `server.js` module would require and attach all the resource-specific routers as well as any project-wide middleware.
+And a `server.js` module would require and attach all the resource-specific routers as well as any project-wide middleware.
 
 ```javascript
 'use strict';
