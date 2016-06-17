@@ -299,7 +299,7 @@ An Express router is useful because it allows you to organize a project's RESTfu
 
 Now, Node.js doesn't care if all the RESTful routes live in the same file. But it might be hard for you, as the developer, to build and maintain thousands of lines of code in a single file.
 
-But by using an Express router, you can split the RESTful routes for each resource into separate file modules. For example, it's common for an Express project to have a `routes` directory where all the route-related file modules can be stored.
+However, by using an Express router, you can split the RESTful routes for each resource into separate file modules. For example, it's common for an Express project to have a `routes` directory where all the route-related file modules can be stored.
 
 ```text
 ├── routes
