@@ -568,7 +568,7 @@ And you should see something like this.
 
 ![](https://i.imgur.com/sd4WnE5.png)
 
-In a separate Terminal tab, send the following RESTful HTTP requests to your server.
+In a separate Terminal tab, send the following RESTful HTTP requests to your server and verify the HTTP responses.
 
 ```shell
 http GET localhost:8000/guests
@@ -604,7 +604,7 @@ Now, deploy your project by pushing your local `master` branch to Heroku's `mast
 git push heroku master
 ```
 
-Finally, send a RESTful HTTP requests to the server running on the production environment. Remember to replace `USERNAME` with your GitHub username.
+Finally, send a RESTful HTTP requests to the server running on the production environment and verify the HTTP responses. Remember to replace `USERNAME` with your GitHub username.
 
 ```shell
 http GET USERNAME-party.herokuapp.com/guests
