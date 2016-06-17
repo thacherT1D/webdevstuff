@@ -354,11 +354,6 @@ app.use(function(req, res) {
   res.sendStatus(404);
 });
 
-app.use(function(err, req, res, next) {
-	console.error(err);
-	res.sendStatus(500);
-});
-
 app.listen(port, function() {
   console.log('Listening on port', port);
 });
