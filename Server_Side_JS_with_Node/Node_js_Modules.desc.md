@@ -289,7 +289,7 @@ And you should see something like this.
 
 ## Why is an Express router useful?
 
-An Express router is useful because it allows you to organize the RESTful routes for many resources into separate file modules. For example, imagine your boss wants you to expand the `party` project to manage the following resources.
+An Express router is useful because it allows you to organize a project's RESTful routes into separate, resource-specific file modules. For example, imagine your boss wants you to expand the `party` project to manage the following resources.
 
 - Activities
 - Drinks
