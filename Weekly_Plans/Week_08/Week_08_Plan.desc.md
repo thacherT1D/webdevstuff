@@ -71,6 +71,9 @@ Lessons:
 
 # Friday, June 17
 
+Warmup: [Typing.io](typing.io)
+
+
 Crush Code Friday: [CCF](/cohorts/68/student_dashboard)
 
 Lightning Talks:
