@@ -289,7 +289,7 @@ And you should see something like this.
 
 ## Why is an Express router useful?
 
-An Express router useful because it allows you to organize RESTful routes into files modules. Each file module can contain all the routes of a RESTful resource. For example, imagine your `party` project needs to be expanded to provide RESTful routing for managing the following resources.
+An Express router is useful because it allows you to organize the RESTful routes for many resources into separate file modules. For example, imagine your boss wants you to expand the `party` project to manage the following resources.
 
 - Activities
 - Drinks
@@ -297,9 +297,9 @@ An Express router useful because it allows you to organize RESTful routes into f
 - Guests
 - Prizes
 
-Node.js doesn't care if these all live in the same file. But it might be hard for you as the developer to build and maintain thousands of lines of code in a single file.
+Now, Node.js doesn't care if all the RESTful routes live in the same file. But it might be hard for you, as the developer, to build and maintain thousands of lines of code in a single file.
 
-But by using an Express router, you can split the RESTful routes for each resource into separate file modules. For example, it's common the create a `routes` directory for all the route-related file modules.
+But by using an Express router, you can split the RESTful routes for each resource into separate file modules. For example, it's common for an Express project to have a `routes` directory where all the route-related file modules can be stored.
 
 ```text
 ├── routes
@@ -311,7 +311,7 @@ But by using an Express router, you can split the RESTful routes for each resour
 └── server.js
 ```
 
-Each file module would define all the RESTful routes for the following resources.
+Each route-based file module would define the RESTful routes for their respective resource.
 
 | RESTful Routes | File Modules           |
 |----------------|------------------------|
@@ -321,7 +321,7 @@ Each file module would define all the RESTful routes for the following resources
 | `/guests`      | `routes/guests.js`     |
 | `/prizes`      | `routes/prizes.js`     |
 
-And then in the `server.js` module, you can require all the routes And
+And the `server.js` module would require and attach all the resource-specific routers as well as any project-wide middleware.
 
 ```javascript
 'use strict';
