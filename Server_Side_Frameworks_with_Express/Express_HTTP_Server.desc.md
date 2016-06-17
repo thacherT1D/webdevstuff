@@ -417,7 +417,7 @@ git merge express
 With the commits merged in, it's safe to delete the `express` branch.
 
 ```shell
-git br -d express
+git branch -d express
 ```
 
 ## What's Express middleware?

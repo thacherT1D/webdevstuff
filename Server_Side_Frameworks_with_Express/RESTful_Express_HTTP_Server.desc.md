@@ -494,7 +494,7 @@ git merge rest
 With the commits merged in, it's safe to delete the `rest` branch.
 
 ```shell
-git br -d rest
+git branch -d rest
 ```
 
 To deploy the RESTful Express server to Heroku, update the `Procfile` so it runs the correct server.

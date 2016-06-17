@@ -7,6 +7,7 @@
 - Explain what the three kinds of modules are.
 - Explain what an Express router is.
 - Explain why an Express router is useful.
+- Use the Express router to organize RESTful routes.
 
 ## What's a Node.js module?
 
@@ -364,7 +365,29 @@ app.listen(port, function() {
 
 This kind of project structure can help developers understand and maintain a correct middleware chain while reducing the risk for accidental bugs and duplicate code.
 
-## How do you use the Express router?
+## How do you use the Express router to organize RESTful routes?
+
+Let's return to the `party` project from yesterday and create a new feature branch.
+
+```shell
+cd party
+git checkout -b router
+```
+
+Next, create a resource-specific route module.
+
+```shell
+mkdir routes
+touch routes/guests.js
+```
+
+Then, open the project in your text editor.
+
+```shell
+atom .
+```
+
+And add the following code the `routes/guests.js` route module.
 
 ```javascript
 'use strict';
@@ -506,6 +529,8 @@ router.delete('/guests/:id', function(req, res) {
 module.exports = router;
 ```
 
+Then, in the `server.js` module, require the route module and use it to replace the route-specific middleware.
+
 ```javascript
 'use strict';
 
@@ -531,6 +556,62 @@ app.use(function(req, res) {
 app.listen(port, function() {
   console.log('Listening on port', port);
 });
+```
+
+Start your Express server.
+
+```shell
+nodemon serverExpress.js
+```
+
+And you should see something like this.
+
+![](https://i.imgur.com/sd4WnE5.png)
+
+In a separate Terminal tab, send the following RESTful HTTP requests to your server.
+
+```shell
+http GET localhost:8000/guests
+http GET localhost:8000/guests/0
+http POST localhost:8000/guests name=Don
+http PUT localhost:8000/guests/0 name=Kate
+http DELETE localhost:8000/guests/0
+```
+
+Next, add and commit the latest changes.
+
+```shell
+git add .
+git commit -m 'Refactor guests routes into a module'
+```
+
+Then, merge the commits into the `master` branch.
+
+```shell
+git checkout master
+git merge router
+```
+
+With the commits merged in, it's safe to delete the feature branch.
+
+```shell
+git branch -d router
+```
+
+Now, deploy your project by pushing your local `master` branch to Heroku's `master` branch.
+
+```shell
+git push heroku master
+```
+
+Finally, send a RESTful HTTP requests to the server running on the production environment. Remember to replace `USERNAME` with your GitHub username.
+
+```shell
+http GET USERNAME-party.herokuapp.com/guests
+http GET USERNAME-party.herokuapp.com/guests/0
+http POST USERNAME-party.herokuapp.com/guests name=Don
+http PUT USERNAME-party.herokuapp.com/guests/0 name=Kate
+http DELETE USERNAME-party.herokuapp.com/guests/0
 ```
 
 ## Resources

@@ -501,7 +501,7 @@ git merge http
 With the commits merged in, it's safe to delete the `http` branch.
 
 ```shell
-git br -d http
+git branch -d http
 ```
 
 ## How do you deploy a Node.js HTTP server to Heroku?
@@ -572,7 +572,7 @@ git merge heroku
 With the commits merged in, it's safe to delete the `heroku` branch.
 
 ```shell
-git br -d heroku
+git branch -d heroku
 ```
 
 After you've signed up for [Heroku](https://signup.heroku.com/), install the `heroku` package with Homebrew.
