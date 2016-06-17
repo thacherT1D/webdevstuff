@@ -289,7 +289,17 @@ And you should see something like this.
 
 ## Why is an Express router useful?
 
-Because it allows you to organize RESTful routes into modules, split them up by resource.
+An Express router useful because it allows you to organize RESTful routes into files modules. Each file module can contain all the routes of a RESTful resource. For example, imagine your `party` project needs to be expanded to provide RESTful routing for managing the following resources.
+
+- Activities
+- Drinks
+- Foods
+- Guests
+- Prizes
+
+Node.js doesn't care if these all live in the same file. But it might be hard for you as the developer to build and maintain thousands of lines of code in a single file.
+
+But by using an Express router, you can split the RESTful routes for each resource into separate file modules. For example, it's common the create a `routes` directory for all the route-related file modules.
 
 ```text
 ├── routes
@@ -301,13 +311,56 @@ Because it allows you to organize RESTful routes into modules, split them up by 
 └── server.js
 ```
 
-| Routes        | Module                 |
-|---------------|------------------------|
-| `/activities` | `routes/activities.js` |
-| `/drinks`     | `routes/drinks.js`     |
-| `/foods`      | `routes/foods.js`      |
-| `/guests`     | `routes/guests.js`     |
-| `/prizes`     | `routes/prizes.js`     |
+Each file module would define all the RESTful routes for the following resources.
+
+| RESTful Routes | File Modules           |
+|----------------|------------------------|
+| `/activities`  | `routes/activities.js` |
+| `/drinks`      | `routes/drinks.js`     |
+| `/foods`       | `routes/foods.js`      |
+| `/guests`      | `routes/guests.js`     |
+| `/prizes`      | `routes/prizes.js`     |
+
+And then in the `server.js` module, you can require all the routes And
+
+```javascript
+'use strict';
+
+var express = require('express');
+var app = express();
+var port = process.env.PORT || 8000;
+
+var morgan = require('morgan');
+var bodyParser = require('body-parser');
+
+app.use(morgan('short'));
+app.use(bodyParser.json());
+
+var activities = require('./routes/activities');
+var drinks = require('./routes/drinks');
+var foods = require('./routes/foods');
+var guests = require('./routes/guests');
+var prizes = require('./routes/prizes');
+
+app.use(activities);
+app.use(drinks);
+app.use(foods);
+app.use(guests);
+app.use(prizess);
+
+app.use(function(req, res) {
+  res.sendStatus(404);
+});
+
+app.use(function(err, req, res, next) {
+	console.error(err);
+	res.sendStatus(500);
+});
+
+app.listen(port, function() {
+  console.log('Listening on port', port);
+});
+```
 
 ## How do you use the Express router?
 
