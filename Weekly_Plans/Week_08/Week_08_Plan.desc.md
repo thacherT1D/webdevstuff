@@ -73,8 +73,7 @@ Lessons:
 
 Warmup: [Typing.io](http://www.typing.io)
 
-
-Crush Code Friday: [CCF](/cohorts/68/student_dashboard)
+Crush Code Friday: [CCF](https://github.com/gSchool/movie-inventory-crud)
 
 Lightning Talks:
 - Ryan Mackey
