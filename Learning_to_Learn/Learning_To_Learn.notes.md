@@ -1,6 +1,6 @@
-[Evan's slides](http://slides.com/evanmoore/learning-to-learn#/)
+[Learning to Learn, Slides](http://slides.com/evanmoore/learning-to-learn#/)
 
-[Evan's video](https://drive.google.com/a/galvanize.com/file/d/0B5JFrukBL_jpVVZZY3BRZERYdWM/view)
+[Learning to Learn, Video](https://drive.google.com/a/galvanize.com/file/d/0B5JFrukBL_jpVVZZY3BRZERYdWM/view)
 
 [Assessment](https://students.galvanize.com/assessments/51)
 
