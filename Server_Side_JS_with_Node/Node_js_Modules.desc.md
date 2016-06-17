@@ -566,7 +566,7 @@ nodemon serverExpress.js
 
 And you should see something like this.
 
-![](https://i.imgur.com/sd4WnE5.png)
+![](https://i.imgur.com/81pZjRq.png)
 
 In a separate Terminal tab, send the following RESTful HTTP requests to your server and verify the HTTP responses.
 
