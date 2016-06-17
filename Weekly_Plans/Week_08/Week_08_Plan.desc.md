@@ -73,8 +73,6 @@ Lessons:
 
 Crush Code Friday: [CCF](/cohorts/68/student_dashboard)
 
-Homework: [Homework](/cohorts/68/student_dashboard)
-
 Lightning Talks:
 - Ryan Mackey
 - Stephanie Ogburn
