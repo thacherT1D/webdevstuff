@@ -11,7 +11,7 @@ Being a student in this program is like drinking from a firehose. It's going to 
 
 Learning is essential to being a programmer. It's a huge field with new technologies and methodologies being discovered every day. Becoming a better learner will prepare you for a long and successful career. Also, we want Galvanize to be a transformative experience for you. In addition to programming skills and knowledge, we want to help grow your habits and mindsets.
 
-![](https://i.imgur.com/n3oUe01.png)
+<img src="https://i.imgur.com/n3oUe01.png" height='50%' width='50%' style="display: block; margin: 0 auto; padding: 25px;">
 
 At an average college or code school, you'd learn a lot, but you'd probably fall back into the same habits and mindsets you had before you started. Yes, you'd be better off for having gone back to school, but you wouldn't really have been transformed.
 
@@ -63,7 +63,7 @@ The why is the meaning or motivation behind the learning. Being human is to be d
 
 The last part of setting the stage is about prioritizing process over product. In other words, defining success as simply spending time doing focused and deliberate practice. This program is going to be very difficult at times. You may not fully understand some of the concepts on the first try. And you may not reach your end goal in the period of time that you set out to do your work. This is perfectly fine so long as you're challenging yourself to get better while in the [zone of proximal development](https://en.wikipedia.org/wiki/Zone_of_proximal_development).
 
-![](https://i.imgur.com/st9ILOw.png)
+<img src="https://i.imgur.com/st9ILOw.png" height='50%' width='50%' style="display: block; margin: 0 auto; padding: 25px;">
 
 While in the zone of proximal development, doing focused and deliberate practice while learning and doing will produce far more quality results in the long run. If you flip the prioritization—prioritizing product over process—you're much more likely to take shortcuts, to cheat, or to do something that benefits you in the short term but harms you in the long run. Remember, top performers do what's hard, not what they're good at.
 
@@ -103,11 +103,11 @@ You've probably heard a bunch of common sayings about this already.
 
 When it comes to learning through play, it's the effort, and not the intelligence, that makes the biggest difference. This aligns with the research done around fixed mindset versus growth mindset.
 
-![](https://i.imgur.com/jO19KKD.png)
+<img src="https://i.imgur.com/jO19KKD.png" height='50%' width='50%' style="display: block; margin: 0 auto; padding: 25px;">
 
 Training your mind with a growth mindset can be very difficult. But the reward for your persistence is being able to drink more and more from the firehose every day. Here are some things you can say to yourself that'll help train your mind to be more growth oriented.
 
-![](https://i.imgur.com/HiEOCHw.jpg)
+<img src="https://i.imgur.com/HiEOCHw.jpg" height='50%' width='50%' style="display: block; margin: 0 auto; padding: 25px;">
 
 ### Have fun!
 
