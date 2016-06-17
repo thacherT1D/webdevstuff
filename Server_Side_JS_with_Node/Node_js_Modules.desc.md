@@ -348,7 +348,7 @@ app.use(activities);
 app.use(drinks);
 app.use(foods);
 app.use(guests);
-app.use(prizess);
+app.use(prizes);
 
 app.use(function(req, res) {
   res.sendStatus(404);
