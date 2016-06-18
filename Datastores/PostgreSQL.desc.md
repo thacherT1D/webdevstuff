@@ -22,7 +22,7 @@ null;
 new Date('2016-01-22T04:30:00Z');
 ```
 
-On the other hand, **information** are facts about something or someone. In other words, information is data with context. Here are some examples of information about a person represented in JavaScript.
+On the other hand, **information** are facts about something or someone. In other words, information is data with context. Here's an example of information about a person represented in JavaScript.
 
 ```javascript
 const person = {
