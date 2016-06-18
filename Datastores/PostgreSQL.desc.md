@@ -3,7 +3,7 @@
 - Explain the difference between data and information.
 - Explain what an entity is.
 - Diagram how web applications store and retrieve data.
-- Describe what a relational database is.
+- Explain what a relational database is.
 - Explain why relational databases are so important.
 - Describe what PostgreSQL is.
 - Install and configure PostgreSQL.
@@ -115,13 +115,16 @@ For example, the CRUD operations correspond to the following SQL commands.
 | Update          | `UPDATE`     |
 | Destroy         | `DELETE`     |
 
-SQL became an official standard in the mid-1980's and, since then, has been revised to include a growing set of features. Despite the existence of such standards, most SQL code is not completely portable among different database systems without adjustments. Popular relational database systems that implement the SQL standard include:
+SQL became an official standard in the mid-1980's and, since then, has been revised to include a growing set of features. Despite the existence of such standards, most SQL code is not completely portable among different database systems without adjustments. Popular open and closed source relational database systems that implement the SQL standard include:
 
-- PostgreSQL
-- MySQL
-- Oracle
-- Microsoft SQL Server (MSSQL)
-- SQLite
+| Name                 | Source |
+|----------------------|--------|
+| Microsoft Access     | Closed |
+| Microsoft SQL Server | Closed |
+| MySQL                | Open   |
+| Oracle               | Closed |
+| PostgreSQL           | Open   |
+| SQLite               | Open   |
 
 Most of these relation database systems follow a similar software architecture.
 
