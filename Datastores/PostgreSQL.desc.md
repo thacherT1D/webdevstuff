@@ -140,7 +140,7 @@ SQL became an official standard in the mid-1980's. Since then, it has been revis
 | PostgreSQL           | Open   |
 | SQLite               | Open   |
 
-Relational database systems all share a few things in common. First, is the concept of a database server which contain multiple databases. And each database contains multiple tables. All the information inside of these tables are persisted to a hard disk by the relational database so you don't have to worry about how the information is stored. For example, if you were working a learning management system of your own, it might use one database server with two databases: a `lms_dev` database for the development environment and `lms_test` database for the test environment.
+Relational database systems all share a few things in common. First, is the concept of a database server which contain multiple databases. And each database contains multiple tables. All the information inside of these tables are persisted to a hard disk by the relational database so you don't have to worry about how the information is stored. For example, if you were building a learning management system of your own, it might use one database server with two databases: a `lms_dev` database for the development environment and `lms_test` database for the test environment.
 
 ```text
  Name    |   Owner   | Encoding
