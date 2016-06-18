@@ -16,7 +16,6 @@ Before you can before fluent with databases, like PostgreSQL, you first need bec
 'Mary';
 'mary@microsoft.com';
 24;
-3.14;
 true;
 false;
 null;
