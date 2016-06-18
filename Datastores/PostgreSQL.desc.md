@@ -95,13 +95,11 @@ For the next few days, you'll be learning how web applications store and retriev
 A **relational database**, or relational database management system (RDBMS), is a database that's based on the relational model. The **relational model** is an approach to managing information using a structure where an entity is represented as row (i.e. tuple) that's grouped in a table (i.e. relation).
 
 ```text
-# select * from students;
  id | first_name | last_name | gpa
 ----+------------+-----------+------
   1 | Bruce      | Wayne     | 2.94
   2 | Selina     | Kyle      | 3.02
   3 | Clark      | Kent      | 2.45
-(3 rows)
 ```
 
 Most modern relation databases use a special-purpose programming language to manage its information called Structured Query Language (**SQL**) which consists of three distinctive languages.
