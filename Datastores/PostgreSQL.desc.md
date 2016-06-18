@@ -58,6 +58,11 @@
   * Use lots of spreadsheet metaphors
   * Don't use a ton of ERD diagramming yet- save it for another lecture
 
+
+![Part 1](https://s3-us-west-2.amazonaws.com/assessment-images/misc/intro-to-data-part-1.jpg)
+![Part 1](https://s3-us-west-2.amazonaws.com/assessment-images/misc/intro-to-data-part-2.jpg)
+
+
 ## What's a relational database?
 
 A **relational database**, or relational database management system (RDBMS), is a database that's based on the relational model. The **relational model** is an approach to managing data using a structure and language consistent with first-order predicate logic.
@@ -528,9 +533,6 @@ DELETE FROM movies WHERE id < 9 AND rating = 2;
 ### Relational Databases
 
 <iframe src="https://player.vimeo.com/video/142036155" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-
-###
-
 
 
 [postgresql-docs]: http://www.postgresql.org/docs/manuals/
