@@ -16,6 +16,7 @@ Before you can before fluent with databases, like PostgreSQL, you first need bec
 'Mary';
 'mary@microsoft.com';
 24;
+3.14;
 true;
 false;
 null;
@@ -29,6 +30,7 @@ const person = {
   name: 'Mary',
   email: 'mary@microsoft.com',
   age: 24,
+  favoriteNumber: 3.14,
   likesDogs: true,
   likesCats: false,
   phoneNumber: null,
