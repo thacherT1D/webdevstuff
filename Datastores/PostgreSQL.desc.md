@@ -10,7 +10,7 @@
 
 ## What's the difference between data and information?
 
-Simply put, **data** are facts. Here are some examples of data, represented in JavaScript.
+Before you can understand databases, you first need to understand the difference between data and information. Simply put, **data** are facts. Here are some examples of data, represented in JavaScript.
 
 ```javascript
 'Mary';
@@ -37,6 +37,10 @@ const person = {
   graduatedAt: new Date('2016-01-22T04:30:00Z')
 };
 ```
+
+### Exercise
+
+What's the difference between data and information?
 
 ## What's an entity?
 
