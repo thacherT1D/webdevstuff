@@ -9,7 +9,7 @@
 
 ## What's the difference between data and information?
 
-**Data** are facts. Here are some examples of data represented in JavaScript.
+Simply put, **data** are facts. Here are some examples of data represented in JavaScript.
 
 ```javascript
 'Mary';
