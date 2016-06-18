@@ -111,7 +111,7 @@ Each column represents attributes that contains a piece of information that matc
 | `last_name`  | `VARCHAR`     | `String`        |
 | `gpa`        | `NUMERIC`     | `Number`        |
 
-Most modern relation databases use a special-purpose programming language to manage its information called Structured Query Language (**SQL**) which consists of three distinctive languages.
+The way you manage the tables and rows in most modern relation databases is with a special-purpose programming language called Structured Query Language (**SQL**) which consists of three distinctive languages.
 
 1. A data definition language (DDL) for managing tables.
 1. A data manipulation language (DML) for managing rows.
