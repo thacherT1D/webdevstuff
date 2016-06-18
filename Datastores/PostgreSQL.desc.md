@@ -48,7 +48,7 @@ In the above example, the `student` object is called an entity. An **entity** is
 |--------------|-------------|--------|---------------------------|------------|----------------|------------------------------------|
 | `'Bruce'`    | `'Wayne'`   | `2.94` | `'bruce.wayne@gmail.com'` | `false`    | `null`         | `new Date('2016-05-02T04:30:00Z')` |
 
-An **attribute** is a piece of information that describes an entity. For example, this `student` entity has a `firstName` attribute with the value of `'Bruce'`.
+An **attribute** is a piece of information that describes an entity. For example, this `student` entity has a `first_name` attribute with the value of `'Bruce'`.
 
 ### Exercise
 
