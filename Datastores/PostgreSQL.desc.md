@@ -40,7 +40,7 @@ const person = {
 
 ### Exercise
 
-What's the difference between data and information?
+In your own words, explain the difference between data and information.
 
 ## What's an entity?
 
