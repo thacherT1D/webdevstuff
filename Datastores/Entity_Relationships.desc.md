@@ -235,7 +235,13 @@ id | first_name | last_name |         name         | start_year | end_year
 
 - [Lucidchart - ER Diagram Symbols and Meaning](https://www.lucidchart.com/pages/ER-diagram-symbols-and-meaning)
 - [Wikipedia - Associative entity](https://en.wikipedia.org/wiki/Associative_entity)
+- [Youtube - Entity Relationship Diagram Training](https://www.youtube.com/watch?v=-fQ-bRllhXc)
 - [Youtube - Introduction to Set Theory](https://www.youtube.com/watch?v=yCwnifwVjIg)
+
+## Services
+
+- [Draw.io](https://www.draw.io/)
+- [Lucidchart](https://www.lucidchart.com/)
 
 ## Videos
 

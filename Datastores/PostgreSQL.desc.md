@@ -517,23 +517,21 @@ We could also chain together multiple conditions like so:
 DELETE FROM movies WHERE id < 9 AND rating = 2;
 ```
 
-### Homework
+## Homework
 
 [Intro SQL Exercise](https://github.com/gSchool/intro_sql_exercise)
 
-## SQL Resources
+## Resources
 
-* [http://www.postgresql.org/docs/](http://www.postgresql.org/docs/)  - This is your friend!
-* [http://www.cheat-sheets.org/saved-copy/sqlcheetsheet.gif](http://www.cheat-sheets.org/saved-copy/sqlcheetsheet.gif)
-* [http://www.sql-tutorial.net/SQL-Cheat-Sheet.pdf](http://www.sql-tutorial.net/SQL-Cheat-Sheet.pdf)
-* [http://www.sqlcommands.net/sql+insert/](http://www.sqlcommands.net/sql+insert/)
+- [SQL Tutorial - Home](http://www.sqltutorial.org/wp-content/uploads/2016/04/sqlcheatsheet.pdf)
+- [SQL Tutorial - SQL Cheatsheet](http://www.sqltutorial.org/wp-content/uploads/2016/04/sqlcheatsheet.pdf)
+- [W3Schools - SQL Tutorial](http://www.w3schools.com/sql/default.asp)
 
 ## Videos
 
 ### Relational Databases
 
 <iframe src="https://player.vimeo.com/video/142036155" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-
 
 [postgresql-docs]: http://www.postgresql.org/docs/manuals/
 [relational-arch]: https://upload.wikimedia.org/wikipedia/commons/5/57/RDBMS_structure.png
