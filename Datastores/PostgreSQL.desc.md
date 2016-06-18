@@ -102,6 +102,15 @@ A **relational database**, or relational database management system (RDBMS), is 
   3 | Clark      | Kent      | 2.45
 ```
 
+Each column represents attributes that contains a piece of information that matches a particular data type.
+
+| Attribute    | Database type | JavaScript type |
+|--------------|---------------|-----------------|
+| `id`         | `SERIAL`      | `Integer`       |
+| `first_name` | `VARCHAR`     | `String`        |
+| `last_name`  | `VARCHAR`     | `String`        |
+| `gpa`        | `NUMERIC`     | `Number`        |
+
 Most modern relation databases use a special-purpose programming language to manage its information called Structured Query Language (**SQL**) which consists of three distinctive languages.
 
 1. A data definition language (DDL) for managing tables.
