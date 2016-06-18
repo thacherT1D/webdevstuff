@@ -124,7 +124,6 @@ CREATE TABLE students (
 And here's an example of a data manipulation command in SQL.
 
 ```sql
-Selina Kyle
 INSERT INTO students (first_name, last_Name, gpa) VALUES ('Bruce', 'Wayne', 2.94);
 INSERT INTO students (first_name, last_Name, gpa) VALUES ('Selina', 'Kyle', 3.02);
 INSERT INTO students (first_name, last_Name, gpa) VALUES ('Clark', 'Kent', 2.45);
