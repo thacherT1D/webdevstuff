@@ -1,20 +1,60 @@
 ## Objectives
 
-* Describe what a relational database is.
-* Explain why relational databases are so important.
-* Describe what PostgreSQL is.
-* Install and configure PostgreSQL.
+- Explain the difference between data and information.
+- Diagram how web applications store and retrieve data.
+- Describe what a relational database is.
+- Explain why relational databases are so important.
+- Describe what PostgreSQL is.
+- Install and configure PostgreSQL.
 
-## What's the different between data and information?
+## What's the difference between data and information?
 
-1. Ask the students what is the difference between data and information is
-  * 5-10 minutes to research on their own
-  * Information has context, data does not
-  * Write a bunch of numbers on the board- is this data or information? (Data)
-  * Add units to them- information or data (still data)
-  * Add a title to the numbers (student ages or something)- information or data (Information)
-  * Conclusion- we store data so that we can transform it into information in our apps
-1. Data Flow Diagrams
+**Data** are facts. Here are some examples of data represented in JavaScript.
+
+```javascript
+'Mary';
+'mary@microsoft.com';
+24;
+3.14;
+true;
+false;
+null;
+new Date('2016-01-22T04:30:00Z');
+```
+
+On the other hand, **information** are facts about something or someone. In other words, information is data with context. Here are some examples of information about a person represented in JavaScript.
+
+```javascript
+const person = {
+  name: 'Mary',
+  email: 'mary@microsoft.com',
+  age: 24,
+  favoriteNumber: 3.14,
+  likesDogs: true,
+  likesCats: false,
+  phoneNumber: null,
+  graduatedAt: new Date('2016-01-22T04:30:00Z')
+};
+```
+
+### Exercise
+
+Turn to a partner and write down what information you'd use to represent a pet.
+
+## How do web applications store and retrieve information?
+
+For the next few days, you'll be learning how web applications store and retrieve information.
+
+* Revisit the client-server diagram
+* Add a database server with DBMS and a database to it
+* Important for them to understand that the database server is (usually) a different computer
+  * Web server sends a request to a database server using a database driver
+  * Database server interprets the request and executes a query on the database
+  * Results come back to the database server
+  * Database server sends them back to the web server
+  * Database driver formats the results
+  * Web server does something with them
+* Data Flow Diagrams
   * Introduce the students to DFDs, but tell them they don't need to know how to how to write them- they're really useful for demonstrating the role of databases, but otherwise they're a kinda-rare UML artifact
   * DFDs have these elements:
     * Actors
@@ -34,34 +74,6 @@
     * Create another actor called admin that looks the user list, or another process that requires what's in the data store
   * The point is to illustrate data in motion (data flows) vs. data at rest (data stores)
   * If the system turns off, data in motion is lost, data at rest is not
-1. Client-Server Review
-  * Revisit the client-server diagram
-  * Add a database server with DBMS and a database to it
-  * Important for them to understand that the database server is (usually) a different computer
-    * Web server sends a request to a database server using a database driver
-    * Database server interprets the request and executes a query on the database
-    * Results come back to the database server
-    * Database server sends them back to the web server
-    * Database driver formats the results
-    * Web server does something with them
-1. Definitions
-  * Students should be able to define these things:
-    * Schema
-    * Table
-    * Relationship
-    * Record
-    * Field
-    * Key
-    * Type
-    * Constraints
-  * You can have them look these up for 15 minutes, or just tell them and then grill them on it until you have critical mass
-  * Use lots of spreadsheet metaphors
-  * Don't use a ton of ERD diagramming yet- save it for another lecture
-
-
-![Part 1](https://s3-us-west-2.amazonaws.com/assessment-images/misc/intro-to-data-part-1.jpg)
-![Part 1](https://s3-us-west-2.amazonaws.com/assessment-images/misc/intro-to-data-part-2.jpg)
-
 
 ## What's a relational database?
 
