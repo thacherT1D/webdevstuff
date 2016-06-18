@@ -40,11 +40,17 @@ const person = {
 
 ### Exercise
 
-In your own words, explain the difference between data and information.
+Take a minute to write down how you'd explain the difference between data and information to a friend. Then, turn to a neighbor and share what you wrote.
 
 ## What's an entity?
 
-The above `person` object is JavaScript code that represents an entity. An **entity** is object the represents a person, place, or thing. As you can see, this `person` entity has handful of attributes. An **attribute** is a piece of information that describes an entity. For example, the `person` entity has a `name` attribute with the value of `'Mary'`.
+In the above example, the `person` object is called an entity. An **entity** is an object the represents a person, place, or thing. As you can see, this `person` entity has handful of attributes.
+
+| `name`   | `email`                | `age` | `favoriteNumber` | `likesDogs` | `likesCats` | `phoneNumber` | `graduatedAt`                      |
+|----------|------------------------|-------|------------------|-------------|-------------|---------------|------------------------------------|
+| `'Mary'` | `'mary@microsoft.com'` | `24`  | `3.14`           | `true`      | `false`     | `null`        | `new Date('2016-01-22T04:30:00Z')` |
+
+An **attribute** is a piece of information that describes an entity. For example, the `person` entity has a `name` attribute with the value of `'Mary'`.
 
 ### Exercise
 
