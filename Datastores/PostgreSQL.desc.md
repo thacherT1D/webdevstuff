@@ -94,7 +94,13 @@ For the next few days, you'll be learning how web applications store and retriev
 
 A **relational database**, or relational database management system (RDBMS), is a database that's based on the relational model. The **relational model** is an approach to managing information using a structure where an entity is represented as row (i.e. tuple) that's grouped in a table (i.e. relation).
 
-![](http://www.vertabelo.com/_file/blog/orms-under-the-hood/data-representation-in-relational-database.png)
+#### `students`
+
+|id | first_name | last_name | gpa  |
+|---|------------|-----------|------|
+| 1 | Bruce      | Wayne     | 2.94 |
+| 2 | Selina     | Kyle      | 3.02 |
+| 3 | Clark      | Kent      | 2.45 |
 
 Most modern relation databases use a special-purpose programming language to manage its information called Structured Query Language (**SQL**) which consists of three distinctive languages.
 
@@ -109,8 +115,8 @@ Here's an example of a data definition command in SQL.
 ```sql
 CREATE TABLE students (
   id SERIAL PRIMARY KEY,
-  firstName VARCHAR(100),
-  lastName VARCHAR(100),
+  first_name VARCHAR(100),
+  last_name VARCHAR(100),
   gpa NUMERIC(8, 2)
 );
 ```
@@ -118,7 +124,10 @@ CREATE TABLE students (
 And here's an example of a data manipulation command in SQL.
 
 ```sql
-INSERT INTO person (firstName, lastName, gpa) VALUES ('Bruce', 'Wayne', 2.94);
+Selina Kyle
+INSERT INTO students (first_name, last_Name, gpa) VALUES ('Bruce', 'Wayne', 2.94);
+INSERT INTO students (first_name, last_Name, gpa) VALUES ('Selina', 'Kyle', 3.02);
+INSERT INTO students (first_name, last_Name, gpa) VALUES ('Clark', 'Kent', 2.45);
 ```
 
 SQL became an official standard in the mid-1980's. Since then, it has been revised a few times to include a growing set of features. Despite the existence of such standards, most SQL code is not completely portable between different database systems without adjustments. Popular open and closed source relational database systems that implement the SQL standard include the following.
