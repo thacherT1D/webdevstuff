@@ -121,7 +121,7 @@ And here's an example of a data manipulation command in SQL.
 INSERT INTO person (firstName, lastName, gpa) VALUES ('Bruce', 'Wayne', 2.94);
 ```
 
-SQL became an official standard in the mid-1980's and, since then, has been revised to include a growing set of features. Despite the existence of such standards, most SQL code is not completely portable among different database systems without adjustments. Popular open and closed source relational database systems that implement the SQL standard include:
+SQL became an official standard in the mid-1980's. Since then, it has been revised a few times to include a growing set of features. Despite the existence of such standards, most SQL code is not completely portable between different database systems without adjustments. Popular open and closed source relational database systems that implement the SQL standard include the following.
 
 | Name                 | Source |
 |----------------------|--------|
@@ -132,7 +132,7 @@ SQL became an official standard in the mid-1980's and, since then, has been revi
 | PostgreSQL           | Open   |
 | SQLite               | Open   |
 
-Most of these relation database systems follow a similar software architecture.
+Most of these relational database systems follow a similar software architecture.
 
 ![][relational-arch]
 
