@@ -13,28 +13,26 @@
 Before you can before fluent with databases, like PostgreSQL, you first need become fluent with the difference between data and information. Simply put, **data** are facts. Here are some examples of data, represented in JavaScript.
 
 ```javascript
-'Mary';
-'mary@microsoft.com';
-24;
-3.14;
-true;
-false;
-null;
-new Date('2016-01-22T04:30:00Z');
+'Bruce',
+'Wayne'
+'bruce.wayne@gmail.com',
+2.94,
+false,
+null,
+new Date('2016-05-02T04:30:00Z')
 ```
 
-On the other hand, **information** is facts about something or someone. In other words, information is data with context. Here's an example of information about a person, represented in JavaScript.
+On the other hand, **information** is facts about something or someone. In other words, information is data with context. Here's an example of information about a student, represented in JavaScript.
 
 ```javascript
-const person = {
-  name: 'Mary',
-  email: 'mary@microsoft.com',
-  age: 24,
-  favoriteNumber: 3.14,
-  likesDogs: true,
-  likesCats: false,
+const student = {
+  firstName: 'Bruce',
+  lastName: 'Wayne'
+  email: 'bruce.wayne@gmail.com',
+  gpa: 2.94,
+  hasLoan: false,
   phoneNumber: null,
-  graduatedAt: new Date('2016-01-22T04:30:00Z')
+  enrolledAt: new Date('2016-05-02T04:30:00Z')
 };
 ```
 
@@ -44,13 +42,13 @@ Take a minute to write down how you'd explain the difference between data and in
 
 ## What's an entity?
 
-In the above example, the `person` object is called an entity. An **entity** is an object the represents a person, place, or thing. As you can see from this table, this `person` entity has handful of attributes.
+In the above example, the `student` object is called an entity. An **entity** is an object the represents a person, place, or thing. As you can see from this table, this `student` entity has handful of attributes.
 
-| `name`   | `email`                | `age` | `favoriteNumber` | `likesDogs` | `likesCats` | `phoneNumber` | `graduatedAt`                      |
-|----------|------------------------|-------|------------------|-------------|-------------|---------------|------------------------------------|
-| `'Mary'` | `'mary@microsoft.com'` | `24`  | `3.14`           | `true`      | `false`     | `null`        | `new Date('2016-01-22T04:30:00Z')` |
+| `firstName` | `lastName` | `email`                   | `gpa`  | `hasLoan` | `phoneNumber` | `enrolledAt`                       |
+|-------------|------------|---------------------------|--------|-----------|---------------|------------------------------------|
+| `'Bruce'`   | `'Wayne'`  | `'bruce.wayne@gmail.com'` | `2.94` | `false`   | `null`        | `new Date('2016-05-02T04:30:00Z')` |
 
-An **attribute** is a piece of information that describes an entity. For example, this `person` entity has a `name` attribute with the value of `'Mary'`.
+An **attribute** is a piece of information that describes an entity. For example, this `student` entity has a `name` attribute with the value of `'Mary'`.
 
 ### Exercise
 
@@ -109,18 +107,18 @@ Most modern relation databases use a special-purpose programming language to man
 Here's an example of a data definition command in SQL.
 
 ```sql
-CREATE TABLE person (
+CREATE TABLE students (
   id SERIAL PRIMARY KEY,
-  first_name VARCHAR(100),
-  last_name VARCHAR(100),
-  birth_date TIMESTAMP
+  firstName VARCHAR(100),
+  lastName VARCHAR(100),
+  gpa DECIMAL(8, 2)
 );
 ```
 
 And here's an example of a data manipulation command in SQL.
 
 ```sql
-INSERT INTO person (first_name, last_name, birth_date) VALUES ('Bruce', 'Wayne', '1939-05-01T00:00:00Z');
+INSERT INTO person (firstName, lastName, gpa) VALUES ('Bruce', 'Wayne', 2.94);
 ```
 
 SQL became an official standard in the mid-1980's and, since then, has been revised to include a growing set of features. Despite the existence of such standards, most SQL code is not completely portable among different database systems without adjustments. Popular open and closed source relational database systems that implement the SQL standard include:
