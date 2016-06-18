@@ -123,15 +123,6 @@ And here's an example of a data manipulation command in SQL.
 INSERT INTO person (first_name, last_name, birth_date) VALUES ('Bruce', 'Wayne', '1939-05-01T00:00:00Z');
 ```
 
-For example, the CRUD operations correspond to the following SQL commands.
-
-| CRUD operations | SQL commands |
-|-----------------|--------------|
-| Create          | `INSERT`     |
-| Read            | `SELECT`     |
-| Update          | `UPDATE`     |
-| Destroy         | `DELETE`     |
-
 SQL became an official standard in the mid-1980's and, since then, has been revised to include a growing set of features. Despite the existence of such standards, most SQL code is not completely portable among different database systems without adjustments. Popular open and closed source relational database systems that implement the SQL standard include:
 
 | Name                 | Source |
@@ -223,7 +214,16 @@ psql
 
 And you'll be in an interactive PostgreSQL REPL. To get help, type `\?` and press `Enter`. To quit, type `\q` and press `Enter`.
 
-__CRUD__
+## What are the CRUD operations?
+
+The CRUD operations correspond to the following SQL commands.
+
+| CRUD operations | SQL commands |
+|-----------------|--------------|
+| Create          | `INSERT`     |
+| Read            | `SELECT`     |
+| Update          | `UPDATE`     |
+| Destroy         | `DELETE`     |
 
 Stands for Create, Read, Update and Destroy.  This is the lifecycle of data in an applicatoin.  In SQL, CRUD can be mapped to the following __INSERT, SELECT, UPDATE, DELETE__.
 
