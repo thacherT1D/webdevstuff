@@ -570,7 +570,7 @@ DELETE FROM movies WHERE id < 9 AND rating = 2;
 
 ## Resources
 
-- [SQL Tutorial - Home](http://www.sqltutorial.org/wp-content/uploads/2016/04/sqlcheatsheet.pdf)
+- [SQL Tutorial - Home](http://www.sqltutorial.org/)
 - [SQL Tutorial - SQL Cheatsheet](http://www.sqltutorial.org/wp-content/uploads/2016/04/sqlcheatsheet.pdf)
 - [W3Schools - SQL Tutorial](http://www.w3schools.com/sql/default.asp)
 
