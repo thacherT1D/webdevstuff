@@ -37,9 +37,11 @@ const person = {
 };
 ```
 
+You can think of the above JavaScript object as an entity. An **entity** is code the represents a person, place, or thing. The `person` entity from above has handful of attributes. An **attribute** is a piece of information that describes an entity. For example, the `person` entity has an `name` attribute with the value of `'Mary'`.
+
 ### Exercise
 
-Turn to a partner and write down what information you'd use to describe a pet. Then, create a JavaScript object to represent one instance of a pet with this information.
+Turn to a partner and write down what information you'd use to describe a pet entity. Then, create a JavaScript object to represent one instance of a pet with this information.
 
 ## How do web applications store and retrieve information?
 
