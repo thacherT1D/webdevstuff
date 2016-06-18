@@ -39,7 +39,7 @@ const person = {
 
 ### Exercise
 
-Turn to a partner and write down what information you'd use to represent a pet.
+Turn to a partner and write down what information you'd use to describe a pet. Then, create a JavaScript object to represent one instance of a pet with this information.
 
 ## How do web applications store and retrieve information?
 
