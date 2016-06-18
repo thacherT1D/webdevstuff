@@ -94,9 +94,7 @@ For the next few days, you'll be learning how web applications store and retriev
 
 ## What's a relational database?
 
-A **relational database**, or relational database management system (RDBMS), is a database that's based on the relational model. The **relational model** is an approach to managing data using a structure and language consistent with first-order predicate logic.
-
-Regarding structure, all data in a relational database is represented in terms of tuples (i.e. records) that are grouped into relations (i.e. tables).
+A **relational database**, or relational database management system (RDBMS), is a database that's based on the relational model. The **relational model** is an approach to managing data using a structure where all data is represented in terms of tuples (i.e. rows) that are grouped into relations (i.e. tables).
 
 ![][relational-db]
 
