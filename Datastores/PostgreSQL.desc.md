@@ -30,7 +30,6 @@ const person = {
   name: 'Mary',
   email: 'mary@microsoft.com',
   age: 24,
-  favoriteNumber: 3.14,
   likesDogs: true,
   likesCats: false,
   phoneNumber: null,
@@ -46,9 +45,9 @@ Take a minute to write down how you'd explain the difference between data and in
 
 In the above example, the `person` object is called an entity. An **entity** is an object the represents a person, place, or thing. As you can see, this `person` entity has handful of attributes.
 
-| `name`   | `email`                | `age` | `favoriteNumber` | `likesDogs` | `likesCats` | `phoneNumber` | `graduatedAt`                      |
-|----------|------------------------|-------|------------------|-------------|-------------|---------------|------------------------------------|
-| `'Mary'` | `'mary@microsoft.com'` | `24`  | `3.14`           | `true`      | `false`     | `null`        | `new Date('2016-01-22T04:30:00Z')` |
+| `name`   | `email`                | `age` | `likesDogs` | `likesCats` | `phoneNumber` | `graduatedAt`                      |
+|----------|------------------------|-------|-------------|-------------|---------------|------------------------------------|
+| `'Mary'` | `'mary@microsoft.com'` | `24`  | `true`      | `false`     | `null`        | `new Date('2016-01-22T04:30:00Z')` |
 
 An **attribute** is a piece of information that describes an entity. For example, the `person` entity has a `name` attribute with the value of `'Mary'`.
 
