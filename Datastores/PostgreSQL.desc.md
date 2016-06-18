@@ -9,7 +9,7 @@
 
 ## What's the difference between data and information?
 
-Simply put, **data** are facts. Here are some examples of data represented in JavaScript.
+Simply put, **data** are facts. Here are some examples of data, represented in JavaScript.
 
 ```javascript
 'Mary';
@@ -22,7 +22,7 @@ null;
 new Date('2016-01-22T04:30:00Z');
 ```
 
-On the other hand, **information** is facts about something or someone. In other words, information is data with context. Here's an example of information about a person represented in JavaScript.
+On the other hand, **information** is facts about something or someone. In other words, information is data with context. Here's an example of information about a person, represented in JavaScript.
 
 ```javascript
 const person = {
