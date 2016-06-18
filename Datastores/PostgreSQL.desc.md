@@ -98,11 +98,30 @@ A **relational database**, or relational database management system (RDBMS), is 
 
 ![][relational-db]
 
-Most modern relation databases use a special-purpose programming language to manage its data called **Structured Query Language** (SQL). Originally based upon relational algebra and tuple relational calculus, SQL consists of distinctive three languages.
+Most modern relation databases use a special-purpose programming language to manage its information called Structured Query Language (**SQL**) which consists of three distinctive languages.
 
-1. A data definition language (DDL) for structuring relations.
-1. A data manipulation language (DML) for performing CRUD operations.
-1. A data control language (DCL) for managing permissions.
+1. A data definition language (DDL) for managing tables.
+1. A data manipulation language (DML) for managing rows.
+1. A data control language (DCL) for managing permissions to the tables and rows.
+
+**NOTE:** In this course, we'll just be focusing on the data definition and data manipulation languages of SQL.
+
+Here's an example of a data definition command in SQL.
+
+```sql
+CREATE TABLE person (
+  id SERIAL PRIMARY KEY,
+  first_name VARCHAR(100),
+  last_name VARCHAR(100),
+  birth_date TIMESTAMP
+);
+```
+
+And here's an example of a data manipulation command in SQL.
+
+```sql
+INSERT INTO person (first_name, last_name, birth_date) VALUES ('Bruce', 'Wayne', '1939-05-01T00:00:00Z');
+```
 
 For example, the CRUD operations correspond to the following SQL commands.
 
