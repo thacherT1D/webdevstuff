@@ -54,9 +54,9 @@ An **attribute** is a piece of information that describes an entity. For example
 
 ### Exercise
 
-Turn to a neighbor and consider how you'd describe a `pet` entity. Think of the information that's important to being a pet.
+Turn to a neighbor and consider how you'd describe a `pet` entity. Think of at least five pieces of information that's essential to being a pet.
 
-Then, create a JavaScript object that represents one instance of a `pet` entity. Afterwards, create a table to represent the same `pet` entity. Make sure to include the information you thought of earlier as attributes for the entity.
+Using this information, create a JavaScript object that represents one instance of a `pet` entity. Then, create a table to represent the same `pet` entity.
 
 ## How do web applications store and retrieve information?
 
