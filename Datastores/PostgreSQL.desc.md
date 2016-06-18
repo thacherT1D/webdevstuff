@@ -130,14 +130,14 @@ INSERT INTO students (first_name, last_Name, gpa) VALUES ('Selina', 'Kyle', 3.02
 INSERT INTO students (first_name, last_Name, gpa) VALUES ('Clark', 'Kent', 2.45);
 ```
 
-SQL became an official standard in the mid-1980's. Since then, it has been revised a few times to include a growing set of features. Despite the existence of such standards, most SQL code is not completely portable between different database systems without adjustments. Popular open and closed source relational database systems that implement the SQL standard include the following.
+SQL became an official standard in the mid-1980's. Since then, it has been revised a few times to include a growing set of features. Despite the existence of such standards, most SQL code is not completely portable between different database systems without adjustments. Popular closed and open source relational database systems that implement the SQL standard include the following.
 
 | Name                 | Source |
 |----------------------|--------|
 | Microsoft Access     | Closed |
 | Microsoft SQL Server | Closed |
-| MySQL                | Open   |
 | Oracle               | Closed |
+| MySQL                | Open   |
 | PostgreSQL           | Open   |
 | SQLite               | Open   |
 
