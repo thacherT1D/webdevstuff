@@ -15,8 +15,8 @@ Before you can become fluent with databases, like PostgreSQL, you first need bec
 ```javascript
 'Bruce',
 'Wayne'
-'bruce.wayne@gmail.com',
 2.94,
+'bruce.wayne@gmail.com',
 false,
 null,
 new Date('2016-05-02T04:30:00Z')
@@ -28,8 +28,8 @@ On the other hand, **information** is facts about something or someone. In other
 const student = {
   firstName: 'Bruce',
   lastName: 'Wayne'
-  email: 'bruce.wayne@gmail.com',
   gpa: 2.94,
+  email: 'bruce.wayne@gmail.com',
   hasLoan: false,
   phoneNumber: null,
   enrolledAt: new Date('2016-05-02T04:30:00Z')
@@ -44,9 +44,9 @@ Take a minute to write down how you'd explain the difference between data and in
 
 In the above example, the `student` object is called an entity. An **entity** is an object the represents a person, place, or thing. As you can see from this table, this `student` entity has handful of attributes.
 
-| `first_Name` | `last_name` | `email`                   | `gpa`  | `has_loan` | `phone_number` | `enrolled_at`                      |
-|--------------|-------------|---------------------------|--------|------------|----------------|------------------------------------|
-| `'Bruce'`    | `'Wayne'`   | `'bruce.wayne@gmail.com'` | `2.94` | `false`    | `null`         | `new Date('2016-05-02T04:30:00Z')` |
+| `first_Name` | `last_name` | `gpa`  | `email`                   | `has_loan` | `phone_number` | `enrolled_at`                      |
+|--------------|-------------|--------|---------------------------|------------|----------------|------------------------------------|
+| `'Bruce'`    | `'Wayne'`   | `2.94` | `'bruce.wayne@gmail.com'` | `false`    | `null`         | `new Date('2016-05-02T04:30:00Z')` |
 
 An **attribute** is a piece of information that describes an entity. For example, this `student` entity has a `firstName` attribute with the value of `'Bruce'`.
 
