@@ -1,6 +1,7 @@
 ## Objectives
 
 - Explain the difference between data and information.
+- Explain what an entity is.
 - Diagram how web applications store and retrieve data.
 - Describe what a relational database is.
 - Explain why relational databases are so important.
@@ -37,7 +38,9 @@ const person = {
 };
 ```
 
-In JavaScript, above `person` object is called an entity. An **entity** is object the represents a person, place, or thing. As you can see, this `person` entity has handful of attributes. An **attribute** is a piece of information that describes an entity. For example, the `person` entity has a `name` attribute with the value of `'Mary'`.
+## What's an entity?
+
+The above `person` object is JavaScript code that represents an entity. An **entity** is object the represents a person, place, or thing. As you can see, this `person` entity has handful of attributes. An **attribute** is a piece of information that describes an entity. For example, the `person` entity has a `name` attribute with the value of `'Mary'`.
 
 ### Exercise
 
