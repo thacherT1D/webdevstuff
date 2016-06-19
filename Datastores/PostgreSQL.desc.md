@@ -220,6 +220,10 @@ ln -sfv /usr/local/opt/postgresql/*.plist ~/Library/LaunchAgents
 launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist
 ```
 
+## What are the CRUD operations on a database?
+
+## How do you create a database in PostgreSQL?
+
 With the PostgreSQL server running, create a default database with the same name as your current user's account name.
 
 ```sh
@@ -233,21 +237,6 @@ psql
 ```
 
 And you'll be in an interactive PostgreSQL REPL. To get help, type `\?` and press `Enter`. To quit, type `\q` and press `Enter`.
-
-## What are the CRUD operations?
-
-The CRUD operations correspond to the following SQL commands.
-
-| CRUD operations | SQL commands |
-|-----------------|--------------|
-| Create          | `INSERT`     |
-| Read            | `SELECT`     |
-| Update          | `UPDATE`     |
-| Destroy         | `DELETE`     |
-
-Stands for Create, Read, Update and Destroy.  This is the lifecycle of data in an applicatoin.  In SQL, CRUD can be mapped to the following __INSERT, SELECT, UPDATE, DELETE__.
-
-## Creating a Database
 
 Most database products have the notion of separate databases. Let's create one for the lesson. In your terminal, type `psql`. Next create a database:
 
@@ -277,7 +266,11 @@ Check what tables we have in our newly created database (dt stands for display t
 
 At this point we should have a database with no tables in it.  So now we need to create tables.
 
-## Creating a Table
+## How do you drop a database in PostgreSQL?
+
+## What are the CRUD operations on a table?
+
+## How do you create a table in a database?
 
 Let's look at the Postgres docs for __[creating a table](http://www.postgresql.org/docs/9.1/static/sql-createtable.html).__
 
@@ -307,16 +300,6 @@ CREATE TABLE students (
 );
 ```
 
-### Dropping a Table
-
-Let's say we no longer need the students table from above, to get rid of all of the data and the definition of the table, we can use the DROP statement.  Here are the [docs on DROP](http://www.postgresql.org/docs/8.2/static/sql-droptable.html).
-
-```sql
-DROP TABLE students;
-```
-
-####Schema
-
 The schema of the database is the set of create table commands that specify what the tables are and how they relate to each other.  For our very simple database example, here is the schema:
 
 ```sql
@@ -329,15 +312,15 @@ CREATE TABLE students (
 );
 ```
 
-#### What is a Primary Key?
+### What is a Primary Key?
 
 It denotes an attribute on a table that can uniquely identify the row.  What is a similar property on a mongo db?
 
-#### What does SERIAL Do?
+### What does SERIAL Do?
 
 SERIAL tells the database to automatically assign the next unused integer value to id whenever we insert into the database and do not specify id. You will nearly always want a column to exist on your table that is defined as a serial column. There will be times when you will want to manage the `id` field yourself, but they are rare. Let the database do the work for you.
 
-#### Data Types
+### Data Types
 
 Similar to how Ruby or Javascript has types of data, SQL defines types that can be stored in the DB. Here are some common ones:
 
@@ -349,11 +332,32 @@ Similar to how Ruby or Javascript has types of data, SQL defines types that can 
 * Timestamp
 * Boolean (True or False)
 
-#### Exercise
+## How do you destroy a table in a database?
+
+Let's say we no longer need the students table from above, to get rid of all of the data and the definition of the table, we can use the DROP statement.  Here are the [docs on DROP](http://www.postgresql.org/docs/8.2/static/sql-droptable.html).
+
+```sql
+DROP TABLE students;
+```
+
+### Exercise
 
 Design a table for a movie database. Discuss a few things that a movie table may have. Choose the appropriate data type for the data. Make the CREATE TABLE command and execute it in psql. Use `\dt` to verify that the table was created. Once you're satisfied that the table is there, get rid of it using the DROP TABLE command. Use `\dt` again to make sure that the table has been dropped.
 
-## Inserting
+## What are the CRUD operations on a row?
+
+The CRUD operations correspond to the following SQL commands.
+
+| CRUD operations | SQL commands |
+|-----------------|--------------|
+| Create          | `INSERT`     |
+| Read            | `SELECT`     |
+| Update          | `UPDATE`     |
+| Destroy         | `DELETE`     |
+
+Stands for Create, Read, Update and Destroy.  This is the lifecycle of data in an applicatoin.  In SQL, CRUD can be mapped to the following __INSERT, SELECT, UPDATE, DELETE__.
+
+## How do you create a row in a table?
 
 The INSERT SQL command adds new rows to a table. Here are the [postgres docs on INSERT](http://www.postgresql.org/docs/9.1/static/sql-insert.html).
 
@@ -382,7 +386,7 @@ Our new row of data will look something like this:
 
 Even though we did not specify an id, one was created anyways. Since we have set the data type of the `id` column to `serial`, postgres automatically set the value for us.
 
-## Selecting
+## How do you read a row in a table?
 
 A select statement allows you to get data from the database. Here are the [docs on select](http://www.postgresql.org/docs/9.1/static/sql-select.html). Also, postgres a good [tutorial on select](http://www.postgresql.org/docs/9.3/static/tutorial-select.html). I'd recommend looking at the tutorial sometime after the lesson.
 
@@ -549,14 +553,14 @@ SELECT title, rating FROM movies ORDER BY rating DESC LIMIT 5;
 | Back to the Future |      9 |
 | Mystic River       |      7 |
 
-#### Exercises
+### Exercises
 
 * Write a query on the movie table to return the worst movie of all time.  There should be only 1 result returned.  The result should include the title, description and rating of the movie.
 * Write a query that returns Gigli and Mad Max: Fury Road
 * Write a query that returns the id and title of the first 5 movies inserted into the database.
 * Write a query to get all of the average movies from the table.  Average is defined as a rating between 4 and 7 inclusive.
 
-## Updating
+## How do you update a row in a table?
 
 The update statement is defined [here](http://www.postgresql.org/docs/9.1/static/sql-update.html) in the postgres docs.  It is used to change existing data in our database.
 
@@ -566,11 +570,11 @@ For example, if we do not think Gigli was actually that bad, and we want to chan
 UPDATE movies SET rating=2 WHERE title='Gigli';
 ```
 
-#### Exercise
+### Exercise
 
 You are a harsh critic and don't feel like any of these movies are worthy of a 10. Write an update query that downgrades all of the 10s in our database to 9s.
 
-## Deleting
+## How do you destroy a row in a table?
 
 Deleting works similarly to a select statement.  Here are the [docs on delete](http://www.postgresql.org/docs/8.1/static/sql-delete.html)
 
