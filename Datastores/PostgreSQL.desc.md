@@ -18,26 +18,26 @@
 Before you can become fluent with databases, like PostgreSQL, you first need become fluent with the difference between data and information. Simply put, **data** are facts. Here are some examples of data, represented in JavaScript.
 
 ```javascript
-'Bruce',
-'Wayne'
-2.94,
-'bruce.wayne@gmail.com',
-false,
-null,
-new Date('2016-05-02T04:30:00Z')
+'Frozen';
+102;
+'PG';
+'Animation';
+new Date('2013-11-27T00:00:00Z');
+7.6;
+true;
 ```
 
-On the other hand, **information** is facts about something or someone. In other words, information is data with context. Here's an example of information about a student, represented in JavaScript.
+On the other hand, **information** is facts about something or someone. In other words, information is data with context. Here's an example of information about a movie, represented in JavaScript.
 
 ```javascript
-const student = {
-  firstName: 'Bruce',
-  lastName: 'Wayne'
-  gpa: 2.94,
-  email: 'bruce.wayne@gmail.com',
-  hasLoan: false,
-  phoneNumber: null,
-  enrolledAt: new Date('2016-05-02T04:30:00Z')
+const movie = {
+  title: 'Frozen',
+  duration: 102,
+  rated: 'PG',
+  genre: 'Animation',
+  releasedAt: new Date('2013-11-27T00:00:00Z'),
+  score: 7.6,
+  wonOscar: true
 };
 ```
 
@@ -47,13 +47,13 @@ Take a minute to write down how you'd explain the difference between data and in
 
 ## What's an entity?
 
-In the above example, the `student` object is called an entity. An **entity** is an object the represents a person, place, or thing. As you can see from this table, this `student` entity has handful of attributes.
+In the above example, the `movie` object is called an entity. An **entity** is an object the represents a person, place, or thing. As you can see from this table, this `movie` entity has handful of attributes.
 
-| `first_Name` | `last_name` | `gpa`  | `email`                   | `has_loan` | `phone_number` | `enrolled_at`                      |
-|--------------|-------------|--------|---------------------------|------------|----------------|------------------------------------|
-| `'Bruce'`    | `'Wayne'`   | `2.94` | `'bruce.wayne@gmail.com'` | `false`    | `null`         | `new Date('2016-05-02T04:30:00Z')` |
+| `title`    | `duration` | `rated` | `genre`       | `released_at`                      | `score` | `won_oscar` |
+|------------|------------|---------|---------------|------------------------------------|---------|-------------|
+| `'Frozen'` | `102`      | `'PG'`  | `'Animation'` | `new Date('2013-11-27T00:00:00Z')` | `7.6`   | `true`      |
 
-An **attribute** is a piece of information that describes an entity. For example, this `student` entity has a `first_name` attribute with the value of `'Bruce'`.
+An **attribute** is a piece of information that describes an entity. For example, this `movie` entity has a `title` attribute with the value of `'Frozen'`.
 
 ### Exercise
 
@@ -75,7 +75,7 @@ For the next few days, you'll be learning how web applications store and retriev
   * Database driver formats the results
   * Web server does something with them
 * Data Flow Diagrams
-  * Introduce the students to DFDs, but tell them they don't need to know how to how to write them- they're really useful for demonstrating the role of databases, but otherwise they're a kinda-rare UML artifact
+  * Introduce the movies to DFDs, but tell them they don't need to know how to how to write them- they're really useful for demonstrating the role of databases, but otherwise they're a kinda-rare UML artifact
   * DFDs have these elements:
     * Actors
     * Processes
@@ -127,7 +127,7 @@ The way you manage the tables and rows in most modern relation databases is with
 Here's an example of a data definition command in SQL.
 
 ```sql
-CREATE TABLE students (
+CREATE TABLE movies (
   id SERIAL PRIMARY KEY,
   first_name VARCHAR(100),
   last_name VARCHAR(100),
@@ -138,9 +138,9 @@ CREATE TABLE students (
 And here's an example of a data manipulation command in SQL.
 
 ```sql
-INSERT INTO students (first_name, last_Name, gpa) VALUES ('Bruce', 'Wayne', 2.94);
-INSERT INTO students (first_name, last_Name, gpa) VALUES ('Selina', 'Kyle', 3.02);
-INSERT INTO students (first_name, last_Name, gpa) VALUES ('Clark', 'Kent', 2.45);
+INSERT INTO movies (first_name, last_Name, gpa) VALUES ('Bruce', 'Wayne', 2.94);
+INSERT INTO movies (first_name, last_Name, gpa) VALUES ('Selina', 'Kyle', 3.02);
+INSERT INTO movies (first_name, last_Name, gpa) VALUES ('Clark', 'Kent', 2.45);
 ```
 
 SQL became an official standard in the mid-1980's. Since then, it has been revised a few times to include a growing set of features. Despite the existence of such standards, most SQL code is not completely portable between different database systems without adjustments. Popular closed and open source relational database systems that implement the SQL standard include the following.
@@ -374,10 +374,10 @@ CREATE TABLE table_name
 
 Example:
 
-This is an example of a students table.  We will talk about the primary key soon.
+This is an example of a movies table.  We will talk about the primary key soon.
 
 ```sql
-CREATE TABLE students (
+CREATE TABLE movies (
     id SERIAL PRIMARY KEY,
     name TEXT,
     phone_no VARCHAR(10),
@@ -389,7 +389,7 @@ CREATE TABLE students (
 The schema of the database is the set of create table commands that specify what the tables are and how they relate to each other.  For our very simple database example, here is the schema:
 
 ```sql
-CREATE TABLE students (
+CREATE TABLE movies (
     id SERIAL PRIMARY KEY,
     name TEXT,
     phone_no VARCHAR(10),
@@ -420,10 +420,10 @@ Similar to how Ruby or Javascript has types of data, SQL defines types that can 
 
 ## How do you destroy a table in a database?
 
-Let's say we no longer need the students table from above, to get rid of all of the data and the definition of the table, we can use the DROP statement.  Here are the [docs on DROP](http://www.postgresql.org/docs/8.2/static/sql-droptable.html).
+Let's say we no longer need the movies table from above, to get rid of all of the data and the definition of the table, we can use the DROP statement.  Here are the [docs on DROP](http://www.postgresql.org/docs/8.2/static/sql-droptable.html).
 
 ```sql
-DROP TABLE students;
+DROP TABLE movies;
 ```
 
 ### Exercise
