@@ -107,6 +107,7 @@ A **relational database system**, or relational database management system (RDBM
   1 | Frozen             |      102 | PG    | Animation | t     | 2013-11-26 16:00:00-08 |   7.6
   2 | X-Men: Apocalypse  |      144 | PG-13 | Action    | t     | 2016-05-26 17:00:00-07 |   7.4
   3 | The Princess Bride |       98 | PG    | Adventure | f     | 1987-10-08 17:00:00-07 |   8.1
+  4 | Pulp Fiction       |      154 | R     | Crime     | f     | 1994-10-13 17:00:00-07 |   8.9
 ```
 
 Each column represents attributes that contains a piece of information that matches a particular data type.
@@ -151,6 +152,7 @@ And here's an example of a data manipulation command in SQL.
 INSERT INTO movies (title, duration, rated, genre, is_3d, released_at, score) VALUES ('Frozen', 102, 'PG', 'Animation', TRUE, '2013-11-27 00:00:00 UTC', 7.6);
 INSERT INTO movies (title, duration, rated, genre, is_3d, released_at, score) VALUES ('X-Men: Apocalypse', 144, 'PG-13', 'Action', TRUE, '2016-05-27 00:00:00 UTC', 7.4);
 INSERT INTO movies (title, duration, rated, genre, is_3d, released_at, score) VALUES ('The Princess Bride', 98, 'PG', 'Adventure', FALSE, '1987-10-09 00:00:00 UTC', 8.1);
+INSERT INTO movies (title, duration, rated, genre, is_3d, released_at, score) VALUES ('Pulp Fiction', 154, 'R', 'Crime', FALSE, '1994-10-14 00:00:00 UTC', 8.9);
 ```
 
 SQL became an official standard in the mid-1980's. Since then, it has been revised a few times to include a growing set of features. Despite the existence of such standards, most SQL code is not completely portable between different database systems without adjustments. Popular closed and open source relational database systems that implement the SQL standard include the following.
