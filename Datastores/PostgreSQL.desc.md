@@ -3,8 +3,8 @@
 - Explain the difference between data and information.
 - Explain what an entity is.
 - Diagram how web applications store and retrieve data.
-- Explain what a relational database is.
-- Explain why relational databases are so important.
+- Explain what is a relational database system is.
+- Explain why is a relational database system so important.
 - Explain what PostgreSQL is.
 - Install PostgreSQL using Homebrew.
 - Start a PostgreSQL server using Homebrew Services.
@@ -15,7 +15,7 @@
 
 ## What's the difference between data and information?
 
-Before you can become fluent with databases, like PostgreSQL, you first need become fluent with the difference between data and information. Simply put, **data** are facts. Here are some examples of data, represented in JavaScript.
+Before you can become fluent with database systems, like PostgreSQL, you first need become fluent with the difference between data and information. Simply put, **data** are facts. Here are some examples of data, represented in JavaScript.
 
 ```javascript
 'Frozen';
@@ -55,7 +55,7 @@ In the above example, the `movie` object is called an entity. An **entity** is a
 
 An **attribute** is a piece of information that describes an entity. For example, this `movie` entity has a `title` attribute with the value of `'Frozen'`.
 
-**NOTE:** Attribute names tables are often displayed in camel case because unquoted identifiers in database systems like PostgreSQL are case insensitive.
+**NOTE:** In table form, attribute names are often in camel case because unquoted identifiers in database systems, like PostgreSQL, are case insensitive.
 
 ### Exercise
 
@@ -97,9 +97,9 @@ For the next few days, you'll be learning how web applications store and retriev
   * The point is to illustrate data in motion (data flows) vs. data at rest (data stores)
   * If the system turns off, data in motion is lost, data at rest is not
 
-## What's a relational database?
+## What's a relational database system?
 
-A **relational database**, or relational database management system (RDBMS), is a database that's based on the relational model. The **relational model** is an approach to managing information using a structure where an entity is represented as row (i.e. tuple) that's grouped in a table (i.e. relation).
+A **relational database system**, or relational database management system (RDBMS), is a database system that's based on the relational model. The **relational model** is an approach to managing information using a structure where an entity is represented as row (i.e. tuple) that's grouped in a table (i.e. relation).
 
 ```text
  id | first_name | last_name | gpa
@@ -118,7 +118,7 @@ Each column represents attributes that contains a piece of information that matc
 | `last_name`  | `VARCHAR`     | `String`        |
 | `gpa`        | `NUMERIC`     | `Number`        |
 
-The way you manage the tables and rows in most modern relation databases is with a special-purpose programming language called Structured Query Language (**SQL**) which consists of three distinctive languages.
+The way you manage the tables and rows in most modern relation database systems is with a special-purpose programming language called Structured Query Language (**SQL**) which consists of three distinctive languages.
 
 1. A data definition language (DDL) for managing tables.
 1. A data manipulation language (DML) for managing rows.
@@ -157,7 +157,7 @@ SQL became an official standard in the mid-1980's. Since then, it has been revis
 | PostgreSQL           | Open   |
 | SQLite               | Open   |
 
-Relational database systems all share a few things in common. First, is the concept of a database server which contain multiple databases. And each database contains multiple tables. All the information inside of these tables are persisted to a hard disk by the relational database so you don't have to worry about how the information is stored. For example, if you were building a web application for movie fanatics called Movie Junkies, it might use one database server with two databases: a `movie_junkies_dev` database for the development environment and `movie_junkies_test` database for the test environment.
+Relational database systems all share a few things in common. First, is the concept of a database server which contain multiple databases. And each database contains multiple tables. All the information inside of these tables are persisted to a hard disk by the database system so you don't have to worry about how the information is stored. For example, if you were building a web application for movie fanatics called Movie Junkies, it might use one database server with two databases: a `movie_junkies_dev` database for the development environment and `movie_junkies_test` database for the test environment.
 
 ```text
         Name        |   Owner   | Encoding
@@ -166,9 +166,9 @@ Relational database systems all share a few things in common. First, is the conc
  movie_junkies_test | ryansobol | UTF8     
 ```
 
-## Why are relational databases so important?
+## Why is a relational database system so important?
 
-Since the 1970s, relational databases have been used to store financial records, manufacturing and logistical information, personnel data, government information, communication data, etc. By structuring data in records and tables, computers can quickly and efficiently store and retrieve insanely large amounts data.
+Since the 1970s, relational database systems have been used to store financial records, manufacturing and logistical information, personnel data, government information, communication data, etc. By structuring data in records and tables, computers can quickly and efficiently store and retrieve insanely large amounts data.
 
 Imagine, for a moment, you have a database for an online store with a single `orders` table.
 
@@ -180,7 +180,7 @@ Imagine, for a moment, you have a database for an online store with a single `or
 | `2`  | `'Joel'`     | `'Capra'`   | `2016-02-10` | `32.99` |
 | `3`  | `'Susan'`    | `'Frazier'` | `2016-03-01` | `46.99` |
 
-As you can see, there's duplicate customer data. And wherever there's duplicate data, there's the possibility for inconsistencies to arise. For example, imagine Susan Frazier wants to change her last name. Given the current structure, that would require changing multiple records. With a relational database, it's possible to use multiple tables—like a `customers` and `orders` table—to store the same information.
+As you can see, there's duplicate customer data. And wherever there's duplicate data, there's the possibility for inconsistencies to arise. For example, imagine Susan Frazier wants to change her last name. Given the current structure, that would require changing multiple records. With a relational database system, it's possible to use multiple tables—like a `customers` and `orders` table—to store the same information.
 
 ##### `customers`
 
@@ -302,7 +302,7 @@ psql movie_junkies_dev
 
 And you'll be in an interactive PostgreSQL REPL. To get help, type `\?` and press `Enter`. To quit, type `\q` and press `Enter`.
 
-Most database products have the notion of separate databases. Let's create one for the lesson. In your terminal, type `psql`. Next create a database:
+Most database systems have the notion of separate databases. Let's create one for the lesson. In your terminal, type `psql`. Next create a database:
 
 ```text
 \l
