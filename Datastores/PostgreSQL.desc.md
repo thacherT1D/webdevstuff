@@ -22,9 +22,9 @@ Before you can become fluent with databases, like PostgreSQL, you first need bec
 102;
 'PG';
 'Animation';
+true;
 new Date('2013-11-27T00:00:00Z');
 7.6;
-true;
 ```
 
 On the other hand, **information** is facts about something or someone. In other words, information is data with context. Here's an example of information about a movie, represented in JavaScript.
@@ -35,9 +35,9 @@ const movie = {
   duration: 102,
   rated: 'PG',
   genre: 'Animation',
+  is3D: true,
   releasedAt: new Date('2013-11-27T00:00:00Z'),
-  score: 7.6,
-  wonOscar: true
+  score: 7.6
 };
 ```
 
@@ -49,9 +49,9 @@ Take a minute to write down how you'd explain the difference between data and in
 
 In the above example, the `movie` object is called an entity. An **entity** is an object the represents a person, place, or thing. As you can see from this table, this `movie` entity has handful of attributes.
 
-| `title`    | `duration` | `rated` | `genre`       | `released_at`                      | `score` | `won_oscar` |
-|------------|------------|---------|---------------|------------------------------------|---------|-------------|
-| `'Frozen'` | `102`      | `'PG'`  | `'Animation'` | `new Date('2013-11-27T00:00:00Z')` | `7.6`   | `true`      |
+| `title`    | `duration` | `rated` | `genre`       | `is_3D`     | `released_at`                      | `score` |
+|------------|------------|---------|---------------|-------------|------------------------------------|---------|
+| `'Frozen'` | `102`      | `'PG'`  | `'Animation'` | `true`      | `new Date('2013-11-27T00:00:00Z')` | `7.6`   |
 
 An **attribute** is a piece of information that describes an entity. For example, this `movie` entity has a `title` attribute with the value of `'Frozen'`.
 
@@ -132,16 +132,16 @@ CREATE TABLE movies (
   title VARCHAR(100),
   rated VARCHAR(10),
   genre TEXT,
+  is_3D BOOLEAN,
   released_at TIMESTAMP WITH TIME ZONE,
-  score NUMERIC(3, 1),
-  won_oscar BOOLEAN
+  score NUMERIC(3, 1)
 );
 ```
 
 And here's an example of a data manipulation command in SQL.
 
 ```sql
-INSERT INTO movies (title, rated, genre, released_at, score, won_oscar) VALUES ('Frozen', 102, 'PG', 'Animation', '2013-11-27T00:00:00Z', 7.6, true);
+INSERT INTO movies (title, rated, genre, is_3D, released_at, score) VALUES ('Frozen', 102, 'PG', 'Animation', true, '2013-11-27T00:00:00Z', 7.6);
 ```
 
 SQL became an official standard in the mid-1980's. Since then, it has been revised a few times to include a growing set of features. Despite the existence of such standards, most SQL code is not completely portable between different database systems without adjustments. Popular closed and open source relational database systems that implement the SQL standard include the following.
@@ -155,13 +155,13 @@ SQL became an official standard in the mid-1980's. Since then, it has been revis
 | PostgreSQL           | Open   |
 | SQLite               | Open   |
 
-Relational database systems all share a few things in common. First, is the concept of a database server which contain multiple databases. And each database contains multiple tables. All the information inside of these tables are persisted to a hard disk by the relational database so you don't have to worry about how the information is stored. For example, if you were building a web application for film fanatics called Film Junkies, it might use one database server with two databases: a `film_junkies_dev` database for the development environment and `film_junkies_test` database for the test environment.
+Relational database systems all share a few things in common. First, is the concept of a database server which contain multiple databases. And each database contains multiple tables. All the information inside of these tables are persisted to a hard disk by the relational database so you don't have to worry about how the information is stored. For example, if you were building a web application for movie fanatics called Movie Junkies, it might use one database server with two databases: a `movie_junkies_dev` database for the development environment and `movie_junkies_test` database for the test environment.
 
 ```text
-       Name        |   Owner   | Encoding
--------------------+-----------+----------
- film_junkies_dev  | ryansobol | UTF8     
- film_junkies_test | ryansobol | UTF8     
+        Name        |   Owner   | Encoding
+--------------------+-----------+----------
+ movie_junkies_dev  | ryansobol | UTF8     
+ movie_junkies_test | ryansobol | UTF8     
 ```
 
 ## Why are relational databases so important?
@@ -265,7 +265,7 @@ psql -l
 ```
 
 ```shell
-createdb film_junkies_dev
+createdb movie_junkies_dev
 ```
 
 ```shell
@@ -273,7 +273,7 @@ psql -l
 ```
 
 ```shell
-dropdb film_junkies_dev
+dropdb movie_junkies_dev
 ```
 
 ```shell
@@ -282,7 +282,7 @@ psql -l
 
 ### Exercise
 
-Use the command line tools to create a `film_junkies_dev` database in the PostgreSQL cluster. When your done, check out the usage messages for the following commands.
+Use the command line tools to create a `movie_junkies_dev` database in the PostgreSQL cluster. When your done, check out the usage messages for the following commands.
 
 ```shell
 psql --help
@@ -295,7 +295,7 @@ dropdb --help
 Now, you can connect to the default database in your PostgreSQL server through PostgreSQL client.
 
 ```shell
-psql film_junkies_dev
+psql movie_junkies_dev
 ```
 
 And you'll be in an interactive PostgreSQL REPL. To get help, type `\?` and press `Enter`. To quit, type `\q` and press `Enter`.
@@ -309,7 +309,7 @@ Most database products have the notion of separate databases. Let's create one f
 **NOTE:** Remember to end SQL commands with a semicolon `;`.
 
 ```sql
-CREATE DATABASE film_junkies_test;
+CREATE DATABASE movie_junkies_test;
 ```
 
 Next, list all of the available databases:
@@ -321,15 +321,15 @@ Next, list all of the available databases:
 Now connect to the database we just created.
 
 ```text
-\c film_junkies_test
+\c movie_junkies_test
 ```
 
 ```text
-\c film_junkies_dev
+\c movie_junkies_dev
 ```
 
 ```sql
-DROP DATABASE film_junkies_test;
+DROP DATABASE movie_junkies_test;
 ```
 
 ```text
