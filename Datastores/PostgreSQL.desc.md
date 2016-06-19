@@ -47,7 +47,7 @@ Take a minute to write down how you'd explain the difference between data and in
 
 ## What's an entity?
 
-In the above example, the `movie` object is called an entity. An **entity** is an object the represents a person, place, or thing. As you can see from this table, this `movie` entity has handful of attributes.
+In the above example, the `movie` object is called an entity. An **entity** is an object the represents a person, place, or thing. As you can see from the table below, this `movie` entity has handful of attributes.
 
 | `title`    | `duration` | `rated` | `genre`       | `is_3D`     | `released_at`                      | `score` |
 |------------|------------|---------|---------------|-------------|------------------------------------|---------|
@@ -55,9 +55,11 @@ In the above example, the `movie` object is called an entity. An **entity** is a
 
 An **attribute** is a piece of information that describes an entity. For example, this `movie` entity has a `title` attribute with the value of `'Frozen'`.
 
+**NOTE:** Attribute names tables are often displayed in camel case because unquoted identifiers in database systems like PostgreSQL are case insensitive.
+
 ### Exercise
 
-Turn to a neighbor and consider how you'd describe a `pet` entity. Think of at least five pieces of information that's essential to being a pet.
+Turn to a neighbor and consider how you'd describe a `pet` entity. Think of at least five pieces of information that are essential to being a pet.
 
 Using this information, create a JavaScript object that represents one instance of a `pet` entity. Then, create a table, like the one above, to represent the same `pet` entity.
 
