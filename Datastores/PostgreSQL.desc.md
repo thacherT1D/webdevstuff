@@ -194,10 +194,10 @@ Imagine, for a moment, you have a database for an online store with a single `or
 As you can see, there's duplicate customer data. And wherever there's duplicate data, there's the possibility for inconsistencies to arise. For example, imagine Susan Frazier wants to change her last name. Given the current structure, that would require changing multiple records. With a relational database system, it's possible to use multiple tables—like a `customers` and `orders` table—to store the same information.
 
 ```text
- id | movie_id |                                 name                                 | kind  |      received_at
-----+----------+----------------------------------------------------------------------+-------+------------------------
-  1 |        1 | Best Animated Feature Film of the Year                               | Oscar | 2014-03-02 16:00:00-08
-  2 |        1 | Best Achievement in Music Written for Motion Pictures, Original Song | Oscar | 2014-03-02 16:00:00-08
+ id | movie_id | kind  |                                 name                                 |      received_at
+----+----------+-------+----------------------------------------------------------------------+------------------------
+  1 |        1 | Oscar | Best Animated Feature Film of the Year                               | 2014-03-02 16:00:00-08
+  2 |        1 | Oscar | Best Achievement in Music Written for Motion Pictures, Original Song | 2014-03-02 16:00:00-08
 ```
 Now, a change to a customer's last name only requires a change to one record.
 
