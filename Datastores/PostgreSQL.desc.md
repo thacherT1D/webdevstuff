@@ -129,18 +129,19 @@ Here's an example of a data definition command in SQL.
 ```sql
 CREATE TABLE movies (
   id SERIAL PRIMARY KEY,
-  first_name VARCHAR(100),
-  last_name VARCHAR(100),
-  gpa NUMERIC(8, 2)
+  title VARCHAR(100),
+  rated VARCHAR(10),
+  genre TEXT,
+  released_at TIMESTAMP WITH TIME ZONE,
+  score NUMERIC(3, 1),
+  won_oscar BOOLEAN
 );
 ```
 
 And here's an example of a data manipulation command in SQL.
 
 ```sql
-INSERT INTO movies (first_name, last_Name, gpa) VALUES ('Bruce', 'Wayne', 2.94);
-INSERT INTO movies (first_name, last_Name, gpa) VALUES ('Selina', 'Kyle', 3.02);
-INSERT INTO movies (first_name, last_Name, gpa) VALUES ('Clark', 'Kent', 2.45);
+INSERT INTO movies (title, rated, genre, released_at, score, won_oscar) VALUES ('Frozen', 102, 'PG', 'Animation', '2013-11-27T00:00:00Z', 7.6, true);
 ```
 
 SQL became an official standard in the mid-1980's. Since then, it has been revised a few times to include a growing set of features. Despite the existence of such standards, most SQL code is not completely portable between different database systems without adjustments. Popular closed and open source relational database systems that implement the SQL standard include the following.
@@ -154,13 +155,13 @@ SQL became an official standard in the mid-1980's. Since then, it has been revis
 | PostgreSQL           | Open   |
 | SQLite               | Open   |
 
-Relational database systems all share a few things in common. First, is the concept of a database server which contain multiple databases. And each database contains multiple tables. All the information inside of these tables are persisted to a hard disk by the relational database so you don't have to worry about how the information is stored. For example, if you were building a learning management system of your own, it might use one database server with two databases: a `lms_dev` database for the development environment and `lms_test` database for the test environment.
+Relational database systems all share a few things in common. First, is the concept of a database server which contain multiple databases. And each database contains multiple tables. All the information inside of these tables are persisted to a hard disk by the relational database so you don't have to worry about how the information is stored. For example, if you were building a web application for film fanatics called Film Junkies, it might use one database server with two databases: a `film_junkies_dev` database for the development environment and `film_junkies_test` database for the test environment.
 
 ```text
- Name    |   Owner   | Encoding
----------+-----------+----------
-lms_dev  | ryansobol | UTF8     
-lms_test | ryansobol | UTF8     
+       Name        |   Owner   | Encoding
+-------------------+-----------+----------
+ film_junkies_dev  | ryansobol | UTF8     
+ film_junkies_test | ryansobol | UTF8     
 ```
 
 ## Why are relational databases so important?
@@ -264,7 +265,7 @@ psql -l
 ```
 
 ```shell
-createdb test
+createdb film_junkies_dev
 ```
 
 ```shell
@@ -272,7 +273,7 @@ psql -l
 ```
 
 ```shell
-dropdb test
+dropdb film_junkies_dev
 ```
 
 ```shell
@@ -281,7 +282,7 @@ psql -l
 
 ### Exercise
 
-Use the command line tools to create a `nottest` database in the PostgreSQL cluster. When your done, check out the usage messages for the following commands.
+Use the command line tools to create a `film_junkies_dev` database in the PostgreSQL cluster. When your done, check out the usage messages for the following commands.
 
 ```shell
 psql --help
@@ -294,7 +295,7 @@ dropdb --help
 Now, you can connect to the default database in your PostgreSQL server through PostgreSQL client.
 
 ```shell
-psql nottest
+psql film_junkies_dev
 ```
 
 And you'll be in an interactive PostgreSQL REPL. To get help, type `\?` and press `Enter`. To quit, type `\q` and press `Enter`.
@@ -308,7 +309,7 @@ Most database products have the notion of separate databases. Let's create one f
 **NOTE:** Remember to end SQL commands with a semicolon `;`.
 
 ```sql
-CREATE DATABASE test;
+CREATE DATABASE film_junkies_test;
 ```
 
 Next, list all of the available databases:
@@ -320,15 +321,15 @@ Next, list all of the available databases:
 Now connect to the database we just created.
 
 ```text
-\c test
+\c film_junkies_test
 ```
 
 ```text
-\c nottest
+\c film_junkies_dev
 ```
 
 ```sql
-DROP DATABASE test;
+DROP DATABASE film_junkies_test;
 ```
 
 ```text
