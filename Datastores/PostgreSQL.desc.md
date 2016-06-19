@@ -207,7 +207,7 @@ Now, a change to a customer's last name only requires a change to one record.
 
 **PostgreSQL** is a powerful, open source relational database system that's been around since 1996 and has a strong reputation for reliability, data integrity, and correctness. It runs on all major operating systems, including Linux, Mac OS X, and Windows.
 
-PostgreSQL is fully ACID (atomicity, consistency, isolation, durability) compliant and supports most SQL:2008 data types, including `INTEGER`, `NUMERIC`, `BOOLEAN`, `CHAR`, `VARCHAR`, `DATE`, `INTERVAL`, and `TIMESTAMP`. And it can even store large binary objects such as pictures, sounds, or video. PostgreSQL has native interfaces for a number of programming languages including JavaScript and is known for its [exceptional documentation][postgresql-docs].
+PostgreSQL is fully ACID (atomicity, consistency, isolation, durability) compliant and supports most SQL:2008 data types, including `INTEGER`, `NUMERIC`, `BOOLEAN`, `CHAR`, `VARCHAR`, `DATE`, `INTERVAL`, and `TIMESTAMP`. And it can even store large binary objects such as pictures, sounds, or video. PostgreSQL has native interfaces for a number of programming languages including JavaScript and is known for its [exceptional documentation](https://www.postgresql.org/docs/current/static/).
 
 ## How do you install PostgreSQL using Homebrew?
 
@@ -364,7 +364,7 @@ Check what tables we have in our newly created database (dt stands for display t
 At this point we should have a database with no tables in it.  So now we need to create tables.
 
 
-Let's look at the Postgres docs for __[creating a table](http://www.postgresql.org/docs/9.1/static/sql-createtable.html).__
+Let's look at the Postgres docs for __[creating a table](https://www.postgresql.org/docs/current/static/sql-createtable.html).__
 
 The basic structure for table creation:  
 
@@ -426,7 +426,7 @@ Similar to how Ruby or Javascript has types of data, SQL defines types that can 
 
 ## How do you destroy a table in a database?
 
-Let's say we no longer need the movies table from above, to get rid of all of the data and the definition of the table, we can use the DROP statement.  Here are the [docs on DROP](http://www.postgresql.org/docs/8.2/static/sql-droptable.html).
+Let's say we no longer need the movies table from above, to get rid of all of the data and the definition of the table, we can use the DROP statement.  Here are the [docs on DROP](https://www.postgresql.org/docs/current/static/sql-droptable.html).
 
 ```sql
 DROP TABLE movies;
@@ -451,7 +451,7 @@ Stands for Create, Read, Update and Destroy.  This is the lifecycle of data in a
 
 ## How do you create a row in a table?
 
-The INSERT SQL command adds new rows to a table. Here are the [postgres docs on INSERT](http://www.postgresql.org/docs/9.1/static/sql-insert.html).
+The INSERT SQL command adds new rows to a table. Here are the [postgres docs on INSERT](https://www.postgresql.org/docs/current/static/sql-insert.html).
 
 First, let's create a new table to store movie data:
 
@@ -480,7 +480,7 @@ Even though we did not specify an id, one was created anyways. Since we have set
 
 ## How do you read a row in a table?
 
-A select statement allows you to get data from the database. Here are the [docs on select](http://www.postgresql.org/docs/9.1/static/sql-select.html). Also, postgres a good [tutorial on select](http://www.postgresql.org/docs/9.3/static/tutorial-select.html). I'd recommend looking at the tutorial sometime after the lesson.
+A select statement allows you to get data from the database. Here are the [docs on select](https://www.postgresql.org/docs/current/static/sql-select.html). Also, postgres a good [tutorial on select](https://www.postgresql.org/docs/current/static/tutorial-select.html). I'd recommend looking at the tutorial sometime after the lesson.
 
 First, let's populate our movies table with a few more movies:
 
@@ -654,7 +654,7 @@ SELECT title, rating FROM movies ORDER BY rating DESC LIMIT 5;
 
 ## How do you update a row in a table?
 
-The update statement is defined [here](http://www.postgresql.org/docs/9.1/static/sql-update.html) in the postgres docs.  It is used to change existing data in our database.
+The update statement is defined [here](https://www.postgresql.org/docs/current/static/sql-update.html) in the postgres docs.  It is used to change existing data in our database.
 
 For example, if we do not think Gigli was actually that bad, and we want to change the rating to a 2, we can use an update statement:
 
@@ -668,7 +668,7 @@ You are a harsh critic and don't feel like any of these movies are worthy of a 1
 
 ## How do you destroy a row in a table?
 
-Deleting works similarly to a select statement.  Here are the [docs on delete](http://www.postgresql.org/docs/8.1/static/sql-delete.html)
+Deleting works similarly to a select statement.  Here are the [docs on delete](https://www.postgresql.org/docs/current/static/sql-delete.html)
 
 The statement below deletes the Dude Wheres My Car row from the database:
 
@@ -688,6 +688,7 @@ DELETE FROM movies WHERE id < 9 AND rating = 2;
 
 ## Resources
 
+- [PostgreSQL Documentation](https://www.postgresql.org/docs/current/static/)
 - [SQL Tutorial - Home](http://www.sqltutorial.org/)
 - [SQL Tutorial - SQL Cheatsheet](http://www.sqltutorial.org/wp-content/uploads/2016/04/sqlcheatsheet.pdf)
 - [W3Schools - SQL Tutorial](http://www.w3schools.com/sql/default.asp)
@@ -698,5 +699,4 @@ DELETE FROM movies WHERE id < 9 AND rating = 2;
 
 <iframe src="https://player.vimeo.com/video/142036155" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
-[postgresql-docs]: http://www.postgresql.org/docs/manuals/
 [relational-arch]: https://upload.wikimedia.org/wikipedia/commons/5/57/RDBMS_structure.png
