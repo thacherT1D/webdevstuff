@@ -17,6 +17,8 @@
 
 Before you can become fluent with a database systems like PostgreSQL, you first need become fluent with the difference between data and information. Simply put, **data** are facts. Here are some examples of data, represented in JavaScript.
 
+**NOTE:** A good habit to form is to always include a time with a timezone when creating a specific date.
+
 ```javascript
 'Frozen';
 102;
@@ -26,8 +28,6 @@ true;
 new Date('2013-11-27 00:00:00 UTC');
 7.6;
 ```
-
-**NOTE:** A good habit to form is to always include a time with a timezone when creating a specific date.
 
 On the other hand, **information** is facts about something or someone. In other words, information is data with context. Here's an example of information about a movie, represented in JavaScript.
 
