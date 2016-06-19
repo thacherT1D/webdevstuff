@@ -102,21 +102,25 @@ For the next few days, you'll be learning how web applications store and retriev
 A **relational database system**, or relational database management system (RDBMS), is a database system that's based on the relational model. The **relational model** is an approach to managing information using a structure where an entity is represented as row (i.e. tuple) that's grouped in a table (i.e. relation).
 
 ```text
- id | first_name | last_name | gpa
-----+------------+-----------+------
-  1 | Bruce      | Wayne     | 2.94
-  2 | Selina     | Kyle      | 3.02
-  3 | Clark      | Kent      | 2.45
+ id |       title        | duration | rated |   genre   | is_3d |      released_at       | score
+----+--------------------+----------+-------+-----------+-------+------------------------+-------
+  1 | Frozen             |      102 | PG    | Animation | t     | 2013-11-26 16:00:00-08 |   7.6
+  2 | X-Men: Apocalypse  |      144 | PG-13 | Action    | t     | 2016-05-26 17:00:00-07 |   7.4
+  3 | The Princess Bride |       98 | PG    | Adventure | f     | 1987-10-08 17:00:00-07 |   8.1
 ```
 
 Each column represents attributes that contains a piece of information that matches a particular data type.
 
-| Attribute    | Database type | JavaScript type |
-|--------------|---------------|-----------------|
-| `id`         | `SERIAL`      | `Integer`       |
-| `first_name` | `VARCHAR`     | `String`        |
-| `last_name`  | `VARCHAR`     | `String`        |
-| `gpa`        | `NUMERIC`     | `Number`        |
+| Attribute     | Database type | JavaScript type |
+|---------------|---------------|-----------------|
+| `id`          | `INTEGER`     | `Number`        |
+| `title`       | `VARCHAR`     | `String`        |
+| `duration`    | `INTEGER`     | `Number`        |
+| `rated`       | `VARCHAR`     | `String`        |
+| `genre`       | `TEXT`        | `String`        |
+| `is_3d`       | `BOOLEAN`     | `Boolean`       |
+| `released_at` | `TIMESTAMP`   | `Date`          |
+| `score`       | `NUMERIC`     | `Number`        |
 
 The way you manage the tables and rows in most modern relation database systems is with a special-purpose programming language called Structured Query Language (**SQL**) which consists of three distinctive languages.
 
@@ -145,6 +149,8 @@ And here's an example of a data manipulation command in SQL.
 
 ```sql
 INSERT INTO movies (title, duration, rated, genre, is_3d, released_at, score) VALUES ('Frozen', 102, 'PG', 'Animation', TRUE, '2013-11-27 00:00:00 UTC', 7.6);
+INSERT INTO movies (title, duration, rated, genre, is_3d, released_at, score) VALUES ('X-Men: Apocalypse', 144, 'PG-13', 'Action', TRUE, '2016-05-27 00:00:00 UTC', 7.4);
+INSERT INTO movies (title, duration, rated, genre, is_3d, released_at, score) VALUES ('The Princess Bride', 98, 'PG', 'Adventure', FALSE, '1987-10-09 00:00:00 UTC', 8.1);
 ```
 
 SQL became an official standard in the mid-1980's. Since then, it has been revised a few times to include a growing set of features. Despite the existence of such standards, most SQL code is not completely portable between different database systems without adjustments. Popular closed and open source relational database systems that implement the SQL standard include the following.
