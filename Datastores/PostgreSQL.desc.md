@@ -99,7 +99,7 @@ For the next few days, you'll be learning how web applications store and retriev
 
 ## What's a relational database system?
 
-A **relational database system**, or relational database management system (RDBMS), is a database system that's based on the relational model. The **relational model** is an approach to managing information in a table (i.e. relation) where an entity is represented as a row and its attributes are represented as columns. For example, here's a `movies` table that contains four movie entities.
+A **relational database system**, or relational database management system (RDBMS), is a database system that's based on the relational model. The **relational model** is an approach to managing information in a table (i.e. relation) where an entity is represented as a row and its attributes are represented as columns. For example, here's a `movies` table that contains some movie entities.
 
 ```text
  id |       title        | duration | rated |   genre   | is_3d |      released_at       | score
@@ -110,7 +110,7 @@ A **relational database system**, or relational database management system (RDBM
   4 | Pulp Fiction       |      154 | R     | Crime     | f     | 1994-10-13 17:00:00-07 |   8.9
 ```
 
-Each column represents attributes that contains a piece of information that matches a particular data type.
+In a relational database system, all values in the same column must be the same data type.
 
 | Attribute     | Database type | JavaScript type |
 |---------------|---------------|-----------------|
@@ -123,15 +123,13 @@ Each column represents attributes that contains a piece of information that matc
 | `released_at` | `TIMESTAMP`   | `Date`          |
 | `score`       | `NUMERIC`     | `Number`        |
 
-The way you manage the tables and rows in most modern relation database systems is with a special-purpose programming language called Structured Query Language (**SQL**) which consists of three distinctive languages.
+The way you manage the tables and rows in most modern relation database systems is with a special-purpose programming language called Structured Query Language (**SQL**). It consists of three distinctive languages.
 
 1. A data definition language (DDL) for managing tables.
 1. A data manipulation language (DML) for managing rows.
 1. A data control language (DCL) for managing permissions to the tables and rows.
 
-**NOTE:** In this course, we'll just be focusing on the data definition and data manipulation languages of SQL.
-
-Here's an example of a data definition command in SQL.
+In this course, we'll only be focusing on the data definition and data manipulation languages of SQL. Here's an example of a data definition command in SQL.
 
 ```sql
 CREATE TABLE movies (
@@ -140,13 +138,13 @@ CREATE TABLE movies (
   duration INTEGER,
   rated VARCHAR(10),
   genre TEXT,
-  is_3d BOOLEAN,
+  is_3d BOOLEAN NOT NULL,
   released_at TIMESTAMP WITH TIME ZONE,
   score NUMERIC(3, 1)
 );
 ```
 
-And here's an example of a data manipulation command in SQL.
+And here's an example of a few data manipulation commands in SQL.
 
 ```sql
 INSERT INTO movies (title, duration, rated, genre, is_3d, released_at, score) VALUES ('Frozen', 102, 'PG', 'Animation', TRUE, '2013-11-27 00:00:00 UTC', 7.6);
@@ -166,7 +164,15 @@ SQL became an official standard in the mid-1980's. Since then, it has been revis
 | PostgreSQL           | Open   |
 | SQLite               | Open   |
 
-Relational database systems all share a few things in common. First, is the concept of a database server which contain multiple databases. And each database contains multiple tables. All the information inside of these tables are persisted to a hard disk by the database system so you don't have to worry about how the information is stored. For example, if you were building a web application for movie fanatics called Movie Junkies, it might use one database server with two databases: a `movie_junkies_dev` database for the development environment and `movie_junkies_test` database for the test environment.
+Relational database systems all have a few things in common.
+
+1. A database client issues SQL commands to a database server.
+1. A database server manages a cluster of databases.
+1. A database manages multiple tables.
+1. A table manages multiple rows of information.
+1. Rows are persisted to a hard disk by the database server.
+
+For example, if you were building a web application for movie fanatics called Movie Junkies, it might use one database server with two databases: a `movie_junkies_dev` database for the development environment and `movie_junkies_test` database for the test environment.
 
 ```text
         Name        |   Owner   | Encoding
