@@ -193,22 +193,12 @@ Imagine, for a moment, you have a database for an online store with a single `or
 
 As you can see, there's duplicate customer data. And wherever there's duplicate data, there's the possibility for inconsistencies to arise. For example, imagine Susan Frazier wants to change her last name. Given the current structure, that would require changing multiple records. With a relational database system, it's possible to use multiple tables—like a `customers` and `orders` table—to store the same information.
 
-##### `customers`
-
-| `id` | `first_name` | `last_name` |
-|------|--------------|-------------|
-| `1`  | `'Susan'`    | `'Frazier'` |
-| `2`  | `'Joel'`     | `'Capra'`   |
-| `3`  | `'Susan'`    | `'Frazier'` |
-
-##### `orders`
-
-| `id` | `customer_id` | `ordered_on` | `total` |
-|------|---------------|--------------|---------|
-| `1`  | `1`           | `2015-11-16` | `25.99` |
-| `2`  | `2`           | `2016-02-10` | `32.99` |
-| `3`  | `1`           | `2016-03-01` | `46.99` |
-
+```text
+ id | movie_id |                                 name                                 | kind  |      received_at
+----+----------+----------------------------------------------------------------------+-------+------------------------
+  1 |        1 | Best Animated Feature Film of the Year                               | Oscar | 2014-03-02 16:00:00-08
+  2 |        1 | Best Achievement in Music Written for Motion Pictures, Original Song | Oscar | 2014-03-02 16:00:00-08
+```
 Now, a change to a customer's last name only requires a change to one record.
 
 ## What's PostgreSQL?
