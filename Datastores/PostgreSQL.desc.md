@@ -100,9 +100,9 @@ A **relational database system**, or relational database management system (RDBM
  id |       title        | duration | rated |   genre   | is_3d |      released_at       | score
 ----+--------------------+----------+-------+-----------+-------+------------------------+-------
   1 | Frozen             |      102 | PG    | Animation | t     | 2013-11-26 16:00:00-08 |   7.6
-  2 | X-Men: Apocalypse  |      144 | PG-13 | Action    | t     | 2016-05-26 17:00:00-07 |   7.4
-  3 | The Princess Bride |       98 | PG    | Adventure | f     | 1987-10-08 17:00:00-07 |   8.1
-  4 | Pulp Fiction       |      154 | R     | Crime     | f     | 1994-10-13 17:00:00-07 |   8.9
+  2 | X-Men: Apocalypse  |      144 | PG-13 | Action    | t     | 2016-05-26 16:00:00-08 |   7.4
+  3 | The Princess Bride |       98 | PG    | Adventure | f     | 1987-10-08 16:00:00-08 |   8.1
+  4 | Pulp Fiction       |      154 | R     | Crime     | f     | 1994-10-13 16:00:00-08 |   8.9
 ```
 
 In a relational database system, all values in the same column must be the same data type.
