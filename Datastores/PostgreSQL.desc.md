@@ -165,7 +165,7 @@ Popular closed source relational database systems that implement the SQL standar
 - Microsoft SQL Server
 - Oracle
 
-Relational database systems all have a few things in common.
+Regardless of source type, all relational database systems have a few things in common.
 
 1. A database client issues SQL commands to a database server.
 1. A database server manages a cluster of databases.
