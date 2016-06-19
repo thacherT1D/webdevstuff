@@ -196,7 +196,6 @@ As you can see, there's duplicate customer data. And wherever there's duplicate 
  id | title  | duration | rated |   genre   | is_3d |      released_at       | score |
 ----+--------+----------+-------+-----------+-------+------------------------+-------+
   1 | Frozen |      102 | PG    | Animation | t     | 2013-11-26 16:00:00-08 |   7.6 |
-  1 | Frozen |      102 | PG    | Animation | t     | 2013-11-26 16:00:00-08 |   7.6 |
 ```
 
 ```text
