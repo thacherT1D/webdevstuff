@@ -183,15 +183,21 @@ Since the 1970s, relational database systems have been used to store financial r
 
 Imagine, for a moment, you have a database for an online store with a single `orders` table.
 
-##### `orders`
-
-| `id` | `first_name` | `last_name` | `ordered_on` | `total` |
-|------|--------------|-------------|--------------|---------|
-| `1`  | `'Susan'`    | `'Frazier'` | `2015-11-16` | `25.99` |
-| `2`  | `'Joel'`     | `'Capra'`   | `2016-02-10` | `32.99` |
-| `3`  | `'Susan'`    | `'Frazier'` | `2016-03-01` | `46.99` |
+```text
+ id | title  | duration | rated |   genre   | is_3d |      released_at       | score |                              award_name                              | award_kind |   award_received_at
+----+--------+----------+-------+-----------+-------+------------------------+-------+----------------------------------------------------------------------+------------+------------------------
+  1 | Frozen |      102 | PG    | Animation | t     | 2013-11-26 16:00:00-08 |   7.6 | Best Animated Feature Film of the Year                               | Oscar      | 2014-03-01 16:00:00-08
+  1 | Frozen |      102 | PG    | Animation | t     | 2013-11-26 16:00:00-08 |   7.6 | Best Achievement in Music Written for Motion Pictures, Original Song | Oscar      | 2014-03-01 16:00:00-08
+```
 
 As you can see, there's duplicate customer data. And wherever there's duplicate data, there's the possibility for inconsistencies to arise. For example, imagine Susan Frazier wants to change her last name. Given the current structure, that would require changing multiple records. With a relational database system, it's possible to use multiple tables—like a `customers` and `orders` table—to store the same information.
+
+```text
+ id | title  | duration | rated |   genre   | is_3d |      released_at       | score |
+----+--------+----------+-------+-----------+-------+------------------------+-------+
+  1 | Frozen |      102 | PG    | Animation | t     | 2013-11-26 16:00:00-08 |   7.6 |
+  1 | Frozen |      102 | PG    | Animation | t     | 2013-11-26 16:00:00-08 |   7.6 |
+```
 
 ```text
  id | movie_id | kind  |                                 name                                 |      received_at
