@@ -18,6 +18,7 @@
 Before you can become fluent with a database systems like PostgreSQL, you first need become fluent with the difference between data and information. Simply put, **data** are facts. Here are some examples of data, represented in JavaScript.
 
 ```javascript
+1;
 'Frozen';
 102;
 'PG';
@@ -31,6 +32,7 @@ On the other hand, **information** is facts about something or someone. In other
 
 ```javascript
 const movie = {
+  id: 1,
   title: 'Frozen',
   duration: 102,
   rated: 'PG',
@@ -51,9 +53,9 @@ Take a minute to write down how you'd explain the difference between data and in
 
 In the above example, the `movie` object is called an entity. An **entity** is an object the represents a person, place, or thing. As you can see from the table below, this `movie` entity has handful of attributes. An **attribute** is a piece of information that describes an entity.
 
-| `title`    | `duration` | `rated` | `genre`       | `is_3d`     | `released_at`                         | `score` |
-|------------|------------|---------|---------------|-------------|---------------------------------------|---------|
-| `'Frozen'` | `102`      | `'PG'`  | `'Animation'` | `true`      | `new Date('2013-11-27 00:00:00 UTC')` | `7.6`   |
+| `id` | `title`    | `duration` | `rated` | `genre`       | `is_3d`     | `released_at`                         | `score` |
+|------|------------|------------|---------|---------------|-------------|---------------------------------------|---------|
+| `1`  | `'Frozen'` | `102`      | `'PG'`  | `'Animation'` | `true`      | `new Date('2013-11-27 00:00:00 UTC')` | `7.6`   |
 
 **NOTE:** In table form, attribute names are often displayed in camelcase because unquoted identifiers in database systems, like PostgreSQL, are case insensitive. This sentence will make more sense shortly.
 
@@ -71,6 +73,14 @@ For the next few days, you'll be learning how web applications store and retriev
 [INSERT CLIENT-SERVER DIAGRAM WITH A RDBMS]
 
 In a development environment, a database server often lives on the same machine. In a production environment, a database server often lives on a different machine.
+
+```shell
+http POST moviejunkies.com/movies title=Frozen duration=102 rated=PG genre=Animation is3D=true releasedAt='2013-11-27 00:00:00 UTC' score=7.6
+```
+
+```shell
+http GET moviejunkies.com/movies/1
+```
 
 * Data Flow Diagrams have these rules:
   * An actor cannot communicate directly with a data store or another actor- there has to be a process in between
