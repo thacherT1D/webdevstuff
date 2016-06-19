@@ -115,7 +115,7 @@ In a relational database system, all values in the same column must be the same 
 | Attribute     | Database type | JavaScript type |
 |---------------|---------------|-----------------|
 | `id`          | `INTEGER`     | `Number`        |
-| `title`       | `VARCHAR`     | `String`        |
+| `title`       | `TEXT`        | `String`        |
 | `duration`    | `INTEGER`     | `Number`        |
 | `rated`       | `VARCHAR`     | `String`        |
 | `genre`       | `TEXT`        | `String`        |
@@ -134,7 +134,7 @@ In this course, we'll only be focusing on the data definition and data manipulat
 ```sql
 CREATE TABLE movies (
   id SERIAL PRIMARY KEY,
-  title VARCHAR(100),
+  title TEXT,
   duration INTEGER,
   rated VARCHAR(10),
   genre TEXT,
