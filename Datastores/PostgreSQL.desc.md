@@ -305,10 +305,6 @@ Most database products have the notion of separate databases. Let's create one f
 \l
 ```
 
-```text
-\t
-```
-
 **NOTE:** Remember to end SQL commands with a semicolon `;`.
 
 ```sql
