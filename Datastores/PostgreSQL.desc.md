@@ -67,30 +67,19 @@ Using this information, create a JavaScript object that represents one instance 
 
 For the next few days, you'll be learning how web applications store and retrieve information.
 
-* Revisit the client-server diagram
-* Add a database server with DBMS and a database to it
-* Important for them to understand that the database server is (usually) a different computer
-  * Web server sends a request to a database server using a database driver
-  * Database server interprets the request and executes a query on the database
-  * Results come back to the database server
-  * Database server sends them back to the web server
-  * Database driver formats the results
-  * Web server does something with them
-* Data Flow Diagrams
-  * Introduce the movies to DFDs, but tell them they don't need to know how to how to write them- they're really useful for demonstrating the role of databases, but otherwise they're a kinda-rare UML artifact
-  * DFDs have these elements:
-    * Actors
-    * Processes
-    * Data Stores
-    * Data Flows
-  * DFDs have these rules:
-    * An actor cannot communicate directly with a data store or another actor- there has to be a process in between
-    * A data store cannot communicate directly with another data store- there has to be a process in between
-    * A process can communicate to another process
-    * You can't put data into a data store and never take it out- this is called a "black hole"
-    * You can't take data out of a data store that you never put in- this is called "immaculate conception"
-    * What goes into a process can't be the same thing that comes out of it- the process has to transform it somehow
-    * DFDs are implementation-agnostic- a datastore could just as easily be a database or a filing cabinet
+
+[INSERT CLIENT-SERVER DIAGRAM WITH A RDBMS]
+
+In a development environment, a database server often lives on the same machine. In a production environment, a database server often lives on a different machine.
+
+* Data Flow Diagrams have these rules:
+  * An actor cannot communicate directly with a data store or another actor- there has to be a process in between
+  * A data store cannot communicate directly with another data store- there has to be a process in between
+  * A process can communicate to another process
+  * You can't put data into a data store and never take it out- this is called a "black hole"
+  * You can't take data out of a data store that you never put in- this is called "immaculate conception"
+  * What goes into a process can't be the same thing that comes out of it- the process has to transform it somehow
+  * DFDs are implementation-agnostic- a datastore could just as easily be a database or a filing cabinet
   * Illustrate with a user sign up form- the user puts in their information, the sign up process transforms the information ("My name is Kyle Coberly, and I want my username to be kylecoberly") into data (`{firstName: "Kyle", lastName: "Coberly", username: "kylecoberly"`), and stores it in a data store named "Users".
     * Ask them what's wrong (It's a black hole)
     * Create another actor called admin that looks the user list, or another process that requires what's in the data store
