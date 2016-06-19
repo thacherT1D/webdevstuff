@@ -5,8 +5,13 @@
 - Diagram how web applications store and retrieve data.
 - Explain what a relational database is.
 - Explain why relational databases are so important.
-- Describe what PostgreSQL is.
-- Install and configure PostgreSQL.
+- Explain what PostgreSQL is.
+- Install PostgreSQL using Homebrew.
+- Start a PostgreSQL server using Homebrew Services.
+- Use command line tools to manage databases in a PostgreSQL cluster.
+- Use SQL to manage databases in a PostgreSQL cluster.
+- Use SQL to manage tables in a database.
+- Use SQL to manage rows in a table.
 
 ## What's the difference between data and information?
 
@@ -198,42 +203,98 @@ Now, a change to a customer's last name only requires a change to one record.
 
 PostgreSQL is fully ACID (atomicity, consistency, isolation, durability) compliant and supports most SQL:2008 data types, including `INTEGER`, `NUMERIC`, `BOOLEAN`, `CHAR`, `VARCHAR`, `DATE`, `INTERVAL`, and `TIMESTAMP`. And it can even store large binary objects such as pictures, sounds, or video. PostgreSQL has native interfaces for a number of programming languages including JavaScript and is known for its [exceptional documentation][postgresql-docs].
 
-## How do you install and configure PostgreSQL?
+## How do you install PostgreSQL using Homebrew?
 
-You can install the latest version of PostgreSQL using Homebrew.
+Using Homebrew, install the latest version of PostgreSQL by running the following commands.
 
-```sh
+```shell
 brew update
-brew install postgres
+brew install postgresql
 ```
 
-When it's finished, verify PostgreSQL is installed correctly.
+### Exercise
 
-```sh
+Verify PostgreSQL was installed correctly by running the following commands.
+
+```shell
 postgres --version
+psql --version
 ```
 
-Then configure your computer to auto-start a PostgreSQL server on boot.
+## How do you start a PostgreSQL server using Homebrew Services?
 
-```sh
-ln -sfv /usr/local/opt/postgresql/*.plist ~/Library/LaunchAgents
-launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist
+```shell
+brew tap homebrew/services
 ```
 
-## What are the CRUD operations on a database?
+```shell
+brew services list
+```
 
-## How do you create a database in PostgreSQL?
+```shell
+brew services start postgresql
+```
+
+```shell
+brew services list
+```
+
+```shell
+brew services stop postgresql
+```
+
+```shell
+brew services list
+```
+
+### Exercise
+
+Start the PostgreSQL server as a Homebrew service. When your done, check out the the usage message with the following command.
+
+```shell
+brew services --help
+```
+
+## How do you use command line tools to manage databases in a PostgreSQL cluster?
 
 With the PostgreSQL server running, create a default database with the same name as your current user's account name.
 
-```sh
-createdb
+```shell
+psql -l
 ```
+
+```shell
+createdb test
+```
+
+```shell
+psql -l
+```
+
+```shell
+dropdb test
+```
+
+```shell
+psql -l
+```
+
+### Exercise
+
+Use the command line tools to create a `nottest` database in the PostgreSQL cluster. When your done, check out the the usage messages for the following commands.
+
+```shell
+psql --help
+createdb --help
+dropdb --help
+```
+
+## How do you use SQL to manage databases in a PostgreSQL cluster?
 
 Now, you can connect to the default database in your PostgreSQL server through PostgreSQL client.
 
-```sh
-psql
+```shell
+psql nottest
 ```
 
 And you'll be in an interactive PostgreSQL REPL. To get help, type `\?` and press `Enter`. To quit, type `\q` and press `Enter`.
