@@ -15,7 +15,7 @@
 
 ## What's the difference between data and information?
 
-Before you can become fluent with database systems, like PostgreSQL, you first need become fluent with the difference between data and information. Simply put, **data** are facts. Here are some examples of data, represented in JavaScript.
+Before you can become fluent with a database systems like PostgreSQL, you first need become fluent with the difference between data and information. Simply put, **data** are facts. Here are some examples of data, represented in JavaScript.
 
 ```javascript
 'Frozen';
@@ -23,9 +23,11 @@ Before you can become fluent with database systems, like PostgreSQL, you first n
 'PG';
 'Animation';
 true;
-new Date('2013-11-27T00:00:00Z');
+new Date('2013-11-27 00:00:00 UTC');
 7.6;
 ```
+
+**NOTE:** A good habit to form is to always include a time with a timezone when creating a specific date.
 
 On the other hand, **information** is facts about something or someone. In other words, information is data with context. Here's an example of information about a movie, represented in JavaScript.
 
@@ -36,7 +38,7 @@ const movie = {
   rated: 'PG',
   genre: 'Animation',
   is3D: true,
-  releasedAt: new Date('2013-11-27T00:00:00Z'),
+  releasedAt: new Date('2013-11-27 00:00:00 UTC'),
   score: 7.6
 };
 ```
@@ -49,9 +51,9 @@ Take a minute to write down how you'd explain the difference between data and in
 
 In the above example, the `movie` object is called an entity. An **entity** is an object the represents a person, place, or thing. As you can see from the table below, this `movie` entity has handful of attributes.
 
-| `title`    | `duration` | `rated` | `genre`       | `is_3D`     | `released_at`                      | `score` |
-|------------|------------|---------|---------------|-------------|------------------------------------|---------|
-| `'Frozen'` | `102`      | `'PG'`  | `'Animation'` | `true`      | `new Date('2013-11-27T00:00:00Z')` | `7.6`   |
+| `title`    | `duration` | `rated` | `genre`       | `is_3d`     | `released_at`                         | `score` |
+|------------|------------|---------|---------------|-------------|---------------------------------------|---------|
+| `'Frozen'` | `102`      | `'PG'`  | `'Animation'` | `true`      | `new Date('2013-11-27 00:00:00 UTC')` | `7.6`   |
 
 An **attribute** is a piece of information that describes an entity. For example, this `movie` entity has a `title` attribute with the value of `'Frozen'`.
 
@@ -132,9 +134,10 @@ Here's an example of a data definition command in SQL.
 CREATE TABLE movies (
   id SERIAL PRIMARY KEY,
   title VARCHAR(100),
+  duration INTEGER,
   rated VARCHAR(10),
   genre TEXT,
-  is_3D BOOLEAN,
+  is_3d BOOLEAN,
   released_at TIMESTAMP WITH TIME ZONE,
   score NUMERIC(3, 1)
 );
@@ -143,7 +146,7 @@ CREATE TABLE movies (
 And here's an example of a data manipulation command in SQL.
 
 ```sql
-INSERT INTO movies (title, rated, genre, is_3D, released_at, score) VALUES ('Frozen', 102, 'PG', 'Animation', true, '2013-11-27T00:00:00Z', 7.6);
+INSERT INTO movies (title, duration, rated, genre, is_3d, released_at, score) VALUES ('Frozen', 102, 'PG', 'Animation', TRUE, '2013-11-27 00:00:00 UTC', 7.6);
 ```
 
 SQL became an official standard in the mid-1980's. Since then, it has been revised a few times to include a growing set of features. Despite the existence of such standards, most SQL code is not completely portable between different database systems without adjustments. Popular closed and open source relational database systems that implement the SQL standard include the following.
