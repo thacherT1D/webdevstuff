@@ -51,11 +51,11 @@ Take a minute to write down how you'd explain the difference between data and in
 
 In the above example, the `movie` object is called an entity. An **entity** is an object the represents a person, place, or thing. As you can see from the table below, this `movie` entity has handful of attributes. An **attribute** is a piece of information that describes an entity.
 
-**NOTE:** In table form, attribute names are often in camelcase because unquoted identifiers in database systems, like PostgreSQL, are case insensitive.
-
 | `title`    | `duration` | `rated` | `genre`       | `is_3d`     | `released_at`                         | `score` |
 |------------|------------|---------|---------------|-------------|---------------------------------------|---------|
 | `'Frozen'` | `102`      | `'PG'`  | `'Animation'` | `true`      | `new Date('2013-11-27 00:00:00 UTC')` | `7.6`   |
+
+**NOTE:** In table form, attribute names are often in camelcase because unquoted identifiers in database systems, like PostgreSQL, are case insensitive.
 
 ### Exercise
 
