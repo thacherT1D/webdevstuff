@@ -82,19 +82,15 @@ http POST moviejunkies.com/movies title=Frozen duration=102 rated=PG genre=Anima
 http GET moviejunkies.com/movies/1
 ```
 
-* Data Flow Diagrams have these rules:
-  * An actor cannot communicate directly with a data store or another actor- there has to be a process in between
-  * A data store cannot communicate directly with another data store- there has to be a process in between
-  * A process can communicate to another process
-  * You can't put data into a data store and never take it out- this is called a "black hole"
-  * You can't take data out of a data store that you never put in- this is called "immaculate conception"
-  * What goes into a process can't be the same thing that comes out of it- the process has to transform it somehow
-  * DFDs are implementation-agnostic- a datastore could just as easily be a database or a filing cabinet
-  * Illustrate with a user sign up form- the user puts in their information, the sign up process transforms the information ("My name is Kyle Coberly, and I want my username to be kylecoberly") into data (`{firstName: "Kyle", lastName: "Coberly", username: "kylecoberly"`), and stores it in a data store named "Users".
-    * Ask them what's wrong (It's a black hole)
-    * Create another actor called admin that looks the user list, or another process that requires what's in the data store
-  * The point is to illustrate data in motion (data flows) vs. data at rest (data stores)
-  * If the system turns off, data in motion is lost, data at rest is not
+You can't put data into a data store and never take it out. This is called a "black hole".
+
+You can't take data out of a data store that you never put in. This is called "immaculate conception".
+
+A datastore could just as easily be a database or a filing cabinet
+
+The point is to illustrate data in motion (data flows) vs. data at rest (data stores)
+
+If the system turns off, data in motion is lost, data at rest is not.
 
 ## What's a relational database system?
 
