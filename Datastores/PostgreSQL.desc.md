@@ -153,16 +153,17 @@ INSERT INTO movies (title, duration, rated, genre, is_3d, released_at, score) VA
 INSERT INTO movies (title, duration, rated, genre, is_3d, released_at, score) VALUES ('Pulp Fiction', 154, 'R', 'Crime', FALSE, '1994-10-14 00:00:00 UTC', 8.9);
 ```
 
-SQL became an official standard in the mid-1980's. Since then, it has been revised a few times to include a growing set of features. Despite the existence of such standards, most SQL code is not completely portable between different database systems without adjustments. Popular closed and open source relational database systems that implement the SQL standard include the following.
+SQL became an official standard in the mid-1980's. Since then, it has been revised a few times to include a growing set of features. Despite the existence of such standards, most SQL code is not completely portable between different database systems without adjustments. Popular open source relational database systems that implement the SQL standard include the following.
 
-| Name                 | Source |
-|----------------------|--------|
-| Microsoft Access     | Closed |
-| Microsoft SQL Server | Closed |
-| Oracle               | Closed |
-| MySQL                | Open   |
-| PostgreSQL           | Open   |
-| SQLite               | Open   |
+- MySQL
+- PostgreSQL
+- SQLite
+
+Popular closed source relational database systems that implement the SQL standard include the following.
+
+- Microsoft Access
+- Microsoft SQL Server
+- Oracle
 
 Relational database systems all have a few things in common.
 
