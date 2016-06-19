@@ -249,7 +249,7 @@ brew services list
 
 ### Exercise
 
-Start the PostgreSQL server as a Homebrew service. When your done, check out the the usage message with the following command.
+Start the PostgreSQL server as a Homebrew service. When your done, check out the usage message with the following command.
 
 ```shell
 brew services --help
@@ -281,7 +281,7 @@ psql -l
 
 ### Exercise
 
-Use the command line tools to create a `nottest` database in the PostgreSQL cluster. When your done, check out the the usage messages for the following commands.
+Use the command line tools to create a `nottest` database in the PostgreSQL cluster. When your done, check out the usage messages for the following commands.
 
 ```shell
 psql --help
@@ -301,23 +301,57 @@ And you'll be in an interactive PostgreSQL REPL. To get help, type `\?` and pres
 
 Most database products have the notion of separate databases. Let's create one for the lesson. In your terminal, type `psql`. Next create a database:
 
+```text
+\l
+```
+
+```text
+\t
+```
+
+**NOTE:** Remember to end SQL commands with a semicolon `;`.
+
 ```sql
-CREATE DATABASE testdb;
+CREATE DATABASE test;
 ```
 
 Next, list all of the available databases:
 
-```
-\list
+```text
+\l
 ```
 
 Now connect to the database we just created.
 
+```text
+\c test
 ```
-\connect testdb
+
+```text
+\c nottest
+```
+
+```sql
+DROP DATABASE test;
+```
+
+```text
+\l
 ```
 
 Once we connect, our command prompt should look similar to this: `testdb=#`
+
+### Exercises
+
+Check out the help messages for the following PostgreSQL REPL commands.
+
+```text
+help
+\?
+\h
+```
+
+## How do you use SQL to manage tables in a database?
 
 Check what tables we have in our newly created database (dt stands for display tables):
 
@@ -327,11 +361,6 @@ Check what tables we have in our newly created database (dt stands for display t
 
 At this point we should have a database with no tables in it.  So now we need to create tables.
 
-## How do you drop a database in PostgreSQL?
-
-## What are the CRUD operations on a table?
-
-## How do you create a table in a database?
 
 Let's look at the Postgres docs for __[creating a table](http://www.postgresql.org/docs/9.1/static/sql-createtable.html).__
 
