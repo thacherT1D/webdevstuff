@@ -564,54 +564,45 @@ help
 
 ## How do you use the PostgreSQL REPL to manage tables in a database?
 
-Check what tables we have in our newly created database (dt stands for display tables):
+In addition to managing databases, the PostgreSQL REPL can also manage tables in the default PostgreSQL cluster. To display the tables in the current connected database, run the following command.
 
-```
+```text
 \dt
 ```
 
-At this point we should have a database with no tables in it.  So now we need to create tables.
+And you should see something like this.
 
+![](https://i.imgur.com/Ypfh2EV.png)
 
-Let's look at the Postgres docs for __[creating a table](https://www.postgresql.org/docs/current/static/sql-createtable.html).__
+**NOTE:** The word relation is a synonym for a table.
 
-The basic structure for table creation:  
-
-```sql
-CREATE TABLE table_name
-(
-   column_name1 data_type(size),
-   column_name2 data_type(size),
-   column_name3 data_type(size),
-   ....
-);
-```
-
-Example:
-
-This is an example of a movies table.  We will talk about the primary key soon.
+To create a `movies` table in the current connected database, run the following command.
 
 ```sql
 CREATE TABLE movies (
-    id SERIAL PRIMARY KEY,
-    name TEXT,
-    phone_no VARCHAR(10),
-    email TEXT,
-    address TEXT
+  id SERIAL PRIMARY KEY,
+  title TEXT,
+  duration INTEGER,
+  rated VARCHAR(10),
+  genre TEXT,
+  is_3d BOOLEAN NOT NULL,
+  released_at TIMESTAMP WITH TIME ZONE,
+  score NUMERIC(3, 1)
 );
 ```
 
-The schema of the database is the set of create table commands that specify what the tables are and how they relate to each other.  For our very simple database example, here is the schema:
+The above `CREATE TABLE` command is a multi-line SQL command. When executed by the PostgreSQL REPL, a `movies` table is created with the following attributes.
 
-```sql
-CREATE TABLE movies (
-    id SERIAL PRIMARY KEY,
-    name TEXT,
-    phone_no VARCHAR(10),
-    email TEXT,
-    address TEXT
-);
-```
+- `id`
+- `title`
+- `duration`
+- `rated`
+- `genre`
+- `is_3d`
+- `released_at`
+- `score`
+
+Each attribute must contain data that matches a particular data type.
 
 ### What is a Primary Key?
 
@@ -619,7 +610,7 @@ It denotes an attribute on a table that can uniquely identify the row.  What is 
 
 ### What does SERIAL Do?
 
-SERIAL tells the database to automatically assign the next unused integer value to id whenever we insert into the database and do not specify id. You will nearly always want a column to exist on your table that is defined as a serial column. There will be times when you will want to manage the `id` field yourself, but they are rare. Let the database do the work for you.
+The `SERIAL` attribute creates a hidden integer value that starts with `1` by default. When an entity without an `id` attribute is inserted into the table, the entity is given the current integer value for its `id` attribute. Then, the next integer value is calculated by incrementing it by `1`. When an entity is deleted from the table, it integer value of the `id` attribute is not reused. Therefore, each entity in the table is guaranteed to have a unique `id` attribute for all time. Almost every table you create will have a `SERIAL` `id` attribute.
 
 ### Data Types
 
@@ -633,9 +624,25 @@ Similar to how Ruby or Javascript has types of data, SQL defines types that can 
 * Timestamp
 * Boolean (True or False)
 
-## How do you destroy a table in a database?
+Let's look at the Postgres docs for __[creating a table](https://www.postgresql.org/docs/current/static/sql-createtable.html).__
 
 Let's say we no longer need the movies table from above, to get rid of all of the data and the definition of the table, we can use the DROP statement.  Here are the [docs on DROP](https://www.postgresql.org/docs/current/static/sql-droptable.html).
+
+```sql
+ALTER TABLE movies ADD COLUMN plot TEXT;
+```
+
+```sql
+ALTER TABLE movies RENAME COLUMN plot TO summary;
+```
+
+```sql
+ALTER TABLE movies ALTER COLUMN summary TYPE VARCHAR(100);
+```
+
+```sql
+ALTER TABLE movies DROP COLUMN summary;
+```
 
 ```sql
 DROP TABLE movies;
