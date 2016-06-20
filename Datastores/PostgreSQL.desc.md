@@ -123,6 +123,41 @@ In a relational database system, all values in the same column must be the same 
 | `released_at` | `TIMESTAMP`   | `Date`          |
 | `score`       | `NUMERIC`     | `Number`        |
 
+### Exercise
+
+In your own words, write down what a relational database system means to you. After about 30 seconds, your instructor will cold call on the class and ask what was written down.
+
+## Why is a relational database system so important?
+
+Since the 1970s, relational database systems have been used to store financial records, manufacturing and logistical information, personnel data, government information, communication data, etc. By structuring data in records and tables, computers can quickly and efficiently store and retrieve insanely large amounts data.
+
+Imagine, for a moment, you have a database for an online store with a single `orders` table.
+
+```text
+ id | title  | duration | rated |   genre   | is_3d |      released_at       | score |                              award_name                              | award_kind |   award_received_at
+----+--------+----------+-------+-----------+-------+------------------------+-------+----------------------------------------------------------------------+------------+------------------------
+  1 | Frozen |      102 | PG    | Animation | t     | 2013-11-26 16:00:00-08 |   7.6 | Best Animated Feature Film of the Year                               | Oscar      | 2014-03-01 16:00:00-08
+  1 | Frozen |      102 | PG    | Animation | t     | 2013-11-26 16:00:00-08 |   7.6 | Best Achievement in Music Written for Motion Pictures, Original Song | Oscar      | 2014-03-01 16:00:00-08
+```
+
+As you can see, there's duplicate customer data. And wherever there's duplicate data, there's the possibility for inconsistencies to arise. For example, imagine Susan Frazier wants to change her last name. Given the current structure, that would require changing multiple records. With a relational database system, it's possible to use multiple tables—like a `customers` and `orders` table—to store the same information.
+
+```text
+ id | title  | duration | rated |   genre   | is_3d |      released_at       | score |
+----+--------+----------+-------+-----------+-------+------------------------+-------+
+  1 | Frozen |      102 | PG    | Animation | t     | 2013-11-26 16:00:00-08 |   7.6 |
+```
+
+```text
+ id | movie_id | kind  |                                 name                                 |      received_at
+----+----------+-------+----------------------------------------------------------------------+------------------------
+  1 |        1 | Oscar | Best Animated Feature Film of the Year                               | 2014-03-01 16:00:00-08
+  2 |        1 | Oscar | Best Achievement in Music Written for Motion Pictures, Original Song | 2014-03-01 16:00:00-08
+```
+Now, a change to a customer's last name only requires a change to one record.
+
+## What's SQL?
+
 In most modern relational database systems, tables and rows are managed with a special-purpose programming language called Structured Query Language (**SQL**). SQL consists of three distinctive languages.
 
 1. A data definition language (DDL) for managing tables.
@@ -171,15 +206,18 @@ Whereas the following are popular closed source relational database systems that
 
 Regardless of source type, all relational database systems have a few things in common.
 
-1. A database server manages a cluster of databases.
+1. A database server manages a database cluster.
 1. A database client connects to a database server.
 1. A database client sends SQL commands to a database server.
 1. A database server sends rows of information back to a database client.
-1. A single database often manages multiple tables.
-1. A single table often manages multiple rows of information.
+1. A single database cluster often contains multiple databases.
+1. A single database often contains multiple tables.
+1. A single table often contains multiple rows of information.
 1. Rows are automatically persisted to the hard disk by the database server.
 
-For example, the Movie Junkies web application might use one database server with two databases: a `movie_junkies_dev` database for the development environment and `movie_junkies_test` database for the test environment.
+[INSERT DATABASE CLIENT-SERVER DIAGRAM]
+
+For example, the Movie Junkies web application from earlier might use a database cluster that contains two databases: a `movie_junkies_dev` database for the development environment and `movie_junkies_test` database for the test environment.
 
 ```text
         Name        |   Owner   | Encoding
@@ -188,34 +226,10 @@ For example, the Movie Junkies web application might use one database server wit
  movie_junkies_test | ryansobol | UTF8     
 ```
 
-## Why is a relational database system so important?
+A database server is started to manage this database cluster. Then a database client connects to the database server and begins sending SQL commands to the server in order to store or retrieve information from the database cluster.
 
-Since the 1970s, relational database systems have been used to store financial records, manufacturing and logistical information, personnel data, government information, communication data, etc. By structuring data in records and tables, computers can quickly and efficiently store and retrieve insanely large amounts data.
+### Exercise
 
-Imagine, for a moment, you have a database for an online store with a single `orders` table.
-
-```text
- id | title  | duration | rated |   genre   | is_3d |      released_at       | score |                              award_name                              | award_kind |   award_received_at
-----+--------+----------+-------+-----------+-------+------------------------+-------+----------------------------------------------------------------------+------------+------------------------
-  1 | Frozen |      102 | PG    | Animation | t     | 2013-11-26 16:00:00-08 |   7.6 | Best Animated Feature Film of the Year                               | Oscar      | 2014-03-01 16:00:00-08
-  1 | Frozen |      102 | PG    | Animation | t     | 2013-11-26 16:00:00-08 |   7.6 | Best Achievement in Music Written for Motion Pictures, Original Song | Oscar      | 2014-03-01 16:00:00-08
-```
-
-As you can see, there's duplicate customer data. And wherever there's duplicate data, there's the possibility for inconsistencies to arise. For example, imagine Susan Frazier wants to change her last name. Given the current structure, that would require changing multiple records. With a relational database system, it's possible to use multiple tables—like a `customers` and `orders` table—to store the same information.
-
-```text
- id | title  | duration | rated |   genre   | is_3d |      released_at       | score |
-----+--------+----------+-------+-----------+-------+------------------------+-------+
-  1 | Frozen |      102 | PG    | Animation | t     | 2013-11-26 16:00:00-08 |   7.6 |
-```
-
-```text
- id | movie_id | kind  |                                 name                                 |      received_at
-----+----------+-------+----------------------------------------------------------------------+------------------------
-  1 |        1 | Oscar | Best Animated Feature Film of the Year                               | 2014-03-01 16:00:00-08
-  2 |        1 | Oscar | Best Achievement in Music Written for Motion Pictures, Original Song | 2014-03-01 16:00:00-08
-```
-Now, a change to a customer's last name only requires a change to one record.
 
 ## What's PostgreSQL?
 
