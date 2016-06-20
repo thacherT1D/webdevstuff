@@ -433,7 +433,7 @@ And you should see something like this.
 
 ![](https://i.imgur.com/sNcaEdD.png)
 
-Welcome to the PostgreSQL REPL. To get help, run the following command.
+Welcome to the PostgreSQL REPL! To get help, run the following command.
 
 ```text
 help
