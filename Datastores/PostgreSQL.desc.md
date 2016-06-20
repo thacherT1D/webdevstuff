@@ -473,9 +473,9 @@ If you forget to end an SQL command with a semicolon `;`, the PostgreSQL REPL wi
 
 ![](https://i.imgur.com/RjCdoWD.png)
 
-SQL commands can get very long and writing them over multiple lines is extremely useful. However, the PostgreSQL REPL won't execute the command unless it ends with a semicolon `;`. It can hard to know if a command has been accepted by the REPL or not. The sure fire way you can tell the REPL is waiting for a semicolon is when the yellow equals sign `=` in the prompt changes to a yellow minus sign `-`. For example, see the above screenshot.
+SQL commands can get very long and writing them over multiple lines is extremely useful. However, the PostgreSQL REPL won't execute the command unless it ends with a semicolon `;`. It can be hard to know if the REPL is waiting or not. But the sure fire way you can tell is when the yellow equals sign `=` in the prompt changes to a yellow minus sign `-`. See the above screenshot for an example.
 
-Just remember, all SQL commands must be end with a semicolon `;`. So if you're wondering why your SQL didn't work, check for the yellow minus sign `-`. If you see it, type the semicolon `;` and hit the `Enter` key.
+Just remember, SQL commands must be end with a semicolon `;`. So if you're wondering why your SQL command didn't work, check for the yellow minus sign `-`. And if you see it, type in a semicolon `;` and hit the `Enter` key.
 
 ![](https://i.imgur.com/3TCOj1w.png)
 
