@@ -144,6 +144,8 @@ CREATE TABLE movies (
 );
 ```
 
+**NOTE:** This is an example of a SQL command split up on multiple lines.
+
 And here are a few examples of data manipulation commands in SQL.
 
 ```sql
@@ -152,6 +154,8 @@ INSERT INTO movies (title, duration, rated, genre, is_3d, released_at, score) VA
 INSERT INTO movies (title, duration, rated, genre, is_3d, released_at, score) VALUES ('The Princess Bride', 98, 'PG', 'Adventure', FALSE, '1987-10-09 00:00:00 UTC', 8.1);
 INSERT INTO movies (title, duration, rated, genre, is_3d, released_at, score) VALUES ('Pulp Fiction', 154, 'R', 'Crime', FALSE, '1994-10-14 00:00:00 UTC', 8.9);
 ```
+
+**NOTE:** These are examples of SQL commands on a single line. Each one could have been split up on multiple lines.
 
 SQL became an official standard in the mid-1980's. Since then, it has been revised a few times to include a growing set of features. Despite the existence of such standards, most SQL code is not completely portable between different database systems without adjustments. Popular open source relational database systems that implement the SQL standard include the following.
 
