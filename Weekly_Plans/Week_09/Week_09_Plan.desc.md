@@ -22,7 +22,7 @@ Warmup:
 
 Lessons:
 - [Data Normalization](/redirects/articles/3084)
-- [Knex](/cohorts/68/student_dashboard)
+- [Knex](/redirects/articles/3054)
 
 Homework: [Homework](/cohorts/68/student_dashboard)
 
