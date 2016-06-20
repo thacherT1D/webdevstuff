@@ -129,9 +129,13 @@ In your own words, write down what a relational database system means to you. Af
 
 ## Why is a relational database system so useful?
 
-Since the 1970s, relational database systems have been used to manage all kinds of information—financial, manufacturing, logistical, personal, government, communication, public, and private information. By structuring information into tables with rows and columns, computers can quickly and efficiently store and retrieve insanely large amounts data.
+Thinking back to the Movie Junkies example from earlier, imagine the product development team has determined that a true movie fanatic wants to know about every award that movie entity has won. So, your job is to extend the `movies` table with the following columns.
 
-Imagine, for a moment, you have a database for an online store with a single `orders` table.
+- `award_name`
+- `award_kind`
+- `award_received_at`
+
+Like so.
 
 ```text
  id | title  | duration | rated |   genre   | is_3d |      released_at       | score |                              award_name                              | award_kind |   award_received_at
@@ -155,6 +159,8 @@ As you can see, there's duplicate customer data. And wherever there's duplicate 
   2 |        1 | Oscar | Best Achievement in Music Written for Motion Pictures, Original Song | 2014-03-01 16:00:00-08
 ```
 Now, a change to a customer's last name only requires a change to one record.
+
+Since the 1970s, relational database systems have been used to manage all kinds of information—financial, manufacturing, logistical, personal, government, communication, public, and private information. By structuring information into tables with rows and columns, computers can quickly and efficiently store and retrieve insanely large amounts data.
 
 ### Exercise
 
