@@ -655,20 +655,7 @@ As you can see, the `movies` table has the above columns. Each column must conta
 
 The `serial` data type creates a hidden integer value that starts with `1` by default. When an entity without an `id` value is inserted into the table, the entity is given the current integer value for its `id` attribute. Then, the next integer value is calculated by incrementing it by `1`. When an entity is deleted from the table, it integer value of the `id` attribute is not reused. Therefore, each entity in the table is guaranteed to have a unique `id` attribute for all time. Almost every table you create will have an `id serial` column.
 
-### `text`
-
-### `varchar`
-
-### `integer`
-
-### `numeric`
-
-### `boolean`
-
-`NOT NULL`
-
-### `timestamp with time zone`
-
+### `NOT NULL`
 
 ### `PRIMARY KEY`
 
