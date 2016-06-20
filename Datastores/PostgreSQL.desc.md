@@ -16,7 +16,7 @@
 
 ## What's the difference between data and information?
 
-Before you can become fluent with a database systems like PostgreSQL, you first need become fluent with the difference between data and information. Simply put, **data** are facts. Here are some examples of data, represented in JavaScript.
+Before you can become fluent with a database system like PostgreSQL, you first need become fluent with the difference between data and information. Simply put, **data** are facts. Here are some examples of data, represented in JavaScript.
 
 ```javascript
 1;
