@@ -639,7 +639,7 @@ And you should see something like this.
 
 ![](https://i.imgur.com/bIqxevs.png)
 
-As you can see, the `movies` table has a handful of columns. Each column must contain data that matches a particular data type. Here's a brief overview of the most common PostgreSQL data types.
+As you can see, the `movies` table contains a handful of columns. For an entity that's stored as a row in the table, the value of each attribute must match the data type of its respective column. Here's a brief overview of the most common data types in PostgreSQL.
 
 | Name                                 | Storage Size | Description                               | Range                          |
 |--------------------------------------|--------------|-------------------------------------------|--------------------------------|
