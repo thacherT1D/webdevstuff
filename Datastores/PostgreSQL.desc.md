@@ -664,15 +664,11 @@ And you should see something like this.
 
 ![](https://i.imgur.com/MYG7YWb.png)
 
-When an entity without an `id` value is inserted into the `movies` table, the entity is given the next value of the sequence generator for its `id` column. When an entity is deleted from the table, it integer value of the `id` column is not reused. Therefore, each entity in the table is guaranteed to have a unique `id` attribute for all time. Almost every table you create will have an `id serial` column.
+When an entity without an `id` value is inserted into the `movies` table, the entity is given the next value of the sequence generator for its `id` column. When an entity is deleted from the table, its integer value of the `id` column is not reused. Therefore, each entity in the table is guaranteed to have a unique `id` attribute for all time. Almost every table you create will have an `id serial` column.
 
+A `serial` column also applies a `NOT NULL` constraint. This constraint ensures that a `NULL` value cannot be inserted into the column. This is a requirement of a `PRIMARY KEY` constraint. This constraint indicates that the column can be used as a unique identifier for rows in the table. The `PRIMARY KEY` constraint requires that the values in the column be both unique and `NOT NULL`. With a sequence generator, that's constraint won't be a problem.
 
-
-A NOT NULL constraint is applied to ensure that a null value cannot be inserted.
-
-A `NOT NULL` constraint simply specifies that a column must not accept a null value.
-
-The `PRIMARY KEY` constraint indicates that a column can be used as a unique identifier for rows in the table. This requires that the values in the column be both unique and `NOT NULL`. A column with a `PRIMARY KEY` constraint is given an index. An **index** is primarily used to enhance database performance. We'll talk more about indexes later in the week.
+A column with a `PRIMARY KEY` constraint is given an index. An **index** is used to enhance PostgreSQL server's performance when retrieving information from the table. We'll talk more about indexes later in the week.
 
 ```sql
 ALTER TABLE movies ADD COLUMN plot text;
