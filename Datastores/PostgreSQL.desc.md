@@ -218,9 +218,9 @@ In your own words, write down what SQL means to you. After about 30 seconds, you
 
 ## What's PostgreSQL?
 
-**PostgreSQL** is a powerful, open source relational database system that's been around since 1996. It has a strong reputation for reliability, data integrity, and correctness. PostgreSQL runs on all major operating systems, including Linux, Mac OS X, and Windows.
+**PostgreSQL** is a powerful, open source relational database system that's been around since 1996. It has a strong reputation for reliability, data integrity, and correctness. PostgreSQL runs on all major operating systems, including Linux, Mac OS X, and Windows. In addition, PostgreSQL has native interfaces for a number of programming languages, including JavaScript, and is known for its [exceptional documentation](https://www.postgresql.org/docs/current/static/).
 
-PostgreSQL is fully ACID (atomicity, consistency, isolation, durability) compliant and supports a vast amount of [data types](https://www.postgresql.org/docs/current/static/datatype.html#DATATYPE-TABLE). The most common of these data types include the following.
+PostgreSQL is fully ACID (atomicity, consistency, isolation, durability) compliant and has a vast amount of [built-in data types](https://www.postgresql.org/docs/current/static/datatype.html#DATATYPE-TABLE). The most common of these data types include the following.
 
 - `boolean`
 - `character` (`char`)
@@ -232,9 +232,7 @@ PostgreSQL is fully ACID (atomicity, consistency, isolation, durability) complia
 - `text`
 - `timestamp`
 
-PostgreSQL has native interfaces for a number of programming languages including JavaScript and is known for its [exceptional documentation](https://www.postgresql.org/docs/current/static/).
-
-PostgreSQL is a sophisticated relational database system. To become fluent in PostgreSQL means to be fluent in all its moving parts. Here's a brief rundown the major moving parts of PostgreSQL.
+PostgreSQL is a sophisticated relational database system. To become fluent in PostgreSQL means to become fluent in all its moving parts. Here's a brief rundown the major moving parts of PostgreSQL.
 
 1. A database server manages a database cluster.
 1. A database client connects to a database server.
@@ -247,13 +245,11 @@ PostgreSQL is a sophisticated relational database system. To become fluent in Po
 
 [INSERT DATABASE CLIENT-SERVER DIAGRAM]
 
-For example, the Movie Junkies web application from earlier might use a database cluster that contains two databases: a `movie_junkies_dev` database for the development environment and `movie_junkies_test` database for the test environment.
-
-A database server is started to manage this database cluster. Then a database client connects to the database server and begins sending SQL commands to the server in order to store or retrieve information from the database cluster.
+For example, the Movie Junkies web application from earlier might use a database cluster that contains two databases: a `movie_junkies_dev` database for the development environment and `movie_junkies_test` database for the test environment. A database server is started to manage this database cluster. Then a database client connects to the database server and begins sending SQL commands to the server in order to store or retrieve information from the database cluster.
 
 ### Exercise
 
-How does PostgreSQL work?
+In your own words, write down what PostgreSQL means to you. After about 30 seconds, your instructor will cold call on the class and ask what was written down.
 
 ## How do you install PostgreSQL using Homebrew?
 
