@@ -5,6 +5,7 @@
 - Diagram how server-side web applications manage information.
 - Explain what is a relational database system is.
 - Explain why is a relational database system so useful.
+- Explain what SQL is.
 - Explain what PostgreSQL is.
 - Install PostgreSQL using Homebrew.
 - Start a PostgreSQL server using Homebrew Services.
@@ -235,7 +236,7 @@ PostgreSQL is fully ACID (atomicity, consistency, isolation, durability) complia
 
 PostgreSQL can even store large binary objects such as pictures, sounds, or video. PostgreSQL has native interfaces for a number of programming languages including JavaScript and is known for its [exceptional documentation](https://www.postgresql.org/docs/current/static/).
 
-Postgres works like this.
+PostgreSQL is made up of the following components and interactions.
 
 1. A database server manages a database cluster.
 1. A database client connects to a database server.
