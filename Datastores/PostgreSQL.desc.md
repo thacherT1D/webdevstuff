@@ -141,7 +141,14 @@ Using the Movie Junkies example from earlier, imagine the product development te
 
 While this certainly solves the problem, another one is created. There's duplicate information in the form of multiple rows. And wherever there's duplicate information, there's the possibility for inconsistencies to arise. For example, imagine the Frozen movie is recategorized as a `'Comedy'`. Given the current structure, that would require changing information inside of multiple rows.
 
-With a relational database system, there's a better way to track a movie's awards. And that's to create an separate `awards` table. This table contains an `award` entity's `name`, `kind`, and `received_at` columns, plus a column called `movie_id` that relates each `award` entity to a `movie` entity. Here's an example of what that might look like.
+With a relational database system, there's a better way to track a movie's awards. And that's to create a separate `awards` table with `name`, `kind`, and `received_at` columns. But in order to relate an award to a movie, an extra `movie_id` column is required. This column is used to relate each `award` entity to a `movie` entity. Here's an example of what that might look like.
+
+```text
+id | movie_id | kind  |                                 name                                 |      received_at
+----+----------+-------+----------------------------------------------------------------------+------------------------
+1 |        1 | Oscar | Best Animated Feature Film of the Year                               | 2014-03-01 16:00:00-08
+2 |        1 | Oscar | Best Achievement in Music Written for Motion Pictures, Original Song | 2014-03-01 16:00:00-08
+```
 
 ```text
  id | title  | duration | rated |   genre   | is_3d |      released_at       | score |
@@ -149,12 +156,6 @@ With a relational database system, there's a better way to track a movie's award
   1 | Frozen |      102 | PG    | Animation | t     | 2013-11-26 16:00:00-08 |   7.6 |
 ```
 
-```text
- id | movie_id | kind  |                                 name                                 |      received_at
-----+----------+-------+----------------------------------------------------------------------+------------------------
-  1 |        1 | Oscar | Best Animated Feature Film of the Year                               | 2014-03-01 16:00:00-08
-  2 |        1 | Oscar | Best Achievement in Music Written for Motion Pictures, Original Song | 2014-03-01 16:00:00-08
-```
 Now, a change to a movie's genre only requires a change to one record.
 
 Since the 1970s, relational database systems have been used to manage all kinds of information—financial, manufacturing, logistical, personal, government, communication, public, and private information. By structuring information into tables with rows and columns, computers can quickly and efficiently store and retrieve insanely large amounts data.
