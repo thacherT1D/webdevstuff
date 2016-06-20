@@ -3,7 +3,6 @@
 
 - Normalize Data
 - Use Knex to interact with the database
-- Objective 3
 
 ---
 
