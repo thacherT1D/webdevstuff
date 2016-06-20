@@ -91,6 +91,12 @@ Let's look at another diagram, this time of a server-side web application handli
 
 In a development environment, the server-side web application and its companion relation database system often live on the same machine. However, in a production environment, the two systems often live on different machines to maximum the performance of each.
 
+### Exercise
+
+Take a few moments to diagram how server-side web applications store and retrieve data using a relational database system.
+
+Once you've finished, turn to a neighbor and explain how information flows throw the two systems. Then, explain how information stays at rest when the two systems are turned off.
+
 ## What's a relational database system?
 
 A **relational database system**, or relational database management system (RDBMS), is a database system that's based on the relational model. The **relational model** is an approach to managing information in a table (i.e. relation) where an entity is represented as a row and its attributes are represented as columns. For example, here's a `movies` table that contains some movie entities.
