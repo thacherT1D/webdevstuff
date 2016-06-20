@@ -591,11 +591,21 @@ CREATE TABLE movies (
 );
 ```
 
+And you should see something like this.
+
+![](https://i.imgur.com/R4l9WOj.png)
+
+**NOTE:** The yellow equals sign `=` changed to a yellow open parenthesis sign `(` to indicate the REPL was waiting for the SQL command to have a matching close parenthesis `)`.
+
 To verify the table was created, display the tables by running the following REPL command.
 
 ```text
 \dt
 ```
+
+And you should see something like this.
+
+![](https://i.imgur.com/0geGsbQ.png)
 
 The above `CREATE TABLE` command is a multi-line SQL command. When executed by the PostgreSQL REPL, a `movies` table is created with the following attributes.
 
