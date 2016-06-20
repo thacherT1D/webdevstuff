@@ -9,9 +9,9 @@
 - Install PostgreSQL using Homebrew.
 - Start a PostgreSQL server using Homebrew Services.
 - Use command line tools to manage databases in a PostgreSQL cluster.
-- Use SQL to manage databases in a PostgreSQL cluster.
-- Use SQL to manage tables in a database.
-- Use SQL to manage rows in a table.
+- Use the PostgreSQL REPL to manage databases in a PostgreSQL cluster.
+- Use the PostgreSQL REPL to manage tables in a database.
+- Use the PostgreSQL REPL to manage rows in a table.
 
 ## What's the difference between data and information?
 
@@ -395,7 +395,7 @@ createdb --help
 dropdb --help
 ```
 
-## How do you use SQL to manage databases in a PostgreSQL cluster?
+## How do you use PostgreSQL REPL to manage databases in a PostgreSQL cluster?
 
 In addition to the above command line tools, you can manage the databases inside the default PostgreSQL cluster with SQL and the PostgreSQL REPL.
 
@@ -550,7 +550,7 @@ help
 \h
 ```
 
-## How do you use SQL to manage tables in a database?
+## How do you use the PostgreSQL REPL to manage tables in a database?
 
 Check what tables we have in our newly created database (dt stands for display tables):
 
@@ -633,7 +633,7 @@ DROP TABLE movies;
 
 Design a table for a movie database. Discuss a few things that a movie table may have. Choose the appropriate data type for the data. Make the CREATE TABLE command and execute it in psql. Use `\dt` to verify that the table was created. Once you're satisfied that the table is there, get rid of it using the DROP TABLE command. Use `\dt` again to make sure that the table has been dropped.
 
-## What are the CRUD operations on a row?
+## How do you use the PostgreSQL REPL to manage rows in a table?
 
 The CRUD operations correspond to the following SQL commands.
 
