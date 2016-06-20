@@ -236,7 +236,7 @@ PostgreSQL is fully ACID (atomicity, consistency, isolation, durability) complia
 
 PostgreSQL can even store large binary objects such as pictures, sounds, or video. PostgreSQL has native interfaces for a number of programming languages including JavaScript and is known for its [exceptional documentation](https://www.postgresql.org/docs/current/static/).
 
-PostgreSQL is made up of the following components and interactions.
+PostgreSQL is a sophisticated relational database system. To become fluent in PostgreSQL means to be fluent in all its moving parts. Here's a brief rundown the major moving parts of PostgreSQL.
 
 1. A database server manages a database cluster.
 1. A database client connects to a database server.
