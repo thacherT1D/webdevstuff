@@ -639,7 +639,7 @@ And you should see something like this.
 
 ![](https://i.imgur.com/bIqxevs.png)
 
-As you can see, the `movies` table has the above columns. Each column must contain data that matches a particular data type.
+As you can see, the `movies` table has a handful of columns. Each column must contain data that matches a particular data type. Here's a brief overview of the most common PostgreSQL data types.
 
 | Name                                 | Storage Size | Description                               | Range                          |
 |--------------------------------------|--------------|-------------------------------------------|--------------------------------|
@@ -687,9 +687,10 @@ DROP TABLE movies;
 
 See the following articles in the PostgreSQL documentation to learn more.
 
-- [`CREATE TABLE` article](https://www.postgresql.org/docs/current/static/sql-createtable.html)
-- [`ALTER TABLE` article](https://www.postgresql.org/docs/current/static/sql-altertable.html)
-- [`DROP TABLE` article](https://www.postgresql.org/docs/current/static/sql-droptable.html)
+- [PostgreSQL Documentation - Data Types](https://www.postgresql.org/docs/current/static/datatype.html)
+- [PostgreSQL Documentation - `CREATE TABLE`](https://www.postgresql.org/docs/current/static/sql-createtable.html)
+- [PostgreSQL Documentation - `ALTER TABLE`](https://www.postgresql.org/docs/current/static/sql-altertable.html)
+- [PostgreSQL Documentation - `DROP TABLE`](https://www.postgresql.org/docs/current/static/sql-droptable.html)
 
 ### Exercise
 
