@@ -702,17 +702,13 @@ The `INSERT` SQL command creates new rows in a table. In insert a row into the `
 INSERT INTO movies (title, duration, rated, genre, is_3d, released_at, score) VALUES ('Frozen', 102, 'PG', 'Animation', TRUE, '2013-11-27 00:00:00 UTC', 7.6);
 ```
 
-Our new row of data will look something like this:
+And you should see something like this.
 
-| id | title         | description | rating |
-|----|---------------|-------------|--------|
-| 1  | Batman Begins |             | 10     |
+![](https://i.imgur.com/lnOaIfg.png)
 
-Even though we did not specify an id, one was created anyways. Since we have set the data type of the `id` column to `serial`, postgres automatically set the value for us.
+**NOTE:** Even though it wasn't specified, an integer value was given to the newly inserted row's `id` attribute because it's a `serial` column.
 
-A select statement allows you to get data from the database.
-
-First, let's populate our movies table with a few more movies:
+Insert a few more rows into the `movies` table by running the following command.
 
 ```sql
 INSERT INTO movies (title, duration, rated, genre, is_3d, released_at, score) VALUES ('X-Men: Apocalypse', 144, 'PG-13', 'Action', TRUE, '2016-05-27 00:00:00 UTC', 7.4);
@@ -720,20 +716,7 @@ INSERT INTO movies (title, duration, rated, genre, is_3d, released_at, score) VA
 INSERT INTO movies (title, duration, rated, genre, is_3d, released_at, score) VALUES ('Pulp Fiction', 154, 'R', 'Crime', FALSE, '1994-10-14 00:00:00 UTC', 8.9);
 ```
 
-```sql
-INSERT INTO movies (title, description, rating) VALUES('Cars', 'Pixar movie', 7);
-INSERT INTO movies (title, description, rating) VALUES('Back to the Future', 'No one calls Marty chicken', 9);
-INSERT INTO movies (title, description, rating) VALUES('Dude Wheres My Car', 'probably a bad movie', 3);
-INSERT INTO movies (title, description, rating) VALUES('Godfather', 'good movie', 10);
-INSERT INTO movies (title, description, rating) VALUES('Mystic River', 'did not see it', 7);
-INSERT INTO movies (title, description, rating) VALUES('Argo', 'Ben Affleck is a hero', 7);
-INSERT INTO movies (title, description, rating) VALUES('Gigli', 'really bad movie', 1);
-INSERT INTO movies (title, description, rating) VALUES('Sharknado', 'Instant classic', 10);
-INSERT INTO movies (title, description, rating) VALUES('Jurassic World', 'Chris Pratt trains raptors', 5);
-INSERT INTO movies (title, description, rating) VALUES('Mad Max: Fury Road', 'Water is low, similar to california', 7);
-```
-
-This will select all the attributes from the movies table unconditionally. Make sure not to forget the ; at the end of the state. In SQL, semicolons are required to terminate statements.
+A select statement allows you to get data from the database. This will select all the attributes from the movies table unconditionally. Make sure not to forget the ; at the end of the state. In SQL, semicolons are required to terminate statements.
 
 ```sql
 SELECT * FROM movies;
