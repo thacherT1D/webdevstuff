@@ -204,7 +204,28 @@ Whereas the following are popular closed source relational database systems that
 - Microsoft SQL Server
 - Oracle
 
-Regardless of source type, all relational database systems have a few things in common.
+### Exercise
+
+Explain SQL
+
+## What's PostgreSQL?
+
+**PostgreSQL** is a powerful, open source relational database system that's been around since 1996 and has a strong reputation for reliability, data integrity, and correctness. It runs on all major operating systems, including Linux, Mac OS X, and Windows.
+
+PostgreSQL is fully ACID (atomicity, consistency, isolation, durability) compliant and supports most SQL:2008 data types, including:
+
+- `INTEGER`
+- `NUMERIC`
+- `BOOLEAN`
+- `CHAR`
+- `VARCHAR`
+- `DATE`,
+- `INTERVAL`
+- `TIMESTAMP`
+
+PostgreSQL can even store large binary objects such as pictures, sounds, or video. PostgreSQL has native interfaces for a number of programming languages including JavaScript and is known for its [exceptional documentation](https://www.postgresql.org/docs/current/static/).
+
+Postgres works like this.
 
 1. A database server manages a database cluster.
 1. A database client connects to a database server.
@@ -230,23 +251,7 @@ A database server is started to manage this database cluster. Then a database cl
 
 ### Exercise
 
-
-## What's PostgreSQL?
-
-**PostgreSQL** is a powerful, open source relational database system that's been around since 1996 and has a strong reputation for reliability, data integrity, and correctness. It runs on all major operating systems, including Linux, Mac OS X, and Windows.
-
-PostgreSQL is fully ACID (atomicity, consistency, isolation, durability) compliant and supports most SQL:2008 data types, including:
-
-- `INTEGER`
-- `NUMERIC`
-- `BOOLEAN`
-- `CHAR`
-- `VARCHAR`
-- `DATE`,
-- `INTERVAL`
-- `TIMESTAMP`
-
-PostgreSQL can even store large binary objects such as pictures, sounds, or video. PostgreSQL has native interfaces for a number of programming languages including JavaScript and is known for its [exceptional documentation](https://www.postgresql.org/docs/current/static/).
+How does PostgreSQL work?
 
 ## How do you install PostgreSQL using Homebrew?
 
