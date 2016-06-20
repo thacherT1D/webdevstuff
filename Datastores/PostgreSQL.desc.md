@@ -157,13 +157,13 @@ INSERT INTO movies (title, duration, rated, genre, is_3d, released_at, score) VA
 
 **NOTE:** These are examples of SQL commands on a single line. Each one could have been split up on multiple lines.
 
-SQL became an official standard in the mid-1980's. Since then, it has been revised a few times to include a growing set of features. Despite the existence of such standards, most SQL code is not completely portable between different database systems without adjustments. Popular open source relational database systems that implement the SQL standard include the following.
+SQL became an official standard in the mid-1980's. Since then, it has been revised a few times to include a growing set of features. Despite the existence of such standards, most SQL code is not completely portable between different relational database systems without adjustments. The following are popular open source relational database systems that implement the SQL standard.
 
 - MySQL
 - PostgreSQL
 - SQLite
 
-Popular closed source relational database systems that implement the SQL standard include the following.
+Whereas the following are popular closed source relational database systems that implement the SQL standard.
 
 - Microsoft Access
 - Microsoft SQL Server
