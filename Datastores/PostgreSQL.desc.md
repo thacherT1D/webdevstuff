@@ -607,6 +607,16 @@ And you should see something like this.
 
 ![](https://i.imgur.com/0geGsbQ.png)
 
+To verify the table was created with the correct attributes, run the following command.
+
+```text
+\d movies
+```
+
+And you should see something like this.
+
+![](https://i.imgur.com/bIqxevs.png)
+
 When executed by the PostgreSQL REPL, a `movies` table is created with the following attributes.
 
 - `id`
