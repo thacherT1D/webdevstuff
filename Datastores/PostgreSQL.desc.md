@@ -144,7 +144,7 @@ Like so.
   1 | Frozen |      102 | PG    | Animation | t     | 2013-11-26 16:00:00-08 |   7.6 | Best Achievement in Music Written for Motion Pictures, Original Song | Oscar      | 2014-03-01 16:00:00-08
 ```
 
-As you can see, there's duplicate customer data. And wherever there's duplicate data, there's the possibility for inconsistencies to arise. For example, imagine Susan Frazier wants to change her last name. Given the current structure, that would require changing multiple records. With a relational database system, it's possible to use multiple tables—like a `customers` and `orders` table—to store the same information.
+As you can see, there's duplicate customer data. And wherever there's duplicate data, there's the possibility for inconsistencies to arise. For example, imagine the Frozen movie is given a new genre of `'Comedy'`. Given the current structure, that would require changing multiple records. With a relational database system, it's possible to use multiple tables—like a `movies` table and an `awards` table—to store the same information.
 
 ```text
  id | title  | duration | rated |   genre   | is_3d |      released_at       | score |
@@ -158,7 +158,7 @@ As you can see, there's duplicate customer data. And wherever there's duplicate 
   1 |        1 | Oscar | Best Animated Feature Film of the Year                               | 2014-03-01 16:00:00-08
   2 |        1 | Oscar | Best Achievement in Music Written for Motion Pictures, Original Song | 2014-03-01 16:00:00-08
 ```
-Now, a change to a customer's last name only requires a change to one record.
+Now, a change to a movie's genre only requires a change to one record.
 
 Since the 1970s, relational database systems have been used to manage all kinds of information—financial, manufacturing, logistical, personal, government, communication, public, and private information. By structuring information into tables with rows and columns, computers can quickly and efficiently store and retrieve insanely large amounts data.
 
