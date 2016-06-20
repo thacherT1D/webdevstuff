@@ -617,7 +617,7 @@ And you should see something like this.
 
 ![](https://i.imgur.com/sxhR7RL.png)
 
-The above `CREATE TABLE` command is an example a multi-line SQL command. Notice how the yellow equals sign `=` of the prompt changed to a yellow open parenthesis sign `(`. This is a clue that the PostgreSQL REPL was waiting for the SQL command to have a matching close parenthesis `)`.
+The above `CREATE TABLE` command is an example a multi-line SQL command. Notice how the yellow equals sign `=` of the prompt changed to a yellow open parenthesis sign `(`. This is a clue that the PostgreSQL REPL was waiting for the SQL command to provide a matching close parenthesis `)`.
 
 To verify the table was created, display the tables in the current connected database by running the following REPL command.
 
@@ -641,29 +641,28 @@ And you should see something like this.
 
 As you can see, the `movies` table has the above columns. Each column must contain data that matches a particular data type.
 
-### What is a Primary Key?
-
-It denotes an attribute on a table that can uniquely identify the row.  What is a similar property on a mongo db?
-
-### What does SERIAL Do?
+### `serial`
 
 The `SERIAL` attribute creates a hidden integer value that starts with `1` by default. When an entity without an `id` attribute is inserted into the table, the entity is given the current integer value for its `id` attribute. Then, the next integer value is calculated by incrementing it by `1`. When an entity is deleted from the table, it integer value of the `id` attribute is not reused. Therefore, each entity in the table is guaranteed to have a unique `id` attribute for all time. Almost every table you create will have a `SERIAL` `id` attribute.
 
-### Data Types
+### `text`
 
-Similar to how Ruby or Javascript has types of data, SQL defines types that can be stored in the DB. Here are some common ones:
+### `varchar`
 
-* Serial
-* Integer
-* Numeric // Numbers are exact, no rounding error
-* Float // Rounding error is possible, but operations are faster than Numeric
-* Text, Varchar
-* Timestamp
-* Boolean (True or False)
+### `integer`
 
-Let's look at the Postgres docs for __[creating a table](https://www.postgresql.org/docs/current/static/sql-createtable.html).__
+### `numeric`
 
-Let's say we no longer need the movies table from above, to get rid of all of the data and the definition of the table, we can use the DROP statement.  Here are the [docs on DROP](https://www.postgresql.org/docs/current/static/sql-droptable.html).
+### `boolean`
+
+`NOT NULL`
+
+### `timestamp with time zone`
+
+
+### `PRIMARY KEY`
+
+It denotes an attribute on a table that can uniquely identify the row.
 
 ```sql
 ALTER TABLE movies ADD COLUMN plot TEXT;
@@ -684,6 +683,12 @@ ALTER TABLE movies DROP COLUMN summary;
 ```sql
 DROP TABLE movies;
 ```
+
+See the following articles in the PostgreSQL documentation to learn more.
+
+- [`CREATE TABLE` article](https://www.postgresql.org/docs/current/static/sql-createtable.html)
+- [`ALTER TABLE` article](https://www.postgresql.org/docs/current/static/sql-altertable.html)
+- [`DROP TABLE` article](https://www.postgresql.org/docs/current/static/sql-droptable.html)
 
 ### Exercise
 
