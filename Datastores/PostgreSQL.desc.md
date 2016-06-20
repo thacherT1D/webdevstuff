@@ -469,6 +469,16 @@ And you should see something like this.
 
 **NOTE:** It's quite an expensive operation to create a database by copying the template databases.
 
+If you forget to end an SQL command with a semicolon, the PostgreSQL REPL will display another prompt, allowing you to continue writing the command on the next line. It would look something like this.
+
+![](https://i.imgur.com/RjCdoWD.png)
+
+SQL commands can get very long and writing them over multiple lines is extremely useful. However, the PostgreSQL REPL won't execute the command unless it's terminated with a semicolon `;`. It can hard to know if a command has been accepted by the REPL or not. The sure fire way you can tell the REPL is waiting for a semicolon is when the yellow equals sign `=` in the prompt changes to a yellow minus sign `-`. For example, see the above screenshot.
+
+Just remember, all SQL commands must be end with a semicolon `;`. So if you're wondering why your SQL didn't work, check for the yellow minus sign `-`. If you see it, type the semicolon `;` and hit the `Enter` key.
+
+![](https://i.imgur.com/3TCOj1w.png)
+
 To verify the database was created, check the list of databases again.
 
 ```text
