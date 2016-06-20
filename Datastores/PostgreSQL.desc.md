@@ -2,7 +2,7 @@
 
 - Explain the difference between data and information.
 - Explain what an entity is.
-- Diagram how server-side web applications store and retrieve data.
+- Diagram how server-side web applications manage information.
 - Explain what is a relational database system is.
 - Explain why is a relational database system so important.
 - Explain what PostgreSQL is.
@@ -65,7 +65,7 @@ Turn to a neighbor and consider how you'd describe a `pet` entity. Think of at l
 
 Using this information, create a JavaScript object that represents one instance of a `pet` entity. Then, create a table, like the one above, to represent the same `pet` entity.
 
-## How do server-side web applications store and retrieve information?
+## How do server-side web applications manage information?
 
 Imagine you're building a web application for movie fanatics called Movie Junkies. The product development team has determined that a true movie fanatic must be able create a `movie` entity. After all, a user can't retrieve information that doesn't exist. Therefore, your first job will be to build a server-side web application that can handle the following RESTful HTTP request.
 
@@ -81,11 +81,11 @@ http GET moviejunkies.com/movies/1
 
 Finally, the product development team has determined that the movie information needs to be persisted somewhere resilient. The user doesn't care how the information is stored, just so long as he or she can create or read `movie` entities even if the web application is restarted due to maintenance or unforeseen crashes. Therefore, your third job will be to augment the same server-side web application with the ability to persist the information resiliently.
 
-So far, you've learned how a server-side web application can store and retrieve information from a JSON file. So based on our product's requirements and your experience working with JSON files, let's look at a diagram of a server-side web application handling the above HTTP requests and responses with a JSON file.
+So far, you've learned how a server-side web application can manage information persisted to a JSON file. So based on our product's requirements and your experience working with JSON files, let's look at a diagram of a server-side web application handling the above HTTP requests and responses with a JSON file.
 
 [INSERT HTTP CLIENT-SERVER DIAGRAM WITH A JSON FILE]
 
-Let's look at another diagram, this time of a server-side web application handling the above HTTP requests and responses with relational database system.
+Let's look at another diagram, this time of a server-side web application handling the above HTTP requests and responses with a relational database system.
 
 [INSERT HTTP CLIENT-SERVER DIAGRAM WITH A RDBMS]
 
