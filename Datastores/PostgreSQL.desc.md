@@ -615,7 +615,7 @@ CREATE TABLE movies (
 
 And you should see something like this.
 
-![](https://i.imgur.com/R4l9WOj.png)
+![](https://i.imgur.com/sxhR7RL.png)
 
 The above `CREATE TABLE` command is an example a multi-line SQL command. Notice how the yellow equals sign `=` of the prompt changed to a yellow open parenthesis sign `(`. This is a clue that the PostgreSQL REPL was waiting for the SQL command to have a matching close parenthesis `)`.
 
