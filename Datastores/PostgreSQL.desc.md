@@ -51,7 +51,7 @@ Take a minute to write down how you'd explain the difference between data and in
 
 ## What's an entity?
 
-In the above example, the `movie` object is called an entity. An **entity** is an object the represents a person, place, or thing. As you can see from the table below, this `movie` entity has handful of attributes. An **attribute** is a piece of information that describes an entity.
+In the above example, the `movie` object is called an entity. An **entity** is an object the represents a person, place, or thing. As you can see from the table below, this `movie` entity has a handful of attributes. An **attribute** is a piece of information that describes an entity.
 
 | `id` | `title`    | `duration` | `rated` | `genre`       | `is_3d`     | `released_at`                         | `score` |
 |------|------------|------------|---------|---------------|-------------|---------------------------------------|---------|
@@ -617,18 +617,7 @@ And you should see something like this.
 
 ![](https://i.imgur.com/bIqxevs.png)
 
-When executed by the PostgreSQL REPL, a `movies` table is created with the following attributes.
-
-- `id`
-- `title`
-- `duration`
-- `rated`
-- `genre`
-- `is_3d`
-- `released_at`
-- `score`
-
-Each attribute must contain data that matches a particular data type.
+As you can see, the `movies` table has the above columns. Each column must contain data that matches a particular data type.
 
 ### What is a Primary Key?
 
