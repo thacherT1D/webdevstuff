@@ -67,19 +67,19 @@ Using this information, create a JavaScript object that represents one instance 
 
 ## How do server-side web applications store and retrieve information?
 
-Imagine you're building a web application for movie fanatics called Movie Junkies. The product development team has determined that a true movie fanatic must be able create a `movie` entity. After all, a user can't retrieve information that doesn't exist. Therefore, corresponding server-side web application needs to handle the following RESTful HTTP request somehow.
+Imagine you're building a web application for movie fanatics called Movie Junkies. The product development team has determined that a true movie fanatic must be able create a `movie` entity. After all, a user can't retrieve information that doesn't exist. Therefore, your first job will be to build a server-side web application that can handle the following RESTful HTTP request.
 
 ```shell
 http POST moviejunkies.com/movies title=Frozen duration=102 rated=PG genre=Animation is3D=true releasedAt='2013-11-27 00:00:00 UTC' score=7.6
 ```
 
-Additionally, the product development team has determined that a true movie fanatic must also be able read a `movie` entity. After all, a user can't create information and never look at it again. Therefore, the server-side web application needs to handle the following RESTful HTTP request as well.
+Additionally, the product development team has determined that a true movie fanatic must also be able read a `movie` entity. After all, a user can't create information and never look at it again. Therefore, your second job will be to augment the same server-side web application with the ability to handle the following RESTful HTTP request as well.
 
 ```shell
 http GET moviejunkies.com/movies/1
 ```
 
-Finally, the product development team has determined that the movie information needs to be persisted somewhere resilient. The user doesn't care how the information is stored, just so as he or she can create or read `movie` entities even if the web application needs to be restarted due to maintenance or unforeseen crashes.
+Finally, the product development team has determined that the movie information needs to be persisted somewhere resilient. The user doesn't care how the information is stored, just so as he or she can create or read `movie` entities even if the web application needs to be restarted due to maintenance or unforeseen crashes. Therefore, your third job will be to augment the same server-side web application with the ability to persist the information resiliently.
 
 So far, you've learned how a server-side web application can store and retrieve information from a JSON file. So based on our product's requirements and your experience working with JSON files, let's look at a diagram of a server-side web application handling the above HTTP requests and responses with a JSON file.
 
