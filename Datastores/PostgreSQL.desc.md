@@ -540,7 +540,9 @@ And you should see something like this.
 
 ### Exercises
 
-Check out the help messages for the following PostgreSQL REPL commands.
+Use the `CREATE DATABASE` and `DROP DATABASE` SQL commands to create and drop a `movie_junkies_test` database a few times. Each time you create and drop the database, verify the contents of the default PostgreSQL cluster with the `\l` REPL command. Also, practice connecting to the new database with the `\c` REPL command.
+
+After you've done this a few times, ensure the default PostgreSQL cluster contains a `movie_junkies_test` database. Then, check out the usage messages for the following REPL commands.
 
 ```text
 help
