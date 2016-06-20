@@ -399,7 +399,7 @@ dropdb --help
 
 ## How do you use PostgreSQL REPL to manage databases in a PostgreSQL cluster?
 
-In addition to the above command line tools, you can manage the databases inside the default PostgreSQL cluster the PostgreSQL REPL. Similar to the Node.js REPL, the PostgreSQL REPL is where you can play around and experiment with new database concepts.
+In addition to the above command line tools, you can manage the databases inside the default PostgreSQL cluster with the PostgreSQL REPL. Similar to the Node.js REPL, the **PostgreSQL REPL** is a read-evaluate-print loop where you can play around and experiment with new database concepts.
 
 The PostgreSQL REPL accepts both REPL commands and SQL commands. You can tell the difference between the two because REPL commands start with a backslash `\`. In a moment, you'll see some examples of each.
 
