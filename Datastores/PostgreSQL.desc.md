@@ -652,11 +652,9 @@ Here's an overview of the most common data types in PostgreSQL.
 | `character(n)`, `char(n)`            | variable     | Fixed-length string, blank padded         | N/A                            |
 | `text`                               | variable     | Variable-length string, unlimited length  | N/A                            |
 
-The `serial` data type is not a true type, but merely a notational convenience for creating a unique identifier column. When creating such a column, a PostgreSQL server instead creates an `integer` column with an attached sequence generator.
+Although used for the `id` column of the `movies` table, the `serial` data type is not a true type. Rather, it's merely a notational convenience for creating a unique identifier column. When a `serial` column is created, a PostgreSQL server instead creates an `integer` column with an attached sequence generator. A **sequence generator** is a special, single-row table that's used for generating numbers in sequential order. A `serial` sequence generator starts with value of `1` by default and increments the value by `1` each time generator is used.
 
-A **sequence generator** is a special single-row table that's used for generating numbers in sequential order. The sequence generator attached to a `serial` column starts with value of `1` by default. In this case, the `id` column.
-
-When an entity without an `id` value is inserted into the table, the entity is given the current integer value for its `id` attribute. Then, the next integer value is calculated by incrementing it by `1`. When an entity is deleted from the table, it integer value of the `id` attribute is not reused. Therefore, each entity in the table is guaranteed to have a unique `id` attribute for all time. Almost every table you create will have an `id serial` column.
+The see the sequence generator for the `id` column of the `movies` table, run the following command.
 
 ```text
 \d movies_id_seq
@@ -664,7 +662,11 @@ When an entity without an `id` value is inserted into the table, the entity is g
 
 And you should see something like this.
 
-![](https://i.imgur.com/Q7BAfK4.png)
+![](https://i.imgur.com/MYG7YWb.png)
+
+When an entity without an `id` value is inserted into the `movies` table, the entity is given the next value of the sequence generator for its `id` column. When an entity is deleted from the table, it integer value of the `id` column is not reused. Therefore, each entity in the table is guaranteed to have a unique `id` attribute for all time. Almost every table you create will have an `id serial` column.
+
+
 
 A NOT NULL constraint is applied to ensure that a null value cannot be inserted.
 
