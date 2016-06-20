@@ -123,7 +123,7 @@ In a relational database system, all values in the same column must be the same 
 | `released_at` | `TIMESTAMP`   | `Date`          |
 | `score`       | `NUMERIC`     | `Number`        |
 
-The way you manage the tables and rows in most modern relation database systems is with a special-purpose programming language called Structured Query Language (**SQL**). It consists of three distinctive languages.
+In most modern relational database systems, tables and rows are managed with a special-purpose programming language called Structured Query Language (**SQL**). It consists of three distinctive languages.
 
 1. A data definition language (DDL) for managing tables.
 1. A data manipulation language (DML) for managing rows.
