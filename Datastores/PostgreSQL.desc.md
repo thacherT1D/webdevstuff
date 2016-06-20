@@ -243,7 +243,7 @@ psql --version
 
 ## How do you start a PostgreSQL server using Homebrew Services?
 
-During installation, Homebrew will automatically initialize a PostgreSQL cluster on your machine. You can see what a PostgreSQL cluster looks like by running the following command.
+During installation, Homebrew will automatically initialize a PostgreSQL cluster on your machine. You can see how a PostgreSQL cluster is organized on the filesystem like by running the following command.
 
 ```shell
 ls -hal /usr/local/var/postgres/
