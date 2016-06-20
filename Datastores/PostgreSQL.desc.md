@@ -597,7 +597,7 @@ And you should see something like this.
 
 **NOTE:** The yellow equals sign `=` changed to a yellow open parenthesis sign `(` to indicate the REPL was waiting for the SQL command to have a matching close parenthesis `)`.
 
-To verify the table was created, display the tables by running the following REPL command.
+To verify the table was created, display the tables in the current connected database by running the following REPL command.
 
 ```text
 \dt
