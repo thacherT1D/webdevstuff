@@ -226,7 +226,6 @@ PostgreSQL is fully ACID (atomicity, consistency, isolation, durability) complia
 - `character` (`char`)
 - `character varying` (`varchar`)
 - `integer`
-- `json`
 - `numeric`
 - `serial`
 - `text`
