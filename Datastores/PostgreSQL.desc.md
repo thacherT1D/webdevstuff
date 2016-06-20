@@ -453,6 +453,8 @@ And you should see something like this.
 
 ![](https://i.imgur.com/DDbKKYG.png)
 
+**NOTE:** It should be the exact same output as running the `psql -l` command line tool.
+
 To create a new database for the fictitious Movie Junkies web app test environment, run the following SQL command.
 
 **NOTE:** Remember to end SQL commands with a semicolon `;`.
