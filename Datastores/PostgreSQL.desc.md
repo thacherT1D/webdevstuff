@@ -595,7 +595,7 @@ And you should see something like this.
 
 ![](https://i.imgur.com/R4l9WOj.png)
 
-**NOTE:** The yellow equals sign `=` changed to a yellow open parenthesis sign `(` to indicate the REPL was waiting for the SQL command to have a matching close parenthesis `)`.
+The above `CREATE TABLE` command is an example a multi-line SQL command. Notice how the yellow equals sign `=` of the prompt changed to a yellow open parenthesis sign `(`. This is a clue that the PostgreSQL REPL was waiting for the SQL command to have a matching close parenthesis `)`.
 
 To verify the table was created, display the tables in the current connected database by running the following REPL command.
 
@@ -607,7 +607,7 @@ And you should see something like this.
 
 ![](https://i.imgur.com/0geGsbQ.png)
 
-The above `CREATE TABLE` command is a multi-line SQL command. When executed by the PostgreSQL REPL, a `movies` table is created with the following attributes.
+When executed by the PostgreSQL REPL, a `movies` table is created with the following attributes.
 
 - `id`
 - `title`
