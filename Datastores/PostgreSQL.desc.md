@@ -93,9 +93,9 @@ In a development environment, the server-side web application and its companion 
 
 ### Exercise
 
-Take a few moments to diagram how server-side web applications store and retrieve data using a relational database system.
+Take a few moments to diagram how server-side web applications manage information using a relational database system.
 
-Once you've finished, turn to a neighbor and explain how information flows throw the two systems. Then, explain how information stays at rest when the two systems are turned off.
+Once you've finished, turn to a neighbor and explain how information flows throw the two systems. Then, explain how information stays at rest when either of the two systems are turned off.
 
 ## What's a relational database system?
 
