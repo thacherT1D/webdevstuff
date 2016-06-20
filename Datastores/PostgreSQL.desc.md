@@ -564,7 +564,7 @@ help
 
 ## How do you use the PostgreSQL REPL to manage tables in a database?
 
-In addition to managing databases, the PostgreSQL REPL can also manage tables in the default PostgreSQL cluster. To display the tables in the current connected database, run the following command.
+In addition to managing databases, the PostgreSQL REPL can also manage tables in the default PostgreSQL cluster. To display the tables in the current connected database, run the following REPL command.
 
 ```text
 \dt
@@ -576,7 +576,7 @@ And you should see something like this.
 
 **NOTE:** The word relation is a synonym for a table.
 
-To create a `movies` table in the current connected database, run the following command.
+To create a `movies` table in the current connected database, run the following SQL command.
 
 ```sql
 CREATE TABLE movies (
@@ -589,6 +589,12 @@ CREATE TABLE movies (
   released_at TIMESTAMP WITH TIME ZONE,
   score NUMERIC(3, 1)
 );
+```
+
+To verify the table was created, display the tables by running the following REPL command.
+
+```text
+\dt
 ```
 
 The above `CREATE TABLE` command is a multi-line SQL command. When executed by the PostgreSQL REPL, a `movies` table is created with the following attributes.
