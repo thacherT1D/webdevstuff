@@ -397,9 +397,15 @@ dropdb --help
 
 ## How do you use SQL to manage databases in a PostgreSQL cluster?
 
+In addition to the above command line tools, you can manage the databases inside the default PostgreSQL cluster with SQL and the PostgreSQL REPL.
+
+Before you get started, download and install some configuration for the `psql` command.
+
 ```shell
 curl -fsSL https://git.io/voVWg | sh
 ```
+
+**NOTE:** This configuration will colorize the prompt of your PostgreSQL REPL and allow you to use the `Alt + ←` and `Alt + →` keyboard shortcuts to jump between SQL keywords.
 
 ```shell
 psql
