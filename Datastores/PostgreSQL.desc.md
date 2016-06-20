@@ -61,36 +61,37 @@ In the above example, the `movie` object is called an entity. An **entity** is a
 
 ### Exercise
 
-Turn to a neighbor and consider how you'd describe a `pet` entity. Think of at least five pieces of information that are essential to being a pet.
+Turn to a neighbor and consider how you'd describe a `pet` entity. Think of at least five pieces of information that are essential for being a pet.
 
 Using this information, create a JavaScript object that represents one instance of a `pet` entity. Then, create a table, like the one above, to represent the same `pet` entity.
 
 ## How do web applications store and retrieve information?
 
-For the next few days, you'll be learning how web applications store and retrieve information.
-
-
-[INSERT CLIENT-SERVER DIAGRAM WITH A RDBMS]
-
-In a development environment, a database server often lives on the same machine. In a production environment, a database server often lives on a different machine.
+Imagine you're building a web application for movie fanatics called Movie Junkies. The product development team has determined that a user must be able create a `movie` entity. After all, a user can't access information that was created out of thin air. Therefore, the server-side web application needs to handle the following RESTful HTTP request.
 
 ```shell
 http POST moviejunkies.com/movies title=Frozen duration=102 rated=PG genre=Animation is3D=true releasedAt='2013-11-27 00:00:00 UTC' score=7.6
 ```
 
+Additionally, The product development team has determined that a user must be able read `movie` entities. After all, a user can't create information and never take it out. Therefore, the server-side web application needs to handle the following RESTful HTTP request as well.
+
 ```shell
 http GET moviejunkies.com/movies/1
 ```
 
-You can't put data into a data store and never take it out. This is called a "black hole".
+Here's an diagram of a web application composed of an HTTP client sending the above HTTP requests and an HTTP server sending back HTTP responses.
 
-You can't take data out of a data store that you never put in. This is called "immaculate conception".
+[INSERT CLIENT-SERVER DIAGRAM WITH A JSON-BASED FILE]
 
-A datastore could just as easily be a database or a filing cabinet
+The web application needs to store the information somewhere. The user doesn't care where or how it's stored. Just as long as if the web application goes down for a period of time, the information is available when the web application comes back up.
 
-The point is to illustrate data in motion (data flows) vs. data at rest (data stores)
+So far, you've learned how to store data and retrieve data from a JSON-based file. For the next few days you'll learn how to store and retrieve data from a database.
 
-If the system turns off, data in motion is lost, data at rest is not.
+[INSERT CLIENT-SERVER DIAGRAM WITH A RDBMS]
+
+The point is to illustrate data in motion (data flows) vs. data at rest (data stores). data in motion is lost, data at rest is not.
+
+In a development environment, a database server often lives on the same machine. In a production environment, a database server often lives on a different machine.
 
 ## What's a relational database system?
 
