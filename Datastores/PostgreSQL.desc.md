@@ -225,7 +225,7 @@ PostgreSQL can even store large binary objects such as pictures, sounds, or vide
 
 ## How do you install PostgreSQL using Homebrew?
 
-Using Homebrew, install the latest version of PostgreSQL by running the following commands.
+To install the latest version of PostgreSQL using Homebrew, run the following commands.
 
 ```shell
 brew update
@@ -234,7 +234,7 @@ brew install postgresql
 
 ### Exercise
 
-Verify PostgreSQL was installed correctly by running the following commands.
+Verify the latest version of PostgreSQL was installed correctly by running the following commands.
 
 ```shell
 postgres --version
