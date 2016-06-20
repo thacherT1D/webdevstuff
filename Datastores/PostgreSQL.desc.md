@@ -57,7 +57,7 @@ In the above example, the `movie` object is called an entity. An **entity** is a
 |------|------------|------------|---------|---------------|-------------|---------------------------------------|---------|
 | `1`  | `'Frozen'` | `102`      | `'PG'`  | `'Animation'` | `true`      | `new Date('2013-11-27 00:00:00 UTC')` | `7.6`   |
 
-**NOTE:** In table form, attribute names are often displayed in camelcase because unquoted identifiers in database systems, like PostgreSQL, are case insensitive. This sentence will make more sense shortly.
+**NOTE:** In table form, attribute names are often displayed in camelcase because unquoted identifiers like `releasted_at` are case insensitive in PostgreSQL.
 
 ### Exercise
 
