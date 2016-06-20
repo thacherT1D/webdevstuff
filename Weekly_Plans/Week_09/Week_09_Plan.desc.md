@@ -9,7 +9,14 @@
 
 # Monday, June 20
 
-Warmup: [Link to Warmup](http://github.com/gSchool)
+Warmup:
+
+[SELECT Basics](http://sqlzoo.net/wiki/SELECT_basics)
+- Exercises 1-4
+[SELECT Names](http://sqlzoo.net/wiki/SELECT_names)
+- Exercises 1-11
+[SELECT FROM WORLD Tutorial](http://sqlzoo.net/wiki/SELECT_from_WORLD_Tutorial)
+- Exercises 1-7
 
 Lessons:
 - [Lesson](/cohorts/68/student_dashboard)
