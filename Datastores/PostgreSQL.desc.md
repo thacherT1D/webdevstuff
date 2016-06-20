@@ -2,7 +2,7 @@
 
 - Explain the difference between data and information.
 - Explain what an entity is.
-- Diagram how web applications store and retrieve data.
+- Diagram how server-side web applications store and retrieve data.
 - Explain what is a relational database system is.
 - Explain why is a relational database system so important.
 - Explain what PostgreSQL is.
@@ -65,33 +65,31 @@ Turn to a neighbor and consider how you'd describe a `pet` entity. Think of at l
 
 Using this information, create a JavaScript object that represents one instance of a `pet` entity. Then, create a table, like the one above, to represent the same `pet` entity.
 
-## How do web applications store and retrieve information?
+## How do server-side web applications store and retrieve information?
 
-Imagine you're building a web application for movie fanatics called Movie Junkies. The product development team has determined that a true movie fanatic must be able create a `movie` entity. After all, a user can't retrieve information that doesn't exist. Therefore, the server-side web application needs to handle the following RESTful HTTP request.
+Imagine you're building a web application for movie fanatics called Movie Junkies. The product development team has determined that a true movie fanatic must be able create a `movie` entity. After all, a user can't retrieve information that doesn't exist. Therefore, corresponding server-side web application needs to handle the following RESTful HTTP request somehow.
 
 ```shell
 http POST moviejunkies.com/movies title=Frozen duration=102 rated=PG genre=Animation is3D=true releasedAt='2013-11-27 00:00:00 UTC' score=7.6
 ```
 
-Additionally, The product development team has determined that a user must be able read `movie` entities. After all, a user can't create information and never take it out. Therefore, the server-side web application needs to handle the following RESTful HTTP request as well.
+Additionally, the product development team has determined that a true movie fanatic must also be able read a `movie` entity. After all, a user can't create information and never look at it again. Therefore, the server-side web application needs to handle the following RESTful HTTP request as well.
 
 ```shell
 http GET moviejunkies.com/movies/1
 ```
 
-Here's an diagram of a web application composed of an HTTP client sending the above HTTP requests and an HTTP server sending back HTTP responses.
+Finally, the product development team has determined that the movie information needs to be persisted somewhere resilient. The user doesn't care how the information is stored, just so as he or she can create or read `movie` entities even if the web application needs to be restarted due to maintenance or unforeseen crashes.
 
-[INSERT CLIENT-SERVER DIAGRAM WITH A JSON-BASED FILE]
+So far, you've learned how a server-side web application can store and retrieve information from a JSON file. So based on our product's requirements and your experience working with JSON files, let's look at a diagram of a server-side web application handling the above HTTP requests and responses with a JSON file.
 
-The web application needs to store the information somewhere. The user doesn't care where or how it's stored. Just as long as if the web application goes down for a period of time, the information is available when the web application comes back up.
+[INSERT HTTP CLIENT-SERVER DIAGRAM WITH A JSON FILE]
 
-So far, you've learned how to store data and retrieve data from a JSON-based file. For the next few days you'll learn how to store and retrieve data from a database.
+Let's look at another diagram, this time of a server-side web application handling the above HTTP requests and responses with relational database system.
 
-[INSERT CLIENT-SERVER DIAGRAM WITH A RDBMS]
+[INSERT HTTP CLIENT-SERVER DIAGRAM WITH A RDBMS]
 
-The point is to illustrate data in motion (data flows) vs. data at rest (data stores). data in motion is lost, data at rest is not.
-
-In a development environment, a database server often lives on the same machine. In a production environment, a database server often lives on a different machine.
+In a development environment, the server-side web application and its companion relation database system often live on the same machine. However, in a production environment, the two systems often live on different machines to maximum the performance of each.
 
 ## What's a relational database system?
 
