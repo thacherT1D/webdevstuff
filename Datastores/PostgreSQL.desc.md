@@ -115,14 +115,14 @@ In a relational database system, all values in the same column must be the same 
 
 | Column        | Database type | JavaScript type |
 |---------------|---------------|-----------------|
-| `id`          | `INTEGER`     | `Number`        |
-| `title`       | `TEXT`        | `String`        |
-| `duration`    | `INTEGER`     | `Number`        |
-| `rated`       | `VARCHAR`     | `String`        |
-| `genre`       | `TEXT`        | `String`        |
-| `is_3d`       | `BOOLEAN`     | `Boolean`       |
-| `released_at` | `TIMESTAMP`   | `Date`          |
-| `score`       | `NUMERIC`     | `Number`        |
+| `id`          | `integer`     | `Number`        |
+| `title`       | `text`        | `String`        |
+| `duration`    | `integer`     | `Number`        |
+| `rated`       | `varchar`     | `String`        |
+| `genre`       | `text`        | `String`        |
+| `is_3d`       | `boolean`     | `Boolean`       |
+| `released_at` | `timestamp`   | `Date`          |
+| `score`       | `numeric`     | `Number`        |
 
 ### Exercise
 
@@ -176,14 +176,14 @@ In this course, we'll only be focusing on the data definition and data manipulat
 
 ```sql
 CREATE TABLE movies (
-  id SERIAL PRIMARY KEY,
-  title TEXT,
-  duration INTEGER,
-  rated VARCHAR(10),
-  genre TEXT,
-  is_3d BOOLEAN NOT NULL,
-  released_at TIMESTAMP WITH TIME ZONE,
-  score NUMERIC(3, 1)
+  id serial PRIMARY KEY,
+  title text,
+  duration integer,
+  rated varchar(10),
+  genre text,
+  is_3d boolean NOT NULL,
+  released_at timestamp with time zone,
+  score numeric(3, 1)
 );
 ```
 
@@ -218,20 +218,21 @@ In your own words, write down what SQL means to you. After about 30 seconds, you
 
 ## What's PostgreSQL?
 
-**PostgreSQL** is a powerful, open source relational database system that's been around since 1996 and has a strong reputation for reliability, data integrity, and correctness. It runs on all major operating systems, including Linux, Mac OS X, and Windows.
+**PostgreSQL** is a powerful, open source relational database system that's been around since 1996. It has a strong reputation for reliability, data integrity, and correctness. PostgreSQL runs on all major operating systems, including Linux, Mac OS X, and Windows.
 
-PostgreSQL is fully ACID (atomicity, consistency, isolation, durability) compliant and supports most SQL:2008 data types, including:
+PostgreSQL is fully ACID (atomicity, consistency, isolation, durability) compliant and supports a vast amount of [data types](https://www.postgresql.org/docs/current/static/datatype.html#DATATYPE-TABLE). The most common of these data types include the following.
 
-- `INTEGER`
-- `NUMERIC`
-- `BOOLEAN`
-- `CHAR`
-- `VARCHAR`
-- `DATE`,
-- `INTERVAL`
-- `TIMESTAMP`
+- `boolean`
+- `character` (`char`)
+- `character varying` (`varchar`)
+- `integer`
+- `json`
+- `numeric`
+- `serial`
+- `text`
+- `timestamp`
 
-PostgreSQL can even store large binary objects such as pictures, sounds, or video. PostgreSQL has native interfaces for a number of programming languages including JavaScript and is known for its [exceptional documentation](https://www.postgresql.org/docs/current/static/).
+PostgreSQL has native interfaces for a number of programming languages including JavaScript and is known for its [exceptional documentation](https://www.postgresql.org/docs/current/static/).
 
 PostgreSQL is a sophisticated relational database system. To become fluent in PostgreSQL means to be fluent in all its moving parts. Here's a brief rundown the major moving parts of PostgreSQL.
 
