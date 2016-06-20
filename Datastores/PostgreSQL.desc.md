@@ -469,7 +469,7 @@ And you should see something like this.
 
 **NOTE:** It's quite an expensive operation to create a database by copying the template databases.
 
-If you forget to end an SQL command with a semicolon `;`, the PostgreSQL REPL will display another prompt, allowing you to continue writing the command on the next line. It would look something like this.
+If you forget to end an SQL command with a semicolon `;`, the PostgreSQL REPL will display another prompt. This is REPL's way of trying to be helpful by  letting you continue writing the command on the next line. It would look something like this.
 
 ![](https://i.imgur.com/RjCdoWD.png)
 
