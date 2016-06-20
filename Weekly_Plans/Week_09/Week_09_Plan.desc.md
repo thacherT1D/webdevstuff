@@ -24,6 +24,9 @@ Lessons:
 - [Data Normalization](/redirects/articles/3084)
 - [Knex](/redirects/articles/3054)
 
+Resources:
+- [Database Schema](https://github.com/rogerwschmidt/database-schema/blob/master/knex-setup-schema.sql)
+
 ---
 
 # Tuesday, June 21
