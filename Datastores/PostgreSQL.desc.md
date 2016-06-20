@@ -347,11 +347,11 @@ As you can see, there are already three databases inside the default PostgreSQL 
 1. `template0`
 1. `template1`
 
-The `postgres` database was created when a PostgreSQL cluster was initialized. This database is meant to be the default database for users and applications. Think of it as a scratch pad for when you're experimenting with new database concepts.
+The `postgres` database was created when the PostgreSQL cluster was initialized. This database is meant to be the default database for users and applications. You can use it as a scratch pad when you're experimenting with new database concepts.
 
-The template databases were also created during initialization. New databases are actually copies of these template databases, so it's a good idea to leave these alone. See the [Template Databases](https://www.postgresql.org/docs/current/static/manage-ag-templatedbs.html) article in the PostgreSQL documentation to learn more about them.
+The `template0` and `template1` databases were also created during initialization. When a new database is created, it's actually a copy of these template databases. So it's a good idea to leave these alone. See the [Template Databases](https://www.postgresql.org/docs/current/static/manage-ag-templatedbs.html) article in the PostgreSQL documentation to learn more about them.
 
-Most web applications have multiple databases, one for each environment. To create a database for the fictitious Movie Junkies web app, run the following command.
+Most database-driven web applications use multiple databases, one for each environment. To create a database for the fictitious Movie Junkies web app from earlier, run the following command.
 
 ```shell
 createdb movie_junkies_dev
