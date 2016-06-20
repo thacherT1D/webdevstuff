@@ -650,9 +650,11 @@ As you can see, the `movies` table contains a handful of columns. For an entity 
 | `character(n)`, `char(n)`            | variable     | Fixed-length string, blank padded         | N/A                            |
 | `text`                               | variable     | Variable-length string, unlimited length  | N/A                            |
 
-The `serial` data type is not a true type, but merely a notational convenience for creating a unique identifier column. When creating a column with a `serial` type, a PostgreSQL server instead creates an `integer` column where its default values will be assigned by a sequence generator.
+The `serial` data type is not a true type, but merely a notational convenience for creating a unique identifier column. When creating such a column, a PostgreSQL server instead creates an `integer` column with an attached sequence generator.
 
-A **sequence generator** is a hidden integer value that starts with `1` by default. When an entity without an `id` value is inserted into the table, the entity is given the current integer value for its `id` attribute. Then, the next integer value is calculated by incrementing it by `1`. When an entity is deleted from the table, it integer value of the `id` attribute is not reused. Therefore, each entity in the table is guaranteed to have a unique `id` attribute for all time. Almost every table you create will have an `id serial` column.
+A **sequence generator** is a special single-row table that's used for generating numbers in sequential order. The sequence generator attached to a `serial` column starts with value of `1` by default. In this case, the `id` column.
+
+When an entity without an `id` value is inserted into the table, the entity is given the current integer value for its `id` attribute. Then, the next integer value is calculated by incrementing it by `1`. When an entity is deleted from the table, it integer value of the `id` attribute is not reused. Therefore, each entity in the table is guaranteed to have a unique `id` attribute for all time. Almost every table you create will have an `id serial` column.
 
 ```text
 \d movies_id_seq
