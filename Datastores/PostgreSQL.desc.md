@@ -9,7 +9,7 @@
 - Explain what PostgreSQL is.
 - Install PostgreSQL using Homebrew.
 - Start a PostgreSQL server using Homebrew Services.
-- Use the command line tools to manage databases in a PostgreSQL cluster.
+- Use the PostgreSQL command line tools to manage databases in a PostgreSQL cluster.
 - Use the PostgreSQL REPL to manage databases in a PostgreSQL cluster.
 - Use the PostgreSQL REPL to manage tables in a database.
 - Use the PostgreSQL REPL to manage rows in a table.
@@ -357,7 +357,7 @@ Using the Homebrew Service plugin, start a PostgreSQL server for the default Pos
 brew services --help
 ```
 
-## How do you use command line tools to manage databases in a PostgreSQL cluster?
+## How do you use the PostgreSQL command line tools to manage databases in a PostgreSQL cluster?
 
 Now that a PostgreSQL server running, you can use a variety of command line tools to manage the default PostgreSQL cluster. To list out all the databases in the default cluster, run the following command.
 
