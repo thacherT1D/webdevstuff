@@ -287,7 +287,7 @@ And you should see something like this.
 
 ![](https://i.imgur.com/cIKWKg8.png)
 
-Now, check the list all the running services again.
+Now, check the list of running services again.
 
 ```shell
 brew services list
@@ -307,7 +307,7 @@ And you should see something like this.
 
 ![](https://i.imgur.com/QDlki0f.png)
 
-Check the list all the running services one more time.
+Check the list of running services one more time.
 
 ```shell
 brew services list
