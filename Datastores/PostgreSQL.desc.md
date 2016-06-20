@@ -377,7 +377,7 @@ When a new database is created, it's actually a copy of the `template0` and `tem
 
 Additionally, the default encoding of a PostgreSQL database is `UTF8`. Using the same character encoding throughout your web application is essential for preventing data corruption. You can safely ignore the `Collate`, `Ctype`, and `Access Priviledges` columns for now.
 
-Most database-driven web applications use multiple databases, one for each environment. To create a database for the fictitious Movie Junkies web app from earlier, run the following command.
+Most database-driven web applications use multiple databases, one for each environment. To create a database for the fictitious Movie Junkies web application from earlier, run the following command.
 
 ```shell
 createdb movie_junkies_dev
