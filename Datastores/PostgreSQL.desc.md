@@ -3,8 +3,8 @@
 - Explain the difference between data and information.
 - Explain what an entity is.
 - Diagram how server-side web applications manage information.
-- Explain what is a relational database system is.
-- Explain why is a relational database system so useful.
+- Explain what a relational database system is.
+- Explain why a relational database system so useful.
 - Explain what SQL is.
 - Explain what PostgreSQL is.
 - Install PostgreSQL using Homebrew.
@@ -250,13 +250,6 @@ PostgreSQL is a sophisticated relational database system. To become fluent in Po
 [INSERT DATABASE CLIENT-SERVER DIAGRAM]
 
 For example, the Movie Junkies web application from earlier might use a database cluster that contains two databases: a `movie_junkies_dev` database for the development environment and `movie_junkies_test` database for the test environment.
-
-```text
-        Name        |   Owner   | Encoding
---------------------+-----------+----------
- movie_junkies_dev  | ryansobol | UTF8     
- movie_junkies_test | ryansobol | UTF8     
-```
 
 A database server is started to manage this database cluster. Then a database client connects to the database server and begins sending SQL commands to the server in order to store or retrieve information from the database cluster.
 
