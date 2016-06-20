@@ -369,11 +369,7 @@ And you should see something like this.
 
 ![](https://i.imgur.com/57ZyROA.png)
 
-As you can see, there are already three databases inside the default PostgreSQL cluster.
-
-1. `postgres`
-1. `template0`
-1. `template1`
+As you can see, there are already a few databases inside the default PostgreSQL cluster.
 
 The `postgres` database was created when the PostgreSQL cluster was initialized. This database is meant to be the default database for users and applications. You can use it as a scratch pad when you're experimenting with new database concepts.
 
