@@ -141,7 +141,7 @@ Using the Movie Junkies example from earlier, imagine the product development te
 
 While this certainly solves the problem, another one is created. There's duplicate information in the form of multiple rows. And wherever there's duplicate information, there's the possibility for inconsistencies to arise. For example, imagine the Frozen movie is recategorized as a `'Comedy'`. Given the current structure, that would require changing information inside of multiple rows.
 
-Using a relational database system, a better way to track a movie's awards is to create an `awards` table. This table contains an `award` entity's `name`, `kind`, and `received_at` columns, plus a column called `movie_id` that relates each `award` entity to a `movie` entity. Here's an example of what that might look like.
+With a relational database system, there's a better way to track a movie's awards. And that's to create an separate `awards` table. This table contains an `award` entity's `name`, `kind`, and `received_at` columns, plus a column called `movie_id` that relates each `award` entity to a `movie` entity. Here's an example of what that might look like.
 
 ```text
  id | title  | duration | rated |   genre   | is_3d |      released_at       | score |
