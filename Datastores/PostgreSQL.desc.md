@@ -629,7 +629,7 @@ And you should see something like this.
 
 ![](https://i.imgur.com/0geGsbQ.png)
 
-To verify the table was created with the correct attributes, run the following command.
+To verify the table was created with the correct columns, run the following command.
 
 ```text
 \d movies
