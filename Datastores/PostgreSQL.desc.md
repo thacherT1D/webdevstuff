@@ -139,7 +139,9 @@ Using the Movie Junkies example from earlier, imagine the product development te
   1 | Frozen |      102 | PG    | Animation | t     | 2013-11-26 16:00:00-08 |   7.6 | Best Achievement in Music Written for Motion Pictures, Original Song | Oscar      | 2014-03-01 16:00:00-08
 ```
 
-As you can see, there's duplicate customer data. And wherever there's duplicate data, there's the possibility for inconsistencies to arise. For example, imagine the Frozen movie is given a new genre of `'Comedy'`. Given the current structure, that would require changing multiple records. With a relational database system, it's possible to use multiple tables—like a `movies` table and an `awards` table—to store the same information.
+While this certainly solves the problem, another one is created. There's duplicate information about the Frozen movie. And wherever there's duplicate information, there's the possibility for inconsistencies to arise. For example, imagine the Frozen movie is given a new genre of `'Comedy'`. Given the current structure, that would require changing multiple records.
+
+With a relational database system, another way to track a movie's awards is to create a second `awards` table. In this table, you can have columns for the award's `name`, `kind`, and `received_at`, as well as a `movie_id` column that relates an `award` entity to a `movie` entity like this.
 
 ```text
  id | title  | duration | rated |   genre   | is_3d |      released_at       | score |
