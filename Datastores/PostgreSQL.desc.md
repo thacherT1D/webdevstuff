@@ -638,7 +638,7 @@ And you should see something like this.
 
 ![](https://i.imgur.com/bIqxevs.png)
 
-As you can see, the `movies` table contains a handful of columns. For an entity that's stored as a row in the table, the value of each attribute must match the data type of its respective column. Here's a brief overview of the most common data types in PostgreSQL.
+As you can see, the `movies` table contains a handful of columns. For an entity that's stored as a row in the table, the value of each attribute must match the data type of its respective column. In other words, the PostgreSQL server won't allow an entity to store a `boolean` value in a `text` column. This strictness is one of the reasons why a relational database can remain performant while managing a database with a huge collection of information. Here's a brief overview of the most common data types in PostgreSQL.
 
 | Name                                 | Storage Size | Description                               | Range                          |
 |--------------------------------------|--------------|-------------------------------------------|--------------------------------|
