@@ -85,15 +85,15 @@ In this course, you've learned how a server-side web application can manage info
 
 [INSERT HTTP CLIENT-SERVER DIAGRAM WITH A JSON FILE]
 
-Let's look at another diagram, this time of a server-side web application handling the above HTTP requests and responses with a relational database system.
+Let's look at another diagram, this time of a server-side web application handling the above HTTP requests and responses with a database system.
 
-[INSERT HTTP CLIENT-SERVER DIAGRAM WITH A RDBMS]
+[INSERT HTTP CLIENT-SERVER DIAGRAM WITH A DBMS]
 
-In a development environment, the server-side web application and its companion relation database system often live on the same machine. However, in a production environment, the two systems often live on different machines to maximum the performance of each.
+In a development environment, the server-side web application and its companion database system often live on the same machine. However, in a production environment, the two systems often live on different machines to maximum the performance of each.
 
 ### Exercise
 
-Take a few moments to diagram how server-side web applications manage information using a relational database system.
+Take a few moments to diagram how server-side web applications manage information using a database system.
 
 Once you've finished, turn to a neighbor and explain how information flows throw the two systems. Then, explain how information stays at rest when either of the two systems are turned off.
 
