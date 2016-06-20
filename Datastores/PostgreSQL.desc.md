@@ -146,8 +146,8 @@ With a relational database system, a better way to track a movie's awards is wit
 ```text
  id | movie_id | kind  |                                 name                                 |      received_at
 ----+----------+-------+----------------------------------------------------------------------+------------------------
- 1 |        1 | Oscar | Best Animated Feature Film of the Year                               | 2014-03-01 16:00:00-08
- 2 |        1 | Oscar | Best Achievement in Music Written for Motion Pictures, Original Song | 2014-03-01 16:00:00-08
+  1 |        1 | Oscar | Best Animated Feature Film of the Year                               | 2014-03-01 16:00:00-08
+  2 |        1 | Oscar | Best Achievement in Music Written for Motion Pictures, Original Song | 2014-03-01 16:00:00-08
 ```
 
 ```text
