@@ -4,7 +4,7 @@
 - Explain what an entity is.
 - Diagram how server-side web applications manage information.
 - Explain what is a relational database system is.
-- Explain why is a relational database system so important.
+- Explain why is a relational database system so useful.
 - Explain what PostgreSQL is.
 - Install PostgreSQL using Homebrew.
 - Start a PostgreSQL server using Homebrew Services.
@@ -127,9 +127,9 @@ In a relational database system, all values in the same column must be the same 
 
 In your own words, write down what a relational database system means to you. After about 30 seconds, your instructor will cold call on the class and ask what was written down.
 
-## Why is a relational database system so important?
+## Why is a relational database system so useful?
 
-Since the 1970s, relational database systems have been used to store financial records, manufacturing and logistical information, personnel data, government information, communication data, etc. By structuring data in records and tables, computers can quickly and efficiently store and retrieve insanely large amounts data.
+Since the 1970s, relational database systems have been used to manage all kinds of information—financial, manufacturing, logistical, personal, government, communication, public, and private information. By structuring information into tables with rows and columns, computers can quickly and efficiently store and retrieve insanely large amounts data.
 
 Imagine, for a moment, you have a database for an online store with a single `orders` table.
 
