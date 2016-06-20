@@ -443,7 +443,7 @@ And you should see something like this.
 
 ![](https://i.imgur.com/bQz6Q1s.png)
 
-You can see the list of databases inside the default PostgreSQL cluster by running the following command.
+To see the list of databases inside the default PostgreSQL cluster, run the following command.
 
 ```text
 \l
