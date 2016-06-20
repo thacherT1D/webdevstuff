@@ -708,8 +708,9 @@ Write a `CREATE TABLE` SQL command that'll create an `awards` table for the foll
   2 |        1 | Oscar | Best Achievement in Music Written for Motion Pictures, Original Song | 2014-03-01 16:00:00-08
 ```
 
-
 For each column, choose what you think is the appropriate data type. When you're finished, execute the SQL command in the `movie_junkies_dev` database. Use `\dt` REPL command to verify that the table was created correctly.
+
+Next, use the `ALTER TABLE` SQL command to add a `did_win` column to the `awards` table to track whether or not the movie won the award. Again, choose what you think is the appropriate data type. When you're finished, execute the SQL command in the `movie_junkies_dev` database. Use `\dt` REPL command to verify that the table was altered correctly.
 
 Once you're satisfied, destroy the table with the `DROP TABLE` SQL command. Again, use the `\dt` REPL command to verify the table has been dropped.
 
