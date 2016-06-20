@@ -111,9 +111,9 @@ A **relational database system**, or relational database management system (RDBM
   4 | Pulp Fiction       |      154 | R     | Crime     | f     | 1994-10-13 16:00:00-08 |   8.9
 ```
 
-In a relational database system, all values in the same column must be the same data type.
+In a relational database system, all values in the same column must be the same data type. For example, here are the data types of the columns for the above `movies` table.
 
-| Attribute     | Database type | JavaScript type |
+| Column        | Database type | JavaScript type |
 |---------------|---------------|-----------------|
 | `id`          | `INTEGER`     | `Number`        |
 | `title`       | `TEXT`        | `String`        |
