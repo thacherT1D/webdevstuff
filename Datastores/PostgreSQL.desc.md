@@ -67,7 +67,7 @@ Using this information, create a JavaScript object that represents one instance 
 
 ## How do web applications store and retrieve information?
 
-Imagine you're building a web application for movie fanatics called Movie Junkies. The product development team has determined that a user must be able create a `movie` entity. After all, a user can't access information that was created out of thin air. Therefore, the server-side web application needs to handle the following RESTful HTTP request.
+Imagine you're building a web application for movie fanatics called Movie Junkies. The product development team has determined that a true movie fanatic must be able create a `movie` entity. After all, a user can't retrieve information that doesn't exist. Therefore, the server-side web application needs to handle the following RESTful HTTP request.
 
 ```shell
 http POST moviejunkies.com/movies title=Frozen duration=102 rated=PG genre=Animation is3D=true releasedAt='2013-11-27 00:00:00 UTC' score=7.6
