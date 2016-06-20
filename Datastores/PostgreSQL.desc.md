@@ -641,6 +641,16 @@ And you should see something like this.
 
 As you can see, the `movies` table has the above columns. Each column must contain data that matches a particular data type.
 
+| Name                                 | Storage Size | Description                               | Range                          |
+|--------------------------------------|--------------|-------------------------------------------|--------------------------------|
+| `boolean`                            | 1 byte       | true or false                             | N/A                            |
+| `integer`	                           | 4 bytes      | typical choice for integer                | `-2147483648` to `+2147483647` |
+| `numeric`	                           | variable     | typical choice for decimal                | exact	up to 131,072 digits before the decimal point; up to 16,383 digits after the decimal point |
+| `timestamp with time zone`           | 8 bytes      | both date and time, with time zone        | 4713 BC to 294276 AD           |
+| `character varying(n)`, `varchar(n)` | variable     | variable-length string with limit         | N/A                            |
+| `character(n)`, `char(n)`            | variable     | fixed-length string, blank padded         | N/A                            |
+| `text`                               | variable     | variable-length string, unlimited length  | N/A                            |
+
 ### `serial`
 
 The `serial` data type creates a hidden integer value that starts with `1` by default. When an entity without an `id` value is inserted into the table, the entity is given the current integer value for its `id` attribute. Then, the next integer value is calculated by incrementing it by `1`. When an entity is deleted from the table, it integer value of the `id` attribute is not reused. Therefore, each entity in the table is guaranteed to have a unique `id` attribute for all time. Almost every table you create will have an `id serial` column.
