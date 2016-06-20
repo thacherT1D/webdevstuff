@@ -477,7 +477,7 @@ And you should see something like this.
 
 ![](https://i.imgur.com/DDbKKYG.png)
 
-It should be the exact same output as running the `psql -l` command line tool. To create a database for the test environment of the fictitious Movie Junkies web app, run the following SQL command.
+It should be the exact same output as running the `psql -l` command line tool. To create a database for the test environment of the fictitious Movie Junkies web application, run the following SQL command.
 
 **NOTE:** Remember to end SQL commands with a semicolon `;`.
 
@@ -551,7 +551,7 @@ And you should see something like this.
 
 ![](https://i.imgur.com/EE5BkcP.png)
 
-To verify the database was created, check the list of databases again.
+To verify the database was dropped, check the list of databases again.
 
 ```text
 \l
