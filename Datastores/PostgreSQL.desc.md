@@ -16,7 +16,7 @@
 
 ## What's the difference between data and information?
 
-Before you can become fluent with a database system like PostgreSQL, you first need become fluent with the difference between data and information. Simply put, **data** are facts. Here are some examples of data, represented in JavaScript.
+Before you can become fluent with a database system like PostgreSQL, you first need to become fluent with the difference between data and information. Simply put, **data** are facts. Here are some examples of data, represented in JavaScript.
 
 ```javascript
 1;
@@ -52,13 +52,13 @@ Take a minute to write down how you'd explain the difference between data and in
 
 ## What's an entity?
 
-In the above example, the `movie` object is called an entity. An **entity** is an object the represents a person, place, or thing. As you can see from the table below, this `movie` entity has a handful of attributes. An **attribute** is a piece of information that describes an entity.
+In the above example, the `movie` object is called an entity. An **entity** is an object that represents a person, place, or thing. As you can see from the table below, this `movie` entity has a handful of attributes. An **attribute** is a piece of information that describes an entity.
 
 | `id` | `title`    | `duration` | `rated` | `genre`       | `is_3d`     | `released_at`                         | `score` |
 |------|------------|------------|---------|---------------|-------------|---------------------------------------|---------|
 | `1`  | `'Frozen'` | `102`      | `'PG'`  | `'Animation'` | `true`      | `new Date('2013-11-27 00:00:00 UTC')` | `7.6`   |
 
-**NOTE:** In table form, attribute names are often displayed in camelcase because unquoted identifiers like `releasted_at` are case insensitive in PostgreSQL.
+**NOTE:** In table form, attribute names are often displayed in snakecase because unquoted identifiers like `releasted_at` are case insensitive in PostgreSQL.
 
 ### Exercise
 
