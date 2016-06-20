@@ -651,18 +651,14 @@ As you can see, the `movies` table has the above columns. Each column must conta
 | `character(n)`, `char(n)`            | variable     | Fixed-length string, blank padded         | N/A                            |
 | `text`                               | variable     | Variable-length string, unlimited length  | N/A                            |
 
-### `serial`
-
 The `serial` data type creates a hidden integer value that starts with `1` by default. When an entity without an `id` value is inserted into the table, the entity is given the current integer value for its `id` attribute. Then, the next integer value is calculated by incrementing it by `1`. When an entity is deleted from the table, it integer value of the `id` attribute is not reused. Therefore, each entity in the table is guaranteed to have a unique `id` attribute for all time. Almost every table you create will have an `id serial` column.
 
-### `NOT NULL`
+A `NOT NULL` constraint simply specifies that a column must not accept a null value.
 
-### `PRIMARY KEY`
-
-It denotes an attribute on a table that can uniquely identify the row.
+The `PRIMARY KEY` constraint indicates that a column can be used as a unique identifier for rows in the table. This requires that the values in the column be both unique and `NOT NULL`.
 
 ```sql
-ALTER TABLE movies ADD COLUMN plot TEXT;
+ALTER TABLE movies ADD COLUMN plot text;
 ```
 
 ```sql
@@ -670,7 +666,7 @@ ALTER TABLE movies RENAME COLUMN plot TO summary;
 ```
 
 ```sql
-ALTER TABLE movies ALTER COLUMN summary TYPE VARCHAR(100);
+ALTER TABLE movies ALTER COLUMN summary TYPE varchar(100);
 ```
 
 ```sql
