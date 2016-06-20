@@ -425,9 +425,9 @@ dropdb --help
 
 In addition to the above command line tools, you can manage the databases inside the default PostgreSQL cluster with the PostgreSQL REPL. Similar to the Node.js REPL, the **PostgreSQL REPL** is a read-evaluate-print loop where you can play around and experiment with new database concepts.
 
-The PostgreSQL REPL accepts both REPL commands and SQL commands. You can tell the difference between the two because REPL commands start with a backslash `\` and SQL commands end with a semicolon `;`. In a moment, you'll see some examples of each.
+The PostgreSQL REPL accepts both REPL commands and SQL commands. You can tell the difference between the two because REPL commands start with a backslash `\` and SQL commands end with a semicolon `;`. In a moment, you'll see some examples of both.
 
-Before you get started with the PostgreSQL REPL, download and install some configuration for it by running the following command.
+Before you get started with the PostgreSQL REPL, download and install some configuration for your instructors created for it by running the following command.
 
 ```shell
 curl -fsSL https://git.io/voVWg | sh
