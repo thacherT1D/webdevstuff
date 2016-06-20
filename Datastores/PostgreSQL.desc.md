@@ -156,6 +156,10 @@ As you can see, there's duplicate customer data. And wherever there's duplicate 
 ```
 Now, a change to a customer's last name only requires a change to one record.
 
+### Exercise
+
+In your own words, write down why relational databases are so useful. After about 30 seconds, your instructor will cold call on the class and ask what was written down.
+
 ## What's SQL?
 
 In most modern relational database systems, tables and rows are managed with a special-purpose programming language called Structured Query Language (**SQL**). SQL consists of three distinctive languages.
@@ -206,7 +210,7 @@ Whereas the following are popular closed source relational database systems that
 
 ### Exercise
 
-Explain SQL
+In your own words, write down what SQL means to you. After about 30 seconds, your instructor will cold call on the class and ask what was written down.
 
 ## What's PostgreSQL?
 
