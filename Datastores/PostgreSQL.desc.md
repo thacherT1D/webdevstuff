@@ -2,14 +2,14 @@
 
 - Explain the difference between data and information.
 - Explain what an entity is.
-- Diagram how server-side web applications manage information.
+- Diagram how a server-side web applications manage information.
 - Explain what a relational database system is.
 - Explain why a relational database system so useful.
 - Explain what SQL is.
 - Explain what PostgreSQL is.
 - Install PostgreSQL using Homebrew.
 - Start a PostgreSQL server using Homebrew Services.
-- Use command line tools to manage databases in a PostgreSQL cluster.
+- Use the command line tools to manage databases in a PostgreSQL cluster.
 - Use the PostgreSQL REPL to manage databases in a PostgreSQL cluster.
 - Use the PostgreSQL REPL to manage tables in a database.
 - Use the PostgreSQL REPL to manage rows in a table.
