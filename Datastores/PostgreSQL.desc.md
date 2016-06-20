@@ -699,7 +699,19 @@ See the following articles in the PostgreSQL documentation to learn more.
 
 ### Exercise
 
-Design a table for a movie database. Discuss a few things that a movie table may have. Choose the appropriate data type for the data. Make the CREATE TABLE command and execute it in psql. Use `\dt` to verify that the table was created. Once you're satisfied that the table is there, get rid of it using the DROP TABLE command. Use `\dt` again to make sure that the table has been dropped.
+Write a `CREATE TABLE` SQL command that'll create an `awards` table for the following entities.
+
+```text
+ id | movie_id | kind  |                                 name                                 |      received_at
+----+----------+-------+----------------------------------------------------------------------+------------------------
+  1 |        1 | Oscar | Best Animated Feature Film of the Year                               | 2014-03-01 16:00:00-08
+  2 |        1 | Oscar | Best Achievement in Music Written for Motion Pictures, Original Song | 2014-03-01 16:00:00-08
+```
+
+
+For each column, choose what you think is the appropriate data type. When you're finished, execute the SQL command in the `movie_junkies_dev` database. Use `\dt` REPL command to verify that the table was created correctly.
+
+Once you're satisfied, destroy the table with the `DROP TABLE` SQL command. Again, use the `\dt` REPL command to verify the table has been dropped.
 
 ## How do you use the PostgreSQL REPL to manage rows in a table?
 
