@@ -130,13 +130,7 @@ In your own words, write down what a relational database system means to you. Af
 
 ## Why is a relational database system so useful?
 
-Thinking back to the Movie Junkies example from earlier, imagine the product development team has determined that a true movie fanatic wants to know about every award that movie entity has won. So, your job is to extend the `movies` table with the following columns.
-
-- `award_name`
-- `award_kind`
-- `award_received_at`
-
-Like so.
+Using the Movie Junkies example from earlier, imagine the product development team has determined that a true movie fanatic wants to know about every award a `movie` entity has received. Specifically, users want to know the award's name, kind, when it was received. One way to solve this is to add more columns to the `movies` table like this.
 
 ```text
  id | title  | duration | rated |   genre   | is_3d |      released_at       | score |                              award_name                              | award_kind |   award_received_at
