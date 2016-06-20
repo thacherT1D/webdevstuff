@@ -130,18 +130,18 @@ In your own words, write down what a relational database system means to you. Af
 
 ## Why is a relational database system so useful?
 
-Using the Movie Junkies example from earlier, imagine the product development team has determined that a true movie fanatic wants to know about every award a `movie` entity has received. Specifically, users want to know the award's name, kind, when the movie received it. One way to solve this is to add more columns to the `movies` table. Here's an example what that might look like.
+Using the Movie Junkies example from earlier, imagine the product development team has determined that a true movie fanatic wants to know about every award a `movie` entity has received. Specifically, users want to know the award's kind, name, when the movie received it. One way to solve this is to add more columns to the `movies` table. Here's an example what that might look like.
 
 ```text
- id | title  | duration | rated |   genre   | is_3d |      released_at       | score |                              award_name                              | award_kind |   award_received_at
-----+--------+----------+-------+-----------+-------+------------------------+-------+----------------------------------------------------------------------+------------+------------------------
-  1 | Frozen |      102 | PG    | Animation | t     | 2013-11-26 16:00:00-08 |   7.6 | Best Animated Feature Film of the Year                               | Oscar      | 2014-03-01 16:00:00-08
-  1 | Frozen |      102 | PG    | Animation | t     | 2013-11-26 16:00:00-08 |   7.6 | Best Achievement in Music Written for Motion Pictures, Original Song | Oscar      | 2014-03-01 16:00:00-08
+ id | title  | duration | rated |   genre   | is_3d |      released_at       | score | award_kind |                              award_name                              |   award_received_at
+----+--------+----------+-------+-----------+-------+------------------------+-------+------------+----------------------------------------------------------------------+------------------------
+  1 | Frozen |      102 | PG    | Animation | t     | 2013-11-26 16:00:00-08 |   7.6 | Oscar      | Best Animated Feature Film of the Year                               | 2014-03-01 16:00:00-08
+  2 | Frozen |      102 | PG    | Animation | t     | 2013-11-26 16:00:00-08 |   7.6 | Oscar      | Best Achievement in Music Written for Motion Pictures, Original Song | 2014-03-01 16:00:00-08
 ```
 
 While this certainly solves the problem, another one is created. There's duplicate information in the form of multiple rows. And wherever there's duplicate information, there's the possibility for inconsistencies to arise. For example, imagine the Frozen movie is recategorized as a `'Comedy'`. Given the current structure, that would require changing information inside of multiple rows.
 
-With a relational database system, a better way to track a movie's awards is with a separate `awards` table with `name`, `kind`, and `received_at` columns. But in order to relate an `award` entity to a `movie` entity, an extra `movie_id` column is required. Here's an example of what that might look like.
+With a relational database system, a better way to track a movie's awards is with a separate `awards` table with `kind`, `name`, and `received_at` columns. But in order to relate an `award` entity to a `movie` entity, an extra `movie_id` column is required. Here's an example of what that might look like.
 
 ```text
  id | movie_id | kind  |                                 name                                 |      received_at
