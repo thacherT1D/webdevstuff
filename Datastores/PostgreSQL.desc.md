@@ -602,14 +602,14 @@ To create a `movies` table in the current connected database, run the following 
 
 ```sql
 CREATE TABLE movies (
-  id SERIAL PRIMARY KEY,
-  title TEXT,
-  duration INTEGER,
-  rated VARCHAR(10),
-  genre TEXT,
-  is_3d BOOLEAN NOT NULL,
-  released_at TIMESTAMP WITH TIME ZONE,
-  score NUMERIC(3, 1)
+  id serial PRIMARY KEY,
+  title text,
+  duration integer,
+  rated varchar(10),
+  genre text,
+  is_3d boolean NOT NULL,
+  released_at timestamp with time zone,
+  score numeric(3, 1)
 );
 ```
 
