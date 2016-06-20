@@ -706,9 +706,7 @@ And you should see something like this.
 
 ![](https://i.imgur.com/lnOaIfg.png)
 
-**NOTE:** Even though it wasn't specified, an integer value was given to the newly inserted row's `id` attribute because it's a `serial` column.
-
-Insert a few more rows into the `movies` table by running the following command.
+Although it wasn't specified, an integer value was given to the newly inserted row's `id` attribute because it's a `serial` column. Insert a few more rows into the `movies` table by running the following commands.
 
 ```sql
 INSERT INTO movies (title, duration, rated, genre, is_3d, released_at, score) VALUES ('X-Men: Apocalypse', 144, 'PG-13', 'Action', TRUE, '2016-05-27 00:00:00 UTC', 7.4);
@@ -716,79 +714,53 @@ INSERT INTO movies (title, duration, rated, genre, is_3d, released_at, score) VA
 INSERT INTO movies (title, duration, rated, genre, is_3d, released_at, score) VALUES ('Pulp Fiction', 154, 'R', 'Crime', FALSE, '1994-10-14 00:00:00 UTC', 8.9);
 ```
 
-A select statement allows you to get data from the database. This will select all the attributes from the movies table unconditionally. Make sure not to forget the ; at the end of the state. In SQL, semicolons are required to terminate statements.
+And you should see something like this.
+
+![](https://i.imgur.com/jbIGAR3.png)
+
+Notice how long it took to insert these rows.
+
+A `SELECT` SQL command retrieves rows from a table. To select all the rows and columns from the `movies` table, run the following command.
 
 ```sql
 SELECT * FROM movies;
 ```
 
-You should see an output that looks similar to this:
+And you should see something like this.
 
-| id |       title        |             description             | rating |
-|----|--------------------|-------------------------------------|--------|
-|  1 | Batman Begins      |                                     |     10 |
-|  2 | Cars               | Pixar movie                         |      7 |
-|  3 | Back to the Future | No one calls Marty chicken          |      9 |
-|  4 | Dude Wheres My Car | probably a bad movie                |      3 |
-|  5 | Godfather          | good movie                          |     10 |
-|  6 | Mystic River       | did not see it                      |      7 |
-|  7 | Argo               | Ben Affleck is a hero               |      7 |
-|  8 | Gigli              | really bad movie                    |      1 |
-|  9 | Sharknado          | Instant classic                     |     10 |
-| 10 | Jurassic World     | Chris Pratt trains raptors          |      5 |
-| 11 | Mad Max: Fury Road | Water is low, similar to california |      7 |
+![](https://i.imgur.com/uN4sHgE.png)
 
+Notice how long it took to select these rows.
 
-We may not want all of the attributes though. Let's say instead we only care about the titles of the movie and the description. (In production applications, we typically want to specify the columns that are required rather than doing a `select *`). Here is how we'd build that query:
+Often a user only cares about a few columns. To select all the rows with just a few columns from the `movies` table, run the following command.
 
 ```sql
-SELECT title, description FROM movies;
+SELECT title, genre FROM movies;
 ```
 
-This should return:
+And you should see something like this.
 
-| title        |             description             |
-|-------------------|-------------------------------------|
-| Batman Begins      | |
-| Cars               | Pixar movie |
-| Back to the Future | No one calls Marty chicken |
-| Dude Wheres My Car | probably a bad movie |
-| Godfather          | good movie |
-| Mystic River       | did not see it |
-| Argo               | Ben Affleck is a hero |
-| Gigli              | really bad movie |
-| Sharknado          | Instant classic |
-| Jurassic World     | Chris Pratt trains raptors |
-| Mad Max: Fury Road | Water is low, similar to california |
+![](https://i.imgur.com/egpWxyz.png)
 
-What if we wanted to only select movies that are good? We could add a condition to our query, like:
+Often a user only cares about a few rows. To select a few rows with just a few columns from the `movies` table, run the following command.
 
 ```sql
-SELECT title FROM movies WHERE rating > 4;
+SELECT title, genre FROM movies WHERE score > 8;
 ```
 
-|       title        |
-|--------------------|
-| Batman Begins |
-| Cars |
-| Back to the Future |
-| Godfather |
-| Mystic River |
-| Argo |
-| Sharknado |
-| Jurassic World |
-| Mad Max: Fury Road |
+And you should see something like this.
 
-You can also have more complex queries to get data. The following query finds all the movies with a rating greater than 4 and with a title of Cars.
+![](https://i.imgur.com/WvJ23mc.png)
+
+Often a user only cares about even fewer rows. To select even fewer rows with just a few columns from the `movies` table, run the following command.
 
 ```sql
-SELECT title FROM movies WHERE rating > 4 AND title = 'Cars';
+SELECT title, genre FROM movies WHERE score > 8 AND rated = 'PG';
 ```
 
-| title |
-|-------|
-| Cars |
+And you should see someting like this.
 
+![](https://i.imgur.com/P8EsB9W.png)
 
 SQL also supports an OR statement. The following query will return any movie with a rating greater than 4, or any movies with the title Gigli. In other words, every record that matches _one_ of the criteria will be returned.
 
