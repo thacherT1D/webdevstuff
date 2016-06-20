@@ -1,8 +1,8 @@
 # Week 9 (June 20 - June 24)
 ## Weekly Objective
 
-- Objective 1
-- Objective 2
+- Normalize Data
+- Use Knex to interact with the database
 - Objective 3
 
 ---
