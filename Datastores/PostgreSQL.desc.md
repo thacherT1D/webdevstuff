@@ -79,7 +79,7 @@ Additionally, the product development team has determined that a true movie fana
 http GET moviejunkies.com/movies/1
 ```
 
-Finally, the product development team has determined that the movie information needs to be persisted somewhere resilient. The user doesn't care how the information is stored, so long as he or she can create or read `movie` entities even if the web application is restarted due to maintenance or unforeseen crashes. Therefore, your third job will be to augment the same server-side web application with the ability to persist the information resiliently.
+Finally, the product development team has determined that the movie information needs to be persisted somewhere resilient. The user doesn't care how the information is stored, so long as he or she can create or read `movie` entities even if the web application is restarted due to maintenance or unforeseen outages. Therefore, your third job will be to augment the same server-side web application with the ability to persist the information resiliently.
 
 So far, you've learned how a server-side web application can manage information persisted to a JSON file. So based on our product's requirements and your experience working with JSON files, let's look at a diagram of a server-side web application handling the above HTTP requests and responses with a JSON file.
 
