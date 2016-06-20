@@ -653,9 +653,17 @@ As you can see, the `movies` table has the above columns. Each column must conta
 
 The `serial` data type creates a hidden integer value that starts with `1` by default. When an entity without an `id` value is inserted into the table, the entity is given the current integer value for its `id` attribute. Then, the next integer value is calculated by incrementing it by `1`. When an entity is deleted from the table, it integer value of the `id` attribute is not reused. Therefore, each entity in the table is guaranteed to have a unique `id` attribute for all time. Almost every table you create will have an `id serial` column.
 
+```text
+\d movies_id_seq
+```
+
+And you should see something like this.
+
+![](https://i.imgur.com/Q7BAfK4.png)
+
 A `NOT NULL` constraint simply specifies that a column must not accept a null value.
 
-The `PRIMARY KEY` constraint indicates that a column can be used as a unique identifier for rows in the table. This requires that the values in the column be both unique and `NOT NULL`.
+The `PRIMARY KEY` constraint indicates that a column can be used as a unique identifier for rows in the table. This requires that the values in the column be both unique and `NOT NULL`. A column with a `PRIMARY KEY` constraint is given an index. An **index** is primarily used to enhance database performance. We'll talk more about indexes later in the week.
 
 ```sql
 ALTER TABLE movies ADD COLUMN plot text;
