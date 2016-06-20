@@ -696,36 +696,10 @@ Design a table for a movie database. Discuss a few things that a movie table may
 
 ## How do you use the PostgreSQL REPL to manage rows in a table?
 
-The CRUD operations correspond to the following SQL commands.
-
-| CRUD operations | SQL commands |
-|-----------------|--------------|
-| Create          | `INSERT`     |
-| Read            | `SELECT`     |
-| Update          | `UPDATE`     |
-| Destroy         | `DELETE`     |
-
-Stands for Create, Read, Update and Destroy.  This is the lifecycle of data in an applicatoin.  In SQL, CRUD can be mapped to the following __INSERT, SELECT, UPDATE, DELETE__.
-
-## How do you create a row in a table?
-
-The INSERT SQL command adds new rows to a table. Here are the [postgres docs on INSERT](https://www.postgresql.org/docs/current/static/sql-insert.html).
-
-First, let's create a new table to store movie data:
+The `INSERT` SQL command creates new rows in a table. In insert a row into the `movies` table, run the following command.
 
 ```sql
-CREATE TABLE movies (
-    id SERIAL PRIMARY KEY,
-    title TEXT,
-    description TEXT,
-    rating INTEGER
-);
-```
-
-Below is an example INSERT command. It inserts a new row of data that has values for title and rating into our movies table.
-
-```sql
-INSERT INTO movies (title, rating) VALUES ('Batman Begins', 10);
+INSERT INTO movies (title, duration, rated, genre, is_3d, released_at, score) VALUES ('Frozen', 102, 'PG', 'Animation', TRUE, '2013-11-27 00:00:00 UTC', 7.6);
 ```
 
 Our new row of data will look something like this:
@@ -736,11 +710,15 @@ Our new row of data will look something like this:
 
 Even though we did not specify an id, one was created anyways. Since we have set the data type of the `id` column to `serial`, postgres automatically set the value for us.
 
-## How do you read a row in a table?
-
-A select statement allows you to get data from the database. Here are the [docs on select](https://www.postgresql.org/docs/current/static/sql-select.html). Also, postgres a good [tutorial on select](https://www.postgresql.org/docs/current/static/tutorial-select.html). I'd recommend looking at the tutorial sometime after the lesson.
+A select statement allows you to get data from the database.
 
 First, let's populate our movies table with a few more movies:
+
+```sql
+INSERT INTO movies (title, duration, rated, genre, is_3d, released_at, score) VALUES ('X-Men: Apocalypse', 144, 'PG-13', 'Action', TRUE, '2016-05-27 00:00:00 UTC', 7.4);
+INSERT INTO movies (title, duration, rated, genre, is_3d, released_at, score) VALUES ('The Princess Bride', 98, 'PG', 'Adventure', FALSE, '1987-10-09 00:00:00 UTC', 8.1);
+INSERT INTO movies (title, duration, rated, genre, is_3d, released_at, score) VALUES ('Pulp Fiction', 154, 'R', 'Crime', FALSE, '1994-10-14 00:00:00 UTC', 8.9);
+```
 
 ```sql
 INSERT INTO movies (title, description, rating) VALUES('Cars', 'Pixar movie', 7);
@@ -903,16 +881,7 @@ SELECT title, rating FROM movies ORDER BY rating DESC LIMIT 5;
 | Back to the Future |      9 |
 | Mystic River       |      7 |
 
-### Exercises
-
-* Write a query on the movie table to return the worst movie of all time.  There should be only 1 result returned.  The result should include the title, description and rating of the movie.
-* Write a query that returns Gigli and Mad Max: Fury Road
-* Write a query that returns the id and title of the first 5 movies inserted into the database.
-* Write a query to get all of the average movies from the table.  Average is defined as a rating between 4 and 7 inclusive.
-
-## How do you update a row in a table?
-
-The update statement is defined [here](https://www.postgresql.org/docs/current/static/sql-update.html) in the postgres docs.  It is used to change existing data in our database.
+The `UPDATE` SQL command used to change existing data in our database.
 
 For example, if we do not think Gigli was actually that bad, and we want to change the rating to a 2, we can use an update statement:
 
@@ -920,13 +889,7 @@ For example, if we do not think Gigli was actually that bad, and we want to chan
 UPDATE movies SET rating=2 WHERE title='Gigli';
 ```
 
-### Exercise
-
-You are a harsh critic and don't feel like any of these movies are worthy of a 10. Write an update query that downgrades all of the 10s in our database to 9s.
-
-## How do you destroy a row in a table?
-
-Deleting works similarly to a select statement.  Here are the [docs on delete](https://www.postgresql.org/docs/current/static/sql-delete.html)
+Deleting works similarly to a select statement.
 
 The statement below deletes the Dude Wheres My Car row from the database:
 
@@ -940,14 +903,31 @@ We could also chain together multiple conditions like so:
 DELETE FROM movies WHERE id < 9 AND rating = 2;
 ```
 
-## Homework
+See the following articles in the PostgreSQL documentation to learn more.
 
-[Intro SQL Exercise](https://github.com/gSchool/intro_sql_exercise)
+- [`INSERT` article](https://www.postgresql.org/docs/current/static/sql-insert.html)
+- [`SELECT` article](https://www.postgresql.org/docs/current/static/sql-select.html).
+- [`UPDATE` article](https://www.postgresql.org/docs/current/static/sql-update.html)
+- [`DELETE` article](https://www.postgresql.org/docs/current/static/sql-delete.html)
+
+### Exercises
+
+* Write a query on the movie table to return the worst movie of all time.  There should be only 1 result returned.  The result should include the title, description and rating of the movie.
+* Write a query that returns Gigli and Mad Max: Fury Road
+* Write a query that returns the id and title of the first 5 movies inserted into the database.
+* Write a query to get all of the average movies from the table.  Average is defined as a rating between 4 and 7 inclusive.
+
+You are a harsh critic and don't feel like any of these movies are worthy of a 10. Write an update query that downgrades all of the 10s in our database to 9s.
+
+## Assignment
+
+- [Intro SQL Exercise](https://github.com/gSchool/intro_sql_exercise)
 
 ## Resources
 
 - [Homebrew Services](https://github.com/Homebrew/homebrew-services)
 - [PostgreSQL Documentation](https://www.postgresql.org/docs/current/static/)
+- [PostgreSQL Documentation - Querying a Table](https://www.postgresql.org/docs/current/static/tutorial-select.html)
 - [SQL Tutorial - Home](http://www.sqltutorial.org/)
 - [SQL Tutorial - SQL Cheatsheet](http://www.sqltutorial.org/wp-content/uploads/2016/04/sqlcheatsheet.pdf)
 - [W3Schools - SQL Tutorial](http://www.w3schools.com/sql/default.asp)
