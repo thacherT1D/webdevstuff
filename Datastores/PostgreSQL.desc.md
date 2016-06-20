@@ -501,8 +501,6 @@ And you should see something like this.
 
 To drop the `movie_junkies_test` database, run the following SQL command.
 
-**NOTE:** Remember to end SQL commands with a semicolon `;`.
-
 ```sql
 DROP DATABASE movie_junkies_test;
 ```
@@ -522,8 +520,6 @@ And you should see something like this.
 ![](https://i.imgur.com/NytCCbZ.png)
 
 To drop the `movie_junkies_test` database, run the following SQL command again.
-
-**NOTE:** Remember to end SQL commands with a semicolon `;`.
 
 ```sql
 DROP DATABASE movie_junkies_test;
