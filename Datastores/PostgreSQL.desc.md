@@ -331,39 +331,63 @@ brew services --help
 
 ## How do you use command line tools to manage databases in a PostgreSQL cluster?
 
-```shell
-curl -fsSL https://git.io/voabG | sh
-```
-
-With the PostgreSQL server running, create a default database with the same name as your current user's account name.
-
-```shell
-psql
-```
+Now that a PostgreSQL server running, you can use a variety of command line tools to manage the default PostgreSQL cluster. To list out all the databases in the default cluster, run the following command.
 
 ```shell
 psql -l
 ```
+
+And you should see something like this.
+
+![](https://i.imgur.com/57ZyROA.png)
+
+As you can see, there are already three databases inside the default PostgreSQL cluster.
+
+1. `postgres`
+1. `template0`
+1. `template1`
+
+The `postgres` database was created when a PostgreSQL cluster was initialized. This database is meant to be the default database for users and applications. Think of it as a scratch pad for when you're experimenting with new database concepts.
+
+The template databases were also created during initialization. New databases are actually copies of these template databases, so it's a good idea to leave these alone. See the [Template Databases](https://www.postgresql.org/docs/current/static/manage-ag-templatedbs.html) article in the PostgreSQL documentation to learn more about them.
+
+Most web applications have multiple databases, one for each environment. To create a database for the fictitious Movie Junkies web app, run the following command.
 
 ```shell
 createdb movie_junkies_dev
 ```
 
+And you should see neither a success nor a failure message. To verify that the database was created, check the list of databases again.
+
 ```shell
 psql -l
 ```
+
+And you should see something like this.
+
+![](https://i.imgur.com/H8CflcG.png)
+
+To drop (i.e. destroy) the database, run the following command.
 
 ```shell
 dropdb movie_junkies_dev
 ```
 
+Again, you should see neither a success nor a failure message. To verify that the database was dropped, check the list of databases again.
+
 ```shell
 psql -l
 ```
 
+And you should see something like this.
+
+![](https://i.imgur.com/57ZyROA.png)
+
 ### Exercise
 
-Use the command line tools to create a `movie_junkies_dev` database in the PostgreSQL cluster. When your done, check out the usage messages for the following commands.
+Use the `createdb` and `dropdb` command line tools to create and drop a `movie_junkies_dev` database a few times. Each time you create and drop the database, verify the contents of the default PostgreSQL cluster.
+
+After you've done this a few times, ensure the default PostgreSQL cluster contains a `movie_junkies_dev` database. Then, check out the usage messages for the following commands.
 
 ```shell
 psql --help
@@ -372,6 +396,16 @@ dropdb --help
 ```
 
 ## How do you use SQL to manage databases in a PostgreSQL cluster?
+
+```shell
+curl -fsSL https://git.io/voVWg | sh
+```
+
+```shell
+psql
+```
+
+**NOTE:** create a default database with the same name as your current user's account name.
 
 Now, you can connect to the default database in your PostgreSQL server through PostgreSQL client.
 
