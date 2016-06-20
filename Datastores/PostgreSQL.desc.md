@@ -156,9 +156,7 @@ With a relational database system, a better way to track a movie's awards is wit
   1 | Frozen |      102 | PG    | Animation | t     | 2013-11-26 16:00:00-08 |   7.6 |
 ```
 
-Now, a change to a movie's genre only requires a change to one record.
-
-Since the 1970s, relational database systems have been used to manage all kinds of information—financial, manufacturing, logistical, personal, government, communication, public, and private information. By structuring information into tables with rows and columns, computers can quickly and efficiently store and retrieve insanely large amounts data.
+Now, a change to a movie's genre only requires a change to one record. Since the 1970s, relational database systems have been used to manage all kinds of information—financial, manufacturing, logistical, personal, government, communication, public, private, and so on. By structuring information into tables with rows and columns, computers can quickly and efficiently store and retrieve insanely large amounts data.
 
 ### Exercise
 
