@@ -369,13 +369,13 @@ And you should see something like this.
 
 ![](https://i.imgur.com/57ZyROA.png)
 
-As you can see, there are already a few databases inside the default PostgreSQL cluster.
+As you can see, there are already a few databases inside the default PostgreSQL cluster. These were created when the cluster was initialized
 
-The `postgres` database was created when the PostgreSQL cluster was initialized. This database is meant to be the default database for users and applications. You can use it as a scratch pad when you're experimenting with new database concepts.
+The `postgres` database is meant to be the default database for users and applications. You can use it as a scratch pad when you're experimenting with new database concepts.
 
-The `template0` and `template1` databases were also created during initialization. When a new database is created, it's actually a copy of these template databases. So it's a good idea to leave these alone. See the [Template Databases](https://www.postgresql.org/docs/current/static/manage-ag-templatedbs.html) article in the PostgreSQL documentation to learn more about them.
+When a new database is created, it's actually a copy of the `template0` and `template1` databases. So it's a good idea to leave these alone. See the [Template Databases](https://www.postgresql.org/docs/current/static/manage-ag-templatedbs.html) article in the PostgreSQL documentation to learn more about them.
 
-Additionally, the default encoding for a PostgreSQL database is `UTF8`. Using the same character encoding throughout your web application is essential for preventing data corruption. You can safely ignore the `Collate`, `Ctype`, and `Access Priviledges` columns for now.
+Additionally, the default encoding of a PostgreSQL database is `UTF8`. Using the same character encoding throughout your web application is essential for preventing data corruption. You can safely ignore the `Collate`, `Ctype`, and `Access Priviledges` columns for now.
 
 Most database-driven web applications use multiple databases, one for each environment. To create a database for the fictitious Movie Junkies web app from earlier, run the following command.
 
