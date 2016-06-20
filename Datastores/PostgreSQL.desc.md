@@ -172,8 +172,9 @@ Whereas the following are popular closed source relational database systems that
 Regardless of source type, all relational database systems have a few things in common.
 
 1. A database server manages a cluster of databases.
-1. A database client connects to single database that's managed by a database server.
-1. A database client issues SQL commands to a database server.
+1. A database client connects to a database server.
+1. A database client sends SQL commands to a database server.
+1. A database server sends rows of information back to a database client.
 1. A single database often manages multiple tables.
 1. A single table often manages multiple rows of information.
 1. Rows are automatically persisted to the hard disk by the database server.
