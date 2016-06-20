@@ -407,25 +407,49 @@ curl -fsSL https://git.io/voVWg | sh
 
 **NOTE:** This configuration will colorize the prompt of your PostgreSQL REPL and allow you to use the `Alt + ←` and `Alt + →` keyboard shortcuts to jump between SQL keywords.
 
+Just like the Node.js REPL, the PostgreSQL REPL is where you can play around and experiment with new database concepts. To launch the PostgreSQL REPL, run the following command.
+
 ```shell
 psql
 ```
 
-**NOTE:** create a default database with the same name as your current user's account name.
+And you should see something like this.
 
-Now, you can connect to the default database in your PostgreSQL server through PostgreSQL client.
+![](https://i.imgur.com/Jy458Ah.png)
+
+Opps! What happened? Well, when the `psql` command line tool is executed without any arguments, it'll attempt to connect to a database with the same name as your user account. To fix this, you can either create a database with the same name as your user account or specify a different database.
+
+To connect the PostgreSQL REPL to the `movie_junkies_dev` database, run the following command.
 
 ```shell
 psql movie_junkies_dev
 ```
 
-And you'll be in an interactive PostgreSQL REPL. To get help, type `\?` and press `Enter`. To quit, type `\q` and press `Enter`.
+And you should see something like this.
 
-Most database systems have the notion of separate databases. Let's create one for the lesson. In your terminal, type `psql`. Next create a database:
+![](https://i.imgur.com/sNcaEdD.png)
+
+Welcome to the PostgreSQL REPL. To get help, run the following command.
+
+```text
+help
+```
+
+And you should see something like this.
+
+![](https://i.imgur.com/bQz6Q1s.png)
+
+You can see the list of databases inside the default PostgreSQL cluster by running the following command.
 
 ```text
 \l
 ```
+
+And you should see something like this.
+
+![](https://i.imgur.com/DDbKKYG.png)
+
+To create a new database for the fictitious Movie Junkies web app test environment, run the following SQL command.
 
 **NOTE:** Remember to end SQL commands with a semicolon `;`.
 
@@ -433,31 +457,86 @@ Most database systems have the notion of separate databases. Let's create one fo
 CREATE DATABASE movie_junkies_test;
 ```
 
-Next, list all of the available databases:
+And you should see something like this.
+
+![](https://i.imgur.com/ybLdKKZ.png)
+
+**NOTE:** It's quite an expensive operation to create a database by copying the template databases.
+
+To verify the database was created, check the list of databases again.
 
 ```text
 \l
 ```
 
-Now connect to the database we just created.
+And you should see something like this.
+
+![](https://i.imgur.com/XLJb0j7.png)
+
+As you can see from the prompt, the current working database is the `movie_junkies_dev` database. To connect to the database you just created, run the following command.
 
 ```text
 \c movie_junkies_test
 ```
 
-```text
-\c movie_junkies_dev
-```
+And you should see something like this.
+
+![](https://i.imgur.com/iK5uWtL.png)
+
+To drop the `movie_junkies_test` database, run the following SQL command.
+
+**NOTE:** Remember to end SQL commands with a semicolon `;`.
 
 ```sql
 DROP DATABASE movie_junkies_test;
 ```
 
+And you should see something like this.
+
+![](https://i.imgur.com/j1eZMMe.png)
+
+Opps! What happened? It looks like you can't drop the current working database. To switch back, run the following command.
+
+```text
+\c movie_junkies_dev
+```
+
+And you should see something like this.
+
+![](https://i.imgur.com/NytCCbZ.png)
+
+To drop the `movie_junkies_test` database, run the following SQL command again.
+
+**NOTE:** Remember to end SQL commands with a semicolon `;`.
+
+```sql
+DROP DATABASE movie_junkies_test;
+```
+
+And you should see something like this.
+
+![](https://i.imgur.com/EE5BkcP.png)
+
+To verify the database was created, check the list of databases again.
+
 ```text
 \l
 ```
 
-Once we connect, our command prompt should look similar to this: `testdb=#`
+And you should see something like this.
+
+![](https://i.imgur.com/DDbKKYG.png)
+
+
+Finally, to quit the PostgreSQL REPL, run the following command.
+
+```text
+\q
+```
+
+And you should see something like this.
+
+![](https://i.imgur.com/Z2q2KG3.png)
 
 ### Exercises
 
