@@ -24,12 +24,6 @@ Lessons:
 - [Data Normalization](/redirects/articles/3084)
 - [Knex](/redirects/articles/3054)
 
-Homework: [Homework](/cohorts/68/student_dashboard)
-
-Announcements:
-- Announcement 1
-- Announcement 2
-
 ---
 
 # Tuesday, June 21
