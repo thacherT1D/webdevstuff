@@ -21,8 +21,8 @@ Warmup:
 - Exercises 1-7
 
 Lessons:
-- [Lesson](/cohorts/68/student_dashboard)
-- [Lesson](/cohorts/68/student_dashboard)
+- [Data Normalization](/redirects/articles/3084)
+- [Knex](/cohorts/68/student_dashboard)
 
 Homework: [Homework](/cohorts/68/student_dashboard)
 
