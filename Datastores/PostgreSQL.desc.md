@@ -323,7 +323,7 @@ And you should see something like this.
 
 ### Exercise
 
-Start a PostgreSQL server as a Homebrew service. When your done, check out the Homebrew Services usage message with the following command.
+Using the Homebrew Service plugin, start a PostgreSQL server for the default PostgreSQL cluster. When your done, check out the plugin's usage message with the following command.
 
 ```shell
 brew services --help
