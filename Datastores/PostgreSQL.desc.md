@@ -144,7 +144,7 @@ CREATE TABLE movies (
 );
 ```
 
-And here's an example of a few data manipulation commands in SQL.
+And here are a few examples of data manipulation commands in SQL.
 
 ```sql
 INSERT INTO movies (title, duration, rated, genre, is_3d, released_at, score) VALUES ('Frozen', 102, 'PG', 'Animation', TRUE, '2013-11-27 00:00:00 UTC', 7.6);
