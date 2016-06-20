@@ -644,12 +644,12 @@ As you can see, the `movies` table has the above columns. Each column must conta
 | Name                                 | Storage Size | Description                               | Range                          |
 |--------------------------------------|--------------|-------------------------------------------|--------------------------------|
 | `boolean`                            | 1 byte       | true or false                             | N/A                            |
-| `integer`	                           | 4 bytes      | typical choice for integer                | `-2147483648` to `+2147483647` |
-| `numeric`	                           | variable     | typical choice for decimal                | exact	up to 131,072 digits before the decimal point; up to 16,383 digits after the decimal point |
-| `timestamp with time zone`           | 8 bytes      | both date and time with time zone         | 4713 BC to 294276 AD           |
-| `character varying(n)`, `varchar(n)` | variable     | variable-length string with limit         | N/A                            |
-| `character(n)`, `char(n)`            | variable     | fixed-length string, blank padded         | N/A                            |
-| `text`                               | variable     | variable-length string, unlimited length  | N/A                            |
+| `integer`	                           | 4 bytes      | Typical choice for integer                | `-2147483648` to `+2147483647` |
+| `numeric`	                           | variable     | Typical choice for decimal                | Precise	up to 131,072 digits before the decimal point and up to 16,383 digits after the decimal point |
+| `timestamp with time zone`           | 8 bytes      | Both date and time with time zone         | 4713 BC to 294276 AD           |
+| `character varying(n)`, `varchar(n)` | variable     | Variable-length string with limit         | N/A                            |
+| `character(n)`, `char(n)`            | variable     | Fixed-length string, blank padded         | N/A                            |
+| `text`                               | variable     | Variable-length string, unlimited length  | N/A                            |
 
 ### `serial`
 
