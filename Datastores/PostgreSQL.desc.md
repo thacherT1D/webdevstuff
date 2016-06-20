@@ -144,10 +144,10 @@ While this certainly solves the problem, another one is created. There's duplica
 With a relational database system, a better way to track a movie's awards is with a separate `awards` table with `name`, `kind`, and `received_at` columns. But in order to relate an `award` entity to a `movie` entity, an extra `movie_id` column is required. Here's an example of what that might look like.
 
 ```text
-id | movie_id | kind  |                                 name                                 |      received_at
+ id | movie_id | kind  |                                 name                                 |      received_at
 ----+----------+-------+----------------------------------------------------------------------+------------------------
-1 |        1 | Oscar | Best Animated Feature Film of the Year                               | 2014-03-01 16:00:00-08
-2 |        1 | Oscar | Best Achievement in Music Written for Motion Pictures, Original Song | 2014-03-01 16:00:00-08
+ 1 |        1 | Oscar | Best Animated Feature Film of the Year                               | 2014-03-01 16:00:00-08
+ 2 |        1 | Oscar | Best Achievement in Music Written for Motion Pictures, Original Song | 2014-03-01 16:00:00-08
 ```
 
 ```text
