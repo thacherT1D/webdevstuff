@@ -489,7 +489,7 @@ And you should see something like this.
 
 ![](https://i.imgur.com/XLJb0j7.png)
 
-As you can see from the prompt, the current working database is the `movie_junkies_dev` database. To connect to the database you just created, run the following command.
+As you can see from the prompt, the current connected database is the `movie_junkies_dev` database. To connect the REPL to the database you just created, run the following command.
 
 ```text
 \c movie_junkies_test
@@ -511,7 +511,7 @@ And you should see something like this.
 
 ![](https://i.imgur.com/j1eZMMe.png)
 
-Opps! What happened? It looks like you can't drop the current working database. To switch back, run the following command.
+Opps! What happened? It looks like you can't drop the current connected database. To switch the REPL back, run the following command.
 
 ```text
 \c movie_junkies_dev
