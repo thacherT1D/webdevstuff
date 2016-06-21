@@ -1197,7 +1197,15 @@ See the following articles in the PostgreSQL documentation to learn more.
 
 ### Exercises
 
-Write an SQL command to do the following.
+A **seed** file contains SQL commands that are used to recreate the rows in a table on demand. In a `seed.sql` file, type out the four `INSERT TO movies` SQL commands from above. Then, add a `DELETE FROM movies` command at the top of the file so you can repeatedly execute the commands. Using the PostgreSQL documentation, figure how to delete all the rows of the `movies` table in one command.
+
+To seed the `movie_junkies_dev` database, run the following command from your shell.
+
+```shell
+psql movie_junkies_dev -f seed.sql
+```
+
+Iterate on your seed file until you can repeatedly run it without generating an error. Then, add SQL commands at the bottom of the file to do the following.
 
 - Return the `id`, `title`, and `score` of the single worst movie in the table.
 - Return the `id`, `title`, and `duration` of the "X-Men: Apocalypse" and "The Princess Bride" movies.
