@@ -829,12 +829,36 @@ The `UPDATE` SQL command used to change existing data in our database.
 For example, if we do not think Gigli was actually that bad, and we want to change the rating to a 2, we can use an update statement:
 
 ```sql
-UPDATE movies SET rating = 2 WHERE id = 'Gigli';
+UPDATE movies SET score = 9.1 WHERE id = 2;
 ```
 
 And you should see something like this.
 
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/214/Screen_Shot_2016-06-21_at_4.07.38_AM.png)
 
+```sql
+SELECT title, score FROM movies ORDER BY score DESC;
+```
+
+And you should see something like this.
+
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/215/Screen_Shot_2016-06-21_at_4.08.18_AM.png)
+
+```sql
+UPDATE movies SET score = 7.4 WHERE id = 2;
+```
+
+And you should see something like this.
+
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/216/Screen_Shot_2016-06-21_at_4.09.58_AM.png)
+
+```sql
+SELECT title, score FROM movies ORDER BY score DESC;
+```
+
+And you should see something like this.
+
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/210/Screen_Shot_2016-06-21_at_3.58.15_AM.png)
 
 Deleting works similarly to a select statement.
 
@@ -847,7 +871,7 @@ DELETE FROM movies WHERE title='Dude Wheres My Car';
 We could also chain together multiple conditions like so:
 
 ```sql
-DELETE FROM movies WHERE id < 9 AND rating = 2;
+DELETE FROM movies WHERE id = 9 AND rating = 2;
 ```
 
 See the following articles in the PostgreSQL documentation to learn more.
