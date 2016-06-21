@@ -17,7 +17,9 @@ Before jumping into promises, it is very important to understand the asynchronou
 
 Promises show up pretty much everywhere in JavaScript these days, including interviews.  Having total mastery over promises will allow you to write clean and beautiful, well-factored asynchronous code.
 
-These exercises predominantly use Monk to demonstrate promises because it's so lightweight / quick and easy.  But the exact same principles and techniques would apply if you were reading files, making API calls or making any other async calls that return promises.
+Promises serve as an alternative solution to asynchronous code. Often times, people find it difficult to write async code that is readable and clean looking using callbacks - instead people find themselves in what is known as callback hell. Where callbacks are nested in callbacks are nested in callbacks.
+
+Promises look to do away with callback hell, and instead present asynchronous code in an easy to read chainable form.
 
 Callback Example:
 
@@ -97,7 +99,7 @@ function getPromise(url){
 - [Promise Exercise](https://github.com/gSchool/promise-exercise)
 
 
-### Promises Resources
+#### Promises Resources
 
 - [MDN: Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 - [Lesson Slides](https://docs.google.com/presentation/d/1ehfrCZ9hpc601dkfXUz7TzrDpSOn_VHuKflOumTasVI/edit?usp=sharing)
@@ -113,13 +115,13 @@ function getPromise(url){
 - [Github: Express Error Handling w/ Promises](https://github.com/gSchool/error-handling-in-node-express-promises)
 
 
-### Vimeo Promise Videos
+#### Vimeo Promise Videos
 
 <iframe src="https://player.vimeo.com/video/136801594?byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 <iframe src="https://player.vimeo.com/video/136900546?byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
-### Event Loop
+#### Event Loop
 
 - [Vimeo: Event Loop Video](https://vimeo.com/134061121) - password is schoolhouserock
 - [MDN: Event Loop](https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop)
