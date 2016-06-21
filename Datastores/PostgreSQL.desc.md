@@ -848,7 +848,7 @@ Finally, add an `ALTER TABLE` command to bottom of the migration file that'll ad
 
 ## How do you use the PostgreSQL REPL to manage rows in a table?
 
-The `INSERT` SQL command creates new rows in a table. In insert a row into the `movies` table, run the following command.
+To insert a row into the `movies` table, run the following command.
 
 ```sql
 INSERT INTO movies (title, duration, rating, genre, is_3d, released_at, score) VALUES ('Frozen', 102, 'PG', 'Animation', TRUE, '2013-11-27 00:00:00 UTC', 7.6);
@@ -858,7 +858,9 @@ And you should see something like this.
 
 ![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/205/Screen_Shot_2016-06-21_at_3.48.34_AM.png)
 
-Although it wasn't specified, an integer value was given to the newly inserted row's `id` attribute because it's a `serial` column. Insert a few more rows into the `movies` table by running the following commands.
+**NOTE:** The entity was automatically given a unique value for its `id` attribute.
+
+Insert a few more rows into the `movies` table by running the following commands.
 
 ```sql
 INSERT INTO movies (title, duration, rating, genre, is_3d, released_at, score) VALUES ('X-Men: Apocalypse', 144, 'PG-13', 'Action', TRUE, '2016-05-27 00:00:00 UTC', 7.4);
@@ -870,9 +872,7 @@ And you should see something like this.
 
 ![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/206/Screen_Shot_2016-06-21_at_3.49.35_AM.png)
 
-Notice how long it took to insert these rows.
-
-A `SELECT` SQL command retrieves rows from a table. To select all the rows and columns from the `movies` table, run the following command.
+To select all the rows and columns from the `movies` table, run the following command.
 
 ```sql
 SELECT * FROM movies;
@@ -882,9 +882,7 @@ And you should see something like this.
 
 ![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/207/Screen_Shot_2016-06-21_at_3.51.26_AM.png)
 
-Notice how long it took to select these rows.
-
-Often a user only cares about a few columns. To select all the rows with just a few columns from the `movies` table, run the following command.
+To select all the rows with just a few columns from the `movies` table, run the following command.
 
 ```sql
 SELECT id, title FROM movies;
@@ -894,6 +892,8 @@ And you should see something like this.
 
 ![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/220/Screen_Shot_2016-06-21_at_4.22.50_AM.png)
 
+To select a subset of rows with just a few columns from the `movies` table, run the following command.
+
 ```sql
 SELECT id, title, rating FROM movies WHERE rating = 'PG';
 ```
@@ -901,6 +901,8 @@ SELECT id, title, rating FROM movies WHERE rating = 'PG';
 And you should see something like this.
 
 ![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/219/Screen_Shot_2016-06-21_at_4.21.55_AM.png)
+
+To select a subset of rows with just a few columns from the `movies` table, run the following command.
 
 ```sql
 SELECT id, title, is_3d FROM movies WHERE is_3d = 't';
@@ -910,7 +912,7 @@ And you should see something like this.
 
 ![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/218/Screen_Shot_2016-06-21_at_4.20.48_AM.png)
 
-Often a user only cares about a few rows. To select a few rows with just a few columns from the `movies` table, run the following command.
+To select a subset of rows with just a few columns from the `movies` table, run the following command.
 
 ```sql
 SELECT id, title, score FROM movies WHERE score > 8;
@@ -920,7 +922,7 @@ And you should see something like this.
 
 ![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/221/Screen_Shot_2016-06-21_at_4.23.30_AM.png)
 
-Often a user only cares about even fewer rows. To select even fewer rows with just a few columns from the `movies` table, run the following command.
+To select a subset of rows with just a few columns from the `movies` table, run the following command.
 
 ```sql
 SELECT id, title, score, rating FROM movies WHERE score > 8 AND rating = 'PG';
@@ -930,7 +932,7 @@ And you should see something like this.
 
 ![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/222/Screen_Shot_2016-06-21_at_4.24.46_AM.png)
 
-Often a user only cares about some rows _or_ some other rows. To select some rows _or_ some other rows with just a few columns from the movies table, run the following command.
+To select a subset of rows with just a few columns from the `movies` table, run the following command.
 
 ```sql
 SELECT title, genre FROM movies WHERE score > 8 OR rating = 'PG';
@@ -940,7 +942,7 @@ And you should see something like this.
 
 ![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/209/Screen_Shot_2016-06-21_at_3.55.47_AM.png)
 
-In addition to filtering rows, we can also let postgres sort out data for us. What if we wanted our movies returned in order from the best to the worst?
+To select all the rows in a specific order with just a few columns from the `movies` table, run the following command.
 
 ```sql
 SELECT title, score FROM movies ORDER BY score DESC;
@@ -950,7 +952,7 @@ And you should see something like this.
 
 ![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/210/Screen_Shot_2016-06-21_at_3.58.15_AM.png)
 
-The `DESC` keyword here tells postgres to sort these in descending order. If we wanted to instead have them sorted from worst to best, we could use ASC like this:
+To select all the rows in a specific order with just a few columns from the `movies` table, run the following command.
 
 ```sql
 SELECT title, score FROM movies ORDER BY score ASC;
@@ -960,9 +962,9 @@ And you should see something like this.
 
 ![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/211/Screen_Shot_2016-06-21_at_3.59.18_AM.png)
 
-**NOTE:** If no order by clause is specified, the database does not give any guarantees on what order your data will be returned in. At times it may seem like data you are getting back is in sorted order, but make sure not to rely on that in your code.
+**NOTE:** If an `ORER BY` clause is _not_ specified, there are no guarantees on the order of the resulting rows.
 
-What if we only want a few of the records? We can append a `LIMIT` condition onto the end of our query like so:
+To select one row in a specific order with just a few columns from the `movies` table, run the following command.
 
 ```sql
 SELECT title, score FROM movies ORDER BY score DESC LIMIT 1;
