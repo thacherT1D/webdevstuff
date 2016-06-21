@@ -833,7 +833,7 @@ To migrate the `movie_junkies_dev` database, run the following command from your
 psql movie_junkies_dev -f migration.sql
 ```
 
-Iterate on your migration file until you can repeatedly run it without generating an error. Then, add the necessary SQL commands to migrate an `awards` table with the following columns.
+Iterate on your migration file until you can repeatedly run it without generating an error. Then, add the necessary SQL commands to migrate an `awards` table as well. Create this table with the necessary columns to support the following entities.
 
 ```text
  id | movie_id | kind  |                                 name                                 |      received_at
