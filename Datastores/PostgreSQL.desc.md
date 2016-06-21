@@ -724,7 +724,7 @@ INSERT INTO movies (title, duration, rating, genre, is_3d, released_at, score) V
 
 And you should see something like this.
 
-![](https://i.imgur.com/lnOaIfg.png)
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/205/Screen_Shot_2016-06-21_at_3.48.34_AM.png)
 
 Although it wasn't specified, an integer value was given to the newly inserted row's `id` attribute because it's a `serial` column. Insert a few more rows into the `movies` table by running the following commands.
 
@@ -736,7 +736,7 @@ INSERT INTO movies (title, duration, rating, genre, is_3d, released_at, score) V
 
 And you should see something like this.
 
-![](https://i.imgur.com/jbIGAR3.png)
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/206/Screen_Shot_2016-06-21_at_3.49.35_AM.png)
 
 Notice how long it took to insert these rows.
 
