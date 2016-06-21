@@ -1197,12 +1197,15 @@ See the following articles in the PostgreSQL documentation to learn more.
 
 ### Exercises
 
-* Write a query on the movie table to return the worst movie of all time.  There should be only 1 result returned.  The result should include the title, description and rating of the movie.
-* Write a query that returns Gigli and Mad Max: Fury Road
-* Write a query that returns the id and title of the first 5 movies inserted into the database.
-* Write a query to get all of the average movies from the table.  Average is defined as a rating between 4 and 7 inclusive.
+Write an SQL command to do the following.
 
-You are a harsh critic and don't feel like any of these movies are worthy of a 10. Write an update query that downgrades all of the 10s in our database to 9s.
+- Return the `id`, `title`, and `score` of the single worst movie in the table.
+- Return the `id`, `title`, and `duration` of the "X-Men: Apocalypse" and "The Princess Bride" movies.
+- Return the `id`, `title`, and `released_at` all the movies ordered by from oldest to newest.
+- Return the `id`, `title`, `genre`, and `score` of all of the PG movies that scored about an 8.
+- Add a half a point to the `score` of all Crime movies.
+- Subtract 2 points from the `score` of all the 3-D movies.
+- Delete all movies that have the word 'en' in their `title`.
 
 ## Assignment
 
