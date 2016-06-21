@@ -612,7 +612,7 @@ CREATE TABLE movies (
 );
 ```
 
-**NOTE:** All SQL commands, like the one above, can be written on a single line.
+**NOTE:** All SQL commands, like the one above, can be written on a single line. However, it can be useful to split up longer commands onto multiple lines.
 
 And you should see something like this.
 
