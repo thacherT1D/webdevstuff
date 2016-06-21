@@ -236,7 +236,7 @@ And you should see something like this.
 
 ![](https://i.imgur.com/Ypfh2EV.png)
 
-Believe it or not, but there's a ton more you can do to manage tables. See the following articles to learn more about data types you practiced in this section.
+Believe it or not, but there's a ton more you can do to manage tables. See the following articles to learn more about data types in PostgreSQL.
 
 - [PostgreSQL Documentation - Arbitrary Precision Numbers](https://www.postgresql.org/docs/current/static/datatype-numeric.html#DATATYPE-NUMERIC-DECIMAL)
 - [PostgreSQL Documentation - Character Types](https://www.postgresql.org/docs/current/static/datatype-character.html)
@@ -244,7 +244,12 @@ Believe it or not, but there's a ton more you can do to manage tables. See the f
 - [PostgreSQL Documentation - Integer Types](https://www.postgresql.org/docs/current/static/datatype-numeric.html#DATATYPE-INT)
 - [PostgreSQL Documentation - Serial Types](https://www.postgresql.org/docs/current/static/datatype-numeric.html#DATATYPE-SERIAL)
 
-And see the following articles to learn more about the SQL commands you practiced in this section.
+See the following articles to learn more about column modifiers in PostgreSQL.
+
+- [PostgreSQL Documentation - Not-Null Constraints](https://www.postgresql.org/docs/current/static/ddl-constraints.html#AEN2531)
+- [PostgreSQL Documentation - Default Values](https://www.postgresql.org/docs/current/static/ddl-default.html)
+
+And see the following articles to learn more about the SQL commands you practiced in PostgreSQL.
 
 - [PostgreSQL Documentation - `CREATE TABLE`](https://www.postgresql.org/docs/current/static/sql-createtable.html)
 - [PostgreSQL Documentation - `ALTER TABLE`](https://www.postgresql.org/docs/current/static/sql-altertable.html)
