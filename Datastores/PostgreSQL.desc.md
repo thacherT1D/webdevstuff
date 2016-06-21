@@ -601,7 +601,7 @@ To create a `movies` table in the current connected database, run the following 
 
 ```sql
 CREATE TABLE movies (
-  id serial PRIMARY KEY,
+  id serial,
   title text,
   duration integer,
   rating varchar(10),
@@ -616,7 +616,7 @@ CREATE TABLE movies (
 
 And you should see something like this.
 
-![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/203/Screen_Shot_2016-06-21_at_3.44.16_AM.png)
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/223/Screen_Shot_2016-06-21_at_5.41.07_AM.png)
 
 The above `CREATE TABLE` command is an example a multi-line SQL command. Notice how the yellow equals sign `=` of the prompt changed to a yellow open parenthesis sign `(`. This is a clue that the PostgreSQL REPL was waiting for the SQL command to provide a matching close parenthesis `)`.
 
@@ -638,7 +638,7 @@ To verify the table was created with the correct columns, run the following comm
 
 And you should see something like this.
 
-![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/204/Screen_Shot_2016-06-21_at_3.46.48_AM.png)
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/224/Screen_Shot_2016-06-21_at_5.41.22_AM.png)
 
 As you can see, the `movies` table contains a handful of columns. In a relational database system, all values in the same column must be the same data type. In other words, a PostgreSQL server won't store an entity with a `boolean` value in a `text` column of a table. This strictness is one of the reasons why a relational database system, like PostgreSQL, can remain performant while managing a massive collection of information.
 
@@ -668,9 +668,7 @@ And you should see something like this.
 
 When an entity without an `id` value is inserted into the `movies` table, the entity is given the next value of the sequence generator for its `id` column. When an entity is deleted from the table, its integer value of the `id` column is not reused. Therefore, each entity in the table is guaranteed to have a unique `id` attribute for all time. Almost every table you create will have an `id serial` column.
 
-A `serial` column also applies a `NOT NULL` constraint. This constraint ensures that a `NULL` value cannot be inserted into the column. This is a requirement of a `PRIMARY KEY` constraint. This constraint indicates that the column can be used as a unique identifier for rows in the table. The `PRIMARY KEY` constraint requires that the values in the column be both unique and `NOT NULL`. With a sequence generator, that's constraint won't be a problem.
-
-A column with a `PRIMARY KEY` constraint is given an index. An **index** is used to enhance PostgreSQL server's performance when retrieving information from the table. We'll talk more about indexes later in the week.
+A `serial` column also applies a `NOT NULL` constraint. This constraint ensures that a `NULL` value cannot be inserted into the column.
 
 ```sql
 ALTER TABLE movies ADD COLUMN plot text;
