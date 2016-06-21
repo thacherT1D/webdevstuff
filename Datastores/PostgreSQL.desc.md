@@ -844,7 +844,7 @@ Iterate on your migration file until you can repeatedly run it without generatin
 
 For each column, choose what you think is the most appropriate data type. When you're finished, migrate the database and use `\dt` REPL command to verify that the table was created correctly.
 
-Next, use the `ALTER TABLE` SQL command to add a `did_win` column to the `awards` table. This column will be used to track whether or not the movie won the award. Again, choose what you think is the most appropriate data type. When you're finished, migrate the database and use `\dt` REPL command to verify that the table was created correctly.
+Finally, add an `ALTER TABLE` command to bottom of the migration file that'll add a `did_win` column to the `awards` table. This column will be used to track whether or not the movie won the award. Again, choose what you think is the most appropriate data type for this column. When you're finished, migrate the database and use `\dt` REPL command to verify that the table was created correctly.
 
 ## How do you use the PostgreSQL REPL to manage rows in a table?
 
