@@ -646,7 +646,7 @@ Here's an overview of the most common data types in PostgreSQL.
 
 | Name                                 | Storage Size | Description                               | Range                          |
 |--------------------------------------|--------------|-------------------------------------------|--------------------------------|
-| `boolean`                            | 1 byte       | true or false                             | N/A                            |
+| `boolean`                            | 1 byte       | true or false                             | `t` or `f`                     |
 | `integer`	                           | 4 bytes      | Typical choice for integer                | `-2147483648` to `+2147483647` |
 | `numeric(precision, scale)`	         | variable     | Typical choice for decimal                | Precise	up to 131,072 digits before the decimal point and up to 16,383 digits after the decimal point |
 | `timestamp with time zone`           | 8 bytes      | Both date and time with time zone         | 4713 BC to 294276 AD           |
