@@ -19,19 +19,57 @@ Promises show up pretty much everywhere in JavaScript these days, including inte
 
 These exercises predominantly use Monk to demonstrate promises because it's so lightweight / quick and easy.  But the exact same principles and techniques would apply if you were reading files, making API calls or making any other async calls that return promises.
 
-Example:
+Callback Example:
 
 ```javascript
+getCallback('http://pokeapi.co/api/v2/pokemon/1/', function(err, data){
+  if(err){
+    console.error('Could not make GET request, an error has occurred', err);
+  } else {
+    getCallback(data.abilities[0].ability.url, function(err, data){
+      if(err){
+        console.error('Could not make GET request, an error has occurred', err);
+      } else {
+        console.log(data);
+      }
+    });
+  }
+});
 
-get('http://pokeapi.co/api/v2/pokemon/1/')
+function getCallback(url, callback){
+
+  var xhr = new XMLHttpRequest();
+
+  xhr.open('GET', url);
+
+  xhr.onload = function(){
+    callback(null, JSON.parse(xhr.response));
+  };
+
+  xhr.onerror = function(){
+    callback('Something terrible has happened', null);
+  };
+
+  xhr.send();
+}
+```
+
+
+Promise Example:
+
+```javascript
+getPromise('http://pokeapi.co/api/v2/pokemon/1/')
   .then(function(data){
-    return get(data.abilities[0].ability.url);
+    return getPromise(data.abilities[0].ability.url);
+  })
+  .then(function(data){
+    console.log(data);
   })
   .catch(function(error){
-    console.error('Could not make GET request, an error has occurred,' error);
-  })
+    console.error('Could not make GET request, an error has occurred',  error);
+  });
 
-function get(url){
+function getPromise(url){
 
   return new Promise(function(resolve, reject){
 
@@ -39,8 +77,13 @@ function get(url){
 
     xhr.open('GET', url);
 
-    xhr.onload = resolve;
-    xhr.onerror = reject;
+    xhr.onload = function(){
+      resolve(JSON.parse(xhr.response));
+    };
+
+    xhr.onerror = function(){
+      reject('Something terrible has happened');
+    };
 
     xhr.send();
   });
