@@ -1130,25 +1130,25 @@ And you should see something like this.
 ![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/214/Screen_Shot_2016-06-21_at_4.07.38_AM.png)
 
 ```sql
-SELECT id, title, score FROM movies ORDER BY score DESC;
+SELECT id, title, rating, score FROM movies ORDER BY score DESC;
 ```
 
 And you should see something like this.
 
-![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/257/Screen_Shot_2016-06-21_at_9.39.39_AM.png)
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/259/Screen_Shot_2016-06-21_at_1.34.49_PM.png)
 
 To update a column for a single row in the `movies` table, run the following command.
 
 ```sql
-UPDATE movies SET score = score + 0.3 WHERE genre = 'R';
+UPDATE movies SET score = score + 0.3 WHERE rating = 'R';
 ```
 
 And you should see something like this.
 
-![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/214/Screen_Shot_2016-06-21_at_4.07.38_AM.png)
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/258/Screen_Shot_2016-06-21_at_9.39.39_AM.png)
 
 ```sql
-SELECT id, title, score FROM movies ORDER BY score DESC;
+SELECT id, title, rating, score FROM movies ORDER BY score DESC;
 ```
 
 And you should see something like this.
