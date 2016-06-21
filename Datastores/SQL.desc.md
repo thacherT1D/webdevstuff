@@ -648,7 +648,7 @@ Iterate on your seed file until you can repeatedly run it without generating an 
 - Return the `id`, `title`, and `score` of the single worst movie in the table.
 - Return the `id`, `title`, and `duration` of the "X-Men: Apocalypse" and "The Princess Bride" movies.
 - Return the `id`, `title`, and `released_at` all the movies ordered by from oldest to newest.
-- Return the `id`, `title`, `genre`, and `score` of all of the PG movies that scored about an 8.
+- Return the `id`, `title`, `genre`, and `score` of all of the PG movies that scored between 7.5 and 8.5
 - Add a half a point to the `score` of all Crime movies.
 - Subtract 2 points from the `score` of all the 3-D movies.
 - Delete all movies that have the word 'en' in their `title`.
