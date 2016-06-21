@@ -1179,10 +1179,10 @@ DELETE FROM movies WHERE id = 1;
 
 And you should see something like this.
 
-![]()
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/268/Screen_Shot_2016-06-21_at_3.16.55_PM.png)
 
 ```sql
-SELECT id, title, score FROM movies ORDER BY score DESC;
+SELECT id, title, rating, score FROM movies ORDER BY score DESC;
 ```
 
 And you should see something like this.
@@ -1198,7 +1198,7 @@ And you should see something like this.
 ![]()
 
 ```sql
-SELECT id, title, score FROM movies ORDER BY score DESC;
+SELECT id, title, rating, score FROM movies ORDER BY score DESC;
 ```
 
 And you should see something like this.
