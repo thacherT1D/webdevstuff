@@ -19,6 +19,34 @@ Promises show up pretty much everywhere in JavaScript these days, including inte
 
 These exercises predominantly use Monk to demonstrate promises because it's so lightweight / quick and easy.  But the exact same principles and techniques would apply if you were reading files, making API calls or making any other async calls that return promises.
 
+Example:
+
+```javascript
+
+get('http://pokeapi.co/api/v2/pokemon/1/')
+  .then(function(data){
+    return get(data.abilities[0].ability.url);
+  })
+  .catch(function(error){
+    console.error('Could not make GET request, an error has occurred,' error);
+  })
+
+function get(url){
+
+  return new Promise(function(resolve, reject){
+
+    var xhr = new XMLHttpRequest();
+
+    xhr.open('GET', url);
+
+    xhr.onload = resolve;
+    xhr.onerror = reject;
+
+    xhr.send();
+  });
+}
+```
+
 
 ## Exercise
 
