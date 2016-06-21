@@ -1146,26 +1146,46 @@ And you should see something like this.
 ![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/216/Screen_Shot_2016-06-21_at_4.09.58_AM.png)
 
 ```sql
-SELECT title, score FROM movies ORDER BY score DESC;
+SELECT id, title, score FROM movies ORDER BY score DESC;
 ```
 
 And you should see something like this.
 
 ![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/210/Screen_Shot_2016-06-21_at_3.58.15_AM.png)
 
-Deleting works similarly to a select statement.
-
-The statement below deletes the Dude Wheres My Car row from the database:
+To delete a row in the `movies table`, run the following command.
 
 ```sql
-DELETE FROM movies WHERE id = 'Dude Wheres My Car';
+DELETE FROM movies WHERE id = 1;
 ```
 
-We could also chain together multiple conditions like so:
+And you should see something like this.
+
+![]()
 
 ```sql
-DELETE FROM movies WHERE id = 9 AND rating = 2;
+SELECT id, title, score FROM movies ORDER BY score DESC;
 ```
+
+And you should see something like this.
+
+![]()
+
+```sql
+DELETE FROM movies WHERE score < 8;
+```
+
+And you should see something like this.
+
+![]()
+
+```sql
+SELECT id, title, score FROM movies ORDER BY score DESC;
+```
+
+And you should see something like this.
+
+![]()
 
 See the following articles in the PostgreSQL documentation to learn more.
 
