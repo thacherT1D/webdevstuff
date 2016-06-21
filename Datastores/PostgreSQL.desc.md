@@ -935,44 +935,44 @@ And you should see something like this.
 To select a subset of rows with just a few columns from the `movies` table, run the following command.
 
 ```sql
-SELECT title, genre FROM movies WHERE score > 8 OR rating = 'PG';
+SELECT id, title, score, rating FROM movies WHERE score > 8 OR rating = 'PG';
 ```
 
 And you should see something like this.
 
-![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/209/Screen_Shot_2016-06-21_at_3.55.47_AM.png)
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/237/Screen_Shot_2016-06-21_at_8.43.26_AM.png)
 
 To select all the rows in a specific order with just a few columns from the `movies` table, run the following command.
 
 ```sql
-SELECT title, score FROM movies ORDER BY score DESC;
+SELECT id, title, score FROM movies ORDER BY score DESC;
 ```
 
 And you should see something like this.
 
-![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/210/Screen_Shot_2016-06-21_at_3.58.15_AM.png)
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/238/Screen_Shot_2016-06-21_at_8.44.17_AM.png)
 
 To select all the rows in a specific order with just a few columns from the `movies` table, run the following command.
 
 ```sql
-SELECT title, score FROM movies ORDER BY score ASC;
+SELECT id, title, score FROM movies ORDER BY score ASC;
 ```
 
 And you should see something like this.
 
-![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/211/Screen_Shot_2016-06-21_at_3.59.18_AM.png)
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/239/Screen_Shot_2016-06-21_at_8.45.06_AM.png)
 
-**NOTE:** If an `ORER BY` clause is _not_ specified, there are no guarantees on the order of the resulting rows.
+**NOTE:** If an `ORDER BY` clause is _not_ specified, there are no guarantees on the order of the resulting rows.
 
 To select one row in a specific order with just a few columns from the `movies` table, run the following command.
 
 ```sql
-SELECT title, score FROM movies ORDER BY score DESC LIMIT 1;
+SELECT id, title, score FROM movies ORDER BY score DESC LIMIT 1;
 ```
 
 And you should see something like this.
 
-![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/212/Screen_Shot_2016-06-21_at_4.00.42_AM.png)
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/240/Screen_Shot_2016-06-21_at_8.45.42_AM.png)
 
 The `UPDATE` SQL command used to change existing data in our database.
 
