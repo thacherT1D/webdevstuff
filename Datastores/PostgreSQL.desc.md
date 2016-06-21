@@ -736,6 +736,26 @@ And you should see something like this.
 
 ![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/230/Screen_Shot_2016-06-21_at_6.22.39_AM.png)
 
+To set a `NOT NULL` constraint on a column in the `movies` table, run the following command.
+
+```sql
+ALTER TABLE movies ALTER COLUMN summary SET NOT NULL;
+```
+
+And you should see something like this.
+
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/235/Screen_Shot_2016-06-21_at_6.55.23_AM.png)
+
+To verify the constraint was set correctly, run the following command.
+
+```text
+\d movies
+```
+
+And you should see something like this.
+
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/236/Screen_Shot_2016-06-21_at_6.56.30_AM.png)
+
 To drop a column in the `movies` table, run the following command.
 
 ```sql
