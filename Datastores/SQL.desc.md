@@ -659,17 +659,8 @@ Iterate on your seed file until you can repeatedly run it without generating an 
 
 ## Resources
 
-- [Homebrew Services](https://github.com/Homebrew/homebrew-services)
-- [PostgreSQL Documentation](https://www.postgresql.org/docs/current/static/)
+- [PostgreSQL Documentation - Home](https://www.postgresql.org/docs/current/static/)
 - [PostgreSQL Documentation - Querying a Table](https://www.postgresql.org/docs/current/static/tutorial-select.html)
 - [SQL Tutorial - Home](http://www.sqltutorial.org/)
 - [SQL Tutorial - SQL Cheatsheet](http://www.sqltutorial.org/wp-content/uploads/2016/04/sqlcheatsheet.pdf)
 - [W3Schools - SQL Tutorial](http://www.w3schools.com/sql/default.asp)
-
-## Videos
-
-### Relational Databases
-
-<iframe src="https://player.vimeo.com/video/142036155" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-
-[relational-arch]: https://upload.wikimedia.org/wikipedia/commons/5/57/RDBMS_structure.png
