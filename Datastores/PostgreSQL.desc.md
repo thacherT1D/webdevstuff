@@ -905,6 +905,16 @@ And you should see something like this.
 To select a subset of rows with just a few columns from the `movies` table, run the following command.
 
 ```sql
+SELECT id, title, rating FROM movies WHERE rating <> 'PG';
+```
+
+And you should see something like this.
+
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/246/Screen_Shot_2016-06-21_at_8.59.12_AM.png)
+
+To select a subset of rows with just a few columns from the `movies` table, run the following command.
+
+```sql
 SELECT id, title, is_3d FROM movies WHERE is_3d = 't';
 ```
 
@@ -941,6 +951,48 @@ SELECT id, title, score, rating FROM movies WHERE score > 8 OR rating = 'PG';
 And you should see something like this.
 
 ![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/237/Screen_Shot_2016-06-21_at_8.43.26_AM.png)
+
+To select a subset of rows with just a few columns from the `movies` table, run the following command.
+
+```sql
+SELECT id, title, genre FROM movies WHERE genre LIKE 'A%';
+```
+
+And you should see something like this.
+
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/242/Screen_Shot_2016-06-21_at_8.54.19_AM.png)
+
+To select a subset of rows with just a few columns from the `movies` table, run the following command.
+
+```sql
+SELECT id, title, genre FROM movies WHERE genre LIKE '%e';
+```
+
+And you should see something like this.
+
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/243/Screen_Shot_2016-06-21_at_8.55.13_AM.png)
+
+To select a subset of rows with just a few columns from the `movies` table, run the following command.
+
+```sql
+SELECT id, title, genre FROM movies WHERE genre LIKE '%i%';
+```
+
+And you should see something like this.
+
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/244/Screen_Shot_2016-06-21_at_8.56.54_AM.png)
+
+To select a subset of rows with just a few columns from the `movies` table, run the following command.
+
+```sql
+SELECT id, title, genre FROM movies WHERE genre NOT LIKE '%i%';
+```
+
+And you should see something like this.
+
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/245/Screen_Shot_2016-06-21_at_8.58.12_AM.png)
+
+**NOTE:** `ILIKE` and `NOT ILIKE` for case-insensitive searches.
 
 To select all the rows in a specific order with just a few columns from the `movies` table, run the following command.
 
@@ -985,7 +1037,7 @@ And you should see something like this.
 ![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/214/Screen_Shot_2016-06-21_at_4.07.38_AM.png)
 
 ```sql
-SELECT title, score FROM movies ORDER BY score DESC;
+SELECT id, title, score FROM movies ORDER BY score DESC;
 ```
 
 And you should see something like this.
