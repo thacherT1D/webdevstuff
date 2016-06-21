@@ -986,7 +986,16 @@ And you should see something like this.
 
 ![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/237/Screen_Shot_2016-06-21_at_8.43.26_AM.png)
 
+
+```SQL
+SELECT id, title, genre FROM movies WHERE genre IN ('Animation', 'Crime');
+```
+
 To select a subset of rows with just a few columns from the `movies` table, run the following command.
+
+And you should see something like this.
+
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/251/Screen_Shot_2016-06-21_at_9.31.44_AM.png)
 
 ```sql
 SELECT id, title, genre FROM movies WHERE genre LIKE 'A%';
@@ -1059,6 +1068,46 @@ SELECT id, title, score FROM movies ORDER BY score DESC LIMIT 1;
 And you should see something like this.
 
 ![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/241/Screen_Shot_2016-06-21_at_8.47.09_AM.png)
+
+To select the number of rows in the `movies` table, run the following command.
+
+```sql
+SELECT COUNT(*) FROM movies;
+```
+
+And you should see something like this.
+
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/252/Screen_Shot_2016-06-21_at_9.36.29_AM.png)
+
+To select the maximum column in the `movies` table, run the following command.
+
+```sql
+SELECT MAX(duration) FROM movies;
+```
+
+And you should see something like this.
+
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/253/Screen_Shot_2016-06-21_at_9.37.11_AM.png)
+
+To select the minimum column in the `movies` table, run the following command.
+
+```sql
+SELECT MIN(duration) FROM movies;
+```
+
+And you should see something like this.
+
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/254/Screen_Shot_2016-06-21_at_9.37.44_AM.png)
+
+To select the average column in the `movies` table, run the following command.
+
+```sql
+SELECT AVG(duration) FROM movies;
+```
+
+And you should see something like this.
+
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/255/Screen_Shot_2016-06-21_at_9.38.16_AM.png)
 
 To update a column for a single row in the `movies` table, run the following command.
 
