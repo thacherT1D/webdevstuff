@@ -612,6 +612,8 @@ CREATE TABLE movies (
 );
 ```
 
+**NOTE:** All SQL commands, like the one above, can be written on a single line.
+
 And you should see something like this.
 
 ![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/203/Screen_Shot_2016-06-21_at_3.44.16_AM.png)
