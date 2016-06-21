@@ -670,7 +670,7 @@ And you should see something like this.
 
 ![](https://i.imgur.com/MYG7YWb.png)
 
-When an entity without an `id` value is inserted into the `movies` table, the column's sequence generator is triggered and the inserted entity is given the next value for its `id` value. When an entity is deleted from the table, its `id` value is not reused. Therefore, each entity in the table is guaranteed to have a unique identifier forever. Almost every table you create will have an `id serial` column.
+When an entity without an `id` value is inserted into the `movies` table, the column's sequence generator is triggered and the next value is given to the inserted entity's `id` attribute. If the entity is eventually deleted from the table, its `id` value is not reused. Therefore, each entity in the table is guaranteed to have a unique identifier forever. Almost every table you create will have an `id serial` column.
 
 The `serial` type also applies a `NOT NULL` constraint to the column. Like JavaScript, the `NULL` value represents the absence of data. Unless a column is given a `NOT NULL` constraint, the `NULL` value is an acceptable value for any column no matter the data type. While a `serial` column is automatically given a `NOT NULL` constraint, it's wise to manually apply the constraint to `boolean` columns as well. For example, the `NOT NULL` constraint was applied to the `is_3d` column in the `movies` table.
 
