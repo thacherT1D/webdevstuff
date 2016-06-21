@@ -1215,7 +1215,7 @@ See the following articles in the PostgreSQL documentation to learn more.
 
 ### Exercises
 
-A **seed** file contains SQL commands that are used to recreate the rows in a table on demand. In a `seed.sql` file, type out the four `INSERT TO movies` SQL commands from above. Then, add a `DELETE FROM movies` command at the top of the file so you can repeatedly execute the commands. Using the PostgreSQL documentation, figure how to delete all the rows of the `movies` table in one command.
+A **seed** file contains SQL commands that are used to recreate the rows in a table on demand. In a `seed.sql` file, type out the four `INSERT INTO movies` SQL commands from above. Then, add a `DELETE FROM movies` command at the top of the file so you can repeatedly execute the commands. Using the PostgreSQL documentation, figure how to delete all the rows of the `movies` table in one command.
 
 To seed the `movie_junkies_dev` database, run the following command from your shell.
 
