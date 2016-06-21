@@ -1156,7 +1156,7 @@ And you should see something like this.
 ![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/215/Screen_Shot_2016-06-21_at_4.08.18_AM.png)
 
 ```sql
-UPDATE movies SET score = 7.4 WHERE id = 2;
+UPDATE movies SET score = score - 1.2 WHERE rating = 'PG';
 ```
 
 And you should see something like this.
@@ -1190,7 +1190,7 @@ And you should see something like this.
 ![]()
 
 ```sql
-DELETE FROM movies WHERE score < 8;
+DELETE FROM movies WHERE score > 9;
 ```
 
 And you should see something like this.
