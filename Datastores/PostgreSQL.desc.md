@@ -687,7 +687,11 @@ ALTER TABLE movies DROP COLUMN summary;
 ```
 
 ```sql
-DROP TABLE movies;
+ALTER TABLE movies RENAME TO films;
+```
+
+```sql
+DROP TABLE films;
 ```
 
 See the following articles in the PostgreSQL documentation to learn more.
@@ -699,7 +703,7 @@ See the following articles in the PostgreSQL documentation to learn more.
 
 ### Exercise
 
-Write a `CREATE TABLE` SQL command that'll create an `awards` table for the following entities.
+Execute the `CREATE TABLE movies` SQL command from above. Then, write a `CREATE TABLE` SQL command that'll create an `awards` table for the following entities.
 
 ```text
  id | movie_id | kind  |                                 name                                 |      received_at
