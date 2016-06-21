@@ -176,7 +176,7 @@ In this course, we'll only be focusing on the data definition and data manipulat
 
 ```sql
 CREATE TABLE movies (
-  id serial PRIMARY KEY,
+  id serial,
   title text,
   duration integer,
   rating varchar(10),
