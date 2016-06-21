@@ -1190,7 +1190,7 @@ And you should see something like this.
 See the following articles in the PostgreSQL documentation to learn more.
 
 - [PostgreSQL documentation - `INSERT`](https://www.postgresql.org/docs/current/static/sql-insert.html)
-- [PostgreSQL documentation - `SELECT`](https://www.postgresql.org/docs/current/static/sql-select.html).
+- [PostgreSQL documentation - `SELECT`](https://www.postgresql.org/docs/current/static/sql-select.html)
 - [PostgreSQL documentation - `UPDATE`](https://www.postgresql.org/docs/current/static/sql-update.html)
 - [PostgreSQL documentation - `DELETE`](https://www.postgresql.org/docs/current/static/sql-delete.html)
 - [PostgreSQL documentation - Comparison Operators](https://www.postgresql.org/docs/9.1/static/functions-comparison.html)
