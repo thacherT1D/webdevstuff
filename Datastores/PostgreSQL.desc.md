@@ -780,7 +780,7 @@ SELECT title, genre FROM movies WHERE score > 8 AND rating = 'PG';
 
 And you should see someting like this.
 
-![](https://i.imgur.com/P8EsB9W.png)
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/208/Screen_Shot_2016-06-21_at_3.52.26_AM.png)
 
 SQL also supports an OR statement. The following query will return any movie with a rating greater than 4, or any movies with the title Gigli. In other words, every record that matches _one_ of the criteria will be returned.
 
