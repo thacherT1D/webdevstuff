@@ -36,7 +36,7 @@ const movie = {
   id: 1,
   title: 'Frozen',
   duration: 102,
-  rated: 'PG',
+  rating: 'PG',
   genre: 'Animation',
   is3D: true,
   releasedAt: new Date('2013-11-27 00:00:00 UTC'),
@@ -54,9 +54,9 @@ Take a minute to write down how you'd explain the difference between data and in
 
 In the above example, the `movie` object is called an entity. An **entity** is an object that represents a person, place, or thing. As you can see from the table below, this `movie` entity has a handful of attributes. An **attribute** is a piece of information that describes an entity.
 
-| `id` | `title`    | `duration` | `rated` | `genre`       | `is_3d`     | `released_at`                         | `score` |
-|------|------------|------------|---------|---------------|-------------|---------------------------------------|---------|
-| `1`  | `'Frozen'` | `102`      | `'PG'`  | `'Animation'` | `true`      | `new Date('2013-11-27 00:00:00 UTC')` | `7.6`   |
+| `id` | `title`    | `duration` | `rating` | `genre`       | `is_3d`     | `released_at`                         | `score` |
+|------|------------|------------|----------|---------------|-------------|---------------------------------------|---------|
+| `1`  | `'Frozen'` | `102`      | `'PG'`   | `'Animation'` | `true`      | `new Date('2013-11-27 00:00:00 UTC')` | `7.6`   |
 
 **NOTE:** In table form, attribute names are often displayed in snakecase because unquoted identifiers like `releasted_at` are case insensitive in PostgreSQL.
 
@@ -71,7 +71,7 @@ Using this information, create a JavaScript object that represents one instance 
 Imagine you're building a web application for movie fanatics called Movie Junkies. The product development team has determined that a true movie fanatic must be able to create a `movie` entity using the web app. After all, a user can't retrieve information that doesn't exist. Therefore, your first job will be to build a server-side web application that can handle the following RESTful HTTP request.
 
 ```shell
-http POST moviejunkies.com/movies title=Frozen duration=102 rated=PG genre=Animation is3D=true releasedAt='2013-11-27 00:00:00 UTC' score=7.6
+http POST moviejunkies.com/movies title=Frozen duration=102 rating=PG genre=Animation is3D=true releasedAt='2013-11-27 00:00:00 UTC' score=7.6
 ```
 
 Additionally, the product development team has determined that a true movie fanatic must also be able to read a `movie` entity using the web app. After all, a user can't create information and never look at it again. Therefore, your second job will be to augment the same server-side web application with the ability to handle the following RESTful HTTP request as well.
@@ -103,12 +103,12 @@ Once you've finished, turn to a neighbor and explain how information flows throw
 A **relational database system**, or relational database management system (RDBMS), is a database system that's based on the relational model. The **relational model** is an approach to managing information in a table structure (i.e. relation), where an entity is represented as a row and its attributes are represented as columns. For example, here's a `movies` table that contains some movie entities.
 
 ```text
- id |       title        | duration | rated |   genre   | is_3d |      released_at       | score
-----+--------------------+----------+-------+-----------+-------+------------------------+-------
-  1 | Frozen             |      102 | PG    | Animation | t     | 2013-11-26 16:00:00-08 |   7.6
-  2 | X-Men: Apocalypse  |      144 | PG-13 | Action    | t     | 2016-05-26 16:00:00-08 |   7.4
-  3 | The Princess Bride |       98 | PG    | Adventure | f     | 1987-10-08 16:00:00-08 |   8.1
-  4 | Pulp Fiction       |      154 | R     | Crime     | f     | 1994-10-13 16:00:00-08 |   8.9
+ id |       title        | duration | rating |   genre   | is_3d |      released_at       | score
+----+--------------------+----------+--------+-----------+-------+------------------------+-------
+  1 | Frozen             |      102 | PG     | Animation | t     | 2013-11-26 16:00:00-08 |   7.6
+  2 | X-Men: Apocalypse  |      144 | PG-13  | Action    | t     | 2016-05-26 16:00:00-08 |   7.4
+  3 | The Princess Bride |       98 | PG     | Adventure | f     | 1987-10-08 16:00:00-08 |   8.1
+  4 | Pulp Fiction       |      154 | R      | Crime     | f     | 1994-10-13 16:00:00-08 |   8.9
 ```
 
 In a relational database system, all values in the same column must be the same data type. For example, here are the data types of the columns for the above `movies` table.
@@ -118,7 +118,7 @@ In a relational database system, all values in the same column must be the same 
 | `id`          | `integer`     | `Number`        |
 | `title`       | `text`        | `String`        |
 | `duration`    | `integer`     | `Number`        |
-| `rated`       | `varchar`     | `String`        |
+| `rating`      | `varchar`     | `String`        |
 | `genre`       | `text`        | `String`        |
 | `is_3d`       | `boolean`     | `Boolean`       |
 | `released_at` | `timestamp`   | `Date`          |
@@ -133,10 +133,10 @@ In your own words, write down what a relational database system means to you. Af
 Using the Movie Junkies example from earlier, imagine the product development team has determined that a true movie fanatic wants to know about every award a `movie` entity has received. Specifically, users want to know the award's kind, name, when the movie received it. One way to solve this is to add more columns to the `movies` table. Here's an example what that might look like.
 
 ```text
- id | title  | duration | rated |   genre   | is_3d |      released_at       | score | award_kind |                              award_name                              |   award_received_at
-----+--------+----------+-------+-----------+-------+------------------------+-------+------------+----------------------------------------------------------------------+------------------------
-  1 | Frozen |      102 | PG    | Animation | t     | 2013-11-26 16:00:00-08 |   7.6 | Oscar      | Best Animated Feature Film of the Year                               | 2014-03-01 16:00:00-08
-  2 | Frozen |      102 | PG    | Animation | t     | 2013-11-26 16:00:00-08 |   7.6 | Oscar      | Best Achievement in Music Written for Motion Pictures, Original Song | 2014-03-01 16:00:00-08
+ id | title  | duration | rating |   genre   | is_3d |      released_at       | score | award_kind |                              award_name                              |   award_received_at
+----+--------+----------+--------+-----------+-------+------------------------+-------+------------+----------------------------------------------------------------------+------------------------
+  1 | Frozen |      102 | PG     | Animation | t     | 2013-11-26 16:00:00-08 |   7.6 | Oscar      | Best Animated Feature Film of the Year                               | 2014-03-01 16:00:00-08
+  2 | Frozen |      102 | PG     | Animation | t     | 2013-11-26 16:00:00-08 |   7.6 | Oscar      | Best Achievement in Music Written for Motion Pictures, Original Song | 2014-03-01 16:00:00-08
 ```
 
 While this certainly solves the problem, another one is created. There's duplicate information in the form of multiple rows. And wherever there's duplicate information, there's the possibility for inconsistencies to arise. For example, imagine the Frozen movie is recategorized as a `'Comedy'`. Given the current structure, that would require changing information inside of multiple rows.
@@ -153,9 +153,9 @@ With a relational database system, a better way to track a movie's awards is wit
 Now, a change to a movie's genre only requires a change to one record.
 
 ```text
- id | title  | duration | rated |   genre   | is_3d |      released_at       | score
-----+--------+----------+-------+-----------+-------+------------------------+-------
-  1 | Frozen |      102 | PG    | Comedy    | t     | 2013-11-26 16:00:00-08 |   7.6
+ id | title  | duration | rating |   genre   | is_3d |      released_at       | score
+----+--------+----------+--------+-----------+-------+------------------------+-------
+  1 | Frozen |      102 | PG     | Comedy    | t     | 2013-11-26 16:00:00-08 |   7.6
 ```
 
 Since the 1970s, relational database systems have been used to manage all kinds of information—financial, manufacturing, logistical, personal, government, communication, public, private, and so on. By structuring information into tables with rows and columns, computers can quickly and efficiently store and retrieve insanely large amounts data.
@@ -179,7 +179,7 @@ CREATE TABLE movies (
   id serial PRIMARY KEY,
   title text,
   duration integer,
-  rated varchar(10),
+  rating varchar(10),
   genre text,
   is_3d boolean NOT NULL,
   released_at timestamp with time zone,
@@ -192,10 +192,10 @@ CREATE TABLE movies (
 And here are a few examples of data manipulation commands in SQL.
 
 ```sql
-INSERT INTO movies (title, duration, rated, genre, is_3d, released_at, score) VALUES ('Frozen', 102, 'PG', 'Animation', TRUE, '2013-11-27 00:00:00 UTC', 7.6);
-INSERT INTO movies (title, duration, rated, genre, is_3d, released_at, score) VALUES ('X-Men: Apocalypse', 144, 'PG-13', 'Action', TRUE, '2016-05-27 00:00:00 UTC', 7.4);
-INSERT INTO movies (title, duration, rated, genre, is_3d, released_at, score) VALUES ('The Princess Bride', 98, 'PG', 'Adventure', FALSE, '1987-10-09 00:00:00 UTC', 8.1);
-INSERT INTO movies (title, duration, rated, genre, is_3d, released_at, score) VALUES ('Pulp Fiction', 154, 'R', 'Crime', FALSE, '1994-10-14 00:00:00 UTC', 8.9);
+INSERT INTO movies (title, duration, rating, genre, is_3d, released_at, score) VALUES ('Frozen', 102, 'PG', 'Animation', TRUE, '2013-11-27 00:00:00 UTC', 7.6);
+INSERT INTO movies (title, duration, rating, genre, is_3d, released_at, score) VALUES ('X-Men: Apocalypse', 144, 'PG-13', 'Action', TRUE, '2016-05-27 00:00:00 UTC', 7.4);
+INSERT INTO movies (title, duration, rating, genre, is_3d, released_at, score) VALUES ('The Princess Bride', 98, 'PG', 'Adventure', FALSE, '1987-10-09 00:00:00 UTC', 8.1);
+INSERT INTO movies (title, duration, rating, genre, is_3d, released_at, score) VALUES ('Pulp Fiction', 154, 'R', 'Crime', FALSE, '1994-10-14 00:00:00 UTC', 8.9);
 ```
 
 **NOTE:** These are examples of SQL commands on a single line. Each one could have been split up on multiple lines.
@@ -604,7 +604,7 @@ CREATE TABLE movies (
   id serial PRIMARY KEY,
   title text,
   duration integer,
-  rated varchar(10),
+  rating varchar(10),
   genre text,
   is_3d boolean NOT NULL,
   released_at timestamp with time zone,
@@ -719,7 +719,7 @@ Once you're satisfied, destroy the table with the `DROP TABLE` SQL command. Agai
 The `INSERT` SQL command creates new rows in a table. In insert a row into the `movies` table, run the following command.
 
 ```sql
-INSERT INTO movies (title, duration, rated, genre, is_3d, released_at, score) VALUES ('Frozen', 102, 'PG', 'Animation', TRUE, '2013-11-27 00:00:00 UTC', 7.6);
+INSERT INTO movies (title, duration, rating, genre, is_3d, released_at, score) VALUES ('Frozen', 102, 'PG', 'Animation', TRUE, '2013-11-27 00:00:00 UTC', 7.6);
 ```
 
 And you should see something like this.
@@ -729,9 +729,9 @@ And you should see something like this.
 Although it wasn't specified, an integer value was given to the newly inserted row's `id` attribute because it's a `serial` column. Insert a few more rows into the `movies` table by running the following commands.
 
 ```sql
-INSERT INTO movies (title, duration, rated, genre, is_3d, released_at, score) VALUES ('X-Men: Apocalypse', 144, 'PG-13', 'Action', TRUE, '2016-05-27 00:00:00 UTC', 7.4);
-INSERT INTO movies (title, duration, rated, genre, is_3d, released_at, score) VALUES ('The Princess Bride', 98, 'PG', 'Adventure', FALSE, '1987-10-09 00:00:00 UTC', 8.1);
-INSERT INTO movies (title, duration, rated, genre, is_3d, released_at, score) VALUES ('Pulp Fiction', 154, 'R', 'Crime', FALSE, '1994-10-14 00:00:00 UTC', 8.9);
+INSERT INTO movies (title, duration, rating, genre, is_3d, released_at, score) VALUES ('X-Men: Apocalypse', 144, 'PG-13', 'Action', TRUE, '2016-05-27 00:00:00 UTC', 7.4);
+INSERT INTO movies (title, duration, rating, genre, is_3d, released_at, score) VALUES ('The Princess Bride', 98, 'PG', 'Adventure', FALSE, '1987-10-09 00:00:00 UTC', 8.1);
+INSERT INTO movies (title, duration, rating, genre, is_3d, released_at, score) VALUES ('Pulp Fiction', 154, 'R', 'Crime', FALSE, '1994-10-14 00:00:00 UTC', 8.9);
 ```
 
 And you should see something like this.
@@ -775,7 +775,7 @@ And you should see something like this.
 Often a user only cares about even fewer rows. To select even fewer rows with just a few columns from the `movies` table, run the following command.
 
 ```sql
-SELECT title, genre FROM movies WHERE score > 8 AND rated = 'PG';
+SELECT title, genre FROM movies WHERE score > 8 AND rating = 'PG';
 ```
 
 And you should see someting like this.
