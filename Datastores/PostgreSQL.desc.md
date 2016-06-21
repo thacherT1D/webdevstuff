@@ -972,11 +972,9 @@ SELECT id, title, score FROM movies ORDER BY score DESC LIMIT 1;
 
 And you should see something like this.
 
-![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/240/Screen_Shot_2016-06-21_at_8.45.42_AM.png)
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/241/Screen_Shot_2016-06-21_at_8.47.09_AM.png)
 
-The `UPDATE` SQL command used to change existing data in our database.
-
-For example, if we do not think Gigli was actually that bad, and we want to change the rating to a 2, we can use an update statement:
+To update a column for a single row in the `movies` table, run the following command.
 
 ```sql
 UPDATE movies SET score = 9.1 WHERE id = 2;
