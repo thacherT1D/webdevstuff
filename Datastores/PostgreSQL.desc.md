@@ -912,15 +912,29 @@ And you should see something like this.
 
 ![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/246/Screen_Shot_2016-06-21_at_8.59.12_AM.png)
 
+**NOTE:** The `!=` operator is converted to the `<>` operator.
+
 To select a subset of rows with just a few columns from the `movies` table, run the following command.
 
 ```sql
-SELECT id, title, is_3d FROM movies WHERE is_3d = 't';
+SELECT id, title, is_3d FROM movies WHERE is_3d IS TRUE;
 ```
 
 And you should see something like this.
 
-![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/218/Screen_Shot_2016-06-21_at_4.20.48_AM.png)
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/247/Screen_Shot_2016-06-21_at_9.20.06_AM.png)
+
+To select a subset of rows with just a few columns from the `movies` table, run the following command.
+
+```sql
+SELECT id, title, is_3d FROM movies WHERE is_3d IS FALSE;
+```
+
+And you should see something like this.
+
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/248/Screen_Shot_2016-06-21_at_9.20.46_AM.png)
+
+**NOTE:** The `IS NULL` and `IS NOT NULL` operators work similarly.
 
 To select a subset of rows with just a few columns from the `movies` table, run the following command.
 
@@ -931,6 +945,26 @@ SELECT id, title, score FROM movies WHERE score > 8;
 And you should see something like this.
 
 ![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/221/Screen_Shot_2016-06-21_at_4.23.30_AM.png)
+
+To select a subset of rows with just a few columns from the `movies` table, run the following command.
+
+```sql
+SELECT id, title, score FROM movies WHERE score <= 7.5;
+```
+
+And you should see something like this.
+
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/249/Screen_Shot_2016-06-21_at_9.26.03_AM.png)
+
+To select a subset of rows with just a few columns from the `movies` table, run the following command.
+
+```sql
+SELECT id, title, score FROM movies WHERE score BETWEEN 7.5 AND 8;
+```
+
+And you should see something like this.
+
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/250/Screen_Shot_2016-06-21_at_9.26.57_AM.png)
 
 To select a subset of rows with just a few columns from the `movies` table, run the following command.
 
@@ -1076,10 +1110,11 @@ DELETE FROM movies WHERE id = 9 AND rating = 2;
 
 See the following articles in the PostgreSQL documentation to learn more.
 
-- [`INSERT` article](https://www.postgresql.org/docs/current/static/sql-insert.html)
-- [`SELECT` article](https://www.postgresql.org/docs/current/static/sql-select.html).
-- [`UPDATE` article](https://www.postgresql.org/docs/current/static/sql-update.html)
-- [`DELETE` article](https://www.postgresql.org/docs/current/static/sql-delete.html)
+- [PostgreSQL documentation - `INSERT`](https://www.postgresql.org/docs/current/static/sql-insert.html)
+- [`PostgreSQL documentation - SELECT`](https://www.postgresql.org/docs/current/static/sql-select.html).
+- [PostgreSQL documentation - `UPDATE`](https://www.postgresql.org/docs/current/static/sql-update.html)
+- [PostgreSQL documentation - `DELETE`](https://www.postgresql.org/docs/current/static/sql-delete.html)
+- [PostgreSQL documentation - Comparison Operators](https://www.postgresql.org/docs/9.1/static/functions-comparison.html)
 
 ### Exercises
 
