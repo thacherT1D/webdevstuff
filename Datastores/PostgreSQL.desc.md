@@ -748,7 +748,7 @@ SELECT * FROM movies;
 
 And you should see something like this.
 
-![](https://i.imgur.com/uN4sHgE.png)
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/207/Screen_Shot_2016-06-21_at_3.51.26_AM.png)
 
 Notice how long it took to select these rows.
 
