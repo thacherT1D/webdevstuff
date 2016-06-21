@@ -1135,7 +1135,7 @@ SELECT id, title, rating, score FROM movies ORDER BY score DESC;
 
 And you should see something like this.
 
-![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/259/Screen_Shot_2016-06-21_at_1.34.49_PM.png)
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/261/Screen_Shot_2016-06-21_at_3.05.37_PM.png)
 
 To update a column for a single row in the `movies` table, run the following command.
 
