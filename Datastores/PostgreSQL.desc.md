@@ -674,6 +674,8 @@ When an entity without an `id` value is inserted into the `movies` table, the co
 
 The `serial` type also applies a `NOT NULL` constraint to the column. Like JavaScript, the `NULL` value represents the absence of data. Unless a column is given a `NOT NULL` constraint, the `NULL` value is an acceptable value for any column no matter the data type. While a `serial` column is automatically given a `NOT NULL` constraint, it's wise to manually apply the constraint to `boolean` columns as well. For example, the `NOT NULL` constraint was applied to the `is_3d` column in the `movies` table.
 
+While creating a table with the right columns is important, the structure of a table is not set in stone. For example, as a web application evolves over time, so too can its companion database tables.
+
 To add a column to the `movies` table, run the following command.
 
 ```sql
