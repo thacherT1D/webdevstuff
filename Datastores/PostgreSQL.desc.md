@@ -654,7 +654,7 @@ Here's an overview of the most common data types in PostgreSQL.
 | `character varying(n)`, `varchar(n)` | variable     | Variable-length string, limited length    | N/A                            |
 | `character(n)`, `char(n)`            | variable     | Fixed-length string, blank padded         | N/A                            |
 
-Although used for the `id` column of the `movies` table, the `serial` data type is not a true type. Rather, it's merely a notational convenience for creating a unique identifier column. When a `serial` column is created, a PostgreSQL server instead creates an `integer` column with an attached sequence generator. A **sequence generator** is a special, single-row table that's used for generating numbers in sequential order. A `serial` sequence generator starts with value of `1` by default and increments the value by `1` each time generator is used.
+Used for the `id` column of the `movies` table from earlier, the `serial` data type is not a true type. Rather, it's merely a notational convenience for creating a unique identifier column. When a `serial` column is created, a PostgreSQL server instead creates an `integer` column with an attached sequence generator. A **sequence generator** is a special, single-row table that's used for generating numbers in sequential order. A `serial` sequence generator starts with value of `1` by default and increments the value by `1` each time generator is used.
 
 The see the sequence generator for the `id` column of the `movies` table, run the following command.
 
