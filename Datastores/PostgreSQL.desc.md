@@ -1099,7 +1099,17 @@ And you should see something like this.
 
 ![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/254/Screen_Shot_2016-06-21_at_9.37.44_AM.png)
 
-To select the average column in the `movies` table, run the following command.
+To select the sum of a column in the `movies` table, run the following command.
+
+```sql
+SELECT SUM(duration) FROM movies;
+```
+
+And you should see something like this.
+
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/256/Screen_Shot_2016-06-21_at_9.39.39_AM.png)
+
+To select the average of a column in the `movies` table, run the following command.
 
 ```sql
 SELECT AVG(duration) FROM movies;
