@@ -632,13 +632,22 @@ And you should see something like this.
 
 ![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/272/Screen_Shot_2016-06-21_at_4.14.43_PM.png)
 
-See the following articles in the PostgreSQL documentation to learn more.
+See the following articles to learn more about the operators in PostgreSQL.
 
+- [PostgreSQL documentation - Aggregate Functions](https://www.postgresql.org/docs/current/static/functions-aggregate.html)
+- [PostgreSQL documentation - Comparison Operators](https://www.postgresql.org/docs/current/static/functions-comparison.html)
+- [PostgreSQL documentation - Logical Operators](https://www.postgresql.org/docs/current/static/functions-logical.html)
+- [PostgreSQL documentation - Mathematical Operators](https://www.postgresql.org/docs/current/static/functions-math.html)
+- [PostgreSQL documentation - Pattern Matching](https://www.postgresql.org/docs/current/static/functions-matching.html)
+- [PostgreSQL documentation - Range Functions and Operators](https://www.postgresql.org/docs/current/static/functions-range.html)
+- [PostgreSQL documentation - String Operators](https://www.postgresql.org/docs/current/static/functions-string.html)
+
+See the following articles to learn more about the SQL commands you practiced in this section.
+
+- [PostgreSQL documentation - `DELETE`](https://www.postgresql.org/docs/current/static/sql-delete.html)
 - [PostgreSQL documentation - `INSERT`](https://www.postgresql.org/docs/current/static/sql-insert.html)
 - [PostgreSQL documentation - `SELECT`](https://www.postgresql.org/docs/current/static/sql-select.html)
 - [PostgreSQL documentation - `UPDATE`](https://www.postgresql.org/docs/current/static/sql-update.html)
-- [PostgreSQL documentation - `DELETE`](https://www.postgresql.org/docs/current/static/sql-delete.html)
-- [PostgreSQL documentation - Comparison Operators](https://www.postgresql.org/docs/9.1/static/functions-comparison.html)
 
 ### Exercises
 
