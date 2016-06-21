@@ -778,91 +778,63 @@ Often a user only cares about even fewer rows. To select even fewer rows with ju
 SELECT title, genre FROM movies WHERE score > 8 AND rating = 'PG';
 ```
 
-And you should see someting like this.
+And you should see something like this.
 
 ![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/208/Screen_Shot_2016-06-21_at_3.52.26_AM.png)
 
-SQL also supports an OR statement. The following query will return any movie with a rating greater than 4, or any movies with the title Gigli. In other words, every record that matches _one_ of the criteria will be returned.
+Often a user only cares about some rows _or_ some other rows. To select some rows _or_ some other rows with just a few columns from the movies table, run the following command.
 
 ```sql
-SELECT title FROM movies WHERE rating > 4 OR title = 'Gigli';
+SELECT title, genre FROM movies WHERE score > 8 OR rating = 'PG';
 ```
-| title |
-|-------|
-| Batman Begins |
-| Cars |
-| Back to the Future |
-| Godfather |
-| Mystic River |
-| Argo |
-| Gigli |
-| Sharknado |
-| Jurassic World |
-| Mad Max: Fury Road |
+
+And you should see something like this.
+
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/209/Screen_Shot_2016-06-21_at_3.55.47_AM.png)
 
 In addition to filtering rows, we can also let postgres sort out data for us. What if we wanted our movies returned in order from the best to the worst?
 
 ```sql
-SELECT title, rating FROM movies ORDER BY rating DESC;
+SELECT title, score FROM movies ORDER BY score DESC;
 ```
 
-|       title        | rating  |
-|--------------------|--------|
-| Godfather          |     10 |
-| Batman Begins      |     10 |
-| Sharknado          |     10 |
-| Back to the Future |      9 |
-| Mad Max: Fury Road |      7 |
-| Cars               |      7 |
-| Mystic River       |      7 |
-| Argo               |      7 |
-| Jurassic World     |      5 |
-| Dude Wheres My Car |      3 |
-| Gigli              |      1 |
+And you should see something like this.
+
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/210/Screen_Shot_2016-06-21_at_3.58.15_AM.png)
 
 The `DESC` keyword here tells postgres to sort these in descending order. If we wanted to instead have them sorted from worst to best, we could use ASC like this:
 
 ```sql
-SELECT title, rating FROM movies ORDER BY rating ASC;
+SELECT title, score FROM movies ORDER BY score ASC;
 ```
 
-|       title        | rating  |
-|--------------------|--------|
-| Gigli              |      1 |
-| Dude Wheres My Car |      3 |
-| Jurassic World     |      5 |
-| Argo               |      7 |
-| Mad Max: Fury Road |      7 |
-| Cars               |      7 |
-| Mystic River       |      7 |
-| Back to the Future |      9 |
-| Godfather          |     10 |
-| Sharknado          |     10 |
-| Batman Begins      |     10 |
+And you should see something like this.
 
-__IMPORTANT NOTE:__ If no order by clause is specified, the database does not give any guarantees on what order your data will be returned in. At times it may seem like data you are getting back is in sorted order, but make sure not to rely on that in your code.
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/211/Screen_Shot_2016-06-21_at_3.59.18_AM.png)
+
+**NOTE:** If no order by clause is specified, the database does not give any guarantees on what order your data will be returned in. At times it may seem like data you are getting back is in sorted order, but make sure not to rely on that in your code.
 
 What if we only want a few of the records? We can append a `LIMIT` condition onto the end of our query like so:
 
 ```sql
-SELECT title, rating FROM movies ORDER BY rating DESC LIMIT 5;
+SELECT title, score FROM movies ORDER BY score DESC LIMIT 1;
 ```
 
-|       title        | rating |
-|--------------------|--------|
-| Godfather          |     10 |
-| Sharknado          |     10 |
-| Batman Begins      |     10 |
-| Back to the Future |      9 |
-| Mystic River       |      7 |
+And you should see something like this.
+
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/212/Screen_Shot_2016-06-21_at_4.00.42_AM.png)
 
 The `UPDATE` SQL command used to change existing data in our database.
 
 For example, if we do not think Gigli was actually that bad, and we want to change the rating to a 2, we can use an update statement:
 
 ```sql
-UPDATE movies SET rating=2 WHERE title='Gigli';
+UPDATE movies SET rating = 2 WHERE id = 'Gigli';
 ```
+
+And you should see something like this.
+
+
 
 Deleting works similarly to a select statement.
 
