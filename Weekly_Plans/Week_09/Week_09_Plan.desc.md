@@ -30,18 +30,17 @@ Resources:
 
 # Tuesday, June 21
 
-Warmup: [Link to Warmup](http://github.com/gSchool)
+Warmup: [Closest Pair of Points](https://www.codewars.com/kata/closest-pair-of-points)
 
 Lessons:
-- [Lesson](/cohorts/68/student_dashboard)
-- [Lesson](/cohorts/68/student_dashboard)
 
-Homework: [Homework](/cohorts/68/student_dashboard)
+- [Async & Promises](/redirects/articles/3113)
+- [Knex Migrations](/redirects/articles/3091)
 
-Announcements:
-- Announcement 1
-- Announcement 2
 
+Other:
+
+- [Older Promise Curriculum](/redirects/articles/3056)
 ---
 
 # Wednesday, June 22

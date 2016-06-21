@@ -2,16 +2,6 @@
 
 Before jumping into promises, it is very important to understand the asynchronous nature of JavaScript. Imagine if your application had to wait for one event to finish before it could start another. What kind of problems could that lead to? What would the user experience be like?
 
-First, watch the video at https://vimeo.com/134061121 - password is schoolhouserock
-
-Now read throught he MDN docs at https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop
-
-This is a great video as well https://www.youtube.com/watch?v=8aGhZQkoFbQ
-
-And here is a link to the excellent tool he built for visualizing the event loop. Play around with it a little and watch how your code is executed: latentflip.com
-
-Click on "Click Me" LOTS of times as quickly as you can :)
-
 ##Promises
 
 Promises show up pretty much everywhere in JavaScript these days, including interviews.  Having total mastery over promises will allow you to write clean and beautiful, well-factored asynchronous code.
@@ -34,4 +24,12 @@ When you get to the part about `Promise.all`, definitely watch this video to get
 
 ## Exercise
 
-[github repo](https://github.com/gSchool/promise-exercise)
+- [Promise Exercise](https://github.com/gSchool/promise-exercise)
+
+
+## Resources
+
+- [Vimeo Video](https://vimeo.com/134061121) - password is schoolhouserock
+- [Event Loop](https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop)
+- [Youtube Video](https://www.youtube.com/watch?v=8aGhZQkoFbQ)
+- [Loupe: Event Loop Visualizer](http://latentflip.com/loupe/)
