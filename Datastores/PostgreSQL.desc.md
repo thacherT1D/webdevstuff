@@ -640,7 +640,7 @@ And you should see something like this.
 
 ![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/224/Screen_Shot_2016-06-21_at_5.41.22_AM.png)
 
-As you can see, the `movies` table contains a handful of columns. In a relational database system, all values in the same column must be the same data type. In other words, a PostgreSQL server won't store an entity with a `boolean` value in a `text` column of a table. This strictness is one of the reasons why a relational database system, like PostgreSQL, can remain performant while managing a massive collection of information.
+As you can see, the `movies` table contains a handful of columns. In a relational database system, all values in the same column must be the same data type. For example, a `integer` value can't be stored in a `text` column. This strictness is one of the reasons why a relational database system, like PostgreSQL, can remain performant while managing a massive collection of information.
 
 Here's an overview of the most common data types in PostgreSQL.
 
