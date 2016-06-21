@@ -816,7 +816,7 @@ And you should see something like this.
 
 ![](https://i.imgur.com/Ypfh2EV.png)
 
-See the following articles in the PostgreSQL documentation to learn more about the commands you practiced in this section.
+Believe it or not, but there's a ton more you can do to manage tables. See the following articles in the PostgreSQL documentation to learn more about the commands you practiced in this section.
 
 - [PostgreSQL Documentation - Data Types](https://www.postgresql.org/docs/current/static/datatype.html)
 - [PostgreSQL Documentation - `CREATE TABLE`](https://www.postgresql.org/docs/current/static/sql-createtable.html)
