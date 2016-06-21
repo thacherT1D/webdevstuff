@@ -1135,7 +1135,7 @@ SELECT id, title, rating, score FROM movies ORDER BY score DESC;
 
 And you should see something like this.
 
-![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/261/Screen_Shot_2016-06-21_at_3.05.37_PM.png)
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/263/Screen_Shot_2016-06-21_at_3.11.32_PM.png)
 
 To update a column for a single row in the `movies` table, run the following command.
 
@@ -1153,7 +1153,7 @@ SELECT id, title, rating, score FROM movies ORDER BY score DESC;
 
 And you should see something like this.
 
-![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/215/Screen_Shot_2016-06-21_at_4.08.18_AM.png)
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/264/Screen_Shot_2016-06-21_at_3.12.35_PM.png)
 
 ```sql
 UPDATE movies SET score = score - 1.2 WHERE rating = 'PG';
@@ -1161,7 +1161,7 @@ UPDATE movies SET score = score - 1.2 WHERE rating = 'PG';
 
 And you should see something like this.
 
-![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/216/Screen_Shot_2016-06-21_at_4.09.58_AM.png)
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/265/Screen_Shot_2016-06-21_at_3.13.17_PM.png)
 
 ```sql
 SELECT id, title, score FROM movies ORDER BY score DESC;
@@ -1169,7 +1169,7 @@ SELECT id, title, score FROM movies ORDER BY score DESC;
 
 And you should see something like this.
 
-![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/262/Screen_Shot_2016-06-21_at_3.07.21_PM.png)
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/266/Screen_Shot_2016-06-21_at_3.14.00_PM.png)
 
 To delete a row in the `movies table`, run the following command.
 
