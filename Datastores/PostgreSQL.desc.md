@@ -912,7 +912,7 @@ And you should see something like this.
 
 ![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/246/Screen_Shot_2016-06-21_at_8.59.12_AM.png)
 
-**NOTE:** The `!=` operator is converted to the `<>` operator.
+**NOTE:** The `<>` operator is part of the SQL standard. However, PostgreSQL also implements the `!=` operator as well. Both operators do the exact same thing.
 
 To select a subset of rows with just a few columns from the `movies` table, run the following command.
 
@@ -1123,6 +1123,24 @@ To update a column for a single row in the `movies` table, run the following com
 
 ```sql
 UPDATE movies SET score = 9.1 WHERE id = 2;
+```
+
+And you should see something like this.
+
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/214/Screen_Shot_2016-06-21_at_4.07.38_AM.png)
+
+```sql
+SELECT id, title, score FROM movies ORDER BY score DESC;
+```
+
+And you should see something like this.
+
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/257/Screen_Shot_2016-06-21_at_9.39.39_AM.png)
+
+To update a column for a single row in the `movies` table, run the following command.
+
+```sql
+UPDATE movies SET score = score + 0.3 WHERE genre = 'R';
 ```
 
 And you should see something like this.
