@@ -672,21 +672,85 @@ When an entity without an `id` value is inserted into the `movies` table, the co
 
 The `serial` type also applies a `NOT NULL` constraint to the column. Like JavaScript, the `NULL` value represents the absence of data. Unless a column is given a `NOT NULL` constraint, the `NULL` value is an acceptable value for any column no matter the data type. While a `serial` column is automatically given a `NOT NULL` constraint, it's wise to manually apply the constraint to `boolean` columns as well. For example, the `NOT NULL` constraint was applied to the `is_3d` column in the `movies` table.
 
+To add a column to the `movies` table, run the following command.
+
 ```sql
 ALTER TABLE movies ADD COLUMN plot text;
 ```
+
+And you should see something like this.
+
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/225/Screen_Shot_2016-06-21_at_6.17.36_AM.png)
+
+To verify the column was added correctly, run the following command.
+
+```text
+\d movies
+```
+
+And you should see something like this.
+
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/226/Screen_Shot_2016-06-21_at_6.18.38_AM.png)
+
+To rename a column in the `movies` table, run the following command.
 
 ```sql
 ALTER TABLE movies RENAME COLUMN plot TO summary;
 ```
 
-```sql
-ALTER TABLE movies ALTER COLUMN summary TYPE varchar(100);
+And you should see something like this.
+
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/227/Screen_Shot_2016-06-21_at_6.19.46_AM.png)
+
+To verify the column was renamed correctly, run the following command.
+
+```text
+\d movies
 ```
+
+And you should see something like this.
+
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/228/Screen_Shot_2016-06-21_at_6.20.34_AM.png)
+
+To alter the data type of a column in the `movies` table, run the following command.
+
+```sql
+ALTER TABLE movies ALTER COLUMN summary TYPE varchar(255);
+```
+
+And you should see something like this.
+
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/229/Screen_Shot_2016-06-21_at_6.21.38_AM.png)
+
+To verify the column was renamed correctly, run the following command.
+
+```text
+\d movies
+```
+
+And you should see something like this.
+
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/230/Screen_Shot_2016-06-21_at_6.22.39_AM.png)
+
+To drop a column in the `movies` table, run the following command.
 
 ```sql
 ALTER TABLE movies DROP COLUMN summary;
 ```
+
+And you should see something like this.
+
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/231/Screen_Shot_2016-06-21_at_6.23.27_AM.png)
+
+To verify the column was dropped correctly, run the following command.
+
+```text
+\d movies
+```
+
+And you should see something like this.
+
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/224/Screen_Shot_2016-06-21_at_5.41.22_AM.png)
 
 ```sql
 ALTER TABLE movies RENAME TO films;
