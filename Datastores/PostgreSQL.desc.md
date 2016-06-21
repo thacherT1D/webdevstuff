@@ -1187,7 +1187,7 @@ SELECT id, title, rating, score FROM movies ORDER BY score DESC;
 
 And you should see something like this.
 
-![]()
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/269/Screen_Shot_2016-06-21_at_3.17.48_PM.png)
 
 ```sql
 DELETE FROM movies WHERE score > 9;
