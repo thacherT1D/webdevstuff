@@ -755,32 +755,48 @@ Notice how long it took to select these rows.
 Often a user only cares about a few columns. To select all the rows with just a few columns from the `movies` table, run the following command.
 
 ```sql
-SELECT title, genre FROM movies;
+SELECT id, title FROM movies;
 ```
 
 And you should see something like this.
 
-![](https://i.imgur.com/egpWxyz.png)
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/220/Screen_Shot_2016-06-21_at_4.22.50_AM.png)
+
+```sql
+SELECT id, title, rating FROM movies WHERE rating = 'PG';
+```
+
+And you should see something like this.
+
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/219/Screen_Shot_2016-06-21_at_4.21.55_AM.png)
+
+```sql
+SELECT id, title, is_3d FROM movies WHERE is_3d = 't';
+```
+
+And you should see something like this.
+
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/218/Screen_Shot_2016-06-21_at_4.20.48_AM.png)
 
 Often a user only cares about a few rows. To select a few rows with just a few columns from the `movies` table, run the following command.
 
 ```sql
-SELECT title, genre FROM movies WHERE score > 8;
+SELECT id, title, score FROM movies WHERE score > 8;
 ```
 
 And you should see something like this.
 
-![](https://i.imgur.com/WvJ23mc.png)
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/221/Screen_Shot_2016-06-21_at_4.23.30_AM.png)
 
 Often a user only cares about even fewer rows. To select even fewer rows with just a few columns from the `movies` table, run the following command.
 
 ```sql
-SELECT title, genre FROM movies WHERE score > 8 AND rating = 'PG';
+SELECT id, title, score, rating FROM movies WHERE score > 8 AND rating = 'PG';
 ```
 
 And you should see something like this.
 
-![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/208/Screen_Shot_2016-06-21_at_3.52.26_AM.png)
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/222/Screen_Shot_2016-06-21_at_4.24.46_AM.png)
 
 Often a user only cares about some rows _or_ some other rows. To select some rows _or_ some other rows with just a few columns from the movies table, run the following command.
 
@@ -865,7 +881,7 @@ Deleting works similarly to a select statement.
 The statement below deletes the Dude Wheres My Car row from the database:
 
 ```sql
-DELETE FROM movies WHERE title='Dude Wheres My Car';
+DELETE FROM movies WHERE id = 'Dude Wheres My Car';
 ```
 
 We could also chain together multiple conditions like so:
