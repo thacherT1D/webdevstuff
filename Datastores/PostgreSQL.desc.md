@@ -752,15 +752,47 @@ And you should see something like this.
 
 ![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/224/Screen_Shot_2016-06-21_at_5.41.22_AM.png)
 
+To rename the `movies` table, run the following command.
+
 ```sql
 ALTER TABLE movies RENAME TO films;
 ```
+
+And you should see something like this.
+
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/232/Screen_Shot_2016-06-21_at_6.25.23_AM.png)
+
+To verify the table was renamed correctly, run the following command.
+
+```text
+\dt
+```
+
+And you should see something like this.
+
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/233/Screen_Shot_2016-06-21_at_6.26.56_AM.png)
+
+To drop the `films` table, run the following command.
 
 ```sql
 DROP TABLE films;
 ```
 
-See the following articles in the PostgreSQL documentation to learn more.
+And you should see something like this.
+
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/234/Screen_Shot_2016-06-21_at_6.27.35_AM.png)
+
+To verify the table was dropped, run the following command.
+
+```text
+\dt
+```
+
+And you should see something like this.
+
+![](https://i.imgur.com/Ypfh2EV.png)
+
+See the following articles in the PostgreSQL documentation to learn more about the commands you practiced in this section.
 
 - [PostgreSQL Documentation - Data Types](https://www.postgresql.org/docs/current/static/datatype.html)
 - [PostgreSQL Documentation - `CREATE TABLE`](https://www.postgresql.org/docs/current/static/sql-createtable.html)
