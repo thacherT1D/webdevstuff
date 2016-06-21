@@ -630,7 +630,7 @@ And you should see something like this.
 
 ![](https://i.imgur.com/0geGsbQ.png)
 
-**NOTE:** In PostgreSQL, all databases contain a `public` schema which in turn contains tables, among other things.
+In PostgreSQL, all databases contain a `public` schema which in turn contains tables, among other things. The most important thing to note, however, is that there a `movies` table and it has an owner.
 
 To verify the table was created with the correct columns, run the following command.
 
