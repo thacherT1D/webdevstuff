@@ -825,7 +825,17 @@ Believe it or not, but there's a ton more you can do to manage tables. See the f
 
 ### Exercise
 
-Execute the `CREATE TABLE movies` SQL command from above. Then, write a `CREATE TABLE` SQL command that'll create an `awards` table for the following entities.
+A **migration** is a file that contains SQL commands that are used to recreate the tables in a database on demand. In a `migration.sql` file, type out the `CREATE TABLE movies` SQL command from above. Then, add a `DROP TABLE` command at the top of the file. In the PostgreSQL documentation, see how to prevent the `DROP TABLE` from generating an error if the table doesn't exist.
+
+To migrate the `movie_junkies_dev` database, run the following command.
+
+```shell
+psql movie_junkies_dev -f migration.sql
+```
+
+Iterate on your migration file until you can repeatedly run it without generating an error.
+
+Then, add the necessary SQL commands to migrate an `awards` table with the following columns.
 
 ```text
  id | movie_id | kind  |                                 name                                 |      received_at
@@ -834,11 +844,9 @@ Execute the `CREATE TABLE movies` SQL command from above. Then, write a `CREATE 
   2 |        1 | Oscar | Best Achievement in Music Written for Motion Pictures, Original Song | 2014-03-01 16:00:00-08
 ```
 
-For each column, choose what you think is the appropriate data type. When you're finished, execute the SQL command in the `movie_junkies_dev` database. Use `\dt` REPL command to verify that the table was created correctly.
+For each column, choose what you think is the most appropriate data type. When you're finished, migrate the database and use `\dt` REPL command to verify that the table was created correctly.
 
-Next, use the `ALTER TABLE` SQL command to add a `did_win` column to the `awards` table to track whether or not the movie won the award. Again, choose what you think is the appropriate data type. When you're finished, execute the SQL command in the `movie_junkies_dev` database. Use `\dt` REPL command to verify that the table was altered correctly.
-
-Once you're satisfied, destroy the table with the `DROP TABLE` SQL command. Again, use the `\dt` REPL command to verify the table has been dropped.
+Next, use the `ALTER TABLE` SQL command to add a `did_win` column to the `awards` table. This column will be used to track whether or not the movie won the award. Again, choose what you think is the most appropriate data type. When you're finished, migrate the database and use `\dt` REPL command to verify that the table was created correctly.
 
 ## How do you use the PostgreSQL REPL to manage rows in a table?
 
