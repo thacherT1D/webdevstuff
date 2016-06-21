@@ -426,7 +426,7 @@ In addition to the above command line tools, you can manage the databases inside
 
 The PostgreSQL REPL accepts both REPL commands and SQL commands. You can tell the difference between the two because REPL commands start with a backslash `\` and SQL commands end with a semicolon `;`. In a moment, you'll see some examples of both.
 
-Before you get started with the PostgreSQL REPL, download and install some configuration for your instructors created for it by running the following command.
+Before you get started with the PostgreSQL REPL, download and install some configuration that your instructors have created for you. To do so, run the following command.
 
 ```shell
 curl -fsSL https://git.io/voVWg | sh
@@ -629,6 +629,8 @@ To verify the table was created, display the tables in the current connected dat
 And you should see something like this.
 
 ![](https://i.imgur.com/0geGsbQ.png)
+
+**NOTE:** In PostgreSQL, all databases contain a `public` schema which in turn contains tables, among other things.
 
 To verify the table was created with the correct columns, run the following command.
 
