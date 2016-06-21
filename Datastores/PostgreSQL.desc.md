@@ -1145,7 +1145,7 @@ UPDATE movies SET score = score + 0.3 WHERE rating = 'R';
 
 And you should see something like this.
 
-![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/258/Screen_Shot_2016-06-21_at_9.39.39_AM.png)
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/260/Screen_Shot_2016-06-21_at_1.35.57_PM.png)
 
 ```sql
 SELECT id, title, rating, score FROM movies ORDER BY score DESC;
