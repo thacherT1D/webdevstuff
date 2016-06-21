@@ -825,9 +825,9 @@ Believe it or not, but there's a ton more you can do to manage tables. See the f
 
 ### Exercise
 
-A **migration** is a file that contains SQL commands that are used to recreate the tables in a database on demand. In a `migration.sql` file, type out the `CREATE TABLE movies` SQL command from above. Then, add a `DROP TABLE` command at the top of the file so you repeatedly execute the commands. Using the PostgreSQL documentation, figure how to prevent the `DROP TABLE` command from generating an error if the table doesn't exist.
+A **migration** is a file that contains SQL commands that are used to recreate the tables in a database on demand. In a `migration.sql` file, type out the `CREATE TABLE movies` SQL command from above. Then, add a `DROP TABLE` command at the top of the file so you can repeatedly execute the commands. Using the PostgreSQL documentation, figure how to prevent the `DROP TABLE` command from generating an error if the table doesn't exist.
 
-To migrate the `movie_junkies_dev` database, run the following command.
+To migrate the `movie_junkies_dev` database, run the following command from your shell.
 
 ```shell
 psql movie_junkies_dev -f migration.sql
