@@ -1,11 +1,12 @@
 ## Objectives
 
+1. Explain what an entity-relationship model is.
+1. Explain why an entity-relationship model is useful.
+1. Implement an entity-relationship model in a relational database system.
 1. Explain what a join statement is.
 1. Explain why a join statement is useful.
 1. Alias columns and tables in SQL `SELECT` statements.
 1. Write inner join statements.
-1. Build multi-line SQL statements.
-1. Chain multiple SQL statements together.
 
 ## What's an entity-relationship model?
 
