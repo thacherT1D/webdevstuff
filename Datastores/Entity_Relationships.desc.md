@@ -98,6 +98,32 @@ Here's an example ER diagram that represents the relationship between movies and
 └──────────────┘       └──────────────┘
 ```
 
+Here's an example of a `movies` table based on the above ER diagram.
+
+```sql
+CREATE TABLE movies (
+  id serial,
+  title text,
+  duration integer,
+  rating varchar(10),
+  genre text,
+  is_3d boolean NOT NULL,
+  released_at timestamp with time zone,
+  score numeric(3, 1)
+);
+```
+
+Here's an example of a `awards` table based on the above ER diagram.
+
+```sql
+CREATE TABLE awards (
+  id serial,
+  movie_id integer,
+  kind varchar(50),
+  name text
+);
+```
+
 Here's an example of a movie entity's unique identifier being stored as the `id` primary key in the `movies` table.
 
 ```text
