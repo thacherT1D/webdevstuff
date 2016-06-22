@@ -143,7 +143,11 @@ And here's an example of the movie entity's unique identifier being stored as th
 
 ### Exercise
 
-With your neighbors, add some attributes to the pet-based ER diagram that you created earlier. Once you're satisfied with the diagram, create a database table for each entity.
+With your neighbors, add some attributes to the pet-based ER diagram that you created earlier.
+
+Once you're satisfied with the diagram, write a `CREATE TABLE` SQL command for each entity.
+
+Once you're satisfied with the tables, write some `INSERT` SQL commands to seed each table.
 
 ## What are the four PostgreSQL column constraints?
 
