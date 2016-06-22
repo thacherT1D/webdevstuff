@@ -3,7 +3,7 @@
 1. Explain what an entity relationship diagram is.
 1. Explain why an entity relationship diagram is useful.
 1. Explain what the four PostgreSQL column constraints are.
-1. Use constraints to implement an entity relationship diagram in PostgreSQL.
+1. Use PostgreSQL column constraints to implement an entity relationship diagram.
 1. Explain what a join statement is.
 1. Explain why a join statement is useful.
 1. Alias columns and tables in SQL `SELECT` statements.
@@ -229,7 +229,7 @@ CREATE TABLE awards (
 
 **NOTE:** Typically, a foreign key has a not-null constraint to prevent orphaned entities from being inserted.
 
-## How do you use constraints to implement an entity relationship diagram in PostgreSQL?
+## How do you use PostgreSQL column constraints to implement an entity relationship diagram.
 
 In a relational database system, a one-to-one relationship exists when one row in table A is linked with only one row in table B.
 
