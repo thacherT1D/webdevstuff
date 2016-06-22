@@ -58,6 +58,17 @@ A **many-to-many** relationship describes the relationship between two entities,
 
 ## What are the four PostgreSQL column constraints?
 
+Data types are a way to limit the kind of information that can be stored in a table. For many web applications, however, the constraints they provide are too loose. It's common for web applications to constrain column data with respect to other columns or rows. For example, in a table containing product information, there should be only one row for each product number.
+
+To that end, PostgreSQL allows you to define constraints on columns and tables. Constraints give you as much control over the data in your tables as you wish. If an application attempts to store data in a column that would violate a constraint, an error is raised.
+
+There are four PostgreSQL column constraints.
+
+1. Not-null constraints
+1. Unique constraints
+1. Primary key constraints
+1. Foreign key constraints
+
 A **not-null constraint** simply specifies that a column must not assume the null value. A table can have more than one column with a not-null constraint.
 
 ```sql
