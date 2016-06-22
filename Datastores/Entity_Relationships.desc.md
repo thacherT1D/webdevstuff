@@ -231,6 +231,12 @@ Write down the four PostgreSQL column constraints and explain each one in your o
 
 ## How do you use PostgreSQL column constraints to implement an entity relationship diagram.
 
+```shell
+dropdb movie_junkies_dev
+createdb movie_junkies_dev
+psql movie_junkies_dev
+```
+
 In a relational database system, a one-to-one relationship exists when one row in table A is linked with only one row in table B.
 
 ```sql
@@ -252,7 +258,7 @@ CREATE TABLE plots (
 );
 ```
 
-[PLAY WITH INSERTING ROWS INTO THE COLUMN]
+[INSPECT THE CREATE TABLES]
 
 ```SQL
 INSERT INTO movies (id, title, duration, rating, genre, is_3d, released_at, score)
@@ -279,6 +285,8 @@ VALUES (3, 3 'A kindly grandfather sits down with his ill grandson and reads him
 INSERT INTO plots (id, movie_id, summary)
 VALUES (4, 4, 'Jules Winnfield and Vincent Vega are two hitmen who are out to retrieve a suitcase stolen from their employer, mob boss Marsellus Wallace. Wallace has also asked Vincent to take his wife Mia out a few days later when Wallace himself will be out of town. Butch Coolidge is an aging boxer who is paid by Wallace to lose his next fight. The lives of these seemingly unrelated people are woven together comprising of a series of funny, bizarre and uncalled-for incidents.');
 ```
+
+[INSPECT INSERTED ROWS, PLAY WITH CONSTRAINTS]
 
 In a relational database, a one-to-many relationship exists when one row in table A is linked with many rows in table B, but one row in table B is linked to only one row in table A.
 
