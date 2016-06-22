@@ -45,7 +45,7 @@ A **one-to-one** relationship describes the relationship between two entities, `
 └──────────────┘       └─────────────┘
 ```
 
-A **one-to-many** relationship describes the relationship between two entities, `A` and `B`, in which an entity of `A` may be linked to many entities of `B`, but a entity of `B` is linked to only one entity of `A`. For example, think of `A` as movies and `B` as awards. A movie can have several awards, but an award can only be given to one movie (per year).
+A **one-to-many** relationship describes the relationship between two entities, `A` and `B`, in which an entity of `A` may be linked to many entities of `B`, but a entity of `B` is linked to only one entity of `A`. For example, think of `A` as movies and `B` as awards. A movie can have many awards, but an award can only be given to one movie (per year).
 
 ```text
 ┌──────────────┐       ┌──────────────┐
@@ -55,7 +55,7 @@ A **one-to-many** relationship describes the relationship between two entities, 
 └──────────────┘       └──────────────┘
 ```
 
-A **many-to-many** relationship describes the relationship between two entities, `A` and `B`, in which many entities of `A` may be linked to many entities of `B` and vice versa. For example, think of `A` as movies and `B` as actors. An actor can star in several movies and a movie can have several actors.
+A **many-to-many** relationship describes the relationship between two entities, `A` and `B`, in which many entities of `A` may be linked to many entities of `B` and vice versa. For example, think of `A` as movies and `B` as actors. An actor can star in many movies and a movie can have many actors.
 
 ```text
 ┌──────────────┐       ┌────────────────┐       ┌──────────────┐
