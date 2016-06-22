@@ -46,17 +46,11 @@ Other:
 
 # Wednesday, June 22
 
-Warmup: [Link to Warmup](http://github.com/gSchool)
+Warmup: [Fibonacci Sequence](https://raw.githubusercontent.com/gSchool/challenges/master/Programming/Fibonacci/prompt.js)
 
 Lessons:
-- [Lesson](/cohorts/68/student_dashboard)
-- [Lesson](/cohorts/68/student_dashboard)
-
-Homework: [Homework](/cohorts/68/student_dashboard)
-
-Announcements:
-- Announcement 1
-- Announcement 2
+- [SQL Joins](/cohorts/68/articles/3081)
+- [Functional Programming](/cohorts/68/student_dashboard)
 
 ---
 
