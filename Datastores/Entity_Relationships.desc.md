@@ -14,11 +14,11 @@
 An **entity relationship diagram** (ER diagram) is a drawing that represents people, places, or things that are inter-related. As the name suggests, an ER diagram is composed of entities and the relationships that can exist between them. Here's an ER diagram that represents movie, award, and plot entities and their relationships.
 
 ```text
-┌──────────────┐       ┌────────────────┐       ┌──────────────┐       ┌──────────────┐
-│              │      ╱│                │╲      │              │      ╱│              │
-│    actors    │───────│  actor_movies  │───────│    movies    │───────│    awards    │
-│              │      ╲│                │╱      │              │      ╲│              │
-└──────────────┘       └────────────────┘       └──────────────┘       └──────────────┘
+┌──────────────┐       ┌─────────────────┐       ┌──────────────┐       ┌──────────────┐
+│              │      ╱│                 │╲      │              │      ╱│              │
+│    actors    │───────│  actors_movies  │───────│    movies    │───────│    awards    │
+│              │      ╲│                 │╱      │              │      ╲│              │
+└──────────────┘       └─────────────────┘       └──────────────┘       └──────────────┘
                                                         │
                                                         │
                                                         │
@@ -58,11 +58,11 @@ A **one-to-many** relationship describes the relationship between two entities, 
 A **many-to-many** relationship describes the relationship between two entities, `A` and `B`, in which many entities of `A` may be linked to many entities of `B` and vice versa. For example, think of `A` as movies and `B` as actors. An actor can star in many movies and a movie can have many actors.
 
 ```text
-┌──────────────┐       ┌────────────────┐       ┌──────────────┐
-│              │      ╱│                │╲      │              │
-│    actors    │───────│  actor_movies  │───────│    movies    │
-│              │      ╲│                │╱      │              │
-└──────────────┘       └────────────────┘       └──────────────┘
+┌──────────────┐       ┌─────────────────┐       ┌──────────────┐
+│              │      ╱│                 │╲      │              │
+│    actors    │───────│  actors_movies  │───────│    movies    │
+│              │      ╲│                 │╱      │              │
+└──────────────┘       └─────────────────┘       └──────────────┘
 ```
 
 As you can see here, a many-to-many relationship is the combination of two one-to-many relationships connected to an associative entity in the middle. We'll talk more about associative entities in a bit.
