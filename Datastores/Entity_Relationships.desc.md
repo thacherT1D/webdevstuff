@@ -45,9 +45,9 @@ Once you're satisfied with that, add your own entities to the diagram and draw t
 
 ## Why is an entity-relationship model useful?
 
-An ER model is the result of analyzing a problem domain to better understand how its entities and their relationships exist over time. These processes that modified entities and their relationships can often be hard to describe in words. An ER diagram can be useful to represent these processes graphically.
+An ER model is the result of analyzing a problem domain to better understand how its entities and their relationships exist over time. The processes that modify entities and their relationships can often be hard to describe in words. For example, how do you describe the logic of a movie winning an award to a person who doesn't understand how to code (e.g. you future boss)? An ER diagram can be useful to represent these processes graphically.
 
-An ER diagram is commonly created to represent the persistence needs of a new feature in a web application. Typically, creating an ER diagram is the first step toward establishing a relational database structure for the feature. In a relational database, the relationships between entities are implemented by storing the primary key of one entity as a foreign key reference in the table of another entity.
+An ER diagram is commonly created to represent the persistence needs of a new feature in a web application. Typically, creating an ER diagram is the first step toward establishing a relational database structure for the feature. In a relational database, the relationships between entities are implemented by storing the primary key of one entity as a foreign key in the table of another entity.
 
 Here's an example of a movie entity's unique identifier being stored as the `id` primary key in the `movies` table.
 
@@ -57,7 +57,7 @@ Here's an example of a movie entity's unique identifier being stored as the `id`
   1 | Frozen |      102 | PG     | Animation | t     | 2013-11-26 16:00:00-08 |   7.6
 ```
 
-And here's an example of the movie entity's unique identifier being stored as the `movie_id` foreign key of two award entities in the `awards` table.
+And here's an example of the movie entity's unique identifier being stored as the `movie_id` foreign key in the `awards` table for two award entities.
 
 ```text
  id | movie_id | kind  |                                 name                                 
@@ -66,9 +66,9 @@ And here's an example of the movie entity's unique identifier being stored as th
   2 |        1 | Oscar | Best Achievement in Music Written for Motion Pictures, Original Song
 ```
 
-###
+### Exercise
 
-Turn to a neighbor and explain, in your own words, why an ER model is useful when creating a new feature in a web application.
+Turn to a neighbor and explain, in your own words, the ways in which an ER model is useful.
 
 ## What are the four PostgreSQL column constraints?
 
