@@ -47,7 +47,7 @@ A **one-to-one** relationship describes the relationship between two entities, A
 
 [INSERT ER MODEL HERE]
 
-A **one-to-many** relationship describes the relationship between two entities, A and B, in which an element of A may be linked to many elements of B, but a member of B is linked to only one element of A. For instance, think of A as mothers, and B as children. A mother can have several children, but a child can have only one mother.
+A **one-to-many** relationship describes the relationship between two entities, A and B, in which an element of A may be linked to many elements of B, but a member of B is linked to only one element of A. For example, think of A as mothers, and B as children. A mother can have several children, but a child can have only one mother.
 
 [INSERT ER MODEL HERE]
 
@@ -57,17 +57,68 @@ A **many-to-many** relationship describes the relationship between two entities,
 
 ## How do you implement an entity-relationship model in a relational database system?
 
+A **unique constraint** ensures that the data contained in a column is unique among all the rows in the table. Adding a unique constraint automatically creates a unique index on the column, which is something you're learn about later. A table can have more than one column with a unique constraint.
+
+A **primary key constraint** indicates that a column can be used as a unique identifier for rows in the table. This constraint requires the values in the primary key column to be both unique and not null. Adding a primary key constraint automatically creates a unique index on the column, which is something you'll learn about later. A table can only have one column with a primary key constraint.
+
+A **foreign key constraint** specifies that the values in a column must match the values appearing in some row of another table. This constraint is used to maintain the referential integrity between two related tables. A table can have more than one column with a foreign key constraint.
+
 In a relational database system, a one-to-one relationship exists when one row in table A is linked with only one row in table B.
 
-[INSERT RELATIONS HERE]
+```sql
+CREATE TABLE countries (
+  id serial PRIMARY KEY,
+  name text
+);
+
+CREATE TABLE capital_cities (
+  id serial PRIMARY KEY,
+  country_id integer UNIQUE NOT NULL REFERENCES countries ON DELETE CASCADE,
+  name text
+);
+```
+
+[PLAY WITH INSERTING ROWS INTO THE COLUMN]
 
 In a relational database, a one-to-many relationship exists when one row in table A is linked with many rows in table B, but one row in table B is linked to only one row in table A.
 
-[INSERT RELATIONS HERE]
+```sql
+CREATE TABLE mothers (
+  id serial PRIMARY KEY,
+  name text
+);
+
+CREATE TABLE children (
+  id serial PRIMARY KEY,
+  mother_id integer NOT NULL REFERENCES mothers ON DELETE CASCADE,
+  name text
+);
+```
+
+[PLAY WITH INSERTING ROWS INTO THE COLUMN]
 
 In a relational database management system, a many-to-many relationship is implemented by means of an join table, AB, with two one-to-many relationships. A -> AB and B -> AB. In this case the logical primary key for AB is formed from the two foreign keys.
 
-[INSERT RELATIONS HERE]
+```sql
+CREATE TABLE authors (
+  id serial PRIMARY KEY,
+  name text
+);
+
+CREATE TABLE books (
+  id serial PRIMARY KEY,
+  name text
+);
+
+CREATE TABLE authorships (
+  id serial PRIMARY KEY,
+  author_id integer NOT NULL REFERENCES authors ON DELETE CASCADE,
+  book_id integer NOT NULL REFERENCES books ON DELETE CASCADE,
+  name text
+);
+```
+
+[PLAY WITH INSERTING ROWS INTO THE COLUMN]
 
 ## Learn the data model
 
