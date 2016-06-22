@@ -68,20 +68,6 @@ In a relational database management system, a many-to-many relationship is imple
 
 [INSERT RELATIONS HERE]
 
-## What's a join statement and why is it useful?
-
-In SQL, a **join statement** combines records from two or more tables in a relational database. The combined records can be viewed or even saved to a new table.
-
-Additionally, you can combine fields from two or more tables by joining on values that are common to each. There are five types of joins, though in this lesson, we'll only cover the first one:
-
-- `INNER JOIN`
-- `LEFT OUTER JOIN`
-- `RIGHT OUTER JOIN`
-- `FULL OUTER JOIN`
-- `CROSS JOIN`
-
-As a full stack developer, you'll save data in separate tables and then use joins to get it back together.
-
 ## Learn the data model
 
 Suppose we were building an application that allows users to build resumes. In this data model we have tables for
@@ -159,6 +145,20 @@ When you run that, notice that the column name in the output is `user_id`:
        3 | Hank
        4 | Ted
 ```
+
+## What's a join statement and why is it useful?
+
+In SQL, a **join statement** combines records from two or more tables in a relational database. The combined records can be viewed or even saved to a new table.
+
+Additionally, you can combine fields from two or more tables by joining on values that are common to each. There are five types of joins, though in this lesson, we'll only cover the first one:
+
+- `INNER JOIN`
+- `LEFT OUTER JOIN`
+- `RIGHT OUTER JOIN`
+- `FULL OUTER JOIN`
+- `CROSS JOIN`
+
+As a full stack developer, you'll save data in separate tables and then use joins to get it back together.
 
 ## Joins - Syntax
 
