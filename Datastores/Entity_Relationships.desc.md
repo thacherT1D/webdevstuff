@@ -14,11 +14,19 @@
 An **entity–relationship model** (ER model) describes people, places, or things that are inter-related. As the name suggests, an ER model is composed of entities and the relationships that can exist between them. An ER model is often expressed as an **entity-relationship diagram**. Here's an ER diagram that represents the movie, award, and plot entities.
 
 ```text
-┌─────────────┐       ┌──────────────┐        ┌────────────────┐       ┌──────────────┐
-│             │       │              │       ╱│                │╲      │              │
-│    plots    │┼─────┼│    movies    │┼───────│  actor_movies  │──────┼│    movies    │
-│             │       │              │       ╲│                │╱      │              │
-└─────────────┘       └──────────────┘        └────────────────┘       └──────────────┘
+┌──────────────┐       ┌────────────────┐       ┌──────────────┐       ┌──────────────┐
+│              │      ╱│                │╲      │              │      ╱│              │
+│    actors    │───────│  actor_movies  │───────│    movies    │───────│    awards    │
+│              │      ╲│                │╱      │              │      ╲│              │
+└──────────────┘       └────────────────┘       └──────────────┘       └──────────────┘
+                                                        │
+                                                        │
+                                                        │
+                                                 ┌─────────────┐
+                                                 │             │
+                                                 │    plots    │
+                                                 │             │
+                                                 └─────────────┘
 ```
 
 This ER diagram uses crow's foot notation to specify the relationship cardinality of the entities. **Relationship cardinality** is just a fancy term that means the number of related entities in a relationship. There are three distinct relationship cardinality types.
@@ -29,15 +37,33 @@ This ER diagram uses crow's foot notation to specify the relationship cardinalit
 
 A **one-to-one** relationship describes the relationship between two entities, `A` and `B`, in which one entity of `A` may only be linked to one entity of `B` and vice versa. For example, think of `A` as movies, and `B` as plots. A movie has only one plot and a plot has only one movie.
 
-[INSERT ER DIAGRAM HERE]
+```text
+┌──────────────┐       ┌─────────────┐
+│              │       │             │
+│    movies    │───────│    plots    │
+│              │       │             │
+└──────────────┘       └─────────────┘
+```
 
 A **one-to-many** relationship describes the relationship between two entities, `A` and `B`, in which an entity of `A` may be linked to many entities of `B`, but a entity of `B` is linked to only one entity of `A`. For example, think of `A` as movies and `B` as awards. A movie can have several awards, but an award can only be given to one movie (per year).
 
-[INSERT ER DIAGRAM HERE]
+```text
+┌──────────────┐       ┌──────────────┐
+│              │      ╱│              │
+│    movies    │───────│    awards    │
+│              │      ╲│              │
+└──────────────┘       └──────────────┘
+```
 
 A **many-to-many** relationship describes the relationship between two entities, `A` and `B`, in which many entities of `A` may be liked to many entities of `B` and vice versa. For example, think of `A` as movies and `B` as actors. An actor can star in several movies and a movie can have several actors.
 
-[INSERT ER MODEL HERE]
+```text
+┌──────────────┐       ┌────────────────┐       ┌──────────────┐
+│              │      ╱│                │╲      │              │
+│    actors    │───────│  actor_movies  │───────│    movies    │
+│              │      ╲│                │╱      │              │
+└──────────────┘       └────────────────┘       └──────────────┘
+```
 
 As you can see here, a many-to-many relationship is just the composition of two one-to-many relationships with an associative entity in the middle. We'll talk more about this kind entity a bit.
 
