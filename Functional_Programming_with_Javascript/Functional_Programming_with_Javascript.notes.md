@@ -28,9 +28,8 @@ Topics: (overview of these)
 - Have students read through the first section up to side effects.
 - Give students 5 minutes on their own to research what "side effects" are in functional programming.
 - Give students 2 minutes to discuss their findings with their table and then share an agreed upon answer with the class.
-
 - Review what functional programming is with regards to side-effects.
-
+- Have students read to the end, then start the exercise at the bottom.
 
 
 ### Resources

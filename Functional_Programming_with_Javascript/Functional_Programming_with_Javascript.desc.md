@@ -117,9 +117,9 @@ each(names, console.log)
 
 - There are many libraries that make many useful functions available through functional design.
 
-- lodash
+- [lodash](https://lodash.com/)
 
-- underscore
+- [underscore](http://underscorejs.org/)
 
 - http://benmccormick.org/2014/11/12/underscore-vs-lodash/
 - http://stackoverflow.com/questions/13789618/differences-between-lodash-and-underscore
