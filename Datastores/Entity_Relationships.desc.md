@@ -507,7 +507,7 @@ id | first_name | last_name |         name         | start_year | end_year
 - [Wikipedia - Associative entity](https://en.wikipedia.org/wiki/Associative_entity)
 - [Wikipedia - Entity relationship model](https://en.wikipedia.org/wiki/Entity%E2%80%93relationship_model)
 - [Wikipedia - Many-to-many (data model)][many-to-many]
-- [Wikipedia - One-to-many (data model)][one-to-many]
+- [Wikipedia - Many-to-one (data model)][many-to-one]
 - [Wikipedia - One-to-one (data model)][one-to-one]
 - [Youtube - Entity Relationship Diagram Training](https://www.youtube.com/watch?v=-fQ-bRllhXc)
 - [Youtube - Introduction to Set Theory](https://www.youtube.com/watch?v=yCwnifwVjIg)
@@ -524,5 +524,5 @@ id | first_name | last_name |         name         | start_year | end_year
 <iframe src="https://player.vimeo.com/video/142034756?byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 [many-to-many]: https://en.wikipedia.org/wiki/Many-to-many_(data_model)
-[one-to-many]: https://en.wikipedia.org/wiki/Many-to-one_(data_model)
+[many-to-one]: https://en.wikipedia.org/wiki/Many-to-one_(data_model)
 [one-to-one]: https://en.wikipedia.org/wiki/One-to-one_(data_model)
