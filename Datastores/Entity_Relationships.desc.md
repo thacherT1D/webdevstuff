@@ -1,4 +1,27 @@
-## Relational Databases
+## Objectives
+
+1. Explain what a join statement is.
+1. Explain why a join statement is useful.
+1. Alias columns and tables in SQL `SELECT` statements.
+1. Write inner join statements.
+1. Build multi-line SQL statements.
+1. Chain multiple SQL statements together.
+
+## What's a join statement and why is it useful?
+
+In SQL, a **join statement** combines records from two or more tables in a relational database. The combined records can be viewed or even saved to a new table.
+
+Additionally, you can combine fields from two or more tables by joining on values that are common to each. There are five types of joins, though in this lesson, we'll only cover the first one:
+
+- `INNER JOIN`
+- `LEFT OUTER JOIN`
+- `RIGHT OUTER JOIN`
+- `FULL OUTER JOIN`
+- `CROSS JOIN`
+
+As a full stack developer, you'll save data in separate tables and then use joins to get it back together.
+
+## Learn the data model
 
 Suppose we were building an application that allows users to build resumes. In this data model we have tables for
 
@@ -11,46 +34,17 @@ Logically in our application, each user may have as many employments and resumes
 
 In the next few exercises you'll learn how to join these together.
 
-## Setup
+At the Terminal, clone the following repository and then build a database using the SQL file included:
 
-1. At the terminal, clone the following repository and then build a database using the SQL file included:
-
-```
+```shell
 git clone git@github.com:gSchool/sql-curriculum.git
 cd sql-curriculum/Unit-02-Relational
 createdb resume_builder
 psql resume_builder -f 01-statements.sql
-psql -d resume_builder
+psql resume_builder
 ```
 
-> `createdb` is a command line utility that was installed when you ran `brew install postgresql` and it simply creates a new postgres database.  It's the same as going into `psql` and typing `create database resume_builder`.  If you need to drop that database and start over again, you can do that with `dropdb resume_builder`.
-
-# Objectives
-
-1. Explain what join statements are in the context of SQL.
-1. Explain why joins are useful.
-1. Alias columns and tables in SQL `SELECT` statements.
-1. Write inner join statements.
-1. Build multi-line SQL statements.
-1. Chain multiple SQL statements together.
-
-## What JOINs are and why they are useful
-
-A SQL `JOIN` statement combines records from two or more tables in a relational database. It creates a set that can be saved as a new table or simply viewed.
-
-Additionally, you can combine fields from two or more tables by using joining on values that are common to each. There are five types of joins, though in this lesson, we'll only cover the first one:
-
-- `INNER JOIN`
-- `LEFT OUTER JOIN`
-- `RIGHT OUTER JOIN`
-- `FULL OUTER JOIN`
-- `CROSS JOIN`
-
-As a full stack developer, you'll save data in separate tables and then use joins to get it back together.
-
-## Learn the data model
-
-Recall that `\d` in `psql` lists all relations (or tables) in the database, and `\d table_name` lists the specific structure of `table_name`. So to get more details about these tables, spend some time getting familiar with their structure and where they connect (e.g. spots where we can join data).
+So to get more details about these tables, spend some time getting familiar with their structure and where they connect (e.g. spots where we can join data).
 
 To start, run the following commands:
 
@@ -62,8 +56,6 @@ psql resume_builder
 \d employments
 \d employment_resumes
 ```
-
-## Review
 
 Just to get into the data model a little, and review your SQL, open the `resume_builder` database with `psql`, and perform the following queries:
 
@@ -98,7 +90,7 @@ SELECT users.id AS user_id, users.first_name FROM users;
 
 When you run that, notice that the column name in the output is `user_id`:
 
-```
+```text
  user_id | first_name
 ---------+------------
        1 | Ty
@@ -112,14 +104,14 @@ When you run that, notice that the column name in the output is `user_id`:
 Unlike Mongo and most document databases and key-value stores, in SQL you can easily make a single query that returns data from multiple tables.  The syntax looks like this:
 
 ```sql
-SELECT * FROM users
-INNER JOIN employments ON employments.user_id = users.id;
+SELECT * FROM users INNER JOIN employments ON employments.user_id = users.id;
 ```
 
 In SQL newlines and spacing don't matter, so the same query might look like this:
 
 ```sql
-SELECT * FROM users INNER JOIN employments ON employments.user_id = users.id;
+SELECT * FROM users
+INNER JOIN employments ON employments.user_id = users.id;
 ```
 
 or this...
@@ -134,22 +126,22 @@ INNER JOIN employments
 Some things in SQL are case-sensitive, like the values in your `where` clauses, but for keywords the case doesn't matter.  So you also might see that same query look like this:
 
 ```sql
-SELECT *
-FROM users
-INNER JOIN employments
-  ON employments.user_id = users.id;
+select *
+from users
+inner join employments
+  on employments.user_id = users.id;
 ```
 
 Notice that `ON` clause?  It doesn't matter which table is listed on which side, so these two are equivalent:
 
 ```sql
-INNER JOIN employments ON employments.user_id = users.id;
+SELECT * FROM users INNER JOIN employments ON employments.user_id = users.id;
 ```
 
 and...
 
 ```sql
-INNER JOIN employments ON users.id = employments.user_id;
+SELECT * FROM users INNER JOIN employments ON users.id = employments.user_id;
 ```
 
 ## Inner / Left / Right Joins
@@ -181,12 +173,14 @@ In `psql` you can run the previous command by using the up arrow, or using `CTRL
 1. Take the query from above and sort it by the `start_year` ascending. (hint: read this http://www.postgresql.org/docs/9.1/static/queries-order.html)
 1. Select `title`, `organization`, `start_year`, and `end_year` from `employments` for `resume_id = 1` (hint: `\d employments_resumes`)
 
-#### Three things to note
+### Three things to note
+
 - The order of the equality doesn't matter: `resumes.id = employment_resumes.resume_id` is equivalent to `employment_resumes.resume_id = resumes.id`.
 - When there's a duplicate field name, you need to specify the table name.
 - When you are displaying 2 fields with the same name and want to differentiate them in the JOIN, use aliases.
 
 An example of the last two noes:
+
 ```sql
 SELECT users.id AS user_id, employments.id AS employments_id
 FROM users
