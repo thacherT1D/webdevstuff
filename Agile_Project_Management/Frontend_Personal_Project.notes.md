@@ -120,3 +120,12 @@ App Constraints:
 ## Present your work to the class
 
 * Be prepared to spend ~5 minutes presenting your work to the class.
+* Project should address the following:
+
+```
+-- ~ 20 seconds about who you are and what problem your project solves
+-- A walkthrough of your app ( ~ 1 minute )
+-- A brief discussion of how your app works under the hood (~ 1 minute )
+-- Challenges you faced and how you solved them ( ~ 1 minute )
+
+```
