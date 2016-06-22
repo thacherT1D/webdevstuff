@@ -219,7 +219,7 @@ CREATE TABLE movies (
 
 CREATE TABLE awards (
   id serial PRIMARY KEY,
-  movies_id integer NOT NULL REFERENCES movies ON DELETE CASCADE,
+  movie_id integer NOT NULL REFERENCES movies ON DELETE CASCADE,
   name text
 );
 ```
