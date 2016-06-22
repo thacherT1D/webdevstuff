@@ -81,7 +81,7 @@ An ER diagram is the result of analyzing a problem domain to better understand h
 
 Additionally, an ER diagram is often created to represent the persistence needs of a new feature in a web application. Typically, creating an ER diagram is the first step toward forming a relational database structure for the feature. In a relational database, the relationships between entities are implemented by storing the **primary key** of one entity as a **foreign key** in the table of another entity.
 
-Here's an example ER diagram that represents the relationship between movies and awards with their respective attributes.
+Here's an example ER diagram that represents the relationship between movies and awards in more detail.
 
 ```text
 ┌──────────────┐       ┌──────────────┐
