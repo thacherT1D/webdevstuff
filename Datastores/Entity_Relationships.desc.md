@@ -65,7 +65,7 @@ A **many-to-many** relationship describes the relationship between two entities,
 └──────────────┘       └────────────────┘       └──────────────┘
 ```
 
-As you can see here, a many-to-many relationship is just the composition of two one-to-many relationships with an associative entity in the middle. We'll talk more about this kind entity a bit.
+As you can see here, a many-to-many relationship is the combination of two one-to-many relationships connected to an associative entity in the middle. We'll talk more about associative entities in a bit.
 
 ### Exercise
 
