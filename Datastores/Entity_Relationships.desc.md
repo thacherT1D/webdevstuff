@@ -11,7 +11,7 @@
 
 ## What's an entity relationship diagram?
 
-An **entity–relationship diagram** (ER diagram) is a drawing that represents people, places, or things that are inter-related. As the name suggests, an ER diagram is composed of entities and the relationships that can exist between them. Here's an ER diagram that represents movie, award, and plot entities and their relationships.
+An **entity relationship diagram** (ER diagram) is a drawing that represents people, places, or things that are inter-related. As the name suggests, an ER diagram is composed of entities and the relationships that can exist between them. Here's an ER diagram that represents movie, award, and plot entities and their relationships.
 
 ```text
 ┌──────────────┐       ┌────────────────┐       ┌──────────────┐       ┌──────────────┐
