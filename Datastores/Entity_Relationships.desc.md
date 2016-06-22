@@ -2,7 +2,8 @@
 
 1. Explain what an entity-relationship model is.
 1. Explain why an entity-relationship model is useful.
-1. Implement an entity-relationship model in a relational database system.
+1. Explain what the four PostgreSQL column constraints are.
+1. Implement an entity-relationship model in PostgreSQL.
 1. Explain what a join statement is.
 1. Explain why a join statement is useful.
 1. Alias columns and tables in SQL `SELECT` statements.
@@ -55,15 +56,55 @@ A **many-to-many** relationship describes the relationship between two entities,
 
 [INSERT ER MODEL HERE]
 
-## How do you implement an entity-relationship model in a relational database system?
+## What are the four PostgreSQL column constraints?
 
 A **not-null constraint** simply specifies that a column must not assume the null value. A table can have more than one column with a not-null constraint.
 
+```sql
+CREATE TABLE products (
+  id serial,
+  name text NOT NULL,
+  price numeric NOT NULL
+);
+```
+
 A **unique constraint** ensures that the data contained in a column is unique among all the rows in the table. Adding a unique constraint automatically creates a unique index on the column, which is something you're learn about later. A table can have more than one column with a unique constraint.
+
+```sql
+CREATE TABLE products (
+  id serial UNIQUE,
+  name text NOT NULL,
+  price numeric NOT NULL
+);
+```
 
 A **primary key constraint** indicates that a column can be used as a unique identifier for rows in the table. This constraint requires the values in the primary key column to be both unique and not null. Adding a primary key constraint automatically creates a unique index on the column, which is something you'll learn about later. A table can only have one column with a primary key constraint.
 
+```sql
+CREATE TABLE products (
+  id serial PRIMARY KEY,
+  name text NOT NULL,
+  price numeric NOT NULL
+);
+```
+
 A **foreign key constraint** specifies that the values in a column must match the values appearing in some row of another table. This constraint is used to maintain the referential integrity between two related tables. A table can have more than one column with a foreign key constraint. A foreign key constraint can also cascade the deletion of its specified row. In other words, when the referenced row is deleted, the row(s) referencing it should be automatically deleted as well.
+
+```sql
+CREATE TABLE products (
+  id serial PRIMARY KEY,
+  name text NOT NULL,
+  price numeric NOT NULL
+);
+
+CREATE TABLE orders (
+  id serial PRIMARY KEY,
+  product_id integer REFERENCES countries ON DELETE CASCADE,
+  quantity integer
+);
+```
+
+## How do you implement an entity-relationship model in PostgreSQL?
 
 In a relational database system, a one-to-one relationship exists when one row in table A is linked with only one row in table B.
 
