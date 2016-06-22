@@ -44,15 +44,15 @@ In an ER model, the **cardinality** of a relationship describes the number of el
 - One-to-many relationship
 - Many-to-many relationship
 
-A **one-to-one** relationship describes the relationship between two entities, A and B, in which one element of A may only be linked to one element of B and vice versa. For example, think of A as countries, and B as capital cities. A country has only one capital city, and a capital city is the capital of only one country.
+A **one-to-one** relationship describes the relationship between two entities, A and B, in which one element of A may only be linked to one element of B and vice versa. For example, think of A as movies, and B as plots. A movie has only one plot and a plot has only one movie.
 
 [INSERT ER MODEL HERE]
 
-A **one-to-many** relationship describes the relationship between two entities, A and B, in which an element of A may be linked to many elements of B, but a member of B is linked to only one element of A. For example, think of A as mothers, and B as children. A mother can have several children, but a child can have only one mother.
+A **one-to-many** relationship describes the relationship between two entities, A and B, in which an element of A may be linked to many elements of B, but a member of B is linked to only one element of A. For example, think of A as movies and B as awards. A movie can have several awards, but an award can only be given to one movie (per year).
 
 [INSERT ER MODEL HERE]
 
-A **many-to-many** relationship describes the relationship between two entities, A and B, in which many elements of A may be liked to many elements of B and vice versa. For example, think of A as Authors, and B as Books. An Author can write several Books and a Book can be written by several Authors.
+A **many-to-many** relationship describes the relationship between two entities, A and B, in which many elements of A may be liked to many elements of B and vice versa. For example, think of A as movies and B as actors. An actor can star in several movies and a movie can have several actors.
 
 [INSERT ER MODEL HERE]
 
@@ -72,46 +72,48 @@ There are four PostgreSQL column constraints.
 A **not-null constraint** simply specifies that a column must not assume the null value. A table can have more than one column with a not-null constraint.
 
 ```sql
-CREATE TABLE products (
+CREATE TABLE movies (
   id serial,
-  name text NOT NULL,
-  price numeric NOT NULL
+  title text,
+  is_3d boolean NOT NULL
 );
 ```
+
+**NOTE:** The `serial` data type automatically adds not-null constraint to the column.
 
 A **unique constraint** ensures that the data contained in a column is unique among all the rows in the table. Adding a unique constraint automatically creates a unique index on the column, which is something you're learn about later. A table can have more than one column with a unique constraint.
 
 ```sql
-CREATE TABLE products (
+CREATE TABLE movies (
   id serial UNIQUE,
-  name text NOT NULL,
-  price numeric NOT NULL
+  title text,
+  is_3d boolean NOT NULL
 );
 ```
 
 A **primary key constraint** indicates that a column can be used as a unique identifier for rows in the table. This constraint requires the values in the primary key column to be both unique and not null. Adding a primary key constraint automatically creates a unique index on the column, which is something you'll learn about later. A table can only have one column with a primary key constraint.
 
 ```sql
-CREATE TABLE products (
+CREATE TABLE movies (
   id serial PRIMARY KEY,
-  name text NOT NULL,
-  price numeric NOT NULL
+  title text,
+  is_3d boolean NOT NULL
 );
 ```
 
 A **foreign key constraint** specifies that the values in a column must match the values appearing in some row of another table. This constraint is used to maintain the referential integrity between two related tables. A table can have more than one column with a foreign key constraint. A foreign key constraint can also cascade the deletion of its specified row. In other words, when the referenced row is deleted, the row(s) referencing it should be automatically deleted as well.
 
 ```sql
-CREATE TABLE products (
+CREATE TABLE movies (
   id serial PRIMARY KEY,
-  name text NOT NULL,
-  price numeric NOT NULL
+  title text,
+  is_3d boolean NOT NULL
 );
 
-CREATE TABLE orders (
+CREATE TABLE awards (
   id serial PRIMARY KEY,
-  product_id integer REFERENCES countries ON DELETE CASCADE,
-  quantity integer
+  movies_id integer REFERENCES movies ON DELETE CASCADE,
+  name text
 );
 ```
 
@@ -120,15 +122,15 @@ CREATE TABLE orders (
 In a relational database system, a one-to-one relationship exists when one row in table A is linked with only one row in table B.
 
 ```sql
-CREATE TABLE countries (
+CREATE TABLE movies (
   id serial PRIMARY KEY,
-  name text
+  title text
 );
 
-CREATE TABLE capital_cities (
+CREATE TABLE plots (
   id serial PRIMARY KEY,
-  country_id integer UNIQUE NOT NULL REFERENCES countries ON DELETE CASCADE,
-  name text
+  movie_id integer UNIQUE NOT NULL REFERENCES movies ON DELETE CASCADE,
+  summary text
 );
 ```
 
@@ -137,14 +139,14 @@ CREATE TABLE capital_cities (
 In a relational database, a one-to-many relationship exists when one row in table A is linked with many rows in table B, but one row in table B is linked to only one row in table A.
 
 ```sql
-CREATE TABLE mothers (
+CREATE TABLE movies (
   id serial PRIMARY KEY,
-  name text
+  title text
 );
 
-CREATE TABLE children (
+CREATE TABLE awards (
   id serial PRIMARY KEY,
-  mother_id integer NOT NULL REFERENCES mothers ON DELETE CASCADE,
+  movie_id integer NOT NULL REFERENCES movies ON DELETE CASCADE,
   name text
 );
 ```
@@ -154,21 +156,21 @@ CREATE TABLE children (
 In a relational database management system, a many-to-many relationship is implemented by means of an join table, AB, with two one-to-many relationships. A -> AB and B -> AB. In this case the logical primary key for AB is formed from the two foreign keys.
 
 ```sql
-CREATE TABLE authors (
+CREATE TABLE movies (
+  id serial PRIMARY KEY,
+  title text
+);
+
+CREATE TABLE actors (
   id serial PRIMARY KEY,
   name text
 );
 
-CREATE TABLE books (
+CREATE TABLE actors_movies (
   id serial PRIMARY KEY,
-  name text
-);
-
-CREATE TABLE authorships (
-  id serial PRIMARY KEY,
-  author_id integer NOT NULL REFERENCES authors ON DELETE CASCADE,
-  book_id integer NOT NULL REFERENCES books ON DELETE CASCADE,
-  name text
+  actor_id integer NOT NULL REFERENCES actors ON DELETE CASCADE,
+  movie_id integer NOT NULL REFERENCES movies ON DELETE CASCADE,
+  role text
 );
 ```
 
