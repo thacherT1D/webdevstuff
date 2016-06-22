@@ -495,7 +495,7 @@ ORDER BY score DESC;
 
 ### Exercise
 
-You know you have it correct when your result set looks like this:
+Write an SQL command that displays the follow rows.
 
 ```
        title        |      released_at       | score |     actor_name     |           role
