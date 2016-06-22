@@ -213,6 +213,8 @@ CREATE TABLE movies (
 
 A **foreign key constraint** specifies that the values in a column must match the values appearing in some row of another table. This constraint is used to maintain the referential integrity between two related tables. A table can have more than one column with a foreign key constraint. A foreign key constraint can also cascade the deletion of its specified row. In other words, when the referenced row is deleted, the row(s) referencing it should be automatically deleted as well.
 
+**NOTE:** Typically, a foreign key has a not-null constraint to prevent orphaned entities from being inserted.
+
 ```sql
 CREATE TABLE movies (
   id serial PRIMARY KEY,
@@ -226,8 +228,6 @@ CREATE TABLE awards (
   name text
 );
 ```
-
-**NOTE:** Typically, a foreign key has a not-null constraint to prevent orphaned entities from being inserted.
 
 ### Exercise
 
