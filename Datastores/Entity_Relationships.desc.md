@@ -133,7 +133,7 @@ INSERT INTO awards (movie_id, kind, name)
 VALUES (1, 'Oscar', 'Best Achievement in Music Written for Motion Pictures, Original Song');
 ```
 
-Here's an example of a movie entity's unique identifier being stored as the `id` primary key in the `movies` table.
+Here's the above movie entity's unique identifier being stored as the `id` primary key in the `movies` table.
 
 ```text
  id | title  | duration | rating |   genre   | is_3d |      released_at       | score
@@ -141,7 +141,7 @@ Here's an example of a movie entity's unique identifier being stored as the `id`
   1 | Frozen |      102 | PG     | Animation | t     | 2013-11-26 16:00:00-08 |   7.6
 ```
 
-And here's an example of the movie entity's unique identifier being stored as the `movie_id` foreign key in the `awards` table for two award entities.
+And here's the same movie entity's unique identifier being stored as the `movie_id` foreign key in the `awards` table for two award entities.
 
 ```text
  id | movie_id | kind  |                                 name                                 
