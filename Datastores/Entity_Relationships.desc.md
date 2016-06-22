@@ -11,11 +11,43 @@
 
 ## What's an entity-relationship model?
 
-An **entity–relationship** model (ER model) describes people, places, or things that are inter-related. As the name suggests, an ER model is composed of entities and the relationships that can exist between them.
+An **entity–relationship model** (ER model) describes people, places, or things that are inter-related. As the name suggests, an ER model is composed of entities and the relationships that can exist between them. An ER model is often expressed as an **entity-relationship diagram**. Here's an ER diagram that represents the movie, award, and plot entities.
 
-[INSERT EXAMPLE ER MODEL OF MOVIES AND AWARDS HERE]
+[INSERT ER DIAGRAM OF MOVIES, AWARDS, AND PLOTS HERE]
 
-An ER model is commonly formed to represent the persistence needs of a web application. Typically, forming an ER model is the first step toward establishing a relational database structure. In a relational database, the relationship between an entity is implemented by storing the primary key of one entity as a foreign key reference in the table of another entity.
+This ER diagram uses crow's foot notation to specify the relationship cardinality of the entities. **Relationship cardinality** is just a fancy term that means the number of related entities in a relationship. There are three distinct relationship cardinality types.
+
+- One-to-one relationship
+- One-to-many relationship
+- Many-to-many relationship
+
+A **one-to-one** relationship describes the relationship between two entities, `A` and `B`, in which one entity of `A` may only be linked to one entity of `B` and vice versa. For example, think of `A` as movies, and `B` as plots. A movie has only one plot and a plot has only one movie.
+
+[INSERT ER DIAGRAM HERE]
+
+A **one-to-many** relationship describes the relationship between two entities, `A` and `B`, in which an entity of `A` may be linked to many entities of `B`, but a entity of `B` is linked to only one entity of `A`. For example, think of `A` as movies and `B` as awards. A movie can have several awards, but an award can only be given to one movie (per year).
+
+[INSERT ER DIAGRAM HERE]
+
+A **many-to-many** relationship describes the relationship between two entities, `A` and `B`, in which many entities of `A` may be liked to many entities of `B` and vice versa. For example, think of `A` as movies and `B` as actors. An actor can star in several movies and a movie can have several actors.
+
+[INSERT ER MODEL HERE]
+
+As you can see here, a many-to-many relationship is just the composition of two one-to-many relationships with an associative entity in the middle. We'll talk more about this kind entity a bit.
+
+### Exercise
+
+Draw an ER diagram to represent the relationship between pet entities and breed entities.
+
+Once you're satisfied, add owner entities to the diagram and draw their relationship with pet entities.
+
+Once you're satisfied with that, add your own entities to the diagram and draw their relationship with the other entities as appropriate.
+
+## Why is an entity-relationship model useful?
+
+An ER model is the result of analyzing a problem domain to better understand how its entities and their relationships exist over time. These processes that modified entities and their relationships can often be hard to describe in words. An ER diagram can be useful to represent these processes graphically.
+
+An ER diagram is commonly created to represent the persistence needs of a new feature in a web application. Typically, creating an ER diagram is the first step toward establishing a relational database structure for the feature. In a relational database, the relationships between entities are implemented by storing the primary key of one entity as a foreign key reference in the table of another entity.
 
 Here's an example of a movie entity's unique identifier being stored as the `id` primary key in the `movies` table.
 
@@ -25,7 +57,7 @@ Here's an example of a movie entity's unique identifier being stored as the `id`
   1 | Frozen |      102 | PG     | Animation | t     | 2013-11-26 16:00:00-08 |   7.6
 ```
 
-And being stored as the `movie_id` foreign key of two award entities in the `awards` table.
+And here's an example of the movie entity's unique identifier being stored as the `movie_id` foreign key of two award entities in the `awards` table.
 
 ```text
  id | movie_id | kind  |                                 name                                 
@@ -34,27 +66,9 @@ And being stored as the `movie_id` foreign key of two award entities in the `awa
   2 |        1 | Oscar | Best Achievement in Music Written for Motion Pictures, Original Song
 ```
 
-## Why is an entity-relationship model useful?
+###
 
-An ER model is the result of systematic analysis of a problem domain to better understand how its entities and relationships exist and change over time. These processes can be often be hard to describe in words, so an ER model can be useful to present them graphically instead.
-
-In an ER model, the **cardinality** of a relationship describes the number of elements between two entities. There are three distinct relationship cardinality types.
-
-- One-to-one relationship
-- One-to-many relationship
-- Many-to-many relationship
-
-A **one-to-one** relationship describes the relationship between two entities, A and B, in which one element of A may only be linked to one element of B and vice versa. For example, think of A as movies, and B as plots. A movie has only one plot and a plot has only one movie.
-
-[INSERT ER MODEL HERE]
-
-A **one-to-many** relationship describes the relationship between two entities, A and B, in which an element of A may be linked to many elements of B, but a member of B is linked to only one element of A. For example, think of A as movies and B as awards. A movie can have several awards, but an award can only be given to one movie (per year).
-
-[INSERT ER MODEL HERE]
-
-A **many-to-many** relationship describes the relationship between two entities, A and B, in which many elements of A may be liked to many elements of B and vice versa. For example, think of A as movies and B as actors. An actor can star in several movies and a movie can have several actors.
-
-[INSERT ER MODEL HERE]
+Turn to a neighbor and explain, in your own words, why an ER model is useful when creating a new feature in a web application.
 
 ## What are the four PostgreSQL column constraints?
 
@@ -399,9 +413,9 @@ id | first_name | last_name |         name         | start_year | end_year
 - [PostgreSQL Documentation - Constraints](https://www.postgresql.org/docs/9.5/static/ddl-constraints.html)
 - [Wikipedia - Associative entity](https://en.wikipedia.org/wiki/Associative_entity)
 - [Wikipedia - Entity-relationship model](https://en.wikipedia.org/wiki/Entity%E2%80%93relationship_model)
-- [Wikipedia - Many-to-many (data model)](https://en.wikipedia.org/wiki/Many-to-many_(data_model)
-- [Wikipedia - One-to-many (data model)](https://en.wikipedia.org/wiki/One-to-many_(data_model)
-- [Wikipedia - One-to-one (data model)](https://en.wikipedia.org/wiki/One-to-one_(data_model)
+- [Wikipedia - Many-to-many (data model)](https://en.wikipedia.org/wiki/Many-to-many_(data_model))
+- [Wikipedia - One-to-many (data model)](https://en.wikipedia.org/wiki/One-to-many_(data_model))
+- [Wikipedia - One-to-one (data model)](https://en.wikipedia.org/wiki/One-to-one_(data_model))
 - [Youtube - Entity Relationship Diagram Training](https://www.youtube.com/watch?v=-fQ-bRllhXc)
 - [Youtube - Introduction to Set Theory](https://www.youtube.com/watch?v=yCwnifwVjIg)
 
