@@ -29,6 +29,8 @@ Topics: (overview of these)
 - Give students 5 minutes on their own to research what "side effects" are in functional programming.
 - Give students 2 minutes to discuss their findings with their table and then share an agreed upon answer with the class.
 - Review what functional programming is with regards to side-effects.
+- Discuss mutable and immutable data.
+
 - Have students read to the end, then start the exercise at the bottom.
 
 
