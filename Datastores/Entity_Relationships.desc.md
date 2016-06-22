@@ -305,7 +305,7 @@ CREATE TABLE actors_movies (
 ```shell
 dropdb movie_junkies_dev
 createdb movie_junkies_dev
-curl -fsSL https://git.io/voX4O | psql movie_junkies_dev
+curl -fsSL https://git.io/voXVD | psql movie_junkies_dev
 psql movie_junkies_dev
 ```
 
