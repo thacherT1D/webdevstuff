@@ -373,7 +373,7 @@ In SQL, **join clause** is an optional part of a `SELECT` command that combines 
 SELECT * FROM movies INNER JOIN awards ON awards.movie_id = movies.id;
 ```
 
-There are five types of joins, though in this lesson, we'll only cover the first one:
+There are five types of join clauses.
 
 - `INNER JOIN`
 - `LEFT OUTER JOIN`
@@ -381,66 +381,26 @@ There are five types of joins, though in this lesson, we'll only cover the first
 - `FULL OUTER JOIN`
 - `CROSS JOIN`
 
-As a web developer, you'll save data in separate tables and then use join clauses to get it back together.
-
-## Joins - Syntax
-
-Unlike Mongo and most document databases and key-value stores, in SQL you can easily make a single query that returns data from multiple tables.  The syntax looks like this:
-
-```sql
-SELECT * FROM users INNER JOIN employments ON employments.user_id = users.id;
-```
-
-In SQL newlines and spacing don't matter, so the same query might look like this:
-
-```sql
-SELECT * FROM users
-INNER JOIN employments ON employments.user_id = users.id;
-```
-
-or this...
-
-```sql
-SELECT *
-FROM users
-INNER JOIN employments
-  ON employments.user_id = users.id;
-```
-
-Some things in SQL are case-sensitive, like the values in your `where` clauses, but for keywords the case doesn't matter.  So you also might see that same query look like this:
-
-```sql
-select *
-from users
-inner join employments
-  on employments.user_id = users.id;
-```
-
-Notice that `ON` clause?  It doesn't matter which table is listed on which side, so these two are equivalent:
-
-```sql
-SELECT * FROM users INNER JOIN employments ON employments.user_id = users.id;
-```
-
-and...
-
-```sql
-SELECT * FROM users INNER JOIN employments ON users.id = employments.user_id;
-```
-
-## Inner / Left / Right Joins
-
-There are several different ways you can join data.  Three common ways are `INNER JOIN`, `LEFT JOIN` and `RIGHT JOIN`.
-
-Take a few minutes to search the internet for the differences between the three - joins have been around for years, so there's a plethora of great information and articles on what they are / when to use them.
-
-...
-
-Have you searched yet?  No really - go do that :)
-
-You're back?  Awesome - let's talk about how to use them. Here is an image that could be useful:
-
 ![SQL JOINS](http://www.codeproject.com/KB/database/Visual_SQL_Joins/Visual_SQL_JOINS_orig.jpg)
+
+In this lesson, you'll only play with `INNER JOIN` clauses.
+
+## How do you use an `INNER JOIN` clause?
+
+```sql
+SELECT * FROM movies INNER JOIN awards ON awards.movie_id = movies.id;
+
+SELECT * FROM movies
+INNER JOIN awards ON awards.movie_id = movies.id;
+
+SELECT *
+FROM movies
+INNER JOIN awards
+  ON awards.movie_id = movies.id;
+
+SELECT * FROM movies INNER JOIN awards ON movies.id = awards.movie_id;
+```
+
 
 In `psql` you can run the previous command by using the up arrow, or using `CTRL+P` (just like the command line).  When you arrow up to a multi-line command, you see the whole command (in multiple lines) and you can use arrow keys to go back through the text.  Use `CTRL+A` to go to the beginning (just like the command line) and `CTRL+E` to go to the end.
 
