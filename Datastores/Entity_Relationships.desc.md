@@ -98,7 +98,7 @@ Here's an example ER diagram that represents the relationship between movies and
 └──────────────┘       └──────────────┘
 ```
 
-Here's an example `CREATE TABLE` SQL command that'll create a `movies` table based on the above ER diagram.
+Using the diagram, it's easy to see how you'd create the `movies` and `awards` tables. Here are some example `CREATE TABLE` commands that'll create tables based on the above ER diagram.
 
 ```sql
 CREATE TABLE movies (
@@ -111,11 +111,7 @@ CREATE TABLE movies (
   released_at timestamp with time zone,
   score numeric(3, 1)
 );
-```
 
-Here's an example `CREATE TABLE` SQL command that'll create a `awards` table based on the above ER diagram.
-
-```sql
 CREATE TABLE awards (
   id serial,
   movie_id integer,
@@ -124,16 +120,12 @@ CREATE TABLE awards (
 );
 ```
 
-Here's an example `INSERT` SQL command that'll insert a movie entity into the `movies` table from above.
+And with the tables defined, it's easy to see how you'd insert some rows into them. Here are some an example `INSERT` commands insert rows into the tables from above.
 
 ```sql
 INSERT INTO movies (title, duration, rating, genre, is_3d, released_at, score)
 VALUES ('Frozen', 102, 'PG', 'Animation', 't', '2013-11-26 16:00:00-08', 7.6);
-```
 
-Here's an example `INSERT` SQL command that'll insert a few award entities into the `awards` table from above.
-
-```sql
 INSERT INTO awards (movie_id, kind, name)
 VALUES (1, 'Oscar', 'Best Animated Feature Film of the Year');
 
