@@ -365,17 +365,13 @@ When you run that, notice that the column name in the output is `user_id`:
 
 ## What's a join clause and why is it useful?
 
-In SQL, a **join clause** combines records from two or more tables in a relational database. The combined records can be viewed or even saved to a new table.
+In SQL, **join clause** is an optional part of a `SELECT` command that combines rows from two or more tables by joining on columns that are common to each. The combined rows can be viewed or even saved to a new table. The following is an example of a join clause.
 
 **NOTE:** Type the `\x auto` REPL command to automatically use PostgreSQL's extended display mode.
 
 ```sql
 SELECT * FROM movies INNER JOIN awards ON awards.movie_id = movies.id;
 ```
-
-
-Additionally, you can combine fields from two or more tables by joining on values that are common to each.
-
 
 There are five types of joins, though in this lesson, we'll only cover the first one:
 
