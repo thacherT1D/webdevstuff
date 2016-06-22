@@ -81,6 +81,23 @@ An ER model is the result of analyzing a problem domain to better understand how
 
 An ER diagram is commonly created to represent the persistence needs of a new feature in a web application. Typically, creating an ER diagram is the first step toward establishing a relational database structure for the feature. In a relational database, the relationships between entities are implemented by storing the primary key of one entity as a foreign key in the table of another entity.
 
+Here's an example ER diagram that represents the relationship between movies and awards with their respective attributes.
+
+```text
+┌──────────────┐       ┌──────────────┐
+│    movies    │       │    awards    │
+│──────────────│       │──────────────│
+│ id           │       │ id           │
+│ title        │       │ movie_id     │
+│ duration     │      ╱│ kind         │
+│ rating       │───────│ name         │
+│ genre        │      ╲│              │
+│ is_3d        │       │              │
+│ released_at  │       │              │
+│ score        │       │              │
+└──────────────┘       └──────────────┘
+```
+
 Here's an example of a movie entity's unique identifier being stored as the `id` primary key in the `movies` table.
 
 ```text
