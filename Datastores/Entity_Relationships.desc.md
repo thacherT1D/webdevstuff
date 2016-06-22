@@ -326,42 +326,6 @@ Spend some time getting familiar with the tables and their relationships.
 
 With your neighbors, add the necessary PostgreSQL column constraints to the `CREATE TABLE` commands you created earlier for your pet-based ER diagram.
 
-## Selecting with table names / Aliasing
-
-When joining two columns, you'll sometimes need to include two columns that have the same name.  In these cases, you'll need to specify which table it comes from, which looks like this:
-
-```sql
-SELECT users.id, users.first_name FROM users;
-```
-
-Notice how the output does _not_ include the table name:
-
-```
- id | first_name
-----+------------
-  1 | Ty
-  2 | Joe
-  3 | Hank
-  4 | Ted
-```
-
-Sometimes you'll also want to rename the column, which you can do with an alias, like so:
-
-```sql
-SELECT users.id AS user_id, users.first_name FROM users;
-```
-
-When you run that, notice that the column name in the output is `user_id`:
-
-```text
- user_id | first_name
----------+------------
-       1 | Ty
-       2 | Joe
-       3 | Hank
-       4 | Ted
-```
-
 ## What's a join clause and why is it useful?
 
 In SQL, **join clause** is an optional part of a `SELECT` command that combines rows from two or more tables by joining on columns that are common to each. The combined rows can be viewed or even saved to a new table. The following is an example of a join clause.
