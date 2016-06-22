@@ -258,28 +258,9 @@ CREATE TABLE plots (
 );
 ```
 
-[INSPECT THE CREATE TABLES]
+[INSPECTE THE CREATED TABLES]
 
-```SQL
-INSERT INTO movies (id, title, duration, rating, genre, is_3d, released_at, score)
-VALUES (1, 'Frozen', 102, 'PG', 'Animation', TRUE, '2013-11-27 00:00:00 UTC', 7.6);
-
-INSERT INTO movies (id, title, duration, rating, genre, is_3d, released_at, score)
-VALUES (2, 'X-Men: Apocalypse', 144, 'PG-13', 'Action', TRUE, '2016-05-27 00:00:00 UTC', 7.4);
-
-INSERT INTO movies (id, title, duration, rating, genre, is_3d, released_at, score)
-VALUES (3, 'The Princess Bride', 98, 'PG', 'Adventure', FALSE, '1987-10-09 00:00:00 UTC', 8.1);
-
-INSERT INTO movies (id, title, duration, rating, genre, is_3d, released_at, score)
-VALUES (4, 'Pulp Fiction', 154, 'R', 'Crime', FALSE, '1994-10-14 00:00:00 UTC', 8.9);
-
-INSERT INTO plots (id, movie_id, summary) VALUES (1, 1, 'Anna, a fearless optimist, sets off on an epic journey - teaming up with rugged mountain man Kristoff and his loyal reindeer Sven - to find her sister Elsa, whose icy powers have trapped the kingdom of Arendelle in eternal winter. Encountering Everest-like conditions, mystical trolls and a hilarious snowman named Olaf, Anna and Kristoff battle the elements in a race to save the kingdom. From the outside Anna''s sister, Elsa looks poised, regal and reserved, but in reality, she lives in fear as she wrestles with a mighty secret-she was born with the power to create ice and snow. It''s a beautiful ability, but also extremely dangerous. Haunted by the moment her magic nearly killed her younger sister Anna, Elsa has isolated herself, spending every waking minute trying to suppress her growing powers. Her mounting emotions trigger the magic, accidentally setting off an eternal winter that she can''t stop. She fears she''s becoming a monster and that no one, not even her sister, can help her.');
-
-INSERT INTO plots (id, movie_id, summary) VALUES (2, 2, 'Since the dawn of civilization, he was worshipped as a God. Apocalypse, the first and most powerful mutant from Marvel''s X-Men universe, amassed the powers of many other mutants, becoming immortal and invincible. Upon awakening after thousands of years, he is disillusioned with the world as he finds it and recruits a team of powerful mutants, including a disheartened Magneto, to cleanse mankind and create a new world order, over which he will reign. As the fate of the Earth hangs in the balance, Raven with the help of Professor X must lead a team of young X-Men to stop their greatest nemesis and save mankind from complete destruction.');
-
-INSERT INTO plots (id, movie_id, summary) VALUES (3, 3, 'A kindly grandfather sits down with his ill grandson and reads him a story. The story is one that has been passed down from father to son for generations. As the grandfather reads the story, the action comes alive. The story is a classic tale of love and adventure as the beautiful Buttercup, engaged to the odious Prince Humperdinck, is kidnapped and held against her will in order to start a war, It is up to Westley (her childhood beau, now returned as the Dread Pirate Roberts) to save her. On the way he meets a thief and his hired helpers, an accomplished swordsman and a huge, super strong giant, both of whom become Westley''s companions in his quest.');
-
-INSERT INTO plots (id, movie_id, summary) VALUES (4, 4, 'Jules Winnfield and Vincent Vega are two hitmen who are out to retrieve a suitcase stolen from their employer, mob boss Marsellus Wallace. Wallace has also asked Vincent to take his wife Mia out a few days later when Wallace himself will be out of town. Butch Coolidge is an aging boxer who is paid by Wallace to lose his next fight. The lives of these seemingly unrelated people are woven together comprising of a series of funny, bizarre and uncalled-for incidents.');
+```shell
 ```
 
 [INSPECT INSERTED ROWS, PLAY WITH CONSTRAINTS]
