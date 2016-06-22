@@ -310,53 +310,22 @@ curl -fsSL https://git.io/voXYX | psql movie_junkies_dev
 psql movie_junkies_dev
 ```
 
+Spend some time getting familiar with the tables and their relationships.
+
+```
+\dt
+\d movies
+\d plots
+\d awards
+\d actors
+\d actors_movies
+```
+
 [PLAY WITH INSERTED ROWS]
 
 ### Exercise
 
 With your neighbors, add the necessary PostgreSQL column constraints to the `CREATE TABLE` commands you created earlier for your pet-based ER diagram.
-
-## Learn the data model
-
-Suppose we were building an application that allows users to build resumes. In this data model we have tables for
-
-- `users`
-- `resumes`
-- `employments`
-- `employments_resumes`
-
-Logically in our application, each user may have as many employments and resumes as they want. A resume consists of multiple of employments, for which the relationship is stored in `employments_resumes`.
-
-In the next few exercises you'll learn how to join these together.
-
-At the Terminal, clone the following repository and then build a database using the SQL file included:
-
-```shell
-git clone git@github.com:gSchool/sql-curriculum.git
-cd sql-curriculum/Unit-02-Relational
-createdb resume_builder
-psql resume_builder -f 01-statements.sql
-psql resume_builder
-```
-
-So to get more details about these tables, spend some time getting familiar with their structure and where they connect (e.g. spots where we can join data).
-
-To start, run the following commands:
-
-```
-psql resume_builder
-\dt
-\d users
-\d resumes
-\d employments
-\d employment_resumes
-```
-
-Just to get into the data model a little, and review your SQL, open the `resume_builder` database with `psql`, and perform the following queries:
-
-1. Select the `first_name` and `last_name` for all `users`.
-1. Select all `resumes` (all columns).
-1. Select all `employments` for `user_id = 3` and `user_id = 4` (<- would you use an `and` or and `or` here?)
 
 ## Selecting with table names / Aliasing
 
