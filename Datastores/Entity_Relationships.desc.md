@@ -6,8 +6,7 @@
 - Use PostgreSQL column constraints to implement an entity relationship diagram.
 - Explain what a join clause is.
 - Explain why a join clause is useful.
-- Alias columns and tables in SQL `SELECT` statements.
-- Write inner join clause.
+- Use an `INNER JOIN` clause to combine rows from different tables.
 
 ## What's an entity relationship diagram?
 
@@ -385,7 +384,7 @@ There are five types of join clauses.
 
 In this lesson, you'll only play with `INNER JOIN` clauses.
 
-## How do you use an `INNER JOIN` clause?
+## How do you use an `INNER JOIN` clause to combine rows from different tables?
 
 ```sql
 SELECT * FROM movies INNER JOIN awards ON awards.movie_id = movies.id;
