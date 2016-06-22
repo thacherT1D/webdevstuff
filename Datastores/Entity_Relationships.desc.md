@@ -7,6 +7,44 @@
 1. Build multi-line SQL statements.
 1. Chain multiple SQL statements together.
 
+## What's an entity-relationship model?
+
+An **entity–relationship** model (ER model) describes people, places, or things that are inter-related. As the name suggests, an ER model is composed of entities and the relationships that can exist between them.
+
+[INSERT EXAMPLE ER MODEL HERE]
+
+An ER model is commonly formed to represent the persistence needs of a web application. Typically, forming an ER model is the first step toward establishing a relational database structure. In a relational database, the relationship between an entity is implemented by storing the primary key of one entity as a foreign key references in the table of another entity.
+
+Here's an example of a `movie` entity's `id` being stored as a primary key in the `movies` table.
+
+```text
+ id | title  | duration | rating |   genre   | is_3d |      released_at       | score
+----+--------+----------+--------+-----------+-------+------------------------+-------
+  1 | Frozen |      102 | PG     | Comedy    | t     | 2013-11-26 16:00:00-08 |   7.6
+```
+
+And the being stored as the `movie_id` foreign key of the `awards` table.
+
+```text
+ id | movie_id | kind  |                                 name                                 
+----+----------+-------+----------------------------------------------------------------------
+  1 |        1 | Oscar | Best Animated Feature Film of the Year                               
+  2 |        1 | Oscar | Best Achievement in Music Written for Motion Pictures, Original Song
+```
+
+## Why is an entity-relationship model useful?
+
+An ER model is the result of systematic analysis of a problem domain to better understand how its entities and relationships exist and change over time. These processes can be often be hard to describe in words, so an ER model can be useful to present them graphically.
+
+**Cardinality** is the number of elements in a set or other grouping.
+
+- One-to-one
+- One-to-many
+- Many-to-many
+
+A **one-to-one** relationship is a type of cardinality that refers to the relationship between two entities (see also entity–relationship model) A and B in which one element of A may only be linked to one element of B, and vice versa. For instance, think of A as countries, and B as capital cities. A country has only one capital city, and a capital city is the capital of only one country
+In a relational database, a one-to-one relationship exists when one row in a table may be linked with only one row in another table and vice versa. It is important to note that a one-to-one relationship is not a property of the data, but rather of the relationship itself. A list of mothers and their children may happen to describe mothers with only one child, in which case one row of the mothers table will refer to only one row of the children table and vice versa, but the relationship itself is not one-to-one, because mothers may have more than one child, thus forming a one-to-many relationship.
+
 ## What's a join statement and why is it useful?
 
 In SQL, a **join statement** combines records from two or more tables in a relational database. The combined records can be viewed or even saved to a new table.

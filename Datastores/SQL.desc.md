@@ -268,15 +268,15 @@ psql movie_junkies_dev -f migration.sql
 Iterate on your migration file until you can repeatedly run it without generating an error. Then, add the necessary SQL commands to migrate an `awards` table as well. Create this table with the necessary columns to support the following entities.
 
 ```text
- id | movie_id | kind  |                                 name                                 |      received_at
-----+----------+-------+----------------------------------------------------------------------+------------------------
-  1 |        1 | Oscar | Best Animated Feature Film of the Year                               | 2014-03-01 16:00:00-08
-  2 |        1 | Oscar | Best Achievement in Music Written for Motion Pictures, Original Song | 2014-03-01 16:00:00-08
+ id | movie_id | kind  |                                 name                                 
+----+----------+-------+----------------------------------------------------------------------
+  1 |        1 | Oscar | Best Animated Feature Film of the Year                               
+  2 |        1 | Oscar | Best Achievement in Music Written for Motion Pictures, Original Song
 ```
 
 For each column, choose what you think is the most appropriate data type. When you're finished, migrate the database and use `\dt` REPL command to verify that the table was created correctly.
 
-Finally, add an `ALTER TABLE` command to bottom of the migration file that'll add a `did_win` column to the `awards` table. This column will be used to track whether or not the movie won the award. Again, choose what you think is the most appropriate data type for this column. When you're finished, migrate the database and use `\dt` REPL command to verify that the table was created correctly.
+Finally, add an `ALTER TABLE` command to bottom of the migration file that'll add a column to the `awards` table to track whether or not the related movie received the award. In other words, the difference between being nominated and winning the award. For this column, you get to choose both its name and data type. When you're finished, migrate the database and use `\dt` REPL command to verify that the table was created correctly.
 
 ## How do you use the PostgreSQL REPL to manage rows in a table?
 
