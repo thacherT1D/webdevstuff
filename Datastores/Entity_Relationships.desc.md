@@ -57,6 +57,8 @@ A **many-to-many** relationship describes the relationship between two entities,
 
 ## How do you implement an entity-relationship model in a relational database system?
 
+A **not-null constraint** simply specifies that a column must not assume the null value. A table can have more than one column with a not-null constraint.
+
 A **unique constraint** ensures that the data contained in a column is unique among all the rows in the table. Adding a unique constraint automatically creates a unique index on the column, which is something you're learn about later. A table can have more than one column with a unique constraint.
 
 A **primary key constraint** indicates that a column can be used as a unique identifier for rows in the table. This constraint requires the values in the primary key column to be both unique and not null. Adding a primary key constraint automatically creates a unique index on the column, which is something you'll learn about later. A table can only have one column with a primary key constraint.
