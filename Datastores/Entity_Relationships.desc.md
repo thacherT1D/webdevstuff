@@ -1,17 +1,17 @@
 ## Objectives
 
-1. Explain what an entity-relationship model is.
-1. Explain why an entity-relationship model is useful.
+1. Explain what an entity-relationship diagram is.
+1. Explain why an entity-relationship diagram is useful.
 1. Explain what the four PostgreSQL column constraints are.
-1. Implement an entity-relationship model in PostgreSQL.
+1. Use constraints to implement an entity-relationship diagram in PostgreSQL.
 1. Explain what a join statement is.
 1. Explain why a join statement is useful.
 1. Alias columns and tables in SQL `SELECT` statements.
 1. Write inner join statements.
 
-## What's an entity-relationship model?
+## What's an entity-relationship diagram?
 
-An **entity–relationship model** (ER model) describes people, places, or things that are inter-related. As the name suggests, an ER model is composed of entities and the relationships that can exist between them. An ER model is often expressed as an **entity-relationship diagram**. Here's an ER diagram that represents the movie, award, and plot entities.
+An **entity–relationship diagram** (ER diagram) is a drawing that represents people, places, or things that are inter-related. As the name suggests, an ER diagram is composed of entities and the relationships that can exist between them. Here's an ER diagram that represents movie, award, and plot entities and their relationships.
 
 ```text
 ┌──────────────┐       ┌────────────────┐       ┌──────────────┐       ┌──────────────┐
@@ -29,7 +29,7 @@ An **entity–relationship model** (ER model) describes people, places, or thing
                                                  └─────────────┘
 ```
 
-This ER diagram uses crow's foot notation to specify the relationship cardinality of the entities. **Relationship cardinality** is just a fancy term that means the number of related entities in a relationship. There are three distinct relationship cardinality types.
+This ER diagram uses crow's foot notation to specify the relationship cardinalities. **Relationship cardinality** is just a fancy term that means the number of related entities in a relationship. There are three distinct relationship cardinality types.
 
 - One-to-one relationship
 - One-to-many relationship
@@ -75,9 +75,9 @@ Once you're satisfied, add owner entities to the diagram and draw their relation
 
 Once you're satisfied with that, add your own entities to the diagram and draw their relationship with the other entities as appropriate.
 
-## Why is an entity-relationship model useful?
+## Why is an entity-relationship diagram useful?
 
-An ER model is the result of analyzing a problem domain to better understand how its entities and their relationships exist over time. The processes that modify entities and their relationships can often be hard to describe in words. For example, how do you describe the logic of a movie winning an award to a person who doesn't understand how to code (e.g. you future boss)? An ER diagram can be useful to represent these processes graphically.
+An ER diagram is the result of analyzing a problem domain to better understand how its entities and their relationships exist over time. The processes that modify entities and their relationships can often be hard to describe in words. For example, how do you describe the logic of a movie winning an award to a person who doesn't understand how to code (e.g. you future boss)? An ER diagram can be useful to represent these processes graphically.
 
 An ER diagram is commonly created to represent the persistence needs of a new feature in a web application. Typically, creating an ER diagram is the first step toward establishing a relational database structure for the feature. In a relational database, the relationships between entities are implemented by storing the primary key of one entity as a foreign key in the table of another entity.
 
@@ -229,7 +229,7 @@ CREATE TABLE awards (
 
 **NOTE:** Typically, a foreign key has a not-null constraint to prevent orphaned entities from being inserted.
 
-## How do you implement an entity-relationship model in PostgreSQL?
+## How do you use constraints to implement an entity-relationship diagram in PostgreSQL?
 
 In a relational database system, a one-to-one relationship exists when one row in table A is linked with only one row in table B.
 
