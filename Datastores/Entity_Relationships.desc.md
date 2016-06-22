@@ -35,7 +35,7 @@ This ER diagram uses crow's foot notation to specify the relationship cardinalit
 - One-to-many relationship
 - Many-to-many relationship
 
-A **one-to-one** relationship describes the relationship between two entities, `A` and `B`, in which one entity of `A` may only be linked to one entity of `B` and vice versa. For example, think of `A` as movies, and `B` as plots. A movie has only one plot and a plot has only one movie.
+A **one-to-one** relationship describes the relationship between two entities, `A` and `B`, in which one entity of `A` may only be linked to one entity of `B` and vice versa. For example, think of `A` as movies and `B` as plots. A movie has only one plot and a plot has only one movie.
 
 ```text
 ┌──────────────┐       ┌─────────────┐
@@ -55,7 +55,7 @@ A **one-to-many** relationship describes the relationship between two entities, 
 └──────────────┘       └──────────────┘
 ```
 
-A **many-to-many** relationship describes the relationship between two entities, `A` and `B`, in which many entities of `A` may be liked to many entities of `B` and vice versa. For example, think of `A` as movies and `B` as actors. An actor can star in several movies and a movie can have several actors.
+A **many-to-many** relationship describes the relationship between two entities, `A` and `B`, in which many entities of `A` may be linked to many entities of `B` and vice versa. For example, think of `A` as movies and `B` as actors. An actor can star in several movies and a movie can have several actors.
 
 ```text
 ┌──────────────┐       ┌────────────────┐       ┌──────────────┐
