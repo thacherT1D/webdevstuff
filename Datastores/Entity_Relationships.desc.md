@@ -63,7 +63,7 @@ A **unique constraint** ensures that the data contained in a column is unique am
 
 A **primary key constraint** indicates that a column can be used as a unique identifier for rows in the table. This constraint requires the values in the primary key column to be both unique and not null. Adding a primary key constraint automatically creates a unique index on the column, which is something you'll learn about later. A table can only have one column with a primary key constraint.
 
-A **foreign key constraint** specifies that the values in a column must match the values appearing in some row of another table. This constraint is used to maintain the referential integrity between two related tables. A table can have more than one column with a foreign key constraint.
+A **foreign key constraint** specifies that the values in a column must match the values appearing in some row of another table. This constraint is used to maintain the referential integrity between two related tables. A table can have more than one column with a foreign key constraint. A foreign key constraint can also cascade the deletion of its specified row. In other words, when the referenced row is deleted, the row(s) referencing it should be automatically deleted as well.
 
 In a relational database system, a one-to-one relationship exists when one row in table A is linked with only one row in table B.
 
