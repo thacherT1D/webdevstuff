@@ -2,7 +2,7 @@
 
 - Explain what an entity relationship diagram is.
 - Explain why an entity relationship diagram is useful.
-- Explain what the four PostgreSQL column constraints are.
+- Explain what PostgreSQL column constraints are.
 - Use PostgreSQL column constraints to implement an entity relationship diagram.
 - Explain what a join statement is.
 - Explain why a join statement is useful.
@@ -162,13 +162,13 @@ Once you're satisfied with the diagram, write a `CREATE TABLE` SQL command for e
 
 Once you're satisfied with the tables, write some `INSERT` SQL commands to seed each table.
 
-## What are the four PostgreSQL column constraints?
+## What are PostgreSQL column constraints?
 
 Data types are a way to limit the kind of information that can be stored in a table. For many web applications, however, the constraints they provide are not strict enough. It's common for web applications to constrain column data with respect to other columns or rows. For example, in a table containing product information, there should be only one row for each product number.
 
-To that end, PostgreSQL allows you to define constraints on columns and tables. Constraints give you as much control over the data in your tables as you wish. If an application attempts to store data in a column that would violate a constraint, an error is raised.
+To that end, PostgreSQL allows you to define **column constraints** on tables. Constraints give you as much control over the data in your tables as you wish. If an application attempts to store data in a column that would violate a constraint, an error is raised.
 
-There are four PostgreSQL column constraints.
+The PostgreSQL column constraints useful for entity relationships are the following.
 
 1. Not-null constraints
 1. Unique constraints
@@ -187,7 +187,7 @@ CREATE TABLE movies (
 );
 ```
 
-A **unique constraint** ensures that the data contained in a column is unique among all the rows in the table. Adding a unique constraint automatically creates a unique index on the column, which is something you're learn about later. A table can have more than one column with a unique constraint.
+A **unique constraint** ensures that the data contained in a column is unique among all the rows in the table. Adding a unique constraint automatically creates a unique index on the column, which is something we'll discuss later. A table can have more than one column with a unique constraint.
 
 ```sql
 CREATE TABLE movies (
@@ -197,7 +197,7 @@ CREATE TABLE movies (
 );
 ```
 
-A **primary key constraint** indicates that a column can be used as a unique identifier for rows in the table. This constraint requires the values in the primary key column to be both unique and not null. Adding a primary key constraint automatically creates a unique index on the column, which is something you'll learn about later. A table can only have one column with a primary key constraint.
+A **primary key constraint** indicates that a column can be used as a unique identifier for rows in the table. This constraint requires the values in the primary key column to be both unique and not null. Adding a primary key constraint automatically creates a unique index on the column, which is something we'll discuss later. A table can only have one column with a primary key constraint.
 
 ```sql
 CREATE TABLE movies (
@@ -236,7 +236,13 @@ In a relational database system, a one-to-one relationship exists when one row i
 ```sql
 CREATE TABLE movies (
   id serial PRIMARY KEY,
-  title text
+  title text,
+  duration integer,
+  rating varchar(10),
+  genre text,
+  is_3d boolean NOT NULL,
+  released_at timestamp with time zone,
+  score numeric(3, 1)
 );
 
 CREATE TABLE plots (
@@ -253,12 +259,19 @@ In a relational database, a one-to-many relationship exists when one row in tabl
 ```sql
 CREATE TABLE movies (
   id serial PRIMARY KEY,
-  title text
+  title text,
+  duration integer,
+  rating varchar(10),
+  genre text,
+  is_3d boolean NOT NULL,
+  released_at timestamp with time zone,
+  score numeric(3, 1)
 );
 
 CREATE TABLE awards (
   id serial PRIMARY KEY,
   movie_id integer NOT NULL REFERENCES movies ON DELETE CASCADE,
+  kind text,
   name text
 );
 ```
@@ -270,12 +283,20 @@ In a relational database management system, a many-to-many relationship is imple
 ```sql
 CREATE TABLE movies (
   id serial PRIMARY KEY,
-  title text
+  title text,
+  duration integer,
+  rating varchar(10),
+  genre text,
+  is_3d boolean NOT NULL,
+  released_at timestamp with time zone,
+  score numeric(3, 1)
 );
 
 CREATE TABLE actors (
   id serial PRIMARY KEY,
-  name text
+  name text,
+  bio text,
+  birthedAt timestamp with time zone
 );
 
 CREATE TABLE actors_movies (
