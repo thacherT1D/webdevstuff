@@ -343,9 +343,9 @@ id | first_name | last_name |         name         | start_year | end_year
 - [Lucidchart - ER Diagram Symbols and Meaning](https://www.lucidchart.com/pages/ER-diagram-symbols-and-meaning)
 - [Wikipedia - Associative entity](https://en.wikipedia.org/wiki/Associative_entity)
 - [Wikipedia - Entity-relationship model](https://en.wikipedia.org/wiki/Entity%E2%80%93relationship_model)
-- [Wikipedia - Many-to-many (data model)](https://en.wikipedia.org/wiki/Many-to-many_(data_model))
-- [Wikipedia - One-to-many (data model)](https://en.wikipedia.org/wiki/One-to-many_(data_model))
-- [Wikipedia - One-to-one (data model)](https://en.wikipedia.org/wiki/One-to-one_(data_model))
+- [Wikipedia - Many-to-many (data model)](https://en.wikipedia.org/wiki/Many-to-many_(data_model)
+- [Wikipedia - One-to-many (data model)](https://en.wikipedia.org/wiki/One-to-many_(data_model)
+- [Wikipedia - One-to-one (data model)](https://en.wikipedia.org/wiki/One-to-one_(data_model)
 - [Youtube - Entity Relationship Diagram Training](https://www.youtube.com/watch?v=-fQ-bRllhXc)
 - [Youtube - Introduction to Set Theory](https://www.youtube.com/watch?v=yCwnifwVjIg)
 
