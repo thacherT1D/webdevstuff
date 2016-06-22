@@ -343,6 +343,7 @@ id | first_name | last_name |         name         | start_year | end_year
 ## Resources
 
 - [Lucidchart - ER Diagram Symbols and Meaning](https://www.lucidchart.com/pages/ER-diagram-symbols-and-meaning)
+- [PostgreSQL Documentation - Constraints](https://www.postgresql.org/docs/9.5/static/ddl-constraints.html)
 - [Wikipedia - Associative entity](https://en.wikipedia.org/wiki/Associative_entity)
 - [Wikipedia - Entity-relationship model](https://en.wikipedia.org/wiki/Entity%E2%80%93relationship_model)
 - [Wikipedia - Many-to-many (data model)](https://en.wikipedia.org/wiki/Many-to-many_(data_model)
