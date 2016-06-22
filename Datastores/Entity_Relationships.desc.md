@@ -73,7 +73,7 @@ With your neighbors, draw an ER diagram to represent the relationship between pe
 
 Once you're satisfied, add owner entities to the diagram and draw their relationship with pet entities.
 
-Once you're satisfied with that, add entities of your choosing to the diagram and draw their relationships with the other entities as appropriate.
+Once you're satisfied with that, add one more entity of your choosing to the diagram and draw their relationship with the other entities as appropriate.
 
 ## Why is an entity relationship diagram useful?
 
