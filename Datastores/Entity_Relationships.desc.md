@@ -67,6 +67,10 @@ A **many-to-many** relationship describes the relationship between two entities,
 
 As you can see here, a many-to-many relationship is the combination of two one-to-many relationships connected to an associative entity in the middle. We'll talk more about associative entities in a bit.
 
+A **primary key** is the unique identifier of an entity, usually its `id` attribute. A **foreign key** is the unique identifier of an entity stored in another entity. This is usually the singular form of the entity's name with an `_id` suffix. For example, `movie_id` is a good name for a foreign key of a movie entity.
+
+In a one-to-many relationship, the primary key of the one entity is stored as the foreign key of the many entity. In other words, whichever entity the crow's foot touches is the entity the has the foreign key. In a one-to-one relation, any entity can be the one with the foreign key.
+
 ### Exercise
 
 With your neighbors, draw an ER diagram to represent the relationship between pet entities and breed entities.
@@ -79,7 +83,7 @@ Once you're satisfied with that, add one more entity of your choosing to the dia
 
 An ER diagram is the result of analyzing a problem domain to better understand how its entities and their relationships exist over time. The processes that modify entities and their relationships can often be hard to describe in words. For example, how do you describe the programming logic of a movie winning an award to a person who doesn't understand how to code (e.g. you future boss)? An ER diagram can be useful to represent these processes graphically.
 
-Additionally, an ER diagram is often created to represent the persistence needs of a new feature in a web application. Typically, creating an ER diagram is the first step toward forming a relational database structure for the feature. In a relational database, the relationships between entities are implemented by storing the **primary key** of one entity as a **foreign key** in the table of another entity.
+Additionally, an ER diagram is often created to represent the persistence needs of a new feature in a web application. Typically, creating an ER diagram is the first step toward forming a relational database structure for the feature. In a relational database, the relationships between entities are implemented by storing the primary key of one entity as a foreign key in the table of another entity.
 
 Here's an example ER diagram that represents the relationship between movies and awards in more detail.
 
