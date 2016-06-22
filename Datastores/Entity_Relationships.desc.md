@@ -374,6 +374,10 @@ id | first_name | last_name |         name         | start_year | end_year
 10 | Ted        | Williams  | Manager Resume       |       1969 |     1972
 ```
 
+## Exercises
+
+- [Online Retailer](https://github.com/gSchool/sql-curriculum/blob/solutions/Unit-02-Relational/02-readme.md)
+
 ## Resources
 
 - [Lucidchart - ER Diagram Symbols and Meaning](https://www.lucidchart.com/pages/ER-diagram-symbols-and-meaning)
