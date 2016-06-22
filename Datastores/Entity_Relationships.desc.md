@@ -72,7 +72,7 @@ Turn to a neighbor and explain, in your own words, the ways in which an ER model
 
 ## What are the four PostgreSQL column constraints?
 
-Data types are a way to limit the kind of information that can be stored in a table. For many web applications, however, the constraints they provide are too loose. It's common for web applications to constrain column data with respect to other columns or rows. For example, in a table containing product information, there should be only one row for each product number.
+Data types are a way to limit the kind of information that can be stored in a table. For many web applications, however, the constraints they provide are not strict enough. It's common for web applications to constrain column data with respect to other columns or rows. For example, in a table containing product information, there should be only one row for each product number.
 
 To that end, PostgreSQL allows you to define constraints on columns and tables. Constraints give you as much control over the data in your tables as you wish. If an application attempts to store data in a column that would violate a constraint, an error is raised.
 
