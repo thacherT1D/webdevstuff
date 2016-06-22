@@ -305,7 +305,7 @@ CREATE TABLE actors_movies (
 ```shell
 dropdb movie_junkies_dev
 createdb movie_junkies_dev
-curl -fsSL https://git.io/voXYX | psql movie_junkies_dev
+curl -fsSL https://git.io/voX4O | psql movie_junkies_dev
 psql movie_junkies_dev
 ```
 
@@ -482,31 +482,36 @@ WHERE movies.id = 3
 ORDER BY birthed_at DESC;
 ```
 
+SELECT
+  title,
+  released_at,
+  score,
+  actors.name AS actor_name,
+  role
+FROM movies
+INNER JOIN actors_movies ON actors_movies.movie_id = movies.id
+INNER JOIN actors ON actors.id = actors_movies.actor_id
+ORDER BY score DESC;
+
 ### Exercise
-
-Knowing that, now add write a query that
-
-- starts with the `employments_resumes` table
-- includes the `id` column from the `employments_resumes` table
-- includes the `first_name` and `last_name` columns from the `users` table
-- includes the `name` from the `resumes` table
-- includes the `start_year` and `end_year` columns from the `employments` table
 
 You know you have it correct when your result set looks like this:
 
 ```
-id | first_name | last_name |         name         | start_year | end_year
-----+------------+-----------+----------------------+------------+----------
- 1 | Ty         | Cobb      | First Attempt Resume |       1905 |     1926
- 2 | Ty         | Cobb      | First Attempt Resume |       1927 |     1928
- 3 | Ty         | Cobb      | First Attempt Resume |       1921 |     1926
- 4 | Joe        | DiMaggio  | My only              |       1936 |     1942
- 5 | Joe        | DiMaggio  | My only              |       1946 |     1951
- 6 | Hank       | Aaron     | My Favorite Rezzy    |       1954 |     1974
- 7 | Hank       | Aaron     | My Favorite Rezzy    |       1975 |     1976
- 8 | Ted        | Williams  | Player Resume        |       1939 |     1942
- 9 | Ted        | Williams  | Player Resume        |       1946 |     1960
-10 | Ted        | Williams  | Manager Resume       |       1969 |     1972
+       title        |      released_at       | score |     actor_name     |           role
+--------------------+------------------------+-------+--------------------+--------------------------
+ Pulp Fiction       | 1994-10-13 17:00:00-07 |   8.9 | John Travolta      | Vincent Vega
+ Pulp Fiction       | 1994-10-13 17:00:00-07 |   8.9 | Amanda Plummer     | Honey Bunny / Yolanda
+ Pulp Fiction       | 1994-10-13 17:00:00-07 |   8.9 | Tim Roth           | Pumpkin / Ringo
+ Pulp Fiction       | 1994-10-13 17:00:00-07 |   8.9 | Samuel L. Jackson  | Jules Winnfield
+ The Princess Bride | 1987-10-08 17:00:00-07 |   8.1 | Robin Wright       | The Princess Bride
+ The Princess Bride | 1987-10-08 17:00:00-07 |   8.1 | Cary Elwes         | Westley
+ The Princess Bride | 1987-10-08 17:00:00-07 |   8.1 | Chris Sarandon     | Prince Humperdinck
+ Frozen             | 2013-11-26 16:00:00-08 |   7.6 | Idina Menzel       | Elsa
+ Frozen             | 2013-11-26 16:00:00-08 |   7.6 | Kristen Bell       | Anna
+ X-Men: Apocalypse  | 2016-05-26 17:00:00-07 |   7.4 | Jennifer Lawrence  | Raven / Mystique
+ X-Men: Apocalypse  | 2016-05-26 17:00:00-07 |   7.4 | Michael Fassbender | Erik Lehnsherr / Magneto
+ X-Men: Apocalypse  | 2016-05-26 17:00:00-07 |   7.4 | James McAvoy       | Professor Charles Xavier
 ```
 
 ## Exercises
