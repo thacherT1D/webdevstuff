@@ -1,15 +1,15 @@
 ## Objectives
 
-1. Explain what an entity-relationship diagram is.
-1. Explain why an entity-relationship diagram is useful.
+1. Explain what an entity relationship diagram is.
+1. Explain why an entity relationship diagram is useful.
 1. Explain what the four PostgreSQL column constraints are.
-1. Use constraints to implement an entity-relationship diagram in PostgreSQL.
+1. Use constraints to implement an entity relationship diagram in PostgreSQL.
 1. Explain what a join statement is.
 1. Explain why a join statement is useful.
 1. Alias columns and tables in SQL `SELECT` statements.
 1. Write inner join statements.
 
-## What's an entity-relationship diagram?
+## What's an entity relationship diagram?
 
 An **entity–relationship diagram** (ER diagram) is a drawing that represents people, places, or things that are inter-related. As the name suggests, an ER diagram is composed of entities and the relationships that can exist between them. Here's an ER diagram that represents movie, award, and plot entities and their relationships.
 
@@ -75,7 +75,7 @@ Once you're satisfied, add owner entities to the diagram and draw their relation
 
 Once you're satisfied with that, add your own entities to the diagram and draw their relationship with the other entities as appropriate.
 
-## Why is an entity-relationship diagram useful?
+## Why is an entity relationship diagram useful?
 
 An ER diagram is the result of analyzing a problem domain to better understand how its entities and their relationships exist over time. The processes that modify entities and their relationships can often be hard to describe in words. For example, how do you describe the logic of a movie winning an award to a person who doesn't understand how to code (e.g. you future boss)? An ER diagram can be useful to represent these processes graphically.
 
@@ -229,7 +229,7 @@ CREATE TABLE awards (
 
 **NOTE:** Typically, a foreign key has a not-null constraint to prevent orphaned entities from being inserted.
 
-## How do you use constraints to implement an entity-relationship diagram in PostgreSQL?
+## How do you use constraints to implement an entity relationship diagram in PostgreSQL?
 
 In a relational database system, a one-to-one relationship exists when one row in table A is linked with only one row in table B.
 
@@ -508,7 +508,7 @@ id | first_name | last_name |         name         | start_year | end_year
 - [Lucidchart - ER Diagram Symbols and Meaning](https://www.lucidchart.com/pages/ER-diagram-symbols-and-meaning)
 - [PostgreSQL Documentation - Constraints](https://www.postgresql.org/docs/9.5/static/ddl-constraints.html)
 - [Wikipedia - Associative entity](https://en.wikipedia.org/wiki/Associative_entity)
-- [Wikipedia - Entity-relationship model](https://en.wikipedia.org/wiki/Entity%E2%80%93relationship_model)
+- [Wikipedia - entity relationship model](https://en.wikipedia.org/wiki/Entity%E2%80%93relationship_model)
 - [Wikipedia - Many-to-many (data model)](https://en.wikipedia.org/wiki/Many-to-many_(data_model))
 - [Wikipedia - One-to-many (data model)](https://en.wikipedia.org/wiki/One-to-many_(data_model))
 - [Wikipedia - One-to-one (data model)](https://en.wikipedia.org/wiki/One-to-one_(data_model))
