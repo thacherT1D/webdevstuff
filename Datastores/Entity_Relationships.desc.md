@@ -181,6 +181,8 @@ There are four PostgreSQL column constraints.
 
 A **not-null constraint** simply specifies that a column must not assume the null value. A table can have more than one column with a not-null constraint.
 
+**NOTE:** The `serial` data type automatically adds not-null constraint to the column.
+
 ```sql
 CREATE TABLE movies (
   id serial,
@@ -188,8 +190,6 @@ CREATE TABLE movies (
   is_3d boolean NOT NULL
 );
 ```
-
-**NOTE:** The `serial` data type automatically adds not-null constraint to the column.
 
 A **unique constraint** ensures that the data contained in a column is unique among all the rows in the table. Adding a unique constraint automatically creates a unique index on the column, which is something you're learn about later. A table can have more than one column with a unique constraint.
 
