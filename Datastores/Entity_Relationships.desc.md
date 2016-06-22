@@ -292,6 +292,10 @@ CREATE TABLE actors_movies (
 
 [PLAY WITH INSERTING ROWS INTO THE COLUMN]
 
+### Exercise
+
+With your neighbors, add the necessary PostgreSQL column constraints to the `CREATE TABLE` commands you created earlier for your pet-based ER diagram.
+
 ## Learn the data model
 
 Suppose we were building an application that allows users to build resumes. In this data model we have tables for
