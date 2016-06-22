@@ -81,9 +81,9 @@ An ER diagram is the result of analyzing a problem domain to better understand h
 
 Additionally, an ER diagram is often created to represent the persistence needs of a new feature in a web application. Typically, creating an ER diagram is the first step toward forming a relational database structure for the feature. In a relational database, the relationships between entities are implemented by storing the primary key of one entity as a foreign key in the table of another entity.
 
-In a relational database, a **primary key** is the unique identifier of an entity, the `id` column. A **foreign key** is the unique identifier of an entity stored in another entity. This is usually the singular form of the entity's name with an `_id` suffix. For example, `movie_id` is a good name for a foreign key of a movie entity.
+In a relational database, a **primary key** is the unique identifier of a table row, usually the `id` column. While other tables may use the same value, the primary key for every row in the same table is guaranteed to be unique and never reused. A **foreign key** is the unique identifier of a row stored in a foreign key column of another table. The name of a foreign key column is usually the singular form of the entity's table name with an `_id` suffix. For example, the `movie_id` foreign key column that references the `id` primary key column of the `movies` tables.
 
-In a one-to-many relationship, the primary key of one entity is stored as the foreign key of another entity. They way you can determine which entity gets the foreign key is to look at the crow's foot in the ER diagram. The crow's foot touches is the entity the needs the foreign key. In a one-to-one relation, any of the two entities can be the one with the foreign key, but only one of them needs to have it.
+In a one-to-many relationship, the primary key of one table row is stored as the foreign key in another table row. The way you determine which table gets the foreign key column is to look at the crow's foot in the ER diagram. The crow's foot touches is the table the needs the foreign key column. In a one-to-one relation, any of the two tables can have the foreign key column, but only one of them needs to have it.
 
 Here's an example ER diagram that represents the relationship between movies and awards in more detail.
 
