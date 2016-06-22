@@ -112,10 +112,12 @@ CREATE TABLE movies (
 
 CREATE TABLE awards (
   id serial PRIMARY KEY,
-  movies_id integer REFERENCES movies ON DELETE CASCADE,
+  movies_id integer NOT NULL REFERENCES movies ON DELETE CASCADE,
   name text
 );
 ```
+
+**NOTE:** Typically, a foreign key has a not-null constraint to prevent orphaned entities from being inserted.
 
 ## How do you implement an entity-relationship model in PostgreSQL?
 
