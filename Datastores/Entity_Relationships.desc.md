@@ -291,7 +291,7 @@ CREATE TABLE actors (
   id serial PRIMARY KEY,
   name text,
   bio text,
-  birthedAt timestamp with time zone
+  birthed_at timestamp with time zone
 );
 
 CREATE TABLE actors_movies (
@@ -386,6 +386,8 @@ In this lesson, you'll only play with `INNER JOIN` clauses.
 
 ## How do you use an `INNER JOIN` clause to combine rows from different tables?
 
+The following SQL commands all produce the same rows.
+
 ```sql
 SELECT * FROM movies INNER JOIN awards ON awards.movie_id = movies.id;
 
@@ -400,41 +402,87 @@ INNER JOIN awards
 SELECT * FROM movies INNER JOIN awards ON movies.id = awards.movie_id;
 ```
 
-
-In `psql` you can run the previous command by using the up arrow, or using `CTRL+P` (just like the command line).  When you arrow up to a multi-line command, you see the whole command (in multiple lines) and you can use arrow keys to go back through the text.  Use `CTRL+A` to go to the beginning (just like the command line) and `CTRL+E` to go to the end.
-
-## Join'em up!
-
-1. Select all columns from the users table, joined to all columns of the `employments` table.
-1. Select `first_name`, `last_name`, `title`, `organization`, `start_year`, and `end_year` from the `users` table joined to the `employments` table.
-1. Take the query from above and sort it by the `start_year` ascending. (hint: read this http://www.postgresql.org/docs/9.1/static/queries-order.html)
-1. Select `title`, `organization`, `start_year`, and `end_year` from `employments` for `resume_id = 1` (hint: `\d employments_resumes`)
-
-### Three things to note
-
-- The order of the equality doesn't matter: `resumes.id = employment_resumes.resume_id` is equivalent to `employment_resumes.resume_id = resumes.id`.
-- When there's a duplicate field name, you need to specify the table name.
-- When you are displaying 2 fields with the same name and want to differentiate them in the JOIN, use aliases.
-
-An example of the last two noes:
-
 ```sql
-SELECT users.id AS user_id, employments.id AS employments_id
-FROM users
-INNER JOIN employments
-  ON employments.user_id = users.id;
+SELECT title, kind, name FROM movies INNER JOIN awards ON awards.movie_id = movies.id;
 ```
 
-## Chaining Joins
+```sql
+SELECT id, title, kind, name FROM movies INNER JOIN awards ON awards.movie_id = movies.id;
+```
 
-Every SQL query needs to have a `from` clause.  Once you have table in the `from` clause, you can join onto it.  And you can _also_ join onto tables that have been mentioned in joins, like so:
+When there's a duplicate column name, you need to prefix it with the table name and dot `.` operator.
 
 ```sql
-SELECT *
-FROM comments
-INNER JOIN articles ON articles.id = comments.article_id
-INNER JOIN authors ON authors.id = articles.author_id
+SELECT movies.id, title, kind, name
+FROM movies INNER JOIN awards ON awards.movie_id = movies.id;
 ```
+
+```sql
+SELECT movies.id, awards.id, title, kind, name
+FROM movies INNER JOIN awards ON awards.movie_id = movies.id;
+```
+
+```sql
+SELECT movies.id AS movie_id, awards.id AS awards.id, title, kind, name
+FROM movies INNER JOIN awards ON awards.movie_id = movies.id;
+```
+
+```sql
+SELECT movies.id, title, kind, name FROM movies
+INNER JOIN awards ON awards.movie_id = movies.id WHERE movies.id = 1;
+```
+
+```sql
+SELECT title, kind FROM movies
+INNER JOIN awards ON awards.movie_id = movies.id;
+```
+
+```sql
+SELECT DISTINCT title, kind
+FROM movies INNER JOIN awards ON awards.movie_id = movies.id;
+```
+
+```sql
+SELECT DISTINCT title, kind FROM movies
+INNER JOIN awards ON awards.movie_id = movies.id ORDER BY title ASC;
+```
+
+```sql
+SELECT title, role FROM movies
+INNER JOIN actors_movies ON actors_movies.movie_id = movies.id;
+```
+
+```sql
+SELECT title, role, name, birthed_at FROM movies
+INNER JOIN actors_movies ON actors_movies.movie_id = movies.id
+INNER JOIN actors ON actors.id = actors_movies.actor_id;
+```
+
+```sql
+SELECT title, role, name, birthed_at FROM movies
+INNER JOIN actors_movies ON actors_movies.movie_id = movies.id
+INNER JOIN actors ON actors.id = actors_movies.actor_id
+WHERE movies.id = 3;
+```
+
+```sql
+SELECT title, role, name, birthed_at FROM movies
+INNER JOIN actors_movies ON actors_movies.movie_id = movies.id
+INNER JOIN actors ON actors.id = actors_movies.actor_id
+WHERE movies.id = 3
+  AND birthed_at >= '1962-01-01 00:00:00 UTC';
+```
+
+```sql
+SELECT title, role, name, birthed_at FROM movies
+INNER JOIN actors_movies ON actors_movies.movie_id = movies.id
+INNER JOIN actors ON actors.id = actors_movies.actor_id
+WHERE movies.id = 3
+  AND birthed_at >= '1962-01-01 00:00:00 UTC'
+ORDER BY birthed_at DESC;
+```
+
+### Exercise
 
 Knowing that, now add write a query that
 
