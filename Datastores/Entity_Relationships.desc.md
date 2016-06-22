@@ -314,12 +314,6 @@ You're back?  Awesome - let's talk about how to use them. Here is an image that 
 
 ![SQL JOINS](http://www.codeproject.com/KB/database/Visual_SQL_Joins/Visual_SQL_JOINS_orig.jpg)
 
-## Multiline queries in `psql`
-
-When you run SQL queries/commands in `psql`, you need to make sure they end with a semi-colon.  If you hit ENTER before putting a semi-colon, that's OK - just add one and hit ENTER and it will work.  That's because `psql` allows you to enter multi-line SQL statements.
-
-When working with joins, it's often nice to enter multi-line statements.  Take one of the multi-line SQL statements from above and type it in by hand, and make sure to end it with a semi-colon.
-
 In `psql` you can run the previous command by using the up arrow, or using `CTRL+P` (just like the command line).  When you arrow up to a multi-line command, you see the whole command (in multiple lines) and you can use arrow keys to go back through the text.  Use `CTRL+A` to go to the beginning (just like the command line) and `CTRL+E` to go to the end.
 
 ## Join'em up!
@@ -379,7 +373,6 @@ id | first_name | last_name |         name         | start_year | end_year
  9 | Ted        | Williams  | Player Resume        |       1946 |     1960
 10 | Ted        | Williams  | Manager Resume       |       1969 |     1972
 ```
-
 
 ## Resources
 
