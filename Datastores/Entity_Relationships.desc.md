@@ -258,12 +258,7 @@ CREATE TABLE plots (
 );
 ```
 
-[INSPECTE THE CREATED TABLES]
-
-```shell
-```
-
-[INSPECT INSERTED ROWS, PLAY WITH CONSTRAINTS]
+[INSPECT THE CREATED TABLES]
 
 In a relational database, a one-to-many relationship exists when one row in table A is linked with many rows in table B, but one row in table B is linked to only one row in table A.
 
