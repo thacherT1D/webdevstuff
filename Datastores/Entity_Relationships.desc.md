@@ -77,7 +77,7 @@ Once you're satisfied with that, add one more entity of your choosing to the dia
 
 ## Why is an entity relationship diagram useful?
 
-An ER diagram is the result of analyzing a problem domain to better understand how its entities and their relationships exist over time. The processes that modify entities and their relationships can often be hard to describe in words. For example, how do you describe the logic of a movie winning an award to a person who doesn't understand how to code (e.g. you future boss)? An ER diagram can be useful to represent these processes graphically.
+An ER diagram is the result of analyzing a problem domain to better understand how its entities and their relationships exist over time. The processes that modify entities and their relationships can often be hard to describe in words. For example, how do you describe the programming logic of a movie winning an award to a person who doesn't understand how to code (e.g. you future boss)? An ER diagram can be useful to represent these processes graphically.
 
 An ER diagram is commonly created to represent the persistence needs of a new feature in a web application. Typically, creating an ER diagram is the first step toward establishing a relational database structure for the feature. In a relational database, the relationships between entities are implemented by storing the primary key of one entity as a foreign key in the table of another entity.
 
