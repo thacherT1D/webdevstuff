@@ -229,6 +229,10 @@ CREATE TABLE awards (
 
 **NOTE:** Typically, a foreign key has a not-null constraint to prevent orphaned entities from being inserted.
 
+### Exercise
+
+Write down the four PostgreSQL column constraints and explain each one in your own words. After about 30 seconds, your instructor will cold call on the class and ask what was written down.
+
 ## How do you use PostgreSQL column constraints to implement an entity relationship diagram.
 
 In a relational database system, a one-to-one relationship exists when one row in table A is linked with only one row in table B.
