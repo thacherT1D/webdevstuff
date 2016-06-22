@@ -69,7 +69,7 @@ As you can see here, a many-to-many relationship is the combination of two one-t
 
 ### Exercise
 
-With your neighbors, draw an ER diagram to represent the relationship between pet entities and breed entities.
+With your neighbors, draw an ER diagram to represent the relationship between pet entities and species entities.
 
 Once you're satisfied, add owner entities to the diagram and draw their relationship with pet entities.
 
