@@ -13,7 +13,13 @@
 
 An **entity–relationship model** (ER model) describes people, places, or things that are inter-related. As the name suggests, an ER model is composed of entities and the relationships that can exist between them. An ER model is often expressed as an **entity-relationship diagram**. Here's an ER diagram that represents the movie, award, and plot entities.
 
-[INSERT ER DIAGRAM OF MOVIES, AWARDS, AND PLOTS HERE]
+```text
+┌─────────────┐       ┌──────────────┐        ┌────────────────┐       ┌──────────────┐
+│             │       │              │       ╱│                │╲      │              │
+│    plots    │┼─────┼│    movies    │┼───────│  actor_movies  │──────┼│    movies    │
+│             │       │              │       ╲│                │╱      │              │
+└─────────────┘       └──────────────┘        └────────────────┘       └──────────────┘
+```
 
 This ER diagram uses crow's foot notation to specify the relationship cardinality of the entities. **Relationship cardinality** is just a fancy term that means the number of related entities in a relationship. There are three distinct relationship cardinality types.
 
