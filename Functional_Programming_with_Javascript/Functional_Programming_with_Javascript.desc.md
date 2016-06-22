@@ -95,7 +95,7 @@ each(names, console.log)
 
 > Define "side effects" in reference to functions
 
-- In computer science, functional programming is a programming paradigm— a style of building the structure and elements of computer programs— that treats computation as the evaluation of mathematical functions and avoids changing- state and mutable data. It is a declarative programming paradigm, which means programming is done with expressions or declarations instead of statements. In functional code, the output value of a function depends only on the arguments that are input to the function, so calling a function f twice with the same value for an argument x will produce the same result f(x) each time. Eliminating side effects, i.e. changes in state that do not depend on the function inputs, can make it much easier to understand and predict the behavior of a program, which is one of the key motivations for the development of functional programming.
+- In functional code, the output value of a function depends only on the arguments that are input to the function, so calling a function f twice with the same value for an argument x will produce the same result f(x) each time. Eliminating side effects, i.e. changes in state that do not depend on the function inputs, can make it much easier to understand and predict the behavior of a program, which is one of the key motivations for the development of functional programming.
 
 - Side effects are a fancy way of saying that running a certain function or expression creates some sort of noticeable, or observable change in the outside world (Relative to the function or expression). In functional programming, your goal is to write completely contained functions which don't change, or rely on any kind of state outside of themselves (except the input parameter(s)). This will allow you to clearly understand what a function does, and because of that clarity, allow you to use it at any time without having to worry about it changing some other portion of your program.
 
@@ -115,15 +115,23 @@ each(names, console.log)
 
 ##Libraries
 
-- There are many libraries that make many useful functions available through functional design.
+- There are many libraries that make many useful functions available through functional design. You're welcome to check these out at some point, but we'll be using lodash in the below exercise.
 
-- [lodash](https://lodash.com/)
+- [Lodash](https://lodash.com/)
 
-- [underscore](http://underscorejs.org/)
+- [Underscore](http://underscorejs.org/)
+
+- [Ramada](http://ramdajs.com/0.21.0/index.html)
+
+- [Functional.js](http://functionaljs.com/)
 
 - http://benmccormick.org/2014/11/12/underscore-vs-lodash/
 - http://stackoverflow.com/questions/13789618/differences-between-lodash-and-underscore
 
+
+##Tips:
+
+- Write LOTS of functions! Functions can build upon and use other functions.
 
 ##Exercise:
 
