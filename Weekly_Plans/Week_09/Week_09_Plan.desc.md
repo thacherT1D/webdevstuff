@@ -50,7 +50,7 @@ Warmup: [Fibonacci Sequence](https://raw.githubusercontent.com/gSchool/challenge
 
 Lessons:
 - [SQL Joins](/cohorts/68/articles/3081)
-- [Functional Programming](/cohorts/68/student_dashboard)
+- [Functional Programming](/cohorts/68/articles/3187)
 
 ---
 
