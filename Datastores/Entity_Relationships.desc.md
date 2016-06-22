@@ -83,7 +83,7 @@ Additionally, an ER diagram is often created to represent the persistence needs 
 
 A **primary key** is the unique identifier of an entity, usually its `id` attribute. A **foreign key** is the unique identifier of an entity stored in another entity. This is usually the singular form of the entity's name with an `_id` suffix. For example, `movie_id` is a good name for a foreign key of a movie entity.
 
-In a one-to-many relationship, the primary key of the one entity is stored as the foreign key of the many entity. In other words, whichever entity the crow's foot touches is the entity the has the foreign key. In a one-to-one relation, any entity can be the one with the foreign key.
+In a one-to-many relationship, the primary key of one entity is stored as the foreign key of another entity. They way you can determine which entity gets the foreign key is to look at the crow's foot in the ER diagram. The crow's foot touches is the entity the needs the foreign key. In a one-to-one relation, any of the two entities can be the one with the foreign key, but only one of them needs to have it.
 
 Here's an example ER diagram that represents the relationship between movies and awards in more detail.
 
