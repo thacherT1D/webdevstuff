@@ -35,7 +35,7 @@ This ER diagram uses crow's foot notation to specify the relationship cardinalit
 - One-to-many relationship
 - Many-to-many relationship
 
-A **one-to-one** relationship describes the relationship between two entities, `A` and `B`, in which one entity of `A` may only be linked to one entity of `B` and vice versa. For example, think of `A` as movies and `B` as plots. A movie has only one plot and a plot has only one movie.
+A **one-to-one** relationship describes the relationship between two entities where an entity from group `A` may only be linked to an entity of group `B` and vice versa. For example, think of movies as group `A` and plots as group `B`. A movie has only one plot and a plot has only one movie, if it's a good movie.
 
 ```text
 ┌──────────────┐       ┌─────────────┐
@@ -45,7 +45,7 @@ A **one-to-one** relationship describes the relationship between two entities, `
 └──────────────┘       └─────────────┘
 ```
 
-A **one-to-many** relationship describes the relationship between two entities, `A` and `B`, in which an entity of `A` may be linked to many entities of `B`, but a entity of `B` is linked to only one entity of `A`. For example, think of `A` as movies and `B` as awards. A movie can have many awards, but an award can only be given to one movie (per year).
+A **one-to-many** relationship describes the relationship between two entities where an entity from group `A` may be linked to many entities from group `B`, but a entity from group `B` is linked to only one entity of group `A`. For example, think of movies as group `A` and awards as group `B`. A movie can have many awards, but an award can only be given to one movie (per year).
 
 ```text
 ┌──────────────┐       ┌──────────────┐
@@ -55,7 +55,7 @@ A **one-to-many** relationship describes the relationship between two entities, 
 └──────────────┘       └──────────────┘
 ```
 
-A **many-to-many** relationship describes the relationship between two entities, `A` and `B`, in which many entities of `A` may be linked to many entities of `B` and vice versa. For example, think of `A` as movies and `B` as actors. An actor can star in many movies and a movie can have many actors.
+A **many-to-many** relationship describes the relationship between two entities where many entities of group `A` may be linked to many entities of group `B` and vice versa. For example, think of movies as group `A` and actors as group `B`. An actor can star in many movies and a movie can have many actors.
 
 ```text
 ┌──────────────┐       ┌─────────────────┐       ┌──────────────┐
@@ -65,15 +65,15 @@ A **many-to-many** relationship describes the relationship between two entities,
 └──────────────┘       └─────────────────┘       └──────────────┘
 ```
 
-As you can see here, a many-to-many relationship is the combination of two one-to-many relationships connected to an associative entity in the middle. We'll talk more about associative entities in a bit.
+As you can see here, a many-to-many relationship is the combination of two one-to-many relationships connected to an **associative entity** in the middle. We'll talk more about associative entities in a bit.
 
 ### Exercise
 
 With your neighbors, draw an ER diagram to represent the relationship between pet entities and species entities.
 
-Once you're satisfied, add owner entities to the diagram and draw their relationship with pet entities.
+Once you're satisfied with this, add owner entities to the diagram and draw their relationship with pet entities.
 
-Once you're satisfied with that, add one more entity of your choosing to the diagram and draw their relationship with the other entities as appropriate.
+Once you're satisfied with this, add one more entity of your choosing to the diagram and draw their relationship with the other entities as appropriate.
 
 ## Why is an entity relationship diagram useful?
 
