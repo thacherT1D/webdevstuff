@@ -69,7 +69,7 @@ As you can see here, a many-to-many relationship is just the composition of two 
 
 ### Exercise
 
-Draw an ER diagram to represent the relationship between pet entities and breed entities.
+With your neighbors, draw an ER diagram to represent the relationship between pet entities and breed entities.
 
 Once you're satisfied, add owner entities to the diagram and draw their relationship with pet entities.
 
@@ -117,7 +117,7 @@ And here's an example of the movie entity's unique identifier being stored as th
 
 ### Exercise
 
-Turn to a neighbor and explain, in your own words, the ways in which an ER model is useful.
+With your neighbors, add some attributes to the pet-based ER diagram that you created earlier. Once you're satisfied with the diagram, create a database table for each entity.
 
 ## What are the four PostgreSQL column constraints?
 
