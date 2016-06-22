@@ -4,10 +4,10 @@
 - Explain why an entity relationship diagram is useful.
 - Explain what PostgreSQL column constraints are.
 - Use PostgreSQL column constraints to implement an entity relationship diagram.
-- Explain what a join statement is.
-- Explain why a join statement is useful.
+- Explain what a join clause is.
+- Explain why a join clause is useful.
 - Alias columns and tables in SQL `SELECT` statements.
-- Write inner join statements.
+- Write inner join clause.
 
 ## What's an entity relationship diagram?
 
@@ -363,11 +363,21 @@ When you run that, notice that the column name in the output is `user_id`:
        4 | Ted
 ```
 
-## What's a join statement and why is it useful?
+## What's a join clause and why is it useful?
 
-In SQL, a **join statement** combines records from two or more tables in a relational database. The combined records can be viewed or even saved to a new table.
+In SQL, a **join clause** combines records from two or more tables in a relational database. The combined records can be viewed or even saved to a new table.
 
-Additionally, you can combine fields from two or more tables by joining on values that are common to each. There are five types of joins, though in this lesson, we'll only cover the first one:
+**NOTE:** Type the `\x auto` REPL command to automatically use PostgreSQL's extended display mode.
+
+```sql
+SELECT * FROM movies INNER JOIN awards ON awards.movie_id = movies.id;
+```
+
+
+Additionally, you can combine fields from two or more tables by joining on values that are common to each.
+
+
+There are five types of joins, though in this lesson, we'll only cover the first one:
 
 - `INNER JOIN`
 - `LEFT OUTER JOIN`
@@ -375,7 +385,7 @@ Additionally, you can combine fields from two or more tables by joining on value
 - `FULL OUTER JOIN`
 - `CROSS JOIN`
 
-As a full stack developer, you'll save data in separate tables and then use joins to get it back together.
+As a web developer, you'll save data in separate tables and then use join clauses to get it back together.
 
 ## Joins - Syntax
 
