@@ -212,7 +212,7 @@ You know you have it correct when your result set looks like this:
 
 ## More practice
 
-Contiue working with joins by completing the [join exercises on sqlzoo.net](http://www.sqlzoo.net/wiki/More_JOIN_operations)
+Continue working with joins by completing the [join exercises on sqlzoo.net](http://www.sqlzoo.net/wiki/More_JOIN_operations)
 
 
 ## Resources
@@ -220,6 +220,7 @@ Contiue working with joins by completing the [join exercises on sqlzoo.net](http
 - [SQL Tutorials with Data Analysis Focus](https://community.modeanalytics.com/sql/tutorial/introduction-to-sql/)
 - [Use The Index, Luke - A guide to database performance for developers](http://use-the-index-luke.com/)
 
+<br><br>
 
 # SQL operators Reference
 
