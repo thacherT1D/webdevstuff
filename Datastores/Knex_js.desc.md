@@ -9,7 +9,7 @@
 
 ## What is Knex.js?
 
-**Knex.js** is a third-party JavaScript library that builds SQL commands and sends them to a relational database system like PostgreSQL. In other words, Knex.js allows you to build a Node.js-based PostgreSQL client to communicate with a PostgreSQL server.
+**Knex.js** is a third-party JavaScript library that builds an SQL command, or query, and sends it to a relational database system like PostgreSQL. In other words, Knex.js allows you to build a Node.js-based PostgreSQL client to communicate with a PostgreSQL server.
 
 To get started, migrate and seed a database by running the following shell commands.
 
@@ -71,9 +71,9 @@ And you should see something like this.
 select * from "movies"
 ```
 
-Nearly all functions in Knex.js return a promise. A **promise** is an object that's used for asynchronous computations. A promise is more than a callback as it represents an operation that hasn't completed yet, but is expected to complete in the future.
+Nearly all functions in Knex.js return a promise. A **promise** is an object that's used for asynchronous operations. A promise is more than a callback as it's an object that represents an operation that hasn't completed yet, but will in the future.
 
-Promises are the preferred way of handling query responses in Knex. The main benefit of a promise is the ability to catch thrown errors without crashing a Node.js app. By using the `then()` and `catch()` asynchronous functions of a promise, your code will behave like a `try / catch` block in synchronous code.
+Promises are the preferred way of handling Knex query responses. The main benefit of a promise is the ability to catch thrown errors without crashing a Node.js app. By using a promise's `then()` and `catch()` asynchronous functions, your code will behave like `try / catch` synchronous blocks.
 
 In the `index.js` file, write and save the following code.
 
@@ -141,6 +141,10 @@ And you should see something like this.
     released_at: 1994-10-14T00:00:00.000Z,
     score: '8.9' } ]
 ```
+
+### Exercise
+
+##
 
 ## Why is Knex.js useful?
 
