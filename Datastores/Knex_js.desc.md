@@ -9,7 +9,7 @@
 
 ## What is Knex.js?
 
-**Knex.js** is a third-party JavaScript library that builds SQL commands and sends them to (i.e. queries) a relational database system like PostgreSQL. In other words, Knex.js allows you to build a Node.js-based PostgreSQL client that communicate with a PostgreSQL server.
+**Knex.js** is a third-party JavaScript library that builds SQL commands and sends them to a relational database system like PostgreSQL. In other words, Knex.js allows you to build a Node.js-based PostgreSQL client that communicate with a PostgreSQL server.
 
 Just like jQuery builds and sends HTTP requests to an HTTP server, Knex builds and sends SQL commands to a PostgreSQL server. Just remember that jQuery runs inside a web browser while Knex runs outside a web browser, in Node.js.
 
