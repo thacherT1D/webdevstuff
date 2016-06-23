@@ -250,9 +250,7 @@ At the heart of Knex is the query builder. The **query builder** is the API used
 
 ### `SELECT` clause
 
-The [`select()` method](http://knexjs.org/#Builder-select) creates a `SELECT` command. It accepts an optional list of column names as string arguments and adds them to the `SELECT` clause of a query. When no arguments are specified, it adds a `*` to the `SELECT` clause.
-
-List most Knex methods, the `select()` method returns a promise. When the promise is resolved, the `then()` method's callback is triggered and given an array of objects for the matching rows in a table.
+The [`select()` method](http://knexjs.org/#Builder-select) creates a `SELECT` command. It accepts an optional list of column names as string arguments and adds them to the `SELECT` clause of a query. When no arguments are specified, it adds a `*` to the `SELECT` clause. List most Knex methods, the `select()` method returns a promise. When the promise is resolved, the `then()` method's callback is triggered and given an array of objects for the matching rows in a table.
 
 In the `index.js` file, write and save the following code.
 
@@ -675,9 +673,7 @@ Using Knex.js, build the following queries.
 
 ## How do you use Knex.js to insert rows into a PostgreSQL table?
 
-The [`insert()` method](http://knexjs.org/#Builder-insert) creates an `INSERT` command. It accepts an object of key-value pairs to be inserted into a row in the table.
-
-List most Knex methods, the `insert()` method returns a promise. When the promise is resolved, the `then()` method's callback is triggered and given an object that contains the number of rows inserted.
+The [`insert()` method](http://knexjs.org/#Builder-insert) creates an `INSERT` command. It accepts an object of key-value pairs to be inserted into a row in the table. List most Knex methods, the `insert()` method returns a promise. When the promise is resolved, the `then()` method's callback is triggered and given an object that contains the number of rows inserted.
 
 In the `index.js` file, write and save the following code.
 
