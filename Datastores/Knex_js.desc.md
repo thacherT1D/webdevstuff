@@ -186,7 +186,7 @@ Knex.js allows developers to build Node.js web applications that can create, rea
 Knex.js also prevents against SQL injection attacks. An **SQL injection** attack occurs when user input is not filtered for escape characters and is then passed into an SQL command. This results in the potential for a malicious user to manipulate the database commands that a web application performs. The following line of code illustrates this vulnerability.
 
 ```javascript
-const stmt = "SELECT * FROM users WHERE name = '" + userName + "';"
+const sql = "SELECT * FROM users WHERE name = '" + userName + "';"
 ```
 
 The intent of the SQL code to select the rows of a specified `name` column from the `users` table. However, if the `userName` variable is crafted in a specific way by a malicious user, the SQL command can do more than the author intended. For example, setting the `userName` variable to the following.
