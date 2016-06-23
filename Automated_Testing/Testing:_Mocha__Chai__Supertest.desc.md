@@ -1,6 +1,6 @@
 ## Exercise
 
-https://github.com/gSchool/testing-express-with-supertest
+[Testing Express with Supertest](https://github.com/gSchool/testing-express-with-supertest)
 
 ## JavaScript Testing Basics
 

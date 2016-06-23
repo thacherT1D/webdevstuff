@@ -56,17 +56,11 @@ Lessons:
 
 # Thursday, June 23
 
-Warmup: [Link to Warmup](http://github.com/gSchool)
+Warmup: [Debounce](https://www.codewars.com/kata/throttle-a-function)
 
 Lessons:
 - [Lesson](/cohorts/68/student_dashboard)
 - [Lesson](/cohorts/68/student_dashboard)
-
-Homework: [Homework](/cohorts/68/student_dashboard)
-
-Announcements:
-- Announcement 1
-- Announcement 2
 
 ---
 
