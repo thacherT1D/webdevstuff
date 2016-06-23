@@ -207,7 +207,7 @@ select * from "users" where "name" = '''; DROP TABLE users; -- '
 
 Draw a diagram of a database-driven, full-stack web application. Identify which part uses Knex.js and how it works.
 
-## Something
+## How do you use Knex.js to select rows from a PostgreSQL table?
 
 This should look pretty familiar, as it's the same database we used
 earlier this week when we started to explore PostgreSQL. We're going to
