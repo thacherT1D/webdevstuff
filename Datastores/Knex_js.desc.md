@@ -189,25 +189,26 @@ Knex.js also prevents against SQL injection attacks. An **SQL injection** attack
 const sql = "SELECT * FROM users WHERE name = '" + userName + "';"
 ```
 
-The intent of the SQL code to select the rows of a specified `name` column from the `users` table. However, if the `userName` variable is crafted in a specific way by a malicious user, the SQL command can do more than the author intended. For example, setting the `userName` variable to the following.
+The intent of the SQL command is to select the rows that match a specified `name` column from the `users` table. However, if the `userName` variable is crafted in a specific way by a malicious user, the SQL command can do more than the author intended. For example, setting the `userName` variable to the following:
 
 ```javascript
 const userName = "'; DROP TABLE users; -- ";
 ```
 
-Would result in the following malicious SQL command.
+Would generate the following malicious SQL command.
 
 ```sql
 SELECT * FROM users WHERE name = ''; DROP TABLE users; -- ';
 ```
 
-To prevent a SQL injection attack, all you need to do is just escape the special characters that a user, malicious or otherwise, may input into a web application. In SQL, a single-quote `'` character is escaped with another single-quote `'`.
+To prevent a SQL injection attack, all you need to do is escape the special characters that a user, malicious or otherwise, may input into a web application. In SQL, a single-quote `'` character is escaped with another single-quote `'`.
 
 ```sql
 SELECT * FROM users WHERE name = '''; DROP TABLE users; -- ';
 ```
+So now the generated SQL command harmlessly looks for rows in the `users` table with a funny `name`. Thankfully, the Knex.js API will automatically escape characters for you.
 
-Thankfully, the Knex.js API will automatically escape characters for you. In the `index.js` file, write and save the following code.
+In the `index.js` file, write and save the following code.
 
 ```javascript
 'use strict';
@@ -237,6 +238,8 @@ select * from "users" where "name" = '''; DROP TABLE users; -- '
 ### Exercise
 
 Draw a diagram of a database-driven, full-stack web application. Identify which part uses Knex.js and how it works.
+
+Once you're satisfied, explain to a neighbor how user input from a malicious user could flow through the system.
 
 ## How do you use Knex.js to select rows from a PostgreSQL table?
 
