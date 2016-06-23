@@ -78,7 +78,7 @@ select * from "movies"
 
 As you can see, the `knex('movies').toString()` functions built a `SELECT` command and returned it as a string. Why on earth would you want a Node.js program to build an SQL command? To send it to a relational database system, of course! Just like jQuery builds and sends HTTP requests to an HTTP server, Knex builds and sends SQL queries to a PostgreSQL server.
 
-Though it must feel like a lifetime ago, think back to last quarter when you used jQuery to send HTTP requests. Remember how jQuery's `$.getJSON()` function works? Here's a refresher, just in case.
+Though it must feel like a lifetime ago, think back to last quarter when you used jQuery to send HTTP requests. Do you remember how jQuery's `$.getJSON()` function works? Here's a refresher, just in case.
 
 ```javascript
 const $xhr = $.getJSON('www.omdbapi.com/?i=tt2294629');
@@ -92,7 +92,7 @@ $xhr.fail(() => {
 });
 ```
 
-jQuery's `$.getJSON()` function fires off an HTTP request and returns an `$xhr` promise. A **promise** is an object that's used for asynchronous operations. Though at first it looks like just a regular callback, it's much more than that. A promise is an object that represents an operation that hasn't completed yet, but will in the future. The main benefit of a promise is the ability to catch thrown errors without crashing an application.
+The `$.getJSON()` function sends an HTTP request and returns an `$xhr` promise. A **promise** is an object that's used for asynchronous operations. Though at first it looks like just a regular callback, a promise is much more than that. A promise is an object that represents an operation that hasn't completed yet, but will in the future. The main benefit of a promise is the ability to catch thrown errors without crashing an application.
 
 For example, the `$xhr` promise remains in an unresolved state while it waits for the HTTP response. The `$xhr` promise has two methods, `done()` and `fail()`, that are given a callback each. If the HTTP response is successful, the `done()` function's callback is triggered. On the other hand, if the HTTP response generates an error, the `fail()` function's callback is triggered.
 
