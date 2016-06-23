@@ -666,7 +666,7 @@ psql movie_junkies_dev -f seed.sql
 
 Iterate on your seed file until you can repeatedly run it without generating an error. Then, add SQL commands at the bottom of the file to do the following.
 
-- Return the `id`, `title`, and `score` of the single worst movie in the table.
+- Return the `id`, `title`, and `score` of the single lowest scoring movie in the table.
 - Return the `id`, `title`, and `duration` of the "X-Men: Apocalypse" and "The Princess Bride" movies.
 - Return the `id`, `title`, and `released_at` all the movies ordered by from oldest to newest.
 - Return the `id`, `title`, `genre`, and `score` of all of the PG movies that scored between 7.5 and 8.5
