@@ -407,7 +407,7 @@ And you should see something like this.
     score: '8.9' } ]
 ```
 
-If you want to have multiple `WHERE` clauses separated by an `AND`, you can chain more `where()` methods into our Knex query.
+If you want to have multiple `WHERE` clauses separated by an `AND` keyword, you can chain more `where()` methods into our Knex query.
 
 In the `index.js` file, write and save the following code.
 
@@ -456,7 +456,7 @@ And you should see something like this.
     score: '8.1' } ]
 ```
 
-
+The `where()` method also has a form that accepts one argument—an object with key-value pairs. The keys become column names and the values become their respective match values. If an object with multiple key-value pairs is given, the `where()` method generates multiple `WHERE` clauses, each separated by an `AND` keyword.
 
 ```javascript
 'use strict';
@@ -479,6 +479,14 @@ knex('movies')
     process.exit(1);
   });
 ```
+
+Then, execute the program by running the following shell command.
+
+```shell
+node index.js
+```
+
+And you should see something like this.
 
 ```shell
 node index.js
