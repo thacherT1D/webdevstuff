@@ -250,7 +250,7 @@ At the heart of Knex is the query builder. The **query builder** is the API used
 
 ### `SELECT` clause
 
-In Knex, the [`select()` method](http://knexjs.org/#Builder-select) accepts an optional list of column names as arguments and adds them to the `SELECT` clause of a query. When no arguments are specified, it defaults to `*`. The response of a `SELECT` query will resolve the promise with an array of objects for the matching rows in a table.
+In Knex, the [`select()` method](http://knexjs.org/#Builder-select) accepts an optional list of column names as string arguments and adds them to the `SELECT` clause of a query. When no arguments are specified, it defaults to `*`. The response of a `SELECT` query will resolve the promise with an array of objects for the matching rows in a table.
 
 In the `index.js` file, write and save the following code.
 
@@ -311,7 +311,7 @@ And you should see something like this.
 
 ### `WHERE` clause
 
-Several Knex methods exist to assist in building dynamic `WHERE` clauses. The first you'll play with is the [`where()` method](http://knexjs.org/#Builder-wheres) which accepts two arguments—a column name as a string and a value to match against.
+Several Knex methods exist to assist in adding dynamic `WHERE` clauses to a query. The first method to play with is the [`where()` method](http://knexjs.org/#Builder-wheres). It accepts two arguments—a column name as a string and a value to match against.
 
 **NOTE:** Supplying `where()` with the `undefined` value will throw an error.
 
