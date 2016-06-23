@@ -725,7 +725,7 @@ And you should see something like this.
   _getTypeParser: [Function: bound ] }
 ```
 
-You can pass second argument to the `insert()` method that tells PostgreSQL what columns to returned from the database as a result of the insert.
+Additionally, the `insert()` method accepts a list of string column names as a second argument. This tells Knex what columns of the newly inserted row to pass into the `then()` method's callback. Commonly, an asterisk `*` is used to pass along all the columns of the row.
 
 In the `index.js` file, write and save the following code.
 
