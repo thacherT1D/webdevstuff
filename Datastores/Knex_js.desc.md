@@ -407,7 +407,7 @@ And you should see something like this.
     score: '8.9' } ]
 ```
 
-If you want to have multiple `WHERE` clauses separated by an `AND` keyword, you can chain more `where()` methods into our Knex query.
+If you want to have multiple `AND` clauses, you can chain additional `where()` methods into your Knex query.
 
 In the `index.js` file, write and save the following code.
 
@@ -456,7 +456,7 @@ And you should see something like this.
     score: '8.1' } ]
 ```
 
-The `where()` method also has a form that accepts one argument—an object with key-value pairs. The keys become column names and the values become their respective match values. If an object with multiple key-value pairs is given, the `where()` method generates multiple `WHERE` clauses, each separated by an `AND` keyword.
+The `where()` method also has a form that accepts one argument—an object with key-value pairs. The keys become column names and the values become their respective match values. If an object with multiple key-value pairs is given, the `where()` method generates multiple `AND` clauses.
 
 ```javascript
 'use strict';
@@ -488,10 +488,6 @@ node index.js
 
 And you should see something like this.
 
-```shell
-node index.js
-```
-
 ```text
 [ anonymous {
     id: 1,
@@ -500,14 +496,6 @@ node index.js
     is_3d: true,
     score: '7.6' } ]
 ```
-
-There's a handful of ways to tell Knex you want it to match a key and a
-value, but passing an object is going to be the clearest usually.
-
-Did you run this code and get back an empty arry? PostgreSQL is case
-sensitive, so if you don't capitalize `Cars`, it won't actually match
-anything.
-
 
 ### How about adding OR clauses?
 
