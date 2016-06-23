@@ -682,7 +682,7 @@ And you should see something like this.
 - [Knex.js - `sum()`](http://knexjs.org/#Builder-sum)
 - [Knex.js - `avg()`](http://knexjs.org/#Builder-avg)
 
-### Help methods
+### Helper methods
 
 - [Knex.js - `increment()`](http://knexjs.org/#Builder-increment)
 - [Knex.js - `decrement()`](http://knexjs.org/#Builder-decrement)
