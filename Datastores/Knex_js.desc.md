@@ -152,9 +152,56 @@ Knex.js allows developers to build Node.js web applications that can create, rea
 
 [INSERT DIAGRAM OF A DATABASE-DRIVEN, FULL-STACK WEB APPLICATION]
 
-Knex.js also helps developers avoid writing bugs in SQL commands and prevents against SQL injection attacks.
+Knex.js also prevents against SQL injection attacks. An **SQL injection** attack occurs when user input is not filtered for escape characters and is then passed into an SQL command. This results in the potential for a malicious user to manipulate the database commands that a web application performs. The following line of code illustrates this vulnerability.
 
-[INSERT EXAMPLE OF AN SQL INJECTION ATTACK]
+```javascript
+const stmt = "SELECT * FROM users WHERE name = '" + userName + "';"
+```
+
+The intent of the SQL code to select the rows of a specified `name` column from the `users` table. However, if the `userName` variable is crafted in a specific way by a malicious user, the SQL command can do more than the author intended. For example, setting the `userName` variable to the following.
+
+```javascript
+const userName = "'; DROP TABLE users; -- ";
+```
+
+Would result in the following malicious SQL command.
+
+```sql
+SELECT * FROM users WHERE name = ''; DROP TABLE users; -- ';
+```
+
+To prevent a SQL injection attack, just escape the special characters that a user, malicious or otherwise, may input into the web application. In SQL, a single-quote `'` character is escaped with another single-quote `'`.
+
+```sql
+SELECT * FROM users WHERE name = '''; DROP TABLE users; -- ';
+```
+
+Thankfully, the Knex.js API will automatically escape characters for you. In the `index.js` file, write and save the following code.
+
+```javascript
+'use strict';
+
+const env = 'development';
+const config = require('./knexfile.js')[env];
+const knex = require('knex')(config);
+
+const sql = knex('users').where('name', userName).toString();
+
+console.log(sql);
+knex.destroy();
+```
+
+Then, execute the program by running the following shell command.
+
+```shell
+node index.js
+```
+
+And you should see something like this.
+
+```text
+select * from "users" where "name" = '''; DROP TABLE users; -- '
+```
 
 And because the same Knex.js API works across many relational databases, such as  Postgres, MSSQL, MySQL, MariaDB, SQLite3, and Oracle, in theory, you could switch to a different database system without changing any of your Node.js code. However, most production web applications have a fair bit of highly optimized code that's specific to database system. But it's certainly possible that it can be converted as well.
 
@@ -683,10 +730,8 @@ knex('movies').insert({title: 'Gigli', description: 'Best movie evar', rating: 1
 
 ## Resources
 
-* [http://knexjs.org/#Builder](http://knexjs.org/#Builder)
-
-* [knex.js website and documentation](http://knexjs.org/)
-
-* [knex query lab](http://michaelavila.com/knex-querylab/)
-
-* [SQL to knex exercise](https://github.com/gSchool/sql-to-knex-assignment)
+- [http://knexjs.org/#Builder](http://knexjs.org/#Builder)
+- [knex.js website and documentation](http://knexjs.org/)
+- [knex query lab](http://michaelavila.com/knex-querylab/)
+- [SQL to knex exercise](https://github.com/gSchool/sql-to-knex-assignment)
+- [Wikipedia - SQL injection](https://en.wikipedia.org/wiki/SQL_injection)
