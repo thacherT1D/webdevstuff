@@ -92,7 +92,7 @@ $xhr.fail(() => {
 });
 ```
 
-The `$.getJSON()` function sends an HTTP request and returns an `$xhr` promise. A **promise** is an object that's used for asynchronous operations. Though at first it looks like just a regular callback, a promise is much more than that. A promise is an object that represents an operation that hasn't completed yet, but will in the future. The main benefit of a promise is the ability to catch thrown errors without crashing an application.
+The `$.getJSON()` function sends an HTTP request and returns an `$xhr` promise. A **promise** is an object that's used for asynchronous operations. Though at first it looks like just a regular callback, a promise is much more than that. A promise is an object that represents an operation that hasn't completed yet, but will in the future. The main benefit of a promise is its ability to separate the success handling logic from the error handling logic.
 
 For example, the `$xhr` promise remains in an unresolved state while it waits for the HTTP response. The `$xhr` promise has two methods, `done()` and `fail()`, that are given a callback each. If the HTTP response is successful, the `done()` function's callback is triggered. On the other hand, if the HTTP response generates an error, the `fail()` function's callback is triggered.
 
