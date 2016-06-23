@@ -504,7 +504,7 @@ And you should see something like this.
     score: '7.6' } ]
 ```
 
-The `orWhere()` method works exactly the same as the `where()` method, except it wraps its arguments in an `OR ( )` clause.
+The `orWhere()` method works exactly the same as the `where()` method, except it adds an `OR` clause and groups its arguments in parenthesis `()`.
 
 In the `index.js` file, write and save the following code.
 
