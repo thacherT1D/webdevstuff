@@ -250,7 +250,7 @@ At the heart of Knex is the query builder. The **query builder** is the API used
 
 ### `SELECT` clause
 
-In Knex, the [`select()` method](http://knexjs.org/#Builder-select) adds a `SELECT` clause. It takes an optional list of columns for the query, defaulting to `*` if none are specified. The response of a `SELECT` query will resolve with an array of objects of the matching rows in a table.
+In Knex, the [`select()` method](http://knexjs.org/#Builder-select) accepts an optional list of column names as arguments and adds them to the `SELECT` clause of a query. When no arguments are specified, it defaults to `*`. The response of a `SELECT` query will resolve the promise with an array of objects for the matching rows in a table.
 
 In the `index.js` file, write and save the following code.
 
