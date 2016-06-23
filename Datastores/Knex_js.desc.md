@@ -170,7 +170,7 @@ Would result in the following malicious SQL command.
 SELECT * FROM users WHERE name = ''; DROP TABLE users; -- ';
 ```
 
-To prevent a SQL injection attack, just escape the special characters that a user, malicious or otherwise, may input into the web application. In SQL, a single-quote `'` character is escaped with another single-quote `'`.
+To prevent a SQL injection attack, all you need to do is just escape the special characters that a user, malicious or otherwise, may input into a web application. In SQL, a single-quote `'` character is escaped with another single-quote `'`.
 
 ```sql
 SELECT * FROM users WHERE name = '''; DROP TABLE users; -- ';
