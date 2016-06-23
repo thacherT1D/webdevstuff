@@ -130,79 +130,121 @@ fields we care about to the select method.
 Let's change index.js to look like:
 
 ```javascript
-var knex = require('./db/knex');
+'use strict';
 
-knex('movies').select(['title', 'description']).then(function(data) {
-  console.log(data);
-  process.exit(1);
-});
+const env = process.env.NODE_ENV || 'development';
+const config = require('./knexfile.js')[env];
+const knex = require('knex')(config);
+
+knex('movies')
+  .select('id', 'title', 'rating', 'is_3d', 'score')
+  .then((result) => {
+    console.log(result);
+
+    process.exit();
+  });
 ```
 
-```bash
-/development/galvanize/intro_to_knex  ᐅ node index.js
-[ { title: 'Batman Begins', description: null },
-  { title: 'Cars', description: 'Pixar movie' },
-  { title: 'Back to the Future',
-    description: 'No one calls Marty chicken' },
-  { title: 'Dude Wheres My Car',
-    description: 'probably a bad movie' },
-  { title: 'Godfather', description: 'good movie' },
-  { title: 'Mystic River', description: 'did not see it' },
-  { title: 'Argo', description: 'Ben Affleck is a hero' },
-  { title: 'Gigli', description: 'really bad movie' },
-  { title: 'Sharknado', description: 'Instant classic' },
-  { title: 'Jurassic World',
-    description: 'Chris Pratt trains raptors' },
-  { title: 'Mad Max: Fury Road',
-    description: 'Water is low, similar to california' } ]
+```shell
+node index.js
 ```
 
-### What if we only want movies that are decent?
+```text
+[ anonymous {
+    id: 1,
+    title: 'Frozen',
+    rating: 'PG',
+    is_3d: true,
+    score: '7.6' },
+  anonymous {
+    id: 2,
+    title: 'X-Men: Apocalypse',
+    rating: 'PG-13',
+    is_3d: true,
+    score: '7.4' },
+  anonymous {
+    id: 3,
+    title: 'The Princess Bride',
+    rating: 'PG',
+    is_3d: false,
+    score: '8.1' },
+  anonymous {
+    id: 4,
+    title: 'Pulp Fiction',
+    rating: 'R',
+    is_3d: false,
+    score: '8.9' } ]
+```
+
+```javascript
+'use strict';
+
+const env = process.env.NODE_ENV || 'development';
+const config = require('./knexfile.js')[env];
+const knex = require('knex')(config);
+
+knex('movies')
+  .select('id', 'title', 'rating', 'is_3d', 'score')
+  .where('id', 4)
+  .then((result) => {
+    console.log(result);
+
+    process.exit();
+  });
+```
+
+```text
+[ anonymous {
+    id: 4,
+    title: 'Pulp Fiction',
+    rating: 'R',
+    is_3d: false,
+    score: '8.9' } ]
+```
 
 Knex has a fairly intuitive API, so if we want to add a `where` clause,
 we'll just use the [where](http://knexjs.org/#Builder-where) function like so:
 
 ```javascript
-var knex = require('./db/knex');
+'use strict';
 
-knex('movies').select().where('rating', '>', 4).then(function(data) {
-  console.log(data);
-  process.exit(1);
-});
+const env = process.env.NODE_ENV || 'development';
+const config = require('./knexfile.js')[env];
+const knex = require('knex')(config);
+
+knex('movies')
+  .select('id', 'title', 'rating', 'is_3d', 'score')
+  .where('score', '>=', 7.5)
+  .then((result) => {
+    console.log(result);
+
+    process.exit();
+  });
 ```
 
-```bash
-/development/galvanize/intro_to_knex  ᐅ node index.js
-[ { id: 1, title: 'Batman Begins', description: null, rating: 10 },
-  { id: 2, title: 'Cars', description: 'Pixar movie', rating: 7 },
-  { id: 3,
-    title: 'Back to the Future',
-    description: 'No one calls Marty chicken',
-    rating: 9 },
-  { id: 5,
-    title: 'Godfather',
-    description: 'good movie',
-    rating: 10 },
-  { id: 6,
-    title: 'Mystic River',
-    description: 'did not see it',
-    rating: 7 },
-  { id: 7,
-    title: 'Argo',
-    description: 'Ben Affleck is a hero',
-    rating: 7 },
-  { id: 9,
-    title: 'Sharknado',
-    description: 'Instant classic',
-    rating: 10 },
-  { id: 10,
-    title: 'Jurassic World',
-    description: 'Chris Pratt trains raptors',
-    rating: 5 },
-  { id: 11,
-    title: 'Mad Max: Fury Road',
-    description: 'Water is low, similar to california',
-    rating: 7 } ]
+```shell
+node index.js
+```
+
+```shell
+[ anonymous {
+    id: 1,
+    title: 'Frozen',
+    rating: 'PG',
+    is_3d: true,
+    score: '7.6' },
+  anonymous {
+    id: 3,
+    title: 'The Princess Bride',
+    rating: 'PG',
+    is_3d: false,
+    score: '8.1' },
+  anonymous {
+    id: 4,
+    title: 'Pulp Fiction',
+    rating: 'R',
+    is_3d: false,
+    score: '8.9' } ]
 ```
 
 ### What if we want to have multiple where clauses?
@@ -212,10 +254,71 @@ handle building the proper query for those. Let's fetch decent movies
 named Cars:
 
 ```javascript
-knex('movies').select().where('rating', '>', 4).where({title: 'Cars'}).then(function(data) {
-  console.log(data);
-  process.exit(1);
-});
+'use strict';
+
+const env = process.env.NODE_ENV || 'development';
+const config = require('./knexfile.js')[env];
+const knex = require('knex')(config);
+
+knex('movies')
+  .select('id', 'title', 'rating', 'is_3d', 'score')
+  .where('score', '>=', 7.5)
+  .where('rating', 'PG')
+  .then((result) => {
+    console.log(result);
+
+    process.exit();
+  });
+```
+
+```shell
+node index.js
+```
+
+```text
+[ anonymous {
+    id: 1,
+    title: 'Frozen',
+    rating: 'PG',
+    is_3d: true,
+    score: '7.6' },
+  anonymous {
+    id: 3,
+    title: 'The Princess Bride',
+    rating: 'PG',
+    is_3d: false,
+    score: '8.1' } ]
+```
+
+```javascript
+'use strict';
+
+const env = process.env.NODE_ENV || 'development';
+const config = require('./knexfile.js')[env];
+const knex = require('knex')(config);
+
+knex('movies')
+  .select('id', 'title', 'rating', 'is_3d', 'score')
+  .where('score', '>=', 7.5)
+  .where({ rating: 'PG', is_3d: true })
+  .then((result) => {
+    console.log(result);
+
+    process.exit();
+  });
+```
+
+```shell
+node index.js
+```
+
+```text
+[ anonymous {
+    id: 1,
+    title: 'Frozen',
+    rating: 'PG',
+    is_3d: true,
+    score: '7.6' } ]
 ```
 
 There's a handful of ways to tell Knex you want it to match a key and a
@@ -225,10 +328,6 @@ Did you run this code and get back an empty arry? PostgreSQL is case
 sensitive, so if you don't capitalize `Cars`, it won't actually match
 anything.
 
-```bash
-/development/galvanize/intro_to_knex  ᐅ node index.js
-[ { id: 2, title: 'Cars', description: 'Pixar movie', rating: 7 } ]
-```
 
 ### How about adding OR clauses?
 
