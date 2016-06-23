@@ -203,8 +203,6 @@ And you should see something like this.
 select * from "users" where "name" = '''; DROP TABLE users; -- '
 ```
 
-And because the same Knex.js API works across many relational databases, such as  Postgres, MSSQL, MySQL, MariaDB, SQLite3, and Oracle, in theory, you could switch to a different database system without changing any of your Node.js code. However, most production web applications have a fair bit of highly optimized code that's specific to database system. But it's certainly possible that it can be converted as well.
-
 ### Exercise
 
 Draw a diagram of a database-driven, full-stack web application. Identify which part uses Knex.js and how it works.
