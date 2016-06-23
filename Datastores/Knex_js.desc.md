@@ -167,9 +167,9 @@ And you should see something like this.
     score: '8.9' } ]
 ```
 
-This data probably looks familiar. Congratulations on querying a PostgreSQL database from Node.js successfully! You're on your way to building dynamic web applications.
+This data probably looks familiar. By the way, congratulations on successfully querying a PostgreSQL database from Node.js! You're on your way to building dynamic web applications.
 
-As it turns out, the `then()` function returns a promise too. This is why you can immediately chain a `catch()` function call. We'll study promises in more depth soon as they're essential for handling asynchronous operations. For now, just follow the coding pattern outlined above.
+As it turns out, the `then()` function returns a promise too. This is why you can immediately chain a `catch()` function call to return value of the `then()` function. We'll study promises in more depth soon as they're essential for handling asynchronous operations. For now, just follow the coding pattern outlined above.
 
 Before moving on, here's a quick note about connecting to a PostgreSQL server with Knex. When the `require('knex')(config)` function is called, Knex opens a connection to the PostgreSQL server. When the `knex.destroy()` function is called, Knex closes it. If the connection isn't closed, the program would run indefinitely.
 
