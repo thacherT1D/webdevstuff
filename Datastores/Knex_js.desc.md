@@ -222,6 +222,7 @@ const knex = require('knex')(config);
 const sql = knex('users').where('name', userName).toString();
 
 console.log(sql);
+
 knex.destroy();
 ```
 
@@ -245,11 +246,11 @@ Once you're satisfied, explain to a neighbor how user input from a malicious use
 
 ## How do you use Knex.js to select rows from a PostgreSQL table?
 
-Something about the Knex.js API.
+At the heart of Knex is the query builder. The **query builder** is the API used to build and send SQL queries, such as `SELECT`, `INSERT`, `UPDATE`, `DELETE`, to a database system. Let's play around with selecting rows from a table.
 
 ### `SELECT` clause
 
-In Knex, the [`select()` method](http://knexjs.org/#Builder-select) creates a `SELECT` query. It takes an optional list of columns for the query, defaulting to `*` if none are specified. The response of a `SELECT` query will resolve with an array of objects of the matching rows in a table.
+In Knex, the [`select()` method](http://knexjs.org/#Builder-select) adds a `SELECT` clause. It takes an optional list of columns for the query, defaulting to `*` if none are specified. The response of a `SELECT` query will resolve with an array of objects of the matching rows in a table.
 
 In the `index.js` file, write and save the following code.
 
