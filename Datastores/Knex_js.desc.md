@@ -2,9 +2,10 @@
 
 - Explain what Knex.js is.
 - Explain why Knex.js is useful.
-- Define what a query builder is and what some of the benefits are to using one
-- Setup a new project with Knex
-- Perform CRUD on a resource using Knex methods
+- Use Knex.js to select rows from a PostgreSQL table.
+- Use Knex.js to insert rows into a PostgreSQL table.
+- Use Knex.js to update rows in a PostgreSQL table.
+- Use Knex.js to delete rows from a PostgreSQL table.
 
 ## What is Knex?
 
