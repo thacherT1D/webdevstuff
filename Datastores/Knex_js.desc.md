@@ -92,11 +92,11 @@ $xhr.fail(() => {
 });
 ```
 
-jQuery's `$.getJSON()` function fires off an HTP request and returns an `$xhr` promise object. A **promise** is an object that's used for asynchronous operations. Though at first it looks like just a regular callback, it's much more than that. A promise is an object that represents an operation that hasn't completed yet, but will in the future.
+jQuery's `$.getJSON()` function fires off an HTTP request and returns an `$xhr` promise. A **promise** is an object that's used for asynchronous operations. Though at first it looks like just a regular callback, it's much more than that. A promise is an object that represents an operation that hasn't completed yet, but will in the future. The main benefit of a promise is the ability to catch thrown errors without crashing an application.
 
 For example, the `$xhr` promise remains in an unresolved state while it waits for the HTTP response. The `$xhr` promise has two methods, `done()` and `fail()`, that are given a callback each. If the HTTP response is successful, the `done()` function's callback is triggered. On the other hand, if the HTTP response generates an error, the `fail()` function's callback is triggered.
 
-Just like how jQuery uses promises to handle HTTP response from an HTTP server, Knex uses promises to handle SQL responses from a PostgreSQL server. In fact, nearly all the functions in Knex return a promise as it's the preferred way of handling SQL responses. The main benefit of a promise is the ability to catch thrown errors without crashing an application. By using a Knex promise's `then()` and `catch()` asynchronous functions, your code will behave like `try` and `catch` synchronous blocks.
+Just like how jQuery uses a promise to handle an HTTP response from an HTTP server, Knex uses promises to handle a SQL response from a PostgreSQL server. In fact, nearly all the functions in Knex return a promise as it's the preferred way of handling SQL responses. The main difference from jQuery is that Knex promises use the `then()` and `catch()` asynchronous functions instead of `done()` and `fail()`.
 
 In the `index.js` file, write and save the following code.
 
@@ -165,11 +165,15 @@ And you should see something like this.
     score: '8.9' } ]
 ```
 
-When the `require('knex')(config)` function is called, Knex opens a connection to the PostgreSQL server. When the `knex.destroy()` function is called, Knex closes it. If the connection isn't closed, the program would run indefinitely.
+This data probably looks familiar. Congratulations on querying a PostgreSQL database from Node.js successfully! You're on your way to building dynamic web applications.
+
+As it turns out, the `then()` function returns a promise too. This is why you can immediately chain a `catch()` function call. We'll study promises in more depth soon as they're essential for handling asynchronous operations. For now, just follow the coding pattern outlined above.
+
+Before moving on, here's a quick note about connecting to a PostgreSQL server with Knex. When the `require('knex')(config)` function is called, Knex opens a connection to the PostgreSQL server. When the `knex.destroy()` function is called, Knex closes it. If the connection isn't closed, the program would run indefinitely.
 
 ### Exercise
 
-Turn to a partner and explain what Knex.js is in your own words.
+Turn to a neighbor and explain what Knex.js is and how it works in your own words.
 
 ## Why is Knex.js useful?
 
