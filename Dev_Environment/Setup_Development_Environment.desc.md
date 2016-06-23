@@ -4,21 +4,26 @@ This article will help you setup a web development environment on [Mac OS X 10.1
 
 By the end of this article, your development machine should have the following software installed and configured.
 
-1. [Terminal](#configure-the-terminal)
+1. [iTerm](#install-and-configure-iterm)
+  * [Upgrade with iTerm](#upgrade-with-iterm)
+  * [Discover the Terminal](#discover-the-terminal)
+  * [Upgrade Your Workflow](#upgrade-your-workflow)
 1. [Homebrew](#install-homebrew)
+  * [Update Homebrew](#update-homebrew)
+  * [Verify Homebrew](#verify-homebrew)
 1. [Chrome](#install-and-configure-chrome)
-1. [Fish](#install-and-configure-fish)
+1. [zsh](#install-and-configure-zsh)
 1. [Atom](#install-and-configure-atom)
+  * [Install the Shell Commands](#install-the-shell-commands)
+  * [Edit Your zsh Theme](#edit-your-zsh-theme)
+  * [Discover the PATH Environment Variable](#discover-the-path-environment-variable)
 1. [Git](#install-and-configure-git)
 1. [Node](#install-node)
-1. [Surge](#install-surge)
-
-After you've finished setting up your development environment, you'll be able to complete the following tasks.
-
-1. Create a tiny web page with a text editor
-1. Test the web page in a browser
-1. Commit the web page to a repository
-1. Deploy the web page to a production environment
+  * [Discover the Node Shell](#discover-the-node-shell)
+  * [Discover the Node Interpreter](#discover-the-node-interpreter)
+1. [Setup Your Class File Structure](#setup-your-class-file-structure)
+1. [Spectacle](#install-and-configure-spectacle)
+1. [Anki](#install-and-configure-anki)
 
 Additionally, this article assumes your computer is up to the task of coding.
 
@@ -51,7 +56,7 @@ That's why many developers prefer a development environment composed of multiple
 
 The following instructions will help you install and configure a development environment so you can complete the essential tasks of a web developer using tools that adhere to the Unix philosophy. Let's get started.
 
-## Configure the Terminal
+## Install and Configure iTerm
 
 Included in Mac OS X is the **Terminal**—an app that runs a Unix shell.
 
@@ -59,32 +64,37 @@ A **Unix shell** is a command line user interface between you and your computer'
 
 The first Unix shell was released in 1971 and yet developers continue to incorporate them into their workflows. That's because Unix shells are both interactive and scriptable. In other words, the same commands that control an operating system from the command line can be included in a script file. A **script file** is commonly used to automate repetitive tasks and increase developer productivity. In this article, you'll download and run script files to speed up the installation and configuration of your development environment.
 
+### Upgrade with iTerm
+
+While the Terminal that comes with Mac OS X is useful as is, you'll find many developers have upgraded to use [iTerm2](https://www.iterm2.com/). There are
+[many features](https://www.iterm2.com/features.html) iTerm provides which goes above and beyond the typical Terminal program.
+
+[Download](https://www.iterm2.com/downloads.html) the latest stable version of iTerm and then drag the downloaded icon into your Applications folder.
+
 ### Discover the Terminal
 
-Let's get our hands dirty and have some fun. :paw_prints:
+Let's get our hands dirty and have some fun!
 
-First, use Spotlight to launch the Terminal app by pressing the `Command` + `Spacebar` keys at the same time, typing the word "terminal" into the search field, and then pressing the `Enter` key.
-
-![](https://i.imgur.com/XQE36wU.jpg)
+First, use Spotlight to launch the iTerm app by pressing the `Command` + `Spacebar` keys at the same time, typing the word "iterm" into the search field, and then pressing the `Enter` key.
 
 Once launched, you'll see something like this.
 
-![](https://i.imgur.com/7d6GeeO.png)
+![](https://i.imgur.com/lHX0JWD.png)
 
 Here's a quick break down of what you're seeing in the Terminal app.
 
 | Component             | Description                            |
 | --------------------- | -------------------------------------- |
-| `Wed Jan 28 12:06:29` | Date of your last login                |
-| `ttys008`             | Name of your last terminal session     |
-| `photon`              | Name of your computer                  |
+| `Mon Jun 20 10:14:00` | Date of your last login                |
+| `ttys000`             | Name of your last terminal session     |
+| `Avenger`             | Name of your computer                  |
 | `~` (home directory)  | Name of your working directory         |
-| `ryansobol`           | Name of your user account              |
+| `steverogers`         | Name of your user account              |
 | `$`                   | Prompt symbol                          |
 
 Go ahead and type `uname` which is a command that will display your operating system's Unix name. Any characters you type will appear after the `$` prompt symbol. After pressing the `Enter` key, you'll see something like this.
 
-![](https://i.imgur.com/eGnT4NZ.png)
+![](https://i.imgur.com/lcRJe6D.png)
 
 **TIP:** The two most common Unix operating systems are Darwin and Linux.
 
@@ -107,68 +117,75 @@ Here's what happened:
 
 This sequence of events is known as a read-evaluate-print loop or **REPL** for short. This is just one example of a larger concept called the **Request-Response Cycle**. You'll study the cycle of sending a request and processing a response throughout this course as it's at the core of web development.
 
-### Change the Terminal Profile
+### Upgrade Your Workflow
 
-The default profile for the Terminal uses small, black text on a white background. Boring! Let's change that.
+Right now using the terminal may not be very intuitive. Not only is it something completely new but it also doesn't share the
+keybindings from other programs that we may know better. Let's set up our terminal to work more like the rest of our
+computer and therefore speed up our workflow.
 
-1. Download the [Tomorrow Night Eighties](https://raw.githubusercontent.com/ryansobol/sea-c17-ruby/master/class1/osx/Tomorrow%20Night%20Eighties.terminal) terminal profile by holding the `Option` key and left-clicking the link.
-1. Navigate to the `Downloads` folder.
-1. Install the profile by double-clicking the file.
-1. You'll see an alert explaining the file "cannot be opened because it is from an unidentified developer". **Don't panic.**
-1. Using Spotlight, open the `Security & Privacy` system preferences by pressing the `Command` + `Spacebar` keys at the same time, typing the word "security" into the search field, and then pressing the `Enter` key.
-1. Navigate to the `General` tab and then click on the `Open Anyway` button. ![](https://i.imgur.com/lOh3GAH.png)
-1. Press the `Command` + `Tab` keys at the same time to switch back to the Terminal app.
-1. Navigate to the `Terminal > Preferences` menu item by pressing the `Command` + `,` keys at the same time.
-1. In the preferences window, click the `Settings` Pane.
-1. On the left side, scroll to the bottom, select the `Tommorrow Night Eighties` profile, and click the `Default` button. ![](https://i.imgur.com/g9l91K0.png)
-1. Quit the Terminal app by pressing the `Command` + `Q` keys at the same time.
-1. Relaunch the Terminal using Spotlight like before.
+As we move forward, you may find that your terminal window is getting cluttered with text! If that ever happens, press `Command` + `K`
+and your window will be cleared out. This is a great way to make sure you are always **Clearing the Stage** and don't get overwhelmed
+by the amount of information your screen.
 
-Now, every new Terminal window will look like this.
+Just like in Atom and Chrome, you can open a new tab on your terminal with `Command` + `T`. However, unlike in these programs you can't navigate back and forth between tabs using `Command` + `Option` + `Left / Right`. Currently, if you try, you'll see this:
 
-![](https://i.imgur.com/87bHvEF.png)
+[![https://gyazo.com/53c479c4175b81b4fe61fb6197f18d74](https://i.gyazo.com/53c479c4175b81b4fe61fb6197f18d74.gif)](https://gyazo.com/53c479c4175b81b4fe61fb6197f18d74)
 
-### Add Universal Keyboard Shortcuts
+Let's fix our key bindings so that we can navigate between tabs just like in Chrome. Press `Command` + `,` to open the preferences pane
+and then navigate to the **Keys** section. Find the "Previous Tab" and "Next Tab" key mappings. By default, iTerm has these set to be
+just `Command` + `Left / Right`. Consolidating our key mappings will make it easier for us to open any program and be able to **just work™**,
+as opposed to trying to remember what the key mappings for this program are.
 
-Keyboard shortcuts on Mac OS X typically consist of one or more of the following keys.
+Double click on "Previous Tab" and then enter in our new key binding of `Command` + `Option` + `Left`. Then do the same with "Next Tab"
+except using `Command` + `Option` + `Right`.
 
-| Key         | Symbol |
-|-------------|--------|
-| `Command`   | ⌘      |
-| `Option`    | ⌥      |
-| `Control`   | ⌃      |
-| `Function`  | fn     |
-| `Shift`     | ⇧      |
-| `Caps Lock` | ⇪      |
+[![https://gyazo.com/d4f8196a7782289b7110cd01a0f2e2ef](https://i.gyazo.com/d4f8196a7782289b7110cd01a0f2e2ef.gif)](https://gyazo.com/d4f8196a7782289b7110cd01a0f2e2ef)
 
-Unsurprisingly, Mac OS X has a bunch of built-in keyboard shortcuts that are universal to all applications. For example, `Command` + `T` is the universal keyboard shortcut for creating a new application tab. Though there are keyboard shortcuts for switching between an application's tabs, you might be surprised to learn that these not universal for all applications.
+In other programs you can use `Command` + `Delete` to delete an entire line but we can't do this an iTerm. These means if you need to delete
+a long line you were just typing you'd need to hold the Delete key. That's ridiculous, so let's fix it.
 
-Since you'll be switching between tabs in applications like the Terminal, Google Chrome, and Atom all the time, let's add a few universal keyboard shortcuts for this.
+Back in the **Keys** section of your preferences pane, press the `+` button to create a new key mapping. This time we need to select the option
+titled "Send Hex Code" which will allow us to type in some characters that will send a command to our computer. It's not important to understand
+how this is happening just yet. Add the following and then press OK.
 
-1. Using Spotlight, open the `Keyboard` system preferences by pressing the `Command` + `Spacebar` keys at the same time, typing the word "keyboard" into the search field, and then pressing the `Enter` key.
-1. Navigate to the `Shortcuts` tab, select `App Shortcuts` from the left pane, and then click on the `+` button. ![](https://i.imgur.com/tFgUgSk.png)
-1. In the panel that slides down, add the following keyboard shortcuts to **All Applications**.
+![](http://i.imgur.com/3E7rdVw.png)
 
-| Menu Title          | Keyboard Shortcut          | Symbols |
-|---------------------|----------------------------|---------|
-| Select Next Tab     | `Option` + `Command` + `→` | ⌥⌘→     |
-| Select Previous Tab | `Option` + `Command` + `←` | ⌥⌘←     |
-| Show Next Tab       | `Option` + `Command` + `→` | ⌥⌘→     |
-| Show Previous Tab   | `Option` + `Command` + `←` | ⌥⌘←     |
+If you return back to your terminal, you'll find that you can now delete everything before the cursor with `Command` + `Delete`. Much, much faster!
 
-By adding a keyboard shortcut, you're associating it with a possible menu title for all applications. The reason for the duplicate shortcuts is because different applications have differently named menu titles to switch between the next and previous tab.
+[![https://gyazo.com/3cd1cb44c01d8be442fe7bfca578c796](https://i.gyazo.com/3cd1cb44c01d8be442fe7bfca578c796.gif)](https://gyazo.com/3cd1cb44c01d8be442fe7bfca578c796)
 
-When you're done, it should look like this.
+But, did you notice that the cursor had to manually moved back a word? In Atom, you can navigate to the front and back of a line with `Command` + `Left / Right`, move back or forward a single word with `Option` + `Left / Right`, and delete only a single word with `Option` + `Delete`. Let's set up all of those
+key mappings so we can be efficient programmers!
 
-![](https://i.imgur.com/wzhNmHr.png)
+For the movement-based key mappings. Take a look at this [Stack Overflow response](http://stackoverflow.com/questions/6205157/iterm2-how-to-get-jump-to-beginning-end-of-line-in-bash-shell). Stack Overflow is a forum where you
+can ask and answer questions. It's typically used by developers but there are a ton of different Stack Overflow forums on all different types of topics.
 
-You may also be surprised to learn that there are no universal keyboard shortcuts to quickly and neatly arrange application windows on the screen. For this, you'll need a tool called a window manager. There are many window managers on the market, but the one I use and whole-heartedly recommend is called [Magnet](https://itunes.apple.com/us/app/magnet/id441258766?mt=12). I like Magnet because its adds several universal keyboard shortcuts that are compatible with the ones you just created. If you're comfortable spending a couple of dollars on the Mac App Store, give it a try. Otherwise, feel free to use any window manager you want.
+When you attempt to do the last two, you'll get a warning message that a different key mapping is overriding the changes you're attempting to make.
+Don't worry! Go to the **Profiles** tab and then just delete the key bindings associated with `Option` + `Left / Right`.
+
+[![https://gyazo.com/61892d48108b14995ca20282dadf56ed](https://i.gyazo.com/61892d48108b14995ca20282dadf56ed.gif)](https://gyazo.com/61892d48108b14995ca20282dadf56ed)
+
+One last key mapping! Add this final key mapping to delete only the prior word.
+
+![](http://i.imgur.com/qftxOBD.png)
+
+You can now navigate around the text in your terminal incredibly quickly! At the moment, this may seem like a lot of work for such little gain; but, I think you'll find these key bindings to be invaluable in the weeks to come.
+
+We can enable one last time saving trick in iTerm to make development more predictable and quick. Currently, if you navigate to a folder inside of your file system and then open up a new terminal window, you'll find yourself back at your home directory. This ends up getting pretty annoying as we attempt to work on different parts of a project.
+
+Instead, let's have our terminal open the previous session's directory as its new starting point. To do so, in Preferences under "Profiles" select the following:
+
+![](http://i.imgur.com/IlJ3VyU.png)
+
+Now whenever you open a new window, you'll be in the same directory and won't need to navigate to it again. Hurray!
+
+We've completed a number of customizations to make our terminal more intuitive which will, in turn, make us faster developers. Moving forward in the course, you should feel free to experiment with different key bindings that you like.
 
 ## Install Homebrew
 
 Now that your Terminal is setup, it's time to install [Homebrew](http://brew.sh/), the de facto package manager for OS X. If you've never heard of a package manager, think of it as an app store for **free** command line programs.
 
-To get started, run the following command in your shell. It'll download and run a script file that downloads and installs Homebrew onto your development environment. So meta! :metal:
+To get started, run the following command in your shell. It'll download and run a script file that downloads and installs Homebrew onto your development environment. So meta!
 
 ```
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -194,7 +211,7 @@ Otherwise, you'll see something like this.
 
 ![](https://i.imgur.com/JPB9Gnn.png)
 
-**TIP:** Run this command periodically as Homebrew doesn't automatically update itself. :sweat:
+**TIP:** Run this command periodically as Homebrew doesn't automatically update itself.
 
 ### Verify Homebrew
 
@@ -230,120 +247,33 @@ Scroll down a bit more until you find the **Send a "Do Not Track" request with y
 
 **TIP:** You may want to consider installing an [ad blocking extension](https://chrome.google.com/webstore/detail/adblock/gighmmpiobklfepjocnamgkkbiglidom) to Chrome.
 
-## Install and Configure Fish
+## Install and Configure Zsh
 
-Using Homebrew, you can now install [Fish](https://fishshell.com/), a smart and user-friendly command line shell. Remember, a shell is simply the user interface between you and your computer's operating system.
+Because we'll be working with the shell often, it's important to make the experience as efficient and fun as possible. Remember, a shell is simply the user interface between you and your computer's operating system.
 
-There are many command line shells availabe to choose from, each with their own strengths. Since it's easy to switch back and forth at any time, I recommend you give Fish a try.
+There are many command line shells available to choose from, each with their own strengths. We're all going to start together using Zsh and Oh My Zsh, but you can work with another in the future.
 
-To get started, run the following command.
-
-```
-brew install fish
-```
-
-Run the following command to let your computer know it's safe to use Fish as your default shell.
+You should actually already have zsh installed! To check, run the following command.
 
 ```
-echo '/usr/local/bin/fish' | sudo tee -a /etc/shells
+zsh --version
 ```
+
+You should receive some output that looks like this.
+
+```
+zsh 5.0.8 (x86_64-apple-darwin15.0)
+```
+
+That means all we need to do is install [Oh My Zsh](https://github.com/robbyrussell/oh-my-zsh), which is simply a framework for managing your zsh configuration. It's like icing on a delicious, shell cake. Read the instructions on how to install via the Github repository.
 
 **TIP:** This will require your account password which **will not** appear on the screen as you type.
 
-Finally, run this command to make Fish your default shell.
+You should end up with something like the following:
 
-```
-chsh -s /usr/local/bin/fish
-```
+![](http://i.imgur.com/AHD1JS5.png)
 
-**TIP:** This will also require your account password which **will not** appear on the screen as you type.
-
-Now, quit the Terminal app by pressing the `Command` + `Q` keys at the same time. Then relaunch your Terminal using Spotlight and you'll see something like this.
-
-![](https://i.imgur.com/h2qvEez.png)
-
-Welcome to Fish! :tropical_fish:
-
-### Improve the prompt
-
-The prompt is the visual cornerstone of any shell, so let's change it to be both functional and glamorous. :nail_care:
-
-To download and install a better prompt, run the following command.
-
-```
-curl -fsSL https://git.io/vgqFU | ruby
-```
-
-To verify the new prompt is installed correctly, relaunch the Terminal. You'll see something like this.
-
-![](https://imgur.com/kBsLiZK.png)
-
-**TIP:** Run the `rm -r ~/.git` command if your Fish prompt looks like the this instead.
-
-![](https://i.imgur.com/fAO3vje.png)
-
-Here's a quick break down of what you're seeing.
-
-| Component             | Description                            |
-| --------------------- | -------------------------------------- |
-| `Wed Jan 28 08:53:47` | Date of your last login                |
-| `ttys006`             | Name of your last terminal session     |
-| `~` (home directory)  | Name of your working directory         |
-| `$`                   | Prompt symbol                          |
-
-### Update the auto-completions
-
-Fish's auto-completions enhance the user experience of most command line tools.
-
-To update fish's completions, run the following command.
-
-```
-fish_update_completions
-```
-
-And you'll see something like this.
-
-![](https://i.imgur.com/NOS48CL.png)
-
-To try out auto-completions, start typing the following command.
-
-```
-brew in
-```
-
-And press the `Tab` key and you'll see something like this.
-
-![](https://i.imgur.com/NNP06MA.png)
-
-Finish typing the following command and press the `Enter` key.
-
-```
-brew info fish
-```
-
-And you'll see something like this.
-
-![](https://i.imgur.com/ShGjo1s.png)
-
-### Leverage your history
-
-Fish keeps a record of every command you've ever run. You can use that history to your advantage.
-
-Start by typing the following command one more time.
-
-```
-brew in
-```
-
-This time you'll see an auto-suggestion based on the most recent matching command.
-
-![](https://i.imgur.com/yrOuJX9.png)
-
-To use the auto-suggestion, press the right arrow ➡ key and hit the `Enter` key.
-
-![](https://i.imgur.com/DbaBTi7.png)
-
-**TIP:** Use the up arrow ⬆ and the down arrow ⬇ keys to cycle through your entire history of commands.
+With zsh, we can set up some really great themes that will give us more information as we interact with the shell, making it much easier to use. We'll do that in the next session after we've installed Atom!
 
 ## Install and Configure Atom
 
@@ -369,19 +299,12 @@ Under the **Settings** tab, change the following:
 | Soft Wrap                          | :white_check_mark: |
 | Soft Wrap At Preferred Line Length | :white_check_mark: |
 
-Under the **Install** tab, install the following:
-
-| Name                           | Type    |
-|--------------------------------|---------|
-| file-icons                     | Package |
-| language-fish-shell            | Package |
-| tomorrow-night-eighties-syntax | Theme   |
-
-Under the **Themes** tab, choose the following:
+Atom has a number of themes you can install to change how code appears on your screen. Under the **Themes** tab, choose the following:
 
 | Name                           | Type         |
 |--------------------------------|--------------|
-| Tomorrow Night Eighties        | Syntax Theme |
+| One Dark                       | UI Theme     |
+| Base16 Tomorrow Dark           | Syntax Theme |
 
 When you're done, close the preferences tab by pressing the `Command` + `W` keys  at the same time.
 
@@ -394,47 +317,38 @@ To get started, select the `Atom > Install Shell Commands` menu item.
 To verify Atom is wired up correctly, run the following command.
 
 ```
-atom ~/.config/fish/config.fish
+atom -v
 ```
 
-And Fish's startup file will open in Atom like this.
+### Edit Your zsh Theme
 
-![](https://i.imgur.com/efTSZJR.png)
+Now we have our editor installed and Oh My Zsh setup. Let's make our terminal fabulous.
 
-### Discover the `EDITOR` environment variable
-
-Like most shells, Fish allows you to control the contents of its **environment variables**, which are a set of key-value pairs that can affect the way running programs behave. These environment variables are often set when a new shell starts so their contents are available throughout the entire duration of the shell's session.
-
-When executed, many command line tools look up specific environment variables and use their contents as implicit input. For example, Git uses the `EDITOR` environment variable to open your preferred text editor when you forget to include a commit message.
-
-Environment variables like `EDITOR` can be set in a shell's startup file. While Fish's startup file is handy, add the following settings.
+Running the following command should open a file with atom:
 
 ```
-# Atom
-set -x EDITOR 'atom -w'
+atom ~/.zshrc
 ```
 
-**TIP:** Environment variables, like `EDITOR`, must be written in all capital letters.
-
-Save the file and you'll see something like this.
-
-![](https://i.imgur.com/0k7KvdD.png)
-
-Now, relaunch the Terminal and verify these settings with the following command.
+This is your zsh config file, which allows you to manage your shell's settings in all kinds of ways. You should see on or around Line 8 the following:
 
 ```
-echo $EDITOR
+ZSH_THEME="robbyrussell"
 ```
 
-**TIP:** When reading the content of an environment variable, it must be prefixed with a dollar sign `$`.
+What's between the `"`s is the name of the theme that's currently in play. There's a great website that allows you to preview the hundreds of themes available to zsh called [zshthem.es](http://zshthem.es/). A good theme should:
 
-And you'll see something like this.
+1. Give you some indication as to where you are in the file system.
+1. Not be so cluttered that you can't distinguish between the theme and what you're typing.
+1. When working with git, should give you some indication as to what branch you're on and if you have any uncommitted files.
 
-![](https://i.imgur.com/TAXG4JV.png)
+To change your theme, you simply need to change the name from `robbyrussell` to whatever the name of the theme is. You could spend a lot of time doing this, so for now start with either `clean` or `ys`.
 
-### Discover the `PATH` environment variable
+Once you have changed the file, save it (with `Command` + `S`) and then open up a new terminal window. You should see your new theme in place!
 
-Like most shells, Fish relies on the `PATH` environment variable to specify a set of directories where other commands can be found.
+### Discover the `PATH` Environment Variable
+
+Like most shells, zsh relies on the `PATH` environment variable to specify a set of directories where other commands can be found.
 
 To see the contents of the `PATH` environment variable, run the following command.
 
@@ -490,13 +404,7 @@ git config --global user.name 'YOUR FULL NAME'
 git config --global user.email 'YOUR EMAIL ADDRESS'
 ```
 
-Next, run this command to download and install some awesome Git colors, handy aliases for common Git subcommands, and extra Git configuration that'll make your life easier when connecting to GitHub from the command line.
-
-```
-curl -fsSL https://git.io/vgqFH | sh
-```
-
-We'll go over these later. For now, relish in your victory of making it this far. :tada:
+You've gotten git!
 
 ## Install Node
 
@@ -544,7 +452,7 @@ And you'll see something like this.
 
 The Node shell is a great tool for learning and experimenting with JavaScript.
 
-Play around with JavaScript on your own. When you're done, type `.exit` and press the `Enter` key to quit the Node shell.
+Play around with JavaScript on your own. When you're done, type `.exit` and press the `Enter` key to quit the Node shell. Alternatively, you can hit `Command` + `D` once or `Command` + `C` twice.
 
 ### Discover the Node Interpreter
 
@@ -574,7 +482,7 @@ Save the file and run the program using the Node interpreter.
 node ~/Desktop/test.js
 ```
 
-Weird, nothing happened. Remember, the Node interpreter won't print anything unless told. Jerk! :triumph:
+Weird, nothing happened. Remember, the Node interpreter won't print anything unless told. Jerk!
 
 Change the program so it reads like this.
 
@@ -598,225 +506,98 @@ Play around with JavaScript on your own. When you're done, remove the `test.js` 
 rm ~/Desktop/test.js
 ```
 
-## Install Surge
+## Setup Your Class File Structure
 
-Now, you'll deploy a tiny web page with [Surge](https://nodejs.org/), a static web publishing platform for front-end developers. To deploy to Surge, you'll use a command line program that's installed via [npm](https://www.npmjs.com/), a package manager for JavaScript software that comes with Node.
+Throughout the class, we've noticed many students try a variety of file structures that don't work for them. Either it becomes too granular, or their files are all over the place. So, to start, let's all begin with the same file structure.
 
-To get started, run the following command.
-
-`npm install -g surge`
-
-Once it finishes, run the following command.
-
-`surge -V`
-
-**TIP:** Notice the flag uses a capital `V`.
-
-And you'll see something like this.
-
-![](https://i.imgur.com/vRRoJau.png)
-
-### Start a new project
-
-If you don't have one, make a `Projects` directory to hold all of your upcoming projects.
+First of all, make sure you're in your `$HOME` directory. To find out what your home directory is, we can echo the environment variable, `$HOME`:
 
 ```
-mkdir ~/Projects
+echo $HOME
 ```
 
-Then change into the directory.
+To find out where you are, you can use the print working directory command, abbreviated to `pwd`:
 
 ```
-cd ~/Projects
+pwd
 ```
 
-Now make a `GITHUB-USERNAME.surge.sh` project directory replacing `GITHUB-USERNAME` with your actual GitHub username.
+Those two commands should output the same result! If they don't, you can run the change directory command which, when not given an additional parameter, will just return you to your home directory.
 
 ```
-mkdir wcrusher.surge.sh
+cd
 ```
 
-And change into the directory.
+Once you've confirmed you're in that directory, you can run the following command. Typically, you should not just run commands people give you that you don't understand. In this case though, it's probably okay. :wink:
 
 ```
-cd wcrusher.surge.sh
+mkdir galvanize && \
+cd galvanize && \
+mkdir unit-1 && mkdir unit-2 && mkdir unit-3 && mkdir unit-4 && mkdir projects && \
+ls -la
 ```
 
-You should see something like this.
-
-![](https://i.imgur.com/PDDFaMu.png)
-
-**TIP:** The full name of your working directory is `~/Projects/wcrusher.surge.sh`. To save prompt space, Fish abbreviates it. This is especially handy for **deeply nested** directories.
-
-Next, initialize a new Git repository in this directory.
+The output you receive should look something like this:
 
 ```
-git init
+total 0
+drwxr-xr-x   7 steverogers  staff  238 Jun 23 09:42 .
+drwxr-xr-x  18 steverogers  staff  612 Jun 23 09:42 ..
+drwxr-xr-x   2 steverogers  staff   68 Jun 23 09:42 projects
+drwxr-xr-x   2 steverogers  staff   68 Jun 23 09:42 unit-1
+drwxr-xr-x   2 steverogers  staff   68 Jun 23 09:42 unit-2
+drwxr-xr-x   2 steverogers  staff   68 Jun 23 09:42 unit-3
+drwxr-xr-x   2 steverogers  staff   68 Jun 23 09:42 unit-4
 ```
 
-And you should see something like this.
+You now have five folders setup: one for each unit and another for your end of unit projects. As we work on warmups, exercises, and mini-projects, do all of your work inside of the appropriate unit folder.
 
-![](https://i.imgur.com/p6Xw9eq.png)
+## Install and Configure Spectacle
 
-As the message suggests, an empty Git repository was initialized in your working directory. Notice the prompt changed too. You'll see this fancy prompt whenever your current working directory contains a Git repository.
+You'll often find yourself working with multiple programs at the same time while you're developing. Smartly utilizing your screen space will allow you to work more efficiently.
 
-Here's a quick break down of what you're seeing.
+To do so, we recommend using [Spectacle](https://www.spectacleapp.com/), a free application that allows you to manage your screen space with keyboard shortcuts. Download the application from the homepage and then drag the icon to your `Applications` directory. To open, press `Command` + `Spacebar` to open up Spotlight and then type in Spectacle.
 
-| Component                | Description                                   |
-|--------------------------|-----------------------------------------------|
-| `~/P/wcrusher.surge.sh`  | Abbreviated name of your working directory    |
-| `master`                 | Name of your repository's current branch      |
-| `✔`                      | Prompt symbol indicating a clean staging area |
+Try out Spectacle by opening up a window in Chrome and pressing `Command` + `Option` + `Left / Right / Up / Down`. Your Chrome window should move around the screen and take up half the space! You can do this with any program so you could have Atom on one side of the screen and your terminal on the other.
 
-Anything typed will appear after the green `✔` prompt symbol.
+Unfortunately, some of Spectacle's native commands now override the ability to switch between tabs on both our terminal and in Chrome! Let's fix those by setting up custom bindings. Instead of `Command` + `Option` + [Some Direction], we're going to do `Command` + `Option` + `Control` + [Some Direction].
 
-### Create a tiny web page
+Open up Preferences in Spectacle, and first delete the keybindings for Next Display and Previous Display.
 
-Now that the project's directory contains a Git repository, let's create a tiny web page.
+[![https://gyazo.com/83b9e59da89794e5480eba12dc69c1c9](https://i.gyazo.com/83b9e59da89794e5480eba12dc69c1c9.gif)](https://gyazo.com/83b9e59da89794e5480eba12dc69c1c9)
 
-To get started, run the following command.
+Next, click the relevant bindings and then simply press the new keyboard commands you'd like to use.
 
-```
-touch index.html
-```
+[![https://gyazo.com/e0a4ef72d9385b55f4fb03b0e41f71be](https://i.gyazo.com/e0a4ef72d9385b55f4fb03b0e41f71be.gif)](https://gyazo.com/e0a4ef72d9385b55f4fb03b0e41f71be)
 
-Noticed a red `✖` has replaced your prompt symbol. It indicates your staging area is dirty. :worried:
+That's it! You can now do all the things with your keyboard!
 
-![](https://i.imgur.com/jdcHS8p.png)
+## Install and Configure Anki
 
-To find out why, open the project directory in Atom.
+Anki is an intelligent flashcard program that smartly decides when you need to study certain material. While it is not important in this class to memorize many things, it is helpful to study definitions for certain terms in order to begin the process of speaking like a developer. This is invaluable for interviewing and we'd recommend starting that process now as opposed to at the end of the class.
 
-```
-atom .
-```
+You can download Anki at it's [official website](http://ankisrs.net/). By now, I'm sure you can figure out how to install an application on a Mac!
 
-**TIP:** The period `.` represents the current working directory.
+Anki works by creating decks of cards which you can study. Begin by renaming the default deck to "Web Development".
 
-It looks like there's a new, empty `index.html` file inside our project directory. As you can see, a Git repository's staging area becomes dirty whenever a new file is created.
+[![https://gyazo.com/d3fedeaf44e1a3f0c3adb55f5d5fc3d3](https://i.gyazo.com/d3fedeaf44e1a3f0c3adb55f5d5fc3d3.gif)](https://gyazo.com/d3fedeaf44e1a3f0c3adb55f5d5fc3d3)
 
-![](https://i.imgur.com/5wqLRFE.png)
+Click on that deck and then click the "Add" button. This will bring you to a screen where you can create a new card. The "Front" is where you'd place the term or question and the "Back" is where you'd put the answer.
 
-Go ahead and type the following HTML code into the `index.html` file and save it.
+We'll let you determine how you want to create and study the cards. However, I'd suggest only doing definitions and thinking of the Front of the card as an interview question. For example:
 
-```html
-<h1>Hello world</h1>
-```
+![](http://i.imgur.com/JAfnfux.png)
 
-It should look like this when you're finished.
+It's more important that you find a **correct definition that makes sense to you in your own words** than a definition from Wikipedia. Once you're done with the card, you can add it and then create more cards.
 
-![](https://i.imgur.com/F26QSWr.png)
+When you're ready to study, hit **Study Now** and test your knowledge! For more information on how Anki works, you should check out the documentation.
 
-### Test your tiny web page
-
-To test your tiny web page, you'll need to open it with your browser. An easy way to open a web page from the Terminal is to run the following command.
-
-`open index.html`
-
-And your default browser should open the file.
-
-![](https://i.imgur.com/8XUgHOh.png)
-
-### Commit your tiny web page
-
-With your tiny web page working as expected, it's ready to be committed into your Git repository.
-
-First, add the `index.html` file to your repository's staging area.
-
-```
-git add index.html
-```
-
-And then commit the changes, with a message, to your repository.
-
-```
-git commit -m 'Add a tiny web page'
-```
-
-The green `✔` prompt symbol is back, indicating your staging area is clean. Phew! :relieved:
-
-![](https://i.imgur.com/QE3ks9b.png)
-
-### Prepare your tiny web page for deployment
-
-You're almost ready to deploy your tiny web page to Surge. However, Surge will ask you for a desired domain name each time you deploy. To prevent this, you can save your a domain name to a `CNAME` file so you don’t have to type it every time you deploy.
-
-To add a `CNAME` file to the project directory, run the following command.
-
-```
-touch CNAME
-```
-
-Noticed a red `✖` is back, indicating your staging area is dirty.
-
-Back in Atom, open the `CNAME` file and type in `GITHUB-USERNAME.surge.sh` replacing `GITHUB-USERNAME` with your actual GitHub username in **lower case** form. Save the file and it should look something like this.
-
-**TIP:** The domain name in the CNAME file must be in lower case form.
-
-![](https://i.imgur.com/BRuK4kA.png)
-
-Now, add the `CNAME` file to your repository's staging area.
-
-```
-git add CNAME
-```
-
-And then commit the changes, with a message, to your repository.
-
-```
-git commit -m 'Add a CNAME'
-```
-
-The green `✔` prompt symbol is back, indicating your staging area is clean.
-
-![](https://i.imgur.com/AMzOTd3.png)
-
-### Deploy your tiny web page
-
-You're finally ready to deploy your tiny web page to Surge!
-
-To get started, run the following command.
-
-```
-surge
-```
-
-You'll be asked for three pieces of information.
-
-1. An email address
-1. A password
-1. A project path
-
-Since you're probably creating a new Surge account, type in your email address and a unique, secure password. Be careful when you type in a password as the characters will **not** show up on the screen for security purposes.
-
-When asked about the project path, just press the `Enter` key to use the current working directory. When you're finished, it should look something like this.
-
-![](https://i.imgur.com/rh2I4gE.png)
-
-Before moving on, **please write down your account credentials**. If you don't currently use a password manager, now is a great time to invest in one. As a professional web developer, you're going to be responsible for hundreds, if not thousands, of passwords throughout your career.
-
-There are many password managers on the market. I use and whole-heartedly recommend [1Password](https://agilebits.com/onepassword) because its user-friendly interface makes it easy to generate and access all my account credentials on all my devices. More importantly, I trust the company behind 1Password to employ the best security practices available. While it's not a free application, there is a 30-day free trial. And if you become a satisfied customer, you can use the `MacPowerUsers` coupon code to take 20% off the price.
-
-After having written down your Surge account credentials somewhere, open your deployed tiny web page in a browser by running the following command.
-
-```
-open http://wcrusher.surge.sh
-```
-
-**TIP:** Don't forget to use your tiny web page's domain name.
-
-You should see something like this.
-
-![](https://i.imgur.com/3koEnB4.png)
-
-Bravo! :tada:
-
-### Congratulations!
+## Congratulations!
 
 You've successfully setup a web development environment on Mac OS X and have completed these development tasks.
 
-1. Created a tiny web page with a text editor
-1. Tested the web page in a browser
-1. Committed the web page to a repository
-1. Deployed the web page to a production environment
+1. Customized your terminal to be more intuitive and more colorful.
+1. Installed programs and tools to make it easier to develop and learn.
+1. Built character.
 
 Now that you've finished this article, it's time to celebrate with a frosty beverage. :beers:
