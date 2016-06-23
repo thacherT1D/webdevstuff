@@ -736,8 +736,6 @@ const env = 'development';
 const config = require('./knexfile.js')[env];
 const knex = require('knex')(config);
 
-In the `index.js` file, write and save the following code.
-
 knex('movies')
   .insert({
     title: 'Deadpool',
@@ -869,28 +867,45 @@ And you should see something like this.
     score: '9.1' } ]
 ```
 
-
 ## How do you use Knex.js to delete rows from a PostgreSQL table?
 
-This is going to work very similarly to update above, we just replace
-the call to update with a call to [del](http://knexjs.org/#Builder-del).
+The [`del()` method](http://knexjs.org/#Builder-del) creates a `DELETE` command. Unlike the other Knex methods, the `del()` method doesn't accept any arguments all. However, like most Knex methods, the `del()` method returns a promise. When the promise is resolved, the `then()` method's callback is triggered and given a single value representing the number of rows deleted.
 
-* Sidenote: Why is this called `del` instead of `delete`?
+**NOTE** The method is named `del()` because the token `delete` is a reserved word in JavaScript.
+
+In the `index.js` file, write and save the following code.
 
 ```javascript
-var knex = require('./db/knex');
+'use strict';
 
-knex('movies').where({title: 'Gigli'}).del().then(function() {
-  knex('movies').select().where({title: 'Gigli'}).then(function(data) {
-    console.log(data);
+const env = 'development';
+const config = require('./knexfile')[env];
+const knex = require('knex')(config);
+
+knex('movies')
+  .del()
+  .where('title', 'Deadpool')
+  .then((result) => {
+    console.log(result);
+    knex.destroy();
+  })
+  .catch((err) => {
+    console.error(err);
+    knex.destroy();
     process.exit(1);
   });
-});
 ```
 
+Then, execute the program by running the following shell command.
+
 ```shell
-/development/galvanize/intro_to_knex  ᐅ node index.js
-[]
+node index.js
+```
+
+And you should see something like this.
+
+```text
+1
 ```
 
 ## Assignment
