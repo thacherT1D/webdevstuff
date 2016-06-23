@@ -144,11 +144,23 @@ And you should see something like this.
 
 ### Exercise
 
-##
+Turn to a partner and explain what Knex.js is in your own words.
 
 ## Why is Knex.js useful?
 
-It helps to avoid bugs in SQL statements, and prevents against certain kinds of security vulnerabilities. In theory, it also allows you to switch databases without changing all of your code to query data. Knex provides an interface to a handful of different relational databases other than PostgreSQL, such as MySQL, Oracle, sqlite, and others.
+Knex.js allows developers to build Node.js web applications that can create, read, update, and destroy the rows, tables, and even databases of a relational database system like PostgreSQL.
+
+[INSERT DIAGRAM OF A DATABASE-DRIVEN, FULL-STACK WEB APPLICATION]
+
+Knex.js also helps developers avoid writing bugs in SQL commands and prevents against SQL injection attacks.
+
+[INSERT EXAMPLE OF AN SQL INJECTION ATTACK]
+
+And because the same Knex.js API works across many relational databases, such as  Postgres, MSSQL, MySQL, MariaDB, SQLite3, and Oracle, in theory, you could switch to a different database system without changing any of your Node.js code. However, most production web applications have a fair bit of highly optimized code that's specific to database system. But it's certainly possible that it can be converted as well.
+
+### Exercise
+
+Draw a diagram of a database-driven, full-stack web application. Identify which part uses Knex.js and how it works.
 
 ## Something
 
