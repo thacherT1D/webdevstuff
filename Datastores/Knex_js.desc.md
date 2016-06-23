@@ -355,7 +355,7 @@ And you should see something like this.
     score: '8.9' } ]
 ```
 
-The `where()` method also has a contract that accepts three arguments—a column name as a string, and operator as a string, and a value to compare against.
+The `where()` method can also accepts three arguments—a column name as a string, and operator as a string, and a value to operate against.
 
 In the `index.js` file, write and save the following code.
 
@@ -410,7 +410,7 @@ And you should see something like this.
     score: '8.9' } ]
 ```
 
-If you want to have multiple `AND` clauses, you can chain additional `where()` methods into your Knex query.
+To add `AND` clauses to a query, you can chain additional `where()` methods.
 
 In the `index.js` file, write and save the following code.
 
@@ -459,7 +459,7 @@ And you should see something like this.
     score: '8.1' } ]
 ```
 
-The `where()` method also has a form that accepts one argument—an object with key-value pairs. The keys become column names and the values become their respective match values. If an object with multiple key-value pairs is given, the `where()` method generates multiple `AND` clauses.
+The `where()` method also accepts one argument—an object with key-value pairs. The keys translate column names and the values translate to their respective comparison values. If an object with multiple key-value pairs is given, the `where()` method adds multiple `AND` clauses to the query.
 
 In the `index.js` file, write and save the following code.
 
@@ -502,7 +502,7 @@ And you should see something like this.
     score: '7.6' } ]
 ```
 
-The `orWhere()` method works exactly the same as the `where()` method, except it wraps it's arguments in an `OR ( )` clause.
+The `orWhere()` method works exactly the same as the `where()` method, except it wraps its arguments in an `OR ( )` clause.
 
 In the `index.js` file, write and save the following code.
 
@@ -552,7 +552,20 @@ And you should see something like this.
     score: '8.9' } ]
 ```
 
-Chaining an [`orderBy` method](http://knexjs.org/#Builder-orderBy) creates an `ORDER BY` clause. It accepts two string arguments—a column name and a direction.
+Additionally, the Knex API includes the following `WHERE` clause methods.
+
+- [`whereNot()`](http://knexjs.org/#Builder-whereNot)
+- [`whereIn()`](http://knexjs.org/#Builder-whereIn)
+- [`whereNotIn()`](http://knexjs.org/#Builder-whereNotIn)
+- [`whereNull()`](http://knexjs.org/#Builder-whereNull)
+- [`whereNotNull()`](http://knexjs.org/#Builder-whereNotNull)
+- [`whereExists()`](http://knexjs.org/#Builder-whereExists)
+- [`whereNotExists()`](http://knexjs.org/#Builder-whereNotExists)
+- [`whereBetween()`](http://knexjs.org/#Builder-whereBetween)
+- [`whereNotBetween()`](http://knexjs.org/#Builder-whereNotBetween)
+- [`whereRaw()`](http://knexjs.org/#Builder-whereRaw)
+
+Chaining an [`orderBy` method](http://knexjs.org/#Builder-orderBy) adds an `ORDER BY` clause to the query. It accepts two string arguments—a column name and a direction.
 
 In the `index.js` file, write and save the following code.
 
@@ -603,7 +616,7 @@ And you should see something like this.
     score: '7.6' } ]
 ```
 
-Chaining the [`limit()` method](http://knexjs.org/#Builder-limit) onto a Knex query adds a `LIMIT` clause. The method takes a single number argument—the limit value.
+Chaining the [`limit()` method](http://knexjs.org/#Builder-limit) adds a `LIMIT` clause to the query. The method takes a single number argument—the limit value.
 
 In the `index.js` file, write and save the following code.
 
