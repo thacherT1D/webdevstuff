@@ -662,6 +662,33 @@ And you should see something like this.
     score: '8.9' } ]
 ```
 
+### `OFFSET` clause
+
+- [Knex.js - `offset()`](http://knexjs.org/#Builder-offset)
+
+### `JOIN` clause
+
+- [Knex.js - `innerJoin()`](http://knexjs.org/#Builder-innerJoin)
+
+### `DISTINCT` clause
+
+- [Knex.js - `distinct()`](http://knexjs.org/#Builder-distinct)
+
+### Aggregate methods
+
+- [Knex.js - `count()`](http://knexjs.org/#Builder-count)
+- [Knex.js - `max()`](http://knexjs.org/#Builder-max)
+- [Knex.js - `min()`](http://knexjs.org/#Builder-min)
+- [Knex.js - `sum()`](http://knexjs.org/#Builder-sum)
+- [Knex.js - `avg()`](http://knexjs.org/#Builder-avg)
+
+### Help methods
+
+- [Knex.js - `increment()`](http://knexjs.org/#Builder-increment)
+- [Knex.js - `decrement()`](http://knexjs.org/#Builder-decrement)
+- [Knex.js - `pluck()`](http://knexjs.org/#Builder-pluck)
+- [Knex.js - `first()`](http://knexjs.org/#Builder-first)
+
 ### Exercise
 
 Using Knex.js, build the following queries.
