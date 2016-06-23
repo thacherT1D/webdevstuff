@@ -250,7 +250,7 @@ At the heart of Knex is the query builder. The **query builder** is the API used
 
 ### `SELECT` clause
 
-The [`select()` method](http://knexjs.org/#Builder-select) creates a `SELECT` command. It accepts an optional list of column names as string arguments and adds them to the `SELECT` clause of a query. When no arguments are specified, it adds a `*` to the `SELECT` clause. List most Knex methods, the `select()` method returns a promise. When the promise is resolved, the `then()` method's callback is triggered and given an array of objects for the matching rows in a table.
+The [`select()` method](http://knexjs.org/#Builder-select) creates a `SELECT` command. It accepts an optional list of column names as string arguments and adds them to the `SELECT` clause of a query. When no arguments are specified, it adds a `*` to the `SELECT` clause. Like most Knex methods, the `select()` method returns a promise. When the promise is resolved, the `then()` method's callback is triggered and given an array of objects for the matching rows in a table.
 
 In the `index.js` file, write and save the following code.
 
@@ -673,7 +673,7 @@ Using Knex.js, build the following queries.
 
 ## How do you use Knex.js to insert rows into a PostgreSQL table?
 
-The [`insert()` method](http://knexjs.org/#Builder-insert) creates an `INSERT` command. It accepts an object of key-value pairs to be inserted into a row in the table. List most Knex methods, the `insert()` method returns a promise. When the promise is resolved, the `then()` method's callback is triggered and given an object that contains the number of rows inserted.
+The [`insert()` method](http://knexjs.org/#Builder-insert) creates an `INSERT` command. It accepts an object of key-value pairs to be inserted into a row in the table. Like most Knex methods, the `insert()` method returns a promise. When the promise is resolved, the `then()` method's callback is triggered and given an object that contains the number of rows inserted.
 
 In the `index.js` file, write and save the following code.
 
@@ -781,57 +781,94 @@ And you should see something like this.
 
 ## How do you use Knex.js to update rows in a PostgreSQL table?
 
-Updating is simply replacing the `select()` method with a call to [`update` method](http://knexjs.org/#Builder-update), passing in what fields should be changed.
+The [`update()` method](http://knexjs.org/#Builder-update) creates an `UPDATE` command. Like the `insert()` method, the `update()` method accepts an object of key-value pairs to be updated into a row in the table. Like most Knex methods, the `update()` method returns a promise. When the promise is resolved, the `then()` method's callback is triggered and given a single value representing the number of rows updated.
 
-Let's fix Gigli:
+In the `index.js` file, write and save the following code.
 
 ```javascript
-var knex = require('./db/knex');
+'use strict';
 
-knex('movies').where({title: 'Gigli'}).update({rating: 10}).then(function() {
-  knex('movies').select().where({title: 'Gigli'}).then(function(data) {
-    console.log(data);
+const env = 'development';
+const config = require('./knexfile.js')[env];
+const knex = require('knex')(config);
+
+knex('movies')
+  .update({
+    is_3d: true,
+    score: 9.1
+  })
+  .where('id', 5)
+  .then((result) => {
+    console.log(result);
+    knex.destroy();
+  })
+  .catch((err) => {
+    console.error(err);
+    knex.destroy();
     process.exit(1);
   });
-});
 ```
+
+Then, execute the program by running the following shell command.
 
 ```shell
-/development/galvanize/intro_to_knex  ᐅ node index.js
-[ { id: 8,
-    title: 'Gigli',
-    description: 'really bad movie',
-    rating: 10 } ]
+node index.js
 ```
 
-We had to nest a second select in there, why?
+And you should see something like this.
 
-Another way to write the update (at least with PostgreSQL, this won't
-work for some other relational databases) is to also pass a `returning`
-argument in addition to the data being updated.
+```text
+1
+```
 
-Something like this:
+Additionally, the `update()` method accepts a list of string column names as a second argument. This tells Knex what columns of the updated row to pass into the `then()` method's callback. Commonly, an asterisk `*` is used to pass along all the columns of the row.
+
+In the `index.js` file, write and save the following code.
 
 ```javascript
-var knex = require('./db/knex');
+'use strict';
 
-knex('movies').where({title: 'Gigli'}).update({rating: 10}, '*').then(function(data) {
-  console.log(data);
-  process.exit(1);
-});
+const env = 'development';
+const config = require('./knexfile.js')[env];
+const knex = require('knex')(config);
+
+knex('movies')
+  .update({
+    is_3d: true,
+    score: 9.1
+  }, '*')
+  .where('id', 5)
+  .then((result) => {
+    console.log(result);
+    knex.destroy();
+  })
+  .catch((err) => {
+    console.error(err);
+    knex.destroy();
+    process.exit(1);
+  });
 ```
+
+Then, execute the program by running the following shell command.
 
 ```shell
-/development/galvanize/intro_to_knex  ᐅ node index.js
-[ { id: 8,
-    title: 'Gigli',
-    description: 'really bad movie',
-    rating: 10 } ]
+node index.js
 ```
 
-It's usually better to write your updates this way if you need the data
-returned afterwards. This minimizes the number of individual queries
-you're executing.
+And you should see something like this.
+
+```text
+[ anonymous {
+    id: 5,
+    title: 'Deadpool',
+    duration: 108,
+    rating: 'R',
+    genre: 'Action',
+    is_3d: true,
+    released_at: 2016-02-12T00:00:00.000Z,
+    score: '9.1' } ]
+```
+
 
 ## How do you use Knex.js to delete rows from a PostgreSQL table?
 
