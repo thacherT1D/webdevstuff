@@ -11,8 +11,6 @@
 
 **Knex.js** is a SQL query builder for PostgreSQL and other relational database systems. In other words, Knex.js provides an JavaScript API sending SQL commands to a PostgreSQL server.
 
-It helps to avoid bugs in SQL statements, and prevents against certain kinds of security vulnerabilities. In theory, it also allows you to switch databases without changing all of your code to query data. Knex provides an interface to a handful of different relational databases other than PostgreSQL, such as MySQL, Oracle, sqlite, and others.
-
 ```shell
 cd movies
 npm init
@@ -116,6 +114,12 @@ node index.js
     released_at: 1994-10-14T00:00:00.000Z,
     score: '8.9' } ]
 ```
+
+## Why is Knex.js useful?
+
+It helps to avoid bugs in SQL statements, and prevents against certain kinds of security vulnerabilities. In theory, it also allows you to switch databases without changing all of your code to query data. Knex provides an interface to a handful of different relational databases other than PostgreSQL, such as MySQL, Oracle, sqlite, and others.
+
+## Something
 
 This should look pretty familiar, as it's the same database we used
 earlier this week when we started to explore PostgreSQL. We're going to
