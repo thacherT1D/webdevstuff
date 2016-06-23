@@ -662,40 +662,38 @@ database. We can use [insert](http://knexjs.org/#Builder-insert) to add
 new rows to our database:
 
 ```javascript
-var knex = require('./db/knex');
+'use strict';
 
-knex('movies').insert({title: 'Gigli', description: 'Best movie evar', rating: 10}, '*').then(function(data) {
-  console.log(data);
-  process.exit(1);
-});
+const env = 'development';
+const config = require('./knexfile.js')[env];
+const knex = require('knex')(config);
+
+knex('movies')
+  .insert({
+    title: 'Deadpool',
+    duration: 108,
+    rating: 'R',
+    genre: 'Action',
+    is_3d: false,
+    released_at: new Date('2016-02-12 00:00:00 UTC'),
+    score: 8.2
+  })
+  .then((result) => {
+    console.log(result);
+    knex.destroy();
+  })
+  .catch((err) => {
+    console.error(err);
+    knex.destroy();
+    process.exit(1);
+  });
 ```
 
 ```shell
-/development/galvanize/intro_to_knex  ᐅ node index.js
-[ { id: 12,
-    title: 'Gigli',
-    description: 'Best movie evar',
-    rating: 10 } ]
+node index.js
 ```
 
-Just like with `update`, we can pass a second argument to `insert` that
-tells PostgreSQL what we want returned from the database as a result of
-our insert. If we don't include that second parameter, then postgres
-will only return the ID, and the promise will be resolved with a fairly
-useless object:
-
-```javascript
-var knex = require('./db/knex');
-
-knex('movies').insert({title: 'Gigli', description: 'Best movie evar', rating: 10}).then(function(data) {
-  console.log(data);
-  process.exit(1);
-});
-```
-
-```shell
-/development/galvanize/intro_to_knex  ᐅ node index.js
-
+```text
 { command: 'INSERT',
   rowCount: 1,
   oid: 0,
@@ -705,6 +703,56 @@ knex('movies').insert({title: 'Gigli', description: 'Best movie evar', rating: 1
   RowCtor: null,
   rowAsArray: false,
   _getTypeParser: [Function: bound ] }
+```
+
+Just like with `update`, we can pass a second argument to `insert` that
+tells PostgreSQL what we want returned from the database as a result of
+our insert. If we don't include that second parameter, then postgres
+will only return the ID, and the promise will be resolved with a fairly
+useless object:
+
+```javascript
+'use strict';
+
+const env = 'development';
+const config = require('./knexfile.js')[env];
+const knex = require('knex')(config);
+
+knex('movies')
+  .insert({
+    title: 'Deadpool',
+    duration: 108,
+    rating: 'R',
+    genre: 'Action',
+    is_3d: false,
+    released_at: new Date('2016-02-12 00:00:00 UTC'),
+    score: 8.2
+  }, '*')
+  .then((result) => {
+    console.log(result);
+    knex.destroy();
+  })
+  .catch((err) => {
+    console.error(err);
+    knex.destroy();
+    process.exit(1);
+  });
+```
+
+```shell
+node index.js
+```
+
+```text
+[ anonymous {
+    id: 6,
+    title: 'Deadpool',
+    duration: 108,
+    rating: 'R',
+    genre: 'Action',
+    is_3d: false,
+    released_at: 2016-02-12T00:00:00.000Z,
+    score: '8.2' } ]
 ```
 
 ## How do you use Knex.js to update rows in a PostgreSQL table?
