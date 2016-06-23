@@ -24,7 +24,6 @@ For this project, you will be assigned into groups of four. Together, you will n
 There are some constraints around what technologies MUST be present in your app. Check out [Create and deploy a web app](#create-deploy) below.
 
 ## Follow Agile Workflow 
-See Slideshow 
 
 ### Example Ideas
 
@@ -44,7 +43,6 @@ Your web app should:
 
 * CRUD
     * Allow users to create, read, update, and delete data from a form
-    * Interact with a server-side A
 * HTML
     * Make good use of semantic HTML tags
     * Be well-indented, [validated](https://validator.w3.org/nu/), etc.
@@ -66,34 +64,26 @@ Your web app should:
     * Use a feature-branch workflow for your user stories
     * Squash commits and issue pull requests rather merging directly to master
 
-Your API should:
+Your App should:
 
-* API
-    * Must have atleast 2 API integrations
+* App
     * Use express.js
-    * Have routes for create, read, update, and delete operations on multiple routes
-    * Be designed according to RESTful principles
-    * CRUD data from/to a relational database using SQL or an ORM
+    * Hanlde create, read, update, and delete operations on multiple related models
+    * CRUD data from/to a relational database using SQL, Knex, or an ORM
 * Auth
     * Support functionality for three role types:
         * A non-logged in user
         * A logged-in user with limited permissions
         * A logged-in superuser
-    * Support login via a social network
     * Passwords should be hashed
-    * Use signed Cookies
 * Database
-    * Use PostGres
+    * Use Postgres
     * Be normalized to 3rd Normal Form
     * Be seeded with data
-    * Have a separate user for the application
 * Workflow
     * Use a feature-branch workflow for your user stories
-    * Use an automated tool (such as Gulp) to build, deploy, and test your project
     * Document dependencies in a `package.json` file
     * Squash commits and issue pull requests rather merging directly to master
-
-Note that you will end up with 3 deployments- your client-side web app, your API, and your database. The code for these should also be stored in 3 separate repositories.
 
 <a id="video"></a>
 
