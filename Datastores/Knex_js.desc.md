@@ -171,9 +171,9 @@ This data probably looks familiar. By the way, congratulations on successfully q
 
 As it turns out, the `then()` function returns a promise too. This is why you can immediately chain a `catch()` function call to return value of the `then()` function. We'll study promises in more depth soon as they're essential for handling asynchronous operations. For now, just follow the coding pattern outlined above.
 
-Before moving on, here's a quick note on how Knex connects to a PostgreSQL server. When the `require('knex')(config)` function is called, Knex opens two connections to the PostgreSQL server. This allows Knex to send multiple SQL commands to a PostgreSQL server concurrently. When the `knex.destroy()` function is called, Knex closes the connections. If the connections aren't closed, the program will run indefinitely.
+Before moving on, here's a quick explanation on how Knex connects to a PostgreSQL server. When the `require('knex')(config)` function is called, Knex opens two connections to the PostgreSQL server. This allows Knex to send multiple SQL commands to a PostgreSQL server concurrently. When the `knex.destroy()` function is called, Knex closes the connections. If the connections aren't closed, the program will run indefinitely.
 
-**NOTE:** If needed, Knex will open 10 connections in total. The minimum and maximum connections to open is [configurable option](http://knexjs.org/#Installation-pooling) when initializing Knex.
+**NOTE:** If needed, Knex will open 10 connections in total. The minimum and maximum connections to open is a [configurable option](http://knexjs.org/#Installation-pooling) when initializing Knex.
 
 ### Exercise
 
