@@ -243,17 +243,13 @@ Once you're satisfied, explain to a neighbor how user input from a malicious use
 
 ## How do you use Knex.js to select rows from a PostgreSQL table?
 
-This should look pretty familiar, as it's the same database we used
-earlier this week when we started to explore PostgreSQL. We're going to
-build each of the queries we ran in that lecture using Knex instead.
+Something about the Knex.js API.
 
-Let's say we don't want to select every field, but we only care about
-the titles and descriptions. To do that, we'll just pass an array of the
-fields we care about to the select method.
+### `SELECT` clause
 
-### `SELECT` command
+In Knex, the [`select()` function](http://knexjs.org/#Builder-select) creates a `SELECT` query. It takes an optional list of columns for the query, defaulting to `*` if none are specified. The response of a `SELECT` query will resolve with an array of objects of the matching rows in a table.
 
-Let's change index.js to look like:
+In the `index.js` file, write and save the following code.
 
 ```javascript
 'use strict';
@@ -275,9 +271,13 @@ knex('movies')
   });
 ```
 
+Then, execute the program by running the following shell command.
+
 ```shell
 node index.js
 ```
+
+And you should see something like this.
 
 ```text
 [ anonymous {
@@ -305,8 +305,6 @@ node index.js
     is_3d: false,
     score: '8.9' } ]
 ```
-
-[select](http://knexjs.org/#Builder-select)
 
 ### `WHERE` clause
 
