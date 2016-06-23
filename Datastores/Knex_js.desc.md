@@ -335,24 +335,42 @@ Let's say we wanted to fetch both Gigli and Cars. Knex also
 provides an `orWhere` function that we can use:
 
 ```javascript
-var knex = require('./db/knex');
+'use strict';
 
-knex('movies').select().where({title: 'Cars'}).orWhere({title: 'Gigli'}).then(function(data) {
-  console.log(data);
-  process.exit(1);
-});
+const env = process.env.NODE_ENV || 'development';
+const config = require('./knexfile.js')[env];
+const knex = require('knex')(config);
+
+knex('movies')
+  .select('id', 'title', 'rating', 'is_3d', 'score')
+  .where('score', '>=', 7.5)
+  .where({ rating: 'PG', is_3d: true })
+  .orWhere('title', 'Pulp Fiction')
+  .then((result) => {
+    console.log(result);
+
+    process.exit();
+  });
 ```
 
-```bash
-/development/galvanize/intro_to_knex  ᐅ node index.js
-[ { id: 2, title: 'Cars', description: 'Pixar movie', rating: 7 },
-  { id: 8,
-    title: 'Gigli',
-    description: 'really bad movie',
-    rating: 1 } ]
+```shell
+node index.js
 ```
 
-### Ordering? Can we get our data back ordered nicely?
+```text
+[ anonymous {
+    id: 1,
+    title: 'Frozen',
+    rating: 'PG',
+    is_3d: true,
+    score: '7.6' },
+  anonymous {
+    id: 4,
+    title: 'Pulp Fiction',
+    rating: 'R',
+    is_3d: false,
+    score: '8.9' } ]
+```
 
 Anytime you want your data in a specific order, it's better to let the
 database return your rows in the proper order instead of resorting it in
@@ -360,54 +378,42 @@ your code. Let's use the [orderBy](http://knexjs.org/#Builder-orderBy)
 function to return all the movies sorted by rating, descending:
 
 ```javascript
-var knex = require('./db/knex');
+'use strict';
 
-knex('movies').select().orderBy('rating', 'desc').then(function(data) {
-  console.log(data);
-  process.exit(1);
-});
+const env = process.env.NODE_ENV || 'development';
+const config = require('./knexfile.js')[env];
+const knex = require('knex')(config);
+
+knex('movies')
+  .select('id', 'title', 'rating', 'is_3d', 'score')
+  .where('score', '>=', 7.5)
+  .where({ rating: 'PG', is_3d: true })
+  .orWhere('title', 'Pulp Fiction')
+  .orderBy('score', 'DESC')
+  .then((result) => {
+    console.log(result);
+
+    process.exit();
+  });
 ```
 
-```bash
-/development/galvanize/intro_to_knex  ᐅ node index.js
-[ { id: 5,
-    title: 'Godfather',
-    description: 'good movie',
-    rating: 10 },
-  { id: 1, title: 'Batman Begins', description: null, rating: 10 },
-  { id: 9,
-    title: 'Sharknado',
-    description: 'Instant classic',
-    rating: 10 },
-  { id: 3,
-    title: 'Back to the Future',
-    description: 'No one calls Marty chicken',
-    rating: 9 },
-  { id: 11,
-    title: 'Mad Max: Fury Road',
-    description: 'Water is low, similar to california',
-    rating: 7 },
-  { id: 2, title: 'Cars', description: 'Pixar movie', rating: 7 },
-  { id: 6,
-    title: 'Mystic River',
-    description: 'did not see it',
-    rating: 7 },
-  { id: 7,
-    title: 'Argo',
-    description: 'Ben Affleck is a hero',
-    rating: 7 },
-  { id: 10,
-    title: 'Jurassic World',
-    description: 'Chris Pratt trains raptors',
-    rating: 5 },
-  { id: 4,
-    title: 'Dude Wheres My Car',
-    description: 'probably a bad movie',
-    rating: 3 },
-  { id: 8,
-    title: 'Gigli',
-    description: 'really bad movie',
-    rating: 1 } ]
+```shell
+node index.js
+```
+
+```text
+[ anonymous {
+    id: 4,
+    title: 'Pulp Fiction',
+    rating: 'R',
+    is_3d: false,
+    score: '8.9' },
+  anonymous {
+    id: 1,
+    title: 'Frozen',
+    rating: 'PG',
+    is_3d: true,
+    score: '7.6' } ]
 ```
 
 The first parameter to orderBy is going to be the field, and the second
@@ -420,33 +426,37 @@ Yep, Knex provides [limit](http://knexjs.org/#Builder-limit) also. Let's
 only fetch the top 5 movies:
 
 ```javascript
-var knex = require('./db/knex');
+'use strict';
 
-knex('movies').select().orderBy('rating', 'desc').limit(5).then(function(data) {
-  console.log(data);
-  process.exit(1);
-});
+const env = process.env.NODE_ENV || 'development';
+const config = require('./knexfile.js')[env];
+const knex = require('knex')(config);
+
+knex('movies')
+  .select('id', 'title', 'rating', 'is_3d', 'score')
+  .where('score', '>=', 7.5)
+  .where({ rating: 'PG', is_3d: true })
+  .orWhere('title', 'Pulp Fiction')
+  .orderBy('score', 'DESC')
+  .limit(1)
+  .then((result) => {
+    console.log(result);
+
+    process.exit();
+  });
 ```
 
-```bash
-/development/galvanize/intro_to_knex  ᐅ node index.js
-[ { id: 5,
-    title: 'Godfather',
-    description: 'good movie',
-    rating: 10 },
-  { id: 9,
-    title: 'Sharknado',
-    description: 'Instant classic',
-    rating: 10 },
-  { id: 1, title: 'Batman Begins', description: null, rating: 10 },
-  { id: 3,
-    title: 'Back to the Future',
-    description: 'No one calls Marty chicken',
-    rating: 9 },
-  { id: 6,
-    title: 'Mystic River',
-    description: 'did not see it',
-    rating: 7 } ]
+```shell
+node index.js
+```
+
+```text
+[ anonymous {
+    id: 4,
+    title: 'Pulp Fiction',
+    rating: 'R',
+    is_3d: false,
+    score: '8.9' } ]
 ```
 
 # Query Exercises
