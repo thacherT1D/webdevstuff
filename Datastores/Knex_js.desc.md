@@ -9,18 +9,29 @@
 
 ## What is Knex.js?
 
-**Knex.js** is a SQL query builder for PostgreSQL and other relational database systems. In other words, Knex.js provides an JavaScript API sending SQL commands to a PostgreSQL server.
+**Knex.js** is a third-party JavaScript library that builds SQL commands and sends them to a relational database system like PostgreSQL. In other words, Knex.js allows you to build a Node.js-based PostgreSQL client to communicate with a PostgreSQL server.
+
+To get started, migrate and seed a database by running the following shell commands.
 
 ```shell
-cd movies
-npm init
-npm install --save pg
-npm install --save knex
-touch index.js
 dropdb movie_junkies_dev
 createdb movie_junkies_dev
 curl -fsSL https://git.io/voXVD | psql movie_junkies_dev
 ```
+
+Then, setup a new Node.js project by running the following shell commands.
+
+```shell
+mkdir movies
+cd movies
+npm init
+npm install --save pg
+npm install --save knex
+touch knexfile.js
+touch index.js
+```
+
+In the `knexfile.js` file, write and save the following code.
 
 ```javascript
 module.exports = {
@@ -31,10 +42,7 @@ module.exports = {
 };
 ```
 
-Now that we have created a file that will configure Knex, let's actually
-initialize it in our new application. We're going to create a `db`
-folder inside of the `intro_to_knex` folder, and create a file just
-called `knex.js` in there.
+In the `index.js` file, write and save the following code.
 
 ```javascript
 'use strict';
@@ -46,17 +54,28 @@ const knex = require('knex')(config);
 const sql = knex('movies').toString();
 
 console.log(sql);
-
-process.exit();
+knex.destroy();
 ```
+
+When the `require('knex')(config)` function is called, Knex opens a connection to the PostgreSQL server. When the `knex.destroy()` function is called, Knex closes it. If the connection isn't closed, the program would run indefinitely.
+
+Then, execute the program by running the following shell command.
 
 ```shell
 node index.js
 ```
 
-Here we're just telling knex we want to query the `movies` table, and we
-want to [select](http://knexjs.org/#Builder-select) all the data. Knex will return a promise from `select`,
-so we use `then` just like we did with jQuery to process the data.
+And you should see something like this.
+
+```text
+select * from "movies"
+```
+
+Nearly all functions in Knex.js return a promise. A **promise** is an object that's used for asynchronous computations. A promise is more than a callback as it represents an operation that hasn't completed yet, but is expected to complete in the future.
+
+Promises are the preferred way of handling query responses in Knex. The main benefit of a promise is the ability to catch thrown errors without crashing a Node.js app. By using the `then()` and `catch()` asynchronous functions of a promise, your code will behave like a `try / catch` block in synchronous code.
+
+In the `index.js` file, write and save the following code.
 
 ```javascript
 'use strict';
@@ -67,14 +86,22 @@ const knex = require('knex')(config);
 
 knex('movies').then((result) => {
   console.log(result);
-
-  process.exit();
+  knex.destroy();
+})
+.catch((err) => {
+  console.error(err);
+  knex.destroy();
+  process.exit(1);
 });
 ```
+
+Then, execute the program by running the following shell command.
 
 ```shell
 node index.js
 ```
+
+And you should see something like this.
 
 ```shell
 [ anonymous {
@@ -129,6 +156,8 @@ Let's say we don't want to select every field, but we only care about
 the titles and descriptions. To do that, we'll just pass an array of the
 fields we care about to the select method.
 
+### `SELECT` command
+
 Let's change index.js to look like:
 
 ```javascript
@@ -142,8 +171,12 @@ knex('movies')
   .select('id', 'title', 'rating', 'is_3d', 'score')
   .then((result) => {
     console.log(result);
-
-    process.exit();
+    knex.destroy();
+  })
+  .catch((err) => {
+    console.error(err);
+    knex.destroy();
+    process.exit(1);
   });
 ```
 
@@ -178,6 +211,10 @@ node index.js
     score: '8.9' } ]
 ```
 
+[select](http://knexjs.org/#Builder-select)
+
+### `WHERE` clause
+
 ```javascript
 'use strict';
 
@@ -190,8 +227,12 @@ knex('movies')
   .where('id', 4)
   .then((result) => {
     console.log(result);
-
-    process.exit();
+    knex.destroy();
+  })
+  .catch((err) => {
+    console.error(err);
+    knex.destroy();
+    process.exit(1);
   });
 ```
 
@@ -220,7 +261,12 @@ knex('movies')
   .then((result) => {
     console.log(result);
 
-    process.exit();
+    knex.destroy();
+  })
+  .catch((err) => {
+    console.error(err);
+    knex.destroy();
+    process.exit(1);
   });
 ```
 
@@ -268,8 +314,12 @@ knex('movies')
   .where('rating', 'PG')
   .then((result) => {
     console.log(result);
-
-    process.exit();
+    knex.destroy();
+  })
+  .catch((err) => {
+    console.error(err);
+    knex.destroy();
+    process.exit(1);
   });
 ```
 
@@ -305,8 +355,12 @@ knex('movies')
   .where({ rating: 'PG', is_3d: true })
   .then((result) => {
     console.log(result);
-
-    process.exit();
+    knex.destroy();
+  })
+  .catch((err) => {
+    console.error(err);
+    knex.destroy();
+    process.exit(1);
   });
 ```
 
@@ -350,8 +404,12 @@ knex('movies')
   .orWhere('title', 'Pulp Fiction')
   .then((result) => {
     console.log(result);
-
-    process.exit();
+    knex.destroy();
+  })
+  .catch((err) => {
+    console.error(err);
+    knex.destroy();
+    process.exit(1);
   });
 ```
 
@@ -394,8 +452,12 @@ knex('movies')
   .orderBy('score', 'DESC')
   .then((result) => {
     console.log(result);
-
-    process.exit();
+    knex.destroy();
+  })
+  .catch((err) => {
+    console.error(err);
+    knex.destroy();
+    process.exit(1);
   });
 ```
 
@@ -443,8 +505,12 @@ knex('movies')
   .limit(1)
   .then((result) => {
     console.log(result);
-
-    process.exit();
+    knex.destroy();
+  })
+  .catch((err) => {
+    console.error(err);
+    knex.destroy();
+    process.exit(1);
   });
 ```
 
@@ -487,7 +553,7 @@ knex('movies').where({title: 'Gigli'}).update({rating: 10}).then(function() {
 });
 ```
 
-```bash
+```shell
 /development/galvanize/intro_to_knex  ᐅ node index.js
 [ { id: 8,
     title: 'Gigli',
@@ -512,7 +578,7 @@ knex('movies').where({title: 'Gigli'}).update({rating: 10}, '*').then(function(d
 });
 ```
 
-```bash
+```shell
 /development/galvanize/intro_to_knex  ᐅ node index.js
 [ { id: 8,
     title: 'Gigli',
@@ -562,7 +628,7 @@ knex('movies').insert({title: 'Gigli', description: 'Best movie evar', rating: 1
 });
 ```
 
-```bash
+```shell
 /development/galvanize/intro_to_knex  ᐅ node index.js
 [ { id: 12,
     title: 'Gigli',
@@ -585,7 +651,7 @@ knex('movies').insert({title: 'Gigli', description: 'Best movie evar', rating: 1
 });
 ```
 
-```bash
+```shell
 /development/galvanize/intro_to_knex  ᐅ node index.js
 
 { command: 'INSERT',
