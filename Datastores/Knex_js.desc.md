@@ -247,7 +247,7 @@ Something about the Knex.js API.
 
 ### `SELECT` clause
 
-In Knex, the [`select()` function](http://knexjs.org/#Builder-select) creates a `SELECT` query. It takes an optional list of columns for the query, defaulting to `*` if none are specified. The response of a `SELECT` query will resolve with an array of objects of the matching rows in a table.
+In Knex, the [`select()` method](http://knexjs.org/#Builder-select) creates a `SELECT` query. It takes an optional list of columns for the query, defaulting to `*` if none are specified. The response of a `SELECT` query will resolve with an array of objects of the matching rows in a table.
 
 In the `index.js` file, write and save the following code.
 
@@ -308,6 +308,12 @@ And you should see something like this.
 
 ### `WHERE` clause
 
+Several Knex methods exist to assist in building dynamic `WHERE` clauses. The first you'll play with is the [`where()` method](http://knexjs.org/#Builder-wheres) which accepts two arguments—a column name as a string and a value to match against.
+
+**NOTE:** Supplying `where()` with the `undefined` value will throw an error.
+
+In the `index.js` file, write and save the following code.
+
 ```javascript
 'use strict';
 
@@ -329,6 +335,14 @@ knex('movies')
   });
 ```
 
+Then, execute the program by running the following shell command.
+
+```shell
+node index.js
+```
+
+And you should see something like this.
+
 ```text
 [ anonymous {
     id: 4,
@@ -338,8 +352,9 @@ knex('movies')
     score: '8.9' } ]
 ```
 
-Knex has a fairly intuitive API, so if we want to add a `where` clause,
-we'll just use the [where](http://knexjs.org/#Builder-where) function like so:
+The `where()` method also has a contract that accepts three arguments—a column name as a string, and operator as a string, and a value to compare against.
+
+In the `index.js` file, write and save the following code.
 
 ```javascript
 'use strict';
@@ -363,9 +378,13 @@ knex('movies')
   });
 ```
 
+Then, execute the program by running the following shell command.
+
 ```shell
 node index.js
 ```
+
+And you should see something like this.
 
 ```shell
 [ anonymous {
@@ -388,11 +407,9 @@ node index.js
     score: '8.9' } ]
 ```
 
-### What if we want to have multiple where clauses?
+If you want to have multiple `WHERE` clauses separated by an `AND`, you can chain more `where()` methods into our Knex query.
 
-We can just chain more where clauses into our query, and Knex will
-handle building the proper query for those. Let's fetch decent movies
-named Cars:
+In the `index.js` file, write and save the following code.
 
 ```javascript
 'use strict';
@@ -416,9 +433,13 @@ knex('movies')
   });
 ```
 
+Then, execute the program by running the following shell command.
+
 ```shell
 node index.js
 ```
+
+And you should see something like this.
 
 ```text
 [ anonymous {
@@ -434,6 +455,8 @@ node index.js
     is_3d: false,
     score: '8.1' } ]
 ```
+
+
 
 ```javascript
 'use strict';
