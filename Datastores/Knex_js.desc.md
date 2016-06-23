@@ -94,7 +94,7 @@ $xhr.fail(() => {
 
 The `$.getJSON()` function sends an HTTP request and returns an `$xhr` promise. A **promise** is an object that's used for asynchronous operations. Though at first it looks like just a regular callback, a promise is much more than that. A promise is an object that represents an operation that hasn't completed yet, but will in the future. The main benefit of a promise is its ability to separate the success handling logic from the error handling logic.
 
-For example, the `$xhr` promise remains in an unresolved state while it waits for the HTTP response. The `$xhr` promise has two methods, `done()` and `fail()`, that are given a callback each. If the HTTP response is successful, the `done()` function's callback is triggered. On the other hand, if the HTTP response generates an error, the `fail()` function's callback is triggered.
+For example, the `$xhr` promise remains unresolved while it waits for the HTTP response. The `$xhr` promise has two methods, `done()` and `fail()`, that are given a callback each. If the HTTP response is successful, the `done()` function's callback is triggered. On the other hand, if the HTTP response generates an error, the `fail()` function's callback is triggered.
 
 Just like how jQuery uses a promise to handle an HTTP response from an HTTP server, Knex uses promises to handle a SQL response from a PostgreSQL server. In fact, nearly all the functions in Knex return a promise as the preferred way of handling SQL responses. The main difference from jQuery is that Knex promises use the `then()` and `catch()` asynchronous functions instead of `done()` and `fail()`.
 
