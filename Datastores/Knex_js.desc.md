@@ -78,7 +78,7 @@ select * from "movies"
 
 As you can see, the `knex('movies').toString()` functions built a `SELECT` command and returned it as a string. Why on earth would you want a Node.js program to build an SQL command? To send it to a relational database system, of course! Just like jQuery builds and sends HTTP requests to an HTTP server, Knex builds and sends SQL queries to a PostgreSQL server.
 
-Though it must feel like a lifetime ago, think back to last quarter and how you used jQuery to send HTTP requests. Remember how jQuery's `$.getJSON()` function works? Here's a refresher, just in case.
+Though it must feel like a lifetime ago, think back to last quarter when you used jQuery to send HTTP requests. Remember how jQuery's `$.getJSON()` function works? Here's a refresher, just in case.
 
 ```javascript
 const $xhr = $.getJSON('www.omdbapi.com/?i=tt2294629');
