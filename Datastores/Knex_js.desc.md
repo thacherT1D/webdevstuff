@@ -7,12 +7,11 @@
 - Use Knex.js to update rows in a PostgreSQL table.
 - Use Knex.js to delete rows from a PostgreSQL table.
 
-## What is Knex?
+## What is Knex.js?
 
 **Knex.js** is a SQL query builder for PostgreSQL and other relational database systems. In other words, Knex.js provides an JavaScript API sending SQL commands to a PostgreSQL server.
 
 It helps to avoid bugs in SQL statements, and prevents against certain kinds of security vulnerabilities. In theory, it also allows you to switch databases without changing all of your code to query data. Knex provides an interface to a handful of different relational databases other than PostgreSQL, such as MySQL, Oracle, sqlite, and others.
-
 
 ```shell
 cd movies
@@ -42,7 +41,7 @@ called `knex.js` in there.
 ```javascript
 'use strict';
 
-const env = process.env.NODE_ENV || 'development';
+const env = 'development';
 const config = require('./knexfile.js')[env];
 const knex = require('knex')(config);
 
@@ -64,7 +63,7 @@ so we use `then` just like we did with jQuery to process the data.
 ```javascript
 'use strict';
 
-const env = process.env.NODE_ENV || 'development';
+const env = 'development';
 const config = require('./knexfile.js')[env];
 const knex = require('knex')(config);
 
@@ -122,8 +121,6 @@ This should look pretty familiar, as it's the same database we used
 earlier this week when we started to explore PostgreSQL. We're going to
 build each of the queries we ran in that lecture using Knex instead.
 
-### What if I don't want to select everything?
-
 Let's say we don't want to select every field, but we only care about
 the titles and descriptions. To do that, we'll just pass an array of the
 fields we care about to the select method.
@@ -133,7 +130,7 @@ Let's change index.js to look like:
 ```javascript
 'use strict';
 
-const env = process.env.NODE_ENV || 'development';
+const env = 'development';
 const config = require('./knexfile.js')[env];
 const knex = require('knex')(config);
 
@@ -180,7 +177,7 @@ node index.js
 ```javascript
 'use strict';
 
-const env = process.env.NODE_ENV || 'development';
+const env = 'development';
 const config = require('./knexfile.js')[env];
 const knex = require('knex')(config);
 
@@ -209,7 +206,7 @@ we'll just use the [where](http://knexjs.org/#Builder-where) function like so:
 ```javascript
 'use strict';
 
-const env = process.env.NODE_ENV || 'development';
+const env = 'development';
 const config = require('./knexfile.js')[env];
 const knex = require('knex')(config);
 
@@ -257,7 +254,7 @@ named Cars:
 ```javascript
 'use strict';
 
-const env = process.env.NODE_ENV || 'development';
+const env = 'development';
 const config = require('./knexfile.js')[env];
 const knex = require('knex')(config);
 
@@ -294,7 +291,7 @@ node index.js
 ```javascript
 'use strict';
 
-const env = process.env.NODE_ENV || 'development';
+const env = 'development';
 const config = require('./knexfile.js')[env];
 const knex = require('knex')(config);
 
@@ -338,7 +335,7 @@ provides an `orWhere` function that we can use:
 ```javascript
 'use strict';
 
-const env = process.env.NODE_ENV || 'development';
+const env = 'development';
 const config = require('./knexfile.js')[env];
 const knex = require('knex')(config);
 
@@ -381,7 +378,7 @@ function to return all the movies sorted by rating, descending:
 ```javascript
 'use strict';
 
-const env = process.env.NODE_ENV || 'development';
+const env = 'development';
 const config = require('./knexfile.js')[env];
 const knex = require('knex')(config);
 
@@ -421,7 +418,7 @@ The first parameter to orderBy is going to be the field, and the second
 will be 'asc' by default, or you can specify 'desc' instead to reverse
 the order.
 
-### Limits?
+### `Limit`
 
 Yep, Knex provides [limit](http://knexjs.org/#Builder-limit) also. Let's
 only fetch the top 5 movies:
@@ -429,7 +426,7 @@ only fetch the top 5 movies:
 ```javascript
 'use strict';
 
-const env = process.env.NODE_ENV || 'development';
+const env = 'development';
 const config = require('./knexfile.js')[env];
 const knex = require('knex')(config);
 
@@ -460,7 +457,7 @@ node index.js
     score: '8.9' } ]
 ```
 
-# Query Exercises
+### Exercise
 
 Build the following 4 queries:
 
