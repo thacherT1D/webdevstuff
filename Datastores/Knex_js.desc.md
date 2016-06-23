@@ -98,7 +98,7 @@ For example, the `$xhr` promise remains unresolved while it waits for the HTTP r
 
 Just like how jQuery uses a promise to handle an HTTP response from an HTTP server, Knex uses promises to handle a SQL response from a PostgreSQL server. In fact, nearly all the functions in Knex return a promise as the preferred way of handling SQL responses. The main difference from jQuery is that Knex promises use the `then()` and `catch()` asynchronous functions instead of `done()` and `fail()`.
 
-**NOTE:** jQuery 3.0 has switched over to the `then()` and `catch()` standard.
+**NOTE:** jQuery 3.0 has switched over to use the `then()` and `catch()` functions as well.
 
 In the `index.js` file, write and save the following code.
 
