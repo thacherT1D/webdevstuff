@@ -556,16 +556,16 @@ And you should see something like this.
 
 Additionally, the Knex API includes the following `WHERE` clause methods.
 
-- [`whereNot()`](http://knexjs.org/#Builder-whereNot)
-- [`whereIn()`](http://knexjs.org/#Builder-whereIn)
-- [`whereNotIn()`](http://knexjs.org/#Builder-whereNotIn)
-- [`whereNull()`](http://knexjs.org/#Builder-whereNull)
-- [`whereNotNull()`](http://knexjs.org/#Builder-whereNotNull)
-- [`whereExists()`](http://knexjs.org/#Builder-whereExists)
-- [`whereNotExists()`](http://knexjs.org/#Builder-whereNotExists)
-- [`whereBetween()`](http://knexjs.org/#Builder-whereBetween)
-- [`whereNotBetween()`](http://knexjs.org/#Builder-whereNotBetween)
-- [`whereRaw()`](http://knexjs.org/#Builder-whereRaw)
+- [Knex.js - `whereNot()`](http://knexjs.org/#Builder-whereNot)
+- [Knex.js - `whereIn()`](http://knexjs.org/#Builder-whereIn)
+- [Knex.js - `whereNotIn()`](http://knexjs.org/#Builder-whereNotIn)
+- [Knex.js - `whereNull()`](http://knexjs.org/#Builder-whereNull)
+- [Knex.js - `whereNotNull()`](http://knexjs.org/#Builder-whereNotNull)
+- [Knex.js - `whereExists()`](http://knexjs.org/#Builder-whereExists)
+- [Knex.js - `whereNotExists()`](http://knexjs.org/#Builder-whereNotExists)
+- [Knex.js - `whereBetween()`](http://knexjs.org/#Builder-whereBetween)
+- [Knex.js - `whereNotBetween()`](http://knexjs.org/#Builder-whereNotBetween)
+- [Knex.js - `whereRaw()`](http://knexjs.org/#Builder-whereRaw)
 
 Chaining an [`orderBy` method](http://knexjs.org/#Builder-orderBy) adds an `ORDER BY` clause to the query. It accepts two string arguments—a column name and a direction.
 
