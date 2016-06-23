@@ -657,9 +657,9 @@ Using Knex.js, build the following queries.
 
 ## How do you use Knex.js to insert rows into a PostgreSQL table?
 
-Let's say we changed our mind, and really do want to have Gigli in our
-database. We can use [insert](http://knexjs.org/#Builder-insert) to add
-new rows to our database:
+The [`insert()` method](http://knexjs.org/#Builder-insert) creates an insert query, taking an object of key-value pairs to be inserted into the row. When the promise is resolved, the `then()` method's callback is triggered and given object that contains the number of rows inserted.
+
+In the `index.js` file, write and save the following code.
 
 ```javascript
 'use strict';
@@ -689,9 +689,13 @@ knex('movies')
   });
 ```
 
+Then, execute the program by running the following shell command.
+
 ```shell
 node index.js
 ```
+
+And you should see something like this.
 
 ```text
 { command: 'INSERT',
@@ -705,11 +709,9 @@ node index.js
   _getTypeParser: [Function: bound ] }
 ```
 
-Just like with `update`, we can pass a second argument to `insert` that
-tells PostgreSQL what we want returned from the database as a result of
-our insert. If we don't include that second parameter, then postgres
-will only return the ID, and the promise will be resolved with a fairly
-useless object:
+You can pass second argument to the `insert()` method that tells PostgreSQL what columns to returned from the database as a result of the insert.
+
+In the `index.js` file, write and save the following code.
 
 ```javascript
 'use strict';
@@ -717,6 +719,8 @@ useless object:
 const env = 'development';
 const config = require('./knexfile.js')[env];
 const knex = require('knex')(config);
+
+In the `index.js` file, write and save the following code.
 
 knex('movies')
   .insert({
@@ -739,9 +743,13 @@ knex('movies')
   });
 ```
 
+Then, execute the program by running the following shell command.
+
 ```shell
 node index.js
 ```
+
+And you should see something like this.
 
 ```text
 [ anonymous {
