@@ -458,6 +458,8 @@ And you should see something like this.
 
 The `where()` method also has a form that accepts one argument—an object with key-value pairs. The keys become column names and the values become their respective match values. If an object with multiple key-value pairs is given, the `where()` method generates multiple `AND` clauses.
 
+In the `index.js` file, write and save the following code.
+
 ```javascript
 'use strict';
 
@@ -497,10 +499,9 @@ And you should see something like this.
     score: '7.6' } ]
 ```
 
-### How about adding OR clauses?
+The `orWhere()` method works exactly the same as the `where()` method, except it wraps it's arguments in an `OR ( )` clause.
 
-Let's say we wanted to fetch both Gigli and Cars. Knex also
-provides an `orWhere` function that we can use:
+In the `index.js` file, write and save the following code.
 
 ```javascript
 'use strict';
@@ -525,9 +526,13 @@ knex('movies')
   });
 ```
 
+Then, execute the program by running the following shell command.
+
 ```shell
 node index.js
 ```
+
+And you should see something like this.
 
 ```text
 [ anonymous {
@@ -544,10 +549,9 @@ node index.js
     score: '8.9' } ]
 ```
 
-Anytime you want your data in a specific order, it's better to let the
-database return your rows in the proper order instead of resorting it in
-your code. Let's use the [orderBy](http://knexjs.org/#Builder-orderBy)
-function to return all the movies sorted by rating, descending:
+Chaining an [`orderBy` method](http://knexjs.org/#Builder-orderBy) creates an `ORDER BY` clause. It accepts two string arguments—a column name and a direction.
+
+In the `index.js` file, write and save the following code.
 
 ```javascript
 'use strict';
@@ -573,9 +577,13 @@ knex('movies')
   });
 ```
 
+Then, execute the program by running the following shell command.
+
 ```shell
 node index.js
 ```
+
+And you should see something like this.
 
 ```text
 [ anonymous {
@@ -592,14 +600,9 @@ node index.js
     score: '7.6' } ]
 ```
 
-The first parameter to orderBy is going to be the field, and the second
-will be 'asc' by default, or you can specify 'desc' instead to reverse
-the order.
+Chaining the [`limit()` method](http://knexjs.org/#Builder-limit) onto a Knex query adds a `LIMIT` clause. The method takes a single number argument—the limit value.
 
-### `Limit`
-
-Yep, Knex provides [limit](http://knexjs.org/#Builder-limit) also. Let's
-only fetch the top 5 movies:
+In the `index.js` file, write and save the following code.
 
 ```javascript
 'use strict';
@@ -626,9 +629,13 @@ knex('movies')
   });
 ```
 
+Then, execute the program by running the following shell command.
+
 ```shell
 node index.js
 ```
+
+And you should see something like this.
 
 ```text
 [ anonymous {
@@ -641,16 +648,68 @@ node index.js
 
 ### Exercise
 
-Build the following 4 queries:
+Using Knex.js, build the following queries.
 
-* Write a query on the movie table to return the worst movie of all time. There should be only 1 result returned. The result should include the title, description and rating of the movie.
-* Write a query that returns Gigli and Mad Max: Fury Road
-* Write a query that returns the id and title of the first 5 movies inserted into the database.
-* Write a query to get all of the average movies from the table. Average is defined as a rating between 4 and 7 inclusive.
+- Return the `id`, `title`, and `score` of the single worst movie in the table.
+- Return the `id`, `title`, and `duration` of the "X-Men: Apocalypse" and "The Princess Bride" movies.
+- Return the `id`, `title`, and `released_at` all the movies ordered by from oldest to newest.
+- Return the `id`, `title`, `genre`, and `score` of all of the PG movies that scored between 7.5 and 8.5
 
-# Updating
+## How do you use Knex.js to insert rows into a PostgreSQL table?
 
-Updating is simply replacing the `select` function with a call to [update](http://knexjs.org/#Builder-update), passing in what fields should be changed.
+Let's say we changed our mind, and really do want to have Gigli in our
+database. We can use [insert](http://knexjs.org/#Builder-insert) to add
+new rows to our database:
+
+```javascript
+var knex = require('./db/knex');
+
+knex('movies').insert({title: 'Gigli', description: 'Best movie evar', rating: 10}, '*').then(function(data) {
+  console.log(data);
+  process.exit(1);
+});
+```
+
+```shell
+/development/galvanize/intro_to_knex  ᐅ node index.js
+[ { id: 12,
+    title: 'Gigli',
+    description: 'Best movie evar',
+    rating: 10 } ]
+```
+
+Just like with `update`, we can pass a second argument to `insert` that
+tells PostgreSQL what we want returned from the database as a result of
+our insert. If we don't include that second parameter, then postgres
+will only return the ID, and the promise will be resolved with a fairly
+useless object:
+
+```javascript
+var knex = require('./db/knex');
+
+knex('movies').insert({title: 'Gigli', description: 'Best movie evar', rating: 10}).then(function(data) {
+  console.log(data);
+  process.exit(1);
+});
+```
+
+```shell
+/development/galvanize/intro_to_knex  ᐅ node index.js
+
+{ command: 'INSERT',
+  rowCount: 1,
+  oid: 0,
+  rows: [],
+  fields: [],
+  _parsers: [],
+  RowCtor: null,
+  rowAsArray: false,
+  _getTypeParser: [Function: bound ] }
+```
+
+## How do you use Knex.js to update rows in a PostgreSQL table?
+
+Updating is simply replacing the `select()` method with a call to [`update` method](http://knexjs.org/#Builder-update), passing in what fields should be changed.
 
 Let's fix Gigli:
 
@@ -725,62 +784,13 @@ knex('movies').where({title: 'Gigli'}).del().then(function() {
 []
 ```
 
-# Inserting
+## Assignment
 
-Let's say we changed our mind, and really do want to have Gigli in our
-database. We can use [insert](http://knexjs.org/#Builder-insert) to add
-new rows to our database:
-
-```javascript
-var knex = require('./db/knex');
-
-knex('movies').insert({title: 'Gigli', description: 'Best movie evar', rating: 10}, '*').then(function(data) {
-  console.log(data);
-  process.exit(1);
-});
-```
-
-```shell
-/development/galvanize/intro_to_knex  ᐅ node index.js
-[ { id: 12,
-    title: 'Gigli',
-    description: 'Best movie evar',
-    rating: 10 } ]
-```
-
-Just like with `update`, we can pass a second argument to `insert` that
-tells PostgreSQL what we want returned from the database as a result of
-our insert. If we don't include that second parameter, then postgres
-will only return the ID, and the promise will be resolved with a fairly
-useless object:
-
-```javascript
-var knex = require('./db/knex');
-
-knex('movies').insert({title: 'Gigli', description: 'Best movie evar', rating: 10}).then(function(data) {
-  console.log(data);
-  process.exit(1);
-});
-```
-
-```shell
-/development/galvanize/intro_to_knex  ᐅ node index.js
-
-{ command: 'INSERT',
-  rowCount: 1,
-  oid: 0,
-  rows: [],
-  fields: [],
-  _parsers: [],
-  RowCtor: null,
-  rowAsArray: false,
-  _getTypeParser: [Function: bound ] }
-```
+- [SQL to Knex](https://github.com/gSchool/sql-to-knex-assignment)
 
 ## Resources
 
-- [http://knexjs.org/#Builder](http://knexjs.org/#Builder)
-- [knex.js website and documentation](http://knexjs.org/)
-- [knex query lab](http://michaelavila.com/knex-querylab/)
-- [SQL to knex exercise](https://github.com/gSchool/sql-to-knex-assignment)
+- [Knex.js - Home](http://knexjs.org/)
+- [Knex.js - Knex Query Builder](http://knexjs.org/#Builder)
+- [Knex Query Lab](http://michaelavila.com/knex-querylab/)
 - [Wikipedia - SQL injection](https://en.wikipedia.org/wiki/SQL_injection)
