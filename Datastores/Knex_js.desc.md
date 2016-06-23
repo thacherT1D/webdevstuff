@@ -9,9 +9,13 @@
 
 ## What is Knex.js?
 
-**Knex.js** is a third-party JavaScript library that builds an SQL command, or query, and sends it to a relational database system like PostgreSQL. In other words, Knex.js allows you to build a Node.js-based PostgreSQL client to communicate with a PostgreSQL server.
+**Knex.js** is a third-party JavaScript library that builds SQL commands and sends them to (i.e. queries) a relational database system like PostgreSQL. In other words, Knex.js allows you to build a Node.js-based PostgreSQL client that communicate with a PostgreSQL server.
 
-To get started, migrate and seed a database by running the following shell commands.
+Just like jQuery builds and sends HTTP requests to an HTTP server, Knex builds and sends SQL commands to a PostgreSQL server. Just remember that jQuery runs inside a web browser while Knex runs outside a web browser, in Node.js.
+
+[INSERT CLIENT-SERVER DIAGRAM OF JQUERY VS KNEX]
+
+To see how this works in action, migrate and seed a database by running the following shell commands.
 
 ```shell
 dropdb movie_junkies_dev
@@ -54,10 +58,11 @@ const knex = require('knex')(config);
 const sql = knex('movies').toString();
 
 console.log(sql);
+
 knex.destroy();
 ```
 
-When the `require('knex')(config)` function is called, Knex opens a connection to the PostgreSQL server. When the `knex.destroy()` function is called, Knex closes it. If the connection isn't closed, the program would run indefinitely.
+**NOTE:** The program needs the `knex.destroy()` function to stop running. You'll learn why in a moment.
 
 Then, execute the program by running the following shell command.
 
@@ -71,9 +76,27 @@ And you should see something like this.
 select * from "movies"
 ```
 
-Nearly all functions in Knex.js return a promise. A **promise** is an object that's used for asynchronous operations. A promise is more than a callback as it's an object that represents an operation that hasn't completed yet, but will in the future.
+As you can see, the `knex('movies').toString()` function built a `SELECT` command as a string. Why on earth would you want a Node.js program to build an SQL command? To send it to a relational database system, of course! Just like jQuery builds and sends HTTP requests to an HTTP server, Knex builds and sends SQL queries to a PostgreSQL server.
 
-Promises are the preferred way of handling Knex query responses. The main benefit of a promise is the ability to catch thrown errors without crashing a Node.js app. By using a promise's `then()` and `catch()` asynchronous functions, your code will behave like `try` and `catch` synchronous blocks.
+Though it must feel like a lifetime ago, think back to last quarter. Remember how jQuery's `$.getJSON()` function works? Here's a refresher, just in case.
+
+```javascript
+const $xhr = $.getJSON('www.omdbapi.com/?i=tt2294629');
+
+$xhr.done((result) => {
+  // Handle success
+});
+
+$xhr.fail(() => {
+  // Handle error
+});
+```
+
+jQuery's `$.getJSON()` function fires off an HTP request and returns an `$xhr` promise object. A **promise** is an object that's used for asynchronous operations. Though at first it looks like just a regular callback, it's much more than that. A promise is an object that represents an operation that hasn't completed yet, but will in the future.
+
+For example, the `$xhr` promise remains in an unresolved state while it waits for the HTTP response. The `$xhr` promise has two methods, `done()` and `fail()`, that are given a callback each. If the HTTP response is successful, the `done()` function's callback is triggered. On the other hand, if the HTTP response generates an error, the `fail()` function's callback is triggered.
+
+Just like how jQuery uses promises to handle HTTP response from an HTTP server, Knex uses promises to handle SQL responses from a PostgreSQL server. In fact, nearly all the functions in Knex return a promise as it's the preferred way of handling SQL responses. The main benefit of a promise is the ability to catch thrown errors without crashing an application. By using a Knex promise's `then()` and `catch()` asynchronous functions, your code will behave like `try` and `catch` synchronous blocks.
 
 In the `index.js` file, write and save the following code.
 
@@ -141,6 +164,8 @@ And you should see something like this.
     released_at: 1994-10-14T00:00:00.000Z,
     score: '8.9' } ]
 ```
+
+When the `require('knex')(config)` function is called, Knex opens a connection to the PostgreSQL server. When the `knex.destroy()` function is called, Knex closes it. If the connection isn't closed, the program would run indefinitely.
 
 ### Exercise
 
