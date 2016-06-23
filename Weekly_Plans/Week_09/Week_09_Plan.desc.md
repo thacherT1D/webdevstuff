@@ -59,8 +59,8 @@ Lessons:
 Warmup: [Debounce](https://www.codewars.com/kata/throttle-a-function)
 
 Lessons:
-- [Lesson](/cohorts/68/student_dashboard)
-- [Lesson](/cohorts/68/student_dashboard)
+- [Testing: Mocha Chai Supertest](/redirects/articles/4686)
+- [MongoDB and CRUD](/redirects/articles/3161)
 
 ---
 
