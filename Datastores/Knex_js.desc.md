@@ -11,7 +11,7 @@
 
 **Knex.js** is a third-party JavaScript library that builds SQL commands and sends them to a relational database system like PostgreSQL. In other words, Knex.js allows you to build a Node.js-based PostgreSQL client that communicates with a PostgreSQL server.
 
-Just like jQuery builds and sends HTTP requests to an HTTP server, Knex builds and sends SQL queries to a PostgreSQL server. Just remember that jQuery runs inside a web browser while Knex runs outside a web browser, in Node.js.
+Just like jQuery builds and sends HTTP requests to an HTTP server, Knex builds and sends SQL queries to a PostgreSQL server. Just remember that jQuery runs inside a web browser while Knex runs outside a web browser using Node.js.
 
 [INSERT CLIENT-SERVER DIAGRAM OF JQUERY VS KNEX]
 
@@ -62,7 +62,7 @@ console.log(sql);
 knex.destroy();
 ```
 
-**NOTE:** The program needs the `knex.destroy()` function to stop running. You'll learn why in a moment.
+**NOTE:** The program won't terminate unless the `knex.destroy()` function is called. You'll learn why in a moment.
 
 Then, execute the program by running the following shell command.
 
