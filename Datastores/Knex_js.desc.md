@@ -73,7 +73,7 @@ select * from "movies"
 
 Nearly all functions in Knex.js return a promise. A **promise** is an object that's used for asynchronous operations. A promise is more than a callback as it's an object that represents an operation that hasn't completed yet, but will in the future.
 
-Promises are the preferred way of handling Knex query responses. The main benefit of a promise is the ability to catch thrown errors without crashing a Node.js app. By using a promise's `then()` and `catch()` asynchronous functions, your code will behave like `try / catch` synchronous blocks.
+Promises are the preferred way of handling Knex query responses. The main benefit of a promise is the ability to catch thrown errors without crashing a Node.js app. By using a promise's `then()` and `catch()` asynchronous functions, your code will behave like `try` and `catch` synchronous blocks.
 
 In the `index.js` file, write and save the following code.
 
