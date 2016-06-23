@@ -697,7 +697,8 @@ Using Knex.js, build the following queries.
 - Return the `id`, `title`, and `duration` of the "X-Men: Apocalypse" and "The Princess Bride" movies.
 - Return the `id`, `title`, and `released_at` all the movies ordered by from oldest to newest.
 - Return the `id`, `title`, `genre`, and `score` of all of the PG movies that scored between 7.5 and 8.5
-- Return the `title`, `actor_name`, `role` of all the movies.
+- Return the `title`, `score`, `award_kind`, and `award_name` of all movies.
+- Return the `title`, `actor_name`, `role` of "Pulp Fiction".
 
 ## How do you use Knex.js to insert rows into a PostgreSQL table?
 
