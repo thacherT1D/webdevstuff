@@ -59,8 +59,12 @@ Lessons:
 Warmup: [Debounce](https://www.codewars.com/kata/throttle-a-function)
 
 Lessons:
-- [Testing: Mocha Chai Supertest](/redirects/articles/4686)
+
+- [New Link: Testing: Mocha Chai Supertest](https://github.com/gSchool/testing-express-with-supertest)
 - [MongoDB and CRUD](/redirects/articles/3161)
+
+Other:
+- [Old Link: Mocha Chai Supertest](/redirects/articles/4686)
 
 ---
 
