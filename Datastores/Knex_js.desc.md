@@ -761,7 +761,7 @@ It's usually better to write your updates this way if you need the data
 returned afterwards. This minimizes the number of individual queries
 you're executing.
 
-# Deleting
+## How do you use Knex.js to delete rows from a PostgreSQL table?
 
 This is going to work very similarly to update above, we just replace
 the call to update with a call to [del](http://knexjs.org/#Builder-del).
@@ -779,7 +779,7 @@ knex('movies').where({title: 'Gigli'}).del().then(function() {
 });
 ```
 
-```bash
+```shell
 /development/galvanize/intro_to_knex  ᐅ node index.js
 []
 ```
