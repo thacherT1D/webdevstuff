@@ -143,7 +143,7 @@ And you should see something like this.
 Time: 9.837 ms
 ```
 
-A query without a `WHERE` clause can't be optimized. So let's add one.
+A query without a `WHERE` clause can't be optimized. So let's fix that.
 
 ```sql
 SELECT COUNT(id) FROM places WHERE parent_id = 21138;
