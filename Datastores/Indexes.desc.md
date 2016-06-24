@@ -16,6 +16,41 @@ A index on a table-column pair is very similar.
 1. Find the references to the rows that contain a table-column value.
 1. Follow those references to the desired rows.
 
+```text
+movies
+┌────────┬────────────────────┐
+│   id   │       title        │
+├────────┼────────────────────┤
+│   1    │       Frozen       │
+├────────┼────────────────────┤
+┌────────┐         │   2    │ X-Men: Apocolypse  │
+│   1    │         ├────────┼────────────────────┤
+├────────┤         │   3    │ The Princess Bride │
+│   2    │         ├────────┼────────────────────┤
+├────────┤         │  ...   │        ...         │
+movies_pkey       │   3    │         ├────────┼────────────────────┤
+┌────────┐        ├────────┤         │  999   │  The Conjuring 2   │
+│  NULL  │        │  ...   │         ├────────┼────────────────────┤
+├────────┤        ├────────┤         │  1000  │    Finding Dory    │
+│  1000  │───┐    │  999   │         ├────────┼────────────────────┤
+├────────┤   │    └────────┘         │  1001  │      Zootopia      │
+│  2000  │   │                       ├────────┼────────────────────┤
+├────────┤   │    ┌────────┐    ┌───▶│  1002  │  The 5th Element   │
+│  3000  │   └───▶│  1000  │    │    ├────────┼────────────────────┤
+├────────┤        ├────────┤    │    │  ...   │        ...         │
+│  4000  │        │  1001  │    │    ├────────┼────────────────────┤
+└────────┘        ├────────┤    │    │  1999  │ Batman v Superman  │
+│  1002  │────┘    ├────────┼────────────────────┤
+├────────┤         │  2000  │    The Martian     │
+│  ...   │         ├────────┼────────────────────┤
+├────────┤         │  2001  │     Zoolander      │
+│  1999  │         ├────────┼────────────────────┤
+└────────┘         │  2002  │    The Revenant    │
+├────────┼────────────────────┤
+│  ...   │        ...         │
+└────────┴────────────────────┘
+```
+
 Since an index doesn't contain any information itself, it can be created or dropped without effecting the referenced information.
 
 ## Why are indexes important?
