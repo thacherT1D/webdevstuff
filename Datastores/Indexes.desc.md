@@ -16,7 +16,7 @@ An index on a table-column pair is very similar.
 1. Find the references to the rows that contain a table-column value.
 1. Follow those references to the desired rows.
 
-Under the hood, a PostgreSQL index is implemented as a balanced-tree (b-tree). A **b-tree** is a self-balancing tree structure that keeps data sorted in a balanced number of child nodes. This structure allows for very fast operations on the b-tree such as searches, sequential access, insertions, and deletions.
+Under the hood, a PostgreSQL index is implemented as a balanced-tree (b-tree). A **b-tree** is a tree structure that keeps data sorted in a balanced number of child nodes. This structure allows for very fast operations on the b-tree, such as searches, sequential access, insertions, and deletions.
 
 For example, image you want to select the row from the `movies` table where its `id` is `1001`. If the `id` column was declared as a primary key, it would automatically have a `movies_pkey` index. So instead of sequentially searching the entire `movies` table, the `movies_pkey` index can be consulted to locate the correct row in fraction of the time.
 
@@ -27,7 +27,7 @@ For example, image you want to select the row from the `movies` table where its 
                                      ├────────┼────────────────────┤
                   ┌────────┐         │   1    │       Frozen       │
                   │   1    │         ├────────┼────────────────────┤
-                  ├────────┤         │   2    │ X-Men: Apocolypse  │
+                  ├────────┤         │   2    │ X-Men: Apocalypse  │
                   │   2    │         ├────────┼────────────────────┤
 movies_pkey       ├────────┤         │  ...   │        ...         │
 ┌────────┐        │  ...   │         ├────────┼────────────────────┤
@@ -55,9 +55,9 @@ As you can see, an index doesn't contain any essential information. Therefore, i
 
 An index is used to speed up `SELECT` commands on a table-column pair. For example, a `SELECT` command for table-column pair without an index could average 10.4 ms. But with an index, the same command could average 0.7 ms. That's a significant speed up!
 
-Unfortunately, the price you pay is a slight slow down for `INSERT` and `UPDATE` commands on the corresponding table. This is because when a row is inserted into or updated in a table with an index, the index's underlying b-tree is updated as well.
+Unfortunately, the price you pay is a slight slow down for `INSERT` and `UPDATE` commands on the corresponding table. This is because when a row is inserted into or updated in a table with an index, the index's underlying b-tree must be inserted or updated as well.
 
-As a web developer, you'll have to determine if the trade-off of adding an index is worth it. While an index can significantly speed up `SELECT` COMMANDS WITH `WHERE` clauses, it should for the following use cases.
+As a web developer, you'll have to determine if the trade-off of adding an index is worth it. While an index can significantly speed up `SELECT` commands with `WHERE` clauses, it should not be used for the following cases.
 
 - Tables with few rows.
 - Tables with frequent, large batch inserts or updates.
@@ -75,13 +75,13 @@ curl -fsSL https://git.io/voDXr | psql geo_dev
 psql geo_dev
 ```
 
-List the `places` table.
+To list the `places` table, running the following command.
 
 ```
 \d places
 ```
 
-And you should see something similar.
+And you should see something like this.
 
 ```text
                                      Table "public.places"
@@ -98,9 +98,9 @@ Indexes:
     "places_pkey" PRIMARY KEY, btree (id)
 ```
 
-As you can see, PostgreSQL automatically creates indexes are for primary key constraints. It's also worth mentioning that PostgreSQL do not automatically create indexes for foreign key constraints.
+As you can see, PostgreSQL automatically creates indexes for primary key constraints. It's also worth mentioning that PostgreSQL do not automatically create indexes for foreign key constraints.
 
-List all the index tables to check the size of the index table.
+To list all index tables with their size, run the following command.
 
 ```
 \di+
@@ -116,13 +116,13 @@ And you should see something similar.
 (1 row)
 ```
 
-Turn on the timing of commands.
+If it's not already configured, you'll want to turn on the timing of commands.
 
 ```
 \timing on
 ```
 
-And run the following query.
+To count the number of rows using the `id` column, run the following command.
 
 ```sql
 SELECT COUNT(id) FROM places;
@@ -141,7 +141,7 @@ Time: 9.837 ms
 
 This query can't be optimized because it doesn't have a `WHERE` clause.
 
-Now, run the following query.
+To count the number of rows using the `id` column and filtering for a specific `parent_id` value, run the following command.
 
 ```sql
 SELECT COUNT(id) FROM places WHERE parent_id = 21138;
@@ -329,7 +329,7 @@ And you'll see something like this.
  public | places_pkey                         | index | ryansobol | places | 1912 kB |
  ```
 
- Go ahead and run the same query.
+Go ahead and run the same query.
 
 ```sql
 SELECT COUNT(id) FROM places WHERE canonical_name = 'Seattle,Washington,United States';
@@ -362,7 +362,7 @@ DETAIL:  Key (canonical_name)=(Seattle,Washington,United States) already exists.
 Time: 0.818 ms
 ```
 
-Under the hood, a unique index is identical to a unique constraint. The only difference is a unique partial index can only be declared with the `CREATE UNIQUE INDEX` command. See the PostgreSQL documentation on [Partial Indexes](https://www.postgresql.org/docs/9.5/static/indexes-partial.html) and a [Stack Overflow article](http://stackoverflow.com/questions/23542794/postgres-unique-constraint-vs-index#23665806) for more information.
+Under the hood, a unique index is identical to a unique constraint. The only difference is a unique partial index can only be declared with the `CREATE UNIQUE INDEX` command. See the PostgreSQL documentation on [Partial Indexes](https://www.postgresql.org/docs/9.5/static/indexes-partial.html) and this [Stack Overflow article](http://stackoverflow.com/questions/23542794/postgres-unique-constraint-vs-index#23665806) for more information.
 
 Drop the `places_canonical_name_idx` index table.
 
@@ -403,5 +403,10 @@ DROP INDEX
 Time: 1.896 ms
 ```
 
+## Resources
+
+- [Pat Shaughnessy - Discovering the Computer Science Behind Postgres Indexes](http://patshaughnessy.net/2014/11/11/discovering-the-computer-science-behind-postgres-indexes)
+- [PostgreSQL Documentation - `CREATE INDEX`](https://www.postgresql.org/docs/current/static/sql-createindex.html)
+- [Wikipedia - B-tree](https://en.wikipedia.org/wiki/B-tree)
 
 [create-index]: http://www.postgresql.org/docs/current/static/sql-createindex.html
