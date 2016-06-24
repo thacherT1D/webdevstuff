@@ -6,9 +6,7 @@
 
 ## What's an index?
 
-In a relational database system, an **index** is a special lookup table used to improve the speed of information retrieval for a specified table-column pair.
-
-A index on a table-column pair is like the index in an encyclopedia. You just follow the references to the desired pages that contain a subject. An index on a table-column pair is very similar in that you follow the references to the desired rows that contain a table-column value.
+In a relational database system, an **index** is a special lookup table used to improve the speed of information retrieval for a specified table-column pair. An index on a table-column pair is like the index in an encyclopedia. You follow the references to the desired rows that contain a table-column value.
 
 ```text
                                                  movies
