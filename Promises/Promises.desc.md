@@ -246,3 +246,11 @@ https://github.com/gSchool/promise-challenges/tree/master/01-knex-associations
 * [Promises - In Wicked Detail](http://www.mattgreer.org/articles/promises-in-wicked-detail/)
 * [Promises/A+ Standard](https://promisesaplus.com/)
 * [We have a problem with promises](http://pouchdb.com/2015/05/18/we-have-a-problem-with-promises.html)
+
+## Videos
+
+**ERRATA:** There's an error at 3:55. The bottom function box should read "f2".
+
+<iframe src="https://player.vimeo.com/video/136801594?byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+<iframe src="https://player.vimeo.com/video/136900546?byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
