@@ -37,7 +37,8 @@ var promise = new Promise((resolve, reject) => {
 
 promise;
 ```
-# `.then()`
+
+## `.then()`
 
 While the calculation happened correctly, the result is still a Promise. In order to return the value, we'll need to call `.then()` with the appropriate arguments. First though, let's create a function that will allow for us to dynamically set the variable we'll be checking for odd and even.
 
