@@ -49,7 +49,7 @@ movies_pkey       ├────────┤         │  ...   │        .
                                      └────────┴────────────────────┘
 ```
 
-As you can see, an index doesn't contain any information itself. Therefore, it can safely be created or dropped without affecting the information it references.
+As you can see, an index doesn't contain any essential information. Therefore, it can safely be created or dropped without affecting the information it references.
 
 ## Why are indexes important?
 
