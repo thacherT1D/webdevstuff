@@ -11,10 +11,12 @@ In a relational database system, an **index** is a special lookup table used to 
 1. Find the references to the pages that contain a subject.
 1. Follow those references to the desired pages.
 
-A index on a table-column pair is very similar.
+An index on a table-column pair is very similar.
 
 1. Find the references to the rows that contain a table-column value.
 1. Follow those references to the desired rows.
+
+Under the hood in PostgreSQL, an index is implemented as a balanced-tree (b-tree). A **b-tree** is a self-balancing tree data structure that keeps data sorted and allows fast searches, sequential access, insertions, and deletions. In B-trees, internal (non-leaf) nodes can have a variable number of child nodes within some pre-defined range.
 
 ```text
                                      movies
@@ -51,7 +53,7 @@ Since an index doesn't contain any information itself, it can be created or drop
 
 An index is used to speed up `SELECT` commands on a table-column pair. For example, a `SELECT` command for table-column pair without an index could average 10.4 ms. But with an index, the same command could average 0.7 ms. That's a significant speed up!
 
-Unfortunately, the price you pay is a slight slow down for `INSERT` and `UPDATE` commands on the corresponding table. This is because when a row is inserted into or updated in a table with an index, a second row must be inserted or updated in the corresponding index table.
+Unfortunately, the price you pay is a slight slow down for `INSERT` and `UPDATE` commands on the corresponding table. This is because when a row is inserted into or updated in a table with an index, the index's underlying b-tree is updated as well.
 
 As a web developer, you'll have to determine if the trade-off of adding an index is worth it. While an index can significantly speed up `SELECT` COMMANDS WITH `WHERE` clauses, it should for the following use cases.
 
