@@ -53,7 +53,7 @@ Turn to a neighbor and explain in your own words what an index is.
 
 ## Why are indexes important?
 
-An index is used to speed up `SELECT` commands on a table-column pair. For example, a `SELECT` command for table-column pair without an index could average 10.4 ms. But with an index, the same command could average 0.7 ms. That's a significant speed up!
+An index is used to speed up `SELECT` commands on a table-column pair. As you'll see in a moment, a `SELECT` command for table-column pair without an index averages 10.4 ms, but with an index averages 0.7 ms. That's a significant speed up!
 
 Unfortunately, the price you pay is a slight slow down for `INSERT` and `UPDATE` commands on the corresponding table. This is because when a row is inserted into or updated in a table with an index, the index's underlying b-tree must be inserted or updated as well.
 
