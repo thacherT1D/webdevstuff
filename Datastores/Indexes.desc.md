@@ -45,6 +45,10 @@ For example, image you want to select the row from the `movies` table where its 
 
 As you can see, an index doesn't contain any essential information. Therefore, it can safely be created or dropped without affecting the information it references.
 
+## Exercise
+
+Turn to a neighbor and explain in your own words what an index is.
+
 ## Why are indexes important?
 
 An index is used to speed up `SELECT` commands on a table-column pair. For example, a `SELECT` command for table-column pair without an index could average 10.4 ms. But with an index, the same command could average 0.7 ms. That's a significant speed up!
@@ -58,6 +62,10 @@ As a web developer, you'll have to determine if the trade-off of adding an index
 - Columns with many `NULL` values.
 
 Additionally, an index on a number and timestamp column is generally more effective than an index on a textual column. This is especially true when querying a table for a particular word or phrase within a large amount of text.
+
+### Exercise
+
+Take a moment to write down your thoughts on why indexes are useful. After about 30 seconds, your instructor will cold call on the class and ask what was written down.
 
 ## How do use indexes to improve the speed of information retrieval in PostgreSQL?
 
