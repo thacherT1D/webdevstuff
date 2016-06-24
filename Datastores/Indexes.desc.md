@@ -55,9 +55,9 @@ Turn to a neighbor and explain in your own words what an index is.
 
 An index is used to speed up `SELECT` commands on a table-column pair. As you'll see in a moment, a `SELECT` command for table-column pair without an index averages 10.4 ms, but with an index averages 0.7 ms. That's a significant speed up!
 
-Unfortunately, the price you pay is a slight slow down for `INSERT` and `UPDATE` commands on the corresponding table. This is because when a row is inserted into or updated in a table with an index, a record must be inserted or updated into the underlying b-tree index as well.
+Unfortunately, the price you pay is a slight slow down for `INSERT` and `UPDATE` commands on the corresponding table. This is because when a row is inserted into or updated in a table with an index, a record must be inserted or updated into the underlying b-tree index as well. As a web developer, you'll have to determine if the trade-off of adding an index is worth it.
 
-As a web developer, you'll have to determine if the trade-off of adding an index is worth it. While an index can significantly speed up `SELECT` commands with `WHERE` clauses, it should not be used for the following cases.
+While an index can significantly speed up `SELECT` commands on the table-column pair, it should not be used for the following cases.
 
 - Tables with few rows.
 - Tables with frequent, large batch inserts or updates.
