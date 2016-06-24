@@ -20,9 +20,11 @@ Since an index doesn't contain any information itself, it can be created or drop
 
 ## Why are indexes important?
 
-An index helps to speed up `SELECT` commands with `WHERE` clauses. Unfortunately, the price you pay is a slight slow down for `INSERT` and `UPDATE` commands.
+An index is used to speed up `SELECT` commands on a table-column pair. For example, a `SELECT` command for table-column pair without an index could average 10.4 ms. But with an index, the same command could average 0.7 ms. That's a significant speed up!
 
-When a row is inserted or updated into a table with an index, the database system must create or update a row in the index table. As a web developer, you'll have to determine if the trade-off of adding an index is worth it. In general, indexes should be avoided on:
+Unfortunately, the price you pay is a slight slow down for `INSERT` and `UPDATE` commands on the corresponding table. This is because when a row is inserted into or updated in a table with an index, a second row must be inserted or updated in the corresponding index table.
+
+As a web developer, you'll have to determine if the trade-off of adding an index is worth it. While an index can significantly speed up `SELECT` COMMANDS WITH `WHERE` clauses, it should for the following use cases.
 
 - Tables with few rows.
 - Tables with frequent, large batch inserts or updates.
