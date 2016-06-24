@@ -79,7 +79,7 @@ curl -fsSL https://git.io/voDXr | psql geo_dev
 psql geo_dev
 ```
 
-To list the `places` table, running the following command.
+Then, list the `places` table.
 
 ```text
 \d places
@@ -102,9 +102,9 @@ Indexes:
     "places_pkey" PRIMARY KEY, btree (id)
 ```
 
-As you can see, PostgreSQL automatically creates indexes for primary key constraints. It's also worth mentioning that PostgreSQL do not automatically create indexes for foreign key constraints.
+As you can see, PostgreSQL automatically creates an index for a primary key constraints. However, it's important to remember that PostgreSQL do not automatically create an index for a foreign key constraint.
 
-To list all index tables with their size, run the following command.
+To list all index tables, with their size, run the following command.
 
 ```text
 \di+
@@ -120,19 +120,19 @@ And you should see something similar.
 (1 row)
 ```
 
-If it's not already configured, you'll want to turn on the timing of commands.
+If it's not already configured, turn on the timing of commands.
 
 ```text
 \timing on
 ```
 
-To count the number of rows using the `id` column, run the following command.
+Next, count the number of rows with the `id` column.
 
 ```sql
 SELECT COUNT(id) FROM places;
 ```
 
-You'll see something like this.
+And you should see something like this.
 
 ```text
  count
@@ -143,9 +143,7 @@ You'll see something like this.
 Time: 9.837 ms
 ```
 
-This query can't be optimized because it doesn't have a `WHERE` clause.
-
-To count the number of rows using the `id` column and filtering for a specific `parent_id` value, run the following command.
+A query without a `WHERE` clause can't be optimized. So let's add one.
 
 ```sql
 SELECT COUNT(id) FROM places WHERE parent_id = 21138;
@@ -164,7 +162,7 @@ Time: 10.656 ms
 
 To get get a statistically significant sample, run the query at least 7 times. On my computer, the average run time is about 10.4 ms.
 
-Unsurprisingly, the [`CREATE INDEX`][create-index] statement creates an index table. Use it to create an index for the `parent_id` column of the `places` table.
+Unsurprisingly, the [`CREATE INDEX`][create-index] statement creates an index. Use it to create an index for the `parent_id` column on the `places` table.
 
 ```sql
 CREATE INDEX ON places (parent_id);
@@ -232,7 +230,7 @@ Time: 17.076 ms
 
 Run the query several times to get a statistically significant sample. On my computer, the average run time is about 16.3 ms.
 
-Because there are two columns in the query's `WHERE` clause, a two-column index table is needed. Create an index for the `country_code` and `target_type` columns of the `places` table.
+Because there are two columns in the query's `WHERE` clause, a two-column index is needed. Create an index for the `country_code` and `target_type` columns of the `places` table.
 
 ```sql
 CREATE INDEX ON places (country_code, target_type);
@@ -302,7 +300,7 @@ Time: 11.210 ms
 
 Run the query several times to get a statistically significant sample. On my computer, the average run time is about 11.1 ms.
 
-**Unique indexes** are used not only for performance, but also for data integrity. A unique index table does not allow any duplicate values to be inserted. Create a unique index for the `canonical_name` column of the `places` table.
+A **unique index** is used not only for performance, but also for data integrity. A unique index does not allow any duplicate values to be inserted. Create a unique index for the `canonical_name` column of the `places` table.
 
 ```sql
 CREATE UNIQUE INDEX ON places (canonical_name);
@@ -366,7 +364,7 @@ DETAIL:  Key (canonical_name)=(Seattle,Washington,United States) already exists.
 Time: 0.818 ms
 ```
 
-Under the hood, a unique index is identical to a unique constraint. The only difference is a unique partial index can only be declared with the `CREATE UNIQUE INDEX` command. See the PostgreSQL documentation on [Partial Indexes](https://www.postgresql.org/docs/9.5/static/indexes-partial.html) and this [Stack Overflow article](http://stackoverflow.com/questions/23542794/postgres-unique-constraint-vs-index#23665806) for more information.
+Under the hood, a unique index is identical to a unique constraint. The only difference is a unique partial index can only be declared with the `CREATE UNIQUE INDEX` command. See the PostgreSQL documentation on [Partial Indexes](https://www.postgresql.org/docs/9.5/static/indexes-partial.html) and this [Stack Overflow article](http://stackoverflow.com/questions/23542794/postgres-unique-constraint-vs-index#23665806) if you want to know more.
 
 Drop the `places_canonical_name_idx` index table.
 
@@ -379,6 +377,12 @@ And you'll see something similar.
 ```text
 DROP INDEX
 Time: 2.175 ms
+```
+
+Then, verify this query still works.
+
+```sql
+SELECT COUNT(id) FROM places WHERE canonical_name = 'Seattle,Washington,United States';
 ```
 
 Drop the `places_country_code_target_type_idx` index table.
@@ -394,6 +398,12 @@ DROP INDEX
 Time: 1.828 ms
 ```
 
+Then, verify this query still works.
+
+```sql
+SELECT COUNT(id) FROM places WHERE country_code = 'US' AND target_type = 'City';
+```
+
 Drop the `places_parent_id_idx` index table.
 
 ```sql
@@ -405,6 +415,12 @@ And you'll see something similar.
 ```text
 DROP INDEX
 Time: 1.896 ms
+```
+
+Then, verify this query still works.
+
+```sql
+SELECT COUNT(id) FROM places WHERE parent_id = 21138;
 ```
 
 ## Resources
