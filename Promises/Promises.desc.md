@@ -249,8 +249,12 @@ https://github.com/gSchool/promise-challenges/tree/master/01-knex-associations
 
 ## Videos
 
+### Nested / Chained Promises
+
 **ERRATA:** There's an error at 3:55. The bottom function box should read "f2".
 
 <iframe src="https://player.vimeo.com/video/136801594?byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+### `Promise.all`
 
 <iframe src="https://player.vimeo.com/video/136900546?byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
