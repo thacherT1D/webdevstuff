@@ -1,36 +1,43 @@
 ## Objectives
 
-- Describe what a database index is.
-- Explain why database indexes are important.
-- Create indexes in PostgreSQL.
+- Explain what an index is.
+- Explain why indexes are useful.
+- Use indexes to improve the speed of information retrieval in PostgreSQL.
 
 ## What's an index?
 
-In relational databases, an **index** is a special lookup table used to improve the performance of data retrieval. When you imagine a database index, think of the index in the back of an encyclopedia. If you want to all the information on elephants, you find the subject in the index, lookup the page numbers that correspond to that subject, and then jump directly to one or more those pages.
+In a relational database system, an **index** is a special lookup table used to improve the speed of information retrieval for a specified table-column pair. A index on a table-column pair is like the index in an encyclopedia.
 
-A database index is just like that—a pointer to data that lives somewhere else. And since they're just pointers, indexes can be created or dropped without effecting the data.
+1. Find the references to the pages that contain a subject.
+1. Follow those references to the desired pages.
+
+A index on a table-column pair is very similar.
+
+1. Find the references to the rows that contain a table-column value.
+1. Follow those references to the desired rows.
+
+Since an index doesn't contain any information itself, it can be created or dropped without effecting the referenced information.
 
 ## Why are indexes important?
 
-An index helps speed up `SELECT` queries with `WHERE` clauses, but it slows down `INSERT` and `UPDATE` statements. When index data is inserted or updated, the database must write the data in two places—the relation table and the index table. As a full stack developer, you'll have to determine if the trade-off of indexing is worth it. In general, indexes should be avoided on:
+An index helps to speed up `SELECT` commands with `WHERE` clauses. Unfortunately, the price you pay is a slight slow down for `INSERT` and `UPDATE` commands.
+
+When a row is inserted or updated into a table with an index, the database system must create or update a row in the index table. As a web developer, you'll have to determine if the trade-off of adding an index is worth it. In general, indexes should be avoided on:
 
 - Tables with few rows.
 - Tables with frequent, large batch inserts or updates.
 - Columns with many `NULL` values.
-- Columns with frequent updates.
 
-Additionally, indexes on number and timestamp columns are generally more effective than indexes on textual columns, especially when searching for a particular word or phrase in a large amount of text.
+Additionally, an index on a number and timestamp column is generally more effective than an index on a textual column. This is especially true when querying a table for a particular word or phrase within a large amount of text.
 
-## How do you create indexes in PostgreSQL?
+## How do use indexes to improve the speed of information retrieval in PostgreSQL?
 
 To get started, run the following shell commands.
 
 ```bash
-git clone https://github.com/gSchool/sql-curriculum.git
-cd sql-curriculum/Unit-02-Relational
-createdb geodb
-psql geodb -f geodb.sql
-psql geodb
+createdb geo_dev
+curl -fsSL https://git.io/voDXr | psql geo_dev
+psql geo_dev
 ```
 
 List the `places` table.
@@ -41,7 +48,7 @@ List the `places` table.
 
 And you should see something similar.
 
-```
+```text
                                      Table "public.places"
      Column     |          Type          |                      Modifiers
 ----------------+------------------------+-----------------------------------------------------
@@ -137,7 +144,7 @@ Now list out the index tables.
 \di+
 ```
 
-And you'll see something liket this.
+And you'll see something like this.
 
 ```
                                  List of relations
@@ -319,6 +326,8 @@ ERROR:  duplicate key value violates unique constraint "places_canonical_name_id
 DETAIL:  Key (canonical_name)=(Seattle,Washington,United States) already exists.
 Time: 0.818 ms
 ```
+
+Under the hood, a unique index is identical to a unique constraint. The only difference is a unique partial index can only be declared with the `CREATE UNIQUE INDEX` command. See the PostgreSQL documentation on [Partial Indexes](https://www.postgresql.org/docs/9.5/static/indexes-partial.html) for more information.
 
 Drop the `places_canonical_name_idx` index table.
 

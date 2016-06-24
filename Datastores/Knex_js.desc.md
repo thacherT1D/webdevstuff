@@ -688,6 +688,7 @@ And you should see something like this.
 - [Knex.js - `decrement()`](http://knexjs.org/#Builder-decrement)
 - [Knex.js - `pluck()`](http://knexjs.org/#Builder-pluck)
 - [Knex.js - `first()`](http://knexjs.org/#Builder-first)
+- [Knex.js - `raw()`](http://knexjs.org/#Builder-raw)
 
 ### Exercise
 
