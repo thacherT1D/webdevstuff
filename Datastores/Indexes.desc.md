@@ -71,7 +71,7 @@ Take a moment to write down your thoughts on why indexes are useful. After about
 
 To get started, run the following shell commands.
 
-```bash
+```shell
 createdb geo_dev
 curl -fsSL https://git.io/voDXr | psql geo_dev
 psql geo_dev
@@ -79,7 +79,7 @@ psql geo_dev
 
 To list the `places` table, running the following command.
 
-```
+```text
 \d places
 ```
 
@@ -104,13 +104,13 @@ As you can see, PostgreSQL automatically creates indexes for primary key constra
 
 To list all index tables with their size, run the following command.
 
-```
+```text
 \di+
 ```
 
 And you should see something similar.
 
-```
+```text
                              List of relations
  Schema |    Name     | Type  |   Owner   | Table  |  Size   | Description
 --------+-------------+-------+-----------+--------+---------+-------------
@@ -120,7 +120,7 @@ And you should see something similar.
 
 If it's not already configured, you'll want to turn on the timing of commands.
 
-```
+```text
 \timing on
 ```
 
@@ -132,7 +132,7 @@ SELECT COUNT(id) FROM places;
 
 You'll see something like this.
 
-```
+```text
  count
 -------
  86457
@@ -151,7 +151,7 @@ SELECT COUNT(id) FROM places WHERE parent_id = 21138;
 
 And you see something like this.
 
-```
+```text
 count
 -------
   897
@@ -170,20 +170,20 @@ CREATE INDEX ON places (parent_id);
 
 And you'll see something like this.
 
-```
+```text
 CREATE INDEX
 Time: 52.983 ms
 ```
 
 Now list out the index tables.
 
-```
+```text
 \di+
 ```
 
 And you'll see something like this.
 
-```
+```text
                                  List of relations
  Schema |         Name         | Type  |   Owner   | Table  |  Size   | Description
 --------+----------------------+-------+-----------+--------+---------+-------------
@@ -200,7 +200,7 @@ SELECT COUNT(id) FROM places WHERE parent_id = 21138;
 
 And you'll see something like this.
 
-```
+```text
 count
 -------
   897
@@ -219,7 +219,7 @@ SELECT COUNT(id) FROM places WHERE country_code = 'US' AND target_type = 'City';
 
 And you'll see something like this.
 
-```
+```text
  count
 -------
  16325
@@ -238,20 +238,20 @@ CREATE INDEX ON places (country_code, target_type);
 
 And you'll see something like this.
 
-```
+```text
 CREATE INDEX
 Time: 361.801 ms
 ```
 
 List out the index tables.
 
-```
+```text
 \di+
 ```
 
 And you'll see something like this.
 
-```
+```text
                                          List of relations
  Schema |                Name                 | Type  |   Owner   | Table  |  Size   | Description
 --------+-------------------------------------+-------+-----------+--------+---------+-------------
@@ -269,7 +269,7 @@ SELECT COUNT(id) FROM places WHERE country_code = 'US' AND target_type = 'City';
 
 And you'll see something like this.
 
-```
+```text
  count
 -------
  16325
@@ -289,7 +289,7 @@ SELECT COUNT(id) FROM places WHERE canonical_name = 'Seattle,Washington,United
 
 And you'll see something like this.
 
-```
+```text
  count
 -------
      1
@@ -308,14 +308,14 @@ CREATE UNIQUE INDEX ON places (canonical_name);
 
 And you'll see something like this.
 
-```
+```text
 CREATE INDEX
 Time: 1530.046 ms
 ```
 
 List out the index tables.
 
-```
+```text
 \di+
 ```
 
@@ -339,7 +339,7 @@ SELECT COUNT(id) FROM places WHERE canonical_name = 'Seattle,Washington,United S
 
 And you'll see something like this.
 
-```
+```text
   count
  -------
       1
@@ -358,7 +358,7 @@ INSERT INTO places (canonical_name) VALUES ('Seattle,Washington,United States');
 
 And you'll see something like this.
 
-```
+```text
 ERROR:  duplicate key value violates unique constraint "places_canonical_name_idx"
 DETAIL:  Key (canonical_name)=(Seattle,Washington,United States) already exists.
 Time: 0.818 ms
@@ -374,7 +374,7 @@ DROP INDEX places_canonical_name_idx;
 
 And you'll see something similar.
 
-```
+```text
 DROP INDEX
 Time: 2.175 ms
 ```
@@ -387,7 +387,7 @@ DROP INDEX places_country_code_target_type_idx;
 
 And you'll see something similar.
 
-```
+```text
 DROP INDEX
 Time: 1.828 ms
 ```
@@ -400,7 +400,7 @@ DROP INDEX places_parent_id_idx;
 
 And you'll see something similar.
 
-```
+```text
 DROP INDEX
 Time: 1.896 ms
 ```
