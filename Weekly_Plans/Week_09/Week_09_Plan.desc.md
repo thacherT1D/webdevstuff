@@ -78,7 +78,7 @@ In a blog post,
 - Turn and talk: What do you think is meant by a "Culture of Error."
 
 
-Crush Code Friday: [CCF](/cohorts/68/student_dashboard)
+Crush Code Friday: [Reddit Clone](https://github.com/gSchool/reddit-clone-express-knex)
 
 Lightning Talks:
 - Vy Nguyen
