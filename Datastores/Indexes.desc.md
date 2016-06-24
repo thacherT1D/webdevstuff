@@ -69,7 +69,7 @@ Additionally, an index on a number and timestamp column is generally more effect
 
 Take a moment to write down your thoughts on why indexes are useful. After about 30 seconds, your instructor will cold call on the class and ask what was written down.
 
-## How do use indexes to improve the speed of information retrieval in PostgreSQL?
+## How do you use indexes to improve the speed of information retrieval in PostgreSQL?
 
 To get started, run the following shell commands.
 
