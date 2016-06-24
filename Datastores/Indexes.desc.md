@@ -1,7 +1,7 @@
 ## Objectives
 
 - Explain what an index is.
-- Explain why indexes are useful.
+- Explain why an index is useful.
 - Use indexes to improve the speed of information retrieval in PostgreSQL.
 
 ## What's an index?
