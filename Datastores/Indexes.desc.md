@@ -43,7 +43,7 @@ movies_pkey       ├────────┤         │  ...   │        .
 
 The diagram above is a picture of a data structure called a balance-tree (b-tree). A **data structure** is a particular way of organizing data so it can be used efficiently. Both an array and an object are two examples of a common data structures. Under the hood, PostgreSQL uses a b-tree to store the references of an index.
 
-A **b-tree** is a self-balancing tree data structure. The best way to explain a b-tree is to [see it in action](https://www.cs.usfca.edu/~galles/visualization/BTree.html). Suffice to say that, due to its structure and self-balancing nature, a b-tree can perform very fast operations such as searching, sequential accessing, inserting, and deleting. Later in this program, you'll learn how to implement a special kind of b-tree called a binary search tree. For now, we can leverage the hard work the PostgreSQL development team has done for us.
+A **b-tree** is a self-balancing tree data structure. The best way to explain a b-tree is to [see it in action](https://www.cs.usfca.edu/~galles/visualization/BTree.html). Suffice to say that, due to its structure and self-balancing nature, a b-tree can perform very fast operations such as searching, sequential accessing, inserting, and deleting. Later in this program, you'll learn how to implement a special kind of b-tree called a binary search tree. For now, you can happily leverage the hard work of the PostgreSQL development team.
 
 As you can see, an index doesn't contain any essential information. Therefore, it can safely be created or dropped without affecting the information it references.
 
