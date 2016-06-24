@@ -8,7 +8,7 @@
 
 In a relational database system, an **index** is a special lookup table used to improve the speed of information retrieval for a specified table-column pair. An index on a table-column pair is like the index in an encyclopedia. You follow the references to the desired rows that contain a table-column value.
 
-A **data structure** is a particular way of organizing data so it can be used efficiently. Both an array and an object are two examples of a common data structures. The diagram below is a picture of a special kind of data structure called a balance-tree (b-tree). Under the hood, PostgreSQL uses a b-tree to store an index to a table-column pair.
+Imagine, for a moment, you want to select the row from the `movies` table where its `id` is `1001`. If the `id` column was declared as a primary key, it would automatically have a `movies_pkey` index. So instead of sequentially searching the entire `movies` table, the `movies_pkey` index can be consulted to locate the correct row in fraction of the time.
 
 ```text
                                                  movies
@@ -39,9 +39,9 @@ movies_pkey       ├────────┤         │  ...   │        .
                                      └────────┴────────────────────┘
 ```
 
-A **b-tree** is a self-balancing tree data structure. The best way to explain a b-tree is to [see it in action](https://www.cs.usfca.edu/~galles/visualization/BTree.html). Suffice to say that, due to its structure and self-balancing properties, a b-tree can perform very fast operations such as searching, sequential accessing, inserting, and deleting. Later in this program, you'll learn how to implement a special kind of b-tree called a binary search tree. For now, we can leverage the hard work the PostgreSQL development team has done for us.
+The diagram above is a picture of a data structure called a balance-tree (b-tree). A **data structure** is a particular way of organizing data so it can be used efficiently. Both an array and an object are two examples of a common data structures. Under the hood, PostgreSQL uses a b-tree to store an index to a table-column pair.
 
-For example, image you want to select the row from the `movies` table where its `id` is `1001`. If the `id` column was declared as a primary key, it would automatically have a `movies_pkey` index. So instead of sequentially searching the entire `movies` table, the `movies_pkey` index can be consulted to locate the correct row in fraction of the time.
+A **b-tree** is a self-balancing tree data structure. The best way to explain a b-tree is to [see it in action](https://www.cs.usfca.edu/~galles/visualization/BTree.html). Suffice to say that, due to its structure and self-balancing nature, a b-tree can perform very fast operations such as searching, sequential accessing, inserting, and deleting. Later in this program, you'll learn how to implement a special kind of b-tree called a binary search tree. For now, we can leverage the hard work the PostgreSQL development team has done for us.
 
 As you can see, an index doesn't contain any essential information. Therefore, it can safely be created or dropped without affecting the information it references.
 
