@@ -6,7 +6,7 @@
 
 ## What's an index?
 
-In a relational database system, an **index** is a special lookup table used to improve the speed of information retrieval for a specified table-column pair. An index on a table-column pair is like the index in an encyclopedia. You follow the references to the desired rows that contain a table-column value.
+In a relational database system, an **index** is a special lookup table used to improve the speed of information retrieval for a specified table-column pair. An index on a table-column pair is like the index in an encyclopedia. You go to the index and follow the references to the desired rows that contain a table-column value.
 
 For example, imagine a PostgreSQL database contains a `movies` table with an `id serial PRIMARY KEY` column. In PostgreSQL, every primary key is given an index and so, in this example, a `movies_pkey` index is automatically created for the `movie` table's primary key column.
 
