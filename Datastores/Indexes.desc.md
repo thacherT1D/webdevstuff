@@ -6,19 +6,9 @@
 
 ## What's an index?
 
-In a relational database system, an **index** is a special lookup table used to improve the speed of information retrieval for a specified table-column pair. A index on a table-column pair is like the index in an encyclopedia.
+In a relational database system, an **index** is a special lookup table used to improve the speed of information retrieval for a specified table-column pair.
 
-1. Find the references to the pages that contain a subject.
-1. Follow those references to the desired pages.
-
-An index on a table-column pair is very similar.
-
-1. Find the references to the rows that contain a table-column value.
-1. Follow those references to the desired rows.
-
-Under the hood, a PostgreSQL index is implemented as a balanced-tree (b-tree). A **b-tree** is a tree structure that keeps data sorted in a balanced number of child nodes. This structure allows for very fast operations on the b-tree, such as searches, sequential access, insertions, and deletions.
-
-For example, image you want to select the row from the `movies` table where its `id` is `1001`. If the `id` column was declared as a primary key, it would automatically have a `movies_pkey` index. So instead of sequentially searching the entire `movies` table, the `movies_pkey` index can be consulted to locate the correct row in fraction of the time.
+A index on a table-column pair is like the index in an encyclopedia. You just follow the references to the desired pages that contain a subject. An index on a table-column pair is very similar in that you follow the references to the desired rows that contain a table-column value.
 
 ```text
                                                  movies
@@ -48,6 +38,10 @@ movies_pkey       ├────────┤         │  ...   │        .
                                      │  ...   │        ...         │
                                      └────────┴────────────────────┘
 ```
+
+Under the hood, a PostgreSQL index is implemented as a balanced-tree (b-tree). A **b-tree** is a tree structure that keeps data sorted in a balanced number of child nodes. This structure allows for very fast operations on the b-tree, such as searches, sequential access, insertions, and deletions.
+
+For example, image you want to select the row from the `movies` table where its `id` is `1001`. If the `id` column was declared as a primary key, it would automatically have a `movies_pkey` index. So instead of sequentially searching the entire `movies` table, the `movies_pkey` index can be consulted to locate the correct row in fraction of the time.
 
 As you can see, an index doesn't contain any essential information. Therefore, it can safely be created or dropped without affecting the information it references.
 
