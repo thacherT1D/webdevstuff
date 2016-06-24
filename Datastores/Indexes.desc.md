@@ -39,7 +39,7 @@ movies_pkey       ├────────┤         │  ...   │        .
 
 A **data structure** is a particular way of organizing data so it can be used efficiently. Both an array and an object are two examples of a common data structures.
 
-Under the hood, a PostgreSQL index is implemented as a balanced-tree (b-tree). A **b-tree** is a self-balancing tree data structure. The best way to explain a b-tree is to [see it in action](https://www.cs.usfca.edu/~galles/visualization/BTree.html). Suffice to say that, due to its structure, a b-tree can perform very fast operations such as searching, sequential accessing, inserting, and deleting.
+Under the hood, a PostgreSQL index is implemented as a balanced-tree (b-tree). A **b-tree** is a self-balancing tree data structure. The best way to explain a b-tree is to [see it in action](https://www.cs.usfca.edu/~galles/visualization/BTree.html). Suffice to say that, due to its structure and self-balancing properties, a b-tree can perform very fast operations such as searching, sequential accessing, inserting, and deleting.
 
 For example, image you want to select the row from the `movies` table where its `id` is `1001`. If the `id` column was declared as a primary key, it would automatically have a `movies_pkey` index. So instead of sequentially searching the entire `movies` table, the `movies_pkey` index can be consulted to locate the correct row in fraction of the time.
 
