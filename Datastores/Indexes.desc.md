@@ -8,7 +8,7 @@
 
 In a relational database system, an **index** is a special lookup table used to improve the speed of information retrieval for a specified table-column pair. An index on a table-column pair is like the index in an encyclopedia. You follow the references to the desired rows that contain a table-column value.
 
-Imagine, for a moment, you want to select the row from the `movies` table where its `id` is `1001`. If the `id` column was declared as a primary key, it would automatically have a `movies_pkey` index. So instead of sequentially searching the entire `movies` table, the `movies_pkey` index can be consulted to locate the correct row in fraction of the time.
+For example, imagine a `movies` table with an `id` column as its primary key. When the table is created, PostgreSQL automatically creates an `movies_pkey` index for the table-column pair. Over time, thousands of rows are inserted into the table. Eventually, PostgreSQL receives a query to select the row from the `movies` table where its `id` is `1001`. Instead of sequentially searching the entire `movies` table, PostgreSQL can use the `movies_pkey` index to locate the desired row in fraction of the time.
 
 ```text
                                                  movies
