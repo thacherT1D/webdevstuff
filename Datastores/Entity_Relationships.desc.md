@@ -484,6 +484,7 @@ Write an SQL command that displays the follow rows.
 
 ## Resources
 
+- [CODING HORROR - A Visual Explanation of SQL Joins](https://blog.codinghorror.com/a-visual-explanation-of-sql-joins/)
 - [Lucidchart - ER Diagram Symbols and Meaning](https://www.lucidchart.com/pages/ER-diagram-symbols-and-meaning)
 - [PostgreSQL Documentation - Constraints](https://www.postgresql.org/docs/9.5/static/ddl-constraints.html)
 - [Wikipedia - Associative entity](https://en.wikipedia.org/wiki/Associative_entity)
@@ -494,10 +495,11 @@ Write an SQL command that displays the follow rows.
 - [Youtube - Entity Relationship Diagram Training](https://www.youtube.com/watch?v=-fQ-bRllhXc)
 - [Youtube - Introduction to Set Theory](https://www.youtube.com/watch?v=yCwnifwVjIg)
 
-## Services
+## Diagram Apps
 
 - [Draw.io](https://www.draw.io/)
 - [Lucidchart](https://www.lucidchart.com/)
+- [Monodraw](http://monodraw.helftone.com/)
 
 ## Videos
 
