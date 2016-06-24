@@ -1,4 +1,8 @@
-# Intro - Basics
+## Objectives
+
+- Explain what a promise is.
+
+## What's a promise?
 
 > The Promise object is used for deferred and asynchronous computations. A Promise represents an operation that hasn't completed yet, but is expected in the future.
 
@@ -54,7 +58,7 @@ evenPromise(13);
 
 While we can now dynamically change the number being evaluated, it's still wrapped in a Promise. In order to log the real result, take a look at [the docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then) on the `.then()` function.
 
-## Exercise
+### Exercise
 
 1. Change the above function so that it responds with the number if it is even and responds with `false` if it is not.
 1. Chain `.then()` onto the promise you're creating with `evenPromise()` and pass in a function that `console.log()`s out the result. You can get the `reject()` case to run by adding a second anonymous function as an argument!
@@ -79,7 +83,7 @@ module.exports = {
 }
 ```
 
-# `.catch()`
+## `.catch()`
 
 In addition to `.then()`, we can also use `.catch()` to catch any rejections. Let's fire up a node console and paste in our simple promise code and play around with how this works:
 
@@ -118,7 +122,7 @@ Promise { <pending> }
 
 This allows you to handle both resolved and rejected states for a given promise in the same `.then()` call.
 
-# Visualizing
+## Visualizing
 
 To visualize this process, check out this Promises visualizer, [Promisees](http://bevacqua.github.io/promisees/). Copy the following code into the editor:
 
@@ -137,13 +141,13 @@ In the editor, you should see each part of the Promise.
 
 First, try un-commenting `reject('BAD')`. You should see that the initial Promise was rejected and both the `.catch()` and `.then()` were fulfilled. Now, switch it so that only the resolve statement runs. You should see the `.catch()` part of the chain disappear completely! You can also use the ◀ and ▶ tools on the right-hand side to slowly walk your way through the Promise chain.
 
-##### Before moving on to the next section, answer the following:
+### Exercise
 
 1. Refresh the page and take a look at the Basic example on the front-page. Slowly walk your way through the chain using the ◀ and ▶ tools.
   * Why does the one `.then()` statement fail?
 1. Try adding more `.then()` and `.catch()` statements until you feel comfortable understanding how each method is working.
 
-# Chaining & Errors
+## Chaining & Errors
 
 Now that we better understand how Promises chain together, let's work through our own example. Go to your `spec/example.spec.js` file and remove the 'x' from the remaining tests. Let's get all of these to pass!
 
@@ -171,13 +175,13 @@ This is one of the best perks of promises. You can avoid going down the rabbit h
 
 Let's add another function, the `reject()` function. It should just reject with whatever value it's given. The tests should show you how that function should operate.
 
-##### Before moving on to the next section, answer the following:
+### Exercise
 
 1. Inside of the `sum50` function, add a `.then(reject)` to the middle of the chain and re-run the tests.
   * If you get an `Error: Timeout` issue, that's likely because there's no `.catch()` case. Add one so that you still return a number.
   * If you receive an error like this, great job! `Failures ... Expected 30 to equal 50.` Keep the `.then(reject)` call where it is and still get the test to pass by adding more to the chain.
 
-# `Promise.all()`
+## `Promise.all()`
 
 One incredibly powerful tool in the promises toolkit is [Promise.all()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all). This is a great way to run a handful of asynchronous calls, and wait til they are all finished before you continue execution of your code. An example of where you'd use this is when you need to make multiple API calls to fetch data, and you want to ensure that they all finish before you process the data.
 
@@ -187,7 +191,7 @@ To illustrate this point, we've setup a really simple API server that will retur
 
 Pull down this node client here: https://github.com/gSchool/promise-all and let's use this to show the power of `Promise.all()`.
 
-# Bluebird
+## Bluebird
 
 Having Promises natively supported is great! But more often than not you'll be working with a library to implement Promises. Libraries come with a ton of additional functions and features and are likely faster than ES6's Promises. We're going to use the [Bluebird](http://bluebirdjs.com/docs/why-bluebird.html) Promise library which works just like ES6's Promises. In fact, using it will be a simple copy and paste job!
 
@@ -217,9 +221,7 @@ Unhandled rejection Boom!
 
 Try commenting out the require statement for Bluebird and re-running the file. That `Unhandled rejection` will disappear. A nice feature of Bluebird is that it surfaces these errors to you; ES6 Promises won't do that. This will save you an unbelievable amount of time, since one of the more frustrating parts of promises is that it will swallow errors if you haven't attached `.catch()` handlers to everything.
 
-* * *
-
-##### Before moving on to the next section, answer the following:
+### Exercise
 
 1. You can handle the above thrown error with a `.catch()`; implement this on the above example so that the error logs the following message:
 
@@ -229,18 +231,17 @@ Try commenting out the require statement for Bluebird and re-running the file. T
 1. Check out [Promise.method](http://bluebirdjs.com/docs/api/promise.method.html).
   * Rewrite `simplePromise()` using `Promise.method`. Throwing an exception from a `Promise.method` will work very similarly to rejecting, it's another nice part of utilising Promise wrappers. You don't have to worry about code you call throwing errors, because it will automatically get wrapped up as a rejection.
 
-# Review
+## Review
 
 In this first part of the lesson we've learned about basic Promise syntax with ES6, the `.then()` and `.catch()` functions, chaining, and about how Promises can create branches of functions. We also implemented the Bluebird library to take our Promises to the next level.
 
 We've only skimmed the surface of what is great about Promises. If you feel ready, the super effective [Pokemon API](http://pokeapi.co/) section can give you a greater challenge. For now, take a look at the following resources and exercises to make sure you understand the basics of Promises!
 
-* * *
-##### Exercise
+## Assignment
 
 https://github.com/gSchool/promise-challenges/tree/master/01-knex-associations
 
-##### Extra Resources
+## Resources
 
 * [Introduction to ES6 Promises](http://jamesknelson.com/grokking-es6-promises-the-four-functions-you-need-to-avoid-callback-hell/)
 * [Promises - In Wicked Detail](http://www.mattgreer.org/articles/promises-in-wicked-detail/)
