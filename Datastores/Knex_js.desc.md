@@ -13,7 +13,27 @@
 
 Just like jQuery builds and sends HTTP requests to an HTTP server, Knex builds and sends SQL queries to a PostgreSQL server. Just remember that jQuery runs inside a web browser while Knex runs outside a web browser using Node.js.
 
-[INSERT CLIENT-SERVER DIAGRAM OF JQUERY VS KNEX]
+```text
+Client: Chrome               Server: Node.js
+┌────────────┐               ┌────────────┐
+│            │─── request ──▶│            │
+│            │               │            │
+│   jQuery   │               │  Express   │
+│            │               │            │
+│            │◀── response ──│            │
+└────────────┘               └────────────┘
+
+
+
+Client: Node.js               Server: postgres
+┌────────────┐               ┌────────────┐
+│            │─── request ──▶│            │
+│            │               │            │
+│    Knex    │               │            │
+│            │               │            │
+│            │◀── response ──│            │
+└────────────┘               └────────────┘
+```
 
 To see how this works in action, migrate and seed a database by running the following shell commands.
 
