@@ -86,7 +86,27 @@ In this course, you've learned how a server-side web application can manage info
 
 Let's look at another diagram, this time of a server-side web application handling the above HTTP requests and responses with a database system.
 
-[INSERT HTTP CLIENT-SERVER DIAGRAM WITH A DBMS]
+```text
+┌─── Chrome ──┐               ┌── Node.js ──┐               ┌── postgres ─┐               ╔════════════ cluster ═══════════╗
+│             │─── request ──▶│             │─── request ──▶│             │──── write ───▶║                                ║
+│             │               │             │               │             │               ║  ┏━━━━━━━━ database ━━━━━━━━┓  ║
+│             │               │             │               │             │               ║  ┃                          ┃  ║
+│             │               │             │               │             │               ║  ┃  ┌──────┬ table ┬─────┐  ┃  ║
+│             │               │             │               │             │               ║  ┃  ├──────┼───────┼─────┤  ┃  ║
+│             │◀── response ──│             │◀── response ──│             │◀─── read ─────║  ┃  ├──────┼───────┼─────┤  ┃  ║
+└─────────────┘               └─────────────┘               └─────────────┘               ║  ┃  ├──────┼───────┼─────┤  ┃  ║
+                                                                                          ║  ┃  └──────┴───────┴─────┘  ┃  ║
+                                                                                          ║  ┃                          ┃  ║
+                                                                                          ║  ┃  ┌──────┬ table ┬─────┐  ┃  ║
+                                                                                          ║  ┃  ├──────┼───────┼─────┤  ┃  ║
+                                                                                          ║  ┃  ├──────┼───────┼─────┤  ┃  ║
+                                                                                          ║  ┃  ├──────┼───────┼─────┤  ┃  ║
+                                                                                          ║  ┃  └──────┴───────┴─────┘  ┃  ║
+                                                                                          ║  ┃                          ┃  ║
+                                                                                          ║  ┗━━━━━━━━━━━━━━━━━━━━━━━━━━┛  ║
+                                                                                          ║                                ║
+                                                                                          ╚════════════════════════════════╝
+```
 
 In a development environment, the server-side web application and its companion database system often live on the same machine. However, in a production environment, the two systems often live on different machines to maximum the performance of each.
 
