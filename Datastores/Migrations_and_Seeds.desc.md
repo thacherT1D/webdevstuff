@@ -7,89 +7,252 @@
 - Explain why a Knex.js seed is useful.
 - Use Knex.js to seed a PostgreSQL database.
 
-## Installing and setting up knex
+## What's a Knex.js migration?
 
-```sh
-$ npm init
-$ npm install --save pg knex    #install knex locally
-$ npm install knex -g           #install knex cli globally
-$ knex init                     #create knexfile.js
+A Knex.js migration allows you to define sets of database changes.
+
+```shell
+mkdir trackify
+cd trackify
+npm init
 ```
 
----
+```shell
+echo '.DS_Store' >> .gitignore
+echo 'node_modules' >> .gitignore
+echo 'npm-debug.log' >> .gitignore
+```
 
-## knexfile.js
+```shell
+brew services list
+```
 
-`knex init`  creates a new knexfile with some default values. Update the knexfile with the following:
+```shell
+brew services stop postgresql
+```
 
-```js
+```shell
+brew services list
+```
+
+```shell
+initdb pg
+```
+
+```shell
+ls -hal pg
+```
+
+```shell
+echo 'pg' >> .gitignore
+```
+
+```shell
+postgres -D pg
+```
+
+```shell
+createdb trackify_dev
+psql -l
+```
+The migration cli is bundled with the knex global install.
+
+```shell
+npm install --save pg knex
+```
+
+```shell
+touch knexfile.js
+```
+
+```javascript
 module.exports = {
-
   development: {
     client: 'pg',
-    connection: 'postgres://localhost/album-demo'
-  },
-
-  production: {
-    client: 'pg',
-    connection: process.env.DATABASE_URL
+    connection: 'postgres://localhost/trackify_dev'
   }
-
 };
 ```
 
----
+```shell
+./node_modules/.bin/knex migrate:currentVersion
+```
 
-## Migrations
+```javascript
+"scripts": {
+  "knex": "knex",
+  "test": "echo \"Error: no test specified\" && exit 1"
+},
+```
 
-* Migrations allow for you to define sets of schema changes that modify a database schema
-
-* The migration cli is bundled with the knex global install.
-
----
-
-## knex migration tool
+```shell
+npm run knex migrate:currentVersion
+```
 
 Create a new migration with the name create_albums
 
-```sh
-knex migrate:make create_albums
+```shell
+npm run knex migrate:make artists
 ```
 
----
+```shell
+ls -hal
+ls -hal migrations
+```
 
-## migrations
+```shell
+npm run knex migrate:currentVersion
+```
 
-* Migrations are how we define and update our database schema. Update the new migration file migrations/CURRENTDATETIME_create_albums.js accordingly:
+Migrations are how we define and update our database schema.
 
-```js
+```javascript
+'use strict';
+
 exports.up = function(knex, Promise) {
-  return knex.schema.createTable('albums', function(table){
+  return knex.schema.createTable('artists', function(table) {
     table.increments();
-    table.string('artist');
-    table.string('name');
-    table.string('genre');
-    table.integer('stars');
-    table.boolean('explicit');
+    table.string('name').notNullable().defaultTo('');
+    table.timestamps(true, true);
   })
 };
 
 exports.down = function(knex, Promise) {
-  return knex.schema.dropTable('albums');
+  return knex.schema.dropTable('artists');
 };
 ```
 
----
-
-## Create the database
-
-```sh
-$ createdb "album-demo"
+```shell
+npm run knex migrate:latest
 ```
-## Run the latest migrations using the development connection string
 
-```sh
-$ knex migrate:latest --env development
+```shell
+npm run knex migrate:currentVersion
+```
+
+```shell
+psql trackify_dev -c '\dt'
+```
+
+```shell
+psql trackify_dev -c '\d knex_migrations'
+```
+
+```shell
+psql trackify_dev -c 'SELECT * FROM knex_migrations;'
+```
+
+```shell
+npm run knex migrate:rollback
+```
+
+```shell
+npm run knex migrate:currentVersion
+```
+
+```shell
+psql trackify_dev -c 'SELECT * FROM knex_migrations;'
+```
+
+```shell
+npm run knex migrate:latest
+```
+
+```shell
+npm run knex migrate:currentVersion
+```
+
+```shell
+psql trackify_dev -c 'SELECT * FROM knex_migrations;'
+```
+
+Add migration locking so multiple services cannot try to run migrations at same time. This added a new lock table. If migrations are locked and migrations are run by another service it results in an error.
+
+```shell
+psql trackify_dev -c '\d knex_migrations_lock'
+```
+
+```shell
+psql trackify_dev -c 'SELECT * FROM knex_migrations_lock;'
+```
+
+```shell
+npm run knex migrate:make tracks
+```
+
+```shell
+ls -hal migrations
+```
+
+```javascript
+'use strict';
+
+exports.up = function(knex, Promise) {
+  return knex.schema.createTable('tracks', function(table) {
+    table.increments();
+    table.integer('artist_id')
+      .notNullable()
+      .references('id')
+      .inTable('artists')
+      .onDelete('CASCADE')
+      .index();
+    table.string('title').notNullable().defaultTo('');
+    table.integer('likes').notNullable().defaultTo(0);
+    table.timestamps(true, true);
+  });
+};
+
+exports.down = function(knex, Promise) {
+  return knex.schema.dropTable('tracks');
+};
+```
+
+```shell
+npm run knex migrate:latest
+```
+
+```shell
+npm run knex migrate:currentVersion
+```
+
+```shell
+psql trackify_dev -c 'SELECT * FROM knex_migrations;'
+```
+
+```shell
+npm run knex migrate:rollback
+```
+
+```shell
+npm run knex migrate:currentVersion
+```
+
+```shell
+psql trackify_dev -c 'SELECT * FROM knex_migrations;'
+```
+
+```shell
+npm run knex migrate:rollback
+```
+
+```shell
+npm run knex migrate:currentVersion
+```
+
+```shell
+psql trackify_dev -c 'SELECT * FROM knex_migrations;'
+```
+
+```shell
+npm run knex migrate:latest
+```
+
+```shell
+npm run knex migrate:currentVersion
+```
+
+```shell
+psql trackify_dev -c 'SELECT * FROM knex_migrations;'
 ```
 
 ---
