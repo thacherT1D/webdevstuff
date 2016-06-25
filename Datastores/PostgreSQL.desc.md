@@ -270,25 +270,25 @@ PostgreSQL is a sophisticated relational database system. To become fluent in Po
 1. Rows are automatically persisted to the hard disk by the database server.
 
 ```text
-┌─── client  ─┐               ┌─── server ──┐               ╔════════════ cluster ═══════════╗
-│             │─── request ──▶│             │──── write ───▶║                                ║
-│             │               │             │               ║  ┏━━━━━━━━ database ━━━━━━━━┓  ║
-│             │               │             │               ║  ┃                          ┃  ║
-│             │               │             │               ║  ┃  ┌──────┬ table ┬─────┐  ┃  ║
-│             │               │             │               ║  ┃  ├──────┼───────┼─────┤  ┃  ║
-│             │◀── response ──│             │◀─── read ─────║  ┃  ├──────┼───────┼─────┤  ┃  ║
-└─────────────┘               └─────────────┘               ║  ┃  ├──────┼───────┼─────┤  ┃  ║
-                                                            ║  ┃  └──────┴───────┴─────┘  ┃  ║
-                                                            ║  ┃                          ┃  ║
-                                                            ║  ┃  ┌──────┬ table ┬─────┐  ┃  ║
-                                                            ║  ┃  ├──────┼───────┼─────┤  ┃  ║
-                                                            ║  ┃  ├──────┼───────┼─────┤  ┃  ║
-                                                            ║  ┃  ├──────┼───────┼─────┤  ┃  ║
-                                                            ║  ┃  └──────┴───────┴─────┘  ┃  ║
-                                                            ║  ┃                          ┃  ║
-                                                            ║  ┗━━━━━━━━━━━━━━━━━━━━━━━━━━┛  ║
-                                                            ║                                ║
-                                                            ╚════════════════════════════════╝
+┌─── client  ─┐               ┌─── server ──┐               ╔═══════════════════════════ cluster ═══════════════════════════╗
+│             │─── request ──▶│             │──── write ───▶║                                                               ║
+│             │               │             │               ║  ┏━━━━━━━━ database ━━━━━━━━┓   ┏━━━━━━━━ database ━━━━━━━━┓  ║
+│             │               │             │               ║  ┃                          ┃   ┃                          ┃  ║
+│             │               │             │               ║  ┃  ┌──────┬ table ┬─────┐  ┃   ┃  ┌──────┬ table ┬─────┐  ┃  ║
+│             │               │             │               ║  ┃  ├──────┼───────┼─────┤  ┃   ┃  ├──────┼───────┼─────┤  ┃  ║
+│             │◀── response ──│             │◀─── read ─────║  ┃  ├──────┼───────┼─────┤  ┃   ┃  ├──────┼───────┼─────┤  ┃  ║
+└─────────────┘               └─────────────┘               ║  ┃  ├──────┼───────┼─────┤  ┃   ┃  ├──────┼───────┼─────┤  ┃  ║
+                                                            ║  ┃  └──────┴───────┴─────┘  ┃   ┃  └──────┴───────┴─────┘  ┃  ║
+                                                            ║  ┃                          ┃   ┃                          ┃  ║
+                                                            ║  ┃  ┌──────┬ table ┬─────┐  ┃   ┃  ┌──────┬ table ┬─────┐  ┃  ║
+                                                            ║  ┃  ├──────┼───────┼─────┤  ┃   ┃  ├──────┼───────┼─────┤  ┃  ║
+                                                            ║  ┃  ├──────┼───────┼─────┤  ┃   ┃  ├──────┼───────┼─────┤  ┃  ║
+                                                            ║  ┃  ├──────┼───────┼─────┤  ┃   ┃  ├──────┼───────┼─────┤  ┃  ║
+                                                            ║  ┃  └──────┴───────┴─────┘  ┃   ┃  └──────┴───────┴─────┘  ┃  ║
+                                                            ║  ┃                          ┃   ┃                          ┃  ║
+                                                            ║  ┗━━━━━━━━━━━━━━━━━━━━━━━━━━┛   ┗━━━━━━━━━━━━━━━━━━━━━━━━━━┛  ║
+                                                            ║                                                               ║
+                                                            ╚═══════════════════════════════════════════════════════════════╝
 ```
 
 For example, the Movie Junkies web application from earlier might use a database cluster that contains two databases: a `movie_junkies_dev` database for the development environment and `movie_junkies_test` database for the test environment. A database server is started to manage this database cluster. Then a database client connects to the database server and begins sending SQL commands to the server in order to store or retrieve information from the database cluster.
