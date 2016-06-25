@@ -82,7 +82,16 @@ Finally, the product development team has determined that the movie information 
 
 In this course, you've learned how a server-side web application can manage information persisted to a JSON file. So based on our product's requirements and your experience working with JSON files, let's look at a diagram of a server-side web application handling the above HTTP requests and responses with a JSON file.
 
-[INSERT HTTP CLIENT-SERVER DIAGRAM WITH A JSON FILE]
+```text
+┌─── Chrome ──┐               ┌── Node.js ──┐               ┌─ JSON file ─┐
+│             │─── request ──▶│             │──── write ───▶│             │
+│             │               │             │               │             │
+│             │               │             │               │             │
+│             │               │             │               │             │
+│             │               │             │               │             │
+│             │◀── response ──│             │◀─── read ─────│             │
+└─────────────┘               └─────────────┘               └─────────────┘
+```
 
 Let's look at another diagram, this time of a server-side web application handling the above HTTP requests and responses with a database system.
 
