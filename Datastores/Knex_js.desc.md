@@ -204,24 +204,24 @@ Turn to a neighbor and explain what Knex.js is and how it works in your own word
 Knex.js allows developers to build Node.js web applications that can create, read, update, and destroy the rows, tables, and even databases of a relational database system like PostgreSQL.
 
 ```text
-┌─── Chrome ──┐               ┌── Node.js ──┐               ┌── postgres ─┐               ╔════════════════════════════ cluster ═══════════════════════════╗
-│             ├── request ──▶ │             │─── request ──▶│             │──── write ───▶║                                                                ║
-│             │               │             │               │             │               ║  ┏━━━━━━━━ database ━━━━━━━━┓ ┏━━━━━━━━ database ━━━━━━━━┓     ║
-│   jQuery    │               │   Express   │               │             │               ║  ┃                          ┃ ┃                          ┃     ║
-│             │               │   Knex      │               │             │               ║  ┃  ┌──────┬ table ┬─────┐  ┃ ┃  ┌──────┬ table ┬─────┐  ┃     ║
-│             │               │             │               │             │               ║  ┃  ├──────┼───────┼─────┤  ┃ ┃  ├──────┼───────┼─────┤  ┃     ║
-│             ◀── response ── │             │◀── response ──│             │◀─── read ─────║  ┃  ├──────┼───────┼─────┤  ┃ ┃  ├──────┼───────┼─────┤  ┃     ║
-└─────────────┘               └─────────────┘               └─────────────┘               ║  ┃  ├──────┼───────┼─────┤  ┃ ┃  ├──────┼───────┼─────┤  ┃     ║
-                                                                                          ║  ┃  └──────┴───────┴─────┘  ┃ ┃  └──────┴───────┴─────┘  ┃     ║
-                                                                                          ║  ┃  ┌──────┬ table ┬─────┐  ┃ ┃  ┌──────┬ table ┬─────┐  ┃     ║
-                                                                                          ║  ┃  ├──────┼───────┼─────┤  ┃ ┃  ├──────┼───────┼─────┤  ┃     ║
-                                                                                          ║  ┃  ├──────┼───────┼─────┤  ┃ ┃  ├──────┼───────┼─────┤  ┃     ║
-                                                                                          ║  ┃  ├──────┼───────┼─────┤  ┃ ┃  ├──────┼───────┼─────┤  ┃     ║
-                                                                                          ║  ┃  └──────┴───────┴─────┘  ┃ ┃  └──────┴───────┴─────┘  ┃     ║
-                                                                                          ║  ┃                          ┃ ┃                          ┃     ║
-                                                                                          ║  ┗━━━━━━━━━━━━━━━━━━━━━━━━━━┛ ┗━━━━━━━━━━━━━━━━━━━━━━━━━━┛     ║
-                                                                                          ║                                                                ║
-                                                                                          ╚════════════════════════════════════════════════════════════════╝
+┌─── Chrome ──┐               ┌── Node.js ──┐               ┌── postgres ─┐               ╔════════════ cluster ═══════════╗
+│             │─── request ──▶│             │─── request ──▶│             │──── write ───▶║                                ║
+│             │               │             │               │             │               ║  ┏━━━━━━━━ database ━━━━━━━━┓  ║
+│   jQuery    │               │   Express   │               │             │               ║  ┃                          ┃  ║
+│             │               │   Knex      │               │             │               ║  ┃  ┌──────┬ table ┬─────┐  ┃  ║
+│             │               │             │               │             │               ║  ┃  ├──────┼───────┼─────┤  ┃  ║
+│             │◀── response ──│             │◀── response ──│             │◀─── read ─────║  ┃  ├──────┼───────┼─────┤  ┃  ║
+└─────────────┘               └─────────────┘               └─────────────┘               ║  ┃  ├──────┼───────┼─────┤  ┃  ║
+                                                                                          ║  ┃  └──────┴───────┴─────┘  ┃  ║
+                                                                                          ║  ┃  ┌──────┬ table ┬─────┐  ┃  ║
+                                                                                          ║  ┃  ├──────┼───────┼─────┤  ┃  ║
+                                                                                          ║  ┃  ├──────┼───────┼─────┤  ┃  ║
+                                                                                          ║  ┃  ├──────┼───────┼─────┤  ┃  ║
+                                                                                          ║  ┃  └──────┴───────┴─────┘  ┃  ║
+                                                                                          ║  ┃                          ┃  ║
+                                                                                          ║  ┗━━━━━━━━━━━━━━━━━━━━━━━━━━┛  ║
+                                                                                          ║                                ║
+                                                                                          ╚════════════════════════════════╝
 ```
 
 Knex.js also prevents against SQL injection attacks. An **SQL injection** attack occurs when user input is not filtered for escape characters and is then passed into an SQL command. This results in the potential for a malicious user to manipulate the database commands that a web application performs. The following line of code illustrates this vulnerability.
