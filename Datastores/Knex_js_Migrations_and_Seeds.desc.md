@@ -255,12 +255,119 @@ npm run knex migrate:currentVersion
 psql trackify_dev -c 'SELECT * FROM knex_migrations;'
 ```
 
----
+## What's a Knex.js Seed?
 
-## Initialize knex only once
+```shell
+npm run knex seed:make 1_artists
+```
 
- * Initializing the library should normally only ever happen once in your application
- * This creates a connection pool for the current database
- * You should use the instance returned from the initialize call throughout your library.
+```shell
+ls -hal
+ls -hal seeds
+```
 
----
+```javascript
+'use strict';
+
+exports.seed = function(knex, Promise) {
+  return knex('artists').del()
+    .then(() => {
+      return knex('artists').insert([{
+        id: 1,
+        name: 'The Beatles'
+      }, {
+        id: 2,
+        name: 'Adele'
+      }]);
+    });
+};
+```
+
+```shell
+npm run knex seed:run
+```
+
+```shell
+psql trackify_dev -c 'SELECT * FROM artists;'
+```
+
+```shell
+npm run knex seed:run
+```
+
+```shell
+psql trackify_dev -c 'SELECT * FROM artists;'
+```
+
+
+```shell
+npm run knex seed:make 2_tracks
+```
+
+```shell
+ls -hal seeds
+```
+
+```javascript
+'use strict';
+
+exports.seed = function(knex, Promise) {
+  return knex('tracks').del()
+    .then(() => {
+      return knex('tracks').insert([{
+        id: 1,
+        artist_id: 1,
+        title: 'Here Comes the Sun',
+        likes: 28808736
+      }, {
+        id: 2,
+        artist_id: 1,
+        title: 'Hey Jude',
+        likes: 20355655
+      }, {
+        id: 4,
+        artist_id: 1,
+        title: 'Yesterday',
+        likes: 21626039
+      }, {
+        id: 5,
+        artist_id: 2,
+        title: 'Send My Love',
+        likes: 39658471
+      }, {
+        id: 6,
+        artist_id: 2,
+        title: 'Hello',
+        likes: 538300301
+      }, {
+        id: 7,
+        artist_id: 2,
+        title: 'When We Were Young',
+        likes: 112487182
+      }, {
+        id: 8,
+        artist_id: 2,
+        title: 'Someone Like You',
+        likes: 112487182
+      }]);
+    });
+};
+```
+
+```shell
+npm run knex seed:run
+```
+
+```shell
+psql trackify_dev -c 'SELECT * FROM tracks;'
+```
+
+```shell
+npm run knex seed:run
+```
+
+```shell
+psql trackify_dev -c 'SELECT * FROM tracks;'
+```
+
+## How do you deploy to Heroku?
