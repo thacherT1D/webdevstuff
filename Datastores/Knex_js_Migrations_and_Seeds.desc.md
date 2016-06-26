@@ -419,14 +419,6 @@ heroku pg:info
 ```
 
 ```javascript
-"scripts": {
-  "knex": "knex",
-  "heroku-postbuild": "knex migrate:latest",
-  "test": "echo \"Error: no test specified\" && exit 1"
-}
-```
-
-```javascript
 'use strict';
 
 module.exports = {
@@ -440,6 +432,14 @@ module.exports = {
     connection: process.env.DATABASE_URL
   }
 };
+```
+
+```javascript
+"scripts": {
+  "knex": "knex",
+  "heroku-postbuild": "knex migrate:latest",
+  "test": "echo \"Error: no test specified\" && exit 1"
+}
 ```
 
 ```shell
