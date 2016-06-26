@@ -327,6 +327,11 @@ exports.seed = function(knex, Promise) {
         title: 'Hey Jude',
         likes: 20355655
       }, {
+        id: 3,
+        artist_id: 1,
+        title: 'Come Together',
+        likes: 24438428
+      }, {
         id: 4,
         artist_id: 1,
         title: 'Yesterday',
@@ -396,11 +401,29 @@ heroku apps:info
 ```
 
 ```shell
+node -v
+```
+
+```javascript
+"engines": {
+  "node": "DEV_VERSION"
+}
+```
+
+```shell
 heroku addons:create heroku-postgresql
 ```
 
 ```shell
 heroku pg:info
+```
+
+```javascript
+"scripts": {
+  "knex": "knex",
+  "heroku-postbuild": "knex migrate:latest",
+  "test": "echo \"Error: no test specified\" && exit 1"
+}
 ```
 
 ```javascript
@@ -421,20 +444,27 @@ module.exports = {
 
 ```shell
 git add .
-git commit -m 'Prepare for Heroku PostgreSQL'
+git commit -m 'Prepare for Heroku'
 ```
 
 ```shell
-git push master heroku
+git push heroku master
 ```
 
 ```shell
-heroku pg:psql
+heroku apps:info
 ```
 
 ```shell
-heroku run npm run knex migrate:latest
+heroku pg:info
+```
+
+```shell
 heroku run npm run knex seed:run
+```
+
+```shell
+heroku pg:info
 ```
 
 ```shell
