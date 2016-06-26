@@ -82,8 +82,7 @@ module.exports = {
 
 ```javascript
 "scripts": {
-  "knex": "knex",
-  "test": "echo \"Error: no test specified\" && exit 1"
+  "knex": "knex"
 },
 ```
 
@@ -437,8 +436,7 @@ module.exports = {
 ```javascript
 "scripts": {
   "knex": "knex",
-  "heroku-postbuild": "knex migrate:latest",
-  "test": "echo \"Error: no test specified\" && exit 1"
+  "heroku-postbuild": "knex migrate:latest"
 }
 ```
 
