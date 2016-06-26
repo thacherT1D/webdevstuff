@@ -66,6 +66,8 @@ touch knexfile.js
 ```
 
 ```javascript
+'use strict';
+
 module.exports = {
   development: {
     client: 'pg',
@@ -371,3 +373,70 @@ psql trackify_dev -c 'SELECT * FROM tracks;'
 ```
 
 ## How do you deploy to Heroku?
+
+```shell
+git init
+```
+
+```shell
+git status
+```
+
+```shell
+git add .
+git commit -m 'Initial commit'
+```
+
+```shell
+heroku apps:create USERNAME-trackify
+```
+
+```shell
+heroku apps:info
+```
+
+```shell
+heroku addons:create heroku-postgresql
+```
+
+```shell
+heroku pg:info
+```
+
+```javascript
+'use strict';
+
+module.exports = {
+  development: {
+    client: 'pg',
+    connection: 'postgres://localhost/trackify_dev'
+  },
+
+  production: {
+    client: 'pg',
+    connection: process.env.DATABASE_URL
+  }
+};
+```
+
+```shell
+git add .
+git commit -m 'Prepare for Heroku PostgreSQL'
+```
+
+```shell
+git push master heroku
+```
+
+```shell
+heroku pg:psql
+```
+
+```shell
+heroku run npm run knex migrate:latest
+heroku run npm run knex seed:run
+```
+
+```shell
+heroku pg:psql
+```
