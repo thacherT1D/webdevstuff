@@ -9,18 +9,18 @@
 
 ## What's a Knex migration?
 
-A **Knex migration** is a system that allows developers to automate the management of database tables in JavaScript. At the heart of the system are migration files. When defined, a migration file can move the database up and down, or forwards and backwards, through a series of database changes that usually affects a single table.
+A **Knex migration** is a system that allows developers to automate the management of database tables in JavaScript. At the heart of the system are migration files. When defined, a migration file can move the database up and down, or forwards and backwards, through a series of database changes that usually affects a single table. A migration
 
 ```text
-┌────────────────────────┐                      ┌────────────────────────┐
-│                        │──── up / forward ───▶│                        │
-│                        │                      │                        │
-│                        │                      │                        │
-│ 20160621141318_artists │                      │ 20160621141319_tracks  │
-│                        │                      │                        │
-│                        │                      │                        │
-│                        │◀── down / backward ──│                        │
-└────────────────────────┘                      └────────────────────────┘
+┌───────────────────────────┐                      ┌───────────────────────────┐
+│                           │                      │                           │
+│                           │──── up / forward ───▶│                           │
+│                           │                      │                           │
+│ 20160621141318_artists.js │                      │ 20160621141319_tracks.js  │
+│                           │                      │                           │
+│                           │◀── down / backward ──│                           │
+│                           │                      │                           │
+└───────────────────────────┘                      └───────────────────────────┘
 ```
 
 Here's an example of a Knex migration file.
