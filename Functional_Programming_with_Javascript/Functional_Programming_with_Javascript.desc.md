@@ -121,7 +121,7 @@ each(names, console.log)
 
 - [Underscore](http://underscorejs.org/)
 
-- [Ramada](http://ramdajs.com/0.21.0/index.html)
+- [Ramda](http://ramdajs.com/0.21.0/index.html)
 
 - [Functional.js](http://functionaljs.com/)
 

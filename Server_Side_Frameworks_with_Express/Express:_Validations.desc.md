@@ -42,7 +42,7 @@ Or maybe they'll show up like this:
 
 Styles will vary depending on your site's design.  But regardless, the errors need to be clear and concise and helpful to the user.
 
-Another important point is that form fields need to remain filled-in, even when forms are re-rendered to show errors.  In the following example, note how the user has filled in an email, so even though the form was re-rendered, the email field is remains filled-in:
+Another important point is that form fields need to remain filled-in, even when forms are re-rendered to show errors.  In the following example, note how the user has filled in an email, so even though the form was re-rendered, the email field remains filled-in:
 
 ![](https://s3-us-west-2.amazonaws.com/lesson-plan-images/express_validation_images/validations-ui-03.png)
 
@@ -138,8 +138,3 @@ This is only viable if your database provides unique indexes.  Many databases su
 ## Includes
 
 You should make your site's UI as consistent as possible when displaying errors to users.  One way to enforce this consistency is to create an "include" (aka "partial").  So instead of duplicating error code in multiple places, you have one file that contains your markup / code for displaying errors, and you include that in multiple places.
-
-
-## [EXERCISE ONE](https://github.com/gSchool/intro-to-express-validations-EXERCISE-1)
-
-## [EXERCISE TWO](https://github.com/gSchool/express-validations-exercise-2)
