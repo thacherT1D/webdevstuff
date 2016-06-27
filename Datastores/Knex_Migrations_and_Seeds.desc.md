@@ -45,9 +45,9 @@ exports.down = function(knex, Promise) {
 };
 ```
 
-As you can see, a migration file exports two functions—`up()` and `down()`. The `up()` function returns instructions to the Knex migration system on how to migrate the database forward while the `down()` function returns instructions on how to migrate the database backward.
+As you can see, a migration file exports two functions—`up()` and `down()`. The `up()` function returns instructions to the Knex migration system on how to migrate the database forward. And the `down()` function returns instructions on how to migrate the database backward.
 
-When the database is migrated forward, the following SQL command is executed in a database.
+When the database is migrated forward, the `up()` function is translated into the following SQL command.
 
 ```sql
 CREATE TABLE artists (
@@ -58,11 +58,15 @@ CREATE TABLE artists (
 );
 ```
 
-And when the database is migrated backward, the following SQL command is executed in a database.
+And when the database is migrated backward, the `down()` function is translated into the following SQL command.
 
 ```sql
 DROP TABLE artists;
 ```
+
+### Exercise
+
+Turn to a neighbor and explain what the Knex migration system is in your own words.
 
 ## Why is the Knex migration system useful?
 
