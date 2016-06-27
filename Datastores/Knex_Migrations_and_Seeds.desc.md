@@ -1,15 +1,15 @@
 ## Objectives
 
-- Explain what a Knex migration is.
-- Explain why a Knex migration is useful.
+- Explain what the Knex migration system is.
+- Explain why the Knex migration system is useful.
 - Use Knex to migrate a PostgreSQL database.
-- Explain what a Knex seed is.
-- Explain why a Knex seed is useful.
+- Explain what the Knex seed system is.
+- Explain why the Knex seed system is useful.
 - Use Knex to seed a PostgreSQL database.
 
-## What's a Knex migration?
+## What's the Knex migration system?
 
-A **Knex migration** is a system that allows developers to automate the management of database tables in JavaScript. At the heart of the system are migration files. When defined, a migration file can move the database up and down, or forwards and backwards, through a series of database changes that usually affects a single table.
+The **Knex migration system** allows developers to automate the management of database tables in JavaScript. At the heart of the system are migration files. When defined, a migration file can move the database up and down, or forwards and backwards, through a series of database changes that usually affects a single table.
 
 Here's a diagram representing two Knex migration files that manage the `artists` and `tracks` tables respectively.
 
@@ -64,7 +64,7 @@ And when the database is migrated backward, the following SQL command is execute
 DROP TABLE artists;
 ```
 
-## Why are Knex migrations useful?
+## Why is the Knex migration system useful?
 
 Knex migrations are a consistent and convenient way to automate the management of database tables.
 
@@ -348,7 +348,11 @@ npm run knex migrate:currentVersion
 psql trackify_dev -c 'SELECT * FROM knex_migrations;'
 ```
 
-## What's a Knex Seed?
+## What's the Knex seed system?
+
+## Why is the Knex seed system useful?
+
+## How do you use Knex to seed a PostgreSQL database?
 
 ```shell
 npm run knex seed:make 1_artists
