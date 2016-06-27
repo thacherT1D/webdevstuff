@@ -54,8 +54,8 @@ When the database is migrated forward, the `up()` function is translated into th
 CREATE TABLE artists (
   id serial PRIMARY KEY,
   name varchar(255) NOT NULL DEFAULT '',
-  created_at timestamp with time zone DEFAULT now(),
-  updated_at timestamp with time zone DEFAULT now()
+  created_at timestamp with time zone NOT NULL DEFAULT now(),
+  updated_at timestamp with time zone NOT NULL DEFAULT now()
 );
 ```
 
