@@ -45,7 +45,7 @@ exports.down = function(knex, Promise) {
 };
 ```
 
-As you can see, a migration file exports two functions—`up()` and `down()`. The `up()` function instructs the Knex migration system how to migrate the
+As you can see, a migration file exports two functions—`up()` and `down()`. The `up()` function returns instructions to the Knex migration system on how to migrate the database forward while the `down()` function returns instructions on how to migrate the database backward.
 
 When the database is migrated forward, this SQL command is executed in a database.
 
