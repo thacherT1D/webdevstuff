@@ -6,6 +6,7 @@
 - Explain what the Knex seed system is.
 - Explain why the Knex seed system is useful.
 - Use Knex to seed a PostgreSQL database.
+- Migrate and seed a PostgreSQL database on Heroku.
 
 ## What's the Knex migration system?
 
@@ -33,7 +34,7 @@ Here's an example what the contents of the `20160621141318_artists.js` migration
 'use strict';
 
 exports.up = function(knex) {
-  return knex.schema.createTable('artists', function(table) {
+  return knex.schema.createTable('artists', (table) => {
     table.increments();
     table.string('name').notNullable().defaultTo('');
     table.timestamps(true, true);
@@ -206,15 +207,15 @@ Migrations are how we define and update our database schema.
 ```javascript
 'use strict';
 
-exports.up = function(knex, Promise) {
-  return knex.schema.createTable('artists', function(table) {
+exports.up = function(knex) {
+  return knex.schema.createTable('artists', (table) => {
     table.increments();
     table.string('name').notNullable().defaultTo('');
     table.timestamps(true, true);
   })
 };
 
-exports.down = function(knex, Promise) {
+exports.down = function(knex) {
   return knex.schema.dropTable('artists');
 };
 ```
@@ -284,8 +285,8 @@ ls -hal migrations
 ```javascript
 'use strict';
 
-exports.up = function(knex, Promise) {
-  return knex.schema.createTable('tracks', function(table) {
+exports.up = function(knex) {
+  return knex.schema.createTable('tracks', (table) => {
     table.increments();
     table.integer('artist_id')
       .notNullable()
@@ -299,7 +300,7 @@ exports.up = function(knex, Promise) {
   });
 };
 
-exports.down = function(knex, Promise) {
+exports.down = function(knex) {
   return knex.schema.dropTable('tracks');
 };
 ```
@@ -374,7 +375,7 @@ ls -hal seeds
 ```javascript
 'use strict';
 
-exports.seed = function(knex, Promise) {
+exports.seed = function(knex) {
   return knex('artists').del()
     .then(() => {
       return knex('artists').insert([{
@@ -416,7 +417,7 @@ ls -hal seeds
 ```javascript
 'use strict';
 
-exports.seed = function(knex, Promise) {
+exports.seed = function(knex) {
   return knex('tracks').del()
     .then(() => {
       return knex('tracks').insert([{
@@ -480,7 +481,7 @@ npm run knex seed:run
 psql trackify_dev -c 'SELECT * FROM tracks;'
 ```
 
-## How do you deploy to Heroku?
+## How do you migrate and seed a PostgreSQL database on Heroku.
 
 ```shell
 git init
