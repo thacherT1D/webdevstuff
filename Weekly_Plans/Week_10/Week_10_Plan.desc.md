@@ -1,9 +1,8 @@
 # Week 10 (June 27 - July 1)
 ## Weekly Objective
 
-- Objective 1
-- Objective 2
-- Objective 3
+- Implement password hashing using bcrypt
+
 
 ---
 
