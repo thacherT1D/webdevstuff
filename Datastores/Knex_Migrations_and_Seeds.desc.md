@@ -25,9 +25,9 @@ Here's a diagram representing two Knex migration files that manage the `artists`
 └───────────────────────────┘                      └───────────────────────────┘
 ```
 
-The name of a migration file is prefixed with a UTC timestamp. That way, the Knex migration system can identify and order the migrations based on when they files were created.
+The name of a migration file is prefixed with a UTC timestamp. That way, the Knex migration system can identify and order the migrations based on when the files were created and what tables they affect.
 
-Here's an example of a Knex migration file.
+Here's an example what the contents of the `20160621141318_artists.js` migration file might look like.
 
 ```javascript
 'use strict';
