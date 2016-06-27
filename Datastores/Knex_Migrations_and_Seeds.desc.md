@@ -350,7 +350,11 @@ psql trackify_dev -c 'SELECT * FROM knex_migrations;'
 
 ## What's the Knex seed system?
 
+The **Knex seed system** allows developers to automate the initialization of table rows in JavaScript.
+
 ## Why is the Knex seed system useful?
+
+Most web application start with an initial set of table rows. It's useful to be able to seed a database with that set.
 
 ## How do you use Knex to seed a PostgreSQL database?
 
