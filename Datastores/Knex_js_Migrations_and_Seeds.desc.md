@@ -1,15 +1,46 @@
 ## Objectives
 
-- Explain what a Knex.js migration is.
-- Explain why a Knex.js migration is useful.
-- Use Knex.js to migrate a PostgreSQL database.
-- Explain what a Knex.js seed is.
-- Explain why a Knex.js seed is useful.
-- Use Knex.js to seed a PostgreSQL database.
+- Explain what a Knex migration is.
+- Explain why a Knex migration is useful.
+- Use Knex to migrate a PostgreSQL database.
+- Explain what a Knex seed is.
+- Explain why a Knex seed is useful.
+- Use Knex to seed a PostgreSQL database.
 
-## What's a Knex.js migration?
+## What's a Knex migration?
 
-A Knex.js migration allows you to define sets of database changes.
+A Knex migration allows you to define sets of database changes.
+
+```javascript
+'use strict';
+
+exports.up = function(knex, Promise) {
+  return knex.schema.createTable('artists', function(table) {
+    table.increments();
+    table.string('name').notNullable().defaultTo('');
+    table.timestamps(true, true);
+  })
+};
+
+exports.down = function(knex, Promise) {
+  return knex.schema.dropTable('artists');
+};
+```
+
+```sql
+CREATE TABLE artists (
+  id serial PRIMARY KEY,
+  name varchar(255) NOT NULL DEFAULT '',
+  created_at timestamp with time zone DEFAULT now(),
+  updated_at timestamp with time zone DEFAULT now()
+);
+```
+
+```sql
+DROP TABLE artists;
+```
+
+## Why are
 
 ```shell
 mkdir trackify
@@ -177,6 +208,31 @@ psql trackify_dev -c '\d knex_migrations_lock'
 psql trackify_dev -c 'SELECT * FROM knex_migrations_lock;'
 ```
 
+```text
+┌────────────────────────────────────────────────────────────────┐
+│                            artists                             │
+├─────────────┬─────────────────────────┬────────────────────────┤
+│id           │serial                   │primary key             │
+│name         │varchar(255)             │not null, default ''    │
+│created_at   │timestamp with time zone │not null, default now() │
+│updated_at   │timestamp with time zone │not null, default now() │
+└─────────────┴─────────────────────────┴────────────────────────┘
+                                 ┼
+                                 │
+                                 ○
+                                ╱│╲
+┌──────────────────────────────────────────────────────────────────────────────────┐
+│                                      tracks                                      │
+├─────────────┬─────────────────────────┬──────────────────────────────────────────┤
+│id           │serial                   │primary key                               │
+│artist_id    │integer                  │foreign key authors(id) on delete cascade │
+│title        │varchar(255)             │not null, default ''                      │
+│likes        │integer                  │not null, default 0                       │
+│created_at   │timestamp with time zone │not null, default now()                   │
+│updated_at   │timestamp with time zone │not null, default now()                   │
+└─────────────┴─────────────────────────┴──────────────────────────────────────────┘
+```
+
 ```shell
 npm run knex migrate:make tracks
 ```
@@ -256,7 +312,7 @@ npm run knex migrate:currentVersion
 psql trackify_dev -c 'SELECT * FROM knex_migrations;'
 ```
 
-## What's a Knex.js Seed?
+## What's a Knex Seed?
 
 ```shell
 npm run knex seed:make 1_artists
