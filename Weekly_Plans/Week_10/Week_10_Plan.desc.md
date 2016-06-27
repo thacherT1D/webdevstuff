@@ -8,7 +8,7 @@
 
 # Monday, June 27
 
-Warmup: [Link to Warmup](http://github.com/gSchool)
+Warmup: [Rearange number to get its maximum](https://www.codewars.com/kata/rearange-number-to-get-its-maximum
 
 Lessons:
 - [Auth: Password Hashing](/redirects/articles/4692)
