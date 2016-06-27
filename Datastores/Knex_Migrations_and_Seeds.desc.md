@@ -84,28 +84,28 @@ Turn to a neighbor and talk about when it might be useful to consistently create
 ## How do you use Knex to migrate a PostgreSQL database?
 
 ```text
-┌────────────────────────────────────────────────────────────────┐
-│                            artists                             │
-├─────────────┬─────────────────────────┬────────────────────────┤
-│id           │serial                   │primary key             │
-│name         │varchar(255)             │not null, default ''    │
-│created_at   │timestamp with time zone │not null, default now() │
-│updated_at   │timestamp with time zone │not null, default now() │
-└─────────────┴─────────────────────────┴────────────────────────┘
-                                 ┼
-                                 │
-                                 ○
-                                ╱│╲
-┌────────────────────────────────────────────────────────────────────────────────────────────┐
-│                                           tracks                                           │
-├─────────────┬─────────────────────────┬────────────────────────────────────────────────────┤
-│id           │serial                   │primary key                                         │
-│artist_id    │integer                  │not null, foreign key authors(id) on delete cascade │
-│title        │varchar(255)             │not null, default ''                                │
-│likes        │integer                  │not null, default 0                                 │
-│created_at   │timestamp with time zone │not null, default now()                             │
-│updated_at   │timestamp with time zone │not null, default now()                             │
-└─────────────┴─────────────────────────┴────────────────────────────────────────────────────┘
+┌───────────────────────────────────────────────────────────────┐
+│                            artists                            │
+├─────────────┬─────────────────────────┬───────────────────────┤
+│id           │serial                   │primary key            │
+│name         │varchar(255)             │not null default ''    │
+│created_at   │timestamp with time zone │not null default now() │
+│updated_at   │timestamp with time zone │not null default now() │
+└─────────────┴─────────────────────────┴───────────────────────┘
+                                ┼
+                                │
+                                ○
+                               ╱│╲
+┌──────────────────────────────────────────────────────────────────────────────────────────┐
+│                                          tracks                                          │
+├─────────────┬─────────────────────────┬──────────────────────────────────────────────────┤
+│id           │serial                   │primary key                                       │
+│artist_id    │integer                  │not null references authors(id) on delete cascade │
+│title        │varchar(255)             │not null default ''                               │
+│likes        │integer                  │not null default 0                                │
+│created_at   │timestamp with time zone │not null default now()                            │
+│updated_at   │timestamp with time zone │not null default now()                            │
+└─────────────┴─────────────────────────┴──────────────────────────────────────────────────┘
 ```
 
 ```shell
