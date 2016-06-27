@@ -12,14 +12,10 @@
 Warmup: [Link to Warmup](http://github.com/gSchool)
 
 Lessons:
-- [Lesson](/cohorts/68/student_dashboard)
+- [Auth: Password Hashing](redirects/articles/4692)
 - [Lesson](/cohorts/68/student_dashboard)
 
-Homework: [Homework](/cohorts/68/student_dashboard)
 
-Announcements:
-- Announcement 1
-- Announcement 2
 
 ---
 
@@ -78,6 +74,8 @@ Crush Code Friday: [CCF](/cohorts/68/student_dashboard)
 Homework: [Homework](/cohorts/68/student_dashboard)
 
 Lightning Talks:
+- Stephanie Ogburn
+- Gabriel Thexton
 
 Announcements:
 - Announcement 1
