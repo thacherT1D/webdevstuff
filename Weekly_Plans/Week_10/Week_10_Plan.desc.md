@@ -12,7 +12,7 @@ Warmup: [Rearange number to get its maximum](https://www.codewars.com/kata/reara
 
 Lessons:
 - [Auth: Password Hashing](/redirects/articles/4692)
-- [Lesson](/redirects/articles/3095)
+- [Express: Validation](/redirects/articles/3095)
 
 
 
