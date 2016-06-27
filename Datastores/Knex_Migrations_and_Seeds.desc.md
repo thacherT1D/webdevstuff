@@ -96,16 +96,16 @@ Turn to a neighbor and talk about when it might be useful to consistently create
                                  │
                                  ○
                                 ╱│╲
-┌──────────────────────────────────────────────────────────────────────────────────┐
-│                                      tracks                                      │
-├─────────────┬─────────────────────────┬──────────────────────────────────────────┤
-│id           │serial                   │primary key                               │
-│artist_id    │integer                  │foreign key authors(id) on delete cascade │
-│title        │varchar(255)             │not null, default ''                      │
-│likes        │integer                  │not null, default 0                       │
-│created_at   │timestamp with time zone │not null, default now()                   │
-│updated_at   │timestamp with time zone │not null, default now()                   │
-└─────────────┴─────────────────────────┴──────────────────────────────────────────┘
+┌────────────────────────────────────────────────────────────────────────────────────────────┐
+│                                           tracks                                           │
+├─────────────┬─────────────────────────┬────────────────────────────────────────────────────┤
+│id           │serial                   │primary key                                         │
+│artist_id    │integer                  │not null, foreign key authors(id) on delete cascade │
+│title        │varchar(255)             │not null, default ''                                │
+│likes        │integer                  │not null, default 0                                 │
+│created_at   │timestamp with time zone │not null, default now()                             │
+│updated_at   │timestamp with time zone │not null, default now()                             │
+└─────────────┴─────────────────────────┴────────────────────────────────────────────────────┘
 ```
 
 ```shell
