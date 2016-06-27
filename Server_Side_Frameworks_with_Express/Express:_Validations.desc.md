@@ -1,6 +1,6 @@
 ## Objectives
 
-- Re-render templates with errors with previous form data filled in.
+- Re-render templates with errors, and previous form data filled in.
 - Display useful and readable error messages.
 
 ## Validation overview
