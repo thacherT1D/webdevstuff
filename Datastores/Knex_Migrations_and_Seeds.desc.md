@@ -9,7 +9,7 @@
 
 ## What's the Knex migration system?
 
-The **Knex migration system** allows developers to automate the management of database tables in JavaScript. At the heart of the system are migration files. When defined, a migration file moves the database up and down, or forwards and backwards, through a set of changes that usually affects a single table.
+The **Knex migration system** allows developers to automate the management of database tables in JavaScript. At the heart of the system are migration files. When defined, a migration file moves the database up and down, or forwards and backwards, through a set of changes applied to a single table.
 
 Here's a diagram representing two Knex migration files that manage the `artists` and `tracks` tables respectively.
 
