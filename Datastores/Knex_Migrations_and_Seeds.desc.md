@@ -9,7 +9,9 @@
 
 ## What's a Knex migration?
 
-A Knex migration allows you to define sets of database changes.
+A **Knex migration** is a system that allows developers to automate the management of database tables in JavaScript.
+
+Here's an example of a Knex migration file.
 
 ```javascript
 'use strict';
@@ -27,6 +29,8 @@ exports.down = function(knex, Promise) {
 };
 ```
 
+When the database is migrated forward, this SQL command is executed in a database.
+
 ```sql
 CREATE TABLE artists (
   id serial PRIMARY KEY,
@@ -35,6 +39,8 @@ CREATE TABLE artists (
   updated_at timestamp with time zone DEFAULT now()
 );
 ```
+
+When the database is rolled back, this SQL command is executed in a database.
 
 ```sql
 DROP TABLE artists;
