@@ -12,7 +12,7 @@
 Warmup: [Link to Warmup](http://github.com/gSchool)
 
 Lessons:
-- [Auth: Password Hashing](redirects/articles/4692)
+- [Auth: Password Hashing](/redirects/articles/4692)
 - [Lesson](/cohorts/68/student_dashboard)
 
 
