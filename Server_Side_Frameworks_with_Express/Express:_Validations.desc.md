@@ -1,6 +1,7 @@
-<div class="alert alert-info">
-  We are currently transitioning this Learning Experience from Mongo to SQL.  Even though these reference Mongo, we recommend using SQL.
-</div>
+## Objectives
+
+- Re-render templates with errors with previous form data filled in.
+- Display useful and readable error messages.
 
 ## Validation overview
 
@@ -138,3 +139,6 @@ This is only viable if your database provides unique indexes.  Many databases su
 ## Includes
 
 You should make your site's UI as consistent as possible when displaying errors to users.  One way to enforce this consistency is to create an "include" (aka "partial").  So instead of duplicating error code in multiple places, you have one file that contains your markup / code for displaying errors, and you include that in multiple places.
+
+## Exercises
+[Express Validations](https://github.com/micah-eberhard/express_validation_exercise)
