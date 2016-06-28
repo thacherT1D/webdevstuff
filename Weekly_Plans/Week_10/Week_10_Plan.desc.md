@@ -28,14 +28,9 @@ Announcements:
 Warmup: [Link to Warmup](http://github.com/gSchool)
 
 Lessons:
-- [Lesson](/cohorts/68/student_dashboard)
-- [Lesson](/cohorts/68/student_dashboard)
+- [Express: Form-Based Authentication](/redirects/articles/3058)
 
 Homework: [Homework](/cohorts/68/student_dashboard)
-
-Announcements:
-- Announcement 1
-- Announcement 2
 
 ---
 
