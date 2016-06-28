@@ -43,7 +43,7 @@ If the signatures match the server can be confident the session has not been mod
 
 **You Do:**
 
-- Talks to everyone at your table, explain session token signing as if they were someone with no technical background.
+- Talk to everyone at your table, explain session token signing as if they were someone with no technical background.
 
 ***
 
