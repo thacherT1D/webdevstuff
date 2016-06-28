@@ -222,6 +222,7 @@ const knex = require('../knex');
 
 router.get('/artists', (_req, res, next) => {
   knex('artists')
+    .orderBy('id')
     .then((artists) => {
       res.send(artists);
     })
@@ -303,6 +304,7 @@ router.delete('/artists/:id', (req, res, next) => {
 router.get('/artists/:id/tracks', (req, res, next) => {
   knex('tracks')
     .where('artist_id', req.params.id)
+    .orderBy('id')
     .then((track) => {
       res.send(track);
     })
@@ -332,6 +334,7 @@ const knex = require('../knex');
 
 router.get('/tracks', (_req, res, next) => {
   knex('tracks')
+    .orderBy('id')
     .then((tracks) => {
       res.send(tracks);
     })
