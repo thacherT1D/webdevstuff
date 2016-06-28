@@ -26,8 +26,8 @@ Do your best to recreate [bower.io](https://bower.io/).
 
 Lessons:
 
-- [HTTP Cookies]()
-- [Cookie Sessions]()
+- [Express: Baking Cookies Pt I: Intro](/redirects/articles/4693)
+- [Express: Baking Cookies Pt II: Sessions](/redirects/articles/4694)
 
 More:
 

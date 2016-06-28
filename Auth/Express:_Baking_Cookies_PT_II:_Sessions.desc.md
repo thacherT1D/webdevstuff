@@ -27,13 +27,7 @@ By the end of this lesson you will be able to:
 
 ## Exercise
 
-- `GET /login` Create the cookie and send it to the client
-  - redirects to `/`
-- `GET /logout` Clear the cookie
-  - redirects to `/`
-- Secure the cookie with a session using a hard coded key
-- Replace the key with environment variables
-- Update `POST/logout` to only clear the session from the cookie.
+[Github Repo]()
 
 ***
 
