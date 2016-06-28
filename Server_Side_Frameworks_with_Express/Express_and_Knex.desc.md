@@ -39,7 +39,50 @@ Once you've satisfied, turn to a neighbor and explain how information flows thro
 
 ## Why is a database-driven, HTTP server is useful?
 
-Because they manage resources.
+**Representational state transfer** (REST) is a way to structure client-server communication over HTTP. While the official definition of REST is quite formal, the basics of REST can be summarized with the following rules.
+
+-  Clients are concerned with user interface.
+-  Servers are concerned with data persistence.
+-  Clients and servers communicate over a well-defined HTTP contract.
+-  Clients and servers think about data in terms of resources.
+-  Clients send HTTP requests to create, read, update, and destroy resources.
+-  Servers send HTTP responses to indicate the result of these operations.
+
+For example, imagine a RESTful HTTP server manages the persistence of the following guest resources.
+
+```javascript
+var artists = ['Mary'];
+```
+
+A RESTful server would handle the following HTTP requests by mapping them to a specific REST action.
+
+| REST Action       | Request Method | Request URL  | Request Body |
+|-------------------|----------------|--------------|--------------|
+| Read (all)        | `GET`          | `/artists`   | N/A          |
+| Read (individual) | `GET`          | `/artists/1` | N/A          |
+| Create            | `POST`         | `/artists`   | `name=Don`   |
+| Update            | `PUT`          | `/artists/1` | `name=Kate`  |
+| Destroy           | `DELETE`       | `/artists/1` | N/A          |
+
+Each REST action performs a unique operation. If the above RESTful actions were performed sequentially, the operations would leave the guest resources looking like this.
+
+| REST Action       | Guest Resources   |
+|-------------------|-------------------|
+| Read (all)        | `['Mary']`        |
+| Read (individual) | `['Mary']`        |
+| Create            | `['Mary', 'Don']` |
+| Update            | `['Kate', 'Don']` |
+| Destroy           | `['Don']`         |
+
+Once the operation is complete, the RESTful server would send a specific HTTP response back to the client indicating the result of the operation.
+
+| REST Action       | Response Status | Response Content-Type | Response Body |
+|-------------------|-----------------|-----------------------|---------------|
+| Read (all)        | `200`           | `application/json`    | `['Mary']`    |
+| Read (individual) | `200`           | `application/json`    | `'Mary'`      |
+| Create            | `200`           | `application/json`    | `'Don'`       |
+| Update            | `200`           | `application/json`    | `'Kate'`      |
+| Destroy           | `200`           | `application/json`    | `'Kate'`      |
 
 ## How do you use Express and Knex to build a database-driven, HTTP server?
 
