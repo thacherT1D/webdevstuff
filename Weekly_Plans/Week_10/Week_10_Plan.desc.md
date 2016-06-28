@@ -20,13 +20,18 @@ Lessons:
 
 # Tuesday, June 28
 
-Warmup: [Link to Warmup](http://github.com/gSchool)
+Warmup:
+
+Do your best to recreate [bower.io](https://bower.io/).
 
 Lessons:
+
+- [HTTP Cookies]()
+- [Cookie Sessions]()
+
+More:
+
 - [Express: Form-Based Authentication](/redirects/articles/3058)
-
-Homework: [Homework](/cohorts/68/student_dashboard)
-
 ---
 
 # Wednesday, June 29
