@@ -1,3 +1,60 @@
+## Objectives
+
+- Use Express and Knex to build a database-driven HTTP server
+
+## How do you use Express and Knex to build a database-driven HTTP server?
+
+```text
+┌─── Chrome ──┐    JSON       ┌── Node.js ──┐    SQL        ┌── postgres ─┐               ╔════════════ cluster ═══════════╗
+│             │─── request ──▶│             │─── request ──▶│             │──── write ───▶║                                ║
+│             │               │             │               │             │               ║  ┏━━━━━━━━ database ━━━━━━━━┓  ║
+│   jQuery    │               │   Express   │               │             │               ║  ┃                          ┃  ║
+│             │               │   Knex      │               │             │               ║  ┃  ┌──────┬ table ┬─────┐  ┃  ║
+│             │    JSON       │             │    Row(s)     │             │               ║  ┃  ├──────┼───────┼─────┤  ┃  ║
+│             │◀── response ──│             │◀── response ──│             │◀─── read ─────║  ┃  ├──────┼───────┼─────┤  ┃  ║
+└─────────────┘               └─────────────┘               └─────────────┘               ║  ┃  ├──────┼───────┼─────┤  ┃  ║
+                                                                                          ║  ┃  └──────┴───────┴─────┘  ┃  ║
+                                                                                          ║  ┃                          ┃  ║
+                                                                                          ║  ┃  ┌──────┬ table ┬─────┐  ┃  ║
+                                                                                          ║  ┃  ├──────┼───────┼─────┤  ┃  ║
+                                                                                          ║  ┃  ├──────┼───────┼─────┤  ┃  ║
+                                                                                          ║  ┃  ├──────┼───────┼─────┤  ┃  ║
+                                                                                          ║  ┃  └──────┴───────┴─────┘  ┃  ║
+                                                                                          ║  ┃                          ┃  ║
+                                                                                          ║  ┗━━━━━━━━━━━━━━━━━━━━━━━━━━┛  ║
+                                                                                          ║                                ║
+                                                                                          ╚════════════════════════════════╝
+```
+
+```text
+┌───────────────────────────────────────────────────────────────┐
+│                            artists                            │
+├─────────────┬─────────────────────────┬───────────────────────┤
+│id           │serial                   │primary key            │
+│name         │varchar(255)             │not null default ''    │
+│created_at   │timestamp with time zone │not null default now() │
+│updated_at   │timestamp with time zone │not null default now() │
+└─────────────┴─────────────────────────┴───────────────────────┘
+                                ┼
+                                │
+                                ○
+                               ╱│╲
+┌──────────────────────────────────────────────────────────────────────────────────────────┐
+│                                          tracks                                          │
+├─────────────┬─────────────────────────┬──────────────────────────────────────────────────┤
+│id           │serial                   │primary key                                       │
+│artist_id    │integer                  │not null references authors(id) on delete cascade │
+│title        │varchar(255)             │not null default ''                               │
+│likes        │integer                  │not null default 0                                │
+│created_at   │timestamp with time zone │not null default now()                            │
+│updated_at   │timestamp with time zone │not null default now()                            │
+└─────────────┴─────────────────────────┴──────────────────────────────────────────────────┘
+```
+
+```shell
+git checkout -b express_knex
+```
+
 In a `server.js` file, type the following code.
 
 ```javascript
@@ -39,6 +96,24 @@ app.listen(port, () => {
 });
 
 module.exports = app;
+```
+
+In both the `routes/artists.js` and `routes/tracks.js` files, type out the following code.
+
+```javascript
+'use strict';
+
+const express = require('express');
+const router = express.Router();
+
+module.exports = router;
+```
+
+Add and commit the changes to your repository.
+
+```shell
+git add .
+git commit -m 'Add an Express server'
 ```
 
 In a `knex.js` file, type out the following code.
@@ -196,6 +271,13 @@ router.get('/artists/:id/tracks', (req, res, next) => {
 });
 
 module.exports = router;
+```
+
+Add and commit the changes to your repository.
+
+```shell
+git add .
+git commit -m 'Route /artists'
 ```
 
 In a `routes/tracks.js` file, type the following code.
@@ -384,4 +466,30 @@ router.delete('/tracks/:id', (req, res, next) => {
 });
 
 module.exports = router;
+```
+
+Add and commit the changes to your repository.
+
+```shell
+git add .
+git commit -m 'Route /tracks'
+```
+
+Merge the feature branch into the `master` branch.
+
+```shell
+git checkout master
+git merge express_knex
+```
+
+Now that it's merged, delete the feature branch.
+
+```shell
+git branch -d express_knex
+```
+
+Push the local `master` branch to Heroku's `master` branch.
+
+```shell
+git push heroku master
 ```
