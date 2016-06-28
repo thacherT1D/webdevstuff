@@ -509,10 +509,10 @@ To get started, checkout a new feature branch.
 git checkout -b heroku
 ```
 
-Then, install the following dependencies locally and save them to the `package.json` file.
+Then, install the following dependencies globally.
 
 ```shell
-npm install --save foreman
+npm install -g foreman
 ```
 
 Create a `Procfile` so Heroku can start the HTTP server with `foreman`.
@@ -524,7 +524,7 @@ echo 'web: node server.js' > Procfile
 Test `foreman` by running the following command.
 
 ```shell
-./node_modules/.bin/nf start
+nf start
 ```
 
 Add and commit the changes to your repository.
