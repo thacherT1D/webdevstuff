@@ -214,6 +214,8 @@ Follow up questions:
 ## Resources
 
 - [Github: Cookie Parser](https://github.com/expressjs/cookie-parser)
+- [Express: res.cookie](http://expressjs.com/en/api.html#res.cookie)
+- [Express: res.clearCookie](http://expressjs.com/en/api.html#res.clearCookie)
 - [Wikipedia: HTTP Cookie](https://en.wikipedia.org/wiki/HTTP_cookie)
 
 <iframe src="https://player.vimeo.com/video/141304889?byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
