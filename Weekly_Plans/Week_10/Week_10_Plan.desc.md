@@ -31,6 +31,12 @@ Old Auth Lesson:
 
 - [Express: Form-Based Authentication](/redirects/articles/3058)
 
+> This lesson is kind of a mess, but it has 4 really useful videos that put together authentication:
+- Auth Overview
+- Hashing Overview
+- Cookie Overview
+- Session Overview
+
 Exercise / Homework:
 
 - [Express Cookie Session Form Authentication Exercise](https://github.com/gSchool/express-cookie-session-form-authentication-exercise)
