@@ -122,6 +122,28 @@ const router = express.Router();
 module.exports = router;
 ```
 
+Then, install `nodemon` as a local development dependency, saving it to the `package.json` file.
+
+```shell
+npm install --save-dev nodemon
+```
+
+Add a `nodemon` script to the `package.json` file.
+
+```javascript
+"scripts": {
+  "knex": "knex",
+  "heroku-postbuild": "knex migrate:latest",
+  "nodemon": "nodemon server.js"
+},
+```
+
+Then, start the server with `nodemon`.
+
+```shell
+npm run nodemon
+```
+
 Add and commit the changes to your repository.
 
 ```shell
@@ -509,22 +531,33 @@ To get started, checkout a new feature branch.
 git checkout -b heroku
 ```
 
-Then, install the following dependencies globally.
+Then, install `foreman` as a local development dependency, saving it to the `package.json` file.
 
 ```shell
-npm install -g foreman
+npm install --save-dev foreman
 ```
 
-Create a `Procfile` so Heroku can start the HTTP server with `foreman`.
+Create a `Procfile` for `foreman`.
 
 ```shell
 echo 'web: node server.js' > Procfile
 ```
 
-Test `foreman` by running the following command.
+Add an `nf` script to the `package.json` file.
+
+```javascript
+"scripts": {
+  "knex": "knex",
+  "heroku-postbuild": "knex migrate:latest",
+  "nf": "nf start",
+  "nodemon": "nodemon server.js"
+},
+```
+
+Then, start the server with `foreman`.
 
 ```shell
-nf start
+npm run nf
 ```
 
 Add and commit the changes to your repository.
