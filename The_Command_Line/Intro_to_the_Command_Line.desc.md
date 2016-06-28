@@ -6,11 +6,10 @@ This lesson will introduce you to the fundamental commands of Mac OS X. By the e
 * [Command flags](#command-flags)
 * [Manual pages](#manual-pages)
 * [Graphical user interfaces](#graphical-user-interfaces)
-* File system navigation
-* File system management
-* File system redirection
+* [File System Navigation](#file-system-navigation)
+* [File System Manipulation](#file-system-manipulation)
 
-Before getting stared, use Spotlight to launch the `Terminal` app.
+Before getting stared, use Spotlight to launch the `iTerm` app.
 
 ## User accounts
 
@@ -82,7 +81,7 @@ It's common for a user account to belong to a many groups. The only important gr
 
 **TIP:** If your user account doesn't belong to the `admin` group, it'll be difficult to manage your development machine.
 
-### Exercise
+### **Exercise**
 
 Find out the account name and groups of the current user of your computer.
 
@@ -90,7 +89,7 @@ Find out the account name and groups of the current user of your computer.
 
 At any given time, the Unix shell has a **current working directory**. By convention, the current working directory is displayed in your shell's prompt. That way, you know where you are in the your computer's file system hierarchy at all times.
 
-From the command line, you can reference the current working directory with the period `.` character. You'll get to play around with this in a minute. Typically, a new shell session will set the current working directory to your user account's home directory when it starts.
+From the command line, you can reference the current working directory with the period `.` character. You'll get to play around with this in a minute. Typically, a new shell session will set the current working directory to your user account's home directory when it starts. We've changed our iTerms settings so that when you open a new tab, it should be in the same directory from your previous session.
 
 ### The home directory
 
@@ -108,7 +107,7 @@ pwd
 
 ![](https://i.imgur.com/s6Xqtmn.png)
 
-### Exercise
+### **Exercise**
 
 What's the current working directory of your shell?
 
@@ -118,23 +117,23 @@ In any computer system, a **path** represents a location in the file system. Pat
 
 ```
 USA
-Washington
-Seattle
-111 Jackson Street
+Colorado
+Denver
+1062 Delaware Street
 Galvanize, Inc.
 ```
 
 Is similar to
 
 ```
-/Users/wcrusher/Projects/nanites
+/Users/steverogers/galvanize/unit-1
 ```
 
 A path is **absolute** when it starts with `/`.
 
 A path is **relative** when it does not.
 
-### Exercise
+### **Exercise**
 
 Is the path returned by the `pwd` command absolute or relative?
 
@@ -148,7 +147,7 @@ ls
 
 ![](https://i.imgur.com/tivSrqi.png)
 
-### Exercise
+### **Exercise**
 
 In what order are the files and directories displayed?
 
@@ -168,7 +167,7 @@ ls -l
 
 ![](https://i.imgur.com/TzK8I2m.png)
 
-### Exercise
+### **Exercise**
 
 How can you tell if an item is a file or directory? **Hint:** look at its permissions.
 
@@ -191,7 +190,7 @@ ls -hl
 
 ![](https://i.imgur.com/oUiKGx6.png)
 
-**TIP:** In fish, the `ll` command is the same as `ls -hl` only faster to type.
+**TIP:** With zsh, the `ll` command is the same as `ls -hl` only faster to type.
 
 ### Hidden files and directories
 
@@ -203,7 +202,7 @@ You may not realize it, but there are **hidden files and directories** scattered
 
 Many programs have configuration settings that they want stored out of plain sight from users. Traditionally, these settings are stored in hidden files and directories in your home directory. As a professional web developer, you'll want to access and modify these settings and, throughout this course, you'll be doing just that.
 
-**TIP:** In fish, the `la` command is the same as `ls -hal` only faster to type.
+**TIP:** With zsh, the `l` command is the same as `ls -hal` only faster to type.
 
 ## Manual pages
 
@@ -247,7 +246,7 @@ open .
 
 **TIP:** Remember, the period `.` character represents the current working directory.
 
-### Exercise
+### **Exercise**
 
 Why can't you see any hidden files and directories in the Finder?
 
@@ -278,11 +277,13 @@ The tilde `~` character represents the home directory. Try displaying the tilde 
 echo ~
 ```
 
-### Exercise
+### **Exercise**
 
 Is the output from this command the as the output you got from the `pwd` command?
 
-## File system navigation
+## File System Navigation
+
+You're likely used to navigating around your computer by clicking on various folders. As developers, we want a faster way to navigate (and one that makes us look way _cooler_) so we use our terminals!
 
 ### The File System is a Tree
 
@@ -335,7 +336,7 @@ We can move back to your **home directory** with the command `cd ~`.
 ```
 $ cd ~  
 $ pwd
-/Users/ryansobol
+/Users/steverogers
 ```
 
 Remember, the `~` always refers to the current user's home directory, this is handy for scripts and for you, but you can use the full path just as well if you know it, `pwd` will give you the full path.
@@ -382,7 +383,7 @@ The command means, list the contents of the parent of `~/Documents/` So it liste
 
 Any path starting with a `/` is said to be an absolute path and it is the complete path starting from the root directory. Relative paths (ones that do not begin with a `/`) are relative to your current location.
 
-## Tab Completion
+### Tab Completion
 
 Hitting `<TAB>` autocompletes.  Hit `<TAB>` constantly. Try it right now! Type:
 
@@ -398,21 +399,11 @@ This way you can easily see the competing outcomes of autocomplete. What happens
 
 The competing options for me are `Desktop/`, `Documents/`, and `Downloads/`
 
-### Exercise
+### **Exercise**
 
 Spend three minutes navigating around your computer's file system from the command line. Use a mixture of relative and absolute paths to navigate around. See what dark corners you can discover in your operating system.
 
-## Review
-
-* `tree`
-* Root directory
-* `cd /`
-* `cd ~`
-* `cd ..`
-* `cd relative/path`
-* Tab Completion
-
-## File system manipulation
+## File System Manipulation
 
 ### The `mkdir` command
 
@@ -423,7 +414,7 @@ Now that we know how to move around, it's time to make some changes. We can make
 **Try This**
 
 ```
-$ cd ~/Projects
+$ cd ~/galvanize
 
 $ mkdir notebook
 ```
@@ -442,7 +433,7 @@ I want my note book to have some notes.
 
 Now try listing the contents of your current directory.
 
-`$ ls notes.txt`
+`$ ls`
 
 What did the command `touch` do? You can use `touch` to do more than just create files. Try reading the man page for touch!
 
@@ -493,85 +484,111 @@ Our old text has been replaced with the new text. Sometimes we'll want to **appe
 
 `$ history >> notes.txt`
 
+### **Exercise**
+
+Create a new file called `movies.txt`. Then, try this:
+
+`$ echo "The Little Mermaid" > movies.txt`
+
+Append at least 4 more movies to your `movies.txt` file before moving on to the next step.
+
 ### Piping
 
 The Unix Philosophy is "do one thing, and do it well." Complex problems are solved by using small and simple modules, and chaining them together. This is a great way to think about software, and in terminal programming we chain commands using the `|` or pipe character.
 
-Let's look back at our books.  Read out the file.  Notice that the list of books is unsorted!  Lets organize this list using the `sort` command.
+Let's look back at our movies.  Read out the file.  Notice that the list of movies is unsorted!  Lets organize this list using the `sort` command.
 
 Pipes allow us to use the output from one command as the input for another command.
 
 **Try This**
 
-`$ cat notes.txt | sort`
+`$ cat movies.txt | sort`
 
-We took the output from `cat books.txt` and sent it through a pipe to `sort`.  The output of `cat books.txt` becomes the input of `sort`. The output of `sort` printed to our screen. Now lets redirect the output of `sort` to a file:
+We took the output from `cat movies.txt` and sent it through a pipe to `sort`.  The output of `cat movies.txt` becomes the input of `sort`. The output of `sort` printed to our screen. Now lets redirect the output of `sort` to a file:
 
 **Try This**
 
-`$ cat notes.txt | sort > sorted_notes.txt`
+`$ cat movies.txt | sort > sorted_movies.txt`
 
 There are dozens of powerful tools we can leverage using pipes.  One of the ones you'll be using the most is `grep`.
 
 **Try This**
 
-`$ cat books.txt | grep Mil`
+`$ cat movies.txt | grep Little`
 
-See how we filtered out just the lines that contain Mil?  Try grepping for something else.
+See how we filtered out just the lines that contain "Little"?  Try grepping for something else.
 
 Adapted from [http://en.flossmanuals.net/command-line/piping/](http://en.flossmanuals.net/command-line/piping/)
 
 ### Exercise: Using grep
 
-`grep` is a powerful command that can search through text output for matching text, or patterns of text. Use pipes, grep, and the commands we've learned about so far to do the following:
+`grep` is a powerful command that can search through text output for matching text, or patterns of text. Begin by taking a look at [this gist](https://gist.github.com/bwreid/cd8bd5437f19a52a02b2e197e7aa8ca4) and copying the commands to your terminal.
 
-1. Using `ls` list all files in the current directory that contain the word 'book'
-2. Using `cat` list all the books in `books.txt` where the author or book title contains "John".
-3. Using `tree` find the fullpath of all the files on your file system which contain the string 'book'
-4. **CHALLENGE**, using `cat` again, list the books written by an author whose first or last name is John. Remember, Jack London's John Barleycorn doesn't count. Pipe the output of this to `sort`. Your output should match this:
+**TIP:** You should always read through code snippets before copying and pasting them into your terminal! What if I had put something malicious in here to delete everything on your computer?
+
+Use pipes, grep, and the commands we've learned about so far to do the following.
+
+1. List all books that were written by "Dan Brown"
+1. Using a single command, create a new file called `sorted_books.txt` that contains a list of the books in `books.txt` by sorted by title.
+1. Using a single command, create a new file called `books_by_george_orwell.txt` which should only contain those books by George Orwell, sorted by title.
+
+**CHALLENGE**
+
+Create a new file called `authors.txt` which lists only the authors of the books, alphabetized by first name. The list should be unique (i.e. Dan Brown is not listed twice) and should be numbered. Your output should look something like this:
 
 ```
-Bartlett, John:Familiar Quotations
-Bunyan, John:Pilgrim's Progress, The
-Bunyan, John:Saved by Grace
-Johnson, Samuel:Lives of the Poets
-Mill, John :On Nature
-Mill, John Stuart:On Liberty
-Mill, John Stuart:System of Logic, A
-Milton, John:Paradise Lost
+1: Dan Brown
+2: Ernest Hemingway
+3: George Orwell
+4: Harper Lee
+5: J.D. Salinger
+6: J.K. Rowling
+7: J.R.R. Tolkien
+8: Khaled Hosseini
+9: Mark Twain
+10: Mary Shelley
+11: Neil Gaiman
+12: Ray Bradbury
+13: Suzanne Collins
 ```
 
-> hint: you will need to use the `.*` wildcard to complete this challenge. In grep `.` means 'match any single character" and `.*` means match any number of any character. `.*:` means match any number of any character until we find a colon. `.*F` means match any number of any characters until we find a capital F.
+> HINT: you will need to use the `.*` wildcard to complete this challenge. In grep `.` means 'match any single character" and `.*` means match any number of any character. `.*:` means match any number of any character until we find a colon. `.*F` means match any number of any characters until we find a capital F.
 
-## Moving
+### Moving
 
-Now that we have our books sorted, we really don't need our unsorted list of books.  `mv` stands for move, and that's how we move files and folders from place to place.
+In the terminal, we can use the `mv` command to move files from one place to another. We can also use it to rename files -- that is, we can move the file _in the same directory_ to a new name.
 
-**Try This**
+The `mv` command takes two arguments: an origin and a destination.
 
-`$ mv sorted_books.txt books.txt`
+Let's first try renaming `george_orwell_books.txt` to `books_by_george_orwell.txt`.
 
-Examine the contents of our current directory. What has changed?
+```
+mv george_orwell_books.txt books_by_george_orwell.txt
+```
 
-## Copying
-To copy files, we use the `cp` command.  Extrapolate from the way we used `mv` to copy the file `bookshelf.txt` to add a file `second_bookshelf.txt`.
-
-**Try This**
-
-`$ cp bookshelf.txt second_bookshelf.txt`
-
-What happend? What are the contents of second_bookshelf.txt?
-
-## Removing
-`rm` is short for remove.  Use `rm` to remove the `second_bookshelf.txt` file we just created with `cp`.
+List out the files in your current directory to see what's happened. In this case, your first file was the origin and your second file was the destination. Because there was no folders prefixing the path, it is assumed you mean in the same folder.
 
 **Try This**
 
-`$ rm second_bookshelf.txt`
+Let's try moving a file somewhere else. First, read the following code. What do you think will happen?
 
->Pro-tip: `rm` does not send things to your trash can, it deletes them permanently. Be careful when using `rm`.
+```
+mv books_by_george_orwell.txt ../.
+```
 
-## The "Recursive" Option
+Check in your current directory. Where did your file go? Find it, and then move it back to your `notebook` directory.
+
+### Copying
+
+To copy files, we use the `cp` command. Extrapolate from the way we used `mv` to copy the file `sorted_books.txt` to add a file `second_list.txt`.
+
+### Removing
+
+`rm` is short for remove. The `rm` command only takes a single parameter -- the thing to be removed. You may be used to dragging files to the trashcan to remove them from your computer. In the trashcan case, you can actually "undo" your deletions. When you use `rm`, it's important to note that the file is gone, forever. There is no way to recover it (unless you're using git!).
+
+Use `rm` to remove the `second_list.txt` file we just created with `cp`.
+
+### The Recursive Option
 
 By default, commands like `cp` and `rm` only apply to the file specified. We can copy and remove entire directories with the `-r` option. `-r` stands for recursive, which is a very important term in computer programming. In this context it means "follow the directory structure through sub-directories until we are at a 'leaf node' in our directory tree."
 
@@ -579,20 +596,20 @@ By default, commands like `cp` and `rm` only apply to the file specified. We can
 
 ```
 cd ..
-cp living_room study
+cp notebook new_notebook
 ```
 
-We get an error: `cp: study/ is a directory (not copied).` To copy directories, we need to use `-r`:
+We get an error: `cp: notebook is a directory (not copied).` To copy directories, we need to use `-r`:
 
-`cp -r living_room study`
+`cp -r notebook new_notebook`
 
-Now examine the contents of the directory 'study'. We copied all of our files to the new directory! Just like `cp`, `rm` will not work by default on a directory. Try `rm study` and you'll get the same error. Try this instead:
+Now examine the contents of the directory `new_notebook`. We copied all of our files to the new directory! Just like `cp`, `rm` will not work by default on a directory. Try `rm new_notebook` and you'll get a similar error. Try this instead:
 
-`$ rm -r study`
+`rm -r new_notebook`
 
-The study is gone. You can also use `rmdir` for this purpose.
+The `new_notebook` is gone. The `rmdir` command will also remove directories.
 
-## Filename Wildcards
+### Filename Wildcards
 
 Sometimes we want to refer to a bunch of similar files, to do this we can use wildcards. The most common wildcard to use is `*` usually along with a file extension:
 **Try This**
@@ -603,53 +620,17 @@ Sometimes we want to refer to a bunch of similar files, to do this we can use wi
 
 For more ideas go here: [How to Use Wildcards](http://www.linfo.org/wildcard.html)
 
-## Review
-
-* `mkdir`
-* editing files
-* echo
-* redirection `>` and `>>`
-* piping
-* moving, copying and removing
-* recursive option
-
-## File Permissions
-
-Lets examine our current working directory to discuss permissions.
-
-`$ ls -l`
-
-I'll cherry pick one line to describe permissions:
-
-```
--rwxrw-r--  1 Tyler  staff  413 Oct 15 11:22 books.txt
-```
-
-The column on the left e.g.: `-rwxrw-r--` displays the files' permissions. That is whether or not you can read, write or execute the file. The first character is one of three:
-
-* `-` for a regular file
-* `d` for a directory
-* `l` for a "link" which we'll talk about more another time.
-
-The next 9 characters are one of 4 characters, and refer to what can be done to the file. These should be thought of in groups of 3, and they describe the permissions for different people/groups of people. So for our line: `-rwxrw-r--` we have the leading `-` telling us it's a file, then 3 groups:
-
-* `rwx` The owner's permissions are first, the owner can read write and execute
-* `rw-` The group's permissions are next, they can read and write
-* `r--` Everyone else's permissions are last, everyone can read this file
-
-After that we see `1 Tyler  staff  413 Oct 15 11:22 books.txt`. This line tells that Tyler owns this file; the file belongs to the staff group; its size is 413 bytes; it was last modified Oct 15th at 11:22 and the name of the file is books.txt. The 1 at the start refers to how many files a directory contains, it is always 1 for regular files but might be larger for directories.  
-
-## History
+### History
 
 Wow, we've done a lot of work. Remembering all these commands can be hard. Luckily our shell remembers a lot of what we've done for us! Try tapping the up arrow in your shell. What happens? We can scroll up and down through the most recent commands we've executed.
 
 **Try This**
 
-`$ history`
+`history`
 
 and
 
-`$ history | grep cd`
+`history | grep cd`
 
 Searching through history can be very useful if you know you've done something, but can't remember exactly how you did it. You can also combine the power of `history` with auto-complete. Try hitting `ctrl+r` then typing `ls`.  What happens?
 
@@ -657,9 +638,9 @@ You can scroll up and down through all recently used commands that contain the s
 
 If you don't want to execute any of these commands, type `ctrl+c`. Control+c is a powerful command that you can use at any time to kill the currently running terminal process, or exit many terminal applications.
 
-## Homework
+### Exercise
 
-Solve the [Command Line Murder Mystery](https://github.com/ryansobol/clmystery). To get started, clone the repo to your local machine. Further instructions can be found in the `README` for the mystery. Good luck!
+Let's keep our `galvanize` directory clean! Move the contents of the `notebook` directory into a new folder at `unit-1/intro-to-the-command-line`. You should be able to do this in a single line!
 
 ## Resources
 
