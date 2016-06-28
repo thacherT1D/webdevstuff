@@ -13,15 +13,27 @@ By the end of this lesson you will be able to:
 
 ## Sessions
 
-### I do
+A session is a unique identifier that maps to data.
 
-### We Do
+It is used it ensure the data has not been tampered with or falsified.
 
-### You Do
+A session can be stored:
+
+- in databases like `mongo` or `postgres`.
+- in memory data stores like `redis` or straight up node.
+- in a `cookie` or a `JWT`.
+- in many other forms.
+
 
 ***
 
 ## Sessions in Express
+
+**You Do:**
+
+Watch the following video:
+
+<iframe src="https://player.vimeo.com/video/141306923?byline=0&portrait=0" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 ***
 
@@ -36,5 +48,3 @@ By the end of this lesson you will be able to:
 - [Github: Cookie-Session](https://github.com/expressjs/cookie-session)
 - [Wikipedia: HTTP Cookie](https://en.wikipedia.org/wiki/HTTP_cookie)
 - [Github: dotenv](https://github.com/motdotla/dotenv)
-
-<iframe src="https://player.vimeo.com/video/141306923?byline=0&portrait=0" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
