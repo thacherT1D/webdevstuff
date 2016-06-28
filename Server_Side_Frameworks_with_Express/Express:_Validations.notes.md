@@ -1,7 +1,36 @@
 ## Objectives
 
-* Re-render templates with errors
-* Use includes in templates
+- Re-render templates with errors with previous form data filled in.
+- Display useful and readable error messages.
+
+
+
+
+
+
+
+##Direction ->
+
+- Give general overview of validations.
+  - Reasons:
+  - Ensure incoming data is formatted right for:
+    - Manipulation & calculation.
+    - Database entry.
+  - Maintain a consistent format of error feedback.
+
+- Have students read up to Uniqueness Validation.
+- Walk through the reading.
+  > Trim removes whitespace and other things like line endings from the end and beginning of a string
+
+- Take questions.
+
+- Have students finish reading, then return for  discussion.
+- Do a fast demo of the exercise example.
+- Stress the importance of breaking the code into smaller functions.
+- Students can start the exercise.
+
+
+
 
 ## Validation overview
 
@@ -90,8 +119,6 @@ router.post('/users', function (req, res) {
 
 ## Exercise
 
-[Exercise Repo](https://github.com/gSchool/express-validations-intro)
-
 * Intro students to wires / and/or demo
 * Give them the requirements
 * In pairs, have them write a proposed solution (10 minutes)
@@ -99,3 +126,6 @@ router.post('/users', function (req, res) {
     * If statements in the create route
     * Errors array that gets pushed to
     * Sending back errors locals on error
+
+
+[Exercise Repo](https://github.com/micah-eberhard/express_validation_exercise)
