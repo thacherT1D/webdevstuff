@@ -75,16 +75,8 @@ Take a few moments to diagram how a RESTful, database-driven HTTP server works.
 
 Once you've satisfied, turn to a neighbor and explain how information flows throw the system.
 
-## Why is a database-driven, HTTP server is useful?
+## Why is a RESTful, database-driven HTTP server is useful?
 
-**Representational state transfer** (REST) is a way to structure client-server communication over HTTP. While the official definition of REST is quite formal, the basics of REST can be summarized with the following rules.
-
--  Clients are concerned with user interface.
--  Servers are concerned with data persistence.
--  Clients and servers communicate over a well-defined HTTP contract.
--  Clients and servers think about data in terms of resources.
--  Clients send HTTP requests to create, read, update, and destroy resources.
--  Servers send HTTP responses to indicate the result of these operations.
 
 ## How do you use Express and Knex to build a RESTful, database-driven HTTP server?
 
