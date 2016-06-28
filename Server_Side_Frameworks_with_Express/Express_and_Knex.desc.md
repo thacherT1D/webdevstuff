@@ -60,7 +60,7 @@ Once the operation is complete, the RESTful server would send a specific HTTP re
 | Read (individual) | `200`           | `application/json`    | `{ id: "1", name": "The Beatles" }`   |
 | Create            | `200`           | `application/json`    | `{ id: "2", name": "Prince" }`        |
 | Update            | `200`           | `application/json`    | `{ id: "2", name": "⚥" }`             |
-| Destroy           | `200`           | `application/json`    | `{ name": "⚥" }                       |
+| Destroy           | `200`           | `application/json`    | `{ name": "⚥" }`                      |
 
 ### Exercise
 
