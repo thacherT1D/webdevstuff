@@ -234,14 +234,8 @@ router.get('/artists', (_req, res, next) => {
 });
 
 router.get('/artists/:id', (req, res, next) => {
-  const id = Number.parseInt(req.params.id);
-
-  if (Number.isNaN(id)) {
-    return next();
-  }
-
-  knex('artists')
-    .where('id', id)
+    knex('artists')
+    .where('id', req.params.id)
     .first()
     .then((artist) => {
       if (!artist) {
@@ -256,17 +250,8 @@ router.get('/artists/:id', (req, res, next) => {
 });
 
 router.post('/artists', (req, res, next) => {
-  const newAuthor = req.body;
-
-  if (!newAuthor.name || newAuthor.name.trim() === '') {
-    return res
-      .status(400)
-      .set('Content-Type', 'text/plain')
-      .send('first_name must not be blank');
-  }
-
   knex('artists')
-    .insert(artist, '*')
+    .insert(req.body, '*')
     .then((results) => {
       res.send(results[0]);
     })
@@ -276,32 +261,17 @@ router.post('/artists', (req, res, next) => {
 });
 
 router.put('/artists/:id', (req, res, next) => {
-  const id = Number.parseInt(req.params.id);
-
-  if (Number.isNaN(id)) {
-    return next();
-  }
-
   knex('artists')
-    .where('id', id)
+    .where('id', req.params.id)
     .first()
     .then((artist) => {
       if (!artist) {
         return next();
       }
 
-      const newAuthor = req.body;
-
-      if (!newAuthor.name || newAuthor.name.trim() === '') {
-        return res
-          .status(400)
-          .set('Content-Type', 'text/plain')
-          .send('first_name must not be blank');
-      }
-
       return knex('artists')
-        .update(artist, '*')
-        .where('id', id)
+        .update(req.body, '*')
+        .where('id', req.params.id)
         .then((results) => {
           res.send(results[0]);
         });
@@ -312,14 +282,8 @@ router.put('/artists/:id', (req, res, next) => {
 });
 
 router.delete('/artists/:id', (req, res, next) => {
-  const id = Number.parseInt(req.params.id);
-
-  if (Number.isNaN(id)) {
-    return next();
-  }
-
   knex('artists')
-    .where('id', id)
+    .where('id', req.params.id)
     .first()
     .then((artist) => {
       if (!artist) {
@@ -328,7 +292,7 @@ router.delete('/artists/:id', (req, res, next) => {
 
       return knex('artist')
         .del()
-        .where('id', id)
+        .where('id', req.params.id)
         .then(() => {
           delete artist.id;
           res.send(artist);
@@ -340,14 +304,8 @@ router.delete('/artists/:id', (req, res, next) => {
 });
 
 router.get('/artists/:id/tracks', (req, res, next) => {
-  const id = Number.parseInt(req.params.id);
-
-  if (Number.isNaN(id)) {
-    return next();
-  }
-
   knex('tracks')
-    .where('artist_id', id)
+    .where('artist_id', req.params.id)
     .then((track) => {
       res.send(track);
     })
@@ -386,14 +344,8 @@ router.get('/tracks', (_req, res, next) => {
 });
 
 router.get('/tracks/:id', (req, res, next) => {
-  const id = Number.parseInt(req.params.id);
-
-  if (Number.isNaN(id)) {
-    return next();
-  }
-
   knex('tracks')
-    .where('id', id)
+    .where('id', req.params.id)
     .first()
     .then((track) => {
       if (!track) {
@@ -408,35 +360,8 @@ router.get('/tracks/:id', (req, res, next) => {
 });
 
 router.post('/tracks', (req, res, next) => {
-  const newTrack = Object.assign({}, req.body);
-
-  if (!newTrack.title || newTrack.title.trim() === '') {
-    return res
-      .status(400)
-      .set('Content-Type', 'text/plain')
-      .send('title must not be blank');
-  }
-
-  newTrack.likes = Number.parseInt(newTrack.likes);
-
-  if (Number.isNaN(newTrack.likes)) {
-    return res
-      .status(400)
-      .set('Content-Type', 'text/plain')
-      .send('likes must be an integer');
-  }
-
-  newTrack.artist_id = Number.parseInt(newTrack.artist_id);
-
-  if (Number.isNaN(newTrack.artist_id)) {
-    return res
-      .status(400)
-      .set('Content-Type', 'text/plain')
-      .send('artist_id must be an integer');
-  }
-
   knex('artists')
-    .where('id', newTrack.artist_id)
+    .where('id', req.body.artist_id)
     .first()
     .then((artist) => {
       if (!artist) {
@@ -447,7 +372,7 @@ router.post('/tracks', (req, res, next) => {
       }
 
       return knex('tracks')
-        .insert(newTrack, '*')
+        .insert(req.body, '*')
         .then((results) => {
           res.send(results[0]);
         });
@@ -458,49 +383,16 @@ router.post('/tracks', (req, res, next) => {
 });
 
 router.put('/tracks/:id', (req, res, next) => {
-  const id = Number.parseInt(req.params.id);
-
-  if (Number.isNaN(id)) {
-    return next();
-  }
-
   knex('tracks')
-    .where('id', id)
+    .where('id', req.params.id)
     .first()
     .then((track) => {
       if (!track) {
         return next();
       }
 
-      const newTrack = Object.assign({}, req.body);
-
-      if (!newTrack.title || newTrack.title.trim() === '') {
-        return res
-          .status(400)
-          .set('Content-Type', 'text/plain')
-          .send('title must not be blank');
-      }
-
-      newTrack.likes = Number.parseInt(newTrack.likes);
-
-      if (Number.isNaN(newTrack.likes)) {
-        return res
-          .status(400)
-          .set('Content-Type', 'text/plain')
-          .send('likes must be an integer');
-      }
-
-      newTrack.artist_id = Number.parseInt(newTrack.artist_id);
-
-      if (Number.isNaN(artist_id)) {
-        return res
-          .status(400)
-          .set('Content-Type', 'text/plain')
-          .send('artist_id must be an integer');
-      }
-
       return knex('artists')
-        .where('id', newTrack.artist_id)
+        .where('id', req.body.artist_id)
         .first()
         .then((artist) => {
           if (!artist) {
@@ -511,8 +403,8 @@ router.put('/tracks/:id', (req, res, next) => {
           }
 
           return knex('tracks')
-            .update(newTrack, '*')
-            .where('id', id)
+            .update(req.body, '*')
+            .where('id', req.params.id)
             .then((results) => {
               res.send(results[0]);
             });
@@ -524,14 +416,8 @@ router.put('/tracks/:id', (req, res, next) => {
 });
 
 router.delete('/tracks/:id', (req, res, next) => {
-  const id = Number.parseInt(req.params.id);
-
-  if (Number.isNaN(id)) {
-    return next();
-  }
-
   knex('tracks')
-    .where('id', id)
+    .where('id', req.params.id)
     .first()
     .then((track) => {
       if (!track) {
@@ -540,7 +426,7 @@ router.delete('/tracks/:id', (req, res, next) => {
 
       return knex('tracks')
         .del()
-        .where('id', id)
+        .where('id', req.params.id)
         .then(() => {
           delete track.id;
           res.send(track);
