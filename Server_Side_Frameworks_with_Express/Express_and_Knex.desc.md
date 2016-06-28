@@ -44,23 +44,23 @@ For example, imagine a RESTful, database-driven HTTP server manages the persiste
 
 A RESTful server would handle the following HTTP requests by mapping them to a specific REST action.
 
-| REST Action       | Request Method | Request URL  | Request Body          |
-|-------------------|----------------|--------------|-----------------------|
-| Read (all)        | `GET`          | `/artists`   | N/A                   |
-| Read (individual) | `GET`          | `/artists/1` | N/A                   |
-| Create            | `POST`         | `/artists`   | `{ name": "Prince" }` |
-| Update            | `PATCH`        | `/artists/2` | `{ name": "⚥" }`      |
-| Destroy           | `DELETE`       | `/artists/2` | N/A                   |
+| REST Action       | Request Method | Request URL  | Request Content-Type  | Request Body           |
+|-------------------|----------------|--------------|-----------------------|------------------------|
+| Read (all)        | `GET`          | `/artists`   | `application/json`    | N/A                    |
+| Read (individual) | `GET`          | `/artists/1` | `application/json`    | N/A                    |
+| Create            | `POST`         | `/artists`   | `application/json`    | `{ "name": "Prince" }` |
+| Update            | `PATCH`        | `/artists/2` | `application/json`    | `{ "name": "⚥" }`      |
+| Destroy           | `DELETE`       | `/artists/2` | `application/json`    | N/A                    |
 
 Once the operation is complete, the RESTful server would send a specific HTTP response back to the client indicating the result of the operation.
 
-| REST Action       | Response Status | Response Content-Type | Response Body                         |
-|-------------------|-----------------|-----------------------|---------------------------------------|
-| Read (all)        | `200`           | `application/json`    | `[{ id: "1", name": "The Beatles" }]` |
-| Read (individual) | `200`           | `application/json`    | `{ id: "1", name": "The Beatles" }`   |
-| Create            | `200`           | `application/json`    | `{ id: "2", name": "Prince" }`        |
-| Update            | `200`           | `application/json`    | `{ id: "2", name": "⚥" }`             |
-| Destroy           | `200`           | `application/json`    | `{ name": "⚥" }`                      |
+| REST Action       | Response Status | Response Content-Type | Response Body                          |
+|-------------------|-----------------|-----------------------|----------------------------------------|
+| Read (all)        | `200`           | `application/json`    | `[{ id: "1", "name": "The Beatles" }]` |
+| Read (individual) | `200`           | `application/json`    | `{ id: "1", "name": "The Beatles" }`   |
+| Create            | `200`           | `application/json`    | `{ id: "2", "name": "Prince" }`        |
+| Update            | `200`           | `application/json`    | `{ id: "2", "name": "⚥" }`             |
+| Destroy           | `200`           | `application/json`    | `{ "name": "⚥" }`                      |
 
 ### Exercise
 
