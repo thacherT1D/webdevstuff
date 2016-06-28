@@ -40,6 +40,11 @@ The server verifies signature by resigning the session token with it's secret ke
 
 If the signatures match the server can be confident the session has not been modified.
 
+
+**You Do:**
+
+- Talks to everyone at your table, explain session token signing as if they were someone with no technical background.
+
 ***
 
 ## Sessions in Express
@@ -167,7 +172,7 @@ app.get('/', function(req,res){
   if(req.session.views){
     req.session.views = parseInt(req.session.views, 10) + 1;
   }else{
-    req.session.views = 0;
+    req.session.views = 0;``
   }
 
   res.end('<h1>I\'ve visited this page ' + req.session.views + 'times!</h1><a href="/reset">Start Over</a>');
