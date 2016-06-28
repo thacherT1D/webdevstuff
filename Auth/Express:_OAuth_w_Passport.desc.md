@@ -2,6 +2,7 @@
 
 There are two main goals for this lesson: to get familiar with Passport, and to hone your documentation interaction abilities.  Note "documentation interaction" - not "reading documentation".  Documentation is rarely a step-by-step tutorial.  Instead, it's an active process of knowing what to look for, seeking it out, pattern matching and only pulling in the few lines necessary to satisfy the errors you are getting.
 
+
 By the end of this lesson, you should be able to:
 
 - Describe and explain OAuth and it's role in web authentication (content)
@@ -47,16 +48,48 @@ Resources:
 ### Walkthrough - Start a new Express app
 
 Create a new express app:  
-`express --ejs --git linkedInLogin`  
-
-Install your dependencies:
+`mkdir linkedInLogin`  
 `cd linkedInLogin`  
-`npm install`  
+`npm init`  
+
+Install your dependencies:  
+`npm install --save express`  
+`npm install --save ejs`  
+`npm install --save pg`  
 `npm install --save knex`  
 `npm install --save passport`  
 `npm install --save passport-linkedin`  
 `npm install --save cookie-session`  
 `npm install --save dotenv`  
+
+Make a base express application in a file named 'app.js'  
+`touch app.js`  
+
+```javascript
+'use strict';
+
+var express = require('express');
+var path = require('path');
+
+var app = express();
+
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
+
+
+app.use(express.static(__dirname + "/public"));
+
+app.get('/', function(req, res){
+res.send('Youre at: ' + req.url);
+});
+
+
+var port = 3000;
+app.listen(port, function(){
+console.log("App listening on: " + port);
+});
+
+```
 
 Now initialize your app:  
 `knex init`  
@@ -81,7 +114,7 @@ module.exports = require('knex')(config);
 `git add db`  
 `git commit -am"added db config"`  
 
-Go to LinkedIn, then setup a new [oAuth Application](https://www.linkedin.com/developer/apps). 
+Go to LinkedIn, then setup a new [oAuth Application](https://www.linkedin.com/developer/apps).
 Most items in that form don't matter- the logo, application name, and description will be shown to the user who is trying to login to your app when you request access to their account. You'll also need to provide a logo for your app that is the same pixel length and width. The email, url, and website don't require you to know them or have them set up beforehand, just put something there because you can always change it later.
 
 Once you have the client ID and client secret, you can store it in your .env file like so:
@@ -123,7 +156,7 @@ module.exports = router;
 
 ```
 
-Now, add the following lines to `app.js` (in the appropriate places- see [this example](https://github.com/jaredhanson/passport-linkedin/blob/master/examples/login/app.js) for more details):
+Now, add the following lines to `app.js` (in the appropriate places!!)
 
 #### app.js
 ```javascript
@@ -161,7 +194,7 @@ passport.use(new LinkedInStrategy({
     scope: ['r_emailaddress', 'r_basicprofile'],
   },
   function(token, tokenSecret, profile, done) {
-    
+
       // To keep the example simple, the user's LinkedIn profile is returned to
       // represent the logged-in user.  In a typical application, you would want
       // to associate the LinkedIn account with a user record in your database,
@@ -179,9 +212,3 @@ app.use('/auth', auth);
 [Passport](http://passportjs.org/docs)  
 [passport-linkedin](https://github.com/jaredhanson/passport-linkedin)  
 [Linkedin Passport Example](https://github.com/jaredhanson/passport-linkedin/blob/master/examples/login/app.js)  
-
-## Assignment:
-Read and complete the following exercise:  
-[Express + Passport + Linkedin](https://github.com/gSchool/express-passport-linkedin)  
-
-**Note:** The above exercise uses handlebars, but you may use the templating language of your choice. Make sure you understand what each command does before you copy and paste.
