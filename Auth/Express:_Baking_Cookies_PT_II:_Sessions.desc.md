@@ -102,7 +102,7 @@ var cookieSession = require('cookie-session')
 var app = express();
 
 app.use(cookieSession({
-  name: 'session' //name of cookie to set
+  name: 'session', //name of cookie to set
   // other cookie attributes like maxAge, expires,  domain can be set here
   keys: ['some_secure_key']
 }));
@@ -151,13 +151,14 @@ Finally, increment the view counter:
 app.get('/', function(req,res){
 
   // check if the session exists already
-  // if(req.session)
   // this is how you would check if the user is logged in
-  if(req.session && req.session.views){
+  // if(req.session.username)
+  if(req.session.views){
     req.session.views = parseInt(req.session.views, 10) + 1;
   }else{
-    req.session.views = 0;
+    req.session.views = 1;
   }
+
 
   res.end('<h1>I\'ve visited this page ' + req.session.views + 'times!</h1>');
 });
@@ -173,7 +174,7 @@ app.get('/check-session', function(req, res){
 
   var response = 'user does not have a session';
 
-  if(req.session){
+  if(req.session.views){
     response = 'user has a session';
   }
 
@@ -204,7 +205,7 @@ app.get('/', function(req,res){
   if(req.session.views){
     req.session.views = parseInt(req.session.views, 10) + 1;
   }else{
-    req.session.views = 0;``
+    req.session.views = 1;
   }
 
   res.end('<h1>I\'ve visited this page ' + req.session.views + 'times!</h1><a href="/reset">Start Over</a>');
@@ -255,7 +256,7 @@ KEY_THREE=somevalue
 
 ```javascript
 //loads all key value pairs from .env file into shell as environment variables
-require('dotenv').configure();
+require('dotenv').config();
 
 var express = require('express');
 var cookieSession = require('cookie-session')
