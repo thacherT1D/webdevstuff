@@ -49,7 +49,7 @@ A RESTful server would handle the following HTTP requests by mapping them to a s
 | Read (all)        | `GET`          | `/artists`   | N/A                   |
 | Read (individual) | `GET`          | `/artists/1` | N/A                   |
 | Create            | `POST`         | `/artists`   | `{ name": "Prince" }` |
-| Update            | `PUT`          | `/artists/2` | `{ name": "⚥" }`      |
+| Update            | `PATCH`        | `/artists/2` | `{ name": "⚥" }`      |
 | Destroy           | `DELETE`       | `/artists/2` | N/A                   |
 
 Once the operation is complete, the RESTful server would send a specific HTTP response back to the client indicating the result of the operation.
@@ -254,7 +254,7 @@ router.post('/artists', (req, res, next) => {
     });
 });
 
-router.put('/artists/:id', (req, res, next) => {
+router.patch('/artists/:id', (req, res, next) => {
   knex('artists')
     .where('id', req.params.id)
     .first()
@@ -376,7 +376,7 @@ router.post('/tracks', (req, res, next) => {
     });
 });
 
-router.put('/tracks/:id', (req, res, next) => {
+router.patch('/tracks/:id', (req, res, next) => {
   knex('tracks')
     .where('id', req.params.id)
     .first()
