@@ -1,6 +1,7 @@
 ## Objectives
 
-- Use Express and Knex to build a database-driven, HTTP server
+- Use Express and Knex to build a database-driven, HTTP server.
+- Deploy a database-driven, HTTP server to Heroku.
 
 ## How do you use Express and Knex to build a database-driven, HTTP server?
 
@@ -498,6 +499,52 @@ Now that it's merged, delete the feature branch.
 
 ```shell
 git branch -d http_server
+```
+
+## How do you deploy a database-driven, HTTP server to Heroku?
+
+To get started, checkout a new feature branch.
+
+```shell
+git checkout -b heroku
+```
+
+Then, install the following dependencies locally and save them to the `package.json` file.
+
+```shell
+npm install --save foreman
+```
+
+Create a `Procfile` so Heroku can start the HTTP server with `foreman`.
+
+```shell
+echo 'web: node server.js' > Procfile
+```
+
+Test `foreman` by running the following command.
+
+```shell
+./node_modules/.bin/nf start
+```
+
+Add and commit the changes to your repository.
+
+```shell
+git add .
+git commit -m 'Prepare the Heroku'
+```
+
+Merge the feature branch into the `master` branch.
+
+```shell
+git checkout master
+git merge heroku
+```
+
+Now that it's merged, delete the feature branch.
+
+```shell
+git branch -d heroku
 ```
 
 Push the local `master` branch to Heroku's `master` branch.
