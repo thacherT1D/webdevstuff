@@ -5,7 +5,7 @@
 * Explain what a salt is
 * Explain why using a salt is important
 * Explain the process of user registration
-* Create migration files to create a users table
+* Use knex migration to create a users table
 * Add custom routes for user registration
 * Use bcrypt to hash and salt passwords
 
@@ -26,6 +26,10 @@ Some of the properties of a successful hashing function include:
 * It is impractical to calculate an input based on a hash
 * Even small changes to an input will result in a completely new hash that is uncorrelated to a previous hash
 
+### Exercise
+
+Write down in your own words why cryptographic hashing is important. Once you're finished, we'll discuss what you wrote.
+
 ## What is a salt?
 
 Before a password is run through a hashing function, it is recommended to add another layer of protection with something called a salt. A **salt** is a random data string that is concatenated to input before it's hashed.
@@ -34,30 +38,33 @@ Before a password is run through a hashing function, it is recommended to add an
 
 Using a salt provides extra security since different random data is generated each time for each password. This prevents attackers from potentially using a table of precomputed hashes of common passwords to gain access.
 
-### What is the user registration process?
+### Exercise
 
-1. User submits form with various information required to register
-1. Plain-text password is concatenated with random generated salt
-1. Plain-text password + salt is then run through hashing function
-1. Encoded string output (hash) is stored in password column in database
+Turn to your neighbor and discuss what a salt is and how it adds another layer of security before hashing a password. We'll regroup and I'll pick students at random to share what you talked about.
+
+## What is the user registration process?
+
+1. User submits form with various data required to register
+1. Database is queried to see if unique information already exists, such as email
+1. If not, plain-text password is concatenated with random generated salt
+1. Plain-text password + salt is then run through hashing function, which returns an encoded string at a fixed length (hash)
+1. Hash is inserted along with user information into database
 
 ## Create migrations for users table
 
 To start off with, change into your `trackify` directory and make a new branch called `registration`.
 
-```
-cd ~/Users/Galvanize/g28/week9/trackify
+```shell
+cd PATH_TO/trackify
 git checkout -b registration
 ```
 
-Create the migration file to define the schema for the users table and open the migration file with atom.
+Open the project directory with atom if you haven't already, and create the migration file to define the schema for the users table.
 
-```
+```shell
+atom .
 npm run knex migrate:make users
-atom TIMESTAMP_users.js
 ```
-
-The user data you will need to store in your databases will vary from project to project, but for trackify we are only concerned with email and password.
 
 Inside the newly created `TIMESTAMP_users.js` migration file, add the following:
 
@@ -80,16 +87,16 @@ exports.down = function(knex) {
 
 Add and commit your work.
 
-```
+```shell
 git add .
-git commit -m "create user migration file"
+git commit -m "create migration file for users table"
 ```
 
-## Add user registration routes
+## Add user registration route
 
 Create a new file for the users routes and open it with Atom.
 
-```
+```shell
 touch routes/users.js
 atom routes/users.js
 ```
@@ -102,9 +109,11 @@ const usersRoutes = require('routes/users');
 app.use('/users', usersRoutes);
 ```
 
-After requiring the necessary dependencies in the `users.js` file, add a `POST` route to the `'/'` path, and save the incoming data as constants from `req.body` for the email and password.
+After requiring the necessary dependencies for an Express router and knex, add a `POST` route to the `'/'` path in the `users.js` file. Save the incoming data from `req.body` as constants for the email and password.
 
 ```JavaScript
+'use strict';
+
 const express = require('express');
 const router = express.Router();
 
@@ -122,21 +131,14 @@ router.post('/', (req, res, next) => {
 
 Add and commit your work.
 
-```
+```shell
 git add .
 git commit -m "add register user route"
 ```
 
-Before hashing the password or inserting data, query the database to see if the email already exists.
+In the route handler, before hashing the password or inserting data, query the database to see if the email already exists.
 
 ```JavaScript
-const express = require('express');
-const router = express.Router();
-
-const environment = process.env.NODE_ENV || 'development';
-const knexConfig = require('../knexfile')[environment];
-const knex = require('knex')(knexConfig);
-
 router.post('/', (req, res, next) => {
   const email = req.body.email;
   const password = req.body.password;
@@ -159,7 +161,7 @@ router.post('/', (req, res, next) => {
 
 Add and commit your work.
 
-```
+```shell
 git add .
 git commit -m "add unique email check"
 ```
@@ -168,7 +170,7 @@ git commit -m "add unique email check"
 
 For our password hashing, we will use an NPM package called bcrypt. To start off with, install and save bcrypt:
 
-```
+```shell
 npm install --save bcrypt
 ```
 
@@ -212,7 +214,7 @@ bcrypt.hash(plainTextPassword, saltRounds, (err, hash) => {
 });
 ```
 
-In the `users.js` route file, use the `.hash()` method to hash and salt the password.
+Use the `bcrypt.hash()` method to generate a salt and hash the password.
 
 ```JavaScript
 router.post('/', (req, res, next) => {
@@ -243,7 +245,7 @@ router.post('/', (req, res, next) => {
 
 Add and commit your work.
 
-```
+```shell
 git add .
 git commit -m "use bcrypt to hash password"
 ```
@@ -289,9 +291,9 @@ router.post('/', (req, res, next) => {
 
 Add and commit your work, and push to the registration branch. Then, checkout the master branch, and merge registration into master. Delete the registration branch if you'd like.
 
-```
+```shell
 git add .
-git commit -m "use knex to insert user data into db"
+git commit -m "use knex to insert user data with hash into db"
 git push origin registration
 git checkout master
 git merge registration
