@@ -15,12 +15,11 @@ By the end of this lesson you will be able to:
 
 Broadly speaking, a session refers to an ongoing dialogue between two system. In the case of Express, the systems are the client and the server.
 
-When a client makes a request to the server, the server creates a session to identify the client. The server can then use that session throughout the ongoing dialogue to keep track of who the client is.
+When a client makes a request to the server, the server creates a session token to identify the client. The server can then use that session token throughout the ongoing dialogue to keep track of who the client is.
 
-Essentially, a session is a piece of data which can provide:
+Essentially, a session is a token which can provide:
 
 - a way to identify the client.
-- ensure the client is not falsifying information.
 
 A session can be stored:
 
@@ -29,13 +28,30 @@ A session can be stored:
 - in a `cookie` or a `JWT`.
 - in many other forms.
 
-A session can be cryptographically signed using secret keys to ensure the data has not been tampered with or falsified.
+Since anybody can create a cookie and falsify information, like a session token, the server needs a way to ensure the token is authentic and not fraudulent.
+
+A session token can be signed cryptographically using secret keys to ensure the data has not been tampered with or falsified.
+
+The server then sends the session token along with the signature.
+
+The client responds with the session token and signature.
+
+The server verifies signature by resigning the session token with it's secret key.
+
+If the signatures match the server can be confident the session has not been modified.
 
 ***
 
 ## Sessions in Express
 
-[Cookie-Session](https://github.com/expressjs/cookie-session) is a piece of middleware that provides:
+[Cookie-Session](https://github.com/expressjs/cookie-session) is a piece of middleware that is useful for storing, reading and signing sessions and storing them in a cookie.
+
+Cookie session modifies the `req` object:
+
+- `req.session` represents the session stored in the cookie.
+- `req.sessionOptions` represents the settings of the session.
+
+This means it provides:
 
 - A way to set cookies and send them to the client.
 - A way to sign cookies and verify their authenticity.
@@ -48,59 +64,117 @@ Watch the following video, as you do consider the following questions:
 
 ### Using Cookie-Session
 
+**You Do:** Follow along with the rest of the lesson.
+
+Ensure you have the [cookie-session](https://github.com/expressjs/cookie-session) docs pulled up.
+
+Create a and navigate into a directory for the session project.
+
+Use `npm init` to create a `package.json`.
+
+Use `npm` to install and save `cookie-session`, `express`
+
 Set up the `cookie-session` middleware:
 
 ```javascript
+var express = require('express');
 var cookieSession = require('cookie-session')
+
+var app = express();
 
 app.use(cookieSession({
   name: 'session' //name of cookie to set
   // other cookie attributes like maxAge, expires,  domain can be set here
   keys: ['some_secure_key']
 }));
+
+app.get('/', function(){
+  res.end('Hello Express')
+})
+
+app.listen(8080);
 ```
 
-Cookie session modifies the `req` object:
+Use `node` or `nodemon` to launch the program.
 
-- `req.session` represents the session stored in the cookie.
-- `req.sessionOptions` represents the settings of the session.
+Open up your browser to `localhost:8080` and ensure it reads Hello Express
 
-
-To read a session value:
-
-```javascript
-app.get('/', function(req,res){
-
-  // get a value from the session and print it
-  console.log('Some stored session value', req.session.someValue);
-
-  res.end();
-});
-```
-
-To set a session value:
+Update the route to set a session:
 
 ```javascript
 app.get('/', function(req,res){
 
   // set a session value
-  req.session.otherValue = 'foo';
+  req.session.views = 0;
 
   res.end();
 });
 ```
 
-To delete a session:
+Open up the `storage` and look for the cookie you sent.
+
+Update the route to send the number of views to the user
 
 ```javascript
-app.get('/', function(req, res){
+app.get('/', function(req,res){
+
+  req.session.views = 0;
+
+  res.end('<h1>I\'ve visited this page ' + req.session.views + 'times!</h1>');
+});
+```
+
+Open up your browser and test.
+
+Finally, increment the view counter:
+
+
+```javascript
+app.get('/', function(req,res){
+
+  if(req.session.views){
+    req.session.views++;
+  }else{
+    req.session.views = 0;
+  }
+
+  res.end('<h1>I\'ve visited this page ' + req.session.views + 'times!</h1>');
+});
+```
+
+Test in browser.
+
+
+Finally, add a route that will delete the session
+
+```javascript
+app.get('/reset', function(req, res){
 
   // delete the session
   req.session = null;
 
-  res.end();
+  res.end('<h1>Counter Reset</h1><a href="/">Start Counting Again!</a>');
 });
 ```
+
+Check in your browser storage that the cookie is gone.
+
+For fun, let's add a link to the reset page:
+
+```javascript
+app.get('/', function(req,res){
+
+  if(req.session.views){
+    req.session.views++;
+  }else{
+    req.session.views = 0;
+  }
+
+  res.end('<h1>I\'ve visited this page ' + req.session.views + 'times!</h1><a href="/reset">Start Over</a>');
+});
+```
+
+Congrats! You now know how to use `cookie-session`.
 
 ### Generating secure keys and using dotenv to load them.
 

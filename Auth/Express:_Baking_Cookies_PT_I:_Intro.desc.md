@@ -37,9 +37,10 @@ Set-Cookie: sessionToken=abc123; Expires=Wed, 09 Jun 2021 10:18:14 GMT
 **You Do:**
 
 1. Open up chrome.
+1. Logout of [github.com](https://github.com)
 1. Open up the `network` developer tools.
 1. Select the `other` filter.
-1. Navigate to [github.com](https://github.com).
+1. Login to [github.com](https://github.com).
 1. Examine the `Response Headers`
 1. Is there a `Set-Cookie` header?
 
@@ -50,7 +51,7 @@ The client typically reads the `Set-Cookie` `Response Header` and then stores th
 **You Do:**
 
 1. Open up chrome.
-1. Open up the `storage` developer tools.
+1. Open up the `resources` developer tools.
 1. Navigate to [github.com](https://github.com).
 1. Click on the `Cookies` dropdown.
 1. Click on the `github.com` cookie.
@@ -81,7 +82,7 @@ Personalization
 
   - Settings are sent in the cookie to persist personalization settings.
 
-** You Do:**
+**You Do:**
 
 1. Can you think of any examples of where a personalization cookie might be useful?
 
@@ -96,7 +97,7 @@ Tracking
 
   - Information about a user can be stored in a cookie.
 
-** You Do:**
+**You Do:**
 
 1. What kind of user information would be useful to store?
 
@@ -169,6 +170,7 @@ app.get('/', function(req, res) {
     httpOnly: true
   };
   res.cookie('some_name', 'some_value', opts);
+  res.end();
 })
 ```
 
