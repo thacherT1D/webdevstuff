@@ -70,7 +70,10 @@ Once you've satisfied, turn to a neighbor and explain how information flows thro
 
 ## Why is a RESTful, database-driven HTTP server is useful?
 
-Because humans haven't found a better way to make web apps to manage huge volumes of information.
+- separation of concerns
+- follows the principle of least surprise
+- great way to organize data, relationships, processes
+- process are independently scalable and replaceable
 
 ## How do you use Express and Knex to build a RESTful, database-driven HTTP server?
 
