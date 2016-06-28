@@ -7,7 +7,7 @@
 
 ## What's a RESTful, database-driven HTTP server?
 
-A **RESTful, database-driven HTTP server** is exactly what the name implies. It's an HTTP server that communicates with a HTTP client using a RESTful HTTP API. It's sole purpose is to manage information that's persisted to a database.
+A **RESTful, database-driven HTTP server** is exactly what the name implies. It's a server that communicates with a client using a RESTful HTTP API. The sole purpose of the HTTP server is to manage information that's persisted to a database.
 
 Here's a sequence diagram of the RESTful, database-driven HTTP server.
 
