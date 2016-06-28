@@ -45,6 +45,15 @@ If the signatures match the server can be confident the session has not been mod
 
 - Talk to everyone at your table, explain session token signing as if they were someone with no technical background.
 
+## Example Authentication flow
+
+1. Client sends login credentials to server
+1. Server verifies credentials with database
+1. Server sends back a cookie with a signed session set to the users id, username, or email
+1. Client stores the cookie and sends it with each subsequent request.
+1. Server verifies the cookie's signature, if it is valid then the user is authenticated.
+1. The server can log out the client by clearing the cookie or clearing the session from the cookie.
+
 ***
 
 ## Sessions in Express
@@ -64,6 +73,10 @@ This means it provides:
 **You Do:**
 
 Watch the following video, as you do consider the following questions:
+
+- How do you set a cookie session using `cookie-session`?
+- How do you clear a cookie session using `cookie-session`?
+- How do you verify a cookie session using `cookie-session`?
 
 <iframe src="https://player.vimeo.com/video/141306923?byline=0&portrait=0" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
