@@ -36,31 +36,31 @@ Here's a sequence diagram of the RESTful, database-driven HTTP server.
 For example, imagine a RESTful, database-driven HTTP server manages the persistence of the following rows in the `artists` table.
 
 ```text
- id |    name     |          created_at           |          updated_at
-----+-------------+-------------------------------+-------------------------------
-  1 | The Beatles | 2016-06-27 15:34:24.638326-07 | 2016-06-27 15:34:24.638326-07
+ id |    name     
+----+-------------
+  1 | The Beatles
 (1 row)
 ```
 
 A RESTful server would handle the following HTTP requests by mapping them to a specific REST action.
 
-| REST Action       | Request Method | Request URL  | Request Body         |
-|-------------------|----------------|--------------|----------------------|
-| Read (all)        | `GET`          | `/artists`   | N/A                  |
-| Read (individual) | `GET`          | `/artists/1` | N/A                  |
-| Create            | `POST`         | `/artists`   | `{ name": "Prince", "created_at": "2016-06-28T22:34:24.638Z", "updated_at": "2016-06-28T22:34:24.638Z" }` |
-| Update            | `PATCH`        | `/artists/2` | `{ name": "⚥" }`     |
-| Destroy           | `DELETE`       | `/artists/2` | N/A                  |
+| REST Action       | Request Method | Request URL  | Request Body          |
+|-------------------|----------------|--------------|-----------------------|
+| Read (all)        | `GET`          | `/artists`   | N/A                   |
+| Read (individual) | `GET`          | `/artists/1` | N/A                   |
+| Create            | `POST`         | `/artists`   | `{ name": "Prince" }` |
+| Update            | `PUT`          | `/artists/2` | `{ name": "⚥" }`      |
+| Destroy           | `DELETE`       | `/artists/2` | N/A                   |
 
 Once the operation is complete, the RESTful server would send a specific HTTP response back to the client indicating the result of the operation.
 
-| REST Action       | Response Status | Response Content-Type | Response Body |
-|-------------------|-----------------|-----------------------|---------------|
-| Read (all)        | `200`           | `application/json`    | `[{ id: "1", name": "The Beatles", "created_at": "2016-06-27T22:34:24.638Z", "updated_at": "2016-06-27T22:34:24.638Z" }]` |
-| Read (individual) | `200`           | `application/json`    | `{ id: "1", name": "The Beatles", "created_at": "2016-06-27T22:34:24.638Z", "updated_at": "2016-06-27T22:34:24.638Z" }`   |
-| Create            | `200`           | `application/json`    | `{ id: "2", name": "Prince", "created_at": "2016-06-28T22:34:24.638Z", "updated_at": "2016-06-28T22:34:24.638Z" }`        |
-| Update            | `200`           | `application/json`    | `{ id: "2", name": "⚥", "created_at": "2016-06-28T22:34:24.638Z", "updated_at": "2016-06-28T22:34:24.638Z" }`             |
-| Destroy           | `200`           | `application/json`    | `{ name": "⚥", "created_at": "2016-06-28T22:34:24.638Z", "updated_at": "2016-06-28T22:34:24.638Z" }`                      |
+| REST Action       | Response Status | Response Content-Type | Response Body                         |
+|-------------------|-----------------|-----------------------|---------------------------------------|
+| Read (all)        | `200`           | `application/json`    | `[{ id: "1", name": "The Beatles" }]` |
+| Read (individual) | `200`           | `application/json`    | `{ id: "1", name": "The Beatles" }`   |
+| Create            | `200`           | `application/json`    | `{ id: "2", name": "Prince" }`        |
+| Update            | `200`           | `application/json`    | `{ id: "2", name": "⚥" }`             |
+| Destroy           | `200`           | `application/json`    | `{ name": "⚥" }                       |
 
 ### Exercise
 
