@@ -37,6 +37,8 @@ app.use((err, _req, res, _next) => {
 app.listen(port, () => {
   console.log('Listening on port', port);
 });
+
+module.exports = app;
 ```
 
 In a `knex.js` file, type out the following code.
@@ -136,15 +138,15 @@ router.put('/artists/:id', (req, res, next) => {
           .send('first_name must not be blank');
       }
 
-      knex('artists')
+      return knex('artists')
         .update(artist, '*')
         .where('id', id)
         .then((results) => {
           res.send(results[0]);
-        })
-        .catch((err) => {
-          next(err);
         });
+    })
+    .catch((err) => {
+      next(err);
     });
 });
 
@@ -176,17 +178,17 @@ router.delete('/artists/:id', (req, res, next) => {
     });
 });
 
-router.get('/artists/:id/books', (req, res, next) => {
+router.get('/artists/:id/tracks', (req, res, next) => {
   const id = Number.parseInt(req.params.id);
 
   if (Number.isNaN(id)) {
     return next();
   }
 
-  knex('books')
+  knex('tracks')
     .where('artist_id', id)
-    .then((books) => {
-      res.send(books));
+    .then((track) => {
+      res.send(track);
     })
     .catch((err) => {
       next(err);
