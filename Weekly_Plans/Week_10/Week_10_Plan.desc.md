@@ -12,25 +12,34 @@ Warmup: [Rearange number to get its maximum](https://www.codewars.com/kata/reara
 
 Lessons:
 - [Auth: Password Hashing](/redirects/articles/4692)
-- [Lesson](/cohorts/68/student_dashboard)
-
-
+- [Express: Validation](/redirects/articles/3095)
 
 ---
 
 # Tuesday, June 28
 
-Warmup: [Link to Warmup](http://github.com/gSchool)
+Warmup:
+
+Do your best to recreate [bower.io](https://bower.io/).
 
 Lessons:
-- [Lesson](/cohorts/68/student_dashboard)
-- [Lesson](/cohorts/68/student_dashboard)
 
-Homework: [Homework](/cohorts/68/student_dashboard)
+- [Express: Baking Cookies Pt I: Intro](/redirects/articles/4693)
+- [Express: Baking Cookies Pt II: Sessions](/redirects/articles/4694)
 
-Announcements:
-- Announcement 1
-- Announcement 2
+Old Auth Lesson:
+
+- [Express: Form-Based Authentication](/redirects/articles/3058)
+
+> This lesson is kind of a mess, but it has 4 really useful videos that put together authentication:
+- Auth Overview
+- Hashing Overview
+- Cookie Overview
+- Session Overview
+
+Exercise / Homework:
+
+- [Express Cookie Session Form Authentication Exercise](https://github.com/gSchool/express-cookie-session-form-authentication-exercise)
 
 ---
 
