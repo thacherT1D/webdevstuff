@@ -133,7 +133,7 @@ Finally, increment the view counter:
 app.get('/', function(req,res){
 
   if(req.session.views){
-    req.session.views++;
+    req.session.views = parseInt(req.session.views, 10) + 1;
   }else{
     req.session.views = 0;
   }
@@ -165,7 +165,7 @@ For fun, let's add a link to the reset page:
 app.get('/', function(req,res){
 
   if(req.session.views){
-    req.session.views++;
+    req.session.views = parseInt(req.session.views, 10) + 1;
   }else{
     req.session.views = 0;
   }
