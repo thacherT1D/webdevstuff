@@ -5,7 +5,8 @@
 * Explain what a salt is
 * Explain why using a salt is important
 * Explain the process of user registration
-* Use knex migration to create a users table
+* Use Knex migrations to create a users table
+* Use an HTML form to gather user information
 * Add custom routes for user registration
 * Use bcrypt to hash and salt passwords
 
@@ -92,6 +93,64 @@ git add .
 git commit -m "create migration file for users table"
 ```
 
+## Use an HTML form to gather user information
+
+Install and save the `path` module as a dependency. Make a new directory called `public`.
+
+```shell
+npm install --save path
+mkdir public
+```
+
+Require `path` and add the following Express middleware to `server.js` to serve static files from the `public` directory.
+
+```JavaScript
+const path = require('path');
+
+app.use(express.static(path.join('public')));
+```
+
+Create an HTML file to gather user information required to register.
+
+```shell
+touch public/registration.html
+```
+
+Use the following HTML form as a rough template.
+
+```HTML
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>User Registration</title>
+  </head>
+
+  <body>
+    <form method="post" action="/users">
+      <div>
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email">
+      </div>
+      <div>
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password">
+      </div>
+      <div>
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+  </body>
+</html>
+```
+
+Add and commit your work.
+
+```shell
+git add .
+git commit -m "use html form to gather user registration data"
+```
+
 ## Add user registration route
 
 Create a new file for the users routes and open it with Atom.
@@ -109,7 +168,7 @@ const usersRoutes = require('routes/users');
 app.use('/users', usersRoutes);
 ```
 
-After requiring the necessary dependencies for an Express router and knex, add a `POST` route to the `'/'` path in the `users.js` file. Save the incoming data from `req.body` as constants for the email and password.
+After requiring the necessary dependencies for an Express router and Knex, add a `POST` route to the `'/'` path in the `users.js` file. Save the incoming data from `req.body` as constants for email and password.
 
 ```JavaScript
 'use strict';
@@ -250,7 +309,7 @@ git add .
 git commit -m "use bcrypt to hash password"
 ```
 
-Finally, use the correct knex query to insert the email and hashed password into the users table in the trackify_dev database
+Finally, use Knex to insert the email and hashed password into the users table.
 
 ```JavaScript
 router.post('/', (req, res, next) => {
