@@ -165,6 +165,22 @@ app.get('/', function(req,res){
 
 Test in browser.
 
+Lets add a route to check if a user has a session.
+This logic could be used to check if a user is authenticated.
+
+```javascript
+app.get('/check-session', function(req, res){
+
+  var response = 'user does not have a session';
+
+  if(req.session){
+    response = 'user has a session';
+  }
+
+  res.send('<h1>'  + response + '</h1>');
+});
+```
+
 
 Finally, add a route that will delete the session
 
