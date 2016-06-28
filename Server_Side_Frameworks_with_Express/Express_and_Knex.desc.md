@@ -12,14 +12,14 @@ A **RESTful, database-driven HTTP server** is exactly what the name implies. It'
 Here's a sequence diagram of the RESTful, database-driven HTTP server.
 
 ```text
-┌─── Chrome ──┐    JSON       ┌── Node.js ──┐    SQL        ┌── postgres ─┐               ╔════════════ cluster ═══════════╗
+┌─── Chrome ──┐               ┌── Node.js ──┐               ┌── postgres ─┐               ╔════════════ cluster ═══════════╗
 │             │─── request ──▶│             │─── request ──▶│             │──── write ───▶║                                ║
-│             │               │             │               │             │               ║  ┏━━━━━━━━ database ━━━━━━━━┓  ║
+│             │    JSON       │             │    SQL        │             │               ║  ┏━━━━━━━━ database ━━━━━━━━┓  ║
 │   jQuery    │               │   Express   │               │             │               ║  ┃                          ┃  ║
 │             │               │   Knex      │               │             │               ║  ┃  ┌──────┬ table ┬─────┐  ┃  ║
-│             │    JSON       │             │    Row(s)     │             │               ║  ┃  ├──────┼───────┼─────┤  ┃  ║
+│             │               │             │               │             │               ║  ┃  ├──────┼───────┼─────┤  ┃  ║
 │             │◀── response ──│             │◀── response ──│             │◀─── read ─────║  ┃  ├──────┼───────┼─────┤  ┃  ║
-└─────────────┘               └─────────────┘               └─────────────┘               ║  ┃  ├──────┼───────┼─────┤  ┃  ║
+└─────────────┘    JSON       └─────────────┘    Row(s)     └─────────────┘               ║  ┃  ├──────┼───────┼─────┤  ┃  ║
                                                                                           ║  ┃  └──────┴───────┴─────┘  ┃  ║
                                                                                           ║  ┃                          ┃  ║
                                                                                           ║  ┃  ┌──────┬ table ┬─────┐  ┃  ║
