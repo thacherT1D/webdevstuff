@@ -1,17 +1,19 @@
 ## Objectives
 
+- Explain what a database-driven, HTTP server is.
+- Explain why a database-driven, HTTP server is useful.
 - Use Express and Knex to build a database-driven, HTTP server.
 - Deploy a database-driven, HTTP server to Heroku.
 
-## How do you use Express and Knex to build a database-driven, HTTP server?
+## What's a database-driven, HTTP server?
 
 Here's a sequence diagram of the database-driven, HTTP server you're going to build today.
 
 ```text
-┌─── HTTPie ──┐    JSON       ┌── Node.js ──┐    SQL        ┌── postgres ─┐               ╔════════════ cluster ═══════════╗
+┌─── Chrome ──┐    JSON       ┌── Node.js ──┐    SQL        ┌── postgres ─┐               ╔════════════ cluster ═══════════╗
 │             │─── request ──▶│             │─── request ──▶│             │──── write ───▶║                                ║
 │             │               │             │               │             │               ║  ┏━━━━━━━━ database ━━━━━━━━┓  ║
-│             │               │   Express   │               │             │               ║  ┃                          ┃  ║
+│   jQuery    │               │   Express   │               │             │               ║  ┃                          ┃  ║
 │             │               │   Knex      │               │             │               ║  ┃  ┌──────┬ table ┬─────┐  ┃  ║
 │             │    JSON       │             │    Row(s)     │             │               ║  ┃  ├──────┼───────┼─────┤  ┃  ║
 │             │◀── response ──│             │◀── response ──│             │◀─── read ─────║  ┃  ├──────┼───────┼─────┤  ┃  ║
@@ -28,6 +30,18 @@ Here's a sequence diagram of the database-driven, HTTP server you're going to bu
                                                                                           ║                                ║
                                                                                           ╚════════════════════════════════╝
 ```
+
+### Exercise
+
+Take a few moments to diagram how a database-driven, HTTP server works.
+
+Once you've satisfied, turn to a neighbor and explain how information flows throw the system.
+
+## Why is a database-driven, HTTP server is useful?
+
+Because they manage resources.
+
+## How do you use Express and Knex to build a database-driven, HTTP server?
 
 Here's an entity relationship diagram representing the data model the HTTP server will need to manage.
 
