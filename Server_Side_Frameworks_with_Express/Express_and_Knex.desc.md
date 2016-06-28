@@ -1,14 +1,16 @@
 ## Objectives
 
-- Use Express and Knex to build a database-driven HTTP server
+- Use Express and Knex to build a database-driven, HTTP server
 
-## How do you use Express and Knex to build a database-driven HTTP server?
+## How do you use Express and Knex to build a database-driven, HTTP server?
+
+Here's a sequence diagram of the database-driven, HTTP server you're going to build today.
 
 ```text
-┌─── Chrome ──┐    JSON       ┌── Node.js ──┐    SQL        ┌── postgres ─┐               ╔════════════ cluster ═══════════╗
+┌─── HTTPie ──┐    JSON       ┌── Node.js ──┐    SQL        ┌── postgres ─┐               ╔════════════ cluster ═══════════╗
 │             │─── request ──▶│             │─── request ──▶│             │──── write ───▶║                                ║
 │             │               │             │               │             │               ║  ┏━━━━━━━━ database ━━━━━━━━┓  ║
-│   jQuery    │               │   Express   │               │             │               ║  ┃                          ┃  ║
+│             │               │   Express   │               │             │               ║  ┃                          ┃  ║
 │             │               │   Knex      │               │             │               ║  ┃  ┌──────┬ table ┬─────┐  ┃  ║
 │             │    JSON       │             │    Row(s)     │             │               ║  ┃  ├──────┼───────┼─────┤  ┃  ║
 │             │◀── response ──│             │◀── response ──│             │◀─── read ─────║  ┃  ├──────┼───────┼─────┤  ┃  ║
@@ -25,6 +27,8 @@
                                                                                           ║                                ║
                                                                                           ╚════════════════════════════════╝
 ```
+
+Here's an entity relationship diagram representing the data model the HTTP server will need to manage.
 
 ```text
 ┌───────────────────────────────────────────────────────────────┐
@@ -54,7 +58,7 @@
 To get started, checkout a new feature branch.
 
 ```shell
-git checkout -b express_knex
+git checkout -b http_server
 ```
 
 Then, install the following dependencies locally and save them to the `package.json` file.
@@ -487,13 +491,13 @@ Merge the feature branch into the `master` branch.
 
 ```shell
 git checkout master
-git merge express_knex
+git merge http_server
 ```
 
 Now that it's merged, delete the feature branch.
 
 ```shell
-git branch -d express_knex
+git branch -d http_server
 ```
 
 Push the local `master` branch to Heroku's `master` branch.
