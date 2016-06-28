@@ -6,6 +6,7 @@ By the end of this lesson you will be able to:
 
 - Describe the purpose and function of a session.
 - Store a session in a cookie.
+- Check for an existing session.
 - Clear a session from a cookie.
 - Use environment variables to store session key.
 
@@ -146,11 +147,13 @@ Open up your browser and test.
 
 Finally, increment the view counter:
 
-
 ```javascript
 app.get('/', function(req,res){
 
-  if(req.session.views){
+  // check if the session exists already
+  // if(req.session)
+  // this is how you would check if the user is logged in
+  if(req.session && req.session.views){
     req.session.views = parseInt(req.session.views, 10) + 1;
   }else{
     req.session.views = 0;
@@ -214,6 +217,8 @@ Generate at and save at least 3 keys using the following command:
 ```bash
 node -e "require('crypto').randomBytes(48, function(ex, buf) { console.log(buf.toString('hex')) });"
 ```
+
+> FUN: Try to break down and understand the command.
 
 Since hard coding the keys is poor practice, an environment variable should be used for the keys
 
