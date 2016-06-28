@@ -14,8 +14,6 @@ Lessons:
 - [Auth: Password Hashing](/redirects/articles/4692)
 - [Express: Validation](/redirects/articles/3095)
 
-
-
 ---
 
 # Tuesday, June 28
@@ -29,9 +27,14 @@ Lessons:
 - [Express: Baking Cookies Pt I: Intro](/redirects/articles/4693)
 - [Express: Baking Cookies Pt II: Sessions](/redirects/articles/4694)
 
-More:
+Old Auth Lesson:
 
 - [Express: Form-Based Authentication](/redirects/articles/3058)
+
+Exercise / Homework:
+
+- [Express Cookie Session Form Authentication Exercise](https://github.com/gSchool/express-cookie-session-form-authentication-exercise)
+
 ---
 
 # Wednesday, June 29

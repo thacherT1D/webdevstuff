@@ -230,12 +230,6 @@ app.use(cookieSession({
 
 ***
 
-## Exercise
-
-[Github Repo]()
-
-***
-
 ## Resources
 
 - [Github: Cookie-Session](https://github.com/expressjs/cookie-session)
