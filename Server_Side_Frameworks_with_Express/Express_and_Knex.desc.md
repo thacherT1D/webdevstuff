@@ -51,8 +51,16 @@
 └─────────────┴─────────────────────────┴──────────────────────────────────────────────────┘
 ```
 
+To get started, checkout a new feature branch.
+
 ```shell
 git checkout -b express_knex
+```
+
+Then, install the following dependencies locally and save them to the `package.json` file.
+
+```shell
+npm install --save express body-parser morgan
 ```
 
 In a `server.js` file, type the following code.
