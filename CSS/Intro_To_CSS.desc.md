@@ -10,7 +10,7 @@ CSS is a style sheet language used for describing the look and formatting of a d
 
 Make sure to check the **Mastery** tab to understand what you're expected to know by the end of this lesson.
 
----
+<hr style="margin: 5rem 0;"/>
 
 ## Linking CSS to HTML
 
@@ -42,7 +42,7 @@ Let's use the `style` attribute to make give that div a width of 200px, a height
 
 `width`, `value`, `background-color`, are all called _properties_. Their corresponding values (200px, 200px, and red) are, conveniently enough, called _values_.
 
-<div class="media" style="padding: 2.5rem 2rem 1rem; border: 1px solid #c7254e; border-radius: 1rem;">
+<div class="media" style="padding: 2.5rem 2rem 1rem; margin: 2rem 0; border: 1px solid #c7254e; border-radius: 1rem;">
   <div class="media-left" style="font-size: 3rem; color: #c7254e;">
     <i class="fa fa-exclamation-circle"></i>
   </div>
@@ -101,7 +101,7 @@ But, it's a better practice to move styling to an external stylesheet. Let's cre
 
 This last way is the preferred way of linking your CSS with your HTML.
 
-<div class="media" style="padding: 2.5rem 2rem 1rem; border: 1px solid #c7254e; border-radius: 1rem;">
+<div class="media" style="padding: 2.5rem 2rem 1rem; margin: 2rem 0; border: 1px solid #c7254e; border-radius: 1rem;">
   <div class="media-left" style="font-size: 3rem; color: #c7254e;">
     <i class="fa fa-exclamation-circle"></i>
   </div>
@@ -115,7 +115,7 @@ This last way is the preferred way of linking your CSS with your HTML.
   </div>
 </div>
 
----
+<hr style="margin: 5rem 0;"/>
 
 ## Specificity
 
@@ -146,7 +146,7 @@ The answer is that whichever rule comes _latest_ in the stylesheet will take pre
 
 HTML Elements (`div`, `p`, `ul`, etc) are the least specific CSS selectors. That is, they hold the least amount of weight.
 
-<div class="media" style="padding: 2.5rem 2rem 1rem; border: 1px solid #c7254e; border-radius: 1rem;">
+<div class="media" style="padding: 2.5rem 2rem 1rem; margin: 2rem 0; border: 1px solid #c7254e; border-radius: 1rem;">
   <div class="media-left" style="font-size: 3rem; color: #c7254e;">
     <i class="fa fa-exclamation-circle"></i>
   </div>
@@ -221,7 +221,7 @@ After that is the `!important` tag. It's not a good practice to use either of th
 
 You can see an example of all of these in action [in this codepen](https://codepen.io/bwreid/pen/QypZGO).
 
----
+<hr style="margin: 5rem 0;"/>
 
 ## Width and Height
 
@@ -259,7 +259,7 @@ Two of the most common keywords to place in height and width are auto and inheri
 
 **Auto** means that the browser is going to calculate and select the dimension for you. **Inherit** means that the value will be inherited from its parent element.
 
-<div class="media" style="padding: 2.5rem 2rem 1rem; border: 1px solid #c7254e; border-radius: 1rem;">
+<div class="media" style="padding: 2.5rem 2rem 1rem; margin: 2rem 0; border: 1px solid #c7254e; border-radius: 1rem;">
   <div class="media-left" style="font-size: 3rem; color: #c7254e;">
     <i class="fa fa-exclamation-circle"></i>
   </div>
@@ -279,7 +279,7 @@ _Further reading:_
 * [MDN - height](https://developer.mozilla.org/en-US/docs/Web/CSS/height)
 * [Auto width vs. 100% width](http://www.456bereastreet.com/lab/width-auto/)
 
----
+<hr style="margin: 5rem 0;"/>
 
 ## Display Styles
 
@@ -310,7 +310,7 @@ _Further reading:_
 * [List of HTML5 inline elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Inline_elemente)
 * [What's the Deal with Display: Inline-Block?](http://designshack.net/articles/css/whats-the-deal-with-display-inline-block/)
 
----
+<hr style="margin: 5rem 0;"/>
 
 ## The Box Model
 
@@ -339,7 +339,7 @@ To see these things in action, try giving your div the following style:
 
 You can also style the top, right, bottom, or left side of any of these attributes separately. For instance, if you want to push your div farther down the page, you can give it a `margin-top` of 100px.
 
-<div class="media" style="padding: 2.5rem 2rem 1rem; border: 1px solid #c7254e; border-radius: 1rem;">
+<div class="media" style="padding: 2.5rem 2rem 1rem; margin: 2rem 0; border: 1px solid #c7254e; border-radius: 1rem;">
   <div class="media-left" style="font-size: 3rem; color: #c7254e;">
     <i class="fa fa-exclamation-circle"></i>
   </div>
@@ -348,17 +348,20 @@ You can also style the top, right, bottom, or left side of any of these attribut
 
     <p>Take some time to answer the following:</p>
 
-    <p>You can set margins/border/padding by defining four values instead of one; e.g. margin: 15px 15px 15px 15px. Which number corresponds to which direction?</p>
+    <ol>
+      <li>You can set margins/border/padding by defining four values instead of one; e.g. margin: 15px 15px 15px 15px. Which number corresponds to which direction?</li>
 
-    <p>You can set margins/border/padding by defining two values; e.g. margin: 20px 30px. Which number corresponds to which direction(s)?</p>
+      <li>You can set margins/border/padding by defining two values; e.g. margin: 20px 30px. Which number corresponds to which direction(s)?</li>
 
-    <p>You can set margins/border/padding by defining three values; e.g. padding: 15px 10px 5px. Which number corresponds to which direction(s)?</p>
+      <li>You can set margins/border/padding by defining three values; e.g. padding: 15px 10px 5px. Which number corresponds to which direction(s)?</li>
 
-    <p>You can create dashed and dotted borders and set different sides of a div to have different border properties. How?</p>
+      <li>You can create dashed and dotted borders and set different sides of a div to have different border properties. How?</li>
 
-    <p>What does the border-radius property do?</p>
+      <li>What does the border-radius property do?</li>
 
-    <p>What happens if you set the margins on a block-level div equal to `0 auto`?</p>
+      <li>What happens if you set the margins on a block-level div equal to `0 auto`?</li>
+    </ol>
+
   </div>
 </div>
 
@@ -370,7 +373,7 @@ A final note on the box model. Note that when you add padding or border to your 
 
 The default styling is `content-box`, in which the size of the content is what is fixed by `width` and `height`, rather than the size of content+padding+border.
 
----
+<hr style="margin: 5rem 0;"/>
 
 ## Floating
 
@@ -382,7 +385,7 @@ When we float an element to the left, that element will be aligned as left as po
 
 Open up [this codepen](http://codepen.io/bwreid/pen/LZWwge) to begin playing around with floating elements! Read through the HTML and CSS to make sure you understand how everything is working before starting on this next exercise.
 
-<div class="media" style="padding: 2.5rem 2rem 1rem; border: 1px solid #c7254e; border-radius: 1rem;">
+<div class="media" style="padding: 2.5rem 2rem 1rem; margin: 2rem 0; border: 1px solid #c7254e; border-radius: 1rem;">
   <div class="media-left" style="font-size: 3rem; color: #c7254e;">
     <i class="fa fa-exclamation-circle"></i>
   </div>
@@ -416,7 +419,7 @@ But what if we want this new div to be on its own row, as you might expect from 
 
 An element styled with `clear: both;` can't have any floats to the left or right of it, and so in the presence of floated elements will break into a new row.
 
----
+<hr style="margin: 5rem 0;"/>
 
 ## Positioning
 
@@ -478,7 +481,7 @@ To play around with this, select one of the images and select it specifically. T
 
 Change the value now to `30px`. How is it changed? Is it what you expected?
 
-<div class="media" style="padding: 2.5rem 2rem 1rem; border: 1px solid #c7254e; border-radius: 1rem;">
+<div class="media" style="padding: 2.5rem 2rem 1rem; margin: 2rem 0; border: 1px solid #c7254e; border-radius: 1rem;">
   <div class="media-left" style="font-size: 3rem; color: #c7254e;">
     <i class="fa fa-exclamation-circle"></i>
   </div>
