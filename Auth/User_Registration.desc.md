@@ -90,18 +90,17 @@ Turn to your neighbor and discuss what a salt is and how it adds another layer o
 
 ## What is the user registration process?
 
-1. User submits form with various data required to register
-1. Database is queried to see if unique information already exists, such as email
-1. If not, plain-text password is concatenated with random generated salt
-1. Plain-text password + salt is then run through hashing function, which returns an encoded string at a fixed length (hash)
-1. Hash is inserted along with user information into database
+1. User submits form with various data required to register.
+1. The plain-text password is concatenated with random generated salt.
+1. Plain-text password + salt is then run through hashing function, which returns a string at a fixed length.
+1. Hash is inserted along with user information into database.
 
 ## Create migrations for users table
 
 To start off with, change into your `trackify` directory and make a new branch called `registration`.
 
 ```shell
-cd PATH_TO/trackify
+cd trackify
 git checkout -b registration
 ```
 
@@ -140,10 +139,9 @@ git commit -m "create migration file for users table"
 
 ## Use an HTML form to gather user information
 
-Install and save the `path` module as a dependency. Make a new directory called `public`.
+Make a new directory called `public`.
 
 ```shell
-npm install --save path
 mkdir public
 ```
 
