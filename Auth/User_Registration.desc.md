@@ -61,7 +61,7 @@ Turn to a neighbor and explain what a cryptographic hash function is in your own
 
 ## Why is a cryptographic hash function important?
 
-If user-submitted passwords are stored inside a database unhashed, that information is compromised when the database is stolen. The means whoever has access to that data can use try the user's login credentials on other sites. And since so many people use the same password for every site, chances are good the malicious person can now log into your users' banks and online stores. That's why it's necessary to store hashed passwords in your application's database.
+As you've seen, a malicious user can leverage SQL injection attacks to access the rows of a database table without much effort. A common target of these attacks is to access a `users` table that contains passwords. If user-submitted passwords are stored in the `users` table without being hashed, your and possibly other web applications are now compromised as users tend to have the same password. That's why it's necessary to store hashed passwords in your application's database.
 
 Using defined algorithms, hashing helps protect against hash tables, dictionary attacks, rainbow tables, and other types of brute-force attacks.
 
