@@ -63,7 +63,7 @@ Turn to a neighbor and explain what a cryptographic hash function is in your own
 
 As you've seen, a malicious user can leverage SQL injection attacks to access the rows of a database table without much effort. A common target of these attacks is a `users` table which often contains passwords. If user-submitted passwords are stored in a table without being hashed, your and possibly hundreds of other web applications are now compromised as people tend to reuse the same password over and over. That's why it's necessary to store hashed passwords in your application's database.
 
-Using defined algorithms, hashing helps protect against hash tables, dictionary attacks, rainbow tables, and other types of brute-force attacks. Password hashing also provides an extra layer of security between developer and end user. When passwords are stored as cryptographic hashes, the developer never has access to a user's plaintext password.
+Using cryptographic hash functions like bcrypt, helps protect against hash tables, dictionary attacks, rainbow tables, and other types of brute-force attacks. Password hashing also provides an extra layer of security between developer and end user. When passwords are stored as cryptographic hashes, the developer never has access to a user's plaintext password.
 
 ### Exercise
 
