@@ -39,9 +39,16 @@
 
 A cryptographic hash function is designed to be one-way function. In other words, it should be unfeasible to calculate the input string based on the output string. The only way to recreate the input string using it's output string is to try a large number of possible inputs to see if they produce a match.
 
+The input string is often called the message, and the output string is often called the message digest or simply the digest. The ideal cryptographic hash function has four main properties.
+
+1. It's quick to compute the digest for any given message.
+1. It's infeasible to generate a message from its digest, except by trying all possible messages.
+1. A small change to a message should change the digest so extensively that the new digest appears uncorrelated with the old digest.
+1. It's infeasible to find two different messages with the same digest.
+
 ### Exercise
 
-Turn to a neighbor and explain what a cryptographic hash function is and when you might use one.
+Turn to a neighbor and explain what a cryptographic hash function is in your own words. Once you're satisfied, talk about when you might use one.
 
 ## Why is password hashing important?
 
