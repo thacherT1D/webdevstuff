@@ -256,7 +256,7 @@ const bcrypt = require('bcrypt');
 const knex = require('../knex');
 
 router.post('/users', (req, res, next) => {
-  bcrypt.hash(req.body.password, 10, (err, hashed_password) => {
+  bcrypt.hash(req.body.password, 12, (err, hashed_password) => {
     if (err) {
       return next(err);
     }
@@ -282,14 +282,23 @@ module.exports = router;
 http POST localhost:8000/users email=neo@thematrix.com password=theone
 ```
 
-Add and commit your work, and push to the registration branch. Then, checkout the master branch, and merge registration into master. Delete the registration branch if you'd like.
+Add and commit your work.
 
 ```shell
 git add .
 git commit -m 'Add user registration'
-git push origin registration
+```
+
+Then, checkout the master branch and merge the feature branch into the `master` branch.
+
+```shell
 git checkout master
 git merge registration
+```
+
+Once merged, delete the feature branch.
+
+```shell
 git branch -d registration
 ```
 
