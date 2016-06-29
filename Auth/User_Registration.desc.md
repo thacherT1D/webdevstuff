@@ -184,11 +184,13 @@ router.post('/users', (req, res, next) => {
 module.exports = router;
 ```
 
+Then, start the HTTP server with `nodemon`.
+
 ```shell
-nodemon server.js
+npm run nodemon
 ```
 
-Then run the following shell command.
+In a new Terminal tab, then run the following shell command.
 
 ```shell
 http POST localhost:8000/users
