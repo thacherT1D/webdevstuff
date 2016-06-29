@@ -987,3 +987,10 @@ And you should see something like this.
 - [Knex.js - Knex Query Builder](http://knexjs.org/#Builder)
 - [Knex Query Lab](http://michaelavila.com/knex-querylab/)
 - [Wikipedia - SQL injection](https://en.wikipedia.org/wiki/SQL_injection)
+
+
+## Videos
+
+### Running an SQL Injection Attack - Computerphile
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ciNHn38EyRc" frameborder="0" allowfullscreen></iframe>
