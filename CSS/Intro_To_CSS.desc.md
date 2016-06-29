@@ -1,12 +1,23 @@
-## Intro To CSS
+CSS is a style sheet language used for describing the look and formatting of a document written in a markup language. It is used to manipulate the way elements appear on a web page, and CSS can interact with both HTML and JavaScript.
 
-### Cascading Style Sheets (CSS)
+* [Linking CSS to HTML](#linking-css-to-html)
+* [Specificity](#specificity)
+* [Width and Height](#width-and-height)
+* [Display Styles](#display-styles)
+* [The Box Model](#the-box-model)
+* [Floating](#floating)
+* [Positioning](#positioning)
 
-CSS is a style sheet language used for describing the look and formatting of a document written in a markup language.  
+Make sure to check the **Mastery** tab to understand what you're expected to know by the end of this lesson.
 
-It is used to manipulate the way elements appear on a web page, and CSS can interact with both HTML and JavaScript.
+---
 
-## Adding our First Styling
+## Linking CSS to HTML
+
+There are three main ways to include CSS inside of HTML files. You may see all of these out in the wild but there is one preferred method.
+
+<br>
+### Styling with Inline Attributes
 
 An easy (and heavily frowned-upon) way to add styling to an HTML element is by using the `style` attribute on the HTML element directly. As a first example, let's create a new `index.html` file and throw a `<div>` into it:
 
@@ -31,23 +42,20 @@ Let's use the `style` attribute to make give that div a width of 200px, a height
 
 `width`, `value`, `background-color`, are all called _properties_. Their corresponding values (200px, 200px, and red) are, conveniently enough, called _values_.
 
-Using inline styles is a bad practice, for a couple of reasons. For one, you're cluttering up your HTML, and mixing content from styling. Second, it's hard to keep your code DRY if you use inline style. If you wanted to add a second div with the same styling, you'd need to duplicate all that styling code. For example, let's add a second div to our html file:
+<div class="media" style="padding: 2.5rem 2rem 1rem; border: 1px solid #c7254e; border-radius: 1rem;">
+  <div class="media-left" style="font-size: 3rem; color: #c7254e;">
+    <i class="fa fa-exclamation-circle"></i>
+  </div>
+  <div class="media-body">
+    <h3 class="media-heading">Exercise</h3>
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>Kicking it with some Divs</title>
-  </head>
-  <body>
-    <div style="width: 200px; height: 200px; background-color: red;">Here's my first div!</div>
-    <div style="width: 200px; height: 200px; background-color: red;">Here's my second div!</div>
-  </body>
-</html>
-```
+    <p>Using inline styles is a bad practice. Think of at least two reasons why this is considered a bad practice.</p>
 
-Now all that styling code has been duplicated.
+  </div>
+</div>
+
+<br>
+### The Style & Link Elements
 
 We can clean up this code (a.k.a. refactor it) by moving these style rules to a stylesheet. One place we can put our CSS is inside of the `head` of our HTML, as follows:
 
@@ -72,6 +80,8 @@ We can clean up this code (a.k.a. refactor it) by moving these style rules to a 
 </html>
 ```
 
+This is better in that we can now style all our `div` elements by only writing the CSS rules once.
+
 But, it's a better practice to move styling to an external stylesheet. Let's create a file called `style.css` and put the CSS inside of your `style` tag into that file. We can then remove the style tags from our HTML, and replacing it with a link to our external stylesheet:
 
 ```html
@@ -89,7 +99,30 @@ But, it's a better practice to move styling to an external stylesheet. Let's cre
 </html>
 ```
 
-## CSS - CSS Specificity, Classes, and IDs
+This last way is the preferred way of linking your CSS with your HTML.
+
+<div class="media" style="padding: 2.5rem 2rem 1rem; border: 1px solid #c7254e; border-radius: 1rem;">
+  <div class="media-left" style="font-size: 3rem; color: #c7254e;">
+    <i class="fa fa-exclamation-circle"></i>
+  </div>
+  <div class="media-body">
+    <h3 class="media-heading">Exercise</h3>
+
+    <p>You can import multiple CSS files into a single HTML file. This allows you to split up your code to make it more **modular** and better organized.</p>
+
+    <p>Take a look at [galvanize.com](http://www.galvanize.com/). How might you organize the styles on this page to be in multiple files?</p>
+
+  </div>
+</div>
+
+---
+
+## Specificity
+
+When people first start working with CSS, it often feels like rules are applied arbitrarily; however, this is not the case! There are steadfast rules that apply to CSS (for the most part) and much of the confusion all boils down to understanding specificity.
+
+<br/>
+### What Cascading Means
 
 Suppose you change your stylesheet to look like the following:
 
@@ -111,7 +144,33 @@ Which style rules will win out?
 
 The answer is that whichever rule comes _latest_ in the stylesheet will take precedence (this is what the _Cascading_ means). However, you can overwrite this default behavior by using a more _specific_ selector.
 
-HTML Elements (`div`, `p`, `ul`, etc) are the least specific CSS selectors. The next level of specificity is provided by classes. To add a class to an element, we use a class attribute. For example, give your first HTML div a class of "red", and then change your stylesheet to look like this:
+HTML Elements (`div`, `p`, `ul`, etc) are the least specific CSS selectors. That is, they hold the least amount of weight.
+
+<div class="media" style="padding: 2.5rem 2rem 1rem; border: 1px solid #c7254e; border-radius: 1rem;">
+  <div class="media-left" style="font-size: 3rem; color: #c7254e;">
+    <i class="fa fa-exclamation-circle"></i>
+  </div>
+  <div class="media-body">
+    <h3 class="media-heading">Exercise</h3>
+
+    <p>Imagine we added the following to the CSS file mentioned above:</p>
+
+    ```css
+    div {
+      height: 150px;
+      background-color: yellow;
+    }
+    ```
+
+    <p>What would be the resulting rules applied to the div element?</p>
+
+  </div>
+</div>
+
+<br/>
+### Classes & IDs
+
+The next level of specificity is provided by classes. To add a class to an element, we use a class attribute. For example, give your first HTML div a class of "red", and then change your stylesheet to look like this:
 
 ```css
 .red {
@@ -127,9 +186,9 @@ div {
 }
 ```
 
-(the dot in front of "red" indicates that we're targeting a class). Now the first div should be red. Even though the styling for `.red` comes before the styling for `div`, targeting a class is more specific than targeting an element.
+(The dot in front of "red" indicates that we're targeting a class.) Now the first div should be red. Even though the styling for `.red` comes before the styling for `div`, targeting a class is more specific than targeting an element.
 
-The next level of specificty is an id. Let's add a third div with a class of red and an id of green; then change the stylesheet as follows:
+The next level of specificity is an id. Let's add a third div with a class of red and an id of green; then change the stylesheet as follows:
 
 ```css
 #green {
@@ -153,51 +212,114 @@ Even though the new div has a class of red, the id is more specific, so its back
 
 Aside from specificity, what's the difference between a class and an id? For today, all we need to know is that ids for an HTML element should be _unique_: no two elements should share the same id, and no element should have more than one id. Classes, however, don't have these restrictions: an element can have multiple classes, and multiple elements can share the same class.
 
-After ids, the next level of specificity is inline styling. After that is the `!important` tag. It's not a good practice to use either of these, though, so try to avoid them wherever possible.
+<br/>
+### Inline Styling & `!important`
 
-More info: [The Difference Between ID and Class](https://css-tricks.com/the-difference-between-id-and-class/)
+After ids, the next level of specificity is inline styling. We already saw how this worked above when we were linking our HTML to our CSS.
 
-## CSS - Width and Height
+After that is the `!important` tag. It's not a good practice to use either of these, though, so try to avoid them wherever possible.
 
-We've seen what happens as you change the width and height of a div in pixels.  
-Instead of pixel values, you can also assign width and height using percentages. What happens if you set the width to 50%? Is this what you expected? What happens if you set the height to 50%? Is this what you expected?
+You can see an example of all of these in action [in this codepen](https://codepen.io/bwreid/pen/QypZGO).
 
-Here we come to an important difference between width and height. If you want to use a percentage height to work as expected, you need to make sure the parent container has an explicit height set. To learn more, check out [this Stack Overflow article](http://stackoverflow.com/questions/5657964/css-why-doesn-t-percentage-height-work).
+---
 
-One last value to know about for width and height is `inherit`. If the width or height of a div is set to `inherit`, then, as the name implies, the div will inherit the width or height property from its parent.
+## Width and Height
 
-Further reading:
+We've already played around with explicitly setting the width and height of elements like so:
 
-[MDN - width](https://developer.mozilla.org/en-US/docs/Web/CSS/width)
+```css
+img.avatar {
+  height: 50px;
+  width: 50px;
+}
+```
 
-[MDN - height](https://developer.mozilla.org/en-US/docs/Web/CSS/height)
+We can put numbers with different units as the values to width and height or can put some specific keywords. Open up [this codepen](http://codepen.io/bwreid/pen/EyWBdx) for the next few examples.
 
-[Auto width vs. 100% width](http://www.456bereastreet.com/lab/width-auto/)
+<br/>
+### Percentages
 
-## CSS - Display Style
+Try changing just the width now to 50%. Your image should skew to half the size of the browser. Change the height to 50% as well.
+
+Height and width are actually determined by the parent element's height and width. Try adding the following CSS to the codepen and see what happens.
+
+```css
+div {
+  background-color: black;
+  height: 150px;
+}
+```
+
+You'll find that the image now takes up half of the div height. This can end up being a bit tricky the more elements you begin to have on a page.
+
+<br/>
+### Auto & Inherit
+
+Two of the most common keywords to place in height and width are auto and inherit.
+
+**Auto** means that the browser is going to calculate and select the dimension for you. **Inherit** means that the value will be inherited from its parent element.
+
+<div class="media" style="padding: 2.5rem 2rem 1rem; border: 1px solid #c7254e; border-radius: 1rem;">
+  <div class="media-left" style="font-size: 3rem; color: #c7254e;">
+    <i class="fa fa-exclamation-circle"></i>
+  </div>
+  <div class="media-body">
+    <h3 class="media-heading">Exercise</h3>
+
+    <p>Try substituting the values for `img.avatar` with auto. How is the browser determining how to size your image?</p>
+
+    <p>Then, try replacing them with inherit. In each case, what value is being inherited?</p>
+
+  </div>
+</div>
+
+_Further reading:_
+
+* [MDN - width](https://developer.mozilla.org/en-US/docs/Web/CSS/width)
+* [MDN - height](https://developer.mozilla.org/en-US/docs/Web/CSS/height)
+* [Auto width vs. 100% width](http://www.456bereastreet.com/lab/width-auto/)
+
+---
+
+## Display Styles
 
 You've probably noticed by now that by default, `<div>`s stack on top of one another vertically. This behavior is determined by the `display` property of the div, which has a value of `block` by default. There are a few different display values (in particular, CSS3 has introduced a few new ones), but the four we're concerned with now are `block`, `inline`, `inline-block`, and `none`.
 
-Of these, `none` is probably the most obvious. Change one of your divs to have `display: none` and see what happens.
+Of these, `none` is probably the most obvious. Change one of your divs from the previous codepen to have `display: none` and see what happens.
 
-What if you want the divs to be side-by-side, and not stacked? `inline` sounds like a natural solution. Try setting the displays on both divs to `inline`. What happens?
+<br/>
+### Block
 
-While inline elements don't mind sharing space horizontally, they also don't like taking up more space than they need.
+Block is the default value for a number of elements. When elements have `display: block` applied to them, they stack on top of each other. Block elements essentially push everything that comes after it to wherever they end.
 
-Now let's look at `inline-block`. Elements displayed like this don't require their own new row, so they can share horizontal space (like `inline` elements). But they also respect properties of `block` elements (like width and height). Try it out.
+Let's play around with display styles by using [this codepen](http://codepen.io/bwreid/pen/rLyXwx).
 
-Further reading:
+<br/>
+### Inline & Inline-Block
 
-[What is the difference between display: inline and display: inline-block?](http://stackoverflow.com/questions/8969381/what-is-the-difference-between-display-inline-and-display-inline-block)
-[List of HTML5 block elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Block-level_elements)
-[List of HTML5 inline elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Inline_elemente)
-[What's the Deal with Display: Inline-Block?](http://designshack.net/articles/css/whats-the-deal-with-display-inline-block/)
+Often we don't want our elements to stack but instead appear nested or next to one another. The way to fix that is with the inline or inline-block values.
 
-## CSS - The Box Model
+Try changing the display to inline and notice the change. Inline only takes the content of the element into consideration -- for example, the text. So, when you change the display property to inline you'll notice the width for the RED block will decrease significantly.
+
+If you change the display to inline-block, the height and width rules that are applied to the divs will be maintained while still stacking them next to each other.
+
+_Further reading:_
+
+* [What is the difference between display: inline and display: inline-block?](http://stackoverflow.com/questions/8969381/what-is-the-difference-between-display-inline-and-display-inline-block)
+* [List of HTML5 block elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Block-level_elements)
+* [List of HTML5 inline elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Inline_elemente)
+* [What's the Deal with Display: Inline-Block?](http://designshack.net/articles/css/whats-the-deal-with-display-inline-block/)
+
+---
+
+## The Box Model
 
 As you may have noticed, elements on an HTML page are rectangles. These boxes have some common CSS properties, collectively referred to as the box model. Since these are properties you'll be using all the time, let's take a moment to explore how the box model works.
 
-To keep things simple, let's return to a single 200x200 div (color choice is up to you). Let's also put some content inside of our div:
+<br/>
+### Border, Content, Margin, and Padding
+
+To keep things simple, create a new page or codepen with a single 200x200 div (color choice is up to you). Let's also put some content inside of our div:
 
 ```
 <div id="div1">This is a div of my favorite color.</div>
@@ -217,19 +339,28 @@ To see these things in action, try giving your div the following style:
 
 You can also style the top, right, bottom, or left side of any of these attributes separately. For instance, if you want to push your div farther down the page, you can give it a `margin-top` of 100px.
 
-Take some time to explore the following questions:
+<div class="media" style="padding: 2.5rem 2rem 1rem; border: 1px solid #c7254e; border-radius: 1rem;">
+  <div class="media-left" style="font-size: 3rem; color: #c7254e;">
+    <i class="fa fa-exclamation-circle"></i>
+  </div>
+  <div class="media-body">
+    <h3 class="media-heading">Exercise</h3>
 
-1. You can set margins/border/padding by defining four values instead of one; e.g. margin: 15px 15px 15px 15px. Which number corresponds to which direction?
+    <p>Take some time to answer the following:</p>
 
-2. You can set margins/border/padding by defining two values; e.g. margin: 20px 30px. Which number corresponds to which direction(s)?
+    <p>You can set margins/border/padding by defining four values instead of one; e.g. margin: 15px 15px 15px 15px. Which number corresponds to which direction?</p>
 
-3. You can set margins/border/padding by defining three values; e.g. padding: 15px 10px 5px. Which number corresponds to which direction(s)?
+    <p>You can set margins/border/padding by defining two values; e.g. margin: 20px 30px. Which number corresponds to which direction(s)?</p>
 
-4. Can you create a dashed border? What about a dotted border?
+    <p>You can set margins/border/padding by defining three values; e.g. padding: 15px 10px 5px. Which number corresponds to which direction(s)?</p>
 
-5. What does the border-radius property do?
+    <p>You can create dashed and dotted borders and set different sides of a div to have different border properties. How?</p>
 
-6. What happens if you set the margins on a block-level div equal to `0 auto`?
+    <p>What does the border-radius property do?</p>
+
+    <p>What happens if you set the margins on a block-level div equal to `0 auto`?</p>
+  </div>
+</div>
 
 A final note on the box model. Note that when you add padding or border to your div, the dimensions of the div change. If you want that to **not** happen -- e.g. if you want your div to maintain a size of 200x200 regardless of box model styling -- then the easiest thing to do is add the following line to your stylesheet for that div:
 
@@ -239,16 +370,39 @@ A final note on the box model. Note that when you add padding or border to your 
 
 The default styling is `content-box`, in which the size of the content is what is fixed by `width` and `height`, rather than the size of content+padding+border.
 
-## CSS - Floats
+---
 
-There are other ways to align the divs side-by-side if you don't want to mess with the `display` property. One approach is to use the `float` property. Try to do the following:
+## Floating
 
-1. Remove any reference to the `display` property in your stylesheet (your divs will revert to their default styling of `display: block`.
-2. Assign `left` to the `float` property for each div.
-3. What happens if you change `float: left;` to `float: right;`?
-4. What happens if you float one of the divs, but not the other?
+There are other ways to align the divs side-by-side if you don't want to mess with the `display` property. One approach is to use the `float` property. Floating can be a bit difficult but it is incredibly important to understanding how modern web sites are built.
 
-**Clearing a Float**
+Floating an element takes that element out of the **normal flow** of the document and places it where specified. The [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/CSS/float) describes it pretty well.
+
+When we float an element to the left, that element will be aligned as left as possible and everything that falls after it in the HTML document will visually come _to the right or after it_. This is the opposite case for floating something left.
+
+Open up [this codepen](http://codepen.io/bwreid/pen/LZWwge) to begin playing around with floating elements! Read through the HTML and CSS to make sure you understand how everything is working before starting on this next exercise.
+
+<div class="media" style="padding: 2.5rem 2rem 1rem; border: 1px solid #c7254e; border-radius: 1rem;">
+  <div class="media-left" style="font-size: 3rem; color: #c7254e;">
+    <i class="fa fa-exclamation-circle"></i>
+  </div>
+  <div class="media-body">
+    <h3 class="media-heading">Exercise</h3>
+
+    <p>Floating changes the normal flow and changes how elements are rendered. Begin by adding `float: left` to the first div. What changes do you notice? Try removing it from the first div and adding it to the second. Is anything different in how it's acting?</p>
+
+    <p>Next, try adding the float rule to both divs on the page. Change them so the both have a value of left or right and make sure to try them as different. What do you notice is happening?</p>
+
+    <p>Finally, add a paragraph element with some text after the two divs, making sure both of them are floating. What's happening now?</p>
+  </div>
+</div>
+
+People tend to hate the float property because it's hard to visualize what is going to happen. One way to think of it is that as soon as we add a float property that element is now playing by its own rules -- if we apply `float: left` to multiple elements, they're all playing by one set of rules while anyone with `float: right` plays by another.
+
+Remember, it takes the element out of the **normal flow** of the document!
+
+<br/>
+### Clearing Floated Elements
 
 Float your first two divs to the left, and now add a new div: `<div id="myNewDiv">I want to be on a new row.</div>` You should find that this new div is on the same row as the first two.
 
@@ -262,178 +416,104 @@ But what if we want this new div to be on its own row, as you might expect from 
 
 An element styled with `clear: both;` can't have any floats to the left or right of it, and so in the presence of floated elements will break into a new row.
 
-## CSS - Positioning
+---
 
-A third common way to position divs is to use the `position` property. Like `display`, we're going to focus on four different values for positioning: `static`, `relative`, `absolute`, and `fixed`.
+## Positioning
 
-[Here's](https://css-tricks.com/almanac/properties/p/position/) a great overview on positioning from CSS Tricks. To summarize...
+Sometimes we need to be more specific with how we set up certain elements on our page. In times of visual specificity, we turn to Positioning.
 
-Static is the default value for all elements. An element with static position will sit where it normally does, and won't have any special positioning.
+If you thought floats were bad, just you wait! Positioning without understanding the rules to it can cause lots of weird problems; so, it's important to do your best to [grok](https://en.wikipedia.org/wiki/Grok) how the values of `position` manipulate elements.
 
-If you go with one of the other three values for `position`, you can then adjust the position of your div by using the `top`, `right`, `bottom` and `left` attributes.
-
-Briefly, here are the differences between the other types of positioning:
-
-- `position: relative` positions an element relative to **where it would normally sit**.
-- `position: absolute` positions an element relative to **its nearest ancestor that isn't statically positioned**,
-- `position: fixed` positions an element relative to **the viewport, even when scrolling**.
-
-Let's explore positioning using the following HTML snippet:
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>Kicking it with some Divs</title>
-    <style>
-      div {
-        width: 100px;
-        height: 100px;
-      }
-      #div1 {
-        width: 300px;
-        height: 300px;
-        background-color: red;
-      }
-      #div2 {
-        width: 200px;
-        height: 200px;
-        background-color: orange;
-      }
-      #div3 {
-        background-color: yellow;
-      }
-      #div4 {
-        background-color: green;
-      }
-      #div5 {
-        background-color: blue;
-      }
-    </style>
-  </head>
-  <body>
-    <div id="div1">
-      <div id="div2">
-        <div id="div3"></div>
-      </div>
-    </div>
-    <div id="div4"></div>
-    <div id="div5"></div>
-  </body>
-</html>
-```
-
-Next, using only the `position`, `top`, `bottom`, `left`, and `right` properties, do the following:
-
-1. Nudge the green square 10px down and 10px to the right.
-2. Push the yellow square to the upper-right corner of the window.
-3. Push the yellow square to the lower-right corner of the orange square.
-4. Push the yellow square to the lower-right corner of the red square, _without moving the orange square_.
-5. Push the green to the bottom-right corner of the screen.
-
-## CSS - Media Queries
-
-Sometimes styling isn't one-size-fits-all. How you want your page to look may depend on different factors. Let's work on a simple example:
-
-1. In a clean HTML file, create three divs. arrange them horizontally so that they each take up 1/3 of the screen. (Hint: you can define widths in terms of percentages, not just pixels!). Style them so that they're visually distinguishable from one another.
-
-Having your divs aligned in a row is probably fine on a large screen (e.g. a laptop). But what if a user comes to your site on a mobile device, with a much narrower screen? In this case, having your divs in a row may look cramped, and you might prefer to have your divs stacked vertically.
-
-In order to set different styling rules based on the viewport, we can use a **Media Query**. In this case, if you wanted to set a different rule for narrower viewports, you could add something like this to your stylesheet:
+There are five possible values of position:
 
 ```
-@media (max-width: 600px) {
-  /*insert your div ids here*/ {
-    clear: both;
-    width: 100%;
-  }
+static, relative, absolute, fixed, sticky
+```
+
+<br/>
+### Static
+
+Static is the default position for all elements. It simply means it is positioned where it's told to be on the page! Take a look at [this codepen](http://codepen.io/bwreid/pen/QEvLyy?editors=1100) for this section of the lesson. All the images there are currently set to static.
+
+<br/>
+### Relative
+
+Relative positioning allows for an element to be moved relative to it's current location. For example, try adding the following rules for the first image in the div.
+
+```
+position: relative;
+left: 25px;
+```
+
+First, we set the image to relative which, by itself, will not move it at all. However, we can now move it using the top, right, bottom, or left properties a certain number of pixels. In this case, we're moving the image 25px _away_ from the left.
+
+We can also use negative numbers as values to move it towards the direction we've set as the property. For example, add the following to the first image:
+
+```
+bottom: -200px;
+```
+
+You'll notice the image now moves down 200px from where it normally would be. Try setting a very high value for the `bottom` property. Your image will go off the page but you won't be able to scroll to see it. That's because your image is, as far as the browser is concerned, positioned right where it initially is. It has only been relatively _rendered_ elsewhere.
+
+<br/>
+### Absolute
+
+Absolute positioning positions an element relative to its nearest parent which is _not_ statically positioned. As you can tell from the definition, this one can get a bit tricky!
+
+Remove the CSS you just added for the first image and add the following:
+
+```css
+div {
+  position: relative;
+}
+
+img {
+  position: absolute;
 }
 ```
 
-See how the styling changes based on your viewport width? Congratulations, you've completed your first foray into **responsive** design!
+What happened? Well, first of all we gave the wrapping div a position of relative. We then set all images to be positioned absolutely. This means their new layout is based upon the surrounding div.
 
-Media queries have a fair amount of built-in logic. To learn more about them, read [this](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Media_queries).
+To play around with this, select one of the images and select it specifically. Then, add `right: 0;` to its selector. That image is now aligned on the right side of the surrounding div.
 
-## CSS - Tables
+Change the value now to `30px`. How is it changed? Is it what you expected?
 
-Let's talk briefly about styling tables in CSS, since the default styling is pretty terrible.
+<div class="media" style="padding: 2.5rem 2rem 1rem; border: 1px solid #c7254e; border-radius: 1rem;">
+  <div class="media-left" style="font-size: 3rem; color: #c7254e;">
+    <i class="fa fa-exclamation-circle"></i>
+  </div>
+  <div class="media-body">
+    <h3 class="media-heading">Exercise</h3>
 
-To kick things off, let's create a table in our html file with no special styling:
+    <p>You can actually get all the images to be aligned just how they were (i.e. stacked side by side) with absolute positioning now by selecting them individually and moving them around. Spend a few minutes trying to do so and then _never do so again_ because that's just ridiculous. Whenever possibnle, you want to rely on more standard ways of position elements.</p>
 
-```
-<table>
-  <tbody>
-    <tr>
-      <td>Cell 1</td>
-      <td>Cell 2</td>
-    </tr>
-    <tr>
-      <td>Cell 3</td>
-      <td>Cell 4</td>
-    </tr>
-    <tr>
-      <td>Cell 5</td>
-      <td>Cell 6</td>
-    </tr>
-    <tr>
-      <td>Cell 7</td>
-      <td>Cell 8</td>
-    </tr>
-    <tr>
-      <td>Cell 9</td>
-      <td>Cell 10</td>
-    </tr>
-    <tr>
-      <td>Cell 11</td>
-      <td>Cell 12</td>
-    </tr>
-  </tbody>
-</table>
-```
+  </div>
+</div>
 
-Start by adding some borders and padding to the `td` cells.
+<br/>
+### Fixed
 
-That doesn't look too good, does it? Let's remove the spaces between the td cells:
+When we set the position value to fixed, it won't move initially. However, when we add a top, right, bottom, or left property it'll move to be relative to the browser window and stay there. This means that the element will stay where it's positioned even if you scroll on the page.
+
+Try this on your codepen by adding the following to a single image:
 
 ```
-table {
-  border-spacing: 0;
-}
+position: fixed;
+top: 0;
+left: 0;
 ```
 
-Better, but not quite right. Let's add one more property to our `<table>` styling: `border-collapse: collapse;`.
+Now make your screen really small and try scrolling around. Do you see how the image doesn't move from its anchored location?
 
-Sweet. For small tables like this, it may even be sufficient. But for large tables (e.g. tables of users), readability can become an issue. What would be nice is if we could make the table _striped_, so that rows alternated their colors. How can we do this using CSS?
+<br/>
+### Sticky
 
-To do this right, we'll need **pseudo-classes**. A pseudo-class lets us express more information about a given element. In this case, the pseudo-class we want is `:nth-child()`. With this psuedo-class, you can select the kth row of your table using the selector `tr:nth-child(k)`. In particular, notice that `:nth-child()` is 1-indexed, not 0-indexed: for instance, `tr:nth-child(2)` will select the second row of your table, not the third.
+This value is a new, experimental one that doesn't work in all browsers. It is described as a hybrid of relative and fixed positioning in that it will stay in the same place until another element comes along to replace it.
 
-Use `:nth-child` to highlight every other row of the table in some other color.
+The best way to understand it is to simply take a look at the [MDN Docs](https://developer.mozilla.org/en-US/docs/Web/CSS/position) for position and scroll down to the example they have there. While scrolling on their example, you'll see that the heading stays at the top of the page until it's replaced by a new one!
 
-One of the nice things about `nth-child` is that it accepts arguments other than whole-numbers. Try out the selector `tr:nth-child(odd)`. What about `tr:nth-child(even)`?
+<div class="alert alert-warning" role="alert">This feature is so new it doesn't work in the current version of Chrome as of this article being written. Open up Safari and try loading the MDN page there.</div>
 
-Bonus 1. You can also select every mth element, starting with the kth, using the selector `tr:nth-child(mn+k)`. Try to select every third row, starting with the first row.
+## Conclusion
 
-Bonus 2. Color every even row one color, and every third row another color. What's the color of the 6th row, and why?
-
-Another thing we can do to improve the readability of a table is to highlight a row when the user mouses over it. To do this, we'll use the `:hover` psuedo-class.
-
-```
-tr:hover {
-  background-color: /* insert a color here */
-}
-```
-
-Neat, right? Related to the `:hover` psuedo-class are the `:active`, `:focus`, and `:visited` pseudo-classes. You can read all about these (and other!) pseudo-classes [here](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes).
-
-## CSS - Rock star demos
-
-We've only scratched the surface of what you can do with CSS. For inspiration, check out a sampling of some awesome things that people have built:
-
-[A Single Div](http://a.singlediv.com/)
-
-[The Simpsons](http://pattle.github.io/simpsons-in-css/)
-
-[CSS Creatures](http://bennettfeely.com/csscreatures/)
-
-[CSS Coke Can](http://www.romancortes.com/ficheros/css-coke.html)
+There is so much more to CSS -- and we'll cover it soon! For now, it's important to get comfortable with the idea of **Play** and **Reflection** -- have fun moving elements around and trying out new properties; but, remember that none of this is magic! There are rules as to why certain properties work the way they do so be on the lookout for the logic behind it.
