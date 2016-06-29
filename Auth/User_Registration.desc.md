@@ -90,6 +90,21 @@ When hashing an input string, bcrypt will go through `2^workfactor` iterations 
 | 25          | ~1 hash/hour   |
 | 31          | 2-3 hash/days  |
 
+Here's an example of a bcrypt output string.
+
+```text
+$2a$12$XeT/ETMEi/saK0oPTHnOUu9Bt5kZ0PRCYOq.n6xDkPskPOux0zztq
+ ─┐ ─┐ ────────────────────────────────────────────────────┐
+  │  │                                                     │
+  │  │                                                     │
+  │
+  │ work factor                                     digest + salt
+
+algorithm
+```
+
+Notice that the output string is 60 characters long.
+
 ### Exercise
 
 Turn to your neighbor and explain what bcrypt is. In your conversation, include some of the advantages bcrypt has over other generic cryptographic hash functions. After about 30 seconds, your instructor will cold call on the class and ask what was written down.
