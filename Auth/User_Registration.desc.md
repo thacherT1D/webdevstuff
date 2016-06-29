@@ -400,4 +400,6 @@ git branch -d registration
 
 ## Videos
 
+### Ethical Hacking Tutorials - 32 - Cryptographic Hash function
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/pVinBTaNtnM" frameborder="0" allowfullscreen></iframe>
