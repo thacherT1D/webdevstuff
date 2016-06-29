@@ -152,7 +152,7 @@ Add and commit your work.
 
 ```shell
 git add .
-git commit -m 'Create users migration'
+git commit -m 'Add users migration'
 ```
 
 Create a new routes file for user registration.
@@ -200,10 +200,10 @@ Add and commit your work.
 
 ```shell
 git add .
-git commit -m "Add POST /user route"
+git commit -m 'Add users route'
 ```
 
-For our password hashing, we will use an NPM package called bcrypt. To start off with, install and save bcrypt:
+Install the `bcrypt` package with `npm`.
 
 ```shell
 npm install --save bcrypt
@@ -219,12 +219,12 @@ const router = express.Router();
 const bcrypt = require('bcrypt');
 
 router.post('/users', (req, res, next) => {
-  bcrypt.hash(req.body.password, 10, (err, hashed_password) => {
+  bcrypt.hash(req.body.password, 12, (err, hashed_password) => {
     if (err) {
       return next(err);
     }
 
-    console.log(hashed_password);
+    console.log(req.body.email, hashed_password);
     res.sendStatus(200);
   });
 });
@@ -232,7 +232,7 @@ router.post('/users', (req, res, next) => {
 module.exports = router;
 ```
 
-Then run the following shell command.
+Then, run the following shell command.
 
 ```shell
 http POST localhost:8000/users email=neo@thematrix.com password=theone
@@ -242,7 +242,7 @@ Add and commit your work.
 
 ```shell
 git add .
-git commit -m "Use bcrypt to hash password"
+git commit -m 'Use bcrypt to hash passwords'
 ```
 
 Finally, use Knex to insert the email and hashed password into the users table.
@@ -286,7 +286,7 @@ Add and commit your work, and push to the registration branch. Then, checkout th
 
 ```shell
 git add .
-git commit -m "Add user registration"
+git commit -m 'Add user registration'
 git push origin registration
 git checkout master
 git merge registration
