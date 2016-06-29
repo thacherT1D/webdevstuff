@@ -1,14 +1,9 @@
 ## Objectives
 
-* Explain what a cryptographic hash function is.
-* Explain why a cryptographic hash function is important.
-* Explain what a salt is.
-* Explain why using a salt is important.
-* Explain the process of user registration.
-* Use Knex migrations to create a users table.
-* Use an HTML form to gather user information.
-* Add custom routes for user registration.
-* Use bcrypt to hash and salt passwords.
+- Explain what a cryptographic hash function is.
+- Explain why a cryptographic hash function is important.
+- Explain what bcrypt is.
+- Register a user with a hashed password.
 
 ## What's cryptographic hash function?
 
@@ -76,26 +71,27 @@ Password hashing also provides an extra layer of security between developer and 
 
 In your own words, write down why cryptographic password hashing is important. After about 30 seconds, your instructor will cold call on the class and ask what was written down.
 
-## What is a salt?
+## What's bcrypt?
+
+[Coda Hale - How To Safely Store A Password](https://codahale.com/how-to-safely-store-a-password/)
 
 Before a password is run through a hashing function, it is recommended to add another layer of protection with something called a salt. A **salt** is a random data string that is concatenated to input before it's hashed.
-
-## Why is using a salt important?
 
 Using a salt provides extra security since different random data is generated each time for each password. This prevents attackers from potentially using a table of precomputed hashes of common passwords to gain access.
 
 ### Exercise
 
-Turn to your neighbor and discuss what a salt is and how it adds another layer of security before hashing a password. We'll regroup and I'll pick students at random to share what you talked about.
+Turn to your neighbor and explain what bcrypt is. In your conversation, include some of the advantages bcrypt has over other cryptographic hash functions. After about 30 seconds, your instructor will cold call on the class and ask what was written down.
 
-## What is the user registration process?
+## How do you register a user with a hashed password?
 
-1. User submits form with various data required to register.
-1. The plain-text password is concatenated with random generated salt.
-1. Plain-text password + salt is then run through hashing function, which returns a string at a fixed length.
-1. Hash is inserted along with user information into database.
+Here's a high-level overview of the user registration process.
 
-## Create migrations for users table
+1. A user sends identification information to an HTTP server which includes a unique account name and a plaintext password.
+1. On the server, the password is concatenated with a randomly generated salt.
+1. Then, a cryptographic hash function takes the password + salt message and returns a hash digest.
+1. The hash digest is inserted into the database along side the user's other information.
+1. The server informs the client that registration was a success.
 
 To start off with, change into your `trackify` directory and make a new branch called `registration`.
 
@@ -134,64 +130,7 @@ Add and commit your work.
 
 ```shell
 git add .
-git commit -m "create migration file for users table"
-```
-
-## Use an HTML form to gather user information
-
-Make a new directory called `public`.
-
-```shell
-mkdir public
-```
-
-Require `path` and add the following Express middleware to `server.js` to serve static files from the `public` directory.
-
-```JavaScript
-const path = require('path');
-
-app.use(express.static(path.join('public')));
-```
-
-Create an HTML file to gather user information required to register.
-
-```shell
-touch public/registration.html
-```
-
-Use the following HTML form as a rough template.
-
-```HTML
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>User Registration</title>
-  </head>
-
-  <body>
-    <form method="post" action="/users">
-      <div>
-        <label for="email">Email</label>
-        <input type="email" name="email" id="email">
-      </div>
-      <div>
-        <label for="password">Password</label>
-        <input type="password" name="password" id="password">
-      </div>
-      <div>
-        <button type="submit">Submit</button>
-      </div>
-    </form>
-  </body>
-</html>
-```
-
-Add and commit your work.
-
-```shell
-git add .
-git commit -m "use html form to gather user registration data"
+git commit -m "Create users migration"
 ```
 
 ## Add user registration route
@@ -200,18 +139,17 @@ Create a new file for the users routes and open it with Atom.
 
 ```shell
 touch routes/users.js
-atom routes/users.js
 ```
 
 In the `server.js` file, add the necessary routing middleware for the `/users` endpoint:
 
 ```JavaScript
-const usersRoutes = require('routes/users');
+const users = require('routes/users');
 
-app.use('/users', usersRoutes);
+app.use(users);
 ```
 
-After requiring the necessary dependencies for an Express router and Knex, add a `POST` route to the `'/'` path in the `users.js` file. Save the incoming data from `req.body` as constants for email and password.
+Add the following code to the `routes/users.js` module.
 
 ```JavaScript
 'use strict';
@@ -220,42 +158,30 @@ const express = require('express');
 const router = express.Router();
 const knex = require('../knex');
 
-router.post('/', (req, res, next) => {
+router.post('/users', (req, res, next) => {
   res.sendStatus(200);
 });
 
 module.exports = router;
 ```
 
+Then run the following shell command.
+
+```shell
+http POST localhost:8000/users
+```
+
 Add and commit your work.
 
 ```shell
 git add .
-git commit -m "add register user route"
+git commit -m "Add POST /user route"
 ```
-
-## How to use bcrypt
 
 For our password hashing, we will use an NPM package called bcrypt. To start off with, install and save bcrypt:
 
 ```shell
 npm install --save bcrypt
-```
-
-- The first argument is the plain-text to be hashed.
-- The second argument is the cost of processing the data (defaults to 10).
-- The final argument is a callback with two parameters:
-  - `err` details any errors
-  - `hash` is the encoded string that can be stored in the database.
-
-```JavaScript
-bcrypt.hash(plainText, saltRounds, (err, hash) => {
-  if (err) {
-    // Handle err
-  }
-
-  // Store hash in your database
-});
 ```
 
 Use the `bcrypt.hash()` method to generate a salt and hash the password.
@@ -266,6 +192,7 @@ Use the `bcrypt.hash()` method to generate a salt and hash the password.
 const express = require('express');
 const router = express.Router();
 const knex = require('../knex');
+const bcrypt = require('bcrypt');
 
 router.post('/users', (req, res, next) => {
   bcrypt.hash(req.body.password, 10, (err, hashed_password) => {
@@ -281,11 +208,17 @@ router.post('/users', (req, res, next) => {
 module.exports = router;
 ```
 
+Then run the following shell command.
+
+```shell
+http POST localhost:8000/users email=neo@thematrix.com password=theone
+```
+
 Add and commit your work.
 
 ```shell
 git add .
-git commit -m "use bcrypt to hash password"
+git commit -m "Use bcrypt to hash password"
 ```
 
 Finally, use Knex to insert the email and hashed password into the users table.
@@ -296,6 +229,7 @@ Finally, use Knex to insert the email and hashed password into the users table.
 const express = require('express');
 const router = express.Router();
 const knex = require('../knex');
+const bcrypt = require('bcrypt');
 
 router.post('/users', (req, res, next) => {
   bcrypt.hash(req.body.password, 10, (err, hashed_password) => {
@@ -305,8 +239,6 @@ router.post('/users', (req, res, next) => {
 
     knex('users')
       .insert({
-        first_name: req.body.first_name,
-        last_name: req.body.last_name,
         email: req.body.email,
         hashed_password: hashed_password
       }, '*')
@@ -322,11 +254,15 @@ router.post('/users', (req, res, next) => {
 module.exports = router;
 ```
 
+```shell
+http POST localhost:8000/users email=neo@thematrix.com password=theone
+```
+
 Add and commit your work, and push to the registration branch. Then, checkout the master branch, and merge registration into master. Delete the registration branch if you'd like.
 
 ```shell
 git add .
-git commit -m "use knex to insert user data with hash into db"
+git commit -m "Add user registration"
 git push origin registration
 git checkout master
 git merge registration
