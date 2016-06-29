@@ -48,10 +48,16 @@ The input string is often called the message, and the output string is often cal
 1. A small change to a message should change the digest so extensively that the new digest appears uncorrelated with the old digest.
 1. It's infeasible to find two different messages with the same digest.
 
-To hash your own message with the [sha256 cryptographic hash function](https://en.wikipedia.org/wiki/SHA-2), run the following shell commend.
+One such cryptographic hash function is called [sha256](https://en.wikipedia.org/wiki/SHA-2). To hash a message with sha256, run the following shell commend.
 
 ```shell
 echo 'Fox' | shasum -a 256
+```
+
+If you hash the digest from above, you won't get the original message back. Instead, you'll get a different digest.
+
+```shell
+echo '6e9c620dcd316bf29a37bf6d0be3d685acfd18bea7e6d5a2a697104539610491' | shasum -a 256
 ```
 
 ### Exercise
