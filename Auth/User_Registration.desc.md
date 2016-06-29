@@ -77,18 +77,18 @@ When generating a digest, it's recommended to add another layer of protection wi
 
 When hashing an input string, bcrypt will go through `2^workfactor` iterations when generating a digest. On a 2GHz core machine, you can roughly expect the following performance when using the `bcrypt` NPM module.
 
-| work factor | performance    |
-|-------------|----------------|
-| 8           | ~40 hashes/sec |
-| 9           | ~20 hashes/sec |
-| 10          | ~10 hashes/sec |
-| 11          | ~5  hashes/sec |
-| 12          | 2-3 hashes/sec |
-| 13          | ~1 hash/sec    |
-| 14          | ~1.5 hash/sec  |
-| 15          | ~3 hash/sec    |
-| 25          | ~1 hash/hour   |
-| 31          | 2-3 hash/days  |
+| work factor | iterations | performance     |
+|-------------|------------|-----------------|
+| 8           | 2^8        | ~40 hashes/sec  |
+| 9           | 2^9        | ~20 hashes/sec  |
+| 10          | 2^10       | ~10 hashes/sec  |
+| 11          | 2^11       | ~5  hashes/sec  |
+| 12          | 2^12       | 2-3 hashes/sec  |
+| 13          | 2^13       | ~1 hash/sec     |
+| 14          | 2^14       | ~1.5 hashes/sec |
+| 15          | 2^15       | ~3 hashes/sec   |
+| 25          | 2^25       | ~1 hash/hour    |
+| 31          | 2^31       | 2-3 hashes/days |
 
 Here's an example of a bcrypt output string.
 
@@ -103,7 +103,7 @@ $2a$12$XeT/ETMEi/saK0oPTHnOUu9Bt5kZ0PRCYOq.n6xDkPskPOux0zztq
 algorithm
 ```
 
-Notice that the output string is 60 characters long.
+Notice that the bcrypt output string is 60 characters long.
 
 ### Exercise
 
