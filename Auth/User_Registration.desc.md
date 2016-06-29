@@ -156,7 +156,6 @@ Add the following code to the `routes/users.js` module.
 
 const express = require('express');
 const router = express.Router();
-const knex = require('../knex');
 
 router.post('/users', (req, res, next) => {
   res.sendStatus(200);
@@ -191,7 +190,6 @@ Use the `bcrypt.hash()` method to generate a salt and hash the password.
 
 const express = require('express');
 const router = express.Router();
-const knex = require('../knex');
 const bcrypt = require('bcrypt');
 
 router.post('/users', (req, res, next) => {
@@ -228,8 +226,8 @@ Finally, use Knex to insert the email and hashed password into the users table.
 
 const express = require('express');
 const router = express.Router();
-const knex = require('../knex');
 const bcrypt = require('bcrypt');
+const knex = require('../knex');
 
 router.post('/users', (req, res, next) => {
   bcrypt.hash(req.body.password, 10, (err, hashed_password) => {
