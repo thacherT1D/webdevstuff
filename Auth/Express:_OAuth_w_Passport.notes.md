@@ -1,3 +1,22 @@
+# OAUTH
+
+
+
+
+## Direction ->
+
+- Read objectives.
+- Talk about OAuth a little
+- Explain the concept and use the flow chart example.
+- Ask for examples of where they think they've used OAuth before... (Github signin with galvanize etc..)
+- Explain the eercise a bit.
+- Have the students do the exercise.
+
+
+
+
+
+
 
 
 

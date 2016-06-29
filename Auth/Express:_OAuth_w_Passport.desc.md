@@ -50,6 +50,8 @@ Resources:
 Create a new express app:  
 `mkdir linkedInLogin`  
 `cd linkedInLogin`  
+`mkdir routes`  
+`mkdir views`  
 `npm init`  
 
 Install your dependencies:  
