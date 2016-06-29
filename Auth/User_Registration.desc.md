@@ -46,6 +46,12 @@ The input string is often called the message, and the output string is often cal
 1. A small change to a message should change the digest so extensively that the new digest appears uncorrelated with the old digest.
 1. It's infeasible to find two different messages with the same digest.
 
+To encrypt your own message with the [sha256 cryptographic hash function](https://en.wikipedia.org/wiki/SHA-2), run the following shell commend.
+
+```shell
+echo 'YOUR MESSAGE HERE' | openssl dgst -sha256
+```
+
 ### Exercise
 
 Turn to a neighbor and explain what a cryptographic hash function is in your own words. Once you're satisfied, talk about when you might use one.
