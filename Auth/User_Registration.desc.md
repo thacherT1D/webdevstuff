@@ -1,16 +1,16 @@
 ## Objectives
 
-* Explain cryptographic password hashing
-* Explain why password hashing is important
-* Explain what a salt is
-* Explain why using a salt is important
-* Explain the process of user registration
-* Use Knex migrations to create a users table
-* Use an HTML form to gather user information
-* Add custom routes for user registration
-* Use bcrypt to hash and salt passwords
+* Explain what cryptographic password hashing is.
+* Explain why cryptographic password hashing hashing is important.
+* Explain what a salt is.
+* Explain why using a salt is important.
+* Explain the process of user registration.
+* Use Knex migrations to create a users table.
+* Use an HTML form to gather user information.
+* Add custom routes for user registration.
+* Use bcrypt to hash and salt passwords.
 
-## What is cryptographic password hashing?
+## What's cryptographic password hashing?
 
 **Password hashing** is a security process that takes a user-submitted password and encrypts it, producing an encoded string at a fixed length. Cryptographic hash functions are intended to be one-way functions, meaning it is supposed to be unfeasible to calculate the input based on an encoded string's output.
 
