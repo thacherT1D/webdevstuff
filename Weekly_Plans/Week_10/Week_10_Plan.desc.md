@@ -52,7 +52,7 @@ Warmup: Make sure you select javascript as the language.
 
 Lessons:
 - [Authorization with Middleware](/redirects/articles/4696)
-- [Lesson](/cohorts/68/student_dashboard)
+- [OAuth](/cohorts/68/articles/3098)
 
 Homework: [Homework](/cohorts/68/student_dashboard)
 
