@@ -58,7 +58,7 @@ echo 'Fox' | shasum -a 256
 
 Turn to a neighbor and explain what a cryptographic hash function is in your own words. Once you're satisfied, talk about when you might use one.
 
-## Why is password hashing important?
+## Why is a cryptographic hash function important?
 
 If user-submitted passwords are stored inside a database unhashed, that information is compromised when the database is stolen. The means whoever has access to that data can use try the user's login credentials on other sites. And since so many people use the same password for every site, chances are good the malicious person can now log into your users' banks and online stores. That's why it's necessary to store hashed passwords in your application's database.
 
@@ -115,7 +115,7 @@ exports.up = function(knex) {
   return knex.schema.createTable('users', (table) => {
     table.increments();
     table.string('email').unique().notNullable().defaultTo('');
-    table.string('password').notNullable().defaultTo('');
+    table.string('hashed_password').notNullable().defaultTo('');
     table.timestamps(true, true);
   });
 };
@@ -272,38 +272,14 @@ For our password hashing, we will use an NPM package called bcrypt. To start off
 npm install --save bcrypt
 ```
 
-### Technique 1 (Generate salt and hash on separate function calls)
-
-```JavaScript
-const bcrypt = require('bcrypt');
-const plainTextPassword = 'password123';
-const saltRounds = 10;
-
-bcrypt.genSalt(saltRounds, (saltErr, salt) => {
-  if (saltErr) {
-    // Handle saltErr
-  }
-
-  bcrypt.hash(plainTextPassword, salt, (hashErr, hash) => {
-    if (hashErr) {
-      // Handle hashErr
-    }
-
-    // Store hash in your password database
-  });
-});
-```
-
-### Technique 2 (Auto-gen a salt and hash)
-
-- The first argument is the plain-text password to be hashed.
+- The first argument is the plain-text to be hashed.
 - The second argument is the cost of processing the data (defaults to 10).
 - The final argument is a callback with two parameters:
   - `err` details any errors
   - `hash` is the encoded string that can be stored in the database.
 
 ```JavaScript
-bcrypt.hash(plainTextPassword, saltRounds, (err, hash) => {
+bcrypt.hash(plainText, saltRounds, (err, hash) => {
   if (err) {
     // Handle err
   }
@@ -327,7 +303,7 @@ router.post('/', (req, res, next) => {
         return next(err);
       }
 
-      bcrypt.hash(password, 10, (err, hash) => {
+      bcrypt.hash(password, 10, (err, hashed_password) => {
         if (err) {
           return next(err);
         }
@@ -363,7 +339,7 @@ router.post('/', (req, res, next) => {
         return next(err);
       }
 
-      bcrypt.hash(password, 10, (err, hash) => {
+      bcrypt.hash(password, 10, (err, hashed_password) => {
         if (err) {
           return next(err);
         }
@@ -371,7 +347,7 @@ router.post('/', (req, res, next) => {
         knex('users').returning('*')
           .insert({
             email: email,
-            password: hash
+            hashed_password: hashed_password
           })
           .then((users) => {
             res.status(200).send(users[0]);
