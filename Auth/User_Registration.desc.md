@@ -32,7 +32,7 @@ A **cryptographic hash functions** is a mathematical algorithm that converts a s
 └─────────────┘        └───  sha256  ──┘       └─────────────────────┘
 ```
 
-A cryptographic hash function is designed to be one-way function. In other words, it should be unfeasible to calculate the input string based on the output string. The only way to recreate the input string using it's output string is to try a large number of possible inputs to see if they produce a match.
+A cryptographic hash function is designed to be a one-way function. In other words, it should be unfeasible to calculate the input string based on the output string. The only way to recreate the input string using it's output string is to try a large number of possible inputs to see if they produce a match.
 
 **NOTE:** There is no encryption involved in a cryptographic hash function because encryption is a two-way process. When you encrypt a string, you expect to reverse the process and get the original string back out again.
 
@@ -281,6 +281,10 @@ git checkout master
 git merge registration
 git branch -d registration
 ```
+
+## Exercise
+
+- [Galvanize Bookshelf - User registration](https://github.com/gSchool/galvanize-bookshelf/blob/master/3_user_registration.md)
 
 ## Resources
 
