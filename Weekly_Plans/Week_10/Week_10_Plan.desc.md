@@ -43,7 +43,7 @@ Exercise / Homework:
 
 ---
 
-# Wednesday, June 29
+# Wednesday, June 29 - Roger/Micah
 
 Warmup: Make sure you select javascript as the language.
 
