@@ -45,7 +45,7 @@ Exercise / Homework:
 
 # Wednesday, June 29
 
-Warmup:
+Warmup: Make sure you select javascript as the language.
 
 - [Panagrams](https://www.hackerrank.com/challenges/pangrams)
 - [Game of Thrones](https://www.hackerrank.com/challenges/game-of-thrones)
