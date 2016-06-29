@@ -75,6 +75,21 @@ In your own words, write down why cryptographic password hashing is important. A
 
 [Coda Hale - How To Safely Store A Password](https://codahale.com/how-to-safely-store-a-password/)
 
+When hashing an input string, bcrypt will go through `2^rounds` iterations when generating a digest. On a 2GHz core machine, you can roughly expect the following performance when using the `bcrypt` NPM module.
+
+| rounds | performance    |
+|--------|----------------|
+| 8      | ~40 hashes/sec |
+| 9      | ~20 hashes/sec |
+| 10     | ~10 hashes/sec |
+| 11     | ~5  hashes/sec |
+| 12     | 2-3 hashes/sec |
+| 13     | ~1 hash/sec    |
+| 14     | ~1.5 hash/sec  |
+| 15     | ~3 hash/sec    |
+| 25     | ~1 hash/hour   |
+| 31     | 2-3 hash/days  |
+
 Before a password is run through a hashing function, it is recommended to add another layer of protection with something called a salt. A **salt** is a random data string that is concatenated to input before it's hashed.
 
 Using a salt provides extra security since different random data is generated each time for each password. This prevents attackers from potentially using a table of precomputed hashes of common passwords to gain access.
