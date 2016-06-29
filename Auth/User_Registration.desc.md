@@ -12,7 +12,7 @@
 
 ## What's cryptographic password hashing?
 
-**Cryptographic password hashing** is a security process that takes a user-submitted password and encrypts it, producing an encoded string at a fixed length. Cryptographic hash functions are intended to be one-way functions, meaning it is supposed to be unfeasible to calculate the input based on an encoded string's output.
+**Cryptographic password hashing** is the process of encrypting a user-submitted password with a cryptographic hash function. A **cryptographic hash functions** is a mathematical algorithm that converts a string of arbitrary length to a string of fixed length. Given the same input string, a cryptographic hash function always produces the same output string.
 
 ```text
 ┌─────────────┐        ┌───────────────┐       ┌─────────────────────┐
@@ -22,14 +22,12 @@
 │             │        │               │       │ a697 1045 3961 0491 │
 └─────────────┘        └───  sha256  ──┘       └─────────────────────┘
 
-
 ┌─────────────┐        ┌───────────────┐       ┌─────────────────────┐
 │             │        │               │       │ ddad 2ab3 b2a8 f269 │
 │     Fax     │        │ Cryptographic │       │ a001 bb26 a075 4a6b │
 │             │───────▶│ hash function │──────▶│ 49ed f7ab 7ddb c953 │
 │             │        │               │       │ 12fa 89c8 e19a b03e │
 └─────────────┘        └───  sha256  ──┘       └─────────────────────┘
-
 
 ┌─────────────┐        ┌───────────────┐       ┌─────────────────────┐
 │             │        │               │       │ 46b7 ffe0 588c ec9b │
@@ -38,6 +36,12 @@
 │             │        │               │       │ 3899 67e1 bcfc 3672 │
 └─────────────┘        └───  sha256  ──┘       └─────────────────────┘
 ```
+
+A cryptographic hash function is designed to be one-way function. In other words, it should be unfeasible to calculate the input string based on the output string. The only way to recreate the input string using it's output string is to try a large number of possible inputs to see if they produce a match.
+
+### Exercise
+
+Turn to a neighbor and explain what a cryptographic hash function is and when you might use one.
 
 ## Why is password hashing important?
 
