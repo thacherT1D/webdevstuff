@@ -5,7 +5,7 @@ Introduce the concept and topic. Lorem ipsum dolor sit amet, consectetur adipisi
 
 Additional supportive text, if any. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
----
+<hr style="margin: 5rem 0;"/>
 
 ## Section A
 
@@ -41,7 +41,7 @@ Use this callout to define exercises. You only need to replace what's inside of 
   </div>
 </div>
 
----
+<hr style="margin: 5rem 0;"/>
 
 ## Section B
 
