@@ -260,13 +260,21 @@ man ls
 
 Use the down arrow `↓` key to scroll down and the up arrow `↑` key to scroll up. To quit a `man` page and return to the shell, press the `q` key.
 
-### Exercise
+<div class="media" style="padding: 2.5rem 2rem 1rem; border: 1px solid #c7254e; border-radius: 1rem;">
+  <div class="media-left" style="font-size: 3rem; color: #c7254e;">
+    <i class="fa fa-exclamation-circle"></i>
+  </div>
+  <div class="media-body">
+    <h3 class="media-heading">Exercise</h3>
 
-With the `man` command, spend three minutes discovering new flags for the `ls` command. Try out different combinations of flags to see what they do. For each flag you try, make a prediction about the effect it will have. After trying it, review your prediction.
+    <p>With the `man` command, spend three minutes discovering new flags for the `ls` command. Try out different combinations of flags to see what they do. For each flag you try, make a prediction about the effect it will have. After trying it, review your prediction.</p>
 
-Were you right? If not, in what way were you wrong? What happened that surprised you? These sorts of surprises are the seeds of learning so treasure them.
+    <p>Were you right? If not, in what way were you wrong? What happened that surprised you? These sorts of surprises are the seeds of learning so treasure them.</p>
 
-**TIP:** http://explainshell.com/ is a great resource for understanding [complex shell commands](http://explainshell.com/explain?cmd=ls+-hal).
+    <p>**TIP:** http://explainshell.com/ is a great resource for understanding [complex shell commands](http://explainshell.com/explain?cmd=ls+-hal).</p>
+
+  </div>
+</div>
 
 ## Graphical user interfaces
 
