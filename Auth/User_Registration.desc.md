@@ -400,6 +400,7 @@ git branch -d registration
 
 ## Resources
 
+- [Coda Hale - How To Safely Store A Password](https://codahale.com/how-to-safely-store-a-password/)
 - [Wikipedia - Cryptographic hash function](https://en.wikipedia.org/wiki/Cryptographic_hash_function)
 
 ## Videos
