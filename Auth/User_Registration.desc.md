@@ -155,13 +155,13 @@ git add .
 git commit -m 'Create users migration'
 ```
 
-Create a new file for the users routes and open it with Atom.
+Create a new routes file for user registration.
 
 ```shell
 touch routes/users.js
 ```
 
-In the `server.js` file, add the necessary routing middleware for the `/users` endpoint:
+In the `server.js` file, add the necessary routing middleware.
 
 ```JavaScript
 const users = require('routes/users');
@@ -169,7 +169,7 @@ const users = require('routes/users');
 app.use(users);
 ```
 
-Add the following code to the `routes/users.js` module.
+In the `routes/users.js` module, write the following code.
 
 ```JavaScript
 'use strict';
@@ -182,6 +182,10 @@ router.post('/users', (req, res, next) => {
 });
 
 module.exports = router;
+```
+
+```shell
+nodemon server.js
 ```
 
 Then run the following shell command.
