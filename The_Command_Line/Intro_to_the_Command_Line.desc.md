@@ -81,9 +81,17 @@ It's common for a user account to belong to a many groups. The only important gr
 
 **TIP:** If your user account doesn't belong to the `admin` group, it'll be difficult to manage your development machine.
 
-### **Exercise**
+<div class="media" style="padding: 2.5rem 2rem 1rem; border: 1px solid #c7254e; border-radius: 1rem;">
+  <div class="media-left" style="font-size: 3rem; color: #c7254e;">
+    <i class="fa fa-exclamation-circle"></i>
+  </div>
+  <div class="media-body">
+    <h3 class="media-heading">Exercise</h3>
 
-Find out the account name and groups of the current user of your computer.
+    <p>Find out the account name and groups of the current user of your computer.</p>
+
+  </div>
+</div>
 
 ## Working directories
 
@@ -107,9 +115,17 @@ pwd
 
 ![](https://i.imgur.com/s6Xqtmn.png)
 
-### **Exercise**
+<div class="media" style="padding: 2.5rem 2rem 1rem; border: 1px solid #c7254e; border-radius: 1rem;">
+  <div class="media-left" style="font-size: 3rem; color: #c7254e;">
+    <i class="fa fa-exclamation-circle"></i>
+  </div>
+  <div class="media-body">
+    <h3 class="media-heading">Exercise</h3>
 
-What's the current working directory of your shell?
+    <p>What's the current working directory of your shell?</p>
+
+  </div>
+</div>
 
 ## File system paths
 
@@ -133,9 +149,17 @@ A path is **absolute** when it starts with `/`.
 
 A path is **relative** when it does not.
 
-### **Exercise**
+<div class="media" style="padding: 2.5rem 2rem 1rem; border: 1px solid #c7254e; border-radius: 1rem;">
+  <div class="media-left" style="font-size: 3rem; color: #c7254e;">
+    <i class="fa fa-exclamation-circle"></i>
+  </div>
+  <div class="media-body">
+    <h3 class="media-heading">Exercise</h3>
 
-Is the path returned by the `pwd` command absolute or relative?
+    <p>Is the path returned by the `pwd` command absolute or relative?</p>
+
+  </div>
+</div>
 
 ### The `ls` command
 
@@ -147,9 +171,17 @@ ls
 
 ![](https://i.imgur.com/tivSrqi.png)
 
-### **Exercise**
+<div class="media" style="padding: 2.5rem 2rem 1rem; border: 1px solid #c7254e; border-radius: 1rem;">
+  <div class="media-left" style="font-size: 3rem; color: #c7254e;">
+    <i class="fa fa-exclamation-circle"></i>
+  </div>
+  <div class="media-body">
+    <h3 class="media-heading">Exercise</h3>
 
-In what order are the files and directories displayed?
+    <p>In what order are the files and directories displayed?</p>
+
+  </div>
+</div>
 
 ## Command flags
 
@@ -167,9 +199,17 @@ ls -l
 
 ![](https://i.imgur.com/TzK8I2m.png)
 
-### **Exercise**
+<div class="media" style="padding: 2.5rem 2rem 1rem; border: 1px solid #c7254e; border-radius: 1rem;">
+  <div class="media-left" style="font-size: 3rem; color: #c7254e;">
+    <i class="fa fa-exclamation-circle"></i>
+  </div>
+  <div class="media-body">
+    <h3 class="media-heading">Exercise</h3>
 
-How can you tell if an item is a file or directory? **Hint:** look at its permissions.
+    <p>How can you tell if an item is a file or directory? <em>HINT:<em> Look at its permissions.</p>
+
+  </div>
+</div>
 
 ### Human-friendly sizes
 
@@ -246,9 +286,17 @@ open .
 
 **TIP:** Remember, the period `.` character represents the current working directory.
 
-### **Exercise**
+<div class="media" style="padding: 2.5rem 2rem 1rem; border: 1px solid #c7254e; border-radius: 1rem;">
+  <div class="media-left" style="font-size: 3rem; color: #c7254e;">
+    <i class="fa fa-exclamation-circle"></i>
+  </div>
+  <div class="media-body">
+    <h3 class="media-heading">Exercise</h3>
 
-Why can't you see any hidden files and directories in the Finder?
+    <p>Why can't you see any hidden files and directories in the Finder?</p>
+
+  </div>
+</div>
 
 ## Review
 
@@ -277,9 +325,17 @@ The tilde `~` character represents the home directory. Try displaying the tilde 
 echo ~
 ```
 
-### **Exercise**
+<div class="media" style="padding: 2.5rem 2rem 1rem; border: 1px solid #c7254e; border-radius: 1rem;">
+  <div class="media-left" style="font-size: 3rem; color: #c7254e;">
+    <i class="fa fa-exclamation-circle"></i>
+  </div>
+  <div class="media-body">
+    <h3 class="media-heading">Exercise</h3>
 
-Is the output from this command the as the output you got from the `pwd` command?
+    <p>Is the output from this command the as the output you got from the `pwd` command?</p>
+
+  </div>
+</div>
 
 ## File System Navigation
 
@@ -399,9 +455,17 @@ This way you can easily see the competing outcomes of autocomplete. What happens
 
 The competing options for me are `Desktop/`, `Documents/`, and `Downloads/`
 
-### **Exercise**
+<div class="media" style="padding: 2.5rem 2rem 1rem; border: 1px solid #c7254e; border-radius: 1rem;">
+  <div class="media-left" style="font-size: 3rem; color: #c7254e;">
+    <i class="fa fa-exclamation-circle"></i>
+  </div>
+  <div class="media-body">
+    <h3 class="media-heading">Exercise</h3>
 
-Spend three minutes navigating around your computer's file system from the command line. Use a mixture of relative and absolute paths to navigate around. See what dark corners you can discover in your operating system.
+    <p>Spend three minutes navigating around your computer's file system from the command line. Use a mixture of relative and absolute paths to navigate around. See what dark corners you can discover in your operating system.</p>
+
+  </div>
+</div>
 
 ## File System Manipulation
 
@@ -425,7 +489,7 @@ What command can you use to see the results of your handywork?
 
 Let's `cd` into our new `notebook`  Look around with `ls`, and `ls -la`.  What do you see?
 
-### Exercise
+**Try This**
 
 I want my note book to have some notes.  
 
@@ -484,13 +548,23 @@ Our old text has been replaced with the new text. Sometimes we'll want to **appe
 
 `$ history >> notes.txt`
 
-### **Exercise**
+**Try This**
 
 Create a new file called `movies.txt`. Then, try this:
 
 `$ echo "The Little Mermaid" > movies.txt`
 
-Append at least 4 more movies to your `movies.txt` file before moving on to the next step.
+<div class="media" style="padding: 2.5rem 2rem 1rem; border: 1px solid #c7254e; border-radius: 1rem;">
+  <div class="media-left" style="font-size: 3rem; color: #c7254e;">
+    <i class="fa fa-exclamation-circle"></i>
+  </div>
+  <div class="media-body">
+    <h3 class="media-heading">Exercise</h3>
+
+    <p>Append at least 4 more movies to your `movies.txt` file before moving on to the next step.</p>
+
+  </div>
+</div>
 
 ### Piping
 
@@ -520,39 +594,17 @@ See how we filtered out just the lines that contain "Little"?  Try grepping for 
 
 Adapted from [http://en.flossmanuals.net/command-line/piping/](http://en.flossmanuals.net/command-line/piping/)
 
-### Exercise: Using grep
+<div class="media" style="padding: 2.5rem 2rem 1rem; border: 1px solid #c7254e; border-radius: 1rem;">
+  <div class="media-left" style="font-size: 3rem; color: #c7254e;">
+    <i class="fa fa-exclamation-circle"></i>
+  </div>
+  <div class="media-body">
+    <h3 class="media-heading">Exercise</h3>
 
-`grep` is a powerful command that can search through text output for matching text, or patterns of text. Begin by taking a look at [this gist](https://gist.github.com/bwreid/cd8bd5437f19a52a02b2e197e7aa8ca4) and copying the commands to your terminal.
+    <p>Test your `grep` knowledge by completing the _Intro to grep_ exercise assigned to this lesson now.</p>
 
-**TIP:** You should always read through code snippets before copying and pasting them into your terminal! What if I had put something malicious in here to delete everything on your computer?
-
-Use pipes, grep, and the commands we've learned about so far to do the following.
-
-1. List all books that were written by "Dan Brown"
-1. Using a single command, create a new file called `sorted_books.txt` that contains a list of the books in `books.txt` by sorted by title.
-1. Using a single command, create a new file called `books_by_george_orwell.txt` which should only contain those books by George Orwell, sorted by title.
-
-**CHALLENGE**
-
-Create a new file called `authors.txt` which lists only the authors of the books, alphabetized by first name. The list should be unique (i.e. Dan Brown is not listed twice) and should be numbered. Your output should look something like this:
-
-```
-1: Dan Brown
-2: Ernest Hemingway
-3: George Orwell
-4: Harper Lee
-5: J.D. Salinger
-6: J.K. Rowling
-7: J.R.R. Tolkien
-8: Khaled Hosseini
-9: Mark Twain
-10: Mary Shelley
-11: Neil Gaiman
-12: Ray Bradbury
-13: Suzanne Collins
-```
-
-> HINT: you will need to use the `.*` wildcard to complete this challenge. In grep `.` means 'match any single character" and `.*` means match any number of any character. `.*:` means match any number of any character until we find a colon. `.*F` means match any number of any characters until we find a capital F.
+  </div>
+</div>
 
 ### Moving
 
@@ -638,9 +690,17 @@ You can scroll up and down through all recently used commands that contain the s
 
 If you don't want to execute any of these commands, type `ctrl+c`. Control+c is a powerful command that you can use at any time to kill the currently running terminal process, or exit many terminal applications.
 
-### Exercise
+<div class="media" style="padding: 2.5rem 2rem 1rem; border: 1px solid #c7254e; border-radius: 1rem;">
+  <div class="media-left" style="font-size: 3rem; color: #c7254e;">
+    <i class="fa fa-exclamation-circle"></i>
+  </div>
+  <div class="media-body">
+    <h3 class="media-heading">Exercise</h3>
 
-Let's keep our `galvanize` directory clean! Move the contents of the `notebook` directory into a new folder at `unit-1/intro-to-the-command-line`. You should be able to do this in a single line!
+    <p>Let's keep our `galvanize` directory clean! Move the contents of the `notebook` directory into a new folder at `unit-1/intro-to-the-command-line`. You should be able to do this in a single line!</p>
+
+  </div>
+</div>
 
 ## Resources
 
