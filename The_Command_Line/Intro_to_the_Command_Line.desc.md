@@ -206,7 +206,7 @@ ls -l
   <div class="media-body">
     <h3 class="media-heading">Exercise</h3>
 
-    <p>How can you tell if an item is a file or directory? <em>HINT:</em> Look at its permissions.</p>
+    <p>How can you tell if an item is a file or directory? **HINT:** Look at its permissions.</p>
 
   </div>
 </div>
