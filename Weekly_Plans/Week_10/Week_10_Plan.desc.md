@@ -45,17 +45,16 @@ Exercise / Homework:
 
 # Wednesday, June 29
 
-Warmup: [Link to Warmup](http://github.com/gSchool)
+Warmup:
+
+- [Panagrams](https://www.hackerrank.com/challenges/pangrams)
+- [Game of Thrones](https://www.hackerrank.com/challenges/game-of-thrones)
 
 Lessons:
 - [Lesson](/cohorts/68/student_dashboard)
 - [Lesson](/cohorts/68/student_dashboard)
 
 Homework: [Homework](/cohorts/68/student_dashboard)
-
-Announcements:
-- Announcement 1
-- Announcement 2
 
 ---
 
