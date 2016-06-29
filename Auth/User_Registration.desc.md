@@ -104,8 +104,8 @@ Here's a high-level overview of the user registration process.
 
 1. A user sends identification information to an HTTP server which includes a unique account name and a plaintext password.
 1. On the server, the password is concatenated with a randomly generated salt.
-1. Then, a cryptographic hash function takes the password + salt message and returns a hash digest.
-1. The hash digest is inserted into the database along side the user's other information.
+1. Then, a cryptographic hash function takes the password + salt message and returns a digest.
+1. The digest is inserted into the database along side the user's other information.
 1. The server informs the client that registration was a success.
 
 To start off with, change into your `trackify` directory and make a new branch called `registration`.
