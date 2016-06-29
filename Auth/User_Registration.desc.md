@@ -1,7 +1,7 @@
 ## Objectives
 
-* Explain what cryptographic password hashing is.
-* Explain why cryptographic password hashing hashing is important.
+* Explain what a cryptographic hash function is.
+* Explain why a cryptographic hash function is important.
 * Explain what a salt is.
 * Explain why using a salt is important.
 * Explain the process of user registration.
@@ -10,9 +10,9 @@
 * Add custom routes for user registration.
 * Use bcrypt to hash and salt passwords.
 
-## What's cryptographic password hashing?
+## What's cryptographic hash function?
 
-**Cryptographic password hashing** is the process of encrypting a user-submitted password with a cryptographic hash function. A **cryptographic hash functions** is a mathematical algorithm that converts a string of arbitrary length to a string of fixed length. Given the same input string, a cryptographic hash function always produces the same output string.
+A **cryptographic hash functions** is a mathematical algorithm that converts a string of arbitrary length to a string of fixed length. Given the same input string, a cryptographic hash function always produces the same output string.
 
 ```text
 ┌─────────────┐        ┌───────────────┐       ┌─────────────────────┐
@@ -39,6 +39,8 @@
 
 A cryptographic hash function is designed to be one-way function. In other words, it should be unfeasible to calculate the input string based on the output string. The only way to recreate the input string using it's output string is to try a large number of possible inputs to see if they produce a match.
 
+**NOTE:** There is no encryption involved in a cryptographic hash function because encryption is a two-way process. When you encrypt a string, you expect to reverse the process and get the original string back out again.
+
 The input string is often called the message, and the output string is often called the message digest or simply the digest. The ideal cryptographic hash function has four main properties.
 
 1. It's quick to compute the digest for any given message.
@@ -46,7 +48,7 @@ The input string is often called the message, and the output string is often cal
 1. A small change to a message should change the digest so extensively that the new digest appears uncorrelated with the old digest.
 1. It's infeasible to find two different messages with the same digest.
 
-To encrypt your own message with the [sha256 cryptographic hash function](https://en.wikipedia.org/wiki/SHA-2), run the following shell commend.
+To hash your own message with the [sha256 cryptographic hash function](https://en.wikipedia.org/wiki/SHA-2), run the following shell commend.
 
 ```shell
 echo 'YOUR MESSAGE HERE' | openssl dgst -sha256
@@ -58,9 +60,9 @@ Turn to a neighbor and explain what a cryptographic hash function is in your own
 
 ## Why is password hashing important?
 
-If user-submitted passwords are stored inside a database unencrypted, that information is compromised when the database is stolen. The means whoever has access to that data can use try the user's login credentials on other sites. And since so many people use the same password for every site, chances are good the malicious person can now log into your users' banks and online stores. That's why it's necessary to store encrypted passwords in your application's database.
+If user-submitted passwords are stored inside a database unhashed, that information is compromised when the database is stolen. The means whoever has access to that data can use try the user's login credentials on other sites. And since so many people use the same password for every site, chances are good the malicious person can now log into your users' banks and online stores. That's why it's necessary to store hashed passwords in your application's database.
 
-Using defined encryption algorithms, hashing helps protect against hash tables, dictionary attacks, rainbow tables, and other types of brute-force attacks.
+Using defined algorithms, hashing helps protect against hash tables, dictionary attacks, rainbow tables, and other types of brute-force attacks.
 
 Password hashing also provides an extra layer of security between developer and end user. When passwords are stored as cryptographic hashes, the developer never has access to a user's plain-text password.
 
