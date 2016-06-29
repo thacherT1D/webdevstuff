@@ -51,7 +51,7 @@ The input string is often called the message, and the output string is often cal
 To hash your own message with the [sha256 cryptographic hash function](https://en.wikipedia.org/wiki/SHA-2), run the following shell commend.
 
 ```shell
-echo 'YOUR MESSAGE HERE' | openssl dgst -sha256
+echo 'Fox' | shasum -a 256
 ```
 
 ### Exercise
