@@ -98,7 +98,7 @@ $2a$12$XeT/ETMEi/saK0oPTHnOUu9Bt5kZ0PRCYOq.n6xDkPskPOux0zztq
   │  │                                                     │
   │  │                                                     │
   │
-  │ work factor                                     hash + salt
+  │ work factor                                       hash + salt
 
 algorithm
 ```
