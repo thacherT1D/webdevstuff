@@ -75,7 +75,7 @@ In your own words, write down why cryptographic password hashing is important. A
 
 When generating a digest, it's recommended to add another layer of protection with something called a salt. A **salt** is a random string that is concatenated to the end of a message before it's hashed. Using a different salt every time a digest is generated will provide an extra layer of security when hashing a password. This prevents attackers from potentially using a table of precomputed hashes of common passwords to breach your web application.
 
-When hashing an input string, bcrypt will go through `2^workfactor` iterations when generating a digest. On a 2GHz core machine, you can roughly expect the following performance when using the `bcrypt` NPM module.
+When hashing an input string, bcrypt will go through `2^workfactor` iterations when generating a digest. On a 2GHz core machine, you can roughly expect the following performance when using the [`bcrypt` NPM module](https://www.npmjs.com/package/bcrypt).
 
 | work factor | iterations | performance     |
 |-------------|------------|-----------------|
@@ -324,9 +324,8 @@ git branch -d registration
 ## Resources
 
 - [Coda Hale - How To Safely Store A Password](https://codahale.com/how-to-safely-store-a-password/)
-- [Stack Overflow - What column type/length should I use for storing a Bcrypt hashed password in a Database?](http://stackoverflow.com/a/5882472)
-- [Wikipedia - Cryptographic hash function](https://en.wikipedia.org/wiki/Cryptographic_hash_function)
 - [Salted Password Hashing - Doing it Right](https://crackstation.net/hashing-security.htm)
+- [Wikipedia - Cryptographic hash function](https://en.wikipedia.org/wiki/Cryptographic_hash_function)
 
 ## Videos
 
