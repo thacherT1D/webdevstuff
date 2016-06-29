@@ -75,20 +75,20 @@ In your own words, write down why cryptographic password hashing is important. A
 
 When generating a digest, it's recommended to add another layer of protection with something called a salt. A **salt** is a random string that is concatenated to the end of a message before it's hashed. Using a different salt every time a digest is generated will provide an extra layer of security when hashing a password. This prevents attackers from potentially using a table of precomputed hashes of common passwords to breach your web application.
 
-When hashing an input string, bcrypt will go through `2^rounds` iterations when generating a digest. On a 2GHz core machine, you can roughly expect the following performance when using the `bcrypt` NPM module.
+When hashing an input string, bcrypt will go through `2^workfactor` iterations when generating a digest. On a 2GHz core machine, you can roughly expect the following performance when using the `bcrypt` NPM module.
 
-| rounds | performance    |
-|--------|----------------|
-| 8      | ~40 hashes/sec |
-| 9      | ~20 hashes/sec |
-| 10     | ~10 hashes/sec |
-| 11     | ~5  hashes/sec |
-| 12     | 2-3 hashes/sec |
-| 13     | ~1 hash/sec    |
-| 14     | ~1.5 hash/sec  |
-| 15     | ~3 hash/sec    |
-| 25     | ~1 hash/hour   |
-| 31     | 2-3 hash/days  |
+| work factor | performance    |
+|-------------|----------------|
+| 8           | ~40 hashes/sec |
+| 9           | ~20 hashes/sec |
+| 10          | ~10 hashes/sec |
+| 11          | ~5  hashes/sec |
+| 12          | 2-3 hashes/sec |
+| 13          | ~1 hash/sec    |
+| 14          | ~1.5 hash/sec  |
+| 15          | ~3 hash/sec    |
+| 25          | ~1 hash/hour   |
+| 31          | 2-3 hash/days  |
 
 ### Exercise
 
