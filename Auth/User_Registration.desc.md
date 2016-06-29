@@ -58,16 +58,9 @@ Using defined encryption algorithms, hashing helps protect against hash tables, 
 
 Password hashing also provides an extra layer of security between developer and end user. When passwords are stored as cryptographic hashes, the developer never has access to a user's plain-text password.
 
-Some of the properties of a successful hashing function include:
-
-* The process of hashing is quick and inexpensive for any input
-* It is impractical for a hash to be the same for two different inputs
-* It is impractical to calculate an input based on a hash
-* Even small changes to an input will result in a completely new hash that is uncorrelated to a previous hash
-
 ### Exercise
 
-Write down in your own words why cryptographic hashing is important. Once you're finished, we'll discuss what you wrote.
+In your own words, write down why cryptographic password hashing is important. After about 30 seconds, your instructor will cold call on the class and ask what was written down.
 
 ## What is a salt?
 
