@@ -187,7 +187,8 @@ app.use('/users', users);
 
 ```
 
-**`GET /about`**  
+**GET /about**  
+
 ```javascript
 router.use(function f1 (req, res, next) {
 	next()
@@ -207,7 +208,7 @@ router.get('/other', function f4 (req, res, next) {
 
 ```
 
-**`GET /other`**  
+**GET /other**  
 ```javascript
 router.use(function f1 (req, res, next) {
 	next()
