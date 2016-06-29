@@ -92,7 +92,7 @@ When hashing an input string, bcrypt will go through `2^workfactor` iterations 
 
 ### Exercise
 
-Turn to your neighbor and explain what bcrypt is. In your conversation, include some of the advantages bcrypt has over other cryptographic hash functions. After about 30 seconds, your instructor will cold call on the class and ask what was written down.
+Turn to your neighbor and explain what bcrypt is. In your conversation, include some of the advantages bcrypt has over other generic cryptographic hash functions. After about 30 seconds, your instructor will cold call on the class and ask what was written down.
 
 ## How do you register a user with a hashed password?
 
