@@ -398,6 +398,10 @@ git merge registration
 git branch -d registration
 ```
 
+## Resources
+
+- [Wikipedia - Cryptographic hash function](https://en.wikipedia.org/wiki/Cryptographic_hash_function)
+
 ## Videos
 
 ### Ethical Hacking Tutorials - 32 - Cryptographic Hash function
