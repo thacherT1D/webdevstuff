@@ -108,11 +108,11 @@ git checkout -b registration
 Open the project directory with atom if you haven't already, and create the migration file to define the schema for the users table.
 
 ```shell
-atom .
 npm run knex migrate:make users
+atom .
 ```
 
-Inside the newly created `TIMESTAMP_users.js` migration file, add the following:
+Inside the new migration file, add the following:
 
 ```JavaScript
 'use strict';
@@ -120,8 +120,8 @@ Inside the newly created `TIMESTAMP_users.js` migration file, add the following:
 exports.up = function(knex) {
   return knex.schema.createTable('users', (table) => {
     table.increments();
-    table.string('email').unique().notNullable().defaultTo('');
-    table.string('hashed_password').notNullable().defaultTo('');
+    table.string('email').unique().notNullable();
+    table.specificType('hashed_password', 'char(60)').notNullable();
     table.timestamps(true, true);
   });
 };
@@ -220,17 +220,13 @@ After requiring the necessary dependencies for an Express router and Knex, add a
 
 const express = require('express');
 const router = express.Router();
-
-const environment = process.env.NODE_ENV || 'development';
-const knexConfig = require('../knexfile')[environment];
-const knex = require('knex')(knexConfig);
+const knex = require('../knex');
 
 router.post('/', (req, res, next) => {
-  const email = req.body.email;
-  const password = req.body.password;
-
-  // Check if email already exists in database
+  res.sendStatus(200);
 });
+
+module.exports = router;
 ```
 
 Add and commit your work.
@@ -238,36 +234,6 @@ Add and commit your work.
 ```shell
 git add .
 git commit -m "add register user route"
-```
-
-In the route handler, before hashing the password or inserting data, query the database to see if the email already exists.
-
-```JavaScript
-router.post('/', (req, res, next) => {
-  const email = req.body.email;
-  const password = req.body.password;
-
-  knex('users').where('email', email)
-    .then((data) => {
-      if (data.length) {
-        let err = new Error('Email already exists');
-        err.status = 409;
-        return next(err);
-      }
-
-      // Hash and salt password
-    })
-    .catch((err) => {
-      return next(err);
-    });
-});
-```
-
-Add and commit your work.
-
-```shell
-git add .
-git commit -m "add unique email check"
 ```
 
 ## How to use bcrypt
@@ -290,37 +256,31 @@ bcrypt.hash(plainText, saltRounds, (err, hash) => {
     // Handle err
   }
 
-  // Store hash in your password database
+  // Store hash in your database
 });
 ```
 
 Use the `bcrypt.hash()` method to generate a salt and hash the password.
 
 ```JavaScript
-router.post('/', (req, res, next) => {
-  const email = req.body.email;
-  const password = req.body.password;
+'use strict';
 
-  knex('users').where('email', email)
-    .then((data) => {
-      if (data.length) {
-        let err = new Error('Email already exists');
-        err.status = 409;
-        return next(err);
-      }
+const express = require('express');
+const router = express.Router();
+const knex = require('../knex');
 
-      bcrypt.hash(password, 10, (err, hashed_password) => {
-        if (err) {
-          return next(err);
-        }
-
-        // Store hash in your password database
-      });
-    })
-    .catch((err) => {
+router.post('/users', (req, res, next) => {
+  bcrypt.hash(req.body.password, 10, (err, hashed_password) => {
+    if (err) {
       return next(err);
-    });
+    }
+
+    console.log(hashed_password);
+    res.sendStatus(200);
+  });
 });
+
+module.exports = router;
 ```
 
 Add and commit your work.
@@ -333,40 +293,35 @@ git commit -m "use bcrypt to hash password"
 Finally, use Knex to insert the email and hashed password into the users table.
 
 ```JavaScript
-router.post('/', (req, res, next) => {
-  const email = req.body.email;
-  const password = req.body.password;
+'use strict';
 
-  knex('users').where('email', email)
-    .then((data) => {
-      if (data.length) {
-        let err = new Error('Email already exists');
-        err.status = 409;
-        return next(err);
-      }
+const express = require('express');
+const router = express.Router();
+const knex = require('../knex');
 
-      bcrypt.hash(password, 10, (err, hashed_password) => {
-        if (err) {
-          return next(err);
-        }
-
-        knex('users').returning('*')
-          .insert({
-            email: email,
-            hashed_password: hashed_password
-          })
-          .then((users) => {
-            res.status(200).send(users[0]);
-          })
-          .catch((err) => {
-            return next(err);
-          });
-      });
-    })
-    .catch((err) => {
+router.post('/users', (req, res, next) => {
+  bcrypt.hash(req.body.password, 10, (err, hashed_password) => {
+    if (err) {
       return next(err);
-    });
+    }
+
+    knex('users')
+      .insert({
+        first_name: req.body.first_name,
+        last_name: req.body.last_name,
+        email: req.body.email,
+        hashed_password: hashed_password
+      }, '*')
+      .then((users) => {
+        res.sendStatus(200);
+      })
+      .catch((err) => {
+        next(err);
+      });
+  });
 });
+
+module.exports = router;
 ```
 
 Add and commit your work, and push to the registration branch. Then, checkout the master branch, and merge registration into master. Delete the registration branch if you'd like.
@@ -383,6 +338,7 @@ git branch -d registration
 ## Resources
 
 - [Coda Hale - How To Safely Store A Password](https://codahale.com/how-to-safely-store-a-password/)
+- [Stack Overflow - What column type/length should I use for storing a Bcrypt hashed password in a Database?](http://stackoverflow.com/a/5882472)
 - [Wikipedia - Cryptographic hash function](https://en.wikipedia.org/wiki/Cryptographic_hash_function)
 - [Salted Password Hashing - Doing it Right](https://crackstation.net/hashing-security.htm)
 
