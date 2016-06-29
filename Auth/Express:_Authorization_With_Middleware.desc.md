@@ -209,6 +209,7 @@ router.get('/other', function f4 (req, res, next) {
 ```
 
 **GET /other**  
+
 ```javascript
 router.use(function f1 (req, res, next) {
 	next()
