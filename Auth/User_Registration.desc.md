@@ -402,6 +402,7 @@ git branch -d registration
 
 - [Coda Hale - How To Safely Store A Password](https://codahale.com/how-to-safely-store-a-password/)
 - [Wikipedia - Cryptographic hash function](https://en.wikipedia.org/wiki/Cryptographic_hash_function)
+- [Salted Password Hashing - Doing it Right](https://crackstation.net/hashing-security.htm)
 
 ## Videos
 
