@@ -104,21 +104,26 @@ Here's a high-level overview of a user registration process for a web applicatio
 1. The digest and the salt are inserted into the database along side the user's other personal information.
 1. The server informs the client that user registration was a success.
 
-To start off with, change into your `trackify` directory and make a new branch called `registration`.
+To start off with, change into your `trackify` directory and create a new branch called `registration`.
 
 ```shell
 cd trackify
 git checkout -b registration
 ```
 
-Open the project directory with atom if you haven't already, and create the migration file to define the schema for the users table.
+Create the migration file to define the schema for the users table.
 
 ```shell
 npm run knex migrate:make users
+```
+
+Open the project directory in your text editor
+
+```shell
 atom .
 ```
 
-Inside the new migration file, add the following:
+Inside the new migration file, write the following code.
 
 ```JavaScript
 'use strict';
@@ -137,14 +142,18 @@ exports.down = function(knex) {
 };
 ```
 
+Migrate your database with the latest migration file.
+
+```shell
+npm run knex migrate:latest
+```
+
 Add and commit your work.
 
 ```shell
 git add .
-git commit -m "Create users migration"
+git commit -m 'Create users migration'
 ```
-
-## Add user registration route
 
 Create a new file for the users routes and open it with Atom.
 
