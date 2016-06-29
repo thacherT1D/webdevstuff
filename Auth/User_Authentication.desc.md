@@ -203,6 +203,40 @@ router.post('/session', (req, res, next) => {
 
 # Detecting whether user is authenticated
 
+Our API will eventually need to allow users to interact with our resources. For example, users may want to follow artists or create their own playlists with tracks. In these cases, it is important that we can ensure that a user can only change their own playlist. For this, we can build guard clauses to check if the proper user is allowed to make the changes.
+
+```javascript
+// User follows an artist.
+app.post('/users/:userId/artists/:artistId', (req, res, next) => {
+  const userId = Number.parseInt(req.params.userId);
+
+  if (!req.session.user || req.session.user.id !== userId) {
+    return res.sendStatus(401);
+  }
+
+  // Database work
+});
+```
+
+Since there will be a lot of user actions, this guard clause is a common guard clause to use and also forget. We can create a piece of middleware and apply it to specific routes.
+
+```javascript
+const checkAuth = function(req, res, next) {
+  const userId = Number.parseInt(req.params.userId);
+
+  if (!req.session.user || req.session.user.id !== userId) {
+    return res.sendStatus(401);
+  }
+
+  next();
+}
+
+// User follows an artist.
+app.post('/users/:userId/artists/:artistId', checkAuth, (req, res, next) => {
+  // Database work
+});
+```
+
 # Logging a user out
 
 Logging a user out is as easy as destroying the request session. This clears the session cookies so that the user cannot be authenticated.
