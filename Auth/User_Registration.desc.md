@@ -96,13 +96,13 @@ Turn to your neighbor and explain what bcrypt is. In your conversation, include 
 
 ## How do you register a user with a hashed password?
 
-Here's a high-level overview of the user registration process.
+Here's a high-level overview of a user registration process for a web application.
 
-1. A user sends identification information to an HTTP server which includes a unique account name and a plaintext password.
+1. A user sends personal identification information to an HTTP server, including a unique account name and a plaintext password.
 1. On the server, the password is concatenated with a randomly generated salt.
-1. Then, a cryptographic hash function takes the password + salt message and returns a digest.
-1. The digest is inserted into the database along side the user's other information.
-1. The server informs the client that registration was a success.
+1. Then, bcrypt generates a digest from the password + salt message.
+1. The digest and the salt are inserted into the database along side the user's other personal information.
+1. The server informs the client that user registration was a success.
 
 To start off with, change into your `trackify` directory and make a new branch called `registration`.
 
