@@ -12,7 +12,32 @@
 
 ## What's cryptographic password hashing?
 
-**Password hashing** is a security process that takes a user-submitted password and encrypts it, producing an encoded string at a fixed length. Cryptographic hash functions are intended to be one-way functions, meaning it is supposed to be unfeasible to calculate the input based on an encoded string's output.
+**Cryptographic password hashing** is a security process that takes a user-submitted password and encrypts it, producing an encoded string at a fixed length. Cryptographic hash functions are intended to be one-way functions, meaning it is supposed to be unfeasible to calculate the input based on an encoded string's output.
+
+```text
+┌─────────────┐        ┌───────────────┐       ┌─────────────────────┐
+│             │        │               │       │ 6e9c 620d cd31 6bf2 │
+│     Fox     │        │ Cryptographic │       │ 9a37 bf6d 0be3 d685 │
+│             │───────▶│ hash function │──────▶│ acfd 18be a7e6 d5a2 │
+│             │        │               │       │ a697 1045 3961 0491 │
+└─────────────┘        └───  sha256  ──┘       └─────────────────────┘
+
+
+┌─────────────┐        ┌───────────────┐       ┌─────────────────────┐
+│             │        │               │       │ ddad 2ab3 b2a8 f269 │
+│     Fax     │        │ Cryptographic │       │ a001 bb26 a075 4a6b │
+│             │───────▶│ hash function │──────▶│ 49ed f7ab 7ddb c953 │
+│             │        │               │       │ 12fa 89c8 e19a b03e │
+└─────────────┘        └───  sha256  ──┘       └─────────────────────┘
+
+
+┌─────────────┐        ┌───────────────┐       ┌─────────────────────┐
+│             │        │               │       │ 46b7 ffe0 588c ec9b │
+│    Haxor    │        │ Cryptographic │       │ 80de a058 a448 a063 │
+│             │───────▶│ hash function │──────▶│ 9be9 451e 99ea 89f6 │
+│             │        │               │       │ 3899 67e1 bcfc 3672 │
+└─────────────┘        └───  sha256  ──┘       └─────────────────────┘
+```
 
 ## Why is password hashing important?
 
