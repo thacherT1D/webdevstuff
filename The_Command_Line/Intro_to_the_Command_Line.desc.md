@@ -206,7 +206,7 @@ ls -l
   <div class="media-body">
     <h3 class="media-heading">Exercise</h3>
 
-    <p>How can you tell if an item is a file or directory? <em>HINT:<em> Look at its permissions.</p>
+    <p>How can you tell if an item is a file or directory? <em>HINT:</em> Look at its permissions.</p>
 
   </div>
 </div>
@@ -601,7 +601,7 @@ Adapted from [http://en.flossmanuals.net/command-line/piping/](http://en.flossma
   <div class="media-body">
     <h3 class="media-heading">Exercise</h3>
 
-    <p>Test your `grep` knowledge by completing the _Intro to grep_ exercise assigned to this lesson now.</p>
+    <p>Test your `grep` knowledge by completing the **Intro to grep** exercise assigned to this lesson now.</p>
 
   </div>
 </div>
