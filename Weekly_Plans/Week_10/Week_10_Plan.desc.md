@@ -51,7 +51,7 @@ Warmup: Make sure you select javascript as the language.
 - [Game of Thrones](https://www.hackerrank.com/challenges/game-of-thrones)
 
 Lessons:
-- [Authorization with Middleware](/cohorts/68/student_dashboard)
+- [Authorization with Middleware](/redirects/articles/4696)
 - [Lesson](/cohorts/68/student_dashboard)
 
 Homework: [Homework](/cohorts/68/student_dashboard)
