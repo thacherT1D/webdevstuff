@@ -88,7 +88,7 @@ When hashing an input string, bcrypt will go through `2^rounds` iterations when
 | 25     | ~1 hash/hour   |
 | 31     | 2-3 hash/days  |
 
-When generating a digest, it's recommended to add another layer of protection with something called a salt. A **salt** is a random string that is concatenated to the end of a message before it's hashed. Using a different salt every time a digest is generated will provide an extra layer of security when hashing a password. This prevents attackers from potentially using a table of precomputed hashes of common passwords to gain access.
+When generating a digest, it's recommended to add another layer of protection with something called a salt. A **salt** is a random string that is concatenated to the end of a message before it's hashed. Using a different salt every time a digest is generated will provide an extra layer of security when hashing a password. This prevents attackers from potentially using a table of precomputed hashes of common passwords to breach your web application.
 
 ### Exercise
 
