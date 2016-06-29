@@ -104,7 +104,7 @@ Here's a high-level overview of a user registration process for a web applicatio
 1. The digest and the salt are inserted into the database along side the user's other personal information.
 1. The server informs the client that user registration was a success.
 
-To start off with, change into your `trackify` directory and create a new branch called `registration`.
+To start off with, change into your `trackify` directory and create a new feature branch.
 
 ```shell
 cd trackify
