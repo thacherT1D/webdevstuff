@@ -58,7 +58,7 @@ router.post('/session', (req, res, next) => {
     .first()
     .then((user) => {
       if (!user) {
-        return res.sendStatus(400);
+        return res.sendStatus(401);
       }
 
       const hashed_password = user.hashed_password;
@@ -69,7 +69,7 @@ router.post('/session', (req, res, next) => {
         }
 
         if (!isMatch) {
-          return res.sendStatus(400);
+          return res.sendStatus(401);
         }
 
         res.sendStatus(200);
