@@ -43,15 +43,20 @@ bcrypt.compare(plainTextPassword, hash, (err, isMatch) => {
 });
 ```
 
-Now let's create a route for logging in and use `bcrypt`.
+Now let's create a route for logging in and use `bcrypt` in a `routes/session.js` module.
 
 ```javascript
-router.post('/session', (req, res, next) => {
-  const { email, password } = req.body;
+'use strict';
 
+const express = require('express');
+const router = express.Router();
+const knex = require('../knex');
+const bcrypt = require('bcrypt');
+
+router.post('/session', (req, res, next) => {
   // Find user in the database using identifier (email).
   knex('users')
-    .where('email', email)
+    .where('email', req.body.email)
     .first()
     .then((user) => {
       if (!user) {
@@ -59,9 +64,11 @@ router.post('/session', (req, res, next) => {
         return res.sendStatus(400);
       }
 
+      const hashed_password = user.hashed_password;
+
       // Hash password with bcrypt and compare it to the database's hash.
-      bcrypt.compare(password, user.password, (err, isMatch) => {
-        if(err) {
+      bcrypt.compare(req.body.password, hashed_password, (err, isMatch) => {
+        if (err) {
           // Error in hashing
           return next(err);
         }
@@ -79,6 +86,8 @@ router.post('/session', (req, res, next) => {
       next(err);
     });
 });
+
+module.exports = router;
 ```
 
 ## What is a cookie?
@@ -162,13 +171,20 @@ app.use(cookieSession({
 }));
 
 // ...
+```
+
+```javascript
+'use strict';
+
+const express = require('express');
+const router = express.Router();
+const knex = require('../knex');
+const bcrypt = require('bcrypt');
 
 router.post('/session', (req, res, next) => {
-  const { email, password } = req.body;
-
   // Find user in the database using identifier (email).
   knex('users')
-    .where('email', email)
+    .where('email', req.body.email)
     .first()
     .then((user) => {
       if (!user) {
@@ -176,9 +192,11 @@ router.post('/session', (req, res, next) => {
         return res.sendStatus(400);
       }
 
+      const hashed_password = user.hashed_password;
+
       // Hash password with bcrypt and compare it to the database's hash.
-      bcrypt.compare(password, user.password, (err, isMatch) => {
-        if(err) {
+      bcrypt.compare(req.body.password, hashed_password, (err, isMatch) => {
+        if (err) {
           // Error in hashing
           return next(err);
         }
@@ -188,7 +206,7 @@ router.post('/session', (req, res, next) => {
           return res.sendStatus(400);
         }
 
-        // User is authenticated. Store user in the session.
+        // User is authenticated
         req.session.user = user;
         res.sendStatus(200);
       });
@@ -197,6 +215,8 @@ router.post('/session', (req, res, next) => {
       next(err);
     });
 });
+
+module.exports = router;
 ```
 
 *Note:* The cookie is marked as `HttpOnly`, which means that the cookie can only be set over HTTP and HTTPS. It also means you cannot access cookies in JavaScript on the browser using `document.cookie`. If there is any user information, you'd like the client to use, another cookie that's accessible needs to be set.
@@ -242,7 +262,7 @@ app.post('/users/:userId/artists/:artistId', checkAuth, (req, res, next) => {
 Logging a user out is as easy as destroying the request session. This clears the session cookies so that the user cannot be authenticated.
 
 ```javascript
-router.delete('/session', (req, res, next) => {
+router.delete('/session', (req, res) => {
   req.session = null;
   res.sendStatus(200);
 });
