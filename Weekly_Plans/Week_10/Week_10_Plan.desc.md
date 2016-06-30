@@ -60,7 +60,7 @@ Homework: [Homework](/cohorts/68/student_dashboard)
 
 # Thursday, June 30
 
-Warmup: May need to use aggregate functions 
+Warmup: May need to use [aggregate functions](https://community.modeanalytics.com/sql/tutorial/sql-group-by/).
 
 - https://www.hackerrank.com/challenges/salary-of-employees
 - https://www.hackerrank.com/challenges/more-than-75-marks
@@ -70,6 +70,8 @@ Warmup: May need to use aggregate functions
 
 Lessons:
 - [Git for Teams: Branching & Merging](/redirects/articles/3106)
+- Auth Review
+- [Q2 Project Intro]()
 
 ---
 
