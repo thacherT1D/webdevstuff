@@ -60,17 +60,16 @@ Homework: [Homework](/cohorts/68/student_dashboard)
 
 # Thursday, June 30
 
-Warmup: [Link to Warmup](http://github.com/gSchool)
+Warmup: May need to use aggregate functions 
+
+- https://www.hackerrank.com/challenges/salary-of-employees
+- https://www.hackerrank.com/challenges/more-than-75-marks
+- https://www.hackerrank.com/challenges/revising-aggregations-the-average-function
+- https://www.hackerrank.com/challenges/average-population-of-each-continent
+- stretch - https://www.hackerrank.com/challenges/full-score
 
 Lessons:
-- [Lesson](/cohorts/68/student_dashboard)
-- [Lesson](/cohorts/68/student_dashboard)
-
-Homework: [Homework](/cohorts/68/student_dashboard)
-
-Announcements:
-- Announcement 1
-- Announcement 2
+- [Git for Teams: Branching & Merging](/redirects/articles/3106)
 
 ---
 

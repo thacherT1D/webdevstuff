@@ -1,3 +1,13 @@
+## Objectives
+
+- Describe a branching workflow
+- Create new git branches for new features/bug fixes
+- Merge features/bug fixes into appropriate branch when ready
+- Use a master and possibly dev branch for currently deployed code
+- Explain what causes a merge conflict
+- Resolve merge conflicts
+
+
 ## Discuss
  - What are the benefits of a fork / pr workflow model?
  - What are some drawbacks?
@@ -7,7 +17,7 @@
 ## Git Branch
 Used to create new working branches of a git repository.
 
- - `git branch ` to create a new working branch
+ - `git branch <branchname>` to create a new working branch
  - `git co <branchname>` to change between branches
  - `git co -b <branchname>` creates and changes your current branch to the newly created one
  - `git branch -av` list all branches (local and remote)
@@ -18,7 +28,7 @@ Used to merge the commits in two branches together. Depending on previous commit
 
  - `git merge <branchname>` merges the specified branch into the current branch
  - `git merge <branchname1> <branchname2>` merges branch 1 into branch 2
- - `git merge <branchname> --squash` merges the specified branch into the current branch by squashing all the commits.
+ - `git merge <branchname> --squash` merges the specified branch into the current branch by combining (squashing) all the commits into one
 
 ## Git Workflow
  - Master will be the branch used to deploy to production environments.
@@ -27,6 +37,6 @@ Used to merge the commits in two branches together. Depending on previous commit
 
 
 ### Resources
- - [Git Branching Workflows](https://git-scm.com/book/en/v2/Git-Branching-Branching-Workflows)
+- [Git Branching Workflows](https://git-scm.com/book/en/v2/Git-Branching-Branching-Workflows)
 - [Branching Diagran](http://nvie.com/posts/a-successful-git-branching-model/)
-
+- [Visual Git Branching practice](http://learngitbranching.js.org/) 
