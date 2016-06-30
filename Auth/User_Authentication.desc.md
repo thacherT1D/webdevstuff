@@ -9,7 +9,7 @@
 
 ## What's user authentication?
 
-**User authentication** is the process of confirming the identity of a user. When a user logs into a web application, he or she must provide unique personal identification, like a username or email address, and a password. If the information provided by the user during login matches the previous information provided during registration, the user is considered to be authenticated.
+**User authentication** is the process of confirming the identity of a user. When a user logs into a web application, he or she must provide unique personal identification, like a username or email address, and a password. If the information provided by the user during login matches the information previously provided during registration, the user is considered to be authenticated.
 
 Since only hashed passwords are stored in the database, work will need to be done to check whether the login password is valid. When a user attempts to login, their password is hashed with their particular salt and compared to the encoded string stored in the database. If they are equivalent, the user is who they claim and can successfully login.
 
