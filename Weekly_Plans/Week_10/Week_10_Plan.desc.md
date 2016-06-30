@@ -69,9 +69,10 @@ Warmup: May need to use [aggregate functions](https://community.modeanalytics.co
 - stretch - https://www.hackerrank.com/challenges/full-score
 
 Lessons:
+
 - [Git for Teams: Branching & Merging](/redirects/articles/3106)
 - Auth Review
-- [Q2 Project Intro]()
+- [Q2 Project Intro](/redirects/articles/3107)
 
 ---
 
