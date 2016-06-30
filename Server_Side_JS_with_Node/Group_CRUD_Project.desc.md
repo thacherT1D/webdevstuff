@@ -124,3 +124,4 @@ Note that you will end up with 3 deployments- your client-side web app, your API
 ---
 
 This is a realistic approximation of what developing real products on a software team is like. You will have approximately 20-25 hours of class time to work on this. **It will not be enough time to do a good job on this project**. Plan on spending extra time outside of class, and coordinate this time with your team. This is another Big Deal Week, and you should put maximum effort into making it successful. You can and should use your teammates, classmates on other teams, and your instructors as learning resources, but this should be your own work.
+
