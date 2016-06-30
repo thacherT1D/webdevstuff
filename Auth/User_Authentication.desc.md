@@ -468,7 +468,7 @@ router.get('/users/artists', checkAuth, (req, res, next) => {
 ```
 ```shell
 git add .
-git commit -m 'Add user following and unfollowing artists.'
+git commit -m 'Add routes for a users following artists'
 ```
 ```shell
 git checkout master
