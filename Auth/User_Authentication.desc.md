@@ -9,16 +9,13 @@
 
 ## What's user authentication?
 
-**User authentication** is the process of confirming the identity of a user. When a user logs into a web application, he or she must provide unique personal identification, like a username or email address, and a password. If the information provided by the user during login matches the information previously provided during registration, the user is considered to be authenticated.
+**User authentication** is the process of confirming the identity of a user. When a user logs into a web application, he or she is attempting to authenticate. To confirm his or her identity, unique personal identification, like a username or email address, and a password must be provided. If the information provided during login matches the information previously provided during registration, the user is considered to be authenticated.
 
-Since only hashed passwords are stored in the database, work will need to be done to check whether the login password is valid. When a user attempts to login, their password is hashed with their particular salt and compared to the encoded string stored in the database. If they are equivalent, the user is who they claim and can successfully login.
+However, it's not quite as simple as that. As you've seen, only hashed passwords are stored in the database during registration. To verify whether a login password is correct, it too mush be run through the same cryptographic hash function as the registration password. If the two hashed passwords are equivalent, the user is authenticated.
 
-More specifically, the user authentication process works like this.
+### Exercise
 
-1. User attempts to login by submitting their unique identifier and password to the server.
-1. The server retrieves the user's registration hashed password from the database using the identifier.
-1. Login password is hashed in the exact same way as the registration hashed password.
-1. The two hashed passwords are compared. If they match, they user is authenticated.
+Turn to a neighbor and explain the user authentication process. It may help to draw a diagram of what's happening.
 
 ### Using `bcrypt`
 
