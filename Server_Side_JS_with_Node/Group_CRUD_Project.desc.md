@@ -43,8 +43,8 @@ See Slideshow
 Your web app should:
 
 * CRUD
-    * Allow users to create, read, update, and delete data from a form
-    * Interact with a server-side A
+    * Allow users to create, read, update, and delete data from a form for two resources
+    * Have relationships between the two resources
 * HTML
     * Make good use of semantic HTML tags
     * Be well-indented, [validated](https://validator.w3.org/nu/), etc.
@@ -60,38 +60,37 @@ Your web app should:
 * JavaScript
     * Well-indented, [linted](http://www.javascriptlint.com/online_lint.php), and use excellent variable names
     * Split code into separate files where appropriate
-    * Optionally, use a test-driven development approach
+    * Preferably, use a test-driven development approach
 * Workflow
     * Use wireframes to create your layouts before you build them
     * Use a feature-branch workflow for your user stories
     * Squash commits and issue pull requests rather merging directly to master
 
-Your API should:
+Your Server Side Application should:
 
 * API
-    * Must have atleast 2 API integrations
+    * Must have atleast 1 API integrations
     * Use express.js
     * Have routes for create, read, update, and delete operations on multiple routes
     * Be designed according to RESTful principles
     * CRUD data from/to a relational database using SQL or an ORM
+    * Have user authentication
 * Auth
-    * Support functionality for three role types:
+    * Support functionality for at least two role types. Possibilities include:
         * A non-logged in user
         * A logged-in user with limited permissions
         * A logged-in superuser
-    * Support login via a social network
-    * Passwords should be hashed
+    * If stored locally, passwords should be hashed
     * Use signed Cookies
 * Database
     * Use PostGres
     * Be normalized to 3rd Normal Form
     * Be seeded with data
-    * Have a separate user for the application
+    * Need joins for related data
 * Workflow
     * Use a feature-branch workflow for your user stories
-    * Use an automated tool (such as Gulp) to build, deploy, and test your project
+    * Optionally, use an automated tool (such as Gulp) to build, deploy, and test your project
     * Document dependencies in a `package.json` file
-    * Squash commits and issue pull requests rather merging directly to master
 
 Note that you will end up with 3 deployments- your client-side web app, your API, and your database. The code for these should also be stored in 3 separate repositories.
 
