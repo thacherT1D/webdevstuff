@@ -1,9 +1,23 @@
 ## Objectives
 
+- Explain what Heroku is.
+- Explainy why Heroku is important.
 - Migrate and seed a PostgreSQL database on Heroku.
 - Deploy a RESTful, database-driven HTTP server to Heroku.
 
+## What's Heroku?
+
+Heroku is a cloud platform that lets you deploy, monitor, and scale HTTP servers. Getting HTTP servers onto the Internet easily and being able to iterate on them quickly can make or break a product. Heroku focuses on providing an excellent developer experience around managing HTTP servers on a production environment. That way, developers can focus on writing server-side applications without having to build and maintain the production environment themselves.
+
+## Why is Heroku important?
+
 ## How do you migrate and seed a PostgreSQL database on Heroku.
+
+To get started, create a new heroku feature branch.
+
+```shell
+git checkout -b heroku
+```
 
 ```shell
 heroku apps:create USERNAME-trackify
@@ -84,12 +98,6 @@ heroku pg:psql
 ```
 
 ## How do you deploy a RESTful, database-driven HTTP server to Heroku?
-
-To get started, checkout a new feature branch.
-
-```shell
-git checkout -b heroku
-```
 
 Then, install `foreman` as a local development dependency, saving it to the `package.json` file.
 
