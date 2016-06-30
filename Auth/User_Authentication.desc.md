@@ -268,7 +268,13 @@ While we can store user information in a cookie, it's not the most secure way to
 
 Broadly speaking, a session refers to an ongoing dialogue between two system. In the case of Express, the systems are the client and the server. When a client makes a request to the server, the server creates a session token to identify the client. The server can then use that session token throughout the ongoing dialogue to keep track of who the client is.
 
-We can store the session anywhere, but it is commonly stored in a cookie. Since anybody can create a cookie and falsify information, like a session token, the server needs a way to ensure the token is authentic and not fraudulent. A session token can be signed cryptographically using secret keys to ensure the data has not been tampered with or falsified. The server then sends the session token along with the signature. The client responds with the session token and signature. The server verifies signature by resigning the session token with it's secret key. If the signatures match the server can be confident the session has not been modified.
+We can store the session anywhere, but it is commonly stored in a cookie. Since anybody can create a cookie and falsify information, like a session token, the server needs a way to ensure the token is authentic and not fraudulent. The following steps occur:
+
+1. The server encrypts a session token using secret keys.
+1. The server sends the session token along with the signature to the client via a cookie.
+1. The client makes subsequent requests with the session token and signature.
+1. The server verifies signature by decrypting the session token with its secret key.
+1. If the signatures match, the server can be confident the session has not been modified.
 
 ### `cookie-session` middleware
 
