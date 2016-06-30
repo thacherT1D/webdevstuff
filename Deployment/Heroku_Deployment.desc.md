@@ -1,7 +1,7 @@
 ## Objectives
 
 - Explain what Heroku is.
-- Explainy why Heroku is important.
+- Explain why Heroku is important.
 - Migrate and seed a PostgreSQL database on Heroku.
 - Deploy a RESTful, database-driven HTTP server to Heroku.
 
