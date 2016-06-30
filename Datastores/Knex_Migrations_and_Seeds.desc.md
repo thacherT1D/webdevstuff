@@ -121,34 +121,6 @@ echo 'npm-debug.log' >> .gitignore
 ```
 
 ```shell
-brew services list
-```
-
-```shell
-brew services stop postgresql
-```
-
-```shell
-brew services list
-```
-
-```shell
-initdb pg
-```
-
-```shell
-ls -hal pg
-```
-
-```shell
-echo 'pg' >> .gitignore
-```
-
-```shell
-postgres -D pg
-```
-
-```shell
 createdb trackify_dev
 psql -l
 ```
