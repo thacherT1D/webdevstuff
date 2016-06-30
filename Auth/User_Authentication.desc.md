@@ -30,7 +30,7 @@ In the previous lesson, we learned how to use `bcrypt` to hash a password and st
   - `isMatch` is a boolean informing whether the plain-text password is equivalent to the hash
 
 ```javascript
-bcrypt.compare(plainTextPassword, hash, (err, isMatch) => {
+bcrypt.compare(password, hashed_password, (err, isMatch) => {
   if (err) {
     // Handle err
   }
