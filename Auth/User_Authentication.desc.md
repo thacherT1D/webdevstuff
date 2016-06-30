@@ -42,7 +42,13 @@ bcrypt.compare(password, hashed_password, (err, isMatch) => {
 });
 ```
 
-Now let's create a route for logging in and use `bcrypt` in a `routes/session.js` module.
+Now let's create a route for logging in and use `bcrypt`. First we will create a branch for our session.
+
+```shell
+git checkout -b session
+```
+
+Once we are in the `session` branch let's create a `routes/session.js` module.
 
 ```javascript
 'use strict';
@@ -81,6 +87,64 @@ router.post('/session', (req, res, next) => {
 });
 
 module.exports = router;
+```
+
+Before we can test our new endpoint, we need to add our router to the `server.js` file.
+
+```javascript
+'use strict';
+
+const express = require('express');
+const path = require('path');
+const port = process.env.PORT || 8000;
+
+const morgan = require('morgan');
+const bodyParser = require('body-parser');
+
+const artists = require('./routes/artists');
+const tracks = require('./routes/tracks');
+const users = require('./routes/users');
+const session = require('./routes/session');
+
+const app = express();
+
+app.disable('x-powered-by');
+
+app.use(morgan('short'));
+app.use(bodyParser.json());
+
+app.use(artists);
+app.use(tracks);
+app.use(users);
+app.use(session);
+
+app.use((_req, res) => {
+  res.sendStatus(404);
+});
+
+app.use((err, _req, res, _next) => {
+  console.error(err);
+  res.sendStatus(500);
+});
+
+app.listen(port, () => {
+  console.log('Listening on port', port);
+});
+
+module.exports = app;
+```
+
+We are now ready to test our server for authentication.
+
+```shell
+http POST localhost:8000/session email=neo@thematrix.com password=theone
+```
+
+Once you get a successful response, commit your changes.
+
+```shell
+git add .
+git commit -m 'Add authentication endpoint'
 ```
 
 ## What is a cookie?
