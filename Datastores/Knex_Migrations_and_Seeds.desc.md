@@ -6,7 +6,6 @@
 - Explain what the Knex seed system is.
 - Explain why the Knex seed system is useful.
 - Use Knex to seed a PostgreSQL database.
-- Migrate and seed a PostgreSQL database on Heroku.
 
 ## What's the Knex migration system?
 
@@ -453,8 +452,6 @@ npm run knex seed:run
 psql trackify_dev -c 'SELECT * FROM tracks;'
 ```
 
-## How do you migrate and seed a PostgreSQL database on Heroku.
-
 ```shell
 git init
 ```
@@ -466,82 +463,4 @@ git status
 ```shell
 git add .
 git commit -m 'Initial commit'
-```
-
-```shell
-heroku apps:create USERNAME-trackify
-```
-
-```shell
-heroku apps:info
-```
-
-```shell
-node -v
-```
-
-```javascript
-"engines": {
-  "node": "DEV_VERSION"
-}
-```
-
-```shell
-heroku addons:create heroku-postgresql
-```
-
-```shell
-heroku pg:info
-```
-
-```javascript
-'use strict';
-
-module.exports = {
-  development: {
-    client: 'pg',
-    connection: 'postgres://localhost/trackify_dev'
-  },
-
-  production: {
-    client: 'pg',
-    connection: process.env.DATABASE_URL
-  }
-};
-```
-
-```javascript
-"scripts": {
-  "knex": "knex",
-  "heroku-postbuild": "knex migrate:latest"
-}
-```
-
-```shell
-git add .
-git commit -m 'Prepare for Heroku'
-```
-
-```shell
-git push heroku master
-```
-
-```shell
-heroku apps:info
-```
-
-```shell
-heroku pg:info
-```
-
-```shell
-heroku run npm run knex seed:run
-```
-
-```shell
-heroku pg:info
-```
-
-```shell
-heroku pg:psql
 ```

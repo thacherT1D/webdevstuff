@@ -3,7 +3,6 @@
 - Explain what a RESTful, database-driven HTTP server is.
 - Explain why a RESTful, database-driven HTTP server is useful.
 - Use Express and Knex to build a RESTful, database-driven HTTP server.
-- Deploy a RESTful, database-driven HTTP server to Heroku.
 
 ## What's a RESTful, database-driven HTTP server?
 
@@ -458,67 +457,4 @@ Now that it's merged, delete the feature branch.
 
 ```shell
 git branch -d http_server
-```
-
-## How do you deploy a RESTful, database-driven HTTP server to Heroku?
-
-To get started, checkout a new feature branch.
-
-```shell
-git checkout -b heroku
-```
-
-Then, install `foreman` as a local development dependency, saving it to the `package.json` file.
-
-```shell
-npm install --save-dev foreman
-```
-
-Create a `Procfile` for `foreman`.
-
-```shell
-echo 'web: node server.js' > Procfile
-```
-
-Add an `nf` script to the `package.json` file.
-
-```javascript
-"scripts": {
-  "knex": "knex",
-  "heroku-postbuild": "knex migrate:latest",
-  "nf": "nf start",
-  "nodemon": "nodemon server.js"
-},
-```
-
-Then, start the server with `foreman`.
-
-```shell
-npm run nf
-```
-
-Add and commit the changes to your repository.
-
-```shell
-git add .
-git commit -m 'Prepare the Heroku'
-```
-
-Merge the feature branch into the `master` branch.
-
-```shell
-git checkout master
-git merge heroku
-```
-
-Now that it's merged, delete the feature branch.
-
-```shell
-git branch -d heroku
-```
-
-Push the local `master` branch to Heroku's `master` branch.
-
-```shell
-git push heroku master
 ```
