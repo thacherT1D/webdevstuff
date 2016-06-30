@@ -13,7 +13,7 @@
 
 Since only hashed passwords are stored in the database, work will need to be done to check whether the login password is valid. When a user attempts to login, their password is hashed with their particular salt and compared to the encoded string stored in the database. If they are equivalent, the user is who they claim and can successfully login.
 
-In short,
+In summary, the user authentication process works like this.
 
 1. User attempts to login by submitting their unique identifier and password to the server.
 1. The server retrieves the user's registration hashed password from the database using the identifier.
