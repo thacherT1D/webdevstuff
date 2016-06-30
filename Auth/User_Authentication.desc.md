@@ -353,20 +353,79 @@ http DELETE localhost:8000/session
 
 *Note:* The cookie is marked as `HttpOnly`, which means that the cookie can only be set over HTTP and HTTPS. It also means you cannot access cookies in JavaScript on the browser using `document.cookie`. If there is any user information, you'd like the client to use, another cookie that's accessible needs to be set.
 
+Once the authentication API is working properly, commit your changes.
+
+```shell
+git add .
+git commit -m 'Add session storage for authentication'
+```
+
 ## Detecting whether user is authenticated
 
-Our API will eventually need to allow users to interact with our resources. For example, users may want to follow artists or create their own playlists with tracks. In these cases, it is important that we can ensure that a user can only change their own playlist. For this, we can build guard clauses to check if the proper user is allowed to make the changes.
+Our API will eventually need to allow users to interact with our resources. For example, users may want to follow artists or create their own playlists with tracks. In these cases, it is important that we can ensure that a user can only change their own playlist. Let's start implementing the ability for a user to follow an artist. Since we have a many to many relationship, we need to create the relationship table.
+
+```shell
+npm run knex migrate:make users_artists
+```
+```
+'use strict';
+
+exports.up = function(knex) {
+  return knex.schema.createTable('users_artists', (table) => {
+    table.increments();
+    table.integer('users_id')
+      .notNullable()
+      .references('id')
+      .inTable('artists')
+      .onDelete('CASCADE')
+      .index();
+    table.integer('artist_id')
+      .notNullable()
+      .references('id')
+      .inTable('artists')
+      .onDelete('CASCADE')
+      .index();
+    table.timestamps(true, true);
+  });
+};
+
+exports.down = function(knex) {
+  return knex.schema.dropTable('users_artists');
+};
+```
+
+In order to allow a user to follow an artist, we need to ensure the user is logged in and obtain its user id. We do this by checking the session. For this, we can build guard clauses to check if the proper user is allowed to make the changes.
 
 ```javascript
 // User follows an artist.
 app.post('/users/artists/:artistId', (req, res, next) => {
-  const userId = Number.parseInt(req.params.userId);
-
   if (!req.session.user) {
     return res.sendStatus(401);
   }
 
-  // Database work
+  const userId = req.session.user.id;
+  const artistId = Number.parseInt(req.params.artistId);
+
+  knex('artists')
+   .where('id', artistId)
+   .first()
+   .then((artist) => {
+     if (!artist) {
+       return next();
+     }
+
+    return knex('users_artists')
+      .insert({
+        user_id: userId,
+        artist_id: artistId
+      }, '*');
+    })
+    .then((results) => {
+      res.send(results[0]);
+    })
+    .catch((err) => {
+      next(err);
+    });
 });
 ```
 
@@ -374,8 +433,6 @@ Since there will be a lot of user actions, this guard clause is a common guard c
 
 ```javascript
 const checkAuth = function(req, res, next) {
-  const userId = Number.parseInt(req.params.userId);
-
   if (!req.session.user) {
     return res.sendStatus(401);
   }
@@ -385,8 +442,54 @@ const checkAuth = function(req, res, next) {
 
 // User follows an artist.
 app.post('/users/artists/:artistId', checkAuth, (req, res, next) => {
-  // Database work
+  const userId = req.session.user.id;
+  const artistId = Number.parseInt(req.params.artistId);
+
+  knex('artists')
+   .where('id', artistId)
+   .first()
+   .then((artist) => {
+     if (!artist) {
+       return next();
+     }
+
+    return knex('users_artists')
+      .insert({
+        user_id: userId,
+        artist_id: artistId
+      }, '*');
+    })
+    .then((results) => {
+      res.send(results[0]);
+    })
+    .catch((err) => {
+      next(err);
+    });
 });
+```
+```javascript
+// All artists that the user follows.
+app.delete('/users/artists', checkAuth, (req, res, next) => {
+  const userId = req.session.user.id;
+
+  knex('artists')
+    .innerJoin('users_artists', 'users_artists.artist_id', 'artists.id')
+    .where('users_artists.user_id', userId)
+    .then((artists) => {
+      res.send(artists);
+    })
+    .catch((err) => {
+      next(err);
+    });
+});
+```
+```shell
+git add .
+git commit -m 'Add user following and unfollowing artists.'
+```
+```shell
+git checkout master
+git merge session
 ```
 
 ## Exercise
