@@ -406,26 +406,18 @@ app.post('/users/artists/:artistId', (req, res, next) => {
   const userId = req.session.user.id;
   const artistId = Number.parseInt(req.params.artistId);
 
-  knex('artists')
-   .where('id', artistId)
-   .first()
-   .then((artist) => {
-     if (!artist) {
-       return next();
-     }
-
-    return knex('users_artists')
-      .insert({
-        user_id: userId,
-        artist_id: artistId
-      }, '*');
-    })
-    .then((results) => {
-      res.send(results[0]);
-    })
-    .catch((err) => {
-      next(err);
-    });
+  knex('users_artists')
+    .insert({
+      user_id: userId,
+      artist_id: artistId
+    }, '*');
+  })
+  .then((results) => {
+    res.send(results[0]);
+  })
+  .catch((err) => {
+    next(err);
+  });
 });
 ```
 
@@ -445,26 +437,18 @@ app.post('/users/artists/:artistId', checkAuth, (req, res, next) => {
   const userId = req.session.user.id;
   const artistId = Number.parseInt(req.params.artistId);
 
-  knex('artists')
-   .where('id', artistId)
-   .first()
-   .then((artist) => {
-     if (!artist) {
-       return next();
-     }
-
-    return knex('users_artists')
-      .insert({
-        user_id: userId,
-        artist_id: artistId
-      }, '*');
-    })
-    .then((results) => {
-      res.send(results[0]);
-    })
-    .catch((err) => {
-      next(err);
-    });
+  knex('users_artists')
+    .insert({
+      user_id: userId,
+      artist_id: artistId
+    }, '*');
+  })
+  .then((results) => {
+    res.send(results[0]);
+  })
+  .catch((err) => {
+    next(err);
+  });
 });
 ```
 ```javascript
