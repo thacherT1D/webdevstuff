@@ -16,6 +16,7 @@
 Read [Branches in a Nutshell](https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell)
 
 Guiding questions:
+
 - What is a branch?
 - What is special about the `master` branch?
 - How do you create a branch?
@@ -42,6 +43,7 @@ Used to merge the commits in two branches together. Depending on previous commit
 Read [Branching Workflows](https://git-scm.com/book/en/v2/Git-Branching-Branching-Workflows)
 
 Guiding questions:
+
 - Why are topic branches useful?
 - How do they come into play in both an individual environment as well as a team environment?
 
