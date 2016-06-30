@@ -398,7 +398,7 @@ In order to allow a user to follow an artist, we need to ensure the user is logg
 
 ```javascript
 // User follows an artist.
-app.post('/users/artists/:artistId', (req, res, next) => {
+router.post('/users/artists/:artistId', (req, res, next) => {
   if (!req.session.user) {
     return res.sendStatus(401);
   }
@@ -410,8 +410,7 @@ app.post('/users/artists/:artistId', (req, res, next) => {
     .insert({
       user_id: userId,
       artist_id: artistId
-    }, '*');
-  })
+    }, '*')
   .then((results) => {
     res.send(results[0]);
   })
@@ -453,7 +452,7 @@ app.post('/users/artists/:artistId', checkAuth, (req, res, next) => {
 ```
 ```javascript
 // All artists that the user follows.
-app.delete('/users/artists', checkAuth, (req, res, next) => {
+router.get('/users/artists', checkAuth, (req, res, next) => {
   const userId = req.session.user.id;
 
   knex('artists')
@@ -478,4 +477,4 @@ git merge session
 
 ## Exercise
 
-- [Galvanize Bookshelf - User registration](https://github.com/gSchool/galvanize-bookshelf/blob/master/4_user_authentication.md)
+- [Galvanize Bookshelf - User authentication](https://github.com/gSchool/galvanize-bookshelf/blob/master/4_user_authentication.md)
