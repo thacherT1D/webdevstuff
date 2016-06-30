@@ -1,11 +1,11 @@
 ## Objectives
 
-* Explain how user authentication works
-* Use bcrypt to check if a password is valid
-* Explain what a cookie is
-* Explain what a session is
-* Add routes to authenticate a user
-* Create express middleware to detect whether user is authenticated
+- Explain how user authentication works
+- Use bcrypt to check if a password is valid
+- Explain what a cookie is
+- Explain what a session is
+- Add routes to authenticate a user
+- Create express middleware to detect whether user is authenticated
 
 ## How does user authentication work?
 
