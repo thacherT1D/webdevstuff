@@ -9,13 +9,13 @@
 
 ## What's user authentication?
 
-**User authentication** is the process of confirming the identity of a user. When a user logs into a web application, he or she is attempting to authenticate. To confirm his or her identity, unique personal identification, like a username or email address, and a password must be provided. If the information provided during login matches the information previously provided during registration, the user is considered to be authenticated.
+**User authentication** is the process of confirming the identity of a user. When a user logs into a web application, he or she is attempting to authenticate. To confirm his or her identity, unique personal identification, like a username or email address, and a password must be provided. If the information provided during login matches the information previously provided during registration, the user is authenticated.
 
-However, it's not quite as simple as that. As you've seen, only hashed passwords are stored in the database during registration. To verify whether a login password is correct, it too mush be run through the same cryptographic hash function as the registration password. If the two hashed passwords are equivalent, the user is authenticated.
+However, it's not quite as simple as that. As you've seen, only hashed passwords are stored in the database during registration. To verify whether a login password is correct, it too mush be run through the same cryptographic hash function as the registration password. Only if the two hashed passwords are equivalent is the user authenticated.
 
 ### Exercise
 
-Turn to a neighbor and explain the user authentication process. It may help to draw a diagram of what's happening.
+Turn to a neighbor and explain the user authentication process from the perspective of an HTTP server. It may help to draw a diagram of what's happening.
 
 ### Using `bcrypt`
 
