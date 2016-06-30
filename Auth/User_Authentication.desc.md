@@ -1,23 +1,24 @@
 ## Objectives
 
-- Explain how user authentication works
+- Explain what user authentication is.
 - Use bcrypt to check if a password is valid
 - Explain what a cookie is
 - Explain what a session is
 - Add routes to authenticate a user
 - Create express middleware to detect whether user is authenticated
 
-## How does user authentication work?
+## What's user authentication?
 
-When a user is logging in, they provide an identifier (e.g. username, email, employee number, etc.) as well as their password. Since passwords are stored in as a hash, more work needs to be done to check whether the password is valid. When a user attempts to login, their password is hashed with their particular salt and compared to the encoded string stored in the database. If they are equivalent, the user is who they claim and can successfully login.
+**User authentication** is the process of confirming the identity of a user. When a user logs into a web application, he or she must provide unique personal identification, like a username or email address, and a password. If the information provided by the user during login matches the previous information provided during registration, the user is considered to be authenticated.
+
+Since only hashed passwords are stored in the database, work will need to be done to check whether the login password is valid. When a user attempts to login, their password is hashed with their particular salt and compared to the encoded string stored in the database. If they are equivalent, the user is who they claim and can successfully login.
 
 In short,
 
-1. User enters identifier and password on login
-1. Find user in the database using identifier
-1. Plain-text password is hashed
-1. Encoded string is compared to hash from database
-1. If match, user is authenticated
+1. User attempts to login by submitting their unique identifier and password to the server.
+1. The server retrieves the user's registration hashed password from the database using the identifier.
+1. Login password is hashed in the exact same way as the registration hashed password.
+1. The two hashed passwords are compared. If they match, they user is authenticated.
 
 ### Using `bcrypt`
 
