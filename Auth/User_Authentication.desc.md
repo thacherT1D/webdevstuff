@@ -1,7 +1,8 @@
 ## Objectives
 
 - Explain what user authentication is.
-- Use bcrypt to check if a password is valid
+- Explain why is user authentication important.
+- Use bcrypt to authenticate a user
 - Explain what a cookie is
 - Explain what a session is
 - Add routes to authenticate a user
@@ -17,7 +18,11 @@ However, it's not quite as simple as that. As you've seen, only hashed passwords
 
 Turn to a neighbor and explain the user authentication process from the perspective of an HTTP server. It may help to draw a diagram of what's happening.
 
-### Using `bcrypt`
+## Why is user authentication important?
+
+So a web application can show information—sometimes public, most of the time private—that's specific to each user.
+
+## How do you use bcrypt to authenticate a user?
 
 In the previous lesson, we learned how to use `bcrypt` to hash a password and store it in the database. In hashing the password, `bcrypt` generates a salt and includes that in the final encoded string. `bcrypt` also allows the ability to check if a user's password is equivalent to the hash with the `compare()` method. It takes three arguments:
 
