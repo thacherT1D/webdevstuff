@@ -1,4 +1,4 @@
-# Objectives
+## Objectives
 
 * Explain how user authentication works
 * Use bcrypt to check if a password is valid
@@ -7,7 +7,7 @@
 * Add routes to authenticate a user
 * Create express middleware to detect whether user is authenticated
 
-# How does user authentication work?
+## How does user authentication work?
 
 When a user is logging in, they provide an identifier (e.g. username, email, employee number, etc.) as well as their password. Since passwords are stored in as a hash, more work needs to be done to check whether the password is valid. When a user attempts to login, their password is hashed with their particular salt and compared to the encoded string stored in the database. If they are equivalent, the user is who they claim and can successfully login.
 
@@ -19,7 +19,7 @@ In short,
 1. Encoded string is compared to hash from database
 1. If match, user is authenticated
 
-## Using `bcrypt`
+### Using `bcrypt`
 
 In the previous lesson, we learned how to use `bcrypt` to hash a password and store it in the database. In hashing the password, `bcrypt` generates a salt and includes that in the final encoded string. `bcrypt` also allows the ability to check if a user's password is equivalent to the hash with the `compare()` method. It takes three arguments:
 
@@ -81,7 +81,7 @@ router.post('/session', (req, res, next) => {
 });
 ```
 
-# What is a cookie?
+## What is a cookie?
 
 The process of **user authentication** starts when a user provides a password to be stored for future login. Instead of requiring authentication for each request the browser needs to make, the server sends a small piece of data to the browser called a **cookie** to hold onto authentication information.
 
@@ -112,7 +112,7 @@ GET / HTTP/1.1
 Cookie: theme=light; sessionToken=abc123;
 ```
 
-## `cookie-parser` middleware
+### `cookie-parser` middleware
 
 Parsing the `Cookie` HTTP header can be an annoying task. Luckily, there's a piece of middleware that can parse the cookies for you named `cookie-parser`.
 
@@ -133,13 +133,13 @@ app.get('/hello', function(req, res, next) {
 });
 ```
 
-# What is a session?
+## What is a session?
 
 Broadly speaking, a session refers to an ongoing dialogue between two system. In the case of Express, the systems are the client and the server. When a client makes a request to the server, the server creates a session token to identify the client. The server can then use that session token throughout the ongoing dialogue to keep track of who the client is.
 
 We can store the session anywhere, but it is commonly stored in a cookie. Since anybody can create a cookie and falsify information, like a session token, the server needs a way to ensure the token is authentic and not fraudulent. A session token can be signed cryptographically using secret keys to ensure the data has not been tampered with or falsified. The server then sends the session token along with the signature. The client responds with the session token and signature. The server verifies signature by resigning the session token with it's secret key. If the signatures match the server can be confident the session has not been modified.
 
-## `cookie-session` middleware
+### `cookie-session` middleware
 
 `cookie-session` is a piece of middleware that is useful for storing, reading and signing sessions and storing them in a cookie. the library modifies the req object providing the following properties:
 
@@ -201,7 +201,7 @@ router.post('/session', (req, res, next) => {
 
 *Note:* The cookie is marked as `HttpOnly`, which means that the cookie can only be set over HTTP and HTTPS. It also means you cannot access cookies in JavaScript on the browser using `document.cookie`. If there is any user information, you'd like the client to use, another cookie that's accessible needs to be set.
 
-# Detecting whether user is authenticated
+## Detecting whether user is authenticated
 
 Our API will eventually need to allow users to interact with our resources. For example, users may want to follow artists or create their own playlists with tracks. In these cases, it is important that we can ensure that a user can only change their own playlist. For this, we can build guard clauses to check if the proper user is allowed to make the changes.
 
@@ -237,7 +237,7 @@ app.post('/users/:userId/artists/:artistId', checkAuth, (req, res, next) => {
 });
 ```
 
-# Logging a user out
+## Logging a user out
 
 Logging a user out is as easy as destroying the request session. This clears the session cookies so that the user cannot be authenticated.
 

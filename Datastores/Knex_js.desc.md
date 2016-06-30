@@ -988,7 +988,6 @@ And you should see something like this.
 - [Knex Query Lab](http://michaelavila.com/knex-querylab/)
 - [Wikipedia - SQL injection](https://en.wikipedia.org/wiki/SQL_injection)
 
-
 ## Videos
 
 ### Running an SQL Injection Attack - Computerphile
