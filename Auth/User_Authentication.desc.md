@@ -1,8 +1,8 @@
 ## Objectives
 
-- Explain what user authentication is.
-- Explain why is user authentication important.
-- Use bcrypt to authenticate a user
+- Explain what user authentication is
+- Explain why is user authentication important
+- Use `bcrypt` to authenticate a user
 - Explain what a cookie is
 - Explain what a session is
 - Add routes to authenticate a user
@@ -161,6 +161,14 @@ Set-Cookie: theme=light
 Set-Cookie: sessionToken=abc123; Expires=Wed, 09 Jun 2021 10:18:14 GMT
 ```
 
+Clients request contains a `Cookie` HTTP header.
+
+Example HTTP Request Header:
+```
+GET / HTTP/1.1
+Cookie: theme=light; sessionToken=abc123;
+```
+
 Express JS offers an easy way to set the cookie and clear a cookie in the response.
 
 ```javascript
@@ -170,12 +178,65 @@ res.clearCookie(name[, options]);
 
 See the documentation for [setting cookies](http://expressjs.com/en/4x/api.html#res.cookie) and [clearing cookies](http://expressjs.com/en/4x/api.html#res.clearCookie).
 
-Clients request contains a `Cookie` HTTP header.
+We can use cookies as a way to inform the client that the user is logged in.
 
-Example HTTP Request Header:
+```javascript
+router.post('/session', (req, res, next) => {
+  knex('users')
+    .where('email', req.body.email)
+    .first()
+    .then((user) => {
+      if (!user) {
+        return res.sendStatus(401);
+      }
+
+      const hashed_password = user.hashed_password;
+
+      bcrypt.compare(req.body.password, hashed_password, (err, isMatch) => {
+        if (err) {
+          return next(err);
+        }
+
+        if (!isMatch) {
+          return res.sendStatus(401);
+        }
+
+        res.cookie('loggedIn', true);
+        res.sendStatus(200);
+      });
+    })
+    .catch((err) => {
+      next(err);
+    });
+});
 ```
-GET / HTTP/1.1
-Cookie: theme=light; sessionToken=abc123;
+
+Check through a request that the server specifies the client to set a cookie.
+
+```shell
+http POST localhost:8000/session email=neo@thematrix.com password=theone
+```
+
+### Logout
+
+Logging a user our can be as easy as deleting a cookie.
+
+```javascript
+router.delete('/session', (req, res, next) => {
+  res.clearCookie('loggedIn');
+  res.sendStatus(200);
+});
+```
+
+```shell
+http DELETE localhost:8000/session
+```
+
+Once done, commit your changes.
+
+```shell
+git add .
+git commit -m 'Store users login state as a cookie'
 ```
 
 ### `cookie-parser` middleware
@@ -195,9 +256,13 @@ app.use(cookieParser());
 
 app.get('/hello', function(req, res, next) {
   console.log(req.cookies); // object
-  // ...
+  if(req.cookies.loggedIn) {
+    // user is logged in
+  }
 });
 ```
+
+While we can store user information in a cookie, it's not the most secure way to have the client have access to user information. For this, we rely on sessions.
 
 ## What is a session?
 
@@ -209,8 +274,8 @@ We can store the session anywhere, but it is commonly stored in a cookie. Since 
 
 `cookie-session` is a piece of middleware that is useful for storing, reading and signing sessions and storing them in a cookie. the library modifies the req object providing the following properties:
 
-* req.session represents the session stored in the cookie.
-* req.sessionOptions represents the settings of the session.
+* `req.session` represents the session stored in the cookie.
+* `req.sessionOptions` represents the settings of the session.
 
 These properties provide a way to set cookies and send them to the client and a way to sign cookies and verify their authenticity.
 
@@ -218,26 +283,21 @@ These properties provide a way to set cookies and send them to the client and a 
 npm install --save cookie-session
 ```
 
+Now let's use cookie-session in the server.
+
 ```javascript
 const cookieSession = require('cookie-session');
 
 app.use(cookieSession({
-  name: 'session', //name of cookie to set
-  // other cookie attributes like maxAge, expires, domain can be set here
+  name: 'session', // name of cookie to set
   keys: ['some_secure_key']
+  // other cookie attributes like maxAge, expires, domain can be set here
 }));
-
-// ...
 ```
 
+Once we have the `cookie-session` module included. We can use it in our `routes/session.js`
+
 ```javascript
-'use strict';
-
-const express = require('express');
-const router = express.Router();
-const knex = require('../knex');
-const bcrypt = require('bcrypt');
-
 router.post('/session', (req, res, next) => {
   knex('users')
     .where('email', req.body.email)
@@ -259,7 +319,7 @@ router.post('/session', (req, res, next) => {
         }
 
         req.session.user = user;
-
+        res.cookie('loggedIn', true);
         res.sendStatus(200);
       });
     })
@@ -267,8 +327,28 @@ router.post('/session', (req, res, next) => {
       next(err);
     });
 });
+```
 
-module.exports = router;
+### Logging a user out
+
+Logging a user out is as easy as destroying the request session. This clears the session cookies so that the user cannot be authenticated.
+
+```javascript
+router.delete('/session', (req, res) => {
+  req.session = null;
+  res.clearCookie('loggedIn');
+  res.sendStatus(200);
+});
+```
+
+Test drive your authentication API now.
+
+```shell
+http POST localhost:8000/session email=neo@thematrix.com password=theone
+```
+
+```shell
+http DELETE localhost:8000/session
 ```
 
 *Note:* The cookie is marked as `HttpOnly`, which means that the cookie can only be set over HTTP and HTTPS. It also means you cannot access cookies in JavaScript on the browser using `document.cookie`. If there is any user information, you'd like the client to use, another cookie that's accessible needs to be set.
@@ -279,10 +359,10 @@ Our API will eventually need to allow users to interact with our resources. For 
 
 ```javascript
 // User follows an artist.
-app.post('/users/:userId/artists/:artistId', (req, res, next) => {
+app.post('/users/artists/:artistId', (req, res, next) => {
   const userId = Number.parseInt(req.params.userId);
 
-  if (!req.session.user || req.session.user.id !== userId) {
+  if (!req.session.user) {
     return res.sendStatus(401);
   }
 
@@ -296,7 +376,7 @@ Since there will be a lot of user actions, this guard clause is a common guard c
 const checkAuth = function(req, res, next) {
   const userId = Number.parseInt(req.params.userId);
 
-  if (!req.session.user || req.session.user.id !== userId) {
+  if (!req.session.user) {
     return res.sendStatus(401);
   }
 
@@ -304,18 +384,11 @@ const checkAuth = function(req, res, next) {
 }
 
 // User follows an artist.
-app.post('/users/:userId/artists/:artistId', checkAuth, (req, res, next) => {
+app.post('/users/artists/:artistId', checkAuth, (req, res, next) => {
   // Database work
 });
 ```
 
-## Logging a user out
+## Exercise
 
-Logging a user out is as easy as destroying the request session. This clears the session cookies so that the user cannot be authenticated.
-
-```javascript
-router.delete('/session', (req, res) => {
-  req.session = null;
-  res.sendStatus(200);
-});
-```
+- [Galvanize Bookshelf - User registration](https://github.com/gSchool/galvanize-bookshelf/blob/master/4_user_authentication.md)
