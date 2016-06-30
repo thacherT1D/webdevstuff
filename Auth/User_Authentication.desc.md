@@ -24,13 +24,9 @@ So a web application can show information—sometimes public, most of the time p
 
 ## How do you use bcrypt to authenticate a user?
 
-In the previous lesson, we learned how to use `bcrypt` to hash a password and store it in the database. In hashing the password, `bcrypt` generates a salt and includes that in the final encoded string. `bcrypt` also allows the ability to check if a user's password is equivalent to the hash with the `compare()` method. It takes three arguments:
+Previously, you used the `bcrypt.hash()` method to hash a password during user registration. Additionally, the `bcrypt.compare()` method checks whether or not a login plaintext password matches a registration hashed password.
 
-1. The plain-text password from a user login attempt
-1. The stored hash from the database
-1. A callback with two parameters:
-  - `err` details any errors
-  - `isMatch` is a boolean informing whether the plain-text password is equivalent to the hash
+Here's how the `bcrypt.compare()` method works.
 
 ```javascript
 bcrypt.compare(password, hashed_password, (err, isMatch) => {
