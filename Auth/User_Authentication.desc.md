@@ -55,31 +55,25 @@ const knex = require('../knex');
 const bcrypt = require('bcrypt');
 
 router.post('/session', (req, res, next) => {
-  // Find user in the database using identifier (email).
   knex('users')
     .where('email', req.body.email)
     .first()
     .then((user) => {
       if (!user) {
-        // User does not exist.
         return res.sendStatus(400);
       }
 
       const hashed_password = user.hashed_password;
 
-      // Hash password with bcrypt and compare it to the database's hash.
       bcrypt.compare(req.body.password, hashed_password, (err, isMatch) => {
         if (err) {
-          // Error in hashing
           return next(err);
         }
 
         if (!isMatch) {
-          // Password is not correct.
           return res.sendStatus(400);
         }
 
-        // User is authenticated
         res.sendStatus(200);
       });
     })
