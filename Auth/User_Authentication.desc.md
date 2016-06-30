@@ -182,7 +182,7 @@ router.post('/session', (req, res, next) => {
     .then((user) => {
       if (!user) {
         // User does not exist.
-        return res.sendStatus(400);
+        return res.sendStatus(401);
       }
 
       const hashed_password = user.hashed_password;
@@ -196,7 +196,7 @@ router.post('/session', (req, res, next) => {
 
         if (!isMatch) {
           // Password is not correct.
-          return res.sendStatus(400);
+          return res.sendStatus(401);
         }
 
         // User is authenticated
