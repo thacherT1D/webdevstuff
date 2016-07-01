@@ -139,13 +139,7 @@ Morning:
     <td>Jeremy</td>
     <td>Ryan</td>
   </tr>
-  <tr>
-    <td>Gabe</td>
-    <td>Daniel</td>
-    <td>Jimmy</td>
-    <td>Kristen</td>
-    <td>Stephanie</td>
-  </tr>
+
   <tr>
     <td>Jess</td>
     <td>Jayme</td>
@@ -161,11 +155,13 @@ Morning:
     <td>**Reviewer**</td>
   </tr>
   <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
+  <tr>
+    <td>Jimmy</td>
+    <td>Kristen</td>
+    <td>Stephanie</td>
+    <td>Gabe</td>
+    <td>Daniel</td>
+  </tr>
   </tr>
 </table>
 
