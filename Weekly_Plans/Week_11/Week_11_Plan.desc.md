@@ -11,27 +11,36 @@
   <td>[undercats](https://github.com/undercats)</td>
   <td>[mukipuz](https://github.com/mukipuz)</td>
   <td>[chernobyl-pod](https://github.com/orgs/chernobyl-pod)</td>
+  <td>[foo-baristas](https://github.com/foo-baristas)</td>
 </tr>
 <tr>
   <td>Sam</td>
   <td>Michael</td>
   <td>Mike</td>
+  <td>Jeremy</td>
 </tr>
 <tr>
   <td>Gabe</td>
   <td>Daniel</td>
   <td>Jimmy</td>
+  <td>Kristen</td>
 </tr>
 <tr>
   <td>Jess</td>
   <td>Jayme</td>
   <td>Roy</td>
+  <td>Vy</td>
 </tr>
 <tr>
   <td>[Deployed Site](http://github.com)</td>
   <td>[Deployed Site](http://github.com)</td>
+  <td>[Deployed Site](http://github.com)</td>
+  <td>[Deployed Site](http://github.com)</td>
 </tr>
 </table>
+
+
+
 
 
 
