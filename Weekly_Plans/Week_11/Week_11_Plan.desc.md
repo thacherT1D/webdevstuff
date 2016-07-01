@@ -16,6 +16,13 @@
     <td>[oddball-designs](https://github.com/oddball-designs)</td>
   </tr>
   <tr>
+    <td>Sam</td>
+    <td>Michael</td>
+    <td>Mike</td>
+    <td>Jeremy</td>
+    <td>Ryan</td>
+  </tr>
+  <tr>
     <td>Gabe</td>
     <td>Daniel</td>
     <td>Jimmy</td>
@@ -133,7 +140,6 @@ Morning:
     <td>Jeremy</td>
     <td>Ryan</td>
   </tr>
-
   <tr>
     <td>Jess</td>
     <td>Jayme</td>
