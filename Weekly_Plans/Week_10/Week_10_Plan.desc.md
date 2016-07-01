@@ -92,27 +92,27 @@ End of Day objective:
 
 ## Teams
 
-[Team Name](http://github.com)
+[undercats](https://github.com/undercats)
 - sam
 - gabe
 - jess
 
-[Team Name](http://github.com)
+[mukipuz](https://github.com/mukipuz)
 - michael
 - dan
 - jayme
 
-[Team Name](http://github.com)
+[chernobyl-pod](https://github.com/orgs/chernobyl-pod)
 - mike
 - jimmy
 - roy
 
-[Team Name](http://github.com)
+[foo-baristas](https://github.com/foo-baristas)
 - jeremy
 - kristen
 - vy
 
-[Team Name](http://github.com)
+[oddball-designs](https://github.com/oddball-designs)
 - ryan
 - stephanie
 - philip
