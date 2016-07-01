@@ -12,22 +12,25 @@
 </tr>
 <tr>
   <td>Sam</td>
+  <td>Michael</td>
 </tr>
 <tr>
   <td>Gabe</td>
+  <td>Daniel</td>
 </tr>
 <tr>
   <td>Jess</td>
+  <td>Jayme</td>
 </tr>
 <tr>
-
+  <td>[Deployed Site](http://github.com)</td>
+  <td>[Deployed Site](http://github.com)</td>
 </tr>
 </table>
 
 
-sam
-- gabe
-- jess
+
+
 
 # Monday, July 4 - Independence Day, No Class
 
