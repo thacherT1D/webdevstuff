@@ -270,10 +270,10 @@ Broadly speaking, a session refers to an ongoing dialogue between two system. In
 
 We can store the session anywhere, but it is commonly stored in a cookie. Since anybody can create a cookie and falsify information, like a session token, the server needs a way to ensure the token is authentic and not fraudulent. The following steps occur:
 
-1. The server encrypts a session token using secret keys.
-1. The server sends the session token along with the signature to the client via a cookie.
-1. The client makes subsequent requests with the session token and signature.
-1. The server verifies signature by decrypting the session token with its secret key.
+1. The server encodes a session into base64.
+1. The server sends the session encoding to the client via a cookie. It also sends a signature generated using the session encoding and a secret key.
+1. The client makes subsequent requests with a session encoding and signature.
+1. The server verifies the session by generating a signature of the session sent with its secret key and compares it with the signature sent.
 1. If the signatures match, the server can be confident the session has not been modified.
 
 ### `cookie-session` middleware
