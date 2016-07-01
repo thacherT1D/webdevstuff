@@ -2,7 +2,6 @@
 
 ## July 4 - Independence Day, No Class
 ## Weekly Objective
-
 - Group Project Week
 ---
 
@@ -13,13 +12,6 @@
     <td>[chernobyl-pod](https://github.com/orgs/chernobyl-pod)</td>
     <td>[foo-baristas](https://github.com/foo-baristas)</td>
     <td>[oddball-designs](https://github.com/oddball-designs)</td>
-  </tr>
-  <tr>
-    <td>Sam</td>
-    <td>Michael</td>
-    <td>Mike</td>
-    <td>Jeremy</td>
-    <td>Ryan</td>
   </tr>
   <tr>
     <td>Gabe</td>
@@ -43,11 +35,11 @@
     <td>[Deployed Site](http://github.com)</td>
   </tr>
   <tr>
-    <td>Logan</td>
-    <td>Roger</td>
-    <td>Jordan</td>
-    <td>Roger</td>
-    <td>Jordan</td>
+    <td>Jeremy</td>
+    <td>Ryan</td>
+    <td>Sam</td>
+    <td>Michael</td>
+    <td>Mike</td>
   </tr>
 </table>
 
