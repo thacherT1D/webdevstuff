@@ -4,6 +4,7 @@
 ## Weekly Objective
 
 - Group Project Week
+
 ---
 
 <table>
