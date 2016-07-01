@@ -2,6 +2,7 @@
 
 ## July 4 - Independence Day, No Class
 ## Weekly Objective
+
 - Group Project Week
 ---
 
