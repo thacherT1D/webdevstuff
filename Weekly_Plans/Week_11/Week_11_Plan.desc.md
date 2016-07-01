@@ -57,66 +57,50 @@
 
 # Tuesday, July 5
 
-Warmup: [Link to Warmup](http://github.com/gSchool)
+Warmup: Group Standup
 
-Lessons:
-- [Lesson](/cohorts/68/student_dashboard)
-- [Lesson](/cohorts/68/student_dashboard)
-
-Homework: [Homework](/cohorts/68/student_dashboard)
-
-Announcements:
-- Announcement 1
-- Announcement 2
+Workshops:
+- Morning: Heroku  Deployment
+- Morning: CI Integration
 
 ---
 
 # Wednesday, July 6
 
-Warmup: [Link to Warmup](http://github.com/gSchool)
+Warmup: Group Standup
 
-Lessons:
-- [Lesson](/cohorts/68/student_dashboard)
-- [Lesson](/cohorts/68/student_dashboard)
+Workshops:
+- Morning: Authorization Practice
+- Afternoon: Validation with Checkit
 
-Homework: [Homework](/cohorts/68/student_dashboard)
-
-Announcements:
-- Announcement 1
-- Announcement 2
 
 ---
 
 # Thursday, July 7
 
-Warmup: [Link to Warmup](http://github.com/gSchool)
+Warmup: Group Standup
 
-Lessons:
-- [Lesson](/cohorts/68/student_dashboard)
-- [Lesson](/cohorts/68/student_dashboard)
-
-Homework: [Homework](/cohorts/68/student_dashboard)
-
-Announcements:
-- Announcement 1
-- Announcement 2
+Morning:
+- Peer Review
 
 ---
 
 # Friday, July 8
 
-Warmup: [Biweekly Survey](https://docs.google.com/forms/d/1XsnxPufkGL24Bnsa_8IxcyJT6-VudP4QC9VqbTbctAw/viewform?usp=send_form)
+Warmup:
+- [Biweekly Survey](https://docs.google.com/forms/d/1XsnxPufkGL24Bnsa_8IxcyJT6-VudP4QC9VqbTbctAw/viewform?usp=send_form)
+- Group Standup
 
 Morning:
 - Polish Projects
 
 Afternoon:
 - Project Presentations
- - foo-baristas
- - mukipuz
- - oddball-designs
- - chernoby-pod
- - undercats
+ 1. foo-baristas
+ 1. mukipuz
+ 1. oddball-designs
+ 1. chernoby-pod
+ 1. undercats
 - Q2 Wrap up.
 
 Lightning Talks:
