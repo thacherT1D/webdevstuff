@@ -3,11 +3,19 @@
 ## July 4 - Independence Day, No Class
 ## Weekly Objective
 
-- Objective 1
-- Objective 2
-- Objective 3
-
+- Group Project Week
 ---
+
+| [undercats](https://github.com/undercats) |   |   |   |   |
+|-------------------------------------------|---|---|---|---|
+| sam                                       |   |   |   |   |
+| gabe                                      |   |   |   |   |
+| jess                                      |   |   |   |   |
+
+
+sam
+- gabe
+- jess
 
 # Monday, July 4 - Independence Day, No Class
 
@@ -70,7 +78,5 @@ Crush Code Friday: [CCF](/cohorts/68/student_dashboard)
 Homework: [Homework](/cohorts/68/student_dashboard)
 
 Lightning Talks:
-
-Announcements:
-- Announcement 1
-- Announcement 2
+- Jayme Thorson
+- Jimmy Stafford
