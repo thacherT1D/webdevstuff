@@ -83,6 +83,9 @@ Lessons:
 
 9:15 - Organization Names
 
+Submit group project proposal [here](https://github.com/gSchool/group-project-proposals)
+
+
 End of Day objective:
 - Turn in proposal
 - Wireframe, ERD, Application workflow.
