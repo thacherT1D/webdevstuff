@@ -83,6 +83,138 @@ Warmup: Group Standup
 Morning:
 - Peer Review
 
+
+### Round 1
+<table>
+  <tr>
+    <td>[undercats](https://github.com/undercats)</td>
+    <td>[mukipuz](https://github.com/mukipuz)</td>
+    <td>[chernobyl-pod](https://github.com/orgs/chernobyl-pod)</td>
+    <td>[foo-baristas](https://github.com/foo-baristas)</td>
+    <td>[oddball-designs](https://github.com/oddball-designs)</td>
+  </tr>
+  <tr>
+    <td>Sam</td>
+    <td>Michael</td>
+    <td>Mike</td>
+    <td>Jeremy</td>
+    <td>Ryan</td>
+  </tr>
+  <tr>
+    <td>Gabe</td>
+    <td>Daniel</td>
+    <td>Jimmy</td>
+    <td>Kristen</td>
+    <td>Stephanie</td>
+  </tr>
+  <tr>
+    <td>**Reviewer**</td>
+    <td>**Reviewer**</td>
+    <td>**Reviewer**</td>
+    <td>**Reviewer**</td>
+    <td>**Reviewer**</td>
+  </tr>
+  <tr>
+    <td>Philip</td>
+    <td>Jess</td>
+    <td>Jayme</td>
+    <td>Roy</td>
+    <td>Vy</td>
+  </tr>
+</table>
+
+### Round 2
+<table>
+  <tr>
+    <td>[undercats](https://github.com/undercats)</td>
+    <td>[mukipuz](https://github.com/mukipuz)</td>
+    <td>[chernobyl-pod](https://github.com/orgs/chernobyl-pod)</td>
+    <td>[foo-baristas](https://github.com/foo-baristas)</td>
+    <td>[oddball-designs](https://github.com/oddball-designs)</td>
+  </tr>
+  <tr>
+    <td>Sam</td>
+    <td>Michael</td>
+    <td>Mike</td>
+    <td>Jeremy</td>
+    <td>Ryan</td>
+  </tr>
+  <tr>
+    <td>Gabe</td>
+    <td>Daniel</td>
+    <td>Jimmy</td>
+    <td>Kristen</td>
+    <td>Stephanie</td>
+  </tr>
+  <tr>
+    <td>Jess</td>
+    <td>Jayme</td>
+    <td>Roy</td>
+    <td>Vy</td>
+    <td>Philip</td>
+  </tr>
+  <tr>
+    <td>**Reviewer**</td>
+    <td>**Reviewer**</td>
+    <td>**Reviewer**</td>
+    <td>**Reviewer**</td>
+    <td>**Reviewer**</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+</table>
+
+### Round 3
+<table>
+  <tr>
+    <td>[undercats](https://github.com/undercats)</td>
+    <td>[mukipuz](https://github.com/mukipuz)</td>
+    <td>[chernobyl-pod](https://github.com/orgs/chernobyl-pod)</td>
+    <td>[foo-baristas](https://github.com/foo-baristas)</td>
+    <td>[oddball-designs](https://github.com/oddball-designs)</td>
+  </tr>
+  <tr>
+    <td>Sam</td>
+    <td>Michael</td>
+    <td>Mike</td>
+    <td>Jeremy</td>
+    <td>Ryan</td>
+  </tr>
+  <tr>
+    <td>Gabe</td>
+    <td>Daniel</td>
+    <td>Jimmy</td>
+    <td>Kristen</td>
+    <td>Stephanie</td>
+  </tr>
+  <tr>
+    <td>Jess</td>
+    <td>Jayme</td>
+    <td>Roy</td>
+    <td>Vy</td>
+    <td>Philip</td>
+  </tr>
+  <tr>
+    <td>**Reviewer**</td>
+    <td>**Reviewer**</td>
+    <td>**Reviewer**</td>
+    <td>**Reviewer**</td>
+    <td>**Reviewer**</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+</table>
+
 ---
 
 # Friday, July 8
