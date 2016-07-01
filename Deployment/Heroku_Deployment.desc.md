@@ -8,9 +8,11 @@
 
 **Heroku** is a cloud platform that lets you deploy, monitor, and scale HTTP servers.
 
+[Login](https://dashboard.heroku.com/apps) to your Heroku account.
+
 ## Why is Heroku important?
 
-Getting HTTP servers onto the Internet easily and being able to iterate on them quickly can make or break a product. Heroku focuses on providing an excellent developer experience around managing HTTP servers on a production environment. That way, developers can focus on writing server-side applications without having to build and maintain the production environment themselves.
+Getting HTTP servers onto the Internet easily and being able to iterate on them quickly can make or break a product. Heroku focuses on providing an excellent developer experience around managing servers on a production environment. That way, developers can focus on writing server-side applications without having to build and maintain the production environment themselves.
 
 ## How do you deploy a RESTful, database-driven HTTP server to Heroku?
 
