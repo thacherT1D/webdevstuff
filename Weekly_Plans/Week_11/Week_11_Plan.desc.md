@@ -6,11 +6,23 @@
 - Group Project Week
 ---
 
-| [undercats](https://github.com/undercats) |   |   |   |   |
-|-------------------------------------------|---|---|---|---|
-| sam                                       |   |   |   |   |
-| gabe                                      |   |   |   |   |
-| jess                                      |   |   |   |   |
+<table>
+<tr>
+  <td>[undercats](https://github.com/undercats)</td>
+</tr>
+<tr>
+  <td>Sam</td>
+</tr>
+<tr>
+  <td>Gabe</td>
+</tr>
+<tr>
+  <td>Jess</td>
+</tr>
+<tr>
+
+</tr>
+</table>
 
 
 sam
