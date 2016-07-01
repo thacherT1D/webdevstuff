@@ -90,29 +90,29 @@ End of Day objective:
 ## Teams
 
 [Team Name](http://github.com)
-sam
-gabe
-jess
+- sam
+- gabe
+- jess
 
 [Team Name](http://github.com)
-michael
-dan
-jayme
+- michael
+- dan
+- jayme
 
 [Team Name](http://github.com)
-mike
-jimmy
-roy
+- mike
+- jimmy
+- roy
 
 [Team Name](http://github.com)
-jeremy
-kristen
-vy
+- jeremy
+- kristen
+- vy
 
 [Team Name](http://github.com)
-ryan
-stephanie
-philip
+- ryan
+- stephanie
+- philip
 
 
 Lightning Talks:
