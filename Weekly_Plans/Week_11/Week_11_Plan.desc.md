@@ -35,11 +35,11 @@
     <td>[Deployed Site](http://github.com)</td>
   </tr>
   <tr>
-    <td>Jeremy</td>
-    <td>Ryan</td>
-    <td>Sam</td>
-    <td>Michael</td>
-    <td>Mike</td>
+    <td>Logan</td>
+    <td>Roger</td>
+    <td>Jordan</td>
+    <td>Roger</td>
+    <td>Jordan</td>
   </tr>
 </table>
 
@@ -167,13 +167,6 @@ Morning:
     <td>[oddball-designs](https://github.com/oddball-designs)</td>
   </tr>
   <tr>
-    <td>Sam</td>
-    <td>Michael</td>
-    <td>Mike</td>
-    <td>Jeremy</td>
-    <td>Ryan</td>
-  </tr>
-  <tr>
     <td>Gabe</td>
     <td>Daniel</td>
     <td>Jimmy</td>
@@ -195,11 +188,11 @@ Morning:
     <td>**Reviewer**</td>
   </tr>
   <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td>Jeremy</td>
+    <td>Ryan</td>
+    <td>Sam</td>
+    <td>Michael</td>
+    <td>Mike</td>
   </tr>
 </table>
 
