@@ -14,9 +14,9 @@ Getting HTTP servers onto the Internet easily and being able to iterate on them 
 
 ## How do you deploy a RESTful, database-driven HTTP server to Heroku?
 
-Change into the `trackify` project directory
+To get started, change into the `trackify` project directory
 
-``shell
+```shell
 cd trackify
 ```
 
@@ -26,25 +26,27 @@ Once your staging area is clean, create a feature branch.
 git checkout -b heroku
 ```
 
-Create a Heroku application.
+Create a production environment on Heroku.
+
+**NOTE:** Replace `USERNAME` with the lowercase form of your GitHub username.
 
 ```shell
 heroku apps:create USERNAME-trackify
 ```
 
-Take a look at some of the properties for your new Heroku application.
+Inspect the properties of the production environment.
 
 ```shell
 heroku apps:info
 ```
 
-To see the version of Node.js on your development environment, run the following shell command.
+Display the version of Node.js on your development environment.
 
 ```shell
 node -v
 ```
 
-To specify the version of Node.js on your production environment, add the following property to the `package.json` file.
+Specify the exact version of Node.js on the production environment by adding the following property to the `package.json` file.
 
 ```javascript
 "engines": {
@@ -52,19 +54,19 @@ To specify the version of Node.js on your production environment, add the follow
 }
 ```
 
-To add the Heroku PostgreSQL add-on to your Heroku application, run the following shell command.
+Create a PostgreSQL database for the production environment.
 
 ```shell
 heroku addons:create heroku-postgresql
 ```
 
-To inspect the properties of the Heroku PostgreSQL add-on, run the following shell command.
+Inspect the properties of the production database.
 
 ```shell
 heroku pg:info
 ```
 
-To specify the connection URL for production database server, add the following property to the `package.json` file.
+Specify the connection URL to the production database server by adding the following property to the `package.json` file.
 
 ```javascript
 production: {
@@ -73,7 +75,7 @@ production: {
 }
 ```
 
-To tell Heroku to automatically migrate the production database, add the following property to the `package.json` file.
+Automatically migrate the production database after on deployment by adding the following property to the `package.json` file.
 
 ```javascript
 "scripts": {
@@ -83,19 +85,19 @@ To tell Heroku to automatically migrate the production database, add the followi
 }
 ```
 
-Then, install `foreman` as a local development dependency, saving it to the `package.json` file.
+Install `foreman` as a local and saved development dependency.
 
 ```shell
 npm install --save-dev foreman
 ```
 
-Create a `Procfile` for `foreman`.
+Create a `Procfile` that'll start the server on the production environment.
 
 ```shell
 echo 'web: node server.js' > Procfile
 ```
 
-Add an `nf` script to the `package.json` file.
+Make it easy to test `foreman` on the development environment by adding an `nf` script to the `package.json` file.
 
 ```javascript
 "scripts": {
@@ -106,7 +108,7 @@ Add an `nf` script to the `package.json` file.
 },
 ```
 
-Then, start the server with `foreman`.
+Test `foreman` on the development environment.
 
 ```shell
 npm run nf
@@ -126,32 +128,51 @@ git checkout master
 git merge heroku
 ```
 
-Now that it's merged, delete the feature branch.
+Delete the feature branch now that it's merged.
 
 ```shell
 git branch -d heroku
 ```
 
+Deploy the project to Heroku.
+
 ```shell
 git push heroku master
 ```
+
+Inspect the production environment.
 
 ```shell
 heroku apps:info
 ```
 
+Inspect the production database.
+
 ```shell
 heroku pg:info
 ```
+
+Seed the production database.
 
 ```shell
 heroku run npm run knex seed:run
 ```
 
+Inspect the production database once again.
+
+**NOTE:** Give Heroku about a minute to update it's records.
+
 ```shell
 heroku pg:info
 ```
 
+Log into the production database and verify
+
 ```shell
 heroku pg:psql
 ```
+
+## Resources
+
+- [Heroku Dev Center - Getting Started on Heroku with Node.js](https://devcenter.heroku.com/articles/getting-started-with-nodejs#introduction)
+- [Heroku Dev Center - Heroku Postgres](https://devcenter.heroku.com/categories/heroku-postgres)
