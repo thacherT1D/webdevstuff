@@ -42,6 +42,13 @@
     <td>[Deployed Site](http://github.com)</td>
     <td>[Deployed Site](http://github.com)</td>
   </tr>
+  <tr>
+    <td>Logan</td>
+    <td>Roger</td>
+    <td>Jordan</td>
+    <td>Roger</td>
+    <td>Jordan</td>
+  </tr>
 </table>
 
 # Monday, July 4 - Independence Day, No Class
@@ -100,9 +107,17 @@ Announcements:
 
 Warmup: [Biweekly Survey](https://docs.google.com/forms/d/1XsnxPufkGL24Bnsa_8IxcyJT6-VudP4QC9VqbTbctAw/viewform?usp=send_form)
 
-Crush Code Friday: [CCF](/cohorts/68/student_dashboard)
+Morning:
+- Polish Projects
 
-Homework: [Homework](/cohorts/68/student_dashboard)
+Afternoon:
+- Project Presentations
+ - foo-baristas
+ - mukipuz
+ - oddball-designs
+ - chernoby-pod
+ - undercats
+- Q2 Wrap up.
 
 Lightning Talks:
 - Jayme Thorson
