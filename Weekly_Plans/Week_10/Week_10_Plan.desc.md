@@ -79,14 +79,42 @@ Lessons:
 
 # Friday, July 1
 
-Crush Code Friday: [CCF](/cohorts/68/student_dashboard)
+9:00 - Standup
 
-Homework: [Homework](/cohorts/68/student_dashboard)
+9:15 - Organization Names
+
+End of Day objective:
+- Turn in proposal
+- Wireframe, ERD, Application workflow.
+
+## Teams
+
+[Team Name](http://github.com)
+sam
+gabe
+jess
+
+[Team Name](http://github.com)
+michael
+dan
+jayme
+
+[Team Name](http://github.com)
+mike
+jimmy
+roy
+
+[Team Name](http://github.com)
+jeremy
+kristen
+vy
+
+[Team Name](http://github.com)
+ryan
+stephanie
+philip
+
 
 Lightning Talks:
 - Stephanie Ogburn
 - Gabriel Thexton
-
-Announcements:
-- Announcement 1
-- Announcement 2
