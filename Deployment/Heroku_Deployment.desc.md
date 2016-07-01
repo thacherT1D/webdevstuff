@@ -68,7 +68,7 @@ Inspect the properties of the production database.
 heroku pg:info
 ```
 
-Specify the connection URL to the production database server by adding the following property to the `package.json` file.
+Specify the connection URL to the production database server by adding the following property to the `knexfile.js` file.
 
 ```javascript
 production: {
