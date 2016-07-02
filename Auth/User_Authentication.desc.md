@@ -523,6 +523,10 @@ git checkout master
 git merge session
 ```
 
-## Exercise
+## Assignment
 
 - [Galvanize Bookshelf - User authentication](https://github.com/gSchool/galvanize-bookshelf/blob/master/4_user_authentication.md)
+
+## Resources
+
+- [Express - Production Best Practices: Security - Use cookies securely](http://expressjs.com/en/advanced/best-practice-security.html#use-cookies-securely)
