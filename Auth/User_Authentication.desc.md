@@ -295,8 +295,8 @@ Now let's use cookie-session in the server.
 const cookieSession = require('cookie-session');
 
 app.use(cookieSession({
-  name: 'session', // name of cookie to set
-  keys: ['some_secure_key']
+  name: 'trackify',
+  secret: 'some_secret_key'
   // other cookie attributes like maxAge, expires, domain can be set here
 }));
 ```
@@ -366,6 +366,47 @@ git add .
 git commit -m 'Add session storage for authentication'
 ```
 
+Install the `dotenv` package as a local development dependency.
+
+```shell
+npm install --save-dev dotenv
+```
+
+Ignore the `.env` file from the repository.
+
+```shell
+echo '.env' >> .gitignore
+```
+
+Generate a secret key that'll be used to sign session information on non-production environments.
+
+```shell
+bash -c 'echo "SESSION_SECRET="$(openssl rand -hex 64)' > .env
+```
+
+In `server.js`, add the following code to require and config the `dotenv` package on non-production environments.
+
+```javascript
+'use strict';
+
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').config();
+}
+
+// ...
+```
+
+Update the cookie session secret to use the secret key in the `SESSION_SECRET` environment variable.
+
+```javascript
+app.use(cookieSession({
+  name: 'trackify',
+  secret: process.env.SESSION_SECRET
+}));
+
+// ...
+```
+
 ## Detecting whether user is authenticated
 
 Our API will eventually need to allow users to interact with our resources. For example, users may want to follow artists or create their own playlists with tracks. In these cases, it is important that we can ensure that a user can only change their own playlist. Let's start implementing the ability for a user to follow an artist. Since we have a many to many relationship, we need to create the relationship table.
@@ -373,7 +414,8 @@ Our API will eventually need to allow users to interact with our resources. For 
 ```shell
 npm run knex migrate:make users_artists
 ```
-```
+
+```javascript
 'use strict';
 
 exports.up = function(knex) {
