@@ -1,6 +1,7 @@
 ## Objectives
 
 - Explain what a promise is.
+- Explain why a promise is important.
 
 ## What's a promise?
 
@@ -25,7 +26,9 @@ fs.appendFile(path, message, (err) => {
 });
 ```
 
-With a promise.
+With a promise. As mentioned in the Mozilla Docs, promises are instantiated with an `executor` function which has two arguments:
+
+Function object with two arguments resolve and reject. The first argument fulfills the promise, the second argument rejects it. We can call these functions once our operation is completed.
 
 ```javascript
 'use strict';
@@ -76,36 +79,9 @@ Just like how jQuery uses a promise to handle an HTTP response from an HTTP serv
 
 **NOTE:** jQuery 3.0 has switched over to use the `then()` and `catch()` functions as well.
 
-A **promise** is an object that's used for deferred and asynchronous computations. A Promise represents an operation that hasn't completed yet, but is expected in the future.
-
-Promises, at their most basic level, allow you to chain functions together. While we typically want to use Promises to block asynchronously, we can just chain functions together to build up a context. It's a bit easier to understand what's happening with Promises if we write some code, so let's try building some really simple Promise examples to understand the syntax and generally how they work.
-
-First, let's learn how to instantiate a new Promise:
-
-```javascript
-new Promise((resolve, reject) => {
-  // code calls 'resolve' and sometimes 'reject'
-});
-```
-
-As mentioned in the Mozilla Docs, promises are instantiated with an `executor` function which has two arguments:
-
-> Function object with two arguments resolve and reject. The first argument fulfills the promise, the second argument rejects it. We can call these functions once our operation is completed.
-
 These two arguments are functions which tell the promise how it should branch and allow you to return different values. For example, let's have a promise simply check to see if a number is odd or not. Open up a node repl and paste in the following code.
 
-```javascript
-var myNum = 10;
-var promise = new Promise((resolve, reject) => {
-  if (myNum % 2 === 0) {
-    resolve('even');
-  } else {
-    reject('odd');
-  }
-});
-
-promise;
-```
+## Why is a promise important?
 
 ## `.then()`
 
@@ -315,6 +291,7 @@ https://github.com/gSchool/promise-challenges/tree/master/01-knex-associations
 
 - [Introduction to ES6 Promises](http://jamesknelson.com/grokking-es6-promises-the-four-functions-you-need-to-avoid-callback-hell/)
 - [Mozilla Developer Network - Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+- [Promises Unwrapping - States and Fates](https://github.com/domenic/promises-unwrapping/blob/master/docs/states-and-fates.md)
 - [Promises - In Wicked Detail](http://www.mattgreer.org/articles/promises-in-wicked-detail/)
 - [Promises/A+ Standard](https://promisesaplus.com/)
 - [We have a problem with promises](http://pouchdb.com/2015/05/18/we-have-a-problem-with-promises.html)
