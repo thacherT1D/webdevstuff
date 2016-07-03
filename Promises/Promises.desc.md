@@ -4,16 +4,85 @@
 
 ## What's a promise?
 
-> The Promise object is used for deferred and asynchronous computations. A Promise represents an operation that hasn't completed yet, but is expected in the future.
+A **promise** is an object that represents an asynchronous operation that hasn't completed yet, but will in the future. The main benefit of a promise is its ability to separate the success handling logic from the error handling logic.
 
-> [Mozilla - Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+Without a promise.
 
-Promises, at their most basic level, allow us to chain functions together. While we typically want to use Promises to block asynchronicity, we can just chain functions together to build up a context. It's a bit easier to understand what's happening with Promises if we write some code, so let's try building some really simple Promise examples to understand the syntax and generally how they work.
+```javascript
+'use strict';
+
+const fs = require('fs');
+const path = 'hello.txt';
+const message = 'Hello callback\n';
+
+fs.appendFile(path, message, (err) => {
+  if (err) {
+    console.error(err);
+    process.exit(1);
+  }
+
+  console.log(`Message appended to ${path}`);
+});
+```
+
+With a promise.
+
+```javascript
+'use strict';
+
+const fs = require('fs');
+const path = 'hello.txt';
+const message = 'Hello promise\n';
+
+const promise = new Promise((resolve, reject) => {
+  fs.appendFile(path, message, (err) => {
+    if (err) {
+      return reject(err);
+    }
+
+    resolve(`Message appended to ${path}`);
+  });
+});
+
+promise.then((result) => {
+  console.log(result);
+});
+
+promise.catch((err) => {
+  console.error(err);
+  process.exit(1);
+});
+```
+
+For example, the `$xhr` promise remains unresolved while it waits for the HTTP response. The `$xhr` promise has two methods, `done()` and `fail()`, that are given a callback each. If the HTTP response is successful, the `done()` function's callback is triggered. On the other hand, if the HTTP response generates an error, the `fail()` function's callback is triggered.
+
+```text
+┌── new Promise(executor) ──┐                  ┌── then(onFulfilled) ──┐
+│                           │                  │                       │
+│                           │───── fulfill ───▶│                       │
+│                           │                  │                       │
+│                           │                  └───────────────────────┘
+│                           │
+│          Pending          │
+│                           │
+│                           │                  ┌── catch(onRejected) ──┐
+│                           │                  │                       │
+│                           │───── reject ────▶│                       │
+│                           │                  │                       │
+└───────────────────────────┘                  └───────────────────────┘
+```
+
+Just like how jQuery uses a promise to handle an HTTP response from an HTTP server, Knex uses promises to handle a SQL response from a PostgreSQL server. In fact, nearly all the functions in Knex return a promise as the preferred way of handling SQL responses. The main difference from jQuery is that Knex promises use the `then()` and `catch()` asynchronous functions instead of `done()` and `fail()`.
+
+**NOTE:** jQuery 3.0 has switched over to use the `then()` and `catch()` functions as well.
+
+A **promise** is an object that's used for deferred and asynchronous computations. A Promise represents an operation that hasn't completed yet, but is expected in the future.
+
+Promises, at their most basic level, allow you to chain functions together. While we typically want to use Promises to block asynchronously, we can just chain functions together to build up a context. It's a bit easier to understand what's happening with Promises if we write some code, so let's try building some really simple Promise examples to understand the syntax and generally how they work.
 
 First, let's learn how to instantiate a new Promise:
 
 ```javascript
-new Promise(executor);
 new Promise((resolve, reject) => {
   // code calls 'resolve' and sometimes 'reject'
 });
@@ -244,10 +313,11 @@ https://github.com/gSchool/promise-challenges/tree/master/01-knex-associations
 
 ## Resources
 
-* [Introduction to ES6 Promises](http://jamesknelson.com/grokking-es6-promises-the-four-functions-you-need-to-avoid-callback-hell/)
-* [Promises - In Wicked Detail](http://www.mattgreer.org/articles/promises-in-wicked-detail/)
-* [Promises/A+ Standard](https://promisesaplus.com/)
-* [We have a problem with promises](http://pouchdb.com/2015/05/18/we-have-a-problem-with-promises.html)
+- [Introduction to ES6 Promises](http://jamesknelson.com/grokking-es6-promises-the-four-functions-you-need-to-avoid-callback-hell/)
+- [Mozilla Developer Network - Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+- [Promises - In Wicked Detail](http://www.mattgreer.org/articles/promises-in-wicked-detail/)
+- [Promises/A+ Standard](https://promisesaplus.com/)
+- [We have a problem with promises](http://pouchdb.com/2015/05/18/we-have-a-problem-with-promises.html)
 
 ## Videos
 
