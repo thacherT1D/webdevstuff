@@ -2,6 +2,7 @@
 
 - Explain what a promise is.
 - Explain why a promise is important.
+- Send an HTTP request from Node.js with a promise.
 
 ## What's a promise?
 
@@ -83,26 +84,51 @@ These two arguments are functions which tell the promise how it should branch an
 
 ## Why is a promise important?
 
-## `.then()`
+## How do you send an HTTP request from Node.js with a promise?
 
 While the calculation happened correctly, the result is still a Promise. In order to return the value, we'll need to call `.then()` with the appropriate arguments. First though, let's create a function that will allow for us to dynamically set the variable we'll be checking for odd and even.
 
 ```javascript
-var evenPromise = num => {
-  return new Promise((resolve, reject) => {
-    if (num % 2 === 0) {
-      resolve('even');
-    } else {
-      reject('odd');
-    }
-  });
-};
+'use strict';
 
-evenPromise(10);
-evenPromise(13);
+const request = require('request');
+
+request('https://fs-student-roster.herokuapp.com/', (err, res, body) => {
+  if (err) {
+    console.error(err);
+    process.exit(1);
+  }
+
+  console.log(body);
+});
 ```
 
 While we can now dynamically change the number being evaluated, it's still wrapped in a Promise. In order to log the real result, take a look at [the docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then) on the `.then()` function.
+
+```javascript
+'use strict';
+
+const request = require('request');
+
+const promise = new Promise((resolve, reject) => {
+  request('https://fs-student-roster.herokuapp.com/', (err, res, body) => {
+    if (err) {
+      return reject(err);
+    }
+
+    resolve(body);
+  });
+});
+
+promise.then((result) => {
+  console.log(result);
+});
+
+promise.catch((err) => {
+  console.error(err);
+  process.exit(1);
+})
+```
 
 ### Exercise
 
