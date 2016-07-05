@@ -15,20 +15,20 @@ During project week, you'll have approximately 24 hours of class time to impleme
 
 ## Understand the technical requirements
 
-The general technical requirements for your project are as follows.
+The general technical requirements for your project:
 
 - Have [valid](https://validator.w3.org/nu/), well-indented, and semantic HTML.
 - Have [valid](https://jigsaw.w3.org/css-validator/), well-indented, and minimally-specific CSS.
 - Have [linted](http://eslint.org/), readable, and concise JavaScript.
 
-The client-specific technical requirements for your project are as follows.
+The client-specific technical requirements for your project:
 
 - Use embedded media like fonts, images, audio, or video.
 - Use a front-end framework like Bootstrap, Foundation, or Materialize.
 - Respond to form input and/or user events.
 - Send HTTP requests to a RESTful HTTP server application.
 
-The server-specific technical requirements for your project are as follows.
+The server-specific technical requirements for your project:
 
 - Send HTTP responses back to a RESTful HTTP client application.
 - Store and retrieve a many-to-many relationship using a relational database.
