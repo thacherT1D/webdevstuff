@@ -5,7 +5,7 @@ During project week, you'll have approximately 24 hours of class time to impleme
 ## Table of Contents
 
 1. [Understand the technical requirements](#understand-the-technical-requirements)
-1. [Submit two project proposals for approval](#submit-two-project-proposals-for-approval)
+1. [Submit a project proposal for approval](#submit-a-project-proposal-for-approval)
 1. [Use a software development process](#use-a-software-development-process)
 1. [Pay attention to your mindset](#pay-attention-to-your-mindset)
 1. [Demonstrate your project to the class](#demonstrate-your-project-to-the-class)
@@ -111,32 +111,30 @@ The technical requirements for your project are as follows.
 
 Or browse the [ProgrammableWeb's API repository](http://www.programmableweb.com/apis/directory). You'll want to avoid calling web API endpoints that require [OAuth](https://en.wikipedia.org/wiki/OAuth) for authorization, a technique you'll study later in this course.
 
-## Write a project proposal and get it approved by an instructor
+## Submit a project proposal for approval
 
-For this project, you will be assigned into groups of three or four. Together, you will need to come up with a product idea, and write it as a proposal that includes:
+For this project, you'll submit a proposal to an instructor for approval. The goal of the approval process is to give you the tools to finish your idea in a week. You'll be given class time to work on your proposal, but you'll probably have to work on it outside of class too.
 
-* A project description
-    * Who uses it?
-    * What outputs do they need?
-    * What inputs are needed to generate those outputs?
-* A list of technologies that you plan to use
-* A well-defined and written-out feature list
+The best way to come up with a viable project idea is to do some light experimentation with a web API or technology that interests you. Take a weather service API, for example. Try sending requests to the API and see what kind of data you get back in response. In this case, it's likely to include a weather forecast for the day.
 
-There are some constraints around what technologies MUST be present in your app. Check out [Create and deploy a web app](#create-deploy) below.
+Once you figure out how the API works and see how the data actually looks, start thinking about the problems you could solve with this knowledge. Using our weather service API example from before, one problem worth solving could be knowing whether or not it's a good day to bring an umbrella to school. That's a problem that you and your fellow students might like solved.
 
-## Follow Agile Workflow
+Once you have a solvable problem and an audience who'd like it solved, you have the seeds of viable project idea. Next, take those seeds and plant them in a project proposal. For your proposal, please answer the following questions.
 
-See Slideshow
+- What problem does your project solve?
+- Who has this problem?
+- How will your project solve this problem?
+- What inputs does it need?
+- What outputs does it produce?
+- What web APIs will it use?
+- What technologies will it use?
+- What additional features will it have?
 
-### Example Ideas
+Additionally, please include a pencil and paper wireframe with your answers. Included in this repository is a [template](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/190/template.pdf) wireframe that can be printed out on 11×17 inch paper. Here's an example of how a past student used this template.
 
-* Library
-* Movie Database
-* Blog
-* Retail Store
-* Student Enrollment System
-* Sports Performance Database
-* Trip Itenerary
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/188/brewify.jpg)
+
+Remember, you're _not_ expected to discover and publish a brand new idea so keep your project idea simple. And you _must_ submit your proposal to an instructor for approval before you start translating one of your ideas into code.
 
 ## Create and deploy a complete CRUD app
 
