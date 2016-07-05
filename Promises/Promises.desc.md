@@ -311,6 +311,8 @@ We've only skimmed the surface of what is great about Promises. If you feel read
 
 ## Assignment
 
+- [Promise Fundamentals](https://github.com/gSchool/wd-promise-fundamentals)
+
 https://github.com/gSchool/promise-challenges/tree/master/01-knex-associations
 
 ## Resources
