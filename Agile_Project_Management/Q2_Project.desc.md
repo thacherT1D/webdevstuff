@@ -24,7 +24,7 @@ The technical requirements for your project are as follows.
 - Use a front-end framework like Bootstrap, Foundation, or Materialize.
 - Respond to form input and/or user events.
 - Store and retrieve a many-to-many relationship using a database-driven, RESTful HTTP server.
-- Connect to at least one external web API via server-side HTTP request.
+- Connect to at least one external web API via server-side HTTP requests.
 - Be deployed to a production environment.
 
 ### Bonuses
