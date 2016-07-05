@@ -145,48 +145,76 @@ console.log('Waiting for the asynchronous I/O operation to complete...');
 
 ## How do you send an HTTP request from Node.js with a promise?
 
-While the calculation happened correctly, the result is still a Promise. In order to return the value, we'll need to call `.then()` with the appropriate arguments. First though, let's create a function that will allow for us to dynamically set the variable we'll be checking for odd and even.
-
-```javascript
-'use strict';
-
-const request = require('request');
-
-request.get('https://fs-student-roster.herokuapp.com/', (err, res, body) => {
-  if (err) {
-    console.error(err);
-    process.exit(1);
-  }
-
-  console.log(body);
-});
+```shell
+mkdir promises
+cd promises
 ```
 
-While we can now dynamically change the number being evaluated, it's still wrapped in a Promise. In order to log the real result, take a look at [the docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then) on the `.then()` function.
+```shell
+npm init
+npm install --save request
+```
 
 ```javascript
 'use strict';
 
 const request = require('request');
 
-const promise = new Promise((resolve, reject) => {
-  request.get('https://fs-student-roster.herokuapp.com/', (err, res, body) => {
-    if (err) {
-      return reject(err);
-    }
+const getJSON = function(url) {
+  const promise = new Promise((resolve, reject) => {
+    request.get(url, (err, res, body) => {
+      if (err) {
+        return reject(err);
+      }
 
-    resolve(body);
+      resolve(JSON.parse(body));
+    });
   });
-});
 
-promise
-  .then((result) => {
-    console.log(result);
+  return promise;
+};
+
+getJSON('http://www.omdbapi.com/?s=Captain%20America')
+  .then((body) => {
+    console.log(body);
   })
   .catch((err) => {
     console.error(err);
     process.exit(1);
   });
+```
+
+```javascript
+'use strict';
+
+const request = require('request');
+
+const getJSON = function(url) {
+  const promise = new Promise((resolve, reject) => {
+    request.get(url, (err, res, body) => {
+      if (err) {
+        return reject(err);
+      }
+
+      resolve(JSON.parse(body));
+    });
+  });
+
+  return promise;
+};
+
+getJSON('http://www.omdbapi.com/?s=Captain%20America')
+  .then((body) => {
+    return getJSON(`http://www.omdbapi.com/?i=${body.Search[0].imdbID}`);
+  })
+  .then((body) => {
+    console.log(body);
+  })
+  .catch((err) => {
+    console.error(err);
+    process.exit(1);
+  });
+
 ```
 
 ### Exercise
