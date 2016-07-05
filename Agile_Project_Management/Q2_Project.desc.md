@@ -169,23 +169,28 @@ The number one thing that affects a student's performance during project week is
 
 ![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/189/growth_mindset.jpg)
 
+## Demonstrate your project to the class
 
+At the end of project week, you'll give a brief, 5-minute demonstration of your project for the class. Your audience will want to hear you answer the following questions.
 
-## Make a video highlighting the functionality of your app
-
-* Make a 3-6 minute video explaining your project and demonstrating its features
+- What's the name of your project?
+- What problem does it solve?
+- Who has this problem?
+- How does your project solve this problem?
+- What web APIs did it use?
+- What technologies did it use?
+- What was the most valuable piece of Customer feedback you received?
+- What was the biggest challenge you had to overcome?
 
 ## Complete a write-up of the project
 
-* Describe what the project is, the technologies you used, and some information about the workflow you followed.
-* 1-2 tight paragraphs
+At the top of this file, please write a few paragraphs that answer the above questions.
 
-## Add all three of these to an online portfolio
+## Submit your project for assessment
 
-* Create a portfolio on the [student portal](http://students.galvanize.com)
-* Link to your final deployed site, your video, your respositories, and your write-up
-* This will be added to your web development portfolio
+Find the corresponding exercise in the learning management system and submit a link to your project's GitHub repository. Make sure you include a link to your deployed application at the top of the this page.
 
-## Present your work to the class
+## Update your online portfolio
 
-* Be prepared to spend ~10 minutes presenting your work to the class.
+- Create a portfolio on the [Galvanize student portal](http://students.galvanize.com).
+- Add a link to your project's production environment.
