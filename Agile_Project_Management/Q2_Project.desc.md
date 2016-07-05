@@ -13,6 +13,104 @@ During project week, you'll have approximately 24 hours of class time to impleme
 1. [Submit your project for assessment](#submit-your-project-for-assessment)
 1. [Update your online portfolio](#update-your-online-portfolio)
 
+## Understand the technical requirements
+
+The technical requirements for your project are as follows.
+
+- Have [valid](https://validator.w3.org/nu/), well-indented, and semantic HTML.
+- Have [valid](https://jigsaw.w3.org/css-validator/), well-indented, and minimally-specific CSS.
+- Have [linted](http://eslint.org/), readable, and concise JavaScript.
+- Use embedded media like fonts, images, audio, or video.
+- Use a front-end framework like Bootstrap, Foundation, or Materialize.
+- Respond to form input and/or user events.
+- Connect to at least one external web API via Ajax.
+- Be deployed to a production environment.
+
+### Bonuses
+
+- Customize the color palette or theme of your front-end framework.
+- Optimize for various viewport sizes using responsive design.
+- Develop a game instead of an application.
+- Or connect to external hardware like an Arduino or MIDI keyboard.
+
+### Application ideas
+
+- A nutrition tracker
+- A documentation aggregator
+- A ping-pong tournament tracker
+- A message encryptor
+- A journey mapper
+- A brewery locator
+- An audio sequencer
+- A synonym finder
+- A language translator
+- A real-time chatroom
+- A collection manager
+- A blog article publisher
+- A membership organizer
+- A sports team tracker
+
+### Game ideas
+
+- Asteroids
+- Battleship
+- Blackjack
+- Breakout
+- Flash cards
+- Sudoku
+- Tetris
+
+### Web APIs
+
+- [Bacon Ipsum](http://baconipsum.com/json-api/)
+- [Big Huge Thesaurus](http://words.bighugelabs.com/api.php)
+- [COLOURlovers](http://www.colourlovers.com/api)
+- [Crunchbase](https://data.crunchbase.com/v3/docs/using-the-api)
+- [data.seattle.gov](https://data.seattle.gov/)
+- [Deck of Cards](http://deckofcardsapi.com/)
+- [Discogs](https://www.discogs.com/developers/)
+- [Etsy](https://www.etsy.com/developers/documentation)
+- [Firebase](https://firebase.google.com/docs/web/setup)
+- [Flickr](https://www.flickr.com/services/api/)
+- [Gilt](https://dev.gilt.com/documentation/overview.html)
+- [GitHub](https://developer.github.com/)
+- [Google Books](https://developers.google.com/books/docs/v1/using)
+- [Google Knowledge Graph](https://developers.google.com/knowledge-graph/)
+- [Google Geocoding](https://developers.google.com/maps/documentation/geocoding/start)
+- [Google Maps](https://developers.google.com/maps/documentation/javascript/)
+- [Google Places](https://developers.google.com/maps/documentation/javascript/places#overview)
+- [Gravatar](http://en.gravatar.com/site/implement/)
+- [Groupon](https://www.groupon.com/pages/api)
+- [JSONPlaceholder](http://jsonplaceholder.typicode.com/)
+- [Lob](https://lob.com/docs)
+- [Mapbox](https://www.mapbox.com/api-documentation/)
+- [Markit](http://dev.markitondemand.com/MODApis/)
+- [MyJSON](http://myjson.com/)
+- [OpenTok](https://tokbox.com/developer/rest/)
+- [OpenWeatherMap](http://openweathermap.org/api)
+- [PoetryDB](http://poetrydb.org/)
+- [Reddit](https://www.reddit.com/dev/api)
+- [Rotten Tomatoes](http://developer.rottentomatoes.com/docs/read/JSON)
+- [Snooth Wine](http://api.snooth.com/)
+- [SoundCloud](https://developers.soundcloud.com/docs/api/reference)
+- [(Hacker)Space](http://spaceapi.net/)
+- [Stripe](https://stripe.com/docs/api#intro)
+- [SF OpenData](https://data.sfgov.org/)
+- [TextBelt](http://textbelt.com/)
+- [theguardian](http://open-platform.theguardian.com/)
+- [Transitland](https://transit.land/documentation/)
+- [Tumblr](https://www.tumblr.com/docs/en/api/v2)
+- [Twitch.tv](https://github.com/justintv/Twitch-API)
+- [Unsplash](https://unsplash.com/documentation)
+- [Weather Underground](http://api.wunderground.com/weather/api/d/docs)
+- [Wolfram Alpha](http://products.wolframalpha.com/api/)
+- [Wordnik](http://developer.wordnik.com/docs.html)
+- [xkcd](https://xkcd.com/json.html)
+- [Yandex Translate](https://tech.yandex.com/translate/)
+- [Youtube](https://developers.google.com/youtube/v3/getting-started)
+
+Or browse the [ProgrammableWeb's API repository](http://www.programmableweb.com/apis/directory). You'll want to avoid calling web API endpoints that require [OAuth](https://en.wikipedia.org/wiki/OAuth) for authorization, a technique you'll study later in this course.
+
 ## Write a project proposal and get it approved by an instructor
 
 For this project, you will be assigned into groups of three or four. Together, you will need to come up with a product idea, and write it as a proposal that includes:
@@ -27,6 +125,7 @@ For this project, you will be assigned into groups of three or four. Together, y
 There are some constraints around what technologies MUST be present in your app. Check out [Create and deploy a web app](#create-deploy) below.
 
 ## Follow Agile Workflow
+
 See Slideshow
 
 ### Example Ideas
