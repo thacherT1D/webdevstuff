@@ -138,9 +138,15 @@ Waiting for the asynchronous I/O operation to complete...
 Hello promise
 ```
 
-As you can see, the role of the `executor` callback function is to start an asynchronous I/O operation. If the operation generates an error, the callback invokes the `reject()` function, passing along the error, which permanently changes the state of the promise to rejected. Otherwise, the `resolve()` function is invoked, passing along the results of the operation, which permanently resolves the state of the promise to either rejected or fulfilled. If resolving the promise generates a new error, the state is changed to rejected, otherwise it's changed to fulfilled.
+As you can see, the role of the `executor` callback function is to start an asynchronous I/O operation. If the operation generates an error, the callback invokes the `reject()` function, passing along the error. Invoking the `reject()` function permanently changes the state of the promise to rejected.
+
+If the operating doesn't generate an error, the callback invokes the `resolve()` function, passing along the results of the operation. If invoking the `resolve()` function throws a new error, the promise's state is permanently changed to rejected and the new error is passed along. Otherwise, the state is permanently changed to fulfilled and the results are passed along as intended.
 
 A promise is **unresolved** while in the pending state. A promised is **resolved** when it's state is changed to either fulfilled or rejected. Once a promise is resolved, it's state can never change.
+
+To access a fulfilled promise's results, attach a callback to the `then()` method.
+
+To access a rejected promise's error, attach a callback to the `then()` method.
 
 ```text
 ┌── new Promise(executor) ──┐                  ┌── then(onFulfilled) ──┐
@@ -157,12 +163,6 @@ A promise is **unresolved** while in the pending state. A promised is **resolved
 │                           │                  │                       │
 └───────────────────────────┘                  └───────────────────────┘
 ```
-
-Just like how jQuery uses a promise to handle an HTTP response from an HTTP server, Knex uses promises to handle a SQL response from a PostgreSQL server. In fact, nearly all the functions in Knex return a promise as the preferred way of handling SQL responses. The main difference from jQuery is that Knex promises use the `then()` and `catch()` asynchronous functions instead of `done()` and `fail()`.
-
-**NOTE:** jQuery 3.0 has switched over to use the `then()` and `catch()` functions as well.
-
-These two arguments are functions which tell the promise how it should branch and allow you to return different values. For example, let's have a promise simply check to see if a number is odd or not. Open up a node repl and paste in the following code.
 
 ### Exercise
 
