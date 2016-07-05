@@ -61,7 +61,6 @@ node appendContent.js
 And you should see something like this.
 
 ```text
-node appendContent.js
 Waiting for the asynchronous I/O operation to complete...
 { Error: EACCES: permission denied, open 'hello.txt'
     at Error (native) errno: -13, code: 'EACCES', syscall: 'open', path: 'hello.txt' }
@@ -106,8 +105,37 @@ promise.catch((err) => {
 console.log('Waiting for the asynchronous I/O operation to complete...');
 ```
 
+Execute the program.
+
+```shell
+node appendContentPromise.js
+```
+
+And you should see something like this.
+
+```text
+Waiting for the asynchronous I/O operation to complete...
+{ Error: EACCES: permission denied, open 'hello.txt'
+    at Error (native) errno: -13, code: 'EACCES', syscall: 'open', path: 'hello.txt' }
+```
+
+Add the user's write permission back to the `hello.text` file.
+
 ```shell
 chmod u+w hello.txt
+```
+
+And execute the program again.
+
+```shell
+node appendContentPromise.js
+```
+
+And you should see something like this.
+
+```text
+Waiting for the asynchronous I/O operation to complete...
+Hello promise
 ```
 
 For example, the `$xhr` promise remains unresolved while it waits for the HTTP response. The `$xhr` promise has two methods, `done()` and `fail()`, that are given a callback each. If the HTTP response is successful, the `done()` function's callback is triggered. On the other hand, if the HTTP response generates an error, the `fail()` function's callback is triggered.
