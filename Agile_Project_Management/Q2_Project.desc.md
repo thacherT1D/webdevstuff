@@ -23,51 +23,14 @@ The technical requirements for your project are as follows.
 - Use embedded media like fonts, images, audio, or video.
 - Use a front-end framework like Bootstrap, Foundation, or Materialize.
 - Respond to form input and/or user events.
-- Connect to at least one external web API via Ajax.
+- Store and retrieve a many-to-many relationship using a database-driven, RESTful HTTP server.
+- Connect to at least one external web API via server-side HTTP request.
 - Be deployed to a production environment.
-* CRUD
-    * Allow users to create, read, update, and delete data from a form
-    * Interact with a server-side A
-
-
-
-
-## Create and deploy a complete CRUD app
-
-Your web app should:
-
-
-Your API should:
-
-* API
-    * Must have atleast 2 API integrations
-    * Use express.js
-    * Have routes for create, read, update, and delete operations on multiple routes
-    * Be designed according to RESTful principles
-    * CRUD data from/to a relational database using SQL or an ORM
-* Auth
-    * Support functionality for three role types:
-        * A non-logged in user
-        * A logged-in user with limited permissions
-        * A logged-in superuser
-    * Support login via a social network
-    * Passwords should be hashed
-    * Use signed Cookies
-* Database
-    * Use PostgreSQL
-    * Be seeded with data
-    * Have a separate user for the application
-* Workflow
-    * Use a feature-branch workflow for your user stories
-    * Document dependencies in a `package.json` file
-    * Squash commits and issue pull requests rather merging directly to master
-
 
 ### Bonuses
 
-- Customize the color palette or theme of your front-end framework.
-- Optimize for various viewport sizes using responsive design.
-- Build an automated test suite to verify the HTTP server works as expected.
+- Register and authenticate users securely.
+- Test your HTTP server with an automated test suite.
 - Develop a game instead of an application.
 - Or connect to external hardware like an Arduino or MIDI keyboard.
 
