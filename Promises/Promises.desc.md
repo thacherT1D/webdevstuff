@@ -23,7 +23,7 @@ fs.appendFile(filePath, content, (err) => {
     process.exit(1);
   }
 
-  console.log(`Content appended to ${filePath}`);
+  console.log(content);
 });
 
 console.log('Waiting for the asynchronous I/O operation to complete...');
@@ -48,12 +48,12 @@ const promise = new Promise((resolve, reject) => {
       return reject(err);
     }
 
-    resolve(`Content appended to ${filePath}`);
+    resolve(content);
   });
 });
 
-promise.then((result) => {
-  console.log(result);
+promise.then((content) => {
+  console.log(content);
 });
 
 promise.catch((err) => {
@@ -121,13 +121,16 @@ const promise = new Promise((resolve, reject) => {
       return reject(err);
     }
 
-    resolve(`Content appended to ${filePath}`);
+    resolve(content);
   });
 });
 
 promise
-  .then((result) => {
-    console.log(result);
+  .then((content) => {
+    return content.toUpperCase();
+  })
+  .then((content) => {
+    console.log(content); 
   })
   .catch((err) => {
     console.error(err);
