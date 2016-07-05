@@ -70,6 +70,8 @@ Another way to perform an asynchronous I/O operation is with a more sophisticate
 1. Fulfilled
 1. Rejected
 
+**NOTE:** A promise can only be in one state at time.
+
 A newly instantiated promise starts off in the pending state and is given an `executor` callback function. Like a traditional asynchronous I/O operation, the callback is registered with the event loop and is automatically invoked when the currently executing call stack is finished. However, unlike a traditional asynchronous I/O operation, the `executor` callback is invoked with two arguments—a `resolve` function and a `reject` function.
 
 The following `appendContentPromise.js` program appends content to a file using the `fs` core module. It performs the exact same asynchronous I/O operation as before, only this time it's wrapped inside the `executor` callback function of a promise.
@@ -136,7 +138,7 @@ Waiting for the asynchronous I/O operation to complete...
 Hello promise
 ```
 
-As you can see, the role of the `executor` callback function is to start an asynchronous I/O operation. If the operation generates an error, the callback invokes the `reject()` function, passing along the error, which permanently changes the state of the promise to rejected. Otherwise, the `resolve()` function is invoked, passing along the results of the operation, which permanently resolves the state of the promise to either rejected or fulfilled. If resolving the promise generates a new error, the state is changed to rejected, otherwise it's changed to fulfilled. 
+As you can see, the role of the `executor` callback function is to start an asynchronous I/O operation. If the operation generates an error, the callback invokes the `reject()` function, passing along the error, which permanently changes the state of the promise to rejected. Otherwise, the `resolve()` function is invoked, passing along the results of the operation, which permanently resolves the state of the promise to either rejected or fulfilled. If resolving the promise generates a new error, the state is changed to rejected, otherwise it's changed to fulfilled.
 
 
 ```text
