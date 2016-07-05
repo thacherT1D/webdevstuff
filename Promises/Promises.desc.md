@@ -92,6 +92,51 @@ These two arguments are functions which tell the promise how it should branch an
 
 The main benefit of a promise is its ability to separate the success handling logic from the error handling logic.
 
+```text
+┌── new Promise(executor) ──┐                  ┌── then(onFulfilled) ──┐                  ┌────── new Promise() ──────┐
+│                           │                  │                       │───── fulfill ───▶│                           │
+│                           │───── fulfill ───▶│                       │                  │                           │
+│                           │                  │                       │───── reject ────▶│                           │
+│                           │                  └───────────────────────┘                  │                           │
+│                           │                                                             │                           │
+│          Pending          │                                                             │                           │
+│                           │                                                             │                           │
+│                           │                  ┌── catch(onRejected) ──┐                  │                           │
+│                           │                  │                       │───── fulfill ───▶│                           │
+│                           │───── reject ────▶│                       │                  │                           │
+│                           │                  │                       │───── reject ────▶│                           │
+└───────────────────────────┘                  └───────────────────────┘                  └───────────────────────────┘
+```
+
+```javascript
+'use strict';
+
+const fs = require('fs');
+const filePath = 'hello.txt';
+const content = 'Hello promise\n';
+
+const promise = new Promise((resolve, reject) => {
+  fs.appendFile(filePath, content, (err) => {
+    if (err) {
+      return reject(err);
+    }
+
+    resolve(`Content appended to ${filePath}`);
+  });
+});
+
+promise
+  .then((result) => {
+    console.log(result);
+  })
+  .catch((err) => {
+    console.error(err);
+    process.exit(1);
+  });
+
+console.log('Waiting for the asynchronous I/O operation to complete...');
+```
+
 ## How do you send an HTTP request from Node.js with a promise?
 
 While the calculation happened correctly, the result is still a Promise. In order to return the value, we'll need to call `.then()` with the appropriate arguments. First though, let's create a function that will allow for us to dynamically set the variable we'll be checking for odd and even.
