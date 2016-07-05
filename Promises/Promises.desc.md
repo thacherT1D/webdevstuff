@@ -140,6 +140,7 @@ Hello promise
 
 As you can see, the role of the `executor` callback function is to start an asynchronous I/O operation. If the operation generates an error, the callback invokes the `reject()` function, passing along the error, which permanently changes the state of the promise to rejected. Otherwise, the `resolve()` function is invoked, passing along the results of the operation, which permanently resolves the state of the promise to either rejected or fulfilled. If resolving the promise generates a new error, the state is changed to rejected, otherwise it's changed to fulfilled.
 
+A promise is **unresolved** while in the pending state. A promised is **resolved** when it's state is changed to either fulfilled or rejected. Once a promise is resolved, it's state can never change.
 
 ```text
 ┌── new Promise(executor) ──┐                  ┌── then(onFulfilled) ──┐
