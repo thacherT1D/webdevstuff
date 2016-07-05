@@ -12,7 +12,7 @@ The goal of this project is to put what you've learned to use to:
 
 ## Write a project proposal and get it approved by an instructor
 
-For this project, you will be assigned into groups of four. Together, you will need to come up with a product idea, and write it as a proposal that includes:
+For this project, you will be assigned into groups of three or four. Together, you will need to come up with a product idea, and write it as a proposal that includes:
 
 * A project description
     * Who uses it?
@@ -23,8 +23,8 @@ For this project, you will be assigned into groups of four. Together, you will n
 
 There are some constraints around what technologies MUST be present in your app. Check out [Create and deploy a web app](#create-deploy) below.
 
-## Follow Agile Workflow 
-See Slideshow 
+## Follow Agile Workflow
+See Slideshow
 
 ### Example Ideas
 
@@ -83,17 +83,13 @@ Your API should:
     * Passwords should be hashed
     * Use signed Cookies
 * Database
-    * Use PostGres
-    * Be normalized to 3rd Normal Form
+    * Use PostgreSQL
     * Be seeded with data
     * Have a separate user for the application
 * Workflow
     * Use a feature-branch workflow for your user stories
-    * Use an automated tool (such as Gulp) to build, deploy, and test your project
     * Document dependencies in a `package.json` file
     * Squash commits and issue pull requests rather merging directly to master
-
-Note that you will end up with 3 deployments- your client-side web app, your API, and your database. The code for these should also be stored in 3 separate repositories.
 
 <a id="video"></a>
 
