@@ -1,105 +1,183 @@
-# Testing with Mocha - a primer
+## Objectives
 
-### Objectives
+- Explain the benefits of testing.
+- Describe the different types of tests.
+- Write tests using Mocha and Chai
+- Explain what is Test Driven Development
+- Practice Test Driven Development by writing tests then writing code.
 
-- Discuss the benefits of testing. How does it help developers do their jobs more effectively?
-- Write tests for existing code.
-- Write code to pass a given set of tests.
-- Write tests, then write code that passes those tests.
+## Benefits of testing
 
-### Key terms
+Up to this point, we have not written tests for our projects, but we have run tests on our code through our exercises. As projects get bigger, the cognitive load needed to understand all aspects becomes too cumbersome to manage all the components' logic. Testing steps in to help out.
 
-- Mocha
-- Chai
-- Test
-- Suite
-- Expectation
+Testing your code has many strengths:
 
-Let's learn to test code with [Mocha](https://mochajs.org/), Mocha is a feature-rich JavaScript test framework.
+- Testing identifies bugs in our code.
+- Testing continues to test to ensure no new bugs get introduced (called a regression).
+- It overall takes _less_ to write correct code when testing. Specifically, testing reduce the cost of change in your code.
+- Tests enforce better code design to be testable.
+- They provide better documentation on code.
+- Testing reduces fear.
 
-1. [Overview](#overview)
-1. [Setup](#setup)
-1. [Discussion](#discussion)
-1. [Reflect](#reflect)
+## Types of tests
 
-## Overview
+There are multiple goals we have in testing our code. As a result, there are multiple types of tests that we create to accomplish these goals. We will work on three main types of tests.
 
-### Why should you care?
+### Unit tests
 
-*Something that is untested is broken.*
+The most common type of tests amongst software developers are *unit tests*. Unit tests are tests that isolate a specific pieces of code. These are particularly helpful during development because when a unit test fails, we can isolate the area of code that where the bug is.
 
-If your codebase is untested then it is **very** difficult to add new features, because
+Because we test functions and functions can be composed of other functions that we would test, it is our responsibility to isolate the code by creating *stubs* of other functions, that is, creating functions that return the expected output.
 
-- You don't know if that feature will work or not, and
-- The new feature could break your existing codebase.
+Unit tests is a type of *white box testing* that is writing tests with knowledge of the internal workings of code we are testing.
 
-Automated tests help minimize these issues, allowing you to safely update your codebase and sleep at night. Unfortunately, many developers don't understand the importance of testing until their application breaks and s/he is up all night trying to fix things.
+### Functional tests
 
-Read more [here](http://stackoverflow.com/questions/67299/is-unit-testing-worth-the-effort).
+Broader in scope, *functional tests* make no attempt to understand the inner workings of a function (also called *black box testing*). Here, functional tests are meant to test the overall functionality of a function or module. They can overlap with unit tests, but oftentimes, functional tests work on larger pieces of code.
 
-## Setup
+The advantages of these tests is easy: if the tests pass, your software works as expected. The main disadvantage is that a failure in a test does not clearly identify where in the code the bug is.
 
-> Always refer to the [Mocha Docs](https://mochajs.org/) for help.
+### Integration tests
 
-Install Mocha globally via NPM:
+When projects get bigger and including multiple APIs across different projects, *integration tests* are put in place to test the functionality on the broadest scale, checking the contract of the API for a piece of the system.
 
-  ```sh
-  $ npm install -g mocha
-  ```
+Integration tests offer similar advantages and disadvantages of functional tests except on a grander scale. A successful set of tests indicate overall success of the system. A failure does not describe the location clearly in the entire system.
 
-Create a new directory called "test-basics". CD into it, and then create a subdirectory called test:
+### Other types of tests
 
-  ```sh
-  $ mkdir test-basics
-  $ cd test-basics
-  $ mkdir test
-  ```
+While the three above types are the ones we are focusing on, there are many aspects of software that we test, they include:
 
-Initialize a new git repo, and then initialize npm (press return multiple times to confirm the defaults).
+* Performance testing - testing the limits of software for speed and scalability purposes.
+* A/B testing - testing the overall customer satisfaction of a change based on some criteria of success.
+* Compatibility testing - testing software on various types of "clients" (think mobile phones, browsers, OS's).
 
-  ```sh
-  $ npm init
-  ```
+And many more.
+
+## Using Mocha and Chai
+
+Create a new directory called "test-basics". `cd` into it, and then create a subdirectory called test:
+
+```sh
+$ mkdir test-basics
+$ cd test-basics
+$ git init
+$ mkdir test
+```
+
+Initialize a new git repo, and then initialize npm package file. The defaults are fine for the package file except for `test command`, specify `mocha`.
+
+```sh
+$ npm init
+```
+
+![NPM Init Shell](http://i.imgur.com/BJgxd9c.png)
+
+Install [Mocha](https://mochajs.org/) locally via NPM:
+
+```sh
+$ npm install --save-dev mocha
+```
 
 Install the [chai](http://chaijs.com/guide/) expectation library locally:
 
-  ```sh
-  $ npm install --save-dev chai
-  ```
+```sh
+$ npm install --save-dev chai
+```
 
-Add node_modules to the .gitignore file:
+Be sure to add node_modules to the .gitignore file:
 
-  ```sh
-  $ echo node_modules >> .gitignore
-  ```
+```sh
+$ echo node_modules >> .gitignore
+```
 
-Try running the tests with the `mocha` command. You should see:
+To verify, here's what your `package.json` file should look like. Pay attention to the test script and your development dependencies.
 
-  ```sh
-  $ mocha
+```json
+{
+  "name": "test-basics",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Ken McGrady",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.5.3"
+  }
+}
+```
+
+Try running the tests with the `npm test` command. You should see:
+
+```sh
+$ npm test
 
 
-  0 passing (3ms)
+0 passing (3ms)
+```
 
+Let's create a function to test. In this case, let's implement an `index.js` file in our project directory.
 
-  ```
+```javascript
+// Define a function named toSentence that takes four arguments
+//    word1 (string)
+//    word2 (string)
+//    word3 (string)
+//    oxfordComma (boolean)
+//
+// If oxfordComma is true,
+//    Return a string in the format "word1, word2, and word3."
+// If oxfordComma is false,
+//    Return a string in the format "word1, word2 and word3."
+const toSentence = function (word1, word2, word3, oxfordComma) {
+  return `${word1}, ${word2}${oxfordComma ? ',' : ''} and ${word3}.`;
+};
+
+module.exports = { toSentence };
+```
 
 Add a test file called `test.js` to the `test/` directory and add the following code:
 
-  ```javascript
-  var code = require('../main');
-  var expect = require('chai').expect;
+```javascript
+'use strict';
 
-  describe('', function() {
-    it('');
+const assert = require('chai').assert;
+const {suite, test} = require('mocha');
+
+suite('NAME OF SUITE', () => {
+  test('NAME OF TEST', (done) => {
+
   });
-  ```
+});
+```
 
-If you run `mocha` again, you should see an error. What does the error message say?
+Each test handles a specific aspect of functionality of a particular function. Mocha groups all of these functions into a suite. This helps in understanding the overall functionality and then identify the specific aspect to look at. In testing our function, we first need to include the file in our test, and then create a set of tests for it.
 
-To resolve your error, add a `main.js` file to the root directory. Now when you run `mocha`, things should be working again. What was the problem?
+```javascript
+'use strict';
 
-With the setup complete, we can now start writing some tests!
+const assert = require('chai').assert;
+const {suite, test} = require('mocha');
+
+const {toSentence} = require('../index');
+
+suite('toSentence function', () => {
+  test('converts to a sentence without oxford comma specified', () => {
+    assert.strictEqual(toSentence('', '', '', false), ',  and .');
+    assert.strictEqual(toSentence('Huey', 'Dewey', 'Louie', false), 'Huey, Dewey and Louie.');
+  });
+
+  test('converts to a sentence with oxford comma specified', () => {
+    assert.strictEqual(toSentence('', '', '', true), ', , and .');
+    assert.strictEqual(toSentence('Huey', 'Dewey', 'Louie', true), 'Huey, Dewey, and Louie.');
+  });
+});
+```
+
+## What is Test Driven Development (TDD)?
 
 ## Discussion
 
@@ -303,10 +381,10 @@ describe("Object Values", function() {
 
   it("returns an array of the object's values", function() {
     expect(code.objectValues({
-      key1: 'value1', 
-      key2: 0, 
-      key3: null, 
-      key4: undefined, 
+      key1: 'value1',
+      key2: 0,
+      key3: null,
+      key4: undefined,
       key5: true
     })).to.deep.equal(['value1', 0, null, undefined, true]);
   });
@@ -316,7 +394,7 @@ describe("Object Values", function() {
       foo: [1, 2, 3],
       bar: {nested: "object"}
     })).to.deep.equal([
-      [1, 2, 3], 
+      [1, 2, 3],
       {nested: "object"}
     ]);
   });
@@ -348,10 +426,10 @@ describe("Object Values", function() {
 
   it("returns an array of the object's values", function() {
     expect(code.objectValues({
-      key1: 'value1', 
-      key2: 0, 
-      key3: null, 
-      key4: undefined, 
+      key1: 'value1',
+      key2: 0,
+      key3: null,
+      key4: undefined,
       key5: true
     })).to.deep.equal(['value1', 0, null, undefined, true]);
   });
@@ -361,11 +439,11 @@ describe("Object Values", function() {
       foo: [1, 2, 3],
       bar: {nested: "object"}
     })).to.deep.equal([
-      [1, 2, 3], 
+      [1, 2, 3],
       {nested: "object"}
     ]);
   });
-  
+
   it("returns null if given a string, boolean, undefined, null, or number", function() {
     ["hi",true,undefined,null,8].forEach(function(el) {
       expect(code.objectValues(el)).to.be.null;
@@ -410,10 +488,10 @@ describe("Object Values", function() {
 
   it("returns an array of the object's values", function() {
     expect(code.objectValues({
-      key1: 'value1', 
-      key2: 0, 
-      key3: null, 
-      key4: undefined, 
+      key1: 'value1',
+      key2: 0,
+      key3: null,
+      key4: undefined,
       key5: true
     })).to.deep.equal(['value1', 0, null, undefined, true]);
   });
@@ -423,11 +501,11 @@ describe("Object Values", function() {
       foo: [1, 2, 3],
       bar: {nested: "object"}
     })).to.deep.equal([
-      [1, 2, 3], 
+      [1, 2, 3],
       {nested: "object"}
     ]);
   });
-  
+
   it("returns null if given a string, boolean, undefined, null, or number", function() {
     ["hi",true,undefined,null,8].forEach(function(el) {
       expect(code.objectValues(el)).to.be.null;
@@ -449,7 +527,7 @@ describe("Create Object", function() {
   });
 
   // add a test for one or two simple cases
-  
+
   // what are some edge cases? test for those too!
 });
 ```
@@ -475,7 +553,7 @@ Protip: sick of seeing the tests for `objectValues` show up every time you run t
 
 ### Note on testing syntax
 
-In our `main.js` file, we declared our functions up top, then exported them using `module.exports`. Another common pattern is to wrap everything in the `main` file in an object and export the entire thing. In this case, your `main.js` would look something like this: 
+In our `main.js` file, we declared our functions up top, then exported them using `module.exports`. Another common pattern is to wrap everything in the `main` file in an object and export the entire thing. In this case, your `main.js` would look something like this:
 
 ```javascript
 module.exports = {
