@@ -2,7 +2,9 @@
 
 - Explain the benefits of testing.
 - Describe the different types of tests.
-- Write tests using Mocha and Chai
+- Write tests using Mocha and Chai and additional testing libraries including
+  - Nock
+  - Supertest
 - Explain what is Test Driven Development
 - Practice Test Driven Development by writing tests then writing code.
 
@@ -154,7 +156,17 @@ suite('NAME OF SUITE', () => {
 });
 ```
 
-Each test handles a specific aspect of functionality of a particular function. Mocha groups all of these functions into a suite. This helps in understanding the overall functionality and then identify the specific aspect to look at. In testing our function, we first need to include the file in our test, and then create a set of tests for it.
+Each test handles a specific aspect of functionality of a particular function. Mocha groups all of these functions into a suite. This helps in understanding the overall functionality and then identify the specific aspect to look at.
+
+Each test leverages Chai, an assertion library. In essence, it's the code that performs the actual check of the test. An assertion is a statement that is always expected to evaluate to `true`. If the statement evaluates to `false`, and error is thrown. If an error is thrown, the testing library (Mocha) catches it, immediately finishes the test, marking it a failure, and continues to the next test. If the test finishes with no errors thrown, the test is considered successful.
+
+Assertions can be used in actual code to maintain expectations, but we often see them in tests. Chai offers many methods in performing our checks. For equality checks, it has the `strictEqual` method which equates to the `===` operator in JavaScript.
+
+**NOTE:** The first parameter is always the actual result. This is the part that your code generates. The second parameter is what you expect your code to produce. This is important for messaging in the test suite.
+
+```javascript
+assert.strictEqual(actual, expected[, message]);
+```
 
 ```javascript
 'use strict';
@@ -177,7 +189,337 @@ suite('toSentence function', () => {
 });
 ```
 
+For objects and arrays, `strictEqual` will not test the content inside the object or array. It will only test the reference. Chai offers a different method, `deepEqual` to handle this check.
+
+See the [Chai assert documentation](http://chaijs.com/api/assert/) for all the types of checks you can make.
+
+### Asynchronous testing
+
+Testing asynchronous functions is more difficult because each test needs to inform Mocha when the test is completed. Each test function allows you to specify a `done` parameter. If the parameter is not specified, it will wait until the function completes.
+
+As an example, let's test a request library. Let's install `request-promise`.
+
+```sh
+$ npm install --save request-promise
+```
+
+With that, we can create a function called `getMovies` to use the request library.
+
+```javascript
+const request = require('request-promise');
+
+// Define a function named getMovies that takes in one argument
+//   query (string)
+// It returns a promise that searches the OMDB database for that query.
+const getMovies = function (query) {
+  return request.get(`http://www.omdbapi.com/?s=${query}`)
+    .then((body) => {
+      return JSON.parse(body);
+    });
+};
+
+module.exports = { toSentence, getMovies };
+```
+
+Next write the test. Let's create a new file called `movies.js` in the `test` directory.
+
+```sh
+$ touch movies.js
+$ atom movies.js
+```
+
+Create the following suite:
+```javascript
+'use strict';
+
+const assert = require('chai').assert;
+const {suite, test} = require('mocha');
+
+const {getMovies} = require('../index');
+
+suite('getMovies function', () => {
+  test('obtains a valid set of movies', (done) => {
+    getMovies('Jurassic Park')
+      .then((results) => {
+        assert.deepEqual(results, {
+          "Response": "True",
+          "Search": [
+              {
+                  "Poster": "http://ia.media-imdb.com/images/M/MV5BMjM2MDgxMDg0Nl5BMl5BanBnXkFtZTgwNTM2OTM5NDE@._V1_SX300.jpg",
+                  "Title": "Jurassic Park",
+                  "Type": "movie",
+                  "Year": "1993",
+                  "imdbID": "tt0107290"
+              },
+              {
+                  "Poster": "http://ia.media-imdb.com/images/M/MV5BMTYxNjY1NjE2OV5BMl5BanBnXkFtZTYwNzE0MDc4._V1_SX300.jpg",
+                  "Title": "The Lost World: Jurassic Park",
+                  "Type": "movie",
+                  "Year": "1997",
+                  "imdbID": "tt0119567"
+              },
+              {
+                  "Poster": "http://ia.media-imdb.com/images/M/MV5BMjA2NzAyMDgyM15BMl5BanBnXkFtZTYwOTQ5Mjg5._V1_SX300.jpg",
+                  "Title": "Jurassic Park III",
+                  "Type": "movie",
+                  "Year": "2001",
+                  "imdbID": "tt0163025"
+              },
+              {
+                  "Poster": "http://ia.media-imdb.com/images/M/MV5BMTQ1NDc4MjczMl5BMl5BanBnXkFtZTYwNzY0MzY2._V1_SX300.jpg",
+                  "Title": "The Making of 'Jurassic Park'",
+                  "Type": "movie",
+                  "Year": "1995",
+                  "imdbID": "tt0256908"
+              },
+              {
+                  "Poster": "N/A",
+                  "Title": "Beyond Jurassic Park",
+                  "Type": "movie",
+                  "Year": "2001",
+                  "imdbID": "tt0321431"
+              },
+              {
+                  "Poster": "N/A",
+                  "Title": "Jurassic Park",
+                  "Type": "game",
+                  "Year": "1993",
+                  "imdbID": "tt0478182"
+              },
+              {
+                  "Poster": "N/A",
+                  "Title": "Jurassic Park: Operation Genesis",
+                  "Type": "game",
+                  "Year": "2003",
+                  "imdbID": "tt0389060"
+              },
+              {
+                  "Poster": "N/A",
+                  "Title": "Jurassic Park: The Game",
+                  "Type": "game",
+                  "Year": "2011",
+                  "imdbID": "tt1988671"
+              },
+              {
+                  "Poster": "N/A",
+                  "Title": "The Lost World: Jurassic Park",
+                  "Type": "game",
+                  "Year": "1997",
+                  "imdbID": "tt0292073"
+              },
+              {
+                  "Poster": "N/A",
+                  "Title": "The Lost World: Jurassic Park - Chaos Island",
+                  "Type": "game",
+                  "Year": "1997",
+                  "imdbID": "tt1306984"
+              }
+          ],
+          "totalResults": "61"
+        });
+        done();
+      })
+      .catch((err) => {
+        done(err);
+      })
+  });
+});
+```
+
+The test is not complete until the `done` argument is called. If the `done` argument is called with an error, the test has failed.
+
+### Removing variability
+
+It's important that our tests always return the same result. This includes times where the test suite loses access to the internet, changes in data/APIs, etc. With that in mind, let's find a way to stub out our request using Nock.
+
+```sh
+$ npm install --save-dev nock
+```
+
+The Nock library intercepts requests and produces expected responses.
+
+```javascript
+const nock = require('nock');
+suite('getMovies function', () => {
+  test('obtains a valid set of movies', (done) => {
+    const aNock = nock('http://www.omdbapi.com')
+      .get('/')
+      .query({
+        s: 'Jurassic Park'
+      })
+      .reply(200, `{
+        "Response": "True",
+        "Search": [
+            {
+                "Poster": "http://ia.media-imdb.com/images/M/MV5BMjM2MDgxMDg0Nl5BMl5BanBnXkFtZTgwNTM2OTM5NDE@._V1_SX300.jpg",
+                "Title": "Jurassic Park",
+                "Type": "movie",
+                "Year": "1993",
+                "imdbID": "tt0107290"
+            },
+            {
+                "Poster": "http://ia.media-imdb.com/images/M/MV5BMTYxNjY1NjE2OV5BMl5BanBnXkFtZTYwNzE0MDc4._V1_SX300.jpg",
+                "Title": "The Lost World: Jurassic Park",
+                "Type": "movie",
+                "Year": "1997",
+                "imdbID": "tt0119567"
+            },
+            {
+                "Poster": "http://ia.media-imdb.com/images/M/MV5BMjA2NzAyMDgyM15BMl5BanBnXkFtZTYwOTQ5Mjg5._V1_SX300.jpg",
+                "Title": "Jurassic Park III",
+                "Type": "movie",
+                "Year": "2001",
+                "imdbID": "tt0163025"
+            },
+            {
+                "Poster": "http://ia.media-imdb.com/images/M/MV5BMTQ1NDc4MjczMl5BMl5BanBnXkFtZTYwNzY0MzY2._V1_SX300.jpg",
+                "Title": "The Making of 'Jurassic Park'",
+                "Type": "movie",
+                "Year": "1995",
+                "imdbID": "tt0256908"
+            },
+            {
+                "Poster": "N/A",
+                "Title": "Beyond Jurassic Park",
+                "Type": "movie",
+                "Year": "2001",
+                "imdbID": "tt0321431"
+            },
+            {
+                "Poster": "N/A",
+                "Title": "Jurassic Park",
+                "Type": "game",
+                "Year": "1993",
+                "imdbID": "tt0478182"
+            },
+            {
+                "Poster": "N/A",
+                "Title": "Jurassic Park: Operation Genesis",
+                "Type": "game",
+                "Year": "2003",
+                "imdbID": "tt0389060"
+            },
+            {
+                "Poster": "N/A",
+                "Title": "Jurassic Park: The Game",
+                "Type": "game",
+                "Year": "2011",
+                "imdbID": "tt1988671"
+            },
+            {
+                "Poster": "N/A",
+                "Title": "The Lost World: Jurassic Park",
+                "Type": "game",
+                "Year": "1997",
+                "imdbID": "tt0292073"
+            },
+            {
+                "Poster": "N/A",
+                "Title": "The Lost World: Jurassic Park - Chaos Island",
+                "Type": "game",
+                "Year": "1997",
+                "imdbID": "tt1306984"
+            }
+        ],
+        "totalResults": "61"
+      }`);
+
+    getMovies('Jurassic Park')
+      .then((results) => {
+        assert.deepEqual(results, {
+          "Response": "True",
+          "Search": [
+              {
+                  "Poster": "http://ia.media-imdb.com/images/M/MV5BMjM2MDgxMDg0Nl5BMl5BanBnXkFtZTgwNTM2OTM5NDE@._V1_SX300.jpg",
+                  "Title": "Jurassic Park",
+                  "Type": "movie",
+                  "Year": "1993",
+                  "imdbID": "tt0107290"
+              },
+              {
+                  "Poster": "http://ia.media-imdb.com/images/M/MV5BMTYxNjY1NjE2OV5BMl5BanBnXkFtZTYwNzE0MDc4._V1_SX300.jpg",
+                  "Title": "The Lost World: Jurassic Park",
+                  "Type": "movie",
+                  "Year": "1997",
+                  "imdbID": "tt0119567"
+              },
+              {
+                  "Poster": "http://ia.media-imdb.com/images/M/MV5BMjA2NzAyMDgyM15BMl5BanBnXkFtZTYwOTQ5Mjg5._V1_SX300.jpg",
+                  "Title": "Jurassic Park III",
+                  "Type": "movie",
+                  "Year": "2001",
+                  "imdbID": "tt0163025"
+              },
+              {
+                  "Poster": "http://ia.media-imdb.com/images/M/MV5BMTQ1NDc4MjczMl5BMl5BanBnXkFtZTYwNzY0MzY2._V1_SX300.jpg",
+                  "Title": "The Making of 'Jurassic Park'",
+                  "Type": "movie",
+                  "Year": "1995",
+                  "imdbID": "tt0256908"
+              },
+              {
+                  "Poster": "N/A",
+                  "Title": "Beyond Jurassic Park",
+                  "Type": "movie",
+                  "Year": "2001",
+                  "imdbID": "tt0321431"
+              },
+              {
+                  "Poster": "N/A",
+                  "Title": "Jurassic Park",
+                  "Type": "game",
+                  "Year": "1993",
+                  "imdbID": "tt0478182"
+              },
+              {
+                  "Poster": "N/A",
+                  "Title": "Jurassic Park: Operation Genesis",
+                  "Type": "game",
+                  "Year": "2003",
+                  "imdbID": "tt0389060"
+              },
+              {
+                  "Poster": "N/A",
+                  "Title": "Jurassic Park: The Game",
+                  "Type": "game",
+                  "Year": "2011",
+                  "imdbID": "tt1988671"
+              },
+              {
+                  "Poster": "N/A",
+                  "Title": "The Lost World: Jurassic Park",
+                  "Type": "game",
+                  "Year": "1997",
+                  "imdbID": "tt0292073"
+              },
+              {
+                  "Poster": "N/A",
+                  "Title": "The Lost World: Jurassic Park - Chaos Island",
+                  "Type": "game",
+                  "Year": "1997",
+                  "imdbID": "tt1306984"
+              }
+          ],
+          "totalResults": "61"
+        });
+        aNock.done();
+        done();
+      })
+      .catch((err) => {
+        done(err);
+      })
+  });
+});
+```
+
+Try testing out with different expected responses.
+
 ## What is Test Driven Development (TDD)?
+
+
+
+
+
 
 ## Discussion
 
