@@ -130,10 +130,13 @@ promise
     return content.toUpperCase();
   })
   .then((content) => {
-    console.log(content); 
+    console.log(content);
   })
   .catch((err) => {
     console.error(err);
+    throw err;
+  })
+  .catch((err) => {
     process.exit(1);
   });
 
