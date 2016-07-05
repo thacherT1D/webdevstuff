@@ -88,6 +88,10 @@ Just like how jQuery uses a promise to handle an HTTP response from an HTTP serv
 
 These two arguments are functions which tell the promise how it should branch and allow you to return different values. For example, let's have a promise simply check to see if a number is odd or not. Open up a node repl and paste in the following code.
 
+### Exercise
+
+Turn to a neighbor and explain what a promise is and how it works in your own words. Then, diagram how a promise works.
+
 ## Why is a promise important?
 
 The main benefit of a promise is its ability to separate the success handling logic from the error handling logic.
@@ -142,6 +146,10 @@ promise
 
 console.log('Waiting for the asynchronous I/O operation to complete...');
 ```
+
+### Exercise
+
+Turn to a neighbor and explain why a promise is important. Then, diagram how a promise chaining works.
 
 ## How do you send an HTTP request from Node.js with a promise?
 
@@ -216,17 +224,6 @@ getJSON('http://www.omdbapi.com/?s=Captain%20America')
   });
 
 ```
-
-### Exercise
-
-1. Change the above function so that it responds with the number if it is even and responds with `false` if it is not.
-1. Chain `.then()` onto the promise you're creating with `evenPromise()` and pass in a function that `console.log()`s out the result. You can get the `reject()` case to run by adding a second anonymous function as an argument!
-1. Clone [this repository](https://github.com/ctide/promises-es6), and take a look at the `example.spec.js` file inside of the `spec/` folder. Remove the 'x' from the first test related to `simplePromise`. Create that functionality in the accompanying `src/example.js` file and get the test to pass!
-  * If you're having trouble getting the `resolve()` test to pass, re-read above and look at how the test is formatted inside of `spec/example.spec.js`.
-1. Once your `resolve()` test is passing, make the `reject()` test pass.
-1. Now, let's make the `add10Promise()` tests pass. This function should take a single argument (a number) and return a Promise that returns that argument + 10. If it's given no number, the argument should default to 0.
-
-In order to get the first test inside of `spec/example.spec.js` to pass, you may have created a function like this one:
 
 ## Assignment
 
