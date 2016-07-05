@@ -10,7 +10,7 @@
 * g15: Planit: http://app-planit.herokuapp.com/
 * g15: Trailmix: http://www.trailmix.in/
 
-# Week 11 Project
+## Tips
 
 * Do stories the friday before week 11 and get everything set up
 * Have a reason for students to be present at the beginning and end of each day:
