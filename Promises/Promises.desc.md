@@ -23,7 +23,7 @@ fs.appendFile(filePath, content, (err) => {
     process.exit(1);
   }
 
-  console.log(`Content appended to ${path}`);
+  console.log(`Content appended to ${filePath}`);
 });
 
 console.log('Waiting for the asynchronous I/O operation to complete...');
@@ -41,16 +41,16 @@ Function object with two arguments resolve and reject. The first argument fulfil
 'use strict';
 
 const fs = require('fs');
-const path = 'hello.txt';
-const message = 'Hello promise\n';
+const filePath = 'hello.txt';
+const content = 'Hello promise\n';
 
 const promise = new Promise((resolve, reject) => {
-  fs.appendFile(path, message, (err) => {
+  fs.appendFile(filePath, content, (err) => {
     if (err) {
       return reject(err);
     }
 
-    resolve(`Message appended to ${path}`);
+    resolve(`Content appended to ${filePath}`);
   });
 });
 
@@ -62,6 +62,8 @@ promise.catch((err) => {
   console.error(err);
   process.exit(1);
 });
+
+console.log('Waiting for the asynchronous I/O operation to complete...');
 ```
 
 For example, the `$xhr` promise remains unresolved while it waits for the HTTP response. The `$xhr` promise has two methods, `done()` and `fail()`, that are given a callback each. If the HTTP response is successful, the `done()` function's callback is triggered. On the other hand, if the HTTP response generates an error, the `fail()` function's callback is triggered.
