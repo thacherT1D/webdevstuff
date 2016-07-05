@@ -72,7 +72,7 @@ Another way to perform an asynchronous I/O operation is with a more sophisticate
 
 **NOTE:** A promise can only be in one state at time.
 
-A newly instantiated promise starts off in the pending state and is given an `executor` callback function. Like a traditional asynchronous I/O operation, the callback is registered with the event loop and is automatically invoked when the currently executing call stack is finished. However, unlike a traditional asynchronous I/O operation, the `executor` callback is invoked with two arguments—a `resolve` function and a `reject` function.
+A newly instantiated promise starts off in the pending state and is given an `executor` callback function. The `executor` callback is invoked right away with two arguments—a `resolve` function and a `reject` function.
 
 The following `appendContentPromise.js` program appends content to a file using the `fs` core module. It performs the exact same asynchronous I/O operation as before, only this time it's wrapped inside the `executor` callback function of a promise.
 
@@ -140,7 +140,9 @@ Hello promise
 
 As you can see, the role of the `executor` callback function is to start an asynchronous I/O operation. If the operation generates an error, the callback invokes the `reject()` function, passing along the error. Invoking the `reject()` function permanently changes the state of the promise to rejected.
 
-If the operating doesn't generate an error, the callback invokes the `resolve()` function, passing along the results of the operation. If invoking the `resolve()` function throws a new error, the promise's state is permanently changed to rejected and the new error is passed along. Otherwise, the state is permanently changed to fulfilled and the results are passed along as intended.
+If the operating doesn't generate an error, the callback invokes the `resolve()` function, passing along the results of the operation. If invoking the `resolve()` function throws a new error, the promise's state is permanently changed to rejected and the new error is passed along. Otherwise, the state is permanently changed to fulfilled and the results of the operation are passed along as intended.
+
+**NOTE:** An example of the `resolve()` function throwing an error is if had to
 
 A promise is **unresolved** while in the pending state. A promised is **resolved** when it's state is changed to either fulfilled or rejected. Once a promise is resolved, it's state can never change.
 
