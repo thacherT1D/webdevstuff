@@ -70,9 +70,9 @@ Another way to perform an asynchronous I/O operation is with a more sophisticate
 1. Fulfilled
 1. Rejected
 
-A newly instantiated promise starts off in the pending state and is given an `executor` callback function. Like a traditional asynchronous I/O operation, the callback is registered with the event loop and automatically invoked when the currently executing call stack is finished. Unlike a traditional asynchronous I/O operation, however, the callback is invoked with two arguments—a `resolve` function and a `reject` function.
+A newly instantiated promise starts off in the pending state and is given an `executor` callback function. Like a traditional asynchronous I/O operation, the callback is registered with the event loop and is automatically invoked when the currently executing call stack is finished. Unlike a traditional asynchronous I/O operation, however, the `executor` callback is invoked with two arguments—a `resolve` function and a `reject` function.
 
-The role of the `executor` callback function is to start an asynchronous I/O operation and either invoke the `resolve()` function when the operation completes successfully or invoked the `reject()` function when it does not. The following `appendContentPromise.js` program appends content to a file using the `fs` core module as before. The only difference is it does so with a promise.
+The following `appendContentPromise.js` program appends content to a file using the `fs` core module. It performs the exact same asynchronous I/O operation as before, only this time it's wrapped inside an `executor` callback function of a promise.
 
 ```javascript
 'use strict';
@@ -136,7 +136,8 @@ Waiting for the asynchronous I/O operation to complete...
 Hello promise
 ```
 
-For example, the `$xhr` promise remains unresolved while it waits for the HTTP response. The `$xhr` promise has two methods, `done()` and `fail()`, that are given a callback each. If the HTTP response is successful, the `done()` function's callback is triggered. On the other hand, if the HTTP response generates an error, the `fail()` function's callback is triggered.
+As you can see, the role of the `executor` callback function is to start an asynchronous I/O operation and either invoke the `resolve()` function when the operation completes successfully or invoked the `reject()` function when it does not.
+
 
 ```text
 ┌── new Promise(executor) ──┐                  ┌── then(onFulfilled) ──┐
