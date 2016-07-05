@@ -152,7 +152,7 @@ While the calculation happened correctly, the result is still a Promise. In orde
 
 const request = require('request');
 
-request('https://fs-student-roster.herokuapp.com/', (err, res, body) => {
+request.get('https://fs-student-roster.herokuapp.com/', (err, res, body) => {
   if (err) {
     console.error(err);
     process.exit(1);
@@ -170,7 +170,7 @@ While we can now dynamically change the number being evaluated, it's still wrapp
 const request = require('request');
 
 const promise = new Promise((resolve, reject) => {
-  request('https://fs-student-roster.herokuapp.com/', (err, res, body) => {
+  request.get('https://fs-student-roster.herokuapp.com/', (err, res, body) => {
     if (err) {
       return reject(err);
     }
@@ -179,14 +179,14 @@ const promise = new Promise((resolve, reject) => {
   });
 });
 
-promise.then((result) => {
-  console.log(result);
-});
-
-promise.catch((err) => {
-  console.error(err);
-  process.exit(1);
-})
+promise
+  .then((result) => {
+    console.log(result);
+  })
+  .catch((err) => {
+    console.error(err);
+    process.exit(1);
+  });
 ```
 
 ### Exercise
@@ -199,20 +199,6 @@ promise.catch((err) => {
 1. Now, let's make the `add10Promise()` tests pass. This function should take a single argument (a number) and return a Promise that returns that argument + 10. If it's given no number, the argument should default to 0.
 
 In order to get the first test inside of `spec/example.spec.js` to pass, you may have created a function like this one:
-
-```javascript
-module.exports = {
-  simplePromise: bool => {
-    return new Promise((resolve, reject) => {
-      if (bool) {
-        resolve('OK');
-      } else {
-        reject('BAD');
-      }
-    });
-  }
-}
-```
 
 ## `.catch()`
 
