@@ -6,9 +6,9 @@
 
 ## What's a promise?
 
-In Node.js, it's possible to start an I/O operation and then continue with the other operations that don't require the I/O to be completed. This approach is called **asynchronous** or **non-blocking** I/O. Any tasks that depend on the I/O operation to be completed still need to wait and are thus blocked. But other operations that don't have a dependency on the I/O operation can continue.
+In Node.js, it's possible to start an I/O operation and then continue with other operations that don't require the I/O to be completed. This approach is called **asynchronous** or **non-blocking** I/O. Any tasks that depend on the I/O operation to be completed still need to wait and are thus blocked. But other operations that don't have a dependency on the I/O operation can continue.
 
-All asynchronous operations that are core to Node.js accept a callback function. For example, here's a short program that appends content to a file using the `fs` core module.
+All asynchronous I/O operations that are core to Node.js invoke a callback function when it completes. For example, here's a short program that appends content to a file using the `fs` core module.
 
 ```javascript
 'use strict';
