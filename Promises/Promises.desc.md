@@ -71,11 +71,11 @@ For example, the `$xhr` promise remains unresolved while it waits for the HTTP r
 │                           │                  │                       │
 │                           │───── fulfill ───▶│                       │
 │                           │                  │                       │
+│                           │                  │                       │
 │                           │                  └───────────────────────┘
-│                           │
 │          Pending          │
-│                           │
 │                           │                  ┌── catch(onRejected) ──┐
+│                           │                  │                       │
 │                           │                  │                       │
 │                           │───── reject ────▶│                       │
 │                           │                  │                       │
@@ -93,19 +93,19 @@ These two arguments are functions which tell the promise how it should branch an
 The main benefit of a promise is its ability to separate the success handling logic from the error handling logic.
 
 ```text
-┌── new Promise(executor) ──┐                  ┌── then(onFulfilled) ──┐                  ┌────── new Promise() ──────┐
-│                           │                  │                       │───── fulfill ───▶│                           │
-│                           │───── fulfill ───▶│                       │                  │                           │
-│                           │                  │                       │───── reject ────▶│                           │
-│                           │                  └───────────────────────┘                  │                           │
-│                           │                                                             │                           │
-│          Pending          │                                                             │                           │
-│                           │                                                             │                           │
-│                           │                  ┌── catch(onRejected) ──┐                  │                           │
-│                           │                  │                       │───── fulfill ───▶│                           │
-│                           │───── reject ────▶│                       │                  │                           │
-│                           │                  │                       │───── reject ────▶│                           │
-└───────────────────────────┘                  └───────────────────────┘                  └───────────────────────────┘
+┌── new Promise(executor) ──┐                  ┌── then(onFulfilled) ──┐                    ┌────── new Promise() ──────┐
+│                           │                  │                       │────── fulfill ────▶│                           │
+│                           │───── fulfill ───▶│                       │       return       │                           │
+│                           │                  │                       │                    │                           │
+│                           │                  │                       │────── reject ─────▶│                           │
+│                           │                  └───────────────────────┘       throw        │                           │
+│          Pending          │                                                               │                           │
+│                           │                  ┌── catch(onRejected) ──┐                    │                           │
+│                           │                  │                       │────── fulfill ────▶│                           │
+│                           │                  │                       │       return       │                           │
+│                           │───── reject ────▶│                       │                    │                           │
+│                           │                  │                       │────── reject ─────▶│                           │
+└───────────────────────────┘                  └───────────────────────┘       throw        └───────────────────────────┘
 ```
 
 ```javascript
