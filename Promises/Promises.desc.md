@@ -140,15 +140,15 @@ Hello promise
 
 As you can see, the role of the `executor` callback function is to start an asynchronous I/O operation. If the operation generates an error, the callback invokes the `reject()` function, passing along the error. Invoking the `reject()` function permanently changes the state of the promise to rejected.
 
-If the operating doesn't generate an error, the callback invokes the `resolve()` function, passing along the results of the operation. If invoking the `resolve()` function throws a new error, the promise's state is permanently changed to rejected and the new error is passed along. Otherwise, the state is permanently changed to fulfilled and the results of the operation are passed along as intended.
+If the operating doesn't generate an error, the callback invokes the `resolve()` function, passing along the results of the operation. Invoking the `resolve()` function with a value other than another promise permanently changes the state of the promise to fulfilled.
 
-**NOTE:** An example of the `resolve()` function throwing an error is if had to
+**NOTE:** Believe it or not, a promise can be resolved with the state of another promise. It's a sophisticated technique which you'll practice shortly. Never the less, this is why the function is called `resolve()` and not `fulfill()`.
 
 A promise is **unresolved** while in the pending state. A promised is **resolved** when it's state is changed to either fulfilled or rejected. Once a promise is resolved, it's state can never change.
 
-To access a fulfilled promise's results, attach a callback to the `then()` method.
+If a promise is fulfilled, the results of the asynchronous I/O operation are ready. To access them, you use the `then()` method to register a callback. As soon as promise is fulfilled, the registered callbacks will be invoked with the operations results.
 
-To access a rejected promise's error, attach a callback to the `then()` method.
+On the other hand, if a promise is rejected, the error of the asynchronous I/O operation is ready. To access it, you use the `catch()` method to register a callback. As soon as promise is rejected, the registered callbacks will be invoked with the error.
 
 ```text
 ┌── new Promise(executor) ──┐                  ┌── then(onFulfilled) ──┐
