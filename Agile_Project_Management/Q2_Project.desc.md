@@ -25,11 +25,49 @@ The technical requirements for your project are as follows.
 - Respond to form input and/or user events.
 - Connect to at least one external web API via Ajax.
 - Be deployed to a production environment.
+* CRUD
+    * Allow users to create, read, update, and delete data from a form
+    * Interact with a server-side A
+
+
+
+
+## Create and deploy a complete CRUD app
+
+Your web app should:
+
+
+Your API should:
+
+* API
+    * Must have atleast 2 API integrations
+    * Use express.js
+    * Have routes for create, read, update, and delete operations on multiple routes
+    * Be designed according to RESTful principles
+    * CRUD data from/to a relational database using SQL or an ORM
+* Auth
+    * Support functionality for three role types:
+        * A non-logged in user
+        * A logged-in user with limited permissions
+        * A logged-in superuser
+    * Support login via a social network
+    * Passwords should be hashed
+    * Use signed Cookies
+* Database
+    * Use PostgreSQL
+    * Be seeded with data
+    * Have a separate user for the application
+* Workflow
+    * Use a feature-branch workflow for your user stories
+    * Document dependencies in a `package.json` file
+    * Squash commits and issue pull requests rather merging directly to master
+
 
 ### Bonuses
 
 - Customize the color palette or theme of your front-end framework.
 - Optimize for various viewport sizes using responsive design.
+- Build an automated test suite to verify the HTTP server works as expected.
 - Develop a game instead of an application.
 - Or connect to external hardware like an Arduino or MIDI keyboard.
 
@@ -136,58 +174,43 @@ Additionally, please include a pencil and paper wireframe with your answers. Inc
 
 Remember, you're _not_ expected to discover and publish a brand new idea so keep your project idea simple. And you _must_ submit your proposal to an instructor for approval before you start translating one of your ideas into code.
 
-## Create and deploy a complete CRUD app
+## Use a software development process
 
-Your web app should:
+* Use wireframes to create your layouts before you build them
+* Use a feature-branch workflow for your user stories
+* Squash commits and issue pull requests rather merging directly to master
 
-* CRUD
-    * Allow users to create, read, update, and delete data from a form
-    * Interact with a server-side A
-* HTML
-    * Make good use of semantic HTML tags
-    * Be well-indented, [validated](https://validator.w3.org/nu/), etc.
+After your proposal has been approved, you'll assume the role of the Product Owner and have another student assume the role of a Customer. You, as the Product Owner, will explain the approved proposal to the Customer.
 
-* CSS
-    * Be well-designed
-    * Use either SASS or a styling framework like Bootstrap
-        * If you are using Bootstrap, please consider theming with something like bootswatch, customizing the download with SASS, or a [customizer](http://getbootstrap.com/customize/)
-    * Be well-indented and clean
-    * Use at least one web font
-    * Split code into separate files where appropriate
-    * Responsive design optional but strongly encouraged
-* JavaScript
-    * Well-indented, [linted](http://www.javascriptlint.com/online_lint.php), and use excellent variable names
-    * Split code into separate files where appropriate
-    * Optionally, use a test-driven development approach
-* Workflow
-    * Use wireframes to create your layouts before you build them
-    * Use a feature-branch workflow for your user stories
-    * Squash commits and issue pull requests rather merging directly to master
+1. The Customer will inspect the proposal and give their initial feedback to the Product Owner.
+1. The Product Owner will start translating the wireframe into an HTML and CSS scaffold.
+1. When that's finished, the Product Owner will begin adding JavaScript behavior to the scaffold.
 
-Your API should:
+Every morning, the Product Owner will show the current state of the project to the Customer.
 
-* API
-    * Must have atleast 2 API integrations
-    * Use express.js
-    * Have routes for create, read, update, and delete operations on multiple routes
-    * Be designed according to RESTful principles
-    * CRUD data from/to a relational database using SQL or an ORM
-* Auth
-    * Support functionality for three role types:
-        * A non-logged in user
-        * A logged-in user with limited permissions
-        * A logged-in superuser
-    * Support login via a social network
-    * Passwords should be hashed
-    * Use signed Cookies
-* Database
-    * Use PostgreSQL
-    * Be seeded with data
-    * Have a separate user for the application
-* Workflow
-    * Use a feature-branch workflow for your user stories
-    * Document dependencies in a `package.json` file
-    * Squash commits and issue pull requests rather merging directly to master
+1. The Customer will test the project and give their feedback to the Product Owner.
+1. For each piece of feedback, the Product Owner will create a new user story in an issue tracker.
+1. For the rest of the day, the Product Owner will address the highest priority user story, one at a time.
+1. At the end of the day, the Product Owner will show the current state of the project to the Customer.
+1. The Product Owner will close any issue that the Customer says is resolved.
+
+### Tips for the Customer
+
+When you assume the role, step into the mindset of a target audience member for the project. That way you can provide feedback more about the user experience and less about the idea itself. If something is unclear about the project, ask for more details.
+
+### Tips for Product Owner
+
+When you listen to the Customer's feedback, step into the mindset of a person who may not see the project's final form as clearly as you do. Remember that you and your Customer might be making different assumptions. If something is unclear about the feedback, ask for more details.
+
+## Pay attention to your mindset
+
+Even with the best of intentions and preparation, things won't go as planned and that's okay. There are always unforeseen challenges that arise during project week regardless of how successful you've been in the past. How you react to this will determine whether you're sprinting or limping across the finish line.
+
+The number one thing that affects a student's performance during project week is losing confidence in oneself. Remember, web development is hard and it's still fairly new to you. If you're feeling down on yourself, consider one of these alternate ways of thinking.
+
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/189/growth_mindset.jpg)
+
+
 
 ## Make a video highlighting the functionality of your app
 
