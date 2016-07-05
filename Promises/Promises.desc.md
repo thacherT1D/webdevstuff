@@ -64,7 +64,7 @@ Waiting for the asynchronous I/O operation to complete...
     at Error (native) errno: -13, code: 'EACCES', syscall: 'open', path: 'hello.txt' }
 ```
 
-Another way to perform an asynchronous I/O operation is with a more sophisticated coding construct called a promise. A **promise** is an object that represents an asynchronous operation that hasn't completed yet, but will in the future. As an object, a promise can be in the following three states.
+Another way to perform an asynchronous I/O operation is with a more sophisticated coding construct called a promise. A **promise** is an object that represents an asynchronous operation that hasn't completed yet, but will in the future. As an object, a promise has the following three possible states.
 
 1. Pending
 1. Fulfilled
