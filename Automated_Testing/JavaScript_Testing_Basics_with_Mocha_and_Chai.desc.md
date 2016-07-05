@@ -512,447 +512,244 @@ suite('getMovies function', () => {
 });
 ```
 
-Try testing out with different expected responses.
+Try testing out with different expected responses. Refer to the [Nock's documentation](https://github.com/node-nock/nock) for more types of requests you can intercept.
 
 ## What is Test Driven Development (TDD)?
 
+Up until now, we have focused on developing software with very little structure or process. This can be loosely termed as *development driven development*. This means that we developed code for the sake of developing code. Another process of development is called *test driven development*. It's described in 5 steps.
 
+1. Add a test.
+1. Run all tests to ensure new test fails.
+1. Write the code.
+1. Run tests.
+1. Refactor code
 
+and repeat.
 
+## TDD Example: An Editor
 
+As an example, let's work on building an editor. Here's the following requirements:
 
-## Discussion
+> We would like to provide a module that represents an editor. This editor has three methods: `toString`, `write`, and `clear`. The `toString` method does not take any parameters and produces a string which is everything that has been written. The `write` method, takes in a string and does nothing. It writes to an editor. The `clear` method will empty everything that has been written by the editor.
 
-All examples follow this three step process-
-
-1. Place the mocha tests inside of `test/test.js`.
-1. Add your code to test to `main.js`
-1. Run your tests.
-
-Test time!
-
-### First Test: Hello World
-
-Per tradition, let's start with a basic "Hello, World!"
-
-#### Test
-
-```javascript
-describe("Hello World", function() {
-  it("should say 'Hello, World!' when called");
-});
-```
-
-**What's happening here?**
-
-describe defines a test suite.
-it defines a single test
-
-A suite takes a string that describes what a particular suite is testing.
-
-A test takes a string that describes the specific functionality being tested.
-
-#### Test!
-
-Run the test. If all went well, you should see:
+Let's write a tests for the `write` and the `toString` method. Create a new project named `editor`.
 
 ```sh
-$ mocha
-
-
-  Hello World
-    - says "Hello, World!" when ran
-
-
-  0 passing (7ms)
-  1 pending
-
-
+$ mkdir editor
+$ cd editor
+$ mkdir test
+$ npm init
+$ npm install --save-dev mocha
+$ npm install --save-dev chai
 ```
 
-Notice a few things:
-- We have the test suite "Hello World", followed by a description.
-- 0 passing tests, and 1 pending test.
-
-In mocha, any test without a function will be marked as pending. Update the test so that it will run your code and check the output:
+In the `test` directory, create a file `editor.js`. In here, we will initialize the tests for `write` and `toString`.
 
 ```javascript
-describe("Hello World", function() {
-  it("should say 'Hello, World!' when ran", function() {
-    expect(code.helloWorld()).to.equal("Hello, World!");
+'use strict';
+
+const assert = require('chai').assert;
+const {suite, test} = require('mocha');
+
+const editor = require('../editor');
+
+suite('editor module', () => {
+  afterEach(() => {
+    editor.clear();
+  });
+
+  test('initial editor produces empty string', () => {
+    assert.strictEqual(editor.toString(), '');
+  });
+
+  test('write method adds to editor', () => {
+    editor.write('Hello World');
+    assert.strictEqual(editor.toString(), 'Hello World');
+
+    editor.write('Hello World Again');
+    assert.strictEqual(editor.toString(), 'Hello WorldHello World Again');
+  });
+
+  test('clear method clears the editor', () => {
+    editor.write('Hello World');
+    editor.clear();
+    assert.strictEqual(editor.toString(), '');
   });
 });
 ```
 
-**What's happening here?**
-
- The test uses JavaScript to test the state of the code being tested via an expectation - test the *expected* state against the *actual* state (the output of the code being tested).
-
- We are using the BDD syntax to.equal More about BDD style [here](http://chaijs.com/api/bdd/);
-
- Now run the test:
-
- ```sh
- $ mocha
-
-
-  Hello World
-    1) says "Hello, World!" when ran
-
-
-  0 passing (11ms)
-  1 failing
-
-  1) Hello World says "Hello, World!" when ran:
-     TypeError: code.helloWorld is not a function
-      at Context.<anonymous> (test/test.js:6:17)
-
-
-
-
- ```
-
-Notice a few things:
-- 1 failing test
-- TypeError
-- Line number (6)
-
-The first line of our test is trying to access our code in `main.js`, but we haven't written any code yet! In fact, if you try console.logging the `code` variable, you should see that it's currently an empty object.
-
-To resolve this error, we need to actually write some Javascript in our `main.js`. Moreover, that code needs to have a certain structure:
-
-#### Function
+Given these requirements, and the tests provided, we might implement the editor module in `editor.js` as follows:
 
 ```javascript
-module.exports = {
-  helloWorld
+'use strict';
+
+let string = '';
+
+const clear = function(str) {
+  string = '';
 };
+
+const write = function(str) {
+  string += str;
+};
+
+const toString = function() {
+  return string;
+};
+
+module.exports = { write, toString, clear };
 ```
 
-The object we assign to `module.exports` is what will be returned by the `require` function in our `test.js`. If you console log `code` again, you should now see a new error: `ReferenceError: helloWorld is not defined`. We've seen this type of error before! To fix it, let's declare `helloWorld` as a function:
+You submit this to your manager who is satisfied with the results. A day later, the manager comes back and says that the software needs an `undo` functionality. Every time, a write call occurs, the `undo` functionality would remove that write. This means that `toString` will not produce the write that was undo-ed. If there is no more actions to undo, throw an error. By TDD process, we first write the test for `undo`.
 
 ```javascript
-function helloWorld() {
-}
+  test('undo a write', () => {
+    editor.write('Hello World');
+    assert.strictEqual(editor.toString(), 'Hello World');
+    editor.write('Hello World Again');
+    assert.strictEqual(editor.toString(), 'Hello WorldHello World Again');
+    editor.undo();
+    assert.strictEqual(editor.toString(), 'Hello World');
+    editor.undo();
+    assert.strictEqual(editor.toString(), '');
+    assert.throws(() => editor.undo());
+  });
+```
 
-module.exports = {
-  helloWorld
+With this in mind, we can now refactor our editor module.
+
+```javascript
+'use strict';
+
+let strings = [];
+
+const clear = function(str) {
+  strings = [];
 };
-```
 
-If you `console.log(code)` again, you should see that it looks like this: `{ helloWorld: [Function: helloWorld] }`. The test itself still fails, but the error message is now different:
+const write = function(str) {
+  strings.push(str);
+};
 
-```js
-AssertionError: expected undefined to equal 'Hello, World!'
-```
+const toString = function() {
+  return strings.reduce((written, str) => written + str, '');
+};
 
-In other words, the actual return value of our function is `undefined`, but the test expects the value to be `'Hello, World!'`. We told it to expect as much inside of our test, when we wrote `expect(code.helloWorld()).to.equal("Hello, World!");`.
-
-The problem should be clear: we haven't actually written the code defining `helloWorld`! Let's write that code now:
-
-```js
-module.exports = {
-  helloWorld: function () {
-    return 'Hello, World!';
+const undo = function() {
+  if (strings.length) {
+    strings.pop();
   }
-}
-```
-
-```sh
-$ mocha
-
-
-  Hello World
-    ✓ says "Hello, World!" when ran
-
-
-  1 passing (8ms)
-
-
-```
-
-We now have a passing test! Will the test continue to pass if we `console.log` rather than `return`? Why or why not?
-
-## Second Example: More Functions!
-
-Let's try another example. Create a directory called `more-testing-examples`. CD into it and get things ready for testing. As before, you'll need to:
-
-1. `cd` into your new directory
-2. Initialize a new git repository
-3. create a `test` directory
-4. create a `test.js` file inside of your `test` directory
-5. create a `main.js` file inside of `more-testing-examples`
-6. run `npm init`
-7. install chai: `npm install --save-dev chai`
-8. add `node_modules` to your `.gitignore`
-9. add this starter code to your `test.js`:
-
-  ```javascript
-  var code = require('../main');
-  var expect = require('chai').expect;
-
-  describe('', function() {
-    it('');
-  });
-  ```
-
-Now we're ready.
-
-The goal here is to write tests for two functions. The first function, called `objectValues`, returns an array of all the values of an array. For example, `objectValues({hi: 4, boom: null, super: 'sweet'})` should return `[4, null, 'sweet']`.
-
-The second, called `createObject`, takes two arrays and returns an object. Elements in the first array correspond to keys in the object, and elements in the second array correspond to values in the object. For example, `createObject(['hi','boom'],[4,null])` should return `{hi: 4, boom: null}`.
-
-Before writing these functions, let's write some tests. When writing tests, here are some questions to keep in mind:
-
-1. What should the functions return in some simple examples?
-2. What should the functions return in some more complicated examples?
-3. What are some edge cases we need to consider?
-
-You may not be able to think of all the edge cases at the outset -- that's okay! The beauty of using tests is that once you catch an edge case you didn't previously consider, you can always add a test to catch that edge case. Then, when you modify your code to treat the edge case, you can be confident that any changes you make aren't breaking things that worked before (as long as the tests continue to pass).
-
-Let's focus first on `objectValues`. Here are some simple cases we can test:
-
-```javascript
-var code = require('../main');
-var expect = require('chai').expect;
-
-describe("Object Values", function() {
-  it("returns an array", function() {
-    expect(code.objectValues({a: "b"})).to.be.an('array');
-  });
-
-  it("returns an array of the object's values", function() {
-    expect(code.objectValues({
-      key1: 'value1',
-      key2: 0,
-      key3: null,
-      key4: undefined,
-      key5: true
-    })).to.deep.equal(['value1', 0, null, undefined, true]);
-  });
-
-  it("works with reference types", function() {
-    expect(code.objectValues({
-      foo: [1, 2, 3],
-      bar: {nested: "object"}
-    })).to.deep.equal([
-      [1, 2, 3],
-      {nested: "object"}
-    ]);
-  });
-});
-```
-
-Note that our expect statements are a little different than before. We're able to test a lot of different things with this syntax. For a full list of what's available to you, [check the docs](http://chaijs.com/api/bdd/)!
-
-In terms of edge cases, here are some questions to consider:
-
-1. What should happen if you try to call `objectValues` with something that isn't an object?
-2. What should happen if you try to call `objectValues` on an array?
-3. What whould happen if you try to call `objectValues` on an empty object?
-
-There aren't right or wrong answers here, it's just a question of how you want your function to behave.
-
-Let's suppose we want our function to respond to these cases in the following ways: it should return `null` if you try to pass in a primitive data type. If you pass in an array, it should just return that array. And if you pass in an empty object, it should return that object.
-
-The full set of tests might then look like this:
-
-```javascript
-var code = require('../main');
-var expect = require('chai').expect;
-
-describe("Object Values", function() {
-  it("returns an array", function() {
-    expect(code.objectValues({a: "b"})).to.be.an('array');
-  });
-
-  it("returns an array of the object's values", function() {
-    expect(code.objectValues({
-      key1: 'value1',
-      key2: 0,
-      key3: null,
-      key4: undefined,
-      key5: true
-    })).to.deep.equal(['value1', 0, null, undefined, true]);
-  });
-
-  it("works with reference types", function() {
-    expect(code.objectValues({
-      foo: [1, 2, 3],
-      bar: {nested: "object"}
-    })).to.deep.equal([
-      [1, 2, 3],
-      {nested: "object"}
-    ]);
-  });
-
-  it("returns null if given a string, boolean, undefined, null, or number", function() {
-    ["hi",true,undefined,null,8].forEach(function(el) {
-      expect(code.objectValues(el)).to.be.null;
-    });
-  });
-
-  it("returns an array if given an array", function() {
-    expect(code.objectValues([1,"hi",true])).to.deep.equal([1,"hi",true]);
-  });
-
-  it("returns an empty array if given an empty object", function() {
-    expect(code.objectValues({})).to.deep.equal([]);
-  });
-});
-```
-
-**Exercise** Implement an `objectValues` function that makes the tests pass! Here's some starter code:
-
-```javascript
-function objectValues(obj) {
-  // write your code here
-}
-
-module.exports = {
-  objectValues
-};
-
-```
-
-**Exercise** Once you get those tests to pass, write some tests for `createObject`, then write the function! Here's some starter code for you `test.js` file and your `main.js` file:
-
-`test.js`
-
-```javascript
-var code = require('../main');
-var expect = require('chai').expect;
-
-describe("Object Values", function() {
-  it("returns an array", function() {
-    expect(code.objectValues({a: "b"})).to.be.an('array');
-  });
-
-  it("returns an array of the object's values", function() {
-    expect(code.objectValues({
-      key1: 'value1',
-      key2: 0,
-      key3: null,
-      key4: undefined,
-      key5: true
-    })).to.deep.equal(['value1', 0, null, undefined, true]);
-  });
-
-  it("works with reference types", function() {
-    expect(code.objectValues({
-      foo: [1, 2, 3],
-      bar: {nested: "object"}
-    })).to.deep.equal([
-      [1, 2, 3],
-      {nested: "object"}
-    ]);
-  });
-
-  it("returns null if given a string, boolean, undefined, null, or number", function() {
-    ["hi",true,undefined,null,8].forEach(function(el) {
-      expect(code.objectValues(el)).to.be.null;
-    });
-  });
-
-  it("returns an array if given an array", function() {
-    expect(code.objectValues([1,"hi",true])).to.deep.equal([1,"hi",true]);
-  });
-
-  it("returns an empty array if given an empty object", function() {
-    expect(code.objectValues({})).to.deep.equal([]);
-  });
-});
-
-describe("Create Object", function() {
-  it("returns returns an object", function() {
-  	// add code here  
-  });
-
-  // add a test for one or two simple cases
-
-  // what are some edge cases? test for those too!
-});
-```
-
-`main.js`
-
-```javascript
-function objectValues(obj) {
-  // your code here
-}
-
-function createObject(arr1, arr2) {
-  // your code here
-}
-
-module.exports = {
-  objectValues,
-  createObject
-};
-```
-
-Protip: sick of seeing the tests for `objectValues` show up every time you run the tests? change the word `describe` in the line `describe('Object Values', function() {` to `xdescribe`, and all of those tests will be pending.
-
-### Note on testing syntax
-
-In our `main.js` file, we declared our functions up top, then exported them using `module.exports`. Another common pattern is to wrap everything in the `main` file in an object and export the entire thing. In this case, your `main.js` would look something like this:
-
-```javascript
-module.exports = {
-  objectValues: function(obj) {
-    // your code here
-  },
-  createObject: function(arr1, arr2) {
-    // your code here
+  else {
+    throw new Error('Cannot undo any more.');
   }
 };
+
+module.exports = { write, toString, clear, undo };
 ```
 
-This pattern may be slightly more confusing when you're just getting started, but it's good to know about because it is commonly used. But if you'd rather avoid it for now, that's fine.
-
-Want some more practice writing tests? Here you go!
-
-### Exercise: Leap Year
-
-Create a new directory in your workspace called leapYear.
-Follow the same steps as above to create the test.js, main.js, npm init and install chai.
-
-Give the following tax system, what kind(s) of tests can we write?
-
-1. every year whose number is perfectly divisible by four is a leap year.
-1. except for years which are both divisible by 100 and not divisible by 400.
-1. 1600 and 2000 are leap years, but the century years 1700, 1800, and 1900 are not.
-
-### Exercise: Taxes
-
-Create a new directory in your workspace called taxCalculator.
-Follow the same steps as above to create the test.js, main.js, npm init and install chai.
-
-Give the following tax system, what kind(s) of tests can we write?
-
-1. The first $10 is taxed at 10%
-1. The second $10 is taxed at 7%
-1. The third $10 is taxed at 5%
-1. Everything after that is taxed at 3%
-
-#### Test
-
-Here are a couple tests to get you started:
+You submit this to your manager, and you survive another day. A day later, the manager comes back and says that everyone loves `undo` functionality, but now people now need a `redo` operation. If an `undo` is called, a `redo` would reapply the write. If there is no more actions to redo, throw an error. Let's write a test for redo.
 
 ```javascript
-var code = require('../main');
-var expect = require('chai').expect;
-
-describe('Tax Calculator', function(){
-
-  it('should tax 10% on the first $10', function() {
-    expect(code.calculate(1)).to.equal(0.1);
-    expect(code.calculate(10)).to.equal(1);
+  test('redo a write', () => {
+    assert.throws(() => editor.redo());
+    editor.write('Hello World');
+    assert.strictEqual(editor.toString(), 'Hello World');
+    editor.undo();
+    assert.strictEqual(editor.toString(), '');
+    editor.redo();
+    assert.strictEqual(editor.toString(), 'Hello World');
+    assert.throws(() => editor.redo());
   });
-
-  it('should tax 7% on the second $10', function(){
-    expect(code.calculate(15)).to.equal(1.35);
-  });
-
-});
 ```
+
+Run the tests and make sure the tests fails. Write the code for the test.
+
+```javascript
+'use strict';
+
+let strings = [];
+let redoStrings = [];
+
+const clear = function(str) {
+  strings = [];
+  redoStrings = [];
+};
+
+const write = function(str) {
+  strings.push(str);
+};
+
+const toString = function() {
+  return strings.reduce((written, str) => written + str, '');
+};
+
+const undo = function() {
+  if (strings.length) {
+    const str = strings.pop();
+    redoStrings.push(str);
+  }
+  else {
+    throw new Error('Cannot undo any more.');
+  }
+};
+
+const redo = function() {
+  if (redoStrings.length) {
+    const str = redoStrings.pop();
+    strings.push(str);
+  }
+  else {
+    throw new Error('Cannot redo any more.');
+  }
+};
+
+module.exports = { write, toString, clear, undo, redo };
+```
+
+Your manager is happy with the solution and gives you a bonus. The next day, customers provide feedback begging for the ability to save the content, and your manager creates a requirement for a `save` method that takes in one argument, which is the path to save the content. The method should return a promise.
+
+```javascript
+const fs = require('fs');
+
+// ...
+
+  test('save a file', (done) => {
+    editor.write('Hello World');
+    editor.save('./test.txt')
+      .then(() => {
+        fs.readFile('./test.txt', 'utf8', (err, text) => {
+          if (err) {
+            return done(err);
+          }
+
+          assert.strictEqual(text, 'Hello World');
+          done();
+        });
+      })
+      .catch((err) => {
+        done(err);
+      });
+  });
+```
+
+```javascript
+const fs = require('fs');
+
+// ...
+
+const save = function(path) {
+  return new Promise((resolve, reject) => {
+    fs.writeFile(path, toString(), (err) => {
+      if (err) {
+        return reject(err);
+      }
+
+      resolve();
+    });
+  });
+};
+
+module.exports = { write, toString, clear, undo, redo, save };
+```
+
+*NOTE:* You are able to mock the filesystem calls using [mock-fs](https://www.npmjs.com/package/mock-fs).
