@@ -313,8 +313,6 @@ We've only skimmed the surface of what is great about Promises. If you feel read
 
 - [Promise Fundamentals](https://github.com/gSchool/wd-promise-fundamentals)
 
-https://github.com/gSchool/promise-challenges/tree/master/01-knex-associations
-
 ## Resources
 
 - [Introduction to ES6 Promises](http://jamesknelson.com/grokking-es6-promises-the-four-functions-you-need-to-avoid-callback-hell/)
