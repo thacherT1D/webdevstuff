@@ -15,21 +15,23 @@ During project week, you'll have approximately 24 hours of class time to impleme
 
 ## Understand the technical requirements
 
-The technical requirements for your project are as follows.
+The general technical requirements for your project are as follows.
 
 - Have [valid](https://validator.w3.org/nu/), well-indented, and semantic HTML.
 - Have [valid](https://jigsaw.w3.org/css-validator/), well-indented, and minimally-specific CSS.
 - Have [linted](http://eslint.org/), readable, and concise JavaScript.
 
-### Client requirements
+The client-specific technical requirements for your project are as follows.
 
 - Use embedded media like fonts, images, audio, or video.
 - Use a front-end framework like Bootstrap, Foundation, or Materialize.
 - Respond to form input and/or user events.
+- Send HTTP requests to a RESTful HTTP server application.
 
-### Server requirements
+The server-specific technical requirements for your project are as follows.
 
-- Store and retrieve a many-to-many relationship using a database-driven, RESTful HTTP server.
+- Send HTTP responses back to a RESTful HTTP client application.
+- Store and retrieve a many-to-many relationship using a relational database.
 - Connect to at least one external web API via server-side HTTP requests.
 - Be deployed to a production environment.
 
@@ -37,8 +39,6 @@ The technical requirements for your project are as follows.
 
 - Register and authenticate users securely.
 - Test your HTTP server with an automated test suite.
-- Develop a game instead of an application.
-- Or connect to external hardware like an Arduino or MIDI keyboard.
 
 ### Application ideas
 
@@ -56,16 +56,6 @@ The technical requirements for your project are as follows.
 - A blog article publisher
 - A membership organizer
 - A sports team tracker
-
-### Game ideas
-
-- Asteroids
-- Battleship
-- Blackjack
-- Breakout
-- Flash cards
-- Sudoku
-- Tetris
 
 ### Web APIs
 
