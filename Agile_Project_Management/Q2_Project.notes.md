@@ -1,10 +1,7 @@
-#Agile Workflow
-[Agile Project Management slides and expectations ](https://docs.google.com/presentation/d/1NpKJ2XxkAimuaihdoR8278YrpEyZpGz7qdHt9depVx0/edit?usp=sharing)
+- [Agile Project Management slides and expectations ](https://docs.google.com/presentation/d/1NpKJ2XxkAimuaihdoR8278YrpEyZpGz7qdHt9depVx0/edit?usp=sharing)
+- http://scrumtrainingseries.com/
 
-* http://scrumtrainingseries.com/
-
-
-## Examples from previous classes 
+## Examples from previous classes
 (some requirements may be different):
 
 * g10: Spotifize: http://spotifize.herokuapp.com/visualize
@@ -14,6 +11,7 @@
 * g15: Trailmix: http://www.trailmix.in/
 
 # Week 11 Project
+
 * Do stories the friday before week 11 and get everything set up
 * Have a reason for students to be present at the beginning and end of each day:
     * Group warmups or a brief lecture in the morning
@@ -22,25 +20,3 @@
 * Their projects/writeups/videos will go in the LMS
 * Emphasize that classtime is not enough to do a good job on this project
 * A class of 30 doing 5-minute presentations will take 2.5 hours. If you add in time for breaks and feedback, presentations will probably take all of Friday afternoon.
-
-## Disasters
-
-Ideas for real-life disaster scenarios
-
-* Remove a project member for a day
-* No one is allowed to use GitHub for a day
-
-## Added Objectives
-
-* Hashed passwords and signed cookies
-
-## Removed Objectives
-
-* CRUD
-    * Be proven functional in Chrome, Firefox, and IE11
-* HTML
-    * Use a templating engine (Handlebars, Jade)
-* Workflow
-    * Use an automated tool (such as Gulp) to build and deploy your project
-* Testing
-    * Have test coverage for each API route and method (using something like [Super Test](https://www.npmjs.com/package/supertest))
