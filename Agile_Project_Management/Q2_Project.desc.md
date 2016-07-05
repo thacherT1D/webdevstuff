@@ -184,7 +184,7 @@ At the end of project week, you'll give a brief, 5-minute demonstration of your 
 
 ## Complete a write-up of the project
 
-At the top of this file, please write a few paragraphs that answer the above questions.
+At the top of the GitHub repository for your project, please write a few paragraphs that answer the above questions.
 
 ## Submit your project for assessment
 
