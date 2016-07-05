@@ -96,6 +96,35 @@ Turn to a neighbor and explain what a promise is and how it works in your own wo
 
 The main benefit of a promise is its ability to separate the success handling logic from the error handling logic.
 
+```javascript
+'use strict';
+
+const fs = require('fs');
+const filePath = 'hello.txt';
+const content = 'Hello promise\n';
+
+const promise = new Promise((resolve, reject) => {
+  fs.appendFile(filePath, content, (err) => {
+    if (err) {
+      return reject(err);
+    }
+
+    resolve(content);
+  });
+});
+
+promise
+  .then((content) => {
+    console.log(content);
+  })
+  .catch((err) => {
+    console.error(err);
+    process.exit(1);
+  });
+
+console.log('Waiting for the asynchronous I/O operation to complete...');
+```
+
 ```text
 ┌── new Promise(executor) ──┐                  ┌── then(onFulfilled) ──┐                    ┌────── new Promise() ──────┐
 │                           │                  │                       │────── fulfill ────▶│                           │
