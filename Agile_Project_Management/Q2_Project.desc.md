@@ -1,14 +1,17 @@
-The goal of this project is to put what you've learned to use to:
+The goal of this project is to demonstrate your mastery of the concepts covered over the past quarter. Like your capstone, you're expected to come up with a project idea and implement it all on your own. Unlike a PhD dissertation, you are _not_ expected to discover and publish an idea that's never been done before. Asking your classmates and instructors for help throughout the process is strongly encouraged, but your work must be your own.
 
-* [Write a project proposal and get it approved by an instructor](#proposal)
-* [Follow an agile development workflow](#agile)
-* [Create and deploy a complete CRUD app](#create-deploy)
-* [Make a video highlighting the functionality of your app](#video)
-* [Complete a write-up of the project](#write-up)
-* [Add all three of these to an online portfolio](#portfolio)
-* [Present your work to the class](#present)
+During project week, you'll have approximately 24 hours of class time to implement your idea. It'll most likely not be enough time, so plan on allocating extra time for it outside of class. On the last day of project week, you'll give short demonstration of your project to the class.
 
-<a id="proposal"></a>
+## Table of Contents
+
+1. [Understand the technical requirements](#understand-the-technical-requirements)
+1. [Submit two project proposals for approval](#submit-two-project-proposals-for-approval)
+1. [Use a software development process](#use-a-software-development-process)
+1. [Pay attention to your mindset](#pay-attention-to-your-mindset)
+1. [Demonstrate your project to the class](#demonstrate-your-project-to-the-class)
+1. [Complete a write-up of the project](#complete-a-write-up-of-the-project)
+1. [Submit your project for assessment](#submit-your-project-for-assessment)
+1. [Update your online portfolio](#update-your-online-portfolio)
 
 ## Write a project proposal and get it approved by an instructor
 
@@ -35,8 +38,6 @@ See Slideshow
 * Student Enrollment System
 * Sports Performance Database
 * Trip Itenerary
-
-<a id="create-deploy"></a>
 
 ## Create and deploy a complete CRUD app
 
@@ -91,20 +92,14 @@ Your API should:
     * Document dependencies in a `package.json` file
     * Squash commits and issue pull requests rather merging directly to master
 
-<a id="video"></a>
-
 ## Make a video highlighting the functionality of your app
 
 * Make a 3-6 minute video explaining your project and demonstrating its features
-
-<a id="write-up"></a>
 
 ## Complete a write-up of the project
 
 * Describe what the project is, the technologies you used, and some information about the workflow you followed.
 * 1-2 tight paragraphs
-
-<a id="portfolio"></a>
 
 ## Add all three of these to an online portfolio
 
@@ -112,12 +107,6 @@ Your API should:
 * Link to your final deployed site, your video, your respositories, and your write-up
 * This will be added to your web development portfolio
 
-<a id="present"></a>
-
 ## Present your work to the class
 
 * Be prepared to spend ~10 minutes presenting your work to the class.
-
----
-
-This is a realistic approximation of what developing real products on a software team is like. You will have approximately 20-25 hours of class time to work on this. **It will not be enough time to do a good job on this project**. Plan on spending extra time outside of class, and coordinate this time with your team. This is another Big Deal Week, and you should put maximum effort into making it successful. You can and should use your teammates, classmates on other teams, and your instructors as learning resources, but this should be your own work.
