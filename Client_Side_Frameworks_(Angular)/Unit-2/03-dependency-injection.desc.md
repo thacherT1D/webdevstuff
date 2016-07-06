@@ -1,8 +1,8 @@
-#Dependency Injection
+#Dependency Injection.
 
 ### What is it?
 
-From [Wikipedia](https://en.wikipedia.org/wiki/Dependency_injection): 
+From [Wikipedia](https://en.wikipedia.org/wiki/Dependency_injection):
 
 "In software engineering, dependency injection is a software design pattern that implements inversion of control for resolving dependencies. Dependency injection means giving an object its instance variables. Really. That's it."
 
@@ -24,7 +24,7 @@ Now this all sounds wonderful, but in order to write more modular code, we need 
 
 - Single Responsibility Principle
 - Interface (you can start [here](http://stackoverflow.com/questions/3710275/does-javascript-have-the-interface-type-such-as-javas-interface))
-- Duck Typing 
+- Duck Typing
 - Law of Demeter
 - Tight Coupling (in contrast with Loose Coupling)
 - Separation of Concerns (in your own words :P )
@@ -33,7 +33,7 @@ After reading about Separation of Concerns, the Single Responsibility Principle 
 
 ### Now we're getting somewhere!
 
-Now that we are building an understanding of what modular code is - we are also beginning to understand that in order for us to write modular code, we need our small containers (modules) to be dependent upon other modules! This means that when we are modular, we are also dependent! 
+Now that we are building an understanding of what modular code is - we are also beginning to understand that in order for us to write modular code, we need our small containers (modules) to be dependent upon other modules! This means that when we are modular, we are also dependent!
 
 So how can we share dependencies amongst our modules and still write clean code?
 
@@ -51,13 +51,13 @@ The first two options of creating or looking up dependencies are not optimal bec
 
 The third option is the most viable, since it removes the responsibility of locating the dependency from the component. The dependency is simply handed to the component.
 
-In angular, we take our dependencies (which we call services - we will learn more about these in another unit) and inject them into a dependent object (controller/directive/filter). This separates the creation of the dependency from its behavior and enables the client to abide by the single responsibility principle. 
+In angular, we take our dependencies (which we call services - we will learn more about these in another unit) and inject them into a dependent object (controller/directive/filter). This separates the creation of the dependency from its behavior and enables the client to abide by the single responsibility principle.
 
-We are not going to go into how angular implements dependency injection under the hood, but if you would like to learn more about how this works, check out these articles: 
+We are not going to go into how angular implements dependency injection under the hood, but if you would like to learn more about how this works, check out these articles:
 
-[https://docs.angularjs.org/guide/di](https://docs.angularjs.org/guide/di) 
+[https://docs.angularjs.org/guide/di](https://docs.angularjs.org/guide/di)
 
-[https://github.com/angular/angular.js/wiki/Understanding-Dependency-Injection](https://github.com/angular/angular.js/wiki/Understanding-Dependency-Injection) 
+[https://github.com/angular/angular.js/wiki/Understanding-Dependency-Injection](https://github.com/angular/angular.js/wiki/Understanding-Dependency-Injection)
 
 
 ### So where do we see this in action?
@@ -100,13 +100,13 @@ So how does angular do it? Let's open up an angular application and add the code
 
 `angular.injector().annotate(sayHi)`
 
-It should return: 
+It should return:
 
 `["firstName", "lastName", "favoriteColor"]`
 
 Now imagine that instead of `["firstName", "lastName", "favoriteColor"]` we had `["$scope", "$rootScope"]`. Angular would now be able to assign the correct values to each of these and their order would not make any difference! Using this technique (of calling `.toString()` on a `function`), angular can create an object and pass it in that spot. So all we have to do is name our parameter correctly and angular can find wherever it is and add the correct value for us!
 
-### Different ways to define dependencies 
+### Different ways to define dependencies
 
 We have been using __implicit annotation__ so far. You can read more about it in the following exercise:
 
@@ -120,11 +120,11 @@ Angular supports 3 ways to annotate our code (define dependencies):
 
 __The implicit annotation dependency injection will break when you minify your code.__   This happens because minification tools rename variables to a something smaller, but the minification tool doesn't know that the variable name in the function is meaningful to angular.
 
-For now, use inline array annotation (it is the most commonly seen and is stated as "preferred" by the angular docs). In more recent style guides however, it is recommended that the `$inject` property be used. 
+For now, use inline array annotation (it is the most commonly seen and is stated as "preferred" by the angular docs). In more recent style guides however, it is recommended that the `$inject` property be used.
 
 ### Answer the following questions
 
-- What is dependency injection? 
+- What is dependency injection?
 - How does angular implement dependency injection?
 - What are the three ways to annotate our code with service names (dependencies)? Write three code examples with each one of these options.
 
@@ -147,7 +147,7 @@ app.controller('SampleController', function($scope, $rootScope){
 
 - When using inline array annotation does the order of anything matter?  What order should match?
 
-**BONUS** - write a function that takes in another function as an argument and returns an array of the function's parameters as strings. 
+**BONUS** - write a function that takes in another function as an argument and returns an array of the function's parameters as strings.
 
 
 ### Additional Reading/Watching
@@ -159,5 +159,3 @@ app.controller('SampleController', function($scope, $rootScope){
 [http://stackoverflow.com/questions/130794/what-is-dependency-injection](http://stackoverflow.com/questions/130794/what-is-dependency-injection)
 
 [Angular Docs on DI](https://docs.angularjs.org/guide/di)
-
-

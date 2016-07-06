@@ -1,4 +1,4 @@
-# Fullstack CRUD
+# Fullstack CRUD.
 
 ### Structuring a fullstack application
 

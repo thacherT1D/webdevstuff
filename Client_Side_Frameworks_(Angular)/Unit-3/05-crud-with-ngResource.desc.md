@@ -1,18 +1,18 @@
-# CRUD with ngResource
+# CRUD with ngResource.
 
 ### Refactoring to use $resource
 
 So far we have made API calls using the `$http` service, but when we start building more complex backends (especially ones that use RESTful routing), we can leverage a more advanced tool - `ngResource`. The `ngResource` module provides interaction with RESTful services via the $resource service. It is important to note that the $resource service is built on the top of the $http service so this is simply an extension of things that we have seen before. $resource also handles the resolving/rejecting of a promise for us, so there is no need to add `.then` to our methods (unlike `$http`). However, `$resource` does assume that we have a RESTful backend which means that our routes on the server need to be set up as follows (we've seen this many times!):
 
-Let's assume that our resource is for a user - this is what `$resource` would expect our backend to look like for all RESTful routes. 
+Let's assume that our resource is for a user - this is what `$resource` would expect our backend to look like for all RESTful routes.
 ```
-GET '/users' 
-GET '/users/new' 
-GET '/users/:id' 
-GET '/users/:id/edit' 
-POST '/users' 
-PUT '/users/:id' 
-DELETE '/users/:id' 
+GET '/users'
+GET '/users/new'
+GET '/users/:id'
+GET '/users/:id/edit'
+POST '/users'
+PUT '/users/:id'
+DELETE '/users/:id'
 ```
 
 If our backend is set up correctly and with a little set up on the front end, we can start accessing some built in methods given to us by the `$resource` service.
@@ -33,7 +33,7 @@ In order to get started using these methods, we need to first include the script
 
 `<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-resource.js"></script>`
 
-We then need to include `ngResource` as a dependency to our application 
+We then need to include `ngResource` as a dependency to our application
 
 `var app = angular.module("todoApp", ['ngRoute','ngResource']);`
 
@@ -45,10 +45,10 @@ angular.module('firstApp').service('User', ["$resource", function ($resource) {
 }]);
 ```
 
-#### What is this @_id? 
+#### What is this @_id?
 
-The second argument to $resource() is an object with the parameter as the key and the value is whatever property we set (starting with a @). This means that 
-if we set the key to `id` and the value to `@id`, the value will correspond ot the `id` property of the instance that we have passed to the method we used. This is very useful for PUT and DELETE requests. 
+The second argument to $resource() is an object with the parameter as the key and the value is whatever property we set (starting with a @). This means that
+if we set the key to `id` and the value to `@id`, the value will correspond ot the `id` property of the instance that we have passed to the method we used. This is very useful for PUT and DELETE requests.
 
 #### Seeing these methods in action
 
@@ -79,7 +79,7 @@ $scope.createUser = function(user) {
 
 $scope.deleteUser = function(user){
     user.$delete(function(user){
-      $location.path('/'); 
+      $location.path('/');
     });
 };
 
@@ -92,7 +92,7 @@ $scope.deleteTodo = function(todo){
 
 ```
 
-### Adding additional methods to a resource 
+### Adding additional methods to a resource
 
 Unfortunately, `ngResource` does not come with a built in method for updating a resource. However, it is quite simple to add additional methods to a service that we create using `$resource`. Instead of just returning `return $resource('/api/user/:id', { id: '@_id' });` - we can pass in an optional third parameter which we pass in objects with keys (name of our method) and value (what request we are making). To add the update functionality to our todo resource - here is what we need to write in our `services.js`.
 
@@ -115,7 +115,7 @@ $scope.updateUser = function(user){
 
 ### An important note
 
-From the docs: 
+From the docs:
 
 It is important to realize that invoking a $resource object method immediately returns an empty reference (object or array depending on isArray). Once the data is returned from the server the existing reference is populated with the actual data. This is a useful trick since usually the resource is assigned to a model which is then rendered by the view. Having an empty object results in no rendering, once the data arrives from the server then the object is populated with the data and the view automatically re-renders itself showing the new data. This means that in most cases one never has to write a callback function for the action methods.
 

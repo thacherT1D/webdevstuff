@@ -1,4 +1,4 @@
-#The Final Evolution: Angular Style
+#The Final Evolution: Angular Style.
 
 Let's take a look at how to structure larger Angular apps, using this refactored [AngularFire todo list app](https://github.com/gSchool/refactored-angular-todo-list).
 
@@ -44,7 +44,7 @@ app
 		todos.module.js
 	app.module.js
 index.html
-	
+
 ```
 
 We're using [John Papa's Angular Styleguide](https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md) as a jumping off point for structuring our applications.  Here are some of the most important changes:
@@ -55,17 +55,17 @@ We're using [John Papa's Angular Styleguide](https://github.com/johnpapa/angular
 2. **Wrap Angular components in an Immediately Invoked Function Expression (IIFE).**
 
 	```js
-	
+
 	(function() {
 	  'use strict';
-	
+
 	  angular
 	      .module('app')
 	      .factory('storage', storage);
-	
+
 	  function storage() { }
 	})();
-	
+
 	```
 
 	An IIFE removes variables from the global scope. This helps prevent variables and function declarations from living longer than expected in the global scope, which also helps avoid variable collisions.
@@ -82,9 +82,9 @@ We're using [John Papa's Angular Styleguide](https://github.com/johnpapa/angular
 	        'app.shared',
 	        'app.dashboard'
 	    ]);
-	        
+
 	```
-	
+
 	With 1 component per file, there is rarely a need to introduce a variable for the module.
 
 5. **When using a module, avoid using a variable and instead use chaining with the getter syntax.**
@@ -93,67 +93,67 @@ We're using [John Papa's Angular Styleguide](https://github.com/johnpapa/angular
 
 
 	```js
-	
+
 	angular
 	    .module('app')
 	    .controller('Dashboard', Dashboard);
-	
+
 	function Dashboard() { }
-	
+
 	```
 
 7. **Use the controllerAs syntax** over the classic controller with $scope syntax.
-	
+
 	```html
-	
+
 		<div ng-controller="Customer as customer">
 	    	{{ customer.name }}
 		</div>
-	
+
 	```
 
 8. **Use a capture variable for this when using the controllerAs syntax**. Choose a consistent variable name such as vm, which stands for ViewModel.
-	
+
 	```js
-	
+
 	function Customer() {
 	    var vm = this;
 	    vm.name = {};
 	    vm.sendMessage = function() { };
 	}
 	```
-	
+
 	The this keyword is contextual and when used within a function inside a controller may change its context. Capturing the context of this avoids encountering this problem.
 
 8. **Place bindable members at the top of the controller**
 
 	```js
-	
+
 	function Sessions() {
 	    var vm = this;
-	
+
 	    vm.gotoSession = gotoSession;
 	    vm.refresh = refresh;
 	    vm.search = search;
 	    vm.sessions = [];
 	    vm.title = 'Sessions';
-	
+
 	    ////////////
-	
+
 	    function gotoSession() {
 	      /* */
 	    }
-	
+
 	    function refresh() {
 	      /* */
 	    }
-	
+
 	    function search() {
 	      /* */
 	    }
-	    
+
 	 ```
-	
+
 	Placing bindable members at the top makes it easy to read and helps you instantly identify which members of the controller can be bound and used in the View. Setting anonymous functions in-line can be easy, but when those functions are more than 1 line of code they can reduce the readability. Defining the functions below the bindable members (the functions will be hoisted) moves the implementation details down, keeps the bindable members up top, and makes it easier to read.
 
 
@@ -161,15 +161,15 @@ We're using [John Papa's Angular Styleguide](https://github.com/johnpapa/angular
 
 
 	Avoid:
-	
-	
+
+
 	```js
 	function Order($http, $q, config, userInfo) {
 	    var vm = this;
 	    vm.checkCredit = checkCredit;
 	    vm.isCreditOk;
 	    vm.total = 0;
-	
+
 	    function checkCredit() {
 	        var settings = {};
 	        // Get the credit service base URL from config
@@ -191,25 +191,25 @@ We're using [John Papa's Angular Styleguide](https://github.com/johnpapa/angular
 	    };
 	}
 	```
-	
-	
+
+
 	Recommended:
-	
+
 	```js
-	
+
 	function Order(creditService) {
 	    var vm = this;
 	    vm.checkCredit = checkCredit;
 	    vm.isCreditOk;
 	    vm.total = 0;
-	
+
 	    function checkCredit() {
 	       return creditService.isOrderTotalOk(vm.total)
 	          .then(function(isOk) { vm.isCreditOk = isOk; })
 	          .catch(showError);
 	    };
 	}
-	
+
 	```
 
 	Logic may be reused by multiple controllers when placed within a service and exposed via a function.
@@ -219,21 +219,20 @@ We're using [John Papa's Angular Styleguide](https://github.com/johnpapa/angular
 
 11. **Use $inject to manually identify your dependencies for Angular components**
 
-	
+
 	```js
-	
+
 	angular
 	    .module('app')
 	    .controller('Dashboard', Dashboard);
-	
+
 	Dashboard.$inject = ['$location', '$routeParams', 'common', 'dataservice'];
-	
+
 	function Dashboard($location, $routeParams, common, dataservice) {
 	}
-	
+
 	```
 
 	This safeguards your dependencies from being vulnerable to minification issues when parameters may be mangled. For example, common and dataservice may become a or b and not be found by Angular. Avoid creating in-line dependencies as long lists can be difficult to read in the array. Also it can be confusing that the array is a series of strings while the last item is the component's function.
 
 12. **Use consistent names for all components following a pattern that describes the component's feature** then (optionally) its type. My recommended pattern is `feature.type.js`
-

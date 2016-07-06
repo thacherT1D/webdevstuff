@@ -1,4 +1,4 @@
-#AngularFire Project
+#AngularFire Project.
 
 **Exercise** Revisit the Angular Reddit Clone project from Unit 1 Lesson 7.  Implement a backend using Firebase. The functionality should stay exactly the same from a user's point of view.  The only difference is that data will now persist.  
 

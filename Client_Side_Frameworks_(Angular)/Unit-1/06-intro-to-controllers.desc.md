@@ -1,4 +1,4 @@
-# Intro to Controllers
+# Intro to Controllers.
 
 In MVC, controllers provide properties and functionality for use in the view. Angular controllers are no different. They are just functions that provide data for use in the views.
 

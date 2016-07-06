@@ -1,4 +1,4 @@
-#AngularFire Intro
+#AngularFire Intro.
 
 Let's see how we integrate Firebase with an Angular app. Watch the following video:
 

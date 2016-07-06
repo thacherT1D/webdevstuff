@@ -1,4 +1,4 @@
-## Angular JS internals 
+## Angular JS internals.
 
 So now that we have a stronger understanding of what angular is, how to structure larger applications and most importantly, what `$scope` is (and how to avoid some pitfalls with it), let's learn a little bit about how angular works under the hood. But before we can really get started, we need to be aware of a few essential methods that can be called on `$scope`.
 
@@ -6,7 +6,7 @@ So now that we have a stronger understanding of what angular is, how to structur
 
 `$scope.$digest` - In the background, there is a digest cycle running which monitors what variables are getting changed that are being watched. We'll cover a bit more on the digest cycle, but the method that is constantly called to update data in the digest cycle is `$digest`.
 
-`$scope.$apply` - Sometimes we see that scope data is not getting updated on our HTML content. This can happen when we are using APIs that are external to angular (`setTimeout`, `XHR`). When we are not able to get updated data, we have to forcefully fire a digest cycle, this is where $scope.$apply helps us out. While this sounds quite helpful, you should be using this **VERY INFREQUENTLY**. 
+`$scope.$apply` - Sometimes we see that scope data is not getting updated on our HTML content. This can happen when we are using APIs that are external to angular (`setTimeout`, `XHR`). When we are not able to get updated data, we have to forcefully fire a digest cycle, this is where $scope.$apply helps us out. While this sounds quite helpful, you should be using this **VERY INFREQUENTLY**.
 
 You can check to see if the digest cycle is running by examining `$scope.$$phase`. If you see that this returns `"$apply"` or `"$digest"`, the cycle is running and an exception will be thrown if you try to call `$scope.$apply()`, otherwise you can call `$scope.$apply` and your data will be updated.
 
@@ -54,7 +54,7 @@ angular.module("applydigest", []).controller("MainController", function($rootSco
 
 When you call $scope.digest it only runs the digest loop from that particular scope, but when you call $apply, that uses the $rootScope and goes through all scopes in the application.
 
-If you have many watches and scopes, and you know that you only need to modify a single scope it is best to use $digest, otherwise use $apply. 
+If you have many watches and scopes, and you know that you only need to modify a single scope it is best to use $digest, otherwise use $apply.
 
 ## How angular extends the browser + the digest cycle
 
@@ -66,11 +66,11 @@ In this diagram, the section (left) is the browser. Events are put on the Event 
 
 When we are dealing with an angular application, all of the callbacks on the event queue that are relevant to angular (anything that we would not manually have to call `$apply` on) have the $apply function in them. When the event fires, it goes into the JavaScript context and JS starts processing it, JS then runs $apply and goes into the AngularJS Context (the yellow box), which is the digest loop. This modifies the DOM and it is rendered by the native browser.
 
-When the digest loop runs, it always runs against a `scope`. As we saw before, some angular directives create their own scope and when the digest loop runs, it runs against the scope for that specific directive. 
+When the digest loop runs, it always runs against a `scope`. As we saw before, some angular directives create their own scope and when the digest loop runs, it runs against the scope for that specific directive.
 
 ### What is this $digest loop?
 
-The digest loop is what runs after the $apply function brings a callback into the angular context. 
+The digest loop is what runs after the $apply function brings a callback into the angular context.
 
 The digest loop has two sub-loops in it. One is the `$watch list` and the other is the `$evalAsync`
 
@@ -104,7 +104,7 @@ Let's look at this chart:
 
 ![https://docs.angularjs.org/img/guide/concepts-startup.png](https://docs.angularjs.org/img/guide/concepts-startup.png)
 
-This shows how the angular parser gets control when a page is loaded in the browser. The browser loads the HTML and builds the DOM out of it, when the browser finishes, it issues a DOMContentLoaded event. Angular, if there is an `ng-app` directive, runs a callback on the DOMContentLoaded event and the compiler runs and looks for angular directives on the page and it builds HTML based on the directives and merges it into the DOM. 
+This shows how the angular parser gets control when a page is loaded in the browser. The browser loads the HTML and builds the DOM out of it, when the browser finishes, it issues a DOMContentLoaded event. Angular, if there is an `ng-app` directive, runs a callback on the DOMContentLoaded event and the compiler runs and looks for angular directives on the page and it builds HTML based on the directives and merges it into the DOM.
 
 The compiler can also run whenever the `$compile` function is executed (when we discuss routing and the router sees a new page for the first time it will call `$compile`).
 
@@ -118,4 +118,3 @@ You can read more about this process (Bootstrapping) [here](https://docs.angular
 - What is the digest cycle?
 - What is the scope life cycle? (this will require some additional reading)
 - What does "bootstrapping an angular app" mean?
-

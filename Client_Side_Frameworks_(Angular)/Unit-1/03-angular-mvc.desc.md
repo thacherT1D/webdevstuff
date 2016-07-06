@@ -1,4 +1,4 @@
-# Angular MVC
+# Angular MVC.
 
 Angular utilizes a MVC(-like) design pattern, which seperates the app into Models, Views, and Controllers. Let's take a look ...
 [Slides for MVC in Angular](https://slides.com/tylerbettilyon/angularmvc)

@@ -1,4 +1,4 @@
-# Angular Reddit Clone
+# Angular Reddit Clone.
 
 It's time to put everything you've learned so far about Angular to use.  You're going to make a reddit clone with posts, comments, searching, sorting, animations, and more! Watch the following video for an in-depth walk-through of the features.
 
@@ -26,7 +26,7 @@ Requirements:
 * A user can sort posts by votes, date, and title.
 * Animate posts as they are added and removed from the search results.  
 * Research Angular animations.See the video for an example implementation.
-* Hint for animations: 
+* Hint for animations:
 * http://plnkr.co/edit/qrQwv1?p=preview
 * https://divshot.com/blog/tips-and-tricks/angular-1-2-and-animate-css/
 * http://odetocode.com/blogs/scott/archive/2014/02/25/easy-animations-for-angularjs-with-animate-css.aspx

@@ -1,4 +1,4 @@
-# Angular Shopping Cart App
+# Angular Shopping Cart App.
 
 
 **Watch the videos in the linked LE for a description of the project.**

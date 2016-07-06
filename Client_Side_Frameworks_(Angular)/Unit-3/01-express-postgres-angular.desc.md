@@ -1,4 +1,4 @@
-## Using Angular with Express and Postgres to Persist Data
+## Using Angular with Express and Postgres to Persist Data.
 
 ## Overview
 

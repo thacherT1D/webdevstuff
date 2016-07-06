@@ -1,4 +1,4 @@
-# Custom Directives: Part 1
+# Custom Directives: Part 1.
 
 Way back in [Unit 1, Lesson 5](https://github.com/gSchool/angular-curriculum/blob/master/Unit-1/5-built-in-directives.md), we went over built in directives.  These are directives that angular comes with.  In this lesson, we're going to build our own custom directives. But first...
 
@@ -164,7 +164,7 @@ There are a couple of problems with this default behavior of the directive havin
 
 The solution to these problems involves creating an `isolate scope` for the directive. Before doing this, let's see what happens if we don't create an isolate scope.
 
-**Exercise** Change `scope.view.yoyo` to `scope.view.yoyos`, an array of yoyo objects. In your view, render each yoyo's information using your custom directive. 
+**Exercise** Change `scope.view.yoyo` to `scope.view.yoyos`, an array of yoyo objects. In your view, render each yoyo's information using your custom directive.
 
 Possible solution:
 
@@ -241,7 +241,7 @@ The value of `scope` must be an object. The keys in this object (e.g. `yoyoInDir
 
 As you can see, the value corresponding to `yoyoDirective` is `'=yoyoAttribute'`. Let's ignore the equals sign for a moment (we'll get to it later). The 'yoyoAttribue' corresponds to an _attribute name_ that we must use when passing data from our controller to our directive. Passing data via attributes is how we get the parts of the scope that we care about into our directive.
 
-In the current example, this means we need to include an attribute so that our custom directive looks like this: 
+In the current example, this means we need to include an attribute so that our custom directive looks like this:
 
 ```html
 <gs-yoyo-details yoyo-attribute="yoyo" ng-repeat="yoyo in view.yoyos"></gs-yoyo-details>
@@ -261,7 +261,7 @@ So, how does data about an individual yoyo get passed from our controller to our
 
 Of course, we've now got two different names for our data depending on where we are (`yoyoFromRepeat` and `yoyoInDirective`), plus a third name for the attribute on our directive. It's common to name all of these the same; the downside with this approach is that if we name everything `yoyo`, it's much less clear how the directive's isolate scope is connected to the controller's scope.
 
-**Exercise** Refactor your code to eliminate `yoyoInDirective`, `yoyoAttribute`, and `yoyoFromRepeat` in favor of just `yoyo`. 
+**Exercise** Refactor your code to eliminate `yoyoInDirective`, `yoyoAttribute`, and `yoyoFromRepeat` in favor of just `yoyo`.
 
 **Exercise** Fun fact: if in your scope you have a key and value with the same name (e.g. `foo: '=foo'`), you can omit the name in the value (e.g. `foo: '=') and Angular will still know what to do! Use this to refactor your directive even more.
 

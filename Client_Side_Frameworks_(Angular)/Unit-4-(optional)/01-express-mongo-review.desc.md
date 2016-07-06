@@ -1,4 +1,4 @@
-# Express Setup
+# Express Setup.
 
 In this unit, we'll be building an AngularJS app on top of Node and Express:
 
@@ -29,7 +29,7 @@ After you get through the prompts we want to add express, and some key middlewar
  * method-override
  * morgan (to automatically log requests)
  * mongoose
- 
+
 ```
 $ npm install --save express mongoose body-parser method-override morgan ejs
 ```
@@ -62,7 +62,7 @@ Now we'll add a route and set the port.
 
 ```javascript
  . . .
- 
+
 app.get('/', function(req,res){
   res.send("Hello!")
 });
@@ -88,15 +88,15 @@ app = express(),
 bodyParser = require("body-parser"),
 methodOverride = require('method-override'),
 morgan = require("morgan")
- 
-app.set('view engine', 'ejs'); 
+
+app.set('view engine', 'ejs');
 app.use(morgan('tiny'));
 app.use(methodOverride('_method'));
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({extended:true}));
 
- . . . 
- 
+ . . .
+
 ```
 
 
@@ -110,7 +110,7 @@ $ mongod
 
 Go in to you app directory and create a models folder.  We're going to create a single model for this exercise called `icecream`.  
 
-**models/icecream.js:** 
+**models/icecream.js:**
 
 ```javascript
 var mongoose = require("mongoose");
@@ -142,9 +142,9 @@ Now we need to add our database inside of our `server.js`, add it where all of t
 **server.js:**
 
 ```javascript
- . . . 
+ . . .
  db = require("./models");
- . . . 
+ . . .
 ```
 
 **EXERCISE** Use this setup to build a simple CRUD app for your Ice cream model. Try not to look at any old notes or apps. You should also use partials for your header and footer.
@@ -152,5 +152,3 @@ Now we need to add our database inside of our `server.js`, add it where all of t
 **Bonus** Add some error handling to your app. This includes both rendering errors on form submissions, and including a 404 page.
 
 **Bonus** Even though the `imageUrl` isn't mandatory, include a default image in your app that will get stored to your database in the event that the user doesn't specify an image url.
-
-

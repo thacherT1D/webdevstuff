@@ -1,4 +1,4 @@
-# Movie Search App
+# Movie Search App.
 
 It's time to use everything you've learned so far in the 2nd unit to build a small movie search app. This project incorporates the new file structure, routes, and the $http service.  Watch the following video to get a sense of how it works:
 

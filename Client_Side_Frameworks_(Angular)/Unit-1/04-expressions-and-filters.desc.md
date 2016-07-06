@@ -1,4 +1,4 @@
-# Expressions and Built-In Filters
+# Expressions and Built-In Filters.
 
 Angular expressions are-
 

@@ -1,4 +1,4 @@
-## Scope
+## Scope.
 
 ### What is it?
 
@@ -27,7 +27,7 @@ angular.module("firstApp",[]).controller("FirstController", function($scope, $ro
 
 Now you might be thinking, if everything comes from $rootScope then angular must be using some kind of inheritance? That is correct! Well, with one exception, custom directives that create their own (isolate) scope, but that's quite beyond the scope of this lesson (pun embarassingly intended).
 
-All scopes are created with prototypal inheritance, meaning that they have access to their parent scopes. Any time that Angular can not find a method or property on the local scope, it will move up to its parent scope and try to look for the property or method there. If it can’t find what it's looking for, it will go to the parent scope’s parent and so on and so forth until it reaches the `$rootScope`. 
+All scopes are created with prototypal inheritance, meaning that they have access to their parent scopes. Any time that Angular can not find a method or property on the local scope, it will move up to its parent scope and try to look for the property or method there. If it can’t find what it's looking for, it will go to the parent scope’s parent and so on and so forth until it reaches the `$rootScope`.
 
 ## A very useful tool - AngularJS Batarang
 
@@ -64,7 +64,7 @@ Let's take a look at this example:
 </html>
 ```
 
-If you run this code, you will see something potentially unexpected when we type in the first input. The controller inherits from its parent scope (ng-app), and since it does not exist yet, once we start typing in the first input, a value for data will be assigned! The controller doesn't have a value for data defined so it inherits the value from its parent scope. Once we type in the second text box, it creates its own local data within its own scope and we are all fine, but this is not great. What are some ways you could fix this? 
+If you run this code, you will see something potentially unexpected when we type in the first input. The controller inherits from its parent scope (ng-app), and since it does not exist yet, once we start typing in the first input, a value for data will be assigned! The controller doesn't have a value for data defined so it inherits the value from its parent scope. Once we type in the second text box, it creates its own local data within its own scope and we are all fine, but this is not great. What are some ways you could fix this?
 
 A pretty simple solution would be to just not name each ng-model `data`, but what if we want it to be so that when we type in the second input box, it updates the first one and vice versa? Instead of passing scope from a parent to a child, we need some way to pass it back up from the child to the parent. How could you do that?
 
@@ -105,7 +105,7 @@ How is it possible that this works, but when we didn't use an object - it failed
 
 Let's take a look at the following code:
 
-```html 
+```html
 <!DOCTYPE html>
 <html lang="en" ng-app="broken">
 <head>
@@ -135,15 +135,15 @@ app.controller('MainController', function($scope) {
 });
 ```
 
-So what we're essentially doing here is checking to see if `$scope.number` is `42` and if it is, display an input where the user can type a secret message that will appear outside the `ng-if`. Pretty simple, but it doesn't do what we expect! Why do you think that is? 
+So what we're essentially doing here is checking to see if `$scope.number` is `42` and if it is, display an input where the user can type a secret message that will appear outside the `ng-if`. Pretty simple, but it doesn't do what we expect! Why do you think that is?
 
 There's 2 reasons, one is that `ng-if` actually creates it's own new scope. The second part of the answer has to do with the way JavaScript works! Let's review prototypal inheritance for a quick minute and see if that helps solve our problem.
 
-## Prototypal inheritance review 
+## Prototypal inheritance review
 
 Even before we get to the good stuff, let's make sure we have a thorough understanding what a `primitive` is.
 
-From MDN: 
+From MDN:
 
 "All types except objects define immutable values (values, which are incapable of being changed). For example and unlike to C, Strings are immutable. We refer to values of these types as "primitive values"."
 
@@ -213,15 +213,15 @@ Still confused? Take a look at [this](http://stackoverflow.com/questions/1404948
 
 [http://www.smashingmagazine.com/2015/01/angularjs-internals-in-depth/](http://www.smashingmagazine.com/2015/01/angularjs-internals-in-depth/)
 
-## So how do we fix this? 
+## So how do we fix this?
 
 From the creator of Angular, Misko Hevery:
 
 <blockquote>
-"If you use ng-model there has to be a dot somewhere. If you don't have a dot, you're doing it wrong" 
+"If you use ng-model there has to be a dot somewhere. If you don't have a dot, you're doing it wrong"
 </blockquote>
 
-Simply put - ALWAYS HAVE A DOT. This means that no more primitives will be assigned to $scope! That's true for ng-model, but also for ALL inherited scopes! 
+Simply put - ALWAYS HAVE A DOT. This means that no more primitives will be assigned to $scope! That's true for ng-model, but also for ALL inherited scopes!
 
 Here is a solution to our previous issue with the secret message and the number 42:
 
@@ -255,9 +255,9 @@ app.controller('MainController', function($scope) {
 ```
 
 Now that we have an understanding of how to fix this issue - here are a few other built-in directives to be aware of, as they also create their own scope.
- 
+
 - ng-controller
-- ng-repeat 
+- ng-repeat
 - ng-if (actually destroys the scope every time it is false and creates a new one every time it is true - be careful with this one!)
 - ng-view
 - ng-switch
@@ -265,14 +265,14 @@ Now that we have an understanding of how to fix this issue - here are a few othe
 
 Still not understanding this concept? No worries, check out  [this](http://blog.carbonfive.com/2014/02/11/angularjs-scopes-an-introduction/) excellent tutorial on scopes and [this](https://egghead.io/lessons/angularjs-the-dot) video from egghead
 
-If you want to read a bit more in depth, [this](https://github.com/angular/angular.js/wiki/Understanding-Scopes) article is an incredibly in depth walkthrough of how scope works 
+If you want to read a bit more in depth, [this](https://github.com/angular/angular.js/wiki/Understanding-Scopes) article is an incredibly in depth walkthrough of how scope works
 
 ## Exercises
 
 ### Answer the following questions
 
 - What is $rootScope?
-- Explain how $scope is passed from a parent to child controller 
+- Explain how $scope is passed from a parent to child controller
 - List five built in directives that create their own scope
 - "Scope becomes tricky when you try to 2 way data bind to a primitive defined on the parent scope from inside the child scope" - what does this mean?
 
@@ -280,4 +280,3 @@ If you want to read a bit more in depth, [this](https://github.com/angular/angul
 
 - Create an example of some buggy angular code where you try to two way data bind a primitive defined on the parent scope from inside the child scope
 - Fix your example above, how did you fix it? What did you have to do to make it work?
-

@@ -1,4 +1,4 @@
-## Form Validation with Angular
+## Form Validation with Angular.
 
 ### Why we validate on the client side
 

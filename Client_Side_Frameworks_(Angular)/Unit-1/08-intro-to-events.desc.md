@@ -1,4 +1,4 @@
-# Events
+# Events.
 
 Angular provides event-handling directives to help us write interactive applications.
 
@@ -125,7 +125,7 @@ $scope.replay = function() {
     replaying = false;
     // else
     $timeout(dispalyPrevColor, 1000);
-    // end if/else 
+    // end if/else
   };
   if (!replaying) {
     replaying = true;

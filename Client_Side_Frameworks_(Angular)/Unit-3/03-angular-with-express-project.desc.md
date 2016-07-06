@@ -1,4 +1,4 @@
-# Adding Angular to Express
+# Adding Angular to Express.
 
 Let's keep working off of the app you built in the first section of this unit. With our ExpressJS app we just need to make a few more changes and we're ready to add angular!
 

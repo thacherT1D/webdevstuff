@@ -1,4 +1,4 @@
-#Angular And Rails: Basic Setup
+#Angular And Rails: Basic Setup.
 
 To get started we are going to make an api for the contacts app.  Our api will be a rails applicaiton that just returns json.  Create the new app:
 

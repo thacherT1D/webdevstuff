@@ -1,4 +1,4 @@
-# Built-In Directives
+# Built-In Directives.
 
 Directives are Angular's way of extending HTML. Angular uses directives to add functionality to HTML elements and attributes. Coupled with Angular templating, directives create dynamic components that re-render whenever the underlying data changes. According to the docs-
 

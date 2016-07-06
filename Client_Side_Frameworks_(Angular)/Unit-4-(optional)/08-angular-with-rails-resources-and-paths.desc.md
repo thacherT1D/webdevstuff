@@ -1,4 +1,4 @@
-#Angular And Rails: Resources, HTML5 Pushstate
+#Angular And Rails: Resources, HTML5 Pushstate.
 
 The lesson will build off of [this solution](https://github.com/gSchool/contacts-app-angular-rails/tree/solutionBasicSetup) to the contacts app.
 
@@ -11,7 +11,7 @@ contactsApp.service('Contact', ['$resource', function($resource) {
   return $resource(
     "/contacts/:id.json",
     {id: "@id"},
-    {update: {method: "PUT"}} 
+    {update: {method: "PUT"}}
   );
 }]);
 ```

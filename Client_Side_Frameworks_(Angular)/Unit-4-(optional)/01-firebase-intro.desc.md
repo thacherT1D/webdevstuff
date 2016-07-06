@@ -1,4 +1,4 @@
-#Firebase Intro
+#Firebase Intro.
 
 This unit focuses on writing Angular apps with a backend.  Rather than starting with Rails or Express, we're going to use a simple and powerful service called Firebase as our backend.
 

@@ -1,4 +1,4 @@
-# Promises Refresher
+# Promises Refresher.
 
 >A promise represents a value that may not be available yet. i.e. an action that is being executed asynchronously.
 

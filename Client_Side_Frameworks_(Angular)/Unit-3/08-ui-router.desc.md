@@ -1,4 +1,4 @@
-# Routing with ui-router
+# Routing with ui-router.
 
 #### What is it?
 

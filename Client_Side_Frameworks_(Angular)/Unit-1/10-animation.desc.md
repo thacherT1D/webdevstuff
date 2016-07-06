@@ -1,4 +1,4 @@
-## Animations in Angular with ngAnimate
+## Animations in Angular with ngAnimate.
 
 To get started with animations we need to include a module which our application will depend on (this is also called a dependency). The name of our module is ngAnimate and it is not directly part of the angular script that we are using, so we need to do 2 things:
 

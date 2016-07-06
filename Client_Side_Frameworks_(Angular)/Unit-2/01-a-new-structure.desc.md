@@ -1,4 +1,4 @@
-#A New Structure
+#A New Structure.
 
 As our Angular apps grow we'll need a new file structure. It won't work to put everything in a single `app.js` file when we have multiple controllers, modules, directives, filters, services, and much  more.
 

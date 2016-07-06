@@ -1,4 +1,4 @@
-# Custom Filters
+# Custom Filters.
 
 We've seen how to use Angular's built-in filters like `currency`, `number`, and `uppercase`.  These are definitely useful, but we often will need to create custom filters to format data to meet our specific needs.
 

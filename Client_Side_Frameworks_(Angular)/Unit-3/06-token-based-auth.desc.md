@@ -1,4 +1,4 @@
-# Authentication with Angular and JSON Web Tokens
+# Authentication with Angular and JSON Web Tokens.
 
 **Standard**: Implement and diagram JWT-based authentication between single-page apps and servers
 

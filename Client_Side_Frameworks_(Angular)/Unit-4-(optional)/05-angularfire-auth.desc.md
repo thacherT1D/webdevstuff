@@ -1,4 +1,4 @@
-#AngularFire Authentication
+#AngularFire Authentication.
 
 In the following video we take a look at implementing authentication using AngularFire's built-in $firebaseAuth service.  You can easily implement full user authentication with multiple providers(Google, Facebook, etc.) without writing any server-side code.
 

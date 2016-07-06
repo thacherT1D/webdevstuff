@@ -1,4 +1,4 @@
-# Custom Directives: Part 2
+# Custom Directives: Part 2.
 
 ## DOM Manipulation
 

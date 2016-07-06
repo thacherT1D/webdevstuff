@@ -1,4 +1,4 @@
-# Testing Angular and Node
+# Testing Angular and Node.
 
 Testing is an important part of any application, but it becomes increasingly important when the complexity of our application gets higher.
 
@@ -34,7 +34,7 @@ You should see at least `4.2`.  If you do not, go to the [NodeJS](https://nodejs
 
 #### Tools For the Job
 
-We are going to be making two types of tests, server side request specs with [jasmine](http://jasmine.github.io/2.0/introduction.html) and [supertest](https://github.com/visionmedia/supertest) and end to end integration tests with [protractor](https://angular.github.io/protractor/#/). 
+We are going to be making two types of tests, server side request specs with [jasmine](http://jasmine.github.io/2.0/introduction.html) and [supertest](https://github.com/visionmedia/supertest) and end to end integration tests with [protractor](https://angular.github.io/protractor/#/).
 
 #### Folder Structure
 
@@ -244,4 +244,3 @@ Finally, we have to update package.json to tell it how to start the server.
 Now the app and the listening logic are separate!  Run `npm test` again.  You should see a passing test!
 
 **EXERCISES**:  Add more protractor integration tests and supertest request specs.  The goal is to get total coverage on the api, and a reasonable amount of certainty that your front end behaves properly.
-

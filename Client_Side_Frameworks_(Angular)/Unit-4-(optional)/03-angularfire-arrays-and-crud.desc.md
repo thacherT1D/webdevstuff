@@ -1,4 +1,4 @@
-#AngularFire Arrays and CRUD
+#AngularFire Arrays and CRUD.
 
 We've seen how to "read" data from Firebase, now let's explore implementing full CRUD with a sample Todo List App.  Watch the following video:
 

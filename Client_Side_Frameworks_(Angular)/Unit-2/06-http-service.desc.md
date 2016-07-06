@@ -1,4 +1,4 @@
-# HTTP Service
+# HTTP Service.
 
 Angular services are simply objects that contain some code that can be shared across your app.  Like most things we've discussed, Angular comes with some services already, but we can also write our own custom services too.  
 
@@ -73,7 +73,7 @@ $http.get('https://api.github.com/zen').then(function(data){
 ```
 
 NOTE: If you have trouble sending GET requests to 'https://api.github.com/zen' ,
-create a new zen.json file in your application and send get requests to retrieve data from 
+create a new zen.json file in your application and send get requests to retrieve data from
 that newly created file.
 
 PS: sometimes the api reaches it's daily limit of calls and shuts down for the day
