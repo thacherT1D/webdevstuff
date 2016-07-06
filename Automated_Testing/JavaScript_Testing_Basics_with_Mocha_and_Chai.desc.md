@@ -1,24 +1,24 @@
 ## Objectives
 
-- Explain the benefits of testing.
-- Describe the different types of tests.
-- Write tests using Mocha and Chai.
-- Explain what is Test Driven Development.
-- Practice Test Driven Development by writing tests then writing code.
-- Reflect on and discuss the benefits of Test Driven Development.
+* Explain the benefits of testing.
+* Describe the different types of tests.
+* Write tests using Mocha and Chai.
+* Explain what is Test Driven Development.
+* Practice Test Driven Development by writing tests then writing code.
+* Reflect on and discuss the benefits of Test Driven Development.
 
 ## Benefits of testing
 
-Up to this point, we have not written tests for our projects, but the instruction have created tests for you to run through exercises. As projects get bigger, the cognitive load needed to understand your project becomes too cumbersome to manage all the logic. Testing helps us out out here.
+Up to this point, we have not written tests for our projects, but the instruction staff have created tests for you to run through exercises. As projects get bigger, the cognitive load needed to understand your project becomes too cumbersome to manage all the logic. Testing helps us out out here.
 
 Testing your code has many strengths:
 
-- Testing identifies bugs in our code.
-- Testing continues to test to ensure no new bugs get introduced (called a regression).
-- It overall takes _less_ to write correct code when testing. Specifically, testing reduce the cost of change in your code.
-- Tests enforce better code design to be testable.
-- They provide better documentation on code.
-- Testing reduces fear.
+* Testing identifies bugs in our code.
+* Testing continues to test to ensure no new bugs get introduced (called a regression).
+* Tests enforce better code design to be testable.
+* They provide better documentation on code.
+* Testing reduces fear.
+* It overall takes _less_ to write correct code when testing. Specifically, testing reduce the cost of change in your code.
 
 ## Types of tests
 
@@ -46,6 +46,12 @@ While the three above types are the ones we are focusing on, there are many aspe
 * Compatibility testing - testing software on various types of "clients" (think mobile phones, browsers, OS's).
 
 And many more.
+
+**Exercise** Turn and talk to your neighbor and talk about the following:
+* Provide an example in your projects where you had a regression (ie a piece of code that works but later stopped working).
+* Provide an example in your projects where you wish you had a unit test.
+* Provide an example in your projects where you wish you had an integration test.
+* Discuss your opinions on the benefits of creating tests.
 
 ## Using Mocha and Chai
 
@@ -155,7 +161,7 @@ suite('NAME OF SUITE', () => {
 
 Each test handles a specific aspect of functionality for a particular function. Mocha groups all of these tests into a **suite**. This helps in understanding the overall functionality and then identify the specific aspect to look at.
 
-Each test leverages Chai, an assertion library. In essence, it's the code that performs the actual check of the test. An **assertion** is a statement that is always expected to evaluate to `true`. If the statement evaluates to `false`, and error is thrown. If an error is thrown, the testing library (Mocha) catches it, immediately finishes the test, marking it a failure, and continues to the next test. If the test finishes with no errors thrown, the test is considered successful.
+Each test leverages Chai, an assertion library. In essence, it's the code that performs the actual check of the test. An **assertion** is a statement that is always expected to evaluate to `true`. If the statement evaluates to `false`, an error is thrown. If an error is thrown, the testing library (Mocha) catches it, immediately finishes the test, marking it a failure, and continues to the next test. If the test finishes with no errors thrown, the test is considered successful.
 
 Assertions can be used in actual code to maintain expectations, but we often see them in tests. Chai offers many methods in performing our checks. For equality checks, it has the `strictEqual` method which equates to the `===` operator in JavaScript.
 
@@ -462,16 +468,7 @@ As an example, let's work on building an editor. Let's say your manager has come
 
 > We would like to provide a module that represents an editor. This editor has three functions: `displayString`, `write`, and `clear`. The `displayString` function does not take any parameters and produces a string which is everything that has been written to the editor. The `write` method, takes in a string and returns nothing. It writes to the editor as a side effect. The `clear` method will empty everything that has been written to the editor.
 
-Let's write a tests for the `write` and the `displayString` method. Create a new project named `editor`.
-
-```sh
-$ mkdir editor
-$ cd editor
-$ mkdir test
-$ npm init
-$ npm install --save-dev mocha
-$ npm install --save-dev chai
-```
+Let's write a tests for the `write` and the `displayString` method.
 
 In the `test` directory, create a file `editor.js`. In here, we will initialize the tests for `write` and `displayString`.
 
@@ -693,18 +690,20 @@ module.exports = { write, displayString, clear, undo, redo, save };
 Test Driven Development process has many benefits.
 
 * When faced with a large and daunting piece of work ahead writing the tests will get you moving quickly.
+* You are forced to have tests, which have the benefits described above.
 * Your tests give you confidence that you've done enough for now and can stop tweaking and move on to the next thing.
 * Tests help you really understand the design of the code you are working on. Instead of writing code to do something, you are starting by outlining all the conditions you are subjecting the code to and what outputs you'd expect from that.
 * Overall, speed of development increases.
 
 ## Creating Integration Tests using Supertest
 
-Let's convert our editor to a server. Create a `server.js` file.
+Let's convert our editor to a server with similar methods. Install express and the common middleware.
 
 ```sh
 $ npm install --save express body-parser morgan
 ```
 
+Create a `server.js` file.
 
 ```javascript
 'use strict';
@@ -743,11 +742,6 @@ app.use((req, res) => {
   res.sendStatus(404);
 });
 
-app.use((err, _req, res, _next) => {
-  console.error(err.stack);
-  res.sendStatus(500);
-});
-
 app.listen(port, () =>{
   console.log('Listening on port', port);
 });
@@ -755,7 +749,7 @@ app.listen(port, () =>{
 module.exports = app;
 ```
 
-Install supertest.
+Install a new dependency called `supertest`. `supertest` is an testing library that tests server APIs.
 
 ```sh
 $ npm install --save-dev supertest
