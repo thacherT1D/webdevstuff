@@ -6,6 +6,8 @@
 
 [Exercises](https://github.com/gSchool/g15/tree/master/curriculum/01-week/exercises)
 
+[Git Workflow](https://github.com/mjhea0/thinkful-mentor/blob/master/git-workflow.md)
+
 ## Intro
 
 * What is version control:

@@ -18,23 +18,22 @@ In other words...create a document you can put on the web and share with others!
 
 ## What is HTML?
 
-HyperText Markup Language (HTML) is the standard language to create webpages. It is a subset of a language called XML. Anytime you see a webpage in a browser, HTML is the language telling the browser what content to put on the screen.
+HyperText Markup Language (HTML) is the standard language to create web pages. It is a subset of a language called XML. Anytime you see a web page in a browser, HTML is the language telling the browser what content to put on the screen.
 
 * HTML *describes* and applies *structure* to a page; it's the skeleton.
 * Browsers *parse* and then *render* the HTML so that it's human-readable.
 
-It included presentation and appearance cues into the webpage, but these features are now deprecated in favor of Cascading Style Sheets (CSS). Both the HTML and CSS standard is maintained by The World Wide Web Consortium (W3C). 
+It included presentation and appearance cues into the web page, but these features are now deprecated in favor of Cascading Style Sheets (CSS). Both the HTML and CSS standard is maintained by The World Wide Web Consortium (W3C).
 
 ## Syntax
 
 ### Tags Make Elements
 
-You've probably run into tags before if you've ever used the Internet. You've seen paragraph tags - `<p>`, or you've run into `<span>` or `<div>`. You may have used `<a href="http://example.com">Click here</a>`
-before to link to something. 
-  
-Tags are the basic unit of HTML. Think of tags (anything that starts with < and ends with >) as _boxes_. The words in between the angle braces (> & <) are like labels to tell you what the box contains.  
+You've probably run into tags before if you've ever used the Internet. You've seen paragraph tags - `<p>`, or you've run into `<span>` or `<div>`. You may have used `<a href="http://example.com">Click here</a>` before to link to something.
 
-HTML _tags_ are used to wrap *content*, by which we usually mean text or other tags.
+Tags are the basic unit of HTML. Think of tags (anything that starts with `<` and ends with `>`) as _boxes_. The words in between the angle braces (`>` & `<`) are like labels to tell you what the box contains.
+
+HTML _tags_ are used to wrap *content*, by which we usually mean text or other tags:
 
 ```html
 <p>Some text.</p>
@@ -43,14 +42,16 @@ HTML _tags_ are used to wrap *content*, by which we usually mean text or other t
 The tags above are `<p>` & `</p>`, and the content is "Some text."
 The _opening tag_ is the `<p>`, and the _closing tag_ is the `</p>`. These are the bounds of the box, they define it's beginning and end.
 
-When tags are read by the browser, they form an HTML `element`. The use of `p` tags surrounding text above creates an HTML element.
+When tags are read by the browser, they form an HTML *element*. The use of `p` tags surrounding text above creates an HTML element.
 
 ### Self-closing tags
 
-Not all tags need a beginning and an end, some tags are self-closing and do no need to wrap content. This is because they aren't thought of as enclosing anything. Think of them as boxes that are already closed and taped up, so there's no need to close them.
+Not all tags need a beginning and an end - some tags are self-closing and do no need to wrap content. This is because they aren't thought of as enclosing anything. Think of them as boxes that are already closed and taped up, so there's no need to close them.
+
+Examples:
 
 ```html
-<img src="foo.com/thing.png">
+<img src="foo.com/thing.png" alt="A cool image of a foo thing.">
 ```
 
 ```html
@@ -58,26 +59,30 @@ Not all tags need a beginning and an end, some tags are self-closing and do no n
 ```
 
 ```html
-<hr>
+<hr class="border">
 ```
 
 ### Attributes
 
-The above examples contain _attributes_, which are more information attached to an _element_. These attributes are usually to generate content or to act as a reference for other technologies like CSS & JS.
+The above examples contain _attributes_ - which just provide more information about to an _element_. These attributes are usually used to generate content or to act as a reference for other technologies like CSS or JavaScript.
 
-This image (`<img>`) has a _source_ and _alternate_ attribute. The source (`src`) attribute tells the element what image file to display, and the alternate (`alt`) attribute tells the element what text to display if the image can't be displayed for some reason.
+This image (`<img>`) has a _source_ and _alternate_ attribute:
 
-```
+```html
 <img src="foo.com/thing.png" alt="A cool image of a foo thing.">
 ```
 
-This _anchor_ (`<a>`) link has a hypertext reference (`href`) attribute. The reference tells the link tag where to take you when clicked.
+The source (`src`) attribute tells the element what image file to display, and the alternate (`alt`) attribute tells the element what text to display if the image can't be displayed for some reason (slow connection, error in the src attribute, or if the user uses a screen reader).
+
+This _anchor_ (`<a>`) link has a hypertext reference (`href`) attribute:
 
 ```html
 <a href="/contact">Contact Page</a>
 ```
 
-This title has a `class` attribute. It tells the browser what styles to apply to the element.
+The reference tells the link tag where to take you when clicked.
+
+This title has a `class` attribute, which tells the browser what styles to apply to the element:
 
 ```html
 <h1 class="content-title">You Will Never Guess What This Puppy Does With Her Brunch.</h1>
@@ -85,60 +90,70 @@ This title has a `class` attribute. It tells the browser what styles to apply to
 
 ## Structure
 
-HTML can be thought of as a tree structure, which is similar to a family tree. Each element has a  *parent*, it sometimes has *siblings* and it also may have *children*. Imagine a large box that you put smaller boxes in- the smaller boxes are contained within the larger box. They can't be in multiple boxes at once, so the larger box can be thought of as their *parent* or *container*. The smaller boxes can contain still smaller boxes, aka *children*. Another way to think of this is to imagine making a family tree for a group of jellyfish. They reproduce asexually, so they each have only one parent. 
+HTML can be thought of as a tree structure, which is similar to a family tree. Each element has a  *parent*, it sometimes has *siblings* and it may also have *children*. Imagine a large box that you put smaller boxes in - the smaller boxes are contained within the larger box. They can't be in multiple boxes at once, so the larger box can be thought of as their *parent* (or *container*). The smaller boxes can contain still smaller boxes, aka *children*. Another way to think of this is to imagine making a family tree for a group of jellyfish. They reproduce asexually, so they each have only one parent.
 
 Here's an example:
 
 ```html
 <html>
-	<head>
-		<title>The title is nested in the head</title>
-	</head>
-	<body>
-		<h1>This header is nested in the body</h1>
-		<div>
-			<p>This paragraph is nested in the div tag above it, which is itself nested in the body. It's a <em>child</em> of the div.</p>
-		</div>
-	</body>
+  <head>
+    <title>The title is nested in the head</title>
+  </head>
+  <body>
+    <h1>This header is nested in the body</h1>
+    <div>
+      <p>This paragraph is nested in the div tag above it, which is itself nested in the body. It's a <em>child</em> of the div.</p>
+    </div>
+  </body>
 
 </html>
-
 ```
 
-You'll note that it's easier to visualize what is contained within what because we're using tabs to indent every time we open up a new tag. This isn't important for the computer to read and render the code you write, it's to make the code easier for a programmer to read and use.  
-This image is how the above HTML can be visualized.
-![credit: http://www.efishdesign.com/tutorials/javascript.php](http://www.efishdesign.com/tutorials/dom-tree.png)
+You'll note that it's easier to visualize what is contained within what because we're using two spaces to indent every time we open up a new tag. This isn't important for the computer to read and render the code you write - it's to make the code easier for a programmer to read and use.
 
+![credit: http://www.efishdesign.com/tutorials/javascript.php](http://www.efishdesign.com/tutorials/dom-tree.png)
 
 ## Our First Page
 
-Let's create a simple HTML page called `index.html` in a directory called `html-exercise`, then open it. **Do the following in your terminal, rather than using Finder.app.**
+From the terminal, start by creating a simple HTML page called `index.html` in a directory called `html-exercise`:
 
-```
+```sh
 $ mkdir html-exercise
 $ cd html-exercise
-$ git init
 $ touch index.html
+```
+
+Create a git repo:
+
+```sh
+$ git init
+```
+
+Finally, open the web page:
+
+```sh
 $ open index.html
 ```
 
-Chrome opens the `index.html` file, and because of the `.html` extension, it knows to present it to us as a normal webpage. Looking in chrome though, we have a blank screen! Pretty useless.
+Chrome opens the `index.html` file, and because of the `.html` extension, it knows to present it to us as a normal web page. Looking in chrome though, we have a blank screen! Pretty useless.
 
-HTML pages always have the following structure:
+Movin on, HTML pages always have the following structure:
 
 * Doctype `<!DOCTYPE html>`
 * HTML `<html>`
  * head `<head>`
-	 * links to CSS stylesheets, some javascript links, meta-data, the `<title>` tag
+   * links to CSS stylesheets, meta-data, the `<title>` tag
  * body `<body>`
-	  * page content (`<h1>`, `<p>`, `<div>`, `<ul>`, `<li>` etc.)
-
+    * page content (`<h1>`, `<p>`, `<div>`, `<ul>`, `<li>` etc.)
+    * links to JavaScript files
 
 ### Doctype
 
-The Doctype is the first tag on the web page. It is self-closing and serves to inform the browser of which type of HTML that the file is written in. It is required for legacy reasons to allow the browser to render it properly. We primarily use the following:
+The Doctype is the first tag on the web page:
 
 `<!DOCTYPE html>`
+
+It is self-closing -remember what that meands? - and serves to inform the browser about which type of HTML that the file is written in. It is not required in HTML 5, but it should still be used for legacy reasons to allow the browser to render it properly.
 
 ### HTML Tag
 
@@ -154,53 +169,46 @@ The `title` tag provides the title of the document. It will appear in the browse
 
 ### Body Tag
 
-All of the web page's content is placed into the `<body>` tag.
+All of the web page's content (what is seen is by the end user) is placed into the `<body>` tag.
 
 > Now is a great time to `git add` your files, and `git commit` them. Remember to add the `-m` command and add a commit message.
 
-Next we're going to dive into some documentation. Take a look at the [documentation for the paragraph tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p)- there is a description as to what all the parts do, and several examples. If you copy-paste these examples, you'll notice they show up on the screen.
+Next we're going to dive into some documentation. Take a look at the [documentation for the paragraph tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p) - there is a description as to what all the parts do, and several examples. If you copy-paste these examples into `index.html`, save, and then refresh the page in Chrome, you'll notice they show up on the screen.
 
-Using [Mozilla Developer Network Element Reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Element) we're going to create your first page. *Keep this page open as you code*- real developers don't try to memorize things, that's why we have google and documentation!
+Using [Mozilla Developer Network Element Reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Element) we're going to create your first page.
 
-* Make an [unordered list](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul) all of the cities you've lived in (then, commit your changes!)
+> Keep this page open as you code. "Real" developers don't try to memorize things - we have Google and documentation!
 
-* Make an [ordered list](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ol) of the top three cities you would like to visit (then, commit your changes!)
+Follow these steps, making sure to commit your changes after each one:
 
-* Add [a heading](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements) before each list that says what the list is (then, commit your changes!)
-
-* Add a description under the headings of each list explaining how you came to live in each of those cities, and why you would like to visit those cities respectively. (then, commit your changes!)
-
-* In the list of cities you've visited, add [a span](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/span) at the end of each city with any HTML character entity and a short summary of why the city is on the list. (...then, commit your changes!)
-
-* In the second list, make every odd number [strong](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/strong), and every even number [emphasized](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/em). (then, commit your changes!)
-
-* Finally add the following [image](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img) somewhere in the page, and give it a height and width attribute with number values: https://students.galvanize.com/assets/galvanize-logo-ac9865cc4217b77aebbce9e63670dd96.svg
-(then, commit your changes!)
-
-* **BONUS** add audio and video to the page, find them on MDN.  Give it controls and make the video autoplay. (then, commit your changes!)
-
-audio: https://upload.wikimedia.org/wikipedia/en/0/04/Rayman_2_music_sample.ogg
-
-video:   https://upload.wikimedia.org/wikipedia/en/2/28/Illusion_movie.ogg
+* Make an [unordered list](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul) of all of the cities you've lived in.
+* Make an [ordered list](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ol) of the top three cities you would like to visit.
+* Add a [heading](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements) before each list that says what the list is.
+* Add a description under the headings of each list explaining how you came to live in each of those cities or why you would like to visit those cities, respectively.
+* In the list of cities you've visited, add a [span](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/span) at the end of each city with any [HTML character entity](https://dev.w3.org/html5/html-author/charref) and a short summary of why the city is on the list.
+* In the second list, make every odd number [strong](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/strong), and every even number [emphasized](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/em).
+* Finally add the following [image](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img) somewhere on the page, and give it a height and width attribute with number values: https://students.galvanize.com/assets/galvanize-logo-ac9865cc4217b77aebbce9e63670dd96.svg.
+* **BONUS**: Add audio and video to the page. Give it controls and make the video autoplay.
+  * audio: https://upload.wikimedia.org/wikipedia/en/0/04/Rayman_2_music_sample.ogg
+  video: https://upload.wikimedia.org/wikipedia/en/2/28/Illusion_movie.ogg
 
 ## Block-level vs. Inline
 
-Elements are usually either "block-level" elements or "inline" elements. 
+Elements are usually either *block-level* or *inline*.
 
-Block-Level elements:
+### Block-Level Elements
 
-* occupy the entire space of its parent element (container), thereby creating a "block."
-* may appear only within a <body> element.
+* Occupy the entire space of its parent element (container), thereby creating a "block"
 * Begin on new lines (by default)
 
-Here's a [list of the Block-level Elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Block-level_elements#Elements).
+[List](https://developer.mozilla.org/en-US/docs/Web/HTML/Block-level_elements#Elements) of the Block-level Elements
 
-Inline elements:
+### Inline elements
 
-* occupy only the space bounded by the tags that define the inline element.
-* can start anywhere on a page.
+* Occupy only the space bounded by the tags that define the inline element
+* Can start anywhere on a page
 
-Here's a [list of the Inline Elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Inline_elements).
+[List](https://developer.mozilla.org/en-US/docs/Web/HTML/Inline_elements) of the Inline Elements
 
 **Question** Which tags are block-level and which are inline?
 
@@ -210,17 +218,16 @@ Here's a [list of the Inline Elements](https://developer.mozilla.org/en-US/docs/
 </p>
 ```
 
+## Tables
 
-### Tables
+Tables are how we display "tabular data" in HTML. Any time you have something that would be good in a spreadsheet, Tables are the way to go.
 
-Tables are how we display "tabular data" in HTML. What this really means is something like this:
 ![table examples](http://www.codeproject.com/KB/office/WebExcel/Excel.jpg)
-Any time you have something that would be good in a spreadsheet, Tables are the way to go. 
 
-> Early in the history of the web, people tried to adapt tables for layout purposes. Today, we have CSS Grid Systems and tables are back to being used for their actual purpose. This is one of the first examples of how code can be "abused"- AKA used for a purpose other than what it was designed for. Tables worked well when you could be sure of what size everyone's screens were (remember when monitors were all the same size?) but nowadays they just break when viewed on a small screen (like a phone) or a big one (like a giant iMac monitor).
+> Early in the history of the web, people tried to adapt tables for layout purposes. Today, we have CSS Grid Systems and tables are back to being used for their actual purpose. This is one of the first examples of how code can be "abused", e.g. - used for a purpose other than what it was designed for. Tables worked well when you are sure of what size everyone's screens were - remember when monitors were all the same size? - but nowadays they just break when viewed on a small screen (like a phone) or a big one (like a giant iMac monitor).
 
-Table tags: 
-`<table>,<thead>,<th>,<tbody>,<td>,<tr>,<tfoot>`
+Table tags:
+`<table>` , `<thead>`, `<th>`, `<tbody>`, `<td>`, `<tr>`, `<tfoot>`
 
 Example:
 
@@ -248,42 +255,47 @@ Example:
 ```
 
 Take a look at the documentation for Tables. Keep this documentation up, and use it to find out how to use the elements you need in order to complete the exercise below.
+
 [Table Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table)
 
-## **Exercise** 
+## **Exercise**
 
-Create a new file, call it `favorites.html`.
-`git add` the file to your repository, and commit it.
-
-* Set up the page with the proper structure, like the last exercise
-* Create a table and add a table head element (then, commit your changes!)
-* Create a row of table headers for `First Name`, `Last Name`, `Favorite Animal` 
-* Create a table body with one row and three columns 
-* Enter your first name, last name, and favorite animal in the corresponding columns (then, commit your changes!)
+1. Create a new file called `favorites.html`.
+1. `git add` the file to your repository, and commit it.
+1. Set up the page with the proper base HTML structure
+1. Create a table and add a table head element
+1. Create a row of table headers for `First Name`, `Last Name`, `Favorite Animal`
+1. Create a table body with one row and three columns
+1. Enter your first name, last name, and favorite animal in the corresponding columns
+1. Commit!
 
 ## Links
 
-We are going to now create a link from your `index.html` page to your `favorites.html` page.
+Let's create a link from your `index.html` page to your `favorites.html` page.
 
-For this we use the _anchor_ (`<a>`) link has a hypertext reference (`href`) attribute. The reference tells the link tag where to take you when clicked.
+For this we use the _anchor_ (`<a>`) tag along with a hypertext reference (`href`) attribute. The reference tells the link tag where to take you when clicked.
 
 ```html
 <a href="anotherpage.html">Another Page</a>
 ```
 
-Above is a link with a _relative_ path. You can tell it is relative path because it does not include a full website address. (A full website address includes http://www.). The server will look in the same directory as the webpage with the link for that file. An absolute link will include the full website address.
+Above is a link with a _relative_ path. You can tell it is relative path because it does not include a full website address. (A full website address includes http://www.). The server will look in the same directory as the web page with the link for that file.
+
+An absolute link will include the full website address:
 
 ```html
 <a href="http://www.google.com">Google</a>
 ```
 
-Links have a lot of similar features that you see when navigating the file system in your shell. For example: Where will be looking for the following link?
+Links have a lot of similar features that you see when navigating the file system in your shell. For example: Where will we be looking for the following link?
 
 ```html
 <a href="../anotherpage.html">Another Page</a>
 ```
 
-It will look into the parent directory. How about this?
+It will look into the parent directory.
+
+How about this?
 
 ```html
 <a href="/folder/subfolder/anotherpage.html">Another Page</a>
@@ -296,88 +308,3 @@ Notice we are starting with a slash. This is the root directory of your website.
 HTML provides generic tags for us that help us style the page. The `<div>` [tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div) is a block-level element that helps group other elements together. The `<span>` [tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/span) is very similar to a `<div>`, but it is an inline element.
 
 These tags are heavily used on web pages with CSS to help add style to the page. We'll talk more about them then.
-
-## Semantic Markup
-
-You may have been using various tags to help you style your content. `<h1>` text is larger than `<p>` text, and `<strong>` makes something bold. While on its own this is usually fine, HTML was not designed to style content, but to "mark up" its distinct components *semantically*.
-
-Semantic HTML means to identify your content by its meaning, rather than its presentation. `<h1>` indicates that something is the most important header on the page, and `<p>` means that something is a paragraph of text. It's easy to get in the habit of using the generic tags, `<div>` and `<span>`, to set any other kind of content, such as a footer, apart. HTML actually has a wealth of tags, such as `<footer>`, that are intended to help identify content.
-
-You may be realizing at this point that within the HTML `<body>`, you could just use `<div>` and `<span>` (or almost any other tag) to markup an entire document, and just use CSS classes to distinguish between them. It's an unfortunately common practice. The advantages of writing semantically are:
-
-* **Readability**. Semantically written documents are much easier for other developers to follow.
-* **Accessibility**. Assistive devices, such as screen-readers for the visually impaired, rely on tags to help users navigate through content.
-* **Consumability**. Tools like screen-scrapers and crawlers look for markup to separate content from structure.
-* **SEO**. Search engines use semantic markup to map your site and identify content. Poor markup can result in down-ranking.
-* **Separation of Concerns**.  HTML is primarily concerned with *content*, while CSS is primarily concerned with *presentation* (JavaScript is concerned with *behavior*). While it is possible to dictate appearance with HTML, manipulate content with CSS, and do just about anything with JavaScript, each of them specializes in one thing. By "separating concerns", you allow each technology to stick with what it's good at.
-
-## Exercise: Semantic Scavenger Hunt
-
-Spend the next 30 minutes finding examples of semantic tags being used "in the wild", aka on live websites. For each tag, use MDN to help you write a definition of the semantic use of the tag, then find a live example, record the url for the website where the tag is used and write a sentence about (Is the tag is being used appropriately? Why or why not? You don't need to find an example for every tag, just do as many as you can. We'll share examples of uses found after completing.
-
-Here are the various semantic tags to define and look for on the internet:
-
-### Structural
-
-Use these tags to create the overall hierarchy of the content in your page:
-
-* nav
-* main
-* article
-* header
-* section
-* aside
-* footer
-* h1-h6
-* ul
-* ol
-* li
-
-
-### Text Markup
-
-These tags are for marking up text content within a structural element:
-
-* p
-* em
-* strong
-* b
-* i
-* s
-* mark
-* hr
-* wbr
-* pre
-* br
-* cite
-* code
-* kybd
-* samp
-* var
-* q
-* blockquote
-* data
-* a
-* abbr
-* small
-* sub
-* sup
-* del
-* ins
-* time
-* address
-* ul
-* ol
-* li
-* details
-* summary
-
-## Exercise: The Semantic News
-
-Fork and clone the [semantic HTML](https://github.com/gSchool/semantic-html-exercise) repository. `index.html` is a news site that's been marked up with `<div>` and `<span>` tags. Using the list of tags above, update the code with semantic tags. When you're done, add/commit/push, and then submit a pull request.
-
-> Fun fact: Facebook has implemented something called [Instant Articles](https://instantarticles.fb.com) to help news sources have their articles be more friendly with Facebook. Their docs stress the use of [semantic tags and specific formats](https://developers.facebook.com/docs/instant-articles).
-
-## HTML 5 Cheat Sheet
-
-![HTML 5 Cheat Sheet](http://www.inmotionhosting.com/img/infographics/html5_cheat_sheet_tags.png)
