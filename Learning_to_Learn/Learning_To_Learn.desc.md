@@ -1,10 +1,32 @@
-[Differentiated instruction](https://en.wikipedia.org/wiki/Differentiated_instruction): Great teachers differentiate instruction for their students - they don't provide the same exact instruction to everyone. As a student, it's important to understand that Galvanize instructors choose the best tool for the job based on data about student performance/understanding.
+## [Modalities](https://en.wikipedia.org/wiki/Differentiated_instruction)
 
-3 stages: Setting the stage, play, reflect (learn, do, get stuck, repeat)
+## [Bloom's Taxonomy](https://en.wikipedia.org/wiki/Bloom%27s_taxonomy)
 
-What parts of the 3 stage process are you strong on, which parts do you struggle on?
+## [Zone of Proximal Development](https://en.wikipedia.org/wiki/Zone_of_proximal_development)
 
-[Zone of proximal development](https://en.wikipedia.org/wiki/Zone_of_proximal_development) is the difference between what a learner can do without help and what he or she can do with help.
+## [Process Over Product](http://www.awakeparent.com/Shelly/process-not-product/)
 
-[Bloom's taxonomy](https://en.wikipedia.org/wiki/Bloom%27s_taxonomy):
-![Bloom's taxonomy](http://1.bp.blogspot.com/-29ppRDg5aSk/VAqTwGTXDGI/AAAAAAAALB4/eH2rWi7Xv-M/s1600/Bloom.png)
+## [Learning and Stress](http://www.kidsinthehouse.com/special-needs/other-disabilities-or-impairments/why-a-brain-under-stress-cant-learn-new-information)
+
+* [Difference between chronic, toxic, and regular stress](http://www.kidsinthehouse.com/special-needs/learning-disabilities/the-difference-between-chronic-toxic-and-regular-stress)
+
+## [Chunking](https://en.wikipedia.org/wiki/Chunking_(psychology))
+
+## [Illusion of Competance (Dunning-Kruger Effect)](https://en.wikipedia.org/wiki/Dunning%E2%80%93Kruger_effect)
+
+## [Imposter Syndrome](https://en.wikipedia.org/wiki/Impostor_syndrome)
+
+* [Galvanize Employees and Impostor Syndrome](http://gschool.github.io/impostor-syndrome/#/)
+
+## [Flow](https://en.wikipedia.org/wiki/Flow_(psychology))
+
+## [Growth Mindset](https://en.wikipedia.org/wiki/Carol_Dweck#.22Mindset.22)
+
+## [Teach to Learn](https://en.wikipedia.org/wiki/Learning_by_teaching)
+
+## [Little Lies](http://slides.com/kylecoberly/deck-11#/8/4)
+
+* Teach hard concepts by reducing it down into its simpler forms and build up.
+* Teach harder and harder concepts to go deeper as needed.
+* You don't need a super comprehensive understanding of something to use it effectively.
+* People that find out they were taught a simpler version of the concept get irritated it wasn't completely true. **BUT**, People that dive into the hardest form of the problem domain give up and don't learn it. 
