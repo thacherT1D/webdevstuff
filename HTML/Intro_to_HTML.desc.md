@@ -308,3 +308,7 @@ Notice we are starting with a slash. This is the root directory of your website.
 HTML provides generic tags for us that help us style the page. The `<div>` [tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div) is a block-level element that helps group other elements together. The `<span>` [tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/span) is very similar to a `<div>`, but it is an inline element.
 
 These tags are heavily used on web pages with CSS to help add style to the page. We'll talk more about them then.
+
+## Exercise
+
+- [Basic HTML](https://github.com/gSchool/basic-html)
