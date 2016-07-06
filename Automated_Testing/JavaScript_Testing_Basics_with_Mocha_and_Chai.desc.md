@@ -484,7 +484,7 @@ const {suite, test} = require('mocha');
 const editor = require('../editor');
 
 suite('editor module', () => {
-  afterEach(() => {
+  beforeEach(() => {
     editor.clear();
   });
 
@@ -508,7 +508,7 @@ suite('editor module', () => {
 });
 ```
 
-Mocha offers the ability to run code before and after each suite is run (using `before` and `after` respectively) as well as before and after each test (using `beforeEach` and `afterEach` respectively). In this case, we want to return the editor to the initial state. The `clear` allows us to do that.
+Mocha offers the ability to run code before and after each suite is run (using `before` and `after` respectively) as well as before and after each test (using `beforeEach` and `afterEach` respectively). In this case, we want to initialize the editor state before we run each test.
 
 Given these requirements, and the tests provided, we might implement the editor module in `editor.js` as follows:
 
@@ -697,6 +697,144 @@ Test Driven Development process has many benefits.
 * Tests help you really understand the design of the code you are working on. Instead of writing code to do something, you are starting by outlining all the conditions you are subjecting the code to and what outputs you'd expect from that.
 * Overall, speed of development increases.
 
+## Creating Integration Tests using Supertest
+
+Let's convert our editor to a server. Create a `server.js` file.
+
+```sh
+$ npm install --save express body-parser morgan
+```
+
+
+```javascript
+'use strict';
+
+const express = require('express');
+const app = express();
+const port = process.env.PORT || 8000;
+
+const morgan = require('morgan');
+const bodyParser = require('body-parser');
+const editor = require('./editor');
+
+app.disable('x-powered-by');
+app.use(morgan('short'));
+app.use(bodyParser.json());
+
+app.get('/displayString', (req, res, next) => {
+  res.status(200)
+    .set('Content-Type', 'text/plain')
+    .send(editor.displayString());
+});
+
+app.post('/write', (req, res, next) => {
+  editor.write(req.body.text);
+
+  res.sendStatus(200);
+});
+
+app.get('/clear', (req, res, next) => {
+  editor.clear();
+
+  res.sendStatus(200);
+});
+
+app.use((req, res) => {
+  res.sendStatus(404);
+});
+
+app.use((err, _req, res, _next) => {
+  console.error(err.stack);
+  res.sendStatus(500);
+});
+
+app.listen(port, () =>{
+  console.log('Listening on port', port);
+});
+
+module.exports = app;
+```
+
+Install supertest.
+
+```sh
+$ npm install --save-dev supertest
+```
+
+Create a file called `testServer.js` in your `test` directory.
+
+```javascript
+'use strict';
+
+const assert = require('chai').assert;
+const {suite, test} = require('mocha');
+const request = require('supertest');
+
+const server = require('../server');
+
+suite('editor server', () => {
+  beforeEach((done) => {
+    request(server)
+      .get('/clear')
+      .expect(200, done);
+  });
+
+  test('GET /displayString', (done) => {
+    request(server)
+      .get('/displayString')
+      .expect('Content-Type', /plain/)
+      .expect(200, '', done);
+  });
+
+  test('POST /write', (done) => {
+    request(server)
+      .post('/write')
+      .send({ text: 'Hello World' })
+      .expect(200)
+      .end((err, res) => {
+        if (err) {
+          throw err;
+        }
+
+        request(server)
+          .get('/displayString')
+          .expect('Content-Type', /plain/)
+          .expect(200, 'Hello World', done);
+      });
+  });
+
+  test('GET /clear', (done) => {
+    request(server)
+      .post('/write')
+      .send({ text: 'Hello World' })
+      .expect(200)
+      .end((writeErr, res) => {
+        if (writeErr) {
+          throw writeErr;
+        }
+
+        request(server)
+          .get('/clear')
+          .expect(200)
+          .end((clearErr, res) => {
+            if (clearErr) {
+              throw clearErr;
+            }
+
+            request(server)
+              .get('/displayString')
+              .expect('Content-Type', /plain/)
+              .expect(200, '', done);
+          });
+      });
+  });
+});
+```
+
 ## Assignment
 
 [https://github.com/gSchool/javascript-test-coverage](https://github.com/gSchool/javascript-test-coverage)
+
+## Bonus
+
+Write tests using `supertest` for your pet shop assignment. [https://github.com/gSchool/fs-pet-shop](https://github.com/gSchool/fs-pet-shop)
