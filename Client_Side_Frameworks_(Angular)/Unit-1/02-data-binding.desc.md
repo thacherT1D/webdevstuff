@@ -1,4 +1,5 @@
 # Data Binding
+..
 Let's start by building something simple that showcases the power of Angular.
 
 In traditional frameworks, controllers package up data from the models with a template and then render a view to the user. That view is a snapshot in time; it only reflects the state of data at the time it was rendered. Newer JavaScript frameworks like Angular and Ember allow us to write dynamic, live templates. This means that we can write Angular templates that will **automatically update when our data changes.**
