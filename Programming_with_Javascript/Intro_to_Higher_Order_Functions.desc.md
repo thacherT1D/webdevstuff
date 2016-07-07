@@ -79,7 +79,7 @@ And we want our output to look like this:
     <p>Take a moment to solve this problem with what you know so far. You should not be re-writing the `listIt` function and, instead, should only be writing new code.</p>
 
   </div>
-</div>
+</div><br/>
 
 We can solve this problem by referencing the `listIt` function within another function or for loop. However, another way to solve this would be to pass the existing `listIt` function into a new function that uses it. You should be able to copy and paste all the code below into your console and get a successful result.
 
@@ -181,7 +181,7 @@ var myArray = [10, 20, 30];
     <p>Take a few minutes to write the function described above and pass it into the `map` function. Try not to peak ahead! Remember that the function you're building is for each individual item, not the entire array.</p>
 
   </div>
-</div>
+</div><br/>
 
 How was building that function? Are you ready? The answer is coming up next!
 
@@ -215,6 +215,6 @@ function add (num) {
     <p>With a partner, read over the code and try and understand what is happening. Consider how you would invoke the `add` function, what it returns, and how you would use it with the `map` function we built above.</p>
 
   </div>
-</div>
+</div><br/>
 
 When you've finished decoding the above function, move on to the **Higher Order Function Challenge** assigned to this article.
