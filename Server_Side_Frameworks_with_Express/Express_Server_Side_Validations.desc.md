@@ -147,7 +147,7 @@ module.exports.post = {
       .label('Email')
       .required()
       .email()
-      .trim()
+      .trim(),
 
     password: Joi.string()
       .label('Password')
