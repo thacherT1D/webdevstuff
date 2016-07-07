@@ -79,8 +79,8 @@ Explore the follow validation rules and add more rules as you see fit.
 - [`any.label(name)`](https://github.com/hapijs/joi/blob/v9.0.0-9/API.md#anylabelname)
 - [`any.optional()`](https://github.com/hapijs/joi/blob/v9.0.0-9/API.md#anyoptional)
 - [`any.required()`](https://github.com/hapijs/joi/blob/v9.0.0-9/API.md#anyrequired)
-- [`string.length(limit, [encoding])`](https://github.com/hapijs/joi/blob/v9.0.0-9/API.md#stringlengthlimit-encoding)
 - [`string.email([options])`](https://github.com/hapijs/joi/blob/v9.0.0-9/API.md#stringemailoptions)
+- [`string.length(limit, [encoding])`](https://github.com/hapijs/joi/blob/v9.0.0-9/API.md#stringlengthlimit-encoding)
 - [`string.max(limit, [encoding])`](https://github.com/hapijs/joi/blob/v9.0.0-9/API.md#stringmaxlimit-encoding)
 - [`string.min(limit, [encoding])`](https://github.com/hapijs/joi/blob/v9.0.0-9/API.md#stringminlimit-encoding)
 - [`string.regex(pattern, [name])`](https://github.com/hapijs/joi/blob/v9.0.0-9/API.md#stringregexpattern-name)
@@ -107,25 +107,29 @@ module.exports.post = {
 };
 ```
 
-Now that the validation logic is setup, in the `users.js` routes file, require `express-validation` and the `schema` module you just created. Add the following middleware to validate on specific routes.
+Now that the validation schema is defined, add the following code to the `routes/users.js` file.
 
 ```JavaScript
 const ev = require('express-validation');
 const validations = require('../validations/users');
+
+// ...
 
 router.post('/users', ev(validations.post), (req, res, next) => {
   // Route handler logic
 });
 ```
 
-In the `server.js` file, require `express-validation` and alter the error handler to display the validation error(s)
+In the `server.js` file, add the following code to display the any validation error that occur.
 
 ```JavaScript
 const ev = require('express-validation');
 
+// ...
+
 app.use((err, _req, res, _next) => {
-  if (err instanceof ev.ValidationError) {
-    return res.status(err.status).json(err);
+  if (err.status) {
+    return res.status(err.status).send(err);
   }
 
   console.error(err);
