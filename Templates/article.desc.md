@@ -39,7 +39,8 @@ Use this callout to define exercises. You only need to replace what's inside of 
     <p>A very short exercise. This is a way to signal to students to stop what they're doing and take notice.</p>
 
   </div>
-</div><br/>
+</div>
+<br>
 
 <hr style="margin: 5rem 0;"/>
 
