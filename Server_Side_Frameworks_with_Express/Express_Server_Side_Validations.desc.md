@@ -128,7 +128,6 @@ module.exports.post = {
 
 Explore the follow validation rules and add more rules as you see fit.
 
-- [`any.example(value)`](https://github.com/hapijs/joi/blob/v9.0.0-9/API.md#anyexamplevalue)
 - [`any.label(name)`](https://github.com/hapijs/joi/blob/v9.0.0-9/API.md#anylabelname)
 - [`any.optional()`](https://github.com/hapijs/joi/blob/v9.0.0-9/API.md#anyoptional)
 - [`any.required()`](https://github.com/hapijs/joi/blob/v9.0.0-9/API.md#anyrequired)
@@ -188,7 +187,7 @@ app.use((err, _req, res, _next) => {
 
 ## Assignment
 
-- [Trackify Validations](https://github.com/ryansobol/trackify/blob/express_validations/1_User_Input_Validation.md)
+- [Server-side Validations for Galvanize Bookshelf](https://gist.github.com/ryansobol/7d02bc09fddec3621b463803460dd2b4)
 
 ## Resources
 
