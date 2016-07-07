@@ -79,6 +79,7 @@ The server-specific technical requirements for your project:
 - [Gravatar](http://en.gravatar.com/site/implement/)
 - [Groupon](https://www.groupon.com/pages/api)
 - [JSONPlaceholder](http://jsonplaceholder.typicode.com/)
+- [Kanye Rest](http://www.kanyerest.xyz/)
 - [Lob](https://lob.com/docs)
 - [Mapbox](https://www.mapbox.com/api-documentation/)
 - [Markit](http://dev.markitondemand.com/MODApis/)
