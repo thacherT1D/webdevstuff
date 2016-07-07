@@ -57,6 +57,8 @@ Turn to a neighbor and explain what server-side validation is. After about 30 se
 
 ## Why is server-side validation important?
 
+[INSERT EXPLANATION HOW SSV SIT BETWEEN DATABASE-SIDE VALIDATIONS AND CLIENT-SIDE VALIDATIONS]
+
 In addition to catching simple mistakes, like missing information, server-side validation can protect your application, and its users, against those who would send malicious input to the server. It's very dangerous to assume that your application's user interface will protect the server from malicious user input. Remember, an HTTP request can be sent from many locations, not just the ones your application provides via its UI.
 
 When creating route handlers, always ask yourself, "What if an HTTP request was sent..."
