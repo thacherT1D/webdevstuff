@@ -24,7 +24,15 @@ Turn to your neighbor and explain what the `express-validation` package is. Afte
 
 ## How do you validate user input sent to an Express server?
 
-The [express-validation](https://github.com/andrewkeig/express-validation) library provides Express middleware that validates the user input inside `req.body`, `req.params`, `req.query`, `req.header` and even `req.cookies`. returns a response with errors; if any of the configured validation rules fail.
+The [`express-validation` library](https://github.com/andrewkeig/express-validation) provides Express middleware that validates the user input found in the following possible locations of an HTTP request.
+
+- `req.body`
+- `req.params`
+- `req.query`
+- `req.header`
+- `req.cookies`
+
+It does so with the help of the [`joi` library](https://github.com/hapijs/joi), which provides a system for defining a schema to ensure the properties of the above objects contain valid data. If any user input in these objects fail to validate against a `joi` schema, `express-validation` will immediately send an HTTP response, with human-friendly the error messages, back to the client.
 
 To start off, change into the `trackify` directory project.
 
@@ -38,21 +46,26 @@ Install the `express-validation` and `joi` NPM packages.
 npm install --save express-validation joi
 ```
 
-Create a file called `schema.js` in a new directory called `validations`
+Make a new directory to store validation schemas.
 
-```Shell
+```shell
 mkdir validations
-touch validations/schema.js
 ```
 
-In the newly created `schema.js` file, require `joi` and create basic validation logic for the `users` routes to ensure that the data sent in `req.body` for email and password are strings.
+Create a file called `validations/users.js`.
+
+```shell
+touch validations/users.js
+```
+
+In this file, add the following validation logic that'll be used for the `POST /users` middleware.
 
 ```JavaScript
 'use strict';
 
 const Joi = require('joi');
 
-module.exports.users = {
+module.exports.post = {
   body: {
     email: Joi.string(),
     password: Joi.string()
@@ -60,12 +73,12 @@ module.exports.users = {
 };
 ```
 
-Explore the [Joi Documentation](https://github.com/hapijs/joi/blob/v9.0.0-9/API.md#validatevalue-schema-options-callback) and add more rules for validating email and password. (min, max, regex, trim, email, required, etc.)
+Explore the [`joi` Documentation](https://github.com/hapijs/joi/blob/v9.0.0-9/API.md#validatevalue-schema-options-callback) and add more rules for validating the email address and password. (min, max, regex, trim, email, required, etc.)
 
 ```JavaScript
 'use strict';
 
-module.exports.users = {
+module.exports.post = {
   body: {
     email: Joi.string()
       .email()
@@ -87,9 +100,9 @@ Now that the validation logic is setup, in the `users.js` routes file, require `
 
 ```JavaScript
 const ev = require('express-validation');
-const validations = require('../validations/schema');
+const validations = require('../validations/users');
 
-router.post('/users', ev(validations.users), (req, res, next) => {
+router.post('/users', ev(validations.post), (req, res, next) => {
   // Route handler logic
 });
 ```
