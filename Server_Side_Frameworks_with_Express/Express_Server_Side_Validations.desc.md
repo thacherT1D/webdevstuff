@@ -36,7 +36,7 @@ router.post('/users', (req, res, next) => {
   // ...
 });
 
-app.use((err, req, res, next) => {
+app.use((err, _req, res, _next) => {
   if (err.status) {
     return res
       .status(err.status)
