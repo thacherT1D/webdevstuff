@@ -78,12 +78,14 @@ In your own words, write down why server-side validation is important. Focus on 
 The [`express-validation` library](https://github.com/andrewkeig/express-validation) provides Express middleware to validate any user input found in the following locations of an HTTP request.
 
 - `req.body`
-- `req.params`
 - `req.query`
+- `req.params`
 - `req.header`
 - `req.cookies`
 
-It does so with the help of the [`joi` library](https://github.com/hapijs/joi), which provides a system for defining a schema to ensure the properties of the above objects contain valid information. If any user input found in these objects fail to validate against a `joi` schema, `express-validation` will immediately pass an error object, filled with human-friendly the error messages, to the `next` error handling middleware in the stack.
+**NOTE:** For most HTTP requests, you'll only need to validate user input found in `req.body` and `req.query`.
+
+It does so with the help of the [`joi` library](https://github.com/hapijs/joi), which provides a system for defining a schema to ensure the properties of the above objects contain valid information. If any user input found in these objects fail to validate against a `joi` schema, `express-validation` will immediately pass an error object, filled with human-friendly error messages, to the `next` error handling middleware in the stack.
 
 To start off, change into the `trackify` directory project.
 
