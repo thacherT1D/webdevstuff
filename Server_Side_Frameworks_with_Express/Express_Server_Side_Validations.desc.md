@@ -2,8 +2,7 @@
 
 - Explain what server-side validation is.
 - Explain why server-side validation is important.
-- Explain what express-validation is.
-- Validate input on an Express server.
+- Validate user input sent to an Express server.
 
 ## What's server-side validation?
 
@@ -11,7 +10,7 @@
 
 ### Exercise
 
-Turn to a neighbor and explain what server-side validation is.
+Turn to a neighbor and explain what server-side validation is. After about 30 seconds, your instructor will cold call on the class and ask what was written down.
 
 ## Why is server-side validation important?
 
@@ -21,21 +20,21 @@ Server-side validation can protect against malicious users who attempt to submit
 
 In your own words, write down why server-side validation is important. Focus on the different scenarios server-side validation protects against. After about 30 seconds, your instructor will cold call on the class and ask what was written down.
 
-## What's express-validation?
-
-**express-validation** is a middleware that validates the body, params, query, headers and cookies of a request and returns a response with errors; if any of the configured validation rules fail.
-
-### Exercise
-
 Turn to your neighbor and explain what the `express-validation` package is. After about 30 seconds, your instructor will cold call on the class and ask what was written down.
 
-## How do you validate input on an Express server?
+## How do you validate user input sent to an Express server?
 
-To start off, change into and open your `trackify` project. Install `express-validation` and `joi`
+The [express-validation](https://github.com/andrewkeig/express-validation) library provides Express middleware that validates the user input inside `req.body`, `req.params`, `req.query`, `req.header` and even `req.cookies`. returns a response with errors; if any of the configured validation rules fail.
 
-```Shell
-cd PATH_TO/trackify
-atom .
+To start off, change into the `trackify` directory project.
+
+```shell
+cd trackify
+```
+
+Install the `express-validation` and `joi` NPM packages.
+
+```shell
 npm install --save express-validation joi
 ```
 
@@ -110,7 +109,7 @@ app.use((err, _req, res, _next) => {
 });
 ```
 
-## Exercise
+## Assignment
 
 - [Trackify Validations](https://github.com/ryansobol/trackify/blob/express_validations/1_User_Input_Validation.md)
 
