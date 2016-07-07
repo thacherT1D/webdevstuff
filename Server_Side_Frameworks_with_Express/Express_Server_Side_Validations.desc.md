@@ -112,7 +112,7 @@ app.use((err, _req, res, _next) => {
 
 ## Exercise
 
-- ASSIGNMENT
+- [Trackify Validations](https://github.com/ryansobol/trackify/blob/express_validations/1_User_Input_Validation.md)
 
 ## Resources
 
