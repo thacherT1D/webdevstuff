@@ -6,7 +6,38 @@
 
 ## What's server-side validation?
 
-**Server-side validation** is the process of a server using a defined set of rules to ensure input from a client is correct, meaningful, and secure. The rules to validate on a server can be as strict or lenient as the developer prefers, but remember to NEVER TRUST THE CLIENT.
+**Server-side validation** is the process of a HTTP server using a defined set of rules to ensure user input from a client is correct, meaningful, and secure. The rules to validate on a server can be as strict or lenient as the developer prefers, but remember to **never** trust user input sent from the client.
+
+Here's an example of server-side validation from the `trackify` project.
+
+```javascript
+'use strict';
+
+const express = require('express');
+const router = express.Router();
+
+router.post('/users', (req, res, next) => {
+  const { email, password } = req.body;
+
+  if (!email || email.trim() === '') {
+    const err = new Error('Email must not be blank');
+    err.status = 400;
+
+    return next(err);
+  }
+
+  if (!password || password.trim() === '') {
+    const err = new Error('Password must not be blank');
+    err.status = 400;
+
+    return next(err);
+  }
+
+  // ...
+});
+
+module.exports = router;
+```
 
 ### Exercise
 
@@ -14,7 +45,15 @@ Turn to a neighbor and explain what server-side validation is. After about 30 se
 
 ## Why is server-side validation important?
 
-Server-side validation can protect against malicious users who attempt to submit dangerous input to the server. It is very dangerous to trust your UI. Not only can users abuse your UI, but they may not be using your UI at all, or even a browser. What if the user manually edits the URL, or runs their own Javascript, or tweaks their HTTP requests with another tool? What if they send custom HTTP requests from `curl` or from a script, for example? Clients can send HTTP requests by whatever means they wish, and you should respond correctly. That includes validation.
+In addition to catching simple mistakes, like missing information, server-side validation can protect your application, and it's users, against those who would send malicious input to the server. It's very dangerous to assume that your application's user interface will protect the server from malicious user input. Remember, an HTTP request can be sent from many locations, not just the ones you're application provides via its UI.
+
+When creating route handlers, always ask yourself, "What if an HTTP request was sent..."
+
+- From the browser's URL bar?
+- From the browser's console?
+- From another program like HTTPie?
+
+A user can send HTTP requests by whatever means he or she wishes. And it's the job of a web developer to ensure that one bad apple doesn't spoil the bunch.
 
 ### Exercise
 
