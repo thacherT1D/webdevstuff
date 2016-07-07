@@ -53,7 +53,7 @@ When creating route handlers, always ask yourself, "What if an HTTP request was 
 - From the browser's console?
 - From another program like HTTPie?
 
-A user can send HTTP requests by whatever means he or she wishes. And it's the job of a web developer to ensure that one bad apple doesn't spoil the bunch.
+A user can send HTTP requests by whatever means he or she wishes. And it's the job of a web developer to ensure one bad apple doesn't spoil the bunch.
 
 ### Exercise
 
@@ -133,7 +133,7 @@ module.exports.post = {
   body: {
     email: Joi.string()
       .label('Email')
-      .required(),
+      .required()
       .email()
       .trim()
 
