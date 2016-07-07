@@ -1,3 +1,5 @@
+[Slides](https://docs.google.com/presentation/d/1iQ7GBvIM1-1U4OYwUG47lIZ28hKZa1amfOI4tn69fg4)
+
 ## Semantic Markup
 
 You may have been using various tags to help you style your content. `<h1>` text is larger than `<p>` text, and `<strong>` makes something bold. While on its own this is usually fine, HTML was not designed to style content, but to "mark up" its distinct components *semantically*.
@@ -74,4 +76,4 @@ Fork and clone the [semantic HTML](https://github.com/gSchool/semantic-html-exer
 
 ## Exercise: Rectifying past wrongs
 
-Go back to an exercise you completed last week without using semantic HTML (maybe something in the Intro to HTML LE). Change out the unsemantic markup with semantic tags. Share your solution with a classmate and ask for constructive criticism about the markup used.
+Go back to an exercise you completed last week without using semantic HTML (maybe something in the Intro to HTML LE). Change out the non-semantic markup with semantic tags. Share your solution with a classmate and ask for constructive criticism about the markup used.
