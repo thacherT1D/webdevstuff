@@ -8,13 +8,13 @@
 
 **Server-side validation** is the process of a HTTP server using a defined set of rules to ensure user input from a client is correct, meaningful, and secure. The rules to validate on a server can be as strict or lenient as the developer prefers, but remember to **never** trust user input sent from the client.
 
-Here's an example of server-side validation from the `trackify` project.
+Here's an example of server-side validation for a user registration route handler.
 
 ```javascript
 'use strict';
 
 const express = require('express');
-const router = express.Router();
+const app = express.Router();
 
 router.post('/users', (req, res, next) => {
   const { email, password } = req.body;
@@ -36,7 +36,19 @@ router.post('/users', (req, res, next) => {
   // ...
 });
 
-module.exports = router;
+app.use((err, _req, res, _next) => {
+  if (err.status) {
+    return res
+      .status(err.status)
+      .set('Content-Type', 'text/plain')
+      .send(err.message);
+  }
+
+  console.error(err);
+  res.sendStatus(500);
+});
+
+// ...
 ```
 
 ### Exercise
