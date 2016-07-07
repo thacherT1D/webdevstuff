@@ -40,6 +40,7 @@ Use this callout to define exercises. You only need to replace what's inside of 
 
   </div>
 </div>
+<br>
 
 <hr style="margin: 5rem 0;"/>
 
