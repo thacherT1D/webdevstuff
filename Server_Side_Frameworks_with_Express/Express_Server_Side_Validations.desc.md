@@ -174,10 +174,6 @@ router.post('/users', ev(validations.post), (req, res, next) => {
 In the `server.js` file, add the following code to display the any validation error that occur.
 
 ```JavaScript
-const ev = require('express-validation');
-
-// ...
-
 app.use((err, _req, res, _next) => {
   if (err.status) {
     return res.status(err.status).send(err);
