@@ -73,7 +73,17 @@ module.exports.post = {
 };
 ```
 
-Explore the [`joi` Documentation](https://github.com/hapijs/joi/blob/v9.0.0-9/API.md#validatevalue-schema-options-callback) and add more rules for validating the email address and password. (min, max, regex, trim, email, required, etc.)
+Explore the follow validation rules and add more rules as you see fit.
+
+- [`any.example(value)`](https://github.com/hapijs/joi/blob/v9.0.0-9/API.md#anyexamplevalue)
+- [`any.label(name)`](https://github.com/hapijs/joi/blob/v9.0.0-9/API.md#anylabelname)
+- [`any.optional()`](https://github.com/hapijs/joi/blob/v9.0.0-9/API.md#anyoptional)
+- [`any.required()`](https://github.com/hapijs/joi/blob/v9.0.0-9/API.md#anyrequired)
+- [`string.length(limit, [encoding])`](https://github.com/hapijs/joi/blob/v9.0.0-9/API.md#stringlengthlimit-encoding)
+- [`string.man(limit, [encoding])`](https://github.com/hapijs/joi/blob/v9.0.0-9/API.md#stringmaxlimit-encoding)
+- [`string.min(limit, [encoding])`](https://github.com/hapijs/joi/blob/v9.0.0-9/API.md#stringminlimit-encoding)
+- [`string.regex(pattern, [name])`](https://github.com/hapijs/joi/blob/v9.0.0-9/API.md#stringregexpattern-name)
+- [`string.email([options])`](https://github.com/hapijs/joi/blob/v9.0.0-9/API.md#stringemailoptions)
 
 ```JavaScript
 'use strict';
@@ -81,17 +91,16 @@ Explore the [`joi` Documentation](https://github.com/hapijs/joi/blob/v9.0.0-9/AP
 module.exports.post = {
   body: {
     email: Joi.string()
-      .email()
-      .min(3)
-      .max(63)
       .label('Email')
-      .trim()
       .required(),
-    password: Joi.string()
-      .regex(/[a-zA-Z0-9]{3,30}/)
-      .label('Password')
+      .email()
       .trim()
+
+    password: Joi.string()
+      .label('Password')
       .required()
+      .trim()
+      .min(8)
   }
 };
 ```
