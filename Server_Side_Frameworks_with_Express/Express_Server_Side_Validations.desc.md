@@ -14,9 +14,9 @@ Here's an example of server-side validation for a user registration route handle
 'use strict';
 
 const express = require('express');
-const app = express.Router();
+const app = express();
 
-router.post('/users', (req, res, next) => {
+app.post('/users', (req, res, next) => {
   const { email, password } = req.body;
 
   if (!email || email.trim() === '') {
@@ -57,7 +57,7 @@ Turn to a neighbor and explain what server-side validation is. After about 30 se
 
 ## Why is server-side validation important?
 
-In addition to catching simple mistakes, like missing information, server-side validation can protect your application, and it's users, against those who would send malicious input to the server. It's very dangerous to assume that your application's user interface will protect the server from malicious user input. Remember, an HTTP request can be sent from many locations, not just the ones you're application provides via its UI.
+In addition to catching simple mistakes, like missing information, server-side validation can protect your application, and its users, against those who would send malicious input to the server. It's very dangerous to assume that your application's user interface will protect the server from malicious user input. Remember, an HTTP request can be sent from many locations, not just the ones your application provides via its UI.
 
 When creating route handlers, always ask yourself, "What if an HTTP request was sent..."
 
@@ -70,8 +70,6 @@ A user can send HTTP requests by whatever means he or she wishes. And it's the j
 ### Exercise
 
 In your own words, write down why server-side validation is important. Focus on the different scenarios server-side validation protects against. After about 30 seconds, your instructor will cold call on the class and ask what was written down.
-
-Turn to your neighbor and explain what the `express-validation` package is. After about 30 seconds, your instructor will cold call on the class and ask what was written down.
 
 ## How do you validate user input sent to an Express server?
 
