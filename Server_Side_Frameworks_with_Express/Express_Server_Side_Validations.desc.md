@@ -24,7 +24,7 @@ Turn to your neighbor and explain what the `express-validation` package is. Afte
 
 ## How do you validate user input sent to an Express server?
 
-The [`express-validation` library](https://github.com/andrewkeig/express-validation) provides Express middleware that validates the user input found in the following possible locations of an HTTP request.
+The [`express-validation` library](https://github.com/andrewkeig/express-validation) provides Express middleware to validate any user input found in the following locations of an HTTP request.
 
 - `req.body`
 - `req.params`
@@ -32,7 +32,7 @@ The [`express-validation` library](https://github.com/andrewkeig/express-validat
 - `req.header`
 - `req.cookies`
 
-It does so with the help of the [`joi` library](https://github.com/hapijs/joi), which provides a system for defining a schema to ensure the properties of the above objects contain valid data. If any user input in these objects fail to validate against a `joi` schema, `express-validation` will immediately send an HTTP response, with human-friendly the error messages, back to the client.
+It does so with the help of the [`joi` library](https://github.com/hapijs/joi), which provides a system for defining a schema to ensure the properties of the above objects contain valid information. If any user input found in these objects fail to validate against a `joi` schema, `express-validation` will immediately pass an error object, filled with human-friendly the error messages, to the `next` error handling middleware in the stack.
 
 To start off, change into the `trackify` directory project.
 
