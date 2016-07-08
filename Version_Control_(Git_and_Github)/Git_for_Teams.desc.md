@@ -71,7 +71,7 @@ When you were ready to publish your changes, you pushed your local `master` bran
 └─────────┘     └─────────┘
 ```
 
-As previously mentioned, this was your development workflow for the first quarter of the course. However, throughout the second quarter, you began to adopt a Feature Branch Workflow for your development process. The core idea behind the **Feature Branch Workflow** is that all feature development takes place in a dedicated branch instead of the `master` branch.
+As previously mentioned, this was, more or less, your Git workflow for the first quarter of the course. However, throughout the second quarter, you began to adopt a Feature Branch Workflow to manage the Git commits of your projects. The core idea behind the **Feature Branch Workflow** is that all commits related a specific feature, or bug fix, are stored in a dedicated branch instead of the `master` branch.
 
 The Feature Branch Workflow still uses a central repository and the `origin/master` branch still represents the official project history. But, instead of committing directly on your local `master` branch, you create a new branch each time you start work on a new feature. Descriptive feature branch names, like `animate_menu_61`, help to give a clear, highly-focused purpose to each branch.
 
