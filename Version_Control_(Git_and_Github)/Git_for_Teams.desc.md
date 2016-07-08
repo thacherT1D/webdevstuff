@@ -7,9 +7,80 @@
 
 ## What's the Feature Branch Workflow?
 
-Throughout this program, you've been using a Centralized Workflow for nearly all of your projects. A **Centralized Workflow** uses a central repository on GitHub with a single `master` branch to serve as the point-of-entry for all changes to the project.
+Throughout this program, you've been using a Centralized Workflow for nearly all of your projects. A **Centralized Workflow** uses a central `origin` repository on GitHub with a single `master` branch to serve as the point-of-entry for all changes to the project. For most of your projects, the central repository started off with at least one commit that was made by your instructors.
 
-You started each project by cloning the central repository to your development environment. In your own local copy of the project, you edited files and committed changes. These new commits were stored locally, completely isolated from the central repository. This let you defer synchronizing with the central repository until you were at a convenient break point. To publish your changes, you pushed your local `master` branch to the central repository. This added all of the local commits that weren’t already in the central `master` branch.
+```text
+origin/master
+      │
+      │
+      │
+      ▼
+ ┌─────────┐
+ │         │
+ │ be282f7 │
+ │         │
+ └─────────┘
+```
+
+You began each project by cloning the central repository to your development environment.
+
+```text
+origin/master
+      │
+      │
+      │
+      ▼
+ ┌─────────┐
+ │         │
+ │ be282f7 │
+ │         │
+ └─────────┘
+      ▲
+      │
+      │
+      │
+   master
+```
+
+In your own local copy of the project, you edited files and committed changes. These new commits were stored locally, completely isolated from the central repository.
+
+```text
+origin/master
+      │
+      │
+      │
+      ▼
+ ┌─────────┐    ┌─────────┐
+ │         │    │         │
+ │ be282f7 │────│ 4f7e591 │
+ │         │    │         │
+ └─────────┘    └─────────┘
+                     ▲
+                     │
+                     │
+                     │
+                  master
+```
+
+This let you defer synchronizing with the central repository until you were at a convenient break point. To publish your changes, you pushed your local `master` branch to the central repository. This added all of the local commits that weren’t already in the central `master` branch.
+
+```text
+              origin/master
+                    │
+                    │
+                    │
+                    ▼
+┌─────────┐    ┌─────────┐
+│         │    │         │
+│ be282f7 │────│ 4f7e591 │
+│         │    │         │
+└─────────┘    └─────────┘
+                    ▲
+                    │
+                    │
+                    │
+                 master
+```
 
 Now that you've got the hang of the Centralized Workflow, adding feature branches to your development process is an easy way to encourage collaboration and streamline communication between developers. The core idea behind the **Feature Branch Workflow** is that all feature development takes place in a dedicated branch instead of the `master` branch.
 
