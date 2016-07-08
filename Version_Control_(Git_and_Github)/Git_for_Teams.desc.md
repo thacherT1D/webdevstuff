@@ -7,7 +7,7 @@
 
 ## What's the Feature Branch Workflow?
 
-In the first quarter this course, you employed a Centralized Workflow to develop nearly all of your projects. A **Centralized Workflow** uses a central `origin` repository with a single `master` branch to serve as the hub for all changes to a project. In Git speak, this is simply referred to as the `origin/master` branch.
+In the first quarter this course, you employed a Centralized Workflow to manage the Git commits for all your projects. In Git, a **Centralized Workflow** uses a central `origin` repository with a single `master` branch to serve as the hub for all changes to a project. In Git speak, this is simply referred to as the `origin/master` branch.
 
 Most of your projects started off with at least one commit, made by your instructors, in the `origin/master` branch.
 
