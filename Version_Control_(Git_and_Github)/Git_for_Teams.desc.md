@@ -182,9 +182,9 @@ Take a moment to write down why the Feature Branch Workflow is important. After 
 
 ## How do you use the Feature Branch Workflow in a team-based project?
 
-It's time to use the Feature Branch Workflow in a team-based project. To get started, organize your team by completing the following steps.
+Since you've been using the Feature Branch Workflow in your individual projects this quarter, let's use it in a team-based project. To get started, organize your Q2 Project team by completing the following steps.
 
-1. Sit next to the people in your Q2 Project team.
+1. Sit next to the people on your team.
 
 1. Elect one project owner to fork the [Merge Conflict Chart](https://github.com/gSchool/wd-merge-conflict-chart) repository on GitHub. The only responsibility the project owner has over the other members of the team is to setup the project on GitHub.
 
