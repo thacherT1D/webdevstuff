@@ -28,6 +28,7 @@ In most cases, you got started by forking and cloning a central repository. Fork
 
 ```text
 origin/master
+   master
       │
       │
       │
@@ -37,51 +38,37 @@ origin/master
  │ be282f7 │
  │         │
  └─────────┘
-      ▲
-      │
-      │
-      │
-   master
 ```
 
 In your local repository, you edited files and committed changes. These new commits were stored in the local `master` branch, completely isolated from the central `origin/master` branch. This allowed you defer synchronizing with the central repository until you reached a convenient break point.
 
 ```text
-origin/master
-      │
-      │
-      │
-      ▼
- ┌─────────┐    ┌─────────┐
- │         │    │         │
- │ be282f7 │────│ 4f7e591 │
- │         │    │         │
- └─────────┘    └─────────┘
-                     ▲
-                     │
-                     │
-                     │
-                  master
+origin/master      master
+      │               │
+      │               │
+      │               │
+      ▼               ▼
+ ┌─────────┐     ┌─────────┐
+ │         │     │         │
+ │ be282f7 │─────│ 4f7e591 │
+ │         │     │         │
+ └─────────┘     └─────────┘
 ```
 
 When you were ready to publish your changes, you pushed your local `master` branch to the central `origin/master` branch. Pushing is the process of adding all of the additional commits from the local repository to central repository.
 
 ```text
-              origin/master
-                    │
-                    │
-                    │
-                    ▼
-┌─────────┐    ┌─────────┐
-│         │    │         │
-│ be282f7 │────│ 4f7e591 │
-│         │    │         │
-└─────────┘    └─────────┘
-                    ▲
-                    │
-                    │
-                    │
-                 master
+               origin/master
+                  master
+                     │
+                     │
+                     │
+                     ▼
+┌─────────┐     ┌─────────┐
+│         │     │         │
+│ be282f7 │─────│ 4f7e591 │
+│         │     │         │
+└─────────┘     └─────────┘
 ```
 
 As previously mentioned, this was your development workflow for the first quarter of the course. However, throughout the second quarter, you began to adopt a Feature Branch Workflow for your development process. The core idea behind the **Feature Branch Workflow** is that all feature development takes place in a dedicated branch instead of the `master` branch.
@@ -91,104 +78,83 @@ The Feature Branch Workflow still uses a central repository and the `origin/mast
 Each feature branch is created from the local `master` branch when it's synchronized with the central `origin/master` branch.
 
 ```text
-              origin/master
-                    │
-                    │
-                    │
-                    ▼
-┌─────────┐    ┌─────────┐
-│         │    │         │
-│ be282f7 │────│ 4f7e591 │
-│         │    │         │
-└─────────┘    └─────────┘
-                    ▲
-                    │
-                    │
-                    │
-                 master
-             animate_menu_61
+               origin/master
+                  master
+               animate_menu_61
+                     │
+                     │
+                     │
+                     ▼
+┌─────────┐     ┌─────────┐
+│         │     │         │
+│ be282f7 │─────│ 4f7e591 │
+│         │     │         │
+└─────────┘     └─────────┘
 ```
 
 Git makes no technical distinction between the `master` branch and a feature branch. So you can add and commit changes to a feature branch just as you did in the Centralized Workflow. The only difference being the new commits are stored in the local `animate_menu_61` branch, completely isolated from both the `master` and `origin/master` branches. This let you defer synchronizing your work with official project history until the feature is working as intended.
 
 ```text
-              origin/master
-                    │
-                    │
-                    │
-                    ▼
-┌─────────┐    ┌─────────┐    ┌─────────┐
-│         │    │         │    │         │
-│ be282f7 │────│ 4f7e591 │────│ dad1e7f │
-│         │    │         │    │         │
-└─────────┘    └─────────┘    └─────────┘
-                    ▲              ▲
-                    │              │
-                    │              │
-                    │              │
-                 master     animate_menu_61
+               origin/master
+                  master      animate_menu_61
+                     │               │
+                     │               │
+                     │               │
+                     ▼               ▼
+┌─────────┐     ┌─────────┐     ┌─────────┐
+│         │     │         │     │         │
+│ be282f7 │─────│ 4f7e591 │─────│ dad1e7f │
+│         │     │         │     │         │
+└─────────┘     └─────────┘     └─────────┘
 ```
 
 When you're ready to publish your changes, you first merge your local `animate_menu_61` branch into the local `master` branch. This adds the feature's commits into the `master` branch.
 
 ```text
-              origin/master
-                    │
-                    │
-                    │
-                    ▼
-┌─────────┐    ┌─────────┐    ┌─────────┐
-│         │    │         │    │         │
-│ be282f7 │────│ 4f7e591 │────│ dad1e7f │
-│         │    │         │    │         │
-└─────────┘    └─────────┘    └─────────┘
-                                   ▲
-                                   │
-                                   │
-                                   │
-                                master
-                            animate_menu_61
+                                  master
+               origin/master  animate_menu_61
+                     │               │
+                     │               │
+                     │               │
+                     ▼               ▼
+┌─────────┐     ┌─────────┐     ┌─────────┐
+│         │     │         │     │         │
+│ be282f7 │─────│ 4f7e591 │─────│ dad1e7f │
+│         │     │         │     │         │
+└─────────┘     └─────────┘     └─────────┘
 ```
 
 Then, you push your local `master` branch to the central `origin/master` branch, adding the feature's commits into the official project history.
 
 ```text
-                             origin/master
-                                   │
-                                   │
-                                   │
-                                   ▼
-┌─────────┐    ┌─────────┐    ┌─────────┐
-│         │    │         │    │         │
-│ be282f7 │────│ 4f7e591 │────│ dad1e7f │
-│         │    │         │    │         │
-└─────────┘    └─────────┘    └─────────┘
-                                   ▲
-                                   │
-                                   │
-                                   │
-                                master
-                            animate_menu_61
+                               origin/master
+                                  master
+                              animate_menu_61
+                                     │
+                                     │
+                                     │
+                                     ▼
+┌─────────┐     ┌─────────┐     ┌─────────┐
+│         │     │         │     │         │
+│ be282f7 │─────│ 4f7e591 │─────│ dad1e7f │
+│         │     │         │     │         │
+└─────────┘     └─────────┘     └─────────┘
 ```
 
 Now that both the `master` and `origin/master` branch have the feature commits, you can delete the `animate_menu_61` feature branch.
 
 ```text
-                             origin/master
-                                   │
-                                   │
-                                   │
-                                   ▼
-┌─────────┐    ┌─────────┐    ┌─────────┐
-│         │    │         │    │         │
-│ be282f7 │────│ 4f7e591 │────│ dad1e7f │
-│         │    │         │    │         │
-└─────────┘    └─────────┘    └─────────┘
-                                   ▲
-                                   │
-                                   │
-                                   │
-                                master
+                               origin/master
+                                  master
+                                     │
+                                     │
+                                     │
+                                     ▼
+┌─────────┐     ┌─────────┐     ┌─────────┐
+│         │     │         │     │         │
+│ be282f7 │─────│ 4f7e591 │─────│ dad1e7f │
+│         │     │         │     │         │
+└─────────┘     └─────────┘     └─────────┘
 ```
 
 And that's the basics of the Feature Branch Workflow.
