@@ -91,7 +91,7 @@ Each feature branch is created from the local `master` branch when it's synchron
 └─────────┘     └─────────┘
 ```
 
-Git makes no technical distinction between the `master` branch and a feature branch. So you can add and commit changes to a feature branch just as you did in the Centralized Workflow. The only difference is that new commits are stored in the local `animate_menu_42` branch, completely isolated from any other branch.
+A branch is just a label that points to a commit and Git makes no technical distinction between the `master` branch and a feature branch. So you can add and commit changes to a feature branch just as you did in the Centralized Workflow. The only difference is that new commits are stored in the local `animate_menu_42` branch, completely isolated from any other branch.
 
 Feature branches keep both the `master` and `origin/master` branches pristine and unchanged while you iterate on an idea. If a breaking change is accidentally committed while working, it won't immediately contaminate the `master` and `origin/master` branches. Thus you can continue developing and testing the project without polluting the centralized source of truth.
 
@@ -441,6 +441,12 @@ Those working on the `dimensions_1` feature branch should see something that res
  └─────────┘         └─────────┘
 ```
 
+Finally, delete your `dimensions_1` feature branch.
+
+```shell
+git branch -d dimensions_1
+```
+
 Assuming your staging area is clean, those who worked on the `colors_2` feature branch, checkout the local `master` branch.
 
 ```shell
@@ -660,6 +666,12 @@ Those working on the `colors_2` feature branch should see something that resembl
 └─────────┘     └─────────┘     └─────────┘
 ```
 
+Finally, delete your `colors_2` feature branch.
+
+```shell
+git branch -d colors_2
+```
+
 Those who worked on the `dimensions_1` feature branch can now synchronize their local `master` branch with the `origin/master` branch.
 
 ```shell
@@ -677,7 +689,6 @@ Those working on the `dimensions_1` feature branch should see something that res
 ```text
                                origin/master
                                HEAD -> master
-                                dimensions_1
                                      │
                                      │
                                      │
@@ -691,239 +702,423 @@ Those working on the `dimensions_1` feature branch should see something that res
 
 ### Workflow with merge commits
 
-A **merge commit** is result of a three-way merge.
+Now, as a team, create the following issues in the issue tracker for your repository. Then, as a team, assign the issues to different team members.
 
-Imagine the next issue for you to work on is creating a migration for a `users` table. The first step is to ensure the `master` and `origin/master` are synchronized.
+**NOTE:** If your team has more members than issues, your team gets to practice pair-programming.
 
-```text
-                               origin/master
-                               HEAD ─> master
-                                     │
-                                     │
-                                     │
-                                     ▼
-┌─────────┐     ┌─────────┐     ┌─────────┐
-│         │     │         │     │         │
-│ be282f7 │─────│ 4f7e591 │─────│ dad1e7f │
-│         │     │         │     │         │
-└─────────┘     └─────────┘     └─────────┘
-```
+1. Change the labels of the chart
+1. Change the title of the page
 
-Then, you'll create
+For team members with an assigned issue, create and checkout a corresponding feature branch in your local repository.
+
+1. `git checkout -b labels_3`
+1. `git checkout -b title_4`
+
+Show the commit logs of your local repository.
 
 ```shell
-git checkout
+git log --oneline --graph --all --decorate=short
 ```
 
-Assuming the currrent branch of your your local repository has , the first thing you'll want to do is create a feature branch.
+Those working on the `labels_3` feature branch should see something that resembles this diagram.
 
 ```text
                                origin/master
-                                  master
-                             migrate_users_43
+                                   master
+                              HEAD -> labels_3
                                      │
                                      │
                                      │
                                      ▼
 ┌─────────┐     ┌─────────┐     ┌─────────┐
 │         │     │         │     │         │
-│ be282f7 │─────│ 4f7e591 │─────│ dad1e7f │
+│ 2e0dc92 │─────│ 4f7e591 │─────│ 8b4782c │
 │         │     │         │     │         │
 └─────────┘     └─────────┘     └─────────┘
 ```
 
-```text
-                               origin/master
-                                  master     migrate_users_43
-                                     │               │
-                                     │               │
-                                     │               │
-                                     ▼               ▼
-┌─────────┐     ┌─────────┐     ┌─────────┐     ┌─────────┐
-│         │     │         │     │         │     │         │
-│ be282f7 │─────│ 4f7e591 │─────│ dad1e7f │─────│ 89ee2b0 │
-│         │     │         │     │         │     │         │
-└─────────┘     └─────────┘     └─────────┘     └─────────┘
-```
+And those working on the `title_4` feature branch should see something that resembles this diagram.
 
 ```text
                                origin/master
-                                  master
-                               fix_menu_44
+                                   master
+                              HEAD -> title_4
                                      │
                                      │
                                      │
                                      ▼
 ┌─────────┐     ┌─────────┐     ┌─────────┐
 │         │     │         │     │         │
-│ be282f7 │─────│ 4f7e591 │─────│ dad1e7f │
+│ 2e0dc92 │─────│ 4f7e591 │─────│ 8b4782c │
 │         │     │         │     │         │
 └─────────┘     └─────────┘     └─────────┘
 ```
 
+Then, as a team, work toward solving the issues. Once you have a working solution, commit the changes to your respective feature branch.
+
+**NOTE:** Please hold off on merging until the entire class is ready.
+
+Show the commit logs of your local repository.
+
+```shell
+git log --oneline --graph --all --decorate=short
+```
+
+Those working on the `labels_3` feature branch should see something that resembles this diagram.
+
 ```text
                                origin/master
-                                  master       fix_menu_44
+                                   master     HEAD -> labels_3
                                      │               │
                                      │               │
                                      │               │
                                      ▼               ▼
 ┌─────────┐     ┌─────────┐     ┌─────────┐     ┌─────────┐
 │         │     │         │     │         │     │         │
-│ be282f7 │─────│ 4f7e591 │─────│ dad1e7f │─────│ fda3560 │
+│ 2e0dc92 │─────│ 4f7e591 │─────│ 8b4782c │─────│ c69fbd2 │
 │         │     │         │     │         │     │         │
 └─────────┘     └─────────┘     └─────────┘     └─────────┘
 ```
 
+And those working on the `title_4` feature branch should see something that resembles this diagram.
+
 ```text
-                                                  master
-                               origin/master   fix_menu_44
+                               origin/master
+                                   master     HEAD -> title_4
                                      │               │
                                      │               │
                                      │               │
                                      ▼               ▼
 ┌─────────┐     ┌─────────┐     ┌─────────┐     ┌─────────┐
 │         │     │         │     │         │     │         │
-│ be282f7 │─────│ 4f7e591 │─────│ dad1e7f │─────│ fda3560 │
+│ 2e0dc92 │─────│ 4f7e591 │─────│ 8b4782c │─────│ a7c7c3f │
 │         │     │         │     │         │     │         │
 └─────────┘     └─────────┘     └─────────┘     └─────────┘
 ```
 
-```text
-                                               origin/master
-                                                  master
-                                               fix_menu_44
-                                                     │
-                                                     │
-                                                     │
-                                                     ▼
-┌─────────┐     ┌─────────┐     ┌─────────┐     ┌─────────┐
-│         │     │         │     │         │     │         │
-│ be282f7 │─────│ 4f7e591 │─────│ dad1e7f │─────│ fda3560 │
-│         │     │         │     │         │     │         │
-└─────────┘     └─────────┘     └─────────┘     └─────────┘
+Assuming your staging area is clean, those who worked on the `labels_3` feature branch, checkout the local `master` branch.
+
+```shell
+git checkout master
 ```
 
-```text
-                                               origin/master
-                                                  master
-                                                     │
-                                                     │
-                                                     │
-                                                     ▼
-┌─────────┐     ┌─────────┐     ┌─────────┐     ┌─────────┐
-│         │     │         │     │         │     │         │
-│ be282f7 │─────│ 4f7e591 │─────│ dad1e7f │─────│ fda3560 │
-│         │     │         │     │         │     │         │
-└─────────┘     └─────────┘     └─────────┘     └─────────┘
+Show the commit logs of your local repository.
+
+```shell
+git log --oneline --graph --all --decorate=short
 ```
 
+Those working on the `labels_3` feature branch should see something that resembles this diagram.
+
 ```text
-                                  master       origin/master
+                               origin/master
+                               HEAD -> master     labels_3
                                      │               │
                                      │               │
                                      │               │
                                      ▼               ▼
 ┌─────────┐     ┌─────────┐     ┌─────────┐     ┌─────────┐
 │         │     │         │     │         │     │         │
-│ be282f7 │─────│ 4f7e591 │─────│ dad1e7f │─────│ fda3560 │
-│         │     │         │     │         │─┐   │         │
-└─────────┘     └─────────┘     └─────────┘ │   └─────────┘
-                                            │
-                                            │   ┌─────────┐
-                                            │   │         │
-                                            └───│ 89ee2b0 │
-                                                │         │
-                                                └─────────┘
-                                                     ▲
-                                                     │
-                                                     │
-                                                     │
-                                             migrate_users_43
+│ 2e0dc92 │─────│ 4f7e591 │─────│ 8b4782c │─────│ c69fbd2 │
+│         │     │         │     │         │     │         │
+└─────────┘     └─────────┘     └─────────┘     └─────────┘
 ```
+
+Pull down any new commits from the central `origin/master` branch to the local `master` branch. There should be no commits, but this is the habit you'll want to form.
+
+```shell
+git pull
+```
+
+Checkout the `labels_3` feature branch.
+
+```shell
+git checkout labels_3
+```
+
+Rebase the `labels_3` feature branch with the `master` branch. The branch should be up to date, but, again, you'll want to form this habit.
+
+```shell
+git rebase master
+```
+
+Checkout the `master` branch once again.
+
+```shell
+git checkout master
+```
+
+Merge the `labels_3` feature branch into the local `master` branch.
+
+```shell
+git merge labels_3
+```
+
+Show the commit logs of your local repository.
+
+```shell
+git log --oneline --graph --all --decorate=short
+```
+
+Those working on the `labels_3` feature branch should see something that resembles this diagram.
+
+```text
+                                               HEAD -> master
+                               origin/master      labels_3
+                                     │               │
+                                     │               │
+                                     │               │
+                                     ▼               ▼
+┌─────────┐     ┌─────────┐     ┌─────────┐     ┌─────────┐
+│         │     │         │     │         │     │         │
+│ 2e0dc92 │─────│ 4f7e591 │─────│ 8b4782c │─────│ c69fbd2 │
+│         │     │         │     │         │     │         │
+└─────────┘     └─────────┘     └─────────┘     └─────────┘
+```
+
+And push the local `master` branch to the central `origin/master` branch.
+
+```shell
+git push
+```
+
+Show the commit logs of your local repository.
+
+```shell
+git log --oneline --graph --all --decorate=short
+```
+
+Those working on the `labels_3` feature branch should see something that resembles this diagram.
 
 ```text
                                                origin/master
-                                                  master
+                                               HEAD -> master
+                                                  labels_3
                                                      │
                                                      │
                                                      │
                                                      ▼
 ┌─────────┐     ┌─────────┐     ┌─────────┐     ┌─────────┐
 │         │     │         │     │         │     │         │
-│ be282f7 │─────│ 4f7e591 │─────│ dad1e7f │─────│ fda3560 │
-│         │     │         │     │         │─┐   │         │
-└─────────┘     └─────────┘     └─────────┘ │   └─────────┘
-                                            │
-                                            │
-                                            │   ┌─────────┐
-                                            │   │         │
-                                            └───│ 89ee2b0 │
-                                                │         │
-                                                └─────────┘
-                                                     ▲
-                                                     │
-                                                     │
-                                                     │
-                                             migrate_users_43
+│ 2e0dc92 │─────│ 4f7e591 │─────│ 8b4782c │─────│ c69fbd2 │
+│         │     │         │     │         │     │         │
+└─────────┘     └─────────┘     └─────────┘     └─────────┘
 ```
 
+Finally, delete your `labels_3` feature branch.
+
+```shell
+git branch -d labels_3
+```
+
+Assuming your staging area is clean, those who worked on the `title_4` feature branch, checkout the local `master` branch.
+
+```shell
+git checkout master
+```
+
+Show the commit logs of your local repository.
+
+```shell
+git log --oneline --graph --all --decorate=short
+```
+
+Those working on the `title_4` feature branch should see something that resembles this diagram.
+
 ```text
-                                               origin/master
-                                                  master     migrate_users_43
+                               origin/master
+                               HEAD -> master     title_4
+                                     │               │
+                                     │               │
+                                     │               │
+                                     ▼               ▼
+┌─────────┐     ┌─────────┐     ┌─────────┐     ┌─────────┐
+│         │     │         │     │         │     │         │
+│ 2e0dc92 │─────│ 4f7e591 │─────│ 8b4782c │─────│ a7c7c3f │
+│         │     │         │     │         │     │         │
+└─────────┘     └─────────┘     └─────────┘     └─────────┘
+```
+
+Though you'll always want to synchronize a feature branch with the central `origin/master` branch before merging, accidents happen from time to time. Go ahead and "accidentally" merge the `title_4` feature branch into the master branch.
+
+```shell
+git merge title_4
+```
+
+Show the commit logs of your local repository.
+
+```shell
+git log --oneline --graph --all --decorate=short
+```
+
+Those working on the `title_4` feature branch should see something that resembles this diagram.
+
+```text
+                                               HEAD -> master
+                               origin/master      title_4
+                                     │               │
+                                     │               │
+                                     │               │
+                                     ▼               ▼
+┌─────────┐     ┌─────────┐     ┌─────────┐     ┌─────────┐
+│         │     │         │     │         │     │         │
+│ 2e0dc92 │─────│ 4f7e591 │─────│ 8b4782c │─────│ a7c7c3f │
+│         │     │         │     │         │     │         │
+└─────────┘     └─────────┘     └─────────┘     └─────────┘
+```
+
+Pull down any new commits from the central `origin/master` branch to the local `master` branch. There should be one commit pulled down.
+
+```shell
+git pull
+```
+
+But your text editor should open a window that looks somethings like this.
+
+[INSERT IMAGE HERE]
+
+In this scenario, Git has asked your text editor to ask you to confirm a message for special kind of commit called a merge commit. A **merge commit** is result of a merge between three commits.
+
+Show the commit logs of your local repository.
+
+```shell
+git log --oneline --graph --all --decorate=short
+```
+
+Those working on the `title_4` feature branch should see something that resembles this diagram.
+
+```text
+                                               origin/master   HEAD -> master
                                                      │               │
                                                      │               │
                                                      │               │
                                                      ▼               ▼
 ┌─────────┐     ┌─────────┐     ┌─────────┐     ┌─────────┐     ┌─────────┐
 │         │     │         │     │         │     │         │     │         │
-│ be282f7 │─────│ 4f7e591 │─────│ dad1e7f │─────│ fda3560 │─────│ 5e049cf │
-│         │     │         │     │         │     │         │     │         │
-└─────────┘     └─────────┘     └─────────┘     └─────────┘     └─────────┘
+│ 2e0dc92 │─────│ 4f7e591 │─────│ 8b4782c │─────│ c69fbd2 │─────│ 00131b9 │
+│         │     │         │     │         │─┐   │         │   ┌─│         │
+└─────────┘     └─────────┘     └─────────┘ │   └─────────┘   │ └─────────┘
+                                            │                 │
+                                            │   ┌─────────┐   │
+                                            │   │         │   │
+                                            └───│ a7c7c3f │───┘    
+                                                │         │
+                                                └─────────┘
+                                                     ▲
+                                                     │
+                                                     │
+                                                     │
+                                                  title_4
 ```
 
-```text
-                                                                  master
-                                               origin/master migrate_users_43
-                                                     │               │
-                                                     │               │
-                                                     │               │
-                                                     ▼               ▼
-┌─────────┐     ┌─────────┐     ┌─────────┐     ┌─────────┐     ┌─────────┐
-│         │     │         │     │         │     │         │     │         │
-│ be282f7 │─────│ 4f7e591 │─────│ dad1e7f │─────│ fda3560 │─────│ 5e049cf │
-│         │     │         │     │         │     │         │     │         │
-└─────────┘     └─────────┘     └─────────┘     └─────────┘     └─────────┘
+Push the local `master` branch to the central `origin/master` branch.
+
+```shell
+git push
 ```
+
+Show the commit logs of your local repository.
+
+```shell
+git log --oneline --graph --all --decorate=short
+```
+
+Those working on the `title_4` feature branch should see something that resembles this diagram.
 
 ```text
                                                                origin/master
-                                                                  master
-                                                             migrate_users_43
+                                                               HEAD -> master
                                                                      │
                                                                      │
                                                                      │
                                                                      ▼
 ┌─────────┐     ┌─────────┐     ┌─────────┐     ┌─────────┐     ┌─────────┐
 │         │     │         │     │         │     │         │     │         │
-│ be282f7 │─────│ 4f7e591 │─────│ dad1e7f │─────│ fda3560 │─────│ 5e049cf │
-│         │     │         │     │         │     │         │     │         │
-└─────────┘     └─────────┘     └─────────┘     └─────────┘     └─────────┘
+│ 2e0dc92 │─────│ 4f7e591 │─────│ 8b4782c │─────│ c69fbd2 │─────│ 00131b9 │
+│         │     │         │     │         │─┐   │         │   ┌─│         │
+└─────────┘     └─────────┘     └─────────┘ │   └─────────┘   │ └─────────┘
+                                            │                 │
+                                            │   ┌─────────┐   │
+                                            │   │         │   │
+                                            └───│ a7c7c3f │───┘    
+                                                │         │
+                                                └─────────┘
+                                                     ▲
+                                                     │
+                                                     │
+                                                     │
+                                                  title_4
 ```
+
+Finally, delete your `title_4` feature branch.
+
+```shell
+git branch -d title_4
+```
+
+Show the commit logs of your local repository.
+
+```shell
+git log --oneline --graph --all --decorate=short
+```
+
+Those working on the `title_4` feature branch should see something that resembles this diagram.
 
 ```text
                                                                origin/master
-                                                                  master
+                                                               HEAD -> master
                                                                      │
                                                                      │
                                                                      │
                                                                      ▼
 ┌─────────┐     ┌─────────┐     ┌─────────┐     ┌─────────┐     ┌─────────┐
 │         │     │         │     │         │     │         │     │         │
-│ be282f7 │─────│ 4f7e591 │─────│ dad1e7f │─────│ fda3560 │─────│ 5e049cf │
-│         │     │         │     │         │     │         │     │         │
-└─────────┘     └─────────┘     └─────────┘     └─────────┘     └─────────┘
+│ 2e0dc92 │─────│ 4f7e591 │─────│ 8b4782c │─────│ c69fbd2 │─────│ 00131b9 │
+│         │     │         │     │         │─┐   │         │   ┌─│         │
+└─────────┘     └─────────┘     └─────────┘ │   └─────────┘   │ └─────────┘
+                                            │                 │
+                                            │   ┌─────────┐   │
+                                            │   │         │   │
+                                            └───│ a7c7c3f │───┘    
+                                                │         │
+                                                └─────────┘
 ```
+
+Those who worked on the `labels_3` feature branch can now synchronize their local `master` branch with the `origin/master` branch.
+
+```shell
+git pull
+```
+
+Show the commit logs of your local repository.
+
+```shell
+git log --oneline --graph --all --decorate=short
+```
+
+Those working on the `dimensions_1` feature branch should see something that resembles this diagram.
+
+```text
+                                                               origin/master
+                                                               HEAD -> master
+                                                                     │
+                                                                     │
+                                                                     │
+                                                                     ▼
+┌─────────┐     ┌─────────┐     ┌─────────┐     ┌─────────┐     ┌─────────┐
+│         │     │         │     │         │     │         │     │         │
+│ 2e0dc92 │─────│ 4f7e591 │─────│ 8b4782c │─────│ c69fbd2 │─────│ 00131b9 │
+│         │     │         │     │         │─┐   │         │   ┌─│         │
+└─────────┘     └─────────┘     └─────────┘ │   └─────────┘   │ └─────────┘
+                                            │                 │
+                                            │   ┌─────────┐   │
+                                            │   │         │   │
+                                            └───│ a7c7c3f │───┘    
+                                                │         │
+                                                └─────────┘
+```
+
+Everyone, config your `git` command to perform a `fetch + rebase` for a pull instead of a `fetch + merge`.
 
 
 ```shell
