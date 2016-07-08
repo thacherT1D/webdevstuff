@@ -214,7 +214,25 @@ And it should look something like this.
 
 ![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/275/Screen_Shot_2016-07-08_at_11.05.48_AM.png)
 
-1. Have each team member create a new issue to transfer more students into the "understand merge conflicts" segment of the chart.
+Now, as a team, create the following issues in the issue tracker for your repository. Then, as a team, assign the issues to different team members.
+
+**NOTE:** If your team has more members than issues, your team gets to practice pair-programming.
+
+1. Change the dimensions of the chart
+1. Change the colors of the chart
+
+For team members with an assigned issue, create and checkout a corresponding feature branch in your local repository.
+
+1. `git checkout -b dimensions_1`
+1. `git checkout -b colors_2`
+
+Now, as a team, work toward solving the issues. Once you have a working solution, commit the changes to your respective feature branch.
+
+**NOTE:** Please hold off on merging until the entire class is ready.
+
+
+
+Have each team member create a new issue in your repository's issue tracker. to transfer more students into the "understand merge conflicts" segment of the chart.
 
 1. Have each team member clone the repository to their development environment.
 
