@@ -24,7 +24,7 @@ origin/master
  └─────────┘
 ```
 
-You began each project by cloning the central repository to your development environment. Cloning is the process of copying all the commits from the `origin/master` branch to a local repository's `master` branch.
+In most cases, you got started by forking and cloning a central repository. Forking is the process of coping a repository to your GitHub account, while cloning is the process of copying a central repository to your local development environment. When you clone, all the commits from the central repository's `origin/master` branch are copied to your local repository's `master` branch.
 
 ```text
 origin/master
@@ -44,7 +44,7 @@ origin/master
    master
 ```
 
-In your own local repository, you edited files and committed changes. These new commits were stored on the local `master` branch, completely isolated from the central repository. This let you defer synchronizing with the central repository until you were at a convenient break point.
+In your local repository, you edited files and committed changes. These new commits were stored in the local `master` branch, completely isolated from the central `origin/master` branch. This allowed you defer synchronizing with the central repository until you reached a convenient break point.
 
 ```text
 origin/master
@@ -64,7 +64,7 @@ origin/master
                   master
 ```
 
-When you were ready to publish your changes, you pushed your local `master` branch to the central repository. This added all of the additional local commits to the `origin/master` branch.
+When you were ready to publish your changes, you pushed your local `master` branch to the central `origin/master` branch. Pushing is the process of adding all of the additional commits from the local repository to central repository.
 
 ```text
               origin/master
@@ -84,7 +84,7 @@ When you were ready to publish your changes, you pushed your local `master` bran
                  master
 ```
 
-Now that you've got the hang of the Centralized Workflow, it's time to add feature branches to your development process so you can streamline communication with your team. The core idea behind the **Feature Branch Workflow** is that all feature development takes place in a dedicated branch instead of the `master` branch.
+Like previously mentioned, this was your development workflow for the first quarter of the course. However, throughout the second quarter, you started adopting a Feature Branch Workflow to your development process. The core idea behind the **Feature Branch Workflow** is that all feature development takes place in a dedicated branch instead of the `master` branch.
 
 The Feature Branch Workflow still uses a central repository, and the `origin/master` branch still represents the official project history. But, instead of committing directly on your local `master` branch, you create a new branch every time you start work on a new feature. Descriptive feature branch names, like `animate_menu_61`, help to give a clear, highly-focused purpose to each branch.
 
@@ -201,6 +201,8 @@ In addition, feature branches can be pushed to the central repository. This make
 Turn to your partner and explain what the Feature Branch Workflow is in your own words. Be sure to draw a diagram together that describes how the workflow progresses over time.
 
 ## Why is the Feature Branch Workflow is important?
+
+so you can streamline communication with your team
 
 This encapsulation makes it easy for you to work on a particular feature without disturbing the main codebase. It also means the `master` branch will never contain broken code, which is a huge advantage when working collaboratively.
 
