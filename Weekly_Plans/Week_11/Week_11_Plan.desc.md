@@ -7,50 +7,6 @@
 
 ---
 
-<table>
-  <tr>
-    <td>[undercats](https://github.com/undercats)</td>
-    <td>[mukipuz](https://github.com/mukipuz)</td>
-    <td>[chernobyl-pod](https://github.com/orgs/chernobyl-pod)</td>
-    <td>[foo-baristas](https://github.com/foo-baristas)</td>
-    <td>[oddball-designs](https://github.com/oddball-designs)</td>
-  </tr>
-  <tr>
-    <td>Sam</td>
-    <td>Michael</td>
-    <td>Mike</td>
-    <td>Jeremy</td>
-    <td>Ryan</td>
-  </tr>
-  <tr>
-    <td>Gabe</td>
-    <td>Daniel</td>
-    <td>Jimmy</td>
-    <td>Kristen</td>
-    <td>Stephanie</td>
-  </tr>
-  <tr>
-    <td>Jess</td>
-    <td>Jayme</td>
-    <td>Roy</td>
-    <td>Vy</td>
-    <td>Philip</td>
-  </tr>
-  <tr>
-    <td>[Deployed Site](http://github.com)</td>
-    <td>[Deployed Site](http://github.com)</td>
-    <td>[Deployed Site](http://github.com)</td>
-    <td>[Deployed Site](http://github.com)</td>
-    <td>[Deployed Site](http://github.com)</td>
-  </tr>
-  <tr>
-    <td>Logan</td>
-    <td>Roger</td>
-    <td>Jordan</td>
-    <td>Roger</td>
-    <td>Jordan</td>
-  </tr>
-</table>
 
 # Monday, July 4 - Independence Day, No Class
 
@@ -206,8 +162,6 @@ Morning:
   </tr>
 </table>
 
-
-
 ---
 
 # Friday, July 8
@@ -227,6 +181,51 @@ Afternoon:
  1. chernoby-pod
  1. undercats
 - Q2 Wrap up.
+
+<table>
+  <tr>
+    <td>[undercats](https://github.com/undercats)</td>
+    <td>[mukipuz](https://github.com/mukipuz)</td>
+    <td>[chernobyl-pod](https://github.com/orgs/chernobyl-pod)</td>
+    <td>[foo-baristas](https://github.com/foo-baristas)</td>
+    <td>[oddball-designs](https://github.com/oddball-designs)</td>
+  </tr>
+  <tr>
+    <td>Sam</td>
+    <td>Michael</td>
+    <td>Mike</td>
+    <td>Jeremy</td>
+    <td>Ryan</td>
+  </tr>
+  <tr>
+    <td>Gabe</td>
+    <td>Daniel</td>
+    <td>Jimmy</td>
+    <td>Kristen</td>
+    <td>Stephanie</td>
+  </tr>
+  <tr>
+    <td>Jess</td>
+    <td>Jayme</td>
+    <td>Roy</td>
+    <td>Vy</td>
+    <td>Philip</td>
+  </tr>
+  <tr>
+    <td>[Grokkit](http://grokkit.herokuapp.com/)</td>
+    <td>[Mukipayz](http://mukipayz.herokuapp.com/)</td>
+    <td>[Shop Appetit](http://testing-travis.herokuapp.com/)</td>
+    <td>[Ride Share](http://gschool-rideshare.herokuapp.com/index)</td>
+    <td>[Habit@](http://habit-at.herokuapp.com/)</td>
+  </tr>
+  <tr>
+    <td>Logan</td>
+    <td>Roger</td>
+    <td>Jordan</td>
+    <td>Roger</td>
+    <td>Jordan</td>
+  </tr>
+</table>
 
 Lightning Talks:
 - Jayme Thorson
