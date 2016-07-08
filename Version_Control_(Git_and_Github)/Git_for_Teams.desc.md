@@ -24,7 +24,7 @@ origin/master
  └─────────┘
 ```
 
-In most cases, you got started by forking and cloning a central repository. Forking is the process of coping a repository to your GitHub account, while cloning is the process of copying a central repository to your local development environment. When you clone, all the commits from the central repository's `origin/master` branch are copied to your local repository's `master` branch.
+From here, you got started by forking and cloning a central repository. Forking is the process of coping a repository to your GitHub account, while cloning is the process of copying a central repository to your local development environment. When you clone, all the commits from the central repository's `origin/master` branch are copied to your local repository's `master` branch.
 
 ```text
 origin/master
