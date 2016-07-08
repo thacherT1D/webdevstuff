@@ -704,8 +704,6 @@ Those working on the `dimensions_1` feature branch should see something that res
 
 Now, as a team, create the following issues in the issue tracker for your repository. Then, as a team, assign the issues to different team members.
 
-**NOTE:** If your team has more members than issues, your team gets to practice pair-programming.
-
 1. Change the labels of the chart
 1. Change the title of the page
 
@@ -1129,16 +1127,19 @@ git config --global branch.master.rebase true
 
 As a team, create the following issues in the issue tracker for your repository. Then, as a team, assign the issues to different team members.
 
-**NOTE:** If your team has more members than issues, your team gets to practice pair-programming.
-
 1. Change the data so more students don't understand
 1. Change the data so more students do understand
 
-For team members with an assigned issue, create and checkout a corresponding feature branch in your local repository.
+For team members with an assigned issue, create and checkout a corresponding feature branch in your local repository. Then, as a team, work toward solving the issues using a team-based Feature Branch Workflow.
 
-Then, as a team, work toward solving the issues using a team-based Feature Branch Workflow.
+Be sure that each team member changes both data values. This will force the slowest person to resolve a merge conflict. As a team, resolve the conflict by following these steps.
 
-**HINT:** Be sure that each team member changes both data values. This will force you to resolve a merge conflict when rebasing.
+1. Find the conflict in the code.
+1. Pick the winning code.
+1. Remove all the merge conflict syntax.
+1. Save the file.
+1. Add the file.
+1. Continue the rebase with `git rebase --continue`
 
 ## Resources
 
