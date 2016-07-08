@@ -40,7 +40,7 @@ origin/master
  └─────────┘
 ```
 
-In your local repository, you edited files and committed changes. These new commits were stored in the local `master` branch, completely isolated from the central `origin/master` branch. This allowed you defer synchronizing with the central repository until you reached a convenient break point.
+In your local repository, you created and modified files, added the changes to the local repository's staging area, and committed the staging to the local `master` branch. These new commits, stored in the local `master` branch, were completely isolated from the central `origin/master` branch. This allowed you defer synchronizing with the central repository until you reached a convenient stopping point.
 
 ```text
 origin/master      master
