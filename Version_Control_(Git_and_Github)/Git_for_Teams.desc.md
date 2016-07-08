@@ -1125,9 +1125,20 @@ Everyone, config your `git` command to perform a `fetch + rebase` for a pull ins
 git config --global branch.master.rebase true
 ```
 
-## Exercise
+## Assignment
 
-Practice more!
+As a team, create the following issues in the issue tracker for your repository. Then, as a team, assign the issues to different team members.
+
+**NOTE:** If your team has more members than issues, your team gets to practice pair-programming.
+
+1. Change the data so more students don't understand
+1. Change the data so more students do understand
+
+For team members with an assigned issue, create and checkout a corresponding feature branch in your local repository.
+
+Then, as a team, work toward solving the issues using a team-based Feature Branch Workflow.
+
+**HINT:** Be sure that each team member changes both data values. This will force you to resolve a merge conflict when rebasing.
 
 ## Resources
 
