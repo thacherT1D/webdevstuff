@@ -9,7 +9,7 @@
 
 In the first quarter this course, you employed a Centralized Workflow to manage the Git commits for your projects. In Git, a **Centralized Workflow** uses a central `origin` repository with a single `master` branch to serve as the hub for all the commits of a project. In Git speak, this is simply referred to as the `origin/master` branch.
 
-Most of your projects started off with at least one commit, made by your instructors, in the `origin/master` branch.
+Most of your projects started off with at least one commit in the `origin/master` branch as your instructors wanted to give you a solid foundation from which to build.
 
 ```text
 origin/master
