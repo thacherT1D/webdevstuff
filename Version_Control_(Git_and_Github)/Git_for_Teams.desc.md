@@ -158,11 +158,11 @@ Now that all three branches contain the same commits, you can safely delete the 
 └─────────┘     └─────────┘     └─────────┘
 ```
 
-And thus successfully completing one cycle of the Feature Branch Workflow.
+And thus you've successfully completing one cycle of the Feature Branch Workflow.
 
 ### Exercise
 
-Turn to your partner and explain what the Feature Branch Workflow is in your own words. It may be helpful to draw diagram together to describe how the commits flow over time.
+Turn to your partner and explain what the Feature Branch Workflow is in your own words. It may be helpful to draw a diagram together to visualize how branches change over time.
 
 ## Why is the Feature Branch Workflow is important?
 
