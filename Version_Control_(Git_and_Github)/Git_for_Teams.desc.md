@@ -226,11 +226,85 @@ For team members with an assigned issue, create and checkout a corresponding fea
 1. `git checkout -b dimensions_1`
 1. `git checkout -b colors_2`
 
-Now, as a team, work toward solving the issues. Once you have a working solution, commit the changes to your respective feature branch.
+Then, as a team, work toward solving the issues. Once you have a working solution, commit the changes to your respective feature branch.
 
 **NOTE:** Please hold off on merging until the entire class is ready.
 
+Assuming your staging area is clean, those who worked on the `dimensions_1` feature branch, checkout the local `master` branch.
 
+```shell
+git checkout master
+```
+
+Pull down any new commits from the central `origin/master` branch to the local `master` branch. There should be no commits, but this is the habit you'll want to form.
+
+```shell
+git pull
+```
+
+Checkout the `dimensions_1` feature branch.
+
+```shell
+git checkout dimensions_1
+```
+
+Rebase the `dimensions_1` feature branch with the `master` branch. The branch should be up to date, but, again, you'll want to form this habit.
+
+Checkout the `master` branch once again.
+
+```shell
+git checkout master
+```
+
+Merge in the `dimensions_1` feature branch.
+
+```shell
+git merge dimensions_1
+```
+
+And push the local `master` branch to the central `origin/master` branch.
+
+```shell
+git push
+```
+
+Assuming your staging area is clean, those who worked on the `colors_2` feature branch, checkout the local `master` branch.
+
+```shell
+git checkout master
+```
+
+Pull down any new commits from the central `origin/master` branch to the local `master` branch. There should be one commit pulled down.
+
+```shell
+git pull
+```
+
+Checkout the `colors_2` feature branch.
+
+```shell
+git checkout colors_2
+```
+
+Rebase the `colors_2` feature branch with the `master` branch. The branch should be up to date, but, again, you'll want to form this habit.
+
+Checkout the `master` branch once again.
+
+```shell
+git checkout master
+```
+
+Merge in the `colors_2` feature branch.
+
+```shell
+git merge colors_2
+```
+
+And push the local `master` branch to the central `origin/master` branch.
+
+```shell
+git push
+```
 
 Have each team member create a new issue in your repository's issue tracker. to transfer more students into the "understand merge conflicts" segment of the chart.
 
@@ -257,6 +331,8 @@ Add and commit your changes to the feature branch.
 git add .
 git commit -m '25 more students get it!'
 ```
+
+A **merge commit** is result of a three-way merge.
 
 Imagine the next issue for you to work on is creating a migration for a `users` table. The first step is to ensure the `master` and `origin/master` are synchronized.
 
