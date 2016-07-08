@@ -180,7 +180,7 @@ Afternoon:
  1. oddball-designs
  1. chernoby-pod
  1. undercats
-- Q2 Wrap up.
+
 
 <table>
   <tr>
@@ -226,6 +226,8 @@ Afternoon:
     <td>Jordan</td>
   </tr>
 </table>
+
+- Q2 Wrap up.
 
 Lightning Talks:
 - Jayme Thorson
