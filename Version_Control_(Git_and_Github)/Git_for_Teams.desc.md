@@ -29,6 +29,12 @@ Create a new feature branch with the issue number as the suffix.
 git checkout -b transfer_1
 ```
 
+Inspect the `pie.html` file in your browser.
+
+```shell
+open pie.html
+```
+
 In the `pie.html` file, update the data values as you see fit. Make sure each team member chooses different values.
 
 ```javascript
