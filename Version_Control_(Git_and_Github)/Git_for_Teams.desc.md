@@ -190,13 +190,29 @@ It's time to use the Feature Branch Workflow in a team-based project. To get sta
 
 1. Have the project owner enable GitHub Issues in the "Settings" section of the forked repository. By default, GitHub disables issues for forked repositories.
 
-1. Have the project owner add the other team members as Collaborators also in the "Settings" section.
+1. Have the project owner add the other team members as Collaborators which is also found in the "Settings" section.
 
-As a team, inspect the following areas of the repository.
+Now, as a team, inspect the following areas of the repository.
 
 - The commits on the `master` branch.
 - The open issues.
 - The contributors graph.
+
+Then, have each team member clone the repository to their own development environment. Once cloned, change into the project directory.
+
+```shell
+cd wd-merge-conflict-chart
+```
+
+And open the `index.html` file in your browser.
+
+```shell
+open index.html
+```
+
+And it should look something like this.
+
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/273/Screen_Shot_2016-07-08_at_11.05.48_AM.png)
 
 1. Have each team member create a new issue to transfer more students into the "understand merge conflicts" segment of the chart.
 
@@ -206,12 +222,6 @@ Create a new feature branch with the issue number as the suffix.
 
 ```shell
 git checkout -b transfer_1
-```
-
-Inspect the `index.html` file in your browser.
-
-```shell
-open index.html
 ```
 
 In the `index.html` file, update the data values as you see fit. Make sure each team member chooses different values.
