@@ -72,14 +72,14 @@ When you were ready to publish your changes, you pushed your local `master` bran
 
 As previously mentioned, this was, more or less, your Git workflow for the first quarter of the course. However, throughout the second quarter, you began to adopt a Feature Branch Workflow to manage the Git commits of your projects. The core idea behind the **Feature Branch Workflow** is that all commits related a specific feature, or bug fix, are stored in a dedicated branch instead of the `master` branch.
 
-The Feature Branch Workflow still uses a central repository and the `origin/master` branch still represents the official project history. But, instead of committing directly on your local `master` branch, you create a new branch each time you start work on a new feature. Descriptive feature branch names, like `animate_menu_61`, help to give a clear, highly-focused purpose to each branch. It's common to suffix an feature branch name with the number of a corresponding issue in an issue tracker.
+The Feature Branch Workflow still uses a central repository and the `origin/master` branch still represents the official project history. But, instead of committing directly on your local `master` branch, you create a new branch each time you start work on a new feature. Descriptive feature branch names, like `animate_menu_42`, help to give a clear, highly-focused purpose to each branch. It's common to suffix a feature branch name with the number of a corresponding issue in an issue tracker.
 
 Each feature branch is created from the local `master` branch when it's synchronized with the central `origin/master` branch.
 
 ```text
                origin/master
                   master
-              animate_menu_61
+              animate_menu_42
                      │
                      │
                      │
@@ -91,11 +91,11 @@ Each feature branch is created from the local `master` branch when it's synchron
 └─────────┘     └─────────┘
 ```
 
-Git makes no technical distinction between the `master` branch and a feature branch. So you can add and commit changes to a feature branch just as you did in the Centralized Workflow. The only difference being the new commits are stored in the local `animate_menu_61` branch, completely isolated from both the `master` and `origin/master` branches. This let you defer synchronizing your work with official project history until the feature is working as intended.
+Git makes no technical distinction between the `master` branch and a feature branch. So you can add and commit changes to a feature branch just as you did in the Centralized Workflow. The only difference being the new commits are stored in the local `animate_menu_42` branch, completely isolated from both the `master` and `origin/master` branches. This let you defer synchronizing your work with official project history until the feature is working as intended.
 
 ```text
                origin/master
-                  master      animate_menu_61
+                  master      animate_menu_42
                      │               │
                      │               │
                      │               │
@@ -107,11 +107,11 @@ Git makes no technical distinction between the `master` branch and a feature bra
 └─────────┘     └─────────┘     └─────────┘
 ```
 
-When you're ready to publish your changes, you first merge your local `animate_menu_61` branch into the local `master` branch. This adds the feature's commits into the `master` branch.
+When you're ready to publish your changes, you first merge your local `animate_menu_42` branch into the local `master` branch. This adds the feature's commits into the `master` branch.
 
 ```text
                                   master
-               origin/master  animate_menu_61
+               origin/master  animate_menu_42
                      │               │
                      │               │
                      │               │
@@ -128,7 +128,7 @@ Then, you push your local `master` branch to the central `origin/master` branch,
 ```text
                                origin/master
                                   master
-                              animate_menu_61
+                              animate_menu_42
                                      │
                                      │
                                      │
@@ -140,7 +140,7 @@ Then, you push your local `master` branch to the central `origin/master` branch,
 └─────────┘     └─────────┘     └─────────┘
 ```
 
-Now that both the `master` and `origin/master` branch have the feature commits, you can delete the `animate_menu_61` feature branch.
+Now that both the `master` and `origin/master` branch have the feature commits, you can delete the `animate_menu_42` feature branch.
 
 ```text
                                origin/master
@@ -171,7 +171,7 @@ This encapsulation makes it easy for you to work on a particular feature without
 ```text
                                origin/master
                                   master
-                             migrate_users_62
+                             migrate_users_43
                                      │
                                      │
                                      │
@@ -186,7 +186,7 @@ This encapsulation makes it easy for you to work on a particular feature without
 
 ```text
                                origin/master
-                                  master     migrate_users_62
+                                  master     migrate_users_43
                                      │               │
                                      │               │
                                      │               │
@@ -201,7 +201,7 @@ This encapsulation makes it easy for you to work on a particular feature without
 ```text
                                origin/master
                                   master
-                               fix_menu_63
+                               fix_menu_44
                                      │
                                      │
                                      │
@@ -215,7 +215,7 @@ This encapsulation makes it easy for you to work on a particular feature without
 
 ```text
                                origin/master
-                                  master       fix_menu_63
+                                  master       fix_menu_44
                                      │               │
                                      │               │
                                      │               │
@@ -229,7 +229,7 @@ This encapsulation makes it easy for you to work on a particular feature without
 
 ```text
                                                   master
-                               origin/master   fix_menu_63
+                               origin/master   fix_menu_44
                                      │               │
                                      │               │
                                      │               │
@@ -244,7 +244,7 @@ This encapsulation makes it easy for you to work on a particular feature without
 ```text
                                                origin/master
                                                   master
-                                               fix_menu_63
+                                               fix_menu_44
                                                      │
                                                      │
                                                      │
@@ -291,7 +291,7 @@ This encapsulation makes it easy for you to work on a particular feature without
                                                      │
                                                      │
                                                      │
-                                             migrate_users_62
+                                             migrate_users_43
 ```
 
 ```text
@@ -317,33 +317,33 @@ This encapsulation makes it easy for you to work on a particular feature without
                                                      │
                                                      │
                                                      │
-                                             migrate_users_62
+                                             migrate_users_43
 ```
 
 ```text
                                                origin/master
-                                                  master     migrate_users_62
+                                                  master     migrate_users_43
                                                      │               │
                                                      │               │
                                                      │               │
                                                      ▼               ▼
 ┌─────────┐     ┌─────────┐     ┌─────────┐     ┌─────────┐     ┌─────────┐
 │         │     │         │     │         │     │         │     │         │
-│ be282f7 │─────│ 4f7e591 │─────│ dad1e7f │─────│ fda3560 │─────│ 89ee2b0 │
+│ be282f7 │─────│ 4f7e591 │─────│ dad1e7f │─────│ fda3560 │─────│ 5e049cf │
 │         │     │         │     │         │     │         │     │         │
 └─────────┘     └─────────┘     └─────────┘     └─────────┘     └─────────┘
 ```
 
 ```text
                                                                   master
-                                               origin/master migrate_users_62
+                                               origin/master migrate_users_43
                                                      │               │
                                                      │               │
                                                      │               │
                                                      ▼               ▼
 ┌─────────┐     ┌─────────┐     ┌─────────┐     ┌─────────┐     ┌─────────┐
 │         │     │         │     │         │     │         │     │         │
-│ be282f7 │─────│ 4f7e591 │─────│ dad1e7f │─────│ fda3560 │─────│ 89ee2b0 │
+│ be282f7 │─────│ 4f7e591 │─────│ dad1e7f │─────│ fda3560 │─────│ 5e049cf │
 │         │     │         │     │         │     │         │     │         │
 └─────────┘     └─────────┘     └─────────┘     └─────────┘     └─────────┘
 ```
@@ -351,14 +351,14 @@ This encapsulation makes it easy for you to work on a particular feature without
 ```text
                                                                origin/master
                                                                   master
-                                                             migrate_users_62
+                                                             migrate_users_43
                                                                      │
                                                                      │
                                                                      │
                                                                      ▼
 ┌─────────┐     ┌─────────┐     ┌─────────┐     ┌─────────┐     ┌─────────┐
 │         │     │         │     │         │     │         │     │         │
-│ be282f7 │─────│ 4f7e591 │─────│ dad1e7f │─────│ fda3560 │─────│ 89ee2b0 │
+│ be282f7 │─────│ 4f7e591 │─────│ dad1e7f │─────│ fda3560 │─────│ 5e049cf │
 │         │     │         │     │         │     │         │     │         │
 └─────────┘     └─────────┘     └─────────┘     └─────────┘     └─────────┘
 ```
@@ -372,7 +372,7 @@ This encapsulation makes it easy for you to work on a particular feature without
                                                                      ▼
 ┌─────────┐     ┌─────────┐     ┌─────────┐     ┌─────────┐     ┌─────────┐
 │         │     │         │     │         │     │         │     │         │
-│ be282f7 │─────│ 4f7e591 │─────│ dad1e7f │─────│ fda3560 │─────│ 89ee2b0 │
+│ be282f7 │─────│ 4f7e591 │─────│ dad1e7f │─────│ fda3560 │─────│ 5e049cf │
 │         │     │         │     │         │     │         │     │         │
 └─────────┘     └─────────┘     └─────────┘     └─────────┘     └─────────┘
 ```
