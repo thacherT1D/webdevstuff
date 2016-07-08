@@ -198,7 +198,7 @@ Now, as a team, inspect the following areas of the repository.
 - The open issues.
 - The contributors graph.
 
-Then, have each team member clone the repository to their own development environment. Once cloned, change into the project directory.
+Then, have each team member clone the project owner's forked repository to their own development environment. Once cloned, change into the project directory.
 
 ```shell
 cd wd-merge-conflict-chart
