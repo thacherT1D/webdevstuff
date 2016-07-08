@@ -380,6 +380,10 @@ This encapsulation makes it easy for you to work on a particular feature without
 
 ## How do you use the feature branch workflow?
 
+```shell
+git config --global branch.master.rebase true
+```
+
 Visit the [Merge Conflict Chart](https://github.com/gSchool/merge_conflict_chart.git) repository on GitHub.
 
 1. Have one person on your team fork this repository. That person is now the project owner.
