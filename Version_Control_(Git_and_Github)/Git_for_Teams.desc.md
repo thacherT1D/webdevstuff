@@ -1125,6 +1125,10 @@ Everyone, config your `git` command to perform a `fetch + rebase` for a pull ins
 git config --global branch.master.rebase true
 ```
 
+## Exercise
+
+Practice more!
+
 ## Resources
 
 - [Atlassian Feature Branch Workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow)
