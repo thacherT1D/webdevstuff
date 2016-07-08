@@ -2,7 +2,7 @@
 
 - Explain what the Feature Branch Workflow is.
 - Explain why the Feature Branch Workflow is important.
-- Use the Feature Branch Workflow.
+- Use the feature branch workflow in a team-based project.
 
 ## What's the Feature Branch Workflow?
 
@@ -180,7 +180,51 @@ As you've seen, the Feature Branch Workflow makes it easy for you to work on a p
 
 Take a moment to write down why the Feature Branch Workflow is important. After about a minute, your instructor will cold call on the class and ask what was written down.
 
-## How do you use the feature branch workflow?
+## How do you use the feature branch workflow in a team-based project?
+
+To get started, visit the [Merge Conflict Chart](https://github.com/gSchool/merge_conflict_chart.git) repository on GitHub.
+
+1. Have one person on your team fork this repository. That person is now the project owner.
+
+1. Have the owner turn on GitHub Issues as forked repositories will disabled them by default.
+
+1. Have the owner add the other team members as Collaborators.
+
+1. Have each team member inspect the commits on the `master` branch.
+
+1. Have each team member inspect the open issues for the project.
+
+1. Have each team member create a new issue to transfer more students into the "understand merge conflicts" segment of the chart.
+
+1. Have each team member clone the repository to their development environment.
+
+Create a new feature branch with the issue number as the suffix.
+
+```shell
+git checkout -b transfer_1
+```
+
+Inspect the `pie.html` file in your browser.
+
+```shell
+open pie.html
+```
+
+In the `pie.html` file, update the data values as you see fit. Make sure each team member chooses different values.
+
+```javascript
+data: [
+  125,
+  475
+]
+```
+
+Add and commit your changes to the feature branch.
+
+```shell
+git add .
+git commit -m '25 more students get it!'
+```
 
 Imagine the next issue for you to work on is creating a migration for a `users` table. The first step is to ensure the `master` and `origin/master` are synchronized.
 
@@ -417,50 +461,6 @@ Assuming the currrent branch of your your local repository has , the first thing
 
 ```shell
 git config --global branch.master.rebase true
-```
-
-Visit the [Merge Conflict Chart](https://github.com/gSchool/merge_conflict_chart.git) repository on GitHub.
-
-1. Have one person on your team fork this repository. That person is now the project owner.
-
-1. Have the owner turn on GitHub Issues as forked repositories will disabled them by default.
-
-1. Have the owner add the other team members as Collaborators.
-
-1. Have each team member inspect the commits on the `master` branch.
-
-1. Have each team member inspect the open issues for the project.
-
-1. Have each team member create a new issue to transfer more students into the "understand merge conflicts" segment of the chart.
-
-1. Have each team member clone the repository to their development environment.
-
-Create a new feature branch with the issue number as the suffix.
-
-```shell
-git checkout -b transfer_1
-```
-
-Inspect the `pie.html` file in your browser.
-
-```shell
-open pie.html
-```
-
-In the `pie.html` file, update the data values as you see fit. Make sure each team member chooses different values.
-
-```javascript
-data: [
-  125,
-  475
-]
-```
-
-Add and commit your changes to the feature branch.
-
-```shell
-git add .
-git commit -m '25 more students get it!'
 ```
 
 ## Resources
