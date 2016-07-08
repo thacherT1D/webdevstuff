@@ -1,6 +1,8 @@
-# Feature Branch Workflow
+## Objectives
 
-For working in groups and teams
+- Explain what the feature branch workflow is.
+- Explain why the feature branch workflow is important.
+- Use the feature branch workflow.
 
 ## Getting Started
 
@@ -15,16 +17,16 @@ For working in groups and teams
 
 1. Create an [upstream remote](https://help.github.com/articles/configuring-a-remote-for-a-fork/) (if necessary) and [sync your local fork with the Project master](https://help.github.com/articles/syncing-a-fork/).
 
-    ```sh
-    $ git checkout master
-    $ git fetch upstream
-    $ git merge upstream/master
-    ```
+```shell
+git checkout master
+git fetch upstream
+git merge upstream/master
+```
 
 1. Delete the feature branch once done.
 
 ## Rinse, Repeat
 
-## Resource
+## Resources
 
 - [Atlassian Feature Branch Workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow)
