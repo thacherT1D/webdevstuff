@@ -6,9 +6,9 @@
 
 ## What's the Feature Branch Workflow?
 
-In the first quarter this course, you employed a Centralized Workflow to manage the Git commits for your projects. In Git, a **Centralized Workflow** uses a central `origin` repository with a single `master` branch to serve as the hub for all the commits of a project. In Git speak, this is simply referred to as the `origin/master` branch.
+In the first quarter this course, you employed a Centralized Workflow to manage the Git commits of your projects. In Git, a **Centralized Workflow** uses a central `origin` repository with a single `master` branch to serve as the hub for all commits. In Git speak, this is simply referred to as the `origin/master` branch.
 
-Most of your projects started off with at least one commit in the `origin/master` branch as your instructors wanted to give you a solid foundation from which to build.
+Most of your projects started off with at least one commit in the `origin/master` branch as your instructors gave you a solid foundation from which to build.
 
 ```text
 origin/master
@@ -23,7 +23,7 @@ origin/master
  └─────────┘
 ```
 
-From here, you got started by forking and cloning a central repository. Forking is the process of coping a repository to your GitHub account, while cloning is the process of copying a central repository to your local development environment. When you clone, all the commits from the central repository's `origin/master` branch are copied to your local repository's `master` branch.
+From here, forked and cloned a central repository. Forking is the process of coping a repository to your GitHub account, while cloning is the process of copying a central repository to your local development environment. When you clone, all the commits from the central repository's `origin/master` branch are copied to your local repository's `master` branch.
 
 ```text
 origin/master
