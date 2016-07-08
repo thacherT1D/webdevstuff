@@ -84,7 +84,9 @@ When you were ready to publish your changes, you pushed your local `master` bran
 
 Now that you've got the hang of the Centralized Workflow, it's time to add feature branches to your development process so you can streamline communication with your team. The core idea behind the **Feature Branch Workflow** is that all feature development takes place in a dedicated branch instead of the `master` branch.
 
-The Feature Branch Workflow still uses a central repository, and `origin/master` still represents the official project history. But, instead of committing directly on their local `master` branch, developers create a new branch every time they start work on a new feature. Feature branches should have descriptive names, like `animate_menu_61`. The idea is to give a clear, highly-focused purpose to each branch.
+The Feature Branch Workflow still uses a central repository, and the `origin/master` branch still represents the official project history. But, instead of committing directly on your local `master` branch, you create a new branch every time you start work on a new feature. Descriptive feature branch names, like `animate_menu_61`, help to give a clear, highly-focused purpose to each branch.
+
+Each feature branch is created from the local `master` branch when it's synchronized with the central `origin/master` branch.
 
 ```text
               origin/master
@@ -105,6 +107,11 @@ The Feature Branch Workflow still uses a central repository, and `origin/master`
              animate_menu_61
 ```
 
+In your local feature branch, you edit files and committed changes just like before. These new commits were stored on the local `animate_menu_61` branch, completely isolated from both the `master` and `origin/master` branches. This let you defer synchronizing until the feature is working as expected.
+
+Git makes no technical distinction between the `master` branch and feature branches, so developers can edit, stage, and commit changes to a feature branch just as they did in the Centralized Workflow.
+
+
 ```text
               origin/master
                     │
@@ -123,6 +130,8 @@ The Feature Branch Workflow still uses a central repository, and `origin/master`
                  master     animate_menu_61
 ```
 
+When you were ready to publish your changes, you merge your local `animate_menu_61` branch into the local `master` branch. This adds all of the additional feature commits to the `master` branch.
+
 ```text
               origin/master
                     │
@@ -142,6 +151,8 @@ The Feature Branch Workflow still uses a central repository, and `origin/master`
                             animate_menu_61
 ```
 
+Then, you push your local `master` branch to the central repository. This added all of the additional local commits to the `origin/master` branch.
+
 ```text
                              origin/master
                                    │
@@ -161,6 +172,8 @@ The Feature Branch Workflow still uses a central repository, and `origin/master`
                             animate_menu_61
 ```
 
+Now that both the `master` and `origin/master` branch are synchronized, you can delete the `animate_menu_61` feature branch.
+
 ```text
                              origin/master
                                    │
@@ -178,9 +191,12 @@ The Feature Branch Workflow still uses a central repository, and `origin/master`
                                    │
                                 master
 ```
-Git makes no technical distinction between the `master` branch and feature branches, so developers can edit, stage, and commit changes to a feature branch just as they did in the Centralized Workflow.
 
 In addition, feature branches can be pushed to the central repository. This makes it possible to share a feature with other developers without touching any official code. Since `master` is the only special branch, storing several feature branches on the central repository doesn’t pose any problems. Of course, this is also a convenient way to back up everybody’s local commits.
+
+### Exercise
+
+Turn to your partner and explain what the Feature Branch Workflow is in your own words. Be sure to draw a diagram together that describes how the workflow progresses over time.
 
 ## Why is the Feature Branch Workflow is important?
 
