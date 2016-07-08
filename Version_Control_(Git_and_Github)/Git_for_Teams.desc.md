@@ -166,9 +166,47 @@ Turn to your partner and explain what the Feature Branch Workflow is in your own
 
 ## Why is the Feature Branch Workflow is important?
 
-so you can streamline communication with your team
+As you've seen, the Feature Branch Workflow makes it easy for you to work on a particular feature or bug fix without disturbing the main codebase. It protects the `master` and `origin/master` branches by minimizing the amount of broken code that's merged in.
 
-This encapsulation makes it easy for you to work on a particular feature without disturbing the main codebase. It also means the `master` branch will never contain broken code, which is a huge advantage when working collaboratively.
+Everyone pushes broken code into the `origin/master` branch from time to time, even when using a Feature Branch Workflow. And that's okay because nobody is perfect. However, minimizing the amount of broken code merged in the main codebase is a huge advantage when working collaboratively.
+
+1. A feature branch created from known stable point in the codebase provides a solid foundation from which to build. If the `master` and `origin/master` are broken, how can you build a feature or fix a bug with any confidence?
+
+1. A feature branch gives you the freedom to focus exclusively on one feature or bug fix at a time. It's easy to get lost or overwhelmed when you're trying to implement more than one idea at time.
+
+1. A feature branch allows you to start over if your work go bad. It's much easier, and safer, to delete a feature branch rather than rewrite the history of the `master` and `origin/master` branches.
+
+1. A feature branch gives you the confidence to publish well-tested code. If the code works on your development environment in a branch that's based on `master` and `origin/master` branches, there's a good chance it'll work on other environments too.
+
+### Exercise
+
+Take a moment to write down why a Feature Branch Workflow is important. After about 30 seconds, your instructor will cold call on the class and ask what was written down.
+
+## How do you use the feature branch workflow?
+
+Imagine the next issue for you to work on is creating a migration for a `users` table. The first step is to ensure the `master` and `origin/master` are synchronized.
+
+```text
+                               origin/master
+                               HEAD ─> master
+                                     │
+                                     │
+                                     │
+                                     ▼
+┌─────────┐     ┌─────────┐     ┌─────────┐
+│         │     │         │     │         │
+│ be282f7 │─────│ 4f7e591 │─────│ dad1e7f │
+│         │     │         │     │         │
+└─────────┘     └─────────┘     └─────────┘
+```
+
+Then, you'll create
+
+```shell
+git checkout
+```
+
+Assuming the currrent branch of your your local repository has , the first thing you'll want to do is create a feature branch.
 
 ```text
                                origin/master
@@ -183,7 +221,6 @@ This encapsulation makes it easy for you to work on a particular feature without
 │ be282f7 │─────│ 4f7e591 │─────│ dad1e7f │
 │         │     │         │     │         │
 └─────────┘     └─────────┘     └─────────┘
-
 ```
 
 ```text
@@ -379,7 +416,6 @@ This encapsulation makes it easy for you to work on a particular feature without
 └─────────┘     └─────────┘     └─────────┘     └─────────┘     └─────────┘
 ```
 
-## How do you use the feature branch workflow?
 
 ```shell
 git config --global branch.master.rebase true
