@@ -214,6 +214,30 @@ And it should look something like this.
 
 ![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/275/Screen_Shot_2016-07-08_at_11.05.48_AM.png)
 
+Show the commit logs of your local repository.
+
+```shell
+git log --oneline --graph --all --decorate=short
+```
+
+And you should something that resembles this diagram.
+
+```text
+origin/master
+HEAD ─> master
+     │
+     │
+     │
+     ▼
+┌─────────┐
+│         │
+│ 2e0dc92 │
+│         │
+└─────────┘
+```
+
+### Workflow without merge commits
+
 Now, as a team, create the following issues in the issue tracker for your repository. Then, as a team, assign the issues to different team members.
 
 **NOTE:** If your team has more members than issues, your team gets to practice pair-programming.
@@ -226,9 +250,87 @@ For team members with an assigned issue, create and checkout a corresponding fea
 1. `git checkout -b dimensions_1`
 1. `git checkout -b colors_2`
 
+Show the commit logs of your local repository.
+
+```shell
+git log --oneline --graph --all --decorate=short
+```
+
+Those working on the `dimensions_1` feature branch should something that resembles this diagram.
+
+```text
+   origin/master
+       master
+HEAD ─> dimensions_1
+         │
+         │
+         │
+         ▼
+    ┌─────────┐
+    │         │
+    │ 2e0dc92 │
+    │         │
+    └─────────┘
+```
+
+And those working on the `colors_2` feature branch should something that resembles this diagram.
+
+```text
+   origin/master
+       master
+  HEAD ─> colors_2
+         │
+         │
+         │
+         ▼
+    ┌─────────┐
+    │         │
+    │ 2e0dc92 │
+    │         │
+    └─────────┘
+```
+
 Then, as a team, work toward solving the issues. Once you have a working solution, commit the changes to your respective feature branch.
 
 **NOTE:** Please hold off on merging until the entire class is ready.
+
+Show the commit logs of your local repository.
+
+```shell
+git log --oneline --graph --all --decorate=short
+```
+
+Those working on the `dimensions_1` feature branch should something that resembles this diagram.
+
+```text
+   origin/master
+       master       HEAD ─> dimensions_1
+         │                   │
+         │                   │
+         │                   │
+         ▼                   ▼
+    ┌─────────┐         ┌─────────┐
+    │         │         │         │
+    │ 2e0dc92 │─────────│ 4f7e591 │
+    │         │         │         │
+    └─────────┘         └─────────┘
+```
+
+And those working on the `colors_2` feature branch should something that resembles this diagram.
+
+```text
+origin/master
+    master         HEAD ─> colors_2
+      │                   │
+      │                   │
+      │                   │
+      ▼                   ▼
+ ┌─────────┐         ┌─────────┐
+ │         │         │         │
+ │ 2e0dc92 │─────────│ e19450b │
+ │         │         │         │
+ └─────────┘         └─────────┘
+```
 
 Assuming your staging area is clean, those who worked on the `dimensions_1` feature branch, checkout the local `master` branch.
 
@@ -320,31 +422,7 @@ Those who worked on the `dimensions_1` feature branch can now synchronize their 
 git pull
 ```
 
-Have each team member create a new issue in your repository's issue tracker. to transfer more students into the "understand merge conflicts" segment of the chart.
-
-1. Have each team member clone the repository to their development environment.
-
-Create a new feature branch with the issue number as the suffix.
-
-```shell
-git checkout -b transfer_1
-```
-
-In the `index.html` file, update the data values as you see fit. Make sure each team member chooses different values.
-
-```javascript
-data: [
-  125,
-  475
-]
-```
-
-Add and commit your changes to the feature branch.
-
-```shell
-git add .
-git commit -m '25 more students get it!'
-```
+### Workflow with merge commits
 
 A **merge commit** is result of a three-way merge.
 
