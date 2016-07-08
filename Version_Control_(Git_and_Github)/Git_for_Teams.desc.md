@@ -220,7 +220,7 @@ Show the commit logs of your local repository.
 git log --oneline --graph --all --decorate=short
 ```
 
-And you should something that resembles this diagram.
+And you should see something that resembles this diagram.
 
 ```text
 origin/master
@@ -256,7 +256,7 @@ Show the commit logs of your local repository.
 git log --oneline --graph --all --decorate=short
 ```
 
-Those working on the `dimensions_1` feature branch should something that resembles this diagram.
+Those working on the `dimensions_1` feature branch should see something that resembles this diagram.
 
 ```text
    origin/master
@@ -273,7 +273,7 @@ HEAD ─> dimensions_1
     └─────────┘
 ```
 
-And those working on the `colors_2` feature branch should something that resembles this diagram.
+And those working on the `colors_2` feature branch should see something that resembles this diagram.
 
 ```text
    origin/master
@@ -300,7 +300,7 @@ Show the commit logs of your local repository.
 git log --oneline --graph --all --decorate=short
 ```
 
-Those working on the `dimensions_1` feature branch should something that resembles this diagram.
+Those working on the `dimensions_1` feature branch should see something that resembles this diagram.
 
 ```text
    origin/master
@@ -316,7 +316,7 @@ Those working on the `dimensions_1` feature branch should something that resembl
     └─────────┘         └─────────┘
 ```
 
-And those working on the `colors_2` feature branch should something that resembles this diagram.
+And those working on the `colors_2` feature branch should see something that resembles this diagram.
 
 ```text
 origin/master
@@ -344,7 +344,7 @@ Show the commit logs of your local repository.
 git log --oneline --graph --all --decorate=short
 ```
 
-Those working on the `dimensions_1` feature branch should something that resembles this diagram.
+Those working on the `dimensions_1` feature branch should see something that resembles this diagram.
 
 ```text
    origin/master
@@ -396,7 +396,7 @@ Show the commit logs of your local repository.
 git log --oneline --graph --all --decorate=short
 ```
 
-Those working on the `dimensions_1` feature branch should something that resembles this diagram.
+Those working on the `dimensions_1` feature branch should see something that resembles this diagram.
 
 ```text
                     HEAD -> master
@@ -424,7 +424,7 @@ Show the commit logs of your local repository.
 git log --oneline --graph --all --decorate=short
 ```
 
-Those working on the `dimensions_1` feature branch should something that resembles this diagram.
+Those working on the `dimensions_1` feature branch should see something that resembles this diagram.
 
 ```text
                     origin/master
@@ -453,7 +453,7 @@ Show the commit logs of your local repository.
 git log --oneline --graph --all --decorate=short
 ```
 
-Those working on the `colors_2` feature branch should something that resembles this diagram.
+Those working on the `colors_2` feature branch should see something that resembles this diagram.
 
 ```text
 origin/master
@@ -481,7 +481,7 @@ Show the commit logs of your local repository.
 git log --oneline --graph --all --decorate=short
 ```
 
-Those working on the `colors_2` feature branch should something that resembles this diagram.
+Those working on the `colors_2` feature branch should see something that resembles this diagram.
 
 ```text
                origin/master
@@ -520,7 +520,7 @@ Show the commit logs of your local repository.
 git log --oneline --graph --all --decorate=short
 ```
 
-Those working on the `colors_2` feature branch should something that resembles this diagram.
+Those working on the `colors_2` feature branch should see something that resembles this diagram.
 
 ```text
                origin/master
@@ -559,7 +559,7 @@ Show the commit logs of your local repository.
 git log --oneline --graph --all --decorate=short
 ```
 
-Those working on the `colors_2` feature branch should something that resembles this diagram.
+Those working on the `colors_2` feature branch should see something that resembles this diagram.
 
 ```text
                origin/master
@@ -587,7 +587,7 @@ Show the commit logs of your local repository.
 git log --oneline --graph --all --decorate=short
 ```
 
-Those working on the `colors_2` feature branch should something that resembles this diagram.
+Those working on the `colors_2` feature branch should see something that resembles this diagram.
 
 ```text
                origin/master
@@ -615,7 +615,7 @@ Show the commit logs of your local repository.
 git log --oneline --graph --all --decorate=short
 ```
 
-Those working on the `colors_2` feature branch should something that resembles this diagram.
+Those working on the `colors_2` feature branch should see something that resembles this diagram.
 
 ```text
                                HEAD -> master
@@ -643,7 +643,7 @@ Show the commit logs of your local repository.
 git log --oneline --graph --all --decorate=short
 ```
 
-Those working on the `colors_2` feature branch should something that resembles this diagram.
+Those working on the `colors_2` feature branch should see something that resembles this diagram.
 
 ```text
                                origin/master
@@ -672,7 +672,7 @@ Show the commit logs of your local repository.
 git log --oneline --graph --all --decorate=short
 ```
 
-Those working on the `dimensions_1` feature branch should something that resembles this diagram.
+Those working on the `dimensions_1` feature branch should see something that resembles this diagram.
 
 ```text
                                origin/master
