@@ -166,7 +166,7 @@ Turn to your partner and explain what the Feature Branch Workflow is in your own
 
 ## Why is the Feature Branch Workflow is important?
 
-As you've seen, the Feature Branch Workflow makes it easy for you to work on a particular feature or bug fix without disturbing the main codebase. It protects the `master` and `origin/master` branches by minimizing the amount of broken code that's committed to them. Everyone commits broken code to the main codebase from time to time, even when using a Feature Branch Workflow. And that's okay because nobody is perfect. However, minimizing the amount of broken code in the main codebase is a huge advantage when working collaboratively.
+As you've seen, the Feature Branch Workflow makes it easy for you to work on a particular feature or bug fix without disturbing the main codebase. It protects the `master` and `origin/master` branches by minimizing the amount of broken code that's committed to them. Everyone commits broken code to the main codebase from time to time, even when using a Feature Branch Workflow. And that's okay because nobody is perfect. However, minimizing the amount of broken code in the main codebase is a huge advantage when working collaboratively. Here are a few reasons why.
 
 1. A feature branch created from known stable point in the codebase provides a solid foundation from which to build. If the `master` and `origin/master` are broken, how can you build a feature or fix a bug with any confidence?
 
