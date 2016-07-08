@@ -250,13 +250,17 @@ git checkout dimensions_1
 
 Rebase the `dimensions_1` feature branch with the `master` branch. The branch should be up to date, but, again, you'll want to form this habit.
 
+```shell
+git rebase master
+```
+
 Checkout the `master` branch once again.
 
 ```shell
 git checkout master
 ```
 
-Merge in the `dimensions_1` feature branch.
+Merge the `dimensions_1` feature branch into the local `master` branch.
 
 ```shell
 git merge dimensions_1
@@ -286,7 +290,11 @@ Checkout the `colors_2` feature branch.
 git checkout colors_2
 ```
 
-Rebase the `colors_2` feature branch with the `master` branch. The branch should be up to date, but, again, you'll want to form this habit.
+Rebase the `colors_2` feature branch with the `master` branch. The branch should apply its commits on top of the one new commit in the `master` branch.
+
+```shell
+git rebase master
+```
 
 Checkout the `master` branch once again.
 
@@ -294,7 +302,7 @@ Checkout the `master` branch once again.
 git checkout master
 ```
 
-Merge in the `colors_2` feature branch.
+Merge the `colors_2` feature branch into the local `master` branch.
 
 ```shell
 git merge colors_2
@@ -304,6 +312,12 @@ And push the local `master` branch to the central `origin/master` branch.
 
 ```shell
 git push
+```
+
+Those who worked on the `dimensions_1` feature branch can now synchronize their local `master` branch with the `origin/master` branch.
+
+```shell
+git pull
 ```
 
 Have each team member create a new issue in your repository's issue tracker. to transfer more students into the "understand merge conflicts" segment of the chart.
