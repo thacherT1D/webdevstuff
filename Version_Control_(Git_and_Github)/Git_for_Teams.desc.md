@@ -160,6 +160,24 @@ The Feature Branch Workflow still uses a central repository, and `origin/master`
                                 master
                             animate_menu_61
 ```
+
+```text
+                             origin/master
+                                   │
+                                   │
+                                   │
+                                   ▼
+┌─────────┐    ┌─────────┐    ┌─────────┐
+│         │    │         │    │         │
+│ be282f7 │────│ 4f7e591 │────│ dad1e7f │
+│         │    │         │    │         │
+└─────────┘    └─────────┘    └─────────┘
+                                   ▲
+                                   │
+                                   │
+                                   │
+                                master
+```
 Git makes no technical distinction between the `master` branch and feature branches, so developers can edit, stage, and commit changes to a feature branch just as they did in the Centralized Workflow.
 
 In addition, feature branches can be pushed to the central repository. This makes it possible to share a feature with other developers without touching any official code. Since `master` is the only special branch, storing several feature branches on the central repository doesn’t pose any problems. Of course, this is also a convenient way to back up everybody’s local commits.
