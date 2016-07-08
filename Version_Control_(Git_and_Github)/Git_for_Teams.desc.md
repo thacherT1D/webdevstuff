@@ -186,7 +186,7 @@ It's time to use the Feature Branch Workflow in a team-based project. To get sta
 
 1. Sit next to the people in your Q2 Project team.
 
-1. Elect one **project owner** to fork the [Merge Conflict Chart](https://github.com/gSchool/wd-merge-conflict-chart) repository on GitHub. The only responsibility the project owner has over the other members of the team is to setup the project on GitHub.
+1. Elect one project owner to fork the [Merge Conflict Chart](https://github.com/gSchool/wd-merge-conflict-chart) repository on GitHub. The only responsibility the project owner has over the other members of the team is to setup the project on GitHub.
 
 1. Have the project owner enable GitHub Issues in the "Settings" section of the forked repository. By default, GitHub disables issues for forked repositories.
 
