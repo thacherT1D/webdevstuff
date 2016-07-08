@@ -212,7 +212,7 @@ open index.html
 
 And it should look something like this.
 
-![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/273/Screen_Shot_2016-07-08_at_11.05.48_AM.png)
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/274/Screen_Shot_2016-07-08_at_11.05.48_AM.png)
 
 1. Have each team member create a new issue to transfer more students into the "understand merge conflicts" segment of the chart.
 
