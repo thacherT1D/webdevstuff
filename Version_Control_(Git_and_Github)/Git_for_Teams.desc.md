@@ -80,7 +80,7 @@ Each feature branch is created from the local `master` branch when it's synchron
 ```text
                origin/master
                   master
-               animate_menu_61
+              animate_menu_61
                      │
                      │
                      │
