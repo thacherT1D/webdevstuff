@@ -2,7 +2,7 @@
 
 - Explain what the Feature Branch Workflow is.
 - Explain why the Feature Branch Workflow is important.
-- Use the feature branch workflow in a team-based project.
+- Use the Feature Branch Workflow in a team-based project.
 
 ## What's the Feature Branch Workflow?
 
@@ -180,9 +180,9 @@ As you've seen, the Feature Branch Workflow makes it easy for you to work on a p
 
 Take a moment to write down why the Feature Branch Workflow is important. After about a minute, your instructor will cold call on the class and ask what was written down.
 
-## How do you use the feature branch workflow in a team-based project?
+## How do you use the Feature Branch Workflow in a team-based project?
 
-To get started, complete the following steps to organize your team.
+It's time to use the Feature Branch Workflow in a team-based project. To get started, organize your team by completing the following steps.
 
 1. Sit next to the people in your Q2 Project team.
 
@@ -208,13 +208,13 @@ Create a new feature branch with the issue number as the suffix.
 git checkout -b transfer_1
 ```
 
-Inspect the `pie.html` file in your browser.
+Inspect the `index.html` file in your browser.
 
 ```shell
-open pie.html
+open index.html
 ```
 
-In the `pie.html` file, update the data values as you see fit. Make sure each team member chooses different values.
+In the `index.html` file, update the data values as you see fit. Make sure each team member chooses different values.
 
 ```javascript
 data: [
