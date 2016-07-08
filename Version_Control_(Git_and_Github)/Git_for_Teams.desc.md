@@ -338,6 +338,28 @@ Assuming your staging area is clean, those who worked on the `dimensions_1` feat
 git checkout master
 ```
 
+Show the commit logs of your local repository.
+
+```shell
+git log --oneline --graph --all --decorate=short
+```
+
+Those working on the `dimensions_1` feature branch should something that resembles this diagram.
+
+```text
+   origin/master
+   HEAD -> master       dimensions_1
+         │                   │
+         │                   │
+         │                   │
+         ▼                   ▼
+    ┌─────────┐         ┌─────────┐
+    │         │         │         │
+    │ 2e0dc92 │─────────│ 4f7e591 │
+    │         │         │         │
+    └─────────┘         └─────────┘
+```
+
 Pull down any new commits from the central `origin/master` branch to the local `master` branch. There should be no commits, but this is the habit you'll want to form.
 
 ```shell
@@ -368,10 +390,55 @@ Merge the `dimensions_1` feature branch into the local `master` branch.
 git merge dimensions_1
 ```
 
+Show the commit logs of your local repository.
+
+```shell
+git log --oneline --graph --all --decorate=short
+```
+
+Those working on the `dimensions_1` feature branch should something that resembles this diagram.
+
+```text
+                    HEAD -> master
+origin/master        dimensions_1
+      │                   │
+      │                   │
+      │                   │
+      ▼                   ▼
+ ┌─────────┐         ┌─────────┐
+ │         │         │         │
+ │ 2e0dc92 │─────────│ 4f7e591 │
+ │         │         │         │
+ └─────────┘         └─────────┘
+```
+
 And push the local `master` branch to the central `origin/master` branch.
 
 ```shell
 git push
+```
+
+Show the commit logs of your local repository.
+
+```shell
+git log --oneline --graph --all --decorate=short
+```
+
+Those working on the `dimensions_1` feature branch should something that resembles this diagram.
+
+```text
+                    origin/master
+                    HEAD -> master
+                     dimensions_1
+                          │
+                          │
+                          │
+                          ▼
+ ┌─────────┐         ┌─────────┐
+ │         │         │         │
+ │ 2e0dc92 │─────────│ 4f7e591 │
+ │         │         │         │
+ └─────────┘         └─────────┘
 ```
 
 Assuming your staging area is clean, those who worked on the `colors_2` feature branch, checkout the local `master` branch.
@@ -380,10 +447,65 @@ Assuming your staging area is clean, those who worked on the `colors_2` feature 
 git checkout master
 ```
 
+Show the commit logs of your local repository.
+
+```shell
+git log --oneline --graph --all --decorate=short
+```
+
+Those working on the `colors_2` feature branch should something that resembles this diagram.
+
+```text
+origin/master
+HEAD ─> master         colors_2
+      │                   │
+      │                   │
+      │                   │
+      ▼                   ▼
+ ┌─────────┐         ┌─────────┐
+ │         │         │         │
+ │ 2e0dc92 │─────────│ e19450b │
+ │         │         │         │
+ └─────────┘         └─────────┘
+```
+
 Pull down any new commits from the central `origin/master` branch to the local `master` branch. There should be one commit pulled down.
 
 ```shell
 git pull
+```
+
+Show the commit logs of your local repository.
+
+```shell
+git log --oneline --graph --all --decorate=short
+```
+
+Those working on the `colors_2` feature branch should something that resembles this diagram.
+
+```text
+               origin/master
+               HEAD -> master
+                     │
+                     │
+                     │
+                     ▼
+┌─────────┐     ┌─────────┐
+│         │     │         │
+│ 2e0dc92 │─────│ 4f7e591 │
+│         │─┐   │         │
+└─────────┘ │   └─────────┘
+            │
+            │   ┌─────────┐
+            │   │         │
+            └───│ e19450b │
+                │         │
+                └─────────┘
+                     ▲
+                     │
+                     │
+                     │
+                  colors_2
 ```
 
 Checkout the `colors_2` feature branch.
@@ -392,10 +514,65 @@ Checkout the `colors_2` feature branch.
 git checkout colors_2
 ```
 
+Show the commit logs of your local repository.
+
+```shell
+git log --oneline --graph --all --decorate=short
+```
+
+Those working on the `colors_2` feature branch should something that resembles this diagram.
+
+```text
+               origin/master
+                  master
+                     │
+                     │
+                     │
+                     ▼
+┌─────────┐     ┌─────────┐
+│         │     │         │
+│ 2e0dc92 │─────│ 4f7e591 │
+│         │─┐   │         │
+└─────────┘ │   └─────────┘
+            │
+            │   ┌─────────┐
+            │   │         │
+            └───│ e19450b │
+                │         │
+                └─────────┘
+                     ▲
+                     │
+                     │
+                     │
+              HEAD -> colors_2
+```
+
 Rebase the `colors_2` feature branch with the `master` branch. The branch should apply its commits on top of the one new commit in the `master` branch.
 
 ```shell
 git rebase master
+```
+
+Show the commit logs of your local repository.
+
+```shell
+git log --oneline --graph --all --decorate=short
+```
+
+Those working on the `colors_2` feature branch should something that resembles this diagram.
+
+```text
+               origin/master
+                  master      HEAD -> colors_2
+                     │               │
+                     │               │
+                     │               │
+                     ▼               ▼
+┌─────────┐     ┌─────────┐     ┌─────────┐
+│         │     │         │     │         │
+│ 2e0dc92 │─────│ 4f7e591 │─────│ 8b4782c │
+│         │     │         │     │         │
+└─────────┘     └─────────┘     └─────────┘
 ```
 
 Checkout the `master` branch once again.
@@ -404,10 +581,54 @@ Checkout the `master` branch once again.
 git checkout master
 ```
 
+Show the commit logs of your local repository.
+
+```shell
+git log --oneline --graph --all --decorate=short
+```
+
+Those working on the `colors_2` feature branch should something that resembles this diagram.
+
+```text
+               origin/master
+               HEAD -> master     colors_2
+                     │               │
+                     │               │
+                     │               │
+                     ▼               ▼
+┌─────────┐     ┌─────────┐     ┌─────────┐
+│         │     │         │     │         │
+│ 2e0dc92 │─────│ 4f7e591 │─────│ 8b4782c │
+│         │     │         │     │         │
+└─────────┘     └─────────┘     └─────────┘
+```
+
 Merge the `colors_2` feature branch into the local `master` branch.
 
 ```shell
 git merge colors_2
+```
+
+Show the commit logs of your local repository.
+
+```shell
+git log --oneline --graph --all --decorate=short
+```
+
+Those working on the `colors_2` feature branch should something that resembles this diagram.
+
+```text
+                               HEAD -> master
+               origin/master      colors_2
+                     │               │
+                     │               │
+                     │               │
+                     ▼               ▼
+┌─────────┐     ┌─────────┐     ┌─────────┐
+│         │     │         │     │         │
+│ 2e0dc92 │─────│ 4f7e591 │─────│ 8b4782c │
+│         │     │         │     │         │
+└─────────┘     └─────────┘     └─────────┘
 ```
 
 And push the local `master` branch to the central `origin/master` branch.
@@ -416,10 +637,56 @@ And push the local `master` branch to the central `origin/master` branch.
 git push
 ```
 
+Show the commit logs of your local repository.
+
+```shell
+git log --oneline --graph --all --decorate=short
+```
+
+Those working on the `colors_2` feature branch should something that resembles this diagram.
+
+```text
+                               origin/master
+                               HEAD -> master
+                                  colors_2
+                                     │
+                                     │
+                                     │
+                                     ▼
+┌─────────┐     ┌─────────┐     ┌─────────┐
+│         │     │         │     │         │
+│ 2e0dc92 │─────│ 4f7e591 │─────│ 8b4782c │
+│         │     │         │     │         │
+└─────────┘     └─────────┘     └─────────┘
+```
+
 Those who worked on the `dimensions_1` feature branch can now synchronize their local `master` branch with the `origin/master` branch.
 
 ```shell
 git pull
+```
+
+Show the commit logs of your local repository.
+
+```shell
+git log --oneline --graph --all --decorate=short
+```
+
+Those working on the `dimensions_1` feature branch should something that resembles this diagram.
+
+```text
+                               origin/master
+                               HEAD -> master
+                                dimensions_1
+                                     │
+                                     │
+                                     │
+                                     ▼
+┌─────────┐     ┌─────────┐     ┌─────────┐
+│         │     │         │     │         │
+│ 2e0dc92 │─────│ 4f7e591 │─────│ 8b4782c │
+│         │     │         │     │         │
+└─────────┘     └─────────┘     └─────────┘
 ```
 
 ### Workflow with merge commits
