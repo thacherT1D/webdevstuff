@@ -84,6 +84,86 @@ When you were ready to publish your changes, you pushed your local `master` bran
 
 Now that you've got the hang of the Centralized Workflow, it's time to add feature branches to your development process so you can streamline communication with your team. The core idea behind the **Feature Branch Workflow** is that all feature development takes place in a dedicated branch instead of the `master` branch.
 
+The Feature Branch Workflow still uses a central repository, and `origin/master` still represents the official project history. But, instead of committing directly on their local `master` branch, developers create a new branch every time they start work on a new feature. Feature branches should have descriptive names, like `animate_menu_61`. The idea is to give a clear, highly-focused purpose to each branch.
+
+```text
+              origin/master
+                    │
+                    │
+                    │
+                    ▼
+┌─────────┐    ┌─────────┐
+│         │    │         │
+│ be282f7 │────│ 4f7e591 │
+│         │    │         │
+└─────────┘    └─────────┘
+                    ▲
+                    │
+                    │
+                    │
+                 master
+             animate_menu_61
+```
+
+```text
+              origin/master
+                    │
+                    │
+                    │
+                    ▼
+┌─────────┐    ┌─────────┐    ┌─────────┐
+│         │    │         │    │         │
+│ be282f7 │────│ 4f7e591 │────│ dad1e7f │
+│         │    │         │    │         │
+└─────────┘    └─────────┘    └─────────┘
+                    ▲              ▲
+                    │              │
+                    │              │
+                    │              │
+                 master     animate_menu_61
+```
+
+```text
+              origin/master
+                    │
+                    │
+                    │
+                    ▼
+┌─────────┐    ┌─────────┐    ┌─────────┐
+│         │    │         │    │         │
+│ be282f7 │────│ 4f7e591 │────│ dad1e7f │
+│         │    │         │    │         │
+└─────────┘    └─────────┘    └─────────┘
+                                   ▲
+                                   │
+                                   │
+                                   │
+                                master
+                            animate_menu_61
+```
+
+```text
+                             origin/master
+                                   │
+                                   │
+                                   │
+                                   ▼
+┌─────────┐    ┌─────────┐    ┌─────────┐
+│         │    │         │    │         │
+│ be282f7 │────│ 4f7e591 │────│ dad1e7f │
+│         │    │         │    │         │
+└─────────┘    └─────────┘    └─────────┘
+                                   ▲
+                                   │
+                                   │
+                                   │
+                                master
+                            animate_menu_61
+```
+Git makes no technical distinction between the `master` branch and feature branches, so developers can edit, stage, and commit changes to a feature branch just as they did in the Centralized Workflow.
+
+In addition, feature branches can be pushed to the central repository. This makes it possible to share a feature with other developers without touching any official code. Since `master` is the only special branch, storing several feature branches on the central repository doesn’t pose any problems. Of course, this is also a convenient way to back up everybody’s local commits.
+
 ## Why is the Feature Branch Workflow is important?
 
 This encapsulation makes it easy for you to work on a particular feature without disturbing the main codebase. It also means the `master` branch will never contain broken code, which is a huge advantage when working collaboratively.
