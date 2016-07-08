@@ -93,7 +93,7 @@ Each feature branch is created from the local `master` branch when it's synchron
 
 Git makes no technical distinction between the `master` branch and a feature branch. So you can add and commit changes to a feature branch just as you did in the Centralized Workflow. The only difference is that new commits are stored in the local `animate_menu_42` branch, completely isolated from any other branch.
 
-Feature branches keep both the `master` and `origin/master` branches pristine and unchanged while you iterate on a idea. If a breaking change is accidentally committed while working, it won't immediately contaminate the `master` and `origin/master` branches. Thus you can continue developing and testing the project without polluting the centralized source of truth.
+Feature branches keep both the `master` and `origin/master` branches pristine and unchanged while you iterate on an idea. If a breaking change is accidentally committed while working, it won't immediately contaminate the `master` and `origin/master` branches. Thus you can continue developing and testing the project without polluting the centralized source of truth.
 
 ```text
                origin/master
