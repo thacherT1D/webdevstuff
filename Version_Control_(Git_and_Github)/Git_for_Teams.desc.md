@@ -23,7 +23,7 @@ origin/master
  └─────────┘
 ```
 
-From here, forked and cloned a central repository. Forking is the process of coping a repository to your GitHub account, while cloning is the process of copying a central repository to your local development environment. When you clone, all the commits from the central repository's `origin/master` branch are copied to your local repository's `master` branch.
+From here, you forked and cloned a central repository. Forking is the process of coping an existing GitHub repository to your GitHub account, while cloning is the process of copying a central repository to your local development environment. When you clone, all the commits from the central repository's `origin/master` branch are copied to your local repository's `master` branch.
 
 ```text
 origin/master
@@ -39,7 +39,7 @@ origin/master
  └─────────┘
 ```
 
-In your local repository, you created and modified files, added the changes to the local repository's staging area, and committed the staging to the local `master` branch. These new commits, stored in the local `master` branch, were completely isolated from the central `origin/master` branch. This allowed you defer synchronizing with the central repository until you reached a convenient stopping point.
+In your local repository, you created and modified files, added the changes to the local repository's staging area, and committed the staging area to the local `master` branch. These new commits, stored in the local `master` branch, were completely isolated from the central `origin/master` branch. This allowed you defer synchronizing with the central repository until you reached a convenient stopping point.
 
 ```text
 origin/master      master
@@ -54,7 +54,7 @@ origin/master      master
  └─────────┘     └─────────┘
 ```
 
-When you were ready to publish your changes, you pushed your local `master` branch to the central `origin/master` branch. Pushing is the process of copying all of the additional commits from the local repository to the central repository.
+When you were ready to publish your changes, you pushed your local `master` branch to the central `origin/master` branch. Pushing is the process of copying all the additional commits from the local repository to the central repository.
 
 ```text
                origin/master
@@ -70,7 +70,7 @@ When you were ready to publish your changes, you pushed your local `master` bran
 └─────────┘     └─────────┘
 ```
 
-As previously mentioned, this was, more or less, your Git workflow for the first quarter of the course. However, throughout the second quarter, you began to adopt a Feature Branch Workflow to manage the Git commits of your projects. The core idea behind the **Feature Branch Workflow** is that all commits related a specific feature, or bug fix, are developed and stored in a dedicated branch instead of the `master` branch.
+As previously mentioned, this was more or less your Git workflow for the first quarter of the course. However, throughout the second quarter, you began to adopt a Feature Branch Workflow. The core idea behind the **Feature Branch Workflow** is that all commits related a specific feature, or bug fix, are developed and stored in a dedicated branch instead of the `master` branch.
 
 The Feature Branch Workflow still uses a central repository and the `origin/master` branch still represents the official project history. But, instead of committing directly on your local `master` branch, you create a new branch each time you start work on a new feature or bug fix. Descriptive branch names, like `animate_menu_42`, help to give a clear, highly-focused purpose to each branch. It's common to suffix a branch name with the number of a corresponding issue in an issue tracker.
 
@@ -91,7 +91,9 @@ Each feature branch is created from the local `master` branch when it's synchron
 └─────────┘     └─────────┘
 ```
 
-Git makes no technical distinction between the `master` branch and a feature branch. So you can add and commit changes to a feature branch just as you did in the Centralized Workflow. The only difference is that new commits are stored in the local `animate_menu_42` branch, completely isolated from any other branch. This keeps both the `master` and `origin/master` branches pristine and unchanged while you work on the feature or bug fix, committing potential breaking changes to the project.
+Git makes no technical distinction between the `master` branch and a feature branch. So you can add and commit changes to a feature branch just as you did in the Centralized Workflow. The only difference is that new commits are stored in the local `animate_menu_42` branch, completely isolated from any other branch.
+
+Feature branches keep both the `master` and `origin/master` branches pristine and unchanged while you iterate on a idea. If a breaking change is accidentally committed while working, it won't immediately contaminate the `master` and `origin/master` branches. Thus you can continue developing and testing the project without polluting the centralized source of truth.
 
 ```text
                origin/master
@@ -107,7 +109,7 @@ Git makes no technical distinction between the `master` branch and a feature bra
 └─────────┘     └─────────┘     └─────────┘
 ```
 
-Once you test that your feature or bug fix doesn't break any existing code, you're ready to publish. The first step is to merge the commits from the local `animate_menu_42` branch to the local `master` branch.
+Once you're confident that your feature or bug fix doesn't break any existing code, ideally using automated tests, you're ready to publish. The first step is to merge the commits from the local `animate_menu_42` branch into the local `master` branch.
 
 ```text
                                   master
@@ -123,7 +125,7 @@ Once you test that your feature or bug fix doesn't break any existing code, you'
 └─────────┘     └─────────┘     └─────────┘
 ```
 
-Then, you push your local `master` branch to the central `origin/master` branch, adding the feature's commits into the official project history.
+Then, you can publish your code by pushing your local `master` branch to the central `origin/master` branch, adding the feature's commits into the official project history.
 
 ```text
                                origin/master
@@ -156,11 +158,11 @@ Now that all three branches contain the same commits, you can safely delete the 
 └─────────┘     └─────────┘     └─────────┘
 ```
 
-Thus successfully completing one cycle of the Feature Branch Workflow.
+And thus successfully completing one cycle of the Feature Branch Workflow.
 
 ### Exercise
 
-Turn to your partner and explain what the Feature Branch Workflow is in your own words. Be sure to draw a diagram together that describes how the workflow progresses over time.
+Turn to your partner and explain what the Feature Branch Workflow is in your own words. It may be helpful to draw diagram together to describe how the commits flow over time.
 
 ## Why is the Feature Branch Workflow is important?
 
