@@ -70,9 +70,9 @@ When you were ready to publish your changes, you pushed your local `master` bran
 └─────────┘     └─────────┘
 ```
 
-As previously mentioned, this was, more or less, your Git workflow for the first quarter of the course. However, throughout the second quarter, you began to adopt a Feature Branch Workflow to manage the Git commits of your projects. The core idea behind the **Feature Branch Workflow** is that all commits related a specific feature, or bug fix, are stored in a dedicated branch instead of the `master` branch.
+As previously mentioned, this was, more or less, your Git workflow for the first quarter of the course. However, throughout the second quarter, you began to adopt a Feature Branch Workflow to manage the Git commits of your projects. The core idea behind the **Feature Branch Workflow** is that all commits related a specific feature, or bug fix, are developed and stored in a dedicated branch instead of the `master` branch.
 
-The Feature Branch Workflow still uses a central repository and the `origin/master` branch still represents the official project history. But, instead of committing directly on your local `master` branch, you create a new branch each time you start work on a new feature. Descriptive feature branch names, like `animate_menu_42`, help to give a clear, highly-focused purpose to each branch. It's common to suffix a feature branch name with the number of a corresponding issue in an issue tracker.
+The Feature Branch Workflow still uses a central repository and the `origin/master` branch still represents the official project history. But, instead of committing directly on your local `master` branch, you create a new branch each time you start work on a new feature or bug fix. Descriptive branch names, like `animate_menu_42`, help to give a clear, highly-focused purpose to each branch. It's common to suffix a branch name with the number of a corresponding issue in an issue tracker.
 
 Each feature branch is created from the local `master` branch when it's synchronized with the central `origin/master` branch.
 
@@ -91,7 +91,7 @@ Each feature branch is created from the local `master` branch when it's synchron
 └─────────┘     └─────────┘
 ```
 
-Git makes no technical distinction between the `master` branch and a feature branch. So you can add and commit changes to a feature branch just as you did in the Centralized Workflow. The only difference being the new commits are stored in the local `animate_menu_42` branch, completely isolated from both the `master` and `origin/master` branches. This let you defer synchronizing your work with official project history until the feature is working as intended.
+Git makes no technical distinction between the `master` branch and a feature branch. So you can add and commit changes to a feature branch just as you did in the Centralized Workflow. The only difference is that new commits are stored in the local `animate_menu_42` branch, completely isolated from any other branch. This keeps both the `master` and `origin/master` branches pristine and unchanged while you work on the feature or bug fix, committing potential breaking changes to the project.
 
 ```text
                origin/master
@@ -107,7 +107,7 @@ Git makes no technical distinction between the `master` branch and a feature bra
 └─────────┘     └─────────┘     └─────────┘
 ```
 
-When you're ready to publish your changes, you first merge your local `animate_menu_42` branch into the local `master` branch. This adds the feature's commits into the `master` branch.
+Once you test that your feature or bug fix doesn't break any existing code, you're ready to publish. The first step is to merge the commits from the local `animate_menu_42` branch to the local `master` branch.
 
 ```text
                                   master
@@ -140,7 +140,7 @@ Then, you push your local `master` branch to the central `origin/master` branch,
 └─────────┘     └─────────┘     └─────────┘
 ```
 
-Now that both the `master` and `origin/master` branch have the feature commits, you can delete the `animate_menu_42` feature branch.
+Now that all three branches contain the same commits, you can safely delete the `animate_menu_42` feature branch.
 
 ```text
                                origin/master
@@ -156,7 +156,7 @@ Now that both the `master` and `origin/master` branch have the feature commits, 
 └─────────┘     └─────────┘     └─────────┘
 ```
 
-And that's the basics of the Feature Branch Workflow.
+Thus successfully completing one cycle of the Feature Branch Workflow.
 
 ### Exercise
 
