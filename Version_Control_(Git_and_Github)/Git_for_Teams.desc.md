@@ -178,7 +178,7 @@ As you've seen, the Feature Branch Workflow makes it easy for you to work on a p
 
 ### Exercise
 
-Take a moment to write down why a Feature Branch Workflow is important. After about 30 seconds, your instructor will cold call on the class and ask what was written down.
+Take a moment to write down why the Feature Branch Workflow is important. After about a minute, your instructor will cold call on the class and ask what was written down.
 
 ## How do you use the feature branch workflow?
 
