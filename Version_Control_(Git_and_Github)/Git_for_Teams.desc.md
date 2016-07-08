@@ -29,10 +29,21 @@ Create a new feature branch with the issue number as the suffix.
 git checkout -b transfer_1
 ```
 
+In the `pie.html` file, update the data values as you see fit. Make sure each team member chooses different values.
 
-1. Commit your code/create PR on Github
+```javascript
+data: [
+  125,
+  475
+]
+```
 
-1. Review Code / Provide Feedback / Merge pull request (after issues are fixed)
+Add and commit your changes to the feature branch.
+
+```shell
+git add .
+git commit -m '25 more students get it!'
+```
 
 ## Resources
 
