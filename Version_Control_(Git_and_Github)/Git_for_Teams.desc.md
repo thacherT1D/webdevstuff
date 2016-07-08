@@ -55,7 +55,7 @@ origin/master      master
  └─────────┘     └─────────┘
 ```
 
-When you were ready to publish your changes, you pushed your local `master` branch to the central `origin/master` branch. Pushing is the process of adding all of the additional commits from the local repository to central repository.
+When you were ready to publish your changes, you pushed your local `master` branch to the central `origin/master` branch. Pushing is the process of copying all of the additional commits from the local repository to the central repository.
 
 ```text
                origin/master
