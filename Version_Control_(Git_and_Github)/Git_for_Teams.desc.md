@@ -182,17 +182,21 @@ Take a moment to write down why the Feature Branch Workflow is important. After 
 
 ## How do you use the feature branch workflow in a team-based project?
 
-To get started, visit the [Merge Conflict Chart](https://github.com/gSchool/merge_conflict_chart.git) repository on GitHub.
+To get started, complete the following steps to organize your team.
 
-1. Have one person on your team fork this repository. That person is now the project owner.
+1. Sit next to the people in your Q2 Project team.
 
-1. Have the owner turn on GitHub Issues as forked repositories will disabled them by default.
+1. Elect one **project owner** to fork the [Merge Conflict Chart](https://github.com/gSchool/wd-merge-conflict-chart) repository on GitHub. The only responsibility the project owner has over the other members of the team is to setup the project on GitHub.
 
-1. Have the owner add the other team members as Collaborators.
+1. Have the project owner enable GitHub Issues in the "Settings" section of the forked repository. By default, GitHub disables issues for forked repositories.
 
-1. Have each team member inspect the commits on the `master` branch.
+1. Have the project owner add the other team members as Collaborators also in the "Settings" section.
 
-1. Have each team member inspect the open issues for the project.
+As a team, inspect the following areas of the repository.
+
+- The commits on the `master` branch.
+- The open issues.
+- The contributors graph.
 
 1. Have each team member create a new issue to transfer more students into the "understand merge conflicts" segment of the chart.
 
