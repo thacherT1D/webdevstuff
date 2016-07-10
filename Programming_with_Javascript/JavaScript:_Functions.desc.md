@@ -17,7 +17,7 @@ When I think about functions in the real world, I often consider a recipe (e.g.,
 
 At this point, I hope that many of us can embrace our shared definition of a function--they are a sequence of instructions that achieve a specific task.
 
-__EXERCISE__: What are some other examples of functions you enounter in daily life?
+__EXERCISE__: What are some other examples of functions you encounter in daily life?
 
 ### Example Function
 
@@ -136,7 +136,7 @@ daysInMonth("February");
 
 ### The keyword `return`
 
-We have now seen functions that take a set of inputs as parameters.  It is also often desireable to return a value from the function.  Our function examples have all been printing to the console, but in many cases we want the function to return a value for us.  For example:
+We have now seen functions that take a set of inputs as parameters.  It is also often desirable to return a value from the function.  Our function examples have all been printing to the console, but in many cases we want the function to return a value for us.  For example:
 
 ```javascript
 var total = sum(5, 20);
