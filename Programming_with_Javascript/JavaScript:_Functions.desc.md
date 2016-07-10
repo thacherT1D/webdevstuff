@@ -1,17 +1,17 @@
 # An Introduction to Functions with JavaScript
 
-Today, we're going to explore the fascinating world of functions. This world may bewilder or intimidate some of you. Find solace in the fact that functions are nothing more than a way of re-using code. This realization will help you to eventually embrace the usage of functions and, dare I say, excitement for them. At the end of today's lessons, I hope that you guys are able to add functions to your coding tool-belt.
+Today we're going to explore the fascinating world of functions. This world may bewilder and/or intimidate some of you - but find solace in the fact that functions are nothing more than a way of re-using code. This realization will help you to eventually embrace the usage of functions. At the end of today's lessons, I hope that you all are able to add functions to your coding tool-belt.
 
 ## Objectives
 
 * Explain what a function is conceptually
 * Write a function that takes parameters
 * Write a function that returns a value
-* Describe variable scope in javascript and how it relates to functions
+* Describe variable scope in JavaScript and how it relates to functions
 
 ### What is a Function?
 
-In one sentence, we can say that a function is a sequence of instructions that achieve a specific task. I've always found definitions to be more meaningful when they are tied to the world around us. So let's pause for a moment and think of real-world examples that fit our definition....
+In one sentence, we can say that a function is a sequence of instructions that achieve a specific task. I've always found definitions to be more meaningful when they are tied to the world around us. So let's pause for a moment and think of real-world examples that fit our definition...
 
 When I think about functions in the real world, I often consider a recipe (e.g., making pumpkin pie) or a manual (e.g. assembling a coffee table from IKEA).
 
@@ -46,7 +46,7 @@ function greet() {
 }
 ```
 
-Awesome, you guys just created a function. If we want to see the value of our function, we just type in the name of the function to our REPL (read, evaluate, print, loop):
+Awesome! We just created a function. If we want to see the value of our function, we just type in the name of the function to our REPL (read, evaluate, print, loop):
 
 ```javascript
 function greet() {
@@ -60,7 +60,10 @@ greet
 // undefined
 ```
 
-Similar to the real world, functions consist of two processes: first, creation of the instructions; second, execution of the instructions.
+Similar to the real world, functions consist of two processes -
+
+1. creation of the instructions
+1. execution of the instructions
 
 To this point, we've just created a recipe for `greet`, we haven't actually told anyone or anything to execute the instructions in our function.
 
@@ -86,7 +89,7 @@ greet();
 
 That's it! Now we can re-use the instructions of `greet` whenever we want. Above, we just invoked it 3 times. :)
 
-__EXERCISE__: Write a function called `yell` that prints out a phrase 10 times in a row.  On the 10th iteration, the phrase should be in all caps and have an extra exlimation point at the end.  Example output is below:
+__EXERCISE__: Write a function called `yell` that prints out a phrase 10 times in a row.  On the 10th iteration, the phrase should be in all caps and have an extra exclamation point at the end.  Example output is below:
 
 ```javascript
 yell(); // You must implement this function
@@ -115,10 +118,10 @@ function hello(name, age) {
 }
 ```
 
-The parameters are `name` and `age`.  They are variables that are defined in the function 
+The parameters are `name` and `age`.  They are variables that are defined in the function
 
 
-__EXERCISE__: Create a function that takes name of a month as a parameter.  Print out every day in that month.  Assume leap years don't exist.
+__EXERCISE__: Create a function that takes the name of a month as a parameter.  Print out every day in that month.  Assume leap years don't exist.
 
 ```javascript
 daysInMonth("February");
@@ -133,7 +136,7 @@ daysInMonth("February");
 
 ### The keyword `return`
 
-We have now seen functions that take a set of inputs as parameters.  It is also often desireable to return an value from the function.  Our function examples have all been printing to the console, but in many cases we want the function to return a value for us.  For example:
+We have now seen functions that take a set of inputs as parameters.  It is also often desireable to return a value from the function.  Our function examples have all been printing to the console, but in many cases we want the function to return a value for us.  For example:
 
 ```javascript
 var total = sum(5, 20);
@@ -145,7 +148,7 @@ The implementation of sum looks like this:
 
 ```javascript
 function sum(num1, num2) {
-	return num1 + num2;
+  return num1 + num2;
 }
 ```
 
@@ -153,17 +156,17 @@ Let's make another method that returns a greeting for a name.  If the name is `T
 
 ```javascript
 function getGreeting(name) {
-	if (name === "Tim") {
-		return "Hello Tim!  Your favorite color is blue.";
-	}
-	
-	return "Hello " + name;
+  if (name === "Tim") {
+    return "Hello Tim!  Your favorite color is blue.";
+  }
+
+  return "Hello " + name;
 }
-``` 
+```
 
 __EXERCISE__
 
-* What is output to the console with the following function invocation?
+* What is outputted to the console with the following function invocation?
 
 ```javascript
 getGreeting("Elie");
@@ -221,15 +224,15 @@ Variable scope is a term that describes the duration for which a variable exists
 
 ```javascript
 function scopeExample() {
-	var num1 = 5;
-	var num2 = 6;
-	num3 = 7;
-	
-	console.log(num1, num2, num3, num4, "-> num1, num2, num3 and num4 are defined from inside scopeExample");
+  var num1 = 5;
+  var num2 = 6;
+  num3 = 7;
+
+  console.log(num1, num2, num3, num4, "-> num1, num2, num3 and num4 are defined from inside scopeExample");
 }
 
 num4 = 12345;
-console.log(num4, "-> Only num4 is defined at this point");  // num1, num2, and num3 do not exist 
+console.log(num4, "-> Only num4 is defined at this point");  // num1, num2, and num3 do not exist
 scopeExample();
 
 console.log(num3, num4, "-> Only num3 and num4 exist now");
