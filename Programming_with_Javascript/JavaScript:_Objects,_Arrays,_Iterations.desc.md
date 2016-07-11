@@ -128,7 +128,7 @@ Imagine that we want to iterate through every element from our array from the fi
 
 ```
 var lines = [
-	'It's me.',
+	'It\'s me.',
 	'Can you hear me?',
 	'from the other side',
 	'from the outside'
