@@ -600,6 +600,5 @@ https://github.com/gSchool/wd-javascript-fundamentals
 
 - [Mozilla Developer Network - JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 - [Quick history of JavaScript by Douglas Crockford](https://www.youtube.com/watch?v=t7_5-XYrkqg)
-- [Wikipedia: Ajax (programming%29](https://en.wikipedia.org/wiki/Ajax_(programming)
 - [Wikipedia: ECMAScript](https://en.wikipedia.org/wiki/ECMAScript)
 - [Wikipedia: JavaScript](https://en.wikipedia.org/wiki/JavaScript)
