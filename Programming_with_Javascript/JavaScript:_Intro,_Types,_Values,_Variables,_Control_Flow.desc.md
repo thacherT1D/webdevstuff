@@ -599,6 +599,7 @@ https://github.com/gSchool/wd-javascript-fundamentals
 ## Resources
 
 - [Mozilla Developer Network - JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- [JSJ 124 - The Origin of Javascript with Brendan Eich] (https://devchat.tv/js-jabber/124-jsj-the-origin-of-javascript-with-brendan-eich)
 - [Quick history of JavaScript by Douglas Crockford](https://www.youtube.com/watch?v=t7_5-XYrkqg)
 - [Wikipedia: Ajax (programming)](https://en.wikipedia.org/wiki/Ajax_(programming)
 - [Wikipedia: ECMAScript](https://en.wikipedia.org/wiki/ECMAScript)
