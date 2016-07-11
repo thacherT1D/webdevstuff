@@ -985,20 +985,16 @@ But your text editor should open a window that looks somethings like this.
 
 [INSERT IMAGE HERE]
 
-In this scenario, Git asks your text editor to confirm a commit message for special kind of commit—a **merge commit**—which is the result of a merge between three commits. But why?
+In this scenario, Git asks your text editor to confirm a commit message for a special kind of commit—a **merge commit**—which is the result of a merge between three commits. But why?
 
-In reality, the `git pull origin master` command is composed of the following two commands.
+In reality, the `git pull` command is short for `git pull origin master`, which is composed of the following two commands.
 
 1. `git fetch origin master`
 1. `git merge origin/master`
 
-In other words, the commits on the `master` branch at the central `origin` repository are downloaded to the `origin/master` branch on the local repository. Then, Git merges the commits from the `origin/master` branch into the `master` branch.
+In other words, the commits on the `master` branch at the central `origin` repository are downloaded to the `origin/master` branch in the local repository. Then, Git merges the commits from the `origin/master` branch into the current `master` branch.
 
-In this case, the `master` branch is not directly ahead of the `origin/master` branch. Therefore, Git can't perform a fast-forward merge and instead must performs a **three-way merge** between the following commits.
-
-- The `HEAD` commit
-- The `origin/HEAD` commit
-- Their common base commit
+In this case, the `master` branch is not directly ahead of the `origin/master` branch. Therefore, Git can't perform a fast-forward merge. Instead, it must perform a **three-way merge** between the following commits the `master` commit, he `origin/master` commit, and their common base commit.
 
 Show the commit logs of your local repository.
 
