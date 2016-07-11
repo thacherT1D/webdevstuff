@@ -832,3 +832,40 @@ suite('editor server', () => {
 ## Bonus
 
 Write tests using `supertest` for your pet shop assignment. [https://github.com/gSchool/fs-pet-shop](https://github.com/gSchool/fs-pet-shop)
+
+## Resources
+
+- [Chai](http://chaijs.com/)
+- [Mocha](https://mochajs.org/)
+- [SuperTest](https://www.npmjs.com/package/supertest)
+- [Testing Node.js with Mocha and Chai](http://mherman.org/blog/2015/09/10/testing-node-js-with-mocha-and-chai/#.V4QAd5MrKRt)
+
+## Videos
+
+### JavaScript Testing Basics
+
+<iframe src="https://player.vimeo.com/video/141373137?byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+### Anatomy of a Test
+
+<iframe src="https://player.vimeo.com/video/141371553?byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+### Red-Green-Refactor
+
+<iframe src="https://player.vimeo.com/video/141372837?byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+### Testing Asynchronous Code
+
+<iframe src="https://player.vimeo.com/video/141374358?byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+### Integration Testing
+
+<iframe src="https://player.vimeo.com/video/141377435?byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+### Testing w/ Cookies
+
+<iframe src="https://player.vimeo.com/video/141378476?byline=0&portrait=0" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+### Behavior-Driven Development
+
+<iframe src="https://player.vimeo.com/video/141376165?byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
