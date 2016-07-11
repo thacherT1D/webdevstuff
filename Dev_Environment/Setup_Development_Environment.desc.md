@@ -493,7 +493,7 @@ git config --global user.email 'YOUR EMAIL ADDRESS'
 Next, run this command to download and install some awesome Git colors, handy aliases for common Git subcommands, and extra Git configuration that'll make your life easier when connecting to GitHub from the command line.
 
 ```
-curl -fsSL https://git.io/vgqFH | sh
+curl -fsSL https://git.io/vKZJ8 | sh
 ```
 
 We'll go over these later. For now, relish in your victory of making it this far. :tada:
