@@ -1,13 +1,10 @@
-"Big O" notation is a way of describing how long an algorithm will take to run **relative to its input**.
+Now that we are beginning to learn how to program you may be wondering: how do we know if our code runs efficiently? "Big O" notation is a way of describing how long an algorithm will take to run **relative to its input**.
 
-Vocab you should know:
+## About Big O Notation
 
-- Time complexity
-- Aymptotic Complexity 
-    - The term asymptotic means approaching a value or curve arbitrarily closely (i.e., as some sort of limit is taken) - http://mathworld.wolfram.com/Asymptotic.html
+We will be primarily using our [Computer Science Curriculum](https://github.com/gSchool/computer-science-curriculum) repository when learning about it. For this section, go to the [Big O](https://github.com/gSchool/computer-science-curriculum/blob/master/Unit-1/02-big-o-notation.md) file in Unit 1.
 
-Resources:
+## Resources
 
-- https://github.com/gSchool/computer-science-curriculum/blob/master/Unit-2/02-big-o-notation.md
-- http://bigocheatsheet.com/
-- http://web.engr.illinois.edu/~jeffe/teaching/algorithms/
+- [Big O Cheatsheet](http://bigocheatsheet.com/)
+- [Asymptotic Notation Video](https://www.youtube.com/watch?v=iOq5kSKqeR4) by Stanford's CS50
