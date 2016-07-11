@@ -343,6 +343,7 @@ getJSON('http://www.omdbapi.com/?s=Captain%20America')
 - [Promises Unwrapping - States and Fates](https://github.com/domenic/promises-unwrapping/blob/master/docs/states-and-fates.md)
 - [Promises - In Wicked Detail](http://www.mattgreer.org/articles/promises-in-wicked-detail/)
 - [Promises/A+ Standard](https://promisesaplus.com/)
+- [Treehouse - Understanding Promises in JavaScript](https://teamtreehouse.com/library/why-promises)
 - [We have a problem with promises](http://pouchdb.com/2015/05/18/we-have-a-problem-with-promises.html)
 
 ## Videos
