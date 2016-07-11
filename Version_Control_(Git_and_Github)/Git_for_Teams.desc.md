@@ -565,8 +565,6 @@ Rebase the current `colors_2` feature branch with the `master` branch. Remember,
 1. The `colors_2` branch is reset to the same base commit as the `master` branch.
 1. The saved commits are reapplied to the rebased `colors_2` branch.
 
-In this case, the `colors_2` branch should apply its commits on top of the new commits in the `master` branch.
-
 ```shell
 git rebase master
 ```
