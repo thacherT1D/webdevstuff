@@ -372,7 +372,13 @@ Checkout the `dimensions_1` feature branch.
 git checkout dimensions_1
 ```
 
-Rebase the `dimensions_1` feature branch with the `master` branch. The branch should be up to date, but, again, you'll want to form this habit.
+Rebase the current `dimensions_1` feature branch with the `master` branch. A **rebase**, in this case, performs the following steps.
+
+1. All the new commits on the current `dimensions_1` branch are saved to a temporary area.
+1. The `dimensions_1` branch is reset to the same base commit as the `master` branch.
+1. The saved commits are reapplied to the rebased `dimensions_1` branch.
+
+In this case, the `dimensions_1` branch should be up to date with the `master` branch, but, again, you'll want to form this habit.
 
 ```shell
 git rebase master
@@ -553,7 +559,13 @@ Those working on the `colors_2` feature branch should see something that resembl
               HEAD -> colors_2
 ```
 
-Rebase the `colors_2` feature branch with the `master` branch. The branch should apply its commits on top of the one new commit in the `master` branch.
+Rebase the current `colors_2` feature branch with the `master` branch. Remember, a rebase, in this case, performs the following steps.
+
+1. All the new commits on the current `colors_2` branch are saved to a temporary area.
+1. The `colors_2` branch is reset to the same base commit as the `master` branch.
+1. The saved commits are reapplied to the rebased `colors_2` branch.
+
+In this case, the `colors_2` branch should apply its commits on top of the new commits in the `master` branch.
 
 ```shell
 git rebase master
@@ -834,7 +846,7 @@ Checkout the `labels_3` feature branch.
 git checkout labels_3
 ```
 
-Rebase the `labels_3` feature branch with the `master` branch. The branch should be up to date, but, again, you'll want to form this habit.
+Rebase the current `labels_3` feature branch with the `master` branch. The branch should be up to date, but, again, you'll want to form this habit.
 
 ```shell
 git rebase master
@@ -1117,7 +1129,6 @@ Those working on the `dimensions_1` feature branch should see something that res
 ```
 
 Everyone, config your `git` command to perform a `fetch + rebase` for a pull instead of a `fetch + merge`.
-
 
 ```shell
 git config --global branch.master.rebase true
