@@ -69,7 +69,7 @@ And we want our output to look like this:
 // [ '1: Zarya', '2: Mei', '3: Mercy' ]
 ```
 
-<div class="media" style="padding: 2.5rem 2rem 1rem; border: 1px solid #c7254e; border-radius: 1rem;">
+<div class="media" style="padding: 2.5rem 2rem 1rem; border: 1px solid #c7254e; border-radius: 1rem; margin-bottom: 1rem;">
   <div class="media-left" style="font-size: 3rem; color: #c7254e;">
     <i class="fa fa-exclamation-circle"></i>
   </div>
@@ -80,7 +80,6 @@ And we want our output to look like this:
 
   </div>
 </div>
-<br>
 
 We can solve this problem by referencing the `listIt` function within another function or for loop. However, another way to solve this would be to pass the existing `listIt` function into a new function that uses it. You should be able to copy and paste all the code below into your console and get a successful result.
 
@@ -172,7 +171,7 @@ var myArray = [10, 20, 30];
 // map(myArray) should return [11, 21, 22]
 ```
 
-<div class="media" style="padding: 2.5rem 2rem 1rem; border: 1px solid #c7254e; border-radius: 1rem;">
+<div class="media" style="padding: 2.5rem 2rem 1rem; border: 1px solid #c7254e; border-radius: 1rem; margin-bottom: 1rem;">
   <div class="media-left" style="font-size: 3rem; color: #c7254e;">
     <i class="fa fa-exclamation-circle"></i>
   </div>
@@ -183,7 +182,6 @@ var myArray = [10, 20, 30];
 
   </div>
 </div>
-<br>
 
 How was building that function? Are you ready? The answer is coming up next!
 
@@ -207,7 +205,7 @@ function add (num) {
 }
 ```
 
-<div class="media" style="padding: 2.5rem 2rem 1rem; border: 1px solid #c7254e; border-radius: 1rem;">
+<div class="media" style="padding: 2.5rem 2rem 1rem; border: 1px solid #c7254e; border-radius: 1rem; margin-bottom: 1rem;">
   <div class="media-left" style="font-size: 3rem; color: #c7254e;">
     <i class="fa fa-exclamation-circle"></i>
   </div>
@@ -218,6 +216,5 @@ function add (num) {
 
   </div>
 </div>
-<br>
 
 When you've finished decoding the above function, move on to the **Higher Order Function Challenge** assigned to this article.
