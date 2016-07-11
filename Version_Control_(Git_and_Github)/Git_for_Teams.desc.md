@@ -390,7 +390,7 @@ Checkout the `master` branch once again.
 git checkout master
 ```
 
-Merge the `dimensions_1` feature branch into the local `master` branch.
+Merge the commits from the `dimensions_1` feature branch into the current `master` branch. Because the `dimensions_1` branch is directly ahead of the `master` branch, Git performs a **fast-forward merge** by simply moving the pointer forward.
 
 ```shell
 git merge dimensions_1
@@ -619,7 +619,7 @@ Those working on the `colors_2` feature branch should see something that resembl
 └─────────┘     └─────────┘     └─────────┘
 ```
 
-Merge the `colors_2` feature branch into the local `master` branch.
+Merge the commits from the `colors_2` feature branch into the current `master` branch. Because the `colors_2` branch is directly ahead of the `master` branch, Git performs a fast-forward merge** by simply moving the pointer forward.
 
 ```shell
 git merge colors_2
@@ -856,7 +856,7 @@ Checkout the `master` branch once again.
 git checkout master
 ```
 
-Merge the `labels_3` feature branch into the local `master` branch.
+Merge the commits from the `labels_3` feature branch into the current `master` branch. Because the `labels_3` branch is directly ahead of the `master` branch, Git performs a fast-forward merge.
 
 ```shell
 git merge labels_3
@@ -947,7 +947,7 @@ Those working on the `title_4` feature branch should see something that resemble
 └─────────┘     └─────────┘     └─────────┘     └─────────┘
 ```
 
-Though you'll always want to synchronize a feature branch with the central `origin/master` branch before merging, accidents happen from time to time. Go ahead and "accidentally" merge the `title_4` feature branch into the master branch.
+Though you'll always want to synchronize a feature branch with the central `origin/master` branch before merging, accidents happen from time to time. Go ahead and "accidentally" merge the commits from the `title_4` feature branch into the current `master` branch. Because the `title_4` branch is directly ahead of the `master` branch, Git performs a fast-forward merge.
 
 ```shell
 git merge title_4
@@ -985,7 +985,20 @@ But your text editor should open a window that looks somethings like this.
 
 [INSERT IMAGE HERE]
 
-In this scenario, Git has asked your text editor to ask you to confirm a message for special kind of commit called a merge commit. A **merge commit** is result of a merge between three commits.
+In this scenario, Git asks your text editor to confirm a commit message for special kind of commit—a **merge commit**—which is the result of a merge between three commits. But why?
+
+In reality, the `git pull origin master` command is composed of the following two commands.
+
+1. `git fetch origin master`
+1. `git merge origin/master`
+
+In other words, the commits on the `master` branch at the central `origin` repository are downloaded to the `origin/master` branch on the local repository. Then, Git merges the commits from the `origin/master` branch into the `master` branch.
+
+In this case, the `master` branch is not directly ahead of the `origin/master` branch. Therefore, Git can't perform a fast-forward merge and instead must performs a **three-way merge** between the following commits.
+
+- The `HEAD` commit
+- The `origin/HEAD` commit
+- Their common base commit
 
 Show the commit logs of your local repository.
 
