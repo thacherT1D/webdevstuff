@@ -1135,11 +1135,23 @@ Those working on the `dimensions_1` feature branch should see something that res
                                                 └─────────┘
 ```
 
-Everyone, config your `git` command to perform a `fetch + rebase` for a pull instead of a `fetch + merge`.
+There are two ways to prevent a merge commit in this scenario. Both ways involve performing a rebase instead of a merge when pulling the `origin/master` branch to the local `master` branch.
+
+You can either perform a rebase when pulling to the `master` branch on an individual basis.
+
+```shell
+git pull --rebase origin master
+```
+
+Or you can config Git to always rebase when pulling to the `master` branch.
 
 ```shell
 git config --global branch.master.rebase true
 ```
+
+When using a team-based Feature Branch Workflow, the act of reapplying your commits in the local `master` branch on top of newer commits in the central `origin/master` branch is very common. Imagine you and your team are hacking away at the intended linear history of a project's central `origin/master` branch. The fact that someone happened to push commits to it slightly prior to the rest of the team is irrelevant. Producing a merge commit in the main history of a code because of an accident of timing is counter-productive to the need of understanding the history of your project.
+
+Ask yourself do you want the history of `origin/master` to be littered with hundreds of merge commits or do you want a select few merge commits that represent real three-way merges of intentional divergent development? If the answer is the later, use rebase when synchronizing `master` with `origin/master`.
 
 ## Assignment
 
