@@ -564,7 +564,8 @@ Rebase the current `colors_2` feature branch with the `master` branch. Remember,
 
 1. All the new commits on the current `colors_2` branch are saved to a temporary area.
 1. The `colors_2` branch is reset to the same base commit as the `master` branch.
-1. The saved commits are reapplied to the rebased `colors_2` branch.
+1. The changes from the saved commits are reapplied to the rebased `colors_2` branch, creating new commits.
+1. The original saved commits are deleted.
 
 ```shell
 git rebase master
@@ -845,7 +846,14 @@ Checkout the `labels_3` feature branch.
 git checkout labels_3
 ```
 
-Rebase the current `labels_3` feature branch with the `master` branch. The branch should be up to date, but, again, you'll want to form this habit.
+Rebase the current `labels_3` feature branch with the `master` branch. Remember, a rebase, in this case, performs the following steps.
+
+1. All the new commits on the current `labels_3` branch are saved to a temporary area.
+1. The `labels_3` branch is reset to the same base commit as the `master` branch.
+1. The changes from the saved commits are reapplied to the rebased `labels_3` branch, creating new commits.
+1. The original saved commits are deleted.
+
+In this case, the `labels_3` branch should be up to date with the `master` branch, but, again, you'll want to form this habit.
 
 ```shell
 git rebase master
