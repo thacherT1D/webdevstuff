@@ -1758,3 +1758,6 @@ Those working on the `less_5` feature branch should see something that resembles
 ## Resources
 
 - [Atlassian Feature Branch Workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow)
+- [Pro Git - Git Branching - Basic Branching and Merging](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging)
+- [Pro Git - Git Branching - Rebasing](https://git-scm.com/book/en/v2/Git-Branching-Rebasing)
+- [StackOverflow - When should I use `git pull --rebase`?](http://stackoverflow.com/questions/2472254/when-should-i-use-git-pull-rebase/4675513#4675513)
