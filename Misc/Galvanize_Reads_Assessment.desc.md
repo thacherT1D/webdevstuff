@@ -56,35 +56,37 @@ ID,Book Title,Book Genre,Book Description,Book Cover URL,Author 1 First Name,Aut
 ## Notes
 
 * You can use a styling library if you'd like
-* You can use server-side templating or AJAX/RESTful services. There are trade-offs with each, but server-side templating will likely be faster to build.
 * You can use a raw database driver, a query builder, or an ORM for your database connection. A query builder, such as Knex, is recommended.
 * Use feature-branch workflows. You should end up with one commit for each feature.
-* Deploy your work
+* Deploy your work after every feature
+* Use good agile development practices
+* You do _not_ need to use any of the mocha tests in the repo- feel free to delete them
+* Everything after the filtering by genre story is an optional stretch feature
+* You can do a vertical navigation or a horizontal navigation- the horizontal one is easier:
 
-## Wireframes
+## Wireframes and Screenshots
 
-You can use these wireframes as a reference.
+You can use these as a reference.
 
 ![Index](https://s3-us-west-2.amazonaws.com/assessment-images/galvanize_reads/Galvanize+Reads+Homepage.png)
-![Books - List](https://s3-us-west-2.amazonaws.com/assessment-images/galvanize_reads/Galvanize+Reads+Book+List.png)
+![Books - List](https://s3-us-west-2.amazonaws.com/assessment-images/galvanize_reads/Books+List.png)
 ![Books - Read](https://s3-us-west-2.amazonaws.com/assessment-images/galvanize_reads/Galvanize+Reads+Book+Read.png)
-![Books - New](https://s3-us-west-2.amazonaws.com/assessment-images/galvanize_reads/Galvanize+Reads+Book+New.png)
-![Books - Edit](https://s3-us-west-2.amazonaws.com/assessment-images/galvanize_reads/Galvanize+Reads+Book+Edit.png)
+![Books - New](https://s3-us-west-2.amazonaws.com/assessment-images/galvanize_reads/Add+Book.png)
+![Books - Edit](https://s3-us-west-2.amazonaws.com/assessment-images/galvanize_reads/Add+Author+to+Books.png)
 ![Books - Delete](https://s3-us-west-2.amazonaws.com/assessment-images/galvanize_reads/Galvanize+Reads+Book+Delete.png)
-![Authors - List](https://s3-us-west-2.amazonaws.com/assessment-images/galvanize_reads/Galvanize+Reads+Author+List.png)
+![Authors - List](https://s3-us-west-2.amazonaws.com/assessment-images/galvanize_reads/Authors+List.png)
 ![Authors - Read](https://s3-us-west-2.amazonaws.com/assessment-images/galvanize_reads/Galvanize+Reads+Author+Read.png)
 ![Authors - New](https://s3-us-west-2.amazonaws.com/assessment-images/galvanize_reads/Galvanize+Reads+Author+New.png)
-![Authors - Edit](https://s3-us-west-2.amazonaws.com/assessment-images/galvanize_reads/Galvanize+Reads+Author+Edit.png)
+![Authors - Edit](https://s3-us-west-2.amazonaws.com/assessment-images/galvanize_reads/Add+Books+to+Authors.png)
 ![Authors - Delete](https://s3-us-west-2.amazonaws.com/assessment-images/galvanize_reads/Galvanize+Reads+Author+Delete.png)
 
 ## How to Submit Your Assessment
 
-Fork/clone [this repo](https://github.com/gSchool/galvanize-reads-q2).
+Fork/clone [this repo](https://github.com/gSchool/galvanize-reads).
 Add a README to your project that has:
 
 * A link to your deployed site
 * Link to your tracker project
-* Links to any repos you used with updated code
-* A data model of the final data model of the project
+* A data model of the final data model of the project as a graphic
 
 Submit a pull request to the orginal repo with this README.
