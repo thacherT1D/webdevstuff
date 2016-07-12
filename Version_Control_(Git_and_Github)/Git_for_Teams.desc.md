@@ -1449,12 +1449,309 @@ Finally, delete your `less_5` feature branch.
 git branch -d less_5
 ```
 
+Assuming your staging area is clean, those who worked on the `more_6` feature branch, checkout the local `master` branch.
+
+```shell
+git checkout master
+```
+
+Show the commit logs of your local repository.
+
+```shell
+git log --oneline --graph --all --decorate=short
+```
+
+Those working on the `more_6` feature branch should see something that resembles this diagram.
+
+```text
+                                                               origin/master
+                                                                  master       HEAD -> more_6
+                                                                     │               │
+                                                                     │               │
+                                                                     │               │
+                                                                     ▼               ▼
+┌─────────┐     ┌─────────┐     ┌─────────┐     ┌─────────┐     ┌─────────┐     ┌─────────┐
+│         │     │         │     │         │     │         │     │         │     │         │
+│ 2e0dc92 │─────│ 4f7e591 │─────│ 8b4782c │─────│ c69fbd2 │─────│ 00131b9 │─────│ b070eef │
+│         │     │         │     │         │─┐   │         │   ┌─│         │     │         │
+└─────────┘     └─────────┘     └─────────┘ │   └─────────┘   │ └─────────┘     └─────────┘
+                                            │                 │
+                                            │   ┌─────────┐   │
+                                            │   │         │   │
+                                            └───│ a7c7c3f │───┘    
+                                                │         │
+                                                └─────────┘
+```
+
+Pull down any new commits from the central `origin/master` branch to the local `master` branch. There should be one commit pulled down.
+
+```shell
+git pull
+```
+
+Show the commit logs of your local repository.
+
+```shell
+git log --oneline --graph --all --decorate=short
+```
+
+Those working on the `more_6` feature branch should see something that resembles this diagram.
+
+```text
+                                                                               origin/master
+                                                                               HEAD -> master       
+                                                                                     │
+                                                                                     │
+                                                                                     │
+                                                                                     ▼
+┌─────────┐     ┌─────────┐     ┌─────────┐     ┌─────────┐     ┌─────────┐     ┌─────────┐
+│         │     │         │     │         │     │         │     │         │     │         │
+│ 2e0dc92 │─────│ 4f7e591 │─────│ 8b4782c │─────│ c69fbd2 │─────│ 00131b9 │─────│ a1dc585 │
+│         │     │         │     │         │─┐   │         │   ┌─│         │─┐   │         │
+└─────────┘     └─────────┘     └─────────┘ │   └─────────┘   │ └─────────┘ │   └─────────┘
+                                            │                 │             │
+                                            │   ┌─────────┐   │             │   ┌─────────┐
+                                            │   │         │   │             │   │         │
+                                            └───│ a7c7c3f │───┘             └───│ b070eef │    
+                                                │         │                     │         │
+                                                └─────────┘                     └─────────┘
+                                                                                     ▲
+                                                                                     │
+                                                                                     │
+                                                                                     │
+                                                                                  more_6
+```
+
+Checkout the `more_6` feature branch.
+
+```shell
+git checkout more_6
+```
+
+Show the commit logs of your local repository.
+
+```shell
+git log --oneline --graph --all --decorate=short
+```
+
+Those working on the `more_6` feature branch should see something that resembles this diagram.
+
+```text
+                                                                               origin/master
+                                                                                  master       
+                                                                                     │
+                                                                                     │
+                                                                                     │
+                                                                                     ▼
+┌─────────┐     ┌─────────┐     ┌─────────┐     ┌─────────┐     ┌─────────┐     ┌─────────┐
+│         │     │         │     │         │     │         │     │         │     │         │
+│ 2e0dc92 │─────│ 4f7e591 │─────│ 8b4782c │─────│ c69fbd2 │─────│ 00131b9 │─────│ a1dc585 │
+│         │     │         │     │         │─┐   │         │   ┌─│         │─┐   │         │
+└─────────┘     └─────────┘     └─────────┘ │   └─────────┘   │ └─────────┘ │   └─────────┘
+                                            │                 │             │
+                                            │   ┌─────────┐   │             │   ┌─────────┐
+                                            │   │         │   │             │   │         │
+                                            └───│ a7c7c3f │───┘             └───│ b070eef │    
+                                                │         │                     │         │
+                                                └─────────┘                     └─────────┘
+                                                                                     ▲
+                                                                                     │
+                                                                                     │
+                                                                                     │
+                                                                               HEAD -> more_6
+```
+
+Rebase the current `more_6` feature branch with the `master` branch. Remember, a rebase, in this case, performs the following steps.
+
+1. All the new commits on the current `more_6` branch are saved to a temporary area.
+1. The `more_6` branch is reset to the same base commit as the `master` branch.
+1. The changes from the saved commits are reapplied to the rebased `more_6` branch, creating new commits.
+1. The original saved commits are deleted.
+
+```shell
+git rebase master
+```
+
+You see a merge conflict while rebasing.
+
 1. Find the conflict in the code.
 1. Pick the winning code.
 1. Remove all the merge conflict syntax.
 1. Save the file.
 1. Add the file.
 1. Continue the rebase with `git rebase --continue`
+
+Show the commit logs of your local repository.
+
+```shell
+git log --oneline --graph --all --decorate=short
+```
+
+Those working on the `more_6` feature branch should see something that resembles this diagram.
+
+```text
+                                                                               origin/master
+                                                                                  master        HEAD -> more_6
+                                                                                     │               │
+                                                                                     │               │
+                                                                                     │               │
+                                                                                     ▼               ▼
+┌─────────┐     ┌─────────┐     ┌─────────┐     ┌─────────┐     ┌─────────┐     ┌─────────┐     ┌─────────┐
+│         │     │         │     │         │     │         │     │         │     │         │     │         │
+│ 2e0dc92 │─────│ 4f7e591 │─────│ 8b4782c │─────│ c69fbd2 │─────│ 00131b9 │─────│ a1dc585 │─────│ 358ea74 │
+│         │     │         │     │         │─┐   │         │   ┌─│         │     │         │     │         │
+└─────────┘     └─────────┘     └─────────┘ │   └─────────┘   │ └─────────┘     └─────────┘     └─────────┘
+                                            │                 │              
+                                            │   ┌─────────┐   │
+                                            │   │         │   │
+                                            └───│ a7c7c3f │───┘
+                                                │         │
+                                                └─────────┘
+```
+
+Checkout the `master` branch once again.
+
+```shell
+git checkout master
+```
+
+Show the commit logs of your local repository.
+
+```shell
+git log --oneline --graph --all --decorate=short
+```
+
+Those working on the `more_6` feature branch should see something that resembles this diagram.
+
+```text
+                                                                               origin/master
+                                                                               HEAD -> master      more_6
+                                                                                     │               │
+                                                                                     │               │
+                                                                                     │               │
+                                                                                     ▼               ▼
+┌─────────┐     ┌─────────┐     ┌─────────┐     ┌─────────┐     ┌─────────┐     ┌─────────┐     ┌─────────┐
+│         │     │         │     │         │     │         │     │         │     │         │     │         │
+│ 2e0dc92 │─────│ 4f7e591 │─────│ 8b4782c │─────│ c69fbd2 │─────│ 00131b9 │─────│ a1dc585 │─────│ 358ea74 │
+│         │     │         │     │         │─┐   │         │   ┌─│         │     │         │     │         │
+└─────────┘     └─────────┘     └─────────┘ │   └─────────┘   │ └─────────┘     └─────────┘     └─────────┘
+                                            │                 │              
+                                            │   ┌─────────┐   │
+                                            │   │         │   │
+                                            └───│ a7c7c3f │───┘
+                                                │         │
+                                                └─────────┘
+```
+
+Merge the commits from the `more_6` feature branch into the current `master` branch. Because the `colors_2` branch is directly ahead of the `master` branch, Git performs a fast-forward merge** by simply moving the pointer forward.
+
+```shell
+git merge more_6
+```
+
+Show the commit logs of your local repository.
+
+```shell
+git log --oneline --graph --all --decorate=short
+```
+
+Those working on the `more_6` feature branch should see something that resembles this diagram.
+
+```text
+                                                                                               HEAD -> master
+                                                                               origin/master       more_6
+                                                                                     │               │
+                                                                                     │               │
+                                                                                     │               │
+                                                                                     ▼               ▼
+┌─────────┐     ┌─────────┐     ┌─────────┐     ┌─────────┐     ┌─────────┐     ┌─────────┐     ┌─────────┐
+│         │     │         │     │         │     │         │     │         │     │         │     │         │
+│ 2e0dc92 │─────│ 4f7e591 │─────│ 8b4782c │─────│ c69fbd2 │─────│ 00131b9 │─────│ a1dc585 │─────│ 358ea74 │
+│         │     │         │     │         │─┐   │         │   ┌─│         │     │         │     │         │
+└─────────┘     └─────────┘     └─────────┘ │   └─────────┘   │ └─────────┘     └─────────┘     └─────────┘
+                                            │                 │              
+                                            │   ┌─────────┐   │
+                                            │   │         │   │
+                                            └───│ a7c7c3f │───┘
+                                                │         │
+                                                └─────────┘
+```
+
+And push the local `master` branch to the central `origin/master` branch.
+
+```shell
+git push
+```
+
+Show the commit logs of your local repository.
+
+```shell
+git log --oneline --graph --all --decorate=short
+```
+
+Those working on the `colors_2` feature branch should see something that resembles this diagram.
+
+```text
+                                                                                               origin/master
+                                                                                               HEAD -> master
+                                                                                                  more_6
+                                                                                                     │
+                                                                                                     │
+                                                                                                     │
+                                                                                                     ▼
+┌─────────┐     ┌─────────┐     ┌─────────┐     ┌─────────┐     ┌─────────┐     ┌─────────┐     ┌─────────┐
+│         │     │         │     │         │     │         │     │         │     │         │     │         │
+│ 2e0dc92 │─────│ 4f7e591 │─────│ 8b4782c │─────│ c69fbd2 │─────│ 00131b9 │─────│ a1dc585 │─────│ 358ea74 │
+│         │     │         │     │         │─┐   │         │   ┌─│         │     │         │     │         │
+└─────────┘     └─────────┘     └─────────┘ │   └─────────┘   │ └─────────┘     └─────────┘     └─────────┘
+                                            │                 │              
+                                            │   ┌─────────┐   │
+                                            │   │         │   │
+                                            └───│ a7c7c3f │───┘
+                                                │         │
+                                                └─────────┘
+```
+
+Finally, delete your `more_6` feature branch.
+
+```shell
+git branch -d more_6
+```
+
+Those who worked on the `less_5` feature branch can now synchronize their local `master` branch with the `origin/master` branch.
+
+```shell
+git pull
+```
+
+Show the commit logs of your local repository.
+
+```shell
+git log --oneline --graph --all --decorate=short
+```
+
+Those working on the `less_5` feature branch should see something that resembles this diagram.
+
+```text
+                                                                                               origin/master
+                                                                                               HEAD -> master
+                                                                                                  less_5
+                                                                                                     │
+                                                                                                     │
+                                                                                                     │
+                                                                                                     ▼
+┌─────────┐     ┌─────────┐     ┌─────────┐     ┌─────────┐     ┌─────────┐     ┌─────────┐     ┌─────────┐
+│         │     │         │     │         │     │         │     │         │     │         │     │         │
+│ 2e0dc92 │─────│ 4f7e591 │─────│ 8b4782c │─────│ c69fbd2 │─────│ 00131b9 │─────│ a1dc585 │─────│ 358ea74 │
+│         │     │         │     │         │─┐   │         │   ┌─│         │     │         │     │         │
+└─────────┘     └─────────┘     └─────────┘ │   └─────────┘   │ └─────────┘     └─────────┘     └─────────┘
+                                            │                 │              
+                                            │   ┌─────────┐   │
+                                            │   │         │   │
+                                            └───│ a7c7c3f │───┘
+                                                │         │
+                                                └─────────┘
+```
 
 ## Resources
 
