@@ -1574,14 +1574,18 @@ Rebase the current `more_6` feature branch with the `master` branch. Remember, a
 git rebase master
 ```
 
-You see a merge conflict while rebasing.
+And you should see something like this.
+
+[INSERT IMAGE HERE]
+
+This is what a merge conflict looks like while rebasing. To resolve the conflict, perform the following steps.
 
 1. Find the conflict in the code.
 1. Pick the winning code.
-1. Remove all the merge conflict syntax.
+1. Remove all the conflict syntax.
 1. Save the file.
 1. Add the file.
-1. Continue the rebase with `git rebase --continue`
+1. And continue the rebase with `git rebase --continue`.
 
 Show the commit logs of your local repository.
 
