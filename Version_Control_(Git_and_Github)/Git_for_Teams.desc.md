@@ -2,7 +2,9 @@
 
 - Explain what the Feature Branch Workflow is.
 - Explain why the Feature Branch Workflow is important.
-- Use the Feature Branch Workflow in a team-based project.
+- Use the Feature Branch Workflow, without merge commits, in a team-based project.
+- Use the Feature Branch Workflow, with merge commits, in a team-based project.
+- Use the Feature Branch Workflow, with merge conflicts, in a team-based project.
 
 ## What's the Feature Branch Workflow?
 
@@ -180,7 +182,7 @@ As you've seen, the Feature Branch Workflow makes it easy for you to work on a p
 
 Take a moment to write down why the Feature Branch Workflow is important. After about a minute, your instructor will cold call on the class and ask what was written down.
 
-## How do you use the Feature Branch Workflow in a team-based project?
+## How do you use the Feature Branch Workflow, without merge commits, in a team-based project?
 
 Since you've been using the Feature Branch Workflow in your individual projects this quarter, let's use it in a team-based project. To get started, organize your Q2 Project team by completing the following steps.
 
@@ -235,8 +237,6 @@ HEAD ─> master
 │         │
 └─────────┘
 ```
-
-### Workflow without merge commits
 
 Now, as a team, create the following issues in the issue tracker for your repository. Then, as a team, assign the issues to different team members.
 
@@ -712,7 +712,7 @@ Those working on the `dimensions_1` feature branch should see something that res
 └─────────┘     └─────────┘     └─────────┘
 ```
 
-### Workflow with merge commits
+## How do you use the Feature Branch Workflow, with merge commits, in a team-based project?
 
 Now, as a team, create the following issues in the issue tracker for your repository. Then, as a team, assign the issues to different team members.
 
@@ -1193,7 +1193,7 @@ Or you can config Git to always rebase when pulling to the `master` branch.
 git config --global branch.master.rebase true
 ```
 
-### Workflow with merge conflicts
+## How do you use the Feature Branch Workflow, with merge conflicts, in a team-based project?
 
 As a team, create the following issues in the issue tracker for your repository. Then, as a team, assign the issues to different team members.
 
