@@ -992,7 +992,7 @@ git pull
 
 But your text editor should open a window that looks somethings like this.
 
-[INSERT IMAGE HERE]
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/276/Screen_Shot_2016-07-12_at_1.37.46_PM.png)
 
 In this scenario, Git asks your text editor to confirm a commit message for a special kind of commit—a **merge commit**—which is the result of a merge between three commits. But why?
 
@@ -1031,6 +1031,8 @@ The problem, in this case, was the `master` branch was not directly ahead of the
 ```
 
 Because the `master` branch was not directly ahead of the `origin/master` branch, Git couldn't perform a fast-forward merge. Instead, it performed a **three-way merge** between the `master` commit, the `origin/master` commit, and their common base commit.
+
+A three-way merge always results in a merge commit. This is why your text editor opened a new window, like the one above, asking you to type in a commit message. Typically, the default message is good enough. When you're ready, save the file and close the window to instruct Git to accept the commit message.
 
 Show the commit logs of your local repository.
 
