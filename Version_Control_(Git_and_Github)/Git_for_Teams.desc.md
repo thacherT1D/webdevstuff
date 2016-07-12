@@ -4,7 +4,7 @@
 - Explain why the Feature Branch Workflow is important.
 - Use the Feature Branch Workflow, without merge commits, in a team-based project.
 - Use the Feature Branch Workflow, with merge commits, in a team-based project.
-- Use the Feature Branch Workflow, with merge conflicts, in a team-based project.
+- Use the Feature Branch Workflow, with merge conflicts after a rebase, in a team-based project.
 
 ## What's the Feature Branch Workflow?
 
@@ -1193,7 +1193,7 @@ Or you can config Git to always rebase when pulling to the `master` branch.
 git config --global branch.master.rebase true
 ```
 
-## How do you use the Feature Branch Workflow, with merge conflicts, in a team-based project?
+## How do you use the Feature Branch Workflow, with merge conflicts after a rebase, in a team-based project?
 
 As a team, create the following issues in the issue tracker for your repository. Then, as a team, assign the issues to different team members.
 
@@ -1762,6 +1762,7 @@ Those working on the `less_5` feature branch should see something that resembles
 ## Resources
 
 - [Atlassian Feature Branch Workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow)
+- [GitHub Help - Resolving merge conflicts after a Git rebase](https://help.github.com/articles/resolving-merge-conflicts-after-a-git-rebase/)
 - [Pro Git - Git Branching - Basic Branching and Merging](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging)
 - [Pro Git - Git Branching - Rebasing](https://git-scm.com/book/en/v2/Git-Branching-Rebasing)
 - [StackOverflow - When should I use `git pull --rebase`?](http://stackoverflow.com/questions/2472254/when-should-i-use-git-pull-rebase/4675513#4675513)
