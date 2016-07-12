@@ -1153,7 +1153,7 @@ Show the commit logs of your local repository.
 git log --oneline --graph --all --decorate=short
 ```
 
-Those working on the `dimensions_1` feature branch should see something that resembles this diagram.
+Those working on the `labels_3` feature branch should see something that resembles this diagram.
 
 ```text
                                                                origin/master
@@ -1643,7 +1643,7 @@ Those working on the `more_6` feature branch should see something that resembles
                                                 └─────────┘
 ```
 
-Merge the commits from the `more_6` feature branch into the current `master` branch. Because the `colors_2` branch is directly ahead of the `master` branch, Git performs a fast-forward merge** by simply moving the pointer forward.
+Merge the commits from the `more_6` feature branch into the current `master` branch. Because the `more_6` branch is directly ahead of the `master` branch, Git performs a fast-forward merge** by simply moving the pointer forward.
 
 ```shell
 git merge more_6
@@ -1689,7 +1689,7 @@ Show the commit logs of your local repository.
 git log --oneline --graph --all --decorate=short
 ```
 
-Those working on the `colors_2` feature branch should see something that resembles this diagram.
+Those working on the `more_6` feature branch should see something that resembles this diagram.
 
 ```text
                                                                                                origin/master
