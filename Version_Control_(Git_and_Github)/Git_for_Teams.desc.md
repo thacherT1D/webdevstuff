@@ -1191,16 +1191,263 @@ Or you can config Git to always rebase when pulling to the `master` branch.
 git config --global branch.master.rebase true
 ```
 
-## Assignment
+### Workflow with merge conflicts
 
 As a team, create the following issues in the issue tracker for your repository. Then, as a team, assign the issues to different team members.
 
-1. Change the data so more students don't understand
-1. Change the data so more students do understand
+1. Change the data so less students understand
+1. Change the data so more students understand
 
-For team members with an assigned issue, create and checkout a corresponding feature branch in your local repository. Then, as a team, work toward solving the issues using a team-based Feature Branch Workflow.
+For team members with an assigned issue, create and checkout a corresponding feature branch in your local repository.
 
-Be sure that each team member changes both data values. This will force the slowest person to resolve a merge conflict. As a team, resolve the conflict by following these steps.
+1. `git checkout -b less_5`
+1. `git checkout -b more_6`
+
+Show the commit logs of your local repository.
+
+```shell
+git log --oneline --graph --all --decorate=short
+```
+
+Those working on the `less_5` feature branch should see something that resembles this diagram.
+
+```text
+                                                               origin/master
+                                                                  master
+                                                               HEAD -> less_5
+                                                                     │
+                                                                     │
+                                                                     │
+                                                                     ▼
+┌─────────┐     ┌─────────┐     ┌─────────┐     ┌─────────┐     ┌─────────┐
+│         │     │         │     │         │     │         │     │         │
+│ 2e0dc92 │─────│ 4f7e591 │─────│ 8b4782c │─────│ c69fbd2 │─────│ 00131b9 │
+│         │     │         │     │         │─┐   │         │   ┌─│         │
+└─────────┘     └─────────┘     └─────────┘ │   └─────────┘   │ └─────────┘
+                                            │                 │
+                                            │   ┌─────────┐   │
+                                            │   │         │   │
+                                            └───│ a7c7c3f │───┘    
+                                                │         │
+                                                └─────────┘
+```
+
+And those working on the `more_6` feature branch should see something that resembles this diagram.
+
+```text
+                                                               origin/master
+                                                                  master
+                                                               HEAD -> more_6
+                                                                     │
+                                                                     │
+                                                                     │
+                                                                     ▼
+┌─────────┐     ┌─────────┐     ┌─────────┐     ┌─────────┐     ┌─────────┐
+│         │     │         │     │         │     │         │     │         │
+│ 2e0dc92 │─────│ 4f7e591 │─────│ 8b4782c │─────│ c69fbd2 │─────│ 00131b9 │
+│         │     │         │     │         │─┐   │         │   ┌─│         │
+└─────────┘     └─────────┘     └─────────┘ │   └─────────┘   │ └─────────┘
+                                            │                 │
+                                            │   ┌─────────┐   │
+                                            │   │         │   │
+                                            └───│ a7c7c3f │───┘    
+                                                │         │
+                                                └─────────┘
+```
+
+Then, as a team, work toward solving the issues. Be sure that each team member changes both data values so their sum is remains `600`. Once you have a working solution, commit the changes to your respective feature branch.
+
+**NOTE:** Please hold off on merging until the entire class is ready.
+
+Show the commit logs of your local repository.
+
+```shell
+git log --oneline --graph --all --decorate=short
+```
+
+Those working on the `less_5` feature branch should see something that resembles this diagram.
+
+```text
+                                                               origin/master
+                                                                  master       HEAD -> less_5
+                                                                     │               │
+                                                                     │               │
+                                                                     │               │
+                                                                     ▼               ▼
+┌─────────┐     ┌─────────┐     ┌─────────┐     ┌─────────┐     ┌─────────┐     ┌─────────┐
+│         │     │         │     │         │     │         │     │         │     │         │
+│ 2e0dc92 │─────│ 4f7e591 │─────│ 8b4782c │─────│ c69fbd2 │─────│ 00131b9 │─────│ a1dc585 │
+│         │     │         │     │         │─┐   │         │   ┌─│         │     │         │
+└─────────┘     └─────────┘     └─────────┘ │   └─────────┘   │ └─────────┘     └─────────┘
+                                            │                 │
+                                            │   ┌─────────┐   │
+                                            │   │         │   │
+                                            └───│ a7c7c3f │───┘    
+                                                │         │
+                                                └─────────┘
+```
+
+And those working on the `more_6` feature branch should see something that resembles this diagram.
+
+```text
+                                                               origin/master
+                                                                  master       HEAD -> more_6
+                                                                     │               │
+                                                                     │               │
+                                                                     │               │
+                                                                     ▼               ▼
+┌─────────┐     ┌─────────┐     ┌─────────┐     ┌─────────┐     ┌─────────┐     ┌─────────┐
+│         │     │         │     │         │     │         │     │         │     │         │
+│ 2e0dc92 │─────│ 4f7e591 │─────│ 8b4782c │─────│ c69fbd2 │─────│ 00131b9 │─────│ df3501f │
+│         │     │         │     │         │─┐   │         │   ┌─│         │     │         │
+└─────────┘     └─────────┘     └─────────┘ │   └─────────┘   │ └─────────┘     └─────────┘
+                                            │                 │
+                                            │   ┌─────────┐   │
+                                            │   │         │   │
+                                            └───│ a7c7c3f │───┘    
+                                                │         │
+                                                └─────────┘
+```
+
+Assuming your staging area is clean, those who worked on the `less_5` feature branch, checkout the local `master` branch.
+
+```shell
+git checkout master
+```
+
+Show the commit logs of your local repository.
+
+```shell
+git log --oneline --graph --all --decorate=short
+```
+
+Those working on the `less_5` feature branch should see something that resembles this diagram.
+
+```text
+                                                               origin/master
+                                                               HEAD -> master      less_5
+                                                                     │               │
+                                                                     │               │
+                                                                     │               │
+                                                                     ▼               ▼
+┌─────────┐     ┌─────────┐     ┌─────────┐     ┌─────────┐     ┌─────────┐     ┌─────────┐
+│         │     │         │     │         │     │         │     │         │     │         │
+│ 2e0dc92 │─────│ 4f7e591 │─────│ 8b4782c │─────│ c69fbd2 │─────│ 00131b9 │─────│ a1dc585 │
+│         │     │         │     │         │─┐   │         │   ┌─│         │     │         │
+└─────────┘     └─────────┘     └─────────┘ │   └─────────┘   │ └─────────┘     └─────────┘
+                                            │                 │
+                                            │   ┌─────────┐   │
+                                            │   │         │   │
+                                            └───│ a7c7c3f │───┘    
+                                                │         │
+                                                └─────────┘
+```
+
+Pull down any new commits from the central `origin/master` branch to the local `master` branch. There should be no commits, but this is the habit you'll want to form.
+
+```shell
+git pull
+```
+
+Checkout the `less_5` feature branch.
+
+```shell
+git checkout less_5
+```
+
+Rebase the current `less_5` feature branch with the `master` branch. Remember, a rebase, in this case, performs the following steps.
+
+1. All the new commits on the current `less_5` branch are saved to a temporary area.
+1. The `less_5` branch is reset to the same base commit as the `master` branch.
+1. The changes from the saved commits are reapplied to the rebased `less_5` branch, creating new commits.
+1. The original saved commits are deleted.
+
+In this case, the `less_5` branch should be up to date with the `master` branch, but, again, you'll want to form this habit.
+
+```shell
+git rebase master
+```
+
+Checkout the `master` branch once again.
+
+```shell
+git checkout master
+```
+
+Merge the commits from the `less_5` feature branch into the current `master` branch. Because the `less_5` branch is directly ahead of the `master` branch, Git performs a fast-forward merge.
+
+```shell
+git merge less_5
+```
+
+Show the commit logs of your local repository.
+
+```shell
+git log --oneline --graph --all --decorate=short
+```
+
+Those working on the `less_5` feature branch should see something that resembles this diagram.
+
+```text
+                                                                               HEAD -> master
+                                                               origin/master       less_5
+                                                                     │               │
+                                                                     │               │
+                                                                     │               │
+                                                                     ▼               ▼
+┌─────────┐     ┌─────────┐     ┌─────────┐     ┌─────────┐     ┌─────────┐     ┌─────────┐
+│         │     │         │     │         │     │         │     │         │     │         │
+│ 2e0dc92 │─────│ 4f7e591 │─────│ 8b4782c │─────│ c69fbd2 │─────│ 00131b9 │─────│ a1dc585 │
+│         │     │         │     │         │─┐   │         │   ┌─│         │     │         │
+└─────────┘     └─────────┘     └─────────┘ │   └─────────┘   │ └─────────┘     └─────────┘
+                                            │                 │
+                                            │   ┌─────────┐   │
+                                            │   │         │   │
+                                            └───│ a7c7c3f │───┘    
+                                                │         │
+                                                └─────────┘
+```
+
+And push the local `master` branch to the central `origin/master` branch.
+
+```shell
+git push
+```
+
+Show the commit logs of your local repository.
+
+```shell
+git log --oneline --graph --all --decorate=short
+```
+
+Those working on the `less_5` feature branch should see something that resembles this diagram.
+
+```text
+                                                                               origin/master
+                                                                               HEAD -> master
+                                                                                  less_5
+                                                                                     │
+                                                                                     │
+                                                                                     │
+                                                                                     ▼
+┌─────────┐     ┌─────────┐     ┌─────────┐     ┌─────────┐     ┌─────────┐     ┌─────────┐
+│         │     │         │     │         │     │         │     │         │     │         │
+│ 2e0dc92 │─────│ 4f7e591 │─────│ 8b4782c │─────│ c69fbd2 │─────│ 00131b9 │─────│ a1dc585 │
+│         │     │         │     │         │─┐   │         │   ┌─│         │     │         │
+└─────────┘     └─────────┘     └─────────┘ │   └─────────┘   │ └─────────┘     └─────────┘
+                                            │                 │
+                                            │   ┌─────────┐   │
+                                            │   │         │   │
+                                            └───│ a7c7c3f │───┘    
+                                                │         │
+                                                └─────────┘
+```
+
+Finally, delete your `less_5` feature branch.
+
+```shell
+git branch -d less_5
+```
 
 1. Find the conflict in the code.
 1. Pick the winning code.
