@@ -1135,7 +1135,7 @@ Those working on the `dimensions_1` feature branch should see something that res
                                                 └─────────┘
 ```
 
-When using a Feature Branch Workflow in a team-based project, it's common to reapply your commits from the local `master` branch on top of newer commits in the central `origin/master` branch. Imagine you and your team are hacking away at the intended linear history of a project's central `origin/master` branch. The fact that one of you happened to push commits to it slightly before the rest of the team is irrelevant. Producing a merge commit in the `origin/master` branch because of a timing accident is counter-productive to understanding the history of your project.
+When using a Feature Branch Workflow in a team-based project, it's common to reapply your commits from the local `master` branch on top of newer commits in the central `origin/master` branch. Imagine you and your team are hacking away at the intended linear history of a project's central `origin/master` branch. The fact that one of you happened to push commits to it slightly before the rest of the team is irrelevant. Producing a "merge bubble" in the `origin/master` branch because of a timing accident is counter-productive to understanding the history of your project.
 
 Ask yourself do you want the history of `origin/master` to be littered with hundreds of merge commits or do you want the history to contain a handful of merge commits that represent intentional divergent development? If the answer is the later, perform a rebase instead of a merge when pulling the `origin/master` branch into the `master` branch.
 
