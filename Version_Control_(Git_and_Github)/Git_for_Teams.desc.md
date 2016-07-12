@@ -1003,7 +1003,34 @@ In reality, the `git pull` command is short for `git pull origin master`, which 
 
 In other words, the commits on the `master` branch at the central `origin` repository are downloaded to the `origin/master` branch in the local repository. Then, Git merges the commits from the `origin/master` branch into the current `master` branch.
 
-In this case, the `master` branch is not directly ahead of the `origin/master` branch. Therefore, Git can't perform a fast-forward merge. Instead, it must perform a **three-way merge** between the following commits the `master` commit, he `origin/master` commit, and their common base commit.
+The problem, in this case, was the `master` branch was not directly ahead of the `origin/master` branch. In reality, the two branches had diverged, producing something that resembles this diagram.
+
+```text
+                                               origin/master
+                                                     │
+                                                     │
+                                                     │
+                                                     ▼
+┌─────────┐     ┌─────────┐     ┌─────────┐     ┌─────────┐
+│         │     │         │     │         │     │         │
+│ 2e0dc92 │─────│ 4f7e591 │─────│ 8b4782c │─────│ c69fbd2 │
+│         │     │         │     │         │─┐   │         │
+└─────────┘     └─────────┘     └─────────┘ │   └─────────┘
+                                            │
+                                            │   ┌─────────┐
+                                            │   │         │
+                                            └───│ a7c7c3f │
+                                                │         │
+                                                └─────────┘
+                                                     ▲
+                                                     │
+                                                     │
+                                                     │
+                                                  title_4
+                                               HEAD -> master
+```
+
+Because the `master` branch was not directly ahead of the `origin/master` branch, Git couldn't perform a fast-forward merge. Instead, it performed a **three-way merge** between the `master` commit, the `origin/master` commit, and their common base commit.
 
 Show the commit logs of your local repository.
 
@@ -1036,6 +1063,10 @@ Those working on the `title_4` feature branch should see something that resemble
                                                      │
                                                   title_4
 ```
+
+As you can see, the merge commit, referenced by the `master` branch, joins the two divergent branches in history.
+
+**QUESTION:** In Git, merging and rebasing are designed to handle this exact scenario. However, they handle it in very different ways. What would have happened if a rebase was performed instead of a merge?
 
 Push the local `master` branch to the central `origin/master` branch.
 
