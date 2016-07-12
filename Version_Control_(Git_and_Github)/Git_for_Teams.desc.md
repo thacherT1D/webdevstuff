@@ -376,7 +376,8 @@ Rebase the current `dimensions_1` feature branch with the `master` branch. A **r
 
 1. All the new commits on the current `dimensions_1` branch are saved to a temporary area.
 1. The `dimensions_1` branch is reset to the same base commit as the `master` branch.
-1. The saved commits are reapplied to the rebased `dimensions_1` branch.
+1. The changes from the saved commits are reapplied to the rebased `dimensions_1` branch, creating new commits.
+1. The original saved commits are deleted.
 
 In this case, the `dimensions_1` branch should be up to date with the `master` branch, but, again, you'll want to form this habit.
 
