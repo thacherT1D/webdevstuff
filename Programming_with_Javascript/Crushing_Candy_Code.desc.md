@@ -12,6 +12,7 @@ You will be using array and object methods, if you're not comfortable with these
 Once you get to the looping section, it makes more sense for us to create functions for each exercise. Instead of commenting out previous code as you go on, we can define a function and then just comment out the function invocation to keep things cleaner.
 
 Loop through a specific date in store 1 and find total candies sold.
+
 ```js
 function candiesSoldByDate(date){
 // your code here
