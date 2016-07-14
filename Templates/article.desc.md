@@ -29,7 +29,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
 
 Use this callout to define exercises. You only need to replace what's inside of the `.media-body` div.
 
-<div class="media" style="padding: 2.5rem 2rem 1rem; border: 1px solid #c7254e; border-radius: 1rem;">
+<div class="media" style="padding: 2.5rem 2rem 1rem; border: 1px solid #c7254e; border-radius: 1rem; margin-bottom: 1rem;">
   <div class="media-left" style="font-size: 3rem; color: #c7254e;">
     <i class="fa fa-exclamation-circle"></i>
   </div>
@@ -40,7 +40,6 @@ Use this callout to define exercises. You only need to replace what's inside of 
 
   </div>
 </div>
-<br>
 
 <hr style="margin: 5rem 0;"/>
 
