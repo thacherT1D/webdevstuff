@@ -331,6 +331,10 @@ git branch -d registration
 
 ## Videos
 
+### Password Cracking - Computerphile
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/7U-RbOKanYs" frameborder="0" allowfullscreen></iframe>
+
 ### Ethical Hacking Tutorials - 32 - Cryptographic Hash function
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/pVinBTaNtnM" frameborder="0" allowfullscreen></iframe>
