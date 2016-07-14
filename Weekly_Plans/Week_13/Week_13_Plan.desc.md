@@ -25,33 +25,14 @@ Announcements:
 
 # Tuesday, July 19
 
-Warmup: [Link to Warmup](http://github.com/gSchool)
+### [Galvanize Reads Assessment](/redirects/articles/3197)
 
-Lessons:
-- [Lesson](/cohorts/68/student_dashboard)
-- [Lesson](/cohorts/68/student_dashboard)
-
-Homework: [Homework](/cohorts/68/student_dashboard)
-
-Announcements:
-- Announcement 1
-- Announcement 2
 
 ---
 
 # Wednesday, July 20
 
-Warmup: [Link to Warmup](http://github.com/gSchool)
-
-Lessons:
-- [Lesson](/cohorts/68/student_dashboard)
-- [Lesson](/cohorts/68/student_dashboard)
-
-Homework: [Homework](/cohorts/68/student_dashboard)
-
-Announcements:
-- Announcement 1
-- Announcement 2
+### [Galvanize Reads Assessment](/redirects/articles/3197)
 
 ---
 
