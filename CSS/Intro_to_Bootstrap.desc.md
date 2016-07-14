@@ -1,25 +1,26 @@
-## Bootstrap Introduction
+[Bootstrap](http://getbootstrap.com/) is a **front-end framework** that comes with a responsive, flexible grid system and allows you to quickly make your site look less ugly. It offloads much of the CSS you might otherwise need to write into some sensible default styles, so that you can focus more on building your application and less on technical details in your stylesheet.
 
-[Bootstrap](http://getbootstrap.com/) is a front-end framework that helps make your web applications look less ugly. It offloads much of the CSS you might otherwise need to write into some sensible default styles, so that you can focus more on building your application and less on technical details in your stylesheet.
+<hr style="margin: 5rem 0;"/>
 
 ## Installing Bootstrap
 
 Bootstrap's documentation offers up a number of installation options. To keep things simple, we're going to  but we're going to use the Bootstrap CDN.
 
-**What's a CDN?**
+### What's a CDN?
 
-Great question! A CDN (short for **C**ontent **D**elivery **N**etwork) is used to cache static content (e.g. JS/CSS files) across a geographically dispersed network of servers. When a user makes a request for a file hosted on the CDN, the server which is geographically closest to the user will serve up the requested file. In this way, load times are reduced, and users are less annoyed by slow page loads. (To learn more about CDNs, check out [Why Use a Content Delivery Network (CDN)?](https://gtmetrix.com/why-use-a-cdn.html).)
+Great question! A CDN (short for Content Delivery Network) is used to cache static content (e.g. JS/CSS files) across a geographically dispersed network of servers. When a user makes a request for a file hosted on the CDN, the server which is geographically closest to the user will serve up the requested file. In this way, load times are reduced, and users are less annoyed by slow page loads.
+(To learn more about CDNs, check out [Why Use a Content Delivery Network (CDN)?](https://gtmetrix.com/why-use-a-cdn.html).)
 
-**How Can I link to the Bootstrap CDN?**
+### How Can I link to the Bootstrap CDN?
 
-Open up a new HTML file in Sublime Text; let's call it `bootstrap-sandbox.html`. Fill it up with some HTML boilerplate:
+Create a new repository called `intro-to-bootstrap`. Create a new `index.html` file and include the following code.
 
 ```
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>Bootstrap Sandbox</title>
+    <title>Intro to Bootstrap</title>
   </head>
   <body>
     <div>Hello, World!</div>
@@ -27,54 +28,21 @@ Open up a new HTML file in Sublime Text; let's call it `bootstrap-sandbox.html`.
 </html>
 ```
 
-As explained on the Bootstrap website, to hook in to the CDN you'll need to add the following code to your file:
+Read the section on [getbootstrap.com](http://getbootstrap.com) about the [Bootstrap CDN](http://getbootstrap.com/getting-started/#download-cdn). Copy the code there into the appropriate place on your HTML page.
 
-```
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<div class="media" style="padding: 2.5rem 2rem 1rem; border: 1px solid #c7254e; border-radius: 1rem; margin-bottom: 1rem;">
+  <div class="media-left" style="font-size: 3rem; color: #c7254e;">
+    <i class="fa fa-exclamation-circle"></i>
+  </div>
+  <div class="media-body">
+    <h3 class="media-heading">Exercise</h3>
 
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+    <p>[Bootswatch](https://www.bootstrapcdn.com/bootswatch/) is a site that allows you to quickly theme your Bootstrap implementation. Find a theme you like and replace the appropriate link in your `head`.</p>
 
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-```
-
-Copy and paste that code above the `</head>` tag, and that's it! You're ready to start using Bootstrap.
-
-Note: there are also a lot of Bootstrap themes that reskin the default Bootstrap styles. If you're interested, check out http://www.bootstrapcdn.com/bootswatch/.
-
-## Aside: Sublime Snippets
-
-You'll be using Bootstrap on most (if not all) of your projects, and copying and pasting the CDN code from the website can be annoying. To help speed up our workflow, we can have Sublime store this piece of code -- or any other piece, really -- in what's called a snippet. Snippets allow us to save chunks of code so that we can easily reuse them within and across our applications.
-
-Let's take a brief detour to see how snippets in Sublime Text work. Under `Tools`, scroll down to `New Snippet`. A file should open that looks like this:
-
-```
-<snippet>
-	<content><![CDATA[
-Hello, ${1:this} is a ${2:snippet}.
-]]></content>
-	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-	<!-- <tabTrigger>hello</tabTrigger> -->
-	<!-- Optional: Set a scope to limit where the snippet will trigger -->
-	<!-- <scope>source.python</scope> -->
-</snippet>
-```
-
-The only rows you need to worry about are rows 3 and 6. What goes in row 3 is the chunk of code you want to be able to reuse; in this case, replace `Hello, ${1:this} is a ${2:snippet}.` with the Bootstrap CDN code.
-
-Next, you need to tell Sublime Text when it should paste your snippet of code into whatever you're working on. Find the row with the code `<!-- <tabTrigger>hello</tabTrigger> -->` and replace it so that it reads:
-
-`<tabTrigger>bootstrap</tabTrigger>`
-
-Now, save your snippet. **IMPORTANT** when you save, Sublime Text will default to the `/User/` folder. Don't save the snippet anywhere else! Also, the snippet must be saved with the extension `sublime-snippet`. For instance, `bootstrap.sublime-snippet` is probably the most reasonable name for the file you've just created.
-
-Here's where the magic happens. Go back in to your `bootstrap-sandbox.html` file, and delete out the Bootstrap code you pasted in earlier. Then, add a row in between `<title>Bootstrap Sandbox</title>` and `</head>`. In your new row, type `bootstrap` and then hit the `tab` key. Booya! 
+  </div>
+</div>
 
 ## Containers and the Grid System
-
-Bootstrap has a lot to offer, and we don't have time to go over all of it (check out the [docs](http://getbootstrap.com/)  if you want to dig deeper). Our goal here is just to hit on some of the most important features that Bootstrap brings to the table.
 
 One of the most important features of Bootstrap is its grid system. The grid system allows you to easily organize your content into a responsive design based around a 12-column grid. In order to make use of this grid, we need to wrap the main area of our content in one of Bootstrap's container classes: either `.container` or `.container-fluid`:
 
@@ -91,51 +59,55 @@ One of the most important features of Bootstrap is its grid system. The grid sys
 </html>
 ```
 
-To make use of the grid layout, we can add column classes to our divs. Every column needs to be inside of a div with the row class in order for Bootstrap's styling magic to work.
+To make use of the grid layout, we can add **column** classes to our divs. Every column needs to be inside of a div with the **row** class in order for Bootstrap's styling magic to work.
 
-Let's throw some more divs into our html document to see a couple examples of Bootstrap's grid layout in action. (We'll throw in some of Bootstrap's default background classes as well, just to help make the columns easier to see.)
+Replace your `body` tag with the following markup below:
 
 ```
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>Bootstrap Sandbox</title>
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
-    
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-  </head>
-  <body>
-    <div class="container-fluid">
-      <div class="row">
-    	<div class="col-md-12 bg-primary">Hello, World!</div>
-      </div>
-      <div class="row">
-  	<div class="col-md-6 bg-success">Hello,</div>
-  	<div class="col-md-6 bg-danger">World!</div>
-      </div>
-      <div class="row">
-        <div class="col-md-2 bg-info">Hi!</div>
-        <div class="col-md-2 bg-warning">Hi!</div>
-        <div class="col-md-2 bg-info">Hi!</div>
-        <div class="col-md-2 bg-warning">Hi!</div>
-        <div class="col-md-2 bg-info">Hi!</div>
-        <div class="col-md-2 bg-warning">Hi!</div>
-      </div>
-      <div class="row">
-  	<div class="col-md-6 col-md-offset-3 text-center">Hello, World!</div>
-      </div>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+  	<div class="col-md-12 bg-primary">Hello, World!</div>
     </div>
-  </body>
-</html>
+    <div class="row">
+	<div class="col-md-6 bg-success">Hello,</div>
+	<div class="col-md-6 bg-danger">World!</div>
+    </div>
+    <div class="row">
+      <div class="col-md-2 bg-info">Hi!</div>
+      <div class="col-md-2 bg-warning">Hi!</div>
+      <div class="col-md-2 bg-info">Hi!</div>
+      <div class="col-md-2 bg-warning">Hi!</div>
+      <div class="col-md-2 bg-info">Hi!</div>
+      <div class="col-md-2 bg-warning">Hi!</div>
+    </div>
+    <div class="row">
+	<div class="col-md-6 col-md-offset-3 text-center">Hello, World!</div>
+    </div>
+  </div>
+</body>
 ```
 
-Take a few minutes to play around with the grid system. Try to answer some of the questions in this learning experience around Bootstrap and the grid system.
+<div class="media" style="padding: 2.5rem 2rem 1rem; border: 1px solid #c7254e; border-radius: 1rem; margin-bottom: 1rem;">
+  <div class="media-left" style="font-size: 3rem; color: #c7254e;">
+    <i class="fa fa-exclamation-circle"></i>
+  </div>
+  <div class="media-body">
+    <h3 class="media-heading">Exercise</h3>
+
+    <p>Take a look at the classes attached to each `div` element and then answer the following questions:</p>
+
+    <ol>
+      <li>What is the difference between `.container` and `.container-fluid`?</li>
+      <li>What are the possible values for the middle two characters when creating a column? What do they do?</li>
+      <li>What are the possible values for the last number when creating a column? What do they do?</li>
+      <li>What happens if you add too many columns?</li>
+    </ol>
+
+  </div>
+</div>
+
+<hr style="margin: 5rem 0;"/>
 
 ## Tables Revisited
 
@@ -152,6 +124,8 @@ Earlier we used CSS to style some tables to make them more readable. Bootstrap m
 5. What about a hover effect?
 
 6. Like with background colors, table rows and cells come with some default coloring options. Try adding one of the `.success`, `.warning`, `.danger`, or `.info` classes to one of your rows.
+
+<hr style="margin: 5rem 0;"/>
 
 ## Forms and Buttons
 
@@ -183,15 +157,24 @@ When it comes to forms, the `.form-control` class will be your best friend. Here
 </div>
 ```
 
-Try out some other things with forms, comparing styling with Bootstrap and without it:
+<div class="media" style="padding: 2.5rem 2rem 1rem; border: 1px solid #c7254e; border-radius: 1rem; margin-bottom: 1rem;">
+  <div class="media-left" style="font-size: 3rem; color: #c7254e;">
+    <i class="fa fa-exclamation-circle"></i>
+  </div>
+  <div class="media-body">
+    <h3 class="media-heading">Exercise</h3>
 
-1. Add another input! Suggestions: Password, Address, or Favorite Food.
+    <p>Try out some other things with forms, comparing styling with Bootstrap and without it:</p>
 
-2. Give your form the `.form-inline` class. What happens? What happens if your window is small?
+    <ol>
+      <li>Add another input! Suggestions: Password, Address, or Favorite Food.</li>
+      <li>Give your form the `.form-inline` class. What happens? What happens if your window is small?</li>
+      <li>What happens if you add `disabled` as an attribute to one of your inputs?</li>
+      <li>Add a checkbox! Give your div wrapping the checkbox input the `.checkbox` class.</li>
+    </ol>
 
-3. What happens if you add `disabled` as an attribute to one of your inputs?
-
-4. Add a checkbox! Give your div wrapping the checkbox input the `checkbox` class.
+  </div>
+</div>
 
 You can also wrap your form in the `.form-horizontal` class to make use of grid classes and align your labels and inputs in the same row:
 
@@ -247,17 +230,26 @@ Add these three elements to your html file, and then explore the questions below
 <button>I'm a button!</button>
 ```
 
-1. What does adding the `.btn` class do?
+<div class="media" style="padding: 2.5rem 2rem 1rem; border: 1px solid #c7254e; border-radius: 1rem; margin-bottom: 1rem;">
+  <div class="media-left" style="font-size: 3rem; color: #c7254e;">
+    <i class="fa fa-exclamation-circle"></i>
+  </div>
+  <div class="media-body">
+    <h3 class="media-heading">Exercise</h3>
 
-2. Once you've added the `.btn` class to an element, you can add other classes for addition styling. Play around with `.btn-default`, `.btn-primary`, `.btn-success`, `.btn-info`, `.btn-warning`,`.btn-danger`, and `.btn-link`. 
+    <p>After adding the above code, consider the following questions:</p>
 
-3. What does the `.btn-block` class do when used in conjunction with `.btn`?
+    <ol>
+      <li>What does adding the `.btn` class do?</li>
+      <li>Once you've added the `.btn` class to an element, you can add other classes for addition styling. Play around with `.btn-default`, `.btn-primary`, `.btn-success`, `.btn-info`, `.btn-warning`,`.btn-danger`, and `.btn-link`.</li>
+      <li>What does the `.btn-block` class do when used in conjunction with `.btn`?</li>
+      <li>What do you think the `.btn-lg` class does? Can you guess what some other button classes might be?</li>
+    </ol>
 
-4. What do you think the `.btn-lg` class does? Can you guess what some other button classes might be?
+  </div>
+</div>
 
-Further reading: 
-
-[Forms in Bootstrap](http://getbootstrap.com/css/#forms)
+<hr style="margin: 5rem 0;"/>
 
 ## Glyphicons
 
@@ -265,11 +257,13 @@ One other nice feature of Bootstrap is that it comes with a set of icons called 
 
 `<span class='glyphicon glyphicon-heart'></span>`.
 
-Protip #1: The spans for your icons must always be empty!
+**Protip #1:** The spans for your icons must always be empty!
 
-Protip #2: It is super easy to misspell the word glyphicon. Watch out.
+**Protip #2:** It is super easy to misspell the word glyphicon. Watch out.
 
-Protip #3: It's best practice to use `<button>` elements if you want to use buttons in Bootstrap. Check the [documentation](http://getbootstrap.com/css/#buttons) for more details.
+**Protip #3:** It's best practice to use `<button>` elements if you want to use buttons in Bootstrap.
+
+<hr style="margin: 5rem 0;"/>
 
 ## Nav bars
 
@@ -285,27 +279,26 @@ Here's the basic pattern:
 </nav>
 ```
 
-Try your hand at adding the following design elements to your navigation bar:
+<div class="media" style="padding: 2.5rem 2rem 1rem; border: 1px solid #c7254e; border-radius: 1rem; margin-bottom: 1rem;">
+  <div class="media-left" style="font-size: 3rem; color: #c7254e;">
+    <i class="fa fa-exclamation-circle"></i>
+  </div>
+  <div class="media-body">
+    <h3 class="media-heading">Exercise</h3>
 
-1. Add a name for your site! Typically the name is wrapped in an `<a>` tag that's been given the `.navbar-header` class. To make the design more responsive, you can also wrap this entire tag inside of a `<div>` with the `.navbar-header` class.
-2. Add some links! Create an unordered list after your title and give it a couple of classes: `.nav` and `.navbar-nav`. For each `<li>` in your list, wrap the name of the link (e.g. About, Contact) in an `<a>` tag.
-3. Explore alignment! What happens if you give your list of links the `.navbar-right` class?
-4. (Bonus) Put a form in your navigation! If you run into alignment issues, try giving your `<form>` the `.navbar-form` class.
-5. (Bonus) Change one of your `<li>` links into a dropdown! Here's a template for dropdowns:
+    <p>Try your hand at adding the following design elements to your navigation bar:</p>
 
-```
-<li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-  <ul class="dropdown-menu">
-    <li><a href="#">Option 1</a></li>
-    <li><a href="#">Option 2</a></li>
-    <li class="divider"></li>
-    <li><a href="#">Separated Option</a></li>
-  </ul>
-</li>
-```
+    <ol>
+      <li>Add a name for your site! Typically the name is wrapped in an `<a>` tag that's been given the `.navbar-header` class. To make the design more responsive, you can also wrap this entire tag inside of a `<div>` with the `.navbar-header` class.</li>
+      <li>Add some links! Create an unordered list after your title and give it a couple of classes: `.nav` and `.navbar-nav`. For each `<li>` in your list, wrap the name of the link (e.g. About, Contact) in an `<a>` tag.</li>
+      <li>Explore alignment! What happens if you give your list of links the `.navbar-right` class?</li>
+      <li>(Bonus) Put a form in your navigation! If you run into alignment issues, try giving your `<form>` the `.navbar-form` class.</li>
+    </ol>
 
-If you copy this code as-is, you may notice a problem: the dropdown isn't showing up! This is because Bootstrap dropdowns require the use of Bootstrap's javascript file, which in turn requires [jQuery](https://jquery.com/). But we haven't included jQuery in our file! To remedy this, you'll need to snag the relevant jQuery JS file. See if you can do this using the same CDN approach that we used to grab Bootstrap!
+  </div>
+</div>
+
+You can always take a look at the [default navbar](http://getbootstrap.com/components/#navbar-default) to get a sense of all the options possible. If you copy this code to your own page you may notice the dropdown doesn't work. That's because you need to include jQuery! Try doing so using a CDN.
 
 ### Homework!
 
