@@ -1,5 +1,12 @@
 [Bootstrap](http://getbootstrap.com/) is a **front-end framework** that comes with a responsive, flexible grid system and allows you to quickly make your site look less ugly. It offloads much of the CSS you might otherwise need to write into some sensible default styles, so that you can focus more on building your application and less on technical details in your stylesheet.
 
+* [Installing Bootstrap](#installing-bootstrap)
+* [Containers and the Grid System](#containers-and-the-grid-system)
+* [Tables Revisited](#tables-revisited)
+* [Forms and Buttons](#forms-and-buttons)
+* [Glyphicons](#glyphicons)
+* [Navbars](#navbars)
+
 <hr style="margin: 5rem 0;"/>
 
 ## Installing Bootstrap
@@ -265,7 +272,7 @@ One other nice feature of Bootstrap is that it comes with a set of icons called 
 
 <hr style="margin: 5rem 0;"/>
 
-## Nav bars
+## Navbars
 
 Finally, let's take a quick look at navigation bars in Bootstrap. Since nearly every website has a header and footer, nav bars are fairly universal design elements. It shouldn't be surprising, then, that Bootstrap provides us with some sensible styles.
 
@@ -299,11 +306,3 @@ Here's the basic pattern:
 </div>
 
 You can always take a look at the [default navbar](http://getbootstrap.com/components/#navbar-default) to get a sense of all the options possible. If you copy this code to your own page you may notice the dropdown doesn't work. That's because you need to include jQuery! Try doing so using a CDN.
-
-### Homework!
-
-[CSS Assignment](https://github.com/gSchool/css-week-1)
-
-[Bootstrap Assignment](https://github.com/gSchool/bootstrap_mocks_assignment)
-
-[Personal Website Assignment](https://github.com/gSchool/personal_website_assignment)
