@@ -20,7 +20,7 @@ DOM operations form the basis of all client-side javascript, and all JavaScript 
 
 ## HTML is a Tree
 
-Recall in the *Introduction to HTML* article that HTML can be thought of as a tree structure. Each HTML element has a _parent_. Elements could aslo have _siblings_ and _children_.
+Recall in the *Introduction to HTML* article that HTML can be thought of as a tree structure. Each HTML element has a _parent_. Elements could also have _siblings_ and _children_.
 
 ![HTML Tree](http://www.webstepbook.com/supplements/slides/images/dom_tree.gif)
 
@@ -76,6 +76,30 @@ Let's start with a simple HTML boilerplate.
   <body>
   </body>
 </html>
+```
+
+Then add the following to the `body`:
+
+```html
+<section>
+
+  <h1>Just a header</h1>
+
+  <p id="main">Just a paragraph...</p>
+
+  <ul>
+    <li class="odd">item 1</li>
+    <li class="even">item 2</li>
+    <li class="odd">item 3</li>
+    <li class="even">item 4</li>
+    <li class="odd">item 5</li>
+  </ul>
+
+  <button id="main-button">Just a button</button>
+
+</section>
+
+<script type="text/javascript" src="main.js"></script>
 ```
 
 ## `document` object
