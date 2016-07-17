@@ -21,7 +21,7 @@ Knowing how the internet works at a deeper level is essential when becoming a we
 * Identify the parts of an HTTP request and response and discuss their purpose
 * Discuss the semantics of common HTTP Verbs, Headers, and Status Codes
 * Discuss and diagram Client-Server Model
-* Send HTTP requests and view HTTP responses with Postman
+* Send HTTP requests and view HTTP responses with HTTPie
 
 <hr style="margin: 5rem 0;"/>
 
@@ -83,7 +83,7 @@ A URL can be broken up into multiple parts. For example, take the following fake
 
 * `how-the-web-works.html`: This is the file that is being accessed. As with directories, this may say something about the file structure of the site but, if there is not extension, it likely does not.
 
-* `referrer=galvanize`: These are called **query parameters** and can be passed to any URL to provide additional meaning to the back-end service. When forms are submitted with a `GET` request, the form information is added up here.
+* `referrer=galvanize`: These are called **query parameters** and can be passed to any URL to provide additional meaning to the back-end service. When forms are submitted with a `GET` request, the form information is added up here. In this example, `referrer` is the key and `galvanize` is the value.
 
 You may hear about URIs instead of URLs. [This website](https://danielmiessler.com/study/url-uri/) will give you a quick description of the difference.
 
