@@ -1,26 +1,22 @@
 # Week 13 (July 18 - July 22)
 ## Weekly Objective
 
-- Objective 1
-- Objective 2
-- Objective 3
+- Quarter 2 Review
+- Galvanize Reads Assessment
 
 ---
 
 # Monday, July 18
 
-Warmup: [Link to Warmup](http://github.com/gSchool)
+Warmup: [Codewars: Weight for weight](https://www.codewars.com/kata/weight-for-weight/javascript)
 
 Lessons:
-- [Lesson](/cohorts/68/student_dashboard)
-- [Lesson](/cohorts/68/student_dashboard)
+- Live coding a TODO app using Github OAUTH
+- [Promises](https://github.com/gSchool/promise-exercise)
+- [RESTFUL Design](/cohorts/68/student_dashboard)
 
-Homework: [Homework](/cohorts/68/student_dashboard)
-
-Announcements:
-- Announcement 1
-- Announcement 2
-
+Additional Practice:
+- [Pagination](https://github.com/gSchool/express-knex-pagination)
 ---
 
 # Tuesday, July 19
