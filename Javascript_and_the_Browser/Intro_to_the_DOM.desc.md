@@ -6,29 +6,21 @@ By the end of this lesson you should be able to:
 
 - Describe what the DOM is and JavaScript’s role in manipulating the DOM
 - Alter DOM properties after initial page load
-- Find an element by id, tag name, class name, and more advanced CSS selectors
-- Set an element’s text content.
+- Find an element using basic (tag name, `id`, `class`) and advanced CSS selectors
+- Set an element’s text content
 - Construct and add elements to the DOM
-- Remove elements from the dom
+- Remove elements from the DOM
 - Detach and reattach DOM elements
 
 ## What is the DOM?
 
-The Document Object Model (DOM) is a cross-platform convention for representing and interacting with HTML. Originally, Netscape Navigator and Internet Explorer competed for the browser and invented their own version of a DOM. It was then standardized by the W3C about one year after ECMAScript 1.0 was released. JavaScript has a way of accessing the DOM. This allows us to combine HTML and JavaScript together and create dynamic web pages.
+The Document Object Model (DOM) is a cross-platform convention for representing and interacting with HTML. During the first [browser war](https://en.wikipedia.org/wiki/Browser_wars#First_browser_war) of the late '90s, Netscape Navigator and Internet Explorer competed for the browser and invented their own version of a DOM. It was then standardized by the W3C about one year after ECMAScript 1.0 was released. JavaScript has a way of accessing the DOM. This allows us to combine HTML and JavaScript together and create dynamic web pages.
 
-DOM operations form the basis of all client-side javascript, and all frameworks including jQuery and Angular ultimately just boil down to these calls. Knowing what the DOM is and how to use it is an essential skill for web developers, and many of the in-class assignments will include these DOM operations.
+DOM operations form the basis of all client-side javascript, and all JavaScript frameworks - including jQuery and Angular - ultimately just boil down to these calls. Knowing what the DOM is and how to use it is an essential skill for web developers, and many of the in-class assignments will include these DOM operations.
 
-### Fun Fact: Browser Wars
+## HTML is a Tree
 
-The two main competitors during the early browsers were Netscape Navigator and Internet Explorer. Since then more browsers have entered the market compete on some level. Here is a map highlighting countries and their most popular browser.
-
-![Browser Map](https://upload.wikimedia.org/wikipedia/commons/b/ba/Browser_Market_Map_June_2015.svg)
-
-Source: StatCounter https://en.wikipedia.org/wiki/Browser_wars June 2015
-
-## Recall that HTML is a Tree
-
-Recall in our Introduction to HTML article that HTML can be thought of as a tree structure. Each element has a _parent_, it sometimes has _siblings_ and it also may have _children_.
+Recall in the *Introduction to HTML* article that HTML can be thought of as a tree structure. Each HTML element has a _parent_. Elements could aslo have _siblings_ and _children_.
 
 ![HTML Tree](http://www.webstepbook.com/supplements/slides/images/dom_tree.gif)
 
@@ -88,11 +80,9 @@ Let's start with a simple HTML boilerplate.
 
 ## `document` object
 
-Open up the inspector by pressing Command + Option + I. In the console, type in the following.
+Open up the inspector by pressing Command + Option + i. In the console, type in the following: `document`
 
-`document`
-
-The document is the root access point to all of the HTML. It even includes the DocType. You can access the root `<html>` node by calling `document.documentElement` or `document.childNodes[1]`.
+The document is the root access point to all of the page's HTML. It even includes the DocType. You can access the root `<html>` node by calling `document.documentElement` or `document.childNodes[1]`.
 
 **Exercise** What type is `document`?
 
@@ -104,16 +94,14 @@ The document and each HTML element (tag) inherits a Node interface. The MDN prov
 
 You can access a node in the `childNodes` property. It is an array-like object. This means that you can access its elements by index and use the provided `length` property, but you do not have any built in Array functions.
 
-**Exercise** Can you remember of another array-like object we talked about?
-
 It's _**important to note**_ that the these properties are _live_. This means that _changes in the DOM affect the array_.
 
-#### More Children
-
-There are multiple shortcuts in accessing children.
+There are multiple shortcuts for accessing children:
 
 * `firstChild`
 * `lastChild`
+
+Try these!
 
 ### `parentNode` vs `parentElement`
 
@@ -144,9 +132,7 @@ You can access the node name using `nodeName`. For HTML elements, this is the ta
 
 You can retrieve the text content between the opening and closing tag using the `textContent` property.
 
-#### Comparison to `innerText`
-
-You may often see code using the `innerText` property. `innerText` takes into account the layout which leads to poor performance and it is not a standard.  We would recommending not using `innerText` unless specifically needed.
+> Comparison to `innerText`: You may often see code using the `innerText` property. `innerText` takes into account the layout which leads to poor performance and it is not a standard.  We would recommending not using `innerText` unless specifically needed.
 
 ### Attributes
 
@@ -154,16 +140,16 @@ You can access an HTML tag's attributes with [`getAttribute`](https://developer.
 
 ## DOM Querying and Traversal
 
-When we talk about "DOM Manipulation", what we're really talking about is 4 things:
+When we talk about "DOM Manipulation", what we're really talking about is:
 
-* Finding existing DOM Nodes
-* Creating new DOM Nodes
-* Changing DOM Nodes that we've found or created
-* Moving or Adding DOM Nodes on the DOM Tree
+1. Finding existing DOM Nodes
+1. Creating new DOM Nodes
+1. Changing DOM Nodes that we've found or created
+1. Moving or Adding DOM Nodes on the DOM Tree
 
-## Finding Existing DOM Nodes
+### Finding Existing DOM Nodes
 
-### `getElementbyID`
+#### `getElementbyID`
 
 Add the following code to your JavaScript file:
 
@@ -186,7 +172,7 @@ Any node within the [document](https://developer.mozilla.org/en-US/docs/Web/API/
 
 Without an `id` attribute, we need to use a different [method](https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByTagName)...
 
-## `getElementsByTagName`
+#### `getElementsByTagName`
 
 The [`getElementsByTagName()`](https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByTagName) method returns a collection/array of nodes. These collections are "live", which means that if you add a new HTML element to the collection, it will also be added to the DOM.
 
@@ -225,9 +211,9 @@ for (var i = 0; i < allListItems.length; i++) {
 }
 ```
 
-### `getElementsByClassName`
+#### `getElementsByClassName`
 
-The [`getElementsByClassName()`](https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByClassName) returns an array-like object of all child elements which have all of the given class names. When called on the document object, the complete document is searched, including the root node. You may also call getElementsByClassName() on any element; it will return only elements which are descendants of the specified root element with the given class names.
+The [`getElementsByClassName()`](https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByClassName) returns an array-like object of all child elements which have all of the given class names. When called on the document object, the complete document is searched, including the root node. You may also call `getElementsByClassName()` on any element; it will return only elements which are descendants of the specified root element with the given class names.
 
 Add the following code to your JavaScript file:
 
@@ -261,7 +247,7 @@ The first two examples output the *entire* collections while the second two exam
 
 Similar to `getElementsByTagName`, the collection returned from `getElementsByClassName` can be iterated over.
 
-### `querySelector`
+#### `querySelector`
 
 The [`querySelector()`](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector
 ) Returns the first element within the document that matches the specified group of selectors. The argument you pass into `querySelector` should be a valid CSS query.
@@ -288,7 +274,7 @@ Open your JS console. **What do you see?**
 <li class="odd">item 1</li>
 ```
 
-### `querySelectorAll`
+#### `querySelectorAll`
 
 The [`querySelectorAll()`](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll) Returns a list of the elements within the document that match the specified group of selectors. The object returned is a NodeList.
 
@@ -306,11 +292,12 @@ Open your JS console. **What do you see?**
 
 Both `querySelector` and `querySelectorAll` accept selectors which can be [very specific and powerful](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector#ExamplePowerful).
 
-## Modifying DOM Nodes
+### Modifying DOM Nodes
 
 Now that we know how to find DOM Nodes, we need to know how to actually do something to them. We actually have complete power over the entire HTML document- we can change anything we want! We can modify the CSS properties of every element individually, or we can assign them classes or IDs using Javascript. We can also alter the contents of the elements.
 
-### Altering the Content
+#### Altering the Content
+
 Let's look at this snippet of code, using the array of nodes we found before- **what do you think it does?**
 
 ```javascript
@@ -331,7 +318,7 @@ console.log(allListItems);
 
 Test it out!
 
-## Manipulation
+### Manipulation
 
 Moving on from accessing nodes and traversing the DOM, let's look at manipulating elements. First off, each node can be manipulated via its properties/HTML attributes.
 
@@ -357,7 +344,7 @@ With the JavaScript Console open, follow these steps:
 1. Choose something applicable to that specific HTML tag and add a new style. Simple, right?
 1. Practice!
 
-## Creating new Elements
+### Creating new Elements
 
 #### `createElement`
 
@@ -414,7 +401,7 @@ Make sense? Prepend another element. Try removing an element with `removeChild()
 
 ## Practice
 
-See [https://github.com/gSchool/js-dom-tests](https://github.com/gSchool/js-dom-tests).
+Complete [JavaScript DOM Manipulation](https://github.com/gSchool/js-dom-tests)
 
 
 ## Further Reading
