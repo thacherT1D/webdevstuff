@@ -1,23 +1,20 @@
-## **(I Do)**
+## Resources
 
-* Open up Postman
-* show request to google.com
-* show request to other pages
-* make GET requests and POST requests
-* show them code snippet generator
-* show them cURL
-* make cURL requests to some pages
+* SLIDES: [How the Web Works](http://slides.com/wesleyreid/how-the-web-works#/)
 
-## **(We Do)**
+## Technical Terms
 
-* Make a request to a server together in Postman
-* Make a request to a server together with cURL
-* Make a request with Postman to this server
-* https://pacific-stream-1533.herokuapp.com/students
-* https://github.com/gSchool/StudentRosterGetAndPostPractice
+Protocol
+> The way in which information is being retrieved.
 
-## **(They Do)**
+Domain
+> The human-readable name of the computer location
 
-* https://github.com/gSchool/http-parser-js
+Query Parameters
+> Key / Value pairs added to URLs to provide additional information about the request.
 
+HTTP Verbs
+> GET, POST, PUT, and DELETE. These four main actions are used to describe what kind of action is being taken when accessing an endpoint.
 
+HTTP Status Codes
+> Codes provided on a response to give more information about what happened.
