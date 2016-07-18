@@ -12,9 +12,10 @@
 
 [jQuery](http://jquery.com/) is a widely popular library for manipulating the DOM in a browser.
 
+<br>
 ## What's wrong with vanilla JS?
 
-Depending on who you ask, nothing! There's nothing you can do in jQuery that you _can't_ do in plain old vanilla JavaScript. And as Javascript evolves, some feel like the gap between vanilla JavaScript and the enhancements of jQuery is narrowing. 
+Depending on who you ask, nothing! There's nothing you can do in jQuery that you _can't_ do in plain old vanilla JavaScript. And as Javascript evolves, some feel like the gap between vanilla JavaScript and the enhancements of jQuery is narrowing.
 
 But based on what you've seen so far, here are a few reasons you might like jQuery:
 
@@ -23,19 +24,19 @@ But based on what you've seen so far, here are a few reasons you might like jQue
 	```javascript
 	document.getElementById('foo').setAttribute('attribute', 'value');
 	```
-	
+
 	In jQuery, the same functionality looks like this:
 
 	```javascript
 	$("#foo").attr('attribute', 'value');
 	```
-	
+
 	This efficient interface also allows _chaining_ calls so that we can combine multiple lines of vanilla JavaScript into one line using jQuery.
-	
+
 2. Return values from functions like `document.getElementsByTagName` or `document.querySelectorAll` are NodeLists, which are array-like objects which lack much of the functionality that arrays have. Specifically, array methods like `forEach`, `map`, etc. don't exist on these.
 
 	To address this issue, jQuery comes with an `$.each` method and a `$.map` method that lets us iterate over jQuery objects. The syntax is a bit different than with `forEach` and `map`, but we'll cross that bridge later.
-	
+
 3. Dealing with adding, removing, and toggling classes is a bit more streamlined in jQuery.
 
 4. AJAX with jQuery is _way_ better than AJAX with vanilla JavaScript. (More on this next week.)
@@ -44,6 +45,26 @@ But based on what you've seen so far, here are a few reasons you might like jQue
 
 You can [download](http://jquery.com/download/) and include jQuery with a `<script>` tag in your HTML.
 There are also [many CDN's](http://jquery.com/download/#using-jquery-with-a-cdn) available you can link to so you do not have to download the file.
+
+### `$(document).ready();`
+
+Because a large part of jQuery is about accessing and manipulating the DOM, you often don't want any of your jQuery code to run until after the DOM has loaded and is available. This is why you enclose code that interacts with the DOM inside of a `document.ready` statement. It just tells that block: wait until the page has loaded, then go.
+
+```javascript
+$(document).ready(function() {
+	// code here
+});
+
+// shorthand version
+$(function() {
+	// code here
+});
+
+// you may also see:
+jQuery(document).ready(function($) {
+	//code here
+});
+```
 
 ## Key Features
 
@@ -77,9 +98,7 @@ There are [tons more](http://api.jquery.com/category/selectors/) selectors you c
 
 ![HTML Tree](http://www.webstepbook.com/supplements/slides/images/dom_tree.gif)
 
-### DOM Creation
-
-[[jquery]](https://api.jquery.com/jQuery/#jQuery-html-ownerDocument)
+### [DOM Creation](https://api.jquery.com/jQuery/#jQuery-html-ownerDocument)
 
 Creating DOM Elements with jQuery is super easy! Just insert a tag into the `$` function. It should be able to handle any valid HTML string.
 
@@ -87,13 +106,12 @@ Creating DOM Elements with jQuery is super easy! Just insert a tag into the `$` 
 var myDiv = $('<div class="active">');
 ```
 
+<br>
 ## Attributes/CSS/Display
 
 Modifying a DOM Element can be difficult at times using native functions. jQuery offers a [plethora of methods](http://api.jquery.com/category/manipulation/) to make modifying the DOM super simple.
 
-### .toggleClass()
-
-[[jquery]](http://api.jquery.com/toggleClass/)
+### [`.toggleClass()`](http://api.jquery.com/toggleClass/)
 
 Say you have a DOM Element with the `className` `"box active red big"`. How would you detect and remove the class active from the middle of the string if it exists and add it if it doesn't exist? Fortunately with jQuery you can just use `.toggleClass()` to do that for you.
 
@@ -103,117 +121,94 @@ $('#myButton').click(function () {
 })
 ```
 
-### .attr()
+### [`.attr()`](http://api.jquery.com/attr/)
 
-[[jquery]](http://api.jquery.com/attr/)
-
-Use `.attr()` to change a DOMElement's attribute:
+Use `.attr()` to change a DOM Element's attribute:
 
 ```js
 console.log($('img').attr('title')) // print out the first img's title
 $('img').attr('title', 'image hover text for the win!'); // set the title text on all images
 ```
 
-### .text()
-
-[[jquery]](http://api.jquery.com/text/)
+### [`.text()`](http://api.jquery.com/text/)
 
 The `.text()` function to get and set the text content on the element.
 
-### .val()
-
-[[jquery]](http://api.jquery.com/val/)
+### [`.val()`](http://api.jquery.com/val/)
 
 The `.val()` function to get and set the value on the element (usually used for an input's `value` property).
 
-### .html()
-
-[[jquery]](http://api.jquery.com/html/)
+### [`.html()`](http://api.jquery.com/html/)
 
 The `.html()` function to get and set the html inside an element. This is useful when making a change inside an element that's composed of multiple elements.
 
-### .css()
+### [`.css()`](http://api.jquery.com/css/)
 
-[[jquery]](http://api.jquery.com/css/)
-
-Use `.css()` to change the style attribute of a DOMElement:
+Use `.css()` to change the style attribute of a DOM Element:
 
 ```js
 var color = $('div').css('background-color'); //get the first div background-color
 $('div').css('background-color', 'red'); //set all div's background colors
 ```
 
-### .prop()
+### [`.prop()`](http://api.jquery.com/prop/)
 
-[[jquery]](http://api.jquery.com/prop/)
-
-Use `.prop()` to change a property of a DOMElement:
+Use `.prop()` to change a property of a DOM Element:
 
 ```js
 var isChecked = $('input[type="checkbox"]').prop('checked');
 $('input[type="checkbox"]').prop('checked', true);
 ```
 
-### .height(), .innerHeight(), .outerHeight()
-
-[[jquery]](http://api.jquery.com/height/)
+### [`.height()`](http://api.jquery.com/height/)
 
 Use `.height()` to get the height of the content area.
 
-[[jquery]](http://api.jquery.com/innerHeight/)
+### [`.innerHeight()`](http://api.jquery.com/innerHeight/)
 
 Use `.innerHeight()` to get the height of the content area including the padding.
 
-[[jquery]](http://api.jquery.com/outerHeight/)
+### [`.outerHeight()`](http://api.jquery.com/outerHeight/)
 
 Use `.outerHeight()` to get the height of the content area including the padding and border (the margin is optional).
 
-### .width(), .innerWidth(), .outerWidth()
-
-[[jquery]](http://api.jquery.com/width/)
+### [`.width()`](http://api.jquery.com/width/)
 
 Use `.width()` to get the height of the content area.
 
 
-[[jquery]](http://api.jquery.com/innerWidth/)
+### [`.innerWidth()`](http://api.jquery.com/innerWidth/)
 
 Use `.innerWidth()` to get the height of the content area including the padding.
 
-[[jquery]](http://api.jquery.com/outerWidth/)
+### [`.outerWidth()`](http://api.jquery.com/outerWidth/)
 
 Use `.outerWidth()` to get the height of the content area including the padding and border (the margin is optional).
 
-### .offset()
-
-[[jquery]](http://api.jquery.com/offset/)
+### [`.offset()`](http://api.jquery.com/offset/)
 
 Use `.offset()` to get the `left` and `top` coordinates (in pixels) of an element in relation to the _document_.
 
-### .position()
-
-[[jquery]](http://api.jquery.com/position/)
+### [`.position()`]((http://api.jquery.com/position/))
 
 Use `.position()` to get the `left` and `top` coordinates (in pixels) of an element in relation to the _offset parent_, that is, the parent that is closest positioned element (that is with a `position` CSS property equal to `relative`, `absolute`, or `fixed`).
 
-### .offsetParent()
-
-[[jquery]](http://api.jquery.com/offsetParent/)
+### [`.offsetParent()`](http://api.jquery.com/offsetParent/)
 
 Use `.offsetParent()` to get the offset parent of an element. This is useful in identifying the element for which `position()` is based off of.
 
-### .scrollTop(), .scrollLeft()
-
-[[jquery]](http://api.jquery.com/scrollTop/)
+### [`.scrollTop()`](http://api.jquery.com/scrollTop/)
 
 Use `scrollTop()` to get the number of pixels we have scrolled from the top.
 
-[[jquery]](http://api.jquery.com/scrollLeft/)
+### [`.scrollLeft()`](http://api.jquery.com/scrollLeft/)
 
 Similarly, `scrollLeft()` produces the number of pixels we have scrolled from the left.
 
+<br>
 ## DOM Manipulation
 
-### .prepend() .append() .insertBefore() .insertAfter() .before() .after()
+### DOM Insertion
 
 All of these methods are used for inserting a DOM Element into the DOM at various spots.
 
@@ -223,25 +218,19 @@ All of these methods are used for inserting a DOM Element into the DOM at variou
 
 [`.before()`](http://api.jquery.com/before/) and [`.after()`](http://api.jquery.com/after/) are the same as `.insertBefore()` and `.insertAfter()`.
 
-### .remove(), .detach()
-
-[[jquery]](http://api.jquery.com/remove/)
+### [`.remove()`](http://api.jquery.com/remove/)
 
 The `.remove()` function removes a DOM element from the DOM.
 
-[[jquery]](http://api.jquery.com/detach/)
+### [`.detach()`](http://api.jquery.com/detach/)
 
 The `.detach()` function is very similar to `.remove()`, but it returns the removed jQuery object that you can use later.
 
-### .clone()
-
-[[jquery]](http://api.jquery.com/clone/)
+### [`.clone()`](http://api.jquery.com/clone/)
 
 The `.clone()` function makes a deep copy clone of the selected DOM Element.
 
-### .empty()
-
-[[jquery]](http://api.jquery.com/empty/)
+### [`.empty()`](http://api.jquery.com/empty/)
 
 the `.empty()` method will clear out the contents of any DOM Element.
 
@@ -249,135 +238,123 @@ the `.empty()` method will clear out the contents of any DOM Element.
 $('div').empty() //clear out all divs
 ```
 
-### .replaceAll(), .replaceWith()
+### [`.replaceWith()`](http://api.jquery.com/replaceWith/)
 
-[[jquery]](http://api.jquery.com/replaceWith/)
+Use `.replaceWith()` to replace a source element _with_ a target element.
 
-Use `replaceWith` to replace a source element _with_ a target element.
+### [`.replaceAll()`](http://api.jquery.com/replaceAll/)
 
-[[jquery]](http://api.jquery.com/replaceAll/)
-
-Use `replaceAll` to replace all the target elements _with_ a source element.
+Use `.replaceAll()` to replace all the target elements _with_ a source element.
 
 ## DOM Traversing
 
-### .get()
-
-[[jquery]](http://api.jquery.com/get/)
+### [`.get()`](http://api.jquery.com/get/)
 
 Use `.get()` with an index to get an item out of the jQuery collection that is the native DOM element.
 
-### .eq()
-
-[[jquery]](http://api.jquery.com/eq/)
+### [`.eq()`](http://api.jquery.com/eq/)
 
 Use `.eq()` with an index to get an item out of the jQuery collection that is a jQuery object.
 
-### .parent(), .parents()
-
-[[jquery]](http://api.jquery.com/parent/)
+### [`.parent()`](http://api.jquery.com/parent/)
 
 Use `.parent()` to get the parent element.
 
-[[jquery]](http://api.jquery.com/parents/)
+### [`.parents()`](http://api.jquery.com/parents/)
 
 Use `.parents()` to get all the parents element to a particular element.
 
-### .children()
-
-[[jquery]](http://api.jquery.com/children/)
+### [`.children()`](http://api.jquery.com/children/)
 
 Use `.children()` to get the children of an element. It goes only one level deep.
 
-### .first(), .last()
-
-[[jquery]](http://api.jquery.com/first/)
+### [`.first()`](http://api.jquery.com/first/)
 
 Use `.first()` to get the first child.
 
-[[jquery]](http://api.jquery.com/last/)
+### [`.last()`](http://api.jquery.com/last/)
 
 Use `.last()` to get the first child.
 
-### .find()
-
-[[jquery]](http://api.jquery.com/find/)
+### [`.find()`](http://api.jquery.com/find/)
 
 Use `.find()` to search through the children of an element. It goes all the way into the tree.
 
-### .next(), .nextAll(), .prev(), .prevAll(), .siblings()
+### [`.next()`](http://api.jquery.com/next/)
 
-[[jquery]](http://api.jquery.com/next/)
+Use `.next()` to get the next sibling.
 
-Use `next()` to get the next sibling.
+### [`.nextAll()`](http://api.jquery.com/nextAll/)
 
-[[jquery]](http://api.jquery.com/nextAll/)
+Use `.nextAll()` to get all the siblings after the element.
 
-Use `nextAll()` to get all the siblings after the element.
+### [`.prev()`](http://api.jquery.com/prev/)
 
-[[jquery]](http://api.jquery.com/prev/)
+Use `.prev()` to get the previous sibling.
 
-Use `prev()` to get the previous sibling.
+### [`.prevAll()`](http://api.jquery.com/prevAll/)
 
-[[jquery]](http://api.jquery.com/prevAll/)
+Use `.prevAll()` to get all the siblings before the element.
 
-Use `prevAll()` to get all the siblings before the element.
+### [`.siblings()`](http://api.jquery.com/siblings/)
 
-[[jquery]](http://api.jquery.com/siblings/)
+Use `.siblings()` to get all the siblings of an element.
 
-Use `siblings()` to get all the siblings of an element.
-
-### .has()
-
-[[jquery]](http://api.jquery.com/has/)
+### [`.has()`](http://api.jquery.com/has/)
 
 Use `.has()` to filter the set by a selector.
 
-### .is()
-
-[[jquery]](http://api.jquery.com/is/)
+### [`.is()`](http://api.jquery.com/is/)
 
 Use `.is()` to check if the matched set matches a specific selector.
 
-### .not()
-
-[[jquery]](http://api.jquery.com/not/)
+### [`.not()`](http://api.jquery.com/not/)
 
 Use `.not()` to remove items from the set of match elements by a selector or function.
 
-### .filter()
-
-[[jquery]](http://api.jquery.com/filter/)
+### [`.filter()`](http://api.jquery.com/filter/)
 
 Use `.filter()` to only include items from the set of match elements by a selector or function.
 
-### .closest()
-
-[[jquery]](http://api.jquery.com/closest/)
+### [`.closest()`](http://api.jquery.com/closest/)
 
 Use `.closest()` to get the closest element by checking itself and all of its ancestors.
 
+<br>
+## Events
+One of the powerful features of jQuery is how easy it becomes to manage events handlers on DOM Elements.
+
+### [`.on()`](http://api.jquery.com/on/)
+The `.on()` function is the generic way to register event handlers with jQuery. It's the most similar to `addEventListener`.
+
+```javascript
+// console.log "<p> clicked!" when you click a <p>
+$('p').on('click', function() {
+	console.log('<p> clicked!');
+});
+```
+
+All events are bound to the element that it originated from. This conveniently means that you'll have access to that DOM element in your event handler. There are many shortcut event methods, but in general just use `.on()`. It isn't really more difficult, and it's far more flexible and powerful.
+
 ## Other awesome Methods
 
-### .show(), .hide(), .toggle()
+### Display
 
-[[jquery]](http://api.jquery.com/show/)
-[[jquery]](http://api.jquery.com/hide/)
-[[jquery]](http://api.jquery.com/toggle/)
+[`.show()`](http://api.jquery.com/show/)
+[`.hide()`](http://api.jquery.com/hide/)
+[`.toggle()`](http://api.jquery.com/toggle/)
 
-### .animate()
+### Animation
 
-[[jquery]](http://api.jquery.com/animate/)
+[`.animate()`](http://api.jquery.com/animate/)
+[`.fadeIn()`](http://api.jquery.com/fadeIn/)
+[`.fadeOut()`](http://api.jquery.com/fadeOut/)
+[`.slideDown()`](http://api.jquery.com/slideDown/)
+[`.slideUp()`](http://api.jquery.com/slideUp/)
 
-### .fadeIn(), .fadeOut()
 
-[[jquery]](http://api.jquery.com/fadeIn/)
-[[jquery]](http://api.jquery.com/fadeOut/)
-
-### .slideDown(), .slideUp()
-
-[[jquery]](http://api.jquery.com/slideDown/)
-[[jquery]](http://api.jquery.com/slideUp/)
+## Homework
+[jQuery Playground](https://github.com/gSchool/boxes-jQuery-playground)
 
 
 ## Further reading
@@ -387,5 +364,3 @@ Use `.closest()` to get the closest element by checking itself and all of its an
 [jQuery CheatSheet](https://oscarotero.com/jquery/)
 
 [You might not need jQuery](http://youmightnotneedjquery.com/)
-
-[jQuery Playground](https://github.com/gSchool/boxes-jQuery-playground)
