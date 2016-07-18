@@ -1,10 +1,12 @@
+# Web Forms: Event Listeners, Action / Method, Getting Values
+
 ## Objectives
 
 * Explain what a web form is.
 * Explain what control tags are.
 * Build a web form with various controls tags.
-* Verify user data with the built-in HTML5 form validation.
-* Verify user data with JavaScript-based form validation.
+* Access the values of inputs
+* Hijack form submissions using `.preventDefault()`
 
 ## What's a web form?
 
@@ -318,7 +320,7 @@ myForm.addEventListener('blur', function () {
 
 A typical pattern is to display either next to the incorrectly filled out element, or a the top of the form, a new DOM element that lists the error in question. Try to be descriptive, tell the user what they did wrong- did they miss filling out the field, or did they just forget to put dashes in their phone number?
 
-When you bind an event handler to something that has a _default action_, the handler will fire and then the default action will happen. A default action is something like a form's submission to the location that's in the action property, or the navigation that happens when you click a link. In order to render errors, you have to stop the default action. One way is to use `event.preventDefault();`, but simply calling `return false` from within a jQuery event handler will stop the default event from occuring.
+When you bind an event handler to something that has a _default action_, the handler will fire and then the default action will happen. A default action is something like a form's submission to the location that's in the action property, or the navigation that happens when you click a link. In order to render errors, you have to stop the default action. One way is to use `event.preventDefault();`, but simply calling `return false` from within a jQuery event handler will stop the default event from occurring.
 
 
 ```javascript
