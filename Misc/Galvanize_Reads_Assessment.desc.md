@@ -9,9 +9,31 @@
 
 There are some additional features, such as search, that are nice-to-haves, but a lower priority than the core features. The folks at Galvanize Reads have provided you some sample data from their existing registry that you can use for development.
 
+## How to Submit Your Assessment
+
+Fork/clone [this repo](https://github.com/gSchool/galvanize-reads).
+Add a README to your project that has:
+
+* A link to your deployed site
+* Link to your tracker project
+* An ERD of the final data model of the project (see [draw.io](http://www.draw.io) or [gliffy.com](http://www.gliffy.com) for some diagramming tools)
+
+Submit a pull request to the orginal repo with this README.
+
+## Notes
+
+* You can use a styling library if you'd like
+* You can use server-side templating or AJAX/RESTful services. There are trade-offs with each, but server-side templating will likely be faster to build.
+* You can use a raw database driver, a query builder, or an ORM for your database connection. A query builder, such as Knex, is recommended.
+* Use feature-branch workflows. You should end up with one commit for each feature.
+* Deploy your work often (ideally after completion of every new feature).
+* Be aware of your time and don't spend too long working on a given item before moving on / asking for help. For example, you shouldn't spend longer than a couple of hours (max!) working on migrations / seeding. If you find yourself stick working on the db setup in the afternoon of day 1, ask an instructor for assistance.
+* In the submission repo, there are tests written out so that you can follow a TDD workflow. Feel free to use them or to delete/disregard them - whichever is more helpful.
+* One wireframe shows a horizontal menu instead of the vertical one on the rest of the wireframes. Feel free to do either style (the horizontal one is easier).
+
 ## Import stories into Pivotal Tracker
 
-Import this [CSV](https://s3-us-west-2.amazonaws.com/assessment-images/galvanize_reads/galvanize_reads_20160104_0559.csv) into a new project in Pivotal Tracker to get the requirements for this story. They are prioritized. You may find it useful to size the stories before you begin.
+Import the following CSV into a new project in Pivotal Tracker to get the requirements for this story (Settings -> Import CSV). They are prioritized. You may find it useful to size the stories before you begin. Start your project name with "g27_" so that we can easily clean up Pivotal Tracker later.
 
 ```
 Id,Title,Labels,Iteration,Iteration Start,Iteration End,Type,Estimate,Current State,Created at,Accepted at,Deadline,Requested By,Description,URL,Owned By,Task,Task Status,Task,Task Status,Task,Task Status,Task,Task Status,Task,Task Status,Task,Task Status,Task,Task Status
@@ -30,13 +52,13 @@ Id,Title,Labels,Iteration,Iteration Start,Iteration End,Type,Estimate,Current St
 110938710,"As a user, I need to be able to link to an author from a book.","",1,"Dec 28, 2015","Jan 3, 2016",feature,,unstarted,"Jan 3, 2016",,,Kyle Coberly,,https://www.pivotaltracker.com/story/show/110938710,,Add links to single author views from the books list,not completed,Add links to single author views from individual books,not completed,Add links to single author views from delete books views,not completed,Deploy your changes,not completed
 110938702,"As a user, I need to be able to link to a book from an author","",1,"Dec 28, 2015","Jan 3, 2016",feature,,unstarted,"Jan 3, 2016",,,Kyle Coberly,,https://www.pivotaltracker.com/story/show/110938702,,Add links to single book views from authors list,not completed,Add links to single book views from single author view,not completed,Add links to single book views from delete author view,not completed,Deploy your changes,not completed
 110938720,"As a user, I need to be able to filter books by genre","",1,"Dec 28, 2015","Jan 3, 2016",feature,,unstarted,"Jan 3, 2016",,,Kyle Coberly,,https://www.pivotaltracker.com/story/show/110938720,,Add a drop down for genres to the books list,not completed,"When a value is selected from the list, only show books from that genre",not completed,Deploy your changes,not completed
-110938730,"As a user, I need to limit the number of book results I receive at a time","",1,"Dec 28, 2015","Jan 3, 2016",feature,,unstarted,"Jan 3, 2016",,,Kyle Coberly,,https://www.pivotaltracker.com/story/show/110938730,,Limit the display on the books list page to 10 books per page,not completed,Link another page if there are more than 10,not completed,Link to a previous page if there are fewer than 10,not completed,Deploy your changes,not completed
-110938738,"As a user, I need to limit the number of authors I receive at a time","",1,"Dec 28, 2015","Jan 3, 2016",feature,,unstarted,"Jan 3, 2016",,,Kyle Coberly,,https://www.pivotaltracker.com/story/show/110938738,,Limit the display on the authors page to 10 authors per page,not completed,Link to another page if there are more than 10 authors,not completed,Link to a previous page if there are fewer than 10 authors,not completed,Deploy your changes,not completed
-110938750,"As a user, I need to search for books","",1,"Dec 28, 2015","Jan 3, 2016",feature,,unstarted,"Jan 3, 2016",,,Kyle Coberly,,https://www.pivotaltracker.com/story/show/110938750,,Add a field to the books list page to enter a search term for a book,not completed,Add the ability to search for a record to the books list route,not completed,Deploy your changes,not completed
-110938754,"As a user, I need to be able to search for authors","",1,"Dec 28, 2015","Jan 3, 2016",feature,,unstarted,"Jan 3, 2016",,,Kyle Coberly,,https://www.pivotaltracker.com/story/show/110938754,,Add a field to the authors list page to enter a search term for an author,not completed,Add the ability to search for a record to the authors route,not completed,Deploy your changes,not completed
-110938756,"As a user, I need to be able to search for books and authors","",1,"Dec 28, 2015","Jan 3, 2016",feature,,unstarted,"Jan 3, 2016",,,Kyle Coberly,,https://www.pivotaltracker.com/story/show/110938756,,Add the ability to enter a search term on the index page for authors or books,not completed,Add a route that can do a general search between books and authors,not completed,Add a view that displays the results of the search,not completed,Deploy your changes,not completed
-110938764,"As a user, I need to be able see the total number of books","",1,"Dec 28, 2015","Jan 3, 2016",feature,,unstarted,"Jan 3, 2016",,,Kyle Coberly,,https://www.pivotaltracker.com/story/show/110938764,,"On the books list page, display the total number of books in the database",not completed,Deploy your changes,not completed
-110938768,"As a user, I need to be able to see the total number of authors","",1,"Dec 28, 2015","Jan 3, 2016",feature,,unstarted,"Jan 3, 2016",,,Kyle Coberly,,https://www.pivotaltracker.com/story/show/110938768,,"On the authors list page, display the total number of authors in the database",not completed,Deploy your changes,not completed
+110938730,"Optionally, as a user, I need to limit the number of book results I receive at a time","",1,"Dec 28, 2015","Jan 3, 2016",feature,,unstarted,"Jan 3, 2016",,,Kyle Coberly,,https://www.pivotaltracker.com/story/show/110938730,,Limit the display on the books list page to 10 books per page,not completed,Link another page if there are more than 10,not completed,Link to a previous page if there are fewer than 10,not completed,Deploy your changes,not completed
+110938738,"Optionally, as a user, I need to limit the number of authors I receive at a time","",1,"Dec 28, 2015","Jan 3, 2016",feature,,unstarted,"Jan 3, 2016",,,Kyle Coberly,,https://www.pivotaltracker.com/story/show/110938738,,Limit the display on the authors page to 10 authors per page,not completed,Link to another page if there are more than 10 authors,not completed,Link to a previous page if there are fewer than 10 authors,not completed,Deploy your changes,not completed
+110938750,"Optionally, as a user, I need to search for books","",1,"Dec 28, 2015","Jan 3, 2016",feature,,unstarted,"Jan 3, 2016",,,Kyle Coberly,,https://www.pivotaltracker.com/story/show/110938750,,Add a field to the books list page to enter a search term for a book,not completed,Add the ability to search for a record to the books list route,not completed,Deploy your changes,not completed
+110938754,"Optionally, as a user, I need to be able to search for authors","",1,"Dec 28, 2015","Jan 3, 2016",feature,,unstarted,"Jan 3, 2016",,,Kyle Coberly,,https://www.pivotaltracker.com/story/show/110938754,,Add a field to the authors list page to enter a search term for an author,not completed,Add the ability to search for a record to the authors route,not completed,Deploy your changes,not completed
+110938756,"Optionally, as a user, I need to be able to search for books and authors","",1,"Dec 28, 2015","Jan 3, 2016",feature,,unstarted,"Jan 3, 2016",,,Kyle Coberly,,https://www.pivotaltracker.com/story/show/110938756,,Add the ability to enter a search term on the index page for authors or books,not completed,Add a route that can do a general search between books and authors,not completed,Add a view that displays the results of the search,not completed,Deploy your changes,not completed
+110938764,"Optionally, as a user, I need to be able see the total number of books","",1,"Dec 28, 2015","Jan 3, 2016",feature,,unstarted,"Jan 3, 2016",,,Kyle Coberly,,https://www.pivotaltracker.com/story/show/110938764,,"On the books list page, display the total number of books in the database",not completed,Deploy your changes,not completed
+110938768,"Optionally, as a user, I need to be able to see the total number of authors","",1,"Dec 28, 2015","Jan 3, 2016",feature,,unstarted,"Jan 3, 2016",,,Kyle Coberly,,https://www.pivotaltracker.com/story/show/110938768,,"On the authors list page, display the total number of authors in the database",not completed,Deploy your changes,not completed
 ```
 
 ## Sample Data
@@ -53,14 +75,6 @@ ID,Book Title,Book Genre,Book Description,Book Cover URL,Author 1 First Name,Aut
 6,You Don't Know JS: Async & Performance,JavaScript,"No matter how much experience you have with JavaScript, odds are you don’t fully understand the language. As part of the ""You Don’t Know JS"" series, this concise yet in-depth guide focuses on new asynchronous features and performance techniques—including Promises, generators, and Web Workers—that let you create sophisticated single-page web applications and escape callback hell in the process.",https://s3-us-west-2.amazonaws.com/assessment-images/galvanize_reads/photos/async_and_performance.jpg,Kyle,Simpson,"Kyle Simpson is an Open Web Evangelist who's passionate about all things JavaScript. He's an author, workshop trainer, tech speaker, and OSS contributor/leader.",https://s3-us-west-2.amazonaws.com/assessment-images/galvanize_reads/photos/kyle_simpson.jpg,,,,,,,,				
 ```
 
-## Notes
-
-* You can use a styling library if you'd like
-* You can use server-side templating or AJAX/RESTful services. There are trade-offs with each, but server-side templating will likely be faster to build.
-* You can use a raw database driver, a query builder, or an ORM for your database connection. A query builder, such as Knex, is recommended.
-* Use feature-branch workflows. You should end up with one commit for each feature.
-* Deploy your work
-
 ## Wireframes
 
 You can use these wireframes as a reference.
@@ -76,15 +90,3 @@ You can use these wireframes as a reference.
 ![Authors - New](https://s3-us-west-2.amazonaws.com/assessment-images/galvanize_reads/Galvanize+Reads+Author+New.png)
 ![Authors - Edit](https://s3-us-west-2.amazonaws.com/assessment-images/galvanize_reads/Galvanize+Reads+Author+Edit.png)
 ![Authors - Delete](https://s3-us-west-2.amazonaws.com/assessment-images/galvanize_reads/Galvanize+Reads+Author+Delete.png)
-
-## How to Submit Your Assessment
-
-Fork/clone [this repo](https://github.com/gSchool/galvanize-reads).
-Add a README to your project that has:
-
-* A link to your deployed site
-* Link to your tracker project
-* Links to any repos you used with updated code
-* A data model of the final data model of the project
-
-Submit a pull request to the orginal repo with this README.
