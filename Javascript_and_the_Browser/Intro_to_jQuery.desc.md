@@ -336,6 +336,20 @@ $('p').on('click', function() {
 
 All events are bound to the element that it originated from. This conveniently means that you'll have access to that DOM element in your event handler. There are many shortcut event methods, but in general just use `.on()`. It isn't really more difficult, and it's far more flexible and powerful.
 
+<div class="media" style="padding: 2.5rem 2rem 1rem; border: 1px solid #c7254e; border-radius: 1rem; margin-bottom: 1rem;">
+  <div class="media-left" style="font-size: 3rem; color: #c7254e;">
+    <i class="fa fa-exclamation-circle"></i>
+  </div>
+  <div class="media-body">
+    <h3 class="media-heading">Exercise</h3>
+
+    <p>Complete jQuery Hadouken in the Exercises tab. Submit your code as a link to your GitHub repo.</p>
+
+  </div>
+</div>
+
+<hr style="margin: 5rem 0;"/>
+
 ## Other awesome Methods
 
 ### Display
