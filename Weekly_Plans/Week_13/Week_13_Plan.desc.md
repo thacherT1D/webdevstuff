@@ -23,6 +23,7 @@ Additional Practice:
 
 ### [Galvanize Reads Assessment](/redirects/articles/3197)
 
+** BBQ at Logan's @ 6pm ** - Bring your spouse / partner / family. DM him for address. Bring a side to share.
 
 ---
 
@@ -37,24 +38,29 @@ Additional Practice:
 Warmup: [Link to Warmup](http://github.com/gSchool)
 
 Lessons:
-- [Lesson](/cohorts/68/student_dashboard)
-- [Lesson](/cohorts/68/student_dashboard)
+
+- [Secret Life of Functions](/cohorts/68/student_dashboard)
+- [Intro to OOP](/cohorts/68/student_dashboard)
 
 Homework: [Homework](/cohorts/68/student_dashboard)
-
-Announcements:
-- Announcement 1
-- Announcement 2
 
 ---
 
 # Friday, July 22
 
-Crush Code Friday: [CCF](/cohorts/68/student_dashboard)
+Warmup: [Link to Warmup](http://github.com/gSchool)
+
+Lessons:
+
+- [Prototypal Inheritance](/cohorts/68/student_dashboard)
 
 Homework: [Homework](/cohorts/68/student_dashboard)
 
 Lightning Talks:
+
+- Roy
+- Philip
+- [Open Slot]
 
 Announcements:
 - Announcement 1
