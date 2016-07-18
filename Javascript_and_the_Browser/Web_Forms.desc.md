@@ -188,6 +188,26 @@ With control tags, there are a variety of attributes available. Many attributes 
 - tabindex
 - value
 
+
+## Hijacking Form submissions
+
+What does the method `.preventDefault()` do?
+
+- Cancels the event if it is cancelable
+
+Example:
+```js
+//Plain JS
+document.getElementById('submit').addEventListener('click', function(event){
+	event.preventDefault();
+})
+
+//jQuery
+$("#submit").click(function(event){
+    event.preventDefault();
+});
+```
+
 ## Questions
 
 * Why do we need to do form validation inside an event listener?
