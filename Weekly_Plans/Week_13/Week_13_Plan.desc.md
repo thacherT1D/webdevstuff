@@ -16,6 +16,7 @@ Lessons:
 - [RESTFUL Design](/cohorts/68/student_dashboard)
 
 Additional Practice:
+
 - [Pagination](https://github.com/gSchool/express-knex-pagination)
 ---
 
