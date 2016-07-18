@@ -1,16 +1,17 @@
-## Objectives
-
-- Explain what Ajax is.
-- Explain why Ajax primarily transfers JSON data now.
-- Use Ajax to retrieve data from a server.
-- Handle CORS issues caused by Ajax requests.
-- Handle race conditions caused by Ajax requests.
-
-## What's Ajax?
-
 Asynchronous JavaScript and XML (**Ajax**) is a technique that allows web applications to send and receive data in the background without interfering with the display and behavior of the existing page. In other words, Ajax allows web applications to dynamically load content from a server without doing a full page refresh. The XML part is less applicable today because most web APIs use JSON for the data exchange format.
 
 With Ajax, the possibilities are limitless. For example, think of when you reach the bottom of the page on Facebook or Twitter. How do new stories and tweets magically appear at the bottom without you clicking on anything or reloading the whole page? Ajax.
+
+* [Objectives](#objectives)
+* [Why does Ajax primarily transfer JSON data now?](#why-does-ajax-primarily-transfer-json-data-now)
+* [How do you retrieve data from a server using Ajax?](#how-do-you-retrieve-data-from-a-server-using-ajax)
+* [How do you handle CORS issues caused by Ajax requests?](#how-do-you-handle-cors-issues-caused-by-ajax)
+* [How do you handle race conditions caused by Ajax requests?](#how-do-you-handle-race-conditions-caused-by-ajax)
+* [Resources](#resources)
+
+## Objectives
+
+* Fetch & send JSON with Ajax
 
 ## Why does Ajax primarily transfer JSON data now?
 
@@ -50,7 +51,6 @@ And here's the same person data represented in JSON.
   "favoriteColors": ["Blue", "Orange"]
 }
 ```
-
 
 JSON looks like JavaScript, right? Remember, that JSON is just a data format and _not_ actual code.
 
@@ -161,6 +161,8 @@ $xhr.done(function(data) {
 
 console.log('AFTER THE AJAX');
 ```
+
+The reason this happens is because JavaScript is an asynchronous language. When the above code is being run, the `$.getJSON` request doesn't have enough time to finish (that is, get to the `.done` step) before the log command runs.
 
 ### Exercise
 
