@@ -11,7 +11,7 @@
 Warmup: [Codewars: Weight for weight](https://www.codewars.com/kata/weight-for-weight/javascript)
 
 Lessons:
-- Live coding a TODO app using Github OAUTH
+- [Live coding a TODO app using Github OAUTH + RESTFUL Design](https://github.com/gSchool/express-knex-github-oauth-todo-app)
 - [Promises](https://github.com/gSchool/promise-exercise)
 
 Additional Practice:
