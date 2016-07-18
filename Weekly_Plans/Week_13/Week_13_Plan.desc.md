@@ -13,11 +13,10 @@ Warmup: [Codewars: Weight for weight](https://www.codewars.com/kata/weight-for-w
 Lessons:
 - Live coding a TODO app using Github OAUTH
 - [Promises](https://github.com/gSchool/promise-exercise)
-- [RESTFUL Design](/cohorts/68/student_dashboard)
 
 Additional Practice:
-
 - [Pagination](https://github.com/gSchool/express-knex-pagination)
+
 ---
 
 # Tuesday, July 19
