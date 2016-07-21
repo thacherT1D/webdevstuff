@@ -157,6 +157,7 @@ Visit `localhost:8080` to see the application. *Make sure everything works corre
 * What are the differences between serving files from an http server and from the file system? It seemed to work fine with just `open index.html` in the browser...
 * Reflecting on the new structure and thinking back to lesson 1 - is Angular an MVC framework? How does the app structure support/disprove that?
 
+
 ## Resources
 
 * [Angular Docs](https://docs.angularjs.org/api)

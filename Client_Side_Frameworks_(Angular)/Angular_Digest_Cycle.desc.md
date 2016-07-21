@@ -348,6 +348,7 @@ app.factory('omdbapi', function($http, $q) {
 
 **EXERCISE** What are some advantages of caching the data? What role does `$q` play in caching the data?
 
+
 ### Additional reading on the scope life cycle and digest cycle
 
 [http://stackoverflow.com/questions/9682092/angularjs-how-does-databinding-work/9693933#9693933](http://stackoverflow.com/questions/9682092/angularjs-how-does-databinding-work/9693933#9693933)

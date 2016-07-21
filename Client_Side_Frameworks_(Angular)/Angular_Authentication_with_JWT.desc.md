@@ -184,6 +184,7 @@ Add authentication to your todo app! This is going to be quite challenging so ta
 1. [The Anatomy of a JSON Web Token](https://scotch.io/tutorials/the-anatomy-of-a-json-web-token)
 1. [Understanding JSON Web Tokens (JWT)](https://medium.com/vandium-software/5-easy-steps-to-understanding-json-web-tokens-jwt-1164c0adfcec#.h0649q1oi)
 
+
 ### Additional Things to consider + read
 
 Expiring Tokens - right now our tokens never expire, for security they should! Research how to add this to your JWT and see an example [here](https://github.com/sahat/satellizer/blob/master/examples/server/node/server.js)

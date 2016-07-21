@@ -223,6 +223,7 @@ angular
 
 Use the [Giphy Api](https://github.com/Giphy/GiphyAPI) to add a feature to to the contacts application.  Whenever a new user is submitted, do a search for a gif using the person's name.  If you get a result, save that along with the users name email and phone number.  Show the user's gif on the show page.  HINT: you will NOT want to use the embedded url from the giphy search resutls.
 
+
 ### Resources
 
 [Putting Angular Code in the Right Place](http://datamelon.io/blog/2016/putting-angular-code-in-the-right-place.html)

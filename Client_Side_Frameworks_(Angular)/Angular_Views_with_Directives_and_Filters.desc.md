@@ -386,6 +386,7 @@ app.filter('kebab', function () {
 
 **EXERCISE:** Create a filter called `redact` which will remove all instances of a provided word from a string and replace it with "REDACTED". `{{"My dog Rusty is adorable" | redact: "Rusty"}} should return "My dog REDACTED is adorable". You will need to research creating custom filters that take parameters.
 
+
 ## Resources
 
 - https://docs.angularjs.org/guide/expression

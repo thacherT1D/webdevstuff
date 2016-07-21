@@ -1,7 +1,7 @@
 ## Objectives
 
 * Explain the different ways of using a custom Angular directive.
-* Create a custom Angular directive. 
+* Create a custom Angular directive.
 
 ## Simple Custom Directive
 
@@ -539,6 +539,7 @@ If we want our directives to _wrap around_ HTML content, we need to use transclu
   </div>
 </div>
 ```
+
 
 **EXERCISE** What happens if you move the `ng-transclude` tag in the file above to some other line? How does this change the view?
 
