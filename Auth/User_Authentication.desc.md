@@ -2,7 +2,7 @@
 
 - Explain what user authentication is
 - Explain why is user authentication important
-- Use `bcrypt` to authenticate a user
+- Use bcrypt to authenticate a user
 - Explain what a cookie is
 - Explain what a session is
 - Add routes to authenticate a user
@@ -26,22 +26,6 @@ So a web application can show information—sometimes public, most of the time p
 
 Previously, you used the `bcrypt.hash()` method to hash a password during user registration. Additionally, the `bcrypt.compare()` method checks whether or not a login plaintext password matches a registration hashed password.
 
-Here's how the `bcrypt.compare()` method works.
-
-```javascript
-bcrypt.compare(password, hashed_password, (err, isMatch) => {
-  if (err) {
-    // Handle err
-  }
-
-  if (isMatch) {
-    // User authenticated
-  } else {
-    // Incorrect password
-  }
-});
-```
-
 Now let's create a route for logging in and use `bcrypt`. First we will create a branch for our session.
 
 ```shell
@@ -56,7 +40,7 @@ Once we are in the `session` branch let's create a `routes/session.js` module.
 const express = require('express');
 const router = express.Router();
 const knex = require('../knex');
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcrypt-as-promised');
 
 router.post('/session', (req, res, next) => {
   knex('users')
@@ -64,22 +48,24 @@ router.post('/session', (req, res, next) => {
     .first()
     .then((user) => {
       if (!user) {
-        return res.sendStatus(401);
+        const err = new Error('Unauthorized');
+
+        err.status = 401;
+
+        throw err;
       }
 
-      const hashed_password = user.hashed_password;
+      return bcrypt.compare(req.body.password, user.hashed_password);
+    })
+    .then(() => {
+      res.sendStatus(200);
+    })
+    .catch(bcrypt.MISMATCH_ERROR, () => {
+      const err = new Error('Unauthorized');
 
-      bcrypt.compare(req.body.password, hashed_password, (err, isMatch) => {
-        if (err) {
-          return next(err);
-        }
+      err.status = 401;
 
-        if (!isMatch) {
-          return res.sendStatus(401);
-        }
-
-        res.sendStatus(200);
-      });
+      throw err;
     })
     .catch((err) => {
       next(err);
@@ -190,20 +176,18 @@ router.post('/session', (req, res, next) => {
         return res.sendStatus(401);
       }
 
-      const hashed_password = user.hashed_password;
+      return bcrypt.compare(req.body.password, user.hashed_password);
+    })
+    .then(() => {
+      res.cookie('loggedIn', true);
+      res.sendStatus(200);
+    })
+    .catch(bcrypt.MISMATCH_ERROR, () => {
+      const err = new Error('Unauthorized');
 
-      bcrypt.compare(req.body.password, hashed_password, (err, isMatch) => {
-        if (err) {
-          return next(err);
-        }
+      err.status = 401;
 
-        if (!isMatch) {
-          return res.sendStatus(401);
-        }
-
-        res.cookie('loggedIn', true);
-        res.sendStatus(200);
-      });
+      throw err;
     })
     .catch((err) => {
       next(err);
@@ -256,7 +240,7 @@ app.use(cookieParser());
 
 app.get('/hello', function(req, res, next) {
   console.log(req.cookies); // object
-  if(req.cookies.loggedIn) {
+  if (req.cookies.loggedIn) {
     // user is logged in
   }
 });
@@ -313,21 +297,19 @@ router.post('/session', (req, res, next) => {
         return res.sendStatus(401);
       }
 
-      const hashed_password = user.hashed_password;
+      return bcrypt.compare(req.body.password, user.hashed_password);
+    })
+    .then(() => {
+      req.session.user = user;
+      res.cookie('loggedIn', true);
+      res.sendStatus(200);
+    })
+    .catch(bcrypt.MISMATCH_ERROR, () => {
+      const err = new Error('Unauthorized');
 
-      bcrypt.compare(req.body.password, hashed_password, (err, isMatch) => {
-        if (err) {
-          return next(err);
-        }
+      err.status = 401;
 
-        if (!isMatch) {
-          return res.sendStatus(401);
-        }
-
-        req.session.user = user;
-        res.cookie('loggedIn', true);
-        res.sendStatus(200);
-      });
+      throw err;
     })
     .catch((err) => {
       next(err);
