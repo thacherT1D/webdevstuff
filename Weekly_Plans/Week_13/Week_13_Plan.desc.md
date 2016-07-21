@@ -39,10 +39,15 @@ Warmup: Write your own function to make xhr requests that returns a promise. The
 
 Lessons:
 
-- [Secret Life of Functions](/redirects/articles/5090)
+- [Secret Life of Functions](/cohorts/68/articles/5090)
 - Intro to OOP
 
-Homework: [Homework](/cohorts/68/student_dashboard)
+Homework: Research and com up with a definition for each of the following Object Oriented Programming concepts:
+
+- Encapsulation
+- Abstraction
+- Inheritance
+- Polymorphism
 
 ---
 
