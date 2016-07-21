@@ -220,10 +220,10 @@ git add .
 git commit -m 'Add users route'
 ```
 
-Install the `bcrypt` package with `npm`.
+Install the `bcrypt-as-promised` package with `npm`.
 
 ```shell
-npm install --save bcrypt
+npm install --save bcrypt-as-promised
 ```
 
 Use the `bcrypt.hash()` method to generate a salt and hash the password.
@@ -233,17 +233,17 @@ Use the `bcrypt.hash()` method to generate a salt and hash the password.
 
 const express = require('express');
 const router = express.Router();
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcrypt-as-promised');
 
 router.post('/users', (req, res, next) => {
-  bcrypt.hash(req.body.password, 12, (err, hashed_password) => {
-    if (err) {
-      return next(err);
-    }
-
-    console.log(req.body.email, hashed_password);
-    res.sendStatus(200);
-  });
+  bcrypt.hash(req.body.password, 12)
+    .then((hashed_password) => {
+      console.log(req.body.email, hashed_password);
+      res.sendStatus(200);
+    })
+    .catch((err) => {
+      next(err);
+    });
 });
 
 module.exports = router;
@@ -269,27 +269,26 @@ Finally, use Knex to insert the email and hashed password into the users table.
 
 const express = require('express');
 const router = express.Router();
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcrypt-as-promised');
 const knex = require('../knex');
 
 router.post('/users', (req, res, next) => {
-  bcrypt.hash(req.body.password, 12, (err, hashed_password) => {
-    if (err) {
-      return next(err);
-    }
-
-    knex('users')
-      .insert({
-        email: req.body.email,
-        hashed_password: hashed_password
-      }, '*')
-      .then((users) => {
-        res.sendStatus(200);
-      })
-      .catch((err) => {
-        next(err);
-      });
-  });
+  bcrypt.hash(req.body.password, 12)
+    .then((hashed_password) => {
+      return knex('users')
+        .insert({
+          email: req.body.email,
+          hashed_password: hashed_password
+        }, '*');
+    })
+    .then((users) => {
+      const user = users[0];
+      delete user.hashed_password;
+      res.send(user);
+    })
+    .catch((err) => {
+      next(err);
+    });
 });
 
 module.exports = router;
