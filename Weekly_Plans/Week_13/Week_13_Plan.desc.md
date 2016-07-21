@@ -42,7 +42,7 @@ Lessons:
 - [Secret Life of Functions](/cohorts/68/articles/5090)
 - Intro to OOP
 
-Homework: Research and com up with a definition for each of the following Object Oriented Programming concepts:
+Homework: Research and come up with a definition for each of the following Object Oriented Programming concepts:
 
 - Encapsulation
 - Abstraction
