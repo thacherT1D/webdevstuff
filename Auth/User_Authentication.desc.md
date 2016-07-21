@@ -109,6 +109,13 @@ app.use((_req, res) => {
 });
 
 app.use((err, _req, res, _next) => {
+  if (err.status) {
+    return res
+      .status(err.status)
+      .set('Content-Type', 'text/plain')
+      .send(err.message);
+  }
+
   console.error(err);
   res.sendStatus(500);
 });
