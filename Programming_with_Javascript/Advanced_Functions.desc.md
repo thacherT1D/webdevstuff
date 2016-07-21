@@ -21,7 +21,7 @@ function logArguments() {
   return arguments;
 }
 
-console.log(logArguments(1, 2, 3)); // returns [1,2,3]
+console.log(logArguments("cat", "dog", "squirrel")); // returns {0:"cat", 1:"dog", 2:"squirrel"}
 ```
 
 This is extremely useful any time we want to work on an indeterminate amount of arguments being individually passed in.
