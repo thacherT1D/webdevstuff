@@ -147,6 +147,13 @@ app.use((_req, res) => {
 });
 
 app.use((err, _req, res, _next) => {
+  if (err.status) {
+    return res
+      .status(err.status)
+      .set('Content-Type', 'text/plain')
+      .send(err.message);
+  }
+
   console.error(err.stack);
   res.sendStatus(500);
 });
@@ -248,7 +255,7 @@ router.get('/artists/:id', (req, res, next) => {
 
 router.post('/artists', (req, res, next) => {
   knex('artists')
-    .insert(req.body, '*')
+    .insert({ name: req.body.name }, '*')
     .then((results) => {
       res.send(results[0]);
     })
@@ -267,7 +274,7 @@ router.patch('/artists/:id', (req, res, next) => {
       }
 
       return knex('artists')
-        .update(req.body, '*')
+        .update({ name: req.body.name }, '*')
         .where('id', req.params.id)
         .then((results) => {
           res.send(results[0]);
@@ -364,17 +371,22 @@ router.post('/tracks', (req, res, next) => {
     .first()
     .then((artist) => {
       if (!artist) {
-        return res
-          .status(400)
-          .set('Content-Type', 'text/plain')
-          .send('artist_id does not exist');
+        const err = new Error('artist_id does not exist');
+
+        err.status = 400;
+
+        throw err;
       }
 
       return knex('tracks')
-        .insert(req.body, '*')
-        .then((results) => {
-          res.send(results[0]);
-        });
+        .insert({
+          artist_id: req.body.artist_id,
+          title: req.body.title,
+          likes: req.body.likes
+        }, '*');
+    })
+    .then((tracks) => {
+      res.send(tracks[0]);
     })
     .catch((err) => {
       next(err);
@@ -392,44 +404,53 @@ router.patch('/tracks/:id', (req, res, next) => {
 
       return knex('artists')
         .where('id', req.body.artist_id)
-        .first()
-        .then((artist) => {
-          if (!artist) {
-            return res
-              .status(400)
-              .set('Content-Type', 'text/plain')
-              .send('artist_id does not exist');
-          }
-
-          return knex('tracks')
-            .update(req.body, '*')
-            .where('id', req.params.id)
-            .then((results) => {
-              res.send(results[0]);
-            });
-        });
+        .first();
     })
+    .then((artist) => {
+      if (!artist) {
+        const err = new Error('artist_id does not exist');
+
+        err.status = 400;
+
+        throw err;
+      }
+
+      return knex('tracks')
+        .update({
+          artist_id: req.body.artist_id,
+          title: req.body.title,
+          likes: req.body.likes
+        }, '*')
+        .where('id', req.params.id);
+    })
+    .then((tracks) => {
+      res.send(tracks[0]);
+    });
     .catch((err) => {
       next(err);
     });
 });
 
 router.delete('/tracks/:id', (req, res, next) => {
+  let track;
+
   knex('tracks')
     .where('id', req.params.id)
     .first()
-    .then((track) => {
-      if (!track) {
+    .then((row) => {
+      if (!row) {
         return next();
       }
 
+      track = row;
+
       return knex('tracks')
         .del()
-        .where('id', req.params.id)
-        .then(() => {
-          delete track.id;
-          res.send(track);
-        });
+        .where('id', req.params.id);
+    })
+    .then(() => {
+      delete track.id;
+      res.send(track);
     })
     .catch((err) => {
       next(err);
