@@ -54,7 +54,7 @@ In many languages, such as Java, `this` always represents the current object bei
 public class Teacher {
   private string name="Franz";
 
-  public getName() {
+  public void getName() {
     System.out.println(this.name);
   }
 }
@@ -85,7 +85,7 @@ var otherTeacher = {
   name: 'Frank',
   getName: teacher.getName
 }
-otherTeacher.getName // outputs 'Frank'
+otherTeacher.getName() // outputs 'Frank'
 
 teacher.getName.call({name: 'Philip'}); // outputs 'Philip'
 ```
@@ -125,12 +125,12 @@ Implicit context is the most common context and usually what people expect. In t
 
 ```javascript
 function getName() {
-  returns this.name;
+  return this.name;
 }
 
 var student = {
   name: 'Bob',
-  getname: getName
+  getName: getName
 }
 student.getName(); // here `this` refers to `student` and outputs "Bob"
 
@@ -143,14 +143,14 @@ book.getName(); // here `this` refers to `book` and outputs "You Don't Know JS"
 student.books = [book];
 student.books[0].getName(); // here `this` refers to the first item in the array, which is `book` so it ouputs "You Don't Know JS"
 
-var class = {
+var cohort = {
   name: 'g142',
-  teacher = {
+  teacher: {
     name: 'Wallace',
     getName: getName
   }
 }
-class.teacher.getName(); // `this` refers to teacher and outputs "wallace"
+cohort.teacher.getName(); // `this` refers to teacher and outputs "wallace"
 ```
 
 ### Explicit Context
@@ -162,27 +162,27 @@ function getName() {
   returns this.name;
 }
 
-getNamed.call({name: 'Rene'}); // outputs Rene
+getName.call({name: 'Rene'}); // outputs Rene
 
 var student = {
   name: 'Roberta'
 };
-getNamed.apply(student); // outputs Roberta
+getName.apply(student); // outputs Roberta
 
 var otherStudent = {
   name: 'Rodrigo'
 }
-var class = {
+var cohort = {
   name: 'g142',
-  teacher = {
+  teacher: {
     name: 'Wallace',
     getName: getName
   }
 }
-class.teacher.getName.call(otherStudent); // outputs 'Rodrigo'
+cohort.teacher.getName.call(otherStudent); // outputs 'Rodrigo'
 
 var getterNamer = getName.bind({name: "Roland"}); // returns a function where `this` is bound to the specified context
-getterName(); // always outputs "Roland"
+getterNamer(); // always outputs "Roland"
 ```
 
 The difference between call and apply is how they can be used to pass additional parameters to the original function - call takes an indeterminate number of arguments that will be passed through, whereas apply expects a second argument that is an array containing arguments to pass through:
@@ -210,15 +210,16 @@ Call, apply, and bind are also commonly used in hackish ways to do common tasks 
 - converting an array-like argument into a true array
 
 ```javascript
-funciton convertArgs() {
+function convertArgs() {
   return Array.prototype.slice.call(arguments); // slice is called as if on the arguments array without a starting or ending point specifiec, so it returns an array of the entire contents
 }
+convertArgs(1,2,3); // returns [1,2,3]
 ```
 
 - finding the maximum value for multiple numbers
 
 ```javascript
-Math.max.apply(this,[1,2,3,4,5])
+Math.max.apply(this,[1,2,3,4,5]); // returns 5
 ```
 
 - binding expected values in asynchronous code. (Necessary because the actual call-site for the function outputting the greeting is within the innards of Javascript is probably not want you want.)
@@ -232,6 +233,7 @@ var teacher = {
       }.bind(this),1000)
   }
 };
+teacher.sayHi();
 ```
 
 ### Constructor Context
