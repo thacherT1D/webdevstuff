@@ -1,5 +1,6 @@
 ## Objectives
 
+
 * Distinguish agile from traditional project management
 * Describe the scrum process
 * Define the roles of product owner, Scrum Master, developer
