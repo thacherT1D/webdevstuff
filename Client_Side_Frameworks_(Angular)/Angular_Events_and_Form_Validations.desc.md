@@ -1,0 +1,356 @@
+## Objectives
+
+* Explain the difference between how Angular handles events vs native JavaScript/jQuery
+* Use Angular event handlers including:
+  * `ng-click`
+  * `ng-mouseenter`
+  * `ng-submit`
+* Build form validation using Angular's form validation features.
+
+Angular provides event-handling directives to help us write interactive applications.
+
+### ng-click
+
+`ng-click` is used to run a specific method on the current `$scope` when an element is clicked. Think of it as the Angular equivalent of the `onclick` property.  Let's use it to build a random number picker!
+
+In a controller, let's add a property to the `$scope` called `view.number`:
+
+```jsdi
+$scope.view = {};
+$scope.view.number = 5;
+```
+
+Let's display `number` in the template:
+
+```html
+<h3>The number is: {{view.number}}</h3>
+```
+
+Next, let's add a button which will call `pickRandomNumber()` (we haven't defined it yet) when clicked.
+
+```html
+<button ng-click="pickRandomNumber()">Pick Random Number</button>
+```
+
+Now let's implement `pickRandomNumber()`. Remember that `ng-click` calls a method on the current `$scope`, so we need to make sure `pickRandomNumber()` is defined on the `$scope`. Back in your controller, add:
+
+```js
+$scope.pickRandomNumber = function() {
+  $scope.view.number = Math.floor(Math.random() * 10) + 1;
+}
+```
+
+And that's it!  Try clicking your button and watch as the number changes automatically on the screen.
+
+**EXERCISE**
+
+Explain in as much detail as you can what happens when you click the button.  Why does `number` update in the template without us telling it to?
+
+**EXERCISE**
+
+Add a button that will reverse some text when clicked.  Take a look at the example gif below.
+
+![](http://zippy.gfycat.com/ClosedFreshGar.gif)
+
+**EXERCISE: Create a simple Ping Pong Score Keeper.**  
+
+It should display the 2 players' scores, have buttons to increment each player's scores, and highlight the winner (assume games only go to 11).  It should also display the current server (switch serves every 2 points).  Lastly, make sure to include a reset button.  BONUS: Keep track of how many games each player wins.
+
+![](https://i.gyazo.com/40d31881e3774f4f374503920e784931.gif)
+
+### ng-mouseenter
+
+```ng-mouseenter``` is another event that you have access to in angular.  Let's make a quick counter that counts every time a div gets a mouse enter event.
+
+In your controller add:
+
+```js
+$scope.view = {};
+$scope.view.enterCount = 0;
+```
+
+In your view, display the number of times the div was entered, along with the div itself.  Notice that the div has the ng-mouseenter attribute which evaluates an expression every time a mouse enter occurs:
+
+```html
+<h3>The div was entered {{view.enterCount}} times</h3>
+<div class="divbox" ng-mouseenter="view.enterCount = view.enterCount + 1">
+</div>
+```
+
+You will also need to add some css to see the div:
+
+```css
+.divbox {
+  width: 400px;
+  height: 400px;
+  border-style: solid;
+  border-width: 6px;
+}
+```
+
+Now you have a mouse enter event working on your div.
+
+**EXERCISE: Create a box that randomly changes colors**
+
+Use ```ng-mouseenter``` and ```ng-style``` to create a box that gets a new random color every time your mouse enters the box.  The gif below, in the next exercise, will give you and idea of how the random color box should work.
+
+**Hint**:
+
+Here is code to generate a random hex color:
+
+```js
+  function randomColor() {
+    var x = Math.round(0xffffff * Math.random()).toString(16);
+    var y = (6-x.length);
+    var z = "000000";
+    var z1 = z.substring(0,y);
+    var color = "#" + z1 + x;
+    return color;
+  }
+```
+
+**EXERCISE: Replay colors**
+
+Now that you have a box that will change to a new random color on each mouse enter, use ```ng-click``` and the ```$timeout``` service to create a feature that will show all the random colors that have been clicked in reverse order.
+
+In the gif below, you can see the user refreshes the page, mouses over the box 4 times, then clicks the replay colors button.  The colors are then replayed in reverse order.
+
+![](http://i.imgur.com/iWqXHnv.gif)
+
+**Hint**:
+
+1. You will need to save an array of each color that was randomly generated for the box.
+2. To replay the colors, you will need to use the ```$timeout``` service.  Here is a pattern for calling the ```$timeout``` service to solve this problem:
+
+```js
+var replaying = false;
+
+$scope.replay = function() {
+  var displayPrevColor = function() {
+    // do some logic to change color
+    // if done replay colors
+    replaying = false;
+    // else
+    $timeout(dispalyPrevColor, 1000);
+    // end if/else
+  };
+  if (!replaying) {
+    replaying = true;
+    // This timeout starts the timeout loop
+    $timeout(function() { displayPrevColor(); }, 500);
+  }
+};
+```
+### ng-submit
+
+```ng-submit``` can be used whenever you want an action to take place on a form submit.  The ```ng-submit``` directive prevents the default broswer behavior (sending a request to some action and refreshing the page).  It also evaluates the expression in the ```ng-submit```.  For example:
+
+
+**index.html**
+
+```html
+<form ng-submit="submitFav()" name="favPieForm">
+  <input name="name" type="text" ng-model="favoriteForm.name">
+  <input name="favorite_pie" type="text" ng-model="favoriteForm.favoritePie">
+  <input type="submit">
+</form>
+Name: {{favoriteForm.name}}<br>
+Favorite Pi: {{favoriteForm.favoritePie}}
+```
+**app.js**
+
+```js
+  $scope.favoriteForm = {};
+  $scope.submitFav = function() {
+    var favPi = parseFloat($scope.favoriteForm.favoritePie);
+    // Special output if the favorite pie is a certain number
+    if (!isNaN(favPi) && favPi >= 3.14 && favPi <= 3.142) {
+      $scope.favoriteForm.favoritePie = "\u03A0";
+    }
+    console.log("Your favorite pie is: ", $scope.favoriteForm.favoritePie);
+  };
+```
+
+#### ng-submit Anti Patterns
+
+An anti pattern is a way of writing code that is a bad practice in your framework.  There are a few things you should **not** do with ```ng-submit```.
+
+1. Do not use ```ng-submit``` on the form and ```ng-click``` on the submit button at the same time. Use either ng-submit on the form and no directive on the submit button, or use ```ng-click``` on the submit button and no directive on the form. ```ng-submit``` is preferred in a form.
+2. Do not create separate properties directly on the `$scope` object for each form field. Instead, create an object that contains all the form properties inside of it. In the above example, `$scope.favoriteForm = {};` is the object that will contain each form property.
+3. Never do any DOM manipulation in your controller. When submitting form data, it is often tempting to revert back to the jQuery way of doing things. For example, do not attempt to append the new form data to the DOM inside of your controller. Again, **do not do any DOM manipulation in the controller**. Instead, add the data that you want to display to an object in the scope that will then be displayed in the view.
+
+**Exercise**
+
+Create a form for entering address data.  The form should accept a street (line 1), street (line 2), city, state, and zip code.  When the data is submitted, it again should be shown to the user (displayed on the page) and the form data should be cleared so that more data can be entered.
+
+**EXERCISE - Contact List**
+
+Create a simple contacts app.  Each contact has a name, email, and phone number.  A user can create new contacts using a form.  A user can search contacts as well (you'll need to research this part). HINT: try binding name, email, and phone as properties on one `newContact` object rather than creating 3 different properties on the `$scope`
+
+![](https://i.gyazo.com/e1dba3d8e24812690d1af363630af5a6.gif)
+
+### Other Events
+
+There are a bunch of other built-in event directives like
+
+* ng-change
+* ng-mousedown
+* ng-mouseenter
+* ng-mouseleave
+* ng-mousemove
+* ng-mouseover
+* ng-mouseup
+
+They all work just like `ng-click`.  When a specific event is triggered, they will run a given method on the current $scope.  
+
+**EXERCISE**
+
+Add a feature to a previous exercise using one of the event directives listed above
+
+## Form Validation with Angular
+
+### Why we validate on the client side
+
+Form and controls provide validation services, so that the user can be notified of invalid input before submitting a form. This provides a better user experience than server-side validation alone because the user gets instant feedback on how to correct the error and better yet, we don't need to even bother going to the server if the user fails the client side validation.
+
+### Why we can't ONLY validate on the client side
+
+Keep in mind that while client-side validation plays an important role in providing good user experience, it can easily be circumvented and thus can not be trusted. Server-side validation is still necessary for a secure application. We can easily disable javascript and delete things from the DOM using the developer tools - so we need to ensure that we are validating in a place where users do NOT have access.
+
+## Building our first form
+
+Remember how to build forms? Let's make sure.
+
+- Create a form with an action to # (you can use `javascript:void(0)` as well - wondering what that does? Read [this](http://stackoverflow.com/questions/1291942/what-does-javascriptvoid0-mean))
+- Inside your form add two text inputs (each one should have a label with the `for` attribute matching the `id` of each input) and an input with type of `submit` and a value of `Click me!`
+
+Your form should look like this:
+
+```html
+<form action="#">
+  <label for="firstname">First Name: </label>
+  <input type="text" id="firstname">
+  <label for="lastname">Last Name: </label>
+  <input type="text" id="lastname" >
+  <input type="submit" value="Click me!">
+</form>
+```
+
+Now this form is pretty decent, but it looks like we are not validating anything! A user can leave the inputs blank and still submit the form successfully! Let's add some validations with HTML5 using `required`.
+
+Your form should now look like this:
+
+```html
+<form action="#">
+  <label for="firstname">First Name: </label>
+  <input type="text" id="firstname" required>
+  <label for="lastname">Last Name: </label>
+  <input type="text" id="lastname" required>
+  <input type="submit" value="Click me!">
+</form>
+```
+
+Now this is great, but it would be nice if we could be a bit more specific on what we want to validate inside this form. What if we want (a) the First Name to be present, but it has to be at least three characters, and (b) the Last Name does not need to be present, but if it is, it should also be at least 3 characters (we still need to make sure Bono can sign up for our application)?
+
+Our first thought might be to start writing a bunch of javascript and figure out if there is any text inside the input and if so, to figure out the length. While this would work, angular has a nicer way to help us out. But before we do this, let's learn about some of the key properties and classes we will be using to validate forms in angular.
+
+## Before you continue, read through the following documentation regarding Angular form validations:
+[http://www.ng-newsletter.com/posts/validations.html](http://www.ng-newsletter.com/posts/form-validation-with-angularjs.html)
+
+### A quick walkthrough of angular form properties, classes and descriptions
+
+This table and the corresponding descriptions come from [this](https://scotch.io/tutorials/angularjs-form-validation-with-ngmessages) fantastic tutorial.
+
+| Property  |  Class | Description  |
+|---|---|---|
+| $valid  |  ng-valid | Boolean that indicates whether an item is currently valid based on the rules you placed.  |   
+| $invalid  |  ng-invalid |  Boolean that indicates whether an item is currently invalid based on the rules you placed. |   
+|  $pristine |  ng-pristine |  Boolean that's true if the form/input has not been used yet. |   
+|  $dirty |  ng-dirty |   Boolean that's true if the form/input has been used. |   
+|  $touched |  ng-touched |  Boolean that's true if the input has been blurred |   
+
+## Accessing and targeting our form and inputs
+
+In order to use angular form validation we have to abide by the following rules
+
+- We must give our form a name attribute (let's imagine a name attribute = "firstForm")
+	- We can then do things like `firstForm.$valid` (which returns true or false)
+- We have to put an ng-model on each of our inputs (remember to use the dot!)
+
+A couple extra things:
+- If we do not want to use the standard HTML5 validations we add `novalidate` as an attribute to our form
+- To access angular properties on our inputs we use the syntax `formName.inputName.angularProperty`.
+  + We can then do things like `firstForm.username.$valid` or `firstForm.username.$error` (to see an object with any errors)
+
+## Styling our forms and displaying error messages:
+
+It would be much nicer if we could display a message to our user and style it accordingly. We are going to be using bootstrap as it gives us some nice classes for validation (you can read more about them [here](http://getbootstrap.com/css/#forms-control-validation))
+
+In order to add a class based off of a condition we are going to be using the built in `ng-class` directive (docs are [here](https://docs.angularjs.org/api/ng/directive/ngClass). There are a few ways to use `ng-class`, the way we will be using it is as follows (pay close attention to the quotes!)
+
+`ng-class="{ 'class-name' : expression, 'another-class': another expression }".`
+
+An example of this would be: `"{ 'has-error' : sampleForm.username.$invalid }"`
+
+But how about showing an error message? To do this we are going to be using the `ng-show` directive which works like this:
+
+`ng-show="condition"`
+
+An example of this would be:
+`<span ng-show="sampleForm.username.$invalid">Username is invalid</span>`
+
+## Visualization
+
+If you would like a great example of how these form classes and properties work (99% borrowed from scotch.io) - check out [these](http://sales-person-licks-61176.bitballoon.com) validation tables
+
+
+## Questions
+#### Exercise - questions + building your own form and validations
+
+First, answer the following questions
+
+- When does a form/input have a property of $valid? What class accompanies this property?
+- When does a form/input have a property of $invalid? What class accompanies this property?
+- When does a form/input have a property of $pristine? What class accompanies this property?
+- When does a form/input have a property of $dirty? What class accompanies this property?
+- When does a form/input have a property of $touched? What class accompanies this property?
+- What does blurred mean? (research the `blur` event)
+
+#### For the next set of questions, assume that you have a form with a name="quizForm"
+
+- Create a text input with a name of "question" and give it a validation of "required". If it is $valid add a class of "valid"
+- For your text input with a name of question, add a paragraph tag with the text "please enter a valid question" if the input is not valid
+- Create a text input with a name of "answer" and give it a validation of "required" and a minimum length of 4 characters. If it is $valid and not $pristine add a class of "correct".
+- How would you access all of the errors (in an object) for an input with a name of `quizForm.username`
+- What validations would you add in an input to make sure that there is a minimum length of 4 and a maximum length of 20
+- What validation would you add in an input to make sure that only numbers between 1 and 5 are a valid input (use regular expressions for this!)
+
+## Exercise - styling our form and adding some error messages!
+
+Now that you have a solid understanding of these properties/classes, let's build another form with an action of "#" and four text inputs for a username, password, email and zip code. Your form should validate that the username and password are both between 3 and 12 characters long. It should also make sure that the email is a valid email and that the zip code is a five digit number (use ng-pattern and regular expressions for this!).
+
+Now that we have an idea of how to style and display error messages, let's do the following
+
+- include bootstrap for styling
+- display error messages if inputs are invalid (write whatever you would like for the error message)
+- add a class of `has-error` if the validation fails
+- add a class of `has-success` if the validation passes
+- only display the error message/styling if the user has typed something
+- when the form is submitted, collect the inputs and add them to an array called `users` (this will be done in your controller)
+  + remember that the default behavior for the form submission is a page refresh - you will need to prevent this.
+  + make sure to clear all the form values and validations (you should use a method from [here](https://docs.angularjs.org/api/ng/type/form.FormController) to do that )
+  + display the array of users (each one should be an object) at the top of your form (see the gif below for guidance).
+
+Your form should work like this:
+
+[![https://gyazo.com/a6a93b98ada81f54140052956cea2cb0](https://i.gyazo.com/a6a93b98ada81f54140052956cea2cb0.gif)](https://gyazo.com/a6a93b98ada81f54140052956cea2cb0)
+
+## Bonus - refactor using ngMessages
+
+Our HTML is getting a bit messy, it would be nice to have an easier way to deal with error messages, that's where ng-messages comes in. Walk through [this](https://scotch.io/tutorials/angularjs-form-validation-with-ngmessages) or [this](http://www.yearofmoo.com/2014/05/how-to-use-ngmessages-in-angularjs.html) tutorial and refactor your form to use ng-messages.
+
+## Additional Resources
+
+[https://docs.angularjs.org/guide/forms](https://docs.angularjs.org/guide/forms)
+
+[https://docs.angularjs.org/api/ng/directive/input](https://docs.angularjs.org/api/ng/directive/input)
