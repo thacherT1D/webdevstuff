@@ -256,8 +256,8 @@ router.get('/artists/:id', (req, res, next) => {
 router.post('/artists', (req, res, next) => {
   knex('artists')
     .insert({ name: req.body.name }, '*')
-    .then((results) => {
-      res.send(results[0]);
+    .then((artists) => {
+      res.send(artists[0]);
     })
     .catch((err) => {
       next(err);
@@ -275,10 +275,10 @@ router.patch('/artists/:id', (req, res, next) => {
 
       return knex('artists')
         .update({ name: req.body.name }, '*')
-        .where('id', req.params.id)
-        .then((results) => {
-          res.send(results[0]);
-        });
+        .where('id', req.params.id);
+    })
+    .then((artists) => {
+      res.send(artists[0]);
     })
     .catch((err) => {
       next(err);
@@ -286,22 +286,26 @@ router.patch('/artists/:id', (req, res, next) => {
 });
 
 router.delete('/artists/:id', (req, res, next) => {
+  let artist;
+
   knex('artists')
     .where('id', req.params.id)
     .first()
-    .then((artist) => {
-      if (!artist) {
+    .then((row) => {
+      if (!row) {
         return next();
       }
 
+      artist = row;
+
       return knex('artist')
         .del()
-        .where('id', req.params.id)
-        .then(() => {
-          delete artist.id;
-          res.send(artist);
-        });
+        .where('id', req.params.id);
     })
+    .then(() => {
+      delete artist.id;
+      res.send(artist);
+    });
     .catch((err) => {
       next(err);
     });
