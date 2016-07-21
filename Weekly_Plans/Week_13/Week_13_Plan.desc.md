@@ -35,12 +35,12 @@ Additional Practice:
 
 # Thursday, July 21
 
-Warmup: [Link to Warmup](http://github.com/gSchool)
+Warmup: Write your own function to make xhr requests that returns a promise. Then use that function to write another function called `areThereInternets` that makes three requests to three different sites at the same time (such as google, netflix, and amazon) and returns true if all of those requests worked or false if any fail.
 
 Lessons:
 
-- [Secret Life of Functions](/cohorts/68/student_dashboard)
-- [Intro to OOP](/cohorts/68/student_dashboard)
+- [Secret Life of Functions](/redirects/articles/5090)
+- Intro to OOP
 
 Homework: [Homework](/cohorts/68/student_dashboard)
 
