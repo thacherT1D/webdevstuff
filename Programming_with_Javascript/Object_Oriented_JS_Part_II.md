@@ -256,13 +256,6 @@ spot.speak(); //returns woof
 spot.eat(); //26
 ```
 
-## Useful Methods / Keywords
-
-- `hasOwnProperty`
-- `instanceof`
-- `typeof`
-- `call/apply/bind`
-
 **You Do:**
 
 - Create a prototype called `Square`.
@@ -270,7 +263,20 @@ spot.eat(); //26
 - Have `Square` takes on parents prototype.
 - Instantiate a square and invoke the method.
 
-## Exercise
+
+## Useful Methods / Keywords
+
+- `hasOwnProperty`
+- `instanceof`
+- `typeof`
+- `call/apply`
+- 'instance.constructor'
+
+## Consider
+
+- What happens when you override a method then delete delete the overridden method?
+- Is there a way to automate this, so you don't have to type as much?
+- Where can you apply this knowledge in previous projects?
 
 ## Glossary
 
