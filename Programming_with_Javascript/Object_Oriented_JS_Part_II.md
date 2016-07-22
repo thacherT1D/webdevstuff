@@ -205,6 +205,52 @@ spot.speak(); //returns woof
 spot.eat(); //26
 ```
 
+
+Here's the full example:
+
+
+```javascript
+//declare animal constructor
+function Animal(_species, _weight, _sound){
+  //when the constructor is invoked with the new keyword
+  //this refers to the object being constructed
+  //so we are giving the constructed animal
+  this.species = _species;
+  this.weight = _weight;
+  this.sound = _sound;
+}
+
+//add a method to the animal prototype
+Animal.prototype.speak = function(){
+  console.log(this.sound);
+};
+
+//create dog constructor
+function Dog(_weight){
+  //dog constructor calls super / parent constructor
+  //it passes in the this
+  Animal.call(this, 'dog', _weight, 'woof');
+}
+//have dog take on a copy of the parents prototype
+Dog.prototype = Object.create(Animal.prototype);
+
+//override super classes speak method
+Dog.prototype.speak = function(){
+  return this.sound;
+};
+
+//define method eat
+Dog.prototype.eat = function(){
+  return this.weight += 1
+};
+
+//construct an instance of a dog
+var spot = new Dog(25);
+//invoke methods
+spot.speak(); //returns woof
+spot.eat(); //26
+```
+
 ## Useful Methods / Keywords
 
 - `hasOwnProperty`
