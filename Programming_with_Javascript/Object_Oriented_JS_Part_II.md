@@ -2,38 +2,217 @@
 
 ## Objectives
 
-- Implement Prototypal Inheritance in Javascript.
+By the end of this article you will be able to:
+
+- Implement Prototypal OOP in Javascript.
+- Create an object prototype.
+- Construct an object from a prototype.
+- Inherit from a prototype.
 
 ## Intro
 
-Javascript makes use of `Prototypal Inheritance`, while most other languages utilize `Classical Inheritance`.
 
-We won't really take the time to discuss the differences right now, but be aware they are not the same.
+Javascript supports both `Loose Inheritance` and `Prototypal Inheritance`, and even allows for custom implementations of inheritance as well. For this lesson, we will focus on `Prototypal Inheritance`.
 
-Example:
+## Creating an Object Prototype
 
-prototype
-hasOwnProperty
-this
-call / apply / bind
-prototype chain
 
-function Child(){
-  Parent.call(this);
+The first step is to create a constructor function.
+
+```javascript
+function Animal(){
+
 }
-Child.prototype = Object.create(Parent.prototype)
+```
 
-**I Do**
+A constructor will construct an instance of the object based on the prototype (instantiate). When we invoke the constructer we use the `new` keyword:
 
-I demonstrate how to implement prototypal inheritance using an example.
+```javascript
+var dog = new Animal();
+console.log(dog);
+console.log(dog instanceof Animal);
+console.log(typeof dog);
+```
 
-**We Do**
+Our dog variable is now an instance of the Animal Prototype.
 
-Together we think of a similar model where inheritance would be useful.
+Right now the Animal prototype doesn't have any state so lets add some:
 
-**You Do**
+```javascript
+function Animal(_species, _weight, _sound){
+  this.species = _species;
+  this.weight = _weight;
+  this.sound = _sound;
+}
+```
 
-You are provided with a model and need to implement it.
+What does `this` refer to in the constructor?
+
+`this` refers to the object the constructor is instantiating.
+
+Now that we updated our constructor, let's instantiate an animal:
+
+```javascript
+var dog = new Animal('dog', 24, 'woof');
+console.log(dog);
+console.log(dog instanceof Animal);
+console.log(typeof dog);
+```
+
+Great! Our dog now holds state and values.
+
+Let's add some methods to the Animal Object.
+
+In order to do that, we simply need to add functions to the Animal's prototype.
+
+```javascript
+function Animal(_species, _weight, _sound){
+  this.species = _species;
+  this.weight = _weight;
+  this.sound = _sound;
+}
+
+Animal.prototype.speak = function(){
+  console.log(this.sound);
+};
+```
+
+Notice how `this` in the prototype method refers to the same `this` as in the constructor.
+
+They both refer to the object instance.
+
+Now let's test out our method:
+
+```javascript
+var dog = new Animal('dog', 24, 'woof');
+dog.speak();
+```
+
+`this.sound` in the `speak` method refers to `dog.sound`;
+
+We can now use our prototype to construct / instantiate  unlimited Animal objects:
+
+```javascript
+var dog = new Animal('dog', 24, 'woof');
+dog.speak();
+
+var goat = new Animal('goat', 52, 'bleat');
+goat.speak();
+
+var cat = new Animal('cat', 52, 'meow');
+cat.speak();
+```
+
+## Inheriting from an Object
+
+
+Let's inherit from Animal to create a dog species. The first step would be to create a  constructor for the new Object Prototype.
+
+```javascript
+function Dog(){
+
+}
+```
+
+Now we need to invoke the parent/super prototypes constructor:
+
+```javascript
+function Dog(_weight){
+  Animal.call(this, 'dog', _weight, 'woof');
+}
+```
+
+This will invoke the parent constructor, and `this` will refer to the dog being constructed.
+
+```javascript
+var spot = new Dog(25);
+spot.speak();
+```
+
+Damn, that didn't work. That's because we haven't taken on the super prototypes prototype.
+
+```javascript
+function Dog(_weight){
+  Animal.call(this, 'dog', _weight, 'woof');
+}
+Dog.prototype = Object.create(Animal.prototype);
+```
+
+Now that we have the parents prototype lets try that again:
+
+```javascript
+var spot = new Dog(25);
+spot.speak();
+```
+
+Now it works! We now have taken all the state and behavior of the parent animal object.
+
+What properties does spot have?
+
+```javascript
+var spot = new Dog(25);
+console.log(spot);
+console.log(spot.hasOwnProperty(speak));
+spot.speak();
+```
+
+Lets say we want to change the behavior of speak. Instead of console logging the sound, lets have it return the sound. This is known as method overriding, a type of polymorphism.
+
+```javascript
+function Dog(_weight){
+  Animal.call(this, 'dog', _weight, 'woof');
+}
+Dog.prototype = Object.create(Animal.prototype);
+
+Dog.prototype.speak = function(){
+  return this.sound;
+};
+
+var spot = new Dog(25);
+spot.speak(); //returns woof, previously console logged.
+```
+
+What properties does spot have now?
+
+```javascript
+var spot = new Dog(25);
+console.log(spot);
+console.log(spot.hasOwnProperty(speak));
+spot.speak();
+```
+
+Interesting.
+
+
+We can now even add custom methods to Dog:
+
+```javascript
+function Dog(_weight){
+  Animal.call(this, 'dog', _weight, 'woof');
+}
+Dog.prototype = Object.create(Animal.prototype);
+
+Dog.prototype.speak = function(){
+  return this.sound;
+};
+
+Dog.prototype.eat = function(){
+  return this.weight += 1
+};
+
+var spot = new Dog(25);
+spot.speak(); //returns woof
+spot.eat(); //26
+```
+
+## Useful Methods / Keywords
+
+- `hasOwnProperty`
+- `instanceof`
+- `typeof`
+- `call/apply/bind`
+
+## Exercise
 
 ## Glossary
 
@@ -52,3 +231,4 @@ You are provided with a model and need to implement it.
 - Classical OOP
 - Prototypal OOP
 - Type
+- Super
