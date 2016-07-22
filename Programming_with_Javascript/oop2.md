@@ -1,4 +1,10 @@
-## Prototypal Inheritance
+# OOP I Did It Again: Prototypal Inheritance and JS
+
+## Objectives
+
+- Implement Prototypal Inheritance in Javascript.
+
+## Intro
 
 Javascript makes use of `Prototypal Inheritance`, while most other languages utilize `Classical Inheritance`.
 

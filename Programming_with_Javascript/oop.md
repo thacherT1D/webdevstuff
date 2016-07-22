@@ -1,4 +1,4 @@
-# OOPs I Did It Again
+# Alley-OOP: Object Oriented Programming
 
 ## Objectives
 
@@ -7,7 +7,6 @@ By the end of this lesson you should be able to:
 - Explain why Object Oriented Programming is useful.
 - Describe what Object Oriented Programming is.
 - List the 4 Pillars of Object Oriented Programming.
-- Implement Prototypal Inheritance in Javascript.
 
 ## Why OOP?
 
