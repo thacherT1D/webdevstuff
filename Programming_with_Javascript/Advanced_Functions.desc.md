@@ -21,7 +21,7 @@ function logArguments() {
   return arguments;
 }
 
-console.log(logArguments(1, 2, 3)); // returns [1,2,3]
+console.log(logArguments("cat", "dog", "squirrel")); // returns {0:"cat", 1:"dog", 2:"squirrel"}
 ```
 
 This is extremely useful any time we want to work on an indeterminate amount of arguments being individually passed in.
@@ -263,3 +263,6 @@ To determine the context coming into play, just watch for some of the special ke
 # Resources
 
 - [You Don't Know JS - 'this'](https://github.com/getify/You-Dont-Know-JS/blob/master/this%20&%20object%20prototypes/ch2.md)
+- [Drip of Javascript - Invoking JavaScript Functions With 'call' and 'apply'](http://adripofjavascript.com/blog/drips/invoking-javascript-functions-with-call-and-apply.html)
+- [Drip of Javascript - Creating Bound Functions with Function#bind](http://adripofjavascript.com/blog/drips/creating-bound-functions-with-function-bind.html)
+- [Drip of Javascript - Partial Application with Function#bind](http://adripofjavascript.com/blog/drips/partial-application-with-function-bind.html)
