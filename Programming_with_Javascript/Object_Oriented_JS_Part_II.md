@@ -1,4 +1,4 @@
-# OOP I Did It Again: Prototypal Inheritance and JS
+# OOPs I Did It Again: Prototypal Inheritance and JS
 
 ## Objectives
 
