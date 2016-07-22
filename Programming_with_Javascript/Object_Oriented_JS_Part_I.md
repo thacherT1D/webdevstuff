@@ -245,7 +245,7 @@ There are several types of Polymorphism:
 For the rest of this article, we will primarily use Method Overriding to implement polymorphic design.
 
 **Real World Example:**
-
+<!--  -->
 Many mammals can walk, although there are many different forms of walking.
 
 When a dog walks, it utilizes 4 legs.
