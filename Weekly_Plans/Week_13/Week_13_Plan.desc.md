@@ -48,20 +48,16 @@ Homework: [Homework](/cohorts/68/student_dashboard)
 
 # Friday, July 22
 
-Warmup: [Link to Warmup](http://github.com/gSchool)
+Warmup:
+
+[The Lazy Startup](https://www.codewars.com/kata/the-lazy-startup-office)
 
 Lessons:
 
-- [Prototypal Inheritance](/cohorts/68/student_dashboard)
-
-Homework: [Homework](/cohorts/68/student_dashboard)
+- [Alley-OOP: Object Oriented Programming & Prototypal Inheritance](/cohorts/68/student_dashboard)
 
 Lightning Talks:
 
 - Roy
 - Philip
 - [Open Slot]
-
-Announcements:
-- Announcement 1
-- Announcement 2
