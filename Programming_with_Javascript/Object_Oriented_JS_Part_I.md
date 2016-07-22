@@ -186,32 +186,10 @@ It also makes things easier on the developer, because all objects that inherit f
 
 **Real World Example:**
 
-
-
-**Code Example:**
-
-
-### Polymorphism
-
-The world literally is Greek for many forms.
-
-**Definition:**
-
-Providing a single interface to objects of different types.
-
-There are several types of Polymorphism:
-
-- An interface which provides different behavior dependent on the types of the arguments passed into the method. (Ad Hoc Polymorphism / Method Overloading)
-- An interface which provides different behavior dependent on the object the method is invoked upon. (Subtype Polymorphism / Inclusion Polymorphism / Method Overriding)
-- An interface which can operate on any type provided. (Generic programming / Parametric Polymorphism)
-
-For the rest of this article, we will primarily use Method Overriding to implement polymorphic design.
-
-**Real World Example:**
-
 Volkswagon Jettas, Golfs, GTIs and Audis are similar vehicles. Instead of redesigning and manufacturing the each one, they developed a single set of components and used them in every vehicle.
 
 **Code Example:**
+
 
 ```javascript
 function Car(_model, _speed, _fuel){
@@ -247,4 +225,65 @@ myCar.accelerate();
 
 var yourCar = new Jetta(100, 0);
 yourCar.decelerate();
+```
+
+
+### Polymorphism
+
+The world literally is Greek for many forms.
+
+**Definition:**
+
+Providing a single interface to objects of different types.
+
+There are several types of Polymorphism:
+
+- An interface which provides different behavior dependent on the types of the arguments passed into the method. (Ad Hoc Polymorphism / Method Overloading)
+- An interface which provides different behavior dependent on the object the method is invoked upon. (Subtype Polymorphism / Inclusion Polymorphism / Method Overriding)
+- An interface which can operate on any type provided. (Generic programming / Parametric Polymorphism)
+
+For the rest of this article, we will primarily use Method Overriding to implement polymorphic design.
+
+**Real World Example:**
+
+Many mammals can walk, although there are many different forms of walking.
+
+When a dog walks, it utilizes 4 legs.
+
+When a human walks, it utilizes 2 legs.
+
+
+**Code Example:**
+
+```javascript
+function Shape(dimenion){
+
+}
+Shape.prototype.calcArea = function(){
+
+}
+
+function Square(_width){
+  this.width = _width;
+  Shape.call(this);
+}
+Square.prototype = Object.create(Shape.prototype);
+Square.prototype.calcArea = function(){
+  return this.width * this.width;
+}
+
+function Circle(_radius){
+  this.radius = _radius;
+  Shape.call(this);
+}
+Circle.prototype = Circle.create(Shape.prototype);
+Circle.prototype.calcArea = function(){
+  return this.radius * this.radius * Math.PI;
+}
+
+var circ = new Circle(2);
+circ.calcArea();
+
+var square = new Square(2);
+square.calcArea();
 ```
