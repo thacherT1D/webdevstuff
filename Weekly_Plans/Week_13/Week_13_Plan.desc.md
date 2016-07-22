@@ -59,8 +59,8 @@ Warmup:
 
 Lessons:
 
-- [Alley-OOP: Object Oriented Programming](/cohorts/68/student_dashboard)
-- [OOP I Did It Again: Prototypal Inheritance and JS](/cohorts/68/student_dashboard)
+- [Alley-OOP: Object Oriented Programming](/redirects/articles/5289)
+- [OOP I Did It Again: Prototypal Inheritance and JS](/redirects/articles/5290)
 
 Lightning Talks:
 
