@@ -103,6 +103,13 @@ var cat = new Animal('cat', 52, 'meow');
 cat.speak();
 ```
 
+**You Do:**
+
+- Create a prototype called `Rectangle`.
+- Constructor takes in `_width` and `_height` and sets them as a value on the rectangle.
+- Prototype has a method called calculate area, which returns width * height.
+- Instantiate the rectangle and invoke the method.
+
 ## Inheriting from an Object
 
 
@@ -205,9 +212,7 @@ spot.speak(); //returns woof
 spot.eat(); //26
 ```
 
-
 Here's the full example:
-
 
 ```javascript
 //declare animal constructor
@@ -257,6 +262,13 @@ spot.eat(); //26
 - `instanceof`
 - `typeof`
 - `call/apply/bind`
+
+**You Do:**
+
+- Create a prototype called `Square`.
+- Constructor takes in `_width` and invokes super constructor of `Rectangle` passing in `_width` for both `_width` and `_height`.
+- Have `Square` takes on parents prototype.
+- Instantiate a square and invoke the method.
 
 ## Exercise
 
