@@ -79,8 +79,9 @@ Javascript naturally fits well with some of these pillars, and others not so muc
 **Definition:**
 
 Encapsulation is:
-  - Restricting access to the internals of an object, and only exposing certain state and behavior through an interface.
-  - The act of grouping similar state (data / values) and behavior (methods / functions) together.
+
+- Restricting access to the internals of an object, and only exposing certain state and behavior through an interface.
+- The act of grouping similar state (data / values) and behavior (methods / functions) together.
 
 Restricting access to the internals of an object protects the objects integrity.  It prevents the object from being modified in a manner that would put it in an illegal state (break it).
 
@@ -142,8 +143,36 @@ Abstraction is the act of hiding complexity and instead providing a simplified i
 
 **Real World Example:**
 
+For example, a car is made of many complex components. There is the engine, the drive train, the chassis, the exhaust manifold and many more components. Each of those is comprised of many more smaller and sometimes even more complex pieces.
+
+Yet, we don't actually need to know anything about how a combustion engine works to drive a car. We just need to interact with the simple interface that has been provided:
+
+- Moving the steering wheel turns the car.
+- Pressing the gas accelerates.
+- Pressing the brake decelerates.
+
 **Code Example:**
 
+```javascript
+
+function DataList(datum){
+
+  return {
+    getSmallestValue: function (){
+      var smallest = datum[0];
+      datum.forEach(function(data){
+        if(data < smallest){
+          smallest = data
+        }
+      });
+      return smallest;
+    }
+  };
+}
+
+var myDataList = new DataList([0, 9, 12323, 4345234, 1, -234324, 543254]);
+var smallest = myDataList.getSmallestValue(); //-234324
+```
 
 ### Inheritance
 
