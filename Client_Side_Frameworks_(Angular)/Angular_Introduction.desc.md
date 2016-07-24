@@ -6,15 +6,49 @@
 * Explain what is data binding.
 * Create the recommended structure of a project using Angular.
 
+## What is a client side framework?
+
+As of now, we have built a fully functional website complete with both a frontend and a backend. The tools we have used have been very minimal. For example, jQuery provides a lot of convenient features in traversing and manipulating the DOM. Since then, many websites grew more and more complicated (think Facebook, Twitter, Pinterest, Google's applications) and the organization of code using these tools became extremely unwieldy. As a result, many of these big companies developed or threw support on software to make things easier. For example,
+
+* Angular (Google)
+* React (Facebook)
+* Bootstrap (Twitter)
+
+A software framework provides common functionality that can be specially changed as needed. This supports an overall trend in software engineering called *code reuse*. As software engineers write code, they begin to recognize the pieces of code that get duplicated over and over. Engineers eventually abstract this functionality to their own functions or libraries. It is because of groups of common functionality, frameworks become strong backbones of an application. Frameworks differ from a standard libraries in the following ways:
+
+* The application is primarily run by the framework instead of the user-written parts.
+* Frameworks provide default behavior. This makes getting a rich application running from scratch relatively simple.
+* Frameworks can be extended to override specific functionality, but the framework code itself is not meant to be changed.
+
+Because there is a lot of common functionality in place, it's important to understand the nuances. A framework itself becomes its own language with its own features and recommendations. We are going to begin by talking about a frontend framework that has gotten very popular lately, AngularJS.
+
+When evaluating frameworks to use, it's important to understand your needs to determine which framework you should use. Lots of frameworks provide everything but the kitchen sink, but if you only use a subset of those features, you end up wasting a lot of time and memory downloading the framework and using it. Keep this in mind when given a problem and you decide to user a framework. For example, there's a battle between AngularJS vs Backbone. AngularJS provides many features (which you will learn in this quarter) where as Backbone provides a very small abstraction of models, views, collections, and routers. AngularJS, when downloaded and minified, takes up 160Kb of space. Backbone on the other hand, takes up only 23Kb of space. That's over 85% less space!
+
 ## What is Angular?
 
 According to the official Angular introduction, Angular is a-
 
 > client-side technology, written entirely in JavaScript. It works with the long-established technologies of the web (HTML, CSS, and JavaScript) to make the development of web apps easier and faster than ever before.
 
-Angular, along with other client-side libraries (Backbone, Ember, React), help us deal with larger, more complex code bases on the client-side. They also redefined the roles of the client and server, resulting in a new application structure called a Single-Page Application (or SPA). In this new structure, the client interacts with the server by making RESTful AJAX requests that are triggered by user interactions.
+Angular, along with other client-side libraries (Backbone, Ember, React), help us deal with larger, more complex code bases on the client-side. They also redefined the roles of the client and server, resulting in a new application structure called a Single-Page Application (or SPA). In this new structure, the client interacts with the server by making AJAX requests that are triggered by user interactions.
 
 It boils down to this: **Angular helps us build complex, single-page applications very quickly.**
+
+It may seem not that amazing, but when you think about it, but AngularJS provided some incredibly important functionality:
+
+* It provided modules. Keep in mind browsers did not have a formal module system and Node.js was just getting released with its own module system. Modules helped avoided the need to pollute the global scope and provided separation of logic.
+* It provided an organization of coding through a process similar to a Model-View-Controller architecture. This organization helps us separate the logic between our presentation logic and our core business logic.
+* It abstracted the link between input values in values in a process called two-way data binding. There was no need to build listeners to input events, update fields accordingly. Angular did that for us.
+* It built in a concept called *routing* where urls can be specified for specific parts of the application without the need for the server to define such routes and logic.
+* It was designed to be testable, something that a majority of developers do not think about when constructing UIs.
+* It added reusable code for many features such as form validation and localization (translating for different countries).
+* It allowed the ability to add your own reusable code in the form of directives and components.
+
+### A little history
+
+AngularJS was developed by Miško Hevery in 2009. Originally, it was developed outside of Google, but it was later funded by Google. Hevery believed that HTML was not originally meant to handle the web applications that we build today. He chose to build an extension onto it.
+
+For some more understanding on the motivation behind AngularJS, I recommend looking at the video of Hevery's [presentation](https://www.youtube.com/watch?v=khk_vEF95Jk) of AngularJS in 2011.
 
 ## Hello, Angular!
 
@@ -53,11 +87,11 @@ Staying true to an iterative approach to coding, we'll start slow, defining ever
 </html>
 ```
 
-## Questions
+### Exercise
 
-* Why learn Angular JS over other frameworks like Ember, Backbone, Knockout, etc?
-* People have some very strong opinions about Angular. What are 3 common complaints people have about Angular?
-* Is Angular an MVC framework?
+Turn and talk to your neighbor and discuss the following questions:
+* What is a software framework?
+
 * Turn to the Angular docs. Find `ng-app`. What is it and what does it do? What does `ng` stand for?
 
 ## Data Binding
