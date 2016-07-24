@@ -3,7 +3,7 @@
 * Explain what a client side framework is.
 * Explain how Angular helps build complex applications.
 * Use Angular in a single page application.
-* Explain what is data binding.
+* Explain what is two-way data binding.
 * Create the recommended structure of a project using Angular.
 
 ## What is a client side framework?
@@ -56,45 +56,140 @@ We're going to start by setting up a very simple Angular app to say Hello World 
 
 Staying true to an iterative approach to coding, we'll start slow, defining everything (markup and Angular syntax) within a single `index.html` file - a true single page app! - and scale from there, learning about patterns for structuring complicated Angular apps.
 
-1. Create an `index.html` file.
-1. Add the Angular dependency. For now, we're going to utilize a CDN - `https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js`.
-1. Add the `ng-app` attribute to the `<html>` element in your document. This indicates that *everything* inside of the `<html>` element - from the opening to closing tag - is part of an Angular app. In other words, all Angular code/tags that fall inside the `<html>` element will be rendered by the Angular interpreter. *Get used to that `ng` prefix as you will be seeing it A LOT!*
-1. Test it out! Add the following Angular tag anywhere inside of the `<body>` tag - `<p>{{1 + 6}}<p>`. Open the page in your browser. If all is well then you should see `7`.
-1. Finally, update the title element - `<title>{{ greeting }} World</title>` - and add the following two paragraphs:
-  ```html
-  <p>Say something to the world <input type="text" ng-model="greeting" ng-init="greeting='Hello, '"></p>
-  <p>{{ greeting }} world!</p>
-  ```
+Create a directory to hold your example work and create an `index.html` file in it.
 
-1. Test this out. Enter something in the input box and watch the DOM update! Note the new `ng-`attributes - you will learn more about them soon.
+```sh
+$ mkdir hello-angular
+$ cd hello-angular
+$ touch index.html
+$ atom index.html
+```
 
-### Final Code
+In your `index.html` file, create the boilerplate of an html page. Add the Angular dependency. For now, we're going to utilize a CDN - `https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js`.
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+  </body>
+</html>
+```
+
+As of now, Angular is loaded but will not do anything to the page itself. We need to _inform_ the framework that there is an application intended to run in Angular. For that we need to add the `ng-app` attribute to an HTML element, typically the `<html>` element in your document. This indicates that *everything* inside of the `<html>` element - from the opening to closing tag - is part of an Angular app. In other words, all Angular code/tags that fall inside the `<html>` element will be rendered through Angular. *Get used to that `ng` prefix as you will be seeing it A LOT!* While `ng-app` is an attribute, Angular calls it a *directive* since its distinguishing itself from ordinary HTML attributes. In fact, directives can take on many forms, and we'll expand more about directives throughout this quarter.
+
+Now that we have informed Angular of our application we can begin to leverage some of its capabilities. For example, add the following Angular tag anywhere inside of the `<body>` tag - `<p>{{1 + 6}}<p>`. Open the page in your browser. If all is well then you should see `7`.
 
 ```html
 <!DOCTYPE html>
 <html ng-app>
   <head>
     <meta charset="utf-8">
-    <title>{{ greeting }} World</title>
+    <title></title>
   </head>
   <body>
-    <p>{{1 + 6}}<p>
-    <br>
-    <p>Say something to the world <input type="text" ng-model="greeting" ng-init="greeting='Hello, '"></p>
-    <p>{{ greeting }} world!</p>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js"></script>
+    <p>{{1 + 6}}</p>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
   </body>
 </html>
 ```
 
-### Exercise
+Angular is providing us with Angular *expressions*, being able to process your page and replacing it with values. Trying playing with other types of expressions. What kinds of things can you do and can't you do in here.
 
-Turn and talk to your neighbor and discuss the following questions:
-* What is a software framework?
+**Question** What would the above code produce if `ng-app` was not specified?
+**Question** What will Angular produce with the following code?
 
-* Turn to the Angular docs. Find `ng-app`. What is it and what does it do? What does `ng` stand for?
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <p>{{1 + 6}}</p>
+    <p ng-app>{{1 + 6}}</p>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+  </body>
+</html>
+```
 
-## Data Binding
+### Variables in Angular
+
+Angular expressions can also process variables. The variables however need to be defined somewhere. There are many places to define it, but for now, we will use another special directive from Angular called `ng-init`. Place an `ng-init` attribute in another paragraph.
+
+```html
+<p ng-init="someone = 'World'">Hello {{someone}}!</p>
+```
+
+In the above code, `ng-init` takes in an expression and evaluates it, assigning whatever values to variables. It can also do math as well.
+
+```html
+<p ng-init="sum = 1 + 4">The sum of 1 and 4 is {{sum}}</p>
+```
+
+While `ng-init` provides some easy ways if initializing variables. It's important to note that this style is meant for demonstration purposes only. `ng-init` is creating the variable for it to be used across the page.
+
+Try updating the title to include the `someone` variable.
+
+```html
+<title>Hello {{someone}}!</title>
+```
+
+That being said, `someone` is inaccessible from `window`. It is stored within Angular's library for use, thereby avoiding the need to pollute the global scope.
+
+```html
+<!DOCTYPE html>
+<html ng-app>
+  <head>
+    <meta charset="utf-8">
+    <title>Hello {{someone}}!</title>
+  </head>
+  <body>
+    <p>{{1 + 6}}</p>
+    <p ng-init="someone = 'World'">Hello {{someone}}!</p>
+    <p ng-init="sum = 1 + 4">The sum of 1 and 4 is {{sum}}</p>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+  </body>
+</html>
+```
+
+## Introducing Interactivity with Data binding
+
+We have played with some simple features of Angular, but we really want to work on using them in an interactive setting. For this we want to use the `ng-model` directive.
+
+Create an input box at the top of the body.
+
+```html
+<input type="text" ng-model="greeting">
+```
+
+In this example, `ng-model` is providing a variable name to store the information in the text box. In this case, the name of the variable is `greeting`. Now that we have the variable stored, let's use it somewhere. Replace any cases where you see the word "Hello" with `{{greeting}}` (should be in the `<title>` element and one of the `<p>` elements).
+
+```html
+<!DOCTYPE html>
+<html ng-app>
+  <head>
+    <meta charset="utf-8">
+    <title>{{greeting}} {{someone}}!</title>
+  </head>
+  <body>
+    <input type="text" ng-model="greeting">
+    <p>{{1 + 6}}</p>
+    <p ng-init="someone = 'World'">{{greeting}} {{someone}}!</p>
+    <p ng-init="sum = 1 + 4">The sum of 1 and 4 is {{sum}}</p>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+  </body>
+</html>
+```
+
+Test this out. Enter something in the input box and watch the DOM update! This is a result of Angular's ability to bind a view to a piece of data as it changes.
+
+### Data Binding
 
 Let's start by building something simple that showcases the power of Angular.
 
