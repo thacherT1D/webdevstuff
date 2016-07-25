@@ -1,10 +1,10 @@
-# An Introduction to Programming and JavaScript: Arrays, Objects, Iterations
+## Objectives:
 
-Objectives:
-
+* Explain the purpose of the 'arguments' keyword
+* Describe variable scope in javascript and how it relates to functions
 * Create and manipulate arrays and objects
 * Explain the difference between object dot notation and bracket notation
-* Explain how objects are stored and compared in memory 
+* Explain how objects are stored and compared in memory
 * Write for loops and while loops
 * Write a for loop to iterate over an array
 * Write a for-in loop to iterate over an object
@@ -12,9 +12,77 @@ Objectives:
 * Write a deeply nested object
 * Read data from a deeply nested object
 
+## The keyword `arguments`
+
+The arguments keyword gives you an array like object of parameters to a function:
+
+* the keyword `arguments` exist only inside of a function
+* the keyword `arguments` is array-like, which means it has some functionality of an array, such as `length`, but not others.
+
+Let's use `arguments` in a function and see what we can and cannot do:
+
+```javascript
+function args() {
+  return arguments.length;
+}
+
+args(1,2,3);
+// 3
+```
+
+Notice that the correct number of arguments is being logged to the console. We achieved this functionality with the `length` property being used on `arguments`. Since we have the ability to use dot notation with `arguments`, that's an insightful indicator that `arguments` is actually an object.
+
+Now watch what happens when we try to use another method such as `pop()` that is very common to arrays:
+
+```javascript
+function args() {
+  console.log(arguments.pop());
+}
+
+args(1,2,3);
+// ...arguments.pop is not a function
+```
+
+Using the `pop()` method doesn't work, and this observation confirms our assumption that `arguments` doesn't have access to all methods of an array. So what methods or properties does it have? Let's use console.log to see! As we'll soon notice, `arguments` is an object where each argument being passed, from left to right, is assigned a numeric key starting from the integer `0`. `arguments` also has a `length` property, as we learned in an earlier example.
+
+## Scope In Javascript
+
+Variable scope is a term that describes the duration for which a variable exists in javascript.  In javascript variables are scoped to functions.  In other words, when a variable is defined with the keyword `var`, it exists for the life span of that function:
+
+```javascript
+function scopeExample() {
+	var num1 = 5;
+	var num2 = 6;
+	num3 = 7;
+
+	console.log(num1, num2, num3, num4, "-> num1, num2, num3 and num4 are defined from inside scopeExample");
+}
+
+num4 = 12345;
+console.log(num4, "-> Only num4 is defined at this point");  // num1, num2, and num3 do not exist
+scopeExample();
+
+console.log(num3, num4, "-> Only num3 and num4 exist now");
+```
+
+### Exercise
+
+* When should you use the `var` keyword to declare variables?
+* What does the following code console log?
+
+```javascript
+var test = 10;
+function scopeChallenge() {
+  console.log(test);
+  var test = 99;
+}
+
+scopeChallenge();
+```
+
 Now that we've talked about primitive data types, let's discuss the last data type in Javascript: objects. Arrays, functions, and (shocker!) objects are all examples of objects. Objects are sometimes referred to as reference types (to distinguish them from the primitive types that we've seen already). Here we'll discuss arrays and objects as well as delve deeper into functions.
 
-## Arrays 
+## Arrays
 
 Arrays describe a set of elements in a particular order. Arrays in Javascript are declared using square brackets. The simplest array is one with nothing in it:
 
@@ -151,7 +219,7 @@ for (var i = 1; i < 5; i++) {
 
 **Question** When might we want to iterate between two numbers?
 
-## Objects 
+## Objects
 
 Let's now transition to objects, which are created with a different syntax.
 
