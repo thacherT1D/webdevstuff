@@ -4,7 +4,6 @@
 * Explain how Angular helps build complex applications.
 * Use Angular in a single page application.
 * Explain what is two-way data binding.
-* Create the recommended structure of a project using Angular.
 
 ## What is a client side framework?
 
@@ -82,7 +81,7 @@ In your `index.html` file, create the boilerplate of an html page. Add the Angul
 
 As of now, Angular is loaded but will not do anything to the page itself. We need to _inform_ the framework that there is an application intended to run in Angular. For that we need to add the `ng-app` attribute to an HTML element, typically the `<html>` element in your document. This indicates that *everything* inside of the `<html>` element - from the opening to closing tag - is part of an Angular app. In other words, all Angular code/tags that fall inside the `<html>` element will be rendered through Angular. *Get used to that `ng` prefix as you will be seeing it A LOT!* While `ng-app` is an attribute, Angular calls it a *directive* since its distinguishing itself from ordinary HTML attributes. In fact, directives can take on many forms, and we'll expand more about directives throughout this quarter.
 
-Now that we have informed Angular of our application we can begin to leverage some of its capabilities. For example, add the following Angular tag anywhere inside of the `<body>` tag - `<p>{{1 + 6}}<p>`. Open the page in your browser. If all is well then you should see `7`.
+Now that we have informed Angular of our application we can begin to leverage some of its capabilities. For example, add the following Angular tag anywhere inside of the `<body>` tag - `<p ng-bind="1 + 6"><p>`. Open the page in your browser. If all is well then you should see `7`.
 
 ```html
 <!DOCTYPE html>
@@ -92,7 +91,7 @@ Now that we have informed Angular of our application we can begin to leverage so
     <title></title>
   </head>
   <body>
-    <p>{{1 + 6}}</p>
+    <p ng-bind="1 + 6"></p>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
   </body>
 </html>
@@ -111,8 +110,8 @@ Angular is providing us with Angular *expressions*, being able to process your p
     <title></title>
   </head>
   <body>
-    <p>{{1 + 6}}</p>
-    <p ng-app>{{1 + 6}}</p>
+    <p ng-bind="1 + 6"></p>
+    <p ng-app ng-bind="1 + 6"></p>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
   </body>
 </html>
@@ -123,24 +122,24 @@ Angular is providing us with Angular *expressions*, being able to process your p
 Angular expressions can also process variables. The variables however need to be defined somewhere. There are many places to define it, but for now, we will use another special directive from Angular called `ng-init`. Place an `ng-init` attribute in another paragraph.
 
 ```html
-<p ng-init="someone = 'World'">Hello {{someone}}!</p>
+<p ng-init="someone = 'World'">Hello <span ng-bind="someone"></span>!</p>
 ```
 
 In the above code, `ng-init` takes in an expression and evaluates it, assigning whatever values to variables. It can also do math as well.
 
 ```html
-<p ng-init="sum = 1 + 4">The sum of 1 and 4 is {{sum}}</p>
+<p ng-init="sum = 1 + 4">The sum of 1 and 4 is <span ng-bind="sum"></span></p>
 ```
 
-While `ng-init` provides some easy ways if initializing variables. It's important to note that this style is meant for demonstration purposes only. `ng-init` is creating the variable for it to be used across the page.
+While `ng-init` provides some easy ways if initializing variables. It's important to note that this style is meant for demonstration purposes only. `ng-init` is creating the variable for it to be used across the page. That being said, `someone` is inaccessible from `window`. It is stored within Angular's library for use, thereby avoiding the need to pollute the global scope.
 
-Try updating the title to include the `someone` variable.
+Angular has an alternative way of displaying expressions other than `ng-bind` using double curly braces. Update the `<title>` element with the following.
 
 ```html
 <title>Hello {{someone}}!</title>
 ```
 
-That being said, `someone` is inaccessible from `window`. It is stored within Angular's library for use, thereby avoiding the need to pollute the global scope.
+Angular will look in all elements in their text and evaluate the curly braces as an expression.
 
 ```html
 <!DOCTYPE html>
@@ -150,9 +149,9 @@ That being said, `someone` is inaccessible from `window`. It is stored within An
     <title>Hello {{someone}}!</title>
   </head>
   <body>
-    <p>{{1 + 6}}</p>
-    <p ng-init="someone = 'World'">Hello {{someone}}!</p>
-    <p ng-init="sum = 1 + 4">The sum of 1 and 4 is {{sum}}</p>
+    <p ng-bind="1 + 6"></p>
+    <p ng-init="someone = 'World'">Hello <span ng-bind="someone"></span>!</p>
+    <p ng-init="sum = 1 + 4">The sum of 1 and 4 is <span ng-bind="sum"></span></p>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
   </body>
 </html>
@@ -179,9 +178,9 @@ In this example, `ng-model` is providing a variable name to store the informatio
   </head>
   <body>
     <input type="text" ng-model="greeting">
-    <p>{{1 + 6}}</p>
-    <p ng-init="someone = 'World'">{{greeting}} {{someone}}!</p>
-    <p ng-init="sum = 1 + 4">The sum of 1 and 4 is {{sum}}</p>
+    <p ng-bind="1 + 6"></p>
+    <p ng-init="someone = 'World'"><span ng-bind="greeting"></span> <span ng-bind="someone"></span>!</p>
+    <p ng-init="sum = 1 + 4">The sum of 1 and 4 is <span ng-bind="sum"></span></p>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
   </body>
 </html>
@@ -191,26 +190,24 @@ Test this out. Enter something in the input box and watch the DOM update! This i
 
 ### Data Binding
 
-Let's start by building something simple that showcases the power of Angular.
-
-In traditional frameworks, controllers package up data from the models with a template and then render a view to the user. That view is a snapshot in time; it only reflects the state of data at the time it was rendered. Newer JavaScript frameworks like Angular and Ember allow us to write dynamic, live templates. This means that we can write Angular templates that will **automatically update when our data changes.**
+In traditional frameworks, views are a snapshot in time, only reflecting the state of data at the time it was rendered. Newer JavaScript frameworks like Angular and Ember allow us to write dynamic, live templates. This means that we can write Angular templates that will **automatically update when our data changes.**
 
 This is called two-way or bi-directional binding.
 
 * when a model changes, the view knows about it.
 * when a view changes, the model also knows about it.
 
-Put another way, if the data changes in the controller, that change is *immediately* updated on the view. If the data changes in the view, then it is *immediately* updated in the controller.
+Put another way, if the data changes, that change is *immediately* updated on the view. If the data changes in the view, then it is *immediately* updated in the code.
 
 Let's try it out!
 
 In `index.html` create a text input:
 
 ```html
-<input type="text" placeholder="What is your name?">
+<input type="text" placeholder="What is your name?" ng-model="name" ng-init="name = 'Ken'">
 ```
 
-Add a new attribute `ng-model="name"` to the text input. This ties/binds the value of the text input to a property called "name". Technically, `ng-model` tries to bind "name" by evaluating the expression on the current `$scope`, and since the property "name" doesn't already exist on this `$scope`, it will be created implicitly and added to the `$scope`. *We'll talk a lot more about this when we learn about controllers in a few lessons, so don't worry about it for now.*
+With the attribute `ng-model="name"` added to the text input, this ties/binds the value of the text input to a property called "name". Technically, `ng-model` tries to bind "name" by evaluating the expression, and since the property "name" doesn't already exist in angular's scope, it will be created implicitly.
 
 Now that we've bound the input to the "name" property, let's display the value of "name" on the page.  We can write expressions in our HTML using `{{ }}`.
 
@@ -222,78 +219,15 @@ Open up `index.html` in your browser. What does the `h1` display when the page l
 
 ### Exercises
 
-**Raw JS**
-
-Replicate the exact same functionality without using Angular. In a new file, write vanilla JS code that will automatically update the h1 when the value in the text input changes. Once done, compare your solution to [examples/update-without-angular.html](examples/update-without-angular.html).
-
 **Dropdowns**
 
 Use `ng-model` with a dropdown menu (select tag). Give the user the following four items to pick from - "Dogs", "Cats", "Dogs and Cats", "Neither". Display the user's choice in an `h3`. For example, if the user selects "Dogs", the `h3` should say "I love dogs <3".
-
-## Questions
-
-* What does `ng-model` do?
-* [What is "dirty checking"?](http://stackoverflow.com/questions/24698620/dirty-checking-on-angular)
-* Find a way to set the initial value of "name" as "BoJack" (without writing a controller).
-* What are those `{{ }}` expressions? Are they Handlebars?
-* Explain what two-way data binding is.
-* BONUS: Research the `$digest` loop
-
-## A New Structure
-
-As our Angular apps grow we'll need a new file structure. It won't work to put everything in a single `app.js` file when we have multiple controllers, modules, directives, filters, services, and much  more.
-
-We're going to start by using the following structure:
-
-```sh
-app
-├── css
-├── index.html
-└── js
-    ├── app.js
-    ├── controllers.js
-    ├── directives.js
-    ├── filters.js
-    └── services.js
-```
-
-This structure is pretty simple. We have an `app.js` file where we will declare our Angular app and all dependencies. For now it will just look like:
-
-```javascript
-var app = angular.module("whateverYourModuleNameIs", []);
-```
-
-We also have files like `controllers.js` and `directives.js`, which contain all of our controllers or custom directives (we'll get there soon). Basically, instead of writing everything inside of `app.js`, we've broken it out into separate files grouped by functionality.
-
-In order for this structure to work, make sure you correctly include all the scripts in your `index.html` file.
-
-Check out the boilerplate [here](examples/boilerplate/app). Cheers!
-
-**EXERCISE**
-
-Convert the reddit clone app to this new file structure. Then serve up your reddit clone app using [http-server](https://www.npmjs.com/package/http-server) inside of the "app" directory:
-
-```sh
-$ http-server -c-1 -o
-```
-
-Visit `localhost:8080` to see the application. *Make sure everything works correctly.*
-
-### Questions
-
-* What are possible issues with this new file structure?
-* When thinking about extending the single responsibility principle to the app structure, what are some other ways that the app could be structured?
-* What are the differences between serving files from an http server and from the file system? It seemed to work fine with just `open index.html` in the browser...
-* Reflecting on the new structure and thinking back to lesson 1 - is Angular an MVC framework? How does the app structure support/disprove that?
-
 
 ## Resources
 
 * [Angular Docs](https://docs.angularjs.org/api)
 * [Thinking in Angular](http://stackoverflow.com/questions/14994391/thinking-in-angularjs-if-i-have-a-jquery-background/15012542#15012542)
-* [AngularJS by Example - Building a Bitcoin Investment Calculator](https://github.com/mjhea0/thinkful-angular)
 * [Angular vs Ember vs Backbone] (https://www.airpair.com/js/javascript-framework-comparison)
 * [Data Binding Reference](https://docs.angularjs.org/guide/databinding)
 * [ng-model Docs](https://docs.angularjs.org/api/ng/directive/ngModel)
-* [`$watch`](https://www.ng-book.com/p/The-Digest-Loop-and-apply/)
 * [ng-cloak StackOverflow discussion](http://stackoverflow.com/questions/12866447/prevent-double-curly-brace-notation-from-displaying-momentarily-before-angular-j)
