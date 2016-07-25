@@ -1,4 +1,4 @@
-## Objectives:
+## Objectives
 
 * Explain the purpose of the 'arguments' keyword
 * Describe variable scope in javascript and how it relates to functions
