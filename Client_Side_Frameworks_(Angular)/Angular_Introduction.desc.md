@@ -239,6 +239,10 @@ Open up `index.html` in your browser. What does the `h1` display when the page l
 
 Use `ng-model` with a dropdown menu (select tag). Give the user the following four items to pick from - "Dogs", "Cats", "Dogs and Cats", "Neither". Display the user's choice in an `h3`. For example, if the user selects "Dogs", the `h3` should say "I love dogs <3".
 
+## Assignment
+
+[Blueit](https://github.com/gSchool/blueit)
+
 ## Resources
 
 * [Angular Docs](https://docs.angularjs.org/api)
