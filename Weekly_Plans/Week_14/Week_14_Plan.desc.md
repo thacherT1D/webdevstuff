@@ -9,13 +9,17 @@
 
 # Monday, July 25 - Roger
 
-Warmup:
-- [Doggy Daycare](https://www.codewars.com/kata/doggy-daycare)
+Warmup: [Link to Warmup](http://github.com/gSchool)
 
 Lessons:
-- [Data-Binding](/cohorts/68/student_dashboard)
-- [Expression and Filters](/cohorts/68/student_dashboard)
-- [Built-in Directives](/cohorts/68/student_dashboard)
+- [Lesson](/cohorts/68/student_dashboard)
+- [Lesson](/cohorts/68/student_dashboard)
+
+Homework: [Homework](/cohorts/68/student_dashboard)
+
+Announcements:
+- Announcement 1
+- Announcement 2
 
 ---
 
@@ -24,8 +28,8 @@ Lessons:
 Warmup: [Link to Warmup](http://github.com/gSchool)
 
 Lessons:
-- [Angular Events](/cohorts/68/student_dashboard)
-- [Angular Form Validation](/cohorts/68/student_dashboard)
+- [Lesson](/cohorts/68/student_dashboard)
+- [Lesson](/cohorts/68/student_dashboard)
 
 Homework: [Homework](/cohorts/68/student_dashboard)
 
@@ -37,7 +41,7 @@ Announcements:
 
 # Wednesday, July 27 - Roger
 
-Warmup: [OOP Warmup](http://github.com/gSchool)
+Warmup: [Link to Warmup](http://github.com/gSchool)
 
 Lessons:
 - [Lesson](/cohorts/68/student_dashboard)
