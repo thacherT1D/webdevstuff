@@ -89,7 +89,7 @@ Or you can use it to make multiple line comments.
    that we don't need to end the comment on the first line. */
 ```
 
-Most of the time, you'll use the `//` style because Atom can toggle a line to be commented or not using the `Command + /` keyboard shortcut. Go ahead, try it out!
+Most of the time, you'll use the `//` style because Atom can toggle a line to be commented or not using the `Command` + `/` keyboard shortcut. Go ahead, try it out!
 
 See the [comments](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Comments) documentation on the Mozilla Developer Network for more information.
 
@@ -213,7 +213,7 @@ See the [string type](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Da
 
 ### Variables
 
-In JavaScript, variables lets you give a name to a value. Think of a variable as a bucket that can store one thing inside of it. To create a new variable, use the `var` keyword followed by the name of the variable.
+In JavaScript, variables let you give a name to a value. Think of a variable as a bucket that can store one thing inside of it. To create a new variable, use the `var` keyword followed by the name of the variable.
 
 ```javascript
 var person;
@@ -223,7 +223,7 @@ A **keyword** is a word that has special meaning and is [reserved by the ECMAScr
 
 The word variable means 'can change' or 'can vary'. In JavaScript, the value inside a variable can vary over time. Additionally, a JavaScript variable can store many different types of values. However, if you put a new value in a variable, the old one goes away.
 
-**TIP:** Remember, a variable only needs to be declared once using the `var` keyword.
+**TIP:** A variable only needs to be declared once using the `var` keyword. It can however be reassigned multiple times.
 
 ```javascript
 var name = 'Casey';
@@ -259,7 +259,7 @@ var result = 2 + 2;
 
 ### Undefined
 
-`undefined` represents a value that hasn't been defined. A variable that has not been assigned a value is of type `undefined`. A function returns `undefined` if a value is not returned, which is the default.
+`undefined` represents a value that has not been defined. A variable that has not been assigned a value is of type `undefined`. A function *returns* `undefined` if a value is not returned, which is the default.
 
 ```javascript
 var x;
