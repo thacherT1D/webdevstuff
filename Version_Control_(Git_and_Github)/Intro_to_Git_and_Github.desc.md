@@ -234,7 +234,7 @@ $ git commit -m "Initial commit"
 
 ### Pushing to GitHub
 
-1. Create a GitHub repository and don't initialize it
+1. Create a *GitHub* repository and don't initialize it
 1. Create a local git repository
 1. Create a file
 1. Stage the file
@@ -242,12 +242,15 @@ $ git commit -m "Initial commit"
 1. Set the GitHub repo as the git remote
 1. Push to GitHub
 
+![Answer
+Padding](https://media.giphy.com/media/l46CsTPetihC1rX9K/giphy.gif)
+
 #### Answer
 
 Create a GitHub repo:
-![Hit the + Icon](create-github-repo-1.png)
-
-![Hit Create](create-github-repo-2.png)
+ * Click on the + icon in the top right.
+ * choose "New Repository"
+ * fill out the forms and click "Create Repository"
 
 ```
 $ mkdir myProjectName
