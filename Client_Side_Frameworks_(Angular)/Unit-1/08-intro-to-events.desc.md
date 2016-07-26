@@ -4,32 +4,40 @@ Angular provides event-handling directives to help us write interactive applicat
 
 ### ng-click
 
-`ng-click` is used to run a specific method on the current `$scope` when an element is clicked. Think of it as the Angular equivalent of the `onclick` property.  Let's use it to build a random number picker!
+`ng-click` is used to run a specific method on the current `vm` when an element is clicked. Think of it as the Angular equivalent of the `onclick` property.  Let's use it to build a random number picker!
 
-In a controller, let's add a property to the `$scope` called `view.number`:
+For this inital example, a basic angular scaffold has been created [here](https://github.com/gSchool/angular-intro-to-events/tree/master/ng-click-scaffold).
+
+In a controller, let's add a property to the `vm` called `view.number`:
 
 ```jsdi
-$scope.view = {};
-$scope.view.number = 5;
+vm.view = {};
+vm.view.number = 5;
+```
+
+In the `index.html`, add a controller using the `controller as` pattern.
+
+```
+<div ng-controller="Example1Controller as e1c>"
 ```
 
 Let's display `number` in the template:
 
 ```html
-<h3>The number is: {{view.number}}</h3>
+<h3>The number is: {{e1c.number}}</h3>
 ```
 
 Next, let's add a button which will call `pickRandomNumber()` (we haven't defined it yet) when clicked.
 
 ```html
-<button ng-click="pickRandomNumber()">Pick Random Number</button>
+<button ng-click="e1c.pickRandomNumber()">Pick Random Number</button>
 ```
 
-Now let's implement `pickRandomNumber()`. Remember that `ng-click` calls a method on the current `$scope`, so we need to make sure `pickRandomNumber()` is defined on the `$scope`. Back in your controller, add:
+Now let's implement `pickRandomNumber()`. Remember that `ng-click` calls a method on the current `vm`, so we need to make sure `pickRandomNumber()` is defined on the `vm`. Back in your controller, add:
 
 ```js
-$scope.pickRandomNumber = function() {
-  $scope.view.number = Math.floor(Math.random() * 10) + 1;
+vm.pickRandomNumber = function() {
+  vm.view.number = Math.floor(Math.random() * 10) + 1;
 }
 ```
 
