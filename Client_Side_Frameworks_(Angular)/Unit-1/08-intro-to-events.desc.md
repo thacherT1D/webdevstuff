@@ -35,17 +35,17 @@ $scope.pickRandomNumber = function() {
 
 And that's it!  Try clicking your button and watch as the number changes automatically on the screen.
 
-**EXERCISE**
+**EXERCISE 1**
 
 Explain in as much detail as you can what happens when you click the button.  Why does `number` update in the template without us telling it to?
 
-**EXERCISE**
+**EXERCISE 2**
 
 Add a button that will reverse some text when clicked.  Take a look at the example gif below.
 
 ![](http://zippy.gfycat.com/ClosedFreshGar.gif)
 
-**EXERCISE: Create a simple Ping Pong Score Keeper.**  
+**EXERCISE 3: Create a simple Ping Pong Score Keeper.**  
 
 It should display the 2 players' scores, have buttons to increment each player's scores, and highlight the winner (assume games only go to 11).  It should also display the current server (switch serves every 2 points).  Lastly, make sure to include a reset button.  BONUS: Keep track of how many games each player wins.
 
@@ -83,7 +83,7 @@ You will also need to add some css to see the div:
 
 Now you have a mouse enter event working on your div.
 
-**EXERCISE: Create a box that randomly changes colors**
+**EXERCISE 4: Create a box that randomly changes colors**
 
 Use ```ng-mouseenter``` and ```ng-style``` to create a box that gets a new random color every time your mouse enters the box.  The gif below, in the next exercise, will give you and idea of how the random color box should work.
 
@@ -102,7 +102,7 @@ Here is code to generate a random hex color:
   }
 ```
 
-**EXERCISE: Replay colors**
+**EXERCISE 5: Replay colors**
 
 Now that you have a box that will change to a new random color on each mouse enter, use ```ng-click``` and the ```$timeout``` service to create a feature that will show all the random colors that have been clicked in reverse order.
 
@@ -136,7 +136,7 @@ $scope.replay = function() {
 ```
 ### ng-submit
 
-```ng-submit``` can be used whenever you want an action to take place on a form submit.  The ```ng-submit``` directive prevents the default broswer behavior (sending a request to some action and refreshing the page).  It also evaluates the expression in the ```ng-submit```.  For example:
+`ng-submit` can be used whenever you want an action to take place on a form submit.  The `ng-submit` directive prevents the default browser behavior (sending a request to some action and refreshing the page).  It also evaluates the expression in the `ng-submit`.  For example:
 
 
 **index.html**
@@ -172,11 +172,11 @@ An anti pattern is a way of writing code that is a bad practice in your framewor
 2. Do not create separate properties directly on the `$scope` object for each form field. Instead, create an object that contains all the form properties inside of it. In the above example, `$scope.favoriteForm = {};` is the object that will contain each form property.
 3. Never do any DOM manipulation in your controller. When submitting form data, it is often tempting to revert back to the jQuery way of doing things. For example, do not attempt to append the new form data to the DOM inside of your controller. Again, **do not do any DOM manipulation in the controller**. Instead, add the data that you want to display to an object in the scope that will then be displayed in the view.
 
-**Exercise**
+**EXERCISE 6**
 
 Create a form for entering address data.  The form should accept a street (line 1), street (line 2), city, state, and zip code.  When the data is submitted, it again should be shown to the user (displayed on the page) and the form data should be cleared so that more data can be entered.
 
-**EXERCISE - Contact List**
+**EXERCISE 7: Contact List**
 
 Create a simple contacts app.  Each contact has a name, email, and phone number.  A user can create new contacts using a form.  A user can search contacts as well (you'll need to research this part). HINT: try binding name, email, and phone as properties on one `newContact` object rather than creating 3 different properties on the `$scope`
 
@@ -196,6 +196,6 @@ There are a bunch of other built-in event directives like
 
 They all work just like `ng-click`.  When a specific event is triggered, they will run a given method on the current $scope.  
 
-**EXERCISE**
+**EXERCISE 8**
 
 Add a feature to a previous exercise using one of the event directives listed above
