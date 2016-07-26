@@ -115,7 +115,7 @@ function hello(name, age) {
 }
 ```
 
-The parameters are `name` and `age`.  They are variables that are defined in the function 
+The parameters are `name` and `age`.  They are variables that are defined in the function
 
 
 __EXERCISE__: Create a function that takes name of a month as a parameter.  Print out every day in that month.  Assume leap years don't exist.
@@ -156,7 +156,7 @@ function getGreeting(name) {
 	if (name === "Tim") {
 		return "Hello Tim!  Your favorite color is blue.";
 	}
-	
+
 	return "Hello " + name;
 }
 ``` 
@@ -224,12 +224,12 @@ function scopeExample() {
 	var num1 = 5;
 	var num2 = 6;
 	num3 = 7;
-	
+
 	console.log(num1, num2, num3, num4, "-> num1, num2, num3 and num4 are defined from inside scopeExample");
 }
 
 num4 = 12345;
-console.log(num4, "-> Only num4 is defined at this point");  // num1, num2, and num3 do not exist 
+console.log(num4, "-> Only num4 is defined at this point");  // num1, num2, and num3 do not exist
 scopeExample();
 
 console.log(num3, num4, "-> Only num3 and num4 exist now");
