@@ -1,20 +1,28 @@
 # Intro to Controllers.
 
+##Objectives
+* Describe the importance of controllers.
+* Use named dependency injection with controllers.
+* Explain how scope works with controllers.
+
+
 In MVC, controllers provide properties and functionality for use in the view. Angular controllers are no different. They are just functions that provide data for use in the views.
 
-Angular takes care of the hard part - connecting our controllers and views together. All we have to do is add various properties to the `$scope` and use them inside of our views.
+Angular takes care of the hard part - connecting our controllers and views together. All we have to do is add various properties to the `$scope` of our controller and use them inside of our views.
 
 When a new controller is created, Angular automatically gives it a brand new `$scope`. The `$scope` object is a JavaScript object that glues together controllers and views. Properties that are on the `$scope` object are available to both the view and the controller. *Don't worry. This will make more sense after a few examples!*
 
 **All properties added to the `$scope` are automatically available in our view.**
+**How are '$scope' and controller as syntax similar?**
 
 Let's write our first controller! Inside a new JS file called `app.js` add
 
 ```javascript
 var app = angular.module("firstApp", []);
-app.controller("MyFirstController", function($scope){
-  $scope.name = "Severus Snape";
-})
+app.controller("MyFirstController", [function(){
+  var vm = this;
+  vm.name = "Severus Snape";
+}])
 ```
 
 The first line tells Angular to create a **module** named `firstApp`. `angular.module('firstApp', [])` returns a new module which we use on the next line when we call `.controller()` on `app`.
@@ -23,9 +31,7 @@ Back in our view, we need to specify which module our `ng-app` should use. Updat
 
 **Question: What are Angular modules? Why should we use them?**
 
-We're declaring a new controller named "MyFirstController". The first argument to `.controller()` is just the name of the new controller, and the second argument is a function that defines the functionality of the controller. Inside of "MyFirstController", we're adding a `name` property to the `$scope` with the value "Severus Snape".
-
-> Note: This is just one way of writing a controller and adding properties to the `$scope`. We will discuss some others in the "Controllers Revisited" lesson.
+We're declaring a new controller named "MyFirstController". The first argument to `.controller()` is just the name of the new controller, and the second argument is a function that defines the functionality of the controller. Inside of "MyFirstController", we're adding a `name` property to the scope of MyFirstController with the value "Severus Snape".
 
 Now let's use the `name` property inside of our view.
 
@@ -34,24 +40,24 @@ Before we can access the `name` property, we need to specify which part of our t
 In `index.html`, add the following code:
 
 ```html
-<div ng-controller="MyFirstController">
+<div ng-controller="MyFirstController as MFC">
 </div>
 ```
 
 Just like how `ng-app` declares that the elements inside of a particular element are part of an Angular app, `ng-controller` declares that the elements in side of a particular element belong to a controller.
 
-Now we have access to any properties that we set inside of "MyFirstController", as long as we access them within the `<div>`.
+Now we have access to any properties that we set inside of "MyFirstController", as long as we access them within the `<div>` we defined for the controller.
 
 Let's reuse our code from the very first example. Try this
 
 ```html
-<div ng-controller="MyFirstController">
-  <h1>My name is: {{name}}</h1>
-  <input ng-model="name" type="text" placeholder="What is your name">
+<div ng-controller="MyFirstController as MFC">
+  <h1>My name is: {{MFC.name}}</h1>
+  <input ng-model="MFC.name" type="text" placeholder="What is your name">
 </div>
 ```
 
-When you run this in your browser, you'll see that the initial value that we set for `name` in our controller is displayed both inside of the text `input` and `h1` tags. When we refer to `name`, Angular automatically looks for a property called `name` on the `$scope`.
+When you run this in your browser, you'll see that the initial value that we set for `name` in our controller is displayed both inside of the text `input` and `h1` tags. When we refer to `name`, Angular automatically looks for a property called `name` in the MyFirstController object.
 
 Try moving the `h1` and `input` tags somewhere outside of the `div`. Notice that we no longer have access to the initial value of "Severus Snape".
 
@@ -59,8 +65,8 @@ Try moving the `h1` and `input` tags somewhere outside of the `div`. Notice that
 
 To wrap up, according to the Angular Docs you should use controllers to:
 
-* Set up the initial state of the `$scope` object.
-* Add behavior to the `$scope` object.
+* Set up the initial state of the controller object's scope.
+* Add behavior to the object.
 
 In essence, they manage the view.
 
@@ -87,11 +93,14 @@ Start by adding an external JavaScript file, *main.js*, to create a module with 
 
 ![](./examples/ngmadlibs-p2.png)
 
+
+https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md#controllers
+
 ## Questions
 
 * What is `$scope`?
+* Why do we use "var vm = this;" syntax instead of `$scope`?
 * What are Angular modules? What's the syntax for defining a module?
-* Why do we pass in `$scope` as an argument to controller functions?
 * In Express, what are Angular controllers most analogous to?
 
 ## Resources:

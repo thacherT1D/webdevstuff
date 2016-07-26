@@ -1,5 +1,11 @@
 ## Scope.
 
+##Objectives
+* Explain what '$scope' is.
+* Describe two issues you might run into attaching variables to '$scope'.
+* Use 'controller as' syntax to sidestep these issues.
+
+
 ### What is it?
 
 `$scope` is an object used for data binding that we can define methods and properties on. It is automatically injected into our controllers so that we can use it. Many times you will also see/hear `$scope` being defined as "the glue between the controller and the view".
@@ -7,9 +13,9 @@
 Although it sounds complex, `$scope` is just a JavaScript object. Both the controller and the view have access to `$scope` so it can be used for communication between the two. When a controller is attached to the DOM via the `ng-controller` directive, Angular will instantiate a new controller object. A new child scope will be created and made available as an injectable parameter. This is what happens when we write code like this:
 
 ```js
-angular.module("firstApp",[]).controller("FirstController", function($scope){
+angular.module("firstApp",[]).controller("FirstController", ['$scope', function($scope){
   // we can define all sorts of methods and properties on $scope here
-})
+}])
 ```
 
 ## Where does it come from? $rootScope
@@ -17,9 +23,9 @@ angular.module("firstApp",[]).controller("FirstController", function($scope){
 Every application has a single root scope. All other scopes descend from `$rootScope` which we can inject into our controllers (by adding `$rootScope as a parameter to the callback function on the .controller method`)
 
 ```js
-angular.module("firstApp",[]).controller("FirstController", function($scope, $rootScope){
+angular.module("firstApp",[]).controller("FirstController",['$rootScope', function($rootScope){
   // now we can add things to $rootScope!
-})
+}])
 ```
 
 ##### If you wanted to create a sample rootscope (this is what $rootScope essentially is) you could write something like this:
@@ -58,7 +64,7 @@ Let's take a look at this example:
   </div>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js"></script>
 <script>
-  angular.module("myApp", []).controller("ScopeController", function($scope) { });
+  angular.module("myApp", []).controller("ScopeController",['$scope', function($scope) { }]);
 </script>
 </body>
 </html>
@@ -92,9 +98,9 @@ One way to solve our previous challenge would be to assign each ng-model to a pr
   </div>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js"></script>
 <script>
-  angular.module("myApp", []).controller("ScopeController", function($rootScope) {
+  angular.module("myApp", []).controller("ScopeController", ['$rootScope',function($rootScope) {
     $rootScope.view = {};
-  });
+  }]);
 </script>
 </body>
 
@@ -130,9 +136,9 @@ And in our `script.js` file
 ```js
 var app = angular.module("broken", []);
 
-app.controller('MainController', function($scope) {
+app.controller('MainController', ['$scope', function($scope) {
   $scope.number = 42;
-});
+}]);
 ```
 
 So what we're essentially doing here is checking to see if `$scope.number` is `42` and if it is, display an input where the user can type a secret message that will appear outside the `ng-if`. Pretty simple, but it doesn't do what we expect! Why do you think that is?
@@ -248,10 +254,10 @@ Here is a solution to our previous issue with the secret message and the number 
 ```js
 var app = angular.module("broken",[])
 
-app.controller('MainController', function($scope) {
+app.controller('MainController', ['$scope', function($scope) {
   $scope.view = {} // this is commonly also called vm for ViewModel, we will see more about this later in the curriculum
   $scope.view.number = 42
-});
+}]);
 ```
 
 Now that we have an understanding of how to fix this issue - here are a few other built-in directives to be aware of, as they also create their own scope.
