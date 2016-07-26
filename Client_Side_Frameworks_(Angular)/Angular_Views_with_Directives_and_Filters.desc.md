@@ -100,7 +100,7 @@ What would happen if you put the `ng-repeat` directive on the `ul` element, like
 
 ### ngOptions
 
-The `ng-options` attribute can be used to dynamically generate a list of <option> elements for the <select> element.
+The `ng-options` attribute can be used to dynamically generate a list of `<option>` elements for the `<select>` element.
 
 ```html
 <div ng-init="list = [
