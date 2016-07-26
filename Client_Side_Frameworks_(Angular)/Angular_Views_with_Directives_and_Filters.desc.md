@@ -15,6 +15,7 @@
   * number
   * orderBy
   * filter
+* Use Angular modules.
 * Build a custom Angular filter.
 
 ## What are Angular expressions?
@@ -325,6 +326,18 @@ Selects a subset of items from array and returns it as a new array.
 ### Exercise
 
 Write down in your own words the purpose of Angular filters? Describe what a filter does and then name four built-in filters, including one that we haven't used yet. We'll discuss as a class what you wrote down.
+
+## How to use Angular modules
+
+The `angular.module` is a global place for creating, registering and retrieving Angular modules. All modules (angular core or 3rd party) that should be available to an application must be registered using this mechanism.
+
+`app.js`
+
+```JavaScript
+'use strict';
+
+angular.module('myAngularApp', []);
+```
 
 ## Custom Filters
 
