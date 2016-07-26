@@ -97,37 +97,39 @@ Let's say you want to deliver some packages to Mars with a rocketship. *You want
 ### Basic Git Commands
 
 There are 4 main commands for `git`
-* init
-* status
-* add
-* commit
+ * init
+ * status
+ * add
+ * commit
 
 With these 4 commands you can create a repo and start versioning your project.
 
-#### `git init`
+#### init
+ * `git init`
 
-[git manual](https://git-scm.com/docs/git-init) or `man git-init`
+> [git manual](https://git-scm.com/docs/git-init) or `man git-init`
 
 Initialize a new git repo in the current directory with:
-```sh
+```shell
 $ git init
 ```
 
 You can verify git was intialized by checking if a `.git` folder was created with `ls -a`.
 
-#### `git status`
+#### status
+ * `git status`
 
-[git manual](https://git-scm.com/docs/git-status) or `man git-status`
+> [git manual](https://git-scm.com/docs/git-status) or `man git-status`
 
 When in a git repository, you can type `git status` to see any staged or unstaged changes pending.
 
 In your git repository:
-```sh
+```bash
 $ git status
 ```
 
 Example Output:
-```sh
+```zsh
 $ git status
 On branch g15
 
