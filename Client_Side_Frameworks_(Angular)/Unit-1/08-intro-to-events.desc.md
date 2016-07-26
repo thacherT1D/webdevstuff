@@ -1,7 +1,7 @@
 # Angular - Intro to Events
 
 ## Objectives
-- Objective 1
+- Use `ng-click` to trigger
 - Objective 2
 
 
@@ -16,7 +16,7 @@ Angular provides event-handling directives to help us write interactive applicat
 
 `ng-click` is used to run a specific method on the current `vm` when an element is clicked. Think of it as the Angular equivalent of the `onclick` property.  Let's use it to build a random number picker!
 
-For this example, a basic angular scaffold has been found in the `ng-click-scaffold` folder in the  [exercises repository](https://github.com/gSchool/angular-intro-to-events).
+For this example, a basic angular scaffold can been found in the `ng-click-scaffold` folder in the  [exercises repository](https://github.com/gSchool/angular-intro-to-events).
 
 In a controller, let's add a property to the `vm` called `view.number`:
 
@@ -79,7 +79,7 @@ Place your solution in the `Exercise 3` folder in the [exercises repository](htt
 
 `ng-mouseenter` is another event that you have access to in angular.  Let's make a quick counter that counts every time a div gets a mouse enter event.
 
-For this example, a basic angular scaffold has been found in the `ng-mouseenter-scaffold` folder in the  [exercises repository](https://github.com/gSchool/angular-intro-to-events).
+For this example, a basic angular scaffold can been found in the `ng-mouseenter-scaffold` folder in the  [exercises repository](https://github.com/gSchool/angular-intro-to-events).
 
 In your controller add:
 
@@ -202,6 +202,8 @@ Place your solution in the `Exercise 5` folder in the [exercises repository](htt
     console.log("Your favorite pie is: ", vm.favoriteForm.favoritePie);
   };
 ```
+
+For this example, a basic angular scaffold can been found in the `ng-submit-scaffold` folder in the  [exercises repository](https://github.com/gSchool/angular-intro-to-events).
 
 #### ng-submit Anti Patterns
 
