@@ -14,7 +14,7 @@
 Version control is a class of tools that programmers use to manage software projects.
 It allows you to track changes you make to files on your machine.
 This is helpful for when you screw things up!
-And you will. :wink:
+And you will. 😉
 And that's ok.
 Version control allows developers to revert back to a specific time and place in your code.
 Sort of like a reset button.
@@ -73,6 +73,7 @@ And if GitHub goes down, we can still work on our distributed repos offline.
 | Launchpad | Staging area |
 | Rocketship | Git repo |
 | Mars | GitHub |
+| Mars Landing Pad Coordinates | Remote |
 
 Let's say you want to deliver some packages to Mars with a rocketship. *You want to push changes to GitHub from your git repo*
 
@@ -105,7 +106,7 @@ With these 4 commands you can create a repo and start versioning your project.
 
 #### `git init`
 
-[git manual](https://git-scm.com/docs/git-init)
+[git manual](https://git-scm.com/docs/git-init) or `man git-init`
 
 Initialize a new git repo in the current directory with:
 ```sh
@@ -116,7 +117,7 @@ You can verify git was intialized by checking if a `.git` folder was created wit
 
 #### `git status`
 
-[git manual](https://git-scm.com/docs/git-status)
+[git manual](https://git-scm.com/docs/git-status) or `man git-status`
 
 When in a git repository, you can type `git status` to see any staged or unstaged changes pending.
 
@@ -149,7 +150,7 @@ Untracked files:
 
 #### `git add`
 
-[git manual](https://git-scm.com/docs/git-add)
+[git manual](https://git-scm.com/docs/git-add) or `man git-add`
 
 If you have any files that are brand new to the repo or have been changed, you can tell git to start tracking it with:
 ```sh
@@ -166,7 +167,7 @@ After adding a file or change to the repo,
 
 #### `git commit`
 
-[git manual](https://git-scm.com/docs/git-commit)
+[git manual](https://git-scm.com/docs/git-commit) or `man git-commit`
 
 After staging files with `git add`,
   you can now commit the changes to save the current state of the project as a snapshot in time.
@@ -179,7 +180,7 @@ This will create a commit in git that will be a snapshot of what the project cur
 
 #### `git push`
 
-[git manual](https://git-scm.com/docs/git-push)
+[git manual](https://git-scm.com/docs/git-push) or `man git-push`
 
 If you are using GitHub or collaborating with another git repo, you can push any new commits to your default remote with:
 ```sh
@@ -247,12 +248,13 @@ $ git push -u origin master
 
 ## Resources
 
+* `man git` // the full git manual from your terminal.
 * [VCS on Wikipedia](https://en.wikipedia.org/wiki/Version_control)
 * [Git SCM Manual](https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control)
 * [Pro Git book](http://git-scm.com/book/en/v2)
 * [Tower Learn Version Control with Git book](https://www.git-tower.com/learn/git/ebook/command-line/introduction#start)
 * [Try Git](https://try.github.io/)
-
+* [Git Glossary](https://help.github.com/articles/github-glossary/)
 
 ## Git Cheatsheet 
 * [Tower Git Cheatsheet](http://www.git-tower.com/blog/git-cheat-sheet/)
