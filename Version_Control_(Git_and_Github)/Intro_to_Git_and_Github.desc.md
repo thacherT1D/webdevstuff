@@ -110,7 +110,7 @@ With these 4 commands you can create a repo and start versioning your project.
 > [git manual](https://git-scm.com/docs/git-init) or `man git-init`
 
 Initialize a new git repo in the current directory with:
-```shell
+```
 $ git init
 ```
 
@@ -124,12 +124,12 @@ You can verify git was intialized by checking if a `.git` folder was created wit
 When in a git repository, you can type `git status` to see any staged or unstaged changes pending.
 
 In your git repository:
-```bash
+```
 $ git status
 ```
 
 Example Output:
-```zsh
+```
 $ git status
 On branch g15
 
@@ -155,12 +155,12 @@ Untracked files:
 [git manual](https://git-scm.com/docs/git-add) or `man git-add`
 
 If you have any files that are brand new to the repo or have been changed, you can tell git to start tracking it with:
-```sh
+```
 $ git add <file>
 ```
 
 To add all new files and changes in a directory:
-```sh
+```
 $ git add .
 ```
 
@@ -174,7 +174,7 @@ After adding a file or change to the repo,
 After staging files with `git add`,
   you can now commit the changes to save the current state of the project as a snapshot in time.
 
-```sh
+```
 $ git commit -m "I fixed all of the bugs. :)"
 ```
 
@@ -185,7 +185,7 @@ This will create a commit in git that will be a snapshot of what the project cur
 [git manual](https://git-scm.com/docs/git-push) or `man git-push`
 
 If you are using GitHub or collaborating with another git repo, you can push any new commits to your default remote with:
-```sh
+```
 $ git push
 ```
 
@@ -207,7 +207,7 @@ Try to do these without looking at the answer first!
 
 #### Answer
 
-```bash
+```
 $ mkdir myProjectName
 $ cd myProjectName
 $ git init
@@ -235,7 +235,7 @@ Create a GitHub repo:
 
 ![Hit Create](create-github-repo-2.png)
 
-```bash
+```
 $ mkdir myProjectName
 $ cd myProjectName
 $ git init
