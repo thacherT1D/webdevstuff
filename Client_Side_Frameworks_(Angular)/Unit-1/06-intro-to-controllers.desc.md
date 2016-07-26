@@ -93,6 +93,9 @@ Start by adding an external JavaScript file, *main.js*, to create a module with 
 
 ![](./examples/ngmadlibs-p2.png)
 
+
+https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md#controllers
+
 ## Questions
 
 * What is `$scope`?
