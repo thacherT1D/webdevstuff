@@ -15,6 +15,8 @@ When a new controller is created, Angular automatically gives it a brand new `$s
 **All properties added to the `$scope` are automatically available in our view.**
 **How are '$scope' and controller as syntax similar?**
 
+https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md#controllers
+
 Let's write our first controller! Inside a new JS file called `app.js` add
 
 ```javascript
