@@ -105,10 +105,6 @@ There are 4 main commands for `git`
 With these 4 commands you can create a repo and start versioning your project.
 
 #### init
- * `git init`
-
-> [git manual](https://git-scm.com/docs/git-init) or `man git-init`
-
 Initialize a new git repo in the current directory with:
 ```
 $ git init
@@ -116,19 +112,19 @@ $ git init
 
 You can verify git was intialized by checking if a `.git` folder was created with `ls -a`.
 
+> [git manual](https://git-scm.com/docs/git-init) or `man git-init`
+
 #### status
- * `git status`
-
-> [git manual](https://git-scm.com/docs/git-status) or `man git-status`
-
 When in a git repository, you can type `git status` to see any staged or unstaged changes pending.
 
 In your git repository:
+
 ```
 $ git status
 ```
 
 Example Output:
+
 ```
 $ git status
 On branch g15
@@ -150,11 +146,11 @@ Untracked files:
 	05_github_workflow.md
 ```
 
-#### `git add`
+> [git manual](https://git-scm.com/docs/git-status) or `man git-status`
 
-[git manual](https://git-scm.com/docs/git-add) or `man git-add`
-
+#### git add
 If you have any files that are brand new to the repo or have been changed, you can tell git to start tracking it with:
+
 ```
 $ git add <file>
 ```
@@ -164,32 +160,31 @@ To add all new files and changes in a directory:
 $ git add .
 ```
 
-After adding a file or change to the repo,
-  try running `git status` again to make sure it got staged.
+After adding a file or change to the repo, try running `git status` again to make sure it got staged.
 
-#### `git commit`
+[git manual](https://git-scm.com/docs/git-add) or `man git-add`
+
+#### git commit
+After staging files with `git add`, you can now commit the changes to save the current state of the project as a snapshot in time.
+
+```
+$ git commit -m "I fixed all of the bugs. 😃"
+```
+
+This will create a commit in git that will be a snapshot of what the
+project currently is, and yes, you can even use emojis! 🎉
 
 [git manual](https://git-scm.com/docs/git-commit) or `man git-commit`
 
-After staging files with `git add`,
-  you can now commit the changes to save the current state of the project as a snapshot in time.
-
-```
-$ git commit -m "I fixed all of the bugs. :)"
-```
-
-This will create a commit in git that will be a snapshot of what the project currently is.
-
-#### `git push`
-
-[git manual](https://git-scm.com/docs/git-push) or `man git-push`
-
+#### git push
 If you are using GitHub or collaborating with another git repo, you can push any new commits to your default remote with:
 ```
 $ git push
 ```
 
 If you have your remote pointing to GitHub, you should now be able to see any changes on your GitHub page.
+
+[git manual](https://git-scm.com/docs/git-push) or `man git-push`
 
 ## Exercises
 
