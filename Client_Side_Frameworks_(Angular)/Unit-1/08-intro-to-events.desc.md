@@ -8,7 +8,7 @@
 ## Resources
 For this article, fork and clone the following repository [angular-intro-to-events](https://github.com/gSchool/angular-intro-to-events). This repository includes folders where you can code your solutions as well as some scaffolding to better target the content.
 
-# Events
+## Events
 
 Angular provides event-handling directives to help us write interactive applications.
 
@@ -16,7 +16,7 @@ Angular provides event-handling directives to help us write interactive applicat
 
 `ng-click` is used to run a specific method on the current `vm` when an element is clicked. Think of it as the Angular equivalent of the `onclick` property.  Let's use it to build a random number picker!
 
-For this inital example, a basic angular scaffold has been found [here](https://github.com/gSchool/angular-intro-to-events/tree/master/ng-click-scaffold).
+For this example, a basic angular scaffold has been found in the `ng-click-scaffold` folder in the  [exercises repository](https://github.com/gSchool/angular-intro-to-events).
 
 In a controller, let's add a property to the `vm` called `view.number`:
 
@@ -57,11 +57,15 @@ And that's it!  Try clicking your button and watch as the number changes automat
 
 Explain in as much detail as you can what happens when you click the button.  Why does `number` update in the template without us telling it to?
 
+Write your conclusion in the `Exercise_1/answer.md` in the [exercises repository](https://github.com/gSchool/angular-intro-to-events).
+
 **EXERCISE 2**
 
 Add a button that will reverse some text when clicked.  Take a look at the example gif below.
 
 ![](http://zippy.gfycat.com/ClosedFreshGar.gif)
+
+Place your solution in the `Exercise 2` folder in the [exercises repository](https://github.com/gSchool/angular-intro-to-events).
 
 **EXERCISE 3: Create a simple Ping Pong Score Keeper.**  
 
@@ -69,9 +73,13 @@ It should display the 2 players' scores, have buttons to increment each player's
 
 ![](https://i.gyazo.com/40d31881e3774f4f374503920e784931.gif)
 
+Place your solution in the `Exercise 3` folder in the [exercises repository](https://github.com/gSchool/angular-intro-to-events).
+
 ### ng-mouseenter
 
 `ng-mouseenter` is another event that you have access to in angular.  Let's make a quick counter that counts every time a div gets a mouse enter event.
+
+For this example, a basic angular scaffold has been found in the `ng-mouseenter-scaffold` folder in the  [exercises repository](https://github.com/gSchool/angular-intro-to-events).
 
 In your controller add:
 
@@ -126,6 +134,8 @@ Here is code to generate a random hex color:
   }
 ```
 
+Place your solution in the `Exercise 4` folder in the [exercises repository](https://github.com/gSchool/angular-intro-to-events).
+
 **EXERCISE 5: Replay colors**
 
 Now that you have a box that will change to a new random color on each mouse enter, use `ng-click` and the `$timeout` service to create a feature that will show all the random colors that have been clicked in reverse order.
@@ -158,6 +168,9 @@ vm.replay = function() {
   }
 };
 ```
+
+Place your solution in the `Exercise 5` folder in the [exercises repository](https://github.com/gSchool/angular-intro-to-events).
+
 ### ng-submit
 
 `ng-submit` can be used whenever you want an action to take place on a form submit.  The `ng-submit` directive prevents the default browser behavior (sending a request to some action and refreshing the page).  It also evaluates the expression in the `ng-submit`.  For example:
@@ -166,45 +179,51 @@ vm.replay = function() {
 **index.html**
 
 ```html
-<form ng-submit="submitFav()" name="favPieForm">
-  <input name="name" type="text" ng-model="favoriteForm.name">
-  <input name="favorite_pie" type="text" ng-model="favoriteForm.favoritePie">
-  <input type="submit">
-</form>
-Name: {{favoriteForm.name}}<br>
-Favorite Pi: {{favoriteForm.favoritePie}}
+<div ng-controller="submitController as sc">
+  <form ng-submit="sc.submitFav()" name="favPieForm">
+    <input name="name" type="text" ng-model="sc.favoriteForm.name">
+    <input name="favorite_pie" type="text" ng-model="sc.favoriteForm.favoritePie">
+    <input type="submit">
+  </form>
+  Name: {{sc.favoriteForm.name}}<br>
+  Favorite Pi: {{sc.favoriteForm.favoritePie}}
+</div>
 ```
-**app.js**
+**controller.js**
 
 ```js
-  $scope.favoriteForm = {};
-  $scope.submitFav = function() {
-    var favPi = parseFloat($scope.favoriteForm.favoritePie);
+  vm.favoriteForm = {};
+  vm.submitFav = function() {
+    var favPi = parseFloat(vm.favoriteForm.favoritePie);
     // Special output if the favorite pie is a certain number
     if (!isNaN(favPi) && favPi >= 3.14 && favPi <= 3.142) {
-      $scope.favoriteForm.favoritePie = "\u03A0";
+      vm.favoriteForm.favoritePie = "\u03A0";
     }
-    console.log("Your favorite pie is: ", $scope.favoriteForm.favoritePie);
+    console.log("Your favorite pie is: ", vm.favoriteForm.favoritePie);
   };
 ```
 
 #### ng-submit Anti Patterns
 
-An anti pattern is a way of writing code that is a bad practice in your framework.  There are a few things you should **not** do with ```ng-submit```.
+An anti pattern is a way of writing code that is a bad practice in your framework.  There are a few things you should **not** do with `ng-submit`.
 
-1. Do not use ```ng-submit``` on the form and ```ng-click``` on the submit button at the same time. Use either ng-submit on the form and no directive on the submit button, or use ```ng-click``` on the submit button and no directive on the form. ```ng-submit``` is preferred in a form.
-2. Do not create separate properties directly on the `$scope` object for each form field. Instead, create an object that contains all the form properties inside of it. In the above example, `$scope.favoriteForm = {};` is the object that will contain each form property.
+1. Do not use `ng-submit` on the form and `ng-click` on the submit button at the same time. Use either ng-submit on the form and no directive on the submit button, or use `ng-click` on the submit button and no directive on the form. `ng-submit` is preferred in a form.
+2. Do not create separate properties directly on the `vm` object for each form field. Instead, create an object that contains all the form properties inside of it. In the above example, `vm.favoriteForm = {};` is the object that will contain each form property.
 3. Never do any DOM manipulation in your controller. When submitting form data, it is often tempting to revert back to the jQuery way of doing things. For example, do not attempt to append the new form data to the DOM inside of your controller. Again, **do not do any DOM manipulation in the controller**. Instead, add the data that you want to display to an object in the scope that will then be displayed in the view.
 
 **EXERCISE 6**
 
 Create a form for entering address data.  The form should accept a street (line 1), street (line 2), city, state, and zip code.  When the data is submitted, it again should be shown to the user (displayed on the page) and the form data should be cleared so that more data can be entered.
 
+Place your solution in the `Exercise 6` folder in the [exercises repository](https://github.com/gSchool/angular-intro-to-events).
+
 **EXERCISE 7: Contact List**
 
-Create a simple contacts app.  Each contact has a name, email, and phone number.  A user can create new contacts using a form.  A user can search contacts as well (you'll need to research this part). HINT: try binding name, email, and phone as properties on one `newContact` object rather than creating 3 different properties on the `$scope`
+Create a simple contacts app.  Each contact has a name, email, and phone number.  A user can create new contacts using a form.  A user can search contacts as well (you'll need to research this part). HINT: try binding name, email, and phone as properties on one `newContact` object rather than creating 3 different properties on the `vm`
 
 ![](https://i.gyazo.com/e1dba3d8e24812690d1af363630af5a6.gif)
+
+Place your solution in the `Exercise 7` folder in the [exercises repository](https://github.com/gSchool/angular-intro-to-events).
 
 ### Other Events
 
@@ -218,8 +237,10 @@ There are a bunch of other built-in event directives like
 * ng-mouseover
 * ng-mouseup
 
-They all work just like `ng-click`.  When a specific event is triggered, they will run a given method on the current $scope.  
+They all work just like `ng-click`.  When a specific event is triggered, they will run a given method on the current `vm`.  
 
 **EXERCISE 8**
 
 Add a feature to a previous exercise using one of the event directives listed above
+
+Place your solution in the `Exercise 8` folder in the [exercises repository](https://github.com/gSchool/angular-intro-to-events).
