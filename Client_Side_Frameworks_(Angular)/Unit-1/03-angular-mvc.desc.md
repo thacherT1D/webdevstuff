@@ -59,6 +59,11 @@ Control the relationship between the Models and Views by exposing parts of the m
 
 Via JavaScript. Within Angular Controllers. "Imperatively".
 
+**What does it generally include?**
+
+1. Connects the model with the view
+1. Holds the event logic
+
 ## Example
 
 Take a look a the following code:
