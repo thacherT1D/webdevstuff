@@ -217,7 +217,8 @@ Try to do these without looking at the answer first!
 1. Check that the file is staged
 1. Commit the file
 
-![Answer Padding](http://gph.is/1r1KPaG)
+![Answer
+Padding](https://media.giphy.com/media/3oD3YveOJWdwIAfZ5e/giphy.gif)
 
 #### Answer
 
@@ -267,13 +268,15 @@ $ git push -u origin master
 
 ## Resources
 
-* `man git` // the full git manual from your terminal.
+* `man git` // the full git manual from your terminal
 * [VCS on Wikipedia](https://en.wikipedia.org/wiki/Version_control)
 * [Git SCM Manual](https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control)
 * [Pro Git book](http://git-scm.com/book/en/v2)
 * [Tower Learn Version Control with Git book](https://www.git-tower.com/learn/git/ebook/command-line/introduction#start)
 * [Try Git](https://try.github.io/)
 * [Git Glossary](https://help.github.com/articles/github-glossary/)
+* [Getting
+  Started](https://www.atlassian.com/git/tutorials/what-is-version-control)
 
 ## Git Cheatsheet
 * [Tower Git Cheatsheet](http://www.git-tower.com/blog/git-cheat-sheet/)
