@@ -1,4 +1,14 @@
-## Form Validation with Angular.
+# Form Validation with Angular.
+
+## Objectives
+- Explain why client side validations don’t replace server side validations.
+- Implement validation using states
+
+Provide examples, not focus
+- required
+- pattern
+- length
+
 
 ### Why we validate on the client side
 
@@ -8,7 +18,7 @@ Form and controls provide validation services, so that the user can be notified 
 
 Keep in mind that while client-side validation plays an important role in providing good user experience, it can easily be circumvented and thus can not be trusted. Server-side validation is still necessary for a secure application. We can easily disable javascript and delete things from the DOM using the developer tools - so we need to ensure that we are validating in a place where users do NOT have access.
 
-## Building our first form
+## Building your first form
 
 Remember how to build forms? Let's make sure.
 

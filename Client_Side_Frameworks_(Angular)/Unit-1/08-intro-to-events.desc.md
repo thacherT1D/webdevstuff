@@ -1,8 +1,9 @@
 # Angular - Intro to Events
 
 ## Objectives
-- Use `ng-click` to trigger
-- Objective 2
+- Compare and contrast angular events to browser events.
+- Use angular event directives to handle user input.
+- Discuss `ng-submit` anti-patterns.
 
 
 ## Resources
