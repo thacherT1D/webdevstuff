@@ -1,4 +1,14 @@
-# Events.
+# Angular - Intro to Events
+
+## Objectives
+- Objective 1
+- Objective 2
+
+
+## Resources
+For this article, for and clone the following repository [angular-intro-to-events](https://github.com/gSchool/angular-intro-to-events). This repository includes folders where you can code your solutions as well as some scaffolding to better target the content.
+
+# Events
 
 Angular provides event-handling directives to help us write interactive applications.
 
