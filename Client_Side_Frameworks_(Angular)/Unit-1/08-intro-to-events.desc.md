@@ -6,7 +6,7 @@
 
 
 ## Resources
-For this article, for and clone the following repository [angular-intro-to-events](https://github.com/gSchool/angular-intro-to-events). This repository includes folders where you can code your solutions as well as some scaffolding to better target the content.
+For this article, fork and clone the following repository [angular-intro-to-events](https://github.com/gSchool/angular-intro-to-events). This repository includes folders where you can code your solutions as well as some scaffolding to better target the content.
 
 # Events
 
@@ -16,7 +16,7 @@ Angular provides event-handling directives to help us write interactive applicat
 
 `ng-click` is used to run a specific method on the current `vm` when an element is clicked. Think of it as the Angular equivalent of the `onclick` property.  Let's use it to build a random number picker!
 
-For this inital example, a basic angular scaffold has been created [here](https://github.com/gSchool/angular-intro-to-events/tree/master/ng-click-scaffold).
+For this inital example, a basic angular scaffold has been found [here](https://github.com/gSchool/angular-intro-to-events/tree/master/ng-click-scaffold).
 
 In a controller, let's add a property to the `vm` called `view.number`:
 
@@ -28,19 +28,19 @@ vm.view.number = 5;
 In the `index.html`, add a controller using the `controller as` pattern.
 
 ```
-<div ng-controller="Example1Controller as e1c>"
+<div ng-controller="ngClickController as ngCC>"
 ```
 
 Let's display `number` in the template:
 
 ```html
-<h3>The number is: {{e1c.number}}</h3>
+<h3>The number is: {{ngCC.view.number}}</h3>
 ```
 
 Next, let's add a button which will call `pickRandomNumber()` (we haven't defined it yet) when clicked.
 
 ```html
-<button ng-click="e1c.pickRandomNumber()">Pick Random Number</button>
+<button ng-click="ngCC.pickRandomNumber()">Pick Random Number</button>
 ```
 
 Now let's implement `pickRandomNumber()`. Remember that `ng-click` calls a method on the current `vm`, so we need to make sure `pickRandomNumber()` is defined on the `vm`. Back in your controller, add:
@@ -71,20 +71,26 @@ It should display the 2 players' scores, have buttons to increment each player's
 
 ### ng-mouseenter
 
-```ng-mouseenter``` is another event that you have access to in angular.  Let's make a quick counter that counts every time a div gets a mouse enter event.
+`ng-mouseenter` is another event that you have access to in angular.  Let's make a quick counter that counts every time a div gets a mouse enter event.
 
 In your controller add:
 
 ```js
-$scope.view = {};
-$scope.view.enterCount = 0;
+vm.view = {};
+vm.view.enterCount = 0;
 ```
 
-In your view, display the number of times the div was entered, along with the div itself.  Notice that the div has the ng-mouseenter attribute which evaluates an expression every time a mouse enter occurs:
+In your html add your `ng-controller` directive:
+
+```
+<div ng-controller="mouseEnterController as mec">
+```
+
+In your view, display the number of times the div was entered, along with the div itself.  Notice that the div has the `ng-mouseenter` attribute which evaluates an expression every time a mouse enter occurs:
 
 ```html
 <h3>The div was entered {{view.enterCount}} times</h3>
-<div class="divbox" ng-mouseenter="view.enterCount = view.enterCount + 1">
+<div class="divbox" ng-mouseenter="mec.view.enterCount = mec.view.enterCount + 1">
 </div>
 ```
 
@@ -103,7 +109,7 @@ Now you have a mouse enter event working on your div.
 
 **EXERCISE 4: Create a box that randomly changes colors**
 
-Use ```ng-mouseenter``` and ```ng-style``` to create a box that gets a new random color every time your mouse enters the box.  The gif below, in the next exercise, will give you and idea of how the random color box should work.
+Use `ng-mouseenter` and `ng-style` to create a box that gets a new random color every time your mouse enters the box.  The gif below, in the next exercise, will give you and idea of how the random color box should work.
 
 **Hint**:
 
@@ -122,7 +128,7 @@ Here is code to generate a random hex color:
 
 **EXERCISE 5: Replay colors**
 
-Now that you have a box that will change to a new random color on each mouse enter, use ```ng-click``` and the ```$timeout``` service to create a feature that will show all the random colors that have been clicked in reverse order.
+Now that you have a box that will change to a new random color on each mouse enter, use `ng-click` and the `$timeout` service to create a feature that will show all the random colors that have been clicked in reverse order.
 
 In the gif below, you can see the user refreshes the page, mouses over the box 4 times, then clicks the replay colors button.  The colors are then replayed in reverse order.
 
@@ -131,12 +137,12 @@ In the gif below, you can see the user refreshes the page, mouses over the box 4
 **Hint**:
 
 1. You will need to save an array of each color that was randomly generated for the box.
-2. To replay the colors, you will need to use the ```$timeout``` service.  Here is a pattern for calling the ```$timeout``` service to solve this problem:
+2. To replay the colors, you will need to use the `$timeout` service.  Here is a pattern for calling the `$timeout` service to solve this problem:
 
 ```js
 var replaying = false;
 
-$scope.replay = function() {
+vm.replay = function() {
   var displayPrevColor = function() {
     // do some logic to change color
     // if done replay colors
