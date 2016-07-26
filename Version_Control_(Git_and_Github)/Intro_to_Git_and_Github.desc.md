@@ -51,7 +51,7 @@ Any files tracked by git typically go through 3 stages:
 1. Committed
   * Changes committed in the last commit
 
-### What is GitHub?
+## What is GitHub?
 
 Git and GitHub are NOT the same thing.
 [Github](http://github.com/) is a web based service that hosts repositories on a server and allows developers to easily collaborate.
@@ -60,9 +60,7 @@ Once we've __pushed__ to a __remote__ such as GitHub, we know our code is safe.
 Even if our hard drives die.
 And if GitHub goes down, we can still work on our distributed repos offline.
 
-### A Metaphor: Git is a Rocketship, Github is Mars
-
-:rocket:
+## A Metaphor: Git is a Rocketship, Github is Mars 🚀
 
 | Rocketship Version | Git Version |
 |--------------------|-------------|
@@ -94,17 +92,20 @@ Let's say you want to deliver some packages to Mars with a rocketship. *You want
 
 1. Astronaut on Mars will recieve your rocketship and be happy with their new packages. *Check your GitHub repo to make sure the changes were pushed*
 
-### Basic Git Commands
+## Basic Git Commands
 
-There are 4 main commands for `git`
+There are 5 main commands for `git`
+
  * init
  * status
  * add
  * commit
+ * push
 
-With these 4 commands you can create a repo and start versioning your project.
+With these 5 commands you can create a repo and start versioning your project.
 
-#### init
+
+### init
 Initialize a new git repo in the current directory with:
 ```
 $ git init
@@ -112,9 +113,10 @@ $ git init
 
 You can verify git was intialized by checking if a `.git` folder was created with `ls -a`.
 
-> [git manual](https://git-scm.com/docs/git-init) or `man git-init`
+> Docs: [git manual](https://git-scm.com/docs/git-init) or `man git-init`
 
-#### status
+
+### status
 When in a git repository, you can type `git status` to see any staged or unstaged changes pending.
 
 In your git repository:
@@ -139,16 +141,15 @@ Changes to be committed:
 Untracked files:
   (use "git add <file>..." to include in what will be committed)
 
-	01_vcs.md
-	02_basic_git.md
-	03_github.md
-	04_github_clone.md
-	05_github_workflow.md
+	01_file_one.md
+	02_file_two.md
+	03_some_other_file.md
 ```
 
-> [git manual](https://git-scm.com/docs/git-status) or `man git-status`
+> Docs: [git manual](https://git-scm.com/docs/git-status) or `man git-status`
 
-#### git add
+
+### add
 If you have any files that are brand new to the repo or have been changed, you can tell git to start tracking it with:
 
 ```
@@ -162,9 +163,10 @@ $ git add .
 
 After adding a file or change to the repo, try running `git status` again to make sure it got staged.
 
-[git manual](https://git-scm.com/docs/git-add) or `man git-add`
+> Docs: [git manual](https://git-scm.com/docs/git-add) or `man git-add`
 
-#### git commit
+
+### commit
 After staging files with `git add`, you can now commit the changes to save the current state of the project as a snapshot in time.
 
 ```
@@ -174,9 +176,10 @@ $ git commit -m "I fixed all of the bugs. 😃"
 This will create a commit in git that will be a snapshot of what the
 project currently is, and yes, you can even use emojis! 🎉
 
-[git manual](https://git-scm.com/docs/git-commit) or `man git-commit`
+> Docs: [git manual](https://git-scm.com/docs/git-commit) or `man git-commit`
 
-#### git push
+
+### push
 If you are using GitHub or collaborating with another git repo, you can push any new commits to your default remote with:
 ```
 $ git push
@@ -184,7 +187,7 @@ $ git push
 
 If you have your remote pointing to GitHub, you should now be able to see any changes on your GitHub page.
 
-[git manual](https://git-scm.com/docs/git-push) or `man git-push`
+> Docs: [git manual](https://git-scm.com/docs/git-push) or `man git-push`
 
 ## Exercises
 
@@ -253,5 +256,5 @@ $ git push -u origin master
 * [Try Git](https://try.github.io/)
 * [Git Glossary](https://help.github.com/articles/github-glossary/)
 
-## Git Cheatsheet 
+## Git Cheatsheet
 * [Tower Git Cheatsheet](http://www.git-tower.com/blog/git-cheat-sheet/)
