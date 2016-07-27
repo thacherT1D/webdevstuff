@@ -1,1 +1,0 @@
-A timed exercise to see how long it takes to build and style a full stack application.
