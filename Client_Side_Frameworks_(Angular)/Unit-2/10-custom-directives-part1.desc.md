@@ -1,18 +1,32 @@
 # Custom Directives: Part 1.
 
-Way back in [Unit 1, Lesson 5](https://github.com/gSchool/angular-curriculum/blob/master/Unit-1/5-built-in-directives.md), we went over built in directives.  These are directives that angular comes with.  In this lesson, we're going to build our own custom directives. But first...
+## Objectives
+
+
+## Framing
+
+
+
+
+## Custom Directives
+
+Way back in when we studied [Angular Directives](/redirects/articles/4880), we went over built in directives.  These are directives that Angular comes with.  In this lesson, we're going to build our own custom directives. But first...
 
 - Name at least 5 built in directives you've used so far.
-- Watch [AngularJS Directives Tutorial - Part 1 - Demystifying Angular Directives](https://www.youtube.com/watch?v=0r5QvzjjKDc)
 
-### Simple Custom Directive
+### Example 1 - Simple Custom Directive
 
 We are going to make a simple directive that just puts some html on the page.  This is not a great use for directives, but we'll get to more complicated examples later.
 
 `app.js`:
 
 ```js
-var app = angular.module('simpleDirectiveApp', [])
+var app = angular.module('Example1', [])  
+```
+
+`directives.js`
+
+```js
 app.directive('gsAngularLogo', function() {
   return {
     template: '<img src="https://lh6.googleusercontent.com/-TlY7amsfzPs/T9ZgLXXK1cI/AAAAAAABK-c/Ki-inmeYNKk/w749-h794/AngularJS-Shield-large.png">'
@@ -20,34 +34,32 @@ app.directive('gsAngularLogo', function() {
 });
 ```
 
-Our `index.html` would look like this:
+`index.html`
 
 ```html
-<!DOCTYPE html>
-<html ng-app="simpleDirectiveApp">
-<head>
+<body ng-app="Example1">
+
+  <gs-angular-logo></gs-angular-logo>
+
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js" type="text/javascript"></script>
   <script src="app.js" type="text/javascript"></script>
-</head>
-<body>
-  <gs-angular-logo></gs-angular-logo>
+  <script src="directives.js" type="text/javascript"></script>
 </body>
-</html>
 ```
 
 A few things to notice with our new custom directive:
 
 1. Our directive is called `gsAngularLogo` but in the html we use it by calling it `gs-angular-logo`.
-2. We prefixed our directive name with gs (galvanize school).  Acording to angular docs, adding a prefix is a good practice so that the chance of a name collision is minimized.
-3. The built in directives we've seen so far are called in the view by adding them as attributes of an html tag.  For example: `<html ng-app="simpleDirectiveApp">`.  The `ng-app` directive is an attribute of the html tag.
+2. We prefixed our directive name with gs (galvanize school).  According to angular docs, adding a prefix is a good practice so that the chance of a name collision is minimized.
+3. The built in directives we've seen so far are called in the view by adding them as attributes of an html tag.  For example: `<body ng-app="Example1">`.  The `ng-app` directive is an attribute of the html tag.
 
 These observations lead to a few topics:
 
 **Normalization of Html**
 
-When angular looks over your html document, it goes through a process called normalization.  The process essentially goes over each tag, looks for angular directives, and then normalizes the name from dash-delimited name to a camel case name.  For example, angular translates `gs-angular-logo` into `gsAngularLogo`.  This process is necessary because dash delimited names are not the only possiblity for directives.  For example, `gs_angular_logo` would also be valid.
+When Angular looks over your html document, it goes through a process called normalization.  The process essentially goes over each tag, looks for Angular directives, and then normalizes the name from dash-delimited name to a camelCase name.  For example, Angular translates `gs-angular-logo` into `gsAngularLogo`.  This process is necessary because dash delimited names are not the only possibility for directives.  For example, `gs_angular_logo` would also be valid.
 
-**EXERCISE**
+**EXERCISE 1**
 
 Look through [the normalization section of the angular docs on directives](https://docs.angularjs.org/guide/directive).  Investigate all types of acceptable directive names.  Try all possible formats in the example above.  What is the preferred format for directive naming?
 
@@ -85,7 +97,7 @@ Use an angular directive as an attribute only when it decorates a tag or somehow
 
 > Use an element when you are creating a component that is in control of the template. The common case for this is when you are creating a Domain-Specific Language for parts of your template. Use an attribute when you are decorating an existing element with new functionality.
 
-**EXERCISE**
+**EXERCISE 2**
 
 Update the html inside of your body as follows:
 
@@ -106,7 +118,7 @@ Note that we're using a custom directive in three ways: as an element, as an att
 
 Typically a directive's template will become larger.  To make the directive cleaner, you can use `templateUrl` instead of `template` in the directive.  The `templateUrl` defines an html file that will be requested via ajax and used as the template.
 
-**EXERCISE**
+**EXERCISE 3**
 
 Fix our example to use `templateUrl` instead of template.  **HINT**: Keep in mind that the request for the `templateUrl` is via **ajax**.
 
@@ -164,7 +176,9 @@ There are a couple of problems with this default behavior of the directive havin
 
 The solution to these problems involves creating an `isolate scope` for the directive. Before doing this, let's see what happens if we don't create an isolate scope.
 
-**Exercise** Change `scope.view.yoyo` to `scope.view.yoyos`, an array of yoyo objects. In your view, render each yoyo's information using your custom directive.
+**Exercise**
+
+Change `scope.view.yoyo` to `scope.view.yoyos`, an array of yoyo objects. In your view, render each yoyo's information using your custom directive.
 
 Possible solution:
 
@@ -263,12 +277,11 @@ Of course, we've now got two different names for our data depending on where we 
 
 **Exercise** Refactor your code to eliminate `yoyoInDirective`, `yoyoAttribute`, and `yoyoFromRepeat` in favor of just `yoyo`.
 
-**Exercise** Fun fact: if in your scope you have a key and value with the same name (e.g. `foo: '=foo'`), you can omit the name in the value (e.g. `foo: '=') and Angular will still know what to do! Use this to refactor your directive even more.
+**Exercise** Fun fact: if in your scope you have a key and value with the same name (e.g. `foo: '=foo'`), you can omit the name in the value (e.g. `foo`: '=') and Angular will still know what to do! Use this to refactor your directive even more.
 
 **Exercise** After completing the previous two exercises, try replacing one of the strings `yoyo` somewhere in your app with the string `foo`. Where else do you need to replace `yoyo` by `foo` to get your app working again?
 
 **EXERCISE**
-
 Create an app that uses the [pokemon api](http://pokeapi.co/docs/).  The app should first make a request to the pokedex to get all possible pokemon.  Then randomly select 5 pokemon to display.  The app should display the pokemon's name, types, name of moves (limit it to 6), and a sprite for the pokemon. Use a custom directive to display the pokemon.
 
 The app should use a custom directive for each pokemon (eg `pokemon-item`).
@@ -276,3 +289,7 @@ The app should use a custom directive for each pokemon (eg `pokemon-item`).
 **Bonus**: For the pokemon fans out there, write an algorithm that randomly picks two pokemon and decide who would win.  I do not know anything about the pokemon game, so this would be up to you to figure out.
 
 ![](http://s8.postimg.org/eo2kbbnb9/pokemon.png)
+
+
+## Resources
+[AngularJS Directives Tutorial - Part 1 - Demystifying Angular Directives](https://www.youtube.com/watch?v=0r5QvzjjKDc)
