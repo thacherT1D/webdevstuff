@@ -1,4 +1,13 @@
-# Routing.
+# Routing with ngRoute
+
+## Objectives
+- Compare and contrast client-side routing in Angular wither server-side routing
+- Use ngRoute to assist in decoupling application logic into separate controllers
+- Use ng-view to render controller partials
+- Use path named groups to grab route parameters
+- Use $location to get and set the applications path
+
+### SPA Routing
 
 One of Angular's most important features is its handling of routing and browser history navigation.
 
@@ -15,6 +24,8 @@ Typical issues with complex single page apps are:
 * If all of our code is in a single template, things can get incredibly messy
 
 Angular provides solutions for all of the above issues through its router.  We can break down a view into multiple smaller views that are rendered inside of a layout depending on the URL the user is currently accessing.
+
+### The ngRoute module
 
 We'll see how to use the `$routeProvider` to make use of the browser’s history navigation and allow users to bookmark and share specific pages based off of the current URL.  Let's get started.
 
@@ -48,11 +59,13 @@ app.config(function($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'partials/home.html',
-        controller: 'HomeController'
+        controller: 'HomeController',
+        controllerAs: 'home'
       })
       .when('/dogs', {
-      	templateUrl: 'partials/dogs.html',
-      	controller: 'DogsController'
+        templateUrl: 'partials/dogs.html',
+        controller: 'DogsController',
+        controllerAs: 'dogs'
       })
 });
 ```
@@ -66,15 +79,15 @@ The above route declarations define two routes: '/' and '/dogs'.  When a user vi
 To make this work, we need to create 2 templates and 2 controllers.  Let's start with the `/` route.  Create a controller in `controllers.js` named `HomeController`:
 
 ```js
-app.controller('HomeController', function($scope){
+app.controller('HomeController', function(){
 });
 ```
 
-Let's add a property to the scope called `view.message`.  Set it to whatever you want:
+Let's add a property to the scope called `message`.  Set it to whatever you want:
 
 ```js
-$scope.view = {};
-$scope.view.message = "Welcome!"
+var vm = this;
+vm.message = "Welcome!"
 ```
 
 Now let's create the template.  Inside of `app/partials` create a `home.html` file.
@@ -82,7 +95,7 @@ Now let's create the template.  Inside of `app/partials` create a `home.html` fi
 ```html
 <p>This is the home template</p>
 
-<p>Message: {{view.message}}</p>
+<p>Message: {{home.message}}</p>
 ```
 
 Make sure when you visit `localhost:8080`, you see the above template rendered between the header and footer we created earlier.  Let's repeat the same process for the '/dogs' route.  
@@ -90,9 +103,9 @@ Make sure when you visit `localhost:8080`, you see the above template rendered b
 Controller:
 
 ```js
-app.controller('DogsController', function($scope){
-  $scope.view = {};
-  $scope.view.message = "Woof Woof!"
+app.controller('DogsController', function(){
+  var vm = this;
+  vm.message = "Woof Woof!"
 });
 ```
 
@@ -101,26 +114,30 @@ Template:
 ```html
 <p>This is the dogs template</p>
 
-<p>Message: {{view.message}}</p>
+<p>Message: {{dogs.message}}</p>
 ```
 
 Make sure the second route works correctly by visiting `http://localhost:8080/#/dogs`. Play around with the browser navigation buttons.  Try bookmarking a page.  It should all work!
 
 **QUESTION:** Why does Angular put a `#` in the route path?
 
-**EXERCISE:** Figure out how to set a "catchall" route that will render the `home.html` template if the user visits any other route
+**EXERCISE:** Figure out how to set a "catchall" route that will render the `home.html` template if the user visits any other route.
 
 **EXERCISE:** Make a simple portfolio site using Angular.  It should have 3 routes: "projects", "bio", and "resume".  Add a Bootstrap navbar to the layout file with links to all 3 routes. Figure out how to have the navbar reflect the current route that a user is on.
+
+### #routeProvider
+
+The $routeProvider object not only allows us to set up static routes and load templates, but it also allows access to route parameters (as named groups), route-based redirections, and dynamically injecting dependencies into the controller (via resolve). We'll look more at resolve in the future when we work with services and components.
 
 **EXERCISE:** Make a simple route-based calculator.  When a user visits "/add/4/10", display "14".  Do the same thing for division.  To accomplish this, your routes will need to have path variables.  Research how to define variable segments in your route.  Next, you'll need to research how you access the value of path variables inside of a controller.  You'll need to find the angular equivalent of the `params` hash in rails or the `req.params` object in Express.
 
 **EXERCISE:** Refactor the above exercise so that your calculator works using the query string.  When a user visits "/add/?x=4&y=10", display "14".  You will need to research how to access query string data inside of a controller.
 
-**EXERCISE:** Configure Angular so that routes do not contain `#`'s. Research!  You may want to start using https://www.npmjs.com/package/superstatic instead of `http-server`
+**EXERCISE:** Configure Angular so that routes do not contain `#`'s. Research!  You may want to start using https://www.npmjs.com/package/superstatic instead of `http-server` and look into the $location service and $locationProvider.
 
 ## Questions:
 
-* Why isn't `ngRoute` part of Angular core?  Name at least 2 other Angular modules we could use
+* Why isn't `ngRoute` part of Angular core?  Name at least 2 other Angular modules that aren't part of ngCore.
 * Compare and contrast client-side routing with server-side routing
 * Aside from route definitions, what else can go in a `.config()`?
 * What is the `$routeChangeSuccess` event?
