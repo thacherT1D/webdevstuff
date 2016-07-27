@@ -3,7 +3,9 @@
 ## Objectives
 
 * Discuss what a Version Control System is
-* Describe the purpose of a staging area and repository
+* Describe the purpose of a staging area/index
+* Describe the relationship between a repository and a working
+  directory
 * Initialize a git repository with `git init`
 * Check the status of changed files in a git repository with `git status`
 * Stage new and changed files with `git add`
@@ -13,11 +15,8 @@
 
 Version control is a class of tools that programmers use to manage software projects.
 It allows you to track changes you make to files on your machine.
-This is helpful for when you screw things up!
-And you will. 😉
-And that's ok.
-Version control allows developers to revert back to a specific time and place in your code.
-Sort of like a reset button.
+This is helpful for when you screw things up! And you will. 😉
+And that's ok. Version control allows developers to revert back to a specific time and place in your code. Sort of like a reset button.
 
 Version control allows developers to:
 
@@ -120,9 +119,9 @@ Initialize a new git repo in the current directory with:
 $ git init
 ```
 
-Boom! Your directory is now a git repo! 💥
+Boom! Your directory is now a git repository! 💥
 
-You can verify this by checking if a `.git` subdirectory was created by running `ls -a`.
+You can verify this by checking that a `.git` subdirectory was created when you run `ls -a`.
 
 The .git subdirectory contains a number of subdirectories and files that keep track of all the changes happening in your working tree, or repo as we are now calling it. You will also find configuration details, a list of branches, Github remotes and also things called SHAs. SHAs are a long series of numbers used as a unique ID for your commits. Don't worry too much about that right now, just know that the *.git* subdirectory is where all that stuff related to your git repo is stored.
 
@@ -135,6 +134,8 @@ Lets say you modified a file in your repo, you can tell git to start tracking it
 ```
 $ git add <the_name_of_the_file>
 ```
+
+This then adds that file to the *staging area*, or *index* as it's sometimes referred to.
 
 If you've made changes to several files, and even created a few new ones
 as well, you can tell git to track all things that have been changed or
@@ -159,18 +160,18 @@ at once, in which case using `git add .` makes more sense.
 
 
 ### status
-if you type `git status` when in a git repository it will show you if you
-have any staged or unstaged files. remember from the metaphor above that
-just means
+If you type `git status` when in a git repository it will show you if you
+have any staged or unstaged files. Remember from the metaphor above
+*unstaged* changes are those packages on the launch pad waiting to be
+loaded up into the rocket and *staged* changes are the packages already
+loaded on the rocket ready to be committed to mars.
 
-in your git repository:
+in your git repository (working directory):
 
 ```
 $ git status
 ```
 
-  * this adds them to the *staging area*, or *index* as it's sometimes
-    referred to.
 example output:
 
 ```
