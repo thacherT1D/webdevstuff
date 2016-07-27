@@ -102,17 +102,17 @@ Use an angular directive as an attribute only when it decorates a tag or somehow
 Update the html inside of your body as follows:
 
 ```html
-  <p>Element directive:</p>
-  <gs-angular-logo></gs-angular-logo>
-  <p>Attribute directive:</p>
-  <h4 gs-angular-logo></h4>
-  <p>Class directive:</p>
-  <p class="gs-angular-logo"></p>
+<p>Element directive:</p>
+<gs-angular-logo></gs-angular-logo>
+<p>Attribute directive:</p>
+<h4 gs-angular-logo></h4>
+<p>Class directive:</p>
+<span class="gs-angular-logo"></span>
 ```
 
 Note that we're using a custom directive in three ways: as an element, as an attribute, and as a class. When you load the page, what do you see? How could you modify `restrict` to show just the class? Just the attribute? All three?
 
-(As an aside, if you check out the [docs](https://docs.angularjs.org/guide/directive) you'll see it's also possible to trigger a directive by comment. However, this feature is included mainly for compatibility with older versions of angular, and shouldn't be used. Stick to elements and attributes.)
+(As an aside, if you check out the [Angular Custom Directive Documentation](https://docs.angularjs.org/guide/directive) you'll see it's also possible to trigger a directive by comment. However, this feature is included mainly for compatibility with older versions of angular, and shouldn't be used. Stick to elements and attributes.)
 
 **Template Url**
 
