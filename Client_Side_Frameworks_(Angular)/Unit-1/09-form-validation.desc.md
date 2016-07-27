@@ -2,13 +2,12 @@
 
 ## Objectives
 - Explain why client side validations don’t replace server side validations.
-- Implement validation using states
-
-Provide examples, not focus
-- required
-- pattern
-- length
-
+- Implement validation using Angular validation properties
+ - $valid
+ - $invalid
+ - $pristine
+ - $dirty
+ - $touched
 
 ### Why we validate on the client side
 
@@ -20,42 +19,11 @@ Keep in mind that while client-side validation plays an important role in provid
 
 ## Building your first form
 
-Remember how to build forms? Let's make sure.
+Lets take a look at the [angular-intro-to-validation](https://github.com/gSchool/angular-intro-to-validation) repository. Validation is very detailed oriented work, we will work through both examples to show how all the pieces interact together.
 
-- Create a form with an action to # (you can use `javascript:void(0)` as well - wondering what that does? Read [this](http://stackoverflow.com/questions/1291942/what-does-javascriptvoid0-mean))
-- Inside your form add two text inputs (each one should have a label with the `for` attribute matching the `id` of each input) and an input with type of `submit` and a value of `Click me!`
+## Resource:
 
-Your form should look like this:
-
-```html
-<form action="#">
-  <label for="firstname">First Name: </label>
-  <input type="text" id="firstname">
-  <label for="lastname">Last Name: </label>
-  <input type="text" id="lastname" >
-  <input type="submit" value="Click me!">
-</form>
-```
-
-Now this form is pretty decent, but it looks like we are not validating anything! A user can leave the inputs blank and still submit the form successfully! Let's add some validations with HTML5 using `required`.
-
-Your form should now look like this:
-
-```html
-<form action="#">
-  <label for="firstname">First Name: </label>
-  <input type="text" id="firstname" required>
-  <label for="lastname">Last Name: </label>
-  <input type="text" id="lastname" required>
-  <input type="submit" value="Click me!">
-</form>
-```
-
-Now this is great, but it would be nice if we could be a bit more specific on what we want to validate inside this form. What if we want (a) the First Name to be present, but it has to be at least three characters, and (b) the Last Name does not need to be present, but if it is, it should also be at least 3 characters (we still need to make sure Bono can sign up for our application)?
-
-Our first thought might be to start writing a bunch of javascript and figure out if there is any text inside the input and if so, to figure out the length. While this would work, angular has a nicer way to help us out. But before we do this, let's learn about some of the key properties and classes we will be using to validate forms in angular.
-
-## Before you continue, read through the following documentation regarding Angular form validations:
+This is a very good resource that explains validation in angular.
 [http://www.ng-newsletter.com/posts/validations.html](http://www.ng-newsletter.com/posts/form-validation-with-angularjs.html)
 
 ### A quick walkthrough of angular form properties, classes and descriptions
@@ -75,13 +43,13 @@ This table and the corresponding descriptions come from [this](https://scotch.io
 In order to use angular form validation we have to abide by the following rules
 
 - We must give our form a name attribute (let's imagine a name attribute = "firstForm")
-	- We can then do things like `firstForm.$valid` (which returns true or false)
+	- We can then do things like `controllerAlias.firstForm.$valid` (which returns true or false)
 - We have to put an ng-model on each of our inputs (remember to use the dot!)
 
 A couple extra things:
 - If we do not want to use the standard HTML5 validations we add `novalidate` as an attribute to our form
-- To access angular properties on our inputs we use the syntax `formName.inputName.angularProperty`.
-  + We can then do things like `firstForm.username.$valid` or `firstForm.username.$error` (to see an object with any errors)
+- To access angular properties on our inputs we use the syntax `controllerAlias.formName.inputName.angularProperty`.
+  + We can then do things like `controllerAlias.firstForm.username.$valid` or `controllerAlias.firstForm.username.$error` (to see an object with any errors)
 
 ## Styling our forms and displaying error messages:
 
@@ -106,7 +74,7 @@ If you would like a great example of how these form classes and properties work 
 
 
 ## Questions
-#### Exercise - questions + building your own form and validations
+### Exercise 1
 
 First, answer the following questions
 
@@ -117,7 +85,9 @@ First, answer the following questions
 - When does a form/input have a property of $touched? What class accompanies this property?
 - What does blurred mean? (research the `blur` event)
 
-#### For the next set of questions, assume that you have a form with a name="quizForm"
+### Exercise 2
+
+For the next set of questions, assume that you have a form with a name="quizForm"
 
 - Create a text input with a name of "question" and give it a validation of "required". If it is $valid add a class of "valid"
 - For your text input with a name of question, add a paragraph tag with the text "please enter a valid question" if the input is not valid
@@ -126,9 +96,9 @@ First, answer the following questions
 - What validations would you add in an input to make sure that there is a minimum length of 4 and a maximum length of 20
 - What validation would you add in an input to make sure that only numbers between 1 and 5 are a valid input (use regular expressions for this!)
 
-## Exercise - styling our form and adding some error messages!
+## Exercise 3 - styling our form and adding some error messages!
 
-Now that you have a solid understanding of these properties/classes, let's build another form with an action of "#" and four text inputs for a username, password, email and zip code. Your form should validate that the username and password are both between 3 and 12 characters long. It should also make sure that the email is a valid email and that the zip code is a five digit number (use ng-pattern and regular expressions for this!).
+Now that you have a solid understanding of these properties/classes, let's build another form with an action of "#" and four text inputs for a `username`, `password`, `email` and `zip code`. Your form should validate that the username and password are both between 3 and 12 characters long. It should also make sure that the email is a valid email and that the zip code is a five digit number (use [ng-pattern](https://docs.angularjs.org/api/ng/directive/ngPattern) and regular expressions for this!).
 
 Now that we have an idea of how to style and display error messages, let's do the following
 
