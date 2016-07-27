@@ -7,7 +7,6 @@ You can see a list of the built-in Angular services [here](https://docs.angularj
 * $http
 * $location
 * $rootScope
-* $q
 * $animate
 * $routeParams
 
@@ -109,4 +108,3 @@ Remember that most Rails apps expect your data for a given model to be nested in
 
 * What is a service?  Is there a Ruby or JavaScript equivalent to Angular services?
 * Explain in as much detail as possible what happens under the hood of `$http.get()`
-* What is `$q` and how does it relate to `$http`?
