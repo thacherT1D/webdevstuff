@@ -200,7 +200,7 @@ Modify our HTML to add people:
       </ul>
     </div>
     <div>
-      <input type="text" ng-model="peopleCtrl.nameToAdd"><a href="" ng-click="peopleCtrl.addPerson()">add person</a>
+      <input type="text" ng-model="people.nameToAdd"><a href="" ng-click="people.addPerson()">add person</a>
     </div>
   </div>
 </main>
