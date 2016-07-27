@@ -124,32 +124,67 @@ Boom! Your directory is now a git repo! 💥
 
 You can verify this by checking if a `.git` subdirectory was created by running `ls -a`.
 
+The .git subdirectory contains a number of subdirectories and files that keep track of all the changes happening in your working tree, or repo as we are now calling it. You will also find configuration details, a list of branches, Github remotes and also things called SHAs. SHAs are a long series of numbers used as a unique ID for your commits. Don't worry too much about that right now, just know that the *.git* subdirectory is where all that stuff related to your git repo is stored.
+
 > Docs: [git manual](https://git-scm.com/docs/git-init) or `man git-init`
 
 
+### add
+Lets say you modified a file in your repo, you can tell git to start tracking it  with:
+
+```
+$ git add <the_name_of_the_file>
+```
+
+If you've made changes to several files, and even created a few new ones
+as well, you can tell git to track all things that have been changed or
+newly created inside the working directory with:
+
+```
+$ git add .
+```
+
+Remember the `.` just means *everything inside the directory I'm
+currently standing in*
+
+It is good practice to make a few changes that all relate to a single
+task and *add* them to the staging area individually using that first
+command. You would then *commit* that group of files at one time. More
+on that part in a bit.
+
+On occation you will do things that create a crazy number of files all
+at once, in which case using `git add .` makes more sense.
+
+> Docs: [git manual](https://git-scm.com/docs/git-add) or `man git-add`
+
+
 ### status
-When in a git repository, you can type `git status` to see any staged or unstaged changes pending.
+if you type `git status` when in a git repository it will show you if you
+have any staged or unstaged files. remember from the metaphor above that
+just means
 
-In your git repository:
-
-```
-$ git status
-```
-
-Example Output:
+in your git repository:
 
 ```
 $ git status
-On branch g15
+```
 
-Initial commit
+  * this adds them to the *staging area*, or *index* as it's sometimes
+    referred to.
+example output:
 
-Changes to be committed:
+```
+$ git status
+on branch g15
+
+initial commit
+
+changes to be committed:
   (use "git rm --cached <file>..." to unstage)
 
-	new file:   README.md
+	new file:   readme.md
 
-Untracked files:
+untracked files:
   (use "git add <file>..." to include in what will be committed)
 
 	01_file_one.md
@@ -157,29 +192,10 @@ Untracked files:
 	03_some_other_file.md
 ```
 
-> Docs: [git manual](https://git-scm.com/docs/git-status) or `man git-status`
-
-
-### add
-If you have any new or changed files in the repo, you can tell git to start tracking them with:
-
-```
-$ git add <file>
-```
-
-To add all new files and changes in a directory:
-
-```
-$ git add .
-```
-
-After adding or changing a file in the repo, try running `git status` again to make sure it got staged.
-
-> Docs: [git manual](https://git-scm.com/docs/git-add) or `man git-add`
-
+> docs: [git manual](https://git-scm.com/docs/git-status) or `man git-status`
 
 ### commit
-After staging files with `git add` you will then be able to commit those changes. This will save the current state of the project as a snapshot in time.
+after staging files with `git add` you will then be able to commit those changes. This will save the current state of the project as a snapshot in time.
 
 ```
 $ git commit -m "I fixed all of the bugs. 😃"
