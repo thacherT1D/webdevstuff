@@ -42,7 +42,7 @@ Lets take a look at the [angular-intro-to-validation](https://github.com/gSchool
 ### Inline exercise
 - In the `_valid_invalid` folder,
  - Add a validation message for when the email is not valid.
- - Add code so that validation errors only appear after the field has been changed.
+ - Add code so that validation errors only appear after the field has been touched.
  - Have the background color of the form change to green when the form is valid.
 
 
