@@ -196,15 +196,24 @@ untracked files:
 > docs: [git manual](https://git-scm.com/docs/git-status) or `man git-status`
 
 ### commit
-after staging files with `git add` you will then be able to commit those changes. This will save the current state of the project as a snapshot in time.
+After staging files with `git add` you will then be able to commit those changes. This will save the current state of the project as a snapshot in time.
 
 ```
 $ git commit -m "I fixed all of the bugs. 😃"
 ```
 
-This will create a commit in git that will be a snapshot of what the
-project currently is, and yes, you can even use emojis in your commit
+This will create a commit in git that will be a snapshot of the current
+state of your working directory. And yes, you can even use emojis in your commit
 messages! 🎉
+
+If you make a few changes and apply the `git add` command you previously
+learned on just some of those files, and then use the `git status`
+command you will see some of the files are green and some are red. The
+green ones are all the files that you have *add*ed to the *index*, or
+have "staged". The red ones are the *unstaged* files. When you run `git commit`
+only the green, or "staged" files will be committed, AKA, saved to git. The red ones will
+just remain in the "staging area" waiting to be added for the next
+commit trip to Mars.
 
 > Docs: [git manual](https://git-scm.com/docs/git-commit) or `man git-commit`
 
@@ -216,9 +225,21 @@ If you are using GitHub or collaborating with another git repo, you can push any
 $ git push
 ```
 
-If you have your remote pointing to GitHub, you should now be able to see any changes on your GitHub page.
+Using the `push` command will update your default *remote* repository.
+For you this will typically be some Github repo you have created and will be the backed-up-on-the-web source of truth for your project.
+
+If you have your remote pointing to GitHub, you should be able to see the changes you *push* on your GitHub page.
+
+#### remotes
+You can have mulitple *remotes* and give them different nicknames but there
+is only one default remote. By convention the default remote is named "origin". You can
+check your *remotes* by running `git remote -v`. Don't worry too much
+more about remotes for now, just know generally what they represent and
+how to look at them.
 
 > Docs: [git manual](https://git-scm.com/docs/git-push) or `man git-push`
+> Docs: [git manual](https://git-scm.com/docs/git-remote) or `man git-remote`
+
 
 ## Exercises
 
