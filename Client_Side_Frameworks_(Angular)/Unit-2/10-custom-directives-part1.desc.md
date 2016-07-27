@@ -1,7 +1,5 @@
-# Custom Directives: Part 1.
-
 ## Objectives
-
+-
 
 ## Framing
 
