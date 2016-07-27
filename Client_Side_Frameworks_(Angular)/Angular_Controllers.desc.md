@@ -3,7 +3,6 @@
 * Explain what a Controller is.
 * Explain why a Controller is important.
 * Build an Angular Controller.
-* Explain the rules for separating logic in controllers vs views/models.
 * Explain `$scope` in Angular.
 * Practice proper scoping recommendations in an Angular application.
 
@@ -35,7 +34,132 @@ Write down in your own words what a controller is and why they are important. Tu
 
 Angular takes care of the hard part - connecting our controllers and views together through two-way data binding. Because of this, Angular controllers are often called **View Models** and the architectural pattern becomes an **Model-View-ViewModel (MVVM)**.
 
-When a new controller is created, Angular automatically gives it a brand new `$scope`. The `$scope` object is a JavaScript object that glues together controllers and views. Properties that are on the `$scope` object are available to both the view and the controller. *Don't worry. This will make more sense after a few examples!*
+As an examples on controllers, we are going to make a ToDo list app, often a great way to illustrate the overall structure of an application. Create a directory for your project.
+
+```sh
+$ mkdir todo-app-angular
+$ cd todo-app-angular
+$ touch index.html
+$ atom .
+```
+
+Use the initial template for your html application.
+
+```html
+<!DOCTYPE html>
+<html ng-app="todoApp">
+  <head>
+    <meta charset="utf-8">
+    <title>My ToDo List</title>
+    <link rel="stylesheet" href="style.css" charset="utf-8">
+  </head>
+  <body>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+  </body>
+</html>
+```
+
+Include the css template. Test that your application is running properly.
+
+```css
+ul {
+  list-style-type: none;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: gray;
+  font-style: italic;
+}
+```
+
+Next, we are going to build our `app.js` file which initializes our application.
+
+```sh
+touch app.js
+```
+
+```javascript
+(function() {
+  'use strict';
+
+  angular.module('todoApp', []);
+}());
+```
+
+### Building a controller for our todo list
+
+Our todo list needs to manage two aspects of a todo list.
+
+* The list of todos and their status.
+* The todo text that needs to be added.
+
+Let's model the structure of our todo list in our html.
+
+```html
+<body>
+  <header>
+    <h1>My ToDo List</h1>
+  </header>
+  <main>
+    <ul ng-init="todos = [{text: 'Make a todo list', completed: true}, {text: 'Make it fancy', completed: false}]">
+      <li ng-repeat="todo in todos">
+        <input type="checkbox" ng-model="todo.completed"> <span ng-class="{ completed: todo.completed }">{{todo.text}}</span>
+      </li>
+      <li><input type="text" ng-model="todoToAdd"><a href="">add</a></li>
+    </ul>
+  </main>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+</body>
+```
+
+Let's now move the code to a controller. Create a `controllers.js` file and modify the html as follows.
+
+```javascript
+(function() {
+  'use strict';
+
+  const app = angular.module('todoApp');
+
+  app.controller('TodoListController', function() {
+    this.todoToAdd = '';
+    this.todos = [];
+
+    this.addTodo = function() {
+      this.todos.push({
+        completed: false,
+        text: this.todoToAdd
+      });
+      this.todoToAdd = '';
+    };
+
+    this.completeTodo = function(todo) {
+      todo.completed = true;
+    };
+  });
+}());
+```
+
+Update your HTML to the following:
+
+```html
+<ul ng-controller="TodoListCtrl as todoList">
+  <li ng-repeat="todo in todoList.todos">
+    <input type="checkbox" ng-model="todo.completed"> <span ng-class="{ completed: todo.completed }">{{todo.text}}</span>
+  </li>
+  <li><input type="text" ng-model="todoList.todoToAdd"><a href="" ng-click="todoList.addTodo()">add</a></li>
+</ul>
+```
+
+Let's talk about what we see. In the `controllers.js` file, we first reference the `todoApp` module in angular. We then use a special method called `controller` that takes in a two arguments: the name of the controller, and a function. The function uses the `this` variable to include all the variables and functions that the controller will offer.
+
+In the HTML, we initialize the controller using an angular built-in directive called `ng-controller`. It starts as the name of the controller, `TodoListController`, followed by the keyword `as`, then a name for use. The name creates a copy of the controller as defined in the JavaScript file. When a new controller is created, everything inside and including the element can reference that controller. Every reference of `todoList` after that refers to the specific instance of the controller. This allows us to use a controller multiple times in an application.
+
+The next new directive to us is `ng-click`. The `ng-click` takes an expression. This is where the controller is called to add a todo.
+
+## The `$scope` variable
+
+Angular automatically gives a controller a brand new `$scope`. The `$scope` object is a JavaScript object that glues together controllers and views. Properties that are on the `$scope` object are available to both the view and the controller. *Don't worry. This will make more sense after a few examples!*
 
 **All properties added to the `$scope` are automatically available in our view.**
 
