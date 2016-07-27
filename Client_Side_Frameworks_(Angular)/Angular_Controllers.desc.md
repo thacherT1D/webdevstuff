@@ -1,126 +1,39 @@
 ## Objectives
 
-* Explain what MVC is including:
-  * Models
-  * Views
-  * Controllers (View Model)
-* Explain what an Angular Controller is.
+* Explain what a Controller is.
+* Explain why a Controller is important.
 * Build an Angular Controller.
 * Explain the rules for separating logic in controllers vs views/models.
 * Explain `$scope` in Angular.
 * Practice proper scoping recommendations in an Angular application.
 
-## What is MVC?
+## What is a controller?
 
-Angular utilizes a MVC(-like) design pattern, which seperates the app into Models, Views, and Controllers. Let's take a look ...
-[Slides for MVC in Angular](https://slides.com/tylerbettilyon/angularmvc)
+In our client-server setup, the server provides us with all of the data in its raw state. It gets stored in our client side application (this data on the client is often referred to as the **model**) and eventually gets used in our **view**. A **controller** provides properties and functionality to get the data in the model, process it in some way, and send it to the view. In essence, controllers provide a bridge between the model and the view. This is often referred to as an **Model-View-Controller (MVC)** architectural pattern.
 
-### Model
+## Why are controllers important?
 
-**What is it?**
+Continuing the trend of Separation of Concerns, models and views can focus solely on what they do best. Models focus on retrieving and core business logic of the data whereas views focus on the display of the data and handling user interaction. The controllers provide the need for communicating between the two. This separation provides the same benefits that we see elsewhere:
 
-It's where your application's data lives, representing the current state.
+* Its focus is crystal clear to understand, reducing cognitive load.
+* It's easily testable since there is only one focus to be testing.
+* Pieces can easily be swapped out without affecting other areas.
 
-**How is it defined?**
+Here are example interactions that describe the connection between the model view controller.
 
-Via JavaScript. Within Angular Services. Imperatively.
+* The catalog model downloads catalog informing the controller that the data has been downloaded. The controller then passes the data to the view to display a catalog page onto the screen formatted as needed.
+* The view accepts a click of a button to add an item to the cart. The view informs the controller of this click to add an item. The controller then adds the item to the cart its managing.
+* The view accepts a click to submit the payment. The controller sends the items in the cart to a order model which creates a request to purchase the items and create an order receipt.
 
-**What does it generally include?**
+![Model-View-Controller Diagram](http://i.stack.imgur.com/ocEWx.png)
 
-1. Access to the persistent layer/store
-1. Business logic
-1. CRUD functions
-1. Data validation
+### Exercise
 
-### View
+Write down in your own words what a controller is and why they are important. Turn and talk to your neighbor and discuss what you wrote. Think of other example interactions in the format of a Model
 
-**What is it?**
+## Building an Angular Controller
 
-It displays your application's data (from the model) for the end user and handles user interaction.
-
-**How is it defined?**
-
-Via HTML, CSS, some JavaScript, Angular directives ('ng-'attributes) and two-way data bindings. Within the HTML document. Declaratively.
-
-**What does it generally include?**
-
-1. Markup for -
-  - presenting data
-  - handling user interactions
-  - showing and hiding elements
-1. Filters to limit/organize data
-1. Expressions/logic
-
-### Controller (often called the view-model)
-
-**What is it?**
-
-Control the relationship between the Models and Views by exposing parts of the model and managing state.
-
-**How is it defined?**
-
-Via JavaScript. Within Angular Controllers. Imperatively.
-
-## Example
-
-Take a look a the following code:
-
-```html
-<!DOCTYPE html>
-<html ng-app="myapp">
-  <head>
-    <meta charset="utf-8">
-    <title>Hello, World!</title>
-  </head>
-  <body>
-    <div ng-controller="HelloController">
-      <h2>Hello, {{hello.title}}!</h2>
-    </div>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js"></script>
-    <script>
-    angular.module("myapp", [])
-      .controller("HelloController", function($scope) {
-        $scope.hello = {};
-        $scope.hello.title = "World";
-      });
-    </script>
-  </body>
-</html>
-```
-
-Can you define the model, view, and controller parts of this app?
-
-**Model**
-
-```javascript
-$scope.hello
-```
-
-**View**
-
-```html
-<div ng-controller="HelloController">
-  <h2>Hello, {{hello.title}}!</h2>
-</div>
-```
-
-**Controller**
-
-```javascript
-<script>
-angular.module("myapp", [])
-  .controller("HelloController", function($scope) {
-    $scope.hello = {};
-    $scope.hello.title = "World";
-  });
-</script>
-```
-
-# Intro to Controllers
-
-In MVC, controllers provide properties and functionality for use in the view. Angular controllers are no different. They are just functions that provide data for use in the views.
-
-Angular takes care of the hard part - connecting our controllers and views together. All we have to do is add various properties to the `$scope` and use them inside of our views.
+Angular takes care of the hard part - connecting our controllers and views together through two-way data binding. Because of this, Angular controllers are often called **View Models** and the architectural pattern becomes an **Model-View-ViewModel (MVVM)**.
 
 When a new controller is created, Angular automatically gives it a brand new `$scope`. The `$scope` object is a JavaScript object that glues together controllers and views. Properties that are on the `$scope` object are available to both the view and the controller. *Don't worry. This will make more sense after a few examples!*
 
