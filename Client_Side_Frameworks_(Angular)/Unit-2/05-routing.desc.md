@@ -1,7 +1,7 @@
 # Routing with ngRoute
 
 ## Objectives
-- Compare and contrast client-side routing in Angular wither server-side routing
+- Compare and contrast client-side routing in Angular with server-side routing
 - Use ngRoute to assist in decoupling application logic into separate controllers
 - Use ng-view to render controller partials
 - Use path named groups to grab route parameters
