@@ -135,16 +135,12 @@ $ touch controllers.js
     this.todoToAdd = '';
     this.todos = [];
 
-    this.addTodo = function() {
+    this.addTodo = function(todoText) {
       this.todos.push({
         completed: false,
-        text: this.todoToAdd
+        text: todoText
       });
       this.todoToAdd = '';
-    };
-
-    this.completeTodo = function(todo) {
-      todo.completed = true;
     };
   });
 }());
@@ -157,7 +153,7 @@ Update your HTML to the following:
   <li ng-repeat="todo in todoList.todos">
     <input type="checkbox" ng-model="todo.completed"> <span ng-class="{ completed: todo.completed }">{{todo.text}}</span>
   </li>
-  <li><input type="text" ng-model="todoList.todoToAdd"><a href="" ng-click="todoList.addTodo()">add</a></li>
+  <li><input type="text" ng-model="todoList.todoToAdd"><a href="" ng-click="todoList.addTodo(todoList.todoToAdd)">add</a></li>
 </ul>
 ```
 
@@ -178,8 +174,8 @@ app.controller('PeopleCtrl', function() {
   this.nameToAdd = '';
   this.people = [];
 
-  this.addPerson = function() {
-    this.people.push({ name: this.nameToAdd });
+  this.addPerson = function(personName) {
+    this.people.push({ name: personName });
     this.nameToAdd = '';
   };
 });
@@ -189,18 +185,18 @@ Modify our HTML to add people:
 
 ```html
 <main>
-  <div ng-controller="PeopleCtrl as people">
-    <div ng-repeat="person in people.people">
+  <div ng-controller="PeopleCtrl as peopleList">
+    <div ng-repeat="person in peopleList.people">
       <h2>{{person.name}}</h2>
       <ul ng-controller="TodoListCtrl as todoList">
         <li ng-repeat="todo in todoList.todos">
           <input type="checkbox" ng-model="todo.completed"> <span ng-class="{ completed: todo.completed }">{{todo.text}}</span>
         </li>
-        <li><input type="text" ng-model="todoList.todoToAdd"><a href="" ng-click="todoList.addTodo()">add</a></li>
+        <li><input type="text" ng-model="todoList.todoToAdd"><a href="" ng-click="todoList.addTodo(todoList.todoToAdd)">add</a></li>
       </ul>
     </div>
     <div>
-      <input type="text" ng-model="people.nameToAdd"><a href="" ng-click="people.addPerson()">add person</a>
+      <input type="text" ng-model="peopleList.nameToAdd"><a href="" ng-click="peopleList.addPerson(peopleList.nameToAdd)">add person</a>
     </div>
   </div>
 </main>
