@@ -17,10 +17,6 @@ Form and controls provide validation services, so that the user can be notified 
 
 Keep in mind that while client-side validation plays an important role in providing good user experience, it can easily be circumvented and thus can not be trusted. Server-side validation is still necessary for a secure application. We can easily disable javascript and delete things from the DOM using the developer tools - so we need to ensure that we are validating in a place where users do NOT have access.
 
-## Building your first form
-
-Lets take a look at the [angular-intro-to-validation](https://github.com/gSchool/angular-intro-to-validation) repository. Validation is very detailed oriented work, we will work through both examples to show how all the pieces interact together.
-
 ## Resource:
 
 This is a very good resource that explains validation in angular.
@@ -37,6 +33,16 @@ This table and the corresponding descriptions come from [this](https://scotch.io
 |  $pristine |  ng-pristine |  Boolean that's true if the form/input has not been used yet. |   
 |  $dirty |  ng-dirty |   Boolean that's true if the form/input has been used. |   
 |  $touched |  ng-touched |  Boolean that's true if the input has been blurred |   
+
+
+## Building your first form
+
+Lets take a look at the [angular-intro-to-validation](https://github.com/gSchool/angular-intro-to-validation) repository. Validation is very detailed oriented work, we will work through both examples to show how all the pieces interact together. These examples are in the `_dirty_pristine_touched`, and in the `_valid_invalid` folders.
+
+### Inline exercise
+- In the `_valid_invalid` folder,
+ - Add code so that validation errors only appear after the field has been changed.
+ - Add a validation message for when the email is not valid.
 
 ## Accessing and targeting our form and inputs
 
@@ -90,11 +96,11 @@ First, answer the following questions
 For the next set of questions, assume that you have a form with a name="quizForm"
 
 - Create a text input with a name of "question" and give it a validation of "required". If it is $valid add a class of "valid"
-- For your text input with a name of question, add a paragraph tag with the text "please enter a valid question" if the input is not valid
-- Create a text input with a name of "answer" and give it a validation of "required" and a minimum length of 4 characters. If it is $valid and not $pristine add a class of "correct".
-- How would you access all of the errors (in an object) for an input with a name of `quizForm.username`
-- What validations would you add in an input to make sure that there is a minimum length of 4 and a maximum length of 20
-- What validation would you add in an input to make sure that only numbers between 1 and 5 are a valid input (use regular expressions for this!)
+- For your text input with a name of question, add a paragraph tag with the text "please enter a question" if the input is not valid
+- Create a text input with a name of "answer" and give it a validation of "required" and a minimum length of 4 characters. If it is $valid and not $pristine add a class of "correct". This class changes the border color of the input box to green.
+- How would you access all of the errors (in an object) for an input with a name of `controllerAlias.quizForm.username`?
+- What validations would you add in an input to make sure that there is a minimum length of 4 and a maximum length of 20?
+- What validation would you add in an input to make sure that only numbers between 1 and 5 are a valid input (use regular expressions for this!)?
 
 ## Exercise 3 - styling our form and adding some error messages!
 
