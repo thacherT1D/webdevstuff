@@ -196,7 +196,7 @@ Modify our HTML to add people:
         <li ng-repeat="todo in todoList.todos">
           <input type="checkbox" ng-model="todo.completed"> <span ng-class="{ completed: todo.completed }">{{todo.text}}</span>
         </li>
-        <li><input type="text" ng-model="todoList.todoToAdd"><a href="" ng-click="todoListCtrl.addTodo()">add</a></li>
+        <li><input type="text" ng-model="todoList.todoToAdd"><a href="" ng-click="todoList.addTodo()">add</a></li>
       </ul>
     </div>
     <div>
