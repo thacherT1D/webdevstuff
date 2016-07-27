@@ -323,6 +323,10 @@ Instantiate controllers using the `CONTROLLER as INSTANCE` to not rely on `$scop
 For a more in depth analysis of scopes, install the  
 [AngularJS batarang](https://chrome.google.com/webstore/detail/angularjs-batarang-stable/niopocochgahfkiccpjmmpchncjoapek/related?hl=en-US) chrome extention. Make sure you are running a server when using this tool and have the `enable` checkbox checked. You can view all of the scopes and their methods and properties using this tool. It is exceptionally useful when dealing with parent/child scope relationships.
 
+## Assignment
+
+[Angular Camera View Part 2](https://github.com/gSchool/angular-camera-view)
+
 ## Resources:
 
 - [Controllers Docs](https://docs.angularjs.org/guide/controller)
