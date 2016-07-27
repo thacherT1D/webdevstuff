@@ -27,7 +27,7 @@ var app = angular.module('Example1', [])
 ```js
 app.directive('gsAngularLogo', function() {
   return {
-    template: '<img src="https://lh6.googleusercontent.com/-TlY7amsfzPs/T9ZgLXXK1cI/AAAAAAABK-c/Ki-inmeYNKk/w749-h794/AngularJS-Shield-large.png">'
+    template: '<img src="https://tctechcrunch2011.files.wordpress.com/2015/12/angular_small.png">'
   };
 });
 ```
@@ -39,7 +39,7 @@ app.directive('gsAngularLogo', function() {
 
   <gs-angular-logo></gs-angular-logo>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js" type="text/javascript"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.js" type="text/javascript"></script>
   <script src="app.js" type="text/javascript"></script>
   <script src="directives.js" type="text/javascript"></script>
 </body>
@@ -59,11 +59,11 @@ When Angular looks over your html document, it goes through a process called nor
 
 **EXERCISE 1**
 
-Look through [the normalization section of the angular docs on directives](https://docs.angularjs.org/guide/directive).  Investigate all types of acceptable directive names.  Try all possible formats in the example above.  What is the preferred format for directive naming?
+Look through the `Normalization` section of the documentation for [Angular Directives](https://docs.angularjs.org/guide/directive).  Investigate all types of acceptable directive names.  Try all possible formats in the example above.  What is the preferred format for directive naming?
 
 **Using Restrict**
 
-In our example, the directive we used creates an img tag that displays the angular logo.  We could change our html to look like this as well:
+In our example, the directive we used creates an `img` tag that displays the angular logo.  We could change our html to look like this as well:
 
 ```html
 <body>
