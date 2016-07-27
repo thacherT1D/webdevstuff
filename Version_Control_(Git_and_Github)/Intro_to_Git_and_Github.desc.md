@@ -78,13 +78,13 @@ shortly.
 | Rocketship Version | Git Version |
 |--------------------|-------------|
 | Package | Unstaged change |
+| Launchpad | Staging area |
 | Package on Launchpad | Staged change |
 | Package in Rocketship | Commited change |
 | Launch | Push |
-| Launchpad | Staging area |
-| Rocketship | Git repo |
+| Rocketship | Local Git repo |
 | Mars | GitHub |
-| Mars Landing Pad Coordinates | Remote |
+| Mars Landing Pad | Remote repo |
 
 Let's say you want to deliver some packages to Mars with a rocketship. *You want to push changes to GitHub from your git repo*
 
@@ -92,20 +92,17 @@ Let's say you want to deliver some packages to Mars with a rocketship. *You want
  * *Make some changes to your files*
 
 1. Choose which packages to place on the launchpad.
-  * *`git add` the changed files you want to push*
+  * *`git add` the changed files you want to stage to be committed*
 
 1. Put the packages on the launchpad into the rocketship.
   * *`git commit`*
 
-  * Any packages left off the launchpad and not in the rocketship will not be sent to Mars.
-    * *Any changes not staged with `git add` will not be committed and will not be pushed to GitHub*
-
 1. Repeat the create packages, move to launchpad, and pack rocketship steps for any additional packages you want to send.
   * *Change files, `git add`, `git commit`*
 
-1. Set the rocketship coordinates for Mars.
-  * *`git remote add origin git@github.com:nasa/marooned-astronaut.git`*
-  * We'll reuse our rocketship, so you only need to do this once per rocket!
+1. Set the rocketship coordinates for a specific landing pad on Mars.
+  * *`git remote add origin git@github.com:spacex/marooned-astronaut.git`*
+  * We'll reuse our rocketship, so you only need to do this step on the very first launch!
 
 1. When the rocketship is sufficiently loaded, we want to launch the rocketship to Mars.
   * *`git push -u origin master`*
