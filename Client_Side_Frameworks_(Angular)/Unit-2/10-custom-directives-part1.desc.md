@@ -61,28 +61,30 @@ When Angular looks over your html document, it goes through a process called nor
 
 Look through the `Normalization` section of the documentation for [Angular Directives](https://docs.angularjs.org/guide/directive).  Investigate all types of acceptable directive names.  Try all possible formats in the example above.  What is the preferred format for directive naming?
 
-**Using Restrict**
+**EXAMPLE 2 - Using Restrict**
 
 In our example, the directive we used creates an `img` tag that displays the angular logo.  We could change our html to look like this as well:
 
 ```html
 <body>
+  <gs-angular-logo></gs-angular-logo>
   <h5 gs-angular-logo></h5>
 </body>
 ```
+
+Take a look at this example in your browser, there should be 2 Angular pictures.
 
 This doesn't really make a lot of sense though.  Angular will add the img tag as a child of the h5 tag.  But our custom directive doesn't really have anything to do with the h5 tag we are claiming to modify.
 
 In this case, it's possible to _restrict_ the custom directive so that it can only be used as an element, rather than an attribute. To do this, we can use the `restrict` option as follows:
 
-`app.js`:
+`directives.js`
 
 ```js
-var app = angular.module('simpleDirectiveApp', [])
 app.directive('gsAngularLogo', function() {
   return {
     restrict: 'E', // 'E' for element
-    template: '<img src="https://lh6.googleusercontent.com/-TlY7amsfzPs/T9ZgLXXK1cI/AAAAAAABK-c/Ki-inmeYNKk/w749-h794/AngularJS-Shield-large.png">'
+    template: '<img src="https://tctechcrunch2011.files.wordpress.com/2015/12/angular_small.png">'
   };
 });
 ```
