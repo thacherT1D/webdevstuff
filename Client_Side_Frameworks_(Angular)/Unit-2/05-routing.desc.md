@@ -15,7 +15,7 @@ Most single page apps (SPAs) actually consist of multiple "pages" or "screens". 
 
 A good example of this is gmail. gmail has different views for your inbox, viewing a specific email, composing a message, viewing starred emails, viewing spam etc.  The app is still a single page app, you just don't see everything at once.
 
-**EXERCISE**  Open up your gmail (or similar email provider) account. Try clicking around and accessing the different features.  Pay special attention to the url bar.  What do you notice?
+<input type="checkbox"></input>**EXERCISE**  Open up your gmail (or similar email provider) account. Try clicking around and accessing the different features.  Pay special attention to the url bar.  What do you notice?
 
 Typical issues with complex single page apps are:
 
@@ -70,9 +70,9 @@ app.config(function($routeProvider) {
 });
 ```
 
-**EXERCISE:** Before reading on, take time to understand the above code on your own, and make it work. The end goal is to have 2 routes that display 2 different templates.  It's up to you to decide what to put in the templates. The above route declarations tell you exactly what files you need to create. Go write them!
+<input type="checkbox"></input>**EXERCISE:** Before reading on, take time to understand the above code on your own, and make it work. The end goal is to have 2 routes that display 2 different templates.  It's up to you to decide what to put in the templates. The above route declarations tell you exactly what files you need to create. Go write them!
 
-**EXERCISE: Seriously, do the above exercise!**  Don't just move on to see the answer.  Process over product :)
+<input type="checkbox"></input>**EXERCISE: Seriously, do the above exercise!**  Don't just move on to see the answer.  Process over product :)
 
 The above route declarations define two routes: '/' and '/dogs'.  When a user visits '/', Angular will render the `partials/home.html` file inside of our layout file and set the `HomeController` as the controller on the `ng-view`. When a user visits '/dogs', Angular will render the `partials/dogs.html` file inside of our layout file and set the `DogsController` as the controller on the `ng-view`.
 
@@ -121,19 +121,19 @@ Make sure the second route works correctly by visiting `http://localhost:8080/#/
 
 **QUESTION:** Why does Angular put a `#` in the route path?
 
-**EXERCISE:** Figure out how to set a "catchall" route that will render the `home.html` template if the user visits any other route.
+<input type="checkbox"></input>**EXERCISE:** Figure out how to set a "catchall" route that will render the `home.html` template if the user visits any other route.
 
-**EXERCISE:** Make a simple portfolio site using Angular.  It should have 3 routes: "projects", "bio", and "resume".  Add a Bootstrap navbar to the layout file with links to all 3 routes. Figure out how to have the navbar reflect the current route that a user is on.
+<input type="checkbox"></input>**EXERCISE:** Make a simple portfolio site using Angular.  It should have 3 routes: "projects", "bio", and "resume".  Add a Bootstrap navbar to the layout file with links to all 3 routes. Figure out how to have the navbar reflect the current route that a user is on.
 
 ### $routeProvider
 
 $routeProvider not only allows us to set up static routes and load templates, but it also allows access to route parameters (as named groups), route-based redirections, and dynamically injecting dependencies into the controller (via resolve). We'll look more at resolve in the future when we work with services and components.
 
-**EXERCISE:** Make a simple route-based calculator.  When a user visits "/add/4/10", display "14".  Do the same thing for division.  To accomplish this, your routes will need to have path variables.  Research how to define variable segments in your route.  Next, you'll need to research how you access the value of path variables inside of a controller.  You'll need to find the angular equivalent of the `params` hash in rails or the `req.params` object in Express.
+<input type="checkbox"></input>**EXERCISE:** Make a simple route-based calculator.  When a user visits "/add/4/10", display "14".  Do the same thing for division.  To accomplish this, your routes will need to have path variables.  Research how to define variable segments in your route.  Next, you'll need to research how you access the value of path variables inside of a controller.  You'll need to find the angular equivalent of the `params` hash in rails or the `req.params` object in Express.
 
-**EXERCISE:** Refactor the above exercise so that your calculator works using the query string.  When a user visits "/add/?x=4&y=10", display "14".  You will need to research how to access query string data inside of a controller.
+<input type="checkbox"></input>**EXERCISE:** Refactor the above exercise so that your calculator works using the query string.  When a user visits "/add/?x=4&y=10", display "14".  You will need to research how to access query string data inside of a controller.
 
-**EXERCISE:** Configure Angular so that routes do not contain `#`'s. Research!  You may want to start using https://www.npmjs.com/package/superstatic instead of `http-server` and look into the $location service and $locationProvider.
+<input type="checkbox"></input>**EXERCISE:** Configure Angular so that routes do not contain `#`'s. Research!  You may want to start using https://www.npmjs.com/package/superstatic instead of `http-server` and look into the $location service and $locationProvider.
 
 ## Questions:
 
