@@ -125,9 +125,9 @@ Make sure the second route works correctly by visiting `http://localhost:8080/#/
 
 **EXERCISE:** Make a simple portfolio site using Angular.  It should have 3 routes: "projects", "bio", and "resume".  Add a Bootstrap navbar to the layout file with links to all 3 routes. Figure out how to have the navbar reflect the current route that a user is on.
 
-### #routeProvider
+### $routeProvider
 
-The $routeProvider object not only allows us to set up static routes and load templates, but it also allows access to route parameters (as named groups), route-based redirections, and dynamically injecting dependencies into the controller (via resolve). We'll look more at resolve in the future when we work with services and components.
+$routeProvider not only allows us to set up static routes and load templates, but it also allows access to route parameters (as named groups), route-based redirections, and dynamically injecting dependencies into the controller (via resolve). We'll look more at resolve in the future when we work with services and components.
 
 **EXERCISE:** Make a simple route-based calculator.  When a user visits "/add/4/10", display "14".  Do the same thing for division.  To accomplish this, your routes will need to have path variables.  Research how to define variable segments in your route.  Next, you'll need to research how you access the value of path variables inside of a controller.  You'll need to find the angular equivalent of the `params` hash in rails or the `req.params` object in Express.
 
