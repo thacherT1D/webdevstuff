@@ -131,7 +131,7 @@ $ touch controllers.js
 
   const app = angular.module('todoApp');
 
-  app.controller('TodoListController', function() {
+  app.controller('TodoListCtrl', function() {
     this.todoToAdd = '';
     this.todos = [];
 
@@ -174,7 +174,7 @@ An application can have multiple models, views, and controllers. Each controller
 In our `controllers.js`, add the following:
 
 ```javascript
-app.controller('PeopleController', function() {
+app.controller('PeopleCtrl', function() {
   this.nameToAdd = '';
   this.people = [];
 
@@ -189,8 +189,8 @@ Modify our HTML to add people:
 
 ```html
 <main>
-  <div ng-controller="PeopleController as peopleCtrl">
-    <div ng-repeat="person in peopleCtrl.people">
+  <div ng-controller="PeopleCtrl as people">
+    <div ng-repeat="person in people.people">
       <h2>{{person.name}}</h2>
       <ul ng-controller="TodoListController as todoListCtrl">
         <li ng-repeat="todo in todoListCtrl.todos">
