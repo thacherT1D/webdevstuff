@@ -3,6 +3,10 @@
 - Use `templateUrl` to remove template information from directives.
 - Use directive scoping to enforce separation of concerns.
 
+## Exercise Repository
+
+Fork and clone [angular-custom-directives-part-1](https://github.com/gSchool/angular-custom-directives-part-1), all the examples and exercises for this lesson are located there.
+
 ## Custom Directives
 
 Way back in when we studied [Angular Directives](/redirects/articles/4880), we went over built in directives.  These are directives that Angular comes with.  In this lesson, we're going to build our own custom directives. But first...
