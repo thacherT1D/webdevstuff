@@ -341,15 +341,12 @@ Of course, we've now got two different names for our data depending on where we 
 
 **EXERCISE 6.2** Fun fact: if in your scope you have a key and value with the same name (e.g. `foo: '=foo'`), you can omit the name in the value (e.g. `foo`: '=') and Angular will still know what to do! Use this to refactor your directive even more.
 
-
 **EXERCISE 7**
-Create an app that uses the [pokemon api](http://pokeapi.co/docs/).  The app should first make a request to the pokedex to get all possible pokemon.  Then randomly select 5 pokemon to display.  The app should display the pokemon's name, types, name of moves (limit it to 6), and a sprite for the pokemon. Use a custom directive to display the pokemon.
+Create an app that uses the JSON data located in the `user.json` file in the `Exercise_7` folder. Create a 'card' for each user, have each piece of information be on a separate line
 
-The app should use a custom directive for each pokemon (eg `pokemon-item`).
+The app should use a custom directive for each user (eg `user-card`).
 
-**Bonus**: For the pokemon fans out there, write an algorithm that randomly picks two pokemon and decide who would win.  I do not know anything about the pokemon game, so this would be up to you to figure out.
-
-![](http://s8.postimg.org/eo2kbbnb9/pokemon.png)
+**Bonus**: Use css floats to position the cards next to each other, extra bonus points if it is responsive
 
 
 ## Resources
