@@ -5,11 +5,9 @@
 * Discuss what a Version Control System is and why you would use it
 * Describe what Git and Github are and how they differ
 * List the three primary parts of the Git flow
-* Describe the relationship between a repository and a working
-  directory
 * Initialize a git repository with `git init`
-* Check the status of changed files in a git repository with `git status`
 * Stage new and changed files with `git add`
+* Check the status of changed files with `git status`
 * Commit staged files to the git repository with `git commit`
 
 ## What is a Version Control System?
@@ -42,6 +40,12 @@ There are many flavors of VCS:
 [Git](https://git-scm.com/) is a free and open source software for version control.
 While there are many different version control systems, git is incredibly popular and powerful. Many companies use git, and if you understand git it will be easy to learn another version control paradigm.
 
+### Exercise
+
+Take a moment and think how you would rephrase the above description of
+git in your own words. Once you feel comfortable with your description
+of git, turn and share it with your neighbor.
+
 ## What is GitHub?
 
 *Git* and *GitHub* are **NOT** the same thing.
@@ -50,6 +54,11 @@ Github acts as a remote backup service for git repositories.
 Once we've __pushed__ to a __remote__ such as GitHub, we know our code is safe.
 Even if our hard drives die.
 And if GitHub goes down, we can still work on our distributed repos offline.
+
+### Exercise
+
+Again, take take a moment and think how you would rephrase the above description of
+Github in your own words. Once you feel comfortable with your description, turn and share it with your neighbor.
 
 ## What does the Git Flow look like?
 Any files tracked by git typically go through 3 stages:
@@ -72,6 +81,22 @@ fact tracked separately
 shortly.
 
 ![Git Flow](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/291/git_flow.png)
+
+### Exercise
+
+Partner up with the person sitting next to you for a Sage & Scribe exercise.
+
+The Sage can only speak, but can't write.
+The Scribe can only write but can't speak.
+
+Each person will take a turn being both the Sage and the Scribe.
+
+Without looking at the above notes:
+The Sage is responsible for describing in as much detail as they can recall the git flow.
+The Scribe is responsible for drawing out a diagram dipicting the git flow **as described by the Sage**
+
+Don't worry, the point isn't to check to see that you memorized 100% of
+the git flow 10 seconds after we walked though it. Now close your laptops!
 
 ## A Metaphor: Git is a Rocketship, Github is Mars 🚀
 
@@ -122,39 +147,113 @@ There are 5 main commands for `git`
 
 With these 5 commands you can create a repo and start versioning your project.
 
+Let's spin up a new project to play with them. You should have a
+"workspace", "playground" or some other place where you are going to be
+organizing all your projects for this class.
+
+In there create a new directory `mkdir git-test`
+Move into that directory `cd git-test`
+Create a few files `touch space-is-rad.txt what-about-bob.txt stuff.txt`
 
 ### init
-Initialize a new git repo in the current directory with:
+Initialize a new git repo in your current directory with:
 
 ```
 $ git init
 ```
 
-Boom! Your directory is now a git repository! 💥
+Boom! Your working directory now has a git repository! 💥
 
 You can verify this by checking that a `.git` subdirectory was created when you run `ls -a`.
 
-The .git subdirectory contains a number of subdirectories and files that keep track of all the changes happening in your working tree, or repo as we are now calling it. You will also find configuration details, a list of branches, Github remotes and also things called SHAs. SHAs are a long series of numbers used as a unique ID for your commits. Don't worry too much about that right now, just know that the *.git* subdirectory is where all that stuff related to your git repo is tracked.
+The .git subdirectory contains a number of subdirectories and files that keep wrack of all the changes happening in your working directory, or repo as it also called. You will also find configuration details, a list of branches, Github remotes and also things called SHAs. SHAs are a long series of numbers used as a unique ID for your commits. Don't worry too much about that right now, just know that the *.git* subdirectory is where all that stuff related to your git repo is tracked.
 
 > Docs: [git manual](https://git-scm.com/docs/git-init) or `man git-init`
 
 
+### status
+If you type `git status` when in a git repository it will show you if you
+have any staged or unstaged files. Remember from the metaphor above
+*unstaged* changes are those packages on the launch pad waiting to be
+loaded up into the rocket and *staged* changes are the packages already
+loaded on the rocket ready to be committed to mars.
+
+in your git repository (working directory) run:
+
+```
+$ git status
+```
+
+Your output should look something like:
+
+```
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+  space-is-rad.txt
+  what-about-bob.txt
+  stuff.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+```
+
+You will see our files show up under the "Untracked files" section. "Untracked" simply means it's a new file that git hasn't seen before.
+
+Aside from that you may also notice git's output is also giving us a hint on how to stage our file to the staging area. It should look familar, you also saw it in the git flow diagram not too long ago.
+
+> docs: [git manual](https://git-scm.com/docs/git-status) or `man git-status`
+
+
 ### add
-Lets say you modified a file in your repo, you can tell git to start tracking it  with:
+So let's use that hint git gave us above and it start tracking files:
 
 ```
-$ git add <the_name_of_the_file>
+$ git add space-is-rad.txt
 ```
 
-This then adds that file to the *staging area*, or *index* as it's sometimes referred to.
+This then adds that file to the *staging area*, or *index* as it's sometimes referred to. Let's check the status of our repo again:
+
+```
+$ git status
+```
+
+You should now see a few new things from before:
+  * Our *space-is-rad* file is listed under the "Changes to be committed" section
+  * It's green instead of red
+  * It is prefaced by "new file:"
+
+Add some text to that file and check the status yet again:
+
+```
+$ echo 'space cats!' >> space-is-rad.txt
+$ git status
+```
+
+Well now we have three secions. Looks like our space file is staged to be commited, but also below shows that it is "not staged for commit" wha?
+
+In that second section there you can see it is listed as being "modified:" What is happening is that we have staged, or are tracking, the original state of the file when it was empty. We now also have our newly "modified" version in our working directory. To sync thing up all we have to do is `git add` this newly modified version of our space file:
+
+```
+$ git add space-is-rad.txt
+$ git status
+```
+
+A status check shows us that the changes we made to our space file are now staged and ready to be commited.
 
 If you've made changes to several files, and even created a few new ones
 as well, you can tell git to track all things that have been changed or
-newly created inside the working directory with:
+newly created inside the working directory in one go with:
 
 ```
 $ git add .
+$ git status
 ```
+
+After running those command you can see that it added all the things!
 
 Remember the `.` just means *everything inside the directory I'm
 currently standing in*
@@ -169,42 +268,6 @@ at once, in which case using `git add .` makes more sense.
 
 > Docs: [git manual](https://git-scm.com/docs/git-add) or `man git-add`
 
-
-### status
-If you type `git status` when in a git repository it will show you if you
-have any staged or unstaged files. Remember from the metaphor above
-*unstaged* changes are those packages on the launch pad waiting to be
-loaded up into the rocket and *staged* changes are the packages already
-loaded on the rocket ready to be committed to mars.
-
-in your git repository (working directory):
-
-```
-$ git status
-```
-
-example output:
-
-```
-$ git status
-on branch g15
-
-initial commit
-
-changes to be committed:
-  (use "git rm --cached <file>..." to unstage)
-
-	new file:   readme.md
-
-untracked files:
-  (use "git add <file>..." to include in what will be committed)
-
-	01_file_one.md
-	02_file_two.md
-	03_some_other_file.md
-```
-
-> docs: [git manual](https://git-scm.com/docs/git-status) or `man git-status`
 
 ### commit
 After staging files with `git add` you will then be able to commit those changes. This will save the current state of the project as a snapshot in time.
