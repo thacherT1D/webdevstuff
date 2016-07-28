@@ -11,7 +11,6 @@
 
 * Implement form validation using Angular's form validation features.
 
-
 ## What is jQuery thinking?
 
 At this point, we have used jQuery to do many things diverse things in the browser but in lots of cases we use jQuery to handle events. We want textboxes to handle `keyup()` events, list boxes to handle `select()` events and so on.
