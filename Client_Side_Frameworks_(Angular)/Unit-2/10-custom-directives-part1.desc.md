@@ -114,13 +114,62 @@ Note that we're using a custom directive in three ways: as an element, as an att
 
 (As an aside, if you check out the [Angular Custom Directive Documentation](https://docs.angularjs.org/guide/directive) you'll see it's also possible to trigger a directive by comment. However, this feature is included mainly for compatibility with older versions of angular, and shouldn't be used. Stick to elements and attributes.)
 
-**Template Url**
+**Example 3 - Template Url**
 
 Typically a directive's template will become larger.  To make the directive cleaner, you can use `templateUrl` instead of `template` in the directive.  The `templateUrl` defines an html file that will be requested via ajax and used as the template.
+
+We will be storing out `html` template in a folder named `templates`.
+
+Create a folder named `templates`. In that folder, create a file named `gsAngularLogo.html`. In that file add:
+
+```js
+<img src="https://tctechcrunch2011.files.wordpress.com/2015/12/angular_small.png">
+```
+
+Which is what was stored in the `template` key in the previous examples.
+
+The files would look as follows:
+
+`app.js`
+
+```js
+var app = angular.module('Example3',[]);
+```
+
+`directives.js`
+
+```js
+app.directive('gsAngularLogo', function() {
+  return {
+    restrict: 'E',
+    templateUrl: 'templates/gsAngularLogo.html'
+  };
+});
+```
+
+`index.html`
+
+```html
+<body ng-app="Example3">
+
+  <gs-angular-logo></gs-angular-logo>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.js" type="text/javascript"></script>
+  <script src="app.js" type="text/javascript"></script>
+  <script src="directives.js" type="text/javascript"></script>
+</body>
+```
+
+
+
+
 
 **EXERCISE 3**
 
 Fix our example to use `templateUrl` instead of template.  **HINT**: Keep in mind that the request for the `templateUrl` is via **ajax**.
+
+create several directives and have templateurl for each.
+
 
 ### Directives And Scope
 
@@ -216,6 +265,7 @@ app.directive('gsYoyoDetails', function() {
 </head>
 <body ng-controller="YoyoController">
   <gs-yoyo-details ng-repeat="yoyo in view.yoyos"></gs-yoyo-details>
+
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.js"></script>
   <script src="./js/app.js"></script>
 </body>
@@ -238,7 +288,7 @@ app.directive('gsYoyoDetails', function() {
   return {
     templateUrl: '../yoyo-details.html',
     scope: {
-      yoyoInDirective: '=yoyoAttribue'
+      yoyoInDirective: '=yoyoAttribute'
     }
   }
 })
