@@ -356,6 +356,11 @@ exports.seed = function(knex) {
         id: 2,
         name: 'Adele'
       }]);
+    })
+    .then(() => {
+      return knex.raw(
+        "SELECT setval('artists_id_seq', (SELECT MAX(id) FROM artists));"
+      );
     });
 };
 ```
@@ -432,6 +437,11 @@ exports.seed = function(knex) {
         title: 'Someone Like You',
         likes: 112487182
       }]);
+    })
+    .then(() => {
+      return knex.raw(
+        "SELECT setval('tracks_id_seq', (SELECT MAX(id) FROM tracks));"
+      );
     });
 };
 ```
