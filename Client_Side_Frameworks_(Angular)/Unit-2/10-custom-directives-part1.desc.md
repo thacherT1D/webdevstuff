@@ -170,109 +170,126 @@ Use these 2 separate custom directives in the `index.html`.
 
 Let's add some data to a controller and see how it interacts with the directive.  In the following example, we'll show a yoyo's details in our directive:
 
+**EXAMPLE 4**
+
 `app.js`:
 
+```js
+var app = angular.module('Example4', [])
+```
+
+`controllers.js`
 
 ```js
-var app = angular.module('yoyoDirectiveApp', [])
-
-app.controller('YoyoController', ['$scope', function($scope) {
-  $scope.yoyo = {name: 'Duncan Metal Drifter',
+app.controller('YoyoController', [function() {
+  var vm = this;
+  vm.yoyo = {name: 'Duncan Metal Drifter',
     img: "http://www.toysrus.com/graphics/tru_prod_images/Duncan-Metal-Drifter-Pro-Yo-Yo--pTRU1-8444206dt.jpg"
   };
 }]);
+```
 
+`directives.js`
+
+```js
 app.directive('gsYoyoDetails', function() {
   return {
-    templateUrl: 'yoyo-details.html',
+    templateUrl: 'templates/yoyo-details.html',
   };
 });
 ```
 
-`yoyo-details.html`
+`templates/yoyo-details.html`
 
 ```html
-<h3>{{yoyo.name}}</h3>
-<img ng-src="{{yoyo.img}}">
+<h3>{{YC.yoyo.name}}</h3>
+<img ng-src="{{YC.yoyo.img}}">
 ```
 
 `index.html`:
 
 ```html
-<!DOCTYPE html>
-<html ng-app="yoyoDirectiveApp">
-<head>
-<script src="https://code.jquery.com/jquery-2.1.4.min.js" type="text/javascript"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.3/angular.js" type="text/javascript"></script>
-<script src="app.js" type="text/javascript"></script>
-</head>
-<body ng-controller="YoyoController">
-  <gs-yoyo-details></gs-yoyo-details>
+<body ng-app="Example4" ng-cloak>
+  <div ng-controller="YoyoController as YC">
+    <gs-yoyo-details></gs-yoyo-details>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.js" type="text/javascript"></script>
+  <script src="app.js" type="text/javascript"></script>
+  <script src="controllers.js" type="text/javascript"></script>
+  <script src="directives.js" type="text/javascript"></script>
 </body>
-</html>
 ```
 
 We can see here that the directive has access to the yoyo from the controller's scope.  By default, when a directive is placed inside of a controller, it will have access to everything on its parent controller's scope.
 
-**Exercise** add a `message` property to the `YoyoController`, then show the message both inside and outside of the directive.
+**EXERCISE 4**
+
+Add a `message` property to the `YoyoController`, then show the message both inside and outside of the directive.
 
 There are a couple of problems with this default behavior of the directive having access to everything in the parent's scope. For one, it's often not a good idea to have your directives so tightly coupled to your controller.  If you change the variable name in the  controller or try to use the directive again somewhere else, you may run into errors. Also, from a practical standpoint you may not want your directive to have access to all of the information in your controller. For example, if you have a list of yoyos and a custom directive governing the display of a yoyo's information, that directive only needs to know about one yoyo, not all of them.
 
 The solution to these problems involves creating an `isolate scope` for the directive. Before doing this, let's see what happens if we don't create an isolate scope.
 
-**Exercise**
+**EXERCISE 5**
 
-Change `scope.view.yoyo` to `scope.view.yoyos`, an array of yoyo objects. In your view, render each yoyo's information using your custom directive.
+Change `vm.yoyo` to `vm.yoyos`, an array of yoyo objects. In your view, render each yoyo's information using your custom directive.
 
 Possible solution:
 
 `app.js`
 
 ```js
-var app = angular.module('yoyoApp', []);
+var app = angular.module('Exercise5',[]);
+```
 
-app.controller('YoyoController', function($scope) {
-  $scope.view = {};
-  $scope.view.yoyos = [{
+`controllers.js`
+
+```js
+app.controller('YoyoController', [function() {
+  var vm = this;
+  vm.yoyos = [{
     name: "Duncan Metal Drifter",
     img: "http://www.toysrus.com/graphics/tru_prod_images/Duncan-Metal-Drifter-Pro-Yo-Yo--pTRU1-8444206dt.jpg"
   }, {
     name: "Duncan Hello Kitty Pro Yo yoyo",
     img: "http://cdn6.bigcommerce.com/s-8ndhalpa/products/277/images/613/duncan-hello-kitty-pro-yo-yoyo-15__90815.1404161701.1280.1280.jpg"
   }];
-});
+}]);
+```
 
+`directives.js`
+
+```js
 app.directive('gsYoyoDetails', function() {
   return {
-    templateUrl: '../yoyo-details.html'
-  }
+    templateUrl: 'templates/yoyo-details.html',
+  };
 });
 ```
 
 `index.html`
 
 ```html
-<!DOCTYPE html>
-<html lang="en" ng-app="yoyoApp">
-<head>
-  <meta charset="UTF-8">
-  <title>Document</title>
-</head>
-<body ng-controller="YoyoController">
-  <gs-yoyo-details ng-repeat="yoyo in view.yoyos"></gs-yoyo-details>
+  <div ng-controller="YoyoController as YC">
+    <gs-yoyo-details ng-repeat="yoyo in YC.yoyos"></gs-yoyo-details>
+  </div>
 
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.js"></script>
-  <script src="./js/app.js"></script>
-</body>
-</html>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.js" type="text/javascript"></script>
+  <script src="app.js" type="text/javascript"></script>
+  <script src="controllers.js" type="text/javascript"></script>
+  <script src="directives.js" type="text/javascript"></script>
 ```
 
-`yoyo-details.html`
+`templates/yoyo-details.html`
 
 ```html
-<h3>{{ yoyo.name }}</h3>
-<img ng-src="{{ yoyo.img }}">
+<h3>{{yoyo.name}}</h3>
+<img ng-src="{{yoyo.img}}">
+
 ```
+
+
 
 #### Isolate Scope
 
