@@ -23,7 +23,7 @@ By the end of Q1 you'll be able to build and deploy rich frontend applications!
       </td>
     </tr>
     <tr>
-      <td><a href="../../Learning to Learn.md">Learning to Learn</a>
+      <td><a href="../../Misc/Learning to Learn.md">Learning to Learn</a>
       </td>
       <td>
       </td>
@@ -44,7 +44,7 @@ By the end of Q1 you'll be able to build and deploy rich frontend applications!
       </td>
     </tr>
     <tr>
-      <td><a href="../../Development Environment/README.md">Intro to the Command Line</a>
+      <td><a href="../../Misc/Command Line.md">Intro to the Command Line</a>
       </td>
       <td><a href="https://github.com/ryansobol/clmystery">Command Line Murder Mystery</a>
       </td>

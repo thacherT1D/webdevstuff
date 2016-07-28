@@ -9,18 +9,18 @@ function q1() {
     {
       activities: [
         {article: {text: "Welcome to WDI", url: "https://docs.google.com/presentation/d/154ou9yQJNcVcVehD6vqaKjGbCKhFb2xK85toqniWaa8/edit#slide=id.g108a6e17ae_0_112"}},
-        {article: {text: "Learning to Learn", path: "Learning to Learn.md"}},
+        {article: {text: "Learning to Learn", path: "Misc/Learning to Learn.md"}},
         {article: {text: "Setup Development Environment", path: "Development Environment/README.md"}},
       ]
     },
     {
-      warmup: { text: "Typing", path: "Typing.md" },
+      warmup: { text: "Typing", path: "Misc/Typing.md" },
       activities: [
         {
           article: {text: "Setup Development Environment", path: "Development Environment/README.md"},
         },
         {
-          article: {text: "Intro to the Command Line", path: "Development Environment/README.md"},
+          article: {text: "Intro to the Command Line", path: "Misc/Command Line.md"},
           exercise: {text: "Command Line Murder Mystery", url: "https://github.com/ryansobol/clmystery"},
         },
       ],

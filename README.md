@@ -21,7 +21,7 @@
       </td>
     </tr>
     <tr>
-      <td><a href="Learning to Learn.md">Learning to Learn</a>
+      <td><a href="Misc/Learning to Learn.md">Learning to Learn</a>
       </td>
       <td>
       </td>
@@ -42,7 +42,7 @@
       </td>
     </tr>
     <tr>
-      <td><a href="Development Environment/README.md">Intro to the Command Line</a>
+      <td><a href="Misc/Command Line.md">Intro to the Command Line</a>
       </td>
       <td><a href="https://github.com/ryansobol/clmystery">Command Line Murder Mystery</a>
       </td>
