@@ -7,6 +7,7 @@ By the end of this article, your development machine should have the following s
 1. [Terminal](#configure-the-terminal)
 1. [Homebrew](#install-homebrew)
 1. [Chrome](#install-and-configure-chrome)
+1. [Zsh](#install-and-configure-zsh)
 1. [Fish](#install-and-configure-fish)
 1. [Atom](#install-and-configure-atom)
 1. [Git](#install-and-configure-git)
@@ -229,6 +230,21 @@ Scroll down a bit more until you find the **Send a "Do Not Track" request with y
 ![](https://i.imgur.com/NAWbEim.png)
 
 **TIP:** You may want to consider installing an [ad blocking extension](https://chrome.google.com/webstore/detail/adblock/gighmmpiobklfepjocnamgkkbiglidom) to Chrome.
+
+
+## Install and Configure Zsh
+**What is it? What will I be using it for?**
+
+Right now our terminal is not very user friendly. We're going to change our shell from `bash` to `zsh` and install a plugin called `oh my zsh` to give us some very useful shortcuts and coloring.
+
+**How do I install it?**
+
+In the terminal run:
+
+`sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"`
+
+You may have to type in your password if it asks you, and when you are done with this, in the terminal, type `zsh`.
+
 
 ## Install and Configure Fish
 
