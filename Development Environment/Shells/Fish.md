@@ -117,4 +117,4 @@ To use the auto-suggestion, press the right arrow ➡ key and hit the `Enter` ke
 
 ## Next Steps
 
-Install [Homebrew](Homebrew.md) - A Package Manager
+Install [Homebrew](../Homebrew.md) - A Package Manager

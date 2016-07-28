@@ -16,4 +16,4 @@ You may have to type in your password if it asks you, and when you are done with
 
 ## Next Steps
 
-Install [Homebrew](Homebrew.md) - A Package Manager
+Install [Homebrew](../Homebrew.md) - A Package Manager
