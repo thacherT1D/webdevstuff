@@ -203,7 +203,7 @@ Now watch what happens when we try to use another method such as `pop()` that is
 
 ```javascript
 function args() {
-  console.log(arguments.pop();
+  console.log(arguments.pop());
 }
 
 args(1,2,3);
@@ -298,6 +298,7 @@ sumMagic(‘5’, 5, ‘apple’, 11);
 // ‘blackjack’
 
 ```
+
 - DJ Khaled what are the keys to success? Write a function that says “Another one!” waits for 1 second and says “Another one!”.
 On the (N)th time it logs “I’m DJ Khaled!” and exits execution.
 
@@ -329,6 +330,107 @@ whoIsTaller(‘Joe’, ‘Beyonce’);
 // ‘Joe’’
 ```
 
+### Some remarks on Scope
+
+What's the result of running the following code:
+
+```js
+var scoped = function(name) {
+  var greeting = "Hello " + name + "!";
+  return greeting;
+};
+
+var hello = scoped("Matt");
+console.log(greeting);
+```
+
+###Why is variable scope important?
+
+Let's add to the example above to add to our discussion of variable scope.
+
+```js
+var greeting = "Hello Galvanize";
+
+var scoped = function(name) {
+  var greeting = "Hello " + name + "!";
+  return greeting;
+};
+
+var result = scoped("John Muir");
+
+console.log(result);
+console.log(greeting); // What will the output of this line be?
+```
+
+###Local vs. Global Scope and the 'var' keyword
+
+```js
+var greeting = "Hello Galvanize";
+
+var scoped = function(name) {
+  greeting = "Hello " + name + "!";
+  return greeting;
+};
+
+var result = scoped("Henry Hudson");
+
+console.log(result);
+console.log(greeting); // What will the output of this line be?
+```
+Check out another case:
+
+```js
+var greeting = "Hello Galvanize";
+
+var scoped = function(name) {
+  var greeting = "Hello " + name + "!";
+  return greeting;
+};
+
+var result = scoped("Henry Hudson");
+
+console.log(result);
+console.log(greeting); // What will the output of this line be?
+```
+
+Here's even more nesting!
+
+```
+var greeting = "Hello Galvanize";
+
+var scoped = function(name) {
+  var greeting = "Hello " + name + "!";
+  console.log(greeting);
+  var yetAnotherGreeting = function() {
+    var greeting = "I'm another greeting!";
+    console.log(greeting);
+  }();
+};
+```
+
+### Optional Arguments
+
+```
+function power(base, exponent) {
+  var exponent = exponent || 2;
+  var result = 1;
+  for (var count = 0; count < exponent; count++) {
+    result *= base;
+  }
+  return result;
+}
+
+console.log(power(4));
+// → 16
+console.log(power(4, 3));
+// → 64
+
+```
+
+What if you want your exponent to be 0? How can you fix this?
+
 ## Resources
 
 https://github.com/mjhea0/javascript-functions
+
+[More Javascript!](https://github.com/gSchool/basic-js-part-2)

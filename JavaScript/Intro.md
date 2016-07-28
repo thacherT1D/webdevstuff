@@ -561,6 +561,58 @@ if (7 % 2 === 0 || Number.isInteger(3.4)) {
 
 See the [operator precedence](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence) documentation on the Mozilla Developer Network for more information.
 
+## Switch Statements
+
+Switch statements are another way to express a very common structure:
+
+```
+if () {
+} else if () {
+} else if () {
+} else {
+}
+```
+Here is the syntax for a switch statement which would replace our if, else if, else construct:
+
+```
+switch (/* our expression */ ) {
+   case /*value 1*/:
+       // some code
+       break;
+   case /*another value*/:
+       // some code
+       break;
+   default:
+       // the default code, just like the else block
+       break;
+}
+```
+Here is a code example
+
+```
+var typeOfPet = prompt("Please name an animal");
+switch (typeOfPet) {
+	case "dog":
+	   console.log(typeOfPet + " goes woof.");
+	   break;
+	case "cat":
+	   console.log(typeOfPet + " goes meow.");
+	   break;
+	case "bird":
+	   console.log(typeOfPet + " goes tweet");
+	   break;
+	case "mouse":
+	   console.log(typeOfPet + " goes squeak");
+	   break;
+	case "fox":
+	   console.log(typeOfPet + " goes Ring-ding-ding-ding-dingeringeding! Gering-ding-ding-ding-dingeringeding! Gering-ding-ding-ding-dingeringeding");
+	   break;
+	default:
+	   console.log("Sorry, I don't know what noise that animal makes.");
+	   break;
+}
+```
+
 ### Type Conversion
 
 Sometimes, your code uses a value of one type when JavaScript expects a value of a different type. In this case, rather than throwing an error, JavaScript will convert the value into a type that makes sense.

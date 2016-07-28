@@ -736,3 +736,25 @@ var graphObject = {
 We learned about reference types. Combined with our knowledge of primitive types, we now know all the data types used in JavaScript. Awesome!
 
 <iframe src="https://player.vimeo.com/video/145447330?byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+## Resources
+
+http://www.pythontutor.com/javascript.html
+> Use this to go through your code step by step to examine variables and see where/when they change.
+
+https://github.com/gSchool/javascriptIntroObjectsArraysIterations
+
+## Slides
+
+* [CJ](https://docs.google.com/presentation/d/15Pvx09_spsLvV2ST5KCOAZJembz53X1Mf3YI63VTYBk/edit#slide=id.p)
+
+## Further Exercises
+
+[Computer Science Exercises Repo In Java](https://github.com/gSchool/computer-science-exercises/blob/master/src/main/java/ArrayUtils.java)
+
+https://projecteuler.net/problem=3
+> You will have to use a nested loop to solve this. Feel free to research what a prime factor is if you aren't sure.
+  ```javascript
+  The prime factors of 13195 are 5, 7, 13 and 29.
+  What is the largest prime factor of the number 600851475143 ?
+  ```
