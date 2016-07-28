@@ -1,10 +1,8 @@
 ## Objectives
-- Objective 1
-- Objective 2
-- Objective 3
+- Implement Custom Directives
 
 ## Framing
-Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing
+
 
 ## Custom Directives
 
@@ -351,4 +349,5 @@ The app should use a custom directive for each user (eg `user-card`).
 
 
 ## Resources
-[AngularJS Directives Tutorial - Part 1 - Demystifying Angular Directives](https://www.youtube.com/watch?v=0r5QvzjjKDc)
+- [AngularJS Directives Tutorial - Part 1 - Demystifying Angular Directives](https://www.youtube.com/watch?v=0r5QvzjjKDc)
+- [angular-custom-directives-part-1](https://github.com/gSchool/angular-custom-directives-part-1)
