@@ -369,6 +369,10 @@ This table and the corresponding descriptions come from [this](https://scotch.io
 |  $dirty |  ng-dirty |   Boolean that's true if the form/input has been used. |
 |  $touched |  ng-touched |  Boolean that's true if the input has been blurred |
 
+
+
+
+
 ## Accessing and targeting our form and inputs
 
 In order to use angular form validation we have to abide by the following rules
@@ -432,8 +436,8 @@ Now that you have a solid understanding of these properties/classes, let's build
 Now that we have an idea of how to style and display error messages, let's do the following
 
 - display error messages if inputs are invalid (write whatever you would like for the error message)
-- add a class of `has-error` if the validation fails
-- add a class of `has-success` if the validation passes
+- add a class of `invalid` if the validation fails
+- add a class of `valid` if the validation passes
 - only display the error message/styling if the user has typed something
 - when the form is submitted, collect the inputs and add them to an array called `users` (this will be done in your controller)
   + remember that the default behavior for the form submission is a page refresh - you will need to prevent this.
