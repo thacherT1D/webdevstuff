@@ -22,6 +22,7 @@ function q1() {
         {
           article: {text: "Intro to the Command Line", path: "Misc/Command Line.md"},
           exercise: {text: "Command Line Murder Mystery", url: "https://github.com/ryansobol/clmystery"},
+          stretch: {text: "Intermediate Command Line", url: "Misc/Intermediate Command Line.md"},
         },
       ],
     },
@@ -47,6 +48,9 @@ function dataFor(base) {
       }
       if (activity.exercise && activity.exercise.path) {
         activity.exercise.url = normalize(activity.exercise.path, base)
+      }
+      if (activity.stretch && activity.stretch.path) {
+        activity.stretch.url = normalize(activity.stretch.path, base)
       }
     })
 

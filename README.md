@@ -1,5 +1,7 @@
 # Galvanize Web Development Immersive
 
+- [Q1](Schedule/Q1/readme.md)
+
 <!-- BEGIN SCHEDULE -->
 <table>
   <thead>
@@ -8,6 +10,7 @@
       <th>Warmup</th>
       <th>Activities</th>
       <th>Exercises</th>
+      <th>Stretch</th>
     </tr>
   </thead>
   <tbody>
@@ -19,15 +22,21 @@
       </td>
       <td>
       </td>
+      <td>
+      </td>
     </tr>
     <tr>
       <td><a href="Misc/Learning to Learn.md">Learning to Learn</a>
       </td>
       <td>
       </td>
+      <td>
+      </td>
     </tr>
     <tr>
       <td><a href="Development Environment/README.md">Setup Development Environment</a>
+      </td>
+      <td>
       </td>
       <td>
       </td>
@@ -40,11 +49,15 @@
       </td>
       <td>
       </td>
+      <td>
+      </td>
     </tr>
     <tr>
       <td><a href="Misc/Command Line.md">Intro to the Command Line</a>
       </td>
       <td><a href="https://github.com/ryansobol/clmystery">Command Line Murder Mystery</a>
+      </td>
+      <td><a href="Misc/Intermediate Command Line.md">Intermediate Command Line</a>
       </td>
     </tr>
   </tbody>

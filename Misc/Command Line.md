@@ -1,28 +1,38 @@
-## Mac OS X Fundamental Commands
+# Intro the Command Line
 
-This lesson will introduce you to the fundamental commands of Mac OS X. By the end, you'll be able to describe and utilize commands to manipulate the following concepts.
+This lesson will introduce you to the fundamental commands of Mac OS X. By the end, you'll be able to describe and use commands to manipulate the following concepts:
 
-* [User accounts](#user-accounts)
-* Working directories
-* Home directories
+* [User accounts](#user-accounts) (`sudo, chmod, chown`)
+* Working directories (`pwd`)
+* Home directories (`~/`)
 * Unix paths
 * Command flags
-* Manual pages
+* Manual pages ("*the only command you'll ever need*.")
 * Graphical user interfaces
 * Environment variables
-* File system management
-* File system navigation
-* File system redirection
+* File system management (`touch, mkdir, rm, rmdir, cp, mv`)
+* File system navigation (`ls, cd`)
+* File system redirection (`|, >, >>`)
+* Search your bash history with `history | grep` and `ctrl+r`.
+* Use [www.explainshell.com](http://www.explainshell.com).
+
+## Why are there so many commands!?
+
+The Unix philosophy for command line programs is: “Do one thing and do it well”. Output of one program can be the input for another so commands can be easily chained together.
+
+Typing is faster than clicking in many cases, and the command line is easily scriptable.
+
+## Getting Started
 
 Before getting stared, use Spotlight to launch the `Terminal` app by pressing the `Command` + `Spacebar` keys at the same time, typing the word "terminal" into the search field, and then pressing the `Enter` key.
 
 ## User accounts
 
-Mac OS X is a multi-user operating system which means it manages one or more user accounts. Each user account on Mac OS X has a full name and an account name.
+Mac OS X is a multi-user operating system which means it manages one or more user accounts. Each user account on Mac OS X has a **full name** and an **account name**.
 
 ### The full name
 
-If automatic login is turned off, you'll see the **full name** when logging into the OS after the computer boots.
+If automatic login is turned off, you'll see your account's full name when logging into the operating system after the computer boots up.
 
 ![](https://i.imgur.com/t8AVjbq.png)
 
@@ -31,17 +41,17 @@ As a professional web developer, you'll be responsible for keeping sensitive inf
 If you want to turn off automatic login:
 
 1. Use Spotlight to launch the `Users & Groups` System Preferences.
-1. If the lock in the bottom left corner is closed, click on it and enter your admin account password.
+1. If the lock in the bottom left corner is closed, click on it and enter your account password in the window that pops up.
 1. Click the `Login Options` tab in the sidebar on the bottom left.
 1. Select `Off` in the dropdown menu next the `Automatic login`.
 
-When finished, the window should look something like this.
+When finished, your System Preferences should look something like this.
 
 ![](https://i.imgur.com/CwrbvzQ.png)
 
 ### The account name
 
-Additionally, you'll see the **account name** when viewing your home directory, among other places.
+Additionally, you'll see your account's name when viewing your home directory, among other places.
 
 To view the home directory:
 
@@ -56,13 +66,15 @@ If you don't see the home directory in your favorites sidebar:
 1. Click the `Sidebar` tab at the top of the window.
 1. Enable the checkbox next to your home directory's icon and name.
 
-When finished, the window should look something like this.
+When finished, the Finder Preferences should look something like this.
 
 ![](https://i.imgur.com/UZHZ2Aw.png)
 
 ### The current user
 
-Whenever you log into Mac OS X, that user account becomes the **current user**. Additionally, when you start a new shell session in the Terminal, the current user is automatically logged in to the shell. There are a two fundamental commands that display the state of the current user in th shell—the `whoami` and `groups` commands.
+Whenever you log into Mac OS X, that user account becomes the **current user**. Additionally, when you start a new shell session in the Terminal, the current user is automatically logged in to the shell.
+
+There are a two fundamental commands that display the state of the current user from within the shell—the `whoami` and `groups` commands.
 
 The `whoami` command displays the account name of the current user.
 
@@ -80,35 +92,43 @@ groups
 
 ![](https://imgur.com/TsyyfL9.png)
 
-It's common for a user account to belong to a many groups. The only important groups to note are `staff` and `admin`. In Mac OS X, every user account belongs to the `staff` group, while only Administrator accounts belong to the `admin` group.
+It's common for a user account to belong to a many groups. The only important groups to mention are `staff` and `admin`. In Mac OS X, every user account belongs to the `staff` group, while only administrator accounts belong to the `admin` group.
 
 **TIP:** If your user account doesn't belong to the `admin` group, it'll be difficult to manage your development machine.
 
-### Questions?
+### Exercise
 
-What's the account name of the current user on your computer?
+Find out the account name and groups of the current user of your computer.
 
-What are some of the groups that your current user belongs to?
+## Working directories
 
-## The `pwd` command
+At any given time, the Unix shell has a **current working directory**. By convention, the current working directory is displayed in your shell's prompt. That way, you know where you are in the your computer's file system hierarchy at all times.
 
-Typically the shell will start in your home directory. This is a folder on the computer file system that belongs to you. You put your work here and configure the settings of many command line programs.
+From the command line, you can reference the current working directory with the period `.` character. You'll get to play around with this in a minute. Typically, a new shell session will set the current working directory to your user account's home directory when it starts.
 
-Each user has their own home directory. In the past, it was really common for multiple people to share the same computer. Since the era of personal computing, most operating systems only have one human user account.
+### The home directory
 
-At any given time, the Unix shell has a **current working directory**. Let's use the `pwd` command to print the current working directory for your shell.
+The **home directory** is a special folder in your computer's file system that belongs to only your user account. This is where you'll store your documents, downloads, music, projects, etc. as well as store the configuration settings of many command line programs. In the Unix shell, the tilde `~` character represents the home directory.
+
+Each user has their own home directory. Prior to the personal computer revolution in the 1980's, many people frequently shared the same computer because they were so relatively expensive. Thus operating systems' with multiple accounts, and therefore home directories, was commonplace. Since computers are relatively cheaper nowadays, most operating systems only have one human user account.
+
+### The `pwd` command
+
+Let's use the `pwd` command to print the current working directory of your shell session.
 
 ```
 pwd
 ```
 
-### Question?
+![](https://i.imgur.com/s6Xqtmn.png)
+
+### Exercise
 
 What's the current working directory of your shell?
 
-## The Unix Path
+## File system paths
 
-In any computer system, a path represents a location in the file system. Paths are like addresses, listing a location from the general to the specific. It's a bit like addressing an envelope backwards.
+In any computer system, a **path** represents a location in the file system. Paths are similar to addresses in the physical world except they list a location from the general to the specific. It's a bit like addressing an envelope backwards.
 
 ```
 USA
@@ -118,21 +138,21 @@ Seattle
 Galvanize, Inc.
 ```
 
-vs.
+Is similar to
 
 ```
-/Users/someuser/Projects/someproject
+/Users/wcrusher/Projects/nanites
 ```
 
 A path is **absolute** when it starts with `/`.
 
 A path is **relative** when it does not.
 
-### Question?
+### Exercise
 
 Is the path returned by the `pwd` command absolute or relative?
 
-## The `ls` command
+### The `ls` command
 
 One of the most frequently used commands is the `ls` command which lists the contents of the current working directory.
 
@@ -140,101 +160,116 @@ One of the most frequently used commands is the `ls` command which lists the con
 ls
 ```
 
-### Question?
+![](https://i.imgur.com/tivSrqi.png)
+
+### Exercise
 
 In what order are the files and directories displayed?
 
+## Command flags
+
+**Command flags** are a common way to specify options for command line programs. If a command allows a command flag to be specified, it typically is a single dash `-` or double dash `--` immediately followed by a letter, number, symbol, or word. Some commands even accept multiple command flags to be specified at the same time. You'll see some examples of this shortly.
+
 ### Long format
 
-Like many shell commands, the behavior of `ls` can be modified. By default, it shows the names of items in your present working directory in alphabetical order. By providing the command with flags, we can modify that.
+Like many shell commands, the behavior of `ls` can be modified. By default, it displays the files and directories in your current working directory in alphabetical order spread over multiple columns. However, you can modify that behavior by providing one or more command flags.
 
-For example, the `l` flag changes the listing shown to long format. This will display permission, ownership, and modification information about each item in the directory.
+The `l` flag changes the behavior of `ls` to display the items in a long format. So in addition to the file and directories names, it'll display permission, ownership, size, and the last modification time of each item in the directory.
 
 ```
 ls -l
 ```
 
-Now I can see a lot more clearly what files are in my current working directory. Some of these items are files, some are directories and in my case also have a `link` which we'll deal with on another day :)
+![](https://i.imgur.com/TzK8I2m.png)
 
-### Question?
+### Exercise
 
-INSERT QUESTION HERE
+How can you tell if an item is a file or directory? **Hint:** look at its permissions.
 
-### Human-friendly file sizes
+### Human-friendly sizes
 
-When used with the `-l` flag, use unit suffixes: Byte, Kilobyte, Megabyte, Gigabyte, Ter-abyte and Petabyte in order to reduce the number of digits to three or less using base 2 for sizes.
+When using the `-l` flag with the `ls` command, the size of each item is displayed in bytes. To display sizes in a more human-friendly manner, you can use the `-h` flag and it'll add one of the following suffixes.
+
+| Suffix | Meaning  |
+|--------|----------|
+| `B`    | byte     |
+| `K`    | kilobyte |
+| `M`    | megabyte |
+| `G`    | gigabyte |
+| `T`    | terabyte |
+| `P`    | petabyte |
+
 ```
 ls -hl
 ```
 
-**TIP:** `ll`
+![](https://i.imgur.com/oUiKGx6.png)
 
-### Question?
+**TIP:** In fish, the `ll` command is the same as `ls -hl` only faster to type.
 
-INSERT QUESTION HERE
+### Hidden files and directories
 
-### Hidden Files
-
-Have you ever heard of hidden files? Well it's true, they are real! And we can see them by with the `-a` flag.
-
-```
-ls -a
-```
-
-Hidden Files are typically used by applications to store configurations and there will be a many of them in your home directory. Most users don't want to be editing these files so they don't show up in `Finder`, but you as a software developer will be editing some these for yourself later on in the course.
-
-Hidden files are hidden because their names begin with `.`
+You may not realize it, but there are **hidden files and directories** scattered throughout your computer's operating system. All it takes to hide a file or directory is to start its name with period `.` prefix. Hidden items can be revealed by using the `-a` flag with the `ls` command.
 
 `ls -hal`
 
-**TIP:** `la`
+![](https://i.imgur.com/AIKsLux.png)
 
-### Question?
+Many programs have configuration settings that they want stored out of plain sight from users. Traditionally, these settings are stored in hidden files and directories in your home directory. As a professional web developer, you'll want to access and modify these settings and, throughout this course, you'll be doing just that.
 
-INSERT QUESTION HERE
+**TIP:** In fish, the `la` command is the same as `ls -hal` only faster to type.
 
-## The `man` command
+## Manual pages
 
-How can you know what flags may be used for a given command?
+A **manual page** (or man page) is a form of documentation that explains how a command works. It includes what the command does, the specifics of how you run it, and what arguments and flags it accepts. Some man pages are a little hard to get your head around. But they're fairly consistent in their structure, so once you get the hang of it it's not too bad. You can access a man page by using the `man` command.
 
-Shells provide a system command called `man` (short for manual). You provide this command plus the name of another command and it'll return a manual explaining how that command works and what options it provides.
+### The `man` command
 
-Type the following command at your prompt:
+Let's use the `man` command to display the man page for the `ls` command.
 
 ```
 man ls
 ```
 
-The man command provides access to the built-in manual for all unix commands. Often these manual pages include useful examples for common and advanced usage patterns.
+![](https://i.imgur.com/CdYtnkQ.png)
 
-To quit the `man` page and return to the shell, press the `q` key.
+Use the down arrow `↓` key to scroll down and the up arrow `↑` key to scroll up. To quit a `man` page and return to the shell, press the `q` key.
 
-### Practice
+### Exercise
 
-With the `man` command, spend 3 minutes discovering new flags for the `ls` command. Try out different combinations of flags to see what they do. For each flag you try, make a prediction about the effect it will have. After trying it, review your prediction.
+With the `man` command, spend three minutes discovering new flags for the `ls` command. Try out different combinations of flags to see what they do. For each flag you try, make a prediction about the effect it will have. After trying it, review your prediction.
 
-Were you right? If not, in what way were you wrong? What happened that surprised you? These sorts of surprises are the seeds of learning. Treasure them.
+Were you right? If not, in what way were you wrong? What happened that surprised you? These sorts of surprises are the seeds of learning so treasure them.
 
 **TIP:** http://explainshell.com/ is a great resource for understanding [complex shell commands](http://explainshell.com/explain?cmd=ls+-hal).
 
-## The `open` command
+## Graphical user interfaces
 
-The file structure you see in the shell is the same as the one you see in the Finder application. Finder tends to hide some of the folders from you to keep things simple for most users, but everywhere that you go in Finder is accessible through shell.
+The file structure you see in the textual command line interface is the same as the one you see in the graphical interface via the Finder application. The only difference is the Finder tends to hide some of the files and directories to keep things simple for most users.
 
-Wherever we are, `open .`, opens a `Finder` window in the current directory, this can be handy sometimes. Type that command into your terminal now.
+**TIP:** The Finder on Mac OS X is equivalent to the Explorer on Windows.
 
-`open .`
+### The `open` command
 
-**TIP:** The period `.` character represents the **current working directory**.
+The `open` command opens a directory in the Finder which can be really handy. Let's give that a try right now.
 
-### Question?
+```
+open .
+```
 
-INSERT QUESTION HERE
+![](https://i.imgur.com/ckQDqNp.png)
+
+**TIP:** Remember, the period `.` character represents the current working directory.
+
+### Exercise
+
+Why can't you see any hidden files and directories in the Finder?
 
 ## Review
 
 - What's the command for displaying the username of the current user?
 - What's the command for printing the current working directory?
+- What's the character that represents the current working directory?
 - What's a home directory?
 - What's the character that represents the home directory?
 - What's a path?
@@ -245,12 +280,11 @@ INSERT QUESTION HERE
 - What's the flag for listing directories in long format?
 - What's a hidden file or directory?
 - What's the flag for listing the hidden content of a directory?
-- What's the command for display a command's manual page?
+- What's the command for displaying a command's manual page?
 - How do you quit a manual page and return to the shell?
 - What's the command for opening a directory in the Finder?
-- What's the character that represents the current working directory?
 
-## The `echo` command
+### The `echo` command
 
 The tilde `~` character represents the home directory. Try displaying the tilde `~` character with the `echo` command.
 
@@ -258,13 +292,13 @@ The tilde `~` character represents the home directory. Try displaying the tilde 
 echo ~
 ```
 
-### Question?
+### Exercise
 
 Is the output from this command the as the output you got from the `pwd` command?
 
-# <a name="navigating"></a>Navigating Around
+## File system navigation
 
-## The File System is a Tree
+### The File System is a Tree
 
 Install the `tree` command with Homebrew.
 
@@ -296,7 +330,8 @@ Your file system is a "tree". This is a very common data structure in computer p
 
 In our file system *nodes* can be directories or files. The parent of any file or directory is the directory that contains that file or directory. There is exactly one directory in the file system that doesn't have a parent. This is called the **"root directory"**.
 
-## Root Directory
+### Root Directory
+
 Another important directory is the root directory `/`
 
 **Try This**:
@@ -319,7 +354,8 @@ $ pwd
 
 Remember, the `~` always refers to the current user's home directory, this is handy for scripts and for you, but you can use the full path just as well if you know it, `pwd` will give you the full path.
 
-## Relative Paths
+### Parent directories
+
 **Try this:**
 
 ```
@@ -329,7 +365,7 @@ pwd
 
 What happened? Which directory are you in?
 
-In the terminal, the `.` character refers to the **current working directory** and two dots `..` refers to the current directories **parent** directory. What happens if you try this:
+In the terminal, the `.` character refers to the current working directory and two dots `..` refers to the current directories **parent directory**. What happens if you try this:
 
 ```
 $ cd /
@@ -338,7 +374,7 @@ $ cd ..
 
 The terminal ignores `cd ..` in this case. the root directory is the only directory in your entire file system that does not have a parent.  
 
-(`../`) is a **relative paths** and you can use it anywhere you would use a path. What happens if we type:
+(`../`) is a relative path you can use it anywhere you would use a path. What happens if we type:
 
 ```
 $ ls -l ~/Documents/../
@@ -358,9 +394,10 @@ drwxr-xr-x+  4 Guest  _guest  136 Nov  4 10:47 Public
 
 The command means, list the contents of the parent of `~/Documents/` So it listed the contents of `~`, or the home directory.
 
-Any path starting with a `/` is said to be an **absolute path** and it is the complete path starting from the root directory. Relative paths (ones that do not begin with a `/`) are relative to your current location.
+Any path starting with a `/` is said to be an absolute path and it is the complete path starting from the root directory. Relative paths (ones that do not begin with a `/`) are relative to your current location.
 
 ## Tab Completion
+
 Hitting `<TAB>` autocompletes.  Hit `<TAB>` constantly. Try it right now! Type:
 
 `$ cd ~/L` THEN HIT TAB!
@@ -375,13 +412,12 @@ This way you can easily see the competing outcomes of autocomplete. What happens
 
 The competing options for me are `Desktop/`, `Documents/`, and `Downloads/`
 
-## Practice
-**Exercise: 5 minutes**
+### Exercise
 
-Navigate to around your computer's file system from the command line. Use a mixture of relative and absolute paths to navigate around. See what dark corners you can discover in your operating system.
+Spend three minutes navigating around your computer's file system from the command line. Use a mixture of relative and absolute paths to navigate around. See what dark corners you can discover in your operating system.
 
+## Review
 
-## Mini Review - Navigating Around
 * `tree`
 * Root directory
 * `cd /`
@@ -390,9 +426,9 @@ Navigate to around your computer's file system from the command line. Use a mixt
 * `cd relative/path`
 * Tab Completion
 
-# <a name="files"></a>File Manipulation
+## File system manipulation
 
-## mkdir
+### The `mkdir` command
 
 Now that we know how to move around, it's time to make some changes. We can make directories with the `mkdir` command.  
 
@@ -408,11 +444,12 @@ $ mkdir notebook
 
 What command can you use to see the results of your handywork?
 
-## Adding Files
+### Adding Files
 
 Let's `cd` into our new `notebook`  Look around with `ls`, and `ls -la`.  What do you see?
 
-**Exercise**
+### Exercise
+
 I want my note book to have some notes.  
 
 `$ touch notes.txt`
@@ -425,15 +462,13 @@ What did the command `touch` do? You can use `touch` to do more than just create
 
 `$ cat notes.txt`
 
-
-
-## Removing files
+### Removing files
 
 We've created a file, so let's try removing it.
 
 `$ rm notes.txt`
 
-## Creating some notes
+### Creating some notes
 
 `$ history`
 
@@ -472,7 +507,7 @@ Our old text has been replaced with the new text. Sometimes we'll want to **appe
 
 `$ history >> notes.txt`
 
-## Piping
+### Piping
 
 The Unix Philosophy is "do one thing, and do it well." Complex problems are solved by using small and simple modules, and chaining them together. This is a great way to think about software, and in terminal programming we chain commands using the `|` or pipe character.
 
@@ -500,7 +535,7 @@ See how we filtered out just the lines that contain Mil?  Try grepping for somet
 
 Adapted from [http://en.flossmanuals.net/command-line/piping/](http://en.flossmanuals.net/command-line/piping/)
 
-### Excercise: Using grep
+### Exercise: Using grep
 
 `grep` is a powerful command that can search through text output for matching text, or patterns of text. Use pipes, grep, and the commands we've learned about so far to do the following:
 
@@ -521,8 +556,6 @@ Milton, John:Paradise Lost
 ```
 
 > hint: you will need to use the `.*` wildcard to complete this challenge. In grep `.` means 'match any single character" and `.*` means match any number of any character. `.*:` means match any number of any character until we find a colon. `.*F` means match any number of any characters until we find a capital F.
-
-
 
 ## Moving
 
@@ -584,7 +617,7 @@ Sometimes we want to refer to a bunch of similar files, to do this we can use wi
 
 For more ideas go here: [How to Use Wildcards](http://www.linfo.org/wildcard.html)
 
-## Mini Review - File Maniuplation
+## Review
 
 * `mkdir`
 * editing files
@@ -620,39 +653,6 @@ The next 9 characters are one of 4 characters, and refer to what can be done to 
 
 After that we see `1 Tyler  staff  413 Oct 15 11:22 books.txt`. This line tells that Tyler owns this file; the file belongs to the staff group; its size is 413 bytes; it was last modified Oct 15th at 11:22 and the name of the file is books.txt. The 1 at the start refers to how many files a directory contains, it is always 1 for regular files but might be larger for directories.  
 
-You can change permissions with `chmod` (short for change mode) and you can change file ownership with `chown` (short for change owner). For now we'll leave permissions at that if you're interested in more this is a nice tutorial: [http://en.flossmanuals.net/command-line/permissions/](http://en.flossmanuals.net/command-line/permissions/)
-
-You can also look at the man pages for `chown` and `chmod`. Lets try changing the permissions and ownership of our bookshelf!
-
-```
-$ chmod 400 bookshelf.txt
-$ ls -l bookshelf.txt
--r--------  1 Tyler   staff  106 Oct 15 13:40 bookshelf.txt
-
-```
-Now only the owner has permission to do anything, and all they can do is read the file. If you try to edit that file with nano, and save, what happens?
-
-Lets try changing the ownership of the file:
-
-```
-$ chown StrangeUser:staff bookshelf.txt
-chown: bookshelf.txt: Operation not permitted
-```
-
-This failed, because even though your user owns that file, you're not allowed to write to it! So, this begs the question -- if no one is allowed to write to this file, can we ever change or delete it?!
-
-Enter `root`. Root is the administrative user. Root has all permissions. Root can do anything. You can become this "super user" to run a command using the `sudo` (super user do) command.
-
-**Try This**:
-
-```
-sudo chown StrangeUser:staff bookshelf.txt
-```
-
-You should be asked for your password, then the command will execute as if you are `root`. Root has all permissions for all things. Running commands as `root` can be dangerous, and unless you know what you're doing and know why you need to be root, I suggest not using `sudo`.
-
->Pro-tip: You can use `!!` as a shortcut to repeat the last command. A common idiom is to try a command, and if permission is denied to your current user, try `sudo !!` to repeat the previous command as root.
-
 ## History
 
 Wow, we've done a lot of work. Remembering all these commands can be hard. Luckily our shell remembers a lot of what we've done for us! Try tapping the up arrow in your shell. What happens? We can scroll up and down through the most recent commands we've executed.
@@ -669,29 +669,39 @@ Searching through history can be very useful if you know you've done something, 
 
 You can scroll up and down through all recently used commands that contain the string 'ls' using `ctrl+r` and `ctrl+shift+r` to go backwards.
 
-If you don't want to execute any of these commands, type `ctrl+c`. Control+c is a powerful command that you can use at any time to kill the currently running terminal process, or exit many terminal applications.
-
-# <a name="review"></a>Review
-
-## Getting Help
-Don't forget about the command `man`! Short for **manual**, it will give a (hopefully) detailed explanation of that command.  Sometimes that explanation will be too detailed for you.  When you get lost in a man page and you want to understand it, start again from the beginning of the **man page** and keep repeating.  Hopefully you will get further into the page each time you read it.
-
->Pro-tip: when you're feeling meta, try the command `man man`
-
-Many advanced commands also accept the --help, or -h option, but not all, but if you get stuck it can be worth a try. Most of the commands covered in this simple overview do not support this feature
-
-`$ git --help`
-
-### Terminal Cheat Sheet
+If you don't want to execute any of these commands, type `ctrl+c`. Control+c is a powerful command that you can use at any time to kill the currently running terminal process, or exit many terminal applications.### Terminal Cheat Sheet
 Bookmark this:
 
 * [http://bit.ly/terminalcheats](http://bit.ly/terminalcheats)
 
-### Homework!
+### Exercise
 
 Solve the [Command Line Murder Mystery](https://github.com/veltman/clmystery). To get started, fork and clone the repo to your local machine. Further instructions can be found in the README for the mystery. Good luck!
 
 ### Additional Resources
 
+>Pro-tip:
+>[www.explainshell.com](http://explainshell.com/) is a great resource for understanding shell commands. Commands can get complex, take a look at this command which copies any file under `/path/to/search/` whose name contains the word "smile" to the directory `/target/path/`:
+
+>`find /path/to/search/ -type f -name ".*smile.*" | xargs cp -t /target/path/;`
+
+> Read about [this command on Stack Overflow](http://stackoverflow.com/questions/17368872/how-to-move-or-copy-files-listed-by-find-command-in-unix) then try examining [that command on explain shell](http://explainshell.com/explain?cmd=find+%2Fpath%2Fto%2Fsearch%2F+-type+f+-name+%22.*smile.*%22+|+xargs+cp+-t+%2Ftarget%2Fpath%2F). The command line is very powerful. Don't worry if this command doesn't make sense yet.
+
 Learn the Command Line the Hard Way is a great book for learning the command line. Check it out!
 http://cli.learncodethehardway.org/book/
+
+[http://bit.ly/terminalcheats](http://bit.ly/terminalcheats)
+
+* Explore interesting, but non-essential commands on your own:
+	* networks: `ping, curl, wget, traceroute`
+	* systems: `ps, top, df`
+
+[CMD Line Warmup](https://github.com/gSchool/cmdLineWarmup)
+
+## Slides
+
+[Slide Deck Option 1](https://docs.google.com/presentation/d/10THpOD-J8vSPFAGiB3dU4w8wEstZ8PkxNIOrup3cTCU/edit#slide=id.gbf37db18e_0_32)
+
+[Slide Deck Option 2](https://docs.google.com/presentation/d/1IVdWBXeh9cIDqGZzslQoMfPPxwD-xZYpl36wBS-oSuQ/edit#slide=id.p)
+
+[CLI Assessment Review](https://docs.google.com/presentation/d/1Jhr3uhGQcUFizWu4nTJyz37Xy9mgffrN1kyMHiVUPYE/edit?usp=sharing)

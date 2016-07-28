@@ -10,6 +10,7 @@ By the end of Q1 you'll be able to build and deploy rich frontend applications!
       <th>Warmup</th>
       <th>Activities</th>
       <th>Exercises</th>
+      <th>Stretch</th>
     </tr>
   </thead>
   <tbody>
@@ -21,15 +22,21 @@ By the end of Q1 you'll be able to build and deploy rich frontend applications!
       </td>
       <td>
       </td>
+      <td>
+      </td>
     </tr>
     <tr>
       <td><a href="../../Misc/Learning to Learn.md">Learning to Learn</a>
       </td>
       <td>
       </td>
+      <td>
+      </td>
     </tr>
     <tr>
       <td><a href="../../Development Environment/README.md">Setup Development Environment</a>
+      </td>
+      <td>
       </td>
       <td>
       </td>
@@ -42,11 +49,15 @@ By the end of Q1 you'll be able to build and deploy rich frontend applications!
       </td>
       <td>
       </td>
+      <td>
+      </td>
     </tr>
     <tr>
       <td><a href="../../Misc/Command Line.md">Intro to the Command Line</a>
       </td>
       <td><a href="https://github.com/ryansobol/clmystery">Command Line Murder Mystery</a>
+      </td>
+      <td><a href="Misc/Intermediate Command Line.md">Intermediate Command Line</a>
       </td>
     </tr>
   </tbody>

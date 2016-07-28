@@ -5,6 +5,7 @@ table
       th Warmup
       th Activities
       th Exercises
+      th Stretch
   tbody
     for day in data
       tr
@@ -21,6 +22,10 @@ table
           if day.firstActivity && day.firstActivity.exercise
             a(href=day.firstActivity.exercise.url)
               = day.firstActivity.exercise.text
+        td
+          if day.firstActivity && day.firstActivity.stretch
+            a(href=day.firstActivity.stretch.url)
+              = day.firstActivity.stretch.text
       for activity in day.otherActivities
         tr
           td
@@ -31,3 +36,7 @@ table
             if activity && activity.exercise
               a(href=activity.exercise.url)
                 = activity.exercise.text
+          td
+            if activity && activity.stretch
+              a(href=activity.stretch.url)
+                = activity.stretch.text
