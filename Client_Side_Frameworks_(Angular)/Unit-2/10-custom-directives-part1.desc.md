@@ -289,16 +289,16 @@ app.directive('gsYoyoDetails', function() {
 
 ```
 
-
-
 #### Isolate Scope
+
+**EXERCISE 6**
 
 Once you have more than one yoyo, and you have a copy of your custom directive on the page for each yoyo, we can create an isolate scope by using the `scope` option when we create our directive. Here's the basic syntax:
 
 ```javascript
 app.directive('gsYoyoDetails', function() {
   return {
-    templateUrl: '../yoyo-details.html',
+    templateUrl: 'templates/yoyo-details.html',
     scope: {
       yoyoInDirective: '=yoyoAttribute'
     }
@@ -315,35 +315,34 @@ The value of `scope` must be an object. The keys in this object (e.g. `yoyoInDir
 <img ng-src="{{ yoyoInDirective.img }}">
 ```
 
-As you can see, the value corresponding to `yoyoDirective` is `'=yoyoAttribute'`. Let's ignore the equals sign for a moment (we'll get to it later). The 'yoyoAttribue' corresponds to an _attribute name_ that we must use when passing data from our controller to our directive. Passing data via attributes is how we get the parts of the scope that we care about into our directive.
+As you can see, the value corresponding to `yoyoDirective` is `'=yoyoAttribute'`. Let's ignore the equals sign for a moment (we'll get to it later). The 'yoyoAttribute' corresponds to an _attribute name_ that we must use when passing data from our controller to our directive. Passing data via attributes is how we get the parts of the scope that we care about into our directive.
 
 In the current example, this means we need to include an attribute so that our custom directive looks like this:
 
 ```html
-<gs-yoyo-details yoyo-attribute="yoyo" ng-repeat="yoyo in view.yoyos"></gs-yoyo-details>
+<gs-yoyo-details yoyo-attribute="yoyo" ng-repeat="yoyo in YC.yoyos"></gs-yoyo-details>
 ```
 
 At the risk of making things overly verbose, let's change the placeholder name we're repeating over from `yoyo` to `yoyoFromRepeat`. Then our HTML would look like this:
 
 ```html
-<gs-yoyo-details yoyo-attribute="yoyoFromRepeat" ng-repeat="yoyoFromRepeat in view.yoyos"></gs-yoyo-details>
+<gs-yoyo-details yoyo-attribute="yoyoFromRepeat" ng-repeat="yoyoFromRepeat in YC.yoyos"></gs-yoyo-details>
 ```
 
 So, how does data about an individual yoyo get passed from our controller to our directive?
 
 1. We iterate over each `yoyo` in the controller's `yoyos` array, storing the data in `yoyoFromRepeat`.
 2. Each `yoyoFromRepeat` gets passed into our custom directive via the `yoyo-attribute` attribute.
-3. In the html for our custom directive, we have access to `yoyoFromRepeat`'s data in `yoyoInDirective`. This conndtion is possible because we told our directive that `yoyoInDirective` should correspond to whatever we pass into the directive via the `yoyo-attribute` attribute.
+3. In the html for our custom directive, we have access to `yoyoFromRepeat`'s data in `yoyoInDirective`. This condition is possible because we told our directive that `yoyoInDirective` should correspond to whatever we pass into the directive via the `yoyo-attribute` attribute.
 
 Of course, we've now got two different names for our data depending on where we are (`yoyoFromRepeat` and `yoyoInDirective`), plus a third name for the attribute on our directive. It's common to name all of these the same; the downside with this approach is that if we name everything `yoyo`, it's much less clear how the directive's isolate scope is connected to the controller's scope.
 
-**Exercise** Refactor your code to eliminate `yoyoInDirective`, `yoyoAttribute`, and `yoyoFromRepeat` in favor of just `yoyo`.
+**EXERCISE 6.1** Refactor your code to eliminate `yoyoInDirective`, `yoyoAttribute`, and `yoyoFromRepeat` in favor of just `yoyo`.
 
-**Exercise** Fun fact: if in your scope you have a key and value with the same name (e.g. `foo: '=foo'`), you can omit the name in the value (e.g. `foo`: '=') and Angular will still know what to do! Use this to refactor your directive even more.
+**EXERCISE 6.2** Fun fact: if in your scope you have a key and value with the same name (e.g. `foo: '=foo'`), you can omit the name in the value (e.g. `foo`: '=') and Angular will still know what to do! Use this to refactor your directive even more.
 
-**Exercise** After completing the previous two exercises, try replacing one of the strings `yoyo` somewhere in your app with the string `foo`. Where else do you need to replace `yoyo` by `foo` to get your app working again?
 
-**EXERCISE**
+**EXERCISE 7**
 Create an app that uses the [pokemon api](http://pokeapi.co/docs/).  The app should first make a request to the pokedex to get all possible pokemon.  Then randomly select 5 pokemon to display.  The app should display the pokemon's name, types, name of moves (limit it to 6), and a sprite for the pokemon. Use a custom directive to display the pokemon.
 
 The app should use a custom directive for each pokemon (eg `pokemon-item`).
