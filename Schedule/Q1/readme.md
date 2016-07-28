@@ -72,7 +72,26 @@ By the end of Q1 you'll be able to build and deploy rich frontend applications!
       </td>
     </tr>
     <tr>
-      <td><a href="../../JavaScript/Intro to Programming.md">Intro to Programming</a>
+      <td><a href="../../JavaScript/Vocabulary.md">JavaScript Vocabulary</a>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <th rowspan="2">Thursday</th>
+      <td rowspan="2"><a href="https://github.com/sethvincent/javascripting">JavaScripting (con't)</a>
+      </td>
+      <td><a href="../../JavaScript/Intro.md">JavaScript: Intro, Types, Values, Variables, Control Flow</a>
+      </td>
+      <td><a href="../../https://github.com/gSchool/javascript-statements">JavaScript Statements</a>
+      </td>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <td><a href="../../JavaScript/Functions.md">JavaScript Functions</a>
       </td>
       <td>
       </td>

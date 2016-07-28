@@ -33,7 +33,19 @@ function q1() {
           article: {text: "Intro to Git and Github", path: "Misc/Intro to Git.md"},
         },
         {
-          article: {text: "Intro to Programming", path: "JavaScript/Intro to Programming.md"},
+          article: {text: "JavaScript Vocabulary", path: "JavaScript/Vocabulary.md"},
+        },
+      ],
+    },
+    {
+      warmup: { text: "JavaScripting (con't)", url: "https://github.com/sethvincent/javascripting" },
+      activities: [
+        {
+          article: {text: "JavaScript: Intro, Types, Values, Variables, Control Flow", path: "JavaScript/Intro.md"},
+          exercise: {text: "JavaScript Statements", path: "https://github.com/gSchool/javascript-statements"},
+        },
+        {
+          article: {text: "JavaScript Functions", path: "JavaScript/Functions.md"},
         },
       ],
     },
