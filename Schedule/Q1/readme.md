@@ -60,6 +60,17 @@ By the end of Q1 you'll be able to build and deploy rich frontend applications!
       <td><a href="Misc/Intermediate Command Line.md">Intermediate Command Line</a>
       </td>
     </tr>
+    <tr>
+      <th rowspan="1">Wednesday</th>
+      <td rowspan="1"><a href="https://github.com/sethvincent/javascripting">JavaScripting</a>
+      </td>
+      <td><a href="../../Misc/Intro to Git.md">Intro to Git and Github</a>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+    </tr>
   </tbody>
 </table>
 <!-- END SCHEDULE -->

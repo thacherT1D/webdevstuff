@@ -26,6 +26,14 @@ function q1() {
         },
       ],
     },
+    {
+      warmup: { text: "JavaScripting", url: "https://github.com/sethvincent/javascripting" },
+      activities: [
+        {
+          article: {text: "Intro to Git and Github", path: "Misc/Intro to Git.md"},
+        },
+      ],
+    },
   ]
 }
 
