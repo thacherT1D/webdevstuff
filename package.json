@@ -1,0 +1,23 @@
+{
+  "name": "fs-curriculum",
+  "version": "1.0.0",
+  "description": "Build tools for fs-curriculum",
+  "dependencies": {
+    "pug": "^2.0.0-beta4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "build": "node build/schedule.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gSchool/fs-curriculum.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gSchool/fs-curriculum/issues"
+  },
+  "homepage": "https://github.com/gSchool/fs-curriculum#readme"
+}

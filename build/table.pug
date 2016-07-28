@@ -1,0 +1,33 @@
+table
+  thead
+    tr
+      th Day
+      th Warmup
+      th Activities
+      th Exercises
+  tbody
+    for day in data
+      tr
+        th(rowspan=day.activities.length)= day.name
+        td(rowspan=day.activities.length)
+          if day.warmup
+            a(href=day.warmup.url)
+              = day.warmup.text
+        td
+          if day.firstActivity && day.firstActivity.article
+            a(href=day.firstActivity.article.url)
+              = day.firstActivity.article.text
+        td
+          if day.firstActivity && day.firstActivity.exercise
+            a(href=day.firstActivity.exercise.url)
+              = day.firstActivity.exercise.text
+      for activity in day.otherActivities
+        tr
+          td
+            if activity && activity.article
+              a(href=activity.article.url)
+                = activity.article.text
+          td
+            if activity && activity.exercise
+              a(href=activity.exercise.url)
+                = activity.exercise.text
