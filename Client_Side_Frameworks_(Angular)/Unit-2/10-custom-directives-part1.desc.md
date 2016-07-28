@@ -4,7 +4,7 @@
 - Objective 3
 
 ## Framing
-Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing 
+Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing Framing
 
 ## Custom Directives
 
@@ -116,9 +116,9 @@ Note that we're using a custom directive in three ways: as an element, as an att
 
 **Example 3 - Template Url**
 
-Typically a directive's template will become larger.  To make the directive cleaner, you can use `templateUrl` instead of `template` in the directive.  The `templateUrl` defines an html file that will be requested via ajax and used as the template.
+Typically, a directive's template will become larger.  To make the directive cleaner, you can use `templateUrl` instead of `template` in the directive.  The `templateUrl` defines an html file that will be requested via ajax and used as the template.
 
-We will be storing out `html` template in a folder named `templates`.
+We will be storing our `html` templates in a folder named `templates`.
 
 Create a folder named `templates`. In that folder, create a file named `gsAngularLogo.html`. In that file add:
 
@@ -160,15 +160,10 @@ app.directive('gsAngularLogo', function() {
 </body>
 ```
 
-
-
-
-
 **EXERCISE 3**
 
-Fix our example to use `templateUrl` instead of template.  **HINT**: Keep in mind that the request for the `templateUrl` is via **ajax**.
-
-create several directives and have templateurl for each.
+In an angular application, create 2 separate custom directives that us `templateUrl`.
+Use these 2 separate custom directives in the `index.html`.
 
 
 ### Directives And Scope
