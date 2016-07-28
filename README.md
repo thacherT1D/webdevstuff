@@ -61,10 +61,18 @@
       </td>
     </tr>
     <tr>
-      <th rowspan="1">Wednesday</th>
-      <td rowspan="1"><a href="https://github.com/sethvincent/javascripting">JavaScripting</a>
+      <th rowspan="2">Wednesday</th>
+      <td rowspan="2"><a href="https://github.com/sethvincent/javascripting">JavaScripting</a>
       </td>
       <td><a href="Misc/Intro to Git.md">Intro to Git and Github</a>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <td><a href="JavaScript/Intro to Programming.md">Intro to Programming</a>
       </td>
       <td>
       </td>

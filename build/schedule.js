@@ -32,6 +32,9 @@ function q1() {
         {
           article: {text: "Intro to Git and Github", path: "Misc/Intro to Git.md"},
         },
+        {
+          article: {text: "Intro to Programming", path: "JavaScript/Intro to Programming.md"},
+        },
       ],
     },
   ]
