@@ -95,7 +95,7 @@ These values should **NEVER** be changed!
 
 ### Creating our first Service
 
-#### **Note: a factory is a type of service. You will commonly see factories refered to as services**
+#### **Note: a factory is a type of service. You will commonly see factories referred to as services**
 
 To create a service, let's make sure we are using our new layout and have a `services.js` file. The syntax to create a service looks like this:
 

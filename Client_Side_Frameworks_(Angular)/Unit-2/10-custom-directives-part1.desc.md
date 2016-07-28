@@ -343,7 +343,7 @@ Of course, we've now got two different names for our data depending on where we 
 **EXERCISE 6.2** Fun fact: if in your scope you have a key and value with the same name (e.g. `foo: '=foo'`), you can omit the name in the value (e.g. `foo`: '=') and Angular will still know what to do! Use this to refactor your directive even more.
 
 **EXERCISE 7**
-Create an app that uses the JSON data located in the `user.json` file in the `Exercise_7` folder. Create a 'card' for each user, have each piece of information be on a separate line. The data is loaded using the `$http` service, and is available to use in the `vm.users` variable.
+Create an app that uses the JSON data located in the `user.json` file in the `Exercise_7` folder. Create a 'card' for each user (do not use a table), have each piece of information be on a separate line. The data is loaded using the `$http` service, and is available to use in the `vm.users` variable.
 
 The app should use a custom directive for each user (eg `user-card`).
 
