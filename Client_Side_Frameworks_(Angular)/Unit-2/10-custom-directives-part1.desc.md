@@ -345,7 +345,6 @@ Of course, we've now got two different names for our data depending on where we 
 **EXERCISE 7**
 Create an app that uses the JSON data located in the `user.json` file in the `Exercise_7` folder. Create a 'card' for each user (do not use a table), have each piece of information be on a separate line. The data is loaded using the `$http` service, and is available to use in the `vm.users` variable.
 
-The app should use a custom directive for each user (eg `user-card`).
 
 **Bonus**: Use css floats to position the cards next to each other, extra bonus points if it is responsive
 

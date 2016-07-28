@@ -8,7 +8,7 @@ As we start building larger applications with multiple controllers, not only is 
 
 When you start learning about services you will see many different things around creating a `service`, `factory`, or `provider`. These are all commonly called services and one of them is called service...it's a bit tricky, but for the most part these three things serve very similar purposes and they are only a bit different. We will compare and contrast these later, but for now, let's learn a little more about how services work in Angular:
 
-Angular services are components that are added to your code via dependency injection.  From the[ angular docs](https://docs.angularjs.org/guide/services):
+Angular services are components that are added to your code via dependency injection.  From the [angular docs](https://docs.angularjs.org/guide/services):
 
 
 > Angular services are:
