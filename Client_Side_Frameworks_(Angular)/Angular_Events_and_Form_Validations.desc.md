@@ -1,5 +1,3 @@
-https://daveceddia.com/angular/handle-dom-events-the-angular-way-without-jquery/
-
 ## Objectives
 
 * Explain the difference between jQuery thinking and Angular thinking
