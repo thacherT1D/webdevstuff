@@ -34,7 +34,7 @@
     </tr>
     <tr>
       <th rowspan="2">Tuesday</th>
-      <td rowspan="2"><a>Typing</a>
+      <td rowspan="2"><a href="Misc/Typing.md">Typing</a>
       </td>
       <td><a href="Development Environment/README.md">Setup Development Environment</a>
       </td>

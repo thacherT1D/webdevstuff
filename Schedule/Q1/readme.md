@@ -36,7 +36,7 @@ By the end of Q1 you'll be able to build and deploy rich frontend applications!
     </tr>
     <tr>
       <th rowspan="2">Tuesday</th>
-      <td rowspan="2"><a>Typing</a>
+      <td rowspan="2"><a href="../../Misc/Typing.md">Typing</a>
       </td>
       <td><a href="../../Development Environment/README.md">Setup Development Environment</a>
       </td>

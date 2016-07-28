@@ -38,7 +38,7 @@ function dataFor(base) {
     day.name = days[i % 5]
 
     if (day.warmup && day.warmup.path) {
-      normalize(day.warmup.path, base)
+      day.warmup.url = normalize(day.warmup.path, base)
     }
 
     day.activities.forEach(function (activity) {
