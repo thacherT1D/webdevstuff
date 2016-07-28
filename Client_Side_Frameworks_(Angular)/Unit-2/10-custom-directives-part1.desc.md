@@ -109,7 +109,7 @@ Note that we're using a custom directive in three ways: as an element, as an att
 
 (As an aside, if you check out the [Angular Custom Directive Documentation](https://docs.angularjs.org/guide/directive) you'll see it's also possible to trigger a directive by comment. However, this feature is included mainly for compatibility with older versions of angular, and shouldn't be used. Stick to elements and attributes.)
 
-**Example 3 - Template Url**
+**EXAMPLE 3 - Template Url**
 
 Typically, a directive's template will become larger.  To make the directive cleaner, you can use `templateUrl` instead of `template` in the directive.  The `templateUrl` defines an html file that will be requested via ajax and used as the template.
 
