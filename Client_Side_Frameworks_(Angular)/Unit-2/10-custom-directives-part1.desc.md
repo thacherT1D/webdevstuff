@@ -1,9 +1,6 @@
 ## Objectives
 - Implement Custom Directives
 
-## Framing
-
-
 ## Custom Directives
 
 Way back in when we studied [Angular Directives](/redirects/articles/4880), we went over built in directives.  These are directives that Angular comes with.  In this lesson, we're going to build our own custom directives. But first...
