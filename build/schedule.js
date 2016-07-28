@@ -63,6 +63,9 @@ function data() {
           },
         ],
       },
+      {
+        warmup: { text: "Memory Diagrams", path: "JavaScript Memory Diagrams" },
+      },
     ]
   }
 }
@@ -71,14 +74,25 @@ function normalize(path, base) {
   return '../'.repeat(base) + path
 }
 
+// takes the number of `../` to add to the path
+// returns an array of arrays, where each array represents 1 week
 function dataFor(base) {
-  let result = data().q1
-  result.forEach(function (day, i) {
+  let result = []
+  let week
+
+  data().q1.forEach(function (day, i) {
+    if (i % 5 === 0) { // start a new week every monday, every 5th day
+      week = []
+      result.push(week)
+    }
+    week.push(day)
+
     day.name = days[i % 5]
 
     if (day.warmup && day.warmup.path) {
       day.warmup.url = normalize(day.warmup.path, base)
     }
+    day.activities = day.activities || []
 
     day.activities.forEach(function (activity) {
       if (activity.article && activity.article.path) {
@@ -100,7 +114,34 @@ function dataFor(base) {
 }
 
 function renderTo(path, template, base) {
-  let html = template({data: dataFor(base)});
+  let weeks = dataFor(base)
+
+  let tables = weeks.map(week => template({data: week}))
+
+  const file = fs.readFileSync(path, 'utf8')
+  const lines = file.split("\n")
+  const startLine = lines.indexOf('<!-- BEGIN SCHEDULE -->')
+  const endLine = lines.indexOf('<!-- END SCHEDULE -->')
+
+  let segments = []
+  tables.forEach(function (table, i) {
+    segments.push(`Week ${i + 1}`)
+    segments.push(table)
+    segments.push('')
+    segments.push('')
+  })
+  let html = segments.join('\n').trim()
+
+  lines.splice(startLine + 1, endLine - startLine - 1)
+  lines.splice(startLine + 1, 0, html)
+
+  console.log(lines.join("\n"));
+  fs.writeFileSync(path, lines.join('\n'))
+}
+
+function renderToWeek(path, template, base, weekNumber) {
+  let weeks = dataFor(base)
+  let html = template({data: weeks[weekNumber]})
 
   const file = fs.readFileSync(path, 'utf8')
   const lines = file.split("\n")
@@ -108,7 +149,7 @@ function renderTo(path, template, base) {
   const endLine = lines.indexOf('<!-- END SCHEDULE -->')
 
   lines.splice(startLine + 1, endLine - startLine - 1)
-  lines.splice(startLine + 1, 0, html.trim())
+  lines.splice(startLine + 1, 0, html)
 
   console.log(lines.join("\n"));
   fs.writeFileSync(path, lines.join('\n'))
@@ -119,3 +160,6 @@ let template = pug.compileFile(templatePath, {pretty: true});
 
 renderTo('./README.md', template, 0)
 renderTo('./Schedule/Q1/README.md', template, 2)
+
+renderToWeek('./Schedule/Q1/week-1.md', template, 2, 0)
+renderToWeek('./Schedule/Q1/week-2.md', template, 2, 1)
