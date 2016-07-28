@@ -37,3 +37,8 @@ Now it's time to review:
   - In Chrome, open multiple tabs, switch between them and close some
   - In Chrome, open multiple windows, switch between them and close some
   - In terminal, open multiple tabs, switch between them and close some
+
+## Next Steps
+
+- [Check your answers](Final Check Answers.md)
+- Learn more [Keyboard Shortcuts](Keyboard Shortcuts.md)
