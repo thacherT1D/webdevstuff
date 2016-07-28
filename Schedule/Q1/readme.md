@@ -98,6 +98,25 @@ By the end of Q1 you'll be able to build and deploy rich frontend applications!
       <td>
       </td>
     </tr>
+    <tr>
+      <th rowspan="2">Friday</th>
+      <td rowspan="2"><a href="https://github.com/sethvincent/javascripting">JavaScripting (con't)</a>
+      </td>
+      <td><a href="../../JavaScript/Functions.md">JavaScript Functions (con't)</a>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <td><a href="../../JavaScript/Arrays-Objects-Iteration.md">JavaScript: Arrays, Objects, Iteration</a>
+      </td>
+      <td><a href="https://github.com/gSchool/javascript-statements">JavaScript Statements (con't)</a>
+      </td>
+      <td><a href="https://github.com/gSchool/ccf-data-structures">Crushing Candy Code: Data Structures</a>
+      </td>
+    </tr>
   </tbody>
 </table>
 <!-- END SCHEDULE -->
