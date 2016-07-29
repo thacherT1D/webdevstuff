@@ -190,8 +190,29 @@ module.exports = function() {
         warmup: { text: "SameDigits", url: "https://github.com/gSchool/g26-challenges-so-far/blob/master/w4/w4-t-equivalent-number/problem.js" },
         activities: [
           {
-            article: { text: "AJAX", url: "HTTP/AJAX.md" },
-            assignment: { text: "AJAX Hero", url: "https://github.com/gschool/wd-ajax-hero" },
+            article: { text: "Wireframing", url: "UI/Wireframing.md" },
+            assignment: { text: "Q1 Project", url: "Projects/Q1.md" },
+          },
+        ]
+      },
+      {
+        warmup: { text: "SameDigits", url: "https://github.com/gSchool/g26-challenges-so-far/blob/master/w4/w4-t-equivalent-number/problem.js" },
+        activities: [
+          {
+            article: { text: "Scope", url: "JavaScript/Scope.md" },
+            assignment: { text: "Function Tests", url: "https://github.com/gSchool/function-tests" },
+          },
+          {
+            article: { text: "Hoisting", url: "JavaScript/Hoisting.md" },
+          },
+          {
+            article: { text: "Higher Order Functions", url: "JavaScript/Higher Order Functions.md" },
+          },
+          {
+            article: { text: "Closures", url: "JavaScript/Closure.md" },
+          },
+          {
+            article: { text: "IIFEs", url: "JavaScript/IIFE.md" },
           },
         ]
       },

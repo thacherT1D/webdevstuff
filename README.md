@@ -353,9 +353,52 @@ Week 4
       <th rowspan="1">Wednesday</th>
       <td rowspan="1"><a href="https://github.com/gSchool/g26-challenges-so-far/blob/master/w4/w4-t-equivalent-number/problem.js">SameDigits</a>
       </td>
-      <td><a href="HTTP/AJAX.md">AJAX</a>
+      <td><a href="UI/Wireframing.md">Wireframing</a>
       </td>
-      <td><a href="https://github.com/gschool/wd-ajax-hero">AJAX Hero</a>
+      <td><a href="Projects/Q1.md">Q1 Project</a>
+      </td>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <th rowspan="5">Thursday</th>
+      <td rowspan="5"><a href="https://github.com/gSchool/g26-challenges-so-far/blob/master/w4/w4-t-equivalent-number/problem.js">SameDigits</a>
+      </td>
+      <td><a href="JavaScript/Scope.md">Scope</a>
+      </td>
+      <td><a href="https://github.com/gSchool/function-tests">Function Tests</a>
+      </td>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <td><a href="JavaScript/Hoisting.md">Hoisting</a>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <td><a href="JavaScript/Higher Order Functions.md">Higher Order Functions</a>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <td><a href="JavaScript/Closure.md">Closures</a>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <td><a href="JavaScript/IIFE.md">IIFEs</a>
+      </td>
+      <td>
       </td>
       <td>
       </td>
