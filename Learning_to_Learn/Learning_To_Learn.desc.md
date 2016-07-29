@@ -7,6 +7,18 @@ Being a student in this program is like drinking from a firehose. It's going to 
 - Identify a few personal strengths regarding this process.
 - Identify at least one personal weakness regarding this process.
 
+## Exercises
+1. Exercise 1
+2. Exercise 2
+3. Exercise 3
+
+## Resources
+
+* Resource 1 star
+* Resource 2 star
+- Resource 3 dash
+- Resource 4 dash
+
 ## Why is becoming a better learner important?
 
 Learning is essential to being a programmer. It's a huge field with new technologies and methodologies being discovered every day. Becoming a better learner will prepare you for a long and successful career. Also, we want Galvanize to be a transformative experience for you. In addition to programming skills and knowledge, we want to help grow your habits and mindsets.
