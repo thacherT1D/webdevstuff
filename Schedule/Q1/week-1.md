@@ -1,15 +1,14 @@
 # Quarter 1 - Week 1
 
 <!-- BEGIN SCHEDULE -->
-Week 1
 
 <table style="width: 100%">
   <thead>
     <tr>
       <th>Day</th>
       <th>Warmup</th>
-      <th>Activities</th>
-      <th>Exercises</th>
+      <th>Article</th>
+      <th>Assignment</th>
       <th>Stretch</th>
     </tr>
   </thead>
@@ -55,7 +54,7 @@ Week 1
     <tr>
       <td><a href="../../Misc/Command Line.md">Intro to the Command Line</a>
       </td>
-      <td><a href="https://github.com/ryansobol/clmystery">Command Line Murder Mystery</a>
+      <td>
       </td>
       <td><a href="Misc/Intermediate Command Line.md">Intermediate Command Line</a>
       </td>
@@ -85,7 +84,7 @@ Week 1
       </td>
       <td><a href="../../JavaScript/Intro.md">JavaScript: Intro, Types, Values, Variables, Control Flow</a>
       </td>
-      <td><a href="../../https://github.com/gSchool/javascript-statements">JavaScript Statements</a>
+      <td>
       </td>
       <td>
       </td>
@@ -112,56 +111,9 @@ Week 1
     <tr>
       <td><a href="../../JavaScript/Arrays-Objects-Iteration.md">JavaScript: Arrays, Objects, Iteration</a>
       </td>
-      <td><a href="https://github.com/gSchool/javascript-statements">JavaScript Statements (con't)</a>
+      <td>
       </td>
       <td><a href="https://github.com/gSchool/ccf-data-structures">Crushing Candy Code: Data Structures</a>
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-
-Week 2
-
-<table style="width: 100%">
-  <thead>
-    <tr>
-      <th>Day</th>
-      <th>Warmup</th>
-      <th>Activities</th>
-      <th>Exercises</th>
-      <th>Stretch</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th rowspan="2">Monday</th>
-      <td rowspan="2"><a href="../../JavaScript/Memory Diagrams.md">Memory Diagrams</a>
-      </td>
-      <td><a href="../../HTML/Intro.md">Intro to HTML</a>
-      </td>
-      <td><a href="https://github.com/gSchool/html-intro">HTML Intro</a>
-      </td>
-      <td><a href="../../HTML/Media.md">Media</a>
-      </td>
-    </tr>
-    <tr>
-      <td><a href="../../HTML/Semantic.md">Semantic HTML</a>
-      </td>
-      <td><a href="https://github.com/gSchool/semantic-html-exercise">Semantic HTML</a>
-      </td>
-      <td>
-      </td>
-    </tr>
-    <tr>
-      <th rowspan="1">Tuesday</th>
-      <td rowspan="1"><a href="https://github.com/gSchool/g26-challenges-so-far/blob/master/w2/w2-f-replace-with-alphabet-position/w2-f-replace-with-alphabet-position.js">Alphabet Position</a>
-      </td>
-      <td><a href="../../CSS/Intro.md">Intro to CSS</a>
-      </td>
-      <td><a href="https://github.com/gSchool/css-exercises">CSS Exercises</a>
-      </td>
-      <td>
       </td>
     </tr>
   </tbody>

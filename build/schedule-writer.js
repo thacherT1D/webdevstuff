@@ -30,8 +30,8 @@ function linkify(data, indentationLevel) {
       if (activity.article && activity.article.path) {
         activity.article.url = normalize(activity.article.path, indentationLevel)
       }
-      if (activity.exercise && activity.exercise.path) {
-        activity.exercise.url = normalize(activity.exercise.path, indentationLevel)
+      if (activity.assignment && activity.assignment.path) {
+        activity.assignment.url = normalize(activity.assignment.path, indentationLevel)
       }
       if (activity.stretch && activity.stretch.path) {
         activity.stretch.url = normalize(activity.stretch.path, indentationLevel)

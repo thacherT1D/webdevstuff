@@ -16,7 +16,7 @@ module.exports = function() {
           },
           {
             article: {text: "Intro to the Command Line", path: "Misc/Command Line.md"},
-            exercise: {text: "Command Line Murder Mystery", url: "https://github.com/ryansobol/clmystery"},
+            assignment: {text: "Command Line Murder Mystery", url: "https://github.com/ryansobol/clmystery"},
             stretch: {text: "Intermediate Command Line", url: "Misc/Intermediate Command Line.md"},
           },
         ],
@@ -37,7 +37,7 @@ module.exports = function() {
         activities: [
           {
             article: {text: "JavaScript: Intro, Types, Values, Variables, Control Flow", path: "JavaScript/Intro.md"},
-            exercise: {text: "JavaScript Statements", path: "https://github.com/gSchool/javascript-statements"},
+            assignment: {text: "JavaScript Statements", path: "https://github.com/gSchool/javascript-statements"},
           },
           {
             article: {text: "JavaScript Functions", path: "JavaScript/Functions.md"},
@@ -52,7 +52,7 @@ module.exports = function() {
           },
           {
             article: {text: "JavaScript: Arrays, Objects, Iteration", path: "JavaScript/Arrays-Objects-Iteration.md"},
-            exercise: {text: "JavaScript Statements (con't)", url: "https://github.com/gSchool/javascript-statements"},
+            assignment: {text: "JavaScript Statements (con't)", url: "https://github.com/gSchool/javascript-statements"},
             stretch: {text: "Crushing Candy Code: Data Structures", url: "https://github.com/gSchool/ccf-data-structures"},
           },
         ],
@@ -62,12 +62,12 @@ module.exports = function() {
         activities: [
           {
             article: { text: "Intro to HTML", path: "HTML/Intro.md" },
-            exercise: { text: "HTML Intro", url: "https://github.com/gSchool/html-intro" },
+            assignment: { text: "HTML Intro", url: "https://github.com/gSchool/html-intro" },
             stretch: { text: "Media", path: "HTML/Media.md" },
           },
           {
             article: { text: "Semantic HTML", path: "HTML/Semantic.md" },
-            exercise: { text: "Semantic HTML", url: "https://github.com/gSchool/semantic-html-exercise" },
+            assignment: { text: "Semantic HTML", url: "https://github.com/gSchool/semantic-html-assignment" },
           },
         ]
       },
@@ -76,7 +76,10 @@ module.exports = function() {
         activities: [
           {
             article: { text: "Intro to CSS", path: "CSS/Intro.md" },
-            exercise: { text: "CSS Exercises", url: "https://github.com/gSchool/css-exercises" },
+            assignment: { text: "CSS assignments", url: "https://github.com/gSchool/css-assignments" },
+          },
+          {
+            article: { text: "Intermediate CSS", path: "CSS/Intermediate.md" },
           },
         ]
       },
