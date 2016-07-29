@@ -1,10 +1,10 @@
 # Movie Search App.
 
-It's time to use everything you've learned so far in Angular to build a small movie search app. This project incorporates routes, custom directives, and the $http service.  Watch the following video to get a sense of how it works:
+It's time to use everything you've learned so far in Angular to build a small movie search app. Using the [OMDB API](http://www.omdbapi.com/), create a project that incorporates routes, custom directives, and the $http service.  Watch the following video to get a sense of how it works:
 
 <iframe src="https://player.vimeo.com/video/135991632" width="500" height="388" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
-[OMDB API](http://www.omdbapi.com/)
+
 
 ## WARNING
 
