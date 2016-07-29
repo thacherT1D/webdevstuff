@@ -128,6 +128,11 @@ module.exports = function() {
             article: { text: "CSS Frameworks", url: "CSS/Frameworks.md" },
             assignment: { text: "Galvanize Delivers", url: "https://github.com/gSchool/galvanize-delivers/" },
           },
+        ]
+      },
+      {
+        warmup: { text: "Double Char", url: "https://github.com/gSchool/master_warmup_repository_full_stack/blob/master/w3/w3-t-doubleChar/solution.js" },
+        activities: [
           {
             article: { text: "HTML Forms", url: "HTML/Forms.md" },
             assignment: { text: "HTML Forms", url: "https://github.com/gSchool/html-forms" },
@@ -141,6 +146,11 @@ module.exports = function() {
             article: { text: "Intro to jQuery", url: "jQuery/README.md" },
             assignment: { text: "JS DOM Tests Reloaded", url: "https://github.com/gSchool/js-dom-tests" },
           },
+        ]
+      },
+      {
+        warmup: { text: "Sum Range", url: "https://github.com/gSchool/master_warmup_repository_full_stack/blob/master/w3/w3-r-sum-of-numbers/solution.js" },
+        activities: [
           {
             article: { text: "jQuery Events", url: "jQuery/Events.md" },
             assignment: { text: "jQuery Calculator", url: "https://github.com/gSchool/jquery-calculator" },

@@ -250,8 +250,8 @@ Week 3
   </thead>
   <tbody>
     <tr>
-      <th rowspan="2">Monday</th>
-      <td rowspan="2"><a href="https://github.com/gSchool/master_warmup_repository_full_stack/blob/master/w3/w3-t-doubleChar/solution.js">Double Char</a>
+      <th rowspan="1">Monday</th>
+      <td rowspan="1"><a href="https://github.com/gSchool/master_warmup_repository_full_stack/blob/master/w3/w3-t-doubleChar/solution.js">Double Char</a>
       </td>
       <td><a href="../../CSS/Frameworks.md">CSS Frameworks</a>
       </td>
@@ -261,6 +261,9 @@ Week 3
       </td>
     </tr>
     <tr>
+      <th rowspan="1">Tuesday</th>
+      <td rowspan="1"><a href="https://github.com/gSchool/master_warmup_repository_full_stack/blob/master/w3/w3-t-doubleChar/solution.js">Double Char</a>
+      </td>
       <td><a href="../../HTML/Forms.md">HTML Forms</a>
       </td>
       <td><a href="https://github.com/gSchool/html-forms">HTML Forms</a>
@@ -269,8 +272,8 @@ Week 3
       </td>
     </tr>
     <tr>
-      <th rowspan="2">Tuesday</th>
-      <td rowspan="2"><a href="https://github.com/gSchool/master_warmup_repository_full_stack/blob/master/w3/w3-r-sum-of-numbers/solution.js">Sum Range</a>
+      <th rowspan="1">Wednesday</th>
+      <td rowspan="1"><a href="https://github.com/gSchool/master_warmup_repository_full_stack/blob/master/w3/w3-r-sum-of-numbers/solution.js">Sum Range</a>
       </td>
       <td><a href="../../jQuery/README.md">Intro to jQuery</a>
       </td>
@@ -280,6 +283,9 @@ Week 3
       </td>
     </tr>
     <tr>
+      <th rowspan="1">Thursday</th>
+      <td rowspan="1"><a href="https://github.com/gSchool/master_warmup_repository_full_stack/blob/master/w3/w3-r-sum-of-numbers/solution.js">Sum Range</a>
+      </td>
       <td><a href="../../jQuery/Events.md">jQuery Events</a>
       </td>
       <td><a href="https://github.com/gSchool/jquery-calculator">jQuery Calculator</a>
@@ -288,7 +294,7 @@ Week 3
       </td>
     </tr>
     <tr>
-      <th rowspan="2">Wednesday</th>
+      <th rowspan="2">Friday</th>
       <td rowspan="2"><a href="https://gist.github.com/IanSmith89/6ae569d695ffa1134d229c8f75117da0">Word Scrambler</a>
       </td>
       <td>
