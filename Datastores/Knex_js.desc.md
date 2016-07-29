@@ -194,7 +194,7 @@ Before moving on, here's a quick explanation on how Knex connects to a PostgreSQ
 
 **NOTE:** If needed, Knex will open 10 connections in total. The minimum and maximum connections to open is a [configurable option](http://knexjs.org/#Installation-pooling) when initializing Knex.
 
-### Exercise
+**Practice:**
 
 Turn to a neighbor and explain what Knex.js is and how it works in your own words.
 
@@ -277,7 +277,7 @@ And you should see something like this.
 select * from "users" where "name" = '''; DROP TABLE users; -- '
 ```
 
-### Exercise
+**Practice:**
 
 Draw a diagram of a database-driven, full-stack web application. Identify which part uses Knex.js and how it works.
 
@@ -729,7 +729,7 @@ And you should see something like this.
 - [Knex.js - `first()`](http://knexjs.org/#Builder-first)
 - [Knex.js - `raw()`](http://knexjs.org/#Builder-raw)
 
-### Exercise
+**Practice:**
 
 Using Knex.js, build the following queries.
 

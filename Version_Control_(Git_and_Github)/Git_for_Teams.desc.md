@@ -162,7 +162,7 @@ Now that all three branches contain the same commits, you can safely delete the 
 
 And thus you've successfully completing one cycle of the Feature Branch Workflow.
 
-### Exercise
+**Practice:**
 
 Turn to your partner and explain what the Feature Branch Workflow is in your own words. It may be helpful to draw a diagram together to visualize how branches change over time.
 
@@ -178,7 +178,7 @@ As you've seen, the Feature Branch Workflow makes it easy for you to work on a p
 
 1. A feature branch that's based on the `master` and `origin/master` branches gives you the confidence to publish well-tested code. If the code in a feature branch works correctly and that branch is based on a branch that's continuously deployed to other environments, there's a good chance the code will work correctly on those environments too.
 
-### Exercise
+**Practice:**
 
 Take a moment to write down why the Feature Branch Workflow is important. After about a minute, your instructor will cold call on the class and ask what was written down.
 

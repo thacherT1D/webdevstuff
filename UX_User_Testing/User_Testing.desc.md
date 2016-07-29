@@ -65,7 +65,7 @@ User Testing is a crucial step in meassuring the product. The fundamental activi
 * [Fluid User Testing](https://wiki.fluidproject.org/display/fluid/User+Testing)
 * [Lean Startup](http://theleanstartup.com/principles)
 
-### Exercise
+**Practice:**
 
 * Find an app to test. One that you've built or currently working on.
 * Find a user to test your app

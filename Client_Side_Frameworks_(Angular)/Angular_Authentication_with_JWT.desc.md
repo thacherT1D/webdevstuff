@@ -36,7 +36,7 @@ From [jwt.io](jwt.io):
 
 That's quite a lot. Let's try to understand this a bit more by reading the documentation...
 
-### Exercise
+**Practice:**
 
 Read [http://jwt.io/introduction/](http://jwt.io/introduction/) introduction and answer the following questions
 
@@ -175,7 +175,7 @@ There is also another tool called [satelizer](https://github.com/sahat/satellize
 
  If you find satelizer to be too difficult, Auth0 is another option tool. You can get started with this tutorial (here)[https://www.youtube.com/watch?v=ug_KmAZFe9Q](https://www.youtube.com/watch?v=ug_KmAZFe9Q) (but be warned - this is still quite challenging)
 
-### Exercise
+**Practice:**
 
 Add authentication to your todo app! This is going to be quite challenging so take your time to review the example and concepts discussed in this readme. Users should be able to see other users todos, but not be able to update and delete them.
 

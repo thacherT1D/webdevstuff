@@ -166,7 +166,7 @@ On the other hand, if a promise is rejected, the error of the asynchronous I/O o
 └───────────────────────────┘                  └───────────────────────┘
 ```
 
-### Exercise
+**Practice:**
 
 Turn to a neighbor and explain what a promise is and how it works in your own words. Then, diagram how a promise works.
 
@@ -254,7 +254,7 @@ promise
 console.log('Waiting for the asynchronous I/O operation to complete...');
 ```
 
-### Exercise
+**Practice:**
 
 Turn to a neighbor and explain why a promise is important. Then, diagram how a promise chaining works.
 

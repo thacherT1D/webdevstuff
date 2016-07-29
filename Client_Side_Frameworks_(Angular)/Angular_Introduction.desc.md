@@ -233,7 +233,7 @@ Now that we've bound the input to the "name" property, let's display the value o
 
 Open up `index.html` in your browser. What does the `h1` display when the page loads? Try typing something into the input and notice that the `h1` reflects whatever value we type into the input. This is our first example of two-way data binding.
 
-### Exercises
+**Practice:**s
 
 **Dropdowns**
 

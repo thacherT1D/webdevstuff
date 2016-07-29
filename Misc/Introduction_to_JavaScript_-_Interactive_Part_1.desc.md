@@ -463,7 +463,7 @@ friend["name"] OR
 friend.name
 ```
 
-### Exercise
+**Practice:**
 
 
 1.) How would you represent the following using and object literal. Then update `john's` address to `1234 Park ln`.
@@ -521,7 +521,7 @@ ReferenceError: ... is not defined
 * AND `&&`, OR `||`
 * `>`, `<`, `>=`, `<=`
 
-### Exercise #1: The Marathon Runner
+**Practice:** #1: The Marathon Runner
 
 - Create a prompt that asks the user what their best marathon time was.
 - If their time was between 4 to 5 hours, alert the user that their time was average.

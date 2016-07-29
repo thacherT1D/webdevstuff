@@ -305,7 +305,7 @@ If you would like a great example of how these form classes and properties work 
 
 
 ## Questions
-#### Exercise - questions + building your own form and validations
+#**Practice:** - questions + building your own form and validations
 
 First, answer the following questions
 

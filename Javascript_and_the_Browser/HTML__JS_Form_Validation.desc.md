@@ -185,7 +185,7 @@ $("#myForm").on("submit", function(){
 ```
 
 
-### Exercise 
+**Practice:** 
 This should take you about 1.5 hours to complete.  
 
 https://github.com/gSchool/form_validation/blob/master/README.md

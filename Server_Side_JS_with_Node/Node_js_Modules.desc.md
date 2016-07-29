@@ -38,7 +38,7 @@ module.exports = function(a, b) {
 
 The function that's exported effectively replaces the `require()` function. Another way to think of this is that the `add` variable is assigned the value of the `module.exports` object.
 
-### Exercise
+**Practice:**
 
 Turn to a partner and, in your own words, explain what a Node.js module is. Explain to each other how the `module.exports` object works and how the `require()` function works.
 

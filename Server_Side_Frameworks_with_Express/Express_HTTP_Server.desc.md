@@ -81,7 +81,7 @@ And you should see something like this.
 
 ![](https://i.imgur.com/OuxwwyS.png)
 
-### Exercise
+**Practice:**
 
 Turn to a partner and share your thoughts about the similarities and differences you noticed about using the `express` module versus the `http` module. Afterwards, come up with a definition of Express in your own words.
 

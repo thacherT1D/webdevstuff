@@ -26,7 +26,7 @@ Here are example interactions that describe the connection between the model vie
 
 ![Model-View-Controller Diagram](http://i.stack.imgur.com/ocEWx.png)
 
-### Exercise
+**Practice:**
 
 Write down in your own words what a controller is and why they are important. Turn and talk to your neighbor and discuss what you wrote. Think of other example interactions in the format of a Model, View, and Controller.
 

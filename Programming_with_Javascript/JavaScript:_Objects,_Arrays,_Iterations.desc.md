@@ -400,7 +400,7 @@ while (i <= 10) {
 ```
 Why is the above code block problematic?
 
-### Exercises
+**Practice:**s
 
 1. Iterate through the array [1, 2, 3, 4] to change the array to [2, 3, 4, 5].
 1. Print the numbers 1 to 10 and also the number 10 to 1, side by side.  Do this using a for loop and a while loop. Expected output:

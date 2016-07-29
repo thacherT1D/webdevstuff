@@ -52,7 +52,7 @@ Knowing how the internet works at a deeper level is essential when becoming a we
 ## DNS Lookup & IP Addresses
 __DNS__, or __Domain Name System__ is a distributed set of servers that looks up an IP address for a human readable domain, like [https://www.google.com/](https://www.google.com/).
 
-#### Exercise
+#**Practice:**
 
 Using chrome developer tools and the network tab, figure out the IP address for a popular site like google.
 
@@ -258,7 +258,7 @@ var companyJson = JSON.stringify(companyArr);
 console.log(companyJson);  // Prints the json string that represents the array
 ```
 
-### Exercise
+**Practice:**
 
 Go to this [student roster page](https://fs-student-roster.herokuapp.com/). Your job is to add a student profile of yourself to this page. Notice that there's no web form. To add your student profile, you'll have to use Postman to communicate to the application through its **web API**.
 

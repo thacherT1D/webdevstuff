@@ -36,7 +36,7 @@ You've seen similar-like tags in a templating engine - like EJS, ERB, Swig, Jade
 
 > Keep in mind that you do not want to have complex logic in your views. If you want to run more complex code, we'll see how to move logic to a controller shortly.
 
-### Exercise
+**Practice:**
 
 Turn to your table and explain in your own words what Angular expressions are. Think of some of the key differences between Angular expressions and JavaScript.
 
@@ -50,7 +50,7 @@ There are 4 ways of writing directives, but it's best practice to only write the
 
 Angular comes with a bunch of built-in directives, some of which we've already used. We will focus on built-in directives for now, but soon we will write our own custom directives.
 
-### Exercise
+**Practice:**
 
 Turn to a neighbor and discuss in your own words what you think an Angular directive is. Name at least 3 built-in directives that we have used so far.
 
@@ -153,7 +153,7 @@ You can also use `track by` with other properties such as object keys.
 </select>
 ```
 
-### Exercise
+**Practice:**
 
 In your notes, write down some of the nuances and important characteristics of `ngRepeat`. We'll discuss what you wrote as a class.
 
@@ -323,7 +323,7 @@ Selects a subset of items from array and returns it as a new array.
 </table>
 ```
 
-### Exercise
+**Practice:**
 
 Write down in your own words the purpose of Angular filters? Describe what a filter does and then name four built-in filters, including one that we haven't used yet. We'll discuss as a class what you wrote down.
 

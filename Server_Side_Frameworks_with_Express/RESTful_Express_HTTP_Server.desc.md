@@ -52,7 +52,7 @@ Once the operation is complete, the RESTful server would send a specific HTTP re
 | Update            | `200`           | `application/json`    | `'Kate'`      |
 | Destroy           | `200`           | `application/json`    | `'Kate'`      |
 
-### Exercise
+**Practice:**
 
 A **safe** REST action is one that doesn't modify any resources. Turn to a partner and see you can determine which REST actions from the above example are safe. Afterwards, explain what REST is to your partner in your own words.
 
@@ -60,7 +60,7 @@ A **safe** REST action is one that doesn't modify any resources. Turn to a partn
 
 REST is one way of structuring client-server HTTP communication. However, it's a very popular structure because it leads to a **separation of concerns** between clients and servers. Since the goals of clients and servers are well-defined, it's easy to develop and evolve clients and servers independently. In other words, you can easily add and remove RESTful clients or servers.
 
-### Exercise
+**Practice:**
 
 Think about what scenarios would cause you to add or remove a RESTful client or server. After ten seconds, I'll cold call on a few of you for an answer.
 

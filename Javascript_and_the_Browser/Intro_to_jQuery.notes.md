@@ -6,7 +6,7 @@
 
 * http://jqfundamentals.com/chapter/jquery-basics
 
-### Exercises
+**Practice:**s
 
 * https://github.com/gSchool/boxes-jQuery-playground
 * exercise 00 on https://github.com/gSchool/jquery-exercises

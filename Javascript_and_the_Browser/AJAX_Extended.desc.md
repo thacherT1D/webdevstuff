@@ -121,7 +121,7 @@ $xhr.fail(function(err) {
 });
 ```
 
-### Exercise
+**Practice:**
 
 Fix the above code so it connects to the correct URL. Then modify the code to only log the movie's title and year it was released, each on a separate line. For example, with Frozen, the output would be the following.
 
@@ -162,7 +162,7 @@ $xhr.done(function(data) {
 console.log('AFTER THE AJAX');
 ```
 
-### Exercise
+**Practice:**
 
 Fix the above the code so the race condition is correctly handled. The output should be the following.
 

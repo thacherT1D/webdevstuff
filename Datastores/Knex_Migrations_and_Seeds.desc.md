@@ -64,7 +64,7 @@ And when the database is migrated backward, the `down()` function is translated 
 DROP TABLE artists;
 ```
 
-### Exercise
+**Practice:**
 
 Turn to a neighbor and explain what the Knex migration system is in your own words.
 
@@ -76,7 +76,7 @@ First, when the same sequence of Knex migration files are run on an empty databa
 
 Second, when a mistake in a Knex migration is caught early in the development process, the affected tables can be dropped, effectively rolling the database back to a known good state. This convenience is useful for correcting bugs that appear in a table's structure before they make it to production. For example, imagine a `price numeric(4, 2)` column is given a precision that's too low. This could lead to significant losses in revenue if the bug isn't corrected during development. With a Knex migration, you can roll the database back, fix the bug  before it's able to do damage, and migrate the database forward.
 
-### Exercise
+**Practice:**
 
 Turn to a neighbor and talk about when it might be useful to consistently create the same tables in multiple databases. Once you're satisfied, talk about when it might be useful to conveniently roll a database back.
 

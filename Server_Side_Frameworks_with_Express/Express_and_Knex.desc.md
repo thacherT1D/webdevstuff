@@ -61,7 +61,7 @@ Once the operation is complete, the RESTful server would send a specific HTTP re
 | Update            | `200`           | `application/json`    | `{ id: "2", "name": "⚥" }`             |
 | Destroy           | `200`           | `application/json`    | `{ "name": "⚥" }`                      |
 
-### Exercise
+**Practice:**
 
 Take a few moments to diagram how a RESTful, database-driven HTTP server works.
 

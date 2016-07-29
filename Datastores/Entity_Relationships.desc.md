@@ -66,7 +66,7 @@ A **many-to-many** relationship describes the relationship between two entities 
 
 As you can see here, a many-to-many relationship is the combination of two one-to-many relationships connected to an **associative entity** in the middle. We'll talk more about associative entities in a bit.
 
-### Exercise
+**Practice:**
 
 With your neighbors, draw an ER diagram to represent the relationship between pet entities and species entities.
 
@@ -153,7 +153,7 @@ And here's the same movie entity's unique identifier being stored as the `movie_
   2 |        1 | Oscar | Best Achievement in Music Written for Motion Pictures, Original Song
 ```
 
-### Exercise
+**Practice:**
 
 With your neighbors, add some attributes to the pet-based ER diagram that you created earlier.
 
@@ -224,7 +224,7 @@ CREATE TABLE awards (
 );
 ```
 
-### Exercise
+**Practice:**
 
 Write down the four PostgreSQL column constraints and explain each one in your own words. After about 30 seconds, your instructor will cold call on the class and ask what was written down.
 
@@ -322,7 +322,7 @@ Spend some time getting familiar with the tables and their relationships.
 
 [PLAY WITH INSERTED ROWS]
 
-### Exercise
+**Practice:**
 
 With your neighbors, add the necessary PostgreSQL column constraints to the `CREATE TABLE` commands you created earlier for your pet-based ER diagram.
 
@@ -457,7 +457,7 @@ INNER JOIN actors_movies ON actors_movies.movie_id = movies.id
 INNER JOIN actors ON actors.id = actors_movies.actor_id
 ORDER BY score DESC;
 
-### Exercise
+**Practice:**
 
 Write an SQL command that displays the follow rows.
 

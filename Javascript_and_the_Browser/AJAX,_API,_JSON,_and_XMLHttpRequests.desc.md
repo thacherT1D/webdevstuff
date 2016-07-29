@@ -270,7 +270,7 @@ Origin 'http://example.net/' is therefore not allowed access
 
 That means the server you are hitting has explicitly denied access to your website - but don't fret. This keeps prying developer eyes from your bank accounts and social life, and is for your protection! As a developer it can be quite frustrating though. The server administrator has to edit their CORS headers to allow certain domains or all domains access.
 
-#### Exercise
+#**Practice:**
 
 Modify the request to only alert the title of the movie and the status code from the response.
 

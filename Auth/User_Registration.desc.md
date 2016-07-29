@@ -55,7 +55,7 @@ If you hash the digest from above, you won't get the original message back. Inst
 echo '6e9c620dcd316bf29a37bf6d0be3d685acfd18bea7e6d5a2a697104539610491' | shasum -a 256
 ```
 
-### Exercise
+**Practice:**
 
 Turn to a neighbor and explain what a cryptographic hash function is in your own words. Once you're satisfied, talk about when you might use one.
 
@@ -67,7 +67,7 @@ As you've seen, a malicious user can leverage SQL injection attacks to access th
 
 Using cryptographic hash functions like bcrypt, helps protect against hash tables, dictionary attacks, rainbow tables, and other types of brute-force attacks. Password hashing also provides an extra layer of security between developer and end user. When passwords are stored as cryptographic hashes, the developer never has access to a user's plaintext password.
 
-### Exercise
+**Practice:**
 
 In your own words, write down why cryptographic password hashing is important. After about 30 seconds, your instructor will cold call on the class and ask what was written down.
 
@@ -107,7 +107,7 @@ algorithm
 
 Notice that the bcrypt output string is 60 characters long.
 
-### Exercise
+**Practice:**
 
 Turn to your neighbor and explain what bcrypt is. In your conversation, include some of the advantages bcrypt has over other generic cryptographic hash functions. After about 30 seconds, your instructor will cold call on the class and ask what was written down.
 

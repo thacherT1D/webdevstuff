@@ -67,7 +67,7 @@ node ~/Desktop/readPaths.js
 
 The program only needs to require one module—the `fs` module—to import the filesystem functionality. And because the `readPaths.js` file is executed in its own scope, this functionality lives inside the local `fs` variable and doesn't pollute the global scope.
 
-### Exercise
+**Practice:**
 
 In your own words, think about what Node.js means to you and write it down.
 
@@ -81,7 +81,7 @@ As a developer, switching back and forth across the HTTP divide makes you more v
 
 Usage of Node.js varies from company to company and it's unlikely that any company operates solely on Node.js. Just like everything, Node.js has its [advantages](http://www.toptal.com/nodejs/why-the-hell-would-i-use-node-js) and [disadvantages](http://www.quora.com/What-are-the-disadvantages-of-using-Node-js) which you can read about on your own.
 
-### Exercise
+**Practice:**
 
 Think back to your Q1 project. If you were designing your own custom JSON API for it, what would the response look like? Take a few moments to write it down.
 
@@ -128,7 +128,7 @@ To quit the Node.js REPL, run the `.exit` command.
 
 The Node.JS REPL is a handy way to play around with JavaScript before you commit your ideas to a file. In a way, it's similar to the browser console except that you can only access Node.js functions.
 
-### Exercise
+**Practice:**
 
 How can you tell when your Terminal is running the Node.js REPL? How can you tell when it's running your default shell?
 
@@ -162,7 +162,7 @@ Now, save the `addition.js` file and run it with the Node.js interpreter using t
 node ~/Desktop/addition.js
 ```
 
-### Exercise
+**Practice:**
 
 What happens if you try to execute the expression `1 + 2` without the `console.log()` function using the Node.js interpreter?
 
@@ -284,7 +284,7 @@ And you should see something like this.
 
 In this course, the vast majority of the JavaScript programs you build will perform asynchronous I/O.
 
-### Exercise
+**Practice:**
 
 What kind of programs do you think would prefer asynchronous I/O? What kind of programs would prefer synchronous I/O?
 

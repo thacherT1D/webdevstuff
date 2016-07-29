@@ -247,7 +247,7 @@ For now, use inline array annotation (it is the most commonly seen and is stated
 - How does angular implement dependency injection?
 - What are the three ways to annotate our code with service names (dependencies)? Write three code examples with each one of these options.
 
-### Exercises
+**Practice:**s
 
 ```js
 app.controller('SampleController', function($scope, $rootScope){

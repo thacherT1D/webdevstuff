@@ -83,7 +83,7 @@ Primary reasons to use accessors:
 * Change-Proofing
 * Simplifying the complex
 
-#### Exercise: Writing Accessors
+#**Practice:**: Writing Accessors
 
 * Create a `Person` object with `firstName` and `lastName` properties
 * Create setter methods for `firstName` and `lastName` that verify that the input is:
@@ -142,7 +142,7 @@ Dog.name; // Undefined
 * `legs` and `name` are private
 * The bark()` method and all the accessors are _public_
 
-#### Exercise: Real-Life Encapsulation
+#**Practice:**: Real-Life Encapsulation
 
 * Create an object for something in the room.
 * It should have at least three properties, and at least two methods.
@@ -161,7 +161,7 @@ When you're done, you should be able to create an object, examine it in your REP
     * Ford F150 is a truck, car, automobile, vehicle
     * Any hierarchical taxonomy
 
-#### Exercise: Inheritance
+#**Practice:**: Inheritance
 
 Pick something (other than one of the examples above) that has a hierarchical taxonomy, with at least 3 levels. Write out the hierarchy. Each level should introduce new "methods" (behaviors) and "properties" (characteristics) that are inherited by their children.
 
@@ -200,7 +200,7 @@ Fido = new Dog();
 * The function is a constructor
 * Now build the `Dog`, passing in the name
 
-#### Exercise: Building Objects
+#**Practice:**: Building Objects
 
 Using the `function` strategy, build out actual instances of all the members from the hierarchy you built above.
 
@@ -305,7 +305,7 @@ fight(Goose, 2); // "Quack! Quack! Quack! Quack!"
 fight(Snake, 2); // "Hiss! Hiss! Hiss! Hiss! Hiss! Hiss! Hiss! Hiss!"
 ```
 
-#### Exercise: Polymorphism
+#**Practice:**: Polymorphism
 
 * Use the same hierarchy from previous exercises
 * Do the same kind of thing from above

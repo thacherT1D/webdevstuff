@@ -51,7 +51,7 @@ app.use((err, _req, res, _next) => {
 // ...
 ```
 
-### Exercise
+**Practice:**
 
 Turn to a neighbor and explain what server-side validation is. After about 30 seconds, your instructor will cold call on the class and ask what was written down.
 
@@ -69,7 +69,7 @@ When creating route handlers, always ask yourself, "What if an HTTP request was 
 
 A user can send HTTP requests by whatever means he or she wishes. And it's the job of a web developer to ensure one bad apple doesn't spoil the bunch.
 
-### Exercise
+**Practice:**
 
 In your own words, write down why server-side validation is important. Focus on the different scenarios server-side validation protects against. After about 30 seconds, your instructor will cold call on the class and ask what was written down.
 

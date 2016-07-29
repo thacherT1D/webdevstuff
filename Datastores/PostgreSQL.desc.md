@@ -44,7 +44,7 @@ const movie = {
 
 **NOTE:** When working with a date, always include a time with a [timezone](https://en.wikipedia.org/wiki/Time_zone#/media/File:Standard_World_Time_Zones.png). For example, if it's March 31st for a person in the U.S.A., it's April 1st for a person in China.
 
-### Exercise
+**Practice:**
 
 Take a minute to write down how you'd explain the difference between data and information to a friend. Then, turn to a neighbor and share what you wrote.
 
@@ -58,7 +58,7 @@ In the above example, the `movie` object is called an entity. An **entity** is a
 
 **NOTE:** In table form, attribute names are often displayed in snakecase because unquoted identifiers like `releasted_at` are case insensitive in PostgreSQL.
 
-### Exercise
+**Practice:**
 
 Turn to a neighbor and consider how you'd describe a `pet` entity. Think of at least five pieces of information that are essential for being a pet.
 
@@ -108,7 +108,7 @@ Let's look at another diagram, this time of a server-side web application handli
 
 In a development environment, the server-side web application and its companion database system often live on the same machine. However, in a production environment, the two systems often live on different machines to maximum the performance of each.
 
-### Exercise
+**Practice:**
 
 Take a few moments to diagram how server-side web applications manage information using a database system.
 
@@ -140,7 +140,7 @@ In a relational database system, all values in the same column must be the same 
 | `released_at` | `timestamp`   | `Date`          |
 | `score`       | `numeric`     | `Number`        |
 
-### Exercise
+**Practice:**
 
 In your own words, write down what a relational database system means to you. After about 30 seconds, your instructor will cold call on the class and ask what was written down.
 
@@ -176,7 +176,7 @@ Now, a change to a movie's genre only requires a change to one record.
 
 Since the 1970s, relational database systems have been used to manage all kinds of information—financial, manufacturing, logistical, personal, government, communication, public, private, and so on. By structuring information into tables with rows and columns, computers can quickly and efficiently store and retrieve insanely large amounts data.
 
-### Exercise
+**Practice:**
 
 In your own words, write down why relational databases are so useful. After about 30 seconds, your instructor will cold call on the class and ask what was written down.
 
@@ -228,7 +228,7 @@ Whereas the following are popular closed source relational database systems that
 - Microsoft SQL Server
 - Oracle
 
-### Exercise
+**Practice:**
 
 In your own words, write down what SQL means to you. After about 30 seconds, your instructor will cold call on the class and ask what was written down.
 
@@ -282,7 +282,7 @@ PostgreSQL is a sophisticated relational database system. To become fluent in Po
 
 For example, the Movie Junkies web application from earlier might use a database cluster that contains two databases: a `movie_junkies_dev` database for the development environment and `movie_junkies_test` database for the test environment. A database server is started to manage this database cluster. Then a database client connects to the database server and begins sending SQL commands to the server in order to store or retrieve information from the database cluster.
 
-### Exercise
+**Practice:**
 
 In your own words, write down what PostgreSQL means to you. After about 30 seconds, your instructor will cold call on the class and ask what was written down.
 
@@ -295,7 +295,7 @@ brew update
 brew install postgresql
 ```
 
-### Exercise
+**Practice:**
 
 Verify the latest version of PostgreSQL was installed correctly by running the following commands.
 
@@ -384,7 +384,7 @@ And you should see something like this.
 
 ![](https://i.imgur.com/Qaj9Or8.png)
 
-### Exercise
+**Practice:**
 
 Using the Homebrew Service plugin, start a PostgreSQL server for the default PostgreSQL cluster. When your done, check out the plugin's usage message with the following command.
 
@@ -444,7 +444,7 @@ And you should see something like this.
 
 ![](https://i.imgur.com/57ZyROA.png)
 
-### Exercise
+**Practice:**
 
 Use the `createdb` and `dropdb` command line tools to create and drop a `movie_junkies_dev` database a few times. Each time you create and drop the database, verify the contents of the default PostgreSQL cluster with the `psql` command line tool.
 
@@ -607,7 +607,7 @@ And you should see something like this.
 
 ![](https://i.imgur.com/Z2q2KG3.png)
 
-### Exercises
+**Practice:**s
 
 Use the `CREATE DATABASE` and `DROP DATABASE` SQL commands to create and drop a `movie_junkies_test` database a few times. Each time you create and drop the database, verify the contents of the default PostgreSQL cluster with the `\l` REPL command. Also, practice connecting to the new database with the `\c` REPL command.
 

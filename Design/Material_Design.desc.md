@@ -14,7 +14,7 @@ To see it in action, watch this video on [Material Design by Google](https://www
 
 To learn more details, check out the [documentation on Material Design](https://www.google.com/design/spec/what-is-material/environment.html)
 
-### Exercise
+**Practice:**
 
 After having explored the above resources, turn to a partner and explain what Material Design is in your own words.
 
@@ -31,7 +31,7 @@ To see it in action, check out some of these components.
 
 To see a few examples of Materialize, check out this [showcase of user submitted web sites](http://materializecss.com/showcase.html).
 
-### Exercise
+**Practice:**
 
 After having explored the above resources, turn to a partner and explain what Materialize is in your own words.
 
@@ -41,7 +41,7 @@ Not only can web developers use both Material Design the Materialize framework t
 
 To learn more about it, watch this video on [The Gap by Ira Glass](https://www.youtube.com/watch?v=3ResTHKVxf4)
 
-### Exercise
+**Practice:**
 
 After having explored the above resource, take a moment and write down your thoughts on how you've been feeling about your own gap.
 

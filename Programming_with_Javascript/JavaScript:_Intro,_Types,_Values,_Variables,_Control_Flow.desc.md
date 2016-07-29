@@ -19,7 +19,7 @@ JavaScript was developed at the Netscape Communication Corporation by Brendan Ei
 
 Since the mid 90s, JavaScript has become one of the most popular programming languages on the Web. Initially, however, many professional programmers criticized the language because its target audience consisted of web masters and other "amateurs". The advent of something called Ajax, which became a standard in 2006, returned JavaScript to the spotlight and brought it more professional programming attention. The result has been a proliferation of comprehensive frameworks and libraries, improved JavaScript programming practices, and increased usage of JavaScript outside of web browsers as seen by server-side platforms like Node.js.
 
-### Exercise
+**Practice:**
 
 Turn to a partner and describe what JavaScript is in your own words.
 
@@ -44,7 +44,7 @@ There are six editions of ECMAScript published. Work on version 6 of the standar
 
 To see what kind of support your browser has of the ECMAScript standard, check out this [compatibility table](http://kangax.github.io/compat-table/es6/). Which browser has the best support? Which browser has the worst support?
 
-### Exercise
+**Practice:**
 
 Turn to a partner and describe what ECMAScript is in your own words.
 
@@ -58,7 +58,7 @@ JavaScript allows web developers to make web pages interactive, dynamic, and awe
 - [Image Grid Effects](http://tympanus.net/Development/ImageGridEffects/index2.html)
 - [Animated Map Path for Interactive Storytelling](http://tympanus.net/Development/StorytellingMap/)
 
-### Exercise
+**Practice:**
 
 What are some websites you frequently use? Revisit them and try to figure out which parts are using JavaScript. Once you've selected a favorite, show it to a partner and explain why JavaScript is important this website.
 

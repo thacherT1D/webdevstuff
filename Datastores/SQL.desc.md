@@ -255,7 +255,7 @@ And see the following articles to learn more about the SQL commands you practice
 - [PostgreSQL Documentation - `ALTER TABLE`](https://www.postgresql.org/docs/current/static/sql-altertable.html)
 - [PostgreSQL Documentation - `DROP TABLE`](https://www.postgresql.org/docs/current/static/sql-droptable.html)
 
-### Exercise
+**Practice:**
 
 A **migration** is a file that contains SQL commands that are used to recreate the tables in a database on demand. In a `migration.sql` file, type out the `CREATE TABLE movies` SQL command from above. Then, add a `DROP TABLE` command at the top of the file so you can repeatedly execute the commands. Using the PostgreSQL documentation, figure how to prevent the `DROP TABLE` command from generating an error if the table doesn't exist.
 
@@ -654,7 +654,7 @@ See the following articles to learn more about the SQL commands you practiced in
 - [PostgreSQL documentation - `SELECT`](https://www.postgresql.org/docs/current/static/sql-select.html)
 - [PostgreSQL documentation - `UPDATE`](https://www.postgresql.org/docs/current/static/sql-update.html)
 
-### Exercises
+**Practice:**s
 
 A **seed** file contains SQL commands that are used to recreate the rows in a table on demand. In a `seed.sql` file, type out the four `INSERT INTO movies` SQL commands from above. Then, add a `DELETE FROM movies` command at the top of the file so you can repeatedly execute the commands. Using the PostgreSQL documentation, figure how to delete all the rows of the `movies` table in one command.
 

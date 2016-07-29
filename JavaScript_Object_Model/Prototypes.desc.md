@@ -27,7 +27,7 @@ Now imagine that there are 100 specialists. Pause a moment and observe the follo
 Our specialist would be served better if there were just one library that could be accessed and updated. What we are describing is the use of a prototype!
 
 ***
-#### Exercise: 
+#**Practice:**: 
 In the context of object-oriented programming, what's a customer support specialist, an identification number, email address, and a library? How do these things translate to objects?
 ***
 
@@ -51,7 +51,7 @@ obj.constructor()
 Notice that invoking `constructor()` did not output an error! In other words, it is defined somewhere and being accessed--prototype, cough!
 
 ***
-#### Exercise:
+#**Practice:**:
 Create a list of other properties or methods that are accessed via a prototype.
 ***
 
@@ -63,7 +63,7 @@ At this moment, we've used a non-code and code related example of prototypes. Bo
 - Real-Time Updating of Code
 
 ***
-#### Exercise: 
+#**Practice:**: 
 Find a pair and discover a real-world example of prototypes.
 ***
 
@@ -122,7 +122,7 @@ gollum.sayBanana();
 ```
 
 ***
-#### Exercise: 
+#**Practice:**: 
 Draw an in-memory diagram of the following snippet:
 
 ```javascript
@@ -154,7 +154,7 @@ Now only `minionOne` and `minionTwo` can access `sayBanana()`. Notice the follow
 
 ***
 
-#### Exercise: 
+#**Practice:**: 
 Draw an in-memory diagram for the following snippet:
 
 ```javascript
@@ -198,7 +198,7 @@ minionTwo.sayBanana();
 All minions now access `sayBanana()`; moreover, our code is semantically meaningful. We aren't creating just objects; we are creating minions.
 
 ***
-#### Exercise: 
+#**Practice:**: 
 Draw an in-memory diagram for the following snippet:
 
 ```javascript

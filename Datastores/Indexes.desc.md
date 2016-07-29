@@ -65,7 +65,7 @@ While an index can significantly speed up `SELECT` commands on the table-column 
 
 Additionally, an index on a number and timestamp column is generally more effective than an index on a textual column. This is especially true when querying a table for a particular word or phrase within a large amount of text.
 
-### Exercise
+**Practice:**
 
 Take a moment to write down your thoughts on why indexes are useful. After about 30 seconds, your instructor will cold call on the class and ask what was written down.
 

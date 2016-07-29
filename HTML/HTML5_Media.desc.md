@@ -29,7 +29,7 @@ New in HTML5 are the `<video>` and `<audio>` tags. Previously, embedding media r
 
 For additional reading, check out the [MDN guide for HTML5 audio and video](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML5_audio_and_video).
 
-#### Exercise: Video & Audio
+#**Practice:**: Video & Audio
 
 Follow the instructions in the [embedding audio and video](https://github.com/gSchool/embedding-audio-video) repository.
 
@@ -60,7 +60,7 @@ Additionally, note that you can create multiple clickable areas on an image with
 </map>
 ```
 
-##### Exercise: Image Maps
+##**Practice:**: Image Maps
 
 Follow the instructions on the [image maps repo](https://github.com/gSchool/image-map-exercise).
 
@@ -94,7 +94,7 @@ Since the browser generates the graphics, their file size is incredibly small an
 
 Creating SVGs is beyond the scope of this learning experience, but as a web developer you should be familiar with what they are and how they work.
 
-##### Exercise: SVG
+##**Practice:**: SVG
 
 Read through the [MDN guide to SVG](https://developer.mozilla.org/en-US/docs/Web/SVG) and be able to answer the following questions:
 

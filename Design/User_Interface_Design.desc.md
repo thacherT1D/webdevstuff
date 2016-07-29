@@ -17,7 +17,7 @@ A **user interface** is a shared boundary across which a user exchanges informat
 
 With UI design, simplicity and clarity are paramount. A good interface is invisible to the user. In other words, a good interface doesn't waste the user's time by searching for controls or dealing with unhelpful error messages. Likewise, good interfaces maintain consistency and predictability. All user interactions are evaluated not only on their efficiency by also the satisfaction gained by the user while performing the task.
 
-### Exercise
+**Practice:**
 
 In your own words, write down what UI design entails. While you're writing, think about what's involved when designing good UI and write down some of the keywords that come to mind.
 
@@ -50,7 +50,7 @@ A well designed user interface employs common design patterns for navigation tha
 
 Elements such as tooltips, popovers, toasts, notifications, modals, and error messages all provide feedback and feedforward to the user. Displaying key information at the right time can alleviate frustration and communicate the current state of the product to the user.
 
-### Exercise
+**Practice:**
 
 What are some other common interface components or patterns?
 

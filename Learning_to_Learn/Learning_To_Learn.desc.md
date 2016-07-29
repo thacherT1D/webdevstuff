@@ -27,7 +27,7 @@ To become a better learner, we recommend this three step learning process which 
 1. Play
 1. Reflect
 
-### Exercise
+**Practice:**
 
 Time to take out a notebook. When you encounter one of these steps and its sub-steps, write it down. Don't worry, there's not a lot to write so you can still pay attention to the lecture. But it's important that you understand these keywords and share in their meaning.
 
@@ -67,7 +67,7 @@ The last part of setting the stage is about prioritizing process over product. I
 
 While in the zone of proximal development, doing focused and deliberate practice while learning and doing will produce far more quality results in the long run. If you flip the prioritization—prioritizing product over process—you're much more likely to take shortcuts, to cheat, or to do something that benefits you in the short term but harms you in the long run. Remember, top performers do what's hard, not what they're good at.
 
-### Exercise
+**Practice:**
 
 Imagine that a friend came to Galvanize and asked you, "Hey everyone is talking about setting the stage. What does that mean? Why is that important? How do you do that?" Take a few moments to think about what you'd say to your friend. When you've decided what to say, turn and talk to a partner and share your thoughts with them.
 
@@ -117,7 +117,7 @@ Having fun is not about feeling good either. When the outer cortex of your brain
 
 When you find yourself not having fun, take a deep breath, step outside, go for a walk, do whatever you need to do to regain focus on the why. Remember, programming is just about the coolest thing you can do in this world! If that's not how you feel when you're in this program, it's time for a break.
 
-### Exercise
+**Practice:**
 
 Imagine that same friend from earlier asks you, "Hey, what's this play business all about? Why is that important? How do you do that?" Take a few moments to think about what you'd say to your friend. When you've decided what to say, turn and talk to a partner and share your thoughts with them. Since you've been sitting for a while, feel free to stand up and stretch your legs too.
 
@@ -157,7 +157,7 @@ Additionally, by writing down these questions, you can go back and review them a
 
 The third and final step of reflection is to repeat this whole cycle. As mentioned earlier, learning never stops for programmers as there's always something new to master. The best part about mastering this learning process is that the more you practice it, the faster and easier you'll retain new information.
 
-### Exercise
+**Practice:**
 
 Picture someone who's struggling with a part of this process, maybe with clearing the stage or taking risks or self assessment. Imagine what it would look like and sound like to watch and hear someone struggling. Take a moment visualize this and then write down your thoughts.
 

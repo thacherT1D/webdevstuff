@@ -60,7 +60,7 @@ Student will:
 </map>
 ```
 
-##### Exercise: Image Maps
+##**Practice:**: Image Maps
 
 Follow the instructions on the [image maps repo](https://github.com/gSchool/image-map-exercise).
 
@@ -85,7 +85,7 @@ Follow the instructions on the [image maps repo](https://github.com/gSchool/imag
 * Replacement for Flash
 * Creating them is outside of scope, but we should know what they are
 
-##### Exercise: SVG
+##**Practice:**: SVG
 
 Read through the [MDN guide to SVG](https://developer.mozilla.org/en-US/docs/Web/SVG) and be able to answer the following questions:
 

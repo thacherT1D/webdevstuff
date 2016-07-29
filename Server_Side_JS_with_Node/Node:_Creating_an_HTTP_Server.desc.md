@@ -149,7 +149,7 @@ server.listen(8080, function() {
 
 If we submit a request to either `localhost:8080/special-message` or `localhost:8080/non-special-message`, we still receive our intended response.
 
-### Exercises: 
+**Practice:**s: 
 - [Building a simple HTTP server](https://github.com/gSchool/node-http-server-intro).
 
 - [Parsing query strings](https://github.com/gSchool/node-query-string-parsing).
