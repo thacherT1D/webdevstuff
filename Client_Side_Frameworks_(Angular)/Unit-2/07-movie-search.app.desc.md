@@ -1,8 +1,8 @@
 # Movie Search App.
 
-It's time to use everything you've learned so far in the 2nd unit to build a small movie search app. This project incorporates the new file structure, routes, and the $http service.  Watch the following video to get a sense of how it works:
+It's time to use everything you've learned so far in the 2nd unit to build a small movie search app. This project incorporates routes, and the $http service.  Watch the following video to get a sense of how it works:
 
-[![](https://i.gyazo.com/aaebae489446960de0fd485720964b10.png)](https://coursework.galvanize.com/redirects/learning_experiences/10)
+<iframe src="https://player.vimeo.com/video/135991632" width="500" height="388" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 # WARNING
 
