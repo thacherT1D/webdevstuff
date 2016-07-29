@@ -8,6 +8,10 @@ function normalize(path, indentationLevel) {
   return '../'.repeat(indentationLevel) + path
 }
 
+function isLocalLink(url) {
+  return !url.startsWith('http')
+}
+
 function linkify(data, indentationLevel) {
   let result = []
   let week
@@ -21,20 +25,23 @@ function linkify(data, indentationLevel) {
 
     day.name = days[i % 5]
 
-    if (day.warmup && day.warmup.path) {
-      day.warmup.url = normalize(day.warmup.path, indentationLevel)
+    if (day.warmup && isLocalLink(day.warmup.url)) {
+      day.warmup.url = normalize(day.warmup.url, indentationLevel)
     }
     day.activities = day.activities || []
 
     day.activities.forEach(function (activity) {
-      if (activity.article && activity.article.path) {
-        activity.article.url = normalize(activity.article.path, indentationLevel)
+
+      if (activity.article && isLocalLink(activity.article.url)) {
+        activity.article.url = normalize(activity.article.url, indentationLevel)
       }
-      if (activity.assignment && activity.assignment.path) {
-        activity.assignment.url = normalize(activity.assignment.path, indentationLevel)
+
+      if (activity.assignment && isLocalLink(activity.assignment.url)) {
+        activity.assignment.url = normalize(activity.assignment.url, indentationLevel)
       }
-      if (activity.stretch && activity.stretch.path) {
-        activity.stretch.url = normalize(activity.stretch.path, indentationLevel)
+
+      if (activity.stretch && isLocalLink(activity.stretch.url)) {
+        activity.stretch.url = normalize(activity.stretch.url, indentationLevel)
       }
     })
 

@@ -83,7 +83,7 @@
       <th rowspan="2">Thursday</th>
       <td rowspan="2"><a href="https://github.com/sethvincent/javascripting">JavaScripting (con't)</a>
       </td>
-      <td><a href="../../JavaScript/Intro.md">JavaScript: Intro, Types, Values, Variables, Control Flow</a>
+      <td><a href="../../JavaScript/README.md">JavaScript: Intro, Types, Values, Variables, Control Flow</a>
       </td>
       <td>
       </td>

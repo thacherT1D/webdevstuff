@@ -84,7 +84,7 @@ Week 1
       <th rowspan="2">Thursday</th>
       <td rowspan="2"><a href="https://github.com/sethvincent/javascripting">JavaScripting (con't)</a>
       </td>
-      <td><a href="JavaScript/Intro.md">JavaScript: Intro, Types, Values, Variables, Control Flow</a>
+      <td><a href="JavaScript/README.md">JavaScript: Intro, Types, Values, Variables, Control Flow</a>
       </td>
       <td>
       </td>
@@ -139,7 +139,7 @@ Week 2
       <th rowspan="2">Monday</th>
       <td rowspan="2"><a href="JavaScript/Memory Diagrams.md">Memory Diagrams</a>
       </td>
-      <td><a href="HTML/Intro.md">Intro to HTML</a>
+      <td><a href="HTML/README.md">Intro to HTML</a>
       </td>
       <td>
       </td>
@@ -158,7 +158,7 @@ Week 2
       <th rowspan="2">Tuesday</th>
       <td rowspan="2"><a href="https://github.com/gSchool/g26-challenges-so-far/blob/master/w2/w2-f-replace-with-alphabet-position/w2-f-replace-with-alphabet-position.js">Alphabet Position</a>
       </td>
-      <td><a href="CSS/Intro.md">Intro to CSS</a>
+      <td><a href="CSS/README.md">Intro to CSS</a>
       </td>
       <td>
       </td>
@@ -171,6 +171,41 @@ Week 2
       <td>
       </td>
       <td>
+      </td>
+    </tr>
+    <tr>
+      <th rowspan="4">Wednesday</th>
+      <td rowspan="4"><a href="http://rosettacode.org/wiki/FizzBuzz">FizzBuzz</a>
+      </td>
+      <td><a href="DOM/README.md">Intro to the DOM</a>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <td><a href="DOM/Manipulation.md">DOM Manipulation</a>
+      </td>
+      <td>
+      </td>
+      <td><a href="https://github.com/gSchool/style-with-javascript">Style with JavaScript</a>
+      </td>
+    </tr>
+    <tr>
+      <td><a href="DOM/Traversal.md">DOM Traversal</a>
+      </td>
+      <td>
+      </td>
+      <td><a href="https://github.com/gSchool/dom-query-function">DOM Query</a>
+      </td>
+    </tr>
+    <tr>
+      <td><a href="DOM/Creation and Deletion.md">DOM Creation and Deletion</a>
+      </td>
+      <td>
+      </td>
+      <td><a href="https://github.com/gSchool/checkerboard-exercise">DOM Checkerboard</a>
       </td>
     </tr>
   </tbody>
