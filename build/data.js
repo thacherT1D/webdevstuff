@@ -128,6 +128,10 @@ module.exports = function() {
             article: { text: "CSS Frameworks", url: "CSS/Frameworks.md" },
             assignment: { text: "Galvanize Delivers", url: "https://github.com/gSchool/galvanize-delivers/" },
           },
+          {
+            article: { text: "HTML Forms", url: "HTML/Forms.md" },
+            assignment: { text: "HTML Forms", url: "https://github.com/gSchool/html-forms" },
+          },
         ]
       },
     ]
