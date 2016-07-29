@@ -56,7 +56,7 @@ Week 1
     <tr>
       <td><a href="Misc/Command Line.md">Intro to the Command Line</a>
       </td>
-      <td>
+      <td><a href="https://github.com/ryansobol/clmystery">Command Line Murder Mystery</a>
       </td>
       <td><a href="Misc/Intermediate Command Line.md">Intermediate Command Line</a>
       </td>
@@ -86,7 +86,7 @@ Week 1
       </td>
       <td><a href="JavaScript/README.md">JavaScript: Intro, Types, Values, Variables, Control Flow</a>
       </td>
-      <td>
+      <td><a href="https://github.com/gSchool/javascript-statements">JavaScript Statements</a>
       </td>
       <td>
       </td>
@@ -113,7 +113,7 @@ Week 1
     <tr>
       <td><a href="JavaScript/Arrays-Objects-Iteration.md">JavaScript: Arrays, Objects, Iteration</a>
       </td>
-      <td>
+      <td><a href="https://github.com/gSchool/javascript-statements">JavaScript Statements (con't)</a>
       </td>
       <td><a href="https://github.com/gSchool/ccf-data-structures">Crushing Candy Code: Data Structures</a>
       </td>
@@ -141,7 +141,7 @@ Week 2
       </td>
       <td><a href="HTML/README.md">Intro to HTML</a>
       </td>
-      <td>
+      <td><a href="https://github.com/gSchool/html-intro">HTML Intro</a>
       </td>
       <td><a href="HTML/Media.md">Media</a>
       </td>
@@ -149,7 +149,7 @@ Week 2
     <tr>
       <td><a href="HTML/Semantic.md">Semantic HTML</a>
       </td>
-      <td>
+      <td><a href="https://github.com/gSchool/semantic-html-assignment">Semantic HTML</a>
       </td>
       <td>
       </td>
@@ -160,7 +160,7 @@ Week 2
       </td>
       <td><a href="CSS/README.md">Intro to CSS</a>
       </td>
-      <td>
+      <td><a href="https://github.com/gSchool/css-assignments">CSS assignments</a>
       </td>
       <td>
       </td>
@@ -179,7 +179,7 @@ Week 2
       </td>
       <td><a href="DOM/README.md">Intro to the DOM</a>
       </td>
-      <td>
+      <td><a href="https://github.com/gSchool/js-dom-tests">JS DOM Tests</a>
       </td>
       <td>
       </td>

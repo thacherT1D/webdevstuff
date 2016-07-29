@@ -55,7 +55,7 @@
     <tr>
       <td><a href="../../Misc/Command Line.md">Intro to the Command Line</a>
       </td>
-      <td>
+      <td><a href="https://github.com/ryansobol/clmystery">Command Line Murder Mystery</a>
       </td>
       <td><a href="../../Misc/Intermediate Command Line.md">Intermediate Command Line</a>
       </td>
@@ -85,7 +85,7 @@
       </td>
       <td><a href="../../JavaScript/README.md">JavaScript: Intro, Types, Values, Variables, Control Flow</a>
       </td>
-      <td>
+      <td><a href="https://github.com/gSchool/javascript-statements">JavaScript Statements</a>
       </td>
       <td>
       </td>
@@ -112,7 +112,7 @@
     <tr>
       <td><a href="../../JavaScript/Arrays-Objects-Iteration.md">JavaScript: Arrays, Objects, Iteration</a>
       </td>
-      <td>
+      <td><a href="https://github.com/gSchool/javascript-statements">JavaScript Statements (con't)</a>
       </td>
       <td><a href="https://github.com/gSchool/ccf-data-structures">Crushing Candy Code: Data Structures</a>
       </td>

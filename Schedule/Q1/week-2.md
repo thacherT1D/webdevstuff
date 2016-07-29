@@ -20,7 +20,7 @@
       </td>
       <td><a href="../../HTML/README.md">Intro to HTML</a>
       </td>
-      <td>
+      <td><a href="https://github.com/gSchool/html-intro">HTML Intro</a>
       </td>
       <td><a href="../../HTML/Media.md">Media</a>
       </td>
@@ -28,7 +28,7 @@
     <tr>
       <td><a href="../../HTML/Semantic.md">Semantic HTML</a>
       </td>
-      <td>
+      <td><a href="https://github.com/gSchool/semantic-html-assignment">Semantic HTML</a>
       </td>
       <td>
       </td>
@@ -39,7 +39,7 @@
       </td>
       <td><a href="../../CSS/README.md">Intro to CSS</a>
       </td>
-      <td>
+      <td><a href="https://github.com/gSchool/css-assignments">CSS assignments</a>
       </td>
       <td>
       </td>
@@ -58,7 +58,7 @@
       </td>
       <td><a href="../../DOM/README.md">Intro to the DOM</a>
       </td>
-      <td>
+      <td><a href="https://github.com/gSchool/js-dom-tests">JS DOM Tests</a>
       </td>
       <td>
       </td>

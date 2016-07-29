@@ -19,9 +19,9 @@ table(style="width: 100%")
             a(href=day.firstActivity.article.url)
               = day.firstActivity.article.text
         td
-          if day.firstActivity && day.firstActivity.exercise
-            a(href=day.firstActivity.exercise.url)
-              = day.firstActivity.exercise.text
+          if day.firstActivity && day.firstActivity.assignment
+            a(href=day.firstActivity.assignment.url)
+              = day.firstActivity.assignment.text
         td
           if day.firstActivity && day.firstActivity.stretch
             a(href=day.firstActivity.stretch.url)
@@ -33,9 +33,9 @@ table(style="width: 100%")
               a(href=activity.article.url)
                 = activity.article.text
           td
-            if activity && activity.exercise
-              a(href=activity.exercise.url)
-                = activity.exercise.text
+            if activity && activity.assignment
+              a(href=activity.assignment.url)
+                = activity.assignment.text
           td
             if activity && activity.stretch
               a(href=activity.stretch.url)
