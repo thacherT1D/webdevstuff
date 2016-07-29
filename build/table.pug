@@ -9,7 +9,7 @@ table(style="width: 100%")
   tbody
     for day in data
       tr
-        th(rowspan=day.activities.length)= day.name
+        td(rowspan=day.activities.length)= day.name
         td(rowspan=day.activities.length)
           if day.warmup
             a(href=day.warmup.url)

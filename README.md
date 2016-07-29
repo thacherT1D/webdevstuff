@@ -16,7 +16,7 @@ Week 1
   </thead>
   <tbody>
     <tr>
-      <th rowspan="3">Monday</th>
+      <td rowspan="3">Monday</td>
       <td rowspan="3">
       </td>
       <td><a href="https://docs.google.com/presentation/d/154ou9yQJNcVcVehD6vqaKjGbCKhFb2xK85toqniWaa8/edit#slide=id.g108a6e17ae_0_112">Welcome to WDI</a>
@@ -43,7 +43,7 @@ Week 1
       </td>
     </tr>
     <tr>
-      <th rowspan="2">Tuesday</th>
+      <td rowspan="2">Tuesday</td>
       <td rowspan="2"><a href="Misc/Typing.md">Typing</a>
       </td>
       <td><a href="Development Environment/README.md">Setup Development Environment</a>
@@ -62,7 +62,7 @@ Week 1
       </td>
     </tr>
     <tr>
-      <th rowspan="2">Wednesday</th>
+      <td rowspan="2">Wednesday</td>
       <td rowspan="2"><a href="https://github.com/sethvincent/javascripting">JavaScripting</a>
       </td>
       <td><a href="Misc/Intro to Git.md">Intro to Git and Github</a>
@@ -81,7 +81,7 @@ Week 1
       </td>
     </tr>
     <tr>
-      <th rowspan="2">Thursday</th>
+      <td rowspan="2">Thursday</td>
       <td rowspan="2"><a href="https://github.com/sethvincent/javascripting">JavaScripting (con't)</a>
       </td>
       <td><a href="JavaScript/README.md">JavaScript: Intro, Types, Values, Variables, Control Flow</a>
@@ -100,7 +100,7 @@ Week 1
       </td>
     </tr>
     <tr>
-      <th rowspan="2">Friday</th>
+      <td rowspan="2">Friday</td>
       <td rowspan="2"><a href="https://github.com/sethvincent/javascripting">JavaScripting (con't)</a>
       </td>
       <td><a href="JavaScript/Functions.md">JavaScript Functions (con't)</a>
@@ -136,7 +136,7 @@ Week 2
   </thead>
   <tbody>
     <tr>
-      <th rowspan="2">Monday</th>
+      <td rowspan="2">Monday</td>
       <td rowspan="2"><a href="JavaScript/Memory Diagrams.md">Memory Diagrams</a>
       </td>
       <td><a href="HTML/README.md">Intro to HTML</a>
@@ -155,7 +155,7 @@ Week 2
       </td>
     </tr>
     <tr>
-      <th rowspan="2">Tuesday</th>
+      <td rowspan="2">Tuesday</td>
       <td rowspan="2"><a href="https://github.com/gSchool/g26-challenges-so-far/blob/master/w2/w2-f-replace-with-alphabet-position/w2-f-replace-with-alphabet-position.js">Alphabet Position</a>
       </td>
       <td><a href="CSS/README.md">Intro to CSS</a>
@@ -174,7 +174,7 @@ Week 2
       </td>
     </tr>
     <tr>
-      <th rowspan="4">Wednesday</th>
+      <td rowspan="4">Wednesday</td>
       <td rowspan="4"><a href="http://rosettacode.org/wiki/FizzBuzz">FizzBuzz</a>
       </td>
       <td><a href="DOM/README.md">Intro to the DOM</a>
@@ -209,7 +209,7 @@ Week 2
       </td>
     </tr>
     <tr>
-      <th rowspan="1">Thursday</th>
+      <td rowspan="1">Thursday</td>
       <td rowspan="1"><a href="https://github.com/gSchool/master_warmup_repository_full_stack/blob/master/w2/w2-w-remove-dupes-string-warmup/prompt.js">Remove Duplicates</a>
       </td>
       <td><a href="DOM/Events.md">DOM Events</a>
@@ -220,7 +220,7 @@ Week 2
       </td>
     </tr>
     <tr>
-      <th rowspan="1">Friday</th>
+      <td rowspan="1">Friday</td>
       <td rowspan="1"><a href="Misc/Typing.md">Typing</a>
       </td>
       <td>
@@ -248,7 +248,7 @@ Week 3
   </thead>
   <tbody>
     <tr>
-      <th rowspan="1">Monday</th>
+      <td rowspan="1">Monday</td>
       <td rowspan="1"><a href="https://github.com/gSchool/master_warmup_repository_full_stack/blob/master/w3/w3-t-doubleChar/solution.js">Double Char</a>
       </td>
       <td><a href="CSS/Frameworks.md">CSS Frameworks</a>
@@ -259,7 +259,7 @@ Week 3
       </td>
     </tr>
     <tr>
-      <th rowspan="1">Tuesday</th>
+      <td rowspan="1">Tuesday</td>
       <td rowspan="1"><a href="https://github.com/gSchool/master_warmup_repository_full_stack/blob/master/w3/w3-t-doubleChar/solution.js">Double Char</a>
       </td>
       <td><a href="HTML/Forms.md">HTML Forms</a>
@@ -270,7 +270,7 @@ Week 3
       </td>
     </tr>
     <tr>
-      <th rowspan="1">Wednesday</th>
+      <td rowspan="1">Wednesday</td>
       <td rowspan="1"><a href="https://github.com/gSchool/master_warmup_repository_full_stack/blob/master/w3/w3-r-sum-of-numbers/solution.js">Sum Range</a>
       </td>
       <td><a href="jQuery/README.md">Intro to jQuery</a>
@@ -281,7 +281,7 @@ Week 3
       </td>
     </tr>
     <tr>
-      <th rowspan="1">Thursday</th>
+      <td rowspan="1">Thursday</td>
       <td rowspan="1"><a href="https://github.com/gSchool/master_warmup_repository_full_stack/blob/master/w3/w3-r-sum-of-numbers/solution.js">Sum Range</a>
       </td>
       <td><a href="jQuery/Events.md">jQuery Events</a>
@@ -292,7 +292,7 @@ Week 3
       </td>
     </tr>
     <tr>
-      <th rowspan="2">Friday</th>
+      <td rowspan="2">Friday</td>
       <td rowspan="2"><a href="https://gist.github.com/IanSmith89/6ae569d695ffa1134d229c8f75117da0">Word Scrambler</a>
       </td>
       <td>
@@ -328,7 +328,7 @@ Week 4
   </thead>
   <tbody>
     <tr>
-      <th rowspan="1">Monday</th>
+      <td rowspan="1">Monday</td>
       <td rowspan="1"><a href="https://gist.github.com/IanSmith89/6ae569d695ffa1134d229c8f75117da0">Word Scrambler</a>
       </td>
       <td><a href="HTTP/README.md">HTTP</a>
@@ -339,7 +339,7 @@ Week 4
       </td>
     </tr>
     <tr>
-      <th rowspan="1">Tuesday</th>
+      <td rowspan="1">Tuesday</td>
       <td rowspan="1"><a href="https://github.com/gSchool/g26-challenges-so-far/blob/master/w4/w4-r-rotate-array/problem.js">Rotate</a>
       </td>
       <td><a href="HTTP/AJAX.md">AJAX</a>
@@ -350,7 +350,7 @@ Week 4
       </td>
     </tr>
     <tr>
-      <th rowspan="1">Wednesday</th>
+      <td rowspan="1">Wednesday</td>
       <td rowspan="1"><a href="https://github.com/gSchool/g26-challenges-so-far/blob/master/w4/w4-t-equivalent-number/problem.js">SameDigits</a>
       </td>
       <td><a href="UI/Wireframing.md">Wireframing</a>
@@ -361,7 +361,7 @@ Week 4
       </td>
     </tr>
     <tr>
-      <th rowspan="5">Thursday</th>
+      <td rowspan="5">Thursday</td>
       <td rowspan="5"><a href="https://github.com/gSchool/g26-challenges-so-far/blob/master/w4/w4-t-equivalent-number/problem.js">SameDigits</a>
       </td>
       <td><a href="JavaScript/Scope.md">Scope</a>
@@ -404,7 +404,7 @@ Week 4
       </td>
     </tr>
     <tr>
-      <th rowspan="1">Friday</th>
+      <td rowspan="1">Friday</td>
       <td rowspan="1"><a href="https://gist.github.com/ryansobol/52642194e31327fe5d94a160c1eb2764">ArrayMap</a>
       </td>
       <td><a href="Agile/README.md">Project Mangement</a>

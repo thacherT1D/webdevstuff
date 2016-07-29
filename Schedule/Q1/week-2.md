@@ -15,7 +15,7 @@
   </thead>
   <tbody>
     <tr>
-      <th rowspan="2">Monday</th>
+      <td rowspan="2">Monday</td>
       <td rowspan="2"><a href="../../JavaScript/Memory Diagrams.md">Memory Diagrams</a>
       </td>
       <td><a href="../../HTML/README.md">Intro to HTML</a>
@@ -34,7 +34,7 @@
       </td>
     </tr>
     <tr>
-      <th rowspan="2">Tuesday</th>
+      <td rowspan="2">Tuesday</td>
       <td rowspan="2"><a href="https://github.com/gSchool/g26-challenges-so-far/blob/master/w2/w2-f-replace-with-alphabet-position/w2-f-replace-with-alphabet-position.js">Alphabet Position</a>
       </td>
       <td><a href="../../CSS/README.md">Intro to CSS</a>
@@ -53,7 +53,7 @@
       </td>
     </tr>
     <tr>
-      <th rowspan="4">Wednesday</th>
+      <td rowspan="4">Wednesday</td>
       <td rowspan="4"><a href="http://rosettacode.org/wiki/FizzBuzz">FizzBuzz</a>
       </td>
       <td><a href="../../DOM/README.md">Intro to the DOM</a>
@@ -88,7 +88,7 @@
       </td>
     </tr>
     <tr>
-      <th rowspan="1">Thursday</th>
+      <td rowspan="1">Thursday</td>
       <td rowspan="1"><a href="https://github.com/gSchool/master_warmup_repository_full_stack/blob/master/w2/w2-w-remove-dupes-string-warmup/prompt.js">Remove Duplicates</a>
       </td>
       <td><a href="../../DOM/Events.md">DOM Events</a>
@@ -99,7 +99,7 @@
       </td>
     </tr>
     <tr>
-      <th rowspan="1">Friday</th>
+      <td rowspan="1">Friday</td>
       <td rowspan="1"><a href="../../Misc/Typing.md">Typing</a>
       </td>
       <td>

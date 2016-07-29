@@ -15,7 +15,7 @@
   </thead>
   <tbody>
     <tr>
-      <th rowspan="1">Monday</th>
+      <td rowspan="1">Monday</td>
       <td rowspan="1"><a href="https://gist.github.com/IanSmith89/6ae569d695ffa1134d229c8f75117da0">Word Scrambler</a>
       </td>
       <td><a href="../../HTTP/README.md">HTTP</a>
@@ -26,7 +26,7 @@
       </td>
     </tr>
     <tr>
-      <th rowspan="1">Tuesday</th>
+      <td rowspan="1">Tuesday</td>
       <td rowspan="1"><a href="https://github.com/gSchool/g26-challenges-so-far/blob/master/w4/w4-r-rotate-array/problem.js">Rotate</a>
       </td>
       <td><a href="../../HTTP/AJAX.md">AJAX</a>
@@ -37,7 +37,7 @@
       </td>
     </tr>
     <tr>
-      <th rowspan="1">Wednesday</th>
+      <td rowspan="1">Wednesday</td>
       <td rowspan="1"><a href="https://github.com/gSchool/g26-challenges-so-far/blob/master/w4/w4-t-equivalent-number/problem.js">SameDigits</a>
       </td>
       <td><a href="../../UI/Wireframing.md">Wireframing</a>
@@ -48,7 +48,7 @@
       </td>
     </tr>
     <tr>
-      <th rowspan="5">Thursday</th>
+      <td rowspan="5">Thursday</td>
       <td rowspan="5"><a href="https://github.com/gSchool/g26-challenges-so-far/blob/master/w4/w4-t-equivalent-number/problem.js">SameDigits</a>
       </td>
       <td><a href="../../JavaScript/Scope.md">Scope</a>
@@ -91,7 +91,7 @@
       </td>
     </tr>
     <tr>
-      <th rowspan="1">Friday</th>
+      <td rowspan="1">Friday</td>
       <td rowspan="1"><a href="https://gist.github.com/ryansobol/52642194e31327fe5d94a160c1eb2764">ArrayMap</a>
       </td>
       <td><a href="../../Agile/README.md">Project Mangement</a>

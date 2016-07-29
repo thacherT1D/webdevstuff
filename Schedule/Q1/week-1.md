@@ -15,7 +15,7 @@
   </thead>
   <tbody>
     <tr>
-      <th rowspan="3">Monday</th>
+      <td rowspan="3">Monday</td>
       <td rowspan="3">
       </td>
       <td><a href="https://docs.google.com/presentation/d/154ou9yQJNcVcVehD6vqaKjGbCKhFb2xK85toqniWaa8/edit#slide=id.g108a6e17ae_0_112">Welcome to WDI</a>
@@ -42,7 +42,7 @@
       </td>
     </tr>
     <tr>
-      <th rowspan="2">Tuesday</th>
+      <td rowspan="2">Tuesday</td>
       <td rowspan="2"><a href="../../Misc/Typing.md">Typing</a>
       </td>
       <td><a href="../../Development Environment/README.md">Setup Development Environment</a>
@@ -61,7 +61,7 @@
       </td>
     </tr>
     <tr>
-      <th rowspan="2">Wednesday</th>
+      <td rowspan="2">Wednesday</td>
       <td rowspan="2"><a href="https://github.com/sethvincent/javascripting">JavaScripting</a>
       </td>
       <td><a href="../../Misc/Intro to Git.md">Intro to Git and Github</a>
@@ -80,7 +80,7 @@
       </td>
     </tr>
     <tr>
-      <th rowspan="2">Thursday</th>
+      <td rowspan="2">Thursday</td>
       <td rowspan="2"><a href="https://github.com/sethvincent/javascripting">JavaScripting (con't)</a>
       </td>
       <td><a href="../../JavaScript/README.md">JavaScript: Intro, Types, Values, Variables, Control Flow</a>
@@ -99,7 +99,7 @@
       </td>
     </tr>
     <tr>
-      <th rowspan="2">Friday</th>
+      <td rowspan="2">Friday</td>
       <td rowspan="2"><a href="https://github.com/sethvincent/javascripting">JavaScripting (con't)</a>
       </td>
       <td><a href="../../JavaScript/Functions.md">JavaScript Functions (con't)</a>
