@@ -17,7 +17,7 @@ Being a student in this program is like drinking from a firehose. It's going to 
 * Resource 1 star
 * Resource 2 star
 - Resource 3 dash
-- Resource 4 dash
+- Resource 4 dash :bowtie: 
 
 ## Why is becoming a better learner important?
 
