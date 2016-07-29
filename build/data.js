@@ -186,6 +186,15 @@ module.exports = function() {
           },
         ]
       },
+      {
+        warmup: { text: "SameDigits", url: "https://github.com/gSchool/g26-challenges-so-far/blob/master/w4/w4-t-equivalent-number/problem.js" },
+        activities: [
+          {
+            article: { text: "AJAX", url: "HTTP/AJAX.md" },
+            assignment: { text: "AJAX Hero", url: "https://github.com/gschool/wd-ajax-hero" },
+          },
+        ]
+      },
     ]
   }
 }
