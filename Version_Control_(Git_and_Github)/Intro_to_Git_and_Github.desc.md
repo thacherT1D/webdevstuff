@@ -1,6 +1,6 @@
 # Track Changes with Git
 
-## Objectives
+## Objectives:
 
 * Discuss what a Version Control System is
 * Describe the purpose of a working directory, staging area, and repository
@@ -9,12 +9,27 @@
 * Stage new and changed files with `git add`
 * Commit staged files to the git repository with `git commit`
 
+## Exercises:
+
+* Nothing to submit, but work through this entire article and follow along.
+
+## Included Resources:
+
+* [VCS on Wikipedia](https://en.wikipedia.org/wiki/Version_control)
+* [Git SCM Manual](https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control)
+* [Pro Git book](http://git-scm.com/book/en/v2)
+* [Tower Learn Version Control with Git book](https://www.git-tower.com/learn/git/ebook/command-line/introduction#start)
+* [Try Git](https://try.github.io/)
+* [Tower Git Cheatsheet](http://www.git-tower.com/blog/git-cheat-sheet/)
+* [Git Docs](https://git-scm.com/docs/)
+
+
 ## Version Control System
 
 Version control is a class of tools that programmers use to manage software projects.
 It allows you to track changes you make to files on your machine.
 This is helpful for when you screw things up!
-And you will. :wink:
+And you will.
 And that's ok.
 Version control allows developers to revert back to a specific time and place in your code.
 Sort of like a reset button.
@@ -61,8 +76,6 @@ Even if our hard drives die.
 And if GitHub goes down, we can still work on our distributed repos offline.
 
 ### A Metaphor: Git is a Rocketship, Github is Mars
-
-:rocket:
 
 | Rocketship Version | Git Version |
 |--------------------|-------------|
@@ -188,7 +201,7 @@ $ git push
 
 If you have your remote pointing to GitHub, you should now be able to see any changes on your GitHub page.
 
-## Exercises
+## Practice
 
 Try to do these without looking at the answer first!
 
@@ -244,15 +257,3 @@ $ git commit -m "Initial commit"
 $ git remote add origin git@github.com:{userName}/{repoName}.git
 $ git push -u origin master
 ```
-
-## Resources
-
-* [VCS on Wikipedia](https://en.wikipedia.org/wiki/Version_control)
-* [Git SCM Manual](https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control)
-* [Pro Git book](http://git-scm.com/book/en/v2)
-* [Tower Learn Version Control with Git book](https://www.git-tower.com/learn/git/ebook/command-line/introduction#start)
-* [Try Git](https://try.github.io/)
-
-
-## Git Cheatsheet 
-* [Tower Git Cheatsheet](http://www.git-tower.com/blog/git-cheat-sheet/)
