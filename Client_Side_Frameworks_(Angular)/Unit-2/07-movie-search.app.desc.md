@@ -4,8 +4,6 @@ It's time to use everything you've learned so far in Angular to build a small mo
 
 <iframe src="https://player.vimeo.com/video/135991632" width="500" height="388" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
-
-
 ## WARNING
 
 Due to an issue with the OMDB API, images will not load if you are serving your app from `http://127.0.0.1:8080`
@@ -28,7 +26,6 @@ Show page:
 
   - Shows the results of a more detailed OMDb API search using the movie's ID.
   - Displays all the details of the specific movie, including the poster image of the movie.
-
 
 Bonus:
 
