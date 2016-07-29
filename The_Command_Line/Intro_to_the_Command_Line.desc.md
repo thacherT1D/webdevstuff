@@ -1,3 +1,6 @@
+
+##Objectives:
+
 This lesson will introduce you to the fundamental commands of Mac OS X. By the end, you'll be able to describe and utilize commands to manipulate the following concepts.
 
 * [User accounts](#user-accounts)
@@ -10,7 +13,20 @@ This lesson will introduce you to the fundamental commands of Mac OS X. By the e
 * File system management
 * File system redirection
 
-Before getting stared, use Spotlight to launch the `Terminal` app.
+##Exercises:
+
+1. Solve the [Command Line Murder Mystery](https://github.com/ryansobol/clmystery). To get started, clone the repo to your local machine. Further instructions can be found in the `README` for the mystery. Good luck!
+
+##Included Resources:
+
+- [Learn the Command Line the Hard Way](http://cli.learncodethehardway.org/book/)
+- [Terminal Cheatsheet for Mac](http://bit.ly/terminalcheats)
+- [Complex Shell Commands](http://explainshell.com/explain?cmd=ls+-hal)
+- [camelCase vs. snake_case Showdown on Stackexchange](http://programmers.stackexchange.com/questions/27264/naming-conventions-camelcase-versus-underscore-case-what-are-your-thoughts-ab)
+- [Floss Manuals Piping Tutorial](http://en.flossmanuals.net/command-line/piping/)
+- [How to Use Wildcards](http://www.linfo.org/wildcard.html)
+
+Before getting started, use Spotlight to launch the `Terminal` app.
 
 ## User accounts
 
@@ -657,11 +673,4 @@ You can scroll up and down through all recently used commands that contain the s
 
 If you don't want to execute any of these commands, type `ctrl+c`. Control+c is a powerful command that you can use at any time to kill the currently running terminal process, or exit many terminal applications.
 
-## Homework
-
-Solve the [Command Line Murder Mystery](https://github.com/ryansobol/clmystery). To get started, clone the repo to your local machine. Further instructions can be found in the `README` for the mystery. Good luck!
-
-## Resources
-
-- [Learn the Command Line the Hard Way](http://cli.learncodethehardway.org/book/)
-- [Terminal Cheatsheet for Mac](http://bit.ly/terminalcheats)
+###***> Complete Exercise 1***
