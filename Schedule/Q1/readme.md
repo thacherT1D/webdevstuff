@@ -155,6 +155,17 @@ Week 2
       <td>
       </td>
     </tr>
+    <tr>
+      <th rowspan="1">Tuesday</th>
+      <td rowspan="1"><a href="https://github.com/gSchool/g26-challenges-so-far/blob/master/w2/w2-f-replace-with-alphabet-position/w2-f-replace-with-alphabet-position.js">Alphabet Position</a>
+      </td>
+      <td><a href="../../CSS/Intro.md">Intro to CSS</a>
+      </td>
+      <td><a href="https://github.com/gSchool/css-exercises">CSS Exercises</a>
+      </td>
+      <td>
+      </td>
+    </tr>
   </tbody>
 </table>
 <!-- END SCHEDULE -->

@@ -7,7 +7,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "build": "node build/schedule.js"
+    "build": "node build/run.js"
   },
   "repository": {
     "type": "git",
