@@ -4,13 +4,15 @@ It's time to use everything you've learned so far in Angular to build a small mo
 
 <iframe src="https://player.vimeo.com/video/135991632" width="500" height="388" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
-# WARNING
+[OMDB API](http://www.omdbapi.com/)
+
+## WARNING
 
 Due to an issue with the OMDB API, images will not load if you are serving your app from `http://127.0.0.1:8080`
 
 Instead, use localhost to get the images to show up: `http://localhost:8080`
 
-#### Specs:
+## Specs:
 
 When a user enters a movie title into the search box and clicks the search button, make an API call to search for movies using the user input.  Then, display all the search results on the same page.  When a user clicks on specific search result, send them to another route which displays more detailed information about the specific movie.  You'll need to make another type of OMDB API call.  Lastly, users can start a new search from any page. To sum up the two main routes:
 
