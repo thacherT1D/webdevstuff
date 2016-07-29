@@ -134,9 +134,9 @@ Year: 2013
 
 You may run into the following error from time to time.
 
-```
-XMLHttpRequest cannot load http://example.com/. No 'Access-Control-Allow-Origin' header is present on the requested resource. Origin 'http://example.net/' is therefore not allowed access.
-```
+
+> XMLHttpRequest cannot load http://example.com/. No 'Access-Control-Allow-Origin' header is present on the requested resource. Origin 'http://example.net/' is therefore not allowed access.
+
 
 This error means the server handling the HTTP request has explicitly denied access to your website. Meanie! But don't fret, this keeps hackers from your bank accounts and social life.
 
