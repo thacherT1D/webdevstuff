@@ -65,6 +65,17 @@ function data() {
       },
       {
         warmup: { text: "Memory Diagrams", path: "JavaScript Memory Diagrams" },
+        activities: [
+          {
+            article: { text: "Intro to HTML", path: "HTML/Intro.md" },
+            exercise: { text: "HTML Intro", url: "https://github.com/gSchool/html-intro" },
+            stretch: { text: "Media", path: "HTML/Media.md" },
+          },
+          // {
+          //   article: { text: "Semantic HTML", path: "HTML/Semantic.md" },
+          //   exercise: { text: "Semantic HTML", url: "https://github.com/gSchool/semantic-html-exercise" },
+          // },
+        ]
       },
     ]
   }

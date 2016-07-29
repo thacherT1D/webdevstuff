@@ -137,14 +137,14 @@ Week 2
   </thead>
   <tbody>
     <tr>
-      <th rowspan="0">Monday</th>
-      <td rowspan="0"><a href="../../JavaScript Memory Diagrams">Memory Diagrams</a>
+      <th rowspan="1">Monday</th>
+      <td rowspan="1"><a href="../../JavaScript Memory Diagrams">Memory Diagrams</a>
       </td>
-      <td>
+      <td><a href="../../HTML/Intro.md">Intro to HTML</a>
       </td>
-      <td>
+      <td><a href="https://github.com/gSchool/html-intro">HTML Intro</a>
       </td>
-      <td>
+      <td><a href="../../HTML/Media.md">Media</a>
       </td>
     </tr>
   </tbody>
