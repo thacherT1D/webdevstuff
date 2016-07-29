@@ -171,4 +171,4 @@ Picture someone who's struggling with a part of this process, maybe with clearin
 
 When you're finished, find someone new who you haven't talked with yet and act like this struggling student. Your partner will then pretend to be a doctor by diagnosing the issue and prescribing a concrete step that you can do get healthy again. Once you've been diagnosed and prescribed, switch roles with your partner.
 
-##***Complete all exercises***
+###***> Complete all exercises***
