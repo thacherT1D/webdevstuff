@@ -2,6 +2,8 @@
 
 This article will help you setup a web development environment on [Mac OS X 10.11 El Capitan](https://www.apple.com/osx/) and above. By the end, your computer will be configured with the same state-of-the-art tools used by professional web developers. While this article is mostly compatible with older versions of Mac OS X, follow along as best you can while Googling any problems that arise.
 
+## Objectives:
+
 By the end of this article, your development machine should have the following software installed and configured.
 
 1. [Terminal](#configure-the-terminal)
@@ -21,7 +23,26 @@ After you've finished setting up your development environment, you'll be able to
 1. Commit the web page to a repository
 1. Deploy the web page to a production environment
 
-Additionally, this article assumes your computer is up to the task of coding.
+## Exercises:
+
+* None
+
+## Included Resources
+
+- [Tomorrow Night Eighties Terminal Theme download](https://raw.githubusercontent.com/ryansobol/sea-c17-ruby/master/class1/osx/Tomorrow%20Night%20Eighties.terminal)
+- [Magnet - Window Manager download](https://itunes.apple.com/us/app/magnet/id441258766?mt=12)
+- [Homebrew - Package Manager download](http://brew.sh/)
+- [Google Chrome - Browser download](https://www.google.com/chrome/browser/desktop/)
+- [uBlock Origin - Ad blocker extension](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm?hl=en)
+- [Fish - Command Line Shell](https://fishshell.com/)
+- [Atom - Text Editor](https://atom.io/download/mac)
+- [Git](https://git-scm.com/)
+- [Node](https://nodejs.org/)
+- [1Password - Password Manager download](https://agilebits.com/onepassword)
+
+### Note:
+
+This article assumes your computer is up to the task of coding.
 
 - Is virus and malware free
 - Uses the latest, stable version of its operating system
@@ -62,7 +83,7 @@ The first Unix shell was released in 1971 and yet developers continue to incorpo
 
 ### Discover the Terminal
 
-Let's get our hands dirty and have some fun. :paw_prints:
+Let's get our hands dirty and have some fun.
 
 First, use Spotlight to launch the Terminal app by pressing the `Command` + `Spacebar` keys at the same time, typing the word "terminal" into the search field, and then pressing the `Enter` key.
 
@@ -169,7 +190,7 @@ You may also be surprised to learn that there are no universal keyboard shortcut
 
 Now that your Terminal is setup, it's time to install [Homebrew](http://brew.sh/), the de facto package manager for OS X. If you've never heard of a package manager, think of it as an app store for **free** command line programs.
 
-To get started, run the following command in your shell. It'll download and run a script file that downloads and installs Homebrew onto your development environment. So meta! :metal:
+To get started, run the following command in your shell. It'll download and run a script file that downloads and installs Homebrew onto your development environment. So meta!
 
 ```
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -195,7 +216,7 @@ Otherwise, you'll see something like this.
 
 ![](https://i.imgur.com/JPB9Gnn.png)
 
-**TIP:** Run this command periodically as Homebrew doesn't automatically update itself. :sweat:
+**TIP:** Run this command periodically as Homebrew doesn't automatically update itself.
 
 ### Verify Homebrew
 
@@ -229,7 +250,7 @@ Scroll down a bit more until you find the **Send a "Do Not Track" request with y
 
 ![](https://i.imgur.com/NAWbEim.png)
 
-**TIP:** You may want to consider installing an [ad blocking extension](https://chrome.google.com/webstore/detail/adblock/gighmmpiobklfepjocnamgkkbiglidom) to Chrome.
+**TIP:** You may want to consider installing an [ad blocking extension](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm?hl=en) to Chrome.
 
 
 ## Install and Configure Zsh
@@ -810,7 +831,7 @@ When asked about the project path, just press the `Enter` key to use the current
 
 Before moving on, **please write down your account credentials**. If you don't currently use a password manager, now is a great time to invest in one. As a professional web developer, you're going to be responsible for hundreds, if not thousands, of passwords throughout your career.
 
-There are many password managers on the market. I use and whole-heartedly recommend [1Password](https://agilebits.com/onepassword) because its user-friendly interface makes it easy to generate and access all my account credentials on all my devices. More importantly, I trust the company behind 1Password to employ the best security practices available. While it's not a free application, there is a 30-day free trial. And if you become a satisfied customer, you can use the `MacPowerUsers` coupon code to take 20% off the price.
+There are many password managers on the market. I recommend [1Password](https://agilebits.com/onepassword) because it's user-friendly and you can access your account credentials on all your devices. While it's not a free application, there is a 30-day free trial. Afterwards, you can use the `MacPowerUsers` coupon code to take 20% off the price.
 
 After having written down your Surge account credentials somewhere, open your deployed tiny web page in a browser by running the following command.
 
@@ -824,7 +845,7 @@ You should see something like this.
 
 ![](https://i.imgur.com/3koEnB4.png)
 
-Bravo! :tada:
+Bravo!
 
 ### Congratulations!
 
@@ -834,5 +855,3 @@ You've successfully setup a web development environment on Mac OS X and have com
 1. Tested the web page in a browser
 1. Committed the web page to a repository
 1. Deployed the web page to a production environment
-
-Now that you've finished this article, it's time to celebrate with a frosty beverage. :beers:
