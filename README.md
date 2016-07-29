@@ -312,4 +312,32 @@ Week 3
     </tr>
   </tbody>
 </table>
+
+
+Week 4
+
+<table style="width: 100%">
+  <thead>
+    <tr>
+      <th>Day</th>
+      <th>Warmup</th>
+      <th>Article</th>
+      <th>Assignment</th>
+      <th>Stretch</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="1">Monday</th>
+      <td rowspan="1"><a href="https://gist.github.com/IanSmith89/6ae569d695ffa1134d229c8f75117da0">Word Scrambler</a>
+      </td>
+      <td><a href="HTTP/README.md">HTTP</a>
+      </td>
+      <td><a href="Projects/Q1.md">Q1 Project</a>
+      </td>
+      <td>
+      </td>
+    </tr>
+  </tbody>
+</table>
 <!-- END SCHEDULE -->

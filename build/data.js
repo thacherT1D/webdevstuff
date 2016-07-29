@@ -168,6 +168,15 @@ module.exports = function() {
           },
         ]
       },
+      {
+        warmup: { text: "Word Scrambler", url: "https://gist.github.com/IanSmith89/6ae569d695ffa1134d229c8f75117da0" },
+        activities: [
+          {
+            article: { text: "HTTP", url: "HTTP/README.md" },
+            assignment: { text: "Q1 Project", url: "Projects/Q1.md" },
+          },
+        ]
+      },
     ]
   }
 }
