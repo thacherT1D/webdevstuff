@@ -234,4 +234,32 @@ Week 2
     </tr>
   </tbody>
 </table>
+
+
+Week 3
+
+<table style="width: 100%">
+  <thead>
+    <tr>
+      <th>Day</th>
+      <th>Warmup</th>
+      <th>Article</th>
+      <th>Assignment</th>
+      <th>Stretch</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="1">Monday</th>
+      <td rowspan="1"><a href="https://github.com/gSchool/master_warmup_repository_full_stack/blob/master/w3/w3-t-doubleChar/solution.js">Double Char</a>
+      </td>
+      <td><a href="../../CSS/Frameworks.md">CSS Frameworks</a>
+      </td>
+      <td><a href="https://github.com/gSchool/galvanize-delivers/">Galvanize Delivers</a>
+      </td>
+      <td>
+      </td>
+    </tr>
+  </tbody>
+</table>
 <!-- END SCHEDULE -->

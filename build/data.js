@@ -121,6 +121,15 @@ module.exports = function() {
           },
         ]
       },
+      {
+        warmup: { text: "Double Char", url: "https://github.com/gSchool/master_warmup_repository_full_stack/blob/master/w3/w3-t-doubleChar/solution.js" },
+        activities: [
+          {
+            article: { text: "CSS Frameworks", url: "CSS/Frameworks.md" },
+            assignment: { text: "Galvanize Delivers", url: "https://github.com/gSchool/galvanize-delivers/" },
+          },
+        ]
+      },
     ]
   }
 }
