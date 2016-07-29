@@ -1,23 +1,19 @@
 Being a student in this program is like drinking from a firehose. It's going to feel like information is just gushing out of your instructors on a daily basis with no way to control the flow. Since you probably haven't been a student in a while, this article will help prepare you on how to be a sponge and retain as much of that information as possible.
 
-## Objectives
+## Objectives:
 
 - Describe why becoming a better learner is important.
 - Explain how to become a better learner using a three step process.
 - Identify a few personal strengths regarding this process.
 - Identify at least one personal weakness regarding this process.
 
-## Exercises
-1. Exercise 1
-2. Exercise 2
-3. Exercise 3
+## Exercises:
 
-## Resources
+1. Please complete a short series of questions by scrolling to the top of this page, clicking the 'Questions' tab, and then writing down your thoughts.
 
-* Resource 1 star
-* Resource 2 star
-- Resource 3 dash
-- Resource 4 dash :bowtie: 
+## Included Resources:
+
+* [Zone of Proximal Development (ZPD)](https://en.wikipedia.org/wiki/Zone_of_proximal_development)
 
 ## Why is becoming a better learner important?
 
@@ -175,6 +171,4 @@ Picture someone who's struggling with a part of this process, maybe with clearin
 
 When you're finished, find someone new who you haven't talked with yet and act like this struggling student. Your partner will then pretend to be a doctor by diagnosing the issue and prescribing a concrete step that you can do get healthy again. Once you've been diagnosed and prescribed, switch roles with your partner.
 
-## Final exercise
-
-As a final exercise, please complete a short series of questions by scrolling to the top of this page, clicking the 'Questions' tab, and then writing down your thoughts.
+##***Complete all exercises***
