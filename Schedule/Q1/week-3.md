@@ -33,6 +33,25 @@
       <td>
       </td>
     </tr>
+    <tr>
+      <th rowspan="2">Tuesday</th>
+      <td rowspan="2"><a href="https://github.com/gSchool/master_warmup_repository_full_stack/blob/master/w3/w3-r-sum-of-numbers/solution.js">Sum Range</a>
+      </td>
+      <td><a href="../../jQuery/README.md">Intro to jQuery</a>
+      </td>
+      <td><a href="https://github.com/gSchool/js-dom-tests">JS DOM Tests Reloaded</a>
+      </td>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <td><a href="../../jQuery/Events.md">jQuery Events</a>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+    </tr>
   </tbody>
 </table>
 <!-- END SCHEDULE -->

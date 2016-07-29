@@ -134,6 +134,18 @@ module.exports = function() {
           },
         ]
       },
+      {
+        warmup: { text: "Sum Range", url: "https://github.com/gSchool/master_warmup_repository_full_stack/blob/master/w3/w3-r-sum-of-numbers/solution.js" },
+        activities: [
+          {
+            article: { text: "Intro to jQuery", url: "jQuery/README.md" },
+            assignment: { text: "JS DOM Tests Reloaded", url: "https://github.com/gSchool/js-dom-tests" },
+          },
+          {
+            article: { text: "jQuery Events", url: "jQuery/Events.md" },
+          },
+        ]
+      },
     ]
   }
 }
