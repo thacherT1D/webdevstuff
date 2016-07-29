@@ -143,6 +143,18 @@ module.exports = function() {
           },
           {
             article: { text: "jQuery Events", url: "jQuery/Events.md" },
+            assignment: { text: "jQuery Calculator", url: "https://github.com/gSchool/jquery-calculator" },
+          },
+        ]
+      },
+      {
+        warmup: { text: "Word Scrambler", url: "https://gist.github.com/IanSmith89/6ae569d695ffa1134d229c8f75117da0" },
+        activities: [
+          {
+            assignment: { text: "Galanize Delivers", url: "https://github.com/gSchool/galvanize-delivers/" },
+          },
+          {
+            article: { text: "Linting JavaScript", url: "Misc/Linting.md" },
           },
         ]
       },

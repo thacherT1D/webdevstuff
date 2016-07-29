@@ -47,6 +47,25 @@
     <tr>
       <td><a href="../../jQuery/Events.md">jQuery Events</a>
       </td>
+      <td><a href="https://github.com/gSchool/jquery-calculator">jQuery Calculator</a>
+      </td>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <th rowspan="2">Wednesday</th>
+      <td rowspan="2"><a href="https://gist.github.com/IanSmith89/6ae569d695ffa1134d229c8f75117da0">Word Scrambler</a>
+      </td>
+      <td>
+      </td>
+      <td><a href="https://github.com/gSchool/galvanize-delivers/">Galanize Delivers</a>
+      </td>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <td><a href="../../Misc/Linting.md">Linting JavaScript</a>
+      </td>
       <td>
       </td>
       <td>
