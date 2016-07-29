@@ -216,6 +216,15 @@ module.exports = function() {
           },
         ]
       },
+      {
+        warmup: { text: "ArrayMap", url: "https://gist.github.com/ryansobol/52642194e31327fe5d94a160c1eb2764" },
+        activities: [
+          {
+            article: { text: "Project Mangement", url: "Agile/README.md" },
+            assignment: { text: "Q1 Project", url: "Projects/Q1.md" },
+          },
+        ]
+      },
     ]
   }
 }
