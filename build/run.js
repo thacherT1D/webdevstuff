@@ -1,3 +1,5 @@
+console.log("Generating Tables...");
+
 const data = require('./data');
 const renderTo = require('./schedule-writer').renderTo;
 const renderToWeek = require('./schedule-writer').renderToWeek;

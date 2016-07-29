@@ -60,7 +60,7 @@ Week 1
       </td>
       <td>
       </td>
-      <td><a href="Misc/Intermediate Command Line.md">Intermediate Command Line</a>
+      <td><a href="../../Misc/Intermediate Command Line.md">Intermediate Command Line</a>
       </td>
     </tr>
     <tr>

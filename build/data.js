@@ -17,7 +17,7 @@ module.exports = function() {
           {
             article: {text: "Intro to the Command Line", path: "Misc/Command Line.md"},
             assignment: {text: "Command Line Murder Mystery", url: "https://github.com/ryansobol/clmystery"},
-            stretch: {text: "Intermediate Command Line", url: "Misc/Intermediate Command Line.md"},
+            stretch: {text: "Intermediate Command Line", path: "Misc/Intermediate Command Line.md"},
           },
         ],
       },
