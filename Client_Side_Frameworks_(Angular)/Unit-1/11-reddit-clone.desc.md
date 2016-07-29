@@ -2,7 +2,7 @@
 
 It's time to put everything you've learned so far about Angular to use.  You're going to make a reddit clone with posts, comments, searching, sorting, animations, and more! Watch the following video for an in-depth walk-through of the features.
 
-[![](https://i.gyazo.com/f9d435b4e198cf5ea3c29607d40a8958.png)](https://coursework.galvanize.com/redirects/learning_experiences/9)
+<iframe src="https://player.vimeo.com/video/135778837?byline=0&portrait=0" width="500" height="313" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 Note:
 
@@ -39,4 +39,3 @@ Note:
   * http://plnkr.co/edit/qrQwv1?p=preview
   * https://divshot.com/blog/tips-and-tricks/angular-1-2-and-animate-css/
   * http://odetocode.com/blogs/scott/archive/2014/02/25/easy-animations-for-angularjs-with-animate-css.aspx
-
