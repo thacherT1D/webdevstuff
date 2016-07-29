@@ -71,10 +71,10 @@ function data() {
             exercise: { text: "HTML Intro", url: "https://github.com/gSchool/html-intro" },
             stretch: { text: "Media", path: "HTML/Media.md" },
           },
-          // {
-          //   article: { text: "Semantic HTML", path: "HTML/Semantic.md" },
-          //   exercise: { text: "Semantic HTML", url: "https://github.com/gSchool/semantic-html-exercise" },
-          // },
+          {
+            article: { text: "Semantic HTML", path: "HTML/Semantic.md" },
+            exercise: { text: "Semantic HTML", url: "https://github.com/gSchool/semantic-html-exercise" },
+          },
         ]
       },
     ]
