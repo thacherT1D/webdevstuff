@@ -1,4 +1,4 @@
-## Objectives
+## Objectives:
 
 - Describe what JavaScript is.
 - Describe what ECMAScript is.
@@ -10,6 +10,43 @@
 - Explain simple control flow examples using `if` statements.
 - Explain what type conversion is.
 - Name all the "falsy" values in JavaScript.
+
+##Exercises:
+
+1. Complete this assessment: https://github.com/gSchool/wd-javascript-fundamentals
+
+##Included resources:
+- [Comments (MDN)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Comments)
+- [Data Types (MDN)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Data_types)
+- [Primitives (MDN)](https://developer.mozilla.org/en-US/docs/Glossary/Primitive)
+- [Boolean Type (MDN)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type)
+- [`String` Global Object (MDN)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)
+- [Keywords in Javascript (MDN)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords)
+- [`undefined` Global Property (MDN)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined)
+- [`null` Value (MDN)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null)
+- [What is the difference between null and undefined in JavaScript?](http://stackoverflow.com/questions/5076944/what-is-the-difference-between-null-and-undefined-in-javascript)
+- [Why is typeof null "object"?](http://stackoverflow.com/questions/18808226/why-is-typeof-null-object)
+- [`Symbol` Global Object (MDN)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol)
+- [Arithmetic Operators (MDN)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators)
+- [`Number` Global Object (MDN)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)
+- [`Math` Global Object (MDN)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math)
+- [Logical Operators (MDN)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators)
+- [Relational Operators (MDN)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Relational_operators)
+- [Strange behavior of the '==' loose equality. Or, Why I Stopped Getting Weird Answers with '==' and Learned to love '==='](https://dorey.github.io/JavaScript-Equality-Table/)
+- [Equality Operators (MDN)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Equality_operators)
+- [Operator Precedence (MDN)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)
+- [Equality operators (MDN)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Equality_operators)
+- [Falsey (MDN)](https://developer.mozilla.org/en-US/docs/Glossary/Falsy)
+- [Truthy (MDN)](https://developer.mozilla.org/en-US/docs/Glossary/Truthy)
+- [typeof Operator (MDN)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof)
+
+## Additional Resources:
+
+- [Mozilla Developer Network - JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- [Quick history of JavaScript by Douglas Crockford](https://www.youtube.com/watch?v=t7_5-XYrkqg)
+- [Wikipedia: Ajax (programming)](https://en.wikipedia.org/wiki/Ajax_(programming)
+- [Wikipedia: ECMAScript](https://en.wikipedia.org/wiki/ECMAScript)
+- [Wikipedia: JavaScript](https://en.wikipedia.org/wiki/JavaScript)
 
 ## What's JavaScript?
 
@@ -588,18 +625,8 @@ typeof 'hi' // 'string'
 
 See the [typeof operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof) on the Mozilla Developer Network for more information.
 
+###***> Complete Exercise 1***
+
 ### Further Reading
 
 Want to dig deeper? Read chapters 1 and 2 in [Eloquent JavaScript](http://eloquentjavascript.net/). A word of caution though: this book is great but not very beginner friendly.
-
-## Assessment
-
-https://github.com/gSchool/wd-javascript-fundamentals
-
-## Resources
-
-- [Mozilla Developer Network - JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-- [Quick history of JavaScript by Douglas Crockford](https://www.youtube.com/watch?v=t7_5-XYrkqg)
-- [Wikipedia: Ajax (programming)](https://en.wikipedia.org/wiki/Ajax_(programming)
-- [Wikipedia: ECMAScript](https://en.wikipedia.org/wiki/ECMAScript)
-- [Wikipedia: JavaScript](https://en.wikipedia.org/wiki/JavaScript)

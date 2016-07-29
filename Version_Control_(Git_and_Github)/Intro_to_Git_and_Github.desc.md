@@ -11,7 +11,7 @@
 
 ## Exercises:
 
-* Nothing to submit, but work through this entire article and follow along.
+* Nothing to submit, but work through this entire article and practice sections. 
 
 ## Included Resources:
 
