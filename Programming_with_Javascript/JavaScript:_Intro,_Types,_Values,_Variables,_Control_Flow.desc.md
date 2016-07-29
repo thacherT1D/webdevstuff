@@ -9,7 +9,7 @@
 - Explain the difference between `=`, `==`, and `===` in JavaScript.
 - Explain simple control flow examples using `if` statements.
 - Explain what type conversion is.
-- Name all the "falsy" values in JavaScript.
+- Name all the "falsey" values in JavaScript.
 
 ##Exercises:
 
@@ -32,7 +32,7 @@
 - [`Math` Global Object (MDN)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math)
 - [Logical Operators (MDN)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators)
 - [Relational Operators (MDN)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Relational_operators)
-- [Strange behavior of the '==' loose equality. Or, Why I Stopped Getting Weird Answers with '==' and Learned to love '==='](https://dorey.github.io/JavaScript-Equality-Table/)
+- [Strange behavior of the '==' loose equality. Or, Why I Stopped Getting Weird Answers with '==' and Learned to Love '==='](https://dorey.github.io/JavaScript-Equality-Table/)
 - [Equality Operators (MDN)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Equality_operators)
 - [Operator Precedence (MDN)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)
 - [Equality operators (MDN)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Equality_operators)

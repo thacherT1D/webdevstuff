@@ -3,7 +3,7 @@
 ## Objectives:
 - Learn how to 'speak' correctly about code
 - Use specific language to describe code
-- Visually represen scope as a table
+- Visually represent scope as a table
 - Mentally evaluate assignment statements
 
 ## Exercises:
