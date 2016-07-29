@@ -64,7 +64,7 @@ function data() {
         ],
       },
       {
-        warmup: { text: "Memory Diagrams", path: "JavaScript Memory Diagrams" },
+        warmup: { text: "Memory Diagrams", path: "JavaScript/Memory Diagrams.md" },
         activities: [
           {
             article: { text: "Intro to HTML", path: "HTML/Intro.md" },
@@ -128,12 +128,6 @@ function renderTo(path, template, base) {
   let weeks = dataFor(base)
 
   let tables = weeks.map(week => template({data: week}))
-
-  const file = fs.readFileSync(path, 'utf8')
-  const lines = file.split("\n")
-  const startLine = lines.indexOf('<!-- BEGIN SCHEDULE -->')
-  const endLine = lines.indexOf('<!-- END SCHEDULE -->')
-
   let segments = []
   tables.forEach(function (table, i) {
     segments.push(`Week ${i + 1}`)
@@ -143,17 +137,16 @@ function renderTo(path, template, base) {
   })
   let html = segments.join('\n').trim()
 
-  lines.splice(startLine + 1, endLine - startLine - 1)
-  lines.splice(startLine + 1, 0, html)
-
-  console.log(lines.join("\n"));
-  fs.writeFileSync(path, lines.join('\n'))
+  writeToDisk(path, html)
 }
 
 function renderToWeek(path, template, base, weekNumber) {
   let weeks = dataFor(base)
   let html = template({data: weeks[weekNumber]})
+  writeToDisk(path, html)
+}
 
+function writeToDisk(path, html) {
   const file = fs.readFileSync(path, 'utf8')
   const lines = file.split("\n")
   const startLine = lines.indexOf('<!-- BEGIN SCHEDULE -->')

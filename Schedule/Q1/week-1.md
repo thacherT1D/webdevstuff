@@ -2,7 +2,7 @@
 
 <!-- BEGIN SCHEDULE -->
 
-<table>
+<table style="width: 100%">
   <thead>
     <tr>
       <th>Day</th>

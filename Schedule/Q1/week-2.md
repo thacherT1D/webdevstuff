@@ -2,7 +2,7 @@
 
 <!-- BEGIN SCHEDULE -->
 
-<table>
+<table style="width: 100%">
   <thead>
     <tr>
       <th>Day</th>
@@ -15,7 +15,7 @@
   <tbody>
     <tr>
       <th rowspan="1">Monday</th>
-      <td rowspan="1"><a href="../../JavaScript Memory Diagrams">Memory Diagrams</a>
+      <td rowspan="1"><a href="../../JavaScript/Memory Diagrams.md">Memory Diagrams</a>
       </td>
       <td><a href="../../HTML/Intro.md">Intro to HTML</a>
       </td>

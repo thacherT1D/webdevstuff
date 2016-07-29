@@ -5,7 +5,7 @@ By the end of Q1 you'll be able to build and deploy rich frontend applications!
 <!-- BEGIN SCHEDULE -->
 Week 1
 
-<table>
+<table style="width: 100%">
   <thead>
     <tr>
       <th>Day</th>
@@ -125,7 +125,7 @@ Week 1
 
 Week 2
 
-<table>
+<table style="width: 100%">
   <thead>
     <tr>
       <th>Day</th>
@@ -138,7 +138,7 @@ Week 2
   <tbody>
     <tr>
       <th rowspan="1">Monday</th>
-      <td rowspan="1"><a href="../../JavaScript Memory Diagrams">Memory Diagrams</a>
+      <td rowspan="1"><a href="../../JavaScript/Memory Diagrams.md">Memory Diagrams</a>
       </td>
       <td><a href="../../HTML/Intro.md">Intro to HTML</a>
       </td>
