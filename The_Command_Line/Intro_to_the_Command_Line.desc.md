@@ -82,7 +82,7 @@ It's common for a user account to belong to a many groups. The only important gr
 
 **TIP:** If your user account doesn't belong to the `admin` group, it'll be difficult to manage your development machine.
 
-### Practice
+**Practice:**
 
 Find out the account name and groups of the current user of your computer.
 
@@ -108,7 +108,7 @@ pwd
 
 ![](https://i.imgur.com/s6Xqtmn.png)
 
-### Practice
+**Practice:**
 
 What's the current working directory of your shell?
 
@@ -134,7 +134,7 @@ A path is **absolute** when it starts with `/`.
 
 A path is **relative** when it does not.
 
-### Practice
+**Practice:**
 
 Is the path returned by the `pwd` command absolute or relative?
 
@@ -148,7 +148,7 @@ ls
 
 ![](https://i.imgur.com/tivSrqi.png)
 
-### Practice
+**Practice:**
 
 In what order are the files and directories displayed?
 
@@ -168,7 +168,7 @@ ls -l
 
 ![](https://i.imgur.com/TzK8I2m.png)
 
-### Practice
+**Practice:**
 
 How can you tell if an item is a file or directory? **Hint:** look at its permissions.
 
@@ -221,7 +221,7 @@ man ls
 
 Use the down arrow `↓` key to scroll down and the up arrow `↑` key to scroll up. To quit a `man` page and return to the shell, press the `q` key.
 
-### Practice
+**Practice:**
 
 With the `man` command, spend three minutes discovering new flags for the `ls` command. Try out different combinations of flags to see what they do. For each flag you try, make a prediction about the effect it will have. After trying it, review your prediction.
 
@@ -247,7 +247,7 @@ open .
 
 **TIP:** Remember, the period `.` character represents the current working directory.
 
-### Practice
+**Practice:**
 
 Why can't you see any hidden files and directories in the Finder?
 
@@ -278,7 +278,7 @@ The tilde `~` character represents the home directory. Try displaying the tilde 
 echo ~
 ```
 
-### Practice
+**Practice:**
 
 Is the output from this command the as the output you got from the `pwd` command?
 
@@ -398,7 +398,7 @@ This way you can easily see the competing outcomes of autocomplete. What happens
 
 The competing options for me are `Desktop/`, `Documents/`, and `Downloads/`
 
-### Practice
+**Practice:**
 
 Spend three minutes navigating around your computer's file system from the command line. Use a mixture of relative and absolute paths to navigate around. See what dark corners you can discover in your operating system.
 
@@ -434,7 +434,7 @@ What command can you use to see the results of your handywork?
 
 Let's `cd` into our new `notebook`  Look around with `ls`, and `ls -la`.  What do you see?
 
-### Practice
+**Practice:**
 
 I want my note book to have some notes.  
 
@@ -521,7 +521,7 @@ See how we filtered out just the lines that contain Mil?  Try grepping for somet
 
 Adapted from [http://en.flossmanuals.net/command-line/piping/](http://en.flossmanuals.net/command-line/piping/)
 
-### Practice: Using grep
+**Practice:**: Using grep
 
 `grep` is a powerful command that can search through text output for matching text, or patterns of text. Use pipes, grep, and the commands we've learned about so far to do the following:
 
