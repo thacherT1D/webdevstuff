@@ -169,10 +169,9 @@ A document is a web page.
 
 ## Slides
 
-[Slides](https://docs.google.com/presentation/d/1dW_VJ9HgqKfDKekYIhNZewaC_bNHe2iSEvLiSkzwpFs/edit?usp=sharing)
-[Slides](http://slides.com/lizh/the-document-object-model#/)
+- [Slides](https://docs.google.com/presentation/d/1dW_VJ9HgqKfDKekYIhNZewaC_bNHe2iSEvLiSkzwpFs/edit?usp=sharing)
+- [Slides](http://slides.com/lizh/the-document-object-model#/)
 - [Slides](https://docs.google.com/a/galvanize.com/presentation/d/1OSSS8pLkMeZmu19BAE1dvHKjmG5uN3-SiEteS2Fk3kQ/edit?usp=sharing)
-
 
 ## Assignment
 

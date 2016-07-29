@@ -210,6 +210,28 @@ Week 2
       <td><a href="https://github.com/gSchool/checkerboard-exercise">DOM Checkerboard</a>
       </td>
     </tr>
+    <tr>
+      <th rowspan="1">Thursday</th>
+      <td rowspan="1"><a href="https://github.com/gSchool/master_warmup_repository_full_stack/blob/master/w2/w2-w-remove-dupes-string-warmup/prompt.js">Remove Duplicates</a>
+      </td>
+      <td><a href="../../DOM/Events.md">DOM Events</a>
+      </td>
+      <td><a href="https://github.com/gSchool/stoplight-event-exercise">Stoplight Events</a>
+      </td>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <th rowspan="1">Friday</th>
+      <td rowspan="1"><a href="../../Misc/Typing.md">Typing</a>
+      </td>
+      <td>
+      </td>
+      <td><a href="https://github.com/gSchool/pixel-art-maker">Pixel Art Maker</a>
+      </td>
+      <td>
+      </td>
+    </tr>
   </tbody>
 </table>
 <!-- END SCHEDULE -->

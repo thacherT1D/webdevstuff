@@ -104,6 +104,23 @@ module.exports = function() {
           },
         ]
       },
+      {
+        warmup: { text: "Remove Duplicates", url: "https://github.com/gSchool/master_warmup_repository_full_stack/blob/master/w2/w2-w-remove-dupes-string-warmup/prompt.js" },
+        activities: [
+          {
+            article: { text: "DOM Events", url: "DOM/Events.md" },
+            assignment: { text: "Stoplight Events", url: "https://github.com/gSchool/stoplight-event-exercise" },
+          },
+        ]
+      },
+      {
+        warmup: { text: "Typing", url: "Misc/Typing.md" },
+        activities: [
+          {
+            assignment: { text: "Pixel Art Maker", url: "https://github.com/gSchool/pixel-art-maker" },
+          },
+        ]
+      },
     ]
   }
 }
