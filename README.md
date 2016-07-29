@@ -338,6 +338,17 @@ Week 4
       <td>
       </td>
     </tr>
+    <tr>
+      <th rowspan="1">Tuesday</th>
+      <td rowspan="1"><a href="https://github.com/gSchool/g26-challenges-so-far/blob/master/w4/w4-r-rotate-array/problem.js">Rotate</a>
+      </td>
+      <td><a href="HTTP/AJAX.md">AJAX</a>
+      </td>
+      <td><a href="https://github.com/gschool/wd-ajax-hero">AJAX Hero</a>
+      </td>
+      <td>
+      </td>
+    </tr>
   </tbody>
 </table>
 <!-- END SCHEDULE -->
