@@ -1,5 +1,30 @@
 ## Intro To CSS
 
+## Objectives:
+
+## Exercises:
+
+1. [Galvanize Delivers](https://github.com/gSchool/galvanize-delivers) <- Fork, clone, refer to README.md for directions
+2. [Pixel Art Maker](https://github.com/gSchool/pixel-art-maker) <- Fork, clone, refer to README.md for directions
+
+## Included resources:
+
+- [The Difference Between ID and Class](https://css-tricks.com/the-difference-between-id-and-class/)
+- [Percentage height-- why doesn't it work?](http://stackoverflow.com/questions/5657964/css-why-doesn-t-percentage-height-work).
+- [Width (MDN)](https://developer.mozilla.org/en-US/docs/Web/CSS/width)
+- [Height (MDN)](https://developer.mozilla.org/en-US/docs/Web/CSS/height)
+- [Auto width vs. 100% idth](http://www.456bereastreet.com/lab/width-auto/)
+- [What is the difference between display: inline and display: inline-block?](http://stackoverflow.com/questions/8969381/what-is-the-difference-between-display-inline-and-display-inline-block)
+- [List of HTML5 block elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Block-level_elements)
+- [List of HTML5 inline elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Inline_elemente)
+- [What's the Deal with Display: Inline-Block?](http://designshack.net/articles/css/whats-the-deal-with-display-inline-block/)
+- [Overview of Positioning in CSS](https://css-tricks.com/almanac/properties/p/position/) a great overview on positioning from CSS Tricks. To
+- [Media Queries](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Media_queries).
+- [A Single Div](http://a.singlediv.com/)
+- [The Simpsons](http://pattle.github.io/simpsons-in-css/)
+- [CSS Creatures](http://bennettfeely.com/csscreatures/)
+- [CSS Coke Can](http://www.romancortes.com/ficheros/css-coke.html)
+
 ### Cascading Style Sheets (CSS)
 
 CSS is a style sheet language used for describing the look and formatting of a document written in a markup language.  
@@ -437,3 +462,5 @@ We've only scratched the surface of what you can do with CSS. For inspiration, c
 [CSS Creatures](http://bennettfeely.com/csscreatures/)
 
 [CSS Coke Can](http://www.romancortes.com/ficheros/css-coke.html)
+
+###***> Complete Exercises 1 & 2***

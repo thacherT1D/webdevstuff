@@ -1,10 +1,12 @@
 # An Introduction to Programming and JavaScript: Arrays, Objects, Iterations
 
-Objectives:
+Now that we've talked about primitive data types, let's discuss the last data type in Javascript: objects. Arrays, functions, and (shocker!) objects are all examples of objects. Objects are sometimes referred to as reference types (to distinguish them from the primitive types that we've seen already). Here we'll discuss arrays and objects as well as delve deeper into functions.
+
+## Objectives:
 
 * Create and manipulate arrays and objects
 * Explain the difference between object dot notation and bracket notation
-* Explain how objects are stored and compared in memory 
+* Explain how objects are stored and compared in memory
 * Write for loops and while loops
 * Write a for loop to iterate over an array
 * Write a for-in loop to iterate over an object
@@ -12,9 +14,17 @@ Objectives:
 * Write a deeply nested object
 * Read data from a deeply nested object
 
-Now that we've talked about primitive data types, let's discuss the last data type in Javascript: objects. Arrays, functions, and (shocker!) objects are all examples of objects. Objects are sometimes referred to as reference types (to distinguish them from the primitive types that we've seen already). Here we'll discuss arrays and objects as well as delve deeper into functions.
+## Exercises:
 
-## Arrays 
+1. Complete part 2 of the JavaScript fundamentals assessment: https://github.com/gSchool/wd-javascript-fundamentals
+
+## Included resources:
+
+- [indexOf (MDN)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf)
+- [slice (MDN)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice)
+- [splice (MDN)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice)
+
+## Arrays
 
 Arrays describe a set of elements in a particular order. Arrays in Javascript are declared using square brackets. The simplest array is one with nothing in it:
 
@@ -122,9 +132,9 @@ Imagine that we want to iterate through every element from our array from the fi
 3. We want to increment `i` after every iteration of the `for` loop.
 4. During each iteration, we use `i` to access a element in the array.
 
-**Exercise** Write a loop that iterates over the array [1, 2, 3, 4], doubles each element, and stores in back. `[2, 4, 6, 8]` (who do we appreciate?)
+**Practice** Write a loop that iterates over the array [1, 2, 3, 4], doubles each element, and stores in back. `[2, 4, 6, 8]` (who do we appreciate?)
 
-**Exercise** Adele is having trouble remembering her own song lyrics. For some reason, all she knows is the word "Hello". Let's help her out.
+**Practice** Adele is having trouble remembering her own song lyrics. For some reason, all she knows is the word "Hello". Let's help her out.
 
 ```
 var lines = [
@@ -151,7 +161,7 @@ for (var i = 1; i < 5; i++) {
 
 **Question** When might we want to iterate between two numbers?
 
-## Objects 
+## Objects
 
 Let's now transition to objects, which are created with a different syntax.
 
@@ -185,7 +195,7 @@ var person = {
  }
 ```
 
-**Exercise** Create your person object.
+**Practice** Create your person object.
 
 ### Dot notation vs. square bracket notation (Creation)
 
@@ -400,7 +410,7 @@ while (i <= 10) {
 ```
 Why is the above code block problematic?
 
-**Practice:**s
+**Practice:**
 
 1. Iterate through the array [1, 2, 3, 4] to change the array to [2, 3, 4, 5].
 1. Print the numbers 1 to 10 and also the number 10 to 1, side by side.  Do this using a for loop and a while loop. Expected output:
@@ -615,7 +625,7 @@ Reading deeply nested values is a very important technique. If you want to inclu
 For this reason, you need to gain comfort navigating and finding data anywhere in a deeply nested value.
 
 ***
-Exercise: Take this deeply nested reference type and write the code to find the following values:
+**Practice**: Take this deeply nested reference type and write the code to find the following values:
 
 1. The email of user 1.
 2. The title of user 5.
@@ -730,6 +740,8 @@ var graphObject = {
 }
 ```
 ***
+
+###***> Complete Exercise 1***
 
 ## Conclusion
 

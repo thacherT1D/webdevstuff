@@ -1,6 +1,6 @@
 # Intro to HTML
 
-## Objectives
+## Objectives:
 
 By the end of this lesson you should be able to:
 
@@ -16,6 +16,35 @@ By the end of this lesson you should be able to:
 
 In other words...create a document you can put on the web and share with others!
 
+## Exercises:
+
+1. Fork and clone the [semantic HTML](https://github.com/gSchool/semantic-html-exercise) repository. `index.html` is a news site that's been marked up with `<div>` and `<span>` tags. Using the list of tags above, update the code with semantic tags. When you're done, add/commit/push, and then submit a pull request.
+
+## Included resources:
+[The Paragraph ('<p>') Element (MDN)](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p)
+[Elements (MDN)](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
+[The Unordered List ('<ul>') Element (MDN)](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul)
+[The Ordered List ('<ol>') Element (MDN)](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ol)
+[The Heading Elements ('<h1>', '<h2>', etc.) (MDN)](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements)
+[The Div ('<div>') Element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div)
+[The Span ('<span>') Element (MDN)](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/span)
+[The Strong ('<strong>') Element (MDN)](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/strong)
+[The Emphasis ('<em>') Element (MDN)](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/em)
+[The Image ('<img>') Element (MDN)](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img)
+[The Table ('<table>') Element (MDN) ](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table)
+[List of the Block-level Elements (MDN)](https://developer.mozilla.org/en-US/docs/Web/HTML/Block-level_elements#Elements)
+[List of the Inline Elements (MDN)](https://developer.mozilla.org/en-US/docs/Web/HTML/Inline_elements)
+
+[Table Examples](http://www.codeproject.com/KB/office/WebExcel/Excel.jpg)
+[HTML 5 Cheat Sheet](http://www.inmotionhosting.com/img/infographics/html5_cheat_sheet_tags.png)
+[Facebook's Instant Articles](https://instantarticles.fb.com)
+[Facebook Semantic Tags and Specific Formats](https://developers.facebook.com/docs/instant-articles)
+
+Audio sample: https://upload.wikimedia.org/wikipedia/en/0/04/Rayman_2_music_sample.ogg
+
+Video sample:   https://upload.wikimedia.org/wikipedia/en/2/28/Illusion_movie.ogg
+
+
 ## What is HTML?
 
 HyperText Markup Language (HTML) is the standard language to create webpages. It is a subset of a language called XML. Anytime you see a webpage in a browser, HTML is the language telling the browser what content to put on the screen.
@@ -23,15 +52,15 @@ HyperText Markup Language (HTML) is the standard language to create webpages. It
 * HTML *describes* and applies *structure* to a page; it's the skeleton.
 * Browsers *parse* and then *render* the HTML so that it's human-readable.
 
-It included presentation and appearance cues into the webpage, but these features are now deprecated in favor of Cascading Style Sheets (CSS). Both the HTML and CSS standard is maintained by The World Wide Web Consortium (W3C). 
+It included presentation and appearance cues into the webpage, but these features are now deprecated in favor of Cascading Style Sheets (CSS). Both the HTML and CSS standard is maintained by The World Wide Web Consortium (W3C).
 
 ## Syntax
 
 ### Tags Make Elements
 
 You've probably run into tags before if you've ever used the Internet. You've seen paragraph tags - `<p>`, or you've run into `<span>` or `<div>`. You may have used `<a href="http://example.com">Click here</a>`
-before to link to something. 
-  
+before to link to something.
+
 Tags are the basic unit of HTML. Think of tags (anything that starts with < and ends with >) as _boxes_. The words in between the angle braces (> & <) are like labels to tell you what the box contains.  
 
 HTML _tags_ are used to wrap *content*, by which we usually mean text or other tags.
@@ -85,7 +114,7 @@ This title has a `class` attribute. It tells the browser what styles to apply to
 
 ## Structure
 
-HTML can be thought of as a tree structure, which is similar to a family tree. Each element has a  *parent*, it sometimes has *siblings* and it also may have *children*. Imagine a large box that you put smaller boxes in- the smaller boxes are contained within the larger box. They can't be in multiple boxes at once, so the larger box can be thought of as their *parent* or *container*. The smaller boxes can contain still smaller boxes, aka *children*. Another way to think of this is to imagine making a family tree for a group of jellyfish. They reproduce asexually, so they each have only one parent. 
+HTML can be thought of as a tree structure, which is similar to a family tree. Each element has a  *parent*, it sometimes has *siblings* and it also may have *children*. Imagine a large box that you put smaller boxes in- the smaller boxes are contained within the larger box. They can't be in multiple boxes at once, so the larger box can be thought of as their *parent* or *container*. The smaller boxes can contain still smaller boxes, aka *children*. Another way to think of this is to imagine making a family tree for a group of jellyfish. They reproduce asexually, so they each have only one parent.
 
 Here's an example:
 
@@ -185,7 +214,7 @@ video:   https://upload.wikimedia.org/wikipedia/en/2/28/Illusion_movie.ogg
 
 ## Block-level vs. Inline
 
-Elements are usually either "block-level" elements or "inline" elements. 
+Elements are usually either "block-level" elements or "inline" elements.
 
 Block-Level elements:
 
@@ -215,11 +244,11 @@ Here's a [list of the Inline Elements](https://developer.mozilla.org/en-US/docs/
 
 Tables are how we display "tabular data" in HTML. What this really means is something like this:
 ![table examples](http://www.codeproject.com/KB/office/WebExcel/Excel.jpg)
-Any time you have something that would be good in a spreadsheet, Tables are the way to go. 
+Any time you have something that would be good in a spreadsheet, Tables are the way to go.
 
 > Early in the history of the web, people tried to adapt tables for layout purposes. Today, we have CSS Grid Systems and tables are back to being used for their actual purpose. This is one of the first examples of how code can be "abused"- AKA used for a purpose other than what it was designed for. Tables worked well when you could be sure of what size everyone's screens were (remember when monitors were all the same size?) but nowadays they just break when viewed on a small screen (like a phone) or a big one (like a giant iMac monitor).
 
-Table tags: 
+Table tags:
 `<table>,<thead>,<th>,<tbody>,<td>,<tr>,<tfoot>`
 
 Example:
@@ -250,15 +279,15 @@ Example:
 Take a look at the documentation for Tables. Keep this documentation up, and use it to find out how to use the elements you need in order to complete the exercise below.
 [Table Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table)
 
-## **Exercise** 
+## **Exercise**
 
 Create a new file, call it `favorites.html`.
 `git add` the file to your repository, and commit it.
 
 * Set up the page with the proper structure, like the last exercise
 * Create a table and add a table head element (then, commit your changes!)
-* Create a row of table headers for `First Name`, `Last Name`, `Favorite Animal` 
-* Create a table body with one row and three columns 
+* Create a row of table headers for `First Name`, `Last Name`, `Favorite Animal`
+* Create a table body with one row and three columns
 * Enter your first name, last name, and favorite animal in the corresponding columns (then, commit your changes!)
 
 ## Links
@@ -372,12 +401,12 @@ These tags are for marking up text content within a structural element:
 * details
 * summary
 
-## Exercise: The Semantic News
 
-Fork and clone the [semantic HTML](https://github.com/gSchool/semantic-html-exercise) repository. `index.html` is a news site that's been marked up with `<div>` and `<span>` tags. Using the list of tags above, update the code with semantic tags. When you're done, add/commit/push, and then submit a pull request.
 
 > Fun fact: Facebook has implemented something called [Instant Articles](https://instantarticles.fb.com) to help news sources have their articles be more friendly with Facebook. Their docs stress the use of [semantic tags and specific formats](https://developers.facebook.com/docs/instant-articles).
 
 ## HTML 5 Cheat Sheet
 
 ![HTML 5 Cheat Sheet](http://www.inmotionhosting.com/img/infographics/html5_cheat_sheet_tags.png)
+
+###***> Complete Exercise 1***

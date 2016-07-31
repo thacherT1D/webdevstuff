@@ -13,7 +13,7 @@
 
 ##Exercises:
 
-1. Complete this assessment: https://github.com/gSchool/wd-javascript-fundamentals
+1. Complete part 1 of the JavaScript fundamentals assessment: https://github.com/gSchool/wd-javascript-fundamentals
 
 ##Included resources:
 - [Comments (MDN)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Comments)
