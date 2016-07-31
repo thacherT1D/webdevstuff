@@ -1,6 +1,6 @@
 # JavaScript and the DOM
 
-## Objectives
+## Objectives:
 
 By the end of this lesson you should be able to:
 
@@ -11,6 +11,28 @@ By the end of this lesson you should be able to:
 - Construct and add elements to the DOM
 - Remove elements from the dom
 - Detach and reattach DOM elements
+
+## Exercises:
+
+1. Follow along with the article below, creating your own repository and practicing DOM manipulation.
+2. [js-dom-tests](https://github.com/gSchool/js-dom-tests) --> Fork, clone, refer to README.md for directions
+
+## Included Resources:
+- [comprehensive overview](https://developer.mozilla.org/en-US/docs/Web/API/Node)
+- [`getAttribute`](https://developer.mozilla.org/en-US/docs/Web/API/Element/getAttribute)
+- [`setAttribute`](https://developer.mozilla.org/en-US/docs/Web/API/Element/getAttribute)
+- [`attributes`](https://developer.mozilla.org/en-US/docs/Web/API/Element/attributes)
+- [DOM node](https://developer.mozilla.org/en-US/docs/Web/API/Node)
+- [document](https://developer.mozilla.org/en-US/docs/Web/API/Document)
+- [method](https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByTagName)...
+- [`getElementsByTagName()`](https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByTagName)
+- [`getElementsByClassName()`](https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByClassName)
+- [`querySelector()`](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector)
+- [`querySelectorAll()`](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll)
+- [very specific and powerful](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector#ExamplePowerful)
+- [`createElement()`](https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement)
+- [element node](http://www.w3schools.com/jsref/prop_node_nodetype.asp).
+- [The Basics of JavaScript DOM Manipulation](http://callmenick.com/post/basics-javascript-dom-manipulation)
 
 ## What is the DOM?
 
@@ -32,7 +54,7 @@ Recall in our Introduction to HTML article that HTML can be thought of as a tree
 
 ![HTML Tree](http://www.webstepbook.com/supplements/slides/images/dom_tree.gif)
 
-**Exercise** Look at the code below. Can you give examples of parent-child relationships and sibling relationships?
+**Practice:** Look at the code below. Can you give examples of parent-child relationships and sibling relationships?
 
 ```html
 <!DOCTYPE html>
@@ -94,7 +116,7 @@ Open up the inspector by pressing Command + Option + I. In the console, type in 
 
 The document is the root access point to all of the HTML. It even includes the DocType. You can access the root `<html>` node by calling `document.documentElement` or `document.childNodes[1]`.
 
-**Exercise** What type is `document`?
+**Practice:** What type is `document`?
 
 ## Node Interface
 
@@ -104,7 +126,7 @@ The document and each HTML element (tag) inherits a Node interface. The MDN prov
 
 You can access a node in the `childNodes` property. It is an array-like object. This means that you can access its elements by index and use the provided `length` property, but you do not have any built in Array functions.
 
-**Exercise** Can you remember of another array-like object we talked about?
+**Practice:** Can you remember of another array-like object we talked about?
 
 It's _**important to note**_ that the these properties are _live_. This means that _changes in the DOM affect the array_.
 
@@ -412,10 +434,7 @@ console.log(allListItems);
 
 Make sense? Prepend another element. Try removing an element with `removeChild()`. Once done, show an instructor.
 
-## Practice
-
-See [https://github.com/gSchool/js-dom-tests](https://github.com/gSchool/js-dom-tests).
-
+###***> Complete Exercise 2***
 
 ## Further Reading
 

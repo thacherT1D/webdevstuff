@@ -8,6 +8,17 @@ By the end of this lesson you should be able to:
 * Explain the difference between `this` and `event.target` in event listeners
 * Respond to the event `DOMContentLoaded` event
 
+## Exercises:
+1. Follow along with the article below, creating your own repository and practicing DOM manipulation.
+
+## Included resources:
+
+- [Events list (MDN)](https://developer.mozilla.org/en-US/docs/Web/Events)
+- [Difference between DOMContentLoaded and window.onLoad](http://web.archive.org/web/20150405114023/http://ie.microsoft.com/testdrive/HTML5/DOMContentLoaded/Default.html)
+- [addEventListener (MDN)](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)
+- [removeEventListener (MDN)](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/removeEventListener)
+- [Bubbling and Capturing](http://javascript.info/tutorial/bubbling-and-capturing)
+
 ## Introduction
 
 Events are one of the most important underlying concepts in modern Javascript. Events add interactivity to a webpage and let us do all sorts of fun stuff!
