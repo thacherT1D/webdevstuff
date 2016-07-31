@@ -1,6 +1,6 @@
 # Intermediate CSS
 
-[slides here](https://docs.google.com/presentation/d/1omsUSz7UPV9mf-yPNMrhA99K1shQjvcxTvHN94xvu3k/edit?usp=sharing)
+[Slides:](https://docs.google.com/presentation/d/1omsUSz7UPV9mf-yPNMrhA99K1shQjvcxTvHN94xvu3k/edit?usp=sharing)
 
 Today we will be expanding on our understanding of CSS.
 
@@ -15,6 +15,27 @@ Today we will be expanding on our understanding of CSS.
   - Understand what a psuedo-class does.
   - Be able to manipulate fonts
   - Understand the different types of colors.
+
+## Exercises:
+
+## Included resources:
+
+- [normalize.css](https://necolas.github.io/normalize.css/).
+- [Meyer Reset](http://meyerweb.com/eric/tools/css/reset/).
+- [Relative Practice](https://www.codecademy.com/courses/advanced-css-positioning/0/4)
+- [Absolute Practice](https://www.codecademy.com/courses/advanced-css-positioning/1/3)
+- [Fixed Practice](https://www.codecademy.com/courses/advanced-css-positioning/3/2?)
+- [Dummy content](http://lipsum.com/)
+
+## Additional Resources:
+
+- [CSS Diner](http://flukeout.github.io/)
+- [CSS Zen Garden](http://www.mezzoblue.com/zengarden/alldesigns/)
+- [Standard CSS Colors](http://www.colors.commutercreative.com/grid/)
+- [CSS Cheatsheet](http://overapi.com/css)
+- [Webfont Generator](https://www.fontsquirrel.com/tools/webfont-generator)
+- [Flexbox Guide](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+- [Flexbox Froggy Game](http://flexboxfroggy.com/)
 
 
 ## CSS Resets & Normalizers
@@ -261,13 +282,3 @@ Most properties, such as fonts, will be inherited by children. The following pro
 * Any kind of positioning
 * Backgrounds
 * Borders
-
-## Resources
-
-- http://flukeout.github.io/ - CSS diner
-- http://www.mezzoblue.com/zengarden/alldesigns/ - CSS zen garden
-- http://www.colors.commutercreative.com/grid/ - Standard CSS colors
-- http://overapi.com/css - CSS cheatsheet
-- https://www.fontsquirrel.com/tools/webfont-generator - webfont generator
-- https://css-tricks.com/snippets/css/a-guide-to-flexbox/ - flexbox guide
-- http://flexboxfroggy.com/ - fun flexbox game

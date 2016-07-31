@@ -2,10 +2,26 @@
 
 ## Objectives:
 
+Students should be able to:
+
+- describe the concept of specificity as it relates to CSS
+- manipulate the width of HTML elements
+- manipulate the height of HTML elements
+- explain the differences between possible values of the `display` property
+- explain the box model
+- position elements
+- explain the differences between possible values of the `position` property
+- use the `float` property
+- use media queries
+- create tables
+
+
 ## Exercises:
 
-1. [Galvanize Delivers](https://github.com/gSchool/galvanize-delivers) <- Fork, clone, refer to README.md for directions
-2. [Pixel Art Maker](https://github.com/gSchool/pixel-art-maker) <- Fork, clone, refer to README.md for directions
+1. Answer the questions in this article's `Questions` tab.
+2. [Galvanize Delivers](https://github.com/gSchool/galvanize-delivers) --> Fork, clone, refer to README.md for directions
+3. [Pixel Art Maker](https://github.com/gSchool/pixel-art-maker) --> Fork, clone, refer to README.md for directions
+
 
 ## Included resources:
 
