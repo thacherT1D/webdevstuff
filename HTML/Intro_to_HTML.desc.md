@@ -21,17 +21,17 @@ In other words...create a document you can put on the web and share with others!
 1. Fork and clone the [semantic HTML](https://github.com/gSchool/semantic-html-exercise) repository. `index.html` is a news site that's been marked up with `<div>` and `<span>` tags. Using the list of tags above, update the code with semantic tags. When you're done, add/commit/push, and then submit a pull request.
 
 ## Included resources:
-- [The Paragraph (<p>) Element (MDN)](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p)
+- [The Paragraph (p) Element (MDN)](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p)
 - [Elements (MDN)](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
-- [The Unordered List (<ul>) Element (MDN)](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul)
-- [The Ordered List (<ol>) Element (MDN)](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ol)
-- [The Heading Elements (<h1>, <h2>, etc.) (MDN)](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements)
-- [The Div (<div>) Element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div)
-- [The Span (<span>) Element (MDN)](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/span)
-- [The Strong (<strong>) Element (MDN)](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/strong)
-- [The Emphasis (<em>) Element (MDN)](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/em)
-- [The Image (<img>) Element (MDN)](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img)
-- [The Table (<table>) Element (MDN) ](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table)
+- [The Unordered List (ul) Element (MDN)](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul)
+- [The Ordered List (ol) Element (MDN)](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ol)
+- [The Heading Elements (h1, h2, etc.) (MDN)](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements)
+- [The Div (div) Element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div)
+- [The Span (span) Element (MDN)](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/span)
+- [The Strong (strong) Element (MDN)](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/strong)
+- [The Emphasis (em) Element (MDN)](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/em)
+- [The Image (img) Element (MDN)](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img)
+- [The Table (table) Element (MDN) ](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table)
 - [List of the Block-level Elements (MDN)](https://developer.mozilla.org/en-US/docs/Web/HTML/Block-level_elements#Elements)
 - [List of the Inline Elements (MDN)](https://developer.mozilla.org/en-US/docs/Web/HTML/Inline_elements)
 
