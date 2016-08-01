@@ -325,7 +325,7 @@ Then, run the following shell command.
 http POST localhost:8000/users email=missy.elliot@gmail.com password=geturfreakon
 ```
 
-And you should see something like this on the client.
+And in the client logs, you should see something like this.
 
 ```text
 HTTP/1.1 200 OK
@@ -338,7 +338,7 @@ ETag: W/"2-4KoCHiHd29bYzs7HHpz1ZA"
 OK
 ```
 
-And something like this on the server logs.
+And in the server logs, you should see something like this.
 
 ```text
 missy.elliot@gmail.com $2a$12$6hRYmwZzf9hwcY8q4ClC6eiY3McrZmS6J7H/ga4g6KwpDPaxVjLPm
