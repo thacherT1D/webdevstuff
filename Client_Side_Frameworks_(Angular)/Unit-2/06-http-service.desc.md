@@ -97,7 +97,7 @@ Try making a request to an invalid URL.  Write code to properly handle a request
 
 **EXERCISE 5**
 
-Use `$http.get()` and `$http.post()` to interact with this [Rails API that we've made for you](https://still-tundra-8387.herokuapp.com/).  It's a simple collaborative chat app.  The API has two endpoints:
+Use `$http.get()` and `$http.post()` to interact with this [http://angular-http-service-backend.herokuapp.com/messages](https://still-tundra-8387.herokuapp.com/) endpoint.  It's a simple collaborative chat app. [Github Repo](https://github.com/gSchool/angular-http-service-backend)  The API has two endpoints:
 
 The app is one Rails model, Message, which has two attributes: name and content.
 
@@ -106,7 +106,7 @@ The app is one Rails model, Message, which has two attributes: name and content.
 
 Create a simple app that displays a list of all the messages coming from the API.  Also display a form that allows a user to submit a new message to the database.
 
-Remember that most Rails apps expect your data for a given model to be nested inside of a single object with the name of the model.  So the data you send should follow this format:
+Data that does not follow the following pattern will not be accepted by the server:
 
 ```js
 {message: {

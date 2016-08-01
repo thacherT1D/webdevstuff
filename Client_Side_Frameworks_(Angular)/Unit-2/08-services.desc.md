@@ -142,7 +142,6 @@ app.service("firstService", [function() {
 Now in our `controller`, we can inject the service:
 
 ```
-app.controller("firstController", function($scope, firstService) {
   app.controller("controller", ['firstService', function(firstService){
     var vm = this;
     vm.greeting = firstService.sayHi;
