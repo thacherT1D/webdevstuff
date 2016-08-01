@@ -128,21 +128,73 @@ angular
 - What is the difference between a factory and a service?
 - Name at least 3 angular built in services that we have used so far.
 
-**EXERCISE 3: todoService**
+**EXERCISE todoService**
 
-For this exercise you will be building a todo app will full CRUD (no backend required). It should have the following requirements
+For this exercise you will be refactoring your todo app. This will involve removing logic related to storing your todos in your app, and also moving logic related to initializing your todos and adding todos into a factory.
 
-- a user should be able to create a todo only when there is text present (use angular form validation!)
-- a user should see all of their created todos with the option to delete a single todo
-- a user should be able to edit each individual todo. This involves showing/hiding a new form for editing the text of a todo
+All of your logic to create, show, updated and delete todos and people  should be inside of a **service**.
 
-All of your logic to create, show, updated and delete todos should be inside of a **service**.
+/*
+- a user should be able to edit each individual todo.
+*/
 
-You should be using the new folder structure and angular router for this application. Although you only need one route, it's good practice!
+Currently your controllers should looks something like this:
 
-It should function like (and look far better than) this:
+```js
+// controllers.js
 
-[![https://gyazo.com/ac2169731726c391acfd87cf50137e58](https://i.gyazo.com/ac2169731726c391acfd87cf50137e58.gif)](https://gyazo.com/ac2169731726c391acfd87cf50137e58)
+(function() {
+  'use strict';
+
+  angular
+    .module('todoApp')
+
+    .controller('TodoListCtrl', function() {
+      this.todoToAdd = '';
+      this.todos = [];
+
+      this.addTodo = (todoText) => {
+        this.todos.push({
+          completed: false,
+          text: todoText
+        });
+        this.todoToAdd = '';
+      };
+    })
+
+    .controller('PeopleCtrl', function() {
+      this.nameToAdd = '';
+      this.people = [];
+
+      this.addPerson = (personName) => {
+        this.people.push({ name: personName });
+        this.nameToAdd = '';
+      };
+    });
+
+})();
+```
+
+We know that we are going to be abstracting some things out of the controllers here into services, and we know that our servies are going to be defined in the `services.js` file we already created. Let's go over to that file and build out the basic skelton for those services.
+
+```js
+// services.js
+
+(function() {
+  'use strict';
+
+  const app = angular.module('todoApp');
+
+  app.factory('Todos', function() {
+    return {
+      addTodo: function(todo) {
+        // POST todo data
+      },
+    }
+  });
+})();
+```
+In the above `TodoListCtrl` we have a method which pushes data for a todo into the `todos` array that is also defined on this controller.
 
 ### Resources
 
