@@ -382,8 +382,7 @@ router.post('/users', (req, res, next) => {
     .then((hashedPassword) => {
       const insertUser = { email, hashedPassword };
 
-      return knex('users')
-        .insert(decamelizeKeys(insertUser), '*');
+      return knex('users').insert(decamelizeKeys(insertUser), '*');
     })
     .then((rows) => {
       const user = camelizeKeys(rows[0]);
