@@ -239,6 +239,19 @@ psql trackify_dev -c '\d knex_migrations_lock'
 psql trackify_dev -c 'SELECT * FROM knex_migrations_lock;'
 ```
 
+```text
+┌─────────────────────────────────────────────────────────────┐
+│                            users                            │
+├───────────┬─────────────────────────┬───────────────────────┤
+│id         │serial                   │primary key            │
+│first_name │varchar(255)             │not null default ''    │
+│last_name  │varchar(255)             │not null default ''    │
+│email      │varchar(255)             │not null unique index  │
+│created_at │timestamp with time zone │not null default now() │
+│updated_at │timestamp with time zone │not null default now() │
+└───────────┴─────────────────────────┴───────────────────────┘
+```
+
 ```shell
 npm run knex migrate:make users
 ```
@@ -255,7 +268,7 @@ exports.up = function(knex) {
     table.increments();
     table.string('first_name').notNullable().defaultTo('');
     table.string('last_name').notNullable().defaultTo('');
-    table.string('email').unique().notNullable();
+    table.string('email').notNullable().unique();
     table.timestamps(true, true);
   });
 };
