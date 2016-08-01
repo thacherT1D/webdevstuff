@@ -587,6 +587,10 @@ typeof 'hi' // 'string'
 
 See the [typeof operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof) on the Mozilla Developer Network for more information.
 
+### Exercise
+
+Turn to your neighbor and list the six types of falsy values in JavaScript.
+
 ## What is a Function?
 
 In one sentence, we can say that a function is a sequence of instructions that achieve a specific task. I've always found definitions to be more meaningful when they are tied to the world around us. So let's pause for a moment and think of real-world examples that fit our definition....
