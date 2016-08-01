@@ -434,7 +434,6 @@ exports.seed = function(knex) {
       );
     });
 };
-
 ```
 
 ```shell
