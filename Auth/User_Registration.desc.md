@@ -375,10 +375,7 @@ router.post('/users', (req, res, next) => {
   }
 
   if (!password || password.length < 8) {
-    return next(boom.create(
-      400,
-      'Password must be at least 8 characters long'
-    ));
+    return next(boom.create(400, 'Password must be at least 8 characters long'));
   }
 
   bcrypt.hash(password, 12)
