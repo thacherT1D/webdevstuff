@@ -1,16 +1,15 @@
 ## Objectives
 
-- Explain what user authentication is
-- Explain why is user authentication important
-- Use bcrypt to authenticate a user
-- Explain what a cookie is
+- Explain what authentication is.
+- Explain why is authentication important.
+- Use bcrypt to authenticate a user.
 - Explain what a session is
 - Add routes to authenticate a user
-- Create express middleware to detect whether user is authenticated
+- Create Express middleware to authorize a user.
 
-## What's user authentication?
+## What's authentication?
 
-**User authentication** is the process of confirming the identity of a user. When a user logs into a web application, he or she is attempting to authenticate. To confirm his or her identity, unique personal identification, like a username or email address, and a password must be provided. If the information provided during login matches the information previously provided during registration, the user is authenticated.
+**Authentication** is the process of confirming the identity of a user. When a user logs into a web application, he or she is attempting to authenticate. To confirm his or her identity, unique personal identification, like a username or email address, and a password must be provided. If the information provided during login matches the information previously provided during registration, the user is authenticated.
 
 However, it's not quite as simple as that. As you've seen, only hashed passwords are stored in the database during registration. To verify whether a login password is correct, it too must be run through the same cryptographic hash function as the registration password. Only if the two hashed passwords are equivalent is the user authenticated.
 
@@ -26,46 +25,115 @@ So a web application can show information—sometimes public, most of the time p
 
 Previously, you used the `bcrypt.hash()` method to hash a password during user registration. Additionally, the `bcrypt.compare()` method checks whether or not a login plaintext password matches a registration hashed password.
 
-Now let's create a route for logging in and use `bcrypt`. First we will create a branch for our session.
+Now, let's create a route for logging in and use `bcrypt`.
+
+To get started, navigate to the `trackify` project directory.
 
 ```shell
-git checkout -b session
+cd path/to/trackify
 ```
 
-Once we are in the `session` branch let's create a `routes/session.js` module.
+And checkout a new feature branch.
+
+```shell
+git checkout -b authentication
+```
 
 ```javascript
 'use strict';
 
-const express = require('express');
-const router = express.Router();
-const knex = require('../knex');
-const bcrypt = require('bcrypt-as-promised');
-
-router.post('/session', (req, res, next) => {
-  knex('users')
-    .where('email', req.body.email)
-    .first()
-    .then((user) => {
-      if (!user) {
-        const err = new Error('Unauthorized');
-
-        err.status = 401;
-
-        throw err;
-      }
-
-      return bcrypt.compare(req.body.password, user.hashed_password);
+exports.seed = function(knex) {
+  return knex('users').del()
+    .then(() => {
+      return knex('users').insert([{
+        id: 1,
+        email: '2pac@shakur.com',
+        hashed_password: '$2a$12$LaKBUi8mCFc/9LiCtvwcvuNIjgaq9LJuy/NO.m4P5.3FP8zA6t2Va',
+        created_at: new Date('2016-06-29 14:26:16 UTC'),
+        updated_at: new Date('2016-06-29 14:26:16 UTC')
+      }]);
     })
     .then(() => {
-      res.sendStatus(200);
+      return knex.raw(
+        "SELECT setval('users_id_seq', (SELECT MAX(id) FROM users));"
+      );
+    });
+};
+```
+
+Then, seed the database.
+
+```shell
+npm run knex seed:run
+```
+
+In the `server.js` file, add the necessary routing middleware.
+
+```javascript
+// ...
+
+const session = require('routes/session');
+const tracks = require('routes/tracks');
+const users = require('routes/users');
+
+app.use(session);
+app.use(tracks);
+app.use(users);
+
+// ...
+```
+
+Create a new routes file for managing a session.
+
+```shell
+touch routes/session.js
+```
+
+In the `routes/session.js` file, type the following code.
+
+```javascript
+'use strict';
+
+const boom = require('boom');
+const bcrypt = require('bcrypt-as-promised');
+const express = require('express');
+const knex = require('../knex');
+const { camelizeKeys, decamelizeKeys } = require('humps');
+
+const router = express.Router();
+
+router.post('/session', (req, res, next) => {
+  const { email, password } = req.body;
+
+  if (!email || !email.trim()) {
+    return next(boom.create(400, 'Email must not be blank'));
+  }
+
+  if (!password || password.length < 8) {
+    return next(boom.create(400, 'Password must not be blank'));
+  }
+
+  let user;
+
+  knex('users')
+    .where('email', email)
+    .first()
+    .then((row) => {
+      if (!row) {
+        throw boom.create(400, 'Bad email or password');
+      }
+
+      user = camelizeKeys(row);
+
+      return bcrypt.compare(password, user.hashedPassword);
+    })
+    .then(() => {
+      delete user.hashedPassword;
+
+      res.send(user);
     })
     .catch(bcrypt.MISMATCH_ERROR, () => {
-      const err = new Error('Unauthorized');
-
-      err.status = 401;
-
-      throw err;
+      throw boom.create(400, 'Bad email or password');
     })
     .catch((err) => {
       next(err);
@@ -75,62 +143,28 @@ router.post('/session', (req, res, next) => {
 module.exports = router;
 ```
 
-Before we can test our new endpoint, we need to add our router to the `server.js` file.
-
-```javascript
-'use strict';
-
-const express = require('express');
-const path = require('path');
-const port = process.env.PORT || 8000;
-
-const morgan = require('morgan');
-const bodyParser = require('body-parser');
-
-const artists = require('./routes/artists');
-const tracks = require('./routes/tracks');
-const users = require('./routes/users');
-const session = require('./routes/session');
-
-const app = express();
-
-app.disable('x-powered-by');
-
-app.use(morgan('short'));
-app.use(bodyParser.json());
-
-app.use(artists);
-app.use(tracks);
-app.use(users);
-app.use(session);
-
-app.use((_req, res) => {
-  res.sendStatus(404);
-});
-
-app.use((err, _req, res, _next) => {
-  if (err.status) {
-    return res
-      .status(err.status)
-      .set('Content-Type', 'text/plain')
-      .send(err.message);
-  }
-
-  console.error(err);
-  res.sendStatus(500);
-});
-
-app.listen(port, () => {
-  console.log('Listening on port', port);
-});
-
-module.exports = app;
-```
-
-We are now ready to test our server for authentication.
+Run the following shell command.
 
 ```shell
-http POST localhost:8000/session email=neo@thematrix.com password=theone
+http POST localhost:8000/session email='2pac@shakur.com' password=ambitionz
+```
+
+And you should see something like this.
+
+```text
+HTTP/1.1 200 OK
+Connection: keep-alive
+Content-Length: 112
+Content-Type: application/json; charset=utf-8
+Date: Mon, 01 Aug 2016 23:53:35 GMT
+ETag: W/"70-1qLFVreC078yebGK0TQomg"
+
+{
+    "createdAt": "2016-06-29T14:26:16.000Z",
+    "email": "2pac@shakur.com",
+    "id": 1,
+    "updatedAt": "2016-06-29T14:26:16.000Z"
+}
 ```
 
 Once you get a successful response, commit your changes.
