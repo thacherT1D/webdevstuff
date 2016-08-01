@@ -392,7 +392,6 @@ npm run knex seed:run
 psql trackify_dev -c 'SELECT * FROM tracks;'
 ```
 
-
 ```shell
 npm run knex seed:make 2_users
 ```
