@@ -460,4 +460,8 @@ git commit -m 'Initial commit'
 
 ## Resources
 
-- [Knex.js](http://knexjs.org/)
+- [Knex.js - Migrations](http://knexjs.org/#Migrations)
+- [Knex.js - Schema Builder](http://knexjs.org/#Schema)
+- [Knex.js - Schema Builder - Schema Building](http://knexjs.org/#Schema-Building)
+- [Knex.js - Schema Builder - Chainable Methods](http://knexjs.org/#Chainable)
+- [Knex.js - Seeds](http://knexjs.org/#Seeds)
