@@ -251,7 +251,7 @@ git add .
 git commit -m 'Add GET /tracks middleware'
 ```
 
-### Read (one)
+### Read (individual)
 
 Then, install `boom` as a dependency, saving it to the `package.json` file.
 
@@ -704,3 +704,8 @@ git branch -d http_server
 
 - [Galvanize Bookshelf](https://github.com/gSchool/galvanize-bookshelf#galvanize-bookshelf)
 - [Galvanize Bookshelf - Express and Knex](https://github.com/gSchool/galvanize-bookshelf/blob/master/2_express_knex.md)
+
+## Resources
+
+- [NPM - boom](https://www.npmjs.com/package/boom)
+- [NPM - humps](https://www.npmjs.com/package/humps)
