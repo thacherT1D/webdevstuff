@@ -197,6 +197,12 @@ const knex = require('knex')(knexConfig);
 module.exports = knex;
 ```
 
+Then, install `boom` and `humps` as a dependencies, saving it to the `package.json` file.
+
+```shell
+npm install --save boom humps
+```
+
 In a `routes/artists.js` file, type the following code.
 
 ```javascript
