@@ -50,7 +50,7 @@ A RESTful HTTP server handles the following requests by mapping them to a specif
 | Update            | `PATCH`        | `/tracks/1` | `application/json`    | `{ "title": "Yesterday" }`                     |
 | Destroy           | `DELETE`       | `/tracks/1` | N/A                   | N/A                                            |
 
-Once the operation is complete, the RESTful HTTP server sends a specific response back to the client indicating the result of the operation.
+Once the operation is complete, the RESTful HTTP server sends a specific response back to the client indicating the result of a database operation.
 
 | REST Action       | Response Status | Response Content-Type | Response Body                                                           |
 |-------------------|-----------------|-----------------------|-------------------------------------------------------------------------|
