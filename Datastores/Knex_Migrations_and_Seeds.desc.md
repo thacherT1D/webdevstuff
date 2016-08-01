@@ -25,7 +25,7 @@ Here's a diagram representing two Knex migration files that manage the `tracks` 
 └───────────────────────────┘                      └───────────────────────────┘
 ```
 
-The name of a migration file is prefixed with a UTC timestamp. That way, the Knex migration system can identify and order the migrations based on when the files were created and what tables they affect.
+The name of a migration file starts with a UTC timestamp and ends with a table name. That way, the Knex migration system can identify and order the migrations based on when the files were created and what tables they affect.
 
 Here's an example what the contents of the `20160621141318_tracks.js` migration file might look like.
 
