@@ -484,8 +484,9 @@ See the [equality operators](https://developer.mozilla.org/en-US/docs/Web/JavaSc
 ### Exercise
 
 Take a whiteboard and write 2 boolean comparisons of primitive values. Have the first one be identical to the second EXCEPT for 2 things:
-1) One comparison must have a strict equality operator while the other has a loose equality operator
-2) One comparison must evaluate to false while the other evaluates to true
+1. One comparison must have a strict equality operator while the other has a loose equality operator
+1. One comparison must evaluate to false while the other evaluates to true
+1. Talk to a neighbor about how double equals (==) and triple equals (===) are different from single equals (=) 
 
 ### Conditionals
 
