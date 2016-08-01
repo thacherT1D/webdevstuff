@@ -493,7 +493,7 @@ ETag: W/"88-sdB8iatsE+TUImSXMzKOPg"
     "artist": "Prince",
     "createdAt": "2016-08-01T21:33:27.246Z",
     "id": 5,
-    "likes": 0,
+    "likes": 8569790,
     "title": "Purple Rain",
     "updatedAt": "2016-08-01T21:33:27.246Z"
 }
@@ -628,6 +628,21 @@ http PATCH localhost:8000/tracks/1 title='Yesterday'
 And you should see the following.
 
 ```text
+HTTP/1.1 200 OK
+Connection: keep-alive
+Content-Length: 146
+Content-Type: application/json; charset=utf-8
+Date: Mon, 01 Aug 2016 21:41:28 GMT
+ETag: W/"92-OquPiwjMgs+nhWOWc3/DDw"
+
+{
+    "artist": "The Beatles",
+    "createdAt": "2016-06-26T14:26:16.000Z",
+    "id": 1,
+    "likes": 28808736,
+    "title": "Yesterday",
+    "updatedAt": "2016-06-26T14:26:16.000Z"
+}
 ```
 
 Add and commit the changes to your repository.
@@ -786,6 +801,20 @@ http DELETE localhost:8000/tracks/1
 And you should see the following.
 
 ```text
+HTTP/1.1 200 OK
+Connection: keep-alive
+Content-Length: 139
+Content-Type: application/json; charset=utf-8
+Date: Mon, 01 Aug 2016 21:41:47 GMT
+ETag: W/"8b-Uno5ocjVI0LOt8qSxqFYYw"
+
+{
+    "artist": "The Beatles",
+    "createdAt": "2016-06-26T14:26:16.000Z",
+    "likes": 28808736,
+    "title": "Yesterday",
+    "updatedAt": "2016-06-26T14:26:16.000Z"
+}
 ```
 
 Add and commit the changes to your repository.
