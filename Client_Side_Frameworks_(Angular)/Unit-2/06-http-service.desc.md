@@ -1,4 +1,14 @@
-# HTTP Service.
+# HTTP Service
+
+## Objectives
+- Perform $http service GET request
+- Perform $http service POST request
+
+## Resources
+
+Fork and clone the following repository. [angular-http-service](https://github.com/gSchool/angular-http-service)
+
+## Lesson
 
 Angular services are simply objects that contain some code that can be shared across your app.  Like most things we've discussed, Angular comes with some services already, but we can also write our own custom services too.  
 
@@ -114,6 +124,11 @@ Data that does not follow the following pattern will not be accepted by the serv
   content: "This is such a cool API!"
 }}
 ```
+
+Stretch goals:
+
+- Use the [Giphy API](https://github.com/Giphy/GiphyAPI) to add gifs based on the content of the messages.
+
 
 ## Questions
 
