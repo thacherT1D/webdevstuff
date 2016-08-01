@@ -108,25 +108,18 @@ In a `server.js` file, type the following code.
 'use strict';
 
 const express = require('express');
-const path = require('path');
-const port = process.env.PORT || 8000;
-
-const morgan = require('morgan');
-const bodyParser = require('body-parser');
-
-const artists = require('./routes/artists');
-const tracks = require('./routes/tracks');
-
 const app = express();
 
 app.disable('x-powered-by');
 
-app.use(morgan('short'));
+const bodyParser = require('body-parser');
+const morgan = require('morgan');
+
+app.use(morgan('dev'));
 app.use(bodyParser.json());
 
-app.use(express.static(path.join('public')));
+const tracks = require('./routes/tracks');
 
-app.use(artists);
 app.use(tracks);
 
 app.use((_req, res) => {
@@ -134,9 +127,9 @@ app.use((_req, res) => {
 });
 
 app.use((err, _req, res, _next) => {
-  if (err.status) {
+  if (err.output && err.output.statusCode) {
     return res
-      .status(err.status)
+      .status(err.output.statusCode)
       .set('Content-Type', 'text/plain')
       .send(err.message);
   }
@@ -145,19 +138,20 @@ app.use((err, _req, res, _next) => {
   res.sendStatus(500);
 });
 
+const port = process.env.PORT || 8000;
+
 app.listen(port, () => {
   console.log('Listening on port', port);
 });
-
-module.exports = app;
 ```
 
-In both the `routes/artists.js` and `routes/tracks.js` files, type out the following code.
+In the `routes/tracks.js` file, write the following code.
 
 ```javascript
 'use strict';
 
 const express = require('express');
+
 const router = express.Router();
 
 module.exports = router;
@@ -174,7 +168,6 @@ Add a `nodemon` script to the `package.json` file.
 ```javascript
 "scripts": {
   "knex": "knex",
-  "heroku-postbuild": "knex migrate:latest",
   "nodemon": "nodemon server.js"
 },
 ```
@@ -209,130 +202,19 @@ In a `routes/artists.js` file, type the following code.
 ```javascript
 'use strict';
 
+const boom = require('boom');
 const express = require('express');
-const router = express.Router();
 const knex = require('../knex');
+const { camelizeKeys, decamelizeKeys } = require('humps');
 
-router.get('/artists', (_req, res, next) => {
-  knex('artists')
-    .orderBy('id')
-    .then((artists) => {
-      res.send(artists);
-    })
-    .catch((err) => {
-      next(err);
-    });
-});
-
-router.get('/artists/:id', (req, res, next) => {
-    knex('artists')
-    .where('id', req.params.id)
-    .first()
-    .then((artist) => {
-      if (!artist) {
-        return next();
-      }
-
-      res.send(artist);
-    })
-    .catch((err) => {
-      next(err);
-    });
-});
-
-router.post('/artists', (req, res, next) => {
-  knex('artists')
-    .insert({ name: req.body.name }, '*')
-    .then((artists) => {
-      res.send(artists[0]);
-    })
-    .catch((err) => {
-      next(err);
-    });
-});
-
-router.patch('/artists/:id', (req, res, next) => {
-  knex('artists')
-    .where('id', req.params.id)
-    .first()
-    .then((artist) => {
-      if (!artist) {
-        return next();
-      }
-
-      return knex('artists')
-        .update({ name: req.body.name }, '*')
-        .where('id', req.params.id);
-    })
-    .then((artists) => {
-      res.send(artists[0]);
-    })
-    .catch((err) => {
-      next(err);
-    });
-});
-
-router.delete('/artists/:id', (req, res, next) => {
-  let artist;
-
-  knex('artists')
-    .where('id', req.params.id)
-    .first()
-    .then((row) => {
-      if (!row) {
-        return next();
-      }
-
-      artist = row;
-
-      return knex('artist')
-        .del()
-        .where('id', req.params.id);
-    })
-    .then(() => {
-      delete artist.id;
-      res.send(artist);
-    });
-    .catch((err) => {
-      next(err);
-    });
-});
-
-router.get('/artists/:id/tracks', (req, res, next) => {
-  knex('tracks')
-    .where('artist_id', req.params.id)
-    .orderBy('id')
-    .then((track) => {
-      res.send(track);
-    })
-    .catch((err) => {
-      next(err);
-    });
-});
-
-module.exports = router;
-```
-
-Add and commit the changes to your repository.
-
-```shell
-git add .
-git commit -m 'Route /artists'
-```
-
-In a `routes/tracks.js` file, type the following code.
-
-```javascript
-'use strict';
-
-const express = require('express');
 const router = express.Router();
-const knex = require('../knex');
 
 router.get('/tracks', (_req, res, next) => {
   knex('tracks')
-    .orderBy('id')
-    .then((tracks) => {
+    .orderBy('title')
+    .then((rows) => {
+      const tracks = camelizeKeys(rows);
+
       res.send(tracks);
     })
     .catch((err) => {
@@ -341,13 +223,15 @@ router.get('/tracks', (_req, res, next) => {
 });
 
 router.get('/tracks/:id', (req, res, next) => {
-  knex('tracks')
+    knex('tracks')
     .where('id', req.params.id)
     .first()
-    .then((track) => {
-      if (!track) {
-        return next();
+    .then((row) => {
+      if (!row) {
+        throw boom.create(404, 'Not Found');
       }
+
+      const track = camelizeKeys(row);
 
       res.send(track);
     })
@@ -357,27 +241,24 @@ router.get('/tracks/:id', (req, res, next) => {
 });
 
 router.post('/tracks', (req, res, next) => {
+  const { title, artist } = req.body;
+
+  if (!title || !title.trim()) {
+    return next(boom.create(400, 'Title must not be blank'));
+  }
+
+  if (!artist || !artist.trim()) {
+    return next(boom.create(400, 'Artist must not be blank'));
+  }
+
+  const insertTrack = { title, artist };
+
   knex('artists')
-    .where('id', req.body.artist_id)
-    .first()
-    .then((artist) => {
-      if (!artist) {
-        const err = new Error('artist_id does not exist');
+    .insert(decamelizeKeys(insertTrack), '*')
+    .then((rows) => {
+      const track = camelizeKeys(rows[0]);
 
-        err.status = 400;
-
-        throw err;
-      }
-
-      return knex('tracks')
-        .insert({
-          artist_id: req.body.artist_id,
-          title: req.body.title,
-          likes: req.body.likes
-        }, '*');
-    })
-    .then((tracks) => {
-      res.send(tracks[0]);
+      res.send(track);    
     })
     .catch((err) => {
       next(err);
@@ -385,38 +266,34 @@ router.post('/tracks', (req, res, next) => {
 });
 
 router.patch('/tracks/:id', (req, res, next) => {
-  knex('tracks')
+  knex('artists')
     .where('id', req.params.id)
     .first()
-    .then((track) => {
-      if (!track) {
-        return next();
-      }
-
-      return knex('artists')
-        .where('id', req.body.artist_id)
-        .first();
-    })
     .then((artist) => {
       if (!artist) {
-        const err = new Error('artist_id does not exist');
+        throw boom.create(404, 'Not Found');
+      }
 
-        err.status = 400;
+      const { title, artist } = req.body;
+      const updateTrack = {};
 
-        throw err;
+      if (title) {
+        updateTrack.title = title;
+      }
+
+      if (artist) {
+        updateTrack.artist = artist;
       }
 
       return knex('tracks')
-        .update({
-          artist_id: req.body.artist_id,
-          title: req.body.title,
-          likes: req.body.likes
-        }, '*')
+        .update(decamelizeKeys(updateTrack), '*')
         .where('id', req.params.id);
     })
-    .then((tracks) => {
-      res.send(tracks[0]);
-    });
+    .then((rows) => {
+      const track = camelizeKeys(rows[0]);
+
+      res.send(track);
+    })
     .catch((err) => {
       next(err);
     });
@@ -430,10 +307,10 @@ router.delete('/tracks/:id', (req, res, next) => {
     .first()
     .then((row) => {
       if (!row) {
-        return next();
+        throw boom.create(404, 'Not Found');
       }
 
-      track = row;
+      track = camelizeKeys(row);
 
       return knex('tracks')
         .del()
@@ -441,8 +318,9 @@ router.delete('/tracks/:id', (req, res, next) => {
     })
     .then(() => {
       delete track.id;
+
       res.send(track);
-    })
+    });
     .catch((err) => {
       next(err);
     });
@@ -455,7 +333,7 @@ Add and commit the changes to your repository.
 
 ```shell
 git add .
-git commit -m 'Route /tracks'
+git commit -m 'Add tracks routes'
 ```
 
 Merge the feature branch into the `master` branch.
