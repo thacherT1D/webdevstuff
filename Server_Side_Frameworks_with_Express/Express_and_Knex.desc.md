@@ -75,7 +75,7 @@ Once you've satisfied, turn to a neighbor and explain how information flows thro
 
 ## How do you use Express and Knex to build a RESTful, database-driven, HTTP server?
 
-Here's an entity relationship diagram representing the data model the HTTP server will need to manage.
+In a moment, you'll create a RESTful, database-driven, HTTP server to manage information in a data model represented by the following entity relationship diagram.
 
 ```text
 ┌─────────────────────────────────────────────────────────────┐
@@ -90,19 +90,25 @@ Here's an entity relationship diagram representing the data model the HTTP serve
 └───────────┴─────────────────────────┴───────────────────────┘
 ```
 
-To get started, checkout a new feature branch.
+To get started, navigate to the `trackify` project directory.
 
 ```shell
-git checkout -b http_server
+cd path/to/trackify
 ```
 
-Then, install the following dependencies locally and save them to the `package.json` file.
+And checkout a new feature branch.
+
+```shell
+git checkout -b server
+```
+
+Then, install the following dependencies while saving them to the `package.json` file.
 
 ```shell
 npm install --save express body-parser morgan
 ```
 
-In a `server.js` file, type the following code.
+Create a `server.js` file and type the following code.
 
 ```javascript
 'use strict';
@@ -145,7 +151,7 @@ app.listen(port, () => {
 });
 ```
 
-In the `routes/tracks.js` file, write the following code.
+Create a `routes/tracks.js` file and type the following code.
 
 ```javascript
 'use strict';
@@ -157,7 +163,7 @@ const router = express.Router();
 module.exports = router;
 ```
 
-Then, install `nodemon` as a local development dependency, saving it to the `package.json` file.
+Then, install `nodemon` as a development dependency while saving it to the `package.json` file.
 
 ```shell
 npm install --save-dev nodemon
@@ -172,7 +178,7 @@ Add a `nodemon` script to the `package.json` file.
 },
 ```
 
-Then, start the server with `nodemon`.
+Then, start the Express server with `nodemon`.
 
 ```shell
 npm run nodemon
@@ -187,7 +193,9 @@ git commit -m 'Add an Express server'
 
 ### Read (all)
 
-In a `knex.js` file, type out the following code.
+Now that the Express server is scaffolded, let's add middleware to handle reading all the rows from the `tracks` table.
+
+Create a `knex.js` file and type the following code.
 
 ```javascript
 'use strict';
@@ -199,14 +207,15 @@ const knex = require('knex')(knexConfig);
 module.exports = knex;
 ```
 
-Then, install `humps` as a dependency, saving it to the `package.json` file.
+Then, install `humps` as a dependency while saving it to the `package.json` file.
 
 ```shell
 npm install --save humps
 ```
 
-In a `routes/artists.js` file, type the following code.
+Back in the `routes/artists.js` file, add the following code.
 
+**NOTE:** Remember to require the `knex` and `humps` dependencies. Be sure to store the `camelizeKeys` function from `humps` in a local variable.
 
 ```javascript
 'use strict';
@@ -253,13 +262,17 @@ git commit -m 'Add GET /tracks middleware'
 
 ### Read (individual)
 
-Then, install `boom` as a dependency, saving it to the `package.json` file.
+Next, let's add middleware to handle reading an individual row from the `tracks` table.
+
+Start by installing `boom` as a dependency while saving it to the `package.json` file.
 
 ```shell
 npm install --save boom
 ```
 
-In a `routes/artists.js` file, type the following code.
+Back in the `routes/artists.js` file, add the following code.
+
+**NOTE:** Remember to require the `boom` dependency.
 
 ```javascript
 'use strict';
@@ -324,6 +337,12 @@ git commit -m 'Add GET /tracks/:id middleware'
 ```
 
 ### Create
+
+Next, let's add middleware to handle creating a row in the `tracks` table.
+
+Back in the `routes/artists.js` file, add the following code.
+
+**NOTE:** Remember to store the `decamelizeKeys` function from `humps` in a local variable.
 
 ```javascript
 'use strict';
@@ -413,6 +432,10 @@ git commit -m 'Add POST /tracks middleware'
 ```
 
 ### Update
+
+Next, let's add middleware to handle updating a row in the `tracks` table.
+
+Back in the `routes/artists.js` file, add the following code.
 
 ```javascript
 'use strict';
@@ -536,6 +559,10 @@ git commit -m 'Add PATCH /tracks/:id middleware'
 ```
 
 ### Destroy
+
+Next, let's add middleware to handle destroying a row from the `tracks` table.
+
+Back in the `routes/artists.js` file, add the following code.
 
 ```javascript
 'use strict';
@@ -685,19 +712,17 @@ git add .
 git commit -m 'Add DELETE /tracks/:id middleware'
 ```
 
-### Merge
-
 Merge the feature branch into the `master` branch.
 
 ```shell
 git checkout master
-git merge http_server
+git merge server
 ```
 
 Now that it's merged, delete the feature branch.
 
 ```shell
-git branch -d http_server
+git branch -d server
 ```
 
 ## Assignment
