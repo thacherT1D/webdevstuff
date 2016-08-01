@@ -400,7 +400,7 @@ module.exports = router;
 ```
 
 ```shell
-http POST localhost:8000/users firstName=Missy lastName=Elliot email=missy.elliot@gmail.com password=geturfreakon
+http POST localhost:8000/users email=missy.elliot@gmail.com password=geturfreakon
 ```
 
 And you should see something like this.
@@ -416,9 +416,7 @@ ETag: W/"94-hZOIDhFI5Ev0q9i6sDE9CQ"
 {
     "createdAt": "2016-08-01T23:20:34.163Z",
     "email": "missy.elliot@gmail.com",
-    "firstName": "Missy",
-    "id": 1,
-    "lastName": "Elliot",
+    "id": 2,
     "updatedAt": "2016-08-01T23:20:34.163Z"
 }
 ```
