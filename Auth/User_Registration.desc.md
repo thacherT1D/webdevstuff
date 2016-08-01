@@ -176,12 +176,6 @@ git add .
 git commit -m 'Add hashed password to users table'
 ```
 
-Create a new routes file for user registration.
-
-```shell
-touch routes/users.js
-```
-
 In the `server.js` file, add the necessary routing middleware.
 
 ```JavaScript
@@ -194,6 +188,12 @@ app.use(tracks);
 app.use(users);
 
 // ...
+```
+
+Create a new routes file for user registration.
+
+```shell
+touch routes/users.js
 ```
 
 In the `routes/users.js` module, write the following code.
