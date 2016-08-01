@@ -181,7 +181,7 @@ Add a `start` script to the `package.json` file.
 Then, start the Express server with `nodemon`.
 
 ```shell
-npm run nodemon
+npm start
 ```
 
 Add and commit the changes to your repository.
@@ -914,7 +914,6 @@ git branch -d server
 
 ## Assignment
 
-- [Galvanize Bookshelf](https://github.com/gSchool/galvanize-bookshelf#galvanize-bookshelf)
 - [Galvanize Bookshelf - Express and Knex](https://github.com/gSchool/galvanize-bookshelf/blob/master/2_express_knex.md)
 
 ## Resources
