@@ -19,8 +19,8 @@ It's **Angular's wrapper for AJAX calls.**  It's the easiest way of communicatin
 **In order to use the `$http` service in a controller, we need to first add it as a dependency**.  Like this:
 
 ```js
-app.controller('someControllerName', function($scope, $http) {
-});
+app.controller('someControllerName', ['$http', function($http) {
+}]);
 ```
 
 Now we can access all of the methods defined on the `$http` service. They are:
@@ -67,7 +67,8 @@ Most of time, we just want the actual response data, so let's change our code sl
 
 ```js
 $http.get('https://api.github.com/zen').then(function(data){
-  $scope.view.zenData = data.data;
+  var vm = this;
+  vm.zenData = data.data;
 });
 ```
 
@@ -77,16 +78,16 @@ that newly created file.
 
 PS: sometimes the api reaches it's daily limit of calls and shuts down for the day
 
-**EXERCISE:** Read about [the same origin policy](https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy) ([wikipedia has some good info too](https://en.wikipedia.org/wiki/Same-origin_policy)) and [Cross-Origin Resource Sharing or CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS).  Describe what both the same origin policy and CORS are.
+**EXERCISE 1:** Read about [the same origin policy](https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy) ([wikipedia has some good info too](https://en.wikipedia.org/wiki/Same-origin_policy)) and [Cross-Origin Resource Sharing or CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS).  Describe what both the same origin policy and CORS are.
 
-**EXERCISE:** Try using `$http.get()` to make a request to `https://itunes.apple.com/search?term=jack+johnson` and display the title of every post on your template. You should get an error. What was the error?  Why did the api.github.com domain work and not the itunes.com domain?
+**EXERCISE 2** Try using `$http.get()` to make a request to `https://itunes.apple.com/search?term=jack+johnson` and display the title of every post on your template. You should get an error. What was the error?  Why did the api.github.com domain work and not the itunes.com domain?
 
-**EXERCISE:** Since making a request to `https://itunes.apple.com/search?term=jack+johnson` didn't work, go to the url in your browser and copy all the json that gets returned.  Save the json data into a file in your app called `itunes.json`.  Use the `$http.get()` service to make a request to get the `itunes.json` file.  Display the title of every post on your template.  Why does this method for getting the json data work?
+**EXERCISE 3** Since making a request to `https://itunes.apple.com/search?term=jack+johnson` didn't work, go to the url in your browser and copy all the json that gets returned.  Save the json data into a file in your app called `itunes.json`.  Use the `$http.get()` service to make a request to get the `itunes.json` file.  Display the title of every post on your template.  Why does this method for getting the json data work?
 
-**EXERCISE:** Try making a request to an invalid URL.  Write code to properly handle a request that fails.  **Does Angular have any built-in functionality that could help you?**
+**EXERCISE 4** Try making a request to an invalid URL.  Write code to properly handle a request that fails.  **Does Angular have any built-in functionality that could help you?**
 
 
-**EXERCISE:** Use `$http.get()` and `$http.post()` to interact with this [Rails API that we've made for you](https://still-tundra-8387.herokuapp.com/).  It's a simple collaborative chat app.  The API has two endpoints:
+**EXERCISE 5** Use `$http.get()` and `$http.post()` to interact with this [Rails API that we've made for you](https://still-tundra-8387.herokuapp.com/).  It's a simple collaborative chat app.  The API has two endpoints:
 
 The app is one Rails model, Message, which has two attributes: name and content.
 
