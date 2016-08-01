@@ -385,6 +385,24 @@ ETag: W/"9b-8gMevLtkzAbZbyRenFODQw"
 }
 ```
 
+Then, run the following command.
+
+```shell
+http GET localhost:8000/tracks/9000
+```
+And you should see the following.
+
+```text
+HTTP/1.1 404 Not Found
+Connection: keep-alive
+Content-Length: 9
+Content-Type: text/plain; charset=utf-8
+Date: Mon, 01 Aug 2016 21:42:52 GMT
+ETag: W/"9-nR6tc+Z4+i9RpwqTOwvwFw"
+
+Not Found
+```
+
 Add and commit the changes to your repository.
 
 ```shell
@@ -497,6 +515,25 @@ ETag: W/"88-sdB8iatsE+TUImSXMzKOPg"
     "title": "Purple Rain",
     "updatedAt": "2016-08-01T21:33:27.246Z"
 }
+```
+
+Then, run the following command.
+
+```shell
+http POST localhost:8000/tracks
+```
+
+And you should see the following.
+
+```text
+HTTP/1.1 400 Bad Request
+Connection: keep-alive
+Content-Length: 23
+Content-Type: text/plain; charset=utf-8
+Date: Mon, 01 Aug 2016 21:44:26 GMT
+ETag: W/"17-vsd3mFLR7EP90T6PJprkZw"
+
+Title must not be blank
 ```
 
 Add and commit the changes to your repository.
@@ -643,6 +680,25 @@ ETag: W/"92-OquPiwjMgs+nhWOWc3/DDw"
     "title": "Yesterday",
     "updatedAt": "2016-06-26T14:26:16.000Z"
 }
+```
+
+Then, run the following command.
+
+```shell
+http PATCH localhost:8000/tracks/9000 title='Yesterday'
+```
+
+And you should see the following.
+
+```text
+HTTP/1.1 404 Not Found
+Connection: keep-alive
+Content-Length: 9
+Content-Type: text/plain; charset=utf-8
+Date: Mon, 01 Aug 2016 21:45:14 GMT
+ETag: W/"9-nR6tc+Z4+i9RpwqTOwvwFw"
+
+Not Found
 ```
 
 Add and commit the changes to your repository.
@@ -815,6 +871,25 @@ ETag: W/"8b-Uno5ocjVI0LOt8qSxqFYYw"
     "title": "Yesterday",
     "updatedAt": "2016-06-26T14:26:16.000Z"
 }
+```
+
+Then, run the following command.
+
+```shell
+http DELETE localhost:8000/tracks/9000
+```
+
+And you should see the following.
+
+```text
+HTTP/1.1 404 Not Found
+Connection: keep-alive
+Content-Length: 9
+Content-Type: text/plain; charset=utf-8
+Date: Mon, 01 Aug 2016 21:45:48 GMT
+ETag: W/"9-nR6tc+Z4+i9RpwqTOwvwFw"
+
+Not Found
 ```
 
 Add and commit the changes to your repository.
