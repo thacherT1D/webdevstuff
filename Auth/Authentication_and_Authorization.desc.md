@@ -39,6 +39,8 @@ And checkout a new feature branch.
 git checkout -b authentication
 ```
 
+In the `seeds/2_users.js` file, add a hashed password to the user entity.
+
 ```javascript
 'use strict';
 
@@ -48,9 +50,9 @@ exports.seed = function(knex) {
       return knex('users').insert([{
         id: 1,
         email: '2pac@shakur.com',
-        hashed_password: '$2a$12$LaKBUi8mCFc/9LiCtvwcvuNIjgaq9LJuy/NO.m4P5.3FP8zA6t2Va',
         created_at: new Date('2016-06-29 14:26:16 UTC'),
-        updated_at: new Date('2016-06-29 14:26:16 UTC')
+        updated_at: new Date('2016-06-29 14:26:16 UTC'),
+        hashed_password: '$2a$12$LaKBUi8mCFc/9LiCtvwcvuNIjgaq9LJuy/NO.m4P5.3FP8zA6t2Va'
       }]);
     })
     .then(() => {
@@ -61,7 +63,7 @@ exports.seed = function(knex) {
 };
 ```
 
-Then, seed the database.
+Then, re-seed the database.
 
 ```shell
 npm run knex seed:run
