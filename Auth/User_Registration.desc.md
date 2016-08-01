@@ -196,7 +196,7 @@ Create a new routes file for user registration.
 touch routes/users.js
 ```
 
-In the `routes/users.js` module, write the following code.
+In the `routes/users.js` module, type the following code.
 
 ```JavaScript
 'use strict';
@@ -309,8 +309,9 @@ router.post('/users', (req, res, next) => {
   }
 
   bcrypt.hash(password, 12)
-    .then((hashed_password) => {
-      console.log(email, hashed_password);
+    .then((hashedPassword) => {
+      console.log(email, hashedPassword);
+
       res.sendStatus(200);
     })
     .catch((err) => {
