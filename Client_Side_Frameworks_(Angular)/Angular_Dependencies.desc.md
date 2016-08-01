@@ -128,26 +128,20 @@ It's **Angular's wrapper for AJAX calls.**  It's the easiest way of communicatin
     TodoListCtrl.$inject = ['$http'];
 
     function PeopleCtrl($http) {
-      const vm = this;
+      this.nameToAdd = '';
+      this.people = [];
 
-      vm.addPerson = addPerson;
-      vm.nameToAdd = '';
-      vm.people = [];
+      this.addPerson = () => {
 
-      function addPerson() {
-
-      }
+      };
     }
 
     function TodoListCtrl($http) {
-      const vm = this;
+      this.todoToAdd = '';
 
-      vm.addTodo = addTodo;
-      vm.todoToAdd = '';
+      this.addTodo = (person) => {
 
-      function addTodo(person) {
-
-      }
+      };
     }
 }());
 ```
@@ -183,26 +177,26 @@ We'll start by creating an `activate` function to initiate the requests that wil
 Below the variable declarations, place the following code:
 
 ```js
-activate();
-
-function activate() {
+const activate = () => {
   return $http.get(server)
     .then((people) => {
-      vm.people = people.data;
+      this.people = people.data;
 
       // Make requests for individual todos
     })
     .catch((err) => {
       throw err;
     });
-}
+};
+
+activate();
 ```
 
 Now that we have access to the list of people on our server, let's add the code to make requests for each person's todos. Below the assignment you just made to `vm.people`:
 
 ```js
-vm.people.forEach((person) => {
-  return $http.get(`${server}/${person.id}/is-todos`)
+this.people.forEach((person) => {
+  $http.get(`${server}/${person.id}/is-todos`)
     .then((todos) => {
       person.todos = todos.data;
     })
@@ -215,17 +209,17 @@ vm.people.forEach((person) => {
 Now, inside the `addPerson` function in `PeopleCtrl`, use `$http.post()` to allow your UI to successfully add a person.
 
 ```js
-function addPerson() {
-  return $http.post(server, { name: vm.nameToAdd })
+this.addPerson = () => {
+  return $http.post(server, { name: this.nameToAdd })
     .then((res) => {
       res.data.todos = [];
-      vm.people.push(res.data);
-      vm.nameToAdd = '';
+      this.people.push(res.data);
+      this.nameToAdd = '';
     })
     .catch((err) => {
       throw err;
     });
-}
+};
 ```
 
 Congratulations! You successfully wired up your `PeopleCtrl` using the built-in `$http` service! Now, let's continue wiring up the rest of the functionality of `TodoListCtrl`.
@@ -233,19 +227,19 @@ Congratulations! You successfully wired up your `PeopleCtrl` using the built-in 
 Inside the `addTodo` function, use `http.post()` to allow the ability to post todos for an individual user:
 
 ```js
-function addTodo(person) {
+this.addTodo = (person) => {
   return $http.post(`${server}/${person.id}/is-todos`, {
     completed: false,
-    text: vm.todoToAdd
+    text: this.todoToAdd
   })
     .then((res) => {
       person.todos.push(res.data);
-      vm.todoToAdd = '';
+      this.todoToAdd = '';
     })
     .catch((err) => {
       throw err;
     });
-}
+};
 ```
 
 After successfully wiring up the `TodoListCtrl`, you now have a working app that makes external AJAX calls. The last step is to slighty alter the view syntax to dynamically update accordingly.
@@ -398,28 +392,26 @@ In the new `PersonCtrl`, refactor the `activate` function to make the correct ca
 
 ```js
 function PersonCtrl($http, $routeParams) {
-  const vm = this;
+  this.person = {};
 
   const { id } = $routeParams;
 
-  vm.person = {};
-
-  activate();
-
-  function activate() {
+  const activate = () => {
     return $http.get(`${server}/${id}`)
       .then((person) => {
-        vm.person = person.data;
+        this.person = person.data;
 
         return $http.get(`${server}/${id}/is-todos`);
       })
       .then((todos) => {
-        vm.person.todos = todos.data;
+        this.person.todos = todos.data;
       })
       .catch((err) => {
         throw err;
       });
-  }
+  };
+
+  activate();
 }
 ```
 
