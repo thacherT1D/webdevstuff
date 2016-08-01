@@ -119,10 +119,10 @@ Create a simple app that displays a list of all the messages coming from the API
 Data that does not follow the following pattern will not be accepted by the server:
 
 ```js
-{message: {
+{
   name: "Mary",
   content: "This is such a cool API!"
-}}
+}
 ```
 
 Stretch goals:
