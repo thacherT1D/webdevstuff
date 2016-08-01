@@ -61,12 +61,12 @@ module.exports = function() {
         warmup: { text: "Memory Diagrams", url: "JavaScript/Memory Diagrams.md" },
         activities: [
           {
-            article: { text: "Intro to HTML", url: "HTML/README.md" },
+            article: { text: "Intro to HTML", url: "https://github.com/gSchool/html-css-curriculum/HTML/README.md" },
             assignment: { text: "HTML Intro", url: "https://github.com/gSchool/html-intro" },
-            stretch: { text: "Media", url: "HTML/Media.md" },
+            stretch: { text: "Media", url: "https://github.com/gSchool/html-css-curriculum/HTML/Media.md" },
           },
           {
-            article: { text: "Semantic HTML", url: "HTML/Semantic.md" },
+            article: { text: "Semantic HTML", url: "https://github.com/gSchool/html-css-curriculum/HTML/Semantic.md" },
             assignment: { text: "Semantic HTML", url: "https://github.com/gSchool/semantic-html-assignment" },
           },
         ]
@@ -75,11 +75,11 @@ module.exports = function() {
         warmup: { text: "Alphabet Position", url: "https://github.com/gSchool/g26-challenges-so-far/blob/master/w2/w2-f-replace-with-alphabet-position/w2-f-replace-with-alphabet-position.js" },
         activities: [
           {
-            article: { text: "Intro to CSS", url: "CSS/README.md" },
+            article: { text: "Intro to CSS", url: "https://github.com/gSchool/html-css-curriculum/CSS/README.md" },
             assignment: { text: "CSS assignments", url: "https://github.com/gSchool/css-assignments" },
           },
           {
-            article: { text: "Intermediate CSS", url: "CSS/Intermediate.md" },
+            article: { text: "Intermediate CSS", url: "https://github.com/gSchool/html-css-curriculum/CSS/Intermediate.md" },
           },
         ]
       },
@@ -125,7 +125,7 @@ module.exports = function() {
         warmup: { text: "Double Char", url: "https://github.com/gSchool/master_warmup_repository_full_stack/blob/master/w3/w3-t-doubleChar/solution.js" },
         activities: [
           {
-            article: { text: "CSS Frameworks", url: "CSS/Frameworks.md" },
+            article: { text: "CSS Frameworks", url: "https://github.com/gSchool/html-css-curriculum/CSS/Frameworks.md" },
             assignment: { text: "Galvanize Delivers", url: "https://github.com/gSchool/galvanize-delivers/" },
           },
         ]
@@ -134,7 +134,7 @@ module.exports = function() {
         warmup: { text: "Double Char", url: "https://github.com/gSchool/master_warmup_repository_full_stack/blob/master/w3/w3-t-doubleChar/solution.js" },
         activities: [
           {
-            article: { text: "HTML Forms", url: "HTML/Forms.md" },
+            article: { text: "HTML Forms", url: "https://github.com/gSchool/html-css-curriculum/HTML/Forms.md" },
             assignment: { text: "HTML Forms", url: "https://github.com/gSchool/html-forms" },
           },
         ]

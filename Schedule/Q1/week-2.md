@@ -18,15 +18,15 @@
       <td rowspan="2">Monday</td>
       <td rowspan="2"><a href="../../JavaScript/Memory Diagrams.md">Memory Diagrams</a>
       </td>
-      <td><a href="../../HTML/README.md">Intro to HTML</a>
+      <td><a href="https://github.com/gSchool/html-css-curriculum/HTML/README.md">Intro to HTML</a>
       </td>
       <td><a href="https://github.com/gSchool/html-intro">HTML Intro</a>
       </td>
-      <td><a href="../../HTML/Media.md">Media</a>
+      <td><a href="https://github.com/gSchool/html-css-curriculum/HTML/Media.md">Media</a>
       </td>
     </tr>
     <tr>
-      <td><a href="../../HTML/Semantic.md">Semantic HTML</a>
+      <td><a href="https://github.com/gSchool/html-css-curriculum/HTML/Semantic.md">Semantic HTML</a>
       </td>
       <td><a href="https://github.com/gSchool/semantic-html-assignment">Semantic HTML</a>
       </td>
@@ -37,7 +37,7 @@
       <td rowspan="2">Tuesday</td>
       <td rowspan="2"><a href="https://github.com/gSchool/g26-challenges-so-far/blob/master/w2/w2-f-replace-with-alphabet-position/w2-f-replace-with-alphabet-position.js">Alphabet Position</a>
       </td>
-      <td><a href="../../CSS/README.md">Intro to CSS</a>
+      <td><a href="https://github.com/gSchool/html-css-curriculum/CSS/README.md">Intro to CSS</a>
       </td>
       <td><a href="https://github.com/gSchool/css-assignments">CSS assignments</a>
       </td>
@@ -45,7 +45,7 @@
       </td>
     </tr>
     <tr>
-      <td><a href="../../CSS/Intermediate.md">Intermediate CSS</a>
+      <td><a href="https://github.com/gSchool/html-css-curriculum/CSS/Intermediate.md">Intermediate CSS</a>
       </td>
       <td>
       </td>

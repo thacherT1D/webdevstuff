@@ -139,15 +139,15 @@ Week 2
       <td rowspan="2">Monday</td>
       <td rowspan="2"><a href="JavaScript/Memory Diagrams.md">Memory Diagrams</a>
       </td>
-      <td><a href="HTML/README.md">Intro to HTML</a>
+      <td><a href="https://github.com/gSchool/html-css-curriculum/HTML/README.md">Intro to HTML</a>
       </td>
       <td><a href="https://github.com/gSchool/html-intro">HTML Intro</a>
       </td>
-      <td><a href="HTML/Media.md">Media</a>
+      <td><a href="https://github.com/gSchool/html-css-curriculum/HTML/Media.md">Media</a>
       </td>
     </tr>
     <tr>
-      <td><a href="HTML/Semantic.md">Semantic HTML</a>
+      <td><a href="https://github.com/gSchool/html-css-curriculum/HTML/Semantic.md">Semantic HTML</a>
       </td>
       <td><a href="https://github.com/gSchool/semantic-html-assignment">Semantic HTML</a>
       </td>
@@ -158,7 +158,7 @@ Week 2
       <td rowspan="2">Tuesday</td>
       <td rowspan="2"><a href="https://github.com/gSchool/g26-challenges-so-far/blob/master/w2/w2-f-replace-with-alphabet-position/w2-f-replace-with-alphabet-position.js">Alphabet Position</a>
       </td>
-      <td><a href="CSS/README.md">Intro to CSS</a>
+      <td><a href="https://github.com/gSchool/html-css-curriculum/CSS/README.md">Intro to CSS</a>
       </td>
       <td><a href="https://github.com/gSchool/css-assignments">CSS assignments</a>
       </td>
@@ -166,7 +166,7 @@ Week 2
       </td>
     </tr>
     <tr>
-      <td><a href="CSS/Intermediate.md">Intermediate CSS</a>
+      <td><a href="https://github.com/gSchool/html-css-curriculum/CSS/Intermediate.md">Intermediate CSS</a>
       </td>
       <td>
       </td>
@@ -251,7 +251,7 @@ Week 3
       <td rowspan="1">Monday</td>
       <td rowspan="1"><a href="https://github.com/gSchool/master_warmup_repository_full_stack/blob/master/w3/w3-t-doubleChar/solution.js">Double Char</a>
       </td>
-      <td><a href="CSS/Frameworks.md">CSS Frameworks</a>
+      <td><a href="https://github.com/gSchool/html-css-curriculum/CSS/Frameworks.md">CSS Frameworks</a>
       </td>
       <td><a href="https://github.com/gSchool/galvanize-delivers/">Galvanize Delivers</a>
       </td>
@@ -262,7 +262,7 @@ Week 3
       <td rowspan="1">Tuesday</td>
       <td rowspan="1"><a href="https://github.com/gSchool/master_warmup_repository_full_stack/blob/master/w3/w3-t-doubleChar/solution.js">Double Char</a>
       </td>
-      <td><a href="HTML/Forms.md">HTML Forms</a>
+      <td><a href="https://github.com/gSchool/html-css-curriculum/HTML/Forms.md">HTML Forms</a>
       </td>
       <td><a href="https://github.com/gSchool/html-forms">HTML Forms</a>
       </td>
