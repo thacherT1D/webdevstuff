@@ -6,7 +6,7 @@
 
 ## What's a RESTful, database-driven, HTTP server?
 
-A **RESTful, database-driven, HTTP server** is exactly what the name implies. It's a server that communicates with a client using a RESTful HTTP API. The sole purpose of the HTTP server is to manage information that's persisted to a database.
+A **RESTful, database-driven, HTTP server** is exactly what it sounds. It's a server that communicates with a client using a RESTful HTTP and is responsible for managing information that's persisted in a database.
 
 Here's a sequence diagram of the RESTful, database-driven, HTTP server.
 
@@ -32,7 +32,7 @@ Here's a sequence diagram of the RESTful, database-driven, HTTP server.
                                                                                           ╚════════════════════════════════╝
 ```
 
-For example, imagine a RESTful, database-driven, HTTP server manages the persistence of the following rows in the `tracks` table.
+To give you a concrete example, imagine a RESTful, database-driven, HTTP server that manages the information in `tracks` database table.
 
 ```text
  id |       title        |   artist    
@@ -40,7 +40,7 @@ For example, imagine a RESTful, database-driven, HTTP server manages the persist
   1 | Here Comes the Sun | The Beatles
 ```
 
-A RESTful server would handle the following HTTP requests by mapping them to a specific REST action.
+A RESTful HTTP server handles the following requests by mapping them to a specific REST action.
 
 | REST Action       | Request Method | Request URL | Request Content-Type  | Request Body                                   |
 |-------------------|----------------|-------------|-----------------------|------------------------------------------------|
@@ -50,7 +50,7 @@ A RESTful server would handle the following HTTP requests by mapping them to a s
 | Update            | `PATCH`        | `/tracks/1` | `application/json`    | `{ "title": "Yesterday" }`                     |
 | Destroy           | `DELETE`       | `/tracks/1` | N/A                   | N/A                                            |
 
-Once the operation is complete, the RESTful server would send a specific HTTP response back to the client indicating the result of the operation.
+Once the operation is complete, the RESTful HTTP server sends a specific response back to the client indicating the result of the operation.
 
 | REST Action       | Response Status | Response Content-Type | Response Body                                                           |
 |-------------------|-----------------|-----------------------|-------------------------------------------------------------------------|
