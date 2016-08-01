@@ -699,3 +699,8 @@ Now that it's merged, delete the feature branch.
 ```shell
 git branch -d http_server
 ```
+
+## Assignment
+
+- [Galvanize Bookshelf](https://github.com/gSchool/galvanize-bookshelf#galvanize-bookshelf)
+- [Galvanize Bookshelf - Express and Knex](https://github.com/gSchool/galvanize-bookshelf/blob/master/2_express_knex.md)
