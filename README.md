@@ -407,7 +407,7 @@ Week 4
       <td rowspan="1">Friday</td>
       <td rowspan="1"><a href="https://gist.github.com/ryansobol/52642194e31327fe5d94a160c1eb2764">ArrayMap</a>
       </td>
-      <td><a href="Agile/README.md">Project Mangement</a>
+      <td><a href="https://github.com/gschool/productivity-curriculum/blob/master/Agile/README.md">Project Mangement</a>
       </td>
       <td><a href="Projects/Q1.md">Q1 Project</a>
       </td>
