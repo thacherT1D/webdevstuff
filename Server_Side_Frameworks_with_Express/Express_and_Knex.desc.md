@@ -507,8 +507,8 @@ router.patch('/tracks/:id', (req, res, next) => {
   knex('tracks')
     .where('id', req.params.id)
     .first()
-    .then((artist) => {
-      if (!artist) {
+    .then((track) => {
+      if (!track) {
         throw boom.create(404, 'Not Found');
       }
 
@@ -634,8 +634,8 @@ router.patch('/tracks/:id', (req, res, next) => {
   knex('tracks')
     .where('id', req.params.id)
     .first()
-    .then((artist) => {
-      if (!artist) {
+    .then((track) => {
+      if (!track) {
         throw boom.create(404, 'Not Found');
       }
 
