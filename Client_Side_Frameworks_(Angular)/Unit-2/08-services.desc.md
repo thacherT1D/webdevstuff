@@ -30,7 +30,8 @@ That first bullet point may be a bit easier to digest, but what is a singleton? 
 
 **START DEMO 1: Singletons**
 
-Look at the code in the `Exercise_1` folder, turn and talk.
+Look at the code in the `Demo_1` folder.
+- add questions here.
 
 **END DEMO 1**
 
