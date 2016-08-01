@@ -80,9 +80,9 @@ app.service('personService', function(){
   }
 });
 
-app.controller('personController', function(personService){
+app.controller('personController', ['personService', function(personService){
     // I now have access to the personService!
-  });
+}]);
 ```
 
 A provider is the most complex method and is used less frequently. It is a factory that can be configured before the application starts, which allows for more flexibility, but for the applications we are going to build, you will not need this level of complexity.
