@@ -95,7 +95,7 @@
       </td>
       <td>
       </td>
-      <td>
+      <td><a href="https://github.com/gSchool/javascript-curriculum/blob/master/Call Apply and Bind.md">Call, Apply and Bind</a>
       </td>
     </tr>
     <tr>
@@ -120,3 +120,16 @@
   </tbody>
 </table>
 <!-- END SCHEDULE -->
+
+#### Homeworks
+* https://github.com/gSchool/ccf-data-structures
+
+### Thursday
+
+#### Lessons
+* Functions and Scopes
+
+https://github.com/gSchool/basic-js-part-2
+
+#### Homeworks
+* Read Eloquent JS 4 & 5 ->http://eloquentjavascript.net/

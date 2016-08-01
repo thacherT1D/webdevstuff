@@ -41,6 +41,7 @@ module.exports = function() {
           },
           {
             article: {text: "JavaScript Functions", url: "https://github.com/gSchool/javascript-curriculum/blob/master/Functions.md"},
+            stretch: {text: "Call, Apply and Bind", url: "https://github.com/gSchool/javascript-curriculum/blob/master/Call Apply and Bind.md"},
           },
         ],
       },
@@ -81,6 +82,7 @@ module.exports = function() {
           },
           {
             article: { text: "Intermediate CSS", url: "https://github.com/gSchool/html-css-curriculum/blob/master/CSS/Intermediate.md" },
+            stretch: { text: "CSS Layout Exercises", url: "https://github.com/gSchool/css-layout-exercises" }
           },
         ]
       },

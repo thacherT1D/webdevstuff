@@ -49,7 +49,7 @@
       </td>
       <td>
       </td>
-      <td>
+      <td><a href="https://github.com/gSchool/css-layout-exercises">CSS Layout Exercises</a>
       </td>
     </tr>
     <tr>

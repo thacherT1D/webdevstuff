@@ -96,7 +96,7 @@ Week 1
       </td>
       <td>
       </td>
-      <td>
+      <td><a href="https://github.com/gSchool/javascript-curriculum/blob/master/Call Apply and Bind.md">Call, Apply and Bind</a>
       </td>
     </tr>
     <tr>
@@ -170,7 +170,7 @@ Week 2
       </td>
       <td>
       </td>
-      <td>
+      <td><a href="https://github.com/gSchool/css-layout-exercises">CSS Layout Exercises</a>
       </td>
     </tr>
     <tr>
