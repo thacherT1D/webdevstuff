@@ -18,7 +18,7 @@
       <td rowspan="1">Monday</td>
       <td rowspan="1"><a href="https://github.com/gSchool/master_warmup_repository_full_stack/blob/master/w3/w3-t-doubleChar/solution.js">Double Char</a>
       </td>
-      <td><a href="https://github.com/gSchool/html-css-curriculum/CSS/Frameworks.md">CSS Frameworks</a>
+      <td><a href="https://github.com/gSchool/html-css-curriculum/blob/master/CSS/Frameworks.md">CSS Frameworks</a>
       </td>
       <td><a href="https://github.com/gSchool/galvanize-delivers/">Galvanize Delivers</a>
       </td>
@@ -29,7 +29,7 @@
       <td rowspan="1">Tuesday</td>
       <td rowspan="1"><a href="https://github.com/gSchool/master_warmup_repository_full_stack/blob/master/w3/w3-t-doubleChar/solution.js">Double Char</a>
       </td>
-      <td><a href="https://github.com/gSchool/html-css-curriculum/HTML/Forms.md">HTML Forms</a>
+      <td><a href="https://github.com/gSchool/html-css-curriculum/blob/master/HTML/Forms.md">HTML Forms</a>
       </td>
       <td><a href="https://github.com/gSchool/html-forms">HTML Forms</a>
       </td>
@@ -40,7 +40,7 @@
       <td rowspan="1">Wednesday</td>
       <td rowspan="1"><a href="https://github.com/gSchool/master_warmup_repository_full_stack/blob/master/w3/w3-r-sum-of-numbers/solution.js">Sum Range</a>
       </td>
-      <td><a href="https://github.com/gSchool/browser-dom-curriculum/jQuery/README.md">Intro to jQuery</a>
+      <td><a href="https://github.com/gSchool/browser-dom-curriculum/blob/master/jQuery/README.md">Intro to jQuery</a>
       </td>
       <td><a href="https://github.com/gSchool/js-dom-tests">JS DOM Tests Reloaded</a>
       </td>
@@ -51,7 +51,7 @@
       <td rowspan="1">Thursday</td>
       <td rowspan="1"><a href="https://github.com/gSchool/master_warmup_repository_full_stack/blob/master/w3/w3-r-sum-of-numbers/solution.js">Sum Range</a>
       </td>
-      <td><a href="https://github.com/gSchool/browser-dom-curriculum/jQuery/Events.md">jQuery Events</a>
+      <td><a href="https://github.com/gSchool/browser-dom-curriculum/blob/master/jQuery/Events.md">jQuery Events</a>
       </td>
       <td><a href="https://github.com/gSchool/jquery-calculator">jQuery Calculator</a>
       </td>
@@ -70,7 +70,7 @@
       </td>
     </tr>
     <tr>
-      <td><a href="https://github.com/gSchool/productivity-curriculum/Misc/Linting.md">Linting JavaScript</a>
+      <td><a href="https://github.com/gSchool/productivity-curriculum/blob/master/Misc/Linting.md">Linting JavaScript</a>
       </td>
       <td>
       </td>

@@ -18,7 +18,7 @@
       <td rowspan="1">Monday</td>
       <td rowspan="1"><a href="https://gist.github.com/IanSmith89/6ae569d695ffa1134d229c8f75117da0">Word Scrambler</a>
       </td>
-      <td><a href="https://github.com/gschool/browser-dom-curriculum/HTTP/README.md">HTTP</a>
+      <td><a href="https://github.com/gschool/browser-dom-curriculum/blob/master/HTTP/README.md">HTTP</a>
       </td>
       <td><a href="../../Projects/Q1.md">Q1 Project</a>
       </td>
@@ -29,7 +29,7 @@
       <td rowspan="1">Tuesday</td>
       <td rowspan="1"><a href="https://github.com/gSchool/g26-challenges-so-far/blob/master/w4/w4-r-rotate-array/problem.js">Rotate</a>
       </td>
-      <td><a href="https://github.com/gschool/browser-dom-curriculum/HTTP/AJAX.md">AJAX</a>
+      <td><a href="https://github.com/gschool/browser-dom-curriculum/blob/master/HTTP/AJAX.md">AJAX</a>
       </td>
       <td><a href="https://github.com/gschool/wd-ajax-hero">AJAX Hero</a>
       </td>
@@ -40,7 +40,7 @@
       <td rowspan="1">Wednesday</td>
       <td rowspan="1"><a href="https://github.com/gSchool/g26-challenges-so-far/blob/master/w4/w4-t-equivalent-number/problem.js">SameDigits</a>
       </td>
-      <td><a href="https://github.com/gSchool/html-css-curriculum/UI/Wireframing.md">Wireframing</a>
+      <td><a href="https://github.com/gSchool/html-css-curriculum/blob/master/UI/Wireframing.md">Wireframing</a>
       </td>
       <td><a href="../../Projects/Q1.md">Q1 Project</a>
       </td>
@@ -51,7 +51,7 @@
       <td rowspan="5">Thursday</td>
       <td rowspan="5"><a href="https://github.com/gSchool/g26-challenges-so-far/blob/master/w4/w4-t-equivalent-number/problem.js">SameDigits</a>
       </td>
-      <td><a href="https://github.com/gSchool/javascript-curriculum/Scope.md">Scope</a>
+      <td><a href="https://github.com/gSchool/javascript-curriculum/blob/master/Scope.md">Scope</a>
       </td>
       <td><a href="https://github.com/gSchool/function-tests">Function Tests</a>
       </td>
@@ -59,7 +59,7 @@
       </td>
     </tr>
     <tr>
-      <td><a href="https://github.com/gSchool/javascript-curriculum/Hoisting.md">Hoisting</a>
+      <td><a href="https://github.com/gSchool/javascript-curriculum/blob/master/Hoisting.md">Hoisting</a>
       </td>
       <td>
       </td>
@@ -67,7 +67,7 @@
       </td>
     </tr>
     <tr>
-      <td><a href="https://github.com/gSchool/javascript-curriculum/Higher Order Functions.md">Higher Order Functions</a>
+      <td><a href="https://github.com/gSchool/javascript-curriculum/blob/master/Higher Order Functions.md">Higher Order Functions</a>
       </td>
       <td>
       </td>
@@ -75,7 +75,7 @@
       </td>
     </tr>
     <tr>
-      <td><a href="https://github.com/gSchool/javascript-curriculum/Closure.md">Closures</a>
+      <td><a href="https://github.com/gSchool/javascript-curriculum/blob/master/Closure.md">Closures</a>
       </td>
       <td>
       </td>
@@ -83,7 +83,7 @@
       </td>
     </tr>
     <tr>
-      <td><a href="https://github.com/gSchool/javascript-curriculum/IIFE.md">IIFEs</a>
+      <td><a href="https://github.com/gSchool/javascript-curriculum/blob/master/IIFE.md">IIFEs</a>
       </td>
       <td>
       </td>

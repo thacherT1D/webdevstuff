@@ -29,7 +29,7 @@ Week 1
       </td>
     </tr>
     <tr>
-      <td><a href="https://github.com/gSchool/productivity-curriculum/Misc/Learning to Learn.md">Learning to Learn</a>
+      <td><a href="https://github.com/gSchool/productivity-curriculum/blob/master/Misc/Learning to Learn.md">Learning to Learn</a>
       </td>
       <td>
       </td>
@@ -37,7 +37,7 @@ Week 1
       </td>
     </tr>
     <tr>
-      <td><a href="https://github.com/gSchool/productivity-curriculum/Development Environment/README.md">Setup Development Environment</a>
+      <td><a href="https://github.com/gSchool/productivity-curriculum/blob/master/Development Environment/README.md">Setup Development Environment</a>
       </td>
       <td>
       </td>
@@ -46,9 +46,9 @@ Week 1
     </tr>
     <tr>
       <td rowspan="2">Tuesday</td>
-      <td rowspan="2"><a href="https://github.com/gSchool/productivity-curriculum/Misc/Typing.md">Typing</a>
+      <td rowspan="2"><a href="https://github.com/gSchool/productivity-curriculum/blob/master/Misc/Typing.md">Typing</a>
       </td>
-      <td><a href="https://github.com/gSchool/productivity-curriculum/Development Environment/README.md">Setup Development Environment</a>
+      <td><a href="https://github.com/gSchool/productivity-curriculum/blob/master/Development Environment/README.md">Setup Development Environment</a>
       </td>
       <td>
       </td>
@@ -56,18 +56,18 @@ Week 1
       </td>
     </tr>
     <tr>
-      <td><a href="https://github.com/gSchool/productivity-curriculum/Misc/Command Line.md">Intro to the Command Line</a>
+      <td><a href="https://github.com/gSchool/productivity-curriculum/blob/master/Misc/Command Line.md">Intro to the Command Line</a>
       </td>
       <td><a href="https://github.com/ryansobol/clmystery">Command Line Murder Mystery</a>
       </td>
-      <td><a href="https://github.com/gSchool/productivity-curriculum/Misc/Intermediate Command Line.md">Intermediate Command Line</a>
+      <td><a href="https://github.com/gSchool/productivity-curriculum/blob/master/Misc/Intermediate Command Line.md">Intermediate Command Line</a>
       </td>
     </tr>
     <tr>
       <td rowspan="2">Wednesday</td>
       <td rowspan="2"><a href="https://github.com/sethvincent/javascripting">JavaScripting</a>
       </td>
-      <td><a href="https://github.com/gSchool/productivity-curriculum/Misc/Intro to Git.md">Intro to Git and Github</a>
+      <td><a href="https://github.com/gSchool/productivity-curriculum/blob/master/Misc/Intro to Git.md">Intro to Git and Github</a>
       </td>
       <td>
       </td>
@@ -75,7 +75,7 @@ Week 1
       </td>
     </tr>
     <tr>
-      <td><a href="https://github.com/gSchool/javascript-curriculum/Vocabulary.md">JavaScript Vocabulary</a>
+      <td><a href="https://github.com/gSchool/javascript-curriculum/blob/master/Vocabulary.md">JavaScript Vocabulary</a>
       </td>
       <td>
       </td>
@@ -86,7 +86,7 @@ Week 1
       <td rowspan="2">Thursday</td>
       <td rowspan="2"><a href="https://github.com/sethvincent/javascripting">JavaScripting (con't)</a>
       </td>
-      <td><a href="https://github.com/gSchool/javascript-curriculum/README.md">JavaScript: Intro, Types, Values, Variables, Control Flow</a>
+      <td><a href="https://github.com/gSchool/javascript-curriculum/blob/master/README.md">JavaScript: Intro, Types, Values, Variables, Control Flow</a>
       </td>
       <td><a href="https://github.com/gSchool/javascript-statements">JavaScript Statements</a>
       </td>
@@ -94,7 +94,7 @@ Week 1
       </td>
     </tr>
     <tr>
-      <td><a href="https://github.com/gSchool/javascript-curriculum/Functions.md">JavaScript Functions</a>
+      <td><a href="https://github.com/gSchool/javascript-curriculum/blob/master/Functions.md">JavaScript Functions</a>
       </td>
       <td>
       </td>
@@ -105,7 +105,7 @@ Week 1
       <td rowspan="2">Friday</td>
       <td rowspan="2"><a href="https://github.com/sethvincent/javascripting">JavaScripting (con't)</a>
       </td>
-      <td><a href="https://github.com/gSchool/javascript-curriculum/Functions.md">JavaScript Functions (con't)</a>
+      <td><a href="https://github.com/gSchool/javascript-curriculum/blob/master/Functions.md">JavaScript Functions (con't)</a>
       </td>
       <td>
       </td>
@@ -113,7 +113,7 @@ Week 1
       </td>
     </tr>
     <tr>
-      <td><a href="https://github.com/gSchool/javascript-curriculum/Arrays-Objects-Iteration.md">JavaScript: Arrays, Objects, Iteration</a>
+      <td><a href="https://github.com/gSchool/javascript-curriculum/blob/master/Arrays-Objects-Iteration.md">JavaScript: Arrays, Objects, Iteration</a>
       </td>
       <td><a href="https://github.com/gSchool/javascript-statements">JavaScript Statements (con't)</a>
       </td>
@@ -139,19 +139,19 @@ Week 2
   <tbody>
     <tr>
       <td rowspan="2">Monday</td>
-      <td rowspan="2"><a href="https://github.com/gSchool/javascript-curriculum/Memory Diagrams.md">Memory Diagrams</a>
+      <td rowspan="2"><a href="https://github.com/gSchool/javascript-curriculum/blob/master/Memory Diagrams.md">Memory Diagrams</a>
       </td>
-      <td><a href="https://github.com/gSchool/html-css-curriculum/HTML/README.md">Intro to HTML</a>
+      <td><a href="https://github.com/gSchool/html-css-curriculum/blob/master/HTML/README.md">Intro to HTML</a>
       </td>
       <td><a href="https://github.com/gSchool/html-intro">HTML Intro</a>
       </td>
-      <td><a href="https://github.com/gSchool/html-css-curriculum/HTML/Media.md">Media</a>
+      <td><a href="https://github.com/gSchool/html-css-curriculum/blob/master/HTML/Media.md">Media</a>
       </td>
     </tr>
     <tr>
-      <td><a href="https://github.com/gSchool/html-css-curriculum/HTML/Semantic.md">Semantic HTML</a>
+      <td><a href="https://github.com/gSchool/html-css-curriculum/blob/master/HTML/Semantic.md">Semantic HTML</a>
       </td>
-      <td><a href="https://github.com/gSchool/semantic-html-assignment">Semantic HTML</a>
+      <td><a href="https://github.com/gSchool/semantic-html-exercise">Semantic HTML</a>
       </td>
       <td>
       </td>
@@ -160,15 +160,15 @@ Week 2
       <td rowspan="2">Tuesday</td>
       <td rowspan="2"><a href="https://github.com/gSchool/g26-challenges-so-far/blob/master/w2/w2-f-replace-with-alphabet-position/w2-f-replace-with-alphabet-position.js">Alphabet Position</a>
       </td>
-      <td><a href="https://github.com/gSchool/html-css-curriculum/CSS/README.md">Intro to CSS</a>
+      <td><a href="https://github.com/gSchool/html-css-curriculum/blob/master/CSS/README.md">Intro to CSS</a>
       </td>
-      <td><a href="https://github.com/gSchool/css-assignments">CSS assignments</a>
+      <td><a href="https://github.com/gSchool/css-exercises">CSS Exercises</a>
       </td>
       <td>
       </td>
     </tr>
     <tr>
-      <td><a href="https://github.com/gSchool/html-css-curriculum/CSS/Intermediate.md">Intermediate CSS</a>
+      <td><a href="https://github.com/gSchool/html-css-curriculum/blob/master/CSS/Intermediate.md">Intermediate CSS</a>
       </td>
       <td>
       </td>
@@ -179,7 +179,7 @@ Week 2
       <td rowspan="4">Wednesday</td>
       <td rowspan="4"><a href="http://rosettacode.org/wiki/FizzBuzz">FizzBuzz</a>
       </td>
-      <td><a href="https://github.com/gSchool/browser-dom-curriculum/DOM/README.md">Intro to the DOM</a>
+      <td><a href="https://github.com/gSchool/browser-dom-curriculum/blob/master/DOM/README.md">Intro to the DOM</a>
       </td>
       <td><a href="https://github.com/gSchool/js-dom-tests">JS DOM Tests</a>
       </td>
@@ -187,7 +187,7 @@ Week 2
       </td>
     </tr>
     <tr>
-      <td><a href="https://github.com/gSchool/browser-dom-curriculum/DOM/Manipulation.md">DOM Manipulation</a>
+      <td><a href="https://github.com/gSchool/browser-dom-curriculum/blob/master/DOM/Manipulation.md">DOM Manipulation</a>
       </td>
       <td>
       </td>
@@ -195,7 +195,7 @@ Week 2
       </td>
     </tr>
     <tr>
-      <td><a href="https://github.com/gSchool/browser-dom-curriculum/DOM/Traversal.md">DOM Traversal</a>
+      <td><a href="https://github.com/gSchool/browser-dom-curriculum/blob/master/DOM/Traversal.md">DOM Traversal</a>
       </td>
       <td>
       </td>
@@ -203,7 +203,7 @@ Week 2
       </td>
     </tr>
     <tr>
-      <td><a href="https://github.com/gSchool/browser-dom-curriculum/DOM/Creation and Deletion.md">DOM Creation and Deletion</a>
+      <td><a href="https://github.com/gSchool/browser-dom-curriculum/blob/master/DOM/Creation and Deletion.md">DOM Creation and Deletion</a>
       </td>
       <td>
       </td>
@@ -214,7 +214,7 @@ Week 2
       <td rowspan="1">Thursday</td>
       <td rowspan="1"><a href="https://github.com/gSchool/master_warmup_repository_full_stack/blob/master/w2/w2-w-remove-dupes-string-warmup/prompt.js">Remove Duplicates</a>
       </td>
-      <td><a href="https://github.com/gSchool/browser-dom-curriculum/DOM/Events.md">DOM Events</a>
+      <td><a href="https://github.com/gSchool/browser-dom-curriculum/blob/master/DOM/Events.md">DOM Events</a>
       </td>
       <td><a href="https://github.com/gSchool/stoplight-event-exercise">Stoplight Events</a>
       </td>
@@ -223,7 +223,7 @@ Week 2
     </tr>
     <tr>
       <td rowspan="1">Friday</td>
-      <td rowspan="1"><a href="https://github.com/gSchool/productivity-curriculum/Misc/Typing.md">Typing</a>
+      <td rowspan="1"><a href="https://github.com/gSchool/productivity-curriculum/blob/master/Misc/Typing.md">Typing</a>
       </td>
       <td>
       </td>
@@ -253,7 +253,7 @@ Week 3
       <td rowspan="1">Monday</td>
       <td rowspan="1"><a href="https://github.com/gSchool/master_warmup_repository_full_stack/blob/master/w3/w3-t-doubleChar/solution.js">Double Char</a>
       </td>
-      <td><a href="https://github.com/gSchool/html-css-curriculum/CSS/Frameworks.md">CSS Frameworks</a>
+      <td><a href="https://github.com/gSchool/html-css-curriculum/blob/master/CSS/Frameworks.md">CSS Frameworks</a>
       </td>
       <td><a href="https://github.com/gSchool/galvanize-delivers/">Galvanize Delivers</a>
       </td>
@@ -264,7 +264,7 @@ Week 3
       <td rowspan="1">Tuesday</td>
       <td rowspan="1"><a href="https://github.com/gSchool/master_warmup_repository_full_stack/blob/master/w3/w3-t-doubleChar/solution.js">Double Char</a>
       </td>
-      <td><a href="https://github.com/gSchool/html-css-curriculum/HTML/Forms.md">HTML Forms</a>
+      <td><a href="https://github.com/gSchool/html-css-curriculum/blob/master/HTML/Forms.md">HTML Forms</a>
       </td>
       <td><a href="https://github.com/gSchool/html-forms">HTML Forms</a>
       </td>
@@ -275,7 +275,7 @@ Week 3
       <td rowspan="1">Wednesday</td>
       <td rowspan="1"><a href="https://github.com/gSchool/master_warmup_repository_full_stack/blob/master/w3/w3-r-sum-of-numbers/solution.js">Sum Range</a>
       </td>
-      <td><a href="https://github.com/gSchool/browser-dom-curriculum/jQuery/README.md">Intro to jQuery</a>
+      <td><a href="https://github.com/gSchool/browser-dom-curriculum/blob/master/jQuery/README.md">Intro to jQuery</a>
       </td>
       <td><a href="https://github.com/gSchool/js-dom-tests">JS DOM Tests Reloaded</a>
       </td>
@@ -286,7 +286,7 @@ Week 3
       <td rowspan="1">Thursday</td>
       <td rowspan="1"><a href="https://github.com/gSchool/master_warmup_repository_full_stack/blob/master/w3/w3-r-sum-of-numbers/solution.js">Sum Range</a>
       </td>
-      <td><a href="https://github.com/gSchool/browser-dom-curriculum/jQuery/Events.md">jQuery Events</a>
+      <td><a href="https://github.com/gSchool/browser-dom-curriculum/blob/master/jQuery/Events.md">jQuery Events</a>
       </td>
       <td><a href="https://github.com/gSchool/jquery-calculator">jQuery Calculator</a>
       </td>
@@ -305,7 +305,7 @@ Week 3
       </td>
     </tr>
     <tr>
-      <td><a href="https://github.com/gSchool/productivity-curriculum/Misc/Linting.md">Linting JavaScript</a>
+      <td><a href="https://github.com/gSchool/productivity-curriculum/blob/master/Misc/Linting.md">Linting JavaScript</a>
       </td>
       <td>
       </td>
@@ -333,7 +333,7 @@ Week 4
       <td rowspan="1">Monday</td>
       <td rowspan="1"><a href="https://gist.github.com/IanSmith89/6ae569d695ffa1134d229c8f75117da0">Word Scrambler</a>
       </td>
-      <td><a href="https://github.com/gschool/browser-dom-curriculum/HTTP/README.md">HTTP</a>
+      <td><a href="https://github.com/gschool/browser-dom-curriculum/blob/master/HTTP/README.md">HTTP</a>
       </td>
       <td><a href="../../Projects/Q1.md">Q1 Project</a>
       </td>
@@ -344,7 +344,7 @@ Week 4
       <td rowspan="1">Tuesday</td>
       <td rowspan="1"><a href="https://github.com/gSchool/g26-challenges-so-far/blob/master/w4/w4-r-rotate-array/problem.js">Rotate</a>
       </td>
-      <td><a href="https://github.com/gschool/browser-dom-curriculum/HTTP/AJAX.md">AJAX</a>
+      <td><a href="https://github.com/gschool/browser-dom-curriculum/blob/master/HTTP/AJAX.md">AJAX</a>
       </td>
       <td><a href="https://github.com/gschool/wd-ajax-hero">AJAX Hero</a>
       </td>
@@ -355,7 +355,7 @@ Week 4
       <td rowspan="1">Wednesday</td>
       <td rowspan="1"><a href="https://github.com/gSchool/g26-challenges-so-far/blob/master/w4/w4-t-equivalent-number/problem.js">SameDigits</a>
       </td>
-      <td><a href="https://github.com/gSchool/html-css-curriculum/UI/Wireframing.md">Wireframing</a>
+      <td><a href="https://github.com/gSchool/html-css-curriculum/blob/master/UI/Wireframing.md">Wireframing</a>
       </td>
       <td><a href="../../Projects/Q1.md">Q1 Project</a>
       </td>
@@ -366,7 +366,7 @@ Week 4
       <td rowspan="5">Thursday</td>
       <td rowspan="5"><a href="https://github.com/gSchool/g26-challenges-so-far/blob/master/w4/w4-t-equivalent-number/problem.js">SameDigits</a>
       </td>
-      <td><a href="https://github.com/gSchool/javascript-curriculum/Scope.md">Scope</a>
+      <td><a href="https://github.com/gSchool/javascript-curriculum/blob/master/Scope.md">Scope</a>
       </td>
       <td><a href="https://github.com/gSchool/function-tests">Function Tests</a>
       </td>
@@ -374,7 +374,7 @@ Week 4
       </td>
     </tr>
     <tr>
-      <td><a href="https://github.com/gSchool/javascript-curriculum/Hoisting.md">Hoisting</a>
+      <td><a href="https://github.com/gSchool/javascript-curriculum/blob/master/Hoisting.md">Hoisting</a>
       </td>
       <td>
       </td>
@@ -382,7 +382,7 @@ Week 4
       </td>
     </tr>
     <tr>
-      <td><a href="https://github.com/gSchool/javascript-curriculum/Higher Order Functions.md">Higher Order Functions</a>
+      <td><a href="https://github.com/gSchool/javascript-curriculum/blob/master/Higher Order Functions.md">Higher Order Functions</a>
       </td>
       <td>
       </td>
@@ -390,7 +390,7 @@ Week 4
       </td>
     </tr>
     <tr>
-      <td><a href="https://github.com/gSchool/javascript-curriculum/Closure.md">Closures</a>
+      <td><a href="https://github.com/gSchool/javascript-curriculum/blob/master/Closure.md">Closures</a>
       </td>
       <td>
       </td>
@@ -398,7 +398,7 @@ Week 4
       </td>
     </tr>
     <tr>
-      <td><a href="https://github.com/gSchool/javascript-curriculum/IIFE.md">IIFEs</a>
+      <td><a href="https://github.com/gSchool/javascript-curriculum/blob/master/IIFE.md">IIFEs</a>
       </td>
       <td>
       </td>

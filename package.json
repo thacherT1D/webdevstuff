@@ -4,12 +4,15 @@
   "description": "Build tools for fs-curriculum",
   "dependencies": {
     "cheerio": "^0.20.0",
+    "dotenv": "^2.0.0",
     "marked": "^0.3.5",
-    "pug": "^2.0.0-beta4"
+    "pug": "^2.0.0-beta4",
+    "request": "^2.74.0"
   },
   "devDependencies": {},
   "scripts": {
-    "build": "node build/run.js && node build/check-links.js"
+    "build": "node build/run.js && node build/check-links.js",
+    "checklinks": "node -r dotenv/config build/check-links.js remote"
   },
   "repository": {
     "type": "git",

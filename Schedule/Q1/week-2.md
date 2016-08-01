@@ -16,19 +16,19 @@
   <tbody>
     <tr>
       <td rowspan="2">Monday</td>
-      <td rowspan="2"><a href="https://github.com/gSchool/javascript-curriculum/Memory Diagrams.md">Memory Diagrams</a>
+      <td rowspan="2"><a href="https://github.com/gSchool/javascript-curriculum/blob/master/Memory Diagrams.md">Memory Diagrams</a>
       </td>
-      <td><a href="https://github.com/gSchool/html-css-curriculum/HTML/README.md">Intro to HTML</a>
+      <td><a href="https://github.com/gSchool/html-css-curriculum/blob/master/HTML/README.md">Intro to HTML</a>
       </td>
       <td><a href="https://github.com/gSchool/html-intro">HTML Intro</a>
       </td>
-      <td><a href="https://github.com/gSchool/html-css-curriculum/HTML/Media.md">Media</a>
+      <td><a href="https://github.com/gSchool/html-css-curriculum/blob/master/HTML/Media.md">Media</a>
       </td>
     </tr>
     <tr>
-      <td><a href="https://github.com/gSchool/html-css-curriculum/HTML/Semantic.md">Semantic HTML</a>
+      <td><a href="https://github.com/gSchool/html-css-curriculum/blob/master/HTML/Semantic.md">Semantic HTML</a>
       </td>
-      <td><a href="https://github.com/gSchool/semantic-html-assignment">Semantic HTML</a>
+      <td><a href="https://github.com/gSchool/semantic-html-exercise">Semantic HTML</a>
       </td>
       <td>
       </td>
@@ -37,15 +37,15 @@
       <td rowspan="2">Tuesday</td>
       <td rowspan="2"><a href="https://github.com/gSchool/g26-challenges-so-far/blob/master/w2/w2-f-replace-with-alphabet-position/w2-f-replace-with-alphabet-position.js">Alphabet Position</a>
       </td>
-      <td><a href="https://github.com/gSchool/html-css-curriculum/CSS/README.md">Intro to CSS</a>
+      <td><a href="https://github.com/gSchool/html-css-curriculum/blob/master/CSS/README.md">Intro to CSS</a>
       </td>
-      <td><a href="https://github.com/gSchool/css-assignments">CSS assignments</a>
+      <td><a href="https://github.com/gSchool/css-exercises">CSS Exercises</a>
       </td>
       <td>
       </td>
     </tr>
     <tr>
-      <td><a href="https://github.com/gSchool/html-css-curriculum/CSS/Intermediate.md">Intermediate CSS</a>
+      <td><a href="https://github.com/gSchool/html-css-curriculum/blob/master/CSS/Intermediate.md">Intermediate CSS</a>
       </td>
       <td>
       </td>
@@ -56,7 +56,7 @@
       <td rowspan="4">Wednesday</td>
       <td rowspan="4"><a href="http://rosettacode.org/wiki/FizzBuzz">FizzBuzz</a>
       </td>
-      <td><a href="https://github.com/gSchool/browser-dom-curriculum/DOM/README.md">Intro to the DOM</a>
+      <td><a href="https://github.com/gSchool/browser-dom-curriculum/blob/master/DOM/README.md">Intro to the DOM</a>
       </td>
       <td><a href="https://github.com/gSchool/js-dom-tests">JS DOM Tests</a>
       </td>
@@ -64,7 +64,7 @@
       </td>
     </tr>
     <tr>
-      <td><a href="https://github.com/gSchool/browser-dom-curriculum/DOM/Manipulation.md">DOM Manipulation</a>
+      <td><a href="https://github.com/gSchool/browser-dom-curriculum/blob/master/DOM/Manipulation.md">DOM Manipulation</a>
       </td>
       <td>
       </td>
@@ -72,7 +72,7 @@
       </td>
     </tr>
     <tr>
-      <td><a href="https://github.com/gSchool/browser-dom-curriculum/DOM/Traversal.md">DOM Traversal</a>
+      <td><a href="https://github.com/gSchool/browser-dom-curriculum/blob/master/DOM/Traversal.md">DOM Traversal</a>
       </td>
       <td>
       </td>
@@ -80,7 +80,7 @@
       </td>
     </tr>
     <tr>
-      <td><a href="https://github.com/gSchool/browser-dom-curriculum/DOM/Creation and Deletion.md">DOM Creation and Deletion</a>
+      <td><a href="https://github.com/gSchool/browser-dom-curriculum/blob/master/DOM/Creation and Deletion.md">DOM Creation and Deletion</a>
       </td>
       <td>
       </td>
@@ -91,7 +91,7 @@
       <td rowspan="1">Thursday</td>
       <td rowspan="1"><a href="https://github.com/gSchool/master_warmup_repository_full_stack/blob/master/w2/w2-w-remove-dupes-string-warmup/prompt.js">Remove Duplicates</a>
       </td>
-      <td><a href="https://github.com/gSchool/browser-dom-curriculum/DOM/Events.md">DOM Events</a>
+      <td><a href="https://github.com/gSchool/browser-dom-curriculum/blob/master/DOM/Events.md">DOM Events</a>
       </td>
       <td><a href="https://github.com/gSchool/stoplight-event-exercise">Stoplight Events</a>
       </td>
@@ -100,7 +100,7 @@
     </tr>
     <tr>
       <td rowspan="1">Friday</td>
-      <td rowspan="1"><a href="https://github.com/gSchool/productivity-curriculum/Misc/Typing.md">Typing</a>
+      <td rowspan="1"><a href="https://github.com/gSchool/productivity-curriculum/blob/master/Misc/Typing.md">Typing</a>
       </td>
       <td>
       </td>
