@@ -109,7 +109,7 @@ Try making a request to an invalid URL.  Write code to properly handle a request
 
 Use `$http.get()` and `$http.post()` to interact with this [http://angular-http-service-backend.herokuapp.com/messages](http://angular-http-service-backend.herokuapp.com/messages) endpoint.  It's a simple collaborative chat app. [Github Repo here](https://github.com/gSchool/angular-http-service-backend).  The API has two endpoints:
 
-The app is one Rails model, Message, which has two attributes: name and content.
+The app is accepts data that has the following attributes: name and content.
 
 * GET `/messages` - responds with a list of all messages
 * POST `/messages` - creates a new message with the data you send to it
