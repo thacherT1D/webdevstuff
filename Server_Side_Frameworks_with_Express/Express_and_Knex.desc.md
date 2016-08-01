@@ -213,7 +213,7 @@ Then, install `humps` as a dependency while saving it to the `package.json` file
 npm install --save humps
 ```
 
-Back in the `routes/artists.js` file, add the following code.
+Back in the `routes/tracks.js` file, add the following code.
 
 **NOTE:** Remember to require the `knex` and `humps` dependencies. Be sure to store the `camelizeKeys` function from `humps` in a local variable.
 
@@ -270,7 +270,7 @@ Start by installing `boom` as a dependency while saving it to the `package.json`
 npm install --save boom
 ```
 
-Back in the `routes/artists.js` file, add the following code.
+Back in the `routes/tracks.js` file, add the following code.
 
 **NOTE:** Remember to require the `boom` dependency.
 
@@ -340,7 +340,7 @@ git commit -m 'Add GET /tracks/:id middleware'
 
 Next, let's add middleware to handle creating a row in the `tracks` table.
 
-Back in the `routes/artists.js` file, add the following code.
+Back in the `routes/tracks.js` file, add the following code.
 
 **NOTE:** Remember to store the `decamelizeKeys` function from `humps` in a local variable.
 
@@ -398,7 +398,7 @@ router.post('/tracks', (req, res, next) => {
 
   const insertTrack = { title, artist };
 
-  knex('artists')
+  knex('tracks')
     .insert(decamelizeKeys(insertTrack), '*')
     .then((rows) => {
       const track = camelizeKeys(rows[0]);
@@ -435,7 +435,7 @@ git commit -m 'Add POST /tracks middleware'
 
 Next, let's add middleware to handle updating a row in the `tracks` table.
 
-Back in the `routes/artists.js` file, add the following code.
+Back in the `routes/tracks.js` file, add the following code.
 
 ```javascript
 'use strict';
@@ -491,7 +491,7 @@ router.post('/tracks', (req, res, next) => {
 
   const insertTrack = { title, artist };
 
-  knex('artists')
+  knex('tracks')
     .insert(decamelizeKeys(insertTrack), '*')
     .then((rows) => {
       const track = camelizeKeys(rows[0]);
@@ -504,7 +504,7 @@ router.post('/tracks', (req, res, next) => {
 });
 
 router.patch('/tracks/:id', (req, res, next) => {
-  knex('artists')
+  knex('tracks')
     .where('id', req.params.id)
     .first()
     .then((artist) => {
@@ -562,7 +562,7 @@ git commit -m 'Add PATCH /tracks/:id middleware'
 
 Next, let's add middleware to handle destroying a row from the `tracks` table.
 
-Back in the `routes/artists.js` file, add the following code.
+Back in the `routes/tracks.js` file, add the following code.
 
 ```javascript
 'use strict';
@@ -618,7 +618,7 @@ router.post('/tracks', (req, res, next) => {
 
   const insertTrack = { title, artist };
 
-  knex('artists')
+  knex('tracks')
     .insert(decamelizeKeys(insertTrack), '*')
     .then((rows) => {
       const track = camelizeKeys(rows[0]);
@@ -631,7 +631,7 @@ router.post('/tracks', (req, res, next) => {
 });
 
 router.patch('/tracks/:id', (req, res, next) => {
-  knex('artists')
+  knex('tracks')
     .where('id', req.params.id)
     .first()
     .then((artist) => {
