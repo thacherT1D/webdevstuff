@@ -342,42 +342,30 @@ exports.seed = function(knex) {
         id: 1,
         title: 'Here Comes the Sun',
         artist: 'The Beatles',
-        likes: 28808736
+        likes: 28808736,
+        created_at: new Date('2016-06-26 14:26:16 UTC'),
+        updated_at: new Date('2016-06-26 14:26:16 UTC')
       }, {
         id: 2,
         title: 'Hey Jude',
         artist: 'The Beatles',
-        likes: 20355655
+        likes: 20355655,
+        created_at: new Date('2016-06-26 14:26:16 UTC'),
+        updated_at: new Date('2016-06-26 14:26:16 UTC')
       }, {
         id: 3,
-        title: 'Come Together',
-        artist: 'The Beatles',
-        likes: 24438428
-      }, {
-        id: 4,
-        title: 'Yesterday',
-        artist: 'The Beatles',
-        likes: 21626039
-      }, {
-        id: 5,
         title: 'Send My Love',
         artist: 'Adele',
-        likes: 39658471
+        likes: 39658471,
+        created_at: new Date('2016-06-26 14:26:16 UTC'),
+        updated_at: new Date('2016-06-26 14:26:16 UTC')
       }, {
-        id: 6,
+        id: 4,
         title: 'Hello',
         artist: 'Adele',
-        likes: 538300301
-      }, {
-        id: 7,
-        title: 'When We Were Young',
-        artist: 'Adele',
-        likes: 112487182
-      }, {
-        id: 8,
-        title: 'Someone Like You',
-        artist: 'Adele',
-        likes: 112487182
+        likes: 538300301,
+        created_at: new Date('2016-06-26 14:26:16 UTC'),
+        updated_at: new Date('2016-06-26 14:26:16 UTC')
       }]);
     })
     .then(() => {
@@ -406,7 +394,7 @@ psql trackify_dev -c 'SELECT * FROM tracks;'
 
 
 ```shell
-npm run knex seed:make 2_tracks
+npm run knex seed:make 2_users
 ```
 
 ```shell
@@ -414,6 +402,26 @@ ls -hal seeds
 ```
 
 ```javascript
+'use strict';
+
+exports.seed = function(knex) {
+  return knex('users').del()
+    .then(() => {
+      return knex('users').insert([{
+        id: 1,
+        first_name: 'Tupac',
+        last_name: 'Shakur',
+        email: 'tupac@isalive.com',
+        created_at: new Date('2016-06-29 14:26:16 UTC'),
+        updated_at: new Date('2016-06-29 14:26:16 UTC')
+      }]);
+    })
+    .then(() => {
+      return knex.raw(
+        "SELECT setval('users_id_seq', (SELECT MAX(id) FROM users));"
+      );
+    });
+};
 
 ```
 
@@ -422,7 +430,7 @@ npm run knex seed:run
 ```
 
 ```shell
-psql trackify_dev -c 'SELECT * FROM tracks;'
+psql trackify_dev -c 'SELECT * FROM users;'
 ```
 
 ```shell
@@ -430,7 +438,7 @@ npm run knex seed:run
 ```
 
 ```shell
-psql trackify_dev -c 'SELECT * FROM tracks;'
+psql trackify_dev -c 'SELECT * FROM users;'
 ```
 
 ```shell
@@ -445,3 +453,12 @@ git status
 git add .
 git commit -m 'Initial commit'
 ```
+
+## Assignment
+
+- [Galvanize Bookshelf](https://github.com/gSchool/galvanize-bookshelf#galvanize-bookshelf)
+- [Galvanize Bookshelf - Knex Migrations and Seeds](https://github.com/gSchool/galvanize-bookshelf/blob/master/1_migrations_seeds.md)
+
+## Resources
+
+- [Knex.js](http://knexjs.org/)
