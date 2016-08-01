@@ -27,7 +27,7 @@ Week 1
       </td>
     </tr>
     <tr>
-      <td><a href="Misc/Learning to Learn.md">Learning to Learn</a>
+      <td><a href="https://github.com/gSchool/productivity-curriculum/Misc/Learning to Learn.md">Learning to Learn</a>
       </td>
       <td>
       </td>
@@ -35,7 +35,7 @@ Week 1
       </td>
     </tr>
     <tr>
-      <td><a href="Development Environment/README.md">Setup Development Environment</a>
+      <td><a href="https://github.com/gSchool/productivity-curriculum/Development Environment/README.md">Setup Development Environment</a>
       </td>
       <td>
       </td>
@@ -44,9 +44,9 @@ Week 1
     </tr>
     <tr>
       <td rowspan="2">Tuesday</td>
-      <td rowspan="2"><a href="Misc/Typing.md">Typing</a>
+      <td rowspan="2"><a href="https://github.com/gSchool/productivity-curriculum/Misc/Typing.md">Typing</a>
       </td>
-      <td><a href="Development Environment/README.md">Setup Development Environment</a>
+      <td><a href="https://github.com/gSchool/productivity-curriculum/Development Environment/README.md">Setup Development Environment</a>
       </td>
       <td>
       </td>
@@ -54,18 +54,18 @@ Week 1
       </td>
     </tr>
     <tr>
-      <td><a href="Misc/Command Line.md">Intro to the Command Line</a>
+      <td><a href="https://github.com/gSchool/productivity-curriculum/Misc/Command Line.md">Intro to the Command Line</a>
       </td>
       <td><a href="https://github.com/ryansobol/clmystery">Command Line Murder Mystery</a>
       </td>
-      <td><a href="Misc/Intermediate Command Line.md">Intermediate Command Line</a>
+      <td><a href="https://github.com/gSchool/productivity-curriculum/Misc/Intermediate Command Line.md">Intermediate Command Line</a>
       </td>
     </tr>
     <tr>
       <td rowspan="2">Wednesday</td>
       <td rowspan="2"><a href="https://github.com/sethvincent/javascripting">JavaScripting</a>
       </td>
-      <td><a href="Misc/Intro to Git.md">Intro to Git and Github</a>
+      <td><a href="https://github.com/gSchool/productivity-curriculum/Misc/Intro to Git.md">Intro to Git and Github</a>
       </td>
       <td>
       </td>
@@ -177,7 +177,7 @@ Week 2
       <td rowspan="4">Wednesday</td>
       <td rowspan="4"><a href="http://rosettacode.org/wiki/FizzBuzz">FizzBuzz</a>
       </td>
-      <td><a href="DOM/README.md">Intro to the DOM</a>
+      <td><a href="https://github.com/gSchool/browser-dom-curriculum/DOM/README.md">Intro to the DOM</a>
       </td>
       <td><a href="https://github.com/gSchool/js-dom-tests">JS DOM Tests</a>
       </td>
@@ -185,7 +185,7 @@ Week 2
       </td>
     </tr>
     <tr>
-      <td><a href="DOM/Manipulation.md">DOM Manipulation</a>
+      <td><a href="https://github.com/gSchool/browser-dom-curriculum/DOM/Manipulation.md">DOM Manipulation</a>
       </td>
       <td>
       </td>
@@ -193,7 +193,7 @@ Week 2
       </td>
     </tr>
     <tr>
-      <td><a href="DOM/Traversal.md">DOM Traversal</a>
+      <td><a href="https://github.com/gSchool/browser-dom-curriculum/DOM/Traversal.md">DOM Traversal</a>
       </td>
       <td>
       </td>
@@ -201,7 +201,7 @@ Week 2
       </td>
     </tr>
     <tr>
-      <td><a href="DOM/Creation and Deletion.md">DOM Creation and Deletion</a>
+      <td><a href="https://github.com/gSchool/browser-dom-curriculum/DOM/Creation and Deletion.md">DOM Creation and Deletion</a>
       </td>
       <td>
       </td>
@@ -212,7 +212,7 @@ Week 2
       <td rowspan="1">Thursday</td>
       <td rowspan="1"><a href="https://github.com/gSchool/master_warmup_repository_full_stack/blob/master/w2/w2-w-remove-dupes-string-warmup/prompt.js">Remove Duplicates</a>
       </td>
-      <td><a href="DOM/Events.md">DOM Events</a>
+      <td><a href="https://github.com/gSchool/browser-dom-curriculum/DOM/Events.md">DOM Events</a>
       </td>
       <td><a href="https://github.com/gSchool/stoplight-event-exercise">Stoplight Events</a>
       </td>
@@ -221,7 +221,7 @@ Week 2
     </tr>
     <tr>
       <td rowspan="1">Friday</td>
-      <td rowspan="1"><a href="Misc/Typing.md">Typing</a>
+      <td rowspan="1"><a href="https://github.com/gSchool/productivity-curriculum/Misc/Typing.md">Typing</a>
       </td>
       <td>
       </td>
@@ -273,7 +273,7 @@ Week 3
       <td rowspan="1">Wednesday</td>
       <td rowspan="1"><a href="https://github.com/gSchool/master_warmup_repository_full_stack/blob/master/w3/w3-r-sum-of-numbers/solution.js">Sum Range</a>
       </td>
-      <td><a href="jQuery/README.md">Intro to jQuery</a>
+      <td><a href="https://github.com/gSchool/browser-dom-curriculum/jQuery/README.md">Intro to jQuery</a>
       </td>
       <td><a href="https://github.com/gSchool/js-dom-tests">JS DOM Tests Reloaded</a>
       </td>
@@ -284,7 +284,7 @@ Week 3
       <td rowspan="1">Thursday</td>
       <td rowspan="1"><a href="https://github.com/gSchool/master_warmup_repository_full_stack/blob/master/w3/w3-r-sum-of-numbers/solution.js">Sum Range</a>
       </td>
-      <td><a href="jQuery/Events.md">jQuery Events</a>
+      <td><a href="https://github.com/gSchool/browser-dom-curriculum/jQuery/Events.md">jQuery Events</a>
       </td>
       <td><a href="https://github.com/gSchool/jquery-calculator">jQuery Calculator</a>
       </td>
@@ -303,7 +303,7 @@ Week 3
       </td>
     </tr>
     <tr>
-      <td><a href="Misc/Linting.md">Linting JavaScript</a>
+      <td><a href="https://github.com/gSchool/productivity-curriculum/Misc/Linting.md">Linting JavaScript</a>
       </td>
       <td>
       </td>
@@ -331,7 +331,7 @@ Week 4
       <td rowspan="1">Monday</td>
       <td rowspan="1"><a href="https://gist.github.com/IanSmith89/6ae569d695ffa1134d229c8f75117da0">Word Scrambler</a>
       </td>
-      <td><a href="HTTP/README.md">HTTP</a>
+      <td><a href="https://github.com/gschool/browser-dom-curriculum/HTTP/README.md">HTTP</a>
       </td>
       <td><a href="Projects/Q1.md">Q1 Project</a>
       </td>
@@ -342,7 +342,7 @@ Week 4
       <td rowspan="1">Tuesday</td>
       <td rowspan="1"><a href="https://github.com/gSchool/g26-challenges-so-far/blob/master/w4/w4-r-rotate-array/problem.js">Rotate</a>
       </td>
-      <td><a href="HTTP/AJAX.md">AJAX</a>
+      <td><a href="https://github.com/gschool/browser-dom-curriculum/HTTP/AJAX.md">AJAX</a>
       </td>
       <td><a href="https://github.com/gschool/wd-ajax-hero">AJAX Hero</a>
       </td>
@@ -353,7 +353,7 @@ Week 4
       <td rowspan="1">Wednesday</td>
       <td rowspan="1"><a href="https://github.com/gSchool/g26-challenges-so-far/blob/master/w4/w4-t-equivalent-number/problem.js">SameDigits</a>
       </td>
-      <td><a href="UI/Wireframing.md">Wireframing</a>
+      <td><a href="https://github.com/gSchool/html-css-curriculum/UI/Wireframing.md">Wireframing</a>
       </td>
       <td><a href="Projects/Q1.md">Q1 Project</a>
       </td>

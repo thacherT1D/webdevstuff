@@ -4,20 +4,20 @@ module.exports = function() {
       {
         activities: [
           {article: {text: "Welcome to WDI", url: "https://docs.google.com/presentation/d/154ou9yQJNcVcVehD6vqaKjGbCKhFb2xK85toqniWaa8/edit#slide=id.g108a6e17ae_0_112"}},
-          {article: {text: "Learning to Learn", url: "Misc/Learning to Learn.md"}},
-          {article: {text: "Setup Development Environment", url: "Development Environment/README.md"}},
+          {article: {text: "Learning to Learn", url: "https://github.com/gSchool/productivity-curriculum/Misc/Learning to Learn.md"}},
+          {article: {text: "Setup Development Environment", url: "https://github.com/gSchool/productivity-curriculum/Development Environment/README.md"}},
         ]
       },
       {
-        warmup: { text: "Typing", url: "Misc/Typing.md" },
+        warmup: { text: "Typing", url: "https://github.com/gSchool/productivity-curriculum/Misc/Typing.md" },
         activities: [
           {
-            article: {text: "Setup Development Environment", url: "Development Environment/README.md"},
+            article: {text: "Setup Development Environment", url: "https://github.com/gSchool/productivity-curriculum/Development Environment/README.md"},
           },
           {
-            article: {text: "Intro to the Command Line", url: "Misc/Command Line.md"},
+            article: {text: "Intro to the Command Line", url: "https://github.com/gSchool/productivity-curriculum/Misc/Command Line.md"},
             assignment: {text: "Command Line Murder Mystery", url: "https://github.com/ryansobol/clmystery"},
-            stretch: {text: "Intermediate Command Line", url: "Misc/Intermediate Command Line.md"},
+            stretch: {text: "Intermediate Command Line", url: "https://github.com/gSchool/productivity-curriculum/Misc/Intermediate Command Line.md"},
           },
         ],
       },
@@ -25,7 +25,7 @@ module.exports = function() {
         warmup: { text: "JavaScripting", url: "https://github.com/sethvincent/javascripting" },
         activities: [
           {
-            article: {text: "Intro to Git and Github", url: "Misc/Intro to Git.md"},
+            article: {text: "Intro to Git and Github", url: "https://github.com/gSchool/productivity-curriculum/Misc/Intro to Git.md"},
           },
           {
             article: {text: "JavaScript Vocabulary", url: "https://github.com/gSchool/javascript-curriculum/Vocabulary.md"},
@@ -87,19 +87,19 @@ module.exports = function() {
         warmup: { text: "FizzBuzz", url: "http://rosettacode.org/wiki/FizzBuzz" },
         activities: [
           {
-            article: { text: "Intro to the DOM", url: "DOM/README.md" },
+            article: { text: "Intro to the DOM", url: "https://github.com/gSchool/browser-dom-curriculum/DOM/README.md" },
             assignment: { text: "JS DOM Tests", url: "https://github.com/gSchool/js-dom-tests" },
           },
           {
-            article: { text: "DOM Manipulation", url: "DOM/Manipulation.md" },
+            article: { text: "DOM Manipulation", url: "https://github.com/gSchool/browser-dom-curriculum/DOM/Manipulation.md" },
             stretch: { text: "Style with JavaScript", url: "https://github.com/gSchool/style-with-javascript" },
           },
           {
-            article: { text: "DOM Traversal", url: "DOM/Traversal.md" },
+            article: { text: "DOM Traversal", url: "https://github.com/gSchool/browser-dom-curriculum/DOM/Traversal.md" },
             stretch: { text: "DOM Query", url: "https://github.com/gSchool/dom-query-function" },
           },
           {
-            article: { text: "DOM Creation and Deletion", url: "DOM/Creation and Deletion.md" },
+            article: { text: "DOM Creation and Deletion", url: "https://github.com/gSchool/browser-dom-curriculum/DOM/Creation and Deletion.md" },
             stretch: { text: "DOM Checkerboard", url: "https://github.com/gSchool/checkerboard-exercise" },
           },
         ]
@@ -108,13 +108,13 @@ module.exports = function() {
         warmup: { text: "Remove Duplicates", url: "https://github.com/gSchool/master_warmup_repository_full_stack/blob/master/w2/w2-w-remove-dupes-string-warmup/prompt.js" },
         activities: [
           {
-            article: { text: "DOM Events", url: "DOM/Events.md" },
+            article: { text: "DOM Events", url: "https://github.com/gSchool/browser-dom-curriculum/DOM/Events.md" },
             assignment: { text: "Stoplight Events", url: "https://github.com/gSchool/stoplight-event-exercise" },
           },
         ]
       },
       {
-        warmup: { text: "Typing", url: "Misc/Typing.md" },
+        warmup: { text: "Typing", url: "https://github.com/gSchool/productivity-curriculum/Misc/Typing.md" },
         activities: [
           {
             assignment: { text: "Pixel Art Maker", url: "https://github.com/gSchool/pixel-art-maker" },
@@ -143,7 +143,7 @@ module.exports = function() {
         warmup: { text: "Sum Range", url: "https://github.com/gSchool/master_warmup_repository_full_stack/blob/master/w3/w3-r-sum-of-numbers/solution.js" },
         activities: [
           {
-            article: { text: "Intro to jQuery", url: "jQuery/README.md" },
+            article: { text: "Intro to jQuery", url: "https://github.com/gSchool/browser-dom-curriculum/jQuery/README.md" },
             assignment: { text: "JS DOM Tests Reloaded", url: "https://github.com/gSchool/js-dom-tests" },
           },
         ]
@@ -152,7 +152,7 @@ module.exports = function() {
         warmup: { text: "Sum Range", url: "https://github.com/gSchool/master_warmup_repository_full_stack/blob/master/w3/w3-r-sum-of-numbers/solution.js" },
         activities: [
           {
-            article: { text: "jQuery Events", url: "jQuery/Events.md" },
+            article: { text: "jQuery Events", url: "https://github.com/gSchool/browser-dom-curriculum/jQuery/Events.md" },
             assignment: { text: "jQuery Calculator", url: "https://github.com/gSchool/jquery-calculator" },
           },
         ]
@@ -164,7 +164,7 @@ module.exports = function() {
             assignment: { text: "Galanize Delivers", url: "https://github.com/gSchool/galvanize-delivers/" },
           },
           {
-            article: { text: "Linting JavaScript", url: "Misc/Linting.md" },
+            article: { text: "Linting JavaScript", url: "https://github.com/gSchool/productivity-curriculum/Misc/Linting.md" },
           },
         ]
       },
@@ -172,7 +172,7 @@ module.exports = function() {
         warmup: { text: "Word Scrambler", url: "https://gist.github.com/IanSmith89/6ae569d695ffa1134d229c8f75117da0" },
         activities: [
           {
-            article: { text: "HTTP", url: "HTTP/README.md" },
+            article: { text: "HTTP", url: "https://github.com/gschool/browser-dom-curriculum/HTTP/README.md" },
             assignment: { text: "Q1 Project", url: "Projects/Q1.md" },
           },
         ]
@@ -181,7 +181,7 @@ module.exports = function() {
         warmup: { text: "Rotate", url: "https://github.com/gSchool/g26-challenges-so-far/blob/master/w4/w4-r-rotate-array/problem.js" },
         activities: [
           {
-            article: { text: "AJAX", url: "HTTP/AJAX.md" },
+            article: { text: "AJAX", url: "https://github.com/gschool/browser-dom-curriculum/HTTP/AJAX.md" },
             assignment: { text: "AJAX Hero", url: "https://github.com/gschool/wd-ajax-hero" },
           },
         ]
@@ -190,7 +190,7 @@ module.exports = function() {
         warmup: { text: "SameDigits", url: "https://github.com/gSchool/g26-challenges-so-far/blob/master/w4/w4-t-equivalent-number/problem.js" },
         activities: [
           {
-            article: { text: "Wireframing", url: "UI/Wireframing.md" },
+            article: { text: "Wireframing", url: "https://github.com/gSchool/html-css-curriculum/UI/Wireframing.md" },
             assignment: { text: "Q1 Project", url: "Projects/Q1.md" },
           },
         ]

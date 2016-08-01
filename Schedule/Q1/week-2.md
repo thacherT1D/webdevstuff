@@ -56,7 +56,7 @@
       <td rowspan="4">Wednesday</td>
       <td rowspan="4"><a href="http://rosettacode.org/wiki/FizzBuzz">FizzBuzz</a>
       </td>
-      <td><a href="../../DOM/README.md">Intro to the DOM</a>
+      <td><a href="https://github.com/gSchool/browser-dom-curriculum/DOM/README.md">Intro to the DOM</a>
       </td>
       <td><a href="https://github.com/gSchool/js-dom-tests">JS DOM Tests</a>
       </td>
@@ -64,7 +64,7 @@
       </td>
     </tr>
     <tr>
-      <td><a href="../../DOM/Manipulation.md">DOM Manipulation</a>
+      <td><a href="https://github.com/gSchool/browser-dom-curriculum/DOM/Manipulation.md">DOM Manipulation</a>
       </td>
       <td>
       </td>
@@ -72,7 +72,7 @@
       </td>
     </tr>
     <tr>
-      <td><a href="../../DOM/Traversal.md">DOM Traversal</a>
+      <td><a href="https://github.com/gSchool/browser-dom-curriculum/DOM/Traversal.md">DOM Traversal</a>
       </td>
       <td>
       </td>
@@ -80,7 +80,7 @@
       </td>
     </tr>
     <tr>
-      <td><a href="../../DOM/Creation and Deletion.md">DOM Creation and Deletion</a>
+      <td><a href="https://github.com/gSchool/browser-dom-curriculum/DOM/Creation and Deletion.md">DOM Creation and Deletion</a>
       </td>
       <td>
       </td>
@@ -91,7 +91,7 @@
       <td rowspan="1">Thursday</td>
       <td rowspan="1"><a href="https://github.com/gSchool/master_warmup_repository_full_stack/blob/master/w2/w2-w-remove-dupes-string-warmup/prompt.js">Remove Duplicates</a>
       </td>
-      <td><a href="../../DOM/Events.md">DOM Events</a>
+      <td><a href="https://github.com/gSchool/browser-dom-curriculum/DOM/Events.md">DOM Events</a>
       </td>
       <td><a href="https://github.com/gSchool/stoplight-event-exercise">Stoplight Events</a>
       </td>
@@ -100,7 +100,7 @@
     </tr>
     <tr>
       <td rowspan="1">Friday</td>
-      <td rowspan="1"><a href="../../Misc/Typing.md">Typing</a>
+      <td rowspan="1"><a href="https://github.com/gSchool/productivity-curriculum/Misc/Typing.md">Typing</a>
       </td>
       <td>
       </td>

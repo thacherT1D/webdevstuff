@@ -40,7 +40,7 @@
       <td rowspan="1">Wednesday</td>
       <td rowspan="1"><a href="https://github.com/gSchool/master_warmup_repository_full_stack/blob/master/w3/w3-r-sum-of-numbers/solution.js">Sum Range</a>
       </td>
-      <td><a href="../../jQuery/README.md">Intro to jQuery</a>
+      <td><a href="https://github.com/gSchool/browser-dom-curriculum/jQuery/README.md">Intro to jQuery</a>
       </td>
       <td><a href="https://github.com/gSchool/js-dom-tests">JS DOM Tests Reloaded</a>
       </td>
@@ -51,7 +51,7 @@
       <td rowspan="1">Thursday</td>
       <td rowspan="1"><a href="https://github.com/gSchool/master_warmup_repository_full_stack/blob/master/w3/w3-r-sum-of-numbers/solution.js">Sum Range</a>
       </td>
-      <td><a href="../../jQuery/Events.md">jQuery Events</a>
+      <td><a href="https://github.com/gSchool/browser-dom-curriculum/jQuery/Events.md">jQuery Events</a>
       </td>
       <td><a href="https://github.com/gSchool/jquery-calculator">jQuery Calculator</a>
       </td>
@@ -70,7 +70,7 @@
       </td>
     </tr>
     <tr>
-      <td><a href="../../Misc/Linting.md">Linting JavaScript</a>
+      <td><a href="https://github.com/gSchool/productivity-curriculum/Misc/Linting.md">Linting JavaScript</a>
       </td>
       <td>
       </td>

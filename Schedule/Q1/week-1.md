@@ -26,7 +26,7 @@
       </td>
     </tr>
     <tr>
-      <td><a href="../../Misc/Learning to Learn.md">Learning to Learn</a>
+      <td><a href="https://github.com/gSchool/productivity-curriculum/Misc/Learning to Learn.md">Learning to Learn</a>
       </td>
       <td>
       </td>
@@ -34,7 +34,7 @@
       </td>
     </tr>
     <tr>
-      <td><a href="../../Development Environment/README.md">Setup Development Environment</a>
+      <td><a href="https://github.com/gSchool/productivity-curriculum/Development Environment/README.md">Setup Development Environment</a>
       </td>
       <td>
       </td>
@@ -43,9 +43,9 @@
     </tr>
     <tr>
       <td rowspan="2">Tuesday</td>
-      <td rowspan="2"><a href="../../Misc/Typing.md">Typing</a>
+      <td rowspan="2"><a href="https://github.com/gSchool/productivity-curriculum/Misc/Typing.md">Typing</a>
       </td>
-      <td><a href="../../Development Environment/README.md">Setup Development Environment</a>
+      <td><a href="https://github.com/gSchool/productivity-curriculum/Development Environment/README.md">Setup Development Environment</a>
       </td>
       <td>
       </td>
@@ -53,18 +53,18 @@
       </td>
     </tr>
     <tr>
-      <td><a href="../../Misc/Command Line.md">Intro to the Command Line</a>
+      <td><a href="https://github.com/gSchool/productivity-curriculum/Misc/Command Line.md">Intro to the Command Line</a>
       </td>
       <td><a href="https://github.com/ryansobol/clmystery">Command Line Murder Mystery</a>
       </td>
-      <td><a href="../../Misc/Intermediate Command Line.md">Intermediate Command Line</a>
+      <td><a href="https://github.com/gSchool/productivity-curriculum/Misc/Intermediate Command Line.md">Intermediate Command Line</a>
       </td>
     </tr>
     <tr>
       <td rowspan="2">Wednesday</td>
       <td rowspan="2"><a href="https://github.com/sethvincent/javascripting">JavaScripting</a>
       </td>
-      <td><a href="../../Misc/Intro to Git.md">Intro to Git and Github</a>
+      <td><a href="https://github.com/gSchool/productivity-curriculum/Misc/Intro to Git.md">Intro to Git and Github</a>
       </td>
       <td>
       </td>
