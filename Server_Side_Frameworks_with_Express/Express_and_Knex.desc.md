@@ -169,12 +169,12 @@ Then, install `nodemon` as a development dependency while saving it to the `pack
 npm install --save-dev nodemon
 ```
 
-Add a `nodemon` script to the `package.json` file.
+Add a `start` script to the `package.json` file.
 
 ```javascript
 "scripts": {
   "knex": "knex",
-  "nodemon": "nodemon server.js"
+  "start": "nodemon server.js"
 },
 ```
 
@@ -251,6 +251,47 @@ http GET localhost:8000/tracks
 And you should see the following.
 
 ```text
+HTTP/1.1 200 OK
+Connection: keep-alive
+Content-Length: 585
+Content-Type: application/json; charset=utf-8
+Date: Mon, 01 Aug 2016 21:32:12 GMT
+ETag: W/"249-LDyujRCOohFz73cLEFkNCQ"
+
+[
+    {
+        "artist": "Adele",
+        "createdAt": "2016-06-26T14:26:16.000Z",
+        "id": 4,
+        "likes": 538300301,
+        "title": "Hello",
+        "updatedAt": "2016-06-26T14:26:16.000Z"
+    },
+    {
+        "artist": "The Beatles",
+        "createdAt": "2016-06-26T14:26:16.000Z",
+        "id": 1,
+        "likes": 28808736,
+        "title": "Here Comes the Sun",
+        "updatedAt": "2016-06-26T14:26:16.000Z"
+    },
+    {
+        "artist": "The Beatles",
+        "createdAt": "2016-06-26T14:26:16.000Z",
+        "id": 2,
+        "likes": 20355655,
+        "title": "Hey Jude",
+        "updatedAt": "2016-06-26T14:26:16.000Z"
+    },
+    {
+        "artist": "Adele",
+        "createdAt": "2016-06-26T14:26:16.000Z",
+        "id": 3,
+        "likes": 39658471,
+        "title": "Send My Love",
+        "updatedAt": "2016-06-26T14:26:16.000Z"
+    }
+]
 ```
 
 Add and commit the changes to your repository.
@@ -327,6 +368,21 @@ http GET localhost:8000/tracks/1
 And you should see the following.
 
 ```text
+HTTP/1.1 200 OK
+Connection: keep-alive
+Content-Length: 155
+Content-Type: application/json; charset=utf-8
+Date: Mon, 01 Aug 2016 21:32:55 GMT
+ETag: W/"9b-8gMevLtkzAbZbyRenFODQw"
+
+{
+    "artist": "The Beatles",
+    "createdAt": "2016-06-26T14:26:16.000Z",
+    "id": 1,
+    "likes": 28808736,
+    "title": "Here Comes the Sun",
+    "updatedAt": "2016-06-26T14:26:16.000Z"
+}
 ```
 
 Add and commit the changes to your repository.
@@ -386,7 +442,7 @@ router.get('/tracks/:id', (req, res, next) => {
 });
 
 router.post('/tracks', (req, res, next) => {
-  const { title, artist } = req.body;
+  const { title, artist, likes } = req.body;
 
   if (!title || !title.trim()) {
     return next(boom.create(400, 'Title must not be blank'));
@@ -396,7 +452,11 @@ router.post('/tracks', (req, res, next) => {
     return next(boom.create(400, 'Artist must not be blank'));
   }
 
-  const insertTrack = { title, artist };
+  if (!Number.isInteger(likes)) {
+    return next(boom.create(400, 'Likes must be an integer'));
+  }
+
+  const insertTrack = { title, artist, likes };
 
   knex('tracks')
     .insert(decamelizeKeys(insertTrack), '*')
@@ -416,12 +476,27 @@ module.exports = router;
 Run the following command.
 
 ```shell
-http POST localhost:8000/tracks title='Purple Rain' artist=Prince
+http POST localhost:8000/tracks title='Purple Rain' artist=Prince likes:=8569790
 ```
 
 And you should see the following.
 
 ```text
+HTTP/1.1 200 OK
+Connection: keep-alive
+Content-Length: 136
+Content-Type: application/json; charset=utf-8
+Date: Mon, 01 Aug 2016 21:33:27 GMT
+ETag: W/"88-sdB8iatsE+TUImSXMzKOPg"
+
+{
+    "artist": "Prince",
+    "createdAt": "2016-08-01T21:33:27.246Z",
+    "id": 5,
+    "likes": 0,
+    "title": "Purple Rain",
+    "updatedAt": "2016-08-01T21:33:27.246Z"
+}
 ```
 
 Add and commit the changes to your repository.
@@ -479,7 +554,7 @@ router.get('/tracks/:id', (req, res, next) => {
 });
 
 router.post('/tracks', (req, res, next) => {
-  const { title, artist } = req.body;
+  const { title, artist, likes } = req.body;
 
   if (!title || !title.trim()) {
     return next(boom.create(400, 'Title must not be blank'));
@@ -489,7 +564,11 @@ router.post('/tracks', (req, res, next) => {
     return next(boom.create(400, 'Artist must not be blank'));
   }
 
-  const insertTrack = { title, artist };
+  if (!Number.isInteger(likes)) {
+    return next(boom.create(400, 'Likes must be an integer'));
+  }
+
+  const insertTrack = { title, artist, likes };
 
   knex('tracks')
     .insert(decamelizeKeys(insertTrack), '*')
@@ -606,7 +685,7 @@ router.get('/tracks/:id', (req, res, next) => {
 });
 
 router.post('/tracks', (req, res, next) => {
-  const { title, artist } = req.body;
+  const { title, artist, likes } = req.body;
 
   if (!title || !title.trim()) {
     return next(boom.create(400, 'Title must not be blank'));
@@ -616,7 +695,11 @@ router.post('/tracks', (req, res, next) => {
     return next(boom.create(400, 'Artist must not be blank'));
   }
 
-  const insertTrack = { title, artist };
+  if (!Number.isInteger(likes)) {
+    return next(boom.create(400, 'Likes must be an integer'));
+  }
+
+  const insertTrack = { title, artist, likes };
 
   knex('tracks')
     .insert(decamelizeKeys(insertTrack), '*')
@@ -685,7 +768,7 @@ router.delete('/tracks/:id', (req, res, next) => {
       delete track.id;
 
       res.send(track);
-    });
+    })
     .catch((err) => {
       next(err);
     });
