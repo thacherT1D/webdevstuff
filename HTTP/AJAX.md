@@ -80,6 +80,8 @@ xhr.open('GET', 'http://www.omdbapi.com/?t=Frozen');
 xhr.send();
 ```
 
+## AJAX in jQuery
+
 Since using the `XMLHttpRequest` object produces verbose and somewhat error prone code, jQuery has a handful of methods that make creating Ajax requests much easier. The same call as above can be rewritten in jQuery like this.
 
 ```javascript

@@ -418,4 +418,54 @@ Week 4
     </tr>
   </tbody>
 </table>
+
+
+Week 5
+
+<table style="width: 100%">
+  <thead>
+    <tr>
+      <th>Day</th>
+      <th>Warmup</th>
+      <th>Article</th>
+      <th>Assignment</th>
+      <th>Stretch</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowspan="1">Monday</td>
+      <td rowspan="1"><a href="https://gist.github.com/ryansobol/4e871410b8648c8eb60ca46dd89236fa">ArrayFilter</a>
+      </td>
+      <td>
+      </td>
+      <td><a href="../../Projects/Q1.md">Q1 Project</a>
+      </td>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <td rowspan="1">Tuesday</td>
+      <td rowspan="1"><a href="https://gist.github.com/ryansobol/08689667a80b3accd519ededf49238d0">ArrayReduce</a>
+      </td>
+      <td>
+      </td>
+      <td><a href="../../Projects/Q1.md">Q1 Project</a>
+      </td>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <td rowspan="1">Wednesday</td>
+      <td rowspan="1"><a href="https://gist.github.com/ryansobol/afda64953e572ca0873905c525d06eb2">ArrayEvery</a>
+      </td>
+      <td>
+      </td>
+      <td><a href="../../Projects/Q1.md">Q1 Project</a>
+      </td>
+      <td>
+      </td>
+    </tr>
+  </tbody>
+</table>
 <!-- END SCHEDULE -->

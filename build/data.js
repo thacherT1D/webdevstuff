@@ -225,6 +225,30 @@ module.exports = function() {
           },
         ]
       },
+      {
+        warmup: { text: "ArrayFilter", url: "https://gist.github.com/ryansobol/4e871410b8648c8eb60ca46dd89236fa" },
+        activities: [
+          {
+            assignment: { text: "Q1 Project", url: "Projects/Q1.md" },
+          },
+        ]
+      },
+      {
+        warmup: { text: "ArrayReduce", url: "https://gist.github.com/ryansobol/08689667a80b3accd519ededf49238d0" },
+        activities: [
+          {
+            assignment: { text: "Q1 Project", url: "Projects/Q1.md" },
+          },
+        ]
+      },
+      {
+        warmup: { text: "ArrayEvery", url: "https://gist.github.com/ryansobol/afda64953e572ca0873905c525d06eb2" },
+        activities: [
+          {
+            assignment: { text: "Q1 Project", url: "Projects/Q1.md" },
+          },
+        ]
+      },
     ]
   }
 }
