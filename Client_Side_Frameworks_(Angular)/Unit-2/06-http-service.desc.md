@@ -97,7 +97,7 @@ Try making a request to an invalid URL.  Write code to properly handle a request
 
 **EXERCISE 5**
 
-Use `$http.get()` and `$http.post()` to interact with this [http://angular-http-service-backend.herokuapp.com/messages](http://angular-http-service-backend.herokuapp.com/messages) endpoint.  It's a simple collaborative chat app. [Github Repo](https://github.com/gSchool/angular-http-service-backend)  The API has two endpoints:
+Use `$http.get()` and `$http.post()` to interact with this [http://angular-http-service-backend.herokuapp.com/messages](http://angular-http-service-backend.herokuapp.com/messages) endpoint.  It's a simple collaborative chat app. [Github Repo here](https://github.com/gSchool/angular-http-service-backend).  The API has two endpoints:
 
 The app is one Rails model, Message, which has two attributes: name and content.
 
@@ -118,4 +118,3 @@ Data that does not follow the following pattern will not be accepted by the serv
 ## Questions
 
 * What is a service?  Is there a Ruby or JavaScript equivalent to Angular services?
-* Explain in as much detail as possible what happens under the hood of `$http.get()`
