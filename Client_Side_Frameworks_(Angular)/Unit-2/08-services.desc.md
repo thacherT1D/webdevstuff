@@ -7,9 +7,7 @@
 
 ## Resources
 
-Repository
-
-Instructions on how to use repository
+Please clone and fork the following repository [angular-services](https://github.com/gSchool/angular-services). Place your solutions to **Exercises 1-3** there.
 
 ## A brief introduction
 
