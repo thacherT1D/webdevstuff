@@ -1,14 +1,14 @@
 ## Objectives
 
-- Explain what a RESTful, database-driven HTTP server is.
-- Explain why a RESTful, database-driven HTTP server is useful.
-- Use Express and Knex to build a RESTful, database-driven HTTP server.
+- Explain what a RESTful, database-driven, HTTP server is.
+- Explain why a RESTful, database-driven, HTTP server is useful.
+- Use Express and Knex to build a RESTful, database-driven, HTTP server.
 
-## What's a RESTful, database-driven HTTP server?
+## What's a RESTful, database-driven, HTTP server?
 
-A **RESTful, database-driven HTTP server** is exactly what the name implies. It's a server that communicates with a client using a RESTful HTTP API. The sole purpose of the HTTP server is to manage information that's persisted to a database.
+A **RESTful, database-driven, HTTP server** is exactly what the name implies. It's a server that communicates with a client using a RESTful HTTP API. The sole purpose of the HTTP server is to manage information that's persisted to a database.
 
-Here's a sequence diagram of the RESTful, database-driven HTTP server.
+Here's a sequence diagram of the RESTful, database-driven, HTTP server.
 
 ```text
 ┌─── Chrome ──┐               ┌── Node.js ──┐               ┌── postgres ─┐               ╔════════════ cluster ═══════════╗
@@ -32,7 +32,7 @@ Here's a sequence diagram of the RESTful, database-driven HTTP server.
                                                                                           ╚════════════════════════════════╝
 ```
 
-For example, imagine a RESTful, database-driven HTTP server manages the persistence of the following rows in the `tracks` table.
+For example, imagine a RESTful, database-driven, HTTP server manages the persistence of the following rows in the `tracks` table.
 
 ```text
  id |       title        |   artist    
@@ -62,18 +62,18 @@ Once the operation is complete, the RESTful server would send a specific HTTP re
 
 ### Exercise
 
-Take a few moments to diagram how a RESTful, database-driven HTTP server works.
+Take a few moments to diagram how a RESTful, database-driven, HTTP server works.
 
 Once you've satisfied, turn to a neighbor and explain how information flows throw the system.
 
-## Why is a RESTful, database-driven HTTP server is useful?
+## Why is a RESTful, database-driven, HTTP server is useful?
 
 - separation of concerns
 - follows the principle of least surprise
 - great way to organize data, relationships, processes
 - process are independently scalable and replaceable
 
-## How do you use Express and Knex to build a RESTful, database-driven HTTP server?
+## How do you use Express and Knex to build a RESTful, database-driven, HTTP server?
 
 Here's an entity relationship diagram representing the data model the HTTP server will need to manage.
 
