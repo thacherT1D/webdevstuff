@@ -481,6 +481,12 @@ Because of [this and other strangeness](https://dorey.github.io/JavaScript-Equal
 
 See the [equality operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Equality_operators) on the Mozilla Developer Network for more information.
 
+### Exercise
+
+Take a whiteboard and write 2 boolean comparisons of primitive values. Have the first one be identical to the second EXCEPT for 2 things:
+1) One comparison must have a strict equality operator while the other has a loose equality operator
+2) One comparison must evaluate to false while the other evaluates to true
+
 ### Conditionals
 
 Conditionals control the flow of a program.  Conditionals decide which code statements gets run based on some input to the conditional.  An example from everyday life would be:
