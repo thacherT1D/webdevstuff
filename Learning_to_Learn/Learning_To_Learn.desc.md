@@ -1,4 +1,4 @@
-# Learn to Learn
+# Learn to Learn (booya!)
 
 ## Standard: Thinking Like a Developer
 * Approaches problems in a methodical and disciplined manner
