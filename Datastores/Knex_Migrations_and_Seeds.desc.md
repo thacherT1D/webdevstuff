@@ -240,7 +240,7 @@ psql trackify_dev -c 'SELECT * FROM knex_migrations_lock;'
 ```
 
 ```shell
-npm run knex migrate:make tracks
+npm run knex migrate:make users
 ```
 
 ```shell
