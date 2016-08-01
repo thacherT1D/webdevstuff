@@ -16,7 +16,7 @@
   <tbody>
     <tr>
       <td rowspan="2">Monday</td>
-      <td rowspan="2"><a href="../../JavaScript/Memory Diagrams.md">Memory Diagrams</a>
+      <td rowspan="2"><a href="https://github.com/gSchool/javascript-curriculum/Memory Diagrams.md">Memory Diagrams</a>
       </td>
       <td><a href="https://github.com/gSchool/html-css-curriculum/HTML/README.md">Intro to HTML</a>
       </td>

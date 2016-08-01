@@ -28,7 +28,7 @@ module.exports = function() {
             article: {text: "Intro to Git and Github", url: "Misc/Intro to Git.md"},
           },
           {
-            article: {text: "JavaScript Vocabulary", url: "JavaScript/Vocabulary.md"},
+            article: {text: "JavaScript Vocabulary", url: "https://github.com/gSchool/javascript-curriculum/Vocabulary.md"},
           },
         ],
       },
@@ -36,11 +36,11 @@ module.exports = function() {
         warmup: { text: "JavaScripting (con't)", url: "https://github.com/sethvincent/javascripting" },
         activities: [
           {
-            article: {text: "JavaScript: Intro, Types, Values, Variables, Control Flow", url: "JavaScript/README.md"},
+            article: {text: "JavaScript: Intro, Types, Values, Variables, Control Flow", url: "https://github.com/gSchool/javascript-curriculum/README.md"},
             assignment: {text: "JavaScript Statements", url: "https://github.com/gSchool/javascript-statements"},
           },
           {
-            article: {text: "JavaScript Functions", url: "JavaScript/Functions.md"},
+            article: {text: "JavaScript Functions", url: "https://github.com/gSchool/javascript-curriculum/Functions.md"},
           },
         ],
       },
@@ -48,17 +48,17 @@ module.exports = function() {
         warmup: { text: "JavaScripting (con't)", url: "https://github.com/sethvincent/javascripting" },
         activities: [
           {
-            article: {text: "JavaScript Functions (con't)", url: "JavaScript/Functions.md"},
+            article: {text: "JavaScript Functions (con't)", url: "https://github.com/gSchool/javascript-curriculum/Functions.md"},
           },
           {
-            article: {text: "JavaScript: Arrays, Objects, Iteration", url: "JavaScript/Arrays-Objects-Iteration.md"},
+            article: {text: "JavaScript: Arrays, Objects, Iteration", url: "https://github.com/gSchool/javascript-curriculum/Arrays-Objects-Iteration.md"},
             assignment: {text: "JavaScript Statements (con't)", url: "https://github.com/gSchool/javascript-statements"},
             stretch: {text: "Crushing Candy Code: Data Structures", url: "https://github.com/gSchool/ccf-data-structures"},
           },
         ],
       },
       {
-        warmup: { text: "Memory Diagrams", url: "JavaScript/Memory Diagrams.md" },
+        warmup: { text: "Memory Diagrams", url: "https://github.com/gSchool/javascript-curriculum/Memory Diagrams.md" },
         activities: [
           {
             article: { text: "Intro to HTML", url: "https://github.com/gSchool/html-css-curriculum/HTML/README.md" },
@@ -199,20 +199,20 @@ module.exports = function() {
         warmup: { text: "SameDigits", url: "https://github.com/gSchool/g26-challenges-so-far/blob/master/w4/w4-t-equivalent-number/problem.js" },
         activities: [
           {
-            article: { text: "Scope", url: "JavaScript/Scope.md" },
+            article: { text: "Scope", url: "https://github.com/gSchool/javascript-curriculum/Scope.md" },
             assignment: { text: "Function Tests", url: "https://github.com/gSchool/function-tests" },
           },
           {
-            article: { text: "Hoisting", url: "JavaScript/Hoisting.md" },
+            article: { text: "Hoisting", url: "https://github.com/gSchool/javascript-curriculum/Hoisting.md" },
           },
           {
-            article: { text: "Higher Order Functions", url: "JavaScript/Higher Order Functions.md" },
+            article: { text: "Higher Order Functions", url: "https://github.com/gSchool/javascript-curriculum/Higher Order Functions.md" },
           },
           {
-            article: { text: "Closures", url: "JavaScript/Closure.md" },
+            article: { text: "Closures", url: "https://github.com/gSchool/javascript-curriculum/Closure.md" },
           },
           {
-            article: { text: "IIFEs", url: "JavaScript/IIFE.md" },
+            article: { text: "IIFEs", url: "https://github.com/gSchool/javascript-curriculum/IIFE.md" },
           },
         ]
       },

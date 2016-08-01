@@ -72,7 +72,7 @@
       </td>
     </tr>
     <tr>
-      <td><a href="../../JavaScript/Vocabulary.md">JavaScript Vocabulary</a>
+      <td><a href="https://github.com/gSchool/javascript-curriculum/Vocabulary.md">JavaScript Vocabulary</a>
       </td>
       <td>
       </td>
@@ -83,7 +83,7 @@
       <td rowspan="2">Thursday</td>
       <td rowspan="2"><a href="https://github.com/sethvincent/javascripting">JavaScripting (con't)</a>
       </td>
-      <td><a href="../../JavaScript/README.md">JavaScript: Intro, Types, Values, Variables, Control Flow</a>
+      <td><a href="https://github.com/gSchool/javascript-curriculum/README.md">JavaScript: Intro, Types, Values, Variables, Control Flow</a>
       </td>
       <td><a href="https://github.com/gSchool/javascript-statements">JavaScript Statements</a>
       </td>
@@ -91,7 +91,7 @@
       </td>
     </tr>
     <tr>
-      <td><a href="../../JavaScript/Functions.md">JavaScript Functions</a>
+      <td><a href="https://github.com/gSchool/javascript-curriculum/Functions.md">JavaScript Functions</a>
       </td>
       <td>
       </td>
@@ -102,7 +102,7 @@
       <td rowspan="2">Friday</td>
       <td rowspan="2"><a href="https://github.com/sethvincent/javascripting">JavaScripting (con't)</a>
       </td>
-      <td><a href="../../JavaScript/Functions.md">JavaScript Functions (con't)</a>
+      <td><a href="https://github.com/gSchool/javascript-curriculum/Functions.md">JavaScript Functions (con't)</a>
       </td>
       <td>
       </td>
@@ -110,7 +110,7 @@
       </td>
     </tr>
     <tr>
-      <td><a href="../../JavaScript/Arrays-Objects-Iteration.md">JavaScript: Arrays, Objects, Iteration</a>
+      <td><a href="https://github.com/gSchool/javascript-curriculum/Arrays-Objects-Iteration.md">JavaScript: Arrays, Objects, Iteration</a>
       </td>
       <td><a href="https://github.com/gSchool/javascript-statements">JavaScript Statements (con't)</a>
       </td>

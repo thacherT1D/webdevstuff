@@ -51,7 +51,7 @@
       <td rowspan="5">Thursday</td>
       <td rowspan="5"><a href="https://github.com/gSchool/g26-challenges-so-far/blob/master/w4/w4-t-equivalent-number/problem.js">SameDigits</a>
       </td>
-      <td><a href="../../JavaScript/Scope.md">Scope</a>
+      <td><a href="https://github.com/gSchool/javascript-curriculum/Scope.md">Scope</a>
       </td>
       <td><a href="https://github.com/gSchool/function-tests">Function Tests</a>
       </td>
@@ -59,7 +59,7 @@
       </td>
     </tr>
     <tr>
-      <td><a href="../../JavaScript/Hoisting.md">Hoisting</a>
+      <td><a href="https://github.com/gSchool/javascript-curriculum/Hoisting.md">Hoisting</a>
       </td>
       <td>
       </td>
@@ -67,7 +67,7 @@
       </td>
     </tr>
     <tr>
-      <td><a href="../../JavaScript/Higher Order Functions.md">Higher Order Functions</a>
+      <td><a href="https://github.com/gSchool/javascript-curriculum/Higher Order Functions.md">Higher Order Functions</a>
       </td>
       <td>
       </td>
@@ -75,7 +75,7 @@
       </td>
     </tr>
     <tr>
-      <td><a href="../../JavaScript/Closure.md">Closures</a>
+      <td><a href="https://github.com/gSchool/javascript-curriculum/Closure.md">Closures</a>
       </td>
       <td>
       </td>
@@ -83,7 +83,7 @@
       </td>
     </tr>
     <tr>
-      <td><a href="../../JavaScript/IIFE.md">IIFEs</a>
+      <td><a href="https://github.com/gSchool/javascript-curriculum/IIFE.md">IIFEs</a>
       </td>
       <td>
       </td>

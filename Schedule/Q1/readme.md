@@ -75,7 +75,7 @@ Week 1
       </td>
     </tr>
     <tr>
-      <td><a href="../../JavaScript/Vocabulary.md">JavaScript Vocabulary</a>
+      <td><a href="https://github.com/gSchool/javascript-curriculum/Vocabulary.md">JavaScript Vocabulary</a>
       </td>
       <td>
       </td>
@@ -86,7 +86,7 @@ Week 1
       <td rowspan="2">Thursday</td>
       <td rowspan="2"><a href="https://github.com/sethvincent/javascripting">JavaScripting (con't)</a>
       </td>
-      <td><a href="../../JavaScript/README.md">JavaScript: Intro, Types, Values, Variables, Control Flow</a>
+      <td><a href="https://github.com/gSchool/javascript-curriculum/README.md">JavaScript: Intro, Types, Values, Variables, Control Flow</a>
       </td>
       <td><a href="https://github.com/gSchool/javascript-statements">JavaScript Statements</a>
       </td>
@@ -94,7 +94,7 @@ Week 1
       </td>
     </tr>
     <tr>
-      <td><a href="../../JavaScript/Functions.md">JavaScript Functions</a>
+      <td><a href="https://github.com/gSchool/javascript-curriculum/Functions.md">JavaScript Functions</a>
       </td>
       <td>
       </td>
@@ -105,7 +105,7 @@ Week 1
       <td rowspan="2">Friday</td>
       <td rowspan="2"><a href="https://github.com/sethvincent/javascripting">JavaScripting (con't)</a>
       </td>
-      <td><a href="../../JavaScript/Functions.md">JavaScript Functions (con't)</a>
+      <td><a href="https://github.com/gSchool/javascript-curriculum/Functions.md">JavaScript Functions (con't)</a>
       </td>
       <td>
       </td>
@@ -113,7 +113,7 @@ Week 1
       </td>
     </tr>
     <tr>
-      <td><a href="../../JavaScript/Arrays-Objects-Iteration.md">JavaScript: Arrays, Objects, Iteration</a>
+      <td><a href="https://github.com/gSchool/javascript-curriculum/Arrays-Objects-Iteration.md">JavaScript: Arrays, Objects, Iteration</a>
       </td>
       <td><a href="https://github.com/gSchool/javascript-statements">JavaScript Statements (con't)</a>
       </td>
@@ -139,7 +139,7 @@ Week 2
   <tbody>
     <tr>
       <td rowspan="2">Monday</td>
-      <td rowspan="2"><a href="../../JavaScript/Memory Diagrams.md">Memory Diagrams</a>
+      <td rowspan="2"><a href="https://github.com/gSchool/javascript-curriculum/Memory Diagrams.md">Memory Diagrams</a>
       </td>
       <td><a href="https://github.com/gSchool/html-css-curriculum/HTML/README.md">Intro to HTML</a>
       </td>
@@ -366,7 +366,7 @@ Week 4
       <td rowspan="5">Thursday</td>
       <td rowspan="5"><a href="https://github.com/gSchool/g26-challenges-so-far/blob/master/w4/w4-t-equivalent-number/problem.js">SameDigits</a>
       </td>
-      <td><a href="../../JavaScript/Scope.md">Scope</a>
+      <td><a href="https://github.com/gSchool/javascript-curriculum/Scope.md">Scope</a>
       </td>
       <td><a href="https://github.com/gSchool/function-tests">Function Tests</a>
       </td>
@@ -374,7 +374,7 @@ Week 4
       </td>
     </tr>
     <tr>
-      <td><a href="../../JavaScript/Hoisting.md">Hoisting</a>
+      <td><a href="https://github.com/gSchool/javascript-curriculum/Hoisting.md">Hoisting</a>
       </td>
       <td>
       </td>
@@ -382,7 +382,7 @@ Week 4
       </td>
     </tr>
     <tr>
-      <td><a href="../../JavaScript/Higher Order Functions.md">Higher Order Functions</a>
+      <td><a href="https://github.com/gSchool/javascript-curriculum/Higher Order Functions.md">Higher Order Functions</a>
       </td>
       <td>
       </td>
@@ -390,7 +390,7 @@ Week 4
       </td>
     </tr>
     <tr>
-      <td><a href="../../JavaScript/Closure.md">Closures</a>
+      <td><a href="https://github.com/gSchool/javascript-curriculum/Closure.md">Closures</a>
       </td>
       <td>
       </td>
@@ -398,7 +398,7 @@ Week 4
       </td>
     </tr>
     <tr>
-      <td><a href="../../JavaScript/IIFE.md">IIFEs</a>
+      <td><a href="https://github.com/gSchool/javascript-curriculum/IIFE.md">IIFEs</a>
       </td>
       <td>
       </td>
