@@ -58,7 +58,7 @@ app.factory('personFactory', function(){
   }
 });
 
-app.controller('personController', [function(personFactory){
+app.controller('personController', ['personFactory', function(personFactory){
     // I now have access to all the methods/properties returned from the personFactory!
   }]);
 ```
