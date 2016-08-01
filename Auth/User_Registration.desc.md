@@ -354,6 +354,8 @@ git commit -m 'Use bcrypt to hash passwords'
 
 Finally, use Knex to insert the email and hashed password into the users table.
 
+**NOTE:** Remember to require the `knex` and `humps` dependencies.  Be sure to store the `camelizeKeys` and `decamelizeKeys` functions from `humps` in a local variable.
+
 ```JavaScript
 'use strict';
 
