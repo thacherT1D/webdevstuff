@@ -2,8 +2,8 @@
 
 ## Objectives
 - Explain what a singleton is.
-- Understand and use Angular services
-- Understand and use Angular factories
+- Use Angular services and factories
+- Express the differences between Angular services and factories.
 
 ## Resources
 
