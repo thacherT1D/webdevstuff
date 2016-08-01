@@ -32,34 +32,33 @@ Here's a sequence diagram of the RESTful, database-driven HTTP server.
                                                                                           ╚════════════════════════════════╝
 ```
 
-For example, imagine a RESTful, database-driven HTTP server manages the persistence of the following rows in the `artists` table.
+For example, imagine a RESTful, database-driven HTTP server manages the persistence of the following rows in the `tracks` table.
 
 ```text
- id |    name     
-----+-------------
-  1 | The Beatles
-(1 row)
+ id |       title        |   artist    
+----+--------------------+-------------
+  1 | Here Comes the Sun | The Beatles
 ```
 
 A RESTful server would handle the following HTTP requests by mapping them to a specific REST action.
 
-| REST Action       | Request Method | Request URL  | Request Content-Type  | Request Body           |
-|-------------------|----------------|--------------|-----------------------|------------------------|
-| Read (all)        | `GET`          | `/artists`   | N/A                   | N/A                    |
-| Read (individual) | `GET`          | `/artists/1` | N/A                   | N/A                    |
-| Create            | `POST`         | `/artists`   | `application/json`    | `{ "name": "Prince" }` |
-| Update            | `PATCH`        | `/artists/2` | `application/json`    | `{ "name": "⚥" }`      |
-| Destroy           | `DELETE`       | `/artists/2` | N/A                   | N/A                    |
+| REST Action       | Request Method | Request URL | Request Content-Type  | Request Body                                   |
+|-------------------|----------------|-------------|-----------------------|------------------------------------------------|
+| Read (all)        | `GET`          | `/tracks`   | N/A                   | N/A                                            |
+| Read (individual) | `GET`          | `/tracks/1` | N/A                   | N/A                                            |
+| Create            | `POST`         | `/tracks`   | `application/json`    | `{ "title": "Purple Rain", "name": "Prince" }` |
+| Update            | `PATCH`        | `/tracks/1` | `application/json`    | `{ "title": "Yesterday" }`                     |
+| Destroy           | `DELETE`       | `/tracks/1` | N/A                   | N/A                                            |
 
 Once the operation is complete, the RESTful server would send a specific HTTP response back to the client indicating the result of the operation.
 
-| REST Action       | Response Status | Response Content-Type | Response Body                          |
-|-------------------|-----------------|-----------------------|----------------------------------------|
-| Read (all)        | `200`           | `application/json`    | `[{ id: "1", "name": "The Beatles" }]` |
-| Read (individual) | `200`           | `application/json`    | `{ id: "1", "name": "The Beatles" }`   |
-| Create            | `200`           | `application/json`    | `{ id: "2", "name": "Prince" }`        |
-| Update            | `200`           | `application/json`    | `{ id: "2", "name": "⚥" }`             |
-| Destroy           | `200`           | `application/json`    | `{ "name": "⚥" }`                      |
+| REST Action       | Response Status | Response Content-Type | Response Body                                                           |
+|-------------------|-----------------|-----------------------|-------------------------------------------------------------------------|
+| Read (all)        | `200`           | `application/json`    | `[{ id: "1", "title": "Here Comes the Sun", "artist": "The Beatles" }]` |
+| Read (individual) | `200`           | `application/json`    | `{ id: "1", "title": "Here Comes the Sun", "artist": "The Beatles" }`   |
+| Create            | `200`           | `application/json`    | `{ id: "2", "title": "Purple Rain", "name": "Prince" }`                 |
+| Update            | `200`           | `application/json`    | `{ id: "1", "title": "Yesterday", "artist": "The Beatles" }`            |
+| Destroy           | `200`           | `application/json`    | `{ "title": "Yesterday", "artist": "The Beatles" }`                     |
 
 ### Exercise
 
@@ -79,28 +78,16 @@ Once you've satisfied, turn to a neighbor and explain how information flows thro
 Here's an entity relationship diagram representing the data model the HTTP server will need to manage.
 
 ```text
-┌───────────────────────────────────────────────────────────────┐
-│                            artists                            │
-├─────────────┬─────────────────────────┬───────────────────────┤
-│id           │serial                   │primary key            │
-│name         │varchar(255)             │not null default ''    │
-│created_at   │timestamp with time zone │not null default now() │
-│updated_at   │timestamp with time zone │not null default now() │
-└─────────────┴─────────────────────────┴───────────────────────┘
-                                ┼
-                                │
-                                ○
-                               ╱│╲
-┌──────────────────────────────────────────────────────────────────────────────────────────┐
-│                                          tracks                                          │
-├─────────────┬─────────────────────────┬──────────────────────────────────────────────────┤
-│id           │serial                   │primary key                                       │
-│artist_id    │integer                  │not null references authors(id) on delete cascade │
-│title        │varchar(255)             │not null default ''                               │
-│likes        │integer                  │not null default 0                                │
-│created_at   │timestamp with time zone │not null default now()                            │
-│updated_at   │timestamp with time zone │not null default now()                            │
-└─────────────┴─────────────────────────┴──────────────────────────────────────────────────┘
+┌─────────────────────────────────────────────────────────────┐
+│                           tracks                            │
+├───────────┬─────────────────────────┬───────────────────────┤
+│id         │serial                   │primary key            │
+│title      │varchar(255)             │not null default ''    │
+│artist     │varchar(255)             │not null default ''    │
+│likes      │integer                  │not null default 0     │
+│created_at │timestamp with time zone │not null default now() │
+│updated_at │timestamp with time zone │not null default now() │
+└───────────┴─────────────────────────┴───────────────────────┘
 ```
 
 To get started, checkout a new feature branch.
