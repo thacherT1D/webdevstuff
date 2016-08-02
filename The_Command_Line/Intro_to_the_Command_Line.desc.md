@@ -1,16 +1,37 @@
 This lesson will introduce you to the fundamental commands of Mac OS X. By the end, you'll be able to describe and utilize commands to manipulate the following concepts.
 
-* [User accounts](#user-accounts)
+## Objectives
+- Explain what the command line is and why it's important
+- Manipulate the file system using commands, file system paths, and command flags
+- Differentiate between the command line and graphical user interfaces
+
+<!-- * [User accounts](#user-accounts)
 * [Working directories](#working-directories)
 * [File system paths](#file-system-paths)
 * [Command flags](#command-flags)
 * [Manual pages](#manual-pages)
 * [Graphical user interfaces](#graphical-user-interfaces)
-* File system navigation
-* File system management
-* File system redirection
+* [File system manipulation](#file-system-manipulation) -->
 
 Before getting stared, use Spotlight to launch the `Terminal` app.
+
+## What is the command line?
+
+The command line allows you to enter typed commands (e.g. type `do something`, then press `Enter`) to get things done on your computer. Common tasks that you do on the command line are starting and stopping programs, looking at the code that makes a file work, and moving files and directories around the computer. The command line's most important parts are __user accounts__, __commands__, __the file system__, __command flags__, and __manual pages__.
+
+### Exercise
+
+Go back to the [development environment setup article](https://learn.galvanize.com/cohorts/78/articles/5101#configure-the-terminal). In the screenshots from that setup, identify 3 different commands and write them on a whiteboard.
+
+Turn to your neighbor and compare your results.
+
+## Why is the command line important?
+
+Because you're on a Mac, you're currently working on a computer with a __graphical user interface (GUI)__. A computer with a GUI has an operating system with icons that you can point-and-click with your mouse to start programs and to manipulate files. However, not every computer has a GUI, so you cannot use your mouse to start programs and to manipulate files. On the job, you're likely to be working with computers that only will have command line shells. In other words, your mice and trackpads will not save you! Even on computers with GUIs, typing is best since it's faster.
+
+### Exercise
+
+Look back at the [setup for your development environment](https://learn.galvanize.com/cohorts/78/articles/5101). You'll notice that a good chunk of the setup instructions involves the command line. Pick 2 commands and think about how they would be executed using a point-and-click GUI method. Turn to your neighbor and discuss how much faster you think it is to type those commands than to point-and-click to accomplish the same tasks.
 
 ## User accounts
 
