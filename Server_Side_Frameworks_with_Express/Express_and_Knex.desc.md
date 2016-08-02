@@ -1,14 +1,14 @@
 ## Objectives
 
-- Explain what a RESTful, database-driven HTTP server is.
-- Explain why a RESTful, database-driven HTTP server is useful.
-- Use Express and Knex to build a RESTful, database-driven HTTP server.
+- Explain what a RESTful, database-driven, HTTP server is.
+- Explain why a RESTful, database-driven, HTTP server is useful.
+- Use Express and Knex to build a RESTful, database-driven, HTTP server.
 
-## What's a RESTful, database-driven HTTP server?
+## What's a RESTful, database-driven, HTTP server?
 
-A **RESTful, database-driven HTTP server** is exactly what the name implies. It's a server that communicates with a client using a RESTful HTTP API. The sole purpose of the HTTP server is to manage information that's persisted to a database.
+A **RESTful, database-driven, HTTP server** is exactly what it sounds. It's a server that communicates with a client using a RESTful HTTP and is responsible for managing information that's persisted in a database.
 
-Here's a sequence diagram of the RESTful, database-driven HTTP server.
+Here's a sequence diagram of the RESTful, database-driven, HTTP server.
 
 ```text
 ┌─── Chrome ──┐               ┌── Node.js ──┐               ┌── postgres ─┐               ╔════════════ cluster ═══════════╗
@@ -32,114 +32,100 @@ Here's a sequence diagram of the RESTful, database-driven HTTP server.
                                                                                           ╚════════════════════════════════╝
 ```
 
-For example, imagine a RESTful, database-driven HTTP server manages the persistence of the following rows in the `artists` table.
+To give you a concrete example, imagine a RESTful, database-driven, HTTP server that manages the information in `tracks` database table.
 
 ```text
- id |    name     
-----+-------------
-  1 | The Beatles
-(1 row)
+ id |       title        |   artist    
+----+--------------------+-------------
+  1 | Here Comes the Sun | The Beatles
 ```
 
-A RESTful server would handle the following HTTP requests by mapping them to a specific REST action.
+A RESTful HTTP server handles the following requests by mapping them to a specific REST action.
 
-| REST Action       | Request Method | Request URL  | Request Content-Type  | Request Body           |
-|-------------------|----------------|--------------|-----------------------|------------------------|
-| Read (all)        | `GET`          | `/artists`   | N/A                   | N/A                    |
-| Read (individual) | `GET`          | `/artists/1` | N/A                   | N/A                    |
-| Create            | `POST`         | `/artists`   | `application/json`    | `{ "name": "Prince" }` |
-| Update            | `PATCH`        | `/artists/2` | `application/json`    | `{ "name": "⚥" }`      |
-| Destroy           | `DELETE`       | `/artists/2` | N/A                   | N/A                    |
+| REST Action       | Request Method | Request URL | Request Content-Type  | Request Body                                   |
+|-------------------|----------------|-------------|-----------------------|------------------------------------------------|
+| Read (all)        | `GET`          | `/tracks`   | N/A                   | N/A                                            |
+| Read (individual) | `GET`          | `/tracks/1` | N/A                   | N/A                                            |
+| Create            | `POST`         | `/tracks`   | `application/json`    | `{ "title": "Purple Rain", "name": "Prince" }` |
+| Update            | `PATCH`        | `/tracks/1` | `application/json`    | `{ "title": "Yesterday" }`                     |
+| Destroy           | `DELETE`       | `/tracks/1` | N/A                   | N/A                                            |
 
-Once the operation is complete, the RESTful server would send a specific HTTP response back to the client indicating the result of the operation.
+Once the operation is complete, the RESTful HTTP server sends a specific response back to the client indicating the result of a database operation.
 
-| REST Action       | Response Status | Response Content-Type | Response Body                          |
-|-------------------|-----------------|-----------------------|----------------------------------------|
-| Read (all)        | `200`           | `application/json`    | `[{ id: "1", "name": "The Beatles" }]` |
-| Read (individual) | `200`           | `application/json`    | `{ id: "1", "name": "The Beatles" }`   |
-| Create            | `200`           | `application/json`    | `{ id: "2", "name": "Prince" }`        |
-| Update            | `200`           | `application/json`    | `{ id: "2", "name": "⚥" }`             |
-| Destroy           | `200`           | `application/json`    | `{ "name": "⚥" }`                      |
+| REST Action       | Response Status | Response Content-Type | Response Body                                                           |
+|-------------------|-----------------|-----------------------|-------------------------------------------------------------------------|
+| Read (all)        | `200`           | `application/json`    | `[{ id: "1", "title": "Here Comes the Sun", "artist": "The Beatles" }]` |
+| Read (individual) | `200`           | `application/json`    | `{ id: "1", "title": "Here Comes the Sun", "artist": "The Beatles" }`   |
+| Create            | `200`           | `application/json`    | `{ id: "2", "title": "Purple Rain", "name": "Prince" }`                 |
+| Update            | `200`           | `application/json`    | `{ id: "1", "title": "Yesterday", "artist": "The Beatles" }`            |
+| Destroy           | `200`           | `application/json`    | `{ "title": "Yesterday", "artist": "The Beatles" }`                     |
 
 ### Exercise
 
-Take a few moments to diagram how a RESTful, database-driven HTTP server works.
+Take a few moments to diagram how a RESTful, database-driven, HTTP server works.
 
 Once you've satisfied, turn to a neighbor and explain how information flows throw the system.
 
-## Why is a RESTful, database-driven HTTP server is useful?
+## Why is a RESTful, database-driven, HTTP server is useful?
 
 - separation of concerns
 - follows the principle of least surprise
 - great way to organize data, relationships, processes
 - process are independently scalable and replaceable
 
-## How do you use Express and Knex to build a RESTful, database-driven HTTP server?
+## How do you use Express and Knex to build a RESTful, database-driven, HTTP server?
 
-Here's an entity relationship diagram representing the data model the HTTP server will need to manage.
+In a moment, you'll create a RESTful, database-driven, HTTP server to manage information in a data model represented by the following entity relationship diagram.
 
 ```text
-┌───────────────────────────────────────────────────────────────┐
-│                            artists                            │
-├─────────────┬─────────────────────────┬───────────────────────┤
-│id           │serial                   │primary key            │
-│name         │varchar(255)             │not null default ''    │
-│created_at   │timestamp with time zone │not null default now() │
-│updated_at   │timestamp with time zone │not null default now() │
-└─────────────┴─────────────────────────┴───────────────────────┘
-                                ┼
-                                │
-                                ○
-                               ╱│╲
-┌──────────────────────────────────────────────────────────────────────────────────────────┐
-│                                          tracks                                          │
-├─────────────┬─────────────────────────┬──────────────────────────────────────────────────┤
-│id           │serial                   │primary key                                       │
-│artist_id    │integer                  │not null references authors(id) on delete cascade │
-│title        │varchar(255)             │not null default ''                               │
-│likes        │integer                  │not null default 0                                │
-│created_at   │timestamp with time zone │not null default now()                            │
-│updated_at   │timestamp with time zone │not null default now()                            │
-└─────────────┴─────────────────────────┴──────────────────────────────────────────────────┘
+┌─────────────────────────────────────────────────────────────┐
+│                           tracks                            │
+├───────────┬─────────────────────────┬───────────────────────┤
+│id         │serial                   │primary key            │
+│title      │varchar(255)             │not null default ''    │
+│artist     │varchar(255)             │not null default ''    │
+│likes      │integer                  │not null default 0     │
+│created_at │timestamp with time zone │not null default now() │
+│updated_at │timestamp with time zone │not null default now() │
+└───────────┴─────────────────────────┴───────────────────────┘
 ```
 
-To get started, checkout a new feature branch.
+To get started, navigate to the `trackify` project directory.
 
 ```shell
-git checkout -b http_server
+cd path/to/trackify
 ```
 
-Then, install the following dependencies locally and save them to the `package.json` file.
+And checkout a new feature branch.
+
+```shell
+git checkout -b server
+```
+
+Then, install the following dependencies while saving them to the `package.json` file.
 
 ```shell
 npm install --save express body-parser morgan
 ```
 
-In a `server.js` file, type the following code.
+Create a `server.js` file and type the following code.
 
 ```javascript
 'use strict';
 
 const express = require('express');
-const path = require('path');
-const port = process.env.PORT || 8000;
-
-const morgan = require('morgan');
-const bodyParser = require('body-parser');
-
-const artists = require('./routes/artists');
-const tracks = require('./routes/tracks');
-
 const app = express();
 
 app.disable('x-powered-by');
 
-app.use(morgan('short'));
+const bodyParser = require('body-parser');
+const morgan = require('morgan');
+
+app.use(morgan('dev'));
 app.use(bodyParser.json());
 
-app.use(express.static(path.join('public')));
+const tracks = require('./routes/tracks');
 
-app.use(artists);
 app.use(tracks);
 
 app.use((_req, res) => {
@@ -147,9 +133,9 @@ app.use((_req, res) => {
 });
 
 app.use((err, _req, res, _next) => {
-  if (err.status) {
+  if (err.output && err.output.statusCode) {
     return res
-      .status(err.status)
+      .status(err.output.statusCode)
       .set('Content-Type', 'text/plain')
       .send(err.message);
   }
@@ -158,44 +144,44 @@ app.use((err, _req, res, _next) => {
   res.sendStatus(500);
 });
 
+const port = process.env.PORT || 8000;
+
 app.listen(port, () => {
   console.log('Listening on port', port);
 });
-
-module.exports = app;
 ```
 
-In both the `routes/artists.js` and `routes/tracks.js` files, type out the following code.
+Create a `routes/tracks.js` file and type the following code.
 
 ```javascript
 'use strict';
 
 const express = require('express');
+
 const router = express.Router();
 
 module.exports = router;
 ```
 
-Then, install `nodemon` as a local development dependency, saving it to the `package.json` file.
+Then, install `nodemon` as a development dependency while saving it to the `package.json` file.
 
 ```shell
 npm install --save-dev nodemon
 ```
 
-Add a `nodemon` script to the `package.json` file.
+Add a `start` script to the `package.json` file.
 
 ```javascript
 "scripts": {
   "knex": "knex",
-  "heroku-postbuild": "knex migrate:latest",
-  "nodemon": "nodemon server.js"
+  "start": "nodemon server.js"
 },
 ```
 
-Then, start the server with `nodemon`.
+Then, start the Express server with `nodemon`.
 
 ```shell
-npm run nodemon
+npm start
 ```
 
 Add and commit the changes to your repository.
@@ -205,7 +191,11 @@ git add .
 git commit -m 'Add an Express server'
 ```
 
-In a `knex.js` file, type out the following code.
+### Read (all)
+
+Now that the Express server is scaffolded, let's add middleware to handle reading all the rows from the `tracks` table.
+
+Create a `knex.js` file and type the following code.
 
 ```javascript
 'use strict';
@@ -217,105 +207,148 @@ const knex = require('knex')(knexConfig);
 module.exports = knex;
 ```
 
-In a `routes/artists.js` file, type the following code.
+Then, install `humps` as a dependency while saving it to the `package.json` file.
+
+```shell
+npm install --save humps
+```
+
+Back in the `routes/tracks.js` file, add the following code.
+
+**NOTE:** Remember to require the `knex` and `humps` dependencies. Be sure to store the `camelizeKeys` function from `humps` in a local variable.
 
 ```javascript
 'use strict';
 
 const express = require('express');
-const router = express.Router();
 const knex = require('../knex');
+const { camelizeKeys } = require('humps');
 
-router.get('/artists', (_req, res, next) => {
-  knex('artists')
-    .orderBy('id')
-    .then((artists) => {
-      res.send(artists);
+const router = express.Router();
+
+router.get('/tracks', (_req, res, next) => {
+  knex('tracks')
+    .orderBy('title')
+    .then((rows) => {
+      const tracks = camelizeKeys(rows);
+
+      res.send(tracks);
     })
     .catch((err) => {
       next(err);
     });
 });
 
-router.get('/artists/:id', (req, res, next) => {
-    knex('artists')
-    .where('id', req.params.id)
-    .first()
-    .then((artist) => {
-      if (!artist) {
-        return next();
-      }
+module.exports = router;
+```
 
-      res.send(artist);
+Run the following command.
+
+```shell
+http GET localhost:8000/tracks
+```
+
+And you should see the following.
+
+```text
+HTTP/1.1 200 OK
+Connection: keep-alive
+Content-Length: 585
+Content-Type: application/json; charset=utf-8
+Date: Mon, 01 Aug 2016 21:32:12 GMT
+ETag: W/"249-LDyujRCOohFz73cLEFkNCQ"
+
+[
+    {
+        "artist": "Adele",
+        "createdAt": "2016-06-26T14:26:16.000Z",
+        "id": 4,
+        "likes": 538300301,
+        "title": "Hello",
+        "updatedAt": "2016-06-26T14:26:16.000Z"
+    },
+    {
+        "artist": "The Beatles",
+        "createdAt": "2016-06-26T14:26:16.000Z",
+        "id": 1,
+        "likes": 28808736,
+        "title": "Here Comes the Sun",
+        "updatedAt": "2016-06-26T14:26:16.000Z"
+    },
+    {
+        "artist": "The Beatles",
+        "createdAt": "2016-06-26T14:26:16.000Z",
+        "id": 2,
+        "likes": 20355655,
+        "title": "Hey Jude",
+        "updatedAt": "2016-06-26T14:26:16.000Z"
+    },
+    {
+        "artist": "Adele",
+        "createdAt": "2016-06-26T14:26:16.000Z",
+        "id": 3,
+        "likes": 39658471,
+        "title": "Send My Love",
+        "updatedAt": "2016-06-26T14:26:16.000Z"
+    }
+]
+```
+
+Add and commit the changes to your repository.
+
+```shell
+git add .
+git commit -m 'Add GET /tracks middleware'
+```
+
+### Read (individual)
+
+Next, let's add middleware to handle reading an individual row from the `tracks` table.
+
+Start by installing `boom` as a dependency while saving it to the `package.json` file.
+
+```shell
+npm install --save boom
+```
+
+Back in the `routes/tracks.js` file, add the following code.
+
+**NOTE:** Remember to require the `boom` dependency.
+
+```javascript
+'use strict';
+
+const boom = require('boom');
+const express = require('express');
+const knex = require('../knex');
+const { camelizeKeys } = require('humps');
+
+const router = express.Router();
+
+router.get('/tracks', (_req, res, next) => {
+  knex('tracks')
+    .orderBy('title')
+    .then((rows) => {
+      const tracks = camelizeKeys(rows);
+
+      res.send(tracks);
     })
     .catch((err) => {
       next(err);
     });
 });
 
-router.post('/artists', (req, res, next) => {
-  knex('artists')
-    .insert({ name: req.body.name }, '*')
-    .then((artists) => {
-      res.send(artists[0]);
-    })
-    .catch((err) => {
-      next(err);
-    });
-});
-
-router.patch('/artists/:id', (req, res, next) => {
-  knex('artists')
-    .where('id', req.params.id)
-    .first()
-    .then((artist) => {
-      if (!artist) {
-        return next();
-      }
-
-      return knex('artists')
-        .update({ name: req.body.name }, '*')
-        .where('id', req.params.id);
-    })
-    .then((artists) => {
-      res.send(artists[0]);
-    })
-    .catch((err) => {
-      next(err);
-    });
-});
-
-router.delete('/artists/:id', (req, res, next) => {
-  let artist;
-
-  knex('artists')
+router.get('/tracks/:id', (req, res, next) => {
+    knex('tracks')
     .where('id', req.params.id)
     .first()
     .then((row) => {
       if (!row) {
-        return next();
+        throw boom.create(404, 'Not Found');
       }
 
-      artist = row;
+      const track = camelizeKeys(row);
 
-      return knex('artist')
-        .del()
-        .where('id', req.params.id);
-    })
-    .then(() => {
-      delete artist.id;
-      res.send(artist);
-    });
-    .catch((err) => {
-      next(err);
-    });
-});
-
-router.get('/artists/:id/tracks', (req, res, next) => {
-  knex('tracks')
-    .where('artist_id', req.params.id)
-    .orderBy('id')
-    .then((track) => {
       res.send(track);
     })
     .catch((err) => {
@@ -326,26 +359,81 @@ router.get('/artists/:id/tracks', (req, res, next) => {
 module.exports = router;
 ```
 
+Run the following command.
+
+```shell
+http GET localhost:8000/tracks/1
+```
+
+And you should see the following.
+
+```text
+HTTP/1.1 200 OK
+Connection: keep-alive
+Content-Length: 155
+Content-Type: application/json; charset=utf-8
+Date: Mon, 01 Aug 2016 21:32:55 GMT
+ETag: W/"9b-8gMevLtkzAbZbyRenFODQw"
+
+{
+    "artist": "The Beatles",
+    "createdAt": "2016-06-26T14:26:16.000Z",
+    "id": 1,
+    "likes": 28808736,
+    "title": "Here Comes the Sun",
+    "updatedAt": "2016-06-26T14:26:16.000Z"
+}
+```
+
+Then, run the following command.
+
+```shell
+http GET localhost:8000/tracks/9000
+```
+And you should see the following.
+
+```text
+HTTP/1.1 404 Not Found
+Connection: keep-alive
+Content-Length: 9
+Content-Type: text/plain; charset=utf-8
+Date: Mon, 01 Aug 2016 21:42:52 GMT
+ETag: W/"9-nR6tc+Z4+i9RpwqTOwvwFw"
+
+Not Found
+```
+
 Add and commit the changes to your repository.
 
 ```shell
 git add .
-git commit -m 'Route /artists'
+git commit -m 'Add GET /tracks/:id middleware'
 ```
 
-In a `routes/tracks.js` file, type the following code.
+### Create
+
+Next, let's add middleware to handle creating a row in the `tracks` table.
+
+Back in the `routes/tracks.js` file, add the following code.
+
+**NOTE:** Remember to store the `decamelizeKeys` function from `humps` in a local variable.
 
 ```javascript
 'use strict';
 
+const boom = require('boom');
 const express = require('express');
-const router = express.Router();
 const knex = require('../knex');
+const { camelizeKeys, decamelizeKeys } = require('humps');
+
+const router = express.Router();
 
 router.get('/tracks', (_req, res, next) => {
   knex('tracks')
-    .orderBy('id')
-    .then((tracks) => {
+    .orderBy('title')
+    .then((rows) => {
+      const tracks = camelizeKeys(rows);
+
       res.send(tracks);
     })
     .catch((err) => {
@@ -354,13 +442,15 @@ router.get('/tracks', (_req, res, next) => {
 });
 
 router.get('/tracks/:id', (req, res, next) => {
-  knex('tracks')
+    knex('tracks')
     .where('id', req.params.id)
     .first()
-    .then((track) => {
-      if (!track) {
-        return next();
+    .then((row) => {
+      if (!row) {
+        throw boom.create(404, 'Not Found');
       }
+
+      const track = camelizeKeys(row);
 
       res.send(track);
     })
@@ -370,27 +460,159 @@ router.get('/tracks/:id', (req, res, next) => {
 });
 
 router.post('/tracks', (req, res, next) => {
-  knex('artists')
-    .where('id', req.body.artist_id)
+  const { title, artist, likes } = req.body;
+
+  if (!title || !title.trim()) {
+    return next(boom.create(400, 'Title must not be blank'));
+  }
+
+  if (!artist || !artist.trim()) {
+    return next(boom.create(400, 'Artist must not be blank'));
+  }
+
+  if (!Number.isInteger(likes)) {
+    return next(boom.create(400, 'Likes must be an integer'));
+  }
+
+  const insertTrack = { title, artist, likes };
+
+  knex('tracks')
+    .insert(decamelizeKeys(insertTrack), '*')
+    .then((rows) => {
+      const track = camelizeKeys(rows[0]);
+
+      res.send(track);    
+    })
+    .catch((err) => {
+      next(err);
+    });
+});
+
+module.exports = router;
+```
+
+Run the following command.
+
+```shell
+http POST localhost:8000/tracks title='Purple Rain' artist=Prince likes:=8569790
+```
+
+And you should see the following.
+
+```text
+HTTP/1.1 200 OK
+Connection: keep-alive
+Content-Length: 136
+Content-Type: application/json; charset=utf-8
+Date: Mon, 01 Aug 2016 21:33:27 GMT
+ETag: W/"88-sdB8iatsE+TUImSXMzKOPg"
+
+{
+    "artist": "Prince",
+    "createdAt": "2016-08-01T21:33:27.246Z",
+    "id": 5,
+    "likes": 8569790,
+    "title": "Purple Rain",
+    "updatedAt": "2016-08-01T21:33:27.246Z"
+}
+```
+
+Then, run the following command.
+
+```shell
+http POST localhost:8000/tracks
+```
+
+And you should see the following.
+
+```text
+HTTP/1.1 400 Bad Request
+Connection: keep-alive
+Content-Length: 23
+Content-Type: text/plain; charset=utf-8
+Date: Mon, 01 Aug 2016 21:44:26 GMT
+ETag: W/"17-vsd3mFLR7EP90T6PJprkZw"
+
+Title must not be blank
+```
+
+Add and commit the changes to your repository.
+
+```shell
+git add .
+git commit -m 'Add POST /tracks middleware'
+```
+
+### Update
+
+Next, let's add middleware to handle updating a row in the `tracks` table.
+
+Back in the `routes/tracks.js` file, add the following code.
+
+```javascript
+'use strict';
+
+const boom = require('boom');
+const express = require('express');
+const knex = require('../knex');
+const { camelizeKeys, decamelizeKeys } = require('humps');
+
+const router = express.Router();
+
+router.get('/tracks', (_req, res, next) => {
+  knex('tracks')
+    .orderBy('title')
+    .then((rows) => {
+      const tracks = camelizeKeys(rows);
+
+      res.send(tracks);
+    })
+    .catch((err) => {
+      next(err);
+    });
+});
+
+router.get('/tracks/:id', (req, res, next) => {
+    knex('tracks')
+    .where('id', req.params.id)
     .first()
-    .then((artist) => {
-      if (!artist) {
-        const err = new Error('artist_id does not exist');
-
-        err.status = 400;
-
-        throw err;
+    .then((row) => {
+      if (!row) {
+        throw boom.create(404, 'Not Found');
       }
 
-      return knex('tracks')
-        .insert({
-          artist_id: req.body.artist_id,
-          title: req.body.title,
-          likes: req.body.likes
-        }, '*');
+      const track = camelizeKeys(row);
+
+      res.send(track);
     })
-    .then((tracks) => {
-      res.send(tracks[0]);
+    .catch((err) => {
+      next(err);
+    });
+});
+
+router.post('/tracks', (req, res, next) => {
+  const { title, artist, likes } = req.body;
+
+  if (!title || !title.trim()) {
+    return next(boom.create(400, 'Title must not be blank'));
+  }
+
+  if (!artist || !artist.trim()) {
+    return next(boom.create(400, 'Artist must not be blank'));
+  }
+
+  if (!Number.isInteger(likes)) {
+    return next(boom.create(400, 'Likes must be an integer'));
+  }
+
+  const insertTrack = { title, artist, likes };
+
+  knex('tracks')
+    .insert(decamelizeKeys(insertTrack), '*')
+    .then((rows) => {
+      const track = camelizeKeys(rows[0]);
+
+      res.send(track);    
     })
     .catch((err) => {
       next(err);
@@ -403,33 +625,194 @@ router.patch('/tracks/:id', (req, res, next) => {
     .first()
     .then((track) => {
       if (!track) {
-        return next();
+        throw boom.create(404, 'Not Found');
       }
 
-      return knex('artists')
-        .where('id', req.body.artist_id)
-        .first();
-    })
-    .then((artist) => {
-      if (!artist) {
-        const err = new Error('artist_id does not exist');
+      const { title, artist } = req.body;
+      const updateTrack = {};
 
-        err.status = 400;
+      if (title) {
+        updateTrack.title = title;
+      }
 
-        throw err;
+      if (artist) {
+        updateTrack.artist = artist;
       }
 
       return knex('tracks')
-        .update({
-          artist_id: req.body.artist_id,
-          title: req.body.title,
-          likes: req.body.likes
-        }, '*')
+        .update(decamelizeKeys(updateTrack), '*')
         .where('id', req.params.id);
     })
-    .then((tracks) => {
-      res.send(tracks[0]);
+    .then((rows) => {
+      const track = camelizeKeys(rows[0]);
+
+      res.send(track);
+    })
+    .catch((err) => {
+      next(err);
     });
+});
+
+module.exports = router;
+```
+
+Run the following command.
+
+```shell
+http PATCH localhost:8000/tracks/1 title='Yesterday'
+```
+
+And you should see the following.
+
+```text
+HTTP/1.1 200 OK
+Connection: keep-alive
+Content-Length: 146
+Content-Type: application/json; charset=utf-8
+Date: Mon, 01 Aug 2016 21:41:28 GMT
+ETag: W/"92-OquPiwjMgs+nhWOWc3/DDw"
+
+{
+    "artist": "The Beatles",
+    "createdAt": "2016-06-26T14:26:16.000Z",
+    "id": 1,
+    "likes": 28808736,
+    "title": "Yesterday",
+    "updatedAt": "2016-06-26T14:26:16.000Z"
+}
+```
+
+Then, run the following command.
+
+```shell
+http PATCH localhost:8000/tracks/9000 title='Yesterday'
+```
+
+And you should see the following.
+
+```text
+HTTP/1.1 404 Not Found
+Connection: keep-alive
+Content-Length: 9
+Content-Type: text/plain; charset=utf-8
+Date: Mon, 01 Aug 2016 21:45:14 GMT
+ETag: W/"9-nR6tc+Z4+i9RpwqTOwvwFw"
+
+Not Found
+```
+
+Add and commit the changes to your repository.
+
+```shell
+git add .
+git commit -m 'Add PATCH /tracks/:id middleware'
+```
+
+### Destroy
+
+Next, let's add middleware to handle destroying a row from the `tracks` table.
+
+Back in the `routes/tracks.js` file, add the following code.
+
+```javascript
+'use strict';
+
+const boom = require('boom');
+const express = require('express');
+const knex = require('../knex');
+const { camelizeKeys, decamelizeKeys } = require('humps');
+
+const router = express.Router();
+
+router.get('/tracks', (_req, res, next) => {
+  knex('tracks')
+    .orderBy('title')
+    .then((rows) => {
+      const tracks = camelizeKeys(rows);
+
+      res.send(tracks);
+    })
+    .catch((err) => {
+      next(err);
+    });
+});
+
+router.get('/tracks/:id', (req, res, next) => {
+    knex('tracks')
+    .where('id', req.params.id)
+    .first()
+    .then((row) => {
+      if (!row) {
+        throw boom.create(404, 'Not Found');
+      }
+
+      const track = camelizeKeys(row);
+
+      res.send(track);
+    })
+    .catch((err) => {
+      next(err);
+    });
+});
+
+router.post('/tracks', (req, res, next) => {
+  const { title, artist, likes } = req.body;
+
+  if (!title || !title.trim()) {
+    return next(boom.create(400, 'Title must not be blank'));
+  }
+
+  if (!artist || !artist.trim()) {
+    return next(boom.create(400, 'Artist must not be blank'));
+  }
+
+  if (!Number.isInteger(likes)) {
+    return next(boom.create(400, 'Likes must be an integer'));
+  }
+
+  const insertTrack = { title, artist, likes };
+
+  knex('tracks')
+    .insert(decamelizeKeys(insertTrack), '*')
+    .then((rows) => {
+      const track = camelizeKeys(rows[0]);
+
+      res.send(track);    
+    })
+    .catch((err) => {
+      next(err);
+    });
+});
+
+router.patch('/tracks/:id', (req, res, next) => {
+  knex('tracks')
+    .where('id', req.params.id)
+    .first()
+    .then((track) => {
+      if (!track) {
+        throw boom.create(404, 'Not Found');
+      }
+
+      const { title, artist } = req.body;
+      const updateTrack = {};
+
+      if (title) {
+        updateTrack.title = title;
+      }
+
+      if (artist) {
+        updateTrack.artist = artist;
+      }
+
+      return knex('tracks')
+        .update(decamelizeKeys(updateTrack), '*')
+        .where('id', req.params.id);
+    })
+    .then((rows) => {
+      const track = camelizeKeys(rows[0]);
+
+      res.send(track);
+    })
     .catch((err) => {
       next(err);
     });
@@ -443,10 +826,10 @@ router.delete('/tracks/:id', (req, res, next) => {
     .first()
     .then((row) => {
       if (!row) {
-        return next();
+        throw boom.create(404, 'Not Found');
       }
 
-      track = row;
+      track = camelizeKeys(row);
 
       return knex('tracks')
         .del()
@@ -454,6 +837,7 @@ router.delete('/tracks/:id', (req, res, next) => {
     })
     .then(() => {
       delete track.id;
+
       res.send(track);
     })
     .catch((err) => {
@@ -464,22 +848,75 @@ router.delete('/tracks/:id', (req, res, next) => {
 module.exports = router;
 ```
 
+Run the following command.
+
+```shell
+http DELETE localhost:8000/tracks/1
+```
+
+And you should see the following.
+
+```text
+HTTP/1.1 200 OK
+Connection: keep-alive
+Content-Length: 139
+Content-Type: application/json; charset=utf-8
+Date: Mon, 01 Aug 2016 21:41:47 GMT
+ETag: W/"8b-Uno5ocjVI0LOt8qSxqFYYw"
+
+{
+    "artist": "The Beatles",
+    "createdAt": "2016-06-26T14:26:16.000Z",
+    "likes": 28808736,
+    "title": "Yesterday",
+    "updatedAt": "2016-06-26T14:26:16.000Z"
+}
+```
+
+Then, run the following command.
+
+```shell
+http DELETE localhost:8000/tracks/9000
+```
+
+And you should see the following.
+
+```text
+HTTP/1.1 404 Not Found
+Connection: keep-alive
+Content-Length: 9
+Content-Type: text/plain; charset=utf-8
+Date: Mon, 01 Aug 2016 21:45:48 GMT
+ETag: W/"9-nR6tc+Z4+i9RpwqTOwvwFw"
+
+Not Found
+```
+
 Add and commit the changes to your repository.
 
 ```shell
 git add .
-git commit -m 'Route /tracks'
+git commit -m 'Add DELETE /tracks/:id middleware'
 ```
 
 Merge the feature branch into the `master` branch.
 
 ```shell
 git checkout master
-git merge http_server
+git merge server
 ```
 
 Now that it's merged, delete the feature branch.
 
 ```shell
-git branch -d http_server
+git branch -d server
 ```
+
+## Assignment
+
+- [Galvanize Bookshelf - Express and Knex](https://github.com/gSchool/galvanize-bookshelf/blob/master/2_express_knex.md)
+
+## Resources
+
+- [NPM - boom](https://www.npmjs.com/package/boom)
+- [NPM - humps](https://www.npmjs.com/package/humps)
