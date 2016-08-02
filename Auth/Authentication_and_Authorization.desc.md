@@ -3,9 +3,9 @@
 - Explain what authentication is.
 - Explain why is authentication important.
 - Use bcrypt to authenticate a user.
-- Explain what a session is
-- Add routes to authenticate a user
-- Create Express middleware to authorize a user.
+- Explain what authorization is.
+- Explain why authorization is important.
+- Use a cookie session to authorize a user.
 
 ## What's authentication?
 
@@ -174,7 +174,7 @@ git add .
 git commit -m 'Add POST /session middleware'
 ```
 
-## What is a cookie?
+## What's authorization?
 
 The process of authentication starts when a user provides a password to be stored for future login. Instead of requiring authentication for each request the browser needs to make, the server sends a small piece of data to the browser called a **cookie** to hold onto authentication information.
 
@@ -196,102 +196,7 @@ GET / HTTP/1.1
 Cookie: theme=light; sessionToken=abc123;
 ```
 
-Express JS offers an easy way to set the cookie and clear a cookie in the response.
-
-```javascript
-res.cookie(name, value [, options]);
-res.clearCookie(name[, options]);
-```
-
-See the documentation for [setting cookies](http://expressjs.com/en/4x/api.html#res.cookie) and [clearing cookies](http://expressjs.com/en/4x/api.html#res.clearCookie).
-
-We can use cookies as a way to inform the client that the user is logged in.
-
-```javascript
-router.post('/session', (req, res, next) => {
-  knex('users')
-    .where('email', req.body.email)
-    .first()
-    .then((user) => {
-      if (!user) {
-        return res.sendStatus(401);
-      }
-
-      return bcrypt.compare(req.body.password, user.hashed_password);
-    })
-    .then(() => {
-      res.cookie('loggedIn', true);
-      res.sendStatus(200);
-    })
-    .catch(bcrypt.MISMATCH_ERROR, () => {
-      const err = new Error('Unauthorized');
-
-      err.status = 401;
-
-      throw err;
-    })
-    .catch((err) => {
-      next(err);
-    });
-});
-```
-
-Check through a request that the server specifies the client to set a cookie.
-
-```shell
-http POST localhost:8000/session email=neo@thematrix.com password=theone
-```
-
-### Logout
-
-Logging a user our can be as easy as deleting a cookie.
-
-```javascript
-router.delete('/session', (req, res, next) => {
-  res.clearCookie('loggedIn');
-  res.sendStatus(200);
-});
-```
-
-```shell
-http DELETE localhost:8000/session
-```
-
-Once done, commit your changes.
-
-```shell
-git add .
-git commit -m 'Store users login state as a cookie'
-```
-
-### `cookie-parser` middleware
-
-Parsing the `Cookie` HTTP header can be an annoying task. Luckily, there's a piece of middleware that can parse the cookies for you named `cookie-parser`.
-
-```shell
-npm install --save cookie-parser
-```
-
-```javascript
-const express = require('express');
-const cookieParser = require('cookie-parser');
-
-const app = express();
-app.use(cookieParser());
-
-app.get('/hello', function(req, res, next) {
-  console.log(req.cookies); // object
-  if (req.cookies.loggedIn) {
-    // user is logged in
-  }
-});
-```
-
-While we can store user information in a cookie, it's not the most secure way to have the client have access to user information. For this, we rely on sessions.
-
-## What is a session?
-
-Broadly speaking, a session refers to an ongoing dialogue between two system. In the case of Express, the systems are the client and the server. When a client makes a request to the server, the server creates a session token to identify the client. The server can then use that session token throughout the ongoing dialogue to keep track of who the client is.
+Broadly speaking, a **session** refers to an ongoing dialogue between two system. In the case of Express, the systems are the client and the server. When a client makes a request to the server, the server creates a session token to identify the client. The server can then use that session token throughout the ongoing dialogue to keep track of who the client is.
 
 We can store the session anywhere, but it is commonly stored in a cookie. Since anybody can create a cookie and falsify information, like a session token, the server needs a way to ensure the token is authentic and not fraudulent. The following steps occur:
 
@@ -301,93 +206,16 @@ We can store the session anywhere, but it is commonly stored in a cookie. Since 
 1. The server verifies the session by generating a signature of the session sent with its secret key and compares it with the signature sent.
 1. If the signatures match, the server can be confident the session has not been modified.
 
-### `cookie-session` middleware
+## How do you use a cookie session to authorize a user?
 
 `cookie-session` is a piece of middleware that is useful for storing, reading and signing sessions and storing them in a cookie. the library modifies the req object providing the following properties:
 
 * `req.session` represents the session stored in the cookie.
 * `req.sessionOptions` represents the settings of the session.
 
-These properties provide a way to set cookies and send them to the client and a way to sign cookies and verify their authenticity.
-
-```shell
-npm install --save cookie-session
-```
-
-Now let's use cookie-session in the server.
-
-```javascript
-const cookieSession = require('cookie-session');
-
-app.use(cookieSession({
-  name: 'trackify',
-  secret: 'some_secret_key'
-  // other cookie attributes like maxAge, expires, domain can be set here
-}));
-```
-
-Once we have the `cookie-session` module included. We can use it in our `routes/session.js`
-
-```javascript
-router.post('/session', (req, res, next) => {
-  knex('users')
-    .where('email', req.body.email)
-    .first()
-    .then((user) => {
-      if (!user) {
-        return res.sendStatus(401);
-      }
-
-      return bcrypt.compare(req.body.password, user.hashed_password);
-    })
-    .then(() => {
-      req.session.user = user;
-      res.cookie('loggedIn', true);
-      res.sendStatus(200);
-    })
-    .catch(bcrypt.MISMATCH_ERROR, () => {
-      const err = new Error('Unauthorized');
-
-      err.status = 401;
-
-      throw err;
-    })
-    .catch((err) => {
-      next(err);
-    });
-});
-```
-
-### Logging a user out
-
-Logging a user out is as easy as destroying the request session. This clears the session cookies so that the user cannot be authenticated.
-
-```javascript
-router.delete('/session', (req, res) => {
-  req.session = null;
-  res.clearCookie('loggedIn');
-  res.sendStatus(200);
-});
-```
-
-Test drive your authentication API now.
-
-```shell
-http POST localhost:8000/session email=neo@thematrix.com password=theone
-```
-
-```shell
-http DELETE localhost:8000/session
-```
-
 *Note:* The cookie is marked as `HttpOnly`, which means that the cookie can only be set over HTTP and HTTPS. It also means you cannot access cookies in JavaScript on the browser using `document.cookie`. If there is any user information, you'd like the client to use, another cookie that's accessible needs to be set.
 
-Once the authentication API is working properly, commit your changes.
-
-```shell
-git add .
-git commit -m 'Add session storage for authentication'
-```
+These properties provide a way to set cookies and send them to the client and a way to sign cookies and verify their authenticity.
 
 Install the `dotenv` package as a local development dependency.
 
@@ -430,38 +258,126 @@ app.use(cookieSession({
 // ...
 ```
 
+In the `routes/users.js` file, add the following line of code to the `POST /session` middleware.
+
+```javascript
+// ...
+
+.then(() => {
+  delete user.hashedPassword;
+
+  req.session.userId = user.id;
+
+  res.send(user);
+})
+
+// ...
+```
+
+And run the following shell command.
+
+```shell
+http POST localhost:8000/session email='2pac@shakur.com' password=ambitionz
+```
+
+And you should see something like this.
+
+```text
+SOMETHING
+```
+
+In the `routes/users.js` file, add the following line of code to the `POST /users` middleware.
+
+```javascript
+// ...
+
+.then((rows) => {
+  const user = camelizeKeys(rows[0]);
+
+  delete user.hashedPassword;
+
+  req.session.userId = user.id;
+
+  res.send(user);
+})
+
+// ...
+```
+
+And run the following shell command.
+
+```shell
+http POST localhost:8000/session email='2pac@shakur.com' password=ambitionz
+```
+
+And you should see something like this.
+
+```text
+SOMETHING
+```
+
+### Logout
+
+Logging a user out is as easy as destroying the request session. This clears the session cookies so that the user cannot be authenticated.
+
+```javascript
+router.delete('/session', (req, res, next) => {
+  req.session = null;
+
+  res.sendStatus(200);
+});
+```
+
+And run the following shell command.
+
+```shell
+http DELETE localhost:8000/session
+```
+
+And you should see something like this.
+
+```text
+SOMETHING
+```
+
+Once done, commit your changes.
+
+```shell
+git add .
+git commit -m 'Store users login state as a cookie'
+```
+
 ## Detecting whether user is authenticated
 
 Our API will eventually need to allow users to interact with our resources. For example, users may want to follow artists or create their own playlists with tracks. In these cases, it is important that we can ensure that a user can only change their own playlist. Let's start implementing the ability for a user to follow an artist. Since we have a many to many relationship, we need to create the relationship table.
 
 ```shell
-npm run knex migrate:make users_artists
+npm run knex migrate:make favorites
 ```
 
 ```javascript
-'use strict';
 
-exports.up = function(knex) {
-  return knex.schema.createTable('users_artists', (table) => {
+exports.up = function(knex, Promise) {
+  return knex.schema.createTable('favorites', (table) => {
     table.increments();
+    table.integer('track_id')
+      .notNullable()
+      .references('id')
+      .inTable('tracks')
+      .onDelete('CASCADE')
+      .index();
     table.integer('user_id')
       .notNullable()
       .references('id')
       .inTable('users')
       .onDelete('CASCADE')
       .index();
-    table.integer('artist_id')
-      .notNullable()
-      .references('id')
-      .inTable('artists')
-      .onDelete('CASCADE')
-      .index();
     table.timestamps(true, true);
   });
 };
 
-exports.down = function(knex) {
-  return knex.schema.dropTable('users_artists');
+exports.down = function(knex, Promise) {
+  return knex.schema.dropTable('favorites');
 };
 ```
 
