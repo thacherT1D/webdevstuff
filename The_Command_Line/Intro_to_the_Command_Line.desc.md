@@ -14,7 +14,7 @@ This lesson will introduce you to the fundamental commands of Mac OS X. By the e
 
 ##Exercises:
 
-1. Solve the [Command Line Murder Mystery](https://github.com/ryansobol/clmystery). To get started, clone the repo to your local machine. Further instructions can be found in the `README` for the mystery. Good luck!
+1. Solve the [Command Line Murder Mystery](https://github.com/veltman/clmystery). To get started, clone the repo to your local machine. Further instructions can be found in the `README` for the mystery. Good luck!
 
 ##Included Resources:
 
