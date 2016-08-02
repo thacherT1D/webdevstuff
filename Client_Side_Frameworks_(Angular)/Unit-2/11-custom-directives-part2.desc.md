@@ -1,4 +1,26 @@
-# Custom Directives: Part 2.
+- review
+  - directive name normalization
+  - directive scoping
+  - services concepts
+
+- discuss
+  - micro mvc (pattern at directive level)
+  - directive factory properties
+    - link (dom manipulation)
+    - transclude (to wrap content)
+    - controller (to allow directives to communicate)
+
+
+
+# Custom Directives: Part 2: DOM Manipulation
+
+So far we've just looked at custom directives that act as template partials - they abstract repeated template patterns to reduce code complexity. Although useful, these directives didn't bring any new functionality or much separation of concern to the applications. They still needed controllers loaded in the template that passed data to the isolate scope. In reality, custom directives can be entirely self contained to have more complex DOM interactions, as well as work directly with their own controllers, other services, and even other directives.
+
+## Objectives
+
+ - Create directives that manipulate the DOM using the link property
+ - Nest directives within one another that have access to the wrapping directive's controller
+ - Use directive transclusion to pass html into a directive
 
 ## DOM Manipulation
 
@@ -44,7 +66,7 @@ app.directive('gsChangeBackground', function() {
 </html>
 ```
 
-**EXERCISE**
+**QUESTION**
 
 How is the code able to call `element.on` and `element.css`?  What type of object is it?  Look in the angular docs for all available methods.
 
@@ -52,9 +74,15 @@ How is the code able to call `element.on` and `element.css`?  What type of objec
 
 The `gsChangeBackground` directive could be more customizable.  Change the code so that the user of the directive can set an attribute on the tag that specifies what the new background color should be on mouse enter.  Also, add the ability for the user to change the text color on mouse enter as well.  If no new text color is specified, the text color should not change.  Lastly, our directive only makes sense in one context.  Add a restriction to the directive so that it can only be used in the correct way.  You'll have to figure out which way that is!
 
+**EXERCISE**
+
+Make a `gsDraggable` directive that allows the user to drag whatever element it's applied to. You may want to experiment with a small element in a large, fixed parent. Some things to consider: how to handle if applied to an inline element? What if an element is dragged out of its parent?
+
+
+
 ## Directive Controllers
 
-You can attach controllers to your custom directives by using the `controller` property. Adding a controller to a directive can be a helpful way to refactor out business logic that might otherwise live inside of your `link` method, making it more difficult to read and maintain.
+You can attach controllers to your custom directives by using the `controller` property. Adding a controller to a directive can be a helpful way to refactor out business logic that might otherwise live inside of your `link` method, making it more difficult to read and maintain. Directive controllers can also hold directive specific logic that may generally go in a larger application controller. And they set the stage for directive to interact with each other.
 
 Here's the syntax for defining a controller from within your directive:
 
@@ -90,17 +118,19 @@ var app = angular.module('circleApp', []);
 
 app.directive('gsBigRedCircle', function() {
   return {
-    controller: function($scope) {
-      $scope.view = {};
-      $scope.view.sayHi = function() {
+    controller: function() {
+      var vm = this;
+      vm.view = {};
+      vm.view.sayHi = function() {
         alert("Hi! Thanks for clicking on me!");
       };
     },
+    controllerAs: 'vm',
     template: '<div class="circle">Click me!</div>',
-    link: function(scope, element, attrs) {
+    link: function(scope, element, attrs, vm) {
 
       element.on('click', function() {
-        scope.view.sayHi();
+        vm.view.sayHi();
       });
 
     }
@@ -133,10 +163,13 @@ For example, suppose you have a custom directive called `gs-parent`, and another
 ```js
 app.directive('gsParent', function() {
   return {
-    templateUrl: 'partials/parent.html',
+    template: '<gs-child></gs-child>',
+    controllerAs: 'gsParent',
     controller: function($scope) {
-      $scope.view = {};
-      $scope.view.parentMessage = function() {
+      var vm = this;
+
+      vm.view = {};
+      vm.view.parentMessage = function() {
         alert("I live on the parent!");
       };
     },
@@ -145,10 +178,10 @@ app.directive('gsParent', function() {
 
 app.directive('gsChild', function() {
   return {
-  	templateUrl: 'partials/child.html',
+    template: '<span>click me</span>',
     link: function(scope, element, attrs) {
       element.on('click', function() {
-        scope.view.parentMessage();
+        scope.gsParent.view.parentMessage();
       });
     }
   };
@@ -266,7 +299,9 @@ If we want our directives to _wrap around_ HTML content, we need to use transclu
 </div>
 ```
 
-**EXERCISE** What happens if you move the `ng-transclude` tag in the file above to some other line? How does this change the view?
+**QUESTION** What happens if you move the `ng-transclude` tag in the file above to some other line? How does this change the view?
+
+**EXERCISE** Create a directive that creates a link to hide / reveal the elements that the directive is wrapping. You should be able to pass in custom text for the link. This directive may be used in situations like an FAQ page where the questions hide/reveal the answer.
 
 Tranclusion is a huge topic, and it's easy to get lost down confusing rabbit holes. But if you'd like to push yourself, [here's](http://teropa.info/blog/2015/06/09/transclusion.html) a good place to start.
 
