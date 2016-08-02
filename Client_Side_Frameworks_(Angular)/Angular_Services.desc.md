@@ -7,7 +7,7 @@
 
 ## A brief introduction
 
-As we start building larger applications with multiple controllers, not only is our code per controller becoming larger, but we are starting to face with a new problem. How do we share data, properties and methods between controllers? Our first thought might be to use `$rootScope` and pass it to each of our controllers, but this gets messy quickly. It would be really nice to have to tool to do this - and for that we use services!
+As we start building larger applications with multiple controllers, not only is our code per controller becoming larger, but we are starting to face with a new problem. How do we share data, properties and methods between controllers?
 
 ## So many choices:
 
@@ -56,7 +56,7 @@ angular
 ### *Service* Service
 Using the service API, you create a constructor function using the `this` syntax to attach properties/methods to the constructor.
 
-Behind the sgenes, Angular calls `new` on your function to create an instance. This instance is set as the *singleton instance* that will be injected into our controllers.
+Behind the scenes, Angular calls `new` on your function to create an instance. This instance is set as the *singleton instance* that will be injected into our controllers.
 
 Here is the same service defined using the service API:
 
@@ -82,44 +82,96 @@ For right now we are going to focus on factories. They are a bit easier to reaso
 
 ## Creating our first Service
 
-#### **Note: a factory is a type of service. You will commonly see factories refered to as services**
+We are going to start off by creating a `service.js` file to define our service in. While we're at it, let's not forget to throw a script for it in our `index.html` file... `<script src="services.js"></script>`
 
-We are going to start off by creating a `service.js` file to put our service into. Remember from above that one of the reasons we use services is to DRY up our code, so creating a new file for it makes sense. The syntax to create a factory looks like this:
+Remember from above that one of the reasons we use services is to DRY up our code, so creating a new file for it makes sense.
 
 ```js
-angular
-  .module("learningServices")
-  .factory("firstService", function() {
-    // outside of the return block, we can declare private variables and functions
+(function() {
+  'use strict';
 
-    // we must return an object, everything we return can be accessed externally
+  const = app = angular.module('todoApp');
+
+  app.factory('PersonTodos', PersonTodos);
+
+  function PersonTodos() {
     return {
-      sayHi: function() {
-        return "Hello!"
+      test: function() {
+        console.log('winner winner vegan tofurkey dinner!');
       },
-      sayGoodbye: function() {
-        return "Goodbye!"
-      },
-      getAllUsers: function() {
-        // some AJAX call to our database to get all the users
-      },
-      addUser: function(user) {
-        // another AJAX call to our database to add a user
-      }
     }
-  });
+  };
+
+})();
 ```
 
-Now in our controller, we can inject this service:
+Back in our controller, we inject this service like such:
 
 ```js
-angular
-  .module("learningServices")
-  .controller("FirstController", function($scope, firstService) {
-    $scope.view = {};
-    $scope.view.greeting = firstService.sayHi();
-    $scope.view.users = firstService.getAllUsers();
-  });
+app.controller('TodoListCtrl', TodoListCtrl);
+
+TodoListCtrl.$inject = ['$http', 'PersonTodos'];
+// ----------------------------------^^^
+
+// ------------------------------vvv
+function TodoListCtrl($http, 'PersonTodos') {
+  this.todoToAdd = '';
+  this.todos = [];
+
+  PersonTodos.test();
+
+  this.addTodo = (person) => {
+    return $http.post(`${server}/${person.id}/is-todos`, {
+      completed: false,
+      text: this.todoToAdd
+    })
+    .then((res) => {
+      person.todos.push(res.data);
+      this.todoToAdd = '';
+    })
+    .catch((err) => {
+      throw err;
+    });
+  };
+}
+```
+
+If you have everything wired up correctly, when you reload the page you should see your message in the console. 🌱🐔 <-- That's a vegetable turkey!
+
+The `addTodo` method is making an http request to our API. That sounds prime for some.. re-factorying
+
+![please clap](https://media.giphy.com/media/l0NwPo3VHujpJDI4w/giphy.gif)
+
+Replace your `test` method with an `addTodo` method.
+
+```js
+(function() {
+  'use strict';
+
+  const = app = angular.module('todoApp');
+
+  app.factory('PersonTodos', PersonTodos);
+
+  function PersonTodos() {
+    return {
+      addTodo: function(id, todoText) {
+        return $http.post(`${server}/${id}/is-todos`, {
+          completed: false,
+          text: todoText
+        });
+      },
+    }
+  };
+
+})();
+```
+
+In our controller we will update the `$http.get(server)` call to the `getPeople` method from our People factory.
+
+```js
+function PeopleCtrl($http, 'PersonTodos') {
+
+};
 ```
 
 ### Answer the following questions:
@@ -128,17 +180,6 @@ angular
 - What is the difference between a factory and a service?
 - Name at least 3 angular built in services that we have used so far.
 
-**EXERCISE todoService**
-
-For this exercise you will be refactoring your todo app. This will involve removing logic related to storing your todos in your app, and also moving logic related to initializing your todos and adding todos into a factory.
-
-All of your logic to create, show, updated and delete todos and people  should be inside of a **service**.
-
-/*
-- a user should be able to edit each individual todo.
-*/
-
-Currently your controllers should looks something like this:
 
 ```js
 // controllers.js
