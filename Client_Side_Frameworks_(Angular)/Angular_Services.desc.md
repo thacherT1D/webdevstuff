@@ -1,6 +1,6 @@
 ## Objectives
 
-* Explain what Angular services are.
+* Explain what an Angular services is.
 * Explain the difference between Angular services and factories.
 * Build a custom Angular service.
 * Inject a custom Angular service into an Angular controller.
@@ -363,7 +363,7 @@ function PersonCtrl($routeParams, peopleSvc) {
 ```js
 // services.js
 
-people.$inject = ['$http', '$q'];
+people.$inject = ['$http', '$q']; // added the $q promise service
 
 function people($http, $q) {
   return {
@@ -421,12 +421,17 @@ function PeopleCtrl(peopleSvc) {
 ### Resources
 
 [Singleton Design Pattern](http://robdodson.me/javascript-design-patterns-singleton/)
+
 [Singleton Wiki](https://en.wikipedia.org/wiki/Singleton_pattern)
+
 [Putting Angular Code in the Right Place](http://datamelon.io/blog/2016/putting-angular-code-in-the-right-place.html)
 
 More about the differences between factories and services:
 
 [ng-newsletter: The short guide to service definitions](http://www.ng-newsletter.com/25-days-of-angular/day-1)
+
 [Service VS Factory - ONCE AND FOR ALL](http://blog.thoughtram.io/angular/2015/07/07/service-vs-factory-once-and-for-all.html)
+
 [AngularJS: Factory vs Service vs Provider](http://tylermcginnis.com/angularjs-factory-vs-service-vs-provider/)
+
 [AngularJS Providers Explained](https://gist.github.com/demisx/9605099)
