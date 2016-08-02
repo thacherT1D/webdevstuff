@@ -301,6 +301,123 @@ function PeopleCtrl(peopleSvc) {
 }
 ```
 
+These next two `activate` functions are a bit heafty so we're just going to drop all the code
+at once and walk through it together.
+
+> `getPerson` method for `PersonCtrl`'s `activate` call.
+
+```js
+// services.js
+
+function people($http)  {
+  return {
+    addPerson: (name) => {
+      // codez...
+    },
+    getPerson: (id) => {
+      let person;
+
+      return $http.get(`${server}/${id}`)
+        .then((res) => {
+          person = res.data;
+
+          return $http.get(`${server}/${id}/is-todos`);
+        })
+        .then((res) => {
+          person.todos = res.data;
+          return person;
+        })
+        .catch((err) => {
+          throw err;
+        });
+    },
+  }
+}
+```
+
+```js
+// controllers.js
+
+PersonCtrl.$inject = ['$routeParams', 'people']; // no more $http, and added people
+
+function PersonCtrl($routeParams, peopleSvc) {
+    this.person = {};
+
+    const { id } = $routeParams;
+
+    const activate = () => {
+      peopleSvc.getPerson(id).then((person) => {
+        this.person = person;
+      })
+      .catch((err) => {
+        throw err;
+      });
+    };
+
+    activate();
+  }
+```
+
+> `getAll` method for `PeopleCtrl`'s `activate` call.
+
+```js
+// services.js
+
+people.$inject = ['$http', '$q'];
+
+function people($http, $q) {
+  return {
+    getAll: function() {
+      return $http.get(server).then((res) => {
+        return $q.all(res.data.map((person) => {
+          return $http.get(`${server}/${person.id}/is-todos`)
+            .then((todos) => {
+              person.todos = todos.data;
+              return person;
+            })
+            .catch((err) => {
+              throw err;
+            });
+        }));
+      })
+      .catch((err) => {
+        throw err;
+      });
+    },
+    addPerson: (name) => {
+      // codez...
+    },
+    getPerson: (id) => {
+      // codez...
+    },
+  }
+}
+```
+
+```js
+// controllers.js
+
+function PeopleCtrl(peopleSvc) {
+  this.nameToAdd = '';
+  this.people = [];
+
+  this.addPerson = () => {
+    // codez...
+  };
+
+  const activate = () => {
+    peopleSvc.getAll().then((peopleList) => {
+      this.people = peopleList;
+    })
+    .catch((err) => {
+      throw err;
+    })
+  };
+
+  activate();
+}
+```
+
 ### Resources
 
 [Singleton Design Pattern](http://robdodson.me/javascript-design-patterns-singleton/)
