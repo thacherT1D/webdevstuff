@@ -464,7 +464,7 @@ git merge session
 
 ## Assignment
 
-- [Galvanize Bookshelf - User authentication](https://github.com/gSchool/galvanize-bookshelf/blob/master/4_user_authentication.md)
+- [Galvanize Bookshelf - Authentication and Authorization](https://github.com/gSchool/galvanize-bookshelf/blob/master/4_authentication_authorization.md)
 
 ## Resources
 
