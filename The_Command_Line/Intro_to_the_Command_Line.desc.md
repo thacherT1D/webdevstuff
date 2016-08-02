@@ -206,7 +206,6 @@ ls -hl
 
 ![](https://i.imgur.com/oUiKGx6.png)
 
-**TIP:** In fish, the `ll` command is the same as `ls -hl` only faster to type.
 
 ### Hidden files and directories
 
