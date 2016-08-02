@@ -208,6 +208,74 @@ function TodoListCtrl('personTodos') {
 
 Should be good to go. Let's test out adding a todo.
 
+Moving on to the next controller, `PeopleCtrl`. The first thing we have
+in there that can be refactored into our factory is the `addPerson`
+funciton. We can start off by creating a new factory called `people` in
+our `services.js` file.
+
+```js
+app.factory('people', people);
+
+function people() {
+  return {
+    addPerson: () => {
+      console.log('things and stuff');
+    }
+  }
+}
+```
+
+We won't be needing `$http` in our controller anymore so let's swap that
+out for our `people` factory.
+
+```js
+  PeopleCtrl.$inject = ['person'] // person in $http out
+
+  function PeopleCtrl(person) {
+    this.nameToAdd = '';
+    this.people = [];
+
+    person.addPerson() // should log out our stuffs!
+
+    // more codez...
+  }
+```
+
+With that all wired up, we can move on to pulling the code from our
+controllers `addPerson` and paste it into our factory.
+  * inject `$http` into our factory.
+  * provide a `name` parameter for our method.
+  * we will want to return our `$http` request.
+  * we can swap out `this.nameToAdd` with the one that gets passed in.
+  * at the top of our `services.js` file create a const pointing at the
+    server url called `server`.
+  * we will fully update our promise handler.
+    * create a person constant set to `res.data`.
+    * create a `todos` property on person set to an emptry array.
+    * then return `person`.
+
+```js
+const server = 'https://galvanize-todos.herokuapp.com/is-persons';
+
+app.factory('people', people);
+people.$inject = ['$http'];
+
+function people($http) {
+  return {
+    addPerson: (name) => {
+      return $http.post(server, { name })
+        .then((res) => {
+          const person = res.data;
+          person.todos = [];
+          return person;
+        })
+        .catch((err) => {
+          throw err;
+        });
+    }
+  }
+}
+```
 
 ### Resources
 
