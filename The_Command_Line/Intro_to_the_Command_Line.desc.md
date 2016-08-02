@@ -542,7 +542,7 @@ Adapted from [http://en.flossmanuals.net/command-line/piping/](http://en.flossma
 1. Using `ls` list all files in the current directory that contain the word 'book'
 2. Using `cat` list all the books in `books.txt` where the author or book title contains "John".
 3. Using `tree` find the fullpath of all the files on your file system which contain the string 'book'
-4. **CHALLENGE**, using `cat` again, list the books written by an author whose first or last name is John. Remember, Jack London's John Barleycorn doesn't count. Pipe the output of this to `sort`. Your output should match this:
+4. **CHALLENGE**, using `grep` again, list the books written by an author whose first or last name is John. Remember, Jack London's John Barleycorn doesn't count. Pipe the output of this to `sort`. Your output should match this:
 
 ```
 Bartlett, John:Familiar Quotations
