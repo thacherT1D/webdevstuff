@@ -9,7 +9,7 @@
 
 ## What's authentication?
 
-**Authentication** is the process of confirming the identity of a user. When a user logs into a web application, he or she is attempting to authenticate. To confirm his or her identity, unique personal identification, like a username or email address, and a password must be provided. If the information provided during login matches the information previously provided during registration, the user is authenticated.
+**Authentication** is the process of confirming the identity of a user. When a user logs into a web application, that person is attempting to authenticate. To confirm their identity, the user must provide unique personal identification, like a username or email address, and a password. If the information provided during login matches the information previously provided during registration, the user is authenticated.
 
 However, it's not quite as simple as that. As you've seen, only hashed passwords are stored in the database during registration. To verify whether a login password is correct, it too must be run through the same cryptographic hash function as the registration password. Only if the two hashed passwords are equivalent is the user authenticated.
 
@@ -17,17 +17,15 @@ However, it's not quite as simple as that. As you've seen, only hashed passwords
 
 Turn to a neighbor and explain the user authentication process from the perspective of an HTTP server. It may help to draw a diagram of what's happening.
 
-## Why is user authentication important?
+## Why is authentication important?
 
 So a web application can show information—sometimes public, most of the time private—that's specific to each user.
 
 ## How do you use bcrypt to authenticate a user?
 
-Previously, you used the `bcrypt.hash()` method to hash a password during user registration. Additionally, the `bcrypt.compare()` method checks whether or not a login plaintext password matches a registration hashed password.
+Previously, you used the `bcrypt.hash()` method to hash a password during user registration. For authentication, you'll use the `bcrypt.compare()` method to check whether or not a login plaintext password matches a registration hashed password.
 
-Now, let's create a route for logging in and use `bcrypt`.
-
-To get started, navigate to the `trackify` project directory.
+Let's add authentication to the `trackify` project. To get started, navigate to the `trackify` project directory.
 
 ```shell
 cd path/to/trackify
@@ -63,7 +61,7 @@ exports.seed = function(knex) {
 };
 ```
 
-Then, re-seed the database.
+And re-seed the database.
 
 ```shell
 npm run knex seed:run
@@ -173,12 +171,12 @@ Once you get a successful response, commit your changes.
 
 ```shell
 git add .
-git commit -m 'Add authentication endpoint'
+git commit -m 'Add POST /session middleware'
 ```
 
 ## What is a cookie?
 
-The process of **user authentication** starts when a user provides a password to be stored for future login. Instead of requiring authentication for each request the browser needs to make, the server sends a small piece of data to the browser called a **cookie** to hold onto authentication information.
+The process of authentication starts when a user provides a password to be stored for future login. Instead of requiring authentication for each request the browser needs to make, the server sends a small piece of data to the browser called a **cookie** to hold onto authentication information.
 
 Cookies are sent in the response header called `Set-Cookie`. This header informs the web browser to optionally store the cookie and send it back in future requests to the server (the user can disable cookies).
 
