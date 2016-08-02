@@ -244,8 +244,6 @@ psql trackify_dev -c 'SELECT * FROM knex_migrations_lock;'
 │                            users                            │
 ├───────────┬─────────────────────────┬───────────────────────┤
 │id         │serial                   │primary key            │
-│first_name │varchar(255)             │not null default ''    │
-│last_name  │varchar(255)             │not null default ''    │
 │email      │varchar(255)             │not null unique index  │
 │created_at │timestamp with time zone │not null default now() │
 │updated_at │timestamp with time zone │not null default now() │
@@ -266,8 +264,6 @@ ls -hal migrations
 exports.up = function(knex) {
   return knex.schema.createTable('users', (table) => {
     table.increments();
-    table.string('first_name').notNullable().defaultTo('');
-    table.string('last_name').notNullable().defaultTo('');
     table.string('email').notNullable().unique();
     table.timestamps(true, true);
   });
@@ -421,9 +417,7 @@ exports.seed = function(knex) {
     .then(() => {
       return knex('users').insert([{
         id: 1,
-        first_name: 'Tupac',
-        last_name: 'Shakur',
-        email: 'tupac@isalive.com',
+        email: '2pac@shakur.com',
         created_at: new Date('2016-06-29 14:26:16 UTC'),
         updated_at: new Date('2016-06-29 14:26:16 UTC')
       }]);
