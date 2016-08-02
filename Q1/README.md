@@ -335,7 +335,7 @@ Week 4
       </td>
       <td><a href="https://github.com/gschool/browser-dom-curriculum/blob/master/HTTP/README.md">HTTP</a>
       </td>
-      <td><a href="../../Projects/Q1.md">Q1 Project</a>
+      <td><a href="../Projects/Q1.md">Q1 Project</a>
       </td>
       <td>
       </td>
@@ -357,7 +357,7 @@ Week 4
       </td>
       <td><a href="https://github.com/gSchool/html-css-curriculum/blob/master/UI/Wireframing.md">Wireframing</a>
       </td>
-      <td><a href="../../Projects/Q1.md">Q1 Project</a>
+      <td><a href="../Projects/Q1.md">Q1 Project</a>
       </td>
       <td>
       </td>
@@ -411,7 +411,7 @@ Week 4
       </td>
       <td><a href="https://github.com/gschool/productivity-curriculum/blob/master/Agile/README.md">Project Mangement</a>
       </td>
-      <td><a href="../../Projects/Q1.md">Q1 Project</a>
+      <td><a href="../Projects/Q1.md">Q1 Project</a>
       </td>
       <td>
       </td>
@@ -439,7 +439,7 @@ Week 5
       </td>
       <td>
       </td>
-      <td><a href="../../Projects/Q1.md">Q1 Project</a>
+      <td><a href="../Projects/Q1.md">Q1 Project</a>
       </td>
       <td>
       </td>
@@ -450,7 +450,7 @@ Week 5
       </td>
       <td>
       </td>
-      <td><a href="../../Projects/Q1.md">Q1 Project</a>
+      <td><a href="../Projects/Q1.md">Q1 Project</a>
       </td>
       <td>
       </td>
@@ -461,7 +461,7 @@ Week 5
       </td>
       <td>
       </td>
-      <td><a href="../../Projects/Q1.md">Q1 Project</a>
+      <td><a href="../Projects/Q1.md">Q1 Project</a>
       </td>
       <td>
       </td>
