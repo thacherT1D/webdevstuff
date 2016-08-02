@@ -2,7 +2,6 @@
 
 * Missing You-Do
 
-
 </div>
 
 ## Lecture (I do)
