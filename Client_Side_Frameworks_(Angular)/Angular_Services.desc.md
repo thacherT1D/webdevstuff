@@ -84,13 +84,13 @@ For right now we are going to focus on factories. They are a bit easier to reaso
 
 We are going to start off by creating a `service.js` file to define our service in. While we're at it, let's not forget to throw a script for it in our `index.html` file... `<script src="services.js"></script>`
 
-Remember from above that one of the reasons we use services is to DRY up our code, so creating a new file for it makes sense.
+Remember from above that one of the reasons we use services is seperation of concerns, so creating a new file for it makes sense.
 
 ```js
 (function() {
   'use strict';
 
-  const = app = angular.module('todoApp');
+  const app = angular.module('todoApp');
 
   app.factory('PersonTodos', PersonTodos);
 
@@ -142,22 +142,31 @@ The `addTodo` method is making an http request to our API. That sounds prime for
 
 ![please clap](https://media.giphy.com/media/l0NwPo3VHujpJDI4w/giphy.gif)
 
-Replace your `test` method with an `addTodo` method.
-
+Now that we know it's working let's replace that `test` method with an `addTodo` method. You can go ahead and just pull all the code from the `addTodo` method in your controller for this. We'll be changing just a couple things.
+  * it will now also take the `todoText` as a second parameter.
+  * in the *then* we will get rid of the `push` to `res.data` and just return the response data instead.
+  * inject `$http` into our controller.
 ```js
 (function() {
   'use strict';
 
   const = app = angular.module('todoApp');
 
-  app.factory('PersonTodos', PersonTodos);
+  app.factory('personTodos', personTodos);
+  PersonTodos.$inject = ['$http'];
 
-  function PersonTodos() {
+  function personTodos($http) {
     return {
       addTodo: function(id, todoText) {
         return $http.post(`${server}/${id}/is-todos`, {
           completed: false,
           text: todoText
+        })
+        .then((res) => {
+          return res.data;
+        })
+        .catch((err) => {
+          throw err;
         });
       },
     }
@@ -165,14 +174,31 @@ Replace your `test` method with an `addTodo` method.
 
 })();
 ```
-
-In our controller we will update the `$http.get(server)` call to the `getPeople` method from our People factory.
+In our controller we will want to make a few changes as well.
+  * our controller will no longer need `$http` injected into it.
+  * we can swap out that `$http.post` request with a call to our factory
+    method instead.
+  * update our *then* push the `todo` and clear text in `todoToAdd`.
 
 ```js
-function PeopleCtrl($http, 'PersonTodos') {
+function TodoListCtrl('personTodos') {
+  this.todoToAdd = '';
+  this.todos = [];
 
-};
+  this.addTodo = (person) => {
+    personTodos.addTodo(person, this.todoToAdd)
+      .then((todo) => {
+        person.todos.push(todo);
+        this.todoToAdd = '';
+      })
+      .catch((err) => {
+        throw err;
+      });
+  };
+}
 ```
+
+Should be good to go. Let's test out adding a todo.
 
 ### Answer the following questions:
 
