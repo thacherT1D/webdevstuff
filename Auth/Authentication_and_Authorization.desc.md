@@ -185,7 +185,7 @@ When a user successfully logs in to an application, the server starts the author
 For example, if a user logged into the system with the following shell command.
 
 ```shell
-http POST localhost:8000/session email='2pac@shakur.com' password=ambitionz
+http POST localhost:8000/session email='2pac@shakur.com' password=ambition
 ```
 
 We want the server to send back the following response.
@@ -195,7 +195,7 @@ HTTP/1.1 200 OK
 Connection: keep-alive
 Content-Length: 112
 Content-Type: application/json; charset=utf-8
-Date: Tue, 02 Aug 2016 20:27:10 GMT
+Date: Tue, 02 Aug 2016 21:53:00 GMT
 ETag: W/"70-1qLFVreC078yebGK0TQomg"
 Set-Cookie: trackify=eyJ1c2VySWQiOjF9; path=/; httponly
 Set-Cookie: trackify.sig=RQbOCG127mu32s5Tb1q2v3grBzs; path=/; httponly
@@ -218,9 +218,19 @@ Instead of requiring the user to authenticate for each request
 Clients request contains a `Cookie` HTTP header.
 
 Example HTTP Request Header:
+
+```shell
+http -p=H GET localhost:8000/playlists 'Cookie: trackify=eyJ1c2VySWQiOjF9; trackify.sig=RQbOCG127mu32s5Tb1q2v3grBzs;'
 ```
-GET / HTTP/1.1
-Cookie: theme=light; sessionToken=abc123;
+
+```
+GET /playlists HTTP/1.1
+Accept: */*
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+Cookie:  trackify=eyJ1c2VySWQiOjF9; trackify.sig=RQbOCG127mu32s5Tb1q2v3grBzs;
+Host: localhost:8000
+User-Agent: HTTPie/0.9.4
 ```
 
 Broadly speaking, a **session** refers to an ongoing dialogue between two system. In the case of Express, the systems are the client and the server. When a client makes a request to the server, the server creates a session token to identify the client. The server can then use that session token throughout the ongoing dialogue to keep track of who the client is.
@@ -421,12 +431,12 @@ In the `seeds/3_playlist.js` file, type the following code.
 'use strict';
 
 exports.seed = function(knex) {
-  return knex('users').del()
+  return knex('playlists').del()
     .then(() => {
       return knex('playlists').insert([{
         id: 1,
-        user_id: 1,
         track_id: 1,
+        user_id: 1,
         created_at: new Date('2016-06-29 14:26:16 UTC'),
         updated_at: new Date('2016-06-29 14:26:16 UTC')
       }]);
@@ -476,6 +486,8 @@ router.get('/playlists', authorize, (req, res, next) => {
       next(err);
     });
 });
+
+module.exports = router;
 ```
 
 ```shell
