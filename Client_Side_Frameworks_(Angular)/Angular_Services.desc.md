@@ -229,16 +229,16 @@ We won't be needing `$http` in our controller anymore so let's swap that
 out for our `people` factory.
 
 ```js
-  PeopleCtrl.$inject = ['person'] // person in $http out
+PeopleCtrl.$inject = ['people'] // people in $http out
 
-  function PeopleCtrl(person) {
-    this.nameToAdd = '';
-    this.people = [];
+function PeopleCtrl(peopleSvc) {
+  this.nameToAdd = '';
+  this.people = [];
 
-    person.addPerson() // should log out our stuffs!
+  peopleSvc.addPerson() // should log out our stuffs!
 
-    // more codez...
-  }
+  // more codez...
+}
 ```
 
 With that all wired up, we can move on to pulling the code from our
@@ -273,6 +273,30 @@ function people($http) {
           throw err;
         });
     }
+  }
+}
+```
+
+Annnnnd, back to the controller...
+  * replace the `$http` request with our factory method.
+  * pass the `nameToAdd` to our method.
+  * update our `people` array with our new `person`.
+  * clear the `nameToAdd` field.
+
+```js
+function PeopleCtrl(peopleSvc) {
+  this.nameToAdd = '';
+  this.people = [];
+
+  this.addPerson = () => {
+    peopleSvc.addPerson(this.nameToAdd)
+      .then((person) => {
+        this.people.push(person);
+        this.nameToAdd = '';
+      })
+      .catch((err) => {
+        throw err;
+      });
   }
 }
 ```
