@@ -80,6 +80,12 @@ A provider is the most complex method and is used less frequently. It is a facto
 
 For right now we are going to focus on factories. They are a bit easier to reason about having not gotten into OOP and instantiation yet. Many articles will lean towards factories, but with the new ES2015 syntax, services are becoming more preferable. Be aware of both of these and the differences between them.
 
+### Answer the following questions:
+
+- What is a service? What problem do they solve for us?
+- What is the difference between a factory and a service?
+- Name at least 3 angular built in services that we have used so far.
+
 ## Creating our first Service
 
 We are going to start off by creating a `service.js` file to define our service in. While we're at it, let's not forget to throw a script for it in our `index.html` file... `<script src="services.js"></script>`
@@ -92,9 +98,9 @@ Remember from above that one of the reasons we use services is seperation of con
 
   const app = angular.module('todoApp');
 
-  app.factory('PersonTodos', PersonTodos);
+  app.factory('personTodos', personTodos);
 
-  function PersonTodos() {
+  function personTodos() {
     return {
       test: function() {
         console.log('winner winner vegan tofurkey dinner!');
@@ -110,15 +116,15 @@ Back in our controller, we inject this service like such:
 ```js
 app.controller('TodoListCtrl', TodoListCtrl);
 
-TodoListCtrl.$inject = ['$http', 'PersonTodos'];
+TodoListCtrl.$inject = ['$http', 'personTodos'];
 // ----------------------------------^^^
 
 // ------------------------------vvv
-function TodoListCtrl($http, 'PersonTodos') {
+function TodoListCtrl($http, 'personTodos') {
   this.todoToAdd = '';
   this.todos = [];
 
-  PersonTodos.test();
+  personTodos.test(); // 👈🏽
 
   this.addTodo = (person) => {
     return $http.post(`${server}/${person.id}/is-todos`, {
@@ -145,7 +151,8 @@ The `addTodo` method is making an http request to our API. That sounds prime for
 Now that we know it's working let's replace that `test` method with an `addTodo` method. You can go ahead and just pull all the code from the `addTodo` method in your controller for this. We'll be changing just a couple things.
   * it will now also take the `todoText` as a second parameter.
   * in the *then* we will get rid of the `push` to `res.data` and just return the response data instead.
-  * inject `$http` into our controller.
+  * inject `$http` into our service.
+
 ```js
 (function() {
   'use strict';
@@ -157,8 +164,8 @@ Now that we know it's working let's replace that `test` method with an `addTodo`
 
   function personTodos($http) {
     return {
-      addTodo: function(id, todoText) {
-        return $http.post(`${server}/${id}/is-todos`, {
+      addTodo: (person, todoText) => {
+        return $http.post(`${server}/${person.id}/is-todos`, {
           completed: false,
           text: todoText
         })
@@ -174,6 +181,7 @@ Now that we know it's working let's replace that `test` method with an `addTodo`
 
 })();
 ```
+
 In our controller we will want to make a few changes as well.
   * our controller will no longer need `$http` injected into it.
   * we can swap out that `$http.post` request with a call to our factory
@@ -200,68 +208,6 @@ function TodoListCtrl('personTodos') {
 
 Should be good to go. Let's test out adding a todo.
 
-### Answer the following questions:
-
-- What is a service? What problem do they solve for us?
-- What is the difference between a factory and a service?
-- Name at least 3 angular built in services that we have used so far.
-
-
-```js
-// controllers.js
-
-(function() {
-  'use strict';
-
-  angular
-    .module('todoApp')
-
-    .controller('TodoListCtrl', function() {
-      this.todoToAdd = '';
-      this.todos = [];
-
-      this.addTodo = (todoText) => {
-        this.todos.push({
-          completed: false,
-          text: todoText
-        });
-        this.todoToAdd = '';
-      };
-    })
-
-    .controller('PeopleCtrl', function() {
-      this.nameToAdd = '';
-      this.people = [];
-
-      this.addPerson = (personName) => {
-        this.people.push({ name: personName });
-        this.nameToAdd = '';
-      };
-    });
-
-})();
-```
-
-We know that we are going to be abstracting some things out of the controllers here into services, and we know that our servies are going to be defined in the `services.js` file we already created. Let's go over to that file and build out the basic skelton for those services.
-
-```js
-// services.js
-
-(function() {
-  'use strict';
-
-  const app = angular.module('todoApp');
-
-  app.factory('Todos', function() {
-    return {
-      addTodo: function(todo) {
-        // POST todo data
-      },
-    }
-  });
-})();
-```
-In the above `TodoListCtrl` we have a method which pushes data for a todo into the `todos` array that is also defined on this controller.
 
 ### Resources
 
