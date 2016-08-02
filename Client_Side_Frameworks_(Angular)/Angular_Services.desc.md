@@ -150,14 +150,17 @@ The `addTodo` method is making an http request to our API. That sounds prime for
 
 Now that we know it's working let's replace that `test` method with an `addTodo` method. You can go ahead and just pull all the code from the `addTodo` method in your controller for this. We'll be changing just a couple things.
   * it will now also take the `todoText` as a second parameter.
+  * at the top of our `services.js` file create a const pointing at the server url.
   * in the *then* we will get rid of the `push` to `res.data` and just return the response data instead.
   * inject `$http` into our service.
+
 
 ```js
 (function() {
   'use strict';
 
   const app = angular.module('todoApp');
+  const server = 'https://galvanize-todos.herokuapp.com/is-persons';
 
   app.factory('personTodos', personTodos);
   personTodos.$inject = ['$http'];
@@ -247,8 +250,6 @@ controllers `addPerson` and paste it into our factory.
   * provide a `name` parameter for our method.
   * we will want to return our `$http` request.
   * we can swap out `this.nameToAdd` with the one that gets passed in.
-  * at the top of our `services.js` file create a const pointing at the
-    server url called `server`.
   * we will fully update our promise handler.
     * create a person constant set to `res.data`.
     * create a `todos` property on person set to an emptry array.
