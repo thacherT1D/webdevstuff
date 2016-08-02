@@ -95,7 +95,7 @@
       </td>
       <td><a href="https://github.com/gSchool/stoplight-event-exercise">Stoplight Events</a>
       </td>
-      <td>
+      <td><a href="https://github.com/gSchool/wheres-waldo">Where's Waldo</a>
       </td>
     </tr>
     <tr>

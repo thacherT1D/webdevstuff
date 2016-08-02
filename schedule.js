@@ -113,6 +113,7 @@ module.exports = function() {
           {
             article: { text: "DOM Events", url: "https://github.com/gSchool/browser-dom-curriculum/blob/master/DOM/Events.md" },
             assignment: { text: "Stoplight Events", url: "https://github.com/gSchool/stoplight-event-exercise" },
+            stretch: { text: "Where's Waldo", url: "https://github.com/gSchool/wheres-waldo" },
           },
         ]
       },
