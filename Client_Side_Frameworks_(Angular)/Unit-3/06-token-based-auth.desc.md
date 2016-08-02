@@ -1,13 +1,14 @@
 # Authentication with Angular and JSON Web Tokens.
 
-**Standard**: Implement and diagram JWT-based authentication between single-page apps and servers
-
-The **objectives** for this article are:
+## Objectives:
 
 - Use interceptors to respond to HTTP requests/responses globally
 - Use `resolve` in routes to resolve dependencies that use promises
 - Use route life cycle + listeners to run code whenever routes change globally
 - Use `angular.run` to run code when the angular app boots
+
+## Resources:
+
 
 
 ### Introduction to Token Authentication
@@ -29,13 +30,13 @@ Before the emergence of single page applications, we usually had a single client
 
 We now have many different technologies and tools and our Single Page Applications consume multiple APIs. We can easily have an application that uses a Node API, a Rails API as well as other Web/Mobile APIs. This makes it a nightmare and almost impossible to try to share cookie/session data between these APIs. It would be really nice if we could have one single "secret" (a key we store on a server) on all of our servers and share the token between each one!
 
-Some other advantages include performance, CSRF protection, ease of testing and mobile development. You can read more about these advantages [here](https://auth0.com/blog/2014/01/07/angularjs-authentication-with-cookies-vs-token/)
+Some other advantages include performance, Cross-Site Request Forgery (CSRF) protection, ease of testing and mobile development. You can read more about these advantages [here](https://auth0.com/blog/2014/01/07/angularjs-authentication-with-cookies-vs-token/)
 
 ### Introducing JSON Web Tokens
 
 So now that we know that tokens are a better option, what kind of token should we use? The most popular tool right now are JSON Web Tokens (JWT for short - pronounced "Jot"). So what is a JWT?
 
-From [jwt.io](jwt.io):
+From [jwt.io](https://jwt.io):
 
 > JSON Web Token (JWT) is an open standard (RFC 7519) that defines a compact and self-contained way for securely transmitting information between parties as a JSON object. This information can be verified and trusted because it is digitally signed. JWTs can be signed using a secret (with HMAC algorithm) or a public/private key pair using RSA.
 
@@ -140,6 +141,7 @@ request: function(config){
 Very commonly, we want to make sure that promises are resolved before we render a page. For example, if we are requesting some data from a server, we might want to wait until we have that data before we render the page. To do this, we use the resolve property which is accessible in each one of our routes. Another excellent use case for resolve is to make sure that a user is authorized to access a certain page. We wouldn't want to partially load a page that a user should not access - we should stop them before they see anything!
 
 Here is an example of a resolve. In this route we are injecting two dependencies into our controller, currentUser and users.
+
 ```js
 .when('/home',{
   templateUrl: "templates/home.html",
@@ -163,7 +165,6 @@ Here are three good resources to learn more about resolve:
 
 [https://www.youtube.com/watch?v=cRjh7Pwobug](https://www.youtube.com/watch?v=cRjh7Pwobug)
 
-If you are using `ui-router`, it also implements similar functionality: https://github.com/angular-ui/ui-router/wiki#resolve
 
 ### Route Life Cycle + Listeners
 
@@ -175,15 +176,6 @@ We are going to be using this example to see how this can be implemented:
 
 [Example Auth Application](./examples/auth_example)
 
-### Refactoring to use angular-jwt + angular-storage
-
-So writing our own interceptors is quite rough! It would be really nice if we had a tool that could handle the creation and management of our interceptor. For that we have angular-jwt. You can learn more about it as well as a useful tool for handling localStorage (and fallback management) with angular-storage [here](https://www.youtube.com/watch?v=lDb_GANDR8U) and [here](https://github.com/auth0/angular-jwt)
-
-### Social Auth
-
-There is also another tool called [satelizer](https://github.com/sahat/satellizer) which can handle multiple social auth providers for you. You can see a demo [here](https://satellizer.herokuapp.com/#/) as well as an example for what a backend with node might look like [here](https://github.com/sahat/satellizer/blob/master/examples/server/node/server.js)
-
- If you find satelizer to be too difficult, Auth0 is another option tool. You can get started with this tutorial (here)[https://www.youtube.com/watch?v=ug_KmAZFe9Q](https://www.youtube.com/watch?v=ug_KmAZFe9Q) (but be warned - this is still quite challenging)
 
 ### Exercise
 
