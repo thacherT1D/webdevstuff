@@ -483,10 +483,23 @@ See the [equality operators](https://developer.mozilla.org/en-US/docs/Web/JavaSc
 
 ### Exercise
 
-Take a whiteboard and write 2 boolean comparisons of primitive values. Have the first one be identical to the second EXCEPT for 2 things:
-1. One comparison must have a strict equality operator while the other has a loose equality operator
-1. One comparison must evaluate to false while the other evaluates to true
-1. Talk to a neighbor about how double equals (==) and triple equals (===) are different from single equals (=) 
+Predict the outcome of the the comparison `(1 == 1)`. Then evaluate it in Chrome's __JavaScript Console__.
+
+How to go to the console:
+- Enter `about:blank` into the address bar
+- Press `command + option + J`. This should open Chrome's __JavaScript Console__
+- Look at the result
+
+Do the same prediction and evaluation for the following comparisons:
+- `(1 === '1')`
+- `(1 == 'zero')`
+- `(1 != '000')`
+- `(0 !== '')`
+- `(0 !== 'refrigerator')`
+
+Turn to a neighbor and discuss which evaluations didn't turn out how you expected and why they may have turned out the way that they did
+
+Talk to a neighbor about how double equals (==) and triple equals (===) are different from single equals (=)
 
 ### Conditionals
 
