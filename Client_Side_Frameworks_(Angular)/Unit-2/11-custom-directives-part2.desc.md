@@ -1,17 +1,3 @@
-- review
-  - directive name normalization
-  - directive scoping
-  - services concepts
-
-- discuss
-  - micro mvc (pattern at directive level)
-  - directive factory properties
-    - link (dom manipulation)
-    - transclude (to wrap content)
-    - controller (to allow directives to communicate)
-
-
-
 # Custom Directives: Part 2: DOM Manipulation
 
 So far we've just looked at custom directives that act as template partials - they abstract repeated template patterns to reduce code complexity. Although useful, these directives didn't bring any new functionality or much separation of concern to the applications. They still needed controllers loaded in the template that passed data to the isolate scope. In reality, custom directives can be entirely self contained to have more complex DOM interactions, as well as work directly with their own controllers, other services, and even other directives.
