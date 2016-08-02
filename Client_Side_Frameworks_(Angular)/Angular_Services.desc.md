@@ -160,7 +160,7 @@ Now that we know it's working let's replace that `test` method with an `addTodo`
   const app = angular.module('todoApp');
 
   app.factory('personTodos', personTodos);
-  PersonTodos.$inject = ['$http'];
+  personTodos.$inject = ['$http'];
 
   function personTodos($http) {
     return {
