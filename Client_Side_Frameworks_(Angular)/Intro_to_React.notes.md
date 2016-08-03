@@ -339,7 +339,7 @@ In addition, an arbitrary number of children can be passed as arguments into the
 
 **NOTE:** The order children are passed into the `React.createElement()` function is the order they'll be mounted.
 
-As you can see from the above code, the `props` object is made up of key-value pairs that set the HTML attributes of the element. Any HTML attribute can be a key in `props` object so long as it's converted to camelcase. However, `class` and `for` are reserved keywords in JavaScript so `className` and `htmlFor` must be used instead.
+As you can see from the above code, the `props` object is made up of key-value pairs that set the HTML attributes of the element. Any HTML attribute can be a key in the `props` object so long as it's converted to camelcase. However, `class` and `for` are reserved keywords in JavaScript so `className` and `htmlFor` must be used instead.
 
 **NOTE:** Here's an official list of the [supported HTML tags and attributes](https://facebook.github.io/react/docs/tags-and-attributes.html) in React.
 
