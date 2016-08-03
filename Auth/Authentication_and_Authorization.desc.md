@@ -180,15 +180,17 @@ git commit -m 'Add POST /session middleware'
 
 **Authorization** is the process of granting access to private resources. After a user is authenticated, that person will often want to access private information stored in a database. An authorization system uses access control rules to decide whether or not the authenticated user is approved to access that information.
 
-When a user successfully logs in to an application, the server starts the authorization process by creating session using an HTTP cookie. An **HTTP cookie** is a small piece of data sent by a server to a client to hold stateful information about a user's session.
+When a user successfully logs in to an application, the server starts the authorization process by creating session. Broadly speaking, a **session** refers to an ongoing dialogue between a client and a server. When a client sends a request to a server, the server creates a session token to identify the client. Then, the server can use that token throughout the session to authorize the user who's controlling the client. You'll see an example of that shortly.
 
-For example, if a user logged into the system with the following shell command.
+You can store the session information anywhere, but it's commonly stored in an HTTP cookie. An **HTTP cookie** is a small piece of data sent by a server to a client, or created directly on the client, to hold stateful information about a user's session. For example, to log a user into the system, run the following shell command.
+
+[INSERT DIAGRAM HERE]
 
 ```shell
-http POST localhost:8000/session email='2pac@shakur.com' password=ambition
+http -p=h POST localhost:8000/session email='2pac@shakur.com' password=ambition
 ```
 
-We want the server to send back the following response.
+And the server will send back the following response.
 
 ```
 HTTP/1.1 200 OK
@@ -199,23 +201,13 @@ Date: Tue, 02 Aug 2016 21:53:00 GMT
 ETag: W/"70-1qLFVreC078yebGK0TQomg"
 Set-Cookie: trackify=eyJ1c2VySWQiOjF9; path=/; httponly
 Set-Cookie: trackify.sig=RQbOCG127mu32s5Tb1q2v3grBzs; path=/; httponly
-
-{
-    "createdAt": "2016-06-29T14:26:16.000Z",
-    "email": "2pac@shakur.com",
-    "id": 1,
-    "updatedAt": "2016-06-29T14:26:16.000Z"
-}
 ```
 
-As you can see, two cookies are sent from the server to the client using the `Set-Cookie` header. This header tells the client to optionally store the cookies in its own database and to send them back to the server in future requests to the server. All modern browsers operate like this unless the user can disable cookies in their browser.
+As you can see, two cookies are sent from the server to the client using the `Set-Cookie` header. Since anybody can create a cookie and falsify information, like a session token, the server needs a way to ensure the token is authentic and not fraudulent.
 
+This header tells the client to optionally store the cookies in its own database and to send them back to the server in future requests to the server. All modern browsers operate like this unless the user can disable cookies in their browser.
 
-
-
-Instead of requiring the user to authenticate for each request
-
-Clients request contains a `Cookie` HTTP header.
+By default, every HTTPie request is completely independent of any previous ones.
 
 Example HTTP Request Header:
 
@@ -233,9 +225,9 @@ Host: localhost:8000
 User-Agent: HTTPie/0.9.4
 ```
 
-Broadly speaking, a **session** refers to an ongoing dialogue between two system. In the case of Express, the systems are the client and the server. When a client makes a request to the server, the server creates a session token to identify the client. The server can then use that session token throughout the ongoing dialogue to keep track of who the client is.
+As you can see, the request contains a `Cookie` HTTP header.
 
-We can store the session anywhere, but it is commonly stored in a cookie. Since anybody can create a cookie and falsify information, like a session token, the server needs a way to ensure the token is authentic and not fraudulent. The following steps occur:
+The following steps occur:
 
 1. The server encodes a session into base64.
 1. The server sends the session encoding to the client via a cookie. It also sends a signature generated using the session encoding and a secret key.
