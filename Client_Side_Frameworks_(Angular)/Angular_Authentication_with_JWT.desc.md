@@ -304,3 +304,7 @@ router.post(`/api/persons/:personId/${initials}-todos`, (req, res, next) => {
     });
   });
 ```
+
+## Resources
+
+[Where to Store your JWTs – Cookies vs HTML5 Web Storage](https://stormpath.com/blog/where-to-store-your-jwts-cookies-vs-html5-web-storage)
