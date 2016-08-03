@@ -373,7 +373,7 @@ Week 4
       </td>
       <td><a href="Projects/Q1.md">Q1 Project</a>
       </td>
-      <td>
+      <td><a href="https://github.com/gSchool/html-css-curriculum/blob/master/UI/User Interface Design.md">User Interface Design</a>
       </td>
     </tr>
     <tr>

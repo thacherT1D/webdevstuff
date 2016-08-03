@@ -202,6 +202,7 @@ module.exports = function() {
         {
           article: { text: "Wireframing", url: "https://github.com/gSchool/html-css-curriculum/blob/master/UI/Wireframing.md" },
           assignment: { text: "Q1 Project", url: "Projects/Q1.md" },
+          stretch: { text: "User Interface Design", url: "https://github.com/gSchool/html-css-curriculum/blob/master/UI/User Interface Design.md" },
         },
       ]
     },
