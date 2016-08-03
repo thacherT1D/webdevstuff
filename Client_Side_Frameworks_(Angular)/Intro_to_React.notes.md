@@ -48,9 +48,9 @@ For example, imagine the following component hierarchy...
 Represents the following HTML.
 
 ```html
-<div id="A">
-  <div id="B">Bulbasaur</div>  
-  <div id="C">Charizard</div>
+<div>
+  <div>Bulbasaur</div>  
+  <div>Charizard</div>
 </div>
 ```
 
@@ -77,9 +77,9 @@ If the component hierarchy is later changed to this.
 Then the HTML is changed to this.
 
 ```html
-<div id="A">
-  <div id="B">Bulbasaur</div>  
-  <div id="C">Squirtle</div>
+<div>
+  <div>Bulbasaur</div>  
+  <div>Squirtle</div>
 </div>
 ```
 
