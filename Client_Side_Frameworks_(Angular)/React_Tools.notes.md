@@ -11,13 +11,15 @@
 For example, when the following React JSX code is run through a transpiler:
 
 ```html
-<a href="http://www.galvanize.com/">Galvanize</a>
+<h1 id="greeting">
+  Hello, Jane.
+</h1>
 ```
 
 It's transformed into the following JavaScript code.
 
 ```js
-React.createElement('a', { href: 'http://www.galvanize.com/' }, 'Galvanize');
+React.createElement('h1', { id: 'greeting' }, 'Hello, Jane.');
 ```
 
 A traditional **compiler** translates the source code of one programming language into another programming language of a *different* level of abstraction. For example, embedded JavaScript (i.e. EJS) templates compile into HTML because one is an embedded programming language and the other is only a markup language.
