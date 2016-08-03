@@ -8,14 +8,14 @@
 
 [JSX](https://facebook.github.io/jsx/), or JavaScript XML, is an JavaScript syntax extension that looks similar to XML. [React JSX](https://facebook.github.io/react/docs/jsx-in-depth.html) lets you create `ReactElement` objects using an XML-like syntax and a transpiler. For example, when the following React JSX code is run through a transpiler:
 
-```jsx
+```html
 <a href="http://www.galvanize.com/">Galvanize</a>
 ```
 
 it's transformed into this:
 
 ```js
-React.createElement('a', { href: 'http://www.galvanize.com/' }, 'Galvanize')
+React.createElement('a', { href: 'http://www.galvanize.com/' }, 'Galvanize');
 ```
 
 A traditional compiler translates the source code of one programming language into another programming language of a *different* level of abstraction. For example, embedded JavaScript (i.e. EJS) templates compile into HTML because one is an embedded programming language and the other is only a markup language.
