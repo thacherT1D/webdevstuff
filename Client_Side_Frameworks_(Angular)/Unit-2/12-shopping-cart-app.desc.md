@@ -30,6 +30,7 @@ Go to https://github.com/gSchool/angular-curriculum/tree/master/Unit-2 to get st
  - Items in checkout show the caffeine scale, ingredients, rating, and sub-total
 
 **Data:**
+
 ```json
 [
     {
