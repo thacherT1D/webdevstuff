@@ -1,8 +1,16 @@
 ## Objectives
-- Explain what Javascript is and why it's important
-- Create variables for each of Javascript's primitive data types
-- Explain simple control flow examples using `if` statements.
-- Write a function that takes parameters and returns a value.
+Describe what JavaScript is.
+Describe what ECMAScript is.
+Explain why JavaScript is important.
+Name all primitive data types in JavaScript.
+Explain what a variable is.
+Explain the difference between a value and an expression.
+Explain the difference between `=`, `==`, and `===` in JavaScript.
+Explain what type conversion is.
+Name all the "falsey" values in JavaScript.
+Explain what a function is.
+Write a function that takes parameters.
+Write a function that returns a value.
 
 ## What's JavaScript?
 
