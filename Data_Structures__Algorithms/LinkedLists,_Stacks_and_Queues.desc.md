@@ -1,19 +1,9 @@
-https://github.com/gSchool/computer-science-curriculum
+While we are used to using Arrays and Objects in JavaScript, there are many other data structures out there. You will be asked to be able to describe these data structures and implement some of them.
 
-By the end of this lesson you should be able to:
+We will be primarily using our [Computer Science Curriculum](https://github.com/gSchool/computer-science-curriculum) repository while learning about these data structures. Use the following links to head to the appropriate sections:
 
-**Part 1**
+* [Intro to Data Structures](https://github.com/gSchool/computer-science-curriculum/blob/master/Unit-2/01-intro-to-data-structures.md)
 
-- Describe and draw a singly-linked list
-- Implement a singly linked list in JavaScript including the methods:
-    - push
-    - pop
-    - delete
-    - all by _value_
-- Describe and draw a doubly-linked list
+* [Linked Lists Intro](https://github.com/gSchool/computer-science-curriculum/blob/master/Unit-3/01-linked-lists-intro.md)
 
-**Part 2**
-
-- Describe a stack
-- Describe a queue
-- Implement both a stack and a queue using a linked list
+* [Stacks & Queues](https://github.com/gSchool/computer-science-curriculum/blob/master/Unit-3/02-stacks-and-queues.md)
