@@ -105,3 +105,7 @@ Week 1
   </tbody>
 </table>
 <!-- END SCHEDULE -->
+
+Other resources:
+
+- [LocalStorage and Data Modeling](https://github.com/gSchool/browser-dom-curriculum/blob/master/Local%20Storage.md)
