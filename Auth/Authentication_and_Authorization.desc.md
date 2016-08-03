@@ -268,9 +268,17 @@ Turn to a neighbor and explain the authorization process. It may help to draw a 
 
 In addition to being created by the server, a cookie can be created directly on the client. Therefore, since anybody can create a session token, the server needs a way to ensure the token is authentic and not fraudulent.
 
-The following steps occur:
+First, the server creates a session token by Base64 encoding the session information (e.g. `{ userId: 1 }`). **Base64** is an encoding scheme that translates a UTF-8 string to binary and then back to a UTF-8 string with only the following characters.
 
-The server creates a session token by encoding the session information (usually a user ID) with base64. A–Z, a–z, 0–9, +, and / and padded with =.
+| Characters | Count |
+|------------|-------|
+| `A`–`Z`    |    26 |
+| `a`–`z`    |    26 |
+| `0`–`9`    |    10 |
+| `+`        |     1 |
+| `/`        |     1 |
+
+**NOTE:** Depending on the input string, the intermediate binary representation may have extra zeros at the end. These zeros are converted to an equals `=` sign in the final Base64 string.
 
 ```text
 ┌──── session info ───┐            ┌──── session JSON ───┐              ┌────session token ───┐
@@ -283,10 +291,13 @@ The server creates a session token by encoding the session information (usually 
 │                     │            │                     │              │                     │
 └─────────────────────┘            └─────────────────────┘              └─────────────────────┘
 ```
-It also sends a signature generated using the session encoding and a secret key.
+
+After the session token is created, the server also generates a session signature. The session signature is created by combining the session name, session token, and session secret that only the server knows and running that through a hashing function like SHA-1. **SHA-1** is cryptographic hash functions that converts a string of arbitrary length to a 20-byte message digest, usually represented as a 40 digit hexadecimal string.
+
+**NOTE:** A good session secret for the SHA-1 algorithm is 64 bytes long.
 
 ```text
-┌── session name & token ───┬───── random 64 bytes ─────┐            ┌───── session signature ─────┐
+┌── session name & token ───┬───── session secret ──────┐            ┌───── session signature ─────┐
 │                           │                           │            │                             │
 │                           │     704a6811 5e3bfdbc     │            │                             │
 │                           │     99e7feef 251712eb     │            │                             │
@@ -571,3 +582,4 @@ git merge session
 - [Wikipedia - Authorization](https://en.wikipedia.org/wiki/Authorization)
 - [Wikipedia - Base64](https://en.wikipedia.org/wiki/Base64)
 - [Wikipedia - HTTP cookie](https://en.wikipedia.org/wiki/HTTP_cookie)
+- [wikipedia - SHA-1](https://en.wikipedia.org/wiki/SHA-1)
