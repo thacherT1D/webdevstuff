@@ -252,6 +252,20 @@ module.exports = function() {
         },
       ]
     },
+    {
+      activities: [
+        {
+          assignment: { text: "Q1 Project", url: "Projects/Q1.md" },
+        },
+      ]
+    },
+    {
+      activities: [
+        {
+          article: { text: "Q1 Project Demonstrations" },
+        },
+      ]
+    },
   ]
 
   let config = [

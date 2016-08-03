@@ -48,6 +48,28 @@ Week 1
       <td>
       </td>
     </tr>
+    <tr>
+      <td rowspan="1">Thursday</td>
+      <td rowspan="1">
+      </td>
+      <td>
+      </td>
+      <td><a href="../Projects/Q1.md">Q1 Project</a>
+      </td>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <td rowspan="1">Friday</td>
+      <td rowspan="1">
+      </td>
+      <td>Q1 Project Demonstrations
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+    </tr>
   </tbody>
 </table>
 <!-- END SCHEDULE -->
