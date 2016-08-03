@@ -158,7 +158,7 @@ Type out the above code example *by hand* and then run it. No copy-and-paste che
 
 In your own words, write down how React works in as much detail as you can. No peaking in the next section either. The point is to make a guess now and see how close you are later. At this stage, being right or wrong doesn't matter.
 
-## How does React work?
+### How does React work?
 
 Most of the above code should look familiar. An empty `<div id="hello">` element is declared and inserted into the DOM. Then, the `react` and `react-dom` JavaScript libraries are loaded into the page.
 
@@ -197,7 +197,7 @@ To help learn how React works, the code example from above is extra explicit abo
 
 Update your code with the above changes. And if needed, update what you wrote earlier about how React works.
 
-## Component presentation
+### Component presentation
 
 Now that you've gotten some practice with the fundamentals, it's time to build a more interesting React application. You could use only `ReactElement` objects, but to really take advantage of React, you'll want to leverage components. Remember, a component is encapsulated code that handles presentation, state, and behavior.
 
@@ -228,7 +228,7 @@ The last thing to note is how `React.createElement()` only requires the `type` a
 
 Update your code with the above changes. Once everything is working, update your notes with what you just learned.
 
-## Component state
+### Component state
 
 Now that our component class has some presentation logic, let's spice it up by adding some state.
 
@@ -267,7 +267,7 @@ React provides other places where you can modify state or interact with the brow
 
 Update your code with the above changes. Once everything is working, update your notes with what you just learned.
 
-## Component hierarchy
+### Component hierarchy
 
 Now that our component class has state, let's provide a user interface to change that state. To start off, we'll need to add elements to our component hierarchy.
 
@@ -319,7 +319,7 @@ Update your code with the above changes and run the code. Once everything is wor
 
 Now update your notes with what you just learned.
 
-## One-way data binding
+### One-way data binding
 
 With a user interface in place, let's make it dynamic by connecting the `input` element to the state inside our component class. Remember, React's one-way data bindings prevent changes made to the user interface from automatically propagating to the state. We'll have to manually propagate user interface changes to the state by writing this code ourselves.
 
@@ -376,7 +376,7 @@ By thinking of a component as being in one of a finite number of transitioning s
 
 Update your code with the above changes. Once everything is working, update your notes with what you just learned.
 
-## Component behavior
+### Component behavior
 
 Now that our component class responds to user interface changes, let's expand its behavior so it's more interesting.
 
@@ -455,5 +455,3 @@ Make sure your app is case insensitive when it comes to city names. In other wor
 - [React Docs - Interactivity and Dynamic UIs](https://facebook.github.io/react/docs/interactivity-and-dynamic-uis.html)
 - [React Docs - Event System](https://facebook.github.io/react/docs/events.html)
 - [React Docs - DOM Differences](https://facebook.github.io/react/docs/dom-differences.html)
-
-#### [Table of Contents](README.md#table-of-contents) | [Next ⇒](02-react-jsx.md)
