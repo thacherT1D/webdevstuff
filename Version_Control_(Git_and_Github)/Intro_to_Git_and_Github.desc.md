@@ -241,9 +241,9 @@ $ git commit -m "Initial commit"
 #### Answer
 
 Create a GitHub repo:
-![Hit the + Icon](create-github-repo-1.png)
+![Hit the + Icon](https://raw.githubusercontent.com/gSchool/fs-curriculum/16-08-FS-BD/Version_Control_(Git_and_Github)/create-github-repo-1.png?token=AF-ZG2E_5yi7XMX3fCzoW2q-DxkRJzx7ks5Xq1ZXwA%3D%3D)
 
-![Hit Create](create-github-repo-2.png)
+![Hit Create](create-github-repo-2.png://raw.githubusercontent.com/gSchool/fs-curriculum/16-08-FS-BD/Version_Control_(Git_and_Github)/create-github-repo-2.png?token=AF-ZG4QRlV9y5bdILesd3HClJydm9I30ks5Xq1d6wA%3D%3D)
 
 ```bash
 $ mkdir myProjectName
