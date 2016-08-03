@@ -240,10 +240,13 @@ $ git commit -m "Initial commit"
 
 #### Answer
 
-Create a GitHub repo:
-![Hit the + Icon](create-github-repo-1.png)
+Goto: [GitHub](https://github.com/)
 
-![Hit Create](create-github-repo-2.png)
+Create a GitHub repo:
+Hit Big Green Button that Says "New Repository"
+
+Fill out your repo info:
+Hit Create
 
 ```bash
 $ mkdir myProjectName
