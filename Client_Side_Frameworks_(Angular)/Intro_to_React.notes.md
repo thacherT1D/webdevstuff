@@ -54,7 +54,7 @@ Represents the following HTML.
 </div>
 ```
 
-If the component hierarchy is later changed to this.
+If the component hierarchy is later changed to this...
 
 ```text
           ┌─────────────┐
