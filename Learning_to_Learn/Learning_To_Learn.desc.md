@@ -61,7 +61,7 @@ The why is the meaning or motivation behind the learning. Being human is to be d
 
 ### Prioritize process over product
 
-The last part of setting the stage is about prioritizing process over product. In other words, defining success as simply spending time doing focused and deliberate practice. This program is going to be very difficult at times. You may not fully understand some of the concepts on the first try. And you may not reach your end goal in the period of time that you set out to do your work. This is perfectly fine so long as you're challenging yourself to get better while in the [zone of proximal development](https://en.wikipedia.org/wiki/Zone_of_proximal_development).
+The last part of setting the stage is about prioritizing process over product. In other words, defining success as simply spending time doing focused and deliberate practice. This program is going to be very difficult at times. You may not fully understand some of the concepts on the first try. And you may not reach your end goal in the period of time that you set out to do your work. This is perfectly fine so long as you're challenging yourself to get better while in the [zone of proximal development](https://en.wikipedia.org/wiki/Zone_of_proximal_development =700).
 
 ![](https://i.imgur.com/st9ILOw.png)
 
