@@ -365,24 +365,19 @@ Under the **Settings** tab, change the following:
 |------------------------------------|--------------------|
 | Font Family                        | Menlo              |
 | Font Size                          | 18                 |
-| Show Indent Guide                  | Checked            |
-| Soft Wrap                          | Checked            |
-| Soft Wrap At Preferred Line Length | Checked            |
-
-Under the **Install** tab, with the Package button highlighted, install the following:
+| Show Indent Guide                  | :white_check_mark: |
 
 | Name                           | Type    |
 |--------------------------------|---------|
 | file-icons                     | Package |
 | language-fish-shell            | Package |
+| tomorrow-night-eighties-syntax | Theme   |
 
-Still in the **Install** tab, with the Themes button highlighted, install the following:
+Under the **Themes** tab, choose the following:
 
 | Name                           | Type         |
 |--------------------------------|--------------|
-| tomorrow-night-eighties-syntax | Syntax Theme |
-
-Under the **Packages** tab, open the autosave package, under settings check "Enabled"
+| Tomorrow Night Eighties        | Syntax Theme |
 
 When you're done, close the preferences tab by pressing the `Command` + `W` keys  at the same time.
 
