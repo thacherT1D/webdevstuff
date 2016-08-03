@@ -101,6 +101,7 @@ const checkAuth = function(req, res, next) {
     }
 
     req.token = decoded;
+    // You can now access the payload via req.token.userId
     next();
   });
 }
