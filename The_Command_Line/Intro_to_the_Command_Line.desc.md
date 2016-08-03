@@ -442,9 +442,23 @@ Now that we know how to move around, it's time to make some changes. We can make
 >Pro-tip: WordsLikeThis are called CamelCase. Programmers frequently [argue about snake_case and CamelCase](http://programmers.stackexchange.com/questions/27264/naming-conventions-camelcase-versus-underscore-case-what-are-your-thoughts-ab)
 
 **Try This**
+To keep track of our work through out the course, it is helpful to store your exercise files by week. Let's start by adding a folder for our first week.
 
 ```
 $ cd ~/Projects
+
+$ mkdir 01_week
+```
+
+Why would we use "01" instead of "1"?
+
+Next week you can start by adding your own `02_week` directory
+
+
+**Try This**
+
+```
+$ cd ~/Projects/01_week
 
 $ mkdir notebook
 ```
@@ -625,7 +639,6 @@ Sometimes we want to refer to a bunch of similar files, to do this we can use wi
 For more ideas go here: [How to Use Wildcards](http://www.linfo.org/wildcard.html)
 
 ## Review
-
 * `mkdir`
 * editing files
 * echo
