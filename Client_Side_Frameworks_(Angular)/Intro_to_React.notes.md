@@ -101,7 +101,7 @@ When an application uses **two-way** data binding:
 ┌─────────────────┐         ┌─────────────────┐
 │                 │         │                 │
 │                 │         │                 │
-│      State      │         │ User Interface  │
+│      State      │         │  User Interface │
 │                 │         │                 │
 │                 │         │                 │
 └─────────────────┘         └─────────────────┘
