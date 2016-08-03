@@ -240,7 +240,7 @@ Update your code with the above changes. And if needed, update what you wrote ea
 
 Now that you've gotten some practice with the fundamentals, it's time to build a more interesting React application. You could use only `ReactElement` objects, but to really take advantage of React, you'll want to leverage components. Remember, a component is encapsulated code that handles presentation, state, and behavior.
 
-Let's start by moving the presentation logic of the previous code example into a custom component. The `React.createClass()` function will create and return a component class given a `specification` object.
+Let's start by moving the presentation logic of the previous code example into a custom component. The `React.createClass()` function accepts a `specification` object and returns a component class.
 
 `hello.html`
 ```html
