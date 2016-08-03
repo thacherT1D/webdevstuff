@@ -114,15 +114,18 @@ In `routes/persons.js`.
 const { checkAuth } = require('../middleware');
 
 router.post('/api/persons', checkAuth, (req, res, next) => {
-// ...
+  // ...
+});
 ```
 
 and `routes/todos.js`.
+
 ```javascript
 const { checkAuth } = require('../middleware');
 
 router.post(`/api/persons/:personId/${initials}-todos`, checkAuth, (req, res, next) => {
-// ...
+  // ...
+});
 ```
 
 ## Authenticating through our client
