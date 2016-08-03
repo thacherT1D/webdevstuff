@@ -453,7 +453,7 @@ Week 5
       <td rowspan="1">Monday</td>
       <td rowspan="1"><a href="https://gist.github.com/ryansobol/4e871410b8648c8eb60ca46dd89236fa">ArrayFilter</a>
       </td>
-      <td>
+      <td><a href="https://github.com/gSchool/browser-dom-curriculum/blob/master/Debugging.md">Debugging JavaScript</a>
       </td>
       <td><a href="../Projects/Q1.md">Q1 Project</a>
       </td>

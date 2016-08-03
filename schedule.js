@@ -240,6 +240,7 @@ module.exports = function() {
       warmup: { text: "ArrayFilter", url: "https://gist.github.com/ryansobol/4e871410b8648c8eb60ca46dd89236fa" },
       activities: [
         {
+          article: { text: "Debugging JavaScript", url: "https://github.com/gSchool/browser-dom-curriculum/blob/master/Debugging.md" },
           assignment: { text: "Q1 Project", url: "Projects/Q1.md" },
         },
       ]
