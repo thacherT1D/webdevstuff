@@ -423,7 +423,7 @@ The competing options for me are `Desktop/`, `Documents/`, and `Downloads/`
 
 Spend three minutes navigating around your computer's file system from the command line. Use a mixture of relative and absolute paths to navigate around. See what dark corners you can discover in your operating system.
 
-## Review
+#### Review
 
 * `tree`
 * Root directory
