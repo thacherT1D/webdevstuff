@@ -27,14 +27,30 @@ Week 1
       </td>
     </tr>
     <tr>
-      <td rowspan="1">Tuesday</td>
-      <td rowspan="1"><a href="https://github.com/gSchool/master_warmup_repository_full_stack/blob/master/w3/w3-t-doubleChar/solution.js">Double Char</a>
+      <td rowspan="3">Tuesday</td>
+      <td rowspan="3"><a href="https://github.com/gSchool/master_warmup_repository_full_stack/blob/master/w3/w3-t-doubleChar/solution.js">Double Char</a>
       </td>
       <td><a href="https://github.com/gSchool/html-css-curriculum/blob/master/HTML/Forms.md">HTML Forms</a>
       </td>
       <td><a href="https://github.com/gSchool/html-forms">HTML Forms</a>
       </td>
       <td>
+      </td>
+    </tr>
+    <tr>
+      <td>
+      </td>
+      <td>
+      </td>
+      <td><a href="https://github.com/gSchool/html-css-curriculum/blob/master/HTML/Form Validation.md">HTML5 Form Validation</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+      </td>
+      <td><a href="https://github.com/gSchool/form_validation">(stretch) Form Validation</a>
+      </td>
+      <td><a href="https://github.com/gSchool/browser-dom-curriculum/blob/master/Form Validation.md">JS Form Validation</a>
       </td>
     </tr>
     <tr>

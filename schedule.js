@@ -140,6 +140,13 @@ module.exports = function() {
           article: { text: "HTML Forms", url: "https://github.com/gSchool/html-css-curriculum/blob/master/HTML/Forms.md" },
           assignment: { text: "HTML Forms", url: "https://github.com/gSchool/html-forms" },
         },
+        {
+          stretch: { text: "HTML5 Form Validation", url: "https://github.com/gSchool/html-css-curriculum/blob/master/HTML/Form Validation.md" },
+        },
+        {
+          stretch: { text: "JS Form Validation", url: "https://github.com/gSchool/browser-dom-curriculum/blob/master/Form Validation.md" },
+          assignment: { text: "(stretch) Form Validation", url: "https://github.com/gSchool/form_validation" },
+        },
       ]
     },
     {
