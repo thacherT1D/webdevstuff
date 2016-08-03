@@ -10,7 +10,6 @@ During project week, you'll have approximately 24 hours of class time to impleme
 1. [Pay attention to your mindset](#pay-attention-to-your-mindset)
 1. [Demonstrate your project to the class](#demonstrate-your-project-to-the-class)
 1. [Complete a write-up of the project](#complete-a-write-up-of-the-project)
-1. [Submit your project for assessment](#submit-your-project-for-assessment)
 1. [Update your online portfolio](#update-your-online-portfolio)
 
 ## Understand the technical requirements
@@ -125,35 +124,17 @@ Once you have a solvable problem and an audience who'd like it solved, you have 
 - What technologies will it use?
 - What additional features will it have?
 
-Additionally, please include a pencil and paper wireframe with your answers. Included in this repository is a [template](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/190/template.pdf) wireframe that can be printed out on 11×17 inch paper. Here's an example of how a past student used this template.
-
-![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/188/brewify.jpg)
+Additionally, please include a wireframe with your answers. Included in this repository is a [template](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/190/template.pdf) wireframe that can be printed out on 11×17 inch paper if you'd like to write it out. Alternatively, use a free wireframe tool like [wireframe.cc](https://wireframe.cc/).
 
 Remember, you're _not_ expected to discover and publish a brand new idea so keep your project ideas simple. And you _must_ submit your proposals to an instructor for approval before you start translating one of your ideas into code.
 
 ## Use a software development process
 
-After your proposal has been approved, you'll assume the role of the Product Owner and have another student assume the role of a Customer. You, as the Product Owner, will explain the approved proposal to the Customer.
+After your proposal has been approved, you _must_ create a Pivotal Tracker for your project. Split up the features you want to build into multiple stories and add as much detail as possible. While you don't necessarily need to point the stories since you're a team of one, make sure to use Tracker to stay focused. That is, to _stack on track!_
 
-1. The Customer will inspect the proposal and give their initial feedback to the Product Owner.
-1. The Product Owner will start translating the wireframe into an HTML and CSS scaffold.
-1. When that's finished, the Product Owner will begin adding JavaScript behavior to the scaffold.
+Many students find themselves getting lost in the small details and spending much more time moving pixels around than really coding. Think about what we've learned in class and implement as much as you can.
 
-Every morning, the Product Owner will show the current state of the project to the Customer.
-
-1. The Customer will test the project and give their feedback to the Product Owner.
-1. For each piece of feedback, the Product Owner will create a new user story in an issue tracker.
-1. For the rest of the day, the Product Owner will address the highest priority user story, one at a time.
-1. At the end of the day, the Product Owner will show the current state of the project to the Customer.
-1. The Product Owner will close any issue that the Customer says is resolved.
-
-### Tips for the Customer
-
-When you assume the role, step into the mindset of a target audience member for the project. That way you can provide feedback more about the user experience and less about the idea itself. If something is unclear about the project, ask for more details.
-
-### Tips for Product Owner
-
-When you listen to the Customer's feedback, step into the mindset of a person who may not see the project's final form as clearly as you do. Remember that you and your Customer might be making different assumptions. If something is unclear about the feedback, ask for more details.
+I would recommend you download a tool like [Pomodoro One](https://itunes.apple.com/us/app/pomodoro-one/id907364780?mt=12) to add breaks into your day. The idea behind Pomodoros is to work for 25 minutes and then take a short break. During that break you should stand up and move away from the screen. You should also be thinking about what it is you're doing at the moment and whether or not it is the best use of your time.
 
 ## Pay attention to your mindset
 
@@ -165,7 +146,7 @@ The number one thing that affects a student's performance during project week is
 
 ## Demonstrate your project to the class
 
-At the end of project week, you'll give a brief, 5-minute demonstration of your project for the class. Your audience will want to hear you answer the following questions.
+At the end of project week, you'll give a brief, 3-minute demonstration of your project for the class. Your audience will want to hear you answer the following questions.
 
 - What's the name of your project?
 - What problem does it solve?
@@ -173,18 +154,13 @@ At the end of project week, you'll give a brief, 5-minute demonstration of your 
 - How does your project solve this problem?
 - What web APIs did it use?
 - What technologies did it use?
-- What was the most valuable piece of Customer feedback you received?
 - What was the biggest challenge you had to overcome?
 
 ## Complete a write-up of the project
 
 At the top of this file, please write a few paragraphs that answer the above questions.
 
-## Submit your project for assessment
-
-Find the corresponding exercise in the learning management system and submit a link to your project's GitHub repository. Make sure you include a link to your deployed application at the top of the this page.
-
 ## Update your online portfolio
 
-- Create a portfolio on the [Galvanize student portal](http://students.galvanize.com).
+- Create a portfolio on the [Galvanize student portal](http://talent.galvanize.com).
 - Add a link to your project's production environment.
