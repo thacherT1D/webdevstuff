@@ -142,7 +142,7 @@ auth.$inject = ['$http'];
 function auth($http) {
   return {
     login: (email, password) => {
-      return $http.post(`/api/token`, { email, password })
+      return $http.post('/api/token', { email, password })
         .then((res) => {
           return res.data;
         })
@@ -151,7 +151,7 @@ function auth($http) {
         });
     },
     logout: () => {
-      return $http.delete(`/api/token`)
+      return $http.delete('/api/token')
         .then((res) => {
           return res.data;
         })
@@ -268,7 +268,7 @@ router.post('/api/persons', (req, res, next) => {
       name: req.body.name
     },
     headers: {
-      Authorization: `Bearer ${req.token}`
+      Authorization: `Bearer ${req.cookies.accessToken}`
     }
   })
   .then((json) => {
@@ -293,7 +293,7 @@ router.post(`/api/persons/:personId/${initials}-todos`, (req, res, next) => {
         completed
       },
       headers: {
-        Authorization: `Bearer ${req.token}`
+        Authorization: `Bearer ${req.cookies.accessToken}`
       }
     })
     .then((json) => {
