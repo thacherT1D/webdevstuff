@@ -272,12 +272,17 @@ The following steps occur:
 
 The server creates a session token by encoding the session information (usually a user ID) with base64. A–Z, a–z, 0–9, +, and / and padded with =.
 
-```javascript
-const session = { userId: 1 };
-const sessionJSON = JSON.stringify(session);
-const sessionToken = new Buffer(sessionJSON).toString('base64'); // eyJ1c2VySWQiOjF9
+```text
+┌──── session info ───┐            ┌──── session JSON ───┐              ┌────session token ───┐
+│                     │            │                     │              │                     │
+│                     │            │                     │              │                     │
+│                     │            │                     │              │                     │
+│    { userId: 1 }    │─── JSON ──▶│    {"userId":1}     │─── base64 ──▶│  eyJ1c2VySWQiOjF9   │
+│                     │            │                     │              │                     │
+│                     │            │                     │              │                     │
+│                     │            │                     │              │                     │
+└─────────────────────┘            └─────────────────────┘              └─────────────────────┘
 ```
-
 It also sends a signature generated using the session encoding and a secret key.
 
 ```text
