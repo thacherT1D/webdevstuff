@@ -3,9 +3,12 @@
 
 **Watch the videos in the linked LE for a description of the project.**
 
-- [Video Instructions](https://coursework.galvanize.com/redirects/learning_experiences/10)
+<iframe src="https://player.vimeo.com/video/135907781?byline=0&portrait=0" width="500" height="456" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+Go to https://github.com/gSchool/angular-curriculum/tree/master/Unit-2 to get started!
 
 **Shopping Cart Should Have the Following Specs:**
+
 - Search by name
 - Search by category with drop down list
 - Table with column for image,  and tea information
@@ -155,6 +158,7 @@
 ```
 
 **The app should look something along the lines of this:**
+
 [![](https://i.gyazo.com/b83c4f06526777f552cb5d817c24e567.png)](https://coursework.galvanize.com/redirects/learning_experiences/10)
 
 
