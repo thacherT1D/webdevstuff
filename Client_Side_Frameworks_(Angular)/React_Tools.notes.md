@@ -35,7 +35,7 @@ A traditional **compiler** translates the source code of one programming languag
 A **transpiler** is a special type of compiler. Given the source code of one programming language, a transpiler produces equivalent source code in another programming language of approximately the *same* level of abstraction. For example, TypeScript transpiles into JavaScript because both languages are similar in capabilities.
 
 ```text
-┌───────── TypeScript ───────────────┐                  ┌───────── JavaScript ─────────┐
+┌──────────── TypeScript ────────────┐                  ┌───────── JavaScript ─────────┐
 │                                    │                  │                              │
 │ function greeter(person: string) { │                  │ function greeter(person) {   │
 │   return 'Hello, ' + person;       │                  │   return 'Hello, ' + person; │
@@ -47,6 +47,18 @@ A **transpiler** is a special type of compiler. Given the source code of one pro
 ```
 
 The take away is that JSX is *not* a template language even though it looks like one. Template languages are compiled into HTML while JSX is transpiled into JavaScript. They're both approximately at the same level of abstraction.
+
+```text
+┌────────────── React JSX ─────────────┐                  ┌──────────────── JavaScript ───────────────┐
+│                                      │                  │                                           │
+│                                      │                  │  React.createElement(                     │
+│ <a href="http://www.galvanize.com/"> │                  │    'a',                                   │
+│   Galvanize                          │──── transpile ──▶│    { href: 'http://www.galvanize.com/' }, │
+│ </a>                                 │                  │    'Galvanize'                            │
+│                                      │                  │  );                                       │
+│                                      │                  │                                           │
+└──────────────────────────────────────┘                  └───────────────────────────────────────────┘
+```
 
 [Babel](https://babeljs.io/) is by far the most popular JavaScript transpiler and ships with built-in support for React JSX. There are a number of ways to transpile React JSX with Babel ranging from CDNs to Node packages. Additionally, the [language-babel](https://atom.io/packages/language-babel) package brings JSX syntax highlighting to Atom.
 
