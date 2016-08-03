@@ -293,7 +293,7 @@ Now that our component class has some presentation logic, let's spice it up by a
 
 Component classes can also define a `getInitialState()` function. It's invoked once, and only once, right before the component is **mounted** or inserted into the DOM. The function's return value is used as the initial value of `this.state`.
 
-After the component is mounted, React will invoke the `render()` function which should be implemented as a **pure function**. In other words, it should:
+After the `getInitialState()` function is invoked, React will invoke the `render()` function which should be implemented as a **pure function**. In other words, it should:
 
 1. Return the same `ReactElement` given the same component state.
 2. Not modify the component's state.
