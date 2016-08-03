@@ -270,8 +270,32 @@ In addition to being created by the server, a cookie can be created directly on 
 
 The following steps occur:
 
-1. The server encodes a session into base64.
-1. The server sends the session encoding to the client via a cookie. It also sends a signature generated using the session encoding and a secret key.
+The server creates a session token by encoding the session information (usually a user ID) with base64. A–Z, a–z, 0–9, +, and / and padded with =.
+
+```javascript
+const session = { userId: 1 };
+const sessionJSON = JSON.stringify(session);
+const sessionToken = new Buffer(sessionJSON).toString('base64'); // eyJ1c2VySWQiOjF9
+```
+
+It also sends a signature generated using the session encoding and a secret key.
+
+```text
+┌── session name & token ───┬───── random 64 bytes ─────┐            ┌───── session signature ─────┐
+│                           │                           │            │                             │
+│                           │     704a6811 5e3bfdbc     │            │                             │
+│                           │     99e7feef 251712eb     │            │                             │
+│                           │     064b7d2b 94c1b105     │            │                             │
+│ trackify=eyJ1c2VySWQiOjF9 │     2375cc55 c5afabc7     │            │ RQbOCG127mu32s5Tb1q2v3grBzs │
+│                           │     d96ae97b 55268cc2     │─── sha1 ──▶│                             │
+│                           │     992099d0 c49d73ac     │            │                             │
+│                           │     812edea0 df5fa081     │            │                             │
+│                           │     d6659af8 0850a939     │            │                             │
+│                           │                           │            │                             │
+└───────────────────────────┴───────────────────────────┘            └─────────────────────────────┘
+```
+
+1. The server sends the session encoding to the client via a cookie.
 1. The client makes subsequent requests with a session encoding and signature.
 1. The server verifies the session by generating a signature of the session sent with its secret key and compares it with the signature sent.
 1. If the signatures match, the server can be confident the session has not been modified.
@@ -540,4 +564,5 @@ git merge session
 - [Express - Production Best Practices: Security - Use cookies securely](http://expressjs.com/en/advanced/best-practice-security.html#use-cookies-securely)
 - [Wikipedia - Authentication](https://en.wikipedia.org/wiki/Authentication)
 - [Wikipedia - Authorization](https://en.wikipedia.org/wiki/Authorization)
+- [Wikipedia - Base64](https://en.wikipedia.org/wiki/Base64)
 - [Wikipedia - HTTP cookie](https://en.wikipedia.org/wiki/HTTP_cookie)
