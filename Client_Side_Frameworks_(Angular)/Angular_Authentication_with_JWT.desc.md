@@ -308,3 +308,4 @@ router.post(`/api/persons/:personId/${initials}-todos`, (req, res, next) => {
 ## Resources
 
 [Where to Store your JWTs – Cookies vs HTML5 Web Storage](https://stormpath.com/blog/where-to-store-your-jwts-cookies-vs-html5-web-storage)
+Identity as a Service that uses JWTs [Stormpath](https://www.stormpath.com) and [Auth0](https://www.auth0.com)
