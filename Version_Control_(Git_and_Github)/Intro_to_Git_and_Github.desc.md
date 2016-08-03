@@ -241,9 +241,10 @@ $ git commit -m "Initial commit"
 #### Answer
 
 Create a GitHub repo:
-![Hit the + Icon]("https://raw.githubusercontent.com/gSchool/fs-curriculum/16-08-FS-BD/Version_Control_(Git_and_Github)/create-github-repo-1.png?token=AF-ZG2E_5yi7XMX3fCzoW2q-DxkRJzx7ks5Xq1ZXwA%3D%3D")
+Hit Big Green Button that Says "New Repository"
 
-![Hit Create]("https://raw.githubusercontent.com/gSchool/fs-curriculum/16-08-FS-BD/Version_Control_(Git_and_Github)/create-github-repo-2.png?token=AF-ZG4QRlV9y5bdILesd3HClJydm9I30ks5Xq1d6wA%3D%3D")
+Fill out your repo info:
+Hit Create
 
 ```bash
 $ mkdir myProjectName
