@@ -181,7 +181,7 @@ Let's start by examining this simple React application.
 </html>
 ```
 
-Open `hello.html` in your browser and, if you've typed everything correctly, you'll see the following.
+It produces the following user interface.
 
 ![Hello world](https://i.imgur.com/nKBW36S.png)
 
