@@ -68,8 +68,8 @@ const jwt = require('jsonwebtoken');
 
 // ...
 
-const expiry = new Date(Date.now() + 1000 * 60 * 60 * 3);
-const token = jwt.sign({ userId: user.id }, 'foo', {
+const expiry = new Date(Date.now() + 1000 * 60 * 60 * 3); // 3 hours
+const token = jwt.sign({ userId: user.id }, 'SECRET_KEY', {
   expiresIn: '3h'
 });
 
@@ -87,6 +87,42 @@ res.cookie('loggedIn', false, {
 
 res.clearCookie('accessToken');
 res.clearCookie('loggedIn');
+```
+
+Let's create a file called `middlewares.js`.
+
+```javascript
+const jwt = require('jsonwebtoken');
+
+const checkAuth = function(req, res, next) {
+  jwt.verify(req.cookies.accessToken, 'SECRET_KEY', (err, decoded) => {
+    if (err) {
+      return res.sendStatus(401);
+    }
+
+    req.token = decoded;
+    next();
+  });
+}
+
+module.exports = { checkAuth };
+```
+
+In `routes/persons.js`.
+
+```javascript
+const { checkAuth } = require('../middleware');
+
+router.post('/api/persons', checkAuth, (req, res, next) => {
+// ...
+```
+
+and `routes/todos.js`.
+```javascript
+const { checkAuth } = require('../middleware');
+
+router.post(`/api/persons/:personId/${initials}-todos`, checkAuth, (req, res, next) => {
+// ...
 ```
 
 ## Authenticating through our client
