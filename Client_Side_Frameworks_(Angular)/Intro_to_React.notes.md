@@ -23,25 +23,64 @@ React applications don't require many programming constructs. With React, there'
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
-React builds a **hierarchy of components** and then inserts them into the DOM. Whenever a component's state changes, React will re-build the hierarchy and update the DOM as needed. Conceptually, it's like hitting the browser's refresh button on just the DOM elements that are out of date. It's a radically different approach to developing user interfaces for web applications.
+React builds a **hierarchy of components** and then inserts them into the DOM. Whenever a component's state changes, React will re-build the hierarchy and update the DOM as needed. Conceptually, it's like hitting the browser's refresh button on just the DOM elements that are out of date.
 
-Imagine that components A, B, and C are arranged into the following hierarchy. If the state of component C changes from `Charizard` to `Bulbasaur`, React can update only the part of the DOM that the component represents. In this case, only the content of the `<div id="C">` element is updated. In a moment, you'll see a concrete example of how this works in code.
+For example, imagine the following component hierarchy...
 
 ```text
-          ┌─────────────┐                       <div id="A">
-          │             │                         <div id="B">Squirtle</div>  
-          │ Component A │                         <div id="C">Charizard</div>
-          │             │                       </div>
+          ┌─────────────┐
+          │             │
+          │  Component  │
+          │             │
           └─────────────┘
-                 │                              becomes
+                 │
        ┌─────────┴─────────┐
-       │                   │                    <div id="A">
-       ▼                   ▼                      <div id="B">Squirtle</div>  
-┌─────────────┐     ┏━━━━━━━━━━━━━┓               <div id="C">Bulbasaur</div>
-│             │     ┃             ┃             </div>
-│ Component B │     ┃ Component C ┃
+       │                   │
+       ▼                   ▼
+┌─────────────┐     ┌─────────────┐
+│             │     │             │
+│  Component  │     │  Component  │
+│  Bulbasaur  │     │  Charizard  │
+│             │     │             │
+└─────────────┘     └─────────────┘
+```
+
+Represents the following HTML.
+
+```html
+<div id="A">
+  <div id="B">Bulbasaur</div>  
+  <div id="C">Charizard</div>
+</div>
+```
+
+If the component hierarchy is later changed to this.
+
+```text
+          ┌─────────────┐
+          │             │
+          │  Component  │
+          │             │
+          └─────────────┘
+                 │
+       ┌─────────┴─────────┐
+       │                   │
+       ▼                   ▼
+┌─────────────┐     ┏━━━━━━━━━━━━━┓
+│             │     ┃             ┃
+│  Component  │     ┃  Component  ┃
+│  Bulbasaur  │     ┃  Squirtle   ┃
 │             │     ┃             ┃
 └─────────────┘     ┗━━━━━━━━━━━━━┛
+```
+
+Then the HTML is changed to this.
+
+```html
+<div id="A">
+  <div id="B">Bulbasaur</div>  
+  <div id="C">Squirtle</div>
+</div>
 ```
 
 Thinking about web applications as a component hierarchy is incredibly powerful because it mirrors the hierarchical nature of HTML. And although components have a fair number of moving parts, they're incredibly fun to use once you get the hang of React.
