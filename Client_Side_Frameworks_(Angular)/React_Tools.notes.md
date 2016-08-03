@@ -6,13 +6,15 @@
 
 ## What's React JSX?
 
-[JSX](https://facebook.github.io/jsx/), or JavaScript XML, is an JavaScript syntax extension that looks similar to XML. [React JSX](https://facebook.github.io/react/docs/jsx-in-depth.html) lets you create `ReactElement` objects using an XML-like syntax and a transpiler. For example, when the following React JSX code is run through a transpiler:
+[JSX](https://facebook.github.io/jsx/), or JavaScript XML, is an JavaScript syntax extension that looks similar to XML. [React JSX](https://facebook.github.io/react/docs/jsx-in-depth.html) lets you create `ReactElement` objects using an XML-like syntax and a transpiler.
+
+For example, when the following React JSX code is run through a transpiler:
 
 ```html
 <a href="http://www.galvanize.com/">Galvanize</a>
 ```
 
-it's transformed into this:
+It's transformed into the following JavaScript code.
 
 ```js
 React.createElement('a', { href: 'http://www.galvanize.com/' }, 'Galvanize');
@@ -53,7 +55,7 @@ The take away is that JSX is *not* a template language even though it looks like
 │                                      │                  │                                           │
 │                                      │                  │  React.createElement(                     │
 │ <a href="http://www.galvanize.com/"> │                  │    'a',                                   │
-│   Galvanize                          │──── transpile ──▶│    { href: 'http://www.galvanize.com/' }, │
+│   Galvanize                          │─── transpile ───▶│    { href: 'http://www.galvanize.com/' }, │
 │ </a>                                 │                  │    'Galvanize'                            │
 │                                      │                  │  );                                       │
 │                                      │                  │                                           │
