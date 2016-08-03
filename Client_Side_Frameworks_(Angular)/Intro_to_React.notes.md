@@ -409,7 +409,7 @@ React thinks of components as simple state machines. A **state machine** is an o
 1. Can be in one of a finite number of states.
 1. Can transition from one state to another when an event is fired.
 
-By thinking of a component as being in one of a finite number of transitioning states, it's easy to keep your user interface consistent. In React, you simply transition a component's state using the `this.setState()` function and it'll render a new user interface based on this new state. React efficiently updates the DOM using a process called **reconciliation** which you'll study later.
+By thinking of a component as being in one of a finite number of transitioning states, it's easy to keep your user interface consistent. In React, you simply transition a component's state using the `this.setState()` function and it'll render a new user interface based on this new state. React efficiently changes only the parts of the DOM that need updating using a process called **reconciliation**, which you'll study later.
 
 ### Exercise
 
