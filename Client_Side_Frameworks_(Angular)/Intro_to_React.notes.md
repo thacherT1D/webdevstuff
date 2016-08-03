@@ -433,7 +433,7 @@ Now that our component class responds to user interface changes, let's expand it
     },
 
     render: function() {
-      const message;
+      let message;
 
       if (this.state.who.trim() === '') {
         message = 'Hello?';
