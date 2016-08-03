@@ -13,7 +13,7 @@ This lesson will introduce you to the fundamental commands of Mac OS X. By the e
 * [Graphical user interfaces](#graphical-user-interfaces)
 * [File system manipulation](#file-system-manipulation) -->
 
-Before getting stared, use Spotlight to launch the `Terminal` app.
+Before getting started, use Spotlight to launch the `Terminal` app.
 
 ## What is the command line?
 
@@ -437,12 +437,12 @@ Spend three minutes navigating around your computer's file system from the comma
 
 ### The `mkdir` command
 
-Now that we know how to move around, it's time to make some changes. We can make directories with the `mkdir` command.  
+Now that you know how to move around, it's time to make some changes. You can make directories with the `mkdir` command.  
 
 >Pro-tip: WordsLikeThis are called CamelCase. Programmers frequently [argue about snake_case and CamelCase](http://programmers.stackexchange.com/questions/27264/naming-conventions-camelcase-versus-underscore-case-what-are-your-thoughts-ab)
 
 **Try This**
-To keep track of our work through out the course, it is helpful to store your exercise files by week. Let's start by adding a folder for our first week.
+To keep track of your work through out the course, it is helpful to store your exercise files by week. Let's start by adding a folder for your first week.
 
 ```
 $ cd ~/Projects
@@ -450,7 +450,7 @@ $ cd ~/Projects
 $ mkdir 01_week
 ```
 
-Why would we use "01" instead of "1"?
+Why would you use "01" instead of "1"?
 
 Next week you can start by adding your own `02_week` directory
 
@@ -467,7 +467,7 @@ What command can you use to see the results of your handywork?
 
 ### Adding Files
 
-Let's `cd` into our new `notebook`  Look around with `ls`, and `ls -la`.  What do you see?
+Let's `cd` into your new `notebook`  Look around with `ls`, and `ls -la`.  What do you see?
 
 ### Exercise
 
