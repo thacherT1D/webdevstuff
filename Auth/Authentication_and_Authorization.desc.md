@@ -178,19 +178,21 @@ git commit -m 'Add POST /session middleware'
 
 ## What's authorization?
 
-**Authorization** is the process of granting access to private resources. After a user is authenticated, that person will often want to access private information stored in a database. An authorization system uses access control rules to decide whether or not the authenticated user is approved to access that information.
-
-When a user successfully logs in to an application, the server starts the authorization process by creating session. Broadly speaking, a **session** refers to an ongoing dialogue between a client and a server. When a client sends a request to a server, the server creates a session token to identify the client. Then, the server can use that token throughout the session to authorize the user who's controlling the client. You'll see an example of that shortly.
-
-You can store the session information anywhere, but it's commonly stored in an HTTP cookie. An **HTTP cookie** is a small piece of data sent by a server to a client, or created directly on the client, to hold stateful information about a user's session. For example, to log a user into the system, run the following shell command.
+**Authorization** is the process of granting access to private information for an authenticated user. When a user successfully authenticates with an application, the server starts the authorization process by creating session. Broadly speaking, a **session** is unique token that represents an ongoing dialogue between a client and a server.
 
 [INSERT DIAGRAM HERE]
 
+Authorization starts when the server creates a session token and sends it to the client. The client includes the session token when it wants to access private information on the server. Using the session token, the server authorizes the client to determine whether or not it can access the information.
+
+The session token can by stored in many places, but it's commonly stored in an HTTP cookie. An **HTTP cookie** is a small piece of data sent by a server to a client to hold stateful information like a session token.
+
+For example, imagine that a client attempts to authenticate a user.
+
 ```shell
-http -p=h POST localhost:8000/session email='2pac@shakur.com' password=ambition
+http POST localhost:8000/session email='2pac@shakur.com' password=ambitionz
 ```
 
-And the server will send back the following response.
+Assuming authentication is successful, the server starts the authorization process by sending a session token in the response.
 
 ```text
 HTTP/1.1 200 OK
@@ -201,6 +203,13 @@ Date: Tue, 02 Aug 2016 21:53:00 GMT
 ETag: W/"70-1qLFVreC078yebGK0TQomg"
 Set-Cookie: trackify=eyJ1c2VySWQiOjF9; path=/; httponly
 Set-Cookie: trackify.sig=RQbOCG127mu32s5Tb1q2v3grBzs; path=/; httponly
+
+{
+    "createdAt": "2016-06-29T14:26:16.000Z",
+    "email": "2pac@shakur.com",
+    "id": 1,
+    "updatedAt": "2016-06-29T14:26:16.000Z"
+}
 ```
 
 As you can see, two cookies are sent from the server to the client using the `Set-Cookie` header. Since anybody can create a cookie and falsify information, like a session token, the server needs a way to ensure the token is authentic and not fraudulent.
@@ -212,7 +221,7 @@ By default, every HTTPie request is completely independent of any previous ones.
 Example HTTP Request Header:
 
 ```shell
-http -p=H GET localhost:8000/playlists 'Cookie: trackify=eyJ1c2VySWQiOjF9; trackify.sig=RQbOCG127mu32s5Tb1q2v3grBzs;'
+http -v GET localhost:8000/playlists 'Cookie: trackify=eyJ1c2VySWQiOjF9; trackify.sig=RQbOCG127mu32s5Tb1q2v3grBzs;'
 ```
 
 ```text
@@ -223,9 +232,31 @@ Connection: keep-alive
 Cookie:  trackify=eyJ1c2VySWQiOjF9; trackify.sig=RQbOCG127mu32s5Tb1q2v3grBzs;
 Host: localhost:8000
 User-Agent: HTTPie/0.9.4
+
+
+
+HTTP/1.1 200 OK
+Connection: keep-alive
+Content-Length: 180
+Content-Type: application/json; charset=utf-8
+Date: Wed, 03 Aug 2016 00:57:37 GMT
+ETag: W/"b4-LmlrS0rY4sUAN7daTFQADQ"
+
+[
+    {
+        "artist": "The Beatles",
+        "createdAt": "2016-06-26T14:26:16.000Z",
+        "id": 1,
+        "likes": 28808736,
+        "title": "Here Comes the Sun",
+        "trackId": 1,
+        "updatedAt": "2016-06-26T14:26:16.000Z",
+        "userId": 1
+    }
+]
 ```
 
-As you can see, the request contains a `Cookie` HTTP header.
+, or created directly on the client, As you can see, the request contains a `Cookie` HTTP header.
 
 The following steps occur:
 
@@ -240,7 +271,6 @@ The following steps occur:
 The `cookie-session` is a piece of middleware that is useful for storing, reading and signing sessions and storing them in a cookie. the library modifies the req object providing the following properties:
 
 * `req.session` represents the session stored in the cookie.
-* `req.sessionOptions` represents the settings of the session.
 
 *Note:* The cookie is marked as `HttpOnly`, which means that the cookie can only be set over HTTP and HTTPS. It also means you cannot access cookies in JavaScript on the browser using `document.cookie`. If there is any user information, you'd like the client to use, another cookie that's accessible needs to be set.
 
