@@ -286,7 +286,7 @@ First, the server creates a session token by Base64 encoding the session informa
 │                     │            │                     │              │                     │
 │                     │            │                     │              │                     │
 │    { userId: 1 }    │─── JSON ──▶│    {"userId":1}     │─── base64 ──▶│  eyJ1c2VySWQiOjF9   │
-│                     │            │                     │              │                     │
+│                     │  stringify │                     │    encode    │                     │
 │                     │            │                     │              │                     │
 │                     │            │                     │              │                     │
 └─────────────────────┘            └─────────────────────┘              └─────────────────────┘
@@ -321,6 +321,18 @@ openssl rand -hex 64
 1. The client makes subsequent requests with a session encoding and signature.
 1. The server verifies the session by generating a signature of the session sent with its secret key and compares it with the signature sent.
 1. If the signatures match, the server can be confident the session has not been modified.
+
+```text
+┌────session token ───┐              ┌──── session JSON ───┐            ┌──── session info ───┐
+│                     │              │                     │            │                     │
+│                     │              │                     │            │                     │
+│                     │              │                     │            │                     │
+│  eyJ1c2VySWQiOjF9   │─── base64 ──▶│    {"userId":1}     │─── JSON ──▶│    { userId: 1 }    │
+│                     │    decode    │                     │    parse   │                     │
+│                     │              │                     │            │                     │
+│                     │              │                     │            │                     │
+└─────────────────────┘              └─────────────────────┘            └─────────────────────┘
+```
 
 ## How do you use a cookie session to authorize a user?
 
