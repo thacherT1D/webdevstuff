@@ -45,7 +45,7 @@ Week 1
       </td>
       <td><a href="../Projects/Q1.md">Q1 Project</a>
       </td>
-      <td><a href="https://github.com/gSchool/html-css-curriculum/blob/master/UI/User Interface Design.md">User Interface Design</a>
+      <td>
       </td>
     </tr>
     <tr>
@@ -108,5 +108,4 @@ Week 1
 
 Other resources:
 
-- [LocalStorage and Data Modeling](https://github.com/gSchool/browser-dom-curriculum/blob/master/Local%20Storage.md)
 - [History of the Web](https://github.com/gSchool/browser-dom-curriculum/blob/master/HTTP/History%20of%20the%20Web.md)

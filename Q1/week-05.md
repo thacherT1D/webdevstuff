@@ -30,7 +30,7 @@ Week 1
       <td rowspan="1">Tuesday</td>
       <td rowspan="1"><a href="https://gist.github.com/ryansobol/08689667a80b3accd519ededf49238d0">ArrayReduce</a>
       </td>
-      <td>
+      <td><a href="https://github.com/gSchool/html-css-curriculum/blob/master/UI/User Interface Design.md">User Interface Design</a>
       </td>
       <td><a href="../Projects/Q1.md">Q1 Project</a>
       </td>
@@ -41,7 +41,7 @@ Week 1
       <td rowspan="1">Wednesday</td>
       <td rowspan="1"><a href="https://gist.github.com/ryansobol/afda64953e572ca0873905c525d06eb2">ArrayEvery</a>
       </td>
-      <td>
+      <td><a href="https://github.com/gSchool/browser-dom-curriculum/blob/master/Local%20Storage.md">LocalStorage and Data Modeling</a>
       </td>
       <td><a href="../Projects/Q1.md">Q1 Project</a>
       </td>

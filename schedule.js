@@ -202,7 +202,6 @@ module.exports = function() {
         {
           article: { text: "Wireframing", url: "https://github.com/gSchool/html-css-curriculum/blob/master/UI/Wireframing.md" },
           assignment: { text: "Q1 Project", url: "Projects/Q1.md" },
-          stretch: { text: "User Interface Design", url: "https://github.com/gSchool/html-css-curriculum/blob/master/UI/User Interface Design.md" },
         },
       ]
     },
@@ -249,6 +248,7 @@ module.exports = function() {
       warmup: { text: "ArrayReduce", url: "https://gist.github.com/ryansobol/08689667a80b3accd519ededf49238d0" },
       activities: [
         {
+          article: { text: "User Interface Design", url: "https://github.com/gSchool/html-css-curriculum/blob/master/UI/User Interface Design.md" },
           assignment: { text: "Q1 Project", url: "Projects/Q1.md" },
         },
       ]
@@ -257,6 +257,7 @@ module.exports = function() {
       warmup: { text: "ArrayEvery", url: "https://gist.github.com/ryansobol/afda64953e572ca0873905c525d06eb2" },
       activities: [
         {
+          article: { text: "LocalStorage and Data Modeling", url: "https://github.com/gSchool/browser-dom-curriculum/blob/master/Local%20Storage.md" },
           assignment: { text: "Q1 Project", url: "Projects/Q1.md" },
         },
       ]
