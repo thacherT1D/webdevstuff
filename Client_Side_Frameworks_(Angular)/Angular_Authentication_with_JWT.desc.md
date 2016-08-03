@@ -224,7 +224,6 @@ In our `app.js` file, let's include the `ngCookies` module.
 angular.module('todoApp', ['ngRoute', 'ngCookies']);
 ```
 
-
 Now, it's time to add the auth controller. In our `controllers.js` file.
 
 ```javascript
@@ -255,4 +254,53 @@ function AuthCtrl(auth, $location, $cookies) {
     auth.logout();
   };
 }
+```
+
+## Adding Auth between our server and the Galvanize TODOs web service.
+
+In `routes/persons.js`.
+
+```javascript
+router.post('/api/persons', (req, res, next) => {
+  request.post({
+    url: `https://galvanize-todos.herokuapp.com/${initials}-persons`,
+    json: {
+      name: req.body.name
+    },
+    headers: {
+      Authorization: `Bearer ${req.token}`
+    }
+  })
+  .then((json) => {
+    res.send(json);
+  })
+  .catch((err) => {
+    next(err);
+  });
+});
+```
+
+In `routes/todos.js`.
+
+```javascript
+router.post(`/api/persons/:personId/${initials}-todos`, (req, res, next) => {
+    const { text, completed } = req.body;
+
+    request.post({
+      url: `https://galvanize-todos.herokuapp.com/${initials}-persons/${req.params.personId}/${initials}-todos`,
+      json: {
+        text,
+        completed
+      },
+      headers: {
+        Authorization: `Bearer ${req.token}`
+      }
+    })
+    .then((json) => {
+      res.send(json);
+    })
+    .catch((err) => {
+      next(err);
+    });
+  });
 ```
