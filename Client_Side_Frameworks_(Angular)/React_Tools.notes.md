@@ -6,9 +6,7 @@
 
 ## What's React JSX?
 
-[JSX](https://facebook.github.io/jsx/), or JavaScript XML, is a JavaScript syntax extension that looks similar to XML. In this chapter, you'll learn what React JSX is, why it's important, and how to use it. By the end, you'll have built a React JSX application with guidance and be ready to build one of your own.
-
-[React JSX](https://facebook.github.io/react/docs/jsx-in-depth.html) lets you create `ReactElement` objects using an HTML-like syntax and a transpiler. For example, when the following JSX code is run through a transpiler:
+[JSX](https://facebook.github.io/jsx/), or JavaScript XML, is an JavaScript syntax extension that looks similar to XML. [React JSX](https://facebook.github.io/react/docs/jsx-in-depth.html) lets you create `ReactElement` objects using an XML-like syntax and a transpiler. For example, when the following React JSX code is run through a transpiler:
 
 ```jsx
 <a href="http://www.galvanize.com/">Galvanize</a>
