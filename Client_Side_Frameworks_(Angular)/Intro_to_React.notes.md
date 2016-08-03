@@ -199,7 +199,7 @@ In your own words, write down how React works in as much detail as you can. No p
 
 ### How does React work?
 
-Most of the above code should look familiar. An empty `<div id="hello">` element is declared and inserted into the DOM. Then, the `react` and `react-dom` JavaScript libraries are loaded into the page.
+Most of the above code should look familiar. An empty `<div id="hello">` element is declared in the HTML and inserted into the DOM when the page loads. Then, the `react` and `react-dom` JavaScript libraries are loaded into the page.
 
 Once loaded, the `React.createElement()` function is called with three arguments—a `type`, some `props`, and a `child`.
 
