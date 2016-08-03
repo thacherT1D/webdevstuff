@@ -123,7 +123,7 @@ However, changes made to the user interface are *not* automatically propagated t
 ┌─────────────────┐         ┌─────────────────┐
 │                 │         │                 │
 │                 │         │                 │
-│      State      │         │ User Interface  │
+│      State      │         │  User Interface │
 │                 │         │                 │
 │                 │         │                 │
 └─────────────────┘         └─────────────────┘
