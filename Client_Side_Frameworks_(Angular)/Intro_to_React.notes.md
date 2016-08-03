@@ -138,7 +138,7 @@ Turn to your partner and, in your own words, explain what React is and how it's 
 
 ## Why is React important?
 
-When it was released in March 2013, React's approach to user interface development, using a hierarchy of components and one-way data binding, was strange and unconventional. However, since then, developers have begun to understand the power in these techniques. And as a result, many client-side tools, including Angular, are adopting component hierarchies and one-way data binding too, helping to make them ordinary and conventional.
+When it was released in March 2013, React's approach to user interface development, using a hierarchy of components and one-way data binding, was strange and unconventional. However, developers have begun to understand the power in these techniques. And as a result, many client-side tools, including Angular, are adopting component hierarchies and one-way data binding too, helping to make them ordinary and conventional.
 
 The following is a short list of [design principals](https://facebook.github.io/react/contributing/design-principles.html) that guide React's approach to user interface development.
 
@@ -168,8 +168,8 @@ Let's start by examining this simple React application.
   <body>
     <div id="hello"></div>
 
-    <script src="https://fb.me/react-15.2.1.js"></script>
-    <script src="https://fb.me/react-dom-15.2.1.js"></script>
+    <script src="https://fb.me/react-15.3.0.js"></script>
+    <script src="https://fb.me/react-dom-15.3.0.js"></script>
 
     <script>
       var element = React.createElement('h1', null, 'Hello world');
