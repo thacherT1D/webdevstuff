@@ -192,7 +192,7 @@ http -p=h POST localhost:8000/session email='2pac@shakur.com' password=ambition
 
 And the server will send back the following response.
 
-```
+```text
 HTTP/1.1 200 OK
 Connection: keep-alive
 Content-Length: 112
@@ -215,7 +215,7 @@ Example HTTP Request Header:
 http -p=H GET localhost:8000/playlists 'Cookie: trackify=eyJ1c2VySWQiOjF9; trackify.sig=RQbOCG127mu32s5Tb1q2v3grBzs;'
 ```
 
-```
+```text
 GET /playlists HTTP/1.1
 Accept: */*
 Accept-Encoding: gzip, deflate
