@@ -2,7 +2,13 @@
 
 1. Explain what a custom directive is and why we would use it.
 
-1. Build a custom directive that uses isolate scope to function as a standalone component.
+1. Build a simple custom directive.
+
+1. Explain how angular matches directives.
+
+1. Explain isolate scope in directives and why they are useful.
+
+1. Build an isolated scope directive.
 
 ## The What and Why of Custom Directives
 
@@ -130,6 +136,10 @@ There are 4 basic directive types that `$compile` can match ($compile is a part 
 
 Angular best practice is to prefer Element and Attribute forms of directives for all your needs.
 
+**Exercise**
+
+Turn to a neighbor and explain how angular matches directives.
+
 ## Directives And Scope
 
 Let's add some data to a controller and see how it interacts with the directive.  In the following example, we'll show a yoyo's details in our directive:
@@ -140,12 +150,14 @@ Let's add some data to a controller and see how it interacts with the directive.
 ```js
 var app = angular.module('yoyoDirectiveApp', [])
 
-app.controller('YoyoController', ['$scope', function($scope) {
-  $scope.view = {};
-  $scope.view.yoyo = {name: 'Duncan Metal Drifter',
+app.controller('YoyoController', YoyoCtrl);
+
+function YoyoCtrl(){
+  this.yoyo = {
+    name: 'Duncan Metal Drifter',
     img: "http://www.toysrus.com/graphics/tru_prod_images/Duncan-Metal-Drifter-Pro-Yo-Yo--pTRU1-8444206dt.jpg"
-  };
-}]);
+  }
+}
 
 app.directive('gsYoyoDetails', function() {
   return {
@@ -157,8 +169,8 @@ app.directive('gsYoyoDetails', function() {
 `yoyo-details.html`
 
 ```html
-<h3>{{view.yoyo.name}}</h3>
-<img ng-src="{{view.yoyo.img}}">
+<h3>{{yoyo.name}}</h3>
+<img ng-src="{{yoyo.img}}">
 ```
 
 `index.html`:
@@ -167,9 +179,8 @@ app.directive('gsYoyoDetails', function() {
 <!DOCTYPE html>
 <html ng-app="yoyoDirectiveApp">
 <head>
-<script src="https://code.jquery.com/jquery-2.1.4.min.js" type="text/javascript"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.3/angular.js" type="text/javascript"></script>
-<script src="app.js" type="text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js" type="text/javascript"></script>
+  <script src="app.js" type="text/javascript"></script>
 </head>
 <body ng-controller="YoyoController">
   <gs-yoyo-details></gs-yoyo-details>
@@ -185,30 +196,31 @@ There are a couple of problems with this default behavior of the directive havin
 
 The solution to these problems involves creating an `isolate scope` for the directive. Before doing this, let's see what happens if we don't create an isolate scope.
 
-**Exercise** Change `scope.view.yoyo` to `scope.view.yoyos`, an array of yoyo objects. In your view, render each yoyo's information using your custom directive.
+**Exercise** Change `this.yoyo` to `this.yoyos`, an array of yoyo objects. In your view, render each yoyo's information using your custom directive.
 
 Possible solution:
 
 `app.js`
 
 ```js
-var app = angular.module('yoyoApp', []);
+var app = angular.module('yoyoDirectiveApp', [])
 
-app.controller('YoyoController', function($scope) {
-  $scope.view = {};
-  $scope.view.yoyos = [{
+app.controller('YoyoController', YoyoCtrl);
+
+function YoyoCtrl(){
+  this.yoyos = [{
     name: "Duncan Metal Drifter",
     img: "http://www.toysrus.com/graphics/tru_prod_images/Duncan-Metal-Drifter-Pro-Yo-Yo--pTRU1-8444206dt.jpg"
   }, {
     name: "Duncan Hello Kitty Pro Yo yoyo",
     img: "http://cdn6.bigcommerce.com/s-8ndhalpa/products/277/images/613/duncan-hello-kitty-pro-yo-yoyo-15__90815.1404161701.1280.1280.jpg"
   }];
-});
+}
 
 app.directive('gsYoyoDetails', function() {
   return {
-    templateUrl: '../yoyo-details.html'
-  }
+    templateUrl: 'yoyo-details.html',
+  };
 });
 ```
 
@@ -220,11 +232,11 @@ app.directive('gsYoyoDetails', function() {
 <head>
   <meta charset="UTF-8">
   <title>Document</title>
-</head>
-<body ng-controller="YoyoController">
-  <gs-yoyo-details ng-repeat="yoyo in view.yoyos"></gs-yoyo-details>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.js"></script>
   <script src="./js/app.js"></script>
+</head>
+<body ng-controller="YoyoController">
+  <gs-yoyo-details ng-repeat="yoyo in yoyos"></gs-yoyo-details>
 </body>
 </html>
 ```
@@ -237,7 +249,13 @@ app.directive('gsYoyoDetails', function() {
   ```
 ## Isolate Scope
 
-Once you have more than one yoyo, and you have a copy of your custom directive on the page for each yoyo, we can create an isolate scope by using the `scope` option when we create our directive. Here's the basic syntax:
+When building a custom directive that you want to use in multiple controllers (which is basically all the time), you will want to uncouple the directive from the specific scope of the controller. We can create an isolate scope by using the `scope` option when we create our directive.
+
+This allows us to use a directive in a specific controller more than once, and allows us to use a directive wherever we want independent of the controller that it is residing inside.
+
+As you will see, this mirrors a component structure which is used in both Angular 2 and React to create standalone pieces of code that can be layered and connected to one another.
+
+Here's the basic syntax:
 
 ```javascript
 app.directive('gsYoyoDetails', function() {
@@ -285,13 +303,17 @@ So, how does data about an individual yoyo get passed from our controller to our
 
 Of course, we've now got two different names for our data depending on where we are (`yoyoFromRepeat` and `yoyoInDirective`), plus a third name for the attribute on our directive. It's common to name all of these the same; the downside with this approach is that if we name everything `yoyo`, it's much less clear how the directive's isolate scope is connected to the controller's scope.
 
-**Exercise** Refactor your code to eliminate `yoyoInDirective`, `yoyoAttribute`, and `yoyoFromRepeat` in favor of just `yoyo`.
-
-**Exercise** Fun fact: if in your scope you have a key and value with the same name (e.g. `foo: '=foo'`), you can omit the name in the value (e.g. `foo: '='`) and Angular will still know what to do! Use this to refactor your directive even more.
+**Exercise** Fun fact: if in your scope you have a key and value with the same name (e.g. `foo: '=foo'`), you can omit the name in the value (e.g. `foo: '='`) and Angular will still know what to do! Use this to refactor your directive to use yoyo and '='.
 
 **Exercise** After completing the previous two exercises, try replacing one of the strings `yoyo` somewhere in your app with the string `foo`. Where else do you need to replace `yoyo` by `foo` to get your app working again?
 
-**EXERCISE**
+## Extending Your Knowledge of Custom Directives
+
+Directives can do even more than what we have so far seen. Custom directives can be used to manipulate the DOM, to wrap other directives, to add event listeners to the DOM, to communicate across directives, and even more.
+
+Take some time and head back to the docs [here](https://docs.angularjs.org/guide/directive) to extend your understanding of custom directives.
+
+**EXERCISE / HOMEWORK**
 
 Create an app that uses the [pokemon api](http://pokeapi.co/docsv1/).  The app should first make a request to the [pokedex](http://pokeapi.co/docsv1/#pokedex) to get all possible pokemon.  Then randomly select 5 pokemon to display.  The app should display the pokemon's name, types, name of moves (limit it to 6), and a sprite for the pokemon. Use a custom directive to display the pokemon.
 
@@ -301,12 +323,6 @@ The app should use a custom directive for each pokemon (eg `pokemon-item`).
 
 ![](http://s8.postimg.org/eo2kbbnb9/pokemon.png)
 
-## Extending Your Knowledge of Custom Directives
-
-Directives can do even more than what we have so far seen. Custom directives can be used to manipulate the DOM, to wrap other directives, to add event listeners to the DOM, to communicate across directives, and even more.
-
-Take some time and head back to the docs [here](https://docs.angularjs.org/guide/directive) to extend your understanding of custom directives.
-
-**EXERCISE / HOMEWORK**
+**Exercise**
 
 Using everything you've learned about custom directives, refactor your Reddit clone to use them and clean up your HTML! Your refactor should use at least two custom directives: one for the add post form, and one for an individual post. If you want to push yourself, you should also add a custom directive for the comment area of a post, which should be nested inside of your custom post directive. You will need to jump into the documentation and learn about how to nest directives to solve this aspect of the assignment.
