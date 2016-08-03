@@ -109,3 +109,4 @@ Week 1
 Other resources:
 
 - [LocalStorage and Data Modeling](https://github.com/gSchool/browser-dom-curriculum/blob/master/Local%20Storage.md)
+- [History of the Web](https://github.com/gSchool/browser-dom-curriculum/blob/master/HTTP/History%20of%20the%20Web.md)
