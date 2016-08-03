@@ -102,7 +102,7 @@ Let's say you want to deliver some packages to Mars with a rocketship. *You want
 1. Set the rocketship coordinates for Mars. *`git remote add origin git@github.com:nasa/marooned-astronaut.git`*
   * We'll reuse our rocketship, so you only need to do this once per rocket!
 
-1. When the rocketship is sufficiently loaded, we want to launch the rocketship to Mars. *`git push origin master`*
+1. When the rocketship is sufficiently loaded, we want to launch the rocketship to Mars. *`git push -u origin master`*
 
 1. Astronaut on Mars will recieve your rocketship and be happy with their new packages. *Check your GitHub repo to make sure the changes were pushed*
 
@@ -255,5 +255,5 @@ $ git add readme.md
 $ git status
 $ git commit -m "Initial commit"
 $ git remote add origin git@github.com:{userName}/{repoName}.git
-$ git push origin master
+$ git push -u origin master
 ```
