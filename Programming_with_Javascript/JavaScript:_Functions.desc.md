@@ -2,12 +2,18 @@
 
 Today, we're going to explore the fascinating world of functions. This world may bewilder or intimidate some of you. Find solace in the fact that functions are nothing more than a way of re-using code. This realization will help you to eventually embrace the usage of functions and, dare I say, excitement for them. At the end of today's lessons, I hope that you guys are able to add functions to your coding tool-belt.
 
-## Objectives
+## Objectives:
 
 * Explain what a function is conceptually
 * Write a function that takes parameters
 * Write a function that returns a value
 * Describe variable scope in javascript and how it relates to functions
+
+## Exercises:
+- None. Just follow along with practice.
+
+## Included Resources:
+- None
 
 ### What is a Function?
 
@@ -17,7 +23,7 @@ When I think about functions in the real world, I often consider a recipe (e.g.,
 
 At this point, I hope that many of us can embrace our shared definition of a function--they are a sequence of instructions that achieve a specific task.
 
-__EXERCISE__: What are some other examples of functions you enounter in daily life?
+__Practice__: What are some other examples of functions you enounter in daily life?
 
 ### Example Function
 
@@ -86,7 +92,7 @@ greet();
 
 That's it! Now we can re-use the instructions of `greet` whenever we want. Above, we just invoked it 3 times. :)
 
-__EXERCISE__: Write a function called `yell` that prints out a phrase 10 times in a row.  On the 10th iteration, the phrase should be in all caps and have an extra exlimation point at the end.  Example output is below:
+__Practice__: Write a function called `yell` that prints out a phrase 10 times in a row.  On the 10th iteration, the phrase should be in all caps and have an extra exlimation point at the end.  Example output is below:
 
 ```javascript
 yell(); // You must implement this function
@@ -115,10 +121,10 @@ function hello(name, age) {
 }
 ```
 
-The parameters are `name` and `age`.  They are variables that are defined in the function 
+The parameters are `name` and `age`.  They are variables that are defined in the function
 
 
-__EXERCISE__: Create a function that takes name of a month as a parameter.  Print out every day in that month.  Assume leap years don't exist.
+__Practice__: Create a function that takes name of a month as a parameter.  Print out every day in that month.  Assume leap years don't exist.
 
 ```javascript
 daysInMonth("February");
@@ -156,12 +162,12 @@ function getGreeting(name) {
 	if (name === "Tim") {
 		return "Hello Tim!  Your favorite color is blue.";
 	}
-	
+
 	return "Hello " + name;
 }
-``` 
+```
 
-__EXERCISE__
+__Practice__
 
 * What is output to the console with the following function invocation?
 
@@ -224,18 +230,18 @@ function scopeExample() {
 	var num1 = 5;
 	var num2 = 6;
 	num3 = 7;
-	
+
 	console.log(num1, num2, num3, num4, "-> num1, num2, num3 and num4 are defined from inside scopeExample");
 }
 
 num4 = 12345;
-console.log(num4, "-> Only num4 is defined at this point");  // num1, num2, and num3 do not exist 
+console.log(num4, "-> Only num4 is defined at this point");  // num1, num2, and num3 do not exist
 scopeExample();
 
 console.log(num3, num4, "-> Only num3 and num4 exist now");
 ```
 
-__EXERCISE__
+__Practice__
 
 * When should you use the `var` keyword to declare variables?
 * What does the following code console log?

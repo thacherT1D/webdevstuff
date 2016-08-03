@@ -1,10 +1,14 @@
-## Objectives
+## Objectives:
 
 - Explain what Material Design is.
 - Explain what the Materialize framework is.
 - Explain why Material Design and the Materialize framework are useful.
 - Explain how the Materialize framework compares against its competition.
 - Use the Materialize framework to implement Material Design.
+
+## Exercises:
+
+1. Work on the landing page for [Galvanize Delivers](https://github.com/gSchool/galvanize-delivers/).
 
 ## What's Material Design?
 
@@ -80,11 +84,7 @@ Here's the list of visuals we'll go over together at a glance.
 - [Footer](http://materializecss.com/footer.html)
 - [Preloader](http://materializecss.com/preloader.html)
 
-## Assessment
-
-Work on the landing page for [Galvanize Delivers](https://github.com/gSchool/galvanize-delivers/).
-
-### Resources
+### Additional Resources
 
 - [Hipster Ipsum](http://hipsum.co/)
 - [Material Design](https://www.google.com/design/spec/material-design/introduction.html)
