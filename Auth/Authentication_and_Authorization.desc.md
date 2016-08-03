@@ -292,9 +292,9 @@ First, the server creates a session token by Base64 encoding the session informa
 └─────────────────────┘            └─────────────────────┘              └─────────────────────┘
 ```
 
-After the session token is created, the server also generates a session signature. The session signature is created by combining the session name, session token, and session secret that only the server knows and running that through a hashing function like SHA-1. **SHA-1** is cryptographic hash functions that converts a string of arbitrary length to a 20-byte message digest, usually represented as a 40 digit hexadecimal string.
+After the session token is created, the server also generates a session signature. The session signature is created by combining the session name, session token, and session secret that only the server knows and running that through a cryptographic hash function like SHA-1. **SHA-1** is cryptographic hash functions that converts a string of arbitrary length to a 20-byte message digest, usually represented as a 40 digit hexadecimal string.
 
-**NOTE:** A good session secret for the SHA-1 algorithm is 64 bytes long.
+**NOTE:** SHA-1 is faster but considered less secure than SHA-256.
 
 ```text
 ┌── session name & token ───┬───── session secret ──────┐            ┌───── session signature ─────┐
@@ -310,6 +310,8 @@ After the session token is created, the server also generates a session signatur
 │                           │                           │            │                             │
 └───────────────────────────┴───────────────────────────┘            └─────────────────────────────┘
 ```
+
+**NOTE:** A good session secret for SHA-1 is random sequence of 64 bytes.
 
 1. The server sends the session encoding to the client via a cookie.
 1. The client makes subsequent requests with a session encoding and signature.
