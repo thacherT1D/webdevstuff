@@ -68,7 +68,9 @@ The take away is that JSX is *not* a template language even though it looks like
 
 ### Exercise
 
-Take a moment to install the above Atom package. Then, turn to a neighbor and, in your own words, explain what React JSX is as well as the similarities and differences of a compiler versus a transpiler. After about a minute, your instructor will cold call on the class and ask what was discussed.
+Take a moment to install the above Atom package.
+
+Then, turn to a neighbor and, in your own words, explain what React JSX is as well as the similarities and differences of a compiler versus a transpiler. After about a minute, your instructor will cold call on the class and ask what was discussed.
 
 ## Why use React JSX?
 
