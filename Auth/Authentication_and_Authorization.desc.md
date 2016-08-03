@@ -11,11 +11,13 @@
 
 **Authentication** is the process of confirming the identity of a user. When a user logs into a web application, that person is attempting to authenticate. To confirm their identity, the user must provide unique personal identification, like a username or email address, and a password. If the information provided during login matches the information previously provided during registration, the user is authenticated.
 
+[INSERT DIAGRAM HERE]
+
 However, it's not quite as simple as that. As you've seen, only hashed passwords are stored in the database during registration. To verify whether a login password is correct, it too must be run through the same cryptographic hash function as the registration password. Only if the two hashed passwords are equivalent is the user authenticated.
 
 ### Exercise
 
-Turn to a neighbor and explain the user authentication process from the perspective of an HTTP server. It may help to draw a diagram of what's happening.
+Turn to a neighbor and explain the authentication process. It may help to draw a diagram of what's happening between the client and server.
 
 ## Why is authentication important?
 
@@ -178,11 +180,11 @@ git commit -m 'Add POST /session middleware'
 
 ## What's authorization?
 
-**Authorization** is the process of granting access to private information for an authenticated user. When a user successfully authenticates with an application, the server starts the authorization process by creating session. Broadly speaking, a **session** is unique token that represents an ongoing dialogue between a client and a server.
+**Authorization** is the process of granting access to private information for an authenticated user. When a user successfully authenticates with an application, the server starts the authorization process by creating a session token. A **session token** is a unique identifier that represents an ongoing dialogue between a client and a server.
 
 [INSERT DIAGRAM HERE]
 
-Authorization starts when the server creates a session token and sends it to the client. The client includes the session token when it wants to access private information on the server. Using the session token, the server authorizes the client to determine whether or not it can access the information.
+As you can see, authorization starts when the server creates a session token and sends it to the client. Afterwards, the client includes the session token in subsequent requests for private information on the server. Using the session token, the server authorizes the client to determine whether or not it can access the information.
 
 The session token can by stored in many places, but it's commonly stored in an HTTP cookie. An **HTTP cookie** is a small piece of data sent by a server to a client to hold stateful information like a session token.
 
@@ -192,7 +194,7 @@ For example, imagine that a client attempts to authenticate a user.
 http POST localhost:8000/session email='2pac@shakur.com' password=ambitionz
 ```
 
-Assuming authentication is successful, the server starts the authorization process by sending a session token in the response.
+Assuming authentication is successful, the server starts the authorization process by sending a session token in its response.
 
 ```text
 HTTP/1.1 200 OK
@@ -212,24 +214,24 @@ Set-Cookie: trackify.sig=RQbOCG127mu32s5Tb1q2v3grBzs; path=/; httponly
 }
 ```
 
-As you can see, two cookies are sent from the server to the client using the `Set-Cookie` header. Since anybody can create a cookie and falsify information, like a session token, the server needs a way to ensure the token is authentic and not fraudulent.
+As you can see, two cookies are sent from the server to the client using the `Set-Cookie` header. The first `trackify` cookie is the session token while the second `trackify.sig` cookie is a signature used to verify the session token. You'll see why a session token must be signed by the server and how a session token signature is generated in a moment.
 
-This header tells the client to optionally store the cookies in its own database and to send them back to the server in future requests to the server. All modern browsers operate like this unless the user can disable cookies in their browser.
+The `Set-Cookie` header informs the client to optionally store the cookies in its own client-side database and to send them back to the server in future requests. All modern browsers operate like this unless its user disables cookies. However, by default, every HTTPie request is completely independent of any previous ones.
 
-By default, every HTTPie request is completely independent of any previous ones.
-
-Example HTTP Request Header:
+Back to the previous example, if an authorized client sent the following request to a server.
 
 ```shell
-http -v GET localhost:8000/playlists 'Cookie: trackify=eyJ1c2VySWQiOjF9; trackify.sig=RQbOCG127mu32s5Tb1q2v3grBzs;'
+http -v GET localhost:8000/playlists 'Cookie:trackify=eyJ1c2VySWQiOjF9; trackify.sig=RQbOCG127mu32s5Tb1q2v3grBzs;'
 ```
+
+The HTTP request and response might look something like this.
 
 ```text
 GET /playlists HTTP/1.1
 Accept: */*
 Accept-Encoding: gzip, deflate
 Connection: keep-alive
-Cookie:  trackify=eyJ1c2VySWQiOjF9; trackify.sig=RQbOCG127mu32s5Tb1q2v3grBzs;
+Cookie: trackify=eyJ1c2VySWQiOjF9; trackify.sig=RQbOCG127mu32s5Tb1q2v3grBzs;
 Host: localhost:8000
 User-Agent: HTTPie/0.9.4
 
@@ -256,7 +258,15 @@ ETag: W/"b4-LmlrS0rY4sUAN7daTFQADQ"
 ]
 ```
 
-, or created directly on the client, As you can see, the request contains a `Cookie` HTTP header.
+As you can see, a `Cookie` header, containing the session token and signature, is sent by the client to the server. Prior to processing the request, the server verifies the session token validity. If valid, the client is authorized to access the information at the `GET /playlists` route.
+
+### Exercise
+
+Turn to a neighbor and explain the authorization process. It may help to draw a diagram of what's happening between the client and server.
+
+## Why is authorization important?
+
+In addition to being created by the server, a cookie can be created directly on the client. Therefore, since anybody can create a session token, the server needs a way to ensure the token is authentic and not fraudulent.
 
 The following steps occur:
 
