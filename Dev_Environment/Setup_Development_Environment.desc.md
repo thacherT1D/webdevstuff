@@ -367,6 +367,9 @@ Under the **Settings** tab, change the following:
 | Font Size                          | 18                 |
 | Show Indent Guide                  | :white_check_mark: |
 
+Under the **Install** tab, with the Package button highlighted, install
+the following:
+
 | Name                           | Type    |
 |--------------------------------|---------|
 | file-icons                     | Package |
