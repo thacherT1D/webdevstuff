@@ -11,9 +11,7 @@
 For example, when the following React JSX code is run through a transpiler:
 
 ```html
-<h1 id="greeting">
-  Hello, Jane.
-</h1>
+<h1 id="greeting">Hello, Jane.</h1>
 ```
 
 It's transformed into the following JavaScript code.
