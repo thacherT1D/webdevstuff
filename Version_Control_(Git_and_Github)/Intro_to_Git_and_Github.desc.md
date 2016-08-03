@@ -17,7 +17,7 @@ It allows you to track changes you make to files on your machine.
 This is helpful for when you screw things up! And you will. 😉
 And that's ok. Version control allows developers to revert back to a specific time and place in your code. Sort of like a time machine.
 
-Version control allows developers to:
+Why developers use Version control:
 
   * Keep track of changes to files over time
   * View previous states of your project
@@ -57,8 +57,7 @@ And if GitHub goes down, we can still work on our distributed repos offline.
 
 ### Exercise
 
-Again, take take a moment and think how you would rephrase the above description of
-Github in your own words. Once you feel comfortable with your description, turn and share it with your neighbor.
+Turn to your neighbor and explain why developers use Github.
 
 ## What does the Git Flow look like?
 Any files tracked by git typically go through 3 stages:
@@ -67,7 +66,7 @@ Any files tracked by git typically go through 3 stages:
   * When you open up a project in your text editor you are seeing the
     state of the *working directory*
   * Any changes made here are considered *unstaged* and will **not** be committed on the next commit
-1. Stageing Area
+1. Staging Area
   * Changes that have been *staged* are ones that have been added to something called the *index*, or *staging area* as it's more commonly referred to
   * Changes added here will be committed to the *local repository* on the next commit
   * It's important to note that your working directory may reflect
