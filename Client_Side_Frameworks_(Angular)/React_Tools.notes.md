@@ -18,7 +18,7 @@ it's transformed into this:
 React.createElement('a', { href: 'http://www.galvanize.com/' }, 'Galvanize');
 ```
 
-A traditional compiler translates the source code of one programming language into another programming language of a *different* level of abstraction. For example, embedded JavaScript (i.e. EJS) templates compile into HTML because one is an embedded programming language and the other is only a markup language.
+A traditional **compiler** translates the source code of one programming language into another programming language of a *different* level of abstraction. For example, embedded JavaScript (i.e. EJS) templates compile into HTML because one is an embedded programming language and the other is only a markup language.
 
 A **transpiler** is a special type of compiler. Given the source code of one programming language, a transpiler produces equivalent source code in another programming language of approximately the *same* level of abstraction. For example, CoffeeScript transpiles into JavaScript because both languages are similar in capabilities.
 
