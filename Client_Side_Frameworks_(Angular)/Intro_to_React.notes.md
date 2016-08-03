@@ -404,7 +404,7 @@ In the code above, both the `h1` and `input` elements need be updated to reflect
 
 After the merge, the component is also automatically re-rendered, updating the user interface. Because of this, you *never* modify the `this.state` object directly. To change a component's state, always use the `this.setState()` function.
 
-React thinks of components as simple state machines. The **state machine** is an object that:
+React thinks of components as simple state machines. A **state machine** is an object that:
 
 1. Can be in one of a finite number of states.
 1. Can transition from one state to another when an event is fired.
