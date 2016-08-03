@@ -11,6 +11,174 @@
 
 
 
+
+## JWT walkthrough
+
+
+### Authentication
+
+**Create function to hit endpoint**
+
+Create create function to hit `http://localhost:3000/authenticate`
+
+```js
+vm.auth = function(user, password){
+    $http.post('http://localhost:3000/authenticate',{username:user, password:password})
+    .then(function(response){
+      console.log(response);
+    })
+    .catch(function(err){
+      console.log(err);
+    });
+  }
+```
+
+Connect function to button.
+
+```html
+<input type="text" ng-model="c.user">
+<input type="text" ng-model="c.password">
+<button ng-click="c.auth(c.user, c.password)">Authenticate</button>
+```
+
+**Create Express Endpoint**
+
+```js
+var root = require('./routes/index');
+// middleware goes here
+app.use('/', root);
+```
+
+
+
+in route file
+```js
+var jwt = require('jsonwebtoken');
+```
+
+
+```js
+router.post('/authenticate', function(req, res, next) {
+  if (!(req.body.username === 'john.doe' && req.body.password === 'foobar')) {
+    res.status(401).send({message:'Wrong user or password'});
+    return;
+  }
+
+  var profile = {
+    first_name: 'John',
+    last_name: 'Doe',
+    email: 'john@doe.com',
+    id: 123
+  };
+
+  // We are sending the profile inside the token
+  var token = jwt.sign(profile, 'secret');
+  res.status(200).json({ token: token });
+});
+```
+
+**Store token in angular**
+
+```js
+vm.auth = function(user, password){
+    $http.post('http://localhost:3000/authenticate',{username:user, password:password})
+    .then(function(response){
+      console.log(response);
+      $window.sessionStorage.token = response.data.token;
+      vm.message = "Logged in successful";
+
+    })
+    .catch(function(err){
+      console.log(err);
+      delete $window.sessionStorage.token;
+      vm.message = "Log in unsuccessful";
+    });
+  }
+```
+
+**Add logout**
+
+```js
+vm.logout = function(){
+  delete $window.sessionStorage.token;
+}
+```
+
+### Authorization
+
+**request to endpoint**
+
+```js
+vm.restricted = function(){
+    $http.get('http://localhost:3000/api/restricted')
+    .then(function (response) {
+      console.log(response);
+      vm.restrictedMessage = response.data.first_name + " " + response.data.last_name;
+    })
+    .catch(function(err){
+      vm.restrictedMessage = err.statusText + ": " + err.data.message;
+    })
+  }
+```
+
+
+**Interceptor**
+
+```js
+app.factory('authInterceptor', ['$q', '$window', function ($q, $window) {
+  return {
+    request: function (config) {
+      config.headers = config.headers || {};
+      if ($window.sessionStorage.token) {
+        config.headers.Authorization = 'Bearer ' + $window.sessionStorage.token;
+      }
+      return config;
+    },
+    response: function (response) {
+      if (response.status === 401) {
+        // handle the case where the user is not authenticated
+      }
+      return response || $q.when(response);
+    }
+  };
+}]);
+```
+
+```js
+app.config(['$httpProvider', function ($httpProvider) {
+  $httpProvider.interceptors.push('authInterceptor');
+}]);
+```
+
+**Middleware**
+
+```js
+var expressJwt = require('express-jwt');
+```
+
+```js
+var api = require('./routes/api');
+```
+
+```js
+app.use('/api', expressJwt({secret:'secret'}), api);
+```
+
+**Express Endpoint**
+
+```js
+router.get('/restricted', function (req, res) {
+  res.json(req.user);
+});
+```
+
+
+
+
+
+
+
+
 ### Introduction to Token Authentication
 
 Now that we are getting more comfortable building applications with the MEAN stack, it's time to add authentication to our application. This is one of the more difficult topics when learning about how to build Single Page Applications. Before continuing - answer the following questions
