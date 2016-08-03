@@ -8,16 +8,16 @@ Today we will be expanding on our understanding of CSS.
 
   Students should be able to:
 
-  - Know what a CSS reset does.
-  - Know what a CSS normalizer does.
-  - Explain the 4 CSS positions.
+  - Explain why you would use CSS reset.
+  - Explain what a CSS normalizer does.
+  - Describe the 4 CSS positions.
   - Use an attribute selector.
-  - Understand what a psuedo-class does.
+  - Describe what a psuedo-class does.
   - Be able to manipulate fonts
-  - Understand the different types of colors.
+  - List three format types for colors.
 
 
-## CSS Resets & Normalizers
+## Resets & Normalizers
 
 The browser has its own stylesheet (called the *user agent stylesheet*) that it tries to apply before any of your stylesheets. This is why, for example, h1 tags are bigger than paragraph text by default.
 
@@ -39,16 +39,17 @@ A CSS reset removes all default styling from a browser, maintaining only the dis
 
 Most projects should use one of these, but not both. It is up to you to decide whether "useful defaults" or "completely unstyled" is more useful to your project. Either way, they should be `<link>`ed to before any of your other stylesheets, so that any overrides you make will take precedence.
 
-**You Try**:
+**Exercise**:
 
-  - Copy the website you have been working on
-  - Add a CSS reset to the copy of your website
-  - Compare the copy with the normalizer and your normal website to see if you can spot any changes
+  - Make a copy of the website you have been working on
+  - Add a CSS reset to the new copy.
+  - Open up both in separate browser windows and compare the differences.
 
 
-## CSS Positioning
+## Positioning
 
 CSS positions change the *flow* of a document.
+> Try it out! Test out the different position properties as we talk about them: https://jsfiddle.net/62mgdps7/
 
 * **`position: static;`**: This is the default for all elements. Normal document flow, will not accept top/right/bottom/left values.
 * **`position: relative;`**: Creates a new positioning context for any `absolute`ly positioned children, and itself.
@@ -60,16 +61,8 @@ Some notes on positioned (relative, absolute, or fixed) elements:
 * Margins for positioned elements are inside of their positioning contexts
 * Absolutely positioned elements can be stretched with the top/right/bottom/left properties
 
-**You Try**:
 
-  NOTE: Only run through the linked exercise on each
-
-  - [Relative Practice](https://www.codecademy.com/courses/advanced-css-positioning/0/4)
-  - [Absolute Practice](https://www.codecademy.com/courses/advanced-css-positioning/1/3)
-  - [Fixed Practice](https://www.codecademy.com/courses/advanced-css-positioning/3/2?)
-
-
-## CSS Selectors
+## Selectors
 
 ### Standard Selector Review
 
@@ -189,7 +182,7 @@ Some notes on positioned (relative, absolute, or fixed) elements:
 }
 ```
 
-* strong and em use bold and italic style/weight
+* strong and em use bold and italic weight/style
 
 ### Font properties
 
@@ -252,7 +245,7 @@ Some notes on positioned (relative, absolute, or fixed) elements:
   - If using HSLA the last number is Alpha (transparency) values 0-1
   - https://www.w3.org/Talks/2013/0516-CSS-WWW2013/color-wheel.png - HSL color wheel
 
-## CSS Inheritance Notes
+## Inheritance Notes
 
 Most properties, such as fonts, will be inherited by children. The following properties *are not* inherited:
 
@@ -271,3 +264,11 @@ Most properties, such as fonts, will be inherited by children. The following pro
 - https://www.fontsquirrel.com/tools/webfont-generator - webfont generator
 - https://css-tricks.com/snippets/css/a-guide-to-flexbox/ - flexbox guide
 - http://flexboxfroggy.com/ - fun flexbox game
+
+**More CSS Positioning Practice**:
+  NOTE: You only need to run through the linked exercise on each
+
+  - [Relative Practice](https://www.codecademy.com/courses/advanced-css-positioning/0/4)
+  - [Absolute Practice](https://www.codecademy.com/courses/advanced-css-positioning/1/3)
+  - [Fixed Practice](https://www.codecademy.com/courses/advanced-css-positioning/3/2?)
+
