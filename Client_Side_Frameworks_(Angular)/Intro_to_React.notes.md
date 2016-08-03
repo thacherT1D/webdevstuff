@@ -172,8 +172,8 @@ Let's start by examining this simple React application.
     <script src="https://fb.me/react-dom-15.3.0.js"></script>
 
     <script>
-      var element = React.createElement('h1', null, 'Hello world');
-      var container = document.getElementById('hello');
+      const element = React.createElement('h1', null, 'Hello world');
+      const container = document.getElementById('hello');
 
       ReactDOM.render(element, container);
     </script>
@@ -245,7 +245,7 @@ Let's start by moving the presentation logic of the previous code example into a
 `hello.html`
 ```html
 <script>
-  var Hello = React.createClass({
+  const Hello = React.createClass({
     render: function() {
       return React.createElement('h1', null, 'Hello world');
     }
@@ -274,7 +274,7 @@ Now that our component class has some presentation logic, let's spice it up by a
 `hello.html`
 ```html
 <script>
-  var Hello = React.createClass({
+  const Hello = React.createClass({
     getInitialState: function() {
       return { who: 'world' };
     },
@@ -313,7 +313,7 @@ Now that our component class has state, let's provide a user interface to change
 `hello.html`
 ```html
 <script>
-  var Hello = React.createClass({
+  const Hello = React.createClass({
     getInitialState: function() {
       return { who: 'world' };
     },
@@ -365,13 +365,13 @@ With a user interface in place, let's make it dynamic by connecting the `input` 
 `hello.html`
 ```html
 <script>
-  var Hello = React.createClass({
+  const Hello = React.createClass({
     getInitialState: function() {
       return { who: 'world' };
     },
 
     handleChange: function(event) {
-      var nextState = { who: event.target.value };
+      const nextState = { who: event.target.value };
       this.setState(nextState);
     },
 
@@ -422,18 +422,18 @@ Now that our component class responds to user interface changes, let's expand it
 `hello.html`
 ```html
 <script>
-  var Hello = React.createClass({
+  const Hello = React.createClass({
     getInitialState: function() {
       return { who: 'world' };
     },
 
     handleChange: function(event) {
-      var nextState = { who: event.target.value };
+      const nextState = { who: event.target.value };
       this.setState(nextState);
     },
 
     render: function() {
-      var message;
+      const message;
 
       if (this.state.who.trim() === '') {
         message = 'Hello?';
