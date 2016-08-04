@@ -324,7 +324,7 @@ const element = <div>
 
 Let's practice refactoring the **Hello world** React application from the previous article into React JSX.
 
-Unfortunately, you can't serve React JSX to a browser and expect it to function. Instead, you'll need the help of a build tool. A **build tool** is a program that automates the creation of a functioning application from source code. In this case, you'll use a build tool to transpile React JSX code into functioning JavaScript code before it's sent to a browser.
+Unfortunately, you can't serve React JSX to a browser and expect it to parse or execute the code. Instead, you'll need the help of a build tool. A **build tool** is a program that automates the creation of a functioning application from source code. In this case, you'll use a build tool to transpile React JSX code into functioning JavaScript code before it's sent to a browser.
 
 To get started, install the Brunch build tool globally with NPM.
 
