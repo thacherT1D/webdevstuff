@@ -212,7 +212,7 @@ const element = (
 
 ### Child expressions
 
-In addition to attributes, JavaScript expressions can also be used as children in JSX tags. These expressions use the exact same curly brace `{}` notation.
+In addition to an attribute value, the result of JavaScript expressions can also be the child of a JSX tag. These expressions use the exact same curly brace `{}` notation.
 
 ```jsx
 const food = 'Cheese';
