@@ -354,7 +354,7 @@ less README.md
 
 To watch the project for changes and launch an HTTP server, start the build tool.
 
-**NOTE:** Press `Ctrl + C` to quit the build tool.
+**NOTE:** Press `Ctrl + C` to quit Brunch.
 
 ```shell
 npm start
@@ -370,7 +370,13 @@ And you should see something like this.
 04 Aug 13:13:41 - info: compiled 178 files into 3 files, copied 2 in 3.3 sec
 ```
 
-Take a look at the `public` directory to see what Brunch created for you.
+In a new Terminal tab, navigate back the the project directory.
+
+```shell
+cd path/to/app
+```
+
+Take a look at the `public` directory to see what Brunch created.
 
 ```shell
 la public
@@ -392,7 +398,9 @@ drwxr-xr-x  11 ryansobol  staff   374B Aug  4 15:32 ..
 -rw-r--r--   1 ryansobol  staff   858K Aug  4 15:32 vendor.js.map
 ```
 
-In a Terminal tab, open the application.
+Most the files should look familiar. However, you should also see a handful of source map files that end in `.map` file extension. A **source map** is a file that tells a browser how to perform debugging of transpiled and optimized JavaScript code. We'll take a look at source maps later.
+
+Open the application in your default browser.
 
 ```shell
 open http://localhost:8000/
