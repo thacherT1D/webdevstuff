@@ -332,21 +332,33 @@ To get started, install the Brunch build tool globally with NPM.
 npm install -g brunch
 ```
 
+Using the global `brunch` command, create a new application called `hello` with the [`ryansobol/with-react`](https://github.com/ryansobol/with-react) skeleton. A **skeleton** creates files and directories that provide a good starting point for a new application.
+
 ```shell
-brunch new hello -s ryansobol/with-react
+brunch new hello --skeleton ryansobol/with-react
 ```
+
+Change into the `hello` project directory.
 
 ```shell
 cd hello
 ```
 
+And open the project in Atom.
+
 ```shell
 atom .
 ```
 
+Let's walkthrough the files and directories, provided by the skeleton, starting with the `README.md` file.
+
+To watch the project for changes and launch an HTTP server, start the build tool.
+
 ```shell
 npm start
 ```
+
+And you should see something like this.
 
 ```text
 > @0.1.0 start /Users/ryansobol/Projects/week15/hello
@@ -356,9 +368,15 @@ npm start
 04 Aug 13:13:41 - info: compiled 178 files into 3 files, copied 2 in 3.3 sec
 ```
 
+Open the application.
+
 ```shell
 open http://localhost:8000/
 ```
+
+And you should see something like this.
+
+[INSERT IMAGE HERE]
 
 Now, inside of `app/components/app.jsx`, let's refactor the component class's `render()` function into React JSX. Simply convert all `React.createElement()` function calls into JSX using the rules from above.
 
