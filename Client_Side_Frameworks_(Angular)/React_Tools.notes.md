@@ -83,6 +83,10 @@ In addition, React developers advocate that components are a better way to separ
 
 React developers argue that the best solution for this problem is to use the expressive power of a full programming language to build user interfaces. React JSX allows markup and display logic to live side-by-side using the power of JavaScript, but with a concise and familiar syntax.
 
+### Exercise
+
+Take a moment to write down why React JSX is important. Include some of its advantages and disadvantages. After about a minute, your instructor will cold call on the class and ask what was written down.
+
 ## How does React JSX work?
 
 Under the hood, React JSX transforms HTML-like elements, attributes, and children into arguments that are passed to the `React.createElement()` function. Both HTML tags and React component classes can be transformed from JSX to JavaScript.
