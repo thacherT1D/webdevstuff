@@ -398,7 +398,7 @@ drwxr-xr-x  11 ryansobol  staff   374B Aug  4 15:32 ..
 -rw-r--r--   1 ryansobol  staff   858K Aug  4 15:32 vendor.js.map
 ```
 
-Most the files should look familiar. However, you should also see a handful of source map files that end in `.map` file extension. A **source map** is a file that tells a browser how to perform debugging of transpiled and optimized JavaScript code. We'll take a look at source maps later.
+Most the files should look familiar with the exception of a handful of source map files that end in `.map` file extension. A **source map** is a file that tells a browser how to debug transpiled and optimized JavaScript code. We'll take a look at source maps later.
 
 Open the application in your default browser.
 
