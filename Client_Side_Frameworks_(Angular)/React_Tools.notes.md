@@ -173,7 +173,7 @@ const element = <Trucks />;
 
 ### Single-line attribute expressions
 
-In JSX, the result of a JavaScript expression can be the value a tag's attribute. This is useful when you want to inline the full power of JavaScript  within a JSX tag. JavaScript expressions are wrapped in a pair of curly braces `{}` instead of double quotes `""`.
+A JSX tag's attribute value can be the result of a JavaScript expression. This is useful when you want to inline the full power of JavaScript within a JSX tag. JavaScript expressions are wrapped in a pair of curly braces `{}` instead of double quotes `""`.
 
 ```jsx
 const source = 'http://i.imgur.com/nVPXKtz.jpg';
