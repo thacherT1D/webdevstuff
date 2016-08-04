@@ -79,7 +79,7 @@ Simply put, JSX makes building React applications easier. But everyone has their
 You'll find that a React application written in JSX is a better way to separate concerns than the traditional division of presentation and behavior. That's because:
 
 1. Presentation and behavior are intimately tied together, so why keep them in separate HTML and JavaScript files.
-2. Dedicated template languages tend to be inadequate when implementing complex user interfaces.
+2. Dedicated template languages tend to be inadequate when implementing a complex user interface.
 
 While it may feel jarring to write HTML-like syntax with your JavaScript at first, using the expressive power of a full programming language to build a complex user interface is an ideal solution to the above problems. In short, React JSX allows presentation and behavior to live side-by-side using the power of JavaScript, but with a concise and familiar syntax.
 
@@ -89,21 +89,21 @@ Take a moment to write down why React JSX is important. Include some of its adv
 
 ## How does React JSX work?
 
-Under the hood, React JSX transforms HTML-like elements, attributes, and children into arguments that are passed to the `React.createElement()` function. Both HTML tags and React component classes can be transformed from JSX to JavaScript.
+Under the hood, React JSX transforms HTML-like elements, attributes, and children into arguments that are passed to the `React.createElement()` function. As you'll see, both HTML tags and React component classes can be transformed from JSX to JavaScript.
 
-For the following code examples, use the [Babel REPL](https://babeljs.io/repl/) to transpile the React JSX code example into JavaScript. Type each code example out *by hand*. Then write down your answers to each question.
+For the following code examples, use the [Babel REPL](https://babeljs.io/repl/) to transpile the React JSX into JavaScript. Type each code example out *by hand* and then write down your answers to each question.
 
 ### HTML tag
 
-HTML tags use a lowercase JSX tag name. Remember, `class` and `for` are reserved keywords in JavaScript so `className` and `htmlFor` must be used instead.
+As you might expect, an HTML tag uses a lowercase JSX tag name. Remember, `class` and `for` are reserved keywords in JavaScript, so instead `className` and `htmlFor` must be used for attributes.
 
 ```jsx
 const element = <p className="bold">Tokyo Dog</p>;
 ```
 
-* How many `ReactElement` objects are created?
-* What are their `type`, `props`, and `children`?
-* **True or False:** Babel adds `use strict;` at the top of the transpiled output.
+- How many `ReactElement` objects are created?
+- What are their `type`, `props`, and `children`?
+- **True or False:** Babel adds `use strict;` at the top of the transpiled output.
 
 ### Nested HTML tags
 
@@ -116,8 +116,8 @@ const element = <ul>
 </ul>;
 ```
 
-* How many `ReactElement` objects are created?
-* What are their `type`, `props`, and `children`?
+- How many `ReactElement` objects are created?
+- What are their `type`, `props`, and `children`?
 
 ### React component class
 
@@ -137,10 +137,10 @@ const element = <Truck />;
 
 As previously mentioned, component classes must specify a `render()` function that returns a single `ReactElement` object. But that single `ReactElement` object can contain other `ReactElement` objects as children. This is the first key to building complex user interfaces.
 
-* How many `ReactElement` objects are created?
-* What are their `type`, `props`, and `children`?
-* What is the `displayName` of the component class?
-* What type of object does the `render()` function return?
+- How many `ReactElement` objects are created?
+- What are their `type`, `props`, and `children`?
+- What is the `displayName` of the component class?
+- What type of object does the `render()` function return?
 
 ### Nested React component classes
 
@@ -166,10 +166,10 @@ const Trucks = React.createClass({
 const element = <Trucks />;
 ```
 
-* How many `ReactElement` objects are created?
-* What are their `type`, `props`, and `children`?
-* What is the `displayName` of each component class?
-* **True or False:** Self-closing JSX tags must end with `/>`.
+- How many `ReactElement` objects are created?
+- What are their `type`, `props`, and `children`?
+- What is the `displayName` of each component class?
+- **True or False:** Self-closing JSX tags must end with `/>`.
 
 ### Single-line attribute expressions
 
@@ -180,8 +180,8 @@ const source = 'http://i.imgur.com/nVPXKtz.jpg';
 const element = <img src={source} alt="Saffron Spice" />;
 ```
 
-* How many `ReactElement` objects are created?
-* What are their `type`, `props`, and `children`?
+- How many `ReactElement` objects are created?
+- What are their `type`, `props`, and `children`?
 
 ### Multi-line attribute expressions
 
@@ -207,8 +207,8 @@ const element = (
   />
 );
 ```
-* How many `ReactElement` objects are created?
-* What are their `type`, `props`, and `children`?
+- How many `ReactElement` objects are created?
+- What are their `type`, `props`, and `children`?
 
 ### Child expressions
 
@@ -219,8 +219,8 @@ const food = 'Cheese';
 const element = <p>{food} Wizards</p>;
 ```
 
-* How many `ReactElement` objects are created?
-* What are their `type`, `props`, and `children`?
+- How many `ReactElement` objects are created?
+- What are their `type`, `props`, and `children`?
 
 ### Boolean attributes
 
@@ -232,9 +232,9 @@ const element2 = <input type="button" disabled={true} />;
 const element3 = <input type="button" disabled={false} />;
 ```
 
-* How many `ReactElement` objects are created?
-* What are their `type`, `props`, and `children`?
-* Which two JSX tags are equivalent?
+- How many `ReactElement` objects are created?
+- What are their `type`, `props`, and `children`?
+- Which two JSX tags are equivalent?
 
 ### Ternary attribute expressions
 
@@ -245,9 +245,9 @@ const isHealthy = false;
 const element = <div className={isHealthy ? 'hide' : 'show'} />;
 ```
 
-* How many `ReactElement` objects are created?
-* What are their `type`, `props`, and `children`?
-* **True or False:** Any element can be a self-closing JSX tag if it has no children.
+- How many `ReactElement` objects are created?
+- What are their `type`, `props`, and `children`?
+- **True or False:** Any element can be a self-closing JSX tag if it has no children.
 
 ### Ternary child expressions
 
@@ -278,8 +278,8 @@ const element = <div>
 </div>;
 ```
 
-* How many `ReactElement` objects are created?
-* What are their `type`, `props`, and `children`?
+- How many `ReactElement` objects are created?
+- What are their `type`, `props`, and `children`?
 
 ### Style attribute expressions
 
@@ -298,8 +298,8 @@ const styles = {
 const element = <p style={styles}>Happy Grillmore</p>;
 ```
 
-* How many `ReactElement` objects are created?
-* What are their `type`, `props`, and `children`?
+- How many `ReactElement` objects are created?
+- What are their `type`, `props`, and `children`?
 
 ### Comments
 
@@ -316,9 +316,9 @@ const element = <div>
 </div>;
 ```
 
-* How many `ReactElement` objects are created?
-* What are their `type`, `props`, and `children`?
-* **True or False:** Child comments can only use the `/* */` style.
+- How many `ReactElement` objects are created?
+- What are their `type`, `props`, and `children`?
+- **True or False:** Child comments can only use the `/* */` style.
 
 ## How do you refactor JavaScript into React JSX?
 
@@ -447,11 +447,11 @@ However, feel free to use any of the [supported tags and attributes](https://fac
 
 ## References
 
-* [React Docs - DOM Differences](https://facebook.github.io/react/docs/dom-differences.html)
-* [React Docs - If-Else in JSX](https://facebook.github.io/react/tips/if-else-in-JSX.html)
-* [React Docs - Inline Styles](https://facebook.github.io/react/tips/inline-styles.html)
-* [React Docs - JSX in Depth](https://facebook.github.io/react/docs/jsx-in-depth.html)
-* [React Docs - Self-closing Tag](https://facebook.github.io/react/tips/self-closing-tag.html)
-* [Wikipedia - Source-to-source compiler](https://en.wikipedia.org/wiki/Source-to-source_compiler)
+- [React Docs - DOM Differences](https://facebook.github.io/react/docs/dom-differences.html)
+- [React Docs - If-Else in JSX](https://facebook.github.io/react/tips/if-else-in-JSX.html)
+- [React Docs - Inline Styles](https://facebook.github.io/react/tips/inline-styles.html)
+- [React Docs - JSX in Depth](https://facebook.github.io/react/docs/jsx-in-depth.html)
+- [React Docs - Self-closing Tag](https://facebook.github.io/react/tips/self-closing-tag.html)
+- [Wikipedia - Source-to-source compiler](https://en.wikipedia.org/wiki/Source-to-source_compiler)
 
 #### [⇐ Previous](01-introduction-to-react.md) | [Table of Contents](README.md#table-of-contents) | [Next ⇒](03-react-developer-tools.md)
