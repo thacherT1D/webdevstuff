@@ -91,11 +91,9 @@ Take a moment to write down why React JSX is important. Include some of its adv
 
 Under the hood, React JSX transforms HTML-like elements, attributes, and children into arguments that are passed to the `React.createElement()` function. Both HTML tags and React component classes can be transformed from JSX to JavaScript.
 
-### Exercise
-
 For the following code examples, use the [Babel REPL](https://babeljs.io/repl/) to transpile the React JSX code example into JavaScript. Then write down your answers to each question.
 
-**NOTE:** Type each code example out *by hand* and then run it. No copy-and-paste cheating either.
+**NOTE:** Type each code example out *by hand* and then run it. No copy-and-paste cheating.
 
 #### HTML tag
 
