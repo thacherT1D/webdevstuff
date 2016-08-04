@@ -10,7 +10,7 @@
 
 For example, when the following React JSX code is run through a transpiler:
 
-```html
+```jsx
 <h1 id="greeting">Hello, Jane.</h1>
 ```
 
