@@ -103,7 +103,7 @@ const element = <p className="bold">Tokyo Dog</p>;
 
 * How many `ReactElement` objects are created?
 * What are their `type`, `props`, and `children`?
-* **True or False:** Babel adds `use strict;` at the top of the transpiled "file".
+* **True or False:** Babel adds `use strict;` at the top of the transpiled output.
 
 ### Nested HTML tags
 
