@@ -318,7 +318,7 @@ Contemplate the following page outline for a moment:
 
 ![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/302/semanticHTML.png)
 
-### **Exercise**
+### Exercise: Semantic HTML structural tags
 Turn to your code partner and discuss:
 
 * What goes in the `<header>` tag?
