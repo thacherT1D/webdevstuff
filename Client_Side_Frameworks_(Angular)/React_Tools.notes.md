@@ -356,7 +356,7 @@ Now, inside of `app/components/app.jsx`, let's refactor the component class's `r
 
 **NOTE:** If you forget to end a self-closing tag with `/>`, you'll see an `Uncaught SyntaxError: embedded: Expected corresponding JSX closing tag` error in the console.
 
-`app.jsx`
+`app/components/app.jsx`
 ```jsx
 import React from 'react';
 
