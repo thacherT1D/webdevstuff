@@ -232,13 +232,13 @@ const element2 = <input type="button" disabled={true} />;
 const element3 = <input type="button" disabled={false} />;
 ```
 
-- Which JSX tags are equivalent?
 - How many `ReactElement` objects are created?
 - What are their `type`, `props`, and `children`?
+- Which JSX tags are equivalent?
 
 ### Ternary attribute expressions
 
-The only conditional statements that work inside of JSX are ternary expressions. `if` statements don't work because JSX is just syntactic sugar for JavaScript function calls.
+The only conditional statement that works inside of JSX is a ternary expression. An `if` statement doesn't work because JSX is just syntactic sugar for JavaScript function calls.
 
 ```jsx
 const isHealthy = false;
@@ -251,7 +251,7 @@ const element = <div className={isHealthy ? 'hide' : 'show'} />;
 
 ### Ternary child expressions
 
-In addition to attributes, ternary expressions can be used as children for JSX tags.
+In addition to attributes, a ternary expression can be used as a child of a JSX tag.
 
 ```jsx
 const isHealthy = false;
