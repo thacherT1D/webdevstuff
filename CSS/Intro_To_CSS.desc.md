@@ -23,15 +23,15 @@ An easy (and heavily frowned-upon) way to add styling to an HTML element is by u
 </html>
 ```
 
-Let's use the `style` attribute to make give that div a width of 200px, a height of 200px, and a red background. Inside the `body` tag, change the div so that it looks like this:
+Let's use the `style` attribute to give that div a width of 200px, a height of 200px, and a red background. Inside the `body` tag, change the div so that it looks like this:
 
 ```html
 <div style="width: 200px; height: 200px; background-color: red;">Here's my first div!</div>
 ```
 
-`width`, `value`, `background-color`, are all called _properties_. Their corresponding values (200px, 200px, and red) are, conveniently enough, called _values_.
+`width`, `value`, and `background-color` are all called _properties_. Their corresponding values (200px, 200px, and red) are, conveniently enough, called _values_.
 
-Using inline styles is a bad practice, for a couple of reasons. For one, you're cluttering up your HTML, and mixing content from styling. Second, it's hard to keep your code DRY if you use inline style. If you wanted to add a second div with the same styling, you'd need to duplicate all that styling code. For example, let's add a second div to our html file:
+Using inline styles is a bad practice, for a couple of reasons. First off, you're cluttering up your HTML by mixing in styling syntax. Second, it's hard to keep your code DRY if you use inline style. If you wanted to add a second div with the same styling, you'd need to duplicate all that styling code:
 
 ```html
 <!DOCTYPE html>

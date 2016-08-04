@@ -27,7 +27,7 @@ Each browser's user agent stylesheet is different. There are two popular approac
 
 A normalizer maintains some default styling, but keeps it consistent between browsers. The most popular implementation of this is [normalize.css](https://necolas.github.io/normalize.css/).
 
-**You Try**:
+#### Exercise
 
   - Copy the website you have been working on
   - Add a normalizer to the copy of your website
