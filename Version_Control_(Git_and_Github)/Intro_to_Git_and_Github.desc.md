@@ -71,7 +71,7 @@ And if GitHub goes down, we can still work on our distributed repos offline.
 | Package in Rocketship (3)| `git commit -m 'including details.txt'` | Commited change |
 | Repeat 2 and 3 to add any new last minute packages before launch (4)| `git add`, `git commit` | Stage and Commit change |
 | Set Coordinates    (5)   | `git remote add mars git@github.com:nasa/marooned-astronaut.git` | Remote Respository |
-| Launch (6)               | `git push origin master` | Push |
+| Launch (6)               | `git push mars master` | Push |
 
 Let's say you want to deliver some packages to Mars with a rocketship. *You want to push changes to GitHub from your git repo*
 
@@ -85,10 +85,10 @@ Let's say you want to deliver some packages to Mars with a rocketship. *You want
 
 1. Repeat the create packages, move to launchpad, and pack rocketship steps for any additional packages you want to send. *Change files, `git add`, `git commit`*
 
-1. Set the rocketship coordinates for Mars. *`git remote add origin git@github.com:nasa/marooned-astronaut.git`*
+1. Set the rocketship coordinates for Mars. *`git remote add mars git@github.com:nasa/marooned-astronaut.git`*
   * We'll reuse our rocketship, so you only need to do this once per rocket!
 
-1. When the rocketship is sufficiently loaded, we want to launch the rocketship to Mars. *`git push -u origin master`*
+1. When the rocketship is sufficiently loaded, we want to launch the rocketship to Mars. *`git push -u mars master`*
 
 1. Astronaut on Mars will recieve your rocketship and be happy with their new packages. *Check your GitHub repo to make sure the changes were pushed*
 
