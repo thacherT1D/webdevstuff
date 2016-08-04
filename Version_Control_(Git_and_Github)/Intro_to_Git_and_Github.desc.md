@@ -188,9 +188,9 @@ $ git push
 
 If you have your remote pointing to GitHub, you should now be able to see any changes on your GitHub page.
 
-### Walkthrough
+------------------------------------------------------------
 
-> ### Mission Alert! :rocket:
+> ### Mission Alert!
 >
 > Welcome aboard the Planet Express ensign! Your first mission is to deliver some important packages to the **Omicron Delegation** who have just landed on the planet **Snarf**.  Planet Snarf is a long way from Austin, but with a little know how we'll be able to make sure our delivery is on-time and on-budget, as always!
 >
@@ -263,6 +263,8 @@ Once you commit, enter the command `git status` again and this time you'll see t
 >
 
 If you enter the command 'git remote -v', Git will list all of the places you can send your files to.  Recall that we set our remote location address earlier and called it `planet-snarf`.  We'll explain what master means later!
+
+------------------------------------------------------------
 
 ## Exercises
 
