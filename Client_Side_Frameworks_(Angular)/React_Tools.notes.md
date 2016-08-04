@@ -107,7 +107,7 @@ const element = <p className="bold">Tokyo Dog</p>;
 
 ### Nested HTML tags
 
-As you might expect, HTML tags can be nested in JSX as well.
+Additionally, HTML tags can be nested in JSX.
 
 ```jsx
 const element = <ul>
