@@ -79,7 +79,7 @@ Simply put, JSX makes building React applications easier. But everyone has their
 You'll find that a React application written in JSX is a better way to separate concerns than the traditional division of presentation and behavior. That's because:
 
 1. Presentation and behavior are intimately tied together, so why keep them in separate HTML and JavaScript files.
-2. Dedicated template languages tend to be inadequate for implementing complex behavior like conditionals and loops.
+2. Dedicated template languages tend to be inadequate for implementing complex behavior with conditionals and loops.
 
 While it may feel jarring to write HTML with your JavaScript at first, using the expressive power of a full programming language to build a complex user interface is an ideal solution to the above problems. In short, React JSX allows presentation and behavior to live side-by-side using the power of JavaScript, but with a concise and familiar syntax.
 
