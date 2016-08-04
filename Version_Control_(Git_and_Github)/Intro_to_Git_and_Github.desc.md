@@ -66,11 +66,12 @@ And if GitHub goes down, we can still work on our distributed repos offline.
 
 | Rocketship  |Git Command/Action | Git Description |
 |--------------------|-------------|
-| Make a Package        | adding or creating a new file e.g. `touch details.txt` | Unstaged change |
-| Package on Launchpad  | `git add details.txt` | Staged change |
-| Package in Rocketship | `git commit -m 'including details.txt'` | Commited change |
-| Set Coordinates       | `git remote add mars git@github.com:nasa/marooned-astronaut.git` | Remote Respository |
-| Launch                | `git push origin master` | Push |
+| Make a Package (1)       | adding or creating a new file e.g. `touch details.txt` | Unstaged change |
+| Package on Launchpad (2) | `git add details.txt` | Staged change |
+| Package in Rocketship (3)| `git commit -m 'including details.txt'` | Commited change |
+| Repeat 2 and 3 to add any new last minute packages before launch (4)| `git add`, `git commit` | Stage and Commit change |
+| Set Coordinates    (5)   | `git remote add mars git@github.com:nasa/marooned-astronaut.git` | Remote Respository |
+| Launch (6)               | `git push origin master` | Push |
 
 Let's say you want to deliver some packages to Mars with a rocketship. *You want to push changes to GitHub from your git repo*
 
