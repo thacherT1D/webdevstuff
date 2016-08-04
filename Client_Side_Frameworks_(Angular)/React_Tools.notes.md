@@ -100,7 +100,7 @@ For the following code examples, use the [Babel REPL](https://babeljs.io/repl/) 
 HTML tags use a lowercase JSX tag name. Remember, `class` and `for` are reserved keywords in JavaScript so `className` and `htmlFor` must be used instead.
 
 ```jsx
-var element = <p className="bold">Tokyo Dog</p>;
+const element = <p className="bold">Tokyo Dog</p>;
 ```
 
 * How many `ReactElement` objects are created?
@@ -112,7 +112,7 @@ var element = <p className="bold">Tokyo Dog</p>;
 As you might expect, HTML tags can be nested in JSX as well.
 
 ```jsx
-var element = <ul>
+const element = <ul>
   <li className="completed">Molly Moon</li>
   <li>Pie Mobile</li>
 </ul>;
@@ -126,7 +126,7 @@ var element = <ul>
 React component classes can also be transformed from JSX to JavaScript. First, create a component class and store it in a local variable that starts with an uppercase letter. Then, use that variable name as the JSX tag name. The lowercase and uppercase convention helps to distinguish between HTML tags and React component classes.
 
 ```jsx
-var Truck = React.createClass({
+const Truck = React.createClass({
   render: function() {
     return <div>
       <a href="http://www.streetdonuts.com/">Street Donuts</a>
@@ -134,7 +134,7 @@ var Truck = React.createClass({
   }
 });
 
-var element = <Truck />;
+const element = <Truck />;
 ```
 
 As previously mentioned, component classes must specify a `render()` function that returns a single `ReactElement` object. But that single `ReactElement` object can contain other `ReactElement` objects as children. This is the first key to building complex user interfaces.
@@ -149,7 +149,7 @@ As previously mentioned, component classes must specify a `render()` function th
 Additionally, component classes can be nested within other JSX tags. This is the second key to building complex user interfaces.
 
 ```jsx
-var Truck = React.createClass({
+const Truck = React.createClass({
   render: function() {
     return <li>
       <a href="http://www.streetdonuts.com/">Street Donuts</a>
@@ -157,7 +157,7 @@ var Truck = React.createClass({
   }
 });
 
-var Trucks = React.createClass({
+const Trucks = React.createClass({
   render: function() {
     return <ul>
       <Truck />
@@ -165,7 +165,7 @@ var Trucks = React.createClass({
   }
 });
 
-var element = <Trucks />;
+const element = <Trucks />;
 ```
 
 * How many `ReactElement` objects are created?
@@ -178,8 +178,8 @@ var element = <Trucks />;
 In JSX, the result of a JavaScript expression can be used as an attribute value. This is useful when you want to inline the full power of JavaScript  within a JSX tag. JavaScript expressions are wrapped in a pair of curly braces `{}` instead of quotes `""`.
 
 ```jsx
-var source = 'http://i.imgur.com/nVPXKtz.jpg';
-var element = <img src={source} alt="Saffron Spice" />;
+const source = 'http://i.imgur.com/nVPXKtz.jpg';
+const element = <img src={source} alt="Saffron Spice" />;
 ```
 
 * How many `ReactElement` objects are created?
@@ -190,7 +190,7 @@ var element = <img src={source} alt="Saffron Spice" />;
 It's common for attributes of a JSX tag to stretch beyond your preferred line length. In cases like this, you can switch to defining one attribute per line. We recommend ordering attributes alphabetically and closing the JSX tag on a separate line, just like curly braces `{}` and parenthesis `()` in JavaScript.
 
 ```jsx
-var element = <input
+const element = <input
   onChange={this.handleChange}
   type="text"
   value={this.state.searchTerm}
@@ -201,7 +201,7 @@ In the wild, you may see multi-line JSX tags wrapped in parenthesis. Syntactical
 
 ```jsx
 // UNNECESSARY PARENTHESIS
-var element = (
+const element = (
   <input
     onChange={this.handleChange}
     type="text"
@@ -217,8 +217,8 @@ var element = (
 In addition to attributes, JavaScript expressions can also be used as children in JSX tags. These expressions use the exact same curly brace `{}` notation.
 
 ```jsx
-var food = 'Cheese';
-var element = <p>{food} Wizards</p>;
+const food = 'Cheese';
+const element = <p>{food} Wizards</p>;
 ```
 
 * How many `ReactElement` objects are created?
@@ -229,9 +229,9 @@ var element = <p>{food} Wizards</p>;
 Boolean attributes come up when using HTML form elements with attributes like `disabled`, `required`, `checked` and `readOnly`.
 
 ```jsx
-var element1 = <input type="button" disabled />;
-var element2 = <input type="button" disabled={true} />;
-var element3 = <input type="button" disabled={false} />;
+const element1 = <input type="button" disabled />;
+const element2 = <input type="button" disabled={true} />;
+const element3 = <input type="button" disabled={false} />;
 ```
 
 * How many `ReactElement` objects are created?
@@ -243,8 +243,8 @@ var element3 = <input type="button" disabled={false} />;
 The only conditional statements that work inside of JSX are ternary expressions. `if` statements don't work because JSX is just syntactic sugar for JavaScript function calls.
 
 ```jsx
-var isHealthy = false;
-var element = <div className={isHealthy ? 'hide' : 'show'} />;
+const isHealthy = false;
+const element = <div className={isHealthy ? 'hide' : 'show'} />;
 ```
 
 * How many `ReactElement` objects are created?
@@ -256,8 +256,8 @@ var element = <div className={isHealthy ? 'hide' : 'show'} />;
 In addition to attributes, ternary expressions can be used as children for JSX tags.
 
 ```jsx
-var isHealthy = false;
-var element = <div>
+const isHealthy = false;
+const element = <div>
   {isHealthy ? <p>Yuck!</p> : <p>Delicious!</p>}
 </div>;
 ```
@@ -265,8 +265,8 @@ var element = <div>
 If a ternary expression isn't robust enough, you can use an `if` statement outside of your JSX.
 
 ```jsx
-var isHealthy = false;
-var message;
+const isHealthy = false;
+const message;
 
 if (isHealthy) {
   message = <p>Yuck!</p>;
@@ -275,7 +275,7 @@ else {
   message = <p>Delicious!</p>;
 }
 
-var element = <div>
+const element = <div>
   {message}
 </div>;
 ```
@@ -290,14 +290,14 @@ In JSX, the `style` attribute accepts a JavaScript object with camel cased CSS p
 **NOTE:** Vendor prefixes, other than `ms`, begin with a capital letter. This is why `WebkitTransition` has an uppercase `W`.
 
 ```jsx
-var styles = {
+const styles = {
   backgroundColor: 'darkblue',
   color: 'lightgreen',
   msTransition: 'all', // 'ms' is the only lowercase vendor prefix
   WebkitTransition: 'all' // note the capital 'W' here
 };
 
-var element = <p style={styles}>Happy Grillmore</p>;
+const element = <p style={styles}>Happy Grillmore</p>;
 ```
 
 * How many `ReactElement` objects are created?
@@ -308,7 +308,7 @@ var element = <p style={styles}>Happy Grillmore</p>;
 In JSX, it's possible to comment out both attributes and children. But remember, commented out code is the same as dead code. Just delete it!
 
 ```jsx
-var element = <div>
+const element = <div>
   <p>It’s Bao Time</p>
   {/* <p>Chopstix</p> */}
   <input
@@ -346,7 +346,7 @@ Now, inside of `hello.jsx`, let's refactor the component class's `render()` func
 
 ```jsx
 render: function() {
-  var message;
+  let message;
 
   if (this.state.who.trim() === '') {
     message = 'Hello?';
