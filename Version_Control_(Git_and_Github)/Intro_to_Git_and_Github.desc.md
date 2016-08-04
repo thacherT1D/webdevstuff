@@ -64,8 +64,6 @@ And if GitHub goes down, we can still work on our distributed repos offline.
 
 :rocket:
 
-A stranded Mars astronaut needs a critical survival package to...well, survive!
-
 | Rocketship  |Git Command/Action | Git Description |
 |--------------------|-------------|
 | Make a Package        | adding or creating a new file e.g. `touch details.txt` | Unstaged change |
@@ -187,84 +185,6 @@ $ git push
 ```
 
 If you have your remote pointing to GitHub, you should now be able to see any changes on your GitHub page.
-
-------------------------------------------------------------
-
-> ### Mission Alert!
->
-> Welcome aboard the Planet Express ensign! Your first mission is to deliver some important packages to the **Omicron Delegation** who have just landed on the planet **Snarf**.  Planet Snarf is a long way from Austin, but with a little know how we'll be able to make sure our delivery is on-time and on-budget, as always!
->
-> As your supervisor, I will help guide you through this mission!
-
-To get setup for this mission you'll need to do the following:
-
- - Create a new github repository online.  *(click on that green button that says 'New'!)*
-
- <img src="https://i.gyazo.com/36e22a9cea3b6a635fe441a57e0ba81f.png" alt="https://gyazo.com/36e22a9cea3b6a635fe441a57e0ba81f" width="500"/>
-
- - Name your repository, in this case 'planet-snarf' and click 'Create repository'.  This will be the remote location for your files.
-
-  ![](http://i.giphy.com/l0MYGhndUucXqbJe0.gif)
-
- - Once you have a remote location created, you'll want to copy it's address.  We'll use this address soon.
-
- <img src="https://i.gyazo.com/2cfee651add0755c15032bfba98d463e.png" alt="" width="600"/>
-
- - Now open your terminal and navigate to an area where you keep your galvanize stuff, and create a new directory called planet-express-warehouse, then go in to that directory.  
-
- Enter the following commands:
-
-  `$ mkdir planet-express-warehouse`
-
-  `$ cd planet-express-warehouse`
-
- - Your prompt (the place in terminal where you type stuff in) might look something like this: `~/planet-express-warehouse $`. Entering the command `pwd` should reveal that you are in the planet-express-warehouse directory.  Go ahead and enter the command `la`.  You should see that the planet-express-warehouse is just an empty directory.  In order to use the Git version control system on this folder and send files from this folder to our remote location, we need to enter this **Git** command:
-
- `$ git init`
-
- - If you enter the command `la` again, you'll see a folder named `.git`.  This is where git keeps track of all of your files and the changes you'll make to them, you'll almost never need to mess with that `.git` folder.  Next, let's create the files we want to send over to our remote location (planet-snarf).  *Note: We're using regular terminal commands to make these files, these are not git specific commands.*
-
- `$ touch mysterious-device.txt`
-
- `$ touch sketchy-looking-paperwork.txt`
-
- - Finally, remember that remote address we copied earlier from Github?  We're going to use that now.  We need to tell git in our local folder that we want to be able to send our files to planet-snarf.
-
- `$ git remote add planet-snarf [Paste or type your remote address here e.g. git@github.com/zubaird/planet-snarf.git]`
-
- You're now ready to proceed with the mission!
-
-> The planet Snarf receives a lot of deliveries everyday, we need to make sure that we properly label the delivery so that they know what its for.  Additionally, we'll have to specify what things we want included in this delivery from our warehouse.
->
-> First off, we need to add a tracking device to each parcel we want to deliver.  Lucky for you, all of the actual work is performed by our robot, Dr.Git!  All you have to do is give it the proper commands.
->
-
-In the world of Git, we add files that we want to track changes on by using `git add`. Type in the ever useful command `git status` to see that you have no files currently tracked, instead it will display a list of files under the heading `'Untracked files:'`.  
-
-> **Step One:** Track the parcels
->
-> `git add mysteriousDevice.txt`
->
-> `git add sketchyLookingPaperWork.txt`
->
-
-Now when we make changes to these files, Git will keep track of it (down to the last character!).  Open the files up in Atom and add the line 'Planet Express Delivery - [Your Name]'.  Type in the command `git status`, Git will tell you that there are changes made to the files tracked and they are ready to be committed.
-
-> **Step Three:** Load all of the packages on to a crate and label it.
->
-> `git commit -m 'stuff for the Omicron Delegation'`
->
-
-Once you commit, enter the command `git status` again and this time you'll see the words `'nothing to commit, working directory clean'`.  Git is saying that no changes have happened since you entered the text 'Planet Express Delivery - [Your Name]' and committed.   If you did make any changes to a file after the commit, you've essentially made a new version of your folder (planet-express-warehouse), and you'll need to make a another commit.  By recording each new change in a commit, we'll have a history that we can look back at, and even be able to switch back to an older version!
-
-> **Step Three:** Load the crate on the Planet Express Ship and Launch to Planet Snarf.
->
-> `git push planet-snarf master`   
->
-
-If you enter the command 'git remote -v', Git will list all of the places you can send your files to.  Recall that we set our remote location address earlier and called it `planet-snarf`.  We'll explain what master means later!
-
-------------------------------------------------------------
 
 ## Exercises
 
