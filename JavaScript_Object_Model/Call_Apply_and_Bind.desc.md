@@ -213,3 +213,4 @@ As we move to more complicated code, you will see `bind` being used quite heavil
 - [Scope](http://dailyjs.com/2012/07/22/js101-scope/)
 - [Functions](http://dailyjs.com/2012/07/01/function)
 - [The Function Constructor](http://dailyjs.com/2012/07/08/function-2)
+
