@@ -810,6 +810,16 @@ You should see something like this.
 Bravo! :tada:
 
 
+###Other Useful Dev Tools
+These are a few other tools that can be helpful for different aspects of development: 
+* Password Manager: [Last Pass](https://lastpass.com) or [One Password](https://1password.com/)
+* Organizes windows on your screen: [Spectacle](https://www.spectacleapp.com/)
+* Keeps a history of what you copy [Jump Cut](http://jumpcut.sourceforge.net/)
+* Color Picker: [sip](http://sipapp.io/) (color)
+* Image Editor: [Pixelmaker](http://www.pixelmator.com/mac/)
+* For Notes: [One Note](https://www.onenote.com/) or [Evernote](https://evernote.com/)
+* Automatically dim your screen for working at night: [Flux](https://justgetflux.com/) — night time your screen
+
 
 ### Congratulations!
 
