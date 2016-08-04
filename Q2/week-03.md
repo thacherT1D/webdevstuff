@@ -19,7 +19,7 @@ Week 1
       <td rowspan="1">Monday</td>
       <td rowspan="1"><a href="https://gist.github.com/ryansobol/9695adcc53c239a45209f17535e8c0d1">SQL Migrations</a>
       </td>
-      <td>
+      <td>Knex Migrations and Seeds
       </td>
       <td><a href="https://github.com/gSchool/galvanize-bookshelf/blob/master/1_migrations_seeds.md">Galvanize Bookshelf - Part 1</a>
       </td>
@@ -30,7 +30,7 @@ Week 1
       <td rowspan="1">Tuesday</td>
       <td rowspan="1"><a>none</a>
       </td>
-      <td>
+      <td>Expess and Knex
       </td>
       <td><a href="https://github.com/gSchool/galvanize-bookshelf/blob/master/2_express_knex.md">Galvanize Bookshelf - Part 2</a>
       </td>
@@ -41,7 +41,7 @@ Week 1
       <td rowspan="1">Wednesday</td>
       <td rowspan="1"><a href="https://gist.github.com/ryansobol/a217c4bc954ebfe78a84058da9e5f19a">SQL Seeds</a>
       </td>
-      <td>
+      <td>User Registration
       </td>
       <td><a href="https://github.com/gSchool/galvanize-bookshelf/blob/master/3_user_registration.md">Galvanize Bookshelf - Part 3</a>
       </td>
@@ -52,7 +52,7 @@ Week 1
       <td rowspan="1">Thursday</td>
       <td rowspan="1"><a href="https://gist.github.com/ryansobol/250cbea3e9a611f2eba4bac2cba61fb6">Knex Migrations</a>
       </td>
-      <td>
+      <td>User Authentication
       </td>
       <td><a href="https://github.com/gSchool/galvanize-bookshelf/blob/master/4_user_authentication.md">Galvanize Bookshelf - Part 4</a>
       </td>
@@ -63,7 +63,7 @@ Week 1
       <td rowspan="1">Friday</td>
       <td rowspan="1"><a href="https://gist.github.com/ryansobol/c4a1e5791ba6dafce6ba8910159acde1">Knex Seeds</a>
       </td>
-      <td>
+      <td>Heroku Deployment
       </td>
       <td><a href="https://github.com/gSchool/galvanize-bookshelf/blob/master/4_user_authentication.md">Galvanize Bookshelf - Part 5</a>
       </td>

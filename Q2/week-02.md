@@ -19,7 +19,7 @@ Week 1
       <td rowspan="1">Monday</td>
       <td rowspan="1"><a href="https://gist.github.com/ryansobol/bc0206c1e5d00af16568ead5e59b01fd">Express Static Files</a>
       </td>
-      <td>
+      <td>PostgreSQL
       </td>
       <td>
       </td>
@@ -30,7 +30,7 @@ Week 1
       <td rowspan="1">Tuesday</td>
       <td rowspan="1"><a href="https://gist.github.com/IanSmith89/f72743227a6db62a454374a39ebdc6b4">Express Templating</a>
       </td>
-      <td>
+      <td>SQL
       </td>
       <td><a href="https://github.com/gSchool/intro_sql_exercise">Apartment Lab</a>
       </td>
@@ -41,7 +41,7 @@ Week 1
       <td rowspan="1">Wednesday</td>
       <td rowspan="1"><a href="https://github.com/IanSmith89/pokemon_templating">Express Templating w/ Materialize</a>
       </td>
-      <td>
+      <td>Entity Relationships
       </td>
       <td><a href="https://github.com/gSchool/sql-curriculum/blob/solutions/Unit-02-Relational/02-readme.md">Online Retailer</a>
       </td>
@@ -52,7 +52,7 @@ Week 1
       <td rowspan="1">Thursday</td>
       <td rowspan="1"><a href="https://gist.github.com/IanSmith89/b9eaf52b98a831bebbee8014e368b812">Express Error Templates</a>
       </td>
-      <td>
+      <td>Knex.js
       </td>
       <td><a href="https://github.com/gSchool/sql-to-knex-assignment">SQL to Knex</a>
       </td>
@@ -63,7 +63,7 @@ Week 1
       <td rowspan="1">Friday</td>
       <td rowspan="1"><a>None</a>
       </td>
-      <td>
+      <td>Indexes
       </td>
       <td>Review
       </td>

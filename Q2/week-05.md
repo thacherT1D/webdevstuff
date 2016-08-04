@@ -19,7 +19,7 @@ Week 1
       <td rowspan="1">Monday</td>
       <td rowspan="1">
       </td>
-      <td>
+      <td>$.ajax
       </td>
       <td><a href="../Projects/Q2.md">Q2 Project</a>
       </td>
@@ -30,7 +30,7 @@ Week 1
       <td rowspan="1">Tuesday</td>
       <td rowspan="1">
       </td>
-      <td>
+      <td>Git for Teams
       </td>
       <td><a href="../Projects/Q2.md">Q2 Project</a>
       </td>
@@ -41,7 +41,7 @@ Week 1
       <td rowspan="1">Wednesday</td>
       <td rowspan="1">
       </td>
-      <td>
+      <td>Git for Teams
       </td>
       <td><a href="../Projects/Q2.md">Q2 Project</a>
       </td>

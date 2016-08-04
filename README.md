@@ -523,7 +523,7 @@ Week 6
       <td rowspan="1">Monday</td>
       <td rowspan="1"><a href="https://github.com/workshopper/learnyounode">learnyounode</a>
       </td>
-      <td>
+      <td>Node.js Filesystem
       </td>
       <td><a href="https://github.com/gSchool/fs-pet-shop/blob/master/1_fs.md">Pet Shop - Node Filesystem</a>
       </td>
@@ -534,7 +534,7 @@ Week 6
       <td rowspan="1">Tuesday</td>
       <td rowspan="1"><a href="https://github.com/workshopper/learnyounode">learnyounode</a>
       </td>
-      <td>
+      <td>Node.js HTTP Server
       </td>
       <td><a href="https://github.com/gSchool/fs-pet-shop/blob/master/2_http.md">Pet Shop - Node HTTP Server</a>
       </td>
@@ -545,7 +545,7 @@ Week 6
       <td rowspan="1">Wednesday</td>
       <td rowspan="1"><a href="https://github.com/workshopper/learnyounode">learnyounode</a>
       </td>
-      <td>
+      <td>Express HTTP Server
       </td>
       <td><a href="https://github.com/gSchool/fs-pet-shop/blob/master/3_express.md">Pet Shop - Express HTTP Server</a>
       </td>
@@ -556,7 +556,7 @@ Week 6
       <td rowspan="1">Thursday</td>
       <td rowspan="1"><a href="https://github.com/mdunisch/lololodash">lololodash</a>
       </td>
-      <td>
+      <td>RESTful Express HTTP Server
       </td>
       <td><a href="https://github.com/gSchool/fs-pet-shop/blob/master/4_rest.md">Pet Shop - RESTful Express HTTP server</a>
       </td>
@@ -567,7 +567,7 @@ Week 6
       <td rowspan="1">Friday</td>
       <td rowspan="1"><a href="https://github.com/mdunisch/lololodash">lololodash</a>
       </td>
-      <td>
+      <td>Node.js Modules
       </td>
       <td><a href="https://github.com/gSchool/fs-pet-shop">Pet Shop</a>
       </td>
@@ -595,7 +595,7 @@ Week 7
       <td rowspan="1">Monday</td>
       <td rowspan="1"><a href="https://gist.github.com/ryansobol/bc0206c1e5d00af16568ead5e59b01fd">Express Static Files</a>
       </td>
-      <td>
+      <td>PostgreSQL
       </td>
       <td>
       </td>
@@ -606,7 +606,7 @@ Week 7
       <td rowspan="1">Tuesday</td>
       <td rowspan="1"><a href="https://gist.github.com/IanSmith89/f72743227a6db62a454374a39ebdc6b4">Express Templating</a>
       </td>
-      <td>
+      <td>SQL
       </td>
       <td><a href="https://github.com/gSchool/intro_sql_exercise">Apartment Lab</a>
       </td>
@@ -617,7 +617,7 @@ Week 7
       <td rowspan="1">Wednesday</td>
       <td rowspan="1"><a href="https://github.com/IanSmith89/pokemon_templating">Express Templating w/ Materialize</a>
       </td>
-      <td>
+      <td>Entity Relationships
       </td>
       <td><a href="https://github.com/gSchool/sql-curriculum/blob/solutions/Unit-02-Relational/02-readme.md">Online Retailer</a>
       </td>
@@ -628,7 +628,7 @@ Week 7
       <td rowspan="1">Thursday</td>
       <td rowspan="1"><a href="https://gist.github.com/IanSmith89/b9eaf52b98a831bebbee8014e368b812">Express Error Templates</a>
       </td>
-      <td>
+      <td>Knex.js
       </td>
       <td><a href="https://github.com/gSchool/sql-to-knex-assignment">SQL to Knex</a>
       </td>
@@ -639,7 +639,7 @@ Week 7
       <td rowspan="1">Friday</td>
       <td rowspan="1"><a>None</a>
       </td>
-      <td>
+      <td>Indexes
       </td>
       <td>Review
       </td>
@@ -667,7 +667,7 @@ Week 8
       <td rowspan="1">Monday</td>
       <td rowspan="1"><a href="https://gist.github.com/ryansobol/9695adcc53c239a45209f17535e8c0d1">SQL Migrations</a>
       </td>
-      <td>
+      <td>Knex Migrations and Seeds
       </td>
       <td><a href="https://github.com/gSchool/galvanize-bookshelf/blob/master/1_migrations_seeds.md">Galvanize Bookshelf - Part 1</a>
       </td>
@@ -678,7 +678,7 @@ Week 8
       <td rowspan="1">Tuesday</td>
       <td rowspan="1"><a>none</a>
       </td>
-      <td>
+      <td>Expess and Knex
       </td>
       <td><a href="https://github.com/gSchool/galvanize-bookshelf/blob/master/2_express_knex.md">Galvanize Bookshelf - Part 2</a>
       </td>
@@ -689,7 +689,7 @@ Week 8
       <td rowspan="1">Wednesday</td>
       <td rowspan="1"><a href="https://gist.github.com/ryansobol/a217c4bc954ebfe78a84058da9e5f19a">SQL Seeds</a>
       </td>
-      <td>
+      <td>User Registration
       </td>
       <td><a href="https://github.com/gSchool/galvanize-bookshelf/blob/master/3_user_registration.md">Galvanize Bookshelf - Part 3</a>
       </td>
@@ -700,7 +700,7 @@ Week 8
       <td rowspan="1">Thursday</td>
       <td rowspan="1"><a href="https://gist.github.com/ryansobol/250cbea3e9a611f2eba4bac2cba61fb6">Knex Migrations</a>
       </td>
-      <td>
+      <td>User Authentication
       </td>
       <td><a href="https://github.com/gSchool/galvanize-bookshelf/blob/master/4_user_authentication.md">Galvanize Bookshelf - Part 4</a>
       </td>
@@ -711,7 +711,7 @@ Week 8
       <td rowspan="1">Friday</td>
       <td rowspan="1"><a href="https://gist.github.com/ryansobol/c4a1e5791ba6dafce6ba8910159acde1">Knex Seeds</a>
       </td>
-      <td>
+      <td>Heroku Deployment
       </td>
       <td><a href="https://github.com/gSchool/galvanize-bookshelf/blob/master/4_user_authentication.md">Galvanize Bookshelf - Part 5</a>
       </td>
@@ -739,7 +739,7 @@ Week 9
       <td rowspan="1">Monday</td>
       <td rowspan="1"><a href="https://gist.github.com/ryansobol/b8d47d7fcb6cfbc2848dfa4fb13b3f00">User Registration</a>
       </td>
-      <td>
+      <td>Promises
       </td>
       <td><a href="https://github.com/gschool/wd-promise-fundamentals">Promise Fundamentals</a>
       </td>
@@ -750,7 +750,7 @@ Week 9
       <td rowspan="1">Tuesday</td>
       <td rowspan="1"><a href="https://gist.github.com/ryansobol/30f56fce077d229de61b96a7da23e95f">User Authentication</a>
       </td>
-      <td>
+      <td>Automated JavaScript Tests
       </td>
       <td><a href="https://github.com/gSchool/javascript-test-coverage">JavaScript Test Coverage</a>
       </td>
@@ -761,7 +761,7 @@ Week 9
       <td rowspan="1">Wednesday</td>
       <td rowspan="1"><a href=""></a>
       </td>
-      <td>
+      <td>Server-side Validation
       </td>
       <td><a href="https://gist.github.com/ryansobol/7d02bc09fddec3621b463803460dd2b4">SSV for Galvanize Bookshelf</a>
       </td>
@@ -772,7 +772,7 @@ Week 9
       <td rowspan="1">Thursday</td>
       <td rowspan="1"><a href=""></a>
       </td>
-      <td>
+      <td>Git for Teams
       </td>
       <td>
       </td>
@@ -811,7 +811,7 @@ Week 10
       <td rowspan="1">Monday</td>
       <td rowspan="1">
       </td>
-      <td>
+      <td>$.ajax
       </td>
       <td><a href="Projects/Q2.md">Q2 Project</a>
       </td>
@@ -822,7 +822,7 @@ Week 10
       <td rowspan="1">Tuesday</td>
       <td rowspan="1">
       </td>
-      <td>
+      <td>Git for Teams
       </td>
       <td><a href="Projects/Q2.md">Q2 Project</a>
       </td>
@@ -833,7 +833,7 @@ Week 10
       <td rowspan="1">Wednesday</td>
       <td rowspan="1">
       </td>
-      <td>
+      <td>Git for Teams
       </td>
       <td><a href="Projects/Q2.md">Q2 Project</a>
       </td>

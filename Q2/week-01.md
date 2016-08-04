@@ -19,7 +19,7 @@ Week 1
       <td rowspan="1">Monday</td>
       <td rowspan="1"><a href="https://github.com/workshopper/learnyounode">learnyounode</a>
       </td>
-      <td>
+      <td>Node.js Filesystem
       </td>
       <td><a href="https://github.com/gSchool/fs-pet-shop/blob/master/1_fs.md">Pet Shop - Node Filesystem</a>
       </td>
@@ -30,7 +30,7 @@ Week 1
       <td rowspan="1">Tuesday</td>
       <td rowspan="1"><a href="https://github.com/workshopper/learnyounode">learnyounode</a>
       </td>
-      <td>
+      <td>Node.js HTTP Server
       </td>
       <td><a href="https://github.com/gSchool/fs-pet-shop/blob/master/2_http.md">Pet Shop - Node HTTP Server</a>
       </td>
@@ -41,7 +41,7 @@ Week 1
       <td rowspan="1">Wednesday</td>
       <td rowspan="1"><a href="https://github.com/workshopper/learnyounode">learnyounode</a>
       </td>
-      <td>
+      <td>Express HTTP Server
       </td>
       <td><a href="https://github.com/gSchool/fs-pet-shop/blob/master/3_express.md">Pet Shop - Express HTTP Server</a>
       </td>
@@ -52,7 +52,7 @@ Week 1
       <td rowspan="1">Thursday</td>
       <td rowspan="1"><a href="https://github.com/mdunisch/lololodash">lololodash</a>
       </td>
-      <td>
+      <td>RESTful Express HTTP Server
       </td>
       <td><a href="https://github.com/gSchool/fs-pet-shop/blob/master/4_rest.md">Pet Shop - RESTful Express HTTP server</a>
       </td>
@@ -63,7 +63,7 @@ Week 1
       <td rowspan="1">Friday</td>
       <td rowspan="1"><a href="https://github.com/mdunisch/lololodash">lololodash</a>
       </td>
-      <td>
+      <td>Node.js Modules
       </td>
       <td><a href="https://github.com/gSchool/fs-pet-shop">Pet Shop</a>
       </td>

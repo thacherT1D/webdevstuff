@@ -19,7 +19,7 @@ Week 1
       <td rowspan="1">Monday</td>
       <td rowspan="1"><a href="https://gist.github.com/ryansobol/b8d47d7fcb6cfbc2848dfa4fb13b3f00">User Registration</a>
       </td>
-      <td>
+      <td>Promises
       </td>
       <td><a href="https://github.com/gschool/wd-promise-fundamentals">Promise Fundamentals</a>
       </td>
@@ -30,7 +30,7 @@ Week 1
       <td rowspan="1">Tuesday</td>
       <td rowspan="1"><a href="https://gist.github.com/ryansobol/30f56fce077d229de61b96a7da23e95f">User Authentication</a>
       </td>
-      <td>
+      <td>Automated JavaScript Tests
       </td>
       <td><a href="https://github.com/gSchool/javascript-test-coverage">JavaScript Test Coverage</a>
       </td>
@@ -41,7 +41,7 @@ Week 1
       <td rowspan="1">Wednesday</td>
       <td rowspan="1"><a href=""></a>
       </td>
-      <td>
+      <td>Server-side Validation
       </td>
       <td><a href="https://gist.github.com/ryansobol/7d02bc09fddec3621b463803460dd2b4">SSV for Galvanize Bookshelf</a>
       </td>
@@ -52,7 +52,7 @@ Week 1
       <td rowspan="1">Thursday</td>
       <td rowspan="1"><a href=""></a>
       </td>
-      <td>
+      <td>Git for Teams
       </td>
       <td>
       </td>
