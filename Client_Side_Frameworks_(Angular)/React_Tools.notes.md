@@ -224,7 +224,7 @@ const element = <p>{food} Wizards</p>;
 
 ### Boolean attributes
 
-Boolean attributes come up when using HTML form elements with attributes like `disabled`, `required`, `checked` and `readOnly`.
+Boolean attribute values are frequently needed when using HTML form elements with attributes like `disabled`, `required`, `checked` and `readOnly`.
 
 ```jsx
 const element1 = <input type="button" disabled />;
@@ -232,9 +232,9 @@ const element2 = <input type="button" disabled={true} />;
 const element3 = <input type="button" disabled={false} />;
 ```
 
+- Which JSX tags are equivalent?
 - How many `ReactElement` objects are created?
 - What are their `type`, `props`, and `children`?
-- Which two JSX tags are equivalent?
 
 ### Ternary attribute expressions
 
