@@ -318,7 +318,7 @@ const element = <div>
 
 - How many `ReactElement` objects are created?
 - What are their `type`, `props`, and `children`?
-- **True or False:** Child comments can only use the `/* */` style.
+- **True or False:** A JSX child can only be commented with a `/* */` style of comment.
 
 ## How do you refactor JavaScript into React JSX?
 
