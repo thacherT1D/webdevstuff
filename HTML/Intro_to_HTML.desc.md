@@ -320,11 +320,12 @@ Contemplate the following page outline for a moment:
 
 ### **Exercise**
 Turn to your code partner and discuss:
-What goes in the <header> tag?
-What goes in the <article> tag?
-What goes in the <aside> tag?
-What goes in the <section> tag?
-What goes in the <footer> tag?
+
+* What goes in the `<header>` tag?
+* What goes in the `<article>` tag?
+* What goes in the `<aside>` tag?
+* What goes in the `<section>` tag?
+* What goes in the `<footer>` tag?
 
 ## Exercise: Semantic Scavenger Hunt
 
