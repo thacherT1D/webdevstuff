@@ -408,7 +408,7 @@ open http://localhost:8000/
 
 And you should see something like this.
 
-[INSERT IMAGE HERE]
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/300/Screen_Shot_2016-08-04_at_3.44.31_PM.png)
 
 Now, inside of `app/components/app.jsx`, let's refactor the component class's `render()` function into React JSX. Simply convert all `React.createElement()` function calls into JSX using the rules from above.
 
