@@ -74,7 +74,7 @@ Then, turn to a neighbor and, in your own words, explain what React JSX is as we
 
 ## Why use React JSX?
 
-Simply put, JSX makes building React applications easier. But everyone has their own workflow, so JSX is not required to use React. However, we recommend using React JSX because of its concise and familiar syntax. Plus, JSX is a very small amount of syntax to learn. If you're not immediately sold on React JSX, that's fine, but [give it five minutes](https://signalvnoise.com/posts/3124-give-it-five-minutes).
+Simply put, JSX makes building React applications easier. But everyone has their own workflow, so JSX is not required to use React. However, we recommend using React JSX because of its concise and familiar syntax. Plus, it's a very small amount of syntax to learn. If you're not immediately sold on React JSX, that's fine, but [give it five minutes](https://signalvnoise.com/posts/3124-give-it-five-minutes).
 
 You'll find that a React application written in JSX is a better way to separate concerns than the traditional division of presentation and behavior. That's because:
 
