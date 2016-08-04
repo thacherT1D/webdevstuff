@@ -322,57 +322,78 @@ const element = <div>
 
 ## How do you refactor JavaScript into React JSX?
 
-Let's practice by refactoring the **Hello world** example from the previous chapter into JSX. Start by loading Babel into the DOM using a CDN. Usually this is done immediately after `react` and `react-dom` are loaded.
+Let's practice by refactoring the **Hello world** example from the previous chapter into JSX.
 
-**NOTE:** Using Babel to transpile JSX in the browser is great for learning. However, the process is fairly slow and results in client-side computation that can be avoided. Typically, a real React application [pretranspiles its JSX](https://facebook.github.io/react/docs/tooling-integration.html#productionizing-precompiled-jsx) using a handful of Babel packages installed from npm. Since you're still learning, let's keep the toolchain simple for now.
-
-```html
-<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.js"></script>
+```shell
+brunch new hello -s ryansobol/with-react
 ```
 
-Then, we need to instruct Babel to transpile any JSX it finds into JavaScript. To do this, let's add a `type="text/babel"` attribute to any `<script>` tag that uses JSX. In this case, you'll need to add this attribute to the final `<script>` tag in your HTML file. While we're at it, let's move our React code to a separate JSX file, called `hello.jsx`.
-
-**NOTE:** If you forget to set the `type` attribute, you'll see an `Uncaught SyntaxError: Unexpected token <` error in the console when you start refactoring `React.createElement()` function calls to React JSX.
-
-```html
-<script type="text/babel" src="hello.jsx"></script>
+```shell
+cd hello
 ```
 
-Now, inside of `hello.jsx`, let's refactor the component class's `render()` function into React JSX. Simply convert all `React.createElement()` function calls into JSX using the rules from above.
+```shell
+atom .
+```
+
+```shell
+npm start
+```
+
+```text
+> @0.1.0 start /Users/ryansobol/Projects/week15/hello
+> brunch watch --server
+
+04 Aug 13:13:38 - info: application started on http://localhost:8000/
+04 Aug 13:13:41 - info: compiled 178 files into 3 files, copied 2 in 3.3 sec
+```
+
+```shell
+open http://localhost:8000/
+```
+
+Now, inside of `app/components/app.jsx`, let's refactor the component class's `render()` function into React JSX. Simply convert all `React.createElement()` function calls into JSX using the rules from above.
 
 **NOTE:** If you forget to end a self-closing tag with `/>`, you'll see an `Uncaught SyntaxError: embedded: Expected corresponding JSX closing tag` error in the console.
 
+`app.jsx`
 ```jsx
-render: function() {
-  let message;
+import React from 'react';
 
-  if (this.state.who.trim() === '') {
-    message = 'Hello?';
-  } else {
-    message = 'Hello ' + this.state.who;
+const App = React.createClass({
+  getInitialState() {
+    return { who: 'world' };
+  },
+
+  handleChange(event) {
+    const nextState = { who: event.target.value };
+    this.setState(nextState);
+  },
+
+  render() {
+    let message;
+
+    if (this.state.who.trim() === '') {
+      message = 'Hello?';
+    } else {
+      message = 'Hello ' + this.state.who;
+    }
+
+    return <div>
+      <h1>{message}</h1>
+      <input
+        onChange={this.handleChange}
+        type="text"
+        value={this.state.who}
+      />
+    </div>;
   }
+});
 
-  return <div>
-    <h1>{message}</h1>
-    <input
-      onChange={this.handleChange}
-      type="text"
-      value={this.state.who}
-    />
-  </div>;
-}
+export default App;
 ```
 
-Finally, we can refactor the `ReactDOM.render()` function into React JSX. Again, don't forget to properly end the self-closing tag.
-
-```jsx
-ReactDOM.render(
-  <Hello />,
-  document.getElementById('hello')
-);
-```
-
-Open or refresh the page in your browser and make sure everything still works. Congratulations! You've just written your first React JSX application.
+Refresh the page in your browser and make sure everything still works. Congratulations! You've just written your first React JSX application.
 
 ### Exercise
 
@@ -408,5 +429,3 @@ However, feel free to use any of the [supported tags and attributes](https://fac
 - [React Docs - JSX in Depth](https://facebook.github.io/react/docs/jsx-in-depth.html)
 - [React Docs - Self-closing Tag](https://facebook.github.io/react/tips/self-closing-tag.html)
 - [Wikipedia - Source-to-source compiler](https://en.wikipedia.org/wiki/Source-to-source_compiler)
-
-#### [⇐ Previous](01-introduction-to-react.md) | [Table of Contents](README.md#table-of-contents) | [Next ⇒](03-react-developer-tools.md)
