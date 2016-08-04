@@ -264,7 +264,7 @@ If a ternary expression isn't robust enough, you can use an `if` statement outsi
 
 ```jsx
 const isHealthy = false;
-const message;
+let message;
 
 if (isHealthy) {
   message = <p>Yuck!</p>;
