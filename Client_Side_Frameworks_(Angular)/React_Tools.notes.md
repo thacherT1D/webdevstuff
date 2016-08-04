@@ -332,7 +332,7 @@ To get started, install the Brunch build tool globally with NPM.
 npm install -g brunch
 ```
 
-Using the global `brunch` command, create a new application called `hello` with the [`ryansobol/with-react`](https://github.com/ryansobol/with-react) skeleton. A **skeleton** creates files and directories that provide a good starting point for a new application.
+Using the freshly installed `brunch` command, create a new application called `hello` with the [`ryansobol/with-react`](https://github.com/ryansobol/with-react) skeleton. A **skeleton** creates files and directories that provide a good starting point for a new application.
 
 ```shell
 brunch new hello --skeleton ryansobol/with-react
