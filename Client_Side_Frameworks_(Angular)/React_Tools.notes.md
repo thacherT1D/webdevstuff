@@ -87,7 +87,7 @@ While it may feel jarring to write HTML-like syntax with your JavaScript at firs
 
 Take a moment to write down why React JSX is important. Include some of its advantages and disadvantages. After about a minute, your instructor will cold call on the class and ask what was written down.
 
-## How does React JSX work?
+## How do you use React JSX to build a user interface?
 
 Under the hood, React JSX transforms HTML-like elements, attributes, and children into arguments that are passed to the `React.createElement()` function. As you'll see, both HTML tags and React component classes can be transformed from JSX to JavaScript.
 
@@ -320,9 +320,15 @@ const element = <div>
 - What are their `type`, `props`, and `children`?
 - **True or False:** A JSX child can only be commented with the `/* */` style of comment.
 
-## How do you refactor JavaScript into React JSX?
+### Refactoring to React JSX
 
-Let's practice by refactoring the **Hello world** example from the previous chapter into JSX.
+Let's practice refactoring the "Hello world" React application from the previous article into React JSX. However, you can't just serve React JSX to a browser and expect it to function. Instead, you'll need the help of a build tool. A **build tool** is a program that automates the creation of a functioning application from source code. In this case, you'll use a build tool to transpile React JSX code into functioning JavaScript code before it's sent to a browser.
+
+To get started, install the Brunch build tool globally with NPM.
+
+```shell
+npm install -g brunch
+```
 
 ```shell
 brunch new hello -s ryansobol/with-react
@@ -423,6 +429,7 @@ However, feel free to use any of the [supported tags and attributes](https://fac
 
 ## References
 
+- [Brunch](http://brunch.io/)
 - [React Docs - DOM Differences](https://facebook.github.io/react/docs/dom-differences.html)
 - [React Docs - If-Else in JSX](https://facebook.github.io/react/tips/if-else-in-JSX.html)
 - [React Docs - Inline Styles](https://facebook.github.io/react/tips/inline-styles.html)
