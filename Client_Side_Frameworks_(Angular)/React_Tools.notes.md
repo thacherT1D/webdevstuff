@@ -6,7 +6,7 @@
 
 ## What's React JSX?
 
-[JSX](https://facebook.github.io/jsx/), or JavaScript XML, is an JavaScript syntax extension that looks similar to XML. [React JSX](https://facebook.github.io/react/docs/jsx-in-depth.html) lets you create `ReactElement` objects using an XML-like syntax and a transpiler.
+[JSX](https://facebook.github.io/jsx/), or JavaScript XML, is an JavaScript syntax extension that looks similar to HTML. [React JSX](https://facebook.github.io/react/docs/jsx-in-depth.html) lets you create `ReactElement` objects using an HTML-like syntax and a transpiler.
 
 For example, when the following React JSX code is run through a transpiler:
 
@@ -81,7 +81,7 @@ You'll find that a React application written in JSX is a better way to separate 
 1. Presentation and behavior are intimately tied together, so why keep them in separate HTML and JavaScript files.
 2. Dedicated template languages tend to be inadequate when implementing complex user interfaces.
 
-While it may feel jarring to write HTML with your JavaScript at first, using the expressive power of a full programming language to build a complex user interface is an ideal solution to the above problems. In short, React JSX allows presentation and behavior to live side-by-side using the power of JavaScript, but with a concise and familiar syntax.
+While it may feel jarring to write HTML-like syntax with your JavaScript at first, using the expressive power of a full programming language to build a complex user interface is an ideal solution to the above problems. In short, React JSX allows presentation and behavior to live side-by-side using the power of JavaScript, but with a concise and familiar syntax.
 
 ### Exercise
 
