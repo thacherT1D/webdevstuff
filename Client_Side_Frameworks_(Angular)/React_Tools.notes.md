@@ -346,15 +346,15 @@ Change into the `hello` project directory.
 cd hello
 ```
 
-And open the project in Atom.
-
-```shell
-atom .
-```
-
 Let's walkthrough the files and directories, provided by the skeleton, starting with the `README.md` file.
 
+```shell
+less README.md
+```
+
 To watch the project for changes and launch an HTTP server, start the build tool.
+
+**NOTE:** Press `Ctrl + C` to quit the build tool.
 
 ```shell
 npm start
@@ -370,7 +370,29 @@ And you should see something like this.
 04 Aug 13:13:41 - info: compiled 178 files into 3 files, copied 2 in 3.3 sec
 ```
 
-Open the application.
+Take a look at the `public` directory to see what Brunch created for you.
+
+```shell
+la public
+```
+
+And you should see something like this.
+
+```text
+total 3240
+drwxr-xr-x  10 ryansobol  staff   340B Aug  4 15:32 .
+drwxr-xr-x  11 ryansobol  staff   374B Aug  4 15:32 ..
+-rw-r--r--   1 ryansobol  staff   7.1K Aug  4 15:32 app.css
+-rw-r--r--   1 ryansobol  staff   9.7K Aug  4 15:32 app.css.map
+-rw-r--r--   1 ryansobol  staff   5.1K Aug  4 15:32 app.js
+-rw-r--r--   1 ryansobol  staff   830B Aug  4 15:32 app.js.map
+-rw-r--r--   1 ryansobol  staff     0B Aug  4 15:32 favicon.ico
+-rw-r--r--   1 ryansobol  staff   390B Aug  4 15:32 index.html
+-rw-r--r--   1 ryansobol  staff   723K Aug  4 15:32 vendor.js
+-rw-r--r--   1 ryansobol  staff   858K Aug  4 15:32 vendor.js.map
+```
+
+In a Terminal tab, open the application.
 
 ```shell
 open http://localhost:8000/
