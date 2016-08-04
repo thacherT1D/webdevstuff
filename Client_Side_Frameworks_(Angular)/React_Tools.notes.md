@@ -303,7 +303,7 @@ const element = <p style={styles}>Happy Grillmore</p>;
 
 ### Comments
 
-In JSX, it's possible to comment out both attributes and children. But remember, commented out code is the same as dead code. Just delete it!
+In JSX, it's possible to comment out both attributes and children. But remember, commented code is the same as dead code. Just delete it!
 
 ```jsx
 const element = <div>
