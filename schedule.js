@@ -1,5 +1,7 @@
 module.exports = function() {
   let days = [
+
+    // Q1 week 1
     {
       activities: [
         {article: {text: "Welcome to WDI", url: "https://docs.google.com/presentation/d/154ou9yQJNcVcVehD6vqaKjGbCKhFb2xK85toqniWaa8/edit#slide=id.g108a6e17ae_0_112"}},
@@ -7,6 +9,7 @@ module.exports = function() {
         {article: {text: "Setup Development Environment", url: "https://github.com/gSchool/productivity-curriculum/blob/master/Development Environment/README.md"}},
       ]
     },
+
     {
       warmup: { text: "Typing", url: "https://github.com/gSchool/productivity-curriculum/blob/master/Misc/Typing.md" },
       activities: [
@@ -20,6 +23,7 @@ module.exports = function() {
         },
       ],
     },
+
     {
       warmup: { text: "JavaScripting", url: "https://github.com/sethvincent/javascripting" },
       activities: [
@@ -31,6 +35,7 @@ module.exports = function() {
         },
       ],
     },
+
     {
       warmup: { text: "JavaScripting (con't)", url: "https://github.com/sethvincent/javascripting" },
       activities: [
@@ -44,6 +49,7 @@ module.exports = function() {
         },
       ],
     },
+
     {
       warmup: { text: "JavaScripting (con't)", url: "https://github.com/sethvincent/javascripting" },
       activities: [
@@ -57,6 +63,8 @@ module.exports = function() {
         },
       ],
     },
+
+    // Q1 week 2
     {
       warmup: { text: "Memory Diagrams", url: "https://github.com/gSchool/javascript-curriculum/blob/master/Memory Diagrams.md" },
       activities: [
@@ -72,6 +80,7 @@ module.exports = function() {
         },
       ]
     },
+
     {
       warmup: { text: "Alphabet Position", url: "https://github.com/gSchool/g26-challenges-so-far/blob/master/w2/w2-f-replace-with-alphabet-position/w2-f-replace-with-alphabet-position.js" },
       activities: [
@@ -85,6 +94,7 @@ module.exports = function() {
         },
       ]
     },
+
     {
       warmup: { text: "FizzBuzz", url: "http://rosettacode.org/wiki/FizzBuzz" },
       activities: [
@@ -106,6 +116,7 @@ module.exports = function() {
         },
       ]
     },
+
     {
       warmup: { text: "Remove Duplicates", url: "https://github.com/gSchool/master_warmup_repository_full_stack/blob/master/w2/w2-w-remove-dupes-string-warmup/prompt.js" },
       activities: [
@@ -116,6 +127,7 @@ module.exports = function() {
         },
       ]
     },
+
     {
       warmup: { text: "Typing", url: "https://github.com/gSchool/productivity-curriculum/blob/master/Misc/Typing.md" },
       activities: [
@@ -124,6 +136,8 @@ module.exports = function() {
         },
       ]
     },
+
+    // Q1 week 3
     {
       warmup: { text: "Double Char", url: "https://github.com/gSchool/master_warmup_repository_full_stack/blob/master/w3/w3-t-doubleChar/solution.js" },
       activities: [
@@ -133,6 +147,7 @@ module.exports = function() {
         },
       ]
     },
+
     {
       warmup: { text: "Double Char", url: "https://github.com/gSchool/master_warmup_repository_full_stack/blob/master/w3/w3-t-doubleChar/solution.js" },
       activities: [
@@ -149,6 +164,7 @@ module.exports = function() {
         },
       ]
     },
+
     {
       warmup: { text: "Sum Range", url: "https://github.com/gSchool/master_warmup_repository_full_stack/blob/master/w3/w3-r-sum-of-numbers/solution.js" },
       activities: [
@@ -158,6 +174,7 @@ module.exports = function() {
         },
       ]
     },
+
     {
       warmup: { text: "Sum Range", url: "https://github.com/gSchool/master_warmup_repository_full_stack/blob/master/w3/w3-r-sum-of-numbers/solution.js" },
       activities: [
@@ -167,6 +184,7 @@ module.exports = function() {
         },
       ]
     },
+
     {
       warmup: { text: "Word Scrambler", url: "https://gist.github.com/IanSmith89/6ae569d695ffa1134d229c8f75117da0" },
       activities: [
@@ -178,6 +196,8 @@ module.exports = function() {
         },
       ]
     },
+
+    // Q1 week 4
     {
       warmup: { text: "Word Scrambler", url: "https://gist.github.com/IanSmith89/6ae569d695ffa1134d229c8f75117da0" },
       activities: [
@@ -187,6 +207,7 @@ module.exports = function() {
         },
       ]
     },
+
     {
       warmup: { text: "Rotate", url: "https://github.com/gSchool/g26-challenges-so-far/blob/master/w4/w4-r-rotate-array/problem.js" },
       activities: [
@@ -196,6 +217,7 @@ module.exports = function() {
         },
       ]
     },
+
     {
       warmup: { text: "SameDigits", url: "https://github.com/gSchool/g26-challenges-so-far/blob/master/w4/w4-t-equivalent-number/problem.js" },
       activities: [
@@ -205,6 +227,7 @@ module.exports = function() {
         },
       ]
     },
+
     {
       warmup: { text: "SameDigits", url: "https://github.com/gSchool/g26-challenges-so-far/blob/master/w4/w4-t-equivalent-number/problem.js" },
       activities: [
@@ -226,6 +249,7 @@ module.exports = function() {
         },
       ]
     },
+
     {
       warmup: { text: "ArrayMap", url: "https://gist.github.com/ryansobol/52642194e31327fe5d94a160c1eb2764" },
       activities: [
@@ -235,6 +259,8 @@ module.exports = function() {
         },
       ]
     },
+
+    // Q1 week 5
     {
       warmup: { text: "ArrayFilter", url: "https://gist.github.com/ryansobol/4e871410b8648c8eb60ca46dd89236fa" },
       activities: [
@@ -244,6 +270,7 @@ module.exports = function() {
         },
       ]
     },
+
     {
       warmup: { text: "ArrayReduce", url: "https://gist.github.com/ryansobol/08689667a80b3accd519ededf49238d0" },
       activities: [
@@ -253,6 +280,7 @@ module.exports = function() {
         },
       ]
     },
+
     {
       warmup: { text: "ArrayEvery", url: "https://gist.github.com/ryansobol/afda64953e572ca0873905c525d06eb2" },
       activities: [
@@ -262,6 +290,7 @@ module.exports = function() {
         },
       ]
     },
+
     {
       activities: [
         {
@@ -269,6 +298,7 @@ module.exports = function() {
         },
       ]
     },
+
     {
       activities: [
         {
@@ -276,6 +306,234 @@ module.exports = function() {
         },
       ]
     },
+
+    // Q2 week 1
+    {
+      warmup: { text: "learnyounode", url: "https://github.com/workshopper/learnyounode" },
+      activities: [
+        {
+          assignment: { text: "Pet Shop - Node Filesystem", url: "https://github.com/gSchool/fs-pet-shop/blob/master/1_fs.md" },
+        },
+      ]
+    },
+
+    {
+      warmup: { text: "learnyounode", url: "https://github.com/workshopper/learnyounode" },
+      activities: [
+        {
+          assignment: { text: "Pet Shop - Node HTTP Server", url: "https://github.com/gSchool/fs-pet-shop/blob/master/2_http.md" },
+        },
+      ]
+    },
+
+    {
+      warmup: { text: "learnyounode", url: "https://github.com/workshopper/learnyounode" },
+      activities: [
+        {
+          assignment: { text: "Pet Shop - Express HTTP Server", url: "https://github.com/gSchool/fs-pet-shop/blob/master/3_express.md" },
+        },
+      ]
+    },
+
+    {
+      warmup: { text: "lololodash", url: "https://github.com/mdunisch/lololodash" },
+      activities: [
+        {
+          assignment: { text: "Pet Shop - RESTful Express HTTP server", url: "https://github.com/gSchool/fs-pet-shop/blob/master/4_rest.md" },
+        },
+      ]
+    },
+
+    {
+      warmup: { text: "lololodash", url: "https://github.com/mdunisch/lololodash" },
+      activities: [
+        {
+          assignment: { text: "Pet Shop", url: "https://github.com/gSchool/fs-pet-shop" },
+        },
+      ]
+    },
+
+    //  Q2 week 2
+    {
+      warmup: { text: "Express Static Files", url: "https://gist.github.com/ryansobol/bc0206c1e5d00af16568ead5e59b01fd" },
+      activities: [
+        {
+          assignment: { text: "", url: "" },
+        },
+      ]
+    },
+
+    {
+      warmup: { text: "Express Templating", url: "https://gist.github.com/IanSmith89/f72743227a6db62a454374a39ebdc6b4" },
+      activities: [
+        {
+          assignment: { text: "Apartment Lab", url: "https://github.com/gSchool/intro_sql_exercise" },
+        },
+      ]
+    },
+
+    {
+      warmup: { text: "Express Templating w/ Materialize", url: "https://github.com/IanSmith89/pokemon_templating" },
+      activities: [
+        {
+          assignment: { text: "Online Retailer", url: "https://github.com/gSchool/sql-curriculum/blob/solutions/Unit-02-Relational/02-readme.md" },
+        },
+      ]
+    },
+
+    {
+      warmup: { text: "Express Error Templates", url: "https://gist.github.com/IanSmith89/b9eaf52b98a831bebbee8014e368b812" },
+      activities: [
+        {
+          assignment: { text: "SQL to Knex", url: "https://github.com/gSchool/sql-to-knex-assignment" },
+        },
+      ]
+    },
+
+    {
+      warmup: { text: "None" },
+      activities: [
+        {
+          assignment: { text: "Review" },
+        },
+      ]
+    },
+
+    //  Q2 week 3
+
+    {
+      warmup: { text: "SQL Migrations", url: "https://gist.github.com/ryansobol/9695adcc53c239a45209f17535e8c0d1" },
+      activities: [
+        {
+          assignment: { text: "Galvanize Bookshelf - Part 1", url: "https://github.com/gSchool/galvanize-bookshelf/blob/master/1_migrations_seeds.md" },
+        },
+      ]
+    },
+
+    {
+      warmup: { text: "none" },
+      activities: [
+        {
+          assignment: { text: "Galvanize Bookshelf - Part 2", url: "https://github.com/gSchool/galvanize-bookshelf/blob/master/2_express_knex.md" },
+        },
+      ]
+    },
+
+    {
+      warmup: { text: "SQL Seeds", url: "https://gist.github.com/ryansobol/a217c4bc954ebfe78a84058da9e5f19a" },
+      activities: [
+        {
+          assignment: { text: "Galvanize Bookshelf - Part 3", url: "https://github.com/gSchool/galvanize-bookshelf/blob/master/3_user_registration.md" },
+        },
+      ]
+    },
+
+    {
+      warmup: { text: "Knex Migrations", url: "https://gist.github.com/ryansobol/250cbea3e9a611f2eba4bac2cba61fb6" },
+      activities: [
+        {
+          assignment: { text: "Galvanize Bookshelf - Part 4", url: "https://github.com/gSchool/galvanize-bookshelf/blob/master/4_user_authentication.md" },
+        },
+      ]
+    },
+
+    {
+      warmup: { text: "Knex Seeds", url: "https://gist.github.com/ryansobol/c4a1e5791ba6dafce6ba8910159acde1" },
+      activities: [
+        {
+          assignment: { text: "Galvanize Bookshelf - Part 5", url: "https://github.com/gSchool/galvanize-bookshelf/blob/master/4_user_authentication.md" },
+        },
+      ]
+    },
+
+    // Q2 week 4
+    {
+      warmup: { text: "User Registration", url: "https://gist.github.com/ryansobol/b8d47d7fcb6cfbc2848dfa4fb13b3f00" },
+      activities: [
+        {
+          assignment: { text: "Promise Fundamentals", url: "https://github.com/gschool/wd-promise-fundamentals" },
+        },
+      ]
+    },
+
+    {
+      warmup: { text: "User Authentication", url: "https://gist.github.com/ryansobol/30f56fce077d229de61b96a7da23e95f" },
+      activities: [
+        {
+          assignment: { text: "JavaScript Test Coverage", url: "https://github.com/gSchool/javascript-test-coverage" },
+        },
+      ]
+    },
+
+    {
+      warmup: { text: "", url: "" },
+      activities: [
+        {
+          assignment: { text: "SSV for Galvanize Bookshelf", url: "https://gist.github.com/ryansobol/7d02bc09fddec3621b463803460dd2b4" },
+        },
+      ]
+    },
+
+    {
+      warmup: { text: "", url: "" },
+      activities: [
+        {
+          assignment: { text: "", url: "" },
+        },
+      ]
+    },
+
+    {
+      warmup: { text: "", url: "" },
+      activities: [
+        {
+          assignment: { text: "Q2 Project", url: "Projects/Q2.md" },
+        },
+      ]
+    },
+
+    // Q2 week 5
+    {
+      activities: [
+        {
+          assignment: { text: "Q2 Project", url: "Projects/Q2.md" },
+        },
+      ]
+    },
+
+    {
+      activities: [
+        {
+          assignment: { text: "Q2 Project", url: "Projects/Q2.md" },
+        },
+      ]
+    },
+
+    {
+      activities: [
+        {
+          assignment: { text: "Q2 Project", url: "Projects/Q2.md" },
+        },
+      ]
+    },
+
+    {
+      activities: [
+        {
+          article: { text: "Project Presentations" },
+          assignment: { text: "Q2 Project", url: "Projects/Q2.md" },
+        },
+      ]
+    },
+
+    {
+      activities: [
+        {
+          assignment: { text: "Assessment" },
+        },
+      ]
+    },
+
   ]
 
   let config = [
