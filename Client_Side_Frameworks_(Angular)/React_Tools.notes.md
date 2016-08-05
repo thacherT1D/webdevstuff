@@ -545,7 +545,7 @@ By selecting a component in the tree view, you can inspect and debug its current
 
 **NOTE:** Not every change to a props or state value will result in an update to the DOM hierarchy. When it comes to component classes, it depends on the `ReactElement` object that's returned from its `render()` function.
 
-With the React Developers Tools, you can finally see that a **component** is an instance of React component classes and HTML tags. And, a component hierarchy is made up of a root component with possible children, grandchildren, etc.
+With the React Developers Tools, you can finally see that a **component** is an instance of either a React component class or HTML tag. And, a component hierarchy is made up of a root component with possible children, grandchildren, etc.
 
 You can confirm this by rendering a second component hierarchy for the **Hello world** application using the same root component class. Start by adding another application container to the `app/assets/index.html` file.
 
