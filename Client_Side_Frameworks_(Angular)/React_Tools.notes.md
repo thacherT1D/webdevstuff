@@ -587,7 +587,7 @@ ReactDOM.render(
 
 Switch back to the browser and voilà! Now, the application now has two distinct and isolated component hierarchies.
 
-![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/314/BB9B2456-BEEF-4F53-B3B9-2B64A251A0E1-570-0000CD7EC85EEA52.gif)
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/315/FD5CCC3E-152C-4CC4-932C-256EF93E1FC3-570-0000D28E7B9AEFEA.gif)
 
 In the React Developer Tools, both components are named `<App />` because their component class is stored in an indentifier named `App`. Remember, Babel automatically sets the value of the `displayName` property to the indentifier where the component class is stored. The React Developer Tools uses this property when determining the name of a component.
 
