@@ -544,7 +544,7 @@ Notice the colors of the collapsable triangles in the tree view provide extra i
 
 Additionally, selecting a component in the tree view on the left allows you to inspect and edit its current props and state in the panel on the right. When a props or state value is changed, the component hierarchy is updated and re-rendered.
 
-![Editing a component's state](https://dl.dropboxusercontent.com/s/02ohh014d3mt1to/DF6C8888-3E88-48D6-BF76-00A6BEEA94ED-40520-00010832DD3ABD60.gif?dl=0)
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/310/BB9B2456-BEEF-4F53-B3B9-2B64A251A0E1-570-0000CD7EC85EEA52.gif)
 
 **NOTE:** Not every change to a props or state value will result in the DOM being updated. When it comes to component classes, it depends on the `ReactElement` object that's returned from its `render()` function.
 
