@@ -28,7 +28,7 @@ module.exports = [
     warmup: { text: "learnyounode", url: "https://github.com/workshopper/learnyounode" },
     activities: [
       {
-        article: { text: "Express HTTP Server", url: "https://github.com/gSchool/node-curriculum/blob/master/unit-1/04-intro-express.md" },
+        article: { text: "Express HTTP Server", url: "https://github.com/gSchool/node-curriculum/tree/master/Express" },
         assignment: { text: "Pet Shop - Express HTTP Server", url: "https://github.com/gSchool/fs-pet-shop/blob/master/3_express.md" },
       },
     ]
