@@ -532,7 +532,7 @@ Play around with the React Developer Tools on your own and see what you can disc
 
 The React Developer Tools are important because they show you stuff in a React application. For example, expanding and mousing over a component in the tree view on the left will highlight its corresponding DOM element in the browser window above.
 
-![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/307/Screen_Shot_2016-08-05_at_6.01.49_AM.png)
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/308/661A28A8-FF59-4A75-AB3B-0BE7F926C4B4-570-0000CCFD8B15DF6E.gif)
 
 Notice the colors of the collapsable triangles in the tree view provide extra information about their adjacent component.
 
