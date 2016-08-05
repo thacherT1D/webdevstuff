@@ -533,7 +533,7 @@ Notice the colors of the collapsable triangles in the tree view. They provide e
 
 ### Exercise
 
-In the main React Developer Tools window, click the `<h1>` component and use the breadcrumbs bar on the bottom of the panel to inspect it, its parent component, and its grandparent component. Then use the search bar to find the `<input />` component by its name.
+In the main React Developer Tools window, click the `<h1>` component and use the breadcrumbs bar on the bottom of the panel to access it, its parent component, and its grandparent component. Then use the search bar to access the `<input />` component by its name.
 
 Finally, turn to a neighbor and, in your own words, explain why the React Developer Tools are important. After about a minute, your instructor will cold call on the class and ask what was discussed.
 
