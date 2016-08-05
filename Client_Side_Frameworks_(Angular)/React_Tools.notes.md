@@ -509,7 +509,7 @@ Save the file and switch back to the browser. Play around with the application a
 
 The **React Developer Tools** are a [Chrome extension](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi) and [Firefox add-on](https://addons.mozilla.org/en-US/firefox/addon/react-devtools/) that allow you to inspect and debug a React user interface from within the browser's developer tools panel.
 
-Using the links above, install the React Developer Tools for both browsers. Once it's installed, refresh the **Hello world** application in Chrome, open its developer tools panel, and click on the React tab. You should see something like this.
+Using the links above, install the React Developer Tools for each browser. Once it's installed, refresh the **Hello world** application in Chrome. Then, open its developer tools panel and click on the React tab. You should see something like this.
 
 ![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/306/Screen_Shot_2016-08-05_at_5.52.28_AM.png)
 
