@@ -64,11 +64,16 @@ The take away is that JSX is *not* a template language even though it looks like
 └────────────────────────────────────┘                  └─────────────────────────┘
 ```
 
-[Babel](https://babeljs.io/) is by far the most popular JavaScript transpiler and ships with built-in support for React JSX. There are a number of ways to transpile React JSX with Babel ranging from CDNs to Node packages. Additionally, the [language-babel](https://atom.io/packages/language-babel) package brings JSX syntax highlighting to Atom.
+[Babel](https://babeljs.io/) is by far the most popular JavaScript transpiler and ships with built-in support for React JSX. There are a number of ways to transpile React JSX with Babel. However, the most popular way is with the help of a Node package, which you'll install later in this article.
+
+Additionally, the [language-babel](https://atom.io/packages/language-babel) package brings JSX syntax highlighting to Atom. Go ahead and install that now by following these steps.
+
+1. Open the Atom preferences with `Ctrl + ,`.
+1. Click on the **Install** tab in the side navigation.
+1. Search for the `language-babel` package in the main screen.
+1. And click on its **Install** button.
 
 ### Exercise
-
-Take a moment to install the above Atom package.
 
 Then, turn to a neighbor and, in your own words, explain what React JSX is as well as the similarities and differences of a compiler versus a transpiler. After about a minute, your instructor will cold call on the class and ask what was discussed.
 
