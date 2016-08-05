@@ -436,7 +436,7 @@ const App = React.createClass({
 export default App;
 ```
 
-Save the file and switch back the Terminal to look at the Brunch output. You should see something like this.
+Save the file, switch back to the Terminal, and inspect the Brunch output. You should see something like this.
 
 ```text
 04 Aug 13:20:41 - info: compiled app.jsx and 1 cached file into app.js in 95ms
@@ -448,7 +448,7 @@ Now, switch back to the browser and open the **Console** tab in the Chrome Devel
 
 ![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/303/Screen_Shot_2016-08-05_at_4.41.16_AM.png)
 
-Notice the page has automatically refreshed itself thanks to the [`auto-reload-brunch`](https://github.com/brunch/auto-reload-brunch) plugin. This plugin tells the browser to refresh the page each time Brunch builds the application. That way the code in Atom is always the same code that's in the browser. Neat!
+Notice the page has automatically refreshed itself thanks to the [`auto-reload-brunch`](https://github.com/brunch/auto-reload-brunch) plugin. This plugin tells the browser to refresh the page each time Brunch builds the application. That way the code in Atom is always the same as the code in the browser. Neat!
 
 Additionally, notice the `ReferenceError` shown in the Console refers to line number 5 of the `app.jsx` file. Click on the error's link and you should see something like this.
 
