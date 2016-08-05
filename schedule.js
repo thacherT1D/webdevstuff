@@ -312,7 +312,7 @@ module.exports = function() {
       warmup: { text: "learnyounode", url: "https://github.com/workshopper/learnyounode" },
       activities: [
         {
-          article: { text: "Node.js Filesystem", url: "" },
+          article: { text: "Node.js Filesystem", url: "https://github.com/gSchool/node-curriculum/blob/master/unit-1/01-intro-to-nodejs.md" },
           assignment: { text: "Pet Shop - Node Filesystem", url: "https://github.com/gSchool/fs-pet-shop/blob/master/1_fs.md" },
         },
       ]

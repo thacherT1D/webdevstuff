@@ -523,7 +523,7 @@ Week 6
       <td rowspan="1">Monday</td>
       <td rowspan="1"><a href="https://github.com/workshopper/learnyounode">learnyounode</a>
       </td>
-      <td>Node.js Filesystem
+      <td><a href="https://github.com/gSchool/node-curriculum/blob/master/unit-1/01-intro-to-nodejs.md">Node.js Filesystem</a>
       </td>
       <td><a href="https://github.com/gSchool/fs-pet-shop/blob/master/1_fs.md">Pet Shop - Node Filesystem</a>
       </td>
