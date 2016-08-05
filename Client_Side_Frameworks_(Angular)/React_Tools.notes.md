@@ -526,15 +526,15 @@ Then, refresh the **Hello world** application in your browser, open its develope
 
 ### Exercise
 
-Turn to a neighbor and, in your own words, explain what the React Developer Tools are. Afterwards, play around with the tools on your own and see what you can discover. After about a minute, your instructor will cold call on the class and ask what was discussed.
+Play around with the React Developer Tools on your own and see what you can discover. While you're playing, turn to a neighbor and, in your own words, explain what the React Developer Tools are. After about a minute, your instructor will cold call on the class and ask what was discussed.
 
 ## Why are the React Developer Tools important?
 
-The React Developer Tools are the fastest way to find bugs in a React application. For example, expanding and mousing over a component in the tree view on the left will highlight its corresponding DOM element in the browser window above.
+The React Developer Tools are important because they show you stuff in a React application. For example, expanding and mousing over a component in the tree view on the left will highlight its corresponding DOM element in the browser window above.
 
-![Highlighting components](https://dl.dropboxusercontent.com/s/azxubbiq211irvj/ED27249A-568E-48BC-A971-B6E560701DF3-40520-000107C8A563DA86.gif?dl=0)
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/307/Screen_Shot_2016-08-05_at_6.01.49_AM.png)
 
-**NOTE:** The colors of the collapsable triangles in the tree view provide extra information about their adjacent component.
+Notice the colors of the collapsable triangles in the tree view provide extra information about their adjacent component.
 
 | Triangle color | Component type  | Has state? |
 |----------------|-----------------|------------|
