@@ -542,7 +542,13 @@ Notice the colors of the collapsable triangles in the tree view provide extra i
 | Black          | Component class | No         |
 | Gray           | HTML tag        | N/A        |
 
-Additionally, selecting a component in the tree view on the left allows you to inspect and edit its current props and state in the panel on the right. When a props or state value is changed, the component hierarchy is updated and re-rendered.
+### Exercise
+
+Turn to a neighbor and, in your own words, explain why the React Developer Tools are important. After about a minute, your instructor will cold call on the class and ask what was discussed.
+
+## How do you use the React Developer Tools to inspect and modify a user interface?
+
+Selecting a component in the tree view on the left allows you to inspect and edit its current props and state in the panel on the right. When a props or state value is changed, the component hierarchy is updated and re-rendered.
 
 ![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/310/BB9B2456-BEEF-4F53-B3B9-2B64A251A0E1-570-0000CD7EC85EEA52.gif)
 
@@ -623,7 +629,7 @@ Then log into your [Facebook](https://www.facebook.com/) account, if you have on
 
 ## Resources
 
-- [Brunch](http://brunch.io/)
+- [Brunch - Homepage](http://brunch.io/)
 - [GitHub - `facebook/react-devtools`](https://github.com/facebook/react-devtools)
 - [React Docs - DOM Differences](https://facebook.github.io/react/docs/dom-differences.html)
 - [React Docs - If-Else in JSX](https://facebook.github.io/react/tips/if-else-in-JSX.html)
