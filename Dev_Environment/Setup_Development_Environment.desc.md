@@ -359,28 +359,30 @@ Close all the open tabs by pressing the `Command` + `W` keys at the same time.
 
 Next, navigate to the `Atom > Preferences` menu item by pressing the `Command` + `,` keys at the same time.
 
-Under the **Settings** tab, change the following:
+Under the **Settings** tab, in the **Editor Settings** section, change the following:
 
 | Name                               | Value              |
 |------------------------------------|--------------------|
 | Font Family                        | Menlo              |
 | Font Size                          | 18                 |
-| Show Indent Guide                  | :white_check_mark: |
+| Show Indent Guide                  | Checked            |
+| Soft Wrap                          | Not Checked        |
+| Soft Wrap At Preferred Line Length | Not Checked        |
 
-Under the **Install** tab, with the Package button highlighted, install
-the following:
+Under the **Install** tab, with the **Package** button highlighted, install the following:
 
 | Name                           | Type    |
 |--------------------------------|---------|
 | file-icons                     | Package |
 | language-fish-shell            | Package |
-| tomorrow-night-eighties-syntax | Theme   |
 
-Under the **Themes** tab, choose the following:
+Under the **Install** tab, with the **Themes** button highlighted, install the following:
 
 | Name                           | Type         |
 |--------------------------------|--------------|
-| Tomorrow Night Eighties        | Syntax Theme |
+| tomorrow-night-eighties-syntax | Syntax Theme |
+
+Under the **Packages** tab search for autosave -- under **Core Packages** click the **Settings** button, in the **Settings** section check Enabled.
 
 When you're done, close the preferences tab by pressing the `Command` + `W` keys  at the same time.
 
@@ -811,7 +813,7 @@ Bravo! :tada:
 
 
 ###Other Useful Dev Tools
-These are a few other tools that can be helpful for different aspects of development: 
+These are a few other tools that can be helpful for different aspects of development:
 * Password Manager: [Last Pass](https://lastpass.com) or [One Password](https://1password.com/)
 * Organizes windows on your screen: [Spectacle](https://www.spectacleapp.com/)
 * Keeps a history of what you copy [Jump Cut](http://jumpcut.sourceforge.net/)
