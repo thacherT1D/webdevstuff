@@ -534,7 +534,7 @@ Week 6
       <td rowspan="1">Tuesday</td>
       <td rowspan="1"><a href="https://github.com/workshopper/learnyounode">learnyounode</a>
       </td>
-      <td>Node.js HTTP Server
+      <td><a href="https://github.com/gSchool/node-curriculum/blob/master/unit-1/03-http-and-node.md">Node.js HTTP Server</a>
       </td>
       <td><a href="https://github.com/gSchool/fs-pet-shop/blob/master/2_http.md">Pet Shop - Node HTTP Server</a>
       </td>
@@ -545,7 +545,7 @@ Week 6
       <td rowspan="1">Wednesday</td>
       <td rowspan="1"><a href="https://github.com/workshopper/learnyounode">learnyounode</a>
       </td>
-      <td>Express HTTP Server
+      <td><a href="https://github.com/gSchool/node-curriculum/blob/master/unit-1/04-intro-express.md">Express HTTP Server</a>
       </td>
       <td><a href="https://github.com/gSchool/fs-pet-shop/blob/master/3_express.md">Pet Shop - Express HTTP Server</a>
       </td>
@@ -858,6 +858,726 @@ Week 10
       <td>
       </td>
       <td>Assessment
+      </td>
+      <td>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+Week 11
+
+<table style="width: 100%">
+  <thead>
+    <tr>
+      <th>Day</th>
+      <th>Warmup</th>
+      <th>Article</th>
+      <th>Assignment</th>
+      <th>Stretch</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowspan="1">Monday</td>
+      <td rowspan="1"><a href=""></a>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <td rowspan="1">Tuesday</td>
+      <td rowspan="1"><a href=""></a>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <td rowspan="1">Wednesday</td>
+      <td rowspan="1"><a href=""></a>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <td rowspan="1">Thursday</td>
+      <td rowspan="1"><a href=""></a>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <td rowspan="1">Friday</td>
+      <td rowspan="1"><a href=""></a>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+Week 12
+
+<table style="width: 100%">
+  <thead>
+    <tr>
+      <th>Day</th>
+      <th>Warmup</th>
+      <th>Article</th>
+      <th>Assignment</th>
+      <th>Stretch</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowspan="1">Monday</td>
+      <td rowspan="1"><a href=""></a>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <td rowspan="1">Tuesday</td>
+      <td rowspan="1"><a href=""></a>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <td rowspan="1">Wednesday</td>
+      <td rowspan="1"><a href=""></a>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <td rowspan="1">Thursday</td>
+      <td rowspan="1"><a href=""></a>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <td rowspan="1">Friday</td>
+      <td rowspan="1"><a href=""></a>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+Week 13
+
+<table style="width: 100%">
+  <thead>
+    <tr>
+      <th>Day</th>
+      <th>Warmup</th>
+      <th>Article</th>
+      <th>Assignment</th>
+      <th>Stretch</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowspan="1">Monday</td>
+      <td rowspan="1"><a href=""></a>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <td rowspan="1">Tuesday</td>
+      <td rowspan="1"><a href=""></a>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <td rowspan="1">Wednesday</td>
+      <td rowspan="1"><a href=""></a>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <td rowspan="1">Thursday</td>
+      <td rowspan="1"><a href=""></a>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <td rowspan="1">Friday</td>
+      <td rowspan="1"><a href=""></a>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+Week 14
+
+<table style="width: 100%">
+  <thead>
+    <tr>
+      <th>Day</th>
+      <th>Warmup</th>
+      <th>Article</th>
+      <th>Assignment</th>
+      <th>Stretch</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowspan="1">Monday</td>
+      <td rowspan="1"><a href=""></a>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <td rowspan="1">Tuesday</td>
+      <td rowspan="1"><a href=""></a>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <td rowspan="1">Wednesday</td>
+      <td rowspan="1"><a href=""></a>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <td rowspan="1">Thursday</td>
+      <td rowspan="1"><a href=""></a>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <td rowspan="1">Friday</td>
+      <td rowspan="1"><a href=""></a>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+Week 15
+
+<table style="width: 100%">
+  <thead>
+    <tr>
+      <th>Day</th>
+      <th>Warmup</th>
+      <th>Article</th>
+      <th>Assignment</th>
+      <th>Stretch</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowspan="1">Monday</td>
+      <td rowspan="1"><a href=""></a>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <td rowspan="1">Tuesday</td>
+      <td rowspan="1"><a href=""></a>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <td rowspan="1">Wednesday</td>
+      <td rowspan="1"><a href=""></a>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <td rowspan="1">Thursday</td>
+      <td rowspan="1"><a href=""></a>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <td rowspan="1">Friday</td>
+      <td rowspan="1"><a href=""></a>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+Week 16
+
+<table style="width: 100%">
+  <thead>
+    <tr>
+      <th>Day</th>
+      <th>Warmup</th>
+      <th>Article</th>
+      <th>Assignment</th>
+      <th>Stretch</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowspan="1">Monday</td>
+      <td rowspan="1"><a href=""></a>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <td rowspan="1">Tuesday</td>
+      <td rowspan="1"><a href=""></a>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <td rowspan="1">Wednesday</td>
+      <td rowspan="1"><a href=""></a>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <td rowspan="1">Thursday</td>
+      <td rowspan="1"><a href=""></a>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <td rowspan="1">Friday</td>
+      <td rowspan="1"><a href=""></a>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+Week 17
+
+<table style="width: 100%">
+  <thead>
+    <tr>
+      <th>Day</th>
+      <th>Warmup</th>
+      <th>Article</th>
+      <th>Assignment</th>
+      <th>Stretch</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowspan="1">Monday</td>
+      <td rowspan="1"><a href=""></a>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <td rowspan="1">Tuesday</td>
+      <td rowspan="1"><a href=""></a>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <td rowspan="1">Wednesday</td>
+      <td rowspan="1"><a href=""></a>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <td rowspan="1">Thursday</td>
+      <td rowspan="1"><a href=""></a>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <td rowspan="1">Friday</td>
+      <td rowspan="1"><a href=""></a>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+Week 18
+
+<table style="width: 100%">
+  <thead>
+    <tr>
+      <th>Day</th>
+      <th>Warmup</th>
+      <th>Article</th>
+      <th>Assignment</th>
+      <th>Stretch</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowspan="1">Monday</td>
+      <td rowspan="1"><a href=""></a>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <td rowspan="1">Tuesday</td>
+      <td rowspan="1"><a href=""></a>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <td rowspan="1">Wednesday</td>
+      <td rowspan="1"><a href=""></a>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <td rowspan="1">Thursday</td>
+      <td rowspan="1"><a href=""></a>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <td rowspan="1">Friday</td>
+      <td rowspan="1"><a href=""></a>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+Week 19
+
+<table style="width: 100%">
+  <thead>
+    <tr>
+      <th>Day</th>
+      <th>Warmup</th>
+      <th>Article</th>
+      <th>Assignment</th>
+      <th>Stretch</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowspan="1">Monday</td>
+      <td rowspan="1"><a href=""></a>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <td rowspan="1">Tuesday</td>
+      <td rowspan="1"><a href=""></a>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <td rowspan="1">Wednesday</td>
+      <td rowspan="1"><a href=""></a>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <td rowspan="1">Thursday</td>
+      <td rowspan="1"><a href=""></a>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <td rowspan="1">Friday</td>
+      <td rowspan="1"><a href=""></a>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+Week 20
+
+<table style="width: 100%">
+  <thead>
+    <tr>
+      <th>Day</th>
+      <th>Warmup</th>
+      <th>Article</th>
+      <th>Assignment</th>
+      <th>Stretch</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowspan="1">Monday</td>
+      <td rowspan="1"><a href=""></a>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <td rowspan="1">Tuesday</td>
+      <td rowspan="1"><a href=""></a>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <td rowspan="1">Wednesday</td>
+      <td rowspan="1"><a href=""></a>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <td rowspan="1">Thursday</td>
+      <td rowspan="1"><a href=""></a>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <td rowspan="1">Friday</td>
+      <td rowspan="1"><a href=""></a>
+      </td>
+      <td>
+      </td>
+      <td>
       </td>
       <td>
       </td>

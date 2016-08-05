@@ -32,7 +32,7 @@ Week 1
       <td rowspan="1">Tuesday</td>
       <td rowspan="1"><a href="https://github.com/workshopper/learnyounode">learnyounode</a>
       </td>
-      <td>Node.js HTTP Server
+      <td><a href="https://github.com/gSchool/node-curriculum/blob/master/unit-1/03-http-and-node.md">Node.js HTTP Server</a>
       </td>
       <td><a href="https://github.com/gSchool/fs-pet-shop/blob/master/2_http.md">Pet Shop - Node HTTP Server</a>
       </td>
@@ -43,7 +43,7 @@ Week 1
       <td rowspan="1">Wednesday</td>
       <td rowspan="1"><a href="https://github.com/workshopper/learnyounode">learnyounode</a>
       </td>
-      <td>Express HTTP Server
+      <td><a href="https://github.com/gSchool/node-curriculum/blob/master/unit-1/04-intro-express.md">Express HTTP Server</a>
       </td>
       <td><a href="https://github.com/gSchool/fs-pet-shop/blob/master/3_express.md">Pet Shop - Express HTTP Server</a>
       </td>
