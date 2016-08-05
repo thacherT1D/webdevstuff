@@ -491,7 +491,7 @@ const App = React.createClass({
 export default App;
 ```
 
-Save the file and switch back to the browser. Once everything is working, pat yourself on back. You've just written your first React JSX application!
+Save the file and switch back to the browser. Play around with the application and, once everything is working, pat yourself on back. You've just written your first React JSX application!
 
 ### Exercise
 
