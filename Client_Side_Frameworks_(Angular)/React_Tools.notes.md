@@ -69,9 +69,9 @@ The take away is that JSX is *not* a template language even though it looks like
 Additionally, the [language-babel](https://atom.io/packages/language-babel) package brings JSX syntax highlighting to Atom. Go ahead and install that now by following these steps.
 
 1. Open the Atom preferences with `Ctrl + ,`.
-1. Click on the **Install** tab in the side navigation.
+1. Click on the Install tab in the side navigation.
 1. Search for the `language-babel` package in the main screen.
-1. And click on its **Install** button.
+1. And click on its Install button.
 
 ### Exercise
 
