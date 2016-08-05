@@ -376,6 +376,7 @@ With a user interface in place, let's make it dynamic by connecting the `input` 
 
     handleChange: function(event) {
       const nextState = { who: event.target.value };
+
       this.setState(nextState);
     },
 
@@ -433,6 +434,7 @@ Now that our component class responds to user interface changes, let's expand it
 
     handleChange: function(event) {
       const nextState = { who: event.target.value };
+
       this.setState(nextState);
     },
 
@@ -441,8 +443,9 @@ Now that our component class responds to user interface changes, let's expand it
 
       if (this.state.who.trim() === '') {
         message = 'Hello?';
-      } else {
-        message = 'Hello ' + this.state.who;
+      }
+      else {
+        message = `Hello ${this.state.who}`;
       }
 
       return React.createElement('div', null,
