@@ -587,7 +587,7 @@ ReactDOM.render(
 
 Switch back to the browser and voilà! Now, the application now has two distinct and isolated component hierarchies.
 
-![](https://dl.dropboxusercontent.com/s/o5tch5gpi5fgkj0/F2582C11-85FC-48B5-B7CB-F8FCFF246E32-40520-00010A39EC7A6348.gif?dl=0)
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/314/BB9B2456-BEEF-4F53-B3B9-2B64A251A0E1-570-0000CD7EC85EEA52.gif)
 
 When displaying components in the tree view, the React Developer Tools names each component using the value of its `displayName` property. When Babel transpiles a component class, it automatically sets this as the variable name where the component class is stored. So, in this case, both components are named `<App />` because their component class is stored in a variable named `App`.
 
