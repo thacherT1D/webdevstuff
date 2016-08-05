@@ -507,14 +507,9 @@ Save the file and switch back to the browser. Play around with the application a
 
 ## What are the React Developer Tools?
 
-The **React Developer Tools** are a Chrome extension and Firefox add-on that allow you to inspect and modify a React user interface from within the browser's developer tools panel.
+The **React Developer Tools** are a [Chrome extension](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi) and [Firefox add-on](https://addons.mozilla.org/en-US/firefox/addon/react-devtools/) that allow you to inspect and modify a React user interface from within the browser's developer tools panel.
 
-Go ahead and install the React Developer Tools for both browsers.
-
-- [Chrome extension](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
-- [Firefox add-on](https://addons.mozilla.org/en-US/firefox/addon/react-devtools/)
-
-Once installed, config the tools in Chrome with the following steps.
+Using the links above, install the React Developer Tools for both browsers. The Chrome extension needs a little configuration. Once it's installed, config Chrome's React Developer Tools with the following steps.
 
 1. Click on the `Window -> Extensions` menu item.
 1. Scroll down into you find the React Developer Tools extension.
