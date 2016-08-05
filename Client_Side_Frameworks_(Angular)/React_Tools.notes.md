@@ -288,7 +288,7 @@ const element = <div>
 
 ### Style attribute expressions
 
-In JSX, the `style` attribute accepts a JavaScript object with camel cased CSS properties.
+To add inline styles to a JSX tag, pass a JavaScript object with camelcase CSS properties to its `style` attribute.
 
 **NOTE:** Vendor prefixes, other than `ms`, begin with a capital letter. This is why `WebkitTransition` has an uppercase `W`.
 
