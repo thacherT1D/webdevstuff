@@ -523,7 +523,7 @@ The React Developer Tools are important because they explain how a React compone
 
 ![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/309/49A90B0A-DD99-4EE5-802E-1E540F3A7F38-570-0000CD51419DD036.gif)
 
-Notice the colors of the collapsable triangles in the tree view provide extra information about their adjacent component.
+Notice the colors of the collapsable triangles in the tree view. They provide extra information about their adjacent component.
 
 | Triangle color | Component type  | Has state? |
 |----------------|-----------------|------------|
