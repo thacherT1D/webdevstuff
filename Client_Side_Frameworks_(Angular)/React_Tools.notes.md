@@ -325,9 +325,9 @@ const element = <div>
 - What are their `type`, `props`, and `children`?
 - **True or False:** A JSX child can only be commented with the `/* */` style of comment.
 
-### Refactoring to React JSX
+### Building a React JSX user interface
 
-Let's practice refactoring the **Hello world** React application from the previous article into React JSX.
+Let's build a React JSX user interface by refactoring the **Hello world** React application from the previous article into JSX.
 
 Unfortunately, you can't serve React JSX to a browser and expect it to parse or execute the code. Instead, you'll need the help of a build tool. A **build tool** is a program that automates the creation of a functioning application from source code. In this case, you'll use a build tool to transpile React JSX code into functioning JavaScript code before it's sent to a browser.
 
