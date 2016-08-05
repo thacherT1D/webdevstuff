@@ -455,13 +455,13 @@ As you can see, Brunch automatically transpiled the `app.jsx` file and updated t
 
 Now, switch back to the browser and open the Console tab in the Chrome Developer Tools. You should see something like this.
 
-![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/303/Screen_Shot_2016-08-05_at_4.41.16_AM.png)
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/321/Screen_Shot_2016-08-05_at_12.37.53_PM.png)
 
 Notice the page has automatically refreshed itself thanks to the [`auto-reload-brunch`](https://github.com/brunch/auto-reload-brunch) plugin. This plugin tells the browser to refresh the page each time Brunch builds the application. That way the code in Atom is always the same as the code in the browser. Neat!
 
 Additionally, notice the `ReferenceError` shown in the Console refers to line number 5 of the `app.jsx` file. Click on the error's link and you should see something like this.
 
-![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/304/Screen_Shot_2016-08-05_at_4.43.48_AM.png)
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/322/Screen_Shot_2016-08-05_at_12.38.40_PM.png)
 
 As you can see, Chrome associated the thrown runtime error with the correct line number of the original source file. Awesome!
 
