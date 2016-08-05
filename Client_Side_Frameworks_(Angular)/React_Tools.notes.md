@@ -519,7 +519,7 @@ Play around with the React Developer Tools and see what you can discover on your
 
 ## Why are the React Developer Tools important?
 
-The React Developer Tools are important because they explain how a React component hierarchy renders the DOM hierarchy of a user interface. For example, expanding and mousing over a component in the tree view on the left will highlight its corresponding DOM element in the browser window above.
+The React Developer Tools are important because they explain how a React component hierarchy creates and updates the DOM hierarchy of a user interface. For example, expanding and mousing over a component in the tree view on the left will highlight its corresponding DOM element in the browser window above.
 
 ![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/309/49A90B0A-DD99-4EE5-802E-1E540F3A7F38-570-0000CD51419DD036.gif)
 
