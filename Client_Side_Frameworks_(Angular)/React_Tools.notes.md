@@ -453,7 +453,7 @@ As you can see, Chrome associated the thrown runtime error with the correct line
 
 Now, switch back to Atom and, inside the `app/components/app.jsx` file, refactor the `App` component class with the following React JSX.
 
-**NOTE:** If you make a `SyntaxError` in the JSX, you'll see the error in the Brunch output.
+**NOTE:** If you type in the code incorrectly, no worries. You'll see a `SyntaxError` in the Brunch output.
 
 ```jsx
 import React from 'react';
