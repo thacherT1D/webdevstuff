@@ -18,6 +18,9 @@ module.exports = [
         article: { text: "Node.js HTTP Server", url: "https://github.com/gSchool/node-curriculum/blob/master/unit-1/03-http-and-node.md" },
         assignment: { text: "Pet Shop - Node HTTP Server", url: "https://github.com/gSchool/fs-pet-shop/blob/master/2_http.md" },
       },
+      {
+        article: { text: "HTTP Concepts", url: "https://github.com/gSchool/browser-dom-curriculum/tree/master/HTTP" },
+      },
     ]
   },
 
@@ -149,7 +152,7 @@ module.exports = [
     activities: [
       {
         article: { text: "Heroku Deployment", url: "" },
-        assignment: { text: "Galvanize Bookshelf - Part 5", url: "https://github.com/gSchool/galvanize-bookshelf/blob/master/4_user_authentication.md" },
+        assignment: { text: "Galvanize Bookshelf - Part 5", url: "https://github.com/gSchool/galvanize-bookshelf/blob/master/4_authentication_authorization.md" },
       },
     ]
   },

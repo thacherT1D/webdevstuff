@@ -531,12 +531,20 @@ Week 6
       </td>
     </tr>
     <tr>
-      <td rowspan="1">Tuesday</td>
-      <td rowspan="1"><a href="https://github.com/workshopper/learnyounode">learnyounode</a>
+      <td rowspan="2">Tuesday</td>
+      <td rowspan="2"><a href="https://github.com/workshopper/learnyounode">learnyounode</a>
       </td>
       <td><a href="https://github.com/gSchool/node-curriculum/blob/master/unit-1/03-http-and-node.md">Node.js HTTP Server</a>
       </td>
       <td><a href="https://github.com/gSchool/fs-pet-shop/blob/master/2_http.md">Pet Shop - Node HTTP Server</a>
+      </td>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/gSchool/browser-dom-curriculum/tree/master/HTTP">HTTP Concepts</a>
+      </td>
+      <td>
       </td>
       <td>
       </td>
@@ -713,7 +721,7 @@ Week 8
       </td>
       <td>Heroku Deployment
       </td>
-      <td><a href="https://github.com/gSchool/galvanize-bookshelf/blob/master/4_user_authentication.md">Galvanize Bookshelf - Part 5</a>
+      <td><a href="https://github.com/gSchool/galvanize-bookshelf/blob/master/4_authentication_authorization.md">Galvanize Bookshelf - Part 5</a>
       </td>
       <td>
       </td>

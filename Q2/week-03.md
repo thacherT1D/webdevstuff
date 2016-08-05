@@ -65,7 +65,7 @@ Week 1
       </td>
       <td>Heroku Deployment
       </td>
-      <td><a href="https://github.com/gSchool/galvanize-bookshelf/blob/master/4_user_authentication.md">Galvanize Bookshelf - Part 5</a>
+      <td><a href="https://github.com/gSchool/galvanize-bookshelf/blob/master/4_authentication_authorization.md">Galvanize Bookshelf - Part 5</a>
       </td>
       <td>
       </td>
