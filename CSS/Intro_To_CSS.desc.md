@@ -2,7 +2,7 @@
 
 ### Cascading Style Sheets (CSS)
 
-CSS is a style sheet language used for describing the look and formatting of a document written in a markup language.  
+CSS is a style sheet language used for describing the look and formatting of a document written in a markup language.
 
 It is used to manipulate the way elements appear on a web page, and CSS can interact with both HTML and JavaScript.
 
@@ -141,7 +141,7 @@ div {
 
 The dot in front of "red" indicates that we're targeting a class attribute. Now the first div should be red. Even though the styling for `.red` comes before the styling for `div`, targeting a class is more specific than targeting an element.
 
-The next level of specificty is an id. Let's add a third div with a `class` of red and an `id` of green.
+The next level of specificty is an id. Let's add a third div with a `class` of red and an `id` of `green-box`.
 
 ```html
 <!-- more code above... -->
@@ -149,7 +149,7 @@ The next level of specificty is an id. Let's add a third div with a `class` of r
   <body>
     <div class="red">Here's my first div!</div>
     <div>Here's my second div!</div>
-    <div id="green" class="red">I have an ID!</div>
+    <div id="green-box" class="red">I have an ID!</div>
   </body>
 </html>
 ```
@@ -157,7 +157,7 @@ The next level of specificty is an id. Let's add a third div with a `class` of r
 Update the stylesheet as follows:
 
 ```css
-#green {
+#green-box {
   background-color: green;
 }
 
@@ -178,13 +178,13 @@ Even though the new div has a class of red, the id is more specific, so its back
 
 Aside from specificity, what's the difference between a class and an id? For today, all we need to know is that ids for an HTML element should be _unique_: no two elements should share the same id, and no element should have more than one id. Classes, however, don't have these restrictions: an element can have multiple classes, and multiple elements can share the same class.
 
-After ids, the next level of specificity is inline styling. After that is the `!important` tag. It's not a good practice to use either of these, though, so try to avoid them wherever possible.
+After ids, the next level of specificity is inline styling. After that is the `!important` tag. It's not a good practice to use either of these, though, so avoid them wherever possible.
 
 More info: [The Difference Between ID and Class](https://css-tricks.com/the-difference-between-id-and-class/)
 
 ## CSS - Width and Height
 
-We've seen what happens as you change the width and height of a div in pixels.  
+We've seen what happens as you change the width and height of a div in pixels.
 Instead of pixel values, you can also assign width and height using percentages. What happens if you set the width to 50%? Is this what you expected? What happens if you set the height to 50%? Is this what you expected?
 
 Here we come to an important difference between width and height. If you want to use a percentage height to work as expected, you need to make sure the parent container has an explicit height set. To learn more, check out [this Stack Overflow article](http://stackoverflow.com/questions/5657964/css-why-doesn-t-percentage-height-work).

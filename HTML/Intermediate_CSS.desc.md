@@ -39,7 +39,7 @@ A CSS reset removes all default styling from a browser, maintaining only the dis
 
 Most projects should use one of these, but not both. It is up to you to decide whether "useful defaults" or "completely unstyled" is more useful to your project. Either way, they should be `<link>`ed to before any of your other stylesheets, so that any overrides you make will take precedence.
 
-**Exercise**:
+#### Exercise
 
   - Make a copy of the website you have been working on
   - Add a CSS reset to the new copy.
@@ -65,6 +65,7 @@ Some notes on positioned (relative, absolute, or fixed) elements:
 ## Selectors
 
 ### Standard Selector Review
+Click on selector type for a live code sample.
 
 * [`tagname`](http://codepen.io/MrJadaml/pen/WxayPV)
 * [`.class`](http://codepen.io/MrJadaml/pen/zBmaXN)
@@ -84,7 +85,7 @@ Some notes on positioned (relative, absolute, or fixed) elements:
 * `tag[attribute$="ends-with-value"]`
 * `tag[attribute*="contains-value"]`
 
-**You Try**:
+****:
 
 - Go to codepen.io and create a new pen
 - create a selector for the following html that hides checked input.
@@ -104,7 +105,7 @@ Some notes on positioned (relative, absolute, or fixed) elements:
 * `:hover`
 * `:active`
 
-**You Try**:
+#### Exercise
 
   - On codepen.io create a button
   - Add a link-based psuedo-class that changes the background on hover.
@@ -116,7 +117,7 @@ Some notes on positioned (relative, absolute, or fixed) elements:
 * `:before {content: "..."}`
 * `:after {content: "..."}`
 
-**You Try**:
+#### Exercise
 
   - On codepen.io
   - Create a paragraph element and fill it with dummy text.
@@ -131,7 +132,7 @@ Some notes on positioned (relative, absolute, or fixed) elements:
 
 * `:not(.other-selector)`
 
-**You Try**:
+#### Exercise
 
   - On codepen.io create a div with the class `foo`
   - create another div with the classes `foo` and `bar`.
@@ -146,7 +147,7 @@ Some notes on positioned (relative, absolute, or fixed) elements:
 * `:last-of-type`
 * `:nth-of-type(odd | even | 3 | 3n + 4)`
 
-**You Try**:
+#### Exercise
 
 - On codepen.io create a list with 5 items
 - Use `:first-child` to bold the first list item.
@@ -202,7 +203,7 @@ Some notes on positioned (relative, absolute, or fixed) elements:
 * `letter-spacing`
 * `word-spacing`
 
-**You Try**:
+#### Exercise
 
   - On codepen.io add a paragraph filled with [dummy content](http://lipsum.com/)
   - Add a style that sets the font to helvetica, weight 500, lowercase justified.
@@ -213,7 +214,7 @@ Some notes on positioned (relative, absolute, or fixed) elements:
 * `list-style-position: inside | outside`
 * `list-style-image: url(...)`
 
-**You Try**:
+#### Exercise
 
   - On codepen.io create a list of 5 items
   - try both of the list-style-positions
