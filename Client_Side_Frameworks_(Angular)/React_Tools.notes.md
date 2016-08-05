@@ -527,7 +527,7 @@ Play around with the React Developer Tools and see what you can discover on your
 
 ## Why are the React Developer Tools important?
 
-The React Developer Tools are important because they show you stuff in a React application. For example, expanding and mousing over a component in the tree view on the left will highlight its corresponding DOM element in the browser window above.
+The React Developer Tools are important because they explain how a React component hierarchy renders the DOM hierarchy of a user interface. For example, expanding and mousing over a component in the tree view on the left will highlight its corresponding DOM element in the browser window above.
 
 ![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/309/49A90B0A-DD99-4EE5-802E-1E540F3A7F38-570-0000CD51419DD036.gif)
 
@@ -541,7 +541,9 @@ Notice the colors of the collapsable triangles in the tree view provide extra i
 
 ### Exercise
 
-Turn to a neighbor and, in your own words, explain why the React Developer Tools are important. After about a minute, your instructor will cold call on the class and ask what was discussed.
+Click the `<h1>` component and use the breadcrumbs bar on the bottom of the panel to inspect it, its parent component, and its grandparent component. Then use the search bar to find the `<input />` component by its tag name and content.
+
+Finally, turn to a neighbor and, in your own words, explain why the React Developer Tools are important. After about a minute, your instructor will cold call on the class and ask what was discussed.
 
 ## How do you use the React Developer Tools to inspect and modify a user interface?
 
@@ -554,16 +556,6 @@ Selecting a component in the tree view on the left allows you to inspect and edi
 ### Exercise
 
 Navigate your browser to [Codecademy's landing page](https://www.codecademy.com/) and open up the React Developer Tools. What changes can you make to the application's props and state values that will cause the browser window to render a different DOM?
-
-## What else can you do with the React Developer Tools?
-
-In the breadcrumbs bar, you can inspect the selected component, the component that created it, the component that created that one, and so on.
-
-![Inspecting component breadcrumbs](https://dl.dropboxusercontent.com/s/8h3k0uu7wvxzg6j/F3082FCC-1F2C-44E4-8748-BC9BC80DB701-40520-000108DCB021CB13.gif?dl=0)
-
-Below the breadcrumbs, you can use the search bar to find components by their name and content.
-
-![Searching for a component](https://dl.dropboxusercontent.com/s/aoecnz8y8pod23m/0AFF4646-E807-4FA1-9B12-403396CC4BB3-40520-00010911BD7BAFB5.gif?dl=0)
 
 ### Exercise
 
