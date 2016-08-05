@@ -539,11 +539,59 @@ Finally, turn to a neighbor and, in your own words, explain why the React Develo
 
 ## How do you use the React Developer Tools to inspect and debug a user interface?
 
-By selecting a component in the tree view, you can inspect and debug its current props and state in the panel on the right. When a component's props or state value is changed, the component hierarchy is updated which in turn updates the DOM hierarchy.
+By selecting a component in the tree view, you can inspect and debug its current props and state in the panel on the right. When a component's props or state value is changed, the component hierarchy is updated which, in this case, updates the DOM hierarchy.
 
 ![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/310/BB9B2456-BEEF-4F53-B3B9-2B64A251A0E1-570-0000CD7EC85EEA52.gif)
 
-**NOTE:** Not every change to a props or state value will result in the DOM being updated. When it comes to component classes, it depends on the `ReactElement` object that's returned from its `render()` function.
+**NOTE:** Not every change to a props or state value will result in an update to the DOM hierarchy. When it comes to component classes, it depends on the `ReactElement` object that's returned from its `render()` function.
+
+With the React Developers Tools, you can finally see a **component** is an instance of React component classes and HTML tags. And, a component hierarchy is made up of a root component with possible children, grandchildren, etc.
+
+You can confirm this by rendering a second component hierarchy for the **Hello world** application using the same root component class. Start by adding another application container to the `app/assets/index.html` file.
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hello world</title>
+    <link rel="stylesheet" href="/app.css">
+  </head>
+  <body>
+    <div id="app"></div>
+    <div id="anotherApp"></div>
+
+    <script src="/vendor.js"></script>
+    <script src="/app.js"></script>
+    <script>require('index');</script>
+  </body>
+</html>
+```
+
+Then, update the `app/index.jsx` file with another `ReactDOM.render()` function call to render another `<App />` component inside the new container.
+
+```jsx
+import App from 'components/app';
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+ReactDOM.render(
+  <App />,
+  document.getElementById('app')
+);
+
+ReactDOM.render(
+  <App />,
+  document.getElementById('anotherApp')
+);
+```
+
+Switch back to the browser and voilà! Now, the application now has two distinct and isolated component hierarchies.
+
+![](https://dl.dropboxusercontent.com/s/o5tch5gpi5fgkj0/F2582C11-85FC-48B5-B7CB-F8FCFF246E32-40520-00010A39EC7A6348.gif?dl=0)
+
+When displaying components in the tree view, the React Developer Tools names each component using the value of its `displayName` property. When Babel transpiles a component class, it automatically sets this as the variable name where the component class is stored. So, in this case, both components are named `<App />` because their component class is stored in a variable named `App`.
 
 ### Exercise
 
@@ -552,31 +600,6 @@ Navigate your browser to [Codecademy's landing page](https://www.codecademy.com/
 ### Exercise
 
 Find another React application from this list of [sites using React](https://github.com/facebook/react/wiki/Sites-Using-React). What else you can uncover with your new x-ray vision?
-
-## What's a React component exactly?
-
-With the React Developers Tools, you can finally see that **components** are instances of React component classes and HTML tags. And, a component hierarchy is made up of a root component with possible children, grandchildren, etc.
-
-We can confirm this by rendering a second component hierarchy for the **Hello world** application using the same root component class. We'll start by adding another container to the HTML.
-
-```html
-<div id="helloAgain"></div>
-```
-
-Then we'll update the JavaScript to render another `<Hello />` component inside the new container.
-
-```jsx
-ReactDOM.render(
-  <Hello />,
-  document.getElementById('helloAgain')
-);
-```
-
-Refresh the browser and voilà! Now, the application now has two distinct and isolated component hierarchies.
-
-![Two component hierarchies](https://dl.dropboxusercontent.com/s/o5tch5gpi5fgkj0/F2582C11-85FC-48B5-B7CB-F8FCFF246E32-40520-00010A39EC7A6348.gif?dl=0)
-
-When displaying components in the tree view, the React Developer Tools names each component using the value of its `displayName` property. When Babel transpiles a component class, it automatically sets this as the variable name where the component class is stored. So, in this case, both components are named `<Hello />` because their component class is stored in a variable named `Hello.`
 
 ## Summary
 
