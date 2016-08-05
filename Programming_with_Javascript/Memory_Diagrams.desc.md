@@ -2,10 +2,6 @@ Visualizing how the JavaScript interpreter runs and organizes your code is an e
 
 <iframe src="https://player.vimeo.com/video/145447330?byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
-### Exercise
-
-[Memory Diagram Practice](https://github.com/gSchool/memory-diagrams/blob/master/exercises.md)
-
 ## Resources
 
 - [JavaScript Scope Chains and Closures](https://www.youtube.com/watch?v=zRZNb4GDOPI)
