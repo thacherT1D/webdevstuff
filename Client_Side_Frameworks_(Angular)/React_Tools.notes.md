@@ -445,7 +445,7 @@ Now, switch back to the browser and open the **Console** tab in the Chrome Devel
 
 Notice the page has automatically refreshed itself thanks to the [`auto-reload-brunch`](https://github.com/brunch/auto-reload-brunch) plugin. This plugin tells the browser to refresh the page each time Brunch builds the application. That way the code in Atom is always the same code that's in the browser. Neat!
 
-Additionally, notice how the ReferenceError shown in the Console refers to line number 5 of the `app.jsx` file. Click on it and you should see something like this.
+Additionally, notice the ReferenceError shown in the Console refers to line number 5 of the `app.jsx` file. Click on the error's link and you should see something like this.
 
 ![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/304/Screen_Shot_2016-08-05_at_4.43.48_AM.png)
 
