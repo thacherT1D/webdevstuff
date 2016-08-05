@@ -512,7 +512,11 @@ Go ahead and install the React Developer Tools for both browsers.
 - [Chrome extension](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
 - [Firefox add-on](https://addons.mozilla.org/en-US/firefox/addon/react-devtools/)
 
-Once installed, enable something.
+Once installed, config the tools in Chrome with the following steps.
+
+1. Click on the `Window -> Extensions` menu item.
+1. Scroll down into you find the React Developer Tools extension.
+1. Enable the "Allow access to file URLs" checkbox.
 
 ![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/305/Screen_Shot_2016-08-05_at_5.45.52_AM.png)
 
