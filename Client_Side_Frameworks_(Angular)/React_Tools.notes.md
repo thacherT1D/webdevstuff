@@ -414,11 +414,45 @@ Assuming your default browser is Chrome, if you open the Chrome Developer Tools 
 
 ![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/301/Screen_Shot_2016-08-04_at_3.52.40_PM.png)
 
-Because Brunch generated source map files, you can see what the source code looked like before it was transpiled. You can even set break points
+Because Brunch automatically generated source map files, you can see what the source code looked like before it was transpiled right from the browser. Even better, when a runtime error is thrown, Chrome will associated the error with the correct file and line number of the original source file.
+
+For example, in `app/components/app.jsx` file, type the following code.
+
+`app/components/app.jsx`
+```jsx
+import React from 'react';
+
+const App = React.createClass({
+  render() {
+    console.log(unknown);
+    return <h1>Hello world</h1>;
+  }
+});
+
+export default App;
+```
+
+Save the file and switch back the Terminal and find the Brunch output. You should see something like this.
+
+```text
+04 Aug 13:20:41 - info: compiled app.jsx and 1 cached file into app.js in 95ms
+```
+
+As you can see, Brunch automatically transpiled the `app.jsx` file and updated the `app.js` file. Even though it didn't explicitly state it, Brunch also updated the `app.js.map` file as well. All in under 100ms!
+
+Now, switch back to the browser and open the **Console** tab in the Chrome Developer Tools. You should see something like this.
+
+
+
+
+Notice the page has automatically refreshed itself thanks to the [`auto-reload-brunch`](https://github.com/brunch/auto-reload-brunch) plugin! This plugin tells the browser to refresh the page each time Brunch builds the application. Neat!
+
+Additionally, notice how the
+
 
 Now, inside of `app/components/app.jsx`, let's refactor the component class's `render()` function into React JSX. Simply convert all `React.createElement()` function calls into JSX using the rules from above.
 
-**NOTE:** If you forget to end a self-closing tag with `/>`, you'll see an `Uncaught SyntaxError: embedded: Expected corresponding JSX closing tag` error in the console.
+**NOTE:** If you forget to end a self-closing tag with `/>`, you'll see an `SyntaxError: app/components/app.jsx: Unterminated JSX contents` error in the Brunch output.
 
 `app/components/app.jsx`
 ```jsx
