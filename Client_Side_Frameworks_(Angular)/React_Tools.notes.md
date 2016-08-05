@@ -589,7 +589,7 @@ Switch back to the browser and voilà! Now, the application now has two distinct
 
 ![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/314/BB9B2456-BEEF-4F53-B3B9-2B64A251A0E1-570-0000CD7EC85EEA52.gif)
 
-When displaying components in the tree view, the React Developer Tools names each component using the value of its `displayName` property. When Babel transpiles a component class, it automatically sets this as the variable name where the component class is stored. So, in this case, both components are named `<App />` because their component class is stored in a variable named `App`.
+In the React Developer Tools, both components are named `<App />` because their component class is stored in an indentifier named `App`. Remember, Babel automatically sets the value of the `displayName` property to the indentifier where the component class is stored. The React Developer Tools uses this property when determining the name of a component.
 
 ### Exercise
 
