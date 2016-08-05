@@ -126,7 +126,7 @@ const element = <ul>
 
 ### React component class
 
-A React component class can also be transformed from JSX to JavaScript. First, create a component class and store it in an identifier that starts with an uppercase letter. Then, use that identifier name as the JSX tag name. The lowercase and uppercase convention helps to distinguish between HTML tags and React component classes.
+A React component class can also be transformed from JSX to JavaScript. First, create a component class and store it in an identifier that starts with an uppercase letter. Then, use that identifier as the JSX tag name. The lowercase and uppercase convention helps to distinguish between HTML tags and React component classes.
 
 ```jsx
 const Truck = React.createClass({
