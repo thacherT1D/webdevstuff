@@ -398,7 +398,7 @@ drwxr-xr-x  11 ryansobol  staff   374B Aug  4 15:32 ..
 -rw-r--r--   1 ryansobol  staff   858K Aug  4 15:32 vendor.js.map
 ```
 
-Most the files should look familiar with the exception of a handful of source map files that end in `.map` file extension. A **source map** is a file that tells a browser how to debug transpiled and optimized JavaScript code. We'll take a look at source maps later.
+Most the files should look familiar with the exception of a handful of source map files that end in `.map` file extension. A **source map** is a file that tells a browser how to debug transpiled and optimized JavaScript code. You'll see what that means in a moment.
 
 Open the application in your default browser.
 
@@ -409,6 +409,12 @@ open http://localhost:8000/
 And you should see something like this.
 
 ![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/300/Screen_Shot_2016-08-04_at_3.44.31_PM.png)
+
+Assuming your default browser is Chrome, if you open the Chrome Developer Tools and click on the **Sources** tab, then you should see something like this.
+
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/301/Screen_Shot_2016-08-04_at_3.52.40_PM.png)
+
+Because Brunch generated source map files, you can see what the source code looked like before it was transpiled. You can even set break points
 
 Now, inside of `app/components/app.jsx`, let's refactor the component class's `render()` function into React JSX. Simply convert all `React.createElement()` function calls into JSX using the rules from above.
 
