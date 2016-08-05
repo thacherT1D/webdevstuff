@@ -465,7 +465,7 @@ Additionally, notice the `ReferenceError` shown in the Console refers to line nu
 
 As you can see, Chrome associated the thrown runtime error with the correct line number of the original source file. Awesome!
 
-Now, switch back to Atom and, inside the `app/components/app.jsx` file, refactor the `App` component class with the following code. If you type in the code incorrectly, no worries. Syntax errors will show up in the Brunch output while runtime errors will show up in the browser console.
+Now, switch back to Atom and, inside the `app/components/app.jsx` file, refactor the `App` component class with the following code. No worries if you type the code incorrectly. Just remember that syntax errors will show up in the Brunch output while runtime errors will show up in the browser console.
 
 ```jsx
 import React from 'react';
