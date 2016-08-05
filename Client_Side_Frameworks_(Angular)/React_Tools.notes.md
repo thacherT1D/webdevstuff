@@ -422,11 +422,11 @@ open http://localhost:8000/
 
 And you should see something like this.
 
-![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/300/Screen_Shot_2016-08-04_at_3.44.31_PM.png)
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/316/Screen_Shot_2016-08-05_at_12.31.54_PM.png)
 
 Assuming your default browser is Chrome, if you open the Chrome Developer Tools and click on the Sources tab, then you should see something like this.
 
-![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/301/Screen_Shot_2016-08-04_at_3.52.40_PM.png)
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/317/Screen_Shot_2016-08-05_at_12.33.46_PM.png)
 
 Because Brunch automatically generated source map files, you can see, right from the browser, what the source code looked like before it was transpiled. Even better, when a runtime error is thrown, Chrome will associate the error with the correct line number of the original source file.
 
