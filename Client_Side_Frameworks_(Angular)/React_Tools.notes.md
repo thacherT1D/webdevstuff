@@ -445,17 +445,16 @@ Now, switch back to the browser and open the **Console** tab in the Chrome Devel
 
 Notice the page has automatically refreshed itself thanks to the [`auto-reload-brunch`](https://github.com/brunch/auto-reload-brunch) plugin. This plugin tells the browser to refresh the page each time Brunch builds the application. That way the code in Atom is always the same code that's in the browser. Neat!
 
-Additionally, notice the ReferenceError shown in the Console refers to line number 5 of the `app.jsx` file. Click on the error's link and you should see something like this.
+Additionally, notice the `ReferenceError` shown in the Console refers to line number 5 of the `app.jsx` file. Click on the error's link and you should see something like this.
 
 ![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/304/Screen_Shot_2016-08-05_at_4.43.48_AM.png)
 
-As you can see, when a runtime error is thrown, Chrome associated the error with the correct line number of the original source file. Awesome!
+As you can see, Chrome associated the thrown runtime error with the correct line number of the original source file. Awesome!
 
-Now, inside of `app/components/app.jsx`, let's refactor the component class's `render()` function into React JSX. Simply convert all `React.createElement()` function calls into JSX using the rules from above.
+Now, switch back to Atom and, inside the `app/components/app.jsx` file, refactor the `App` component class with the following React JSX.
 
-**NOTE:** If you forget to end a self-closing tag with `/>`, you'll see an `SyntaxError: app/components/app.jsx: Unterminated JSX contents` error in the Brunch output.
+**NOTE:** If you make a `SyntaxError` in the JSX, you'll see the error in the Brunch output.
 
-`app/components/app.jsx`
 ```jsx
 import React from 'react';
 
