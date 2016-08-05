@@ -338,6 +338,8 @@ Let's build a React JSX user interface by refactoring the **Hello world** React 
 
 Unfortunately, you can't serve React JSX to a browser and expect it to parse or execute the code. Instead, you'll need the help of a build tool. A **build tool** is a program that automates the creation of a functioning application from source code. In this case, you'll use a build tool to transpile React JSX code into functioning JavaScript code before it's sent to a browser.
 
+There are many, many build tools for JavaScript; Brunch, Grunt, Gulp, Brocolli, Webpack just to name a few. For now, we're going to use Brunch because of its easy of use out-of-the-box. However, you'll certainly encounter these other build tools in the wild.
+
 To get started, install the Brunch build tool globally with NPM.
 
 ```shell
