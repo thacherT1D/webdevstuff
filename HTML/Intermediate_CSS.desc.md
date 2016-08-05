@@ -49,7 +49,7 @@ Most projects should use one of these, but not both. It is up to you to decide w
 ## Positioning
 
 CSS positions change the *flow* of a document.
-> Try it out! Test out the different position properties as we talk about them: https://jsfiddle.net/62mgdps7/
+> Try it out! Test the different position properties as we talk about them: https://jsfiddle.net/dn1kujxa/
 
 * **`position: static;`**: This is the default for all elements. Normal document flow, will not accept top/right/bottom/left values.
 * **`position: relative;`**: Creates a new positioning context for any `absolute`ly positioned children, and itself.
@@ -66,15 +66,15 @@ Some notes on positioned (relative, absolute, or fixed) elements:
 
 ### Standard Selector Review
 
-* `tagname`
-* `.class`
-* `#id`
-* `several, selectors`
-* `all children`
-* `*` (universal)
-* `+` (next sibling)
-* `~` (all siblings)
-* `>` (all direct children)
+* [`tagname`](http://codepen.io/MrJadaml/pen/WxayPV)
+* [`.class`](http://codepen.io/MrJadaml/pen/zBmaXN)
+* [`#id`](http://codepen.io/MrJadaml/pen/YWJvov)
+* [`several, selectors`](http://codepen.io/MrJadaml/pen/RRZBRE)
+* [`nested children`](http://codepen.io/MrJadaml/pen/wWYxvL)
+* [`*` (universal)](http://codepen.io/MrJadaml/pen/vKVaNV)
+* [`+` (next sibling)](http://codepen.io/MrJadaml/pen/xOyJgY)
+* [`~` (all siblings)](http://codepen.io/MrJadaml/pen/LkgBxA)
+* [`>` (all direct children)](http://codepen.io/MrJadaml/pen/grBjmJ)
 
 ### Attribute Selectors
 
