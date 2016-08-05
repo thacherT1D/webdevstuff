@@ -511,7 +511,7 @@ The **React Developer Tools** are a [Chrome extension](https://chrome.google.com
 
 Using the links above, install the React Developer Tools for each browser. Once it's installed, refresh the **Hello world** application in Chrome. Then, open its developer tools panel and click on the React tab. You should see something like this.
 
-![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/323/Screen_Shot_2016-08-05_at_12.38.40_PM.png)
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/324/Screen_Shot_2016-08-05_at_1.37.28_PM.png)
 
 ### Exercise
 
