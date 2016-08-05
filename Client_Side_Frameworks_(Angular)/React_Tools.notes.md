@@ -517,7 +517,7 @@ Using the links above, install the React Developer Tools for both browsers. The 
 
 ![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/305/Screen_Shot_2016-08-05_at_5.45.52_AM.png)
 
-Then, refresh the **Hello world** application in your browser, open its developer tools panel, and click on the React tab. You should see something like this.
+Then, refresh the **Hello world** application in Chrome, open its developer tools panel, and click on the React tab. You should see something like this.
 
 ![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/306/Screen_Shot_2016-08-05_at_5.52.28_AM.png)
 
