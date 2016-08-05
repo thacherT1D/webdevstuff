@@ -539,7 +539,7 @@ Finally, turn to a neighbor and, in your own words, explain why the React Develo
 
 ## How do you use the React Developer Tools to inspect and debug a user interface?
 
-Selecting a component in the tree view on the left allows you to inspect and debug its current props and state in the panel on the right. When a props or state value is changed, the component hierarchy is updated and re-rendered.
+By selecting a component in the tree view, you can inspect and debug its current props and state in the panel on the right. When a component's props or state value is changed, the component hierarchy is updated which in turn updates the DOM hierarchy.
 
 ![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/310/BB9B2456-BEEF-4F53-B3B9-2B64A251A0E1-570-0000CD7EC85EEA52.gif)
 
