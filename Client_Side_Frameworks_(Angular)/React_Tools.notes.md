@@ -512,7 +512,7 @@ The **React Developer Tools** are a [Chrome extension](https://chrome.google.com
 Using the links above, install the React Developer Tools for both browsers. The Chrome extension needs a little configuration though. Once it's installed, configure Chrome's React Developer Tools with the following steps.
 
 1. Click on the `Window -> Extensions` menu item.
-1. Scroll down into you find the React Developer Tools extension.
+1. Scroll down until you find the React Developer Tools extension.
 1. Enable the "Allow access to file URLs" checkbox.
 
 ![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/305/Screen_Shot_2016-08-05_at_5.45.52_AM.png)
