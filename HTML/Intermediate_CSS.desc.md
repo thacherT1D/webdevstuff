@@ -79,16 +79,53 @@ Click on selector type for a live code sample.
 
 ### Attribute Selectors
 
-* `tag[attribute]`
-* `tag[attribute="value"]`
-* `tag[attribute^="starts-with-value"]`
-* `tag[attribute$="ends-with-value"]`
-* `tag[attribute*="contains-value"]`
+`tag[attribute]`
+Say you want to put a cool purple border around videos that are looping. You can target them with the boolean attr `loop`:
+```css
+video[loop] {
+  border: 3px solid purple;
+}
+```
 
-****:
+`tag[attribute="value"]`
+If I wanted to give a cool background image to div's with ONLY the class of "bob" and not ones that may have multiple classes like `class="bob cat", I would do the following:
 
-- Go to codepen.io and create a new pen
-- create a selector for the following html that hides checked input.
+```css
+div[class="bob"] {
+  background-image: url('http://cats.antarcticastartshere.net/issue_04/spacecat_02.jpg');
+}
+```
+
+`tag[attribute^="starts-with-value"]`
+If we wanted to change the color of only links on the page that point at anything within the Galvanize Learn subdomain we could do something like the following:
+
+```css
+a[href^="https://www.learn.galvanize"] {
+  color: orange;
+}
+```
+
+`tag[attribute$="ends-with-value"]`
+Say we have an assortment of buttons using a naming convention like `red-small-button`, `red-big-button`, `blue-small-button` etc. etc. If we want to make a style change to big buttons of any color but don't want to update hundreds of class names we could do something like this:
+
+```css
+button[class$="big-button"] {
+  border-radius: 15px;
+}
+```
+
+`tag[attribute*="contains-value"]`
+Using the example above again, we could also just match for any part of the attribute's value using the `*`
+
+```css
+button[class*="big"] {
+  background-color: rgba(200, 14, 183, 0.4);
+}
+```
+
+#### Exercise
+ * Go to codepen.io and create a new pen.
+ * Create a selector for the following html that hides checked input.
 
 ```html
 <input type="checkbox"> I am unchecked
