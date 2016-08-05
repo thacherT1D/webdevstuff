@@ -75,7 +75,7 @@ Additionally, the [language-babel](https://atom.io/packages/language-babel) pack
 
 ### Exercise
 
-Then, turn to a neighbor and, in your own words, explain what React JSX is as well as the similarities and differences of a compiler versus a transpiler. After about a minute, your instructor will cold call on the class and ask what was discussed.
+Turn to a neighbor and, in your own words, explain what React JSX is as well as the similarities and differences of a compiler versus a transpiler. After about a minute, your instructor will cold call on the class and ask what was discussed.
 
 ## Why use React JSX?
 
@@ -86,7 +86,7 @@ You'll find that a React application written in JSX is a better way to separate 
 1. Presentation and behavior are intimately tied together, so why keep them in separate HTML and JavaScript files.
 2. Dedicated template languages tend to be inadequate when implementing a complex user interface.
 
-While it may feel jarring to write HTML-like syntax with your JavaScript at first, using the expressive power of a full programming language to build a complex user interface is an ideal solution to the above problems. In short, React JSX allows presentation and behavior to live side-by-side using the power of JavaScript, but with a concise and familiar syntax.
+While at first it may feel jarring to write HTML-like syntax with your JavaScript, using the expressive power of a full programming language to build a complex user interface is an ideal solution to the above problems. In short, React JSX allows presentation and behavior to live side-by-side using the power of JavaScript, but with a concise and familiar syntax.
 
 ### Exercise
 
