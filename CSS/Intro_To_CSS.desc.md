@@ -111,7 +111,19 @@ Which style rules will win out?
 
 The answer is that whichever rule comes _latest_ in the stylesheet will take precedence (this is what the _Cascading_ means). However, you can overwrite this default behavior by using a more _specific_ selector.
 
-HTML Elements (`div`, `p`, `ul`, etc) are the least specific CSS selectors. The next level of specificity is provided by classes. To add a class to an element, we use a class attribute. For example, give your first HTML div a class of "red", and then change your stylesheet to look like this:
+HTML Elements (`div`, `p`, `ul`, etc) are the least specific CSS selectors. The next level of specificity is provided by classes. To add a class to an element, we use a class attribute. For example, modify the first `<div>` in your HTML file to have a *class* of "red".
+
+```html
+<!-- more code above... -->
+
+  <body>
+    <div class="red">Here's my first div!</div>
+    <div>Here's my second div!</div>
+  </body>
+</html>
+```
+
+Then change your stylesheet to look like this:
 
 ```css
 .red {
@@ -127,9 +139,22 @@ div {
 }
 ```
 
-(the dot in front of "red" indicates that we're targeting a class). Now the first div should be red. Even though the styling for `.red` comes before the styling for `div`, targeting a class is more specific than targeting an element.
+The dot in front of "red" indicates that we're targeting a class attribute. Now the first div should be red. Even though the styling for `.red` comes before the styling for `div`, targeting a class is more specific than targeting an element.
 
-The next level of specificty is an id. Let's add a third div with a class of red and an id of green; then change the stylesheet as follows:
+The next level of specificty is an id. Let's add a third div with a `class` of red and an `id` of green.
+
+```html
+<!-- more code above... -->
+
+  <body>
+    <div class="red">Here's my first div!</div>
+    <div>Here's my second div!</div>
+    <div id="green" class="red">I have an ID!</div>
+  </body>
+</html>
+```
+
+Update the stylesheet as follows:
 
 ```css
 #green {
