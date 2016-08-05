@@ -414,11 +414,10 @@ Assuming your default browser is Chrome, if you open the Chrome Developer Tools 
 
 ![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/301/Screen_Shot_2016-08-04_at_3.52.40_PM.png)
 
-Because Brunch automatically generated source map files, you can see what the source code looked like before it was transpiled right from the browser. Even better, when a runtime error is thrown, Chrome will associate the error with the correct line number of the original source file.
+Because Brunch automatically generated source map files, you can see, right from the browser, what the source code looked like before it was transpiled. Even better, when a runtime error is thrown, Chrome will associate the error with the correct line number of the original source file.
 
 For example, in `app/components/app.jsx` file, type the following code.
 
-`app/components/app.jsx`
 ```jsx
 import React from 'react';
 
@@ -432,7 +431,7 @@ const App = React.createClass({
 export default App;
 ```
 
-Save the file and switch back the Terminal and find the Brunch output. You should see something like this.
+Save the file and switch back the Terminal to look at the Brunch output. You should see something like this.
 
 ```text
 04 Aug 13:20:41 - info: compiled app.jsx and 1 cached file into app.js in 95ms
@@ -444,7 +443,7 @@ Now, switch back to the browser and open the **Console** tab in the Chrome Devel
 
 ![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/303/Screen_Shot_2016-08-05_at_4.41.16_AM.png)
 
-Notice the page has automatically refreshed itself thanks to the [`auto-reload-brunch`](https://github.com/brunch/auto-reload-brunch) plugin! This plugin tells the browser to refresh the page each time Brunch builds the application. Neat!
+Notice the page has automatically refreshed itself thanks to the [`auto-reload-brunch`](https://github.com/brunch/auto-reload-brunch) plugin. This plugin tells the browser to refresh the page each time Brunch builds the application. That way the code in Atom is always the same code that's in the browser. Neat!
 
 Additionally, notice how the ReferenceError shown in the Console refers to line number 5 of the `app.jsx` file. Click on it and you should see something like this.
 
