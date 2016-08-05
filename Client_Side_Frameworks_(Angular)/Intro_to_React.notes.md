@@ -4,6 +4,10 @@
 - Explain why React is important.
 - Build a user interface with React.
 
+| Duration by yourself | Duration as a class |
+|----------------------|---------------------|
+| About 1.5 hours      | About 3.5 hours     |
+
 ## What's React?
 
 [React](https://facebook.github.io/react/index.html) is a JavaScript library for building sophisticated user interfaces for large, dynamic web applications. As you know, a sophisticated user interface can be hard to build and maintain. Facebook created React to try to make this process easier and faster. What's interesting about React is how different it is compared to other JavaScript solutions. In fact, React has the entire industry rethinking how to approach user interface development.

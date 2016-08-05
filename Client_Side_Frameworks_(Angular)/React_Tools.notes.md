@@ -4,6 +4,10 @@
 - Explain why React JSX is important.
 - Use React JSX to build a user interface.
 
+| Duration by yourself | Duration as a class |
+|----------------------|---------------------|
+| About 3 hours        | About 4.5 hours     |
+
 ## What's React JSX?
 
 [JSX](https://facebook.github.io/jsx/), or JavaScript XML, is an JavaScript syntax extension that looks similar to HTML. [React JSX](https://facebook.github.io/react/docs/jsx-in-depth.html) lets you create `ReactElement` objects using an HTML-like syntax and a transpiler.
