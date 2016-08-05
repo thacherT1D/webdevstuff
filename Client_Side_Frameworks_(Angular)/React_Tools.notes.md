@@ -523,7 +523,7 @@ Then, refresh the **Hello world** application in Chrome, open its developer tool
 
 ### Exercise
 
-Play around with the React Developer Tools on your own and see what you can discover. While you're playing, turn to a neighbor and, in your own words, explain what the React Developer Tools are. After about a minute, your instructor will cold call on the class and ask what was discussed.
+Play around with the React Developer Tools and see what you can discover on your own. While you're playing, turn to a neighbor and, in your own words, explain what the React Developer Tools are. After about a minute, your instructor will cold call on the class and ask what was discussed.
 
 ## Why are the React Developer Tools important?
 
