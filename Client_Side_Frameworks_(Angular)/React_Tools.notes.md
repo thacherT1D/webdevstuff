@@ -615,13 +615,13 @@ However, feel free to use any of the [supported tags and attributes](https://fac
 
 ## Bonus
 
-If you haven't already, inspect and edit your **sportball team** assignment from the previous chapter using the React Developer Tools. Make sure you understand the application's component hierarchy and its state before moving on to the next part of the assignment.
+If you haven't already, inspect and debug your **sportball team** solution from using the React Developer Tools. Make sure you understand the application's component hierarchy and its state.
 
-Then log into your [Facebook](https://www.facebook.com/) account, if you have one, and see if you can figure out which component hierarchies are being reused on the timeline.
+Then visit [Codecademy's landing page](https://www.codecademy.com/) and, using the React Developer Tools, see what changes can you make to this application's props and state values that'll cause the browser window to render a different DOM hierarchy.
 
-Navigate your browser to [Codecademy's landing page](https://www.codecademy.com/) and open up the React Developer Tools. What changes can you make to the application's props and state values that will cause the browser window to render a different DOM?
+Then, log into your [Facebook](https://www.facebook.com/) account, if you have one, and see if you can figure out which component hierarchies are being reused on the timeline.
 
-Find another React application from this list of [sites using React](https://github.com/facebook/react/wiki/Sites-Using-React). What else you can uncover with your new x-ray vision?
+Finally, [pick another React application](https://github.com/facebook/react/wiki/Sites-Using-React) and see what else you can uncover with your new x-ray vision.
 
 ## Resources
 
