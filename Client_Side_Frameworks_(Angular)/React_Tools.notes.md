@@ -357,7 +357,7 @@ Let's walkthrough the files and directories provided by the skeleton starting wi
 less README.md
 ```
 
-To watch the project for changes and launch an HTTP server, start the build tool.
+To watch the project for changes and launch an HTTP server, start Brunch.
 
 **NOTE:** Press `Ctrl + C` to quit Brunch.
 
@@ -378,7 +378,7 @@ And you should see something like this.
 In a new Terminal tab, navigate back the the project directory.
 
 ```shell
-cd path/to/app
+cd path/to/hello
 ```
 
 Take a look at the `public` directory to see what Brunch created.
@@ -403,7 +403,7 @@ drwxr-xr-x  11 ryansobol  staff   374B Aug  4 15:32 ..
 -rw-r--r--   1 ryansobol  staff   858K Aug  4 15:32 vendor.js.map
 ```
 
-Most the files should look familiar with the exception of a handful of source map files that end in `.map` file extension. A **source map** is a file that tells a browser how to debug transpiled and optimized JavaScript code. You'll see what that means in a moment.
+Most of the files should look familiar with the exception of a handful of source map files that end with the `.map` file extension. A **source map** is a file that tells a browser how to debug transpiled and optimized JavaScript code. You'll see what that means in a moment.
 
 Open the application in your default browser.
 
