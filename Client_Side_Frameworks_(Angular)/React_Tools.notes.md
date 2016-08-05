@@ -351,7 +351,7 @@ Change into the `hello` project directory.
 cd hello
 ```
 
-Let's walkthrough the files and directories, provided by the skeleton, starting with the `README.md` file.
+Let's walkthrough the files and directories provided by the skeleton starting with the `README.md` file.
 
 ```shell
 less README.md
