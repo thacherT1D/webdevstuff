@@ -615,6 +615,10 @@ However, feel free to use any of the [supported tags and attributes](https://fac
 
 ## Bonus
 
+Using your preferred ESLint rules, lint your project with the `npm run lint .` command.
+
+## Bonus
+
 If you haven't already, inspect and debug your **sportball team** solution from using the React Developer Tools. Make sure you understand the application's component hierarchy and its state.
 
 Then visit [Codecademy's landing page](https://www.codecademy.com/) and, using the React Developer Tools, see what changes can you make to this application's props and state values that'll cause the browser window to render a different DOM hierarchy.
