@@ -591,19 +591,9 @@ Switch back to the browser and voilà! Now, the application now has two distinct
 
 In the React Developer Tools, both components are named `<App />` because their component class is stored in an indentifier named `App`. Remember, Babel automatically sets the value of the `displayName` property to the indentifier where the component class is stored. The React Developer Tools use this property when determining the name of a component.
 
-### Exercise
-
-Navigate your browser to [Codecademy's landing page](https://www.codecademy.com/) and open up the React Developer Tools. What changes can you make to the application's props and state values that will cause the browser window to render a different DOM?
-
-### Exercise
-
-Find another React application from this list of [sites using React](https://github.com/facebook/react/wiki/Sites-Using-React). What else you can uncover with your new x-ray vision?
-
 ## Summary
 
-In this chapter, you were exposed to the fundamentals of React JSX—an HTML-like syntax for creating `ReactElement` objects. In addition, you practiced writing React JSX and transpiling it into JavaScript using Babel, a popular JavaScript transpiler. At this point, you're well on your way to writing larger, more sophisticated React applications.
-
-In this chapter, you were exposed to the fundamentals of the React Developer Tools. You got to practice inspecting and editing both personal and production React applications. At this point, you're ready to write more sophisticated React applications.
+In this chapter, you were exposed to the fundamentals of React JSX—an HTML-like syntax for creating `ReactElement` objects. You practiced writing React JSX and transpiling it into JavaScript with a transpiler and a build tool. Additionally, you were exposed to the fundamentals of the React Developer Tools. You also practiced inspecting and debugging user interfaces written in React JSX. At this point, you're ready to write more sophisticated React applications.
 
 ## Assignment
 
@@ -628,6 +618,10 @@ However, feel free to use any of the [supported tags and attributes](https://fac
 If you haven't already, inspect and edit your **sportball team** assignment from the previous chapter using the React Developer Tools. Make sure you understand the application's component hierarchy and its state before moving on to the next part of the assignment.
 
 Then log into your [Facebook](https://www.facebook.com/) account, if you have one, and see if you can figure out which component hierarchies are being reused on the timeline.
+
+Navigate your browser to [Codecademy's landing page](https://www.codecademy.com/) and open up the React Developer Tools. What changes can you make to the application's props and state values that will cause the browser window to render a different DOM?
+
+Find another React application from this list of [sites using React](https://github.com/facebook/react/wiki/Sites-Using-React). What else you can uncover with your new x-ray vision?
 
 ## Resources
 
