@@ -5,7 +5,7 @@
 - Use React JSX to build a user interface.
 - Explain what the React Developer Tools are.
 - Explain why the React Developer Tools are important.
-- Use the React Developer Tools to inspect and modify a user interface.
+- Use the React Developer Tools to inspect and debug a user interface.
 
 | Duration by yourself | Duration as a class |
 |----------------------|---------------------|
@@ -507,7 +507,7 @@ Save the file and switch back to the browser. Play around with the application a
 
 ## What are the React Developer Tools?
 
-The **React Developer Tools** are a [Chrome extension](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi) and [Firefox add-on](https://addons.mozilla.org/en-US/firefox/addon/react-devtools/) that allow you to inspect and modify a React user interface from within the browser's developer tools panel.
+The **React Developer Tools** are a [Chrome extension](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi) and [Firefox add-on](https://addons.mozilla.org/en-US/firefox/addon/react-devtools/) that allow you to inspect and debug a React user interface from within the browser's developer tools panel.
 
 Using the links above, install the React Developer Tools for both browsers. The Chrome extension needs a little configuration though. Once it's installed, configure Chrome's React Developer Tools with the following steps.
 
@@ -541,13 +541,13 @@ Notice the colors of the collapsable triangles in the tree view provide extra i
 
 ### Exercise
 
-Click the `<h1>` component and use the breadcrumbs bar on the bottom of the panel to inspect it, its parent component, and its grandparent component. Then use the search bar to find the `<input />` component by its tag name and content.
+In the main React Developer Tools window, click the `<h1>` component and use the breadcrumbs bar on the bottom of the panel to inspect it, its parent component, and its grandparent component. Then use the search bar to find the `<input />` component by its tag name and content.
 
 Finally, turn to a neighbor and, in your own words, explain why the React Developer Tools are important. After about a minute, your instructor will cold call on the class and ask what was discussed.
 
-## How do you use the React Developer Tools to inspect and modify a user interface?
+## How do you use the React Developer Tools to inspect and debug a user interface?
 
-Selecting a component in the tree view on the left allows you to inspect and edit its current props and state in the panel on the right. When a props or state value is changed, the component hierarchy is updated and re-rendered.
+Selecting a component in the tree view on the left allows you to inspect and debug its current props and state in the panel on the right. When a props or state value is changed, the component hierarchy is updated and re-rendered.
 
 ![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/310/BB9B2456-BEEF-4F53-B3B9-2B64A251A0E1-570-0000CD7EC85EEA52.gif)
 
