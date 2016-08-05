@@ -24,7 +24,7 @@ For example, when the following React JSX code is run through a transpiler:
 It's transformed into the following JavaScript code.
 
 ```js
-React.createElement('h1', { id: 'greeting' }, 'Hello, Jane.');
+React.createElement('h1', { id: 'greeting' }, 'Hello, Jane.')
 ```
 
 A traditional **compiler** translates the source code of one programming language into another programming language of a *different* level of abstraction. For example, embedded JavaScript (i.e. EJS) templates compile into HTML because one is an embedded programming language and the other is only a markup language.
