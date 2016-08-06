@@ -297,13 +297,13 @@ const App = React.createClass({
       />
 
       <input
-        type="text"
         defaultValue="I'm changeable but am not under React's control."
+        type="text"
       />
 
       <input
-        type="text"
         readOnly="true"
+        type="text"
         value="I'm read-only and under React's control."
       />
     </div>;
@@ -446,25 +446,25 @@ const App = React.createClass({
       <div>
         {"I'm changeable and under React's control."}
         <input
+          checked={this.state.checked}
           onChange={this.handleChange}
           type="checkbox"
-          checked={this.state.checked}
         />
       </div>
 
       <div>
         {"I'm read-only, am under React's control, but raise a warning."}
-        <input type="checkbox" checked={true} />
+        <input checked={true} type="checkbox" />
       </div>
 
       <div>
         {"I'm changeable but am not under React's control."}
-        <input type="checkbox" defaultChecked={true} />
+        <input defaultChecked={true} type="checkbox" />
       </div>
 
       <div>
         {"I'm read-only and under React's control."}
-        <input type="checkbox" readOnly="true" checked={true} />
+        <input checked={true} readOnly="true" type="checkbox" />
       </div>
     </div>;
   }
@@ -529,35 +529,47 @@ const App = React.createClass({
       <div>
         {"We're changeable and under React's control."}
         <input
+          checked={this.state.value === 'yes'}
           onChange={this.handleChange}
           type="radio"
-          checked={this.state.value === 'yes'}
           value="yes"
         />
         <input
+          checked={this.state.value === 'no'}
           onChange={this.handleChange}
           type="radio"
-          checked={this.state.value === 'no'}
           value="no"
         />
       </div>
 
       <div>
         {"We're read-only, are under React's control, but raise a warning."}
-        <input type="radio" name="1" checked={true} value="yes" />
-        <input type="radio" name="1" checked={false} value="no" />
+        <input checked={true} name="1" type="radio" value="yes" />
+        <input checked={false} name="1" type="radio" value="no" />
       </div>
 
       <div>
         {"We're changeable but are not under React's control."}
-        <input type="radio" name="2" defaultChecked={true} value="yes" />
-        <input type="radio" name="2" defaultChecked={false} value="no" />
+        <input defaultChecked={true} name="2" type="radio" value="yes" />
+        <input defaultChecked={false} name="2" type="radio" value="no" />
       </div>
 
       <div>
         {"We're read-only and are under React's control."}
-        <input type="radio" name="3" readOnly="true" checked={true} value="yes" />
-        <input type="radio" name="3" readOnly="true" checked={false} value="no" />
+        <input
+          checked={true}
+          name="3"
+          readOnly="true"
+          type="radio"
+          value="yes"
+        />
+        <input
+          checked={false}
+          name="3"
+          readOnly="true"
+          type="radio"
+          value="no"
+        />
       </div>
     </div>;
   }
@@ -701,7 +713,7 @@ import ReactDOM from 'react-dom';
 
 const App = React.createClass({
   getInitialState() {
-    return { password: '', username:'' };  
+    return { password: '', username: '' };
   },
 
   handleChange(event) {
@@ -715,12 +727,11 @@ const App = React.createClass({
   handleSubmit(event) {
     event.preventDefault();
 
-    const nextJSON = JSON.stringify({
+    // Perhaps send a JSON string to a server...
+    JSON.stringify({
       password: this.state.password,
       username: this.state.username
     });
-
-    // Perhaps send the JSON string to a server...
   },
 
   render() {
@@ -1017,7 +1028,7 @@ const App = React.createClass({
   handleKeyDown(event) {
     const nextEvents = this.state.events;
 
-    nextEvents.push('Key Down: ' + event.which);
+    nextEvents.push(`Key Down: ${event.which}`);
 
     this.setState({ events: nextEvents });
   },
@@ -1025,7 +1036,7 @@ const App = React.createClass({
   handleKeyPress(event) {
     const nextEvents = this.state.events;
 
-    nextEvents.push('Key Press: ' + event.which);
+    nextEvents.push(`Key Press: ${event.which}`);
 
     this.setState({ events: nextEvents });
   },
@@ -1033,13 +1044,13 @@ const App = React.createClass({
   handleKeyUp(event) {
     const nextEvents = this.state.events;
 
-    nextEvents.push('Key Up: ' + event.which);
+    nextEvents.push(`Key Up: ${event.which}`);
 
     this.setState({ events: nextEvents });
   },
 
   render() {
-    const eventEls = this.state.events.map(function(event, index) {
+    const eventEls = this.state.events.map((event, index) => {
       return <div key={index}>{event}</div>;
     });
 
@@ -1059,7 +1070,7 @@ const App = React.createClass({
       <h2>History</h2>
 
       {eventEls}
-    </div>
+    </div>;
   }
 });
 
