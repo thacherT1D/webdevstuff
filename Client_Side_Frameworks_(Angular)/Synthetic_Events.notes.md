@@ -49,7 +49,7 @@ const Textfield = React.createClass({
 });
 ```
 
-As you can see, a `SyntheticEvent` object has the same properties as a browser's native event object including an `event.target` object. In the vast majority of cases, you won't need the underlying native event object. But if for some reason you ever do, you can access it via the `event.nativeEvent` property.
+As you can see, a `SyntheticEvent` object has the same properties as a browser's native event object including an `event.target` property. In the vast majority of cases, you won't need the underlying native event object. But if for some reason you ever do, you can access it via the `event.nativeEvent` property.
 
 ### Exercise
 
