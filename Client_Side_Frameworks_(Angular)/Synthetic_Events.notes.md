@@ -59,7 +59,7 @@ Turn to a neighbor and, in your own words, explain what a synthetic event is. Af
 
 The problem with native events is that they don't work exactly the same across all browsers. For example, handling native `onMouseEnter` and `onMouseLeave` events has historically been a cross-browser pain point. The advantage of a synthetic event is that it works *identically* across all browsers including IE9 and above.
 
-In this article, you're going to practice how to handle synthetic events and how to leverage their properties in a variety of common use cases. Understanding React's synthetic event system is critical, especially if you ever find yourself integrating React into an existing web application. Thankfully, handling a synthetic event in React is similar to handling a native event in traditional JavaScript. However, React does a few things under the hood to keep your code performant and easy to understand.
+Understanding React's synthetic event system is critical, especially if you ever find yourself integrating React into an existing web application. Thankfully, handling a synthetic event in React is similar to handling a native event in traditional JavaScript. However, React does a few things under the hood to keep your code performant and easy to understand.
 
 When React starts up, it attaches a single event listener onto the root of the DOM. In React, you do *not* have to attach any additional event listeners. If you find yourself reaching for functions like `EventTarget.addEventListener()` or `jQuery.on()` when building a React application from scratch, you're doing it wrong.
 
@@ -133,7 +133,7 @@ Turn to a neighbor and, in your own words, explain why a synthetic event is impo
 
 ## How do you use synthetic events to build an interactive React application?
 
-React [supports a ton of synthetic events](https://facebook.github.io/react/docs/events.html#supported-events), but we're only going to focus on the most common ones.
+In this article, you're going to practice how to handle synthetic events and how to leverage their properties in a variety of common use cases.  React [supports a ton of synthetic events](https://facebook.github.io/react/docs/events.html#supported-events), but we're only going to focus on the most common ones.
 
 - [Form events](#form-events)
   - [Textfield input](#textfield-input)
