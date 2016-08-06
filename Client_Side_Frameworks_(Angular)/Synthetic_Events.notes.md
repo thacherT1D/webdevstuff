@@ -15,7 +15,7 @@ Now that you've gotten some practice with React JSX and the React Developer Tool
 A **synthetic event** is a cross-browser wrapper around a browser's native event. In React, event handlers are passed a [`SyntheticEvent`](https://facebook.github.io/react/docs/events.html) object to their first parameter.
 
 ```JSX
-handleChange: function(event) {
+handleChange(event) {
   // event is a SyntheticEvent object
 }
 ```
@@ -35,17 +35,18 @@ When React starts up, it attaches a single event listener onto the root of the D
 To handle events in React, simply register an event handler with an event prop of a component. This feels similar to registering an event handler with an event attribute of an HTML element. The only difference is that the event prop is written in camelcase.
 
 ```jsx
-var Textfield = React.createClass({
-  getInitialState: function() {
+const Textfield = React.createClass({
+  getInitialState() {
     return { value: '' };
   },
 
-  handleChange: function(event) {
-    var nextState = { value: event.target.value };
+  handleChange(event) {
+    const nextState = { value: event.target.value };
+
     this.setState(nextState);
   },
 
-  render: function() {
+  render() {
     return <input
       onChange={this.handleChange}
       type="text"
@@ -66,13 +67,13 @@ As the synthetic event propagates from component to component, it looks through 
 When an event handler is called, it's time for your code to shine. This is where you'll update a component's `this.state` object by using the `this.setState()` function. If you need to prevent the browser from loading a page as it follows an `href` or `action` URL on an `<a>` or `<form>` component, call the `event.preventDefault()` function inside the event handler.
 
 ```jsx
-var Anchor = React.createClass({
-  handleClick: function(event) {
+const Anchor = React.createClass({
+  handleClick(event) {
     event.preventDefault();
     // The browser will no longer load the page at event.target.href
   },
 
-  render: function() {
+  render() {
     return <a
       href="do-not-follow.html"
       onClick={this.handleClick}
@@ -123,13 +124,13 @@ Type out the following code examples *by hand* and run them to make sure they wo
 Form components such as `<input />`, `<textarea />`, and `<select>` differ from other native components because their state can be changed by a user. However, when a form component's state is set inside a React application, it's known as a **controlled component**.
 
 ```jsx
-var element = <input type="text" value="I'm a controlled component." />;
+const element = <input type="text" value="I'm a controlled component." />;
 ```
 
 The problem with this controlled component is that it renders a *read-only* element. In other words, a user cannot change the state living inside its `value` prop. To implement a form component that's both controlled by React and changeable by a user, you'll want to register an event handler with its `onChange` prop and set its state with a one-way data binding.
 
 ```jsx
-var element = <input onChange={this.handleChange} type="text" value={this.state.value} />;
+const element = <input onChange={this.handleChange} type="text" value={this.state.value} />;
 ```
 
 When a user changes the component's underlying element, its event handler is triggered. The handler can then update `this.state.value` and cause the component hierarchy to re-render the user interface. On most devices, this happens so fast that a user never perceives a delay.
@@ -143,17 +144,18 @@ When a user types a character into an `<input type="text" />` component, the `on
 **NOTE:** If you share control over the `value` prop but forget to also register an `onChange` event handler, the component will render as read-only and a warning will be sent to your browser's console.
 
 ```jsx
-var TextfieldInput = React.createClass({
-  getInitialState: function() {
+const TextfieldInput = React.createClass({
+  getInitialState() {
     return { value: "I'm changeable and under React's control" };
   },
 
-  handleChange: function(event) {
-    var nextValue = event.target.value;
+  handleChange(event) {
+    const nextValue = event.target.value;
+
     this.setState({ value: nextValue });
   },
 
-  render: function() {
+  render() {
     return <div>
       <input
         onChange={this.handleChange}
@@ -193,17 +195,18 @@ When a user types a character into a `<textarea />` component, the `onChange` ev
 **NOTE:** If you share control over the `value` prop but forget to also register an `onChange` event handler, the component will render as read-only and a warning will be sent to your browser's console.
 
 ```jsx
-var Textarea = React.createClass({
-  getInitialState: function() {
+const Textarea = React.createClass({
+  getInitialState() {
     return { value: "I'm changeable and under React's control." };
   },
 
-  handleChange: function(event) {
-    var nextValue = event.target.value;
+  handleChange(event) {
+    const nextValue = event.target.value;
+
     this.setState({ value: nextValue });
   },
 
-  render: function() {
+  render() {
     return <div>
       <textarea
         onChange={this.handleChange}
@@ -239,17 +242,18 @@ When a user clicks an `<input type="checkbox" />` component, the `onChange` even
 **NOTE:** If you share control over the `checked` prop but forget to also register an `onChange` event handler, the component will render as read-only and a warning will be sent to your browser's console.
 
 ```jsx
-var CheckboxInput = React.createClass({
-  getInitialState: function() {
+const CheckboxInput = React.createClass({
+  getInitialState() {
     return { checked: false };
   },
 
-  handleChange: function(event) {
-    var nextChecked = event.target.checked;
+  handleChange(event) {
+    const nextChecked = event.target.checked;
+
     this.setState({ checked: nextChecked });
   },
 
-  render: function() {
+  render() {
     return <div>
       <div>
         {"I'm changeable and under React's control."}
@@ -291,17 +295,18 @@ When a user clicks an `<input type="radio" />` component, the `onChange` event w
 **NOTE:** If you share control over the `checked` prop but forget to also register an `onChange` event handler, the component will render as read-only and a warning will be sent to your browser's console.
 
 ```jsx
-var RadioInput = React.createClass({
-  getInitialState: function() {
+const RadioInput = React.createClass({
+  getInitialState() {
     return { value: 'no' };
   },
 
-  handleChange: function(event) {
-    var nextValue = event.target.value;
+  handleChange(event) {
+    const nextValue = event.target.value;
+
     this.setState({ value: nextValue });
   },
 
-  render: function() {
+  render() {
     return <div>
       <div>
         {"We're changeable and under React's control."}
@@ -353,17 +358,18 @@ When a user selects a new `<option>` from a `<select>` component, the `onChange`
 **NOTE:** If you share control over the `value` prop but forget to also register an `onChange` event handler, the component will render as read-only and a warning will be sent to your browser's console.
 
 ```jsx
-var SelectDropDown = React.createClass({
-  getInitialState: function() {
+const SelectDropDown = React.createClass({
+  getInitialState() {
     return { value: 'B' };
   },
 
-  handleChange: function(event) {
-    var nextValue = event.target.value;
+  handleChange(event) {
+    const nextValue = event.target.value;
+
     this.setState({ value: nextValue });
   },
 
-  render: function() {
+  render() {
     return <div>
       <div>
         {"I'm changeable and under React's control."}
@@ -413,21 +419,23 @@ When a user submits a `<form>` component, the `onChange` event will fire. You'll
 **NOTE:** In terms of their events, `<input type="text" />` and `<input type="password" />` components are identical. Because each component has a unique `name` prop, the `this.handleChange()` event handler can be registered with both components.
 
 ```jsx
-var FormSubmission = React.createClass({
-  getInitialState: function() {
+const FormSubmission = React.createClass({
+  getInitialState() {
     return { json: 'null', password: '', username:'' };
   },
 
-  handleChange: function(event) {
-    var nextState = {};
+  handleChange(event) {
+    const nextState = {};
+
     nextState[event.target.name] = event.target.value;
+
     this.setState(nextState);
   },
 
-  handleSubmit: function(event) {
+  handleSubmit(event) {
     event.preventDefault();
 
-    var nextJSON = JSON.stringify({
+    const nextJSON = JSON.stringify({
       password: this.state.password,
       username: this.state.username
     });
@@ -435,7 +443,7 @@ var FormSubmission = React.createClass({
     this.setState({ json: nextJSON });
   },
 
-  render: function() {
+  render() {
     return <div>
       <form onSubmit={this.handleSubmit}>
         Username:
@@ -473,22 +481,24 @@ ReactDOM.render(
 When a user gives focus to a component, thus removing focus from another, the `onFocus` and `onBlur` events will fire on their respective components.
 
 ```jsx
-var FocusAndBlur = React.createClass({
-  getInitialState: function() {
+const FocusAndBlur = React.createClass({
+  getInitialState() {
     return { value: "I'm blurred :(" };
   },
 
-  handleBlur: function() {
-    var nextValue = "I'm blurred :(";
+  handleBlur() {
+    const nextValue = "I'm blurred :(";
+
     this.setState({ value: nextValue });
   },
 
-  handleFocus: function() {
-    var nextValue = "I'm focused :D";
+  handleFocus() {
+    const nextValue = "I'm focused :D";
+
     this.setState({ value: nextValue });
   },
 
-  render: function() {
+  render() {
     return <div>
       <input
         onBlur={this.handleBlur}
@@ -515,8 +525,8 @@ When the user moves the cursor between two components, the `onMouseEnter` and `o
 **NOTE:** The `onMouseEnter` and `onMouseLeave` events do *not* have an ordinary bubbling phase and do *not* have a capturing phase at all. This is because handling these events across nested components [can get complicated](http://www.quirksmode.org/js/events_mouse.html#link8) real fast.
 
 ```jsx
-var Mouse = React.createClass({
-  getInitialState: function() {
+const Mouse = React.createClass({
+  getInitialState() {
     return {
       clicks: 0,
       location: null,
@@ -525,28 +535,30 @@ var Mouse = React.createClass({
     };
   },
 
-  handleClick: function() {
-    var nextClicks = this.state.clicks + 1;
+  handleClick() {
+    const nextClicks = this.state.clicks + 1;
+
     this.setState({ clicks: nextClicks });
   },
 
-  handleMouseEnter: function() {
+  handleMouseEnter() {
     this.setState({ location: 'Entered' });
   },
 
-  handleMouseLeave: function() {
+  handleMouseLeave() {
     this.setState({ location: 'Left' });
   },
 
-  handleMouseMove: function(event) {
-    var nextState = {
+  handleMouseMove(event) {
+    const nextState = {
       pageX: event.pageX,
       pageY: event.pageY
     };
+
     this.setState(nextState);
   },
 
-  render: function() {
+  render() {
     return <div>
       <div
         onClick={this.handleClick}
@@ -596,7 +608,7 @@ Here's a table that explains the difference between a key code and a character c
 **NOTE:** As of Firefox v42 and React v0.14, pressing the Escape key will sometimes stop React from executing. I haven't figure out why this happens, but you can fix it by calling the  `event.preventDefault()` function in your event handler. Other browsers like Chrome don't have this problem and calling the `event.preventDefault()` function has no effect on them.
 
 ```js
-handleKeyDown: function(event) {
+handleKeyDown(event) {
   if (event.which === 27) {
     event.preventDefault();
     // continue handling the event
@@ -615,40 +627,47 @@ Here's a table to help you quickly remember which event does what.
 In summary, use `onKeyPress` to handle insertable key presses and `onKeyDown` to handle non-insertable key presses.
 
 ```jsx
-var Keyboard = React.createClass({
-  getInitialState: function() {
+const Keyboard = React.createClass({
+  getInitialState() {
     return { events: [], value: '' };
   },
 
-  handleChange: function(event) {
-    var nextValue = event.target.value;
+  handleChange(event) {
+    const nextValue = event.target.value;
+
     this.setState({ value: nextValue });
   },
 
-  handleClick: function() {
+  handleClick() {
     this.setState({ events: [], value: '' });
   },
 
-  handleKeyDown: function(event) {
-    var nextEvents = this.state.events;
+  handleKeyDown(event) {
+    const nextEvents = this.state.events;
+
     nextEvents.push('Key Down: ' + event.which);
+
     this.setState({ events: nextEvents });
   },
 
-  handleKeyPress: function(event) {
-    var nextEvents = this.state.events;
+  handleKeyPress(event) {
+    const nextEvents = this.state.events;
+
     nextEvents.push('Key Press: ' + event.which);
+
     this.setState({ events: nextEvents });
   },
 
-  handleKeyUp: function(event) {
-    var nextEvents = this.state.events;
+  handleKeyUp(event) {
+    const nextEvents = this.state.events;
+
     nextEvents.push('Key Up: ' + event.which);
+
     this.setState({ events: nextEvents });
   },
 
-  render: function() {
-    var eventEls = this.state.events.map(function(event, index) {
+  render() {
+    const eventEls = this.state.events.map(function(event, index) {
       return <div key={index}>{event}</div>;
     });
 
