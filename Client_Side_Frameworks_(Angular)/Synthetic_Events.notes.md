@@ -324,7 +324,7 @@ open http://localhost:8000/textfield.html
 
 ### Textarea
 
-When a user types a character into a `<textarea />` component, the `onChange` event will fire. In HTML, the value of a `<textarea>` element is set by its children. In React, the `value` prop is used instead. You'll need to register an `onChange` event handler to share control over the component's `value` prop with your users. If you share control over the `value` prop but forget to also register an `onChange` event handler, the component will render as read-only and a warning will be sent to your browser's console.
+When a user types a character into a `<textarea />` component, the `onChange` event will fire. In HTML, the value of a `<textarea>` element is set by its children. However, in React, the `value` prop is used instead. You'll need to register an `onChange` event handler to share control over the component's `value` prop with your users. If you share control over the `value` prop but forget to also register an `onChange` event handler, the component will render as read-only and a warning will be sent to your browser's console.
 
 In the `app/assets/textarea.html` file, type in the following code.
 
@@ -399,11 +399,32 @@ Then, take a look at the user interface.
 open http://localhost:8000/textarea.html
 ```
 
-### Checkbox input
+### Checkbox
 
-When a user clicks an `<input type="checkbox" />` component, the `onChange` event will fire. You'll need to register an `onChange` event handler to share control over the component's `checked` prop with your users.
+When a user clicks an `<input type="checkbox" />` component, the `onChange` event will fire. You'll need to register an `onChange` event handler to share control over the component's `checked` prop with your users. If you share control over the `checked` prop but forget to also register an `onChange` event handler, the component will render as read-only and a warning will be sent to your browser's console.
 
-**NOTE:** If you share control over the `checked` prop but forget to also register an `onChange` event handler, the component will render as read-only and a warning will be sent to your browser's console.
+In the `app/assets/checkbox.html` file, type in the following code.
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Checkbox</title>
+    <link rel="stylesheet" href="/app.css">
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <script src="/vendor.js"></script>
+    <script src="/app.js"></script>
+    <script>require('textarea');</script>
+  </body>
+</html>
+```
+
+And in the `app/checkbox.jsx` file, type in the following code.
 
 ```jsx
 const CheckboxInput = React.createClass({
@@ -450,6 +471,12 @@ ReactDOM.render(
   <CheckboxInput />,
   document.getElementById('container')
 );
+```
+
+Then, take a look at the user interface.
+
+```shell
+open http://localhost:8000/checkbox.html
 ```
 
 ### Radio input
