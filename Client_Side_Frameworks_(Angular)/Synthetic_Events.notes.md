@@ -233,7 +233,7 @@ Form components such as `<input />`, `<textarea />`, and `<select>` differ from 
 const element = <input type="text" value="I'm a controlled component." />;
 ```
 
-The problem with this controlled component is that it renders a read-only element. In other words, a user cannot change the state inside its `value` prop. To implement a form component that's both controlled by React and changeable by a user, you'll want to register an event handler with its `onChange` prop and set its state with a automatic one-way data binding.
+The problem with this controlled component is that it renders a read-only element. In other words, a user cannot change the `value` prop. To implement a form component that's both controlled by React and changeable by a user, you'll want to register an event handler with its `onChange` prop and set the `value` prop with a automatic one-way data binding.
 
 ```jsx
 const element = <input onChange={this.handleChange} type="text" value={this.state.value} />;
