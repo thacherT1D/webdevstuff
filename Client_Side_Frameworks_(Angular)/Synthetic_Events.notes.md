@@ -178,7 +178,7 @@ In this section, we've covered a bunch of technical information about React's sy
 
 ### Exercise
 
-Turn to a neighbor and, in your own words, explain why a synthetic event is important and how React's synthetic event system works identically across all browsers. After about a minute, your instructor will cold call on the class and ask what was discussed.
+Turn to a neighbor and, in your own words, explain why a synthetic event is important and how React's synthetic event system works identically across all browsers. It may be helpful to draw a few diagrams together to illustrate your thoughts. After about a minute, your instructor will cold call on the class and ask what was discussed.
 
 ## How do you use synthetic events to build an interactive React application?
 
