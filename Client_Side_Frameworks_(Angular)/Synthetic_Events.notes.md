@@ -63,7 +63,7 @@ When React starts up, it attaches a single event listener onto the root `documen
 
 To handle events in React, simply register an event handler with an event prop of an HTML component. This feels similar to registering an event handler with an event attribute of an HTML element. The only difference is that the event prop is written in camelcase.
 
-**NOTE:** React's synthetic event system won't register an event handler with an event prop of a class component.
+**NOTE:** React's synthetic event system will only register an event handler with an event prop of a HTML component, not a class component. In other words, it only works with a component that has a lowercase name.
 
 ```jsx
 const App = React.createClass({
