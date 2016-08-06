@@ -701,7 +701,7 @@ import ReactDOM from 'react-dom';
 
 const App = React.createClass({
   getInitialState() {
-    return { json: 'null', password: '', username:'' };
+    return { password: '', username:'' };  
   },
 
   handleChange(event) {
@@ -721,8 +721,6 @@ const App = React.createClass({
     });
 
     // Perhaps send the JSON string to a server...
-
-    this.setState({ json: nextJSON });
   },
 
   render() {
@@ -746,8 +744,6 @@ const App = React.createClass({
 
         <input type="submit" value="Log in" />
       </form>
-
-      <pre>JSON: '{this.state.json}'</pre>
     </div>;
   }
 });
@@ -764,7 +760,7 @@ Then, take a look at the user interface.
 open http://localhost:8000/form.html
 ```
 
-## Focus events
+### Focus events
 
 When a user gives focus to a component, thus removing focus from another, the `onFocus` and `onBlur` events will fire on their respective components.
 
