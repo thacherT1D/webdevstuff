@@ -93,7 +93,7 @@ When the `value` of the `<input />` component changes, a native event is fired a
 
 ```text
   Native capturing phase            Native bubbling phase
-  
+
        ┌──────────┐                     ┏━━━━━━━━━━┓
        │ document │                     ┃ document ┃
        └──────────┘                     ┗━━━━━━━━━━┛
@@ -119,6 +119,30 @@ When the `value` of the `<input />` component changes, a native event is fired a
 At the end of [the bubbling phase](http://www.quirksmode.org/js/events_order.html), the native event reaches React's single event listener. The listener triggers its own internal event handler kicking off React's synthetic event system.
 
 First, the internal event handler wraps the native event inside a `SyntheticEvent` object. Then the synthetic event is propagated through the component hierarchy using an [internal capturing and bubbling phase](http://codepen.io/ryansobol/pen/Lpvayw?editors=001). In this way, React ensures that a synthetic event is *identical* across all browsers in terms of both its properties and the way it's propagated.
+
+```text
+ Synthetic capturing phase        Synthetic bubbling phase
+ 
+       ┌──────────┐                     ┏━━━━━━━━━━┓
+       │ document │                     ┃ document ┃
+       └──────────┘                     ┗━━━━━━━━━━┛
+             │                                ▲
+             ▼                                │
+       ┌──────────┐                     ┌──────────┐
+       │   html   │                     │   html   │
+       └──────────┘                     └──────────┘
+             │                                ▲
+      ┌ ─ ─ ─└───────┐                 ┌ ─ ─ ─└───────┐
+                     ▼                                │
+┌──────────┐   ┌──────────┐      ┌──────────┐   ┌──────────┐
+│   head   │   │   body   │      │   head   │   │   body   │
+└──────────┘   └──────────┘      └──────────┘   └──────────┘
+                     │                                ▲
+                     ▼                                │
+               ┏━━━━━━━━━━━┓                    ┌───────────┐
+               ┃   input   ┃                    │   input   │
+               ┗━━━━━━━━━━━┛                    └───────────┘
+```
 
 As the synthetic event propagates from component to component, it looks through their registered event handlers and triggers any that are bound to the event's name. All of the synthetic events covered in this chapter will trigger event handlers during the internal bubbling phase. Though it's rarely needed, React can trigger an event handler during the internal capturing phase too. To do so, simply register an event handler with an event prop that ends in the word `Capture` like `onChangeCapture`.
 
