@@ -91,6 +91,8 @@ In the above code example, the `<input />` component's event prop is `onChange` 
 
 When the `value` of the `<input />` component changes, the browser's native event system works just as you might expect. A native event is fired and propagated through the DOM hierarchy in both a native capturing phase and a native bubbling phase.
 
+**NOTE:** In the diagram below, the solid lines indicate the event's propagation path through the native phases and the darker boxes indicate a check for an attached native event listener.
+
 ```text
   Native capturing phase            Native bubbling phase
 
