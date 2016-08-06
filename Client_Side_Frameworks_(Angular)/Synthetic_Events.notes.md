@@ -945,9 +945,7 @@ open http://localhost:8000/mouse.html
 
 ### Keyboard events
 
-When a user presses down and releases up a key on a focusable component, the `onKeyDown` and `onKeyUp` events will fire respectively. The `onKeyDown` event will repeatedly fire as long as the key is held down.
-
-**NOTE:** The native focusable components are `<button>`, `<input />`, `<select>`, and `<textarea />`.
+When a user presses down and releases up a key on a focusable component, the `onKeyDown` and `onKeyUp` events will fire respectively. The `onKeyDown` event will repeatedly fire as long as the key is held down. The focusable components are `<button>`, `<input />`, `<select>`, and `<textarea />`.
 
 When a user presses a key *and* a character is inserted into a focusable component, the `onKeyPress` event will fire. The `onKeyPress` event will fire repeatedly as long as the key is pressed down and a character is inserted. Keys like Escape, Shift, Control, and Alt can't be inserted into a component. To handle these key presses, you'll need to register an event handler with a component's `onKeyDown` event prop instead.
 
