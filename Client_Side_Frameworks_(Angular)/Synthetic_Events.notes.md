@@ -832,16 +832,40 @@ Then, take a look at the user interface.
 open http://localhost:8000/focus.html
 ```
 
-## Mouse events
+### Mouse events
 
-When a user clicks on a component or moves the cursor across a component, the `onClick` or `onMouseMove` events will fire respectively.
-
-When the user moves the cursor between two components, the `onMouseEnter` and `onMouseLeave` events will fire on their respective components. These events only propagate from the underlying element being left to the one being entered.
+When a user clicks on a component or moves the cursor across a component, the `onClick` or `onMouseMove` events will fire respectively. When the user moves the cursor between two components, the `onMouseEnter` and `onMouseLeave` events will fire on their respective components. These events only propagate from the underlying element being left to the one being entered.
 
 **NOTE:** The `onMouseEnter` and `onMouseLeave` events do *not* have an ordinary bubbling phase and do *not* have a capturing phase at all. This is because handling these events across nested components [can get complicated](http://www.quirksmode.org/js/events_mouse.html#link8) real fast.
 
+In the `app/assets/mouse.html` file, type in the following code.
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mouse</title>
+    <link rel="stylesheet" href="/app.css">
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <script src="/vendor.js"></script>
+    <script src="/app.js"></script>
+    <script>require('mouse');</script>
+  </body>
+</html>
+```
+
+And in the `app/mouse.jsx` file, type in the following code.
+
 ```jsx
-const Mouse = React.createClass({
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+const App = React.createClass({
   getInitialState() {
     return {
       clicks: 0,
@@ -889,7 +913,7 @@ const Mouse = React.createClass({
       />
 
       <div>clicks: {this.state.clicks}</div>
-      <div>location: {this.state.location}</div>            
+      <div>location: {this.state.location}</div>
       <div>pageX: {this.state.pageX}</div>
       <div>pageY: {this.state.pageY}</div>
     </div>;
@@ -897,12 +921,18 @@ const Mouse = React.createClass({
 });
 
 ReactDOM.render(
-  <Mouse />,
-  document.getElementById('container')
+  <App />,
+  document.getElementById('app')
 );
 ```
 
-## Keyboard events
+Then, take a look at the user interface.
+
+```shell
+open http://localhost:8000/mouse.html
+```
+
+### Keyboard events
 
 When a user presses down and releases up a key on a focusable component, the `onKeyDown` and `onKeyUp` events will fire respectively. The `onKeyDown` event will repeatedly fire as long as the key is held down.
 
