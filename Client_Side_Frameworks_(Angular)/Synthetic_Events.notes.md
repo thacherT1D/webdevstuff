@@ -972,8 +972,34 @@ Here's a table to help you quickly remember which event does what.
 
 In summary, use `onKeyPress` to handle insertable key presses and `onKeyDown` to handle non-insertable key presses.
 
+In the `app/assets/keyboard.html` file, type in the following code.
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Keyboard</title>
+    <link rel="stylesheet" href="/app.css">
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <script src="/vendor.js"></script>
+    <script src="/app.js"></script>
+    <script>require('keyboard');</script>
+  </body>
+</html>
+```
+
+And in the `app/keyboard.jsx` file, type in the following code.
+
 ```jsx
-const Keyboard = React.createClass({
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+const App = React.createClass({
   getInitialState() {
     return { events: [], value: '' };
   },
@@ -1038,9 +1064,15 @@ const Keyboard = React.createClass({
 });
 
 ReactDOM.render(
-  <Keyboard />,
-  document.getElementById('container')
+  <App />,
+  document.getElementById('app')
 );
+```
+
+Then, take a look at the user interface.
+
+```shell
+open http://localhost:8000/keyboard.html
 ```
 
 ## Summary
