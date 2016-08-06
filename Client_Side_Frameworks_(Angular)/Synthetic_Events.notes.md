@@ -94,25 +94,25 @@ When the `value` of the `<input />` component changes, a native event is fired a
 ```text
   Native capturing phase            Native bubbling phase
 
-       ┌──────────┐                     ┏━━━━━━━━━━┓
-       │ document │                     ┃ document ┃
-       └──────────┘                     ┗━━━━━━━━━━┛
+       ┏━━━━━━━━━━┓                     ┏━━━━━━━━━━┓
+       ┃ document ┃                     ┃ document ┃
+       ┗━━━━━━━━━━┛                     ┗━━━━━━━━━━┛
              │                                ▲
              ▼                                │
-       ┌──────────┐                     ┌──────────┐
-       │   html   │                     │   html   │
-       └──────────┘                     └──────────┘
+       ┏━━━━━━━━━━┓                     ┏━━━━━━━━━━┓
+       ┃   html   ┃                     ┃   html   ┃
+       ┗━━━━━━━━━━┛                     ┗━━━━━━━━━━┛
              │                                ▲
       ┌ ─ ─ ─└───────┐                 ┌ ─ ─ ─└───────┐
                      ▼                                │
-┌──────────┐   ┌──────────┐      ┌──────────┐   ┌──────────┐
-│   head   │   │   body   │      │   head   │   │   body   │
-└──────────┘   └──────────┘      └──────────┘   └──────────┘
+┌──────────┐   ┏━━━━━━━━━━┓      ┌──────────┐   ┏━━━━━━━━━━┓
+│   head   │   ┃   body   ┃      │   head   │   ┃   body   ┃
+└──────────┘   ┗━━━━━━━━━━┛      └──────────┘   ┗━━━━━━━━━━┛
                      │                                ▲
                      ▼                                │
-               ┏━━━━━━━━━━━┓                    ┌───────────┐
-               ┃   input   ┃                    │   input   │
-               ┗━━━━━━━━━━━┛                    └───────────┘
+               ┏━━━━━━━━━━━┓                    ┏━━━━━━━━━━━┓
+               ┃   input   ┃                    ┃   input   ┃
+               ┗━━━━━━━━━━━┛                    ┗━━━━━━━━━━━┛
 ```
 
 
@@ -123,14 +123,14 @@ First, the internal event handler wraps the native event inside a `SyntheticEven
 ```text
 Synthetic capturing phase         Synthetic bubbling phase
 
-       ┌─────────┐                      ┏━━━━━━━━━┓
-       │   App   │                      ┃   App   ┃
-       └─────────┘                      ┗━━━━━━━━━┛
+       ┌─────────┐                      ┌─────────┐
+       │   App   │                      │   App   │
+       └─────────┘                      └─────────┘
             │                                ▲
             ▼                                │
-       ┏━━━━━━━━━┓                      ┌─────────┐
-       ┃  input  ┃                      │  input  │
-       ┗━━━━━━━━━┛                      └─────────┘
+       ┏━━━━━━━━━┓                      ┏━━━━━━━━━┓
+       ┃  input  ┃                      ┃  input  ┃
+       ┗━━━━━━━━━┛                      ┗━━━━━━━━━┛
 ```
 
 As the synthetic event propagates from component to component, it looks through their registered event handlers and triggers any that are bound to the event's name. All of the synthetic events covered in this chapter will trigger event handlers during the internal bubbling phase. Though it's rarely needed, React can trigger an event handler during the internal capturing phase too. To do so, simply register an event handler with an event prop that ends in the word `Capture` like `onChangeCapture`.
