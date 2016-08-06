@@ -49,7 +49,7 @@ const Textfield = React.createClass({
 });
 ```
 
-As you can see, a `SyntheticEvent` object has the same properties as a browser's native event object including an `event.target` object.
+As you can see, a `SyntheticEvent` object has the same properties as a browser's native event object including an `event.target` object. In the vast majority of cases, you won't need the underlying native event object. But if for some reason you ever do, you can access it via the `event.nativeEvent` property.
 
 ### Exercise
 
@@ -60,8 +60,6 @@ Turn to a neighbor and, in your own words, explain what a synthetic event is. Af
 The only difference is that the properties of a synthetic event work *identically* across all browsers including IE9 and above. For example, handling native `onMouseEnter` and `onMouseLeave` events has historically been a cross-browser pain point.
 
 In this article, you're going to practice how to handle synthetic events and how to leverage their properties in a variety of common use cases.
-
-**NOTE:** In the vast majority of cases, you won't need the underlying native event object. But if for some reason you ever do, you can access it via the `event.nativeEvent` property.
 
 ### Exercise
 
