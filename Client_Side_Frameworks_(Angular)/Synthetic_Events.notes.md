@@ -20,7 +20,7 @@ handleChange: function(event) {
 }
 ```
 
-A `SyntheticEvent` object has the same properties as a browser's native event object including an `event.target` object and an `event.preventDefault()` function. The only difference is that the properties of a synthetic event work *identically* across all browsers including IE8 and above. For example, handling native `onMouseEnter` and `onMouseLeave` events has historically been a cross-browser pain point. In this chapter, we're going to practice how to handle synthetic events and how to leverage their properties in a variety of common use cases.
+A `SyntheticEvent` object has the same properties as a browser's native event object including an `event.target` object and an `event.preventDefault()` function. The only difference is that the properties of a synthetic event work *identically* across all browsers including IE9 and above. For example, handling native `onMouseEnter` and `onMouseLeave` events has historically been a cross-browser pain point. In this chapter, we're going to practice how to handle synthetic events and how to leverage their properties in a variety of common use cases.
 
 **NOTE:** In the vast majority of cases, you won't need the underlying native event object. But if for some reason you ever do, you can access it via the `event.nativeEvent` property.
 
