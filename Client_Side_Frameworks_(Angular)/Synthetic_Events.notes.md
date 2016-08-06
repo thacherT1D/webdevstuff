@@ -61,9 +61,7 @@ The problem with native events is that they don't work exactly the same across a
 
 Understanding React's synthetic event system is critical, especially if you ever find yourself integrating React into an existing application. Thankfully, handling a synthetic event is similar to handling a native event. However, React does a few things under the hood to keep your code performant and easy to understand.
 
-When React starts up, it attaches a single event listener onto the root of the DOM. In React, you do *not* attach any additional event listeners to the DOM. If you find yourself reaching for functions like `EventTarget.addEventListener()` or `jQuery.on()` when building a React application from scratch, you're doing it wrong.
-
-**NOTE:** You may, however, need to integrate a React application into a page with preexisting event listeners. You'll be happy to know that React's synthetic event system is completely isolated from the browser's native event system. This makes reasoning about your components much easier.
+When React starts up, it attaches a single event listener onto the root of the DOM. In React, you do *not* attach any additional event listeners to the DOM. If you find yourself reaching for functions like `EventTarget.addEventListener()` or `jQuery.on()` when building a React application from scratch, you're doing it wrong. You may, however, need to integrate a React application into a page with preexisting event listeners. You'll be happy to know that React's synthetic event system is completely isolated from the browser's native event system. This makes reasoning about your components much easier.
 
 To handle events in React, simply register an event handler with an event prop of a component. This feels similar to registering an event handler with an event attribute of an HTML element. The only difference is that the event prop is written in camelcase.
 
