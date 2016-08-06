@@ -764,8 +764,34 @@ open http://localhost:8000/form.html
 
 When a user gives focus to a component, thus removing focus from another, the `onFocus` and `onBlur` events will fire on their respective components.
 
+In the `app/assets/focus.html` file, type in the following code.
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Focus</title>
+    <link rel="stylesheet" href="/app.css">
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <script src="/vendor.js"></script>
+    <script src="/app.js"></script>
+    <script>require('focus');</script>
+  </body>
+</html>
+```
+
+And in the `app/focus.jsx` file, type in the following code.
+
 ```jsx
-const FocusAndBlur = React.createClass({
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+const App = React.createClass({
   getInitialState() {
     return { value: "I'm blurred :(" };
   },
@@ -795,9 +821,15 @@ const FocusAndBlur = React.createClass({
 });
 
 ReactDOM.render(
-  <FocusAndBlur />,
-  document.getElementById('container')
+  <App />,
+  document.getElementById('app')
 );
+```
+
+Then, take a look at the user interface.
+
+```shell
+open http://localhost:8000/focus.html
 ```
 
 ## Mouse events
