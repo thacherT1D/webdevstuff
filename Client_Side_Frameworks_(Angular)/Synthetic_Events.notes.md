@@ -120,7 +120,7 @@ When the `value` of the `<input />` component changes, the browser's native even
 
 At the end of the native bubbling phase, the native event reaches React's single event listener that was attached to the `document` object when the application loaded. This is indicated by the double-bordered box in the diagram. The listener triggers an internal React event handler, kicking off the synthetic event system.
 
-First, the internal event handler wraps the native event object inside a `SyntheticEvent` object as discussed earlier. Then, the synthetic event is propagated through the component hierarchy using an [internal capturing and bubbling phase](http://codepen.io/ryansobol/pen/Lpvayw?editors=001). In this way, React ensures that a synthetic event is identical across all browsers in terms of both its properties and propagation.
+First, the internal event handler wraps the native event object inside a `SyntheticEvent` object as discussed earlier. Then, the synthetic event is propagated through the component hierarchy using an [internal capturing and bubbling phase](http://codepen.io/ryansobol/pen/Lpvayw?editors=001). In this way, React ensures that a synthetic event is identical across all browsers in terms of both its properties and its propagation.
 
 **NOTE:** In the diagram below, the solid lines indicate the event's propagation path through the synthetic phases and the darker-bordered boxes indicate a check for a registered synthetic event handler.
 
@@ -139,14 +139,23 @@ Synthetic capturing phase         Synthetic bubbling phase
 
 As the synthetic event propagates from component to component, it looks through their registered synthetic event handlers and triggers any that are bound to the event's name. All of the synthetic events covered in this chapter will trigger event handlers during the synthetic bubbling phase. Though it's rarely needed, React can trigger an event handler during the synthetic capturing phase too. To do so, simply register an event handler with an event prop that ends in the word `Capture` like `onChangeCapture`.
 
-When an event handler is called, it's time for your code to shine. This is where you'll update a component's `this.state` object by using the `this.setState()` function. If you need to prevent the browser from loading a page as it follows an `href` or `action` URL on an `<a>` or `<form>` component, call the `event.preventDefault()` function inside the event handler.
+When an event handler is called, it's time for your manual data binding logic to shine. In most cases, you'll update the component's `this.state` object by using the `this.setState()` function. Never *ever* change the value of the `this.state` object directly as it won't tell React to re-render the component. If you need to prevent the browser from loading a page as it follows an `href` or `action` URL on an `<a>` or `<form>` component, call the `event.preventDefault()` function inside the event handler.
 
 ```jsx
 const App = React.createClass({
+  getInitialState() {
+    return { count: 0 };
+  },
+
   handleClick(event) {
+    // The browser will no longer load the page at event.target.href
     event.preventDefault();
 
-    // The browser will no longer load the page at event.target.href
+    // Never directly change the this.state object
+    const nextCount = this.state.count + 1;
+
+    // Instead, tell React to re-render the component with a new state object
+    this.setState({ count: nextCount });
   },
 
   render() {
@@ -157,15 +166,15 @@ const App = React.createClass({
 });
 ```
 
-And if you need to stop a synthetic event from propagating to other components during the internal bubbling phase, call the `event.stopPropagation()` function. However, this is pretty rare and you should only do it if there's a compelling reason.
+And if you need to stop a synthetic event from propagating to other components during the synthetic bubbling phase, call the `event.stopPropagation()` function. However, this is pretty rare and you should only do it if there's a compelling reason.
 
 **NOTE:** Returning `false` from a React event handler doesn't prevent the default behavior or stop event propagation. You'll need to call `event.preventDefault()` or `event.stopPropagation()` manually.
 
 In this section, we've covered a bunch of technical information about React's synthetic event system. To summarize:
 
 1. React's synthetic event system is completely isolated from the browser's native event system.
-2. The synthetic event system works identically across all browsers.
-3. Handling a synthetic event is similar to handling a native event.
+1. The synthetic event system works identically across all browsers.
+1. Handling a synthetic event is similar to handling a native event.
 
 ### Exercise
 
