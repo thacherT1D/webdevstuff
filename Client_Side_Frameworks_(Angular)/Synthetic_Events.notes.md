@@ -199,13 +199,13 @@ Now, it's time to practice handling synthetic events while leveraging their prop
 
 ### Form events
 
-Form components such as `<input />`, `<textarea />`, and `<select>` differ from other native components because their state can be changed by a user. However, when a form component's state is set inside a React application, it's known as a **controlled component**.
+Form components such as `<input />`, `<textarea />`, and `<select>` differ from other HTML components because their state can be changed by a user. However, when a form component's state is set inside a React application, it's known as a **controlled component**.
 
 ```jsx
 const element = <input type="text" value="I'm a controlled component." />;
 ```
 
-The problem with this controlled component is that it renders a *read-only* element. In other words, a user cannot change the state living inside its `value` prop. To implement a form component that's both controlled by React and changeable by a user, you'll want to register an event handler with its `onChange` prop and set its state with a one-way data binding.
+The problem with this controlled component is that it renders a read-only element. In other words, a user cannot change the state living inside its `value` prop. To implement a form component that's both controlled by React and changeable by a user, you'll want to register an event handler with its `onChange` prop and set its state with a automatic one-way data binding.
 
 ```jsx
 const element = <input onChange={this.handleChange} type="text" value={this.state.value} />;
