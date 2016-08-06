@@ -57,7 +57,7 @@ Turn to a neighbor and, in your own words, explain what a synthetic event is. Af
 
 ## Why is a synthetic event important?
 
-The only difference is that the properties of a synthetic event work *identically* across all browsers including IE9 and above. For example, handling native `onMouseEnter` and `onMouseLeave` events has historically been a cross-browser pain point.
+The problem with native events is that they don't work exactly the same across all browsers. For example, handling native `onMouseEnter` and `onMouseLeave` events has historically been a cross-browser pain point. The advantage of a synthetic event is that it works *identically* across all browsers including IE9 and above.
 
 In this article, you're going to practice how to handle synthetic events and how to leverage their properties in a variety of common use cases.
 
