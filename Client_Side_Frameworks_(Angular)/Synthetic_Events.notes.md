@@ -91,14 +91,14 @@ In the above code example, the `<input />` component's event prop is `onChange` 
 
 When the `value` of the `<input />` component changes, the browser's native event system works just as you might expect. A native event is fired and propagated through the DOM hierarchy in both a native capturing phase and a native bubbling phase.
 
-**NOTE:** In the diagram below, the solid lines indicate the event's propagation path through the native phases and the darker boxes indicate a check for an attached native event listener.
+**NOTE:** In the diagram below, the solid lines indicate the event's propagation path through the native phases and the darker-bordered boxes indicate a check for an attached native event listener.
 
 ```text
   Native capturing phase            Native bubbling phase
 
-       ┏━━━━━━━━━━┓                     ┏━━━━━━━━━━┓
-       ┃ document ┃                     ┃ document ┃
-       ┗━━━━━━━━━━┛                     ┗━━━━━━━━━━┛
+       ┏━━━━━━━━━━┓                     ╔══════════╗
+       ┃ document ┃                     ║ document ║
+       ┗━━━━━━━━━━┛                     ╚══════════╝
              │                                ▲
              ▼                                │
        ┏━━━━━━━━━━┓                     ┏━━━━━━━━━━┓
@@ -118,7 +118,7 @@ When the `value` of the `<input />` component changes, the browser's native even
 ```
 
 
-At the end of the [native bubbling phase](http://www.quirksmode.org/js/events_order.html), the native event reaches React's single event listener. The listener triggers its own internal event handler kicking off React's synthetic event system.
+At the end of the native bubbling phase, the native event reaches React's single event listener that's was attached to the `document` object when the application loaded. This is indicated by the double-bordered box in the diagram. The listener triggers an internal React event handler, kicking off the synthetic event system.
 
 First, the internal event handler wraps the native event inside a `SyntheticEvent` object. Then the synthetic event is propagated through the component hierarchy using an [internal capturing and bubbling phase](http://codepen.io/ryansobol/pen/Lpvayw?editors=001). In this way, React ensures that a synthetic event is *identical* across all browsers in terms of both its properties and the way it's propagated.
 
@@ -776,7 +776,7 @@ In this chapter, you learned how to make React applications more interactive. Sp
 
 - [React Calculator](https://github.com/gSchool/wd-react-calculator)
 
-## References
+## Resources
 
 - [React docs - Event System](https://facebook.github.io/react/docs/events.html)
 - [React docs - Forms](https://facebook.github.io/react/docs/forms.html)
