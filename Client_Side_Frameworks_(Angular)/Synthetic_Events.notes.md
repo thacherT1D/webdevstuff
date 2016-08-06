@@ -419,7 +419,7 @@ In the `app/assets/checkbox.html` file, type in the following code.
 
     <script src="/vendor.js"></script>
     <script src="/app.js"></script>
-    <script>require('textarea');</script>
+    <script>require('checkbox');</script>
   </body>
 </html>
 ```
@@ -427,7 +427,10 @@ In the `app/assets/checkbox.html` file, type in the following code.
 And in the `app/checkbox.jsx` file, type in the following code.
 
 ```jsx
-const CheckboxInput = React.createClass({
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+const App = React.createClass({
   getInitialState() {
     return { checked: false };
   },
@@ -468,8 +471,8 @@ const CheckboxInput = React.createClass({
 });
 
 ReactDOM.render(
-  <CheckboxInput />,
-  document.getElementById('container')
+  <App />,
+  document.getElementById('app')
 );
 ```
 
