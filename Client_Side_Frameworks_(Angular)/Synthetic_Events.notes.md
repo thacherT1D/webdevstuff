@@ -190,7 +190,7 @@ Now, it's time to practice handling synthetic events to build a few interactive 
   - [Checkbox](#checkbox)
   - [Radio](#radio)
   - [Select](#select)
-  - [Form submission](#form-submission)
+  - [Form](#form)
 - [Focus events](#focus-events)
 - [Mouse events](#mouse-events)
 - [Keyboard events](#keyboard-events)
@@ -579,8 +579,34 @@ open http://localhost:8000/radio.html
 
 When a user selects a new `<option>` from a `<select>` component, the `onChange` event will fire. You'll need to register an `onChange` event handler to share control over the component's `value` prop with your users. If you share control over the `value` prop but forget to also register an `onChange` event handler, the component will render as read-only and a warning will be sent to your browser's console.
 
+In the `app/assets/select.html` file, type in the following code.
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Select</title>
+    <link rel="stylesheet" href="/app.css">
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <script src="/vendor.js"></script>
+    <script src="/app.js"></script>
+    <script>require('select');</script>
+  </body>
+</html>
+```
+
+And in the `app/select.jsx` file, type in the following code.
+
 ```jsx
-const SelectDropDown = React.createClass({
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+const App = React.createClass({
   getInitialState() {
     return { value: 'B' };
   },
@@ -629,12 +655,18 @@ const SelectDropDown = React.createClass({
 });
 
 ReactDOM.render(
-  <SelectDropDown />,
-  document.getElementById('container')
+  <App />,
+  document.getElementById('app')
 );
 ```
 
-### Form submission
+Then, take a look at the user interface.
+
+```shell
+open http://localhost:8000/select.html
+```
+
+### Form
 
 When a user submits a `<form>` component, the `onChange` event will fire. You'll need to register an `onSubmit` event handler that calls the `event.preventDefault()` function to prevent the browser from reloading the page.
 
