@@ -836,7 +836,7 @@ open http://localhost:8000/focus.html
 
 When a user clicks on a component or moves the cursor across a component, the `onClick` or `onMouseMove` events will fire respectively. When the user moves the cursor between two components, the `onMouseEnter` and `onMouseLeave` events will fire on their respective components. These events only propagate from the underlying element being left to the one being entered.
 
-**NOTE:** The `onMouseEnter` and `onMouseLeave` events do *not* have an ordinary bubbling phase and do *not* have a capturing phase at all. This is because handling these events across nested components [can get complicated](http://www.quirksmode.org/js/events_mouse.html#link8) real fast.
+**NOTE:** The `onMouseEnter` and `onMouseLeave` events don't have an ordinary bubbling phase and don't have a capturing phase at all. This is because handling these events across nested components [can get complicated](http://www.quirksmode.org/js/events_mouse.html#link8) real fast.
 
 In the `app/assets/mouse.html` file, type in the following code.
 
