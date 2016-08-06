@@ -86,7 +86,7 @@ const Anchor = React.createClass({
 
 And if you need to stop a synthetic event from propagating to other components during the internal bubbling phase, call the `event.stopPropagation()` function. However, this is pretty rare and you should only do it if there's a compelling reason.
 
-**NOTE:** As of React v0.14, returning `false` from an event handler will no longer prevent default behavior or stop event propagation. You'll need to call `event.preventDefault()` or `event.stopPropagation()` manually.
+**NOTE:** Returning `false` from a React event handler doesn't prevent the default behavior or stop event propagation. You'll need to call `event.preventDefault()` or `event.stopPropagation()` manually.
 
 In this section, we've covered a bunch of technical information about React's synthetic event system. To summarize:
 
@@ -102,16 +102,16 @@ In your own words, write down how React's synthetic event system works identical
 
 React [supports a ton of synthetic events](https://facebook.github.io/react/docs/events.html#supported-events), but we're only going to focus on the most common ones.
 
-* [Form events](#form-events)
-  * [Textfield input](#textfield-input)
-  * [Textarea](#textarea)
-  * [Checkbox input](#checkbox-input)
-  * [Radio input](#radio-input)
-  * [Select drop-down](#select-drop-down)
-  * [Form submission](#form-submission)
-* [Focus events](#focus-events)
-* [Mouse events](#mouse-events)
-* [Keyboard events](#keyboard-events)
+- [Form events](#form-events)
+  - [Textfield input](#textfield-input)
+  - [Textarea](#textarea)
+  - [Checkbox input](#checkbox-input)
+  - [Radio input](#radio-input)
+  - [Select drop-down](#select-drop-down)
+  - [Form submission](#form-submission)
+- [Focus events](#focus-events)
+- [Mouse events](#mouse-events)
+- [Keyboard events](#keyboard-events)
 
 ### Exercise
 
@@ -707,9 +707,9 @@ In this chapter, you learned how to make React applications more interactive. Sp
 
 ## References
 
-* [React docs - Event System](https://facebook.github.io/react/docs/events.html)
-* [React docs - Forms](https://facebook.github.io/react/docs/forms.html)
-* [React docs - Interactivity and Dynamic UIs](https://facebook.github.io/react/docs/interactivity-and-dynamic-uis.html)
-* [QuirksMode - Event ordering](http://www.quirksmode.org/js/events_order.html)
-* [QuirksMode - keydown, keypress, keyup](http://www.quirksmode.org/dom/events/keys.html)
-* [QuirksMode - Mouse Event](http://www.quirksmode.org/js/events_mouse.html)
+- [React docs - Event System](https://facebook.github.io/react/docs/events.html)
+- [React docs - Forms](https://facebook.github.io/react/docs/forms.html)
+- [React docs - Interactivity and Dynamic UIs](https://facebook.github.io/react/docs/interactivity-and-dynamic-uis.html)
+- [QuirksMode - Event ordering](http://www.quirksmode.org/js/events_order.html)
+- [QuirksMode - keydown, keypress, keyup](http://www.quirksmode.org/dom/events/keys.html)
+- [QuirksMode - Mouse Event](http://www.quirksmode.org/js/events_mouse.html)
