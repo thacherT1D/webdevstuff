@@ -89,7 +89,34 @@ const App = React.createClass({
 
 In the above code example, the `<input />` component's event prop is `onChange` and the event handler is a reference to the `this.handleChange()` function. When the component is mounted or unmounted, the event handler is registered to or unregistered from React's own internal mapping.
 
-When the `value` of the `<input />` component changes, a native event is fired and propagated through the DOM. At the end of [the bubbling phase](http://www.quirksmode.org/js/events_order.html), the native event reaches React's single event listener. The listener triggers its own internal event handler kicking off React's synthetic event system.
+When the `value` of the `<input />` component changes, a native event is fired and propagated through the DOM during the native capturing and bubbling phases.
+
+```text
+  Native capturing phase            Native bubbling phase
+  
+       ┌──────────┐                     ┏━━━━━━━━━━┓
+       │ document │                     ┃ document ┃
+       └──────────┘                     ┗━━━━━━━━━━┛
+             │                                ▲
+             ▼                                │
+       ┌──────────┐                     ┌──────────┐
+       │   html   │                     │   html   │
+       └──────────┘                     └──────────┘
+             │                                ▲
+      ┌ ─ ─ ─└───────┐                 ┌ ─ ─ ─└───────┐
+                     ▼                                │
+┌──────────┐   ┌──────────┐      ┌──────────┐   ┌──────────┐
+│   head   │   │   body   │      │   head   │   │   body   │
+└──────────┘   └──────────┘      └──────────┘   └──────────┘
+                     │                                ▲
+                     ▼                                │
+               ┏━━━━━━━━━━━┓                    ┌───────────┐
+               ┃   input   ┃                    │   input   │
+               ┗━━━━━━━━━━━┛                    └───────────┘
+```
+
+
+At the end of [the bubbling phase](http://www.quirksmode.org/js/events_order.html), the native event reaches React's single event listener. The listener triggers its own internal event handler kicking off React's synthetic event system.
 
 First, the internal event handler wraps the native event inside a `SyntheticEvent` object. Then the synthetic event is propagated through the component hierarchy using an [internal capturing and bubbling phase](http://codepen.io/ryansobol/pen/Lpvayw?editors=001). In this way, React ensures that a synthetic event is *identical* across all browsers in terms of both its properties and the way it's propagated.
 
