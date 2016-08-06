@@ -227,7 +227,7 @@ atom .
 
 ### Form events
 
-Form components such as `<input />`, `<textarea />`, and `<select>` differ from other HTML components because their state can be changed by a user. However, when a form component's state is set by a React user interface, it's known as a **controlled component**.
+Form components such as `<input />`, `<textarea />`, and `<select>` differ from other HTML components because their state can be changed by a user. However, when a form component's state is set by React, it's known as a **controlled component**.
 
 ```jsx
 const element = <input type="text" value="I'm a controlled component." />;
