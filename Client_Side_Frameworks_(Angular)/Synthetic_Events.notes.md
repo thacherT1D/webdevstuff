@@ -2,7 +2,7 @@
 
 - Explain what a synthetic event is
 - Explain why a synthetic event is important.
-- Use synthetic events to build interactive React applications.
+- Use synthetic events to build an interactive React application.
 
 | Duration by yourself | Duration as a class |
 |----------------------|---------------------|
@@ -59,15 +59,7 @@ Turn to a neighbor and, in your own words, explain what a synthetic event is. Af
 
 The problem with native events is that they don't work exactly the same across all browsers. For example, handling native `onMouseEnter` and `onMouseLeave` events has historically been a cross-browser pain point. The advantage of a synthetic event is that it works *identically* across all browsers including IE9 and above.
 
-In this article, you're going to practice how to handle synthetic events and how to leverage their properties in a variety of common use cases.
-
-### Exercise
-
-Turn to a neighbor and, in your own words, explain why a synthetic event is important. After about a minute, your instructor will cold call on the class and ask what was discussed.
-
-## How does the synthetic event system work?
-
-Understanding React's synthetic event system is critical, especially if you ever find yourself integrating React into an existing web application. Thankfully, handling a synthetic event in React is similar to handling a native event in traditional JavaScript. However, React does a few things under the hood to keep your code performant and easy to understand.
+In this article, you're going to practice how to handle synthetic events and how to leverage their properties in a variety of common use cases. Understanding React's synthetic event system is critical, especially if you ever find yourself integrating React into an existing web application. Thankfully, handling a synthetic event in React is similar to handling a native event in traditional JavaScript. However, React does a few things under the hood to keep your code performant and easy to understand.
 
 When React starts up, it attaches a single event listener onto the root of the DOM. In React, you do *not* have to attach any additional event listeners. If you find yourself reaching for functions like `EventTarget.addEventListener()` or `jQuery.on()` when building a React application from scratch, you're doing it wrong.
 
@@ -76,12 +68,14 @@ When React starts up, it attaches a single event listener onto the root of the D
 To handle events in React, simply register an event handler with an event prop of a component. This feels similar to registering an event handler with an event attribute of an HTML element. The only difference is that the event prop is written in camelcase.
 
 ```jsx
-const Textfield = React.createClass({
+const App = React.createClass({
   getInitialState() {
     return { value: '' };
   },
 
   handleChange(event) {
+    // event is a SyntheticEvent object
+
     const nextState = { value: event.target.value };
 
     this.setState(nextState);
@@ -108,18 +102,16 @@ As the synthetic event propagates from component to component, it looks through 
 When an event handler is called, it's time for your code to shine. This is where you'll update a component's `this.state` object by using the `this.setState()` function. If you need to prevent the browser from loading a page as it follows an `href` or `action` URL on an `<a>` or `<form>` component, call the `event.preventDefault()` function inside the event handler.
 
 ```jsx
-const Anchor = React.createClass({
+const App = React.createClass({
   handleClick(event) {
     event.preventDefault();
+
     // The browser will no longer load the page at event.target.href
   },
 
   render() {
-    return <a
-      href="do-not-follow.html"
-      onClick={this.handleClick}
-    >
-      Do not follow my href!
+    return <a href="do-not-load.html" onClick={this.handleClick}>
+      Do not load my href!
     </a>;
   }
 });
@@ -137,9 +129,9 @@ In this section, we've covered a bunch of technical information about React's sy
 
 ### Exercise
 
-In your own words, write down how React's synthetic event system works identically across all browsers.
+Turn to a neighbor and, in your own words, explain why a synthetic event is important and how React's synthetic event system works identically across all browsers. After about a minute, your instructor will cold call on the class and ask what was discussed.
 
-## How do you handle synthetic events?
+## How do you use synthetic events to build an interactive React application?
 
 React [supports a ton of synthetic events](https://facebook.github.io/react/docs/events.html#supported-events), but we're only going to focus on the most common ones.
 
