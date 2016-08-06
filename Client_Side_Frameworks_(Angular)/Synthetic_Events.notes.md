@@ -960,17 +960,6 @@ Here's a table that explains the difference between a key code and a character c
 | Return | 13       | 13             |
 | Escape | 27       | N/A            |
 
-**NOTE:** As of Firefox v42 and React v0.14, pressing the Escape key will sometimes stop React from executing. I haven't figure out why this happens, but you can fix it by calling the  `event.preventDefault()` function in your event handler. Other browsers like Chrome don't have this problem and calling the `event.preventDefault()` function has no effect on them.
-
-```js
-handleKeyDown(event) {
-  if (event.which === 27) {
-    event.preventDefault();
-    // continue handling the event
-  }
-}
-```
-
 Here's a table to help you quickly remember which event does what.
 
 | Event        | Trigger(s)                                  | `event.which`  |
