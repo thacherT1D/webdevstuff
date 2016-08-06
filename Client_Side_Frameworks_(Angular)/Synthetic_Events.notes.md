@@ -182,7 +182,9 @@ Turn to a neighbor and, in your own words, explain why a synthetic event is impo
 
 ## How do you use synthetic events to build an interactive React application?
 
-In this article, you're going to practice how to handle synthetic events and how to leverage their properties in a variety of common use cases. React [supports a ton of synthetic events](https://facebook.github.io/react/docs/events.html#supported-events), but we're only going to focus on the most common ones.
+Now, it's time to practice handling synthetic events while leveraging their properties in a variety of common use cases. React [supports a ton of synthetic events](https://facebook.github.io/react/docs/events.html#supported-events), but we're only going to focus on the most common ones. Type the following code examples *by hand* and run them to make sure they work. Resist the urge to copy-and-paste!
+
+**NOTE:** The surrounding HTML structure has been omitted on purpose. From here on out, you're responsible for implementing it.
 
 - [Form events](#form-events)
   - [Textfield input](#textfield-input)
@@ -195,13 +197,7 @@ In this article, you're going to practice how to handle synthetic events and how
 - [Mouse events](#mouse-events)
 - [Keyboard events](#keyboard-events)
 
-### Exercise
-
-Type out the following code examples *by hand* and run them to make sure they work. Resist the urge to copy-and-paste!
-
-**NOTE:** The surrounding HTML structure has been omitted on purpose. From here on out, you're responsible for implementing it.
-
-## Form events
+### Form events
 
 Form components such as `<input />`, `<textarea />`, and `<select>` differ from other native components because their state can be changed by a user. However, when a form component's state is set inside a React application, it's known as a **controlled component**.
 
