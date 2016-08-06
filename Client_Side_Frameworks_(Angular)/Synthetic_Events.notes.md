@@ -182,7 +182,7 @@ Turn to a neighbor and, in your own words, explain why a synthetic event is impo
 
 ## How do you use synthetic events to build an interactive React user interface?
 
-Now, it's time to practice handling synthetic events to build a few interactive React user interfaces. You'll leverage the properties of synthetic events in a variety of common use cases. React [supports a ton of synthetic events](https://facebook.github.io/react/docs/events.html#supported-events), but we're only going to focus on the most common ones. Type the following code examples *by hand* and run them to make sure they work. Resist the urge to copy-and-paste!
+Now, it's time to practice handling synthetic events to build a few interactive React user interfaces. React [supports a ton of synthetic events](https://facebook.github.io/react/docs/events.html#supported-events), but we're only going to focus on the most common ones. Type the following code examples *by hand* and run them to make sure they work. Resist the urge to copy-and-paste!
 
 - [Form events](#form-events)
   - [Textfield](#textfield)
@@ -206,6 +206,8 @@ And change into the project directory.
 ```shell
 cd synthentic
 ```
+
+Watch the project for changes and launch an HTTP server.
 
 ```shell
 npm start
