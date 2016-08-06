@@ -2,7 +2,7 @@
 
 - Explain what a synthetic event is
 - Explain why a synthetic event is important.
-- Use synthetic events to build an interactive React application.
+- Use synthetic events to build an interactive React user interface.
 
 | Duration by yourself | Duration as a class |
 |----------------------|---------------------|
@@ -10,7 +10,7 @@
 
 ## What's a synthetic event?
 
-Now that you've gotten some practice with React's tools, let's build a sophisticated React application. For that, you'll need to learn about React's synthetic event system. A **synthetic event** is an object that wraps a browser's native event object. In other words, there's a JavaScript object inside of another JavaScript object.
+Now that you've gotten some practice with React's tools, let's build a sophisticated React user interface. For that, you'll need to learn about React's synthetic event system. A **synthetic event** is an object that wraps a browser's native event object. In other words, there's a JavaScript object inside of another JavaScript object.
 
 ```text
 ┌──── Synthetic event ───┐
@@ -180,22 +180,48 @@ In this section, we've covered a bunch of technical information about React's sy
 
 Turn to a neighbor and, in your own words, explain why a synthetic event is important and how React's synthetic event system works identically across all browsers. It may be helpful to draw a few diagrams together to illustrate your thoughts. After about a minute, your instructor will cold call on the class and ask what was discussed.
 
-## How do you use synthetic events to build an interactive React application?
+## How do you use synthetic events to build an interactive React user interface?
 
-Now, it's time to practice handling synthetic events while leveraging their properties in a variety of common use cases. React [supports a ton of synthetic events](https://facebook.github.io/react/docs/events.html#supported-events), but we're only going to focus on the most common ones. Type the following code examples *by hand* and run them to make sure they work. Resist the urge to copy-and-paste!
-
-**NOTE:** The surrounding HTML structure has been omitted on purpose. From here on out, you're responsible for implementing it.
+Now, it's time to practice handling synthetic events to build a few interactive React user interfaces. You'll leverage the synthetic event's properties in a variety of common use cases. React [supports a ton of synthetic events](https://facebook.github.io/react/docs/events.html#supported-events), but we're only going to focus on the most common ones. Type the following code examples *by hand* and run them to make sure they work. Resist the urge to copy-and-paste!
 
 - [Form events](#form-events)
-  - [Textfield input](#textfield-input)
+  - [Textfield](#textfield)
   - [Textarea](#textarea)
-  - [Checkbox input](#checkbox-input)
-  - [Radio input](#radio-input)
+  - [Checkbox](#checkbox)
+  - [Radio](#radio)
   - [Select drop-down](#select-drop-down)
   - [Form submission](#form-submission)
 - [Focus events](#focus-events)
 - [Mouse events](#mouse-events)
 - [Keyboard events](#keyboard-events)
+
+To get started, create a new Brunch application.
+
+```shell
+brunch new synthentic --skeleton ryansobol/with-react
+```
+
+And change into the project directory.
+
+```shell
+cd synthentic
+```
+
+```shell
+npm start
+```
+
+In a new Terminal tab, navigate to the project directory.
+
+```shell
+cd path/to/synthentic
+```
+
+And open the project in Atom.
+
+```shell
+atom .
+```
 
 ### Form events
 
@@ -215,14 +241,40 @@ When a user changes the component's underlying element, its event handler is tri
 
 The next few sections demonstrate the difference between controlled and uncontrolled form components in greater detail.
 
-### Textfield input
+### Textfield
 
 When a user types a character into an `<input type="text" />` component, the `onChange` event will fire. You'll need to register an `onChange` event handler to share control over the component's `value` prop with your users.
 
 **NOTE:** If you share control over the `value` prop but forget to also register an `onChange` event handler, the component will render as read-only and a warning will be sent to your browser's console.
 
+In the `app/assets/textfield.html` file, type in the following code.
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Textfield</title>
+    <link rel="stylesheet" href="/app.css">
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <script src="/vendor.js"></script>
+    <script src="/app.js"></script>
+    <script>require('textfield');</script>
+  </body>
+</html>
+```
+
+And in the `app/textfield.jsx` file, type in the following code.
+
 ```jsx
-const TextfieldInput = React.createClass({
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+const App = React.createClass({
   getInitialState() {
     return { value: "I'm changeable and under React's control" };
   },
@@ -261,9 +313,15 @@ const TextfieldInput = React.createClass({
 });
 
 ReactDOM.render(
-  <TextfieldInput />,
-  document.getElementById('container')
+  <App />,
+  document.getElementById('app')
 );
+```
+
+And take a look at the user interface.
+
+```shell
+open http://localhost:8000/textfield.html
 ```
 
 ### Textarea
@@ -272,8 +330,34 @@ When a user types a character into a `<textarea />` component, the `onChange` ev
 
 **NOTE:** If you share control over the `value` prop but forget to also register an `onChange` event handler, the component will render as read-only and a warning will be sent to your browser's console.
 
+In the `app/assets/textarea.html` file, type in the following code.
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Textarea</title>
+    <link rel="stylesheet" href="/app.css">
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <script src="/vendor.js"></script>
+    <script src="/app.js"></script>
+    <script>require('textarea');</script>
+  </body>
+</html>
+```
+
+And in the `app/textarea.jsx` file, type in the following code.
+
 ```jsx
-const Textarea = React.createClass({
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+const App = React.createClass({
   getInitialState() {
     return { value: "I'm changeable and under React's control." };
   },
@@ -308,9 +392,15 @@ const Textarea = React.createClass({
 });
 
 ReactDOM.render(
-  <Textarea />,
-  document.getElementById('container')
+  <App />,
+  document.getElementById('app')
 );
+```
+
+And take a look at the user interface.
+
+```shell
+open http://localhost:8000/textarea.html
 ```
 
 ### Checkbox input
