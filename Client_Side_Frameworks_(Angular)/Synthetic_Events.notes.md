@@ -316,7 +316,7 @@ ReactDOM.render(
 );
 ```
 
-And take a look at the user interface.
+Then, take a look at the user interface.
 
 ```shell
 open http://localhost:8000/textfield.html
@@ -324,9 +324,7 @@ open http://localhost:8000/textfield.html
 
 ### Textarea
 
-When a user types a character into a `<textarea />` component, the `onChange` event will fire. In HTML, the value of a `<textarea>` element is set by its children. In React, the `value` prop is used instead. You'll need to register an `onChange` event handler to share control over the component's `value` prop with your users.
-
-**NOTE:** If you share control over the `value` prop but forget to also register an `onChange` event handler, the component will render as read-only and a warning will be sent to your browser's console.
+When a user types a character into a `<textarea />` component, the `onChange` event will fire. In HTML, the value of a `<textarea>` element is set by its children. In React, the `value` prop is used instead. You'll need to register an `onChange` event handler to share control over the component's `value` prop with your users. If you share control over the `value` prop but forget to also register an `onChange` event handler, the component will render as read-only and a warning will be sent to your browser's console.
 
 In the `app/assets/textarea.html` file, type in the following code.
 
@@ -395,7 +393,7 @@ ReactDOM.render(
 );
 ```
 
-And take a look at the user interface.
+Then, take a look at the user interface.
 
 ```shell
 open http://localhost:8000/textarea.html
