@@ -1075,7 +1075,7 @@ open http://localhost:8000/keyboard.html
 
 ## Summary
 
-In this chapter, you learned how to make React user interfaces more interactive. Specifically, you'll learned how React's synthetic event system works identically across all browsers. You also learned how to handle synthetic events and how to leverage their properties in a variety of common use cases. Believe it or not, but this chapter only begins to scratch the surface of all the [supported events and properties](https://facebook.github.io/react/docs/events.html#supported-events) in React.
+In this chapter, you learned how to build sophisticated React user interfaces. Specifically, you'll learned how React's synthetic event system works identically across all browsers. You also practiced handling synthetic events in a variety of common use cases. Believe it or not, but this chapter only begins to scratch the surface of all the [supported events and properties](https://facebook.github.io/react/docs/events.html#supported-events) in React's synthetic event system.
 
 ## Assignment
 
