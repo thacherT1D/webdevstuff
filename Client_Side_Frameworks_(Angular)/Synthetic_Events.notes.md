@@ -670,10 +670,36 @@ open http://localhost:8000/select.html
 
 When a user submits a `<form>` component, the `onChange` event will fire. You'll need to register an `onSubmit` event handler that calls the `event.preventDefault()` function to prevent the browser from reloading the page.
 
-**NOTE:** In terms of their events, `<input type="text" />` and `<input type="password" />` components are identical. Because each component has a unique `name` prop, the `this.handleChange()` event handler can be registered with both components.
+In terms of their events, `<input type="text" />` and `<input type="password" />` components are identical. Because each component has a unique `name` prop, the `this.handleChange()` event handler can be registered with both components.
+
+In the `app/assets/form.html` file, type in the following code.
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Form</title>
+    <link rel="stylesheet" href="/app.css">
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <script src="/vendor.js"></script>
+    <script src="/app.js"></script>
+    <script>require('form');</script>
+  </body>
+</html>
+```
+
+And in the `app/form.jsx` file, type in the following code.
 
 ```jsx
-const FormSubmission = React.createClass({
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+const App = React.createClass({
   getInitialState() {
     return { json: 'null', password: '', username:'' };
   },
@@ -693,6 +719,8 @@ const FormSubmission = React.createClass({
       password: this.state.password,
       username: this.state.username
     });
+
+    // Perhaps send the JSON string to a server...
 
     this.setState({ json: nextJSON });
   },
@@ -725,9 +753,15 @@ const FormSubmission = React.createClass({
 });
 
 ReactDOM.render(
-  <FormSubmission />,
-  document.getElementById('container')
+  <App />,
+  document.getElementById('app')
 );
+```
+
+Then, take a look at the user interface.
+
+```shell
+open http://localhost:8000/form.html
 ```
 
 ## Focus events
