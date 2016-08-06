@@ -243,9 +243,7 @@ When a user changes the component's underlying element, its event handler is tri
 
 ### Textfield
 
-When a user types a character into an `<input type="text" />` component, the `onChange` event will fire. You'll need to register an `onChange` event handler to share control over the component's `value` prop with your users.
-
-**NOTE:** If you share control over the `value` prop but forget to also register an `onChange` event handler, the component will render as read-only and a warning will be sent to your browser's console.
+When a user types a character into an `<input type="text" />` component, the `onChange` event will fire. You'll need to register an `onChange` event handler to share control over the component's `value` prop with your users. If you share control over the `value` prop but forget to also register an `onChange` event handler, the component will render as read-only and a warning will be sent to your browser's console.
 
 In the `app/assets/textfield.html` file, type in the following code.
 
