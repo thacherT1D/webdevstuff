@@ -118,9 +118,11 @@ When the `value` of the `<input />` component changes, the browser's native even
 ```
 
 
-At the end of the native bubbling phase, the native event reaches React's single event listener that's was attached to the `document` object when the application loaded. This is indicated by the double-bordered box in the diagram. The listener triggers an internal React event handler, kicking off the synthetic event system.
+At the end of the native bubbling phase, the native event reaches React's single event listener that was attached to the `document` object when the application loaded. This is indicated by the double-bordered box in the diagram. The listener triggers an internal React event handler, kicking off the synthetic event system.
 
-First, the internal event handler wraps the native event inside a `SyntheticEvent` object. Then the synthetic event is propagated through the component hierarchy using an [internal capturing and bubbling phase](http://codepen.io/ryansobol/pen/Lpvayw?editors=001). In this way, React ensures that a synthetic event is *identical* across all browsers in terms of both its properties and the way it's propagated.
+First, the internal event handler wraps the native event object inside a `SyntheticEvent` object as discussed earlier. Then, the synthetic event is propagated through the component hierarchy using an [internal capturing and bubbling phase](http://codepen.io/ryansobol/pen/Lpvayw?editors=001). In this way, React ensures that a synthetic event is *identical* across all browsers in terms of both its properties and propagation.
+
+**NOTE:** In the diagram below, the solid lines indicate the event's propagation path through the synthetic phases and the darker-bordered boxes indicate a check for a registered synthetic event handler.
 
 ```text
 Synthetic capturing phase         Synthetic bubbling phase
@@ -135,7 +137,7 @@ Synthetic capturing phase         Synthetic bubbling phase
        ┗━━━━━━━━━┛                      ┗━━━━━━━━━┛
 ```
 
-As the synthetic event propagates from component to component, it looks through their registered event handlers and triggers any that are bound to the event's name. All of the synthetic events covered in this chapter will trigger event handlers during the internal bubbling phase. Though it's rarely needed, React can trigger an event handler during the internal capturing phase too. To do so, simply register an event handler with an event prop that ends in the word `Capture` like `onChangeCapture`.
+As the synthetic event propagates from component to component, it looks through their registered synthetic event handlers and triggers any that are bound to the event's name. All of the synthetic events covered in this chapter will trigger event handlers during the synthetic bubbling phase. Though it's rarely needed, React can trigger an event handler during the synthetic capturing phase too. To do so, simply register an event handler with an event prop that ends in the word `Capture` like `onChangeCapture`.
 
 When an event handler is called, it's time for your code to shine. This is where you'll update a component's `this.state` object by using the `this.setState()` function. If you need to prevent the browser from loading a page as it follows an `href` or `action` URL on an `<a>` or `<form>` component, call the `event.preventDefault()` function inside the event handler.
 
