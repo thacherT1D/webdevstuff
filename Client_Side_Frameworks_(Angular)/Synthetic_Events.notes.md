@@ -87,7 +87,7 @@ const App = React.createClass({
 });
 ```
 
-In the above code example, the `<input />` component's event prop is `onChange` and the event handler is a reference to the `this.handleChange()` function. When the component is mounted or unmounted, the event handler is registered to or unregistered from React's own internal mapping.
+In the above code example, the `<input />` component's event prop is `onChange` and the event handler is a reference to the `this.handleChange()` function. Notice the component has a lowercase name. When the component is mounted or unmounted, the event handler is registered to or unregistered from the synthetic event system.
 
 When the `value` of the `<input />` component changes, a native event is fired and propagated through the DOM during the native capturing and bubbling phases.
 
