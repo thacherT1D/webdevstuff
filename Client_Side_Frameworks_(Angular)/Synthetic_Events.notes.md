@@ -189,7 +189,7 @@ Now, it's time to practice handling synthetic events to build a few interactive 
   - [Textarea](#textarea)
   - [Checkbox](#checkbox)
   - [Radio](#radio)
-  - [Select drop-down](#select-drop-down)
+  - [Select](#select)
   - [Form submission](#form-submission)
 - [Focus events](#focus-events)
 - [Mouse events](#mouse-events)
@@ -482,14 +482,38 @@ Then, take a look at the user interface.
 open http://localhost:8000/checkbox.html
 ```
 
-### Radio input
+### Radio
 
-When a user clicks an `<input type="radio" />` component, the `onChange` event will fire. In HTML, you manage groups of radio elements using a shared value for the `name` attribute. In React, you manage groups with one-way data bindings instead. You'll need to register an `onChange` event handler to share control over the component's `checked` prop with your users.
+When a user clicks an `<input type="radio" />` component, the `onChange` event will fire. In HTML, you manage groups of radio elements using a shared value for the `name` attribute. However, in React, you manage groups with one-way data bindings instead. You'll need to register an `onChange` event handler to share control over the component's `checked` prop with your users. If you share control over the `checked` prop but forget to also register an `onChange` event handler, the component will render as read-only and a warning will be sent to your browser's console.
 
-**NOTE:** If you share control over the `checked` prop but forget to also register an `onChange` event handler, the component will render as read-only and a warning will be sent to your browser's console.
+In the `app/assets/radio.html` file, type in the following code.
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Radio</title>
+    <link rel="stylesheet" href="/app.css">
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <script src="/vendor.js"></script>
+    <script src="/app.js"></script>
+    <script>require('radio');</script>
+  </body>
+</html>
+```
+
+And in the `app/radio.jsx` file, type in the following code.
 
 ```jsx
-const RadioInput = React.createClass({
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+const App = React.createClass({
   getInitialState() {
     return { value: 'no' };
   },
@@ -540,16 +564,20 @@ const RadioInput = React.createClass({
 });
 
 ReactDOM.render(
-  <RadioInput />,
-  document.getElementById('container')
+  <App />,
+  document.getElementById('app')
 );
 ```
 
-### Select drop-down
+Then, take a look at the user interface.
 
-When a user selects a new `<option>` from a `<select>` component, the `onChange` event will fire. You'll need to register an `onChange` event handler to share control over the component's `value` prop with your users.
+```shell
+open http://localhost:8000/radio.html
+```
 
-**NOTE:** If you share control over the `value` prop but forget to also register an `onChange` event handler, the component will render as read-only and a warning will be sent to your browser's console.
+### Select
+
+When a user selects a new `<option>` from a `<select>` component, the `onChange` event will fire. You'll need to register an `onChange` event handler to share control over the component's `value` prop with your users. If you share control over the `value` prop but forget to also register an `onChange` event handler, the component will render as read-only and a warning will be sent to your browser's console.
 
 ```jsx
 const SelectDropDown = React.createClass({
