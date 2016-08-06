@@ -8,7 +8,7 @@
 |----------------------|---------------------|
 | TBD                  | About 10.5 hours    |
 
-## What's a synthetic event and why is it important?
+## What's a synthetic event?
 
 Now that you've gotten some practice with React's tools, let's build a sophisticated React application. For that, you'll need to learn how React handles a synthetic event. A **synthetic event** is an object that wraps a browser's native event object.
 
@@ -49,13 +49,23 @@ const Textfield = React.createClass({
 });
 ```
 
-As you can see, a `SyntheticEvent` object has the same properties as a browser's native event object including an `event.target` object. The only difference is that the properties of a synthetic event work *identically* across all browsers including IE9 and above. For example, handling native `onMouseEnter` and `onMouseLeave` events has historically been a cross-browser pain point.
+As you can see, a `SyntheticEvent` object has the same properties as a browser's native event object including an `event.target` object.
+
+### Exercise
+
+Turn to a neighbor and, in your own words, explain what a synthetic event is. After about a minute, your instructor will cold call on the class and ask what was discussed.
+
+## Why is a synthetic event important?
+
+The only difference is that the properties of a synthetic event work *identically* across all browsers including IE9 and above. For example, handling native `onMouseEnter` and `onMouseLeave` events has historically been a cross-browser pain point.
 
 In this article, you're going to practice how to handle synthetic events and how to leverage their properties in a variety of common use cases.
 
 **NOTE:** In the vast majority of cases, you won't need the underlying native event object. But if for some reason you ever do, you can access it via the `event.nativeEvent` property.
 
 ### Exercise
+
+Turn to a neighbor and, in your own words, explain why a synthetic event is important. After about a minute, your instructor will cold call on the class and ask what was discussed.
 
 ## How does the synthetic event system work?
 
