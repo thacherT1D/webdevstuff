@@ -10,7 +10,7 @@
 
 ## What's a synthetic event?
 
-Now that you've gotten some practice with React's tools, let's build a sophisticated React application. For that, you'll need to learn about React's synthetic event system. A **synthetic event** is an object that wraps a browser's native event object. In other words, it's a JavaScript object inside of another JavaScript object.
+Now that you've gotten some practice with React's tools, let's build a sophisticated React application. For that, you'll need to learn about React's synthetic event system. A **synthetic event** is an object that wraps a browser's native event object. In other words, there's a JavaScript object inside of another JavaScript object.
 
 ```text
 ┌──── Synthetic event ───┐
