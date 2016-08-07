@@ -1,6 +1,7 @@
 ## Objectives
 
-- Explain what props and state are.
+- Explain what props are.
+- Explain what state is.
 - Explain why props and state are important.
 - Use props and state to build a React component hierarchy.
 
@@ -8,47 +9,63 @@
 |----------------------|---------------------|
 | TBD                  | TBD                 |
 
-## What are props and state?
+## What are props?
 
-As you've seen, **props** are data that's passed into a component when it's created. For example, you can use props to pass in HTML attributes when creating a native HTML component.
+**Props** are data that's passed into a component when it's created. For example, you can use props to pass in HTML attributes when creating a native HTML component.
 
 ```jsx
 var element = <p className="bold">Tokyo Dog</p>;
 ```
 
-Additionally, you can use props to pass in *immutable*, or unchangeable, data when creating a custom component. This data is used to configure a new component before it's mounted (i.e. inserted into the DOM) and is accessible anywhere inside a component class via the `this.props` object. After a component's props are set, they never change.
+Additionally, props are **immutable**, or unchangeable, data that configures a new component before it's mounted (i.e. inserted into the DOM hierarchy). Props are accessible anywhere inside a component class via the `this.props` object. After a component's props are set, they never change.
 
 ```jsx
-var Hello = React.createClass({
-  render: function() {
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+const App = React.createClass({
+  render() {
     return <h1>{this.props.greeting} world</h1>;
   }
 });
 
 ReactDOM.render(
-  <Hello greeting='Hello' />,
-  document.getElementById('hello')
+  <App greeting='Hello' />,
+  document.getElementById('app')
 );
 ```
 
-Every component has their own `this.props` object which is just a plain, old JavaScript object. But remember, the key-value pairs inside `this.props` are immutable. That means `this.props` is not a good location for storing data that's received *after* the component has been mounted. For that, you need to look to state.
+Every component has their own `this.props` object. But remember, the key-value pairs inside `this.props` are immutable. That means `this.props` is not a good location for storing data that's received after a component has been mounted. For that, you need state.
 
-As you've seen, **state** is *mutable*, or changeable, data that's initialized and updated from within a component. This data is initialized by a component's `getInitialState()` function and is accessible anywhere inside a component class via the `this.state` object. Remember, the `getInitialState()` function is automatically invoked *once* before a component is mounted. Afterwards, a component's state is updated by event handlers that receive data from events like user input or server responses.
+### Exercise
+
+Turn to a neighbor and, in your own words, explain what props are and how they're used. After about a minute, your instructor will cold call on the class and ask what was discussed.
+
+## What's state?
+
+**State** is data that's initialized and updated from within a component. State is initialized by a component's `getInitialState()` method and is accessible anywhere inside a component class via the `this.state` object. Remember, the `getInitialState()` method is automatically invoked once before a component is mounted.
+
+Additionally, state is **mutable**, or changeable, data that represents the internal state of a component. State is updated using the `this.setState()` method typically after an event handler is triggered from a user interaction or a server response.
 
 ```jsx
-var Hello = React.createClass({
-  getInitialState: function() {
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+const App = React.createClass({
+  getInitialState() {
     return { who: 'world' };
   },
 
-  handleChange: function(event) {
-    var nextState = { who: event.target.value };
+  handleChange(event) {
+    const nextState = { who: event.target.value };
+
     this.setState(nextState);
   },
 
-  render: function() {
+  render() {
     return <div>
       <h1>Hello {this.state.who}</h1>
+
       <input
         onChange={this.handleChange}
         type="text"
@@ -59,29 +76,33 @@ var Hello = React.createClass({
 });
 
 ReactDOM.render(
-  <Hello />,
-  document.getElementById('hello')
+  <App />,
+  document.getElementById('app')
 );
 ```
 
-Every component has their own `this.state` object which is just a plain, old JavaScript object. And because the key-value pairs inside `this.state` are mutable, they're the perfect location for storing data that changes over time. Remember to always use the `this.setState()` function to merge `nextState` into `this.state` because, after the merge, the component is automatically re-rendered.
+Every component has their own `this.state` object. And because the key-value pairs inside `this.state` are mutable, they're the perfect location for storing data that changes over time. Just remember to always use the `this.setState()` method to merge the changes into the current `this.state` object because, after the merge, the component is automatically re-rendered.
+
+### Exercise
+
+Turn to a neighbor and, in your own words, explain what state is and how it's used. After about a minute, your instructor will cold call on the class and ask what was discussed.
 
 ## Why are props and state important?
 
-React invokes a component's `render()` function whenever it's mounted or its state is updated. Using one-way data binding, a component's props, state, and presentation logic are combined into a user interface. It may help to think of the data inside of `this.props` and `this.state` as implicit inputs to the `render()` function.
+React invokes a component's `render()` method whenever it's mounted or its state is updated. Using one-way data binding, a component's props, state, and presentation logic are combined into a user interface. It may help to think of the data inside of `this.props` and `this.state` as implicit inputs to the `render()` method.
 
 ```jsx
 var Hello = React.createClass({
-  getInitialState: function() {
+  getInitialState() {
     return { who: 'world' };
   },
 
-  handleChange: function(event) {
+  handleChange(event) {
     var nextState = { who: event.target.value };
     this.setState(nextState);
   },
 
-  render: function() {
+  render() {
     return <div>
       <h1>{this.props.greeting} {this.state.who}</h1>
       <input
@@ -99,15 +120,15 @@ ReactDOM.render(
 );
 ```
 
-In the example above, the `{ greeting: 'Hello' }` props object is passed into the `<Hello />` component when it's created. Before the component is mounted, React automatically invokes its `getInitialState()` function which creates the initial `{ who: 'world' }` state object.
+In the example above, the `{ greeting: 'Hello' }` props object is passed into the `<Hello />` component when it's created. Before the component is mounted, React automatically invokes its `getInitialState()` method which creates the initial `{ who: 'world' }` state object.
 
-Then, React invokes the component's `render()` function which returns a component hierarchy. React uses the hierarchy to generate and insert HTML into the DOM. All that remains is to wait for the user to interact with the DOM.
+Then, React invokes the component's `render()` method which returns a component hierarchy. React uses the hierarchy to generate and insert HTML into the DOM. All that remains is to wait for the user to interact with the DOM.
 
-When the `<input />` element is changed, the `onChange` event is fired and the component's `this.handleChange()` function is triggered. The event handler proceeds to update the component's state using the `this.setState()` function. After updating the state, the component's `render()` function is invoked once again.
+When the `<input />` element is changed, the `onChange` event is fired and the component's `this.handleChange()` method is triggered. The event handler proceeds to update the component's state using the `this.setState()` method. After updating the state, the component's `render()` method is invoked once again.
 
-The `render()` function combines the changed `this.state` object and the unchanged `this.props` object with its presentation logic and returns a new component hierarchy. The differences between the old and new hierarchies are calculated and applied to the DOM.
+The `render()` method combines the changed `this.state` object and the unchanged `this.props` object with its presentation logic and returns a new component hierarchy. The differences between the old and new hierarchies are calculated and applied to the DOM.
 
-**NOTE:** A component is easier to understand when its `render()` function is implemented as a [pure function](01-introduction-to-react.md#component-state). In other words, it should return the same component hierarchy given the same `this.state` and `this.props` objects.
+**NOTE:** A component is easier to understand when its `render()` method is implemented as a [pure function](01-introduction-to-react.md#component-state). In other words, it should return the same component hierarchy given the same `this.state` and `this.props` objects.
 
 ### Exercise
 
@@ -125,11 +146,11 @@ You might be wondering how its possible to split the responsibility of managing 
 
 ```jsx
 var Book = React.createClass({
-  handleChange: function(event) {
+  handleChange(event) {
     this.props.updateBook(this.props.index, event.target.value);
   },
 
-  render: function() {
+  render() {
     return <div>
       <h2>Book {this.props.index}: {this.props.book}</h2>
       <input
@@ -142,7 +163,7 @@ var Book = React.createClass({
 });
 
 var Books = React.createClass({
-  getInitialState: function() {
+  getInitialState() {
     return {
       books: [
         'A Game of Thrones',
@@ -152,21 +173,21 @@ var Books = React.createClass({
     };
   },
 
-  updateBook: function(index, value) {
+  updateBook(index, value) {
     var nextBooks = this.state.books;
     nextBooks[index] = value;
     this.setState({ books: nextBooks });
   },
 
-  render: function() {
-    var bookEls = this.state.books.map(function(book, index) {
+  render() {
+    var bookEls = this.state.books.map((book, index) => {
       return <Book
         book={book}
         index={index}
         key={index}
         updateBook={this.updateBook}
       />;
-    }, this);
+    });
 
     return <div>{bookEls}</div>;
   }
@@ -178,11 +199,11 @@ ReactDOM.render(
 );
 ```
 
-In the above code example, two component classes are defined—`Book` and `Books`. `<Book />` components are stateless because its class doesn't use the `getInitialState()` function or the `this.setState()` function. On the other hand, `<Books />` components are stateful because its class *does* use the `getInitialState()` and `this.setState()` functions.
+In the above code example, two component classes are defined—`Book` and `Books`. `<Book />` components are stateless because its class doesn't use the `getInitialState()` method or the `this.setState()` method. On the other hand, `<Books />` components are stateful because its class *does* use the `getInitialState()` and `this.setState()` methods.
 
 Being stateful, a `<Books />` component is only responsible for managing the hierarchy's state. While it could also handle the hierarchy's user interface and events, it follows the [single responsibility principal](https://en.wikipedia.org/wiki/Single_responsibility_principle) by delegating these additional tasks to the stateless components that it owns.
 
-In React, an **owner** is a component that sets the props of another component. Inside the `render()` function of the `Books` component class, a new `<Book />` component is created for each book in the `this.state.books` array. As each component is created, its props are set. Therefore, the `<Books />` component is the owner of the `<Book />` components that are created inside its `render()` function.
+In React, an **owner** is a component that sets the props of another component. Inside the `render()` method of the `Books` component class, a new `<Book />` component is created for each book in the `this.state.books` array. As each component is created, its props are set. Therefore, the `<Books />` component is the owner of the `<Book />` components that are created inside its `render()` method.
 
 Being stateless, each `<Book />` component is responsible for handling the hierarchy's user interface and events for a single book. To handle this responsibility, the owner sets each component's `book`, `index`, `key`, and `updateBook` props. With the exception of the `key` prop, the key-value pairs are accessible inside the `Book` component class using the `this.props` object.
 
@@ -196,21 +217,21 @@ The following table enumerates the values stored inside the `this.props` object 
 | `'Snow Crash'`        | `1`                | `updateBook()`             |
 | `'The Martian'`       | `2`                | `updateBook()`             |
 
-Inside the `render()` function of the `Book` component class, the `book` and `index` props are combined with native components to produce a user interface. The user interface allows a user to view and update a book's information. When the user changes the value of the `<input type="text" />` component, the `handleChange()` function is triggered.
+Inside the `render()` method of the `Book` component class, the `book` and `index` props are combined with native components to produce a user interface. The user interface allows a user to view and update a book's information. When the user changes the value of the `<input type="text" />` component, the `handleChange()` method is triggered.
 
-As you've learned, event handlers process the event and eventually call the `this.setState()` function. However, `<Book />` components are stateless. In order to update the component hierarchy's state, they have to tell the stateful components that there is new state for them to process. They do this using a state mutator.
+As you've learned, event handlers process the event and eventually call the `this.setState()` method. However, `<Book />` components are stateless. In order to update the component hierarchy's state, they have to tell the stateful components that there is new state for them to process. They do this using a state mutator.
 
-In React, a **state mutator** is a function inside a stateful component that calls the `this.setState()` function. The `<Books />` component defines an `updateBook()` function. It passes the function down to its owned `<Book />` components through their props. When the `handleChange()` function is triggered, the state mutator is invoked.
+In React, a **state mutator** is a method inside a stateful component that calls the `this.setState()` method. The `<Books />` component defines an `updateBook()` method. It passes the method down to its owned `<Book />` components through their props. When the `handleChange()` method is triggered, the state mutator is invoked.
 
 When nesting custom components, data flows from the owner to the owned through its props. Effectively, this is another form of one-way data binding. Owners bind their owned component's props to some value the owner has computed based on its props or state. Since this process happens recursively, data changes are automatically reflected everywhere they are used.
 
-In React, **autobinding** is the process of binding a component to its functions. In other words, the `this` variable inside a component's function automatically refers to the component that specified the function no matter how the function was invoked. Specifically, this is why the `this` variable inside the `updateState()` function refers to a `<Books />` component even though it was invoked using `this.props.updateState()`.
+In React, **autobinding** is the process of binding a component to its methods. In other words, the `this` variable inside a component's method automatically refers to the component that specified the method no matter how the method was invoked. Specifically, this is why the `this` variable inside the `updateState()` method refers to a `<Books />` component even though it was invoked using `this.props.updateState()`.
 
-**NOTE:** React only autobinds components to functions specified with the `React.createClass()` function and *not* with the ES2015 `class` keyword.
+**NOTE:** React only autobinds components to methods specified with the `React.createClass()` method and *not* with the ES2015 `class` keyword.
 
-Since mutable state increases complexity and reduces predictability, components with only immutable props are easier to think about. Whenever it's time to update the DOM, they build the user interface using the data they're given. When a user interacts with their components, they handle the event using the functions their given.
+Since mutable state increases complexity and reduces predictability, components with only immutable props are easier to think about. Whenever it's time to update the DOM, they build the user interface using the data they're given. When a user interacts with their components, they handle the event using the methods they're given.
 
-Inside the `render()` function of the `Books` component class, the `Array.prototype.map()` function collects the returned `<Book />` elements into an array. The resulting array is stored in the `bookEls` variable which is used as the child of a `<div>` element. When an array is used as a child, its elements become individual children of the parent `ReactElement`.
+Inside the `render()` method of the `Books` component class, the `Array.prototype.map()` method collects the returned `<Book />` elements into an array. The resulting array is stored in the `bookEls` variable which is used as the child of a `<div>` element. When an array is used as a child, its elements become individual children of the parent `ReactElement`.
 
 ### Exercise
 
@@ -222,7 +243,7 @@ If we look in the chrome console we see the following warning:
 
 Check out [this](http://stackoverflow.com/questions/28329382/understanding-unique-keys-for-array-children-in-react-js) stackoverflow for why this is encouraged by React. How can we refactor our previous example to remove this warning?
 
-Hint: We are using the `map()` function to iterate over our array. The callback function to map takes in additional parameters including the index, can we use that as our unique key to remove the warning?
+Hint: We are using the `map()` method to iterate over our array. The callback method to map takes in additional parameters including the index, can we use that as our unique key to remove the warning?
 
 ## Summary
 
@@ -235,7 +256,7 @@ Using [this template](assignments/05-props-and-state/books.html), create both a 
 ![Books Inventory Part 1](https://dl.dropboxusercontent.com/s/pb3pubwywwetml9/D388F163-2BE6-4910-8A43-FD1BBB772F4E-40520-0002557FF8F592CA.gif?dl=0)
 
 ```js
-getInitialState: function() {
+getInitialState() {
   return {
     books: [{
       author: 'George R. R. Martin',
