@@ -194,10 +194,10 @@ Now, the user interface waits patiently for a user to interact with it. When the
 └─────────────────────────────────────────┘
                      │
                      ▼
-              ┌── <div /> ──┐
-              │             │
-              │             │
-              └─────────────┘
+              ┏━━ <div /> ━━┓
+              ┃             ┃
+              ┃             ┃
+              ┗━━━━━━━━━━━━━┛
                      │
        ┌─────────────┴──────────────┐
        │                            │
