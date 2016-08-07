@@ -186,11 +186,11 @@ Now, the user interface waits patiently for a user to interact with it. When the
 
 ```text
 ┌──────────────── <App /> ────────────────┐
-│ ┌────── Props ──────┐  ┌──── State ───┐ │
-│ │                   │  │              │ │
-│ │ greeting: 'Hello' │  │ who: 'Jane'  │ │
-│ │                   │  │              │ │
-│ └───────────────────┘  └──────────────┘ │
+│ ┌────── Props ──────┐  ┏━━━━ State ━━━┓ │
+│ │                   │  ┃              ┃ │
+│ │ greeting: 'Hello' │  ┃ who: 'Jane'  ┃ │
+│ │                   │  ┃              ┃ │
+│ └───────────────────┘  ┗━━━━━━━━━━━━━━┛ │
 └─────────────────────────────────────────┘
                      │
                      ▼
