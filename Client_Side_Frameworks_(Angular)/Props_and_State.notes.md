@@ -81,7 +81,7 @@ ReactDOM.render(
 );
 ```
 
-Every component has their own `this.state` object. And because the key-value pairs inside `this.state` are mutable, they're the perfect location for storing data that changes over time. Just remember to always use the `this.setState()` method to merge the changes into the current `this.state` object because, after the merge, the component is automatically re-rendered.
+Every component has their own `this.state` object. And because the key-value pairs inside `this.state` are mutable, they're the perfect location for storing data that changes over time. Just remember to always use the `this.setState()` method to merge changes into the current `this.state` object. After the merge, the component is automatically re-rendered.
 
 ### Exercise
 
