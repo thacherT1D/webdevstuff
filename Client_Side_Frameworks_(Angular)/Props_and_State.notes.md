@@ -8,7 +8,7 @@
 |----------------------|---------------------|
 | TBD                  | TBD                 |
 
-## What are props and why are they important?
+## What are props and state?
 
 As you've seen, **props** are data that's passed into a component when it's created. For example, you can use props to pass in HTML attributes when creating a native HTML component.
 
@@ -31,11 +31,9 @@ ReactDOM.render(
 );
 ```
 
-Every component has their own `this.props` object which is just a plain, old JavaScript object. But remember, the key-value pairs inside `this.props` are immutable. That means `this.props` is not a good location for storing data that's received *after* the component has been mounted. For that, you need to look elsewhere...
+Every component has their own `this.props` object which is just a plain, old JavaScript object. But remember, the key-value pairs inside `this.props` are immutable. That means `this.props` is not a good location for storing data that's received *after* the component has been mounted. For that, you need to look to state.
 
-## What is state and why is it important?
-
-On the other hand, **state** is *mutable*, or changeable, data that's initialized and updated from within a component. This data is initialized by a component's `getInitialState()` function and is accessible anywhere inside a component class via the `this.state` object. Remember, the `getInitialState()` function is automatically invoked *once* before a component is mounted. Afterwards, a component's state is updated by event handlers that receive data from events like user input or server responses.
+As you've seen, **state** is *mutable*, or changeable, data that's initialized and updated from within a component. This data is initialized by a component's `getInitialState()` function and is accessible anywhere inside a component class via the `this.state` object. Remember, the `getInitialState()` function is automatically invoked *once* before a component is mounted. Afterwards, a component's state is updated by event handlers that receive data from events like user input or server responses.
 
 ```jsx
 var Hello = React.createClass({
@@ -68,7 +66,7 @@ ReactDOM.render(
 
 Every component has their own `this.state` object which is just a plain, old JavaScript object. And because the key-value pairs inside `this.state` are mutable, they're the perfect location for storing data that changes over time. Remember to always use the `this.setState()` function to merge `nextState` into `this.state` because, after the merge, the component is automatically re-rendered.
 
-## How are props and state used together?
+## Why are props and state important?
 
 React invokes a component's `render()` function whenever it's mounted or its state is updated. Using one-way data binding, a component's props, state, and presentation logic are combined into a user interface. It may help to think of the data inside of `this.props` and `this.state` as implicit inputs to the `render()` function.
 
