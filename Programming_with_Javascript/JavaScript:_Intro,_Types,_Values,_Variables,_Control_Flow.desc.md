@@ -463,29 +463,29 @@ Remember, when you use the `=` operator, a variable name _must_ be on the left a
 Related to the `===` and `!==` operators are the `==` and `!=` operators respectively. The double equals `==` operator compares two values to see if they're equal-ish or "loosely equal" to one another. The operator evaluates to `true` if the values are equal even if they're not the same type.
 
 ```javascript
-4 == 3    // false
-3 == 3    // true
-3 == '3'  // true
+4 == 3;    // false
+3 == 3;    // true
+3 == '3';  // true
 ```
 
 Conversely, the `!=` operator evaluates to `true` if the values are not equal even if they're not the same type.
 
 ```javascript
-4 != 3    // true
-3 != 3    // false
-3 != '3'  // false
+4 != 3;    // true
+3 != 3;    // false
+3 != '3';  // false
 ```
 
 At first it might seem much easier to use the `==` operator instead of the `===` operator. However, the `==` operator in JavaScript often produces some unexpected results.
 
 ```javascript
-true == 1       // true
-true == 'true'  // false
+true == 1;       // true
+true == 'true';  // false
 ```
 
 When JavaScript compares two values with the `==` operator, it first converts them to the same type. In the first example, it converts the boolean `true` into the number `1` which is why `true == 1` is true. In the second example, it converts the boolean `true` into the number `1` _and_ the string `'true'` into the number `NaN` which is why `true == 'true'` is false.
 
-Because of [this and other strangeness](https://dorey.github.io/JavaScript-Equality-Table/), ALWAYS use `===`.
+<!-- Because of [this and other strangeness](https://dorey.github.io/JavaScript-Equality-Table/), ALWAYS use `===`. -->
 
 See the [equality operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Equality_operators) on the Mozilla Developer Network for more information.
 
