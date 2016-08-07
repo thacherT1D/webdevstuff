@@ -43,9 +43,9 @@ Turn to a neighbor and, in your own words, explain what props are and how they'r
 
 ## What's state?
 
-**State** is data that's initialized and updated from within a component. State is initialized by a component's `getInitialState()` method and is accessible anywhere inside a component class via the `this.state` object. Remember, the `getInitialState()` method is automatically invoked once before a component is mounted.
+**State** is data that's initialized and updated from within a component. State is initialized by a component's `getInitialState()` method which is automatically invoked once before a component is mounted. Once initialized, state is accessible anywhere inside a component class via the `this.state` object.
 
-Additionally, state is **mutable**, or changeable, data that represents the internal state of a component. State is updated using the `this.setState()` method typically after an event handler is triggered from a user interaction or a server response.
+Additionally, state is **mutable**, or changeable, data that represents the internal state of a component. State is updated using the `this.setState()` method. This is typically done after an event handler is triggered from a user interaction or a server response.
 
 ```jsx
 import React from 'react';
