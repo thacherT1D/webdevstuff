@@ -202,15 +202,15 @@ Now, the user interface waits patiently for a user to interact with it. When the
        ┌─────────────┴──────────────┐
        │                            │
        ▼                            ▼
-┌─── <h1 /> ──┐    ┌─────────── <input /> ───────────┐
-│             │    │ ┌─────────── Props ───────────┐ │
-│ Hello Jane  │    │ │                             │ │
-│             │    │ │ onChange: this.handleChange │ │
-└─────────────┘    │ │ type: 'text'                │ │
-                   │ │ value: 'Jane'               │ │
-                   │ │                             │ │
-                   │ └─────────────────────────────┘ │
-                   └─────────────────────────────────┘
+┏━━━ <h1 /> ━━┓    ┏━━━━━━━━━━━ <input /> ━━━━━━━━━━━┓
+┃             ┃    ┃ ┌─────────── Props ───────────┐ ┃
+┃ Hello Jane  ┃    ┃ │                             │ ┃
+┃             ┃    ┃ │ onChange: this.handleChange │ ┃
+┗━━━━━━━━━━━━━┛    ┃ │ type: 'text'                │ ┃
+                   ┃ │ value: 'Jane'               │ ┃
+                   ┃ │                             │ ┃
+                   ┃ └─────────────────────────────┘ ┃
+                   ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 ```
 
 React calculates the differences between the old and new component hierarchies and applies them to the DOM hierarchy.
