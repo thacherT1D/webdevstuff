@@ -161,7 +161,7 @@ Next, React invokes the component's `render()` method. The method combines the `
        ▼                            ▼
 ┌─── <h1 /> ──┐    ┌─────────── <input /> ───────────┐
 │             │    │ ┌─────────── Props ───────────┐ │
-│    Hello    │    │ │                             │ │
+│ Hello world │    │ │                             │ │
 │             │    │ │ onChange: this.handleChange │ │
 └─────────────┘    │ │ type: 'text'                │ │
                    │ │ value: 'world'              │ │
@@ -171,7 +171,16 @@ Next, React invokes the component's `render()` method. The method combines the `
 ```
 
 
-React uses the component hierarchy to generate and insert HTML elements into the DOM hierarchy. Once mounting is complete, React holds onto the component hierarchy for later.
+React uses the component hierarchy to generate and insert HTML elements into the DOM hierarchy.
+
+```html
+<div id="app">
+  <div>
+    <h1>Hello world</h1>
+    <input type="text" value="world">
+  </div>
+</div>
+```
 
 Now, the user interface waits patiently for a user to interact with it. When the `<input />` element is changed, the `onChange` event is fired and the component's `this.handleChange()` method is triggered. The event handler updates the component's state using the `this.setState()` method. After updating the state, the component's `render()` method is invoked again.
 
