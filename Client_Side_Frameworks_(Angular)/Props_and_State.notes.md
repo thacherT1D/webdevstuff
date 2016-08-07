@@ -182,9 +182,7 @@ React uses the component hierarchy to generate and insert HTML elements into the
 
 Once mounting is complete, React holds onto the component hierarchy for later. You'll see why in a moment.
 
-Now, the user interface waits patiently for a user to interact with it. When the `<input />` element is changed, the `onChange` event is fired and the component's `this.handleChange()` method is triggered. The event handler updates the component's state using the `this.setState()` method. After updating the state, the component's `render()` method is invoked again.
-
-Once again, the `render()` method combines the immutable `this.props` object and the mutable `this.state` object with its presentation logic. The result is a new component hierarchy which is returned by the `render()` method.
+Now, the user interface waits patiently for a user to interact with it. When the `<input />` element is changed, the `onChange` event is fired and the component's `this.handleChange()` method is triggered. The event handler updates the component's state using the `this.setState()` method. After updating the state, the component's `render()` method is invoked again, combining the immutable `this.props` object and the mutable `this.state` object with the component's presentation logic. The result is a new component hierarchy which is returned by the `render()` method.
 
 ```text
 ┌──────────────── <App /> ────────────────┐
