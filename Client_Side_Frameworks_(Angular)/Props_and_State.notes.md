@@ -143,7 +143,6 @@ Next, React invokes the component's `render()` method. The method combines the `
 
 ```text
 ┌──────────────── <App /> ────────────────┐
-│                                         │
 │ ┌────── Props ──────┐  ┌──── State ───┐ │
 │ │                   │  │              │ │
 │ │ greeting: 'Hello' │  │ who: 'world' │ │
@@ -161,11 +160,10 @@ Next, React invokes the component's `render()` method. The method combines the `
        │                            │
        ▼                            ▼
 ┌─── <h1 /> ──┐    ┌─────────── <input /> ───────────┐
-│             │    │                                 │
-│    Hello    │    │ ┌─────────── Props ───────────┐ │
-│             │    │ │                             │ │
-└─────────────┘    │ │ onChange: this.handleChange │ │
-                   │ │ type: 'text'                │ │
+│             │    │ ┌─────────── Props ───────────┐ │
+│    Hello    │    │ │                             │ │
+│             │    │ │ onChange: this.handleChange │ │
+└─────────────┘    │ │ type: 'text'                │ │
                    │ │ value: 'world'              │ │
                    │ │                             │ │
                    │ └─────────────────────────────┘ │
