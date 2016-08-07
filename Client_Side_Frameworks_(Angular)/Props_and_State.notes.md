@@ -144,7 +144,9 @@ React provides other places where you can modify state or interact with the brow
 
 ### Exercise
 
-Type out the above code example *by hand* and then run it. Resist the urge to copy-and-paste! Once everything is working, write down what you've learned in your own words.
+Type out the above code example by hand and then run it. Resist the urge to copy-and-paste!
+
+Then, turn to a neighbor and, in your own words, explain why props and state are important. After about a few minutes, your instructor will cold call on the class and ask what was discussed.
 
 ## How do you separate components by concern?
 
