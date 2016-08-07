@@ -218,7 +218,7 @@ The new component hierarchy contains new `<div />`, `<h1 />`, and `<input />` co
 </div>
 ```
 
-The process of calculating and applying differences is called **reconciliation** and is one of the primary reasons why React is so performant. Once updating the DOM hierarchy is complete, React holds onto each new component hierarchy for the next reconciliation round. A component's reconciliation process is easier to understand when its `render()` method is implemented as a **pure function**. In other words, it should:
+The process of calculating and applying differences is called **reconciliation** and is one of the primary reasons why React is so performant. Once updating the DOM hierarchy is complete, React holds onto the new component hierarchy for the next reconciliation round. A component's reconciliation process is easier to understand when its `render()` method is implemented as a **pure function**. In other words, it should:
 
 1. Return the same component hierarchy given the same props and state objects.
 1. Not modify the component's state directly or with the `this.setState()` method.
