@@ -1,16 +1,16 @@
 ## Objectives
-Describe what JavaScript is.
-Describe what ECMAScript is.
-Explain why JavaScript is important.
-Name all primitive data types in JavaScript.
-Explain what a variable is.
-Explain the difference between a value and an expression.
-Explain the difference between `=`, `==`, and `===` in JavaScript.
-Explain what type conversion is.
-Name all the "falsey" values in JavaScript.
-Explain what a function is.
-Write a function that takes parameters.
-Write a function that returns a value.
+* Describe what JavaScript is.
+* Describe what ECMAScript is.
+* Explain why JavaScript is important.
+* Name all primitive data types in JavaScript.
+* Explain what a variable is.
+* Explain the difference between a value and an expression.
+* Explain the difference between `=`, `==`, and `===` in JavaScript.
+* Explain what type conversion is.
+* Name all the "falsey" values in JavaScript.
+* Explain what a function is.
+* Write a function that takes parameters.
+* Write a function that returns a value.
 
 ## What's JavaScript?
 
@@ -175,7 +175,7 @@ See the [number type](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Da
 
 ### String
 
-JavaScript's string type is used to represent textual data. To create a string, simply append and prepend a series of characters with either single or double quotation marks. Which quotations you use is a matter of style preference. Just make sure that both opening and closing quotations are the same otherwise JavaScript will throw an error.
+JavaScript's string type is used to represent textual data. To create a string, simply append and prepend a series of characters with either single or double quotation marks. Which quotations you use is a matter of style preference - except we ALWAYS use single quotes in JS.
 
 ```javascript
 'Jane';
@@ -443,17 +443,17 @@ See the [relational operators](https://developer.mozilla.org/en-US/docs/Web/Java
 The triple equals `===` operator compares two values to see if they're exactly the same or "strictly equal" to one another. The operator evaluates to `true` if the values are equal and are the same type.
 
 ```javascript
-4 === 3   // false
-3 === 3   // true
-3 === '3' // false
+4 === 3;   // false
+3 === 3;   // true
+3 === '3'; // false
 ```
 
 Conversely, the `!==` operator evaluates to `true` if the values are not equal and/or are not the same type.
 
 ```javascript
-4 !== 3   // true
-3 !== 3   // false
-3 !== '3' // true
+4 !== 3;   // true
+3 !== 3;   // false
+3 !== '3'; // true
 ```
 
 Be careful not to confuse the `===` operator with the single equal `=` operator. The `===` operator asks "Are these two values strictly equal?" while the `=` operator means "Assign the value on the right to the variable on the left." In short, the `===` operator is used for **comparison** and the `=` operator is used for **assignment**.
@@ -485,7 +485,7 @@ true == 'true'  // false
 
 When JavaScript compares two values with the `==` operator, it first converts them to the same type. In the first example, it converts the boolean `true` into the number `1` which is why `true == 1` is true. In the second example, it converts the boolean `true` into the number `1` _and_ the string `'true'` into the number `NaN` which is why `true == 'true'` is false.
 
-Because of [this and other strangeness](https://dorey.github.io/JavaScript-Equality-Table/), it's probably safest to just stick with `===` for now.
+Because of [this and other strangeness](https://dorey.github.io/JavaScript-Equality-Table/), ALWAYS use `===`.
 
 See the [equality operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Equality_operators) on the Mozilla Developer Network for more information.
 
