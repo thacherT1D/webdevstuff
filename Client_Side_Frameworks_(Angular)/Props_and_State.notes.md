@@ -207,7 +207,7 @@ After updating the state, the component's `render()` method is invoked again, co
                    ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 ```
 
-The new component hierarchy contains new `<div />`, `<h1 />`, and `<input />` components. React calculates the differences between the old and new component hierarchies and applies them to the DOM hierarchy.
+The new component hierarchy contains new `<div />`, `<h1 />`, and `<input />` components. React compares the old component hierarchy with the new component hierarchy and calculates the differences between the two. It then applies those differences to the DOM hierarchy.
 
 ```html
 <div id="app">
