@@ -300,9 +300,9 @@ Component classes can also define a `getInitialState()` function. It's invoked o
 After the `getInitialState()` function is invoked, React will invoke the `render()` function which should be implemented as a **pure function**. In other words, it should:
 
 1. Return the same `ReactElement` given the same component state.
-2. Not modify the component's state.
-3. Not read from or write to the DOM.
-4. Not interact with the browser via functions like `setTimeout()`.
+1. Not modify the component's state.
+1. Not read from or write directly to the DOM.
+1. Not interact with the browser via functions like `setTimeout()`.
 
 React provides other places where you can modify state or interact with the browser. Just not in the `render()` function. Keeping the `render()` function pure makes component classes easier to think about.
 

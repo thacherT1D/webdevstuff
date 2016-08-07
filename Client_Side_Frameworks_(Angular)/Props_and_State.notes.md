@@ -127,13 +127,20 @@ ReactDOM.render(
 
 In the example above, the `{ greeting: 'Hello' }` props object is passed into the `<App />` component when it's created. Before the component is mounted, React also invokes the component's `getInitialState()` method, creating the initial `{ who: 'world' }` state object.
 
-React begins mounting the component by invoking its `render()` method. The `render()` uses the `this.props` and `this.state` objects as implicit inputs to create and return a component hierarchy. React uses the component hierarchy to generate and insert HTML elements into the DOM hierarchy. Once mounting is complete, the user interface waits patiently for a user to interact with it.
+React begins mounting the component by invoking its `render()` method. The `render()` combines the `this.props` and `this.state` objects with its presentation logic and returns a component hierarchy. React uses the component hierarchy to generate and insert HTML elements into the DOM hierarchy. Once mounting is complete, React holds onto the component hierarchy for later.
 
-When the `<input />` element is changed, the `onChange` event is fired and the component's `this.handleChange()` method is triggered. The event handler updates the component's state using the `this.setState()` method. After updating the state, the component's `render()` method is invoked once again.
+Now, the user interface waits patiently for a user to interact with it. When the `<input />` element is changed, the `onChange` event is fired and the component's `this.handleChange()` method is triggered. The event handler updates the component's state using the `this.setState()` method. After updating the state, the component's `render()` method is invoked again.
 
-The `render()` method combines the changed `this.state` object and the unchanged `this.props` object with its presentation logic and returns a new component hierarchy. The differences between the old and new component hierarchies are calculated and applied to the DOM hierarchy. The process of calculating and applying differences is called **reconciliation**. It's one of the primary reasons why React is so performant.
+Once again, the `render()` method combines the immutable `this.props` object and the mutable `this.state` object with its presentation logic. The result is a new component hierarchy which is returned by the `render()` method. React calculates the differences between the old and new component hierarchies and applies them to the DOM hierarchy. The process of calculating and applying differences is called **reconciliation** and is one of the primary reasons why React is so performant. Once updating is complete, React holds onto the new component hierarchy for the next reconciliation round.
 
-**NOTE:** A component is easier to understand when its `render()` method is implemented as a **pure function**. In other words, it should return the same component hierarchy given the same `this.state` and `this.props` objects.
+A component's reconciliation process is easier to understand when its `render()` method is implemented as a **pure function**. In other words, it should:
+
+1. Return the same component hierarchy given the same props and state objects.
+1. Not modify the component's state.
+1. Not read from or write directly to the DOM.
+1. Not interact with the browser via functions like `setTimeout()`.
+
+React provides other places where you can modify state or interact with the browser. Just not in the `render()` function.
 
 ### Exercise
 
