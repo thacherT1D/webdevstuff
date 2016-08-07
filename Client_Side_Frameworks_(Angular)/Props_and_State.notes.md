@@ -128,15 +128,13 @@ ReactDOM.render(
 In the example above, the `ReactDOM.render()` method is instructed to mount an `<App />` component. The mounting process starts by instantiating a new `<App />` component and passing it a `{ greeting: 'Hello' }` props object. Then, the component's `getInitialState()` method is invoked which initializes its `{ who: 'world' }` state object.
 
 ```text
-┌───────────────── <App /> ─────────────────┐
-│                                           │
-│  ┌────── Props ──────┐  ┌──── State ───┐  │
-│  │                   │  │              │  │
-│  │ greeting: 'Hello' │  │ who: 'world' │  │
-│  │                   │  │              │  │
-│  └───────────────────┘  └──────────────┘  │
-│                                           │
-└───────────────────────────────────────────┘
+┌──────────────── <App /> ────────────────┐
+│ ┌────── Props ──────┐  ┌──── State ───┐ │
+│ │                   │  │              │ │
+│ │ greeting: 'Hello' │  │ who: 'Jane'  │ │
+│ │                   │  │              │ │
+│ └───────────────────┘  └──────────────┘ │
+└─────────────────────────────────────────┘
 ```
 
 Next, React invokes the component's `render()` method. The method combines the `this.props` and `this.state` objects with the component's presentation logic and returns a component hierarchy.
