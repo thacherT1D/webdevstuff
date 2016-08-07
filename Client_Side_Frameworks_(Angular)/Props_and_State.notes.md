@@ -182,11 +182,53 @@ React uses the component hierarchy to generate and insert HTML elements into the
 </div>
 ```
 
+Once mounting is complete, React holds onto the component hierarchy for later.
+
 Now, the user interface waits patiently for a user to interact with it. When the `<input />` element is changed, the `onChange` event is fired and the component's `this.handleChange()` method is triggered. The event handler updates the component's state using the `this.setState()` method. After updating the state, the component's `render()` method is invoked again.
 
-Once again, the `render()` method combines the immutable `this.props` object and the mutable `this.state` object with its presentation logic. The result is a new component hierarchy which is returned by the `render()` method. React calculates the differences between the old and new component hierarchies and applies them to the DOM hierarchy. The process of calculating and applying differences is called **reconciliation** and is one of the primary reasons why React is so performant. Once updating is complete, React holds onto the new component hierarchy for the next reconciliation round.
+Once again, the `render()` method combines the immutable `this.props` object and the mutable `this.state` object with its presentation logic. The result is a new component hierarchy which is returned by the `render()` method.
 
-A component's reconciliation process is easier to understand when its `render()` method is implemented as a **pure function**. In other words, it should:
+```text
+┌──────────────── <App /> ────────────────┐
+│ ┌────── Props ──────┐  ┌──── State ───┐ │
+│ │                   │  │              │ │
+│ │ greeting: 'Hello' │  │ who: 'Jane'  │ │
+│ │                   │  │              │ │
+│ └───────────────────┘  └──────────────┘ │
+└─────────────────────────────────────────┘
+                     │
+                     ▼
+              ┌── <div /> ──┐
+              │             │
+              │             │
+              └─────────────┘
+                     │
+       ┌─────────────┴──────────────┐
+       │                            │
+       ▼                            ▼
+┌─── <h1 /> ──┐    ┌─────────── <input /> ───────────┐
+│             │    │ ┌─────────── Props ───────────┐ │
+│ Hello Jane  │    │ │                             │ │
+│             │    │ │ onChange: this.handleChange │ │
+└─────────────┘    │ │ type: 'text'                │ │
+                   │ │ value: 'Jane'               │ │
+                   │ │                             │ │
+                   │ └─────────────────────────────┘ │
+                   └─────────────────────────────────┘
+```
+
+React calculates the differences between the old and new component hierarchies and applies them to the DOM hierarchy.
+
+```html
+<div id="app">
+  <div>
+    <h1>Hello Jane</h1>
+    <input type="text" value="Jane">
+  </div>
+</div>
+```
+
+The process of calculating and applying differences is called **reconciliation** and is one of the primary reasons why React is so performant. Once updating is complete, React holds onto the new component hierarchy for the next reconciliation round. A component's reconciliation process is easier to understand when its `render()` method is implemented as a **pure function**. In other words, it should:
 
 1. Return the same component hierarchy given the same props and state objects.
 1. Not modify the component's state.
