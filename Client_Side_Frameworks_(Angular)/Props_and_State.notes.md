@@ -125,7 +125,7 @@ ReactDOM.render(
 );
 ```
 
-In the example above, the `ReactDOM.render()` method is instructed to mount the `<App />` component by creating a component hierarchy and inserting it's HTML elements into the DOM hierarchy. First, the `{ greeting: 'Hello' }` props object is passed into the component when it's created. Then, the component's `getInitialState()` method is invoked which initializes the `{ who: 'world' }` state object.
+In the example above, the `ReactDOM.render()` method is instructed to mount the `<App />` component by creating a component hierarchy and inserting its HTML elements into the DOM hierarchy. First, the `{ greeting: 'Hello' }` props object is passed into the component when it's created. Then, the component's `getInitialState()` method is invoked which initializes the `{ who: 'world' }` state object.
 
 Next, React invokes the component's `render()` method. The `render()` combines the `this.props` and `this.state` objects with its presentation logic and returns a component hierarchy. React uses the component hierarchy to generate and insert HTML elements into the DOM hierarchy. Once mounting is complete, React holds onto the component hierarchy for later.
 
