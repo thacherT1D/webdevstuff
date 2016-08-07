@@ -225,7 +225,7 @@ The process of calculating and applying differences is called **reconciliation**
 1. Not read from or write directly to the DOM.
 1. Not interact with the browser via functions like `setTimeout()`.
 
-React provides other places where you can modify state or interact with the browser. Just not in the `render()` function.
+React provides other places where you can modify state or interact with the browser, which you'll learn about later. Just not in the `render()` function.
 
 ### Exercise
 
