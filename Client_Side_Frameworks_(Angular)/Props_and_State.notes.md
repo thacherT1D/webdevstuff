@@ -131,7 +131,7 @@ In the example above, the `ReactDOM.render()` method is instructed to mount an `
 ┌──────────────── <App /> ────────────────┐
 │ ┌────── Props ──────┐  ┌──── State ───┐ │
 │ │                   │  │              │ │
-│ │ greeting: 'Hello' │  │ who: 'Jane'  │ │
+│ │ greeting: 'Hello' │  │ who: 'world' │ │
 │ │                   │  │              │ │
 │ └───────────────────┘  └──────────────┘ │
 └─────────────────────────────────────────┘
