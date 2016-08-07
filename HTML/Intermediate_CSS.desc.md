@@ -137,22 +137,50 @@ button[class*="big"] {
 
 #### Link-based
 
-* `:link`
-* `:visited`
-* `:hover`
-* `:active`
+`:link` & `:visited`
+Above we colored our learn.galvanize.com links orange using the `color` property. Only issue there is that the link doesn't change color when it has been clicked, or *visited*. Using `:link`you can set a *before cliked* color, and with `:visited` an *after clicked* color:
+
+```css
+a:link {
+  color: orange;
+}
+
+a:visited {
+  color: red;
+}
+```
+
+`:hover`
+Hover lets you apply styles for whenever your mouse is over an element:
+
+```css
+button:hover {
+  opacity: 0.75;
+}
+```
+
+`:active`
+Active lets you apply styles for whenever your element is being clicked on. If we wanted it to shift down a couple pixels when clicked we would do somethign like this:
+
+```css
+button {
+  position: relative;
+}
+
+button:active {
+  top: 2px;
+}
+```
 
 #### Exercise
-
-  - On codepen.io create a button
-  - Add a link-based psuedo-class that changes the background on hover.
+  - Go on codepen.io and use the link-based psuedo-classes we just went over.
 
 #### Text-based
 
 * `:first-line`
 * `:first-letter`
-* `:before {content: "..."}`
-* `:after {content: "..."}`
+* `::before {content: "..."}`
+* `::after {content: "..."}`
 
 #### Exercise
 
