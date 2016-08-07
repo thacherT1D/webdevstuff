@@ -140,15 +140,6 @@ In the example above, the `ReactDOM.render()` method is instructed to mount an `
 Next, React invokes the component's `render()` method. The method combines the `this.props` and `this.state` objects with the component's presentation logic and returns a component hierarchy.
 
 ```text
-┌──────────────── <App /> ────────────────┐
-│ ┌────── Props ──────┐  ┌──── State ───┐ │
-│ │                   │  │              │ │
-│ │ greeting: 'Hello' │  │ who: 'world' │ │
-│ │                   │  │              │ │
-│ └───────────────────┘  └──────────────┘ │
-└─────────────────────────────────────────┘
-                     │
-                     ▼
               ┌── <div /> ──┐
               │             │
               │             │
@@ -182,7 +173,7 @@ React uses the component hierarchy to generate and insert HTML elements into the
 
 Once mounting is complete, React holds onto the component hierarchy for later. You'll see why in a moment.
 
-Now, the user interface waits patiently for a user to interact with it. When the `<input />` element is changed, the `onChange` event is fired and the component's `this.handleChange()` method is triggered. The event handler updates the component's state using the `this.setState()` method. After updating the state, the component's `render()` method is invoked again, combining the immutable `this.props` object and the mutable `this.state` object with the component's presentation logic. The resulting new component hierarchy is returned by the `render()` method.
+Now, the user interface waits patiently for a user to interact with it. When the `<input />` element is changed, the `onChange` event is fired and the component's `this.handleChange()` method is triggered. The event handler updates the component's state using the `this.setState()` method.
 
 ```text
 ┌──────────────── <App /> ────────────────┐
@@ -192,8 +183,11 @@ Now, the user interface waits patiently for a user to interact with it. When the
 │ │                   │  ┃              ┃ │
 │ └───────────────────┘  ┗━━━━━━━━━━━━━━┛ │
 └─────────────────────────────────────────┘
-                     │
-                     ▼
+```
+
+After updating the state, the component's `render()` method is invoked again, combining the immutable `this.props` object and the mutable `this.state` object with the component's presentation logic. As a result, a new component hierarchy is returned by the `render()` method.
+
+```text
               ┏━━ <div /> ━━┓
               ┃             ┃
               ┃             ┃
@@ -213,7 +207,7 @@ Now, the user interface waits patiently for a user to interact with it. When the
                    ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 ```
 
-React calculates the differences between the old and new component hierarchies and applies them to the DOM hierarchy.
+The new component hierarchy contains new `<div />`, `<h1 />`, and `<input />` components. React calculates the differences between the old and new component hierarchies and applies them to the DOM hierarchy.
 
 ```html
 <div id="app">
