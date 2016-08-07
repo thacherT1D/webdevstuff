@@ -89,22 +89,27 @@ Turn to a neighbor and, in your own words, explain what state is and how it's us
 
 ## Why are props and state important?
 
-React invokes a component's `render()` method whenever it's mounted or its state is updated. Using one-way data binding, a component's props, state, and presentation logic are combined into a user interface. It may help to think of the data inside of `this.props` and `this.state` as implicit inputs to the `render()` method.
+Props and state are important because they're implicit inputs to the `render()` method. React invokes a component's `render()` method whenever it's mounted or its state is updated. Using one-way data binding, a component's props, state, and presentation logic are combined into a user interface.
 
 ```jsx
-var Hello = React.createClass({
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+const App = React.createClass({
   getInitialState() {
     return { who: 'world' };
   },
 
   handleChange(event) {
-    var nextState = { who: event.target.value };
+    const nextState = { who: event.target.value };
+
     this.setState(nextState);
   },
 
   render() {
     return <div>
       <h1>{this.props.greeting} {this.state.who}</h1>
+
       <input
         onChange={this.handleChange}
         type="text"
@@ -115,20 +120,20 @@ var Hello = React.createClass({
 });
 
 ReactDOM.render(
-  <Hello greeting="Hello" />,
-  document.getElementById('hello')
+  <App greeting="Hello" />,
+  document.getElementById('app')
 );
 ```
 
-In the example above, the `{ greeting: 'Hello' }` props object is passed into the `<Hello />` component when it's created. Before the component is mounted, React automatically invokes its `getInitialState()` method which creates the initial `{ who: 'world' }` state object.
+In the example above, the `{ greeting: 'Hello' }` props object is passed into the `<App />` component when it's created. Before the component is mounted, React also invokes the component's `getInitialState()` method, creating the initial `{ who: 'world' }` state object.
 
-Then, React invokes the component's `render()` method which returns a component hierarchy. React uses the hierarchy to generate and insert HTML into the DOM. All that remains is to wait for the user to interact with the DOM.
+Then, React invokes the component's `render()` method which returns a component hierarchy. React uses the component hierarchy to generate and insert HTML elements into the DOM hierarchy. Then, the user interface waits patiently for the user to interact with it.
 
-When the `<input />` element is changed, the `onChange` event is fired and the component's `this.handleChange()` method is triggered. The event handler proceeds to update the component's state using the `this.setState()` method. After updating the state, the component's `render()` method is invoked once again.
+When the `<input />` element is changed, the `onChange` event is fired and the component's `this.handleChange()` method is triggered. The event handler updates the component's state using the `this.setState()` method. After updating the state, the component's `render()` method is invoked once again.
 
-The `render()` method combines the changed `this.state` object and the unchanged `this.props` object with its presentation logic and returns a new component hierarchy. The differences between the old and new hierarchies are calculated and applied to the DOM.
+The `render()` method combines the changed `this.state` object and the unchanged `this.props` object with its presentation logic and returns a new component hierarchy. The differences between the old and new component hierarchies are calculated and applied to the DOM hierarchy. The process of calculating and applying differences is called **reconciliation**. It's one of the primary reasons why React is so performant.
 
-**NOTE:** A component is easier to understand when its `render()` method is implemented as a [pure function](01-introduction-to-react.md#component-state). In other words, it should return the same component hierarchy given the same `this.state` and `this.props` objects.
+**NOTE:** A component is easier to understand when its `render()` method is implemented as a **pure function**. In other words, it should return the same component hierarchy given the same `this.state` and `this.props` objects.
 
 ### Exercise
 
