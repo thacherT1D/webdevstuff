@@ -127,7 +127,7 @@ ReactDOM.render(
 
 In the example above, the `{ greeting: 'Hello' }` props object is passed into the `<App />` component when it's created. Before the component is mounted, React also invokes the component's `getInitialState()` method, creating the initial `{ who: 'world' }` state object.
 
-Then, React invokes the component's `render()` method which returns a component hierarchy. React uses the component hierarchy to generate and insert HTML elements into the DOM hierarchy. Then, the user interface waits patiently for the user to interact with it.
+React begins mounting the component by invoking its `render()` method which returns a component hierarchy. React uses the component hierarchy to generate and insert HTML elements into the DOM hierarchy. Once mounting is complete, the user interface waits patiently for a user to interact with it.
 
 When the `<input />` element is changed, the `onChange` event is fired and the component's `this.handleChange()` method is triggered. The event handler updates the component's state using the `this.setState()` method. After updating the state, the component's `render()` method is invoked once again.
 
