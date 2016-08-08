@@ -5,89 +5,110 @@
 So far we have made API calls using the `$http` service, but when we start building more complex backends (especially ones that use RESTful routing), we can leverage a more advanced tool - `ngResource`. The `ngResource` module provides interaction with RESTful services via the $resource service. It is important to note that the $resource service is built on the top of the $http service so this is simply an extension of things that we have seen before. $resource also handles the resolving/rejecting of a promise for us, so there is no need to add `.then` to our methods (unlike `$http`). However, `$resource` does assume that we have a RESTful backend which means that our routes on the server need to be set up as follows (we've seen this many times!):
 
 Let's assume that our resource is for a user - this is what `$resource` would expect our backend to look like for all RESTful routes.
+
 ```
-GET '/users'
-GET '/users/new'
-GET '/users/:id'
-GET '/users/:id/edit'
-POST '/users'
-PUT '/users/:id'
-DELETE '/users/:id'
+GET '/pirates'
+GET '/pirates/:id'
+POST '/pirates'
+PUT '/pirates/:id'
+DELETE '/pirates/:id'
 ```
 
 If our backend is set up correctly and with a little set up on the front end, we can start accessing some built in methods given to us by the `$resource` service.
 
 #### built in methods given to you by $resource
 
-1. get() - retrieve an individual resource
-2. query() - retrieve all data for that resource
-3. save() - save a single instance
-4. remove() - remove a single instance
-5. delete() - remove a single instance
+1. `get()` - retrieve an individual resource
+2. `query()` - retrieve all data for that resource
+3. `save()` - save a single instance
+4. `remove()` - remove a single instance
+5. `delete()` - remove a single instance
 
-Wondering what the difference between remove and delete are? See [here](http://stackoverflow.com/questions/15706560/difference-between-delete-and-remove-method-in-resource)(spoiler - there isn't any)
+> **Note:** Wondering what the difference between remove and delete are? See [this stackoverflow](http://stackoverflow.com/questions/15706560/difference-between-delete-and-remove-method-in-resource)(Spoiler: there isn't any.)
 
 #### Getting started
 
-In order to get started using these methods, we need to first include the script for ngResource
+In order to get started using these methods, we need to first include the script for `ngResource`:
 
-`<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-resource.js"></script>`
+```html
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-resource.js"></script>
+```
 
-We then need to include `ngResource` as a dependency to our application
+We then need to inject `ngResource` as a dependency to our application:
 
-`var app = angular.module("todoApp", ['ngRoute','ngResource']);`
+```javascript
+var app = angular.module("PirateCrud", ['ngRoute','ngResource']);
+```
 
 Finally we need to create a service that defines what our RESTful endpoint is so that `$resource` can make the correct API calls. Here is what that looks like:
 
-```js
-angular.module('firstApp').service('User', ["$resource", function ($resource) {
-    return $resource('/api/user/:id',{id: "@id"});
-}]);
+```javascript
+angular.module('PirateCrud').service('PirateService', ['$resource', pirateService);
+
+function pirateService($resource){
+  return $resource('/api/pirate/:id', {id: '@id'});  
+}
 ```
 
-#### What is this @_id?
+
+#### What is this `@_id`?
 
 The second argument to $resource() is an object with the parameter as the key and the value is whatever property we set (starting with a @). This means that
-if we set the key to `id` and the value to `@id`, the value will correspond ot the `id` property of the instance that we have passed to the method we used. This is very useful for PUT and DELETE requests.
+if we set the key to `id` and the value to `@id`, the value will correspond to the `id` property of the instance that we have passed to the method we used. This is very useful for PUT and DELETE requests.
 
 #### Seeing these methods in action
 
-Now in our `users` controller we can do the following (these are simple examples):
+Now in our `Pirates` controller we can do the following (these are simple examples):
 
-```js
-// get all users
-$scope.users = User.query();
+```javascript
 
-// get a single user
+function piratesController(Pirate){
 
-User.get({id: $routeParams.id}, function(user){
-    $scope.user = user;
-  }, function(err){
-    $scope.error = err;
-    $location.path('/');
-});
+  var vm = this;
 
-// save a user
+  vm.getAllPirates =  getAllPirates;
+  vm.getPirateById = getPirateById;
+  vm.createPirate = createPirate;
+  vm.deletePirate = deletePirate;
 
-$scope.createUser = function(user) {
-    TodoService.save(user, function(){
-      $location.path('/');
-    });
-};
+  function getAllPirates(){
+    Pirate.$query()
+      .then(function(result){
+        vm.pirates = result;
+      })
+      .catch(function(err){
+        vm.error = err;
+      });  
+  }
 
-// remove a single resource
+  function getPirateById(_id){
+    Pirate.$get({ id: _id })
+      .then(function(pirate){
+        vm.pirate = pirate;
+      })
+      .catch(handleError);
+  }
 
-$scope.deleteUser = function(user){
-    user.$delete(function(user){
-      $location.path('/');
-    });
-};
+  function createPirate(pirate){
+    Pirate.$save(pirate)
+      .then(function(res){
+        console.log(res);
+      })
+      .catch(handleError);
+  }
 
-// this is equivalent to deleting a resource this way:
-$scope.deleteTodo = function(todo){
-		TodoService.delete(todo, function(){
-			findTodos();
-		})
+  function deletePirate(id){
+    Pirate.$delete(id)
+      .then(function(res){
+        console.log(res);
+      })
+      .catch(handleError);
+  }
+
+
+  function handleError(err){
+    vm.error = err;
+  }
 }
 
 ```
@@ -139,4 +160,4 @@ Answer the following questions:
 
 ### Assignment
 
-Refactor your todo app from the previous lesson to use `ngResource`. Your backend should be the exact same, but your client side code should remove all traces of `$http` and use `ngResource` and its built in methods (as well as a custom update method) instead.
+Refactor your pirate app from the previous exercise to use `ngResource`. Your backend should be the exact same, but your client side code should remove all traces of `$http` and use `ngResource` and its built in methods (as well as a custom update method) instead.
