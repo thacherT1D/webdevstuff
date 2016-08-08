@@ -731,7 +731,9 @@ function hello(name, age) {
 The parameters are `name` and `age`.  They are variables that are defined in the function
 
 ### Exercise 1
+
 Create a function call `capWord` that prints out a word and then prints out the capitalized word.
+
 ```javascript
 capWord("awesome"); // You must implement this function
 // awesome
