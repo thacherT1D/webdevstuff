@@ -342,15 +342,13 @@ Once everything is working, make an educated guess on how data flows between sta
 
 ## How does data flow between stateful and stateless components?
 
-You might be wondering how its possible to split the responsibility of managing state and handling events between two different components. For that, we'll need the help of three new concepts—ownership, state mutators, and autobinding.
+In the above code example, the responsibility of managing state and handling events is split between two different component classes—`App` and `Book` respectively. An `<App />` component is stateful because its class uses the `getInitialState()` and `this.setState()` methods. On the other hand, a `<Book />` component is stateless because its class doesn't use the `getInitialState()` function or the `this.setState()` methods.
 
-In the above code example, two component classes are defined—`Book` and `Books`. `<Book />` components are stateless because its class doesn't use the `getInitialState()` method or the `this.setState()` method. On the other hand, `<Books />` components are stateful because its class *does* use the `getInitialState()` and `this.setState()` methods.
+Being stateful, an `<App />` component is only responsible for managing a component hierarchy's state. While it could also handle a hierarchy's events, it follows the [single responsibility principal](https://en.wikipedia.org/wiki/Single_responsibility_principle) and delegates the additional responsibility to the stateless components that it owns.
 
-Being stateful, a `<Books />` component is only responsible for managing the hierarchy's state. While it could also handle the hierarchy's user interface and events, it follows the [single responsibility principal](https://en.wikipedia.org/wiki/Single_responsibility_principle) by delegating these additional tasks to the stateless components that it owns.
+In React, an **owner** is a component that sets the props of another component. Inside the `render()` function of the `App` component class, a new `<Book />` component is created for each book in the `this.state.books` array. As each component is created, its props are set. Therefore, the `<App />` component is the owner of the `<Book />` components that are created inside its `render()` method.
 
-In React, an **owner** is a component that sets the props of another component. Inside the `render()` method of the `Books` component class, a new `<Book />` component is created for each book in the `this.state.books` array. As each component is created, its props are set. Therefore, the `<Books />` component is the owner of the `<Book />` components that are created inside its `render()` method.
-
-Being stateless, each `<Book />` component is responsible for handling the hierarchy's user interface and events for a single book. To handle this responsibility, the owner sets each component's `book`, `index`, `key`, and `updateBook` props. With the exception of the `key` prop, the key-value pairs are accessible inside the `Book` component class using the `this.props` object.
+Being stateless, each `<Book />` component is responsible for handling the hierarchy's events for a single book. To handle this responsibility, the owner sets each component's `book`, `index`, `key`, and `updateBook` props. With the exception of the `key` prop, the key-value pairs are accessible inside the `Book` component class using the `this.props` object.
 
 **NOTE:** The `key` prop is used by React to uniquely identify sibling components of the same type. If a keyed component is changed in any way, React can more efficiently update the DOM. The `key` prop is *not* accessible via `this.props.key`.
 
@@ -362,81 +360,36 @@ The following table enumerates the values stored inside the `this.props` object 
 | `'Snow Crash'`        | `1`                | `updateBook()`             |
 | `'The Martian'`       | `2`                | `updateBook()`             |
 
-Inside the `render()` method of the `Book` component class, the `book` and `index` props are combined with native components to produce a user interface. The user interface allows a user to view and update a book's information. When the user changes the value of the `<input type="text" />` component, the `handleChange()` method is triggered.
+Inside the `render()` method of the `Book` component class, the `book` and `index` props are combined with HTML components to produce a user interface. The user interface allows a user to view and update a book's information.  When the value of the `<input type="text" />` component changes, the `handleChange()` event handler function is invoked.
 
-As you've learned, event handlers process the event and eventually call the `this.setState()` method. However, `<Book />` components are stateless. In order to update the component hierarchy's state, they have to tell the stateful components that there is new state for them to process. They do this using a state mutator.
+As you've seen, event handlers process an event and update a component's state. However, not all components have state to update, as is the case with the stateless `<Book />` components. Rather than calling the `this.setState()` method, each `<Book />` component is given a `this.props.updateBook()` state mutator method to call instead.
 
-In React, a **state mutator** is a method inside a stateful component that calls the `this.setState()` method. The `<Books />` component defines an `updateBook()` method. It passes the method down to its owned `<Book />` components through their props. When the `handleChange()` method is triggered, the state mutator is invoked.
+In React, a **state mutator** is a method inside a stateful component that calls the `this.setState()` method. In the above code example, the `updateBook()` state mutator method is specified in the `App` component class but passed to each `<Book />` component through its props. When the `handleChange()` function is triggered, the state mutator is invoked.
 
 When nesting custom components, data flows from the owner to the owned through its props. Effectively, this is another form of one-way data binding. Owners bind their owned component's props to some value the owner has computed based on its props or state. Since this process happens recursively, data changes are automatically reflected everywhere they are used.
 
 In React, **autobinding** is the process of binding a component to its methods. In other words, the `this` variable inside a component's method automatically refers to the component that specified the method no matter how the method was invoked. Specifically, this is why the `this` variable inside the `updateState()` method refers to a `<Books />` component even though it was invoked using `this.props.updateState()`.
 
-**NOTE:** React only autobinds components to methods specified with the `React.createClass()` method and *not* with the ES2015 `class` keyword.
+**NOTE:** React only autobinds components to methods specified with the `React.createClass()` method and not with the ES2015 `class` keyword.
 
-Since mutable state increases complexity and reduces predictability, components with only immutable props are easier to think about. Whenever it's time to update the DOM, they build the user interface using the data they're given. When a user interacts with their components, they handle the event using the methods they're given.
+Since mutable state increases complexity and reduces predictability, components with only immutable props are easier to think about. Whenever it's time to update the DOM hierarchy, they build the user interface using the data they're given. When a user interacts with their components, they handle the event using the methods they're given.
 
-Inside the `render()` method of the `Books` component class, the `Array.prototype.map()` method collects the returned `<Book />` elements into an array. The resulting array is stored in the `bookEls` variable which is used as the child of a `<div>` element. When an array is used as a child, its elements become individual children of the parent `ReactElement`.
+Inside the `render()` method of the `Books` component class, the `Array.prototype.map()` method collects the returned `<Book />` elements into an array. When an array is used as a child, its elements become individual children of the parent `ReactElement`.
 
 ### Exercise
 
-Type this out and write stuff in your own words.
-
-If we look in the chrome console we see the following warning:
-
-"Warning: Each child in an array or iterator should have a unique "key" prop. Check the render method of BookList. See https://fb.me/react-warning-keys for more information."
-
-Check out [this](http://stackoverflow.com/questions/28329382/understanding-unique-keys-for-array-children-in-react-js) stackoverflow for why this is encouraged by React. How can we refactor our previous example to remove this warning?
-
-Hint: We are using the `map()` method to iterate over our array. The callback method to map takes in additional parameters including the index, can we use that as our unique key to remove the warning?
+Update your previous description of how data flows between stateful and stateless components.
 
 ## Summary
 
 Words, mouth, memories.
 
-## Assignment: Part 1
+## Assignment
 
-Using [this template](assignments/05-props-and-state/books.html), create both a `Books` and `Book` React component that looks and behaves like this.
+- [React Inventory]()
 
-![Books Inventory Part 1](https://dl.dropboxusercontent.com/s/pb3pubwywwetml9/D388F163-2BE6-4910-8A43-FD1BBB772F4E-40520-0002557FF8F592CA.gif?dl=0)
+## Resources
 
-```js
-getInitialState() {
-  return {
-    books: [{
-      author: 'George R. R. Martin',
-      cover: 'https://upload.wikimedia.org/wikipedia/en/9/93/AGameOfThrones.jpg',
-      isbn: '978-0553103547',
-      stock: 7,
-      title: 'A Game of Thrones',
-      year: 1996
-    }, {
-      author: 'Neal Stephenson',
-      cover: 'https://upload.wikimedia.org/wikipedia/en/d/d5/Snowcrash.jpg',
-      isbn: '978-1491515051',
-      stock: 3,
-      title: 'Snow Crash',
-      year: 1992
-    }, {
-      author: 'Andy Weir',
-      cover: 'https://upload.wikimedia.org/wikipedia/en/c/c3/The_Martian_2014.jpg',
-      isbn: '978-0804139021',
-      stock: 11,
-      title: 'The Martian',
-      year: 2014
-    }]
-  };
-}
-```
-
-## Assignment: Part 2
-
-When you're finished with the assignment above, enhance your `Books` and `Book` components so users can change a book's stock with their keyboard like this.
-
-![Books Inventory Part 2](https://dl.dropboxusercontent.com/s/ld2u2jit6hm9yni/804FA6BD-9377-4DE7-94DB-4381B30AA59B-40520-000255CD35A762E4.gif?dl=0)
-
-## References
-
-* [GitHub - props vs state by uberVU](https://github.com/uberVU/react-guide/blob/master/props-vs-state.md)
-* [React docs - Component Life Cycle](https://facebook.github.io/react/docs/component-specs.html)
-* [React docs - Multiple Components](https://facebook.github.io/react/docs/multiple-components.html)
+- [GitHub - props vs state by uberVU](https://github.com/uberVU/react-guide/blob/master/props-vs-state.md)
+- [React docs - Component Life Cycle](https://facebook.github.io/react/docs/component-specs.html)
+- [React docs - Multiple Components](https://facebook.github.io/react/docs/multiple-components.html)
