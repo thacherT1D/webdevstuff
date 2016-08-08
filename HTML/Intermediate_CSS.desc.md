@@ -80,6 +80,7 @@ Click on selector type for a live code sample.
 ### Attribute Selectors
 
 `tag[attribute]`
+
 Say you want to put a cool purple border around videos that are looping. You can target them with the boolean attr `loop`:
 ```css
 video[loop] {
@@ -88,6 +89,7 @@ video[loop] {
 ```
 
 `tag[attribute="value"]`
+
 If I wanted to give a cool background image to div's with ONLY the class of "bob" and not ones that may have multiple classes like `class="bob cat", I would do the following:
 
 ```css
@@ -97,6 +99,7 @@ div[class="bob"] {
 ```
 
 `tag[attribute^="starts-with-value"]`
+
 If we wanted to change the color of only links on the page that point at anything within the Galvanize Learn subdomain we could do something like the following:
 
 ```css
@@ -106,6 +109,7 @@ a[href^="https://www.learn.galvanize"] {
 ```
 
 `tag[attribute$="ends-with-value"]`
+
 Say we have an assortment of buttons using a naming convention like `red-small-button`, `red-big-button`, `blue-small-button` etc. etc. If we want to make a style change to big buttons of any color but don't want to update hundreds of class names we could do something like this:
 
 ```css
@@ -115,6 +119,7 @@ button[class$="big-button"] {
 ```
 
 `tag[attribute*="contains-value"]`
+
 Using the example above again, we could also just match for any part of the attribute's value using the `*`
 
 ```css
@@ -138,6 +143,7 @@ button[class*="big"] {
 #### Link-based
 
 `:link` & `:visited`
+
 Above we colored our learn.galvanize.com links orange using the `color` property. Only issue there is that the link doesn't change color when it has been clicked, or *visited*. Using `:link`you can set a *before cliked* color, and with `:visited` an *after clicked* color:
 
 ```css
@@ -151,6 +157,7 @@ a:visited {
 ```
 
 `:hover`
+
 Hover lets you apply styles for whenever your mouse is over an element:
 
 ```css
@@ -160,6 +167,7 @@ button:hover {
 ```
 
 `:active`
+
 Active lets you apply styles for whenever your element is being clicked on. If we wanted it to shift down a couple pixels when clicked we would do somethign like this:
 
 ```css
@@ -178,6 +186,7 @@ button:active {
 #### Text-based
 
 `::first-line` & `::first-letter`
+
 These two are pretty self explainitory. Make style changes to the first line or first letter:
 
 ```css
@@ -191,6 +200,7 @@ p::first-letter {
 ```
 
 `::before` & `::after`
+
 Respectivly these psuedo elements will insert content before and after the specified element:
 
 ```css
@@ -212,7 +222,8 @@ p::after {
 
 #### Interaction-based
 
-* `:focus`
+`:focus`
+
 Most commonly used for form elements, it will apply styles to the item that is currently active:
 
 ```css
@@ -221,7 +232,8 @@ input:focus {
 }
 ```
 
-* `::selection`
+`::selection`
+
 This psuedo class allows you to set style for selection, or highlighting text. We are going to use the `*` wildcard selector which means it applies to all elements on the page:
 
 ```css
@@ -233,13 +245,23 @@ This psuedo class allows you to set style for selection, or highlighting text. W
 
 #### Other
 
-* `:not(.other-selector)`
+`:not(.other-selector)`
+
+This psuedo class will target a group of elements, `div`s in the sample below, that *DO NOT* have a particular selector, the class `special` in the sample below:
+
+```css
+div:not(.special) {
+  background-color: pink;
+}
+```
+
+In other words, all the divs *WITH* the class special will *NOT* get the pink background.
 
 #### Exercise
 
-  - On codepen.io create a div with the class `foo`
-  - create another div with the classes `foo` and `bar`.
-  - Create a style using `not` that changes the background of the `foo` div that doesn't have the class `bar`
+* On codepen.io create a div with the class `foo`
+* create another div with the classes `foo` and `bar`.
+* Using `not` change the background of the div with only the `foo` class.
 
 #### Child Selectors
 
@@ -252,12 +274,12 @@ This psuedo class allows you to set style for selection, or highlighting text. W
 
 #### Exercise
 
-- On codepen.io create a list with 5 items
-- Use `:first-child` to bold the first list item.
+* On codepen.io create a list with 5 items
+* Use `:first-child` to bold the first list item.
 
 ## More Box Model
 
-* The box model consists of content > padding > border > margin
+* The box model, from inside out, consists of content > padding > border > margin
 * All box-model percentages calculate based on the width of the containing element
 * If margins collide, it only uses the larger of the two (“collapsing” them)
   - This does not apply to: inline-block, floated, absolute elements, elements who's overflow is not visible, cleared elements, the root element.
