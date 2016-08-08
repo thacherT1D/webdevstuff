@@ -340,7 +340,7 @@ const App = React.createClass({
 export default App;
 ```
 
-Finally, take a look at the user interface.
+Then, play around with the user interface.
 
 ```shell
 open http://localhost:8000/
@@ -348,7 +348,7 @@ open http://localhost:8000/
 
 ### Exercise
 
-Once everything is working, played around with the user interface and analyze the code. Then, make an educated guess on how data flows between the stateful and stateless components. Write down your guess in your words. No peaking in the next section either. The point is to make a guess now and see how close you are later. At this stage, being right or wrong doesn't matter.
+Analyze the code and make an educated guess on how data flows between the stateful and stateless components. Write down your guess in your words. No peaking in the next section either. The point is to make a guess now and see how close you are later. At this stage, being right or wrong doesn't matter.
 
 ## How does data flow between stateful and stateless components?
 

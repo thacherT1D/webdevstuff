@@ -316,7 +316,7 @@ ReactDOM.render(
 );
 ```
 
-Then, take a look at the user interface.
+Then, play around with the user interface.
 
 ```shell
 open http://localhost:8000/textfield.html
@@ -393,7 +393,7 @@ ReactDOM.render(
 );
 ```
 
-Then, take a look at the user interface.
+Then, play around with the user interface.
 
 ```shell
 open http://localhost:8000/textarea.html
@@ -486,7 +486,7 @@ ReactDOM.render(
 );
 ```
 
-Then, take a look at the user interface.
+Then, play around with the user interface.
 
 ```shell
 open http://localhost:8000/checkbox.html
@@ -611,7 +611,7 @@ ReactDOM.render(
 );
 ```
 
-Then, take a look at the user interface.
+Then, play around with the user interface.
 
 ```shell
 open http://localhost:8000/radio.html
@@ -702,7 +702,7 @@ ReactDOM.render(
 );
 ```
 
-Then, take a look at the user interface.
+Then, play around with the user interface.
 
 ```shell
 open http://localhost:8000/select.html
@@ -795,7 +795,7 @@ ReactDOM.render(
 );
 ```
 
-Then, take a look at the user interface.
+Then, play around with the user interface.
 
 ```shell
 open http://localhost:8000/form.html
@@ -867,7 +867,7 @@ ReactDOM.render(
 );
 ```
 
-Then, take a look at the user interface.
+Then, play around with the user interface.
 
 ```shell
 open http://localhost:8000/focus.html
@@ -967,7 +967,7 @@ ReactDOM.render(
 );
 ```
 
-Then, take a look at the user interface.
+Then, play around with the user interface.
 
 ```shell
 open http://localhost:8000/mouse.html
@@ -1097,7 +1097,7 @@ ReactDOM.render(
 );
 ```
 
-Then, take a look at the user interface.
+Then, play around with the user interface.
 
 ```shell
 open http://localhost:8000/keyboard.html
