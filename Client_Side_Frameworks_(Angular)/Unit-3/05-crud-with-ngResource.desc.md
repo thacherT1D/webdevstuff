@@ -18,11 +18,11 @@ If our backend is set up correctly and with a little set up on the front end, we
 
 #### built in methods given to you by $resource
 
-1. `get()` - retrieve an individual resource
-2. `query()` - retrieve all data for that resource
-3. `save()` - save a single instance
-4. `remove()` - remove a single instance
-5. `delete()` - remove a single instance
+1. `$get()` - retrieve an individual resource
+2. `$query()` - retrieve all data for that resource
+3. `$save()` - save a single instance
+4. `$remove()` - remove a single instance
+5. `$delete()` - remove a single instance
 
 > **Note:** Wondering what the difference between remove and delete are? See [this stackoverflow](http://stackoverflow.com/questions/15706560/difference-between-delete-and-remove-method-in-resource)(Spoiler: there isn't any.)
 
@@ -61,6 +61,7 @@ if we set the key to `id` and the value to `@id`, the value will correspond to t
 Now in our `Pirates` controller we can do the following (these are simple examples):
 
 ```javascript
+angular.module('PirateCrud').controller('PirateController', ['PirateService', pirateController);
 
 function piratesController(Pirate){
 
@@ -115,23 +116,30 @@ function piratesController(Pirate){
 
 ### Adding additional methods to a resource
 
-Unfortunately, `ngResource` does not come with a built in method for updating a resource. However, it is quite simple to add additional methods to a service that we create using `$resource`. Instead of just returning `return $resource('/api/user/:id', { id: '@_id' });` - we can pass in an optional third parameter which we pass in objects with keys (name of our method) and value (what request we are making). To add the update functionality to our todo resource - here is what we need to write in our `services.js`.
+Unfortunately, `ngResource` does not come with a built in method for updating a resource. However, it is quite simple to add additional methods to a service that we create using `$resource`. Instead of just returning `return $resource('/api/user/:id', { id: '@_id' });` - we can pass in an optional third parameter which we pass in objects with keys (name of our method) and value (what request we are making). To add the update functionality to our todo resource - here is what we need to write in our `PirateService.js`.
 
-```js
-angular.module('firstApp').service('UserService', ['$resource', function($resource) {
-  return $resource('/api/user/:id', { id: '@id' }, {
-    update: { method: 'PUT' } // this method issues a PUT request
-  });
-}]);
+```javascript
+
+angular.module('PirateCrud').service('PirateService', ['$resource', pirateService);
+
+function pirateService($resource){
+  return $resource('/api/pirate/:id', {id: '@id'}, {
+    update: { method: 'PUT' }
+  });  
+}
 ```
 We would then use code like this in our Angular controller:
 
-```js
-$scope.updateUser = function(user){
-		UserService.update(user, function(user){
-		    // This is an optional callback to be run after the resource is updated.
-		})
-	}
+```javascript
+vm.updatePirate = updatePirate;
+
+function updatePirate(pirate){
+  return Pirate.$update(pirate)
+      .then(function(pirate){
+        // This is an optional callback to be run after the resource is updated.
+      })
+      .catch(handleError);
+}
 ```
 
 ### An important note
