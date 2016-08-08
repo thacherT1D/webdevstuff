@@ -236,29 +236,37 @@ Then, turn to a neighbor and, in your own words, explain why props and state are
 
 ## How do you use props and state to build a component hierarchy with separate concerns?
 
-When building a large React application, it becomes important to create modular components with well-defined interfaces. While you're free to separate the different concerns of your application however you want, React components tend fall in one of two groups—either stateful or stateless.
+When building a large React user interface, it becomes important to create modular components with well-defined concerns. While you're free to separate the different concerns of your user interface however you want, React components tend fall in one of two groups—either stateful or stateless.
 
 A **stateful component** may have props but it definitely has state. Typically, a stateful component is at or near the root of a component hierarchy and is responsible for managing the majority of the hierarchy's state. Clearly stateful components are a requirement for interactivity. However, the fewer stateful components a hierarchy has, the easier it is to understand how data flows through it.
 
 A **stateless component** often has props but it definitely has *no* state. Typically, a stateless component is at or near the leaves of a component hierarchy and is responsible for handling the majority of the hierarchy's events. A typical component hierarchy has more stateless components than stateful components, especially if it creates a user interface with lots of events.
 
-Here's an example of how to create a component hierarchy with both stateful and stateless components.
+Let's build a React user interface with both a both stateful and stateless component. To get started, create a new Brunch application.
 
 ```shell
 brunch new props_and_state --skeleton ryansobol/with-react
 ```
 
+And change into the project directory.
+
 ```shell
 cd props_and_state
 ```
+
+Watch the project for changes and launch an HTTP server.
 
 ```shell
 npm start
 ```
 
+In a new Terminal tab, navigate back to the project directory.
+
 ```shell
 cd path/to/props_and_state
 ```
+
+And open the project in Atom.
 
 ```shell
 atom .
@@ -290,7 +298,7 @@ const Book = React.createClass({
 export default Book;
 ```
 
-In the `app/components/app.jsx` file, type the following code.
+And in the `app/components/app.jsx` file, type the following code.
 
 ```jsx
 import Book from 'components/book';
@@ -332,13 +340,15 @@ const App = React.createClass({
 export default App;
 ```
 
+Finally, take a look at the user interface.
+
 ```shell
 open http://localhost:8000/
 ```
 
 ### Exercise
 
-Once everything is working, make an educated guess on how data flows between stateful and stateless components and write it down.
+Once everything is working, played around with the user interface and analyze the code. Then, make an educated guess on how data flows between the stateful and stateless components. Write down your guess in your words. No peaking in the next section either. The point is to make a guess now and see how close you are later. At this stage, being right or wrong doesn't matter.
 
 ## How does data flow between stateful and stateless components?
 
