@@ -8,7 +8,7 @@ By the end of this lesson you should:
 - Be able to implement and utilize `ngResource`.
 - Be able to add custom http methods to `ngResource`.
 
-### Refactoring to use $resource
+### Refactoring $http to $resource
 
 So far we have made API calls using the `$http` service, but when we start building more complex backends (especially ones that use RESTful routing), we can leverage a more advanced tool - `ngResource`. The `ngResource` module provides interaction with RESTful services via the $resource service. It is important to note that the $resource service is built on the top of the $http service so this is simply an extension of things that we have seen before. $resource also handles the resolving/rejecting of a promise for us, so there is no need to add `.then` to our methods (unlike `$http`). However, `$resource` does assume that we have a RESTful backend which means that our routes on the server need to be set up as follows (we've seen this many times!):
 
