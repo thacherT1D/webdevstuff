@@ -348,7 +348,7 @@ open http://localhost:8000/
 
 ### Exercise
 
-Analyze the code and make an educated guess on how data flows between the stateful and stateless components. Write down your guess in your words. No peaking in the next section either. The point is to make a guess now and see how close you are later. At this stage, being right or wrong doesn't matter.
+Once the user interface is working, analyze the code and make an educated guess on how data flows between the stateful and stateless components. Write down your guess in your words. No peaking in the next section either. The point is to make a guess now and see how close you are later. At this stage, being right or wrong doesn't matter.
 
 ## How does data flow between stateful and stateless components?
 
