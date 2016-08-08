@@ -366,10 +366,10 @@ Being stateless, each `<Track />` component is responsible for handling the hier
 
 The following table enumerates the values stored inside the `this.props` object for each `<Track />` component.
 
-| `this.props.track`                                       | `this.props.index` | `this.props.updateBook()`  |
+| `this.props.track`                                       | `this.props.index` | `this.props.updateTrack()` |
 |----------------------------------------------------------|--------------------|----------------------------|
-| `{ title: 'Hey Jude', artist: 'The Beatles', likes: 0 }` | `0`                | `updateBook()`             |
-| `{ title: 'Hello', artist: 'Adele', likes: 0 }`          | `1`                | `updateBook()`             |
+| `{ title: 'Hey Jude', artist: 'The Beatles', likes: 0 }` | `0`                | `updateTrack()`            |
+| `{ title: 'Hello', artist: 'Adele', likes: 0 }`          | `1`                | `updateTrack()`            |
 
 Inside the `render()` method of the `Book` component class, the `book` and `index` props are combined with HTML components to produce a user interface. The user interface allows a user to view and update a book's information.  When the value of the `<input type="text" />` component changes, the `handleChange()` method is invoked.
 
