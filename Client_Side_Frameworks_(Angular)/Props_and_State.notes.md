@@ -350,7 +350,7 @@ In React, an **owner** is a component that sets the props of another component. 
 
 Being stateless, each `<Book />` component is responsible for handling the hierarchy's events for a single book. To handle this responsibility, the owner sets each component's `book`, `index`, `key`, and `updateBook` props. With the exception of the `key` prop, the key-value pairs are accessible inside the `Book` component class using the `this.props` object.
 
-**NOTE:** The `key` prop is used by React to uniquely identify sibling components of the same type. If a keyed component is changed in any way, React can more efficiently update the DOM. The `key` prop is *not* accessible via `this.props.key`.
+**NOTE:** The `key` prop is used by React to uniquely identify sibling components of the same type. If a keyed component is changed in any way, React can more efficiently update the DOM hierarchy. The `key` prop is *not* accessible via `this.props.key`.
 
 The following table enumerates the values stored inside the `this.props` object for each `<Book />` component.
 
