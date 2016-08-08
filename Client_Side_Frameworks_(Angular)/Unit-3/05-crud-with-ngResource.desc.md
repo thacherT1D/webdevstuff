@@ -62,7 +62,7 @@ function pirateService($resource){
 #### What is this `@_id`?
 
 The second argument to $resource() is an object with the parameter as the key and the value is whatever property we set (starting with a @). This means that
-if we set the key to `id` and the value to `@id`, the value will correspond to the `id` property of the instance that we have passed to the method we used. This is very useful for PUT and DELETE requests.
+if we set the key to `id` and the value to `@id`, the value will correspond to the `id` property of the instance that we have passed to the method we used. This is very useful for `PUT` and `DELETE` requests.
 
 #### Seeing these methods in action
 
