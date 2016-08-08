@@ -272,7 +272,7 @@ And open the project in Atom.
 atom .
 ```
 
-In the `app/components/book.jsx` file, type the following code.
+In the `app/components/track.jsx` file, type the following code.
 
 ```jsx
 import React from 'react';
@@ -371,21 +371,21 @@ The following table enumerates the values stored inside the `this.props` object 
 | `{ title: 'Hey Jude', artist: 'The Beatles', likes: 0 }` | `0`                | `updateTrack()`            |
 | `{ title: 'Hello', artist: 'Adele', likes: 0 }`          | `1`                | `updateTrack()`            |
 
-Inside the `render()` method of the `Book` component class, the `book` and `index` props are combined with HTML components to produce a user interface. The user interface allows a user to view and update a book's information.  When the value of the `<input type="text" />` component changes, the `handleChange()` method is invoked.
+Inside the `render()` method of the `Track` component class, the `track` and `index` props are combined with HTML components to produce a user interface. The user interface allows a user to view and update a track's information.  When the value of the `<input type="text" />` component changes, the `handleChange()` method is invoked.
 
-As you've seen, event handlers process an event and update a component's state. However, not all components have state to update, as is the case with the stateless `<Book />` components. Rather than calling the `this.setState()` method, each `<Book />` component is given a `this.props.updateBook()` state mutator method to call instead.
+As you've seen, event handlers process an event and update a component's state. However, not all components have state to update, as is the case with the stateless `<Track />` components. Rather than calling the `this.setState()` method, each `<Track />` component is given a `this.props.updateTrack()` state mutator method to call instead.
 
-In React, a **state mutator** is a method inside a stateful component that calls the `this.setState()` method. In the above code example, the `updateBook()` state mutator method is specified in the `App` component class but passed to each `<Book />` component through its props. When the `handleChange()` method is triggered, the state mutator is invoked.
+In React, a **state mutator** is a method inside a stateful component that calls the `this.setState()` method. In the above code example, the `updateTrack()` state mutator method is specified in the `App` component class but passed to each `<Track />` component through its props. When the `handleChange()` method is triggered, the state mutator is invoked.
 
 When nesting custom components, data flows from the owner to the owned through its props. Effectively, this is another form of one-way data binding. Owners bind their owned component's props to some value the owner has computed based on its props or state. Since this process happens recursively, data changes are automatically reflected everywhere they are used.
 
-In React, **autobinding** is the process of binding a component to its methods. In other words, the `this` variable inside a component's method automatically refers to the component that specified the method no matter how the method was invoked. Specifically, this is why the `this` variable inside the `updateState()` method refers to a `<Books />` component even though it was invoked using `this.props.updateState()`.
+In React, **autobinding** is the process of binding a component to its methods. In other words, the `this` variable inside a component's method automatically refers to the component that specified the method no matter how the method was invoked. Specifically, this is why the `this` variable inside the `updateState()` method refers to a `<Tracks />` component even though it was invoked using `this.props.updateState()`.
 
 **NOTE:** React only autobinds components to methods specified with the `React.createClass()` method and not with the ES2015 `class` keyword.
 
 Since mutable state increases complexity and reduces predictability, components with only immutable props are easier to think about. Whenever it's time to update the DOM hierarchy, they build the user interface using the data they're given. When a user interacts with their components, they handle the event using the methods they're given.
 
-Inside the `render()` method of the `Books` component class, the `Array.prototype.map()` method collects the returned `<Book />` elements into an array. When an array is used as a child, its elements become individual children of the parent `ReactElement`.
+Inside the `render()` method of the `Tracks` component class, the `Array.prototype.map()` method collects the returned `<Track />` elements into an array. When an array is used as a child, its elements become individual children of the parent `ReactElement`.
 
 ### Exercise
 
