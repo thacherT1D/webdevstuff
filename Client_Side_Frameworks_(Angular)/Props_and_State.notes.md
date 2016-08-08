@@ -4,6 +4,7 @@
 - Explain what state is.
 - Explain why props and state are important.
 - Use props and state to build a component hierarchy with separate concerns.
+- Explain how data flows between stateful and stateless components.
 
 | Duration by yourself | Duration as a class |
 |----------------------|---------------------|
@@ -14,7 +15,7 @@
 **Props** are data that's passed into a component when it's created. For example, you can use props to pass in HTML attributes when creating a native HTML component.
 
 ```jsx
-var element = <p className="bold">Tokyo Dog</p>;
+const element = <p className="bold">Tokyo Dog</p>;
 ```
 
 Additionally, props are **immutable**, or unchangeable, data that configures a new component before it's mounted (i.e. inserted into the DOM hierarchy). Props are accessible anywhere inside a component class via the `this.props` object. After a component's props are set, they never change.
@@ -239,12 +240,36 @@ When building a large React application, it becomes important to create modular 
 
 A **stateful component** may have props but it definitely has state. Typically, a stateful component is at or near the root of a component hierarchy and is responsible for managing the majority of the hierarchy's state. Clearly stateful components are a requirement for interactivity. However, the fewer stateful components a hierarchy has, the easier it is to understand how data flows through it.
 
-A **stateless component** often has props but it definitely has *no* state. Typically, a stateless component is at or near the leaves of a component hierarchy and is responsible for handling the majority of the hierarchy's user interface and events. Typically, a component hierarchy will have more stateless components than stateful components, especially when building complex user interfaces with lots of events.
+A **stateless component** often has props but it definitely has *no* state. Typically, a stateless component is at or near the leaves of a component hierarchy and is responsible for handling the majority of the hierarchy's events. A typical component hierarchy has more stateless components than stateful components, especially if it creates a user interface with lots of events.
 
-You might be wondering how its possible to split the responsibility of managing state and handling events between two different components. For that, we'll need the help of three new concepts—ownership, state mutators, and autobinding.
+Here's an example of how to create a component hierarchy with both stateful and stateless components.
+
+```shell
+brunch new props_and_state --skeleton ryansobol/with-react
+```
+
+```shell
+cd props_and_state
+```
+
+```shell
+npm start
+```
+
+```shell
+cd path/to/props_and_state
+```
+
+```shell
+atom .
+```
+
+In the `app/components/book.jsx` file, type the following code.
 
 ```jsx
-var Book = React.createClass({
+import React from 'react';
+
+const Book = React.createClass({
   handleChange(event) {
     this.props.updateBook(this.props.index, event.target.value);
   },
@@ -252,6 +277,7 @@ var Book = React.createClass({
   render() {
     return <div>
       <h2>Book {this.props.index}: {this.props.book}</h2>
+
       <input
         onChange={this.handleChange}
         type="text"
@@ -261,7 +287,16 @@ var Book = React.createClass({
   }
 });
 
-var Books = React.createClass({
+export default Book;
+```
+
+In the `app/components/app.jsx` file, type the following code.
+
+```jsx
+import Book from 'components/book';
+import React from 'react';
+
+const App = React.createClass({
   getInitialState() {
     return {
       books: [
@@ -273,30 +308,41 @@ var Books = React.createClass({
   },
 
   updateBook(index, value) {
-    var nextBooks = this.state.books;
+    const nextBooks = this.state.books;
+
     nextBooks[index] = value;
+
     this.setState({ books: nextBooks });
   },
 
   render() {
-    var bookEls = this.state.books.map((book, index) => {
-      return <Book
-        book={book}
-        index={index}
-        key={index}
-        updateBook={this.updateBook}
-      />;
-    });
-
-    return <div>{bookEls}</div>;
+    return <div>
+      {this.state.books.map((book, index) => {
+        return <Book
+          book={book}
+          index={index}
+          key={index}
+          updateBook={this.updateBook}
+        />;
+      })}
+    </div>;
   }
 });
 
-ReactDOM.render(
-  <Books />,
-  document.getElementById('container')
-);
+export default App;
 ```
+
+```shell
+open http://localhost:8000/
+```
+
+### Exercise
+
+Once everything is working, make an educated guess on how data flows between stateful and stateless components and write it down.
+
+## How does data flow between stateful and stateless components?
+
+You might be wondering how its possible to split the responsibility of managing state and handling events between two different components. For that, we'll need the help of three new concepts—ownership, state mutators, and autobinding.
 
 In the above code example, two component classes are defined—`Book` and `Books`. `<Book />` components are stateless because its class doesn't use the `getInitialState()` method or the `this.setState()` method. On the other hand, `<Books />` components are stateful because its class *does* use the `getInitialState()` and `this.setState()` methods.
 
