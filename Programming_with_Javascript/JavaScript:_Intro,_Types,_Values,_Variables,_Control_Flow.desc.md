@@ -500,9 +500,13 @@ How to go to the console:
 
 Do the same prediction and evaluation for the following comparisons:
 - `(1 === '1')`
+
 - `(1 == 'zero')`
+
 - `(1 != '000')`
+
 - `(0 !== '')`
+
 - `(0 !== 'refrigerator')`
 
 Turn to a neighbor and discuss which evaluations didn't turn out how you expected and why they may have turned out the way that they did
