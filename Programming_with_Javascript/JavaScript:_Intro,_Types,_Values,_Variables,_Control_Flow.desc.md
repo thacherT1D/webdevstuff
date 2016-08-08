@@ -697,7 +697,15 @@ greet();
 
 That's it! Now we can re-use the instructions of `greet` whenever we want. Above, we just invoked it 3 times. :)
 
-### Exercise
+### Exercise 1
+Create a function call `capWord` that prints out a word and then prints out the capitalized word.
+```javascript
+capWord(); // You must implement this function
+// word
+// Word
+```
+
+### Exercise 2
 
 Write a function called `yell` that prints out a phrase 10 times in a row.  On the 10th iteration, the phrase should be in all caps and have an extra exclamation point at the end.  Example output is below:
 
