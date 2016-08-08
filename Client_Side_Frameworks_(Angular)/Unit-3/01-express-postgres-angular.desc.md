@@ -29,6 +29,7 @@ __What will our new file structure look like?__
 ```
 
 ## Objectives
+
 * Be able to use Angular in a full stack application
 * Use `$http` to CRUD from Angular to Postgres
 * Know the difference between client side routes and server side routes
@@ -36,6 +37,7 @@ __What will our new file structure look like?__
 
 
 ### Set Up
+
 __#1 New up an Express App named pirates__
 ```sh
 express pirates --git
@@ -82,6 +84,7 @@ git commit -m "initial commit"
 ```
 
 ### Add an Angular Module and Wire Up a Controller
+
 1. Name your angular app `ng-app='pirates'`
 1. In `javascripts/app.js` instantiate your angular module `var app = angular.module('pirates', [])`
 1. Create a `PiratesController`
@@ -102,6 +105,7 @@ git commit -m "instantiate pirates module"
 1. In `pirates.html` add `<h1>Pirates</h1>`
 
 #### Part II - Routing in Angular
+
 1. Go get the CDN for `angular-route`
 1. Include the `angular-route.min.js` script in your `index.html`
 1. add `ngRoute` to your app module `var app = angular.module('pirates', ['ngRoute'])`
@@ -124,6 +128,7 @@ We are going to use `knex` to connect to a local `postgres` database and seed so
 data to get us up and running.
 
 ### Configuing our local postgres connection using knex
+
 ```sh
 npm install --save knex pg
 knex init
@@ -134,6 +139,7 @@ touch db/knex.js
 Using `knex` config your app to a local `postgres` database called `pirates_development`
 
 ### Seeding the Database (write the code you wish to see)
+
 Let's start with our seed file and let the errors guide our way to spinning up
 the migration schema we need.
 
@@ -225,13 +231,13 @@ __Adding a `PiratesService` service to our app:__
 ```js
 // services/pirates_service.js
 
-app.factory('PiratesService', function ($http) {
-  return {
-    all: function() {
-      return $http.get('/api/pirates');
-    }
+app.service('PiratesService', function ($http) {
+  this.all = all;
+
+  function all(){
+   return $http.get('/api/pirates');
   }
-})
+});
 
 ```
 [More on Services, Factories and Angular](http://tylermcginnis.com/angularjs-factory-vs-service-vs-provider/)
@@ -294,9 +300,9 @@ Right now, your `PiratesController` should look like this:
 
 ```
 // app.js
-app.controller('PiratesController', function ($scope) {
+app.controller('PiratesController', ['$scope', function ($scope) {
 
-})
+}]);
 ```
 Not much going on there, which is kind of nice. We can just focus on making this
 one thing happen right now (getting the pirates to our view!).
