@@ -284,7 +284,7 @@ Now that our component class has some presentation logic, let's spice it up by a
     },
 
     render: function() {
-      return React.createElement('h1', null, 'Hello ' + this.state.who);
+      return React.createElement('h1', null, `Hello ${this.state.who}`);
     }
   });
 
@@ -324,7 +324,7 @@ Now that our component class has state, let's provide a user interface to change
 
     render: function() {
       return React.createElement('div', null,
-        React.createElement('h1', null, 'Hello ' + this.state.who),
+        React.createElement('h1', null, `Hello ${this.state.who}`),
         React.createElement('input', { type: 'text' })
       );
     }
@@ -382,7 +382,7 @@ With a user interface in place, let's make it dynamic by connecting the `input` 
 
     render: function() {
       return React.createElement('div', null,
-        React.createElement('h1', null, 'Hello ' + this.state.who),
+        React.createElement('h1', null, `Hello ${this.state.who}`),
         React.createElement('input', {
           onChange: this.handleChange,
           type: 'text',
