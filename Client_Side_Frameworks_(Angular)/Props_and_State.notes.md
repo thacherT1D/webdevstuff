@@ -3,7 +3,7 @@
 - Explain what props are.
 - Explain what state is.
 - Explain why props and state are important.
-- Use props and state to build a component hierarchy with separate concerns.
+- Use props and state to the separate concerns of a React user interface.
 - Explain how data flows between stateful and stateless components.
 
 | Duration by yourself | Duration as a class |
@@ -234,7 +234,7 @@ Type out the above code example by hand and then run it. Resist the urge to copy
 
 Then, turn to a neighbor and, in your own words, explain why props and state are important. After about a few minutes, your instructor will cold call on the class and ask what was discussed.
 
-## How do you use props and state to build a component hierarchy with separate concerns?
+## How do you use props and state to the separate concerns of a React user interface?
 
 When building a large React user interface, it becomes important to create modular components with well-defined concerns. While you're free to separate the different concerns of your user interface however you want, React components tend fall in one of two groups—either stateful or stateless.
 
