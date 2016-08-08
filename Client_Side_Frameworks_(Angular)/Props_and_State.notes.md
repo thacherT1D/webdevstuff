@@ -3,7 +3,7 @@
 - Explain what props are.
 - Explain what state is.
 - Explain why props and state are important.
-- Use props and state to build a React component hierarchy.
+- Use props and state to build a component hierarchy with separate concerns.
 
 | Duration by yourself | Duration as a class |
 |----------------------|---------------------|
@@ -233,9 +233,9 @@ Type out the above code example by hand and then run it. Resist the urge to copy
 
 Then, turn to a neighbor and, in your own words, explain why props and state are important. After about a few minutes, your instructor will cold call on the class and ask what was discussed.
 
-## How do you separate components by concern?
+## How do you use props and state to build a component hierarchy with separate concerns?
 
-When building larger React applications, it becomes important to create modular components with well-defined interfaces. While you're free to separate the different concerns of your application however you want, React components tend fall in one of two groups—either stateful or stateless.
+When building large React applications, it becomes important to create modular components with well-defined interfaces. While you're free to separate the different concerns of your application however you want, React components tend fall in one of two groups—either stateful or stateless.
 
 A **stateful component** may have props but it definitely has state. Typically, a stateful component is at or near the root of a component hierarchy and is responsible for managing the majority of the hierarchy's state. Clearly stateful components are a requirement for interactivity. However, the fewer stateful components a hierarchy has, the easier it is to understand how data flows through it.
 
