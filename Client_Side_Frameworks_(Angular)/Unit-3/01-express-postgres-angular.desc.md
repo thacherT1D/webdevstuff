@@ -29,6 +29,7 @@ __What will our new file structure look like?__
 ```
 
 ## Objectives
+
 * Be able to use Angular in a full stack application
 * Use `$http` to CRUD from Angular to Postgres
 * Know the difference between client side routes and server side routes
@@ -36,6 +37,7 @@ __What will our new file structure look like?__
 
 
 ### Set Up
+
 __#1 New up an Express App named pirates__
 ```sh
 express pirates --git
