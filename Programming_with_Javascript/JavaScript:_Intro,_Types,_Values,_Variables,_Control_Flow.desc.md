@@ -697,15 +697,7 @@ greet();
 
 That's it! Now we can re-use the instructions of `greet` whenever we want. Above, we just invoked it 3 times. :)
 
-### Exercise 1
-Create a function call `capWord` that prints out a word and then prints out the capitalized word.
-```javascript
-capWord(); // You must implement this function
-// word
-// Word
-```
-
-### Exercise 2
+### Exercise
 
 Write a function called `yell` that prints out a phrase 10 times in a row.  On the 10th iteration, the phrase should be in all caps and have an extra exclamation point at the end.  Example output is below:
 
@@ -738,8 +730,15 @@ function hello(name, age) {
 
 The parameters are `name` and `age`.  They are variables that are defined in the function
 
+### Exercise 1
+Create a function call `capWord` that prints out a word and then prints out the capitalized word.
+```javascript
+capWord("awesome"); // You must implement this function
+// awesome
+// Awesome
+```
 
-### Exercise
+### Exercise 2
 
 Create a function that takes name of a month as a parameter.  Print out every day in that month.  Assume leap years don't exist.
 
