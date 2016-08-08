@@ -226,7 +226,7 @@ The process of calculating and applying differences is called **reconciliation**
 1. Not read from or write directly to the DOM.
 1. Not interact with the browser via functions like `setTimeout()`.
 
-React provides other places where you can modify state or interact with the browser, which you'll learn about later. Just not in the `render()` function.
+React provides other places where you can modify state or interact with the browser, which you'll learn about later. Just not in the `render()` method.
 
 ### Exercise
 
@@ -342,11 +342,11 @@ Once everything is working, make an educated guess on how data flows between sta
 
 ## How does data flow between stateful and stateless components?
 
-In the above code example, the responsibility of managing state and handling events is split between two different component classes—`App` and `Book` respectively. An `<App />` component is stateful because its class uses the `getInitialState()` and `this.setState()` methods. On the other hand, a `<Book />` component is stateless because its class doesn't use the `getInitialState()` function or the `this.setState()` methods.
+In the above code example, the responsibility of managing state and handling events is split between two different component classes—`App` and `Book` respectively. An `<App />` component is stateful because its class uses the `getInitialState()` and `this.setState()` methods. On the other hand, a `<Book />` component is stateless because its class doesn't use the `getInitialState()` method or the `this.setState()` method.
 
 Being stateful, an `<App />` component is only responsible for managing a component hierarchy's state. While it could also handle a hierarchy's events, it follows the [single responsibility principal](https://en.wikipedia.org/wiki/Single_responsibility_principle) and delegates the additional responsibility to the stateless components that it owns.
 
-In React, an **owner** is a component that sets the props of another component. Inside the `render()` function of the `App` component class, a new `<Book />` component is created for each book in the `this.state.books` array. As each component is created, its props are set. Therefore, the `<App />` component is the owner of the `<Book />` components that are created inside its `render()` method.
+In React, an **owner** is a component that sets the props of another component. Inside the `render()` method of the `App` component class, a new `<Book />` component is created for each book in the `this.state.books` array. As each component is created, its props are set. Therefore, the `<App />` component is the owner of the `<Book />` components that are created inside its `render()` method.
 
 Being stateless, each `<Book />` component is responsible for handling the hierarchy's events for a single book. To handle this responsibility, the owner sets each component's `book`, `index`, `key`, and `updateBook` props. With the exception of the `key` prop, the key-value pairs are accessible inside the `Book` component class using the `this.props` object.
 
@@ -360,11 +360,11 @@ The following table enumerates the values stored inside the `this.props` object 
 | `'Snow Crash'`        | `1`                | `updateBook()`             |
 | `'The Martian'`       | `2`                | `updateBook()`             |
 
-Inside the `render()` method of the `Book` component class, the `book` and `index` props are combined with HTML components to produce a user interface. The user interface allows a user to view and update a book's information.  When the value of the `<input type="text" />` component changes, the `handleChange()` event handler function is invoked.
+Inside the `render()` method of the `Book` component class, the `book` and `index` props are combined with HTML components to produce a user interface. The user interface allows a user to view and update a book's information.  When the value of the `<input type="text" />` component changes, the `handleChange()` method is invoked.
 
 As you've seen, event handlers process an event and update a component's state. However, not all components have state to update, as is the case with the stateless `<Book />` components. Rather than calling the `this.setState()` method, each `<Book />` component is given a `this.props.updateBook()` state mutator method to call instead.
 
-In React, a **state mutator** is a method inside a stateful component that calls the `this.setState()` method. In the above code example, the `updateBook()` state mutator method is specified in the `App` component class but passed to each `<Book />` component through its props. When the `handleChange()` function is triggered, the state mutator is invoked.
+In React, a **state mutator** is a method inside a stateful component that calls the `this.setState()` method. In the above code example, the `updateBook()` state mutator method is specified in the `App` component class but passed to each `<Book />` component through its props. When the `handleChange()` method is triggered, the state mutator is invoked.
 
 When nesting custom components, data flows from the owner to the owned through its props. Effectively, this is another form of one-way data binding. Owners bind their owned component's props to some value the owner has computed based on its props or state. Since this process happens recursively, data changes are automatically reflected everywhere they are used.
 
