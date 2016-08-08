@@ -1,5 +1,8 @@
 # Learn to Learn (booya!)
 
+## Slides
+ - [Scott's Slidedeck](https://docs.google.com/a/galvanize.com/presentation/d/1iy3pnObwsdhzu3cpJjHO4ETbsA8aBVv8CS_nh7L007Y/edit?usp=drivesdk)
+
 ## Standard: Thinking Like a Developer
 * Approaches problems in a methodical and disciplined manner
 
