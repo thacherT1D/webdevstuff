@@ -199,21 +199,37 @@ p::before {
 }
 
 p::after {
-  content: '🐓'';
+  content: '🐓';
   font-size: 50;
 }
 ```
 
 #### Exercise
 
-  - On codepen.io
-  - Create a paragraph element and fill it with dummy text.
-  - Add a style using :first-letter to make the first letter capital, bold and massive
+* On codepen.io
+* Create a paragraph element and fill it with dummy text.
+* Add a style using :first-letter to make the first letter capital, bold and massive
 
 #### Interaction-based
 
 * `:focus`
+Most commonly used for form elements, it will apply styles to the item that is currently active:
+
+```css
+input:focus {
+  outline: outline: 3px solid rgba(169, 288, 121, 0.7);
+}
+```
+
 * `::selection`
+This psuedo class allows you to set style for selection, or highlighting text. We are going to use the `*` wildcard selector which means it applies to all elements on the page:
+
+```css
+*::selection {
+  background-color: purple;
+  color: white;
+}
+```
 
 #### Other
 
@@ -345,18 +361,19 @@ Most properties, such as fonts, will be inherited by children. The following pro
 
 ## Resources
 
-- http://flukeout.github.io/ - CSS diner
-- http://www.mezzoblue.com/zengarden/alldesigns/ - CSS zen garden
-- http://www.colors.commutercreative.com/grid/ - Standard CSS colors
-- http://overapi.com/css - CSS cheatsheet
-- https://www.fontsquirrel.com/tools/webfont-generator - webfont generator
-- https://css-tricks.com/snippets/css/a-guide-to-flexbox/ - flexbox guide
-- http://flexboxfroggy.com/ - fun flexbox game
+* [CSS Tricks Almanac](https://css-tricks.com/almanac/)
+* [CSS cheatsheet](http://overapi.com/css)
+* [CSS diner](http://flukeout.github.io/)
+* [CSS zen garden](http://www.mezzoblue.com/zengarden/alldesigns/)
+* [Standard CSS colors](http://www.colors.commutercreative.com/grid/)
+* [Webfont generator](https://www.fontsquirrel.com/tools/webfont-generator)
+* [FLexbox guide](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+* [Fun flexbox game](http://flexboxfroggy.com/)
 
 **More CSS Positioning Practice**:
-  NOTE: You only need to run through the linked exercise on each
+NOTE: You only need to run through the linked exercise on each
 
-  - [Relative Practice](https://www.codecademy.com/courses/advanced-css-positioning/0/4)
-  - [Absolute Practice](https://www.codecademy.com/courses/advanced-css-positioning/1/3)
-  - [Fixed Practice](https://www.codecademy.com/courses/advanced-css-positioning/3/2?)
+* [Relative Practice](https://www.codecademy.com/courses/advanced-css-positioning/0/4)
+* [Absolute Practice](https://www.codecademy.com/courses/advanced-css-positioning/1/3)
+* [Fixed Practice](https://www.codecademy.com/courses/advanced-css-positioning/3/2?)
 
