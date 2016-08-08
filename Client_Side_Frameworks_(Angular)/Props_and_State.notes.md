@@ -379,13 +379,13 @@ In React, a **state mutator** is a method inside a stateful component that calls
 
 When nesting custom components, data flows from the owner to the owned through its props. Effectively, this is another form of one-way data binding. Owners bind their owned component's props to some value the owner has computed based on its props or state. Since this process happens recursively, data changes are automatically reflected everywhere they are used.
 
-In React, **autobinding** is the process of binding a component to its methods. In other words, the `this` variable inside a component's method automatically refers to the component that specified the method no matter how the method was invoked. Specifically, this is why the `this` variable inside the `updateState()` method refers to a `<Tracks />` component even though it was invoked using `this.props.updateState()`.
+In React, **autobinding** is the process of binding a component to its methods. In other words, the `this` variable inside a component's method automatically refers to the component that specified the method no matter how the method was invoked. Specifically, this is why the `this` variable inside the `updateState()` method refers to a `<App />` component even though it was invoked using `this.props.updateState()`.
 
 **NOTE:** React only autobinds components to methods specified with the `React.createClass()` method and not with the ES2015 `class` keyword.
 
 Since mutable state increases complexity and reduces predictability, components with only immutable props are easier to think about. Whenever it's time to update the DOM hierarchy, they build the user interface using the data they're given. When a user interacts with their components, they handle the event using the methods they're given.
 
-Inside the `render()` method of the `Tracks` component class, the `Array.prototype.map()` method collects the returned `<Track />` elements into an array. When an array is used as a child, its elements become individual children of the parent `ReactElement`.
+Inside the `render()` method of the `App` component class, the `Array.prototype.map()` method collects the returned `<Track />` elements into an array. When an array is used as a child, its elements become individual children of the parent `ReactElement`.
 
 ### Exercise
 
