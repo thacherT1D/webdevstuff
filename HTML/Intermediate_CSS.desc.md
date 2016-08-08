@@ -177,10 +177,32 @@ button:active {
 
 #### Text-based
 
-* `:first-line`
-* `:first-letter`
-* `::before {content: "..."}`
-* `::after {content: "..."}`
+`::first-line` & `::first-letter`
+These two are pretty self explainitory. Make style changes to the first line or first letter:
+
+```css
+p::first-line {
+  color: red;
+}
+
+p::first-letter {
+  color: purple;
+}
+```
+
+`::before` & `::after`
+Respectivly these psuedo elements will insert content before and after the specified element:
+
+```css
+p::before {
+  content: '🎉';
+}
+
+p::after {
+  content: '🐓'';
+  font-size: 50;
+}
+```
 
 #### Exercise
 
