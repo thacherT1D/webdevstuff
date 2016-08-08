@@ -9,17 +9,25 @@
 
 ## Resources:
 
-
-
+Clone and fork the following repository [angular-jwt](https://github.com/gSchool/angular-jwt).
 
 ## JWT walkthrough
+
+The following walkthrough will use as a framework the files and code
+located in the `jwt-walktrough` folder. A completed solution is in the `jwt-completed` folder, the code there can be used as reference.
+
+### Getting started
+
+There are two folder, client and server, in order to use this application, you'll need to start two servers. Start `nodemon` in the server folder, and start `http-server` in the client server.
 
 
 ### Authentication
 
-**Create function to hit endpoint**
+**In the Client App, Lets create a function to hit an endpoint**
 
-Create create function to hit `http://localhost:3000/authenticate`
+Lets create a function that hits a server endpoint with a username and password:
+
+In the `controller.js` file, add the following code to the controller named `controller`. Be sure to inject the `$http` service.
 
 ```js
 vm.auth = function(user, password){
@@ -33,7 +41,7 @@ vm.auth = function(user, password){
   }
 ```
 
-Connect function to button.
+In the `index.html` file, lets add the input fields and the button to trigger the `auth` function.
 
 ```html
 <input type="text" ng-model="c.user">
@@ -41,21 +49,24 @@ Connect function to button.
 <button ng-click="c.auth(c.user, c.password)">Authenticate</button>
 ```
 
-**Create Express Endpoint**
+**In the Server App, lets install the required packages**
 
-```js
-var root = require('./routes/index');
-// middleware goes here
-app.use('/', root);
-```
+NPM install the following modules:
+- cors
+- express-jwt
+- jsonwebtoken
 
+In the `app.js` add require `cors` and add it as Middleware. We will require and use the other two as they are needed.
 
+**In the Server App, lets create an express endpoint to hit**
 
-in route file
+In the `index.js` route file, add the following require at the top of the file.
+
 ```js
 var jwt = require('jsonwebtoken');
 ```
 
+Next, lets add a route, `/authenticate`
 
 ```js
 router.post('/authenticate', function(req, res, next) {
@@ -77,7 +88,18 @@ router.post('/authenticate', function(req, res, next) {
 });
 ```
 
-**Store token in angular**
+In this block of code, we check for a specific username and password combination. If the username and password not match expectation, a 401 (Unauthorized) is sent back with a message.
+
+Else, if the username and password match the expectation, a profile object is created, signed, and sent back as json to the client.
+
+
+**Current Behavior**
+
+Before we continue, lets check the current behavior. When you click on `Authenticate` button in the front end, you should see the return on the API call in the browser console window. Try it both with correct and incorrect credentials.
+
+**In the Client App, Store the token in Session Storage**
+
+Update the auth function as seen below. Be sure to inject the `$window` service, it is used to access the Session Storage in the browser.
 
 ```js
 vm.auth = function(user, password){
@@ -96,7 +118,13 @@ vm.auth = function(user, password){
   }
 ```
 
-**Add logout**
+The preceding code calls a server endpoint (which we setup previously), and if the call is successful, it stores the token that is returned in Session Storage. If the class is unsuccessful, it deletes any current tokens in Session Storage.
+
+**In the Client App, Add logout button**
+
+Logging out a user is as simple as deleting the token property from the sessionStorage object.
+
+Add the following code to the controller, and add a button to trigger it(code not provided).
 
 ```js
 vm.logout = function(){
@@ -104,9 +132,11 @@ vm.logout = function(){
 }
 ```
 
-### Authorization
+### Bearer Tokens
 
-**request to endpoint**
+**Client App, Create request to restricted endpoint**
+
+The following function creates a request the the `api/restricted` endpoint (we have not made it yet). If the request is successful, it uses data in the response to update a variable in the view. If the request is unsuccessful, the updates the variable in the view with the error.
 
 ```js
 vm.restricted = function(){
@@ -121,8 +151,13 @@ vm.restricted = function(){
   }
 ```
 
+In the `index.html`, add a button to trigger the `restricted` function and a angular expression to display the `restrictedMessage`.
 
-**Interceptor**
+**Client App, Creating an Interceptor**
+
+An interceptor is a functionality that Angular provides that allows us to specify code to run before a request to a server gets sent out, and before the response from a server is made available to our client (Angular) code.
+
+Add the following two pieces of code to `app.js`
 
 ```js
 app.factory('authInterceptor', ['$q', '$window', function ($q, $window) {
@@ -144,27 +179,43 @@ app.factory('authInterceptor', ['$q', '$window', function ($q, $window) {
 }]);
 ```
 
+An interceptor is an object that has two methods, `request` and `response`. In order for `jwt` to be used, we need to attach it to the Authorization header. The token needs to be prefixed by the word `Bearer`, and a space. As long as the token exists, it needs to be attached to every request that the client makes to the server.
+
 ```js
 app.config(['$httpProvider', function ($httpProvider) {
   $httpProvider.interceptors.push('authInterceptor');
 }]);
 ```
 
-**Middleware**
+The preceding code, tells angular that the factory `authInterceptor` is an interceptor.
+
+
+**Server App, Adding Middleware**
+
+In `app.js`, require express-jwt at the top of the file.
 
 ```js
 var expressJwt = require('express-jwt');
 ```
 
+In `app.js`, require the `api.js` near the top of the file.
+
 ```js
 var api = require('./routes/api');
 ```
+
+In `app.js`, add the `/api` route as follows.
 
 ```js
 app.use('/api', expressJwt({secret:'secret'}), api);
 ```
 
-**Express Endpoint**
+In the preceding code, `expressJwt({secret:'secret'})` will return a 401 if the token is not precent, and if the content has been tampered with.
+
+
+**Server App, Creating a Restricted Endpoint**
+
+In the `routes/api.js`, add the following route.
 
 ```js
 router.get('/restricted', function (req, res) {
@@ -172,9 +223,11 @@ router.get('/restricted', function (req, res) {
 });
 ```
 
+The expressJwt middleware, when authentication is successful, attaches a user property the the req object (`req.user`). The preceding code, just returns the contents of the object that was contained in the jwt back the the client.
 
 
-
+**Final Application**
+Now that all the pieces are in place, you should be able to login, logout, and make a request on a restricted endpoint. Try to send a request to the restricted endpoint when you are not logged in, what happens? Try to modify the token you got from logging on successfully, what happens when you try to hit the restricted endpoint?
 
 
 
