@@ -114,7 +114,7 @@ When an application uses **two-way** data binding:
          └───── Automatic change ────┘
 ```
 
-Two-way data binding works great, especially for smaller applications. With larger applications, it's common to run into a few problems. First, it can be difficult to prevent cycles where a change to one two-way data binding causes a second data binding to change which causes the first data binding to change again. Second, two-way data bindings are expensive in terms of CPU resources. Too many of them can negatively affect an application's perceived speed, especially on resource-contrained mobile devices.
+Two-way data binding works great, especially for smaller applications. With larger applications, it's common to run into a few problems. First, it can be difficult to prevent cycles where a change to one two-way data binding causes a second data binding to change which causes the first data binding to change again. Second, two-way data bindings are expensive in terms of CPU resources. Too many of them can negatively affect an application's perceived speed, especially on resource-constrained mobile devices.
 
 React avoids these problems by only using **one-way** data binding. When building a component hierarchy, its state and presentation logic are combined to produce a user interface. Whenever the state changes, it's automatically recombined with the presentation logic and a new user interface is produced.
 
