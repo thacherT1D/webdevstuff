@@ -354,23 +354,22 @@ Once the user interface is working, analyze the code and make an educated guess 
 
 ## How does data flow between stateful and stateless components?
 
-In the above code example, the responsibility of managing state and handling events is split between two different component classes—`App` and `Book` respectively. An `<App />` component is stateful because its class uses the `getInitialState()` and `this.setState()` methods. On the other hand, a `<Book />` component is stateless because its class doesn't use the `getInitialState()` method or the `this.setState()` method.
+In the above code example, the responsibility of managing state and handling events is split between two different component classes—`App` and `Track` respectively. An `<App />` component is stateful because its class uses the `getInitialState()` and `this.setState()` methods. On the other hand, a `<Track />` component is stateless because its class doesn't use the `getInitialState()` method or the `this.setState()` method.
 
 Being stateful, an `<App />` component is only responsible for managing a component hierarchy's state. While it could also handle a hierarchy's events, it follows the [single responsibility principal](https://en.wikipedia.org/wiki/Single_responsibility_principle) and delegates the additional responsibility to the stateless components that it owns.
 
-In React, an **owner** is a component that sets the props of another component. Inside the `render()` method of the `App` component class, a new `<Book />` component is created for each book in the `this.state.books` array. As each component is created, its props are set. Therefore, the `<App />` component is the owner of the `<Book />` components that are created inside its `render()` method.
+In React, an **owner** is a component that sets the props of another component. Inside the `render()` method of the `App` component class, a new `<Track />` component is created for each track in the `this.state.tracks` array. As each component is created, its props are set. Therefore, the `<App />` component is the owner of the `<Track />` components that are created inside its `render()` method.
 
-Being stateless, each `<Book />` component is responsible for handling the hierarchy's events for a single book. To handle this responsibility, the owner sets each component's `book`, `index`, `key`, and `updateBook` props. With the exception of the `key` prop, the key-value pairs are accessible inside the `Book` component class using the `this.props` object.
+Being stateless, each `<Track />` component is responsible for handling the hierarchy's events for a single track. To handle this responsibility, the owner sets each component's `index`, `key`, `track`, and `updateTrack` props. With the exception of the `key` prop, the key-value pairs are accessible inside the `Track` component class using the `this.props` object.
 
 **NOTE:** The `key` prop is used by React to uniquely identify sibling components of the same type. If a keyed component is changed in any way, React can more efficiently update the DOM hierarchy. The `key` prop is *not* accessible via `this.props.key`.
 
-The following table enumerates the values stored inside the `this.props` object for each `<Book />` component.
+The following table enumerates the values stored inside the `this.props` object for each `<Track />` component.
 
-| `this.props.book`     | `this.props.index` | `this.props.updateBook()`  |
-|-----------------------|--------------------|----------------------------|
-| `'A Game of Thrones'` | `0`                | `updateBook()`             |
-| `'Snow Crash'`        | `1`                | `updateBook()`             |
-| `'The Martian'`       | `2`                | `updateBook()`             |
+| `this.props.track`                                       | `this.props.index` | `this.props.updateBook()`  |
+|----------------------------------------------------------|--------------------|----------------------------|
+| `{ title: 'Hey Jude', artist: 'The Beatles', likes: 0 }` | `0`                | `updateBook()`             |
+| `{ title: 'Hello', artist: 'Adele', likes: 0 }`          | `1`                | `updateBook()`             |
 
 Inside the `render()` method of the `Book` component class, the `book` and `index` props are combined with HTML components to produce a user interface. The user interface allows a user to view and update a book's information.  When the value of the `<input type="text" />` component changes, the `handleChange()` method is invoked.
 
