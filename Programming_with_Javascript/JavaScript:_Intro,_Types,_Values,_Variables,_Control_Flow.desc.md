@@ -489,16 +489,19 @@ When JavaScript compares two values with the `==` operator, it first converts th
 
 See the [equality operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Equality_operators) on the Mozilla Developer Network for more information.
 
-### Exercise
-
-Predict the outcome of the the comparison `(1 == 1)`. Then evaluate it in Chrome's __JavaScript Console__.
+### Exercise - JavaScript in the Chrome console
 
 How to go to the console:
-- Enter `about:blank` into the address bar
+- In Chrome
+- Type `about:blank` into the address bar and press `Enter`
 - Press `command + option + J`. This should open Chrome's __JavaScript Console__
-- Look at the result
+
+To get started on the Exercise, predict the outcome of the the comparison `(1 == 1)`.
+
+Then evaluate `(1 == 1)` in Chrome's __JavaScript Console__ using the same technique you used executing code in the `node` runtime environment.
 
 Do the same prediction and evaluation for the following comparisons:
+
 - `(1 === '1')`
 
 - `(1 == 'zero')`
@@ -619,11 +622,9 @@ Turn to your neighbor and list the six types of falsy values in JavaScript.
 
 ## What is a Function?
 
-In one sentence, we can say that a function is a sequence of instructions that achieve a specific task. I've always found definitions to be more meaningful when they are tied to the world around us. So let's pause for a moment and think of real-world examples that fit our definition....
+In one sentence, we can say that a function is a sequence of instructions that achieve a specific task. A recipe (e.g., making pumpkin pie) or a manual (e.g. assembling a coffee table from IKEA) are great analogies for functions.
 
-When I think about functions in the real world, I often consider a recipe (e.g., making pumpkin pie) or a manual (e.g. assembling a coffee table from IKEA).
-
-At this point, I hope that many of us can embrace our shared definition of a function--they are a sequence of instructions that achieve a specific task.
+The key aspect of function is there ability to be run over and over again and combined to make new processes and workflows. Function truly are the building blocks for ALL applications.
 
 ### Exercise
 
@@ -644,7 +645,7 @@ There are four parts to the above code example:
 1. Keyword `function`
 1. Name for that function
 1. Parameters - a comma separated list enclosed in parenthesis
-1. Instructions - a variable number of optional instructions enclosed in curly braces
+1. Instructions - a variable number of optional instructions enclosed in curly braces; also called the "body" of the function.
 
 ## Creating and Invoking Functions
 
