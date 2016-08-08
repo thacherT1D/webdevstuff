@@ -277,60 +277,61 @@ In the `app/components/book.jsx` file, type the following code.
 ```jsx
 import React from 'react';
 
-const Book = React.createClass({
-  handleChange(event) {
-    this.props.updateBook(this.props.index, event.target.value);
+const Track = React.createClass({
+  handleClick() {
+    this.props.updateTrack(this.props.index);
   },
 
   render() {
     return <div>
-      <h2>Book {this.props.index}: {this.props.book}</h2>
+      <p>{this.props.track.title} - {this.props.track.artist}</p>
+      <p>Likes: {this.props.track.likes}</p>
 
-      <input
-        onChange={this.handleChange}
-        type="text"
-        value={this.props.book}
-      />
+      <button onClick={this.handleClick}>Like</button>
     </div>;
   }
 });
 
-export default Book;
+export default Track;
 ```
 
 And in the `app/components/app.jsx` file, type the following code.
 
 ```jsx
-import Book from 'components/book';
 import React from 'react';
+import Track from 'components/track';
 
 const App = React.createClass({
   getInitialState() {
     return {
-      books: [
-        'A Game of Thrones',
-        'Snow Crash',
-        'The Martian'
-      ]
+      tracks: [{
+        title: 'Hey Jude',
+        artist: 'The Beatles',
+        likes: 0
+      }, {
+        title: 'Hello',
+        artist: 'Adele',
+        likes: 0
+      }]
     };
   },
 
-  updateBook(index, value) {
-    const nextBooks = this.state.books;
+  updateTrack(index) {
+    const nextTracks = this.state.tracks;
 
-    nextBooks[index] = value;
+    nextTracks[index].likes += 1;
 
-    this.setState({ books: nextBooks });
+    this.setState({ tracks: nextTracks });
   },
 
   render() {
     return <div>
-      {this.state.books.map((book, index) => {
-        return <Book
-          book={book}
+      {this.state.tracks.map((track, index) => {
+        return <Track
           index={index}
           key={index}
-          updateBook={this.updateBook}
+          track={track}
+          updateTrack={this.updateTrack}
         />;
       })}
     </div>;
