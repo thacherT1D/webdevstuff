@@ -412,7 +412,7 @@ console.log(allListItems);
 
 Make sense? Prepend another element. Try removing an element with `removeChild()`. Once done, show an instructor.
 
-## Practice
+## Homework
 
 See [https://github.com/gSchool/js-dom-tests](https://github.com/gSchool/js-dom-tests).
 
