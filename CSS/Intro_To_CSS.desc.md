@@ -1,12 +1,12 @@
 ## Objectives
 * Define CSS.
-* Define Specificity, Classes, and IDs
-* Explain when you would assign width and height using percentages or pixels values
+* Define Specificity, Classes, and IDs.
+* Explain when you would assign width and height using percentages or pixels values.
 * Explain what behaviors are determined by the display property.
 * Describe the Box Model and what the different parts of it affect.
 * Describe the four values for the position property: `static`, `relative`, `absolute`, and `fixed`.
-* Explain what Media Queries are and when they would be used
-* Describe why you would use pseudo-classes to modify tables
+* Explain what Media Queries are and when they would be used.
+* Describe why you would use pseudo-classes to modify tables.
 
 ## Intro To CSS
 
