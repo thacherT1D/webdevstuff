@@ -12,7 +12,6 @@ Students should be able to:
 - position elements
 - explain the differences between possible values of the `position` property
 - use the `float` property
-- use media queries
 - create tables
 
 
@@ -29,12 +28,12 @@ Students should be able to:
 - [Percentage height-- why doesn't it work?](http://stackoverflow.com/questions/5657964/css-why-doesn-t-percentage-height-work).
 - [Width (MDN)](https://developer.mozilla.org/en-US/docs/Web/CSS/width)
 - [Height (MDN)](https://developer.mozilla.org/en-US/docs/Web/CSS/height)
-- [Auto width vs. 100% idth](http://www.456bereastreet.com/lab/width-auto/)
+- [Auto width vs. 100% width](http://www.456bereastreet.com/lab/width-auto/)
 - [What is the difference between display: inline and display: inline-block?](http://stackoverflow.com/questions/8969381/what-is-the-difference-between-display-inline-and-display-inline-block)
 - [List of HTML5 block elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Block-level_elements)
 - [List of HTML5 inline elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Inline_elemente)
 - [What's the Deal with Display: Inline-Block?](http://designshack.net/articles/css/whats-the-deal-with-display-inline-block/)
-- [Overview of Positioning in CSS](https://css-tricks.com/almanac/properties/p/position/) a great overview on positioning from CSS Tricks. To
+- [Overview of Positioning in CSS](https://css-tricks.com/almanac/properties/p/position/)
 - [Media Queries](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Media_queries).
 - [A Single Div](http://a.singlediv.com/)
 - [The Simpsons](http://pattle.github.io/simpsons-in-css/)
