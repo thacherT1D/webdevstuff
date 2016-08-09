@@ -8,7 +8,7 @@
 
 Clone and fork the following repository [angular-jwt](https://github.com/gSchool/angular-jwt).
 
-### Introduction to Token Authentication
+## Introduction to Token Authentication
 
 Now that we are getting more comfortable building applications with the MEAN stack, it's time to add authentication to our application. This is one of the more difficult topics when learning about how to build Single Page Applications. Before continuing - answer the following questions
 
@@ -27,9 +27,9 @@ Before the emergence of single page applications, we usually had a single client
 
 We now have many different technologies and tools and our Single Page Applications consume multiple APIs. We can easily have an application that uses a Node API, a Rails API as well as other Web/Mobile APIs. This makes it a nightmare and almost impossible to try to share cookie/session data between these APIs. It would be really nice if we could have one single "secret" (a key we store on a server) on all of our servers and share the token between each one!
 
-Some other advantages include performance, Cross-Site Request Forgery (CSRF) protection, ease of testing and mobile development. You can read more about these advantages [here](https://auth0.com/blog/2014/01/07/angularjs-authentication-with-cookies-vs-token/)
+Some other advantages include performance, Cross-Site Request Forgery (CSRF) protection, ease of testing and mobile development. You can read more about these advantages [here](https://auth0.com/blog/2014/01/07/angularjs-authentication-with-cookies-vs-token/). Do not go into the implementation section of the blog post. This article includes a working example.
 
-### Introducing JSON Web Tokens
+## Introducing JSON Web Tokens
 
 So now that we know that tokens are a better option, what kind of token should we use? The most popular tool right now are JSON Web Tokens (JWT for short - pronounced "Jot"). So what is a JWT?
 
@@ -54,7 +54,7 @@ Read [http://jwt.io/introduction/](http://jwt.io/introduction/) introduction and
 3. What is Cross-Origin Resource Sharing? Why is this not a problem when using JWTs?
 4. What other types of tokens exist? Why is JWT easier to work with than some other options?
 
-#### Additional Resources
+## Additional Resources
 
 1. [The Anatomy of a JSON Web Token](https://scotch.io/tutorials/the-anatomy-of-a-json-web-token)
 1. [Understanding JSON Web Tokens (JWT)](https://medium.com/vandium-software/5-easy-steps-to-understanding-json-web-tokens-jwt-1164c0adfcec#.h0649q1oi)
@@ -140,7 +140,6 @@ router.post('/authenticate', function(req, res, next) {
 In this block of code, we check for a specific username and password combination. If the username and password not match expectation, a 401 (Unauthorized) is sent back with a message.
 
 Else, if the username and password match the expectation, a profile object is created, signed, and sent back as json to the client.
-
 
 **Current Behavior**
 
