@@ -297,16 +297,22 @@ If you would like to use passport for authentication - this is a great example.
 
 ## Exercise 2 - Full Stack Crud App with Authentication and Authorization! Yay!
 
-Create a todo application that can have multiple users. Follow these guidelines:
+Create a todo application that can have multiple users. This will be a full stack application, you'll need to setup a database, express application (api), and an angular application as the front end.
+
+For the back end, you'll need full CRUD endpoints for the todo items, as well as an endpoint to authenticate the user.
+
+For the front end, you'll need to use ngRoute to provide access to different users todo's. There is no need to use directives.
+
+Follow these guidelines:
 
 - Create a seed file with usernames and passwords (3-4 users).
 - Passwords should not be encrypted. The purpose of this exercise is to use JWT, password encryption is a stretch goal.
 - Account owners should be able to add, delete, update, and display to do items.
 - Users should be able to see other users todos, but not be able to update and delete them.
 
-
 Stretch Goals:
 
 - Create a user registration page.
 - Store encrypted passwords.
+- Add directives where appropriate.
 - Style the application.
