@@ -1,8 +1,6 @@
 # An Introduction to Programming and JavaScript: Arrays, Objects, Iterations
 
-Now that we've talked about primitive data types, let's discuss the last data type in Javascript: objects. Arrays, functions, and (shocker!) objects are all examples of objects. Objects are sometimes referred to as reference types (to distinguish them from the primitive types that we've seen already). Here we'll discuss arrays and objects as well as delve deeper into functions.
-
-## Objectives:
+Objectives:
 
 * Create and manipulate arrays and objects
 * Explain the difference between object dot notation and bracket notation
@@ -14,15 +12,7 @@ Now that we've talked about primitive data types, let's discuss the last data ty
 * Write a deeply nested object
 * Read data from a deeply nested object
 
-## Exercises:
-
-1. Complete part 2 of the JavaScript fundamentals assessment: https://github.com/gSchool/wd-javascript-fundamentals
-
-## Included resources:
-
-- [indexOf (MDN)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf)
-- [slice (MDN)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice)
-- [splice (MDN)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice)
+Now that we've talked about primitive data types, let's discuss the last data type in Javascript: objects. Arrays, functions, and (shocker!) objects are all examples of objects. Objects are sometimes referred to as reference types (to distinguish them from the primitive types that we've seen already). Here we'll discuss arrays and objects as well as delve deeper into functions.
 
 ## Arrays
 
@@ -132,9 +122,9 @@ Imagine that we want to iterate through every element from our array from the fi
 3. We want to increment `i` after every iteration of the `for` loop.
 4. During each iteration, we use `i` to access a element in the array.
 
-**Practice** Write a loop that iterates over the array [1, 2, 3, 4], doubles each element, and stores in back. `[2, 4, 6, 8]` (who do we appreciate?)
+**Exercise** Write a loop that iterates over the array [1, 2, 3, 4], doubles each element, and stores in back. `[2, 4, 6, 8]` (who do we appreciate?)
 
-**Practice** Adele is having trouble remembering her own song lyrics. For some reason, all she knows is the word "Hello". Let's help her out.
+**Exercise** Adele is having trouble remembering her own song lyrics. For some reason, all she knows is the word "Hello". Let's help her out.
 
 ```
 var lines = [
@@ -192,10 +182,11 @@ var person = {
   firstName: "Bruce",
   lastName: "Wayne",
   favoriteColors: ["black", "yellow"]
- }
+}
 ```
+**Question** How can we get Bruce Wayne's second favorite color?
 
-**Practice** Create your person object.
+**Exercise** Create your person object.
 
 ### Dot notation vs. square bracket notation (Creation)
 
@@ -268,7 +259,6 @@ cat.foo // undefined (cat has no value corresponding to the key of foo!)
 cat[foo] // "Felix"
 ```
 
-**Question** How can we get Bruce Wayne's second favorite color?
 
 ### Updating key-value pairs
 
@@ -410,7 +400,7 @@ while (i <= 10) {
 ```
 Why is the above code block problematic?
 
-**Practice:**
+### Exercises
 
 1. Iterate through the array [1, 2, 3, 4] to change the array to [2, 3, 4, 5].
 1. Print the numbers 1 to 10 and also the number 10 to 1, side by side.  Do this using a for loop and a while loop. Expected output:
@@ -625,7 +615,7 @@ Reading deeply nested values is a very important technique. If you want to inclu
 For this reason, you need to gain comfort navigating and finding data anywhere in a deeply nested value.
 
 ***
-**Practice**: Take this deeply nested reference type and write the code to find the following values:
+Exercise: Take this deeply nested reference type and write the code to find the following values:
 
 1. The email of user 1.
 2. The title of user 5.
@@ -741,10 +731,20 @@ var graphObject = {
 ```
 ***
 
-###***> Complete Exercise 1***
-
 ## Conclusion
 
 We learned about reference types. Combined with our knowledge of primitive types, we now know all the data types used in JavaScript. Awesome!
 
 <iframe src="https://player.vimeo.com/video/145447330?byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+## Resources
+
+http://www.pythontutor.com/javascript.html
+> Use this to go through your code step by step to examine variables and see where/when they change.
+
+https://github.com/gSchool/javascriptIntroObjectsArraysIterations
+
+- Read the [Objects section](https://github.com/getify/You-Dont-Know-JS/blob/master/up%20&%20going/ch2.md#objects) of YDKJ: Up and Going, Chapter 2
+
+- Read the [Arrays section](https://github.com/getify/You-Dont-Know-JS/blob/master/up%20&%20going/ch2.md#arrays) of YDKJ: Up and Going, Chapter 2
+
