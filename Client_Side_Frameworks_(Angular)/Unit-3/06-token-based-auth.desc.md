@@ -77,7 +77,7 @@ There are two folder, client and server, in order to use this application, you'l
 
 Lets create a function that hits a server endpoint with a username and password:
 
-In the `controller.js` file, add the following code to the controller named `controller`. Be sure to inject the `$http` service.
+In the `controller.js` file, add the following code to the controller named `controller`. Be sure to inject the `$http` service into the controller.
 
 ```js
 vm.auth = function(user, password){
@@ -284,7 +284,7 @@ The expressJwt middleware, when authentication is successful, attaches a user pr
 Now that all the pieces are in place, you should be able to login, logout, and make a request on a restricted endpoint. Try to send a request to the restricted endpoint when you are not logged in, what happens? Try to modify the token you got from logging on successfully, what happens when you try to hit the restricted endpoint?
 
 
-## Additional Things to consider + read
+## Additional Things to consider and read
 
 Expiring Tokens - right now our tokens never expire, for security they should! Research how to add this to your JWT and see an example [here](https://github.com/sahat/satellizer/blob/master/examples/server/node/server.js)
 
@@ -295,7 +295,18 @@ Expiring Tokens - right now our tokens never expire, for security they should! R
 If you would like to use passport for authentication - this is a great example.
 [http://mherman.org/blog/2015/07/02/handling-user-authentication-with-the-mean-stack/#angular-app](http://mherman.org/blog/2015/07/02/handling-user-authentication-with-the-mean-stack/#angular-app)
 
-## Exercise 2
+## Exercise 2 - Full Stack Crud App with Authentication and Authorization! Yay!
 
-Create todo app.
-Add authentication to your todo app! This is going to be quite challenging so take your time to review the example and concepts discussed in this article. Users should be able to see other users todos, but not be able to update and delete them.
+Create a todo application that can have multiple users. Follow these guidelines:
+
+- Create a seed file with usernames and passwords (3-4 users).
+- Passwords should not be encrypted. The purpose of this exercise is to use JWT, password encryption is a stretch goal.
+- Account owners should be able to add, delete, update, and display to do items.
+- Users should be able to see other users todos, but not be able to update and delete them.
+
+
+Stretch Goals:
+
+- Create a user registration page.
+- Store encrypted passwords.
+- Style the application.
