@@ -416,6 +416,8 @@ Make sense? Prepend another element. Try removing an element with `removeChild()
 
 See [https://github.com/gSchool/js-dom-tests](https://github.com/gSchool/js-dom-tests).
 
+*Note: Only do the assignment in the 'part1-native-js' folder*
+
 
 ## Further Reading
 
