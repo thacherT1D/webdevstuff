@@ -143,6 +143,8 @@ In this block of code, we check for a specific username and password combination
 
 Else, if the username and password match the expectation, a profile object is created, signed, and sent back as json to the client.
 
+`jwt.sign()` return a token that contains the profile object as JSON, and is signed with the string `secret`. This secret is usually put in a `.env` file, but that step was skipped in this case for clarity.
+
 **Current Behavior**
 
 Before we continue, lets check the current behavior. When you click on `Authenticate` button in the front end, you should see the return on the API call in the browser console window. Try it both with correct and incorrect credentials.
@@ -261,7 +263,9 @@ In `app.js`, add the `/api` route as follows.
 app.use('/api', expressJwt({secret:'secret'}), api);
 ```
 
-In the preceding code, `expressJwt({secret:'secret'})` will return a 401 if the token is not precent, and if the content has been tampered with.
+In the preceding code, `expressJwt({secret:'secret'})` is a piece of middleware that will return a 401 if the token is not precent, and if the content has been tampered with. The secret needs to match the secret that was used in `jwt.sign`. Otherwise, you'll always get a 401.
+
+Since `expressJwt({secret:'secret'})` is just a piece of middleware, it can be used as to protect the routes that are defined after it.
 
 
 **Server App, Creating a Restricted Endpoint**
