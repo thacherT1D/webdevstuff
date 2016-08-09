@@ -153,6 +153,8 @@ Before we continue, lets check the current behavior. When you click on `Authenti
 
 Update the auth function as seen below. Be sure to inject the `$window` service, it is used to access the Session Storage in the browser.
 
+In your `controller`, update `vm.auth` to the following code:
+
 ```js
 vm.auth = function(user, password){
     $http.post('http://localhost:3000/authenticate',{username:user, password:password})
