@@ -308,6 +308,7 @@ For the front end, you'll need to use ngRoute to provide access to different use
 Follow these guidelines:
 
 - Create a seed file with usernames and passwords (3-4 users).
+- Use a `.env` file to store the secret for `JWT`.
 - Passwords should not be encrypted. The purpose of this exercise is to use JWT, password encryption is a stretch goal.
 - Account owners should be able to add, delete, update, and display to do items.
 - Users should be able to see other users todos, but not be able to update and delete them.
