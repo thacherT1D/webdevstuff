@@ -17,19 +17,19 @@ Before getting started, use Spotlight to launch the `Terminal` app.
 
 ## What is the command line?
 
-The command line allows you to enter typed commands (e.g. type `do something`, then press `Enter`) to get things done on your computer. Common tasks that you do on the command line are starting and stopping programs, looking at the code that makes a file work, and moving files and directories around the computer. The command line's most important parts are __user accounts__, __commands__, __the file system__, __command flags__, and __manual pages__.
+The command line allows you to enter typed commands to get things done on your computer. Common tasks that you do on the command line are starting and stopping programs, looking at the code that makes a file work, and moving files and directories around the computer. The command line's most important parts are __user accounts__, __commands__, __the file system__, __command flags__, and __manual pages__.
 
-### Exercise
+#### Exercise
 
-Go back to the [development environment setup article](https://learn.galvanize.com/cohorts/78/articles/5101#configure-the-terminal). In the screenshots from that setup, identify 3 different commands and write them on a whiteboard.
+Go back to the [development environment setup article](https://learn.galvanize.com/cohorts/78/articles/5101#configure-the-terminal). Skim through the screenshots from that setup, identify 3 different commands and write them on a whiteboard.
 
 Turn to your neighbor and compare your results.
 
 ## Why is the command line important?
 
-Because you're on a Mac, you're currently working on a computer with a __graphical user interface (GUI)__. A computer with a GUI has an operating system with icons that you can point-and-click with your mouse to start programs and to manipulate files. However, not every computer has a GUI, so you cannot use your mouse to start programs and to manipulate files. On the job, you're likely to be working with computers that only will have command line shells. In other words, your mice and trackpads will not save you! Even on computers with GUIs, typing is best since it's faster.
+Because you're on a Mac, you're currently working on a computer with a __graphical user interface (GUI)__. A computer with a GUI has an operating system with icons that you can point-and-click with your mouse to start programs and to manipulate files. However, not every computer has a GUI, so you wont always be able to use your mouse to start programs and manipulate files. On the job, you'll likely work with computers that will only have command line shells. In other words, your mice and trackpads will not save you! Even on computers with GUIs, typing is best since it's faster.
 
-### Exercise
+#### Exercise
 
 Look back at the [setup for your development environment](https://learn.galvanize.com/cohorts/78/articles/5101). You'll notice that a good chunk of the setup instructions involves the command line. Pick 2 commands and think about how they would be executed using a point-and-click GUI method. Turn to your neighbor and discuss how much faster you think it is to type those commands than to point-and-click to accomplish the same tasks.
 
@@ -103,7 +103,7 @@ It's common for a user account to belong to a many groups. The only important gr
 
 **TIP:** If your user account doesn't belong to the `admin` group, it'll be difficult to manage your development machine.
 
-### Exercise
+#### Exercise
 
 Find out the account name and groups of the current user of your computer.
 
@@ -129,7 +129,7 @@ pwd
 
 ![](https://i.imgur.com/s6Xqtmn.png)
 
-### Exercise
+#### Exercise
 
 What's the current working directory of your shell?
 
@@ -155,7 +155,7 @@ A path is **absolute** when it starts with `/`.
 
 A path is **relative** when it does not.
 
-### Exercise
+#### Exercise
 
 Is the path returned by the `pwd` command absolute or relative?
 
@@ -169,7 +169,7 @@ ls
 
 ![](https://i.imgur.com/tivSrqi.png)
 
-### Exercise
+#### Exercise
 
 In what order are the files and directories displayed?
 
@@ -189,7 +189,7 @@ ls -l
 
 ![](https://i.imgur.com/TzK8I2m.png)
 
-### Exercise
+#### Exercise
 
 How can you tell if an item is a file or directory? **Hint:** look at its permissions.
 
@@ -224,7 +224,7 @@ You may not realize it, but there are **hidden files and directories** scattered
 
 Many programs have configuration settings that they want stored out of plain sight from users. Traditionally, these settings are stored in hidden files and directories in your home directory. As a professional web developer, you'll want to access and modify these settings and, throughout this course, you'll be doing just that.
 
-**TIP:** In fish, the `la` command is the same as `ls -hal` only faster to type.
+**TIP:** The `la` command is the same as `ls -hal` only faster to type.
 
 ## Manual pages
 
@@ -240,9 +240,9 @@ man ls
 
 ![](https://i.imgur.com/CdYtnkQ.png)
 
-Use the down arrow `↓` key to scroll down and the up arrow `↑` key to scroll up. To quit a `man` page and return to the shell, press the `q` key.
+Use `j` key to scroll down and `k` to scroll up. To quit a `man` page and return to the shell, press the `q` key.
 
-### Exercise
+#### Exercise
 
 With the `man` command, spend three minutes discovering new flags for the `ls` command. Try out different combinations of flags to see what they do. For each flag you try, make a prediction about the effect it will have. After trying it, review your prediction.
 
@@ -268,7 +268,7 @@ open .
 
 **TIP:** Remember, the period `.` character represents the current working directory.
 
-### Exercise
+#### Exercise
 
 Why can't you see any hidden files and directories in the Finder?
 
@@ -283,7 +283,7 @@ Why can't you see any hidden files and directories in the Finder?
 - As a path get's longer, does it get more general or more specific?
 - What's an absolute path?
 - What's a relative path?
-- What's the command for listing the contents of a directory?
+- Name a command for listing the contents of a directory?
 - What's the flag for listing directories in long format?
 - What's a hidden file or directory?
 - What's the flag for listing the hidden content of a directory?
@@ -299,7 +299,7 @@ The tilde `~` character represents the home directory. Try displaying the tilde 
 echo ~
 ```
 
-### Exercise
+#### Exercise
 
 Is the output from this command the as the output you got from the `pwd` command?
 
@@ -344,17 +344,17 @@ Another important directory is the root directory `/`
 **Try This**:
 
 ```
-$ cd /  
+$ cd /
 $ pwd
 ```
 
 The files on your computer are structured in a tree. The 'top' of the file system is know as the `root` directory. That may sound upside down, but in our case the root is at the top.
 
-We can move to the **root directory** with the command `cd /`.  
-We can move back to your **home directory** with the command `cd ~`.  
+We can move to the **root directory** with the command `cd /`.
+We can move back to your **home directory** with the command `cd ~`.
 
 ```
-$ cd ~  
+$ cd ~
 $ pwd
 /Users/ryansobol
 ```
@@ -379,7 +379,7 @@ $ cd /
 $ cd ..
 ```
 
-The terminal ignores `cd ..` in this case. the root directory is the only directory in your entire file system that does not have a parent.  
+The terminal ignores `cd ..` in this case. the root directory is the only directory in your entire file system that does not have a parent.
 
 (`../`) is a relative path you can use it anywhere you would use a path. What happens if we type:
 
@@ -396,7 +396,7 @@ drwx------+ 26 Guest  _guest  884 Nov  4 10:47 Library
 drwx------+  3 Guest  _guest  102 Nov  4 10:47 Movies
 drwx------+  3 Guest  _guest  102 Nov  4 10:47 Music
 drwx------+  3 Guest  _guest  102 Nov  4 10:47 Pictures
-drwxr-xr-x+  4 Guest  _guest  136 Nov  4 10:47 Public  
+drwxr-xr-x+  4 Guest  _guest  136 Nov  4 10:47 Public
 ```
 
 The command means, list the contents of the parent of `~/Documents/` So it listed the contents of `~`, or the home directory.
@@ -419,7 +419,7 @@ This way you can easily see the competing outcomes of autocomplete. What happens
 
 The competing options for me are `Desktop/`, `Documents/`, and `Downloads/`
 
-### Exercise
+#### Exercise
 
 Spend three minutes navigating around your computer's file system from the command line. Use a mixture of relative and absolute paths to navigate around. See what dark corners you can discover in your operating system.
 
@@ -437,7 +437,7 @@ Spend three minutes navigating around your computer's file system from the comma
 
 ### The `mkdir` command
 
-Now that you know how to move around, it's time to make some changes. You can make directories with the `mkdir` command.  
+Now that you know how to move around, it's time to make some changes. You can make directories with the `mkdir` command.
 
 >Pro-tip: WordsLikeThis are called CamelCase. Programmers frequently [argue about snake_case and CamelCase](http://programmers.stackexchange.com/questions/27264/naming-conventions-camelcase-versus-underscore-case-what-are-your-thoughts-ab)
 
@@ -469,9 +469,9 @@ What command can you use to see the results of your handywork?
 
 Let's `cd` into your new `notebook`  Look around with `ls`, and `ls -la`.  What do you see?
 
-### Exercise
+#### Exercise
 
-I want my note book to have some notes.  
+I want my note book to have some notes.
 
 `$ touch notes.txt`
 
@@ -495,7 +495,7 @@ We've created a file, so let's try removing it.
 
 `$ history > notes.txt`
 
-Using the closing angle bracket `>` in this way is called **redirection**.  Every command that we run in the shell has an input, an output, an error output, and arguments/operands.  We are saying:  "Take the output from `history` and put it in a new file called `notes.txt`"  
+Using the closing angle bracket `>` in this way is called **redirection**.  Every command that we run in the shell has an input, an output, an error output, and arguments/operands.  We are saying:  "Take the output from `history` and put it in a new file called `notes.txt`"
 
 Try running `ls` again. What do you see that's different?
 
@@ -556,7 +556,7 @@ See how we filtered out just the lines that contain Mil?  Try grepping for somet
 
 Adapted from [http://en.flossmanuals.net/command-line/piping/](http://en.flossmanuals.net/command-line/piping/)
 
-### Exercise: Using grep
+#### Exercise: Using grep
 
 `grep` is a powerful command that can search through text output for matching text, or patterns of text. Use pipes, grep, and the commands we've learned about so far to do the following:
 
