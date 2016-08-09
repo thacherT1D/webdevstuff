@@ -52,6 +52,7 @@ In the `index.html` file, lets add the input fields and the button to trigger th
 **In the Server App, lets install the required packages**
 
 NPM install the following modules:
+
 - cors
 - express-jwt
 - jsonwebtoken
