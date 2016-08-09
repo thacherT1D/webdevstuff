@@ -126,7 +126,7 @@ HTML Elements (`div`, `p`, `ul`, etc) are the least specific CSS selectors. The 
 Then change your stylesheet to look like this:
 
 ```css
-.red {
+.red-box {
   width: 200px;
   height: 200px;
   background-color: red;
@@ -139,6 +139,7 @@ div {
 }
 ```
 
+<<<<<<< 5064243fcf48c74ba012ebc1b46c559d2dd70f99
 The dot in front of "red" indicates that we're targeting a class attribute. Now the first div should be red. Even though the styling for `.red` comes before the styling for `div`, targeting a class is more specific than targeting an element.
 
 The next level of specificty is an id. Let's add a third div with a `class` of red and an `id` of `green-box`.
@@ -155,13 +156,18 @@ The next level of specificty is an id. Let's add a third div with a `class` of r
 ```
 
 Update the stylesheet as follows:
+=======
+(the dot in front of "red" indicates that we're targeting a class). Now the first div should be red. Even though the styling for `.red-box` comes before the styling for `div`, targeting a class is more specific than targeting an element.
+
+The next level of specificty is an id. Let's add a third div with a class of red and an id of green-box; then change the stylesheet as follows:
+>>>>>>> class name and link updates
 
 ```css
 #green-box {
   background-color: green;
 }
 
-.red {
+.red-box {
   width: 200px;
   height: 200px;
   background-color: red;
@@ -180,7 +186,7 @@ Aside from specificity, what's the difference between a class and an id? For tod
 
 After ids, the next level of specificity is inline styling. After that is the `!important` tag. It's not a good practice to use either of these, though, so avoid them wherever possible.
 
-More info: [The Difference Between ID and Class](https://css-tricks.com/the-difference-between-id-and-class/)
+
 
 ## CSS - Width and Height
 
@@ -190,14 +196,6 @@ Instead of pixel values, you can also assign width and height using percentages.
 Here we come to an important difference between width and height. If you want to use a percentage height to work as expected, you need to make sure the parent container has an explicit height set. To learn more, check out [this Stack Overflow article](http://stackoverflow.com/questions/5657964/css-why-doesn-t-percentage-height-work).
 
 One last value to know about for width and height is `inherit`. If the width or height of a div is set to `inherit`, then, as the name implies, the div will inherit the width or height property from its parent.
-
-Further reading:
-
-[MDN - width](https://developer.mozilla.org/en-US/docs/Web/CSS/width)
-
-[MDN - height](https://developer.mozilla.org/en-US/docs/Web/CSS/height)
-
-[Auto width vs. 100% width](http://www.456bereastreet.com/lab/width-auto/)
 
 ## CSS - Display Style
 
@@ -210,13 +208,6 @@ What if you want the divs to be side-by-side, and not stacked? `inline` sounds l
 While inline elements don't mind sharing space horizontally, they also don't like taking up more space than they need.
 
 Now let's look at `inline-block`. Elements displayed like this don't require their own new row, so they can share horizontal space (like `inline` elements). But they also respect properties of `block` elements (like width and height). Try it out.
-
-Further reading:
-
-[What is the difference between display: inline and display: inline-block?](http://stackoverflow.com/questions/8969381/what-is-the-difference-between-display-inline-and-display-inline-block)
-[List of HTML5 block elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Block-level_elements)
-[List of HTML5 inline elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Inline_elemente)
-[What's the Deal with Display: Inline-Block?](http://designshack.net/articles/css/whats-the-deal-with-display-inline-block/)
 
 ## CSS - The Box Model
 
@@ -449,7 +440,7 @@ tr:hover {
 }
 ```
 
-Neat, right? Related to the `:hover` psuedo-class are the `:active`, `:focus`, and `:visited` pseudo-classes. You can read all about these (and other!) pseudo-classes [here](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes).
+Neat, right? Related to the `:hover` psuedo-class are the `:active`, `:focus`, and `:visited` pseudo-classes. You can read all about these (and other!)
 
 ## CSS - Rock star demos
 
@@ -462,3 +453,23 @@ We've only scratched the surface of what you can do with CSS. For inspiration, c
 [CSS Creatures](http://bennettfeely.com/csscreatures/)
 
 [CSS Coke Can](http://www.romancortes.com/ficheros/css-coke.html)
+
+
+###Further reading:
+[The Difference Between ID and Class](https://css-tricks.com/the-difference-between-id-and-class/)
+
+[MDN - width](https://developer.mozilla.org/en-US/docs/Web/CSS/width)
+
+[MDN - height](https://developer.mozilla.org/en-US/docs/Web/CSS/height)
+
+[Auto width vs. 100% width](http://www.456bereastreet.com/lab/width-auto/)
+
+[What is the difference between display: inline and display: inline-block?](http://stackoverflow.com/questions/8969381/what-is-the-difference-between-display-inline-and-display-inline-block)
+
+[List of HTML5 block elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Block-level_elements)
+
+[List of HTML5 inline elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Inline_elemente)
+
+[What's the Deal with Display: Inline-Block?](http://designshack.net/articles/css/whats-the-deal-with-display-inline-block/)
+
+[MDN - pseudo-classes](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes)
