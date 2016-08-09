@@ -2,6 +2,8 @@
 
 ## Objectives:
 
+- Describe the advantages of using JWT's
+- Implement an authentication schema using JWT's
 - Use interceptors to respond to HTTP requests/responses globally
 
 ## Resources:
