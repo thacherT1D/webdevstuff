@@ -29,7 +29,7 @@ Before the emergence of single page applications, we usually had a single client
 
 We now have many different technologies and tools and our Single Page Applications consume multiple APIs. We can easily have an application that uses a Node API, a Rails API as well as other Web/Mobile APIs. This makes it a nightmare and almost impossible to try to share cookie/session data between these APIs. It would be really nice if we could have one single "secret" (a key we store on a server) on all of our servers and share the token between each one!
 
-Some other advantages include performance, Cross-Site Request Forgery (CSRF) protection, ease of testing and mobile development. You can read more about these advantages [here](https://auth0.com/blog/2014/01/07/angularjs-authentication-with-cookies-vs-token/). Do not go into the implementation section of the blog post. This article includes a working example.
+Some other advantages include performance, Cross-Site Request Forgery (CSRF) protection, ease of testing and mobile development. You can read more about these advantages [in this article](https://auth0.com/blog/2014/01/07/angularjs-authentication-with-cookies-vs-token/). Do not go into the implementation section of the blog post. This article includes a working example.
 
 ## Introducing JSON Web Tokens
 
