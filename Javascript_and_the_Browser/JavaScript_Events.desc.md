@@ -1,14 +1,16 @@
-## Objectives
+# Objectives
 
-By the end of this lesson you should be able to:
-
+* Describe what an event listener is
 * Attach event handlers to DOM elements
+* Describe what the 
 * Modify the DOM in response to an event
 * Use callbacks in methods like addEventListener
 * Explain the difference between `this` and `event.target` in event listeners
 * Respond to the event `DOMContentLoaded` event
 
-## Introduction
+<hr>
+
+## Events
 
 Events are one of the most important underlying concepts in modern Javascript. Events add interactivity to a webpage and let us do all sorts of fun stuff!
 
@@ -18,8 +20,6 @@ Events are all over the place before we even write a line of code.  We can use t
 monitorEvents(window)
 ```
 
-## Types
-
 Some common event types in your browser:
 
 * click
@@ -28,16 +28,21 @@ Some common event types in your browser:
 * blur
 * [lots more](https://developer.mozilla.org/en-US/docs/Web/Events)
 
+<hr>
+
 ## Event Listeners
 
-In order to explore event listeners, we need some HTML! To kick things off, do the following:
+In order to explore event listeners, we need to do some basic setup to kick things off:
 
-1. Create a new HTML file, and inside of the HTML add a button.
-2. Create a new JS file, and link it to your HTML.
+1. Create a new HTML file.
+1. Inside the HTML file add a button.
+1. Create a new JS file.
+1. Link your JS file to your HTML.
 
-### `addEventListener()`
+At this point you should have the bare bones of what is needed to get started.
 
-[[MDN]](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)
+The `addEventListener()` method is a built-in Javascript function used
+to attach some functionality to an object (an html element in our case).
 
 The following code adds an event listener to the entire `window` object.  Try typing it into your js file and then click anywhere on the webpage!
 
@@ -61,7 +66,6 @@ Now we've attached an event listener to a specific DOM node, a button on the pag
 
 ### `removeEventListener()`
 
-[[MDN]](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/removeEventListener)
 
 You can also remove event listeners from DOM elements if you are no longer interested in the event. Let's return to our example from the previous section. After adding the event listener to the button, maybe you realize that alert messages are terrible, and decide to remove it. It may be tempting to write something like this in the JS console:
 
@@ -298,7 +302,6 @@ Note: putting your script tags at the bottom of the page can help resolve some o
 
 ## Event Propagation
 
-[[JavaScript.info]](http://javascript.info/tutorial/bubbling-and-capturing)
 
 Before finishing up, let's take a look at one more example. Let's return to our earlier example with a single `button`. In our Javascript file, let's add two event listeners:
 
@@ -397,3 +400,13 @@ button.addEventListener('click', function() {
 ```
 
 You should now see that the alert messages pop up in the opposite order!
+
+### 📖 Homework
+
+[Stoplight Exercise](https://github.com/gSchool/stoplight-event-exercise)
+
+#### 📚 Resources
+
+* [MDN](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)
+* [MDN](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/removeEventListener)
+* [JavaScript.info](http://javascript.info/tutorial/bubbling-and-capturing)
