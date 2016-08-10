@@ -137,7 +137,7 @@ Each person will take a turn being both the Sage and the Scribe.
 
 Without looking at the above notes:
 The Sage is responsible for describing in as much detail as they can recall the git flow.
-The Scribe is responsible for drawing out a diagram dipicting the git flow **as described by the Sage**
+The Scribe is responsible for drawing out a diagram depicting the git flow **as described by the Sage**
 
 Don't worry, the point isn't to check to see that you memorized 100% of
 the git flow 10 seconds after we walked though it. Now close your laptops!
@@ -173,7 +173,7 @@ Boom! Your working directory now has a git repository! 💥
 
 You can verify this by checking that a `.git` subdirectory was created when you run `ls -a`.
 
-The .git subdirectory contains a number of subdirectories and files that keep wrack of all the changes happening in your working directory, or repo as it also called. You will also find configuration details, a list of branches, Github remotes and also things called SHAs. SHAs are a long series of numbers used as a unique ID for your commits. Don't worry too much about that right now, just know that the *.git* subdirectory is where all that stuff related to your git repo is tracked.
+The .git subdirectory contains a number of subdirectories and files that keep track of all the changes happening in your working directory, or repo as it also called. You will also find configuration details, a list of branches, Github remotes and also things called SHAs. SHAs are a long series of numbers used as a unique ID for your commits. Don't worry too much about that right now, just know that the *.git* subdirectory is where all that stuff related to your git repo is tracked.
 
 > Docs: [git manual](https://git-scm.com/docs/git-init) or `man git-init`
 
@@ -240,7 +240,7 @@ $ echo 'space cats!' >> space-is-rad.txt
 $ git status
 ```
 
-Well now we have three secions. Looks like our space file is staged to be commited, but also below shows that it is "not staged for commit" wha?
+Well now we have three sections. Looks like our space file is staged to be commited, but also below shows that it is "not staged for commit" wha?
 
 In that second section there you can see it is listed as being "modified:" What is happening is that we have staged, or are tracking, the original state of the file when it was empty. We now also have our newly "modified" version in our working directory. To sync thing up all we have to do is `git add` this newly modified version of our space file:
 
@@ -359,7 +359,7 @@ $ git commit -m "Initial commit"
 
 ### Pushing to GitHub
 
-1. Create a *GitHub* repository and don't initialize it
+1. Create a *GitHub* repository
 1. Create a local git repository
 1. Create a file
 1. Stage the file
