@@ -423,7 +423,7 @@ Being stateless, each `<Track />` component is responsible for handling the hier
 
 **NOTE:** The `key` prop is used by React to uniquely identify sibling components of the same type. If a keyed component is changed in any way, React can more efficiently update the DOM hierarchy. The `key` prop is *not* accessible via `this.props.key`.
 
-Inside the `render()` method of a `<Track>` component, its `track` props are combined with its presentation logic to produce a user interface. The user interface allows a user to view and update the track's information.  When the value of the `<input type="text" />` component changes, the `handleChange()` method is invoked.
+Inside the `render()` method of a `<Track>` component, its `track` props are combined with its presentation logic to produce a user interface. The user interface allows a user to view and update the track's information.  When the the `<button />` component is clicked, the `handleClick()` method is invoked.
 
 ```jsx
 // From app/components/track.jsx
