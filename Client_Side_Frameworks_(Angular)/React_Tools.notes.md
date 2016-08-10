@@ -44,7 +44,7 @@ A traditional **compiler** translates the source code of one programming languag
 A **transpiler** is a special type of compiler. Given the source code of one programming language, a transpiler produces equivalent source code in another programming language of approximately the *same* level of abstraction. For example, TypeScript transpiles into JavaScript because both languages are similar in capabilities.
 
 ```text
-┌─────────────── TypeScript ──────────────┐                  ┌─────────────── JavaScript ──────────────┐
+┌────────────── TypeScript ───────────────┐                  ┌────────────── JavaScript ───────────────┐
 │                                         │                  │                                         │
 │ function greeter(who: string) {         │                  │ function greeter(who) {                 │
 │   return `Hello, ${who.toUpperCase()}`; │                  │   return `Hello, ${who.toUpperCase()}`; │
