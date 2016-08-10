@@ -403,6 +403,8 @@ Being stateful, an `<App />` component is only responsible for managing a compon
 
 In React, an **owner** is a component that sets the props of another component. Inside the `render()` method of an `<App />` component, a new `<Track />` component is created for each track in the `this.state.tracks` array. As each component is created, its props are set. Therefore, the `<App />` component is the owner of the `<Track />` components that are created inside its `render()` method.
 
+**NOTE:** Inside the `render()` method, the `Array.prototype.map()` method collects the returned `<Track />` components into an array. When an array is used as a child, its elements become individual children of the parent component.
+
 ```jsx
 // app/components/app.jsx
 
@@ -439,7 +441,7 @@ render() {
 }
 ```
 
-As you've seen, event handlers process an event and update a component's state. However, not all components have state to update, as is the case with the stateless `<Track />` components. Rather than calling the `this.setState()` method, each `<Track />` component is given a `this.props.updateTrack()` state mutator method to call instead.
+As you've seen, event handlers process an event and update a component's state. However, not all components have state to update, as is the case with the stateless `<Track />` components. Rather than invoking the `this.setState()` method for itself, each `<Track />` component invokes the `incrementLikes()` state mutator method it was given instead via its props.
 
 ```jsx
 // From app/components/track.jsx
@@ -449,7 +451,7 @@ handleClick() {
 }
 ```
 
-In React, a **state mutator** is a method inside a stateful component that calls the `this.setState()` method. In the above code example, the `updateTrack()` state mutator method is defined in the `<App />` component but passed to each `<Track />` component through its props. When the `handleChange()` method is triggered, the state mutator is invoked.
+In React, a **state mutator** is a method inside a stateful component that calls the `this.setState()` method. The `incrementLikes()` state mutator method is defined in the `<App />` component, but is passed to each `<Track />` component through its props. When the `handleChange()` method is triggered, the state mutator is invoked.
 
 ```jsx
 // From app/components/app.jsx
@@ -469,15 +471,18 @@ incrementLikes(track) {
 }
 ```
 
-When nesting custom components, data flows from the owner to the owned through its props. Effectively, this is another form of one-way data binding. Owners bind their owned component's props to some value the owner has computed based on its props or state. Since this process happens recursively, data changes are automatically reflected everywhere they are used.
+When nesting custom components, data flows from the owner to the owned through its props. Effectively, this is another form of one-way data binding.
+
+
+
+
+Owners bind their owned component's props to some value the owner has computed based on its props or state. Since this process happens recursively, data changes are automatically reflected everywhere they are used.
 
 In React, **autobinding** is the process of binding a component to its methods. In other words, the `this` variable inside a component's method automatically refers to the component that specified the method no matter how the method was invoked. Specifically, this is why the `this` variable inside the `updateState()` method refers to a `<App />` component even though it was invoked using `this.props.updateState()`.
 
 **NOTE:** React only autobinds components to methods specified with the `React.createClass()` method and not with the ES2015 `class` keyword.
 
 Since mutable state increases complexity and reduces predictability, components with only immutable props are easier to think about. Whenever it's time to update the DOM hierarchy, they build the user interface using the data they're given. When a user interacts with their components, they handle the event using the methods they're given.
-
-Inside the `render()` method of the `<App />` component, the `Array.prototype.map()` method collects the returned `<Track />` elements into an array. When an array is used as a child, its elements become individual children of the parent `ReactElement`.
 
 ### Exercise
 
