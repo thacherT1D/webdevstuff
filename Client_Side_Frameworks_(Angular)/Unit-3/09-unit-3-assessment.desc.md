@@ -7,7 +7,7 @@ Angular Application goes here [Front End Repository](https://github.com/gSchool/
 
 Express API goes here [Back End Repository](https://github.com/gSchool/reddit-clone-back-end)
 
-#### Required
+## Required
 
 **Backend**
 
@@ -34,7 +34,7 @@ Express API goes here [Back End Repository](https://github.com/gSchool/reddit-cl
 - Deploy the front-end to Firebase.
 - Deploy the back-end to Heroku.
 
-#### Bonus
+## Bonus
 
 - Create admin functionality where an admin has full CRUD over users, posts and comments
 - Style the application!
