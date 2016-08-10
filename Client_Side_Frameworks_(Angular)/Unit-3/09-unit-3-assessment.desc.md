@@ -1,6 +1,5 @@
 # Reddit Clone, The Final Chapter
 
-
 ## Resources
 Angular Application goes here [Front End Repository](https://github.com/gSchool/reddit-clone-front-end).
 
@@ -44,7 +43,6 @@ Include `README.md` files in both of the repositories for this project. The foll
 - Instructions on how to install your application from scratch.
 
 ## Bonus
-
 - Create admin functionality where an admin has full CRUD over users, posts and comments
 - Use `$resource` to manage (at least most) of your API calls
 - Style the application!
