@@ -4,10 +4,10 @@
 * Explain why JavaScript is important.
 * Name all primitive data types in JavaScript.
 * Explain what a variable is.
-* Explain the difference between a value and an expression.
+* Explain the difference between a value, an expression, and a statement.
 * Explain the difference between `=`, `==`, and `===` in JavaScript.
 * Explain what type conversion is.
-* Name all the "falsey" values in JavaScript.
+* Name all the "falsy" values in JavaScript.
 * Explain what a function is.
 * Write a function that takes parameters.
 * Write a function that returns a value.
