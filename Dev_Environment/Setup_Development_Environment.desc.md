@@ -366,8 +366,6 @@ Under the **Settings** tab, in the **Editor Settings** section, change the follo
 | Font Family                        | Menlo              |
 | Font Size                          | 18                 |
 | Show Indent Guide                  | Checked            |
-| Soft Wrap                          | Not Checked        |
-| Soft Wrap At Preferred Line Length | Not Checked        |
 
 Under the **Install** tab, with the **Package** button highlighted, install the following:
 
