@@ -42,6 +42,11 @@ Include `README.md` files in both of the repositories for this project. The foll
 - Location of deployed application.
 - Instructions on how to install your application from scratch.
 
+## Optional
+
+- Using of Mongo instead of Postgres.
+- Using features of ES2015.
+
 ## Bonus
 - Create admin functionality where an admin has full CRUD over users, posts and comments
 - Use `$resource` to manage (at least most) of your API calls
