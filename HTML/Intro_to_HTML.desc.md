@@ -12,7 +12,8 @@ By the end of this lesson you should be able to:
   * lists
   * tables
   * links
-* Explain the importance of Semantic HTML
+* Explain why Semantic HTML is important
+* Create a Semantic HTML page
 
 In other words...create a document you can put on the web and share with others!
 
