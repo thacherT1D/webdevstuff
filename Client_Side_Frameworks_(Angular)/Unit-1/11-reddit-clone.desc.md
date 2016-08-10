@@ -39,3 +39,5 @@ Note:
   * http://plnkr.co/edit/qrQwv1?p=preview
   * https://divshot.com/blog/tips-and-tricks/angular-1-2-and-animate-css/
   * http://odetocode.com/blogs/scott/archive/2014/02/25/easy-animations-for-angularjs-with-animate-css.aspx
+
+[Fork and clone this repo to do a Pull Request against](https://github.com/gSchool/ccf-angular-reddit-clone)
