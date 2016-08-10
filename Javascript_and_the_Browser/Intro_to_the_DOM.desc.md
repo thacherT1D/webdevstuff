@@ -363,6 +363,19 @@ With the JavaScript Console open, follow these steps:
 1. Choose something applicable to that specific HTML tag and add a new style. Simple, right?
 1. Practice!
 
+### Adding Classes to Elements
+
+While you can use `style` to read or change an element's CSS styles, you can you use `className` to read or change an element's classes. `className` works a little bit differently than `style`:
+
+1. If you run `elementOfYourChoice.className,` it gives you a string-based list of classes that looks like this - `'tuber potato sweet-potato'`. This is how you can read the classes of an element. In this case, the element's classes are *tuber*, *potato*, and *sweet-potato*. They are listed in a string and separated by spaces.
+1. If you want to modify an element's classes, you run `elementOfYourChoice.className = 'fruit stone-fruit apricot'`. In other words, you are setting the element's classes to be *fruit*, *stone-fruit*, and *apricot* via assigning a space-separated list of classes to `className`.
+
+### Exercise
+
+Open up the JavaScript Console and use `className` to add three of your favorite dishes as classes to the `body` of this page. For any dish with multiple words, use dashes to make sure that it works as one term (e.g. `peanut-butter-and-jelly-sandwich`).
+
+Ask your neighbor to use each of the classes with `getElementsByClassName` to find the `body`. Was your neighbor able to find it using all 3 classes?
+
 ## Creating new Elements
 
 #### `createElement`
@@ -416,11 +429,11 @@ firstUnorderedList.insertBefore(anotherListElement, firstUnorderedList.firstChil
 console.log(allListItems);
 ```
 
+### Exercise
 
+Make sense? Prepend another element. Try removing an element with `removeChild()`.
 
-Make sense? Prepend another element. Try removing an element with `removeChild()`. Once done, show an instructor.
-
-
+Once done, show an instructor.
 
 ## Homework
 
