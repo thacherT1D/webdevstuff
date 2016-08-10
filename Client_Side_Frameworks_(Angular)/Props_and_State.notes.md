@@ -471,16 +471,27 @@ incrementLikes(track) {
 }
 ```
 
-When nesting custom components, data flows from the owner to the owned through its props. Effectively, this is another form of one-way data binding.
-
-
-
-
-Owners bind their owned component's props to some value the owner has computed based on its props or state. Since this process happens recursively, data changes are automatically reflected everywhere they are used.
-
-In React, **autobinding** is the process of binding a component to its methods. In other words, the `this` variable inside a component's method automatically refers to the component that specified the method no matter how the method was invoked. Specifically, this is why the `this` variable inside the `updateState()` method refers to a `<App />` component even though it was invoked using `this.props.updateState()`.
+In React, **autobinding** is the process of binding a component to its methods. In other words, the `this` variable inside a component's method automatically refers to the component that specified the method no matter how the method was invoked. Specifically, this is why the `this` variable inside the `incrementLikes()` method refers to a `<App />` component even though it was invoked using `this.props.incrementLikes()`.
 
 **NOTE:** React only autobinds components to methods specified with the `React.createClass()` method and not with the ES2015 `class` keyword.
+
+In this example, the owner component's state flows to the owned component's props. There the props are combined with the presentation logic to render a new user interface. Then, the owned component's events change the owner component's state. Effectively, this is another form of one-way data binding.
+
+```text
+         ┌───── Automatic change ────┐
+         │                           │
+         │                           ▼
+┌─────────────────┐         ┌─────────────────┐
+│                 │         │                 │
+│                 │         │                 │
+│      State      │         │   Presentation  │
+│                 │         │                 │
+│                 │         │                 │
+└─────────────────┘         └─────────────────┘
+         ▲                           │
+
+         └ ─ ─ ─ Manual change ─ ─ ─ ┘
+```
 
 Since mutable state increases complexity and reduces predictability, components with only immutable props are easier to think about. Whenever it's time to update the DOM hierarchy, they build the user interface using the data they're given. When a user interacts with their components, they handle the event using the methods they're given.
 
