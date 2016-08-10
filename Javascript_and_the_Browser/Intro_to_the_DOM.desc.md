@@ -32,7 +32,9 @@ Recall in our Introduction to HTML article that HTML can be thought of as a tree
 
 ![HTML Tree](http://www.webstepbook.com/supplements/slides/images/dom_tree.gif)
 
-**Exercise** Look at the code below. Can you give examples of parent-child relationships and sibling relationships?
+### Exercise
+
+Look at the code below. Can you give examples of parent-child relationships and sibling relationships?
 
 ```html
 <!DOCTYPE html>
@@ -94,7 +96,9 @@ Open up the inspector by pressing Command + Option + I. In the console, type in 
 
 The document is the root access point to all of the HTML. It even includes the DocType. You can access the root `<html>` node by calling `document.documentElement` or `document.childNodes[1]`.
 
-**Exercise** What type is `document`?
+### Exercise
+
+What type is `document`?
 
 ## Node Interface
 
@@ -104,7 +108,9 @@ The document and each HTML element (tag) inherits a Node interface. The MDN prov
 
 You can access a node in the `childNodes` property. It is an array-like object. This means that you can access its elements by index and use the provided `length` property, but you do not have any built in Array functions.
 
-**Exercise** Can you remember of another array-like object we talked about?
+### Exercise
+
+Recall another array-like object we talked about and write it on a whiteboard.
 
 It's _**important to note**_ that the these properties are _live_. This means that _changes in the DOM affect the array_.
 
@@ -410,7 +416,11 @@ firstUnorderedList.insertBefore(anotherListElement, firstUnorderedList.firstChil
 console.log(allListItems);
 ```
 
+
+
 Make sense? Prepend another element. Try removing an element with `removeChild()`. Once done, show an instructor.
+
+
 
 ## Homework
 
