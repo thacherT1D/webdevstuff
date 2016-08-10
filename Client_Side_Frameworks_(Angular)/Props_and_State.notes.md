@@ -4,7 +4,7 @@
 - Explain what state is.
 - Explain why props and state are important.
 - Use props and state to separate the concerns of a React user interface.
-- Explain how data flows between stateful and stateless components.
+- Explain how information flows between stateful and stateless components.
 
 | Duration by yourself | Duration as a class |
 |----------------------|---------------------|
@@ -238,7 +238,7 @@ Then, turn to a neighbor and, in your own words, explain why props and state are
 
 When building a large React user interface, it becomes important to create modular components with well-defined concerns. While you're free to separate the different concerns of your user interface however you want, React components tend fall in one of two groups—either stateful or stateless.
 
-A **stateful component** may have props but it definitely has state. Typically, a stateful component is at or near the root of a component hierarchy and is responsible for managing the majority of the hierarchy's state. Clearly stateful components are a requirement for interactivity. However, the fewer stateful components a hierarchy has, the easier it is to understand how data flows through it.
+A **stateful component** may have props but it definitely has state. Typically, a stateful component is at or near the root of a component hierarchy and is responsible for managing the majority of the hierarchy's state. Clearly stateful components are a requirement for interactivity. However, the fewer stateful components a hierarchy has, the easier it is to understand how information flows through it.
 
 A **stateless component** often has props but it definitely has *no* state. Typically, a stateless component is at or near the leaves of a component hierarchy and is responsible for handling the majority of the hierarchy's events. A typical component hierarchy has more stateless components than stateful components, especially if it creates a user interface with lots of events.
 
@@ -355,9 +355,9 @@ open http://localhost:8000/
 
 ### Exercise
 
-Once the user interface is working, analyze the code and make an educated guess on how data flows between the stateful and stateless components. Write down your guess in your words. No peaking in the next section either. The point is to make a guess now and see how close you are later. At this stage, being right or wrong doesn't matter.
+Once the user interface is working, analyze the code and make an educated guess on how information flows between the stateful and stateless components. Write down your guess in your words. No peaking in the next section either. The point is to make a guess now and see how close you are later. At this stage, being right or wrong doesn't matter.
 
-## How does data flow between stateful and stateless components?
+## How does information flow between stateful and stateless components?
 
 In the above code example, the responsibility of managing state and handling events is split between two different component classes—`App` and `Track` respectively.
 
@@ -497,7 +497,7 @@ Since mutable state increases complexity and reduces predictability, components 
 
 ### Exercise
 
-Update your previous description of how data flows between stateful and stateless components.
+Update your previous description of how information flows between stateful and stateless components.
 
 ## Summary
 
