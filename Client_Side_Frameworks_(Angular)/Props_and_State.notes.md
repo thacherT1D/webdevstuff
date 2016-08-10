@@ -359,33 +359,40 @@ In the above code example, the responsibility of managing state and handling eve
 An `<App />` component is stateful because its class uses the `getInitialState()` method to initialize its state and the `this.setState()` method to change its state.
 
 ```text
-┌─────────── <App /> ──────────┐
-│ ┌───────── State ──────────┐ │
-│ │ [{                       │ │
-│ │   title: 'Hey Jude',     │ │
-│ │   artist: 'The Beatles', │ │
-│ │   likes: 0               │ │
-│ │ }, {                     │ │
-│ │   title: 'Hello',        │ │
-│ │   artist: 'Adele',       │ │
-│ │   likes: 0               │ │
-│ │ }]                       │ │
-│ └──────────────────────────┘ │
-└──────────────────────────────┘
+┌──────────── <App /> ───────────┐
+│ ┌─────────── State ──────────┐ │
+│ │ {                          │ │
+│ │   tracks: [{               │ │
+│ │     artist: 'The Beatles', │ │
+│ │     likes: 0,              │ │
+│ │     title: 'Hey Jude'      │ │
+│ │   }, {                     │ │
+│ │     artist: 'Adele',       │ │
+│ │     likes: 0,              │ │
+│ │     title: 'Hello'         │ │
+│ │   }]                       │ │
+│ │ }                          │ │
+│ └────────────────────────────┘ │
+└────────────────────────────────┘
 ```
 
 On the other hand, a `<Track />` component is stateless because its class doesn't use the `getInitialState()` method or the `this.setState()` method. Instead it receives props when it's created by the `<App />` component.
 
 ```text
-┌────────── <Track /> ──────────┐   ┌────────── <Track /> ─────────┐
-│ ┌────────── Props ─────────┐  │   │ ┌────────── Props ─────────┐ │
-│ │ {                        │  │   │ │ {                        │ │
-│ │   title: 'Hey Jude',     │  │   │ │   title: 'Hello',        │ │
-│ │   artist: 'The Beatles', │  │   │ │   artist: 'Adele',       │ │
-│ │   likes: 0               │  │   │ │   likes: 0               │ │
-│ │ }                        │  │   │ │ }                        │ │
-│ └──────────────────────────┘  │   │ └──────────────────────────┘ │
-└───────────────────────────────┘   └──────────────────────────────┘
+┌──────────── <Track /> ───────────┐    ┌──────────── <Track /> ───────────┐
+│ ┌──────────── Props ───────────┐ │    │ ┌────────── Props ─────────────┐ │
+│ │ {                            │ │    │ │ {                            │ │
+│ │   index: 0,                  │ │    │ │   index: 1,                  │ │
+│ │   key: 0,                    │ │    │ │   key: 1,                    │ │
+│ │   track: {                   │ │    │ │   track: {                   │ │
+│ │     artist: 'The Beatles',   │ │    │ │     artist: 'Adele',         │ │
+│ │     likes: 0,                │ │    │ │     likes: 0,                │ │
+│ │     title: 'Hey Jude'        │ │    │ │     title: 'Hello'           │ │
+│ │   },                         │ │    │ │   },                         │ │
+│ │   updateTrack: updateTrack() │ │    │ │   updateTrack: updateTrack() │ │
+│ │ }                            │ │    │ │ }                            │ │
+│ └──────────────────────────────┘ │    │ └──────────────────────────────┘ │
+└──────────────────────────────────┘    └──────────────────────────────────┘
 ```
 
 Being stateful, an `<App />` component is only responsible for managing a component hierarchy's state. While it could also handle a hierarchy's events, it follows the [single responsibility principal](https://en.wikipedia.org/wiki/Single_responsibility_principle) and delegates the additional responsibility to the stateless components that it owns.
