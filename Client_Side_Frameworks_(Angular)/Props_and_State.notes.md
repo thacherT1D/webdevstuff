@@ -279,7 +279,7 @@ import React from 'react';
 
 const Track = React.createClass({
   handleClick() {
-    this.props.updateTrack(this.props.index);
+    this.props.incrementLikes(this.props.track);
   },
 
   render() {
@@ -317,10 +317,16 @@ const App = React.createClass({
     };
   },
 
-  updateTrack(index) {
-    const nextTracks = this.state.tracks;
+  incrementLikes(track) {
+    const nextTracks = this.state.tracks.map((element) => {
+      if (track !== element) {
+        return element;
+      }
 
-    nextTracks[index].likes += 1;
+      const nextLikes = track.likes + 1;
+
+      return Object.assign({}, track, { likes: nextLikes });
+    });
 
     this.setState({ tracks: nextTracks });
   },
@@ -329,10 +335,9 @@ const App = React.createClass({
     return <div>
       {this.state.tracks.map((track, index) => {
         return <Track
-          index={index}
+          incrementLikes={this.incrementLikes}
           key={index}
           track={track}
-          updateTrack={this.updateTrack}
         />;
       })}
     </div>;
@@ -379,20 +384,20 @@ An `<App />` component is stateful because it uses the `getInitialState()` metho
 On the other hand, a `<Track />` component is stateless because it doesn't use the `getInitialState()` method or the `this.setState()` method. Instead it receives props when it's created by the `<App />` component.
 
 ```text
-┌──────────── <Track /> ───────────┐    ┌──────────── <Track /> ───────────┐
-│ ┌──────────── Props ───────────┐ │    │ ┌────────── Props ─────────────┐ │
-│ │ {                            │ │    │ │ {                            │ │
-│ │   index: 0,                  │ │    │ │   index: 1,                  │ │
-│ │   key: 0,                    │ │    │ │   key: 1,                    │ │
-│ │   track: {                   │ │    │ │   track: {                   │ │
-│ │     artist: 'The Beatles',   │ │    │ │     artist: 'Adele',         │ │
-│ │     likes: 0,                │ │    │ │     likes: 0,                │ │
-│ │     title: 'Hey Jude'        │ │    │ │     title: 'Hello'           │ │
-│ │   },                         │ │    │ │   },                         │ │
-│ │   updateTrack: updateTrack() │ │    │ │   updateTrack: updateTrack() │ │
-│ │ }                            │ │    │ │ }                            │ │
-│ └──────────────────────────────┘ │    │ └──────────────────────────────┘ │
-└──────────────────────────────────┘    └──────────────────────────────────┘
+┌─────────────── <Track /> ───────────────┐    ┌────────────── <Track /> ──────────────┐
+│ ┌─────────────── Props ───────────────┐ │    │ ┌────────────── Props ──────────────┐ │
+│ │ {                                   │ │    │ │{                                  │ │
+│ │   incrementLikes: incrementLikes(), │ │    │ │  incrementLikes: incrementLikes() │ │
+│ │   key: 0,                           │ │    │ │  key: 1,                          │ │
+│ │   track: {                          │ │    │ │  track: {                         │ │
+│ │     artist: 'The Beatles',          │ │    │ │    artist: 'Adele',               │ │
+│ │     likes: 0,                       │ │    │ │    likes: 0,                      │ │
+│ │     title: 'Hey Jude'               │ │    │ │    title: 'Hello'                 │ │
+│ │   }                                 │ │    │ │  },                               │ │
+│ │ }                                   │ │    │ │}                                  │ │
+│ │                                     │ │    │ │                                   │ │
+│ └─────────────────────────────────────┘ │    │ └───────────────────────────────────┘ │
+└─────────────────────────────────────────┘    └───────────────────────────────────────┘
 ```
 
 Being stateful, an `<App />` component is only responsible for managing a component hierarchy's state. While it could also handle a hierarchy's events, it follows the [single responsibility principal](https://en.wikipedia.org/wiki/Single_responsibility_principle) and delegates the additional responsibility to the stateless components that it owns.
@@ -406,17 +411,16 @@ render() {
   return <div>
     {this.state.tracks.map((track, index) => {
       return <Track
-        index={index}
+        incrementLikes={this.incrementLikes}
         key={index}
         track={track}
-        updateTrack={this.updateTrack}
       />;
     })}
   </div>;
 }
 ```
 
-Being stateless, each `<Track />` component is responsible for handling the hierarchy's events for a single track. To handle this responsibility, the owner sets each component's `index`, `key`, `track`, and `updateTrack` props. With the exception of the `key` prop, the key-value pairs are accessible inside the `<Track />` component using the `this.props` object.
+Being stateless, each `<Track />` component is responsible for handling the hierarchy's events for a single track. To handle this responsibility, the owner sets each component's `key`, `track`, and `updateTrack` props. With the exception of the `key` prop, the key-value pairs are accessible inside the `<Track />` component using the `this.props` object.
 
 **NOTE:** The `key` prop is used by React to uniquely identify sibling components of the same type. If a keyed component is changed in any way, React can more efficiently update the DOM hierarchy. The `key` prop is *not* accessible via `this.props.key`.
 
@@ -442,7 +446,7 @@ As you've seen, event handlers process an event and update a component's state. 
 // From app/components/track.jsx
 
 handleClick() {
-  this.props.updateTrack(this.props.index);
+  this.props.incrementLikes(this.props.track);
 }
 ```
 
@@ -451,10 +455,16 @@ In React, a **state mutator** is a method inside a stateful component that calls
 ```jsx
 // From app/components/app.jsx
 
-updateTrack(index) {
-  const nextTracks = this.state.tracks;
+incrementLikes(track) {
+  const nextTracks = this.state.tracks.map((element) => {
+    if (track !== element) {
+      return element;
+    }
 
-  nextTracks[index].likes += 1;
+    const nextLikes = track.likes + 1;
+
+    return Object.assign({}, track, { likes: nextLikes });
+  });
 
   this.setState({ tracks: nextTracks });
 }
