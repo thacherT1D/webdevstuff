@@ -6,7 +6,7 @@
 
 | Duration by yourself | Duration as a class |
 |----------------------|---------------------|
-| TBD                  | About 10.5 hours    |
+| 7 hours              | About 10.5 hours    |
 
 ## What's a synthetic event?
 
