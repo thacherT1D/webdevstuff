@@ -18,7 +18,7 @@
 const element = <p className="bold">Tokyo Dog</p>;
 ```
 
-Additionally, props are **immutable** or unchangeable data that configures a new component before it's mounted (i.e. inserted into the DOM hierarchy). Props are accessible anywhere inside a component class via the `this.props` object. After a component's props are set, they never change.
+Additionally, props are **immutable**, or unchangeable, data that configures a new component before it's mounted (i.e. inserted into the DOM hierarchy). Props are accessible anywhere inside a component class via the `this.props` object. After a component's props are set, they never change.
 
 ```jsx
 import React from 'react';
@@ -46,7 +46,7 @@ Turn to a neighbor and, in your own words, explain what props are and how they'r
 
 **State** is data that's initialized and updated from within a component. State is initialized by a component's `getInitialState()` method which is automatically invoked once before a component is mounted. Once initialized, state is accessible anywhere inside a component class via the `this.state` object.
 
-Additionally, state is **mutable** or changeable data that represents the internal state of a component. To mutate state, you use the `this.setState()` method which is typically done after an event handler is triggered from a user interaction or a server response.
+Additionally, state is **mutable**, or changeable, data that represents the internal state of a component. To mutate state, you use the `this.setState()` method which is typically done after an event handler is triggered from a user interaction or a server response.
 
 ```jsx
 import React from 'react';
