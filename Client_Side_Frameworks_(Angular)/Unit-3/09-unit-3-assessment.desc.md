@@ -8,7 +8,7 @@ Express API goes here [Back End Repository](https://github.com/gSchool/reddit-cl
 
 ## Intro
 
-Congratulations - you have completed our Angular Unit. By now you should have an strong understanding of how to build and structure MEAN stack applications and how to add authentication and authorization to a single page application. To put these skills to the test, let's rewrite our reddit clone from Unit 1 and expand it's functionality to have the following.
+Congratulations - you have completed our Angular Unit. By now you should have an strong understanding of how to build and structure MEAN stack applications and how to add authentication and authorization to a single page application. To put these skills to the test, let's rewrite our reddit clone from our [Angular Reddit Clone](/redirects/articles/4886) CCF and expand it's functionality to have the following.
 
 ## Required
 
