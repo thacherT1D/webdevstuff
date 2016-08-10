@@ -1,4 +1,4 @@
-# Reddit Clone, The Final Chapter.
+# Reddit Clone, The Final Chapter
 
 
 ## Resources
