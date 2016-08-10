@@ -1,11 +1,14 @@
 # Reddit Clone, The Final Chapter.
 
-Congratulations - you have completed our Angular Unit. By now you should have an strong understanding of how to build and structure MEAN stack applications and how to add authentication and authorization to a single page application. To put these skills to the test, let's refactor our reddit clone from Unit 1 to have the following.
 
 ## Resources
 Angular Application goes here [Front End Repository](https://github.com/gSchool/reddit-clone-front-end).
 
-Express API goes here [Back End Repository](https://github.com/gSchool/reddit-clone-back-end)
+Express API goes here [Back End Repository](https://github.com/gSchool/reddit-clone-back-end).
+
+## Intro
+
+Congratulations - you have completed our Angular Unit. By now you should have an strong understanding of how to build and structure MEAN stack applications and how to add authentication and authorization to a single page application. To put these skills to the test, let's rewrite our reddit clone from Unit 1 and expand it's functionality to have the following.
 
 ## Required
 
