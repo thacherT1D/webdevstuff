@@ -1,6 +1,11 @@
-# Unit 3 Assessment - Reddit Clone, The Final Chapter.
+# Reddit Clone, The Final Chapter - The Quickening.
 
-Congratulations - you've come to the end of Unit 3! By now you should have an strong understanding of how to build and structure MEAN stack applications and how to add authentication and authorization to a single page application. To put these skills to the test, let's refactor our reddit clone from Unit 1 to have the following.
+Congratulations - you have completed our Angular Unit. By now you should have an strong understanding of how to build and structure MEAN stack applications and how to add authentication and authorization to a single page application. To put these skills to the test, let's refactor our reddit clone from Unit 1 to have the following.
+
+## Resources
+Angular Application goes here [Front End Repository](https://github.com/gSchool/reddit-clone-front-end).
+
+Express API goes here [Back End Repository](https://github.com/gSchool/reddit-clone-back-end)
 
 #### Required
 
@@ -24,8 +29,12 @@ Congratulations - you've come to the end of Unit 3! By now you should have an st
 - Users should be able to see other users posts and comments
 - Users should **only** be able to edit and delete their own posts and comments
 
+**Deployment**
+
+- Deploy the front-end to Firebase.
+- Deploy the back-end to Heroku.
+
 #### Bonus
 
 - Create admin functionality where an admin has full CRUD over users, posts and comments
 - Style the application!
-- Add Social Auth using satelizer or Auth0 (or try it on your own!)
