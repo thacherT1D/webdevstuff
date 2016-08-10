@@ -354,7 +354,9 @@ Once the user interface is working, analyze the code and make an educated guess 
 
 ## How does data flow between stateful and stateless components?
 
-In the above code example, the responsibility of managing state and handling events is split between two different component classes—`App` and `Track` respectively. An `<App />` component is stateful because its class uses the `getInitialState()` and `this.setState()` methods.
+In the above code example, the responsibility of managing state and handling events is split between two different component classes—`App` and `Track` respectively.
+
+An `<App />` component is stateful because its class uses the `getInitialState()` and `this.setState()` methods.
 
 ```text
 ┌────────── <App /> ─────────┐
