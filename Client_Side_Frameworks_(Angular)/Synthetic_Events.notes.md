@@ -302,7 +302,7 @@ const App = React.createClass({
       />
 
       <input
-        readOnly="true"
+        readOnly=={true}
         type="text"
         value="I'm read-only and under React's control."
       />
@@ -380,7 +380,7 @@ const App = React.createClass({
       />
 
       <textarea
-        readOnly="true"
+        readOnly={true}
         value="I'm read-only and under React's control."
       />
     </div>;
@@ -472,7 +472,7 @@ const App = React.createClass({
         {"I'm read-only and under React's control."}
         <input
           checked={true}
-          readOnly="true"
+          readOnly={true}
           type="checkbox"
         />
       </div>
@@ -589,14 +589,14 @@ const App = React.createClass({
         <input
           checked={true}
           name="3"
-          readOnly="true"
+          readOnly={true}
           type="radio"
           value="yes"
         />
         <input
           checked={false}
           name="3"
-          readOnly="true"
+          readOnly={true}
           type="radio"
           value="no"
         />
