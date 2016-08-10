@@ -42,7 +42,7 @@ There are many flavors of VCS:
 [Git](https://git-scm.com/) is a free and open source software for version control.
 While there are many different version control systems, git is incredibly popular and powerful. Many companies use git, and if you understand git it will be easy to learn another version control paradigm.
 
-#### Exercise
+#### 💪 Exercise
 
 Take a moment and think how you would rephrase the above description of
 git in your own words. Once you feel comfortable with your description
@@ -59,7 +59,7 @@ Once we've __pushed__ to a __remote__ such as GitHub, we know our code is safe.
 Even if our hard drives die.
 And if GitHub goes down, we can still work on our distributed repos offline.
 
-#### Exercise
+#### 💪 Exercise
 
 Turn to your neighbor and explain why developers use Github.
 
@@ -87,7 +87,7 @@ shortly.
 
 ![Git Flow](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/291/git_flow.png)
 
-#### Exercise
+#### 💪 Exercise
 
 Partner up with the person sitting next to you for a Sage & Scribe exercise.
 
@@ -322,7 +322,7 @@ how to look at them.
 > Docs: [git manual](https://git-scm.com/docs/git-remote) or `man git-remote`
 
 
-#### Exercises
+#### 💪 Exercises
 
 Try to do these without looking at the answer first!
 
@@ -339,6 +339,7 @@ Try to do these without looking at the answer first!
 
 ![Answer Padding](https://media.giphy.com/media/3oD3YveOJWdwIAfZ5e/giphy.gif)
 
+<br>
 <br>
 <br>
 
@@ -369,6 +370,7 @@ $ git commit -m "Initial commit"
 
 <br>
 <br>
+<br>
 
 #### Answer
 
@@ -390,7 +392,7 @@ $ git remote add origin git@github.com:{userName}/{repoName}.git
 $ git push -u origin master
 ```
 
-#### Resources
+#### 📚 Resources
 
 * `man git` // the full git manual from your terminal
 * [VCS on Wikipedia](https://en.wikipedia.org/wiki/Version_control)
