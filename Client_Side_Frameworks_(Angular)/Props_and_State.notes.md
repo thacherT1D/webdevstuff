@@ -358,6 +358,22 @@ In the above code example, the responsibility of managing state and handling eve
 
 Being stateful, an `<App />` component is only responsible for managing a component hierarchy's state. While it could also handle a hierarchy's events, it follows the [single responsibility principal](https://en.wikipedia.org/wiki/Single_responsibility_principle) and delegates the additional responsibility to the stateless components that it owns.
 
+```text
+┌────────── <App /> ─────────┐
+│┌───────── State ──────────┐│
+││ [{                       ││
+││   title: 'Hey Jude',     ││
+││   artist: 'The Beatles', ││
+││   likes: 0               ││
+││ }, {                     ││
+││   title: 'Hello',        ││
+││   artist: 'Adele',       ││
+││   likes: 0               ││
+││ }]                       ││
+│└──────────────────────────┘│
+└────────────────────────────┘
+```
+
 In React, an **owner** is a component that sets the props of another component. Inside the `render()` method of the `App` component class, a new `<Track />` component is created for each track in the `this.state.tracks` array. As each component is created, its props are set. Therefore, the `<App />` component is the owner of the `<Track />` components that are created inside its `render()` method.
 
 Being stateless, each `<Track />` component is responsible for handling the hierarchy's events for a single track. To handle this responsibility, the owner sets each component's `index`, `key`, `track`, and `updateTrack` props. With the exception of the `key` prop, the key-value pairs are accessible inside the `Track` component class using the `this.props` object.
