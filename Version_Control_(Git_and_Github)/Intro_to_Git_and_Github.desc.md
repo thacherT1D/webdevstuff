@@ -65,6 +65,45 @@ Turn to your neighbor and explain why developers use Github.
 
 <hr>
 
+## A Metaphor: Git is a Rocketship, Github is Mars 🚀
+
+| Rocketship Version | Git Version |
+|--------------------|-------------|
+| Package | Unstaged change |
+| Launchpad | Staging area |
+| Package on Launchpad | Staged change |
+| Package in Rocketship | Commited change |
+| Launch | Push |
+| Rocketship | Local Git repo |
+| Mars | GitHub |
+| Mars Landing Pad | Remote repo |
+
+Let's say you want to deliver some packages to Mars with a rocketship. *You want to push changes to GitHub from your git repo*
+
+1. Create some packages.
+ * *Make some changes to your files*
+
+1. Choose which packages to place on the launchpad.
+  * *`git add` the changed files you want to stage to be committed*
+
+1. Put the packages on the launchpad into the rocketship.
+  * *`git commit`*
+
+1. Repeat the create packages, move to launchpad, and pack rocketship steps for any additional packages you want to send.
+  * *Change files, `git add`, `git commit`*
+
+1. Set the rocketship coordinates for a specific landing pad on Mars.
+  * *`git remote add origin git@github.com:spacex/marooned-astronaut.git`*
+  * We'll reuse our rocketship, so you only need to do this step on the very first launch!
+
+1. When the rocketship is sufficiently loaded, we want to launch the rocketship to Mars.
+  * *`git push -u origin master`*
+
+1. Astronaut on Mars will recieve your rocketship and be happy with their new packages.
+  * *Check your GitHub repo to make sure the changes were pushed*
+
+<hr>
+
 ## What does the Git Flow look like?
 Any files tracked by git typically go through 3 stages:
 
@@ -102,45 +141,6 @@ The Scribe is responsible for drawing out a diagram dipicting the git flow **as 
 
 Don't worry, the point isn't to check to see that you memorized 100% of
 the git flow 10 seconds after we walked though it. Now close your laptops!
-
-<hr>
-
-## A Metaphor: Git is a Rocketship, Github is Mars 🚀
-
-| Rocketship Version | Git Version |
-|--------------------|-------------|
-| Package | Unstaged change |
-| Launchpad | Staging area |
-| Package on Launchpad | Staged change |
-| Package in Rocketship | Commited change |
-| Launch | Push |
-| Rocketship | Local Git repo |
-| Mars | GitHub |
-| Mars Landing Pad | Remote repo |
-
-Let's say you want to deliver some packages to Mars with a rocketship. *You want to push changes to GitHub from your git repo*
-
-1. Create some packages.
- * *Make some changes to your files*
-
-1. Choose which packages to place on the launchpad.
-  * *`git add` the changed files you want to stage to be committed*
-
-1. Put the packages on the launchpad into the rocketship.
-  * *`git commit`*
-
-1. Repeat the create packages, move to launchpad, and pack rocketship steps for any additional packages you want to send.
-  * *Change files, `git add`, `git commit`*
-
-1. Set the rocketship coordinates for a specific landing pad on Mars.
-  * *`git remote add origin git@github.com:spacex/marooned-astronaut.git`*
-  * We'll reuse our rocketship, so you only need to do this step on the very first launch!
-
-1. When the rocketship is sufficiently loaded, we want to launch the rocketship to Mars.
-  * *`git push -u origin master`*
-
-1. Astronaut on Mars will recieve your rocketship and be happy with their new packages.
-  * *Check your GitHub repo to make sure the changes were pushed*
 
 ## Basic Git Commands
 
@@ -321,6 +321,7 @@ how to look at them.
 > Docs: [git manual](https://git-scm.com/docs/git-push) or `man git-push`
 > Docs: [git manual](https://git-scm.com/docs/git-remote) or `man git-remote`
 
+<br>
 
 #### 💪 Exercises
 
@@ -391,6 +392,8 @@ $ git commit -m "Initial commit"
 $ git remote add origin git@github.com:{userName}/{repoName}.git
 $ git push -u origin master
 ```
+
+<hr>
 
 #### 📚 Resources
 
