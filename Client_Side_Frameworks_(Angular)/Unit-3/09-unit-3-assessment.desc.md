@@ -22,7 +22,6 @@ Congratulations - you have completed our Angular Unit. By now you should have an
 
 - This should be a single page application and angular should handle the routing of all views.
 - You should be using `services` to manage business logic, keep your controllers as skinny as possible.
-- You should be using `$resource` to manage (at least most) of your API calls
 - When your HTML starts to get bloated, think about writing some custom directives to clean up your code
 
 **Authentication and Authorization**
@@ -37,7 +36,15 @@ Congratulations - you have completed our Angular Unit. By now you should have an
 - Deploy the front-end to Firebase.
 - Deploy the back-end to Heroku.
 
+**README.MD**
+
+Include `README.md` files in both of the repositories for this project. The following should be included in there:
+
+- Location of deployed application.
+- Instructions on how to install your application from scratch.
+
 ## Bonus
 
 - Create admin functionality where an admin has full CRUD over users, posts and comments
+- Use `$resource` to manage (at least most) of your API calls
 - Style the application!
