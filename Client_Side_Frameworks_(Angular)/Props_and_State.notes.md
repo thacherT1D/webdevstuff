@@ -393,7 +393,7 @@ On the other hand, a `<Track />` component is stateless because it doesn't use t
 │ │     artist: 'The Beatles',          │ │    │ │     artist: 'Adele',               │ │
 │ │     likes: 0,                       │ │    │ │     likes: 0,                      │ │
 │ │     title: 'Hey Jude'               │ │    │ │     title: 'Hello'                 │ │
-│ │   }                                 │ │    │ │   },                               │ │
+│ │   }                                 │ │    │ │   }                                │ │
 │ │ }                                   │ │    │ │ }                                  │ │
 │ └─────────────────────────────────────┘ │    │ └────────────────────────────────────┘ │
 └─────────────────────────────────────────┘    └────────────────────────────────────────┘
