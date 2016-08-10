@@ -397,9 +397,9 @@ On the other hand, a `<Track />` component is stateless because it doesn't use t
 
 Being stateful, an `<App />` component is only responsible for managing a component hierarchy's state. While it could also handle a hierarchy's events, it follows the [single responsibility principal](https://en.wikipedia.org/wiki/Single_responsibility_principle) and delegates the additional responsibility to the stateless components that it owns.
 
-In React, an **owner** is a component that sets the props of another component. Inside the `render()` method of the `App` component class, a new `<Track />` component is created for each track in the `this.state.tracks` array. As each component is created, its props are set. Therefore, the `<App />` component is the owner of the `<Track />` components that are created inside its `render()` method.
+In React, an **owner** is a component that sets the props of another component. Inside the `render()` method of an `<App />` component, a new `<Track />` component is created for each track in the `this.state.tracks` array. As each component is created, its props are set. Therefore, the `<App />` component is the owner of the `<Track />` components that are created inside its `render()` method.
 
-Being stateless, each `<Track />` component is responsible for handling the hierarchy's events for a single track. To handle this responsibility, the owner sets each component's `index`, `key`, `track`, and `updateTrack` props. With the exception of the `key` prop, the key-value pairs are accessible inside the `Track` component class using the `this.props` object.
+Being stateless, each `<Track />` component is responsible for handling the hierarchy's events for a single track. To handle this responsibility, the owner sets each component's `index`, `key`, `track`, and `updateTrack` props. With the exception of the `key` prop, the key-value pairs are accessible inside the `<Track />` component using the `this.props` object.
 
 **NOTE:** The `key` prop is used by React to uniquely identify sibling components of the same type. If a keyed component is changed in any way, React can more efficiently update the DOM hierarchy. The `key` prop is *not* accessible via `this.props.key`.
 
@@ -410,11 +410,11 @@ The following table enumerates the values stored inside the `this.props` object 
 | `{ title: 'Hey Jude', artist: 'The Beatles', likes: 0 }` | `0`                | `updateTrack()`            |
 | `{ title: 'Hello', artist: 'Adele', likes: 0 }`          | `1`                | `updateTrack()`            |
 
-Inside the `render()` method of the `Track` component class, the `track` and `index` props are combined with HTML components to produce a user interface. The user interface allows a user to view and update a track's information.  When the value of the `<input type="text" />` component changes, the `handleChange()` method is invoked.
+Inside the `render()` method of the `<Track>` component, the `track` and `index` props are combined with HTML components to produce a user interface. The user interface allows a user to view and update a track's information.  When the value of the `<input type="text" />` component changes, the `handleChange()` method is invoked.
 
 As you've seen, event handlers process an event and update a component's state. However, not all components have state to update, as is the case with the stateless `<Track />` components. Rather than calling the `this.setState()` method, each `<Track />` component is given a `this.props.updateTrack()` state mutator method to call instead.
 
-In React, a **state mutator** is a method inside a stateful component that calls the `this.setState()` method. In the above code example, the `updateTrack()` state mutator method is specified in the `App` component class but passed to each `<Track />` component through its props. When the `handleChange()` method is triggered, the state mutator is invoked.
+In React, a **state mutator** is a method inside a stateful component that calls the `this.setState()` method. In the above code example, the `updateTrack()` state mutator method is specified in the `<App />` component but passed to each `<Track />` component through its props. When the `handleChange()` method is triggered, the state mutator is invoked.
 
 When nesting custom components, data flows from the owner to the owned through its props. Effectively, this is another form of one-way data binding. Owners bind their owned component's props to some value the owner has computed based on its props or state. Since this process happens recursively, data changes are automatically reflected everywhere they are used.
 
@@ -424,7 +424,7 @@ In React, **autobinding** is the process of binding a component to its methods. 
 
 Since mutable state increases complexity and reduces predictability, components with only immutable props are easier to think about. Whenever it's time to update the DOM hierarchy, they build the user interface using the data they're given. When a user interacts with their components, they handle the event using the methods they're given.
 
-Inside the `render()` method of the `App` component class, the `Array.prototype.map()` method collects the returned `<Track />` elements into an array. When an array is used as a child, its elements become individual children of the parent `ReactElement`.
+Inside the `render()` method of the `<App />` component, the `Array.prototype.map()` method collects the returned `<Track />` elements into an array. When an array is used as a child, its elements become individual children of the parent `ReactElement`.
 
 ### Exercise
 
