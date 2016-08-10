@@ -1,6 +1,4 @@
-# Track Changes with Git
-
-## Objectives
+# Objectives
 
 * Discuss what a Version Control System is and why you would use it
 * Describe what Git and Github are and how they differ
@@ -9,6 +7,8 @@
 * Stage new and changed files with `git add`
 * Check the status of changed files with `git status`
 * Commit staged files to the git repository with `git commit`
+
+<hr>
 
 ## What is a Version Control System?
 
@@ -35,16 +35,20 @@ There are many flavors of VCS:
   * TFS
   * etc.
 
+<hr>
+
 ## What is Git?
 
 [Git](https://git-scm.com/) is a free and open source software for version control.
 While there are many different version control systems, git is incredibly popular and powerful. Many companies use git, and if you understand git it will be easy to learn another version control paradigm.
 
-### Exercise
+#### Exercise
 
 Take a moment and think how you would rephrase the above description of
 git in your own words. Once you feel comfortable with your description
 of git, turn and share it with your neighbor.
+
+<hr>
 
 ## What is GitHub?
 
@@ -55,9 +59,11 @@ Once we've __pushed__ to a __remote__ such as GitHub, we know our code is safe.
 Even if our hard drives die.
 And if GitHub goes down, we can still work on our distributed repos offline.
 
-### Exercise
+#### Exercise
 
 Turn to your neighbor and explain why developers use Github.
+
+<hr>
 
 ## What does the Git Flow look like?
 Any files tracked by git typically go through 3 stages:
@@ -81,7 +87,7 @@ shortly.
 
 ![Git Flow](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/291/git_flow.png)
 
-### Exercise
+#### Exercise
 
 Partner up with the person sitting next to you for a Sage & Scribe exercise.
 
@@ -96,6 +102,8 @@ The Scribe is responsible for drawing out a diagram dipicting the git flow **as 
 
 Don't worry, the point isn't to check to see that you memorized 100% of
 the git flow 10 seconds after we walked though it. Now close your laptops!
+
+<hr>
 
 ## A Metaphor: Git is a Rocketship, Github is Mars 🚀
 
@@ -314,11 +322,12 @@ how to look at them.
 > Docs: [git manual](https://git-scm.com/docs/git-remote) or `man git-remote`
 
 
-## Exercises
+#### Exercises
 
 Try to do these without looking at the answer first!
 
-### Basic Git Workflow
+
+#### Basic Git Workflow
 
 1. Create a new folder
 1. Initialize a git repository
@@ -328,8 +337,10 @@ Try to do these without looking at the answer first!
 1. Check that the file is staged
 1. Commit the file
 
-![Answer
-Padding](https://media.giphy.com/media/3oD3YveOJWdwIAfZ5e/giphy.gif)
+![Answer Padding](https://media.giphy.com/media/3oD3YveOJWdwIAfZ5e/giphy.gif)
+
+<br>
+<br>
 
 #### Answer
 
@@ -354,8 +365,10 @@ $ git commit -m "Initial commit"
 1. Set the GitHub repo as the git remote
 1. Push to GitHub
 
-![Answer
-Padding](https://media.giphy.com/media/l46CsTPetihC1rX9K/giphy.gif)
+![Answer Padding](https://media.giphy.com/media/l46CsTPetihC1rX9K/giphy.gif)
+
+<br>
+<br>
 
 #### Answer
 
@@ -377,7 +390,7 @@ $ git remote add origin git@github.com:{userName}/{repoName}.git
 $ git push -u origin master
 ```
 
-## Resources
+#### Resources
 
 * `man git` // the full git manual from your terminal
 * [VCS on Wikipedia](https://en.wikipedia.org/wiki/Version_control)
@@ -386,8 +399,5 @@ $ git push -u origin master
 * [Tower Learn Version Control with Git book](https://www.git-tower.com/learn/git/ebook/command-line/introduction#start)
 * [Try Git](https://try.github.io/)
 * [Git Glossary](https://help.github.com/articles/github-glossary/)
-* [Getting
-  Started](https://www.atlassian.com/git/tutorials/what-is-version-control)
-
-## Git Cheatsheet
+* [Getting Started](https://www.atlassian.com/git/tutorials/what-is-version-control)
 * [Tower Git Cheatsheet](http://www.git-tower.com/blog/git-cheat-sheet/)
