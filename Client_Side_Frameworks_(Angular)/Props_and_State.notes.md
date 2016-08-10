@@ -378,7 +378,7 @@ On the other hand, a `<Track />` component is stateless because its class doesn'
 
 ```text
 ┌────────── <Track /> ──────────┐   ┌────────── <Track /> ─────────┐
-│ ┌────────── Props ─────────┐  │   │ ┌─────── Props ────────────┐ │
+│ ┌────────── Props ─────────┐  │   │ ┌────────── Props ─────────┐ │
 │ │ {                        │  │   │ │ {                        │ │
 │ │   title: 'Hey Jude',     │  │   │ │   title: 'Hello',        │ │
 │ │   artist: 'The Beatles', │  │   │ │   artist: 'Adele',       │ │
