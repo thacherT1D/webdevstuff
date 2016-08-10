@@ -40,7 +40,7 @@ Every component has their own `this.props` object. But remember, the key-value p
 
 ### Exercise
 
-Turn to a neighbor and, in your own words, explain what props are and how they're used. After about a minute, your instructor will cold call on the class and ask what was discussed.
+Turn to a neighbor and, in your own words, explain what props are and how they're used. After about thirty seconds, your instructor will cold call on the class and ask what was discussed.
 
 ## What's state?
 
