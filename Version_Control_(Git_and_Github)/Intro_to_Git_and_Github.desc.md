@@ -154,13 +154,13 @@ There are 5 main commands for `git`
 
 With these 5 commands you can create a repo and start versioning your project.
 
-Let's spin up a new project to play with them. You should have a
-"workspace", "playground" or some other place where you are going to be
-organizing all your projects for this class.
+Let's spin up a new project and play with these commands. You should have a
+"workspace", "playground" or some other place where you are organizing all your projects for this class.
 
-In there create a new directory `mkdir git-test`
-Move into that directory `cd git-test`
-Create a few files `touch space-is-rad.txt what-about-bob.txt stuff.txt`
+In your work space:
+* Create a new directory `mkdir git-test`
+* Move into that directory `cd git-test`
+* Create a few files `touch space-is-rad.txt what-about-bob.txt stuff.txt`
 
 ### init
 Initialize a new git repo in your current directory with:
