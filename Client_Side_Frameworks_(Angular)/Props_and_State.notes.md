@@ -354,9 +354,7 @@ Once the user interface is working, analyze the code and make an educated guess 
 
 ## How does data flow between stateful and stateless components?
 
-In the above code example, the responsibility of managing state and handling events is split between two different component classes—`App` and `Track` respectively. An `<App />` component is stateful because its class uses the `getInitialState()` and `this.setState()` methods. On the other hand, a `<Track />` component is stateless because its class doesn't use the `getInitialState()` method or the `this.setState()` method.
-
-Being stateful, an `<App />` component is only responsible for managing a component hierarchy's state. While it could also handle a hierarchy's events, it follows the [single responsibility principal](https://en.wikipedia.org/wiki/Single_responsibility_principle) and delegates the additional responsibility to the stateless components that it owns.
+In the above code example, the responsibility of managing state and handling events is split between two different component classes—`App` and `Track` respectively. An `<App />` component is stateful because its class uses the `getInitialState()` and `this.setState()` methods.
 
 ```text
 ┌────────── <App /> ─────────┐
@@ -373,6 +371,22 @@ Being stateful, an `<App />` component is only responsible for managing a compon
 │└──────────────────────────┘│
 └────────────────────────────┘
 ```
+
+On the other hand, a `<Track />` component is stateless because its class doesn't use the `getInitialState()` method or the `this.setState()` method.
+
+```text
+┌───────── <Track /> ────────┐   ┌───────── <Track /> ────────┐
+│┌────────── Props ─────────┐│   │┌─────── Props ────────────┐│
+││ {                        ││   ││ {                        ││
+││   title: 'Hey Jude',     ││   ││   title: 'Hello',        ││
+││   artist: 'The Beatles', ││   ││   artist: 'Adele',       ││
+││   likes: 0               ││   ││   likes: 0               ││
+││ }                        ││   ││ }                        ││
+│└──────────────────────────┘│   │└──────────────────────────┘│
+└────────────────────────────┘   └────────────────────────────┘
+```
+
+Being stateful, an `<App />` component is only responsible for managing a component hierarchy's state. While it could also handle a hierarchy's events, it follows the [single responsibility principal](https://en.wikipedia.org/wiki/Single_responsibility_principle) and delegates the additional responsibility to the stateless components that it owns.
 
 In React, an **owner** is a component that sets the props of another component. Inside the `render()` method of the `App` component class, a new `<Track />` component is created for each track in the `this.state.tracks` array. As each component is created, its props are set. Therefore, the `<App />` component is the owner of the `<Track />` components that are created inside its `render()` method.
 
