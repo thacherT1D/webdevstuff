@@ -399,22 +399,66 @@ Being stateful, an `<App />` component is only responsible for managing a compon
 
 In React, an **owner** is a component that sets the props of another component. Inside the `render()` method of an `<App />` component, a new `<Track />` component is created for each track in the `this.state.tracks` array. As each component is created, its props are set. Therefore, the `<App />` component is the owner of the `<Track />` components that are created inside its `render()` method.
 
+```jsx
+// app/components/app.jsx
+
+render() {
+  return <div>
+    {this.state.tracks.map((track, index) => {
+      return <Track
+        index={index}
+        key={index}
+        track={track}
+        updateTrack={this.updateTrack}
+      />;
+    })}
+  </div>;
+}
+```
+
 Being stateless, each `<Track />` component is responsible for handling the hierarchy's events for a single track. To handle this responsibility, the owner sets each component's `index`, `key`, `track`, and `updateTrack` props. With the exception of the `key` prop, the key-value pairs are accessible inside the `<Track />` component using the `this.props` object.
 
 **NOTE:** The `key` prop is used by React to uniquely identify sibling components of the same type. If a keyed component is changed in any way, React can more efficiently update the DOM hierarchy. The `key` prop is *not* accessible via `this.props.key`.
 
-The following table enumerates the values stored inside the `this.props` object for each `<Track />` component.
+Inside the `render()` method of the `<Track>` component, its `track` props are combined with its presentation logic to produce a user interface. The user interface allows a user to view and update the track's information.  When the value of the `<input type="text" />` component changes, the `handleChange()` method is invoked.
 
-| `this.props.track`                                       | `this.props.index` | `this.props.updateTrack()` |
-|----------------------------------------------------------|--------------------|----------------------------|
-| `{ title: 'Hey Jude', artist: 'The Beatles', likes: 0 }` | `0`                | `updateTrack()`            |
-| `{ title: 'Hello', artist: 'Adele', likes: 0 }`          | `1`                | `updateTrack()`            |
+```jsx
+// From app/components/track.jsx
 
-Inside the `render()` method of the `<Track>` component, the `track` and `index` props are combined with HTML components to produce a user interface. The user interface allows a user to view and update a track's information.  When the value of the `<input type="text" />` component changes, the `handleChange()` method is invoked.
+render() {
+  return <div>
+    <p>{this.props.track.title} - {this.props.track.artist}</p>
+
+    <p>Likes: {this.props.track.likes}</p>
+
+    <button onClick={this.handleClick}>Like</button>
+  </div>;
+}
+```
 
 As you've seen, event handlers process an event and update a component's state. However, not all components have state to update, as is the case with the stateless `<Track />` components. Rather than calling the `this.setState()` method, each `<Track />` component is given a `this.props.updateTrack()` state mutator method to call instead.
 
-In React, a **state mutator** is a method inside a stateful component that calls the `this.setState()` method. In the above code example, the `updateTrack()` state mutator method is specified in the `<App />` component but passed to each `<Track />` component through its props. When the `handleChange()` method is triggered, the state mutator is invoked.
+```jsx
+// From app/components/track.jsx
+
+handleClick() {
+  this.props.updateTrack(this.props.index);
+}
+```
+
+In React, a **state mutator** is a method inside a stateful component that calls the `this.setState()` method. In the above code example, the `updateTrack()` state mutator method is defined in the `<App />` component but passed to each `<Track />` component through its props. When the `handleChange()` method is triggered, the state mutator is invoked.
+
+```jsx
+// From app/components/app.jsx
+
+updateTrack(index) {
+  const nextTracks = this.state.tracks;
+
+  nextTracks[index].likes += 1;
+
+  this.setState({ tracks: nextTracks });
+}
+```
 
 When nesting custom components, data flows from the owner to the owned through its props. Effectively, this is another form of one-way data binding. Owners bind their owned component's props to some value the owner has computed based on its props or state. Since this process happens recursively, data changes are automatically reflected everywhere they are used.
 
