@@ -86,7 +86,7 @@ Every component has their own `this.state` object. And because the key-value pai
 
 ### Exercise
 
-Turn to a neighbor and, in your own words, explain what state is and how it's used. After about a minute, your instructor will cold call on the class and ask what was discussed.
+Turn to a neighbor and, in your own words, explain what state is and how it's used. After about thirty seconds, your instructor will cold call on the class and ask what was discussed.
 
 ## Why are props and state important?
 
