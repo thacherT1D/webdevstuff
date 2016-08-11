@@ -471,7 +471,7 @@ incrementLikes(track) {
 }
 ```
 
-As the name suggests, the `incrementLikes()` method increments the `likes` counter of a given `track` object. However, instead of updating the `track` object, the method creates a new `nextTracks` array that contains all the elements of the old `this.state.track` array but with one difference. The old `track` object is replaced with a new object that contains a copy of the key-value pairs of the old object and the `{ likes: nextLikes }` object. The following diagram illustrates the creation of a new `track` object.
+As the name suggests, the `incrementLikes()` method increments the `likes` counter of a given `track` object. However, instead of updating the `track` object, the method creates a new `nextTracks` array that contains all the elements of the old `this.state.track` array but with one difference. The old `track` object is replaced with a new object that contains a copy of the key-value pairs from the old object and from the `{ likes: nextLikes }` object. The following diagram illustrates the creation of a new `track` object.
 
 ```text
 ┌──────────────────────────┐   ┌────┐           ┌──────────────────────────┐
