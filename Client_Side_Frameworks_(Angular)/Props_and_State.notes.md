@@ -475,14 +475,15 @@ As the name suggests, the `incrementLikes()` method increments the `likes` count
 
 This tactic of copying key-value pairs is part of a immutable data modeling strategy. An **immutable data model** is an entity or collection (e.g. object or array) whose state cannot be changed after it's created. Though it's a bit more work up front, an immutable data model for a stateful component can lead to significant performance gains when re-rendering a component hierarchy. You'll learn more about immutable data modeling later.
 
-The last step of the `incrementLikes()` state mutator is to change the state of an `<App />` component. Using the `this.setState()` method, the `nextTracks` array is merged into the current `this.state` object. After the merge, the entire component hierarchy is automatically re-rendered, producing a new user interface.
+To resolve the `incrementLikes()` state mutator, the state of an `<App />` component is changed. Using the `this.setState()` method, the `nextTracks` array merges into the current `this.state` object. After the merge, the entire component hierarchy is automatically re-rendered, starting the whole process over again.
 
 In this section, we've covered a bunch of technical information about information flows between stateful and stateless components. To summarize:
 
-1. The stateful component's state flows to the stateless component's props.
-1. The stateless component's props combine with presentation logic to render a user interface.
-1. The stateless component's event is handled by invoking its event handler.
-1. The stateful component's state is changed by invoking its state mutator.
+1. A stateful component's state and state mutators are passed to a stateless component's props.
+1. A stateless component's props are combined with presentation logic to render a user interface.
+1. An event is handled by invoking stateless component's event handler.
+1. A stateless component's event handler is processed by invoking a stateful component's state mutator.
+1. A stateful component's state mutator is resolved by changing its state.
 1. Repeat step 1.
 
 Effectively, this is another form of one-way data binding. The following diagram illustrates the one-way data binding between stateful and stateless components.
