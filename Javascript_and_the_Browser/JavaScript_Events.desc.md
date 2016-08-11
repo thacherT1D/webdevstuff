@@ -114,6 +114,8 @@ button.removeEventListener("click", clickAlert);
 ```
 Try clicking your button... What happens?
 
+<br>
+
 #### 💪 Exercise
 
 Modify the event listener on your button to log out to the console "Lost to the ether". The button should only log this message once. If you click the button a second time nothing should be logged.
@@ -147,6 +149,8 @@ button.addEventListener('click', clickyButton);
 
 Once you get this working, you'll see that the `event` object has a lot of details about the click event that was fired: where was the cursor? What time was the event fired? Was the shift key held down? And so on. Meanwhile, `event.target` points to the DOM element that was (in this case) clicked. This can be helpful if you want to modify the DOM based on user interaction.
 
+<br>
+
 #### 💪 Exercise
 
  Create a variable called `clickCount` in your `js` file, and set it equal to 0. Modify your event listener so that every time you click on the button, the clickCount increments, and the button text changes to show the user how many times the button has been clicked.
@@ -154,8 +158,6 @@ Once you get this working, you'll see that the `event` object has a lot of detai
 <hr>
 
 ## Target Vs. This
-
-`event.target` vs. `this`
 
 Let's return to our simple HTML page from before, and add an event listener that calls the `logText` function on a button click:
 
@@ -283,7 +285,7 @@ In this case all p tags share one copy of `eventHandler` which they get from the
 
 When you're using Javascript to manipulate the DOM, you need to be sure that what you're trying to manipulate is available to you. To see what this means we're going to revisit that weirdly placed script tag we have sitting in the bottom of our `<body>` element and put it back in the `<head>` where it blongs:
 
-`index.html`
+In your index.html:
 
 ```html
 <!DOCTYPE html>
@@ -299,7 +301,7 @@ When you're using Javascript to manipulate the DOM, you need to be sure that wha
 </html>
 ```
 
-`app.js`
+In your app.js:
 
 ```javascript
 var img = document.querySelector('img');
@@ -336,6 +338,8 @@ You may also come across `window.onload` It is another option to be aware of. It
 
 Note: putting your script tags at the bottom of the page can help resolve some of these issues, but it's still probably a good idea to wrap any DOM-manipulating functionality inside of an event listener to `DOMContentLoaded`.
 
+<br>
+
 #### 💪 Exercise
 
 With your script tag in the `<head>` of your html, get an event to properly fire using both `DOMContentLoaded` and `window.onload`
@@ -371,6 +375,8 @@ When an event happens. It goes through a _capture_ phase **down** the DOM tree f
 These 2 phases -- event capturing and event bubbling -- are collectively known as event propagation.
 
 There is a third Boolean parameter of `addEventListener` that specifies if you want the handler to fire on capture or bubble. It defaults to `false`, which is bubble. But if you set it to `true`, it will fire on capture.
+
+<br>
 
 #### 💪 Exercise
 
@@ -459,9 +465,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
 You should now see that the alert messages pop up in the opposite order!
 
+<hr>
+
 ### 📖 Homework
 
 [Stoplight Exercise](https://github.com/gSchool/stoplight-event-exercise)
+
+<br>
 
 #### 📚 Resources
 
