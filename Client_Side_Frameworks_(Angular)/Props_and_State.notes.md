@@ -471,7 +471,23 @@ incrementLikes(track) {
 }
 ```
 
-As the name suggests, the `incrementLikes()` method increments the `likes` counter of a given `track` object. However, instead of updating the `track` object, the method creates a new `nextTracks` array that contains all the elements of the old `this.state.track` array but with one difference. The old `track` object is replaced with a new object that contains a copy of the key-value pairs of the old object and the `{ likes: nextLikes }` object.
+As the name suggests, the `incrementLikes()` method increments the `likes` counter of a given `track` object. However, instead of updating the `track` object, the method creates a new `nextTracks` array that contains all the elements of the old `this.state.track` array but with one difference. The old `track` object is replaced with a new object that contains a copy of the key-value pairs of the old object and the `{ likes: nextLikes }` object. The following diagram illustrates the creation of a new `track` object.
+
+```text
+┌──────────────────┐
+│                  │
+▼                  │
+┌──────────────────────────┐   ┌────┐  ┌──────────────────────────┐  ┌──────────────┐
+│ {                        │   │    │  │ {                        │  │              │
+│   artist: 'The Beatles', │   │    │  │   artist: 'The Beatles', │  │              │
+│   likes: 1,              │ = │ {} │  │   likes: 0,              │  │ { likes: 0 } │
+│   title: 'Hey Jude'      │   │    │  │   title: 'Hey Jude'      │  │              │
+│ }                        │   │    │  │ }                        │  │              │
+└──────────────────────────┘   └────┘  └──────────────────────────┘  └──────────────┘
+▲                                          │
+│                                          │
+└──────────────────────────────────────────┘
+```
 
 This tactic of copying key-value pairs is part of a immutable data modeling strategy. An **immutable data model** is an entity or collection (e.g. object or array) whose state cannot be changed after it's created. Though it's a bit more work up front, an immutable data model for a stateful component can lead to significant performance gains when re-rendering a component hierarchy. You'll learn more about immutable data modeling later.
 
