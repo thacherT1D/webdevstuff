@@ -8,7 +8,7 @@
 
 | Duration by yourself | Duration as a class |
 |----------------------|---------------------|
-| TBD                  | TBD                 |
+| About 3 hours        | About 4.5 hours     |
 
 ## What are props?
 
