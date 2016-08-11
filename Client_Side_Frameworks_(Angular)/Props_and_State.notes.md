@@ -473,23 +473,33 @@ incrementLikes(track) {
 
 As the name suggests, the `incrementLikes()` method increments the `likes` counter of a given `track` object. However, instead of updating the `track` object, the method creates a new `nextTracks` array that contains all the elements of the old `this.state.track` array with one difference. The `track` object in the array is replaced with a new object that contains a copy of the key-value pairs of the old `track` object and the `{ likes: nextLikes }` object.
 
-The tactic of copying key-value pairs is part of a immutable data modeling strategy. An **immutable data model** is an entity or collection (e.g. object or array) whose state cannot be changed after it's created. Though it's a bit more work up front, an immutable data model for a stateful component can lead to significant performance gains when re-rendering a component hierarchy. You'll learn more about immutable data modeling later.
+This tactic of copying key-value pairs is part of a immutable data modeling strategy. An **immutable data model** is an entity or collection (e.g. object or array) whose state cannot be changed after it's created. Though it's a bit more work up front, an immutable data model for a stateful component can lead to significant performance gains when re-rendering a component hierarchy. You'll learn more about immutable data modeling later.
 
-In this example, the owner component's state flows to the owned component's props. There the props are combined with the presentation logic to render a new user interface. Then, the owned component's events change the owner component's state. Effectively, this is another form of one-way data binding.
+The last step of the `incrementLikes()` state mutator is to change the state of an `<App />` component. Using the `this.setState()` method, the `nextTracks` array is merged into the current `this.state` object. After the merge, the entire component hierarchy is automatically re-rendered, producing a new user interface.
+
+In this section, we've covered a bunch of technical information about information flows between stateful and stateless components. To summarize:
+
+1. The stateful component's state flows to the stateless component's props.
+1. The stateless component's props combine with presentation logic to render a user interface.
+1. The stateless component's event is handled by invoking its event handler.
+1. The stateful component's state is changed by invoking its state mutator.
+1. Repeat step 1.
+
+Effectively, this is another form of one-way data binding.
 
 ```text
          ┌───── Automatic change ────┐
          │                           │
          │                           ▼
-┌─────────────────┐         ┌─────────────────┐
+┌───── state ─────┐         ┌───── props ─────┐
 │                 │         │                 │
 │                 │         │                 │
-│      State      │         │   Presentation  │
+│    Stateful     │         │    Stateless    │
 │                 │         │                 │
 │                 │         │                 │
-└─────────────────┘         └─────────────────┘
+└─ state mutator ─┘         └─ event handler ─┘
          ▲                           │
-
+ 
          └ ─ ─ ─ Manual change ─ ─ ─ ┘
 ```
 
