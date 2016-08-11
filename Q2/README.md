@@ -48,7 +48,7 @@ Week 1
       <td rowspan="2">Tuesday</td>
       <td rowspan="2"><a href="https://github.com/workshopper/learnyounode">learnyounode</a>
       </td>
-      <td><a href="https://github.com/gSchool/node-curriculum/blob/master/unit-1/03-http-and-node.md">Node.js HTTP Server</a>
+      <td><a href="https://github.com/gSchool/node-curriculum/blob/master/Node/HTTP Server.md">Node.js HTTP Server</a>
       </td>
       <td><a href="https://github.com/gSchool/fs-pet-shop/blob/master/2_http.md">Pet Shop - Node HTTP Server</a>
       </td>

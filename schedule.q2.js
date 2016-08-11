@@ -21,7 +21,7 @@ module.exports = [
     warmup: { text: "learnyounode", url: "https://github.com/workshopper/learnyounode" },
     activities: [
       {
-        article: { text: "Node.js HTTP Server", url: "https://github.com/gSchool/node-curriculum/blob/master/unit-1/03-http-and-node.md" },
+        article: { text: "Node.js HTTP Server", url: "https://github.com/gSchool/node-curriculum/blob/master/Node/HTTP Server.md" },
         assignment: { text: "Pet Shop - Node HTTP Server", url: "https://github.com/gSchool/fs-pet-shop/blob/master/2_http.md" },
       },
       {
