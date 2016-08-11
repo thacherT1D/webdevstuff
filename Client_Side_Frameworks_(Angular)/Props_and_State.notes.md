@@ -449,7 +449,9 @@ handleClick() {
 }
 ```
 
-As you've seen, event handlers process an event and update a component's state. However, not all components have state to update, as is the case with a stateless `<Track />` component. Rather than invoking the `this.setState()` method for itself, each `<Track />` component invokes the `this.props.incrementLikes()` state mutator method instead. In React, a **state mutator** is a method inside a stateful component that invokes the `this.setState()` method. The `incrementLikes()` state mutator method is defined in the `<App />` component, but is passed to each `<Track />` component through its props. It's up the the `<Track />` component to determine the when to invoke the `incrementLikes()` state mutator method.
+As you've seen, event handlers process an event and update a component's state. However, not all components have state to update, as is the case with a stateless `<Track />` component. Rather than invoking the `this.setState()` method for itself, each `<Track />` component invokes the `this.props.incrementLikes()` state mutator method from its `handleClick()` event handler method.
+
+In React, a **state mutator** is a method inside a stateful component that invokes the `this.setState()` method. The `incrementLikes()` state mutator method is defined in the `<App />` component, but is passed to each `<Track />` component through its props. It's up the the `<Track />` component to determine the when to invoke the `incrementLikes()` state mutator method.
 
 ```jsx
 // From app/components/app.jsx
