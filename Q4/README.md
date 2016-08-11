@@ -15,7 +15,7 @@ Week 1
   <tbody>
     <tr>
       <td rowspan="1">Monday</td>
-      <td rowspan="1"><a href=""></a>
+      <td rowspan="1"><a href="">Angular</a>
       </td>
       <td>
       </td>
@@ -161,7 +161,7 @@ Week 3
       <td rowspan="1">Monday</td>
       <td rowspan="1"><a href=""></a>
       </td>
-      <td>
+      <td>Capstone
       </td>
       <td>
       </td>
@@ -172,7 +172,7 @@ Week 3
       <td rowspan="1">Tuesday</td>
       <td rowspan="1"><a href=""></a>
       </td>
-      <td>
+      <td>Capstone
       </td>
       <td>
       </td>
@@ -183,7 +183,7 @@ Week 3
       <td rowspan="1">Wednesday</td>
       <td rowspan="1"><a href=""></a>
       </td>
-      <td>
+      <td>Capstone
       </td>
       <td>
       </td>
@@ -194,7 +194,7 @@ Week 3
       <td rowspan="1">Thursday</td>
       <td rowspan="1"><a href=""></a>
       </td>
-      <td>
+      <td>Capstone
       </td>
       <td>
       </td>
@@ -205,7 +205,7 @@ Week 3
       <td rowspan="1">Friday</td>
       <td rowspan="1"><a href=""></a>
       </td>
-      <td>
+      <td>Capstone
       </td>
       <td>
       </td>
@@ -233,7 +233,7 @@ Week 4
       <td rowspan="1">Monday</td>
       <td rowspan="1"><a href=""></a>
       </td>
-      <td>
+      <td>Capstone
       </td>
       <td>
       </td>
@@ -244,7 +244,7 @@ Week 4
       <td rowspan="1">Tuesday</td>
       <td rowspan="1"><a href=""></a>
       </td>
-      <td>
+      <td>Capstone
       </td>
       <td>
       </td>
@@ -255,7 +255,7 @@ Week 4
       <td rowspan="1">Wednesday</td>
       <td rowspan="1"><a href=""></a>
       </td>
-      <td>
+      <td>Capstone
       </td>
       <td>
       </td>
@@ -266,7 +266,7 @@ Week 4
       <td rowspan="1">Thursday</td>
       <td rowspan="1"><a href=""></a>
       </td>
-      <td>
+      <td>Capstone Presentations
       </td>
       <td>
       </td>
@@ -277,7 +277,7 @@ Week 4
       <td rowspan="1">Friday</td>
       <td rowspan="1"><a href=""></a>
       </td>
-      <td>
+      <td>Capstone Marketing
       </td>
       <td>
       </td>
@@ -335,10 +335,10 @@ Week 5
       </td>
     </tr>
     <tr>
-      <td rowspan="1">Thursday</td>
-      <td rowspan="1"><a href=""></a>
+      <td rowspan="2">Thursday</td>
+      <td rowspan="2"><a href=""></a>
       </td>
-      <td>
+      <td><a href="../Q4/Feedback.md">Final Survey</a>
       </td>
       <td>
       </td>
@@ -346,10 +346,7 @@ Week 5
       </td>
     </tr>
     <tr>
-      <td rowspan="1">Friday</td>
-      <td rowspan="1"><a href=""></a>
-      </td>
-      <td>
+      <td><a href="../Q4/Graduation.md">Graduation</a>
       </td>
       <td>
       </td>

@@ -15,7 +15,7 @@ Week 1
   <tbody>
     <tr>
       <td rowspan="1">Monday</td>
-      <td rowspan="1"><a href=""></a>
+      <td rowspan="1"><a href="">Angular</a>
       </td>
       <td>
       </td>

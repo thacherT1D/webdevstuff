@@ -47,10 +47,10 @@ Week 1
       </td>
     </tr>
     <tr>
-      <td rowspan="1">Thursday</td>
-      <td rowspan="1"><a href=""></a>
+      <td rowspan="2">Thursday</td>
+      <td rowspan="2"><a href=""></a>
       </td>
-      <td>
+      <td><a href="../Q4/Feedback.md">Final Survey</a>
       </td>
       <td>
       </td>
@@ -58,10 +58,7 @@ Week 1
       </td>
     </tr>
     <tr>
-      <td rowspan="1">Friday</td>
-      <td rowspan="1"><a href=""></a>
-      </td>
-      <td>
+      <td><a href="../Q4/Graduation.md">Graduation</a>
       </td>
       <td>
       </td>

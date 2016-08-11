@@ -2,7 +2,7 @@ module.exports = [
 
   // Week 1
   {
-    warmup: { text: "", url: "" },
+    warmup: { text: "Angular", url: "" },
     activities: [
       {
         article: {text: "", url: ""},
@@ -107,7 +107,7 @@ module.exports = [
     warmup: { text: "", url: "" },
     activities: [
       {
-        article: {text: "", url: ""},
+        article: {text: "Capstone", url: ""},
         assignment: {text: "", url: ""},
       },
     ],
@@ -117,7 +117,7 @@ module.exports = [
     warmup: { text: "", url: "" },
     activities: [
       {
-        article: {text: "", url: ""},
+        article: {text: "Capstone", url: ""},
         assignment: {text: "", url: ""},
       },
     ],
@@ -127,7 +127,7 @@ module.exports = [
     warmup: { text: "", url: "" },
     activities: [
       {
-        article: {text: "", url: ""},
+        article: {text: "Capstone", url: ""},
         assignment: {text: "", url: ""},
       },
     ],
@@ -137,7 +137,7 @@ module.exports = [
     warmup: { text: "", url: "" },
     activities: [
       {
-        article: {text: "", url: ""},
+        article: {text: "Capstone", url: ""},
         assignment: {text: "", url: ""},
       },
     ],
@@ -147,7 +147,7 @@ module.exports = [
     warmup: { text: "", url: "" },
     activities: [
       {
-        article: {text: "", url: ""},
+        article: {text: "Capstone", url: ""},
         assignment: {text: "", url: ""},
       },
     ],
@@ -158,7 +158,7 @@ module.exports = [
     warmup: { text: "", url: "" },
     activities: [
       {
-        article: {text: "", url: ""},
+        article: {text: "Capstone", url: ""},
         assignment: {text: "", url: ""},
       },
     ],
@@ -168,7 +168,7 @@ module.exports = [
     warmup: { text: "", url: "" },
     activities: [
       {
-        article: {text: "", url: ""},
+        article: {text: "Capstone", url: ""},
         assignment: {text: "", url: ""},
       },
     ],
@@ -178,7 +178,7 @@ module.exports = [
     warmup: { text: "", url: "" },
     activities: [
       {
-        article: {text: "", url: ""},
+        article: {text: "Capstone", url: ""},
         assignment: {text: "", url: ""},
       },
     ],
@@ -188,7 +188,7 @@ module.exports = [
     warmup: { text: "", url: "" },
     activities: [
       {
-        article: {text: "", url: ""},
+        article: {text: "Capstone Presentations", url: ""},
         assignment: {text: "", url: ""},
       },
     ],
@@ -198,7 +198,7 @@ module.exports = [
     warmup: { text: "", url: "" },
     activities: [
       {
-        article: {text: "", url: ""},
+        article: {text: "Capstone Marketing", url: ""},
         assignment: {text: "", url: ""},
       },
     ],
@@ -239,17 +239,11 @@ module.exports = [
     warmup: { text: "", url: "" },
     activities: [
       {
-        article: {text: "", url: ""},
+        article: {text: "Final Survey", url: "Q4/Feedback.md"},
         assignment: {text: "", url: ""},
       },
-    ],
-  },
-
-  {
-    warmup: { text: "", url: "" },
-    activities: [
       {
-        article: {text: "", url: ""},
+        article: {text: "Graduation", url: "Q4/Graduation.md"},
         assignment: {text: "", url: ""},
       },
     ],
