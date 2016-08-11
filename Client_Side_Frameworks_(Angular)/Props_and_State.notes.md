@@ -439,7 +439,7 @@ render() {
 }
 ```
 
-Inside the `render()` method of a `<Track>` component, the properties of `this.props.track` are combined with presentation logic to produce a user interface. The user interface allows a user to view and update the track's information. When the `<button />` component is clicked, the `handleClick()` method is invoked.
+Inside the `render()` method of a `<Track>` component, the key-value pairs of the `this.props.track` object are combined with presentation logic to produce a user interface. This user interface allows a user to view a track's information and increment its `likes` counter. When the `<button />` component is clicked, the `handleClick()` event handler method is invoked. The following code snippet illustrates the `handleClick()` method of a `<Track />` component.
 
 ```jsx
 // From app/components/track.jsx
