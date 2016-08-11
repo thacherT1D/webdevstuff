@@ -486,7 +486,7 @@ In this section, we've covered a bunch of technical information about how inform
 1. A stateful component's state mutator is resolved by changing its state.
 1. Repeat step 1.
 
-Effectively, this process is another form of one-way data binding. The only difference is that it involves multiple components. The following diagram illustrates the one-way data binding between stateful and stateless components.
+Effectively, this process is another form of one-way data binding. The only difference is that it involves multiple components. The following diagram illustrates one-way data binding between stateful and stateless components.
 
 ```text
          ┌───── Automatic change ────┐
@@ -504,7 +504,7 @@ Effectively, this process is another form of one-way data binding. The only diff
          └ ─ ─ ─ Manual change ─ ─ ─ ┘
 ```
 
-The elegance of this system is that the process of one-way data binding is the same regardless of the how many components are in the hierarchy or how sophisticated the user interface becomes.
+The elegance of React's component hierarchy becomes apparent when you realize the process of one-way data binding is the same regardless of the how many components are in the hierarchy.
 
 ### Exercise
 
