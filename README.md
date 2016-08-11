@@ -520,12 +520,28 @@ Week 6
   </thead>
   <tbody>
     <tr>
-      <td rowspan="1">Monday</td>
-      <td rowspan="1"><a href="https://github.com/workshopper/learnyounode">learnyounode</a>
+      <td rowspan="3">Monday</td>
+      <td rowspan="3"><a href="https://github.com/workshopper/learnyounode">learnyounode</a>
       </td>
-      <td><a href="https://github.com/gSchool/node-curriculum/blob/master/unit-1/01-intro-to-nodejs.md">Node.js Filesystem</a>
+      <td><a href="https://github.com/gSchool/node-curriculum/blob/master/Node/README.md">Node.js Filesystem</a>
       </td>
       <td><a href="https://github.com/gSchool/fs-pet-shop/blob/master/1_fs.md">Pet Shop - Node Filesystem</a>
+      </td>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/gSchool/node-curriculum/blob/master/Node/npm.md">npm - Node Package Manager</a>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/gSchool/node-curriculum/blob/master/Node/Modules.md">Node.js Modules</a>
+      </td>
+      <td>
       </td>
       <td>
       </td>
@@ -888,10 +904,18 @@ Week 11
   </thead>
   <tbody>
     <tr>
-      <td rowspan="1">Monday</td>
-      <td rowspan="1"><a href=""></a>
+      <td rowspan="2">Monday</td>
+      <td rowspan="2"><a href=""></a>
+      </td>
+      <td>Intro to Algorithms
       </td>
       <td>
+      </td>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <td>Intro to Whiteboarding
       </td>
       <td>
       </td>

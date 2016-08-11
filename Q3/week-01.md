@@ -14,10 +14,18 @@ Week 1
   </thead>
   <tbody>
     <tr>
-      <td rowspan="1">Monday</td>
-      <td rowspan="1"><a href=""></a>
+      <td rowspan="2">Monday</td>
+      <td rowspan="2"><a href=""></a>
+      </td>
+      <td>Intro to Algorithms
       </td>
       <td>
+      </td>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <td>Intro to Whiteboarding
       </td>
       <td>
       </td>

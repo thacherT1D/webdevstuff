@@ -5,8 +5,14 @@ module.exports = [
     warmup: { text: "learnyounode", url: "https://github.com/workshopper/learnyounode" },
     activities: [
       {
-        article: { text: "Node.js Filesystem", url: "https://github.com/gSchool/node-curriculum/blob/master/unit-1/01-intro-to-nodejs.md" },
+        article: { text: "Node.js Filesystem", url: "https://github.com/gSchool/node-curriculum/blob/master/Node/README.md" },
         assignment: { text: "Pet Shop - Node Filesystem", url: "https://github.com/gSchool/fs-pet-shop/blob/master/1_fs.md" },
+      },
+      {
+        article: { text: "npm - Node Package Manager", url: "https://github.com/gSchool/node-curriculum/blob/master/Node/npm.md" },
+      },
+      {
+        article: { text: "Node.js Modules", url: "https://github.com/gSchool/node-curriculum/blob/master/Node/Modules.md" },
       },
     ]
   },

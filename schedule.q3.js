@@ -5,7 +5,11 @@ module.exports = [
     warmup: { text: "", url: "" },
     activities: [
       {
-        article: {text: "", url: ""},
+        article: {text: "Intro to Algorithms", url: ""},
+        assignment: {text: "", url: ""},
+      },
+      {
+        article: {text: "Intro to Whiteboarding", url: ""},
         assignment: {text: "", url: ""},
       },
     ],
