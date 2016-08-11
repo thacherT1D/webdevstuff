@@ -381,7 +381,7 @@ An `<App />` component is stateful because it uses the `getInitialState()` metho
 └────────────────────────────────┘
 ```
 
-On the other hand, a `<Track />` component is stateless because it doesn't use the `getInitialState()` method or the `this.setState()` method. Instead it receives props when it's created by the `<App />` component. Here's a diagram that represents two `<Track />` components after its props are received.
+On the other hand, a `<Track />` component is stateless because it doesn't use the `getInitialState()` method or the `this.setState()` method. Instead it receives props when it's created by an `<App />` component. Here's a diagram that represents two `<Track />` components after its props are received.
 
 ```text
 ┌─────────────── <Track /> ───────────────┐    ┌─────────────── <Track /> ──────────────┐
