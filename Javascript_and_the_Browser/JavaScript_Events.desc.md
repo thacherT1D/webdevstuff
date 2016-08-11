@@ -2,7 +2,7 @@
 
 * Describe what an event listener is
 * Attach event handlers to DOM elements
-* Describe what the 
+* Describe what the event handler's event object is
 * Modify the DOM in response to an event
 * Use callbacks in methods like addEventListener
 * Explain the difference between `this` and `event.target` in event listeners
@@ -32,19 +32,11 @@ Some common event types in your browser:
 
 ## Event Listeners
 
-In order to explore event listeners, we need to do some basic setup to kick things off:
+### Adding Event Listners
 
-1. Create a new HTML file.
-1. Inside the HTML file add a button.
-1. Create a new JS file.
-1. Link your JS file to your HTML.
+The `addEventListener()` method is a built-in Javascript function used to attach some functionality to an *EventTarget*. There are a several types of *EventTargets*, but for today we're only going to look at `window` and html elements.
 
-At this point you should have the bare bones of what is needed to get started.
-
-The `addEventListener()` method is a built-in Javascript function used
-to attach some functionality to an object (an html element in our case).
-
-The following code adds an event listener to the entire `window` object.  Try typing it into your js file and then click anywhere on the webpage!
+We'll start off with the following code that adds an event listener to the `window` object. Drop this in your web console to test out:
 
 ```javascript
 window.addEventListener("click", function() {
@@ -52,7 +44,12 @@ window.addEventListener("click", function() {
 });
 ```
 
-Every single DOM element also has its own `addEventListener` method:
+Let's move this to a web page we build so that we can explore event listeners further. We'll need to do some basic setup to kick things off:
+
+1. Create a new HTML file.
+1. Inside the HTML file add a button.
+1. Create a new JS file.
+1. Link your JS file to your HTML.
 
 ```javascript
 var button = document.querySelector("button");
@@ -62,12 +59,11 @@ button.addEventListener("click", function(){
 });
 ```
 
-Now we've attached an event listener to a specific DOM node, a button on the page.  Now, we will see a `"SOMEONE CLICKED THE BUTTON!!"` alert when that particular button is pressed. The function passed into the event listener is an example of a callback; in this particular case, it's also referred to as an **event handler**.
+Here we've attached an event listener to a specific DOM node, a button on the page.  Now, we will see a `"SOMEONE CLICKED THE BUTTON!!"` alert when that particular button is pressed. The function passed into the event listener is an example of a callback; in this particular case, it's also referred to as an **event handler**.
 
-### `removeEventListener()`
+### Removing Event Listners
 
-
-You can also remove event listeners from DOM elements if you are no longer interested in the event. Let's return to our example from the previous section. After adding the event listener to the button, maybe you realize that alert messages are terrible, and decide to remove it. It may be tempting to write something like this in the JS console:
+You can also remove event listeners from DOM elements with `removeEventListener()`. Let's return to our example from the previous section. After adding the event listener to the button, maybe you realize that alert messages are terrible, and decide to remove it. It may be tempting to write something like this in the JS console:
 
 ```javascript
 var button = document.querySelector("button");
@@ -93,24 +89,18 @@ button.addEventListener("click", clickAlert);
 
 Now you should be able to remove the event listener in the console with the following code:
 
-```
+```javascript
 button.removeEventListener("click", clickAlert);
 ```
+Try clicking your button... What happens?
 
-**Exercise** What does the following code do?
+#### 💪 Exercise
 
-```javascript
-var button = document.querySelector("button");
+Modify your button event listener to log out to the console "Lost to the ether". The button should only log this message once. If you click the button a second time nothing should be logged.
 
-var once = function() {
-  console.log("Done.");
-  button.removeEventListener("click", once);
-}
+<hr>
 
-button.addEventListener("click", once);
-```
-
-## Event Object
+## The Event Handler's Event Object
 
 There is a parameter that we can pass into our event handler functions: the event object. The event object gives us lots of information about the event. For example, we can use it to log some text to the console whenever a user clicks on an HTML element:
 
@@ -122,7 +112,18 @@ var logText = function(event) {
 window.addEventListener("click", logText);
 ```
 
-Let's take a closer look at the `event` object, and on `event.target` in particular. Inside of your JS file, add an event listener that console logs the event object AND the event.target when you click on the button.
+Let's take a closer look at the `event` object, and its `target` property in particular. Inside of your JS file, add an event listener that console logs the `event` object AND the `event.target` when you click on the button.
+
+```js
+var button = document.querySelector('button');
+
+var clickyButton = function(event) {
+  console.log(event);
+  console.log(event.target);
+}
+
+button.addEventListener('click', clickyButton);
+```
 
 Once you get this working, you'll see that the `event` object has a lot of details about the click event that was fired: where was the cursor? What time was the event fired? Was the shift key held down? And so on. Meanwhile, `event.target` points to the DOM element that was (in this case) clicked. This can be helpful if you want to modify the DOM based on user interaction.
 
