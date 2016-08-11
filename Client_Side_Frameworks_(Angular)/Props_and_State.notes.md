@@ -471,10 +471,6 @@ incrementLikes(track) {
 }
 ```
 
-In React, **autobinding** is the process of binding a component to its methods. In other words, the `this` variable inside a component's method automatically refers to the component that specified the method no matter how the method was invoked. Specifically, this is why the `this` variable inside the `incrementLikes()` method refers to a `<App />` component even though it was invoked using `this.props.incrementLikes()`.
-
-**NOTE:** React only autobinds components to methods specified with the `React.createClass()` method and not with the ES2015 `class` keyword.
-
 In this example, the owner component's state flows to the owned component's props. There the props are combined with the presentation logic to render a new user interface. Then, the owned component's events change the owner component's state. Effectively, this is another form of one-way data binding.
 
 ```text
