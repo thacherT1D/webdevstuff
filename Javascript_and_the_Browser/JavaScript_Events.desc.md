@@ -3,10 +3,10 @@
 * Describe what an event listener is
 * Attach event handlers to DOM elements
 * Describe what the event handler's event object is
-* Modify the DOM in response to an event
 * Use callbacks in methods like addEventListener
 * Explain the difference between `this` and `event.target` in event listeners
-* Respond to the event `DOMContentLoaded` event
+* Explain why is the `DOMContentLoaded` event is important
+* Modify the DOM in response to an event
 
 <hr>
 
@@ -44,12 +44,32 @@ window.addEventListener("click", function() {
 });
 ```
 
-Let's move this to a web page we build so that we can explore event listeners further. We'll need to do some basic setup to kick things off:
+Spin up a basic web page so that you can code along and explore event listeners further. We'll need to do some basic setup to kick things off:
 
 1. Create a new HTML file.
 1. Inside the HTML file add a button.
 1. Create a new JS file.
 1. Link your JS file to your HTML.
+
+Your index.html should look like this:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Events!</title>
+</head>
+<body>
+  <button>Clicky McClick Face</button>
+  <script src="app.js"></script>
+</body>
+</html>
+```
+You'll notice we have our script file in an odd place. Don't worry about
+that for now. We'll be addressing that a little be later in the lesson.
+
+Inside our app.js add the following code:
 
 ```javascript
 var button = document.querySelector("button");
@@ -133,7 +153,7 @@ Once you get this working, you'll see that the `event` object has a lot of detai
 
 <hr>
 
-### Target Vs. This
+## Target Vs. This
 
 `event.target` vs. `this`
 
@@ -202,7 +222,11 @@ The example demonstrates the difference between `this` and `event.target` in the
 
 When the element that fires the event is the same as the element that has the listener on it, you should see that `this` and `event.target` are the same. But there are times when you'll want to add the event listener to an element that won't necessarily be the same as the element (or elements) that will be firing the event. Let's take a look at an example of this now.
 
-### Attaching Listeners to Multiple Elements
+<hr>
+
+## Triggering Listeners for Multiple Elements
+
+### Attaching to Multiple Elements
 
 Let's suppose we want to add a click listener to every `<p>` on a page. We can't simply use `querySelectorAll` and then set an `addEventListener` on that. (What type of error do you think you'll get?)
 
@@ -238,6 +262,8 @@ for (var i = 0; i < paragraphs.length; i++) {
 
 If you inspect one of these elements in the Elements tab and look under Event Listeners, you'll see that each one of these elements has a copy of `eventHandler` attached to it, as expected. This is fine for this simple little example, but if you have hundreds of DOM elements with their own copy of the same function, that isn't very efficient.
 
+### Attaching to Parent Element
+
 Another option: we can use *event bubbling* (more on this later) and attach a single event listener to the parent:
 
 ```javascript
@@ -251,9 +277,11 @@ container.addEventListener('click', eventHandler);
 
 In this case all p tags share one copy of `eventHandler` which they get from their parent container.
 
-### `DOMContentLoaded`
+<hr>
 
-When you're using Javascript to manipulate the DOM, you need to be sure that what you're trying to manipulate is available to you. To see what this means, consider the following example:
+## DOMContentLoaded Event
+
+When you're using Javascript to manipulate the DOM, you need to be sure that what you're trying to manipulate is available to you. To see what this means we're going to revisit that weirdly placed script tag we have sitting in the bottom of our `<body>` element and put it back in the `<head>` where it blongs:
 
 `index.html`
 
