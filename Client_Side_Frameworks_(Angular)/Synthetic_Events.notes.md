@@ -34,9 +34,9 @@ const App = React.createClass({
   handleChange(event) {
     // event is a SyntheticEvent object
 
-    const nextState = { value: event.target.value };
+    const nextValue = event.target.value;
 
-    this.setState(nextState);
+    this.setState({ value: nextValue });
   },
 
   render() {
@@ -72,9 +72,9 @@ const App = React.createClass({
   handleChange(event) {
     // event is a SyntheticEvent object
 
-    const nextState = { value: event.target.value };
+    const nextValue = event.target.value;
 
-    this.setState(nextState);
+    this.setState({ value: nextValue });
   },
 
   render() {
@@ -747,9 +747,7 @@ const App = React.createClass({
   },
 
   handleChange(event) {
-    const nextState = {};
-
-    nextState[event.target.name] = event.target.value;
+    const nextState = { [event.target.name]: event.target.value };
 
     this.setState(nextState);
   },
@@ -931,12 +929,10 @@ const App = React.createClass({
   },
 
   handleMouseMove(event) {
-    const nextState = {
-      pageX: event.pageX,
-      pageY: event.pageY
-    };
+    const nextPageX = event.pageX;
+    const nextPageY = event.pageY;
 
-    this.setState(nextState);
+    this.setState({ pageX: nextPageX, pageY: nextPageY });
   },
 
   render() {
