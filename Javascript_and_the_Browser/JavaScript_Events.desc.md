@@ -34,7 +34,7 @@ Some common event types in your browser:
 
 ### Adding Event Listners
 
-The `addEventListener()` method is a built-in Javascript function used to attach some functionality to an *EventTarget*. There are a several types of *EventTargets*, but for today we're only going to look at `window` and html elements.
+The `addEventListener()` method is a built-in Javascript function used to attach some functionality to an *EventTarget*. There are several types of *EventTargets*, but for today we're only going to look at `window` and html elements.
 
 We'll start off with the following code that adds an event listener to the `window` object. Drop this in your web console to test out:
 
@@ -96,7 +96,7 @@ Try clicking your button... What happens?
 
 #### 💪 Exercise
 
-Modify your button event listener to log out to the console "Lost to the ether". The button should only log this message once. If you click the button a second time nothing should be logged.
+Modify the event listener on your button to log out to the console "Lost to the ether". The button should only log this message once. If you click the button a second time nothing should be logged.
 
 <hr>
 
@@ -127,11 +127,17 @@ button.addEventListener('click', clickyButton);
 
 Once you get this working, you'll see that the `event` object has a lot of details about the click event that was fired: where was the cursor? What time was the event fired? Was the shift key held down? And so on. Meanwhile, `event.target` points to the DOM element that was (in this case) clicked. This can be helpful if you want to modify the DOM based on user interaction.
 
-**Exercise**: Create a variable called `clickCount` in your `js` file, and set it equal to 0. Modify your event listener so that every time you click on the button, the clickCount increments, and the button text changes to show the user how many times the button has been clicked.
+#### 💪 Exercise
 
-### `event.target` vs. `this`
+ Create a variable called `clickCount` in your `js` file, and set it equal to 0. Modify your event listener so that every time you click on the button, the clickCount increments, and the button text changes to show the user how many times the button has been clicked.
 
-Let's return to our simple HTML page from before, and add an event listener that calls the `logText` button on a button click:
+<hr>
+
+### Target Vs. This
+
+`event.target` vs. `this`
+
+Let's return to our simple HTML page from before, and add an event listener that calls the `logText` function on a button click:
 
 ```javascript
 var button = document.querySelector("button");
@@ -143,7 +149,7 @@ var logText = function(event) {
 button.addEventListener("click", logText);
 ```
 
-We can rewrite this code so that it doesn't reference the `event` object. We can use `this` instead!
+We can rewrite this code so that it doesn't reference `event.target` but uses `this` instead!
 
 ```javascript
 var button = document.querySelector("button");
@@ -151,10 +157,11 @@ var button = document.querySelector("button");
 var logText = function() {
   console.log(this.textContent);
 }
+
 button.addEventListener("click", logText);
 ```
 
-So what's the difference between `this` and `event.target`, then? To answer this question, let's modify our HTML a bit. Wrap your button in a `div` like this:
+So what's the difference between `this` and `event.target`? To answer this question, let's modify our HTML a bit. Wrap your button in a `div` like this:
 
 ```html
 <div>
@@ -191,7 +198,7 @@ div.addEventListener("click", logText);
 
 In this case, the text that's logged to the console depends on where you click. If you click on the `p` tag, you should see "I'm a p tag!" in the console. If you click on the `button`, you should see "I'm a button!" in the console. And if you click anywhere else in the `div`, you should see both exclamations logged to the console.
 
-The example demonstrates the difference between `this` and `event.target` in the event handler. `this` refers to the DOM element that the listener was attached to. Put another way, whenever you write `foo.addEventListener('click', someFunction)` the context of `this` inside of `someFunction` will refer to `foo`. On the other hand, `event.target` will refer to the element that caused the event to fire. For example, when you click on the button, `event.target` will refer to the button, even if the listener is not attached to the button.
+The example demonstrates the difference between `this` and `event.target` in the event handler. `this` refers to the DOM element that the listener is attached to. Put another way, whenever you write `foo.addEventListener('click', someFunction)` the context of `this` inside of `someFunction` will refer to `foo`. On the other hand, `event.target` will refer to the element that caused the event to fire. For example, when you click on the button, `event.target` will refer to the button, even if the listener is not attached to the button.
 
 When the element that fires the event is the same as the element that has the listener on it, you should see that `this` and `event.target` are the same. But there are times when you'll want to add the event listener to an element that won't necessarily be the same as the element (or elements) that will be firing the event. Let's take a look at an example of this now.
 
@@ -199,7 +206,7 @@ When the element that fires the event is the same as the element that has the li
 
 Let's suppose we want to add a click listener to every `<p>` on a page. We can't simply use `querySelectorAll` and then set an `addEventListener` on that. (What type of error do you think you'll get?)
 
-```
+```html
 <div id="container">
   <p>Hello</p>
   <p>Bye</p>
@@ -231,7 +238,7 @@ for (var i = 0; i < paragraphs.length; i++) {
 
 If you inspect one of these elements in the Elements tab and look under Event Listeners, you'll see that each one of these elements has a copy of `eventHandler` attached to it, as expected. This is fine for this simple little example, but if you have hundreds of DOM elements with their own copy of the same function, that isn't very efficient.
 
-Another option: we can use event bubbling (more on this later) and attach a single event listener to the parent:
+Another option: we can use *event bubbling* (more on this later) and attach a single event listener to the parent:
 
 ```javascript
 var container = document.getElementById('container');
