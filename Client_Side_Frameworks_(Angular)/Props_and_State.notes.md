@@ -58,9 +58,9 @@ const App = React.createClass({
   },
 
   handleChange(event) {
-    const nextState = { who: event.target.value };
+    const nextWho = event.target.value;
 
-    this.setState(nextState);
+    this.setState({ who: nextWho });
   },
 
   render() {
@@ -102,9 +102,9 @@ const App = React.createClass({
   },
 
   handleChange(event) {
-    const nextState = { who: event.target.value };
+    const nextWho = event.target.value;
 
-    this.setState(nextState);
+    this.setState({ who: nextWho });
   },
 
   render() {
