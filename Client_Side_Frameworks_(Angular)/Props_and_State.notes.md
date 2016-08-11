@@ -471,7 +471,7 @@ incrementLikes(track) {
 }
 ```
 
-As the name suggests, the `incrementLikes()` method increments the `likes` counter of a given `track` object. It does this by searching for a matching `track` object in the `this.state.tracks` array. Once found, it creates a new entity by copying the key-value pairs of the `track` object and then the `{ likes: nextLikes }` object into an empty object. The resulting new object with the incremented `likes` counter is used replace the old `track` object.
+As the name suggests, the `incrementLikes()` method increments the `likes` counter of a given `track` object. However, instead of updating the `track` object, the method creates a new `nextTracks` array that contains all the elements of the old `this.state.track` array with one difference. The `track` object in the array is replaced with a new object that contains a copy of the key-value pairs of the old `track` object and the `{ likes: nextLikes }` object.
 
 The tactic of copying key-value pairs is part of a immutable data modeling strategy. An **immutable data model** is an entity or collection (e.g. object or array) whose state cannot be changed after it's created. Though it's a bit more work up front, an immutable data model for a stateful component can lead to significant performance gains when re-rendering a component hierarchy. You'll learn more about immutable data modeling later.
 
