@@ -129,13 +129,13 @@ ReactDOM.render(
 In the example above, the `ReactDOM.render()` method is instructed to mount an `<App />` component. The mounting process starts by instantiating a new `<App />` component and passing it a `{ greeting: 'Hello' }` props object. Then, the component's `getInitialState()` method is invoked which initializes its `{ who: 'world' }` state object.
 
 ```text
-┌──────────────── <App /> ────────────────┐
-│ ┌────── Props ──────┐  ┌──── State ───┐ │
-│ │                   │  │              │ │
-│ │ greeting: 'Hello' │  │ who: 'world' │ │
-│ │                   │  │              │ │
-│ └───────────────────┘  └──────────────┘ │
-└─────────────────────────────────────────┘
+┌──────────────────── <App /> ────────────────────┐
+│ ┌──────── Props ────────┐  ┌────── State ─────┐ │
+│ │                       │  │                  │ │
+│ │ { greeting: 'Hello' } │  │ { who: 'world' } │ │
+│ │                       │  │                  │ │
+│ └───────────────────────┘  └──────────────────┘ │
+└─────────────────────────────────────────────────┘
 ```
 
 Next, React invokes the component's `render()` method. The method combines the `this.props` and `this.state` objects with the component's presentation logic and returns a component hierarchy.
@@ -149,15 +149,15 @@ Next, React invokes the component's `render()` method. The method combines the `
        ┌─────────────┴──────────────┐
        │                            │
        ▼                            ▼
-┌─── <h1 /> ──┐    ┌─────────── <input /> ───────────┐
-│             │    │ ┌─────────── Props ───────────┐ │
-│ Hello world │    │ │                             │ │
-│             │    │ │ onChange: this.handleChange │ │
-└─────────────┘    │ │ type: 'text'                │ │
-                   │ │ value: 'world'              │ │
-                   │ │                             │ │
-                   │ └─────────────────────────────┘ │
-                   └─────────────────────────────────┘
+┌─── <h1 /> ──┐    ┌───────────── <input /> ────────────┐
+│             │    │ ┌───────────── Props ────────────┐ │
+│ Hello world │    │ │ {                              │ │
+│             │    │ │   onChange: this.handleChange, │ │
+└─────────────┘    │ │   type: 'text',                │ │
+                   │ │   value: 'world'               │ │
+                   │ │ }                              │ │
+                   │ └────────────────────────────────┘ │
+                   └────────────────────────────────────┘
 ```
 
 
@@ -177,13 +177,13 @@ Once mounting is complete, React holds onto the component hierarchy for later. Y
 Now, the user interface waits patiently for a user to interact with it. When the `<input />` element is changed, the `onChange` event is fired and the component's `this.handleChange()` method is triggered. The event handler updates the component's state using the `this.setState()` method.
 
 ```text
-┌──────────────── <App /> ────────────────┐
-│ ┌────── Props ──────┐  ┏━━━━ State ━━━┓ │
-│ │                   │  ┃              ┃ │
-│ │ greeting: 'Hello' │  ┃ who: 'Jane'  ┃ │
-│ │                   │  ┃              ┃ │
-│ └───────────────────┘  ┗━━━━━━━━━━━━━━┛ │
-└─────────────────────────────────────────┘
+┌────────────────────── <App /> ─────────────────┐
+│ ┌──────── Props ────────┐  ┏━━━━━ State ━━━━━┓ │
+│ │                       │  ┃                 ┃ │
+│ │ { greeting: 'Hello' } │  ┃ { who: 'Jane' } ┃ │
+│ │                       │  ┃                 ┃ │
+│ └───────────────────────┘  ┗━━━━━━━━━━━━━━━━━┛ │
+└────────────────────────────────────────────────┘
 ```
 
 After updating the state, the component's `render()` method is invoked again, combining the immutable `this.props` object and the mutable `this.state` object with the component's presentation logic. As a result, a new component hierarchy is returned by the `render()` method.
@@ -197,15 +197,15 @@ After updating the state, the component's `render()` method is invoked again, co
        ┌─────────────┴──────────────┐
        │                            │
        ▼                            ▼
-┏━━━ <h1 /> ━━┓    ┏━━━━━━━━━━━ <input /> ━━━━━━━━━━━┓
-┃             ┃    ┃ ┌─────────── Props ───────────┐ ┃
-┃ Hello Jane  ┃    ┃ │                             │ ┃
-┃             ┃    ┃ │ onChange: this.handleChange │ ┃
-┗━━━━━━━━━━━━━┛    ┃ │ type: 'text'                │ ┃
-                   ┃ │ value: 'Jane'               │ ┃
-                   ┃ │                             │ ┃
-                   ┃ └─────────────────────────────┘ ┃
-                   ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+┏━━━ <h1 /> ━━┓    ┏━━━━━━━━━━━━━ <input /> ━━━━━━━━━━━━┓
+┃             ┃    ┃ ┌───────────── Props ────────────┐ ┃
+┃ Hello Jane  ┃    ┃ │ {                              │ ┃
+┃             ┃    ┃ │   onChange: this.handleChange, │ ┃
+┗━━━━━━━━━━━━━┛    ┃ │   type: 'text',                │ ┃
+                   ┃ │   value: 'Jane'                │ ┃
+                   ┃ │ }                              │ ┃
+                   ┃ └────────────────────────────────┘ ┃
+                   ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 ```
 
 The new component hierarchy contains new `<div />`, `<h1 />`, and `<input />` components. React compares the old component hierarchy with the new component hierarchy and calculates the differences between the two. In this example, only the content of the `<h1 />` component and the `value` of the `<input />` component has changed. Then, React applies those differences to the DOM hierarchy updating only what's changed.
