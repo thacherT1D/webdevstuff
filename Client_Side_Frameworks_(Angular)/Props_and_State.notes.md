@@ -508,7 +508,7 @@ In this section, we've covered a bunch of technical information about how inform
 1. A stateful component's state mutator is resolved by changing its state.
 1. Repeat step 1.
 
-Effectively, this process is another form of one-way data binding. The only difference is that it involves multiple components. The following diagram illustrates one-way data binding between stateful and stateless components.
+Effectively, this process is another form of one-way data binding. The only difference is that it involves multiple components. The following diagram illustrates how one-way data binding works between stateful and stateless components.
 
 ```text
          ┌───── Automatic change ────┐
