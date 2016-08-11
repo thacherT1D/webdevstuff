@@ -530,7 +530,7 @@ The elegance of React's component hierarchy becomes apparent when you realize th
 
 ### Exercise
 
-Update your previous description of how information flows between stateful and stateless components. It may be helpful to draw a few diagrams to illustrate your thoughts.
+Update your previous description of how information flows between stateful and stateless components. It may be helpful to draw a few diagrams to illustrate your thoughts. After about a minute, your instructor will cold call on the class and ask what was written down.
 
 ## Summary
 
