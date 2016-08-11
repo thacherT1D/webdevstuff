@@ -361,7 +361,7 @@ Once the user interface is working, analyze the code and make an educated guess 
 
 In the above code example, the responsibility of managing state and handling events is split between two different component classes—`App` and `Track` respectively.
 
-An `<App />` component is stateful because it uses the `getInitialState()` method to initialize its state and the `this.setState()` method to change its state.
+An `<App />` component is stateful because it uses the `getInitialState()` method to initialize its state and the `this.setState()` method to change its state. Here's a diagram that represents an `<App />` component after its state is initialized.
 
 ```text
 ┌──────────── <App /> ───────────┐
@@ -381,7 +381,7 @@ An `<App />` component is stateful because it uses the `getInitialState()` metho
 └────────────────────────────────┘
 ```
 
-On the other hand, a `<Track />` component is stateless because it doesn't use the `getInitialState()` method or the `this.setState()` method. Instead it receives props when it's created by the `<App />` component.
+On the other hand, a `<Track />` component is stateless because it doesn't use the `getInitialState()` method or the `this.setState()` method. Instead it receives props when it's created by the `<App />` component. Here's a diagram that represents two `<Track />` components after its props are received.
 
 ```text
 ┌─────────────── <Track /> ───────────────┐    ┌─────────────── <Track /> ──────────────┐
