@@ -419,7 +419,7 @@ render() {
 
 Inside the `render()` method of an `<App />` component, a new `<Track />` component is created for each track in the `this.state.tracks` array. As each component is created, its props are set. Therefore, the `<App />` component is the owner of each `<Track />` component.
 
-**NOTE:** Inside the `render()` method, the `Array.prototype.map()` method collects the returned `<Track />` components into an array. When an array is used as a child, its elements become individual children of the parent component.
+**NOTE:** The `Array.prototype.map()` method collects the returned `<Track />` components into an array. When an array is used as a component's child, its elements become individual children of that parent component.
 
 Being stateless, each `<Track />` component is responsible for handling the hierarchy's events for a single track. To handle this responsibility, the owner sets each component's `key`, `track`, and `incrementLikes` props. With the exception of the `key` prop, the key-value pairs are accessible inside the `<Track />` component using the `this.props` object.
 
