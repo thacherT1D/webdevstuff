@@ -478,7 +478,7 @@ As the name suggests, the `incrementLikes()` method increments the `likes` count
 Using the `Object.assign()` method, the `nextTrack` object contains a copy of the key-value pairs from the `track` object merged with a copy of the key-value pairs from the `{ likes: nextLikes }` object. The following diagram illustrates the creation of the `nextTrack` object.
 
 ```text
-┏━━━━━━━━━━━━━━━━━━━━━━━━━━┓   ┌────┐           ┌──────────────────────────┐
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━┓   ┌────┐           ┌────────── track ─────────┐
 ┃ {                        ┃   │    │           │ {                        │
 ┃   artist: 'The Beatles', ┃   │    │           │   artist: 'The Beatles', │
 ┃   likes: 0,              ┃ = │ {} │◀── copy ──│   likes: 0,              │
@@ -486,10 +486,10 @@ Using the `Object.assign()` method, the `nextTrack` object contains a copy of th
 ┃ }                        ┃   │    │           │ }                        │
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━┛   └────┘           └──────────────────────────┘
 
-┌───────  nextTrack ───────┐   ┏━━━━━━━━━━━━━━━━━━━━━━━━━━┓           ┌──────────────┐
+┌──────── nextTrack ───────┐   ┏━━━━━━━━━━━━━━━━━━━━━━━━━━┓           ┌──────────────┐
 │ {                        │   ┃ {                        ┃           │              │
 │   artist: 'The Beatles', │   ┃   artist: 'The Beatles', ┃           │              │
-│   likes: 1,              │ = ┃   likes: 0,              ┃◀── copy ──│ { likes: 0 } │
+│   likes: 1,              │ = ┃   likes: 0,              ┃◀── copy ──│ { likes: 1 } │
 │   title: 'Hey Jude'      │   ┃   title: 'Hey Jude'      ┃           │              │
 │ }                        │   ┃ }                        ┃           │              │
 └──────────────────────────┘   ┗━━━━━━━━━━━━━━━━━━━━━━━━━━┛           └──────────────┘
