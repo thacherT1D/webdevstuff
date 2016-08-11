@@ -475,9 +475,9 @@ As the name suggests, the `incrementLikes()` method increments the `likes` count
 
 This tactic of copying key-value pairs is part of a immutable data modeling strategy. An **immutable data model** is an entity or collection (e.g. object or array) whose state cannot be changed after it's created. Though it's a bit more work up front, an immutable data model for a stateful component can lead to significant performance gains when re-rendering a component hierarchy. You'll learn more about immutable data modeling later.
 
-To resolve the `incrementLikes()` state mutator, the state of an `<App />` component is changed. Using the `this.setState()` method, the `nextTracks` array merges into the current `this.state` object. After the merge, the entire component hierarchy is automatically re-rendered, starting the whole process over again.
+The final step in resolving the `incrementLikes()` state mutator is to change the state of its component. Using the `this.setState()` method, the `nextTracks` array is merged into the current `this.state` object. After the merge, the component hierarchy, beginning with the current component, is automatically re-rendered.
 
-In this section, we've covered a bunch of technical information about information flows between stateful and stateless components. To summarize:
+In this section, we've covered a bunch of technical information about how information flows between stateful and stateless components. To summarize:
 
 1. A stateful component's state and state mutators are passed to a stateless component's props.
 1. A stateless component's props are combined with presentation logic to render a user interface.
@@ -486,7 +486,7 @@ In this section, we've covered a bunch of technical information about informatio
 1. A stateful component's state mutator is resolved by changing its state.
 1. Repeat step 1.
 
-Effectively, this is another form of one-way data binding. The following diagram illustrates the one-way data binding between stateful and stateless components.
+Effectively, this process is another form of one-way data binding. The only difference is that it involves multiple components. The following diagram illustrates the one-way data binding between stateful and stateless components.
 
 ```text
          ┌───── Automatic change ────┐
@@ -503,6 +503,8 @@ Effectively, this is another form of one-way data binding. The following diagram
 
          └ ─ ─ ─ Manual change ─ ─ ─ ┘
 ```
+
+The elegance of this system is that the process of one-way data binding is the same regardless of the how many components are in the hierarchy or how sophisticated the user interface becomes.
 
 ### Exercise
 
