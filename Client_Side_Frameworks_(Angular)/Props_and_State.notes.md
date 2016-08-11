@@ -485,7 +485,7 @@ In this section, we've covered a bunch of technical information about informatio
 1. The stateful component's state is changed by invoking its state mutator.
 1. Repeat step 1.
 
-Effectively, this is another form of one-way data binding.
+Effectively, this is another form of one-way data binding. The following diagram illustrates the one-way data binding between stateful and stateless components.
 
 ```text
          ┌───── Automatic change ────┐
@@ -499,11 +499,9 @@ Effectively, this is another form of one-way data binding.
 │                 │         │                 │
 └─ state mutator ─┘         └─ event handler ─┘
          ▲                           │
- 
+
          └ ─ ─ ─ Manual change ─ ─ ─ ┘
 ```
-
-Since mutable state increases complexity and reduces predictability, components with only immutable props are easier to think about. Whenever it's time to update the DOM hierarchy, they build the user interface using the data they're given. When a user interacts with their components, they handle the event using the methods they're given.
 
 ### Exercise
 
