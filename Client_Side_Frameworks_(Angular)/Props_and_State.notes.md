@@ -421,7 +421,7 @@ render() {
 
 Inside the `render()` method of an `<App />` component, a new `<Track />` component is created for each track in the `this.state.tracks` array. As each component is created, its props are set. Therefore, the `<App />` component is the owner of each `<Track />` component.
 
-Being stateless, each `<Track />` component is responsible for handling the component hierarchy's events for a single track. To handle this responsibility, the owner sets each component's `key`, `track`, and `incrementLikes` props. With the exception of the `key` prop, the key-value pairs are accessible inside the `<Track />` component using the `this.props` object.
+Being stateless, each `<Track />` component is responsible for handling the component hierarchy's events for a single track. To handle this responsibility, the owner sets each component's `key`, `track`, and `incrementLikes` props. With the exception of the `key` prop, the key-value pairs are accessible inside the `<Track />` component using the `this.props` object. The following code snippet illustrates the a `<Track />` component accessing its props.
 
 **NOTE:** The `key` prop is used by React to uniquely identify sibling components of the same type. If a keyed component is changed in any way, React can more efficiently update the DOM hierarchy. The `key` prop is *not* accessible via `this.props.key`.
 
