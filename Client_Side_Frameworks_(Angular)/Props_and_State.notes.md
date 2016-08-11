@@ -471,6 +471,8 @@ incrementLikes(track) {
 }
 ```
 
+As the name suggests, the `incrementLikes()` method accepts a `track` object and increments its `likes` counter. It does this by iterating over the elements in the `this.state.tracks` array and looking for the matching `track`. Once found, it creates a new entity by copying the properties of the `track` object and then the `{ likes: nextLikes }` object into an empty object. This technique creates an **immutable entity** or object whose state cannot be changed after it's created. Those it's a bit more work to manage, it has performance implications about knowing which to render. You'll study immutable data modeling later.
+
 In this example, the owner component's state flows to the owned component's props. There the props are combined with the presentation logic to render a new user interface. Then, the owned component's events change the owner component's state. Effectively, this is another form of one-way data binding.
 
 ```text
