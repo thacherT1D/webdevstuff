@@ -421,7 +421,9 @@ Inside the `render()` method of an `<App />` component, a new `<Track />` compon
 
 **NOTE:** The `Array.prototype.map()` method collects the returned `<Track />` components into an array. When an array is used as a component's child, its elements become individual children of that parent component.
 
-Being stateless, each `<Track />` component is responsible for handling the hierarchy's events for a single track. To handle this responsibility, the owner sets each component's `key`, `track`, and `incrementLikes` props. With the exception of the `key` prop, the key-value pairs are accessible inside the `<Track />` component using the `this.props` object. The `key` prop is used by React to uniquely identify sibling components of the same type. If a keyed component is changed in any way, React can more efficiently update the DOM hierarchy. The `key` prop is *not* accessible via `this.props.key`.
+Being stateless, each `<Track />` component is responsible for handling the hierarchy's events for a single track. To handle this responsibility, the owner sets each component's `key`, `track`, and `incrementLikes` props. With the exception of the `key` prop, the key-value pairs are accessible inside the `<Track />` component using the `this.props` object.
+
+**NOTE:** The `key` prop is used by React to uniquely identify sibling components of the same type. If a keyed component is changed in any way, React can more efficiently update the DOM hierarchy. The `key` prop is *not* accessible via `this.props.key`.
 
 ```jsx
 // From app/components/track.jsx
