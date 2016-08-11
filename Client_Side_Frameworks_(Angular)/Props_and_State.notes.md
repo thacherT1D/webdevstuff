@@ -524,11 +524,11 @@ The elegance of React's component hierarchy becomes apparent when you realize th
 
 ### Exercise
 
-Update your previous description of how information flows between stateful and stateless components. It may be helpful to draw a few diagrams together to illustrate your thoughts.
+Update your previous description of how information flows between stateful and stateless components. It may be helpful to draw a few diagrams to illustrate your thoughts.
 
 ## Summary
 
-Words, mouth, memories.
+In this chapter, you learned how use props and state to separate the concerns of a React user interface. Specifically, you'll separated the concerns of a component hierarchy into stateful and stateless components. At this point, you're ready to write more sophisticated React user interfaces.
 
 ## Assignment
 
