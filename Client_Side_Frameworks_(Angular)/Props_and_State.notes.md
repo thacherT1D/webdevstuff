@@ -401,6 +401,8 @@ On the other hand, a `<Track />` component is stateless because it doesn't use t
 
 Being stateful, an `<App />` component is only responsible for managing a component hierarchy's state. While it could also handle a hierarchy's events, it follows the [single responsibility principal](https://en.wikipedia.org/wiki/Single_responsibility_principle) and delegates the additional responsibility to the stateless components that it owns. In React, an **owner** is a component that sets the props of another component.
 
+**NOTE:** The `Array.prototype.map()` method collects the returned `<Track />` components into an array. When an array is used as a component's child, its elements become individual children of that parent component.
+
 ```jsx
 // app/components/app.jsx
 
@@ -418,8 +420,6 @@ render() {
 ```
 
 Inside the `render()` method of an `<App />` component, a new `<Track />` component is created for each track in the `this.state.tracks` array. As each component is created, its props are set. Therefore, the `<App />` component is the owner of each `<Track />` component.
-
-**NOTE:** The `Array.prototype.map()` method collects the returned `<Track />` components into an array. When an array is used as a component's child, its elements become individual children of that parent component.
 
 Being stateless, each `<Track />` component is responsible for handling the hierarchy's events for a single track. To handle this responsibility, the owner sets each component's `key`, `track`, and `incrementLikes` props. With the exception of the `key` prop, the key-value pairs are accessible inside the `<Track />` component using the `this.props` object.
 
