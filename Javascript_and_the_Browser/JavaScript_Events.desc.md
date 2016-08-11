@@ -315,9 +315,9 @@ Without loading the page, you should be able to guess at what this code should d
 
 However, when you load the HTML, you should find that no message is getting logged. What's the deal???
 
-The deal is that the script is loading before the DOM has finished loading. Not convinced? Through a debugger in the first line and take a look at the `document` -- you'll see that the `body` hasn't loaded yet! Because of this, there's no `img` tag to grab with javascript, and so your `img` variable will be `null`.
+The deal is that the script is loading before the DOM has finished loading. Not convinced? Throw a debugger in the first line and take a look at the `document` -- you'll see that the `body` hasn't loaded yet! Because of this, there's no `img` tag to grab with javascript, and so your `img` variable will be `null`.
 
-When manipulating the DOM, it's important that your javascript code not load until the DOM is ready. There are a couple of ways to do this. The most common way is to use the `DOMContentLoaded` event:
+When manipulating the DOM, it's important that your javascript code not load until the DOM is *ready*. There are a couple of ways to do this. The most common way is to use the `DOMContentLoaded` event:
 
 ```javascript
 var imgLog = function() {
@@ -330,14 +330,19 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 ```
 
-This event fires when the document has been loaded and parsed. This happens before all assets (e.g. images, videos, stylesheets, etc.) have completely loaded. In other words, `DOMContentLoaded` gets fired before the window finishes loading.
+This event wont fire until the document has been loaded and parsed. This happens before all assets (e.g. images, videos, stylesheets, etc.) have completely loaded. In other words, `DOMContentLoaded` gets fired before the window finishes loading.
 
-Want to see the difference between `DOMContentLoaded` and `window.onload`? Check out [this example](http://web.archive.org/web/20150405114023/http://ie.microsoft.com/testdrive/HTML5/DOMContentLoaded/Default.html).
+You may also come across `window.onload` It is another option to be aware of. It works slightly different than `DOMContentLoaded` but accomplishes the same goal.
 
 Note: putting your script tags at the bottom of the page can help resolve some of these issues, but it's still probably a good idea to wrap any DOM-manipulating functionality inside of an event listener to `DOMContentLoaded`.
 
-## Event Propagation
+#### 💪 Exercise
 
+With your script tag in the `<head>` of your html, get an event to properly fire using both `DOMContentLoaded` and `window.onload`
+
+<hr>
+
+## Event Propagation
 
 Before finishing up, let's take a look at one more example. Let's return to our earlier example with a single `button`. In our Javascript file, let's add two event listeners:
 
@@ -446,3 +451,8 @@ You should now see that the alert messages pop up in the opposite order!
 * [MDN](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)
 * [MDN](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/removeEventListener)
 * [JavaScript.info](http://javascript.info/tutorial/bubbling-and-capturing)
+* [`DOMContentLoaded` vs. `window.onload`](http://web.archive.org/web/20150405114023/http://ie.microsoft.com/testdrive/HTML5/DOMContentLoaded/Default.html)
+
+ifference between `DOMContentLoaded` and `window.onload`? Check out [this example](http://web.archive.org/web/20150405114023/http://ie.microsoft.com/testdrive/HTML5/DOMContentLoaded/Default.html).
+
+
