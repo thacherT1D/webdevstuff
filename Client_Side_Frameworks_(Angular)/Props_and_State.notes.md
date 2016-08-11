@@ -399,9 +399,7 @@ On the other hand, a `<Track />` component is stateless because it doesn't use t
 └─────────────────────────────────────────┘    └────────────────────────────────────────┘
 ```
 
-Being stateful, an `<App />` component is only responsible for managing a component hierarchy's state. While it could also handle a hierarchy's events, it follows the [single responsibility principal](https://en.wikipedia.org/wiki/Single_responsibility_principle) and delegates the additional responsibility to the stateless components that it owns. In React, an **owner** is a component that sets the props of another component. Inside the `render()` method of an `<App />` component, a new `<Track />` component is created for each track in the `this.state.tracks` array. As each component is created, its props are set. Therefore, the `<App />` component is the owner of each `<Track />` component.
-
-**NOTE:** Inside the `render()` method, the `Array.prototype.map()` method collects the returned `<Track />` components into an array. When an array is used as a child, its elements become individual children of the parent component.
+Being stateful, an `<App />` component is only responsible for managing a component hierarchy's state. While it could also handle a hierarchy's events, it follows the [single responsibility principal](https://en.wikipedia.org/wiki/Single_responsibility_principle) and delegates the additional responsibility to the stateless components that it owns. In React, an **owner** is a component that sets the props of another component.
 
 ```jsx
 // app/components/app.jsx
@@ -419,11 +417,13 @@ render() {
 }
 ```
 
+Inside the `render()` method of an `<App />` component, a new `<Track />` component is created for each track in the `this.state.tracks` array. As each component is created, its props are set. Therefore, the `<App />` component is the owner of each `<Track />` component.
+
+**NOTE:** Inside the `render()` method, the `Array.prototype.map()` method collects the returned `<Track />` components into an array. When an array is used as a child, its elements become individual children of the parent component.
+
 Being stateless, each `<Track />` component is responsible for handling the hierarchy's events for a single track. To handle this responsibility, the owner sets each component's `key`, `track`, and `incrementLikes` props. With the exception of the `key` prop, the key-value pairs are accessible inside the `<Track />` component using the `this.props` object.
 
 **NOTE:** The `key` prop is used by React to uniquely identify sibling components of the same type. If a keyed component is changed in any way, React can more efficiently update the DOM hierarchy. The `key` prop is *not* accessible via `this.props.key`.
-
-Inside the `render()` method of a `<Track>` component, the properties of `this.props.track` are combined with presentation logic to produce a user interface. The user interface allows a user to view and update the track's information. When the `<button />` component is clicked, the `handleClick()` method is invoked.
 
 ```jsx
 // From app/components/track.jsx
@@ -439,7 +439,7 @@ render() {
 }
 ```
 
-As you've seen, event handlers process an event and update a component's state. However, not all components have state to update, as is the case with the stateless `<Track />` components. Rather than invoking the `this.setState()` method for itself, each `<Track />` component invokes the `this.props.incrementLikes()` state mutator method instead.
+Inside the `render()` method of a `<Track>` component, the properties of `this.props.track` are combined with presentation logic to produce a user interface. The user interface allows a user to view and update the track's information. When the `<button />` component is clicked, the `handleClick()` method is invoked.
 
 ```jsx
 // From app/components/track.jsx
@@ -448,6 +448,9 @@ handleClick() {
   this.props.incrementLikes(this.props.track);
 }
 ```
+
+
+As you've seen, event handlers process an event and update a component's state. However, not all components have state to update, as is the case with the stateless `<Track />` components. Rather than invoking the `this.setState()` method for itself, each `<Track />` component invokes the `this.props.incrementLikes()` state mutator method instead.
 
 In React, a **state mutator** is a method inside a stateful component that calls the `this.setState()` method. The `incrementLikes()` state mutator method is defined in the `<App />` component, but is passed to each `<Track />` component through its props. It's up the the `<Track />` component to determine the appropriate time to invoke the `incrementLikes()` state mutator method.
 
