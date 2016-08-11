@@ -495,7 +495,7 @@ The `nextTrack` object contains a copy of the key-value pairs from the `track` o
 └──────────────────────────┘   ┗━━━━━━━━━━━━━━━━━━━━━━━━━━┛           └──────────────┘
 ```
 
-This tactic of copying key-value pairs is part of a immutable data modeling strategy. An **immutable data model** is an entity or collection (e.g. object or array) whose state cannot be changed after it's created. Though it's a bit more work up front, an immutable data model for a stateful component can lead to significant performance gains when re-rendering a component hierarchy. You'll learn more about immutable data modeling later.
+This tactic of copying key-value pairs is part of a immutable data modeling strategy. An **immutable data model** is an entity or collection (e.g. object or array) whose state cannot be changed after it's created. Though it requires a bit more work, an immutable data model for a stateful component can lead to significant performance gains when re-rendering a component hierarchy. You'll learn more about immutable data modeling later.
 
 The final step in resolving the `incrementLikes()` state mutator is to change the state of its component. Using the `this.setState()` method, the `nextTracks` array is merged into the current `this.state` object. After the merge, the component hierarchy, beginning with the current component, is automatically re-rendered.
 
