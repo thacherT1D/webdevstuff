@@ -506,7 +506,7 @@ Effectively, this is another form of one-way data binding. The following diagram
 
 ### Exercise
 
-Update your previous description of how information flows between stateful and stateless components.
+Update your previous description of how information flows between stateful and stateless components. It may be helpful to draw a few diagrams together to illustrate your thoughts.
 
 ## Summary
 
