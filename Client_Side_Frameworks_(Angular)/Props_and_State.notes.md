@@ -449,7 +449,7 @@ handleClick() {
 }
 ```
 
-In React, a **state mutator** is a method inside a stateful component that calls the `this.setState()` method. The `incrementLikes()` state mutator method is defined in the `<App />` component, but is passed to each `<Track />` component through its props.
+In React, a **state mutator** is a method inside a stateful component that calls the `this.setState()` method. The `incrementLikes()` state mutator method is defined in the `<App />` component, but is passed to each `<Track />` component through its props. It's up the the `<Track />` component to determine the appropriate time to invoke the `incrementLikes()` state mutator method.
 
 ```jsx
 // From app/components/app.jsx
