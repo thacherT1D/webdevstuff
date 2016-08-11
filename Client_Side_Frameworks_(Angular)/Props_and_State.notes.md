@@ -503,7 +503,7 @@ In this section, we've covered a bunch of technical information about how inform
 
 1. A stateful component's state and state mutators are passed to a stateless component's props.
 1. A stateless component's props are combined with presentation logic to render a user interface.
-1. An event is handled by invoking stateless component's event handler.
+1. An event is handled by invoking a stateless component's event handler.
 1. A stateless component's event handler is processed by invoking a stateful component's state mutator.
 1. A stateful component's state mutator is resolved by changing its state.
 1. Repeat step 1.
