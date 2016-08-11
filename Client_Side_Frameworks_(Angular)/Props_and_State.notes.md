@@ -478,21 +478,21 @@ As the name suggests, the `incrementLikes()` method increments the `likes` count
 Using the `Object.assign()` method, the `nextTrack` object contains a copy of the key-value pairs from the `track` object merged with a copy of the key-value pairs from the `{ likes: nextLikes }` object. The following diagram illustrates the creation of the `nextTrack` object.
 
 ```text
-┏━━━━━━━━━━━━━━━━━━━━━━━━━━┓   ┌────┐           ┌────────── track ─────────┐
-┃ {                        ┃   │    │           │ {                        │
-┃   artist: 'The Beatles', ┃   │    │           │   artist: 'The Beatles', │
-┃   likes: 0,              ┃ = │ {} │◀── copy ──│   likes: 0,              │
-┃   title: 'Hey Jude'      ┃   │    │           │   title: 'Hey Jude'      │
-┃ }                        ┃   │    │           │ }                        │
-┗━━━━━━━━━━━━━━━━━━━━━━━━━━┛   └────┘           └──────────────────────────┘
-
-┌──────── nextTrack ───────┐   ┏━━━━━━━━━━━━━━━━━━━━━━━━━━┓           ┌──────────────┐
-│ {                        │   ┃ {                        ┃           │              │
-│   artist: 'The Beatles', │   ┃   artist: 'The Beatles', ┃           │              │
-│   likes: 1,              │ = ┃   likes: 0,              ┃◀── copy ──│ { likes: 1 } │
-│   title: 'Hey Jude'      │   ┃   title: 'Hey Jude'      ┃           │              │
-│ }                        │   ┃ }                        ┃           │              │
-└──────────────────────────┘   ┗━━━━━━━━━━━━━━━━━━━━━━━━━━┛           └──────────────┘
+                                                  ┌────────── track ─────────┐
+                                                  │ {                        │
+                                                  │   artist: 'The Beatles', │
+                                        ┌─ copy ──│   likes: 0,              │
+┌──────── nextTrack ───────┐   ┌────┐   │         │   title track Jude'      │
+│ {                        │   │    │◀──┘         │ }                        │
+│   artist: 'The Beatles', │   │    │             └──────────────────────────┘
+│   likes: 1,              │ = │ {} │
+│   title: 'Hey Jude'      │   │    │             ┌──────────────┐
+│ }                        │   │    │◀──┐         │              │
+└──────────────────────────┘   └────┘   │         │              │
+                                        └─ copy ──│ { likes: 1 } │
+                                                  │              │
+                                                  │              │
+                                                  └──────────────┘
 ```
 
 This tactic of copying key-value pairs is part of a immutable data modeling strategy. An **immutable data model** is an entity or collection (e.g. object or array) whose state cannot be changed after it's created. Though it requires a bit more work, an immutable data model for a stateful component can lead to significant performance gains when re-rendering a component hierarchy. You'll learn more about immutable data modeling later.
