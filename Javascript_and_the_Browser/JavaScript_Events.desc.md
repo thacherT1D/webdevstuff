@@ -347,29 +347,40 @@ With your script tag in the `<head>` of your html, get an event to properly fire
 Before finishing up, let's take a look at one more example. Let's return to our earlier example with a single `button`. In our Javascript file, let's add two event listeners:
 
 ```javascript
-var body = document.querySelector('body');
-var button = document.querySelector('button');
-
-body.addEventListener('click', function() {
+var bodyClicky = function() {
   alert("YOU CLICKED ON THE BODY!!!!");
-});
+}
 
-button.addEventListener('click', function() {
+var buttonClicky = function() {
   alert("YOU'RE REALLY PUSHING MY BUTTONS!!!!!");
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+  var body = document.querySelector('body');
+  var button = document.querySelector('button');
+
+  body.addEventListener('click', bodyClicky);
+  button.addEventListener('click', buttonClicky);
 });
 ```
 
 Click on the button. You'll see that the button message is alerted, followed by the body message. Why is this the order, rather than the other way around? The answer has to do with _event propagation_.
 
-When an event happens. It _captures_ down the DOM tree from `<html>` to the element where the event happened. Then, it _bubbles_ back up the DOM tree until it gets back to `<html>`. Along each element it passes, it fires the event.
+When an event happens. It goes through a _capture_ phase **down** the DOM tree from `<html>` to the element where the event was triggered. Then, it _bubbles_ back **up** the DOM tree until it gets back to `<html>`. Along each element it passes, it fires the event; a *click* event in our case.
 
 These 2 phases -- event capturing and event bubbling -- are collectively known as event propagation.
 
 There is a third Boolean parameter of `addEventListener` that specifies if you want the handler to fire on capture or bubble. It defaults to `false`, which is bubble. But if you set it to `true`, it will fire on capture.
 
+#### 💪 Exercise
+
+Modify our javascript so that our handlers fire on the capture phase.
+
+<hr>
+
 ### Event Capturing
 
-When an event happens. It first fires a capture event on `<html>` and makes its way down the DOM tree to the element where the event actually happened.
+Let's break down what exactly is happening from the exercise above. When an event happens, it first fires a capture event on `<html>` and makes its way down the DOM tree to the element where the event actually happened.
 
 ```html
 <html>
@@ -425,18 +436,24 @@ The bubble event will fire on each one of these elements.
 -----------------------------------
 ```
 
-Let's return to our example, and change our event listener on the body to fire on the capture phase:
+By setting the third parameter to `true` we are telling the browser to fire those event listeners during the capture phase. Our solution the the exercise above would look something like this:
+
 
 ```javascript
-var body = document.querySelector('body');
-var button = document.querySelector('button');
-
-body.addEventListener('click', function() {
+var bodyClicky = function() {
   alert("YOU CLICKED ON THE BODY!!!!");
-}, true);
+}
 
-button.addEventListener('click', function() {
+var buttonClicky = function() {
   alert("YOU'RE REALLY PUSHING MY BUTTONS!!!!!");
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+  var body = document.querySelector('body');
+  var button = document.querySelector('button');
+
+  body.addEventListener('click', bodyClicky, true);
+  button.addEventListener('click', buttonClicky, true);
 });
 ```
 
@@ -452,7 +469,3 @@ You should now see that the alert messages pop up in the opposite order!
 * [MDN](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/removeEventListener)
 * [JavaScript.info](http://javascript.info/tutorial/bubbling-and-capturing)
 * [`DOMContentLoaded` vs. `window.onload`](http://web.archive.org/web/20150405114023/http://ie.microsoft.com/testdrive/HTML5/DOMContentLoaded/Default.html)
-
-ifference between `DOMContentLoaded` and `window.onload`? Check out [this example](http://web.archive.org/web/20150405114023/http://ie.microsoft.com/testdrive/HTML5/DOMContentLoaded/Default.html).
-
-
