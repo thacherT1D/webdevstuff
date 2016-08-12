@@ -12,7 +12,7 @@ The goal of this project is to put what you've learned to use to:
 
 ## Write a project proposal and get it approved by an instructor
 
-For this project, you will self-organize into groups of 2-6. Together, you will need to come up with a product idea, and write it as a proposal that includes:
+For this project, you will be organized into groups of 5. Together, you will need to come up with a product idea, and write it as a proposal that includes:
 
 * A project description
     * Who uses it?
@@ -48,30 +48,36 @@ Your app should:
 * Use a third-party API
 * Use *some significant technology that was not covered in the program*. Examples include:
     * Using Ember, Angular 2, React/Flux etc. on the front-end instead of Angular 1.4
-    * Making a native mobile app using a wrapper like ionic framework/React Native/PhoneGap/Cordova etc.
+    * Making a native mobile app using a wrapper like Ionic framework/React Native/PhoneGap/Cordova etc.
     * Making a desktop app with [Electron](http://electron.atom.io/)/[React Native](https://github.com/ptmt/react-native-desktop) etc.
     * Integrating a physical device/sensor/internet of things
     * Using Rails, Spring, Java, or some other backend framework for building APIs
 * All of the quality standards from earlier projects are the same as far as clean code, commit messages, READMEs, etc.
+* The README should have a brief project description, screenshot/gif of the application, link to video demo, installation instructions, usage instructions (as applicable)
 
 <a id="video"></a>
 
 ## Make a video highlighting the functionality of your app
 
-* Make a 3-6 minute video explaining your project and demonstrating its features
+* Make a 3-6 minute video explaining your project and demonstrating its features. Think of this along the lines of a product promotional video.
 
 <a id="write-up"></a>
 
-## Complete a write-up of the project
+## Complete two write-ups of the project
 
-* Describe what the project is, the technologies you used, and some information about the workflow you followed.
-* 1-2 tight paragraphs
+* A public, group-writeup that will be used for the github README and student portfolios
+  * Describe what the project is, the technologies you used, and some information about the workflow you followed.
+  * 1-2 tight paragraphs
+* A private, individual write-up that will be emailed to the instructors
+  * Describe which parts of the project you were responsible for
+  * How you felt working in your team went (highlight at least one positive and one negative)
+  * What you'll do differently in the future to improve a future group/team you're a part of
 
 <a id="portfolio"></a>
 
-## Add all three of these to an online portfolio
+## Add the video, public write-up, and github link to an online portfolio
 
-* Create a portfolio on the [student portal](http://students.galvanize.com)
+* Create a portfolio on [Talent](http://talent.galvanize.com)
 * Link to your final deployed site, your video, your respositories, and your write-up
 * This will be added to your web development portfolio
 
@@ -79,8 +85,13 @@ Your app should:
 
 ## Present your work to the class
 
-* Be prepared to spend ~10 minutes presenting your work to the class.
+* Be prepared to spend 5-10 minutes presenting your work to the class
+* Each team member should speak in the presentation
+* Should state problem statement and how your application solves it
+* Highlight some of the technology used in building the application, especially the interesting parts
+* Demo the main / unique functionality of the application
+* Speak to some of the challenges that were encountered during development and how those were overcome
 
 ---
 
-This is a realistic approximation of what developing real products on a software team is like. You will have approximately 20-25 hours of class time to work on this. **It will not be enough time to do a good job on this project**. Plan on spending extra time outside of class, and coordinate this time with your team. This is another Big Deal Week, and you should put maximum effort into making it successful. You can and should use your teammates, classmates on other teams, and your instructors as learning resources, but this should be your own work.
+This is a realistic approximation of what developing real products on a software team is like. You will have approximately 25 hours of class time to work on this. **It will not be enough time to do a good job on this project**. Plan on spending extra time outside of class, and coordinate this time with your team. This is another Big Deal Week, and you should put maximum effort into making it successful. You can and should use your teammates, classmates on other teams, and your instructors as learning resources, but this should be your own work.
