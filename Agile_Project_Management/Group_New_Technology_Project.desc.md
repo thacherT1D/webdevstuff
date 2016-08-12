@@ -23,6 +23,8 @@ For this project, you will be organized into groups of 5. Together, you will nee
 
 There are some constraints around what technologies MUST be present in your app. Check out [Create and deploy a web app](#create-deploy) below.
 
+The project proposal should be submitted as a pull request against [this repo](https://github.com/gSchool/group-project-proposals).
+
 ## Follow Agile Workflow 
 
 * The methodologies, tools, and roles you use are up to your team.
