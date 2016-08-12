@@ -35,7 +35,7 @@ Notice that the correct number of arguments is being logged to the console. We a
 Now watch what happens when we try to use another method such as `pop()` that is very common to arrays:
 
 ```javascript
-function args() {
+function argsPop() {
   console.log(arguments.pop());
 }
 
@@ -274,19 +274,6 @@ When using dot notation, the keys are placed after the dot. The corresponding va
 
 - the name must begin with a `$`, `_`, or alphabet character
 - after the first character, any of the above plus numeric characters
-
-In the case that the key isn't a valid identifier (or it is a valid identifier), we may use square bracket notation:
-
-```javascript
-var cat = {};
-cat["first name"] = "Felix";
-cat["last name"] = "The Cat";
-
-cat
-// {'first name': 'Felix', 'last name': 'The Cat'}
-```
-
-Above, the keys are considered invalid due to the white space in their names. To circumvent this problem, we enclose the invalid identifier in quotation marks. Then, we enclose that string inside of square brackets.
 
 ### Dot notation vs. square bracket notation (Access)
 
