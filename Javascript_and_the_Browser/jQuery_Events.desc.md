@@ -1,8 +1,26 @@
-## Objectives
+## Objectives:
 
 - Explain what jQuery events are.
 - Explain why jQuery events are useful.
 - Use jQuery events to respond to user interaction.
+
+## Exercises:
+
+## Included Resources:
+
+- [World Wide Web Consortium (W3C)](https://en.wikipedia.org/wiki/World_Wide_Web_Consortium)
+- [jQuery API - .ready()](http://api.jquery.com/ready/)
+- [jQuery API - .on()](http://api.jquery.com/on/)
+- [jQuery API - Event Object](https://api.jquery.com/category/events/event-object/)
+- [jQuery API - .off()](http://api.jquery.com/off)
+- [jQuery API - .click()](http://api.jquery.com/click/)
+- [jQuery API - .hover()](http://api.jquery.com/hover/)
+- [jQuery API - .keydown()](http://api.jquery.com/keydown/)
+- [jQuery API - .keypress()](http://api.jquery.com/keypress/)
+- [jQuery API - .keyup()](http://api.jquery.com/keyup/)
+- [jQuery API - .submit()](http://api.jquery.com/submit/)
+
+
 
 ## What are jQuery events?
 
@@ -277,7 +295,7 @@ var names = ['Charizard', 'Bulbasaur', 'Onyx', 'Mewtwo', 'Chansey'];
 var $section = $('section');
 
 $('#add-pokemon').on('click', function() {
-  var name = names[Math.floor(Math.random() * monsters.length)];
+  var name = names[Math.floor(Math.random() * names.length)];
   var $div = $(`<div class="pokemon">${name}</div>`);
   $section.append($div);
 });
@@ -288,6 +306,8 @@ $('.pokemon').on('click', function(event) {
   console.log(`Buh-bye, ${$target.text()}!`);
 });
 ```
+
+jsfiddle available[here](https://jsfiddle.net/user/freemanjamesh/fiddles/)
 
 Try removing the `<div>` tag for Pikachu. If everything is wired up correctly, that should work as expected. Now, try adding a random Pokémon by clicking on the `<button>` tag. That should work too. But, what happens when you try to remove a `<div>` added by the `<button>`? Try clicking on one of the new `<div>` tags and that should not work.
 
