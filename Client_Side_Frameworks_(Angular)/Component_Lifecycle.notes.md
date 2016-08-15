@@ -1,12 +1,12 @@
 ## Objectives
 
-- Explain what the component life cycle is.
-- Explain why the component life cycle is important.
-- Use the component life cycle to manage the state of a React component.
+- Explain what the component lifecycle is.
+- Explain why the component lifecycle is important.
+- Use the component lifecycle to manage the state of a React component.
 
 ## Introduction
 
-As we build larger React applications that contain multiple components, there will be times where we want to change props, state or any other information depending on the component life cycle. For example, You might want to per­form cer­tain actions when a new com­po­nent instance is ini­tial­ized or destroyed. You can read all about the various methods [here](https://facebook.github.io/react/docs/component-specs.html), but here are some methods we will discuss in more detail:
+As we build larger React applications that contain multiple components, there will be times where we want to change props, state or any other information depending on the component lifecycle. For example, You might want to per­form cer­tain actions when a new com­po­nent instance is ini­tial­ized or destroyed. You can read all about the various methods [here](https://facebook.github.io/react/docs/component-specs.html), but here are some methods we will discuss in more detail:
 
 ### componentWillMount
 this method runs before the component mounts
@@ -115,7 +115,7 @@ Modify the previous mounting/unmounting example in the following ways:
 
 ## Questions
 
-* Describe 5 methods in the component life cycle
+* Describe 5 methods in the component lifecycle
 * What kinds of things would we do in the componentWillMount method?
 * What kinds of things would we do in the componentDidMount method?
 * What kinds of things would we do in the componentWillUnmount method?
@@ -123,7 +123,7 @@ Modify the previous mounting/unmounting example in the following ways:
 
 ## Assignment
 
-* Read [this](http://javascript.tutorialhorizon.com/2014/09/13/execution-sequence-of-a-react-components-lifecycle-methods/) article on the react component life cycle
+* Read [this](http://javascript.tutorialhorizon.com/2014/09/13/execution-sequence-of-a-react-components-lifecycle-methods/) article on the react component lifecycle
 * Github Assignment
     - Create a component called GithubProfile
     - After your component mounts, make an ajax called `http://api.github.com/users/` + your github username.
@@ -135,7 +135,7 @@ Modify the previous mounting/unmounting example in the following ways:
     - MovieSearchForm should render a form and the Movie component (which should have no information at first)
     - A user should be able to search for a title of the movie, and when they submit the form, an ajax call should be made to `http://omdbapi.com?t=` + the value of what the user searched.
     - The Movie component should then be updated with the title of the movie, the year and the image poster.
-    - You do not **need** to use any component life cycle methods, but you absolutely can.
+    - You do not **need** to use any component lifecycle methods, but you absolutely can.
 
     Here is what it the OMDB Assignment should look like:
 
