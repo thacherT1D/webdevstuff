@@ -70,7 +70,7 @@ Next, you need to tell Sublime Text when it should paste your snippet of code in
 
 Now, save your snippet. **IMPORTANT** when you save, Sublime Text will default to the `/User/` folder. Don't save the snippet anywhere else! Also, the snippet must be saved with the extension `sublime-snippet`. For instance, `bootstrap.sublime-snippet` is probably the most reasonable name for the file you've just created.
 
-Here's where the magic happens. Go back in to your `bootstrap-sandbox.html` file, and delete out the Bootstrap code you pasted in earlier. Then, add a row in between `<title>Bootstrap Sandbox</title>` and `</head>`. In your new row, type `bootstrap` and then hit the `tab` key. Booya! 
+Here's where the magic happens. Go back in to your `bootstrap-sandbox.html` file, and delete out the Bootstrap code you pasted in earlier. Then, add a row in between `<title>Bootstrap Sandbox</title>` and `</head>`. In your new row, type `bootstrap` and then hit the `tab` key. Booya!
 
 ## Containers and the Grid System
 
@@ -103,10 +103,10 @@ Let's throw some more divs into our html document to see a couple examples of Bo
     <title>Bootstrap Sandbox</title>
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    
+
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
-    
+
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   </head>
@@ -159,18 +159,6 @@ When it comes to forms, the `.form-control` class will be your best friend. Here
 
 ```
 <div class="container-fluid">
-  <!-- Without Bootstrap -->
-  <div class="row">
-    <div class="col-md-12">
-      <form>
-        <div>
-          <label for="exampleName">Name</label>
-          <input type="text" name="exampleName" id="exampleName" placeholder="Name">
-        </div>
-      </form>
-    </div>
-  </div>
-  <!-- With Bootstrap -->
   <div class="row">
     <div class="col-md-12">
       <form>
@@ -249,13 +237,13 @@ Add these three elements to your html file, and then explore the questions below
 
 1. What does adding the `.btn` class do?
 
-2. Once you've added the `.btn` class to an element, you can add other classes for addition styling. Play around with `.btn-default`, `.btn-primary`, `.btn-success`, `.btn-info`, `.btn-warning`,`.btn-danger`, and `.btn-link`. 
+2. Once you've added the `.btn` class to an element, you can add other classes for addition styling. Play around with `.btn-default`, `.btn-primary`, `.btn-success`, `.btn-info`, `.btn-warning`,`.btn-danger`, and `.btn-link`.
 
 3. What does the `.btn-block` class do when used in conjunction with `.btn`?
 
 4. What do you think the `.btn-lg` class does? Can you guess what some other button classes might be?
 
-Further reading: 
+Further reading:
 
 [Forms in Bootstrap](http://getbootstrap.com/css/#forms)
 
