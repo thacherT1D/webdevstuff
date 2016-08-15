@@ -12,7 +12,7 @@ Fork/clone [this repo](https://github.com/gSchool/galvanize-eats). You are requi
 
 ## APIs
 
-The project involves two API calls. The first, to get the menu data should be a GET request to this url: [https://galvanize-eats-api.herokuapp.com/menu](https://galvanize-eats-api.herokuapp.com/menu). The second request, to post an order, should be a POST request to this url: [https://galvanize-eats-api.herokuapp.com/orders](https://galvanize-eats-api.herokuapp.com/orders). 
+The project involves two API calls. The first, to get the menu data should be a GET request to this url: [https://galvanize-eats-api.herokuapp.com/menu](https://galvanize-eats-api.herokuapp.com/menu). The second request, to post an order, should be a POST request to this url: [https://galvanize-eats-api.herokuapp.com/orders](https://galvanize-eats-api.herokuapp.com/orders).
 
 Your post request should submit the user order. When you have successfully hit the POST api you will see "Congratulations!".
 
@@ -46,7 +46,7 @@ The finished product might look something like this:
 
 ```
 
-SHOP ONLINE TEXT 
+SHOP ONLINE TEXT
 
 Using our convenient web app, you'll get all the power of gFood
 
@@ -73,9 +73,9 @@ incredibly fair! Burger sales? Check. Pizza sales? Check. Burger and
 pizza sales?? Check, check, check! We seriously can't stop making
 
 deals.
-  
+
 ```
 
-## HOW TO SUBMIT YOUR ASSESSMENT 
+## HOW TO SUBMIT YOUR ASSESSMENT
 
 Add a README to your project that has a link to your deployed site and submit a pull request.
