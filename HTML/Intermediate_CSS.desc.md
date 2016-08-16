@@ -22,6 +22,7 @@ A normalizer maintains some default styling, but keeps it consistent between bro
 
 For now just use the CDN to add *normalize* to your page.
 
+<br>
 #### 💪 Exercise
 
  - Copy the website you have been working on
@@ -34,6 +35,7 @@ A CSS reset removes all default styling from a browser, maintaining only the dis
 
 Most projects should use one of these, but not both. It is up to you to decide whether "useful defaults" or "completely unstyled" is more useful to your project. Either way, they should be `<link>`ed to before any of your other stylesheets, so that any overrides you make will take precedence.
 
+<br>
 #### 💪 Exercise
 
   - Make a copy of the website you have been working on
@@ -52,6 +54,7 @@ CSS positions change the *flow* of a document.
 * **`position: absolute;`**: Positions relative to the nearest `relative`ly positioned parent, or the `<body>` if it doesn't have any. Absolutely positioned elements are removed from the document flow.
 * **`position: fixed`**: Positions relative to the *viewport* (display area of the browser window), and is not in the document flow.
 
+<br>
 Some notes on positioned (relative, absolute, or fixed) elements:
 
 * Margins for positioned elements are inside of their positioning contexts
@@ -88,6 +91,7 @@ video[loop] {
 }
 ```
 
+<br>
 `tag[attribute="value"]`
 
 If I wanted to give a cool background image to div's with ONLY the class of "bob" and not ones that may have multiple classes like `class="bob cat", I would do the following:
@@ -98,6 +102,7 @@ div[class="bob"] {
 }
 ```
 
+<br>
 `tag[attribute^="starts-with-value"]`
 
 If we wanted to change the color of only links on the page that point at anything within the Galvanize Learn subdomain we could do something like the following:
@@ -108,6 +113,7 @@ a[href^="https://www.learn.galvanize"] {
 }
 ```
 
+<br>
 `tag[attribute$="ends-with-value"]`
 
 Say we have an assortment of buttons using a naming convention like `red-small-button`, `red-big-button`, `blue-small-button` etc. etc. If we want to make a style change to big buttons of any color but don't want to update hundreds of class names we could do something like this:
@@ -118,6 +124,7 @@ button[class$="big-button"] {
 }
 ```
 
+<br>
 `tag[attribute*="contains-value"]`
 
 Using the example above again, we could also just match for any part of the attribute's value using the `*`
@@ -128,6 +135,8 @@ button[class*="big"] {
 }
 ```
 
+<br>
+<br>
 #### 💪 Exercise
  * Go to codepen.io and create a new pen.
  * Create a selector for the following html that hides checked input.
@@ -158,6 +167,7 @@ a:visited {
 }
 ```
 
+<br>
 `:hover`
 
 Hover lets you apply styles for whenever your mouse is over an element:
@@ -168,6 +178,7 @@ button:hover {
 }
 ```
 
+<br>
 `:active`
 
 Active lets you apply styles for whenever your element is being clicked on. If we wanted it to shift down a couple pixels when clicked we would do somethign like this:
@@ -182,6 +193,8 @@ button:active {
 }
 ```
 
+<br>
+<br>
 #### 💪 Exercise
   - Go on codepen.io and use the link-based psuedo-classes we just went over.
 
@@ -201,6 +214,7 @@ p::first-letter {
 }
 ```
 
+<br>
 `::before` & `::after`
 
 Respectivly these psuedo elements will insert content before and after the specified element:
@@ -216,6 +230,8 @@ p::after {
 }
 ```
 
+<br>
+<br>
 #### 💪 Exercise
 
 * On codepen.io
@@ -234,6 +250,7 @@ input:focus {
 }
 ```
 
+<br>
 `::selection`
 
 This psuedo class allows you to set style for selection, or highlighting text. We are going to use the `*` wildcard selector which means it applies to all elements on the page:
@@ -259,6 +276,7 @@ div:not(.special) {
 
 In other words, all the divs *WITH* the class special will *NOT* get the pink background.
 
+<br>
 #### 💪 Exercise
 
 * On codepen.io create a div with the class `foo`
@@ -274,6 +292,7 @@ In other words, all the divs *WITH* the class special will *NOT* get the pink ba
 * `:last-of-type`
 * `:nth-of-type(odd | even | 3 | 3n + 4)`
 
+<br>
 #### 💪 Exercise
 
 * On codepen.io create a list with 5 items
@@ -334,6 +353,7 @@ In other words, all the divs *WITH* the class special will *NOT* get the pink ba
 * `letter-spacing`
 * `word-spacing`
 
+<br>
 #### 💪 Exercise
 
   - On codepen.io add a paragraph filled with [dummy content](http://lipsum.com/)
@@ -347,6 +367,7 @@ In other words, all the divs *WITH* the class special will *NOT* get the pink ba
 * `list-style-position: inside | outside`
 * `list-style-image: url(...)`
 
+<br>
 #### 💪 Exercise
 
   - On codepen.io create a list of 5 items
@@ -393,6 +414,7 @@ Most properties, such as fonts, will be inherited by children. The following pro
 * Backgrounds
 * Borders
 
+<br>
 <hr>
 
 ### 📖 Homework
