@@ -57,6 +57,7 @@ Some notes on positioned (relative, absolute, or fixed) elements:
 * Margins for positioned elements are inside of their positioning contexts
 * Absolutely positioned elements can be stretched with the top/right/bottom/left properties
 
+<hr>
 
 ## Selectors
 
@@ -73,11 +74,14 @@ Click on selector type for a live code sample.
 * [`~` (all siblings)](http://codepen.io/MrJadaml/pen/LkgBxA)
 * [`>` (all direct children)](http://codepen.io/MrJadaml/pen/grBjmJ)
 
+<hr>
+
 ### Attribute Selectors
 
 `tag[attribute]`
 
 Say you want to put a cool purple border around videos that are looping. You can target them with the boolean attr `loop`:
+
 ```css
 video[loop] {
   border: 3px solid purple;
@@ -124,7 +128,7 @@ button[class*="big"] {
 }
 ```
 
-#### Exercise
+#### 💪 Exercise
  * Go to codepen.io and create a new pen.
  * Create a selector for the following html that hides checked input.
 
@@ -133,6 +137,8 @@ button[class*="big"] {
 <input type="checkbox" checked> I am checked
 <input type="checkbox"> I am unchecked
 ```
+
+<hr>
 
 ### Pseudo Classes
 
@@ -176,7 +182,7 @@ button:active {
 }
 ```
 
-#### Exercise
+#### 💪 Exercise
   - Go on codepen.io and use the link-based psuedo-classes we just went over.
 
 #### Text-based
@@ -210,7 +216,7 @@ p::after {
 }
 ```
 
-#### Exercise
+#### 💪 Exercise
 
 * On codepen.io
 * Create a paragraph element and fill it with dummy text.
@@ -253,7 +259,7 @@ div:not(.special) {
 
 In other words, all the divs *WITH* the class special will *NOT* get the pink background.
 
-#### Exercise
+#### 💪 Exercise
 
 * On codepen.io create a div with the class `foo`
 * create another div with the classes `foo` and `bar`.
@@ -268,10 +274,12 @@ In other words, all the divs *WITH* the class special will *NOT* get the pink ba
 * `:last-of-type`
 * `:nth-of-type(odd | even | 3 | 3n + 4)`
 
-#### Exercise
+#### 💪 Exercise
 
 * On codepen.io create a list with 5 items
 * Use `:first-child` to bold the first list item.
+
+<hr>
 
 ## More Box Model
 
@@ -290,6 +298,8 @@ In other words, all the divs *WITH* the class special will *NOT* get the pink ba
 * overflow: visible | scroll | auto | hidden
 * min-height max-height
 * Don’t set height for text areas. Set rows and use height: auto.
+
+<hr>
 
 ## Fonts
 
@@ -324,10 +334,12 @@ In other words, all the divs *WITH* the class special will *NOT* get the pink ba
 * `letter-spacing`
 * `word-spacing`
 
-#### Exercise
+#### 💪 Exercise
 
   - On codepen.io add a paragraph filled with [dummy content](http://lipsum.com/)
   - Add a style that sets the font to helvetica, weight 500, lowercase justified.
+
+<hr>
 
 ## Lists
 
@@ -335,11 +347,13 @@ In other words, all the divs *WITH* the class special will *NOT* get the pink ba
 * `list-style-position: inside | outside`
 * `list-style-image: url(...)`
 
-#### Exercise
+#### 💪 Exercise
 
   - On codepen.io create a list of 5 items
   - try both of the list-style-positions
   - change the style type to none.
+
+<hr>
 
 ## Colors
 
@@ -367,6 +381,8 @@ In other words, all the divs *WITH* the class special will *NOT* get the pink ba
   - If using HSLA the last number is Alpha (transparency) values 0-1
   - https://www.w3.org/Talks/2013/0516-CSS-WWW2013/color-wheel.png - HSL color wheel
 
+<hr>
+
 ## Inheritance Notes
 
 Most properties, such as fonts, will be inherited by children. The following properties *are not* inherited:
@@ -377,7 +393,13 @@ Most properties, such as fonts, will be inherited by children. The following pro
 * Backgrounds
 * Borders
 
-## Resources
+<hr>
+
+### 📖 Homework
+
+[CSS-Exercises](https://github.com/gSchool/css-exercises)
+
+#### Resources
 
 * [CSS Tricks Almanac](https://css-tricks.com/almanac/)
 * [CSS cheatsheet](http://overapi.com/css)
