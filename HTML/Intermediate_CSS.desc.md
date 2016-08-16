@@ -1,21 +1,14 @@
-# Intermediate CSS
+# Objectives
 
-[slides here](https://docs.google.com/presentation/d/1omsUSz7UPV9mf-yPNMrhA99K1shQjvcxTvHN94xvu3k/edit?usp=sharing)
+ - Explain why you would use CSS reset.
+ - Explain what a CSS normalizer does.
+ - Describe the 4 CSS positions.
+ - Use an attribute selector.
+ - Describe what a psuedo-class does.
+ - Be able to manipulate fonts
+ - List three format types for colors.
 
-Today we will be expanding on our understanding of CSS.
-
-## Objectives
-
-  Students should be able to:
-
-  - Explain why you would use CSS reset.
-  - Explain what a CSS normalizer does.
-  - Describe the 4 CSS positions.
-  - Use an attribute selector.
-  - Describe what a psuedo-class does.
-  - Be able to manipulate fonts
-  - List three format types for colors.
-
+<hr>
 
 ## Resets & Normalizers
 
@@ -25,13 +18,15 @@ Each browser's user agent stylesheet is different. There are two popular approac
 
 ### Normalizers
 
-A normalizer maintains some default styling, but keeps it consistent between browsers. The most popular implementation of this is [normalize.css](https://necolas.github.io/normalize.css/).
+A normalizer maintains some default styling, but keeps it consistent between browsers. The most popular implementation of this is [normalize.css](https://github.com/necolas/normalize.css/).
 
-#### Exercise
+For now just use the CDN to add *normalize* to your page.
 
-  - Copy the website you have been working on
-  - Add a normalizer to the copy of your website
-  - Compare the copy with the normalizer and your normal website to see if you can spot any changes
+#### 💪 Exercise
+
+ - Copy the website you have been working on
+ - Add a normalizer to the copy of your website
+ - Compare the copy with the normalizer and your normal website to see if you can spot any changes
 
 ### Resets
 
@@ -39,12 +34,13 @@ A CSS reset removes all default styling from a browser, maintaining only the dis
 
 Most projects should use one of these, but not both. It is up to you to decide whether "useful defaults" or "completely unstyled" is more useful to your project. Either way, they should be `<link>`ed to before any of your other stylesheets, so that any overrides you make will take precedence.
 
-#### Exercise
+#### 💪 Exercise
 
   - Make a copy of the website you have been working on
   - Add a CSS reset to the new copy.
   - Open up both in separate browser windows and compare the differences.
 
+<hr>
 
 ## Positioning
 
