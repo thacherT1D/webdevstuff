@@ -40,7 +40,13 @@ Students should be able to:
 - [CSS Creatures](http://bennettfeely.com/csscreatures/)
 - [CSS Coke Can](http://www.romancortes.com/ficheros/css-coke.html)
 
-### Cascading Style Sheets (CSS)
+### Helpful hints
+1. Atom plugins
+  -Install the 'color-picker' package. This allows you to choose from a color palette and insert your choice into a stylesheet using a variety of color formats.
+  -Install the 'pigments' package. This will highlight colors in your editor on the fly.
+  
+
+## Cascading Style Sheets (CSS)
 
 CSS is a style sheet language used for describing the look and formatting of a document written in a markup language.  
 
