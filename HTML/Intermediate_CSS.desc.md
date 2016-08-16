@@ -194,10 +194,11 @@ button:active {
 ```
 
 <br>
-<br>
 #### 💪 Exercise
-  - Go on codepen.io and use the link-based psuedo-classes we just went over.
 
+Go on codepen.io and use the link-based psuedo-classes we just went over.
+
+<br>
 #### Text-based
 
 `::first-line` & `::first-letter`
@@ -231,13 +232,13 @@ p::after {
 ```
 
 <br>
-<br>
 #### 💪 Exercise
 
 * On codepen.io
 * Create a paragraph element and fill it with dummy text.
 * Add a style using :first-letter to make the first letter capital, bold and massive
 
+<br>
 #### Interaction-based
 
 `:focus`
