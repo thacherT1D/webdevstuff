@@ -5,6 +5,7 @@
 * Build a web form with various controls tags.
 * Verify user data with the built-in HTML5 form validation.
 * Verify user data with JavaScript-based form validation.
+
 <hr>
 ## What's a web form?
 
@@ -28,6 +29,7 @@ With a little code, we can easily recreate their form.
 ```
 
 Like all forms, this one contains a few control tags.
+
 <hr>
 ## What's a control tag?
 
@@ -39,6 +41,7 @@ The following HTML tags are **control tags**—tags that build elements which a 
 - `<button>`
 
 Before the rise of JavaScript, control tags were always nested within a `<form>` tag. That's because control tags have a predefined behavior when nested inside of a `<form>` tag. Nowadays, the `<form>` element isn't needed anymore. Fortunately for you, we'll be teaching you both techniques.
+
 <hr>
 ## The `<input>` tag
 
@@ -97,6 +100,7 @@ Hidden fields are what as described, hidden. There is no visual for the user to 
 ```html
 <input type="hidden" name="secret" value="Tupac is alive">
 ```
+
 <hr>
 ## The `<label>` tag
 
@@ -115,6 +119,7 @@ You can also connect a `<label>` tag to an `<input>` tag with the `for` and `id`
 <label for="album">Album</label>
 <input id="album" type="text" name="album">
 ```
+
 <hr>
 ## The `<select>` tag
 
@@ -139,6 +144,7 @@ Multiple choice select boxes.
   <option value="love_and_hip_hop_atlanta">Love and Hip Hop Atlanta</option>
 </select>
 ```
+
 <hr>
 ## Buttons
 
@@ -159,10 +165,12 @@ Buttons contain a `type` attribute with three options.
 <button type="submit">This a submit button</button>
 <button type="reset">This a reset button</button>
 ```
+
 <hr>
 ## And many more...
 
 There are more challenges in [this repository](https://github.com/gSchool/html-forms) where you can experiment with the basic control tags. Knowing what types of inputs are available is essential to designing a form that is simple and easy to use. When you encounter a new type ask yourself "what would I use this for?"
+
 <hr>
 ## Common Attributes
 
@@ -185,12 +193,15 @@ With control tags, there are a variety of attributes available. Many attributes 
 - spellcheck
 - tabindex
 - value
+
 <hr>
 ## Materialize Forms
 
 Let's start with the Materialize [documentation](http://materializecss.com/forms.html) on forms specifically. Materialize includes some simple ways to make your forms look awesome.
+
 <hr>
 ## HTML and JS Form Validation
+
 <hr>
 ## Why?
 
@@ -199,6 +210,7 @@ As a web developer, you will spend just an obscene amount of time working on HTM
 We're also validating our form input because our programs can't work without proper inputs. Writing simple programs up until this point means only one person has been using your program: you. In the future, this won't be the case- sometimes forms are confusing if you don't know how they work in advance. Your users will often make mistakes, and will often need to be corrected in an expedient way that encourages the user to continue interacting with the form.
 
 So what do we do to ensure we get good input for our programs?
+
 <hr>
 ## Form Validation
 
@@ -247,6 +259,7 @@ When an element is invalid, two things occur:
 
 * The element will now match a special CSS pseudo-class called :invalid. This allows you to stylize your invalid elements. Similarly, valid elements match the :valid pseudo-class.
 * The browser will try to block the user from submitting the form.
+
 <hr>
 ## JS Validation
 
@@ -333,10 +346,12 @@ myForm.addEventListener('submit', function() {
   }
 });
 ```
+
 <hr>
 ## Displaying Validation with Materialize
 
 The [dialogs](http://materializecss.com/dialogs.html) documentation page offers many helpful tools to help you properly display validation errors.
+
 <hr>
 ## Questions
 
@@ -344,6 +359,7 @@ The [dialogs](http://materializecss.com/dialogs.html) documentation page offers 
 * What is a better experience for the user- using the `required` attribute, or using JS to ensure all required fields are checked?
 * Why might browser validation not be enough?
 * What would happen if someone used console Javascript to submit their form, bypassing your validation?
+
 <hr>
 ## Additional Resources on Forms
 
