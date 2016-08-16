@@ -11,7 +11,7 @@
 
 If you've ever given your credit card information to a website, performed a search on Google, or logged into Facebook then you've used a web form. **Web forms** (or just forms) are the main way of getting information from your user into your application. Sometimes this information never leaves the browser and sometimes it's sent to a web server.
 
-At it's core, Google's search page is a simple web form with one input and two buttons.
+At its core, Google's search page is a simple web form with one input and two buttons.
 
 ![](http://i.imgur.com/hcP92bJ.png)
 
