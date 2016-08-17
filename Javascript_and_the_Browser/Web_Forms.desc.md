@@ -1,8 +1,10 @@
+# HTML Forms
+
 ## Objectives
 
 * Explain what a web form is.
 * Explain what control tags are.
-* Build a web form with various controls tags.
+* Build a web form with various controls tags.
 * Verify user data with the built-in HTML5 form validation.
 * Verify user data with JavaScript-based form validation.
 
@@ -160,7 +162,7 @@ Buttons contain a `type` attribute with three options.
 <button type="reset">This a reset button</button>
 ```
 
-## And many more...
+## Assignment
 
 There are more challenges in [this repository](https://github.com/gSchool/html-forms) where you can experiment with the basic control tags. Knowing what types of inputs are available is essential to designing a form that is simple and easy to use. When you encounter a new type ask yourself "what would I use this for?"
 
@@ -185,10 +187,6 @@ With control tags, there are a variety of attributes available. Many attributes 
 - spellcheck
 - tabindex
 - value
-
-## Materialize Forms
-
-Let's start with the Materialize [documentation](http://materializecss.com/forms.html) on forms specifically. Materialize includes some simple ways to make your forms look awesome.
 
 ## HTML and JS Form Validation
 
@@ -345,6 +343,11 @@ The [dialogs](http://materializecss.com/dialogs.html) documentation page offers 
 * Why might browser validation not be enough?
 * What would happen if someone used console Javascript to submit their form, bypassing your validation?
 
+## Styling Forms with CSS Frameworks
+
+- [Bootstrap Forms](http://getbootstrap.com/css/#forms)
+- [Materialize Forms](http://materializecss.com/forms.html)
+
 ## Additional Resources on Forms
 
 - https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms/My_first_HTML_form
@@ -352,3 +355,8 @@ The [dialogs](http://materializecss.com/dialogs.html) documentation page offers 
 - https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Input
 - http://diveintohtml5.info/forms.html
 - http://www.wufoo.com/html5/
+- http://morgancarter.com.au/design-solutions/which-input-when
+
+## Slides
+
+* [Slides](https://docs.google.com/presentation/d/1BeonEGxHl0uQUWQJc_1XJFKS794T4zZnJAIUUoUBy4M/edit#slide=id.p)
