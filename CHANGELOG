@@ -1,9 +1,0 @@
-2016-02-23
-
-- Removed the "auto documentation" standard (aka Swagger) - https://github.com/gSchool/fs-curriculum/pull/8
-- Removed the "microservices" standard https://github.com/gSchool/fs-curriculum/pull/6
-- Removed the "database roles" standard and un-mainlined the LE https://github.com/gSchool/fs-curriculum/pull/10
-
-2016-02-17
-
-- Removed the "embedded media" standard - https://github.com/gSchool/fs-curriculum/pull/4
