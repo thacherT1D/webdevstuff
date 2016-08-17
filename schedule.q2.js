@@ -65,7 +65,7 @@ module.exports = [
     warmup: { text: "Express Static Files", url: "https://gist.github.com/ryansobol/bc0206c1e5d00af16568ead5e59b01fd" },
     activities: [
       {
-        article: { text: "PostgreSQL", url: "" },
+        article: { text: "PostgreSQL", url: "https://github.com/gSchool/sql-curriculum/blob/master/Intro.md" },
         assignment: { text: "", url: "" },
       },
     ]
@@ -75,7 +75,7 @@ module.exports = [
     warmup: { text: "Express Templating", url: "https://gist.github.com/IanSmith89/f72743227a6db62a454374a39ebdc6b4" },
     activities: [
       {
-        article: { text: "SQL", url: "" },
+        article: { text: "SQL", url: "https://github.com/gSchool/sql-curriculum/blob/master/SQL%20Intro.md" },
         assignment: { text: "Apartment Lab", url: "https://github.com/gSchool/intro_sql_exercise" },
       },
     ]
@@ -85,8 +85,8 @@ module.exports = [
     warmup: { text: "Express Templating w/ Materialize", url: "https://github.com/IanSmith89/pokemon_templating" },
     activities: [
       {
-        article: { text: "Entity Relationships", url: "" },
-        assignment: { text: "Online Retailer", url: "https://github.com/gSchool/sql-curriculum/blob/solutions/Unit-02-Relational/02-readme.md" },
+        article: { text: "Entity Relationships", url: "https://github.com/gSchool/sql-curriculum/blob/master/Entity%20Relationship%20Diagrams.md" },
+        assignment: { text: "Online Retailer", url: "https://github.com/gSchool/sql-curriculum/tree/master/Exercises/src/customers" },
       },
     ]
   },
@@ -105,7 +105,7 @@ module.exports = [
     warmup: { text: "None" },
     activities: [
       {
-        article: { text: "Indexes", url: "" },
+        article: { text: "Indexes", url: "https://github.com/gSchool/sql-curriculum/blob/master/Indexes.md" },
         assignment: { text: "Review" },
       },
     ]

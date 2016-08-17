@@ -19,7 +19,7 @@ Week 1
       <td rowspan="1">Monday</td>
       <td rowspan="1"><a href="https://gist.github.com/ryansobol/bc0206c1e5d00af16568ead5e59b01fd">Express Static Files</a>
       </td>
-      <td>PostgreSQL
+      <td><a href="https://github.com/gSchool/sql-curriculum/blob/master/Intro.md">PostgreSQL</a>
       </td>
       <td>
       </td>
@@ -30,7 +30,7 @@ Week 1
       <td rowspan="1">Tuesday</td>
       <td rowspan="1"><a href="https://gist.github.com/IanSmith89/f72743227a6db62a454374a39ebdc6b4">Express Templating</a>
       </td>
-      <td>SQL
+      <td><a href="https://github.com/gSchool/sql-curriculum/blob/master/SQL%20Intro.md">SQL</a>
       </td>
       <td><a href="https://github.com/gSchool/intro_sql_exercise">Apartment Lab</a>
       </td>
@@ -41,9 +41,9 @@ Week 1
       <td rowspan="1">Wednesday</td>
       <td rowspan="1"><a href="https://github.com/IanSmith89/pokemon_templating">Express Templating w/ Materialize</a>
       </td>
-      <td>Entity Relationships
+      <td><a href="https://github.com/gSchool/sql-curriculum/blob/master/Entity%20Relationship%20Diagrams.md">Entity Relationships</a>
       </td>
-      <td><a href="https://github.com/gSchool/sql-curriculum/blob/solutions/Unit-02-Relational/02-readme.md">Online Retailer</a>
+      <td><a href="https://github.com/gSchool/sql-curriculum/tree/master/Exercises/src/customers">Online Retailer</a>
       </td>
       <td>
       </td>
@@ -63,7 +63,7 @@ Week 1
       <td rowspan="1">Friday</td>
       <td rowspan="1"><a>None</a>
       </td>
-      <td>Indexes
+      <td><a href="https://github.com/gSchool/sql-curriculum/blob/master/Indexes.md">Indexes</a>
       </td>
       <td>Review
       </td>
