@@ -16,6 +16,10 @@ The Router component is the parent and Route is the child. React Router provides
 
 React Router provides access to cached versions of components without having to make a separate request to load a different user interface or view. It also provides a fast method of creating client-side routing as well as the associated presentation views.
 
+It simplifies client-side routing. There's no need to send a request to a server to load an entire page or component, unlike Angular which needs to send requests for any and all template files.
+
+The nesting of the URL will match the nesting of React Route components. You can also load multiple named components from a single route (e.g. an admin navbar and aside vs a regular user navbar and aside). All the routing logic is in one place which makes it easier to maintain and update.
+
 ## How do you use React Router to build a React user interface?
 
 To start off with, navigate to the desired React project directory and install and save the `react-router` package.
