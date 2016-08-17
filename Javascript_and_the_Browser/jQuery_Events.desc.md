@@ -309,7 +309,7 @@ $('.pokemon').on('click', function(event) {
 });
 ```
 
-### Note: fiddle available [here](https://jsfiddle.net/user/freemanjamesh/fiddles/).
+### Note: fiddle available [here](https://jsfiddle.net/freemanjamesh/kemkh2nw/).
 
 
 Try removing the `<div>` tag for Pikachu. If everything is wired up correctly, that should work as expected. Now, try adding a random Pokémon by clicking on the `<button>` tag. That should work too. But, what happens when you try to remove a `<div>` added by the `<button>`? Try clicking on one of the new `<div>` tags and that should not work.
