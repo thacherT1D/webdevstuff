@@ -5,7 +5,7 @@
 * Describe what the event handler's event object is
 * Use callbacks in methods like addEventListener
 * Explain the difference between `this` and `event.target` in event listeners
-* Explain why is the `DOMContentLoaded` event is important
+* Explain why the `DOMContentLoaded` event is important
 * Modify the DOM in response to an event
 
 <hr>
@@ -36,10 +36,10 @@ Some common event types in your browser:
 
 The `addEventListener()` method is a built-in Javascript function used to attach some functionality to an *EventTarget*. There are several types of *EventTargets*, but for today we're only going to look at `window` and html elements.
 
-We'll start off with the following code that adds an event listener to the `window` object. Drop this in your web console to test out:
+We'll start off with the following code that adds an event listener to the `window` object. Drop this in your web console to test it out:
 
 ```javascript
-window.addEventListener("click", function() {
+window.addEventListener('click', function() {
   alert("You clicked on the page!");
 });
 ```
@@ -72,9 +72,9 @@ that for now. We'll be addressing that a little be later in the lesson.
 Inside our app.js add the following code:
 
 ```javascript
-var button = document.querySelector("button");
+var button = document.querySelector('button');
 
-button.addEventListener("click", function(){
+button.addEventListener('click', function(){
   alert("SOMEONE CLICKED THE BUTTON!!");
 });
 ```
@@ -86,9 +86,9 @@ Here we've attached an event listener to a specific DOM node, a button on the pa
 You can also remove event listeners from DOM elements with `removeEventListener()`. Let's return to our example from the previous section. After adding the event listener to the button, maybe you realize that alert messages are terrible, and decide to remove it. It may be tempting to write something like this in the JS console:
 
 ```javascript
-var button = document.querySelector("button");
+var button = document.querySelector('button');
 
-button.removeEventListener("click");
+button.removeEventListener('click');
 ```
 
 However, if you copy and paste this code you'll see that it has no effect. The reason for this is that `removeEventListener`, like `addEventListener`, requires two arguments: the type of event, and the callback function to execute.
@@ -98,19 +98,19 @@ Therefore, when you're adding a callback function that you might need to remove 
 Try rewriting your `addEventListener` as follows:
 
 ```javascript
-var button = document.querySelector("button");
+var button = document.querySelector('button');
 
 var clickAlert = function() {
 	alert("SOMEONE CLICKED THE BUTTON!!");
 }
 
-button.addEventListener("click", clickAlert);
+button.addEventListener('click', clickAlert);
 ```
 
 Now you should be able to remove the event listener in the console with the following code:
 
 ```javascript
-button.removeEventListener("click", clickAlert);
+button.removeEventListener('click', clickAlert);
 ```
 Try clicking your button... What happens?
 
@@ -131,7 +131,7 @@ var logText = function(event) {
   console.log(event.target.textContent);
 }
 
-window.addEventListener("click", logText);
+window.addEventListener('click', logText);
 ```
 
 Let's take a closer look at the `event` object, and its `target` property in particular. Inside of your JS file, add an event listener that console logs the `event` object AND the `event.target` when you click on the button.
@@ -153,34 +153,34 @@ Once you get this working, you'll see that the `event` object has a lot of detai
 
 #### 💪 Exercise
 
- Create a variable called `clickCount` in your `js` file, and set it equal to 0. Modify your event listener so that every time you click on the button, the clickCount increments, and the button text changes to show the user how many times the button has been clicked.
+Create a variable called `clickCount` in your `js` file, and set it equal to 0. Modify your event listener so that every time you click on the button, the clickCount increments, and the button text changes to show the user how many times the button has been clicked.
 
 <hr>
 
 ## Target Vs. This
 
-Let's return to our simple HTML page from before, and add an event listener that calls the `logText` function on a button click:
+Let's return to our simple HTML page and add an event listener that calls the `logText` function on a button click:
 
 ```javascript
-var button = document.querySelector("button");
+var button = document.querySelector('button');
 
 var logText = function(event) {
   console.log(event.target.textContent);
 }
 
-button.addEventListener("click", logText);
+button.addEventListener('click', logText);
 ```
 
 We can rewrite this code so that it doesn't reference `event.target` but uses `this` instead!
 
 ```javascript
-var button = document.querySelector("button");
+var button = document.querySelector('button');
 
 var logText = function() {
   console.log(this.textContent);
 }
 
-button.addEventListener("click", logText);
+button.addEventListener('click', logText);
 ```
 
 So what's the difference between `this` and `event.target`? To answer this question, let's modify our HTML a bit. Wrap your button in a `div` like this:
@@ -195,13 +195,13 @@ So what's the difference between `this` and `event.target`? To answer this quest
 Let's now add the event listener to that parent `div`. Update your javascript so that it looks like this:
 
 ```javascript
-var div = document.querySelector("div");
+var div = document.querySelector('div');
 
 var logText = function() {
   console.log(this.textContent);
 }
 
-div.addEventListener("click", logText);
+div.addEventListener('click', logText);
 ```
 
 Refresh the page. You should see that no matter where you click -- on the `div`, on the `p` tag, or on the `button`, the same text gets logged to the console: all of the text inside of the `div`.
@@ -209,13 +209,13 @@ Refresh the page. You should see that no matter where you click -- on the `div`,
 Now let's change our `logText` function back so that it references the `event` object again:
 
 ```javascript
-var div = document.querySelector("div");
+var div = document.querySelector('div');
 
 var logText = function(event) {
   console.log(event.target.textContent);
 }
 
-div.addEventListener("click", logText);
+div.addEventListener('click', logText);
 ```
 
 In this case, the text that's logged to the console depends on where you click. If you click on the `p` tag, you should see "I'm a p tag!" in the console. If you click on the `button`, you should see "I'm a button!" in the console. And if you click anywhere else in the `div`, you should see both exclamations logged to the console.
@@ -242,10 +242,10 @@ Let's suppose we want to add a click listener to every `<p>` on a page. We can't
 
 ```javascript
 //THIS DOES NOT WORK
-var paragraphs = document.querySelectorAll("p");
+var paragraphs = document.querySelectorAll('p');
 
-paragraphs.addEventListener("click", function() {
- console.log("Woof!");
+paragraphs.addEventListener('click', function() {
+ console.log('Woof!');
 });
 ```
 
@@ -255,7 +255,7 @@ One option: we can set a listener on every individual element:
 var paragraphs = document.querySelectorAll('p');
 
 var eventHandler = function() {
-  console.log("Woof!");
+  console.log('Woof!');
 }
 for (var i = 0; i < paragraphs.length; i++) {
   paragraphs[i].addEventListener('click', eventHandler);
@@ -307,7 +307,7 @@ In your app.js:
 var img = document.querySelector('img');
 
 var imgLog = function() {
-  console.log("You moused over Mega Man!");
+  console.log('You moused over Mega Man!');
 }
 
 img.addEventListener('mouseover', imgLog);
@@ -323,10 +323,10 @@ When manipulating the DOM, it's important that your javascript code not load unt
 
 ```javascript
 var imgLog = function() {
-  console.log("You moused over Mega Man!");
+  console.log('You moused over Mega Man!');
 }
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener('DOMContentLoaded', function() {
   var img = document.querySelector('img');
   img.addEventListener('mouseover', imgLog);
 });
@@ -359,7 +359,7 @@ var buttonClicky = function() {
   alert("YOU'RE REALLY PUSHING MY BUTTONS!!!!!");
 }
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener('DOMContentLoaded', function() {
   var body = document.querySelector('body');
   var button = document.querySelector('button');
 
@@ -454,7 +454,7 @@ var buttonClicky = function() {
   alert("YOU'RE REALLY PUSHING MY BUTTONS!!!!!");
 }
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener('DOMContentLoaded', function() {
   var body = document.querySelector('body');
   var button = document.querySelector('button');
 
@@ -475,7 +475,7 @@ You should now see that the alert messages pop up in the opposite order!
 
 #### 📚 Resources
 
-* [MDN](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)
-* [MDN](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/removeEventListener)
+* [addEventListener MDN](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)
+* [removeEventListener MDN](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/removeEventListener)
 * [JavaScript.info](http://javascript.info/tutorial/bubbling-and-capturing)
 * [`DOMContentLoaded` vs. `window.onload`](http://web.archive.org/web/20150405114023/http://ie.microsoft.com/testdrive/HTML5/DOMContentLoaded/Default.html)
