@@ -271,8 +271,8 @@ Another option: we can use *event bubbling* (more on this later) and attach a si
 ```javascript
 var container = document.getElementById('container');
 
-var eventHandler = function() {
-  console.log('Woof!');
+var eventHandler = function(event) {
+  console.log(event.target.textContent);
 }
 container.addEventListener('click', eventHandler);
 ```
