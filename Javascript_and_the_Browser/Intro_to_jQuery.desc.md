@@ -1,35 +1,35 @@
-## Objectives
+# Objectives
 
-* Explain why you might use jQuery over Javascript.
-* Download and include jQuery into an HTML document.
-* Find elements by id, tag name, class name, and more advanced selectors using jQuery.
-* Set an element’s text content and attributes using jQuery.
-* Set an element's CSS styles using jQuery.
-* Construct and add elements to the DOM using jQuery.
-* Remove and elements from the DOM using jQuery.
-* Traverse the DOM using jQuery.
+  * Explain what jQuery is
+  * Explain why you should use jQuery
+  * Download and include jQuery into an HTML document
+  * Find elements by id, tag name, class name, and more advanced selectors using jQuery
+  * Set an element’s attributes using jQuery
+  * Construct and add elements to the DOM using jQuery
+  * Remove and elements from the DOM using jQuery.
+  * Traverse the DOM using jQuery.
 
 <hr>
+## What is jQuery?
+[jQuery](http://jquery.com/) is a widely popular library that provides you and API for manipulating the DOM in a browser.
 
 > jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use API that works across a multitude of browsers. With a combination of versatility and extensibility, jQuery has changed the way that millions of people write JavaScript.
 
-[jQuery](http://jquery.com/) is a widely popular library that provides you and API for manipulating the DOM in a browser.
+## What's wrong with vanilla JS? (or Why should I use jQuery?)
 
-## What's wrong with vanilla JS?
-
-Depending on who you ask, nothing! There's nothing you can do in jQuery that you _can't_ do in plain old vanilla JavaScript. And as Javascript evolves, some feel like the gap between vanilla JavaScript and the enhancements of jQuery is narrowing.
+Depending on who you ask, there is nothing wrong with vanilla JS! There's nothing you can do in jQuery that you _can't_ do in plain old vanilla JavaScript. And as Javascript evolves, some feel like the gap between vanilla JavaScript and the enhancements of jQuery is narrowing.
 
 But based on what you've seen so far, here are a few reasons you might like jQuery:
 
 1. The syntax is shorter. This means you can write code expressing the same functionality more efficiently. Suppose we wanted to set an attribute to a `div` with an id of `foo`. In vanilla JavaScript, that code would look something like this:
 
-	```javascript
+	```js
 	document.getElementById('foo').setAttribute('attribute', 'value');
 	```
 
 	In jQuery, the same functionality looks like this:
 
-	```javascript
+	```js
 	$("#foo").attr('attribute', 'value');
 	```
 
@@ -43,19 +43,17 @@ But based on what you've seen so far, here are a few reasons you might like jQue
 
 4. AJAX with jQuery is _way_ better than AJAX with vanilla JavaScript. (More on this next week.)
 
+
+
 ## Installation
 
 You can [download](http://jquery.com/download/) and include jQuery with a `<script>` tag in your HTML.
+
 There are also [many CDN's](http://jquery.com/download/#using-jquery-with-a-cdn) available you can link to so you do not have to download the file.
 
-## Key Features
+jQuery places 2 variables into the global scope for you to use: `$` and `jQuery`. These two functions are identical. By convention you will see most people using `$`.
 
-So why is jQuery so popular? What features does it offer that makes it so prevalent?
 
-jQuery places 2 variables into the global scope for you to use: `$` and `jQuery`.
-These two functions are identical. By convention you will see most people using `$`.
-
-### DOM Selection
 
 ## Finding elements in the DOM
 

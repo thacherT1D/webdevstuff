@@ -1,6 +1,4 @@
-# JavaScript and the DOM
-
-## Objectives
+# Objectives
 
 By the end of this lesson you should be able to:
 
