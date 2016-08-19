@@ -3,10 +3,11 @@ We have used Node a bit to run JavaScript outside the browser and we have even s
 The most commonly used framework with node.js is express.js. It is known as a _minimalist and unopinionated_ framework. To understand what that means, consider CSS Frameworks. A framework like [Bootstrap](http://getbootstrap.com) is highly opinionated and maximalist -- you get tons of tools to use but have to use them as intended. Compare that with a much lighter framework like [Skeleton](http://getskeleton.com/) which includes fewer components but the same basic grid structure.
 
 * [Getting Started](#getting-started)
-* [Routing](#routing)
+* [Basic Routing](#basic-routing)
 * [Status Codes](#status-codes)
 * [URL Parameters](#url-parameters)
 * [Query Parameters](#query-parameters)
+* [Request Body](#request-body)
 
 During this article you will be asked to create a simple server with express which responds to a variety of paths.
 
@@ -85,7 +86,7 @@ Before moving on to the next section, take a few minutes to comment your code in
 
 <hr style="margin: 5rem 0;"/>
 
-## Routing
+## Basic Routing
 
 The error you got in the last section would've been something like `Cannot GET /`. That error is telling us that the server has not been configured to listen for a GET request at the root path (that is, `/`). Let's configure our server to do just that!
 
@@ -281,4 +282,95 @@ http http://localhost:3000/vegetables?search=cu
 
 http http://localhost:3000/vegetables?search=a
 >> ["Carrots", "Peas"]
+```
+
+<hr style="margin: 5rem 0;"/>
+
+## Request Body
+
+Before we leave this exercise, lets listen for a single post request to see how that works. Add the following code to your file.
+
+```js
+var friends = [];
+app.post('/friends', function (req, res, next) {
+  friends.push(req.query.name);
+  res.status(201).send(friends);
+});
+```
+
+**Before looking below** take a minute to read over the code block above and interpret what the route is expecting. What type of request is it? What will be returned after we've made a request to it? How would we make that request with HTTPie?
+
+You thought about it? You sure?
+
+Try making the following requests and inspect the return result each time:
+
+```
+http POST http://localhost:3000/friends?name=Rick
+http POST http://localhost:3000/friends?name=Morty
+```
+
+Now try stopping your server and re-running it and re-run the above requests. Are you surprised at all at the output? Why or why not?
+
+Imagine we wanted to add more complex objects for our friends, so that the result we get back is something like this:
+
+```js
+[
+  { name: 'Rick Sanchez', title: 'Mad Scientist' },
+  { name: 'Morty Smith', title: 'Student' }
+]
+```
+
+One option would be to continue to add query parameters to our URL. This would work [up until a point](http://stackoverflow.com/questions/417142/what-is-the-maximum-length-of-a-url-in-different-browsers), but would also be incredibly messy. Instead, it's typical to send a `body` with our POST requests. We've done this before with Ajax!
+
+With just node, we've done this by [listening to emitted events](https://nodejs.org/en/docs/guides/anatomy-of-an-http-transaction/#request-body) and combining all the incoming chunks. We can do the same thing here.
+
+Change the above code to look like the following:
+
+```js
+var friends = [];
+app.post('/friends', function (req, res, next) {
+  var body = [];
+  req.on('data', function (chunk) {
+    body.push(chunk.toString());
+  }).on('end', function () {
+    var data = JSON.parse(body.join(''));
+    friends.push(data)
+    res.status(201).send(friends);
+  });
+});
+```
+
+And then try running the following commands:
+
+```
+http POST http://localhost:3000/friends name=Rick title="Mad Scientist"
+http POST http://localhost:3000/friends name=Morty title="Student"
+```
+
+You should see full objects getting stored inside of the friends array!
+
+<br>
+### Exercise
+
+Let's add the ability to add new vegetables to our list! To complete this exercise, do the following:
+
+1. Remove the above route and instead create a POST route that goes to `/vegetables`.
+
+1. Send a new vegetable name in the post body which should be added to the pre-existing list.
+
+1. If the vegetable is not already contained in the list (case insensitive), return only a status code of 201 and add it to the list.
+
+1. If the vegetable is in the list, return only a status code of 422 and do not modify the list.
+
+1. The regular GET all/one commands should still work!
+
+For example:
+
+```
+http POST http://localhost:3000/vegetables name=Kale
+http POST http://localhost:3000/vegetables name=Peas
+http GET http://localhost:3000/vegetables
+>> ["Carrots", "Cucumber", "Peas", "Kale"]
+http GET http://localhost:3000/vegetables?search=a
+>> ["Carrots", "Peas", "Kale"]
 ```
