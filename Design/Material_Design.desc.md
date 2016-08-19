@@ -85,7 +85,5 @@ Work on the landing page for [Galvanize Delivers](https://github.com/gSchool/gal
 - [Documentation on Material Design](https://material.google.com/)
 - [Documentation on Materialize](http://materializecss.com/)
 - [Materialize User Showcase](http://materializecss.com/showcase.html)
-
-
 - [Hipster Ipsum](http://hipsum.co/)
 - [Harry Potter Ipsum](http://www.christinachern.com/hpipsum/)
