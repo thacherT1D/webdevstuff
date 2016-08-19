@@ -12,8 +12,6 @@
 
 To see it in action, watch this video on [Material Design by Google](https://www.youtube.com/watch?v=Q8TXgCzxEnw)
 
-To learn more details, check out the [documentation on Material Design](https://www.google.com/design/spec/what-is-material/environment.html)
-
 ### Exercise
 
 After having explored the above resources, turn to a partner and explain what Material Design is in your own words.
@@ -29,7 +27,6 @@ To see it in action, check out some of these components.
 - [Navbar](http://materializecss.com/navbar.html)
 - [Footer](http://materializecss.com/footer.html)
 
-To see a few examples of Materialize, check out this [showcase of user submitted web sites](http://materializecss.com/showcase.html).
 
 ### Exercise
 
@@ -82,10 +79,11 @@ Here's the list of visuals we'll go over together at a glance.
 
 ## Assessment
 
-Work on the landing page for [Galvanize Delivers](https://github.com/gSchool/galvanize-delivers/).
+Work on the landing page for [Galvanize Delivers](https://github.com/gSchool/galvanize-delivers/)
 
 ### Resources
-
+- [Documentation on Material Design](https://material.google.com/)
+- [Documentation on Materialize](http://materializecss.com/)
+- [Materialize User Showcase](http://materializecss.com/showcase.html)
 - [Hipster Ipsum](http://hipsum.co/)
-- [Material Design](https://www.google.com/design/spec/material-design/introduction.html)
-- [Materialize](http://materializecss.com/)
+- [Harry Potter Ipsum](http://www.christinachern.com/hpipsum/)
