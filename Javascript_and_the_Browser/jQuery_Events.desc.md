@@ -1,14 +1,18 @@
-## Objectives
+# Objectives
 
-- Explain what jQuery events are.
-- Explain why jQuery events are useful.
-- Use jQuery events to respond to user interaction.
+* Explain what jQuery events are
+* Explain why jQuery events are useful
+* Demonstrate how to setup a webpage for jQuery events
+*
+* Use jQuery events to respond to user interaction.
+
+<hr>
 
 ## What are jQuery events?
 
 A few days ago, we learned how to use JavaScript to respond to user interaction like `click` events.
 
-```javascript
+```js
 var paragraphs = document.querySelectorAll('p');
 
 for (var i = 0; i < paragraphs.length; i++) {
@@ -20,7 +24,7 @@ for (var i = 0; i < paragraphs.length; i++) {
 
 Using **jQuery events**, it's way easier to do the exact same thing.
 
-```javascript
+```js
 $('p').on('click', function() {
   console.log('<p> clicked!');
 });
@@ -28,25 +32,56 @@ $('p').on('click', function() {
 
 ## Why are jQuery events useful?
 
-At first glance, it appears that jQuery's `on()` function is just than syntactic sugar for the DOM API's `addEventListener()` function. However, like many parts of jQuery, it's event system smooths over annoying and inconsistent cross-browser behavior. For example, the `focus` and `blur` events, as specified by the [World Wide Web Consortium](https://en.wikipedia.org/wiki/World_Wide_Web_Consortium) (W3C), don't bubble. However, jQuery fixes this by defining cross-browser events named `focusin` and `focusout` that do. Only until you go back to handling events with vanilla JavaScript is it clear just how much work jQuery does under the hood to create the pleasurable experience for web developers.
+At first glance, it appears that jQuery's `on()` function is just than syntactic sugar for the DOM API's `addEventListener()` function. However, as we have seen in other parts of jQuery, its event system smooths over annoying and inconsistent cross-browser behavior. For example, the `focus` and `blur` events, as specified by the [World Wide Web Consortium](https://en.wikipedia.org/wiki/World_Wide_Web_Consortium) (W3C), don't bubble. However, jQuery fixes this by defining cross-browser events named `focusin` and `focusout` that do. Only when you go back to handling events with vanilla JavaScript is it clear just how much work jQuery does under the hood to create a super pleasurable experience for web developers.
 
-## How do you use jQuery events to respond to user interaction?
+#### 💪 Lesson Setup
+
+Please create a new `index.html` file like:
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>jQuery turtle-fest</title>
+  </head>
+  <body>
+
+    <section>
+
+      <h1>Turtle - a sad tale of turtle love</h1>
+      <p id="main">I really, really super love turtles.</p>
+      <p>But Mom, why can't I have a turtle?</p>
+      <p>Jiminy Crickets, Mom! I'm 35, Mom, and I want a frickin' turtle right this very instant. And regardless of what you say, "Johny Quest" is the best TV show ever created and I am going to name my turtle "Haji."</p>
+
+      <button id="main-button">Just a button</button>
+
+    </section>
+
+    <script type="text/javascript" src="main.js"></script>
+
+  </body>
+</html>
+```
+
+
+## How do you setup a web page to respond to jQuery events?
+
+Using vanilla JS when a page includes a `<script>` tag in its `<head>` tag, the corresponding JavaScript file won't have access to the `<body>` tag or any of its children. If the script file must be loaded in the `<head>`, the workaround is to listen for a `DOMContentLoaded` event before trying to access the DOM.
+
+As you might expect, jQuery has the same problem yet a better solution that the 'DOMContentLoaded' event, the `ready()` function.
 
 ### The `ready()` function
 
-When a page includes a `<script>` tag in its `<head>` tag, the corresponding JavaScript file won't have access to the `<body>` tag or any of its children. If the script file must be loaded in the `<head>`, the workaround is to listen for a `DOMContentLoaded` event before trying to access the DOM.
+jQuery provides a `.ready()` function that makes this really convenient. And this syntax is pretty readable.
 
-jQuery provides a `.ready()` function that makes this really convenient.
-
-```javascript
+```js
 $(document).ready(function() {
-  $('p').text('Hello world');
+  $('p').text('Turtle love!');
 });
 ```
 
-This tends to be so common with web developers that jQuery has a shortcut this.
+As most jQuery folks like to be obtuse and murky (this is programming after all) they created a shorter, way less clear way of expressing `.ready()` And to keep jQuery developers employed, and to save precious keystroked, most serious jQuery devs use the following shorthand:
 
-```javascript
+```js
 $(function() {
   $('p').text('Hello world');
 });
@@ -85,7 +120,7 @@ Now that you've seen that the `on()` function adds an event listener, can you ca
 
 ```javascript
 var logMessage = function() {
-  console.log('I like turtles.');
+  console.log('God, I love turtles.');
 };
 
 $('button').on('click', logMessage);
