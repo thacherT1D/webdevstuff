@@ -3,7 +3,7 @@
 * Explain what jQuery events are
 * Explain why jQuery events are useful
 * Demonstrate how to setup a webpage for jQuery events
-*
+* Demonstrate how to add & delete jQuery event listeners
 * Use jQuery events to respond to user interaction.
 
 <hr>
@@ -22,7 +22,7 @@ for (var i = 0; i < paragraphs.length; i++) {
 }
 ```
 
-Using **jQuery events**, it's way easier to do the exact same thing.
+Using **jQuery events**, it's way easier to do the exact same thing - with way less code.
 
 ```js
 $('p').on('click', function() {
@@ -32,7 +32,7 @@ $('p').on('click', function() {
 
 ## Why are jQuery events useful?
 
-At first glance, it appears that jQuery's `on()` function is just than syntactic sugar for the DOM API's `addEventListener()` function. However, as we have seen in other parts of jQuery, its event system smooths over annoying and inconsistent cross-browser behavior. For example, the `focus` and `blur` events, as specified by the [World Wide Web Consortium](https://en.wikipedia.org/wiki/World_Wide_Web_Consortium) (W3C), don't bubble. However, jQuery fixes this by defining cross-browser events named `focusin` and `focusout` that do. Only when you go back to handling events with vanilla JavaScript is it clear just how much work jQuery does under the hood to create a super pleasurable experience for web developers.
+At first glance, it appears that jQuery's `on()` function is just than syntactic sugar for the DOM API's `addEventListener()` function. However, as we have seen in other parts of jQuery, the jQuery event system smooths over annoying and inconsistent cross-browser behavior. For example, the `focus` and `blur` events, as specified by the [World Wide Web Consortium](https://en.wikipedia.org/wiki/World_Wide_Web_Consortium) (W3C), don't bubble. However, jQuery fixes this by defining cross-browser events named `focusin` and `focusout` that do. Only when you go back to handling events with vanilla JavaScript is it clear just how much work jQuery does under the hood to create a super pleasurable experience for web developers.
 
 #### 💪 Lesson Setup
 
@@ -52,7 +52,7 @@ Please create a blank `main.js` file and new `index.html` file like:
       <p id="main">I really, really super love turtles.</p>
       <p>But Mom, why can't I have a turtle?</p>
       <p>Jiminy Crickets, Mom! I'm 35 and half, going on 36, and I want a frickin' turtle right this very instant or I'm going to have a breakdown. And regardless of what you say, "Johny Quest" is the best TV show ever - like in the in the history of ever - much, much better than "Ant Farm." And I am going to name my turtle "Hadji" or "Bandit" or maybe even "Race Bannon."</p>
-      <button id="main-button">Make a Turtle Appear</button>
+      <button id="turtle-button">Make a Turtle Appear</button>
     </section>
   </body>
 </html>
@@ -84,9 +84,10 @@ $(function() {
 
 [jQuery API - .ready()](http://api.jquery.com/ready/)
 
-### The `on()` function
+## Add and Delete jQuery event listeners
 
-As we've seen, the `.on()` function makes adding event listeners a breeze. Just like the `addEventListener()` function, it takes an event handler callback that's invoked when the matching event is fired on the target DOM element. The callback can optionally specify an `event` parameter to accept a reference to the corresponding `Event` object.
+### The `on()` function
+Just like the `addEventListener()` function, jQuery's `.on()`takes an event handler callback that's invoked when the matching event is fired on the target DOM element. Yet, the `.on()` function makes adding event listeners a breeze. The callback can optionally specify an `event` parameter to accept a reference to the corresponding `event` object.
 
 ```javascript
 $('button').on('click', function(event) {
@@ -141,7 +142,7 @@ $('div').off();
 
 [jQuery API - .off()](http://api.jquery.com/off)
 
-### The `click()` function
+### The `off()` function
 
 The `click()` function is a convenient shortcut for adding an `click` event listener. Instead of writing this.
 
@@ -158,8 +159,8 @@ $('p').click(function() {
   $(this).toggleClass('active');
 });
 ```
-
-jQuery provides convenient functions for all event types.
+## Basic jQuery events
+jQuery provides convenient functions for high level event types which are more powerful and flexible vanilla JS including `hover`, `keydown`, `keyup`, and `keypress`.
 
 [jQuery API - .click()](http://api.jquery.com/click/)
 
@@ -267,25 +268,25 @@ $('form').submit(function() {
 
 [jQuery API - .submit()](http://api.jquery.com/submit/)
 
-### Event Object
+## Event Object
 
-#### `event.target`
+### `event.target`
 
 The DOM element that initiated the event. The target property can refer to the element attached to a listener or a descendent of it.
 
-#### `event.currentTarget`
+### `event.currentTarget`
 
 The current DOM element in the event bubbling phase, typically equal to `this` in a function.
 
-#### `event.stopPropagation()`
+### `event.stopPropagation()`
 
 Prevents the event from bubbling up the DOM tree, preventing any parent handlers from being notified of the event.
 
-#### `event.preventDefault()`
+### `event.preventDefault()`
 
 If this method is called, the default action of the event will not be triggered. For example, clicked anchor tags and submitted forms will not take the browser to a new URL.
 
-### Event Delegation
+## Event Delegation
 
 Event delegation is an important topic for DOM manipulation in general. Now that we've talked a bit about jQuery, let's explore how jQuery handles it.
 
