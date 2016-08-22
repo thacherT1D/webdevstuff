@@ -36,32 +36,27 @@ At first glance, it appears that jQuery's `on()` function is just than syntactic
 
 #### 💪 Lesson Setup
 
-Please create a new `index.html` file like:
+Please create a blank `main.js` file and new `index.html` file like:
+
 ```html
 <!DOCTYPE html>
 <html>
   <head>
-    <title>jQuery turtle-fest</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="main.js"></script>
+    <title>Turtle - a sad tale of turtle love</title>
   </head>
   <body>
-
     <section>
-
       <h1>Turtle - a sad tale of turtle love</h1>
       <p id="main">I really, really super love turtles.</p>
       <p>But Mom, why can't I have a turtle?</p>
-      <p>Jiminy Crickets, Mom! I'm 35, Mom, and I want a frickin' turtle right this very instant. And regardless of what you say, "Johny Quest" is the best TV show ever created and I am going to name my turtle "Haji."</p>
-
-      <button id="main-button">Just a button</button>
-
+      <p>Jiminy Crickets, Mom! I'm 35 and half, going on 36, and I want a frickin' turtle right this very instant or I'm going to have a breakdown. And regardless of what you say, "Johny Quest" is the best TV show ever - like in the in the history of ever - much, much better than "Ant Farm." And I am going to name my turtle "Hadji" or "Bandit" or maybe even "Race Bannon."</p>
+      <button id="main-button">Make a Turtle Appear</button>
     </section>
-
-    <script type="text/javascript" src="main.js"></script>
-
   </body>
 </html>
 ```
-
 
 ## How do you setup a web page to respond to jQuery events?
 
