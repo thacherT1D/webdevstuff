@@ -7,6 +7,7 @@
 * Verify user data with JavaScript-based form validation.
 
 <hr>
+
 ## What's a web form?
 
 If you've ever given your credit card information to a website, performed a search on Google, or logged into Facebook then you've used a web form. **Web forms** (or just forms) are the main way of getting information from your user into your application. Sometimes this information never leaves the browser and sometimes it's sent to a web server.
@@ -19,7 +20,7 @@ With a little code, we can easily recreate their form.
 
 ```html
 <form>
-	<input type="text">
+	<input type="text" />
 
 	<div>
 		<button>Google Search</button>
@@ -31,6 +32,7 @@ With a little code, we can easily recreate their form.
 Like all forms, this one contains a few control tags.
 
 <hr>
+
 ## What's a control tag?
 
 The following HTML tags are **control tags**—tags that build elements which a user can control to give information.
@@ -48,17 +50,17 @@ Before the rise of JavaScript, control tags were always nested within a `<form>`
 There are [many ways](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input) the `<input>` control tag can be used. But the most common (and default) way is as a single-line text field.
 
 ```html
-<input type="text">
+<input type="text" />
 ```
 
 Remember when we talked about semantic HTML? We also have semantic `<input>` types that help describe the nature of the input. Aside from `type="text"`, there's also the following textual controls.
 
 ```html
-<input type="email">
-<input type="search">
-<input type="password">
-<input type="tel">
-<input type="url">
+<input type="email" />
+<input type="search" />
+<input type="password" />
+<input type="tel" />
+<input type="url" />
 ```
 
 These control types provides some basic input validation, data formatting, and/or special keyboard types on mobile.
@@ -66,11 +68,11 @@ These control types provides some basic input validation, data formatting, and/o
 Additionally, there are the following non-textual controls.
 
 ```html
-<input type="color">
-<input type="date">
-<input type="file">
-<input type="number">
-<input type="range">
+<input type="color" />
+<input type="date" />
+<input type="file" />
+<input type="number" />
+<input type="range" />
 ```
 
 ### Radios and Checkboxes
@@ -78,9 +80,9 @@ Additionally, there are the following non-textual controls.
 The `<input>` control also has a `radio` and `checkbox` type for displaying both radio buttons and checkboxes respectively. Both of these types allow the user to select options from a set of choices. The key difference is that radio buttons only allow one choice.
 
 ```html
-<input type="radio" name="rappers" value="Biggie"> Biggie
-<input type="radio" name="rappers" value="Dre"> Dre
-<input type="radio" name="rappers" value="Snoop" checked> Snoop
+<input type="radio" name="rappers" value="Biggie" /> Biggie
+<input type="radio" name="rappers" value="Dre" /> Dre
+<input type="radio" name="rappers" value="Snoop" checked /> Snoop
 ```
 
 As you can see, each radio button must belong to a **group** which is defined by setting the `name` attribute to the same value. This forces one radio button to be selected per group.
@@ -88,9 +90,9 @@ As you can see, each radio button must belong to a **group** which is defined by
 On the other hand, checkboxes use `type="checkbox"` and it's `name` must be different per `<input>` control.
 
 ```html
-<input type="checkbox" name="rapper1" value="Ice Cube"> Ice Cube
-<input type="checkbox" name="rapper2" value="Kanye" checked> Kanye
-<input type="checkbox" name="rapper3" value="Eminem"> Eminem
+<input type="checkbox" name="rapper1" value="Ice Cube" /> Ice Cube
+<input type="checkbox" name="rapper2" value="Kanye" checked /> Kanye
+<input type="checkbox" name="rapper3" value="Eminem" /> Eminem
 ```
 
 ### Hidden fields
@@ -98,7 +100,7 @@ On the other hand, checkboxes use `type="checkbox"` and it's `name` must be diff
 Hidden fields are what as described, hidden. There is no visual for the user to see. These have been quite useful in passing data in through the form that the user does not need to enter specifically (eg. An item ID).
 
 ```html
-<input type="hidden" name="secret" value="Tupac is alive">
+<input type="hidden" name="secret" value="Tupac is alive" />
 ```
 
 <hr>
@@ -109,7 +111,7 @@ Each control tag will usually have some sort of caption that instructs the user 
 ```html
 <label>
 	Album
-  <input type="text" name="album">
+  <input type="text" name="album" />
 </label>
 ```
 
@@ -117,7 +119,7 @@ You can also connect a `<label>` tag to an `<input>` tag with the `for` and `id`
 
 ```html
 <label for="album">Album</label>
-<input id="album" type="text" name="album">
+<input id="album" type="text" name="album" />
 ```
 
 <hr>
@@ -229,24 +231,24 @@ Make sure:
 ```html
 <form>
 	<label>Name (required)</label>
-	<input type="text" name="name">
+	<input type="text" name="name" />
 	<label>Email (required)</label>
-	<input type="text" name="email">
+	<input type="text" name="email" />
 	<label>Age (required, must be older than 13)</label>
-	<input type="text" name="age">
+	<input type="text" name="age" />
 
 	<label>Number of siblings</label>
-	<input type="text" name="siblings">
+	<input type="text" name="siblings" />
 
 	<label>Number of rooms in your house</label>
-	<input type="text" name="rooms">
+	<input type="text" name="rooms" />
 
 	<label>Blog url</label>
-	<input type="text" name="blog">
+	<input type="text" name="blog" />
 
 	<label>Twitter Username</label>
-	<input type="text" name="twitter">
-	<input type="submit">
+	<input type="text" name="twitter" />
+	<input type="submit" />
 </form>
 
 ```
@@ -273,7 +275,7 @@ First, let's look at how to go about getting the values of the form:
 
 **Get the value of an `input` element**
 
-Given: `<input type="phone" name="phone" id="phone">`
+Given: `<input type="phone" name="phone" id="phone" />`
 
 ```javascript
 var phoneValue = document.getElementById("phone").value;
