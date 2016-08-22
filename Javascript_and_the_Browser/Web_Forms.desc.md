@@ -75,6 +75,15 @@ Additionally, there are the following non-textual controls.
 <input type="range" />
 ```
 
+#### 💪 Exercise
+Create a form with the following inputs:
+- inputs for first name and last name
+- inputs for username
+- input for password
+- input for email address
+- input for birthdate
+- input for telephone number
+
 ### Radios and Checkboxes
 
 The `<input>` control also has a `radio` and `checkbox` type for displaying both radio buttons and checkboxes respectively. Both of these types allow the user to select options from a set of choices. The key difference is that radio buttons only allow one choice.
@@ -102,6 +111,11 @@ Hidden fields are what as described, hidden. There is no visual for the user to 
 ```html
 <input type="hidden" name="secret" value="Tupac is alive" />
 ```
+
+#### 💪 Exercise
+Add a `hidden` input with the `name` mystery and the `value` of your choice to the form from earlier
+
+Have your neighbor load it in Chrome to make sure that it isn't visible in the browser. Then have your neighbor inspect the form in Chrome Dev Tools to confirm that it's in the code.
 
 <hr>
 ## The `<label>` tag
@@ -141,11 +155,17 @@ Multiple choice select boxes.
 ```html
 <!-- The second and third option will be initially selected. -->
 <select name="vh1_show" multiple>
-	<option value="the_jame_foxx_show">The Jamie Foxx Show</option>
+	<option value="the_jamie_foxx_show">The Jamie Foxx Show</option>
 	<option value="fresh_prince_of_bel_air" selected>Fresh Prince of Bel-Air</option>
   <option value="love_and_hip_hop_atlanta">Love and Hip Hop Atlanta</option>
 </select>
 ```
+
+#### 💪 Exercise
+Make your form from earlier into a survey form with the following choices of favorite cereal:
+- Frosted Flakes
+- Honey Nut Cheerios
+- Cinnamon Toast Crunch
 
 <hr>
 ## Buttons
@@ -173,33 +193,42 @@ Buttons contain a `type` attribute with three options.
 
 There are more challenges in [this repository](https://github.com/gSchool/html-forms) where you can experiment with the basic control tags. Knowing what types of inputs are available is essential to designing a form that is simple and easy to use. When you encounter a new type ask yourself "what would I use this for?"
 
+#### 💪 Exercise
+Add a `submit` button to the bottom of your favorite cereal form.
+
 <hr>
 ## Common Attributes
 
-With control tags, there are a variety of attributes available. Many attributes vary by tag and some are nonstandard but highly recommended. Take a look at [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input) and let's discuss.
+With control tags, there are a variety of attributes available. Many attributes vary by tag and some are nonstandard but highly recommended. Take a look at [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input) and let's discuss the following attributes:
 
-- autocapitalize
-- autocomplete
-- autofocus
-- checked
-- disabled
-- maxlength
-- minlength
-- multiple
-- name
-- placeholder
-- pattern
-- required
-- readonly
-- size
-- spellcheck
-- tabindex
-- value
+- `autocapitalize`
+- `autocomplete`
+- `autofocus`
+- `checked`
+- `disabled`
+- `maxlength`
+- `minlength`
+- `multiple`
+- `name`
+- `placeholder`
+- `pattern`
+- `required`
+- `readonly`
+- `size`
+- `spellcheck`
+- `tabindex`
+- `value`
+
+#### 💪 Exercise
+Look up three of the listed common attributes on MDN. Turn to your neighbor and talk about them.
 
 <hr>
 ## Materialize Forms
 
 Let's start with the Materialize [documentation](http://materializecss.com/forms.html) on forms specifically. Materialize includes some simple ways to make your forms look awesome.
+
+#### 💪 Exercise
+Add Materialize CSS styling to your favorite cereal form.
 
 <hr>
 ## HTML and JS Form Validation
@@ -220,11 +249,12 @@ So what do we do to ensure we get good input for our programs?
 
 First, we need to make it easy for humans with good intentions to use our interface. We can use a number of HTML5 capabilities to do this, such as tabindex, input types, and patterns.
 
-After that, given the form below, change it to use HTML5 form validation techniques.
+#### 💪 Exercise
+Given the form below, change it to use HTML5 form validation techniques.
 Make sure:
 
- * Email fields are type="email"
- * numerical fields are type="number", one that makes sense
+ * Email fields are `type="email"`
+ * numerical fields are `type="number"`, one that makes sense
  * Required fields have the `required` attribute (with no ="true"- check the documentation)
  * Set the `tabindex` property on each form element
 
@@ -262,6 +292,7 @@ When an element is invalid, two things occur:
 * The element will now match a special CSS pseudo-class called :invalid. This allows you to stylize your invalid elements. Similarly, valid elements match the :valid pseudo-class.
 * The browser will try to block the user from submitting the form.
 
+
 <hr>
 ## JS Validation
 
@@ -281,7 +312,7 @@ Given: `<input type="phone" name="phone" id="phone" />`
 var phoneValue = document.getElementById("phone").value;
 ```
 
-Using either of these techniques, we can access the current value of any `input` element. This also works for `textarea` elements as well.
+Using either of these techniques, we can access the current value of any `input` element. This also works for `textarea` elements.
 
 Take a look at the code below for how to access other kinds of form input through the DOM.
 
@@ -302,14 +333,16 @@ input.disabled;           // Get input disabled status
 
 [(why we're using .checked)](https://jsperf.com/prop-vs-ischecked/5)
 
+#### 💪 Exercise
+Load your favorite cereal form in the browser. Use JavaScript to access the different form inputs in the browser console.
 
 ### When to access values
 
 Now that we know how to access values, we need to know when to access them. If we were to use the above code when the page loads, we would only see blank or placeholder values. Why? Because we need to wait to check these until the user tries to submit the form, or until the user is done filling out the field.
 
-**submit event**  
+**`submit` event**  
 
-In order to check the form when the user hits the "I'm finished filling out this form button", we need to listen for the "submit" action on the form. *Remember, we need to select the form, not the submit button.* This is for when you want to validate the entire form at once.
+In order to check the form when the user hits the "I'm finished filling out this form button", we need to listen for the `submit` action on the form. *Remember, we need to select the form, not the submit button.* This is for when you want to validate the entire form at once.
 
 ```javascript
 var myForm = document.getElementById('myForm');
@@ -318,9 +351,13 @@ myForm.addEventListener('submit', function () {
 });
 ```
 
-**blur event**  
+#### 💪 Exercise
+Create a `submit`-triggered event listener that prints the values of the inputs of your completed form. In other words, when you press the `submit` button, the console print a string based summary of the completed form:
+'My name is Jack Sprat. My phone number is 555-555-5555'... and so on.
 
-If we want to check a field as soon as a user is done typing, we can listen to the "blur" event. The blur event fires as soon as a field loses focus.
+**`blur` event**  
+
+If we want to check a field as soon as a user is done typing, we can listen to the `blur` event. The blur event fires as soon as a field loses focus.
 
 ```javascript
 var myForm = document.getElementById('myForm');
@@ -328,6 +365,11 @@ myForm.addEventListener('blur', function () {
 	// do single input validation here
 });
 ```
+
+#### 💪 Exercise
+Create a text input that changes from a white background color to another color when it loses focus. The new color should be based on the following conditions:
+- The background turns green when the input box loses focus and has text inside
+- The background turns red when the input box loses focus and does not have text inside
 
 #### What do I do if there's an error?
 
@@ -349,13 +391,16 @@ myForm.addEventListener('submit', function() {
 });
 ```
 
+#### 💪 Exercise
+Deliberately make an error occur in your form and have it create a red border around your form.
+
 <hr>
 ## Displaying Validation with Materialize
 
 The [dialogs](http://materializecss.com/dialogs.html) documentation page offers many helpful tools to help you properly display validation errors.
 
-<hr>
-## Questions
+#### 💪 Exercise
+Answer the following questions on your own and then turn to a neighbor and come to an agreement on answers.
 
 * Why do we need to do form validation inside an event listener?
 * What is a better experience for the user- using the `required` attribute, or using JS to ensure all required fields are checked?
@@ -363,7 +408,10 @@ The [dialogs](http://materializecss.com/dialogs.html) documentation page offers 
 * What would happen if someone used console Javascript to submit their form, bypassing your validation?
 
 <hr>
-## Additional Resources on Forms
+### 📖 Homework
+[Galvanize Delivers (continued)](https://github.com/gSchool/galvanize-delivers/)
+
+#### 📚 Resources
 
 - https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms/My_first_HTML_form
 - https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms
