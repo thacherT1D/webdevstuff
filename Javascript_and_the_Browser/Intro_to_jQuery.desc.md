@@ -10,10 +10,14 @@
   * Traverse the DOM using jQuery.
 
 <hr>
+
 ## What is jQuery?
-[jQuery](http://jquery.com/) is a widely popular library that provides you and API for manipulating the DOM in a browser.
+[jQuery](http://jquery.com/) is a widely popular library that provides you an API for manipulating the DOM in a browser.
 
 > jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use API that works across a multitude of browsers. With a combination of versatility and extensibility, jQuery has changed the way that millions of people write JavaScript.
+
+<br>
+<hr>
 
 ## What's wrong with vanilla JS? (or Why should I use jQuery?)
 
@@ -27,23 +31,24 @@ But based on what you've seen so far, here are a few reasons you might like jQue
 	document.getElementById('foo').setAttribute('attribute', 'value');
 	```
 
-	In jQuery, the same functionality looks like this:
+In jQuery, the same functionality looks like this:
 
 	```js
 	$("#foo").attr('attribute', 'value');
 	```
 
-	This efficient interface also allows _chaining_ calls so that we can combine multiple lines of vanilla JavaScript into one line using jQuery.
+This efficient interface also allows _chaining_ calls so that we can combine multiple lines of vanilla JavaScript into one line using jQuery.
 
 2. Return values from functions like `document.getElementsByTagName` or `document.querySelectorAll` are NodeLists, which are *array-like* **objects** which lack much of the functionality that arrays have. Specifically, array methods like `forEach`, `map`, etc. don't exist on these.
 
-	To address this issue, jQuery comes with an `$.each` method and a `$.map` method that lets us iterate over jQuery objects. The syntax is a bit different than with `forEach` and `map`, but we'll cross that bridge later.
+To address this issue, jQuery comes with an `$.each` method and a `$.map` method that lets us iterate over jQuery objects. The syntax is a bit different than with `forEach` and `map`, but we'll cross that bridge later.
 
 3. Dealing with adding, removing, and toggling classes is a bit more streamlined in jQuery.
 
 4. AJAX with jQuery is _way_ better than AJAX with vanilla JavaScript. (More on this next week.)
 
-
+<br>
+<hr>
 
 ## Installation
 
@@ -53,7 +58,22 @@ There are also [many CDN's](http://jquery.com/download/#using-jquery-with-a-cdn)
 
 jQuery places 2 variables into the global scope for you to use: `$` and `jQuery`. These two functions are identical. By convention you will see most people using `$`.
 
+#### 💪 Exercise:
 
+Spin up a basic html page and include jQuery. Open it up and test it from the browser console by typing in `$` or `jQuery`. If you don't get an error you should be good.
+
+One you've got jQuery working add the following html content to the body of your page. It will be what we will work from for the rest of this lesson.
+
+```html
+<main>
+  <div id="dressage">🐎 🎩</div>
+  <button class="box active red big">Big active red box</button>
+  <img class="kitty-creeper" hidden title='kitty creep' src="https://s-media-cache-ak0.pinimg.com/23>
+</main>
+```
+
+<br>
+<hr>
 
 ## Finding elements in the DOM
 
@@ -88,7 +108,7 @@ var $boxes = $('.box');
 #### Find by Attribute
 
 ```js
-var x = $('div[hidden]');
+var x = $('[hidden]');
 ```
 
 There are [tons more](http://api.jquery.com/category/selectors/) selectors you can use and chain to find exactly the nodes you need.
@@ -100,6 +120,8 @@ Head over to [jQuery's website](http://api.jquery.com/category/selectors/) (you 
 
 * What gets returned when you target the ID `container` using jQuery? How about using vanilla JS?
 * What gets returned when you target the class `menu-top-container` using jQuery? How about using vanilla JS?
+
+<hr>
 
 ### The jQuery Object
 
@@ -118,6 +140,7 @@ Creating DOM Elements with jQuery is super easy! Just insert a tag into the `$` 
 var myDiv = $('<div class="active">');
 ```
 
+<br>
 <hr>
 
 ## Attributes/CSS/Display
@@ -129,7 +152,7 @@ Modifying a DOM Element can be difficult at times using native functions. jQuery
 Say you have a DOM Element with the `className` `"box active red big"`. How would you detect and remove the class active from the middle of the string if it exists and add it if it doesn't exist? Fortunately with jQuery you can just use `.toggleClass()` to do that for you.
 
 ```js
-$('#myButton').click(function () {
+$('.box').click(function () {
   $(this).toggleClass('active')
 })
 ```
@@ -140,7 +163,8 @@ Use `.attr()` to change a DOMElement's attribute:
 
 ```js
 console.log($('img').attr('title')) // print out the first img's title
-$('img').attr('title', 'image hover text for the win!'); // set the title text on all images
+
+$('img').attr('title', 'come out creepin\' kitty'); // set the title text on all images
 ```
 
 ### [.text()](http://api.jquery.com/text/)
@@ -161,7 +185,8 @@ Use `.css()` to change the style attribute of a DOMElement:
 
 ```js
 var color = $('div').css('background-color'); //get the first div background-color
-$('div').css('background-color', 'red'); //set all div's background colors
+$('.red').css('background-color', 'red'); //set background color of all elements with a
+class of red.
 ```
 
 ### [.prop()](http://api.jquery.com/prop/)
@@ -310,6 +335,9 @@ Use `.filter()` to only include items from the set of match elements by a select
 ### [.closest()](http://api.jquery.com/closest/)
 
 Use `.closest()` to get the closest element by checking itself and all of its ancestors.
+
+<br>
+<hr>
 
 ## Other awesome Methods
 
