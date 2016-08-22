@@ -12,6 +12,7 @@
 
 To see it in action, watch this video on [Material Design by Google](https://www.youtube.com/watch?v=Q8TXgCzxEnw)
 
+
 ### Exercise
 
 After having explored the above resources, turn to a partner and explain what Material Design is in your own words.
