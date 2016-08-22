@@ -1,15 +1,15 @@
 ## Objectives
-- Explain why design matters
+- Explain why does design matter
 - Explain what Material Design is
 - Explain what the Materialize framework is
 - Explain the difference between Material Design and the Materialize framework
 - Explain how the Materialize framework compares against its competition
 - Use the Materialize framework to implement Material Design
 
-##Why design matters?
+##Why does design matter?
 The user interface (UI) of the apps that you build is, aptly named, the way the user interacts with your application. No matter how amazing your back-end design is, if your front-end doesn't convey that to the user they won't appreciate your work as much as it deserves.
 
-To learn more about it, watch this video on [The Gap by Ira Glass](https://www.youtube.com/watch?v=3ResTHKVxf4)
+To learn more about it, we are going to watch this video on [The Gap by Ira Glass](https://www.youtube.com/watch?v=3ResTHKVxf4)
 
 ### Exercise
 Take a moment and write down your thoughts on how you've been feeling about your own gap.
@@ -36,8 +36,6 @@ After having explored the above resources, turn to a partner and explain the dif
 ## Why are both Material Design and the Materialize framework useful?
 Not only can web developers use both Material Design the Materialize framework to create a stunning, unified experience across platforms and device sizes, they can use them to help close the gap between their taste versus their abilities.
 
-
-
 ## How does the Materialize framework compare against its competition?
 Having received over [18,000 stars on GitHub](https://github.com/Dogfalo/materialize), Materialize fairs quite well when evaluated against its hundreds of rival competitors. However, Bootstrap and Foundation are currently the two largest and most popular front-end frameworks. These two frameworks are famous for providing everything plus the kitchen sink. While this sounds great on paper, it's actually a double-edged sword as they both have non-trivial learning curves. Also, both frameworks require web developers to write significant amounts of additional code to get their sites looking less drab right out of the box.
 
@@ -49,7 +47,7 @@ To see a comprehensive list of just their UI components, check out these links.
 In short, Materialize will help you produce better looking sites faster. And as a bonus, the skills you pick up while learning Materialize will help you figure out other front-end frameworks faster as well.
 
 ## How do you use the Materialize framework?
-We'll use Materialize's [official documentation](http://materializecss.com/getting-started.html) to create a style guide that you can reference at any time.
+We'll use Materialize's [official documentation](http://materializecss.com/getting-started.html) to create an initial document so you can see the different CSS options and components style guide that you can reference when building your assignment.
 
 ##Exercise
 Review the following visuals and work with a partner to answer any questions you have before we review them together.
