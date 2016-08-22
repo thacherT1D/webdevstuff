@@ -127,7 +127,7 @@ module.exports = [
     warmup: { text: "none" },
     activities: [
       {
-        article: { text: "Express and Knex", url: "" },
+        article: { text: "Express and Knex", url: "https://github.com/gSchool/node-curriculum/blob/master/Knex/CRUD.md" },
         assignment: { text: "Galvanize Bookshelf - Part 2", url: "https://github.com/gSchool/galvanize-bookshelf/blob/master/2_express_knex.md" },
       },
     ]

@@ -30,7 +30,7 @@ Week 1
       <td rowspan="1">Tuesday</td>
       <td rowspan="1"><a>none</a>
       </td>
-      <td>Express and Knex
+      <td><a href="https://github.com/gSchool/node-curriculum/blob/master/Knex/CRUD.md">Express and Knex</a>
       </td>
       <td><a href="https://github.com/gSchool/galvanize-bookshelf/blob/master/2_express_knex.md">Galvanize Bookshelf - Part 2</a>
       </td>
