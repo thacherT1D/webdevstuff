@@ -1,10 +1,11 @@
 # Objectives
 
-* Explain what jQuery events are
-* Explain why jQuery events are useful
-* Demonstrate how to setup a webpage for jQuery events
+* Explain what jQuery events are -
+* Explain why jQuery events are useful -
+* Demonstrate how to setup a webpage for jQuery events -
 * Demonstrate how to add & delete jQuery event listeners
-* Use jQuery events to respond to user interaction.
+* Use jQuery events to respond to basic jQuery events
+* Explain and use jQuery event delegation
 
 <hr>
 
@@ -70,7 +71,7 @@ jQuery provides a `.ready()` function that makes this really convenient. And thi
 
 ```js
 $(document).ready(function() {
-  $('p').text('Turtle love!');
+  $('#last').text('Turtle love!');
 });
 ```
 
@@ -78,7 +79,7 @@ As most jQuery folks like to be obtuse and murky (this is programming after all)
 
 ```js
 $(function() {
-  $('p').text('Hello world');
+  $('#last').text('Turtle love!');
 });
 ```
 
