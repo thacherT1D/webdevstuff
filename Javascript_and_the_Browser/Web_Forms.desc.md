@@ -106,7 +106,7 @@ On the other hand, checkboxes use `type="checkbox"` and it's `name` must be diff
 
 ### Hidden fields
 
-Hidden fields are what as described, hidden. There is no visual for the user to see. These have been quite useful in passing data in through the form that the user does not need to enter specifically (eg. An item ID).
+For hidden fields, there is no visable input field for the user to see. These have been quite useful in passing data in through the form that the user does not need to enter specifically (eg. An item ID).
 
 ```html
 <input type="hidden" name="secret" value="Tupac is alive" />
@@ -124,8 +124,8 @@ Each control tag will usually have some sort of caption that instructs the user 
 
 ```html
 <label>
-	Album
-  <input type="text" name="album" />
+  Album Name:
+  <input type="text" name="albumName" />
 </label>
 ```
 
@@ -133,7 +133,7 @@ You can also connect a `<label>` tag to an `<input>` tag with the `for` and `id`
 
 ```html
 <label for="album">Album</label>
-<input id="album" type="text" name="album" />
+<input id="album" type="text" name="albumName" />
 ```
 
 <hr>
