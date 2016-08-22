@@ -44,7 +44,7 @@ module.exports = [
     warmup: { text: "lololodash", url: "https://github.com/mdunisch/lololodash" },
     activities: [
       {
-        article: { text: "RESTful Express HTTP Server", url: "" },
+        article: { text: "RESTful Express HTTP Server", url: "https://github.com/gSchool/node-curriculum/blob/master/Express/REST.md" },
         assignment: { text: "Pet Shop - RESTful Express HTTP server", url: "https://github.com/gSchool/fs-pet-shop/blob/master/4_rest.md" },
       },
     ]
@@ -54,7 +54,7 @@ module.exports = [
     warmup: { text: "lololodash", url: "https://github.com/mdunisch/lololodash" },
     activities: [
       {
-        article: { text: "Node.js Modules", url: "" },
+        article: { text: "Node.js Modules", url: "https://github.com/gSchool/node-curriculum/blob/master/Node/Modules.md" },
         assignment: { text: "Pet Shop", url: "https://github.com/gSchool/fs-pet-shop" },
       },
     ]
@@ -95,7 +95,7 @@ module.exports = [
     warmup: { text: "Express Error Templates", url: "https://gist.github.com/IanSmith89/b9eaf52b98a831bebbee8014e368b812" },
     activities: [
       {
-        article: { text: "Knex.js", url: "" },
+        article: { text: "Knex.js", url: "https://github.com/gSchool/node-curriculum/tree/master/Knex" },
         assignment: { text: "SQL to Knex", url: "https://github.com/gSchool/sql-to-knex-assignment" },
       },
     ]
@@ -127,7 +127,7 @@ module.exports = [
     warmup: { text: "none" },
     activities: [
       {
-        article: { text: "Expess and Knex", url: "" },
+        article: { text: "Express and Knex", url: "" },
         assignment: { text: "Galvanize Bookshelf - Part 2", url: "https://github.com/gSchool/galvanize-bookshelf/blob/master/2_express_knex.md" },
       },
     ]

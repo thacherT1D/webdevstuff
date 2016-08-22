@@ -52,7 +52,7 @@ Week 1
       <td rowspan="1">Thursday</td>
       <td rowspan="1"><a href="https://gist.github.com/IanSmith89/b9eaf52b98a831bebbee8014e368b812">Express Error Templates</a>
       </td>
-      <td>Knex.js
+      <td><a href="https://github.com/gSchool/node-curriculum/tree/master/Knex">Knex.js</a>
       </td>
       <td><a href="https://github.com/gSchool/sql-to-knex-assignment">SQL to Knex</a>
       </td>

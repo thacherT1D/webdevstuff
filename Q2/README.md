@@ -78,7 +78,7 @@ Week 1
       <td rowspan="1">Thursday</td>
       <td rowspan="1"><a href="https://github.com/mdunisch/lololodash">lololodash</a>
       </td>
-      <td>RESTful Express HTTP Server
+      <td><a href="https://github.com/gSchool/node-curriculum/blob/master/Express/REST.md">RESTful Express HTTP Server</a>
       </td>
       <td><a href="https://github.com/gSchool/fs-pet-shop/blob/master/4_rest.md">Pet Shop - RESTful Express HTTP server</a>
       </td>
@@ -89,7 +89,7 @@ Week 1
       <td rowspan="1">Friday</td>
       <td rowspan="1"><a href="https://github.com/mdunisch/lololodash">lololodash</a>
       </td>
-      <td>Node.js Modules
+      <td><a href="https://github.com/gSchool/node-curriculum/blob/master/Node/Modules.md">Node.js Modules</a>
       </td>
       <td><a href="https://github.com/gSchool/fs-pet-shop">Pet Shop</a>
       </td>
@@ -150,7 +150,7 @@ Week 2
       <td rowspan="1">Thursday</td>
       <td rowspan="1"><a href="https://gist.github.com/IanSmith89/b9eaf52b98a831bebbee8014e368b812">Express Error Templates</a>
       </td>
-      <td>Knex.js
+      <td><a href="https://github.com/gSchool/node-curriculum/tree/master/Knex">Knex.js</a>
       </td>
       <td><a href="https://github.com/gSchool/sql-to-knex-assignment">SQL to Knex</a>
       </td>
@@ -200,7 +200,7 @@ Week 3
       <td rowspan="1">Tuesday</td>
       <td rowspan="1"><a>none</a>
       </td>
-      <td>Expess and Knex
+      <td>Express and Knex
       </td>
       <td><a href="https://github.com/gSchool/galvanize-bookshelf/blob/master/2_express_knex.md">Galvanize Bookshelf - Part 2</a>
       </td>

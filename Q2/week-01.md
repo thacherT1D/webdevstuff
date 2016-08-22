@@ -76,7 +76,7 @@ Week 1
       <td rowspan="1">Thursday</td>
       <td rowspan="1"><a href="https://github.com/mdunisch/lololodash">lololodash</a>
       </td>
-      <td>RESTful Express HTTP Server
+      <td><a href="https://github.com/gSchool/node-curriculum/blob/master/Express/REST.md">RESTful Express HTTP Server</a>
       </td>
       <td><a href="https://github.com/gSchool/fs-pet-shop/blob/master/4_rest.md">Pet Shop - RESTful Express HTTP server</a>
       </td>
@@ -87,7 +87,7 @@ Week 1
       <td rowspan="1">Friday</td>
       <td rowspan="1"><a href="https://github.com/mdunisch/lololodash">lololodash</a>
       </td>
-      <td>Node.js Modules
+      <td><a href="https://github.com/gSchool/node-curriculum/blob/master/Node/Modules.md">Node.js Modules</a>
       </td>
       <td><a href="https://github.com/gSchool/fs-pet-shop">Pet Shop</a>
       </td>
