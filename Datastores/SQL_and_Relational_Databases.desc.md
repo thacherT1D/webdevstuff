@@ -45,10 +45,6 @@ This video will describe SQL more generally and is a great primer for the conten
 
 <iframe src="https://player.vimeo.com/video/142036155" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
-<!-- ## Intro to Set Theory
-This video should help with the more theoretical aspects of SQL.  
-
-[Introduction to Set Theory](https://www.youtube.com/watch?v=yCwnifwVjIg) -->
 
 <!-- ## Write some SQL!
 
