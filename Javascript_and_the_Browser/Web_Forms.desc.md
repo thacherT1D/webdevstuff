@@ -5,6 +5,7 @@
 * Build a web form with various controls tags.
 * Verify user data with the built-in HTML5 form validation.
 * Verify user data with JavaScript-based form validation.
+
 <br>
 <br>
 <hr>
@@ -87,6 +88,7 @@ Create a form with the following inputs:
 - input for email address
 - input for birthdate
 - input for telephone number
+
 <br>
 <br>
 <hr>
@@ -176,6 +178,7 @@ Make your form from earlier into a survey form with the following `options` of f
 - Frosted Flakes
 - Honey Nut Cheerios
 - Cinnamon Toast Crunch
+
 <br>
 <br>
 <hr>
@@ -232,6 +235,7 @@ With control tags, there are a variety of attributes available. Many attributes 
 - `spellcheck`
 - `tabindex`
 - `value`
+
 <br>
 <br>
 #### 💪 Exercise
@@ -313,6 +317,7 @@ When an element is invalid, two things occur:
 
 * The element will now match a special CSS pseudo-class called :invalid. This allows you to stylize your invalid elements. Similarly, valid elements match the :valid pseudo-class.
 * The browser will try to block the user from submitting the form.
+
 <br>
 <br>
 <hr>
@@ -393,6 +398,7 @@ myForm.addEventListener('blur', function () {
 Create a text input that changes from a white background color to another color when it loses focus. The new color should be based on the following conditions:
 - The background turns green when the input box loses focus and has text inside
 - The background turns red when the input box loses focus and does not have text inside
+
 <br>
 <br>
 <hr>
@@ -435,6 +441,7 @@ Answer the following questions on your own and then turn to a neighbor and come 
 * What is a better experience for the user- using the `required` attribute, or using JS to ensure all required fields are checked?
 * Why might browser validation not be enough?
 * What would happen if someone used console Javascript to submit their form, bypassing your validation?
+
 <br>
 <br>
 <hr>
