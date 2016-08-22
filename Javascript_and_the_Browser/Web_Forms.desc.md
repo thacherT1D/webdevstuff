@@ -75,6 +75,7 @@ Additionally, there are the following non-textual controls.
 <input type="range" />
 ```
 
+
 #### 💪 Exercise
 Create a form with the following inputs:
 - inputs for first name and last name
@@ -84,6 +85,7 @@ Create a form with the following inputs:
 - input for birthdate
 - input for telephone number
 
+<hr>
 ### Radios and Checkboxes
 
 The `<input>` control also has a `radio` and `checkbox` type for displaying both radio buttons and checkboxes respectively. Both of these types allow the user to select options from a set of choices. The key difference is that radio buttons only allow one choice.
@@ -112,10 +114,12 @@ For hidden fields, there is no visable input field for the user to see. These ha
 <input type="hidden" name="secret" value="Tupac is alive" />
 ```
 
+
 #### 💪 Exercise
 Add a `hidden` input with the `name` mystery and the `value` of your choice to the form from earlier
 
 Have your neighbor load it in Chrome to make sure that it isn't visible in the browser. Then have your neighbor inspect the form in Chrome Dev Tools to confirm that it's in the code.
+
 
 <hr>
 ## The `<label>` tag
@@ -161,8 +165,9 @@ Multiple choice select boxes.
 </select>
 ```
 
+
 #### 💪 Exercise
-Make your form from earlier into a survey form with the following choices of favorite cereal:
+Make your form from earlier into a survey form with the following `options` of favorite cereal:
 - Frosted Flakes
 - Honey Nut Cheerios
 - Cinnamon Toast Crunch
@@ -193,8 +198,10 @@ Buttons contain a `type` attribute with three options.
 
 There are more challenges in [this repository](https://github.com/gSchool/html-forms) where you can experiment with the basic control tags. Knowing what types of inputs are available is essential to designing a form that is simple and easy to use. When you encounter a new type ask yourself "what would I use this for?"
 
+
 #### 💪 Exercise
-Add a `submit` button to the bottom of your favorite cereal form.
+Add a `submit` button to the bottom of your favorite cereal form from earlier.
+
 
 <hr>
 ## Common Attributes
@@ -219,16 +226,20 @@ With control tags, there are a variety of attributes available. Many attributes 
 - `tabindex`
 - `value`
 
+
 #### 💪 Exercise
 Look up three of the listed common attributes on MDN. Turn to your neighbor and talk about them.
+
 
 <hr>
 ## Materialize Forms
 
 Let's start with the Materialize [documentation](http://materializecss.com/forms.html) on forms specifically. Materialize includes some simple ways to make your forms look awesome.
 
+
 #### 💪 Exercise
 Add Materialize CSS styling to your favorite cereal form.
+
 
 <hr>
 ## HTML and JS Form Validation
@@ -242,12 +253,14 @@ We're also validating our form input because our programs can't work without pro
 
 So what do we do to ensure we get good input for our programs?
 
+
 <hr>
 ## Form Validation
 
 ### HTML5 Validation
 
 First, we need to make it easy for humans with good intentions to use our interface. We can use a number of HTML5 capabilities to do this, such as tabindex, input types, and patterns.
+
 
 #### 💪 Exercise
 Given the form below, change it to use HTML5 form validation techniques.
@@ -285,6 +298,8 @@ Make sure:
 
 ***Bonus*** If you know regex, use the `pattern` property to ensure users include an @ sign in front of their twitter username.
 
+
+<hr>
 ### What will HTML5 do?
 
 When an element is invalid, two things occur:
@@ -333,9 +348,12 @@ input.disabled;           // Get input disabled status
 
 [(why we're using .checked)](https://jsperf.com/prop-vs-ischecked/5)
 
+
 #### 💪 Exercise
 Load your favorite cereal form in the browser. Use JavaScript to access the different form inputs in the browser console.
 
+
+<hr>
 ### When to access values
 
 Now that we know how to access values, we need to know when to access them. If we were to use the above code when the page loads, we would only see blank or placeholder values. Why? Because we need to wait to check these until the user tries to submit the form, or until the user is done filling out the field.
@@ -351,10 +369,12 @@ myForm.addEventListener('submit', function () {
 });
 ```
 
+
 #### 💪 Exercise
 Create a `submit`-triggered event listener that prints the values of the inputs of your completed form. In other words, when you press the `submit` button, the console print a string based summary of the completed form:
 'My name is Jack Sprat. My phone number is 555-555-5555'... and so on.
 
+<hr>
 **`blur` event**  
 
 If we want to check a field as soon as a user is done typing, we can listen to the `blur` event. The blur event fires as soon as a field loses focus.
@@ -366,11 +386,13 @@ myForm.addEventListener('blur', function () {
 });
 ```
 
+
 #### 💪 Exercise
 Create a text input that changes from a white background color to another color when it loses focus. The new color should be based on the following conditions:
 - The background turns green when the input box loses focus and has text inside
 - The background turns red when the input box loses focus and does not have text inside
 
+<hr>
 #### What do I do if there's an error?
 
 A typical pattern is to display either next to the incorrectly filled out element, or a the top of the form, a new DOM element that lists the error in question. Try to be descriptive, tell the user what they did wrong- did they miss filling out the field, or did they just forget to put dashes in their phone number?
@@ -391,13 +413,16 @@ myForm.addEventListener('submit', function() {
 });
 ```
 
+
 #### 💪 Exercise
 Deliberately make an error occur in your form and have it create a red border around your form.
+
 
 <hr>
 ## Displaying Validation with Materialize
 
 The [dialogs](http://materializecss.com/dialogs.html) documentation page offers many helpful tools to help you properly display validation errors.
+
 
 #### 💪 Exercise
 Answer the following questions on your own and then turn to a neighbor and come to an agreement on answers.
@@ -407,9 +432,11 @@ Answer the following questions on your own and then turn to a neighbor and come 
 * Why might browser validation not be enough?
 * What would happen if someone used console Javascript to submit their form, bypassing your validation?
 
+
 <hr>
 ### 📖 Homework
 [Galvanize Delivers (continued)](https://github.com/gSchool/galvanize-delivers/)
+
 
 #### 📚 Resources
 
