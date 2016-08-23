@@ -148,21 +148,22 @@ You can also connect a `<label>` tag to an `<input>` tag with the `for` and `id`
 <hr>
 ## The `<select>` tag
 
-You can create select boxes that allow the user to choose from a set of options. You have the ability to allow users to select multiple options by using the `multiple` attribute.
+You can create select boxes that allow the user to choose from a set of options.
 
 ```html
 <!-- The second option will be initially selected. -->
+
 <select name="vh1_show">
   <option value="basketball_wives_la">Basketball Wives LA</option>
   <option value="get_rich_or_die_tryin" selected>Get Rich or Die Tryin'</option>
   <option value="black_ink_crew">Black Ink Crew</option>
 </select>
 ```
-
-Multiple choice select boxes.
+You also have the ability to allow users to select multiple options by using the `multiple` attribute.
 
 ```html
 <!-- The second and third option will be initially selected. -->
+
 <select name="vh1_show" multiple>
   <option value="the_jamie_foxx_show">The Jamie Foxx Show</option>
   <option value="fresh_prince_of_bel_air" selected>Fresh Prince of Bel-Air</option>
@@ -172,7 +173,7 @@ Multiple choice select boxes.
 <br>
 <br>
 #### 💪 Exercise
-Make your form from earlier into a survey form with the following `options` of favorite cereal:
+Create a new survey form with the following `options` of favorite cereal, or something else of your choosing:
 - Frosted Flakes
 - Honey Nut Cheerios
 - Cinnamon Toast Crunch
@@ -199,16 +200,11 @@ Buttons contain a `type` attribute with three options.
 <button type="submit">This a submit button</button>
 <button type="reset">This a reset button</button>
 ```
-<br>
-<br>
-<hr>
-## And many more...
 
-There are more challenges in [this repository](https://github.com/gSchool/html-forms) where you can experiment with the basic control tags. Knowing what types of inputs are available is essential to designing a form that is simple and easy to use. When you encounter a new type ask yourself "what would I use this for?"
 <br>
 <br>
 #### 💪 Exercise
-Add a `submit` button to the bottom of your favorite cereal form from earlier.
+Add `submit` and `reset` buttons to your survey form.
 <br>
 <br>
 <hr>
@@ -446,8 +442,10 @@ Answer the following questions on your own and then turn to a neighbor and come 
 <br>
 <hr>
 ### 📖 Homework
-[Galvanize Delivers (the form section)](https://github.com/gSchool/galvanize-delivers/)
+
+There are more challenges in [this repository](https://github.com/gSchool/html-forms) where you can experiment with the basic control tags. Knowing what types of inputs are available is essential to designing a form that is simple and easy to use. When you encounter a new type ask yourself "what would I use this for?"
 <br>
+[Galvanize Delivers (the form section)](https://github.com/gSchool/galvanize-delivers/)
 <br>
 #### 📚 Resources
 
