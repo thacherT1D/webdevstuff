@@ -164,8 +164,8 @@ Multiple choice select boxes.
 ```html
 <!-- The second and third option will be initially selected. -->
 <select name="vh1_show" multiple>
-	<option value="the_jamie_foxx_show">The Jamie Foxx Show</option>
-	<option value="fresh_prince_of_bel_air" selected>Fresh Prince of Bel-Air</option>
+  <option value="the_jamie_foxx_show">The Jamie Foxx Show</option>
+  <option value="fresh_prince_of_bel_air" selected>Fresh Prince of Bel-Air</option>
   <option value="love_and_hip_hop_atlanta">Love and Hip Hop Atlanta</option>
 </select>
 ```
@@ -412,9 +412,11 @@ var myForm = document.getElementById('myForm');
 myForm.addEventListener('submit', function() {
   if (some_error_condition) {
     var errDiv = document.createElement('div');
+
     errDiv.className = 'error';
     errDiv.textContent = 'Please fix your phone number';
     myForm.appendChild(errDiv);
+
     return false; 			// This tells the submission not to happen
   }
 });
