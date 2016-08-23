@@ -346,7 +346,6 @@ input.disabled;           // Get input disabled status
 
 [source: gomakestuff](http://gomakethings.com/ditching-jquery/#working-with-forms)
 
-[(why we're using .checked)](https://jsperf.com/prop-vs-ischecked/5)
 <br>
 <br>
 #### 💪 Exercise
