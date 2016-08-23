@@ -251,7 +251,7 @@ All of these methods are used for inserting a DOM Element into the DOM at variou
 
 The `.remove()` function removes a DOM element from the DOM.
 
-The `.detach()` function is very similar to `.remove()`, but it returns the removed jQuery object that you can use later.
+The `.detach()` function is very similar to `.remove()`, but it *returns* the removed jQuery object that you can use later.
 
 ### [.clone()](http://api.jquery.com/clone/)
 
@@ -259,7 +259,7 @@ The `.clone()` function makes a deep copy clone of the selected DOM Element.
 
 ### [.empty()](http://api.jquery.com/empty/)
 
-the `.empty()` method will clear out the contents of any DOM Element.
+The `.empty()` method will clear out the contents of any DOM Element.
 
 ```js
 $('div').empty() //clear out all divs

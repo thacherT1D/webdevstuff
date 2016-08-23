@@ -1,12 +1,10 @@
-## Objectives
-<hr>
+# Objectives
 * Explain what a web form is.
 * Explain what control tags are.
 * Build a web form with various controls tags.
 * Verify user data with the built-in HTML5 form validation.
 * Verify user data with JavaScript-based form validation.
 
-<br>
 <br>
 <hr>
 
@@ -156,7 +154,7 @@ You can create select boxes that allow the user to choose from a set of options.
 <!-- The second option will be initially selected. -->
 <select name="vh1_show">
   <option value="basketball_wives_la">Basketball Wives LA</option>
-	<option value="get_rich_or_die_tryin" selected>Get Rich or Die Tryin'</option>
+  <option value="get_rich_or_die_tryin" selected>Get Rich or Die Tryin'</option>
   <option value="black_ink_crew">Black Ink Crew</option>
 </select>
 ```
