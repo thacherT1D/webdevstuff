@@ -119,12 +119,6 @@ For hidden fields, there is no visable input field for the user to see. These ha
 ```
 <br>
 <br>
-#### 💪 Exercise
-Add a `hidden` input with the `name` mystery and the `value` of your choice to the form from earlier
-
-Have your neighbor load it in Chrome to make sure that it isn't visible in the browser. Then have your neighbor inspect the form in Chrome Dev Tools to confirm that it's in the code.
-<br>
-<br>
 <hr>
 ## The `<label>` tag
 
