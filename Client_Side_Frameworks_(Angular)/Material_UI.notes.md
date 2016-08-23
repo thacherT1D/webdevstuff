@@ -10,6 +10,10 @@
 
 ## How do you use Material UI to build a React user interface?
 
+```shell
+npm install --save material-ui react-tap-event-plugin
+```
+
 ## Assignment
 
 ## Resources

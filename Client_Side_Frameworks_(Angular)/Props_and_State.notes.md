@@ -455,6 +455,8 @@ As you've seen, event handlers process an event and changes a component's state.
 
 In React, a **state mutator** is a method inside a stateful component that invokes the `this.setState()` method. The `incrementLikes()` state mutator is defined in the `<App />` component, but is passed to each `<Track />` component through its props. It's up to the `<Track />` component to determine when to invoke it. The following code snippet illustrates the `incrementLikes()` method of an `<App />` component.
 
+**NOTE:** In React, **autobinding** is the process of binding a component to every method that's defined in its specification object. This is why the `this` variable inside the `incrementLikes()` method refers to an `<App />` component even though it was invoked using `this.props.incrementLikes()`. React automatically binds components to methods specified with the `React.createClass()` method but not with the ES6 `class` keyword.
+
 ```jsx
 // From app/components/app.jsx
 
