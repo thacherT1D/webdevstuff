@@ -398,7 +398,7 @@ When you bind an event handler to something that has a _default action_, the han
 <br>
 ```javascript
 var myForm = document.getElementById('myForm');
-myForm.addEventListener('submit', function() {
+myForm.addEventListener('submit', function(event) {
   if (some_error_condition) {
     var errDiv = document.createElement('div');
 
@@ -406,7 +406,7 @@ myForm.addEventListener('submit', function() {
     errDiv.textContent = 'Please fix your phone number';
     myForm.appendChild(errDiv);
 
-    return false; 			// This tells the submission not to happen
+    event.preventDefault(); 			// This tells the submission not to happen
   }
 });
 ```
