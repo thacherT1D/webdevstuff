@@ -91,7 +91,7 @@ $(function() {
 Just like the `addEventListener()` function, jQuery's `.on()`takes an event handler callback that's invoked when the matching event is fired on the target DOM element. Yet, the `.on()` function makes adding event listeners a breeze. The callback can optionally specify an `event` parameter to accept a reference to the corresponding `event` object.
 
 ```javascript
-$('button').on('click', function(event) {
+$('#turtle-button').on('click', function(event) {
   var $target = $(event.target);
 
   $target.attr('disabled', true);
@@ -101,12 +101,13 @@ $('button').on('click', function(event) {
 Using the `on()` function binds a callback to a target DOM element. This means the value of the `this` variable inside the callback is the targeted DOM element.
 
 ```javascript
-$('button').on('click', function() {
+$('#turtle-button').on('click', function() {
   var $this = $(this);
 
   $this.attr('disabled', true);
 });
 ```
+In this scenario, `event.target` and `this` are functionally equivalent. That is the point!
 
 - [jQuery API - .on()](http://api.jquery.com/on/)
 - [jQuery API - Event Object](https://api.jquery.com/category/events/event-object/)
@@ -115,14 +116,20 @@ $('button').on('click', function() {
 
 Now that you've seen that the `on()` function adds an event listener, can you can guess what the `off()` function does? Yep, it removes an event listener just like the DOM API's `removeEventListener()` function.
 
+
+```html
+
+
+```
+
 ```javascript
 var logMessage = function() {
-  console.log('God, I love turtles.');
+  console.log('Oh turtles, I love thee.');
 };
 
-$('button').on('click', logMessage);
+$('#turtle-console-button-on').on('click', logMessage);
 
-$('button').off('click', logMessage);
+$('#turtle-console-button-off').off('click', logMessage);
 ```
 
 Like the `removeEventListener()` function, the `off()` function must be given the same event type and callback function to remove it's respective listener from a target DOM element.
