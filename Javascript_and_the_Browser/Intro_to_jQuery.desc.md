@@ -61,7 +61,7 @@ jQuery places 2 variables into the global scope for you to use: `$` and `jQuery`
 <br>
 #### 💪 Exercise:
 
-Spin up a basic html page and include jQuery. Open it up and test it from the browser console by typing in `$` or `jQuery`. If you don't get an error you should be good.
+Spin up a basic html page and include jQuery. Open it up and test it from the browser console by typing `jQuery`. If you don't get an error you should be good.
 
 Once you've got jQuery working add the following html content to the body of your page. It will be what we will work from throughout this lesson.
 
@@ -117,10 +117,20 @@ There are [tons more](http://api.jquery.com/category/selectors/) selectors you c
 <br>
 #### 💪 Exercise
 
-Head over to [jQuery's website](http://api.jquery.com/category/selectors/) (you know they have jQuery loaded on it 💰). Use the browser console to interact with the DOM.
+Head over to this list of [award winning sites using jQuery](http://www.awwwards.com/websites/jquery/), sine we know they will have jQuery loaded on them 💰, and open up the browser console so we can interact with the DOM.
 
-* What gets returned when you target the ID `container` using jQuery? How about using vanilla JS?
-* What gets returned when you target the class `menu-top-container` using jQuery? How about using vanilla JS?
+For good measure once you have the browser console open type in `jQuery` to double check that the page does in fact have it loaded.
+
+After that check do the following:
+
+* open up the element inspector and pick out an element with an ID.
+  * What is returned when you target that element using jQuery?
+  * What is returned when you target that element using vanilla JS?
+
+* Back in the element inspector find a class that is applied to multiple
+  elements.
+  * What is returned when you target that class using jQuery?
+  * What is returned when you target that same class using vanilla JS?
 
 <hr>
 
@@ -241,7 +251,7 @@ Similarly, `scrollLeft()` produces the number of pixels we have scrolled from th
 <br>
 #### 💪 Exercise
 
-Either on the web page you've created or on jQuery's website, play with some of the methods listed above.
+On the web page you've created, play with some of the methods listed above.
 
 <br>
 <hr>
@@ -285,7 +295,7 @@ Use `replaceWith` to replace a source element _with_ a target element.
 <br>
 #### 💪 Exercise
 
-Again, either on the web page you've created or on jQuery's website, play with some of the methods listed above.
+Again, on the web page you've created play with some of the methods listed above.
 
 <br>
 <hr>
@@ -355,7 +365,7 @@ Use `.closest()` to get the closest element by checking itself and all of its an
 <br>
 #### 💪 Exercise
 
-You know the drill -- Either on the web page you've created or on jQuery's website, play with some of the methods listed above.
+You know the drill -- On the web page you've created play with some of the methods listed above.
 
 <br>
 <hr>
@@ -373,7 +383,8 @@ You know the drill -- Either on the web page you've created or on jQuery's websi
 <br>
 #### 💪 Exercise
 
-And one last time -- Either on the web page you've created or on jQuery's website, play with some of the methods listed above.
+And one last time -- On the web page you've created play with some of the methods listed above.
+
 
 <br>
 <hr>
