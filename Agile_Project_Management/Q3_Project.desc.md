@@ -15,30 +15,26 @@ During project week, you'll have approximately 24 hours of class time to impleme
 
 ## Understand the technical requirements
 
-The general technical requirements for your project:
+The general technical requirements:
 
 - Have [valid](https://validator.w3.org/nu/), well-indented, and semantic HTML.
 - Have [valid](https://jigsaw.w3.org/css-validator/), well-indented, and minimally-specific CSS.
 - Have [linted](http://eslint.org/), readable, and concise JavaScript.
 
-The client-specific technical requirements for your project:
+The client-specific technical requirements:
 
+- Use a client-side UI system like Angular or React.
 - Use embedded media like fonts, images, audio, or video.
-- Use a front-end framework like Bootstrap, Foundation, or Materialize.
 - Respond to form input and/or user events.
 - Send HTTP requests to a RESTful HTTP server application.
 
-The server-specific technical requirements for your project:
+The server-specific technical requirements:
 
 - Send HTTP responses back to a RESTful HTTP client application.
 - Store and retrieve a many-to-many relationship using a relational database.
+- Register, authenticate, and authorize users securely.
 - Connect to at least one external web API via server-side HTTP requests.
 - Be deployed to a production environment.
-
-### Bonuses
-
-- Register and authenticate users securely.
-- Test your HTTP server with an automated test suite.
 
 ### Application ideas
 

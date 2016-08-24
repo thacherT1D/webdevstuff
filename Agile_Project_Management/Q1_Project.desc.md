@@ -43,7 +43,12 @@ The technical requirements for your project are as follows.
 - A brewery locator
 - An audio sequencer
 - A synonym finder
+- A language translator
 - A real-time chatroom
+- A collection manager
+- A blog article publisher
+- A membership organizer
+- A sports team tracker
 
 ### Game ideas
 
