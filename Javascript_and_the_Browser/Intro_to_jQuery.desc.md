@@ -12,7 +12,7 @@
 <hr>
 
 ## What is jQuery?
-[jQuery](http://jquery.com/) is a widely popular library that provides you an API for manipulating the DOM in a browser.
+[jQuery](http://jquery.com/) is a widely popular library that provides an API for manipulating the DOM in a browser.
 
 > jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use API that works across a multitude of browsers. With a combination of versatility and extensibility, jQuery has changed the way that millions of people write JavaScript.
 
@@ -25,27 +25,27 @@ Depending on who you ask, there is nothing wrong with vanilla JS! There's nothin
 
 But based on what you've seen so far, here are a few reasons you might like jQuery:
 
-1. The syntax is shorter. This means you can write code expressing the same functionality more efficiently. Suppose we wanted to set an attribute to a `div` with an id of `foo`. In vanilla JavaScript, that code would look something like this:
+* The syntax is shorter. This means you can write code expressing the same functionality more efficiently. Suppose we wanted to set an attribute to a `div` with an id of `foo`. In vanilla JavaScript, that code would look something like this:
 
 	```js
 	document.getElementById('foo').setAttribute('attribute', 'value');
 	```
 
-In jQuery, the same functionality looks like this:
+  In jQuery, the same functionality looks like this:
 
 	```js
 	$("#foo").attr('attribute', 'value');
 	```
 
-This efficient interface also allows _chaining_ calls so that we can combine multiple lines of vanilla JavaScript into one line using jQuery.
+  This efficient interface also allows _chaining_ calls so that we can combine multiple lines of vanilla JavaScript into one line using jQuery.
 
-2. jQuery provides a more consistant return value which allows for chaining. Unlike jQuery, return values from vanilla JS functions, such as `document.getElementsByTagName` or `document.querySelector`, may or may not return those *array-like* NodeList **objects** or just a single DOM Node. This means you need to pay close attention to what methods you are using and what they return.  Likewise, those NodeLists lack much of the functionality that arrays have. Specifically, array methods like `forEach`, `map`, etc. don't exist on these.
+* jQuery provides a more consistant return value which allows for chaining. Unlike jQuery, return values from vanilla JS functions, such as `document.getElementsByTagName` or `document.querySelector`, may or may not return those *array-like* NodeList **objects** or just a single DOM Node. This means you need to pay close attention to what methods you are using and what they return.  Likewise, those NodeLists lack much of the functionality that arrays have. Specifically, array methods like `forEach`, `map`, etc. don't exist on these.
 
 To address this issue, jQuery comes with an `$.each` method and a `$.map` method that lets us iterate over jQuery objects. The syntax is a bit different than with `forEach` and `map`, but we'll cross that bridge later.
 
-3. Dealing with adding, removing, and toggling classes is a bit more streamlined in jQuery.
+* Dealing with adding, removing, and toggling classes is a bit more streamlined in jQuery.
 
-4. AJAX with jQuery is _way_ better than AJAX with vanilla JavaScript. (More on this next week.)
+* AJAX with jQuery is _way_ better than AJAX with vanilla JavaScript. (More on this next week.)
 
 <br>
 <hr>
@@ -58,11 +58,12 @@ There are also [many CDN's](http://jquery.com/download/#using-jquery-with-a-cdn)
 
 jQuery places 2 variables into the global scope for you to use: `$` and `jQuery`. These two functions are identical. By convention you will see most people using `$`.
 
+<br>
 #### 💪 Exercise:
 
 Spin up a basic html page and include jQuery. Open it up and test it from the browser console by typing in `$` or `jQuery`. If you don't get an error you should be good.
 
-One you've got jQuery working add the following html content to the body of your page. It will be what we will work from for the rest of this lesson.
+Once you've got jQuery working add the following html content to the body of your page. It will be what we will work from throughout this lesson.
 
 ```html
 <main>
@@ -81,13 +82,13 @@ The first thing that is necessary to be effective with jQuery is to be able to f
 
 > A selector is used in jQuery to select DOM elements from a DOM document. That document is, in most cases, the DOM document present in all browsers, but can also be an XML document received via Ajax.
 
-Think back to functions like `getElementById()` and `getElementsByClassName()` and recall how these interact with the DOM and return nodes. jQuery has its own selectors that behave in similar ways. Let's visit there docs and scan through some of these:
+Think back to functions like `getElementById()` and `getElementsByClassName()` and recall how these interact with the DOM and return either a single node or a NodeList. The jQuery API provides its own selectors that behave in similar ways. Let's visit their docs and scan through some of these:
 * [jQuery Selectors](http://api.jquery.com/category/selectors/)
 
 While you may be thinking, _Don't we have `querySelector` and `querySelectorAll`?_ Keep in mind two things:
 
 * jQuery was released before `querySelector` and `querySelectorAll` (I know right?!). It had its own engine built in to analyze the queries.
-* jQuery has even more expressive selectors than `querySelector` and `querySelectorAll`.
+* jQuery has much more expressive selectors than `querySelector` and `querySelectorAll`.
 
 One of the nice things about jQuery selectors is you select DOM elements the same way you write CSS selectors.
 
@@ -127,7 +128,7 @@ Head over to [jQuery's website](http://api.jquery.com/category/selectors/) (you 
 
 > When creating new elements (or selecting existing ones), jQuery returns the elements in a collection. Many developers new to jQuery assume that this collection is an array. It has a zero-indexed sequence of DOM elements, some familiar array functions, and a .length property, after all. Actually, the jQuery object is more complicated than that.
 
-This jQuery object is different than the node that gets returned with `getElementById` in that a jQuery object has other jQuery methods defined on it. You probably noticed that when using `getElementsByClassName` that you also got back what looked like a JS array. It however is not. What you got back there was an HTMLCollection and will *not* share the same methods available to you as with JS array.
+This jQuery object is different than the node that gets returned with `getElementById` in that a jQuery object has other jQuery methods defined on it. You probably noticed that when using `getElementsByClassName` that you also got back what looked like a JS array. It however is not. What you got back there was a NodeList and will *not* share the full set of methods available to you as with a JS array.
 
 This jQuery object is what allows you to chain methods.
 
@@ -145,16 +146,16 @@ var myDiv = $('<div class="active">');
 
 ## Attributes/CSS/Display
 
-Modifying a DOM Element can be difficult at times using native functions. jQuery offers a [plethora of methods](http://api.jquery.com/category/manipulation/) to make modifying the DOM super simple.
+Modifying a DOM Element can be difficult and quite verbose at times when using native JS functions. jQuery offers a [plethora of methods](http://api.jquery.com/category/manipulation/) to make modifying the DOM super simple.
 
 ### [.toggleClass()](http://api.jquery.com/toggleClass/)
 
-Say you have a DOM Element with the `className` `"box active red big"`. How would you detect and remove the class active from the middle of the string if it exists and add it if it doesn't exist? Fortunately with jQuery you can just use `.toggleClass()` to do that for you.
+So we have a button element with the `className` `"box active red big"`. How would you detect and remove the "active" class from the middle of the string if it exists and add it if it does not exist? Fortunately with jQuery you can just use `.toggleClass()` to do that for you.
 
 ```js
-$('.box').click(function () {
-  $(this).toggleClass('active')
-})
+$('button').click(function () {
+  $(this).toggleClass('active');
+});
 ```
 
 ### [.attr()](http://api.jquery.com/attr/)
