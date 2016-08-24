@@ -142,6 +142,11 @@ var myDiv = $('<div class="active">');
 ```
 
 <br>
+#### 💪 Exercise
+
+Add several different types of elements to your web page from the browser console.
+
+<br>
 <hr>
 
 ## Attributes/CSS/Display
@@ -163,9 +168,9 @@ $('button').click(function () {
 Use `.attr()` to change a DOMElement's attribute:
 
 ```js
-console.log($('img').attr('title')) // print out the first img's title
+console.log( $('img').attr('title') );  // prints out the first img's title
 
-$('img').attr('title', 'come out creepin\' kitty'); // set the title text on all images
+$('img').attr('title', 'come out creepin\' kitty'); // sets the title text on all images
 ```
 
 ### [.text()](http://api.jquery.com/text/)
@@ -234,6 +239,11 @@ Use `scrollTop()` to get the number of pixels we have scrolled from the top.
 Similarly, `scrollLeft()` produces the number of pixels we have scrolled from the left.
 
 <br>
+#### 💪 Exercise
+
+Either on the web page you've created or on jQuery's website, play with some of the methods listed above.
+
+<br>
 <hr>
 
 ## DOM Manipulation
@@ -271,6 +281,11 @@ $('div').empty() //clear out all divs
 Use `replaceAll` to replace all the target elements _with_ a source element.
 
 Use `replaceWith` to replace a source element _with_ a target element.
+
+<br>
+#### 💪 Exercise
+
+Again, either on the web page you've created or on jQuery's website, play with some of the methods listed above.
 
 <br>
 <hr>
@@ -338,6 +353,11 @@ Use `.filter()` to only include items from the set of match elements by a select
 Use `.closest()` to get the closest element by checking itself and all of its ancestors.
 
 <br>
+#### 💪 Exercise
+
+You know the drill -- Either on the web page you've created or on jQuery's website, play with some of the methods listed above.
+
+<br>
 <hr>
 
 ## Other awesome Methods
@@ -349,6 +369,11 @@ Use `.closest()` to get the closest element by checking itself and all of its an
 ### [.fadeIn()](http://api.jquery.com/fadeIn/), [.fadeOut()](http://api.jquery.com/fadeOut/)
 
 ### [.slideDown()](http://api.jquery.com/slideDown/), [.slideUp()](http://api.jquery.com/slideUp/)
+
+<br>
+#### 💪 Exercise
+
+And one last time -- Either on the web page you've created or on jQuery's website, play with some of the methods listed above.
 
 <br>
 <hr>
