@@ -11,7 +11,7 @@
 
 ## What are jQuery events?
 
-A few days ago, we learned how to use JavaScript to respond to user interaction like `click` events.
+A few days ago, we learned how to use JavaScript to respond to user interaction like `click` events. For example:
 
 ```js
 var paragraphs = document.querySelectorAll('p');
@@ -59,15 +59,17 @@ Please create a blank `main.js` file and new `index.html` file like:
 </html>
 ```
 
+<hr>
+
 ## How do you setup a web page to respond to jQuery events?
 
 Using vanilla JS when a page includes a `<script>` tag in its `<head>` tag, the corresponding JavaScript file won't have access to the `<body>` tag or any of its children. If the script file must be loaded in the `<head>`, the workaround is to listen for a `DOMContentLoaded` event before trying to access the DOM.
 
-As you might expect, jQuery has the same problem yet a better solution that the 'DOMContentLoaded' event, the `ready()` function.
+As you might expect, jQuery has the same problem yet a better solution that the 'DOMContentLoaded' event: the `ready()` function.
 
 ### The `ready()` function
 
-jQuery provides a `.ready()` function that makes this really convenient. And this syntax is pretty readable.
+jQuery provides a `.ready()` function that makes loading it up really convenient. And this syntax is pretty readable:
 
 ```js
 $(document).ready(function() {
@@ -85,15 +87,18 @@ $(function() {
 
 [jQuery API - .ready()](http://api.jquery.com/ready/)
 
+<hr>
+
 ## Add and Delete jQuery event listeners
+Adding and deleting jQuery event listeners is easy using the `on()` function and the `off()` function.
 
 ### The `on()` function
+
 Just like the `addEventListener()` function, jQuery's `.on()`takes an event handler callback that's invoked when the matching event is fired on the target DOM element. Yet, the `.on()` function makes adding event listeners a breeze. The callback can optionally specify an `event` parameter to accept a reference to the corresponding `event` object.
 
 ```javascript
 $('#turtle-button').on('click', function(event) {
   var $target = $(event.target);
-
   $target.attr('disabled', true);
 });
 ```
@@ -103,11 +108,11 @@ Using the `on()` function binds a callback to a target DOM element. This means t
 ```javascript
 $('#turtle-button').on('click', function() {
   var $this = $(this);
-
   $this.attr('disabled', true);
 });
 ```
-In this scenario, `event.target` and `this` are functionally equivalent. That is the point!
+
+In this scenario, `event.target` and `this` are functionally equivalent - essentially the same thing - this is a great way to think of `this`.
 
 - [jQuery API - .on()](http://api.jquery.com/on/)
 - [jQuery API - Event Object](https://api.jquery.com/category/events/event-object/)
@@ -116,9 +121,8 @@ In this scenario, `event.target` and `this` are functionally equivalent. That is
 
 Now that you've seen that the `on()` function adds an event listener, can you can guess what the `off()` function does? Yep, it removes an event listener just like the DOM API's `removeEventListener()` function.
 
-
 ```html
-
+<button id="turtle-console-button-on">Log an important message</button>
 
 ```
 
@@ -129,7 +133,7 @@ var logMessage = function() {
 
 $('#turtle-console-button-on').on('click', logMessage);
 
-$('#turtle-console-button-off').off('click', logMessage);
+$('#turtle-console-button-on').off('click', logMessage);
 ```
 
 Like the `removeEventListener()` function, the `off()` function must be given the same event type and callback function to remove it's respective listener from a target DOM element.
@@ -141,18 +145,21 @@ var logEventType = function(event) {
   console.log(event.type);
 };
 
-$('div').on('click', logEventType);
-$('div').on('mouseenter', logEventType);
-$('div').on('mouseleave', logEventType);
+$('#last').on('click', logEventType);
+$('#last').on('mouseenter', logEventType);
+$('#last').on('mouseleave', logEventType);
 
-$('div').off();
+$('#last').off();
 ```
 
 [jQuery API - .off()](http://api.jquery.com/off)
 
-### The `off()` function
+## Basic jQuery events
+jQuery provides convenient functions for high level event types which are more powerful and flexible vanilla JS including `click`, `hover`, `keydown`, `keyup`, and `keypress`.
 
-The `click()` function is a convenient shortcut for adding an `click` event listener. Instead of writing this.
+### The `click()` function
+
+The `click()` function is a convenient shortcut for adding an `click` event listener using the `on()`. Instead of writing this:
 
 ```javascript
 $('p').on('click', function() {
@@ -167,10 +174,9 @@ $('p').click(function() {
   $(this).toggleClass('active');
 });
 ```
-## Basic jQuery events
-jQuery provides convenient functions for high level event types which are more powerful and flexible vanilla JS including `hover`, `keydown`, `keyup`, and `keypress`.
 
 [jQuery API - .click()](http://api.jquery.com/click/)
+
 
 ### The `hover()` function
 
@@ -347,3 +353,11 @@ $('section').on('click', '.pokemon', function(event) {
 ```
 
 **NOTE:** Try using `this` instead of `event.target` and see if there's any difference.
+
+<hr>
+
+### 📖 Homework
+[Galvanize jQuery Calculator](https://github.com/gSchool/jquery-calculator)
+
+#### 📚 Resources
+* [jQuery Docs](http://api.jquery.com)
