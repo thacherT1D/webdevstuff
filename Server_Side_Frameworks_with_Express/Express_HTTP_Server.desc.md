@@ -53,14 +53,13 @@ var app = express();
 
 console.log(app);
 console.log(typeof app);
-console.log(app.constructor.name);
 ```
 
-What type of thing is `app`? What OOP word would we use to describe it?
+What type of thing is `app`?
 
-It can be overwhelming to look at all the various properties and methods attached to a single instance of the EventEmitter. The purpose of frameworks, at least to start, is not to memorize all the various components of it. Instead, focus on learning first what we _need to know_ to accomplish the task at hand.
+It can be overwhelming to look at all the various properties and methods attached to a single instance of app. The purpose of frameworks, at least to start, is not to memorize all the various components of it. Instead, focus on learning first what we _need to know_ to accomplish the task at hand.
 
-Now that we have a better idea of what's going on under the hood, let's start a simple server with express. Express instances have a method called `.listen`. This should be famililiar from our work with the plain `http` module that comes with node.
+Now that we have a better idea of what's going on under the hood, let's start a simple server with express. Express instances have a method called `.listen`. This should be familiar from our work with the plain `http` module that comes with node.
 
 The `.listen` method takes multiple arguments. The first is the port you want to begin listening on. Add the following to your existing code and then run your file with node. You'll notice you're not getting your prompt back... that's because you're now listening on that port!
 
