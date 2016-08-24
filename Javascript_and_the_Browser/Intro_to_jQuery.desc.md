@@ -1,7 +1,7 @@
 # Objectives
 
   * Explain what jQuery is
-  * Explain why you should use jQuery
+  * Explain what benifits jQuery provides over JS
   * Download and include jQuery into an HTML document
   * Find elements by id, tag name, class name, and more advanced selectors using jQuery
   * Set an element’s attributes using jQuery
@@ -39,7 +39,7 @@ In jQuery, the same functionality looks like this:
 
 This efficient interface also allows _chaining_ calls so that we can combine multiple lines of vanilla JavaScript into one line using jQuery.
 
-2. Return values from functions like `document.getElementsByTagName` or `document.querySelectorAll` are NodeLists, which are *array-like* **objects** which lack much of the functionality that arrays have. Specifically, array methods like `forEach`, `map`, etc. don't exist on these.
+2. jQuery provides a more consistant return value which allows for chaining. Unlike jQuery, return values from vanilla JS functions, such as `document.getElementsByTagName` or `document.querySelector`, may or may not return those *array-like* NodeList **objects** or just a single DOM Node. This means you need to pay close attention to what methods you are using and what they return.  Likewise, those NodeLists lack much of the functionality that arrays have. Specifically, array methods like `forEach`, `map`, etc. don't exist on these.
 
 To address this issue, jQuery comes with an `$.each` method and a `$.map` method that lets us iterate over jQuery objects. The syntax is a bit different than with `forEach` and `map`, but we'll cross that bridge later.
 
