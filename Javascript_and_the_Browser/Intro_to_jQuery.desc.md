@@ -380,7 +380,10 @@ And one last time -- Either on the web page you've created or on jQuery's websit
 
 ### 📖 Homework
 
-[Javascript DOM Manipulation](https://github.com/gSchool/js-dom-tests)
+Move on to Part 2 of othe Javascript DOM Manipulation repo you began
+last week.
+
+* [Javascript DOM Manipulation - Part 2](https://github.com/gSchool/js-dom-tests)
 
 #### 📚 Resources
 
