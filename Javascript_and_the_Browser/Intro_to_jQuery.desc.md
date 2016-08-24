@@ -69,7 +69,7 @@ Once you've got jQuery working add the following html content to the body of you
 <main>
   <div id="dressage">🐎 🎩</div>
   <button class="box active red big">Big active red box</button>
-  <img class="kitty-creeper" hidden title='kitty creep' src="https://s-media-cache-ak0.pinimg.com/23>
+  <img class="kitty-creeper" hidden title='kitty creep' src="https://s-media-cache-ak0.pinimg.com/23">
 </main>
 ```
 
