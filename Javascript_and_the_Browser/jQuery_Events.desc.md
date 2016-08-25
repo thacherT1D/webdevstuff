@@ -1,8 +1,8 @@
 # Objectives
 
-* Explain what jQuery events are -
-* Explain why jQuery events are useful -
-* Demonstrate how to setup a webpage for jQuery events -
+* Explain what jQuery events are
+* Explain why jQuery events are useful
+* Demonstrate how to setup a webpage for jQuery events
 * Demonstrate how to add & delete jQuery event listeners
 * Use jQuery events to respond to basic jQuery events
 * Explain and use jQuery event delegation
@@ -85,8 +85,6 @@ $(function() {
 });
 ```
 
-[jQuery API - .ready()](http://api.jquery.com/ready/)
-
 <hr>
 
 ## Add and Delete jQuery event listeners
@@ -114,8 +112,6 @@ $('#turtle-button').on('click', function() {
 
 In this scenario, `event.target` and `this` are functionally equivalent - essentially the same thing - this is a great way to think of `this`.
 
-- [jQuery API - .on()](http://api.jquery.com/on/)
-- [jQuery API - Event Object](https://api.jquery.com/category/events/event-object/)
 
 ### The `off()` function
 
@@ -152,72 +148,88 @@ $('#last').on('mouseleave', logEventType);
 $('#last').off();
 ```
 
-[jQuery API - .off()](http://api.jquery.com/off)
+<hr>
 
 ## Basic jQuery events
 jQuery provides convenient functions for high level event types which are more powerful and flexible vanilla JS including `click`, `hover`, `keydown`, `keyup`, and `keypress`.
+
+#### 💪 Lesson Setup
+Kindly make a new file `turtle.css` and add the following styles:
+
+```CSS
+.turtle-color {
+  color: chartreuse;
+}
+
+.turtles-like-underlines {
+  text-decoration: underline;
+}
+```
+
+and add this snippet to your `index.html`:
+
+```html
+<section>
+  <input type="text" name="" id="turtle-text">
+</section>
+```
 
 ### The `click()` function
 
 The `click()` function is a convenient shortcut for adding an `click` event listener using the `on()`. Instead of writing this:
 
 ```javascript
-$('p').on('click', function() {
-  $(this).toggleClass('active');
+$('#last').on('click', function() {
+  $(this).toggleClass('turtle-color');
 });
 ```
 
-You can write it like this.
+You can write it like this:
 
 ```javascript
-$('p').click(function() {
-  $(this).toggleClass('active');
+$('#last').click(function() {
+  $(this).toggleClass('turtle-color');
 });
 ```
-
-[jQuery API - .click()](http://api.jquery.com/click/)
-
 
 ### The `hover()` function
 
 The `hover()` function is a convenient shorthand for binding both the `mouseenter` and `mouseleave` events.
 
-So instead of writing this.
+So instead of writing this:
 
 ```javascript
-var $p = $('p');
+var $last = $('#last');
 
-$p.mouseenter(function() {
-  $(this).addClass('active')
+$last.mouseenter(function() {
+  $(this).addClass('turtles-like-underlines')
 });
 
-$p.mouseleave(function() {
-  $(this).removeClass('active')
+$last.mouseleave(function() {
+  $(this).removeClass('turtles-like-underlines')
 });
 ```
 
-You can write this.
+You can write this:
 
 ```javascript
-$('p').hover(function() {
-  $(this).addClass('active')
+$('#last').hover(function() {
+  $(this).addClass('turtles-like-underlines')
 }, function() {
-  $(this).removeClass('active')
+  $(this).removeClass('turtles-like-underlines')
 });
 ```
-
-[jQuery API - .hover()](http://api.jquery.com/hover/)
 
 ### The `keypress()`, `keydown()`, and `keyup()` functions
 
 When a user presses a key _and_ a character is inserted into a focusable control, the `keypress` event will fire. The `keypress` event will fire repeatedly as long as the key is pressed down and a character is inserted. Keys like Escape, Shift, Control, and Alt can't be inserted into a control. To handle these key presses, you'll need to use the `keydown` event instead.
 
 ```javascript
-$('input[type="text"]').keypress(function() {
+$('#turtle-text').keypress(function() {
   console.log('A key was pressed and inserted into a focusable control.');
 });
 
-$('input[type="text"]').keydown(function() {
+$('#turtle-text').keydown(function() {
   console.log('A key was pressed an possibly inserted into a focusable control.');
 });
 ```
@@ -234,9 +246,10 @@ Here's a table that explains the difference between a key code and a character c
 | Escape | 27       | N/A            |
 
 ```javascript
-$('input[type="text"]').keydown(function(event) {
+$('#turtle-text').keydown(function(event) {
+  console.log('A key was pressed an possibly inserted into a focusable control.');
   if (event.which === 27) {
-    // Handle the Escape key press
+    console.log("Turtle escape sequence activate!")
   }
 });
 ```
@@ -251,10 +264,6 @@ Here's a table to help you quickly remember which event does what.
 
 **NOTE:** The `keypress` event's behavior may differ across browsers as there's no official specification for it.
 
-- [jQuery API - .keydown()](http://api.jquery.com/keydown/)
-- [jQuery API - .keypress()](http://api.jquery.com/keypress/)
-- [jQuery API - .keyup()](http://api.jquery.com/keyup/)
-
 ### The `submit()` function
 
 The `submit` event is fired when a user attempts to submit a `<form>` tag. Forms can be submitted in the following ways.
@@ -266,45 +275,50 @@ The `submit` event is fired when a user attempts to submit a `<form>` tag. Forms
 Here's an example of an HTML search form.
 
 ```html
-<form>
-  <input type="text" name="keywords">
-  <button type="submit">Search</button>
-</form>
+<section>
+  <form id="search-form">
+    <input type="text" name="keywords">
+    <button type="submit">Search</button>
+  </form>
+</section>
 ```
 
 With the corresponding JavaScript code.
 
 ```javascript
-$('form').submit(function() {
+$('#search-form').submit(function() {
   console.log('Searching...');
 });
 ```
 
-[jQuery API - .submit()](http://api.jquery.com/submit/)
-
 ## Event Object
+The `event` object is browser "normalized" version of the JS event object implemented by each browser. Unlike the good ole days of yesteryear these days the differences are way smaller, yet you still have to be familiar with the jQuery version... because that is what jQuery uses.
 
 ### `event.target`
 
-The DOM element that initiated the event. The target property can refer to the element attached to a listener or a descendent of it.
+The DOM element that initiated the event. The target property can refer to the element attached to a listener or a descendent of it. Mostly the same as vanilla JS.
 
 ### `event.currentTarget`
 
-The current DOM element in the event bubbling phase, typically equal to `this` in a function.
+The current DOM element in the event bubbling phase, typically equal to `this` in a function. Mostly the same as vanilla JS.
 
 ### `event.stopPropagation()`
 
-Prevents the event from bubbling up the DOM tree, preventing any parent handlers from being notified of the event.
+Prevents the event from bubbling up the DOM tree, preventing any parent handlers from being notified of the event. Mostly the same as vanilla JS.
 
 ### `event.preventDefault()`
 
-If this method is called, the default action of the event will not be triggered. For example, clicked anchor tags and submitted forms will not take the browser to a new URL.
+If this method is called, the default action of the event will not be triggered. For example, clicked anchor tags and submitted forms will not take the browser to a new URL. Mostly the same as vanilla JS.
+
+### `event.originalEvent`
+
+Here is where it gets interesting. To access many "non-normalized" event properties you have to use `event.originalEvent`, making some, less common things, hard to do with jQuery. This sort of "make common things are easier, less common things are harder" is a common library pattern.
 
 ## Event Delegation
 
 Event delegation is an important topic for DOM manipulation in general. Now that we've talked a bit about jQuery, let's explore how jQuery handles it.
 
-Suppose you've got a button on the page that generates a `div` with a random Pokémon name. Click on the div, and it gets removed from the DOM. Let's imagine that to begin, you've got the button and a few sample divs. Your page might look something like the following (for simplicity, we've just put styling info in the head):
+Suppose you've got a button on the page that generates a `div` with a random Pokémon name. Click on the div, and it gets removed from the DOM. Let's imagine that to begin, you've got the button and a few sample divs. Your page might look something like the following:
 
 ```html
 <button id="add-pokemon">Add a random Pokémon!</button>
@@ -319,10 +333,10 @@ And some JavaScript code like this.
 
 ```javascript
 var names = ['Charizard', 'Bulbasaur', 'Onyx', 'Mewtwo', 'Chansey'];
-var $section = $('section');
+var $section = $('#pokemon-section');
 
 $('#add-pokemon').on('click', function() {
-  var name = names[Math.floor(Math.random() * monsters.length)];
+  var name = names[Math.floor(Math.random() * names.length)];
   var $div = $(`<div class="pokemon">${name}</div>`);
   $section.append($div);
 });
@@ -361,3 +375,13 @@ $('section').on('click', '.pokemon', function(event) {
 
 #### 📚 Resources
 * [jQuery Docs](http://api.jquery.com)
+* [jQuery API - .ready()](http://api.jquery.com/ready/)
+- [jQuery API - .on()](http://api.jquery.com/on/)
+- [jQuery API - Event Object](https://api.jquery.com/category/events/event-object/)
+[jQuery API - .off()](http://api.jquery.com/off)
+[jQuery API - .click()](http://api.jquery.com/click/)
+[jQuery API - .hover()](http://api.jquery.com/hover/)
+[jQuery API - .submit()](http://api.jquery.com/submit/)
+- [jQuery API - .keydown()](http://api.jquery.com/keydown/)
+- [jQuery API - .keypress()](http://api.jquery.com/keypress/)
+- [jQuery API - .keyup()](http://api.jquery.com/keyup/)
