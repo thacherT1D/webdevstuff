@@ -176,8 +176,9 @@ At the end of project week, you'll give a brief, 5-minute demonstration of your 
 - How does your project solve this problem?
 - What web APIs did it use?
 - What technologies did it use?
-- What was the most valuable piece of Customer feedback you received?
-- What was the biggest challenge you had to overcome?
+- What was the most valuable piece of user feedback you received?
+- What was the biggest technical challenge you had to overcome?
+- What lessons did your team learn as a result of your collaboration?
 
 ## Complete a write-up of the project
 
