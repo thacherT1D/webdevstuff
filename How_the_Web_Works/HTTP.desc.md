@@ -1,4 +1,4 @@
-## Objectives
+# Objectives
 
 - Explain what HTTP is.
 - Explain why HTTP is useful?
@@ -9,6 +9,9 @@
 - Explain what JSON is.
 - Explain why JSON is useful.
 - Send HTTP requests and receive HTTP responses for JSON.
+
+<br>
+<hr>
 
 ## What's HTTP?
 
@@ -22,9 +25,15 @@ HTTP is request–response protocol. In other words, it sends messages between t
 
 ![](http://i.imgur.com/VbuGgIn.png)
 
+<br>
+<hr>
+
 ## Why is HTTP useful?
 
 HTTP provides a consistent, uniform interface that separates clients from servers. This separation of concerns means that, for example, clients can focus on presenting the user interface instead of managing resources. On the other hand, servers can focus on managing resources instead of presenting the user interface. This allows both clients and servers to be much simpler and more scalable. Additionally, clients and servers can be replaced and developed independently so long as the HTTP interface between them is not altered.
+
+<br>
+<hr>
 
 ## What's an HTTP Request?
 
@@ -59,6 +68,9 @@ While an HTTP request can only contain one method, there are several different m
 | `POST` | Used send information, like user input, to a server.        |
 
 **QUESTION:** When does a web browser make `GET` requests? When does it make `POST` requests?
+
+<br>
+<hr>
 
 ## What's an HTTP response?
 
@@ -131,9 +143,15 @@ While an HTTP response can only contain one status code, there are many differen
 
 **QUESTION:** The most common status codes are `200`, `302`, `304`, `404`, and `500`. Can you figure out why?
 
+<br>
+<hr>
+
 ## How do you diagram the HTTP request-response cycle?
 
 [SEE WHITEBOARD]
+
+<br>
+<hr>
 
 ## How do you send HTTP requests and receive HTTP responses for HTML?
 
@@ -148,7 +166,7 @@ cURL is a command line program that sends HTTP requests to servers and outputs t
 Try running the following command.
 
 ```
-curl -v -X GET https://fs-student-roster.herokuapp.com/
+curl -v -X GET https://fs-student-roster.herokuapp.com/students
 ```
 
 You should see something like this.
@@ -213,10 +231,10 @@ To install HTTPie, run the following command.
 brew install httpie
 ```
 
-The try out the exact some cURL command as above in HTTPie.
+The try out the exact same cURL command as above in HTTPie.
 
 ```
-http -v GET https://fs-student-roster.herokuapp.com
+http -v GET https://fs-student-roster.herokuapp.com/students
 ```
 
 You should see something like this.
@@ -270,6 +288,9 @@ Via: 1.1 vegur
 </html>
 ```
 
+<br>
+<hr>
+
 ## What's JSON?
 
 JavaScript Object Notation (**JSON**) is the de facto data exchange format of the Web. JSON is a string that looks very similar to a native objects and arrays. That means JSON must be parsed in order for it to have meaning in a program.
@@ -315,6 +336,9 @@ Here's an example of an JSON array of objects.
 ]
 ```
 
+<br>
+<hr>
+
 ## Why is JSON useful?
 
 **Serialization** is the process of translating a program's data to and from a string. Data that's been serialized to a string can be stored in a file, inserted into a database, or transmitted across a computer network. At some point in the future, a program retrieves the string and the data is reconstructed. The programs involved in the serialization process can be completely different and even written in completely different languages. The key to serialization is the data remains unchanged from end to end.
@@ -349,12 +373,15 @@ console.log(queen.name);  // Daenerys Targaryen
 
 In other words, JSON is what allows two programs to transfer data to each other and guarantee the data remains the same on both sides.
 
+<br>
+<hr>
+
 ## How do you send HTTP requests and receive HTTP responses for JSON?
 
 In addition to HTML, the server in charge of our student roster can accept HTTP requests for JSON. Try running the following command.
 
 ```
-http -vj GET http://fs-student-roster.herokuapp.com
+http -vj GET http://fs-student-roster.herokuapp.com/students
 ```
 
 You should see something like this.
@@ -402,7 +429,7 @@ Go to this [student roster page](https://fs-student-roster.herokuapp.com/). How 
 Try running the following command.
 
 ```
-http -vj POST http://fs-student-roster.herokuapp.com
+http -vj POST http://fs-student-roster.herokuapp.com/students
 ```
 
 You should see something like this.
@@ -448,7 +475,7 @@ Well, that didn't work as expected. It looks like to make a `POST` request to th
 Try running this command, but replacing the values with your own information.
 
 ```
-http -vj POST http://fs-student-roster.herokuapp.com name='Philip J. Fry' hobby='Time travel' avatar='http://i.imgur.com/F48J2Ij.jpg'
+http -vj POST http://fs-student-roster.herokuapp.com/students name='Philip J. Fry' hobby='Time travel' avatar='http://i.imgur.com/F48J2Ij.jpg'
 ```
 
 You should see something like this.
@@ -481,7 +508,10 @@ Vary: Accept
 Via: 1.1 vegur
 
 {
-    "success": "New student created"
+    "avatar": "http://i.imgur.com/F48J2Ij.jpg",
+    "hobby": "Time travel",
+    "id": "h15yiq-j",
+    "name": "Philip J. Fry"
 }
 ```
 
@@ -490,10 +520,13 @@ Via: 1.1 vegur
 Try sending another `GET` request to the server.
 
 ```
-http -vj GET http://fs-student-roster.herokuapp.com
+http -vj GET http://fs-student-roster.herokuapp.com/students
 ```
 
 **QUESTION:** What's different about this response?
+
+<br>
+<hr>
 
 ## What's a web API?
 
@@ -563,9 +596,12 @@ X-Powered-By: ASP.NET
 }
 ```
 
-## Exercise
+#### 💪 Exercise
 
 Try searching for a few of your favorite movies using the OMDB API.
+
+<br>
+<hr>
 
 ## Resources
 
