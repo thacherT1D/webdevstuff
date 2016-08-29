@@ -129,13 +129,13 @@ Via: 1.1 vegur
 
 While an HTTP response can only contain one status code, there are many different codes that a server can choose from. Each status code explains to the client how the server interpreted the request. Status codes are three-digit numbers that are grouped into the following categories.
 
-| Status Code Group | Description                                             |
-|-------------------|---------------------------------------------------------|
-| `1XX`             | Request accepted, ready for the next one.               |
-| `2XX`             | Request accepted, the server's work is complete.        |
-| `3XX`             | Request accepted, but additional client work is needed. |
-| `4XX`             | Request accepted, but there was an error on the client. |
-| `5XX`             | Request accepted, but there was an error on the server. |
+| Status Code Group | Description                                                           |
+|-------------------|-----------------------------------------------------------------------|
+| `1XX`             | Request accepted, ready for the next one - Informational              |
+| `2XX`             | Request accepted, the server's work is complete - Success             |
+| `3XX`             | Request accepted, but additional client work is needed - Redirect     |
+| `4XX`             | Request accepted, but there was an error on the client - Client Error |
+| `5XX`             | Request accepted, but there was an error on the server - Server Error |
 
 - [HTTP Status Cats](https://http.cat/)
 - [HTTP Status Dogs](https://httpstatusdogs.com/)
