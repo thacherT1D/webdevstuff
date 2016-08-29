@@ -155,12 +155,6 @@ While an HTTP response can only contain one status code, there are many differen
 
 ## How do you send HTTP requests and receive HTTP responses for HTML?
 
-[INSERT EXAMPLE OF CLASSIC WEB SITE SERVED BY PYTHON'S SIMPLEHTTPSERVER]
-
-[TALK ABOUT INITIAL PAGE TRANSMISSION, ASSET TRANSMISSION, ANCHOR TAG HYPERLINKS, AND FORM SUBMISSION]
-
-[INSERT SCREENSHOTS OF CHROME'S NETWORK TAB]
-
 cURL is a command line program that sends HTTP requests to servers and outputs their raw HTTP response to the Terminal. In other words, it can do pretty much anything your web browser can do except render the HTTP response body as a pretty picture. cURL is often used for testing and debugging HTTP requests and responses.
 
 Try running the following command.

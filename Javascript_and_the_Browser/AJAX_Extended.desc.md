@@ -1,4 +1,4 @@
-## Objectives
+# Objectives
 
 - Explain what Ajax is.
 - Explain why Ajax primarily transfers JSON data now.
@@ -6,11 +6,17 @@
 - Handle CORS issues caused by Ajax requests.
 - Handle race conditions caused by Ajax requests.
 
+<br>
+<hr>
+
 ## What's Ajax?
 
 Asynchronous JavaScript and XML (**Ajax**) is a technique that allows web applications to send and receive data in the background without interfering with the display and behavior of the existing page. In other words, Ajax allows web applications to dynamically load content from a server without doing a full page refresh. The XML part is less applicable today because most web APIs use JSON for the data exchange format.
 
 With Ajax, the possibilities are limitless. For example, think of when you reach the bottom of the page on Facebook or Twitter. How do new stories and tweets magically appear at the bottom without you clicking on anything or reloading the whole page? Ajax.
+
+<br>
+<hr>
 
 ## Why does Ajax primarily transfer JSON data now?
 
@@ -57,6 +63,9 @@ JSON looks like JavaScript, right? Remember, that JSON is just a data format and
 Also notice how lightweight JSON is compared to XML. JSON tends to be both easier to read and to write for web developers as well as for JavaScript programs using the [`JSON.parse()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse) and [`JSON.stringify()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) functions.
 
 A more accurate acronym for how people use this technique today would be Ajaj or Asynchronous JavaScript and JSON. But Ajaj sounds dumb, so we're stuck with Ajax regardless if web applications use XML, JSON, or whatever. Whenever you think of Ajax, just think about dynamically loading content from a server without doing a full page refresh.
+
+<br>
+<hr>
 
 ## How do you retrieve data from a server using Ajax?
 
@@ -121,7 +130,7 @@ $xhr.fail(function(err) {
 });
 ```
 
-### Exercise
+#### 💪 Exercise
 
 Fix the above code so it connects to the correct URL. Then modify the code to only log the movie's title and year it was released, each on a separate line. For example, with Frozen, the output would be the following.
 
@@ -129,6 +138,9 @@ Fix the above code so it connects to the correct URL. Then modify the code to on
 Title: Frozen
 Year: 2013
 ```
+
+<br>
+<hr>
 
 ## How do you handle CORS issues caused by Ajax requests?
 
@@ -141,6 +153,9 @@ XMLHttpRequest cannot load http://example.com/. No 'Access-Control-Allow-Origin'
 This error means the server handling the HTTP request has explicitly denied access to your website. Meanie! But don't fret, this keeps hackers from your bank accounts and social life.
 
 As a developer it can be quite frustrating though. The server administrator has to edit their CORS headers to allow certain domains or all domains access.
+
+<br>
+<hr>
 
 ## How do you handle race conditions caused by Ajax requests?
 
@@ -162,7 +177,7 @@ $xhr.done(function(data) {
 console.log('AFTER THE AJAX');
 ```
 
-### Exercise
+#### 💪 Exercise
 
 Fix the above the code so the race condition is correctly handled. The output should be the following.
 
@@ -172,7 +187,10 @@ Frozen
 AFTER THE AJAX
 ```
 
-## Resources
+<br>
+<hr>
+
+#### 📚 Resources
 
 - [CORS Anywhere](https://cors-anywhere.herokuapp.com/)
 - [JSON.org](http://json.org/)
