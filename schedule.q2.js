@@ -224,7 +224,7 @@ module.exports = [
   {
     activities: [
       {
-        article: { text: "$.ajax", url: "" },
+        article: { text: "$.ajax", url: "https://github.com/gSchool/browser-dom-curriculum/blob/master/jQuery/AJAX.md" },
         assignment: { text: "Q2 Project", url: "Projects/Q2.md" },
       },
     ]
@@ -233,7 +233,7 @@ module.exports = [
   {
     activities: [
       {
-        article: { text: "Git for Teams", url: "" },
+        article: { text: "Git for Teams", url: "https://github.com/gSchool/productivity-curriculum/blob/master/Git/Feature%20Branch%20Workflow.md" },
         assignment: { text: "Q2 Project", url: "Projects/Q2.md" },
       },
     ]
@@ -242,7 +242,7 @@ module.exports = [
   {
     activities: [
       {
-        article: { text: "Git for Teams", url: "" },
+        article: { text: "Git for Teams", url: "https://github.com/gSchool/productivity-curriculum/blob/master/Git/Feature%20Branch%20Workflow.md" },
         assignment: { text: "Q2 Project", url: "Projects/Q2.md" },
       },
     ]

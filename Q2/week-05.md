@@ -19,7 +19,7 @@ Week 1
       <td rowspan="1">Monday</td>
       <td rowspan="1">
       </td>
-      <td>$.ajax
+      <td><a href="https://github.com/gSchool/browser-dom-curriculum/blob/master/jQuery/AJAX.md">$.ajax</a>
       </td>
       <td><a href="../Projects/Q2.md">Q2 Project</a>
       </td>
@@ -30,7 +30,7 @@ Week 1
       <td rowspan="1">Tuesday</td>
       <td rowspan="1">
       </td>
-      <td>Git for Teams
+      <td><a href="https://github.com/gSchool/productivity-curriculum/blob/master/Git/Feature%20Branch%20Workflow.md">Git for Teams</a>
       </td>
       <td><a href="../Projects/Q2.md">Q2 Project</a>
       </td>
@@ -41,7 +41,7 @@ Week 1
       <td rowspan="1">Wednesday</td>
       <td rowspan="1">
       </td>
-      <td>Git for Teams
+      <td><a href="https://github.com/gSchool/productivity-curriculum/blob/master/Git/Feature%20Branch%20Workflow.md">Git for Teams</a>
       </td>
       <td><a href="../Projects/Q2.md">Q2 Project</a>
       </td>
