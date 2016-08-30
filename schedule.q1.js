@@ -117,7 +117,7 @@ module.exports = [
   },
 
   {
-    warmup: { text: "Remove Duplicates", url: "https://github.com/gSchool/master_warmup_repository_full_stack/blob/master/w2/w2-w-remove-dupes-string-warmup/prompt.js" },
+    warmup: { text: "Remove Duplicates", url: "https://github.com/gSchool/warmups/blob/master/w2/w2-w-remove-dupes-string-warmup/prompt.js" },
     activities: [
       {
         article: { text: "DOM Events", url: "https://github.com/gSchool/browser-dom-curriculum/blob/master/DOM/Events.md" },
@@ -138,7 +138,7 @@ module.exports = [
 
   // Week 3
   {
-    warmup: { text: "Double Char", url: "https://github.com/gSchool/master_warmup_repository_full_stack/blob/master/w3/w3-t-doubleChar/solution.js" },
+    warmup: { text: "Double Char", url: "https://github.com/gSchool/warmups/blob/master/w3/w3-t-doubleChar/solution.js" },
     activities: [
       {
         article: { text: "CSS Frameworks", url: "https://github.com/gSchool/html-css-curriculum/blob/master/CSS/Frameworks.md" },
@@ -148,7 +148,7 @@ module.exports = [
   },
 
   {
-    warmup: { text: "Double Char", url: "https://github.com/gSchool/master_warmup_repository_full_stack/blob/master/w3/w3-t-doubleChar/solution.js" },
+    warmup: { text: "Double Char", url: "https://github.com/gSchool/warmups/blob/master/w3/w3-t-doubleChar/solution.js" },
     activities: [
       {
         article: { text: "HTML Forms", url: "https://github.com/gSchool/html-css-curriculum/blob/master/HTML/Forms.md" },
@@ -165,7 +165,7 @@ module.exports = [
   },
 
   {
-    warmup: { text: "Sum Range", url: "https://github.com/gSchool/master_warmup_repository_full_stack/blob/master/w3/w3-r-sum-of-numbers/solution.js" },
+    warmup: { text: "Sum Range", url: "https://github.com/gSchool/warmups/blob/master/w3/w3-r-sum-of-numbers/solution.js" },
     activities: [
       {
         article: { text: "Intro to jQuery", url: "https://github.com/gSchool/browser-dom-curriculum/blob/master/jQuery/README.md" },
@@ -175,7 +175,7 @@ module.exports = [
   },
 
   {
-    warmup: { text: "Sum Range", url: "https://github.com/gSchool/master_warmup_repository_full_stack/blob/master/w3/w3-r-sum-of-numbers/solution.js" },
+    warmup: { text: "Sum Range", url: "https://github.com/gSchool/warmups/blob/master/w3/w3-r-sum-of-numbers/solution.js" },
     activities: [
       {
         article: { text: "jQuery Events", url: "https://github.com/gSchool/browser-dom-curriculum/blob/master/jQuery/Events.md" },
@@ -185,7 +185,7 @@ module.exports = [
   },
 
   {
-    warmup: { text: "Word Scrambler", url: "https://github.com/gSchool/master_warmup_repository_full_stack/blob/master/typoglycemia/challenge.js" },
+    warmup: { text: "Word Scrambler", url: "https://github.com/gSchool/warmups/blob/master/typoglycemia/challenge.js" },
     activities: [
       {
         assignment: { text: "Galanize Delivers", url: "https://github.com/gSchool/galvanize-delivers/" },
@@ -198,7 +198,7 @@ module.exports = [
 
   // Week 4
   {
-    warmup: { text: "Word Scrambler", url: "https://github.com/gSchool/master_warmup_repository_full_stack/blob/master/typoglycemia/challenge.js" },
+    warmup: { text: "Word Scrambler", url: "https://github.com/gSchool/warmups/blob/master/typoglycemia/challenge.js" },
     activities: [
       {
         article: { text: "HTTP", url: "https://github.com/gschool/browser-dom-curriculum/blob/master/HTTP/README.md" },
@@ -250,7 +250,7 @@ module.exports = [
   },
 
   {
-    warmup: { text: "ArrayMap", url: "https://github.com/gSchool/master_warmup_repository_full_stack/blob/master/Array%20Map.md" },
+    warmup: { text: "ArrayMap", url: "https://github.com/gSchool/warmups/blob/master/Array%20Map.md" },
     activities: [
       {
         article: { text: "Project Mangement", url: "https://github.com/gschool/productivity-curriculum/blob/master/Agile/README.md" },
@@ -261,7 +261,7 @@ module.exports = [
 
   // Week 5
   {
-    warmup: { text: "ArrayFilter", url: "https://github.com/gSchool/master_warmup_repository_full_stack/blob/master/Array%20Filter.md" },
+    warmup: { text: "ArrayFilter", url: "https://github.com/gSchool/warmups/blob/master/Array%20Filter.md" },
     activities: [
       {
         article: { text: "Debugging JavaScript", url: "https://github.com/gSchool/browser-dom-curriculum/blob/master/Debugging.md" },
@@ -271,7 +271,7 @@ module.exports = [
   },
 
   {
-    warmup: { text: "ArrayReduce", url: "https://github.com/gSchool/master_warmup_repository_full_stack/blob/master/Array%20Reduce.md" },
+    warmup: { text: "ArrayReduce", url: "https://github.com/gSchool/warmups/blob/master/Array%20Reduce.md" },
     activities: [
       {
         article: { text: "User Interface Design", url: "https://github.com/gSchool/html-css-curriculum/blob/master/UI/User Interface Design.md" },
@@ -281,7 +281,7 @@ module.exports = [
   },
 
   {
-    warmup: { text: "ArrayEvery", url: "https://github.com/gSchool/master_warmup_repository_full_stack/blob/master/Array%20Every.md" },
+    warmup: { text: "ArrayEvery", url: "https://github.com/gSchool/warmups/blob/master/Array%20Every.md" },
     activities: [
       {
         article: { text: "LocalStorage and Data Modeling", url: "https://github.com/gSchool/browser-dom-curriculum/blob/master/Local%20Storage.md" },

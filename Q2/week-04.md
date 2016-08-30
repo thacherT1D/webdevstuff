@@ -17,7 +17,7 @@ Week 1
   <tbody>
     <tr>
       <td rowspan="2">Monday</td>
-      <td rowspan="2"><a href="https://github.com/gSchool/master_warmup_repository_full_stack/tree/master/User%20Registration">User Registration</a>
+      <td rowspan="2"><a href="https://github.com/gSchool/warmups/tree/master/User%20Registration">User Registration</a>
       </td>
       <td><a href="https://github.com/gSchool/node-curriculum/blob/master/Knex/Promises.md">Promises</a>
       </td>
@@ -36,7 +36,7 @@ Week 1
     </tr>
     <tr>
       <td rowspan="1">Tuesday</td>
-      <td rowspan="1"><a href="https://github.com/gSchool/master_warmup_repository_full_stack/tree/master/User%20Authentication">User Authentication</a>
+      <td rowspan="1"><a href="https://github.com/gSchool/warmups/tree/master/User%20Authentication">User Authentication</a>
       </td>
       <td><a href="https://github.com/gSchool/node-curriculum/blob/master/unit-3/03-testing-with-mocha-chai-supertest.md">Automated JavaScript Tests</a>
       </td>

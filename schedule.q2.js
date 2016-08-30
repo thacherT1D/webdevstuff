@@ -62,7 +62,7 @@ module.exports = [
 
   //  Week 2
   {
-    warmup: { text: "Express Static Files", url: "https://github.com/gSchool/master_warmup_repository_full_stack/tree/master/Express%20Static%20Files" },
+    warmup: { text: "Express Static Files", url: "https://github.com/gSchool/warmups/tree/master/Express%20Static%20Files" },
     activities: [
       {
         article: { text: "PostgreSQL", url: "https://github.com/gSchool/sql-curriculum/blob/master/Intro.md" },
@@ -72,7 +72,7 @@ module.exports = [
   },
 
   {
-    warmup: { text: "Express Templating", url: "https://github.com/gSchool/master_warmup_repository_full_stack/tree/master/Express%20Templating" },
+    warmup: { text: "Express Templating", url: "https://github.com/gSchool/warmups/tree/master/Express%20Templating" },
     activities: [
       {
         article: { text: "SQL", url: "https://github.com/gSchool/sql-curriculum/blob/master/SQL%20Intro.md" },
@@ -92,7 +92,7 @@ module.exports = [
   },
 
   {
-    warmup: { text: "Express Error Templates", url: "https://github.com/gSchool/master_warmup_repository_full_stack/tree/master/Express%20Error%20Template" },
+    warmup: { text: "Express Error Templates", url: "https://github.com/gSchool/warmups/tree/master/Express%20Error%20Template" },
     activities: [
       {
         article: { text: "Knex.js", url: "https://github.com/gSchool/node-curriculum/tree/master/Knex" },
@@ -114,7 +114,7 @@ module.exports = [
   //  Week 3
 
   {
-    warmup: { text: "SQL Migrations", url: "https://github.com/gSchool/master_warmup_repository_full_stack/tree/master/SQL%20Migration" },
+    warmup: { text: "SQL Migrations", url: "https://github.com/gSchool/warmups/tree/master/SQL%20Migration" },
     activities: [
       {
         article: { text: "Knex Migrations and Seeds", url: "https://github.com/gSchool/node-curriculum/blob/master/Knex/Migrations.md" },
@@ -134,7 +134,7 @@ module.exports = [
   },
 
   {
-    warmup: { text: "SQL Seeds", url: "https://github.com/gSchool/master_warmup_repository_full_stack/tree/master/SQL%20Seeds" },
+    warmup: { text: "SQL Seeds", url: "https://github.com/gSchool/warmups/tree/master/SQL%20Seeds" },
     activities: [
       {
         article: { text: "User Authentication", url: "https://github.com/gSchool/node-curriculum/blob/master/Express/User%20Authentication.md" },
@@ -144,7 +144,7 @@ module.exports = [
   },
 
   {
-    warmup: { text: "Knex Migrations", url: "https://github.com/gSchool/master_warmup_repository_full_stack/tree/master/Knex%20Migration" },
+    warmup: { text: "Knex Migrations", url: "https://github.com/gSchool/warmups/tree/master/Knex%20Migration" },
     activities: [
       {
         article: { text: "User Authorization", url: "https://github.com/gSchool/node-curriculum/blob/master/Express/Authorization.md" },
@@ -154,7 +154,7 @@ module.exports = [
   },
 
   {
-    warmup: { text: "Knex Seeds", url: "https://github.com/gSchool/master_warmup_repository_full_stack/tree/master/Knex%20Seeds" },
+    warmup: { text: "Knex Seeds", url: "https://github.com/gSchool/warmups/tree/master/Knex%20Seeds" },
     activities: [
       {
         article: { text: "Heroku Deployment", url: "https://github.com/gSchool/node-curriculum/blob/master/Deployment/Heroku.md" },
@@ -165,7 +165,7 @@ module.exports = [
 
   // Week 4
   {
-    warmup: { text: "User Registration", url: "https://github.com/gSchool/master_warmup_repository_full_stack/tree/master/User%20Registration" },
+    warmup: { text: "User Registration", url: "https://github.com/gSchool/warmups/tree/master/User%20Registration" },
     activities: [
       {
         article: { text: "Promises", url: "https://github.com/gSchool/node-curriculum/blob/master/Knex/Promises.md" },
@@ -178,7 +178,7 @@ module.exports = [
   },
 
   {
-    warmup: { text: "User Authentication", url: "https://github.com/gSchool/master_warmup_repository_full_stack/tree/master/User%20Authentication" },
+    warmup: { text: "User Authentication", url: "https://github.com/gSchool/warmups/tree/master/User%20Authentication" },
     activities: [
       {
         article: { text: "Automated JavaScript Tests", url: "https://github.com/gSchool/node-curriculum/blob/master/unit-3/03-testing-with-mocha-chai-supertest.md" },

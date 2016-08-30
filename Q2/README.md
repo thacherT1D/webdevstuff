@@ -115,7 +115,7 @@ Week 2
   <tbody>
     <tr>
       <td rowspan="1">Monday</td>
-      <td rowspan="1"><a href="https://github.com/gSchool/master_warmup_repository_full_stack/tree/master/Express%20Static%20Files">Express Static Files</a>
+      <td rowspan="1"><a href="https://github.com/gSchool/warmups/tree/master/Express%20Static%20Files">Express Static Files</a>
       </td>
       <td><a href="https://github.com/gSchool/sql-curriculum/blob/master/Intro.md">PostgreSQL</a>
       </td>
@@ -126,7 +126,7 @@ Week 2
     </tr>
     <tr>
       <td rowspan="1">Tuesday</td>
-      <td rowspan="1"><a href="https://github.com/gSchool/master_warmup_repository_full_stack/tree/master/Express%20Templating">Express Templating</a>
+      <td rowspan="1"><a href="https://github.com/gSchool/warmups/tree/master/Express%20Templating">Express Templating</a>
       </td>
       <td><a href="https://github.com/gSchool/sql-curriculum/blob/master/SQL%20Intro.md">SQL</a>
       </td>
@@ -148,7 +148,7 @@ Week 2
     </tr>
     <tr>
       <td rowspan="1">Thursday</td>
-      <td rowspan="1"><a href="https://github.com/gSchool/master_warmup_repository_full_stack/tree/master/Express%20Error%20Template">Express Error Templates</a>
+      <td rowspan="1"><a href="https://github.com/gSchool/warmups/tree/master/Express%20Error%20Template">Express Error Templates</a>
       </td>
       <td><a href="https://github.com/gSchool/node-curriculum/tree/master/Knex">Knex.js</a>
       </td>
@@ -187,7 +187,7 @@ Week 3
   <tbody>
     <tr>
       <td rowspan="1">Monday</td>
-      <td rowspan="1"><a href="https://github.com/gSchool/master_warmup_repository_full_stack/tree/master/SQL%20Migration">SQL Migrations</a>
+      <td rowspan="1"><a href="https://github.com/gSchool/warmups/tree/master/SQL%20Migration">SQL Migrations</a>
       </td>
       <td><a href="https://github.com/gSchool/node-curriculum/blob/master/Knex/Migrations.md">Knex Migrations and Seeds</a>
       </td>
@@ -209,7 +209,7 @@ Week 3
     </tr>
     <tr>
       <td rowspan="1">Wednesday</td>
-      <td rowspan="1"><a href="https://github.com/gSchool/master_warmup_repository_full_stack/tree/master/SQL%20Seeds">SQL Seeds</a>
+      <td rowspan="1"><a href="https://github.com/gSchool/warmups/tree/master/SQL%20Seeds">SQL Seeds</a>
       </td>
       <td><a href="https://github.com/gSchool/node-curriculum/blob/master/Express/User%20Authentication.md">User Authentication</a>
       </td>
@@ -220,7 +220,7 @@ Week 3
     </tr>
     <tr>
       <td rowspan="1">Thursday</td>
-      <td rowspan="1"><a href="https://github.com/gSchool/master_warmup_repository_full_stack/tree/master/Knex%20Migration">Knex Migrations</a>
+      <td rowspan="1"><a href="https://github.com/gSchool/warmups/tree/master/Knex%20Migration">Knex Migrations</a>
       </td>
       <td><a href="https://github.com/gSchool/node-curriculum/blob/master/Express/Authorization.md">User Authorization</a>
       </td>
@@ -231,7 +231,7 @@ Week 3
     </tr>
     <tr>
       <td rowspan="1">Friday</td>
-      <td rowspan="1"><a href="https://github.com/gSchool/master_warmup_repository_full_stack/tree/master/Knex%20Seeds">Knex Seeds</a>
+      <td rowspan="1"><a href="https://github.com/gSchool/warmups/tree/master/Knex%20Seeds">Knex Seeds</a>
       </td>
       <td><a href="https://github.com/gSchool/node-curriculum/blob/master/Deployment/Heroku.md">Heroku Deployment</a>
       </td>
@@ -259,7 +259,7 @@ Week 4
   <tbody>
     <tr>
       <td rowspan="2">Monday</td>
-      <td rowspan="2"><a href="https://github.com/gSchool/master_warmup_repository_full_stack/tree/master/User%20Registration">User Registration</a>
+      <td rowspan="2"><a href="https://github.com/gSchool/warmups/tree/master/User%20Registration">User Registration</a>
       </td>
       <td><a href="https://github.com/gSchool/node-curriculum/blob/master/Knex/Promises.md">Promises</a>
       </td>
@@ -278,7 +278,7 @@ Week 4
     </tr>
     <tr>
       <td rowspan="1">Tuesday</td>
-      <td rowspan="1"><a href="https://github.com/gSchool/master_warmup_repository_full_stack/tree/master/User%20Authentication">User Authentication</a>
+      <td rowspan="1"><a href="https://github.com/gSchool/warmups/tree/master/User%20Authentication">User Authentication</a>
       </td>
       <td><a href="https://github.com/gSchool/node-curriculum/blob/master/unit-3/03-testing-with-mocha-chai-supertest.md">Automated JavaScript Tests</a>
       </td>

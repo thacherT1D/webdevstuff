@@ -17,7 +17,7 @@ Week 1
   <tbody>
     <tr>
       <td rowspan="1">Monday</td>
-      <td rowspan="1"><a href="https://github.com/gSchool/master_warmup_repository_full_stack/tree/master/Express%20Static%20Files">Express Static Files</a>
+      <td rowspan="1"><a href="https://github.com/gSchool/warmups/tree/master/Express%20Static%20Files">Express Static Files</a>
       </td>
       <td><a href="https://github.com/gSchool/sql-curriculum/blob/master/Intro.md">PostgreSQL</a>
       </td>
@@ -28,7 +28,7 @@ Week 1
     </tr>
     <tr>
       <td rowspan="1">Tuesday</td>
-      <td rowspan="1"><a href="https://github.com/gSchool/master_warmup_repository_full_stack/tree/master/Express%20Templating">Express Templating</a>
+      <td rowspan="1"><a href="https://github.com/gSchool/warmups/tree/master/Express%20Templating">Express Templating</a>
       </td>
       <td><a href="https://github.com/gSchool/sql-curriculum/blob/master/SQL%20Intro.md">SQL</a>
       </td>
@@ -50,7 +50,7 @@ Week 1
     </tr>
     <tr>
       <td rowspan="1">Thursday</td>
-      <td rowspan="1"><a href="https://github.com/gSchool/master_warmup_repository_full_stack/tree/master/Express%20Error%20Template">Express Error Templates</a>
+      <td rowspan="1"><a href="https://github.com/gSchool/warmups/tree/master/Express%20Error%20Template">Express Error Templates</a>
       </td>
       <td><a href="https://github.com/gSchool/node-curriculum/tree/master/Knex">Knex.js</a>
       </td>

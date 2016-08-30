@@ -17,7 +17,7 @@ Week 1
   <tbody>
     <tr>
       <td rowspan="1">Monday</td>
-      <td rowspan="1"><a href="https://github.com/gSchool/master_warmup_repository_full_stack/tree/master/SQL%20Migration">SQL Migrations</a>
+      <td rowspan="1"><a href="https://github.com/gSchool/warmups/tree/master/SQL%20Migration">SQL Migrations</a>
       </td>
       <td><a href="https://github.com/gSchool/node-curriculum/blob/master/Knex/Migrations.md">Knex Migrations and Seeds</a>
       </td>
@@ -39,7 +39,7 @@ Week 1
     </tr>
     <tr>
       <td rowspan="1">Wednesday</td>
-      <td rowspan="1"><a href="https://github.com/gSchool/master_warmup_repository_full_stack/tree/master/SQL%20Seeds">SQL Seeds</a>
+      <td rowspan="1"><a href="https://github.com/gSchool/warmups/tree/master/SQL%20Seeds">SQL Seeds</a>
       </td>
       <td><a href="https://github.com/gSchool/node-curriculum/blob/master/Express/User%20Authentication.md">User Authentication</a>
       </td>
@@ -50,7 +50,7 @@ Week 1
     </tr>
     <tr>
       <td rowspan="1">Thursday</td>
-      <td rowspan="1"><a href="https://github.com/gSchool/master_warmup_repository_full_stack/tree/master/Knex%20Migration">Knex Migrations</a>
+      <td rowspan="1"><a href="https://github.com/gSchool/warmups/tree/master/Knex%20Migration">Knex Migrations</a>
       </td>
       <td><a href="https://github.com/gSchool/node-curriculum/blob/master/Express/Authorization.md">User Authorization</a>
       </td>
@@ -61,7 +61,7 @@ Week 1
     </tr>
     <tr>
       <td rowspan="1">Friday</td>
-      <td rowspan="1"><a href="https://github.com/gSchool/master_warmup_repository_full_stack/tree/master/Knex%20Seeds">Knex Seeds</a>
+      <td rowspan="1"><a href="https://github.com/gSchool/warmups/tree/master/Knex%20Seeds">Knex Seeds</a>
       </td>
       <td><a href="https://github.com/gSchool/node-curriculum/blob/master/Deployment/Heroku.md">Heroku Deployment</a>
       </td>
