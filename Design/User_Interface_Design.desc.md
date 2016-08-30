@@ -9,8 +9,6 @@
 
 A **user interface** is a shared boundary across which a user exchanges information with another entity. Often in computing, a user interface is the bridge between the immaterial world that exists in code and the material world that we physically interact with. Users provide input to the immaterial world through devices like a keyboard, mouse, trackpad, or touch screen.
 
-![Interface](https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.sentios.co.uk%2Fnews%2Fwp-content%2Fuploads%2F2012%2F03%2Finteractive-user-interface.jpg&f=1)
-
 **User interface design** is the implementation of these interfaces with a focus on user experience. The end goal of user interface design is to make the user's interactions as efficient as possible. UI design combines concepts from various fields such as visual design, interaction design, and information architecture.
 
 ![Responsive User Interface Design](http://www.webfuel.com/blog/responsive-design-1.png)
