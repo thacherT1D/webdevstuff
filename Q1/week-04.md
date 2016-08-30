@@ -17,7 +17,7 @@ Week 1
   <tbody>
     <tr>
       <td rowspan="1">Monday</td>
-      <td rowspan="1"><a href="https://gist.github.com/IanSmith89/6ae569d695ffa1134d229c8f75117da0">Word Scrambler</a>
+      <td rowspan="1"><a href="https://github.com/gSchool/master_warmup_repository_full_stack/blob/master/typoglycemia/challenge.js">Word Scrambler</a>
       </td>
       <td><a href="https://github.com/gschool/browser-dom-curriculum/blob/master/HTTP/README.md">HTTP</a>
       </td>
@@ -93,7 +93,7 @@ Week 1
     </tr>
     <tr>
       <td rowspan="1">Friday</td>
-      <td rowspan="1"><a href="https://gist.github.com/ryansobol/52642194e31327fe5d94a160c1eb2764">ArrayMap</a>
+      <td rowspan="1"><a href="https://github.com/gSchool/master_warmup_repository_full_stack/blob/master/Array%20Map.md">ArrayMap</a>
       </td>
       <td><a href="https://github.com/gschool/productivity-curriculum/blob/master/Agile/README.md">Project Mangement</a>
       </td>

@@ -17,7 +17,7 @@ Week 1
   <tbody>
     <tr>
       <td rowspan="2">Monday</td>
-      <td rowspan="2"><a href="https://gist.github.com/ryansobol/b8d47d7fcb6cfbc2848dfa4fb13b3f00">User Registration</a>
+      <td rowspan="2"><a href="https://github.com/gSchool/master_warmup_repository_full_stack/tree/master/User%20Registration">User Registration</a>
       </td>
       <td><a href="https://github.com/gSchool/node-curriculum/blob/master/Knex/Promises.md">Promises</a>
       </td>
@@ -36,7 +36,7 @@ Week 1
     </tr>
     <tr>
       <td rowspan="1">Tuesday</td>
-      <td rowspan="1"><a href="https://gist.github.com/ryansobol/30f56fce077d229de61b96a7da23e95f">User Authentication</a>
+      <td rowspan="1"><a href="https://github.com/gSchool/master_warmup_repository_full_stack/tree/master/User%20Authentication">User Authentication</a>
       </td>
       <td><a href="https://github.com/gSchool/node-curriculum/blob/master/unit-3/03-testing-with-mocha-chai-supertest.md">Automated JavaScript Tests</a>
       </td>
@@ -51,7 +51,7 @@ Week 1
       </td>
       <td><a href="https://github.com/gSchool/node-curriculum/blob/master/Express/Validation.md">Server-side Validation</a>
       </td>
-      <td><a href="https://gist.github.com/ryansobol/7d02bc09fddec3621b463803460dd2b4">SSV for Galvanize Bookshelf</a>
+      <td><a href="https://gist.github.com/ryansobol/7d02bc09fddec3621b463803460dd2b4">Server-Side Validation for Galvanize Bookshelf</a>
       </td>
       <td>
       </td>

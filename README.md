@@ -309,7 +309,7 @@ Week 3
     </tr>
     <tr>
       <td rowspan="2">Friday</td>
-      <td rowspan="2"><a href="https://gist.github.com/IanSmith89/6ae569d695ffa1134d229c8f75117da0">Word Scrambler</a>
+      <td rowspan="2"><a href="https://github.com/gSchool/master_warmup_repository_full_stack/blob/master/typoglycemia/challenge.js">Word Scrambler</a>
       </td>
       <td>
       </td>
@@ -345,7 +345,7 @@ Week 4
   <tbody>
     <tr>
       <td rowspan="1">Monday</td>
-      <td rowspan="1"><a href="https://gist.github.com/IanSmith89/6ae569d695ffa1134d229c8f75117da0">Word Scrambler</a>
+      <td rowspan="1"><a href="https://github.com/gSchool/master_warmup_repository_full_stack/blob/master/typoglycemia/challenge.js">Word Scrambler</a>
       </td>
       <td><a href="https://github.com/gschool/browser-dom-curriculum/blob/master/HTTP/README.md">HTTP</a>
       </td>
@@ -421,7 +421,7 @@ Week 4
     </tr>
     <tr>
       <td rowspan="1">Friday</td>
-      <td rowspan="1"><a href="https://gist.github.com/ryansobol/52642194e31327fe5d94a160c1eb2764">ArrayMap</a>
+      <td rowspan="1"><a href="https://github.com/gSchool/master_warmup_repository_full_stack/blob/master/Array%20Map.md">ArrayMap</a>
       </td>
       <td><a href="https://github.com/gschool/productivity-curriculum/blob/master/Agile/README.md">Project Mangement</a>
       </td>
@@ -449,7 +449,7 @@ Week 5
   <tbody>
     <tr>
       <td rowspan="1">Monday</td>
-      <td rowspan="1"><a href="https://gist.github.com/ryansobol/4e871410b8648c8eb60ca46dd89236fa">ArrayFilter</a>
+      <td rowspan="1"><a href="https://github.com/gSchool/master_warmup_repository_full_stack/blob/master/Array%20Filter.md">ArrayFilter</a>
       </td>
       <td><a href="https://github.com/gSchool/browser-dom-curriculum/blob/master/Debugging.md">Debugging JavaScript</a>
       </td>
@@ -460,7 +460,7 @@ Week 5
     </tr>
     <tr>
       <td rowspan="1">Tuesday</td>
-      <td rowspan="1"><a href="https://gist.github.com/ryansobol/08689667a80b3accd519ededf49238d0">ArrayReduce</a>
+      <td rowspan="1"><a href="https://github.com/gSchool/master_warmup_repository_full_stack/blob/master/Array%20Reduce.md">ArrayReduce</a>
       </td>
       <td><a href="https://github.com/gSchool/html-css-curriculum/blob/master/UI/User Interface Design.md">User Interface Design</a>
       </td>
@@ -471,7 +471,7 @@ Week 5
     </tr>
     <tr>
       <td rowspan="1">Wednesday</td>
-      <td rowspan="1"><a href="https://gist.github.com/ryansobol/afda64953e572ca0873905c525d06eb2">ArrayEvery</a>
+      <td rowspan="1"><a href="https://github.com/gSchool/master_warmup_repository_full_stack/blob/master/Array%20Every.md">ArrayEvery</a>
       </td>
       <td><a href="https://github.com/gSchool/browser-dom-curriculum/blob/master/Local%20Storage.md">LocalStorage and Data Modeling</a>
       </td>
@@ -617,7 +617,7 @@ Week 7
   <tbody>
     <tr>
       <td rowspan="1">Monday</td>
-      <td rowspan="1"><a href="https://gist.github.com/ryansobol/bc0206c1e5d00af16568ead5e59b01fd">Express Static Files</a>
+      <td rowspan="1"><a href="https://github.com/gSchool/master_warmup_repository_full_stack/tree/master/Express%20Static%20Files">Express Static Files</a>
       </td>
       <td><a href="https://github.com/gSchool/sql-curriculum/blob/master/Intro.md">PostgreSQL</a>
       </td>
@@ -628,7 +628,7 @@ Week 7
     </tr>
     <tr>
       <td rowspan="1">Tuesday</td>
-      <td rowspan="1"><a href="https://gist.github.com/IanSmith89/f72743227a6db62a454374a39ebdc6b4">Express Templating</a>
+      <td rowspan="1"><a href="https://github.com/gSchool/master_warmup_repository_full_stack/tree/master/Express%20Templating">Express Templating</a>
       </td>
       <td><a href="https://github.com/gSchool/sql-curriculum/blob/master/SQL%20Intro.md">SQL</a>
       </td>
@@ -650,7 +650,7 @@ Week 7
     </tr>
     <tr>
       <td rowspan="1">Thursday</td>
-      <td rowspan="1"><a href="https://gist.github.com/IanSmith89/b9eaf52b98a831bebbee8014e368b812">Express Error Templates</a>
+      <td rowspan="1"><a href="https://github.com/gSchool/master_warmup_repository_full_stack/tree/master/Express%20Error%20Template">Express Error Templates</a>
       </td>
       <td><a href="https://github.com/gSchool/node-curriculum/tree/master/Knex">Knex.js</a>
       </td>
@@ -689,7 +689,7 @@ Week 8
   <tbody>
     <tr>
       <td rowspan="1">Monday</td>
-      <td rowspan="1"><a href="https://gist.github.com/ryansobol/9695adcc53c239a45209f17535e8c0d1">SQL Migrations</a>
+      <td rowspan="1"><a href="https://github.com/gSchool/master_warmup_repository_full_stack/tree/master/SQL%20Migration">SQL Migrations</a>
       </td>
       <td><a href="https://github.com/gSchool/node-curriculum/blob/master/Knex/Migrations.md">Knex Migrations and Seeds</a>
       </td>
@@ -711,7 +711,7 @@ Week 8
     </tr>
     <tr>
       <td rowspan="1">Wednesday</td>
-      <td rowspan="1"><a href="https://gist.github.com/ryansobol/a217c4bc954ebfe78a84058da9e5f19a">SQL Seeds</a>
+      <td rowspan="1"><a href="https://github.com/gSchool/master_warmup_repository_full_stack/tree/master/SQL%20Seeds">SQL Seeds</a>
       </td>
       <td><a href="https://github.com/gSchool/node-curriculum/blob/master/Express/User%20Authentication.md">User Authentication</a>
       </td>
@@ -722,7 +722,7 @@ Week 8
     </tr>
     <tr>
       <td rowspan="1">Thursday</td>
-      <td rowspan="1"><a href="https://gist.github.com/ryansobol/250cbea3e9a611f2eba4bac2cba61fb6">Knex Migrations</a>
+      <td rowspan="1"><a href="https://github.com/gSchool/master_warmup_repository_full_stack/tree/master/Knex%20Migration">Knex Migrations</a>
       </td>
       <td><a href="https://github.com/gSchool/node-curriculum/blob/master/Express/Authorization.md">User Authorization</a>
       </td>
@@ -733,7 +733,7 @@ Week 8
     </tr>
     <tr>
       <td rowspan="1">Friday</td>
-      <td rowspan="1"><a href="https://gist.github.com/ryansobol/c4a1e5791ba6dafce6ba8910159acde1">Knex Seeds</a>
+      <td rowspan="1"><a href="https://github.com/gSchool/master_warmup_repository_full_stack/tree/master/Knex%20Seeds">Knex Seeds</a>
       </td>
       <td><a href="https://github.com/gSchool/node-curriculum/blob/master/Deployment/Heroku.md">Heroku Deployment</a>
       </td>
@@ -761,7 +761,7 @@ Week 9
   <tbody>
     <tr>
       <td rowspan="2">Monday</td>
-      <td rowspan="2"><a href="https://gist.github.com/ryansobol/b8d47d7fcb6cfbc2848dfa4fb13b3f00">User Registration</a>
+      <td rowspan="2"><a href="https://github.com/gSchool/master_warmup_repository_full_stack/tree/master/User%20Registration">User Registration</a>
       </td>
       <td><a href="https://github.com/gSchool/node-curriculum/blob/master/Knex/Promises.md">Promises</a>
       </td>
@@ -780,7 +780,7 @@ Week 9
     </tr>
     <tr>
       <td rowspan="1">Tuesday</td>
-      <td rowspan="1"><a href="https://gist.github.com/ryansobol/30f56fce077d229de61b96a7da23e95f">User Authentication</a>
+      <td rowspan="1"><a href="https://github.com/gSchool/master_warmup_repository_full_stack/tree/master/User%20Authentication">User Authentication</a>
       </td>
       <td><a href="https://github.com/gSchool/node-curriculum/blob/master/unit-3/03-testing-with-mocha-chai-supertest.md">Automated JavaScript Tests</a>
       </td>
@@ -795,7 +795,7 @@ Week 9
       </td>
       <td><a href="https://github.com/gSchool/node-curriculum/blob/master/Express/Validation.md">Server-side Validation</a>
       </td>
-      <td><a href="https://gist.github.com/ryansobol/7d02bc09fddec3621b463803460dd2b4">SSV for Galvanize Bookshelf</a>
+      <td><a href="https://gist.github.com/ryansobol/7d02bc09fddec3621b463803460dd2b4">Server-Side Validation for Galvanize Bookshelf</a>
       </td>
       <td>
       </td>

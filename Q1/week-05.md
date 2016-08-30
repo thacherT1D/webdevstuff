@@ -17,7 +17,7 @@ Week 1
   <tbody>
     <tr>
       <td rowspan="1">Monday</td>
-      <td rowspan="1"><a href="https://gist.github.com/ryansobol/4e871410b8648c8eb60ca46dd89236fa">ArrayFilter</a>
+      <td rowspan="1"><a href="https://github.com/gSchool/master_warmup_repository_full_stack/blob/master/Array%20Filter.md">ArrayFilter</a>
       </td>
       <td><a href="https://github.com/gSchool/browser-dom-curriculum/blob/master/Debugging.md">Debugging JavaScript</a>
       </td>
@@ -28,7 +28,7 @@ Week 1
     </tr>
     <tr>
       <td rowspan="1">Tuesday</td>
-      <td rowspan="1"><a href="https://gist.github.com/ryansobol/08689667a80b3accd519ededf49238d0">ArrayReduce</a>
+      <td rowspan="1"><a href="https://github.com/gSchool/master_warmup_repository_full_stack/blob/master/Array%20Reduce.md">ArrayReduce</a>
       </td>
       <td><a href="https://github.com/gSchool/html-css-curriculum/blob/master/UI/User Interface Design.md">User Interface Design</a>
       </td>
@@ -39,7 +39,7 @@ Week 1
     </tr>
     <tr>
       <td rowspan="1">Wednesday</td>
-      <td rowspan="1"><a href="https://gist.github.com/ryansobol/afda64953e572ca0873905c525d06eb2">ArrayEvery</a>
+      <td rowspan="1"><a href="https://github.com/gSchool/master_warmup_repository_full_stack/blob/master/Array%20Every.md">ArrayEvery</a>
       </td>
       <td><a href="https://github.com/gSchool/browser-dom-curriculum/blob/master/Local%20Storage.md">LocalStorage and Data Modeling</a>
       </td>

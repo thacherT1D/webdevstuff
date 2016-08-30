@@ -185,7 +185,7 @@ module.exports = [
   },
 
   {
-    warmup: { text: "Word Scrambler", url: "https://gist.github.com/IanSmith89/6ae569d695ffa1134d229c8f75117da0" },
+    warmup: { text: "Word Scrambler", url: "https://github.com/gSchool/master_warmup_repository_full_stack/blob/master/typoglycemia/challenge.js" },
     activities: [
       {
         assignment: { text: "Galanize Delivers", url: "https://github.com/gSchool/galvanize-delivers/" },
@@ -198,7 +198,7 @@ module.exports = [
 
   // Week 4
   {
-    warmup: { text: "Word Scrambler", url: "https://gist.github.com/IanSmith89/6ae569d695ffa1134d229c8f75117da0" },
+    warmup: { text: "Word Scrambler", url: "https://github.com/gSchool/master_warmup_repository_full_stack/blob/master/typoglycemia/challenge.js" },
     activities: [
       {
         article: { text: "HTTP", url: "https://github.com/gschool/browser-dom-curriculum/blob/master/HTTP/README.md" },
@@ -250,7 +250,7 @@ module.exports = [
   },
 
   {
-    warmup: { text: "ArrayMap", url: "https://gist.github.com/ryansobol/52642194e31327fe5d94a160c1eb2764" },
+    warmup: { text: "ArrayMap", url: "https://github.com/gSchool/master_warmup_repository_full_stack/blob/master/Array%20Map.md" },
     activities: [
       {
         article: { text: "Project Mangement", url: "https://github.com/gschool/productivity-curriculum/blob/master/Agile/README.md" },
@@ -261,7 +261,7 @@ module.exports = [
 
   // Week 5
   {
-    warmup: { text: "ArrayFilter", url: "https://gist.github.com/ryansobol/4e871410b8648c8eb60ca46dd89236fa" },
+    warmup: { text: "ArrayFilter", url: "https://github.com/gSchool/master_warmup_repository_full_stack/blob/master/Array%20Filter.md" },
     activities: [
       {
         article: { text: "Debugging JavaScript", url: "https://github.com/gSchool/browser-dom-curriculum/blob/master/Debugging.md" },
@@ -271,7 +271,7 @@ module.exports = [
   },
 
   {
-    warmup: { text: "ArrayReduce", url: "https://gist.github.com/ryansobol/08689667a80b3accd519ededf49238d0" },
+    warmup: { text: "ArrayReduce", url: "https://github.com/gSchool/master_warmup_repository_full_stack/blob/master/Array%20Reduce.md" },
     activities: [
       {
         article: { text: "User Interface Design", url: "https://github.com/gSchool/html-css-curriculum/blob/master/UI/User Interface Design.md" },
@@ -281,7 +281,7 @@ module.exports = [
   },
 
   {
-    warmup: { text: "ArrayEvery", url: "https://gist.github.com/ryansobol/afda64953e572ca0873905c525d06eb2" },
+    warmup: { text: "ArrayEvery", url: "https://github.com/gSchool/master_warmup_repository_full_stack/blob/master/Array%20Every.md" },
     activities: [
       {
         article: { text: "LocalStorage and Data Modeling", url: "https://github.com/gSchool/browser-dom-curriculum/blob/master/Local%20Storage.md" },

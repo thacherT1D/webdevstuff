@@ -77,7 +77,7 @@ Week 1
     </tr>
     <tr>
       <td rowspan="2">Friday</td>
-      <td rowspan="2"><a href="https://gist.github.com/IanSmith89/6ae569d695ffa1134d229c8f75117da0">Word Scrambler</a>
+      <td rowspan="2"><a href="https://github.com/gSchool/master_warmup_repository_full_stack/blob/master/typoglycemia/challenge.js">Word Scrambler</a>
       </td>
       <td>
       </td>
