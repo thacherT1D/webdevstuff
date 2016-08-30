@@ -117,7 +117,7 @@ module.exports = [
     warmup: { text: "SQL Migrations", url: "https://gist.github.com/ryansobol/9695adcc53c239a45209f17535e8c0d1" },
     activities: [
       {
-        article: { text: "Knex Migrations and Seeds", url: "" },
+        article: { text: "Knex Migrations and Seeds", url: "https://github.com/gSchool/node-curriculum/blob/master/Knex/Migrations.md" },
         assignment: { text: "Galvanize Bookshelf - Part 1", url: "https://github.com/gSchool/galvanize-bookshelf/blob/master/1_migrations_seeds.md" },
       },
     ]
@@ -137,7 +137,7 @@ module.exports = [
     warmup: { text: "SQL Seeds", url: "https://gist.github.com/ryansobol/a217c4bc954ebfe78a84058da9e5f19a" },
     activities: [
       {
-        article: { text: "User Registration", url: "" },
+        article: { text: "User Authentication", url: "https://github.com/gSchool/node-curriculum/blob/master/Express/User%20Authentication.md" },
         assignment: { text: "Galvanize Bookshelf - Part 3", url: "https://github.com/gSchool/galvanize-bookshelf/blob/master/3_user_registration.md" },
       },
     ]
@@ -147,7 +147,7 @@ module.exports = [
     warmup: { text: "Knex Migrations", url: "https://gist.github.com/ryansobol/250cbea3e9a611f2eba4bac2cba61fb6" },
     activities: [
       {
-        article: { text: "User Authentication", url: "" },
+        article: { text: "User Authorization", url: "https://github.com/gSchool/node-curriculum/blob/master/Express/Authorization.md" },
         assignment: { text: "Galvanize Bookshelf - Part 4", url: "https://github.com/gSchool/galvanize-bookshelf/blob/master/4_user_authentication.md" },
       },
     ]
@@ -157,7 +157,7 @@ module.exports = [
     warmup: { text: "Knex Seeds", url: "https://gist.github.com/ryansobol/c4a1e5791ba6dafce6ba8910159acde1" },
     activities: [
       {
-        article: { text: "Heroku Deployment", url: "" },
+        article: { text: "Heroku Deployment", url: "https://github.com/gSchool/node-curriculum/blob/master/Deployment/Heroku.md" },
         assignment: { text: "Galvanize Bookshelf - Part 5", url: "https://github.com/gSchool/galvanize-bookshelf/blob/master/4_authentication_authorization.md" },
       },
     ]
@@ -168,8 +168,11 @@ module.exports = [
     warmup: { text: "User Registration", url: "https://gist.github.com/ryansobol/b8d47d7fcb6cfbc2848dfa4fb13b3f00" },
     activities: [
       {
-        article: { text: "Promises", url: "" },
+        article: { text: "Promises", url: "https://github.com/gSchool/node-curriculum/blob/master/Knex/Promises.md" },
         assignment: { text: "Promise Fundamentals", url: "https://github.com/gschool/wd-promise-fundamentals" },
+      },
+      {
+        article: { text: "Promises", url: "https://github.com/gSchool/node-curriculum/blob/master/Knex/Promises.md" },
       },
     ]
   },
@@ -178,7 +181,7 @@ module.exports = [
     warmup: { text: "User Authentication", url: "https://gist.github.com/ryansobol/30f56fce077d229de61b96a7da23e95f" },
     activities: [
       {
-        article: { text: "Automated JavaScript Tests", url: "" },
+        article: { text: "Automated JavaScript Tests", url: "https://github.com/gSchool/node-curriculum/blob/master/unit-3/03-testing-with-mocha-chai-supertest.md" },
         assignment: { text: "JavaScript Test Coverage", url: "https://github.com/gSchool/javascript-test-coverage" },
       },
     ]
@@ -188,8 +191,11 @@ module.exports = [
     warmup: { text: "", url: "" },
     activities: [
       {
-        article: { text: "Server-side Validation", url: "" },
+        article: { text: "Server-side Validation", url: "https://github.com/gSchool/node-curriculum/blob/master/Express/Validation.md" },
         assignment: { text: "SSV for Galvanize Bookshelf", url: "https://gist.github.com/ryansobol/7d02bc09fddec3621b463803460dd2b4" },
+      },
+      {
+        article: { text: "Server-side Validation w/ Templates", url: "https://github.com/gSchool/node-curriculum/blob/master/Express/Validation%20with%20Templates.md" },
       },
     ]
   },
