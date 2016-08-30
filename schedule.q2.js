@@ -204,8 +204,7 @@ module.exports = [
     warmup: { text: "", url: "" },
     activities: [
       {
-        article: { text: "Git for Teams", url: "" },
-        assignment: { text: "", url: "" },
+        article: { text: "Git for Teams", url: "https://github.com/gSchool/productivity-curriculum/blob/master/Git/Feature%20Branch%20Workflow.md" },
       },
     ]
   },
@@ -214,7 +213,6 @@ module.exports = [
     warmup: { text: "", url: "" },
     activities: [
       {
-        article: { text: "", url: "" },
         assignment: { text: "Q2 Project", url: "Projects/Q2.md" },
       },
     ]

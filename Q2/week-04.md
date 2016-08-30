@@ -68,7 +68,7 @@ Week 1
       <td rowspan="1">Thursday</td>
       <td rowspan="1"><a href=""></a>
       </td>
-      <td>Git for Teams
+      <td><a href="https://github.com/gSchool/productivity-curriculum/blob/master/Git/Feature%20Branch%20Workflow.md">Git for Teams</a>
       </td>
       <td>
       </td>
