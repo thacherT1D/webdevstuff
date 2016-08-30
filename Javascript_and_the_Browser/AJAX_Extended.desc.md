@@ -115,7 +115,7 @@ Promises are extremely useful for asynchronous success or failure because you're
 The `$xhr` object has the `done()` function handles the success scenario of sending an HTTP request to a working URL. Unsurprisingly, it also has a `fail()` function that handles the failure scenario of sending an HTTP request to a broken URL.
 
 ```javascript
-var $xhr = $.getJSON('http://www.omdbapi.cooooooom/?t=Frozen');
+var $xhr = $.getJSON('http://www.omdbapi.com/?t=Frozen');
 
 $xhr.done(function(data) {
 	if ($xhr.status !== 200) {
