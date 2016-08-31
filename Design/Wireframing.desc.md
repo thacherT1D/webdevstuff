@@ -1,8 +1,7 @@
 ## Objectives
 - Explain what a wireframe is and why it is important
-- Describe the basic process of wireframing
 - Explain the difference between the types of wireframes
-- Create simple wireframes as part of project planning process
+- Create simple wireframes
 
 ## What is a Wireframe
 A wireframe is an illustration of a page’s interface, focusing on space allocation, content priority, functionality, and intended behaviors. For these reasons, wireframes typically do not include any styling, color, or graphics. Wireframes also help establish relationships between a website’s various templates.
@@ -31,7 +30,7 @@ The goal of wireframes is guide where major navigation and content elements of y
 - Sketch two wireframes:
   - a web developer portfolio homepage
   - a shopping cart page
-
+- For either wireframe, consider the user and draw two more wireframes that would be a part of that user flow
 
 ## Resources
 - [Yahoo Design Library](https://developer.yahoo.com/ypatterns/)
