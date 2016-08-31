@@ -33,6 +33,7 @@ Cynthia is a mid-20s adventurer who works for a non-profit. May is always slow s
 It’s January, Cynthia is sitting at her work computer dreaming of being on the beach. She has some time to order her tickets, but wants to start exploring now.
 
 **List (or Draw) the steps of your primary use case. How would your user use your product/solution?**
+
 - Cynthia goes to a homepage
 - She enters in information about her approximate travel dates
 - She notices her departure city is pre-populated with her current location and leaves that selection
