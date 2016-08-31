@@ -40,8 +40,7 @@ Standard Elements to consider when starting a wireframe:
 
 
 ## Resources
-[Yahoo Design Library](https://developer.yahoo.com/ypatterns/)
-[Presenting Information Architecture](http://webstyleguide.com/wsg3/3-information-architecture/4-presenting-information.html)
-[How To Read a Wireframe](http://blog.fuzzymath.com/wp-content/uploads/2011/07/Fuzzy-Math-How-to-read-a-wireframe.pdf)
-
-Lecture based on [Usability.gov - Wireframing](https://www.usability.gov/how-to-and-tools/methods/wireframing.html)
+- [Yahoo Design Library](https://developer.yahoo.com/ypatterns/)
+- [Presenting Information Architecture](http://webstyleguide.com/wsg3/3-information-architecture/4-presenting-information.html)
+- [How To Read a Wireframe](http://blog.fuzzymath.com/wp-content/uploads/2011/07/Fuzzy-Math-How-to-read-a-wireframe.pdf)
+- [Usability.gov - Wireframing](https://www.usability.gov/how-to-and-tools/methods/wireframing.html)
