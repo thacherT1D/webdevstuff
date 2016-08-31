@@ -2,7 +2,7 @@
 
 Let’s look at the basics of Nunjucks, “a simple and powerful JavaScript Template Engine”, built by Mozilla for NodeJS.
 
-First off, a templating engine creates web pages (or views) dynamically by combining variables and programming logic with HTML. Essentially, you can add placeholders (or tags) to your HTML that are replaced by actual code defined from your router or controller. In general, tags, for the majority of templating engines, fall within one of two categores-
+First off, a templating engine creates web pages (or views) dynamically by combining variables and programming logic with HTML. Essentially, you can add placeholders (or tags) to your HTML that are replaced by actual code defined from your router or controller. In general, tags, for the majority of templating engines, fall within one of two categories
 
 - Variables/Output Tags
   - surrounded by double curly brackets
