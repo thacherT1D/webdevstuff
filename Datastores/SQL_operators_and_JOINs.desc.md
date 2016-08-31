@@ -18,3 +18,5 @@ Before we talk about Joins and Unions, it's helpful to understand a bit about Se
 For a primer on the basic Operators, visit the [SQL Curriculum Operators Article](https://github.com/gSchool/sql-curriculum/blob/master/Operators.md).
 
 For information about Joins and more complex operators, visit the [SQL Curriculum Joins Article](https://github.com/gSchool/sql-curriculum/blob/master/Joins.md).
+
+You'll find the Exercises we worked on in class (as well as the basic setup required) [on this gist](https://gist.github.com/bwreid/5770ccc1f54ff4c267543498107322b7).
