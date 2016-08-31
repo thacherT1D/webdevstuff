@@ -33,12 +33,12 @@ Cynthia is a mid-20s adventurer who works for a non-profit. May is always slow s
 It’s January, Cynthia is sitting at her work computer dreaming of being on the beach. She has some time to order her tickets, but wants to start exploring now.
 
 **List (or Draw) the steps of your primary use case. How would your user use your product/solution?**
-1. Cynthia goes to a homepage
-1. She enters in information about her approximate travel dates
-1. She notices her departure city is pre-populated with her current location and leaves that selection
-1. Cynthia presses enter
-1. Cynthia sees a page of potential trips
-1. After scrolling through results, she presses a button to set up auto alerts
+- Cynthia goes to a homepage
+- She enters in information about her approximate travel dates
+- She notices her departure city is pre-populated with her current location and leaves that selection
+- Cynthia presses enter
+- Cynthia sees a page of potential trips
+- After scrolling through results, she presses a button to set up auto alerts
 
 
 ## What is a Site Map?
