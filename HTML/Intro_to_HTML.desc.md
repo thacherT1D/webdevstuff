@@ -1,4 +1,4 @@
-# Intro to HTML
+# Intro to HTML 
 
 ## Objectives
 
@@ -23,15 +23,15 @@ HyperText Markup Language (HTML) is the standard language to create webpages. It
 * HTML *describes* and applies *structure* to a page; it's the skeleton.
 * Browsers *parse* and then *render* the HTML so that it's human-readable.
 
-It included presentation and appearance cues into the webpage, but these features are now deprecated in favor of Cascading Style Sheets (CSS). Both the HTML and CSS standard is maintained by The World Wide Web Consortium (W3C). 
+It included presentation and appearance cues into the webpage, but these features are now deprecated in favor of Cascading Style Sheets (CSS). Both the HTML and CSS standard is maintained by The World Wide Web Consortium (W3C).
 
 ## Syntax
 
 ### Tags Make Elements
 
 You've probably run into tags before if you've ever used the Internet. You've seen paragraph tags - `<p>`, or you've run into `<span>` or `<div>`. You may have used `<a href="http://example.com">Click here</a>`
-before to link to something. 
-  
+before to link to something.
+
 Tags are the basic unit of HTML. Think of tags (anything that starts with < and ends with >) as _boxes_. The words in between the angle braces (> & <) are like labels to tell you what the box contains.  
 
 HTML _tags_ are used to wrap *content*, by which we usually mean text or other tags.
@@ -85,7 +85,7 @@ This title has a `class` attribute. It tells the browser what styles to apply to
 
 ## Structure
 
-HTML can be thought of as a tree structure, which is similar to a family tree. Each element has a  *parent*, it sometimes has *siblings* and it also may have *children*. Imagine a large box that you put smaller boxes in- the smaller boxes are contained within the larger box. They can't be in multiple boxes at once, so the larger box can be thought of as their *parent* or *container*. The smaller boxes can contain still smaller boxes, aka *children*. Another way to think of this is to imagine making a family tree for a group of jellyfish. They reproduce asexually, so they each have only one parent. 
+HTML can be thought of as a tree structure, which is similar to a family tree. Each element has a  *parent*, it sometimes has *siblings* and it also may have *children*. Imagine a large box that you put smaller boxes in- the smaller boxes are contained within the larger box. They can't be in multiple boxes at once, so the larger box can be thought of as their *parent* or *container*. The smaller boxes can contain still smaller boxes, aka *children*. Another way to think of this is to imagine making a family tree for a group of jellyfish. They reproduce asexually, so they each have only one parent.
 
 Here's an example:
 
@@ -185,7 +185,7 @@ video:   https://upload.wikimedia.org/wikipedia/en/2/28/Illusion_movie.ogg
 
 ## Block-level vs. Inline
 
-Elements are usually either "block-level" elements or "inline" elements. 
+Elements are usually either "block-level" elements or "inline" elements.
 
 Block-Level elements:
 
@@ -215,11 +215,11 @@ Here's a [list of the Inline Elements](https://developer.mozilla.org/en-US/docs/
 
 Tables are how we display "tabular data" in HTML. What this really means is something like this:
 ![table examples](http://www.codeproject.com/KB/office/WebExcel/Excel.jpg)
-Any time you have something that would be good in a spreadsheet, Tables are the way to go. 
+Any time you have something that would be good in a spreadsheet, Tables are the way to go.
 
 > Early in the history of the web, people tried to adapt tables for layout purposes. Today, we have CSS Grid Systems and tables are back to being used for their actual purpose. This is one of the first examples of how code can be "abused"- AKA used for a purpose other than what it was designed for. Tables worked well when you could be sure of what size everyone's screens were (remember when monitors were all the same size?) but nowadays they just break when viewed on a small screen (like a phone) or a big one (like a giant iMac monitor).
 
-Table tags: 
+Table tags:
 `<table>,<thead>,<th>,<tbody>,<td>,<tr>,<tfoot>`
 
 Example:
@@ -250,15 +250,15 @@ Example:
 Take a look at the documentation for Tables. Keep this documentation up, and use it to find out how to use the elements you need in order to complete the exercise below.
 [Table Documentation](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table)
 
-## **Exercise** 
+## **Exercise**
 
 Create a new file, call it `favorites.html`.
 `git add` the file to your repository, and commit it.
 
 * Set up the page with the proper structure, like the last exercise
 * Create a table and add a table head element (then, commit your changes!)
-* Create a row of table headers for `First Name`, `Last Name`, `Favorite Animal` 
-* Create a table body with one row and three columns 
+* Create a row of table headers for `First Name`, `Last Name`, `Favorite Animal`
+* Create a table body with one row and three columns
 * Enter your first name, last name, and favorite animal in the corresponding columns (then, commit your changes!)
 
 ## Links
