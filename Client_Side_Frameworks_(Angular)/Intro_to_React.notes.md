@@ -172,8 +172,8 @@ Let's start by examining this simple React user interface.
   <body>
     <div id="app"></div>
 
-    <script src="https://fb.me/react-15.3.0.js"></script>
-    <script src="https://fb.me/react-dom-15.3.0.js"></script>
+    <script src="https://npmcdn.com/react@15.3.1/dist/react.js"></script>
+    <script src="https://npmcdn.com/react-dom@15.3.1/dist/react-dom.js"></script>
 
     <script>
       const element = React.createElement('h1', null, 'Hello world');
