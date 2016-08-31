@@ -58,10 +58,10 @@ This function can be used to test performance time in a web browser:
 
 ```javascript
 function testPerformance(callback, arr) {
-  var t0 = performance.now();
+  var start = performance.now();
   callback(arr);
-  var t1 = performance.now();
-  return t1 - t0;
+  var end = performance.now();
+  return end - start;
 }
 ```
 
@@ -69,10 +69,10 @@ function testPerformance(callback, arr) {
 
 ```javascript
 function testPerformanceNode(callback, arr) {
-  var t0 = process.hrtime();
+  var start = process.hrtime();
   callback(arr);
-  var t1 = process.hrtime(t0);
-  return t1[0] * 1e9 + t1[1];
+  var end = process.hrtime(start);
+  return end[0] * 1e9 + end[1];
 }
 ```
 
