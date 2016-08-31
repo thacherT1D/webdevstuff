@@ -38,6 +38,7 @@ Let’s start with some basic examples…
 First, we can pass variables from our route handlers/view functions directly to the templates.
 
 Update the index.html file:
+
 ```html
 <!DOCTYPE html>
 <html>
@@ -282,8 +283,8 @@ Create a new HTML file called layout.html:
   {% block content %}{% endblock %}
 </body>
 </html>
-```
 Did you notice the {% block content %}{% endblock %} tags? These are like placeholders that child templates fill in.
+
 
 Add another new file called test.html:
 ```html
@@ -292,5 +293,6 @@ Add another new file called test.html:
   <h3> This is the start of a child template</h3>
 {% endblock %}
 ```
+
 
 So, the blocks - {% block content %}{% endblock %} correspond to the block placeholders from the layout file, and since this file extends from the layout, the content defined here is placed in the corresponding placeholders in the layout.
