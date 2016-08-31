@@ -272,7 +272,7 @@ Try some of these out:
 Logic tags can also be used to extend common code from a base template to child templates. You can use the block tag to accomplish this.
 
 Create a new HTML file called layout.html:
-
+```html
 <!DOCTYPE html>
 <html>
 <head>
@@ -282,6 +282,7 @@ Create a new HTML file called layout.html:
   {% block content %}{% endblock %}
 </body>
 </html>
+```
 Did you notice the {% block content %}{% endblock %} tags? These are like placeholders that child templates fill in.
 
 Add another new file called test.html:
