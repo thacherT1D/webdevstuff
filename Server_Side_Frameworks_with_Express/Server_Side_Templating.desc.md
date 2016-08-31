@@ -61,6 +61,7 @@ app.get('/', function(req, res) {
 Fire up the server and test this out. Nice. Try adding another variable to the template.
 
 index.html:
+
 ```html
 <!DOCTYPE html>
 <html>
@@ -73,7 +74,9 @@ index.html:
 </body>
 </html>
 ```
+
 app.js:
+
 ```js
 app.get('/', function(req, res) {
   var title = 'Nunjucks Primer!'
@@ -81,6 +84,7 @@ app.get('/', function(req, res) {
   res.render('index.html', {title: title, description: description});
 });
 ```
+
 Keep in mind that all variable outputs are automatically escaped except for function outputs:
 
 ```js
