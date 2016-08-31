@@ -12,7 +12,7 @@ First off, a templating engine creates web pages (or views) dynamically by combi
   - handle programming logic like loops and conditionals
 
 Before diving in,
-- grab the basic project structure from Github
+- run the `galvanize-express` generator
 - install the dependencies via `npm i`
 - then run the server
 
