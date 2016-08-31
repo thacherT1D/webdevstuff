@@ -2,11 +2,53 @@
 
 ## Objectives
 
-By the end of this article you should be able 
+By the end of this article you should be able to:
+
+- Explain why recursion is useful.
+- Be able to utilize recursion.
 
 ## Background
 
-[Recursion](https://en.wikipedia.org/wiki/Recursion_(computer_science)) is a technique where a method can call itself. Recursion can be used to traverse tree structures. For example, take the following tree, where each letter represents a node in the tree:
+[Recursion](https://en.wikipedia.org/wiki/Recursion_(computer_science)) is a technique where a function can call itself.
+
+Here is an example of a recursive function:
+
+```javascript
+console.log(recursive(10));
+
+function recursive(n){
+  if(n === 0){
+    return 0;
+  }
+  return 1 + recursive(n - 1);
+}
+```
+
+**Exercise:** What do you think the above example prints?
+
+Everything that can be written recursively can be written using a loop and vice versa.
+
+Here is the above example written using a loop:
+
+```javascript
+console.log(loop(10));
+
+function loop(n){
+  var total = 0;
+  while(n--){
+    total++;
+  }
+  return total;
+}
+```
+
+If a loop can do everything recursion can why is this useful?
+
+It is all about using the right tool for the right problem. Some problems are better solved in a recursive manner, and others are better solved using loops.
+
+Recursion is very useful when working with abstract data types such as linked lists, trees and graphs. Recursive solutions to these problems seem very natural and elegant. While loops can provide a solution, some of these problems are difficult to elegantly express using a loop.
+
+ Recursion can be used to traverse tree structures. For example, take the following tree, where each letter represents a node in the tree:
 
 ```
       A
@@ -62,12 +104,64 @@ Make sense?
 
 ## Quick Start
 
-For recursion we need:
+In order to write a recursive function we need to ensure our function has the following:
 
-1. A base case(s)
+1. A Base Case(s)
 1. Recursive step
 
-The recursive step ensures that we progress.  The base case ensures that our recursion eventually exits, preventing an infinite loop.  Also we usually want to pass some data/information around - we do this with function returns.
+Let's re-examine the example from earlier:
+
+```javascript
+function recursive(n){
+  // Base case
+  // If `n` equals 0, return a 0 and stop recursing.
+  if(n === 0){
+    return 0;
+  }
+  // Recursive step
+  return 1 + recursive(n - 1);
+}
+```
+
+A base case is a condition to stop recursing. It ensures we do not recurse forever. Just like when we loop, we generally have a condition to ensure we do not loop forever.
+
+In the example above our base case would be:
+
+```javascript
+//If `n` equals 0, return a 0 and stop recursing.
+if(n === 0){
+  return 0;
+}
+```
+
+The recursive step is where the function invokes itself.
+
+Here the recursive step is:
+
+```javascript
+// Recursive step
+return 1 + recursive(n - 1);
+```
+
+Essentially this line of code is saying, I would like to return 1 + the result of recursive(n - 1);
+
+**Exercise** Step through this code line by line on paper for function call recursive(5).
+
+Example:
+
+```javascript
+recursive(5);
+recursive(n){
+  //does 5 equal zero?
+  //no, keep moving
+  if(n === 0){
+    return 0
+  }
+  //what is the result of recursive(5 - 1) (step through recursive step, ie does 4 equal zero?)
+  return 1 + recursive(n - 1);
+}
+```
+
 
 ### Approach #1 - Start at the bottom
 
