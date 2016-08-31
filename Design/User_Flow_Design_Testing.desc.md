@@ -60,7 +60,8 @@ Using your site map and what we have learned about UI Design and Wireframing, cr
 ## Test Your User Story
 
 Take turns with a classmate to test your ideas.
+
 1. Describe the primary user that you would like your classmate to play and assign them a task to complete
-  - For the example above, we might tell a partner: You are now Cynthia. Cynthia doesn’t care where she’s going, but has free time in May and is on a budget to travel. Cynthia’s task is to set up a travel alert for cheap trips in May.
+  * For the example above, we might tell a partner: You are now Cynthia. Cynthia doesn’t care where she’s going, but has free time in May and is on a budget to travel. Cynthia’s task is to set up a travel alert for cheap trips in May.
 1. Ask your classmate to speak aloud as they “click” each one of your screens. What do they expect they will see next? Take notes. Observe pauses, Remind your classmate to speak their thoughts aloud.
 1. After your classmate has completed the given task, take 1-2 minutes to record feedback. How can you change your wireframe to make completing this task more intuitive?
