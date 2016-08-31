@@ -5,7 +5,7 @@ Let’s look at the basics of Nunjucks, “a simple and powerful JavaScript Temp
 First off, a templating engine creates web pages (or views) dynamically by combining variables and programming logic with HTML. Essentially, you can add placeholders (or tags) to your HTML that are replaced by actual code defined from your router or controller. In general, tags, for the majority of templating engines, fall within one of two categores-
 
 - Variables/Output Tags
-  - surrounded by double curly brackets ``
+  - surrounded by double curly brackets
   - output the results of a logic tag or a variable to the end user
 - Logic Tags
   - surrounded by {% ... %}
@@ -17,7 +17,9 @@ Before diving in,
 - then run the server
 
 Pay attention to where we initialize Nunjucks and set it as the templating language in app.js:
+
 ```js
+
 //import package
 var nunjucks = require('nunjucks');
 // nunjucks configure method
@@ -106,7 +108,7 @@ Don’t forget to call the function in the template - <p></p>
 
 Please see the official documentation for more info on output tags.
 
-Filters
+## Filters
 
 Filters, which are just simple methods, can be used to modify the output value. To illustrate some examples, add another route handler to app.js, like so:
 
@@ -136,11 +138,11 @@ Now just add a new template, filter.html, adding in a number of filters:
 
 Check out all the available filters. You can also extend the functionality of Nunjucks by adding your own custom filters!
 
-Logic Tags
+## Logic Tags
 
 As the name suggests, logic tags let you use, well, logic in your templates.
 
-IF statements
+### IF statements
 
 Here’s a simple example…
 
@@ -172,7 +174,7 @@ logic.html:
 ```
 Test out some more examples of if, elif, and else.
 
-Loops
+### Loops
 
 How about a for loop?
 
