@@ -54,6 +54,8 @@ The above example is [O(n](https://en.wikipedia.org/wiki/Time_complexity#Linear_
 
 Let's take a look at this even more concretely. The following function takes in two arguments: a callback and an array. It returns the time it takes your computer to execute the code in the callback.
 
+This function can be used to test performance time in a web browser:
+
 ```javascript
 function testPerformance(callback, arr) {
   var t0 = performance.now();
@@ -63,7 +65,16 @@ function testPerformance(callback, arr) {
 }
 ```
 
-NOTE: `performance` is not available in Node, so if you are using Node use [Process HRTime](https://nodejs.org/api/process.html#process_process_hrtime).
+`performance` is not available in Node, so if you are using Node use [Process HRTime](https://nodejs.org/api/process.html#process_process_hrtime):
+
+```javascript
+function testPerformanceNode(callback, arr) {
+  var t0 = process.hrtime();
+  callback(arr);
+  var t1 = process.hrtime(t0);
+  return t1[0] * 1e9 + t1[1];
+}
+```
 
 **Exercise** Create an array of length 1,000,000, where each entry is the number 2. Then test the performance of `square` on this array, using the `testPerformance` function provided above.
 

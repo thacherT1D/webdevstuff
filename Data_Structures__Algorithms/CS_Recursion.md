@@ -7,7 +7,7 @@ By the end of this article you should be able to:
 - Explain why recursion is useful.
 - Be able to utilize recursion.
 
-## Background
+## Intro
 
 [Recursion](https://en.wikipedia.org/wiki/Recursion_(computer_science)) is a technique where a function can call itself.
 
@@ -25,6 +25,69 @@ function recursive(n){
 ```
 
 **Exercise:** What do you think the above example prints?
+
+## Parts of a recursive function.
+
+In order to write a recursive function we need to ensure our function has the following:
+
+1. A Base Case(s)
+1. Recursive step
+
+Let's re-examine the example from earlier:
+
+```javascript
+function recursive(n){
+  // Base case
+  // If `n` equals 0, return a 0 and stop recursing.
+  if(n === 0){
+    return 0;
+  }
+  // Recursive step
+  return 1 + recursive(n - 1);
+}
+```
+
+**A base case is** a condition to stop recursing. It ensures we do not recurse forever. Just like when we loop, we generally have a condition to ensure we do not loop forever.
+
+In the example above our base case would be:
+
+```javascript
+//If `n` equals 0, return a 0 and stop recursing.
+if(n === 0){
+  return 0;
+}
+```
+
+**The recursive step is** where the function invokes itself.
+
+Here the recursive step is:
+
+```javascript
+// Recursive step
+return 1 + recursive(n - 1);
+```
+
+Essentially this line of code is saying, I would like to return 1 + the result of `recursive(n - 1)`;
+
+**Exercise** Step through this code line by line on paper for function call `recursive(5)``.
+
+Example:
+
+```javascript
+recursive(5);
+recursive(n){
+  //does 5 equal zero?
+  //no, keep moving
+  if(n === 0){
+    return 0
+  }
+  //what is the result of recursive(5 - 1) (step through recursive step, ie does 4 equal zero?)
+  return 1 + recursive(n - 1);
+}
+```
+
+
+## Loops vs. Recursion
 
 Everything that can be written recursively can be written using a loop and vice versa.
 
@@ -46,9 +109,43 @@ If a loop can do everything recursion can why is this useful?
 
 It is all about using the right tool for the right problem. Some problems are better solved in a recursive manner, and others are better solved using loops.
 
-Recursion is very useful when working with abstract data types such as linked lists, trees and graphs. Recursive solutions to these problems seem very natural and elegant. While loops can provide a solution, some of these problems are difficult to elegantly express using a loop.
+**Recursion is useful for** breaking a large problem into a tiny problem set. Often times large problems can be reduced to a tiny problem that can be repeated over an over.
 
- Recursion can be used to traverse tree structures. For example, take the following tree, where each letter represents a node in the tree:
+Take this recursive function to remove all instances of character from a string:
+
+```javascript
+var word  = 'I am a monkey!';
+console.log(removeChar(word, ' '));
+
+function removeChar(str, targetChar){
+  //base case
+  if(str.length === 0){
+    return '';
+  }
+
+  var currentChar = str.charAt(0);
+
+  if(currentChar === targetChar){
+    //recursive step
+    return '' + removeChar(str.slice(1), targetChar);
+  } else {
+    //recursive step
+    return currentChar + removeChar(str.slice(1), targetChar);
+  }
+}
+```
+
+This example breaks down the problem of reversing a tiny sub problem it repeats:
+
+If the string is empty return an empty string.
+Otherwise, if the first character of the string is the `targetChar` return removeChar without the current character.
+Otherwise, return the current character and the result of removeChar without the current character.
+
+**Exercise:** Define a recursive function that takes an argument `n` and prints the lyrics to 99 bottles of beer on the wall, starting with that number `n`.
+
+**Recursion is useful when** working with abstract data types such as linked lists, trees and graphs. Recursive solutions to these problems seem very natural and elegant. While loops can provide a solution, some of these problems are difficult to elegantly express using a loop.
+
+Recursion can be used to traverse tree structures. For example, take the following tree, where each letter represents a node in the tree:
 
 ```
       A
@@ -98,89 +195,15 @@ function printLetters(node) {
 }
 ```
 
-Make sense?
+**Exercise:** Write a recursive function to reverse a string.
 
 > Check out the [CMU Recursion Slides](http://www.cs.cmu.edu/~15110-f12/Unit05PtA-handout.pdf) for more.
 
-## Quick Start
+## Creating a recursive solution
 
-In order to write a recursive function we need to ensure our function has the following:
+Outlined below are two useful approaches to designing a recursive solution to a problem.
 
-1. A Base Case(s)
-1. Recursive step
-
-Let's re-examine the example from earlier:
-
-```javascript
-function recursive(n){
-  // Base case
-  // If `n` equals 0, return a 0 and stop recursing.
-  if(n === 0){
-    return 0;
-  }
-  // Recursive step
-  return 1 + recursive(n - 1);
-}
-```
-
-A base case is a condition to stop recursing. It ensures we do not recurse forever. Just like when we loop, we generally have a condition to ensure we do not loop forever.
-
-In the example above our base case would be:
-
-```javascript
-//If `n` equals 0, return a 0 and stop recursing.
-if(n === 0){
-  return 0;
-}
-```
-
-The recursive step is where the function invokes itself.
-
-Here the recursive step is:
-
-```javascript
-// Recursive step
-return 1 + recursive(n - 1);
-```
-
-Essentially this line of code is saying, I would like to return 1 + the result of recursive(n - 1);
-
-**Exercise** Step through this code line by line on paper for function call recursive(5).
-
-Example:
-
-```javascript
-recursive(5);
-recursive(n){
-  //does 5 equal zero?
-  //no, keep moving
-  if(n === 0){
-    return 0
-  }
-  //what is the result of recursive(5 - 1) (step through recursive step, ie does 4 equal zero?)
-  return 1 + recursive(n - 1);
-}
-```
-
-
-### Approach #1 - Start at the bottom
-
-1. Pretend you are at the solution
-  * For example:
-    * This can be a node you are searching for
-    * The end of a recursive data structure
-1. How do you know you found the solution (what's your base case)
-1. Now that you have you answer, how do you get this answer back to the top
-1. Since you have solved the problem, assuming you are at the solution...
-1. How do you get to the solution
-  * Easier to think one step at a time
-  * How do I go one step further
-  * If you know how to get from one step to the next, and know when to stop...
-1. $$$
-
-> [Sparknotes on Recursion](http://www.sparknotes.com/cs/recursion/whatisrecursion/section1.rhtml)
-
-### Approach #2 - Identify sub-problems
+### Approach #1 - Identify sub-problems
 
 Often times recursive problems require you to split a big problem into smaller problems.  For example, let's say you were trying to write a recursive function that would find the first element of an array greater than a specific number.  The `for` loop would look like this:
 
@@ -209,25 +232,36 @@ function firstGt(array, number) {
 }
 ```
 
-## Recursive Problem Set
+### Approach #2 - Start at the bottom
 
-First, practice a bit with the following challenges:
+1. Pretend you are at the solution
+  * For example:
+    * This can be a node you are searching for
+    * The end of a recursive data structure
+1. How do you know you found the solution (what's your base case)
+1. Now that you have you answer, how do you get this answer back to the top
+1. Since you have solved the problem, assuming you are at the solution...
+1. How do you get to the solution
+  * Easier to think one step at a time
+  * How do I go one step further
+  * If you know how to get from one step to the next, and know when to stop...
+1. $$$
 
-1. Define a recursive function that takes an argument n and prints the lyrics to 99 bottles of beer on the wall, starting with that number `n`
-1. Define a recursive function that takes an argument n and returns the fibonacci value of that position. The fibonacci sequence is 0, 1, 1, 2, 3, 5, 8, 13, 21... So fib(5) should return 5 and fib(6) should return 8.
-1. Define a recursive function that returns true if a string is a palindrome and false otherwise.
-1.  Get the JSON data from this Reddit post using an http request: `http://www.reddit.com/r/aww/comments/zzg3k/my_local_humane_society_posts_pictures_of_new/.json`.  Write code to print out the text of each comment in your terminal.  Write code that counts the number of comments, as well.
+> [Sparknotes on Recursion](http://www.sparknotes.com/cs/recursion/whatisrecursion/section1.rhtml)
 
-Then make all of the tests pass in [Exercises/src/recursion/recursive-iteration.js](../Exercises/src/recursion/recursive-iteration.js).
 
-> If you like, you can write an iterative solution to the problem first, then write the recursive solution.
+**Exercise:** Define a recursive function that takes an argument n and returns the fibonacci value of that position. The fibonacci sequence is 0, 1, 1, 2, 3, 5, 8, 13, 21... So fib(5) should return 5 and fib(6) should return 8
 
-For further practice you can also do:
+## More Exercises
 
-[https://github.com/gSchool/js-hof-filter-map-reduce](https://github.com/gSchool/js-hof-filter-map-reduce)
+
 
 #### Stretch goals
 
+> If you like, you can write an iterative solution to the problem first, then write the recursive solution.
+
+1. Define a recursive function that returns true if a string is a palindrome and false otherwise.
+1. Define a recursive function to calculate the factorial for a given number.
 1. Convert Roman Numerals to Integers
 1. [Recursion exercises](https://roman01la.github.io/recursion-exercises/)
 
