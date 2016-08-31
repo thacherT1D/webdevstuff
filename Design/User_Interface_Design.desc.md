@@ -1,11 +1,11 @@
 ## Objectives
 
-- Define what user interface design is.
-- Explain why UI design is important to both users and developers.
-- Style common user interface elements.
-- Explain the how layout, color, texture, and typography are the foundation of good UI.
+- Define what user interface design is
+- Explain why UI design is important to both users and developers
+- Style common user interface elements
+- Explain the how layout, color, texture, and typography are the foundation of good UI
 
-## What's user interface design?
+## What is user interface design?
 
 A **user interface** is a shared boundary across which a user exchanges information with another entity. Often in computing, a user interface is the bridge between the immaterial world that exists in code and the material world that we physically interact with. Users provide input to the immaterial world through devices like a keyboard, mouse, trackpad, or touch screen.
 
@@ -95,7 +95,7 @@ Here are some examples of different fonts.
 
 ## Exercise
 
-Students participate in classroom design critique.
+Look at a website that you regularly use and think about the UI decisions that went into designing it. Explain your thoughts to another student. 
 
 ## Resources
 
