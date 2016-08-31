@@ -55,9 +55,10 @@ Take a few minutes to think about the user flow of your site and map it out with
 
 ## Exercise - Create Your Wireframes
 
-Using your site map and what we have learned about UI Design and Wireframing, create your wireframes for this idea (2-5 wireframes for the needs of this exercise)
+Using your site map and what we have learned about [User Interface Design](/redirects/articles/5114)
+ and [Wireframing](/redirects/articles/5118), create your wireframes for this idea (2-5 wireframes for the needs of this exercise)
 
-## Test Your User Story
+## Exercise - Test Your User Story
 
 Take turns with a classmate to test your ideas.
 
