@@ -283,6 +283,7 @@ Create a new HTML file called layout.html:
   {% block content %}{% endblock %}
 </body>
 </html>
+```
 Did you notice the {% block content %}{% endblock %} tags? These are like placeholders that child templates fill in.
 
 
