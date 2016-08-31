@@ -15,12 +15,14 @@ You create or understand the user story by answering questions about who your us
 User flow is how the user is guided to navigate around your site. This can be done explicitly or implicitly through many different design elements, such as navigation and menus, buttons, fonts, colors, etc. There can be more than a single user flow, for example when there are multiple features, but the focus should always be on the primary user flow.
 
 ## Exercise - Framing Your Idea
+
 For this project (or just this activity) choose a problem/pain point, data set, or game/art experience as your starting point and then answer the following questions:
 - Who is your primary user? (i.e. who would use your product?)
 - In what context? when?
 - How would your user use your product/solution?
 
 ## An Example Idea
+
 **Your Idea/Starting Point**
 I wish I knew when a flight was at its cheapest without having to check a website.
 
@@ -55,6 +57,7 @@ Take a few minutes to think about the user flow of your site and map it out with
 Using your site map and what we have learned about UI Design and Wireframing, create your wireframes for this idea (2-5 wireframes for the needs of this exercise)
 
 ## Test Your User Story
+
 Take turns with a classmate to test your ideas.
 1. Describe the primary user that you would like your classmate to play and assign them a task to complete
   - For the example above, we might tell a partner: You are now Cynthia. Cynthia doesn’t care where she’s going, but has free time in May and is on a budget to travel. Cynthia’s task is to set up a travel alert for cheap trips in May.
