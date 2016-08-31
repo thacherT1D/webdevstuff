@@ -2,7 +2,7 @@
 
 ## Objectives
 
--
+By the end of this article you should be able 
 
 ## Background
 
