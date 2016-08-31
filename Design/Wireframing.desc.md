@@ -5,6 +5,8 @@
 - Create simple wireframes as part of project planning process
 
 ## What is a Wireframe
+![balsamiq mockup](https://media.balsamiq.com/img/examples/mytunez-sketch.png)
+
 A wireframe is an illustration of a page’s interface, focusing on space allocation, content priority, functionality, and intended behaviors. For these reasons, wireframes typically do not include any styling, color, or graphics. Wireframes also help establish relationships between a website’s various templates.
 
 ## The Value of Wireframes
