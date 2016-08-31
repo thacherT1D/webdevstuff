@@ -15,7 +15,10 @@ Wireframes are a great place to get started with any project because they help y
 - Confirm design intended functionality
 
 ## Types of Wireframes
-- **Low Fidelity** wireframes are most often black and white, drawn (usually by hand) in a basic manner, showing some of the basic nature of the planned content using simple images, space blocks, and filler text, such as lorem ipsum. These help to facilitate planning and team communication.
+![](https://www.ecommercewiki.org/wikis/www.ecommercewiki.org/images/1/18/Low_fidelity_wireframe.png)
+**Low Fidelity** wireframes are most often black and white, drawn (usually by hand) in a basic manner, showing some of the basic nature of the planned content using simple images, space blocks, and filler text, such as lorem ipsum. These help to facilitate planning and team communication.
+
+
 - **Mid/High-fidelity** wireframes are a much more refined version, beginning to include digital versions, approximations of copy and content, planned behaviours and interactive elements.
 - **Mockups** are wireframes with visual skinning, such as color, typography, images, and more exact layouts. These can also include the code specifications.
 
