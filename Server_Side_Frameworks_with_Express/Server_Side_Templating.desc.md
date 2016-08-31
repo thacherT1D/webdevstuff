@@ -120,6 +120,7 @@ app.get('/filter', function(req, res) {
 ```
 
 Now just add a new template, filter.html, adding in a number of filters:
+
 ```html
 <!DOCTYPE html>
 <html>
@@ -132,6 +133,7 @@ Now just add a new template, filter.html, adding in a number of filters:
 </body>
 </html>
 ```
+
 Check out all the available filters. You can also extend the functionality of Nunjucks by adding your own custom filters!
 
 Logic Tags
@@ -143,13 +145,16 @@ IF statements
 Here’s a simple example…
 
 app.js:
+
 ```js
 app.get('/logic', function(req, res) {
   var title = 'Nunjucks Logic!'
   res.render('logic.html', {title: title});
 });
 ```
+
 logic.html:
+
 ```html
 <!DOCTYPE html>
 <html>
@@ -277,7 +282,9 @@ Try some of these out:
 Logic tags can also be used to extend common code from a base template to child templates. You can use the block tag to accomplish this.
 
 Create a new HTML file called layout.html:
+
 ```html
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -288,10 +295,12 @@ Create a new HTML file called layout.html:
 </body>
 </html>
 ```
+
 Did you notice the {% block content %}{% endblock %} tags? These are like placeholders that child templates fill in.
 
 
 Add another new file called test.html:
+
 ```html
 {% extends "layout.html" %}
 {% block content %}
