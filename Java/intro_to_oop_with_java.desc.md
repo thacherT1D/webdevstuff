@@ -4,7 +4,7 @@
 
 As evidenced in the Intro to Java, Java is a programming language built with OOP in it's core. Every program must be made up of classes and composed of objects to be valid, let alone run. The ideas around abstraction, encapsulation, inheritance, and polymorphism are ever present and inform programming in Java.
 
-The referenced exercises are all from the [Java Curriculum]() repository on Github. Fork and clone that repository to work through those exercises.
+The referenced exercises are all from the [Java Curriculum](https://github.com/gSchool/java-curriculum) repository on Github. Fork and clone that repository to work through those exercises.
 
 ## Objectives
 - List and explain the 4 pillars of Object Oriented Programming
