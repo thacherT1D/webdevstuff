@@ -61,7 +61,27 @@ console.log(a); // outer
 
 Is this what you expected? In JavaScript, the most local version of a variable is accessed by the interpreter first.
 
-To learn about block scope, see the following articles on the Mozilla Developer Network.
+Block scope was introduced in ES6 with two new keywords: `let` and `const`. It is a more common type of scope in other programming languages allowing variables to be defined and use only within a block (designated with curly braces, `{}`).
+
+The difference between `let` and `const` is that `const` does not allow reassignment of the variable whereas `let` does.
+
+```javascript
+var x = 0;
+const y = 1;
+let z = 2;
+
+if (x < y) {
+  var x = 3;
+  let w = 4;
+  let z = 5
+
+  y = 6;          // TypeError
+  console.log(z); // 5
+}
+
+console.log(w);   // ReferenceError
+console.log(z);   // 2
+```
 
 - [`let` statement](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Statements/let)
 - [`const` statement](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Statements/const)
