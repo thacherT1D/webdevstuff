@@ -343,15 +343,17 @@ Assuming you have parsed the same JSON and have assigned it to the variable `res
 
 ### `reduce`
 
-The `reduce` method has a lot to offer and can be thought of as a swiss army knife. The use of `reduce` is best described through a couple examples of similar problems. Let's look at two problems, summing all of the numbers in an array and multiplying all the numbers in an array.
+The `reduce` method has a lot to offer and can be thought of as a swiss army knife. On a high level, `reduce` provides the ability to take an array of items and consolidate it down to one value. In order to do so, it keeps track of a "running total", and updates that running total for each item in the array.
+
+The use of `reduce` is best described through a couple examples of similar problems. Let's look at two problems, summing all of the numbers in an array and multiplying all the numbers in an array.
 
 ```javascript
 var arr = [1, 2, 3, 4];
 
 var result = 0;
 
-for (var num of arr) {
-  result = result + num;
+for (var element of arr) {
+  result = result + element;
 }
 
 console.log(result); // 10
@@ -362,8 +364,8 @@ var arr = [1, 2, 3, 4];
 
 var result = 1;
 
-for (var num of arr) {
-  result = result * num;
+for (var element of arr) {
+  result = result * element;
 }
 
 console.log(result); // 24
@@ -379,11 +381,11 @@ The `reduce` method takes these differences as arguments that you can specify. A
 ```javascript
 var arr = [1, 2, 3, 4];
 
-var sum = arr.reduce(function(result, element) {
+var sum = arr.reduce(function(result, element, index, array) {
   return result + element;
 }, 0);
 
-var product = arr.reduce(function(result, element) {
+var product = arr.reduce(function(result, element, index, array) {
   return result * element;
 }, 1);
 
@@ -396,68 +398,71 @@ console.log(product); // 24
 
 See the [`Array.prototype.reduce` method](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce) documentation on the Mozilla Developer Network.
 
-**EXERCISE:** While our examples have been with numbers, this can work for many data types as well.
+### Exercise
+
+While all of our examples have reduced down to numbers, `reduce` can produce any data type.
 
 Write a function named `concatenate` that takes in one argument, `arr`, (array of strings) and returns the concatenation of all the strings in the array.
 
-Then write a function named `flatten` that takes in one argument, `arr`, (array of arrays) and returns a new array that combines all of elements of each inner array. For example, given `[[1], [2, 3], [4]]`, then return `[1, 2, 3, 4]`.
-
-## What's a closure?
-
-A **closure** is a function that encloses the scope that exists when its created. To understand closures, lets revisit the original example of a higher-order function, but make one modification.
-
-```javascript
-function createClosure() {
-  var message = 'This information is enclosed with the returned function.';
-
-  return function() {
-    console.log(message);
-  }
-}
-
-var closure = createClosure();
-closure();
-
-// Similarly, you can do
-createClosure()();
-```
-
-In the `createClosure` function scope, a `message` variable is declared and assigned a value. Then a new function is created and given a reference to the `createClosure` function scope. This newly created function is then returned and stored in the `closure` variable. This function is a closure because, when invoked, it can reference variables inside its parent scope.
-
 ### Exercise
 
-What does this code output?
+Then write a function named `flatten` that takes in one argument, `arr`, (array of arrays) and returns a new array that combines all of elements of each inner array. For example, given `[[1], [2, 3], [4]]`, then return `[1, 2, 3, 4]`.
+
+## What is a closure?
+
+A **closure** is a function that has access to the scope where it was created. Take a look at the following example.
 
 ```javascript
 function createClosure() {
   var count = 0;
 
   return function() {
-     return count++;
+    count += 1;
+    return count;
   }
 }
+```
 
+When `createClosure` is called, It will do the following:
+
+1. Initialize the `count` variable within its function scope to 0.
+1. Return a function that when called, increments the `count` variable and returns it.
+
+The returned function has access to the `count` variable even though the `createClosure` function has already finished executing. Even more so, when `createClosure` is called, a new internal `count` variable is created.
+
+```
 var closure1 = createClosure();
 var closure2 = createClosure();
 
 console.log('Closure 1');
-console.log(closure1());  // ???
-console.log(closure1());  // ???
-console.log(closure1());  // ???
+console.log(closure1());  // 1
+console.log(closure1());  // 2
+console.log(closure1());  // 3
 
 console.log('Closure 2');
-console.log(closure2());  // ???
-console.log(closure2());  // ???
-console.log(closure2());  // ???
+console.log(closure2());  // 1
+console.log(closure2());  // 2
+console.log(closure2());  // 3
 ```
 
-## Conclusion
+### Exercise
 
-Functions in JavaScript are _very_ powerful. In many ways, they are more powerful than functions in other languages. That said, this power can be complex and confusing.
+Turn and talk to your neighbor to discuss what is a closure. Use the following example to highlight the closure.
 
-This tour of the hidden power of JavaScript functions is more of an overview of what's possible. As you continue building JavaScript applications, you'll find more use cases these techniques. For now, use the tools you're comfortable with and try experimenting with new ones from time to time.
+```javascript
+function greeter(myName) {
+  return function (yourName) {
+    return `Hello ${yourName}. My name is ${myName}.`
+  }
+}
 
-## Exercise
+var kenGreeter = greeter('Ken');
+kenGreeter('Ryan');               // ???
+```
+
+When you are done, I'll cold call on a few of you for your answer.
+
+## Assignment
 
 [Function Tests](https://github.com/gSchool/function-tests)
 
