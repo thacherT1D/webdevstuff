@@ -61,7 +61,7 @@ console.log(a); // outer
 
 Is this what you expected? In JavaScript, the most local version of a variable is accessed by the interpreter first.
 
-Block scope was introduced in ES6 with two new keywords: `let` and `const`. It is a more common type of scope in other programming languages allowing variables to be defined and use only within a block (designated with curly braces, `{}`).
+Block scope was introduced in ES6 with two new keywords: `let` and `const`. It is a more common type of scope in other programming languages allowing variables to be defined and used only within a block (designated with curly braces, `{}`).
 
 The difference between `let` and `const` is that `const` does not allow reassignment of the variable whereas `let` does.
 
