@@ -1,11 +1,11 @@
 ## Objectives
 
 - Explain the three types of scope.
+- Use IIFEs to enclose scope.
 - Explain what hoisting is.
 - Explain what a higher-order function is.
 - Use the `map`, `filter`, and `reduce` methods on arrays.
 - Explain what a closure is.
-- Use IIFEs to enclose scope.
 
 ## What are the three types of scope?
 
@@ -66,22 +66,73 @@ To learn about block scope, see the following articles on the Mozilla Developer 
 - [`let` statement](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Statements/let)
 - [`const` statement](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Statements/const)
 
-### Exercise
+## How do you use IIFEs to enclose scope?
 
-What will happen when this code is run?
+One of the ways to enclose scope is by creating an immediately invoked functional expression (**IIFE**). With IIFEs, code is wrapped in a function, creating a new scope, and then invoked immediately.
 
 ```javascript
-var a = 'outer';
+(function() {
+  // ALL CODE HERE
+})();
+```
 
-function myFunction() {
-  a = 'inner';
-  console.log(a); // ???
+Ever wondered why you've seen entire JavaScript files wrapped in an IIFE? By using an IIFE, variables are no longer declared in the global scope.
+
+IIFEs can be invoked with arguments as well. Consider the following code. What do you think the final output will be?
+
+```javascript
+var arr = [];
+
+for(var i = 0; i < 3; i++) {
+  arr.push(function() {
+    console.log(i);
+  });
 }
 
-myFunction();
-
-console.log(a); // ???
+for(var func of arr) {
+  func();
+}
 ```
+
+Because these callback functions are not executed immediately, they'll output the final value of `i` multiple times. To maintain each value of `i`, the `for` loop's body can be wrapped in an IIFE.
+
+```javascript
+var arr = [];
+
+for(var i = 0; i < 3; i++) {
+  (function(j) {
+    arr.push(function() {
+      console.log(j);
+    });
+  })(i);
+}
+
+for(var func of arr) {
+  func();
+}
+```
+
+By creating an IIFE with one parameter and invoking it with the value of `i`, the value of `i` is stored in the parameter `j`.
+
+ES6 makes things much simpler with the capabilities of block scope.
+
+```javascript
+const arr = [];
+
+for(let i = 0; i < 3; i++) {
+  arr.push(function() {
+    console.log(i);
+  });
+}
+
+for(const func of arr) {
+  func();
+}
+```
+
+### Exercise
+
+Write down in your own words the three different types of scope and how they work. When you are done, I'll cold call on a few of you for your answer.
 
 ## What's hoisting?
 
@@ -103,7 +154,7 @@ function myFunction() {
 myFunction();
 ```
 
-This is an example of what _not_ to do and there are a few reasons why it's important to know this. First, it's essential to understand why building a language in 10 days is a bad idea. More importantly, you can't make any assumptions that a JavaScript variable is global or will throw an `Unreferenced error` without first checking if it's declared somewhere inside a function. Remember, all declared variables start out as `undefined` even if it's hoisted from way down in the function body. For these reasons, we recommend declaring all variables at the top of a function, with the exception of variables used in `for` statements.
+This is an example of what _not_ to do and there are a few reasons why it's important to know this. First, it's essential to understand why building a language in 10 days is a bad idea. More importantly, you can't make any assumptions that a JavaScript variable is global or will throw an `Unreferenced error` without first checking if it's declared somewhere inside a function. Remember, all declared variables start out as `undefined` even if it's hoisted from way down in the function body. For these reasons, we recommend declaring all variables at the top of a function, with the exception of variables used in `for` statements. ES6's `let` and `const` do not hoist to the top of a function since they are block scoped, which will be great in the future.
 
 ```javascript
 var array = [1, 2, 3, 4];
@@ -118,6 +169,10 @@ for (var element of iterable) {
 ```
 
 Until you absolutely need to share data across may different functions, then we recommend that you declare variables as local as possible. Since variables in the global scope can be changed from anywhere, it's hard to reason about how these variables change over time as the program executes.
+
+### Exercise
+
+Turn and talk to your neighbor and explain what is hoisting in your own words. When you are done, I'll cold call on a few of you for your answer.
 
 ## What's a higher-order function?
 
@@ -143,7 +198,7 @@ There are four common higher-order functions for arrays—`forEach`, `map`, `fil
 
 ### `forEach`
 
-The `forEach` method invokes a callback function for each element of an array.
+The `forEach` method invokes a callback function for each element of an array. It does not return anything.
 
 ```javascript
 var arr = [1, 2, 3, 4];
@@ -167,7 +222,7 @@ See the [`Array.prototype.forEach` method](https://developer.mozilla.org/en-US/d
 
 ### `map`
 
-The `map` method invokes a callback function for each element of an array, but allows each element to be transformed and pushed to a new array. In other words, the `map` method:
+The `map` method is a very elegant way to transform items in an array into something different through invoking a callback function on each element of an array. In other words, the `map` method:
 
 - Creates a new array that's the same size as the original array.
 - Applies a callback function to each element of the original array.
@@ -176,7 +231,7 @@ The `map` method invokes a callback function for each element of an array, but a
 ```javascript
 var arr = [1, 2, 3, 4];
 
-var squares = arr.map(function(element) {
+var squares = arr.map(function(element, index, array) {
   return element * element;
 });
 
@@ -201,22 +256,63 @@ This is really useful when grabbing information from an HTTP response and transf
 
 See the [`Array.prototype.map` method](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map) documentation on the Mozilla Developer Network.
 
-**EXERCISE:** How would you get the IMDB rating as a number from a search request?
+### Exercise
+
+Turn and talk to your neighbor and explain the difference between `forEach` and `map`. When you are done, I'll cold call on a few of you for your answer.
+
+### Exercise
+
+Look at the following JSON of a search query returned by the OMDB API.
+
+```javascript
+[
+  {
+    "Title": "Jurassic Park",
+    "Year": "1993",
+    "imdbID": "tt0107290",
+    "Type": "movie",
+    "Poster": "http://ia.media-imdb.com/images/M/MV5BMjM2MDgxMDg0Nl5BMl5BanBnXkFtZTgwNTM2OTM5NDE@._V1_SX300.jpg"
+  },
+  {
+    "Title": "Jurassic World",
+    "Year": "2015",
+    "imdbID": "tt0369610",
+    "Type": "movie",
+    "Poster": "http://ia.media-imdb.com/images/M/MV5BMTQ5MTE0MTk3Nl5BMl5BanBnXkFtZTgwMjczMzk2NTE@._V1_SX300.jpg"
+  },
+  {
+    "Title": "The Lost World: Jurassic Park",
+    "Year": "1997",
+    "imdbID": "tt0119567",
+    "Type": "movie",
+    "Poster": "http://ia.media-imdb.com/images/M/MV5BMDFlMmM4Y2QtNDg1ZS00MWVlLTlmODgtZDdhYjY5YjdhN2M0XkEyXkFqcGdeQXVyNTI4MjkwNjA@._V1_SX300.jpg"
+  },
+  {
+    "Title": "Jurassic Park III",
+    "Year": "2001",
+    "imdbID": "tt0163025",
+    "Type": "movie",
+    "Poster": "http://ia.media-imdb.com/images/M/MV5BMjA2NzAyMDgyM15BMl5BanBnXkFtZTYwOTQ5Mjg5._V1_SX300.jpg"
+  }
+]
+```
+
+Assuming you have parsed the above JSON and have assigned it to the variable `results`. Write a function using `map` to retrieve the IMDB rating for each movie into an array?
 
 ### `filter`
 
-After `map`, the `filter` method is probably the second most commonly used higher-order function. The `filter` method invokes a callback function for each element of an array, but allows each element to be filtered out of a new array. In other words, the `filter` method:
+After `map`, the `filter` method is probably the second most commonly used higher-order function. The `filter` method produces a new array with only items that satisfy a test. That test is codified as a function that takes in an item and returns a boolean, `true` to include the item in the outputted array, and `false` if not. In other words, the `filter` method:
 
 - Creates a new array that's no larger than the original array.
 - Applies a callback function to each element of the original array.
 - Pushes the element into the new array if the callback returns `true`.
 
-The callback function passed to the `filter` method is called a **predicate**.
+The callback function passed to the `filter` method is often called a **predicate**.
 
 ```javascript
 var arr = [1, 2, 3, 4];
 
-var odds = arr.filter(function(element) {
+var odds = arr.filter(function(element, index, array) {
   return element % 2 !== 0;
 });
 
@@ -241,7 +337,9 @@ console.log(odds); // [1, 3]
 
 See the [`Array.prototype.filter` method](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) documentation on the Mozilla Developer Network.
 
-**EXERCISE:** How would you filter the movies in the search results from OMDB with an ratings that are kid-friendly (G or PG)?
+### Exercise
+
+Assuming you have parsed the same JSON and have assigned it to the variable `results`. Write a function using `filter` to retrieve all movies that have were released before the year 2000?
 
 ### `reduce`
 
@@ -352,54 +450,6 @@ console.log(closure2());  // ???
 console.log(closure2());  // ???
 console.log(closure2());  // ???
 ```
-
-## How do you use IIFEs to enclose scope?
-
-One of the ways to enclose scope is by creating an immediately invoked functional expression (**IIFE**). With IIFEs, code is wrapped in a function, creating a new scope, and then invoked immediately.
-
-```javascript
-(function() {
-  // ALL CODE HERE
-})();
-```
-
-Ever wondered why you've seen entire JavaScript files wrapped in an IIFE? By using an IIFE, variables are no longer declared in the global scope.
-
-IIFEs can be invoked with arguments as well. Consider the following code. What do you think the final output will be?
-
-```javascript
-var arr = [];
-
-for(var i = 0; i < 3; i++) {
-  arr.push(function() {
-    console.log(i);
-  });
-}
-
-for(var func of arr) {
-  func();
-}
-```
-
-Because these callback functions are not executed immediately, they'll output the final value of `i` multiple times. To maintain each value of `i`, the `for` loop's body can be wrapped in an IIFE.
-
-```javascript
-var arr = [];
-
-for(var i = 0; i < 3; i++) {
-  (function(j) {
-    arr.push(function() {
-      console.log(j);
-    });
-  })(i);
-}
-
-for(var func of arr) {
-  func();
-}
-```
-
-By creating an IIFE with one parameter and invoking it with the value of `i`, the value of `i` is stored in the parameter `j`.
 
 ## Conclusion
 
