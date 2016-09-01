@@ -4,6 +4,8 @@
 
 As evidenced in the Intro to Java, Java is a programming language built with OOP in it's core. Every program must be made up of classes and composed of objects to be valid, let alone run. The ideas around abstraction, encapsulation, inheritance, and polymorphism are ever present and inform programming in Java.
 
+The referenced exercises are all from the [Java Curriculum]() repository on Github. Fork and clone that repository to work through those exercises.
+
 ## Objectives
 - List and explain the 4 pillars of Object Oriented Programming
 - Implement getters and setters to work with private / protected fields
@@ -16,7 +18,7 @@ As evidenced in the Intro to Java, Java is a programming language built with OOP
 
 ### Abstraction
 
-Abstraction is the act of hiding complexity and instead providing a simplified interface to interact with the program.
+Abstraction is the act of hiding complexity and instead providing a simplified interface to interact with the program. There aren't specific parts of Java that implement this - it's done anytime you write a function or class or object that contains complexity and is called elsewhere.
 
 ### Encapsulation
 
@@ -41,9 +43,11 @@ There are several types of Polymorphism:
 
 ## Encapsulation in Java
 
+In Javascript, we used closures and function scoping rules to encapsulate state and behavior. Java has more general declarations that can control access and visibility.
+
 ### Visibility
 
-In order to understand Encapsulation, you must know about the concept of _visibility_.  Java allows you to define which classes, methods and variables are visible to which pieces of code.  There are 3 key words that express the visibility of a method or field.
+Visibility declarations in Java allow you to define which classes, methods and variables are visible to which pieces of code.  There are 3 key words that express the visibility of a method or field:
 
 - public
 - private
@@ -53,7 +57,7 @@ When a method / field is marked as `private`, only code _inside_ the class defin
 
 Marking a method / field as `public` allows for code that is inside and outside the class definition to access that method / field.
 
-If a method / field is marked as `protected`, it can only be accessed by classes that extend / inherit to its class definition. This will be discussed in greater detail in the inheritance lesson.
+If a method / field is marked as `protected`, it can only be accessed by classes that extend / inherit to its class definition.
 
 You can set the visibility of methods / fields like so:
 
@@ -88,7 +92,7 @@ error: allInFavor has private access in Proposal
 
 #### Exercise 1
 
-Fix the `Proposal.java` file so that visibility is properly implemented.
+Fix `Proposal.java` file so that visibility is properly implemented.
 
 #### Exercise 2
 
@@ -183,12 +187,6 @@ Notice how even though you did some major surgery to that class, the code that _
 javac -d bin Encapsulation03.java && java -cp bin galvanize.Encapsulation03
 ```
 
-### Resources
-
-- https://docs.oracle.com/javase/tutorial/java/concepts/index.html
-- https://docs.oracle.com/javase/tutorial/java/javaOO/accesscontrol.html
-
-
 ## Inheritance in Java
 
 Inheritance is the way in which a sub class can access fields and methods defined in a parent class, and can optionally do things such as:
@@ -197,6 +195,33 @@ Inheritance is the way in which a sub class can access fields and methods define
 - override methods to change their behavior
 
 Classes can only inherit from _one_ other class.
+
+### Inheriting
+
+The basic syntax for inheriting from another class looks like this:
+
+```java
+class Vehicle {
+}
+
+class Car extends Vehicle {
+}
+```
+
+In the example above, `Car` is a subclass of `Vehicle`.
+
+#### Exercise 6
+
+Run the following code:
+
+```
+javac -d bin Inheritance02.java && java -cp bin galvanize.Inheritance02
+```
+
+Then:
+
+- alter `Manager` such that it is a subclass of `Employee`
+- remove the `status` field from `Manager` as well as the `getStatus` method and re-run
 
 ### Method Signatures / Overloading
 
@@ -209,7 +234,7 @@ A **method signature** is comprised of:
 - the types of parameters
 - the order of parameters
 
-Because Java has types, it can be very specific in how it chooses which method to call.  The concept of having different methods with the same name is called _method overloading_.
+Because Java has types, it can be very specific in how it chooses which method to call.  The concept of having different methods with the same name is called _method overloading_. Method overloading helps in understanding method signatures, but is actually a form of polymorphism - ad hoc polymorphism.
 
 The following are all _different method signatures_:
 
@@ -248,7 +273,7 @@ doer.doStuff("with a string", true);  // calls version 3
 doer.doStuff(false, "with a string"); // calls version 4
 ```
 
-#### Exercise 1
+#### Exercise 7
 
 Try it yourself.  Run the following file:
 
@@ -261,33 +286,6 @@ Then:
 
 - overload the `printName` method with a new method with signature that has another parameter `middle` and prints the first / middle / last
 - overload the `printName` method with a new method with signature that has another parameter `lastFirst` that prints the name in the format "last, first"
-
-### Inheriting
-
-The basic syntax for inheriting from another class looks like this:
-
-```java
-class Vehicle {
-}
-
-class Car extends Vehicle {
-}
-```
-
-In the example above, `Car` is a subclass of `Vehicle`.
-
-#### Exercise 2
-
-Run the following code:
-
-```
-javac -d bin Inheritance02.java && java -cp bin galvanize.Inheritance02
-```
-
-Then:
-
-- alter `Manager` such that it is a subclass of `Employee`
-- remove the `status` field from `Manager` as well as the `getStatus` method and re-run
 
 ### Method Overriding and `super.method`
 
@@ -323,7 +321,7 @@ class RunIt {
 
 Notice how calling the `smoker`'s `speak` method with just a string called the subclass' `speak` method.  That's because it matched the _method signature_ exactly.
 
-#### Exercise 3
+#### Exercise 8
 
 Do it yourself:
 
@@ -447,7 +445,7 @@ class SpecialOrder extends Order {
 SpecialOrder order = new SpecialOrder(2);
 ```
 
-#### Exercise 4
+#### Exercise 9
 
 Do it yourself:
 
@@ -480,18 +478,13 @@ Why would you want to use inheritance in an application?  Inheritance lowers the
 
 With inheritance, Customers and Orders could inherit from a `DatabaseQuery` class, and could _inherit_ the `query` method, such that when you make a change to the query method, it affects all classes.
 
-### Resources
-
-- http://stackoverflow.com/questions/14643362/overriding-constructors
-- http://docstore.mik.ua/orelly/java-ent/jnut/ch03_04.htm
-- https://dzone.com/articles/design-patterns-template-method
-
-
 ## Polymorphism in Java
+
+We've already seen two examples of polymorphism in the inheritance section. Method overloading is ad hoc polymorphism and method overriding is subtype polymorphism. We can take polymorphism in java to the next level be enforcing some of these method signatures using abstract classes and interfaces.
 
 ### Abstract Classes
 
-In order to understand Polymorphism, it's helpful to understand Abstract classes.  Abstract classes are classes that can define fields and methods, but cannot be instantiated.  You can define Abstract classes like so:
+Abstract classes are classes that can define fields and methods, but cannot be instantiated.  You can define Abstract classes like so:
 
 ```java
 abstract class Importer {
@@ -558,7 +551,7 @@ Inheritance is one way to _achieve_ polymorphism, if and only if
 
 There are other ways to achieve polymorphism, such as Interfaces.
 
-#### Exercise 1
+#### Exercise 10
 
 **Do it yourself**
 
@@ -574,8 +567,6 @@ Now make all classes inherit from a common abstract base class, and remove the `
 NOTE: `import` is a keyword, so if you try to use `import` as a method name, it will raise a cryptic syntax error.
 
 ### Polymorphism and Interfaces
-
-Inheritance is one way to achieve polymorphism.  Java provides another way to achieve polymorphism: Interfaces.
 
 Interfaces are similar to Abstract Classes, with a few key differences:
 
@@ -607,7 +598,7 @@ class CSVImporter implements Importer {
 }
 ```
 
-#### Exercise 2
+#### Exercise 11
 
 Run the following command:
 
@@ -656,8 +647,14 @@ class Junk {
 
 ### Resources
 
+- https://docs.oracle.com/javase/tutorial/java/concepts/index.html
+- https://docs.oracle.com/javase/tutorial/java/javaOO/accesscontrol.html
+
+- http://stackoverflow.com/questions/14643362/overriding-constructors
+- http://docstore.mik.ua/orelly/java-ent/jnut/ch03_04.htm
+- https://dzone.com/articles/design-patterns-template-method
+
 - http://docs.oracle.com/javase/tutorial/java/TOC.html
 - https://en.wikipedia.org/wiki/Polymorphism_(computer_science)
 - http://www.codejava.net/java-core/the-java-language/12-rules-of-overriding-in-java-you-should-know
 - http://www.artima.com/objectsandjava/webuscript/PolymorphismInterfaces1.html
-
