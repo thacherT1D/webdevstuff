@@ -272,7 +272,7 @@ And open the project in Atom.
 atom .
 ```
 
-In the `app/components/track.jsx` file, type the following code.
+In the `app/components/Track.jsx` file, type the following code.
 
 ```jsx
 import React from 'react';
@@ -296,11 +296,11 @@ const Track = React.createClass({
 export default Track;
 ```
 
-And in the `app/components/app.jsx` file, type the following code.
+And in the `app/components/App.jsx` file, type the following code.
 
 ```jsx
 import React from 'react';
-import Track from 'components/track';
+import Track from './Track';
 
 const App = React.createClass({
   getInitialState() {
@@ -406,7 +406,7 @@ Being stateful, an `<App />` component is only responsible for managing a compon
 **NOTE:** The `Array.prototype.map()` method collects the returned `<Track />` components into an array. When an array is used as a component's child, its elements conveniently become individual children of that parent component.
 
 ```jsx
-// app/components/app.jsx
+// app/components/App.jsx
 
 render() {
   return <div>
@@ -428,7 +428,7 @@ Being stateless, each `<Track />` component is responsible for handling the comp
 **NOTE:** The `key` prop is used by React to uniquely identify sibling components of the same type. If a keyed component is changed in any way, React can more efficiently update the DOM hierarchy. The `key` prop is *not* accessible via `this.props.key`.
 
 ```jsx
-// From app/components/track.jsx
+// From app/components/Track.jsx
 
 render() {
   return <div>
@@ -444,7 +444,7 @@ render() {
 Inside the `render()` method of a `<Track>` component, the key-value pairs of the `this.props.track` object are combined with presentation logic to produce a user interface. This user interface allows a user to view a track's information and increment its `likes` counter. When the `<button />` component is clicked, the `handleClick()` event handler method is invoked. The following code snippet illustrates the `handleClick()` method of a `<Track />` component.
 
 ```jsx
-// From app/components/track.jsx
+// From app/components/Track.jsx
 
 handleClick() {
   this.props.incrementLikes(this.props.track);
@@ -458,7 +458,7 @@ In React, a **state mutator** is a method inside a stateful component that invok
 **NOTE:** In React, **autobinding** is the process of binding a component to every method that's defined in its specification object. This is why the `this` variable inside the `incrementLikes()` method refers to an `<App />` component even though it was invoked using `this.props.incrementLikes()`. React automatically binds components to methods specified in the `React.createClass()` method but not in an ES6 class.
 
 ```jsx
-// From app/components/app.jsx
+// From app/components/App.jsx
 
 incrementLikes(track) {
   const nextTracks = this.state.tracks.map((element) => {
