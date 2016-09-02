@@ -18,6 +18,8 @@ Big-O is used to to understand:
 
 Being able to understand the complexity of a given algorithm is important because it empowers developers to choose the right algorithm for the task at hand (It will also help you during your interviews.)
 
+//Why not measure time using time? computer hardware advances
+
 Big-O notation deals with the **worst** case scenario for the algorithm. In other words, if the program **may** run quickly but there is a chance it could take a long time given some input then the Big-O runtime will deal with the longer case.
 
 To put it yet another way, Big-O runtime deals with [asymptotic approximations](https://en.wikipedia.org/wiki/Asymptotic_analysis) of the complexity of the algorithm (http://mathworld.wolfram.com/Asymptotic.html).  It tends to care much more about how complex a program is when the input size is very large because that is typically when the performance matters the most.

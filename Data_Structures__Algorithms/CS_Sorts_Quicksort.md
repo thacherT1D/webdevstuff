@@ -28,10 +28,14 @@ Before worrying about implementing a quicksort with the best possible space comp
 
 ```javascript
 function quickSort(arr) {
-  /* 1. If the length of the array is less than 2, it is already sorted, so return it.
-  2. Otherwise, create two empty arrays (one for the left and one for the right), and set the first value in arr equal to the pivot.
-  3. Compare every element in the array to the pivot. If the element is less than the pivot, push it into the left array. Otherwise, push it into the right array.
-  4. Recrusively call quickSort on the left array and the right array, then concatenate these arrays together with the pivot value in between them, and return this larger array. */
+  // If the length of the array is less than 2, it is already sorted, so return it.
+  // Otherwise, create two empty arrays (one for the left and one for the right)
+  // Create a variable named pivot, set to the first value in array.
+  // Compare every element in the array to the pivot.
+  // - If the element is less than the pivot, push it into the left array.
+  // - Otherwise, push it into the right array.
+  // Recursively call quickSort on the left array and the right array
+  // Concatenate the resulting arrays together with the pivot value in between them, and return this larger array.
 }
 ```
 
