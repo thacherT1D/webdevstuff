@@ -17,16 +17,18 @@ In this section, we'll learn about two other sorting algorithms: Merge Sort and 
 
 Merge sort works by decomposing the array into smaller chunks, which are then sorted and merged together. This process goes all the way down to arrays of size 1, which are super easy to sort!
 
+![merge sort](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/172/mergesort.gif)
+
 Here's a step-by-step description of merge sort:
 
-**Pseudo Code:**
-
-1. If your array has a length less than 2, congratulations! It's already sorted.
-2. Otherwise, cut your array in half, and consider the two sub-arrays separately.
-3. Sort each of your smaller subarrays using merge sort.
-4. Merge your two subarrays together, and return the merged array.
-
-![merge sort](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/172/mergesort.gif)
+```javascript
+function mergeSort(arr){
+  // 1. If your array has a length less than 2, congratulations! It's already sorted.
+  // 1. Otherwise, cut your array in half, and consider the two sub-arrays separately.
+  // 1. Sort each of your smaller subarrays using merge sort.
+  // 1. Merge your two subarrays together, and return the merged array.
+}
+```
 
 Through this recursive process, you'll wind up with a sorted array!
 
@@ -34,15 +36,15 @@ In order to implement this function, it's useful to have a helper function that 
 
 ```javascript
 function merge(arr1, arr2) {
-
-	// 1. declare a new empty array, and pointers corresponding to indices in arr1 and arr2 (set them both to 0)
-	// 2. if the first element in arr1 is less than the first element in arr2, push the first element in arr1 to the new array, and move the pointer for arr1 one spot to the right. Otherwise, do this for arr2.
-	// 3. Repeat this process until you've gone through one of the arrays
-	// return the new array, concatenated with whatever elements are remaining from the array that you haven't exhausted yet.
+  // 1. declare a new empty array, and pointers corresponding to indices in arr1 and arr2 (set them both to 0)
+  // 2. if the first element in arr1 is less than the first element in arr2, push the first element in arr1 to the new array, and move the pointer for arr1 one spot to the right. Otherwise, do this for arr2.
+  // 3. Repeat this process until you've gone through one of the arrays
+  // return the new array, concatenated with whatever elements are remaining from the array that you haven't exhausted yet.
 }
 ```
 
-Once you've implemented this merge function, you can implement merge sort using the pseudo code outlined above.
+**Exercise:** Implement the `mergeSort` and `merge` functions provided above.
+
 
 **Time Complexity**
 
