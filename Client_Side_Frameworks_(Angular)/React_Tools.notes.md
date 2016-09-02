@@ -380,8 +380,8 @@ And you should see something like this.
 > @0.1.0 start /Users/ryansobol/Projects/week15/hello
 > brunch watch --server
 
-04 Aug 13:13:38 - info: application started on http://localhost:8000/
-04 Aug 13:13:41 - info: compiled 178 files into 3 files, copied 2 in 3.3 sec
+31 Aug 06:58:47 - info: application started on http://localhost:8000/
+31 Aug 06:58:50 - info: compiled 175 files into 4 files, copied 3 in 3.9 sec
 ```
 
 In a new Terminal tab, navigate back the the project directory.
@@ -399,17 +399,20 @@ la public
 And you should see something like this.
 
 ```text
-total 3240
-drwxr-xr-x  10 ryansobol  staff   340B Aug  4 15:32 .
-drwxr-xr-x  11 ryansobol  staff   374B Aug  4 15:32 ..
--rw-r--r--   1 ryansobol  staff   7.1K Aug  4 15:32 app.css
--rw-r--r--   1 ryansobol  staff   9.7K Aug  4 15:32 app.css.map
--rw-r--r--   1 ryansobol  staff   5.1K Aug  4 15:32 app.js
--rw-r--r--   1 ryansobol  staff   830B Aug  4 15:32 app.js.map
--rw-r--r--   1 ryansobol  staff     0B Aug  4 15:32 favicon.ico
--rw-r--r--   1 ryansobol  staff   390B Aug  4 15:32 index.html
--rw-r--r--   1 ryansobol  staff   723K Aug  4 15:32 vendor.js
--rw-r--r--   1 ryansobol  staff   858K Aug  4 15:32 vendor.js.map
+total 3312
+drwxr-xr-x  13 ryansobol  staff   442B Aug 31 06:57 .
+drwxr-xr-x  12 ryansobol  staff   408B Aug 31 06:57 ..
+-rw-r--r--   1 ryansobol  staff     0B Aug 31 06:58 CNAME
+-rw-r--r--   1 ryansobol  staff    59B Aug 31 06:58 app.css
+-rw-r--r--   1 ryansobol  staff   165B Aug 31 06:58 app.css.map
+-rw-r--r--   1 ryansobol  staff   5.8K Aug 31 06:58 app.js
+-rw-r--r--   1 ryansobol  staff   1.8K Aug 31 06:58 app.js.map
+-rw-r--r--   1 ryansobol  staff    24K Aug 31 06:58 favicon.ico
+-rw-r--r--   1 ryansobol  staff   463B Aug 31 06:58 index.html
+-rw-r--r--   1 ryansobol  staff   7.2K Aug 31 06:58 vendor.css
+-rw-r--r--   1 ryansobol  staff   9.9K Aug 31 06:58 vendor.css.map
+-rw-r--r--   1 ryansobol  staff   723K Aug 31 06:58 vendor.js
+-rw-r--r--   1 ryansobol  staff   857K Aug 31 06:58 vendor.js.map
 ```
 
 Most of the files should look familiar with the exception of a handful of source map files that end with the `.map` file extension. A **source map** is a file that tells a browser how to debug transpiled and optimized JavaScript code. You'll see what that means in a moment.
@@ -422,15 +425,15 @@ open http://localhost:8000/
 
 And you should see something like this.
 
-![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/318/Screen_Shot_2016-08-05_at_12.35.13_PM.png)
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/372/Screen_Shot_2016-09-02_at_10.37.18_AM.png)
 
 Assuming your default browser is Chrome, if you open the Chrome Developer Tools and click on the Sources tab, then you should see something like this.
 
-![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/320/Screen_Shot_2016-08-05_at_12.36.51_PM.png)
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/371/Screen_Shot_2016-09-02_at_10.31.02_AM.png)
 
 Because Brunch automatically generated source map files, you can see, right from the browser, what the source code looked like before it was transpiled. Even better, when a runtime error is thrown, Chrome will associate the error with the correct line number of the original source file.
 
-For example, in `app/components/app.jsx` file, type the following code.
+For example, in `app/components/App.jsx` file, type the following code.
 
 ```jsx
 import React from 'react';
@@ -448,24 +451,24 @@ export default App;
 Save the file, switch back to the Terminal, and inspect the Brunch output. You should see something like this.
 
 ```text
-04 Aug 13:20:41 - info: compiled app.jsx and 1 cached file into app.js in 95ms
+31 Aug 07:05:20 - info: compiled App.jsx and 1 cached file into app.js in 90ms
 ```
 
-As you can see, Brunch automatically transpiled the `app.jsx` file and updated the `app.js` file. Even though it didn't explicitly state it, Brunch also updated the `app.js.map` file as well. All in under 100ms!
+As you can see, Brunch automatically transpiled the `App.jsx` file and updated the `app.js` file. Even though it didn't explicitly state it, Brunch also updated the `app.js.map` file as well. All in under 100ms!
 
 Now, switch back to the browser and open the Console tab in the Chrome Developer Tools. You should see something like this.
 
-![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/321/Screen_Shot_2016-08-05_at_12.37.53_PM.png)
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/374/Screen_Shot_2016-09-02_at_10.43.34_AM.png)
 
 Notice the page has automatically refreshed itself thanks to the [`auto-reload-brunch`](https://github.com/brunch/auto-reload-brunch) plugin. This plugin tells the browser to refresh the page each time Brunch builds the application. That way the code in Atom is always the same as the code in the browser. Neat!
 
-Additionally, notice the `ReferenceError` shown in the Console refers to line number 5 of the `app.jsx` file. Click on the error's link and you should see something like this.
+Additionally, notice the `ReferenceError` shown in the Console refers to line number 5 of the `App.jsx` file. Click on the error's link and you should see something like this.
 
-![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/322/Screen_Shot_2016-08-05_at_12.38.40_PM.png)
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/375/Screen_Shot_2016-09-02_at_10.45.12_AM.png)
 
 As you can see, Chrome associated the thrown runtime error with the correct line number of the original source file. Awesome!
 
-Now, switch back to Atom and, inside the `app/components/app.jsx` file, refactor the `App` component class with the following code. No worries if you type the code incorrectly. Just remember that syntax errors will show up in the Brunch output while runtime errors will show up in the browser console.
+Now, switch back to Atom and, inside the `app/components/App.jsx` file, refactor the `App` component class with the following code. No worries if you type the code incorrectly. Just remember that syntax errors will show up in the Brunch output while runtime errors will show up in the browser console.
 
 ```jsx
 import React from 'react';
@@ -513,7 +516,7 @@ The **React Developer Tools** are a [Chrome extension](https://chrome.google.com
 
 The best way to understand what the React Developer Tools are capable of is to use them. So go ahead and install the tools for each browser using the links above. Once they're installed, refresh the **Hello world** user interface in Chrome. Then, open its developer tools panel and click on the React tab. You should see something like this.
 
-![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/324/Screen_Shot_2016-08-05_at_1.37.28_PM.png)
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/376/Screen_Shot_2016-09-02_at_10.48.00_AM.png)
 
 ### Exercise
 
