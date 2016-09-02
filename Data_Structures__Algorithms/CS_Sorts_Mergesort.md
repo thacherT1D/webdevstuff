@@ -17,9 +17,26 @@ In this section, we'll learn about two other sorting algorithms: Merge Sort and 
 
 Merge sort works by decomposing the array into smaller chunks, which are then sorted and merged together. This process goes all the way down to arrays of size 1, which are super easy to sort!
 
-![merge sort](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/172/mergesort.gif)
+![animated merge sort](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/172/mergesort.gif)
+
+![merge sort graph](https://upload.wikimedia.org/wikipedia/commons/e/e6/Merge_sort_algorithm_diagram.svg)
 
 Here's a step-by-step description of merge sort:
+
+1. If your array has a length less than 2, congratulations! It's already sorted.
+1. Otherwise, cut your array in half, and consider the two sub-arrays separately.
+1. Sort each of your smaller subarrays using merge sort.
+1. Merge your two subarrays together, and return the merged array.
+
+Through this recursive process, you'll wind up with a sorted array!
+
+In order to implement this function, it's useful to have a helper function that takes two sorted arrays and merges them together to create a new, larger sorted array. Here's some pseudo-code to get you started:
+
+1. declare a new empty array, and pointers corresponding to indices in arr1 and arr2 (set them both to 0)
+1. if the first element in arr1 is less than the first element in arr2, push the first element in arr1 to the new array, and move the pointer for arr1 one spot to the right. Otherwise, do this for arr2.
+1. Repeat this process until you've gone through one of the arrays
+1. return the new array, concatenated with whatever elements are remaining from the array that you haven't exhausted yet.
+
 
 ```javascript
 function mergeSort(arr){
@@ -28,13 +45,7 @@ function mergeSort(arr){
   // 1. Sort each of your smaller subarrays using merge sort.
   // 1. Merge your two subarrays together, and return the merged array.
 }
-```
 
-Through this recursive process, you'll wind up with a sorted array!
-
-In order to implement this function, it's useful to have a helper function that takes two sorted arrays and merges them together to create a new, larger sorted array. Here's some pseudo-code to get you started:
-
-```javascript
 function merge(arr1, arr2) {
   // 1. declare a new empty array, and pointers corresponding to indices in arr1 and arr2 (set them both to 0)
   // 2. if the first element in arr1 is less than the first element in arr2, push the first element in arr1 to the new array, and move the pointer for arr1 one spot to the right. Otherwise, do this for arr2.
