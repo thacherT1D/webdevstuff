@@ -575,7 +575,7 @@ With the React Developers Tools, you can finally see that a **component** is an 
 Then, update the `app/index.jsx` file with another `ReactDOM.render()` function call to render another `<App />` component inside the new container.
 
 ```jsx
-import App from 'components/app';
+import App from './components/App';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
