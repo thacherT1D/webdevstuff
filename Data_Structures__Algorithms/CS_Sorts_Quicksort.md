@@ -42,6 +42,7 @@ function quickSort(arr) {
 **Exercise:** [In the file, `Exercises/src/sorting/sortingAlgorithmsSpecPart2.js`,](https://github.com/gSchool/computer-science-curriculum) implement a Quicksort as described above and ensure it passes the provided tests.
 
 **Tip:** To run the tests:
+
 - Navigate to `computer-science-curriculum/Exercises`.
 - Run `npm install`
 - Run the tests with `npm test tests/sorting/sorting/sortingAlgorithmsSpecPart2.js`
@@ -81,6 +82,7 @@ function quickSort(arr, left, right) {
 **Exercise:** [In the file, `Exercises/src/sorting/sortingAlgorithmsSpecPart2.js`,](https://github.com/gSchool/computer-science-curriculum) implement another quicksort, this time use a partition to ensure optimal space complexity and ensure it passes the same test.
 
 **Tip:** To run the tests:
+
 - Navigate to `computer-science-curriculum/Exercises`.
 - Run `npm install`
 - Run the tests with `npm test tests/sorting/sorting/sortingAlgorithmsSpecPart2.js`
