@@ -23,34 +23,29 @@ Merge sort works by decomposing the array into smaller chunks, which are then so
 
 Here's a step-by-step description of merge sort:
 
-1. If the array has a length less than 2, return the array as it is already sorted. This is your base case.
-1. Otherwise, split the array in half, into two sub arrays.
-1. Recurse using using Merge Sort for each of the subarrays.
-1. Merge the two subarrays together using the merge helper outlined below.
-1. Return the merged array.
+1. if the array length is less than 2, return the array because it is already sorted. This is your base case.
+1. split the array in half, into two sub arrays.
+1. recurse Merge Sort on each of the subarrays.
+1. use the merge helper function outlined below to merge the two subarrays and return the result
 
 Through this recursive process, you'll wind up with a sorted array!
 
 In order to implement this function, we need to have a merge helper function that takes two sorted arrays and merges them together to create a new, larger sorted array. Here is a step by step guide to get you started:
 
-1. Declare a new empty array.
-1. Create a variable to use as an index for the `arr1`, set it to 0.
-1. Create a variable to use as an index for `arr2`, set it to 0.
-1. If the first element in `arr1` is less than the first element in `arr2`
-  - push the first element in `arr1` to the new array
-  - increment the `arr1` index.
-1. Else
-  - push the first element in `arr2` to the new array
-  - increment the `arr2` index.
-1. Repeat this process until you've gone through one of the arrays
-1. Return the new array, concatenated with whatever elements are remaining from the array that you haven't exhausted yet.
-
+1. Create a new array named result
+1. While left.length > 0 and right.length > 0 do the following
+- If left[0] is less than or equal to right[0] shift the element from the left array and push it onto the result array.
+- else shift the element from the right array and push it onto the result array.
+1. end loop
+1. while left.length > 0 push all remaining elements to the result array
+1. while right.length > 0 push all remaining elements to the result array
+1. return result array
 
 ```javascript
 function mergeSort(arr){
 }
 
-function merge(arr1, arr2) {
+function merge(left, right) {
 }
 ```
 
