@@ -254,6 +254,7 @@ In the `app/assets/textfield.html` file, type in the following code.
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Textfield</title>
+    <link rel="stylesheet" href="/vendor.css">
     <link rel="stylesheet" href="/app.css">
   </head>
   <body>
@@ -261,18 +262,18 @@ In the `app/assets/textfield.html` file, type in the following code.
 
     <script src="/vendor.js"></script>
     <script src="/app.js"></script>
-    <script>require('textfield');</script>
+    <script>require('Textfield');</script>
   </body>
 </html>
 ```
 
-And in the `app/textfield.jsx` file, type in the following code.
+And in the `app/Textfield.jsx` file, type in the following code.
 
 ```jsx
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const App = React.createClass({
+const Textfield = React.createClass({
   getInitialState() {
     return { value: "I'm changeable and under React's control" };
   },
@@ -302,7 +303,7 @@ const App = React.createClass({
       />
 
       <input
-        readOnly=={true}
+        readOnly={true}
         type="text"
         value="I'm read-only and under React's control."
       />
@@ -311,7 +312,7 @@ const App = React.createClass({
 });
 
 ReactDOM.render(
-  <App />,
+  <Textfield />,
   document.getElementById('app')
 );
 ```
@@ -335,6 +336,7 @@ In the `app/assets/textarea.html` file, type in the following code.
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Textarea</title>
+    <link rel="stylesheet" href="/vendor.css">
     <link rel="stylesheet" href="/app.css">
   </head>
   <body>
@@ -342,18 +344,18 @@ In the `app/assets/textarea.html` file, type in the following code.
 
     <script src="/vendor.js"></script>
     <script src="/app.js"></script>
-    <script>require('textarea');</script>
+    <script>require('Textarea');</script>
   </body>
 </html>
 ```
 
-And in the `app/textarea.jsx` file, type in the following code.
+And in the `app/Textarea.jsx` file, type in the following code.
 
 ```jsx
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const App = React.createClass({
+const Textarea = React.createClass({
   getInitialState() {
     return { value: "I'm changeable and under React's control." };
   },
@@ -388,7 +390,7 @@ const App = React.createClass({
 });
 
 ReactDOM.render(
-  <App />,
+  <Textarea />,
   document.getElementById('app')
 );
 ```
@@ -412,6 +414,7 @@ In the `app/assets/checkbox.html` file, type in the following code.
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Checkbox</title>
+    <link rel="stylesheet" href="/vendor.css">
     <link rel="stylesheet" href="/app.css">
   </head>
   <body>
@@ -419,18 +422,18 @@ In the `app/assets/checkbox.html` file, type in the following code.
 
     <script src="/vendor.js"></script>
     <script src="/app.js"></script>
-    <script>require('checkbox');</script>
+    <script>require('Checkbox');</script>
   </body>
 </html>
 ```
 
-And in the `app/checkbox.jsx` file, type in the following code.
+And in the `app/Checkbox.jsx` file, type in the following code.
 
 ```jsx
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const App = React.createClass({
+const Checkbox = React.createClass({
   getInitialState() {
     return { checked: false };
   },
@@ -481,7 +484,7 @@ const App = React.createClass({
 });
 
 ReactDOM.render(
-  <App />,
+  <Checkbox />,
   document.getElementById('app')
 );
 ```
@@ -505,6 +508,7 @@ In the `app/assets/radio.html` file, type in the following code.
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Radio</title>
+    <link rel="stylesheet" href="/vendor.css">
     <link rel="stylesheet" href="/app.css">
   </head>
   <body>
@@ -512,18 +516,18 @@ In the `app/assets/radio.html` file, type in the following code.
 
     <script src="/vendor.js"></script>
     <script src="/app.js"></script>
-    <script>require('radio');</script>
+    <script>require('Radio');</script>
   </body>
 </html>
 ```
 
-And in the `app/radio.jsx` file, type in the following code.
+And in the `app/Radio.jsx` file, type in the following code.
 
 ```jsx
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const App = React.createClass({
+const Radio = React.createClass({
   getInitialState() {
     return { value: 'no' };
   },
@@ -606,7 +610,7 @@ const App = React.createClass({
 });
 
 ReactDOM.render(
-  <App />,
+  <Radio />,
   document.getElementById('app')
 );
 ```
@@ -630,6 +634,7 @@ In the `app/assets/select.html` file, type in the following code.
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Select</title>
+    <link rel="stylesheet" href="/vendor.css">
     <link rel="stylesheet" href="/app.css">
   </head>
   <body>
@@ -637,18 +642,18 @@ In the `app/assets/select.html` file, type in the following code.
 
     <script src="/vendor.js"></script>
     <script src="/app.js"></script>
-    <script>require('select');</script>
+    <script>require('Select');</script>
   </body>
 </html>
 ```
 
-And in the `app/select.jsx` file, type in the following code.
+And in the `app/Select.jsx` file, type in the following code.
 
 ```jsx
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const App = React.createClass({
+const Select = React.createClass({
   getInitialState() {
     return { value: 'B' };
   },
@@ -697,7 +702,7 @@ const App = React.createClass({
 });
 
 ReactDOM.render(
-  <App />,
+  <Select />,
   document.getElementById('app')
 );
 ```
@@ -723,6 +728,7 @@ In the `app/assets/form.html` file, type in the following code.
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Form</title>
+    <link rel="stylesheet" href="/vendor.css">
     <link rel="stylesheet" href="/app.css">
   </head>
   <body>
@@ -730,18 +736,18 @@ In the `app/assets/form.html` file, type in the following code.
 
     <script src="/vendor.js"></script>
     <script src="/app.js"></script>
-    <script>require('form');</script>
+    <script>require('Form');</script>
   </body>
 </html>
 ```
 
-And in the `app/form.jsx` file, type in the following code.
+And in the `app/Form.jsx` file, type in the following code.
 
 ```jsx
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const App = React.createClass({
+const Form = React.createClass({
   getInitialState() {
     return { password: '', username: '' };
   },
@@ -790,7 +796,7 @@ const App = React.createClass({
 });
 
 ReactDOM.render(
-  <App />,
+  <Form />,
   document.getElementById('app')
 );
 ```
@@ -814,6 +820,7 @@ In the `app/assets/focus.html` file, type in the following code.
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Focus</title>
+    <link rel="stylesheet" href="/vendor.css">
     <link rel="stylesheet" href="/app.css">
   </head>
   <body>
@@ -821,18 +828,18 @@ In the `app/assets/focus.html` file, type in the following code.
 
     <script src="/vendor.js"></script>
     <script src="/app.js"></script>
-    <script>require('focus');</script>
+    <script>require('Focus');</script>
   </body>
 </html>
 ```
 
-And in the `app/focus.jsx` file, type in the following code.
+And in the `app/Focus.jsx` file, type in the following code.
 
 ```jsx
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const App = React.createClass({
+const Focus = React.createClass({
   getInitialState() {
     return { value: "I'm blurred :(" };
   },
@@ -862,7 +869,7 @@ const App = React.createClass({
 });
 
 ReactDOM.render(
-  <App />,
+  <Focus />,
   document.getElementById('app')
 );
 ```
@@ -888,6 +895,7 @@ In the `app/assets/mouse.html` file, type in the following code.
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Mouse</title>
+    <link rel="stylesheet" href="/vendor.css">
     <link rel="stylesheet" href="/app.css">
   </head>
   <body>
@@ -895,18 +903,18 @@ In the `app/assets/mouse.html` file, type in the following code.
 
     <script src="/vendor.js"></script>
     <script src="/app.js"></script>
-    <script>require('mouse');</script>
+    <script>require('Mouse');</script>
   </body>
 </html>
 ```
 
-And in the `app/mouse.jsx` file, type in the following code.
+And in the `app/Mouse.jsx` file, type in the following code.
 
 ```jsx
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const App = React.createClass({
+const Mouse = React.createClass({
   getInitialState() {
     return {
       clicks: 0,
@@ -960,7 +968,7 @@ const App = React.createClass({
 });
 
 ReactDOM.render(
-  <App />,
+  <Mouse />,
   document.getElementById('app')
 );
 ```
@@ -1007,6 +1015,7 @@ In the `app/assets/keyboard.html` file, type in the following code.
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Keyboard</title>
+    <link rel="stylesheet" href="/vendor.css">
     <link rel="stylesheet" href="/app.css">
   </head>
   <body>
@@ -1014,18 +1023,18 @@ In the `app/assets/keyboard.html` file, type in the following code.
 
     <script src="/vendor.js"></script>
     <script src="/app.js"></script>
-    <script>require('keyboard');</script>
+    <script>require('Keyboard');</script>
   </body>
 </html>
 ```
 
-And in the `app/keyboard.jsx` file, type in the following code.
+And in the `app/Keyboard.jsx` file, type in the following code.
 
 ```jsx
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const App = React.createClass({
+const Keyboard = React.createClass({
   getInitialState() {
     return { events: [], value: '' };
   },
@@ -1082,7 +1091,7 @@ const App = React.createClass({
 });
 
 ReactDOM.render(
-  <App />,
+  <Keyboard />,
   document.getElementById('app')
 );
 ```
