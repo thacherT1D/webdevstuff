@@ -1,15 +1,17 @@
-# Quicksort
+# Sorting Algorithms: The Quicksort
 
 ## Objectives
 
 By the end of this article you should be able to:
 
 - Implement a quicksort with O(n) space complexity.
-- Understand what it takes to
+- Implement a quicksort with O(log n) space complexity.
+
+## Quicksort
 
 Quicksort is probably the least straightforward of all the sorting algorithms we'll consider here. Like merge sort, the time complexity for quicksort is typically O(n log(n)) (though in the worst case, it can be O(n<sup>2</sup>)). However, when sorting an array in place using quicksort, the space complexity is better than merge sort: O(log(n)) rather than O(n).
 
-Before diving into the algorithm, you whould watch [this video from Computerphile](https://www.youtube.com/watch?v=XE4VP_8Y0BU), which does a great job of explaining how quicksort works.
+Before diving into the algorithm, you would watch [this video from Computerphile](https://www.youtube.com/watch?v=XE4VP_8Y0BU), which does a great job of explaining how quicksort works.
 
 Here's the gist of how quicksort works:
 
@@ -52,7 +54,7 @@ function partition(arr, left, right) {
   5. Return the partition index. */
 }
 
-function quickSort(arr, left=0, right=arr.length - 1) {
+function quickSort(arr, left, right) {
   /* 1. If left is less than right, declare a variable called partitionIndex which is equal to the result of a call to partition, passing in arr, left, and right. After the call to partition, perform a quicksort to the two subarrays to the left and right of the partitionIndex.
   2. Return arr. */
 }
