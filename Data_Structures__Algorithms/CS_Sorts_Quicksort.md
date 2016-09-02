@@ -46,17 +46,26 @@ This will be easier to understand with some more pseudo code:
 ```javascript
 // left and right indicate the left and rightmost indices in the sub-array that you're partitioning.
 
+'use strict';
+
 function partition(arr, left, right) {
-  /* 1. Set the pivot value to be the value at the left index, and set a varaible called partitionIndex equal to left. The partitionIndex will help us keep track of where to perform our swaps so that we wind up with values correctly placed on either side of the pivot.
-  2. For every index greater than left and less than right + 1, compare the array value to the pivot value.
-  3. If the array value at the given index is less than the pivot value, increment the partition index and swap the array value with the value at the partition index.
-  4. At the end, swap the pivot value with the value at the partition index (this ensures that the pivot ends up in between values less than it and values greater than it).
-  5. Return the partition index. */
+  // create a variable named pivotValue and assign it a value of arr[right]
+  // create a variable named partitionIndex and assign it a vlue of left
+  // starting at left, for every element less than right:
+  // - if the current element is less than or equal to the pivotValue
+  // - swap the current element with the element at partitionIndex
+  // - increment partitionIndex
+  // swap the element at right with the element at the partitionIndex
+  // return the partition index
 }
 
 function quickSort(arr, left, right) {
-  /* 1. If left is less than right, declare a variable called partitionIndex which is equal to the result of a call to partition, passing in arr, left, and right. After the call to partition, perform a quicksort to the two subarrays to the left and right of the partitionIndex.
-  2. Return arr. */
+  // if left is undefined left = 0;
+  // if right is undefined right = arr.length - 1
+  //if left is less than right
+  // - create a variable called partitionIndex equal to the result of partition(arr, left, right)
+  // - recurse for all values left of the partition index
+  // -recurse for all values right of the partition index
 }
 ```
 
