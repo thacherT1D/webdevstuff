@@ -41,6 +41,11 @@ function quickSort(arr) {
 
 **Exercise:** [In the file, `Exercises/src/sorting/sortingAlgorithmsSpecPart2.js`,](https://github.com/gSchool/computer-science-curriculum) implement a Quicksort as described above and ensure it passes the provided tests.
 
+**Tip:** To run the tests:
+- Navigate to `computer-science-curriculum/Exercises`.
+- Run `npm install`
+- Run the tests with `npm test tests/sorting/sorting/sortingAlgorithmsSpecPart2.js`
+
 The downside with the above approach is that when we pass an array into `quickSort`, we're getting a new array back, which requires more memory. If space complexity is important (for example, if you're trying to sort an array with millions of elements), then it might be better to try to implement quicksort on an array _in place_.
 
 This approach is a bit more complicated, and is typically done with the addition of a helper function called `partition`, which handles arranging the values in a given section of an array so that they are moved to the either side of a given pivot based on their values.
@@ -73,10 +78,18 @@ function quickSort(arr, left, right) {
 }
 ```
 
-**Exercise:** [In the file, `Exercises/src/sorting/sortingAlgorithmsSpecPart2.js`,](https://github.com/gSchool/computer-science-curriculum) implement another quickstort, this time use a partition to ensure optimal space complexity and ensure it passes the same test.
+**Exercise:** [In the file, `Exercises/src/sorting/sortingAlgorithmsSpecPart2.js`,](https://github.com/gSchool/computer-science-curriculum) implement another quicksort, this time use a partition to ensure optimal space complexity and ensure it passes the same test.
 
+**Tip:** To run the tests:
+- Navigate to `computer-science-curriculum/Exercises`.
+- Run `npm install`
+- Run the tests with `npm test tests/sorting/sorting/sortingAlgorithmsSpecPart2.js`
 
 Hopefully this should be enough to get you on your way to implementing quicksort with O(log(n)) space complexity. If you're still stuck, consult some of the references below.
+
+## Bonus Exercise:
+
+Starting and left and right is very convenient, but sometimes
 
 ## What about `Array.prototype.sort`?
 
