@@ -167,7 +167,7 @@ In your CLI:
 npm run knex migrate:currentVersion
 ```
 
-Create a new migration with the name create_albums
+Create a new migration with the name artists
 
 ```shell
 npm run knex migrate:make artists
