@@ -125,6 +125,8 @@ psql -l
 ```
 The migration cli is bundled with the knex global install.
 
+In your CLI:
+
 ```shell
 npm install --save pg knex
 ```
@@ -132,6 +134,8 @@ npm install --save pg knex
 ```shell
 touch knexfile.js
 ```
+
+Put this is your `knexfile.js`:
 
 ```javascript
 'use strict';
@@ -144,15 +148,20 @@ module.exports = {
 };
 ```
 
+And in your CLI, run this:
+
 ```shell
 ./node_modules/.bin/knex migrate:currentVersion
 ```
+
+And put this into your `package.json`:
 
 ```javascript
 "scripts": {
   "knex": "knex"
 },
 ```
+In your CLI:
 
 ```shell
 npm run knex migrate:currentVersion
