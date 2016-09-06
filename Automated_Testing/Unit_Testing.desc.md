@@ -8,7 +8,7 @@
 
 ## What is an automated test?
 
-An **automated test** is software that compares the actual outcome of a separate program with an expected outcome. As the name implies, an automated test automates the repetitive but necessary task of testing an application. The alternative to an automated test is a manual test, which is easy to do but hard to repeat every time the code changes.
+An **automated test** is software that compares the actual outcome of a separate program with an expected outcome. As the name implies, an automated test automates the repetitive but necessary task of testing a program. The alternative to an automated test is a manual test, which is easy to do but hard to repeat every time the code changes.
 
 To see an example of an automated test, take the following `sum.js` program.
 
@@ -62,13 +62,51 @@ There are many goals you may want to achieve with an automated test. Here's a ta
 | Ensure the entire use case works as a developer expects         | End-to-end test  |
 | Ensure the entire use case works as a user expects              | Acceptance test  |
 
-The simplest type of automated test is a **unit test**. A unit test refers to a test that verifies the functionality of one specific section of code, usually at the function or class level. Unit tests are particularly helpful during development because when one fails, you can isolate the failure to a specific area of in the program.
+The narrowest type of automated test is a **unit test**. A unit test refers to a test that verifies the functionality of one specific section of code, usually at the function or class level. Unit tests are particularly helpful during development because when one fails, you can isolate the failure to a specific area of in the program.
+
+For example, imagine the `sum.js` project was changed to this.
+
+```js
+'use strict';
+
+const sum = function(a, b) {
+  return a * b;
+};
+
+module.exports = sum;
+```
+
+After running the above automated test with the `mocha` test runner in the shell.
+
+```shell
+mocha sum.test.js
+```
+
+You'd see the following result.
+
+```shell
+  1) sums two numbers
+
+  0 passing (11ms)
+  1 failing
+
+  1)  sums two numbers:
+
+      AssertionError: expected 2 to equal 3
+      + expected - actual
+
+      -2
+      +3
+
+      at Function.assert.strictEqual (node_modules/chai/lib/chai/interface/assert.js:178:32)
+      at Context.it (sum.test.js:11:10)
+```
 
 ### Exercise
 
-Turn to your a neighbor and, in your own words, explain what test automation is.
+Turn to your a neighbor and, in your own words, explain what an automated test is. In your discussion, it may be helpful to include the various goals of automated tests and their corresponding test type.
 
-## Why is test automation important?
+## Why are automated tests important?
 
 Up to this point, we have not written tests for our projects, but the instruction staff have created tests for you to run through exercises. As projects get bigger, the cognitive load needed to understand your project becomes too cumbersome to manage all the logic. Testing helps us out out here.
 
