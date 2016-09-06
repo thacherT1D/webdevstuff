@@ -240,84 +240,110 @@ Test-driven development process has many benefits.
 
 ## How do you use test-driven development to write unit tests?
 
-As an example, let's work on building an editor. Let's say your manager has come in with the following requirements:
+```javascript
+'use strict';
 
-> We would like to provide a module that represents an editor. This editor has three functions: `displayString`, `write`, and `clear`. The `displayString` function does not take any parameters and produces a string which is everything that has been written to the editor. The `write` method, takes in a string and returns nothing. It writes to the editor as a side effect. The `clear` method will empty everything that has been written to the editor.
+const { assert } = require('chai');
+const { suite, test } = require('mocha');
+const Binary = require('../Binary');
 
-Let's write a tests for the `write` and the `displayString` method.
+suite('Binary', () => {
+  test('converts to zero decimal by default', () => {
+    const binary = new Binary();
+    const actual = binary.toDecimal();
+    const expected = 0;
 
-In the `test` directory, create a file `editor.js`. In here, we will initialize the tests for `write` and `displayString`.
+    assert.strictEqual(actual, expected);
+  });
+});
+```
+
+```javascript
+'use strict';
+
+class Binary {
+  toDecimal() {
+    return 0;
+  }
+}
+
+module.exports = Binary;
+```
 
 ```javascript
 'use strict';
 
 const { assert } = require('chai');
 const { suite, test } = require('mocha');
-const Editor = require('../Editor');
+const Binary = require('../Binary');
 
-suite('Editor', () => {
-  beforeEach(() => {
-    editor.clear();
+suite('Binary', () => {
+  test('converts to zero decimal by default', () => {
+    const binary = new Binary();
+    const actual = binary.toDecimal();
+    const expected = 0;
+
+    assert.strictEqual(actual, expected);
   });
 
-  test('initial editor produces empty string', () => {
-    assert.strictEqual(editor.displayString(), '');
-  });
+  test('converts to zero decimal', () => {
+    const binary = new Binary('0');
+    const actual = binary.toDecimal();
+    const expected = 0;
 
-  test('write method adds to editor', () => {
-    editor.write('Hello World');
-    assert.strictEqual(editor.displayString(), 'Hello World');
-
-    editor.write('Hello World Again');
-    assert.strictEqual(editor.displayString(), 'Hello WorldHello World Again');
-  });
-
-  test('clear method clears the editor', () => {
-    editor.write('Hello World');
-    editor.clear();
-    assert.strictEqual(editor.displayString(), '');
+    assert.strictEqual(actual, expected);
   });
 });
 ```
 
-Mocha offers the ability to run code before and after each suite is run (using `before` and `after` respectively) as well as before and after each test (using `beforeEach` and `afterEach` respectively). In this case, we want to initialize the editor state before we run each test.
+```javascript
+'use strict';
 
-Given these requirements, and the tests provided, we might implement the editor module in `editor.js` as follows:
+class Binary {
+  constructor(value) {
+    this.value = value;
+  }
+
+  toDecimal() {
+    return 0;
+  }
+}
+
+module.exports = Binary;
+```
 
 ```javascript
 'use strict';
 
-let text = '';
+const { assert } = require('chai');
+const { suite, test } = require('mocha');
+const Binary = require('../Binary');
 
-const clear = function(str) {
-  text = '';
-};
+suite('Binary', () => {
+  test('converts to zero decimal by default', () => {
+    const binary = new Binary();
+    const actual = binary.toDecimal();
+    const expected = 0;
 
-const write = function(str) {
-  text += str;
-};
-
-const displayString = function() {
-  return text;
-};
-
-module.exports = { write, displayString, clear };
-```
-
-You submit this to your manager who is satisfied with the results. A day later, the manager comes back and says that the software needs an `undo` functionality. Every time, a write call occurs, the `undo` functionality would remove that write. This means that `displayString` will not produce the write that was undo-ed. If there is no more actions to undo, throw an error. By TDD process, we first write the test for `undo`.
-
-```javascript
-  test('undo a write', () => {
-    editor.write('Hello World');
-    assert.strictEqual(editor.displayString(), 'Hello World');
-    editor.write('Hello World Again');
-    assert.strictEqual(editor.displayString(), 'Hello WorldHello World Again');
-    editor.undo();
-    assert.strictEqual(editor.displayString(), 'Hello World');
-    editor.undo();
-    assert.strictEqual(editor.displayString(), '');
-    assert.throws(() => editor.undo());
+    assert.strictEqual(actual, expected);
   });
+
+  test('converts to zero decimal', () => {
+    const binary = new Binary('0');
+    const actual = binary.toDecimal();
+    const expected = 0;
+
+    assert.strictEqual(actual, expected);
+  });
+
+  test('converts to one decimal', () => {
+    const binary = new Binary('1');
+    const actual = binary.toDecimal();
+    const expected = 1;
+
+    assert.strictEqual(actual, expected);
+  });
+});
 ```
 
 With this in mind, we can now refactor our editor module.
@@ -325,45 +351,64 @@ With this in mind, we can now refactor our editor module.
 ```javascript
 'use strict';
 
-let texts = [];
-
-const clear = function(str) {
-  texts = [];
-};
-
-const write = function(str) {
-  texts.push(str);
-};
-
-const displayString = function() {
-  return texts.reduce((written, str) => written + str, '');
-};
-
-const undo = function() {
-  if (texts.length) {
-    texts.pop();
+class Binary {
+  constructor(value = '0') {
+    this.value = value;
   }
-  else {
-    throw new Error('Cannot undo any more.');
-  }
-};
 
-module.exports = { write, displayString, clear, undo };
+  toDecimal() {
+    if (this.value === '0') {
+      return 0;
+    }
+    else if (this.value === '1') {
+      return 1;
+    }
+  }
+}
+
+module.exports = Binary;
 ```
 
-You submit this to your manager, and you survive another day. A day later, the manager comes back and says that everyone loves `undo` functionality, but now customers now need a `redo` operation. If an `undo` is called, a `redo` would reapply the write. If there is no more actions to redo, throw an error. Let's write a test for redo.
-
 ```javascript
-  test('redo a write', () => {
-    assert.throws(() => editor.redo());
-    editor.write('Hello World');
-    assert.strictEqual(editor.displayString(), 'Hello World');
-    editor.undo();
-    assert.strictEqual(editor.displayString(), '');
-    editor.redo();
-    assert.strictEqual(editor.displayString(), 'Hello World');
-    assert.throws(() => editor.redo());
+'use strict';
+
+const { assert } = require('chai');
+const { suite, test } = require('mocha');
+const Binary = require('../Binary');
+
+suite('Binary', () => {
+  test('converts to zero decimal by default', () => {
+    const binary = new Binary();
+    const actual = binary.toDecimal();
+    const expected = 0;
+
+    assert.strictEqual(actual, expected);
   });
+
+  test('converts to zero decimal', () => {
+    const binary = new Binary('0');
+    const actual = binary.toDecimal();
+    const expected = 0;
+
+    assert.strictEqual(actual, expected);
+  });
+
+  test('converts to one decimal', () => {
+    const binary = new Binary('1');
+    const actual = binary.toDecimal();
+    const expected = 1;
+
+    assert.strictEqual(actual, expected);
+  });
+
+  test('converts to two decimal', () => {
+    const binary = new Binary('10');
+    const actual = binary.toDecimal();
+    const expected = 2;
+
+    assert.strictEqual(actual, expected);
+  });
+});
 ```
 
 Run the tests and make sure the tests fails. Write the code for the test.
@@ -371,94 +416,68 @@ Run the tests and make sure the tests fails. Write the code for the test.
 ```javascript
 'use strict';
 
-let texts = [];
-let redoTexts = [];
-
-const clear = function(str) {
-  texts = [];
-  redoTexts = [];
-};
-
-const write = function(str) {
-  texts.push(str);
-};
-
-const displayString = function() {
-  return texts.reduce((written, str) => written + str, '');
-};
-
-const undo = function() {
-  if (texts.length) {
-    const str = texts.pop();
-    redoTexts.push(str);
+class Binary {
+  constructor(value = '0') {
+    this.value = value;
   }
-  else {
-    throw new Error('Cannot undo any more.');
+
+  toDecimal() {
+    return Number.parseInt(this.value, 2)
   }
-};
+}
 
-const redo = function() {
-  if (redoTexts.length) {
-    const str = redoTexts.pop();
-    texts.push(str);
-  }
-  else {
-    throw new Error('Cannot redo any more.');
-  }
-};
-
-module.exports = { write, displayString, clear, undo, redo };
-```
-
-Your manager is happy with the solution and gives you a bonus. The next day, customers provide feedback begging for the ability to save the content, and your manager creates a requirement for a `save` method that takes in one argument, which is the path to save the content. The method should return a promise.
-
-```javascript
-const fs = require('fs');
-
-// ...
-
-  test('save a file', (done) => {
-    editor.write('Hello World');
-    editor.save('./test.txt')
-      .then(() => {
-        fs.readFile('./test.txt', 'utf8', (err, text) => {
-          if (err) {
-            return done(err);
-          }
-
-          assert.strictEqual(text, 'Hello World');
-          done();
-        });
-      })
-      .catch((err) => {
-        done(err);
-      });
-  });
+module.exports = Binary;
 ```
 
 ```javascript
-const fs = require('fs');
+'use strict';
 
-// ...
+const { assert } = require('chai');
+const { suite, test } = require('mocha');
+const Binary = require('../Binary');
 
-const save = function(path) {
-  return new Promise((resolve, reject) => {
-    fs.writeFile(path, displayString(), (err) => {
-      if (err) {
-        return reject(err);
-      }
+suite('Binary', () => {
+  test('converts to zero decimal by default', () => {
+    const binary = new Binary();
+    const actual = binary.toDecimal();
+    const expected = 0;
 
-      resolve();
-    });
+    assert.strictEqual(actual, expected);
   });
-};
 
-module.exports = { write, displayString, clear, undo, redo, save };
+  test('converts to zero decimal', () => {
+    const binary = new Binary('0');
+    const actual = binary.toDecimal();
+    const expected = 0;
+
+    assert.strictEqual(actual, expected);
+  });
+
+  test('converts to one decimal', () => {
+    const binary = new Binary('1');
+    const actual = binary.toDecimal();
+    const expected = 1;
+
+    assert.strictEqual(actual, expected);
+  });
+
+  test('converts to two decimal', () => {
+    const binary = new Binary('10');
+    const actual = binary.toDecimal();
+    const expected = 2;
+
+    assert.strictEqual(actual, expected);
+  });
+
+  test('converts to 42 decimal', () => {
+    const binary = new Binary('101010');
+    const actual = binary.toDecimal();
+    const expected = 42;
+
+    assert.strictEqual(actual, expected);
+  });
+});
 ```
-
-**NOTE:** You are able to mock the filesystem calls using [mock-fs](https://www.npmjs.com/package/mock-fs).
-
-**Exercise:** Turn and talk to your neighbor and reflect on the advantages and disadvantages of Test Driven Development.
 
 ## Assignment
 
