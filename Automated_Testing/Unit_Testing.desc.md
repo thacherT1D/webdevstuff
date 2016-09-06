@@ -29,7 +29,7 @@ The following `sum.test.js` program is one possible automated test for the above
 
 const { assert } = require('chai');
 const { test } = require('mocha');
-const sum = require('../sum');
+const sum = require('./sum');
 
 test('sums two numbers', () => {
   const actual = sum(1, 2);
