@@ -12,7 +12,7 @@ An **automated test** is software that compares the actual outcome of a separate
 
 To see an example of an automated test, take the following `sum.js` program.
 
-```js
+```javascript
 'use strict';
 
 const sum = function(a, b) {
@@ -24,7 +24,7 @@ module.exports = sum;
 
 The following `sum.test.js` program is one possible automated test for the above program. Note how the automated test is separate from the program being tested.
 
-```js
+```javascript
 'use strict';
 
 const { assert } = require('chai');
@@ -66,7 +66,7 @@ The narrowest type of automated test is a **unit test**. A unit test refers to a
 
 For example, imagine the `sum.js` project was changed to this.
 
-```js
+```javascript
 'use strict';
 
 const sum = function(a, b) {
@@ -78,7 +78,7 @@ module.exports = sum;
 
 The original automated test in the `sum.test.js` program is, in fact, a unit test.
 
-```js
+```javascript
 'use strict';
 
 const { assert } = require('chai');
