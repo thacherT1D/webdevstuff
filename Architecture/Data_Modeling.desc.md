@@ -22,7 +22,7 @@ Each of your projects is working with data in some way whether your program is m
 
 ## What is a Data Definition?
 
-Data Definition describes what the nature and scope of an applications data. It is a human readable description of our data in terms of data types, relations, and structure. If you look at the source code for some large open source projects, or even some of your homework assignments, you may see instructions and explanations on how some code works in the form of comments. This is one way we can share knowledge with other people who use an API. Once we read a, well documented, data definition, we should know how to start working with that data.
+Data Definition describes the nature and scope of an application's data. It is a human readable description of our data in terms of data types, relations, and structure. If you look at the source code for some large open source projects, or even some of your homework assignments, you may see instructions and explanations on how some code works in the form of comments. This is one way we can share knowledge with other people who use an API. Once we read a, well documented, data definition, we should know how to start working with that data.
 
 ```javascript
 // A temperature is a number. Its value is in degrees Celsius.
@@ -32,7 +32,7 @@ Data Definition describes what the nature and scope of an applications data. It 
 // A forecast is a nonempty array of temperatures.
 ```
 
-Specificity is key as we want to keep the expectations clear. For example, we could say that a traffic light is a `string`, but really it can be one of three values.
+Specificity is key as we want to keep the expectations clear. For example, we could say that a traffic light's value is of type `string`, but really it can be one of three values, of which all are strings.
 
 ```javascript
 // A traffic light is one of the following:
@@ -40,6 +40,8 @@ Specificity is key as we want to keep the expectations clear. For example, we co
 //   - "slow"
 //   - "go"
 ```
+
+Let's take a look at a real world example of this [here](http://pokeapi.co/docsv2/#pokemon).
 
 Data can be respresented in many different ways. A data definition tells us specifically _how_ the data _needs_ to be described. Take for example a coordinate.
 
