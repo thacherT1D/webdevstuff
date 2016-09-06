@@ -17,7 +17,7 @@ By contrast, information that is not persisted will be destroyed when the user c
 
 **The `localStorage` Object**
 
-To take advantage of Local Storage, we access what is called the `localStorage` object.  It allows you to store data locally into the browser via `Storage` objects. LocalStorage stores data that is essential from page to page, request to request, howevever, `localStorage` can only be accessed on the client side. Additionally, `localStorage` can store up to 5MB of data, and only gets cleared through JavaScript or manually clearing through the browser.
+To take advantage of Local Storage, we access what is called the `localStorage` object.  It allows you to store data locally into the browser via `Storage` objects. LocalStorage stores data that is essential from page to page, request to request, however, `localStorage` can only be accessed on the client side. Additionally, `localStorage` can store up to 5MB of data, and only gets cleared through JavaScript or manually clearing through the browser.
 
 As a general rule, it is not a great idea to store sensitive data into `localStorage`. Even though `localStorage` is _not_ sent with every request, and is instead sent only when asked for, storing sensitive data is usually better left to encrypted Cookies.
 
@@ -40,7 +40,7 @@ You can set values two ways, using `localStorage.key = value`, or `localStorage.
 
 Both of the above methods will create the keys "backpack" and "pen" respectively.
 
-**Accesing Key Values**
+**Accessing Key Values**
 
 Specific values can be accessed with either `localStorage.someKey` or `localStorage.getItem(someKey)`.  As with using setItem(), the difference in using getItem is that a storage event will also be fired if there is a change in data.  Also notice that all values that are returned from local storage are strings.  
 
@@ -63,7 +63,7 @@ Let's say we want to update the pen in our local storage to have "Super" at the 
 
 ## Optional Exercise: Background Preferences
 
-Let's make a simple page that stores the users preference for a web page background color for each day of the week.  A user should be able to visit the site, enter a hex color for each day of the week, and the page's background color should reflect that input.  Furthermore, when the user closes the browser and revists the page, the background color should still be the same as the colors that were previously entered, and NOT the default blank color.
+Let's make a simple page that stores the user's preference for a web page background color for each day of the week.  A user should be able to visit the site, enter a hex color for each day of the week, and the page's background color should reflect that input.  Furthermore, when the user closes the browser and revisits the page, the background color should still be the same as the colors that were previously entered, and NOT the default blank color.
 
 **[(CLONE ME) Walkthrough Exercise Repo](https://github.com/gSchool/localstorage-walkthrough/tree/exercise)
 ** using this git command: `git clone git@github.com:gSchool/localstorage-walkthrough.git -b exercise`
@@ -73,7 +73,7 @@ Let's make a simple page that stores the users preference for a web page backgro
 
 ### Reading
 
-[Diving in To Local Storage](http://diveintohtml5.info/storage.html)
+[Diving into Local Storage](http://diveintohtml5.info/storage.html)
 (*Using Local Storage, solid examples in javascript:*)
 
 [localStorage Examples](https://css-tricks.com/localstorage-examples/) - offers more insight on _when_ and _where_ `localStorage` is used.
