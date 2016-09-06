@@ -83,7 +83,6 @@ Turn and talk to your neighbor and talk about the following:
 
 * Provide an example in your projects where you had a regression (ie a piece of code that works but later stopped working).
 * Provide an example in your projects where you wish you had a unit test.
-* Provide an example in your projects where you wish you had an integration test.
 * Discuss your opinions on the benefits of creating tests.
 
 ## What is Test Driven Development (TDD)?
