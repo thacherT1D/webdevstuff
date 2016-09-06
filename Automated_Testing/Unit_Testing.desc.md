@@ -31,7 +31,7 @@ const { assert } = require('chai');
 const mocha = require('mocha');
 const sum = require('./sum');
 
-it('sums two numbers', () => {
+it('adds two numbers', () => {
   const actual = sum(1, 2);
   const expected = 3;
 
@@ -48,7 +48,7 @@ mocha sum.test.js
 You'd see the following result.
 
 ```shell
-  ✓ sums two numbers
+  ✓ adds two numbers
 
   1 passing (8ms)
 ```
@@ -62,7 +62,7 @@ There are many goals you may want to achieve with an automated test. Here's a ta
 | Ensure an entire use case works as a developer expects          | End-to-end test  |
 | Ensure an entire use case works as a user expects               | Acceptance test  |
 
-The narrowest type of automated test is a **unit test**. A unit test refers to a test that verifies the functionality of one specific section of code, usually at the function or class level. Unit tests are particularly helpful during development because when one fails, you can isolate the failure to a specific area of in the program.
+The narrowest type of automated test is a **unit test**. A unit test refers to a test that verifies the functionality of one specific section of code, usually at the function or class level. Unit tests are particularly helpful during development because when one fails, you can isolate the failure to a specific area of the program.
 
 For example, imagine the `sum.js` project was changed to this.
 
@@ -85,7 +85,7 @@ const { assert } = require('chai');
 const mocha = require('mocha');
 const sum = require('./sum');
 
-it('sums two numbers', () => {
+it('adds two numbers', () => {
   const actual = sum(1, 2);
   const expected = 3;
 
@@ -102,12 +102,12 @@ mocha sum.test.js
 You'd see the following result.
 
 ```shell
-  1) sums two numbers
+  1) adds two numbers
 
   0 passing (11ms)
   1 failing
 
-  1)  sums two numbers:
+  1)  adds two numbers:
 
       AssertionError: expected 2 to equal 3
       + expected - actual
@@ -119,7 +119,7 @@ You'd see the following result.
       at Context.it (sum.test.js:11:10)
 ```
 
-At this point, there's either problem with the program under test or the test itself. As the developer, it's your job to determine which of the two programs to fix. In this case, what would you do?
+At this point, there's either a problem with the program under test or a problem with the test itself. As the developer, it's your job to determine which of the two programs to fix. In this case, what would you do?
 
 ### Exercise
 
