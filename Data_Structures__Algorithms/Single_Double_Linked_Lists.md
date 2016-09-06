@@ -12,7 +12,7 @@ By the end of this lesson you should be able to:
 
 ## Exercise Repository
 
-[Computer Science Linked List Exercises](https://github.com/gSchool/computer-science-linked-list-exercises)
+[Linked List Exercises](https://github.com/gSchool/computer-science-linked-list-exercises)
 
 
 ## Data Structures And Memory
@@ -70,7 +70,7 @@ Whenever you need to add or remove an item from the end you follow 3 simple step
 
 ### Exercise 1 - Singly Linked Lists
 
-Finish the `singly_linked_list.js` in the exercise repo. You can run the tests associated with JUST the linked list exercise using this command:
+Finish the `src/singly_linked_list.js` in the exercise repo. You can run the tests associated with JUST the linked list exercise using this command:
 
 `$ npm test`
 
@@ -92,7 +92,7 @@ Use the Red Green Refactor methodology to build your list. Here are the methods 
 
 If you feel lost, try this process:
 
-1. Pick a test from `singly_linked_list.test.js`
+1. Pick a test from `test/singly_linked_list.test.js`
 1. Read it carefully, try to understand what it does, and what that means your Linked List needs to do.
 1. If you're still confused use Google, you should be able to find some reference implementations for clues on how to get started.
 
@@ -181,7 +181,7 @@ A circular linked list is a list in which the tail element's `next` property is 
 
 ### Exercise 2 - Doubly Linked Lists
 
-Doubly Linked Lists have the same API as Singly Linked Lists. Now that you've implemented Singly Linked Lists, extend your implementations to be doubly linked. Once again, there is a reference implementation in this repo called `doubly_linked_list_solution.js`. Use it for inspiration, but challenge yourself not to copy any code.
+Doubly Linked Lists have the same API as Singly Linked Lists. Now that you've implemented Singly Linked Lists, extend your implementations to be doubly linked. Once again, there is a reference implementation in this repo called `src/doubly_linked_list_solution.js`. Use it for inspiration, but challenge yourself not to copy any code.
 
 ### Exercise 3 - Bonus Problems With Doubly Linked Lists
 
