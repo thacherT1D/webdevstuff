@@ -4,7 +4,7 @@
 - Explain why automated tests are important.
 - Explain what test-driven development is.
 - Explain why test-driven development is important.
-- Use test-driven development to unit test software with Mocha and Chai.
+- Use test-driven development to write unit tests.
 
 ## What's an automated test?
 
@@ -170,7 +170,7 @@ Test-driven development process has many benefits.
 * Tests help you really understand the design of the code you are working on. Instead of writing code to do something, you are starting by outlining all the conditions you are subjecting the code to and what outputs you'd expect from that.
 * Overall, speed of development increases.
 
-## TDD Example: An Editor
+## How do you use test-driven development to write unit tests?
 
 As an example, let's work on building an editor. Let's say your manager has come in with the following requirements:
 
