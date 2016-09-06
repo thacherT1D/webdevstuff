@@ -2,11 +2,11 @@
 
 - Explain what an automated test is.
 - Explain why automated tests are important.
-- Explain what Test Driven Development is.
-- Explain why Test Driven Development is important.
-- Use Test Driven Development to unit test software with Mocha and Chai.
+- Explain what test-driven development is.
+- Explain why test-driven development is important.
+- Use test-driven development to unit test software with Mocha and Chai.
 
-## What is an automated test?
+## What's an automated test?
 
 An **automated test** is software that compares the actual outcome of a separate program with an expected outcome. As the name implies, an automated test automates the repetitive but necessary task of testing a program. The alternative to an automated test is a manual test, which is easy to do but hard to repeat every time the code changes.
 
@@ -147,9 +147,9 @@ Turn and talk to your neighbor and talk about the following.
 * Provide an example in your projects where you wish you had a unit test.
 * Discuss your opinions on the benefits of creating tests.
 
-## What is Test Driven Development (TDD)?
+## What's test-driven development?
 
-Up until now, we have focused on developing software with very little structure or process. This can be loosely termed as *development driven development*. This means that we developed code for the sake of developing code. Another process of development is called *test driven development*. It's described in 4 steps.
+Up until now, we have focused on developing software with very little structure or process. This can be loosely termed as **development-driven development**. This means that we developed code for the sake of developing code. Another process of development is called **test-driven development**. It's described in 4 steps.
 
 Given a requirement,
 
@@ -159,6 +159,16 @@ Given a requirement,
 1. Run tests.
 
 and repeat.
+
+## Why is test-driven development important?
+
+Test-driven development process has many benefits.
+
+* When faced with a large and daunting piece of work ahead writing the tests will get you moving quickly.
+* You are forced to have tests, which have the benefits described above.
+* Your tests give you confidence that you've done enough for now and can stop tweaking and move on to the next thing.
+* Tests help you really understand the design of the code you are working on. Instead of writing code to do something, you are starting by outlining all the conditions you are subjecting the code to and what outputs you'd expect from that.
+* Overall, speed of development increases.
 
 ## TDD Example: An Editor
 
@@ -382,16 +392,6 @@ module.exports = { write, displayString, clear, undo, redo, save };
 **NOTE:** You are able to mock the filesystem calls using [mock-fs](https://www.npmjs.com/package/mock-fs).
 
 **Exercise:** Turn and talk to your neighbor and reflect on the advantages and disadvantages of Test Driven Development.
-
-## Benefits of Test Driven Development
-
-Test Driven Development process has many benefits.
-
-* When faced with a large and daunting piece of work ahead writing the tests will get you moving quickly.
-* You are forced to have tests, which have the benefits described above.
-* Your tests give you confidence that you've done enough for now and can stop tweaking and move on to the next thing.
-* Tests help you really understand the design of the code you are working on. Instead of writing code to do something, you are starting by outlining all the conditions you are subjecting the code to and what outputs you'd expect from that.
-* Overall, speed of development increases.
 
 ## Assignment
 
