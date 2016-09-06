@@ -59,8 +59,8 @@ There are many goals you may want to achieve with an automated test. Here's a ta
 |-----------------------------------------------------------------|------------------|
 | Ensure one part of a use case works as a developer expects      | Unit test        |
 | Ensure multiple parts of a use case work as a developer expects | Integration test |
-| Ensure the entire use case works as a developer expects         | End-to-end test  |
-| Ensure the entire use case works as a user expects              | Acceptance test  |
+| Ensure an entire use case works as a developer expects          | End-to-end test  |
+| Ensure an entire use case works as a user expects               | Acceptance test  |
 
 The narrowest type of automated test is a **unit test**. A unit test refers to a test that verifies the functionality of one specific section of code, usually at the function or class level. Unit tests are particularly helpful during development because when one fails, you can isolate the failure to a specific area of in the program.
 
