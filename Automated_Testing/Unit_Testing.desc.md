@@ -133,11 +133,9 @@ Using automated tests can helps reduce the number of bugs in your projects by:
 
 - Identifying a bug before the make it to production.
 - Ensuring bugs that make it to production aren't reintroduced.
-- Reducing the fear of introducing new bugs when making a change.
+- Preventing new bugs from being introduced when making a change.
 
-Additionally, writing code that adheres to an automated test can help you write better code. Code that's written to be easy to test is often easy to change.
-
-It overall takes less to write correct code when testing. Specifically, testing reduce the cost of change in your code.
+Since every fixed bug consumes precious developer time, it's common for feature development to grind to a stop on large projects that don't use automated tests.
 
 ```text
               │                                 ▣
@@ -160,6 +158,8 @@ Issues closed │               ▰▰  ▣
               └─────────────────────────────────────────
                            Codebase size
 ```
+
+Additionally, writing code that adheres to an automated test can help you write better code. Code that's written to be easy to test is often easy to change.
 
 ### Exercise
 
