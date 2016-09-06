@@ -35,6 +35,8 @@ This process is a convenience for programmers, but it also has performance impli
 
 If the runtime of pushing is important to your program, you may want to use a different data structure.  One option is a **linked list**; linked lists can ensure that `push` is __always__ constant time. Linked lists come in two styles, singly and doubly linked. We'll examine both.
 
+---
+
 ### Singly Linked List
 
 A singly linked list is stored in memory using __nodes__ and __references or pointers__ to other nodes. We think of these references as being __linear__, after all Linked Lists are alternatives to Arrays. In the drawing below, we see this "linearity" of __nodes__.
@@ -59,6 +61,41 @@ Whenever you need to add or remove an item from the end you follow 3 simple step
 1. Give the current tail a __next__ pointer to the new node.
 1. Change the tail to point to the new node.
 1. Give the new node a __next__ pointer of `undefined` or `null`.
+
+
+### Exercise 1 - Singly Linked Lists
+
+Finish the `Exercises/src/linked-list/singly_linked_list.js` in this repo. You can run the tests associated with JUST the linked list exercise using this command:
+
+`$ mocha Exercises/test/linked-list/singly_linked_list.test.js`
+
+Use the Red Green Refactor methodology to build your list. Here are the methods you must complete:
+
+`__getNodeAt`: A function for internal use to find a node at an index.  When implementing the function try to think of the most efficient way of finding the index.  For example, if the list has 3000 elements and the index that we want is at index 2950, does it make more sense to find the node by starting from the front or from the back?
+
+`get`: Gets the value of a node at an index.  This method should  use `__getNodeAt` internally.
+
+`set`: Sets the value at an index.  This method should use `__getNodeAt` internally.
+
+`insert`: Inserts a value at a position.  For example, if the list is [3,7,8], `insert(0,10)` results in a list of [10,3,7,8].
+
+`unshift`: Adds a value to the front of the list
+
+`shift`: removes a value from the front of the list
+
+`remove`: removes a value at an index
+
+If you feel lost, try this process:
+
+1. Pick a test from `Exercises/test/linked-list/singly_linked_list.test.js`
+1. Read it carefully, try to understand what it does, and what that means your Linked List needs to do.
+1. If you're still confused use Google, you should be able to find some reference implementations for clues on how to get started.
+
+**Stretch Goal**
+
+Implement reverse on a singly linked list: Write tests first then make the tests pass.
+
+---
 
 ### Doubly Linked Lists
 
@@ -136,45 +173,12 @@ A circular linked list is a list in which the tail element's `next` property is 
 
 ![circular linked list](https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Circularly-linked-list.svg/700px-Circularly-linked-list.svg.png)
 
-# EXERCISES
 
-### Part 1 - Singly Linked Lists
-
-Finish the `Exercises/src/linked-list/singly_linked_list.js` in this repo. You can run the tests associated with JUST the linked list exercise using this command:
-
-`$ mocha Exercises/test/linked-list/singly_linked_list.test.js`
-
-Use the Red Green Refactor methodology to build your list. Here are the methods you must complete:
-
-`__getNodeAt`: A function for internal use to find a node at an index.  When implementing the function try to think of the most efficient way of finding the index.  For example, if the list has 3000 elements and the index that we want is at index 2950, does it make more sense to find the node by starting from the front or from the back?
-
-`get`: Gets the value of a node at an index.  This method should  use `__getNodeAt` internally.
-
-`set`: Sets the value at an index.  This method should use `__getNodeAt` internally.
-
-`insert`: Inserts a value at a position.  For example, if the list is [3,7,8], `insert(0,10)` results in a list of [10,3,7,8].
-
-`unshift`: Adds a value to the front of the list
-
-`shift`: removes a value from the front of the list
-
-`remove`: removes a value at an index
-
-If you feel lost, try this process:
-
-1. Pick a test from `Exercises/test/linked-list/singly_linked_list.test.js`
-1. Read it carefully, try to understand what it does, and what that means your Linked List needs to do.
-1. If you're still confused use Google, you should be able to find some reference implementations for clues on how to get started.
-
-**Stretch Goal**
-
-Implement reverse on a singly linked list: Write tests first then make the tests pass.
-
-### Part 2 - Doubly Linked Lists
+### Exercise 2 - Doubly Linked Lists
 
 Doubly Linked Lists have the same API as Singly Linked Lists. Now that you've implemented Singly Linked Lists, extend your implementations to be doubly linked. Once again, there is a reference implementation in this repo called `doubly_linked_list_solution.js`. Use it for inspiration, but challenge yourself not to copy any code.
 
-### Part 3 - Bonus Problems With Doubly Linked Lists
+### Exercise 3 - Bonus Problems With Doubly Linked Lists
 
 Red Green Refactor the following:
 
