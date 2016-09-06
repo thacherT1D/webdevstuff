@@ -1,14 +1,14 @@
 ## Objectives
 
-- Explain what test automation is.
-- Explain why test automation is important.
+- Explain what an automated test is.
+- Explain why automated tests are important.
 - Explain what Test Driven Development is.
 - Explain why Test Driven Development is important.
 - Use Test Driven Development to unit test software with Mocha and Chai.
 
-## What is test automation?
+## What is an automated test?
 
-**Test automation** is software that executes a test and compares the actual outcome of a separate program with an expected outcome. Test automation automates the repetitive but necessary testing process that's already in place when you build software. For example, take the following `sum.js` program.
+An **automated test** is software that compares the actual outcome of a separate program with an expected outcome. As the name implies, an automated test automates the repetitive but necessary task of testing your application. For example, take the following `sum.js` program.
 
 ```js
 'use strict';
@@ -20,9 +20,7 @@ const sum = function(a, b) {
 module.exports = sum;
 ```
 
-Now, one possible automated test for this program could be the following `sum.test.js` test program.
-
-**NOTE:** An automated test program is separate from the program being tested.
+The following `sum.test.js` program is one possible automated test for the above program. Note how the automated test is separate from the program being tested.
 
 ```js
 'use strict';
@@ -39,9 +37,13 @@ it('sums two numbers', () => {
 });
 ```
 
+By running the above program with the `mocha` test runner in the shell.
+
 ```shell
 mocha sum.test.js
 ```
+
+You'll see the following result.
 
 ```shell
   ✓ sums two numbers
@@ -49,16 +51,16 @@ mocha sum.test.js
   1 passing (8ms)
 ```
 
-There are multiple goals when using test automation. As a result, there are multiple types of tests that you can create to accomplish these goals.
+With automated tests, there are many possible goals. Here's a table of common goals and the type of automated test used to ensure the goal is met.
 
-- Unit tests
-- Integration tests
-- End-to-end tests
-- Acceptance tests
-- Performance testing
-- Compatibility testing
+| Goal                                                            | Type             |
+|-----------------------------------------------------------------|------------------|
+| Ensure one part of a use case works as a developer expects      | Unit test        |
+| Ensure multiple parts of a use case work as a developer expects | Integration test |
+| Ensure the entire use case works as a developer expects         | End-to-end test  |
+| Ensure the entire use case works as a user expects              | Acceptance test  |
 
-The most common type is a **unit test**. A unit test refers to a test that verifies the functionality of a specific section of code, usually at the function or class level. Unit tests are particularly helpful during development because when one fails, you can isolate the failure to a specific area of in the program.
+The simplest type of automated test is a **unit test**. A unit test refers to a test that verifies the functionality of a specific section of code, usually at the function or class level. Unit tests are particularly helpful during development because when one fails, you can isolate the failure to a specific area of in the program.
 
 ### Exercise
 
