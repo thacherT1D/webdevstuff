@@ -142,9 +142,9 @@ Issues closed │               ▰▰  ▣
               │           ▰▰  ▣
               │         ▰▰  ▣
               │       ▰▰  ▣
-              │     ▰▰  ▣     ▰ With automated tests
+              │     ▰▰  ▣     ▰ Without automated tests
               │    ▰  ▣
-              │   ▰ ▣         ▣ Without automated tests
+              │   ▰ ▣         ▣ With automated tests
               │  ▰▣
               │ ▣
               └─────────────────────────────────────────
@@ -184,6 +184,7 @@ npm install --save-dev mochi chai
 ```
 
 ```shell
+
 ```
 
 ```javascript
