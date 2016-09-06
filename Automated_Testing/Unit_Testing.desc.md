@@ -127,17 +127,39 @@ Turn to your a neighbor and, in your own words, explain what an automated test i
 
 ## Why are automated tests important?
 
-While the instruction team has created automated tests for your assignments, most of you haven't been writing automated tests for your projects. As a project get bigger, the cognitive load needed to understand the entire codebase becomes too great to keep in your head all at once.
+While the instruction team has created automated tests for many of your assignments, most of you haven't written automated tests for your projects. As a project get bigger, the cognitive load needed to keep the entire codebase in your head at the same time becomes too great. And as a result, it's easy to accidentally slip bugs into your program.
 
-Using automated tests helps for your projects can help you by:
+Using automated tests can helps reduce the number of bugs in your projects by:
 
-- Identify bugs in our code before the make it to production.
-- Ensure old bugs that make it to production aren't reintroduced.
-- Enforce better code design.
-- Provide documentation for your code.
-- Reduces fear of making a change.
+- Identifying a bug before the make it to production.
+- Ensuring bugs that make it to production aren't reintroduced.
+- Reducing the fear of introducing new bugs when making a change.
+
+Additionally, writing code that adheres to an automated test can help you write better code. Code that's written to be easy to test is often easy to change.
 
 It overall takes less to write correct code when testing. Specifically, testing reduce the cost of change in your code.
+
+```text
+              │                                 ▣
+              │                               ▣       ▰▰
+              │                             ▣    ▰▰▰▰▰
+              │                           ▣ ▰▰▰▰▰
+              │                       ▰▰▣▰▰▰
+              │                    ▰▰▰▣
+              │                 ▰▰▰ ▣
+Issues closed │               ▰▰  ▣
+  per hour    │             ▰▰  ▣
+              │           ▰▰  ▣
+              │         ▰▰  ▣
+              │       ▰▰  ▣
+              │     ▰▰  ▣     ▰ With automated tests
+              │    ▰  ▣
+              │   ▰ ▣         ▣ Without automated tests
+              │  ▰▣
+              │ ▣
+              └─────────────────────────────────────────
+                           Codebase size
+```
 
 ### Exercise
 
