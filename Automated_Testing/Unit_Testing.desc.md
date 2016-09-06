@@ -127,20 +127,21 @@ Turn to your a neighbor and, in your own words, explain what an automated test i
 
 ## Why are automated tests important?
 
-Up to this point, we have not written tests for our projects, but the instruction staff have created tests for you to run through exercises. As projects get bigger, the cognitive load needed to understand your project becomes too cumbersome to manage all the logic. Testing helps us out out here.
+While the instruction team has created automated tests for your assignments, most of you haven't been writing automated tests for your projects. As a project get bigger, the cognitive load needed to understand the entire codebase becomes too great to keep in your head all at once.
 
-Testing your code has many strengths:
+Using automated tests helps for your projects can help you by:
 
-* Testing identifies bugs in our code.
-* Testing continues to test to ensure no new bugs get introduced (called a regression).
-* Tests enforce better code design to be testable.
-* They provide better documentation on code.
-* Testing reduces fear.
-* It overall takes _less_ to write correct code when testing. Specifically, testing reduce the cost of change in your code.
+- Identify bugs in our code before the make it to production.
+- Ensure old bugs that make it to production aren't reintroduced.
+- Enforce better code design.
+- Provide documentation for your code.
+- Reduces fear of making a change.
+
+It overall takes less to write correct code when testing. Specifically, testing reduce the cost of change in your code.
 
 ### Exercise
 
-Turn and talk to your neighbor and talk about the following:
+Turn and talk to your neighbor and talk about the following.
 
 * Provide an example in your projects where you had a regression (ie a piece of code that works but later stopped working).
 * Provide an example in your projects where you wish you had a unit test.
