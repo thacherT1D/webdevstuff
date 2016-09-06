@@ -481,7 +481,7 @@ suite('Binary', () => {
 
 ## Assignment
 
-[https://github.com/gSchool/javascript-test-coverage](https://github.com/gSchool/javascript-test-coverage)
+- [JavaScript Test Coverage](https://github.com/gSchool/javascript-test-coverage)
 
 ## Resources
 
