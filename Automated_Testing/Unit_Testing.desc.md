@@ -8,7 +8,7 @@
 
 ## What is an automated test?
 
-An **automated test** is software that compares the actual outcome of a separate program with an expected outcome. As the name implies, an automated test automates the repetitive but necessary task of testing an application. The alternative to an automated test is a manual test, which are easy to do but hard to repeat every time the code changes.
+An **automated test** is software that compares the actual outcome of a separate program with an expected outcome. As the name implies, an automated test automates the repetitive but necessary task of testing an application. The alternative to an automated test is a manual test, which is easy to do but hard to repeat every time the code changes.
 
 To see an example of an automated test, take the following `sum.js` program.
 
@@ -53,7 +53,7 @@ You'd see the following result.
   1 passing (8ms)
 ```
 
-With automated tests, there are many possible goals. Here's a table of the most common goals and the type of automated test used to ensure the goal is met.
+There are many goals you may want to achieve with an automated test. Here's a table of the most common goals and the type of automated test used to ensure the goal is met.
 
 | Goal                                                            | Type             |
 |-----------------------------------------------------------------|------------------|
