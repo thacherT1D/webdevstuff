@@ -76,7 +76,24 @@ const sum = function(a, b) {
 module.exports = sum;
 ```
 
-After running the above automated test with the `mocha` test runner in the shell.
+The original automated test in the `sum.test.js` program is, in fact, a unit test.
+
+```js
+'use strict';
+
+const { assert } = require('chai');
+const mocha = require('mocha');
+const sum = require('./sum');
+
+it('sums two numbers', () => {
+  const actual = sum(1, 2);
+  const expected = 3;
+
+  assert.strictEqual(actual, expected);
+});
+```
+
+After running the unit test with the `mocha` test runner in the shell.
 
 ```shell
 mocha sum.test.js
@@ -101,6 +118,8 @@ You'd see the following result.
       at Function.assert.strictEqual (node_modules/chai/lib/chai/interface/assert.js:178:32)
       at Context.it (sum.test.js:11:10)
 ```
+
+At this point, there's either problem with the program under test or the test itself. As the developer, it's your job to determine which of the two programs to fix. In this case, what would you do?
 
 ### Exercise
 
