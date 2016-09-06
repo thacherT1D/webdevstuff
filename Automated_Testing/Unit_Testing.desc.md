@@ -173,6 +173,7 @@ Given a requirement:
 1. Write the code to make the test pass.
 1. Run the test to ensure it passes.
 1. Refactor the code to be more maintainable or performant.
+1. Run the test to ensure it still passes.
 1. Repeat.
 
 ```shell
