@@ -127,7 +127,7 @@ Turn to your a neighbor and, in your own words, explain what an automated test i
 
 ## Why are automated tests important?
 
-While you've used automated tests for many of your assignments, you probably haven't written automated tests for any of your own projects. Writing automated tests for your project can be helpful because, as it get bigger, the keeping the entire codebase in your head gets harder. As a result, it's easy to accidentally slip bugs into your program. And bug fixing takes time away feature development. On large projects that don't use automated tests, it's common for your productivity to slow and even possibly to grind to a stop.
+While you've used automated tests for many of your assignments, you probably haven't written automated tests for any of your own projects. Automated tests can be helpful for projects because, as it gets bigger, keeping the entire codebase in your head gets harder. As a result, it's easy to accidentally slip bugs into your program. And fixing those bugs takes time away feature development. On a large project that doesn't use automated tests, it's common for your productivity to slow and possibly grind to a stop.
 
 ```text
               │                                 ▣
@@ -148,16 +148,15 @@ Issues closed │               ▰▰  ▣
               │  ▰▣
               │ ▣
               └─────────────────────────────────────────
-                           Codebase size
+                           Project size
 ```
 
 Using automated tests, you can reduce the number of bugs in your projects by:
 
 - Identifying a bug before the make it to production.
-- Ensuring bugs that make it to production aren't reintroduced.
-- Preventing new bugs from being introduced when making a change.
+- Ensuring bugs that do make it to production aren't reintroduced.
 
-Additionally, writing code that adheres to an automated test can help you write better code. Code that's written to be easy to test is often easy to change.
+Additionally, writing code that adheres to an automated test can help you write better code. Code that's written to be easy to test is often easy to change. And code that's easy to change allows you to be more productive.
 
 ### Exercise
 
