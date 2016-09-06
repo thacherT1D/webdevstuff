@@ -127,15 +127,7 @@ Turn to your a neighbor and, in your own words, explain what an automated test i
 
 ## Why are automated tests important?
 
-While the instruction team has created automated tests for many of your assignments, most of you haven't written automated tests for your projects. As a project get bigger, the cognitive load needed to keep the entire codebase in your head at the same time becomes too great. And as a result, it's easy to accidentally slip bugs into your program.
-
-Using automated tests can helps reduce the number of bugs in your projects by:
-
-- Identifying a bug before the make it to production.
-- Ensuring bugs that make it to production aren't reintroduced.
-- Preventing new bugs from being introduced when making a change.
-
-Since every fixed bug consumes precious developer time, it's common for feature development to grind to a stop on large projects that don't use automated tests.
+While you've used automated tests for many of your assignments, you probably haven't written automated tests for any of your own projects. Writing automated tests for your project can be helpful because, as it get bigger, the keeping the entire codebase in your head gets harder. As a result, it's easy to accidentally slip bugs into your program. And bug fixing takes time away feature development. On large projects that don't use automated tests, it's common for your productivity to slow and even possibly to grind to a stop.
 
 ```text
               │                                 ▣
@@ -158,6 +150,12 @@ Issues closed │               ▰▰  ▣
               └─────────────────────────────────────────
                            Codebase size
 ```
+
+Using automated tests, you can reduce the number of bugs in your projects by:
+
+- Identifying a bug before the make it to production.
+- Ensuring bugs that make it to production aren't reintroduced.
+- Preventing new bugs from being introduced when making a change.
 
 Additionally, writing code that adheres to an automated test can help you write better code. Code that's written to be easy to test is often easy to change.
 
