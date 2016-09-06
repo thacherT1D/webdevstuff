@@ -10,6 +10,11 @@ By the end of this lesson you should be able to:
 1. Write and describe basic algorithms associated with manipulating linked lists
 1. Advanced: Reverse a linked list in place iteratively and recursively
 
+## Exercise Repository
+
+[Computer Science Linked List Exercises](https://github.com/gSchool/computer-science-linked-list-exercises)
+
+
 ## Data Structures And Memory
 
 Modern programming languages hide a lot of the complexity of dealing with a computer.  In languages like JavaScript and Ruby we never have to worry about memory allocation, but it is important to know what is going on behind the scenes when you use it.
@@ -65,9 +70,9 @@ Whenever you need to add or remove an item from the end you follow 3 simple step
 
 ### Exercise 1 - Singly Linked Lists
 
-Finish the `Exercises/src/linked-list/singly_linked_list.js` in this repo. You can run the tests associated with JUST the linked list exercise using this command:
+Finish the `singly_linked_list.js` in the exercise repo. You can run the tests associated with JUST the linked list exercise using this command:
 
-`$ mocha Exercises/test/linked-list/singly_linked_list.test.js`
+`$ npm test`
 
 Use the Red Green Refactor methodology to build your list. Here are the methods you must complete:
 
@@ -87,7 +92,7 @@ Use the Red Green Refactor methodology to build your list. Here are the methods 
 
 If you feel lost, try this process:
 
-1. Pick a test from `Exercises/test/linked-list/singly_linked_list.test.js`
+1. Pick a test from `singly_linked_list.test.js`
 1. Read it carefully, try to understand what it does, and what that means your Linked List needs to do.
 1. If you're still confused use Google, you should be able to find some reference implementations for clues on how to get started.
 
