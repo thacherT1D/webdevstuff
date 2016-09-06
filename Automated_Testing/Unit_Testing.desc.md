@@ -1,13 +1,70 @@
 ## Objectives
 
-- Explain the benefits of testing.
-- Describe the different types of tests.
-- Write tests using Mocha and Chai.
-- Explain what is Test Driven Development.
-- Practice Test Driven Development by writing tests then writing code.
-- Reflect on and discuss the benefits of Test Driven Development.
+- Explain what test automation is.
+- Explain why test automation is important.
+- Explain what Test Driven Development is.
+- Explain why Test Driven Development is important.
+- Use Test Driven Development to unit test software with Mocha and Chai.
 
-## Benefits of testing
+## What is test automation?
+
+**Test automation** is software that executes a test and compares the actual outcome of a separate program with an expected outcome. Test automation automates the repetitive but necessary testing process that's already in place when you build software. For example, take the following `sum.js` program.
+
+```js
+'use strict';
+
+const sum = function(a, b) {
+  return a + b;
+};
+
+module.exports = sum;
+```
+
+Now, one possible automated test for this program could be the following `sum.test.js` test program.
+
+**NOTE:** An automated test program is separate from the program being tested.
+
+```js
+'use strict';
+
+const { assert } = require('chai');
+const mocha = require('mocha');
+const sum = require('./sum');
+
+it('sums two numbers', () => {
+  const actual = sum(1, 2);
+  const expected = 3;
+
+  assert.strictEqual(actual, expected);
+});
+```
+
+```shell
+mocha sum.test.js
+```
+
+```shell
+  ✓ sums two numbers
+
+  1 passing (8ms)
+```
+
+There are multiple goals when using test automation. As a result, there are multiple types of tests that you can create to accomplish these goals.
+
+- Unit tests
+- Integration tests
+- End-to-end tests
+- Acceptance tests
+- Performance testing
+- Compatibility testing
+
+The most common type is a **unit test**. A unit test refers to a test that verifies the functionality of a specific section of code, usually at the function or class level. Unit tests are particularly helpful during development because when one fails, you can isolate the failure to a specific area of in the program.
+
+### Exercise
+
+Turn to your a neighbor and, in your own words, explain what test automation is.
+
+## Why is test automation important?
 
 Up to this point, we have not written tests for our projects, but the instruction staff have created tests for you to run through exercises. As projects get bigger, the cognitive load needed to understand your project becomes too cumbersome to manage all the logic. Testing helps us out out here.
 
@@ -19,33 +76,6 @@ Testing your code has many strengths:
 * They provide better documentation on code.
 * Testing reduces fear.
 * It overall takes _less_ to write correct code when testing. Specifically, testing reduce the cost of change in your code.
-
-## Types of tests
-
-There are multiple goals we have in testing our code. As a result, there are multiple types of tests that we create to accomplish these goals. We will work on two main types of tests.
-
-### Unit tests
-
-The most common type of tests amongst software developers are *unit tests*. Unit tests are tests that isolate specific pieces of code. These are particularly helpful during development because when a unit test fails, we can isolate the area of code that where the bug is.
-
-Because we test functions and functions can be composed of other functions that we would test, it is our responsibility to isolate the code by creating *stubs* of other functions, that is, creating functions that return an expected output.
-
-Unit tests is a type of *white box testing* that is writing tests with knowledge of the internal workings of code we are testing.
-
-### Integration tests
-
-Broader in scope, *integration tests* make no attempt to understand the inner workings of a function (also called *black box testing*). Here, integration tests are meant to test the overall functionality of a function, module, or API. They can overlap with unit tests, but oftentimes, integration tests work on larger pieces of code.
-
-The advantages of these tests is easy: if the tests pass, your software works as expected. The main disadvantage is that a failure in a test does not clearly identify where in the code the bug is.
-
-### Other types of tests
-
-While the three above types are the ones we are focusing on, there are many aspects of software that we test, they include:
-
-* Performance testing - testing the limits of software for speed and scalability purposes.
-* Compatibility testing - testing software on various types of "clients" (think mobile phones, browsers, OS's).
-
-And many more.
 
 ### Exercise
 
@@ -306,15 +336,10 @@ Test Driven Development process has many benefits.
 
 [https://github.com/gSchool/javascript-test-coverage](https://github.com/gSchool/javascript-test-coverage)
 
-## Bonus
-
-Write tests using `supertest` for your pet shop assignment. [https://github.com/gSchool/fs-pet-shop](https://github.com/gSchool/fs-pet-shop)
-
 ## Resources
 
 - [Chai](http://chaijs.com/)
 - [Mocha](https://mochajs.org/)
-- [SuperTest](https://www.npmjs.com/package/supertest)
 - [Testing Node.js with Mocha and Chai](http://mherman.org/blog/2015/09/10/testing-node-js-with-mocha-and-chai/#.V4QAd5MrKRt)
 
 ## Videos
