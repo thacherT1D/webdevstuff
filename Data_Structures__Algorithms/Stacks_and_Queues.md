@@ -17,7 +17,7 @@ Stacks and Queues are specializations of lists. That is, they are lists with a _
   * Implement a __queue__
 
 ## Exercise Repository
-[Stacks and Queues Exercises](https://github.com/gSchool/computer-science-linked-list-exercises)
+[Stacks and Queues Exercises](https://github.com/gSchool/computer-science-stacks-queues-exercises)
 
 ## [Stacks](https://en.wikipedia.org/wiki/Stack_(abstract_data_type))
 
@@ -41,7 +41,7 @@ Where do we see stacks in the real world?
 - A stack is an extremely useful and efficient data structure for solving algorithms like figuring out a palindrome.
 - Typical application areas include compilers, operating systems, handling of program memory (nested function calls)
 
-## [Queues](https://en.wikipedia.org/wiki/Queue_(abstract_data_type)
+## [Queues](https://en.wikipedia.org/wiki/Queue_(abstract_data_type))
 
 A Queue is a data structure where insertion __must happen__ from one end of the list and removal must happen from the other end. We call this a FIFO (first-in-first-out) structure.
 
@@ -73,6 +73,6 @@ And remember, the regular Array structure in Javascript can be used as both a St
 
 ## Exercises
 
-1. Your solution to Linked Lists should behave as a stack already. Use it as a stack to complete `Exercises/src/linked-list/parens_checker` to practice *using a stack*.
+1. Your solution to Linked Lists should behave as a stack already. Use it as a stack to complete `src/parens_checker` to practice *using a stack*.
 
-1. Use your linked list implementation to create an implementation of a queue.  Complete `Exercises/src/linked-list/queue.js` so it passes the tests in `Exercises/test/linked-list/queue.test.js`. You'll need to decide which functions to use as __enqueue__ and __dequeue__, but you should not have to rewrite much code.
+1. Use your linked list implementation to create an implementation of a queue.  Complete `src/queue.js` so it passes the tests in `test/queue.test.js`. You'll need to decide which functions to use as __enqueue__ and __dequeue__, but you should not have to rewrite much code.
