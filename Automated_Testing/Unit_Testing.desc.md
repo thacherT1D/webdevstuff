@@ -8,7 +8,9 @@
 
 ## What is an automated test?
 
-An **automated test** is software that compares the actual outcome of a separate program with an expected outcome. As the name implies, an automated test automates the repetitive but necessary task of testing your application. For example, take the following `sum.js` program.
+An **automated test** is software that compares the actual outcome of a separate program with an expected outcome. As the name implies, an automated test automates the repetitive but necessary task of testing an application. The alternative to an automated test is a manual test, which are easy to do but hard to repeat every time the code changes.
+
+To see an example of an automated test, take the following `sum.js` program.
 
 ```js
 'use strict';
@@ -37,13 +39,13 @@ it('sums two numbers', () => {
 });
 ```
 
-By running the above program with the `mocha` test runner in the shell.
+After running the above automated test with the `mocha` test runner in the shell.
 
 ```shell
 mocha sum.test.js
 ```
 
-You'll see the following result.
+You'd see the following result.
 
 ```shell
   ✓ sums two numbers
@@ -51,7 +53,7 @@ You'll see the following result.
   1 passing (8ms)
 ```
 
-With automated tests, there are many possible goals. Here's a table of common goals and the type of automated test used to ensure the goal is met.
+With automated tests, there are many possible goals. Here's a table of the most common goals and the type of automated test used to ensure the goal is met.
 
 | Goal                                                            | Type             |
 |-----------------------------------------------------------------|------------------|
@@ -60,7 +62,7 @@ With automated tests, there are many possible goals. Here's a table of common go
 | Ensure the entire use case works as a developer expects         | End-to-end test  |
 | Ensure the entire use case works as a user expects              | Acceptance test  |
 
-The simplest type of automated test is a **unit test**. A unit test refers to a test that verifies the functionality of a specific section of code, usually at the function or class level. Unit tests are particularly helpful during development because when one fails, you can isolate the failure to a specific area of in the program.
+The simplest type of automated test is a **unit test**. A unit test refers to a test that verifies the functionality of one specific section of code, usually at the function or class level. Unit tests are particularly helpful during development because when one fails, you can isolate the failure to a specific area of in the program.
 
 ### Exercise
 
