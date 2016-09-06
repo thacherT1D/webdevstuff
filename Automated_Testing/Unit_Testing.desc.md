@@ -153,14 +153,14 @@ Issues closed │               ▰▰  ▣
 
 Using automated tests, you can reduce the number of bugs in your projects by:
 
-- Identifying a bug before the make it to production.
-- Ensuring bugs that do make it to production aren't reintroduced.
+- Identifying a bug before it's deployed to production.
+- Ensuring bugs that were deployed to production aren't reintroduced.
 
 Additionally, writing code that adheres to an automated test can help you write better code. Code that's written to be easy to test is often easy to change. And code that's easy to change allows you to be more productive.
 
 ### Exercise
 
-Turn to your a neighbor and, in your own words, explain why automated tests are important. If you can, provide an example from your experience where a bug caused your productivity to significantly decrease. Talk about the type of automated test that could have helped prevent that bug from cropping up in the first place.
+Turn to your a neighbor and, in your own words, explain why automated tests are important. If you can, provide an example from your experience where a bug caused your productivity to significantly decrease. Talk about the type of automated test that may have helped prevent that bug from cropping up in the first place.
 
 ## What's test-driven development?
 
