@@ -28,10 +28,10 @@ The following `sum.test.js` program is one possible automated test for the above
 'use strict';
 
 const { assert } = require('chai');
-const mocha = require('mocha');
-const sum = require('./sum');
+const { test } = require('mocha');
+const sum = require('../sum');
 
-it('adds two numbers', () => {
+test('sums two numbers', () => {
   const actual = sum(1, 2);
   const expected = 3;
 
@@ -82,10 +82,10 @@ The original automated test in the `sum.test.js` program is, in fact, a unit tes
 'use strict';
 
 const { assert } = require('chai');
-const mocha = require('mocha');
-const sum = require('./sum');
+const { test } = require('mocha');
+const sum = require('../sum');
 
-it('adds two numbers', () => {
+test('sums two numbers', () => {
   const actual = sum(1, 2);
   const expected = 3;
 
@@ -195,10 +195,10 @@ In the `test/product.test.js` file, type out the following code.
 'use strict';
 
 const { assert } = require('chai');
-const mocha = require('mocha');
+const { test } = require('mocha');
 const product = require('../product');
 
-it('multiplies two numbers', () => {
+test('multiples two numbers', () => {
   const actual = product(4, 5);
   const expected = 20;
 
@@ -251,12 +251,11 @@ In the `test` directory, create a file `editor.js`. In here, we will initialize 
 ```javascript
 'use strict';
 
-const assert = require('chai').assert;
-const {suite, test} = require('mocha');
+const { assert } = require('chai');
+const { suite, test } = require('mocha');
+const Editor = require('../Editor');
 
-const editor = require('../editor');
-
-suite('editor module', () => {
+suite('Editor', () => {
   beforeEach(() => {
     editor.clear();
   });
