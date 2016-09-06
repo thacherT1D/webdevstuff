@@ -184,15 +184,19 @@ npm install --save-dev mochi chai
 ```
 
 ```shell
-
+"scripts": {
+  "test": "mocha"
+}
 ```
+
+In the `test/product.test.js` file, type out the following code.
 
 ```javascript
 'use strict';
 
 const { assert } = require('chai');
 const mocha = require('mocha');
-const product = require('./product');
+const product = require('../product');
 
 it('multiplies two numbers', () => {
   const actual = product(4, 5);
@@ -200,6 +204,10 @@ it('multiplies two numbers', () => {
 
   assert.strictEqual(actual, expected);
 });
+```
+
+```shell
+npm test
 ```
 
 ```javascript
@@ -217,6 +225,7 @@ npm install mocha chai
 ```
 
 ```shell
+npm test
 ```
 
 ## Why is test-driven development important?
