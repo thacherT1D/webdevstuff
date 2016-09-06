@@ -160,24 +160,63 @@ Additionally, writing code that adheres to an automated test can help you write 
 
 ### Exercise
 
-Turn and talk to your neighbor and talk about the following.
-
-* Provide an example in your projects where you had a regression (ie a piece of code that works but later stopped working).
-* Provide an example in your projects where you wish you had a unit test.
-* Discuss your opinions on the benefits of creating tests.
+Turn to your a neighbor and, in your own words, explain why automated tests are important. If you can, provide an example from your experience where a bug caused your productivity to significantly decrease. Talk about the type of automated test that could have helped prevent that bug from cropping up in the first place.
 
 ## What's test-driven development?
 
-Up until now, we have focused on developing software with very little structure or process. This can be loosely termed as **development-driven development**. This means that we developed code for the sake of developing code. Another process of development is called **test-driven development**. It's described in 4 steps.
+Up until now, we've focused on developing software without automated tests. This can be loosely termed as **development-driven development**. This means that we developed code for the sake of developing code. Another process of development is called **test-driven development** and can be described as follows.
 
-Given a requirement,
+Given a requirement:
 
 1. Add a test.
-1. Run all tests to ensure new test fails.
-1. Write the code. Refactor if needed.
-1. Run tests.
+1. Run the test to ensure it fails.
+1. Write the code to make the test pass.
+1. Run the test to ensure it passes.
+1. Refactor the code to be more maintainable or performant.
+1. Repeat.
 
-and repeat.
+```shell
+npm init -y
+```
+
+```shell
+npm install --save-dev mochi chai
+```
+
+```shell
+```
+
+```javascript
+'use strict';
+
+const { assert } = require('chai');
+const mocha = require('mocha');
+const product = require('./product');
+
+it('multiplies two numbers', () => {
+  const actual = product(4, 5);
+  const expected = 20;
+
+  assert.strictEqual(actual, expected);
+});
+```
+
+```javascript
+'use strict';
+
+const product = function(a, b) {
+  return a * b;
+};
+
+module.exports = product;
+```
+
+```shell
+npm install mocha chai
+```
+
+```shell
+```
 
 ## Why is test-driven development important?
 
