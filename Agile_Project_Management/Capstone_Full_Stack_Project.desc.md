@@ -25,14 +25,13 @@ NOTE: in rare cases apps that don't have all of these components _may_ be approv
 
 **Process**
 
-1. Submit 3 ideas for projects
-1. Instructors will evaluate and choose the one that seems the most promising (or ask you to go back to the drawing board)
+1. [Submit an idea](https://github.com/gSchool/capstone-submissions)
 1. Once an idea has been approved, you must create a plan such as:
   - rough wireframes
   - rough stories
   - links to documentation proving you can get what you need from APIs etc...
 1. Start building!
-1. There will be 1 mid-point checkin with an instructor, with one chance for feedback.  Other than that you are largely on your own ('cuz, you know, it's a capstone project)
+1. Instructors will checkin with you throughout the week, and are available for consulting, other than that you are largely on your own.
 
 NOTE: if you already have code on a personal project and want to continue, please submit that along with other ideas, so instructors can evaluate.
 
@@ -76,7 +75,7 @@ This capstone project will demonstrate your ability to build fullstack applicati
     * http://droneflyer.herokuapp.com/
 * Cyber Tanks - A multiplayer game controlled via mobile phone.
     * cybertanks.herokuapp.com
-* Stash App 
+* Stash App
     * https://stash-it-daily.herokuapp.com/
     * https://github.com/horndavidg/coffee_bank
 * Endless 3D Runner
