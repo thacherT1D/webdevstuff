@@ -154,7 +154,7 @@ Issues closed │               ▰▰  ▣
 Using automated tests, you can reduce the number of bugs in your projects by:
 
 - Identifying a bug before it's deployed to production.
-- Ensuring bugs that were deployed to production aren't reintroduced.
+- Ensuring bugs that were deployed to production aren't reintroduced. (i.e. a regression)
 
 Additionally, writing code that adheres to an automated test can help you write better code. Code that's written to be easy to test is often easy to change. And code that's easy to change allows you to be more productive.
 
