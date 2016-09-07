@@ -8,7 +8,7 @@
 
 An **integration test** is meant to test the combination of individual software modules as a group. Often an integration test takes modules that have been unit tested, groups them in larger aggregates, applies tests defined in an integration test plan to those aggregates, and delivers as its output the integrated system ready for system testing.
 
-The purpose of an integration test is to verify functional, performance, and reliability requirements placed on major use cases. Both the success and error use cases are simulated using black-box testing. **Black-box testing** is a testing method that examines the functionality of a program without peering into its internal structures or workings. Instead, appropriate parameter and data inputs are passed in and data outputs are examined.
+The purpose of an integration test is to verify functional, performance, and reliability requirements placed on major use cases. Both the success and error use cases are simulated using black-box testing. **Black-box testing** is a testing method that tests a program without peering into its internal structures or workings. Instead, appropriate parameter and data inputs are passed in and data outputs are examined.
 
 ## Why are integration tests important?
 
