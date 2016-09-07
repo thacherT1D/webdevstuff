@@ -56,14 +56,16 @@ suite('greet routes', () => {
     supertest(app)
       .get('/greet')
       .expect(200, 'Hello world');
-      .expect('Content-Type', /plain/, done);
+      .expect('Content-Type', /plain/)
+      .end(done);
   });
 
   test('POST /greet', (done) => {
     supertest(app)
       .post('/greet')
       .expect(404, 'Not found')
-      .expect('Content-Type', /plain/, done);
+      .expect('Content-Type', /plain/)
+      .end(done);
   });
 });
 ```
@@ -104,7 +106,8 @@ suite('binary routes', () => {
     supertest(app)
       .get('/binary')
       .expect(200, '0')
-      .expect('Content-Type', /json/, done);
+      .expect('Content-Type', /json/)
+      .end(done);
   });
 });
 ```
@@ -165,14 +168,16 @@ suite('binary routes', () => {
     supertest(app)
       .get('/binary')
       .expect(200, '0')
-      .expect('Content-Type', /json/, done);
+      .expect('Content-Type', /json/)
+      .end(done);
   });
 
   test('GET /binary/0', (done) => {
     supertest(app)
       .get('/binary/0')
       .expect(200, '0')
-      .expect('Content-Type', /json/, done);
+      .expect('Content-Type', /json/)
+      .end(done);
   });
 });
 ```
@@ -265,21 +270,24 @@ suite('binary routes', () => {
     supertest(app)
       .get('/binary')
       .expect(200, '0')
-      .expect('Content-Type', /json/, done);
+      .expect('Content-Type', /json/)
+      .end(done);
   });
 
   test('GET /binary/0', (done) => {
     supertest(app)
       .get('/binary/0')
       .expect(200, '0')
-      .expect('Content-Type', /json/, done);
+      .expect('Content-Type', /json/)
+      .end(done);
   });
 
   test('GET /binary/101010', (done) => {
     supertest(app)
       .get('/binary/101010')
       .expect(200, '42')
-      .expect('Content-Type', /json/, done);
+      .expect('Content-Type', /json/)
+      .end(done);
   });
 });
 ```
