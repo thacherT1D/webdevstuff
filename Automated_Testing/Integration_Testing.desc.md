@@ -110,7 +110,7 @@ suite('binary routes', () => {
 ```
 
 ```shell
-npm install --save express morgan
+npm install --save express
 ```
 
 Create a `server.js` file.
@@ -182,17 +182,24 @@ npm -s test
 ```
 
 ```text
+Binary
+  ✓ converts to zero decimal by default
+  ✓ converts to zero decimal
+  ✓ converts to one decimal
+  ✓ converts to two decimal
+  ✓ converts to 42 decimal
+
 binary routes
-  ✓ GET /binary
+  ✓ GET /binary (40ms)
   1) GET /binary/0
 
 
-1 passing (54ms)
+6 passing (68ms)
 1 failing
 
 1) binary routes GET /binary/0:
-   Error: expected "Content-Type" matching /json/, got "text/html; charset=utf-8"
-    at Test._assertHeader (node_modules/supertest/lib/test.js:227:14)
+   Error: expected 200 "OK", got 404 "Not Found"
+    at Test._assertStatus (node_modules/supertest/lib/test.js:250:12)
     at Test._assertFunction (node_modules/supertest/lib/test.js:265:11)
     at Test.assert (node_modules/supertest/lib/test.js:153:18)
     at Server.assert (node_modules/supertest/lib/test.js:131:12)
