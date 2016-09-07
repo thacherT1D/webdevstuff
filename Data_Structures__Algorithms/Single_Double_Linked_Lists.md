@@ -70,7 +70,7 @@ Whenever you need to add or remove an item from the end you follow 3 simple step
 
 ### Exercise 1 - Singly Linked Lists
 
-Finish the `src/singly_linked_list.js` in the exercise repo. You can run the tests associated with JUST the linked list exercise using this command:
+Finish the `src/singly_linked_list.js` in the exercise repo. You can run the tests using this command:
 
 `$ npm test`
 
