@@ -87,4 +87,4 @@ Add a README to your project that has:
 * Links to any repos you used with updated code
 * A data model of the final data model of the project
 
-Submit a pull request to the orginal repo with this README.
+Submit a pull request to the original repo with this README.
