@@ -45,7 +45,7 @@ suite('sum()', () => {
 
 As you can see, the `test()` function is an automated test for a specific part of a program's use case. In the above example, that specific part is adding two positive numbers with the `sum()` function. Because a use case can often have many parts, automated tests are grouped together into a test suite using the `suite()` function. A **test suite** is a way to organize automated tests by grouping them by use case. In the above example, that use case is invoking the `sum()` function.
 
-A `test()` function performs an automated test by making an assertion. An **assertion** is a statement that is expected to evaluate to `true`. In the above example, the `assert.strictEqual()` method is used to assert an `actual` return value of the `sum()` function is strictly equals `===` to an `expected` value. As a developer, it's up to you to determine the `expected` value of an automated test. Notice the first parameter of the `assert.strictEqual()` method is the `actual` value and the second parameter is the `expected` value. The order is important because it's used to show the results of a test run.
+A `test()` function performs an automated test by making an assertion. An **assertion** is a statement that is expected to evaluate to `true`. In the above example, the `assert.strictEqual()` method is used to assert an `actual` return value of the `sum()` function is strictly equals `===` to an `expected` value. As a developer, it's up to you to determine the `expected` value of an automated test. Notice the first parameter of the `assert.strictEqual()` method is the `actual` value and the second parameter is the `expected` value. The order is important because it's used to show the results at the end of a test run.
 
 If an assertion evaluates to `true`, the testing framework marks the automated test as "passing" and continues to the next `test()` function. If the assertion evaluates to `false`, an error is thrown. When an error is thrown, the testing framework catches it, marks the automated test as "failing", and continues to the next `test()` function. At the end of the run, all the passing and failing tests are shown to the tester.
 
@@ -59,7 +59,7 @@ You'd see the following result.
 
 ```shell
 sum()
-  ✓ adds two numbers
+  ✓ adds two postive numbers
 
 
 1 passing (9ms)
@@ -117,13 +117,13 @@ You'd see the following result.
 
 ```shell
 sum()
-  1) adds two numbers
+  1) adds two positive numbers
 
 
 0 passing (11ms)
 1 failing
 
-1) sum adds two numbers:
+1) sum() adds two positive numbers:
 
     AssertionError: expected 2 to equal 3
     + expected - actual
@@ -147,18 +147,18 @@ While you've used automated tests for many of your assignments, you probably ha
 
 ```text
               │                                 ▣
-              │                               ▣       ▰▰
-              │                             ▣    ▰▰▰▰▰
-              │                           ▣ ▰▰▰▰▰
-              │                       ▰▰▣▰▰▰
-              │                    ▰▰▰▣
-              │                 ▰▰▰ ▣
-Issues closed │               ▰▰  ▣
-  per hour    │             ▰▰  ▣
-              │           ▰▰  ▣
-              │         ▰▰  ▣
-              │       ▰▰  ▣
-              │     ▰▰  ▣     ▰ Without automated tests
+              │                               ▣    ▰▰▰▰▰
+              │                             ▣▰▰▰▰▰▰
+              │                        ▰▰▰▣▰
+              │                    ▰▰▰▰ ▣
+              │                 ▰▰▰   ▣
+              │              ▰▰▰    ▣
+Issues closed │            ▰▰     ▣
+  per hour    │          ▰▰     ▣
+              │        ▰▰     ▣
+              │       ▰     ▣
+              │      ▰    ▣
+              │     ▰   ▣     ▰ Without automated tests
               │    ▰  ▣
               │   ▰ ▣         ▣ With automated tests
               │  ▰▣
