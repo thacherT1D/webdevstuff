@@ -18,16 +18,22 @@ The advantages of these tests is easy: if the tests pass, your software works as
 
 Let's convert our editor to a server with similar methods. Install express and the common middleware.
 
-Install a new dependency called `supertest`. `supertest` is an testing library that tests server APIs.
+Install a new dependency called `supertest`, a testing library that tests HTTP servers.
 
-```sh
-npm install --save-dev mocha chai supertest
+```shell
+cd path/to/binary
 ```
 
-Create a file called `testServer.js` in your `test` directory.
+```shell
+npm install --save-dev supertest
+```
+
+In the `test/server.test.js` file, type the following code.
 
 ```javascript
 'use strict';
+
+process.env.NODE_ENV = 'test';
 
 const { assert } = require('chai');
 const { suite, test } = require('mocha');
@@ -38,57 +44,14 @@ suite('binary routes', () => {
   test('GET /binary', (done) => {
     request(server)
       .get('/binary')
-      .expect('Content-Type', /plain/)
-      .expect(200, '', done);
-  });
-
-  test('POST /write', (done) => {
-    request(server)
-      .post('/write')
-      .send({ text: 'Hello World' })
-      .expect(200)
-      .end((err, res) => {
-        if (err) {
-          throw err;
-        }
-
-        request(server)
-          .get('/displayString')
-          .expect('Content-Type', /plain/)
-          .expect(200, 'Hello World', done);
-      });
-  });
-
-  test('GET /clear', (done) => {
-    request(server)
-      .post('/write')
-      .send({ text: 'Hello World' })
-      .expect(200)
-      .end((writeErr, res) => {
-        if (writeErr) {
-          throw writeErr;
-        }
-
-        request(server)
-          .get('/clear')
-          .expect(200)
-          .end((clearErr, res) => {
-            if (clearErr) {
-              throw clearErr;
-            }
-
-            request(server)
-              .get('/displayString')
-              .expect('Content-Type', /plain/)
-              .expect(200, '', done);
-          });
-      });
+      .expect('Content-Type', /json/)
+      .expect(200, '0', done);
   });
 });
 ```
 
-```sh
-npm install --save express body-parser morgan
+```shell
+npm install --save express morgan
 ```
 
 Create a `server.js` file.
@@ -102,36 +65,53 @@ const app = express();
 app.disable('x-powered-by');
 
 const morgan = require('morgan');
-const bodyParser = require('body-parser');
 
-app.use(morgan('short'));
-app.use(bodyParser.json());
+switch (app.get('env')) {
+  case 'development':
+    app.use(morgan('dev'));
+    break;
+
+  case 'production':
+    app.use(morgan('short'));
+    break;
+
+  default:
+}
 
 const Binary = require('./Binary');
 
 app.get('/binary', (req, res, next) => {
   const binary = new Binary();
 
-  res.send(binary.toDecimal());
-});
-
-app.get('/binary/:num', (req, res, next) => {
-  const binary = new Binary(req.params.num);
-
-  res.send(binary.toDecimal());
-});
-
-app.use((req, res) => {
-  res.sendStatus(404);
+  res.json(binary.toDecimal());
 });
 
 const port = process.env.PORT || 8000;
 
-app.listen(port, () =>{
-  console.log('Listening on port', port);
+app.listen(port, () => {
+  if (app.get('env') !== 'test') {
+    console.log('Listening on port', port);
+  }
 });
 
 module.exports = app;
+```
+
+```shell
+npm test
+```
+
+```text
+> binary@0.1.0 test /Users/ryansobol/Desktop/binary
+> mocha
+
+
+
+  binary routes
+    ✓ GET /binary (38ms)
+
+
+  1 passing (48ms)
 ```
 
 ## Assignment
