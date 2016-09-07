@@ -8,7 +8,36 @@
 
 An **integration test** is meant to verify functional, performance, and reliability requirements placed on the major use cases of a program. It does this by ensuring the multiple parts of a use case work together as a developer expects. Often an integration test verifies the functionality of a module even though its submodules have already been individually unit tested.
 
-In an integration test, both the success and error use cases are simulated using black-box testing. **Black-box testing** is a testing method that verifies a program works without peering into its inner structures or workings of a module. Instead, information is passed into the module via its inputs are and assertions are made on the information passed out of the module.
+Here's an example of an integration test for a fictitious HTTP server.
+
+```javascript
+'use strict';
+
+process.env.NODE_ENV = 'test';
+
+const { assert } = require('chai');
+const { suite, test } = require('mocha');
+const request = require('supertest');
+const server = require('../server');
+
+suite('greet routes', () => {
+  test('GET /greet', (done) => {
+    request(server)
+      .get('/greet')
+      .expect('Content-Type', /plain/)
+      .expect(200, 'Hello world', done);
+  });
+
+  test('POST /greet', (done) => {
+    request(server)
+      .post('/greet')
+      .expect('Content-Type', /plain/)
+      .expect(404, 'Not found', done);
+  });
+});
+```
+
+In an integration test, both the success and error use cases are simulated using black-box testing. **Black-box testing** is a testing method that verifies a program works without peering into a module's inner structures. Instead, information is passed into the module via its inputs and assertions are made on the information passed out of the module.
 
 ### Exercise
 
@@ -16,13 +45,9 @@ Turn to your a neighbor and, in your own words, explain what an integration test
 
 ## Why are integration tests important?
 
-The advantages of integrations tests is easy: if the tests pass, your software works as expected. The main disadvantage is that a failure in a test does not clearly identify where in the code the bug is.
+[Discuss the advantages and disadvantages of integration tests]
 
 ## How do you use test-driven development to write integration tests?
-
-Let's convert our editor to a server with similar methods. Install express and the common middleware.
-
-Install a new dependency called `supertest`, a testing library that tests HTTP servers.
 
 ```shell
 cd path/to/binary
