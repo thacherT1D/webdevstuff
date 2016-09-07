@@ -146,26 +146,27 @@ Turn to your a neighbor and, in your own words, explain what an automated test i
 While you've used automated tests for many of your assignments, you probably haven't written automated tests for any of your own projects. Automated tests can be helpful for projects because, as it gets bigger, keeping the entire codebase in your head gets harder. As a result, it's easy to accidentally slip bugs into your program. And fixing those bugs takes time away feature development. On a large project that doesn't use automated tests, it's common for your productivity to slow and possibly grind to a stop.
 
 ```text
-              │                                 ▣
-              │                               ▣    ▰▰▰▰▰
-              │                             ▣▰▰▰▰▰▰
-              │                        ▰▰▰▣▰
-              │                    ▰▰▰▰ ▣
-              │                 ▰▰▰   ▣
-              │              ▰▰▰    ▣
-Issues closed │            ▰▰     ▣
-  per hour    │          ▰▰     ▣
-              │        ▰▰     ▣
-              │       ▰     ▣
-              │      ▰    ▣
-              │     ▰   ▣     ▰ Without automated tests
-              │    ▰  ▣
-              │   ▰ ▣         ▣ With automated tests
-              │  ▰▣
-              │ ▣
-              └─────────────────────────────────────────
+              │
+              │
+              │   ▰ Without automated tests
+              │
+              │   ▣ With automated tests
+              │
+              │
+Issues closed │▰▰▰▰▰▰▰▰
+  per hour    │        ▰▰▰▰▰▰▰▰
+              │                ▰▰▰▰▰▰▰▰
+              │▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▰▰▰▰▰▰▰▰▣▣▣▣▣▣▣▣▣▣▣▣
+              │                                ▰▰▰▰▰▰▰▰
+              │                                        ▰▰▰▰
+              │
+              │
+              │
+              │
+              └────────────────────────────────────────────
                            Project size
 ```
+
 
 Using automated tests, you can reduce the number of bugs in your projects by:
 
