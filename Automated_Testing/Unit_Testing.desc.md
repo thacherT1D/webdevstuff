@@ -47,7 +47,7 @@ As you can see, the `test()` function is an automated test for a specific part o
 
 A `test()` function performs an automated test by making an assertion. An **assertion** is a statement that is expected to evaluate to `true`. In the above example, the `assert.strictEqual()` method is used to assert an actual return value of the `sum()` function is strictly equals `===` to an expected value. As a developer, it's up to you to determine the expected value of an automated test. Notice the first parameter of the `assert.strictEqual()` method is the actual value and the second parameter is the expected value. The order is important because it's used to show the results at the end of a test run.
 
-If an assertion evaluates to `true`, the testing framework marks the automated test as "passing" and continues to the next `test()` function. If the assertion evaluates to `false`, an error is thrown. When an error is thrown, the testing framework catches it, marks the automated test as "failing", and continues to the next `test()` function. At the end of the run, all the passing and failing tests are shown to the tester.
+If an assertion evaluates to `true`, the testing framework marks the automated test as "passing" and continues to the next `test()` function. If the assertion evaluates to `false`, an error is thrown. When an error is thrown, the testing framework catches it, marks the automated test as "failing", and continues to the next `test()` function. At the end of a test run, all the passing and failing tests are shown to the tester.
 
 After running the above automated test with the `mocha` test runner in the shell.
 
