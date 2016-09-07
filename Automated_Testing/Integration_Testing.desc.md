@@ -31,7 +31,13 @@ app.get('/greet', (req, res) => {
   res.send(greeter());
 });
 
-app.listen(8000);
+const port = process.env.PORT || 8000;
+
+app.listen(port, () => {
+  if (app.get('env') !== 'test') {
+    console.log('Listening on port', port);
+  }
+});
 
 module.exports = app;
 ```
@@ -39,23 +45,25 @@ module.exports = app;
 ```javascript
 'use strict';
 
+process.env.NODE_ENV = 'test';
+
 const { suite, test } = require('mocha');
+const app = require('../server');
 const supertest = require('supertest');
-const server = require('../server');
 
 suite('greet routes', () => {
   test('GET /greet', (done) => {
-    supertest(server)
+    supertest(app)
       .get('/greet')
-      .expect('Content-Type', /plain/)
-      .expect(200, 'Hello world', done);
+      .expect(200, 'Hello world');
+      .expect('Content-Type', /plain/, done);
   });
 
   test('POST /greet', (done) => {
-    supertest(server)
+    supertest(app)
       .post('/greet')
-      .expect('Content-Type', /plain/)
-      .expect(404, 'Not found', done);
+      .expect(404, 'Not found')
+      .expect('Content-Type', /plain/, done);
   });
 });
 ```
@@ -87,17 +95,16 @@ In the `test/server.test.js` file, type the following code.
 
 process.env.NODE_ENV = 'test';
 
-const { assert } = require('chai');
 const { suite, test } = require('mocha');
-const request = require('supertest');
-const server = require('../server');
+const app = require('../server');
+const supertest = require('supertest');
 
 suite('binary routes', () => {
   test('GET /binary', (done) => {
-    request(server)
+    supertest(app)
       .get('/binary')
-      .expect('Content-Type', /json/)
-      .expect(200, '0', done);
+      .expect(200, '0')
+      .expect('Content-Type', /json/, done);
   });
 });
 ```
@@ -111,26 +118,9 @@ Create a `server.js` file.
 ```javascript
 'use strict';
 
+const Binary = require('./Binary');
 const express = require('express');
 const app = express();
-
-app.disable('x-powered-by');
-
-const morgan = require('morgan');
-
-switch (app.get('env')) {
-  case 'development':
-    app.use(morgan('dev'));
-    break;
-
-  case 'production':
-    app.use(morgan('short'));
-    break;
-
-  default:
-}
-
-const Binary = require('./Binary');
 
 app.get('/binary', (req, res, next) => {
   const binary = new Binary();
@@ -166,24 +156,23 @@ binary routes
 
 process.env.NODE_ENV = 'test';
 
-const { assert } = require('chai');
 const { suite, test } = require('mocha');
-const request = require('supertest');
-const server = require('../server');
+const app = require('../server');
+const supertest = require('supertest');
 
 suite('binary routes', () => {
   test('GET /binary', (done) => {
-    request(server)
+    supertest(app)
       .get('/binary')
-      .expect('Content-Type', /json/)
-      .expect(200, '0', done);
+      .expect(200, '0')
+      .expect('Content-Type', /json/, done);
   });
 
   test('GET /binary/0', (done) => {
-    request(server)
-      .get('/binary')
-      .expect('Content-Type', /json/)
-      .expect(200, '0', done);
+    supertest(app)
+      .get('/binary/0')
+      .expect(200, '0')
+      .expect('Content-Type', /json/, done);
   });
 });
 ```
@@ -215,26 +204,9 @@ binary routes
 ```javascript
 'use strict';
 
+const Binary = require('./Binary');
 const express = require('express');
 const app = express();
-
-app.disable('x-powered-by');
-
-const morgan = require('morgan');
-
-switch (app.get('env')) {
-  case 'development':
-    app.use(morgan('dev'));
-    break;
-
-  case 'production':
-    app.use(morgan('short'));
-    break;
-
-  default:
-}
-
-const Binary = require('./Binary');
 
 app.get('/binary', (req, res, next) => {
   const binary = new Binary();
@@ -277,31 +249,30 @@ binary routes
 
 process.env.NODE_ENV = 'test';
 
-const { assert } = require('chai');
 const { suite, test } = require('mocha');
-const request = require('supertest');
-const server = require('../server');
+const app = require('../server');
+const supertest = require('supertest');
 
 suite('binary routes', () => {
   test('GET /binary', (done) => {
-    request(server)
+    supertest(app)
       .get('/binary')
-      .expect('Content-Type', /json/)
-      .expect(200, '0', done);
+      .expect(200, '0')
+      .expect('Content-Type', /json/, done);
   });
 
   test('GET /binary/0', (done) => {
-    request(server)
+    supertest(app)
       .get('/binary/0')
-      .expect('Content-Type', /json/)
-      .expect(200, '0', done);
+      .expect(200, '0')
+      .expect('Content-Type', /json/, done);
   });
 
   test('GET /binary/101010', (done) => {
-    request(server)
+    supertest(app)
       .get('/binary/101010')
-      .expect('Content-Type', /json/)
-      .expect(200, '42', done);
+      .expect(200, '42')
+      .expect('Content-Type', /json/, done);
   });
 });
 ```
