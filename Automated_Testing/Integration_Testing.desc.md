@@ -98,20 +98,174 @@ module.exports = app;
 ```
 
 ```shell
-npm test
+npm -s test
 ```
 
 ```text
-> binary@0.1.0 test /Users/ryansobol/Desktop/binary
-> mocha
+binary routes
+  ✓ GET /binary (38ms)
 
 
+1 passing (48ms)
+```
 
-  binary routes
-    ✓ GET /binary (38ms)
+```javascript
+'use strict';
+
+process.env.NODE_ENV = 'test';
+
+const { assert } = require('chai');
+const { suite, test } = require('mocha');
+const request = require('supertest');
+const server = require('../server');
+
+suite('binary routes', () => {
+  test('GET /binary', (done) => {
+    request(server)
+      .get('/binary')
+      .expect('Content-Type', /json/)
+      .expect(200, '0', done);
+  });
+
+  test('GET /binary/0', (done) => {
+    request(server)
+      .get('/binary')
+      .expect('Content-Type', /json/)
+      .expect(200, '0', done);
+  });
+});
+```
+
+```shell
+npm -s test
+```
+
+```text
+binary routes
+  ✓ GET /binary
+  1) GET /binary/0
 
 
-  1 passing (48ms)
+1 passing (54ms)
+1 failing
+
+1) binary routes GET /binary/0:
+   Error: expected "Content-Type" matching /json/, got "text/html; charset=utf-8"
+    at Test._assertHeader (node_modules/supertest/lib/test.js:227:14)
+    at Test._assertFunction (node_modules/supertest/lib/test.js:265:11)
+    at Test.assert (node_modules/supertest/lib/test.js:153:18)
+    at Server.assert (node_modules/supertest/lib/test.js:131:12)
+    at emitCloseNT (net.js:1549:8)
+    at _combinedTickCallback (internal/process/next_tick.js:71:11)
+    at process._tickCallback (internal/process/next_tick.js:98:9)
+```
+
+```javascript
+'use strict';
+
+const express = require('express');
+const app = express();
+
+app.disable('x-powered-by');
+
+const morgan = require('morgan');
+
+switch (app.get('env')) {
+  case 'development':
+    app.use(morgan('dev'));
+    break;
+
+  case 'production':
+    app.use(morgan('short'));
+    break;
+
+  default:
+}
+
+const Binary = require('./Binary');
+
+app.get('/binary', (req, res, next) => {
+  const binary = new Binary();
+
+  res.json(binary.toDecimal());
+});
+
+app.get('/binary/:value', (req, res, next) => {
+  const binary = new Binary(req.params.value);
+
+  res.json(binary.toDecimal());
+});
+
+const port = process.env.PORT || 8000;
+
+app.listen(port, () => {
+  if (app.get('env') !== 'test') {
+    console.log('Listening on port', port);
+  }
+});
+
+module.exports = app;
+```
+
+```shell
+npm -s test
+```
+
+```text
+binary routes
+  ✓ GET /binary
+  ✓ GET /binary/0
+
+
+2 passing (53ms)
+```
+
+```javascript
+'use strict';
+
+process.env.NODE_ENV = 'test';
+
+const { assert } = require('chai');
+const { suite, test } = require('mocha');
+const request = require('supertest');
+const server = require('../server');
+
+suite('binary routes', () => {
+  test('GET /binary', (done) => {
+    request(server)
+      .get('/binary')
+      .expect('Content-Type', /json/)
+      .expect(200, '0', done);
+  });
+
+  test('GET /binary/0', (done) => {
+    request(server)
+      .get('/binary/0')
+      .expect('Content-Type', /json/)
+      .expect(200, '0', done);
+  });
+
+  test('GET /binary/101010', (done) => {
+    request(server)
+      .get('/binary/101010')
+      .expect('Content-Type', /json/)
+      .expect(200, '42', done);
+  });
+});
+```
+
+```shell
+npm -s test
+```
+
+```text
+binary routes
+  ✓ GET /binary
+  ✓ GET /binary/0
+  ✓ GET /binary/101010
+
+
+3 passing (53ms)
 ```
 
 ## Assignment

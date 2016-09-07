@@ -164,7 +164,7 @@ Issues closed │▭▭▭▭▭▭▭▭
               │
               │
               └─────────────────────────────────────────────
-                           Project size
+                               Project size
 ```
 
 
