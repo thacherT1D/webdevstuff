@@ -17,7 +17,7 @@ const greeter = function() {
   return 'Hello world';
 };
 
-module.exports = greet;
+module.exports = greeter;
 ```
 
 ```javascript
