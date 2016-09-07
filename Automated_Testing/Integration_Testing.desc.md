@@ -13,23 +13,46 @@ Here's an example of an integration test for a fictitious HTTP server.
 ```javascript
 'use strict';
 
-process.env.NODE_ENV = 'test';
+const greeter = function() {
+  return 'Hello world';
+};
 
-const { assert } = require('chai');
+module.exports = greet;
+```
+
+```javascript
+'use strict';
+
+const express = require('express');
+const greeter = require('./greeter');
+const app = express();
+
+app.get('/greet', (req, res) => {
+  res.send(greeter());
+});
+
+app.listen(8000);
+
+module.exports = app;
+```
+
+```javascript
+'use strict';
+
 const { suite, test } = require('mocha');
-const request = require('supertest');
+const supertest = require('supertest');
 const server = require('../server');
 
 suite('greet routes', () => {
   test('GET /greet', (done) => {
-    request(server)
+    supertest(server)
       .get('/greet')
       .expect('Content-Type', /plain/)
       .expect(200, 'Hello world', done);
   });
 
   test('POST /greet', (done) => {
-    request(server)
+    supertest(server)
       .post('/greet')
       .expect('Content-Type', /plain/)
       .expect(404, 'Not found', done);
