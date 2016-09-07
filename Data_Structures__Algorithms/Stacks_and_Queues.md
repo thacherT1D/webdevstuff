@@ -51,6 +51,7 @@ This is the opposite order from a __stack__.
 
 Queue operations - (all [O(1) / Constant Time](https://en.wikipedia.org/wiki/Time_complexity#Constant_time)):
 
+
 - insertion: __enqueue__
 - deletion: __dequeue__
 - front/peek: find the head element (just return the element at front)
