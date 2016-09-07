@@ -148,17 +148,17 @@ While you've used automated tests for many of your assignments, you probably ha
 ```text
               │
               │
-              │   ▰ Without automated tests
+              │   ▭ Without automated tests
               │
-              │   ▣ With automated tests
+              │   ▬ With automated tests
               │
               │
-Issues closed │▰▰▰▰▰▰▰▰
-  per hour    │        ▰▰▰▰▰▰▰▰
-              │                ▰▰▰▰▰▰▰▰
-              │▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▰▰▰▰▰▰▰▰▣▣▣▣▣▣▣▣▣▣▣▣
-              │                                ▰▰▰▰▰▰▰▰
-              │                                        ▰▰▰▰
+Issues closed │▭▭▭▭▭▭▭▭
+  per hour    │        ▭▭▭▭▭▭▭▭
+              │                ▭▭▭▭▭▭▭▭
+              │▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▭▭▭▭▭▭▭▭▬▬▬▬▬▬▬▬▬▬▬▬
+              │                                ▭▭▭▭▭▭▭▭
+              │                                        ▭▭▭▭
               │
               │
               │
