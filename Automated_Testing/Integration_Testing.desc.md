@@ -6,13 +6,17 @@
 
 ## What's an integration test?
 
-An **integration test** is meant to test the combination of individual software modules as a group. Often an integration test takes modules that have been unit tested, groups them in larger aggregates, applies tests defined in an integration test plan to those aggregates, and delivers as its output the integrated system ready for system testing.
+An **integration test** is meant to verify functional, performance, and reliability requirements placed on the major use cases of a program. It does this by ensuring the multiple parts of a use case work together as a developer expects. Often an integration test verifies the functionality of a module even though its submodules have already been individually unit tested.
 
-The purpose of an integration test is to verify functional, performance, and reliability requirements placed on major use cases. Both the success and error use cases are simulated using black-box testing. **Black-box testing** is a testing method that tests a program without peering into its internal structures or workings. Instead, appropriate parameter and data inputs are passed in and data outputs are examined.
+In an integration test, both the success and error use cases are simulated using black-box testing. **Black-box testing** is a testing method that verifies a program works without peering into its inner structures or workings of a module. Instead, information is passed into the module via its inputs are and assertions are made on the information passed out of the module.
+
+### Exercise
+
+Turn to your a neighbor and, in your own words, explain what an integration test is. In your discussion, it may be helpful to discuss the goals of an integration test and how it achieves it's goal with black-box testing.
 
 ## Why are integration tests important?
 
-The advantages of these tests is easy: if the tests pass, your software works as expected. The main disadvantage is that a failure in a test does not clearly identify where in the code the bug is.
+The advantages of integrations tests is easy: if the tests pass, your software works as expected. The main disadvantage is that a failure in a test does not clearly identify where in the code the bug is.
 
 ## How do you use test-driven development to write integration tests?
 
