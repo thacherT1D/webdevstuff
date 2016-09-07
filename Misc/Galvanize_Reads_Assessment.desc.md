@@ -11,7 +11,7 @@ There are some additional features, such as search, that are nice-to-haves, but 
 
 ## Import stories into Pivotal Tracker
 
-Import this [CSV](https://s3-us-west-2.amazonaws.com/assessment-images/galvanize_reads/galvanize_reads_20160104_0559.csv) into a new project in Pivotal Tracker to get the requirements for this story. They are prioritized. You may find it useful to size the stories before you begin.
+Import this [CSV](https://s3-us-west-2.amazonaws.com/assessment-images/galvanize_reads/galvanize_reads_20160104_0559.csv) into a new project in Pivotal Tracker to get the requirements for this story. You may find it useful to prioritize the stories before you begin.
 
 ```
 Id,Title,Labels,Iteration,Iteration Start,Iteration End,Type,Estimate,Current State,Created at,Accepted at,Deadline,Requested By,Description,URL,Owned By,Task,Task Status,Task,Task Status,Task,Task Status,Task,Task Status,Task,Task Status,Task,Task Status,Task,Task Status
