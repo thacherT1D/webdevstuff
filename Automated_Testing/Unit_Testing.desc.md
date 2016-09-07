@@ -24,20 +24,30 @@ module.exports = sum;
 
 The following `sum.test.js` program is one possible automated test for the above program. Note how the automated test is separate from the program being tested.
 
+**NOTE:** Both `chai` and `mocha` are third-party packages installed with `npm`. Chai is an assertion library while Mocha is a testing framework.
+
 ```javascript
 'use strict';
 
 const { assert } = require('chai');
-const { test } = require('mocha');
+const { test, suite } = require('mocha');
 const sum = require('./sum');
 
-test('sums two numbers', () => {
-  const actual = sum(1, 2);
-  const expected = 3;
+suite('sum()', () => {  
+  test('adds two positive numbers', () => {
+    const actual = sum(1, 2);
+    const expected = 3;
 
-  assert.strictEqual(actual, expected);
+    assert.strictEqual(actual, expected);
+  });
 });
 ```
+
+As you can see, the `test()` function is an automated test for a specific part of a program's use case. In the above example, that specific part is adding two positive numbers with the `sum()` function. Because a use case can often have many parts, automated tests are grouped together into a test suite using the `suite()` function. A **test suite** is a way to organize automated tests by grouping them by use case. In the above example, that use case is invoking the `sum()` function.
+
+A `test()` function performs an automated test by making an assertion. An **assertion** is a statement that is expected to evaluate to `true`. In the above example, the `assert.strictEqual()` method is used to assert an `actual` return value of the `sum()` function is strictly equals `===` to an `expected` value. As a developer, it's up to you to determine the `expected` value of an automated test. Notice the first parameter of the `assert.strictEqual()` method is the `actual` value and the second parameter is the `expected` value. The order is important because it's used to show the results of a test run.
+
+If an assertion evaluates to `true`, the testing framework marks the automated test as "passing" and continues to the next `test()` function. If the assertion evaluates to `false`, an error is thrown. When an error is thrown, the testing framework catches it, marks the automated test as "failing", and continues to the next `test()` function. At the end of the run, all the passing and failing tests are shown to the tester.
 
 After running the above automated test with the `mocha` test runner in the shell.
 
@@ -48,9 +58,11 @@ mocha sum.test.js
 You'd see the following result.
 
 ```shell
+sum()
   ✓ adds two numbers
 
-  1 passing (8ms)
+
+1 passing (9ms)
 ```
 
 There are many goals you may want to achieve with an automated test. Here's a table of the most common goals and the type of automated test used to ensure the goal is met.
@@ -82,14 +94,16 @@ The original automated test in the `sum.test.js` program is, in fact, a unit tes
 'use strict';
 
 const { assert } = require('chai');
-const { test } = require('mocha');
-const sum = require('../sum');
+const { test, suite } = require('mocha');
+const sum = require('./sum');
 
-test('sums two numbers', () => {
-  const actual = sum(1, 2);
-  const expected = 3;
+suite('sum()', () => {  
+  test('adds two positive numbers', () => {
+    const actual = sum(1, 2);
+    const expected = 3;
 
-  assert.strictEqual(actual, expected);
+    assert.strictEqual(actual, expected);
+  });
 });
 ```
 
@@ -102,21 +116,23 @@ mocha sum.test.js
 You'd see the following result.
 
 ```shell
+sum()
   1) adds two numbers
 
-  0 passing (11ms)
-  1 failing
 
-  1)  adds two numbers:
+0 passing (11ms)
+1 failing
 
-      AssertionError: expected 2 to equal 3
-      + expected - actual
+1) sum adds two numbers:
 
-      -2
-      +3
+    AssertionError: expected 2 to equal 3
+    + expected - actual
 
-      at Function.assert.strictEqual (node_modules/chai/lib/chai/interface/assert.js:178:32)
-      at Context.it (sum.test.js:11:10)
+    -2
+    +3
+
+    at Function.assert.strictEqual (node_modules/chai/lib/chai/interface/assert.js:178:32)
+    at Context.test (test/sum.test.js:12:12)
 ```
 
 At this point, there's either a problem with the program under test or a problem with the test itself. As the developer, it's your job to determine which of the two programs to fix. In this case, what would you do?
@@ -196,15 +212,17 @@ In the `test/product.test.js` file, type out the following code.
 'use strict';
 
 const { assert } = require('chai');
-const { test } = require('mocha');
+const { test, suite } = require('mocha');
 const product = require('../product');
 
-test('multiples two numbers', () => {
-  const actual = product(4, 5);
-  const expected = 20;
+suite('product', () => {
+  test('multiples two positive numbers', () => {
+    const actual = product(4, 5);
+    const expected = 20;
 
-  assert.strictEqual(actual, expected);
-});
+    assert.strictEqual(actual, expected);
+  });  
+})
 ```
 
 ```shell
