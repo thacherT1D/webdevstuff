@@ -145,7 +145,7 @@ Now that we have covered how to handle errors using code, let's discuss how you 
 
 ## Exercise
 
-Complete the error handling exercises in the following repo:
+Complete `Activity 1` and `Activity 2` as described in the following error handling exercise:
 
 - [Error Handling in Node / Express Exercise](https://github.com/gSchool/promise-challenges/tree/master/07-error-handling-in-node-express)
 
