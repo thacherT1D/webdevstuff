@@ -13,13 +13,17 @@ Local Storage (A.K.A. Web Storage, DOM Storage, HTML5 Storage) gives us web deve
 
 Being able to persist information means that when an application is shutdown (like if the user closes the browser window), any data i.e. form information, user preferences, etc. will still exist, and when the application is opened again, the data from the previous time can also be accessed.
 
-By contrast, information that is not persisted will be destroyed when the user closes the application.  Suppose a web application let's a user choose a background color other than the default white for the page they are visiting.  When the user shuts down their web browser and later goes back to the same page, the page's background color will be the default white if the selected color information was not persisted somewhere.
+By contrast, information that is not persisted will be destroyed when the user closes the application.  Suppose a web application lets a user choose a background color other than the default white for the page they are visiting.  When the user shuts down their web browser and later goes back to the same page, the page's background color will be the default white if the selected color information was not persisted somewhere.
 
 **The `localStorage` Object**
 
 To take advantage of Local Storage, we access what is called the `localStorage` object.  It allows you to store data locally into the browser via `Storage` objects. LocalStorage stores data that is essential from page to page, request to request, however, `localStorage` can only be accessed on the client side. Additionally, `localStorage` can store up to 5MB of data, and only gets cleared through JavaScript or manually clearing through the browser.
 
 As a general rule, it is not a great idea to store sensitive data into `localStorage`. Even though `localStorage` is _not_ sent with every request, and is instead sent only when asked for, storing sensitive data is usually better left to encrypted Cookies.
+
+**What Pages Share Local Storage?**
+
+`localStorage` is shared for the same domain accessed in the same browser on the same device. Visiting multiple pages on Twitter.com from Google Chrome on your computer? They'll all share the same `localStorage` object. However, if you visit Twitter.com on your computer on Google Chrome and then on Mozilla Firefox, the `localStorage` object will NOT be the same.
 
 ### Using localStorage
 
@@ -33,7 +37,7 @@ Local Storage can be accessed by calling `window.localStorage` or just `localSto
 
 **Setting Data**
 
-You can set values two ways, using `localStorage.key = value`, or `localStorage.setItem(key, value)`.  They are nearly identical, however using `setItem` fires off a storage event if something is changed.  This can be useful if you want to keep track of when the data is changed.
+You can set values two ways, using `localStorage.someKey = value`, or `localStorage.setItem(someKey, value)`.
 
 
 [![https://gyazo.com/b1c5de1e678947b89aadddc51179cf26](https://i.gyazo.com/b1c5de1e678947b89aadddc51179cf26.png)](https://gyazo.com/b1c5de1e678947b89aadddc51179cf26)
@@ -42,24 +46,57 @@ Both of the above methods will create the keys "backpack" and "pen" respectively
 
 **Accessing Key Values**
 
-Specific values can be accessed with either `localStorage.someKey` or `localStorage.getItem(someKey)`.  As with using setItem(), the difference in using getItem is that a storage event will also be fired if there is a change in data.  Also notice that all values that are returned from local storage are strings.  
+Specific values can be accessed with either `localStorage.someKey` or `localStorage.getItem(someKey)`.  Notice that all values that are returned from local storage are strings.  
 
 [![https://gyazo.com/9650165b836d9391f4a90abf90b85882](https://i.gyazo.com/9650165b836d9391f4a90abf90b85882.png)](https://gyazo.com/9650165b836d9391f4a90abf90b85882)
 
-**Removing Key-Values**
+**Removing Key-Value Pairs`**
 
-In order to remove data from localStorage, use `localStorage.removeItem(key)`
+In order to remove data from localStorage, use `localStorage.removeItem(someKey)`.
 
 [![https://gyazo.com/174fc9f167251bcb8a85ce3a964816e7](https://i.gyazo.com/174fc9f167251bcb8a85ce3a964816e7.png)](https://gyazo.com/174fc9f167251bcb8a85ce3a964816e7)
 
 **Editing/Updating Values**
 
-To edit or update localStorage information, you'll need to save a copy of the existing value somewhere.  This is because localStorage only lets you completely replace values.  It is just like updating values in a typical JavaScript object.  
+To edit or update localStorage information, you'll need to save a copy of the existing value somewhere.  This is because localStorage only lets you completely replace values.  It is just like updating values in a typical JavaScript object. Just like when you initially set values, you can update values two ways, using `localStorage.someKey = value`, or `localStorage.setItem(someKey, value)`.
 
 Let's say we want to update the pen in our local storage to have "Super" at the end of it.
 
 [![https://gyazo.com/c8c69a9073423c02c1cc21bac19bec9f](https://i.gyazo.com/c8c69a9073423c02c1cc21bac19bec9f.png)](https://gyazo.com/c8c69a9073423c02c1cc21bac19bec9f)
 
+**The `length` Property**
+
+Use `localStorage.length` to see how many key-value pairs (excluding `length`) are in the localStorage for that domain.
+
+**Clear All Key-Value Pairs**
+
+`localStorage.clear()` eliminates all of the key-value pairs that have been stored.
+
+**The `storage` event**
+
+The `storage` event fires when a domain's localStorage data changes. This is provided that
+- The data change happens on a __different__ tab/window than the one where there is an event listener
+
+These are the `localStorage` data changes that cause the `storage` event to fire:
+- `localStorage.someKey = value` &  `localStorage.setItem(someKey, value)`
+- `localStorage.removeItem(someKey)`
+- `localStorage.clear()`
+
+The `storage` event can be useful if you want to keep track of when the storage data is changed in another tab/window. Also, the event will have the following properties:
+- `key`: the key where the `localStorage`  data change took place
+- `oldValue`: the old value of the data that changed
+- `newValue`: the new value of the data that changed
+- `storageArea`: the whole localStorage object where the modification is happening
+- `url`: the url of the page where localStorage changed
+
+**Example**
+```javascript
+window.addEventListener('storage', function(e) {
+  console.log('The ' + e.key + ' key has been changed from '
+    + e.oldValue + ' to ' + e.newValue + '.');
+  console.log('The change happened at ' + e.url);
+});
+```
 
 ## Optional Exercise: Background Preferences
 
