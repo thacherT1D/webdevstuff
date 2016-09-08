@@ -312,5 +312,6 @@ Write integration tests for the official `server3.js` solution of the [Pet Shop
 
 ## Resources
 
+- [GitHub - SuperTest](https://github.com/visionmedia/supertest)
 - [Wikipedia - Black-box testing](https://en.wikipedia.org/wiki/Black-box_testing)
 - [Wikipedia - Integration testing](https://en.wikipedia.org/wiki/Integration_testing)
