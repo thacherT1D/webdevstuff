@@ -23,11 +23,11 @@ Javascript has built in functionality for handling errors.
 
 Work through the following exercise on Github, it will cover the basics of built in Javascript error handling. Ensure you genuinely ponder and answer the questions provided. During the exercise you may find it useful to reference the resources below, to assist in answering the questions.
 
-**Exercise: **
+**Exercise:**
 
 - [Error Handling](https://github.com/gSchool/error-handling-lesson)
 
-**Resources: **
+**Resources:**
 
 - [MDN: throw](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/throw)
 - [MDN: try... catch](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch)
