@@ -59,20 +59,78 @@ fs.readFile(path, 'utf8', function (err, data) {
 });
 ```
 
+It is important to note that `try... catch` **cannot enclose** any errors thrown in an asynchronous callback.
+
+Bad example:
+
+```javascript
+try {
+  fs.readFile(path, 'utf8', function (err, data) {
+
+    if(err){
+      throw err;
+    }
+
+    // do stuff
+
+  });
+} catch (err){
+  console.error('Something went wrong', err);
+};
+```
+
+This is because the `throw` takes place **after** the `catch`, when the asynchronous response is received. The resource below goes into great depth on how to handle errors in Node, including using `EventEmitters` to handle errors.
+
+
+**Resources:**
+
+- [Node API: Errors](https://nodejs.org/api/errors.html)
+
 ## Express
 
-Briefly read over this article on Express error handling. It is essential that when something goes wrong on your server you still send a response to the client.
+**Exercise:** Briefly read over this article on Express error handling. It is essential that when something goes wrong on your server you still send a response to the client. Pay specific attention to how `next` is used.
+
+**Resources:**
 
 - [Express Error Handling Guide](http://expressjs.com/en/guide/error-handling.html)
 
 ## Promises
 
-Catch
+We've been over promises so much that I won't dive too in depth on handling errors; just ensure you always handle them. This can be pretty straight forward if you are intentional about using promises properly. **Never nest your promises**. Instead, chain them. That way the error can be handled in a single place.
 
+
+```javascript
+Users().get(inputUser)
+.then(function(user){
+  return hashCompare(user, inputPass);
+})
+.then(function(correctPass){
+  return new Promise(function(reject, resolve){
+    if(!correctPass){
+      reject(new IncorrectPasswordError('You\'re a great big phoney, phoney'));
+    }else {
+      resolve(user);
+    }
+  });
+})
+.then(function(user){
+  return authenticateUser(user);
+})
+.catch(function(err){
+  //handle gracefully
+});
+```
+
+Since nothing is nested, not only do you benefit from readability but you can handle all errors in a single place.
+
+
+**Resources:**
+
+- [MDN: Promise Catch](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/catch)
 
 ## How to respond to errors.
 
-Now that we have covered **How** to handle errors using code, let's discuss **What** you should decide what to do with an error once it occurs.
+Now that we have covered how to handle errors using code, let's discuss how you should respond to errors and what actions you should take.
 
 **Exercise:** Read the following article by Joyent on error handling in javascript. Consider *and answer* the following questions as you read:
 
@@ -80,7 +138,9 @@ Now that we have covered **How** to handle errors using code, let's discuss **Wh
 - What are some ways which you might want to handle a runtime error?
 - What are some ways which you might want to handle a developer error?
 
-[Joyent: Error Handling in Node.js](https://www.joyent.com/node-js/production/design/errors)
+**Resources:**
+
+- [Joyent: Error Handling in Node.js](https://www.joyent.com/node-js/production/design/errors)
 
 
 ## Exercise
@@ -91,7 +151,10 @@ Complete the error handling exercises in the following repo:
 
 ## Resources
 
+- [MDN: throw](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/throw)
+- [MDN: try... catch](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch)
+- [MDN: Error](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error)
+- [Node API: Errors](https://nodejs.org/api/errors.html)
+- [Express Error Handling Guide](http://expressjs.com/en/guide/error-handling.html)
+- [MDN: Promise Catch](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/catch)
 - [Joyent: Error Handling in Node.js](https://www.joyent.com/node-js/production/design/errors)
-
-- [Error Handling Lesson](https://github.com/gSchool/error-handling-lesson)
-- [Error Handling in Node / Express Exercise](https://github.com/gSchool/promise-challenges/tree/master/07-error-handling-in-node-express)
