@@ -261,7 +261,7 @@ Test-driven development process has many benefits.
 ## How do you use test-driven development to write unit tests?
 
 | Decimal | Binary |
-|---------|--------|
+|---------:|--------:|
 |       0 |      0 |
 |       1 |      1 |
 |       2 |     10 |
