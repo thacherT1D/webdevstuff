@@ -85,18 +85,16 @@ Trees also have powerful specializations, such as Binary Search Trees, which are
 - Objective 3
 
 ## Exercise Repository
-[Tree Exercises](https://github.com/gSchool/computer-science-tree-exercises)
-[CSV to Tree Exercise](https://github.com/gSchool/csv-to-tree)
+- [Tree Exercises](https://github.com/gSchool/computer-science-tree-exercises)
+- [CSV to Tree Exercise](https://github.com/gSchool/csv-to-tree)
 
 
 ## Introduction
-We are going to get started with a special case of trees, the binary search tree. The reason we are commencing with a special case, rather than the general solutions is because it offers constraints that will help us think about the properties of a tree in a clearer manner. After learning about binary trees, we will look at searching through the trees, as well as looking at a general form for trees.
+We are going to get started with a special case of trees, the binary search tree. The reason we are commencing with a special case, rather than the general solutions, is because it offers constraints that will help us think about the properties of a tree in a clearer manner. After learning about binary trees, we will look at searching through the trees, as well as looking at a general form for trees.
 
 ## Binary Trees
 
-Specializations of trees usually give constraints to nodes and their children. One common constraint is setting a limit on the __number of children__ each node can have. For example, a __binary tree__ is a type of tree where each node can have at maximum 2 children.
-
-[binary tree](https://en.wikipedia.org/wiki/Binary_tree).
+Specializations of trees usually give constraints to nodes and their children. One common constraint is setting a limit on the __number of children__ each node can have. For example, a [__binary tree__](https://en.wikipedia.org/wiki/Binary_tree) is a type of tree where each node can have at maximum 2 children.
 
 ![Binary Tree](http://www.cs.cmu.edu/~adamchik/15-121/lectures/Trees/pix/tree1.bmp)
 > A tree in which each node can have at most 2 children is called a binary tree.
