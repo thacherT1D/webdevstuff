@@ -53,9 +53,9 @@ Trees have a lot of __domain specific language__, you may see these terms used:
 - Height/Max Depth - Number of edges in longest path from X to a leaf.
 - Depth - length of the path from root to node X or number of edges in path from root to node X.
 
-## Practice
+## Discussion Topics
 
-For each of these facts, write a paragraph which proves it:
+Draw examples of the following facts about trees:
 
 * The __height__ of a tree is equal to the longest path from root to leaf.
 * In a tree with N nodes, there will always be N-1 edges.
@@ -63,8 +63,99 @@ For each of these facts, write a paragraph which proves it:
 
 ## Exercise
 
-Open the `Exercises/src/trees` folder for the exercises. To run the tests, use the command `mocha ../test/trees/[testFile]`, make the tests pass for each of these exercies:
+Open the `src/trees` folder for the exercises. To run the tests, use the command `npm test test/[File].test.js`, make the tests pass for each of these exercises:
 
-- `Node` - Check this file first
-- `objectToNode` - Practice creating trees from JSON
-- `arrayToNode` - Practice creating trees from arrays
+1. `node.js` - Check this file first
+2. `objectToNode` - Practice creating trees from JSON
+3. `arrayToNode` - Practice creating trees from arrays
+
+
+
+# Trees
+
+Trees are a common data structure in programming which are hierarchical as opposed to linear. Trees are used to model all sorts of things, many of which you've interacted with already such as filesystems and the HTML DOM in web browsers.
+
+Trees also have powerful specializations, such as Binary Search Trees, which are used to search ordered data; and Tries which are commonly used to encode dictionaries and spell checking algorithms.
+
+## Objectives
+* Define a binary tree.
+* Define and implement binary search tree.
+- Objective 1
+- Objective 2
+- Objective 3
+
+## Exercise Repository
+[Tree Exercises](https://github.com/gSchool/computer-science-tree-exercises)
+[CSV to Tree Exercise](https://github.com/gSchool/csv-to-tree)
+
+
+## Introduction
+We are going to get started with a special case of trees, the binary search tree. The reason we are commencing with a special case, rather than the general solutions is because it offers constraints that will help us think about the properties of a tree in a clearer manner. After learning about binary trees, we will look at searching through the trees, as well as looking at a general form for trees.
+
+## Binary Trees
+
+Specializations of trees usually give constraints to nodes and their children. One common constraint is setting a limit on the __number of children__ each node can have. For example, a __binary tree__ is a type of tree where each node can have at maximum 2 children.
+
+[binary tree](https://en.wikipedia.org/wiki/Binary_tree).
+
+![Binary Tree](http://www.cs.cmu.edu/~adamchik/15-121/lectures/Trees/pix/tree1.bmp)
+> A tree in which each node can have at most 2 children is called a binary tree.
+
+
+## Binary Search Trees
+
+In addition to setting limits on __children__ some trees give the __children__ an order. A binary search tree is one example:
+
+![Binary Search Tree](https://upload.wikimedia.org/wikipedia/commons/d/da/Binary_search_tree.svg)
+
+> __Try to figure it out__: based on the image, what is special about a binary search tree?
+
+A [binary search tree](https://en.wikipedia.org/wiki/Binary_search_tree) is a special type of binary tree which maintains a __sorted ordering of nodes__. In a __binary search tree__ every node satisfy the following constraints:
+
+* The tree is a __binary tree__.
+* Node's can have __left__ and/or __right__ children.
+* A left child represents a smaller value than its parent.
+* A right child represents a larger value its parent.
+
+This constraint gives the tree a __sorted ordering__. This ordering gives us a nice structure for a very fast search we've already seen, called __binary search__.
+
+To perform binary search in a binary search tree we start at the __root__ node and:
+
+* If the node is the number we're searching for, we did it.
+* If we are looking for a smaller number, we follow the left path.
+* If we are looking for a larger number, we follow the right path.
+* Repeat this process recursively until we are at a __leaf node__ or find the value we are searching for.
+
+### Practice - Discuss and Reflect
+
+Answer these questions:
+
+* How does this differ from doing binary search in a sorted Array?
+* Binary search is __not__ strictly `O(log(n))` when using a binary search tree, knowing this:
+  * Describe a valid binary search tree which would cause the algorithm have an `O(n)` time complexity.
+  * Describe an additional constraint on the binary search tree which causes binary search algorithm to always have an `O(log(n))` time complexity.
+
+Using at the binary search tree above:
+
+* Redraw it on a white-board or paper.
+* Identify all the numbers in the tree, and write them down in __sorted order__ from lowest to highest.
+* Now __label each node__ with it's __position in the ordered list__.
+* Can you identify a __pattern__ in the graph to describe how this tree encodes the order?
+
+### Implementation details
+
+Node
+
+Binary Search tree
+
+## Depth First Search
+
+### Pre-Order
+
+### In-order
+
+### Post-Order
+
+## Breath First Search
+
+## General Trees
