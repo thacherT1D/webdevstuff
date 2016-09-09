@@ -1,17 +1,3 @@
-
-
-
-
-## Exercise
-
-Open the `src/trees` folder for the exercises. To run the tests, use the command `npm test test/[File].test.js`, make the tests pass for each of these exercises:
-
-1. `node.js` - Check this file first
-2. `objectToNode` - Practice creating trees from JSON
-3. `arrayToNode` - Practice creating trees from arrays
-
-
-
 # Trees
 
 Trees are a common data structure in programming which are hierarchical as opposed to linear. Trees are used to model all sorts of things, many of which you've interacted with already such as filesystems and the HTML DOM in web browsers.
@@ -209,3 +195,49 @@ Open the `Exercises/src/trees` folder and run when you run `mocha ../test/trees`
 - This is NOT `Exercises/src/trees/binary-trees/depth_first_search.js` which you should do after reading about special trees.
 
 ## General Trees
+
+
+### Exercise
+
+# Employee CSV Tree Parser
+
+Your job is to use the .csv file in the `data` directory to construct a tree of employee hierarchy.
+The result should be a string, indented appropriately to show the hierarchy.
+
+## Examples
+
+Employee       | Manager
+-------------- | ----------
+Al Dente       |
+Anne Teak      | Al Dente
+Barb Dwyer     | Al Dente
+Bill Ding      | Barb Dwyer
+Chris Cross    | Barb Dwyer
+Jay Walker     |
+Joy Rider      |
+Kenny Penny    | Joy Rider
+Les Moore      | Kenny Penny
+Lou Pole       | Joy Rider
+M. Balmer      | Lou Pole
+Sonny Day      | Lou Pole
+Tim Burr       | Sonny Day
+
+
+For the given set of data above, your final result should look like the following:
+
+
+```
+Al Dente
+  Anne Teak
+  Barb Dwyer
+    Bill Ding
+    Chris Cross
+Jay Walker
+Joy Rider
+  Kenny Penny
+    Les Moore
+  Lou Pole
+    M. Balmer
+    Sonny Day
+      Tim Burr
+```
