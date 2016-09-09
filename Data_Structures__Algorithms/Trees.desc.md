@@ -16,7 +16,6 @@ Trees also have powerful specializations, such as Binary Search Trees, which are
 
 ## Exercise Repository
 - [Tree Exercises](https://github.com/gSchool/computer-science-tree-exercises)
-- [CSV to Tree Exercise](https://github.com/gSchool/csv-to-tree)
 
 
 ## Linear vs Hierarchical Data Structures
