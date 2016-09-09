@@ -1,16 +1,37 @@
+
+
+
+
+## Exercise
+
+Open the `src/trees` folder for the exercises. To run the tests, use the command `npm test test/[File].test.js`, make the tests pass for each of these exercises:
+
+1. `node.js` - Check this file first
+2. `objectToNode` - Practice creating trees from JSON
+3. `arrayToNode` - Practice creating trees from arrays
+
+
+
 # Trees
 
-Trees are a common data structure in programming which are __hierarchical__ as opposed to __linear__. Trees are used to model all sorts of things, many of which you've interacted with already such as *filesystems* and the *HTML DOM* in web browsers.
+Trees are a common data structure in programming which are hierarchical as opposed to linear. Trees are used to model all sorts of things, many of which you've interacted with already such as filesystems and the HTML DOM in web browsers.
 
 Trees also have powerful specializations, such as Binary Search Trees, which are used to search ordered data; and Tries which are commonly used to encode dictionaries and spell checking algorithms.
 
 ## Objectives
-
 * Describe Trees using specific vocabulary.
-* Implement a Tree in JavaScript
+* Define a binary tree.
+* Define and implement binary search tree.
+* Define and implement a general Tree in JavaScript
 * Implement some basic tree algorithms, specifically:
   * Depth First Search
   * Breadth First Search
+
+
+## Exercise Repository
+- [Tree Exercises](https://github.com/gSchool/computer-science-tree-exercises)
+- [CSV to Tree Exercise](https://github.com/gSchool/csv-to-tree)
+
 
 ## Linear vs Hierarchical Data Structures
 
@@ -53,44 +74,9 @@ Trees have a lot of __domain specific language__, you may see these terms used:
 - Height/Max Depth - Number of edges in longest path from X to a leaf.
 - Depth - length of the path from root to node X or number of edges in path from root to node X.
 
-## Discussion Topics
-
-Draw examples of the following facts about trees:
-
-* The __height__ of a tree is equal to the longest path from root to leaf.
-* In a tree with N nodes, there will always be N-1 edges.
-* There is always a __single path__ from the __root node__ to any other node in the tree.
-
-## Exercise
-
-Open the `src/trees` folder for the exercises. To run the tests, use the command `npm test test/[File].test.js`, make the tests pass for each of these exercises:
-
-1. `node.js` - Check this file first
-2. `objectToNode` - Practice creating trees from JSON
-3. `arrayToNode` - Practice creating trees from arrays
-
-
-
-# Trees
-
-Trees are a common data structure in programming which are hierarchical as opposed to linear. Trees are used to model all sorts of things, many of which you've interacted with already such as filesystems and the HTML DOM in web browsers.
-
-Trees also have powerful specializations, such as Binary Search Trees, which are used to search ordered data; and Tries which are commonly used to encode dictionaries and spell checking algorithms.
-
-## Objectives
-* Define a binary tree.
-* Define and implement binary search tree.
-- Objective 1
-- Objective 2
-- Objective 3
-
-## Exercise Repository
-- [Tree Exercises](https://github.com/gSchool/computer-science-tree-exercises)
-- [CSV to Tree Exercise](https://github.com/gSchool/csv-to-tree)
-
-
 ## Introduction
 We are going to get started with a special case of trees, the binary search tree. The reason we are commencing with a special case, rather than the general solutions, is because it offers constraints that will help us think about the properties of a tree in a clearer manner. After learning about binary trees, we will look at searching through the trees, as well as looking at a general form for trees.
+
 
 ## Binary Trees
 
@@ -126,6 +112,12 @@ To perform binary search in a binary search tree we start at the __root__ node a
 
 ### Practice - Discuss and Reflect
 
+Draw examples of the following facts about trees:
+
+* The __height__ of a tree is equal to the longest path from root to leaf.
+* In a tree with N nodes, there will always be N-1 edges.
+* There is always a __single path__ from the __root node__ to any other node in the tree.
+
 Answer these questions:
 
 * How does this differ from doing binary search in a sorted Array?
@@ -146,14 +138,74 @@ Node
 
 Binary Search tree
 
-## Depth First Search
 
-### Pre-Order
+### Exercise
+Make the test pass for a subset of functions
 
-### In-order
+## Searching Trees
 
-### Post-Order
+### Depth First Search
 
-## Breath First Search
+One of the most common ways of searching through a tree is using [Depth First Search](https://en.wikipedia.org/wiki/Depth-first_search) (DFS).
+
+Here is an example of DFS Pre-order for a tree:
+
+![http://upload.wikimedia.org/wikipedia/commons/7/7f/Depth-First-Search.gif](http://upload.wikimedia.org/wikipedia/commons/7/7f/Depth-First-Search.gif)
+
+#### Pre-order vs In-order vs Post-order
+
+Here is some potential step by step pseudo code for implementing DFS Pre-order (with a return value of an array of all the nodes - this can also be done with a callback for additional functionality)
+
+1. Create an array called `data` to store our results
+2. Create a variable called `current` and set it equal to the root
+3. Define a function called `search` that takes in a node as a parameter. Inside of the function-
+    - push into your `data` array the parameter passed into the function
+    - if there is a node to the left, call the `search` function again passing in the node to the left
+    - if there is a node to the right, call the `search` function again passing in the node to the right
+4. Call the `search` function passing in the value of `current`
+4. Return the array
+
+For DFS, there are actually three ways to perform the operation! As we see in the gif above, these are called Pre-order, In-order and Post-order. To see the differences between these three, you can read more [here](https://en.wikipedia.org/wiki/Tree_traversal#Depth-first) and [here](// http://datastructuresnotes.blogspot.com/2009/02/binary-tree-traversal-preorder-inorder.html
+)
+
+#### Pre-Order
+
+#### In-order
+
+#### Post-Order
+
+### Breath First Search
+
+Breadth-first search](https://en.wikipedia.org/wiki/Breadth-first_search) (BFS) is a strategy for searching in a tree in level order. BFS begins at a root node and inspects all the neighboring nodes. Then for each of those neighbor nodes in turn, it inspects their neighbor nodes which were unvisited, and so on. This is commonly implemented with a queue.
+
+Here is an example of BFS in a tree:
+
+![http://upload.wikimedia.org/wikipedia/commons/5/5d/Breadth-First-Search-Algorithm.gif](http://upload.wikimedia.org/wikipedia/commons/5/5d/Breadth-First-Search-Algorithm.gif)
+
+Here is some potential step by step pseudo code for implementing BFS (with a return value of an array of all the nodes - this can also be done with a callback for additional functionality)
+
+1. Create an array called `data` to store our results
+2. Create a variable called `node` and set its value to be the root
+3. Add this variable to your queue
+4. Loop through your queue (as long as there is something in it)-
+    - remove the first item in your queue (remember it is a FIFO structure)
+    - push into the `data` array the value what has been dequeued
+    - if there is a node to the left, add that node to the queue
+    - if there is a node to the right, add that node to the queue
+5. Return the array of data
+
+> Check it out [here](http://visualgo.net/bst.html)!
+
+## BFS or DFS?
+
+Which is better? From [Stack Overflow](http://stackoverflow.com/questions/3332947/when-is-it-practical-to-use-dfs-vs-bfs):
+
+> That heavily depends on the structure of the search tree and the number and location of solutions (aka searched-for items). If you know a solution is not far from the root of the tree, a breadth first search (BFS) might be better. If the tree is very deep and solutions are rare, depth first search (DFS) might take an extremely long time, but BFS could be faster. If the tree is very wide, a BFS might need too much memory, so it might be completely impractical. If solutions are frequent but located deep in the tree, BFS could be impractical. If the search tree is very deep you will need to restrict the search depth for depth first search (DFS), anyway (for example with iterative deepening).
+
+### Exercise - Implement DFS
+Open the `Exercises/src/trees` folder and run when you run `mocha ../test/trees`, make all the following tests pass:
+
+- `depthFirst` - Traverse a tree using Pre-Order Depth First Search
+- This is NOT `Exercises/src/trees/binary-trees/depth_first_search.js` which you should do after reading about special trees.
 
 ## General Trees
