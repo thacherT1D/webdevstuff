@@ -118,14 +118,14 @@ Using at the binary search tree above:
 * Can you identify a __pattern__ in the graph to describe how this tree encodes the order?
 
 ### Implementation details
+A Binary tree is made of two parts:
+- A node, which holds the data, the left child, and right child.
+- The tree, which holds the root of the nodes, and holds all the methods to interact with it
 
-Node
+### Exercise 1
+- Make the tests in `test/binary_search_tree.test.js` pass.
+- Create a test for the `remove` method that has been provided.
 
-Binary Search tree
-
-
-### Exercise
-Make the test pass for a subset of functions
 
 ## Searching Trees
 
@@ -150,14 +150,8 @@ Here is some potential step by step pseudo code for implementing DFS Pre-order (
 4. Call the `search` function passing in the value of `current`
 4. Return the array
 
-For DFS, there are actually three ways to perform the operation! As we see in the gif above, these are called Pre-order, In-order and Post-order. To see the differences between these three, you can read more [here](https://en.wikipedia.org/wiki/Tree_traversal#Depth-first) and [here](// http://datastructuresnotes.blogspot.com/2009/02/binary-tree-traversal-preorder-inorder.html
+For DFS, there are actually three ways to perform the operation! As we see in the gif above, these are called Pre-order, In-order and Post-order. To see the differences between these three, you can read more [here](https://en.wikipedia.org/wiki/Tree_traversal#Depth-first) and [here]( http://datastructuresnotes.blogspot.com/2009/02/binary-tree-traversal-preorder-inorder.html
 )
-
-#### Pre-Order
-
-#### In-order
-
-#### Post-Order
 
 ### Breath First Search
 
@@ -187,23 +181,36 @@ Which is better? From [Stack Overflow](http://stackoverflow.com/questions/333294
 
 > That heavily depends on the structure of the search tree and the number and location of solutions (aka searched-for items). If you know a solution is not far from the root of the tree, a breadth first search (BFS) might be better. If the tree is very deep and solutions are rare, depth first search (DFS) might take an extremely long time, but BFS could be faster. If the tree is very wide, a BFS might need too much memory, so it might be completely impractical. If solutions are frequent but located deep in the tree, BFS could be impractical. If the search tree is very deep you will need to restrict the search depth for depth first search (DFS), anyway (for example with iterative deepening).
 
-### Exercise - Implement DFS
-Open the `Exercises/src/trees` folder and run when you run `mocha ../test/trees`, make all the following tests pass:
+### Exercise 2
+- Make the tests in `test/breadth_first_search.js` pass.
+- Make the tests in `test/depth_first_search.js` pass.
 
-- `depthFirst` - Traverse a tree using Pre-Order Depth First Search
-- This is NOT `Exercises/src/trees/binary-trees/depth_first_search.js` which you should do after reading about special trees.
+
 
 ## General Trees
 
+Binary trees are a subset of General trees, nodes in general trees can store as many children as needed to model the data. A filesystem and a DOM tree is an example of a tree data structure.
 
-### Exercise
+### Implementation details
 
-# Employee CSV Tree Parser
+There are two differences between a binary tree implementation and a general tree implementation.
+- Instead of being restricted to two children, a general tree can have as many children as necessary. The child nodes are stored in an array.
+- Instead of placing the new node based on the data, as in a binary search tree. When inserting a node in a general tree, you need to specify the data to store and the parent to add it under.
 
-Your job is to use the .csv file in the `data` directory to construct a tree of employee hierarchy.
-The result should be a string, indented appropriately to show the hierarchy.
 
-## Examples
+
+### Exercise 2
+- Make the tests in `test/tree.test.js` pass.
+- Implement `findBSF()` first.
+
+
+### Exercise 3 - Employee CSV Tree Parser
+
+Your job is to use the .csv file in the `data` directory to construct a tree of employee hierarchy. The result should be a string, indented appropriately to show the hierarchy.
+
+Store your solution in the `src` folder.
+
+#### Examples
 
 Employee       | Manager
 -------------- | ----------
