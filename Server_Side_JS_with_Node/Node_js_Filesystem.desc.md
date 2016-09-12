@@ -218,9 +218,9 @@ And type in the following code.
 ```javascript
 'use strict';
 
-var fs = require('fs');
+const fs = require('fs');
 
-var data = fs.readFileSync('/etc/paths', 'utf8');
+const data = fs.readFileSync('/etc/paths', 'utf8');
 
 console.log(data);
 console.log(1 + 2);
@@ -257,12 +257,10 @@ And type in the following code.
 ```javascript
 'use strict';
 
-var fs = require('fs');
+const fs = require('fs');
 
-fs.readFile('/etc/paths', 'utf8', function(err, data) {
-  if (err) {
-    throw err;
-  }
+fs.readFile('/etc/paths', 'utf8', (err, data) => {
+  if (err) throw err;
 
   console.log(data);
 });
@@ -321,16 +319,14 @@ And type in the following code to the `guests.js` file.
 ```javascript
 'use strict';
 
-var fs = require('fs');
-var path = require('path');
-var guestsPath = path.join(__dirname, 'guests.json');
+const fs = require('fs');
+const path = require('path');
+const guestsPath = path.join(__dirname, 'guests.json');
 
-fs.readFile(guestsPath, 'utf8', function(err, data) {
-  if (err) {
-    throw err;
-  }
+fs.readFile(guestsPath, 'utf8', (err, data) => {
+  if (err) throw err;
 
-  var guests = JSON.parse(data);
+  const guests = JSON.parse(data);
 
   console.log(guests);
 });
@@ -355,26 +351,23 @@ Next, refactor the `guests.js` file by adding a `read` subcommand.
 ```javascript
 'use strict';
 
-var fs = require('fs');
-var path = require('path');
-var guestsPath = path.join(__dirname, 'guests.json');
+const fs = require('fs');
+const path = require('path');
+const guestsPath = path.join(__dirname, 'guests.json');
 
-var node = path.basename(process.argv[0]);
-var file = path.basename(process.argv[1]);
-var cmd = process.argv[2];
+const node = path.basename(process.argv[0]);
+const file = path.basename(process.argv[1]);
+const cmd = process.argv[2];
 
 if (cmd === 'read') {
   fs.readFile(guestsPath, 'utf8', function(err, data) {
-    if (err) {
-      throw err;
-    }
+    if (err) throw err;
 
-    var guests = JSON.parse(data);
+    const guests = JSON.parse(data);
 
     console.log(guests);
   });
-}
-else {
+} else {
   console.error(`Usage: ${node} ${file} read`);
   process.exit(1);
 }
@@ -402,33 +395,28 @@ Next, refactor the `guests.js` file by adding a `create` subcommand as well.
 ```javascript
 'use strict';
 
-var fs = require('fs');
-var path = require('path');
-var guestsPath = path.join(__dirname, 'guests.json');
+const fs = require('fs');
+const path = require('path');
+const guestsPath = path.join(__dirname, 'guests.json');
 
-var node = path.basename(process.argv[0]);
-var file = path.basename(process.argv[1]);
-var cmd = process.argv[2];
+const node = path.basename(process.argv[0]);
+const file = path.basename(process.argv[1]);
+const cmd = process.argv[2];
 
 if (cmd === 'read') {
   fs.readFile(guestsPath, 'utf8', function(err, data) {
-    if (err) {
-      throw err;
-    }
+    if (err) throw err;
 
-    var guests = JSON.parse(data);
+    const guests = JSON.parse(data);
 
     console.log(guests);
   });
-}
-else if (cmd === 'create') {
-  fs.readFile(guestsPath, 'utf8', function(readErr, data) {
-    if (readErr) {
-      throw readErr;
-    }
+} else if (cmd === 'create') {
+  fs.readFile(guestsPath, 'utf8', (readErr, data) => {
+    if (readErr) throw readErr;
 
-    var guests = JSON.parse(data);
-    var guest = process.argv[3];
+    let guests = JSON.parse(data);
+    const guest = process.argv[3];
 
     if (!guest) {
       console.error(`Usage: ${node} ${file} ${cmd} GUEST`);
@@ -437,18 +425,15 @@ else if (cmd === 'create') {
 
     guests.push(guest);
 
-    var guestsJSON = JSON.stringify(guests);
+    const guestsJSON = JSON.stringify(guests);
 
-    fs.writeFile(guestsPath, guestsJSON, function(writeErr) {
-      if (writeErr) {
-        throw writeErr;
-      }
+    fs.writeFile(guestsPath, guestsJSON, (writeErr) => {
+      if (writeErr) throw writeErr;
 
       console.log(guest);
     });
   });
-}
-else {
+} else {
   console.error(`Usage: ${node} ${file} [read | create]`);
   process.exit(1);
 }
