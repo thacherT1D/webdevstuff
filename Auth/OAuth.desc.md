@@ -1,18 +1,10 @@
 ## Objectives
 
-There are two main goals for this lesson: to get familiar with Passport, and to hone your documentation interaction abilities.  Note "documentation interaction" - not "reading documentation".  Documentation is rarely a step-by-step tutorial.  Instead, it's an active process of knowing what to look for, seeking it out, pattern matching and only pulling in the few lines necessary to satisfy the errors you are getting.
+- Explain what OAuth is.
+- Explain why OAuth is important.
+- Use OAuth to authenticate users.
 
-By the end of this lesson, you should be able to:
-
-- Describe and explain OAuth and it's role in web authentication (content)
-- Carefully read error messages generated from framework code and reason through possible causes based on current knowledge of Express
-- Use targeted searches in documentation to answer specific questions or inform hypothesis
-  - use CMD+F on web pages
-- Keep track of where you were on notecards, so you can maintain your place even when you have to solve smaller problems
-
-You do _not_ need to memorize every step in this document.  Using framework code is all about combining what you know with your critical thinking skills and targeted documentation searches.  Most of this lesson is about non-cognitive behaviors.
-
-## OAuth (content)
+## What's OAuth?
 
 The basic OAuth2 web flow is:
 
@@ -81,7 +73,7 @@ module.exports = require('knex')(config);
 `git add db`  
 `git commit -am"added db config"`  
 
-Go to LinkedIn, then setup a new [oAuth Application](https://www.linkedin.com/developer/apps). 
+Go to LinkedIn, then setup a new [oAuth Application](https://www.linkedin.com/developer/apps).
 Most items in that form don't matter- the logo, application name, and description will be shown to the user who is trying to login to your app when you request access to their account. You'll also need to provide a logo for your app that is the same pixel length and width. The email, url, and website don't require you to know them or have them set up beforehand, just put something there because you can always change it later.
 
 Once you have the client ID and client secret, you can store it in your .env file like so:
@@ -161,7 +153,7 @@ passport.use(new LinkedInStrategy({
     scope: ['r_emailaddress', 'r_basicprofile'],
   },
   function(token, tokenSecret, profile, done) {
-    
+
       // To keep the example simple, the user's LinkedIn profile is returned to
       // represent the logged-in user.  In a typical application, you would want
       // to associate the LinkedIn account with a user record in your database,
