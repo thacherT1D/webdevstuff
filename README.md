@@ -1631,9 +1631,28 @@ Week 20
       </td>
     </tr>
     <tr>
-      <td rowspan="2">Thursday</td>
-      <td rowspan="2"><a href=""></a>
+      <td rowspan="0">Thursday</td>
+      <td rowspan="0"><a href=""></a>
       </td>
+      <td>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <td rowspan="3">Friday</td>
+      <td rowspan="3"><a href=""></a>
+      </td>
+      <td>Re-Present Warmup Projects
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+    </tr>
+    <tr>
       <td><a href="Q4/Feedback.md">Final Survey</a>
       </td>
       <td>

@@ -238,6 +238,15 @@ module.exports = [
   {
     warmup: { text: "", url: "" },
     activities: [
+    ],
+  },
+
+  {
+    warmup: { text: "", url: "" },
+    activities: [
+      {
+        article: {text: "Re-Present Warmup Projects"},
+      },
       {
         article: {text: "Final Survey", url: "Q4/Feedback.md"},
         assignment: {text: "", url: ""},
