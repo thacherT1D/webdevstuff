@@ -113,7 +113,7 @@ npm init --yes
 npm install --save express passport passport-linkedin cookie-parser jsonwebtoken dotenv
 ```
 
-Visit the [LinkedIn Developers](https://www.linkedin.com/developer/apps) website and click the button to create a new application. Then, fill out the form with the information below or with you own fictitious custom information.
+Visit the [LinkedIn Developers](https://www.linkedin.com/developer/apps) website and click the button to create a new application. Then, fill out the form with either the information below or with your own fictitious application information.
 
 **NOTE:** Don't forget to agree to the LinkedIn API Terms of Use before submitting the form.
 
@@ -127,13 +127,14 @@ Visit the [LinkedIn Developers](https://www.linkedin.com/developer/apps) website
 | **Business Email**   | meowth@teamrocket.com                         |
 | **Business Phone**   | 555-555-5555                                  |
 
-On the next page, copy the client ID and client secret into a `.env` file.
+On the next page, copy the client ID and client secret into your application's `.env` file.
 
 ```shell
-LINKEDIN_CLIENT_ID=7893xt2dn6i9ts
-LINKEDIN_CLIENT_SECRET=5IWCXwSNvQEzPl7X
+LINKEDIN_CLIENT_ID=some_client_id
+LINKEDIN_CLIENT_SECRET=some_client_secret
 ```
-Then, choose the default set of permissions that your application will want from the user.
+
+Then, choose the default permissions that LinkedIn will ask your users to grant your application. Accessing a user's private information on LinkedIn will require that user to grant your application certain permissions. The permissions system ensures that a user is made aware of what your application could possibly access or do on their behalf before approving it. The default permissions are specified on this form. Additionally, they can also be explicitly requested using the `scope` argument during the authorization step of the OAuth 2.0 process.
 
 - `r_basicprofile`
 - `r_emailaddress`
