@@ -122,7 +122,7 @@ Go to LinkedIn, then setup a new [OAuth-based application](https://www.linkedin.
 | **Company Name**     | Team Rocket                                   |
 | **Name**             | Blast Off                                     |
 | **Description**      | Team rocket blasts off at the speed of light! |
-| **Application Logo** | ![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/384/team_rocket.png) |
+| **Application Logo** | ![](https://goo.gl/MiYoKc)                    |
 | **Website URL**      | https://twitter.com/teamrocket                |
 | **Business Email**   | meowth@teamrocket.com                         |
 | **Business Phone**   | 555-555-5555                                  |
