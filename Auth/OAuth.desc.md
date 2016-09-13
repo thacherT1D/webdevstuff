@@ -134,7 +134,9 @@ LINKEDIN_CLIENT_ID=some_client_id
 LINKEDIN_CLIENT_SECRET=some_client_secret
 ```
 
-Then, choose the default permissions that LinkedIn will ask your users to grant your application. Accessing a user's private information on LinkedIn will require that user to grant your application certain permissions. The permissions system ensures that a user is made aware of what your application could possibly access or do on their behalf before approving it. The default permissions are specified on this form. Additionally, they can also be explicitly requested using the `scope` argument during the authorization step of the OAuth 2.0 process.
+Then, choose the default permissions for LinkedIn to ask your users to grant your application. Remember, accessing a user's private information on LinkedIn from your application will require certain permissions granted by the user. The permissions system ensures that a user is made aware of what your application could possibly access or do on their behalf. The default permissions to ask the user to grant are specified on this form.
+
+**NOTE:** Additional permissions can also be explicitly requested during the authorization step.
 
 - `r_basicprofile`
 - `r_emailaddress`
