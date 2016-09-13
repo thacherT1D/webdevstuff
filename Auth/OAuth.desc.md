@@ -8,11 +8,29 @@
 
 Before jumping straight into OAuth, let's refresh our memories on the definition of authentication versus authorization. **Authentication** is the process of confirming the identity of a user. When a user logs into a web application, that person is attempting to authenticate. On the other hand, **authorization** is the process of granting access to private information for an authenticated user. When a user successfully authenticates with an application, the server starts the authorization process by creating a token. Afterwards, the client includes the token, and not the user's password, in subsequent requests for private information on the server.
 
-Understanding the different between the two is important because **OAuth** is an open standard for both authentication and authorization. With OAuth, a user authenticates to a web application using an account from another service like Google, Facebook, Microsoft, Twitter, etc. Once authenticated, the user gives the web application permission to access private information on that service. Then, the web application can access the private information if and when it wants to without sharing their credentials.
+Understanding the different between the two is important because **OAuth** is an open standard for both authentication and authorization. With OAuth, a user can authenticate to your web application using an account from another service like Google, Facebook, Microsoft, Twitter, etc. Once authenticated, the user grants your web application permission to access their private information on that service. The credential representing the user's permission is called an **authorization grant**. When your web application receives an authorization grant, it verifies that grant with the service. If the grant is verified to be legitamate, the service issues your web application an **access token** which can be used to access the private information if and when your web application wants.
 
-The OAuth 2.0 spec itself leaves many decisions up to the implementor. Instead of describing all possible decisions that need to be made to successfully implement OAuth 2, this post makes decisions that are appropriate for most implementations.
+```text
++--------+                               +---------------+
+|        |------ Authorization Request ->|   Resource    |
+|        |                               |     Owner     |
+|        |<------ Authorization Grant ---|               |
+|        |                               +---------------+
+|        |
+|        |                               +---------------+
+|        |------- Authorization Grant -->| Authorization |
+| Client |                               |     Server    |
+|        |<--------- Access Token -------|               |
+|        |                               +---------------+
+|        |
+|        |                               +---------------+
+|        |---------- Access Token ------>|    Resource   |
+|        |                               |     Server    |
+|        |<------- Protected Resource ---|               |
++--------+                               +---------------+
+```
 
-An authorization grant is a credential representing the resource owner's authorization (to access its protected resources) used by the client to obtain an access token.  This specification defines four grant types -- authorization code, implicit, resource owner password credentials, and client credentials -- as well as an extensibility mechanism for defining additional types.
+An authorization grant is a credential representing the user's authorization to access their private infomration used by the client to obtain an access token. This specification defines four grant types -- authorization code, implicit, resource owner password credentials, and client credentials -- as well as an extensibility mechanism for defining additional types.
 
 OAuth 2 provides several "grant types" for different use cases. The grant types defined are:
 
