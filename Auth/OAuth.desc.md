@@ -117,6 +117,8 @@ Go to LinkedIn, then setup a new [OAuth-based application](https://www.linkedin.
 
 **NOTE:** Don't forget to agree to the LinkedIn API Terms of Use.
 
+| Field            | Value                                         |
+|------------------|-----------------------------------------------|
 | **Company Name**     | Team Rocket                                   |
 | Name             | Blast Off                                     |
 | Description      | Team rocket blasts off at the speed of light! |
