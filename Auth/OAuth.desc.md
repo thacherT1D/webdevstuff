@@ -32,18 +32,7 @@ Understanding the different between the two is important because **OAuth** is an
 
 An authorization grant is a credential representing the user's authorization to access their private information used by the client to obtain an access token. This specification defines four grant types -- authorization code, implicit, resource owner password credentials, and client credentials -- as well as an extensibility mechanism for defining additional types.
 
-OAuth 2 provides several "grant types" for different use cases. The grant types defined are:
-
-
-| Grant type           | Use case                                    |
-|----------------------|---------------------------------------------|
-| Authorization Code   | For server-based web applications           |
-| Implicit             | For browser-based or mobile apps            |
-| Password Credentials | For logging in with a username and password |
-| Client credentials   | For application access                      |
-
-
-The OAuth 2.0 flow is:
+OAuth 2 provides several grant types for different use cases. The grant type we'll  be covering here is called **Authorization Code** which is designed for server-based web applications. The OAuth 2.0 authorization code grant flow is the following.
 
 ```text
    Chrome                       Your server app                     LinkedIn                         LinkedIn
