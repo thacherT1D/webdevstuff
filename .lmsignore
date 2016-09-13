@@ -1,0 +1,8 @@
+.lmsignore
+.gitignore
+schedule.js
+schedule.q1.js
+schedule.q2.js
+schedule.q3.js
+schedule.q4.js
+videos.md
