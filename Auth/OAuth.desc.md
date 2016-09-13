@@ -10,6 +10,51 @@ The basic OAuth2 web flow is:
 
 ![](http://41.media.tumblr.com/dc0ed4febc896d5d0589fc2940e52a42/tumblr_mp08klMuDm1qax653o1_1280.jpg)
 
+```text
+   Chrome                       Your server app                     LinkedIn                         LinkedIn
+(User Agent)                       (Client)                  (Authorization Server)              (Resource Server)
+      │                                │                                │                                │
+      │                                │                                │                                │
+      ├────────── GET /auth ───────────▶                                │                                │
+      │                                │                                │                                │
+      ◀─────────── 200 OK ─────────────┤                                │                                │
+      │                                │                                │                                │
+      │                                │                                │                                │
+      ├────── GET /auth/linkedin ──────▶                                │                                │
+      │                                │                                │                                │
+      ◀─ ─ ─ 302 auth.linkedin.com ─ ─ ┤                                │                                │
+      │                                │                                │                                │
+      │                                │                                │                                │
+      ├────────────────────── GET auth.linkedin.com ────────────────────▶                                │
+      │                                │                                │                                │
+      ◀───────────────────────────── 200 OK ────────────────────────────┤                                │
+      │                                │                                │                                │
+      │                                │                                │                                │
+      ├───────────────────── POST auth.linkedin.com ────────────────────▶                                │
+      │                                │                                │                                │
+      │                                │                                ├ Verify credentials ┐           │
+      │                                │                                │                    │           │
+      │                                │                                ◀────────────────────┘           │
+      │                                │                                │                                │
+      ◀ ─ ─ ─ ─ ─ ─ ─ ─ ─  302 /auth/linkedin/callback  ─ ─ ─ ─ ─ ─ ─ ─ ┤                                │
+      │                                │                                │                                │
+      │                                │                                │                                │
+      ├─ GET /auth/linkedin/callback ──▶                                │                                │
+      │                                │                                │                                │
+      │                                ├────────────────────── GET res.linkedin.com ─────────────────────▶
+      │                                │                                │                                │
+      │                                │                                ◀───── GET auth.linkedin.com ────┤
+      │                                │                                │                                │
+      │                                │                                ├──────────── 200 OK ────────────▶
+      │                                │                                │                                │
+      │                                ◀──────────────────────────── 200 OK ─────────────────────────────┤
+      │                                │                                │                                │
+      ◀─────────── 200 OK ─────────────┤                                │                                │
+      │                                │                                │                                │
+      │                                │                                │                                │
+      ▼                                ▼                                ▼                                ▼
+```
+
 Some guiding questions are:
 
 - How does Google / Facebook / LinkedIn etc... communicate with your _local_ web app during development?  Isn't that private (aka not published on the internet)??
