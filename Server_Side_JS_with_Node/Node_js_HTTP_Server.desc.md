@@ -1,4 +1,4 @@
-## Objectives
+# Objectives
 
 - Explain what an HTTP server is.
 - Explain why an HTTP server is useful.
@@ -28,16 +28,16 @@ And type in the following code.
 ```javascript
 'use strict';
 
-var http = require('http');
-var port = process.env.PORT || 8000;
+const http = require('http');
+const port = process.env.PORT || 8000;
 
-var server = http.createServer(function(req, res) {
+const server = http.createServer((req, res) => {
   res.setHeader('Content-Type', 'text/plain');
   res.end('Hello world');
 });
 
-server.listen(port, function() {
-  console.log('Listening on port', port);
+server.listen(port, () => {
+  console.log(`Listening on port ${port}`);
 });
 ```
 
@@ -178,19 +178,19 @@ And type in the following code to the `server.js` file.
 ```javascript
 'use strict';
 
-var http = require('http');
-var port = process.env.PORT || 8000;
+const http = require('http');
+const port = process.env.PORT || 8000;
 
-var server = http.createServer(function(req, res) {
-  var guests = ['Mary', 'Don'];
-  var guestsJSON = JSON.stringify(guests);
+const server = http.createServer((req, res) => {
+  const guests = ['Mary', 'Don'];
+  const guestsJSON = JSON.stringify(guests);
 
   res.setHeader('Content-Type', 'application/json');
   res.end(guestsJSON);
 });
 
-server.listen(port, function() {
-  console.log('Listening on port', port);
+server.listen(port, () => {
+  console.log(`Listening on port ${port}`);
 });
 ```
 
@@ -235,26 +235,25 @@ Let's fix that by refactoring the `server.js` file with the following code.
 ```javascript
 'use strict';
 
-var http = require('http');
-var port = process.env.PORT || 8000;
+const http = require('http');
+const port = process.env.PORT || 8000;
 
-var server = http.createServer(function(req, res) {
+const server = http.createServer((req, res) => {
   if (req.method === 'GET' && req.url === '/guests') {
-    var guests = ['Mary', 'Don'];
-    var guestsJSON = JSON.stringify(guests);
+    const guests = ['Mary', 'Don'];
+    const guestsJSON = JSON.stringify(guests);
 
     res.setHeader('Content-Type', 'application/json');
     res.end(guestsJSON);
-  }
-  else {
+  } else {
     res.statusCode = 404;
     res.setHeader('Content-Type', 'text/plain');
     res.end('Not found');
   }
 });
 
-server.listen(port, function() {
-  console.log('Listening on port', port);
+server.listen(port, () => {
+  console.log(`Listening on port ${port}`);
 });
 ```
 
@@ -326,16 +325,16 @@ Let's fix that by refactoring the `server.js` file with the following code.
 ```javascript
 'use strict';
 
-var fs = require('fs');
-var path = require('path');
-var guestsPath = path.join(__dirname, 'guests.json');
+const fs = require('fs');
+const path = require('path');
+const guestsPath = path.join(__dirname, 'guests.json');
 
-var http = require('http');
-var port = process.env.PORT || 8000;
+const http = require('http');
+const port = process.env.PORT || 8000;
 
-var server = http.createServer(function(req, res) {
+const server = http.createServer((req, res) => {
   if (req.method === 'GET' && req.url === '/guests') {
-    fs.readFile(guestsPath, 'utf8', function(err, guestsJSON) {
+    fs.readFile(guestsPath, 'utf8', (err, guestsJSON) => {
       if (err) {
         console.error(err.stack);
         res.statusCode = 500;
@@ -346,16 +345,15 @@ var server = http.createServer(function(req, res) {
       res.setHeader('Content-Type', 'application/json');
       res.end(guestsJSON);
     });
-  }
-  else {
+  } else {
     res.statusCode = 404;
     res.setHeader('Content-Type', 'text/plain');
     res.end('Not found');
   }
 });
 
-server.listen(port, function() {
-  console.log('Listening on port', port);
+server.listen(port, () => {
+  console.log(`Listening on port ${port}`);
 });
 ```
 
@@ -389,16 +387,16 @@ Let's fix that by refactoring the `server.js` file with the following code.
 ```javascript
 'use strict';
 
-var fs = require('fs');
-var path = require('path');
-var guestsPath = path.join(__dirname, 'guests.json');
+const fs = require('fs');
+const path = require('path');
+const guestsPath = path.join(__dirname, 'guests.json');
 
-var http = require('http');
-var port = process.env.PORT || 8000;
+const http = require('http');
+const port = process.env.PORT || 8000;
 
-var server = http.createServer(function(req, res) {
+const server = http.createServer((req, res) => {
   if (req.method === 'GET' && req.url === '/guests') {
-    fs.readFile(guestsPath, 'utf8', function(err, guestsJSON) {
+    fs.readFile(guestsPath, 'utf8', (err, guestsJSON) => {
       if (err) {
         console.error(err.stack);
         res.statusCode = 500;
@@ -409,9 +407,8 @@ var server = http.createServer(function(req, res) {
       res.setHeader('Content-Type', 'application/json');
       res.end(guestsJSON);
     });
-  }
-  else if (req.method === 'GET' && req.url === '/guests/0') {
-    fs.readFile(guestsPath, 'utf8', function(err, guestsJSON) {
+  } else if (req.method === 'GET' && req.url === '/guests/0') {
+    fs.readFile(guestsPath, 'utf8', (err, guestsJSON) => {
       if (err) {
         console.error(err.stack);
         res.statusCode = 500;
@@ -419,15 +416,14 @@ var server = http.createServer(function(req, res) {
         return res.end('Internal Server Error');
       }
 
-      var guests = JSON.parse(guestsJSON);
-      var guestJSON = JSON.stringify(guests[0]);
+      const guests = JSON.parse(guestsJSON);
+      const guestJSON = JSON.stringify(guests[0]);
 
       res.setHeader('Content-Type', 'application/json');
       res.end(guestJSON);
     });
-  }
-  else if (req.method === 'GET' && req.url === '/guests/1') {
-    fs.readFile(guestsPath, 'utf8', function(err, guestsJSON) {
+  } else if (req.method === 'GET' && req.url === '/guests/1') {
+    fs.readFile(guestsPath, 'utf8', (err, guestsJSON) => {
       if (err) {
         console.error(err.stack);
         res.statusCode = 500;
@@ -435,22 +431,21 @@ var server = http.createServer(function(req, res) {
         return res.end('Internal Server Error');
       }
 
-      var guests = JSON.parse(guestsJSON);
-      var guestJSON = JSON.stringify(guests[1]);
+      const guests = JSON.parse(guestsJSON);
+      const guestJSON = JSON.stringify(guests[1]);
 
       res.setHeader('Content-Type', 'application/json');
       res.end(guestJSON);
     });
-  }
-  else {
+  } else {
     res.statusCode = 404;
     res.setHeader('Content-Type', 'text/plain');
     res.end('Not found');
   }
 });
 
-server.listen(port, function() {
-  console.log('Listening on port', port);
+server.listen(port, () => {
+  console.log(`Listening on port ${port}`);
 });
 ```
 
@@ -615,11 +610,16 @@ Finally, you can send a request to the server running on the production environm
 http GET USERNAME-party.herokuapp.com/guests
 ```
 
-## Assignment
+<br>
+<hr>
+
+### Assignment
 
 - [Pet Shop - Node.js HTTP Server](https://github.com/gSchool/fs-pet-shop/blob/master/2_http.md)
 
-## Resources
+<br>
+
+#### Resources
 
 - [Heroku Dev Center- Deploy from GitHub](https://devcenter.heroku.com/articles/github-integration)
 - [Heroku Dev Center - Getting Started with Node.js](https://devcenter.heroku.com/articles/getting-started-with-nodejs#introduction)
