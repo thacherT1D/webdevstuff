@@ -117,15 +117,15 @@ Go to LinkedIn, then setup a new [OAuth-based application](https://www.linkedin.
 
 **NOTE:** Don't forget to agree to the LinkedIn API Terms of Use.
 
-| Field            | Value                                         |
-|------------------|-----------------------------------------------|
+| Field                | Value                                         |
+|----------------------|-----------------------------------------------|
 | **Company Name**     | Team Rocket                                   |
-| Name             | Blast Off                                     |
-| Description      | Team rocket blasts off at the speed of light! |
-| Application Logo | ![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/384/team_rocket.png) |
-| Website URL      | https://twitter.com/teamrocket                |
-| Business Email   | meowth@teamrocket.com                         |
-| Business Phone   | 555-555-5555                                  |
+| **Name**             | Blast Off                                     |
+| **Description**      | Team rocket blasts off at the speed of light! |
+| **Application Logo** | ![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/384/team_rocket.png) |
+| **Website URL**      | https://twitter.com/teamrocket                |
+| **Business Email**   | meowth@teamrocket.com                         |
+| **Business Phone**   | 555-555-5555                                  |
 
 Once you have the client ID and client secret, you can store it in your `.env` file.
 
