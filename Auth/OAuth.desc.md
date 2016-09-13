@@ -6,7 +6,32 @@
 
 ## What's OAuth?
 
-The basic OAuth2 web flow is:
+Before jumping straight into OAuth, let's refresh our memories on the definition of authentication versus authorization. **Authentication** is the process of confirming the identity of a user. When a user logs into a web application, that person is attempting to authenticate.
+
+On the other hand, **authorization** is the process of granting access to private information for an authenticated user. When a user successfully authenticates with an application, the server starts the authorization process by creating a session token. Afterwards, the client includes the session token in subsequent requests for private information on the server.
+
+Understanding the different between the two is important because **OAuth** is an open standard for authorization that's common used for authentication. With OAuth, a user can authenticate with a web application with their Google, Facebook, Microsoft, Twitter, etc. account without exposing their password to that application. Once the user is authenticated, the web application can then use OAuth to access information on Google, Facebook, Microsoft, Twitter, etc. on behalf of the user. Long story short, OAuth specifies a process for users to authorize third-party access to their information without sharing their credentials.
+
+Designed specifically to work with Hypertext Transfer Protocol (HTTP), OAuth essentially allows access tokens to be issued to third-party clients by an authorization server, with the approval of the resource owner. The third party then uses the access token to access the protected resources hosted by the resource server.[2]
+
+OAuth 2.0 in a simplified format to help developers and service providers implement the protocol.
+
+The OAuth 2.0 spec itself leaves many decisions up to the implementor. Instead of describing all possible decisions that need to be made to successfully implement OAuth 2, this post makes decisions that are appropriate for most implementations.
+
+An authorization grant is a credential representing the resource owner's authorization (to access its protected resources) used by the client to obtain an access token.  This specification defines four grant types -- authorization code, implicit, resource owner password credentials, and client credentials -- as well as an extensibility mechanism for defining additional types.
+
+OAuth 2 provides several "grant types" for different use cases. The grant types defined are:
+
+
+| Grant type           | Use case                                    |
+|----------------------|---------------------------------------------|
+| Authorization Code   | For server-based web applications           |
+| Implicit             | For browser-based or mobile apps            |
+| Password Credentials | For logging in with a username and password |
+| Client credentials   | For application access                      |
+
+
+The OAuth 2.0 flow is:
 
 ![](http://41.media.tumblr.com/dc0ed4febc896d5d0589fc2940e52a42/tumblr_mp08klMuDm1qax653o1_1280.jpg)
 
@@ -55,12 +80,6 @@ The basic OAuth2 web flow is:
       ▼                                ▼                                ▼                                ▼
 ```
 
-Some guiding questions are:
-
-- How does Google / Facebook / LinkedIn etc... communicate with your _local_ web app during development?  Isn't that private (aka not published on the internet)??
-- What part of your existing authentication / authorization flows does this replace?
-- Why would you want to authenticate with Google / Facebook instead of storing the emails / passwords yourself?
-
 Resources:
 
 - https://developer.linkedin.com/docs/oauth2
@@ -70,16 +89,11 @@ Resources:
 - https://apigee.com/console/linkedin
 - http://docs.mongodb.org/manual/reference/method/db.collection.update/#db.collection.update
 
-## Activities
+## Why is OAuth important?
 
-## Clear the stage
-
-**Clear the stage**: Close any terminal tabs, atom windows, chrome tabs etc... that you have open.  Just have this doc open to start.
-
-**Know what and why**: Have you really read the objectives and discussion above?  There's a lot of copy-pasting happening today - it'll be easy to forget _why_ you are here.  Keep the big picture in mind as you develop.
-
-**Value process over product**: While finishing the exercise is important, it's not a race.  Take your time - research things you have questions about, _really_ read all of the questions here and discuss them with classmates.  There's no prize for finishing first :)
-
+- How does Google / Facebook / LinkedIn etc... communicate with your _local_ web app during development?  Isn't that private (aka not published on the internet)??
+- What part of your existing authentication / authorization flows does this replace?
+- Why would you want to authenticate with Google / Facebook instead of storing the emails / passwords yourself?
 
 ### Walkthrough - Start a new Express app
 
