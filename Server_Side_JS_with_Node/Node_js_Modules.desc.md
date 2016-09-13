@@ -31,7 +31,7 @@ And the `arithmetic.js` module will export some functionality back to the `main.
 ```javascript
 'use strict';
 
-module.exports = function(a, b) {
+module.exports = (a, b) => {
 	return a + b;
 };
 ```
@@ -78,7 +78,7 @@ To export an object, you simply assign the object to the `module.exports` object
 'use strict';
 
 module.exports = {
-	add: function(a, b) {
+	add: (a, b) => {
 		return a + b;
 	}
 };
@@ -104,7 +104,7 @@ When you're exporting objects, there are three ways you can go about it. The fir
 
 // version 1
 module.exports = {
-	add: function(a, b) {
+	add: (a, b) => {
 		return a + b;
 	}
 };
@@ -116,7 +116,7 @@ Because `module.exports` is an object by default, the second way is to assign a 
 'use strict';
 
 // version 2
-module.exports.add = function(a, b) {
+module.exports.add = (a, b) => {
 	return a + b;
 };
 ```
@@ -129,7 +129,7 @@ And because `exports` as a shorthand for `module.exports`, the third way is to a
 'use strict';
 
 // version 3
-exports.add = function(a, b) {
+exports.add = (a, b) => {
 	return a + b;
 };
 ```
