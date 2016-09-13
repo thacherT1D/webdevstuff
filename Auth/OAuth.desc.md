@@ -113,7 +113,7 @@ npm init --yes
 npm install --save express passport passport-linkedin cookie-parser jsonwebtoken dotenv
 ```
 
-Visit to LinkedIn Developers and click the button to [create a new application](https://www.linkedin.com/developer/apps). Then, fill out the form with the information below or with you own fictitious custom information.
+Visit the [LinkedIn Developers](https://www.linkedin.com/developer/apps) website and click the button to create a new application. Then, fill out the form with the information below or with you own fictitious custom information.
 
 **NOTE:** Don't forget to agree to the LinkedIn API Terms of Use before submitting the form.
 
