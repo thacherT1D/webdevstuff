@@ -48,9 +48,9 @@ And type in the following code. There's no need to wrap this code in an IIFE as 
 ```javascript
 'use strict';
 
-var fs = require('fs');
+const fs = require('fs');
 
-fs.readFile('/etc/paths', 'utf8', function(err, data) {
+fs.readFile('/etc/paths', 'utf8', (err, data) => {
   if (err) {
     throw err;
   }
@@ -360,7 +360,7 @@ const file = path.basename(process.argv[1]);
 const cmd = process.argv[2];
 
 if (cmd === 'read') {
-  fs.readFile(guestsPath, 'utf8', function(err, data) {
+  fs.readFile(guestsPath, 'utf8', (err, data) => {
     if (err) throw err;
 
     const guests = JSON.parse(data);
@@ -404,7 +404,7 @@ const file = path.basename(process.argv[1]);
 const cmd = process.argv[2];
 
 if (cmd === 'read') {
-  fs.readFile(guestsPath, 'utf8', function(err, data) {
+  fs.readFile(guestsPath, 'utf8', (err, data) => {
     if (err) throw err;
 
     const guests = JSON.parse(data);
@@ -419,7 +419,7 @@ if (cmd === 'read') {
     const guest = process.argv[3];
 
     if (!guest) {
-      console.error(`Usage: ${node} ${file} ${cmd} GUEST`);
+      console.error(`Usage: ${node} ${file} ${cmd} GUEST_NAME`);
       process.exit(1);
     }
 
