@@ -45,8 +45,6 @@ OAuth 2 provides several "grant types" for different use cases. The grant types 
 
 The OAuth 2.0 flow is:
 
-![](http://41.media.tumblr.com/dc0ed4febc896d5d0589fc2940e52a42/tumblr_mp08klMuDm1qax653o1_1280.jpg)
-
 ```text
    Chrome                       Your server app                     LinkedIn                         LinkedIn
 (User Agent)                       (Client)                  (Authorization Server)              (Resource Server)
