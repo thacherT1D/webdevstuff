@@ -10,11 +10,7 @@ Before jumping straight into OAuth, let's refresh our memories on the definition
 
 On the other hand, **authorization** is the process of granting access to private information for an authenticated user. When a user successfully authenticates with an application, the server starts the authorization process by creating a session token. Afterwards, the client includes the session token in subsequent requests for private information on the server.
 
-Understanding the different between the two is important because **OAuth** is an open standard for authorization that's common used for authentication. With OAuth, a user can authenticate with a web application with their Google, Facebook, Microsoft, Twitter, etc. account without exposing their password to that application. Once the user is authenticated, the web application can then use OAuth to access information on Google, Facebook, Microsoft, Twitter, etc. on behalf of the user. Long story short, OAuth specifies a process for users to authorize third-party access to their information without sharing their credentials.
-
-Designed specifically to work with Hypertext Transfer Protocol (HTTP), OAuth essentially allows access tokens to be issued to third-party clients by an authorization server, with the approval of the resource owner. The third party then uses the access token to access the protected resources hosted by the resource server.[2]
-
-OAuth 2.0 in a simplified format to help developers and service providers implement the protocol.
+Understanding the different between the two is important because **OAuth** is an open standard for both authentication and authorization. With OAuth, a user authenticates to a web application using an account from another service like Google, Facebook, Microsoft, Twitter, etc. Once authenticated, the user gives the web application permission to access private information on that service. Then, the web application can access the private information if and when it wants to without sharing their credentials.
 
 The OAuth 2.0 spec itself leaves many decisions up to the implementor. Instead of describing all possible decisions that need to be made to successfully implement OAuth 2, this post makes decisions that are appropriate for most implementations.
 
@@ -79,6 +75,8 @@ The OAuth 2.0 flow is:
       │                                │                                │                                │
       ▼                                ▼                                ▼                                ▼
 ```
+
+Designed specifically to work with HTTP, OAuth issues an access token to a web application from authorization server with the approval of the user. The web application then uses the access token to access the private information hosted by the resource server.
 
 Resources:
 
