@@ -1,4 +1,4 @@
-## Objectives
+# Objectives
 
 - Explain what Express is.
 - Explain why Express is useful.
@@ -7,6 +7,8 @@
 - Explain why Express middleware is useful.
 - Use Express middleware to log the request/response cycle.
 - Use Express middleware to parse a request body.
+
+<hr>
 
 ## What's Express?
 
@@ -52,16 +54,16 @@ And type in the following code.
 ```javascript
 'use strict';
 
-var express = require('express');
-var app = express();
-var port = process.env.PORT || 8000;
+const express = require('express');
+const app = express();
+const port = process.env.PORT || 8000;
 
-app.use(function(req, res) {
+app.use((req, res) => {
   res.send('Hello World');
 });
 
-app.listen(port, function() {
-  console.log('Listening on port', port);
+app.listen(port, () => {
+  console.log(`Listening on port ${port]`);
 });
 ```
 
@@ -123,19 +125,19 @@ And type in the following code to the `serverExpress.js` file.
 ```javascript
 'use strict';
 
-var express = require('express');
-var app = express();
-var port = process.env.PORT || 8000;
+const express = require('express');
+const app = express();
+const port = process.env.PORT || 8000;
 
 app.disable('x-powered-by');
 
-app.use(function(req, res) {
-  var guests = ['Mary', 'Don'];
+app.use((req, res) => {
+  const guests = ['Mary', 'Don'];
   res.send(guests);
 });
 
-app.listen(port, function() {
-  console.log('Listening on port', port);
+app.listen(port, () => {
+  console.log(`Listening on port ${port}`);
 });
 ```
 
@@ -173,23 +175,23 @@ Let's fix that by refactoring the `serverExpress.js` file with the following cod
 ```javascript
 'use strict';
 
-var express = require('express');
-var app = express();
-var port = process.env.PORT || 8000;
+const express = require('express');
+const app = express();
+const port = process.env.PORT || 8000;
 
 app.disable('x-powered-by');
 
-app.get('/guests', function(req, res) {
-  var guests = ['Mary', 'Don'];
+app.get('/guests', (req, res) => {
+  let guests = ['Mary', 'Don'];
   res.send(guests);
 });
 
-app.use(function(req, res) {
+app.use((req, res) => {
   res.sendStatus(404);
 });
 
-app.listen(port, function() {
-  console.log('Listening on port', port);
+app.listen(port, () => {
+  console.log(`Listening on port ${port}`);
 });
 ```
 
@@ -227,35 +229,35 @@ Let's fix that by refactoring the `serverExpress.js` file with the following cod
 ```javascript
 'use strict';
 
-var fs = require('fs');
-var path = require('path');
-var guestsPath = path.join(__dirname, 'guests.json');
+const fs = require('fs');
+const path = require('path');
+const guestsPath = path.join(__dirname, 'guests.json');
 
-var express = require('express');
-var app = express();
-var port = process.env.PORT || 8000;
+const express = require('express');
+const app = express();
+const port = process.env.PORT || 8000;
 
 app.disable('x-powered-by');
 
-app.get('/guests', function(req, res) {
-  fs.readFile(guestsPath, 'utf8', function(err, guestsJSON) {
+app.get('/guests', (req, res) => {
+  fs.readFile(guestsPath, 'utf8', (err, guestsJSON) => {
     if (err) {
       console.error(err.stack);
       return res.sendStatus(500);
     }
 
-    var guests = JSON.parse(guestsJSON);
+    const guests = JSON.parse(guestsJSON);
 
     res.send(guests);
   });
 });
 
-app.use(function(req, res) {
+app.use((req, res) => {
   res.sendStatus(404);
 });
 
-app.listen(port, function() {
-  console.log('Listening on port', port);
+app.listen(port, () => {
+  console.log(`Listening on port ${port}`);
 });
 ```
 
@@ -289,38 +291,38 @@ Let's fix that by refactoring the `serverExpress.js` file with the following cod
 ```javascript
 'use strict';
 
-var fs = require('fs');
-var path = require('path');
-var guestsPath = path.join(__dirname, 'guests.json');
+const fs = require('fs');
+const path = require('path');
+const guestsPath = path.join(__dirname, 'guests.json');
 
-var express = require('express');
-var app = express();
-var port = process.env.PORT || 8000;
+const express = require('express');
+const app = express();
+const port = process.env.PORT || 8000;
 
 app.disable('x-powered-by');
 
-app.get('/guests', function(req, res) {
-  fs.readFile(guestsPath, 'utf8', function(err, guestsJSON) {
+app.get('/guests', (req, res) => {
+  fs.readFile(guestsPath, 'utf8', (err, guestsJSON) => {
     if (err) {
       console.error(err.stack);
       return res.sendStatus(500);
     }
 
-    var guests = JSON.parse(guestsJSON);
+    const guests = JSON.parse(guestsJSON);
 
     res.send(guests);
   });
 });
 
-app.get('/guests/:id', function(req, res) {
-  fs.readFile(guestsPath, 'utf8', function(err, guestsJSON)
+app.get('/guests/:id', (req, res) => {
+  fs.readFile(guestsPath, 'utf8', (err, guestsJSON) => {
     if (err) {
       console.error(err.stack);
       return res.sendStatus(500);
     }
 
-    var id = Number.parseInt(req.params.id);
-    var guests = JSON.parse(guestsJSON);
+    const id = Number.parseInt(req.params.id);
+    const guests = JSON.parse(guestsJSON);
 
     if (id < 0 || id >= guests.length || Number.isNaN(id)) {
       return res.sendStatus(404);
@@ -331,12 +333,12 @@ app.get('/guests/:id', function(req, res) {
   });
 });
 
-app.use(function(req, res) {
+app.use((req, res) => {
   res.sendStatus(404);
 });
 
-app.listen(port, function() {
-  console.log('Listening on port', port);
+app.listen(port, () => {
+  console.log(`Listening on port ${port}`);
 });
 ```
 
@@ -453,45 +455,45 @@ Next, type out the following code into the `serverExpress.js` file.
 ```javascript
 'use strict';
 
-var fs = require('fs');
-var path = require('path');
-var guestsPath = path.join(__dirname, 'guests.json');
+const fs = require('fs');
+const path = require('path');
+const guestsPath = path.join(__dirname, 'guests.json');
 
-var express = require('express');
-var app = express();
-var port = process.env.PORT || 8000;
+const express = require('express');
+const app = express();
+const port = process.env.PORT || 8000;
 
 app.disable('x-powered-by');
 
-app.use(function(req, res, next) {
-  var start = new Date();
+app.use((req, res, next) => {
+  const start = new Date();
   next();
-  var end = new Date();
+  const end = new Date();
   console.log(req.method, req.url, res.statusCode, end - start, 'ms');
 });
 
-app.get('/guests', function(req, res) {
-  fs.readFile(guestsPath, 'utf8', function(err, guestsJSON) {
+app.get('/guests', (req, res) => {
+  fs.readFile(guestsPath, 'utf8', (err, guestsJSON) => {
     if (err) {
       console.error(err.stack);
       return res.sendStatus(500);
     }
 
-    var guests = JSON.parse(guestsJSON);
+    const guests = JSON.parse(guestsJSON);
 
     res.send(guests);
   });
 });
 
-app.get('/guests/:id', function(req, res) {
-  fs.readFile(guestsPath, 'utf8', function(err, guestsJSON) {
+app.get('/guests/:id', (req, res) => {
+  fs.readFile(guestsPath, 'utf8', (err, guestsJSON) => {
     if (err) {
       console.error(err.stack);
       return res.sendStatus(500);
     }
 
-    var id = Number.parseInt(req.params.id);
-    var guests = JSON.parse(guestsJSON);
+    const id = Number.parseInt(req.params.id);
+    const guests = JSON.parse(guestsJSON);
 
     if (id < 0 || id >= guests.length || Number.isNaN(id)) {
       return res.sendStatus(404);
@@ -502,12 +504,12 @@ app.get('/guests/:id', function(req, res) {
   });
 });
 
-app.use(function(req, res) {
+app.use((req, res) => {
   res.sendStatus(404);
 });
 
-app.listen(port, function() {
-  console.log('Listening on port', port);
+app.listen(port, () => {
+  console.log(`Listening on port ${port}`);
 });
 ```
 
@@ -534,41 +536,41 @@ Now refactor `serverExpresss.js` with the following code.
 ```javascript
 'use strict';
 
-var fs = require('fs');
-var path = require('path');
-var guestsPath = path.join(__dirname, 'guests.json');
+const fs = require('fs');
+const path = require('path');
+const guestsPath = path.join(__dirname, 'guests.json');
 
-var express = require('express');
-var app = express();
-var port = process.env.PORT || 8000;
+const express = require('express');
+const app = express();
+const port = process.env.PORT || 8000;
 
-var morgan = require('morgan');
+const morgan = require('morgan');
 
 app.disable('x-powered-by');
 app.use(morgan('short'));
 
-app.get('/guests', function(req, res) {
-  fs.readFile(guestsPath, 'utf8', function(err, guestsJSON) {
+app.get('/guests', (req, res) => {
+  fs.readFile(guestsPath, 'utf8', (err, guestsJSON) => {
     if (err) {
       console.error(err.stack);
       return res.sendStatus(500);
     }
 
-    var guests = JSON.parse(guestsJSON);
+    const guests = JSON.parse(guestsJSON);
 
     res.send(guests);
   });
 });
 
-app.get('/guests/:id', function(req, res) {
-  fs.readFile(guestsPath, 'utf8', function(err, guestsJSON) {
+app.get('/guests/:id', (req, res) => {
+  fs.readFile(guestsPath, 'utf8', (err, guestsJSON) => {
     if (err) {
       console.error(err.stack);
       return res.sendStatus(500);
     }
 
-    var id = Number.parseInt(req.params.id);
-    var guests = JSON.parse(guestsJSON);
+    const id = Number.parseInt(req.params.id);
+    const guests = JSON.parse(guestsJSON);
 
     if (id < 0 || id >= guests.length || Number.isNaN(id)) {
       return res.sendStatus(404);
@@ -579,12 +581,12 @@ app.get('/guests/:id', function(req, res) {
   });
 });
 
-app.use(function(req, res) {
+app.use((req, res) => {
   res.sendStatus(404);
 });
 
-app.listen(port, function() {
-  console.log('Listening on port', port);
+app.listen(port, () => {
+  console.log(`Listening on port ${port}`);
 });
 ```
 
@@ -612,28 +614,28 @@ We will now add another middleware to parse the body of an HTTP POST request. Re
 ```javascript
 'use strict';
 
-var fs = require('fs');
-var path = require('path');
-var guestsPath = path.join(__dirname, 'guests.json');
+const fs = require('fs');
+const path = require('path');
+const guestsPath = path.join(__dirname, 'guests.json');
 
-var express = require('express');
-var app = express();
-var port = process.env.PORT || 8000;
+const express = require('express');
+const app = express();
+const port = process.env.PORT || 8000;
 
-var morgan = require('morgan');
+const morgan = require('morgan');
 
 app.disable('x-powered-by');
 app.use(morgan('short'));
 
-app.use(function(req, res, next) {
-  var bodyJSON = '';
+app.use((req, res, next) => {
+  let bodyJSON = '';
 
-  req.on('data', function(chunk) {
+  req.on('data', (chunk) => {
     bodyJSON += chunk.toString();
   });
 
-  req.on('end', function() {
-    var body;
+  req.on('end', () => {
+    let body;
 
     if (bodyJSON !== '') {
       body = JSON.parse(bodyJSON);
@@ -645,28 +647,28 @@ app.use(function(req, res, next) {
   });
 });
 
-app.get('/guests', function(req, res) {
-  fs.readFile(guestsPath, 'utf8', function(err, guestsJSON) {
+app.get('/guests', (req, res) => {
+  fs.readFile(guestsPath, 'utf8', (err, guestsJSON) => {
     if (err) {
       console.error(err.stack);
       return res.sendStatus(500);
     }
 
-    var guests = JSON.parse(guestsJSON);
+    const guests = JSON.parse(guestsJSON);
 
     res.send(guests);
   });
 });
 
-app.post('/guests', function(req, res) {
-  fs.readFile(guestsPath, 'utf8', function(readErr, guestsJSON) {
+app.post('/guests', (req, res) => {
+  fs.readFile(guestsPath, 'utf8', (readErr, guestsJSON) => {
     if (readErr) {
       console.error(readErr.stack);
       return res.sendStatus(500);
     }
 
-    var guests = JSON.parse(guestsJSON);
-    var guest = req.body.name;
+    let guests = JSON.parse(guestsJSON);
+    const guest = req.body.name;
 
     if (!guest) {
       return res.sendStatus(400);
@@ -674,9 +676,9 @@ app.post('/guests', function(req, res) {
 
     guests.push(guest);
 
-    var newGuestsJSON = JSON.stringify(guests);
+    const newGuestsJSON = JSON.stringify(guests);
 
-    fs.writeFile(guestsPath, newGuestsJSON, function(writeErr) {
+    fs.writeFile(guestsPath, newGuestsJSON, (writeErr) => {
       if (writeErr) {
         console.error(writeErr.stack);
         return res.sendStatus(500);
@@ -688,15 +690,15 @@ app.post('/guests', function(req, res) {
   });
 });
 
-app.get('/guests/:id', function(req, res) {
-  fs.readFile(guestsPath, 'utf8', function(err, guestsJSON) {
+app.get('/guests/:id', (req, res) => {
+  fs.readFile(guestsPath, 'utf8', (err, guestsJSON) => {
     if (err) {
       console.error(err.stack);
       return res.sendStatus(500);
     }
 
-    var id = Number.parseInt(req.params.id);
-    var guests = JSON.parse(guestsJSON);
+    const id = Number.parseInt(req.params.id);
+    const guests = JSON.parse(guestsJSON);
 
     if (id < 0 || id >= guests.length || Number.isNaN(id)) {
       return res.sendStatus(404);
@@ -707,12 +709,12 @@ app.get('/guests/:id', function(req, res) {
   });
 });
 
-app.use(function(req, res) {
+app.use((req, res) => {
   res.sendStatus(404);
 });
 
-app.listen(port, function() {
-  console.log('Listening on port', port);
+app.listen(port, () => {
+  console.log(`Listening on port ${port}`);
 });
 ```
 
@@ -759,43 +761,43 @@ Refactor your `serverExpress.js` file with the following code.
 ```javascript
 'use strict';
 
-var fs = require('fs');
-var path = require('path');
-var guestsPath = path.join(__dirname, 'guests.json');
+const fs = require('fs');
+const path = require('path');
+const guestsPath = path.join(__dirname, 'guests.json');
 
-var express = require('express');
-var app = express();
-var port = process.env.PORT || 8000;
+const express = require('express');
+const app = express();
+const port = process.env.PORT || 8000;
 
-var morgan = require('morgan');
-var bodyParser = require('body-parser');
+const morgan = require('morgan');
+const bodyParser = require('body-parser');
 
 app.disable('x-powered-by');
 app.use(morgan('short'));
 app.use(bodyParser.json());
 
-app.get('/guests', function(req, res) {
-  fs.readFile(guestsPath, 'utf8', function(err, guestsJSON) {
+app.get('/guests', (req, res) => {
+  fs.readFile(guestsPath, 'utf8', (err, guestsJSON) => {
     if (err) {
       console.error(err.stack);
       return res.sendStatus(500);
     }
 
-    var guests = JSON.parse(guestsJSON);
+    const guests = JSON.parse(guestsJSON);
 
     res.send(guests);
   });
 });
 
-app.post('/guests', function(req, res) {
-  fs.readFile(guestsPath, 'utf8', function(readErr, guestsJSON) {
+app.post('/guests', (req, res) => {
+  fs.readFile(guestsPath, 'utf8', (readErr, guestsJSON) => {
     if (readErr) {
       console.error(readErr.stack);
       return res.sendStatus(500);
     }
 
-    var guests = JSON.parse(guestsJSON);
-    var guest = req.body.name;
+    let guests = JSON.parse(guestsJSON);
+    const guest = req.body.name;
 
     if (!guest) {
       return res.sendStatus(400);
@@ -803,9 +805,9 @@ app.post('/guests', function(req, res) {
 
     guests.push(guest);
 
-    var newGuestsJSON = JSON.stringify(guests);
+    const newGuestsJSON = JSON.stringify(guests);
 
-    fs.writeFile(guestsPath, newGuestsJSON, function(writeErr) {
+    fs.writeFile(guestsPath, newGuestsJSON, (writeErr) => {
       if (writeErr) {
         console.error(writeErr.stack);
         return res.sendStatus(500);
@@ -817,15 +819,15 @@ app.post('/guests', function(req, res) {
   });
 });
 
-app.get('/guests/:id', function(req, res) {
-  fs.readFile(guestsPath, 'utf8', function(err, newGuestsJSON) {
+app.get('/guests/:id', (req, res) => {
+  fs.readFile(guestsPath, 'utf8', (err, newGuestsJSON) => {
     if (err) {
       console.error(err.stack);
       return res.sendStatus(500);
     }
 
-    var id = Number.parseInt(req.params.id);
-    var guests = JSON.parse(newGuestsJSON);
+    const id = Number.parseInt(req.params.id);
+    const guests = JSON.parse(newGuestsJSON);
 
     if (id < 0 || id >= guests.length || Number.isNaN(id)) {
       return res.sendStatus(404);
@@ -836,12 +838,12 @@ app.get('/guests/:id', function(req, res) {
   });
 });
 
-app.use(function(req, res) {
+app.use((req, res) => {
   res.sendStatus(404);
 });
 
-app.listen(port, function() {
-  console.log('Listening on port', port);
+app.listen(port, () => {
+  console.log(`Listening on port ${port}`);
 });
 ```
 
@@ -897,7 +899,10 @@ With the commits merged in, it's safe to delete the `middleware` branch.
 git br -d middleware
 ```
 
-## Resources
+<br>
+<hr>
+
+#### Resources
 
 - [Envato - HTTP: The Protocol Every Web Developer Must Know - Part 1](http://code.tutsplus.com/tutorials/http-the-protocol-every-web-developer-must-know-part-1--net-31177)
 - [Express - Request](http://expressjs.com/en/4x/api.html#req)
