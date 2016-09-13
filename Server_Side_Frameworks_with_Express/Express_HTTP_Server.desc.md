@@ -1,52 +1,31 @@
-# Intro Videos
+We have used Node a bit to run JavaScript outside the browser and we have even seen how to use Node to start a server. It's totally feasible to build an application using Node alone but some tasks, like starting a server, serving files, and many others are not trivial on their own. To make many of these tasks simpler, we use frameworks!
 
+The most commonly used framework with node.js is express.js. It is known as a _minimalist and unopinionated_ framework. To understand what that means, consider CSS Frameworks. A framework like [Bootstrap](http://getbootstrap.com) is highly opinionated and maximalist -- you get tons of tools to use but have to use them as intended. Compare that with a much lighter framework like [Skeleton](http://getskeleton.com/) which includes fewer components but the same basic grid structure.
 
-## Data Flow in Express!
+* [Getting Started](#getting-started)
+* [Basic Routing](#basic-routing)
+* [Status Codes](#status-codes)
+* [URL Parameters](#url-parameters)
+* [Query Parameters](#query-parameters)
+* [Request Body](#request-body)
 
-<iframe src="https://player.vimeo.com/video/136796681?byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+During this article you will be asked to create a simple server with express which responds to a variety of paths.
 
-## Intro to Dynamic Web App Concepts
+<hr style="margin: 5rem 0;"/>
 
-<iframe src="https://player.vimeo.com/video/136579022?byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+## Getting Started
 
-## Static Websites vs Dynamic Websites
-
-<iframe src="https://player.vimeo.com/video/136582439?byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-
-Need to review HTTP? Check out [this article.](http://code.tutsplus.com/tutorials/http-the-protocol-every-web-developer-must-know-part-1--net-31177)
-
-# Intro to Express.js
-
-Objectives:
-
-- Start a simple express app and review `require`  
-- Add multiple routes to an express.js app
-- Set status code on responses
-- Read URL parameters in express
-- Read query string parameters in express
-- Send dymanic files using ejs as a templating engine
-
-##Express
-
-### What is it?
-
-We have used Node a bit to run JavaScript outside the browser and we have even seen how to use Node to start a server. It's totally feasible to build an application using Node alone but some tasks, like starting a server, serving files, and many others are not trivial on their own. To make many of these tasks simpler, we use frameworks! The most commonly used framework with node.js is express.js. It is known as a 'minimalist' framework because it does not give us a TON of functionality out of the box (like rails for example).
-
-### Getting Started
-
-Let's start with a simple **Express** application.
-
-* Make a directory and `app.js`  
+Let's start with a simple **Express** application. Go into your Unit 2 directory and then:
 
 ```
-mkdir learn_express
-cd learn_express
+mkdir intro-to-express
+cd intro-to-express
 touch app.js
 npm init
 git init
 echo "node_modules" > .gitignore
 git add .
-git commit -m "initial commit"
+git commit -m "Initial commit."
 ```
 
 Now you can install the packages you need running
@@ -55,30 +34,85 @@ Now you can install the packages you need running
 npm install --save express
 ```
 
-Now we need write some code for our simple application. Here's some sample starter code:
+We're going to be building as simple web server that will respond to different types of requests. We're going to start very slow so you can understand what express is. **Spoiler Alert:** express will feel very magical because of all the built in functionality but at its base is just plain ol' JavaScript!
+
+Begin by putting the following code inside of your `app.js`. Once it's there, run the file with the node interpreter and answer the following question: What type of thing are we importing when we require the express module?
 
 ```javascript
-// requirements
+var express = require('express');
+
+console.log(express);
+console.log(typeof express);
+```
+
+At the end of the day, express is just a function! So, what can we do with functions? Invoke them! Try replacing your current code with the following:
+
+```javascript
 var express = require('express');
 var app = express();
 
-// a "GET" request to "/" will run the function below
-app.get("/", function(req, res) {
-  // send back the response: 'Hello World'
-  res.send("Hello World");
-});
+console.log(app);
+console.log(typeof app);
+```
 
-// start the server
-app.listen(3000, function() {
-  console.log("Starting a server on localhost:3000");
+What type of thing is `app`?
+
+It can be overwhelming to look at all the various properties and methods attached to a single instance of app. The purpose of frameworks, at least to start, is not to memorize all the various components of it. Instead, focus on learning first what we _need to know_ to accomplish the task at hand.
+
+Now that we have a better idea of what's going on under the hood, let's start a simple server with express. Express instances have a method called `.listen`. This should be familiar from our work with the plain `http` module that comes with node.
+
+The `.listen` method takes multiple arguments. The first is the port you want to begin listening on. Add the following to your existing code and then run your file with node. You'll notice you're not getting your prompt back... that's because you're now listening on that port!
+
+```javascript
+app.listen(3000);
+```
+
+_Remember that you can stop your server by pressing Ctrl + C. In order for the server to see those changes, you need to go into the terminal, kill your server, and restart it again. We'll introduce a tool to make these easier soon!_
+
+Take a moment to find the `.listen` method in the [API Docs](https://expressjs.com/en/4x/api.html) for express. Typically, you'll simply see a single additional argument which is a callback function. That callback function will be invoked when the server is started.
+
+Try adding the following callback to your file, like so:
+
+```javascript
+app.listen(3000, function () {
+  console.log('Starting a server on http://localhost:3000');
 });
 ```
 
-Next, you can start the server using the following command:
+You should see your message print to the terminal screen. Try going to the above address (or whatever port you put in). What's the message that comes back to you?
 
-`node app.js`
+Before moving on to the next section, take a few minutes to comment your code in as much detail as possible.
 
-### Let's add a second route!
+<hr style="margin: 5rem 0;"/>
+
+## Basic Routing
+
+The error you got in the last section would've been something like `Cannot GET /`. That error is telling us that the server has not been configured to listen for a GET request at the root path (that is, `/`). Let's configure our server to do just that!
+
+The `.get` method allows us to give it a path and one or more callbacks to run whenever we make a GET request to that path. The most basic functionality will look like so:
+
+```javascript
+app.get('/', function (request, response, next) {
+  response.send('Hello World');
+});
+```
+
+First, add this code to your file and re-run your server. Then, try and once again go to the URL. You should see "Hello World" on the screen! What you've done here is create a new **route**.
+
+Let's break down each part of what is happening in the above method invocation.
+
+1. `.get` is a method on the instance returned from invoking express. It will be listening for a GET method. _It's important to note that we're not making a GET request here, we are listening for one._
+
+1. The "/" is the route we'll be hitting. This can be any path but it must start with a forward slash.
+
+1. The callback function that is the second argument comes with the three parameters. The **request** object contains information and methods about the incoming request. The **response** object contains information and methods you can use to respond back to the client. **next** is a special function that we'll get to in just a bit!
+
+1. The response is an object with methods attached to it. One of those is the `.send` message which will respond back to the client in the simplest way possible. You can only respond to the client once inside of this callback function. Try adding another `response.send` and you'll get an error in your terminal.
+
+There are many ways to use the request and response objects which we'll learn about next!
+
+<br>
+### Adding More Routes
 
 In your `app.js`, add the following second route below your first route:
 
@@ -88,73 +122,81 @@ app.get("/new", function(req, res) {
 });
 ```
 
-Save your file and head over to `localhost:3000/new`. What do you see?
-
-Well, what you DON'T see is any sort of congratulatory message. The problem is that once the server starts, it doesn't know when changes have been made to `app.js`. In order for the server to see those changes, you need to go into the terminal, kill your server, and restart it again.
+Save your file, restart your server, and head over to `localhost:3000/new`. What do you see?
 
 As you can imagine, when you're developing even a relatively small application, remembering to restart your server after every change to your server code can be a total pain. Fortunately, there's a better way...
 
-### Let's keep that server running with nodemon!
+<br>
+### Nodemon
 
-Anywhere in the terminal, run `npm install -g nodemon` and then type in `nodemon` instead of `node app.js` to start your server and keep it alive!
+[Nodemon](https://www.npmjs.com/package/nodemon) is a package you can install that will monitor your application for changes. When it detects changes, it will automatically restart your server.
 
-## Routing
+There are a few ways we can use nodemon. We'll be avoiding installing nodemon globally (although you may want to do that at a later date). First, let's install nodemon as a dev dependency.
 
-Building an application will require us to have a firm grasp of something we call **routing**.  Each **route** is a combination of a **Request Type** and **Path**.
+```
+npm install --save-dev nodemon@1.10.0
+```
 
-Let's build these into our application:
+_Note that we're installing a specific version of nodemon. At the time of this writing, the latest version is broken._
 
-`app.js`
+Open your `package.json` and take a look at the "dev-dependencies" section. You should see nodemon there!
+
+Now we're going to add a new script to our `package.json` that will run our server while in development mode. Remove the key "test" and its associated value. Then, add to it so your "scripts" key points toward the following object:
+
+```json
+"scripts": {
+  "dev": "./node_modules/.bin/nodemon app.js"
+},
+```
+
+The "scripts" key points toward an object of scripts we can run with the `npm run` command. When we run `npm run dev` it will look into our node_modules folder at the path listed and run our app.js file with the nodemon package we just installed.
+
+That's it! Try making a change in app.js and you should see that change without restarting the server manually!
+
+<br>
+### Exercise
+
+Create a new file called `groceries.js` and copy the following into it.
 
 ```javascript
-var express = require('express');
-var app = express();
-
-var vegetables = [
+module.exports.vegetables = [
   "Carrots",
   "Cucumber",
   "Peas"
 ];
-
-app.get("/", function (req, res) {
-  res.send("Hello World");
-});
-
-app.get("/vegetables", function (req, res) {
-  //send all the veggies  
-  res.send(vegetables.join(", "));
-});
-
-app.listen(3000, function () {
-  console.log("Go to localhost:3000/");
-});
 ```
 
+In your `app.js`, add the following at the top of your file.
+
+```javascript
+var groceries = require('./groceries');
+```
+
+Now, add a new GET route to your `app.js` with the path `/vegetables`. It should return all the vegetables joined together by a comma. Remember the tools we have available! `app.get`, `response.send`, and everything you'd normally have in JavaScript!
+
+<br>
 ## Status Codes
 
 You can also set the status code manually if you choose. Using the code
-from above, add a new route after your `'/vegetables'` route.  We will
-use a wild card operator. This route must be placed _after_ all your
+from above, add a new route like the one below. We will
+use a wild card operator. This route _must be placed after_ all your
 other routes.
 
 ```js
-//truncated code from above...
-
-app.get("/vegetables", function (req, res) {
-  //send all the veggies
-  res.send(vegetables.join(", "));
-});
-
-// Our new route utilizing a wild card
 app.get('/*', function (req, res) {
   res.status(404).send('Nope! Nothing here.');
 });
-
-app.listen(3000, function () {
-  console.log("Go to localhost:3000/");
-});
 ```
 
+Here we are setting up a route to catch all routes not yet defined and returning a status code of 404 which signifies NOT FOUND. Instead of refreshing your page, try running the following command in your terminal with HTTPie.
+
+```
+http http://localhost:3000/nothinghere
+```
+
+You should see the status code in the headers. Moving forward, let's move away from the browser and instead use the terminal to test out our routes.
+
+<br>
 ## URL Parameters
 
 What if we want to create an app that can dynamically say hello to anyone?
@@ -162,13 +204,42 @@ What if we want to create an app that can dynamically say hello to anyone?
 * Using **url parameters**, add a dynamic route to the application. This is indicated by `:` and the variable name you want to use. We'll use `:name` for the example below:
 
 ```javascript
-app.get("/hello/:name", function (req, res) {
-  res.send( "Hello, " + req.params.name );
+app.get('/hello/:name', function (req, res) {
+  console.log(req.params);
+  res.send('Hello, ' + req.params.name + '!');
 });
 ```
 
-Here we are seeing the first introduction to parameters that the application can identify. In the following route `:name` is considered a route parameter. We can access it using `req.params.name`.
+Now make a request against the route like so:
 
+```
+http http://localhost:3000/hello/friend
+```
+
+You should receive the string "Hello, friend!" in your response (or, whatever name you put) to your request. If you look at the terminal tab where your server is running with nodemon, you should see the following line towards the bottom of the output:
+
+```
+{ name: 'friend' }
+```
+
+Here we are seeing the first introduction to parameters that the application can identify. In the following route `:name` is considered a route parameter. We can access all params access the params property on the request object: `req.params`.
+
+<br>
+### Exercise
+
+Replace that route with a new one that hangs off of the `/vegetables` route. This route will take a single parameter, `:id` and return the vegetable at that index. For example:
+
+```
+http http://localhost:3000/vegetables/1
+>> "Cucumber"
+```
+
+```
+http http://localhost:3000/vegetables/14
+>> "No vegetable found."
+```
+
+<br>
 ## Query Parameters
 
 Generally, you don't want to cram everything into a route. Just imagine when there are multiple parameters in route. Maybe we don't care about getting the order of the parameters correct. To solve this problem, we can use **query parameters** with each request.
@@ -182,417 +253,123 @@ Let's see query params in action. Go to [https://google.com/search?q=puppies](ht
 Let's add our first route to practice query params.
 
 ```javascript
-app.get("/hi", function (req, res) {
+app.get('/hi', function (req, res) {
   var name = req.query.name;
-  res.send("Hello, " + name);
+  res.send('Hello, ' + name + '!');
 });
 ```
 
-Reset your server and go to [localhost:3000/hi?name=elie](localhost:3000/hi?name=elie). Note that we define parameters in the url after a `?`.
-
-## Sending dynamic files
-
-Sometimes there are static HTML files you want to send as a response. There are ways to send files using Express including `res.sendFile`, but if we want to send dynamic content, we will need to use something different.
-
-Right now we have been using res.send to display information to our user, but if we want to render a dynamic page we will use `res.render`. Not only will we use this method, we will render templates using an engine called `ejs`. This requires us to run `npm install --save ejs` as well as including the line `app.set("view engine", "ejs")` inside of our `app.js`
-
-```javascript
-var express = require('express');
-var app = express();
-
-app.set('view engine', 'ejs');
-
-app.get('/', function(req, res){
-  // use res.render
-  res.render('index', {name: "Elie"});
-});
+Now try making a request to that route with a query parameter, like so:
 
 ```
-
-Now create a views folder, and inside of it create an index.ejs file and include:
-
-```html
-<!DOCTYPE HTML>
-
-<html>
-  <head>
-  </head>
-  <body>
-    Hello, <%= name %>!
-  </body>
-</html>
+http http://localhost:3000/hi?name=friend
 ```
 
-# In-class Assignment
+You should receive "Hello, friend!" from the above request.
 
-[Express Calculator](https://github.com/gSchool/express-introduction/tree/master/01-calculator)
+<br>
+### Exercise
 
+Let's add the ability to search through all of our vegetables by name. We're going to add to the `/vegetables` route and, if there is a query param with a key of 'search', we'll _filter_ through our vegetables and only return those where the search string is contained in the vegetable name. This search should be case insensitive. For example:
 
-## Objectives
+```
+http http://localhost:3000/vegetables?search=c
+>> ["Carrots", "Cucumbers"]
 
-- Describe what Express middleware is.
-- Explain to another student why middleware is important.
-- Use Express middleware to log the request/response cycle.
-- Use Express middleware to parse a request body.
+http http://localhost:3000/vegetables?search=cu
+>> ["Cucumbers"]
 
-## What is Express middleware?
-
-An Express application is essentially a series of middleware function calls. Express middleware is a callback function that has access to the request object (`req`), the response object (`res`), and sometimes the next middleware callback (`next`).
-
-Middleware functions **can** execute any JavaScript operation inside the callback function.
-
-- Read and modify the `req` and `res` objects.
-- Read and write to a file or database.
-- Send HTTP requests to other servers.
-
-However, middleware **must** either end the request/response cycle with `res.send()` or call the next middleware callback with `next()`.
-
-## Why is Express middleware important?
-
-Express middleware allows an application's shared code to be organized into in a series of middleware callbacks. These callbacks can be reused in a flexible way.
-
-![middleware](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/66/middleware-1.png)
-
-## How does Express middleware work?
-
-First we'll build **application-level** middleware by hand. Then, we'll replace our hand-made middleware with third party middleware installed from npm.
-
-To get started, create a new Express project.
-
-```bash
-cd path/to/projects
-mkdir party
-cd party
-npm install express
-touch server.js
-atom .
+http http://localhost:3000/vegetables?search=a
+>> ["Carrots", "Peas"]
 ```
 
-Next, type out the following code into the `server.js` file.
+<hr style="margin: 5rem 0;"/>
 
-```javascript
-'use strict';
+## Request Body
 
-var express = require('express');
-var app = express();
+Before we leave this exercise, lets listen for a single post request to see how that works. Add the following code to your file.
 
-var guests = [{ name: 'Teagan' }];
-
-app.disable('x-powered-by');
-app.set('port', process.env.PORT || 5000);
-
-app.use(function(req, res, next) {
-  var start = new Date();
-  next();
-  var end = new Date();
-  console.log(req.method, req.url, res.statusCode, end - start, 'ms');
-});
-
-app.get('/guests', function(req, res) {
-  res.send(guests);
-});
-
-app.listen(app.get('port'), function() {
-  console.log('Listening on', app.get('port'));
+```js
+var friends = [];
+app.post('/friends', function (req, res, next) {
+  friends.push(req.query.name);
+  res.status(201).send(friends);
 });
 ```
 
-Then start your Express server.
+**Before looking below** take a minute to read over the code block above and interpret what the route is expecting. What type of request is it? What will be returned after we've made a request to it? How would we make that request with HTTPie?
 
-```bash
-nodemon server.js
-```
+You thought about it? You sure?
 
-In a new Terminal tab, send an HTTP request to your server.
-
-```bash
-http GET http://localhost:5000/guests
-```
-
-Look back into your first tab, you should see:
+Try making the following requests and inspect the return result each time:
 
 ```
-GET /guests 200 2 ms
+http POST http://localhost:3000/friends?name=Rick
+http POST http://localhost:3000/friends?name=Morty
 ```
 
-This is the hand-made logging middleware you just built! Now let's replace it with `morgan`, a more powerful third-party middleware.
+Now try stopping your server and re-running it and re-run the above requests. Are you surprised at all at the output? Why or why not?
 
-**NOTE:** Before you install `morgan`, make sure your shell's working directory is the `party` directory.
+Imagine we wanted to add more complex objects for our friends, so that the result we get back is something like this:
 
-```bash
-npm install morgan
+```js
+[
+  { name: 'Rick Sanchez', title: 'Mad Scientist' },
+  { name: 'Morty Smith', title: 'Student' }
+]
 ```
 
-Now refactor `server.js` with the following code.
+One option would be to continue to add query parameters to our URL. This would work [up until a point](http://stackoverflow.com/questions/417142/what-is-the-maximum-length-of-a-url-in-different-browsers), but would also be incredibly messy. Instead, it's typical to send a `body` with our POST requests. We've done this before with Ajax!
 
-```javascript
-'use strict';
+With just node, we've done this by [listening to emitted events](https://nodejs.org/en/docs/guides/anatomy-of-an-http-transaction/#request-body) and combining all the incoming chunks. We can do the same thing here.
 
-var express = require('express');
-var app = express();
+Change the above code to look like the following:
 
-var guests = [{ name: 'Teagan' }];
-
-app.disable('x-powered-by');
-app.set('port', process.env.PORT || 5000);
-
-var morgan = require('morgan');
-app.use(morgan('short'));
-
-app.get('/guests', function(req, res) {
-  res.send(guests);
-});
-
-app.listen(app.get('port'), function() {
-  console.log('Listening on', app.get('port'));
-});
-```
-
-Now send another HTTP request to your server.
-
-```bash
-http GET http://localhost:5000/guests
-```
-
-You should see the following server log.
-
-```
-::1 - GET /guests HTTP/1.1 200 35 - 1.345 ms
-```
-
-This is the `morgan` middleware in action!
-
-We will now add another middleware to parse the body of an HTTP POST request. Refactor your `server.js` file again.
-
-```javascript
-'use strict';
-
-var express = require('express');
-var app = express();
-
-var guests = [{ name: 'Teagan' }];
-
-app.disable('x-powered-by');
-app.set('port', process.env.PORT || 5000);
-
-var morgan = require('morgan');
-app.use(morgan('short'));
-
-app.use(function(req, res, next) {
-  var body = '';
-
-  req.on('data', function(chunk) {
-    body += chunk.toString();
-  });
-
-  req.on('end', function() {
-    if (body !== '') {
-      req.body = JSON.parse(body);
-    }
-
-    next();
+```js
+var friends = [];
+app.post('/friends', function (req, res, next) {
+  var body = [];
+  req.on('data', function (chunk) {
+    body.push(chunk.toString());
+  }).on('end', function () {
+    var data = JSON.parse(body.join(''));
+    friends.push(data)
+    res.status(201).send(friends);
   });
 });
-
-app.get('/guests', function(req, res) {
-  res.send(guests);
-});
-
-app.post('/guests', function(req, res){
-  guests.push(req.body);
-  res.send(req.body);
-});
-
-app.listen(app.get('port'), function() {
-  console.log('Listening on', app.get('port'));
-});
 ```
 
-Now you will send another HTTP GET request to your server.
-
-```bash
-http GET http://localhost:5000/guests
-```
-
-You should see a similar HTTP response.
+And then try running the following commands:
 
 ```
-HTTP/1.1 200 OK
-Connection: keep-alive
-Content-Length: 19
-Content-Type: application/json; charset=utf-8
-Date: Wed, 23 Mar 2016 18:40:10 GMT
-ETag: W/"13-eZMtvf4MUiEAJpKhww5ZlQ"
-
-[
-    {
-        "name": "Teagan"
-    }
-]
+http POST http://localhost:3000/friends name=Rick title="Mad Scientist"
+http POST http://localhost:3000/friends name=Morty title="Student"
 ```
 
-Next, send an HTTP POST request, with a JSON body, to your server.
+You should see full objects getting stored inside of the friends array!
 
-```bash
-http POST http://localhost:5000/guests name=Kate
-```
+<br>
+### Exercise
 
-You should see a similar HTTP response.
+Let's add the ability to add new vegetables to our list! To complete this exercise, do the following:
 
-```
-HTTP/1.1 200 OK
-Connection: keep-alive
-Content-Length: 15
-Content-Type: application/json; charset=utf-8
-Date: Wed, 23 Mar 2016 18:48:07 GMT
-ETag: W/"f-Dm6LF8ZOGzVq0Yw/A4JWYw"
+1. Remove the above route and instead create a POST route that goes to `/vegetables`.
 
-{
-    "name": "Kate"
-}
-```
+1. Send a new vegetable name in the post body which should be added to the pre-existing list.
 
-Finally, check to see if your guest list has been modified.
+1. If the vegetable is not already contained in the list (case insensitive), return only a status code of 201 and add it to the list.
 
-```bash
-http GET http://localhost:5000/guests
-```
+1. If the vegetable is in the list, return only a status code of 422 and do not modify the list.
 
-You should see a similar HTTP response.
+1. The regular GET all/one commands should still work!
+
+For example:
 
 ```
-HTTP/1.1 200 OK
-Connection: keep-alive
-Content-Length: 35
-Content-Type: application/json; charset=utf-8
-Date: Wed, 23 Mar 2016 18:48:40 GMT
-ETag: W/"23-BlGLuHg6XvB4VmZU6+bV3A"
-
-[
-    {
-        "name": "Teagan"
-    },
-    {
-        "name": "Kate"
-    }
-]
+http POST http://localhost:3000/vegetables name=Kale
+http POST http://localhost:3000/vegetables name=Peas
+http GET http://localhost:3000/vegetables
+>> ["Carrots", "Cucumber", "Peas", "Kale"]
+http GET http://localhost:3000/vegetables?search=a
+>> ["Carrots", "Peas", "Kale"]
 ```
-
-This is the hand-built body parsing middleware. Now we'll convert this to use the `body-parser` third-party middleware.
-
-**NOTE:** Before you install `body-parser`, make sure your shell's working directory is the `party` directory.
-
-```bash
-npm install body-parser
-```
-
-Refactor your `server.js` file with the following code.
-
-```javascript
-'use strict';
-
-var express = require('express');
-var app = express();
-
-var guests = [{ name: 'Teagan' }];
-
-app.disable('x-powered-by');
-app.set('port', process.env.PORT || 5000);
-
-var morgan = require('morgan');
-app.use(morgan('short'));
-
-var bodyParser = require('body-parser');
-app.use(bodyParser.json());
-
-app.get('/guests', function(req, res) {
-  res.send(guests);
-});
-
-app.post('/guests', function(req, res){
-  guests.push(req.body);
-  res.send(req.body);
-});
-
-app.listen(app.get('port'), function() {
-  console.log('Listening on', app.get('port'));
-});
-```
-
-
-
-Now you will send another HTTP GET request to your server.
-
-```bash
-http GET http://localhost:5000/guests
-```
-
-You should see a similar HTTP response.
-
-```
-HTTP/1.1 200 OK
-Connection: keep-alive
-Content-Length: 19
-Content-Type: application/json; charset=utf-8
-Date: Wed, 23 Mar 2016 18:40:10 GMT
-ETag: W/"13-eZMtvf4MUiEAJpKhww5ZlQ"
-
-[
-    {
-        "name": "Teagan"
-    }
-]
-```
-
-Next, send an HTTP POST request, with a JSON body, to your server.
-
-```bash
-http POST http://localhost:5000/guests name=Kate
-```
-
-You should see a similar HTTP response.
-
-```
-HTTP/1.1 200 OK
-Connection: keep-alive
-Content-Length: 15
-Content-Type: application/json; charset=utf-8
-Date: Wed, 23 Mar 2016 18:48:07 GMT
-ETag: W/"f-Dm6LF8ZOGzVq0Yw/A4JWYw"
-
-{
-    "name": "Kate"
-}
-```
-
-Finally, check to see if your guest list has been modified.
-
-```bash
-http GET http://localhost:5000/guests
-```
-
-You should see a similar HTTP response.
-
-```
-HTTP/1.1 200 OK
-Connection: keep-alive
-Content-Length: 35
-Content-Type: application/json; charset=utf-8
-Date: Wed, 23 Mar 2016 18:48:40 GMT
-ETag: W/"23-BlGLuHg6XvB4VmZU6+bV3A"
-
-[
-    {
-        "name": "Teagan"
-    },
-    {
-        "name": "Kate"
-    }
-]
-```
-
-This is the `body-parser` middleware in action!
-
-## Resources
-
-[Express - Using Middleware](http://expressjs.com/en/guide/using-middleware.html)

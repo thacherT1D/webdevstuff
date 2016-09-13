@@ -1,263 +1,498 @@
-### Entry Ticket
-In order to get th most out of this Learning Experience, you'll need to be comfortable with the following:
+The **Knex migration system** allows developers to automate the management of database tables in JavaScript. At the heart of the system are migration files. When defined, a migration file moves the database up and down, or forwards and backwards, through a set of changes applied to a single table.
 
-* [Node: Deploying to Heroku](/redirects/learning_experiences/8)
-* [Deploying Express / Postgres Apps to Heroku using dotenv](/redirects/learning_experiences/171)
-
-### Objectives
-
-* Be able to alter database schema using migrations
-* Be able to alter a production database schema using migrations
-* Be able to explain why migrations are important
-* Be able to explain why migrations have unique identifying numbers
-* Be able to rollback a migration in both a development and production environement
-
-### Why you should care
-
-Migrations are a convenient way to alter your database schema over time in a consistent and easy way. Migrations reduce the opportunity for human error and allow you to automate schema creation in both development and production.
-
-You can think of each migration as being a new 'version' of the database. A schema starts off with nothing in it, and each migration modifies it to add or remove tables, columns, or entries.
-
-These migrations also provide further documentation about your database schema for you, your team, and _future you!_
-
-### Questions to be answerd by the end of this lesson:
-
-1. Why use the `--save` flag when installing npm packages? How does that affect your app when you deploy?
-1. What does the `knexfile.js` file do? Why is it important?
-1. Why is the `knex` CLI super handy for creating migration files?
-1. What is a database schema?
-1. Why do migration file names start wtih a UTC timestamp?
-1. Why is it important to use the `knex` CLI `rollback` function to undo a migration?
-1. Why does `knex` add an `exports.down` function to your migrations?
-
-## EXERCISE OVERVIEW
-
-Included in the exercise repo is a Library CRUD app. Your mission is to add `Books` and `Readers` schemas to this app using `knex` migrations.
-
-Before you begin, be sure and delete any existing `library` database you might have from previous exercises.
-
-#### Your Schemas Should Have:
-
-__Books__
-
-* id
-* author
-* title
-* rating
-* description
-
-__Readers__
-
-* id
-* first_name
-* last_name
+* [Objectives](#objectives)
+* [Why is the Knex migration system useful?](#why-is-the-knex-migration-system-useful)
+* [How do you use Knex to migrate a PostgreSQL database?](#how-do-you-use-knex-to-migrate-a-postgresql-database)
+* [What's the Knex seed system?](#whats-the-knex-seed-system)
+* [Assignment](#assignment)
+* [Resources](#resources)
 
 
-After you get everything working locally, you will deploy this CRUD app to Heroku and use your migrations to add your `Readers` and `Books` schemas to your production database.
+<hr style="margin: 5rem 0;"/>
 
-# Get Started!
+## Objectives
 
-### Installing and setting up knex and pg npm packages
+- Explain what the Knex migration system is.
+- Explain why the Knex migration system is useful.
+- Use Knex to migrate a PostgreSQL database.
+- Explain what the Knex seed system is.
+- Explain why the Knex seed system is useful.
+- Use Knex to seed a PostgreSQL database.
 
-```sh
-$ npm install --save pg knex  #install knex locally
-$ npm install knex -g         #install knex cli globally if you haven't before
-```
----
+<br>
+## The Knex Migration System
 
-### knexfile.js
+Here's a diagram representing two Knex migration files that manage the `tracks` and `users` tables respectively.
 
-`touch knexfile.js` and add the following.
-
-```js
-module.exports = {
-
-  development: {
-    client: 'pg',
-    connection: 'postgres://localhost/library'
-  },
-
-  production: {
-    client: 'pg',
-    connection: process.env.DATABASE_URL
-  }
-
-};
+```text
+┌───────────────────────────┐                      ┌───────────────────────────┐
+│                           │                      │                           │
+│                           │──── up / forward ───▶│                           │
+│                           │                      │                           │
+│ 20160621141318_tracks.js  │                      │  20160621141319_users.js  │
+│                           │                      │                           │
+│                           │◀── down / backward ──│                           │
+│                           │                      │                           │
+└───────────────────────────┘                      └───────────────────────────┘
 ```
 
----
+The name of a migration file starts with a UTC timestamp and ends with a table name. That way, the Knex migration system can identify and order the migrations based on when the files were created and what tables they affect.
 
-### Migrations
+Here's an example what the contents of the `20160621141318_tracks.js` migration file might look like.
 
-Migrations are stored as files in the migrations directory, one for each migration. The name of the file is of the form CURRENTDATETIME_create_books.js, that is to say a UTC timestamp identifying the migration, followed by an underscore, followed by the name of the migration. Knex uses this timestamp to ensure each migration is unique and helps knex keep track of what migrations have already been run.
+```javascript
+'use strict';
 
-Of course, calculating timestamps is no fun, so Knex provides a generator to handle making it for you:
-
-__The migration cli is bundled with the knex global install.__
-
----
-
-### Knex migration tool
-
-Create a new migration with the name create_books
-
-```sh
-knex migrate:make create_books
-```
-__You probably got an error about not having a database? Your migration file was still created, but go ahead and use knex to create your `library` database__
-
-```sh
-$ createdb library
-```
-
-Update the new migration file `migrations/CURRENTDATETIME_create_books.js` accordingly:
-
-```js
-exports.up = function(knex, Promise) {
-  return knex.schema.createTable('books', function(table){
+exports.up = function(knex) {
+  return knex.schema.createTable('tracks', (table) => {
     table.increments();
-    table.string('author');
-    table.string('title');
-    table.integer('rating');
-    table.text('description');
-  })
+    table.string('title').notNullable().defaultTo('');
+    table.string('artist').notNullable().defaultTo('');
+    table.integer('likes').notNullable().defaultTo(0);
+    table.timestamps(true, true);
+  });
 };
 
-exports.down = function(knex, Promise) {
-  return knex.schema.dropTable('books');
+exports.down = function(knex) {
+  return knex.schema.dropTable('tracks');
 };
 ```
 
----
+As you can see, a migration file exports two functions—`up()` and `down()`. The `up()` function returns instructions to the Knex migration system on how to migrate the database forward. And the `down()` function returns instructions on how to migrate the database backward.
 
-### Run the latest migrations using the development connection string
+When the database is migrated forward, the `up()` function is translated into the following SQL command.
 
-```sh
-$ knex migrate:latest --env development
+```sql
+CREATE TABLE tracks (
+  id serial PRIMARY KEY,
+  title varchar(255) NOT NULL DEFAULT '',
+  artist varchar(255) NOT NULL DEFAULT '',
+  likes integer NOT NULL DEFAULT 0,
+  created_at timestamp with time zone NOT NULL DEFAULT now(),
+  updated_at timestamp with time zone NOT NULL DEFAULT now()
+);
 ```
 
-#### Confirm successful migration and proper schema
+And when the database is migrated backward, the `down()` function is translated into the following SQL command.
 
-```sh
-psql library
-select * from books;
+```sql
+DROP TABLE artists;
 ```
 
-#### Where does knex store its log of what migrations have run?
+<br>
+### Exercise
 
-If you are in your `library` database and run the describe table (`\dt`) command, you should see `knex_migrations`.
+Turn to a neighbor and explain what the Knex migration system is in your own words.
 
-Go ahead and `select * from knex_migrations`. What do you see? What does this tell you about how Knex works?
 
----
+<hr style="margin: 5rem 0;"/>
 
-### Establishing a Connection
+## Why is the Knex migration system useful?
 
-__Initializing knex only once__
-* Initializing the library should normally only ever happen once in your application
-* This creates a connection pool for the current database
-* You should use the instance returned from the initialize call throughout your library.
+Knex migrations are a consistent and convenient way to automate the management of database tables.
 
----
+First, when the same sequence of Knex migration files are run on an empty database, they result in the creation of the same tables every time. This consistency is useful for reproducing the same tables in multiple databases. For example, when a development, test, and production environments, each with their own isolated database, are given the same table structure, the application code that successfully interfaces with one of them will work across all them.
 
-* Create a folder called `db`
+Second, when a mistake in a Knex migration is caught early in the development process, the affected tables can be dropped, effectively rolling the database back to a known good state. This convenience is useful for correcting bugs that appear in a table's structure before they make it to production. For example, imagine a `price numeric(4, 2)` column is given a precision that's too low. This could lead to significant losses in revenue if the bug isn't corrected during development. With a Knex migration, you can roll the database back, fix the bug  before it's able to do damage, and migrate the database forward.
 
-* Inside the db folder create a new file `knex.js` with the following contents:
+<br>
+### Exercise
 
-```js
-var environment = process.env.NODE_ENV || 'development';
-var config = require('../knexfile.js')[environment];
-module.exports = require('knex')(config);
+Turn to a neighbor and talk about when it might be useful to consistently create the same tables in multiple databases. Once you're satisfied, talk about when it might be useful to conveniently roll a database back.
+
+
+<hr style="margin: 5rem 0;"/>
+
+## How do you use Knex to migrate a PostgreSQL database?
+
+```text
+┌─────────────────────────────────────────────────────────────┐
+│                           tracks                            │
+├───────────┬─────────────────────────┬───────────────────────┤
+│id         │serial                   │primary key            │
+│title      │varchar(255)             │not null default ''    │
+│artist     │varchar(255)             │not null default ''    │
+│likes      │integer                  │not null default 0     │
+│created_at │timestamp with time zone │not null default now() │
+│updated_at │timestamp with time zone │not null default now() │
+└───────────┴─────────────────────────┴───────────────────────┘
 ```
 
-* This initializes knex with the connection information obtained from the configuration in `knexfile.js` for the current environment
-
-__NOTE:__ What core module do you need to install to be able to use environment variables?
-
----
-
-### Use the connection in your routes file
-
-* In your `routes/books.js` file, require the `knex.js` file you created
-
-* Create a function `Books` that returns a new knex query builder for the books table
-
-```js
-var knex = require('../db/knex');
-function Books() {
-  return knex('books');
-}
+```shell
+mkdir trackify
+cd trackify
+npm init
 ```
 
-__Using knex and migrations, get `Readers` wired up and confirm that your app is running as it should _locally_ __
+```shell
+echo '.DS_Store' >> .gitignore
+echo 'node_modules' >> .gitignore
+echo 'npm-debug.log' >> .gitignore
+```
 
----
+```shell
+createdb trackify_dev
+psql -l
+```
+The migration cli is bundled with the knex global install.
 
-### Get it working on Heroku
+```shell
+npm install --save pg knex
+```
 
-__STEP 1__
+```shell
+touch knexfile.js
+```
 
-* In your `knexfile.js` you need to add two things. Can you spot them?
-
-```js
-require('dotenv').load();
+```javascript
+'use strict';
 
 module.exports = {
-
   development: {
     client: 'pg',
-    connection: 'postgres://localhost/library'
-  },
-
-  production: {
-    client: 'pg',
-    connection: process.env.DATABASE_URL + '?ssl=true'
+    connection: 'postgres://localhost/trackify_dev'
   }
 };
 ```
-`add`, `commit` and `push`.
 
-__STEP 2__
-
-From the command line, run the following command:
-
-```sh
-knex migrate:latest --env production
+```shell
+./node_modules/.bin/knex migrate:currentVersion
 ```
 
-__Broken?__
-
-You are running your file locally and your app doesn't know what the value of your `DATABASE_URL` environment variable.
-
-__add your DATABASE_URL environment variable to `.env`__
-
-```sh
-heroku config  // to get your variable and value
+```javascript
+"scripts": {
+  "knex": "knex"
+},
 ```
 
-### Helpful Notes
-
-__Connecting to a Heroku Hosted Postgres Database__
-
-```sh
-heroku addons:create heroku-postgresql
+```shell
+npm run knex migrate:currentVersion
 ```
 
-__Using the `dotenv` core module to config environment variables__
+Create a new migration.
 
-You'll need some help getting your app to talk to your environment variables, both locally as well as deployed.
+```shell
+npm run knex migrate:make tracks
+```
 
-Google `npm dotenv` and read the docs to help you get up and running with a `.env` file in your Node.js app.
+```shell
+ls -hal
+ls -hal migrations
+```
 
-Also, remember the __Entry Ticket__ list above? Visit the Learning Experiences listed there to review previous topics used here.
+```shell
+npm run knex migrate:currentVersion
+```
+
+Migrations are how we define and update our database schema.
+
+```javascript
+'use strict';
+
+exports.up = function(knex) {
+  return knex.schema.createTable('tracks', (table) => {
+    table.increments();
+    table.string('title').notNullable().defaultTo('');
+    table.string('artist').notNullable().defaultTo('');
+    table.integer('likes').notNullable().defaultTo(0);
+    table.timestamps(true, true);
+  });
+};
+
+exports.down = function(knex) {
+  return knex.schema.dropTable('tracks');
+};
+```
+
+```shell
+npm run knex migrate:latest
+```
+
+```shell
+npm run knex migrate:currentVersion
+```
+
+```shell
+psql trackify_dev -c '\dt'
+```
+
+```shell
+psql trackify_dev -c '\d knex_migrations'
+```
+
+```shell
+psql trackify_dev -c 'SELECT * FROM knex_migrations;'
+```
+
+```shell
+npm run knex migrate:rollback
+```
+
+```shell
+npm run knex migrate:currentVersion
+```
+
+```shell
+psql trackify_dev -c 'SELECT * FROM knex_migrations;'
+```
+
+```shell
+npm run knex migrate:latest
+```
+
+```shell
+npm run knex migrate:currentVersion
+```
+
+```shell
+psql trackify_dev -c 'SELECT * FROM knex_migrations;'
+```
+
+Add migration locking so multiple services cannot try to run migrations at same time. This added a new lock table. If migrations are locked and migrations are run by another service it results in an error.
+
+```shell
+psql trackify_dev -c '\d knex_migrations_lock'
+```
+
+```shell
+psql trackify_dev -c 'SELECT * FROM knex_migrations_lock;'
+```
+
+```text
+┌─────────────────────────────────────────────────────────────┐
+│                            users                            │
+├───────────┬─────────────────────────┬───────────────────────┤
+│id         │serial                   │primary key            │
+│email      │varchar(255)             │not null unique index  │
+│created_at │timestamp with time zone │not null default now() │
+│updated_at │timestamp with time zone │not null default now() │
+└───────────┴─────────────────────────┴───────────────────────┘
+```
+
+```shell
+npm run knex migrate:make users
+```
+
+```shell
+ls -hal migrations
+```
+
+```javascript
+'use strict';
+
+exports.up = function(knex) {
+  return knex.schema.createTable('users', (table) => {
+    table.increments();
+    table.string('email').notNullable().unique();
+    table.timestamps(true, true);
+  });
+};
+
+exports.down = function(knex) {
+  return knex.schema.dropTable('users');
+};
+```
+
+```shell
+npm run knex migrate:latest
+```
+
+```shell
+npm run knex migrate:currentVersion
+```
+
+```shell
+psql trackify_dev -c 'SELECT * FROM knex_migrations;'
+```
+
+```shell
+npm run knex migrate:rollback
+```
+
+```shell
+npm run knex migrate:currentVersion
+```
+
+```shell
+psql trackify_dev -c 'SELECT * FROM knex_migrations;'
+```
+
+```shell
+npm run knex migrate:rollback
+```
+
+```shell
+npm run knex migrate:currentVersion
+```
+
+```shell
+psql trackify_dev -c 'SELECT * FROM knex_migrations;'
+```
+
+```shell
+npm run knex migrate:latest
+```
+
+```shell
+npm run knex migrate:currentVersion
+```
+
+```shell
+psql trackify_dev -c 'SELECT * FROM knex_migrations;'
+```
 
 
-### Knex is not the only ORM for Node and Postres. Take a minute to explore some of the other options available to developers:
+<hr style="margin: 5rem 0;"/>
 
-- https://github.com/robconery/massive-js
-- Links:
+## What's the Knex seed system?
 
-- Basic Driver - https://github.com/brianc/node-postgres
-- Basic Migrator - http://umigrate.readthedocs.org/projects/db-migrate/en/v0.10.x/
-- Bookshelf ORM - http://bookshelfjs.org/
-- Sequelize ORM - http://docs.sequelizejs.com/en/latest/
+The **Knex seed system** allows developers to automate the initialization of table rows in JavaScript. Most web application start with an initial set of table rows. It's useful to be able to seed a database with that set.
+
+<br>
+## How do you use Knex to seed a PostgreSQL database?
+
+```shell
+npm run knex seed:make 1_tracks
+```
+
+```shell
+ls -hal
+ls -hal seeds
+```
+
+```javascript
+'use strict';
+
+exports.seed = function(knex) {
+  return knex('tracks').del()
+    .then(() => {
+      return knex('tracks').insert([{
+        id: 1,
+        title: 'Here Comes the Sun',
+        artist: 'The Beatles',
+        likes: 28808736,
+        created_at: new Date('2016-06-26 14:26:16 UTC'),
+        updated_at: new Date('2016-06-26 14:26:16 UTC')
+      }, {
+        id: 2,
+        title: 'Hey Jude',
+        artist: 'The Beatles',
+        likes: 20355655,
+        created_at: new Date('2016-06-26 14:26:16 UTC'),
+        updated_at: new Date('2016-06-26 14:26:16 UTC')
+      }, {
+        id: 3,
+        title: 'Send My Love',
+        artist: 'Adele',
+        likes: 39658471,
+        created_at: new Date('2016-06-26 14:26:16 UTC'),
+        updated_at: new Date('2016-06-26 14:26:16 UTC')
+      }, {
+        id: 4,
+        title: 'Hello',
+        artist: 'Adele',
+        likes: 538300301,
+        created_at: new Date('2016-06-26 14:26:16 UTC'),
+        updated_at: new Date('2016-06-26 14:26:16 UTC')
+      }]);
+    })
+    .then(() => {
+      return knex.raw(
+        "SELECT setval('tracks_id_seq', (SELECT MAX(id) FROM tracks));"
+      );
+    });
+};
+```
+
+```shell
+npm run knex seed:run
+```
+
+```shell
+psql trackify_dev -c 'SELECT * FROM tracks;'
+```
+
+```shell
+npm run knex seed:run
+```
+
+```shell
+psql trackify_dev -c 'SELECT * FROM tracks;'
+```
+
+```shell
+npm run knex seed:make 2_users
+```
+
+```shell
+ls -hal seeds
+```
+
+```javascript
+'use strict';
+
+exports.seed = function(knex) {
+  return knex('users').del()
+    .then(() => {
+      return knex('users').insert([{
+        id: 1,
+        email: '2pac@shakur.com',
+        created_at: new Date('2016-06-29 14:26:16 UTC'),
+        updated_at: new Date('2016-06-29 14:26:16 UTC')
+      }]);
+    })
+    .then(() => {
+      return knex.raw(
+        "SELECT setval('users_id_seq', (SELECT MAX(id) FROM users));"
+      );
+    });
+};
+```
+
+```shell
+npm run knex seed:run
+```
+
+```shell
+psql trackify_dev -c 'SELECT * FROM users;'
+```
+
+```shell
+npm run knex seed:run
+```
+
+```shell
+psql trackify_dev -c 'SELECT * FROM users;'
+```
+
+```shell
+git init
+```
+
+```shell
+git status
+```
+
+```shell
+git add .
+git commit -m 'Initial commit'
+```
+
+
+<hr style="margin: 5rem 0;"/>
+
+## Assignment
+
+- [Galvanize Bookshelf](https://github.com/gSchool/galvanize-bookshelf#galvanize-bookshelf)
+- [Galvanize Bookshelf - Knex Migrations and Seeds](https://github.com/gSchool/galvanize-bookshelf/blob/master/1_migrations_seeds.md)
+
+
+<hr style="margin: 5rem 0;"/>
+
+## Resources
+
+- [Knex.js - Migrations](http://knexjs.org/#Migrations)
+- [Knex.js - Schema Builder](http://knexjs.org/#Schema)
+- [Knex.js - Schema Builder - Schema Building](http://knexjs.org/#Schema-Building)
+- [Knex.js - Schema Builder - Chainable Methods](http://knexjs.org/#Chainable)
+- [Knex.js - Seeds](http://knexjs.org/#Seeds)
