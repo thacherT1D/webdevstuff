@@ -18,8 +18,8 @@ In Node.js, a **module** is just a file that contains JavaScript code. And the m
 ```javascript
 'use strict';
 
-var add = require('./arithmetic');
-var result = add(1, 2);
+const add = require('./arithmetic');
+const result = add(1, 2);
 
 console.log(result);
 ```
@@ -65,7 +65,7 @@ Because the `require()` function just returns a value, and the `arithmetic.js` m
 ```javascript
 'use strict';
 
-var result = require('./arithmetic')(1, 2);
+const result = require('./arithmetic')(1, 2);
 
 console.log(result);
 ```
@@ -89,8 +89,8 @@ When requiring the module, you assign the required object to a variable and then
 ```javascript
 'use strict';
 
-var arithmetic = require('./arithmetic');
-var result = arithmetic.add(1, 2);
+const arithmetic = require('./arithmetic');
+const result = arithmetic.add(1, 2);
 
 console.log(result);
 ```
@@ -149,9 +149,9 @@ There are three kinds of modules in the Node.js.
 These are the built-in modules in Node.js like `fs`, `http`, and `path`. You require these modules by their name only.
 
 ```javascript
-var fs = require('fs');
-var http = require('http');
-var path = require('path');
+const fs = require('fs');
+const http = require('http');
+const path = require('path');
 ```
 
 ### NPM modules
@@ -166,9 +166,9 @@ npm root
 NPM modules are required just like core modules.
 
 ```javascript
-var express = require('express');
-var morgan = require('morgan');
-var bodyParser = require('body-parser');
+const express = require('express');
+const morgan = require('morgan');
+const bodyParser = require('body-parser');
 ```
 
 Remember, the above `require()` expressions won't work unless you've installed these NPM modules globally with `npm install -g` or locally with `npm install`.
@@ -180,9 +180,9 @@ These are modules that you've created on your own, such as the `arithmetic.js` m
 When requiring a file module, you provide a path to the module, minus the `.js` extension. These paths must start with `/`, `./`, or `../` to indicate where on the filesystem Node.js can find the file module.
 
 ```javascript
-var myModule1 = require('/myModule1');   // absolute path
-var myModule2 = require('./myModule2');  // same path as the current module
-var myModule3 = require('../myModule3'); // parent path of the current module
+const myModule1 = require('/myModule1');   // absolute path
+const myModule2 = require('./myModule2');  // same path as the current module
+const myModule3 = require('../myModule3'); // parent path of the current module
 ```
 
 ## What's an Express `router`?
@@ -226,14 +226,14 @@ In the `greet.js` module, use an Express router to attach a group of greeting mi
 ```javascript
 'use strict';
 
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
 
-router.get('/english', function(req, res) {
+router.get('/english', (req, res) => {
   res.send('Hello world');
 });
 
-router.get('/spanish', function(req, res) {
+router.get('/spanish', (req, res) => {
   res.send('Hola mundo');
 });
 
@@ -245,15 +245,15 @@ Inside the `server.js` module, require the `greet.js` module and attach the rout
 ```javascript
 'use strict';
 
-var express = require('express');
-var app = express();
-var port = process.env.PORT || 8000;
+const express = require('express');
+const app = express();
+const port = process.env.PORT || 8000;
 
-var greet = require('./greet');
+const greet = require('./greet');
 
 app.use(greet);
 
-app.listen(port, function() {
+app.listen(port, () => {
   console.log('Listening on port', port);
 });
 ```
@@ -327,22 +327,22 @@ And a `server.js` module would require and attach all the resource-specific rout
 ```javascript
 'use strict';
 
-var express = require('express');
-var app = express();
-var port = process.env.PORT || 8000;
+const express = require('express');
+const app = express();
+const port = process.env.PORT || 8000;
 
-var morgan = require('morgan');
-var bodyParser = require('body-parser');
+const morgan = require('morgan');
+const bodyParser = require('body-parser');
 
 app.disable('x-powered-by');
 app.use(morgan('short'));
 app.use(bodyParser.json());
 
-var activities = require('./routes/activities');
-var drinks = require('./routes/drinks');
-var foods = require('./routes/foods');
-var guests = require('./routes/guests');
-var prizes = require('./routes/prizes');
+const activities = require('./routes/activities');
+const drinks = require('./routes/drinks');
+const foods = require('./routes/foods');
+const guests = require('./routes/guests');
+const prizes = require('./routes/prizes');
 
 app.use(activities);
 app.use(drinks);
@@ -350,11 +350,11 @@ app.use(foods);
 app.use(guests);
 app.use(prizes);
 
-app.use(function(req, res) {
+app.use((req, res) => {
   res.sendStatus(404);
 });
 
-app.listen(port, function() {
+app.listen(port, () => {
   console.log('Listening on port', port);
 });
 ```
@@ -388,35 +388,35 @@ And add the following code the `routes/guests.js` route module.
 ```javascript
 'use strict';
 
-var fs = require('fs');
-var path = require('path');
-var guestsPath = path.join(__dirname, '../guests.json');
+const fs = require('fs');
+const path = require('path');
+const guestsPath = path.join(__dirname, '../guests.json');
 
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
 
-router.get('/guests', function(req, res) {
-  fs.readFile(guestsPath, 'utf8', function(err, guestsJSON) {
+router.get('/guests', (req, res) => {
+  fs.readFile(guestsPath, 'utf8', (err, guestsJSON) => {
     if (err) {
       console.error(err.stack);
       return res.sendStatus(500);
     }
 
-    var guests = JSON.parse(guestsJSON);
+    const guests = JSON.parse(guestsJSON);
 
     res.send(guests);
   });
 });
 
-router.get('/guests/:id', function(req, res) {
-  fs.readFile(guestsPath, 'utf8', function(err, newGuestsJSON) {
+router.get('/guests/:id', (req, res) => {
+  fs.readFile(guestsPath, 'utf8', (err, newGuestsJSON) => {
     if (err) {
       console.error(err.stack);
       return res.sendStatus(500);
     }
 
-    var id = Number.parseInt(req.params.id);
-    var guests = JSON.parse(newGuestsJSON);
+    const id = Number.parseInt(req.params.id);
+    const guests = JSON.parse(newGuestsJSON);
 
     if (id < 0 || id >= guests.length || Number.isNaN(id)) {
       return res.sendStatus(404);
@@ -427,15 +427,15 @@ router.get('/guests/:id', function(req, res) {
   });
 });
 
-router.post('/guests', function(req, res) {
-  fs.readFile(guestsPath, 'utf8', function(readErr, guestsJSON) {
+router.post('/guests', (req, res) => {
+  fs.readFile(guestsPath, 'utf8', (readErr, guestsJSON) => {
     if (readErr) {
       console.error(readErr.stack);
       return res.sendStatus(500);
     }
 
-    var guests = JSON.parse(guestsJSON);
-    var guest = req.body.name;
+    const guests = JSON.parse(guestsJSON);
+    const guest = req.body.name;
 
     if (!guest) {
       return res.sendStatus(400);
@@ -443,9 +443,9 @@ router.post('/guests', function(req, res) {
 
     guests.push(guest);
 
-    var newGuestsJSON = JSON.stringify(guests);
+    const newGuestsJSON = JSON.stringify(guests);
 
-    fs.writeFile(guestsPath, newGuestsJSON, function(writeErr) {
+    fs.writeFile(guestsPath, newGuestsJSON, (writeErr) => {
       if (writeErr) {
         console.error(writeErr.stack);
         return res.sendStatus(500);
@@ -457,21 +457,21 @@ router.post('/guests', function(req, res) {
   });
 });
 
-router.put('/guests/:id', function(req, res) {
-  fs.readFile(guestsPath, 'utf8', function(readErr, guestsJSON) {
+router.put('/guests/:id', (req, res) => {
+  fs.readFile(guestsPath, 'utf8', (readErr, guestsJSON) => {
     if (readErr) {
       console.error(readErr.stack);
       return res.sendStatus(500);
     }
 
-    var id = Number.parseInt(req.params.id);
-    var guests = JSON.parse(guestsJSON);
+    const id = Number.parseInt(req.params.id);
+    const guests = JSON.parse(guestsJSON);
 
     if (id < 0 || id >= guests.length || Number.isNaN(id)) {
       return res.sendStatus(404);
     }
 
-    var guest = req.body.name;
+    const guest = req.body.name;
 
     if (!guest) {
       return res.sendStatus(400);
@@ -479,9 +479,9 @@ router.put('/guests/:id', function(req, res) {
 
     guests[id] = guest;
 
-    var newGuestsJSON = JSON.stringify(guests);
+    const newGuestsJSON = JSON.stringify(guests);
 
-    fs.writeFile(guestsPath, newGuestsJSON, function(writeErr) {
+    fs.writeFile(guestsPath, newGuestsJSON, (writeErr) => {
       if (writeErr) {
         console.error(writeErr.stack);
         return res.sendStatus(500);
@@ -493,24 +493,24 @@ router.put('/guests/:id', function(req, res) {
   });
 });
 
-router.delete('/guests/:id', function(req, res) {
-  fs.readFile(guestsPath, 'utf8', function(readErr, guestsJSON) {
+router.delete('/guests/:id', (req, res) => {
+  fs.readFile(guestsPath, 'utf8', (readErr, guestsJSON) => {
     if (readErr) {
       console.error(readErr.stack);
       return res.sendStatus(500);
     }
 
-    var id = Number.parseInt(req.params.id);
-    var guests = JSON.parse(guestsJSON);
+    const id = Number.parseInt(req.params.id);
+    const guests = JSON.parse(guestsJSON);
 
     if (id < 0 || id >= guests.length || Number.isNaN(id) ) {
       return res.sendStatus(404);
     }
 
-    var guest = guests.splice(id, 1)[0];
-    var newGuestsJSON = JSON.stringify(guests);
+    const guest = guests.splice(id, 1)[0];
+    const newGuestsJSON = JSON.stringify(guests);
 
-    fs.writeFile(guestsPath, newGuestsJSON, function(writeErr) {
+    fs.writeFile(guestsPath, newGuestsJSON, (writeErr) => {
       if (writeErr) {
         console.error(writeErr.stack);
         return res.sendStatus(500);
@@ -530,26 +530,26 @@ Then, in the `server.js` module, require the route module and use it to replace 
 ```javascript
 'use strict';
 
-var express = require('express');
-var app = express();
-var port = process.env.PORT || 8000;
+const express = require('express');
+const app = express();
+const port = process.env.PORT || 8000;
 
-var morgan = require('morgan');
-var bodyParser = require('body-parser');
+const morgan = require('morgan');
+const bodyParser = require('body-parser');
 
 app.disable('x-powered-by');
 app.use(morgan('short'));
 app.use(bodyParser.json());
 
-var guests = require('./routes/guests');
+const guests = require('./routes/guests');
 
 app.use(guests);
 
-app.use(function(req, res) {
+app.use((req, res) => {
   res.sendStatus(404);
 });
 
-app.listen(port, function() {
+app.listen(port, () => {
   console.log('Listening on port', port);
 });
 ```
