@@ -39,14 +39,10 @@ OAuth 2 provides several grant types for different use cases. The grant type we'
 (User Agent)                       (Client)                  (Authorization Server)              (Resource Server)
       │                                │                                │                                │
       │                                │                                │                                │
-      ├────────── GET /auth ───────────▶                                │                                │
-      │                                │                                │                                │
-      ◀─────────── 200 OK ─────────────┤                                │                                │
-      │                                │                                │                                │
-      │                                │                                │                                │
       ├────── GET /auth/linkedin ──────▶                                │                                │
       │                                │                                │                                │
       ◀─ ─ ─ 302 auth.linkedin.com ─ ─ ┤                                │                                │
+      │                                │                                │                                │
       │                                │                                │                                │
       │                                │                                │                                │
       ├────────────────────── GET auth.linkedin.com ────────────────────▶                                │
@@ -54,25 +50,28 @@ OAuth 2 provides several grant types for different use cases. The grant type we'
       ◀───────────────────────────── 200 OK ────────────────────────────┤                                │
       │                                │                                │                                │
       │                                │                                │                                │
+      │                                │                                │                                │
       ├───────────────────── POST auth.linkedin.com ────────────────────▶                                │
-      │                                │                                │                                │
-      │                                │                                ├ Verify credentials ┐           │
-      │                                │                                │                    │           │
-      │                                │                                ◀────────────────────┘           │
-      │                                │                                │                                │
+      │                                │                                ├─ Verify credentials ─┐         │
+      │                                │                                ◀──────────────────────┘         │
       ◀ ─ ─ ─ ─ ─ ─ ─ ─ ─  302 /auth/linkedin/callback  ─ ─ ─ ─ ─ ─ ─ ─ ┤                                │
       │                                │                                │                                │
       │                                │                                │                                │
+      │                                │                                │                                │
       ├─ GET /auth/linkedin/callback ──▶                                │                                │
-      │                                │                                │                                │
       │                                ├────────────────────── GET res.linkedin.com ─────────────────────▶
-      │                                │                                │                                │
       │                                │                                │                                ├─── Verify grant  ──┐
-      │                                │                                │                                │                    │
       │                                │                                │                                ◀────────────────────┘
-      │                                │                                │                                │
       │                                ◀──────────────────────────── 200 OK ─────────────────────────────┤
+      ◀─────────── 200 OK ─────────────┤                                │                                │
       │                                │                                │                                │
+      │                                │                                │                                │
+      │                                │                                │                                │
+      ├────── GET /connections ────────▶                                │                                │
+      │                                ├────────────────────── GET res.linkedin.com ────────────────────▶│
+      │                                │                                │                                ├─── Verify token ───┐
+      │                                │                                │                                ◀────────────────────┘
+      │                                ◀──────────────────────────── 200 OK ─────────────────────────────┤
       ◀─────────── 200 OK ─────────────┤                                │                                │
       │                                │                                │                                │
       │                                │                                │                                │
