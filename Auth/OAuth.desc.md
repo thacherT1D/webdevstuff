@@ -119,7 +119,7 @@ Go to LinkedIn, then setup a new [OAuth-based application](https://www.linkedin.
 
 | Field            | Value                                         |
 |------------------|-----------------------------------------------|
-| Company Name     | Team Rocket                                   |
+| **Company Name**     | Team Rocket                                   |
 | Name             | Blast Off                                     |
 | Description      | Team rocket blasts off at the speed of light! |
 | Application Logo | ![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/384/team_rocket.png) |
