@@ -1,4 +1,4 @@
-## Objectives
+# Objectives
 
 - Describe what REST is.
 - Explain why REST is important.
@@ -19,7 +19,7 @@
 For example, imagine a RESTful HTTP server manages the persistence of the following guest resources.
 
 ```javascript
-var guests = ['Mary'];
+const guests = ['Mary'];
 ```
 
 A RESTful server would handle the following HTTP requests by mapping them to a specific REST action.
@@ -52,17 +52,25 @@ Once the operation is complete, the RESTful server would send a specific HTTP re
 | Update            | `200`           | `application/json`    | `'Kate'`      |
 | Destroy           | `200`           | `application/json`    | `'Kate'`      |
 
+<br>
+
 ### Exercise
 
 A **safe** REST action is one that doesn't modify any resources. Turn to a partner and see you can determine which REST actions from the above example are safe. Afterwards, explain what REST is to your partner in your own words.
+
+<hr>
 
 ## Why is REST so important?
 
 REST is one way of structuring client-server HTTP communication. However, it's a very popular structure because it leads to a **separation of concerns** between clients and servers. Since the goals of clients and servers are well-defined, it's easy to develop and evolve clients and servers independently. In other words, you can easily add and remove RESTful clients or servers.
 
+<br>
+
 ### Exercise
 
 Think about what scenarios would cause you to add or remove a RESTful client or server. After ten seconds, I'll cold call on a few of you for an answer.
+
+<hr>
 
 ## How do you build a RESTful Express server?
 
@@ -86,43 +94,43 @@ And add the following update REST action to the `serverExpress.js` file.
 ```javascript
 'use strict';
 
-var fs = require('fs');
-var path = require('path');
-var guestsPath = path.join(__dirname, 'guests.json');
+const fs = require('fs');
+const path = require('path');
+const guestsPath = path.join(__dirname, 'guests.json');
 
-var express = require('express');
-var app = express();
-var port = process.env.PORT || 8000;
+const express = require('express');
+const app = express();
+const port = process.env.PORT || 8000;
 
-var morgan = require('morgan');
-var bodyParser = require('body-parser');
+const morgan = require('morgan');
+const bodyParser = require('body-parser');
 
 app.disable('x-powered-by');
 app.use(morgan('short'));
 app.use(bodyParser.json());
 
-app.get('/guests', function(req, res) {
-  fs.readFile(guestsPath, 'utf8', function(err, guestsJSON) {
+app.get('/guests', (req, res) => {
+  fs.readFile(guestsPath, 'utf8', (err, guestsJSON) => {
     if (err) {
       console.error(err.stack);
       return res.sendStatus(500);
     }
 
-    var guests = JSON.parse(guestsJSON);
+    const guests = JSON.parse(guestsJSON);
 
     res.send(guests);
   });
 });
 
-app.get('/guests/:id', function(req, res) {
-  fs.readFile(guestsPath, 'utf8', function(err, newGuestsJSON) {
+app.get('/guests/:id', (req, res) => {
+  fs.readFile(guestsPath, 'utf8', (err, newGuestsJSON) => {
     if (err) {
       console.error(err.stack);
       return res.sendStatus(500);
     }
 
-    var id = Number.parseInt(req.params.id);
-    var guests = JSON.parse(newGuestsJSON);
+    const id = Number.parseInt(req.params.id);
+    const guests = JSON.parse(newGuestsJSON);
 
     if (id < 0 || id >= guests.length || Number.isNaN(id)) {
       return res.sendStatus(404);
@@ -133,15 +141,15 @@ app.get('/guests/:id', function(req, res) {
   });
 });
 
-app.post('/guests', function(req, res) {
-  fs.readFile(guestsPath, 'utf8', function(readErr, guestsJSON) {
+app.post('/guests', (req, res) => {
+  fs.readFile(guestsPath, 'utf8', (readErr, guestsJSON) => {
     if (readErr) {
       console.error(err.stack);
       return res.sendStatus(500);
     }
 
-    var guests = JSON.parse(guestsJSON);
-    var guest = req.body.name;
+    let guests = JSON.parse(guestsJSON);
+    const guest = req.body.name;
 
     if (!guest) {
       return res.sendStatus(400);
@@ -149,9 +157,9 @@ app.post('/guests', function(req, res) {
 
     guests.push(guest);
 
-    var newGuestsJSON = JSON.stringify(guests);
+    const newGuestsJSON = JSON.stringify(guests);
 
-    fs.writeFile(guestsPath, newGuestsJSON, function(writeErr) {
+    fs.writeFile(guestsPath, newGuestsJSON, (writeErr) => {
       if (writeErr) {
         console.error(writeErr.stack);
         return res.sendStatus(500);
@@ -163,21 +171,21 @@ app.post('/guests', function(req, res) {
   });
 });
 
-app.put('/guests/:id', function(req, res) {
-  fs.readFile(guestsPath, 'utf8', function(readErr, guestsJSON) {
+app.put('/guests/:id', (req, res) => {
+  fs.readFile(guestsPath, 'utf8', (readErr, guestsJSON) => {
     if (readErr) {
       console.error(readErr.stack);
       return res.sendStatus(500);
     }
 
-    var id = Number.parseInt(req.params.id);
-    var guests = JSON.parse(guestsJSON);
+    const id = Number.parseInt(req.params.id);
+    let guests = JSON.parse(guestsJSON);
 
     if (id < 0 || id >= guests.length || Number.isNaN(id)) {
       return res.sendStatus(404);
     }
 
-    var guest = req.body.name;
+    const guest = req.body.name;
 
     if (!guest) {
       return res.sendStatus(400);
@@ -185,9 +193,9 @@ app.put('/guests/:id', function(req, res) {
 
     guests[id] = guest;
 
-    var newGuestsJSON = JSON.stringify(guests);
+    const newGuestsJSON = JSON.stringify(guests);
 
-    fs.writeFile(guestsPath, newGuestsJSON, function(writeErr) {
+    fs.writeFile(guestsPath, newGuestsJSON, (writeErr) => {
       if (writeErr) {
         console.error(writeErr.stack);
         return res.sendStatus(500);
@@ -199,12 +207,12 @@ app.put('/guests/:id', function(req, res) {
   });
 });
 
-app.use(function(req, res) {
+app.use((req, res) => {
   res.sendStatus(404);
 });
 
-app.listen(port, function() {
-  console.log('Listening on port', port);
+app.listen(port, () => {
+  console.log(`Listening on port ${port}`);
 });
 ```
 
@@ -306,43 +314,43 @@ Now, add the following destroy REST action to the `serverExpress.js` file.
 ```javascript
 'use strict';
 
-var fs = require('fs');
-var path = require('path');
-var guestsPath = path.join(__dirname, 'guests.json');
+const fs = require('fs');
+const path = require('path');
+const guestsPath = path.join(__dirname, 'guests.json');
 
-var express = require('express');
-var app = express();
-var port = process.env.PORT || 8000;
+const express = require('express');
+const app = express();
+const port = process.env.PORT || 8000;
 
-var morgan = require('morgan');
-var bodyParser = require('body-parser');
+const morgan = require('morgan');
+const bodyParser = require('body-parser');
 
 app.disable('x-powered-by');
 app.use(morgan('short'));
 app.use(bodyParser.json());
 
-app.get('/guests', function(req, res) {
-  fs.readFile(guestsPath, 'utf8', function(err, guestsJSON) {
+app.get('/guests', (req, res) => {
+  fs.readFile(guestsPath, 'utf8', (err, guestsJSON) => {
     if (err) {
       console.error(err.stack);
       return res.sendStatus(500);
     }
 
-    var guests = JSON.parse(guestsJSON);
+    const guests = JSON.parse(guestsJSON);
 
     res.send(guests);
   });
 });
 
-app.get('/guests/:id', function(req, res) {
-  fs.readFile(guestsPath, 'utf8', function(err, newGuestsJSON) {
+app.get('/guests/:id', (req, res) => {
+  fs.readFile(guestsPath, 'utf8', (err, newGuestsJSON) => {
     if (err) {
       console.error(err.stack);
       return res.sendStatus(500);
     }
 
-    var id = Number.parseInt(req.params.id);
-    var guests = JSON.parse(newGuestsJSON);
+    const id = Number.parseInt(req.params.id);
+    const guests = JSON.parse(newGuestsJSON);
 
     if (id < 0 || id >= guests.length || Number.isNaN(id)) {
       return res.sendStatus(404);
@@ -353,15 +361,15 @@ app.get('/guests/:id', function(req, res) {
   });
 });
 
-app.post('/guests', function(req, res) {
-  fs.readFile(guestsPath, 'utf8', function(readErr, guestsJSON) {
+app.post('/guests', (req, res) => {
+  fs.readFile(guestsPath, 'utf8', (readErr, guestsJSON) => {
     if (readErr) {
       console.error(err.stack);
       return res.sendStatus(500);
     }
 
-    var guests = JSON.parse(guestsJSON);
-    var guest = req.body.name;
+    let guests = JSON.parse(guestsJSON);
+    const guest = req.body.name;
 
     if (!guest) {
       return res.sendStatus(400);
@@ -369,9 +377,9 @@ app.post('/guests', function(req, res) {
 
     guests.push(guest);
 
-    var newGuestsJSON = JSON.stringify(guests);
+    const newGuestsJSON = JSON.stringify(guests);
 
-    fs.writeFile(guestsPath, newGuestsJSON, function(writeErr) {
+    fs.writeFile(guestsPath, newGuestsJSON, (writeErr) => {
       if (writeErr) {
         console.error(writeErr.stack);
         return res.sendStatus(500);
@@ -383,21 +391,21 @@ app.post('/guests', function(req, res) {
   });
 });
 
-app.put('/guests/:id', function(req, res) {
-  fs.readFile(guestsPath, 'utf8', function(readErr, guestsJSON) {
+app.put('/guests/:id', (req, res) => {
+  fs.readFile(guestsPath, 'utf8', (readErr, guestsJSON) => {
     if (readErr) {
       console.error(err.stack);
       return res.sendStatus(500);
     }
 
-    var id = Number.parseInt(req.params.id);
-    var guests = JSON.parse(guestsJSON);
+    const id = Number.parseInt(req.params.id);
+    let guests = JSON.parse(guestsJSON);
 
     if (id < 0 || id >= guests.length || Number.isNaN(id)) {
       return res.sendStatus(404);
     }
 
-    var guest = req.body.name;
+    const guest = req.body.name;
 
     if (!guest) {
       return res.sendStatus(400);
@@ -405,9 +413,9 @@ app.put('/guests/:id', function(req, res) {
 
     guests[id] = guest;
 
-    var newGuestsJSON = JSON.stringify(guests);
+    const newGuestsJSON = JSON.stringify(guests);
 
-    fs.writeFile(guestsPath, newGuestsJSON, function(writeErr) {
+    fs.writeFile(guestsPath, newGuestsJSON, (writeErr) => {
       if (writeErr) {
         console.error(err.stack);
         return res.sendStatus(500);
@@ -419,24 +427,24 @@ app.put('/guests/:id', function(req, res) {
   });
 });
 
-app.delete('/guests/:id', function(req, res) {
-  fs.readFile(guestsPath, 'utf8', function(readErr, guestsJSON) {
+app.delete('/guests/:id', (req, res) => {
+  fs.readFile(guestsPath, 'utf8', (readErr, guestsJSON) => {
     if (readErr) {
       console.error(err.stack);
       return res.sendStatus(500);
     }
 
-    var id = Number.parseInt(req.params.id);
-    var guests = JSON.parse(guestsJSON);
+    const id = Number.parseInt(req.params.id);
+    let guests = JSON.parse(guestsJSON);
 
     if (id < 0 || id >= guests.length || Number.isNaN(id) ) {
       return res.sendStatus(404);
     }
 
-    var guest = guests.splice(id, 1)[0];
-    var newGuestsJSON = JSON.stringify(guests);
+    const guest = guests.splice(id, 1)[0];
+    const newGuestsJSON = JSON.stringify(guests);
 
-    fs.writeFile(guestsPath, newGuestsJSON, function(writeErr) {
+    fs.writeFile(guestsPath, newGuestsJSON, (writeErr) => {
       if (writeErr) {
         console.error(writeErr.stack);
         return res.sendStatus(500);
@@ -448,12 +456,12 @@ app.delete('/guests/:id', function(req, res) {
   });
 });
 
-app.use(function(req, res) {
+app.use((req, res) => {
   res.sendStatus(404);
 });
 
-app.listen(port, function() {
-  console.log('Listening on port', port);
+app.listen(port, () => {
+  console.log(`Listening on port ${port}`);
 });
 ```
 
