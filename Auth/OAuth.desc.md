@@ -2,7 +2,7 @@
 
 - Explain what OAuth is.
 - Explain why OAuth is important.
-- Use OAuth to authenticate users.
+- Use OAuth.
 
 ## What's OAuth?
 
@@ -95,69 +95,46 @@ Resources:
 - What part of your existing authentication / authorization flows does this replace?
 - Why would you want to authenticate with Google / Facebook instead of storing the emails / passwords yourself?
 
-### Walkthrough - Start a new Express app
+## How do you use OAuth?
 
-Create a new express app:  
-`express --ejs --git linkedInLogin`  
-
-Install your dependencies:
-`cd linkedInLogin`  
-`npm install`  
-`npm install --save knex`  
-`npm install --save passport`  
-`npm install --save passport-linkedin`  
-`npm install --save cookie-session`  
-`npm install --save dotenv`  
-
-Now initialize your app:  
-`knex init`  
-`git init`  
-`git add .`  
-`git commit -am"initial commit"`  
-
-Next, make a `db` directory and a `knex.js` file  
-`mkdir db`  
-`touch db/knex.js`  
-
-Now, add your config to `knex.js` and commit:  
-
-**knex.js**
-
-```javascript
-var environment = process.env.NODE_ENV || 'development';
-var config = require('../knexfile.js')[environment];
-module.exports = require('knex')(config);
+```shell
+mkdir oauth
 ```
 
-`git add db`  
-`git commit -am"added db config"`  
+```shell
+cd oauth
+```
 
-Go to LinkedIn, then setup a new [oAuth Application](https://www.linkedin.com/developer/apps).
-Most items in that form don't matter- the logo, application name, and description will be shown to the user who is trying to login to your app when you request access to their account. You'll also need to provide a logo for your app that is the same pixel length and width. The email, url, and website don't require you to know them or have them set up beforehand, just put something there because you can always change it later.
+```shell
+npm init --yes
+```
 
-Once you have the client ID and client secret, you can store it in your .env file like so:
+```shell
+npm install --save express passport passport-linkedin cookie-parser jsonwebtoken dotenv
+```
+
+Go to LinkedIn, then setup a new [OAuth-based application](https://www.linkedin.com/developer/apps). Most items in that form don't matter. However, the logo, application name, and description will be shown to the user who is trying to login to your app when you request access to their account. You'll also need to provide a logo for your app that is the same pixel length and width. The email, url, and website don't require you to know them or have them set up beforehand, just put something there because you can always change it later. Also, on the linkedin app config page, you'll see a field marked **Authorized Redirect URLs:**. Set it to "http://localhost:8000/auth/linkedin/callback".
+
+Once you have the client ID and client secret, you can store it in your `.env` file.
 
 ```shell
 LINKEDIN_API_KEY='your client ID goes here'
 LINKEDIN_SECRET_KEY='your client secret goes here'
 ```
 
-Also, on the linkedin app config page, you'll see a field marked **Authorized Redirect URLs:**. Set it to "http://localhost:3000/auth/linkedin/callback".
+Next, create a routes file called `routes/auth.js` and import it in `app.js`.
 
-### Implementing Passport
-
-Next, create a routes file called `auth.js` and import it in `app.js`.
-
-#### auth.js
 ```javascript
-var express = require('express');
-var router = express.Router();
+'use strict';
 
-router.get('/linkedin',
-  passport.authenticate('linkedin', { state: 'SOME STATE'  }),
-  function(req, res){
-    // The request will be redirected to LinkedIn for authentication, so this
-    // function will not be called.
+const express = require('express');
+const passport = require('passport');
+
+const router = express.Router();
+
+router.get('/linkedin', passport.authenticate('linkedin', { state: 'SOME STATE'  }), (req, res) => {
+  // The request will be redirected to LinkedIn for authentication, so this
+  // function will not be called.
 });
 
 router.get('/linkedin/callback', passport.authenticate('linkedin', {
@@ -171,21 +148,18 @@ router.get('/logout', function(req, res){
 });
 
 module.exports = router;
-
 ```
 
 Now, add the following lines to `app.js` (in the appropriate places- see [this example](https://github.com/jaredhanson/passport-linkedin/blob/master/examples/login/app.js) for more details):
 
-#### app.js
 ```javascript
-var passport = require('passport');
-var cookieSession = require('cookie-session');
-var LinkedInStrategy = require('passport-linkedin').Strategy;
+'use strict';
 
 require('dotenv').load();
 
-//get auth.js module
-var auth = require('./routes/auth');
+const passport = require('passport');
+const cookieSession = require('cookie-session');
+const LinkedInStrategy = require('passport-linkedin').Strategy;
 
 //add to middleware area, after bodyparser, before routes
 app.use(cookieSession({
@@ -195,34 +169,38 @@ app.use(cookieSession({
 app.use(passport.initialize());
 app.use(passport.session());
 
-passport.serializeUser(function(user, done) {
+passport.serializeUser((user, done) => {
   //later this will be where you selectively send to the browser an identifier for your user, like their primary key from the database, or their ID from linkedin
   done(null, user);
 });
 
-passport.deserializeUser(function(obj, done) {
+passport.deserializeUser((obj, done) => {
   //here is where you will go to the database and get the user each time from it's id, after you set up your db
   done(null, obj);
 });
 
-passport.use(new LinkedInStrategy({
-    consumerKey: process.env['LINKEDIN_API_KEY'],
-    consumerSecret: process.env['LINKEDIN_SECRET_KEY'],
-    callbackURL: "http://localhost:3000/auth/linkedin/callback",
-    scope: ['r_emailaddress', 'r_basicprofile'],
-  },
-  function(token, tokenSecret, profile, done) {
+const options = {
+  consumerKey: process.env['LINKEDIN_API_KEY'],
+  consumerSecret: process.env['LINKEDIN_SECRET_KEY'],
+  callbackURL: "http://localhost:3000/auth/linkedin/callback",
+  scope: ['r_emailaddress', 'r_basicprofile'],
+};
 
-      // To keep the example simple, the user's LinkedIn profile is returned to
-      // represent the logged-in user.  In a typical application, you would want
-      // to associate the LinkedIn account with a user record in your database,
-      // and return that user instead (so perform a knex query here later.)
-      return done(null, profile);
-}));
+const strategy = new LinkedInStrategy(options, (token, tokenSecret, profile, done) => {
+  // To keep the example simple, the user's LinkedIn profile is returned to
+  // represent the logged-in user.  In a typical application, you would want
+  // to associate the LinkedIn account with a user record in your database,
+  // and return that user instead (so perform a knex query here later.)
+  return done(null, profile);
+})
 
-//mount auth.js middleware
+passport.use();
+
+const auth = require('./routes/auth');
+
 app.use('/auth', auth);
 
+app.listen(8000);
 ```
 
 ## Resources
@@ -232,6 +210,7 @@ app.use('/auth', auth);
 [Linkedin Passport Example](https://github.com/jaredhanson/passport-linkedin/blob/master/examples/login/app.js)  
 
 ## Assignment:
+
 Read and complete the following exercise:  
 [Express + Passport + Linkedin](https://github.com/gSchool/express-passport-linkedin)  
 
