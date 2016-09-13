@@ -37,7 +37,7 @@ In order to get this most out of this Learning Experience, you'll need to be com
 
 
 ### Overview
-This learning experience covers most of the basic ideas you need to understand if you want users to be able to log in to your application. 
+This learning experience covers most of the basic ideas you need to understand if you want users to be able to log in to your application.
 
 How often will you implement authentication from scratch in a job?  Not often, at least as a junior developer.
 
@@ -78,7 +78,7 @@ How do we secure our user data? Knowing this basic information well will put you
 
 <iframe src="https://player.vimeo.com/video/141304889?byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
-Let's practice what we just learned. **Do this, because we're going to build on it after the next video**. 
+Let's practice what we just learned. **Do this, because we're going to build on it after the next video**.
 
 Create a new directory, and generate an express app with `express cookieExample`. Then `git init` in that folder, of course. Add `node_modules` to your `.gitignore`, and then `npm install`. Then, commit all files.  
 
@@ -423,4 +423,3 @@ router.get('/other', function f4 (req, res, next) {
 ## Resources
 
 * http://alexperry.io/javascript/2015/08/06/what-is-express-middleware.html
-

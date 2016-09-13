@@ -81,7 +81,7 @@ module.exports = require('knex')(config);
 `git add db`  
 `git commit -am"added db config"`  
 
-Go to LinkedIn, then setup a new [oAuth Application](https://www.linkedin.com/developer/apps). 
+Go to LinkedIn, then setup a new [oAuth Application](https://www.linkedin.com/developer/apps).
 Most items in that form don't matter- the logo, application name, and description will be shown to the user who is trying to login to your app when you request access to their account. You'll also need to provide a logo for your app that is the same pixel length and width. The email, url, and website don't require you to know them or have them set up beforehand, just put something there because you can always change it later.
 
 Once you have the client ID and client secret, you can store it in your .env file like so:
@@ -161,7 +161,7 @@ passport.use(new LinkedInStrategy({
     scope: ['r_emailaddress', 'r_basicprofile'],
   },
   function(token, tokenSecret, profile, done) {
-    
+
       // To keep the example simple, the user's LinkedIn profile is returned to
       // represent the logged-in user.  In a typical application, you would want
       // to associate the LinkedIn account with a user record in your database,
