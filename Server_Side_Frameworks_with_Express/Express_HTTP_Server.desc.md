@@ -182,7 +182,7 @@ const port = process.env.PORT || 8000;
 app.disable('x-powered-by');
 
 app.get('/guests', (req, res) => {
-  let guests = ['Mary', 'Don'];
+  const guests = ['Mary', 'Don'];
   res.send(guests);
 });
 
@@ -667,7 +667,7 @@ app.post('/guests', (req, res) => {
       return res.sendStatus(500);
     }
 
-    let guests = JSON.parse(guestsJSON);
+    const guests = JSON.parse(guestsJSON);
     const guest = req.body.name;
 
     if (!guest) {
@@ -796,7 +796,7 @@ app.post('/guests', (req, res) => {
       return res.sendStatus(500);
     }
 
-    let guests = JSON.parse(guestsJSON);
+    const guests = JSON.parse(guestsJSON);
     const guest = req.body.name;
 
     if (!guest) {

@@ -148,7 +148,7 @@ app.post('/guests', (req, res) => {
       return res.sendStatus(500);
     }
 
-    let guests = JSON.parse(guestsJSON);
+    cosnt guests = JSON.parse(guestsJSON);
     const guest = req.body.name;
 
     if (!guest) {
@@ -179,7 +179,7 @@ app.put('/guests/:id', (req, res) => {
     }
 
     const id = Number.parseInt(req.params.id);
-    let guests = JSON.parse(guestsJSON);
+    const guests = JSON.parse(guestsJSON);
 
     if (id < 0 || id >= guests.length || Number.isNaN(id)) {
       return res.sendStatus(404);
@@ -368,7 +368,7 @@ app.post('/guests', (req, res) => {
       return res.sendStatus(500);
     }
 
-    let guests = JSON.parse(guestsJSON);
+    const guests = JSON.parse(guestsJSON);
     const guest = req.body.name;
 
     if (!guest) {
@@ -399,7 +399,7 @@ app.put('/guests/:id', (req, res) => {
     }
 
     const id = Number.parseInt(req.params.id);
-    let guests = JSON.parse(guestsJSON);
+    const guests = JSON.parse(guestsJSON);
 
     if (id < 0 || id >= guests.length || Number.isNaN(id)) {
       return res.sendStatus(404);
@@ -435,7 +435,7 @@ app.delete('/guests/:id', (req, res) => {
     }
 
     const id = Number.parseInt(req.params.id);
-    let guests = JSON.parse(guestsJSON);
+    const guests = JSON.parse(guestsJSON);
 
     if (id < 0 || id >= guests.length || Number.isNaN(id) ) {
       return res.sendStatus(404);

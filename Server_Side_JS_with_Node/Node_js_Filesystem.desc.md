@@ -415,7 +415,7 @@ if (cmd === 'read') {
   fs.readFile(guestsPath, 'utf8', (readErr, data) => {
     if (readErr) throw readErr;
 
-    let guests = JSON.parse(data);
+    const guests = JSON.parse(data);
     const guest = process.argv[3];
 
     if (!guest) {
