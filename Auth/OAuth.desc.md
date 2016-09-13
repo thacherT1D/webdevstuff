@@ -6,9 +6,7 @@
 
 ## What's OAuth?
 
-Before jumping straight into OAuth, let's refresh our memories on the definition of authentication versus authorization. **Authentication** is the process of confirming the identity of a user. When a user logs into a web application, that person is attempting to authenticate.
-
-On the other hand, **authorization** is the process of granting access to private information for an authenticated user. When a user successfully authenticates with an application, the server starts the authorization process by creating a session token. Afterwards, the client includes the session token in subsequent requests for private information on the server.
+Before jumping straight into OAuth, let's refresh our memories on the definition of authentication versus authorization. **Authentication** is the process of confirming the identity of a user. When a user logs into a web application, that person is attempting to authenticate. On the other hand, **authorization** is the process of granting access to private information for an authenticated user. When a user successfully authenticates with an application, the server starts the authorization process by creating a session token. Afterwards, the client includes the session token in subsequent requests for private information on the server.
 
 Understanding the different between the two is important because **OAuth** is an open standard for both authentication and authorization. With OAuth, a user authenticates to a web application using an account from another service like Google, Facebook, Microsoft, Twitter, etc. Once authenticated, the user gives the web application permission to access private information on that service. Then, the web application can access the private information if and when it wants to without sharing their credentials.
 
