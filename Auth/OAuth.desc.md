@@ -115,11 +115,23 @@ npm install --save express passport passport-linkedin cookie-parser jsonwebtoken
 
 Go to LinkedIn, then setup a new [OAuth-based application](https://www.linkedin.com/developer/apps). Most items in that form don't matter. However, the logo, application name, and description will be shown to the user who is trying to login to your app when you request access to their account. You'll also need to provide a logo for your app that is the same pixel length and width. The email, url, and website don't require you to know them or have them set up beforehand, just put something there because you can always change it later. Also, on the linkedin app config page, you'll see a field marked **Authorized Redirect URLs:**. Set it to "http://localhost:8000/auth/linkedin/callback".
 
+**NOTE:** Don't forget to agree to the LinkedIn API Terms of Use.
+
+| Field            | Value                                         |
+|------------------|-----------------------------------------------|
+| Company Name     | Team Rocket                                   |
+| Name             | Blast Off                                     |
+| Description      | Team rocket blasts off at the speed of light! |
+| Application Logo | ![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/384/team_rocket.png) |
+| Website URL      | https://twitter.com/teamrocket                |
+| Business Email   | meowth@teamrocket.com                         |
+| Business Phone   | 555-555-5555                                  |
+
 Once you have the client ID and client secret, you can store it in your `.env` file.
 
 ```shell
-LINKEDIN_API_KEY='your client ID goes here'
-LINKEDIN_SECRET_KEY='your client secret goes here'
+LINKEDIN_API_KEY=7893xt2dn6i9ts
+LINKEDIN_SECRET_KEY=5IWCXwSNvQEzPl7X
 ```
 
 Next, create a routes file called `routes/auth.js` and import it in `app.js`.
