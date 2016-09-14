@@ -233,7 +233,6 @@ Week 3
       <td rowspan="1">Friday</td>
       <td rowspan="1"><a href="https://github.com/gSchool/warmups/tree/master/Knex%20Seeds">Knex Seeds</a>
       </td>
-      
       <td><a href="https://github.com/gSchool/node-curriculum/blob/master/Deployment/Heroku.md">Heroku Deployment</a>
       </td>
       <td><a href="https://github.com/gSchool/galvanize-bookshelf/blob/master/5_heroku_deployment.md">Galvanize Bookshelf - Part 5</a>

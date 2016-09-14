@@ -54,7 +54,7 @@ Week 1
       </td>
       <td><a href="https://github.com/gSchool/node-curriculum/blob/master/Express/Authorization.md">User Authorization</a>
       </td>
-      <td><a href="https://github.com/gSchool/galvanize-bookshelf/blob/master/4_user_authentication.md">Galvanize Bookshelf - Part 4</a>
+      <td><a href="https://github.com/gSchool/galvanize-bookshelf/blob/master/4_authentication_authorization.md">Galvanize Bookshelf - Part 4</a>
       </td>
       <td>
       </td>
@@ -65,7 +65,7 @@ Week 1
       </td>
       <td><a href="https://github.com/gSchool/node-curriculum/blob/master/Deployment/Heroku.md">Heroku Deployment</a>
       </td>
-      <td><a href="https://github.com/gSchool/galvanize-bookshelf/blob/master/4_authentication_authorization.md">Galvanize Bookshelf - Part 5</a>
+      <td><a href="https://github.com/gSchool/galvanize-bookshelf/blob/master/5_heroku_deployment.md">Galvanize Bookshelf - Part 5</a>
       </td>
       <td>
       </td>

@@ -148,7 +148,7 @@ module.exports = [
     activities: [
       {
         article: { text: "User Authorization", url: "https://github.com/gSchool/node-curriculum/blob/master/Express/Authorization.md" },
-        assignment: { text: "Galvanize Bookshelf - Part 4", url: "https://github.com/gSchool/galvanize-bookshelf/blob/master/4_user_authentication.md" },
+        assignment: { text: "Galvanize Bookshelf - Part 4", url: "https://github.com/gSchool/galvanize-bookshelf/blob/master/4_authentication_authorization.md" },
       },
     ]
   },
@@ -158,7 +158,7 @@ module.exports = [
     activities: [
       {
         article: { text: "Heroku Deployment", url: "https://github.com/gSchool/node-curriculum/blob/master/Deployment/Heroku.md" },
-        assignment: { text: "Galvanize Bookshelf - Part 5", url: "https://github.com/gSchool/galvanize-bookshelf/blob/master/4_authentication_authorization.md" },
+        assignment: { text: "Galvanize Bookshelf - Part 5", url: "https://github.com/gSchool/galvanize-bookshelf/blob/master/5_heroku_deployment.md" },
       },
     ]
   },
