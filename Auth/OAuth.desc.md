@@ -109,10 +109,6 @@ cd oauth
 npm init --yes
 ```
 
-```shell
-npm install --save express passport passport-linkedin cookie-parser jsonwebtoken dotenv
-```
-
 Visit the [LinkedIn Developers](https://www.linkedin.com/developer/apps) website and click the button to create a new application. Then, fill out the form with either the information below or with your own fictitious application information.
 
 **NOTE:** Don't forget to agree to the LinkedIn API Terms of Use before submitting the form.
@@ -127,7 +123,13 @@ Visit the [LinkedIn Developers](https://www.linkedin.com/developer/apps) website
 | **Business Email**   | meowth@teamrocket.com                         |
 | **Business Phone**   | 555-555-5555                                  |
 
-On the next page, you'll see two authentication keys—client ID and client secret. Create a `.env` file in your application's project directory.
+On the next page, you'll see two authentication keys—client ID and client secret. Using NPM, install the `dotenv` package as a dependency.
+
+```javascript
+npm install --save dotenv
+```
+
+Create a `.env` file in your application's project directory.
 
 ```shell
 touch .env
@@ -140,18 +142,105 @@ LINKEDIN_CLIENT_ID=replace_me
 LINKEDIN_CLIENT_SECRET=replace_me
 ```
 
-Next, choose the default permissions for LinkedIn to ask your users to grant your application. Remember, accessing a user's private information on LinkedIn from your application will require certain permissions granted by the user. The permissions system ensures that a user is made aware of what your application could possibly access or do on their behalf. The default permissions to ask the user to grant are specified on this form.
+Next, choose the following default application permissions. Remember, accessing a user's private information on LinkedIn from your application will require certain permissions granted by the user. The permissions system ensures that a user is made aware of what your application could possibly access or do on their behalf.
 
-**NOTE:** Additional permissions can also be explicitly requested during the authorization step.
-
-- ✓ `r_basicprofile`
-- ✓ `r_emailaddress`
+- `r_basicprofile`
+- `r_emailaddress`
 
 Then, add the following URL to your application's OAuth 2.0 authorized redirect URLs.
 
-**NOTE:** You can safely ignore any textfields for OAuth 1.0a.
+**NOTE:** Remember to click the Add button.
 
 - `http://localhost:8000/auth/linkedin/callback`
+
+Finally, click the update button on the bottom of the page. You can safely ignore any textfields for OAuth 1.0a. Once the update is successful, install the following dependencies.
+
+```shell
+npm install --save express morgan knex pg
+```
+
+Create a `server.js` file with the following code.
+
+```javascript
+'use strict';
+
+const express = require('express');
+const app = express();
+
+app.disable('x-powered-by');
+
+const morgan = require('morgan');
+
+app.use(morgan('dev'));
+
+const
+
+app.listen(8000);
+```
+
+```shell
+npm install --save passport passport-linkedin cookie-parser jsonwebtoken
+```
+
+```shell
+createdb oauth_dev
+```
+
+```shell
+touch knexfile.js
+```
+
+```javascript
+'use strict';
+
+module.exports = {
+  development: {
+    client: 'pg',
+    connection: 'postgres://localhost/oauth_dev'
+  }
+};
+```
+
+```shell
+npm run knex migrate:make users
+```
+
+```javascript
+'use strict';
+
+exports.up = function(knex) {
+  return knex.schema.createTable('users', (table) => {
+    table.increments();
+    table.string('first_name').notNullable().defaultTo('');
+    table.string('last_name').notNullable().defaultTo('');
+    table.string('email').unique().notNullable();
+    table.specificType('hashed_password', 'char(60)').notNullable();
+    table.timestamps(true, true);
+  });
+};
+
+exports.down = function(knex) {
+  return knex.schema.dropTable('users');
+};
+```
+
+```shell
+npm run -s knex migrate:latest
+```
+
+```shell
+touch knex.js
+```
+
+```javascript
+'use strict';
+
+const environment = process.env.NODE_ENV || 'development';
+const knexConfig = require('./knexfile')[environment];
+const knex = require('knex')(knexConfig);
+
+module.exports = knex;
+```
 
 Next, create a routes file called `routes/auth.js` and import it in `app.js`.
 
@@ -163,20 +252,17 @@ const passport = require('passport');
 
 const router = express.Router();
 
-router.get('/linkedin', passport.authenticate('linkedin', { state: 'SOME STATE'  }), (req, res) => {
-  // The request will be redirected to LinkedIn for authentication, so this
-  // function will not be called.
-});
+router.get('/auth/linkedin', passport.authenticate('linkedin'));
 
-router.get('/linkedin/callback', passport.authenticate('linkedin', {
-  successRedirect: '/',
-  failureRedirect: '/'
+router.get('/auth/linkedin/callback', passport.authenticate('linkedin', {
+  failureRedirect: '/',
+  successRedirect: '/'
 }));
 
-router.get('/logout', function(req, res){
-  req.logout();
-  res.redirect('/');
-});
+// router.get('/logout', function(req, res){
+//   req.logout();
+//   res.redirect('/');
+// });
 
 module.exports = router;
 ```
@@ -186,17 +272,24 @@ Now, add the following lines to `app.js` (in the appropriate places- see [this e
 ```javascript
 'use strict';
 
-require('dotenv').load();
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').config();
+}
+
+const express = require('express');
+const app = express();
+
+app.disable('x-powered-by');
+
+// const cookieSession = require('cookie-session');
+//
+// app.use(cookieSession({
+//   name: 'session',
+//   keys: [process.env['SECRET_KEY']]
+// }));
 
 const passport = require('passport');
-const cookieSession = require('cookie-session');
-const LinkedInStrategy = require('passport-linkedin').Strategy;
 
-//add to middleware area, after bodyparser, before routes
-app.use(cookieSession({
-  name: 'session',
-  keys: [process.env['SECRET_KEY']]
-}));
 app.use(passport.initialize());
 app.use(passport.session());
 
@@ -210,22 +303,28 @@ passport.deserializeUser((obj, done) => {
   done(null, obj);
 });
 
+const { Strategy } = require('passport-linkedin');
+
 const options = {
-  consumerKey: process.env['LINKEDIN_API_KEY'],
-  consumerSecret: process.env['LINKEDIN_SECRET_KEY'],
-  callbackURL: "http://localhost:3000/auth/linkedin/callback",
-  scope: ['r_emailaddress', 'r_basicprofile'],
+  consumerKey: process.env['LINKEDIN_CLIENT_ID'],
+  consumerSecret: process.env['LINKEDIN_CLIENT_SECRET'],
+  callbackURL: 'http://localhost:3000/auth/linkedin/callback'
 };
 
-const strategy = new LinkedInStrategy(options, (token, tokenSecret, profile, done) => {
+const strategy = new Strategy(options, (token, tokenSecret, profile, done) => {
   // To keep the example simple, the user's LinkedIn profile is returned to
   // represent the logged-in user.  In a typical application, you would want
   // to associate the LinkedIn account with a user record in your database,
   // and return that user instead (so perform a knex query here later.)
+
+  // User.findOrCreate({ linkedinId: profile.id }, function (err, user) {
+  //   return done(err, user);
+  // });
+
   return done(null, profile);
 })
 
-passport.use();
+passport.use(strategy);
 
 const auth = require('./routes/auth');
 
