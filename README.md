@@ -1353,8 +1353,8 @@ Week 16
       </td>
     </tr>
     <tr>
-      <td rowspan="3">Tuesday</td>
-      <td rowspan="3"><a href=""></a>
+      <td rowspan="4">Tuesday</td>
+      <td rowspan="4"><a href=""></a>
       </td>
       <td><a href="https://github.com/gSchool/computer-science-curriculum/blob/master/Unit-1/02-big-o-notation.md">Big O</a>
       </td>
@@ -1375,6 +1375,14 @@ Week 16
       <td><a href="https://github.com/gSchool/problem-solving-curriculum/blob/master/Solve%20It/Session%202.md">Solve It!  Session 2</a>
       </td>
       <td>
+      </td>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/gSchool/computer-science-curriculum/blob/master/Unit-0/04-binary-ascii-utf8.md">Binary</a>
+      </td>
+      <td><a href="https://github.com/gSchool/computer-science-curriculum/tree/master/Exercises/src/binary-encoding">Binary Tests</a>
       </td>
       <td>
       </td>
@@ -1495,8 +1503,8 @@ Week 17
       </td>
     </tr>
     <tr>
-      <td rowspan="1">Thursday</td>
-      <td rowspan="1"><a href=""></a>
+      <td rowspan="2">Thursday</td>
+      <td rowspan="2"><a href=""></a>
       </td>
       <td>
       </td>
@@ -1506,14 +1514,30 @@ Week 17
       </td>
     </tr>
     <tr>
-      <td rowspan="1">Friday</td>
-      <td rowspan="1"><a href=""></a>
+      <td>
+      </td>
+      <td>
+      </td>
+      <td><a href="https://github.com/gSchool/computer-science-curriculum/blob/master/Unit-4/01-graphs.md">Graphs</a>
+      </td>
+    </tr>
+    <tr>
+      <td rowspan="2">Friday</td>
+      <td rowspan="2"><a href=""></a>
       </td>
       <td>
       </td>
       <td>Keep Making Tests Pass
       </td>
       <td>
+      </td>
+    </tr>
+    <tr>
+      <td>
+      </td>
+      <td>
+      </td>
+      <td><a href="https://github.com/gSchool/computer-science-curriculum/tree/master/Exercises/src/hash-tables">Hash Tables</a>
       </td>
     </tr>
   </tbody>

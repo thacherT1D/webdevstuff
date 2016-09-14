@@ -33,8 +33,8 @@ Week 1
       </td>
     </tr>
     <tr>
-      <td rowspan="3">Tuesday</td>
-      <td rowspan="3"><a href=""></a>
+      <td rowspan="4">Tuesday</td>
+      <td rowspan="4"><a href=""></a>
       </td>
       <td><a href="https://github.com/gSchool/computer-science-curriculum/blob/master/Unit-1/02-big-o-notation.md">Big O</a>
       </td>
@@ -55,6 +55,14 @@ Week 1
       <td><a href="https://github.com/gSchool/problem-solving-curriculum/blob/master/Solve%20It/Session%202.md">Solve It!  Session 2</a>
       </td>
       <td>
+      </td>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/gSchool/computer-science-curriculum/blob/master/Unit-0/04-binary-ascii-utf8.md">Binary</a>
+      </td>
+      <td><a href="https://github.com/gSchool/computer-science-curriculum/tree/master/Exercises/src/binary-encoding">Binary Tests</a>
       </td>
       <td>
       </td>

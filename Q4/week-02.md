@@ -47,8 +47,8 @@ Week 1
       </td>
     </tr>
     <tr>
-      <td rowspan="1">Thursday</td>
-      <td rowspan="1"><a href=""></a>
+      <td rowspan="2">Thursday</td>
+      <td rowspan="2"><a href=""></a>
       </td>
       <td>
       </td>
@@ -58,14 +58,30 @@ Week 1
       </td>
     </tr>
     <tr>
-      <td rowspan="1">Friday</td>
-      <td rowspan="1"><a href=""></a>
+      <td>
+      </td>
+      <td>
+      </td>
+      <td><a href="https://github.com/gSchool/computer-science-curriculum/blob/master/Unit-4/01-graphs.md">Graphs</a>
+      </td>
+    </tr>
+    <tr>
+      <td rowspan="2">Friday</td>
+      <td rowspan="2"><a href=""></a>
       </td>
       <td>
       </td>
       <td>Keep Making Tests Pass
       </td>
       <td>
+      </td>
+    </tr>
+    <tr>
+      <td>
+      </td>
+      <td>
+      </td>
+      <td><a href="https://github.com/gSchool/computer-science-curriculum/tree/master/Exercises/src/hash-tables">Hash Tables</a>
       </td>
     </tr>
   </tbody>

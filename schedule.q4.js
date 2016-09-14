@@ -29,6 +29,10 @@ module.exports = [
         article: {text: "Solve It!  Session 2", url: "https://github.com/gSchool/problem-solving-curriculum/blob/master/Solve%20It/Session%202.md"},
         assignment: {text: "", url: ""},
       },
+      {
+        article: {text: "Binary", url: "https://github.com/gSchool/computer-science-curriculum/blob/master/Unit-0/04-binary-ascii-utf8.md"},
+        assignment: {text: "Binary Tests", url: "https://github.com/gSchool/computer-science-curriculum/tree/master/Exercises/src/binary-encoding"},
+      },
     ],
   },
 
@@ -116,6 +120,9 @@ module.exports = [
         article: {text: "", url: ""},
         assignment: {text: "Keep Making Tests Pass", url: ""},
       },
+      {
+        stretch: {text: "Graphs", url: "https://github.com/gSchool/computer-science-curriculum/blob/master/Unit-4/01-graphs.md"},
+      },
     ],
   },
 
@@ -125,6 +132,9 @@ module.exports = [
       {
         article: {text: "", url: ""},
         assignment: {text: "Keep Making Tests Pass", url: ""},
+      },
+      {
+        stretch: {text: "Hash Tables", url: "https://github.com/gSchool/computer-science-curriculum/tree/master/Exercises/src/hash-tables"},
       },
     ],
   },
@@ -286,8 +296,12 @@ module.exports = [
     warmup: { text: "", url: "" },
     activities: [
       {
-        article: {text: "", url: ""},
+        article: {text: "OOP in Java", url: "https://github.com/gSchool/java-curriculum"},
         assignment: {text: "", url: ""},
+      },
+      {
+        article: {text: "Encapsulation in Java", url: "https://github.com/gSchool/java-curriculum/tree/master/Unit-2-Encapsulation"},
+        assignment: {text: "Problems", url: "https://github.com/gSchool/java-curriculum/tree/master/Unit-2-Encapsulation/problems"},
       },
     ],
   },
@@ -296,8 +310,8 @@ module.exports = [
     warmup: { text: "", url: "" },
     activities: [
       {
-        article: {text: "", url: ""},
-        assignment: {text: "", url: ""},
+        article: {text: "Inheritance in Java", url: "https://github.com/gSchool/java-curriculum/tree/master/Unit-3-Inheritance"},
+        assignment: {text: "Problems", url: "https://github.com/gSchool/java-curriculum/tree/master/Unit-3-Inheritance/problems"},
       },
     ],
   },
@@ -306,8 +320,8 @@ module.exports = [
     warmup: { text: "", url: "" },
     activities: [
       {
-        article: {text: "", url: ""},
-        assignment: {text: "", url: ""},
+        article: {text: "Polymorphism in Java", url: "https://github.com/gSchool/java-curriculum/tree/master/Unit-4-Polymorphism"},
+        assignment: {text: "Problems", url: "https://github.com/gSchool/java-curriculum/tree/master/Unit-4-Polymorphism/problems"},
       },
     ],
   },
@@ -315,6 +329,9 @@ module.exports = [
   {
     warmup: { text: "", url: "" },
     activities: [
+      {
+        assignment: {text: "Keep making tests pass"},
+      },
     ],
   },
 
