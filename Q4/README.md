@@ -274,7 +274,7 @@ Week 3
       <td rowspan="1">Monday</td>
       <td rowspan="1"><a href=""></a>
       </td>
-      <td>Capstone
+      <td>
       </td>
       <td>
       </td>
@@ -285,7 +285,7 @@ Week 3
       <td rowspan="1">Tuesday</td>
       <td rowspan="1"><a href=""></a>
       </td>
-      <td>Capstone
+      <td>
       </td>
       <td>
       </td>
@@ -296,7 +296,7 @@ Week 3
       <td rowspan="1">Wednesday</td>
       <td rowspan="1"><a href=""></a>
       </td>
-      <td>Capstone
+      <td>
       </td>
       <td>
       </td>
@@ -307,7 +307,7 @@ Week 3
       <td rowspan="1">Thursday</td>
       <td rowspan="1"><a href=""></a>
       </td>
-      <td>Capstone
+      <td>
       </td>
       <td>
       </td>
@@ -318,7 +318,7 @@ Week 3
       <td rowspan="1">Friday</td>
       <td rowspan="1"><a href=""></a>
       </td>
-      <td>Capstone
+      <td>
       </td>
       <td>
       </td>

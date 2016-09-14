@@ -111,7 +111,7 @@ module.exports = [
     warmup: { text: "", url: "" },
     activities: [
       {
-        article: {text: "Capstone", url: ""},
+        article: {text: "", url: ""},
         assignment: {text: "", url: ""},
       },
     ],
@@ -121,7 +121,7 @@ module.exports = [
     warmup: { text: "", url: "" },
     activities: [
       {
-        article: {text: "Capstone", url: ""},
+        article: {text: "", url: ""},
         assignment: {text: "", url: ""},
       },
     ],
@@ -131,7 +131,7 @@ module.exports = [
     warmup: { text: "", url: "" },
     activities: [
       {
-        article: {text: "Capstone", url: ""},
+        article: {text: "", url: ""},
         assignment: {text: "", url: ""},
       },
     ],
@@ -141,7 +141,7 @@ module.exports = [
     warmup: { text: "", url: "" },
     activities: [
       {
-        article: {text: "Capstone", url: ""},
+        article: {text: "", url: ""},
         assignment: {text: "", url: ""},
       },
     ],
@@ -151,7 +151,7 @@ module.exports = [
     warmup: { text: "", url: "" },
     activities: [
       {
-        article: {text: "Capstone", url: ""},
+        article: {text: "", url: ""},
         assignment: {text: "", url: ""},
       },
     ],
