@@ -192,6 +192,57 @@ module.exports = [
     warmup: { text: "", url: "" },
     activities: [
       {
+        article: {text: "Capstone", url: ""},
+        assignment: {text: "", url: ""},
+      },
+    ],
+  },
+
+  {
+    warmup: { text: "", url: "" },
+    activities: [
+      {
+        article: {text: "Capstone", url: ""},
+        assignment: {text: "", url: ""},
+      },
+    ],
+  },
+
+  // Week 5
+  {
+    warmup: { text: "", url: "" },
+    activities: [
+      {
+        article: {text: "Capstone", url: ""},
+        assignment: {text: "", url: ""},
+      },
+    ],
+  },
+
+  {
+    warmup: { text: "", url: "" },
+    activities: [
+      {
+        article: {text: "Capstone", url: ""},
+        assignment: {text: "", url: ""},
+      },
+    ],
+  },
+
+  {
+    warmup: { text: "", url: "" },
+    activities: [
+      {
+        article: {text: "Capstone", url: ""},
+        assignment: {text: "", url: ""},
+      },
+    ],
+  },
+
+  {
+    warmup: { text: "", url: "" },
+    activities: [
+      {
         article: {text: "Capstone Presentations", url: ""},
         assignment: {text: "", url: ""},
       },
@@ -208,7 +259,7 @@ module.exports = [
     ],
   },
 
-  // Week 5
+  // Week 6
   {
     warmup: { text: "", url: "" },
     activities: [

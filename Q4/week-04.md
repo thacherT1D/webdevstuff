@@ -50,7 +50,7 @@ Week 1
       <td rowspan="1">Thursday</td>
       <td rowspan="1"><a href=""></a>
       </td>
-      <td>Capstone Presentations
+      <td>Capstone
       </td>
       <td>
       </td>
@@ -61,7 +61,7 @@ Week 1
       <td rowspan="1">Friday</td>
       <td rowspan="1"><a href=""></a>
       </td>
-      <td>Capstone Marketing
+      <td>Capstone
       </td>
       <td>
       </td>

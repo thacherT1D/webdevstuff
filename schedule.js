@@ -24,7 +24,7 @@ module.exports = function() {
     {
       baseDir: './Q4',
       title: 'Quarter 4',
-      days: 25,
+      days: 30,
     },
   ]
 
