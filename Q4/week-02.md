@@ -17,9 +17,9 @@ Week 1
       <td rowspan="1">Monday</td>
       <td rowspan="1"><a href=""></a>
       </td>
-      <td>
+      <td><a href="https://github.com/gSchool/computer-science-curriculum/blob/master/Unit-3/01-linked-lists-intro.md">Linked Lists</a>
       </td>
-      <td>
+      <td><a href="https://github.com/gSchool/computer-science-curriculum/tree/master/Exercises/src/linked-list">Linked List Tests</a>
       </td>
       <td>
       </td>
@@ -28,9 +28,9 @@ Week 1
       <td rowspan="1">Tuesday</td>
       <td rowspan="1"><a href=""></a>
       </td>
-      <td>
+      <td><a href="https://github.com/gSchool/computer-science-curriculum/blob/master/Unit-3/03-trees.md">Trees</a>
       </td>
-      <td>
+      <td><a href="https://github.com/gSchool/computer-science-curriculum/tree/master/Exercises/src/trees">Tree Tests</a>
       </td>
       <td>
       </td>
@@ -39,9 +39,9 @@ Week 1
       <td rowspan="1">Wednesday</td>
       <td rowspan="1"><a href=""></a>
       </td>
-      <td>
+      <td><a href="https://github.com/gSchool/computer-science-curriculum/blob/master/Unit-3/04-searching-trees.md">BFS and DFS</a>
       </td>
-      <td>
+      <td><a href="https://github.com/gSchool/computer-science-curriculum/tree/master/Exercises/src/trees">Tree Tests</a>
       </td>
       <td>
       </td>
@@ -52,7 +52,7 @@ Week 1
       </td>
       <td>
       </td>
-      <td>
+      <td>Keep Making Tests Pass
       </td>
       <td>
       </td>
@@ -63,7 +63,7 @@ Week 1
       </td>
       <td>
       </td>
-      <td>
+      <td>Keep Making Tests Pass
       </td>
       <td>
       </td>

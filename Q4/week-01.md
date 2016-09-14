@@ -17,7 +17,7 @@ Week 1
       <td rowspan="2">Monday</td>
       <td rowspan="2"><a href=""></a>
       </td>
-      <td>Intro to Algorithms
+      <td><a href="https://github.com/gSchool/computer-science-curriculum/blob/master/Unit-1/01-intro-to-algorithms.md">Intro to Algorithms</a>
       </td>
       <td>
       </td>
@@ -33,9 +33,25 @@ Week 1
       </td>
     </tr>
     <tr>
-      <td rowspan="1">Tuesday</td>
-      <td rowspan="1"><a href=""></a>
+      <td rowspan="3">Tuesday</td>
+      <td rowspan="3"><a href=""></a>
       </td>
+      <td><a href="https://github.com/gSchool/computer-science-curriculum/blob/master/Unit-1/02-big-o-notation.md">Big O</a>
+      </td>
+      <td><a href="https://github.com/gSchool/computer-science-curriculum/blob/master/Unit-1/02-big-o-notation.md">Big O Inline Challenges</a>
+      </td>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <td>
+      </td>
+      <td><a href="https://github.com/gSchool/big-o-practice">Big O Questions</a>
+      </td>
+      <td>
+      </td>
+    </tr>
+    <tr>
       <td><a href="https://github.com/gSchool/problem-solving-curriculum/blob/master/Solve%20It/Session%202.md">Solve It!  Session 2</a>
       </td>
       <td>
@@ -44,9 +60,17 @@ Week 1
       </td>
     </tr>
     <tr>
-      <td rowspan="1">Wednesday</td>
-      <td rowspan="1"><a href=""></a>
+      <td rowspan="2">Wednesday</td>
+      <td rowspan="2"><a href=""></a>
       </td>
+      <td><a href="https://github.com/gSchool/computer-science-curriculum/blob/master/Unit-1/04-recursion.md">Recursion</a>
+      </td>
+      <td><a href="https://github.com/gSchool/computer-science-curriculum/tree/master/Exercises/src/recursion">Recursion Tests</a>
+      </td>
+      <td>
+      </td>
+    </tr>
+    <tr>
       <td><a href="https://github.com/gSchool/problem-solving-curriculum/blob/master/Solve%20It/Session%203.md">Solve It!  Session 3</a>
       </td>
       <td>
@@ -55,9 +79,17 @@ Week 1
       </td>
     </tr>
     <tr>
-      <td rowspan="1">Thursday</td>
-      <td rowspan="1"><a href=""></a>
+      <td rowspan="2">Thursday</td>
+      <td rowspan="2"><a href=""></a>
       </td>
+      <td><a href="https://github.com/gSchool/computer-science-curriculum/blob/master/Unit-2/02-searching-algorithms.md">Search Algorithms</a>
+      </td>
+      <td><a href="https://github.com/gSchool/computer-science-curriculum/tree/master/Exercises/src/array-search">Search Algorithm Tests</a>
+      </td>
+      <td>
+      </td>
+    </tr>
+    <tr>
       <td><a href="https://github.com/gSchool/problem-solving-curriculum/blob/master/Solve%20It/Session%204.md">Solve It!  Session 4</a>
       </td>
       <td>
@@ -66,9 +98,25 @@ Week 1
       </td>
     </tr>
     <tr>
-      <td rowspan="1">Friday</td>
-      <td rowspan="1"><a href=""></a>
+      <td rowspan="3">Friday</td>
+      <td rowspan="3"><a href=""></a>
       </td>
+      <td><a href="https://github.com/gSchool/computer-science-curriculum/blob/master/Unit-2/03-sorting-intro.md">Sorting Algorithms</a>
+      </td>
+      <td><a href="https://github.com/gSchool/computer-science-curriculum/blob/master/Exercises/src/sorting/sortingAlgorithmsPart1.js">Sorting Algorithm Tests</a>
+      </td>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <td>
+      </td>
+      <td><a href="https://github.com/gSchool/computer-science-curriculum/blob/master/Exercises/src/sorting/sortingAlgorithmsPart2.js">Sorting Algorithm Tests Part 2</a>
+      </td>
+      <td><a href="https://github.com/gSchool/computer-science-curriculum/blob/master/Unit-2/04-advanced-sorting.md">Sorting Algorithms 2</a>
+      </td>
+    </tr>
+    <tr>
       <td><a href="https://github.com/gSchool/problem-solving-curriculum/blob/master/Solve%20It/Session%205.md">Solve It!  Session 5</a>
       </td>
       <td>

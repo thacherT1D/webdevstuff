@@ -17,9 +17,9 @@ Week 1
       <td rowspan="1">Monday</td>
       <td rowspan="1"><a href=""></a>
       </td>
-      <td>
+      <td>Pillars of OOP
       </td>
-      <td>
+      <td><a href="https://github.com/gSchool/computer-science-curriculum/tree/master/Exercises/src/OOP">OOP Tests</a>
       </td>
       <td>
       </td>
@@ -28,9 +28,9 @@ Week 1
       <td rowspan="1">Tuesday</td>
       <td rowspan="1"><a href=""></a>
       </td>
-      <td>
+      <td><a href="https://github.com/gSchool/javascript-curriculum/tree/master/OOP">Review of State and Behavior</a>
       </td>
-      <td>
+      <td><a href="https://github.com/gSchool/computer-science-curriculum/tree/master/Exercises/src/OOP">OOP Tests</a>
       </td>
       <td>
       </td>
@@ -39,9 +39,9 @@ Week 1
       <td rowspan="1">Wednesday</td>
       <td rowspan="1"><a href=""></a>
       </td>
-      <td>
+      <td><a href="https://github.com/gSchool/javascript-curriculum/tree/master/Object%20Creation">Object Creation Strategies in JavaScript</a>
       </td>
-      <td>
+      <td><a href="https://github.com/gSchool/computer-science-curriculum/tree/master/Exercises/src/OOP">OOP Tests</a>
       </td>
       <td>
       </td>
@@ -50,9 +50,9 @@ Week 1
       <td rowspan="1">Thursday</td>
       <td rowspan="1"><a href=""></a>
       </td>
-      <td>
+      <td><a href="https://github.com/gSchool/javascript-curriculum/blob/master/SOLID/Single%20Reponsibility%20Principle.md">Single Responsibility Principle (SRP)</a>
       </td>
-      <td>
+      <td><a href="https://github.com/gSchool/computer-science-curriculum/tree/master/Exercises/src/OOP">OOP Tests</a>
       </td>
       <td>
       </td>
@@ -63,7 +63,7 @@ Week 1
       </td>
       <td>
       </td>
-      <td>
+      <td><a href="https://github.com/gSchool/computer-science-curriculum/tree/master/Exercises/src/OOP">OOP Tests</a>
       </td>
       <td>
       </td>
