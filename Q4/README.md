@@ -559,12 +559,20 @@ Week 6
   </thead>
   <tbody>
     <tr>
-      <td rowspan="1">Monday</td>
-      <td rowspan="1"><a href=""></a>
+      <td rowspan="2">Monday</td>
+      <td rowspan="2"><a href=""></a>
+      </td>
+      <td><a href="https://github.com/gSchool/java-curriculum">OOP in Java</a>
       </td>
       <td>
       </td>
       <td>
+      </td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/gSchool/java-curriculum/tree/master/Unit-2-Encapsulation">Encapsulation in Java</a>
+      </td>
+      <td><a href="https://github.com/gSchool/java-curriculum/tree/master/Unit-2-Encapsulation/problems">Problems</a>
       </td>
       <td>
       </td>
@@ -573,9 +581,9 @@ Week 6
       <td rowspan="1">Tuesday</td>
       <td rowspan="1"><a href=""></a>
       </td>
-      <td>
+      <td><a href="https://github.com/gSchool/java-curriculum/tree/master/Unit-3-Inheritance">Inheritance in Java</a>
       </td>
-      <td>
+      <td><a href="https://github.com/gSchool/java-curriculum/tree/master/Unit-3-Inheritance/problems">Problems</a>
       </td>
       <td>
       </td>
@@ -584,20 +592,20 @@ Week 6
       <td rowspan="1">Wednesday</td>
       <td rowspan="1"><a href=""></a>
       </td>
-      <td>
+      <td><a href="https://github.com/gSchool/java-curriculum/tree/master/Unit-4-Polymorphism">Polymorphism in Java</a>
       </td>
-      <td>
+      <td><a href="https://github.com/gSchool/java-curriculum/tree/master/Unit-4-Polymorphism/problems">Problems</a>
       </td>
       <td>
       </td>
     </tr>
     <tr>
-      <td rowspan="0">Thursday</td>
-      <td rowspan="0"><a href=""></a>
+      <td rowspan="1">Thursday</td>
+      <td rowspan="1"><a href=""></a>
       </td>
       <td>
       </td>
-      <td>
+      <td>Keep making tests pass
       </td>
       <td>
       </td>
