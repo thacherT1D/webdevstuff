@@ -127,19 +127,25 @@ Visit the [LinkedIn Developers](https://www.linkedin.com/developer/apps) website
 | **Business Email**   | meowth@teamrocket.com                         |
 | **Business Phone**   | 555-555-5555                                  |
 
-On the next page, copy the client ID and client secret into your application's `.env` file.
+On the next page, you'll see two authentication keys—client ID and client secret. Create a `.env` file in your application's project directory.
 
 ```shell
-LINKEDIN_CLIENT_ID=some_client_id
-LINKEDIN_CLIENT_SECRET=some_client_secret
+touch .env
 ```
 
-Then, choose the default permissions for LinkedIn to ask your users to grant your application. Remember, accessing a user's private information on LinkedIn from your application will require certain permissions granted by the user. The permissions system ensures that a user is made aware of what your application could possibly access or do on their behalf. The default permissions to ask the user to grant are specified on this form.
+And copy the keys into your application's `.env` file.
+
+```shell
+LINKEDIN_CLIENT_ID=replace_me
+LINKEDIN_CLIENT_SECRET=replace_me
+```
+
+Next, choose the default permissions for LinkedIn to ask your users to grant your application. Remember, accessing a user's private information on LinkedIn from your application will require certain permissions granted by the user. The permissions system ensures that a user is made aware of what your application could possibly access or do on their behalf. The default permissions to ask the user to grant are specified on this form.
 
 **NOTE:** Additional permissions can also be explicitly requested during the authorization step.
 
-- `r_basicprofile`
-- `r_emailaddress`
+- [X] `r_basicprofile`
+- [X] `r_emailaddress`
 
 Then, add the following URL to your application's OAuth 2.0 authorized redirect URLs.
 
