@@ -14,10 +14,18 @@ Week 1
   </thead>
   <tbody>
     <tr>
-      <td rowspan="1">Monday</td>
-      <td rowspan="1"><a href="">Angular</a>
+      <td rowspan="2">Monday</td>
+      <td rowspan="2"><a href=""></a>
+      </td>
+      <td>Intro to Algorithms
       </td>
       <td>
+      </td>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/gSchool/problem-solving-curriculum/blob/master/Solve%20It/Session%201.md">Solve It!  Session 1</a>
       </td>
       <td>
       </td>
@@ -28,7 +36,7 @@ Week 1
       <td rowspan="1">Tuesday</td>
       <td rowspan="1"><a href=""></a>
       </td>
-      <td>
+      <td><a href="https://github.com/gSchool/problem-solving-curriculum/blob/master/Solve%20It/Session%202.md">Solve It!  Session 2</a>
       </td>
       <td>
       </td>
@@ -39,7 +47,7 @@ Week 1
       <td rowspan="1">Wednesday</td>
       <td rowspan="1"><a href=""></a>
       </td>
-      <td>
+      <td><a href="https://github.com/gSchool/problem-solving-curriculum/blob/master/Solve%20It/Session%203.md">Solve It!  Session 3</a>
       </td>
       <td>
       </td>
@@ -50,7 +58,7 @@ Week 1
       <td rowspan="1">Thursday</td>
       <td rowspan="1"><a href=""></a>
       </td>
-      <td>
+      <td><a href="https://github.com/gSchool/problem-solving-curriculum/blob/master/Solve%20It/Session%204.md">Solve It!  Session 4</a>
       </td>
       <td>
       </td>
@@ -61,7 +69,7 @@ Week 1
       <td rowspan="1">Friday</td>
       <td rowspan="1"><a href=""></a>
       </td>
-      <td>
+      <td><a href="https://github.com/gSchool/problem-solving-curriculum/blob/master/Solve%20It/Session%205.md">Solve It!  Session 5</a>
       </td>
       <td>
       </td>

@@ -14,12 +14,28 @@ Week 1
   </thead>
   <tbody>
     <tr>
-      <td rowspan="1">Monday</td>
-      <td rowspan="1"><a href=""></a>
+      <td rowspan="3">Monday</td>
+      <td rowspan="3"><a href=""></a>
+      </td>
+      <td><a href="https://github.com/gSchool/angular-curriculum/blob/master/Unit-2/06-http-service.md">Http Service</a>
+      </td>
+      <td>Reddit Clone
       </td>
       <td>
       </td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/gSchool/angular-curriculum/blob/master/Unit-2/03-dependency-injection.md">Dependency Injection</a>
+      </td>
+      <td>Reddit Clone
+      </td>
       <td>
+      </td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/gSchool/angular-curriculum/blob/master/Unit-2/05-routing.md">Routing</a>
+      </td>
+      <td>Reddit Clone
       </td>
       <td>
       </td>
@@ -28,9 +44,9 @@ Week 1
       <td rowspan="1">Tuesday</td>
       <td rowspan="1"><a href=""></a>
       </td>
-      <td>
+      <td><a href="https://github.com/gSchool/angular-curriculum/blob/master/Unit-2/08-services.md">Building Services</a>
       </td>
-      <td>
+      <td>Reddit Clone
       </td>
       <td>
       </td>
@@ -39,20 +55,28 @@ Week 1
       <td rowspan="1">Wednesday</td>
       <td rowspan="1"><a href=""></a>
       </td>
-      <td>
+      <td>Review Services and Routing
       </td>
-      <td>
+      <td><a href="https://github.com/gSchool/angular-curriculum/blob/master/Unit-2/07-movie-search.app.md">Movie Search App</a>
       </td>
       <td>
       </td>
     </tr>
     <tr>
-      <td rowspan="1">Thursday</td>
-      <td rowspan="1"><a href=""></a>
+      <td rowspan="2">Thursday</td>
+      <td rowspan="2"><a href=""></a>
+      </td>
+      <td><a href="https://github.com/gSchool/angular-curriculum/blob/master/Unit-2/10-custom-directives-part1.md">Custom Directives - Basics</a>
+      </td>
+      <td>Reddit Clone
       </td>
       <td>
       </td>
-      <td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/gSchool/angular-curriculum/blob/master/Unit-2/11-custom-directives-part2.md">Custom Directives - DOM</a>
+      </td>
+      <td>Reddit Clone
       </td>
       <td>
       </td>
@@ -63,7 +87,7 @@ Week 1
       </td>
       <td>
       </td>
-      <td>
+      <td>Reddit Clone
       </td>
       <td>
       </td>

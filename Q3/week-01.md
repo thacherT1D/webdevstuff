@@ -14,20 +14,12 @@ Week 1
   </thead>
   <tbody>
     <tr>
-      <td rowspan="2">Monday</td>
-      <td rowspan="2"><a href=""></a>
+      <td rowspan="1">Monday</td>
+      <td rowspan="1"><a href=""></a>
       </td>
-      <td>Intro to Algorithms
+      <td><a href="https://github.com/gSchool/angular-curriculum/blob/master/Unit-1/01-intro-and-setup.md">Intro to Client Framework + Angular + 2-way binding + Project Structure</a>
       </td>
-      <td>
-      </td>
-      <td>
-      </td>
-    </tr>
-    <tr>
-      <td><a href="https://github.com/gSchool/problem-solving-curriculum/blob/master/Solve%20It/Session%201.md">Solve It!  Session 1</a>
-      </td>
-      <td>
+      <td>Two Way Data Binding
       </td>
       <td>
       </td>
@@ -36,9 +28,9 @@ Week 1
       <td rowspan="1">Tuesday</td>
       <td rowspan="1"><a href=""></a>
       </td>
-      <td><a href="https://github.com/gSchool/problem-solving-curriculum/blob/master/Solve%20It/Session%202.md">Solve It!  Session 2</a>
+      <td><a href="https://github.com/gSchool/angular-curriculum/blob/master/Unit-1/04-expressions-and-filters.md">Angular Views (Filters/Expressions), Built In Directives, Custom Filters</a>
       </td>
-      <td>
+      <td><a href="https://github.com/gSchool/angular-curriculum/blob/master/Unit-1/05-built-in-directives.md">Camera Shop</a>
       </td>
       <td>
       </td>
@@ -47,7 +39,18 @@ Week 1
       <td rowspan="1">Wednesday</td>
       <td rowspan="1"><a href=""></a>
       </td>
-      <td><a href="https://github.com/gSchool/problem-solving-curriculum/blob/master/Solve%20It/Session%203.md">Solve It!  Session 3</a>
+      <td><a href="https://github.com/gSchool/angular-curriculum/blob/master/Unit-1/06-intro-to-controllers.md">Angular Controllers (scope) + Separation of Logic</a>
+      </td>
+      <td>Camera Shop (Add to Cart)
+      </td>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <td rowspan="2">Thursday</td>
+      <td rowspan="2"><a href=""></a>
+      </td>
+      <td><a href="https://github.com/gSchool/angular-curriculum/blob/master/Unit-1/08-intro-to-events.md">Events + Form Validation</a>
       </td>
       <td>
       </td>
@@ -55,12 +58,9 @@ Week 1
       </td>
     </tr>
     <tr>
-      <td rowspan="1">Thursday</td>
-      <td rowspan="1"><a href=""></a>
+      <td><a href="https://github.com/gSchool/angular-curriculum/blob/master/Unit-1/09-form-validation.md">Events + Form Validation</a>
       </td>
-      <td><a href="https://github.com/gSchool/problem-solving-curriculum/blob/master/Solve%20It/Session%204.md">Solve It!  Session 4</a>
-      </td>
-      <td>
+      <td>User Registration Form with Password Strength Checker
       </td>
       <td>
       </td>
@@ -69,9 +69,9 @@ Week 1
       <td rowspan="1">Friday</td>
       <td rowspan="1"><a href=""></a>
       </td>
-      <td><a href="https://github.com/gSchool/problem-solving-curriculum/blob/master/Solve%20It/Session%205.md">Solve It!  Session 5</a>
+      <td><a href="https://github.com/gSchool/angular-curriculum/blob/master/Unit-2/02-digest-cycle.md">Digest Cycle + Associated Features (Promises, $setTimeout, etc.)</a>
       </td>
-      <td>
+      <td><a href="https://github.com/gSchool/angular-curriculum/blob/master/Unit-1/11-reddit-clone.md">Reddit Clone</a>
       </td>
       <td>
       </td>

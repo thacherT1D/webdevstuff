@@ -942,20 +942,12 @@ Week 11
   </thead>
   <tbody>
     <tr>
-      <td rowspan="2">Monday</td>
-      <td rowspan="2"><a href=""></a>
+      <td rowspan="1">Monday</td>
+      <td rowspan="1"><a href=""></a>
       </td>
-      <td>Intro to Algorithms
+      <td><a href="https://github.com/gSchool/angular-curriculum/blob/master/Unit-1/01-intro-and-setup.md">Intro to Client Framework + Angular + 2-way binding + Project Structure</a>
       </td>
-      <td>
-      </td>
-      <td>
-      </td>
-    </tr>
-    <tr>
-      <td><a href="https://github.com/gSchool/problem-solving-curriculum/blob/master/Solve%20It/Session%201.md">Solve It!  Session 1</a>
-      </td>
-      <td>
+      <td>Two Way Data Binding
       </td>
       <td>
       </td>
@@ -964,9 +956,9 @@ Week 11
       <td rowspan="1">Tuesday</td>
       <td rowspan="1"><a href=""></a>
       </td>
-      <td><a href="https://github.com/gSchool/problem-solving-curriculum/blob/master/Solve%20It/Session%202.md">Solve It!  Session 2</a>
+      <td><a href="https://github.com/gSchool/angular-curriculum/blob/master/Unit-1/04-expressions-and-filters.md">Angular Views (Filters/Expressions), Built In Directives, Custom Filters</a>
       </td>
-      <td>
+      <td><a href="https://github.com/gSchool/angular-curriculum/blob/master/Unit-1/05-built-in-directives.md">Camera Shop</a>
       </td>
       <td>
       </td>
@@ -975,7 +967,18 @@ Week 11
       <td rowspan="1">Wednesday</td>
       <td rowspan="1"><a href=""></a>
       </td>
-      <td><a href="https://github.com/gSchool/problem-solving-curriculum/blob/master/Solve%20It/Session%203.md">Solve It!  Session 3</a>
+      <td><a href="https://github.com/gSchool/angular-curriculum/blob/master/Unit-1/06-intro-to-controllers.md">Angular Controllers (scope) + Separation of Logic</a>
+      </td>
+      <td>Camera Shop (Add to Cart)
+      </td>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <td rowspan="2">Thursday</td>
+      <td rowspan="2"><a href=""></a>
+      </td>
+      <td><a href="https://github.com/gSchool/angular-curriculum/blob/master/Unit-1/08-intro-to-events.md">Events + Form Validation</a>
       </td>
       <td>
       </td>
@@ -983,12 +986,9 @@ Week 11
       </td>
     </tr>
     <tr>
-      <td rowspan="1">Thursday</td>
-      <td rowspan="1"><a href=""></a>
+      <td><a href="https://github.com/gSchool/angular-curriculum/blob/master/Unit-1/09-form-validation.md">Events + Form Validation</a>
       </td>
-      <td><a href="https://github.com/gSchool/problem-solving-curriculum/blob/master/Solve%20It/Session%204.md">Solve It!  Session 4</a>
-      </td>
-      <td>
+      <td>User Registration Form with Password Strength Checker
       </td>
       <td>
       </td>
@@ -997,9 +997,9 @@ Week 11
       <td rowspan="1">Friday</td>
       <td rowspan="1"><a href=""></a>
       </td>
-      <td><a href="https://github.com/gSchool/problem-solving-curriculum/blob/master/Solve%20It/Session%205.md">Solve It!  Session 5</a>
+      <td><a href="https://github.com/gSchool/angular-curriculum/blob/master/Unit-2/02-digest-cycle.md">Digest Cycle + Associated Features (Promises, $setTimeout, etc.)</a>
       </td>
-      <td>
+      <td><a href="https://github.com/gSchool/angular-curriculum/blob/master/Unit-1/11-reddit-clone.md">Reddit Clone</a>
       </td>
       <td>
       </td>
@@ -1022,12 +1022,28 @@ Week 12
   </thead>
   <tbody>
     <tr>
-      <td rowspan="1">Monday</td>
-      <td rowspan="1"><a href=""></a>
+      <td rowspan="3">Monday</td>
+      <td rowspan="3"><a href=""></a>
+      </td>
+      <td><a href="https://github.com/gSchool/angular-curriculum/blob/master/Unit-2/06-http-service.md">Http Service</a>
+      </td>
+      <td>Reddit Clone
       </td>
       <td>
       </td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/gSchool/angular-curriculum/blob/master/Unit-2/03-dependency-injection.md">Dependency Injection</a>
+      </td>
+      <td>Reddit Clone
+      </td>
       <td>
+      </td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/gSchool/angular-curriculum/blob/master/Unit-2/05-routing.md">Routing</a>
+      </td>
+      <td>Reddit Clone
       </td>
       <td>
       </td>
@@ -1036,9 +1052,9 @@ Week 12
       <td rowspan="1">Tuesday</td>
       <td rowspan="1"><a href=""></a>
       </td>
-      <td>
+      <td><a href="https://github.com/gSchool/angular-curriculum/blob/master/Unit-2/08-services.md">Building Services</a>
       </td>
-      <td>
+      <td>Reddit Clone
       </td>
       <td>
       </td>
@@ -1047,20 +1063,28 @@ Week 12
       <td rowspan="1">Wednesday</td>
       <td rowspan="1"><a href=""></a>
       </td>
-      <td>
+      <td>Review Services and Routing
       </td>
-      <td>
+      <td><a href="https://github.com/gSchool/angular-curriculum/blob/master/Unit-2/07-movie-search.app.md">Movie Search App</a>
       </td>
       <td>
       </td>
     </tr>
     <tr>
-      <td rowspan="1">Thursday</td>
-      <td rowspan="1"><a href=""></a>
+      <td rowspan="2">Thursday</td>
+      <td rowspan="2"><a href=""></a>
+      </td>
+      <td><a href="https://github.com/gSchool/angular-curriculum/blob/master/Unit-2/10-custom-directives-part1.md">Custom Directives - Basics</a>
+      </td>
+      <td>Reddit Clone
       </td>
       <td>
       </td>
-      <td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/gSchool/angular-curriculum/blob/master/Unit-2/11-custom-directives-part2.md">Custom Directives - DOM</a>
+      </td>
+      <td>Reddit Clone
       </td>
       <td>
       </td>
@@ -1071,7 +1095,7 @@ Week 12
       </td>
       <td>
       </td>
-      <td>
+      <td>Reddit Clone
       </td>
       <td>
       </td>
@@ -1097,7 +1121,7 @@ Week 13
       <td rowspan="1">Monday</td>
       <td rowspan="1"><a href=""></a>
       </td>
-      <td>
+      <td><a href="https://github.com/gSchool/angular-curriculum/blob/master/Unit-3/01-express-postgres-angular.md">Angular w/ Express</a>
       </td>
       <td>
       </td>
@@ -1108,7 +1132,7 @@ Week 13
       <td rowspan="1">Tuesday</td>
       <td rowspan="1"><a href=""></a>
       </td>
-      <td>
+      <td><a href="https://github.com/gSchool/angular-curriculum/blob/master/Unit-3/04-fullstack-crud.md">Single-Page CRUD Application w/ Server</a>
       </td>
       <td>
       </td>
@@ -1119,9 +1143,9 @@ Week 13
       <td rowspan="1">Wednesday</td>
       <td rowspan="1"><a href=""></a>
       </td>
-      <td>
+      <td><a href="https://github.com/gSchool/angular-curriculum/blob/master/Unit-3/06-token-based-auth.md">Token-Based Authentication</a>
       </td>
-      <td>
+      <td><a href="https://github.com/gSchool/angular-curriculum/blob/master/Unit-3/09-unit-3-assessment.md">Reddit Clone w/ Auth</a>
       </td>
       <td>
       </td>
@@ -1132,7 +1156,7 @@ Week 13
       </td>
       <td>
       </td>
-      <td>
+      <td><a href="https://github.com/gSchool/angular-curriculum/blob/master/Unit-3/09-unit-3-assessment.md">Reddit Clone w/ Auth</a>
       </td>
       <td>
       </td>
@@ -1143,7 +1167,7 @@ Week 13
       </td>
       <td>
       </td>
-      <td>
+      <td><a href="https://github.com/gSchool/angular-curriculum/blob/master/Unit-3/09-unit-3-assessment.md">Reddit-Clone w/ Auth</a>
       </td>
       <td>
       </td>
@@ -1169,7 +1193,7 @@ Week 14
       <td rowspan="1">Monday</td>
       <td rowspan="1"><a href=""></a>
       </td>
-      <td>
+      <td>Unfamiliar Environments
       </td>
       <td>
       </td>
@@ -1180,7 +1204,7 @@ Week 14
       <td rowspan="1">Tuesday</td>
       <td rowspan="1"><a href=""></a>
       </td>
-      <td>
+      <td>Unfamiliar Environments
       </td>
       <td>
       </td>
@@ -1191,7 +1215,7 @@ Week 14
       <td rowspan="1">Wednesday</td>
       <td rowspan="1"><a href=""></a>
       </td>
-      <td>
+      <td>Unfamiliar Environments
       </td>
       <td>
       </td>
@@ -1202,7 +1226,7 @@ Week 14
       <td rowspan="1">Thursday</td>
       <td rowspan="1"><a href=""></a>
       </td>
-      <td>
+      <td>Unfamiliar Environments
       </td>
       <td>
       </td>
@@ -1213,7 +1237,7 @@ Week 14
       <td rowspan="1">Friday</td>
       <td rowspan="1"><a href=""></a>
       </td>
-      <td>
+      <td>Unfamiliar Environments
       </td>
       <td>
       </td>
@@ -1241,7 +1265,7 @@ Week 15
       <td rowspan="1">Monday</td>
       <td rowspan="1"><a href=""></a>
       </td>
-      <td>
+      <td>Group New Technology Project
       </td>
       <td>
       </td>
@@ -1310,10 +1334,18 @@ Week 16
   </thead>
   <tbody>
     <tr>
-      <td rowspan="1">Monday</td>
-      <td rowspan="1"><a href="">Angular</a>
+      <td rowspan="2">Monday</td>
+      <td rowspan="2"><a href=""></a>
+      </td>
+      <td>Intro to Algorithms
       </td>
       <td>
+      </td>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/gSchool/problem-solving-curriculum/blob/master/Solve%20It/Session%201.md">Solve It!  Session 1</a>
       </td>
       <td>
       </td>
@@ -1324,7 +1356,7 @@ Week 16
       <td rowspan="1">Tuesday</td>
       <td rowspan="1"><a href=""></a>
       </td>
-      <td>
+      <td><a href="https://github.com/gSchool/problem-solving-curriculum/blob/master/Solve%20It/Session%202.md">Solve It!  Session 2</a>
       </td>
       <td>
       </td>
@@ -1335,7 +1367,7 @@ Week 16
       <td rowspan="1">Wednesday</td>
       <td rowspan="1"><a href=""></a>
       </td>
-      <td>
+      <td><a href="https://github.com/gSchool/problem-solving-curriculum/blob/master/Solve%20It/Session%203.md">Solve It!  Session 3</a>
       </td>
       <td>
       </td>
@@ -1346,7 +1378,7 @@ Week 16
       <td rowspan="1">Thursday</td>
       <td rowspan="1"><a href=""></a>
       </td>
-      <td>
+      <td><a href="https://github.com/gSchool/problem-solving-curriculum/blob/master/Solve%20It/Session%204.md">Solve It!  Session 4</a>
       </td>
       <td>
       </td>
@@ -1357,7 +1389,7 @@ Week 16
       <td rowspan="1">Friday</td>
       <td rowspan="1"><a href=""></a>
       </td>
-      <td>
+      <td><a href="https://github.com/gSchool/problem-solving-curriculum/blob/master/Solve%20It/Session%205.md">Solve It!  Session 5</a>
       </td>
       <td>
       </td>

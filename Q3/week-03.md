@@ -17,7 +17,7 @@ Week 1
       <td rowspan="1">Monday</td>
       <td rowspan="1"><a href=""></a>
       </td>
-      <td>
+      <td><a href="https://github.com/gSchool/angular-curriculum/blob/master/Unit-3/01-express-postgres-angular.md">Angular w/ Express</a>
       </td>
       <td>
       </td>
@@ -28,7 +28,7 @@ Week 1
       <td rowspan="1">Tuesday</td>
       <td rowspan="1"><a href=""></a>
       </td>
-      <td>
+      <td><a href="https://github.com/gSchool/angular-curriculum/blob/master/Unit-3/04-fullstack-crud.md">Single-Page CRUD Application w/ Server</a>
       </td>
       <td>
       </td>
@@ -39,9 +39,9 @@ Week 1
       <td rowspan="1">Wednesday</td>
       <td rowspan="1"><a href=""></a>
       </td>
-      <td>
+      <td><a href="https://github.com/gSchool/angular-curriculum/blob/master/Unit-3/06-token-based-auth.md">Token-Based Authentication</a>
       </td>
-      <td>
+      <td><a href="https://github.com/gSchool/angular-curriculum/blob/master/Unit-3/09-unit-3-assessment.md">Reddit Clone w/ Auth</a>
       </td>
       <td>
       </td>
@@ -52,7 +52,7 @@ Week 1
       </td>
       <td>
       </td>
-      <td>
+      <td><a href="https://github.com/gSchool/angular-curriculum/blob/master/Unit-3/09-unit-3-assessment.md">Reddit Clone w/ Auth</a>
       </td>
       <td>
       </td>
@@ -63,7 +63,7 @@ Week 1
       </td>
       <td>
       </td>
-      <td>
+      <td><a href="https://github.com/gSchool/angular-curriculum/blob/master/Unit-3/09-unit-3-assessment.md">Reddit-Clone w/ Auth</a>
       </td>
       <td>
       </td>
