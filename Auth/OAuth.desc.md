@@ -144,8 +144,8 @@ Next, choose the default permissions for LinkedIn to ask your users to grant you
 
 **NOTE:** Additional permissions can also be explicitly requested during the authorization step.
 
-- [✓] `r_basicprofile`
-- [✓] `r_emailaddress`
+- ✓ `r_basicprofile`
+- ✓ `r_emailaddress`
 
 Then, add the following URL to your application's OAuth 2.0 authorized redirect URLs.
 
