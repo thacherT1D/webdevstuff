@@ -17,9 +17,9 @@ Week 1
       <td rowspan="1">Monday</td>
       <td rowspan="1"><a href=""></a>
       </td>
-      <td>Group New Technology Project
-      </td>
       <td>
+      </td>
+      <td>Group New Technology Project
       </td>
       <td>
       </td>
@@ -30,7 +30,7 @@ Week 1
       </td>
       <td>
       </td>
-      <td>
+      <td>Group New Technology Project
       </td>
       <td>
       </td>
@@ -41,7 +41,7 @@ Week 1
       </td>
       <td>
       </td>
-      <td>
+      <td>Group New Technology Project
       </td>
       <td>
       </td>
@@ -52,7 +52,7 @@ Week 1
       </td>
       <td>
       </td>
-      <td>
+      <td>Group New Technology Project
       </td>
       <td>
       </td>
@@ -63,7 +63,7 @@ Week 1
       </td>
       <td>
       </td>
-      <td>
+      <td>Group New Technology Project
       </td>
       <td>
       </td>

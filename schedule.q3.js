@@ -225,8 +225,8 @@ module.exports = [
     warmup: { text: "", url: "" },
     activities: [
       {
-        article: {text: "Group New Technology Project", url: ""},
-        assignment: {text: "", url: ""},
+        article: {text: "", url: ""},
+        assignment: {text: "Group New Technology Project", url: ""},
       },
     ],
   },
@@ -236,7 +236,7 @@ module.exports = [
     activities: [
       {
         article: {text: "", url: ""},
-        assignment: {text: "", url: ""},
+        assignment: {text: "Group New Technology Project", url: ""},
       },
     ],
   },
@@ -246,7 +246,7 @@ module.exports = [
     activities: [
       {
         article: {text: "", url: ""},
-        assignment: {text: "", url: ""},
+        assignment: {text: "Group New Technology Project", url: ""},
       },
     ],
   },
@@ -256,7 +256,7 @@ module.exports = [
     activities: [
       {
         article: {text: "", url: ""},
-        assignment: {text: "", url: ""},
+        assignment: {text: "Group New Technology Project", url: ""},
       },
     ],
   },
@@ -266,7 +266,7 @@ module.exports = [
     activities: [
       {
         article: {text: "", url: ""},
-        assignment: {text: "", url: ""},
+        assignment: {text: "Group New Technology Project", url: ""},
       },
     ],
   },
