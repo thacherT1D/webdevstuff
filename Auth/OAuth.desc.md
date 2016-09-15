@@ -341,6 +341,7 @@ app.listen(8000);
 - [LinkedIn Developer Network - Authenticating with OAuth 2.0](https://developer.linkedin.com/docs/oauth2)
 - [IETF - The OAuth 2.0 Authorization Framework](https://tools.ietf.org/html/rfc6749)
 - [Wikipedia - OAuth](https://en.wikipedia.org/wiki/OAuth)
+- [Aaron Parecki - OAuth 2 Simplified](https://aaronparecki.com/2012/07/29/2/oauth2-simplified)
 
 ## Assignment:
 
