@@ -335,9 +335,12 @@ app.listen(8000);
 
 ## Resources
 
-[Passport](http://passportjs.org/docs)  
-[passport-linkedin](https://github.com/jaredhanson/passport-linkedin)  
-[Linkedin Passport Example](https://github.com/jaredhanson/passport-linkedin/blob/master/examples/login/app.js)  
+- [Passport - documentation](http://passportjs.org/docs)  
+- [GitHub - passport-linkedin](https://github.com/jaredhanson/passport-linkedin)  
+- [Linkedin Passport Example](https://github.com/jaredhanson/passport-linkedin/blob/master/examples/login/app.js)  
+- [LinkedIn Developer Network - Authenticating with OAuth 2.0](https://developer.linkedin.com/docs/oauth2)
+- [IETF - The OAuth 2.0 Authorization Framework](https://tools.ietf.org/html/rfc6749)
+- [Wikipedia - OAuth](https://en.wikipedia.org/wiki/OAuth)
 
 ## Assignment:
 
