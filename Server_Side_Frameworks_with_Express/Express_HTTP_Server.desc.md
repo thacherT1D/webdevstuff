@@ -748,6 +748,12 @@ You should see a similar HTTP response.
 
 ![](https://i.imgur.com/ySdlgI9.png)
 
+**NOTE** Want to send a non-string value in HTTPie? Simply use the `:=` operator with any JSON as the value.
+
+```shell
+http POST localhost:8000/guests name=Kate age:=4
+```
+
 This is the hand-built body parsing middleware. Now we'll convert this to use the `body-parser` third-party middleware.
 
 **NOTE:** Before you install `body-parser`, make sure your shell's working directory is the `party` directory.
