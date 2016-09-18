@@ -11,37 +11,39 @@
 
 The **Knex migration system** allows developers to automate the management of database tables in JavaScript. At the heart of the system are migration files. When defined, a migration file moves the database up and down, or forwards and backwards, through a set of changes applied to a single table.
 
-Here's a diagram representing two Knex migration files that manage the `artists` and `tracks` tables respectively.
+Here's a diagram representing two Knex migration files that manage the `tracks` and `users` tables respectively.
 
 ```text
 ┌───────────────────────────┐                      ┌───────────────────────────┐
 │                           │                      │                           │
 │                           │──── up / forward ───▶│                           │
 │                           │                      │                           │
-│ 20160621141318_artists.js │                      │ 20160621141319_tracks.js  │
+│ 20160621141318_tracks.js  │                      │  20160621141319_users.js  │
 │                           │                      │                           │
 │                           │◀── down / backward ──│                           │
 │                           │                      │                           │
 └───────────────────────────┘                      └───────────────────────────┘
 ```
 
-The name of a migration file is prefixed with a UTC timestamp. That way, the Knex migration system can identify and order the migrations based on when the files were created and what tables they affect.
+The name of a migration file starts with a UTC timestamp and ends with a table name. That way, the Knex migration system can identify and order the migrations based on when the files were created and what tables they affect.
 
-Here's an example what the contents of the `20160621141318_artists.js` migration file might look like.
+Here's an example what the contents of the `20160621141318_tracks.js` migration file might look like.
 
 ```javascript
 'use strict';
 
 exports.up = function(knex) {
-  return knex.schema.createTable('artists', (table) => {
+  return knex.schema.createTable('tracks', (table) => {
     table.increments();
-    table.string('name').notNullable().defaultTo('');
+    table.string('title').notNullable().defaultTo('');
+    table.string('artist').notNullable().defaultTo('');
+    table.integer('likes').notNullable().defaultTo(0);
     table.timestamps(true, true);
-  })
+  });
 };
 
 exports.down = function(knex) {
-  return knex.schema.dropTable('artists');
+  return knex.schema.dropTable('tracks');
 };
 ```
 
@@ -50,9 +52,11 @@ As you can see, a migration file exports two functions—`up()` and `down()`. Th
 When the database is migrated forward, the `up()` function is translated into the following SQL command.
 
 ```sql
-CREATE TABLE artists (
+CREATE TABLE tracks (
   id serial PRIMARY KEY,
-  name varchar(255) NOT NULL DEFAULT '',
+  title varchar(255) NOT NULL DEFAULT '',
+  artist varchar(255) NOT NULL DEFAULT '',
+  likes integer NOT NULL DEFAULT 0,
   created_at timestamp with time zone NOT NULL DEFAULT now(),
   updated_at timestamp with time zone NOT NULL DEFAULT now()
 );
@@ -83,28 +87,16 @@ Turn to a neighbor and talk about when it might be useful to consistently create
 ## How do you use Knex to migrate a PostgreSQL database?
 
 ```text
-┌───────────────────────────────────────────────────────────────┐
-│                            artists                            │
-├─────────────┬─────────────────────────┬───────────────────────┤
-│id           │serial                   │primary key            │
-│name         │varchar(255)             │not null default ''    │
-│created_at   │timestamp with time zone │not null default now() │
-│updated_at   │timestamp with time zone │not null default now() │
-└─────────────┴─────────────────────────┴───────────────────────┘
-                                ┼
-                                │
-                                ○
-                               ╱│╲
-┌──────────────────────────────────────────────────────────────────────────────────────────┐
-│                                          tracks                                          │
-├─────────────┬─────────────────────────┬──────────────────────────────────────────────────┤
-│id           │serial                   │primary key                                       │
-│artist_id    │integer                  │not null references authors(id) on delete cascade │
-│title        │varchar(255)             │not null default ''                               │
-│likes        │integer                  │not null default 0                                │
-│created_at   │timestamp with time zone │not null default now()                            │
-│updated_at   │timestamp with time zone │not null default now()                            │
-└─────────────┴─────────────────────────┴──────────────────────────────────────────────────┘
+┌─────────────────────────────────────────────────────────────┐
+│                           tracks                            │
+├───────────┬─────────────────────────┬───────────────────────┤
+│id         │serial                   │primary key            │
+│title      │varchar(255)             │not null default ''    │
+│artist     │varchar(255)             │not null default ''    │
+│likes      │integer                  │not null default 0     │
+│created_at │timestamp with time zone │not null default now() │
+│updated_at │timestamp with time zone │not null default now() │
+└───────────┴─────────────────────────┴───────────────────────┘
 ```
 
 ```shell
@@ -158,10 +150,10 @@ module.exports = {
 npm run knex migrate:currentVersion
 ```
 
-Create a new migration with the name create_albums
+Create a new migration.
 
 ```shell
-npm run knex migrate:make artists
+npm run knex migrate:make tracks
 ```
 
 ```shell
@@ -179,15 +171,17 @@ Migrations are how we define and update our database schema.
 'use strict';
 
 exports.up = function(knex) {
-  return knex.schema.createTable('artists', (table) => {
+  return knex.schema.createTable('tracks', (table) => {
     table.increments();
-    table.string('name').notNullable().defaultTo('');
+    table.string('title').notNullable().defaultTo('');
+    table.string('artist').notNullable().defaultTo('');
+    table.integer('likes').notNullable().defaultTo(0);
     table.timestamps(true, true);
-  })
+  });
 };
 
 exports.down = function(knex) {
-  return knex.schema.dropTable('artists');
+  return knex.schema.dropTable('tracks');
 };
 ```
 
@@ -245,8 +239,19 @@ psql trackify_dev -c '\d knex_migrations_lock'
 psql trackify_dev -c 'SELECT * FROM knex_migrations_lock;'
 ```
 
+```text
+┌─────────────────────────────────────────────────────────────┐
+│                            users                            │
+├───────────┬─────────────────────────┬───────────────────────┤
+│id         │serial                   │primary key            │
+│email      │varchar(255)             │not null unique index  │
+│created_at │timestamp with time zone │not null default now() │
+│updated_at │timestamp with time zone │not null default now() │
+└───────────┴─────────────────────────┴───────────────────────┘
+```
+
 ```shell
-npm run knex migrate:make tracks
+npm run knex migrate:make users
 ```
 
 ```shell
@@ -257,22 +262,15 @@ ls -hal migrations
 'use strict';
 
 exports.up = function(knex) {
-  return knex.schema.createTable('tracks', (table) => {
+  return knex.schema.createTable('users', (table) => {
     table.increments();
-    table.integer('artist_id')
-      .notNullable()
-      .references('id')
-      .inTable('artists')
-      .onDelete('CASCADE')
-      .index();
-    table.string('title').notNullable().defaultTo('');
-    table.integer('likes').notNullable().defaultTo(0);
+    table.string('email').notNullable().unique();
     table.timestamps(true, true);
   });
 };
 
 exports.down = function(knex) {
-  return knex.schema.dropTable('tracks');
+  return knex.schema.dropTable('users');
 };
 ```
 
@@ -335,7 +333,7 @@ Most web application start with an initial set of table rows. It's useful to be 
 ## How do you use Knex to seed a PostgreSQL database?
 
 ```shell
-npm run knex seed:make 1_artists
+npm run knex seed:make 1_tracks
 ```
 
 ```shell
@@ -347,15 +345,42 @@ ls -hal seeds
 'use strict';
 
 exports.seed = function(knex) {
-  return knex('artists').del()
+  return knex('tracks').del()
     .then(() => {
-      return knex('artists').insert([{
+      return knex('tracks').insert([{
         id: 1,
-        name: 'The Beatles'
+        title: 'Here Comes the Sun',
+        artist: 'The Beatles',
+        likes: 28808736,
+        created_at: new Date('2016-06-26 14:26:16 UTC'),
+        updated_at: new Date('2016-06-26 14:26:16 UTC')
       }, {
         id: 2,
-        name: 'Adele'
+        title: 'Hey Jude',
+        artist: 'The Beatles',
+        likes: 20355655,
+        created_at: new Date('2016-06-26 14:26:16 UTC'),
+        updated_at: new Date('2016-06-26 14:26:16 UTC')
+      }, {
+        id: 3,
+        title: 'Send My Love',
+        artist: 'Adele',
+        likes: 39658471,
+        created_at: new Date('2016-06-26 14:26:16 UTC'),
+        updated_at: new Date('2016-06-26 14:26:16 UTC')
+      }, {
+        id: 4,
+        title: 'Hello',
+        artist: 'Adele',
+        likes: 538300301,
+        created_at: new Date('2016-06-26 14:26:16 UTC'),
+        updated_at: new Date('2016-06-26 14:26:16 UTC')
       }]);
+    })
+    .then(() => {
+      return knex.raw(
+        "SELECT setval('tracks_id_seq', (SELECT MAX(id) FROM tracks));"
+      );
     });
 };
 ```
@@ -365,7 +390,7 @@ npm run knex seed:run
 ```
 
 ```shell
-psql trackify_dev -c 'SELECT * FROM artists;'
+psql trackify_dev -c 'SELECT * FROM tracks;'
 ```
 
 ```shell
@@ -373,12 +398,11 @@ npm run knex seed:run
 ```
 
 ```shell
-psql trackify_dev -c 'SELECT * FROM artists;'
+psql trackify_dev -c 'SELECT * FROM tracks;'
 ```
 
-
 ```shell
-npm run knex seed:make 2_tracks
+npm run knex seed:make 2_users
 ```
 
 ```shell
@@ -389,49 +413,19 @@ ls -hal seeds
 'use strict';
 
 exports.seed = function(knex) {
-  return knex('tracks').del()
+  return knex('users').del()
     .then(() => {
-      return knex('tracks').insert([{
+      return knex('users').insert([{
         id: 1,
-        artist_id: 1,
-        title: 'Here Comes the Sun',
-        likes: 28808736
-      }, {
-        id: 2,
-        artist_id: 1,
-        title: 'Hey Jude',
-        likes: 20355655
-      }, {
-        id: 3,
-        artist_id: 1,
-        title: 'Come Together',
-        likes: 24438428
-      }, {
-        id: 4,
-        artist_id: 1,
-        title: 'Yesterday',
-        likes: 21626039
-      }, {
-        id: 5,
-        artist_id: 2,
-        title: 'Send My Love',
-        likes: 39658471
-      }, {
-        id: 6,
-        artist_id: 2,
-        title: 'Hello',
-        likes: 538300301
-      }, {
-        id: 7,
-        artist_id: 2,
-        title: 'When We Were Young',
-        likes: 112487182
-      }, {
-        id: 8,
-        artist_id: 2,
-        title: 'Someone Like You',
-        likes: 112487182
+        email: '2pac@shakur.com',
+        created_at: new Date('2016-06-29 14:26:16 UTC'),
+        updated_at: new Date('2016-06-29 14:26:16 UTC')
       }]);
+    })
+    .then(() => {
+      return knex.raw(
+        "SELECT setval('users_id_seq', (SELECT MAX(id) FROM users));"
+      );
     });
 };
 ```
@@ -441,7 +435,7 @@ npm run knex seed:run
 ```
 
 ```shell
-psql trackify_dev -c 'SELECT * FROM tracks;'
+psql trackify_dev -c 'SELECT * FROM users;'
 ```
 
 ```shell
@@ -449,7 +443,7 @@ npm run knex seed:run
 ```
 
 ```shell
-psql trackify_dev -c 'SELECT * FROM tracks;'
+psql trackify_dev -c 'SELECT * FROM users;'
 ```
 
 ```shell
@@ -464,3 +458,16 @@ git status
 git add .
 git commit -m 'Initial commit'
 ```
+
+## Assignment
+
+- [Galvanize Bookshelf](https://github.com/gSchool/galvanize-bookshelf#galvanize-bookshelf)
+- [Galvanize Bookshelf - Knex Migrations and Seeds](https://github.com/gSchool/galvanize-bookshelf/blob/master/1_migrations_seeds.md)
+
+## Resources
+
+- [Knex.js - Migrations](http://knexjs.org/#Migrations)
+- [Knex.js - Schema Builder](http://knexjs.org/#Schema)
+- [Knex.js - Schema Builder - Schema Building](http://knexjs.org/#Schema-Building)
+- [Knex.js - Schema Builder - Chainable Methods](http://knexjs.org/#Chainable)
+- [Knex.js - Seeds](http://knexjs.org/#Seeds)
