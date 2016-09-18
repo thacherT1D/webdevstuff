@@ -748,7 +748,7 @@ You should see a similar HTTP response.
 
 ![](https://i.imgur.com/ySdlgI9.png)
 
-**NOTE** Want to send a non-string value in HTTPie? Simply use the `:=` operator with any JSON as the value.
+**NOTE:** Want to send a non-string value in HTTPie? Simply use the `:=` operator with any JSON as the value.
 
 ```shell
 http POST localhost:8000/guests name=Kate age:=4
