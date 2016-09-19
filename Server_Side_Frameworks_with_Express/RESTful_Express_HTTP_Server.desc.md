@@ -144,11 +144,11 @@ app.get('/guests/:id', (req, res) => {
 app.post('/guests', (req, res) => {
   fs.readFile(guestsPath, 'utf8', (readErr, guestsJSON) => {
     if (readErr) {
-      console.error(err.stack);
+      console.error(readErr.stack);
       return res.sendStatus(500);
     }
 
-    cosnt guests = JSON.parse(guestsJSON);
+    const guests = JSON.parse(guestsJSON);
     const guest = req.body.name;
 
     if (!guest) {
@@ -364,7 +364,7 @@ app.get('/guests/:id', (req, res) => {
 app.post('/guests', (req, res) => {
   fs.readFile(guestsPath, 'utf8', (readErr, guestsJSON) => {
     if (readErr) {
-      console.error(err.stack);
+      consoll.error(readErr.stack);
       return res.sendStatus(500);
     }
 
@@ -394,7 +394,7 @@ app.post('/guests', (req, res) => {
 app.put('/guests/:id', (req, res) => {
   fs.readFile(guestsPath, 'utf8', (readErr, guestsJSON) => {
     if (readErr) {
-      console.error(err.stack);
+      console.error(readErr.stack);
       return res.sendStatus(500);
     }
 
@@ -417,7 +417,7 @@ app.put('/guests/:id', (req, res) => {
 
     fs.writeFile(guestsPath, newGuestsJSON, (writeErr) => {
       if (writeErr) {
-        console.error(err.stack);
+        console.error(writeErr.stack);
         return res.sendStatus(500);
       }
 
@@ -430,7 +430,7 @@ app.put('/guests/:id', (req, res) => {
 app.delete('/guests/:id', (req, res) => {
   fs.readFile(guestsPath, 'utf8', (readErr, guestsJSON) => {
     if (readErr) {
-      console.error(err.stack);
+      console.error(readErr.stack);
       return res.sendStatus(500);
     }
 
