@@ -252,7 +252,7 @@ Google `npm dotenv` and read the docs to help you get up and running with a `.en
 Also, remember the __Entry Ticket__ list above? Visit the Learning Experiences listed there to review previous topics used here.
 
 
-### Knex is not the only ORM for Node and Postres. Take a minute to explore some of the other options available to developers:
+### Knex is not the only ORM for Node and Postgres. Take a minute to explore some of the other options available to developers:
 
 - https://github.com/robconery/massive-js
 - Links:
