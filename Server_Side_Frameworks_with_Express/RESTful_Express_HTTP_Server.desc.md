@@ -54,11 +54,12 @@ Once the operation is complete, the RESTful server would send a specific HTTP re
 
 <br>
 
-### Exercise
+### 💪 Exercise
 
 A **safe** REST action is one that doesn't modify any resources. Turn to a partner and see you can determine which REST actions from the above example are safe. Afterwards, explain what REST is to your partner in your own words.
 
 <hr>
+<br>
 
 ## Why is REST so important?
 
@@ -66,11 +67,12 @@ REST is one way of structuring client-server HTTP communication. However, it's a
 
 <br>
 
-### Exercise
+### 💪 Exercise
 
 Think about what scenarios would cause you to add or remove a RESTful client or server. After ten seconds, I'll cold call on a few of you for an answer.
 
 <hr>
+<br>
 
 ## How do you build a RESTful Express server?
 
@@ -302,6 +304,9 @@ And you should see something like this.
 
 ![](https://i.imgur.com/GFK6Zvv.png)
 
+<hr>
+<br>
+
 Next, add and commit the latest changes to the `party` project's `rest` branch.
 
 ```shell
@@ -485,6 +490,9 @@ And you should see something like this.
 
 ![](https://i.imgur.com/TJCRysx.png)
 
+<hr>
+<br>
+
 Next, add and commit the latest changes to the `party` project's `rest` branch.
 
 ```shell
@@ -556,13 +564,17 @@ To destroy a guest resource, send the following RESTful HTTP request.
 http DELETE USERNAME-party.herokuapp.com/guests/0
 ```
 
-## Assignment
+<hr>
+<br>
+
+### 📖 Homework
 
 [Pet Shop - RESTful Express HTTP Server](https://github.com/gSchool/fs-pet-shop/blob/master/4_rest.md)
 
-## Resources
+#### 📚 Resources
 
-- [Express 4.x - API Reference: Request](http://expressjs.com/en/4x/api.html#req)
-- [Express 4.x - API Reference: Response](http://expressjs.com/en/4x/api.html#res)
+- [RESTful API Design 🎥](http://www.youtube.com/watch?v=QpAhXa12xvU&t=1m15s)
 - [API handyman - Do you really know why you prefer REST over RPC?](https://apihandyman.io/do-you-really-know-why-you-prefer-rest-over-rpc/) - Comparing REST to RPC
 - [Startifact - GraphQL and REST](http://blog.startifact.com/posts/graphql-and-rest.html) - Comparing REST to GraphQL
+- [Express 4.x - API Reference: Request](http://expressjs.com/en/4x/api.html#req)
+- [Express 4.x - API Reference: Response](http://expressjs.com/en/4x/api.html#res)
