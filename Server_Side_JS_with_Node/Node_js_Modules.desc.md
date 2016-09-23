@@ -15,6 +15,14 @@ As far as the Node.js is concerned, you could write all of your JavaScript code 
 
 In Node.js, a **module** is just a file that contains JavaScript code. And the module system in Node.js allows you to take pieces of code, split them out into separate files, and easily reuse them in different places. For example, imagine you have a `main.js` module and an `arithmetic.js` module. In this example, the `main.js` module will require some functionality from the `arithmetic.js` module.
 
+```shell
+$ mkdir modules_test
+$ cd modules_test
+$ touch main.js
+```
+
+In `main.js`, type the following:
+
 ```javascript
 'use strict';
 
@@ -40,13 +48,13 @@ The function that's exported effectively replaces the `require()` function. Anot
 
 ### Exercise
 
-Turn to a partner and, in your own words, explain what a Node.js module is. Explain to each other how the `module.exports` object works and how the `require()` function works.
+Turn to a partner and, explain in your own words how the `module.exports` object works and how the `require()` function works in relation to it.
 
 ## How do you split existing code into two modules?
 
 Here are the steps to split existing code into two modules.
 
-1. Identify which piece of code to export.
+1. Identify which piece of code to export. Typically this is code you see duplicated across multiple
 1. Create a new module.
 1. Move that code to the new module.
 1. Assign that code to the `module.exports` object.
@@ -58,17 +66,7 @@ Modules can export any value such as a function, an object, a string, a number, 
 
 To export a function, you simply assign the function to the `module.exports` object. This is exactly what you did in the first example.
 
-Because the `require()` function just returns a value, and the `arithmetic.js` module exports a function, you could immediately invoke that function in the `main.js` module like this.
-
-**NOTE:** Sometimes this is handy and sometimes this makes the code hard to read.
-
-```javascript
-'use strict';
-
-const result = require('./arithmetic')(1, 2);
-
-console.log(result);
-```
+Because the `require()` function just returns a value, and the `arithmetic.js` module exports a function, you could immediately invoke that function in the `main.js`.
 
 ### Export an object
 
@@ -95,46 +93,16 @@ const result = arithmetic.add(1, 2);
 console.log(result);
 ```
 
-Here, the `arithmetic` variable references the entire object that's being exported. And so the `add()` method references the function that's part of the object being exported.
-
-When you're exporting objects, there are three ways you can go about it. The first way is to assign a new object to the `module.exports` property.
+Here, the `arithmetic` variable references the entire object that's being exported. And so the `add()` method references the function that's part of the object being exported. ES6 offers a way to save only a particular property of an object called *destructuring assignment*.
 
 ```javascript
 'use strict';
 
-// version 1
-module.exports = {
-	add: (a, b) => {
-		return a + b;
-	}
-};
+const { add } = require('./arithmetic');
+const result = add(1, 2);
+
+console.log(result);
 ```
-
-Because `module.exports` is an object by default, the second way is to assign a value directly to one of its properties.
-
-```javascript
-'use strict';
-
-// version 2
-module.exports.add = (a, b) => {
-	return a + b;
-};
-```
-
-And because `exports` as a shorthand for `module.exports`, the third way is to assign a value directly to one of its properties.
-
-**NOTE:** In Node.js, `export` is a global variable that references the `module.export` object by default.
-
-```javascript
-'use strict';
-
-// version 3
-exports.add = (a, b) => {
-	return a + b;
-};
-```
-
-Each of the above versions of `arithmetic.js` are equivalent.
 
 ## What are the three kinds of modules?
 
