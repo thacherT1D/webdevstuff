@@ -369,7 +369,7 @@ app.get('/guests/:id', (req, res) => {
 app.post('/guests', (req, res) => {
   fs.readFile(guestsPath, 'utf8', (readErr, guestsJSON) => {
     if (readErr) {
-      consoll.error(readErr.stack);
+      console.error(readErr.stack);
       return res.sendStatus(500);
     }
 
