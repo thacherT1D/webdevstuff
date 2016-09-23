@@ -335,7 +335,7 @@ Week 3
       </td>
       <td>
       </td>
-      <td><a href="https://github.com/gSchool/galvanize-delivers/">Galanize Delivers</a>
+      <td><a href="https://github.com/gSchool/galvanize-delivers/">Galvanize Delivers</a>
       </td>
       <td>
       </td>

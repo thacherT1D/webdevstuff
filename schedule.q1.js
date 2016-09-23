@@ -188,7 +188,7 @@ module.exports = [
     warmup: { text: "Word Scrambler", url: "https://github.com/gSchool/warmups/blob/master/typoglycemia/challenge.js" },
     activities: [
       {
-        assignment: { text: "Galanize Delivers", url: "https://github.com/gSchool/galvanize-delivers/" },
+        assignment: { text: "Galvanize Delivers", url: "https://github.com/gSchool/galvanize-delivers/" },
       },
       {
         article: { text: "Linting JavaScript", url: "https://github.com/gSchool/productivity-curriculum/blob/master/Misc/Linting.md" },
