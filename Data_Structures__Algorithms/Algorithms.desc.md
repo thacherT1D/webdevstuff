@@ -36,22 +36,20 @@ Let's think about the idea of an "algorithm". Say you have a problem that you ne
 
 In everyday programming, we're often putting together simple algorithms to perform simple tasks. Consider the following:
 
-- Ordering strings alphabetically
+- Searching for the definition of a word in the dictionary.
 - Finding out if a number is a prime number
-- Finding out if a number is a Harshad number
+- Ordering strings alphabetically
 - Searching an array of users: `[{name, lastSeen}]` to find the top 5 most recently logged in users.
-- Making a dictionary of users who share first names, and another of users who share last names
-- Determining who won in a game of Tic Tac Toe
+- Determining if there is a winner in a game of Tic Tac Toe
 
 For as many of the above problems as you can, instead of _writing code_, try to describe how to solve these in plain english. Use step-by-step instructions to describe, and make yourself a visualization of the problem that you can test your step by step instructions on.
 
 Now, for each set of instructions, find out the following:
 - Identify the input of your problem
-- Identify how to tell what the size of your input is (length of the array? Size of the number?)
+- Identify the constraints of your input (structure of the array? range of the number?)
 - Given an input for your algorithm, determine the number of steps.
   - When you increase the size of the input by 1, how many more steps are added to the number of steps?
   - When you increase the size of the input by an order of magnitude, how many more steps are added?
-- On a whiteboard, plot inputs to each algorithm given an input size of 10, 50, 100, 500, 1000, 10,000 on a graph, where the X axis is the input size and the Y axis is the number of steps.
 
 ## How do we measure algorithms?
 
