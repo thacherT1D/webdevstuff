@@ -480,7 +480,7 @@ Write an SQL command that displays the follow rows.
 
 ## Exercises
 
-- [Online Retailer](https://github.com/gSchool/sql-curriculum/blob/solutions/Unit-02-Relational/02-readme.md)
+[PostgreSQL Fundamentals: Use Inner Joins ](https://github.com/gSchool/wd-postgresql-fundamentals)
 
 ## Resources
 

@@ -676,7 +676,7 @@ Iterate on your seed file until you can repeatedly run it without generating an 
 
 ## Assignment
 
-- [Intro SQL Exercise](https://github.com/gSchool/intro_sql_exercise)
+[PostgreSQL Fundamentals: Select, Insert, Update, and Delete ](https://github.com/gSchool/wd-postgresql-fundamentals)
 
 ## Resources
 
