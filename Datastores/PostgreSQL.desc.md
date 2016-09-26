@@ -620,8 +620,8 @@ help
 ```
 
 ## Assignment
-
-- None! Tomorrow assignment will definitely stretch you.
+PostgreSQL Fundamentals is a multi-day assignment - the homework for today is the first part: 
+[PostgreSQL Fundamentals: Create Databases ](https://github.com/gSchool/wd-postgresql-fundamentals)
 
 ## Resources
 
