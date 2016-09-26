@@ -283,24 +283,6 @@ Your goal is to get the tests for `mergeSort`, `quickSort`, and `merge` to pass.
 * [JS Front-end Interview Questions: Quicksort](http://khan4019.github.io/front-end-Interview-Questions/sort.html#quickSort
 )
 
-## Binary Search
-
-The key here is that we have an array of n element(s).
-
-[Binary search](https://en.wikipedia.org/wiki/Binary_search_algorithm) or half-interval search finds the position of a specified input value (the search "key") within an array sorted by key value.
-
-For binary search, the array should be arranged in ascending or descending order. In each step, the algorithm compares the search key value with the key value of the middle element of the array. If the keys match, then a matching element has been found and its index, or position, is returned. Otherwise, if the search key is less than the middle element's key, then the algorithm repeats its action on the sub-array to the left of the middle element or, if the search key is greater, on the sub-array to the right. If the remaining array to be searched is empty, then the key cannot be found in the array and a special "not found" indication is returned.
-
-Binary search runs on average at [O(log n)](https://en.wikipedia.org/wiki/Time_complexity#Logarithmic_time) -> THIS IS [FAST](http://stackoverflow.com/a/2307314/1799408)!
-
-The binary search algorithm begins by comparing the target value to the value of the middle element of the sorted array. If the target value is equal to the middle element's value, then the position is returned and the search is finished. If the target value is less than the middle element's value, then the search continues on the lower half of the array; or if the target value is greater than the middle element's value, then the search continues on the upper half of the array. This process continues, eliminating half of the elements, and comparing the target value to the value of the middle element of the remaining elements - until the target value is either found (and its associated element position is returned), or until the entire array has been searched (and "not found" is returned).
-
-https://en.wikipedia.org/wiki/Binary_search_algorithm
-
-## Exercise
-
-Make the `array-search/search-algorithms` tests pass in the exercises directory.
-
 ### Visualization
 
 - [Visualization](https://www.cs.usfca.edu/~galles/visualization/DFS.html)

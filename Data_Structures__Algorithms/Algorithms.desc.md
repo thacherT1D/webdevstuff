@@ -1,8 +1,7 @@
 ## Objectives
 
 * Explain what is an algorithm.
-* Explain why algorithms are important.
-* Explain how are algorithms measured.
+* Explain how algorithms are measured.
 * Explain what is Big O Notation
 * Explain why Big O Notation is important with Time Complexity and Space Complexity
 * Identify Big O Notation of several algorithms
@@ -16,10 +15,10 @@
   * Insertion Sort
 * Describe algorithms for searching including the following algorithms:
   * Linear Search
-  * Chunk Search
+  * Binary Search
 * Identify Big O Notation of the following searching algorithms:
   * Linear Search
-  * Chunk Search
+  * Binary Search
 
 ## What is an Algorithm?
 
@@ -33,8 +32,6 @@ Algorithms:
 - produce output.
 
 Let's think about the idea of an "algorithm". Say you have a problem that you need to solve in your every day life. For instance, let's say you had a deck of cards that were shuffled. How would you approach collecting all of the suits together? Would your approach differ if you were ordering the cards by face value? What if you were ordering the cards by face value, and you always wanted the suits in the same order? Would you make several piles, and then sort the piles? Would you go through the deck many times, placing each card in it's proper place? If you were sorting groups of 5 cards instead of a whole deck, how might your approach change?
-
-## Why are algorithms important?
 
 ### Exercise
 
@@ -59,7 +56,7 @@ Now, for each set of instructions, find out the following:
 
 ## How do we measure algorithms?
 
-We always have said that there are many ways to solve a problem with programming, but one question that one asks is, "Which solution is better?" With that, we need to build methods of measuring the effectiveness of an algorithm. An algorithm's effectiveness is defined by three criteria:
+We always have said that there are many ways to solve a problem with programming, but the question that one asks is, "Which solution is better?" With that, we need to build methods of measuring the effectiveness of an algorithm. An algorithm's effectiveness can be defined by three criteria:
 
 * Its correctness (ie the output is exactly what is expected given an input)
 * Its speed (ie how much time it takes to execute the algorithm)
@@ -69,7 +66,7 @@ We always have said that there are many ways to solve a problem with programming
 
 The correctness of an algorithm is a difficult one to determine. Formally, this would require a mathematical proof that defines that given certain inputs, expected outputs would be produced. In fact, there's a whole research field on building systems that can _prove_ the correctness of an algorithm.
 
-Instead of a proof, programmers use the next best tool: testing. Testing cannot determine completely that all inputs produce expected outputs, but it helps identify the cases that make us more comfortable in believing the algorithm is correct.
+Instead of a proof, programmers use the next best tool: testing. Testing cannot determine completely that all inputs produce expected outputs, but it helps identify the cases that make us more confident in believing the algorithm is correct.
 
 After proving and testing, programmers rely on reasoning in the brain that their algorithm works as expected.
 
@@ -87,9 +84,9 @@ Like a speed measurement, different computers offer different amounts of memory.
 
 ## What is Big-O Notation?
 
-[Big-O notation](https://en.wikipedia.org/wiki/Big_O_notation) is how developers discuss the complexity of an algorithm as a way to understand how fast a program will run given it's input. Big-O notation deals with the **worst** case scenario for the algorithm.  In other words, if the program **may** run quickly, but there is a chance it could take a long time given some input, then the Big-O runtime will deal with the longer case.
+[Big-O notation](https://en.wikipedia.org/wiki/Big_O_notation) is a method of describing the complexity of an algorithm in terms of time (ie the speed) and space (ie the memory footprint). Big-O notation helps describe the relative efficiency as a function of the size of the input. Big-O notation deals with the **worst** case scenario for the algorithm.  In other words, if the program **may** run quickly, but there is a chance it could take a long time given some input, then the Big-O runtime will deal with the longer case.
 
-To put it yet another way, Big-O runtime deals with [asymptotic approximations](https://en.wikipedia.org/wiki/Asymptotic_analysis) of the complexity of the algorithm (http://mathworld.wolfram.com/Asymptotic.html).  It tends to care much more about how complex a program is when the input size is very large because that is typically when the performance matters the most.
+To put it yet another way, Big-O runtime deals with [asymptotic approximations](https://en.wikipedia.org/wiki/Asymptotic_analysis) of the complexity of the algorithm.  It tends to care much more about how complex a program is when the input size is very large because that is typically when the performance matters the most.
 
 Watch [this video on asymptotic complexity from CS50](https://www.youtube.com/watch?v=iOq5kSKqeR4).
 
@@ -99,13 +96,13 @@ Here's the technical definition of big-O notation.
 
 Suppose you have two mathematical functions, `f(x)` and `g(x)`. A function `f(x)` is said to be `O(g(x))` (pronounced 'Big O of g(x)') if there exists some positive constant `C` such that `|f(x)|` is less than or equal to  `C * |g(x)|` for `x` sufficiently large.
 
-When we talk about time complexity and Big O in this class, `f(x)` will typically roughly correspond to the runtime of some javascript function (or, if you prefer, the number of operations that function needs to perform), while `g(x)` will roughly correspond to the size of that function's input. (You can also talk about Big O within the context of [space complexity](https://www.cs.northwestern.edu/academics/courses/311/html/space-complexity.html), but we'll save that for another time.)
+When we talk about time complexity and Big O in this class, `f(x)` will typically roughly correspond to the runtime of some javascript function (or, if you prefer, the number of operations that function needs to perform), while `g(x)` will roughly correspond to the size of that function's input.
 
 > Don't worry if that's difficult to comprehend! We'll show plenty of examples below. The rigorous definition is a helpful point of reference, especially as you begin to familiarize yourself with the concept.
 
 ## Big-O Examples
 
-The best way to get started with big-O notation is to start with some examples...
+The best way to get started with big-O notation is to start with some examples.
 
 ### [O(n) / Linear Time](https://en.wikipedia.org/wiki/Time_complexity#Linear_time)
 
@@ -243,10 +240,6 @@ This is O(n\*n + n).  The first n*n (n^2) comes from the while loop that iterate
 
 **RULE: When big-O values are added, keep the worst case runtime, and drop all other additional values.**
 
-## More Exercises
-
-Visit the [Big-O Notation Practice Repo here](https://github.com/gSchool/big-o-practice)
-
 **EXERCISE**
 
 1. Check out [this graph](https://www.desmos.com/calculator/isubf6mydg) for data on the functions you've explored today, as well as some data on different algorithms we've seen or will encounter later on: bubble sort, binary search, naive Fibonacci, merge sort, and bogo sort. Take a look at the data and the trends. What's the complexity of each algorithm? Which algorithm is the most/least efficient? (Need a refresher on some of the math functions that appear? Scroll down!)
@@ -339,12 +332,6 @@ Factorials are a little more straightforward. The factorial of a positive intege
 # Sorting Algorithms
 
 When you're dealing with data, sorting is a very common task. While [sorting algorithms](https://en.wikipedia.org/wiki/Sorting_algorithm) are well-understood, they also make great fodder for interview questions, so it's essential that you understand, implement, and talk about some simple sorting algorithms.
-
-## Objectives
-
-* Implement a bubble sort algorithm in JavaScript
-* Implement a selection sort algorithm in JavaScript
-* Implement an insertion sort algorithm in JavaScript
 
 ## Sorting Efficiency
 
@@ -483,3 +470,21 @@ Linear search runs on average at [O(n)](https://en.wikipedia.org/wiki/Time_compl
 In computer science, linear search or sequential search is a method for finding a particular value in a list that checks each element in sequence until the desired element is found or the list is exhausted.
 
 https://en.wikipedia.org/wiki/Linear_search
+
+## Binary Search
+
+The key here is that we have an array of n element(s).
+
+[Binary search](https://en.wikipedia.org/wiki/Binary_search_algorithm) or half-interval search finds the position of a specified input value (the search "key") within an array sorted by key value.
+
+For binary search, the array should be arranged in ascending or descending order. In each step, the algorithm compares the search key value with the key value of the middle element of the array. If the keys match, then a matching element has been found and its index, or position, is returned. Otherwise, if the search key is less than the middle element's key, then the algorithm repeats its action on the sub-array to the left of the middle element or, if the search key is greater, on the sub-array to the right. If the remaining array to be searched is empty, then the key cannot be found in the array and a special "not found" indication is returned.
+
+Binary search runs on average at [O(log n)](https://en.wikipedia.org/wiki/Time_complexity#Logarithmic_time) -> THIS IS [FAST](http://stackoverflow.com/a/2307314/1799408)!
+
+The binary search algorithm begins by comparing the target value to the value of the middle element of the sorted array. If the target value is equal to the middle element's value, then the position is returned and the search is finished. If the target value is less than the middle element's value, then the search continues on the lower half of the array; or if the target value is greater than the middle element's value, then the search continues on the upper half of the array. This process continues, eliminating half of the elements, and comparing the target value to the value of the middle element of the remaining elements - until the target value is either found (and its associated element position is returned), or until the entire array has been searched (and "not found" is returned).
+
+https://en.wikipedia.org/wiki/Binary_search_algorithm
+
+## Exercise
+
+Make the `array-search/search-algorithms` tests pass in the exercises directory.
