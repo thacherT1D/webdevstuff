@@ -993,7 +993,7 @@ text
 
 ## Assignment
 
-PostgreSQL Fundamentals is a multi-day assignment. The homework for today is the first part of the assignment:
+PostgreSQL Fundamentals Part 4:
 [PostgreSQL Fundamentals: Knex.js ](https://github.com/gSchool/wd-postgresql-fundamentals)
 
 

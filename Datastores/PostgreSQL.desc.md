@@ -620,7 +620,8 @@ help
 ```
 
 ## Assignment
-PostgreSQL Fundamentals is a multi-day assignment. The homework for today is the first part of the assignment: 
+
+PostgreSQL Fundamentals Part 1:
 [PostgreSQL Fundamentals: Create Databases ](https://github.com/gSchool/wd-postgresql-fundamentals)
 
 ## Resources

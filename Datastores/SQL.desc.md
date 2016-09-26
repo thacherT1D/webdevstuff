@@ -675,7 +675,7 @@ Iterate on your seed file until you can repeatedly run it without generating an 
 - Delete all movies that have the word 'en' in their `title`.
 
 ## Assignment
-
+PostgreSQL Fundamentals Part 2:
 [PostgreSQL Fundamentals: Select, Insert, Update, and Delete ](https://github.com/gSchool/wd-postgresql-fundamentals)
 
 ## Resources

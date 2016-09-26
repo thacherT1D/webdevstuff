@@ -479,7 +479,7 @@ Write an SQL command that displays the follow rows.
 ```
 
 ## Exercises
-
+PostgreSQL Fundamentals Part 3:
 [PostgreSQL Fundamentals: Use Inner Joins ](https://github.com/gSchool/wd-postgresql-fundamentals)
 
 ## Resources
