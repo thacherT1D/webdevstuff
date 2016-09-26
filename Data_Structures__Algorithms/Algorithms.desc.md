@@ -1,9 +1,8 @@
 ## Objectives
 
-* Explain what is an algorithm.
-* Explain how algorithms are measured.
+* Explain what is an algorithm
+* Explain how algorithms are measured
 * Explain what is Big O Notation
-* Explain why Big O Notation is important with Time Complexity and Space Complexity
 * Identify Big O Notation of several algorithms
 * Describe algorithms for sorting including the following algorithms:
   * Selection Sort
