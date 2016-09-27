@@ -17,6 +17,8 @@ And you should see something like this.
 
 **NOTE:** The word relation is a synonym for a table.
 
+### `CREATE TABLE`
+
 To create a `movies` table in the current connected database, run the following SQL command.
 
 ```sql
@@ -64,6 +66,8 @@ And you should see something like this.
 
 As you can see, the `movies` table contains a handful of columns. In a relational database system, all values in the same column must be the same data type. For example, a `integer` value can't be stored in a `text` column. This strictness is one of the reasons why a relational database system like PostgreSQL can remain performant while managing a massive collection of information.
 
+### Data Types
+
 Here's an overview of the most common data types in PostgreSQL.
 
 | Name                                 | Storage Size | Description                               | Range                          |
@@ -75,6 +79,7 @@ Here's an overview of the most common data types in PostgreSQL.
 | `text`                               | variable     | Variable-length string, unlimited length  | N/A                            |
 | `character varying(n)`, `varchar(n)` | variable     | Variable-length string, limited length    | N/A                            |
 | `character(n)`, `char(n)`            | variable     | Fixed-length string, blank padded         | N/A                            |
+
 
 One common data type that's missing from this table is the `serial` data type, which was used earlier for the `id` column of the `movies` table. The reason why it's missing is because the `serial` data type is not a true type. Rather, it's a notational convenience for creating a unique identifier column. When a `serial` column is declared, an `integer` column with a sequence generator and a `NOT NULL` constraint is created instead.
 
@@ -95,6 +100,12 @@ When an entity without an `id` value is inserted into the `movies` table, the co
 The `serial` type also applies a `NOT NULL` constraint to the column. Like JavaScript, the `NULL` value represents the absence of data. Unless a column is given a `NOT NULL` constraint, the `NULL` value is an acceptable value for any column no matter the data type. While a `serial` column is automatically given a `NOT NULL` constraint, it's wise to manually apply the constraint to `boolean` columns as well. For example, the `NOT NULL` constraint was applied to the `is_3d` column in the `movies` table.
 
 While creating a table with the right columns is important, the structure of a table is not set in stone. For example, as a web application evolves over time, so too can its companion database tables.
+
+### Exercise
+
+Take a minute to write down which data types you would use for the columns of a pets table. Then, turn to a neighbor and share what you wrote.
+
+### `ALTER TABLE`
 
 To add a column to the `movies` table, run the following command.
 
@@ -216,6 +227,8 @@ And you should see something like this.
 
 ![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/233/Screen_Shot_2016-06-21_at_6.26.56_AM.png)
 
+### `DROP TABLE`
+
 To drop the `films` table, run the following command.
 
 ```sql
@@ -280,6 +293,8 @@ Finally, add an `ALTER TABLE` command to bottom of the migration file that'll ad
 
 ## How do you use the PostgreSQL REPL to manage rows in a table?
 
+### `INSERT`
+
 To insert a row into the `movies` table, run the following command.
 
 ```sql
@@ -303,6 +318,8 @@ INSERT INTO movies (title, duration, rating, genre, is_3d, released_at, score) V
 And you should see something like this.
 
 ![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/206/Screen_Shot_2016-06-21_at_3.49.35_AM.png)
+
+### `SELECT`
 
 To select all the rows and columns from the `movies` table, run the following command.
 
@@ -551,6 +568,8 @@ And you should see something like this.
 
 ![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/255/Screen_Shot_2016-06-21_at_9.38.16_AM.png)
 
+### `UPDATE`
+
 To update a column for a single row in the `movies` table, run the following command.
 
 ```sql
@@ -602,6 +621,8 @@ SELECT id, title, rating, score FROM movies ORDER BY score DESC;
 And you should see something like this.
 
 ![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/267/Screen_Shot_2016-06-21_at_3.15.34_PM.png)
+
+### `DELETE`
 
 To delete a row in the `movies table`, run the following command.
 
