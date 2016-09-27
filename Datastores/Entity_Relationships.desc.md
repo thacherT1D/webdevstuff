@@ -82,7 +82,7 @@ Additionally, an ER diagram is often created to represent the persistence needs 
 
 In a relational database, a **primary key** is the unique identifier of a table row, usually the `id` column. While other tables may use the same value, the primary key for every row in the same table is guaranteed to be unique and never reused. A **foreign key** is the unique identifier of a row stored in a foreign key column of another table. The name of a foreign key column is usually the singular form of the entity's table name with an `_id` suffix. For example, the `movie_id` foreign key column that references the `id` primary key column of the `movies` tables.
 
-In a one-to-many relationship, the primary key of one table row is stored as the foreign key in another table row. The way you determine which table gets the foreign key column is to look at the crow's foot in the ER diagram. The crow's foot touches is the table the needs the foreign key column. In a one-to-one relation, any of the two tables can have the foreign key column, but only one of them needs to have it.
+In a one-to-many relationship, the primary key of one table row is stored as the foreign key in another table row. The way you determine which table gets the foreign key column is to look at the crow's foot in the ER diagram. The table the crow's foot touches is the table that needs the foreign key column. In a one-to-one relation, either of the two tables can have the foreign key column, but only one of them needs to have it.
 
 Here's an example ER diagram that represents the relationship between movies and awards in more detail.
 
@@ -123,7 +123,7 @@ CREATE TABLE awards (
 );
 ```
 
-And with the tables defined, it's easy to see how you'd insert some rows into them. Here are some an example `INSERT` commands insert rows into the tables from above.
+And with the tables defined, it's easy to see how you'd insert some rows into them. Here are some example `INSERT` commands to insert rows into the tables from above.
 
 ```sql
 INSERT INTO movies (title, duration, rating, genre, is_3d, released_at, score)
