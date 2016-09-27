@@ -393,18 +393,13 @@ FROM movies INNER JOIN awards ON awards.movie_id = movies.id;
 To make the results clearer, you can use the `AS` keyword to create an alias.
 
 ```sql
-SELECT movies.id AS movie_id, awards.id AS awards.id, title, kind, name
+SELECT movies.id AS movie_id, awards.id AS awards_id, title, kind, name
 FROM movies INNER JOIN awards ON awards.movie_id = movies.id;
 ```
 
 ```sql
 SELECT movies.id, title, kind, name FROM movies
 INNER JOIN awards ON awards.movie_id = movies.id WHERE movies.id = 1;
-```
-
-```sql
-SELECT title, kind FROM movies
-INNER JOIN awards ON awards.movie_id = movies.id;
 ```
 
 ```sql
@@ -486,7 +481,7 @@ Write an SQL command that displays the following rows.
  X-Men: Apocalypse  | 2016-05-26 17:00:00-07 |   7.4 | James McAvoy       | Professor Charles Xavier
 ```
 
-## Exercises
+## Assignment
 PostgreSQL Fundamentals Part 3:
 [PostgreSQL Fundamentals: Use Inner Joins ](https://github.com/gSchool/wd-postgresql-fundamentals)
 
