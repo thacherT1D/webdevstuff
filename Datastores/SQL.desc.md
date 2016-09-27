@@ -1,6 +1,12 @@
 ## Objectives
 
 - Use the PostgreSQL REPL to manage tables in a database.
+- Describe the common data types in PostgreSQL and their uses
+- Query a database table with aggregate functions
+- Query a database table with comparison, logical, and mathematical operators
+- Query a database table with pattern matching
+- Query a database table with `LIMIT`
+- Create and use a seed file to create, read, update, and delete tables, columns, and records in a database
 - Use the PostgreSQL REPL to manage rows in a table.
 
 ## How do you use the PostgreSQL REPL to manage tables in a database?
