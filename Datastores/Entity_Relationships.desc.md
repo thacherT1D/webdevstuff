@@ -393,7 +393,7 @@ FROM movies INNER JOIN awards ON awards.movie_id = movies.id;
 To make the results clearer, you can use the `AS` keyword to create an alias.
 
 ```sql
-SELECT movies.id AS movie_id, awards.id AS awards.id, title, kind, name
+SELECT movies.id AS movie_id, awards.id AS awards_id, title, kind, name
 FROM movies INNER JOIN awards ON awards.movie_id = movies.id;
 ```
 
