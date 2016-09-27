@@ -273,7 +273,7 @@ CREATE TABLE awards (
 );
 ```
 
-In a relational database management system, a many-to-many relationship is implemented by means of an join table, AB, with two one-to-many relationships. A -> AB and B -> AB. In this case the logical primary key for AB is formed from the two foreign keys.
+In a relational database management system, a many-to-many relationship is implemented by means of a join table, AB, with two one-to-many relationships. A -> AB and B -> AB.
 
 ```sql
 CREATE TABLE movies (
@@ -326,7 +326,7 @@ With your neighbors, add the necessary PostgreSQL column constraints to the `CRE
 
 ## What's a join clause and why is it useful?
 
-In SQL, **join clause** is an optional part of a `SELECT` command that combines rows from two or more tables by joining on columns that are common to each. The combined rows can be viewed or even saved to a new table. The following is an example of a join clause.
+In SQL, a **join clause** is an optional part of a `SELECT` command that combines rows from two or more tables by joining on columns that are common to each. The combined rows can be viewed or even saved to a new table. The following is an example of a join clause.
 
 **NOTE:** Type the `\x auto` REPL command to automatically use PostgreSQL's extended display mode.
 
