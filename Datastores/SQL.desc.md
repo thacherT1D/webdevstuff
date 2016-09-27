@@ -5,7 +5,7 @@
 - Query a database table with aggregate functions
 - Query a database table with comparison, logical, and mathematical operators
 - Query a database table with pattern matching
-- Query a database table with `LIMIT`
+- Query a database table with `LIMIT` and `ORDER BY`
 - Create and use a seed file to create, read, update, and delete tables, columns, and records in a database
 - Use the PostgreSQL REPL to manage rows in a table.
 
