@@ -302,6 +302,16 @@ CREATE TABLE actors_movies (
 );
 ```
 
+### Exercise
+
+With your neighbors, add the necessary PostgreSQL column constraints to the `CREATE TABLE` commands you created earlier for your pet-based ER diagram.
+
+## What's a join clause and why is it useful?
+
+In SQL, a **join clause** is an optional part of a `SELECT` command that combines rows from two or more tables by joining on columns that are common to each. The combined rows can be viewed or even saved to a new table.
+
+In order to practice using join clauses without taking the time to manually create tables and fill them with data, run the following commands. This will create tables for movies, plots, awards, actors, and actors_movies and seed them with some test data.
+
 ```shell
 dropdb movie_junkies_dev
 createdb movie_junkies_dev
@@ -309,7 +319,7 @@ curl -fsSL https://git.io/voXVD | psql movie_junkies_dev
 psql movie_junkies_dev
 ```
 
-Spend some time getting familiar with the tables and their relationships.
+Use the following commands and spend some time getting familiar with the tables and their relationships.
 
 ```
 \dt
@@ -320,19 +330,13 @@ Spend some time getting familiar with the tables and their relationships.
 \d actors_movies
 ```
 
-### Exercise
-
-With your neighbors, add the necessary PostgreSQL column constraints to the `CREATE TABLE` commands you created earlier for your pet-based ER diagram.
-
-## What's a join clause and why is it useful?
-
-In SQL, a **join clause** is an optional part of a `SELECT` command that combines rows from two or more tables by joining on columns that are common to each. The combined rows can be viewed or even saved to a new table. The following is an example of a join clause.
-
-**NOTE:** Type the `\x auto` REPL command to automatically use PostgreSQL's extended display mode.
+The following is an example of a join clause.
 
 ```sql
 SELECT * FROM movies INNER JOIN awards ON awards.movie_id = movies.id;
 ```
+
+**NOTE:** Type the `\x auto` REPL command to automatically use PostgreSQL's extended display mode.
 
 There are five types of join clauses.
 
@@ -364,6 +368,8 @@ INNER JOIN awards
 SELECT * FROM movies INNER JOIN awards ON movies.id = awards.movie_id;
 ```
 
+You can specify the columns you want included in the results.
+
 ```sql
 SELECT title, kind, name FROM movies INNER JOIN awards ON awards.movie_id = movies.id;
 ```
@@ -383,6 +389,8 @@ FROM movies INNER JOIN awards ON awards.movie_id = movies.id;
 SELECT movies.id, awards.id, title, kind, name
 FROM movies INNER JOIN awards ON awards.movie_id = movies.id;
 ```
+
+To make the results clearer, you can use the `AS` keyword to create an alias.
 
 ```sql
 SELECT movies.id AS movie_id, awards.id AS awards.id, title, kind, name
@@ -459,7 +467,7 @@ ORDER BY score DESC;
 
 ### Exercise
 
-Write an SQL command that displays the follow rows.
+Write an SQL command that displays the following rows.
 
 ```
        title        |      released_at       | score |     actor_name     |           role
