@@ -320,8 +320,6 @@ Spend some time getting familiar with the tables and their relationships.
 \d actors_movies
 ```
 
-[PLAY WITH INSERTED ROWS]
-
 ### Exercise
 
 With your neighbors, add the necessary PostgreSQL column constraints to the `CREATE TABLE` commands you created earlier for your pet-based ER diagram.
@@ -446,6 +444,7 @@ WHERE movies.id = 3
 ORDER BY birthed_at DESC;
 ```
 
+```sql
 SELECT
   title,
   released_at,
@@ -456,6 +455,7 @@ FROM movies
 INNER JOIN actors_movies ON actors_movies.movie_id = movies.id
 INNER JOIN actors ON actors.id = actors_movies.actor_id
 ORDER BY score DESC;
+```
 
 ### Exercise
 
