@@ -44,7 +44,7 @@ A **one-to-one** relationship describes the relationship between two entities wh
 └──────────────┘       └─────────────┘
 ```
 
-A **one-to-many** relationship describes the relationship between two entities where an entity from group `A` may be linked to many entities from group `B`, but a entity from group `B` is linked to only one entity of group `A`. For example, think of movies as group `A` and awards as group `B`. A movie can have many awards, but an award can only be given to one movie (per year).
+A **one-to-many** relationship describes the relationship between two entities where an entity from group `A` may be linked to many entities from group `B`, but an entity from group `B` is linked to only one entity of group `A`. For example, think of movies as group `A` and awards as group `B`. A movie can have many awards, but an award can only be given to one movie (per year).
 
 ```text
 ┌──────────────┐       ┌──────────────┐
