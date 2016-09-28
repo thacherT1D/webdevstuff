@@ -374,6 +374,8 @@ You can specify the columns you want included in the results.
 SELECT title, kind, name FROM movies INNER JOIN awards ON awards.movie_id = movies.id;
 ```
 
+That works as long as the column names you select from each table are unique. If you try to select a column name shared by both tables (e.g. id) then SQL will raise an error.
+
 ```sql
 SELECT id, title, kind, name FROM movies INNER JOIN awards ON awards.movie_id = movies.id;
 ```
@@ -393,7 +395,7 @@ FROM movies INNER JOIN awards ON awards.movie_id = movies.id;
 To make the results clearer, you can use the `AS` keyword to create an alias.
 
 ```sql
-SELECT movies.id AS movie_id, awards.id AS awards_id, title, kind, name
+SELECT movies.id AS movie_id, awards.id AS award_id, title, kind, name
 FROM movies INNER JOIN awards ON awards.movie_id = movies.id;
 ```
 
@@ -417,7 +419,7 @@ SELECT title, role FROM movies
 INNER JOIN actors_movies ON actors_movies.movie_id = movies.id;
 ```
 
-You can use `Inner Join` on more than two tables.
+You can use `INNER JOIN` on more than two tables.
 
 ```sql
 SELECT title, role, name, birthed_at FROM movies
@@ -447,19 +449,6 @@ INNER JOIN actors ON actors.id = actors_movies.actor_id
 WHERE movies.id = 3
   AND birthed_at >= '1962-01-01 00:00:00 UTC'
 ORDER BY birthed_at DESC;
-```
-
-```sql
-SELECT
-  title,
-  released_at,
-  score,
-  actors.name AS actor_name,
-  role
-FROM movies
-INNER JOIN actors_movies ON actors_movies.movie_id = movies.id
-INNER JOIN actors ON actors.id = actors_movies.actor_id
-ORDER BY score DESC;
 ```
 
 ### Exercise
