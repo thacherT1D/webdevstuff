@@ -417,6 +417,8 @@ SELECT title, role FROM movies
 INNER JOIN actors_movies ON actors_movies.movie_id = movies.id;
 ```
 
+You can use `Inner Join` on more than two tables.
+
 ```sql
 SELECT title, role, name, birthed_at FROM movies
 INNER JOIN actors_movies ON actors_movies.movie_id = movies.id
