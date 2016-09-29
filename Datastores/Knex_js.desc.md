@@ -379,7 +379,7 @@ knex('movies')
 
 Then, execute the program by running the following shell command.
 
-```shell
+```
 node index.js
 ```
 
@@ -399,8 +399,7 @@ The `where()` method can also accepts three arguments—a column name as a strin
 
 In the `index.js` file, write and save the following code.
 
-```
-javascript
+```javascript
 'use strict';
 
 const env = 'development';
@@ -424,15 +423,13 @@ knex('movies')
 
 Then, execute the program by running the following shell command.
 
-```
-shell
+```shell
 node index.js
 ```
 
 And you should see something like this.
 
 ```
-shell
 [ anonymous {
     id: 1,
     title: 'Frozen',
@@ -457,8 +454,7 @@ To add `AND` clauses to a query, you can chain additional `where()` methods.
 
 In the `index.js` file, write and save the following code.
 
-```
-javascript
+```javascript
 'use strict';
 
 const env = 'development';
@@ -489,7 +485,6 @@ node index.js
 And you should see something like this.
 
 ```
-text
 [ anonymous {
     id: 1,
     title: 'Frozen',
@@ -508,8 +503,7 @@ The `where()` method also accepts one argument—an object with key-value pairs.
 
 In the `index.js` file, write and save the following code.
 
-```
-javascript
+```javascript
 'use strict';
 
 const env = 'development';
@@ -533,15 +527,13 @@ knex('movies')
 
 Then, execute the program by running the following shell command.
 
-```
-shell
+```shell
 node index.js
 ```
 
 And you should see something like this.
 
-```
-text
+```text
 [ anonymous {
     id: 1,
     title: 'Frozen',
