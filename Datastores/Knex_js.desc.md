@@ -385,8 +385,7 @@ node index.js
 
 And you should see something like this.
 
-```
-text
+```text
 [ anonymous {
     id: 4,
     title: 'Pulp Fiction',
@@ -577,8 +576,7 @@ node index.js
 
 And you should see something like this.
 
-```
-text
+```text
 [ anonymous {
     id: 1,
     title: 'Frozen',
@@ -975,8 +973,7 @@ node index.js
 
 And you should see something like this.
 
-```
-text
+```text
 1
 ```
 
