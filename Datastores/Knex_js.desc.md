@@ -47,7 +47,7 @@ Then, setup a new Node.js project by running the following shell commands.
 ```shell
 mkdir movies
 cd movies
-npm init
+npm init -y
 npm install --save pg
 npm install --save knex
 touch knexfile.js
@@ -148,7 +148,6 @@ node index.js
 And you should see something like this.
 
 ```
-shell
 [ anonymous {
     id: 1,
     title: 'Frozen',
