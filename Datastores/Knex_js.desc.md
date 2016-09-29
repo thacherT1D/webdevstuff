@@ -571,8 +571,7 @@ knex('movies')
 
 Then, execute the program by running the following shell command.
 
-```
-shell
+```shell
 node index.js
 ```
 
@@ -970,8 +969,7 @@ knex('movies')
 
 Then, execute the program by running the following shell command.
 
-```
-shell
+```shell
 node index.js
 ```
 
