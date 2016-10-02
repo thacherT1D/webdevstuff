@@ -219,6 +219,8 @@ exports.down = function(knex) {
 };
 ```
 
+Notice that `.createTable('tracks', (table) => {...})` creates a new table on the database, with the first argument being the name of the table and the second a callback function to define the table's structure.
+
 The `migrate:latest` command is used to run the migration file on the database.
 
 ```shell
@@ -231,53 +233,57 @@ Once again, check the current migration status.
 npm run knex migrate:currentVersion
 ```
 
-
+Confirm that the `tracks` table was created succesfully by listing the tables in the `trackify_dev` database.
 
 ```shell
 psql trackify_dev -c '\dt'
 ```
 
+Notice that there are two other tables alongside `tracks`. Look at the columns of the `knex_migrations` table.
+
 ```shell
 psql trackify_dev -c '\d knex_migrations'
 ```
 
+Next, look at the rows in the `knex_migrations` table.
+
 ```shell
 psql trackify_dev -c 'SELECT * FROM knex_migrations;'
 ```
+
+To better understand the purpose of the `knex_migrations` table, migrate the database backward, look at the migration status, and look at the rows in the `knex_migrations` table.
+
+**NOTE:** The `migrate:rollback` command migrates the database backward by running the down function exported by your migration file.
 
 ```shell
 npm run knex migrate:rollback
-```
 
-```shell
 npm run knex migrate:currentVersion
-```
 
-```shell
 psql trackify_dev -c 'SELECT * FROM knex_migrations;'
 ```
+
+Now run the migration again, check the migration status, and look at the rows in the `knex_migrations` table.
 
 ```shell
 npm run knex migrate:latest
-```
 
-```shell
 npm run knex migrate:currentVersion
-```
 
-```shell
 psql trackify_dev -c 'SELECT * FROM knex_migrations;'
 ```
 
-Add migration locking so multiple services cannot try to run migrations at same time. This added a new lock table. If migrations are locked and migrations are run by another service it results in an error.
+Look at the columns and then the rows in the `knex_migrations_lock` table.
 
 ```shell
 psql trackify_dev -c '\d knex_migrations_lock'
-```
 
-```shell
 psql trackify_dev -c 'SELECT * FROM knex_migrations_lock;'
 ```
+
+Knex automatically adds a lock table so multiple services cannot try to run migrations at the same time. If migrations are locked and migrations are run by another service it results in an error.
+
+Next we'll write a second migration file to create a `users` table in our databse.
 
 ```text
 ┌─────────────────────────────────────────────────────────────┐
@@ -362,28 +368,65 @@ npm run knex migrate:currentVersion
 psql trackify_dev -c 'SELECT * FROM knex_migrations;'
 ```
 
-**NOTE:** A Knex migration will take all new migration files, group them in a batch, and then apply them. A rollback will rollback all of the files in a batch.
+**NOTE:** A Knex migration will take all new migration files, group them in a batch, and then apply them. A rollback will only rollback the files in the most recently run batch.
 
-Example flow
+To help illustrate this, here is an example flow:
 
-Create Migration File 1
-Create Migration File 2
-knex migrate:latest
-Two migrations run, one batch created.
-knex migrate:rollback
-Two migrations rolled back, one batch rolled back.
+```text
+┌─────────────────────────┐
+│ Create Migration File 1 │
+│ Create Migration File 2 │
+└─────────────────────────┘
+            │              
+           \|/
+┌────────────────────────────────────────┐
+│ knex migrate:latest                    │
+│ Two migrations run, one batch created. │
+└────────────────────────────────────────┘
+            │
+           \|/
+┌────────────────────────────────────────────────────┐
+│ knex migrate:rollback                              │
+│ Two migrations rolled back, one batch rolled back. │
+└────────────────────────────────────────────────────┘
+```
 
-vs
+Compare that to a second example flow:
 
-Create Migration File 1
-One migration run, one batch created.
-knex migrate:latest
-Create Migration File 2
-One migrations run, one batch created.
-knex migrate:rollback
-One migrations rolled back, one batch rolled back.
-knex migrate:rollback
-One migrations rolled back, one batch rolled back.
+```text
+┌─────────────────────────┐
+│ Create Migration File 1 │
+└─────────────────────────┘
+            │              
+           \|/
+┌───────────────────────────────────────┐
+│ knex migrate:latest                   │
+│ One migration run, one batch created. │
+└───────────────────────────────────────┘
+            │
+           \|/
+┌─────────────────────────┐
+│ Create Migration File 2 │
+└─────────────────────────┘
+            │              
+           \|/
+┌───────────────────────────────────────┐
+│ knex migrate:latest                   │
+│ One migration run, one batch created. │
+└───────────────────────────────────────┘
+            │              
+           \|/
+┌───────────────────────────────────────────────────┐
+│ knex migrate:rollback                             │
+│ One migration rolled back, one batch rolled back. │
+└───────────────────────────────────────────────────┘
+            │              
+           \|/
+┌───────────────────────────────────────────────────┐
+│ knex migrate:rollback                             │
+│ One migration rolled back, one batch rolled back. │
+└───────────────────────────────────────────────────┘
+```
 
 ## What's the Knex seed system?
 
