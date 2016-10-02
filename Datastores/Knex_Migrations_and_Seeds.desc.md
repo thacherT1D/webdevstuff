@@ -27,7 +27,7 @@ Here's a diagram representing two Knex migration files that manage the `tracks` 
 
 The name of a migration file starts with a UTC timestamp and ends with a table name. That way, the Knex migration system can identify and order the migrations based on when the files were created and what tables they affect.
 
-Here's an example what the contents of the `20160621141318_tracks.js` migration file might look like.
+Here's an example of what the contents of the `20160621141318_tracks.js` migration file might look like.
 
 ```javascript
 'use strict';
@@ -86,6 +86,8 @@ Turn to a neighbor and talk about when it might be useful to consistently create
 
 ## How do you use Knex to migrate a PostgreSQL database?
 
+To practice using the Knex migration system, we're going to write a migration file that will create the following table in our database.  
+
 ```text
 ┌─────────────────────────────────────────────────────────────┐
 │                           tracks                            │
@@ -99,11 +101,15 @@ Turn to a neighbor and talk about when it might be useful to consistently create
 └───────────┴─────────────────────────┴───────────────────────┘
 ```
 
+We'll start by creating a directory named `trackify` and initializing it with a `package.json` file.
+
 ```shell
 mkdir trackify
 cd trackify
-npm init
+npm init -y
 ```
+
+Add `.DS_Store`, `node_modules`, and `npm-debug.log` to a `.gitignore` file.
 
 ```shell
 echo '.DS_Store' >> .gitignore
@@ -111,15 +117,25 @@ echo 'node_modules' >> .gitignore
 echo 'npm-debug.log' >> .gitignore
 ```
 
+Make sure PostgreSQL is running.
+
+```shell
+brew services list
+```
+
+Create a database called `trackify_dev` and confirm that it was created.
+
 ```shell
 createdb trackify_dev
 psql -l
 ```
-The migration cli is bundled with the knex global install.
+The migration cli is bundled with the Knex install. Also, be sure to install the PostgreSQL client.
 
 ```shell
 npm install --save pg knex
 ```
+
+Create a `knexfile.js` file and configure the development environment.
 
 ```shell
 touch knexfile.js
@@ -136,9 +152,21 @@ module.exports = {
 };
 ```
 
+When you install a Node.js module that includes an executable, the executable file is stored in `./node_modules/.bin`. Check the current migration status by running the following command.
+
 ```shell
 ./node_modules/.bin/knex migrate:currentVersion
 ```
+
+It would be annoying to have to type out the full path to the Knex executable file each time we used it. Luckily NPM allows us to add command shortcuts in our `package.json` file inside a `scripts` object.
+
+```javascript
+"scripts": {
+  "knex": "./node_modules/.bin/knex"
+},
+```
+
+By default, NPM looks in the `./node_modules/.bin` folder so we can make this even shorter.
 
 ```javascript
 "scripts": {
@@ -146,26 +174,32 @@ module.exports = {
 },
 ```
 
+We run script commands listed in our `package.json` by typing `npm run` followed by the name we gave the command.
+
 ```shell
 npm run knex migrate:currentVersion
 ```
 
-Create a new migration.
+Create a new migration by using the `migrate:make` command.
 
 ```shell
 npm run knex migrate:make tracks
 ```
+
+This creates a `migration` folder in the root directory of your project (unless it already existed) and adds a tracks migration file into the folder.
 
 ```shell
 ls -hal
 ls -hal migrations
 ```
 
+Check the migration status again.
+
 ```shell
 npm run knex migrate:currentVersion
 ```
 
-Migrations are how we define and update our database schema.
+Migrations are how we define and update our database schema. Open the tracks migration file, delete the boilerplate code, and type in the following code.
 
 ```javascript
 'use strict';
@@ -185,13 +219,19 @@ exports.down = function(knex) {
 };
 ```
 
+The `migrate:latest` command is used to run the migration file on the database.
+
 ```shell
 npm run knex migrate:latest
 ```
 
+Once again, check the current migration status.
+
 ```shell
 npm run knex migrate:currentVersion
 ```
+
+
 
 ```shell
 psql trackify_dev -c '\dt'
@@ -322,9 +362,88 @@ npm run knex migrate:currentVersion
 psql trackify_dev -c 'SELECT * FROM knex_migrations;'
 ```
 
+**NOTE:** A Knex migration will take all new migration files, group them in a batch, and then apply them. A rollback will rollback all of the files in a batch.
+
+Example flow
+
+Create Migration File 1
+Create Migration File 2
+knex migrate:latest
+Two migrations run, one batch created.
+knex migrate:rollback
+Two migrations rolled back, one batch rolled back.
+
+vs
+
+Create Migration File 1
+One migration run, one batch created.
+knex migrate:latest
+Create Migration File 2
+One migrations run, one batch created.
+knex migrate:rollback
+One migrations rolled back, one batch rolled back.
+knex migrate:rollback
+One migrations rolled back, one batch rolled back.
+
 ## What's the Knex seed system?
 
-The **Knex seed system** allows developers to automate the initialization of table rows in JavaScript.
+The **Knex seed system** allows developers to automate the initialization of table rows in JavaScript. The heart of the seed system are seed files. Unlike the Knex migration system, the seed files do not run in batches. They all run every time you run the Knex seed command.
+
+Here's an example of what the contents of the `1_tracks.js` seed file might look like.
+
+```javascript
+'use strict';
+
+exports.seed = function(knex) {
+  return knex('tracks').del()
+    .then(() => {
+      return knex('tracks').insert([{
+        id: 1,
+        title: 'Here Comes the Sun',
+        artist: 'The Beatles',
+        likes: 28808736,
+        created_at: new Date('2016-06-26 14:26:16 UTC'),
+        updated_at: new Date('2016-06-26 14:26:16 UTC')
+      }, {
+        id: 2,
+        title: 'Hey Jude',
+        artist: 'The Beatles',
+        likes: 20355655,
+        created_at: new Date('2016-06-26 14:26:16 UTC'),
+        updated_at: new Date('2016-06-26 14:26:16 UTC')
+      }]);
+    });
+};
+```
+
+Notice that seed files only export a single function that removes all rows from the table and then inserts the specified rows.
+
+When the seed file runs, the exported function is translated into the following SQL commands.
+
+```sql
+DELETE FROM tracks;
+
+INSERT INTO tracks (id, title, artist, likes, created_at, updated_at)
+VALUES (
+  1,
+  'Here Comes the Sun',
+  'The Beatles',
+  28808736,
+  '2016-06-26 07:26:16.000',
+  '2016-06-26 07:26:16.000'
+), (
+  2,
+  'Hey Jude',
+  'The Beatles',
+  20355655,
+  '2016-06-26 07:26:16.000',
+  '2016-06-26 07:26:16.000'
+);
+```
+
+### Exercise
+
+Turn to a neighbor and explain what the Knex seed system is in your own words.
 
 ## Why is the Knex seed system useful?
 
