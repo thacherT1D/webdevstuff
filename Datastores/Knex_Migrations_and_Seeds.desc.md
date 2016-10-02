@@ -296,13 +296,19 @@ Next we'll write a second migration file to create a `users` table in our databs
 └───────────┴─────────────────────────┴───────────────────────┘
 ```
 
+Use the `migrate:make` command to create the new file.
+
 ```shell
 npm run knex migrate:make users
 ```
 
+Confirm that the file was created successfully.
+
 ```shell
 ls -hal migrations
 ```
+
+Add the following code to the new users migration file.
 
 ```javascript
 'use strict';
@@ -319,52 +325,43 @@ exports.down = function(knex) {
   return knex.schema.dropTable('users');
 };
 ```
+Run the migration using the `migrate:latest` command, check the migration status, and inspect the rows in the `knex_migrations` table.
 
 ```shell
 npm run knex migrate:latest
-```
 
-```shell
 npm run knex migrate:currentVersion
-```
 
-```shell
 psql trackify_dev -c 'SELECT * FROM knex_migrations;'
 ```
+
+Rollback the database using the `migrate:rollback` command, check the migration status, and inspect the rows in the `knex_migrations` table.
 
 ```shell
 npm run knex migrate:rollback
-```
 
-```shell
 npm run knex migrate:currentVersion
-```
 
-```shell
 psql trackify_dev -c 'SELECT * FROM knex_migrations;'
 ```
+
+Rollback the database a second time, check the migration status, and inspect the rows in the `knex_migrations` table.
 
 ```shell
 npm run knex migrate:rollback
-```
 
-```shell
 npm run knex migrate:currentVersion
-```
 
-```shell
 psql trackify_dev -c 'SELECT * FROM knex_migrations;'
 ```
+
+Finally, run both migrations using the `migrate:latest` command, check the migration status, and inspect the rows in the `knex_migrations` table.
 
 ```shell
 npm run knex migrate:latest
-```
 
-```shell
 npm run knex migrate:currentVersion
-```
 
-```shell
 psql trackify_dev -c 'SELECT * FROM knex_migrations;'
 ```
 
@@ -433,7 +430,7 @@ Compare that to a second example flow:
 
 ## What's the Knex seed system?
 
-The **Knex seed system** allows developers to automate the initialization of table rows in JavaScript. The heart of the seed system are seed files. Unlike the Knex migration system, the seed files do not run in batches. They all run every time you run the Knex seed command.
+The **Knex seed system** allows developers to automate the initialization of table rows in JavaScript. The heart of the seed system are seed files. Unlike the Knex migration system, the seed files do not run in batches. All seed files run every time you run the Knex seed command.
 
 Here's an example of what the contents of the `1_tracks.js` seed file might look like.
 
@@ -489,7 +486,7 @@ VALUES (
 
 ### Exercise
 
-Turn to a neighbor and explain what the Knex seed system is in your own words.
+Turn to a neighbor and explain what the Knex seed system is in your own words. Then compare and contrast it with what you know about the Knex migration system.
 
 ## Why is the Knex seed system useful?
 
