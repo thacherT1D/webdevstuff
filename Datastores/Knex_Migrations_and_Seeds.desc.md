@@ -381,13 +381,13 @@ To help illustrate this, here is an example flow:
            \|/
 ┌────────────────────────────────────────┐
 │ knex migrate:latest                    │
-│ Two migrations run, one batch created. │
+│ Two migrations run, one batch created  │
 └────────────────────────────────────────┘
             │
            \|/
 ┌────────────────────────────────────────────────────┐
 │ knex migrate:rollback                              │
-│ Two migrations rolled back, one batch rolled back. │
+│ Two migrations rolled back, one batch rolled back  │
 └────────────────────────────────────────────────────┘
 ```
 
@@ -401,31 +401,34 @@ Compare that to a second example flow:
            \|/
 ┌───────────────────────────────────────┐
 │ knex migrate:latest                   │
-│ One migration run, one batch created. │
+│ One migration run, one batch created  │
 └───────────────────────────────────────┘
             │
            \|/
 ┌─────────────────────────┐
 │ Create Migration File 2 │
+│ Create Migration File 3 │
 └─────────────────────────┘
             │              
            \|/
-┌───────────────────────────────────────┐
-│ knex migrate:latest                   │
-│ One migration run, one batch created. │
-└───────────────────────────────────────┘
+┌────────────────────────────────────────┐
+│ knex migrate:latest                    │
+│ Two migrations run, one batch created  │
+└────────────────────────────────────────┘
             │              
            \|/
-┌───────────────────────────────────────────────────┐
-│ knex migrate:rollback                             │
-│ One migration rolled back, one batch rolled back. │
-└───────────────────────────────────────────────────┘
+┌─────────────────────────────────────────────┐
+│ knex migrate:rollback                       │
+│ Two migrations rolled back (File 2, File 3) │
+│ One batch rolled back.                      │
+└─────────────────────────────────────────────┘
             │              
            \|/
-┌───────────────────────────────────────────────────┐
-│ knex migrate:rollback                             │
-│ One migration rolled back, one batch rolled back. │
-└───────────────────────────────────────────────────┘
+┌────────────────────────────────────┐
+│ knex migrate:rollback              │
+│ One migration rolled back (File 1) │
+│ One batch rolled back.             │
+└────────────────────────────────────┘
 ```
 
 ## What's the Knex seed system?
