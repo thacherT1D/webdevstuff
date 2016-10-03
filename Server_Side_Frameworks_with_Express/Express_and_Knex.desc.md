@@ -305,7 +305,7 @@ router.delete('/artists/:id', (req, res, next) => {
     .then(() => {
       delete artist.id;
       res.send(artist);
-    });
+    })
     .catch((err) => {
       next(err);
     });
@@ -429,7 +429,7 @@ router.patch('/tracks/:id', (req, res, next) => {
     })
     .then((tracks) => {
       res.send(tracks[0]);
-    });
+    })
     .catch((err) => {
       next(err);
     });
