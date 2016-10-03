@@ -484,24 +484,30 @@ VALUES (
 );
 ```
 
-### Exercise
-
-Turn to a neighbor and explain what the Knex seed system is in your own words. Then compare and contrast it with what you know about the Knex migration system.
-
 ## Why is the Knex seed system useful?
 
-Most web application start with an initial set of table rows. It's useful to be able to seed a database with that set.
+Most web applications start with an initial set of table rows to use during development and testing and it's useful to be able to seed a database with that set without having to manually insert the data. Every time you rollback your database, one or more tables are dropped and therefore all rows are removed. Imagine having to reinsert your test data any time you modified the structure of a table and had to rollback and migrate your database. Additionally, when a new developer joins a team, it's helpful for them to be able to simply run migration and seed files and be up to speed with the rest of the team.
+
+### Exercise
+
+Turn to a neighbor and explain what the Knex seed system is and why it might be useful in your own words. Then compare and contrast it with what you know about the Knex migration system.
 
 ## How do you use Knex to seed a PostgreSQL database?
+
+Use Knex's `seed:make` command to create a new seed file. Unlike migration files, seed files are not automatically prefixed with a UTC timestamp so it is best to prefix the file name with a number to set the order in which your seed files will run.
 
 ```shell
 npm run knex seed:make 1_tracks
 ```
 
+Confirm that the file was created.
+
 ```shell
 ls -hal
 ls -hal seeds
 ```
+
+Open the `1_tracks` file and add the following code.
 
 ```javascript
 'use strict';
@@ -547,29 +553,31 @@ exports.seed = function(knex) {
 };
 ```
 
-```shell
-npm run knex seed:run
-```
-
-```shell
-psql trackify_dev -c 'SELECT * FROM tracks;'
-```
+Run the seed file by using the `seed:run` command and inspect the `tracks` table rows in your database.
 
 ```shell
 npm run knex seed:run
-```
 
-```shell
 psql trackify_dev -c 'SELECT * FROM tracks;'
 ```
+
+Run the seed file again and once again inspect the rows in the database.
+
+```shell
+npm run knex seed:run
+
+psql trackify_dev -c 'SELECT * FROM tracks;'
+```
+
+Add a `2_users` seed file and confirm it was successfully created.
 
 ```shell
 npm run knex seed:make 2_users
-```
 
-```shell
 ls -hal seeds
 ```
+
+Open the `2_users` file and add in the following code.
 
 ```javascript
 'use strict';
@@ -592,32 +600,35 @@ exports.seed = function(knex) {
 };
 ```
 
-```shell
-npm run knex seed:run
-```
-
-```shell
-psql trackify_dev -c 'SELECT * FROM users;'
-```
+Run the seed files and inspect the rows in the `users` table.
 
 ```shell
 npm run knex seed:run
-```
 
-```shell
 psql trackify_dev -c 'SELECT * FROM users;'
 ```
+
+Run the seed files a second time and once again, look at the rows in the `users` table.
+
+```shell
+npm run knex seed:run
+
+psql trackify_dev -c 'SELECT * FROM users;'
+```
+
+Finally, initialize the directory as a git repository.
 
 ```shell
 git init
-```
 
-```shell
 git status
 ```
 
+Add and commit your files.
+
 ```shell
 git add .
+
 git commit -m 'Initial commit'
 ```
 
