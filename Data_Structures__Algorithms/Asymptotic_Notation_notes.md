@@ -21,3 +21,9 @@ Is factorial
 ```
 O(n)
 ```
+
+# Exercise four
+
+```
+O(n!)
+```
