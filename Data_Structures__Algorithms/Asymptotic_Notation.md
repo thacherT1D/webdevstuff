@@ -2,6 +2,8 @@
 
 This is a brief intro to computational complexity and asymptotic notation. It may not cover some items in depth enough, in which case please refer to the resource materials below.
 
+We previously discussed asymptotic notation in terms of Big O in the [Galvanize CS Curriculum](https://github.com/gSchool/computer-science-curriculum/blob/master/Unit-2/02-big-o-notation.md).
+
 ## Objectives
 
 - Understand what computational complexity is.
