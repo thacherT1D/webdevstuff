@@ -150,12 +150,14 @@ In the new migration file, type the following code.
 
 exports.up = function(knex) {
   return knex.schema.table('users', (table) => {
-    table.specificType('hashed_password', 'char(60)').notNullable();
+    table.specificType('hashed_password', 'char(60)')
+      .notNullable()
+      .defaultTo('$2a$12$Z7JfPVG4qJIIBZCFjZ.VROwEJRm9Gd3c3S1VqhfJDHmZAEdxY5uRC');
   });
 };
 
 exports.down = function(knex) {
-  return knex.schema.table('users', function (table) {
+  return knex.schema.table('users', (table) => {
     table.dropColumn('hashed_password');
   });
 };
@@ -179,8 +181,8 @@ In the `server.js` file, add the necessary routing middleware.
 ```JavaScript
 // ...
 
-const tracks = require('routes/tracks');
-const users = require('routes/users');
+const tracks = require('./routes/tracks');
+const users = require('./routes/users');
 
 app.use(tracks);
 app.use(users);
@@ -212,10 +214,7 @@ router.post('/users', (req, res, next) => {
   }
 
   if (!password || password.length < 8) {
-    return next(boom.create(
-      400,
-      'Password must be at least 8 characters long'
-    ));
+    return next(boom.create(400, 'Password must be at least 8 characters long'));
   }
 
   res.sendStatus(200);
