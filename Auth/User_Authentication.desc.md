@@ -3,15 +3,33 @@
 - Explain what authentication is.
 - Explain why is authentication important.
 - Use bcrypt to authenticate a user.
+- Explain what a JSON Web Token (JWT) is.
+- Build an authentication route that produces a JWT.
 - Explain what authorization is.
 - Explain why authorization is important.
-- Use a cookie session to authorize a user.
+- Use a JWT to authorize use of a route.
 
 ## What's authentication?
 
 **Authentication** is the process of confirming the identity of a user. When a user logs into a web application, that person is attempting to authenticate. To confirm their identity, the user must provide unique personal identification, like a username or email address, and a password. If the information provided during login matches the information previously provided during registration, the user is authenticated.
 
-[INSERT DIAGRAM HERE]
+```text
+                                ┌──────── Node.js ─────────┐                                
+                                │     Express              │                                
+                                │     Knex                 │                                
+┌──── Chrome ───┐               │                          │               ┌─── Postgres ──┐
+│               │── login req -▶│                          │─── SELECT ───▶│               │
+│               │   JSON        │   ┌──Authentication──┐   │    user       │               │
+│               │               │   │                  │   │               │               │
+│               │               │   │                  ▽   │               │               │
+│               │               │   │     bcrypt       │   │               │               │
+│               │◀── response ──│   △                  │   │◀── response ──│               │
+│               │    JSON       │   │                  │   │    user       │               │
+│               │    auth token │   └──────────────────┘   │               │               │
+└───────────────┘               │                          │               └───────────────┘
+                                │                          │                                
+                                └──────────────────────────┘                                
+```
 
 However, it's not quite as simple as that. As you've seen, only hashed passwords are stored in the database during registration. To verify whether a login password is correct, it too must be run through the same cryptographic hash function as the registration password. Only if the two hashed passwords are equivalent is the user authenticated.
 
@@ -76,24 +94,24 @@ In the `server.js` file, add the necessary routing middleware.
 ```javascript
 // ...
 
-const session = require('routes/session');
+const token = require('routes/token');
 const tracks = require('routes/tracks');
 const users = require('routes/users');
 
-app.use(session);
+app.use(token);
 app.use(tracks);
 app.use(users);
 
 // ...
 ```
 
-Create a new routes file for managing a session.
+Create a new routes file for managing a token.
 
 ```shell
-touch routes/session.js
+touch routes/token.js
 ```
 
-In the `routes/session.js` file, type the following code.
+In the `routes/token.js` file, type the following code.
 
 ```javascript
 'use strict';
@@ -106,7 +124,7 @@ const { camelizeKeys, decamelizeKeys } = require('humps');
 
 const router = express.Router();
 
-router.post('/session', (req, res, next) => {
+router.post('/token', (req, res, next) => {
   const { email, password } = req.body;
 
   if (!email || !email.trim()) {
@@ -150,7 +168,7 @@ module.exports = router;
 Run the following shell command.
 
 ```shell
-http POST localhost:8000/session email='2pac@shakur.com' password=ambitionz
+http POST localhost:8000/token email='2pac@shakur.com' password=ambitionz
 ```
 
 And you should see something like this.
@@ -175,7 +193,7 @@ Once you get a successful response, commit your changes.
 
 ```shell
 git add .
-git commit -m 'Add POST /session middleware'
+git commit -m 'Add POST /token middleware'
 ```
 
 ## What's authorization?
