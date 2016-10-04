@@ -75,9 +75,9 @@ In your own words, write down why cryptographic password hashing is important. A
 
 [Coda Hale - How To Safely Store A Password](https://codahale.com/how-to-safely-store-a-password/)
 
-When generating a digest, it's recommended to add another layer of protection with something called a salt. A **salt** is a random string that is concatenated to the end of a message before it's hashed. Using a different salt every time a digest is generated will provide an extra layer of security when hashing a password. This prevents attackers from potentially using a table of precomputed hashes of common passwords to breach your web application.
+When generating a digest, it's recommended to add another layer of protection with something called a salt. A **salt** is a random string that is concatenated to the end of a message before it's hashed. Using a different salt every time a digest is generated will provide an extra layer of security when hashing a password. This prevents attackers from potentially using a table of precomputed hashes of common passwords to breach your web application.
 
-When hashing an input string, bcrypt will go through `2^workfactor` iterations when generating a digest. On a 2GHz core machine, you can roughly expect the following performance when using the [`bcrypt` NPM module](https://www.npmjs.com/package/bcrypt).
+When hashing an input string, bcrypt will go through `2^workfactor` iterations when generating a digest. On a 2GHz core machine, you can roughly expect the following performance when using the [`bcrypt` NPM module](https://www.npmjs.com/package/bcrypt).
 
 | work factor | iterations | performance     |
 |-------------|------------|-----------------|
@@ -121,14 +121,19 @@ Here's a high-level overview of a user registration process for a web applicatio
 1. The digest and the salt are inserted into the database along side the user's other personal information.
 1. The server informs the client that user registration was a success.
 
-To start off with, change into your `trackify` directory and create a new feature branch.
+To get started, navigate to the `trackify` project directory.
 
 ```shell
-cd trackify
+cd path/to/trackify
+```
+
+And checkout a new feature branch.
+
+```shell
 git checkout -b registration
 ```
 
-Create the migration file to define the schema for the users table.
+Then, create the migration file for the `users` table.
 
 ```shell
 npm run knex migrate:make users
@@ -140,22 +145,21 @@ Open the project directory in your text editor
 atom .
 ```
 
-Inside the new migration file, write the following code.
+In the new migration file, type the following code.
 
 ```JavaScript
 'use strict';
 
 exports.up = function(knex) {
-  return knex.schema.createTable('users', (table) => {
-    table.increments();
-    table.string('email').unique().notNullable();
+  return knex.schema.table('users', (table) => {
     table.specificType('hashed_password', 'char(60)').notNullable();
-    table.timestamps(true, true);
   });
 };
 
 exports.down = function(knex) {
-  return knex.schema.dropTable('users');
+  return knex.schema.table('users', function (table) {
+    table.dropColumn('hashed_password');
+  });
 };
 ```
 
@@ -169,7 +173,21 @@ Add and commit your work.
 
 ```shell
 git add .
-git commit -m 'Add users migration'
+git commit -m 'Add hashed password to users table'
+```
+
+In the `server.js` file, add the necessary routing middleware.
+
+```JavaScript
+// ...
+
+const tracks = require('routes/tracks');
+const users = require('routes/users');
+
+app.use(tracks);
+app.use(users);
+
+// ...
 ```
 
 Create a new routes file for user registration.
@@ -178,23 +196,30 @@ Create a new routes file for user registration.
 touch routes/users.js
 ```
 
-In the `server.js` file, add the necessary routing middleware.
-
-```JavaScript
-const users = require('routes/users');
-
-app.use(users);
-```
-
-In the `routes/users.js` module, write the following code.
+In the `routes/users.js` module, type the following code.
 
 ```JavaScript
 'use strict';
 
+const boom = require('boom');
 const express = require('express');
+
 const router = express.Router();
 
 router.post('/users', (req, res, next) => {
+  const { email, password } = req.body;
+
+  if (!email || !email.trim()) {
+    return next(boom.create(400, 'Email must not be blank'));
+  }
+
+  if (!password || password.length < 8) {
+    return next(boom.create(
+      400,
+      'Password must be at least 8 characters long'
+    ));
+  }
+
   res.sendStatus(200);
 });
 
@@ -204,20 +229,52 @@ module.exports = router;
 Then, start the HTTP server with `nodemon`.
 
 ```shell
-npm run nodemon
+npm start
 ```
 
 In a new Terminal tab, then run the following shell command.
 
 ```shell
+http POST localhost:8000/users email=missy.elliot@gmail.com password=geturfreakon
+```
+
+And you should see something like this.
+
+```text
+HTTP/1.1 200 OK
+Connection: keep-alive
+Content-Length: 2
+Content-Type: text/plain; charset=utf-8
+Date: Mon, 01 Aug 2016 23:00:42 GMT
+ETag: W/"2-4KoCHiHd29bYzs7HHpz1ZA"
+
+OK
+```
+
+Then, run the following shell command.
+
+```shell
 http POST localhost:8000/users
+```
+
+And you should see something like this.
+
+```text
+HTTP/1.1 400 Bad Request
+Connection: keep-alive
+Content-Length: 23
+Content-Type: text/plain; charset=utf-8
+Date: Mon, 01 Aug 2016 23:12:38 GMT
+ETag: W/"17-q1yKv5OsRR/Y5yrZftDPbw"
+
+Email must not be blank
 ```
 
 Add and commit your work.
 
 ```shell
 git add .
-git commit -m 'Add users route'
+git commit -m 'Add POST /users middleware'
 ```
 
 Install the `bcrypt-as-promised` package with `npm`.
@@ -231,14 +288,27 @@ Use the `bcrypt.hash()` method to generate a salt and hash the password.
 ```JavaScript
 'use strict';
 
-const express = require('express');
-const router = express.Router();
 const bcrypt = require('bcrypt-as-promised');
+const boom = require('boom');
+const express = require('express');
+
+const router = express.Router();
 
 router.post('/users', (req, res, next) => {
-  bcrypt.hash(req.body.password, 12)
-    .then((hashed_password) => {
-      console.log(req.body.email, hashed_password);
+  const { email, password } = req.body;
+
+  if (!email || !email.trim()) {
+    return next(boom.create(400, 'Email must not be blank'));
+  }
+
+  if (!password || password.length < 8) {
+    return next(boom.create(400, 'Password must be at least 8 characters long'));
+  }
+
+  bcrypt.hash(password, 12)
+    .then((hashedPassword) => {
+      console.log(email, hashedPassword);
+
       res.sendStatus(200);
     })
     .catch((err) => {
@@ -252,7 +322,27 @@ module.exports = router;
 Then, run the following shell command.
 
 ```shell
-http POST localhost:8000/users email=neo@thematrix.com password=theone
+http POST localhost:8000/users email=missy.elliot@gmail.com password=geturfreakon
+```
+
+And in the client logs, you should see something like this.
+
+```text
+HTTP/1.1 200 OK
+Connection: keep-alive
+Content-Length: 2
+Content-Type: text/plain; charset=utf-8
+Date: Mon, 01 Aug 2016 23:14:03 GMT
+ETag: W/"2-4KoCHiHd29bYzs7HHpz1ZA"
+
+OK
+```
+
+And in the server logs, you should see something like this.
+
+```text
+missy.elliot@gmail.com $2a$12$6hRYmwZzf9hwcY8q4ClC6eiY3McrZmS6J7H/ga4g6KwpDPaxVjLPm
+POST /users 200 337.989 ms - 2
 ```
 
 Add and commit your work.
@@ -264,26 +354,41 @@ git commit -m 'Use bcrypt to hash passwords'
 
 Finally, use Knex to insert the email and hashed password into the users table.
 
+**NOTE:** Remember to require the `knex` and `humps` dependencies.  Be sure to store the `camelizeKeys` and `decamelizeKeys` functions from `humps` in a local variable.
+
 ```JavaScript
 'use strict';
 
-const express = require('express');
-const router = express.Router();
 const bcrypt = require('bcrypt-as-promised');
+const boom = require('boom');
+const express = require('express');
 const knex = require('../knex');
+const { camelizeKeys, decamelizeKeys } = require('humps');
+
+const router = express.Router();
 
 router.post('/users', (req, res, next) => {
-  bcrypt.hash(req.body.password, 12)
-    .then((hashed_password) => {
-      return knex('users')
-        .insert({
-          email: req.body.email,
-          hashed_password: hashed_password
-        }, '*');
+  const { email, password } = req.body;
+
+  if (!email || !email.trim()) {
+    return next(boom.create(400, 'Email must not be blank'));
+  }
+
+  if (!password || password.length < 8) {
+    return next(boom.create(400, 'Password must be at least 8 characters long'));
+  }
+
+  bcrypt.hash(password, 12)
+    .then((hashedPassword) => {
+      const insertUser = { email, hashedPassword };
+
+      return knex('users').insert(decamelizeKeys(insertUser), '*');
     })
-    .then((users) => {
-      const user = users[0];
-      delete user.hashed_password;
+    .then((rows) => {
+      const user = camelizeKeys(rows[0]);
+
+      delete user.hashedPassword;
+
       res.send(user);
     })
     .catch((err) => {
@@ -295,7 +400,25 @@ module.exports = router;
 ```
 
 ```shell
-http POST localhost:8000/users email=neo@thematrix.com password=theone
+http POST localhost:8000/users email=missy.elliot@gmail.com password=geturfreakon
+```
+
+And you should see something like this.
+
+```text
+HTTP/1.1 200 OK
+Connection: keep-alive
+Content-Length: 148
+Content-Type: application/json; charset=utf-8
+Date: Mon, 01 Aug 2016 23:20:34 GMT
+ETag: W/"94-hZOIDhFI5Ev0q9i6sDE9CQ"
+
+{
+    "createdAt": "2016-08-01T23:20:34.163Z",
+    "email": "missy.elliot@gmail.com",
+    "id": 2,
+    "updatedAt": "2016-08-01T23:20:34.163Z"
+}
 ```
 
 Add and commit your work.
@@ -318,7 +441,7 @@ Once merged, delete the feature branch.
 git branch -d registration
 ```
 
-## Exercise
+## Assignment
 
 - [Galvanize Bookshelf - User registration](https://github.com/gSchool/galvanize-bookshelf/blob/master/3_user_registration.md)
 
