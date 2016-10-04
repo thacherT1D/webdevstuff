@@ -338,6 +338,24 @@ function f(n){
 
 ### Exercise 4
 
+1. Write a function to solve the following problem.
+1. Calculate the Big O for your function.
+
+```
+List all the permutations for a given array.
+
+Example: All permutations for the array [1, 2, 3]:
+
+[
+[1, 2, 3],
+[1, 3, 2],
+[2, 1, 3],
+[2, 3, 1],
+[3, 1, 2],
+[3, 2, 1]
+]
+```
+
 ## Resources
 
 - [Khan Academy: Asymptotic Notation](https://www.khanacademy.org/computing/computer-science/algorithms/asymptotic-notation/a/asymptotic-notation)
