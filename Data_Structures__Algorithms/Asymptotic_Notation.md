@@ -22,7 +22,7 @@ As a programmer, it is important to not only write code which solves a given pro
 <td>Time Complexity</td><td>Describes the number of operations it takes to run an algorithm for <code>n</code> inputs.</td>
 </tr>
 <tr>
-<td>Space Complexity</td><td>Describes the amount memory it takes to run an algorithm for `n` inputs.</td>
+<td>Space Complexity</td><td>Describes the amount memory it takes to run an algorithm for <code>n</code> inputs.</td>
 </tr>
 </table>
 
@@ -41,8 +41,8 @@ There are four notations generally used to describe the complexity of an algorit
 <table>
 <tr><th>Notation</th><th>Description</th></tr>
 <tr><td>Big Θ (Theta)</td><td>Describes the tight bound, that is the intersection of Big O and Big Ω.</td></tr>
-<tr><td>Big O</td><td>Describes the upper bound, that is the **worst case**.</td></tr>
-<tr><td>Big Ω (Omega)</td><td>Describes the lower bound, that is the **best case**.</td></tr>
+<tr><td>Big O</td><td>Describes the upper bound, that is the <b>worst case</b>.</td></tr>
+<tr><td>Big Ω (Omega)</td><td>Describes the lower bound, that is the <b>best case</b>.</td></tr>
 </table>
 
 **Big O** describes the upper bound or **worst case** it takes to run an algorithm, that is to say the most operations it takes for an algorithm to complete.
@@ -72,25 +72,25 @@ Commonly used terminology for the complexity of algorithms from the book *Discre
 <th>Complexity</th><th>Terminology</th>
 </tr>
 <tr>
-<td>O(1)</td><td>Constant complexity</td>
+<td><code>O(1)</code></td><td>Constant complexity</td>
 </tr>
 <tr>
-<td>O(log n)</td><td>Logarithmic complexity</td>
+<td><code>O(log n)</code></td><td>Logarithmic complexity</td>
 </tr>
 <tr>
-<td>O(n)</td><td>Linear complexity</td>
+<td><code>O(n)</code></td><td>Linear complexity</td>
 </tr>
 <tr>
-<td>O(n log n)</td><td>n log n complexity</td>
+<td><code>O(n log n)</code></td><td>n log n complexity</td>
 </tr>
 <tr>
-<td>O(nᵇ)</td><td>Polynomial complexity</td>
+<td><code>O(nᵇ)</code></td><td>Polynomial complexity</td>
 </tr>
 <tr>
-<td>O(bⁿ) where b > 1</td><td>Exponential complexity</td>
+<td><code>O(bⁿ)</code>where <code>b > 1</code></td><td>Exponential complexity</td>
 </tr>
 <tr>
-<td>O(n!)</td><td>Factorial complexity</td>
+<td><code>O(n!)</code></td><td>Factorial complexity</td>
 </tr>
 </table>
 
