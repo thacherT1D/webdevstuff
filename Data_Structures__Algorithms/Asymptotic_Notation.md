@@ -358,6 +358,7 @@ Example: All permutations for the array [1, 2, 3]:
 
 ## Resources
 
+- [Galvanize CS Curriculum: Big O](https://github.com/gSchool/computer-science-curriculum/blob/master/Unit-2/02-big-o-notation.md)
 - [Khan Academy: Asymptotic Notation](https://www.khanacademy.org/computing/computer-science/algorithms/asymptotic-notation/a/asymptotic-notation)
 - [Wikipedia: Big O Notation](https://en.wikipedia.org/wiki/Big_O_notation)
 - [Interview Cake: Big O Notation](https://www.interviewcake.com/article/java/big-o-notation-time-and-space-complexity)
@@ -365,3 +366,4 @@ Example: All permutations for the array [1, 2, 3]:
 - [Data Structures and Algorithms: Big-O, Little-O, Theta, Omega](https://cathyatseneca.gitbooks.io/data-structures-and-algorithms/content/analysis/notations.html)
 - [Stack Overflow: What exactly does big Θ notation represent](http://stackoverflow.com/questions/10376740/what-exactly-does-big-%D3%A8-notation-represent)
 - [Stack Exchange: Is this a Proper “Rule” for Identifying the “Big O” Notation of an Algorithm?](http://programmers.stackexchange.com/questions/194433/is-this-a-proper-rule-for-identifying-the-big-o-notation-of-an-algorithm)
+- [Big O Cheat Sheet](http://bigocheatsheet.com/)
