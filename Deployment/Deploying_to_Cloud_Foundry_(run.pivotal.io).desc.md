@@ -31,6 +31,15 @@ $ cf login -a api.run.pivotal.io
 
 Fork and clone the [Demo Deploy App](https://github.com/gSchool/ec2-node-deployment/tree/master/simple-app) and navigate to the cloned directory.
 
+TODO or use your own.
+TODO describe engine in package.json
+TODO describe launching from directory of package.json
+TODO view logs
+TODO start command with knex
+TODO view location of app.
+TODO add to instructions something that has already been deployed
+TODO add DATABASE_URL to demo app.
+
 To deploy the Node app simply run:
 
 ```bash
