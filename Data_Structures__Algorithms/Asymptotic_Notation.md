@@ -291,12 +291,12 @@ Complete the following exercises, show your work.
 Calculate Big O for the following:
 
 ```
-function fib(n){
+function f(n){
     if(n <= 1){
         return n;
     }
 
-    return fib(n - 1) + fib(n - 2);
+    return f(n - 1) + f(n - 2);
 }
 ```
 
@@ -305,7 +305,7 @@ function fib(n){
 Calculate Big O for the following:
 
 ```java
-public static void InsertionSort(int[] num) {
+public static void sort(int[] num) {
  int j;
  int key;
  int i;
@@ -316,7 +316,7 @@ public static void InsertionSort(int[] num) {
    (i >= 0) && (num[i] < key); i--) {
    num[i + 1] = num[i];
   }
-  num[i + 1] = key; // Put the key in its proper location
+  num[i + 1] = key;
  }
 }
 ```
@@ -325,16 +325,18 @@ public static void InsertionSort(int[] num) {
 
 Calculate Big O for the following:
 
-```
-function factorial(n){
+```javascript
+function f(n){
 
     if(n === 0){
         return 1;
     }
 
-    return n * factorial(n - 1);
+    return n * f(n - 1);
 }
 ```
+
+### Exercise 4
 
 ## Resources
 
