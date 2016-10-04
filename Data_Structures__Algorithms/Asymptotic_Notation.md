@@ -19,7 +19,7 @@ As a programmer, it is important to not only write code which solves a given pro
 <th>Complexity</th><th>Description</th>
 </tr>
 <tr>
-<td>Time Complexity</td><td>Describes the number of operations it takes to run an algorithm for `n` inputs.</td>
+<td>Time Complexity</td><td>Describes the number of operations it takes to run an algorithm for <code>n</code> inputs.</td>
 </tr>
 <tr>
 <td>Space Complexity</td><td>Describes the amount memory it takes to run an algorithm for `n` inputs.</td>
