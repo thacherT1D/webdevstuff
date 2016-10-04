@@ -72,25 +72,25 @@ Commonly used terminology for the complexity of algorithms from the book *Discre
 <th>Complexity</th><th>Terminology</th>
 </tr>
 <tr>
-<td>`O(1)`</td><td>Constant complexity</td>
+<td>O(1)</td><td>Constant complexity</td>
 </tr>
 <tr>
-<td>`O(log n)`</td><td>Logarithmic complexity</td>
+<td>O(log n)</td><td>Logarithmic complexity</td>
 </tr>
 <tr>
-<td>`O(n)`</td><td>Linear complexity</td>
+<td>O(n)</td><td>Linear complexity</td>
 </tr>
 <tr>
-<td>`O(n log n)`</td><td>n log n complexity</td>
+<td>O(n log n)</td><td>n log n complexity</td>
 </tr>
 <tr>
-<td>`O(nᵇ)`</td><td>Polynomial complexity</td>
+<td>O(nᵇ)</td><td>Polynomial complexity</td>
 </tr>
 <tr>
-<td>`O(bⁿ)` where `b > 1`</td><td>Exponential complexity</td>
+<td>O(bⁿ) where b > 1</td><td>Exponential complexity</td>
 </tr>
 <tr>
-<td>`O(n!)`</td><td>Factorial complexity</td>
+<td>O(n!)</td><td>Factorial complexity</td>
 </tr>
 </table>
 
@@ -129,21 +129,21 @@ for (int i = 0; i < myArray.length; i++) {
 ```
 
 - Outer loop = `O(n)` operations.
-  - Inner loop = `O(n + 1)` operations.
+  - Inner loop = `O(n)` operations.
 
 The inner loop happens outer loop amount of times because it is inside the outer loop, so we need to multiply:
 
 ```
-O(n) * O(n + 1) = O(n² + n)
+O(n) * O(n) = O(n²)
 ```
 
 Step Two: Remove everything except the highest term.
 
 ```
- O(n² + n)
+ O(n²)
 ```
 
-`n² > n` so we can remove `n` and keep `n²`. Resulting in:
+`n² is the only term. We do not need to remove anything;
 
 ```
  O(n²)
@@ -220,65 +220,65 @@ for(var o = 0; o < someArray.length; o++){
 ```
 
 - i loop = `O(n)` operations.
-  - k loop = `O(n + 1)` operations.
-- k loop = `O(n + 1)` operations.
-- l loop = `O(n + 1)` operations.
-- m loop = `O(n + 1)` operations.
+  - k loop = `O(n)` operations.
+- k loop = `O(n)` operations.
+- l loop = `O(n)` operations.
+- m loop = `O(n)` operations.
 - o loop = `O(n)` operations.
-  - p loop = `O(n + 1)` operations.
+  - p loop = `O(n)` operations.
 
 We multiply loops inside of other loops, because they must take place outer loop amount of times.
 
 We add loops that are next to each other, because they don't influence each other's number of operations.
 
 ```
-O(n) * O(n + 1) + O(n + 1) + O(n + 1) + O(n + 1) + O(n) * O(n + 1)
+O(n) * O(n) + O(n) + O(n) + O(n) + O(n) * O(n)
 
 Lets make it more readable:
 
-O(n * (n + 1) + n * (n + 1) + n + 1 + n + 1 + n + 1)
+O( n * n + n * n + n + n + n)
 
 Add:
 
-O(n * (n + 1) + n * (n + 1) + 3n + 3)
+O( n * n + n * n + 3n)
 
 
 Multiply:
 
-O(n² + n + n² + n + 3n + 3)
+O(n² + n² + 3n)
 
 Add:
 
-O(2n² + 5n + 3)
+O(2n² + 3n)
 ```
 
-Step Two: Remove everything except the highest term.
+**Step Two:** Remove everything except the highest term.
 
 We now have:
 
 ```
-O(2n² + 5n + 3)
+O(2n² + 3n)
 ```
 
 Lets find our highest term, and remove the rest:
 
 ```
-2n² > 5n
+2n² > 3n
 ```
 
 So we have:
 
 ```
-Θ(2n² + 3)
+O(2n²)
 ```
 
-Step Three: Remove constants.
+**Step Three:** Remove constants.
 
 ```
-O(2n² + 3)
+O(2n²)
 ```
 
-2 and 3 are a constants, let's rip it out and get our final result:
+2 is a constants, let's rip it out and get our final result:
 
 ```
 O(n²)
@@ -292,7 +292,7 @@ Complete the following exercises, show your work.
 
 Calculate Big O for the following:
 
-```
+```javascript
 function f(n){
     if(n <= 1){
         return n;
