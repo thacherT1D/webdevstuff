@@ -143,7 +143,7 @@ Step Two: Remove everything except the highest term.
  O(n²)
 ```
 
-`n² is the only term. We do not need to remove anything;
+`n²` is the only term. We do not need to remove anything;
 
 ```
  O(n²)
@@ -153,9 +153,9 @@ Step Three: Remove constants.
 
 We don't have any constants so we have found our result!
 
- ```
- O(n²)
- ```
+```
+O(n²)
+```
 
 ### Example Two
 
