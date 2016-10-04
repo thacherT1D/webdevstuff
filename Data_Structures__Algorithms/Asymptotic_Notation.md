@@ -323,7 +323,18 @@ public static void InsertionSort(int[] num) {
 
 ### Exercise Three
 
-TODO Sort B
+Calculate Big O for the following:
+
+```
+function factorial(n){
+
+    if(n === 0){
+        return 1;
+    }
+
+    return n * factorial(n - 1);
+}
+```
 
 ## Resources
 
