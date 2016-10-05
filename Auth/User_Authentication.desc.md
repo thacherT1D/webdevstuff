@@ -4,6 +4,7 @@
 - Explain why is authentication important.
 - Use bcrypt to authenticate a user.
 - Explain what a JSON Web Token (JWT) is.
+- Explain why a JSON Web Token (JWT) is important.
 - Build an authentication route that produces a JWT.
 - Explain what authorization is.
 - Explain why authorization is important.
@@ -24,8 +25,8 @@
 │               │               │   │                  ▽   │               │               │
 │               │               │   │     bcrypt       │   │               │               │
 │               │◀── response ──│   △                  │   │◀── response ──│               │
-│               │    JSON       │   │                  │   │    user       │               │
-│               │    auth token │   └──────────────────┘   │               │               │
+│               │    auth token │   │                  │   │    user       │               │
+│               │               │   └──────────────────┘   │               │               │
 └───────────────┘               │                          │               └───────────────┘
                                 │                          │                                
                                 └──────────────────────────┘                                
@@ -195,6 +196,84 @@ Once you get a successful response, commit your changes.
 git add .
 git commit -m 'Add POST /token middleware'
 ```
+
+## What is a JSON Web Token (JWT)?
+
+A common trend in performing authentication is using a JSON Web Token (JWT pronounced jot). A JWT is a method of communicating the authentication state through an open standard. The standard dictates that a JWT is a string that is divided into 3 parts, each separated by a period.
+
+* Header
+* Payload
+* Signature
+
+```
+HHHHHHHHHH.PPPPPPPPPPPPPPPPPPPPPPPPPPPPP.SSSSSSSSSSSSSSSSSSSSSSSS
+```
+
+### Header
+
+The header provides a description of how the token is structured. It describes the type of token (a JWT) as well as the type of algorithm that was used to sign the token.
+
+```json
+{
+  "alg": "HS256",
+  "typ": "JWT"
+}
+```
+
+The JSON is then *base 64 url encoded* (ie representing the string in only 64 characters as well as url encoded).
+
+### Payload
+
+The second part of a JWT is called the *payload*. The payload contains information about the user codified into the token. It is an object where its keys are called *claims*. There are three types of claims:
+
+* Reserved claims - These are claims that have special meaning as defined by the standard. They are recommended but not mandatory. Some examples include:
+  * `iss` - the issuer of the token
+  * `exp` - the expiration of the token
+  * `sub` - subject
+  * `aud` - audience
+* Public claims - These are claims that the general public has agreed to use. A [set of public claims](http://www.iana.org/assignments/jwt/jwt.xhtml) are defined in the IANA JSON Web Token Registry
+* Private claims - These are custom claims defined by you as agreed on in your system.
+
+Here's an example payload:
+
+```json
+{
+  "sub": "1234567890",
+  "name": "John Doe",
+  "admin": true
+}
+```
+
+The JSON is also base 64 url encoded.
+
+### Signature
+
+The signature takes into account the header and the payload. It is then signed with a secret key (something that should **NEVER** be exposed to the public). The common signing is done with an algorithm called HMAC SHA256. SHA256 is a cryptographic hash function and HMAC means that the hash includes a secret key.
+
+To be more explicit, the signature does the following:
+
+```text
+HMACSHA256(
+  base64UrlEncode(header) + "." +
+  base64UrlEncode(payload),
+  SECRET_KEY)
+```
+
+How is make JWTs secure? It is possible to decode a JWT's header and payload, but with a signature, a JWT cannot be modified and sent to the server. This is because if the JWT is modified, its signature would need to be updated as well. The server _only_ knows how to sign the token because it knows the secret key.
+
+### Exercise
+
+Turn to a neighbor and explain what is a JWT. After a few minutes, your instructor will cold call on the class ask what you discussed.
+
+## Why is a JWT important?
+
+* It's compact. The size of the token is relatively small in size due to the encoding.
+* It's stateless. The JWT can contain information that can be sent to any service within its payload.
+* It's cryptographically signed. This allows the JWT to maintain its integrity and not allow outside users tamper with the data.
+
+### Exercise
+
+Write down in your own words why a JWT is important. After 30 seconds, your instructor will cold call on the class ask what you discussed.
 
 ## What's authorization?
 
