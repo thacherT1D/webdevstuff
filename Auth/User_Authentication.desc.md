@@ -195,6 +195,14 @@ git add .
 git commit -m 'Add POST /token middleware'
 ```
 
+Once you are done, merge in your branch.
+
+```shell
+git checkout master
+git merge authentication
+git branch -d authentication
+```
+
 ## What's authorization?
 
 **Authorization** is the process of granting access to private information for an authenticated user. When a user successfully authenticates with an application, the server starts the authorization process by creating an authentication token. A **authentication token** is a unique identifier that represents an ongoing dialogue between a client and a server.
@@ -398,6 +406,12 @@ Write down in your own words why a JWT is important. After 30 seconds, your inst
 
 ## How do you create a JWT?
 
+Let's start for making a new branch in git.
+
+```shell
+git checkout -b jwt
+```
+
 In order to create a JWT, we can use a library called `jsonwebtoken`. To install it, use npm.
 
 ```shell
@@ -512,123 +526,15 @@ module.exports = router;
 http POST localhost:8000/token email='2pac@shakur.com' password=ambitionz
 ```
 
-## How do you use a cookie session to authorize a user?
-
-The `cookie-session` is a piece of middleware that is useful for storing, reading and signing sessions and storing them in a cookie. the library modifies the req object providing the following properties:
-
-* `req.session` represents the session stored in the cookie.
-
-*Note:* The cookie is marked as `HttpOnly`, which means that the cookie can only be set over HTTP and HTTPS. It also means you cannot access cookies in JavaScript on the browser using `document.cookie`. If there is any user information, you'd like the client to use, another cookie that's accessible needs to be set.
-
-These properties provide a way to set cookies and send them to the client and a way to sign cookies and verify their authenticity.
-
-Install the `dotenv` package as a local development dependency.
-
-```shell
-npm install --save-dev dotenv
-```
-
-Ignore the `.env` file from the repository.
-
-```shell
-echo '.env' >> .gitignore
-```
-
-Generate a secret key that'll be used to sign session information on non-production environments.
-
-```shell
-bash -c 'echo "SESSION_SECRET="$(openssl rand -hex 64)' > .env
-```
-
-In `server.js`, add the following code to require and config the `dotenv` package on non-production environments.
-
-```javascript
-'use strict';
-
-if (process.env.NODE_ENV !== 'production') {
-  require('dotenv').config();
-}
-
-// ...
-```
-
-Update the cookie session secret to use the secret key in the `SESSION_SECRET` environment variable.
-
-```javascript
-app.use(cookieSession({
-  name: 'trackify',
-  secret: process.env.SESSION_SECRET
-}));
-
-// ...
-```
-
-In the `routes/users.js` file, add the following line of code to the `POST /session` middleware.
-
-```javascript
-// ...
-
-.then(() => {
-  delete user.hashedPassword;
-
-  req.session.userId = user.id;
-
-  res.send(user);
-})
-
-// ...
-```
-
-And run the following shell command.
-
-```shell
-http POST localhost:8000/session email='2pac@shakur.com' password=ambitionz
-```
-
-And you should see something like this.
-
-```text
-SOMETHING
-```
-
-In the `routes/users.js` file, add the following line of code to the `POST /users` middleware.
-
-```javascript
-// ...
-
-.then((rows) => {
-  const user = camelizeKeys(rows[0]);
-
-  delete user.hashedPassword;
-
-  req.session.userId = user.id;
-
-  res.send(user);
-})
-
-// ...
-```
-
-And run the following shell command.
-
-```shell
-http POST localhost:8000/session email='2pac@shakur.com' password=ambitionz
-```
-
-And you should see something like this.
-
-```text
-SOMETHING
-```
+*Note:* The cookie is marked as `HttpOnly`, which means that the cookie can only be sent over HTTP and HTTPS. It also means you cannot access cookies in JavaScript on the browser using `document.cookie`. If there is any user information, you'd like the client to use, another cookie that's accessible needs to be set.
 
 ### Logout
 
-Logging a user out is as easy as destroying the request session. This clears the session cookies so that the user cannot be authenticated.
+Logging a user out is as easy as destroying the token cookie. This clears the session cookies so that the user cannot be authenticated.
 
 ```javascript
-router.delete('/session', (req, res, next) => {
-  req.session = null;
-
+router.delete('/token', (req, res, next) => {
+  res.clearCookie('token');
   res.sendStatus(200);
 });
 ```
@@ -636,7 +542,7 @@ router.delete('/session', (req, res, next) => {
 And run the following shell command.
 
 ```shell
-http DELETE localhost:8000/session
+http DELETE localhost:8000/token
 ```
 
 And you should see something like this.
@@ -717,13 +623,32 @@ exports.seed = function(knex) {
 };
 ```
 
-In order for a user to view their playlists, you'll need to ensure a user is logged in and obtain its user id. We do this by checking the session. For this, we can build guard clauses to check if the proper user is allowed to make the changes. Since there will be a lot of user actions, this guard clause is a common guard clause to use and also forget. We can create a piece of middleware and apply it to specific routes.
+In order for a user to view their playlists, you'll need to ensure a user is logged in and obtain its user id. We do this by verifying the token. For this, we can build guard clauses to check if the proper user is allowed to make the changes. Since there will be a lot of user actions, this guard clause is a common guard clause to use and also forget. We can create a piece of middleware and apply it to specific routes.
+
+Reading from the Cookie Headers can be quite convoluted, so we can install a package that provides middleware that parses the Cookie headers into an object. The package is called `cookie-parser`.
+
+```shell
+npm install --save cookie-parser
+```
+
+In your `server.js` file, add the cookie-parser middleware.
+
+```javascript
+const cookieParser = require('cookie-parser');
+// ...
+
+app.use(cookieParser());
+// ...
+```
+
+Now, in your `routes/playlists.js` file, type in the following:
 
 ```javascript
 'use strict';
 
 const boom = require('boom');
 const express = require('express');
+const jwt = require('jsonwebtoken');
 const knex = require('../knex');
 const { camelizeKeys, decamelizeKeys } = require('humps');
 
@@ -731,19 +656,23 @@ const { camelizeKeys, decamelizeKeys } = require('humps');
 const router = express.Router();
 
 const authorize = function(req, res, next) {
-  if (!req.session.userId) {
-    return next(boom.create(401, 'Unauthorized'));
-  }
+  jwt.verify(req.cookies.token, process.env.JWT_SECRET, (err, decoded) => {
+    if (err) {
+      return next(boom.create(401, 'Unauthorized'));
+    }
 
-  next();
+    req.token = decoded;
+    // You can now access the payload via req.token.userId
+    next();
+  });
 };
 
 router.get('/playlists', authorize, (req, res, next) => {
-  const { userId } = req.session;
+  const { sub } = req.token;
 
   knex('playlists')
     .innerJoin('tracks', 'tracks.id', 'playlists.track_id')
-    .where('playlists.user_id', userId)
+    .where('playlists.user_id', sub)
     .orderBy('tracks.title', 'ASC')
     .then((rows) => {
       const playlists = camelizeKeys(rows);
@@ -764,7 +693,8 @@ git commit -m 'Add routes for a users following artists'
 ```
 ```shell
 git checkout master
-git merge session
+git merge jwt
+git branch -d jwt
 ```
 
 ## Assignment
