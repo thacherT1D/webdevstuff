@@ -3,12 +3,11 @@
 - Explain what authentication is.
 - Explain why is authentication important.
 - Use bcrypt to authenticate a user.
-- Explain what a JSON Web Token (JWT) is.
-- Explain why a JSON Web Token (JWT) is important.
-- Build an authentication route that produces a JWT.
 - Explain what authorization is.
 - Explain why authorization is important.
-- Use a JWT to authorize use of a route.
+- Explain what a JSON Web Token (JWT) is.
+- Explain why a JSON Web Token (JWT) is important.
+- Use a JWT to authorize a user.
 
 ## What's authentication?
 
@@ -197,84 +196,6 @@ git add .
 git commit -m 'Add POST /token middleware'
 ```
 
-## What is a JSON Web Token (JWT)?
-
-A common trend in performing authentication is using a JSON Web Token (JWT pronounced jot). A JWT is a method of communicating the authentication state through an open standard. The standard dictates that a JWT is a string that is divided into 3 parts, each separated by a period.
-
-* Header
-* Payload
-* Signature
-
-```
-HHHHHHHHHH.PPPPPPPPPPPPPPPPPPPPPPPPPPPPP.SSSSSSSSSSSSSSSSSSSSSSSS
-```
-
-### Header
-
-The header provides a description of how the token is structured. It describes the type of token (a JWT) as well as the type of algorithm that was used to sign the token.
-
-```json
-{
-  "alg": "HS256",
-  "typ": "JWT"
-}
-```
-
-The JSON is then *base 64 url encoded* (ie representing the string in only 64 characters as well as url encoded).
-
-### Payload
-
-The second part of a JWT is called the *payload*. The payload contains information about the user codified into the token. It is an object where its keys are called *claims*. There are three types of claims:
-
-* Reserved claims - These are claims that have special meaning as defined by the standard. They are recommended but not mandatory. Some examples include:
-  * `iss` - the issuer of the token
-  * `exp` - the expiration of the token
-  * `sub` - subject
-  * `aud` - audience
-* Public claims - These are claims that the general public has agreed to use. A [set of public claims](http://www.iana.org/assignments/jwt/jwt.xhtml) are defined in the IANA JSON Web Token Registry
-* Private claims - These are custom claims defined by you as agreed on in your system.
-
-Here's an example payload:
-
-```json
-{
-  "sub": "1234567890",
-  "name": "John Doe",
-  "admin": true
-}
-```
-
-The JSON is also base 64 url encoded.
-
-### Signature
-
-The signature takes into account the header and the payload. It is then signed with a secret key (something that should **NEVER** be exposed to the public). The common signing is done with an algorithm called HMAC SHA256. SHA256 is a cryptographic hash function and HMAC means that the hash includes a secret key.
-
-To be more explicit, the signature does the following:
-
-```text
-HMACSHA256(
-  base64UrlEncode(header) + "." +
-  base64UrlEncode(payload),
-  SECRET_KEY)
-```
-
-How is make JWTs secure? It is possible to decode a JWT's header and payload, but with a signature, a JWT cannot be modified and sent to the server. This is because if the JWT is modified, its signature would need to be updated as well. The server _only_ knows how to sign the token because it knows the secret key.
-
-### Exercise
-
-Turn to a neighbor and explain what is a JWT. After a few minutes, your instructor will cold call on the class ask what you discussed.
-
-## Why is a JWT important?
-
-* It's compact. The size of the token is relatively small in size due to the encoding.
-* It's stateless. The JWT can contain information that can be sent to any service within its payload.
-* It's cryptographically signed. This allows the JWT to maintain its integrity and not allow outside users tamper with the data.
-
-### Exercise
-
-Write down in your own words why a JWT is important. After 30 seconds, your instructor will cold call on the class ask what you discussed.
-
 ## What's authorization?
 
 **Authorization** is the process of granting access to private information for an authenticated user. When a user successfully authenticates with an application, the server starts the authorization process by creating a session token. A **session token** is a unique identifier that represents an ongoing dialogue between a client and a server.
@@ -429,6 +350,194 @@ openssl rand -hex 64
 │                     │              │                     │            │                     │
 │                     │              │                     │            │                     │
 └─────────────────────┘              └─────────────────────┘            └─────────────────────┘
+```
+
+## What is a JSON Web Token (JWT)?
+
+A common trend in performing authentication is using a JSON Web Token (JWT pronounced jot). A JWT is a method of communicating the authentication state through an open standard. The standard dictates that a JWT is a string that is divided into 3 parts, each separated by a period.
+
+* Header
+* Payload
+* Signature
+
+```
+HHHHHHHHHH.PPPPPPPPPPPPPPPPPPPPPPPPPPPPP.SSSSSSSSSSSSSSSSSSSSSSSS
+```
+
+### Header
+
+The header provides a description of how the token is structured. It describes the type of token (a JWT) as well as the type of algorithm that was used to sign the token.
+
+```json
+{
+  "alg": "HS256",
+  "typ": "JWT"
+}
+```
+
+The JSON is then *base 64 url encoded* (ie representing the string in only 64 characters as well as url encoded).
+
+### Payload
+
+The second part of a JWT is called the *payload*. The payload contains information about the user codified into the token. It is an object where its keys are called *claims*. There are three types of claims:
+
+* Reserved claims - These are claims that have special meaning as defined by the standard. They are recommended but not mandatory. Some examples include:
+  * `iss` - the issuer of the token
+  * `exp` - the expiration of the token
+  * `sub` - subject
+  * `aud` - audience
+* Public claims - These are claims that the general public has agreed to use. A [set of public claims](http://www.iana.org/assignments/jwt/jwt.xhtml) are defined in the IANA JSON Web Token Registry
+* Private claims - These are custom claims defined by you as agreed on in your system.
+
+Here's an example payload:
+
+```json
+{
+  "sub": "1234567890",
+  "name": "John Doe",
+  "admin": true
+}
+```
+
+The JSON is also base 64 url encoded.
+
+### Signature
+
+The signature takes into account the header and the payload. It is then signed with a secret key (something that should **NEVER** be exposed to the public). The common signing is done with an algorithm called HMAC SHA256. SHA256 is a cryptographic hash function and HMAC means that the hash includes a secret key.
+
+To be more explicit, the signature does the following:
+
+```text
+HMACSHA256(
+  base64UrlEncode(header) + "." +
+  base64UrlEncode(payload),
+  SECRET_KEY)
+```
+
+How is make JWTs secure? It is possible to decode a JWT's header and payload, but with a signature, a JWT cannot be modified and sent to the server. This is because if the JWT is modified, its signature would need to be updated as well. The server _only_ knows how to sign the token because it knows the secret key.
+
+### Exercise
+
+Turn to a neighbor and explain what is a JWT. After a few minutes, your instructor will cold call on the class ask what you discussed.
+
+## Why is a JWT important?
+
+* It's compact. The size of the token is relatively small in size due to the encoding.
+* It's stateless. The JWT can contain information that can be sent to any service within its payload.
+* It's cryptographically signed. This allows the JWT to maintain its integrity and not allow outside users tamper with the data.
+
+### Exercise
+
+Write down in your own words why a JWT is important. After 30 seconds, your instructor will cold call on the class ask what you discussed.
+
+## How do you create a JWT?
+
+In order to create a JWT, we can use a library called `jsonwebtoken`. To install it, use npm.
+
+```shell
+npm install --save jsonwebtoken
+```
+
+Next, we need to store our secret key that will be used to generate the JWT. We never want to store our secret key. For development and testing, we store our secret in a special file called `.env`. We can create that from the command line.
+
+```shell
+bash -c 'echo "JWT_SECRET="$(openssl rand -hex 64)' > .env
+```
+
+We do not want to include the `.env` file into our repository, so we add the file to our `.gitignore`.
+
+```shell
+echo '.env' >> .gitignore
+```
+
+Verify that your `.env` file is not staged to be committed in git.
+
+```shell
+git status
+```
+
+To load the `.env` file, we use a special library called `dotenv`. Using it will placed all variables into the process's *environment variables* (ie in `process.env`).
+
+```shell
+npm install --save-dev dotenv
+```
+
+In `server.js`, add the following code to require and config the `dotenv` package on non-production environments.
+
+```javascript
+'use strict';
+
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').config();
+}
+
+// ...
+```
+
+To create the JWT, modify your authentication route in `routes/token.js`.
+
+```javascript
+'use strict';
+
+const boom = require('boom');
+const bcrypt = require('bcrypt-as-promised');
+const express = require('express');
+const jwt = require('jsonwebtoken');    // New Code
+const knex = require('../knex');
+const { camelizeKeys, decamelizeKeys } = require('humps');
+
+const router = express.Router();
+
+router.post('/token', (req, res, next) => {
+  const { email, password } = req.body;
+
+  if (!email || !email.trim()) {
+    return next(boom.create(400, 'Email must not be blank'));
+  }
+
+  if (!password || password.length < 8) {
+    return next(boom.create(400, 'Password must not be blank'));
+  }
+
+  let user;
+
+  knex('users')
+    .where('email', email)
+    .first()
+    .then((row) => {
+      if (!row) {
+        throw boom.create(400, 'Bad email or password');
+      }
+
+      user = camelizeKeys(row);
+
+      return bcrypt.compare(password, user.hashedPassword);
+    })
+    .then(() => {
+      delete user.hashedPassword;
+
+      /* New Code */
+      const expiry = new Date(Date.now() + 1000 * 60 * 60 * 3); // 3 hours
+      const token = jwt.sign({ userId: user.id }, process.env.JWT_SECRET, {
+        expiresIn: '3h'
+      });
+      /* End New Code */
+
+      res.send(user);
+    })
+    .catch(bcrypt.MISMATCH_ERROR, () => {
+      throw boom.create(400, 'Bad email or password');
+    })
+    .catch((err) => {
+      next(err);
+    });
+});
+
+module.exports = router;
+```
+
+```shell
+http POST localhost:8000/token email='2pac@shakur.com' password=ambitionz
 ```
 
 ## How do you use a cookie session to authorize a user?
