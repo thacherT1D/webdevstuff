@@ -38,9 +38,9 @@ Turn to a neighbor and explain the authentication process. It may help to draw a
 
 ## Why is authentication important?
 
-So a web application can show information—sometimes public, most of the time private—that's specific to each user.
+The Internet by definition is an open and public network. To connect to it, one must need a computer-like device as well as a connection through an Internet Service Provider. Originally as a method to share information, the Internet expanded to handle multiple kinds of interactions. As the Internet evolved, websites needed the ability to share private information with individual users like credit card information, social security numbers, etc.
 
-[INSERT MORE CONTENT HERE]
+Privacy has then become a major issue with the Internet that remains a debate today. Keep in mind that we are only talking about one type of authentication, password based authentication. There are many others that are getting popular, including biometric (fingerprints, eye scans, etc.), 2 factor authentication, and more.
 
 ## How do you use bcrypt to authenticate a user?
 
