@@ -207,7 +207,29 @@ git branch -d authentication
 
 **Authorization** is the process of granting access to private information for an authenticated user. When a user successfully authenticates with an application, the server starts the authorization process by creating a token. A **token** is a unique identifier that represents an ongoing dialogue between a client and a server.
 
-[INSERT DIAGRAM HERE]
+```text
+                                ┌──────── Node.js ─────────┐                                
+                                │     Express              │                                
+                                │     Knex                 │                                
+┌──── Chrome ───┐               │                          │               ┌─── Postgres ──┐
+│               │── login req -▶│                          │─── SELECT ───▶│               │
+│               │   JSON        │   ┌──Authentication──┐   │    user       │               │
+│               │               │   │                  │   │               │               │
+│               │               │   │                  ▽   │               │               │
+│               │               │   │     bcrypt       │   │               │               │
+│               │◀── response ──│   △                  │   │◀── row ───────│               │
+│               │    auth token │   │                  │   │    user       │               │
+│               │               │   └──────────────────┘   │               │               │
+│               │               │                          │               │               │
+│               │── auth req --▶│ ┌Authorization┐          │─── SELECT ───▶│               │
+│               │   auth token  │ △             ▽          │               │               │
+│               │               │ └─────────────┘          │◀── rows ──────│               │
+│               │◀── response ──│                          │               │               │
+│               │               │                          │               │               │
+└───────────────┘               │                          │               └───────────────┘
+                                │                          │                                
+                                └──────────────────────────┘                                
+```
 
 As you can see, authorization starts when the server creates a token and sends it to the client. Afterwards, the client includes the token in subsequent requests for private information on the server. Using the token, the server authorizes the client to determine whether or not it can access the information.
 
@@ -386,9 +408,6 @@ How does this make JWTs secure? It is possible to decode a JWT's header and payl
 1. The client makes subsequent requests with a JWT.
 1. The server verifies the JWT by generating a signature from the header and payload in the JWT using its secret key and compares it with the signature provided.
 1. If the signatures match, the server can be confident the token has not been modified.
-
-[INSERT POSITIVE SIGNATURE EXAMPLE]
-[INSERT NEGATIVE SIGNATURE EXAMPLE]
 
 ### Exercise
 
