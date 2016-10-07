@@ -116,10 +116,10 @@ Test `foreman` on the development environment.
 npm run nf
 ```
 
-Generate a secret key that'll be used to sign session information on the production environment.
+Generate a secret key that'll be used to sign JWT information on the production environment.
 
 ```shell
-bash -c 'heroku config:set SESSION_SECRET=$(openssl rand -hex 64)'
+bash -c 'heroku config:set JWT_SECRET=$(openssl rand -hex 64)'
 ```
 
 Add and commit the changes to your repository.
