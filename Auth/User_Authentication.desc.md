@@ -93,9 +93,9 @@ In the `server.js` file, add the necessary routing middleware.
 ```javascript
 // ...
 
-const token = require('routes/token');
-const tracks = require('routes/tracks');
-const users = require('routes/users');
+const token = require('./routes/token');
+const tracks = require('./routes/tracks');
+const users = require('./routes/users');
 
 app.use(token);
 app.use(tracks);
@@ -554,7 +554,7 @@ Logging a user out is as easy as destroying the token cookie. This clears the se
 ```javascript
 router.delete('/token', (req, res, next) => {
   res.clearCookie('token');
-  res.sendStatus(200);
+  res.send(true);
 });
 ```
 
@@ -699,7 +699,7 @@ router.get('/playlists', authorize, (req, res, next) => {
 
   knex('playlists')
     .innerJoin('tracks', 'tracks.id', 'playlists.track_id')
-    .where('playlists.user_id', sub)
+    .where('playlists.user_id', userId)
     .orderBy('tracks.title', 'ASC')
     .then((rows) => {
       const playlists = camelizeKeys(rows);
