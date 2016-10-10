@@ -57,7 +57,7 @@ Turn to a neighbor and explain what server-side validation is. After about 30 se
 
 ## Why is server-side validation important?
 
-[INSERT EXPLANATION HOW SSV SIT BETWEEN DATABASE-SIDE VALIDATIONS AND CLIENT-SIDE VALIDATIONS]
+Server-side validation sits in between database-side validations and client-side validations, but for all intensive purposes the terms server-side and database-side are used interchangeably to describe the validation occurs after client-side validation, before data is accepted into your back-end systems. If you think about client-side validations as the warnings that pop up as a user fills out a form, server-side/database-side validations are what protects your data from malicious intruders and breaches.
 
 In addition to catching simple mistakes, like missing information, server-side validation can protect your application, and its users, against those who would send malicious input to the server. It's very dangerous to assume that your application's user interface will protect the server from malicious user input. Remember, an HTTP request can be sent from many locations, not just the ones your application provides via its UI.
 
@@ -93,6 +93,10 @@ To start off, change into the `trackify` directory project.
 cd trackify
 ```
 
+```shell
+git checkout -b validations
+```
+
 Install the `express-validation` and `joi` NPM packages.
 
 ```shell
@@ -111,12 +115,12 @@ Create a file called `validations/users.js`.
 touch validations/users.js
 ```
 
-In this file, add the following validation logic that'll be used for the `POST /users` middleware.
+In the validations/users.js file, add the following validation logic that'll be used for the `POST /users` middleware.
 
 ```JavaScript
 'use strict';
 
-const Joi = require('joi');
+const joi = require('joi');
 
 module.exports.post = {
   body: {
