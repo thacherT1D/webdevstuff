@@ -2,6 +2,7 @@
 
 - Explain what a promise is.
 - Explain why a promise is important.
+- Explain how promise chaining works.
 - Send an HTTP request from Node.js with a promise.
 
 ## What's a promise?
@@ -166,10 +167,6 @@ On the other hand, if a promise is rejected, the error of the asynchronous I/O o
 └───────────────────────────┘                  └───────────────────────┘
 ```
 
-### Exercise
-
-Turn to a neighbor and explain what a promise is and how it works in your own words. Then, diagram how a promise works.
-
 ## Why is a promise important?
 
 The main benefit of a promise is its ability to separate the success handling logic from the error handling logic.
@@ -202,6 +199,12 @@ promise
 
 console.log('Waiting for the asynchronous I/O operation to complete...');
 ```
+
+### Exercise
+
+Turn to a neighbor and explain what a promise is and how it works in your own words (a diagram may be helpful). Explain why a promise is important.
+
+## How do chained promises work?
 
 ```text
 ┌── new Promise(executor) ──┐                  ┌── then(onFulfilled) ──┐                    ┌────── new Promise() ──────┐
@@ -256,7 +259,25 @@ console.log('Waiting for the asynchronous I/O operation to complete...');
 
 ### Exercise
 
-Turn to a neighbor and explain why a promise is important. Then, diagram how a promise chaining works.
+With your neighbor, draw a diagram for the promise chain described below. Assume that any function beginning with `async` returns a promise. It may be helpful to use two separate colors to signify the success path, and the failure path.
+
+```javascript
+asyncThing1().then(function() {
+  return asyncThing2();
+}).then(function() {
+  return asyncThing3();
+}).catch(function(err) {
+  return asyncRecovery1();
+}).then(function() {
+  return asyncThing4();
+}, function(err) {
+  return asyncRecovery2();
+}).catch(function(err) {
+  console.log("Don't worry about it");
+}).then(function() {
+  console.log("All done!");
+});
+```
 
 ## How do you send an HTTP request from Node.js with a promise?
 
