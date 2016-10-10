@@ -151,6 +151,8 @@ If a promise is fulfilled, the results of the asynchronous I/O operation are rea
 
 On the other hand, if a promise is rejected, the error of the asynchronous I/O operation is ready. To access it, you use the `catch()` method to register a callback. As soon as promise is rejected, the registered callbacks will be invoked with the error.
 
+*Note* You can also optionally add a rejection handler as the second parameter in the `.then` callback.
+
 ```text
 ┌── new Promise(executor) ──┐                  ┌── then(onFulfilled) ──┐
 │                           │                  │                       │
@@ -206,6 +208,51 @@ Turn to a neighbor and explain what a promise is and how it works in your own wo
 
 ## How do chained promises work?
 
+In a promise's `then` method, any return value will be provided as an argument to the next `then` method when it is chained.
+
+```javascript
+invokePromise()
+  .then((promiseValue) => {
+    return 'I am a return value'
+  })
+  .then((returnValueStr) => {
+    console.log(returnValueStr);  // I am a return value
+  })
+  .catch((err) => {
+    console.error(err);
+  });
+```
+
+More sophisticated, if the promise's `then` method returns another promise, the next `then` method is called once the promise resolves. The next `catch` method is invoked if the promise is rejected.
+
+```javascript
+invokePromise()
+  .then((promiseValue) => {
+    return invokeAnotherPromise()
+  })
+  .then((anotherPromiseValue) => {
+    console.log(anotherPromiseValue);
+  })
+  .catch((err) => {
+    console.error(err);
+  });
+```
+
+If at any point, an error is thrown in a promise, the next `catch` method (or the next `then` method with a rejection handler) handles the error.
+
+```javascript
+invokePromise()
+  .then((promiseValue) => {
+    throw new Error('Boo')
+  })
+  .then((anotherPromiseValue) => {
+    // Never called
+  })
+  .catch((err) => {
+    console.error(err);  // Boo
+  });
+```
+
 ```text
 ┌── new Promise(executor) ──┐                  ┌── then(onFulfilled) ──┐                    ┌────── new Promise() ──────┐
 │                           │                  │                       │────── fulfill ────▶│                           │
@@ -221,6 +268,8 @@ Turn to a neighbor and explain what a promise is and how it works in your own wo
 │                           │                  │                       │────── reject ─────▶│                           │
 └───────────────────────────┘                  └───────────────────────┘       throw        └───────────────────────────┘
 ```
+
+The system continues for every `then` and `catch` block in sequence. Let's try this example.
 
 ```javascript
 'use strict';
@@ -262,19 +311,24 @@ console.log('Waiting for the asynchronous I/O operation to complete...');
 With your neighbor, draw a diagram for the promise chain described below. Assume that any function beginning with `async` returns a promise. It may be helpful to use two separate colors to signify the success path, and the failure path.
 
 ```javascript
-asyncThing1().then(function() {
+asyncThing1().then(() => {
   return asyncThing2();
-}).then(function() {
+})
+.then(() => {
   return asyncThing3();
-}).catch(function(err) {
+})
+.catch((err) {
   return asyncRecovery1();
-}).then(function() {
+})
+.then(() => {
   return asyncThing4();
-}, function(err) {
+}, (err) => {
   return asyncRecovery2();
-}).catch(function(err) {
+})
+.catch((err) {
   console.log("Don't worry about it");
-}).then(function() {
+})
+.then(() => {
   console.log("All done!");
 });
 ```
@@ -352,6 +406,8 @@ getJSON('http://www.omdbapi.com/?s=Captain%20America')
   });
 
 ```
+
+You've used the callback style of `request` to demonstrate creating promises. There is an [npm package](https://www.npmjs.com/package/request-promise) that handles requests and returns promises called `request-promise`.
 
 ## Assignment
 
