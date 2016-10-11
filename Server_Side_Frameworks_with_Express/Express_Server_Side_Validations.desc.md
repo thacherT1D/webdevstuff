@@ -122,7 +122,7 @@ In the validations/users.js file, add the following validation logic that'll be 
 ```JavaScript
 'use strict';
 
-const joi = require('joi');
+const Joi = require('joi');
 
 module.exports.post = {
   body: {
@@ -147,6 +147,8 @@ Explore the follow validation rules and add more rules as you see fit.
 
 ```JavaScript
 'use strict';
+
+const Joi = require('joi');
 
 module.exports.post = {
   body: {
@@ -336,7 +338,7 @@ In the validations/tracks.js file, add the following validation logic that'll be
 ```JavaScript
 'use strict';
 
-const joi = require('joi');
+const Joi = require('joi');
 
 module.exports.post = {
   body: {
