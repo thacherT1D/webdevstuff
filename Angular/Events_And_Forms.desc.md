@@ -413,29 +413,33 @@ First, answer the following questions
 - What validations would you add in an input to make sure that there is a minimum length of 4 and a maximum length of 20
 - What validation would you add in an input to make sure that only numbers between 1 and 5 are a valid input (use regular expressions for this!)
 
-## Exercise - styling our form and adding some error messages!
+## Exercise - Angular Form Validation
+
+> **Please Note:** We've added an official Exercise for the following. Please create a new repository and follow the submission instructions on the Exercise.
 
 Now that you have a solid understanding of these properties/classes, let's build another form with an action of "#" and four text inputs for a username, password, email and zip code. Your form should validate that the username and password are both between 3 and 12 characters long. It should also make sure that the email is a valid email and that the zip code is a five digit number (use ng-pattern and regular expressions for this!).
 
-Now that we have an idea of how to style and display error messages, let's do the following
+Now that we have an idea of how to style and display error messages, let's do the following:
 
-- display error messages if inputs are invalid (write whatever you would like for the error message)
-- add a class of `invalid` if the validation fails
-- add a class of `valid` if the validation passes
-- only display the error message/styling if the user has typed something
-- when the form is submitted, collect the inputs and add them to an array called `users` (this will be done in your controller)
-  + remember that the default behavior for the form submission is a page refresh - you will need to prevent this.
-  + make sure to clear all the form values and validations (you should use a method from [here](https://docs.angularjs.org/api/ng/type/form.FormController) to do that )
-  + display the array of users (each one should be an object) at the top of your form (see the gif below for guidance).
+- Display error messages if inputs are invalid
+- Add a class of `invalid` if the validation fails
+- Add a class of `valid` if the validation passes
+- Only display the error message/styling if the user has typed something
+- When the form is submitted, collect the inputs, add them to an array called `users` in your controller, and then clear out all inputs -- the page should not refresh!
+  * Make sure to clear out all the form values _and_ validations. You can use a method [from here](https://docs.angularjs.org/api/ng/type/form.FormController) to do that
+- Display the array of users at the top of the page after page submission
+- When you reuse the form (without refreshing the page) and type in the same username, display an error message that says that username is already taken.
 
 Your form should work like this:
 
 [![https://gyazo.com/a6a93b98ada81f54140052956cea2cb0](https://i.gyazo.com/a6a93b98ada81f54140052956cea2cb0.gif)](https://gyazo.com/a6a93b98ada81f54140052956cea2cb0)
 
 ## Bonus - refactor using ngMessages
+
 Our HTML is getting a bit messy, it would be nice to have an easier way to deal with error messages, that's where ng-messages comes in. Walk through [this](https://scotch.io/tutorials/angularjs-form-validation-with-ngmessages) or [this](http://www.yearofmoo.com/2014/05/how-to-use-ngmessages-in-angularjs.html) tutorial and refactor your form to use ng-messages.
 
 ## Additional Resources
+
 [All about Angular form validation](http://www.ng-newsletter.com/posts/form-validation-with-angularjs.html)
 [https://docs.angularjs.org/guide/forms](https://docs.angularjs.org/guide/forms)
 
