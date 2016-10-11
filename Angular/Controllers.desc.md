@@ -116,6 +116,7 @@ Let's model the structure of our todo list in our html.
   </main>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
   <script src="app.js"></script>
+  <script src="controllers.js"></script>
 </body>
 ```
 
