@@ -8,7 +8,7 @@
 
 ## What's the Feature Branch Workflow?
 
-In the first quarter this course, you employed a Centralized Workflow to manage the Git commits of your projects. In Git, a **Centralized Workflow** uses a central `origin` repository with a single `master` branch to serve as the hub for all commits. In Git speak, this is simply referred to as the `origin/master` branch.
+In the first quarter of this course, you employed a Centralized Workflow to manage the Git commits of your projects. In Git, a **Centralized Workflow** uses a central `origin` repository with a single `master` branch to serve as the hub for all commits. In Git speak, this is simply referred to as the `origin/master` branch.
 
 Most of your projects started off with at least one commit in the `origin/master` branch as your instructors gave you a solid foundation from which to build.
 
@@ -1574,11 +1574,11 @@ Rebase the current `more_6` feature branch with the `master` branch. Remember, a
 git rebase master
 ```
 
-And you should see something like this.
+<!-- And you should see something like this.
 
-[INSERT IMAGE HERE]
+[INSERT IMAGE HERE] -->
 
-This is what a merge conflict looks like while rebasing. To resolve the conflict, perform the following steps.
+This is what a merge conflict is like while rebasing. To resolve the conflict, perform the following steps.
 
 1. Find the conflict in the code.
 1. Pick the winning code.
