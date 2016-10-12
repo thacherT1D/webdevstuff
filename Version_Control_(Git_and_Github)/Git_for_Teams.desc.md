@@ -1179,7 +1179,7 @@ Those working on the `labels_3` feature branch should see something that resembl
 
 When using a Feature Branch Workflow in a team-based project, it's common to reapply your commits from the local `master` branch on top of newer commits in the central `origin/master` branch. Imagine you and your team are hacking away at the intended linear history of a project's central `origin/master` branch. The fact that one of you happened to push commits to it slightly before the rest of the team is irrelevant. Producing a "merge bubble" in the `origin/master` branch because of a timing accident is counter-productive to understanding the history of your project.
 
-Ask yourself do you want the history of `origin/master` to be littered with hundreds of merge commits or do you want the history to contain a handful of merge commits that represent intentional divergent development? If the answer is the later, perform a rebase instead of a merge when pulling the `origin/master` branch into the `master` branch.
+Ask yourself this: do you want the history of `origin/master` to be littered with hundreds of merge commits or do you want the history to contain a handful of merge commits that represent intentional divergent development? If the answer is the later, perform a rebase instead of a merge when pulling the `origin/master` branch into the `master` branch.
 
 You can either perform a rebase when pulling to the `master` branch on an individual basis.
 
@@ -1649,7 +1649,7 @@ Those working on the `more_6` feature branch should see something that resembles
                                                 └─────────┘
 ```
 
-Merge the commits from the `more_6` feature branch into the current `master` branch. Because the `more_6` branch is directly ahead of the `master` branch, Git performs a fast-forward merge** by simply moving the pointer forward.
+Merge the commits from the `more_6` feature branch into the current `master` branch. Because the `more_6` branch is directly ahead of the `master` branch, Git performs a **fast-forward merge** by simply moving the pointer forward.
 
 ```shell
 git merge more_6
