@@ -6,7 +6,6 @@ Today, you're going to build a blog. You will be able to create posts. Each post
 
 1. Come up with a name for your blog
 1. Wireframe each view
-1. Create pivotal stories
 1. Create a data model
 1. Generate an Express app with handlebars
 1. Don't forget `npm i`
@@ -26,15 +25,18 @@ Today, you're going to build a blog. You will be able to create posts. Each post
 1. Write the CRUD knex statements for each route
   * Create, Read, Update, Delete Posts
   * Create, Read, Update, and Delete Comments
-1. Authenticate users with Passport using linkedin, facebook, twitter or google
 1. Server and Client side error handling so a blog can't be submitted without a title and body
+
+## Add Authentication
+
+1. Authenticate users with Passport using linkedin, facebook, twitter or google
 
 ## Style your blog
 
 1. Personalize your blog with some style. Use materialize or bootstrap.
 
 ## Stretch
-
 * Allow users to login with a username & password (Passport Local Strategy)
+* Add authorization so users can only edit their own blog
 * Make your blog responsive
 * Be creative!
