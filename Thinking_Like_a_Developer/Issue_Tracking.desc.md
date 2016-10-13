@@ -51,9 +51,6 @@ A tracker can provide feedback to the team whether issues are being resolved in 
 Having a system of checks and balances is positive for any work process. The reviewing stage of the issue tracking process allows the primary stakeholders an opportunity to ensure a "completed" issue adequately meets the expectations as laid out in the initial definition of the issue. If it does not this would be the point where the solutions would be cycled back for further resolution of the issue. This may also be the point in which tangential issues that arose during the completion process of the task at hand can be spun off into new issues, and tracked separately.
 
 
-with a process for handling prioritization helps minimize developer confusion by freeing them from worrying about priority and letting them focus exclusively on what’s next for them
-
-
 ## Explain how issue tracking works.
 
 Issue tracking works much in the same way as a shared todo list, albeit with the addition of peer review.
