@@ -12,7 +12,7 @@
 
 Issue tracking is frequently referred to as “bug tracking,” but this doesn’t do it justice. The phrase “bug tracking” tends to imply that bugs can only exist in code, but this view is flawed. It’s just as easy to have bugs in requirements, design, or even specifications. Issue tracking is designed to help uncover or prevent these.
 
-![issue tracking flow]('https://sifterapp.com/public-assets/images/academy/states.svg')
+![issue tracking flow](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/408/issue-flow.png)
 
 The Resolved stage is where finished work can be reviewed and approved.
 
@@ -71,7 +71,7 @@ From there rinse and repeat as needed, which is hopefully not often.
 Github provides an issues tracker for each repository, unsurprisingly called Issues. Their Issues tracker provides a handful of useful features like Labels, Milestones, Assignees, Notifications, Mentions, References.
 All of those are useful and you should give the *Github - Mastering Issues* article below a read to find out more about them.
 
-![github issue]('https://guides.github.com/features/issues/labels.png')
+![github issue](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/407/labels.png)
 
 The most useful feature of the group above is probably the References feature. When you create an Issue, github will give it an issue number. This number can then be referenced in several ways. For example if you drop the issue number, say `#42` in the text form of another issue both will then point to one another. A more interesting use of referencing issue numbers is in commit messages. The issue that was referenced will be populated with it's own reference back to the commit on Github. By prefacing your commits with “Fixes”, “Fixed”, “Fix”, “Closes”, “Closed”, or “Close” when the commit is merged into master, it will also automatically close the issue. Keeping in mind the Review stage of issue tracking you will likely submit a pull request that would be reviewed by a Sr Dev who would then choose to accept or reject your pull request. Upon acceptance the issue would then be closed. It can also be helpful when creating feature branches to include the issue number as apart of the branch name for continuity sake.
 
