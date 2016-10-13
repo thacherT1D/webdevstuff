@@ -1,6 +1,9 @@
 # CRUD Blog
 
-Today, you're going to build a blog. You will be able to create posts. Each post will allow comments to be made on them.
+Today, you're going to build a blog. You will be able to create posts. Each post will allow comments to be made on them. The app is due Monday morning.  If you crack-a-lack on it Friday you might be able to get it done on Friday.
+
+## Options
+If you want to do another app with a one to many relationship you may.  Don't overcomplicate it though.  Other apps might include projects/tasks, movies/actors or albums/tracks.  You may not do a bookshelf app for obvious reasons.  Have fun with it.  This is a celebration of everything you know
 
 ## Setup and planning
 
@@ -36,6 +39,7 @@ Today, you're going to build a blog. You will be able to create posts. Each post
 1. Personalize your blog with some style. Use materialize or bootstrap.
 
 ## Stretch
+* Write tests for your routes
 * Allow users to login with a username & password (Passport Local Strategy)
 * Add authorization so users can only edit their own blog
 * Make your blog responsive
