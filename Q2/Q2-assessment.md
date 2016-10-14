@@ -44,3 +44,6 @@ If you want to do another app with a one to many relationship you may.  Don't ov
 * Add authorization so users can only edit their own blog
 * Make your blog responsive
 * Be creative!
+
+## Submit Your github repo and deployed url in Learn under Q2 assessment
+
