@@ -7,6 +7,7 @@ module.exports = [
       {
         article: { text: "Node.js Filesystem", url: "https://github.com/gSchool/node-curriculum/blob/master/Node/README.md" },
         assignment: { text: "Pet Shop - Node Filesystem", url: "https://github.com/gSchool/fs-pet-shop/blob/master/1_fs.md" },
+        stretch: { text: "Filesystem Fundamentals", url : "https://github.com/gSchool/node-filesystem-fundamentals"}
       },
       {
         article: { text: "npm - Node Package Manager", url: "https://github.com/gSchool/node-curriculum/blob/master/Node/npm.md" },

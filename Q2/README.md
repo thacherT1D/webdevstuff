@@ -25,7 +25,7 @@ Week 1
       </td>
       <td><a href="https://github.com/gSchool/fs-pet-shop/blob/master/1_fs.md">Pet Shop - Node Filesystem</a>
       </td>
-      <td>
+      <td><a href="https://github.com/gSchool/node-filesystem-fundamentals">Filesystem Fundamentals</a>
       </td>
     </tr>
     <tr>
