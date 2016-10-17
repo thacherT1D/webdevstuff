@@ -32,16 +32,17 @@ In response, Netscape delivered JavaScript to Ecma International for standardiza
 
 There are six editions of ECMAScript published. Work on version 6 of the standard, codenamed "Harmony", was finalized in June 2015. You'll commonly see version 6 called both ES6 and ES2015 for short.
 
-| Edition |	Date published                         |
+| Edition | Date published                         |
 |---------|----------------------------------------|
-| 1       |	June 1997	                             |
-| 2       |	June 1998                              |
-| 3       |	December 1999                          |
-| 4	      | Abandoned due to political differences |
-| 5       |	December 2009                          |
-| 5.1	    | June 2011                              |
-| 6	      | June 2015                              |
-| 7	      | Work in progress	                     |
+| 1       | June 1997                              |
+| 2       | June 1998                              |
+| 3       | December 1999                          |
+| 4       | Abandoned due to political differences |
+| 5       | December 2009                          |
+| 5.1     | June 2011                              |
+| 6       | June 2015                              |
+| 7       | June 2016                              |
+| 8       | Work in progress                       |
 
 To see what kind of support your browser has of the ECMAScript standard, check out this [compatibility table](http://kangax.github.io/compat-table/es6/). Which browser has the best support? Which browser has the worst support?
 
