@@ -61,7 +61,7 @@ The first Unix shell was released in 1971 and yet developers continue to incorpo
 
 ### Discover the Terminal
 
-Let's get our hands dirty and have some fun. :paw_prints:
+Let's get our hands dirty and have some fun. 🐾
 
 First, use Spotlight to launch the Terminal app by pressing the `Command` + `Spacebar` keys at the same time, typing the word "terminal" into the search field, and then pressing the `Enter` key.
 
@@ -168,7 +168,7 @@ You may also be surprised to learn that there are no universal keyboard shortcut
 
 Now that your Terminal is setup, it's time to install [Homebrew](http://brew.sh/), the de facto package manager for OS X. If you've never heard of a package manager, think of it as an app store for **free** command line programs.
 
-To get started, run the following command in your shell. It'll download and run a script file that downloads and installs Homebrew onto your development environment. So meta! :metal:
+To get started, run the following command in your shell. It'll download and run a script file that downloads and installs Homebrew onto your development environment. So meta! 🤘
 
 ```
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -194,7 +194,7 @@ Otherwise, you'll see something like this.
 
 ![](https://i.imgur.com/JPB9Gnn.png)
 
-**TIP:** Run this command periodically as Homebrew doesn't automatically update itself. :sweat:
+**TIP:** Run this command periodically as Homebrew doesn't automatically update itself. 😓
 
 ### Verify Homebrew
 
@@ -262,11 +262,11 @@ Now, quit the Terminal app by pressing the `Command` + `Q` keys at the same time
 
 ![](https://i.imgur.com/h2qvEez.png)
 
-Welcome to Fish! :tropical_fish:
+Welcome to Fish! 🐠
 
 ### Improve the prompt
 
-The prompt is the visual cornerstone of any shell, so let's change it to be both functional and glamorous. :nail_care:
+The prompt is the visual cornerstone of any shell, so let's change it to be both functional and glamorous. 💅
 
 To download and install a better prompt, run the following command.
 
@@ -365,15 +365,15 @@ Under the **Settings** tab, in the **Editor Settings** section, change the follo
 |------------------------------------|---------|
 | Font Family                        | Menlo   |
 | Font Size                          | 18      |
-| Show Indent Guide                  | Checked |
-| Soft Wrap                          | Checked |
-| Soft Wrap At Preferred Line Length | Checked |
+| Show Indent Guide                  | ✅      |
+| Soft Wrap                          | ✅      |
+| Soft Wrap At Preferred Line Length | ✅      |
 
 Under the **Packages** tab, search for the core package called **autosave**. Then, click the **Settings** button and change the following:
 
 | Name    | Value   |
 |---------|---------|
-| Enabled | Checked |
+| Enabled | ✅      |
 
 Under the **Install** tab, with the **Package** button highlighted, install the following:
 
@@ -468,7 +468,7 @@ Since Homebrew installs new commands to the `/usr/local/bin` directory, Homebrew
 
 ## Install and Configure Git
 
-Using Homebrew, you can also install [Git](https://git-scm.com/), the version control system of choice among choosy developers. :neckbeard:
+Using Homebrew, you can also install [Git](https://git-scm.com/), the version control system of choice among choosy developers. 🤓
 
 To get started, run the following command.
 
@@ -501,7 +501,7 @@ Next, run this command to download and install some awesome Git colors, handy al
 curl -fsSL https://git.io/vKZJ8 | sh
 ```
 
-We'll go over these later. For now, relish in your victory of making it this far. :tada:
+We'll go over these later. For now, relish in your victory of making it this far. 🎉
 
 ## Install Node
 
@@ -579,7 +579,7 @@ Save the file and run the program using the Node interpreter.
 node ~/Desktop/test.js
 ```
 
-Weird, nothing happened. Remember, the Node interpreter won't print anything unless told. Jerk! :triumph:
+Weird, nothing happened. Remember, the Node interpreter won't print anything unless told. Jerk! 😤
 
 Change the program so it reads like this.
 
@@ -685,7 +685,7 @@ To get started, run the following command.
 touch index.html
 ```
 
-Noticed a red `✖` has replaced your prompt symbol. It indicates your staging area is dirty. :worried:
+Noticed a red `✖` has replaced your prompt symbol. It indicates your staging area is dirty. 😟
 
 ![](https://i.imgur.com/jdcHS8p.png)
 
@@ -737,7 +737,7 @@ And then commit the changes, with a message, to your repository.
 git commit -m 'Add a tiny web page'
 ```
 
-The green `✔` prompt symbol is back, indicating your staging area is clean. Phew! :relieved:
+The green `✔` prompt symbol is back, indicating your staging area is clean. Phew! 😌
 
 ![](https://i.imgur.com/QE3ks9b.png)
 
@@ -813,7 +813,7 @@ You should see something like this.
 
 ![](https://i.imgur.com/3koEnB4.png)
 
-Bravo! :tada:
+Bravo! 🎉
 
 
 ### Congratulations!
@@ -825,7 +825,7 @@ You've successfully setup a web development environment on macOS and have comple
 1. Committed the web page to a repository
 1. Deployed the web page to a production environment
 
-Now that you've finished this article, it's time to celebrate with a frosty beverage. :beers:
+Now that you've finished this article, it's time to celebrate with a frosty beverage. 🍻
 
 ### Bonus - Visual Design Tools
 
