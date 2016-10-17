@@ -1,6 +1,6 @@
 ## macOS for Web Development
 
-This article will help you setup a web development environment on [macOS Sierra 10.12](https://www.apple.com/osx/) and above. By the end, your computer will be configured with the same state-of-the-art tools used by professional web developers. While this article is mostly compatible with older versions of macOS, follow along as best you can while Googling any problems that arise.
+This article will help you setup a web development environment on [macOS Sierra 10.12](http://www.apple.com/macos/) and above. By the end, your computer will be configured with the same state-of-the-art tools used by professional web developers. While this article is mostly compatible with older versions of macOS, follow along as best you can while Googling any problems that arise.
 
 By the end of this article, your development machine should have the following software installed and configured.
 
