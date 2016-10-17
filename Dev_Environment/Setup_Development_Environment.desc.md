@@ -361,11 +361,19 @@ Next, navigate to the `Atom > Preferences` menu item by pressing the `Command` +
 
 Under the **Settings** tab, in the **Editor Settings** section, change the following:
 
-| Name                               | Value              |
-|------------------------------------|--------------------|
-| Font Family                        | Menlo              |
-| Font Size                          | 18                 |
-| Show Indent Guide                  | Checked            |
+| Name                               | Value   |
+|------------------------------------|---------|
+| Font Family                        | Menlo   |
+| Font Size                          | 18      |
+| Show Indent Guide                  | Checked |
+| Soft Wrap                          | Checked |
+| Soft Wrap At Preferred Line Length | Checked |
+
+Under the **Packages** tab, search for the core package called **autosave**. Then, click the **Settings** button and change the following:
+
+| Name    | Value   |
+|---------|---------|
+| Enabled | Checked |
 
 Under the **Install** tab, with the **Package** button highlighted, install the following:
 
@@ -379,8 +387,6 @@ Under the **Install** tab, with the **Themes** button highlighted, install the f
 | Name                           | Type         |
 |--------------------------------|--------------|
 | tomorrow-night-eighties-syntax | Syntax Theme |
-
-Under the **Packages** tab search for autosave -- under **Core Packages** click the **Settings** button, in the **Settings** section check Enabled.
 
 When you're done, close the preferences tab by pressing the `Command` + `W` keys  at the same time.
 
@@ -810,17 +816,6 @@ You should see something like this.
 Bravo! :tada:
 
 
-###Other Useful Dev Tools
-These are a few other tools that can be helpful for different aspects of development:
-* Password Manager: [Last Pass](https://lastpass.com) or [One Password](https://1password.com/)
-* Organizes windows on your screen: [Spectacle](https://www.spectacleapp.com/)
-* Keeps a history of what you copy [Jump Cut](http://jumpcut.sourceforge.net/)
-* Color Picker: [sip](http://sipapp.io/) (color)
-* Image Editor: [Pixelmaker](http://www.pixelmator.com/mac/)
-* For Notes: [One Note](https://www.onenote.com/) or [Evernote](https://evernote.com/)
-* Automatically dim your screen for working at night: [Flux](https://justgetflux.com/) — night time your screen
-
-
 ### Congratulations!
 
 You've successfully setup a web development environment on Mac OS X and have completed these development tasks.
@@ -831,3 +826,11 @@ You've successfully setup a web development environment on Mac OS X and have com
 1. Deployed the web page to a production environment
 
 Now that you've finished this article, it's time to celebrate with a frosty beverage. :beers:
+
+### Bonus - Visual Design Tools
+
+Here are a few helpful tools for the different aspects of visual design. Feel free to check them out on your own time.
+
+- Color picker: [Sip](http://sipapp.io/)
+- Photo editor: [Pixelmator](http://www.pixelmator.com/mac/)
+- Vector editor: [Sketch](https://www.sketchapp.com/)
