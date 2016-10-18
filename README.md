@@ -1862,100 +1862,100 @@ Resources:
 - https://github.com/gSchool/code-katas
 
 <!-- BEGIN STANDARDS SHIM -->
-<a rel="standard" href="W0018"></a>
-<a rel="standard" href="W0035"></a>
-<a rel="standard" href="W0036"></a>
-<a rel="standard" href="W0066"></a>
-<a rel="standard" href="W0086"></a>
-<a rel="standard" href="W0087"></a>
-<a rel="standard" href="W0088"></a>
-<a rel="standard" href="W0089"></a>
-<a rel="standard" href="W0090"></a>
-<a rel="standard" href="W0091"></a>
-<a rel="standard" href="W0092"></a>
-<a rel="standard" href="W0093"></a>
-<a rel="standard" href="W0094"></a>
-<a rel="standard" href="W0095"></a>
-<a rel="standard" href="W0096"></a>
-<a rel="standard" href="W0097"></a>
-<a rel="standard" href="W0016"></a>
-<a rel="standard" href="W0033"></a>
-<a rel="standard" href="W0041"></a>
-<a rel="standard" href="W0047"></a>
-<a rel="standard" href="W0050"></a>
-<a rel="standard" href="W0051"></a>
-<a rel="standard" href="W0070"></a>
-<a rel="standard" href="W0071"></a>
-<a rel="standard" href="W0072"></a>
-<a rel="standard" href="W0008"></a>
-<a rel="standard" href="W0009"></a>
-<a rel="standard" href="W0010"></a>
-<a rel="standard" href="W0011"></a>
-<a rel="standard" href="W0012"></a>
-<a rel="standard" href="W0013"></a>
-<a rel="standard" href="W0014"></a>
-<a rel="standard" href="W0015"></a>
-<a rel="standard" href="W0020"></a>
-<a rel="standard" href="W0052"></a>
-<a rel="standard" href="W0080"></a>
-<a rel="standard" href="W0054"></a>
-<a rel="standard" href="W0055"></a>
-<a rel="standard" href="W0056"></a>
-<a rel="standard" href="W0057"></a>
-<a rel="standard" href="W0058"></a>
-<a rel="standard" href="W0059"></a>
-<a rel="standard" href="W0060"></a>
-<a rel="standard" href="W0064"></a>
-<a rel="standard" href="W0061"></a>
-<a rel="standard" href="W0085"></a>
-<a rel="standard" href="W0001"></a>
-<a rel="standard" href="W0007"></a>
-<a rel="standard" href="W0021"></a>
-<a rel="standard" href="W0034"></a>
-<a rel="standard" href="W0077"></a>
-<a rel="standard" href="W0078"></a>
-<a rel="standard" href="W0079"></a>
-<a rel="standard" href="W0081"></a>
-<a rel="standard" href="W0082"></a>
-<a rel="standard" href="W0083"></a>
-<a rel="standard" href="W0002"></a>
-<a rel="standard" href="W0003"></a>
-<a rel="standard" href="W0004"></a>
-<a rel="standard" href="W0005"></a>
-<a rel="standard" href="W0006"></a>
-<a rel="standard" href="W0017"></a>
-<a rel="standard" href="W0019"></a>
-<a rel="standard" href="W0022"></a>
-<a rel="standard" href="W0037"></a>
-<a rel="standard" href="W0048"></a>
-<a rel="standard" href="W0062"></a>
-<a rel="standard" href="W0063"></a>
-<a rel="standard" href="W0065"></a>
-<a rel="standard" href="W0067"></a>
-<a rel="standard" href="W0068"></a>
-<a rel="standard" href="W0069"></a>
-<a rel="standard" href="W0073"></a>
-<a rel="standard" href="W0074"></a>
-<a rel="standard" href="W0075"></a>
-<a rel="standard" href="W0084"></a>
-<a rel="standard" href="W0023"></a>
-<a rel="standard" href="W0024"></a>
-<a rel="standard" href="W0025"></a>
-<a rel="standard" href="W0026"></a>
-<a rel="standard" href="W0027"></a>
-<a rel="standard" href="W0028"></a>
-<a rel="standard" href="W0029"></a>
-<a rel="standard" href="W0030"></a>
-<a rel="standard" href="W0031"></a>
-<a rel="standard" href="W0032"></a>
-<a rel="standard" href="W0038"></a>
-<a rel="standard" href="W0039"></a>
-<a rel="standard" href="W0040"></a>
-<a rel="standard" href="W0042"></a>
-<a rel="standard" href="W0043"></a>
-<a rel="standard" href="W0076"></a>
-<a rel="standard" href="W0044"></a>
-<a rel="standard" href="W0045"></a>
-<a rel="standard" href="W0046"></a>
-<a rel="standard" href="W0049"></a>
-<a rel="standard" href="W0053"></a>
+<a rel="standard">W0018</a>
+<a rel="standard">W0035</a>
+<a rel="standard">W0036</a>
+<a rel="standard">W0066</a>
+<a rel="standard">W0086</a>
+<a rel="standard">W0087</a>
+<a rel="standard">W0088</a>
+<a rel="standard">W0089</a>
+<a rel="standard">W0090</a>
+<a rel="standard">W0091</a>
+<a rel="standard">W0092</a>
+<a rel="standard">W0093</a>
+<a rel="standard">W0094</a>
+<a rel="standard">W0095</a>
+<a rel="standard">W0096</a>
+<a rel="standard">W0097</a>
+<a rel="standard">W0016</a>
+<a rel="standard">W0033</a>
+<a rel="standard">W0041</a>
+<a rel="standard">W0047</a>
+<a rel="standard">W0050</a>
+<a rel="standard">W0051</a>
+<a rel="standard">W0070</a>
+<a rel="standard">W0071</a>
+<a rel="standard">W0072</a>
+<a rel="standard">W0008</a>
+<a rel="standard">W0009</a>
+<a rel="standard">W0010</a>
+<a rel="standard">W0011</a>
+<a rel="standard">W0012</a>
+<a rel="standard">W0013</a>
+<a rel="standard">W0014</a>
+<a rel="standard">W0015</a>
+<a rel="standard">W0020</a>
+<a rel="standard">W0052</a>
+<a rel="standard">W0080</a>
+<a rel="standard">W0054</a>
+<a rel="standard">W0055</a>
+<a rel="standard">W0056</a>
+<a rel="standard">W0057</a>
+<a rel="standard">W0058</a>
+<a rel="standard">W0059</a>
+<a rel="standard">W0060</a>
+<a rel="standard">W0064</a>
+<a rel="standard">W0061</a>
+<a rel="standard">W0085</a>
+<a rel="standard">W0001</a>
+<a rel="standard">W0007</a>
+<a rel="standard">W0021</a>
+<a rel="standard">W0034</a>
+<a rel="standard">W0077</a>
+<a rel="standard">W0078</a>
+<a rel="standard">W0079</a>
+<a rel="standard">W0081</a>
+<a rel="standard">W0082</a>
+<a rel="standard">W0083</a>
+<a rel="standard">W0002</a>
+<a rel="standard">W0003</a>
+<a rel="standard">W0004</a>
+<a rel="standard">W0005</a>
+<a rel="standard">W0006</a>
+<a rel="standard">W0017</a>
+<a rel="standard">W0019</a>
+<a rel="standard">W0022</a>
+<a rel="standard">W0037</a>
+<a rel="standard">W0048</a>
+<a rel="standard">W0062</a>
+<a rel="standard">W0063</a>
+<a rel="standard">W0065</a>
+<a rel="standard">W0067</a>
+<a rel="standard">W0068</a>
+<a rel="standard">W0069</a>
+<a rel="standard">W0073</a>
+<a rel="standard">W0074</a>
+<a rel="standard">W0075</a>
+<a rel="standard">W0084</a>
+<a rel="standard">W0023</a>
+<a rel="standard">W0024</a>
+<a rel="standard">W0025</a>
+<a rel="standard">W0026</a>
+<a rel="standard">W0027</a>
+<a rel="standard">W0028</a>
+<a rel="standard">W0029</a>
+<a rel="standard">W0030</a>
+<a rel="standard">W0031</a>
+<a rel="standard">W0032</a>
+<a rel="standard">W0038</a>
+<a rel="standard">W0039</a>
+<a rel="standard">W0040</a>
+<a rel="standard">W0042</a>
+<a rel="standard">W0043</a>
+<a rel="standard">W0076</a>
+<a rel="standard">W0044</a>
+<a rel="standard">W0045</a>
+<a rel="standard">W0046</a>
+<a rel="standard">W0049</a>
+<a rel="standard">W0053</a>
