@@ -1862,100 +1862,100 @@ Resources:
 - https://github.com/gSchool/code-katas
 
 <!-- BEGIN STANDARDS SHIM -->
-<a rel="standard" href="W0018"></a>
-<a rel="standard" href="W0035"></a>
-<a rel="standard" href="W0036"></a>
-<a rel="standard" href="W0066"></a>
-<a rel="standard" href="W0086"></a>
-<a rel="standard" href="W0087"></a>
-<a rel="standard" href="W0088"></a>
-<a rel="standard" href="W0089"></a>
-<a rel="standard" href="W0090"></a>
-<a rel="standard" href="W0091"></a>
-<a rel="standard" href="W0092"></a>
-<a rel="standard" href="W0093"></a>
-<a rel="standard" href="W0094"></a>
-<a rel="standard" href="W0095"></a>
-<a rel="standard" href="W0096"></a>
-<a rel="standard" href="W0097"></a>
-<a rel="standard" href="W0016"></a>
-<a rel="standard" href="W0033"></a>
-<a rel="standard" href="W0041"></a>
-<a rel="standard" href="W0047"></a>
-<a rel="standard" href="W0050"></a>
-<a rel="standard" href="W0051"></a>
-<a rel="standard" href="W0070"></a>
-<a rel="standard" href="W0071"></a>
-<a rel="standard" href="W0072"></a>
-<a rel="standard" href="W0008"></a>
-<a rel="standard" href="W0009"></a>
-<a rel="standard" href="W0010"></a>
-<a rel="standard" href="W0011"></a>
-<a rel="standard" href="W0012"></a>
-<a rel="standard" href="W0013"></a>
-<a rel="standard" href="W0014"></a>
-<a rel="standard" href="W0015"></a>
-<a rel="standard" href="W0020"></a>
-<a rel="standard" href="W0052"></a>
-<a rel="standard" href="W0080"></a>
-<a rel="standard" href="W0054"></a>
-<a rel="standard" href="W0055"></a>
-<a rel="standard" href="W0056"></a>
-<a rel="standard" href="W0057"></a>
-<a rel="standard" href="W0058"></a>
-<a rel="standard" href="W0059"></a>
-<a rel="standard" href="W0060"></a>
-<a rel="standard" href="W0064"></a>
-<a rel="standard" href="W0061"></a>
-<a rel="standard" href="W0085"></a>
-<a rel="standard" href="W0001"></a>
-<a rel="standard" href="W0007"></a>
-<a rel="standard" href="W0021"></a>
-<a rel="standard" href="W0034"></a>
-<a rel="standard" href="W0077"></a>
-<a rel="standard" href="W0078"></a>
-<a rel="standard" href="W0079"></a>
-<a rel="standard" href="W0081"></a>
-<a rel="standard" href="W0082"></a>
-<a rel="standard" href="W0083"></a>
-<a rel="standard" href="W0002"></a>
-<a rel="standard" href="W0003"></a>
-<a rel="standard" href="W0004"></a>
-<a rel="standard" href="W0005"></a>
-<a rel="standard" href="W0006"></a>
-<a rel="standard" href="W0017"></a>
-<a rel="standard" href="W0019"></a>
-<a rel="standard" href="W0022"></a>
-<a rel="standard" href="W0037"></a>
-<a rel="standard" href="W0048"></a>
-<a rel="standard" href="W0062"></a>
-<a rel="standard" href="W0063"></a>
-<a rel="standard" href="W0065"></a>
-<a rel="standard" href="W0067"></a>
-<a rel="standard" href="W0068"></a>
-<a rel="standard" href="W0069"></a>
-<a rel="standard" href="W0073"></a>
-<a rel="standard" href="W0074"></a>
-<a rel="standard" href="W0075"></a>
-<a rel="standard" href="W0084"></a>
-<a rel="standard" href="W0023"></a>
-<a rel="standard" href="W0024"></a>
-<a rel="standard" href="W0025"></a>
-<a rel="standard" href="W0026"></a>
-<a rel="standard" href="W0027"></a>
-<a rel="standard" href="W0028"></a>
-<a rel="standard" href="W0029"></a>
-<a rel="standard" href="W0030"></a>
-<a rel="standard" href="W0031"></a>
-<a rel="standard" href="W0032"></a>
-<a rel="standard" href="W0038"></a>
-<a rel="standard" href="W0039"></a>
-<a rel="standard" href="W0040"></a>
-<a rel="standard" href="W0042"></a>
-<a rel="standard" href="W0043"></a>
-<a rel="standard" href="W0076"></a>
-<a rel="standard" href="W0044"></a>
-<a rel="standard" href="W0045"></a>
-<a rel="standard" href="W0046"></a>
-<a rel="standard" href="W0049"></a>
-<a rel="standard" href="W0053"></a>
+<a rel="standard">W0018 - Agile Stories</a>
+<a rel="standard">W0035 - Agile Concepts</a>
+<a rel="standard">W0036 - Agile Retrospectives</a>
+<a rel="standard">W0066 - Agile Workflow</a>
+<a rel="standard">W0086 - Social Media Presence</a>
+<a rel="standard">W0087 - Resume</a>
+<a rel="standard">W0088 - Describe Galvanize </a>
+<a rel="standard">W0089 - Verbal introduction</a>
+<a rel="standard">W0090 - Describe Project</a>
+<a rel="standard">W0091 - One Contact per Week</a>
+<a rel="standard">W0092 - Set Your Intention</a>
+<a rel="standard">W0093 - Organize Job Applications</a>
+<a rel="standard">W0094 - Prepare for Interview</a>
+<a rel="standard">W0095 - Compensation Questions</a>
+<a rel="standard">W0096 - Present Yourself</a>
+<a rel="standard">W0097 - Behavioral Questions</a>
+<a rel="standard">W0016 - Deploy a static site</a>
+<a rel="standard">W0033 - Deploy Database App to Heroku</a>
+<a rel="standard">W0041 - Cloud Foundry Deploy Server App</a>
+<a rel="standard">W0047 - Deploy Fullstack Single Page Application</a>
+<a rel="standard">W0050 - Cloud Foundry Deploy Static App</a>
+<a rel="standard">W0051 - Deploy Client Server App with CORS</a>
+<a rel="standard">W0070 - AWS Install App with Script</a>
+<a rel="standard">W0071 - AWS Provision Server with Script</a>
+<a rel="standard">W0072 - Continuously Deploy App</a>
+<a rel="standard">W0008 - HTML Valid and Semantic</a>
+<a rel="standard">W0009 - CSS Style HTML</a>
+<a rel="standard">W0010 - CSS Framework</a>
+<a rel="standard">W0011 - CSS Responsive Pages</a>
+<a rel="standard">W0012 - Frontend Concepts</a>
+<a rel="standard">W0013 - DOM JSON with AJAX</a>
+<a rel="standard">W0014 - DOM Coding</a>
+<a rel="standard">W0015 - HTTP Concepts</a>
+<a rel="standard">W0020 - DOM Unit Tests with Mocha</a>
+<a rel="standard">W0052 - Client-Side Build Tools</a>
+<a rel="standard">W0080 - CSS with SASS</a>
+<a rel="standard">W0054 - OOP State and Behavior</a>
+<a rel="standard">W0055 - OOP Refactor to Pillars</a>
+<a rel="standard">W0056 - OOP Explain Pillars</a>
+<a rel="standard">W0057 - OOP Mentally Evaluate</a>
+<a rel="standard">W0058 - OOP Constructor Functions</a>
+<a rel="standard">W0059 - OOP Speak Fluently</a>
+<a rel="standard">W0060 - OOP with Static Types</a>
+<a rel="standard">W0064 - OOP Factory Functions</a>
+<a rel="standard">W0061 - Polya at Whiteboard</a>
+<a rel="standard">W0085 - Polya with Algorithms</a>
+<a rel="standard">W0001 - Command Line FS</a>
+<a rel="standard">W0007 - Git and Github</a>
+<a rel="standard">W0021 - Git Remotes</a>
+<a rel="standard">W0034 - Git for Teams</a>
+<a rel="standard">W0077 - VIM</a>
+<a rel="standard">W0078 - Git Amend</a>
+<a rel="standard">W0079 - Git Rebase</a>
+<a rel="standard">W0081 - Git Stash</a>
+<a rel="standard">W0082 - Git Bisect</a>
+<a rel="standard">W0083 - Git filter-branch</a>
+<a rel="standard">W0002 - JS Expressions</a>
+<a rel="standard">W0003 - JS Functions</a>
+<a rel="standard">W0004 - Accumulator Pattern</a>
+<a rel="standard">W0005 - JS Higher Order Functions</a>
+<a rel="standard">W0006 - JS Concepts</a>
+<a rel="standard">W0017 - Big O Level 1</a>
+<a rel="standard">W0019 - JS Tests with Mocha</a>
+<a rel="standard">W0022 - JS Spread and Arguments</a>
+<a rel="standard">W0037 - JS Promises</a>
+<a rel="standard">W0048 - Unfamiliar Languages</a>
+<a rel="standard">W0062 - Big O Level 3</a>
+<a rel="standard">W0063 - JS Functional Iteration</a>
+<a rel="standard">W0065 - Big O Level 2</a>
+<a rel="standard">W0067 - Recursive Iteration</a>
+<a rel="standard">W0068 - Linked Lists</a>
+<a rel="standard">W0069 - Swapping and Sorting</a>
+<a rel="standard">W0073 - Refactor to DRY</a>
+<a rel="standard">W0074 - Refactor to SRP</a>
+<a rel="standard">W0075 - TDD Unit Test</a>
+<a rel="standard">W0084 - Tree Traversal</a>
+<a rel="standard">W0023 - SQL</a>
+<a rel="standard">W0024 - ERD</a>
+<a rel="standard">W0025 - Server Side Application</a>
+<a rel="standard">W0026 - CRUD with Single Resource</a>
+<a rel="standard">W0027 - Associations</a>
+<a rel="standard">W0028 - Validations</a>
+<a rel="standard">W0029 - Authentication and Authorization</a>
+<a rel="standard">W0030 - Harden for Security</a>
+<a rel="standard">W0031 - Auth Concepts</a>
+<a rel="standard">W0032 - RESTful API</a>
+<a rel="standard">W0038 - Test Server Side App</a>
+<a rel="standard">W0039 - Refactor Server Side App</a>
+<a rel="standard">W0040 - CRUD in Other Language</a>
+<a rel="standard">W0042 - Deploy to AWS with AMI</a>
+<a rel="standard">W0043 - Web Sockets</a>
+<a rel="standard">W0076 - Feature Test Server Side App</a>
+<a rel="standard">W0044 - Angular with Routes</a>
+<a rel="standard">W0045 - Angular CRUD App</a>
+<a rel="standard">W0046 - Angular Components</a>
+<a rel="standard">W0049 - Angular Token Auth</a>
+<a rel="standard">W0053 - React CRUD App</a>
