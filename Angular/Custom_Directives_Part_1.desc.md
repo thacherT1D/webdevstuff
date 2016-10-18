@@ -92,8 +92,10 @@ Update the html inside of your body as follows:
 ```html
   <p>Element directive:</p>
   <gs-angular-logo></gs-angular-logo>
+
   <p>Attribute directive:</p>
   <h4 gs-angular-logo></h4>
+
   <p>Class directive:</p>
   <p class="gs-angular-logo"></p>
 ```
@@ -121,14 +123,15 @@ Let's add some data to a controller and see how it interacts with the directive.
 var app = angular.module('yoyoDirectiveApp', [])
 
 app.controller('YoyoController', ['$scope', function($scope) {
-  $scope.yoyo = {name: 'Duncan Metal Drifter',
+  $scope.yoyo = {
+    name: 'Duncan Metal Drifter',
     img: "http://www.toysrus.com/graphics/tru_prod_images/Duncan-Metal-Drifter-Pro-Yo-Yo--pTRU1-8444206dt.jpg"
   };
 }]);
 
 app.directive('gsYoyoDetails', function() {
   return {
-    templateUrl: 'yoyo-details.html',
+    templateUrl: './yoyo-details.html',
   };
 });
 ```
@@ -164,7 +167,7 @@ There are a couple of problems with this default behavior of the directive havin
 
 The solution to these problems involves creating an `isolate scope` for the directive. Before doing this, let's see what happens if we don't create an isolate scope.
 
-**Exercise** Change `scope.view.yoyo` to `scope.view.yoyos`, an array of yoyo objects. In your view, render each yoyo's information using your custom directive. 
+**Exercise** Change `scope.view.yoyo` to `scope.view.yoyos`, an array of yoyo objects. In your view, render each yoyo's information using your custom directive.
 
 Possible solution:
 
@@ -186,7 +189,7 @@ app.controller('YoyoController', function($scope) {
 
 app.directive('gsYoyoDetails', function() {
   return {
-    templateUrl: '../yoyo-details.html'
+    templateUrl: './yoyo-details.html'
   }
 });
 ```
@@ -203,7 +206,7 @@ app.directive('gsYoyoDetails', function() {
 <body ng-controller="YoyoController">
   <gs-yoyo-details ng-repeat="yoyo in view.yoyos"></gs-yoyo-details>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.js"></script>
-  <script src="./js/app.js"></script>
+  <script src="./app.js"></script>
 </body>
 </html>
 ```
@@ -222,7 +225,7 @@ Once you have more than one yoyo, and you have a copy of your custom directive o
 ```javascript
 app.directive('gsYoyoDetails', function() {
   return {
-    templateUrl: '../yoyo-details.html',
+    templateUrl: './yoyo-details.html',
     scope: {
       yoyoInDirective: '=yoyoAttribue'
     }
@@ -241,7 +244,7 @@ The value of `scope` must be an object. The keys in this object (e.g. `yoyoInDir
 
 As you can see, the value corresponding to `yoyoDirective` is `'=yoyoAttribute'`. Let's ignore the equals sign for a moment (we'll get to it later). The 'yoyoAttribue' corresponds to an _attribute name_ that we must use when passing data from our controller to our directive. Passing data via attributes is how we get the parts of the scope that we care about into our directive.
 
-In the current example, this means we need to include an attribute so that our custom directive looks like this: 
+In the current example, this means we need to include an attribute so that our custom directive looks like this:
 
 ```html
 <gs-yoyo-details yoyo-attribute="yoyo" ng-repeat="yoyo in view.yoyos"></gs-yoyo-details>
@@ -261,18 +264,20 @@ So, how does data about an individual yoyo get passed from our controller to our
 
 Of course, we've now got two different names for our data depending on where we are (`yoyoFromRepeat` and `yoyoInDirective`), plus a third name for the attribute on our directive. It's common to name all of these the same; the downside with this approach is that if we name everything `yoyo`, it's much less clear how the directive's isolate scope is connected to the controller's scope.
 
-**Exercise** Refactor your code to eliminate `yoyoInDirective`, `yoyoAttribute`, and `yoyoFromRepeat` in favor of just `yoyo`. 
+**Exercise** Refactor your code to eliminate `yoyoInDirective`, `yoyoAttribute`, and `yoyoFromRepeat` in favor of just `yoyo`.
 
-**Exercise** Fun fact: if in your scope you have a key and value with the same name (e.g. `foo: '=foo'`), you can omit the name in the value (e.g. `foo: '=') and Angular will still know what to do! Use this to refactor your directive even more.
+**Exercise** Fun fact: if in your scope you have a key and value with the same name (e.g. `foo: '=foo'`), you can omit the name in the value (e.g. `foo: '='`) and Angular will still know what to do! Use this to refactor your directive even more.
 
 **Exercise** After completing the previous two exercises, try replacing one of the strings `yoyo` somewhere in your app with the string `foo`. Where else do you need to replace `yoyo` by `foo` to get your app working again?
 
-**EXERCISE**
+### Final Exercise
 
-Create an app that uses the [pokemon api](http://pokeapi.co/docs/).  The app should first make a request to the pokedex to get all possible pokemon.  Then randomly select 5 pokemon to display.  The app should display the pokemon's name, types, name of moves (limit it to 6), and a sprite for the pokemon. Use a custom directive to display the pokemon.
+Create an app that uses the [Pokémon API](http://pokeapi.co/docsv2/#pokemon) to show three random Pokémon. The app should randomly choose three numbers between 1 and 721. Then, make requests to the API to return the information for those Pokémon. The app should display the Pokémon's name, types, name of moves (limit it to 6), and a sprite for the Pokémon.
 
-The app should use a custom directive for each pokemon (eg `pokemon-item`).
+Make sure to use a custom directive to display the Pokémon (eg `pokemon-item`).
 
-**Bonus**: For the pokemon fans out there, write an algorithm that randomly picks two pokemon and decide who would win.  I do not know anything about the pokemon game, so this would be up to you to figure out.
+**Bonus 1**: Include a loading GIF while the information loads.
 
-![](http://s8.postimg.org/eo2kbbnb9/pokemon.png)
+**Bonus 2**: For the Pokémon fans out there, write an algorithm that randomly picks two Pokémon and decide who would win. You can decide who would win however you want, but note that there is a `stats` key that gets returned in the Pokémon response.
+
+![https://gyazo.com/3f887a22b288a479ab36786794aa564e](https://i.gyazo.com/3f887a22b288a479ab36786794aa564e.gif)
