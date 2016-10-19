@@ -17,7 +17,7 @@ Week 1
   <tbody>
     <tr>
       <td rowspan="1">Monday</td>
-      <td rowspan="1"><a href="https://github.com/gSchool/warmups/blob/master/w3/w3-t-doubleChar/solution.js">Double Char</a>
+      <td rowspan="1"><a href="https://github.com/gSchool/warmups/blob/master/w03/w3-t-doubleChar/solution.js">Double Char</a>
       </td>
       <td><a href="https://github.com/gSchool/html-css-curriculum/blob/master/CSS/Frameworks.md">CSS Frameworks</a>
       </td>
@@ -28,7 +28,7 @@ Week 1
     </tr>
     <tr>
       <td rowspan="3">Tuesday</td>
-      <td rowspan="3"><a href="https://github.com/gSchool/warmups/blob/master/w3/w3-t-doubleChar/solution.js">Double Char</a>
+      <td rowspan="3"><a href="https://github.com/gSchool/warmups/blob/master/w03/w3-t-doubleChar/solution.js">Double Char</a>
       </td>
       <td><a href="https://github.com/gSchool/html-css-curriculum/blob/master/HTML/Forms.md">HTML Forms</a>
       </td>
@@ -55,7 +55,7 @@ Week 1
     </tr>
     <tr>
       <td rowspan="1">Wednesday</td>
-      <td rowspan="1"><a href="https://github.com/gSchool/warmups/blob/master/w3/w3-r-sum-of-numbers/solution.js">Sum Range</a>
+      <td rowspan="1"><a href="https://github.com/gSchool/warmups/blob/master/w03/w3-r-sum-of-numbers/solution.js">Sum Range</a>
       </td>
       <td><a href="https://github.com/gSchool/browser-dom-curriculum/blob/master/jQuery/README.md">Intro to jQuery</a>
       </td>
@@ -66,7 +66,7 @@ Week 1
     </tr>
     <tr>
       <td rowspan="1">Thursday</td>
-      <td rowspan="1"><a href="https://github.com/gSchool/warmups/blob/master/w3/w3-r-sum-of-numbers/solution.js">Sum Range</a>
+      <td rowspan="1"><a href="https://github.com/gSchool/warmups/blob/master/w03/w3-r-sum-of-numbers/solution.js">Sum Range</a>
       </td>
       <td><a href="https://github.com/gSchool/browser-dom-curriculum/blob/master/jQuery/Events.md">jQuery Events</a>
       </td>
