@@ -214,6 +214,9 @@ module.exports = [
         article: { text: "AJAX", url: "https://github.com/gschool/browser-dom-curriculum/blob/master/HTTP/AJAX.md" },
         assignment: { text: "AJAX Hero", url: "https://github.com/gschool/wd-ajax-hero" },
       },
+      article: { text: "LocalStorage and Data Modeling", url: "https://github.com/gSchool/browser-dom-curriculum/blob/master/Local%20Storage.md" },
+      assignment: { text: "Q1 Project", url: "Projects/Q1.md" },
+    },
     ]
   },
 
@@ -221,9 +224,13 @@ module.exports = [
     warmup: { text: "SameDigits", url: "https://github.com/gSchool/g26-challenges-so-far/blob/master/w4/w4-t-equivalent-number/problem.js" },
     activities: [
       {
-        article: { text: "Wireframing", url: "https://github.com/gSchool/html-css-curriculum/blob/master/UI/Wireframing.md" },
+        article: { text: "User Interface Design", url: "https://github.com/gSchool/html-css-curriculum/blob/master/UI/User Interface Design.md" },
         assignment: { text: "Q1 Project", url: "Projects/Q1.md" },
       },
+      {
+        article: { text: "Wireframing", url: "https://github.com/gSchool/html-css-curriculum/blob/master/UI/Wireframing.md" },
+        assignment: { text: "Q1 Project", url: "Projects/Q1.md" },
+      }
     ]
   },
 
@@ -237,15 +244,7 @@ module.exports = [
       {
         article: { text: "Hoisting", url: "https://github.com/gSchool/javascript-curriculum/blob/master/Hoisting.md" },
       },
-      {
-        article: { text: "Higher Order Functions", url: "https://github.com/gSchool/javascript-curriculum/blob/master/Higher Order Functions.md" },
-      },
-      {
-        article: { text: "Closures", url: "https://github.com/gSchool/javascript-curriculum/blob/master/Closure.md" },
-      },
-      {
-        article: { text: "IIFEs", url: "https://github.com/gSchool/javascript-curriculum/blob/master/IIFE.md" },
-      },
+
     ]
   },
 
@@ -256,6 +255,10 @@ module.exports = [
         article: { text: "Project Mangement", url: "https://github.com/gschool/productivity-curriculum/blob/master/Agile/README.md" },
         assignment: { text: "Q1 Project", url: "Projects/Q1.md" },
       },
+      {
+        article: { text: "Debugging JavaScript", url: "https://github.com/gSchool/browser-dom-curriculum/blob/master/Debugging.md" },
+        assignment: { text: "Q1 Project", url: "Projects/Q1.md" },
+      },
     ]
   },
 
@@ -264,9 +267,9 @@ module.exports = [
     warmup: { text: "ArrayFilter", url: "https://github.com/gSchool/warmups/blob/master/Array%20Filter.md" },
     activities: [
       {
-        article: { text: "Debugging JavaScript", url: "https://github.com/gSchool/browser-dom-curriculum/blob/master/Debugging.md" },
-        assignment: { text: "Q1 Project", url: "Projects/Q1.md" },
+        article: { text: "Higher Order Functions", url: "https://github.com/gSchool/javascript-curriculum/blob/master/Higher Order Functions.md" },
       },
+
     ]
   },
 
@@ -274,8 +277,7 @@ module.exports = [
     warmup: { text: "ArrayReduce", url: "https://github.com/gSchool/warmups/blob/master/Array%20Reduce.md" },
     activities: [
       {
-        article: { text: "User Interface Design", url: "https://github.com/gSchool/html-css-curriculum/blob/master/UI/User Interface Design.md" },
-        assignment: { text: "Q1 Project", url: "Projects/Q1.md" },
+        article: { text: "Closures", url: "https://github.com/gSchool/javascript-curriculum/blob/master/Closure.md" },
       },
     ]
   },
@@ -284,8 +286,7 @@ module.exports = [
     warmup: { text: "ArrayEvery", url: "https://github.com/gSchool/warmups/blob/master/Array%20Every.md" },
     activities: [
       {
-        article: { text: "LocalStorage and Data Modeling", url: "https://github.com/gSchool/browser-dom-curriculum/blob/master/Local%20Storage.md" },
-        assignment: { text: "Q1 Project", url: "Projects/Q1.md" },
+        article: { text: "IIFEs", url: "https://github.com/gSchool/javascript-curriculum/blob/master/IIFE.md" },
       },
     ]
   },
