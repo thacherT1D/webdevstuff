@@ -214,9 +214,10 @@ module.exports = [
         article: { text: "AJAX", url: "https://github.com/gschool/browser-dom-curriculum/blob/master/HTTP/AJAX.md" },
         assignment: { text: "AJAX Hero", url: "https://github.com/gschool/wd-ajax-hero" },
       },
-      article: { text: "LocalStorage and Data Modeling", url: "https://github.com/gSchool/browser-dom-curriculum/blob/master/Local%20Storage.md" },
-      assignment: { text: "Q1 Project", url: "Projects/Q1.md" },
-    },
+      {
+        article: { text: "LocalStorage and Data Modeling", url: "https://github.com/gSchool/browser-dom-curriculum/blob/master/Local%20Storage.md" },
+        assignment: { text: "Q1 Project", url: "Projects/Q1.md" },
+      },
     ]
   },
 
