@@ -138,7 +138,7 @@ module.exports = [
 
   // Week 3
   {
-    warmup: { text: "Double Char", url: "https://github.com/gSchool/warmups/blob/master/w3/w3-t-doubleChar/solution.js" },
+    warmup: { text: "Double Char", url: "https://github.com/gSchool/warmups/blob/master/w03/w3-t-doubleChar/solution.js" },
     activities: [
       {
         article: { text: "CSS Frameworks", url: "https://github.com/gSchool/html-css-curriculum/blob/master/CSS/Frameworks.md" },
@@ -148,7 +148,7 @@ module.exports = [
   },
 
   {
-    warmup: { text: "Double Char", url: "https://github.com/gSchool/warmups/blob/master/w3/w3-t-doubleChar/solution.js" },
+    warmup: { text: "Double Char", url: "https://github.com/gSchool/warmups/blob/master/w03/w3-t-doubleChar/solution.js" },
     activities: [
       {
         article: { text: "HTML Forms", url: "https://github.com/gSchool/html-css-curriculum/blob/master/HTML/Forms.md" },
@@ -165,7 +165,7 @@ module.exports = [
   },
 
   {
-    warmup: { text: "Sum Range", url: "https://github.com/gSchool/warmups/blob/master/w3/w3-r-sum-of-numbers/solution.js" },
+    warmup: { text: "Sum Range", url: "https://github.com/gSchool/warmups/blob/master/w03/w3-r-sum-of-numbers/solution.js" },
     activities: [
       {
         article: { text: "Intro to jQuery", url: "https://github.com/gSchool/browser-dom-curriculum/blob/master/jQuery/README.md" },
@@ -175,7 +175,7 @@ module.exports = [
   },
 
   {
-    warmup: { text: "Sum Range", url: "https://github.com/gSchool/warmups/blob/master/w3/w3-r-sum-of-numbers/solution.js" },
+    warmup: { text: "Sum Range", url: "https://github.com/gSchool/warmups/blob/master/w03/w3-r-sum-of-numbers/solution.js" },
     activities: [
       {
         article: { text: "jQuery Events", url: "https://github.com/gSchool/browser-dom-curriculum/blob/master/jQuery/Events.md" },
