@@ -201,7 +201,7 @@ module.exports = [
     warmup: { text: "Word Scrambler", url: "https://github.com/gSchool/warmups/blob/master/typoglycemia/challenge.js" },
     activities: [
       {
-        article: { text: "HTTP", url: "https://github.com/gschool/browser-dom-curriculum/blob/master/HTTP/README.md" },
+        article: { text: "HTTP", url: "https://github.com/gSchool/browser-dom-curriculum/blob/master/HTTP/README.md" },
         assignment: { text: "Q1 Project", url: "Projects/Q1.md" },
       },
     ]
@@ -211,8 +211,8 @@ module.exports = [
     warmup: { text: "Rotate", url: "https://github.com/gSchool/g26-challenges-so-far/blob/master/w4/w4-r-rotate-array/problem.js" },
     activities: [
       {
-        article: { text: "AJAX", url: "https://github.com/gschool/browser-dom-curriculum/blob/master/HTTP/AJAX.md" },
-        assignment: { text: "AJAX Hero", url: "https://github.com/gschool/wd-ajax-hero" },
+        article: { text: "AJAX", url: "https://github.com/gSchool/browser-dom-curriculum/blob/master/HTTP/AJAX.md" },
+        assignment: { text: "AJAX Hero", url: "https://github.com/gSchool/wd-ajax-hero" },
       },
       {
         article: { text: "LocalStorage and Data Modeling", url: "https://github.com/gSchool/browser-dom-curriculum/blob/master/Local%20Storage.md" },
@@ -253,7 +253,7 @@ module.exports = [
     warmup: { text: "ArrayMap", url: "https://github.com/gSchool/warmups/blob/master/Array%20Map.md" },
     activities: [
       {
-        article: { text: "Project Mangement", url: "https://github.com/gschool/productivity-curriculum/blob/master/Agile/README.md" },
+        article: { text: "Project Management", url: "https://github.com/gSchool/productivity-curriculum/blob/master/Agile/README.md" },
         assignment: { text: "Q1 Project", url: "Projects/Q1.md" },
       },
       {
