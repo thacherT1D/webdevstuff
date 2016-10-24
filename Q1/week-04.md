@@ -19,7 +19,7 @@ Week 1
       <td rowspan="1">Monday</td>
       <td rowspan="1"><a href="https://github.com/gSchool/warmups/blob/master/typoglycemia/challenge.js">Word Scrambler</a>
       </td>
-      <td><a href="https://github.com/gschool/browser-dom-curriculum/blob/master/HTTP/README.md">HTTP</a>
+      <td><a href="https://github.com/gSchool/browser-dom-curriculum/blob/master/HTTP/README.md">HTTP</a>
       </td>
       <td><a href="../Projects/Q1.md">Q1 Project</a>
       </td>
@@ -30,9 +30,9 @@ Week 1
       <td rowspan="2">Tuesday</td>
       <td rowspan="2"><a href="https://github.com/gSchool/g26-challenges-so-far/blob/master/w4/w4-r-rotate-array/problem.js">Rotate</a>
       </td>
-      <td><a href="https://github.com/gschool/browser-dom-curriculum/blob/master/HTTP/AJAX.md">AJAX</a>
+      <td><a href="https://github.com/gSchool/browser-dom-curriculum/blob/master/HTTP/AJAX.md">AJAX</a>
       </td>
-      <td><a href="https://github.com/gschool/wd-ajax-hero">AJAX Hero</a>
+      <td><a href="https://github.com/gSchool/wd-ajax-hero">AJAX Hero</a>
       </td>
       <td>
       </td>
@@ -87,7 +87,7 @@ Week 1
       <td rowspan="2">Friday</td>
       <td rowspan="2"><a href="https://github.com/gSchool/warmups/blob/master/Array%20Map.md">ArrayMap</a>
       </td>
-      <td><a href="https://github.com/gschool/productivity-curriculum/blob/master/Agile/README.md">Project Mangement</a>
+      <td><a href="https://github.com/gSchool/productivity-curriculum/blob/master/Agile/README.md">Project Management</a>
       </td>
       <td><a href="../Projects/Q1.md">Q1 Project</a>
       </td>
