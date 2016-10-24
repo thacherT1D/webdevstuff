@@ -153,7 +153,7 @@ Week 2
       </td>
       <td><a href="https://github.com/gSchool/semantic-html-exercise">Semantic HTML</a>
       </td>
-      <td><a href="https://github.com/gSchool/html-css-curriculum/blob/master/CSS/Flexbox.md">Media</a>
+      <td><a href="https://github.com/gSchool/html-css-curriculum/blob/master/CSS/Flexbox.md">Flexbox</a>
       </td>
     </tr>
     <tr>

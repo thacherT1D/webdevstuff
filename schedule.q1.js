@@ -75,7 +75,7 @@ module.exports = [
       {
         article: { text: "Semantic HTML", url: "https://github.com/gSchool/html-css-curriculum/blob/master/HTML/Semantic.md" },
         assignment: { text: "Semantic HTML", url: "https://github.com/gSchool/semantic-html-exercise" },
-        stretch: { text: "Media", url: "https://github.com/gSchool/html-css-curriculum/blob/master/CSS/Flexbox.md" },
+        stretch: { text: "Flexbox", url: "https://github.com/gSchool/html-css-curriculum/blob/master/CSS/Flexbox.md" },
       },
     ]
   },
