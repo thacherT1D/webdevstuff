@@ -37,7 +37,7 @@ module.exports = [
       {
         article: { text: "Express HTTP Server", url: "https://github.com/gSchool/node-curriculum/tree/master/Express" },
         assignment: { text: "Pet Shop - Express HTTP Server", url: "https://github.com/gSchool/fs-pet-shop/blob/master/3_express.md" },
-        assignment: { text: "Express Drills", url: "https://github.com/gSchool/express-drills" },
+        stretch: { text: "Express Drills", url: "https://github.com/gSchool/express-drills" },
       },
     ]
   },
