@@ -593,7 +593,7 @@ Week 6
       </td>
       <td><a href="https://github.com/gSchool/node-curriculum/tree/master/Express">Express HTTP Server</a>
       </td>
-      <td><a href="https://github.com/gSchool/fs-pet-shop/blob/master/3_express.md">Pet Shop - Express HTTP Server</a>
+      <td><a href="https://github.com/gSchool/express-drills">Express Drills</a>
       </td>
       <td>
       </td>
