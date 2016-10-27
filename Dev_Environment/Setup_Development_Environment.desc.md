@@ -388,7 +388,13 @@ Under the **Install** tab, with the **Themes** button highlighted, install the f
 |--------------------------------|--------------|
 | tomorrow-night-eighties-syntax | Syntax Theme |
 
-When you're done, close the preferences tab by pressing the `Command` + `W` keys  at the same time.
+Under the **Themes** tab, choose the following:
+
+| Name                    | Type         |
+|-------------------------|--------------|
+| Tomorrow Night Eighties | Syntax Theme |
+
+When you're done, close the preferences tab by pressing the `Command` + `W` keys at the same time.
 
 ### Install the Shell Commands
 
