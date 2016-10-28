@@ -371,6 +371,18 @@ Further reading:
 
 Symbol is the newest primitive data type to be added to JavaScript. Talking about symbols is a bit advanced for the first day of JavaScript, especially since we haven't talked about objects yet. If you want a sneak peak, see the [`Symbol` global object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol) on the Mozilla Developer Network for more information.
 
+### typeof
+
+To check a value's type, use the `typeof` operator. This is really helpful in certain debugging situations.
+
+```javascript
+typeof true  // 'boolean'
+typeof 42    // 'number'
+typeof 'hi'  // 'string'
+```
+
+See the [typeof operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof) on the Mozilla Developer Network for more information.
+
 ### Arithmetic operators
 
 JavaScript lets you perform basic arithmetic operations like addition, subtraction, multiplication, and division using the `+`, `-`, `*`, and `/` operators respectively. The arithmetic rules and order of operations apply as expected.
@@ -408,18 +420,6 @@ Notice that the meaning of the `+` operator depends on the data types of the ope
 **QUESTION:** How might you fix the above expression so it evaluates correctly?
 
 See the [arithmetic operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators) on the Mozilla Developer Network for more information.
-
-### The Number global object
-
-Using the following methods in the `Number` global object, you can convert a string to a number.
-
-```javascript
-Number.parseInt('42');         // 42
-Number.parseFloat('3.14');     // 3.14
-Number.parseInt('forty two');  // NaN
-```
-
-See the [`Number` global object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number) on the Mozilla Developer Network for more information.
 
 ### The Math global object
 
@@ -665,9 +665,48 @@ if (7 % 2 === 0 || Number.isInteger(3.4)) {
 
 See the [operator precedence](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence) documentation on the Mozilla Developer Network for more information.
 
+### Type Conversion
+
+Often it's useful to explicitly convert a value of one type to a value of another type. This is called **type conversion**.
+
+Here's how to convert booleans and numbers to strings.
+
+```javascript
+false.toString();  // this converts to 'false'
+true.toString();   // this converts to 'true'
+
+(32).toString();        // this converts to '32'
+(100 + 20).toString();  // this converts to '120'
+```
+
+Here's how to convert booleans and strings to numbers.
+
+```javascript
+Number(false);  // this evaluates to 0
+Number(true);   // this evaluates to 1
+
+Number.parseInt('32');         // 32
+Number.parseInt('forty two');  // NaN
+
+Number.parseFloat('3.14');                  // 3.14
+Number.parseFloat('three point one four');  // NaN
+```
+
+And here's how to convert strings and numbers to booleans.
+
+```javascript
+!!'false';  // this evaluates to true
+!!'true';   // this evaluates to true
+!!'';       // this evaluates to false
+
+!!32;          // this evaluates to true
+!!(100 + 20);  // this evaluates to true
+!!0;           // this evaluates to false
+```
+
 ### Type Coercion
 
-Sometimes, your code uses a value of one type when JavaScript expects a value of a different type. In this case, rather than throwing an error, JavaScript will coerce (i.e. convert) the value into a type that makes sense to it.
+Sometimes, your code uses a value of one type when JavaScript expects a value of a different type. In this case, rather than throwing an error, JavaScript will coerce (i.e. implicitly convert) the value into a type that makes sense to it. This is called **type coercion**.
 
 For example, suppose you type the expression `20 + '16'`. For numbers, the `+` operator means addition; but for strings, it means concatenation. So how does JavaScript deal with this ambiguity?
 
@@ -683,7 +722,7 @@ In the case where any other arithmetic is performed on a number and string, Java
 20 * '16';  // this evaluates to 320
 ```
 
-**Type coercion** also happens when you pass values into `if` statements. In a block of code like `if (x) {...}`, the `x` variable is expected to be a boolean. But if it's not, JavaScript will convert it to a boolean. Most values in JavaScript are "truthy". That is, they get converted into `true` should the need arise. In fact, there are only six "falsy" values in JavaScript.
+Type coercion also happens when you pass values into `if` statements. The condition of an `if` statement is expected to be a boolean. If it's not, JavaScript will coerce the value to a boolean. Most values in JavaScript are **truthy** and is coerced to `true`. On the other hand, a **falsy** value is coerced to `false`. It's easier to remember the falsy values because there are only six of them in JavaScript.
 
 1. `false`
 1. `null`
@@ -692,23 +731,13 @@ In the case where any other arithmetic is performed on a number and string, Java
 1. `''`
 1. `NaN`
 
-See the [falsey](https://developer.mozilla.org/en-US/docs/Glossary/Falsy) and [truthy](https://developer.mozilla.org/en-US/docs/Glossary/Truthy) documentation on the Mozilla Developer Network for more information.
-
-You can always check something's type in JavaScript using the `typeof` operator.
-
-```javascript
-typeof true // 'boolean'
-typeof 42   // 'number'
-typeof 'hi' // 'string'
-```
-
-See the [typeof operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof) on the Mozilla Developer Network for more information.
+See the [falsy](https://developer.mozilla.org/en-US/docs/Glossary/Falsy) and [truthy](https://developer.mozilla.org/en-US/docs/Glossary/Truthy) documentation on the Mozilla Developer Network for more information.
 
 ### Exercise
 
 Turn to your neighbor and list the six types of falsy values in JavaScript.
 
-## What is a Function?
+## What's a function?
 
 In one sentence, we can say that a function is a sequence of instructions that achieve a specific task. A recipe (e.g., making pumpkin pie) or a manual (e.g. assembling a coffee table from IKEA) are great analogies for functions.
 
