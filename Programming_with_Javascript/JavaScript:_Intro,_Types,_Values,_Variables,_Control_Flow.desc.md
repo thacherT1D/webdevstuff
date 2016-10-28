@@ -61,11 +61,39 @@ JavaScript allows web developers to make web pages interactive, dynamic, and awe
 
 ### Exercise
 
-What are some websites you frequently use? Revisit them and try to figure out which parts are using JavaScript. Once you've selected a favorite, show it to a partner and explain why JavaScript is important this website.
+What are some websites you frequently use? Revisit them and try to figure out which parts are using JavaScript. Once you've selected a favorite, show it to a partner and explain why JavaScript is important on this website.
 
 ## How do you write JavaScript?
 
-Most of this will be a review of the precourse, so we'll be going over this fairly quickly. However, go ahead and launch Atom so you can play with JavaScript's syntax.
+Most of this will be a review of the precourse, so we'll be going over this fairly quickly. However, we're going to open Atom and play with JavaScript's syntax.
+
+Start by navigating to your `week01` folder and creating a `jsBasics.html` file.
+
+```shell
+touch jsBasics.html
+```
+
+Now open the newly created file in Atom.
+
+```shell
+atom jsBasics.html
+```
+
+Add an opening and closing `script` tag to the HTML file and add a test `console.log()` statement.
+
+```html
+<script>
+  console.log('Test');
+</script>
+```
+
+Open this file in Chrome.
+
+```shell
+open jsBasics.html
+```
+
+Finally, open the Chrome DevTools using the keyboard shortcut Command + Option + J.
 
 ### Comments
 
@@ -109,7 +137,7 @@ The latest ECMAScript standard defines seven data types:
 
 A **primitive** is data that's immutable. In other words, data that can't be changed.
 
-For example, the number `42` in JavaScript is a primitive. That means it can never be anything other than `42`. Adding `1` to it doesn't change it's value, but instead, results in the number `43`, a completely new and equally unchangeable number. This may sound a bit confusing and obvious, but it'll make more sense when you learn about changeable data called objects.
+For example, the number `42` in JavaScript is a primitive. That means it can never be anything other than `42`. Adding `1` to it doesn't change its value, but instead, results in the number `43`, a completely new and equally unchangeable number. This may sound a bit confusing and obvious, but it'll make more sense when you learn about changeable data called objects.
 
 See [data types](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Data_types) and [primitives](https://developer.mozilla.org/en-US/docs/Glossary/Primitive) on the Mozilla Developer Network for more information.
 
@@ -129,7 +157,7 @@ See the [boolean type](https://developer.mozilla.org/en-US/docs/Web/JavaScript/D
 
 ### Number
 
-According to the ECMAScript standard, there's only one number type. And it represents both integer and floating-point (i.e. decimal) numbers between -(2⁵³ - 1) and 2⁵³ - 1).
+According to the ECMAScript standard, there's only one number type. And it represents both integer and floating-point (i.e. decimal) numbers between -(2<sup>5</sup><sup>3</sup> - 1) and 2<sup>5</sup><sup>3</sup> - 1.
 
 ```javascript
 // integer numbers
@@ -167,8 +195,9 @@ Number.isFinite(100);       // true
 Number.isFinite(Infinity);  // false
 Number.isFinite(-Infinity); // false
 
-Number.isNaN(200);  // false
-Number.isNaN(NaN);  // true
+Number.isNaN(200);      // false
+Number.isNaN('string'); // false
+Number.isNaN(NaN);      // true
 ```
 
 See the [number type](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type) and [`Number` global object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number) on the Mozilla Developer Network for more information.
@@ -182,7 +211,7 @@ JavaScript's string type is used to represent textual data. To create a string, 
 "John";
 ```
 
-Each character in the string occupies a position in the String. The first character is at index 0, the next at index 1, and so on. The length of a String is the number of characters in it.
+Each character in the string occupies a position in the string. The first character is at index 0, the next at index 1, and so on. The length of a string is the number of characters in it.
 
 ```javascript
 'melissa'.length;       // 6
@@ -214,56 +243,68 @@ See the [string type](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Da
 
 ### Variables
 
-In JavaScript, variables let you give a name to a value. Think of a variable as a bucket that can store one thing inside of it. To create a new variable, use the `var` keyword followed by the name of the variable.
+In JavaScript, variables let you give a name to a value. Think of a variable as a bucket that can store one thing inside of it. To create a new variable, use the `let` or `const` keyword followed by the name of the variable. A **keyword** is a word that has special meaning and is [reserved by the ECMAScript standard](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords).
+
+The `let` keyword is used to create (or declare) a variable that can optionally be assigned a value and has the ability to be reassigned. A variable only needs to be declared once using the `let` keyword.
 
 ```javascript
-var person;
+let person;
+
+let dayOfWeek = 'Monday';
+dayOfWeek = 'Tuesday';
+dayOfWeek = 'Wednesday';
 ```
 
-A **keyword** is a word that has special meaning and is [reserved by the ECMAScript standard](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords).
-
-The word variable means 'can change' or 'can vary'. In JavaScript, the value inside a variable can vary over time. Additionally, a JavaScript variable can store many different types of values. However, if you put a new value in a variable, the old one goes away.
-
-**TIP:** A variable only needs to be declared once using the `var` keyword. It can however be reassigned multiple times.
+The word variable means 'can change' or 'can vary'. When using `let`, the value inside a variable can vary over time. Additionally, a JavaScript variable can store many different types of values. However, if you put a new value in a variable, the old one goes away.
 
 ```javascript
-var name = 'Casey';
+let name = 'Casey';
 name = 'Francis';
 name = 42;
+```
+
+The `const` keyword is used to create a constant, or a variable that must be assigned when declared and cannot be reassigned.
+
+```javascript
+const name;         // SyntaxError: Missing initializer in const declaration
+const name = Casey;
+name = 'Francis';   // TypeError: Assignment to constant variable
 ```
 
 Variable names in JavaScript can't contain spaces. The standard practice is to have variables start with a lowercase letter and capitalize each subsequent word. This is called camelcase.
 
 ```javascript
-var firstName = 'Paula';
+const firstName = 'Paula';
 ```
 
 Be careful with your variable names because it's easy to misspell them. Even if you just get the capitalization wrong, the JavaScript interpreter won't know what you mean.
 
 ```javascript
-var lastName = 'Dean';
+const lastName = 'Dean';
 lastname; // ReferenceError
 ```
 
 Variable names also can't start with numbers. If needed, it's common to prepend numbers at the end of a variable name.
 
 ```javascript
-var person1;
-var person2;
+let person1;
+let person2;
 ```
 
 Variables can also store the result of any expression.
 
 ```javascript
-var result = 2 + 2;
+const result = 2 + 2;
 ```
+
+**Note:** The `let` and `const` keywords are new in ES6. Prior to ES6, JavaScript only had one keyword for declaring a variable - the `var` keyword. Using `var` is very similar to the `let` keyword with some slight differences we'll explain later.
 
 ### Undefined
 
-`undefined` represents a value that has not been defined. A variable that has not been assigned a value is of type `undefined`. A function *returns* `undefined` if a value is not returned, which is the default.
+`undefined` represents a value that has not been defined. A variable declared with `let` that has not been assigned a value is of type `undefined`. A function *returns* `undefined` if a value is not returned, which is the default.
 
 ```javascript
-var x;
+let x;
 x; // undefined
 
 x = 3;
@@ -277,7 +318,7 @@ See the [`undefined` global property](https://developer.mozilla.org/en-US/docs/W
 The value `null` represents the intentional absence of any value. Unlike `undefined`, it's not explicitly set by default to unassigned variables. If you want something to be `null`, you must make it so.
 
 ```javascript
-var x = null;
+let x = null;
 ```
 
 See the [`null` value](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null) on the Mozilla Developer Network for more information.
@@ -289,7 +330,37 @@ Further reading:
 
 ### Symbol
 
-Symbol is the newest primitive data type to be added to JavaScript. Talking about symbols is a bit advanced for the first day of JavaScript, especially since we haven't talked about objects yet. If want a sneak peak, see the [`Symbol` global object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol) on the Mozilla Developer Network for more information.
+Symbol is the newest primitive data type to be added to JavaScript. Talking about symbols is a bit advanced for the first day of JavaScript, especially since we haven't talked about objects yet. If you want a sneak peak, see the [`Symbol` global object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol) on the Mozilla Developer Network for more information.
+
+
+### Values, Expressions, and Statements
+
+In JavaScript, the individual pieces of data are referred to as **values**.
+
+```javascript
+3
+'Hello'
+false
+undefined
+```
+
+An **expression** is any valid code that resolves to a value. There are two types of expressions: those with side effects (for example: those that assign value to a variable) and those that simply evaluate to a value.
+
+The expression `x = 7` is an example of an expression with a side effect. This expression uses the `=` operator to assign the value seven to the variable x. The expression itself evaluates to seven.
+
+The code `3 + 4` is an example of the second expression type. This expression uses the `+` operator to add three and four together without assigning the result, seven, to a variable.
+
+```javascript
+y = 45
+32 - 2
+```
+
+A JavaScript program is built as a list of **statements**. A statement is a command. It does something. Most statements end with a semicolon (;). A single statement may span multiple lines.
+
+```javascript
+7;
+let x = 56 + 34;
+```
 
 ### Arithmetic operators
 
@@ -302,7 +373,7 @@ JavaScript lets you perform basic arithmetic operations like addition, subtracti
 5 / 2;  // 2.5
 ```
 
-In JavaScript, the `%` operator finds the remainder after division of one number by another.
+In JavaScript, the modulo operator (`%`) finds the remainder after division of one number by another.
 
 ```javascript
 4 % 2;  // 0
@@ -347,7 +418,7 @@ JavaScript also has a `Math` global object that has properties and methods for m
 
 ```javascript
 // pi
-Math.PI;  // 3.141592653589793
+Math.PI; // 3.141592653589793
 
 // 2⁴
 Math.pow(2, 4); // 16
@@ -365,6 +436,7 @@ Math.ceil(5.99);  // 6
 
 // Round to the nearest integer
 Math.round(7.25); // 7
+Math.round(7.5);  // 8
 Math.round(7.99); // 8
 ```
 
@@ -372,7 +444,7 @@ You can also use the `Math` object to generate random numbers.
 
 ```javascript
 // Generate a random number from 0 up to but not including 1
-Math.random();  // .229375290430
+Math.random(); // .229375290430
 
 // Generate a random number from 0 up to but not including 10
 Math.random() * 10; // 7.133676137309521
@@ -485,51 +557,44 @@ true == 'true';  // false
 
 When JavaScript compares two values with the `==` operator, it first converts them to the same type. In the first example, it converts the boolean `true` into the number `1` which is why `true == 1` is true. In the second example, it converts the boolean `true` into the number `1` _and_ the string `'true'` into the number `NaN` which is why `true == 'true'` is false.
 
-<!-- Because of [this and other strangeness](https://dorey.github.io/JavaScript-Equality-Table/), ALWAYS use `===`. -->
+Because of [this and other strangeness](https://dorey.github.io/JavaScript-Equality-Table/), ALWAYS use `===`.
 
 See the [equality operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Equality_operators) on the Mozilla Developer Network for more information.
 
-### Exercise - JavaScript in the Chrome console
+### Exercise
 
-How to go to the console:
-- In Chrome
-- Type `about:blank` into the address bar and press `Enter`
-- Press `command + option + J`. This should open Chrome's __JavaScript Console__
-
-To get started on the Exercise, predict the outcome of the the comparison `(1 == 1)`.
-
-Then evaluate `(1 == 1)` in Chrome's __JavaScript Console__ using the same technique you used executing code in the `node` runtime environment.
+Predict the outcome of the the comparison `1 == 1` then evaluate `1 == 1` by using `console.log()` in your jsBasics.html file and checking the result in the Chrome console.
 
 Do the same prediction and evaluation for the following comparisons:
 
-- `(1 === '1')`
+- `console.log(1 === '1')`
 
-- `(1 == 'zero')`
+- `console.log(1 == 'zero')`
 
-- `(1 != '000')`
+- `console.log(1 != '000')`
 
-- `(0 !== '')`
+- `console.log(0 !== '')`
 
-- `(0 !== 'refrigerator')`
+- `console.log(0 !== 'refrigerator')`
 
-Turn to a neighbor and discuss which evaluations didn't turn out how you expected and why they may have turned out the way that they did
+Turn to a neighbor and discuss which evaluations didn't turn out how you expected and why they may have turned out the way that they did.
 
-Talk to a neighbor about how double equals (==) and triple equals (===) are different from single equals (=)
+Talk to a neighbor about how double equals (==) and triple equals (===) are different from single equals (=).
 
 ### Conditionals
 
-Conditionals control the flow of a program.  Conditionals decide which code statements gets run based on some input to the conditional.  An example from everyday life would be:
+Conditionals control the flow of a program. Conditionals decide which code statements get run based on some input to the conditional. An example from everyday life would be:
 
-> If you spend $100 or more, then you get 20% off, otherwise the purchase is full price
+> If you spend $100 or more, then you get 20% off, otherwise the purchase is full price.
 
 In the example above, the input to the conditional is the total amount of your purchase.
 
 ### If statements
 
-The most basic control flow statement is the `if` statement.  Here is our example from above in code:
+The most basic control flow statement is the `if` statement. Here is our example from above in code:
 
 ```javascript
-var total = 284;
+let total = 284;
 
 if (total >= 100) {
   total = total * .8;
@@ -624,7 +689,7 @@ Turn to your neighbor and list the six types of falsy values in JavaScript.
 
 In one sentence, we can say that a function is a sequence of instructions that achieve a specific task. A recipe (e.g., making pumpkin pie) or a manual (e.g. assembling a coffee table from IKEA) are great analogies for functions.
 
-The key aspect of function is there ability to be run over and over again and combined to make new processes and workflows. Function truly are the building blocks for ALL applications.
+The key aspect of functions is their ability to be run over and over again and combined to make new processes and workflows. Functions truly are the building blocks for ALL applications.
 
 ### Exercise
 
@@ -645,7 +710,7 @@ There are four parts to the above code example:
 1. Keyword `function`
 1. Name for that function
 1. Parameters - a comma separated list enclosed in parenthesis
-1. Instructions - a variable number of optional instructions enclosed in curly braces; also called the "body" of the function.
+1. Instructions - a number of optional instructions enclosed in curly braces; also called the "body" of the function.
 
 ## Creating and Invoking Functions
 
@@ -653,44 +718,42 @@ We've now established the syntax of a function. Let's apply this knowledge to cr
 
 ```javascript
 function greet() {
-  console.log("Hello, World!");
+  console.log('Hello, World!');
 }
 ```
 
-Awesome, you guys just created a function. If we want to see the value of our function, we just type in the name of the function to our REPL (read, evaluate, print, loop):
+Awesome, you just created a function. If we want to see the value of our function, we just type the name of the function into `console.log()` statement:
 
 ```javascript
 function greet() {
-  console.log("Hello, World!");
+  console.log('Hello, World!');
 }
 
-greet
+console.log(greet);
 // function greet() {
 //  console.log("Hello, World!");
 // }
-// undefined
 ```
 
 Similar to the real world, functions consist of two processes: first, creation of the instructions; second, execution of the instructions.
 
 To this point, we've just created a recipe for `greet`, we haven't actually told anyone or anything to execute the instructions in our function.
 
-To execute the code inside our curly braces, we need to use an operator of `()` next to the name of our function:
+To execute the code inside our curly braces, we need to use the parentheses `()` operator next to the name of our function:
 
 ```javascript
 function greet() {
-  console.log("Hello, World!");
+  console.log('Hello, World!');
 }
 
-greet();
+console.log(greet());
+console.log(greet());
+console.log(greet());
+
 // "Hello, World!"
 // undefined
-
-greet();
-// "Hello, World!"
+// "Hello, World!"'
 // undefined
-
-greet();
 // "Hello, World!"
 // undefined
 ```
@@ -699,16 +762,10 @@ That's it! Now we can re-use the instructions of `greet` whenever we want. Above
 
 ### Exercise
 
-Write a function called `yell` that prints out a phrase 10 times in a row.  On the 10th iteration, the phrase should be in all caps and have an extra exclamation point at the end.  Example output is below:
+Write a function called `yell` that prints out a phrase 5 times in a row. On the 5th iteration, the phrase should be in all caps and have an extra exclamation point at the end. Example output is below:
 
 ```javascript
 yell(); // You must implement this function
-// my phrase
-// my phrase
-// my phrase
-// my phrase
-// my phrase
-// my phrase
 // my phrase
 // my phrase
 // my phrase
@@ -718,52 +775,58 @@ yell(); // You must implement this function
 
 ## Functions With Parameters
 
-So far we have created functions that do the same exact thing every time.  Often times, we want a function to change behavior based on a set of inputs.  Function parameters allow us to create functions with input.
+So far we have created functions that do the same exact thing every time. Often times, we want a function to change behavior based on a set of inputs. Function parameters allow us to create functions with input.
 
 The function example we saw earlier has two parameters:
 
 ```javascript
 function hello(name, age) {
-  console.log("Hello, " + name + ". You are " + age + " years old".);
+  console.log('Hello, ' + name + '. You are ' + age + ' years old'.);
 }
 ```
 
-The parameters are `name` and `age`.  They are variables that are defined in the function
+The parameters are `name` and `age`. They are variables that are used in the function.
+
+**NOTE:** A **parameter** is a variable in a function definition. When a function is called, the data you pass in are referred to as **arguments**.
+
+```javascript
+function hello(name, age) {       // parameters
+  console.log('Hello, ' + name + '. You are ' + age + ' years old'.);
+}
+
+hello('Susan', 27);  // arguments
+```
 
 ### Exercise 1
 
 Create a function call `capWord` that prints out a word and then prints out the capitalized word.
 
 ```javascript
-capWord("awesome"); // You must implement this function
+capWord('awesome'); // You must implement this function
 // awesome
 // Awesome
 ```
 
-### Exercise 2
+### Bonus
 
-Create a function that takes name of a month as a parameter.  Print out every day in that month.  Assume leap years don't exist.
+Modify your function so that it also prints out the word with both the first and last letters capitalized.
 
 ```javascript
-daysInMonth("February");
-// February 1
-// February 2
-.
-.
-.
-// February 27
-// February 28
+capWord('awesome'); // You must implement this function
+// awesome
+// Awesome
+// AwesomE
 ```
 
 ## The keyword `return`
 
-We have now seen functions that take a set of inputs as parameters.  It is also often desireable to return an value from the function.  Our function examples have all been printing to the console, but in many cases we want the function to return a value for us.  For example:
+We have now seen functions that take a set of inputs as parameters. It is also often desirable to return a value from the function. Our function examples have all been printing to the console, but in many cases we want the function to return a value for us. For example:
 
 ```javascript
-var total = sum(5, 20);
+const total = sum(5, 20);
 ```
 
-In the example above, sum is a function that takes 2 parameters.  The values are summed in the function and the result will be returned and saved in the variable `total`.
+In the example above, sum is a function that takes two parameters. The values are summed in the function and the result will be returned and saved in the variable `total`.
 
 The implementation of sum looks like this:
 
@@ -773,38 +836,41 @@ function sum(num1, num2) {
 }
 ```
 
-Let's make another method that returns a greeting for a name.  If the name is `Tim`, return: "Hello Tim!  Your favorite color is blue."  If the name is anything other than Tim, return Hello name.
+Now let's write a function called `calculate` that takes three arguments: `num1`, `num2`, and a string representing addition or subtraction (`'+'` or `'-'`).  The function should decide which math operation to perform, then call either a `sum` or `subtract` function for the appropriate operation. For example, `calculate(4, 5, '+');` should call the `sum` function, which looks like this `sum(4, 5)` and returns the value `9`.
 
 ```javascript
-function getGreeting(name) {
-	if (name === "Tim") {
-		return "Hello Tim!  Your favorite color is blue.";
+function sum(num1, num2) {
+  return num1 + num2;
+}
+
+function subtract(num1, num2) {
+  return num1 - num2;
+}
+
+function calculate(num1, num2, operator) {
+	if (operator === '+') {
+		return sum(num1, num2);
 	}
 
-	return "Hello " + name;
+	return subtract(num1, num2);
 }
 ```
 
 ### Exercise
 
-- What is output to the console with the following function invocation?
+- What is the output to the console with the following function invocation?
 
 ```javascript
-getGreeting("Elie");
+console.log(calculate(10, 5, '+'));
 ```
+
 - With the following function invocation, which return statement is executed (the first, the second, or both)?
 
 ```javascript
-getGreeting("Tim");
+console.log(calculate(20, 6, '-'));
 ```
 
-- Write a function called average that takes an array of numbers as a parameter and returns the average of the array of numbers.
-
-```javascript
-average([2,4,6]) // Returns 4
-```
-
-- Write a function called `calculate` that takes 3 arguments: `num1`, `num2`, and a string representing addition or multiplication (`'+'` or `'*'`).  Have that function decide which math operation to perform, then call another function for the appropriate operation.  For example, `calculate(4, 5, '*');` should call another function internally that looks like this `multiply(4, 5)` and returns the value `20`.
+- Modify the `calculate` function so that it can also perform multiplication and division if a use passes in `*` or `/` as the third argument.
 
 ### Further Reading
 
