@@ -585,9 +585,7 @@ Turn to a neighbor and discuss which expressions surprised you. Also, discuss th
 
 ### Values, Expressions, and Statements
 
-So far, we've used the terms value and expression a bunch. Let's take a second to define what they mean.
-
-In JavaScript, an individual piece of information is referred to as a **value**.
+So far, we've used the terms value and expression a bunch. Let's take a second to define what each one means. In JavaScript, an individual piece of information is referred to as a **value**.
 
 ```javascript
 3
@@ -599,45 +597,28 @@ undefined
 And an **expression** is any valid code that evaluates to a value.
 
 ```javascript
-9 - 3
+9 - 3  // evaluates to the value 6
 ```
 
-The above code is an expression that does not have a side effect. Some expressions, like when you assign a value to a variable, produce a side effect.
-
-```javascript
-let y = 45
-```
-
-In this case, the variable `y` contains the value `45`. The expression above uses the `=` operator to assign the value `45` to the variable `y`.
-
-A JavaScript program is built as a list of **statements**. A statement is a command. It does something. Most statements end with a semicolon (;). A single statement may span multiple lines.
-
-```javascript
-7;
-let x = 56 + 34;
-```
-
-### Conditionals
-
-Conditionals control the flow of a program. Conditionals decide which code statements get run based on some input to the conditional. An example from everyday life would be:
-
-> If you spend $100 or more, then you get 20% off, otherwise the purchase is full price.
-
-In the example above, the input to the conditional is the total amount of your purchase.
+Roughly, a **statement** performs an action. The first statement we'll look at is an `if` statement.
 
 ### If statements
 
-The most basic control flow statement is the `if` statement. Here is our example from above in code:
+An `if` statement controls the flow of a program. It decides which code gets run based on a condition. An example from everyday life would be, "If you spend $100 or more, then you get 20% off the price, otherwise you must pay the full price."
+
+Here is how you would represent the above statement in code.
 
 ```javascript
-let total = 284;
+const price = 284;
 
-if (total >= 100) {
-  total = total * .8;
+let total;
+
+if (price >= 100) {
+  total = price * 0.8;
 }
-
-// Display the total to the user
-console.log('Your total is: $' + total.toFixed(2));
+else {
+  total = price;
+}
 ```
 
 Let's practice with some other if statements!
