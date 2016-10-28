@@ -1,16 +1,18 @@
 ## Objectives
-* Describe what JavaScript is.
-* Describe what ECMAScript is.
-* Explain why JavaScript is important.
-* Name all primitive data types in JavaScript.
-* Explain what a variable is.
-* Explain the difference between a value, an expression, and a statement.
-* Explain the difference between `=`, `==`, and `===` in JavaScript.
-* Explain what type conversion is.
-* Name all the "falsy" values in JavaScript.
-* Explain what a function is.
-* Write a function that takes parameters.
-* Write a function that returns a value.
+
+- Describe what JavaScript is.
+- Describe what ECMAScript is.
+- Explain why JavaScript is important.
+- Name all primitive data types in JavaScript.
+- Explain what a variable is.
+- Explain the difference between `=`, `==`, and `===` in JavaScript.
+- Explain what type conversion is.
+- Name all the "falsy" values in JavaScript.
+- Explain the difference between a value, an expression, and a statement.
+- Conditionals
+- Explain what a function is.
+- Write a function that takes parameters.
+- Write a function that returns a value.
 
 ## What's JavaScript?
 
@@ -34,16 +36,19 @@ There are six editions of ECMAScript published. Work on version 6 of the standar
 
 | Edition |	Date published                         |
 |---------|----------------------------------------|
-| 1       |	June 1997	                             |
-| 2       |	June 1998                              |
-| 3       |	December 1999                          |
-| 4	      | Abandoned due to political differences |
-| 5       |	December 2009                          |
-| 5.1	    | June 2011                              |
-| 6	      | June 2015                              |
-| 7	      | Work in progress	                     |
+| 1       | June 1997                              |
+| 2       | June 1998                              |
+| 3       | December 1999                          |
+| 4       | Abandoned due to political differences |
+| 5       | December 2009                          |
+| 5.1     | June 2011                              |
+| 6       | June 2015                              |
+| 7       | June 2016                              |
+| 8       | Work in progress                       |
 
-To see what kind of support your browser has of the ECMAScript standard, check out this [compatibility table](http://kangax.github.io/compat-table/es6/). Which browser has the best support? Which browser has the worst support?
+To see what kind of support your browser has of the ECMAScript standard, check out this [compatibility table](http://kangax.github.io/compat-table/es6/).
+
+**QUESTION:** Which browser has the best support? Which browser has the worst support?
 
 ### Exercise
 
@@ -54,10 +59,10 @@ Turn to a partner and describe what ECMAScript is in your own words.
 JavaScript allows web developers to make web pages interactive, dynamic, and awesome. Here are some really cool examples of JavaScript in the wild.
 
 - [Password Strength Meter](http://codepen.io/pankajparashar/details/bFhyf/)
-- [Fullscreen Overlay Effects](http://tympanus.net/Development/FullscreenOverlayStyles/index3.html)
-- [Page Loading Effects](http://tympanus.net/Development/PageLoadingEffects/index2.html)
-- [Image Grid Effects](http://tympanus.net/Development/ImageGridEffects/index2.html)
-- [Animated Map Path for Interactive Storytelling](http://tympanus.net/Development/StorytellingMap/)
+- [Fullscreen Overlay Effect](http://codepen.io/taniarascia/full/yYrXRG/)
+- [Page Loading Effect](http://codepen.io/v_trefil/full/oxmdqw/)
+- [Image Grid Effect](http://codepen.io/osublake/full/RNLdpz/)
+- [3D Grid Effect](http://codepen.io/marciopuga/full/dozyLm/)
 
 ### Exercise
 
@@ -67,7 +72,7 @@ What are some websites you frequently use? Revisit them and try to figure out wh
 
 Most of this will be a review of the precourse, so we'll be going over this fairly quickly. However, we're going to open Atom and play with JavaScript's syntax.
 
-Start by navigating to your `week01` folder and creating a `jsBasics.html` file.
+To start, navigate to your `week01` folder and create a `jsBasics.html` file.
 
 ```shell
 touch jsBasics.html
@@ -79,7 +84,7 @@ Now open the newly created file in Atom.
 atom jsBasics.html
 ```
 
-Add an opening and closing `script` tag to the HTML file and add a test `console.log()` statement.
+Add an opening and closing `<script>` tag to the HTML file and add a `console.log()` statement.
 
 ```html
 <script>
@@ -93,32 +98,32 @@ Open this file in Chrome.
 open jsBasics.html
 ```
 
-Finally, open the Chrome DevTools using the keyboard shortcut Command + Option + J.
+To see the result of the script, open the Chrome DevTools using the keyboard shortcut Command + Option + J.
 
 ### Comments
 
-Comments are used to add hints, notes, suggestions, or warnings to JavaScript code. This can make it easier to read and understand. They can also be used to disable code to prevent it from being executed which can be a valuable debugging tool. JavaScript has two ways of creating comments in code.
+Comments are used to add hints, notes, suggestions, or warnings to JavaScript code. This can make it easier to read and understand code. They can also be used to disable code, preventing it from being executed, which is a valuable debugging tool. JavaScript has two ways of creating comments in code.
 
-The first way is with the `//` style. This makes all text following it on the same line into a comment.
+The first way is with the double forward slash `//` style. This turns the following text on the same line into a comment.
 
 ```javascript
 // This is a one line JavaScript comment
 ```
 
-The second way is the `/* */` style, which is more flexible. For example, you can use it on a single line.
+The second way is with the forward slash star `/* */` style, which is more flexible. For example, you can use it on a single line.
 
 ```javascript
 /* This is a one line JavaScript comment */
 ```
 
-Or you can use it to make multiple line comments.
+Or you can use it to make a multi-line comments.
 
 ```javascript
 /* This comment spans multiple lines. Notice
    that we don't need to end the comment on the first line. */
 ```
 
-Most of the time, you'll use the `//` style because Atom can toggle a line to be commented or not using the `Command` + `/` keyboard shortcut. Go ahead, try it out!
+Most of the time, you'll use the `//` style because Atom can toggle whether or not a line is commented out using the `Command` + `/` keyboard shortcut. Go ahead, try it out!
 
 See the [comments](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Comments) documentation on the Mozilla Developer Network for more information.
 
@@ -132,18 +137,18 @@ The latest ECMAScript standard defines seven data types:
   - String
   - Undefined
   - Null
-  - Symbol (new in ECMAScript 6)
+  - Symbol
 - and Object
 
 A **primitive** is data that's immutable. In other words, data that can't be changed.
 
-For example, the number `42` in JavaScript is a primitive. That means it can never be anything other than `42`. Adding `1` to it doesn't change its value, but instead, results in the number `43`, a completely new and equally unchangeable number. This may sound a bit confusing and obvious, but it'll make more sense when you learn about changeable data called objects.
+For example, the number `42` in JavaScript is a primitive. That means the value can never be anything other than `42`. Adding `1` to it doesn't change its value, but instead, results in the number `43`, a completely new and equally unchangeable number. This may sound a bit confusing and obvious, but it'll make more sense when you learn about changeable data called objects.
 
 See [data types](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Data_types) and [primitives](https://developer.mozilla.org/en-US/docs/Glossary/Primitive) on the Mozilla Developer Network for more information.
 
 ### Boolean
 
-Boolean represents a logical entity and can have two values: `true` and `false`.
+Boolean represents a logical entity and can have two values—`true` and `false`.
 
 ```javascript
 // San Francisco is expensive
@@ -157,7 +162,7 @@ See the [boolean type](https://developer.mozilla.org/en-US/docs/Web/JavaScript/D
 
 ### Number
 
-According to the ECMAScript standard, there's only one number type. And it represents both integer and floating-point (i.e. decimal) numbers between -(2<sup>5</sup><sup>3</sup> - 1) and 2<sup>5</sup><sup>3</sup> - 1.
+In the ECMAScript standard, there's only one number type. And it represents both integer and floating-point (i.e. decimal) numbers between -(2<sup>5</sup><sup>3</sup> - 1) and 2<sup>5</sup><sup>3</sup> - 1.
 
 ```javascript
 // integer numbers
@@ -183,7 +188,7 @@ If you want to distinguish between integers and floats, there are a couple of wa
 ```javascript
 Number.isInteger(4);    // true
 Number.isInteger(4.1);  // false
-Number.isInteger(4.0);   // true
+Number.isInteger(4.0);  // true
 ```
 
 Additionally, the number type has three symbolic values: `Infinity`, `-Infinity`, and `NaN` (not-a-number). To determine if a number is finite or not-a-number, use the `Number.isFinite()` and `Number.isNaN()` functions respectively.
@@ -204,14 +209,14 @@ See the [number type](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Da
 
 ### String
 
-JavaScript's string type is used to represent textual data. To create a string, simply append and prepend a series of characters with either single or double quotation marks. Which quotations you use is a matter of style preference - except we ALWAYS use single quotes in JS.
+JavaScript's string type is used to represent textual data. To create a string, simply append and prepend a series of characters with either single or double quotation marks. Which quotations you use is a matter of style, however, our preference in this course will be to use single quotes for a JavaScript string unless its text contains a single quote.
 
 ```javascript
-'Jane';
-"John";
+'Jane loves JavaScript';
+"John's dog ate his homework";
 ```
 
-Each character in the string occupies a position in the string. The first character is at index 0, the next at index 1, and so on. The length of a string is the number of characters in it.
+Each character in the string occupies a position in the string. The first character is at index `0`, the next at index `1`, and so on. The `length` of a string is the number of characters in it.
 
 ```javascript
 'melissa'.length;       // 6
@@ -220,7 +225,7 @@ Each character in the string occupies a position in the string. The first charac
 'melissa'.substr(2, 2); // 'li'
 ```
 
-There are a number of built-in methods associated with strings, some of which are new additions as of ES6.
+There are a number of built-in methods associated with strings.
 
 ```javascript
 'matt'.toUpperCase(); // 'MATT'
@@ -233,7 +238,6 @@ There are a number of built-in methods associated with strings, some of which ar
 'Matt'.indexOf('t');      // 2
 'Matt'.lastIndexOf('t');  // 3
 
-// ES6
 'Matt'.startsWith('Ma');  // true
 'Matt'.endsWith('q');     // false
 'Matt'.includes('t');     // true
@@ -243,48 +247,58 @@ See the [string type](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Da
 
 ### Variables
 
-In JavaScript, variables let you give a name to a value. Think of a variable as a bucket that can store one thing inside of it. To create a new variable, use the `let` or `const` keyword followed by the name of the variable. A **keyword** is a word that has special meaning and is [reserved by the ECMAScript standard](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords).
+In JavaScript, variables allow you to give a name to a value. Think of a variable as a bucket that can store one thing inside of it.
 
-The `let` keyword is used to create (or declare) a variable that can optionally be assigned a value and has the ability to be reassigned. A variable only needs to be declared once using the `let` keyword.
+To declare (i.e. create) a new variable, use the `let` keyword followed by an identifying name. Once declared, a variable can be assigned a value.
+
+**NOTE:** A **keyword** is a word that has special meaning and is [reserved by the ECMAScript standard](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords).
 
 ```javascript
-let person;
-
-let dayOfWeek = 'Monday';
-dayOfWeek = 'Tuesday';
-dayOfWeek = 'Wednesday';
+let person = 'Jane';
 ```
 
-The word variable means 'can change' or 'can vary'. When using `let`, the value inside a variable can vary over time. Additionally, a JavaScript variable can store many different types of values. However, if you put a new value in a variable, the old one goes away.
+In the past, you may have declared variables using the `var` keyword. The `let` keyword is new in ES6. Using `let` is very similar to using `var`, but has some slight advantages which we'll talk about later. In this course, we want you to prefer using `let` over `var`.
+
+A variable has the ability to have its value reassigned. After all, the word variable means 'can change' or 'can vary'. However, if you put a new value in a variable, the old one goes away.
+
+**TIP:** Once it's declared, you don't need to use the `let` keyword again.
+
+```javascript
+let person = 'Jane';
+person = 'John';
+```
+
+A variable can also be declared without assigning it a value. The value of an unassigned variable is `undefined`, which we'll talk about later.
+
+```javascript
+let day;  // the value of day is undefined
+
+day = 'Monday';
+day = 'Tuesday';
+```
+
+Additionally, a JavaScript variable can store many different types of values.
 
 ```javascript
 let name = 'Casey';
-name = 'Francis';
+name = true;
 name = 42;
 ```
 
-The `const` keyword is used to create a constant, or a variable that must be assigned when declared and cannot be reassigned.
+Variable names in JavaScript can't contain spaces. The standard practice is to have variables start with a lowercase letter and capitalize each subsequent word. This is called **camelcase**.
 
 ```javascript
-const name;         // SyntaxError: Missing initializer in const declaration
-const name = Casey;
-name = 'Francis';   // TypeError: Assignment to constant variable
+let firstName = 'Paula';
 ```
 
-Variable names in JavaScript can't contain spaces. The standard practice is to have variables start with a lowercase letter and capitalize each subsequent word. This is called camelcase.
+Be careful with your variable names because it's easy to misspell them. Even if you just get the capitalization wrong, the JavaScript interpreter won't know what you mean and throw a `ReferenceError`.
 
 ```javascript
-const firstName = 'Paula';
+let lastName = 'Dean';
+lastname;  // ReferenceError
 ```
 
-Be careful with your variable names because it's easy to misspell them. Even if you just get the capitalization wrong, the JavaScript interpreter won't know what you mean.
-
-```javascript
-const lastName = 'Dean';
-lastname; // ReferenceError
-```
-
-Variable names also can't start with numbers. If needed, it's common to prepend numbers at the end of a variable name.
+Variable names also can't start with numbers. If needed, it's common to append numbers at the end of a variable name.
 
 ```javascript
 let person1;
@@ -294,22 +308,47 @@ let person2;
 Variables can also store the result of any expression.
 
 ```javascript
-const result = 2 + 2;
+let result = 5 * 8;
 ```
 
-**Note:** The `let` and `const` keywords are new in ES6. Prior to ES6, JavaScript only had one keyword for declaring a variable - the `var` keyword. Using `var` is very similar to the `let` keyword with some slight differences we'll explain later.
+**QUESTION:** Given the above code, what is the value inside the result variable?
+
+### Constants
+
+Similarly, the `const` keyword is used to declare a constant. Think of a constant as a bucket that must be assigned a value when declared and cannot have its value reassigned later.
+
+```javascript
+const name = 'Casey';
+```
+
+If you tried to declare a constant without assigning it a value, JavaScript will throw a `SyntaxError`.
+
+```javascript
+const name;  // SyntaxError: Missing initializer in const declaration
+```
+
+If you tried to reassign a constant with a new value, JavaScript will throw a `TypeError`.
+
+```javascript
+const name = 'Chad';
+name = 'Francis';  // TypeError: Assignment to constant variable
+```
+
+It's totally fine to always use `let` in your code. However, many professional programmers reach for `const` first, to get the extra syntax checks, and change their code to `let` on a case-by-case basis.
 
 ### Undefined
 
-`undefined` represents a value that has not been defined. A variable declared with `let` that has not been assigned a value is of type `undefined`. A function *returns* `undefined` if a value is not returned, which is the default.
+`undefined` represents a value that has not been defined. If a variable is declared without being assigned a value, its value is automatically set to `undefined`.
 
 ```javascript
 let x;
-x; // undefined
+x;  // the value of x is undefined
 
-x = 3;
-x; // no longer undefined
+x = 40;
+x;  // the value of x is no longer undefined
 ```
+
+**QUESTION:** Given the above code, what's the new value of `x`?
 
 See the [`undefined` global property](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined) on the Mozilla Developer Network for more information.
 
@@ -332,36 +371,6 @@ Further reading:
 
 Symbol is the newest primitive data type to be added to JavaScript. Talking about symbols is a bit advanced for the first day of JavaScript, especially since we haven't talked about objects yet. If you want a sneak peak, see the [`Symbol` global object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol) on the Mozilla Developer Network for more information.
 
-
-### Values, Expressions, and Statements
-
-In JavaScript, the individual pieces of data are referred to as **values**.
-
-```javascript
-3
-'Hello'
-false
-undefined
-```
-
-An **expression** is any valid code that resolves to a value. There are two types of expressions: those with side effects (for example: those that assign value to a variable) and those that simply evaluate to a value.
-
-The expression `x = 7` is an example of an expression with a side effect. This expression uses the `=` operator to assign the value seven to the variable x. The expression itself evaluates to seven.
-
-The code `3 + 4` is an example of the second expression type. This expression uses the `+` operator to add three and four together without assigning the result, seven, to a variable.
-
-```javascript
-y = 45
-32 - 2
-```
-
-A JavaScript program is built as a list of **statements**. A statement is a command. It does something. Most statements end with a semicolon (;). A single statement may span multiple lines.
-
-```javascript
-7;
-let x = 56 + 34;
-```
-
 ### Arithmetic operators
 
 JavaScript lets you perform basic arithmetic operations like addition, subtraction, multiplication, and division using the `+`, `-`, `*`, and `/` operators respectively. The arithmetic rules and order of operations apply as expected.
@@ -373,7 +382,7 @@ JavaScript lets you perform basic arithmetic operations like addition, subtracti
 5 / 2;  // 2.5
 ```
 
-In JavaScript, the modulo operator (`%`) finds the remainder after division of one number by another.
+In JavaScript, the remainder operator (`%`) finds the remainder after division of one number by another.
 
 ```javascript
 4 % 2;  // 0
@@ -382,7 +391,7 @@ In JavaScript, the modulo operator (`%`) finds the remainder after division of o
 12 % 3; // 0
 ```
 
-**Question:** How can you use the `%` operator to check whether or not an integer is even or odd?
+**QUESTION:** How can you use the `%` operator to check whether or not an integer is even or odd?
 
 The `+` operator can also be used for **string concatenation**.
 
@@ -396,7 +405,7 @@ Notice that the meaning of the `+` operator depends on the data types of the ope
 'The sum of ' + 5 + ' and ' + 7 + ' is ' + 5 + 7;
 ```
 
-**Question:** How might you fix the above expression so it evaluates correctly?
+**QUESTION:** How might you fix the above expression so it evaluates correctly?
 
 See the [arithmetic operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators) on the Mozilla Developer Network for more information.
 
@@ -405,9 +414,9 @@ See the [arithmetic operators](https://developer.mozilla.org/en-US/docs/Web/Java
 Using the following methods in the `Number` global object, you can convert a string to a number.
 
 ```javascript
-Number.parseInt('42');        // 42
-Number.parseFloat('3.14');    // 3.14
-Number.parseInt('forty two'); // NaN
+Number.parseInt('42');         // 42
+Number.parseFloat('3.14');     // 3.14
+Number.parseInt('forty two');  // NaN
 ```
 
 See the [`Number` global object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number) on the Mozilla Developer Network for more information.
@@ -421,67 +430,67 @@ JavaScript also has a `Math` global object that has properties and methods for m
 Math.PI; // 3.141592653589793
 
 // 2⁴
-Math.pow(2, 4); // 16
+Math.pow(2, 4);  // 16
 
 // √4
-Math.sqrt(4); // 2
+Math.sqrt(4);  // 2
 
 // Round down to an integer
-Math.floor(3.14); // 3
-Math.floor(3.99); // 3
+Math.floor(3.14);  // 3
+Math.floor(3.99);  // 3
 
 // Round up to an integer
 Math.ceil(5.10);  // 6
 Math.ceil(5.99);  // 6
 
 // Round to the nearest integer
-Math.round(7.25); // 7
-Math.round(7.5);  // 8
-Math.round(7.99); // 8
+Math.round(7.25);  // 7
+Math.round(7.5);   // 8
+Math.round(7.99);  // 8
 ```
 
 You can also use the `Math` object to generate random numbers.
 
 ```javascript
 // Generate a random number from 0 up to but not including 1
-Math.random(); // .229375290430
+Math.random();  // .229375290430
 
 // Generate a random number from 0 up to but not including 10
-Math.random() * 10; // 7.133676137309521
+Math.random() * 10;  // 7.133676137309521
 
 // Generate a random number from 1 up to but not including 11
-Math.random() * 10 + 1; // 3.390042587649077
+Math.random() * 10 + 1;  // 3.390042587649077
 
 // Generate a random number from 1 and 10
-Math.floor(Math.random() * 10 + 1); // 8
+Math.floor(Math.random() * 10 + 1);  // 8
 ```
 
 See the [`Math` global object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math) on the Mozilla Developer Network for more information.
 
 ### Logical operators
 
-Logical operators `&&` (and), `||` (or) and `!` (not) are typically used with boolean (logical) values. When they are, they return a boolean value.
+Logical operators `&&` (and), `||` (or) and `!` (not) are typically used with boolean values. When they're used, they return a boolean value.
 
 ```javascript
-true && true;   // true
-true && false;  // false
-false && true;  // false
-false && false; // false
+true && true;    // true
+true && false;   // false
+false && true;   // false
+false && false;  // false
 
-true || true;   // true
-true || false;  // true
-false || true;  // true
-false || false; // false
+true || true;    // true
+true || false;   // true
+false || true;   // true
+false || false;  // false
 
-!true;          // false
-!false;         // true
+!true;           // false
+!false;          // true
 ```
 
 As logical expressions are evaluated left to right, they are tested for possible "short-circuit" evaluation using the following rules.
 
 ```javascript
-false && (anything);  // Short-circuit evaluated to false
-true || (anything);   // Short-circuit evaluated to true
+false && anything;  // Short-circuit evaluated to false
+true || anything;   // Short-circuit evaluated to true
 ```
 
 See the [logical operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators) on the Mozilla Developer Network for more information.
@@ -491,48 +500,48 @@ See the [logical operators](https://developer.mozilla.org/en-US/docs/Web/JavaScr
 Relational operators `>` (greater than), `>=` (greater than or equal to), `<` (less than), and `<=` (less than or equal to) are used to compare the values of two numbers.
 
 ```javascript
-7 < 7;  // false
-7 <= 7; // true
+7 < 7;   // false
+7 <= 7;  // true
 ```
 
 Relational operators are used to compare the values of two strings as well.
 
 ```javascript
-'a' > 'a';  // false
-'a' >= 'a'; // true
+'a' > 'a';   // false
+'a' >= 'a';  // true
 
-'a' > 'b';  // false
-'a' >= 'b'; // false
+'a' > 'b';   // false
+'a' >= 'b';  // false
 
-'b' > 'a';  // true
-'b' >= 'a'; // true
+'b' > 'a';   // true
+'b' >= 'a';  // true
 ```
 
 See the [relational operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Relational_operators) on the Mozilla Developer Network for more information.
 
 ### Equality operators
 
-The triple equals `===` operator compares two values to see if they're exactly the same or "strictly equal" to one another. The operator evaluates to `true` if the values are equal and are the same type.
+The triple equals `===` operator compares two values to see if they're strictly equal (i.e. exactly the same) to one another. The operator evaluates to `true` if the values are equal and are the same type.
 
 ```javascript
-4 === 3;   // false
-3 === 3;   // true
-3 === '3'; // false
+4 === 3;    // false
+3 === 3;    // true
+3 === '3';  // false
 ```
 
 Conversely, the `!==` operator evaluates to `true` if the values are not equal and/or are not the same type.
 
 ```javascript
-4 !== 3;   // true
-3 !== 3;   // false
-3 !== '3'; // true
+4 !== 3;    // true
+3 !== 3;    // false
+3 !== '3';  // true
 ```
 
 Be careful not to confuse the `===` operator with the single equal `=` operator. The `===` operator asks "Are these two values strictly equal?" while the `=` operator means "Assign the value on the right to the variable on the left." In short, the `===` operator is used for **comparison** and the `=` operator is used for **assignment**.
 
 Remember, when you use the `=` operator, a variable name _must_ be on the left and the value you want to assign to that variable _must_ be on the right. On the other hand, since the `===` operator compares two values to see if they're strictly equal, it doesn't matter which value is on which side.
 
-Related to the `===` and `!==` operators are the `==` and `!=` operators respectively. The double equals `==` operator compares two values to see if they're equal-ish or "loosely equal" to one another. The operator evaluates to `true` if the values are equal even if they're not the same type.
+Related to the `===` and `!==` operators are the `==` and `!=` operators respectively. The double equals `==` operator compares two values to see if they're loosely equal (i.e. equal-ish) to one another. The operator evaluates to `true` if the values are equal even if they're not the same type.
 
 ```javascript
 4 == 3;    // false
@@ -555,31 +564,58 @@ true == 1;       // true
 true == 'true';  // false
 ```
 
-When JavaScript compares two values with the `==` operator, it first converts them to the same type. In the first example, it converts the boolean `true` into the number `1` which is why `true == 1` is true. In the second example, it converts the boolean `true` into the number `1` _and_ the string `'true'` into the number `NaN` which is why `true == 'true'` is false.
-
-Because of [this and other strangeness](https://dorey.github.io/JavaScript-Equality-Table/), ALWAYS use `===`.
+When JavaScript compares two values with the `==` operator, it first converts them to the same type. In the first example, it converts the boolean `true` into the number `1` which is why `true == 1` is true. In the second example, it converts the boolean `true` into the number `1` _and_ the string `'true'` into the number `NaN` which is why `true == 'true'` is false. Because of [this and other strangeness](https://dorey.github.io/JavaScript-Equality-Table/), always use `===`.
 
 See the [equality operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Equality_operators) on the Mozilla Developer Network for more information.
 
 ### Exercise
 
-Predict the outcome of the the comparison `1 == 1` then evaluate `1 == 1` by using `console.log()` in your jsBasics.html file and checking the result in the Chrome console.
+For each of the following expressions, make a prediction about its value and check to see if you're right by running it in the browser.
 
-Do the same prediction and evaluation for the following comparisons:
+```javascript
+1 == 1
+1 === '1'
+1 == 'zero'
+1 != '000'
+0 !== ''
+0 !== 'refrigerator'
+```
 
-- `console.log(1 === '1')`
+Turn to a neighbor and discuss which expressions surprised you. Also, discuss the difference between the `===`, `==`, and `=` operators in your own words.
 
-- `console.log(1 == 'zero')`
+### Values, Expressions, and Statements
 
-- `console.log(1 != '000')`
+We've been using the words value and expression a lot. Let's take a second to discuss what they mean.
 
-- `console.log(0 !== '')`
+In JavaScript, individual pieces of data are referred to as **values**.
 
-- `console.log(0 !== 'refrigerator')`
+```javascript
+3
+'Hello'
+false
+undefined
+```
 
-Turn to a neighbor and discuss which evaluations didn't turn out how you expected and why they may have turned out the way that they did.
+An **expression** is any valid code that resolves to a value.
 
-Talk to a neighbor about how double equals (==) and triple equals (===) are different from single equals (=).
+```javascript
+9 - 3
+```
+
+The above code is an expression that does not have a side effect. Some expressions, like when you assign a value to a variable, produce a side effect.
+
+```javascript
+y = 45
+```
+
+The expression above uses the `=` operator to assign the value `45` to the variable `y`.
+
+A JavaScript program is built as a list of **statements**. A statement is a command. It does something. Most statements end with a semicolon (;). A single statement may span multiple lines.
+
+```javascript
+7;
+let x = 56 + 34;
+```
 
 ### Conditionals
 
