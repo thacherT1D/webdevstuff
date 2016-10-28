@@ -600,13 +600,27 @@ And an **expression** is any valid code that evaluates to a value.
 9 - 3  // evaluates to the value 6
 ```
 
-Roughly, a **statement** performs an action. The first statement we'll look at is an `if` statement.
+Roughly, a **statement** performs an action. The first kind of statement we'll study is an `if` statement.
 
 ### If statements
 
 An `if` statement controls the flow of a program. It decides which code gets run based on a condition. An example from everyday life would be, "If you spend $100 or more, then you get 20% off the price, otherwise you must pay the full price."
 
-Here is how you would represent the above statement in code.
+Here is how you would represent the above statement in code. In JavaScript, the condition needs to be wrapped in parentheses.
+
+```javascript
+const price = 284;
+
+let total;
+
+if (price >= 100) {
+  total = price * 0.8;
+} else {
+  total = price;
+}
+```
+
+You could rewrite the above code using two `if` statements.
 
 ```javascript
 const price = 284;
@@ -616,36 +630,16 @@ let total;
 if (price >= 100) {
   total = price * 0.8;
 }
-else {
+
+if (price < 100) {
   total = price;
 }
 ```
+**QUESTION:** What are the trade-offs of using an `if...else` statement versus two `if` statements?
 
-Let's practice with some other if statements!
+### Exercise
 
-```javascript
-if (1 + 1 === 2) {
-  console.log('Arithmetic is the best');
-}
-
-if (1 + 1 !== 2) {
-  console.log('Math is broken.');
-}
-```
-
-We can also combine these two statements using `if...else`:
-
-```javascript
-if (1 + 1 === 2) {
-  console.log('Arithmetic is the best');
-} else {
-  console.log('Math is broken');
-}
-```
-
-**NOTE:** Remember the parentheses!
-
-For each of these examples, try to determine what the console will log:
+For each of these examples, determine what will be logged to the console.
 
 ```javascript
 if (2 > 1) {
