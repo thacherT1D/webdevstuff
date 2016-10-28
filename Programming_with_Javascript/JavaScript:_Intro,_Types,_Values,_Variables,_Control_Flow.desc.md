@@ -1,18 +1,22 @@
 ## Objectives
 
-- Describe what JavaScript is.
-- Describe what ECMAScript is.
+- Explain what JavaScript is.
+- Explain what ECMAScript is.
 - Explain why JavaScript is important.
-- Name all primitive data types in JavaScript.
-- Explain what a variable is.
-- Explain the difference between `=`, `==`, and `===` in JavaScript.
-- Explain what type coercion is.
-- Name all the "falsy" values in JavaScript.
-- Explain the difference between a value, an expression, and a statement.
-- Conditionals
-- Explain what a function is.
-- Write a function that takes parameters.
-- Write a function that returns a value.
+- Practice writing the following JavaScript constructs.
+  - Comments
+  - Primitive data types
+  - Variables
+  - Constants
+  - Arithmetic operators
+  - The Math object
+  - Logical operators
+  - Relational operators
+  - Equality operators
+  - If statements
+  - Type conversion
+  - Type coercion
+  - Functions
 
 ## What's JavaScript?
 
@@ -158,7 +162,7 @@ true;
 false;
 ```
 
-See the [boolean type](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type) and [`Boolean` global object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean) on the Mozilla Developer Network for more information.
+See the [boolean type](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type) and [`Boolean` object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean) on the Mozilla Developer Network for more information.
 
 ### Number
 
@@ -205,7 +209,7 @@ Number.isNaN('string'); // false
 Number.isNaN(NaN);      // true
 ```
 
-See the [number type](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type) and [`Number` global object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number) on the Mozilla Developer Network for more information.
+See the [number type](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type) and [`Number` object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number) on the Mozilla Developer Network for more information.
 
 ### String
 
@@ -243,7 +247,7 @@ There are a number of built-in methods associated with strings.
 'Matt'.includes('t');     // true
 ```
 
-See the [string type](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type) and [`String` global object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) on the Mozilla Developer Network for more information.
+See the [string type](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type) and [`String` object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String) on the Mozilla Developer Network for more information.
 
 ### Variables
 
@@ -350,7 +354,7 @@ x;  // the value of x is no longer undefined
 
 **QUESTION:** Given the above code, what's the new value of `x`?
 
-See the [`undefined` global property](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined) on the Mozilla Developer Network for more information.
+See the [`undefined` property](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined) on the Mozilla Developer Network for more information.
 
 ### Null
 
@@ -369,16 +373,16 @@ Further reading:
 
 ### Symbol
 
-Symbol is the newest primitive data type to be added to JavaScript. Talking about symbols is a bit advanced for the first day of JavaScript, especially since we haven't talked about objects yet. If you want a sneak peak, see the [`Symbol` global object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol) on the Mozilla Developer Network for more information.
+Symbol is the newest primitive data type to be added to JavaScript. Talking about symbols is a bit advanced for the first day of JavaScript, especially since we haven't talked about objects yet. If you want a sneak peak, see the [`Symbol` object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol) on the Mozilla Developer Network for more information.
 
 ### typeof
 
 To check a value's type, use the `typeof` operator. This is really helpful in certain debugging situations.
 
 ```javascript
-typeof true  // 'boolean'
-typeof 42    // 'number'
-typeof 'hi'  // 'string'
+typeof true;  // 'boolean'
+typeof 42;    // 'number'
+typeof 'hi';  // 'string'
 ```
 
 See the [typeof operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof) on the Mozilla Developer Network for more information.
@@ -421,9 +425,9 @@ Notice that the meaning of the `+` operator depends on the data types of the ope
 
 See the [arithmetic operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators) on the Mozilla Developer Network for more information.
 
-### The Math global object
+### The Math object
 
-JavaScript also has a `Math` global object that has properties and methods for mathematical constants and functions.
+JavaScript also has a `Math` object that has properties and methods for mathematical constants and functions.
 
 ```javascript
 // pi
@@ -465,7 +469,7 @@ Math.random() * 10 + 1;  // 3.390042587649077
 Math.floor(Math.random() * 10 + 1);  // 8
 ```
 
-See the [`Math` global object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math) on the Mozilla Developer Network for more information.
+See the [`Math` object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math) on the Mozilla Developer Network for more information.
 
 ### Logical operators
 
@@ -635,7 +639,22 @@ if (price < 100) {
   total = price;
 }
 ```
+
 **QUESTION:** What are the trade-offs of using an `if...else` statement versus two `if` statements?
+
+When it comes to declaring variables and constants inside an `if` statement's block, a common gotcha is that you can only access the variable or constant inside the block where it was declared.
+
+```javascript
+const price = 284;
+
+if (price >= 100) {
+  let total = price * 0.8;
+}
+
+total;  // the value of total is undefined
+```
+
+We'll talk more about variable and constant scope tomorrow.
 
 ### Exercise
 
@@ -685,11 +704,11 @@ Here's how to convert booleans and strings to numbers.
 Number(false);  // this evaluates to 0
 Number(true);   // this evaluates to 1
 
-Number.parseInt('32');         // 32
-Number.parseInt('forty two');  // NaN
+parseInt('32');         // 32
+parseInt('forty two');  // NaN
 
-Number.parseFloat('3.14');                  // 3.14
-Number.parseFloat('three point one four');  // NaN
+parseFloat('3.14');                  // 3.14
+parseFloat('three point one four');  // NaN
 ```
 
 And here's how to convert strings and numbers to booleans.
@@ -735,7 +754,7 @@ See the [falsy](https://developer.mozilla.org/en-US/docs/Glossary/Falsy) and [tr
 
 ### Exercise
 
-Turn to your neighbor and list the six types of falsy values in JavaScript.
+Turn to your neighbor and explain the difference between type conversion and type coercion. Once you've done that, see if you can name the six types of falsy values in JavaScript without looking.
 
 ## What's a function?
 
