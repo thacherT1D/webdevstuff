@@ -756,140 +756,89 @@ See the [falsy](https://developer.mozilla.org/en-US/docs/Glossary/Falsy) and [tr
 
 Turn to your neighbor and explain the difference between type conversion and type coercion. Once you've done that, see if you can name the six types of falsy values in JavaScript without looking.
 
-## What's a function?
+### Functions
 
-In one sentence, we can say that a function is a sequence of instructions that achieve a specific task. A recipe (e.g., making pumpkin pie) or a manual (e.g. assembling a coffee table from IKEA) are great analogies for functions.
+A **function** is a grouped sequence of instructions. By containing code inside of a function, you're able to execute it later as many times as you want. The benefit of containing code inside of a function is the ability to combine them to make new processes and workflows. Imagine you have recipes for making pumpkin pie and pecan pie. The recipes for making both pies are very similar to one another. The basic pie-making steps might live in a function that's shared by both recipes.
 
-The key aspect of functions is their ability to be run over and over again and combined to make new processes and workflows. Functions truly are the building blocks for ALL applications.
+The following is an example of a very simple function.
+
+```javascript
+function speak() {
+  console.log('Hello world');
+}
+
+speak();  // displays 'Hello world' to the console
+```
+
+The above code contains the following parts.
+
+1. The `function` keyword
+1. The name of the function `speak`
+1. The body of the function between the braces
+1. The invocation of the function by calling it with the `()` operator
+
+In order to use a function, first you must declare it and then you must invoke it. You can invoke the instructions inside the `speak` function as many times as you want. For example, here's how you'd invoke it three times.
+
+```javascript
+function speak() {
+  console.log('Hello world');
+}
+
+speak();
+speak();
+speak();
+```
+
+**QUESTION:** What happens when you run this code in your browser?
 
 ### Exercise
 
-What are some other examples of functions you encounter in daily life?
+Declare and implement a function called `yell` that prints out a phrase of your choosing five times in a row. On the fifth time, the phrase should be in all caps and have an extra exclamation point at the end.
 
-## Example Function
-
-Below is an example of a very simple function:
+The example output is below.
 
 ```javascript
-function hello(name, age) {
-  console.log("Hello, " + name + ". You are " + age + " years old".);
-}
+yell();  // Functions are the best
+         // Functions are the best
+         // Functions are the best
+         // Functions are the best
+         // FUNCTIONS ARE THE BEST!
 ```
 
-There are four parts to the above code example:
+### Arguments and Parameters
 
-1. Keyword `function`
-1. Name for that function
-1. Parameters - a comma separated list enclosed in parenthesis
-1. Instructions - a number of optional instructions enclosed in curly braces; also called the "body" of the function.
-
-## Creating and Invoking Functions
-
-We've now established the syntax of a function. Let's apply this knowledge to create a function named `greet()`, which will log to the console the string "Hello, World!":
+So far you've created functions that do the same thing every time it's invoked. It would be much more useful if a function could change its behavior based on some input. For this, you'll need arguments and parameters.
 
 ```javascript
-function greet() {
-  console.log('Hello, World!');
+function speak(person) {
+  console.log(`Hello ${person}`);
 }
+
+speak('Christine');  // displays 'Hello Christine' to the console
 ```
 
-Awesome, you just created a function. If we want to see the value of our function, we just type the name of the function into `console.log()` statement:
+In the code above, the argument to the `speak` function is `'Christine'`. This argument is stored inside the `person` parameter when the function is invoked. An **argument** is data passed to a function via a **parameter**. If the argument is a baseball, then the parameter is a glove. Inside of the function, the `person` parameter is just another variable that you can only access inside of the function's body.
+
+A function can accept multiple arguments with multiple parameters.
 
 ```javascript
-function greet() {
-  console.log('Hello, World!');
+function speak(verb, person) {
+  console.log(`${verb} ${person}`);
 }
 
-console.log(greet);
-// function greet() {
-//  console.log("Hello, World!");
-// }
+speak('Hola', 'Christine');     // displays 'Hola Christine' to the console
+speak('Bonjour', 'Christine');  // displays 'Bonjour Christine' to the console
 ```
-
-Similar to the real world, functions consist of two processes: first, creation of the instructions; second, execution of the instructions.
-
-To this point, we've just created a recipe for `greet`, we haven't actually told anyone or anything to execute the instructions in our function.
-
-To execute the code inside our curly braces, we need to use the parentheses `()` operator next to the name of our function:
-
-```javascript
-function greet() {
-  console.log('Hello, World!');
-}
-
-console.log(greet());
-console.log(greet());
-console.log(greet());
-
-// "Hello, World!"
-// undefined
-// "Hello, World!"'
-// undefined
-// "Hello, World!"
-// undefined
-```
-
-That's it! Now we can re-use the instructions of `greet` whenever we want. Above, we just invoked it 3 times. :)
 
 ### Exercise
 
-Write a function called `yell` that prints out a phrase 5 times in a row. On the 5th iteration, the phrase should be in all caps and have an extra exclamation point at the end. Example output is below:
+Declare and implement a function call `capitalize` that, given a string, displays a capitalized version of that string to the console.
 
 ```javascript
-yell(); // You must implement this function
-// my phrase
-// my phrase
-// my phrase
-// my phrase
-// MY PHRASE!
+capitalize('awesome');  // displays 'Awesome' to the console
 ```
 
-## Functions With Parameters
-
-So far we have created functions that do the same exact thing every time. Often times, we want a function to change behavior based on a set of inputs. Function parameters allow us to create functions with input.
-
-The function example we saw earlier has two parameters:
-
-```javascript
-function hello(name, age) {
-  console.log('Hello, ' + name + '. You are ' + age + ' years old'.);
-}
-```
-
-The parameters are `name` and `age`. They are variables that are used in the function.
-
-**NOTE:** A **parameter** is a variable in a function definition. When a function is called, the data you pass in are referred to as **arguments**.
-
-```javascript
-function hello(name, age) {       // parameters
-  console.log('Hello, ' + name + '. You are ' + age + ' years old'.);
-}
-
-hello('Susan', 27);  // arguments
-```
-
-### Exercise 1
-
-Create a function call `capWord` that prints out a word and then prints out the capitalized word.
-
-```javascript
-capWord('awesome'); // You must implement this function
-// awesome
-// Awesome
-```
-
-### Bonus
-
-Modify your function so that it also prints out the word with both the first and last letters capitalized.
-
-```javascript
-capWord('awesome'); // You must implement this function
-// awesome
-// Awesome
-// AwesomE
-```
-
-## The keyword `return`
+### The `return` keyword
 
 We have now seen functions that take a set of inputs as parameters. It is also often desirable to return a value from the function. Our function examples have all been printing to the console, but in many cases we want the function to return a value for us. For example:
 
