@@ -425,6 +425,16 @@ Notice that the meaning of the `+` operator depends on the data types of the ope
 
 See the [arithmetic operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators) on the Mozilla Developer Network for more information.
 
+A more convenient way to concatenate strings is with interpolation. **String interpolation** means inserting a value—like a string, number, or boolean—inside of a string. Interpolation only works when you wrap a string in backticks instead of single or double quotes. 
+
+```javascript
+const team1 = 'Cubs';
+const team2 = 'Dodgers';
+const year = 2016;
+
+`In ${year}, the ${team1} beat the ${team2}.`;
+```
+
 ### The Math object
 
 JavaScript also has a `Math` object that has properties and methods for mathematical constants and functions.
@@ -847,7 +857,19 @@ function speak(verb, person) {
   return `${verb} ${person}`;
 }
 
-speak('Hola', 'Christine');  // the returned value is 'Hola Christine'
+speak('Hola', 'Christine');  // the return value is 'Hola Christine'
+```
+
+One gotcha that trips up many beginners is that a function's return value can be used later by the program. For example, you can save a function's return value to a constant.
+
+```javascript
+function speak(verb, person) {
+  return `${verb} ${person}`;
+}
+
+const message = speak('Hola', 'Christine');
+
+console.log(message);  // the return value 'Hola Christine' is displayed to the console
 ```
 
 ### Exercise
@@ -855,7 +877,7 @@ speak('Hola', 'Christine');  // the returned value is 'Hola Christine'
 Declare and implement a function call `capitalize` that, given a string, returns a capitalized version of that string.
 
 ```javascript
-capitalize('awesome');  // the returned value is 'Awesome'
+capitalize('awesome');  // the return value is 'Awesome'
 ```
 
 ## Assessment
