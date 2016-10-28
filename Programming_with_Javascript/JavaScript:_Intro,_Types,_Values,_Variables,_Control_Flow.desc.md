@@ -6,7 +6,7 @@
 - Name all primitive data types in JavaScript.
 - Explain what a variable is.
 - Explain the difference between `=`, `==`, and `===` in JavaScript.
-- Explain what type conversion is.
+- Explain what type coercion is.
 - Name all the "falsy" values in JavaScript.
 - Explain the difference between a value, an expression, and a statement.
 - Conditionals
@@ -665,13 +665,25 @@ if (7 % 2 === 0 || Number.isInteger(3.4)) {
 
 See the [operator precedence](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence) documentation on the Mozilla Developer Network for more information.
 
-### Type Conversion
+### Type Coercion
 
-Sometimes, your code uses a value of one type when JavaScript expects a value of a different type. In this case, rather than throwing an error, JavaScript will convert the value into a type that makes sense.
+Sometimes, your code uses a value of one type when JavaScript expects a value of a different type. In this case, rather than throwing an error, JavaScript will coerce (i.e. convert) the value into a type that makes sense to it.
 
-For example, suppose you type the expression `1 + 'hi'`. For numbers, the `+` operator means addition; but for strings, it means concatenation. So how does JavaScript deal with this ambiguity? It converts the number into a string and then concatenates.
+For example, suppose you type the expression `20 + '16'`. For numbers, the `+` operator means addition; but for strings, it means concatenation. So how does JavaScript deal with this ambiguity?
 
-This **type conversion** also happens when you pass values into `if` statements. In a block of code like `if (x) {...}`, the `x` variable is expected to be a boolean. But if it's not, JavaScript will convert it to a boolean. Most values in JavaScript are "truthy". That is, they get converted into `true` should the need arise. In fact, there are only six "falsy" values in JavaScript.
+In the case where addition is performed on a number and string, JavaScript coerces the number to a string and then concatenates the two together.
+
+```javascript
+20 + '16';  // this evaluates to '2016'
+```
+
+In the case where any other arithmetic is performed on a number and string, JavaScript coerces the string to a number and applies the arithmetic.
+
+```javascript
+20 * '16';  // this evaluates to 320
+```
+
+**Type coercion** also happens when you pass values into `if` statements. In a block of code like `if (x) {...}`, the `x` variable is expected to be a boolean. But if it's not, JavaScript will convert it to a boolean. Most values in JavaScript are "truthy". That is, they get converted into `true` should the need arise. In fact, there are only six "falsy" values in JavaScript.
 
 1. `false`
 1. `null`
