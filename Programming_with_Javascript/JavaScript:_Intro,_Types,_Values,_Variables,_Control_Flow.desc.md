@@ -585,9 +585,9 @@ Turn to a neighbor and discuss which expressions surprised you. Also, discuss th
 
 ### Values, Expressions, and Statements
 
-We've been using the words value and expression a lot. Let's take a second to discuss what they mean.
+So far, we've used the terms value and expression a bunch. Let's take a second to define what they mean.
 
-In JavaScript, individual pieces of data are referred to as **values**.
+In JavaScript, an individual piece of information is referred to as a **value**.
 
 ```javascript
 3
@@ -596,7 +596,7 @@ false
 undefined
 ```
 
-An **expression** is any valid code that resolves to a value.
+And an **expression** is any valid code that evaluates to a value.
 
 ```javascript
 9 - 3
@@ -605,10 +605,10 @@ An **expression** is any valid code that resolves to a value.
 The above code is an expression that does not have a side effect. Some expressions, like when you assign a value to a variable, produce a side effect.
 
 ```javascript
-y = 45
+let y = 45
 ```
 
-The expression above uses the `=` operator to assign the value `45` to the variable `y`.
+In this case, the variable `y` contains the value `45`. The expression above uses the `=` operator to assign the value `45` to the variable `y`.
 
 A JavaScript program is built as a list of **statements**. A statement is a command. It does something. Most statements end with a semicolon (;). A single statement may span multiple lines.
 
