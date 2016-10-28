@@ -1,8 +1,8 @@
 ## Objectives
 
-- Explain what Material UI is.
-- Explain why Material UI is important.
-- Use Material UI to build a React user interface.
+- Explain what Material UI is
+- Explain why Material UI is important
+- Use Material UI to build a React user interface
 
 ## What's Material UI?
 
