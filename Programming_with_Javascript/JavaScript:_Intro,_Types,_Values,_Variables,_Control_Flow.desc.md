@@ -840,61 +840,23 @@ capitalize('awesome');  // displays 'Awesome' to the console
 
 ### The `return` keyword
 
-We have now seen functions that take a set of inputs as parameters. It is also often desirable to return a value from the function. Our function examples have all been printing to the console, but in many cases we want the function to return a value for us. For example:
+A function **returns** a value when it's done with it's sequence of instructions. By default, it returns the value `undefined`. However, you may want to return a specific value like a string, number, or boolean. For example, your previous functions have all printed to the console. What if we wanted to return a value instead?
 
 ```javascript
-const total = sum(5, 20);
-```
-
-In the example above, sum is a function that takes two parameters. The values are summed in the function and the result will be returned and saved in the variable `total`.
-
-The implementation of sum looks like this:
-
-```javascript
-function sum(num1, num2) {
-	return num1 + num2;
-}
-```
-
-Now let's write a function called `calculate` that takes three arguments: `num1`, `num2`, and a string representing addition or subtraction (`'+'` or `'-'`).  The function should decide which math operation to perform, then call either a `sum` or `subtract` function for the appropriate operation. For example, `calculate(4, 5, '+');` should call the `sum` function, which looks like this `sum(4, 5)` and returns the value `9`.
-
-```javascript
-function sum(num1, num2) {
-  return num1 + num2;
+function speak(verb, person) {
+  return `${verb} ${person}`;
 }
 
-function subtract(num1, num2) {
-  return num1 - num2;
-}
-
-function calculate(num1, num2, operator) {
-	if (operator === '+') {
-		return sum(num1, num2);
-	}
-
-	return subtract(num1, num2);
-}
+speak('Hola', 'Christine');  // the returned value is 'Hola Christine'
 ```
 
 ### Exercise
 
-- What is the output to the console with the following function invocation?
+Declare and implement a function call `capitalize` that, given a string, returns a capitalized version of that string.
 
 ```javascript
-console.log(calculate(10, 5, '+'));
+capitalize('awesome');  // the returned value is 'Awesome'
 ```
-
-- With the following function invocation, which return statement is executed (the first, the second, or both)?
-
-```javascript
-console.log(calculate(20, 6, '-'));
-```
-
-- Modify the `calculate` function so that it can also perform multiplication and division if a use passes in `*` or `/` as the third argument.
-
-### Further Reading
-
-Want to dig deeper? Read chapters 1 and 2 in [Eloquent JavaScript](http://eloquentjavascript.net/). A word of caution though: this book is great but not very beginner friendly.
 
 ## Assessment
 
@@ -904,6 +866,6 @@ https://github.com/gSchool/wd-javascript-fundamentals
 
 - [Mozilla Developer Network - JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 - [Quick history of JavaScript by Douglas Crockford](https://www.youtube.com/watch?v=t7_5-XYrkqg)
-- [Wikipedia: Ajax (programming)](https://en.wikipedia.org/wiki/Ajax_(programming)
+- [Wikipedia: Ajax (programming)](https://en.wikipedia.org/wiki/Ajax_(programming))
 - [Wikipedia: ECMAScript](https://en.wikipedia.org/wiki/ECMAScript)
 - [Wikipedia: JavaScript](https://en.wikipedia.org/wiki/JavaScript)
