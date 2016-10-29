@@ -103,10 +103,9 @@ Here's an Entity Relationship Diagram that describes the information the applica
 │              └───────────────────────┘                      │ id           int      │                 │                
 │                                                            ╱│ user_id      int      │╲                │                
 └─────────────────────────────────────────────────────────────│ task_id      int      │─────────────────┘                
-╲│                       │╱                                 
-│                       │                                  
-│                       │                                  
-└───────────────────────┘                                  
+                                                             ╲│                       │╱                                 
+                                                              │                       │                                  
+                                                              └───────────────────────┘                                  
 ```
 
 ## Hello, Angular!
