@@ -557,6 +557,8 @@ The Node shell is a great tool for learning and experimenting with JavaScript.
 
 Play around with JavaScript on your own. When you're done, type `.exit` and press the `Enter` key to quit the Node shell.
 
+**TIP:** You can also press the `Command` + `D` keys to exit the Node shell.
+
 ### Discover the Node Interpreter
 
 Given a JavaScript program stored in a file, the **Node interpreter** reads it, evaluates it, and then quits.
