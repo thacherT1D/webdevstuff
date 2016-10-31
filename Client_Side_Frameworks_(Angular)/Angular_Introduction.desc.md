@@ -1,7 +1,9 @@
 ## Objectives
 
 * Explain what a front end framework is.
-* Explain why a front end framework is important.
+* Explain why a Angular is effective.
+* Create our first Angular application.
+* Explain what is two-way data binding
 
 ## What is a front end framework?
 
@@ -58,6 +60,10 @@ It may not seem that amazing when you think about it, but AngularJS provided som
 * It was designed to be testable, something that a majority of developers do not think as much about when constructing UIs.
 * It added reusable code for many features such as form validation and localization (translating for different countries).
 * It allowed the ability to add your own reusable code in the form of directives and components.
+
+### Exercise
+
+Write down some of the reasons Angular is a useful framework. After a minute, your instructor will cold call on the class ask what you wrote.
 
 ## Hello, Angular!
 
@@ -211,55 +217,6 @@ Open up `index.html` in your browser. What does the `h1` display when the page l
 
 Use `ng-model` with a dropdown menu (select tag). Give the user the following four items to pick from - "Dogs", "Cats", "Dogs and Cats", "Neither". Display the user's choice in an `h3`. For example, if the user selects "Dogs", the `h3` should say "I love dogs <3".
 
-## Planning a Front end
-
-It's important to note that when building any front end for an application, one must consider the overall look and feel for the application in order to plan out how to utilize the front end. We will be building an application similar to a popular web application, Trello.
-
-![Trello Clone](http://i.imgur.com/pKKTzVLr.png)
-
-The application can be described as the following:
-
-* A user can own various boards.
-* A board can have multiple collaborators. The owner and the collaborators are allowed to edit the board.
-* A board can have multiple columns. Any (allowed) user can add columns.
-* Each column has a name and can have many tasks in it.
-* A task has a short description (for display), long description (for more context). These can be edited.
-* A task can have many members (that is users involved in a task). Each member must is any (allowed) user on the board.
-
-Here's an Entity Relationship Diagram that describes the information the application will hold.
-
-```
-
-┌───────────────────────┐        ┌───────────────────────┐         ┌───────────────────────┐        ┌───────────────────────┐
-│         Users         │        │        Boards         │         │        Columns        │        │         Tasks         │
-├───────────────────────┤        ├───────────────────────┤         ├───────────────────────┤        ├───────────────────────┤
-│                       │        │                       │         │                       │        │                       │
-│ name       varchar    │        │ name        varchar   │         │ name         varchar  │        │ short_description     │
-│ email      varchar    │       ╱│ owner_id    int       │        ╱│ board_id     int      │       ╱│              varchar  │
-│ hashed_password       ├────────│                       │─────────│                       ├────────│ long_description      │
-│            char(60)   │       ╲│                       │        ╲│                       │       ╲│              varchar  │
-│                       │        │                       │         │                       │        │ column_id    int      │
-│                       │        │                       │         │                       │        │ column_index int      │
-│                       │        │                       │         │                       │        │ is_archived  boolean  │
-│                       │        │                       │         │                       │        │                       │
-└───┬──────┬────────────┘        └──────────────────┬────┘         └───────────────────────┘        └───────┬───────────────┘
-    │      │       ┌───────────────────────┐        │                                                       │                
-    │      │       │     Collaborators     │        │                                                       │                
-    │      │       ├───────────────────────┤        │                                                       │                
-    │      │       │ id           int      │        │                                                       │                
-    │      │      ╱│ user_id      int      │╲       │                                                       │                
-    │      └───────│ board_id     int      │────────┘                                                       │                
-    │             ╲│                       │╱                     ┌───────────────────────┐                 │                
-    │              │                       │                      │        Members        │                 │                
-    │              │                       │                      ├───────────────────────┤                 │                
-    │              └───────────────────────┘                      │ id           int      │                 │                
-    │                                                            ╱│ user_id      int      │╲                │                
-    └─────────────────────────────────────────────────────────────│ task_id      int      │─────────────────┘                
-                                                                 ╲│                       │╱                                 
-                                                                  │                       │                                  
-                                                                  └───────────────────────┘                                  
-```
-
 ## Preparing for ES6
 
 Node.js now includes a majority of ES6 syntax. Returning to the Front end, we need to be mindful of overall support for ES6. In this case, we will want to use a **transpiler** to translate our ES6 syntax to ES5 for cross-browser support.
@@ -333,12 +290,6 @@ class Dog {
   }
 }
 ```
-
-## Cello Preparation
-
-Let's set up our development for cello. Go to the following website and follow the directions in the README.
-
-[Cello](https://github.com/gSchool/cello)
 
 ## Assignment
 
