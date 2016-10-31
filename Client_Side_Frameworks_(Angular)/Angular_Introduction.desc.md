@@ -65,158 +65,6 @@ It may not seem that amazing when you think about it, but AngularJS provided som
 
 Write down some of the reasons Angular is a useful framework. After a minute, your instructor will cold call on the class ask what you wrote.
 
-## Hello, Angular!
-
-We're going to start by setting up a very simple Angular app to say Hello World - Angular-style!
-
-Staying true to an iterative approach to coding, we'll start slow, defining everything (markup and Angular syntax) within a single `index.html` file - a true single page app! - and scale from there, learning about patterns for structuring complicated Angular apps.
-
-Create a directory to hold your example work and create an `index.html` file in it.
-
-```sh
-$ mkdir hello-angular
-$ cd hello-angular
-$ touch index.html
-$ atom index.html
-```
-
-In your `index.html` file, create the boilerplate of an html page. Add the Angular dependency. For now, we're going to utilize a CDN - `https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js`.
-
-```html
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
-  </body>
-</html>
-```
-
-As of now, Angular is loaded but will not do anything to the page itself. We need to _inform_ the framework that there is an application intended to run in Angular. For that we need to add the `ng-app` attribute to an HTML element, typically the `<html>` element in your document. This indicates that *everything* inside of the `<html>` element - from the opening to closing tag - is part of an Angular app. In other words, all Angular code/tags that fall inside the `<html>` element will be rendered through Angular. *Get used to that `ng` prefix as you will be seeing it A LOT!* While `ng-app` is an attribute, Angular calls it a *directive* since its distinguishing itself from ordinary HTML attributes. In fact, directives can take on many forms, and we'll expand more about directives throughout this quarter.
-
-Now that we have informed Angular of our application we can begin to leverage some of its capabilities. For example, add the following Angular tag anywhere inside of the `<body>` tag - `<p>{{ 1 + 6 }}<p>`. Open the page in your browser. If all is well then you should see `7`.
-
-```html
-<!DOCTYPE html>
-<html ng-app="my-app">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    <p>{{ 1 + 6 }}</p>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
-  </body>
-</html>
-```
-
-Angular has a built-in parser for the text content on the HTML page. Using double curly braces (`{{ }}`), any expression can be included to be evaluated. Angular is providing us with Angular *expressions*, being able to process your page and replacing it with values. Trying playing with other types of expressions. What kinds of things can you do and can't you do in here.
-
-**Question** What would the above code produce if `ng-app` was not specified?
-
-### Variables in Angular
-
-Angular expressions can also process variables. The variables however need to be defined somewhere. There are many places to define it, but for now, we will use another special directive from Angular called `ng-init`. Place an `ng-init` attribute in another paragraph.
-
-```html
-<p ng-init="someone = 'World'">Hello {{someone}}!</p>
-```
-
-In the above code, `ng-init` takes in an expression and evaluates it, assigning whatever values to variables. It can also do math as well.
-
-```html
-<p ng-init="sum = 1 + 4">The sum of 1 and 4 is {{sum}}</p>
-```
-
-While `ng-init` provides some easy ways if initializing variables. It's important to note that this style is meant for demonstration purposes only. `ng-init` is creating the variable for it to be used across the page. That being said, `someone` is inaccessible from `window`. It is stored within Angular's library for use, thereby avoiding the need to pollute the global scope.
-
-```html
-<!DOCTYPE html>
-<html ng-app>
-  <head>
-    <meta charset="utf-8">
-    <title>Hello {{someone}}!</title>
-  </head>
-  <body>
-    <p>{{ 1 + 6 }}</p>
-    <p ng-init="someone = 'World'">Hello {{someone}}!</p>
-    <p ng-init="sum = 1 + 4">The sum of 1 and 4 is {{sum}}</p>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
-  </body>
-</html>
-```
-
-## Introducing Interactivity with Data binding
-
-We have played with some simple features of Angular, but we really want to work on using them in an interactive setting. For this we want to use the `ng-model` directive.
-
-Create an input box at the top of the body.
-
-```html
-<input type="text" ng-model="greeting">
-```
-
-In this example, `ng-model` is providing a variable name to store the information in the text box. In this case, the name of the variable is `greeting`. Now that we have the variable stored, let's use it somewhere. Replace any cases where you see the word "Hello" with `{{ greeting }}` (should be in the `<title>` element and one of the `<p>` elements).
-
-```html
-<!DOCTYPE html>
-<html ng-app>
-  <head>
-    <meta charset="utf-8">
-    <title>{{greeting}} {{someone}}!</title>
-  </head>
-  <body>
-    <input type="text" ng-model="greeting">
-    <p>{{1 + 6}}</p>
-    <p ng-init="someone = 'World'">{{greeting}} {{someone}}!</p>
-    <p ng-init="sum = 1 + 4">The sum of 1 and 4 is {{sum}}</p>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
-  </body>
-</html>
-```
-
-Test this out. Enter something in the input box and watch the DOM update! This is a result of Angular's ability to bind a view to a piece of data as it changes.
-
-### Data Binding
-
-In traditional frameworks, views are a snapshot in time, only reflecting the state of data at the time it was rendered. Newer JavaScript frameworks like Angular and Ember allow us to write dynamic, live templates. This means that we can write Angular templates that will **automatically update when our data changes.**
-
-This is called two-way or bi-directional binding.
-
-* when a model changes, the view knows about it.
-* when a view changes, the model also knows about it.
-
-Put another way, if the data changes, that change is *immediately* updated on the view. If the data changes in the view, then it is *immediately* updated in the code.
-
-![Two Way Data Binding Diagram](https://docs.angularjs.org/img/Two_Way_Data_Binding.png)
-
-Let's try it out!
-
-In `index.html` create a text input:
-
-```html
-<input type="text" placeholder="What is your name?" ng-model="name" ng-init="name = 'Ken'">
-```
-
-With the attribute `ng-model="name"` added to the text input, this ties/binds the value of the text input to a property called "name". Technically, `ng-model` tries to bind "name" by evaluating the expression, and since the property "name" doesn't already exist in angular's scope, it will be created implicitly.
-
-Now that we've bound the input to the "name" property, let's display the value of "name" on the page.  We can write expressions in our HTML using `{{ }}`.
-
-```html
-<h1>My name is: {{name}}</h1>
-```
-
-Open up `index.html` in your browser. What does the `h1` display when the page loads? Try typing something into the input and notice that the `h1` reflects whatever value we type into the input. This is our first example of two-way data binding.
-
-### Exercises
-
-**Dropdowns**
-
-Use `ng-model` with a dropdown menu (select tag). Give the user the following four items to pick from - "Dogs", "Cats", "Dogs and Cats", "Neither". Display the user's choice in an `h3`. For example, if the user selects "Dogs", the `h3` should say "I love dogs <3".
-
 ## Preparing for ES6
 
 Node.js now includes a majority of ES6 syntax. Returning to the Front end, we need to be mindful of overall support for ES6. In this case, we will want to use a **transpiler** to translate our ES6 syntax to ES5 for cross-browser support.
@@ -290,6 +138,186 @@ class Dog {
   }
 }
 ```
+
+## Hello, Angular!
+
+We're going to start by setting up a very simple Angular app to say Hello World - Angular-style!
+
+Staying true to an iterative approach to coding, we'll start slow, defining everything (markup and Angular syntax) within a single `index.html` file - a true single page app! - and scale from there, learning about patterns for structuring complicated Angular apps.
+
+Create a directory to hold your example work and create an `index.html` file in it.
+
+```sh
+npm install -g brunch
+cd path/to/app
+brunch new hello-angular --skeleton kmcgrady/with-angular
+```
+
+Look into the `app/assets/index.html`
+
+```html
+<!DOCTYPE html>
+<html ng-app="my-app">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hello world</title>
+    <link rel="stylesheet" href="/vendor.css">
+    <link rel="stylesheet" href="/app.css">
+  </head>
+  <body>
+    <h1>Hello World</h1>
+
+    <script src="/vendor.js"></script>
+    <script src="/app.js"></script>
+    <script>require('app');</script>
+  </body>
+</html>
+```
+
+In any web page, Angular is loaded but will not do anything to the page itself. We need to _inform_ the website that the framework that loaded is an application intended to run in Angular. For that we use the `ng-app` attribute to an HTML element, typically the `<html>` element in your document. This indicates that *everything* inside of the `<html>` element - from the opening to closing tag - is part of an Angular app. In other words, all Angular code/tags that fall inside the `<html>` element will be rendered through Angular. *Get used to that `ng` prefix as you will be seeing it A LOT!* While `ng-app` is an attribute, Angular calls it a *directive* since its distinguishing itself from ordinary HTML attributes. In fact, directives can take on many forms, and we'll expand more about directives throughout this quarter.
+
+Now that we have informed Angular of our application we can begin to leverage some of its capabilities. For example, add the following Angular tag anywhere inside of the `<body>` tag - `<p>{{ 1 + 6 }}<p>`. Open the page in your browser. If all is well then you should see `7`.
+
+```html
+<!DOCTYPE html>
+<html ng-app="my-app">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hello world</title>
+    <link rel="stylesheet" href="/vendor.css">
+    <link rel="stylesheet" href="/app.css">
+  </head>
+  <body>
+    <h1>Hello World</h1>
+    <p>{{ 1 + 6 }}
+
+    <script src="/vendor.js"></script>
+    <script src="/app.js"></script>
+    <script>require('app');</script>
+  </body>
+</html>
+
+```
+
+Angular has a built-in parser for the text content on the HTML page. Using double curly braces (`{{ }}`), any expression can be included to be evaluated. Angular is providing us with Angular *expressions*, being able to process your page and replacing it with values. Trying playing with other types of expressions. What kinds of things can you do and can't you do in here.
+
+**Question** What would the above code produce if `ng-app` was not specified?
+
+### Variables in Angular
+
+Angular expressions can also process variables. The variables however need to be defined somewhere. There are many places to define it, but for now, we will use another special directive from Angular called `ng-init`. Place an `ng-init` attribute in another paragraph.
+
+```html
+<p ng-init="someone = 'World'">Hello {{someone}}!</p>
+```
+
+In the above code, `ng-init` takes in an expression and evaluates it, assigning whatever values to variables. It can also do math as well.
+
+```html
+<p ng-init="sum = 1 + 4">The sum of 1 and 4 is {{sum}}</p>
+```
+
+While `ng-init` provides some easy ways if initializing variables. It's important to note that this style is meant for demonstration purposes only. `ng-init` is creating the variable for it to be used across the page. That being said, `someone` is inaccessible from `window`. It is stored within Angular's library for use, thereby avoiding the need to pollute the global scope.
+
+```html
+<!DOCTYPE html>
+<html ng-app="my-app">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hello {{ someone }}!</title>
+    <link rel="stylesheet" href="/vendor.css">
+    <link rel="stylesheet" href="/app.css">
+  </head>
+  <body>
+    <h1>Hello World</h1>
+    <p>{{ 1 + 6 }}</p>
+    <p ng-init="someone = 'World'">Hello {{ someone }}!</p>
+    <p ng-init="sum = 1 + 4">The sum of 1 and 4 is {{ sum }}</p>
+
+    <script src="/vendor.js"></script>
+    <script src="/app.js"></script>
+    <script>require('app');</script>
+  </body>
+</html>
+```
+
+## Introducing Interactivity with Data binding
+
+We have played with some simple features of Angular, but we really want to work on using them in an interactive setting. For this we want to use the `ng-model` directive.
+
+Create an input box at the top of the body.
+
+```html
+<input type="text" ng-model="greeting">
+```
+
+In this example, `ng-model` is providing a variable name to store the information in the text box. In this case, the name of the variable is `greeting`. Now that we have the variable stored, let's use it somewhere. Replace any cases where you see the word "Hello" with `{{ greeting }}` (should be in the `<title>` element and one of the `<p>` elements).
+
+```html
+<!DOCTYPE html>
+<html ng-app="my-app">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ greeting }} {{ someone }}!</title>
+    <link rel="stylesheet" href="/vendor.css">
+    <link rel="stylesheet" href="/app.css">
+  </head>
+  <body>
+    <h1>Hello World</h1>
+    <input type="text" ng-model="greeting">
+    <p>{{ 1 + 6 }}</p>
+    <p ng-init="someone = 'World'">{{ greeting }} {{ someone }}!</p>
+    <p ng-init="sum = 1 + 4">The sum of 1 and 4 is {{ sum }}</p>
+
+    <script src="/vendor.js"></script>
+    <script src="/app.js"></script>
+    <script>require('app');</script>
+  </body>
+</html>
+```
+
+Test this out. Enter something in the input box and watch the DOM update! This is a result of Angular's ability to bind a view to a piece of data as it changes.
+
+### Data Binding
+
+In traditional frameworks, views are a snapshot in time, only reflecting the state of data at the time it was rendered. Newer JavaScript frameworks like Angular and Ember allow us to write dynamic, live templates. This means that we can write Angular templates that will **automatically update when our data changes.**
+
+This is called two-way or bi-directional binding.
+
+* when a model changes, the view knows about it.
+* when a view changes, the model also knows about it.
+
+Put another way, if the data changes, that change is *immediately* updated on the view. If the data changes in the view, then it is *immediately* updated in the code.
+
+![Two Way Data Binding Diagram](https://docs.angularjs.org/img/Two_Way_Data_Binding.png)
+
+Let's try it out!
+
+In `index.html` create a text input:
+
+```html
+<input type="text" placeholder="What is your name?" ng-model="name" ng-init="name = 'Ken'">
+```
+
+With the attribute `ng-model="name"` added to the text input, this ties/binds the value of the text input to a property called "name". Technically, `ng-model` tries to bind "name" by evaluating the expression, and since the property "name" doesn't already exist in angular's scope, it will be created implicitly.
+
+Now that we've bound the input to the "name" property, let's display the value of "name" on the page.  We can write expressions in our HTML using `{{ }}`.
+
+```html
+<h1>My name is: {{ name }}</h1>
+```
+
+Open up `index.html` in your browser. What does the `h1` display when the page loads? Try typing something into the input and notice that the `h1` reflects whatever value we type into the input. This is our first example of two-way data binding.
+
+### Exercises
+
+**Dropdowns**
+
+Use `ng-model` with a dropdown menu (select tag). Give the user the following four items to pick from - "Dogs", "Cats", "Dogs and Cats", "Neither". Display the user's choice in an `h3`. For example, if the user selects "Dogs", the `h3` should say "I love dogs <3".
 
 ## Assignment
 
