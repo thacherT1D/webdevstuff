@@ -613,7 +613,7 @@ rm ~/Desktop/test.js
 
 ## Install Surge
 
-Now, you'll deploy a tiny web page with [Surge](https://nodejs.org/), a static web publishing platform for front-end developers. To deploy to Surge, you'll use a command line program that's installed via [npm](https://www.npmjs.com/), a package manager for JavaScript software that comes with Node.
+Now, you'll deploy a tiny web page with [Surge](https://surge.sh/), a static web publishing platform for front-end developers. To deploy to Surge, you'll use a command line program that's installed via [npm](https://www.npmjs.com/), a package manager for JavaScript software that comes with Node.
 
 To get started, run the following command.
 
