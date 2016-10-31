@@ -3,7 +3,7 @@
 * Explain what a front end framework is.
 * Explain why a Angular is effective.
 * Create our first Angular application.
-* Explain what is two-way data binding
+* Explain what two-way data binding is.
 
 ## What is a front end framework?
 
@@ -39,7 +39,7 @@ According to the official Angular introduction, Angular is a-
 
 > client-side technology, written entirely in JavaScript. It works with the long-established technologies of the web (HTML, CSS, and JavaScript) to make the development of web apps easier and faster than ever before.
 
-Angular, along with other client-side frameworks (Ember, React), help us deal with larger, more complex code bases on the client-side. They also redefined the roles of the client and server, resulting in a new application structure called a Single-Page Application (or SPA). In this new structure, the client interacts with the server by making AJAX requests that are triggered by user interactions.
+Angular, along with other client-side frameworks (Ember, Backbone), help us deal with larger, more complex code bases on the client-side. They also redefined the roles of the client and server, resulting in a new application structure called a Single-Page Application (or SPA). In this new structure, the client interacts with the server by making AJAX requests that are triggered by user interactions.
 
 It boils down to this: **Angular helps us build complex, single-page applications very quickly.**
 
