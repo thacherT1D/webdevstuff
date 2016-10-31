@@ -59,55 +59,6 @@ It may not seem that amazing when you think about it, but AngularJS provided som
 * It added reusable code for many features such as form validation and localization (translating for different countries).
 * It allowed the ability to add your own reusable code in the form of directives and components.
 
-## Planning a Front end
-
-It's important to note that when building any front end for an application, one must consider the overall look and feel for the application in order to plan out how to utilize the front end. We will be building an application similar to a popular web application, Trello.
-
-![Trello Clone](http://i.imgur.com/pKKTzVLr.png)
-
-The application can be described as the following:
-
-* A user can own various boards.
-* A board can have multiple collaborators. The owner and the collaborators are allowed to edit the board.
-* A board can have multiple columns. Any (allowed) user can add columns.
-* Each column has a name and can have many tasks in it.
-* A task has a short description (for display), long description (for more context). These can be edited.
-* A task can have many members (that is users involved in a task). Each member must is any (allowed) user on the board.
-
-Here's an Entity Relationship Diagram that describes the information the application will hold.
-
-```
-
-┌───────────────────────┐        ┌───────────────────────┐         ┌───────────────────────┐        ┌───────────────────────┐
-│         Users         │        │        Boards         │         │        Columns        │        │         Tasks         │
-├───────────────────────┤        ├───────────────────────┤         ├───────────────────────┤        ├───────────────────────┤
-│                       │        │                       │         │                       │        │                       │
-│ name       varchar    │        │ name        varchar   │         │ name         varchar  │        │ short_description     │
-│ email      varchar    │       ╱│ owner_id    int       │        ╱│ board_id     int      │       ╱│              varchar  │
-│ hashed_password       ├────────│                       │─────────│                       ├────────│ long_description      │
-│            char(60)   │       ╲│                       │        ╲│                       │       ╲│              varchar  │
-│                       │        │                       │         │                       │        │ column_id    int      │
-│                       │        │                       │         │                       │        │ column_index int      │
-│                       │        │                       │         │                       │        │ is_archived  boolean  │
-│                       │        │                       │         │                       │        │                       │
-└───┬──────┬────────────┘        └──────────────────┬────┘         └───────────────────────┘        └───────┬───────────────┘
-│      │       ┌───────────────────────┐        │                                                       │                
-│      │       │     Collaborators     │        │                                                       │                
-│      │       ├───────────────────────┤        │                                                       │                
-│      │       │ id           int      │        │                                                       │                
-│      │      ╱│ user_id      int      │╲       │                                                       │                
-│      └───────│ board_id     int      │────────┘                                                       │                
-│             ╲│                       │╱                     ┌───────────────────────┐                 │                
-│              │                       │                      │        Members        │                 │                
-│              │                       │                      ├───────────────────────┤                 │                
-│              └───────────────────────┘                      │ id           int      │                 │                
-│                                                            ╱│ user_id      int      │╲                │                
-└─────────────────────────────────────────────────────────────│ task_id      int      │─────────────────┘                
-                                                             ╲│                       │╱                                 
-                                                              │                       │                                  
-                                                              └───────────────────────┘                                  
-```
-
 ## Hello, Angular!
 
 We're going to start by setting up a very simple Angular app to say Hello World - Angular-style!
@@ -159,6 +110,155 @@ Now that we have informed Angular of our application we can begin to leverage so
 Angular has a built-in parser for the text content on the HTML page. Using double curly braces (`{{ }}`), any expression can be included to be evaluated. Angular is providing us with Angular *expressions*, being able to process your page and replacing it with values. Trying playing with other types of expressions. What kinds of things can you do and can't you do in here.
 
 **Question** What would the above code produce if `ng-app` was not specified?
+
+### Variables in Angular
+
+Angular expressions can also process variables. The variables however need to be defined somewhere. There are many places to define it, but for now, we will use another special directive from Angular called `ng-init`. Place an `ng-init` attribute in another paragraph.
+
+```html
+<p ng-init="someone = 'World'">Hello {{someone}}!</p>
+```
+
+In the above code, `ng-init` takes in an expression and evaluates it, assigning whatever values to variables. It can also do math as well.
+
+```html
+<p ng-init="sum = 1 + 4">The sum of 1 and 4 is {{sum}}</p>
+```
+
+While `ng-init` provides some easy ways if initializing variables. It's important to note that this style is meant for demonstration purposes only. `ng-init` is creating the variable for it to be used across the page. That being said, `someone` is inaccessible from `window`. It is stored within Angular's library for use, thereby avoiding the need to pollute the global scope.
+
+```html
+<!DOCTYPE html>
+<html ng-app>
+  <head>
+    <meta charset="utf-8">
+    <title>Hello {{someone}}!</title>
+  </head>
+  <body>
+    <p>{{ 1 + 6 }}</p>
+    <p ng-init="someone = 'World'">Hello {{someone}}!</p>
+    <p ng-init="sum = 1 + 4">The sum of 1 and 4 is {{sum}}</p>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+  </body>
+</html>
+```
+
+## Introducing Interactivity with Data binding
+
+We have played with some simple features of Angular, but we really want to work on using them in an interactive setting. For this we want to use the `ng-model` directive.
+
+Create an input box at the top of the body.
+
+```html
+<input type="text" ng-model="greeting">
+```
+
+In this example, `ng-model` is providing a variable name to store the information in the text box. In this case, the name of the variable is `greeting`. Now that we have the variable stored, let's use it somewhere. Replace any cases where you see the word "Hello" with `{{ greeting }}` (should be in the `<title>` element and one of the `<p>` elements).
+
+```html
+<!DOCTYPE html>
+<html ng-app>
+  <head>
+    <meta charset="utf-8">
+    <title>{{greeting}} {{someone}}!</title>
+  </head>
+  <body>
+    <input type="text" ng-model="greeting">
+    <p>{{1 + 6}}</p>
+    <p ng-init="someone = 'World'">{{greeting}} {{someone}}!</p>
+    <p ng-init="sum = 1 + 4">The sum of 1 and 4 is {{sum}}</p>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+  </body>
+</html>
+```
+
+Test this out. Enter something in the input box and watch the DOM update! This is a result of Angular's ability to bind a view to a piece of data as it changes.
+
+### Data Binding
+
+In traditional frameworks, views are a snapshot in time, only reflecting the state of data at the time it was rendered. Newer JavaScript frameworks like Angular and Ember allow us to write dynamic, live templates. This means that we can write Angular templates that will **automatically update when our data changes.**
+
+This is called two-way or bi-directional binding.
+
+* when a model changes, the view knows about it.
+* when a view changes, the model also knows about it.
+
+Put another way, if the data changes, that change is *immediately* updated on the view. If the data changes in the view, then it is *immediately* updated in the code.
+
+![Two Way Data Binding Diagram](https://docs.angularjs.org/img/Two_Way_Data_Binding.png)
+
+Let's try it out!
+
+In `index.html` create a text input:
+
+```html
+<input type="text" placeholder="What is your name?" ng-model="name" ng-init="name = 'Ken'">
+```
+
+With the attribute `ng-model="name"` added to the text input, this ties/binds the value of the text input to a property called "name". Technically, `ng-model` tries to bind "name" by evaluating the expression, and since the property "name" doesn't already exist in angular's scope, it will be created implicitly.
+
+Now that we've bound the input to the "name" property, let's display the value of "name" on the page.  We can write expressions in our HTML using `{{ }}`.
+
+```html
+<h1>My name is: {{name}}</h1>
+```
+
+Open up `index.html` in your browser. What does the `h1` display when the page loads? Try typing something into the input and notice that the `h1` reflects whatever value we type into the input. This is our first example of two-way data binding.
+
+### Exercises
+
+**Dropdowns**
+
+Use `ng-model` with a dropdown menu (select tag). Give the user the following four items to pick from - "Dogs", "Cats", "Dogs and Cats", "Neither". Display the user's choice in an `h3`. For example, if the user selects "Dogs", the `h3` should say "I love dogs <3".
+
+## Planning a Front end
+
+It's important to note that when building any front end for an application, one must consider the overall look and feel for the application in order to plan out how to utilize the front end. We will be building an application similar to a popular web application, Trello.
+
+![Trello Clone](http://i.imgur.com/pKKTzVLr.png)
+
+The application can be described as the following:
+
+* A user can own various boards.
+* A board can have multiple collaborators. The owner and the collaborators are allowed to edit the board.
+* A board can have multiple columns. Any (allowed) user can add columns.
+* Each column has a name and can have many tasks in it.
+* A task has a short description (for display), long description (for more context). These can be edited.
+* A task can have many members (that is users involved in a task). Each member must is any (allowed) user on the board.
+
+Here's an Entity Relationship Diagram that describes the information the application will hold.
+
+```
+
+┌───────────────────────┐        ┌───────────────────────┐         ┌───────────────────────┐        ┌───────────────────────┐
+│         Users         │        │        Boards         │         │        Columns        │        │         Tasks         │
+├───────────────────────┤        ├───────────────────────┤         ├───────────────────────┤        ├───────────────────────┤
+│                       │        │                       │         │                       │        │                       │
+│ name       varchar    │        │ name        varchar   │         │ name         varchar  │        │ short_description     │
+│ email      varchar    │       ╱│ owner_id    int       │        ╱│ board_id     int      │       ╱│              varchar  │
+│ hashed_password       ├────────│                       │─────────│                       ├────────│ long_description      │
+│            char(60)   │       ╲│                       │        ╲│                       │       ╲│              varchar  │
+│                       │        │                       │         │                       │        │ column_id    int      │
+│                       │        │                       │         │                       │        │ column_index int      │
+│                       │        │                       │         │                       │        │ is_archived  boolean  │
+│                       │        │                       │         │                       │        │                       │
+└───┬──────┬────────────┘        └──────────────────┬────┘         └───────────────────────┘        └───────┬───────────────┘
+│      │       ┌───────────────────────┐        │                                                       │                
+│      │       │     Collaborators     │        │                                                       │                
+│      │       ├───────────────────────┤        │                                                       │                
+│      │       │ id           int      │        │                                                       │                
+│      │      ╱│ user_id      int      │╲       │                                                       │                
+│      └───────│ board_id     int      │────────┘                                                       │                
+│             ╲│                       │╱                     ┌───────────────────────┐                 │                
+│              │                       │                      │        Members        │                 │                
+│              │                       │                      ├───────────────────────┤                 │                
+│              └───────────────────────┘                      │ id           int      │                 │                
+│                                                            ╱│ user_id      int      │╲                │                
+└─────────────────────────────────────────────────────────────│ task_id      int      │─────────────────┘                
+                                                             ╲│                       │╱                                 
+                                                              │                       │                                  
+                                                              └───────────────────────┘                                  
+```
 
 ## Preparing for ES6
 
