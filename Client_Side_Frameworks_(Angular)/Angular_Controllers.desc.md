@@ -34,37 +34,20 @@ Write down in your own words what a controller is and why they are important. Tu
 
 Angular takes care of the hard part - connecting our controllers and views together through two-way data binding. Because of this, Angular controllers are often called **View Models** and the architectural pattern becomes an **Model-View-ViewModel (MVVM)**.
 
-As an examples on controllers, we are going to make a ToDo list app, often a great way to illustrate the overall structure of an application. Create a directory for your project.
+As an examples on controllers, we are going to make a ToDo list app, often a great way to illustrate the overall structure of an application. Initialize the project in Brunch.
 
 ```sh
-$ mkdir todo-app-angular
-$ cd todo-app-angular
-$ touch index.html
-$ atom .
+brunch new todo-app-angular --skeleton kmcgrady/with-angular todo-app-angular
 ```
 
-Use the initial template for your html application.
+Change into the directory and start the application.
 
-```html
-<!DOCTYPE html>
-<html ng-app="todoApp">
-  <head>
-    <meta charset="utf-8">
-    <title>My ToDo List</title>
-    <link rel="stylesheet" href="style.css" charset="utf-8">
-  </head>
-  <body>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
-    <script src="app.js"></script>
-  </body>
-</html>
+```javascript
+cd todo-app-angular
+npm start
 ```
 
-Include the css template called `style.css`. Test that your application is running properly.
-
-```sh
-touch style.css
-```
+Update the `app/styles/index.css` with the following text. Test that your application is running properly.
 
 ```css
 ul {
@@ -78,18 +61,12 @@ ul {
 }
 ```
 
-Next, we are going to build our `app.js` file which initializes our application.
-
-```sh
-touch app.js
-```
+Next, we are going to build our `app/app.js` file which initializes our application.
 
 ```javascript
-(function() {
-  'use strict';
+import angular from 'angular'
 
-  angular.module('todoApp', []);
-}());
+angular.module('todoApp', []);
 ```
 
 ### Building a controller for our todo list
@@ -102,64 +79,89 @@ Our todo list needs to manage two aspects of a todo list.
 Let's model the structure of our todo list in our html.
 
 ```html
-<body>
-  <header>
-    <h1>My ToDo List</h1>
-  </header>
-  <main>
-    <ul ng-init="todos = [{text: 'Make a todo list', completed: true}, {text: 'Make it fancy', completed: false}]">
-      <li ng-repeat="todo in todos">
-        <input type="checkbox" ng-model="todo.completed"> <span ng-class="{ completed: todo.completed }">{{todo.text}}</span>
-      </li>
-      <li><input type="text" ng-model="todoToAdd"><a href="">add</a></li>
-    </ul>
-  </main>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
-  <script src="app.js"></script>
-</body>
+<!DOCTYPE html>
+<html ng-app="todoApp">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ToDo List</title>
+    <link rel="stylesheet" href="/vendor.css">
+    <link rel="stylesheet" href="/app.css">
+  </head>
+  <body>
+    <header>
+      <h1>My ToDo List</h1>
+    </header>
+    <main>
+      <ul ng-init="todos = [{text: 'Make a todo list', completed: true}, {text: 'Make it fancy', completed: false}]">
+        <li ng-repeat="todo in todos">
+          <input type="checkbox" ng-model="todo.completed"> <span ng-class="{ completed: todo.completed }">{{todo.text}}</span>
+        </li>
+        <li><input type="text" ng-model="todoToAdd"><a href="">add</a></li>
+      </ul>
+    </main>
+
+    <script src="/vendor.js"></script>
+    <script src="/app.js"></script>
+    <script>require('app');</script>
+  </body>
+</html>
 ```
 
-Let's now move the code to a controller. Create a `controllers.js` file and modify the html as follows.
+Let's now move the code to a controller. Create a folder called `todos` and initialize the file `todolist.controller.js` file and modify the html as follows.
 
-```sh
-$ touch controllers.js
+```shell
+mkdir app/todos
+touch app/todos/todolist.controller.js
 ```
+
+In `app/todolist.controller.js`, type the following in:
 
 ```javascript
-(function() {
-  'use strict';
-
-  const app = angular.module('todoApp');
-
-  app.controller('TodoListCtrl', function() {
+class TodoListCtrl {
+  constructor() {
     this.todoToAdd = '';
     this.todos = [];
+  }
 
-    this.addTodo = function(todoText) {
-      this.todos.push({
-        completed: false,
-        text: todoText
-      });
-      this.todoToAdd = '';
-    };
-  });
-}());
+  addTodo(todoText) {
+    this.todos.push({
+      completed: false,
+      text: todoText
+    });
+    this.todoToAdd = '';
+  }
+}
+
+export default TodoListCtrl;
+
+```
+
+We need to update it in our `app/app.js` file to include our controller.
+
+```javascript
+import angular from 'angular'
+
+import TodoListCtrl from './todos/todolist.controller';
+
+angular.module('todoApp', [])
+  .controller('TodoListCtrl', TodoListCtrl);
 ```
 
 Update your HTML to the following:
 
 ```html
-<ul ng-controller="TodoListCtrl as todoList">
-  <li ng-repeat="todo in todoList.todos">
+<ul ng-controller="TodoListCtrl as todoListCtrl">
+  <li ng-repeat="todo in todoListCtrl.todos">
     <input type="checkbox" ng-model="todo.completed"> <span ng-class="{ completed: todo.completed }">{{todo.text}}</span>
   </li>
-  <li><input type="text" ng-model="todoList.todoToAdd"><a href="" ng-click="todoList.addTodo(todoList.todoToAdd)">add</a></li>
+  <li><input type="text" ng-model="todoListCtrl.todoToAdd"><a href="" ng-click="todoListCtrl.addTodo(todoListCtrl.todoToAdd)">add</a></li>
 </ul>
 ```
 
-Let's talk about what we see. In the `controllers.js` file, we first reference the `todoApp` module in angular. We then use a special method called `controller` that takes in a two arguments: the name of the controller, and a function. The function uses the `this` variable to include all the variables and functions that the controller will offer.
+Let's talk about what we see. In the controller file, we first reference the `todoApp` module in angular. We then use a special method called `controller` that takes in a two arguments: the name of the controller, and a class (imported in).
 
-In the HTML, we initialize the controller using an angular built-in directive called `ng-controller`. It starts as the name of the controller, `TodoListController`, followed by the keyword `as`, then a name for use. The name creates a copy of the controller as defined in the JavaScript file. When a new controller is created, everything inside and including the element can reference that controller. Every reference of `todoList` after that refers to the specific instance of the controller. This allows us to use a controller multiple times in an application.
+In the HTML, we initialize the controller using an angular built-in directive called `ng-controller`. It starts as the name of the controller, `TodoListController`, followed by the keyword `as`, then a name for use. The name creates an instance of the controller class as defined in the JavaScript file. When a new controller is created, everything inside and including the element can reference that controller. Every reference of `todoListCtrl` after that refers to the specific instance of the controller. This allows us to use a controller multiple times in an application.
 
 The next new directive to us is `ng-click`. The `ng-click` takes an expression. This is where the controller is called to add a todo.
 
@@ -167,18 +169,42 @@ The next new directive to us is `ng-click`. The `ng-click` takes an expression. 
 
 An application can have multiple models, views, and controllers. Each controller can manage information of a particular facet of an application. It can even manage multiple controllers. In our todo list application, we are going to amp up our list to include multiple todo lists for multiple people.
 
-In our `controllers.js`, add the following:
+Create a new folder called `people`, with a file `people.controller.js`.
+
+```shell
+mkdir app/people
+touch app/people/people.controller.js
+```
+
+In the `people.controller.js`, add the following:
 
 ```javascript
-app.controller('PeopleCtrl', function() {
-  this.nameToAdd = '';
-  this.people = [];
+class PeopleCtrl {
+  constructor() {
+    this.nameToAdd = '';
+    this.people = [];
+  }
 
-  this.addPerson = function(personName) {
+  addPerson(personName) {
     this.people.push({ name: personName });
     this.nameToAdd = '';
-  };
-});
+  }
+}
+
+export default PeopleCtrl;
+```
+
+Let's inform Angular of our new controller in `app/app.js`.
+
+```javascript
+import angular from 'angular'
+
+import PeopleCtrl from './people/people.controller';
+import TodoListCtrl from './todos/todolist.controller';
+
+angular.module('todoApp', [])
+  .controller('PeopleCtrl', PeopleCtrl);
+  .controller('TodoListCtrl', TodoListCtrl);
 ```
 
 Modify our HTML to add people:

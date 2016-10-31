@@ -380,8 +380,7 @@ Most of the components in Angular Materialize are very similar in style to those
 
 ## Assignment
 
-[SnapShop](https://github.com/gSchool/snapshop)
-[SnapShop Part 1](https://github.com/gSchool/snapshop/blob/master/1_scaffold_html.md)
+[SnapShop Part 2](https://github.com/gSchool/snapshop/blob/master/2_Angular.md)
 
 ## Resources
 

@@ -322,6 +322,8 @@ Use `ng-model` with a dropdown menu (select tag). Give the user the following fo
 ## Assignment
 
 [SnapShop](https://github.com/gSchool/snapshop/blob/master/2_Angular.md)
+[SnapShop](https://github.com/gSchool/snapshop)
+[SnapShop Part 1](https://github.com/gSchool/snapshop/blob/master/1_scaffold_html.md)
 
 ## Resources
 
