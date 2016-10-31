@@ -16,7 +16,6 @@
   * orderBy
   * filter
 * Use Angular modules.
-* Build a custom Angular filter.
 
 ## What are Angular expressions?
 
@@ -52,7 +51,7 @@ Angular comes with a bunch of built-in directives, some of which we've already u
 
 ### Exercise
 
-Turn to a neighbor and discuss in your own words what you think an Angular directive is. Name at least 3 built-in directives that we have used so far.
+Turn to a neighbor and discuss in your own words what you think an Angular directive is. Name some built-in directives that we have used so far.
 
 ## How to use built-in Angular directives
 
@@ -97,21 +96,6 @@ What would happen if you put the `ng-repeat` directive on the `ul` element, like
 <ul ng-repeat='name in names'>
   <li>{{name}}</li>
 </ul>
-```
-
-### ngOptions
-
-The `ng-options` attribute can be used to dynamically generate a list of `<option>` elements for the `<select>` element.
-
-```html
-<div ng-init="list = [
-  {id: 2, name: "John"},
-  {id: 3, name: "Paul"},
-  {id: 1, name: "George"}
-]"></div>
-
-<select ng-options="object.name for object in list">
-</select>
 ```
 
 ### Iterating over Object Properties
@@ -339,51 +323,45 @@ The `angular.module` is a global place for creating, registering and retrieving 
 angular.module('myAngularApp', []);
 ```
 
-## Custom Filters
+## Angular Materialize
 
-We've seen how to use Angular's built-in filters like `currency`, `number`, and `orderBy`. These are definitely useful, but we often will need to create custom filters to format data to meet our specific needs.
+Materialize and Angular aren't the best of friends. Many have built a version of Materialize for Angular called [Angular Material](https://material.angularjs.org/). It takes a _much_ different route than Materialize, so we are going to be using a smaller version built on top of the pre-existing Materialize Library called [Angular Materialize](krescruz.github.io/angular-materialize/).
 
-We're going to start by creating a "snake_case" to "kebab-case" filter. We want to be able to write: `{{ "hello_class" | kebab }}` and see "hello-class" in the view.
+In your HTML file, include jQuery and Materialize CSS as usual.
 
-We need to start by defining a filter named "kebab". In `filters.js`:
+```html
+<html ng-app="myAngularApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Angular Views</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col s6">
+          <select material-select>
+              <option ng-repeat="value in ['a', 'b', 'c']">{{value}}</option>
+          </select>
+        </div>
+        <div class="col s4">
+          <a class="waves-effect waves-light btn">button</a>
+        </div>
+      </div>
+    </div>
 
-```js
-app.filter('kebab', function () {
-
-});
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-materialize/0.2.1/angular-materialize.min.js"></script>
+    <script>
+      angular.module('myAngularApp', ['ui.materialize']);
+    </script>
+  </body>
+</html>
 ```
 
-Remember that filters are just functions to which we pass input and get some returned output to display. Every filter needs to return a function that takes a single argument, (input):
-
-```js
-app.filter('kebab', function () {
-  return function (input) {
-
-  };
-});
-```
-
-The last step is to write our logic inside of the returned function.
-
-Here's a possible solution that will replace all `_`'s with `-`'s:
-
-```js
-app.filter('kebab', function () {
-  return function (input) {
-    return input.replace(/_/g , "-");
-  };
-});
-```
-
-### Additional Filter Exercises
-
-- Fix our `kebab` filter so that it doesn't break when you pass it a number input. It should just return the unaltered input.
-
-- Write a `camel` filter which will take EITHER a snake_cased or kebab-cased string and convert it to camelCase. So `{{ "hello-world" | camel }}` should display "helloWorld", and `{{ "hello_world" | camel }}` should also display "helloWorld"
-
-- Write a `pigLatin` filter which converts a given string to Pig Latin.  Learn the basics of Pig Latin [here](http://www.wikihow.com/Speak-Pig-Latin).
-
-- Create a filter called `redact` which will remove all instances of a provided word from a string and replace it with "REDACTED". `{{ "My dog Rusty is adorable" | redact: "Rusty" }}` should return "My dog REDACTED is adorable". You will need to research creating custom filters that take parameters.
+Most of the components in Angular Materialize are very similar in style to those in [Materialize](http://materializecss.com/), so I recommend taking a look a the [documentation](krescruz.github.io/angular-materialize/).
 
 ### Additional Practice
 
@@ -402,7 +380,8 @@ app.filter('kebab', function () {
 
 ## Assignment
 
-[Angular Camera Shop](http://github.com/gSchool/angular-camera-view/)
+[SnapShop](https://github.com/gSchool/snapshop)
+[SnapShop Part 1](https://github.com/gSchool/snapshop/blob/master/1_scaffold_html.md)
 
 ## Resources
 

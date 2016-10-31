@@ -334,6 +334,16 @@ class Dog {
 }
 ```
 
+## Cello Preparation
+
+Let's set up our development for cello. Go to the following website and follow the directions in the README.
+
+[Cello](https://github.com/gSchool/cello)
+
+## Assignment
+
+[SnapShop](https://github.com/gSchool/snapshop/blob/master/2_Angular.md)
+
 ## Resources
 
 * [Angular Docs](https://docs.angularjs.org/api)
