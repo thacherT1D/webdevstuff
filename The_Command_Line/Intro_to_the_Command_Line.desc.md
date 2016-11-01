@@ -1,6 +1,7 @@
-This lesson will introduce you to the fundamental commands of Mac OS X. By the end, you'll be able to describe and utilize commands to manipulate the following concepts.
+This lesson will introduce you to the fundamental commands of macOS. By the end, you'll be able to describe and utilize commands to manipulate the following concepts.
 
 ## Objectives
+
 - Explain what the command line is and why it's important
 - Manipulate the file system using commands, file system paths, and command flags
 - Differentiate between the command line and graphical user interfaces
@@ -35,7 +36,7 @@ Look back at the [setup for your development environment](https://learn.galvaniz
 
 ## User accounts
 
-Mac OS X is a multi-user operating system which means it manages one or more user accounts. Each user account on Mac OS X has a **full name** and an **account name**.
+macOS is a multi-user operating system which means it manages one or more user accounts. Each user account on macOS has a **full name** and an **account name**.
 
 ### The full name
 
@@ -79,7 +80,7 @@ When finished, the Finder Preferences should look something like this.
 
 ### The current user
 
-Whenever you log into Mac OS X, that user account becomes the **current user**. Additionally, when you start a new shell session in the Terminal, the current user is automatically logged in to the shell.
+Whenever you log into macOS, that user account becomes the **current user**. Additionally, when you start a new shell session in the Terminal, the current user is automatically logged in to the shell.
 
 There are a two fundamental commands that display the state of the current user from within the shell—the `whoami` and `groups` commands.
 
@@ -99,7 +100,7 @@ groups
 
 ![](https://imgur.com/TsyyfL9.png)
 
-It's common for a user account to belong to a many groups. The only important groups to mention are `staff` and `admin`. In Mac OS X, every user account belongs to the `staff` group, while only administrator accounts belong to the `admin` group.
+It's common for a user account to belong to a many groups. The only important groups to mention are `staff` and `admin`. In macOS, every user account belongs to the `staff` group, while only administrator accounts belong to the `admin` group.
 
 **TIP:** If your user account doesn't belong to the `admin` group, it'll be difficult to manage your development machine.
 
@@ -254,7 +255,7 @@ Were you right? If not, in what way were you wrong? What happened that surprised
 
 The file structure you see in the textual command line interface is the same as the one you see in the graphical interface via the Finder application. The only difference is the Finder tends to hide some of the files and directories to keep things simple for most users.
 
-**TIP:** The Finder on Mac OS X is equivalent to the Explorer on Windows.
+**TIP:** The Finder on macOS is equivalent to the Explorer on Windows.
 
 ### The `open` command
 
