@@ -37,7 +37,7 @@ Angular takes care of the hard part - connecting our controllers and views toget
 As an examples on controllers, we are going to make a ToDo list app, often a great way to illustrate the overall structure of an application. Initialize the project in Brunch.
 
 ```sh
-brunch new todo-app-angular --skeleton kmcgrady/with-angular todo-app-angular
+brunch new todo-app-angular --skeleton kmcgrady/with-angular
 ```
 
 Change into the directory and start the application.
