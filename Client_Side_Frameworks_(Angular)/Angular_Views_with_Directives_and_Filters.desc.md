@@ -63,19 +63,30 @@ For a complete list see https://docs.angularjs.org/api/ng/directive
 
 `ng-repeat` will iterate over a collection and create a template for every item in the collection. Think of it as the Angular equivalent of a `forEach`. It's extremely useful. Let's look at an example.
 
+Navigate to your `hello-angular` application and start the server.
+
+```shell
+cd path/to/hello-angular
+npm start
+```
+
 Let's start by initializing an array. In the body tag, add the following:
 
 ```html
 <!DOCTYPE html>
-<html ng-app>
+<html ng-app="my-app">
   <head>
     <meta charset="utf-8">
-    <title>Angular Views</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hello world</title>
+    <link rel="stylesheet" href="/vendor.css">
+    <link rel="stylesheet" href="/app.css">
   </head>
-
   <body ng-init="names = ['Harry', 'Ron', 'Hermione', 'Sirius', 'Hedwig', 'Tonks']">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script src="/vendor.js"></script>
+    <script src="/app.js"></script>
+    <script>require('app');</script>
   </body>
 </html>
 ```
@@ -110,7 +121,7 @@ It is possible to get `ngRepeat` to iterate over the properties of an object usi
 
 - The order of keys returned for an object is dependent on the order returned by the browser using `(for key in myObj)`
 - Keys starting with `$` will be ignored
-- Built in filters such as `orderBy` and `filter` do not work with objects
+- Built in filters such as `orderBy` and `filter` do not work with objects (to be discussed later)
 
 ### Tracking and Duplicates
 
@@ -128,13 +139,6 @@ If you do need to repeat duplicate items, you can substitute the default trackin
 <ul ng-repeat="num in [1,1,2,5,6,9,9,9] track by $index">
   <li>{{ num }}</li>
 </ul>
-```
-
-You can also use `track by` with other properties such as object keys.
-
-```html
-<select ng-options="object.name for object in list track by object.id">
-</select>
 ```
 
 ### Exercise
@@ -315,10 +319,10 @@ Write down in your own words the purpose of Angular filters? Describe what a fil
 
 The `angular.module` is a global place for creating, registering and retrieving Angular modules. All modules (angular core or 3rd party) that should be available to an application must be registered using this mechanism.
 
-`app.js`
+In `app/app.js`, you will see this.
 
 ```JavaScript
-'use strict';
+import angular from 'angular'
 
 angular.module('myAngularApp', []);
 ```
@@ -326,6 +330,21 @@ angular.module('myAngularApp', []);
 ## Angular Materialize
 
 Materialize and Angular aren't the best of friends. Many have built a version of Materialize for Angular called [Angular Material](https://material.angularjs.org/). It takes a _much_ different route than Materialize, so we are going to be using a smaller version built on top of the pre-existing Materialize Library called [Angular Materialize](krescruz.github.io/angular-materialize/).
+
+First, we need to install angular-materialize.
+
+```shell
+npm install angular-materialize
+```
+
+Then we must inform angular of it in `app/app.js`
+
+```javascript
+import angular from 'angular'
+import angularMaterialize from 'angular-materialize'
+
+angular.module('myAngularApp', [angularMaterialize]);
+```
 
 In your HTML file, include jQuery and Materialize CSS as usual.
 
@@ -352,11 +371,9 @@ In your HTML file, include jQuery and Materialize CSS as usual.
 
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-materialize/0.2.1/angular-materialize.min.js"></script>
-    <script>
-      angular.module('myAngularApp', ['ui.materialize']);
-    </script>
+    <script src="/vendor.js"></script>
+    <script src="/app.js"></script>
+    <script>require('app');</script>
   </body>
 </html>
 ```
