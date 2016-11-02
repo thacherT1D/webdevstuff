@@ -28,6 +28,7 @@ module.exports = [
     activities: [
       {
         article: {text: "Intro to Git and Github", url: "https://github.com/gSchool/productivity-curriculum/blob/master/Misc/Intro to Git.md"},
+        assignment: {text: "Git Personal Website", url: "https://github.com/gSchool/git-personal-website"},
       },
       {
         article: {text: "JavaScript Vocabulary", url: "https://github.com/gSchool/javascript-curriculum/blob/master/Vocabulary.md"},
