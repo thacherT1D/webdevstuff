@@ -1,10 +1,10 @@
 ## Objectives
 
-* Explain what a Controller is.
-* Explain why a Controller is important.
-* Build an Angular Controller.
-* Explain `$scope` in Angular.
-* Practice proper scoping recommendations in an Angular application.
+* Explain what a Controller is
+* Explain why a Controller is important
+* Build an Angular Controller
+* Explain `$scope` in Angular
+* Practice proper scoping recommendations in an Angular application
 
 ## What is a controller?
 
@@ -28,7 +28,7 @@ Here are example interactions that describe the connection between the model vie
 
 ### Exercise
 
-Write down in your own words what a controller is and why they are important. Turn and talk to your neighbor and discuss what you wrote. Think of other example interactions in the format of a Model, View, and Controller.
+Write down in your own words what a controller is and why they are important. Turn and talk to your neighbor and discuss what you wrote. Think of other example interactions in the format of a Model, View, and Controller. Draw at least one of these example interactions.
 
 ## Building an Angular Controller
 
@@ -228,6 +228,10 @@ Modify our HTML to add people:
 </main>
 ```
 
+### Exercise
+
+Within the same application, create a `MessageCtrl` and a corresponding view to list messages that you would like to send to people. Once created, demonstrate that it works.
+
 ## The `$scope` variable
 
 You may have seen Angular tutorials that use a controller with the `$scope` keyword. Here's an example:
@@ -269,6 +273,10 @@ angular.module("firstApp",[]).controller("FirstController", function($scope, $ro
   // now we can add things to $rootScope!
 })
 ```
+
+### Exercise
+
+Take a minute to write down what `$scope` and `$rootScope` are in the context of an Angular application. The instructor will cold call on students.
 
 ## Why should we not use `$scope`?
 
@@ -342,7 +350,11 @@ It turns out `ng-if` actually creates it's own new scope and does not inherit an
 
 ### How do we fix it?
 
-Instantiate controllers using the `CONTROLLER as INSTANCE` to not rely on `$scope`'s quirky properties.
+Instantiate controllers using the `CONTROLLER as INSTANCE` syntax to not rely on `$scope`'s quirky properties.
+
+### Exercise
+
+Use `CONTROLLER as INSTANCE` syntax to correct the above example so that it no longer uses `$scope`.
 
 ### A very useful tool - AngularJS Batarang
 
