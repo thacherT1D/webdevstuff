@@ -211,8 +211,8 @@ Modify our HTML to add people:
 
 ```html
 <main>
-  <div ng-controller="PeopleCtrl as peopleList">
-    <div ng-repeat="person in peopleList.people">
+  <div ng-controller="PeopleCtrl as peopleCtrl">
+    <div ng-repeat="person in peopleCtrl.people">
       <h2>{{person.name}}</h2>
       <ul ng-controller="TodoListCtrl as todoList">
         <li ng-repeat="todo in todoList.todos">
@@ -222,7 +222,7 @@ Modify our HTML to add people:
       </ul>
     </div>
     <div>
-      <input type="text" ng-model="peopleList.nameToAdd"><a href="" ng-click="peopleList.addPerson(peopleList.nameToAdd)">add person</a>
+      <input type="text" ng-model="peopleCtrl.nameToAdd"><a href="" ng-click="peopleCtrl.addPerson(peopleCtrl.nameToAdd)">add person</a>
     </div>
   </div>
 </main>

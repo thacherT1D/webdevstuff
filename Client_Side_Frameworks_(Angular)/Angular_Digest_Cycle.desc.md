@@ -11,45 +11,58 @@
 
 ## An example to illustrate the `$digest` cycle
 
-Throughout explaining the `$digest` cycle, we'll use this sample code to illustrate the nuances of Angular that can be explained by the `$digest` cycle.
+Throughout explaining the `$digest` cycle, we'll use a sample project to describe the actions. Here's the HTML.
 
 ```html
 <!DOCTYPE html>
-<html ng-app="myApp">
+<html ng-app="stopwatch">
   <head>
     <meta charset="utf-8">
-    <title>Digest Cycle</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hello world</title>
+    <link rel="stylesheet" href="/vendor.css">
+    <link rel="stylesheet" href="/app.css">
   </head>
   <body>
     <div ng-controller="StopWatchCtrl as stopwatch">
       {{stopwatch.time}}<br>
       <button ng-click="stopwatch.start()">Start</button>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
-    <script src="app.js"></script>
+
+    <script src="/vendor.js"></script>
+    <script src="/app.js"></script>
+    <script>require('app');</script>
   </body>
 </html>
 ```
 
-In the `app.js`.
+In the HTML, we need to use a controller, so in a file in its own folder `app/stopwatch/stopwatch.controller.js`, we have the following:
 
 ```javascript
-(function() {
-  'use strict';
-
-  const app = angular.module('myApp', []);
-
-  app.controller('StopWatchCtrl', function() {
+class StopWatchCtrl {
+  constructor() {
     this.time = 0;
+  }
 
-    this.start = () => {
-      setInterval(1000, () => {
-        this.time += 1;
-      })
-    }
+  start() {
+    setInterval(() => {
+      this.time += 1;
+    }, 1000);
+  }
+}
 
-  });
-})();
+export default StopWatchCtrl;
+```
+
+Finally, we initialize our `app/app.js` file.
+
+```javascript
+import angular from 'angular'
+
+import StopWatchCtrl from './stopwatch/stopwatch.controller';
+
+angular.module('stopwatch', [])
+  .controller('StopWatchCtrl', StopWatchCtrl);
 ```
 
 ## How does Angular handle two-way data binding?
@@ -58,7 +71,7 @@ So now that we have a stronger understanding of what Angular is, how to structur
 
 Angular will identify all places where it needs to track variables (think `ng-model`, creating instances of `ng-controller`, and `ng-init`) and placing them in their proper scope (based on the DOM tree). With this in mind, it now has all the variables that the web page uses. Angular track any changes to these variables by creating **watchers** on each of these variables.
 
-Once it is done, it compiles the rest of the page (looking for `ng-bind` or curly braces `{{}}`) to include the values from these watchers into the page in proper formatting (using filters).
+Once it is done, it compiles the rest of the page (looking for curly braces `{{}}`) to include the values from these watchers into the page in proper formatting (using filters).
 
 The watchers responsibility is to inform Angular when to re-render the page with new variables (adjusting the page accordingly). This is what allows two-way data binding to occur.
 
@@ -78,44 +91,47 @@ It's important to note that these watchers have the ability to change other mode
 ## Fixing our example
 
 ```javascript
-(function() {
-  'use strict';
-
-  const app = angular.module('myApp', []);
-
-  app.controller('StopWatchCtrl', function($scope) {
+class StopWatchCtrl {
+  constructor($scope) {
+    this.$scope = $scope;
     this.time = 0;
+  }
 
-    this.start = () => {
-      setInterval(() => {
-        this.time += 1;
-        $scope.$digest();
-      }, 1000);
-    }
-  });
-})();
+  start() {
+    setInterval(() => {
+      this.time += 1;
+      this.$scope.$digest();
+    }, 1000);
+  }
+}
+
+StopWatchCtrl.$inject = ['$scope'];
+
+export default StopWatchCtrl;
+
 ```
 
 `$scope.$digest()` immediately starts the dirty checking and parsing on the current scope and below. The more recommended form is to use `$scope.$apply()`.
 
 ```javascript
-(function() {
-  'use strict';
-
-  const app = angular.module('myApp', []);
-
-  app.controller('StopWatchCtrl', function($scope) {
+class StopWatchCtrl {
+  constructor($scope) {
+    this.$scope = $scope;
     this.time = 0;
+  }
 
-    this.start = () => {
-      setInterval(() => {
-        $scope.$apply(() =>
-          this.time += 1;
-        );
-      }, 1000);
-    }
-  });
-})();
+  start() {
+    setInterval(() => {
+      this.$scope.$apply(() => {
+        this.time += 1;
+      });
+    }, 1000);
+  }
+}
+
+StopWatchCtrl.$inject = ['$scope'];
+
+export default StopWatchCtrl;
 ```
 
 `$scope.$apply()` takes in a function or an angular expression as a string, executes it, and then ensures that `$scope.$digest()` is called afterwards. This allows the entire page to check for changes rather than the current scope. This is often the case when we use outside libraries.
@@ -129,21 +145,22 @@ It's important to note that these watchers have the ability to change other mode
 In the example above, Angular has provided a feature called `$interval` to help out.
 
 ```javascript
-(function() {
-  'use strict';
-
-  const app = angular.module('myApp', []);
-
-  app.controller('StopWatchCtrl', function($interval) {
+class StopWatchCtrl {
+  constructor($interval) {
+    this.$interval = $interval;
     this.time = 0;
+  }
 
-    this.start = () => {
-      $interval(() => {
-        this.time += 1;
-      }, 1000);
-    }
-  });
-})();
+  start() {
+    this.$interval(() => {
+      this.time += 1;
+    }, 1000);
+  }
+}
+
+StopWatchCtrl.$inject = ['$interval'];
+
+export default StopWatchCtrl;
 ```
 
 Ensure that `$interval` is included in the function.
@@ -151,21 +168,22 @@ Ensure that `$interval` is included in the function.
 ### `$timeout`
 
 ```javascript
-(function() {
-  'use strict';
-
-  const app = angular.module('myApp', []);
-
-  app.controller('CountOneSecCtrl', function($timeout) {
+class StopWatchCtrl {
+  constructor($timeout) {
+    this.$timeout = $timeout;
     this.time = 0;
+  }
 
-    this.start = () => {
-      $timeout(() => {
-        this.time += 1;
-      }, 1000);
-    }
-  });
-})();
+  start() {
+    this.$timeout(() => {
+      this.time += 1;
+    }, 1000);
+  }
+}
+
+StopWatchCtrl.$inject = ['$timeout'];
+
+export default StopWatchCtrl;
 ```
 
 ### Promises and `$q`
