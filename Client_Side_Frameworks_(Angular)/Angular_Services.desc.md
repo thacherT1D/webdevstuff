@@ -171,7 +171,7 @@ class PeopleCtrl {
   }
 }
 
-PeopleCtrl.$inject = ['PeopleService'];
+PeopleCtrl.$inject = ['peopleService'];
 
 export default PeopleCtrl;
 ```
@@ -181,7 +181,7 @@ Notice a few things:
 * The constructor takes in an argument. This is the singleton that the service provides. We save that service in the instance with `this.peopleSvc = peopleSvc;`
 * We used the service's `addPerson` method in the controller's `addPerson` method.
 * We get access to the people with a `people()` method, which returns the people stored in the service.
-* Lastly, we **inject** the PeopleService into the controller with `PeopleCtrl.$inject = ['PeopleService'];` This is how we can include the service into the constructor at the top. Note that the array contains a string with the name of the service. This is the same name as defined in the `app.js` file. This process is called **dependency injection**.
+* Lastly, we **inject** the PeopleService into the controller with `PeopleCtrl.$inject = ['peopleService'];` This is how we can include the service into the constructor at the top. Note that the array contains a string with the name of the service. This is the same name as defined in the `app.js` file. This process is called **dependency injection**.
 
 The one last thing is we want to update our HTML to reflect our need to grab the people via a method versus a variable.
 
@@ -217,7 +217,7 @@ class PeopleCountCtrl {
   }
 }
 
-PeopleCountCtrl.$inject = ['PeopleService'];
+PeopleCountCtrl.$inject = ['peopleService'];
 
 export default PeopleCountCtrl;
 ```
@@ -325,7 +325,7 @@ class TodoListCtrl {
   }
 }
 
-TodoListCtrl.$inject = ['TodosService'];
+TodoListCtrl.$inject = ['todosService'];
 
 export default TodoListCtrl;
 ```
@@ -351,7 +351,7 @@ class TodosCountCtrl {
   }
 }
 
-TodosCountCtrl.$inject = ['TodosService'];
+TodosCountCtrl.$inject = ['todosService'];
 
 export default TodosCountCtrl;
 ```
