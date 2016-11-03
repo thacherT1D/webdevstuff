@@ -404,3 +404,4 @@ More about the differences between factories and services:
 [AngularJS: Factory vs Service vs Provider](http://tylermcginnis.com/angularjs-factory-vs-service-vs-provider/)
 
 [AngularJS Providers Explained](https://gist.github.com/demisx/9605099)
+ 
