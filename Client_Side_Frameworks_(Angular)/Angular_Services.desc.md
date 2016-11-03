@@ -35,61 +35,77 @@ In Angular, there three different ways to implement a service, they are:
 
 The important types we will cover are **factories** and **services**. It's a bit tricky since all these options fall under the umbrella, services, but for the most part these serve very similar purposes with different representations.
 
-### *Factory* Service
-
-Using the factory, you pass in the name of your service and a callback function that returns an object.
-
-Behind the scenes, Angular calls the function and sets the returned object as the *singleton instance* that will be injected into our controllers.
-
-```js
-angular
-  .module("learnServices", [])
-  .factory('personFactory', function(){
-    return {
-      name: "Matt",
-      job: "Instructor",
-      sayHi: function(){
-        return "Hello!"
-      }
-    }
-  }).controller('personController', function(personFactory){
-    // I now have access to all the methods/properties returned from the personFactory!
-  })
-```
-
 ### *Service* Service
 
-Using the service API, you create a constructor function using the `this` syntax to attach properties/methods to the constructor.
+Using the service API, you create a class that represents the service. Behind the scenes, Angular calls `new` on your class to create an instance. This instance is set as the *singleton instance* that will be injected into our controllers.
 
-Behind the scenes, Angular calls `new` on your function to create an instance. This instance is set as the *singleton instance* that will be injected into our controllers.
-
-Here is the same service defined using the service API:
+Here is an example service using the class syntax.
 
 ```js
-angular
-  .module("learnServices", [])
-  .service('personService', function(){
+// person.service.js
+class PersonService {
+  constructor() {
     this.name = "Matt";
     this.job = "Instructor";
-    this.sayHi = function(){
+    this.sayHi = function() {
       return "Hello!"
-    }
-  }).controller('personController', function(personService){
-    // I now have access to the personService!
-  });
+    };
+  }
+}
+
+export default PersonService;
 ```
 
-A provider is the most complex method and is used less frequently. It is a factory that can be configured before the application starts, which allows for more flexibility, but for the applications we are going to build, you will not need this level of complexity.
+The service will then need to be imported into our app module.
+
+```js
+// In app.js
+import angular from 'angular';
+import PersonService from './path/to/person.service';
+
+angular.module("learnServices", [])
+  .service('personService', PersonService);  // Note the capitalization
+```
+
+### *Factory* Service
+
+An alternate way of writing a service is writing a **factory**. Using the factory, you pass in the name of your service and a callback function that returns an object.
+
+```js
+// person.factory.js
+const personFactory = function() {
+  return {
+    name: "Matt",
+    job: "Instructor",
+    sayHi: function(){
+      return "Hello!"
+    }
+  }
+};
+
+export default personFactory;
+```
+
+Each factory needs to be registered in the Angular module.
+
+```js
+// In app.js
+import angular from 'angular';
+import personFactory from './path/to/person.factory';
+
+angular.module("learnServices", [])
+  .factory('personFactory', personFactory);
+```
 
 ## So which one??
 
-For right now we are going to focus on factories. They are a bit easier to reason about having not gotten into OOP and instantiation yet. Many articles will lean towards factories, but with the new ES2015 syntax, services are becoming more preferable. Be aware of both of these and the differences between them.
+In the past, factories were very popular, but nowadays, many ES6 style guides recommend creating services with the class system. Be aware of both of these and the differences between them and choose what feels better for you. Our examples will emphasize services.
 
-### Answer the following questions:
+### Exercise
 
-- What is a service? What problem do they solve for us?
-- What is the difference between a factory and a service?
-- Name at least 3 angular built in services that we have used so far.
+Write down in your own words what is the difference between a factory service and a service service. After a minute, your instructor will cold call on a few students for the answer.
+
+**NOTE:** A provider is the most complex method and is used less frequently. It is a factory that can be configured before the application starts, which allows for more flexibility, but for the applications we are going to build, you will not need this level of complexity.
 
 ## Creating our first Service
 
