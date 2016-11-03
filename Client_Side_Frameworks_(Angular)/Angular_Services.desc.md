@@ -2,6 +2,9 @@
 
 * Explain what an Angular service is.
 * Explain why an Angular service is important.
+* Explain the different ways to implement a service, specifically:
+  * a factory service
+  * a service service
 * Implement an Angular service.
 * Inject a custom Angular service into an Angular controller.
 
@@ -25,7 +28,7 @@ A service provides information to share between the two (or more) controllers. I
 
 In other words, the service allows the ability for two controllers to _communicate_ with each other.
 
-## How do you implement an Angular service?
+## What are the different ways to implement a service?
 
 In Angular, there three different ways to implement a service, they are:
 
@@ -107,7 +110,7 @@ Write down in your own words what is the difference between a factory service an
 
 **NOTE:** A provider is the most complex method and is used less frequently. It is a factory that can be configured before the application starts, which allows for more flexibility, but for the applications we are going to build, you will not need this level of complexity.
 
-## Creating our first Service
+## How do you implement an Angular service?
 
 We are going to continue with our example from yesterday with our todo list. Let's suppose we want to keep a counter at the top of the page that manages the number of people in out todo list system. This part of our webpage is separate from our people list and todo list, so we will need to create a new controller for this piece of our webpage. We now have _two_ controllers that rely on the same information, people. In this case it's time to create the people service.
 
@@ -180,343 +183,210 @@ Notice a few things:
 * We get access to the people with a `people()` method, which returns the people stored in the service.
 * Lastly, we **inject** the PeopleService into the controller with `PeopleCtrl.$inject = ['PeopleService'];` This is how we can include the service into the constructor at the top. Note that the array contains a string with the name of the service. This is the same name as defined in the `app.js` file. This process is called **dependency injection**.
 
-Create a new folder to represent the header of the page for these counters and initialize the controllers for the people counter.
+The one last thing is we want to update our HTML to reflect our need to grab the people via a method versus a variable.
+
+In `index.html`, update the following:
+
+```html
+<div ng-repeat="person in peopleCtrl.people">
+```
+
+to
+
+```html
+<div ng-repeat="person in peopleCtrl.people()">
+```
+
+Let's build our counter for the header. Create a new folder to represent the header of the page for these counters and initialize the controllers for the people counter.
 
 ```shell
 mkdir app/header
 touch app/header/people_count.controller.js
 ```
 
-
-We are going to start off by creating a `service.js` file to define our service in. While we're at it, let's not forget to throw a script for it in our `index.html` file... `<script src="services.js"></script>`
-
-Remember from above that one of the reasons we use services is seperation of concerns, so creating a new file for it makes sense.
+Inside the file, type in the following:
 
 ```js
-(function() {
-  'use strict';
+class PeopleCountCtrl {
+  constructor(peopleSvc) {
+    this.peopleSvc = peopleSvc;
+  }
 
-  const app = angular.module('todoApp');
+  peopleCount() {
+    return this.peopleSvc.people.length;
+  }
+}
 
-  app.factory('personTodos', personTodos);
+PeopleCountCtrl.$inject = ['PeopleService'];
 
-  function personTodos() {
-    return {
-      test: function() {
-        console.log('winner winner vegan tofurkey dinner!');
-      },
-    }
-  };
-
-})();
+export default PeopleCountCtrl;
 ```
 
-Back in our controller, we inject this service like such:
+Notice how we inject the PeopleService in here as well and use it to construct a method `peopleCount()`.
+
+Let's add this controller into our `app.js`.
 
 ```js
-app.controller('TodoListCtrl', TodoListCtrl);
+import angular from 'angular'
 
-TodoListCtrl.$inject = ['$http', 'personTodos'];
-// ----------------------------------^^^
+import PeopleCountCtrl from './header/people_count.controller';
 
-// ------------------------------vvv
-function TodoListCtrl($http, 'personTodos') {
-  this.todoToAdd = '';
-  this.todos = [];
+import PeopleCtrl from './people/people.controller';
+import PeopleService from './people/people.service';
 
-  personTodos.test(); // 👈🏽
+import TodoListCtrl from './todos/todolist.controller';
 
-  this.addTodo = (person) => {
-    return $http.post(`${server}/${person.id}/is-todos`, {
+angular.module('todoApp', [])
+  .service('PeopleService', PeopleService)
+  .controller('PeopleCtrl', PeopleCtrl)
+  .controller('TodoListCtrl', TodoListCtrl)
+  .controller('PeopleCountCtrl', PeopleCountCtrl);
+```
+
+We can now incorporate our Counter into our webpage.
+
+```html
+<header>
+  <h1>My ToDo List</h1>
+  <h3 ng-controller="PeopleCountCtrl as peopleCountCtrl">Number of people in system: {{ peopleCountCtrl.peopleCount() }}</h3>
+</header>
+```
+
+### Tracking the Total Amount of Todos
+
+Let's implement another service to keep track of all todos. This service is implemented differently from our people service because each Todos Controller manages the todos for a specific person whereas the service keeps track of _all_ todos.
+
+Let's start by building the service.
+
+```shell
+touch todos/todos.service.js
+```
+
+In the file, type in the following:
+
+```js
+class TodosService {
+  constructor() {
+    this.todos = [];
+  }
+
+  addTodo(todo) {
+    this.todos.push(todo);
+  }
+
+  notCompletedTodos() {
+    return this.todos.filter((todo) => !todo.completed);
+  }
+}
+
+export default TodosService;
+```
+
+We need to let Angular know of our service now.
+
+```js
+import angular from 'angular'
+
+import PeopleCountCtrl from './header/people_count.controller';
+
+import PeopleCtrl from './people/people.controller';
+import PeopleService from './people/people.service';
+
+import TodoListCtrl from './todos/todolist.controller';
+import TodosService from './todos/todos.service';
+
+angular.module('todoApp', [])
+  .service('TodosService', TodosService)
+  .service('PeopleService', PeopleService)
+  .controller('PeopleCtrl', PeopleCtrl)
+  .controller('TodoListCtrl', TodoListCtrl)
+  .controller('PeopleCountCtrl', PeopleCountCtrl);
+```
+
+With this service, we will inject it into our TodosController:
+
+```js
+class TodoListCtrl {
+  constructor(todosSvc) {
+    this.todosSvc = todosSvc;
+    this.todoToAdd = '';
+    this.todos = [];
+  }
+
+  addTodo(todoText) {
+    const todo = {
       completed: false,
-      text: this.todoToAdd
-    })
-    .then((res) => {
-      person.todos.push(res.data);
-      this.todoToAdd = '';
-    })
-    .catch((err) => {
-      throw err;
-    });
-  };
-}
-```
-
-If you have everything wired up correctly, when you reload the page you should see your message in the console. 🌱🐔 <-- That's a vegetable turkey!
-
-The `addTodo` method is making an http request to our API. That sounds prime for some.. re-factorying
-
-![please clap](https://media.giphy.com/media/l0NwPo3VHujpJDI4w/giphy.gif)
-
-Now that we know it's working let's replace that `test` method with an `addTodo` method. You can go ahead and just pull all the code from the `addTodo` method in your controller for this. We'll be changing just a couple things.
-  * it will now also take the `todoText` as a second parameter.
-  * at the top of our `services.js` file create a const pointing at the server url.
-  * in the *then* we will get rid of the `push` to `res.data` and just return the response data instead.
-  * inject `$http` into our service.
-
-
-```js
-(function() {
-  'use strict';
-
-  const app = angular.module('todoApp');
-  const server = 'https://galvanize-todos.herokuapp.com/is-persons';
-
-  app.factory('personTodos', personTodos);
-  personTodos.$inject = ['$http'];
-
-  function personTodos($http) {
-    return {
-      addTodo: (person, todoText) => {
-        return $http.post(`${server}/${person.id}/is-todos`, {
-          completed: false,
-          text: todoText
-        })
-        .then((res) => {
-          return res.data;
-        })
-        .catch((err) => {
-          throw err;
-        });
-      },
-    }
-  };
-
-})();
-```
-
-In our controller we will want to make a few changes as well.
-  * our controller will no longer need `$http` injected into it.
-  * we can swap out that `$http.post` request with a call to our factory
-    method instead.
-  * update our *then* push the `todo` and clear text in `todoToAdd`.
-
-```js
-function TodoListCtrl('personTodos') {
-  this.todoToAdd = '';
-  this.todos = [];
-
-  this.addTodo = (person) => {
-    personTodos.addTodo(person, this.todoToAdd)
-      .then((todo) => {
-        person.todos.push(todo);
-        this.todoToAdd = '';
-      })
-      .catch((err) => {
-        throw err;
-      });
-  };
-}
-```
-
-Should be good to go. Let's test out adding a todo.
-
-Moving on to the next controller, `PeopleCtrl`. The first thing we have
-in there that can be refactored into our factory is the `addPerson`
-funciton. We can start off by creating a new factory called `people` in
-our `services.js` file.
-
-```js
-app.factory('people', people);
-
-function people() {
-  return {
-    addPerson: () => {
-      console.log('things and stuff');
-    }
-  }
-}
-```
-
-We won't be needing `$http` in our controller anymore so let's swap that
-out for our `people` factory.
-
-```js
-PeopleCtrl.$inject = ['people'] // people in $http out
-
-function PeopleCtrl(peopleSvc) {
-  this.nameToAdd = '';
-  this.people = [];
-
-  peopleSvc.addPerson() // should log out our stuffs!
-
-  // more codez...
-}
-```
-
-With that all wired up, we can move on to pulling the code from our
-controllers `addPerson` and paste it into our factory.
-  * inject `$http` into our factory.
-  * provide a `name` parameter for our method.
-  * we will want to return our `$http` request.
-  * we can swap out `this.nameToAdd` with the one that gets passed in.
-  * we will fully update our promise handler.
-    * create a person constant set to `res.data`.
-    * create a `todos` property on person set to an emptry array.
-    * then return `person`.
-
-```js
-const server = 'https://galvanize-todos.herokuapp.com/is-persons';
-
-app.factory('people', people);
-people.$inject = ['$http'];
-
-function people($http) {
-  return {
-    addPerson: (name) => {
-      return $http.post(server, { name })
-        .then((res) => {
-          const person = res.data;
-          person.todos = [];
-          return person;
-        })
-        .catch((err) => {
-          throw err;
-        });
-    }
-  }
-}
-```
-
-Annnnnd, back to the controller...
-  * replace the `$http` request with our factory method.
-  * pass the `nameToAdd` to our method.
-  * update our `people` array with our new `person`.
-  * clear the `nameToAdd` field.
-
-```js
-function PeopleCtrl(peopleSvc) {
-  this.nameToAdd = '';
-  this.people = [];
-
-  this.addPerson = () => {
-    peopleSvc.addPerson(this.nameToAdd)
-      .then((person) => {
-        this.people.push(person);
-        this.nameToAdd = '';
-      })
-      .catch((err) => {
-        throw err;
-      });
-  }
-}
-```
-
-These next two `activate` functions are a bit heafty so we're just going to drop all the code
-at once and walk through it together.
-
-> `getPerson` method for `PersonCtrl`'s `activate` call.
-
-```js
-// services.js
-
-function people($http)  {
-  return {
-    addPerson: (name) => {
-      // codez...
-    },
-    getPerson: (id) => {
-      let person;
-
-      return $http.get(`${server}/${id}`)
-        .then((res) => {
-          person = res.data;
-
-          return $http.get(`${server}/${id}/is-todos`);
-        })
-        .then((res) => {
-          person.todos = res.data;
-          return person;
-        })
-        .catch((err) => {
-          throw err;
-        });
-    },
-  }
-}
-```
-
-```js
-// controllers.js
-
-PersonCtrl.$inject = ['$routeParams', 'people']; // no more $http, and added people
-
-function PersonCtrl($routeParams, peopleSvc) {
-    this.person = {};
-
-    const { id } = $routeParams;
-
-    const activate = () => {
-      peopleSvc.getPerson(id).then((person) => {
-        this.person = person;
-      })
-      .catch((err) => {
-        throw err;
-      });
+      text: todoText
     };
 
-    activate();
-  }
-```
-
-> `getAll` method for `PeopleCtrl`'s `activate` call.
-
-```js
-// services.js
-
-people.$inject = ['$http', '$q']; // added the $q promise service
-
-function people($http, $q) {
-  return {
-    getAll: function() {
-      return $http.get(server).then((res) => {
-        return $q.all(res.data.map((person) => {
-          return $http.get(`${server}/${person.id}/is-todos`)
-            .then((todos) => {
-              person.todos = todos.data;
-              return person;
-            })
-            .catch((err) => {
-              throw err;
-            });
-        }));
-      })
-      .catch((err) => {
-        throw err;
-      });
-    },
-    addPerson: (name) => {
-      // codez...
-    },
-    getPerson: (id) => {
-      // codez...
-    },
+    this.todos.push(todo);
+    this.todosSvc.addTodo(todo);
+    this.todoToAdd = '';
   }
 }
+
+TodoListCtrl.$inject = ['TodosService'];
+
+export default TodoListCtrl;
 ```
 
+In this case, we still track the todos in the `TodoListCtrl`, but we also add the todo in the service as well. This helps the service track all of the todos for use in a counter.
+
+Let's now create our counter.
+
+```shell
+touch app/header/todos_count.controller.js
+```
+
+In the JS file:
+
 ```js
-// controllers.js
+class TodosCountCtrl {
+  constructor(todosSvc) {
+    this.todosSvc = todosSvc;
+  }
 
-function PeopleCtrl(peopleSvc) {
-  this.nameToAdd = '';
-  this.people = [];
-
-  this.addPerson = () => {
-    // codez...
-  };
-
-  const activate = () => {
-    peopleSvc.getAll().then((peopleList) => {
-      this.people = peopleList;
-    })
-    .catch((err) => {
-      throw err;
-    })
-  };
-
-  activate();
+  notCompletedCount() {
+    return this.todosSvc.notCompletedTodos().length
+  }
 }
+
+TodosCountCtrl.$inject = ['TodosService'];
+
+export default TodosCountCtrl;
+```
+
+Add it into our `app.js`.
+
+```js
+import angular from 'angular'
+
+import TodosCountCtrl from './header/todos_count.controller';
+import PeopleCountCtrl from './header/people_count.controller';
+
+import PeopleCtrl from './people/people.controller';
+import PeopleService from './people/people.service';
+
+import TodoListCtrl from './todos/todolist.controller';
+import TodosService from './todos/todos.service';
+
+angular.module('todoApp', [])
+  .service('TodosService', TodosService)
+  .service('PeopleService', PeopleService)
+  .controller('PeopleCtrl', PeopleCtrl)
+  .controller('TodoListCtrl', TodoListCtrl)
+  .controller('TodosCountCtrl', TodosCountCtrl)
+  .controller('PeopleCountCtrl', PeopleCountCtrl);
+```
+
+Lastly, let's incorporate it into our header.
+
+```html
+<header>
+  <h1>My ToDo List</h1>
+  <h2 ng-controller="TodosCountCtrl as todosCountCtrl">Todos Left: {{ todosCountCtrl.notCompletedCount() }}</h2>
+  <h3 ng-controller="PeopleCountCtrl as peopleCountCtrl">Number of people in system: {{ peopleCountCtrl.peopleCount() }}</h3>
+</header>
 ```
 
 ### Resources
