@@ -391,7 +391,7 @@ Lastly, let's incorporate it into our header.
 
 ### Resources
 
-[Singleton Wiki](https://en.wikipedia.org/wiki/Singleton_pattern)
+[Singleton Pattern Article on Wikipedia](https://en.wikipedia.org/wiki/Singleton_pattern)
 
 [Putting Angular Code in the Right Place](http://datamelon.io/blog/2016/putting-angular-code-in-the-right-place.html)
 
