@@ -109,6 +109,85 @@ Write down in your own words what is the difference between a factory service an
 
 ## Creating our first Service
 
+We are going to continue with our example from yesterday with our todo list. Let's suppose we want to keep a counter at the top of the page that manages the number of people in out todo list system. This part of our webpage is separate from our people list and todo list, so we will need to create a new controller for this piece of our webpage. We now have _two_ controllers that rely on the same information, people. In this case it's time to create the people service.
+
+Create a file for the service in the `people` directory.
+
+```shell
+touch app/people/people.service.js
+```
+
+Inside the service, type the following code:
+
+```js
+class PeopleService {
+  constructor() {
+    this.people = [];
+  }
+
+  addPerson(personName) {
+    this.people.push({ name: personName });
+  }
+}
+
+export default PeopleService;
+```
+
+At first glance, it seems very similar to the People Controller we built yesterday. Now that the people information is stored in the people service, the People Controller needs to be changed. Let's import this service into our `app.js`.
+
+```js
+import angular from 'angular'
+
+import PeopleCtrl from './people/people.controller';
+import PeopleService from './people/people.service';
+
+import TodoListCtrl from './todos/todolist.controller';
+
+angular.module('todoApp', [])
+  .service('PeopleService', PeopleService)
+  .controller('PeopleCtrl', PeopleCtrl)
+  .controller('TodoListCtrl', TodoListCtrl);
+```
+
+We have now given the service a name in the Angular module. Let's modify the People Controller to use this service. In `app/people/people.controller.js`
+
+```js
+class PeopleCtrl {
+  constructor(peopleSvc) {
+    this.peopleSvc = peopleSvc;
+    this.nameToAdd = '';
+  }
+
+  addPerson(personName) {
+    this.peopleSvc.addPerson(personName);
+    this.nameToAdd = '';
+  }
+
+  people() {
+    return this.peopleSvc.people;
+  }
+}
+
+PeopleCtrl.$inject = ['PeopleService'];
+
+export default PeopleCtrl;
+```
+
+Notice a few things:
+
+* The constructor takes in an argument. This is the singleton that the service provides. We save that service in the instance with `this.peopleSvc = peopleSvc;`
+* We used the service's `addPerson` method in the controller's `addPerson` method.
+* We get access to the people with a `people()` method, which returns the people stored in the service.
+* Lastly, we **inject** the PeopleService into the controller with `PeopleCtrl.$inject = ['PeopleService'];` This is how we can include the service into the constructor at the top. Note that the array contains a string with the name of the service. This is the same name as defined in the `app.js` file. This process is called **dependency injection**.
+
+Create a new folder to represent the header of the page for these counters and initialize the controllers for the people counter.
+
+```shell
+mkdir app/header
+touch app/header/people_count.controller.js
+```
+
+
 We are going to start off by creating a `service.js` file to define our service in. While we're at it, let's not forget to throw a script for it in our `index.html` file... `<script src="services.js"></script>`
 
 Remember from above that one of the reasons we use services is seperation of concerns, so creating a new file for it makes sense.
