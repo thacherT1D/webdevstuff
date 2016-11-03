@@ -147,7 +147,7 @@ import PeopleService from './people/people.service';
 import TodoListCtrl from './todos/todolist.controller';
 
 angular.module('todoApp', [])
-  .service('PeopleService', PeopleService)
+  .service('peopleService', PeopleService)
   .controller('PeopleCtrl', PeopleCtrl)
   .controller('TodoListCtrl', TodoListCtrl);
 ```
@@ -237,7 +237,7 @@ import PeopleService from './people/people.service';
 import TodoListCtrl from './todos/todolist.controller';
 
 angular.module('todoApp', [])
-  .service('PeopleService', PeopleService)
+  .service('peopleService', PeopleService)
   .controller('PeopleCtrl', PeopleCtrl)
   .controller('TodoListCtrl', TodoListCtrl)
   .controller('PeopleCountCtrl', PeopleCountCtrl);
@@ -296,8 +296,8 @@ import TodoListCtrl from './todos/todolist.controller';
 import TodosService from './todos/todos.service';
 
 angular.module('todoApp', [])
-  .service('TodosService', TodosService)
-  .service('PeopleService', PeopleService)
+  .service('todosService', TodosService)
+  .service('peopleService', PeopleService)
   .controller('PeopleCtrl', PeopleCtrl)
   .controller('TodoListCtrl', TodoListCtrl)
   .controller('PeopleCountCtrl', PeopleCountCtrl);
@@ -371,8 +371,8 @@ import TodoListCtrl from './todos/todolist.controller';
 import TodosService from './todos/todos.service';
 
 angular.module('todoApp', [])
-  .service('TodosService', TodosService)
-  .service('PeopleService', PeopleService)
+  .service('todosService', TodosService)
+  .service('peopleService', PeopleService)
   .controller('PeopleCtrl', PeopleCtrl)
   .controller('TodoListCtrl', TodoListCtrl)
   .controller('TodosCountCtrl', TodosCountCtrl)
@@ -390,8 +390,6 @@ Lastly, let's incorporate it into our header.
 ```
 
 ### Resources
-
-[Singleton Design Pattern](http://robdodson.me/javascript-design-patterns-singleton/)
 
 [Singleton Wiki](https://en.wikipedia.org/wiki/Singleton_pattern)
 
