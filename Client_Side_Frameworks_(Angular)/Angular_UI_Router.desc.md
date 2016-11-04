@@ -25,11 +25,11 @@ For more detail on this choice check out this article: [Why UI Router?](http://w
 In your own words write down the differences between ngRoute and uiRouter. After two minutes, your instructor will cold call on the class to ask what you wrote.
 
 ## Building a basic angular app with uiRouter
-Get started with this repo:
+Get started with this repo: https://github.com/thacherT1D/hello-ui-router
 
 This repo is based on the hello-angular repo with brunch, so our setup is the same -- Fork, clone, install the dependencies and get it running:
 ```sh
-cd hello-uiRouter-student
+cd hello-uiRouter
 npm install
 npm start
 ```
