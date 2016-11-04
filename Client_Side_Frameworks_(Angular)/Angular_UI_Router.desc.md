@@ -1,33 +1,38 @@
 ## Objectives
 
 * Explain how routing is used in Angular applications
-* Define ngRoute and uiRouter
-* Explain the differences between ngRoute and uiRouter
+* Explain what is uiRouter.
 * Build a basic angular app using uiRouter
 * Use ng-include to modularize your nav and footer
 
 ## Routing in Angular
-Similar to the routing we have already learned in Q2, routing in Angular serves to connect views together both with other views and with your controllers and services.
 
-## What is ngRoute
-ngRoute is the routing module built by Angular that provides routing and deeplinking services and directives for angular applications. Even though ngRoute was built by Angular,
-It is not automatically included with an Angular build. When using ngRoute you need to import it in your app.js file just as you import any other dependency.
+Similar to the routing we have already learned in Q2, Angular provides a mechanism to associate a route (a URL in the browser) to a specific view. The key difference is that Angular routing does not require a request to the server to redisplay the page, which completes our ability to convert a multi-application to a single-page application.
 
-## What is uiRouter
-uiRouter is a third party built routing solution for angular. uiRouter was built to provide routing capabilities above and beyond ngRoute. The two main advantages of uiRouter are that it enables multiple views and nested views.
+## What is ngRoute?
 
-## Why are we learning uiRouter?
+ngRoute is the routing module built by Angular that provides routing through its own set of services and directives for angular applications. Even though ngRoute was built by Angular,
+It is not automatically included with an Angular build. When using ngRoute you need to import it in your app.js file just as you import any other dependency. We are in favor using a third-party library called uiRouter, but if you are interested in exploring ngRoute, we recommend starting at its [documentation page](https://docs.angularjs.org/api/ngRoute).
+
+## What is uiRouter?
+
+uiRouter is a third party built routing solution for Angular. uiRouter was built to provide routing capabilities above and beyond ngRoute. The main advantage of uiRouter is its ability to associate nested views to different routes (that is views within views).
+
+### Why are we learning uiRouter?
+
 The advantages of being able to use multiple views on a single-page and being able to nest views make developing more complex designs easier and without the need to build as many work-arounds to meet desired design specs.
 
 For more detail on this choice check out this article: [Why UI Router?](http://www.funnyant.com/angularjs-ui-router/)
 
 ### Exercise
-In your own words write down the differences between ngRoute and uiRouter. After two minutes, your instructor will cold call on the class to ask what you wrote.
+In your own words write down what is uiRouter and why we are using it. After a minute, your instructor will cold call on the class to ask what you wrote.
 
 ## Building a basic angular app with uiRouter
+
 Get started with this repo:
 
 This repo is based on the hello-angular repo with brunch, so our setup is the same -- Fork, clone, install the dependencies and get it running:
+
 ```sh
 cd hello-uiRouter
 npm install
@@ -61,14 +66,14 @@ Then create an html file for your home view:
 touch app/assets/views/home.html
 ```
 Replace the <main> section from your index.html file with the following:
-```js
+```html
 
 <div ui-view><div>
 
 ```
 Add the following to your home.html file
 
-```js
+```html
 
 <div class="container">
   <h1>Hello World</h1>
@@ -76,7 +81,6 @@ Add the following to your home.html file
 </div>
 
 ```
-
 
 Then create an html file for your Diagon Alley view:
 ```sh
@@ -103,6 +107,7 @@ Let's add to our diagonalley.html:
 
 
 ### Splitting out our nav and footer
+
 Create nav.html and footer.html file within the views folder:
 ```sh
 touch assets/templates/nav.html
@@ -116,9 +121,7 @@ Then in the index.html put this line where the code for your nav bar was:
 ```
 ```
 <footer ng-include="'templates/footer.html'"></footer>
-
 ```
-
 
 ## Assignment
 
