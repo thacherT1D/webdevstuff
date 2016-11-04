@@ -57,27 +57,12 @@ ReactDOM.render(
 );
 ```
 
-## How do you use Ryan Sobol's Brunch application skeleton with Material-UI?
+## What are important Material UI Components?
 
-To start off with, create a new project that includes React, Brunch, and Material-UI and installs all of its dependencies.
-
-```shell
-brunch new path/to/app --skeleton ryansobol/with-react-material
-```
-
-Watch the project for changes and launch an HTTP server.
-
-```shell
-npm start
-```
-
-Open the application in your default browser.
-
-```shell
-open http://localhost:8000/
-```
-
-## Material UI Components
+Before we create an app with Material UI, let's get to know its components. There are three types of components that Material UI uses:
+1. Layout components
+1. Navigation components
+1. Data input components
 
 ### Layout Components
 
@@ -101,7 +86,7 @@ open http://localhost:8000/
 
 #### `AppBar`
 
-### Form Components
+### Data Input Components
 
 #### `TextField`
 
@@ -116,6 +101,148 @@ open http://localhost:8000/
 #### `DatePicker`
 
 #### `RaisedButton`
+
+Check out the sample app here:
+
+`App.jsx`
+
+```jsx
+import RaisedButton from 'material-ui/RaisedButton';
+import Paper from 'material-ui/Paper';
+import Card from 'material-ui/Card';
+import FirstPage from './FirstPage';
+import SecondPage from './SecondPage';
+import Drawer from 'material-ui/Drawer';
+import MenuItem from 'material-ui/MenuItem';
+import Toolbar from 'material-ui/Toolbar';
+import {Tabs, Tab} from 'material-ui/Tabs';
+import React from 'react';
+
+const App = React.createClass({
+  getInitialState(){
+    return {
+      open: false
+    }
+  },
+  handleToggle(){
+    this.setState({open: !this.state.open})
+  },
+  handleClose(){
+    this.setState({open: false})
+  },
+  render() {
+    const stylePaper = {
+      padding: '0px',
+      margin: '0px'
+    };
+    return (
+      <Paper style={stylePaper}>
+        <Toolbar style={{padding: '0', height: '100%', width: '100%'}}>
+          <Tabs style={{width: '100%'}}>
+            <Tab label="Tab One" value={0} />
+            <Tab label="Tab Two" value={1} />
+            <Tab label="Tab Three" value={2} />
+          </Tabs>
+        </Toolbar>
+        <FirstPage></FirstPage>
+      </Paper>
+    )
+  }
+});
+```
+
+`FirstPage.jsx`
+
+```jsx
+import Slider from 'material-ui/Slider'
+import {RadioButton, RadioButtonGroup} from 'material-ui/RadioButton'
+import DatePicker from 'material-ui/DatePicker'
+import React from 'react'
+
+// const stylesFirstPage = {
+//   radioButton: {
+//     display: inline
+//   }
+// }
+
+const FirstPage = React.createClass({
+  getInitialState(){
+    return {
+      sliderValue: 3,
+      radioValue: null,
+      dateValue: {
+        toLocaleDateString(){
+          return 'zilch'
+        }
+      }
+    }
+  },
+  sliderChangeFunc(evt, val){
+    this.setState({sliderValue: val})
+  },
+  radioChangeFunc(evt, val){
+    this.setState({radioValue: val})
+  },
+  dateChangeFunc(ne, date){
+    this.setState({dateValue: date})
+  },
+  render(){
+    return <div id="firstPage">
+      Use the slider below to answer the following question: on a scale of 1-5, how do you like this page? Current Answer: {this.state.sliderValue}
+      <Slider
+        min={1}
+        max={5}
+        step={1}
+        defaultValue={this.state.sliderValue}
+        onChange={this.sliderChangeFunc}
+      />
+
+      Are you excited about answering this question? Current Answer: {this.state.radioValue || 'Nothing yet'}
+      {/* How do I separate the RadioButtonGroup into a separate element without breaking it? Ugh, by passing it back up the DOM chain */}
+      <RadioButtonGroup name="yesNo" onChange={this.radioChangeFunc}>
+        <RadioButton
+          value="yes"
+          label="Yes"
+        />
+        <RadioButton
+          value="no"
+          label="No"
+        />
+      </RadioButtonGroup>
+
+      This is the latest date selection... Current Answer: {this.state.dateValue.toLocaleDateString()}
+      {/* for DatePicker, hintText (or floatingLabelText or id) is necessary to avoid a warning */}
+      <DatePicker
+        onChange={this.dateChangeFunc}
+        hintText={'Pick a date'}
+      />
+
+    </div>
+  }
+})
+
+export default FirstPage
+```
+
+## How do you use Ryan Sobol's Brunch application skeleton with Material-UI?
+
+To start off with, create a new project that includes React, Brunch, and Material-UI and installs all of its dependencies.
+
+```shell
+brunch new path/to/app --skeleton ryansobol/with-react-material
+```
+
+Watch the project for changes and launch an HTTP server.
+
+```shell
+npm start
+```
+
+Open the application in your default browser.
+
+```shell
+open http://localhost:8000/
+```
 
 ## Assignment
 
