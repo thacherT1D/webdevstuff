@@ -87,13 +87,15 @@ open http://localhost:8000/
 
 #### `GridList`
 
+#### `MenuItem`
+
 ### Navigation Components
 
 #### `AppBar`
 
 #### `Tab` & `Tabs`
 
-#### `Menu` & `MenuItem`
+#### `Menu`
 
 #### `Drawer`
 
@@ -101,7 +103,7 @@ open http://localhost:8000/
 
 #### `TextField`
 
-#### `SelectField` & `MenuItem`
+#### `SelectField`
 
 #### `RadioButton`
 
