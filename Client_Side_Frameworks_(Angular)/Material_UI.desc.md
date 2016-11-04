@@ -2,7 +2,9 @@
 
 - Explain what Material UI is
 - Explain why Material UI is important
+- Describe Material UI's main layout, navigation, and form components
 - Use Material UI to build a React user interface
+- Use Inline Styling to modify the look of a React user interface
 
 ## What's Material UI?
 
@@ -74,6 +76,42 @@ Open the application in your default browser.
 ```shell
 open http://localhost:8000/
 ```
+
+## Material UI Components
+
+### Layout Components
+
+#### `Card`
+
+#### `Paper`
+
+#### `GridList`
+
+### Navigation Components
+
+#### `AppBar`
+
+#### `Tab` & `Tabs`
+
+#### `Menu` & `MenuItem`
+
+#### `Drawer`
+
+### Form Components
+
+#### `TextField`
+
+#### `SelectField` & `MenuItem`
+
+#### `RadioButton`
+
+#### `Checkbox`
+
+#### `Slider`
+
+#### `DatePicker`
+
+#### `RaisedButton`
 
 ## Assignment
 
