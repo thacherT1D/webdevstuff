@@ -91,8 +91,6 @@ open http://localhost:8000/
 
 ### Navigation Components
 
-#### `AppBar`
-
 #### `Tab` & `Tabs`
 
 #### `Menu`
@@ -100,6 +98,8 @@ open http://localhost:8000/
 #### `Drawer`
 
 #### `Toolbar`, `ToolbarGroup`, `ToolbarSeparator`, `ToolbarTitle`
+
+#### `AppBar`
 
 ### Form Components
 
