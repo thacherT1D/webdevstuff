@@ -1,45 +1,47 @@
 ## Objectives
 
-1. Explain what a custom directive is and why we would use it.
+* Explain what a custom directive.
+* Explain why a custom directive is useful.
+* Build a simple custom directive.
+* Explain how angular matches directives.
+* Explain isolate scope in directives and why they are useful.
+* Build an isolated scope directive.
 
-1. Build a simple custom directive.
+## What are custom directives?
 
-1. Explain how angular matches directives.
+Recall from our lesson lesson last week, a directive is marker on a DOM element that tell Angular to attach a specified behavior to that DOM element or even transform the DOM element and its children. We've seen many examples of built-in directives including the following:
 
-1. Explain isolate scope in directives and why they are useful.
+* ngRepeat - The ability to repeat DOM elements (and their children) for each item in an array (example: `ng-repeat="todo in todoListCtrl.todos()"`).
+* ngShow - The ability to show a DOM element if a condition is true. Otherwise, it will hide it. (example: `ng-show="authCtrl.isLoggedIn()"`).
+* ngClass - The ability to apply a class onto a DOM element should a condition be true. (example: `ng-class="{ selected: choiceCtrl.isSelected(item) }"`)
 
-1. Build an isolated scope directive.
+We have also built controllers which are designed to help define a behavior that your view (ie. the HTML) has access to. Using the above examples we see the controller provide the following information:
 
-## The What and Why of Custom Directives
+* The list of todos for the ngRepeat directive to iterate over
+* The state of a user being logged in or not so that we determine with ngShow whether to display the user information.
+* The ability to check whether an element should appear selected or not based on whether the item is actually selected.
 
-To begin this lesson, we shall start with some guiding questions:
+A custom directive combines these two ideas, that is, a custom directive allows the developer to provide a marker on a DOM node that is tied to the behavior of a specific controller. To put it another way, it's the ability to create a controller with access to the DOM element itself.
 
-1. What is a custom directive, and
-1. Why would we use one?
+### Exercise
 
-The angular docs describe directives as:
+Turn and talk to your neighbor and explain what is a custom directive. After a few minutes, your instructor will cold call on the class ask what you discussed.
 
-Markers on a DOM element (such as an attribute, element name, comment or CSS class) that tell AngularJS's HTML compiler ($compile) to attach a specified behavior to that DOM element (e.g. via event listeners), or even to transform the DOM element and its children.
+## Why are custom directives useful?
 
-So what does that mean?
+Put simply, directives are an easy way to create custom, _reusable_ components which alter and extend your HTML. They are very flexible and, as a result, very powerful. Because of this, custom directives can take a lot of time to become familiar with.
 
-In a line, that means that directives are an easy way to create custom, reusable components which alter and extend your HTML. They are very flexible and they are very powerful. Because of this, custom directives have many use cases.
+This flexibility can create many use cases. For example:
 
-Some examples:
-
-1. Any time we want to create a component that contains custom functionality and is used in different controllers, we can isolate the scope of the directive and use it everywhere as a standalone chunk.
-
-1. As an extension to templates, custom directives allow you to create template chunks of custom HTML.
-
-1. To manipulate the DOM. Directives allow us to manipulate the DOM on specified elements.
+* Any time we want to create a component that contains custom functionality and is used in different controllers, we can use it everywhere as a standalone view.
+* As an extension to templates, custom directives allow you to create common templates and reuse them.
+* To manipulate the DOM. Directives allow us to manipulate the DOM on specified elements.
 
 **Exercise**
 
-Spend 6 minutes reading through the angular docs on directives and determine 2 more use cases. Afterward you will discuss these use cases with your neighbor.
+Write down in your own words why a custom directive is useful. Think of a couple examples where a directive could be useful in your projects. After you are done, turn and talk to your neighbor to share your examples.
 
-The angular guide to directives is [here.](https://docs.angularjs.org/guide/directive)
-
-## A Simple Example of a Directive
+## How to build a simple directive.
 
 Let's take a look at a simple example of a directive before we go any further, there are 3 pieces, the directive view, the app.js, and the index.html:
 
