@@ -41,50 +41,127 @@ This flexibility can create many use cases. For example:
 
 Write down in your own words why a custom directive is useful. Think of a couple examples where a directive could be useful in your projects. After you are done, turn and talk to your neighbor to share your examples.
 
-## How to build a simple directive.
+## How to build a directive
 
-Let's take a look at a simple example of a directive before we go any further, there are 3 pieces, the directive view, the app.js, and the index.html:
+Let's begin in making a directive that allows us to reuse a specific template. To begin, let's create a new project.
 
-`app.js`:
+```shell
+brunch new directives-example --skeleton kmcgrady/with-angular
+```
+
+Let's then create a new folder in our `app` directory to store all of our directives. Although we usually group common functionality into folders, we'll create one folder to hold everything.
+
+```shell
+cd directives-example
+mkdir app/directives
+touch app/directives/angular-logo.directive.js
+```
+
+In our `app/directives/angular-logo.directive.js` file, write the following:
 
 ```javascript
-var app = angular.module('simpleDirectiveApp', [])
-app.directive('gsAngularLogo', function() {
+const angularLogo = function() {
   return {
-    templateUrl: 'simple-directive.html'
+    restrict: 'EA',
+    template: '<img src="https://lh6.googleusercontent.com/-TlY7amsfzPs/T9ZgLXXK1cI/AAAAAAABK-c/Ki-inmeYNKk/w749-h794/AngularJS-Shield-large.png" style="width: 200px; height: 212px;">'
   };
-});
+};
+
+export default angularLogo;
 ```
 
-`simple-directive.html` is our directive templateUrl referenced above, it is html and looks like this:
+To build a directive, your file needs to export the function that returns an object. This object above has the following keys:
 
-```html
-<img src="https://lh6.googleusercontent.com/-TlY7amsfzPs/T9ZgLXXK1cI/AAAAAAABK-c/Ki-inmeYNKk/w749-h794/AngularJS-Shield-large.png" />
+* `restrict` - This defines how the directive can be used. There are one of four types it could be:
+  * Element (E) - An HTML element.
+  * Attribute (A) - An HTML attribute.
+  * Class (C) - A CSS class (not recommended)
+  * Comment (M) - HTML comment (not recommended)
+* `template` - A string of HTML to use as the template.
+
+In this case, we allow the directive to be used as an HTML element as well as an attribute. We'll see in a minute how we can use it below. Next, we need to include it in our `app.js`, so that Angular JS knows how to use it.
+
+```javascript
+import angular from 'angular'
+
+import angularLogo from './directives/angular-logo.directive'
+
+angular.module('my-app', [])
+  .directive('gsAngularLogo', angularLogo);
 ```
-And our `index.html` would look like this:
+
+We register a directive in our Angular module using the `directive` function. That function takes in a name as well as the function we exported in our directive file. Note that the name is in camelCase and we prefix it with "gs". It is a common convention to define a common prefix for all of your custom directives. This avoids the risk of our directive names of colliding with other directives. We used "gs" to mean Galvanize School.
+
+Let's update the HTML in `app/assets/index.html` to use our directive as both an element and as an attribute.
 
 ```html
 <!DOCTYPE html>
-<html ng-app="simpleDirectiveApp">
-<head>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js" type="text/javascript"></script>
-  <script src="app.js" type="text/javascript"></script>
-</head>
-<body>
-  <gs-angular-logo></gs-angular-logo>
-</body>
+<html ng-app="my-app">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hello world</title>
+    <link rel="stylesheet" href="/vendor.css">
+    <link rel="stylesheet" href="/app.css">
+  </head>
+  <body>
+    <gs-angular-logo></gs-angular-logo>
+
+    <div gs-angular-logo></div>
+
+    <script src="/vendor.js"></script>
+    <script src="/app.js"></script>
+    <script>require('app');</script>
+  </body>
 </html>
 ```
 
 A few things to notice with our new custom directive:
 
-1. Our directive is called `gsAngularLogo` in our `app.js`but in the `index.html` we use it by calling it `gs-angular-logo` (This is called normalization).
+* Our directive is called `gsAngularLogo` in our `app.js`, but in the `index.html` we use it by calling it `gs-angular-logo`. Angular runs a process called **normalization** that converts the directive name from camelCase to kebab-case.
+* The first example uses the directive as an element, that is, the tag name is the name of our directive. The second example uses the directive as an attribute.
 
-1. We prefixed our directive name with gs (galvanize school).  According to the angular docs, adding a prefix is a best practice so that the chance of a name collision is minimized.
+Now run your server, ensure there are no errors, and open up your browser to `localhost:8000`:
 
-1. The built-in directives we've seen so far (`ngModel`, `ngClass`, `ngRepeat`, etc.) are called in the view by adding them as attributes of an html tag. <br /> For example: `<html ng-app="simpleDirectiveApp">`.  The `ng-app` directive is an attribute of the html tag. However here we name the element itself `<gs-angular-logo>`. We will learn that there are 4 ways to add a directive, though attributes and tag names are generally preferred.
+```shell
+npm start
+```
 
-1. The directive calls a function that returns an object with configuration key value pairs. This is a factory that is called when the directive is instantiated.
+You should see the following:
+
+![Angular JS Directive Example](http://i.imgur.com/H7lI8fq.png)
+
+### Template URLs
+
+We used the specific key, `template`, to define the HTML to be included. This may be nice for small amounts of HTML, but this can get very complex for larger amounts. In this case, we are allowed to create a file to store the HTML and access it in our directive. First, let's create the HTML file in a directory called `views`. It needs to live in our `assets` directory so that it can be copied over via brunch.
+
+```shell
+mkdir app/assets/views
+touch app/assets/views/angular-logo.html
+```
+
+Inside `app/assets/views/angular-logo.html`, copy over the template in our directive. There is no need to include any of the traditional boilerplate.
+
+```html
+<img src="https://lh6.googleusercontent.com/-TlY7amsfzPs/T9ZgLXXK1cI/AAAAAAABK-c/Ki-inmeYNKk/w749-h794/AngularJS-Shield-large.png" style="width: 200px; height: 212px;">
+```
+
+Next update our directive in `app/directives/angular-logo.directive.js`
+
+```javascript
+const angularLogo = function() {
+  return {
+    restrict: 'EA',
+    templateUrl: 'views/angular-logo.html'
+  };
+};
+
+export default angularLogo;
+```
+
+Ensure there are no errors in compilation and check for the update in the browser. You should see no changes. The only difference is in how the template is retrieved. Originally, the template was provided in the directive itself. Instead, it is included in a separate file. You can see the file being downloaded from your developer tools in your network tab.
+
+![Chrome Dev Tools Network Tab](http://i.imgur.com/iU7X2kV.png)
 
 **Exercise**
 
