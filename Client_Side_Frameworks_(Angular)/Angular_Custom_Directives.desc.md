@@ -3,7 +3,6 @@
 * Explain what a custom directive.
 * Explain why a custom directive is useful.
 * Build a simple custom directive.
-* Explain how angular matches directives.
 * Explain isolate scope in directives and why they are useful.
 * Build an isolated scope directive.
 
@@ -49,15 +48,15 @@ Let's begin in making a directive that allows us to reuse a specific template. T
 brunch new directives-example --skeleton kmcgrady/with-angular
 ```
 
-Let's then create a new folder in our `app` directory to store all of our directives. Although we usually group common functionality into folders, we'll create one folder to hold everything.
+Let's then create a new folder for our directive to display the angular logo in our `app` directory.
 
 ```shell
 cd directives-example
-mkdir app/directives
-touch app/directives/angular-logo.directive.js
+mkdir app/logo
+touch app/logo/angular-logo.directive.js
 ```
 
-In our `app/directives/angular-logo.directive.js` file, write the following:
+In our `app/logo/angular-logo.directive.js` file, write the following:
 
 ```javascript
 const angularLogo = function() {
@@ -163,245 +162,249 @@ Ensure there are no errors in compilation and check for the update in the browse
 
 ![Chrome Dev Tools Network Tab](http://i.imgur.com/iU7X2kV.png)
 
-**Exercise**
+## Directives And Controllers
 
-Take 11 minutes to build the following:
+As of now, we have created a directive that produces a view no matter what. We can also add the ability to bind it to a controller. We are going to work on an example that manages a single choice to a question. In this case, we have the ability to define it as selected or not.
 
-1. Create a folder named `angularLogoDirective` and create 3 files inside it `app.js`, `index.html`, and `logo-view.html`.
+Let's start with the view HTML. Create a file in `app/views/choice.html`.
 
-1. In app.js create an angular app named `logoDirectiveApp`, and add a directive named `gsLogoDirective` that references the logo-view.html
-
-1. In logo-view.html, add the following:
-```html
-<img src="http://www.galvanize.com/wp-content/themes/galvanize/img/galvanize-logo.svg" width="169px">
+```shell
+touch app/views/choice.html
 ```
 
-1. In index.html, create an html page that references your `ng-app="logoDirectiveApp"`, pulls in angular and then your app.js, and contains the following in the body:
+Inside the file, insert the following HTML.
 
 ```html
-<p>Element directive:</p>
-<gs-logo-directive></gs-logo-directive>
-<p>Attribute directive:</p>
-<div gs-logo-directive></div>
+<div class="choice" ng-class="{ selected: choiceCtrl.isSelected() }" ng-click="choiceCtrl.toggleSelected()">
+  I am a choice!
+</div>
 ```
 
-1. From the shell in the `angularLogoDirective` folder run `python -m SimpleHTTPServer 8080`
+We added some styling to this choice, specifically the class `choice` as well as `selected`. Let's add those styles into the `app/styles/index.css`.
 
-Congrats! You have just created and rendered a custom directive 2 times! Go to `localhost: 8080` and check out your 2 simple directives.
-
-If you still have time, add this:
-```html
-<p>Class directive:</p>
-<div class="gs-logo-directive"></div>
-```
-
-does it work? why or why might it not work? Explore the restrict option on the directive to learn how to make this load.
-
-**Note** There is a 4th way of matching directives using comments, however this approach is only for legacy apps. The preferred approach is using elements or attributes only.
-
-## Matching Directives
-
-As noted in the Angular docs, understanding what is going on under the hood is a crucial part of learning to work with directives, so we advise you to explore further with how Angular's HTML compiler determines how to use a given directive. Here we have the time for only a quick overview of normalization and directive types.
-
-#### Normalization
-
-The docs describe normalization as how:
-
-Angular **normalizes** an element's tag and attribute name to determine which elements match which directives. We typically refer to directives by their case-sensitive camelCase normalized name (e.g. ngModel). However, since HTML is case-insensitive, we refer to directives in the DOM by lower-case forms, typically using dash-delimited attributes on DOM elements (e.g. ng-model).
-
-#### Directive Types
-
-There are 4 basic directive types that `$compile` can match ($compile is a part of the angular nomalization process, if you are interested, it is a great subject for further exploration in the docs). We have already seen them, however again they are `Element`, `Attribute`, `Class name`, and `Comment`.
-
-Angular best practice is to prefer Element and Attribute forms of directives for all your needs.
-
-**Exercise**
-
-Turn to a neighbor and explain how angular matches directives.
-
-## Directives And Scope
-
-Let's add some data to a controller and see how it interacts with the directive.  In the following example, we'll show a yoyo's details in our directive:
-
-`app.js`:
-
-
-```js
-var app = angular.module('yoyoDirectiveApp', [])
-
-app.controller('YoyoController', YoyoCtrl);
-
-function YoyoCtrl(){
-  this.yoyo = {
-    name: 'Duncan Metal Drifter',
-    img: "http://www.toysrus.com/graphics/tru_prod_images/Duncan-Metal-Drifter-Pro-Yo-Yo--pTRU1-8444206dt.jpg"
-  }
+```css
+.choice {
+  width: 75%;
+  height: 200px;
+  border: 1px solid;
+  text-align: center;
+  line-height: 200px;
+  user-select: none;
 }
 
-app.directive('gsYoyoDetails', function() {
-  return {
-    templateUrl: 'yoyo-details.html',
-  };
-});
-```
-
-`yoyo-details.html`
-
-```html
-<h3>{{yoyo.name}}</h3>
-<img ng-src="{{yoyo.img}}">
-```
-
-`index.html`:
-
-```html
-<!DOCTYPE html>
-<html ng-app="yoyoDirectiveApp">
-<head>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js" type="text/javascript"></script>
-  <script src="app.js" type="text/javascript"></script>
-</head>
-<body ng-controller="YoyoController">
-  <gs-yoyo-details></gs-yoyo-details>
-</body>
-</html>
-```
-
-We can see here that the directive has access to the yoyo from the controller's scope.  By default, when a directive is placed inside of a controller, it will have access to everything on its parent controller's scope.
-
-**Exercise** add a `message` property to the `YoyoController`, then show the message both inside and outside of the directive.
-
-There are a couple of problems with this default behavior of the directive having access to everything in the parent's scope. For one, it's often not a good idea to have your directives so tightly coupled to your controller.  If you change the variable name in the  controller or try to use the directive again somewhere else, you may run into errors. Also, from a practical standpoint you may not want your directive to have access to all of the information in your controller. For example, if you have a list of yoyos and a custom directive governing the display of a yoyo's information, that directive only needs to know about one yoyo, not all of them.
-
-The solution to these problems involves creating an `isolate scope` for the directive. Before doing this, let's see what happens if we don't create an isolate scope.
-
-**Exercise** Change `this.yoyo` to `this.yoyos`, an array of yoyo objects. In your view, render each yoyo's information using your custom directive.
-
-Possible solution:
-
-`app.js`
-
-```js
-var app = angular.module('yoyoDirectiveApp', [])
-
-app.controller('YoyoController', YoyoCtrl);
-
-function YoyoCtrl(){
-  this.yoyos = [{
-    name: "Duncan Metal Drifter",
-    img: "http://www.toysrus.com/graphics/tru_prod_images/Duncan-Metal-Drifter-Pro-Yo-Yo--pTRU1-8444206dt.jpg"
-  }, {
-    name: "Duncan Hello Kitty Pro Yo yoyo",
-    img: "http://cdn6.bigcommerce.com/s-8ndhalpa/products/277/images/613/duncan-hello-kitty-pro-yo-yoyo-15__90815.1404161701.1280.1280.jpg"
-  }];
+.choice:hover {
+  width: 75%;
+  height: 200px;
+  border: 1px solid;
+  background-color: #ccc;
+  cursor: pointer;
 }
 
-app.directive('gsYoyoDetails', function() {
-  return {
-    templateUrl: 'yoyo-details.html',
-  };
-});
+.selected {
+  background-color: green;
+}
+
+.selected:hover {
+  background-color: green;
+}
 ```
 
-`index.html`
+Based on we defined the view, we expect there to be a controller named `choiceCtrl`. That controller will have the following methods:
 
-```html
-<!DOCTYPE html>
-<html lang="en" ng-app="yoyoApp">
-<head>
-  <meta charset="UTF-8">
-  <title>Document</title>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.js"></script>
-  <script src="./js/app.js"></script>
-</head>
-<body ng-controller="YoyoController">
-  <gs-yoyo-details ng-repeat="yoyo in yoyos"></gs-yoyo-details>
-</body>
-</html>
+* `isSelected()` - checking if the choice is selected or not.
+* `toggleSelected()` - changes the state of whether the choice is selected or not.
+
+With this in mind, let's create the controller. We'll create a directory to group all related files to a choice.
+
+```shell
+mkdir app/choice
+touch app/choice/choice.controller.js
 ```
 
-`yoyo-details.html`
-
-```html
-<h3>{{ yoyo.name }}</h3>
-<img ng-src="{{ yoyo.img }}">
-  ```
-## Isolate Scope
-
-When building a custom directive that you want to use in multiple controllers (which is basically all the time), you will want to uncouple the directive from the specific scope of the controller. We can create an isolate scope by using the `scope` option when we create our directive.
-
-This allows us to use a directive in a specific controller more than once, and allows us to use a directive wherever we want independent of the controller that it is residing inside.
-
-As you will see, this mirrors a component structure which is used in both Angular 2 and React to create standalone pieces of code that can be layered and connected to one another.
-
-Here's the basic syntax:
+Inside of the controller, we have the following:
 
 ```javascript
-app.directive('gsYoyoDetails', function() {
-  return {
-    templateUrl: '../yoyo-details.html',
-    scope: {
-      yoyoInDirective: '=yoyoAttribute'
-    }
+class ChoiceCtrl {
+  constructor() {
+    this.selected = false;
   }
-})
+
+  toggleSelected() {
+    this.selected = !this.selected;
+  }
+
+  isSelected() {
+    return this.selected;
+  }
+}
+
+export default ChoiceCtrl;
 ```
 
-If you refresh the page, you'll see that the yoyos have disappeared -- our app is broken! Let's take a moment to understand how isolate scope is working in this case, so that we can debug the issue.
+We then need to create the directive. It relies on the controller to manage its behavior, so we need to specify this.
 
-The value of `scope` must be an object. The keys in this object (e.g. `yoyoInDirective` correspond to how Angular expects you to name your data in the directive. In this case, since we used a key of `yoyoInDirective`, we should refactor our `yoyo-details.html` as follows:
+```shell
+touch app/choice/choice.directive.js
+```
+
+The directive will only be an element in this case.
+
+```javascript
+const choice = function() {
+  return {
+    restrict: 'E',
+    templateUrl: 'views/choice.html',
+    controller: 'ChoiceCtrl',
+    controllerAs: 'choiceCtrl'
+  };
+};
+
+export default choice;
+```
+
+Register the controller and the directive in `app/app.js`.
+
+```javascript
+import angular from 'angular'
+
+import angularLogo from './logo/angular-logo.directive'
+
+import choice from './choice/choice.directive.js'
+import ChoiceCtrl from './choice/choice.controller.js'
+
+angular.module('my-app', [])
+  .controller('ChoiceCtrl', ChoiceCtrl)
+  .directive('gsAngularLogo', angularLogo)
+  .directive('choice', choice);
+```
+
+There are two new keys in this object that the directive function returns:
+
+* `controller` - the name of the controller as (to be) defined
+* `controllerAs` - the name of the instance of the controller to be created. This will be similar to `ng-controller="controller as controllerAs"`
+
+Add a choice directive to our `app/assets/index.html`
 
 ```html
-<h3>{{ yoyoInDirective.name }}</h3>
-<img ng-src="{{ yoyoInDirective.img }}">
+<!DOCTYPE html>
+<html ng-app="my-app">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hello world</title>
+    <link rel="stylesheet" href="/vendor.css">
+    <link rel="stylesheet" href="/app.css">
+  </head>
+  <body>
+    <choice></choice>
+
+    <script src="/vendor.js"></script>
+    <script src="/app.js"></script>
+    <script>require('app');</script>
+  </body>
+</html>
 ```
 
-As you can see, the value corresponding to `yoyoDirective` is `'=yoyoAttribute'`. Let's ignore the equals sign for a moment (we'll get to it later). The 'yoyoAttribute' corresponds to an _attribute name_ that we must use when passing data from our controller to our directive. Passing data via attributes is how we get the parts of the scope that we care about into our directive.
+## Isolated Scope
 
-Let's just focus on that for a minute. Passing data via attributes is how we get parts of the scope that we care about into our directive.
-
-In the current example, this means we need to include an attribute so that our custom directive looks like this:
+Let's start with an example of adding multiple choices. Inside your `app/assets/index.html`, add the following:
 
 ```html
-<gs-yoyo-details yoyo-attribute="yoyo" ng-repeat="yoyo in view.yoyos"></gs-yoyo-details>
+<!DOCTYPE html>
+<html ng-app="my-app">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hello world</title>
+    <link rel="stylesheet" href="/vendor.css">
+    <link rel="stylesheet" href="/app.css">
+  </head>
+  <body>
+    <choice></choice>
+    <choice></choice>
+    <choice></choice>
+
+    <script src="/vendor.js"></script>
+    <script src="/app.js"></script>
+    <script>require('app');</script>
+  </body>
+</html>
 ```
 
-Let's change the placeholder name we're repeating over from `yoyo` to `yoyoFromRepeat`. Then our HTML would look like this:
+Once you save, check your browser and select only one choice. The rest of your choices appear highlighted as well. That doesn't quite make sense! The reason this is because the controller is shared across _all_ choices. To do that, we need to isolate the scope for each directive. Modify your directive in `app/choice/choice.directive.js`
+
+```javascript
+const choice = function() {
+  return {
+    restrict: 'E',
+    templateUrl: 'views/choice.html',
+    controller: 'ChoiceCtrl',
+    controllerAs: 'choiceCtrl',
+    scope: {}
+  };
+};
+
+export default choice;
+```
+
+By adding the key `scope` to the directive, we isolate the scope to each individual instance. This means that anything defined outside of its scope cannot be used inside. This is a recommended practice, and it is able to pass functionality from the outside scope inside (to be discussed soon).
+
+
+## Transclusion
+
+Currently, anything we put inside the choice element is erased and is replaced with the template specified. Let's see this by modifying our `app/assets/index.html`.
 
 ```html
-<gs-yoyo-details yoyo-attribute="yoyoFromRepeat" ng-repeat="yoyoFromRepeat in view.yoyos"></gs-yoyo-details>
+<!DOCTYPE html>
+<html ng-app="my-app">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hello world</title>
+    <link rel="stylesheet" href="/vendor.css">
+    <link rel="stylesheet" href="/app.css">
+  </head>
+  <body>
+    <choice>I am choice 1.</choice>
+    <choice>I am choice 2.</choice>
+    <choice>I am choice 3.</choice>
+
+    <script src="/vendor.js"></script>
+    <script src="/app.js"></script>
+    <script>require('app');</script>
+  </body>
+</html>
 ```
 
-So, how does data about an individual yoyo get passed from our controller to our directive?
+We can fix this by using **transclusion**, that is the ability to include elements within the directive into the view itself. We first need to allow transclusion in the directive. To do this, modify `app/choice/choice.directive.js`.
 
-1. We iterate over each `yoyo` in the controller's `yoyos` array, storing the data in `yoyoFromRepeat`.
+```javascript
+const choice = function() {
+  return {
+    restrict: 'E',
+    templateUrl: 'views/choice.html',
+    controller: 'ChoiceCtrl',
+    controllerAs: 'choiceCtrl',
+    scope: {},
+    transclude: true
+  };
+};
 
-1. Each `yoyoFromRepeat` gets passed into our custom directive via the `yoyo-attribute` attribute.
+export default choice;
+```
 
-1. In the html for our custom directive, we have access to `yoyoFromRepeat`'s data in `yoyoInDirective`. This condition is possible because we told our directive that `yoyoInDirective` should correspond to whatever we pass into the directive via the `yoyo-attribute` attribute.
+In addition, we need to modify our code to find the place to insert the text. We use another built-in directive called ngTransclude. Modify `app/assets/views/choice.html` to do the following:
 
-Of course, we've now got two different names for our data depending on where we are (`yoyoFromRepeat` and `yoyoInDirective`), plus a third name for the attribute on our directive. It's common to name all of these the same; the downside with this approach is that if we name everything `yoyo`, it's much less clear how the directive's isolate scope is connected to the controller's scope.
+```html
+<div class="choice" ng-class="{ selected: choiceCtrl.isSelected() }" ng-click="choiceCtrl.toggleSelected()">
+  <ng-transclude></ng-transclude>
+</div>
+```
 
-**Exercise** Fun fact: if in your scope you have a key and value with the same name (e.g. `foo: '=foo'`), you can omit the name in the value (e.g. `foo: '='`) and Angular will still know what to do! Use this to refactor your directive to use yoyo and '='.
-
-**Exercise** After completing the previous two exercises, try replacing one of the strings `yoyo` somewhere in your app with the string `foo`. Where else do you need to replace `yoyo` by `foo` to get your app working again?
+The ngTransclude directive defines the location to insert any children defined inside the directive.
 
 ## Extending Your Knowledge of Custom Directives
 
 Directives can do even more than what we have so far seen. Custom directives can be used to manipulate the DOM, to wrap other directives, to add event listeners to the DOM, to communicate across directives, and even more.
 
 Take some time and head back to the docs [here](https://docs.angularjs.org/guide/directive) to extend your understanding of custom directives.
-
-**EXERCISE / HOMEWORK**
-
-Create an app that uses the [pokemon api](http://pokeapi.co/docsv1/).  The app should first make a request to the [pokedex](http://pokeapi.co/docsv1/#pokedex) to get all possible pokemon.  Then randomly select 5 pokemon to display.  The app should display the pokemon's name, types, name of moves (limit it to 6), and a sprite for the pokemon. Use a custom directive to display the pokemon.
-
-The app should use a custom directive for each pokemon (eg `pokemon-item`).
-
-**Bonus**: For the pokemon fans out there, write an algorithm that randomly picks two pokemon and decide who would win.  I do not know anything about the pokemon game, so this would be up to you to figure out.
-
-![](http://s8.postimg.org/eo2kbbnb9/pokemon.png)
-
-**Exercise**
-
-Using everything you've learned about custom directives, refactor your Reddit clone to use them and clean up your HTML! Your refactor should use at least two custom directives: one for the add post form, and one for an individual post. If you want to push yourself, you should also add a custom directive for the comment area of a post, which should be nested inside of your custom post directive. You will need to jump into the documentation and learn about how to nest directives to solve this aspect of the assignment.
