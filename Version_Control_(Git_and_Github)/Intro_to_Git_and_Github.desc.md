@@ -1,16 +1,14 @@
-# Objectives
+## Objectives
 
-* Discuss what a Version Control System is and why you would use it
-* Describe what Git and Github are and how they differ
-* List the three primary parts of the Git flow
-* Initialize a git repository with `git init`
-* Stage new and changed files with `git add`
-* Check the status of changed files with `git status`
-* Commit staged files to the git repository with `git commit`
+- Discuss what a Version Control System is and why you would use it
+- Describe what Git and Github are and how they differ
+- List the three primary parts of the Git flow
+- Initialize a git repository with `git init`
+- Stage new and changed files with `git add`
+- Check the status of changed files with `git status`
+- Commit staged files to the git repository with `git commit`
 
-<hr>
-
-## What is a Version Control System?
+## What's a Version Control System?
 
 Version control is a class of tools that programmers use to manage software projects.
 It allows you to track changes you make to files on your machine.
