@@ -75,9 +75,9 @@ The additional view files have been setup for you, so let's focus on wiring them
       url: '/',
       templateUrl: 'views/home.html'
     })
-    .state('diagonalley', {
-      url: '/diagonalley',
-      templateUrl: 'views/diagonalley.html'
+    .state('shops', {
+      url: '/shops',
+      templateUrl: 'views/shops.html'
     })
     .state('user', {
       url: '/user',
@@ -98,7 +98,7 @@ The additional view files have been setup for you, so let's focus on wiring them
 In your `index.html` file change your nav bar links to use the ui-router convention of 'ui-sref' which links based on the name you have given to each state:
 ```html
       <li><a ui-sref="home">Home</a></li>
-      <li><a ui-sref="diagonalley">Diagon Alley</a></li>
+      <li><a ui-sref="shops">Shops</a></li>
       <li><a ui-sref="user.profile">User</a></li>
 ```
 
