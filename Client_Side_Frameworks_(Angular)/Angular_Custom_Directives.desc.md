@@ -166,10 +166,10 @@ Ensure there are no errors in compilation and check for the update in the browse
 
 As of now, we have created a directive that produces a view no matter what. We can also add the ability to bind it to a controller. We are going to work on an example that manages a single choice to a question. In this case, we have the ability to define it as selected or not.
 
-Let's start with the view HTML. Create a file in `app/views/choice.html`.
+Let's start with the view HTML. Create a file in `app/assets/views/choice.html`.
 
 ```shell
-touch app/views/choice.html
+touch app/assets/views/choice.html
 ```
 
 Inside the file, insert the following HTML.
