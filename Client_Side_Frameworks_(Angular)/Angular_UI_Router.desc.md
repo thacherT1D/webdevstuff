@@ -1,7 +1,7 @@
 ## Objectives
 
 * Explain how routing is used in Angular applications
-* Explain what is uiRouter.
+* Explain what uiRouter is
 * Build a basic angular app using uiRouter
 * Use ng-include to modularize your nav and footer
 
@@ -30,7 +30,7 @@ Get started with this repo: https://github.com/thacherT1D/hello-ui-router
 This repo is based on the hello-angular repo with brunch, so our setup is the same -- Fork, clone, install the dependencies and get it running:
 
 ```sh
-cd hello-uiRouter
+cd hello-ui-router
 npm install
 npm start
 ```
@@ -52,106 +52,24 @@ and then add `uiRouter` as a dependency to your angular module:
 angular.module('my-app', [angularMaterialize, uiRouter]);
 ```
 
-Open the app folder and look at the file structure to determine where you would want to put additional views.
+Open the app folder and look at the file structure to see how we are going to set up additional views.
 
-In your assets folder create a `views` directory:
-```sh
-mkdir app/assets/views
-```
-Then create an html file for your home view:
-```sh
-touch app/assets/views/home.html
-```
+First we are going to add ui-view to our `index.html` file.
+
 In `index.html`, replace the <main> section from your index.html file with the following:
 ```html
 <div class="container">
   <div ui-view></div>
 </div>
 ```
-Add the following to your `home.html` file
 
-```html
-
-<div>
-  <h1>Hello World</h1>
-  <p>and welcome to the Wizarding World</p>
-</div>
-
-```
-
-
-Then create an html file for your Diagon Alley view:
-```sh
-touch app/assets/views/diagonalley.html
-```
-
-Let's add to our `diagonalley.html`:
-```html
-<div>
-  <h1>Shops</h1>
-  <ul>
-    <li>Eeylops Owl Emporium</li>
-    <li>Florean Fortescue's Ice Cream Parlour</li>
-    <li>Flourish and Blotts</li>
-    <li>Gringotts Wizarding Bank</li>
-    <li>Madam Malkin's Robes for All Occasions</li>
-    <li>Magical Menagerie</li>
-    <li>Ollivanders</li>
-    <li>Quality Quidditch Supplies</li>
-    <li>Rosa Lee Teabag</li>
-  </ul>
-</div>
-```
-Next we're going to create our user views:
-```sh
-mkdir app/assets/views/user
-touch app/assets/views/user/account.html
-touch app/assets/views/user/profile.html
-touch app/assets/views/user/user.html
-```
-And then add the following text to them, respectively:
-`account.html`
-```html
-<div>
-  <h4>User Account</h4>
-  <p>
-    Boggarts lavender robes, Hermione Granger Fantastic Beasts and Where to Find Them. Bee in your bonnet Hand of Glory elder wand, spectacles House Cup Bertie Bott’s Every Flavor Beans Impedimenta. Stunning spells tap-dancing spider Slytherin’s Heir mewing kittens Remus Lupin. Palominos scarlet train black robes, Metamorphimagus Niffler dead easy second bedroom. Padma and Parvati Sorting Hat Minister of Magic blue turban remember my last.
-  </p>
-</div>
-```
-`profile.html`
-```html
-<div>
-  <h4>User Profile</h4>
-  <p>
-    Half-giant jinxes peg-leg gillywater broken glasses large black dog Great Hall. Nearly-Headless Nick now string them together, and answer me this, which creature would you be unwilling to kiss? Poltergeist sticking charm, troll umbrella stand flying cars golden locket Lily Potter. Pumpkin juice Trevor wave your wand out glass orbs, a Grim knitted hats. Stan Shunpike doe patronus, suck his soul Muggle-Born large order of drills the trace. Bred in captivity fell through the veil, quaffle blue flame ickle diddykins Aragog. Yer a wizard, Harry Doxycide the woes of Mrs. Weasley Goblet of Fire.
-  </p>
-</div>
-```
-
-`user.html`
-```html
-<div>
-  <h3>User Information</h3>
-  <p>An example of nested views</p>
-  <a class="waves-effect waves-light btn" ui-sref="user.profile">Show Profile</a>
-  <a class="waves-effect waves-light btn" ui-sref="user.account">Show Account</a>
-
-  <div ui-view></div>
-
-</div>
-```
-
-Now for the fun part... let's wire all of this together!
-Open your `app.js` file -- this a lot of code, so let's pause before adding it and talk through what it is going to do for us.
+The additional view files have been setup for you, so let's focus on wiring them together -- Open your `app.js` file -- this a lot of code, so let's pause before adding it and talk through what it is going to do for us.
 ```js
 .config(['$stateProvider', ($stateProvider) => {
   $stateProvider
     .state('home', {
       url: '',
-      templateUrl: 'views/home.html',
-      controller: 'HomeCtrl',
-      controllerAs: 'homeCtrl'
+      templateUrl: 'views/home.html'
     })
     .state('main', {
       url: '/',
@@ -177,7 +95,7 @@ Open your `app.js` file -- this a lot of code, so let's pause before adding it a
 }]);
 ```
 
-In your `index.html` file change your nav bar links to use ui-router:
+In your `index.html` file change your nav bar links to use the ui-router convention of 'ui-sref' which links based on the name you have given to each state:
 ```html
       <li><a ui-sref="home">Home</a></li>
       <li><a ui-sref="diagonalley">Diagon Alley</a></li>
@@ -187,21 +105,19 @@ In your `index.html` file change your nav bar links to use ui-router:
 We are now using uiRouter!
 
 ### Splitting out our nav and footer
-Another way to modularize your code is to spilt out pieces of your view, for example, your nav and footer. Here we are going to use ngInclude which is an angular built-in directive that fetches, compiles and includes an external HTML fragment. Let's start by creating nav.html and footer.html file within the views folder:
-```sh
-touch assets/templates/nav.html
-touch assets/templates/footer.html
-```
-Let's move our nav and footer into their respective files.
+Another way to modularize your code is to spilt out pieces of your view, for example, your nav and footer. Here we are going to use ngInclude which is an angular built-in directive that fetches, compiles and includes an external HTML fragment. Let's start by moving our nav and footer into their respective files.
 
-Then in the index.html put this line where the code for your nav bar was:
+Then in the index.html put these lines where the code for your nav and footer were:
 ```
-<header ng-include="'templates/nav.html'"></header>
+<header ng-include="'views/nav.html'"></header>
 ```
 ```
-<footer ng-include="'templates/footer.html'"></footer>
+<footer ng-include="'views/footer.html'"></footer>
 
 ```
+
+## Assignment
+Use uiRouter to turn your snapShop project into a true single page app.
 
 ## Resources
 
