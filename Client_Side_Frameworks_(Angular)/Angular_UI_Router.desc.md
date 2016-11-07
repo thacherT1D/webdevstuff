@@ -25,7 +25,7 @@ In your own words write down what is uiRouter and why we are using it. After a m
 
 ## Building a basic angular app with uiRouter
 
-Get started with this repo: https://github.com/thacherT1D/hello-ui-router
+Get started with this repo: https://github.com/gschool/hello-ui-router
 
 This repo is based on the hello-angular repo with brunch, so our setup is the same -- Fork, clone, install the dependencies and get it running:
 
