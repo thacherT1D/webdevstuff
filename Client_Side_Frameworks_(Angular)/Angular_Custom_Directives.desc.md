@@ -2,8 +2,8 @@
 
 * Explain what a custom directive.
 * Explain why a custom directive is useful.
-* Build a simple custom directive.
-* Explain isolate scope in directives and why they are useful.
+* Build a simple custom directive with a template.
+* Build a custom directive with a controller attached to it.
 * Build an isolated scope directive.
 
 ## What are custom directives?
@@ -305,6 +305,8 @@ Add a choice directive to our `app/assets/index.html`
 </html>
 ```
 
+![Choice Directive Example](http://i.imgur.com/dVMa32S.png)
+
 ## Isolated Scope
 
 Let's start with an example of adding multiple choices. Inside your `app/assets/index.html`, add the following:
@@ -331,7 +333,11 @@ Let's start with an example of adding multiple choices. Inside your `app/assets/
 </html>
 ```
 
-Once you save, check your browser and select only one choice. The rest of your choices appear highlighted as well. That doesn't quite make sense! The reason this is because the controller is shared across _all_ choices. To do that, we need to isolate the scope for each directive. Modify your directive in `app/choice/choice.directive.js`
+Once you save, check your browser and select only one choice. The rest of your choices appear highlighted as well. That doesn't quite make sense!
+
+![Multiple Choices Fail](http://i.imgur.com/KMObfqX.png)
+
+The reason this is because the controller is shared across _all_ choices. To do that, we need to isolate the scope for each directive. Modify your directive in `app/choice/choice.directive.js`
 
 ```javascript
 const choice = function() {
@@ -349,6 +355,7 @@ export default choice;
 
 By adding the key `scope` to the directive, we isolate the scope to each individual instance. This means that anything defined outside of its scope cannot be used inside. This is a recommended practice, and it is able to pass functionality from the outside scope inside (to be discussed soon).
 
+![Multiple Choices Success](http://i.imgur.com/fyDOCJ3.png)
 
 ## Transclusion
 
@@ -402,6 +409,8 @@ In addition, we need to modify our code to find the place to insert the text. We
 ```
 
 The ngTransclude directive defines the location to insert any children defined inside the directive.
+
+![Transclusion Example](http://i.imgur.com/mNSFfTy.png)
 
 ## Passing outer scope values into isolated scope
 
@@ -515,6 +524,8 @@ It's possible to set the variables to three different attributes:
 * `@` - Evaluates the attribute value as a pure string.
 * `=` - Evaluates the attribute value as an Angular expression to evaluate.
 * `&` - Evaluates the attribute value as an Angular expression that can later be invoked.
+
+![Isolated Scope](http://i.imgur.com/seKi60Z.png)
 
 ## Extending Your Knowledge of Custom Directives
 
