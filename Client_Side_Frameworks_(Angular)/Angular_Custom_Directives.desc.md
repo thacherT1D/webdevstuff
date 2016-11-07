@@ -83,7 +83,7 @@ In this case, we allow the directive to be used as an HTML element as well as an
 ```javascript
 import angular from 'angular'
 
-import angularLogo from './directives/angular-logo.directive'
+import angularLogo from './logo/angular-logo.directive'
 
 angular.module('my-app', [])
   .directive('gsAngularLogo', angularLogo);
