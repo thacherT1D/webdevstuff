@@ -275,7 +275,7 @@ import ChoiceCtrl from './choice/choice.controller.js'
 angular.module('my-app', [])
   .controller('ChoiceCtrl', ChoiceCtrl)
   .directive('gsAngularLogo', angularLogo)
-  .directive('choice', choice);
+  .directive('gsChoice', choice);
 ```
 
 There are two new keys in this object that the directive function returns:
@@ -296,7 +296,7 @@ Add a choice directive to our `app/assets/index.html`
     <link rel="stylesheet" href="/app.css">
   </head>
   <body>
-    <choice></choice>
+    <gs-choice></gs-choice>
 
     <script src="/vendor.js"></script>
     <script src="/app.js"></script>
@@ -322,9 +322,9 @@ Let's start with an example of adding multiple choices. Inside your `app/assets/
     <link rel="stylesheet" href="/app.css">
   </head>
   <body>
-    <choice></choice>
-    <choice></choice>
-    <choice></choice>
+    <gs-choice></gs-choice>
+    <gs-choice></gs-choice>
+    <gs-choice></gs-choice>
 
     <script src="/vendor.js"></script>
     <script src="/app.js"></script>
@@ -372,9 +372,9 @@ Currently, anything we put inside the choice element is erased and is replaced w
     <link rel="stylesheet" href="/app.css">
   </head>
   <body>
-    <choice>I am choice 1.</choice>
-    <choice>I am choice 2.</choice>
-    <choice>I am choice 3.</choice>
+    <gs-choice>I am choice 1.</gs-choice>
+    <gs-choice>I am choice 2.</gs-choice>
+    <gs-choice>I am choice 3.</gs-choice>
 
     <script src="/vendor.js"></script>
     <script src="/app.js"></script>
@@ -458,7 +458,7 @@ angular.module('my-app', [])
   .controller('ChoiceCtrl', ChoiceCtrl)
   .controller('MultiChoiceCtrl', MultiChoiceCtrl)
   .directive('gsAngularLogo', angularLogo)
-  .directive('choice', choice);
+  .directive('gsChoice', choice);
 ```
 
 Next update your `index.html` file to include the new controller.
@@ -475,7 +475,7 @@ Next update your `index.html` file to include the new controller.
   </head>
   <body>
     <div ng-controller="MultiChoiceCtrl as multiChoiceCtrl">
-      <choice ng-repeat="option in multiChoiceCtrl.options" value="option.value">{{ option.message }}</choice>
+      <gs-choice ng-repeat="option in multiChoiceCtrl.options" value="option.value">{{ option.message }}</gs-choice>
     </div>
 
     <script src="/vendor.js"></script>
