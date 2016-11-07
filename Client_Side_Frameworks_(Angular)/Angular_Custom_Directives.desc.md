@@ -403,6 +403,119 @@ In addition, we need to modify our code to find the place to insert the text. We
 
 The ngTransclude directive defines the location to insert any children defined inside the directive.
 
+## Passing outer scope values into isolated scope
+
+Outside of ngTransclude, there is another way to pass outer scope values into an isolated scope. We will accomplish this with an example. First we will create a controller that manages a set of choices.
+
+```shell
+mkdir app/multichoice
+touch app/multichoice/multichoice.controller.js
+```
+
+Inside the `app/multichoice/multichoice.controller.js`, include the following:
+
+```javascript
+class MultiChoiceCtrl {
+  constructor() {
+    this.options = [{
+      value: 'a',
+      message: 'I understand custom directives.'
+    }, {
+      value: 'b',
+      message: 'I do not understand custom directives.'
+    }, {
+      value: 'c',
+      message: 'I do not understand custom directives.'
+    }];
+  }
+}
+
+export default MultiChoiceCtrl;
+```
+
+Include it in your `app/app.js` file.
+
+```javascript
+import angular from 'angular'
+
+import angularLogo from './logo/angular-logo.directive'
+
+import choice from './choice/choice.directive.js'
+import ChoiceCtrl from './choice/choice.controller.js'
+
+import MultiChoiceCtrl from './multichoice/multichoice.controller.js'
+
+angular.module('my-app', [])
+  .controller('ChoiceCtrl', ChoiceCtrl)
+  .controller('MultiChoiceCtrl', MultiChoiceCtrl)
+  .directive('gsAngularLogo', angularLogo)
+  .directive('choice', choice);
+```
+
+Next update your `index.html` file to include the new controller.
+
+```html
+<!DOCTYPE html>
+<html ng-app="my-app">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hello world</title>
+    <link rel="stylesheet" href="/vendor.css">
+    <link rel="stylesheet" href="/app.css">
+  </head>
+  <body>
+    <div ng-controller="MultiChoiceCtrl as multiChoiceCtrl">
+      <choice ng-repeat="option in multiChoiceCtrl.options" value="option.value">{{ option.message }}</choice>
+    </div>
+
+    <script src="/vendor.js"></script>
+    <script src="/app.js"></script>
+    <script>require('app');</script>
+  </body>
+</html>
+```
+
+In this case, we are using ngRepeat to repeat through the set of choices. The choice element (referencing the directive) has a `value` attribute that will get reference the value in each `option` variable. The `message` value in an option will get transcluded in.
+
+Our directive needs to make sense of the `value` attribute, so we will identify it in `app/choice/choice.directive.js`.
+
+```javascript
+const choice = function() {
+  return {
+    restrict: 'E',
+    templateUrl: 'views/choice.html',
+    controller: 'ChoiceCtrl',
+    controllerAs: 'choiceCtrl',
+    scope: {
+      value: '='
+    },
+    transclude: true,
+    bindToController: true
+  };
+};
+
+export default choice;
+```
+
+To specify an allowable scope variable to pass down, you specify the name of the variable as the key in the object under `scope` with a value of `=`, which means evaluate the attribute value and use that result. We also specified `bindToController` to true, which means add all variables defined in `scope` and place it in the controller `choiceCtrl`.
+
+Lastly, let's update the view in `app/assets/views/choice.html`.
+
+```html
+<div class="choice" ng-class="{ selected: choiceCtrl.isSelected() }" ng-click="choiceCtrl.toggleSelected()">
+  {{ choiceCtrl.value }}. <ng-transclude></ng-transclude>
+</div>
+```
+
+In this case, we evaluate `choiceCtrl.value`, which should be coming from the `value` attribute from `index.html`. That value is retrieved from `choiceCtrl` since we specified the `bindToController` property in the directive.
+
+It's possible to set the variables to three different attributes:
+
+* `@` - Evaluates the attribute value as a pure string.
+* `=` - Evaluates the attribute value as an Angular expression to evaluate.
+* `&` - Evaluates the attribute value as an Angular expression that can later be invoked.
+
 ## Extending Your Knowledge of Custom Directives
 
 Directives can do even more than what we have so far seen. Custom directives can be used to manipulate the DOM, to wrap other directives, to add event listeners to the DOM, to communicate across directives, and even more.
