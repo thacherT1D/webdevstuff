@@ -68,9 +68,11 @@ Before we create an app with Material UI, let's get to know its components. Ther
 
 #### `Paper`
 
--
+- The `Paper` component is generally used as the main container for the app's content
 
 #### `Card`
+
+- You've encountered cards before in MaterializeCSS. And they're in the Material Design specification itself. The `Card` component replicates this look in React.
 
 -
 
@@ -92,31 +94,49 @@ Before we create an app with Material UI, let's get to know its components. Ther
 
 #### `Menu`
 
--
+- One of the many Material UI components that can contain `MenuItem` components
 
 #### `Drawer`
 
-- 
+- Another component that can contain `MenuItem` components
 
 #### `Toolbar`, `ToolbarGroup`, `ToolbarSeparator`, `ToolbarTitle`
 
+-
+
 #### `AppBar`
+
+-
 
 ### Data Input Components
 
 #### `TextField`
 
+-
+
 #### `SelectField`
+
+-
 
 #### `RadioButton`
 
+-
+
 #### `Checkbox`
+
+-
 
 #### `Slider`
 
+-
+
 #### `DatePicker`
 
+-
+
 #### `RaisedButton`
+
+-
 
 Check out the sample app here:
 
