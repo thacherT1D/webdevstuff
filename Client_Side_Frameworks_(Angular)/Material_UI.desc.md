@@ -66,21 +66,37 @@ Before we create an app with Material UI, let's get to know its components. Ther
 
 ### Layout Components
 
+#### `Paper`
+
+-
+
 #### `Card`
 
-#### `Paper`
+-
 
 #### `GridList`
 
+-
+
 #### `MenuItem`
+
+-
 
 ### Navigation Components
 
 #### `Tab` & `Tabs`
 
+-
+
+-
+
 #### `Menu`
 
+-
+
 #### `Drawer`
+
+- 
 
 #### `Toolbar`, `ToolbarGroup`, `ToolbarSeparator`, `ToolbarTitle`
 
@@ -243,6 +259,22 @@ Open the application in your default browser.
 ```shell
 open http://localhost:8000/
 ```
+
+## Inline Styling
+
+- Material UI's styles are baked into it
+- Right now, there are 2 ways to change CSS styles for a Material UI component:
+  1. Use inline styling
+  2. Use CSS styling with `!important` overrides for each property (NOTE: this is not the case for React components in general - you do not need to use `!important` for CSS styles to work)
+- Inline styles that target the root element of a component (the all encompassing element, usually a div) use the `style` prop; For nested elements of a component, there are props that end with `Style` (e.g. `iconStyle`, `labelStyle`, etc.).
+- For inline styles that take a color value, Material UI has a [list of variables](http://www.material-ui.com/#/customization/colors) that act as more intuitive color names than hex color values. Feel free to use them wherever you otherwise would use a hex color value.
+
+General principles of inline styling:
+- Create an object where the object properties correspond to an component's CSS properties
+- When you assign a Javascript number primitive to a property (e.g. `{borderRadius: 2}`, NOT `{borderRadius: '2'}`, which uses a string), React automatically registers it as a pixel (`px`) value.
+- Replace semi-colons with commas
+- For properties, change kebab-case to camelCase
+- You can use `props` to customize the object per component instance
 
 ## Assignment
 
