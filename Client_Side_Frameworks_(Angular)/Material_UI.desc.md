@@ -289,12 +289,14 @@ open http://localhost:8000/
 - Inline styles that target the root element of a component (the all encompassing element, usually a div) use the `style` prop; For nested elements of a component, there are props that end with `Style` (e.g. `iconStyle`, `labelStyle`, etc.).
 - For inline styles that take a color value, Material UI has a [list of variables](http://www.material-ui.com/#/customization/colors) that act as more intuitive color names than hex color values. Feel free to use them wherever you otherwise would use a hex color value.
 
-General principles of inline styling:
+General principles of inline styling in React:
 - Create an object where the object properties correspond to an component's CSS properties
 - When you assign a Javascript number primitive to a property (e.g. `{borderRadius: 2}`, NOT `{borderRadius: '2'}`, which uses a string), React automatically registers it as a pixel (`px`) value.
 - Replace semi-colons with commas
 - For properties, change kebab-case to camelCase
 - You can use `props` to customize the object per component instance
+
+NOTE: Inline styling is becoming less popular. Material UI has announced that it is moving away from it in favor of CSS styling. However, there are still React styling frameworks, like Formidable's Radium, that use inline styling or extend it.
 
 ## Assignment
 
