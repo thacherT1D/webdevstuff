@@ -62,6 +62,8 @@ In short, `$http` is Angular's wrapper to AJAX calls -- the easiest way of commu
 ## Describe what $http is and how it is used
 The $http service is a function which takes a single argument — a configuration object — that is used to generate an HTTP request and returns a promise.
 
+A new sentence
+
 ```js
 $http({
   method: 'GET',
@@ -74,7 +76,7 @@ $http({
     // or server returns response with an error status.
   });
   ```
-  With `$http` you are getting a response back rather than the data itself. This means that you will need to parse out the actual data from the response. 
+  With `$http` you are getting a response back rather than the data itself. This means that you will need to parse out the actual data from the response.
 
 ## Exercise
 Take a minute to turn and talk to a classmate about what $http is and how it is used. We'll discuss as a class some of the ways you defined `$http`.
