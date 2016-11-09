@@ -102,17 +102,22 @@ brunch new httpService --skeleton kmcgrady/with-angular
 ```
 
 In your `index.html` file, replace your `<h1>Hello World</h1>` with:
+
 ```html
+
 <h1>Hello Movies</h1>
 <div ng-controller="homeCtrl as home">
   <div ng-repeat="movie in home.movies">
     {{ movie | json }}
   </div>
 </div>
+
 ```
 
 In your `app.js` file, add:
+
 ```js
+
 import angular from 'angular'
 
 class HomeCtrl {
