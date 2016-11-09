@@ -2,9 +2,9 @@
 
 - Explain what Material UI is
 - Explain why Material UI is important
+- Use inline styling to modify the look of a React user interface
 - Describe Material UI's main layout, navigation, and form components
 - Use Material UI to build a React user interface
-- Use Inline Styling to modify the look of a React user interface
 
 ## What's Material UI?
 
@@ -57,6 +57,31 @@ ReactDOM.render(
 );
 ```
 
+## How do we style Material UI components
+
+- Material UI's styles are baked into it
+- Right now, there are 2 ways to change CSS styles for a Material UI component:
+  1. Use inline styling
+  2. Use CSS styling with `!important` overrides for each property (NOTE: this is not the case for React components in general - you do not need to use `!important` for CSS styles to work)
+- Inline styles that target the root element of a component (the all encompassing element, usually a div) use the `style` prop; For nested elements of a component, there are props that end with `Style` (e.g. `iconStyle`, `labelStyle`, etc.).
+- For inline styles that take a color value, Material UI has a [list of variables](http://www.material-ui.com/#/customization/colors) that act as more intuitive color names than hex color values. Feel free to use them wherever you otherwise would use a hex color value.
+
+Let's style Material UI's `Paper` component in both ways.
+
+Open up the app component.
+```shell
+atom components/app
+```
+
+Reminder of general principles of inline styling in React:
+- Create an object where the object properties correspond to an component's CSS properties
+- When you assign a Javascript number primitive to a property (e.g. `{borderRadius: 2}`, NOT `{borderRadius: '2'}`, which uses a string), React automatically registers it as a pixel (`px`) value.
+- Replace semi-colons with commas
+- For properties, change kebab-case to camelCase
+- You can use `props` to customize the object per component instance
+
+NOTE: Inline styling is becoming less popular. Material UI has announced that it is moving away from it in favor of CSS styling. However, there are still React styling frameworks, like Formidable's Radium, that use inline styling or extend it.
+
 ## What are important Material UI Components?
 
 Before we create an app with Material UI, let's get to know its components. There are three types of components that Material UI uses:
@@ -70,73 +95,212 @@ Before we create an app with Material UI, let's get to know its components. Ther
 
 - The `Paper` component is generally used as the main container for the app's content
 
-#### `Card`
+- Required props: none
 
-- You've encountered cards before in MaterializeCSS. And they're in the Material Design specification itself. The `Card` component replicates this look in React.
+```jsx
+import React from 'react';
+import Paper from 'material-ui/Paper';
 
--
+const style = {
+  margin: 20
+};
 
-#### `GridList`
+const newPaper = React.createClass({
+  render(){
+    return <Paper style={style}>This is a Material UI Paper component</Paper>
+  }
+  });
 
--
+export default newPaper;
+```
+
+#### `Card`, `CardHeader`, `CardMedia`,  `CardTitle`, `CardText`, & `CardActions`
+
+- You've encountered cards before in MaterializeCSS. And they're in the Material Design specification itself. The `Card` component make this same look happen in React.
+
+- Required props: none
+
+Here are optional components for nesting within a `Card`:
+  - `CardHeader` is the `Card` component's header
+  - `CardMedia` is the image used in the main background of the `Card`
+  - `CardTitle` contains the title of the `Card`
+  - `CardText` contains the main, non-title text of the `Card`
+  - `CardActions` contain action buttons for the `Card`
+
+
+```jsx
+import React from 'react';
+import {
+    Card,
+    CardActions,
+    CardHeader,
+    CardMedia,
+    CardTitle,
+    CardText
+  } from 'material-ui/Card';
+
+
+
+const newCard = React.createClass({
+  render(){
+    return <Card style={style}>This is a Material UI card component</Card>
+  }
+  });
+
+export default newCard;
+```
+
+#### `GridList` and `GridTile`
+
+- The `GridList` component creates a responsive grid of `GridTile` components, each of which has an image as a background
+
+- Required props: none
+
+```jsx
+
+```
 
 #### `MenuItem`
 
--
+- The `MenuItem` component is a building block component that can be used in certain Material UI navigation components. In other words, a navigation component can have multiple `MenuItem` components nested within it. You'll see this in the next section, which is dedicated to navigation components.
+
+- Required props: none
+
+```jsx
+
+```
 
 ### Navigation Components
 
 #### `Tab` & `Tabs`
 
--
+- A `Tabs` component can hold multiple `Tab` components
 
--
+- Required props: none
+
+```jsx
+
+```
 
 #### `Menu`
 
-- One of the many Material UI components that can contain `MenuItem` components
+- One of the many Material UI components that can contain `MenuItem` components. A similar component is `IconMenu`, which opens a menu from icons. `IconMenu` can also contain `MenuItem` components.
+
+- Required props: none
+
+```jsx
+
+```
 
 #### `Drawer`
 
-- Another component that can contain `MenuItem` components
+- Another component that can contain `MenuItem` components. It can be used as a side navigation.
+
+- Required props: none
+
+```jsx
+
+```
 
 #### `Toolbar`, `ToolbarGroup`, `ToolbarSeparator`, `ToolbarTitle`
 
--
+- `Toolbar` can hold multiple `ToolbarGroup` components
+
+- `ToolbarSeparator` is a vertical divider bar for separating `ToolbarGroup` components; `ToolbarTitle` is a simple text title that can be displayed in a toolbar
+
+- To create a navigation bar component, your best bet is to customize a `Toolbar` with nested components (e.g. `ToolbarGroup`, `ToolbarTitle`, `Tabs`, `Tab`, etc.) and inline styling until you get your desired look
+
+- Required props: none
+
+```jsx
+
+```
 
 #### `AppBar`
 
--
+- A component for a special kind of toolbar that is common in mobile applications
+
+- It is customizable, but not as customizable as a `Toolbar` component
+
+- Required props: none
+
+```jsx
+
+```
+
+- NOTE: The button left of the title cannot be removed
 
 ### Data Input Components
 
 #### `TextField`
 
--
+- A component for entering text
 
-#### `SelectField`
+- Required props: none
 
--
+```jsx
 
-#### `RadioButton`
+```
 
--
+#### `SelectField` or `DropdownMenu`
+
+- In each case, the component is a controlled component that for making selections. They both also use `MenuItem` components to make up their selections. The main difference between the two is that `SelectField` has more customization features.
+
+- Required props: none
+
+```jsx
+
+```
+
+#### `RadioButtonGroup` & `RadioButton`
+
+- Just like the case of the HTML radio groups and radio buttons, a `RadioButtonGroup` component can have multiple `RadioButton` components
+
+- Required props: For `RadioButtonGroup`, the prop `name` is required
+
+```jsx
+
+```
 
 #### `Checkbox`
 
--
+- A checkbox component
+
+- Required props: none
+
+```jsx
+
+```
 
 #### `Slider`
 
--
+- A slider component
+
+- Required props: none
+
+```jsx
+
+```
 
 #### `DatePicker`
 
--
+- A DatePicker component
+
+- Required props: none
+
+```jsx
+
+```
 
 #### `RaisedButton`
 
--
+- 1 of 4 different options for pressable button components
+
+- Required props: none
+
+```jsx
+
+```
 
 Check out the sample app here:
 
@@ -279,24 +443,6 @@ Open the application in your default browser.
 ```shell
 open http://localhost:8000/
 ```
-
-## Inline Styling
-
-- Material UI's styles are baked into it
-- Right now, there are 2 ways to change CSS styles for a Material UI component:
-  1. Use inline styling
-  2. Use CSS styling with `!important` overrides for each property (NOTE: this is not the case for React components in general - you do not need to use `!important` for CSS styles to work)
-- Inline styles that target the root element of a component (the all encompassing element, usually a div) use the `style` prop; For nested elements of a component, there are props that end with `Style` (e.g. `iconStyle`, `labelStyle`, etc.).
-- For inline styles that take a color value, Material UI has a [list of variables](http://www.material-ui.com/#/customization/colors) that act as more intuitive color names than hex color values. Feel free to use them wherever you otherwise would use a hex color value.
-
-General principles of inline styling in React:
-- Create an object where the object properties correspond to an component's CSS properties
-- When you assign a Javascript number primitive to a property (e.g. `{borderRadius: 2}`, NOT `{borderRadius: '2'}`, which uses a string), React automatically registers it as a pixel (`px`) value.
-- Replace semi-colons with commas
-- For properties, change kebab-case to camelCase
-- You can use `props` to customize the object per component instance
-
-NOTE: Inline styling is becoming less popular. Material UI has announced that it is moving away from it in favor of CSS styling. However, there are still React styling frameworks, like Formidable's Radium, that use inline styling or extend it.
 
 ## Assignment
 
