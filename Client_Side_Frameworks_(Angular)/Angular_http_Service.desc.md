@@ -106,7 +106,7 @@ In your `index.html` file, replace your `<h1>Hello World</h1>` with:
 ```html
 
 <h1>Hello Movies</h1>
-<div ng-controller="homeCtrl as home">
+<div ng-controller="HomeCtrl as home">
   <div ng-repeat="movie in home.movies">
     {{ movie | json }}
   </div>
