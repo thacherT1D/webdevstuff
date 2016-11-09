@@ -108,7 +108,7 @@ In your `index.html` file, replace your `<h1>Hello World</h1>` with:
 <h1>Hello Movies</h1>
 <div ng-controller="HomeCtrl as home">
   <div ng-repeat="movie in home.movies">
-    {{ movie | json }}
+    {{ movie.Title }}
   </div>
 </div>
 
@@ -172,6 +172,8 @@ import angular from 'angular'
       )
     }
   }
+
+  HomeService.$inject = ['$http'];
 
   angular.module('my-app', [])
     .service('HomeService', HomeService)
