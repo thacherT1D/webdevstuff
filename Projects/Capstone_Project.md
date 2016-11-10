@@ -81,8 +81,6 @@ This capstone project will demonstrate your ability to build fullstack applicati
 * Puppy Play Date - Find fellow dog owners and arrange play dates.
     * http://puppyplaydate.co/
     * https://github.com/roryg11/dog_play_date
-* Re-reddit - Browse Reddit and save links to boards.
-    * http://rereddit.meteor.com/
 * Gray Wolf Story - The story of the Gray Wolf migration
     * http://graywolfstory.com/
 * Cyvasse - A web app version of a board game described in the Game of Thrones book series.
