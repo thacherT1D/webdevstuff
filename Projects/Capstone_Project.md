@@ -52,9 +52,6 @@ This capstone project will demonstrate your ability to build fullstack applicati
 
 ## Excellent Capstone Examples
 
-* My HW App - A platform for teachers and students to connect, share assignments, and track student progress.
-    * http://www.myhwapp.com/
-    * https://github.com/parkerlewis9/myHW_app
 * Death, Be Not Unknown - Access and visualized American mortality statistics from the Center for Disease Control and Prevention (CDC).
     * http://death-be-not-unknown.herokuapp.com/
     * https://github.com/kilbergr/MortalityApp
@@ -72,10 +69,8 @@ This capstone project will demonstrate your ability to build fullstack applicati
 
 ## Honorable Mentions
 
-* Drone Flyer - Exactly as it sounds.
-    * http://droneflyer.herokuapp.com/
 * Cyber Tanks - A multiplayer game controlled via mobile phone.
-    * cybertanks.herokuapp.com
+    * http://cybertanks.herokuapp.com
 * Stash App
     * https://stash-it-daily.herokuapp.com/
     * https://github.com/horndavidg/coffee_bank
