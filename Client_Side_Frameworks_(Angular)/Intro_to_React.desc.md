@@ -118,7 +118,7 @@ Two-way data binding works great, especially for smaller user interfaces. With l
 
 React avoids these problems by only using **one-way** data binding. When building a component hierarchy, its state and presentation are combined to produce a user interface. Whenever the state changes, it's automatically recombined with the presentation and a new user interface is produced.
 
-However, changes made to the presentation are *not* automatically propagated to the state. As a developer, you'll have to write this code yourself. Fortunately, explicitly defining how this happens in React is simple and gives more control over the state that needs updating. With some practice, you'll be building, maintaining, and optimizing a sophisticated user interface like a boss.
+However, changes made to the presentation are not *automatically* propagated to the state. As a developer, you'll have to write this code yourself. Fortunately, **explicitly** defining how this happens in React is simple and gives more control over the state that needs updating. With some practice, you'll be building, maintaining, and optimizing a sophisticated user interface like a boss.
 
 ```text
          ┌───── Automatic change ────┐
