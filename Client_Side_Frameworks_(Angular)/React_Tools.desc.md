@@ -602,6 +602,10 @@ In this chapter, you were exposed to the fundamentals of React JSX, an HTML-like
 
 ## Assignment
 
+-[Camera Shop - Part 1](https://github.com/gSchool/react-camera-view#part-1)
+
+#### Bonus:
+
 - [Sports Ball with React Tools](https://github.com/gSchool/wd-react-sports-ball/blob/master/sports_ball_with_react_tools.md)
 
 ## Resources

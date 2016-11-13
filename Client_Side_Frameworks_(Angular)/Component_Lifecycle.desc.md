@@ -123,6 +123,10 @@ Modify the previous mounting/unmounting example in the following ways:
 
 ## Assignment
 
+- [Camera Shop - Part 4](https://github.com/gSchool/react-camera-view#part-4)
+
+#### Bonus:
+
 * Read [this](http://javascript.tutorialhorizon.com/2014/09/13/execution-sequence-of-a-react-components-lifecycle-methods/) article on the react component lifecycle
 * Github Assignment
     - Create a component called GithubProfile

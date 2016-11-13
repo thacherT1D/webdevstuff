@@ -542,6 +542,10 @@ In this chapter, you learned how use props and state to separate the concerns of
 
 ## Assignment
 
+- [Camera Shop - Part 3](https://github.com/gSchool/react-camera-view#part-3)
+
+#### Bonus:
+
 - [React Inventory](https://github.com/gSchool/wd-react-inventory)
 
 ## Resources

@@ -1108,6 +1108,10 @@ In this chapter, you learned how to build sophisticated React user interfaces. S
 
 ## Assignment
 
+- [Camera Shop - Part 2](https://github.com/gSchool/react-camera-view#part-2)
+
+#### Bonus:
+
 - [React Calculator](https://github.com/gSchool/wd-react-calculator)
 
 ## Resources

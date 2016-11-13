@@ -468,16 +468,15 @@ On the line after that we are passing the function `handleAuth`, defined on a pa
 
 <hr />
 
+### Assignment
+
+- [Camera Shop - Part 5](https://github.com/gSchool/react-camera-view#part-5)
+
 #### 📚 Resources:
-- [Demo Code](https://github.com/MrJadaml/react-router-v4-demo)
+
 - [React Router - Docs](https://react-router.now.sh/)
 - [Paul Sherman - Blog](http://www.pshrmn.com/tutorials/react/react-router/)
 - [Passing Props to Child Components - SO](http://stackoverflow.com/questions/40426822/passing-props-to-children-components-with-react-router-v4)
 
 👈 = updated code
 `{/* This is a JSX comment */}`
-
-
-
-### Assignment
-
