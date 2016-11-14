@@ -1,8 +1,9 @@
 ## Objectives
 
 - Explain what a synthetic event is
-- Explain why a synthetic event is important.
-- Use synthetic events to build an interactive React user interface.
+- Explain why a synthetic event is important
+- Explain the difference between `value`, `defaultValue`, and `this.state.value`
+- Use synthetic events to build an interactive React user interface
 
 | Duration by yourself | Duration as a class |
 |----------------------|---------------------|
