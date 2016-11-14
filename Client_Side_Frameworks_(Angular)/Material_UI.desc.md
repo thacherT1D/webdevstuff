@@ -712,6 +712,8 @@ Other data input components in Material UI include `FlatButton`, `Chip`, `Slider
 
 ## Assignment
 
+Use the `Card`, `Toolbar`, `SelectField`/`DropdownMenu`, and other components from this lecture to recreate the cart page from the Angular snapshop homework
+
 ## Resources
 
 - [Brunch](http://brunch.io/)

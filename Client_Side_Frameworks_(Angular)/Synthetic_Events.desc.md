@@ -2,7 +2,7 @@
 
 - Explain what a synthetic event is
 - Explain why a synthetic event is important
-- Explain the difference between `value`, `defaultValue`, and `this.state.value`
+- Explain the difference between `value`, `defaultValue`, and `this.state.firstName`
 - Use synthetic events to build an interactive React user interface
 
 | Duration by yourself | Duration as a class |
