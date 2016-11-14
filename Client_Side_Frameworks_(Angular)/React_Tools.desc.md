@@ -1,4 +1,4 @@
-## Objectives
+# Objectives
 
 - Explain what React JSX is.
 - Explain why React JSX is important.
@@ -11,9 +11,12 @@
 |----------------------|---------------------|
 | About 3 hours        | About 4.5 hours     |
 
+<hr />
+
 ## What's React JSX?
 
-[JSX](https://facebook.github.io/jsx/), or JavaScript XML, is an JavaScript syntax extension that looks similar to HTML. [React JSX](https://facebook.github.io/react/docs/jsx-in-depth.html) lets you create `ReactElement` objects using an HTML-like syntax and a transpiler.
+[JSX](https://facebook.github.io/jsx/), or JavaScript XML, is a JavaScript syntax extension that looks similar to HTML.
+[React JSX](https://facebook.github.io/react/docs/jsx-in-depth.html) lets you create `ReactElement` objects using an HTML-like syntax and a transpiler.
 
 For example, when the following React JSX code is run through a transpiler:
 
@@ -80,9 +83,11 @@ Additionally, the [language-babel](https://atom.io/packages/language-babel) pack
 1. Search for the `language-babel` package in the main screen.
 1. And click on its "Install" button.
 
-### Exercise
+#### Exercise
 
 Turn to a neighbor and, in your own words, explain what React JSX is as well as the similarities and differences of a compiler versus a transpiler. After about a minute, your instructor will cold call on the class and ask what was discussed.
+
+<hr />
 
 ## Why use React JSX?
 
@@ -95,9 +100,11 @@ You'll find that a React user interface written in JSX is a better way to separa
 
 While at first it may feel jarring to write HTML-like syntax with your JavaScript, using the expressive power of a full programming language to build a complex user interface is an ideal solution to the above problems. In short, React JSX allows presentation and behavior to live side-by-side using the power of JavaScript, but with a concise and familiar syntax.
 
-### Exercise
+#### Exercise
 
 Take a moment to write down why React JSX is important. Include some of its advantages and disadvantages. After about a minute, your instructor will cold call on the class and ask what was written down.
+
+<hr />
 
 ## How do you use React JSX to build a user interface?
 
@@ -518,9 +525,11 @@ The best way to understand what the React Developer Tools are capable of is to u
 
 ![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/376/Screen_Shot_2016-09-02_at_10.48.00_AM.png)
 
-### Exercise
+#### Exercise
 
 Play around with the React Developer Tools and see what you can discover on your own. While you're playing, turn to a neighbor and, in your own words, explain what the React Developer Tools are. After about a minute, your instructor will cold call on the class and ask what was discussed.
+
+<hr />
 
 ## Why are the React Developer Tools important?
 
@@ -541,6 +550,8 @@ Notice the colors of the collapsable triangles in the tree view. They provide e
 In the main React Developer Tools window, click the `<h1>` component and use the breadcrumbs bar on the bottom of the panel to access it, its parent component, and its grandparent component. Then use the search bar to access the `<input />` component by its name.
 
 Finally, turn to a neighbor and, in your own words, explain why the React Developer Tools are important. After about a minute, your instructor will cold call on the class and ask what was discussed.
+
+<hr />
 
 ## How do you use the React Developer Tools to inspect and debug a user interface?
 
