@@ -3,6 +3,7 @@
 - Explain what Material UI is
 - Explain why Material UI is important
 - Use inline styling to modify the look of a React user interface
+- Create new color schemes for Material UI themes
 - Describe Material UI's main layout, navigation, and form components
 - Use Material UI to build a React user interface
 
@@ -10,13 +11,38 @@
 
 Material-UI is a framework composed of React components that implement Google's Material Design. Similar to the Materialize CSS framework, it provides a useful skeleton of components that can be easily imported into any existing React application.
 
+This is what Material UI looks like:
+
+```jsx
+import React from 'react';
+import RaisedButton from 'material-ui/RaisedButton';
+
+const App = React.createClass({
+  render() {
+    return <RaisedButton label="Hello World" />;
+  }
+});
+
+export default App;
+```
+
+This is what it would look like when rendered in the browser:
+
+![](URL)
+
+P.S. You can check out examples of Material UI components on the [Material UI website](http://www.material-ui.com/#/components/app-bar)
+
 ### Exercise
 
 Turn to a partner and explain in your own words what the `material-ui` framework is. After about a minute, the instructor will cold-call the class and we'll all discuss.
 
 ## Why is Material UI important?
 
-Available through NPM, the `material-ui` package gives developers access to well designed and aesthetically pleasing components. Since it is made for React, the pains of combining two frontend frameworks such as React and Materialize are alleviated. The Materialize framework also has its own data-binding system that changes presentation that often conflicts with React's one-way binding. **Important reminder:** well designed projects are equally important as an application's functionality.
+Available through NPM, the `material-ui` package gives developers access to well designed and aesthetically pleasing components. Since it is made for React, the pains of combining two front-end libraries/frameworks such as React and Materialize are alleviated. The Materialize framework uses jQuery events. React makes a point of not using those events and has its own set of synthetic events that are acted through props. Thus, Materialize and React don't mix well together. The Materialize framework also has its own data-binding system that changes presentation that often conflicts with React's one-way binding. **Important reminder:** well designed projects are equally important as an application's functionality.
+
+- No jQuery
+- Uses the synthetic events vs native events
+- All self-contained in a jsx component instead of split b/w HTML and JS
 
 ### Exercise
 
@@ -77,23 +103,78 @@ open http://localhost:8000/
 ```
 
 
-## How do we style Material UI components
+## How do we style Material UI components?
 
-- Material UI's styles are baked into it
-- Right now, there are 2 ways to change CSS styles for a Material UI component:
+- Material UI has default styles baked into its components
+- Right now, there are 2 ways to change most CSS styles for a Material UI component:
   1. Use inline styling
   2. Use CSS styling with `!important` overrides for each property (NOTE: this is not the case for React components in general - you do not need to use `!important` for CSS styles to work)
 - Inline styles that target the root element of a component (the all encompassing element, usually a div) use the `style` prop; For nested elements of a component, there are props that end with `Style` (e.g. `iconStyle`, `labelStyle`, etc.).
+- Besides those 2 primary ways to change CSS styles for a component, props for specific style properties (e.g. `backgroundColor` for RaisedButton) also can be used for styling.
 - For inline styles that take a color value, Material UI has a [list of variables](http://www.material-ui.com/#/customization/colors) that act as more intuitive color names than hex color values. Feel free to use them wherever you otherwise would use a hex color value.
 
 Let's style Material UI's `Paper` component in both ways.
 
 Open up the app component.
 ```shell
-atom components/app
+atom app/components/App.jsx
 ```
 
-Create a
+Import Material UI's `Paper` and `RaisedButton` components and replace the current render node with them. Your App.jsx should look like this:
+
+```jsx
+import React from 'react';
+import Paper from 'material-ui/Paper';
+import RaisedButton from 'material-ui/RaisedButton';
+
+const App = React.createClass({
+  render() {
+    return (
+      <Paper>
+          <RaisedButton />
+      </Paper>
+    )
+  }
+});
+
+export default App;
+```
+
+- Open your application at localhost:8000. Notice anything? The page looks like a blank page with an equally blank button. This is because it has no defined dimensions. Let's try adding color to the button. First, let's create a class for the button.
+
+```jsx
+import React from 'react';
+import Paper from 'material-ui/Paper';
+import RaisedButton from 'material-ui/RaisedButton';
+
+const App = React.createClass({
+  render() {
+    return (
+      <Paper>
+          <RaisedButton className='paidInFull' />
+      </Paper>
+    )
+  }
+});
+
+export default App;
+```
+
+
+```jsx
+import Paper from 'material-ui/Paper';
+import React from 'react';
+
+const App = React.createClass({
+  render() {
+    const stylePaper = {
+      padding: '0px',
+      margin: '0px'
+    };
+    return <Paper style={stylePaper}></Paper>
+  }
+});
+```
 
 Reminder of general principles of inline styling in React:
 - Create an object where the object properties correspond to an component's CSS properties
@@ -103,6 +184,8 @@ Reminder of general principles of inline styling in React:
 - You can use `props` to customize the object per component instance
 
 NOTE: Inline styling is becoming less popular. Material UI has announced that it is moving away from it in favor of CSS styling. However, there are still React styling frameworks, like Formidable's Radium, that use inline styling or extend it.
+
+## How do we use Material UI themes?
 
 ## What are important Material UI Components?
 
