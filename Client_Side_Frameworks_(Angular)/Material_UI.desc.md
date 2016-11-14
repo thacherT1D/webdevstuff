@@ -543,6 +543,9 @@ ca
 ```jsx
 
 ```
+#### Other Data Input Components
+
+Other data input components in Material UI include `FlatButton`, `Chip`, `Slider`, `Checkbox`, `RadioButton`
 
 Check out the sample app here:
 
