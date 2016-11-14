@@ -498,6 +498,10 @@ const newToolbar = React.createClass({
 export default newToolbar;
 ```
 
+#### Other Navigation Components
+
+Other navigation components in Material UI include `AppBar`, `BottomNavigation`, `Drawer`, `Popover`, `Stepper`
+
 ### Data Input Components
 
 #### `TextField`
