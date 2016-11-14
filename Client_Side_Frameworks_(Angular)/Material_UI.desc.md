@@ -316,6 +316,10 @@ export default newDropdown;
 
 ```
 
+#### Other Layout Components
+
+Other layout components in Material UI include `Dialog`,`GridList`, `List`, `Snackbar`, and `Table`
+
 ### Navigation Components
 
 #### `Tab` & `Tabs`
