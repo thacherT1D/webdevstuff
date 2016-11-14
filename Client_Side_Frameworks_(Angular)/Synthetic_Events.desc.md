@@ -318,11 +318,13 @@ ReactDOM.render(
 );
 ```
 
-Then, play around with the user interface.
+Then, with the browser console open, play around with the user interface.
 
 ```shell
 open http://localhost:8000/textfield.html
 ```
+
+If we add `readOnly={true}` as an attribute for the second input element. React no longer gives us a warning in the console.
 
 ### Textarea
 
