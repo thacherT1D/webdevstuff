@@ -2,7 +2,7 @@
 
 - Explain what a synthetic event is
 - Explain why a synthetic event is important
-- Explain the difference between `value`, `defaultValue`, and `this.state.firstName`
+- Explain the difference between `value`, `defaultValue`, and `this.state.someName`
 - Use synthetic events to build an interactive React user interface
 
 | Duration by yourself | Duration as a class |
@@ -327,14 +327,14 @@ Then, with the browser console open, play around with the user interface.
 open http://localhost:8000/textfield.html
 ```
 
-#### `value`, `defaultValue`, `this.state.value`
+#### `value`, `defaultValue`, `this.state.someName`
 
 Let's look at that warning message again:
 ![](https://i.gyazo.com/e54acc1b6e1549965b4baf9bb563a14b.png)
 
 It lays out a few notable takeaways:
-- To be updated, the `value` prop of a React form component depends on an `onChange` event handler. Thanks to `this.setState({value: event.target.value})`, `this.state.value` stores the latest string from the input textfield component.
-- Without `onChange` to handle the change event and `this.state.value` to store the changed data, the `value` prop could never be updated. The textfield would end up being a controlled component that could not be modified.
+- To be updated, the `value` prop of a React form component depends on an `onChange` event handler. Thanks to `this.setState({value: event.target.value})`, `this.state.someName` stores the latest string from the input textfield component.
+- Without `onChange` to handle the change event and `this.state.someName` to store the changed data, the `value` prop could never be updated. The textfield would end up being a controlled component that could not be modified.
 - `defaultValue` is used for uncontrolled components, which are components that React does not control. Let's add `onChange = this.handleChange` to the 3rd textfield component.
 - If we add `readOnly={true}` as an attribute for the 2nd input element, React no longer gives us a warning in the console.
 
@@ -344,7 +344,7 @@ Create a Textfield component that whose content is logged every time that a user
 
 Create a Textfield component that is not controlled by React.
 
-Identify which ones use the `value` prop, the `defaultValue` prop, and `this.state.value`.
+Identify which ones use the `value` prop, the `defaultValue` prop, and `this.state.someName`.
 
 Turn to your neighbor and discuss why you can use props to modify one component after initial load and why you cannot do the same with the other component.
 
