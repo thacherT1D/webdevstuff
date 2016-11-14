@@ -187,6 +187,8 @@ NOTE: Inline styling is becoming less popular. Material UI has announced that it
 
 ## How do we use Material UI themes?
 
+
+
 ## What are important Material UI Components?
 
 Before we create an app with Material UI, let's get to know its components. There are three types of components that Material UI uses:
@@ -255,16 +257,6 @@ const newCard = React.createClass({
 export default newCard;
 ```
 
-#### `GridList` and `GridTile`
-
-- The `GridList` component creates a responsive grid of `GridTile` components, each of which has an image as a background
-
-- Required props: none
-
-```jsx
-
-```
-
 #### `MenuItem`
 
 - The `MenuItem` component is a building block component that can be used in certain Material UI navigation components. In other words, a navigation component can have multiple `MenuItem` components nested within it. You'll see this in the next section, which is dedicated to navigation components.
@@ -297,16 +289,6 @@ export default newCard;
 
 ```
 
-#### `Drawer`
-
-- Another component that can contain `MenuItem` components. It can be used as a side navigation.
-
-- Required props: none
-
-```jsx
-
-```
-
 #### `Toolbar`, `ToolbarGroup`, `ToolbarSeparator`, `ToolbarTitle`
 
 - `Toolbar` can hold multiple `ToolbarGroup` components
@@ -320,20 +302,6 @@ export default newCard;
 ```jsx
 
 ```
-
-#### `AppBar`
-
-- A component for a special kind of toolbar that is common in mobile applications
-
-- It is customizable, but not as customizable as a `Toolbar` component
-
-- Required props: none
-
-```jsx
-
-```
-
-- NOTE: The button left of the title cannot be removed
 
 ### Data Input Components
 
@@ -350,36 +318,6 @@ export default newCard;
 #### `SelectField` or `DropdownMenu`
 
 - In each case, the component is a controlled component that for making selections. They both also use `MenuItem` components to make up their selections. The main difference between the two is that `SelectField` has more customization features.
-
-- Required props: none
-
-```jsx
-
-```
-
-#### `RadioButtonGroup` & `RadioButton`
-
-- Just like the case of the HTML radio groups and radio buttons, a `RadioButtonGroup` component can have multiple `RadioButton` components
-
-- Required props: For `RadioButtonGroup`, the prop `name` is required
-
-```jsx
-
-```
-
-#### `Checkbox`
-
-- A checkbox component
-
-- Required props: none
-
-```jsx
-
-```
-
-#### `Slider`
-
-- A slider component
 
 - Required props: none
 
