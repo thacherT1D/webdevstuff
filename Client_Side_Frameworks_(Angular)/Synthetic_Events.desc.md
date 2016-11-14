@@ -246,6 +246,9 @@ When a user changes the component's underlying element, its event handler is tri
 
 When a user types a character into an `<input type="text" />` component, the `onChange` event will fire. You'll need to register an `onChange` event handler to share control over the component's `value` prop with your users. If you share control over the `value` prop but forget to also register an `onChange` event handler, the component will render as read-only and a warning will be sent to your browser's console.
 
+Here is what the warning looks like:
+![](https://i.gyazo.com/e54acc1b6e1549965b4baf9bb563a14b.png)
+
 In the `app/assets/textfield.html` file, type in the following code.
 
 ```html
@@ -324,7 +327,26 @@ Then, with the browser console open, play around with the user interface.
 open http://localhost:8000/textfield.html
 ```
 
-If we add `readOnly={true}` as an attribute for the second input element. React no longer gives us a warning in the console.
+#### `value`, `defaultValue`, `this.state.value`
+
+Let's look at that warning message again:
+![](https://i.gyazo.com/e54acc1b6e1549965b4baf9bb563a14b.png)
+
+It lays out a few notable takeaways:
+- To be updated, the `value` prop of a React form component depends on an `onChange` event handler. Thanks to `this.setState({value: event.target.value})`, `this.state.value` stores the latest string from the input textfield component.
+- Without `onChange` to handle the change event and `this.state.value` to store the changed data, the `value` prop could never be updated. The textfield would end up being a controlled component that could not be modified.
+- `defaultValue` is used for uncontrolled components, which are components that React does not control. Let's add `onChange = this.handleChange` to the 3rd textfield component.
+- If we add `readOnly={true}` as an attribute for the 2nd input element, React no longer gives us a warning in the console.
+
+### Exercise
+
+Create a Textfield component that whose content is logged every time that a user changes it.
+
+Create a Textfield component that is not controlled by React.
+
+Identify which ones use the `value` prop, the `defaultValue` prop, and `this.state.value`.
+
+Turn to your neighbor and discuss why you can use props to modify one component after initial load and why you cannot do the same with the other component.
 
 ### Textarea
 
