@@ -1140,6 +1140,10 @@ Then, play around with the user interface.
 open http://localhost:8000/keyboard.html
 ```
 
+### Exercise
+
+Create a username and password. Use components from today's lecture to create a login page with username and password inputs. Submitting the login information should log the username and password to the console. If the password is correct, change the form background color to green. If not, turn it to red. Also, focusing on the username input should change the box's background color to yellow.
+
 ## Summary
 
 In this chapter, you learned how to build sophisticated React user interfaces. Specifically, you learned how React's synthetic event system works identically across all browsers. You also practiced handling synthetic events in a variety of common use cases. Believe it or not, but this article only begins to scratch the surface of all the [supported events and properties](https://facebook.github.io/react/docs/events.html#supported-events) in React's synthetic event system.
