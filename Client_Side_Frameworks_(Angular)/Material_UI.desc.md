@@ -82,12 +82,12 @@ ReactDOM.render(
   document.getElementById('app')
 );
 ```
-## How do you use Ryan Sobol's Brunch application skeleton with Material-UI?
+## How do you use Galvanize's Brunch application skeleton with Material-UI?
 
 To start off with, create a new project that includes React, Brunch, and Material-UI and installs all of its dependencies.
 
 ```shell
-brunch new path/to/app --skeleton ryansobol/with-react-material
+brunch new path/to/app --skeleton gSchool/with-react-material
 ```
 
 Watch the project for changes and launch an HTTP server.
@@ -186,7 +186,6 @@ Reminder of general principles of inline styling in React:
 NOTE: Inline styling is becoming less popular. Material UI has announced that it is moving away from it in favor of CSS styling. However, there are still React styling frameworks, like Formidable's Radium, that use inline styling or extend it.
 
 ## How do we use Material UI themes?
-
 
 
 ## What are important Material UI Components?
