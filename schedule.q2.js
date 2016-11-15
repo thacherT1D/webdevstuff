@@ -85,7 +85,7 @@ module.exports = [
     warmup: { text: "Express Templating w/ Materialize", url: "https://github.com/IanSmith89/pokemon_templating" },
     activities: [
       {
-        article: { text: "Entity Relationships", url: "https://github.com/gSchool/sql-curriculum/blob/master/Entity%20Relationship%20Diagrams.md" },
+        article: { text: "Entity Relationships", url: "https://learn.galvanize.com/content/gSchool/sql-curriculum/master/Entity%20Relationship%20Diagrams.md" },
         assignment: { text: "Online Retailer", url: "https://github.com/gSchool/sql-curriculum/tree/master/Exercises/src/customers" },
       },
     ]
