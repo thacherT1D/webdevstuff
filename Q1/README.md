@@ -69,7 +69,7 @@ Week 1
       </td>
       <td><a href="https://github.com/gSchool/productivity-curriculum/blob/master/Misc/Intro to Git.md">Intro to Git and Github</a>
       </td>
-      <td>
+      <td><a href="https://github.com/gSchool/git-personal-website">Git Personal Website</a>
       </td>
       <td>
       </td>
