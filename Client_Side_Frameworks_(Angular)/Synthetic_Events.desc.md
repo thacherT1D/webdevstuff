@@ -832,6 +832,18 @@ Then, play around with the user interface.
 open http://localhost:8000/form.html
 ```
 
+Notice these lines?
+
+```jsx
+handleChange(event) {
+  const nextState = { [event.target.name]: event.target.value };
+
+  this.setState(nextState);
+},
+```
+
+They set a key-value pair that we then use to update either the username or password, depending on which one was changed on the page. Let's log nextValue to show it in action.
+
 ### Focus events
 
 When a user gives focus to a component, thus removing focus from another, the `onFocus` and `onBlur` events will fire on their respective components.
