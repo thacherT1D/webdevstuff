@@ -187,6 +187,9 @@ NOTE: Inline styling is becoming less popular. Material UI has announced that it
 
 ## How do we use Material UI themes?
 
+Out of the box, Material UI gives us a great theme that we can use. However, there times when we would like to use a different theme than the default one.
+
+
 
 ## What are important Material UI Components?
 
