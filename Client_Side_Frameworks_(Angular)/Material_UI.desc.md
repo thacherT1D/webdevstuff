@@ -635,7 +635,7 @@ We use Material UI components the same way that we use other React components: b
 
 ### Exercise
 
-Use `Paper`, `AppBar`, `Card`, `RaisedButton` and other components to replicate this view:
+Review [the Material UI documentation](http://www.material-ui.com/#/components/app-bar). Use `Paper`, `AppBar`, `Card`, `RaisedButton` and other components to replicate this view:
 
 ![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/506/Screen_Shot_2016-11-17_at_2.36.43_PM.png)
 
