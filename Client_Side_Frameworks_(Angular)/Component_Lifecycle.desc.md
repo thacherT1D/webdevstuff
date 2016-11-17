@@ -85,6 +85,7 @@ Here you will be able to compare the current props or state against the next pro
 From there you can determine if you do in fact want to update the component.
 Blocking an update can provide a benifit to performance in cases where you do not want an update to occur.
 To prevent an update just return `fasle`.
+To continue through the state change lifecycle flow return `true`.
 
 - Do not use `setState()` in this hook.
 - `shouldComponentUpdate()` will be skipped if you run a forced update.
@@ -178,6 +179,17 @@ You can see these methods in action with this example:
 
     ReactDOM.render(<App/>, document.getElementById('container'))
 ```
+
+<hr />
+
+## Lifecycle Diagram
+
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/501/react-lifecycle.svg)
+
+*  ⚪️   =  unmounted state
+*  ⚫️   =  mounted state
+*  |   =  actions performed by the user
+* - -  =  react's flow (this happens automatically)
 
 <hr />
 
