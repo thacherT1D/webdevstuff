@@ -186,10 +186,10 @@ You can see these methods in action with this example:
 
 ![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/501/react-lifecycle.svg)
 
-  ⚪️    =  unmounted state
-  ⚫️    =  mounted state
-Solid Arrow   =  actions performed by the user
-Dotted Arrow  =  react's flow (this happens automatically)
+-  ⚪️    =  unmounted state
+-  ⚫️    =  mounted state
+- Solid Arrow   =  actions performed by the user
+- Dotted Arrow  =  react's flow (this happens automatically)
 
 <hr />
 
