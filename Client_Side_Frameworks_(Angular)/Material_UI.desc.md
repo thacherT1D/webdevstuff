@@ -629,7 +629,15 @@ Other form components in Material UI include `FlatButton`, `Chip`, `Slider`, `Ch
 
 Get a whiteboard (or your desk) and write down a list of 6 components (2 layout components, 2 navigation components, 2 form components). Discuss with a neighbor what you wrote down. The instructor will cold call on students for their answers.
 
-## How do we
+## How do we use a Material UI component?
+
+We use Material UI components the same way that we use other React components: by importing them and inserting them into our `render()` functions
+
+### Exercise
+
+Use `AppBar`, `Card`, `RaisedButton` and other components to replicate this view:
+
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/506/Screen_Shot_2016-11-17_at_2.36.43_PM.png)
 
 ## How do we style Material UI components?
 
