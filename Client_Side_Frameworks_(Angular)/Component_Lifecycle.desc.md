@@ -44,8 +44,7 @@ It is the *only* lifecycle method that is required to be included in your specif
 ### componentDidMount
 
 This method runs after the component is mounted.
-
-If you are going to be fetching data, this is where you will want to make those API calls.
+If you are going to be fetching data, this is where you will want to make those API calls and set state.
 
 Here is an example that will focus on the input of a component when mounted:
 
@@ -68,7 +67,7 @@ var App = React.createClass({
         <input name="one" ref="nameInput" onChange={this.update} />
         <h1>{this.state.txt}</h1>
       </div>
-      );
+    );
   }
 });
 
@@ -81,11 +80,27 @@ ReactDOM.render(<App/>, document.getElementById('container'));
 
 ### shouldComponentUpdate
 
+This is a useful method to check if your component should infact update.
+Here you will be able to compare the current props or state against the next props or state.
+From there you can determine if you do in fact want to update the component.
+Blocking an update can provide a benifit to performance in cases where you do not want an update to occur.
+To prevent an update just return `fasle`.
+
+- Do not use `setState()` in this hook.
+- `shouldComponentUpdate()` will be skipped if you run a forced update.
+
 ### componentWillUpdate
+
+- Do not use `setState()` in this hook.
 
 ### render
 
+...
+
 ### componentDidUpdate
+
+This is called after the component has been rendered to that page.
+It is ok to use `setState()` in this lifecycle hook.
 
 <hr />
 
@@ -95,13 +110,23 @@ ReactDOM.render(<App/>, document.getElementById('container'));
 
 This method is invoked when a component is receiving new props. Useful if you need to set the state on a component based on some transition in the properties, as this method has access to both the new properties and the old ones.
 
+- `componentWillReceiveProps()` will be skipped if none of your props have changed.
+
 ### shouldComponentUpdate
+
+...
 
 ### componentWillUpdate
 
+...
+
 ### render
 
+...
+
 ### componentDidUpdate
+
+...
 
 <hr />
 
@@ -160,6 +185,8 @@ You can see these methods in action with this example:
 
 This is an object that allows you to validate the types for your props when they are passed to your components. Useful for ensuring that the data types you expect are actually the ones you're getting.
 
+<hr />
+
 **Exercise**
 
 Modify the previous mounting/unmounting example in the following ways:
@@ -180,6 +207,8 @@ Modify the previous mounting/unmounting example in the following ways:
 * What kinds of things would we do in the componentWillUnmount method?
 * In [this](https://facebook.github.io/react/tips/initial-ajax.html) example, inside the `componentDidMount` method, we are using `.bind(this)`. What does this do? What happens if we omit the `bind` method?
 
+<hr />
+
 ## Assignment
 
 - [Camera Shop - Part 4](https://github.com/gSchool/react-camera-view#part-4)
@@ -191,7 +220,7 @@ Modify the previous mounting/unmounting example in the following ways:
     - Create a component called GithubProfile
     - After your component mounts, make an ajax called `http://api.github.com/users/` + your github username.
     - Your user name should be injected utilizing props for the component: (`this.props.children`).
-    - Your component should render the username and an image of the user  
+    - Your component should render the username and an image of the user
     - You should use `componentDidMount` to make your AJAX call.
 * OMDB Assignment
     - Create two components, MovieSearchForm and Movie
