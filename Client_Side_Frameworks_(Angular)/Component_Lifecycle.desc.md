@@ -188,8 +188,8 @@ You can see these methods in action with this example:
 
   ⚪️    =  unmounted state
   ⚫️    =  mounted state
-----▶︎  =  actions performed by the user
-- - ▶︎  =  react's flow (this happens automatically)
+Solid Arrow   =  actions performed by the user
+Dotted Arrow  =  react's flow (this happens automatically)
 
 <hr />
 
