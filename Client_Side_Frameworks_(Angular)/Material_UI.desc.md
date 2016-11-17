@@ -28,7 +28,7 @@ export default App;
 
 This is what it would look like when rendered in the browser:
 
-![](URL)
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/504/Screen_Shot_2016-11-17_at_1.23.47_PM.png)
 
 P.S. You can check out examples of Material UI components on the [Material UI website](http://www.material-ui.com/#/components/app-bar)
 
