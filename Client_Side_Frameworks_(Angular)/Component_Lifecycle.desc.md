@@ -1,49 +1,114 @@
-## Objectives
+# Objectives
 
 - Explain what the component lifecycle is.
 - Explain why the component lifecycle is important.
 - Use the component lifecycle to manage the state of a React component.
 
+<hr />
+
 ## Introduction
 
 As we build larger React applications that contain multiple components, there will be times where we want to change props, state or any other information depending on the component lifecycle. For example, You might want to per­form cer­tain actions when a new com­po­nent instance is ini­tial­ized or destroyed. You can read all about the various methods [here](https://facebook.github.io/react/docs/component-specs.html), but here are some methods we will discuss in more detail:
 
+<hr />
+
+## On Initial Render...
+
+### getDefaultProps
+
+`getDefaultProps()` is the first lifecycle method fired when going through the initial render of the component.
+Similar to `getInitialState()`, this is another way to set initial properties on a component.
+This method is invoked once, before any components are created.
+
+It is called prior to `getInitialState()`, and therefor will any call to `this.state` or `setState()` will not work.
+
+### getInitialState
+
+You should be familar with `getInitialState` at this point.
+This is where you will be adding state to your component.
+It is a bad pattern to be setting your state with props.
+In otherwords DON'T DO THIS: `{ bob: this.props.bob }`
+
 ### componentWillMount
-this method runs before the component mounts
+This method runs before the component mounts to the DOM.
+Specifically it is executed *before* the `render()` method is run and *after* `getInitialState()`.
+Do not rely on this method to trigger a re-render, as it is called before `render()` is executed anyhow.
+
+> This is the only lifecycle hook called on server rendering. Generally, we recommend using the constructor() instead.
+
+### render
+
+Another method that you should be quite familar with at this stage.
+It is the *only* lifecycle method that is required to be included in your specification object/class
 
 ### componentDidMount
-this method runs after the component is mounted
+
+This method runs after the component is mounted.
+
+If you are going to be fetching data, this is where you will want to make those API calls.
 
 Here is an example that will focus on the input of a component when mounted:
 
 ```js
-    var App = React.createClass({
-      getInitialState: function() {
-        return {
-          txt: ""
-        };
-      },
-      componentDidMount: function(){
-        ReactDOM.findDOMNode(this.refs.nameInput).focus();
-      },
-      update: function(e){
-        this.setState({txt: e.target.value})
-      },
-      render:function(){
-        return (
-          <div>
-            <input name="one" ref="nameInput" onChange={this.update} />
-            <h1>{this.state.txt}</h1>
-          </div>
-          );
-      }
-    });
+var App = React.createClass({
+  getInitialState: function() {
+    return {
+      txt: ""
+    };
+  },
+  componentDidMount: function(){
+    ReactDOM.findDOMNode(this.refs.nameInput).focus();
+  },
+  update: function(e){
+    this.setState({txt: e.target.value})
+  },
+  render:function(){
+    return (
+      <div>
+        <input name="one" ref="nameInput" onChange={this.update} />
+        <h1>{this.state.txt}</h1>
+      </div>
+      );
+  }
+});
 
-    ReactDOM.render(<App/>, document.getElementById('container'));
-
+ReactDOM.render(<App/>, document.getElementById('container'));
 ```
 
+<hr />
+
+## On State Change...
+
+### shouldComponentUpdate
+
+### componentWillUpdate
+
+### render
+
+### componentDidUpdate
+
+<hr />
+
+## On Props Change...
+
+### componentWillReceiveProps
+
+This method is invoked when a component is receiving new props. Useful if you need to set the state on a component based on some transition in the properties, as this method has access to both the new properties and the old ones.
+
+### shouldComponentUpdate
+
+### componentWillUpdate
+
+### render
+
+### componentDidUpdate
+
+<hr />
+
+## On unmounting...
+
 ### componentWillUnmount
+
 this method runs before the component will unmount
 
 You can see these methods in action with this example:
@@ -89,13 +154,7 @@ You can see these methods in action with this example:
     ReactDOM.render(<App/>, document.getElementById('container'))
 ```
 
-### getDefaultProps
-
-Similar to `getInitialState`, this is another way to set initial properties on a component. This method is invoked once, before any components are created.
-
-### componentWillReceiveProps
-
-This method is invoked when a component is receiving new props. Useful if you need to set the state on a component based on some transition in the properties, as this method has access to both the new properties and the old ones.
+<hr />
 
 ### propTypes
 
