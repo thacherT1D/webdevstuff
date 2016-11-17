@@ -635,7 +635,7 @@ We use Material UI components the same way that we use other React components: b
 
 ### Exercise
 
-Use `AppBar`, `Card`, `RaisedButton` and other components to replicate this view:
+Use `Paper`, `AppBar`, `Card`, `RaisedButton` and other components to replicate this view:
 
 ![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/506/Screen_Shot_2016-11-17_at_2.36.43_PM.png)
 
@@ -685,7 +685,7 @@ Now is the moment of truth. You've seen some code examples. You've seen some doc
 
 ### Exercise
 
-Using Material UI's `Card`, `Stepper`, and `DatePicker` components, make another view for your app that looks like this:
+Incorporating Material UI's `Stepper` and `DatePicker` components, make another view for your app that looks like this:
 
 ![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/502/vacay_animated.gif)
 
