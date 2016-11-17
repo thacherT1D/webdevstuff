@@ -2,9 +2,9 @@
 
 - Explain what Material UI is
 - Explain why Material UI is important
-- Use inline styling to modify the look of a React user interface
-- Create new color schemes for Material UI themes
 - Describe Material UI's main layout, navigation, and form components
+- Create a new color scheme for a Material UI theme
+- Use inline styling to modify the look of a React user interface
 - Use Material UI to build a React user interface
 
 ## What's Material UI?
@@ -102,101 +102,14 @@ Open the application in your default browser.
 open http://localhost:8000/
 ```
 
-
-## How do we style Material UI components?
-
-- Material UI has default styles baked into its components
-- Right now, there are 2 ways to change most CSS styles for a Material UI component:
-  1. Use inline styling
-  2. Use CSS styling with `!important` overrides for each property (NOTE: this is not the case for React components in general - you do not need to use `!important` for CSS styles to work)
-- Inline styles that target the root element of a component (the all encompassing element, usually a div) use the `style` prop; For nested elements of a component, there are props that end with `Style` (e.g. `iconStyle`, `labelStyle`, etc.).
-- Besides those 2 primary ways to change CSS styles for a component, props for specific style properties (e.g. `backgroundColor` for RaisedButton) also can be used for styling.
-- For inline styles that take a color value, Material UI has a [list of variables](http://www.material-ui.com/#/customization/colors) that act as more intuitive color names than hex color values. Feel free to use them wherever you otherwise would use a hex color value.
-
-Let's style Material UI's `Paper` component in both ways.
-
-Open up the app component.
-```shell
-atom app/components/App.jsx
-```
-
-Import Material UI's `Paper` and `RaisedButton` components and replace the current render node with them. Your App.jsx should look like this:
-
-```jsx
-import React from 'react';
-import Paper from 'material-ui/Paper';
-import RaisedButton from 'material-ui/RaisedButton';
-
-const App = React.createClass({
-  render() {
-    return (
-      <Paper>
-          <RaisedButton />
-      </Paper>
-    )
-  }
-});
-
-export default App;
-```
-
-- Open your application at localhost:8000. Notice anything? The page looks like a blank page with an equally blank button. This is because it has no defined dimensions. Let's try adding color to the button. First, let's create a class for the button.
-
-```jsx
-import React from 'react';
-import Paper from 'material-ui/Paper';
-import RaisedButton from 'material-ui/RaisedButton';
-
-const App = React.createClass({
-  render() {
-    return (
-      <Paper>
-          <RaisedButton className='paidInFull' />
-      </Paper>
-    )
-  }
-});
-
-export default App;
-```
-
-
-```jsx
-import Paper from 'material-ui/Paper';
-import React from 'react';
-
-const App = React.createClass({
-  render() {
-    const stylePaper = {
-      padding: '0px',
-      margin: '0px'
-    };
-    return <Paper style={stylePaper}></Paper>
-  }
-});
-```
-
-Reminder of general principles of inline styling in React:
-- Create an object where the object properties correspond to an component's CSS properties
-- When you assign a Javascript number primitive to a property (e.g. `{borderRadius: 2}`, NOT `{borderRadius: '2'}`, which uses a string), React automatically registers it as a pixel (`px`) value.
-- Replace semi-colons with commas
-- For properties, change kebab-case to camelCase
-- You can use `props` to customize the object per component instance
-
-NOTE: Inline styling is becoming less popular. Material UI has announced that it is moving away from it in favor of CSS styling. However, there are still React styling frameworks, like Formidable's Radium, that use inline styling or extend it.
-
-## How do we use Material UI themes?
-
-Out of the box, Material UI gives us a great theme that we can use. However, there times when we would like to use a different theme than the default one.
-
-
-
 ## What are important Material UI Components?
 
 Before we create an app with Material UI, let's get to know its components. There are three types of components that Material UI uses:
 1. Layout components
 1. Navigation components
-1. Data input components
+1. Form components
+
+NOTE: You'll notice that the stateful components here have been translated to `React.createClass` format
 
 ### Layout Components
 
@@ -504,7 +417,7 @@ export default newToolbar;
 
 Other navigation components in Material UI include `AppBar`, `BottomNavigation`, `Drawer`, `Popover`, `Stepper`
 
-### Data Input Components
+### Form Components
 
 #### `TextField`
 
@@ -708,9 +621,65 @@ const RaisedButtonExampleSimple = () => (
 
 export default RaisedButtonExampleSimple;
 ```
-#### Other Data Input Components
+#### Other Form Components
 
-Other data input components in Material UI include `FlatButton`, `Chip`, `Slider`, `Checkbox`, `RadioButton`
+Other form components in Material UI include `FlatButton`, `Chip`, `Slider`, `Checkbox`, `RadioButton`
+
+### Exercise
+
+Get a whiteboard (or your desk) and write down a list of 6 components (2 layout components, 2 navigation components, 2 form components). Discuss with a neighbor what you wrote down. The instructor will cold call on students for their answers.
+
+## How do we
+
+## How do we style Material UI components?
+
+- Material UI has default styles baked into its components
+- Right now, there are 2 ways to change most CSS styles for a Material UI component:
+  1. Use inline styling
+  2. Use CSS styling with `!important` overrides for each property (NOTE: this is not the case for React components in general - you do not need to use `!important` for CSS styles to work)
+- Inline styles that target the root element of a component (the all encompassing element, usually a div) use the `style` prop; For nested elements of a component, there are props that end with `Style` (e.g. `iconStyle`, `labelStyle`, etc.).
+- Besides those 2 primary ways to change CSS styles for a component, props for specific style properties (e.g. `backgroundColor` for RaisedButton) also can be used for styling.
+- For inline styles that take a color value, Material UI has a [list of variables](http://www.material-ui.com/#/customization/colors) that act as more intuitive color names than hex color values. Feel free to use them wherever you otherwise would use a hex color value.
+
+Reminder of general principles of inline styling in React:
+- Create an object where the object properties correspond to an component's CSS properties
+- When you assign a Javascript number primitive to a property (e.g. `{borderRadius: 2}`, NOT `{borderRadius: '2'}`, which uses a string), React automatically registers it as a pixel (`px`) value.
+- Replace semi-colons with commas
+- For properties, change kebab-case to camelCase
+- You can use `props` to customize the object per component instance
+
+NOTE: Inline styling is becoming less popular. Material UI has announced that it is moving away from it in favor of CSS styling. However, there are still React styling frameworks, like Formidable's Radium, that use inline styling or extend it.
+
+### Exercise
+
+Go to the [Material UI documentation for styling](http://www.material-ui.com/#/customization/styles) and use it to make the app look like this:
+
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/505/Screen_Shot_2016-11-17_at_1.47.32_PM.png)
+
+## How do we use Material UI themes?
+
+Out of the box, Material UI gives us a great theme that we can use. However, there times when we would like to use a different theme than the default one.
+
+Go to the Material UI documentation and read about themes here:
+http://www.material-ui.com/#/customization/themes
+
+Also, remember that color options are here: http://www.material-ui.com/#/customization/colors
+
+### Exercise
+
+Based on the documentation you just read, change the theme's primary color to `pink500` and the text color to `cyan500`. It should look like this:
+
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/503/Screen_Shot_2016-11-17_at_12.49.25_PM.png)
+
+## How do we use Material UI to create a React user interface?
+
+Now is the moment of truth. You've seen some code examples. You've seen some documentation. Now it's your turn to use Material UI to create an interface!
+
+### Exercise
+
+Using Material UI's `Card`, `Stepper`, and `DatePicker` components, make another view for your app that looks like this:
+
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/502/vacay_animated.gif)
 
 ## Assignment
 
