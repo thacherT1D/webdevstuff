@@ -266,7 +266,7 @@ However, nothing on the page itself should change at this point.
 
 The *Match* component is where the magic really starts to happen.
 When the URL updates, any *Match* components in the current context will check to see if the updated URL matches their `pattern` prop.
-If the `location` does match the `pattern` of a `<Match />` it will render the corrisponding component set on that *Match's* `component` prop.
+If the `location` does match the `pattern` of a `<Match />` it will render the corresponding component set on that *Match's* `component` prop.
 
 What this looks like in code...
 
@@ -302,7 +302,7 @@ const Main = React.createClass({
 export default Main;
 ```
 
-And build out the corrisponding components...
+And build out the corresponding components...
 
 >Earth.jsx
 
