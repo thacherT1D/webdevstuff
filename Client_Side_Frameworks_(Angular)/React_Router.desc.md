@@ -382,8 +382,8 @@ More about that in the Bonus section.
 
 ### `<Miss />` Component
 
-React Router also provides a component for when a none of your *Match* components match the current `location`.
-This component is called *Miss*. It works much in the same way as *Match*, but doesn't require a `pattern/' prop.
+React Router also provides a component for when none of your *Match* components match the current `location`.
+This component is called *Miss*. It works much in the same way as *Match*, but it doesn't require a `pattern/' prop.
 
 Right below your `<Match />` components, add a `<Miss /> component.
 
