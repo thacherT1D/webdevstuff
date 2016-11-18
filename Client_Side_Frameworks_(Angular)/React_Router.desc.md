@@ -8,9 +8,9 @@
 
 ### What's React Router?
 
-React Router is a complete routing library for React.
+React Router v4 is a complete routing library for React.
 
-React Router keeps your UI in sync with the URL.
+React Router v4 keeps your UI in sync with the URL.
 It has a simple API with powerful features like lazy code loading, dynamic route matching, and location transition handling built right in.
 
 You probably noticed that we list the version number for this library.
@@ -20,7 +20,7 @@ The v4 API is not compatible with the previous version of this library.
 This is important to note so that when you install react-router,
 you ensure you are working with the version that matches the API documentation you are working from.
 
-The new version of React Router is desinged so that routes are just components.
+The new version of React Router is designed so that routes are just components.
 Also in previous versions you needed to have some sort of top-level config defining all the routes of the application.
 While that top-level config is no longer necessary it is still an option.
 So for those whole like having a single source of truth defining the routes go ahead and include one.
