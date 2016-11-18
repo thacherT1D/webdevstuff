@@ -37,8 +37,7 @@ React Router provides access to cached versions of components without having to 
 It also provides a fast method of creating client-side routing as well as the associated presentation views.
 
 It simplifies client-side routing.
-There's no need to send a request to a server to load an entire page or component,
-unlike Angular which needs to send requests for any and all template files.
+There's no need to send a request to a server to load an entire page or component. This is unlike Angular, which needs to send requests for any and all template files.
 
 The nesting of the URL will match the nesting of React Route components.
 You can also load multiple named components from a single route (e.g. an admin navbar and aside vs a regular user navbar and aside).
@@ -172,7 +171,7 @@ npm install --save react-router@next
 ```
 
 Currently v4 is still in the development stages so we use the `@next`suffix get the latest version of the Alpha branch.
-Dobule check that you do in fact have the right version install by cating out your `package.json` file.
+Double-check that you do in fact have the right version install by `cat`-ing out your `package.json` file.
 Under "dependencies" you should see something like this: `"react-router": "^4.0.0-alpha.5"`
 *This may no longer be necessary in the near future.*
 
@@ -190,7 +189,7 @@ You will want the *BrowserRouter* component to wrap the contents of your *App* c
 React Router's *BrowserRouter* may only have a single child.
 That child though, can have multiple children of its own.
 
-We will use ES6's *“destructuring-esq”* syntax to specifically import the `BrowserRouter` binding from the React Router module.
+We will use ES6's destructuring syntax to specifically import the `BrowserRouter` binding from the React Router module.
 
 >App.jsx
 
@@ -446,13 +445,13 @@ export default NotFound;
 ### Passing State Through Match Components
 I am fairly certain that the following is the preferred pattern for passing props through *Match* components, though feel free to correct me if you find/know otherwise.
 
-Where as before with *Match* we use the `component` prop, here we are using the `render` prop and passing it a function that will be called at render time.
+Whereas we used the `component` prop before with *Match*, here we are using the `render` prop and passing it a function that will be called at render time.
 Our function here is just going to return a `<Home />` component.
-We are then also providing that component with props.
+Then, we are also providing that component with props.
 The first line in our *Home* component is using the rest operator in conjunction with destructuring.
-This will pass in all the key value pairs of our `state` object in as props.
-On the next line we are we are passing a function, `handleAddToCart`, defined on the current component to *Home*
-On the line after that we are passing the function `handleAuth`, defined on a parent component, to the *Home* component.
+This will pass all the key-value pairs of our `state` object in as props.
+On the next line, we are passing the function `handleAddToCart` (which is defined on the current component) to *Home*
+On the line after that, we are passing the function `handleAuth` (which is defined on a parent component) to the *Home* component.
 
 > Sample.jsx
 
