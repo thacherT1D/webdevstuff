@@ -450,7 +450,7 @@ Our function here is just going to return a `<Home />` component.
 Then, we are also providing that component with props.
 The first line in our *Home* component is using the rest operator in conjunction with destructuring.
 This will pass all the key-value pairs of our `state` object in as props.
-On the next line, we are passing the function `handleAddToCart` (which is defined on the current component) to *Home*
+On the next line, we are passing the function `handleAddToCart` (which is defined on the current component) to *Home*.
 On the line after that, we are passing the function `handleAuth` (which is defined on a parent component) to the *Home* component.
 
 > Sample.jsx
