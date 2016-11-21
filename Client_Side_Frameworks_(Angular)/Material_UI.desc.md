@@ -691,7 +691,7 @@ Incorporating Material UI's `Stepper` and `DatePicker` components, make another 
 
 ## Assignment
 
-Use the `Card`, `Toolbar`, `SelectField`/`DropdownMenu`, and other components from this lecture to recreate the cart page from the Angular snapshop homework
+Use the `Card`, `Toolbar`, `SelectField`/`DropdownMenu`, and other components from this lecture to recreate the cart page from the [Angular snapshop homework](https://github.com/gSchool/snapshop-solution/)
 
 ## Resources
 
