@@ -28,7 +28,7 @@ export default App;
 
 This is what it would look like when rendered in the browser:
 
-![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/504/Screen_Shot_2016-11-17_at_1.23.47_PM.png)
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/510/mui_lecture_04.png)
 
 P.S. You can check out examples of Material UI components on the [Material UI website](http://www.material-ui.com/#/components/app-bar)
 
@@ -637,7 +637,7 @@ We use Material UI components the same way that we use other React components: b
 
 Review [the Material UI documentation](http://www.material-ui.com/#/components/app-bar). Use `Paper`, `AppBar`, `Card`, `RaisedButton` and other components to replicate this view:
 
-![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/506/Screen_Shot_2016-11-17_at_2.36.43_PM.png)
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/511/mui_lecture_02.png)
 
 ## How do we style Material UI components?
 
@@ -662,7 +662,7 @@ NOTE: Inline styling is becoming less popular. Material UI has announced that it
 
 Go to the [Material UI documentation for styling](http://www.material-ui.com/#/customization/styles) and use it to make the app look like this:
 
-![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/505/Screen_Shot_2016-11-17_at_1.47.32_PM.png)
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/512/mui_lecture_01.png)
 
 ## How do we use Material UI themes?
 
@@ -677,7 +677,7 @@ Also, remember that color options are here: http://www.material-ui.com/#/customi
 
 Based on the documentation you just read, change the theme's primary color to `pink500` and the text color to `cyan500`. It should look like this:
 
-![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/503/Screen_Shot_2016-11-17_at_12.49.25_PM.png)
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/513/mui_lecture_05.png)
 
 ## How do we use Material UI to create a React user interface?
 
