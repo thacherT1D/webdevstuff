@@ -193,11 +193,11 @@ const newDropdown = React.createClass({
 
   getInitialState() {
     return {value: 1};
-  }
+  },
 
   handleChange(event, index, value){
     this.setState({value});
-  }
+  },
 
   render() {
     return (
