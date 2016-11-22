@@ -44,19 +44,26 @@ import React from 'react';
 
 const Foo = React.createClass {
   getInitialState() {
-    return { movies: [] }
+    return {
+      movies: [],
+      loadErr: false,
+     }
   },
 
   componentDidMount() {
     axios.get(`http://www.omdbapi.com/?s=bob`)
       .then(res => {
         this.setState({ movies: res.Search });
+      })
+      .catch(err => {
+        this.setState({ loadErr: err });
       });
   }
 
   render() {
     return (
       <section>
+        { loadErr && <ErrorLogger loadError={this.state.loadErr} /> }
         <ul>
           {this.state.movies.map((movie, index) =>
             <li key={index}>{movie.Title} | {movie.Year}</li>
@@ -71,7 +78,7 @@ export default Foo;
 ```
 
 In the example above we are using the `.get` method and passing in a URL.
-As mentioned earlier, Axios is a Promise based library, so when you use a method like `.get` you will want to handle that promise with a `.then`.
+As mentioned earlier, Axios is a Promise based library, so when you use a method like `.get` you will want to handle that Promise with a `.then`.
 From there, structure the response as you wish and pass it into `setState`.
 This will trigger a re-render of the component with the new data you just provided.
 
@@ -88,6 +95,8 @@ The `config` object has some 20 plus properties available for you to configure o
 #### 💪 Exercise
 
 Take a minute to think about *what* use the `config` object provides. We will dicuss as a class shortly.
+
+<br />
 
 #### [Concurrency](https://github.com/mzabriskie/axios#concurrency)
 
@@ -106,10 +115,10 @@ function getUserPermissions() {
 
 axios.all([getUserAccount(), getUserPermissions()])
   .then(axios.spread(function (acct, perms) {
-    // Both requests are now complete
+    // All requests have resolved
   })
   .catch((error) => {
-    // handle error
+    // One or more requests have rejected
   });
 ```
 
