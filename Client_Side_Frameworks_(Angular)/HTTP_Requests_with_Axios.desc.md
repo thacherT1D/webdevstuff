@@ -2,6 +2,9 @@
 
 - Explain *what* Axios is and *why* it is useful.
 - Use Axios to fetch data from an API.
+- Explain what Axios' config object is for.
+- Explain what Axios' `.all` helper method is for.
+- Explain what Axios' `.spread` helper method is for.
 
 <hr />
 
@@ -64,8 +67,7 @@ export default Foo;
 ```
 
 In the example above we are using the `.get` method and passing in a URL.
-As mentioned earlier, Axios is a Promise based library,
-so when you use a method like `.get` you will want to handle that promise with a `.then`.
+As mentioned earlier, Axios is a Promise based library, so when you use a method like `.get` you will want to handle that promise with a `.then`.
 From there, structure the response as you wish and pass it into `setState`.
 This will trigger a re-render of the component with the new data you just provided.
 
