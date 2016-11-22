@@ -19,6 +19,10 @@ If you are in Node it uses node's [`http`](https://nodejs.org/docs/latest-v5.x/a
 Axios is also in compliance with the Promise/A+ specification.
 That means the requests you make will return a `Promise` and are *then-able*.
 
+#### 💪 Exercise
+
+Take a moment to think about *what* Axios is used for as well as *why* it is considered useful.
+
 <hr />
 
 ## How to use Axios
@@ -81,6 +85,10 @@ Axios follows the pattern of previous AJAX modules we have used in that it can w
 You will find you have the standard properties like `url`, `method` and `headers`, but you can really tailor your request to your needs should you need to.
 The `config` object has some 20 plus properties available for you to configure on those more finicky requests.
 
+#### 💪 Exercise
+
+Take a minute to think about *what* use the `config` object provides. We will dicuss as a class shortly.
+
 #### [Concurrency](https://github.com/mzabriskie/axios#concurrency)
 
 If you find yourself wanting to make multiple requests at the same time look into Axios' concurrency helper methods.
@@ -110,6 +118,11 @@ In the modified example above, pulled from the Axios docs, you see that they are
 If one should fail, it will reject and handled by `.catch`.
 Axios' `spread` helper method, under the hood, does the same thing as the [spread operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator).
 The callback provided to `spread` makes available the results of each of the requests you made in the scope of a single function.
+
+#### 💪 Exercise
+
+Take a minute to think about *what* use the `all` and `spread` helper methods provide for someone using Axios.
+We will come back and talk as a class when you are done.
 
 <hr />
 
