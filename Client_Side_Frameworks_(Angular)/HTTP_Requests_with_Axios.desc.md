@@ -41,6 +41,7 @@ Like most of the HTTP request APIs you've used, Axios has convenience methods li
 ```js
 import axios from 'axios';
 import React from 'react';
+import ErrorLogger from './ErrorLogger';
 
 const Foo = React.createClass {
   getInitialState() {
