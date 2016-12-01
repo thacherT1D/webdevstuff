@@ -6,15 +6,16 @@
 
 By the end of this lesson, you will be able to:
 
-* Use the keywords `this` and `new` to create classes in javascript
-* Articulate the difference and benefits to adding methods to the prototype vs. the constructor function in Javascript
-* Explain encapsulation, abstraction, inheritance as an object-oriented concept
-* Create a class that inherits from the `Object` prototype
-  * Create a sub-class that inherits from that class
+* Build a __constructor function__ with instance variables
+* Explain what the __prototype__ is
+* Build a constructor function with instance variables and methods
+* Explain how `this` works in ES5 vs ES6
+* Explain how __prototypical inheritance__ works
+* Create a __subclass__ that inherits from another class
 
 ## Why are we doing this?
 
-Fact: at least 25% of unique visitors to Wikimedia (host to Wikipedia's media assets) in September 2016 have browsers that do not feature ES6/ES2015 classes. [Source](https://analytics.wikimedia.org/dashboards/browsers/#all-sites-by-browser/browser-family-and-major-hierarchical-view)
+Fact: at least 25% of unique visitors to Wikimedia (host to Wikipedia's media assets) in September 2016 have browsers that do not feature ES6/ES2015 classes. [Source: Wikimedia Analytics](https://analytics.wikimedia.org/dashboards/browsers/#all-sites-by-browser/browser-family-and-major-hierarchical-view)
 
 In other words, there are plenty of browsers that cannot use ES6 classes, so we need to use ES5 techniques for such browsers.
 
@@ -245,9 +246,9 @@ moxie.speak(); // => moxie says grrrrrr/woof/etc
 moxie.toString(); // => [object Object]
 ```
 
-_Inheritance_: `toString()` is a method that was _inherited_ from `Object`. Inheritance is the concept of a child class receiving functionality from a parent class.  In this case, the Dog class is the child class or __sub-class__ that inherits the `toString` method from the parent class, the `Object`.
+_Inheritance_: `toString()` is a method that was _inherited_ from `Object`. Inheritance is the concept of a child class receiving functionality from a parent class.  In this case, the Dog class is the child class or __subclass__ that inherits the `toString` method from the parent class, the `Object`.
 
-Let's say that we want to create a class `Husky` that's a child class or __sub-class__ to the `Dog` class. We can take advantage of inheritance for this by using `Object.create`
+Let's say that we want to create a class `Husky` that's a child class or __subclass__ to the `Dog` class. We can take advantage of inheritance for this by using `Object.create`
 
 ```js
 // Part 1
@@ -358,7 +359,7 @@ __EXERCISE__
 * Create a `Cat` class that inherits from `Object`
 * Have the constructor function for `Cat` include name, age, and breed parameters
 * Make instances of `Cat` have a method `purr` that returns `'[cat name], a [breed of cat] cat, is purring'`
-* Make a `Siamese` sub-class of `Cat` that hard-codes the siamese breed so that the constructor function only requires name and age parameters
+* Make a `Siamese` subclass of `Cat` that hard-codes the siamese breed so that the constructor function only requires name and age parameters
 * Use DRY techniques to create a `purr` method for `Siamese` that returns `'[cat name], a siamese cat, is purring. How adorable!'`
 
 ## Encapsulation
