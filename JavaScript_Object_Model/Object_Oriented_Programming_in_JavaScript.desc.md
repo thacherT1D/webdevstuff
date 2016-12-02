@@ -19,6 +19,8 @@ Fact: at least 25% of unique visitors to Wikimedia (host to Wikipedia's media as
 
 In other words, there are plenty of browsers that cannot use ES6 classes, so we need to use ES5 techniques for such browsers.
 
+Of course, there are __transpilers__ that take ES6 code and translate it to ES5 code. A couple popular examples are [Babel](http://babeljs.io/) and [Traceur](https://github.com/google/traceur-compiler). However, it does not hurt to know how classes work in ES5 for the purpose of debugging.
+
 ## `this` in detail
 
 The keyword `this` in javascript refers to the current object context.  Here is an example:
@@ -430,7 +432,6 @@ In groups, conceptually design classes for a game of checkers.  What needs to be
 
 ## Additional Resources
 
-* [Encapsulation in JavaScript](http://www.intertech.com/Blog/encapsulation-in-javascript/)
 * [Inheritance and the Prototype chain](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
 * [Some opinions](http://programmers.stackexchange.com/questions/253090/why-are-inheritance-encapsulation-and-polymorphism-not-the-pillars-of-oop)
 * [Some more opinions](https://davidwalsh.name/javascript-objects-deconstruction)
@@ -439,3 +440,4 @@ In groups, conceptually design classes for a game of checkers.  What needs to be
 # Object Model
 
 * [Slides](http://slides.com/tylerbettilyon/inheritance-in-js/)
+* [Object Playground](http://www.objectplayground.com/)
