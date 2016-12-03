@@ -4,22 +4,244 @@
 
 ## Objectives
 
+* Explain why ES5 classes are important
 * Build a __constructor function__ with instance variables
 * Explain what the __prototype__ is
 * Build a constructor function with instance variables and methods
-* Explain how `this` works in ES5 vs ES6
+* Explain how `this` works
 * Explain how __prototypical inheritance__ works
 * Create a __subclass__ that inherits from another class
 
-## Why are we doing this?
+## Why are ES5 classes important?
 
 Fact: at least 25% of unique visitors to Wikimedia (host to Wikipedia's media assets) in September 2016 have browsers that do not feature ES6/ES2015 classes. [Source: Wikimedia Analytics](https://analytics.wikimedia.org/dashboards/browsers/#all-sites-by-browser/browser-family-and-major-hierarchical-view)
 
-In other words, there are plenty of browsers that cannot use ES6 classes, so we need to use ES5 techniques for such browsers.
+In other words, there are plenty of browsers that cannot use ES6 classes, so we need to use ES5 classes for such browsers.
 
 Of course, there are __transpilers__ that take ES6 code and translate it to ES5 code. A couple popular examples are [Babel](http://babeljs.io/) and [Traceur](https://github.com/google/traceur-compiler). However, it does not hurt to know how classes work in ES5 for the purpose of debugging.
 
-## `this` in detail
+## How do you build a class's constructor function with instance variables?
+
+To make a class in javascript, we __could__ try using a javascript object:
+
+```javascript
+var student = {
+	name: "Tim",
+	studentId: "1050",
+	className: "Web Development Immersive"
+};
+```
+
+The above approach for making a class has some big disadvantages.  Most importantly, as the implementor of the class, I cannot easily make more than 1 student.  I would have to create another object with all of the same properties every time I want to make a new student.  
+
+To get around this problem, javascript classes are commonly implemented with functions. The function that defines how a class should be initialized is called the _constructor function_.  Below is an example:
+
+```javascript
+function Student(name, studentId) {
+	this.name = name;
+	this.studentId = studentId;
+	if (studentId > 1000) {
+	  this.className = "Web Development Immersive";
+	} else {
+	  this.className = "Data Science Immersive";
+	}
+}
+```
+
+The ES6 equivalent would be:
+
+```javascript
+class Student {
+  constructor (name, studentId) {
+  	this.name = name;
+  	this.studentId = studentId;
+  	if (studentId > 1000) {
+  	  this.className = "Web Development Immersive";
+  	} else {
+  	  this.className = "Data Science Immersive";
+  	}
+  }
+}
+```
+
+Just like in ES6, use the `new` keyword to create an instance of the class:
+
+```javascript
+var wdiStudent = new Student("Tim", 1050);
+var dsiStudent = new Student("Matt", 903);
+```
+
+Now we can create as many students as we like using the `new` keyword.  The constructor function also has the added benefit of allowing us to do some additional logic when a student is getting created.
+
+#### `this` with the `new` keyword
+
+In the example above, the `new` keyword creates a new object using the constructor function.  Each property defined on `this` in the constructor function will be created as a property for the new object.  Think of the constructor function as the _blueprint_ for how to create a new instance of the class (In the above example, a new instance of a `Student`).  
+
+The `new` keyword also copies the __prototype__ of the constructor function.  We will discuss the __prototype__ next.
+
+__EXERCISE__
+
+Write a class in javascript for that models a Dog.  Give the Dog class a name, a breed, an address, and an age as properties on the class. Example usage is below:
+
+```javascript
+var myDog = new Dog("Tiny", "Bull Mastiff", "111111111111 Market Street", 1);
+console.log(myDog.name);
+console.log(myDog.age);
+// etc
+```
+
+## What is the prototype?
+
+When you create a constructor function for an ES5 class, you automatically also create a __prototype__ that is associated with it. This prototype is an object to which you can attach properties that can be used by any instance of the class.
+
+For example, let's create a `Building` class:
+
+```js
+function Building() {}
+```
+
+OK. Let's make sure that a prototype object exists for it:
+
+```js
+Building.prototype; // => object
+```
+
+If we expand this prototype object in the browser console, we see that it has 2 properties:
+![](https://students-gschool-production.s3.amazonaws.com/uploads/asset/file/536/Screen_Shot_2016-12-02_at_5.11.58_PM.png)
+
+What are these properties? Let's see:
+1. `__proto__` - An object that we do not need to worry about
+1. `constructor` - A reference to the `Building` constructor!
+
+In other words, the `Building` constructor function is listed as the constructor for its own prototype object.
+
+Now, how does this play out for instances of `Building`? Let's see:
+
+```js
+var myHouse = new Building();
+var empireState = new Building();
+var smithTower = new Building();
+
+myHouse.constructor; // => function Building() {}
+empireState.constructor; // => function Building() {}
+smithTower.constructor; // => function Building() {}
+```
+
+Just like the prototype, all of the instances of the `Building` class have a `constructor` property that references the original `Building` function. Let's verify that they all have the same constructor:
+
+```js
+myHouse.constructor === empireState.constructor; // => true
+smithTower.constructor === empireState.constructor; // => true
+```
+
+Yes they do! This is because __all properties on the prototype of an ES5 class are shared among all instances of its class.__
+
+__EXERCISE__
+
+Turn to your neighbor and explain:
+* What a prototype is for an ES5 class
+* How a prototype for an ES5 class gets generated
+* How a prototype relates to an instance of a ES5 class
+
+## How do you build a constructor function with instance variables and methods?
+
+So far we have only created classes that can store properties on an object.  That is useful in that we can give an explicit blueprint to how our object should look, but it is also very useful to be able to write functions using that data.
+
+For example, we can add to the `Dog` class from above by adding a function that returns the sound the dog makes when he speaks.  Let's make it random, just for fun:
+
+```javascript
+function Dog(name, breed, address, age) {
+  this.name = name;
+  this.breed = breed;
+  this.address = address;
+  this.age = age;
+
+  this.speak = function() {
+    var sounds = ["bark", "grrrrrr", "rough rough", "woof", "oink"];
+    var rand = Math.floor(Math.random() * sounds.length);
+    return this.name + " says " + sounds[rand];
+  };
+}
+```
+
+Now let's create a few dogs and call `speak`:
+
+```javascript
+var moxie = new Dog("moxie", "Manx", "1355 Market St #900", 5);
+var deli = new Dog("Deli", "Labradoodle", "88 Colin P Kelly Jr St", 2);
+moxie.speak();
+deli.speak();
+```
+
+Now we can call functions on our classes as well!  That is great progress, but the way we created a function above is not the preferred way.  In your console, try out the following:
+
+```javascript
+console.log(moxie.speak === deli.speak);
+```
+
+The comparison returns false, meaning that every instance of `Dog` that we create gets its own version of the function.  That makes total sense for properties like `name`, `breed`, `address` and `age`, but the function is identical for both dogs, so there is no need to copy it.
+
+To save on the program's memory consumption, you can add the functions you want to its prototype:
+
+```javascript
+function Dog(name, breed, address, age) {
+  this.name = name;
+  this.breed = breed;
+  this.address = address;
+  this.age = age;
+}
+
+Dog.prototype.speak = function() {
+  var sounds = ["bark", "grrrrrr", "rough rough", "woof", "oink"];
+  var rand = Math.floor(Math.random() * sounds.length);
+  return this.name + " says " + sounds[rand];
+};
+```
+
+In ES6, all of that logic would fit into a class like this:
+
+```javascript
+class Dog {
+  constructor(name, breed, address, age) {
+    this.name = name;
+    this.breed = breed;
+    this.address = address;
+    this.age = age;
+  }
+
+  speak() {
+    var sounds = ["bark", "grrrrrr", "rough rough", "woof", "oink"];
+    var rand = Math.floor(Math.random() * sounds.length);
+    return this.name + " says " + sounds[rand];
+  }
+}
+```
+
+Remember, all properties on the prototype of an ES5 class are shared among all instances of the class. In other words, the following console.log now returns true:
+
+```javascript
+var moxie = new Dog("moxie", "Manx", "1355 Market St #900", 5);
+var deli = new Dog("Deli", "Labradoodle", "88 Colin P Kelly Jr St", 2);
+console.log(moxie.speak === deli.speak); // returns true
+```
+
+
+__EXERCISE__
+
+* Implement a method on the dog class that returns the name and address framed in a box.  Call the method, `getDogTag`.  Sample usage and output is below:
+
+```javascript
+var myDog = new Dog("Butch", "Bulldog", "123 Fake Street", 5);
+
+// The getDogTag method will return the following:
+// ###################
+// # Butch           #
+// # 123 Fake Street #
+// ###################
+console.log(myDog.getDogTag());
+```
+
+## How does `this` work?
 
 The keyword `this` in javascript refers to the current object context.  Here is an example:
 
@@ -84,140 +306,7 @@ Research the `bind` method.  How can you apply it to this problem to make the ke
 
 _BONUS_: Why is the context for `this` defaulting to the window?  What is another way to solve the problem without using `bind`?
 
-## Javascript Classes
-
-To make a class in javascript, we __could__ try using a javascript object:
-
-```javascript
-var student = {
-	name: "Tim",
-	studentId: "1050",
-	className: "Web Development Immersive"
-};
-```
-
-The above approach for making a class has some big disadvantages.  Most importantly, as the implementor of the class, I cannot easily make more than 1 student.  I would have to create another object with all of the same properties every time I want to make a new student.  
-
-To get around this problem, javascript classes are commonly implemented with functions. The function that defines how a class should be initialized is called the _constructor function_.  Below is an example:
-
-```javascript
-function Student(name, studentId) {
-	this.name = name;
-	this.studentId = studentId;
-	if (studentId > 1000) {
-	  this.className = "Web Development Immersive";
-	} else {
-	  this.className = "Data Science Immersive";
-	}
-}
-```
-
-To create an instance of the class, use the `new` keyword:
-
-```javascript
-var wdiStudent = new Student("Tim", 1050);
-var dsiStudent = new Student("Matt", 903);
-```
-
-Now we can create as many students as we like using the `new` keyword.  The constructor function also has the added benefit of allowing us to do some additional logic when a student is getting created.
-
-#### `this` with the `new` keyword
-
-In the example above, the `new` keyword creates a new object using the constructor function.  Each property defined on `this` in the constructor function will be created as a property for the new object.  Think of the constructor function as the _blueprint_ for how to create a new instance of the class (In the above example, a new instance of a `Student`).  
-
-The `new` keyword also copies the __prototype__ of the constructor function.  We will discuss the __prototype__ later on in the lesson.
-
-__EXERCISE__
-
-Write a class in javascript for that models a Dog.  Give the Dog class a name, a breed, an address, and an age as properties on the class. Example usage is below:
-
-```javascript
-var myDog = new Dog("Tiny", "Bull Mastiff", "111111111111 Market Street", 1);
-console.log(myDog.name);
-console.log(myDog.age);
-// etc
-```
-
-## Classes With Functions
-
-So far we have only created classes that can store properties on an object.  That is useful in that we can give an explicit blueprint to how our object should look, but it is also very useful to be able to write functions using that data.
-
-For example, we can add to the Dog class from above by adding a function that returns the sound the dog makes when he speaks.  Let's make it random, just for fun:
-
-```javascript
-function Dog(name, breed, address, age) {
-  this.name = name;
-  this.breed = breed;
-  this.address = address;
-  this.age = age;
-
-  this.speak = function() {
-    var sounds = ["bark", "grrrrrr", "rough rough", "woof", "oink"];
-    var rand = Math.floor(Math.random() * sounds.length);
-    return this.name + " says " + sounds[rand];
-  };
-}
-```
-
-Now let's create a few dogs and call speak:
-
-```javascript
-var moxie = new Dog("moxie", "Manx", "1355 Market St #900", 5);
-var deli = new Dog("Deli", "Labradoodle", "88 Colin P Kelly Jr St", 2);
-moxie.speak();
-deli.speak();
-```
-
-Now we can call functions on our classes as well!  That is great progress, but the way we created a function above is not the preferred way.  In your console, try out the following:
-
-```javascript
-console.log(moxie.speak === deli.speak);
-```
-
-The comparison returns false, meaning that every instance of `Dog` that we create gets its own version of the function.  That makes total sense for properties like `name`, `breed`, `address` and `age`, but the function is identical for both dogs, so there is no need to copy it.
-
-To save on the program's memory consumption, you can add the functions you want to its prototype:
-
-```javascript
-function Dog(name, breed, address, age) {
-  this.name = name;
-  this.breed = breed;
-  this.address = address;
-  this.age = age;
-}
-
-Dog.prototype.speak = function() {
-  var sounds = ["bark", "grrrrrr", "rough rough", "woof", "oink"];
-  var rand = Math.floor(Math.random() * sounds.length);
-  return this.name + " says " + sounds[rand];
-};
-```
-
-All properties on the prototype are shared among all instances of the class. In other words the following console.log now returns true:
-
-```javascript
-var moxie = new Dog("moxie", "Manx", "1355 Market St #900", 5);
-var deli = new Dog("Deli", "Labradoodle", "88 Colin P Kelly Jr St", 2);
-console.log(moxie.speak === deli.speak); // returns true
-```
-
-
-__EXERCISE__
-
-* Implement a method on the dog class that returns the name and address framed in a box.  Call the method, `getDogTag`.  Sample usage and output is below:
-
-```javascript
-var myDog = new Dog("Butch", "Bulldog", "123 Fake Street", 5);
-
-// The getDogTag method will return the following:
-// ###################
-// # Butch           #
-// # 123 Fake Street #
-// ###################
-console.log(myDog.getDogTag());
-```
-
-## Prototypes And Inheritance
+## How does prototypal inheritance work?
 
 In javascript, all functions have a prototype.  The prototype is a set of properties that are available to the function.  When you use the `new` keyword to make an instance of a class in javascript, the class you are creating has all of the properties that you have defined on the class's prototype, plus all of the properties on the `Object` prototype.
 
@@ -298,7 +387,7 @@ hugh.address //=> undefined
 hugh.age //=> undefined
 ```
 
-What's happening is that we're using `Dog` for its prototype, but not for instantiation, which is creating an instance of `Dog`. Let's set up instantiation now by rewriting `Husky`:
+What's happening is that we're using `Dog` for its prototype, but not for instantiation (aka creating an instance) of `Dog`. Let's set up instantiation now by rewriting `Husky`:
 
 ```js
 function Husky(name, breed, address, age){
@@ -323,6 +412,16 @@ Just above, there are 3 things going on that set up instantiation:
     ```
 However, doing that would be verbose and would recreate work that we've already done. Yay DRY coding!
 
+The equivalent in ES6 would be:
+
+```js
+class Husky extends Dog {
+  constructor(name, breed, address, age) {
+    super(name, breed, address, age);
+  }
+}
+```
+
 In fact, if we want to be even DRY-er in terms of our coding, we could make the `Husky` constructor hard-code the breed in:
 
 ```js
@@ -337,7 +436,17 @@ var hugh = new Husky('hugh', 'seattle', 10);
 hugh.breed // => husky
 ```
 
-Awesome! Now, say that we want to make a more specific `speak` method for the Husky class. Let's do that:
+Aside: to hard-code the breed in ES6, we'd do the following:
+
+```js
+class Husky extends Dog {
+  constructor(name, address, age){
+    super(name, 'husky', address, age);
+  }
+}
+```
+
+Awesome! Now, say that we want to make a more specific `speak` method for the Husky class. Let's do that like so:
 
 ```js
 Husky.prototype.speak = function (){
@@ -350,7 +459,23 @@ harold.speak()
 // => A husky named harold says grrrrrr/woof/etc
 ```
 
-What's happening here? We're replacing the inherited `speak` method from `Dog` with a new `speak` method that is only for `Husky` instances. Specifically, here is how the new `speak` works: we take the `Dog` class's `speak` method, use `call` to call it from the Husky prototype (the `this`), and add an additional string to the front of it. DRY coding strikes again!
+ES6 version:
+
+```js
+class Husky extends Dog {
+//...
+  speak(){
+    return 'A husky named ' + super.speak();
+  }
+}
+
+const harold = new Husky('harold', /* ... */);
+
+harold.speak();
+// => 'A husky named harold says grrrrrr/woof/etc'
+```
+
+What's happening? In both the ES5 and ES6 versions, we're replacing the inherited `speak` method from `Dog` with a new `speak` method that is only for `Husky` instances. In other words, we've created some method polymorphism. Specifically for ES5, here is how the new `speak` works: we take the `Dog` class's `speak` method, use `call` to call it from the Husky prototype (the `this`), and add an additional string to the front of it. DRY coding strikes again!
 
 __EXERCISE__
 
@@ -361,8 +486,6 @@ __EXERCISE__
 * Make instances of `Cat` have a method `purr` that returns `'[cat name], a [breed of cat] cat, is purring'`
 * Make a `Siamese` subclass of `Cat` that hard-codes the siamese breed so that the constructor function only requires name and age parameters
 * Use DRY techniques to create a `purr` method for `Siamese` that returns `'[cat name], a siamese cat, is purring. How adorable!'`
-
-## Direct ES6 <-> ES5 Comparison
 
 ## Additional Resources
 
