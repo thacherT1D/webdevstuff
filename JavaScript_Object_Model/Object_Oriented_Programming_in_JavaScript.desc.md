@@ -364,71 +364,7 @@ __EXERCISE__
 * Make a `Siamese` subclass of `Cat` that hard-codes the siamese breed so that the constructor function only requires name and age parameters
 * Use DRY techniques to create a `purr` method for `Siamese` that returns `'[cat name], a siamese cat, is purring. How adorable!'`
 
-## Encapsulation
-
-_Encapsulation_ is an important concept to understand in object-oriented programming.  It entails understanding what should be visible to the use of your class and what should not be.
-
-_Public vs Private_
-
-In classic object-oriented programming, there is a concept of _private_ functions and data vs _public_ functions and data.  Javascript doesn't quite have the same built in functionality, many classes written in javascript denote something is private by defining the property with two underscores.  Below is an example:
-
-```javascript
-function Calculator() {
-}
-
-Calculator.prototype.evaluate = function(num1, num2, op) {
-  if (op === '+') {
-    return this.__add(num1, num2);
-  } else if (op === '-') {
-    return this.__subtract(num1, num2);
-  }
-};
-
-Calculator.prototype.__add = function(num1, num2) { return num1 + num2; };
-
-Calculator.prototype.__subtract = function(num1, num2) { return num1 - num2; };
-```
-
-The caller shouldn't have to ever call add directly.  The double underscore tells the caller to avoid using the function.
-
-_Getters and Setters_
-
-Another common object-oriented pattern is getter and setter methods.  This isn't as common in javascript.  Using the dog example:
-
-```javascript
-function Dog(name, breed, address, age) {
-  this.name = name;
-  this.breed = breed;
-  this.address = address;
-  this.age = age;
-}
-
-Dog.prototype.getName = function() {
-  return this.name;
-};
-
-Dog.prototype.setName = function(name) {
-  this.name = name;
-};
-```
-
-In this example, you'll see that the implementer of the class gives the caller explicit ways to get and set a property.  This can be useful if a property has certain error checking that needs to take place before it is saved, or other properties that need to be updated.  In general though, if you just have a single property, most of the time a getter and setter isn't needed.
-
-## Abstraction
-
-Abstraction is the process of modeling concepts within your program as classes.  Abstraction is a tough concept when you're first learning object-oriented programming.  Here are some questions to ask yourself when you are creating a class:
-
-* Should my class know about a certain property or function (e.g. should a `Dog` class know how to walk itself to the store.  That is probably the job of another class).
-* Is my class getting too large?
-* Is there too much functionality in a single function?
-* What is the primary purpose of my class, and does the functionality I'm about to add fit into that primary purpose.
-
-If you continually ask yourself these types of questions when you're building your code, and you're not afraid to refactor (make some changes), then you'll likely come away with a good design.  The best way to make this concrete is to model something that is a little more complicated.
-
-__EXERCISE__
-
-In groups, conceptually design classes for a game of checkers.  What needs to be abstracted into separate classes?  How will the classes be used together?
-
+## Direct ES6 <-> ES5 Comparison
 
 ## Additional Resources
 
