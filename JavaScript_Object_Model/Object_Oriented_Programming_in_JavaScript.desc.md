@@ -4,8 +4,6 @@
 
 ## Objectives
 
-By the end of this lesson, you will be able to:
-
 * Build a __constructor function__ with instance variables
 * Explain what the __prototype__ is
 * Build a constructor function with instance variables and methods
