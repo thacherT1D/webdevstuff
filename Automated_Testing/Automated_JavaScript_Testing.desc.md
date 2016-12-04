@@ -55,7 +55,7 @@ And many more.
 
 ## Using Mocha and Chai
 
-Create a new directory called "test-basics". `cd` into it, and then create a subdirectory called test:
+Create a new directory called "test-basics", initialize "test-basics" as a new git repo, `cd` into "test-basics", and then create a subdirectory called test:
 
 ```sh
 $ mkdir test-basics
@@ -64,15 +64,11 @@ $ git init
 $ mkdir test
 ```
 
-Initialize a new git repo, and then initialize npm package file. The defaults are fine for the package file except for `test command`, specify `mocha`.
-
-```sh
-$ npm init
-```
+Then initialize an npm package file. Do NOT use `npm init -y`. Run `npm init` and step through the options, the defaults are fine for the package file except for `test command`, specify `mocha`.
 
 ![NPM Init Shell](http://i.imgur.com/BJgxd9c.png)
 
-Install [Mocha](https://mochajs.org/) locally via NPM:
+Next, install [Mocha](https://mochajs.org/) locally via NPM:
 
 ```sh
 $ npm install --save-dev mocha
@@ -109,6 +105,7 @@ To verify, here's what your `package.json` file should look like. Pay attention 
   }
 }
 ```
+Add a test file called `test.js` to the `test/` directory.
 
 Try running the tests with the `npm test` command. You should see:
 
@@ -119,7 +116,13 @@ $ npm test
 0 passing (3ms)
 ```
 
-Let's create a function to test. In this case, let's implement an `index.js` file in our project directory.
+Let's create a function to test. Create an `index.js` file in the "test-basics" directory.
+
+```sh
+$ touch index.js
+$ atom index.js
+```
+Add the following to your `index.js` file.
 
 ```javascript
 // Define a function named toSentence that takes four arguments
@@ -144,7 +147,7 @@ const toSentence = function (word1, word2, word3, oxfordComma) {
 module.exports = { toSentence };
 ```
 
-Add a test file called `test.js` to the `test/` directory and add the following code:
+This is the format we will use to write tests in our `test.js` file:
 
 ```javascript
 'use strict';
@@ -171,7 +174,7 @@ Assertions can be used in actual code to maintain expectations, but we often see
 assert.strictEqual(actual, expected[, message]);
 ```
 
-Let's create a test for our `toSentence` function.
+Let's create a test for our `toSentence` function. Add the following code to your `test.js` file:
 
 ```javascript
 'use strict';
@@ -193,6 +196,7 @@ suite('toSentence function', () => {
   });
 });
 ```
+Run the `npm test` command to check your tests.
 
 For objects and arrays, `strictEqual` will not test the content inside the object or array. It will only test the reference. Chai offers a different method, `deepEqual` to handle this check.
 
@@ -208,7 +212,7 @@ As an example, let's test a request library. Let's install `request-promise`.
 $ npm install --save request-promise
 ```
 
-With that, we can create a function called `getMovies` to use the `request-promise` library.
+With that, in our `index.js` file, we can create a function called `getMovies` to use the `request-promise` library.
 
 ```javascript
 const request = require('request-promise');
@@ -230,14 +234,14 @@ const getMovies = function (query) {
 module.exports = { toSentence, getMovies };
 ```
 
-Next write the test. Let's create a new file called `movies.js` in the `test` directory.
+Next let's write the test. Let's create a new file called `movies.js` in the `test` directory.
 
 ```sh
-$ touch movies.js
-$ atom movies.js
+$ touch test/movies.js
+$ atom test/movies.js
 ```
 
-Create the following suite:
+Add the following suite to the `movies.js` test file:
 ```javascript
 'use strict';
 
@@ -253,34 +257,34 @@ suite('getMovies function', () => {
         assert.deepEqual(results, {
           "Response": "True",
           "Search": [
-              {
-                  "Poster": "http://ia.media-imdb.com/images/M/MV5BMjM2MDgxMDg0Nl5BMl5BanBnXkFtZTgwNTM2OTM5NDE@._V1_SX300.jpg",
-                  "Title": "Jurassic Park",
-                  "Type": "movie",
-                  "Year": "1993",
-                  "imdbID": "tt0107290"
-              },
-              {
-                  "Poster": "http://ia.media-imdb.com/images/M/MV5BMTYxNjY1NjE2OV5BMl5BanBnXkFtZTYwNzE0MDc4._V1_SX300.jpg",
-                  "Title": "The Lost World: Jurassic Park",
-                  "Type": "movie",
-                  "Year": "1997",
-                  "imdbID": "tt0119567"
-              },
-              {
-                  "Poster": "http://ia.media-imdb.com/images/M/MV5BMjA2NzAyMDgyM15BMl5BanBnXkFtZTYwOTQ5Mjg5._V1_SX300.jpg",
-                  "Title": "Jurassic Park III",
-                  "Type": "movie",
-                  "Year": "2001",
-                  "imdbID": "tt0163025"
-              },
-              {
-                  "Poster": "http://ia.media-imdb.com/images/M/MV5BMTQ1NDc4MjczMl5BMl5BanBnXkFtZTYwNzY0MzY2._V1_SX300.jpg",
-                  "Title": "The Making of 'Jurassic Park'",
-                  "Type": "movie",
-                  "Year": "1995",
-                  "imdbID": "tt0256908"
-              },
+            {
+            "Poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjM2MDgxMDg0Nl5BMl5BanBnXkFtZTgwNTM2OTM5NDE@._V1_SX300.jpg",
+                "Title": "Jurassic Park",
+                "Type": "movie",
+                "Year": "1993",
+                "imdbID": "tt0107290"
+            },
+            {
+                "Poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BMDFlMmM4Y2QtNDg1ZS00MWVlLTlmODgtZDdhYjY5YjdhN2M0XkEyXkFqcGdeQXVyNTI4MjkwNjA@._V1_SX300.jpg",
+                "Title": "The Lost World: Jurassic Park",
+                "Type": "movie",
+                "Year": "1997",
+                "imdbID": "tt0119567"
+            },
+            {
+                "Poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BZTU1ZWU4ZjUtZDMwYS00MmU4LWI3Y2UtZWVjMWIzODMyOWQ4XkEyXkFqcGdeQXVyNTM2NTY4NzU@._V1_SX300.jpg",
+                "Title": "Jurassic Park III",
+                "Type": "movie",
+                "Year": "2001",
+                "imdbID": "tt0163025"
+            },
+            {
+                "Poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTQ1NDc4MjczMl5BMl5BanBnXkFtZTYwNzY0MzY2._V1_SX300.jpg",
+                "Title": "The Making of 'Jurassic Park'",
+                "Type": "movie",
+                "Year": "1995",
+                "imdbID": "tt0256908"
+            },
               {
                   "Poster": "N/A",
                   "Title": "Beyond Jurassic Park",
@@ -337,6 +341,8 @@ suite('getMovies function', () => {
 
 The test is not complete until the `done` argument is called. If the `done` argument is called with an error, the test has failed.
 
+Run the `npm test` command to check your tests.
+
 ### Removing variability
 
 It's important that our tests always return the same result. This includes times where the test suite loses access to the internet, changes in data/APIs, etc. With that in mind, let's find a way to stub out our request using Nock.
@@ -347,7 +353,24 @@ $ npm install --save-dev nock
 
 The Nock library intercepts requests and produces expected responses.
 
+
+Next let's write the movies test, but using nock. Let's create a new file called `movies_nock.js` in the `test` directory.
+
+```sh
+$ touch test/movies_nock.js
+$ atom test/movies_nock.js
+```
+
+Add the following to the `movies_nock.js` test file:
+
 ```javascript
+'use strict';
+
+const assert = require('chai').assert;
+const {suite, test} = require('mocha');
+
+const {getMovies} = require('../index');
+
 const nock = require('nock');
 
 suite('getMovies function', () => {
@@ -360,29 +383,29 @@ suite('getMovies function', () => {
       .reply(200, `{
         "Response": "True",
         "Search": [
-            {
-                "Poster": "http://ia.media-imdb.com/images/M/MV5BMjM2MDgxMDg0Nl5BMl5BanBnXkFtZTgwNTM2OTM5NDE@._V1_SX300.jpg",
+          {
+            "Poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjM2MDgxMDg0Nl5BMl5BanBnXkFtZTgwNTM2OTM5NDE@._V1_SX300.jpg",
                 "Title": "Jurassic Park",
                 "Type": "movie",
                 "Year": "1993",
                 "imdbID": "tt0107290"
             },
             {
-                "Poster": "http://ia.media-imdb.com/images/M/MV5BMTYxNjY1NjE2OV5BMl5BanBnXkFtZTYwNzE0MDc4._V1_SX300.jpg",
+                "Poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BMDFlMmM4Y2QtNDg1ZS00MWVlLTlmODgtZDdhYjY5YjdhN2M0XkEyXkFqcGdeQXVyNTI4MjkwNjA@._V1_SX300.jpg",
                 "Title": "The Lost World: Jurassic Park",
                 "Type": "movie",
                 "Year": "1997",
                 "imdbID": "tt0119567"
             },
             {
-                "Poster": "http://ia.media-imdb.com/images/M/MV5BMjA2NzAyMDgyM15BMl5BanBnXkFtZTYwOTQ5Mjg5._V1_SX300.jpg",
+                "Poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BZTU1ZWU4ZjUtZDMwYS00MmU4LWI3Y2UtZWVjMWIzODMyOWQ4XkEyXkFqcGdeQXVyNTM2NTY4NzU@._V1_SX300.jpg",
                 "Title": "Jurassic Park III",
                 "Type": "movie",
                 "Year": "2001",
                 "imdbID": "tt0163025"
             },
             {
-                "Poster": "http://ia.media-imdb.com/images/M/MV5BMTQ1NDc4MjczMl5BMl5BanBnXkFtZTYwNzY0MzY2._V1_SX300.jpg",
+                "Poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTQ1NDc4MjczMl5BMl5BanBnXkFtZTYwNzY0MzY2._V1_SX300.jpg",
                 "Title": "The Making of 'Jurassic Park'",
                 "Type": "movie",
                 "Year": "1995",
@@ -431,12 +454,11 @@ suite('getMovies function', () => {
                 "imdbID": "tt1306984"
             }
         ],
-        "totalResults": "61"
+        "totalResults": "62"
       }`);
 
     getMovies('Jurassic Park')
       .then((results) => {
-        assert.deepEqual(results, );
         aNock.done();
         done();
       })
@@ -446,6 +468,7 @@ suite('getMovies function', () => {
   });
 });
 ```
+Run the `npm test` command to check your tests.
 
 Try testing out with different expected responses. Refer to the [Nock's documentation](https://github.com/node-nock/nock) for more types of requests you can intercept.
 
@@ -470,7 +493,14 @@ As an example, let's work on building an editor. Let's say your manager has come
 
 Let's write a tests for the `write` and the `displayString` method.
 
-In the `test` directory, create a file `editor.js`. In here, we will initialize the tests for `write` and `displayString`.
+In the `test` directory, create a file `editor.js`.
+
+```sh
+$ touch test/editor.js
+$ atom test/editor.js
+```
+
+In here, we will initialize the tests for `write` and `displayString` -- add the following code to your `test/editor.js` file:
 
 ```javascript
 'use strict';
@@ -507,7 +537,14 @@ suite('editor module', () => {
 
 Mocha offers the ability to run code before and after each suite is run (using `before` and `after` respectively) as well as before and after each test (using `beforeEach` and `afterEach` respectively). In this case, we want to initialize the editor state before we run each test.
 
-Given these requirements, and the tests provided, we might implement the editor module in `editor.js` as follows:
+Given these requirements, and the tests provided, we can now implement the editor module. In the `test-basics` main directory, create a file `editor.js`.
+
+```sh
+$ touch editor.js
+$ atom editor.js
+```
+
+Add the following code into `editor.js` as follows:
 
 ```javascript
 'use strict';
@@ -529,7 +566,12 @@ const displayString = function() {
 module.exports = { write, displayString, clear };
 ```
 
+Run the `npm test` command to check your tests.
+
+
 You submit this to your manager who is satisfied with the results. A day later, the manager comes back and says that the software needs an `undo` functionality. Every time, a write call occurs, the `undo` functionality would remove that write. This means that `displayString` will not produce the write that was undo-ed. If there is no more actions to undo, throw an error. By TDD process, we first write the test for `undo`.
+
+Add the following code to your `test/editor.js` file.
 
 ```javascript
   test('undo a write', () => {
@@ -545,7 +587,7 @@ You submit this to your manager who is satisfied with the results. A day later, 
   });
 ```
 
-With this in mind, we can now refactor our editor module.
+With this in mind, we can now refactor our `editor.js` module with the following code:
 
 ```javascript
 'use strict';
@@ -576,7 +618,9 @@ const undo = function() {
 module.exports = { write, displayString, clear, undo };
 ```
 
-You submit this to your manager, and you survive another day. A day later, the manager comes back and says that everyone loves `undo` functionality, but now customers now need a `redo` operation. If an `undo` is called, a `redo` would reapply the write. If there is no more actions to redo, throw an error. Let's write a test for redo.
+Run the `npm test` command to check your tests.
+
+You submit this to your manager, and you survive another day. A day later, the manager comes back and says that everyone loves `undo` functionality, but now customers now need a `redo` operation. If an `undo` is called, a `redo` would reapply the write. If there is no more actions to redo, throw an error. Let's write a test for redo in your `test/editor.js` file.
 
 ```javascript
   test('redo a write', () => {
@@ -590,8 +634,9 @@ You submit this to your manager, and you survive another day. A day later, the m
     assert.throws(() => editor.redo());
   });
 ```
+Run the `npm test` command and make sure the tests fails.
 
-Run the tests and make sure the tests fails. Write the code for the test.
+Without scrolling down... write the code for the test in your `editor.js` file.
 
 ```javascript
 'use strict';
@@ -634,8 +679,11 @@ const redo = function() {
 
 module.exports = { write, displayString, clear, undo, redo };
 ```
+Run the `npm test` command to check your tests.
 
 Your manager is happy with the solution and gives you a bonus. The next day, customers provide feedback begging for the ability to save the content, and your manager creates a requirement for a `save` method that takes in one argument, which is the path to save the content. The method should return a promise.
+
+Add the following code your `test/editor.js` file:
 
 ```javascript
 const fs = require('fs');
@@ -661,6 +709,8 @@ const fs = require('fs');
   });
 ```
 
+Add the following code your `editor.js` file:
+
 ```javascript
 const fs = require('fs');
 
@@ -681,6 +731,8 @@ const save = function(path) {
 module.exports = { write, displayString, clear, undo, redo, save };
 ```
 
+Run the `npm test` command to check your tests.
+
 **NOTE:** You are able to mock the filesystem calls using [mock-fs](https://www.npmjs.com/package/mock-fs).
 
 **Exercise:** Turn and talk to your neighbor and reflect on the advantages and disadvantages of Test Driven Development.
@@ -695,150 +747,9 @@ Test Driven Development process has many benefits.
 * Tests help you really understand the design of the code you are working on. Instead of writing code to do something, you are starting by outlining all the conditions you are subjecting the code to and what outputs you'd expect from that.
 * Overall, speed of development increases.
 
-## Creating Integration Tests using Supertest
-
-Let's convert our editor to a server with similar methods. Install express and the common middleware.
-
-```sh
-$ npm install --save express body-parser morgan
-```
-
-Create a `server.js` file.
-
-```javascript
-'use strict';
-
-const express = require('express');
-const app = express();
-const port = process.env.PORT || 8000;
-
-const morgan = require('morgan');
-const bodyParser = require('body-parser');
-const editor = require('./editor');
-
-app.disable('x-powered-by');
-app.use(morgan('short'));
-app.use(bodyParser.json());
-
-app.get('/displayString', (req, res, next) => {
-  res.status(200)
-    .set('Content-Type', 'text/plain')
-    .send(editor.displayString());
-});
-
-app.post('/write', (req, res, next) => {
-  editor.write(req.body.text);
-
-  res.sendStatus(200);
-});
-
-app.get('/clear', (req, res, next) => {
-  editor.clear();
-
-  res.sendStatus(200);
-});
-
-app.use((req, res) => {
-  res.sendStatus(404);
-});
-
-app.listen(port, () =>{
-  console.log('Listening on port', port);
-});
-
-module.exports = app;
-```
-
-Install a new dependency called `supertest`. `supertest` is an testing library that tests server APIs.
-
-```sh
-$ npm install --save-dev supertest
-```
-
-Create a file called `testServer.js` in your `test` directory.
-
-```javascript
-'use strict';
-
-const assert = require('chai').assert;
-const {suite, test} = require('mocha');
-const request = require('supertest');
-
-const server = require('../server');
-
-suite('editor server', () => {
-  beforeEach((done) => {
-    request(server)
-      .get('/clear')
-      .expect(200, done);
-  });
-
-  test('GET /displayString', (done) => {
-    request(server)
-      .get('/displayString')
-      .expect('Content-Type', /plain/)
-      .expect(200, '', done);
-  });
-
-  test('POST /write', (done) => {
-    request(server)
-      .post('/write')
-      .send({ text: 'Hello World' })
-      .expect(200)
-      .end((err, res) => {
-        if (err) {
-          throw err;
-        }
-
-        request(server)
-          .get('/displayString')
-          .expect('Content-Type', /plain/)
-          .expect(200, 'Hello World', done);
-      });
-  });
-
-  test('GET /clear', (done) => {
-    request(server)
-      .post('/write')
-      .send({ text: 'Hello World' })
-      .expect(200)
-      .end((writeErr, res) => {
-        if (writeErr) {
-          throw writeErr;
-        }
-
-        request(server)
-          .get('/clear')
-          .expect(200)
-          .end((clearErr, res) => {
-            if (clearErr) {
-              throw clearErr;
-            }
-
-            request(server)
-              .get('/displayString')
-              .expect('Content-Type', /plain/)
-              .expect(200, '', done);
-          });
-      });
-  });
-});
-```
-
 ## Assignment
 
 [https://github.com/gSchool/javascript-test-coverage](https://github.com/gSchool/javascript-test-coverage)
-
-## Bonus
-
-Write tests using `supertest` for your pet shop assignment. [https://github.com/gSchool/fs-pet-shop](https://github.com/gSchool/fs-pet-shop)
-
-## Resources
-
-- [Chai](http://chaijs.com/)
-- [Mocha](https://mochajs.org/)
-- [SuperTest](https://www.npmjs.com/package/supertest)
-- [Testing Node.js with Mocha and Chai](http://mherman.org/blog/2015/09/10/testing-node-js-with-mocha-and-chai/#.V4QAd5MrKRt)
 
 ## Videos
 
@@ -857,15 +768,3 @@ Write tests using `supertest` for your pet shop assignment. [https://github.com/
 ### Testing Asynchronous Code
 
 <iframe src="https://player.vimeo.com/video/141374358?byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-
-### Integration Testing
-
-<iframe src="https://player.vimeo.com/video/141377435?byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-
-### Testing w/ Cookies
-
-<iframe src="https://player.vimeo.com/video/141378476?byline=0&portrait=0" width="500" height="375" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-
-### Behavior-Driven Development
-
-<iframe src="https://player.vimeo.com/video/141376165?byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
