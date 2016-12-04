@@ -431,9 +431,9 @@ function Husky(name, address, age){
 
 //...
 
-var hugh = new Husky('hugh', 'seattle', 10);
+var haley = new Husky('haley', 'seattle', 10);
 
-hugh.breed // => husky
+haley.breed // => husky
 ```
 
 Aside: to hard-code the breed in ES6, we'd do the following:
