@@ -9,7 +9,7 @@
 
 ## Benefits of testing
 
-Up to this point, we have not written tests for our projects, but the instruction staff have created tests for you to run through exercises. As projects get bigger, the cognitive load needed to understand your project becomes too cumbersome to manage all the logic. Testing helps us out out here.
+Up to this point, we have not written tests for our projects, but the instruction staff have created tests for you to run through exercises. As projects get bigger, the cognitive load needed to understand your project becomes too cumbersome to manage all the logic and ensure everything remains functional. Testing helps us out out here.
 
 Testing your code has many strengths:
 
@@ -105,6 +105,7 @@ To verify, here's what your `package.json` file should look like. Pay attention 
   }
 }
 ```
+
 Add a test file called `test.js` to the `test/` directory.
 
 Try running the tests with the `npm test` command. You should see:
@@ -122,6 +123,7 @@ Let's create a function to test. Create an `index.js` file in the "test-basics" 
 $ touch index.js
 $ atom index.js
 ```
+
 Add the following to your `index.js` file.
 
 ```javascript
@@ -180,9 +182,9 @@ Let's create a test for our `toSentence` function. Add the following code to you
 'use strict';
 
 const assert = require('chai').assert;
-const {suite, test} = require('mocha');
+const { suite, test } = require('mocha');
 
-const {toSentence} = require('../index');
+const { toSentence } = require('../index');
 
 suite('toSentence function', () => {
   test('converts to a sentence without oxford comma specified', () => {
@@ -196,6 +198,7 @@ suite('toSentence function', () => {
   });
 });
 ```
+
 Run the `npm test` command to check your tests.
 
 For objects and arrays, `strictEqual` will not test the content inside the object or array. It will only test the reference. Chai offers a different method, `deepEqual` to handle this check.
@@ -242,6 +245,7 @@ $ atom test/movies.js
 ```
 
 Add the following suite to the `movies.js` test file:
+
 ```javascript
 'use strict';
 
@@ -254,82 +258,8 @@ suite('getMovies function', () => {
   test('obtains a valid set of movies', (done) => {
     getMovies('Jurassic Park')
       .then((results) => {
-        assert.deepEqual(results, {
-          "Response": "True",
-          "Search": [
-            {
-            "Poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjM2MDgxMDg0Nl5BMl5BanBnXkFtZTgwNTM2OTM5NDE@._V1_SX300.jpg",
-                "Title": "Jurassic Park",
-                "Type": "movie",
-                "Year": "1993",
-                "imdbID": "tt0107290"
-            },
-            {
-                "Poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BMDFlMmM4Y2QtNDg1ZS00MWVlLTlmODgtZDdhYjY5YjdhN2M0XkEyXkFqcGdeQXVyNTI4MjkwNjA@._V1_SX300.jpg",
-                "Title": "The Lost World: Jurassic Park",
-                "Type": "movie",
-                "Year": "1997",
-                "imdbID": "tt0119567"
-            },
-            {
-                "Poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BZTU1ZWU4ZjUtZDMwYS00MmU4LWI3Y2UtZWVjMWIzODMyOWQ4XkEyXkFqcGdeQXVyNTM2NTY4NzU@._V1_SX300.jpg",
-                "Title": "Jurassic Park III",
-                "Type": "movie",
-                "Year": "2001",
-                "imdbID": "tt0163025"
-            },
-            {
-                "Poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTQ1NDc4MjczMl5BMl5BanBnXkFtZTYwNzY0MzY2._V1_SX300.jpg",
-                "Title": "The Making of 'Jurassic Park'",
-                "Type": "movie",
-                "Year": "1995",
-                "imdbID": "tt0256908"
-            },
-              {
-                  "Poster": "N/A",
-                  "Title": "Beyond Jurassic Park",
-                  "Type": "movie",
-                  "Year": "2001",
-                  "imdbID": "tt0321431"
-              },
-              {
-                  "Poster": "N/A",
-                  "Title": "Jurassic Park",
-                  "Type": "game",
-                  "Year": "1993",
-                  "imdbID": "tt0478182"
-              },
-              {
-                  "Poster": "N/A",
-                  "Title": "Jurassic Park: Operation Genesis",
-                  "Type": "game",
-                  "Year": "2003",
-                  "imdbID": "tt0389060"
-              },
-              {
-                  "Poster": "N/A",
-                  "Title": "Jurassic Park: The Game",
-                  "Type": "game",
-                  "Year": "2011",
-                  "imdbID": "tt1988671"
-              },
-              {
-                  "Poster": "N/A",
-                  "Title": "The Lost World: Jurassic Park",
-                  "Type": "game",
-                  "Year": "1997",
-                  "imdbID": "tt0292073"
-              },
-              {
-                  "Poster": "N/A",
-                  "Title": "The Lost World: Jurassic Park - Chaos Island",
-                  "Type": "game",
-                  "Year": "1997",
-                  "imdbID": "tt1306984"
-              }
-          ],
-          "totalResults": "61"
-        });
+        assert.deepEqual(results, 
+{"Search":[{"Title":"Jurassic Park","Year":"1993","imdbID":"tt0107290","Type":"movie","Poster":"https://images-na.ssl-images-amazon.com/images/M/MV5BMjM2MDgxMDg0Nl5BMl5BanBnXkFtZTgwNTM2OTM5NDE@._V1_SX300.jpg"},{"Title":"The Lost World: Jurassic Park","Year":"1997","imdbID":"tt0119567","Type":"movie","Poster":"https://images-na.ssl-images-amazon.com/images/M/MV5BMDFlMmM4Y2QtNDg1ZS00MWVlLTlmODgtZDdhYjY5YjdhN2M0XkEyXkFqcGdeQXVyNTI4MjkwNjA@._V1_SX300.jpg"},{"Title":"Jurassic Park III","Year":"2001","imdbID":"tt0163025","Type":"movie","Poster":"https://images-na.ssl-images-amazon.com/images/M/MV5BZTU1ZWU4ZjUtZDMwYS00MmU4LWI3Y2UtZWVjMWIzODMyOWQ4XkEyXkFqcGdeQXVyNTM2NTY4NzU@._V1_SX300.jpg"},{"Title":"The Making of 'Jurassic Park'","Year":"1995","imdbID":"tt0256908","Type":"movie","Poster":"https://images-na.ssl-images-amazon.com/images/M/MV5BMTQ1NDc4MjczMl5BMl5BanBnXkFtZTYwNzY0MzY2._V1_SX300.jpg"},{"Title":"Beyond Jurassic Park","Year":"2001","imdbID":"tt0321431","Type":"movie","Poster":"N/A"},{"Title":"Jurassic Park","Year":"1993","imdbID":"tt0478182","Type":"game","Poster":"N/A"},{"Title":"Jurassic Park: Operation Genesis","Year":"2003","imdbID":"tt0389060","Type":"game","Poster":"N/A"},{"Title":"Jurassic Park: The Game","Year":"2011","imdbID":"tt1988671","Type":"game","Poster":"N/A"},{"Title":"The Lost World: Jurassic Park","Year":"1997","imdbID":"tt0292073","Type":"game","Poster":"N/A"},{"Title":"The Lost World: Jurassic Park - Chaos Island","Year":"1997","imdbID":"tt1306984","Type":"game","Poster":"N/A"}],"totalResults":"62","Response":"True"});
         done();
       })
       .catch((err) => {
@@ -381,81 +311,70 @@ suite('getMovies function', () => {
         s: 'Jurassic Park'
       })
       .reply(200, `{
-        "Response": "True",
-        "Search": [
-          {
-            "Poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjM2MDgxMDg0Nl5BMl5BanBnXkFtZTgwNTM2OTM5NDE@._V1_SX300.jpg",
-                "Title": "Jurassic Park",
-                "Type": "movie",
-                "Year": "1993",
-                "imdbID": "tt0107290"
-            },
-            {
-                "Poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BMDFlMmM4Y2QtNDg1ZS00MWVlLTlmODgtZDdhYjY5YjdhN2M0XkEyXkFqcGdeQXVyNTI4MjkwNjA@._V1_SX300.jpg",
-                "Title": "The Lost World: Jurassic Park",
-                "Type": "movie",
-                "Year": "1997",
-                "imdbID": "tt0119567"
-            },
-            {
-                "Poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BZTU1ZWU4ZjUtZDMwYS00MmU4LWI3Y2UtZWVjMWIzODMyOWQ4XkEyXkFqcGdeQXVyNTM2NTY4NzU@._V1_SX300.jpg",
-                "Title": "Jurassic Park III",
-                "Type": "movie",
-                "Year": "2001",
-                "imdbID": "tt0163025"
-            },
-            {
-                "Poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTQ1NDc4MjczMl5BMl5BanBnXkFtZTYwNzY0MzY2._V1_SX300.jpg",
-                "Title": "The Making of 'Jurassic Park'",
-                "Type": "movie",
-                "Year": "1995",
-                "imdbID": "tt0256908"
-            },
-            {
-                "Poster": "N/A",
-                "Title": "Beyond Jurassic Park",
-                "Type": "movie",
-                "Year": "2001",
-                "imdbID": "tt0321431"
-            },
-            {
-                "Poster": "N/A",
-                "Title": "Jurassic Park",
-                "Type": "game",
-                "Year": "1993",
-                "imdbID": "tt0478182"
-            },
-            {
-                "Poster": "N/A",
-                "Title": "Jurassic Park: Operation Genesis",
-                "Type": "game",
-                "Year": "2003",
-                "imdbID": "tt0389060"
-            },
-            {
-                "Poster": "N/A",
-                "Title": "Jurassic Park: The Game",
-                "Type": "game",
-                "Year": "2011",
-                "imdbID": "tt1988671"
-            },
-            {
-                "Poster": "N/A",
-                "Title": "The Lost World: Jurassic Park",
-                "Type": "game",
-                "Year": "1997",
-                "imdbID": "tt0292073"
-            },
-            {
-                "Poster": "N/A",
-                "Title": "The Lost World: Jurassic Park - Chaos Island",
-                "Type": "game",
-                "Year": "1997",
-                "imdbID": "tt1306984"
-            }
-        ],
-        "totalResults": "62"
-      }`);
+        "Search": [{
+            "Title": "Jurassic Park",
+            "Year": "1993",
+            "imdbID": "tt0107290",
+            "Type": "movie",
+            "Poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjM2MDgxMDg0Nl5BMl5BanBnXkFtZTgwNTM2OTM5NDE@._V1_SX300.jpg"
+        }, {
+            "Title": "The Lost World: Jurassic Park",
+            "Year": "1997",
+            "imdbID": "tt0119567",
+            "Type": "movie",
+            "Poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BMDFlMmM4Y2QtNDg1ZS00MWVlLTlmODgtZDdhYjY5YjdhN2M0XkEyXkFqcGdeQXVyNTI4MjkwNjA@._V1_SX300.jpg"
+        }, {
+            "Title": "Jurassic Park III",
+            "Year": "2001",
+            "imdbID": "tt0163025",
+            "Type": "movie",
+            "Poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BZTU1ZWU4ZjUtZDMwYS00MmU4LWI3Y2UtZWVjMWIzODMyOWQ4XkEyXkFqcGdeQXVyNTM2NTY4NzU@._V1_SX300.jpg"
+        }, {
+            "Title": "The Making of 'Jurassic Park'",
+            "Year": "1995",
+            "imdbID": "tt0256908",
+            "Type": "movie",
+            "Poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTQ1NDc4MjczMl5BMl5BanBnXkFtZTYwNzY0MzY2._V1_SX300.jpg"
+        }, {
+            "Title": "Beyond Jurassic Park",
+            "Year": "2001",
+            "imdbID": "tt0321431",
+            "Type": "movie",
+            "Poster": "N/A"
+        }, {
+            "Title": "Jurassic Park",
+            "Year": "1993",
+            "imdbID": "tt0478182",
+            "Type": "game",
+            "Poster": "N/A"
+        }, {
+            "Title": "Jurassic Park: Operation Genesis",
+            "Year": "2003",
+            "imdbID": "tt0389060",
+            "Type": "game",
+            "Poster": "N/A"
+        }, {
+            "Title": "Jurassic Park: The Game",
+            "Year": "2011",
+            "imdbID": "tt1988671",
+            "Type": "game",
+            "Poster": "N/A"
+        }, {
+            "Title": "The Lost World: Jurassic Park",
+            "Year": "1997",
+            "imdbID": "tt0292073",
+            "Type": "game",
+            "Poster": "N/A"
+        }, {
+            "Title": "The Lost World: Jurassic Park - Chaos Island",
+            "Year": "1997",
+            "imdbID": "tt1306984",
+            "Type": "game",
+            "Poster": "N/A"
+        }],
+        "totalResults": "62",
+        "Response": "True"
+    }`);
 
     getMovies('Jurassic Park')
       .then((results) => {
@@ -489,7 +408,7 @@ and repeat.
 
 As an example, let's work on building an editor. Let's say your manager has come in with the following requirements:
 
-> We would like to provide a module that represents an editor. This editor has three functions: `displayString`, `write`, and `clear`. The `displayString` function does not take any parameters and produces a string which is everything that has been written to the editor. The `write` method, takes in a string and returns nothing. It writes to the editor as a side effect. The `clear` method will empty everything that has been written to the editor.
+> We would like to provide a class that represents an editor. This editor has three functions: `displayString`, `write`, and `clear`. The `displayString` function does not take any parameters and produces a string which is everything that has been written to the editor. The `write` method, takes in a string and returns nothing. It writes to the editor as a side effect. The `clear` method will empty everything that has been written to the editor.
 
 Let's write a tests for the `write` and the `displayString` method.
 
@@ -506,20 +425,20 @@ In here, we will initialize the tests for `write` and `displayString` -- add the
 'use strict';
 
 const assert = require('chai').assert;
-const {suite, test} = require('mocha');
+const { suite, test } = require('mocha');
 
-const editor = require('../editor');
+const Editor = require('../editor');
 
 suite('editor module', () => {
-  beforeEach(() => {
-    editor.clear();
-  });
-
   test('initial editor produces empty string', () => {
+    const editor = new Editor();
+    
     assert.strictEqual(editor.displayString(), '');
   });
 
   test('write method adds to editor', () => {
+    const editor = new Editor();
+    
     editor.write('Hello World');
     assert.strictEqual(editor.displayString(), 'Hello World');
 
@@ -528,6 +447,8 @@ suite('editor module', () => {
   });
 
   test('clear method clears the editor', () => {
+    const editor = new Editor();
+    
     editor.write('Hello World');
     editor.clear();
     assert.strictEqual(editor.displayString(), '');
@@ -549,21 +470,25 @@ Add the following code into `editor.js` as follows:
 ```javascript
 'use strict';
 
-let text = '';
+class Editor {
+  constructor() {
+    this.text = '';
+  }
+  
+  clear(str) {
+    this.text = '';
+  }
+  
+  write(str) {
+    this.text += str;
+  }
+  
+  displayString() {
+    return this.text;
+  }
+}
 
-const clear = function(str) {
-  text = '';
-};
-
-const write = function(str) {
-  text += str;
-};
-
-const displayString = function() {
-  return text;
-};
-
-module.exports = { write, displayString, clear };
+module.exports = Editor;
 ```
 
 Run the `npm test` command to check your tests.
@@ -575,6 +500,8 @@ Add the following code to your `test/editor.js` file.
 
 ```javascript
   test('undo a write', () => {
+    const editor = new Editor();
+    
     editor.write('Hello World');
     assert.strictEqual(editor.displayString(), 'Hello World');
     editor.write('Hello World Again');
@@ -592,30 +519,34 @@ With this in mind, we can now refactor our `editor.js` module with the following
 ```javascript
 'use strict';
 
-let texts = [];
-
-const clear = function(str) {
-  texts = [];
-};
-
-const write = function(str) {
-  texts.push(str);
-};
-
-const displayString = function() {
-  return texts.reduce((written, str) => written + str, '');
-};
-
-const undo = function() {
-  if (texts.length) {
-    texts.pop();
+class Editor {
+  constructor() {
+    this.texts = [];
   }
-  else {
-    throw new Error('Cannot undo any more.');
-  }
-};
 
-module.exports = { write, displayString, clear, undo };
+  clear(str) {
+    this.texts = [];
+  }
+
+  write(str) {
+    this.texts.push(str);
+  }
+
+  displayString() {
+    return this.texts.reduce((prev, str) => prev + str, '');
+  }
+
+  undo() {
+    if (this.texts.length) {
+      this.texts.pop();
+    }
+    else {
+      throw new Error('Cannot undo any more.');
+    }
+  }
+}
+
+module.exports = Editor;
 ```
 
 Run the `npm test` command to check your tests.
@@ -624,6 +555,8 @@ You submit this to your manager, and you survive another day. A day later, the m
 
 ```javascript
   test('redo a write', () => {
+    const editor = new Editor();
+    
     assert.throws(() => editor.redo());
     editor.write('Hello World');
     assert.strictEqual(editor.displayString(), 'Hello World');
@@ -641,44 +574,51 @@ Without scrolling down... write the code for the test in your `editor.js` file.
 ```javascript
 'use strict';
 
-let texts = [];
-let redoTexts = [];
-
-const clear = function(str) {
-  texts = [];
-  redoTexts = [];
-};
-
-const write = function(str) {
-  texts.push(str);
-};
-
-const displayString = function() {
-  return texts.reduce((written, str) => written + str, '');
-};
-
-const undo = function() {
-  if (texts.length) {
-    const str = texts.pop();
-    redoTexts.push(str);
+class Editor {
+  constructor() {
+    this.texts = [];
+    this.redoTexts = [];
   }
-  else {
-    throw new Error('Cannot undo any more.');
-  }
-};
 
-const redo = function() {
-  if (redoTexts.length) {
-    const str = redoTexts.pop();
-    texts.push(str);
+  clear(str) {
+    this.texts = [];
+    this.redoTexts = [];
   }
-  else {
-    throw new Error('Cannot redo any more.');
-  }
-};
 
-module.exports = { write, displayString, clear, undo, redo };
+  write(str) {
+    this.texts.push(str);
+  }
+
+  displayString() {
+    return this.texts.reduce((prev, str) => prev + str, '');
+  }
+
+  undo() {
+    if (this.texts.length) {
+      const str = this.texts.pop();
+
+      this.redoTexts.push(str);
+    }
+    else {
+      throw new Error('Cannot undo any more.');
+    }
+  }
+
+  redo() {
+    if (this.redoTexts.length) {
+      const str = this.redoTexts.pop();
+
+      this.texts.push(str);
+    }
+    else {
+      throw new Error('Cannot redo any more.');
+    }
+  }
+}
+
+module.exports = Editor;
 ```
+
 Run the `npm test` command to check your tests.
 
 Your manager is happy with the solution and gives you a bonus. The next day, customers provide feedback begging for the ability to save the content, and your manager creates a requirement for a `save` method that takes in one argument, which is the path to save the content. The method should return a promise.
@@ -691,6 +631,8 @@ const fs = require('fs');
 // ...
 
   test('save a file', (done) => {
+    const editor = new Editor();
+    
     editor.write('Hello World');
     editor.save('./test.txt')
       .then(() => {
@@ -712,23 +654,65 @@ const fs = require('fs');
 Add the following code your `editor.js` file:
 
 ```javascript
+'use strict';
+
 const fs = require('fs');
 
-// ...
+class Editor {
+  constructor() {
+    this.texts = [];
+    this.redoTexts = [];
+  }
 
-const save = function(path) {
-  return new Promise((resolve, reject) => {
-    fs.writeFile(path, displayString(), (err) => {
-      if (err) {
-        return reject(err);
-      }
+  clear(str) {
+    this.texts = [];
+    this.redoTexts = [];
+  }
 
-      resolve();
+  write(str) {
+    this.texts.push(str);
+  }
+
+  displayString() {
+    return this.texts.reduce((prev, str) => prev + str, '');
+  }
+
+  undo() {
+    if (this.texts.length) {
+      const str = this.texts.pop();
+
+      this.redoTexts.push(str);
+    }
+    else {
+      throw new Error('Cannot undo any more.');
+    }
+  }
+
+  redo() {
+    if (this.redoTexts.length) {
+      const str = this.redoTexts.pop();
+
+      this.texts.push(str);
+    }
+    else {
+      throw new Error('Cannot redo any more.');
+    }
+  }
+
+  save(path) {
+    return new Promise((resolve, reject) => {
+      fs.writeFile(path, this.displayString(), (err) => {
+        if (err) {
+          return reject(err);
+        }
+
+        resolve();
+      });
     });
-  });
-};
+  }
+}
 
-module.exports = { write, displayString, clear, undo, redo, save };
+module.exports = Editor;
 ```
 
 Run the `npm test` command to check your tests.
