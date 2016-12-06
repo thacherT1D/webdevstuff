@@ -83,11 +83,9 @@ Designed specifically to work with HTTP, OAuth issues an access token to a web a
 Resources:
 
 - https://developer.linkedin.com/docs/oauth2
-- https://github.com/auth0/passport-linkedin-oauth2
 - http://passportjs.org/docs
 - http://passportjs.org/docs/configure#configure
 - https://apigee.com/console/linkedin
-- http://docs.mongodb.org/manual/reference/method/db.collection.update/#db.collection.update
 
 ## Why is OAuth important?
 
