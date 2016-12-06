@@ -78,7 +78,14 @@ Turn to your a neighbor and, in your own words, explain what an integration test
 
 ## Why are integration tests important?
 
-[Discuss the advantages and disadvantages of integration tests]
+While integrated tests have been used in some of the assignments you've
+done, you probably haven't written integrated tests for any of your own projects.
+Integrated tests can be helpful for projects because, as it gets bigger,
+keeping the entire codebase in your head gets harder. As a result, it's
+easy to accidentally slip bugs into your program. And fixing those bugs
+takes time away from feature development. On a large project that doesn't use
+integrated tests, it's common for your productivity to slow and possibly
+grind to a stop.
 
 ## How do you use test-driven development to write integration tests?
 
@@ -86,8 +93,10 @@ Turn to your a neighbor and, in your own words, explain what an integration test
 cd path/to/binary
 ```
 
+Install supertest, mocha and chai as dev dependencies.
+
 ```shell
-npm install --save-dev supertest
+npm install --save-dev supertest mocha chai
 ```
 
 In the `test/server.test.js` file, type the following code.
@@ -142,8 +151,27 @@ app.listen(port, () => {
 module.exports = app;
 ```
 
+Create a 'Binary.js' file.
+* Curious about what's going on in this Binary Class? Checkout the link in the 📚 Resources below.
+
+```js
+'use strict';
+
+class Binary {
+  constructor(value = '0') {
+    this.value = value;
+  }
+
+  toDecimal() {
+    return Number.parseInt(this.value, 2)
+  }
+}
+
+module.exports = Binary;
+```
+
 ```shell
-npm -s test
+npm test
 ```
 
 ```text
@@ -183,7 +211,59 @@ suite('binary routes', () => {
 ```
 
 ```shell
-npm -s test
+npm test
+```
+
+Here is an example of UNIT tests, testing the Binary Class's functionality.
+
+```js
+'use strict';
+
+const { assert } = require('chai');
+const { suite, test } = require('mocha');
+const Binary = require('../Binary');
+
+suite('Binary', () => {
+  test('converts to zero decimal by default', () => {
+    const binary = new Binary();
+    const actual = binary.toDecimal();
+    const expected = 0;
+
+    assert.strictEqual(actual, expected);
+  });
+
+  test('converts to zero decimal', () => {
+    const binary = new Binary('0');
+    const actual = binary.toDecimal();
+    const expected = 0;
+
+    assert.strictEqual(actual, expected);
+  });
+
+  test('converts to one decimal', () => {
+    const binary = new Binary('1');
+    const actual = binary.toDecimal();
+    const expected = 1;
+
+    assert.strictEqual(actual, expected);
+  });
+
+  test('converts to two decimal', () => {
+    const binary = new Binary('10');
+    const actual = binary.toDecimal();
+    const expected = 2;
+
+    assert.strictEqual(actual, expected);
+  });
+
+  test('converts to 42 decimal', () => {
+    const binary = new Binary('101010');
+    const actual = binary.toDecimal();
+    const expected = 42;
+
+    assert.strictEqual(actual, expected);
+  });
+});
 ```
 
 ```text
@@ -244,7 +324,7 @@ module.exports = app;
 ```
 
 ```shell
-npm -s test
+npm test
 ```
 
 ```text
@@ -293,7 +373,7 @@ suite('binary routes', () => {
 ```
 
 ```shell
-npm -s test
+npm test
 ```
 
 ```text
@@ -305,13 +385,13 @@ binary routes
 
 3 passing (53ms)
 ```
-
 ## Assignment
 
-Write integration tests for the official `server3.js` solution of the [Pet Shop assignment]((https://github.com/gSchool/fs-pet-shop-solutions).
+Chat with your Q3 project partner and decided on a route for each of you to write an integration test for.
 
-## Resources
+📚 ## Resources
 
 - [GitHub - SuperTest](https://github.com/visionmedia/supertest)
 - [Wikipedia - Black-box testing](https://en.wikipedia.org/wiki/Black-box_testing)
 - [Wikipedia - Integration testing](https://en.wikipedia.org/wiki/Integration_testing)
+- [Binary](https://github.com/gSchool/computer-science-curriculum/blob/master/Unit-0/04-binary-ascii-utf8.md)
