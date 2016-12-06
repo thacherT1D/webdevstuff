@@ -363,6 +363,14 @@ router.get('/linkedin/callback', passport.authenticate('oauth2', {
 module.exports = router;
 ```
 
+Let's take a look at this line-by-line. We do our require in our modules like we usually do. In particular interest, we require a module called `passport-oauth2`. Passport allows the ability to create a "strategy" that describes specific implementation of authentication. Passport has many strategies, LinkedIn included. We chose to work with the general OAuth 2 strategy as it can apply to many other services that do not have a strategy.
+
+After requiring the strategy, we need to initialize it. For the OAuth2 strategy, we initialize it with two arguments, a configuration and a callback. The configuration contains information that the OAuth server provides, for example, the authorization URL, callback URL, and token URL. You can find these values in the documentation for the API you like. LinkedIn provides a [documentation page](https://developer.linkedin.com/docs/oauth2) specific to OAuth. The strategy also requires the client ID and client secret. Those are given to you when creating an application, and are stored in the `.env` file. Lastly, we include a scope in our configuration. This determines what permissions we need from our provider. Again, these values (stored in an array) are specific to the provider.
+
+The second argument is the callback. The callback has a big job, which is to handle the success of the OAuth request. The callback has 4 parameters the access token (the token we use to make requests to our provider), the refresh token (optional), the user profile (which is always an empty object unless a specific strategy is used), and a callback, which we have labeled `done`.
+
+This callback has a lot of responsibility. Specifically it has to manage whether we currently have the user stored in our database and insert it when necessary.
+
 [Final OAuth Example](https://github.com/kmcgrady/oauth-example)
 
 ## Resources
