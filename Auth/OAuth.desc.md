@@ -83,8 +83,6 @@ Designed specifically to work with HTTP, OAuth issues an access token to a web a
 Resources:
 
 - https://developer.linkedin.com/docs/oauth2
-- http://passportjs.org/docs
-- http://passportjs.org/docs/configure#configure
 - https://apigee.com/console/linkedin
 
 ## Why is OAuth important?
@@ -152,6 +150,207 @@ Then, add the following URL to your application's OAuth 2.0 authorized redirect 
 - `http://localhost:8000/auth/linkedin/callback`
 
 Finally, click the update button on the bottom of the page. You can safely ignore any textfields for OAuth 1.0a. Once the update is successful, install the following dependencies.
+
+In your shell, create a database.
+
+```shell
+createdb oauth_dev
+npm install --save knex pg
+```
+
+Add the following files for setting up database and knex configuration.
+
+`knexfile.js`
+
+```javascript
+'use strict';
+
+module.exports = {
+  development: {
+    client: 'pg',
+    connection: 'postgres://localhost/oauth_dev'
+  }
+};
+```
+
+`knex.js`
+
+```javascript
+'use strict';
+
+const environment = process.env.NODE_ENV || 'development';
+const knexConfig = require('./knexfile')[environment];
+const knex = require('knex')(knexConfig);
+
+module.exports = knex;
+```
+
+Create a migration file for your users.
+
+```shell
+npm run knex migrate:make users
+```
+
+Inside your users migration file.
+
+```javascript
+'use strict';
+
+exports.up = function(knex) {
+  return knex.schema.createTable('users', (table) => {
+    table.increments();
+    table.string('first_name').notNullable().defaultTo('');
+    table.string('last_name').notNullable().defaultTo('');
+    table.string('email').unique().notNullable();
+    table.string('linkedin_token').notNullable();
+    table.timestamps(true, true);
+  });
+};
+
+exports.down = function(knex) {
+  return knex.schema.dropTable('users');
+};
+```
+
+Now that our database table migrations have been created, let's run the latest migration.
+
+```shell
+npm run knex run migrate:latest
+```
+
+We will ignore seeds for now. Let's install some of the usual dependencies for our application.
+
+```shell
+npm install --save express humps jsonwebtoken morgan nodemon passport passport-oauth2 request request-promise
+```
+
+We're ready to start our server. Let's build our `server.js` file.
+
+```javascript
+'use strict';
+
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').config();
+}
+
+const express = require('express');
+const passport = require('passport');
+
+const app = express();
+
+app.disable('x-powered-by');
+
+app.use(passport.initialize());
+app.use(express.static('public'));
+
+const auth = require('./routes/auth');
+
+app.use('/auth', auth);
+
+app.listen(8000);
+```
+
+The only difference from how we usually implement servers is requiring the `passport` module. The passport module provides easy implementation to multiple types of authentication. You'll see its use more in detail in the `auth` routes. For now, all we need to do is initialize the passport module as a piece of middleware.
+
+Let's create a `public` folder with the following `index.html` page.
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>OAuth</title>
+  </head>
+  <body>
+    <a href="/auth/linkedin">Login</a>
+  </body>
+</html>
+```
+
+Now, let's build the routes for authentication. In `routes/auth.js`,
+
+```javascript
+'use strict';
+
+const express = require('express');
+const jwt = require('jsonwebtoken');
+const knex = require('../knex');
+const passport = require('passport');
+const OAuth2Strategy = require('passport-oauth2');
+const { camelizeKeys, decamelizeKeys } = require('humps');
+const request = require('request-promise')
+
+const router = express.Router();
+
+const strategy = new OAuth2Strategy({
+  authorizationURL: 'https://www.linkedin.com/oauth/v2/authorization',
+  scope: ['r_basicprofile', 'r_emailaddress'],
+  tokenURL: 'https://www.linkedin.com/oauth/v2/accessToken',
+  clientID: process.env.LINKEDIN_CLIENT_ID,
+  clientSecret: process.env.LINKEDIN_CLIENT_SECRET,
+  callbackURL: 'http://localhost:8000/auth/linkedin/callback'
+}, (accessToken, refreshToken, profile, done) => {
+  let liProfile = null;
+
+  request({
+    url: 'https://api.linkedin.com/v1/people/~:(id,first-name,last-name,email-address)?format=json',
+    headers: {
+      Authorization: `Bearer ${accessToken}`
+    }
+  })
+  .then((linkedInProfile) => {
+    liProfile = JSON.parse(linkedInProfile)
+
+    return knex('users')
+      .where('email', liProfile.emailAddress)
+      .first();
+  })
+  .then((user) => {
+    if (user) {
+      return camelizeKeys(user);
+    }
+
+    return knex('users')
+      .insert(decamelizeKeys({
+        firstName: liProfile.firstName,
+        lastName: liProfile.lastName,
+        email: liProfile.emailAddress,
+        linkedinToken: accessToken,
+      }), '*');
+    })
+    .then((user) => {
+      done(null, user);
+    })
+    .catch((err) => {
+      done(err);
+    });
+});
+
+passport.use(strategy);
+
+router.get('/linkedin', passport.authenticate('oauth2', { session: false }));
+
+router.get('/linkedin/callback', passport.authenticate('oauth2', {
+  session: false,
+  failureRedirect: '/'
+}), (req, res) => {
+  console.log(req.user);
+  const token = jwt.sign({ userId: req.user.id }, process.env.JWT_SECRET, {
+    expiresIn: '3h'
+  });
+
+  res.cookie('token', token, {
+    httpOnly: true,
+    expires: expiry,
+    secure: router.get('env') === 'production'
+  });
+
+  // Successful authentication, redirect home.
+  res.redirect('/');
+});
+
+module.exports = router;
+```
 
 [Final OAuth Example](https://github.com/kmcgrady/oauth-example)
 
