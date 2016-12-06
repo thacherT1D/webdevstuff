@@ -334,7 +334,6 @@ router.get('/linkedin/callback', passport.authenticate('oauth2', {
   session: false,
   failureRedirect: '/'
 }), (req, res) => {
-  console.log(req.user);
   const token = jwt.sign({ userId: req.user.id }, process.env.JWT_SECRET, {
     expiresIn: '3h'
   });
