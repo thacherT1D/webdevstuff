@@ -151,11 +151,23 @@ Then, add the following URL to your application's OAuth 2.0 authorized redirect 
 
 Finally, click the update button on the bottom of the page. You can safely ignore any textfields for OAuth 1.0a. Once the update is successful, install the following dependencies.
 
-In your shell, create a database.
+In your shell, create a database as well as install depdencies needed for our scripts.
 
 ```shell
 createdb oauth_dev
-npm install --save knex pg
+npm install --save knex pg nodemon
+```
+
+Update the `package.json` with a script so that we can run `npm start` as well as `knex`.
+
+```javascript
+...
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "knex": "knex"
+  }
+...
 ```
 
 Add the following files for setting up database and knex configuration.
