@@ -227,7 +227,7 @@ exports.down = function(knex) {
 Now that our database table migrations have been created, let's run the latest migration.
 
 ```shell
-npm run knex run migrate:latest
+npm run knex migrate:latest
 ```
 
 We will ignore seeds for now. Let's install some of the usual dependencies for our application.
