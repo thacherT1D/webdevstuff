@@ -151,7 +151,7 @@ app.listen(port, () => {
 module.exports = app;
 ```
 
-Create a 'Binary.js' file.
+Create a `Binary.js` file.
 * Curious about what's going on in this Binary Class? Checkout the link in the 📚 Resources below.
 
 ```js
@@ -389,7 +389,7 @@ binary routes
 
 Chat with your Q3 project partner and decided on a route for each of you to write an integration test for.
 
-📚 ## Resources
+## 📚 Resources
 
 - [GitHub - SuperTest](https://github.com/visionmedia/supertest)
 - [Wikipedia - Black-box testing](https://en.wikipedia.org/wiki/Black-box_testing)
