@@ -236,6 +236,12 @@ We will ignore seeds for now. Let's install some of the usual dependencies for o
 npm install --save express humps jsonwebtoken morgan nodemon passport passport-oauth2 request request-promise
 ```
 
+We will be using JWTs, so we will need to create a JWT_SECRET.
+
+```shell
+bash -c 'echo JWT_SECRET=$(openssl rand -hex 64) >> .env'
+```
+
 We're ready to start our server. Let's build our `server.js` file.
 
 ```javascript
