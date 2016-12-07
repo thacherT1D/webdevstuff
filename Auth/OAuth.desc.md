@@ -213,7 +213,8 @@ exports.up = function(knex) {
     table.increments();
     table.string('first_name').notNullable().defaultTo('');
     table.string('last_name').notNullable().defaultTo('');
-    table.string('email').unique().notNullable();
+    table.string('email').notNullable();
+    table.string('linkedin_id').unique().notNullable();
     table.string('linkedin_token').notNullable();
     table.timestamps(true, true);
   });
@@ -320,12 +321,12 @@ const strategy = new OAuth2Strategy({
     liProfile = JSON.parse(linkedInProfile)
 
     return knex('users')
-      .where('email', liProfile.emailAddress)
+      .where('linkedin_id', liProfile.id)
       .first();
   })
   .then((user) => {
     if (user) {
-      return camelizeKeys(user);
+      return user;
     }
 
     return knex('users')
@@ -333,11 +334,12 @@ const strategy = new OAuth2Strategy({
         firstName: liProfile.firstName,
         lastName: liProfile.lastName,
         email: liProfile.emailAddress,
+        linkedInId: liProfile.id,
         linkedinToken: accessToken,
       }), '*');
     })
     .then((user) => {
-      done(null, user);
+      done(null, camelizeKeys(user));
     })
     .catch((err) => {
       done(err);
