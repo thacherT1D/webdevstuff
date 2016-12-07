@@ -334,7 +334,7 @@ const strategy = new OAuth2Strategy({
         firstName: liProfile.firstName,
         lastName: liProfile.lastName,
         email: liProfile.emailAddress,
-        linkedInId: liProfile.id,
+        linkedinId: liProfile.id,
         linkedinToken: accessToken,
       }), '*');
     })
@@ -354,6 +354,7 @@ router.get('/linkedin/callback', passport.authenticate('oauth2', {
   session: false,
   failureRedirect: '/'
 }), (req, res) => {
+  console.log(req.user);
   const expiry = new Date(Date.now() + 1000 * 60 * 60 * 3); // 3 hours
   const token = jwt.sign({ userId: req.user.id }, process.env.JWT_SECRET, {
     expiresIn: '3h'
