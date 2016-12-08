@@ -275,6 +275,75 @@ anotherObj.getInfo = myObj.getInfo;
 anotherObj.getInfo();  // returns "Matt Lane - Math Guru/Instructor"
 ```
 
+### `.call` and `.apply`
+
+We've seen that `this` is the current object context for a function. However, `this` can be modified temporarily or permanently. The two temporary ways to do this are by using `.call` or `.apply`
+
+Here's how `.call` works:
+
+```js
+var sheep = {
+	weight: 125,
+	speed: 25,
+	color: 'black',
+	announce: function(){
+		return 'My weight is ' + this.weight + ' pounds, I run ' + this.speed + ' miles per hour, and I\'m ' + this.color + '!';
+	},
+	brag: function(feature){
+		return 'Let me tell you about my ' + feature + '! It\'s the best!';
+	}
+};
+
+sheep.announce();
+//=> My weight is 125 pounds, I run 25 miles per hour, and I'm black!
+
+sheep.brag('wool');
+//=> Let me tell you about my wool! It's the best!
+
+var goat = {
+	weight: 100,
+	speed: 40,
+	color: 'grey'
+};
+
+sheep.announce.call(goat);
+//=> My weight is 100 pounds, I run 40 miles per hour, and I'm grey!
+
+sheep.brag.call(null, 'climbing');
+//=> Let me tell you about my climbing! It's the best!
+```
+
+First, let's look at the method `sheep.announce`. At first, it's being used for the `sheep` object and accordingly uses the `sheep` properties of `weight`, `speed`, and `color` via `this` (`this.weight`, etc). Then, we create an object `goat` with the same properties. If we want to be DRY in that we don't create the same `announce` method twice, we can use the same `sheep.announce` function via `.call`. With `sheep.announce.call(goat)`, we're telling `sheep.announce` to use `goat` as the value of `this` in the function.
+
+Now, let's look at `sheep.brag`. With `sheep.brag.call(null, 'climbing')`, we're telling `sheep.brag` to use null as the value of `this` (as noted in the first argument), because `this` does not matter to `brag` (since it's not being used in the method). But we're also using `'climbing'` as the `feature` argument for the method. In other words, you use `.call` for a function by inserting an appropriate `this` value as your first argument, then following up with whatever other arguments that the function would require. The number of follow-up arguments can be 0 (as in the case of `sheep.announce`) or more (as in the case of `sheep.brag`).
+
+In both cases, we're borrowing methods from `sheep` for use outside of its object context.
+
+`.apply` works similarly: its first argument is for setting `this`. How it differs from `.call` is that it expects to plug in an array as the arguments for its function instead of a series of additional arguments:
+
+```js
+var wolf = {
+	explain: function(cry, time, reason){
+		return 'I ' + cry + ' at ' + time + ' because ' + reason;
+	}
+}
+
+wolf.explain('howl', 'midnight', 'I am wild');
+//=> I howl at midnight because I am wild
+
+var rooster = {};
+
+wolf.explain.call(rooster, 'crow', 'dawn', 'I am helpful');
+//=> I crow at dawn because I am helpful
+
+wolf.explain.apply(rooster, ['crow', 'dawn', 'I am helpful']);
+//=> I crow at dawn because I am helpful
+```
+
+To set an object context permanently for a function, you can use `.bind`. You'll read about it for the next exercise.
+
+In ES6, you can use __arrow functions__ to avoid having to use `.call`, `.apply`, or `.bind` to set the value of `this`. How? `this` operates differently in arrow functions than in regular JavaScript functions. To find out more, read [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
+
 __EXERCISE__
 
 Run the following code:
@@ -336,6 +405,8 @@ moxie.toString(); // => [object Object]
 ```
 
 _Inheritance_: `toString()` is a method that was _inherited_ from `Object`. Inheritance is the concept of a child class receiving functionality from a parent class.  In this case, the Dog class is the child class or __subclass__ that inherits the `toString` method from the parent class, the `Object`.
+
+We'll learn more about classes and subclasses in ES6 soon.
 
 Let's say that we want to create a class `Husky` that's a child class or __subclass__ to the `Dog` class. We can take advantage of inheritance for this by using `Object.create`
 
@@ -480,12 +551,12 @@ What's happening? In both the ES5 and ES6 versions, we're replacing the inherite
 __EXERCISE__
 
 * In the console, type `Object.prototype`.  Take a look at all of the properties that are inherited in any class that you make in javascript.
-* On the Dog class, implement a more useful `toString`
+<!--* On the Dog class, implement a more useful `toString`
 * Create a `Cat` class that inherits from `Object`
 * Have the constructor function for `Cat` include name, age, and breed parameters
 * Make instances of `Cat` have a method `purr` that returns `'[cat name], a [breed of cat] cat, is purring'`
 * Make a `Siamese` subclass of `Cat` that hard-codes the siamese breed so that the constructor function only requires name and age parameters
-* Use DRY techniques to create a `purr` method for `Siamese` that returns `'[cat name], a siamese cat, is purring. How adorable!'`
+* Use DRY techniques to create a `purr` method for `Siamese` that returns `'[cat name], a siamese cat, is purring. How adorable!'`-->
 
 ## Additional Resources
 
