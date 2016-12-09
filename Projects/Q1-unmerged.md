@@ -72,7 +72,7 @@ The server-specific technical requirements for your project:
 - [Firebase](https://firebase.google.com/docs/web/setup)
 - [Flickr](https://www.flickr.com/services/api/)
 - [Gilt](https://dev.gilt.com/documentation/overview.html)
-- [GitHub](https://developer.github.com/)
+- [GitHub](https://developer.github.com)
 - [Google Books](https://developers.google.com/books/docs/v1/using)
 - [Google Knowledge Graph](https://developers.google.com/knowledge-graph/)
 - [Google Geocoding](https://developers.google.com/maps/documentation/geocoding/start)
