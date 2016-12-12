@@ -141,12 +141,13 @@ A hash table has impressive performance characteristics:
 <hr>
 
 ## Implement a variety of problems involving hash tables.
-isAnagram,
 
+Use a hash table to solve the following code challenges:
 
-Write a function that's given an array of words representing a dictionary and a string that represents a sentence. It will return true, if spellcheck would be satisfied. Assume that all forms of a word are included in the dictionary (walk, walking, walks)
-
-Implement a function to find the first character in a string which only appears once. For example: It returns 'b' when the input is "abaccdeff".
+1. Write a function, `isAnagram` that takes a single argument of type string and
+   returns `true` if the string is an anagram and `false` if it is not.
+1. Implement a function to find the first character in a string which only appears once. For example: It returns 'b' when the input is "abaccdeff".
+1. Write a function that's given an array of words representing a dictionary and a string that represents a sentence. It will return true, if spellcheck would be satisfied. Assume that all forms of a word are included in the dictionary (walk, walking, walks)
 
 <hr>
 
