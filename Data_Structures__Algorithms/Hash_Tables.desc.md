@@ -26,7 +26,7 @@ Many languages have a preference for which one they use, like Hash in Ruby or Di
 So when you start working more with other languages just know that nameing for these data structurs may be different,
 but under the hood you are working with the same thing.
 
-### JavaScripts' Hash Table aka Map.
+### JavaScripts' Hash Table, aka Map.
 
 JavaScript itself has an implementation of a hash table, but like others just use a different name; Map.
 
@@ -58,7 +58,7 @@ Take these factors into consideration if you're curious about when you should us
 
 Are you ready for this...???
 
-```
+```js
 var hashTable = {};
 hashTable["bob"] = "wiley";
 hashTable["leo"] = "marvin";
@@ -66,7 +66,7 @@ hashTable["leo"] = "marvin";
 
 <details>
   <summary>That's it?</summary>
-  ![zomg](http://gph.is/1Kqqghq)
+  ![zomg](https://media.giphy.com/media/ALZ1PPM20REZ2/giphy.gif)
 </details>
 
 Checkout the MDN docs for Map in the Resources list below to see its implemention.
@@ -91,13 +91,14 @@ but we're going to talk about what is generally going on under the hood.
 
 The input for the hashing function will be a key and the output some hashed value.
 
-If you recall from Q2 how you always got back the same value for a given string when used in a hashing function for passwords,
-you will always get back the same value for a given key when used in the hash table's hashing function.
-The difference being the format in which the output value is provided.
-For hash tables the format will likely be some hexadecimal value as memory address are generally in hexadecimal form,
-usually starting with `0x`.
-The hash table's hashing function will also know the particular contiguous block of memory that has been alocated to your hash table (array),
-and only spit out a hexadecimal value in that range.
+If you recall from Q2 how our password hashing functions always returned the same value for a given string,
+the hashing functions for hash tables operate in the same way.
+The main difference between the two being the the format in which the output value is provided in.
+Our password hashing function may return a hash that looks something like
+`2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824`,
+whereas the value produced by a hash table's hashing function might be formated in hexidecimal form like `0x12DF`.
+Memory address on your computer are referenced by these hex values,
+so what the hash function is doing is simply pointing to an index in your hash table.
 
 Whenever you are trying to *lookup* or *set* a key-value pair on a hashtable you are providing that key to the hashing function.
 
@@ -112,13 +113,13 @@ You wouldn't want to dynamically size the hash table, as you would just be reser
 Instead hash tables sacrifice a tiny amount of speed in favor of conserving memory.
 They do this by allowing *collisions*, or assigning multiple key-value pairs to the same location in memory.
 
-When a collision occures there are a couple ways to go about handling it, Liner Probing or Chaining.
+When a collision occures there are a couple ways to go about handling it, Linear Probing or Chaining.
 
-#### Liner Probing
+#### Linear Probing
 
-With liner probing, when a collision occures the key-value pair will be assigned the next available block of slot in the hash table.
-While this solution works, it creates less than optimum scenarios where data can *cluster* together on a hash table,
-making for O(n) assignment and lookup times.
+With linear probing, when a collision occures the key-value pair will be assigned to the next empty block in the hash table.
+While this solution works, it creates less than optimum scenarios where data can *cluster* together on a hash table. These clusters,
+in a *worse case* scenario, make for O(n) assignment and lookup times.
 
 #### Chaining
 
@@ -144,10 +145,7 @@ A hash table has impressive performance characteristics:
 
 Use a hash table to solve the following code challenges:
 
-1. Write a function, `isAnagram` that takes a single argument of type string and
-   returns `true` if the string is an anagram and `false` if it is not.
-1. Implement a function to find the first character in a string which only appears once. For example: It returns 'b' when the input is "abaccdeff".
-1. Write a function that's given an array of words representing a dictionary and a string that represents a sentence. It will return true, if spellcheck would be satisfied. Assume that all forms of a word are included in the dictionary (walk, walking, walks)
+[Hash Table Exercises](https://github.com/gSchool/cs-exercises/tree/master/hash-tables)
 
 <hr>
 
