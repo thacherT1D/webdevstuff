@@ -6,6 +6,7 @@
 * Implement a selection sort algorithm in JavaScript
 * Implement an insertion sort algorithm in JavaScript
 
+> some comment
 ## Sorting
 
 Arrays (both static and dynamic) are one of the data structures that is well-suited for sorting of items: it already operates in a sequential order, which is useful for writing a systematic algorithm for sorting its contents. However, just because arrays are well-suited for sorting, it does not mean that all sorting algorithms are good for all situations. Each sorting algorithm has its benefits and drawbacks in terms of time complexity, memory allocation (how much space it needs), and difficulty for the programmer. Furthermore time complexity and memory allocation for each algorithm can vary depending on whether you have an average case, a best case, or a worst case for the algorithm.
