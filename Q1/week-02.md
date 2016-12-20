@@ -14,46 +14,65 @@
   </thead>
   <tbody>
     <tr>
-      <td rowspan="2">Monday</td>
-      <td rowspan="2"><a href="https://github.com/gSchool/javascript-curriculum/blob/master/Memory Diagrams.md">Memory Diagrams</a>
+      <td rowspan="1">Monday</td>
+      <td rowspan="1"><a href="https://github.com/sethvincent/javascripting">JavaScripting (con't)</a>
       </td>
-      <td><a href="https://github.com/gSchool/html-css-curriculum/blob/master/HTML/README.md">Intro to HTML</a>
+      <td><a href="https://github.com/gSchool/javascript-curriculum/blob/master/Memory Diagrams.md">Memory Diagrams</a>
       </td>
-      <td><a href="https://github.com/gSchool/html-intro">HTML Intro</a>
-      </td>
-      <td><a href="https://github.com/gSchool/html-css-curriculum/blob/master/HTML/Media.md">Media</a>
-      </td>
-    </tr>
-    <tr>
-      <td><a href="https://github.com/gSchool/html-css-curriculum/blob/master/HTML/Semantic.md">Semantic HTML</a>
-      </td>
-      <td><a href="https://github.com/gSchool/semantic-html-exercise">Semantic HTML</a>
-      </td>
-      <td><a href="https://github.com/gSchool/html-css-curriculum/blob/master/CSS/Flexbox.md">Flexbox</a>
-      </td>
-    </tr>
-    <tr>
-      <td rowspan="2">Tuesday</td>
-      <td rowspan="2"><a href="https://github.com/gSchool/g26-challenges-so-far/blob/master/w2/w2-f-replace-with-alphabet-position/w2-f-replace-with-alphabet-position.js">Alphabet Position</a>
-      </td>
-      <td><a href="https://github.com/gSchool/html-css-curriculum/blob/master/CSS/README.md">Intro to CSS</a>
-      </td>
-      <td><a href="https://github.com/gSchool/css-exercises">CSS Exercises</a>
+      <td>
       </td>
       <td>
       </td>
     </tr>
     <tr>
-      <td><a href="https://github.com/gSchool/html-css-curriculum/blob/master/CSS/Intermediate.md">Intermediate CSS</a>
+      <td rowspan="3">Tuesday</td>
+      <td rowspan="3"><a href="https://github.com/gSchool/g26-challenges-so-far/blob/master/w2/w2-f-replace-with-alphabet-position/w2-f-replace-with-alphabet-position.js">Alphabet Position</a>
+      </td>
+      <td>Pillars of OOP
+      </td>
+      <td><a href="https://github.com/gSchool/computer-science-curriculum/tree/master/Exercises/src/OOP">OOP Tests</a>
       </td>
       <td>
       </td>
-      <td><a href="https://github.com/gSchool/css-layout-exercises">CSS Layout Exercises</a>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/gSchool/javascript-curriculum/tree/master/OOP">Review of State and Behavior</a>
+      </td>
+      <td><a href="https://github.com/gSchool/computer-science-curriculum/tree/master/Exercises/src/OOP">OOP Tests</a>
+      </td>
+      <td>
       </td>
     </tr>
     <tr>
-      <td rowspan="4">Wednesday</td>
-      <td rowspan="4"><a href="http://rosettacode.org/wiki/FizzBuzz">FizzBuzz</a>
+      <td><a href="https://github.com/gSchool/javascript-curriculum/blob/master/SOLID/Single%20Reponsibility%20Principle.md">Single Responsibility Principle (SRP)</a>
+      </td>
+      <td><a href="https://github.com/gSchool/computer-science-curriculum/tree/master/Exercises/src/OOP">OOP Tests</a>
+      </td>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <td rowspan="2">Wednesday</td>
+      <td rowspan="2"><a href="http://rosettacode.org/wiki/FizzBuzz">FizzBuzz</a>
+      </td>
+      <td><a href="https://github.com/gSchool/javascript-curriculum/blob/master/Call Apply and Bind.md">Call, Apply and Bind</a>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <td><a href="https://learn.galvanize.com/content/gSchool/javascript-curriculum/master/Errors.md">Error Handling In JavaScript</a>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <td rowspan="4">Thursday</td>
+      <td rowspan="4"><a href="https://github.com/gSchool/warmups/blob/master/w2/w2-w-remove-dupes-string-warmup/prompt.js">Remove Duplicates</a>
       </td>
       <td><a href="https://github.com/gSchool/browser-dom-curriculum/blob/master/DOM/README.md">Intro to the DOM</a>
       </td>
@@ -87,8 +106,8 @@
       </td>
     </tr>
     <tr>
-      <td rowspan="1">Thursday</td>
-      <td rowspan="1"><a href="https://github.com/gSchool/warmups/blob/master/w2/w2-w-remove-dupes-string-warmup/prompt.js">Remove Duplicates</a>
+      <td rowspan="2">Friday</td>
+      <td rowspan="2"><a href=""></a>
       </td>
       <td><a href="https://github.com/gSchool/browser-dom-curriculum/blob/master/DOM/Events.md">DOM Events</a>
       </td>
@@ -98,12 +117,9 @@
       </td>
     </tr>
     <tr>
-      <td rowspan="1">Friday</td>
-      <td rowspan="1"><a href="https://github.com/gSchool/productivity-curriculum/blob/master/Misc/Typing.md">Typing</a>
+      <td>Events and Async
       </td>
       <td>
-      </td>
-      <td><a href="https://github.com/gSchool/pixel-art-maker">Pixel Art Maker</a>
       </td>
       <td>
       </td>

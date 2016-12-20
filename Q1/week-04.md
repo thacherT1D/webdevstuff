@@ -15,9 +15,9 @@
   <tbody>
     <tr>
       <td rowspan="1">Monday</td>
-      <td rowspan="1"><a href="https://github.com/gSchool/warmups/blob/master/typoglycemia/challenge.js">Word Scrambler</a>
+      <td rowspan="1"><a href="https://github.com/gSchool/warmups/blob/master/Array%20Filter.md">ArrayFilter</a>
       </td>
-      <td><a href="https://github.com/gschool/browser-dom-curriculum/blob/master/HTTP/README.md">HTTP</a>
+      <td>OOP Inheritance
       </td>
       <td><a href="../Projects/Q1.md">Q1 Project</a>
       </td>
@@ -26,20 +26,9 @@
     </tr>
     <tr>
       <td rowspan="1">Tuesday</td>
-      <td rowspan="1"><a href="https://github.com/gSchool/g26-challenges-so-far/blob/master/w4/w4-r-rotate-array/problem.js">Rotate</a>
+      <td rowspan="1"><a href="https://github.com/gSchool/warmups/blob/master/Array%20Reduce.md">ArrayReduce</a>
       </td>
-      <td><a href="https://github.com/gschool/browser-dom-curriculum/blob/master/HTTP/AJAX.md">AJAX</a>
-      </td>
-      <td><a href="https://github.com/gschool/wd-ajax-hero">AJAX Hero</a>
-      </td>
-      <td>
-      </td>
-    </tr>
-    <tr>
-      <td rowspan="1">Wednesday</td>
-      <td rowspan="1"><a href="https://github.com/gSchool/g26-challenges-so-far/blob/master/w4/w4-t-equivalent-number/problem.js">SameDigits</a>
-      </td>
-      <td><a href="https://github.com/gSchool/html-css-curriculum/blob/master/UI/Wireframing.md">Wireframing</a>
+      <td>ES2015: Decunstructing, Arrow Functions, Spread and Rest, etc...
       </td>
       <td><a href="../Projects/Q1.md">Q1 Project</a>
       </td>
@@ -47,26 +36,21 @@
       </td>
     </tr>
     <tr>
-      <td rowspan="5">Thursday</td>
-      <td rowspan="5"><a href="https://github.com/gSchool/g26-challenges-so-far/blob/master/w4/w4-t-equivalent-number/problem.js">SameDigits</a>
+      <td rowspan="1">Wednesday</td>
+      <td rowspan="1"><a href=""></a>
       </td>
-      <td><a href="https://github.com/gSchool/javascript-curriculum/blob/master/Scope.md">Scope</a>
+      <td><a href="https://github.com/gSchool/node-curriculum/blob/master/unit-3/03-testing-with-mocha-chai-supertest.md">Automated JavaScript Tests</a>
       </td>
-      <td><a href="https://github.com/gSchool/function-tests">Function Tests</a>
-      </td>
-      <td>
-      </td>
-    </tr>
-    <tr>
-      <td><a href="https://github.com/gSchool/javascript-curriculum/blob/master/Hoisting.md">Hoisting</a>
-      </td>
-      <td>
+      <td><a href="https://github.com/gSchool/javascript-test-coverage">JavaScript Test Coverage</a>
       </td>
       <td>
       </td>
     </tr>
     <tr>
-      <td><a href="https://github.com/gSchool/javascript-curriculum/blob/master/Higher Order Functions.md">Higher Order Functions</a>
+      <td rowspan="2">Thursday</td>
+      <td rowspan="2"><a href=""></a>
+      </td>
+      <td>Red-green-refactor
       </td>
       <td>
       </td>
@@ -74,26 +58,18 @@
       </td>
     </tr>
     <tr>
-      <td><a href="https://github.com/gSchool/javascript-curriculum/blob/master/Closure.md">Closures</a>
+      <td><a href="https://github.com/gschool/productivity-curriculum/blob/master/Agile/README.md">Project Mangement</a>
       </td>
-      <td>
-      </td>
-      <td>
-      </td>
-    </tr>
-    <tr>
-      <td><a href="https://github.com/gSchool/javascript-curriculum/blob/master/IIFE.md">IIFEs</a>
-      </td>
-      <td>
+      <td><a href="../Projects/Q1.md">Q1 Project</a>
       </td>
       <td>
       </td>
     </tr>
     <tr>
       <td rowspan="1">Friday</td>
-      <td rowspan="1"><a href="https://github.com/gSchool/warmups/blob/master/Array%20Map.md">ArrayMap</a>
+      <td rowspan="1">
       </td>
-      <td><a href="https://github.com/gschool/productivity-curriculum/blob/master/Agile/README.md">Project Mangement</a>
+      <td>
       </td>
       <td><a href="../Projects/Q1.md">Q1 Project</a>
       </td>

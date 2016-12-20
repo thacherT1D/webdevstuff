@@ -15,7 +15,7 @@
   <tbody>
     <tr>
       <td rowspan="3">Monday</td>
-      <td rowspan="3">
+      <td rowspan="3"><a href=""></a>
       </td>
       <td><a href="https://docs.google.com/presentation/d/154ou9yQJNcVcVehD6vqaKjGbCKhFb2xK85toqniWaa8/edit#slide=id.g108a6e17ae_0_112">Welcome to WDI</a>
       </td>
@@ -42,16 +42,8 @@
     </tr>
     <tr>
       <td rowspan="2">Tuesday</td>
-      <td rowspan="2"><a href="https://github.com/gSchool/productivity-curriculum/blob/master/Misc/Typing.md">Typing</a>
+      <td rowspan="2"><a href=""></a>
       </td>
-      <td><a href="https://github.com/gSchool/productivity-curriculum/blob/master/Development Environment/README.md">Setup Development Environment</a>
-      </td>
-      <td>
-      </td>
-      <td>
-      </td>
-    </tr>
-    <tr>
       <td><a href="https://github.com/gSchool/productivity-curriculum/blob/master/Misc/Command Line.md">Intro to the Command Line</a>
       </td>
       <td><a href="https://github.com/ryansobol/clmystery">Command Line Murder Mystery</a>
@@ -60,9 +52,6 @@
       </td>
     </tr>
     <tr>
-      <td rowspan="2">Wednesday</td>
-      <td rowspan="2"><a href="https://github.com/sethvincent/javascripting">JavaScripting</a>
-      </td>
       <td><a href="https://github.com/gSchool/productivity-curriculum/blob/master/Misc/Intro to Git.md">Intro to Git and Github</a>
       </td>
       <td><a href="https://github.com/gSchool/git-personal-website">Git Personal Website</a>
@@ -71,6 +60,9 @@
       </td>
     </tr>
     <tr>
+      <td rowspan="3">Wednesday</td>
+      <td rowspan="3"><a>1st warmup. CLI and Git</a>
+      </td>
       <td><a href="https://github.com/gSchool/javascript-curriculum/blob/master/Vocabulary.md">JavaScript Vocabulary</a>
       </td>
       <td>
@@ -79,9 +71,6 @@
       </td>
     </tr>
     <tr>
-      <td rowspan="2">Thursday</td>
-      <td rowspan="2"><a href="https://github.com/sethvincent/javascripting">JavaScripting (con't)</a>
-      </td>
       <td><a href="https://github.com/gSchool/javascript-curriculum/blob/master/README.md">JavaScript: Intro, Types, Values, Variables, Control Flow</a>
       </td>
       <td><a href="https://github.com/gSchool/javascript-statements">JavaScript Statements</a>
@@ -98,12 +87,12 @@
       </td>
     </tr>
     <tr>
-      <td rowspan="2">Friday</td>
-      <td rowspan="2"><a href="https://github.com/sethvincent/javascripting">JavaScripting (con't)</a>
+      <td rowspan="2">Thursday</td>
+      <td rowspan="2"><a href="https://github.com/sethvincent/javascripting">JavaScripting</a>
       </td>
-      <td><a href="https://github.com/gSchool/javascript-curriculum/blob/master/Functions.md">JavaScript Functions (con't)</a>
+      <td><a href="https://github.com/gSchool/javascript-curriculum/blob/master/README.md">JavaScript: Intro, Types, Values, Variables, Control Flow</a>
       </td>
-      <td>
+      <td><a href="https://github.com/gSchool/javascript-statements">JavaScript Statements</a>
       </td>
       <td>
       </td>
@@ -116,11 +105,54 @@
       <td><a href="https://github.com/gSchool/ccf-data-structures">Crushing Candy Code: Data Structures</a>
       </td>
     </tr>
+    <tr>
+      <td rowspan="5">Friday</td>
+      <td rowspan="5"><a href="https://github.com/sethvincent/javascripting">JavaScripting (con't)</a>
+      </td>
+      <td><a href="https://github.com/gSchool/javascript-curriculum/blob/master/Scope.md">Scope</a>
+      </td>
+      <td><a href="https://github.com/gSchool/function-tests">Function Tests</a>
+      </td>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/gSchool/javascript-curriculum/blob/master/Hoisting.md">Hoisting</a>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/gSchool/javascript-curriculum/blob/master/Higher Order Functions.md">Higher Order Functions</a>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/gSchool/javascript-curriculum/blob/master/Closure.md">Closures</a>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/gSchool/javascript-curriculum/blob/master/IIFE.md">IIFEs</a>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+    </tr>
   </tbody>
 </table>
 <!-- END SCHEDULE -->
 
-#### Homeworks
+<!--#### Homeworks
 * https://github.com/gSchool/ccf-data-structures
 
 ### Thursday
@@ -131,4 +163,4 @@
 https://github.com/gSchool/basic-js-part-2
 
 #### Homeworks
-* Read Eloquent JS 4 & 5 ->http://eloquentjavascript.net/
+* Read Eloquent JS 4 & 5 ->http://eloquentjavascript.net/-->

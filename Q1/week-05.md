@@ -15,9 +15,9 @@
   <tbody>
     <tr>
       <td rowspan="1">Monday</td>
-      <td rowspan="1"><a href="https://github.com/gSchool/warmups/blob/master/Array%20Filter.md">ArrayFilter</a>
+      <td rowspan="1">
       </td>
-      <td><a href="https://github.com/gSchool/browser-dom-curriculum/blob/master/Debugging.md">Debugging JavaScript</a>
+      <td>
       </td>
       <td><a href="../Projects/Q1.md">Q1 Project</a>
       </td>
@@ -26,9 +26,9 @@
     </tr>
     <tr>
       <td rowspan="1">Tuesday</td>
-      <td rowspan="1"><a href="https://github.com/gSchool/warmups/blob/master/Array%20Reduce.md">ArrayReduce</a>
+      <td rowspan="1">
       </td>
-      <td><a href="https://github.com/gSchool/html-css-curriculum/blob/master/UI/User Interface Design.md">User Interface Design</a>
+      <td>
       </td>
       <td><a href="../Projects/Q1.md">Q1 Project</a>
       </td>
@@ -37,9 +37,9 @@
     </tr>
     <tr>
       <td rowspan="1">Wednesday</td>
-      <td rowspan="1"><a href="https://github.com/gSchool/warmups/blob/master/Array%20Every.md">ArrayEvery</a>
+      <td rowspan="1">
       </td>
-      <td><a href="https://github.com/gSchool/browser-dom-curriculum/blob/master/Local%20Storage.md">LocalStorage and Data Modeling</a>
+      <td>
       </td>
       <td><a href="../Projects/Q1.md">Q1 Project</a>
       </td>
