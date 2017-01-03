@@ -1947,3 +1947,5 @@ Resources:
 <a rel="standard">W0046</a>
 <a rel="standard">W0049</a>
 <a rel="standard">W0053</a>
+<a rel="standard">W0099</a>
+<a rel="standard">W0100</a>
