@@ -76,26 +76,18 @@
       </td>
       <td><a href="https://github.com/gSchool/browser-dom-curriculum/blob/master/Local%20Storage.md">LocalStorage</a>
       </td>
-      <td><a href="https://github.com/gSchool/jquery-calculator">jQuery Calculator</a>
+      <td>
       </td>
       <td>
       </td>
     </tr>
     <tr>
-      <td rowspan="2">Friday</td>
-      <td rowspan="2"><a href="https://github.com/gSchool/warmups/blob/master/Array%20Map.md">ArrayMap</a>
+      <td rowspan="1">Friday</td>
+      <td rowspan="1"><a href="https://github.com/gSchool/warmups/blob/master/Array%20Map.md">ArrayMap</a>
       </td>
       <td><a href="https://github.com/gSchool/html-css-curriculum/blob/master/UI/User Interface Design.md">User Interface Design</a>
       </td>
       <td>
-      </td>
-      <td>
-      </td>
-    </tr>
-    <tr>
-      <td><a href="https://github.com/gschool/productivity-curriculum/blob/master/Agile/README.md">Project Mangement</a>
-      </td>
-      <td><a href="https://github.com/gSchool/galvanize-delivers/">Galvanize Delivers</a>
       </td>
       <td>
       </td>

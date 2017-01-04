@@ -83,12 +83,12 @@
       </td>
       <td>
       </td>
-      <td><a href="https://github.com/gSchool/javascript-curriculum/blob/master/Call Apply and Bind.md">Call, Apply and Bind</a>
+      <td>
       </td>
     </tr>
     <tr>
-      <td rowspan="2">Thursday</td>
-      <td rowspan="2"><a href="https://github.com/sethvincent/javascripting">JavaScripting</a>
+      <td rowspan="4">Thursday</td>
+      <td rowspan="4"><a href="https://github.com/sethvincent/javascripting">JavaScripting</a>
       </td>
       <td><a href="https://github.com/gSchool/javascript-curriculum/blob/master/README.md">JavaScript: Intro, Types, Values, Variables, Control Flow</a>
       </td>
@@ -106,12 +106,28 @@
       </td>
     </tr>
     <tr>
+      <td><a href="https://github.com/gSchool/browser-dom-curriculum/blob/master/Debugging.md">Debugging JS</a>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/gSchool/productivity-curriculum/blob/master/Misc/Linting.md">Linting JavaScript</a>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+    </tr>
+    <tr>
       <td rowspan="5">Friday</td>
       <td rowspan="5"><a href="https://github.com/sethvincent/javascripting">JavaScripting (con't)</a>
       </td>
       <td><a href="https://github.com/gSchool/javascript-curriculum/blob/master/Scope.md">Scope</a>
       </td>
-      <td><a href="https://github.com/gSchool/function-tests">Function Tests</a>
+      <td><a href="https://github.com/gSchool/lodash">lodash</a>
       </td>
       <td>
       </td>
@@ -151,8 +167,7 @@
   </tbody>
 </table>
 <!-- END SCHEDULE -->
-
-<!--#### Homeworks
+-#### Homeworks
 * https://github.com/gSchool/ccf-data-structures
 
 ### Thursday
@@ -163,4 +178,4 @@
 https://github.com/gSchool/basic-js-part-2
 
 #### Homeworks
-* Read Eloquent JS 4 & 5 ->http://eloquentjavascript.net/-->
+* Read Eloquent JS 4 & 5 ->http://eloquentjavascript.net/

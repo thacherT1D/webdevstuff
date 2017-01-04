@@ -87,7 +87,7 @@ Week 1
       </td>
       <td>
       </td>
-      <td><a href="https://github.com/gSchool/javascript-curriculum/blob/master/Call Apply and Bind.md">Call, Apply and Bind</a>
+      <td>
       </td>
     </tr>
     <tr>
@@ -131,7 +131,7 @@ Week 1
       </td>
       <td><a href="https://github.com/gSchool/javascript-curriculum/blob/master/Scope.md">Scope</a>
       </td>
-      <td><a href="https://github.com/gSchool/function-tests">Function Tests</a>
+      <td><a href="https://github.com/gSchool/lodash">lodash</a>
       </td>
       <td>
       </td>
@@ -191,7 +191,7 @@ Week 2
       </td>
       <td><a href="https://github.com/gSchool/javascript-curriculum/blob/master/Memory Diagrams.md">Memory Diagrams</a>
       </td>
-      <td>
+      <td><a href="https://github.com/gSchool/computer-science-curriculum/blob/master/Unit-0/03-memory-diagrams-exercises.md">Memory Diagram Practice</a>
       </td>
       <td>
       </td>
@@ -202,7 +202,7 @@ Week 2
       </td>
       <td>Pillars of OOP
       </td>
-      <td><a href="https://github.com/gSchool/computer-science-curriculum/tree/master/Exercises/src/OOP">OOP Tests</a>
+      <td><a href="https://github.com/gSchool/computer-science-drills/tree/master/src/OOP">OOP Tests</a>
       </td>
       <td>
       </td>
@@ -210,7 +210,7 @@ Week 2
     <tr>
       <td><a href="https://github.com/gSchool/javascript-curriculum/tree/master/OOP">Review of State and Behavior</a>
       </td>
-      <td><a href="https://github.com/gSchool/computer-science-curriculum/tree/master/Exercises/src/OOP">OOP Tests</a>
+      <td><a href="https://github.com/gSchool/computer-science-drills/tree/master/src/OOP">OOP Tests</a>
       </td>
       <td>
       </td>
@@ -218,7 +218,7 @@ Week 2
     <tr>
       <td><a href="https://github.com/gSchool/javascript-curriculum/blob/master/SOLID/Single%20Reponsibility%20Principle.md">Single Responsibility Principle (SRP)</a>
       </td>
-      <td><a href="https://github.com/gSchool/computer-science-curriculum/tree/master/Exercises/src/OOP">OOP Tests</a>
+      <td><a href="https://github.com/gSchool/computer-science-drills/tree/master/src/OOP">OOP Tests</a>
       </td>
       <td>
       </td>
@@ -229,7 +229,7 @@ Week 2
       </td>
       <td><a href="https://github.com/gSchool/javascript-curriculum/blob/master/Call Apply and Bind.md">Call, Apply and Bind</a>
       </td>
-      <td>
+      <td><a href="https://github.com/gSchool/cab_closure_exercises">Call, Apply and Bind</a>
       </td>
       <td>
       </td>
@@ -237,7 +237,7 @@ Week 2
     <tr>
       <td><a href="https://learn.galvanize.com/content/gSchool/javascript-curriculum/master/Errors.md">Error Handling In JavaScript</a>
       </td>
-      <td>
+      <td><a href="https://github.com/gSchool/js-common-errors">JS Common Errors</a>
       </td>
       <td>
       </td>
@@ -283,7 +283,7 @@ Week 2
       </td>
       <td><a href="https://github.com/gSchool/browser-dom-curriculum/blob/master/DOM/Events.md">DOM Events</a>
       </td>
-      <td><a href="https://github.com/gSchool/stoplight-event-exercise">Stoplight Events</a>
+      <td><a href="https://github.com/gschool/pixel-art-maker">Pixel Art Maker</a>
       </td>
       <td><a href="https://github.com/gSchool/wheres-waldo">Where's Waldo</a>
       </td>
@@ -376,26 +376,18 @@ Week 3
       </td>
       <td><a href="https://github.com/gSchool/browser-dom-curriculum/blob/master/Local%20Storage.md">LocalStorage</a>
       </td>
-      <td><a href="https://github.com/gSchool/jquery-calculator">jQuery Calculator</a>
+      <td>
       </td>
       <td>
       </td>
     </tr>
     <tr>
-      <td rowspan="2">Friday</td>
-      <td rowspan="2"><a href="https://github.com/gSchool/warmups/blob/master/Array%20Map.md">ArrayMap</a>
+      <td rowspan="1">Friday</td>
+      <td rowspan="1"><a href="https://github.com/gSchool/warmups/blob/master/Array%20Map.md">ArrayMap</a>
       </td>
       <td><a href="https://github.com/gSchool/html-css-curriculum/blob/master/UI/User Interface Design.md">User Interface Design</a>
       </td>
       <td>
-      </td>
-      <td>
-      </td>
-    </tr>
-    <tr>
-      <td><a href="https://github.com/gschool/productivity-curriculum/blob/master/Agile/README.md">Project Mangement</a>
-      </td>
-      <td><a href="https://github.com/gSchool/galvanize-delivers/">Galvanize Delivers</a>
       </td>
       <td>
       </td>
@@ -440,8 +432,8 @@ Week 4
       </td>
     </tr>
     <tr>
-      <td rowspan="1">Wednesday</td>
-      <td rowspan="1"><a href=""></a>
+      <td rowspan="2">Wednesday</td>
+      <td rowspan="2"><a href=""></a>
       </td>
       <td><a href="https://github.com/gSchool/node-curriculum/blob/master/unit-3/03-testing-with-mocha-chai-supertest.md">Automated JavaScript Tests</a>
       </td>
@@ -451,9 +443,6 @@ Week 4
       </td>
     </tr>
     <tr>
-      <td rowspan="2">Thursday</td>
-      <td rowspan="2"><a href=""></a>
-      </td>
       <td>Red-green-refactor
       </td>
       <td>
@@ -462,6 +451,9 @@ Week 4
       </td>
     </tr>
     <tr>
+      <td rowspan="1">Thursday</td>
+      <td rowspan="1"><a href=""></a>
+      </td>
       <td><a href="https://github.com/gschool/productivity-curriculum/blob/master/Agile/README.md">Project Mangement</a>
       </td>
       <td><a href="../Projects/Q1.md">Q1 Project</a>

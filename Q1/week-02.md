@@ -19,7 +19,7 @@
       </td>
       <td><a href="https://github.com/gSchool/javascript-curriculum/blob/master/Memory Diagrams.md">Memory Diagrams</a>
       </td>
-      <td>
+      <td><a href="https://github.com/gSchool/computer-science-curriculum/blob/master/Unit-0/03-memory-diagrams-exercises.md">Memory Diagram Practice</a>
       </td>
       <td>
       </td>
@@ -30,7 +30,7 @@
       </td>
       <td>Pillars of OOP
       </td>
-      <td><a href="https://github.com/gSchool/computer-science-curriculum/tree/master/Exercises/src/OOP">OOP Tests</a>
+      <td><a href="https://github.com/gSchool/computer-science-drills/tree/master/src/OOP">OOP Tests</a>
       </td>
       <td>
       </td>
@@ -38,7 +38,7 @@
     <tr>
       <td><a href="https://github.com/gSchool/javascript-curriculum/tree/master/OOP">Review of State and Behavior</a>
       </td>
-      <td><a href="https://github.com/gSchool/computer-science-curriculum/tree/master/Exercises/src/OOP">OOP Tests</a>
+      <td><a href="https://github.com/gSchool/computer-science-drills/tree/master/src/OOP">OOP Tests</a>
       </td>
       <td>
       </td>
@@ -46,7 +46,7 @@
     <tr>
       <td><a href="https://github.com/gSchool/javascript-curriculum/blob/master/SOLID/Single%20Reponsibility%20Principle.md">Single Responsibility Principle (SRP)</a>
       </td>
-      <td><a href="https://github.com/gSchool/computer-science-curriculum/tree/master/Exercises/src/OOP">OOP Tests</a>
+      <td><a href="https://github.com/gSchool/computer-science-drills/tree/master/src/OOP">OOP Tests</a>
       </td>
       <td>
       </td>
@@ -57,7 +57,7 @@
       </td>
       <td><a href="https://github.com/gSchool/javascript-curriculum/blob/master/Call Apply and Bind.md">Call, Apply and Bind</a>
       </td>
-      <td>
+      <td><a href="https://github.com/gSchool/cab_closure_exercises">Call, Apply and Bind</a>
       </td>
       <td>
       </td>
@@ -65,7 +65,7 @@
     <tr>
       <td><a href="https://learn.galvanize.com/content/gSchool/javascript-curriculum/master/Errors.md">Error Handling In JavaScript</a>
       </td>
-      <td>
+      <td><a href="https://github.com/gSchool/js-common-errors">JS Common Errors</a>
       </td>
       <td>
       </td>
@@ -111,7 +111,7 @@
       </td>
       <td><a href="https://github.com/gSchool/browser-dom-curriculum/blob/master/DOM/Events.md">DOM Events</a>
       </td>
-      <td><a href="https://github.com/gSchool/stoplight-event-exercise">Stoplight Events</a>
+      <td><a href="https://github.com/gschool/pixel-art-maker">Pixel Art Maker</a>
       </td>
       <td><a href="https://github.com/gSchool/wheres-waldo">Where's Waldo</a>
       </td>

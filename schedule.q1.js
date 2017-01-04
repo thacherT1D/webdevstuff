@@ -39,8 +39,7 @@ module.exports = [
         assignment: {text: "JavaScript Statements", url: "https://github.com/gSchool/javascript-statements"},
       },
       {
-        article: {text: "JavaScript Functions", url: "https://github.com/gSchool/javascript-curriculum/blob/master/Functions.md"},
-        stretch: {text: "Call, Apply and Bind", url: "https://github.com/gSchool/javascript-curriculum/blob/master/Call Apply and Bind.md"},
+        article: {text: "JavaScript Functions", url: "https://github.com/gSchool/javascript-curriculum/blob/master/Functions.md"}
       },
     ],
   },
@@ -73,7 +72,7 @@ module.exports = [
     activities: [
       {
         article: { text: "Scope", url: "https://github.com/gSchool/javascript-curriculum/blob/master/Scope.md" },
-        assignment: { text: "Function Tests", url: "https://github.com/gSchool/function-tests" },
+        assignment: { text: "lodash", url: "https://github.com/gSchool/lodash" },
       },
       {
         article: { text: "Hoisting", url: "https://github.com/gSchool/javascript-curriculum/blob/master/Hoisting.md" },
@@ -96,7 +95,8 @@ module.exports = [
     warmup: { text: "JavaScripting (con't)", url: "https://github.com/sethvincent/javascripting" },
     activities: [
       {
-        article: { text: "Memory Diagrams", url: "https://github.com/gSchool/javascript-curriculum/blob/master/Memory Diagrams.md" }        
+        article: { text: "Memory Diagrams", url: "https://github.com/gSchool/javascript-curriculum/blob/master/Memory Diagrams.md" },
+        assignment: { text: "Memory Diagram Practice", url: "https://github.com/gSchool/computer-science-curriculum/blob/master/Unit-0/03-memory-diagrams-exercises.md" }
       }
     ]
   },
@@ -107,15 +107,15 @@ module.exports = [
     activities: [
       {
         article: {text: "Pillars of OOP", url: ""},
-        assignment: {text: "OOP Tests", url: "https://github.com/gSchool/computer-science-curriculum/tree/master/Exercises/src/OOP"},
+        assignment: {text: "OOP Tests", url: "https://github.com/gSchool/computer-science-drills/tree/master/src/OOP"},
       },
       {
         article: {text: "Review of State and Behavior", url: "https://github.com/gSchool/javascript-curriculum/tree/master/OOP"},
-        assignment: {text: "OOP Tests", url: "https://github.com/gSchool/computer-science-curriculum/tree/master/Exercises/src/OOP"},
+        assignment: {text: "OOP Tests", url: "https://github.com/gSchool/computer-science-drills/tree/master/src/OOP"},
       },
       {
         article: {text: "Single Responsibility Principle (SRP)", url: "https://github.com/gSchool/javascript-curriculum/blob/master/SOLID/Single%20Reponsibility%20Principle.md"},
-        assignment: {text: "OOP Tests", url: "https://github.com/gSchool/computer-science-curriculum/tree/master/Exercises/src/OOP"},
+        assignment: {text: "OOP Tests", url: "https://github.com/gSchool/computer-science-drills/tree/master/src/OOP"},
       }
     ],
   },
@@ -126,9 +126,11 @@ module.exports = [
     activities: [
       {
         article: { text: "Call, Apply and Bind", url: "https://github.com/gSchool/javascript-curriculum/blob/master/Call Apply and Bind.md"},
+        assignment: { text: "Call, Apply and Bind", url: "https://github.com/gSchool/cab_closure_exercises" }
       },
       {
         article: { text: "Error Handling In JavaScript", url: "https://learn.galvanize.com/content/gSchool/javascript-curriculum/master/Errors.md"},
+        assignment: { text: "JS Common Errors", url: "https://github.com/gSchool/js-common-errors" }
       }
     ]
   },
@@ -163,6 +165,7 @@ module.exports = [
       {
         article: { text: "DOM Events", url: "https://github.com/gSchool/browser-dom-curriculum/blob/master/DOM/Events.md" },
         assignment: { text: "Stoplight Events", url: "https://github.com/gSchool/stoplight-event-exercise" },
+        assignment: { text: "Pixel Art Maker", url: "https://github.com/gschool/pixel-art-maker" },
         stretch: { text: "Where's Waldo", url: "https://github.com/gSchool/wheres-waldo" },
       },
       {
@@ -223,7 +226,6 @@ module.exports = [
     activities: [
       {
         article: { text: "LocalStorage", url: "https://github.com/gSchool/browser-dom-curriculum/blob/master/Local%20Storage.md" },
-        assignment: { text: "jQuery Calculator", url: "https://github.com/gSchool/jquery-calculator" },
       },
     ]
   },
@@ -234,11 +236,7 @@ module.exports = [
     activities: [
       {
         article: { text: "User Interface Design", url: "https://github.com/gSchool/html-css-curriculum/blob/master/UI/User Interface Design.md" },
-      },
-      {
-        article: { text: "Project Mangement", url: "https://github.com/gschool/productivity-curriculum/blob/master/Agile/README.md" },
-        assignment: { text: "Galvanize Delivers", url: "https://github.com/gSchool/galvanize-delivers/" }
-      },
+      }
     ]
   },
 
@@ -273,6 +271,9 @@ module.exports = [
         article: { text: "Automated JavaScript Tests", url: "https://github.com/gSchool/node-curriculum/blob/master/unit-3/03-testing-with-mocha-chai-supertest.md" },
         assignment: { text: "JavaScript Test Coverage", url: "https://github.com/gSchool/javascript-test-coverage" },
       },
+      {
+        article: { text: "Red-green-refactor", url: "" }
+      },
     ]
   },
 
@@ -280,9 +281,6 @@ module.exports = [
   {
     warmup: { text: "", url: "" },
     activities: [
-      {
-        article: { text: "Red-green-refactor", url: "" }
-      },
       {
         article: { text: "Project Mangement", url: "https://github.com/gschool/productivity-curriculum/blob/master/Agile/README.md" },
         assignment: { text: "Q1 Project", url: "Projects/Q1.md" },

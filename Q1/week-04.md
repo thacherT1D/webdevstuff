@@ -36,8 +36,8 @@
       </td>
     </tr>
     <tr>
-      <td rowspan="1">Wednesday</td>
-      <td rowspan="1"><a href=""></a>
+      <td rowspan="2">Wednesday</td>
+      <td rowspan="2"><a href=""></a>
       </td>
       <td><a href="https://github.com/gSchool/node-curriculum/blob/master/unit-3/03-testing-with-mocha-chai-supertest.md">Automated JavaScript Tests</a>
       </td>
@@ -47,9 +47,6 @@
       </td>
     </tr>
     <tr>
-      <td rowspan="2">Thursday</td>
-      <td rowspan="2"><a href=""></a>
-      </td>
       <td>Red-green-refactor
       </td>
       <td>
@@ -58,6 +55,9 @@
       </td>
     </tr>
     <tr>
+      <td rowspan="1">Thursday</td>
+      <td rowspan="1"><a href=""></a>
+      </td>
       <td><a href="https://github.com/gschool/productivity-curriculum/blob/master/Agile/README.md">Project Mangement</a>
       </td>
       <td><a href="../Projects/Q1.md">Q1 Project</a>
