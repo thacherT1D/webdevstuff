@@ -1,5 +1,3 @@
-# Stacks and Queues
-
 Stacks and Queues are specializations of lists. That is, they are lists with a __restricted API__. The restrictions are on the *order in which elements can enter and exit* the list. Enforcing this ordering gives programmers the ability to __make assumptions__ about the data they are processing, which can be very powerful.
 
 ## Objectives
@@ -8,13 +6,10 @@ Stacks and Queues are specializations of lists. That is, they are lists with a _
   * Define __LIFO__
   * Define __push__
   * Define __pop__
-  * Understand why it's true that you've already implemented a stack if you've completed the Linked Lists exercises.
-  * Use a stack to solve the __matching parenthesis__ problem.
 * Define a __queue__
   * Define __FIFO__
   * Define __enqueue__
   * Define __dequeue__
-  * Implement a __queue__
 
 ## Stacks
 
@@ -32,7 +27,6 @@ Another way to think about it: a Linked List which can only __insert__ using `pu
 
 Where do we see stacks in the real world?
 
-- How about the [call stack](http://en.wikipedia.org/wiki/Call_stack)?
 - The 'undo' command in a text editor can be modeled with a stack.
 - We use stacks to help in the implementation of more complex data structures and algorithms
 - A stack is an extremely useful and efficient data structure for solving algorithms like figuring out a palindrome.
@@ -72,48 +66,3 @@ Where do we use queues?
 - Typical application areas include print job scheduling, operating systems (process scheduling).
 
 And remember, the regular Array structure in Javascript can be used as both a Stack (first in, last out) and can as a Queue (first in, first out) depending on the calls you make. __However__ using the Array this way, you lose the big O benefits of __constant time insertion/removal__ due to the underlying mechanics of the `Array` type in Javascript.
-
-### !challenge
-* type: project
-* id: computer-science-drills-stacks-and-queues-01
-* title: Stack w/ Linked List
-
-##### !question
-### Create a Stack backed by a Linked List
-
-Your solution to Linked Lists should behave as a stack already. Use it as a stack to complete [parens checker](https://github.com/gSchool/computer-science-drills/blob/master/src/linked-list/parens_checker.js) to practice *using a stack*.
-
-Submit the URL to your solution here:
-##### !end-question
-
-##### !placeholder
-https://github.com/<your name>/computer-science-drills/...
-##### !end-placeholder
-
-##### !explanation
-Check the solutions branch for one possible answer
-##### !end-explanation
-### !end-challenge
-
-
-### !challenge
-* type: project
-* id: computer-science-drills-stacks-and-queues-02
-* title: Queue w/ Linked List
-
-##### !question
-### Create a Queue backed by a Linked List
-
-Use your linked list implementation to create an implementation of a queue.  Complete [queue](https://github.com/gSchool/computer-science-drills/blob/master/src/linked-list/queue.js) so it passes the tests. You'll need to decide which functions to use as __enqueue__ and __dequeue__, but you should not have to rewrite much code.
-
-Submit the URL to your solution here:
-##### !end-question
-
-##### !placeholder
-https://github.com/<your name>/computer-science-drills/...
-##### !end-placeholder
-
-##### !explanation
-Check the solutions branch for one possible answer
-##### !end-explanation
-### !end-challenge
