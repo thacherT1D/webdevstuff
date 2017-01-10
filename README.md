@@ -41,7 +41,7 @@ Week 1
       <td rowspan="3">Monday</td>
       <td rowspan="3"><a href=""></a>
       </td>
-      <td><a href="https://docs.google.com/presentation/d/154ou9yQJNcVcVehD6vqaKjGbCKhFb2xK85toqniWaa8/edit#slide=id.g108a6e17ae_0_112">Welcome to WDI</a>
+      <td>Welcome to WDI
       </td>
       <td>
       </td>
@@ -95,7 +95,7 @@ Week 1
       </td>
     </tr>
     <tr>
-      <td><a href="https://github.com/gSchool/javascript-curriculum/blob/master/README.md">JavaScript: Intro, Types, Values, Variables, Control Flow</a>
+      <td><a href="https://learn.galvanize.com/content/gSchool/javascript-curriculum/master/Basics.md">JavaScript: Intro, Types, Values, Variables, Control Flow</a>
       </td>
       <td><a href="https://github.com/gSchool/javascript-statements">JavaScript Statements</a>
       </td>

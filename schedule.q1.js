@@ -5,7 +5,7 @@ module.exports = [
   {
     warmup: { text: "", url: "" },
     activities: [
-      {article: {text: "Welcome to WDI", url: "https://docs.google.com/presentation/d/154ou9yQJNcVcVehD6vqaKjGbCKhFb2xK85toqniWaa8/edit#slide=id.g108a6e17ae_0_112"}},
+      {article: {text: "Welcome to WDI"}},
       {article: {text: "Learning to Learn", url: "https://github.com/gSchool/productivity-curriculum/blob/master/Misc/Learning to Learn.md"}},
       {article: {text: "Setup Development Environment", url: "https://github.com/gSchool/productivity-curriculum/blob/master/Development Environment/README.md"}}
     ]
@@ -23,10 +23,10 @@ module.exports = [
       {
         article: {text: "Intro to Git and Github", url: "https://github.com/gSchool/productivity-curriculum/blob/master/Misc/Intro to Git.md"},
         assignment: {text: "Git Personal Website", url: "https://github.com/gSchool/git-personal-website"},
-      }    
+      }
     ]
   },
-  
+
   //Wednesday
   {
     warmup: { text: "1st warmup. CLI and Git" },
@@ -35,7 +35,7 @@ module.exports = [
         article: {text: "JavaScript Vocabulary", url: "https://github.com/gSchool/javascript-curriculum/blob/master/Vocabulary.md"},
       },
       {
-        article: {text: "JavaScript: Intro, Types, Values, Variables, Control Flow", url: "https://github.com/gSchool/javascript-curriculum/blob/master/README.md"},
+        article: {text: "JavaScript: Intro, Types, Values, Variables, Control Flow", url: "https://learn.galvanize.com/content/gSchool/javascript-curriculum/master/Basics.md"},
         assignment: {text: "JavaScript Statements", url: "https://github.com/gSchool/javascript-statements"},
       },
       {
