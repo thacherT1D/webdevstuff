@@ -91,17 +91,9 @@ Week 1
       </td>
     </tr>
     <tr>
-      <td rowspan="4">Thursday</td>
-      <td rowspan="4"><a href="https://github.com/sethvincent/javascripting">JavaScripting</a>
+      <td rowspan="3">Thursday</td>
+      <td rowspan="3"><a href="https://github.com/sethvincent/javascripting">JavaScripting</a>
       </td>
-      <td><a href="https://github.com/gSchool/javascript-curriculum/blob/master/README.md">JavaScript: Intro, Types, Values, Variables, Control Flow</a>
-      </td>
-      <td><a href="https://github.com/gSchool/javascript-statements">JavaScript Statements</a>
-      </td>
-      <td>
-      </td>
-    </tr>
-    <tr>
       <td><a href="https://github.com/gSchool/javascript-curriculum/blob/master/Arrays-Objects-Iteration.md">JavaScript: Arrays, Objects, Iteration</a>
       </td>
       <td><a href="https://github.com/gSchool/javascript-statements">JavaScript Statements (con't)</a>

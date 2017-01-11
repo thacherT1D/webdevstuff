@@ -49,10 +49,6 @@ module.exports = [
     warmup: { text: "JavaScripting", url: "https://github.com/sethvincent/javascripting" },
     activities: [
       {
-        article: {text: "JavaScript: Intro, Types, Values, Variables, Control Flow", url: "https://github.com/gSchool/javascript-curriculum/blob/master/README.md"},
-        assignment: {text: "JavaScript Statements", url: "https://github.com/gSchool/javascript-statements"},
-      },
-      {
         article: {text: "JavaScript: Arrays, Objects, Iteration", url: "https://github.com/gSchool/javascript-curriculum/blob/master/Arrays-Objects-Iteration.md"},
         assignment: {text: "JavaScript Statements (con't)", url: "https://github.com/gSchool/javascript-statements"},
         stretch: {text: "Crushing Candy Code: Data Structures", url: "https://github.com/gSchool/ccf-data-structures"},
