@@ -8,6 +8,8 @@
   - Threads
   - Garbage Collection
 
+<hr />
+
 ### What is Memory?
 Memory refers to the "working space" a program has available to it to store values and do calculations on those values. When we store strings, arrays, numbers, or objects- these items are kept in a computer's *memory*. There are 4 major memory storage levels- in this article we are concerned with the first two.
 

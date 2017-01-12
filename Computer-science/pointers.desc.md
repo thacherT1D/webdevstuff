@@ -10,5 +10,7 @@ Here is an example of a linked list with pointers, demonstrating how you would i
 
 ![http://courses.cs.vt.edu/~csonline/DataStructures/Lessons/OrderedListImplementationView/linked_list.gif](http://courses.cs.vt.edu/~csonline/DataStructures/Lessons/OrderedListImplementationView/linked_list.gif)
 
+<hr />
+
 #### 📚 References
 [JS - Pointers vs Reference](http://stackoverflow.com/questions/8318357/javascript-pointer-reference-craziness-can-someone-explain-this)
