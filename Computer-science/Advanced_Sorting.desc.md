@@ -1,5 +1,3 @@
-# Sorting Algorithms, Part 2
-
 ## Objectives
 
 * Implement a merge sort algorithm in Javascript
