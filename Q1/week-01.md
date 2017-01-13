@@ -88,7 +88,7 @@
     </tr>
     <tr>
       <td rowspan="3">Thursday</td>
-      <td rowspan="3"><a href="https://github.com/sethvincent/javascripting">JavaScripting</a>
+      <td rowspan="3"><a href="https://github.com/gSchool/g42_challenges_so_far">Warmup</a>
       </td>
       <td><a href="https://github.com/gSchool/javascript-curriculum/blob/master/Arrays-Objects-Iteration.md">JavaScript: Arrays, Objects, Iteration</a>
       </td>
@@ -115,7 +115,7 @@
     </tr>
     <tr>
       <td rowspan="5">Friday</td>
-      <td rowspan="5"><a href="https://github.com/sethvincent/javascripting">JavaScripting (con't)</a>
+      <td rowspan="5"><a href="https://github.com/gSchool/g42_challenges_so_far">Warmup</a>
       </td>
       <td><a href="https://github.com/gSchool/javascript-curriculum/blob/master/Scope.md">Scope</a>
       </td>

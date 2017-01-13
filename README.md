@@ -112,7 +112,7 @@ Week 1
     </tr>
     <tr>
       <td rowspan="3">Thursday</td>
-      <td rowspan="3"><a href="https://github.com/sethvincent/javascripting">JavaScripting</a>
+      <td rowspan="3"><a href="https://github.com/gSchool/g42_challenges_so_far">Warmup</a>
       </td>
       <td><a href="https://github.com/gSchool/javascript-curriculum/blob/master/Arrays-Objects-Iteration.md">JavaScript: Arrays, Objects, Iteration</a>
       </td>
@@ -139,7 +139,7 @@ Week 1
     </tr>
     <tr>
       <td rowspan="5">Friday</td>
-      <td rowspan="5"><a href="https://github.com/sethvincent/javascripting">JavaScripting (con't)</a>
+      <td rowspan="5"><a href="https://github.com/gSchool/g42_challenges_so_far">Warmup</a>
       </td>
       <td><a href="https://github.com/gSchool/javascript-curriculum/blob/master/Scope.md">Scope</a>
       </td>
@@ -199,7 +199,7 @@ Week 2
   <tbody>
     <tr>
       <td rowspan="1">Monday</td>
-      <td rowspan="1"><a href="https://github.com/sethvincent/javascripting">JavaScripting (con't)</a>
+      <td rowspan="1"><a href="">Code Review Time!</a>
       </td>
       <td><a href="https://github.com/gSchool/javascript-curriculum/blob/master/Memory Diagrams.md">Memory Diagrams</a>
       </td>
@@ -210,7 +210,7 @@ Week 2
     </tr>
     <tr>
       <td rowspan="3">Tuesday</td>
-      <td rowspan="3"><a href="https://github.com/gSchool/g26-challenges-so-far/blob/master/w2/w2-f-replace-with-alphabet-position/w2-f-replace-with-alphabet-position.js">Alphabet Position</a>
+      <td rowspan="3"><a href="https://github.com/gSchool/g42_challenges_so_far">Warmup</a>
       </td>
       <td>Pillars of OOP
       </td>
@@ -228,7 +228,7 @@ Week 2
       </td>
     </tr>
     <tr>
-      <td><a href="https://github.com/gSchool/javascript-curriculum/blob/master/SOLID/Single%20Reponsibility%20Principle.md">Single Responsibility Principle (SRP)</a>
+      <td><a href="https://github.com/gSchool/javascript-curriculum/blob/master/SOLID/Single%20Responsibility%20Principle.md">Single Responsibility Principle (SRP)</a>
       </td>
       <td><a href="https://github.com/gSchool/computer-science-drills/tree/master/src/OOP">OOP Tests</a>
       </td>
@@ -237,7 +237,7 @@ Week 2
     </tr>
     <tr>
       <td rowspan="2">Wednesday</td>
-      <td rowspan="2"><a href="http://rosettacode.org/wiki/FizzBuzz">FizzBuzz</a>
+      <td rowspan="2"><a href="https://github.com/gSchool/g42_challenges_so_far">Warmup</a>
       </td>
       <td><a href="https://github.com/gSchool/javascript-curriculum/blob/master/Call Apply and Bind.md">Call, Apply and Bind</a>
       </td>
@@ -256,7 +256,7 @@ Week 2
     </tr>
     <tr>
       <td rowspan="4">Thursday</td>
-      <td rowspan="4"><a href="https://github.com/gSchool/warmups/blob/master/w2/w2-w-remove-dupes-string-warmup/prompt.js">Remove Duplicates</a>
+      <td rowspan="4"><a href="https://github.com/gSchool/g42_challenges_so_far">Warmup</a>
       </td>
       <td><a href="https://github.com/gSchool/browser-dom-curriculum/blob/master/DOM/README.md">Intro to the DOM</a>
       </td>
@@ -291,7 +291,7 @@ Week 2
     </tr>
     <tr>
       <td rowspan="2">Friday</td>
-      <td rowspan="2"><a href=""></a>
+      <td rowspan="2"><a href="https://github.com/gSchool/g42_challenges_so_far">Warmup</a>
       </td>
       <td><a href="https://github.com/gSchool/browser-dom-curriculum/blob/master/DOM/Events.md">DOM Events</a>
       </td>
@@ -327,7 +327,7 @@ Week 3
   <tbody>
     <tr>
       <td rowspan="3">Monday</td>
-      <td rowspan="3"><a href="https://github.com/gSchool/warmups/blob/master/w3/w3-t-doubleChar/solution.js">Double Char</a>
+      <td rowspan="3"><a href="">Code Review Time!</a>
       </td>
       <td><a href="https://github.com/gSchool/html-css-curriculum/blob/master/CSS/Frameworks.md">CSS Frameworks</a>
       </td>
@@ -354,7 +354,7 @@ Week 3
     </tr>
     <tr>
       <td rowspan="1">Tuesday</td>
-      <td rowspan="1"><a href="https://github.com/gSchool/warmups/blob/master/w3/w3-t-doubleChar/solution.js">Double Char</a>
+      <td rowspan="1"><a href="https://github.com/gSchool/g42_challenges_so_far">Warmup</a>
       </td>
       <td><a href="https://github.com/gschool/browser-dom-curriculum/blob/master/HTTP/README.md">HTTP</a>
       </td>
@@ -365,7 +365,7 @@ Week 3
     </tr>
     <tr>
       <td rowspan="2">Wednesday</td>
-      <td rowspan="2"><a href="https://github.com/gSchool/warmups/blob/master/typoglycemia/challenge.js">Word Scrambler</a>
+      <td rowspan="2"><a href="https://github.com/gSchool/g42_challenges_so_far">Warmup</a>
       </td>
       <td><a href="https://github.com/gSchool/node-curriculum/blob/master/Knex/Promises.md">Promises</a>
       </td>
@@ -384,7 +384,7 @@ Week 3
     </tr>
     <tr>
       <td rowspan="1">Thursday</td>
-      <td rowspan="1"><a href="https://github.com/gSchool/g26-challenges-so-far/blob/master/w4/w4-r-rotate-array/problem.js">Rotate</a>
+      <td rowspan="1"><a href="https://github.com/gSchool/g42_challenges_so_far">Warmup</a>
       </td>
       <td><a href="https://github.com/gSchool/browser-dom-curriculum/blob/master/Local%20Storage.md">LocalStorage</a>
       </td>
@@ -395,7 +395,7 @@ Week 3
     </tr>
     <tr>
       <td rowspan="1">Friday</td>
-      <td rowspan="1"><a href="https://github.com/gSchool/warmups/blob/master/Array%20Map.md">ArrayMap</a>
+      <td rowspan="1"><a href="https://github.com/gSchool/g42_challenges_so_far">Warmup</a>
       </td>
       <td><a href="https://github.com/gSchool/html-css-curriculum/blob/master/UI/User Interface Design.md">User Interface Design</a>
       </td>
@@ -423,7 +423,7 @@ Week 4
   <tbody>
     <tr>
       <td rowspan="1">Monday</td>
-      <td rowspan="1"><a href="https://github.com/gSchool/warmups/blob/master/Array%20Filter.md">ArrayFilter</a>
+      <td rowspan="1"><a href="">Code Review Time!</a>
       </td>
       <td>OOP Inheritance
       </td>
@@ -434,7 +434,7 @@ Week 4
     </tr>
     <tr>
       <td rowspan="1">Tuesday</td>
-      <td rowspan="1"><a href="https://github.com/gSchool/warmups/blob/master/Array%20Reduce.md">ArrayReduce</a>
+      <td rowspan="1"><a href="https://github.com/gSchool/g42_challenges_so_far">Warmup</a>
       </td>
       <td>ES2015: Decunstructing, Arrow Functions, Spread and Rest, etc...
       </td>

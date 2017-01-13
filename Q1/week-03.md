@@ -15,7 +15,7 @@
   <tbody>
     <tr>
       <td rowspan="3">Monday</td>
-      <td rowspan="3"><a href="https://github.com/gSchool/warmups/blob/master/w3/w3-t-doubleChar/solution.js">Double Char</a>
+      <td rowspan="3"><a href="">Code Review Time!</a>
       </td>
       <td><a href="https://github.com/gSchool/html-css-curriculum/blob/master/CSS/Frameworks.md">CSS Frameworks</a>
       </td>
@@ -42,7 +42,7 @@
     </tr>
     <tr>
       <td rowspan="1">Tuesday</td>
-      <td rowspan="1"><a href="https://github.com/gSchool/warmups/blob/master/w3/w3-t-doubleChar/solution.js">Double Char</a>
+      <td rowspan="1"><a href="https://github.com/gSchool/g42_challenges_so_far">Warmup</a>
       </td>
       <td><a href="https://github.com/gschool/browser-dom-curriculum/blob/master/HTTP/README.md">HTTP</a>
       </td>
@@ -53,7 +53,7 @@
     </tr>
     <tr>
       <td rowspan="2">Wednesday</td>
-      <td rowspan="2"><a href="https://github.com/gSchool/warmups/blob/master/typoglycemia/challenge.js">Word Scrambler</a>
+      <td rowspan="2"><a href="https://github.com/gSchool/g42_challenges_so_far">Warmup</a>
       </td>
       <td><a href="https://github.com/gSchool/node-curriculum/blob/master/Knex/Promises.md">Promises</a>
       </td>
@@ -72,7 +72,7 @@
     </tr>
     <tr>
       <td rowspan="1">Thursday</td>
-      <td rowspan="1"><a href="https://github.com/gSchool/g26-challenges-so-far/blob/master/w4/w4-r-rotate-array/problem.js">Rotate</a>
+      <td rowspan="1"><a href="https://github.com/gSchool/g42_challenges_so_far">Warmup</a>
       </td>
       <td><a href="https://github.com/gSchool/browser-dom-curriculum/blob/master/Local%20Storage.md">LocalStorage</a>
       </td>
@@ -83,7 +83,7 @@
     </tr>
     <tr>
       <td rowspan="1">Friday</td>
-      <td rowspan="1"><a href="https://github.com/gSchool/warmups/blob/master/Array%20Map.md">ArrayMap</a>
+      <td rowspan="1"><a href="https://github.com/gSchool/g42_challenges_so_far">Warmup</a>
       </td>
       <td><a href="https://github.com/gSchool/html-css-curriculum/blob/master/UI/User Interface Design.md">User Interface Design</a>
       </td>

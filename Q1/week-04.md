@@ -15,7 +15,7 @@
   <tbody>
     <tr>
       <td rowspan="1">Monday</td>
-      <td rowspan="1"><a href="https://github.com/gSchool/warmups/blob/master/Array%20Filter.md">ArrayFilter</a>
+      <td rowspan="1"><a href="">Code Review Time!</a>
       </td>
       <td>OOP Inheritance
       </td>
@@ -26,7 +26,7 @@
     </tr>
     <tr>
       <td rowspan="1">Tuesday</td>
-      <td rowspan="1"><a href="https://github.com/gSchool/warmups/blob/master/Array%20Reduce.md">ArrayReduce</a>
+      <td rowspan="1"><a href="https://github.com/gSchool/g42_challenges_so_far">Warmup</a>
       </td>
       <td>ES2015: Decunstructing, Arrow Functions, Spread and Rest, etc...
       </td>

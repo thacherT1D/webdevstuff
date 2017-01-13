@@ -46,7 +46,7 @@ module.exports = [
 
   //Thursday
   {
-    warmup: { text: "JavaScripting", url: "https://github.com/sethvincent/javascripting" },
+    warmup: { text: "Warmup", url: "https://github.com/gSchool/g42_challenges_so_far" },
     activities: [
       {
         article: {text: "JavaScript: Arrays, Objects, Iteration", url: "https://github.com/gSchool/javascript-curriculum/blob/master/Arrays-Objects-Iteration.md"},
@@ -64,7 +64,7 @@ module.exports = [
 
   //Friday
   {
-    warmup: { text: "JavaScripting (con't)", url: "https://github.com/sethvincent/javascripting" },
+    warmup: { text: "Warmup", url: "https://github.com/gSchool/g42_challenges_so_far" },
     activities: [
       {
         article: { text: "Scope", url: "https://github.com/gSchool/javascript-curriculum/blob/master/Scope.md" },
@@ -88,7 +88,7 @@ module.exports = [
   // Week 2
   //Monday
   {
-    warmup: { text: "JavaScripting (con't)", url: "https://github.com/sethvincent/javascripting" },
+    warmup: { text: "Code Review Time!", url: "" },
     activities: [
       {
         article: { text: "Memory Diagrams", url: "https://github.com/gSchool/javascript-curriculum/blob/master/Memory Diagrams.md" },
@@ -99,7 +99,7 @@ module.exports = [
 
   //Tuesday
   {
-    warmup: { text: "Alphabet Position", url: "https://github.com/gSchool/g26-challenges-so-far/blob/master/w2/w2-f-replace-with-alphabet-position/w2-f-replace-with-alphabet-position.js" },
+    warmup: { text: "Warmup", url: "https://github.com/gSchool/g42_challenges_so_far" },
     activities: [
       {
         article: {text: "Pillars of OOP", url: ""},
@@ -110,7 +110,7 @@ module.exports = [
         assignment: {text: "OOP Tests", url: "https://github.com/gSchool/computer-science-drills/tree/master/src/OOP"},
       },
       {
-        article: {text: "Single Responsibility Principle (SRP)", url: "https://github.com/gSchool/javascript-curriculum/blob/master/SOLID/Single%20Reponsibility%20Principle.md"},
+        article: {text: "Single Responsibility Principle (SRP)", url: "https://github.com/gSchool/javascript-curriculum/blob/master/SOLID/Single%20Responsibility%20Principle.md"},
         assignment: {text: "OOP Tests", url: "https://github.com/gSchool/computer-science-drills/tree/master/src/OOP"},
       }
     ],
@@ -118,7 +118,7 @@ module.exports = [
 
   //Wednesday
   {
-    warmup: { text: "FizzBuzz", url: "http://rosettacode.org/wiki/FizzBuzz" },
+    warmup: { text: "Warmup", url: "https://github.com/gSchool/g42_challenges_so_far" },
     activities: [
       {
         article: { text: "Call, Apply and Bind", url: "https://github.com/gSchool/javascript-curriculum/blob/master/Call Apply and Bind.md"},
@@ -133,7 +133,7 @@ module.exports = [
 
   //Thursday
   {
-    warmup: { text: "Remove Duplicates", url: "https://github.com/gSchool/warmups/blob/master/w2/w2-w-remove-dupes-string-warmup/prompt.js" },
+    warmup: { text: "Warmup", url: "https://github.com/gSchool/g42_challenges_so_far" },
     activities: [
       {
         article: { text: "Intro to the DOM", url: "https://github.com/gSchool/browser-dom-curriculum/blob/master/DOM/README.md" },
@@ -156,7 +156,7 @@ module.exports = [
 
   //Friday
   {
-    warmup: { text: "", url: "" },
+    warmup: { text: "Warmup", url: "https://github.com/gSchool/g42_challenges_so_far" },
     activities: [
       {
         article: { text: "DOM Events", url: "https://github.com/gSchool/browser-dom-curriculum/blob/master/DOM/Events.md" },
@@ -173,7 +173,7 @@ module.exports = [
   // Week 3
   //Monday
   {
-    warmup: { text: "Double Char", url: "https://github.com/gSchool/warmups/blob/master/w3/w3-t-doubleChar/solution.js" },
+    warmup: { text: "Code Review Time!", url: "" },
     activities: [
       {
         article: { text: "CSS Frameworks", url: "https://github.com/gSchool/html-css-curriculum/blob/master/CSS/Frameworks.md" },
@@ -193,7 +193,7 @@ module.exports = [
 
   //Tuesday
   {
-    warmup: { text: "Double Char", url: "https://github.com/gSchool/warmups/blob/master/w3/w3-t-doubleChar/solution.js" },
+    warmup: { text: "Warmup", url: "https://github.com/gSchool/g42_challenges_so_far" },
     activities: [
       {
         article: { text: "HTTP", url: "https://github.com/gschool/browser-dom-curriculum/blob/master/HTTP/README.md" }
@@ -203,7 +203,7 @@ module.exports = [
 
   //Wednesday
   {
-    warmup: { text: "Word Scrambler", url: "https://github.com/gSchool/warmups/blob/master/typoglycemia/challenge.js" },
+    warmup: { text: "Warmup", url: "https://github.com/gSchool/g42_challenges_so_far" },
     activities: [
       {
         article: { text: "Promises", url: "https://github.com/gSchool/node-curriculum/blob/master/Knex/Promises.md" },
@@ -218,7 +218,7 @@ module.exports = [
 
   //Thursday
   {
-    warmup: { text: "Rotate", url: "https://github.com/gSchool/g26-challenges-so-far/blob/master/w4/w4-r-rotate-array/problem.js" },
+    warmup: { text: "Warmup", url: "https://github.com/gSchool/g42_challenges_so_far" },
     activities: [
       {
         article: { text: "LocalStorage", url: "https://github.com/gSchool/browser-dom-curriculum/blob/master/Local%20Storage.md" },
@@ -228,7 +228,7 @@ module.exports = [
 
   //Friday
   {
-    warmup: { text: "ArrayMap", url: "https://github.com/gSchool/warmups/blob/master/Array%20Map.md" },
+    warmup: { text: "Warmup", url: "https://github.com/gSchool/g42_challenges_so_far" },
     activities: [
       {
         article: { text: "User Interface Design", url: "https://github.com/gSchool/html-css-curriculum/blob/master/UI/User Interface Design.md" },
@@ -239,7 +239,7 @@ module.exports = [
   // Week 4
   //Monday
   {
-    warmup: { text: "ArrayFilter", url: "https://github.com/gSchool/warmups/blob/master/Array%20Filter.md" },
+    warmup: { text: "Code Review Time!", url: "" },
     activities: [
       {
         article: { text: "OOP Inheritance", url: "" },
@@ -250,7 +250,7 @@ module.exports = [
 
   //Tuesday
   {
-    warmup: { text: "ArrayReduce", url: "https://github.com/gSchool/warmups/blob/master/Array%20Reduce.md" },
+    warmup: { text: "Warmup", url: "https://github.com/gSchool/g42_challenges_so_far" },
     activities: [
       {
         article: { text: "ES2015: Decunstructing, Arrow Functions, Spread and Rest, etc...", url: "" },
