@@ -2,8 +2,8 @@ module.exports = function() {
 
   let days = require('./schedule.q1')
     .concat(require('./schedule.q2'))
-    .concat(require('./schedule.q3'))
-    .concat(require('./schedule.q4'))
+    // .concat(require('./schedule.q3'))
+    // .concat(require('./schedule.q4'))
 
   let config = [
     {
@@ -16,16 +16,16 @@ module.exports = function() {
       title: 'Quarter 2',
       days: 25,
     },
-    {
-      baseDir: './Q3',
-      title: 'Quarter 3',
-      days: 25,
-    },
-    {
-      baseDir: './Q4',
-      title: 'Quarter 4',
-      days: 30,
-    },
+    // {
+    //   baseDir: './Q3',
+    //   title: 'Quarter 3',
+    //   days: 25,
+    // },
+    // {
+    //   baseDir: './Q4',
+    //   title: 'Quarter 4',
+    //   days: 30,
+    // },
   ]
 
   return {days, config}

@@ -123,7 +123,7 @@ Week 1
       </td>
       <td><a href="https://github.com/gSchool/javascript-curriculum/blob/master/Scope.md">Scope</a>
       </td>
-      <td><a href="https://github.com/gSchool/lodash">lodash</a>
+      <td><a href="https://github.com/gSchool/function-tests">Function Tests</a>
       </td>
       <td>
       </td>
@@ -181,9 +181,9 @@ Week 2
       <td rowspan="1">Monday</td>
       <td rowspan="1"><a href="">Code Review Time!</a>
       </td>
-      <td><a href="https://github.com/gSchool/javascript-curriculum/blob/master/Memory Diagrams.md">Memory Diagrams</a>
+      <td><a href="https://github.com/gSchool/javascript-curriculum/blob/master/Memory%20Diagrams.md">Memory Diagrams</a>
       </td>
-      <td><a href="https://github.com/gSchool/computer-science-curriculum/blob/master/Unit-0/03-memory-diagrams-exercises.md">Memory Diagram Practice</a>
+      <td><a href="https://github.com/gSchool/lodash">lodash</a>
       </td>
       <td>
       </td>

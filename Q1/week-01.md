@@ -119,7 +119,7 @@
       </td>
       <td><a href="https://github.com/gSchool/javascript-curriculum/blob/master/Scope.md">Scope</a>
       </td>
-      <td><a href="https://github.com/gSchool/lodash">lodash</a>
+      <td><a href="https://github.com/gSchool/function-tests">Function Tests</a>
       </td>
       <td>
       </td>

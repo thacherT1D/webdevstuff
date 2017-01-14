@@ -68,7 +68,7 @@ module.exports = [
     activities: [
       {
         article: { text: "Scope", url: "https://github.com/gSchool/javascript-curriculum/blob/master/Scope.md" },
-        assignment: { text: "lodash", url: "https://github.com/gSchool/lodash" },
+        assignment: { text: "Function Tests", url: "https://github.com/gSchool/function-tests" },
       },
       {
         article: { text: "Hoisting", url: "https://github.com/gSchool/javascript-curriculum/blob/master/Hoisting.md" },
@@ -91,8 +91,9 @@ module.exports = [
     warmup: { text: "Code Review Time!", url: "" },
     activities: [
       {
-        article: { text: "Memory Diagrams", url: "https://github.com/gSchool/javascript-curriculum/blob/master/Memory Diagrams.md" },
-        assignment: { text: "Memory Diagram Practice", url: "https://github.com/gSchool/computer-science-curriculum/blob/master/Unit-0/03-memory-diagrams-exercises.md" }
+        article: { text: "Memory Diagrams", url: "https://github.com/gSchool/javascript-curriculum/blob/master/Memory%20Diagrams.md" },
+        assignment: { text: "Memory Diagram Practice", url: "https://github.com/gSchool/computer-science-curriculum/blob/master/Unit-0/03-memory-diagrams-exercises.md" },
+        assignment: { text: "lodash", url: "https://github.com/gSchool/lodash" },
       }
     ]
   },
