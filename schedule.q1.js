@@ -91,10 +91,13 @@ module.exports = [
     warmup: { text: "Code Review Time!", url: "" },
     activities: [
       {
-        article: { text: "Memory Diagrams", url: "https://github.com/gSchool/javascript-curriculum/blob/master/Memory%20Diagrams.md" },
+        article: { text: "Memory Diagrams", url: "https://learn.galvanize.com/content/gSchool/javascript-curriculum/master/Memory%20Diagrams.md" },
         assignment: { text: "Memory Diagram Practice", url: "https://github.com/gSchool/computer-science-curriculum/blob/master/Unit-0/03-memory-diagrams-exercises.md" },
+      },
+      {
+        article: { text: "", url: "" },
         assignment: { text: "lodash", url: "https://github.com/gSchool/lodash" },
-      }
+      },
     ]
   },
 
@@ -111,7 +114,7 @@ module.exports = [
         assignment: {text: "OOP Tests", url: "https://github.com/gSchool/computer-science-drills/tree/master/src/OOP"},
       },
       {
-        article: {text: "Single Responsibility Principle (SRP)", url: "https://github.com/gSchool/javascript-curriculum/blob/master/SOLID/Single%20Responsibility%20Principle.md"},
+        article: {text: "Single Responsibility Principle (SRP)", url: "https://learn.galvanize.com/content/gSchool/javascript-curriculum/master/SOLID/Single%20Responsibility%20Principle.md"},
         assignment: {text: "OOP Tests", url: "https://github.com/gSchool/computer-science-drills/tree/master/src/OOP"},
       }
     ],

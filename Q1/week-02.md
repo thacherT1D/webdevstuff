@@ -14,10 +14,18 @@
   </thead>
   <tbody>
     <tr>
-      <td rowspan="1">Monday</td>
-      <td rowspan="1"><a href="">Code Review Time!</a>
+      <td rowspan="2">Monday</td>
+      <td rowspan="2"><a href="">Code Review Time!</a>
       </td>
-      <td><a href="https://github.com/gSchool/javascript-curriculum/blob/master/Memory%20Diagrams.md">Memory Diagrams</a>
+      <td><a href="https://learn.galvanize.com/content/gSchool/javascript-curriculum/master/Memory%20Diagrams.md">Memory Diagrams</a>
+      </td>
+      <td><a href="https://github.com/gSchool/computer-science-curriculum/blob/master/Unit-0/03-memory-diagrams-exercises.md">Memory Diagram Practice</a>
+      </td>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <td>
       </td>
       <td><a href="https://github.com/gSchool/lodash">lodash</a>
       </td>
@@ -44,7 +52,7 @@
       </td>
     </tr>
     <tr>
-      <td><a href="https://github.com/gSchool/javascript-curriculum/blob/master/SOLID/Single%20Responsibility%20Principle.md">Single Responsibility Principle (SRP)</a>
+      <td><a href="https://learn.galvanize.com/content/gSchool/javascript-curriculum/master/SOLID/Single%20Responsibility%20Principle.md">Single Responsibility Principle (SRP)</a>
       </td>
       <td><a href="https://github.com/gSchool/computer-science-drills/tree/master/src/OOP">OOP Tests</a>
       </td>
