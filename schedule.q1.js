@@ -106,7 +106,7 @@ module.exports = [
     warmup: { text: "Warmup", url: "https://github.com/gSchool/g42_challenges_so_far" },
     activities: [
       {
-        article: {text: "Pillars of OOP", url: ""},
+        article: {text: "Pillars of OOP", url: "https://github.com/gSchool/javascript-curriculum/blob/master/Object%20Model.md"},
         assignment: {text: "OOP Tests", url: "https://github.com/gSchool/computer-science-drills/tree/master/src/OOP"},
       },
       {
@@ -124,10 +124,6 @@ module.exports = [
   {
     warmup: { text: "Warmup", url: "https://github.com/gSchool/g42_challenges_so_far" },
     activities: [
-      {
-        article: { text: "Call, Apply and Bind", url: "https://github.com/gSchool/javascript-curriculum/blob/master/Call Apply and Bind.md"},
-        assignment: { text: "Call, Apply and Bind", url: "https://github.com/gSchool/cab_closure_exercises" }
-      },
       {
         article: { text: "Error Handling In JavaScript", url: "https://learn.galvanize.com/content/gSchool/javascript-curriculum/master/Errors.md"},
         assignment: { text: "JS Common Errors", url: "https://github.com/gSchool/js-common-errors" }
@@ -259,6 +255,10 @@ module.exports = [
       {
         article: { text: "ES2015: Decunstructing, Arrow Functions, Spread and Rest, etc...", url: "" },
         assignment: { text: "Q1 Project", url: "Projects/Q1.md" }
+      },
+      {
+        article: { text: "Call, Apply and Bind", url: "https://github.com/gSchool/javascript-curriculum/blob/master/Call Apply and Bind.md"},
+        assignment: { text: "Call, Apply and Bind", url: "https://github.com/gSchool/cab_closure_exercises" }
       },
     ]
   },

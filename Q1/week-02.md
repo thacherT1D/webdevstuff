@@ -36,7 +36,7 @@
       <td rowspan="3">Tuesday</td>
       <td rowspan="3"><a href="https://github.com/gSchool/g42_challenges_so_far">Warmup</a>
       </td>
-      <td>Pillars of OOP
+      <td><a href="https://github.com/gSchool/javascript-curriculum/blob/master/Object%20Model.md">Pillars of OOP</a>
       </td>
       <td><a href="https://github.com/gSchool/computer-science-drills/tree/master/src/OOP">OOP Tests</a>
       </td>
@@ -60,17 +60,9 @@
       </td>
     </tr>
     <tr>
-      <td rowspan="2">Wednesday</td>
-      <td rowspan="2"><a href="https://github.com/gSchool/g42_challenges_so_far">Warmup</a>
+      <td rowspan="1">Wednesday</td>
+      <td rowspan="1"><a href="https://github.com/gSchool/g42_challenges_so_far">Warmup</a>
       </td>
-      <td><a href="https://github.com/gSchool/javascript-curriculum/blob/master/Call Apply and Bind.md">Call, Apply and Bind</a>
-      </td>
-      <td><a href="https://github.com/gSchool/cab_closure_exercises">Call, Apply and Bind</a>
-      </td>
-      <td>
-      </td>
-    </tr>
-    <tr>
       <td><a href="https://learn.galvanize.com/content/gSchool/javascript-curriculum/master/Errors.md">Error Handling In JavaScript</a>
       </td>
       <td><a href="https://github.com/gSchool/js-common-errors">JS Common Errors</a>
