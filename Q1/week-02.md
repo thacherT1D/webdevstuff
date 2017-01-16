@@ -89,7 +89,7 @@
     <tr>
       <td><a href="https://github.com/gSchool/browser-dom-curriculum/blob/master/DOM/Manipulation.md">DOM Manipulation</a>
       </td>
-      <td>
+      <td><a href="https://github.com/gSchool/checkerboard-exercise">DOM Checkerboard</a>
       </td>
       <td><a href="https://github.com/gSchool/style-with-javascript">Style with JavaScript</a>
       </td>
@@ -107,7 +107,7 @@
       </td>
       <td>
       </td>
-      <td><a href="https://github.com/gSchool/checkerboard-exercise">DOM Checkerboard</a>
+      <td>
       </td>
     </tr>
     <tr>

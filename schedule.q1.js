@@ -137,6 +137,7 @@ module.exports = [
       },
       {
         article: { text: "DOM Manipulation", url: "https://github.com/gSchool/browser-dom-curriculum/blob/master/DOM/Manipulation.md" },
+        assignment: { text: "DOM Checkerboard", url: "https://github.com/gSchool/checkerboard-exercise" },
         stretch: { text: "Style with JavaScript", url: "https://github.com/gSchool/style-with-javascript" },
       },
       {
@@ -145,7 +146,6 @@ module.exports = [
       },
       {
         article: { text: "DOM Creation and Deletion", url: "https://github.com/gSchool/browser-dom-curriculum/blob/master/DOM/Creation and Deletion.md" },
-        stretch: { text: "DOM Checkerboard", url: "https://github.com/gSchool/checkerboard-exercise" },
       },
     ]
   },
