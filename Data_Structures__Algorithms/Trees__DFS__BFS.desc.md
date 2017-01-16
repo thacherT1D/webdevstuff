@@ -223,7 +223,7 @@ B-tree is a tree data structure that keeps data sorted and allows searches, sequ
 
 
 
-### Trees Challenge
+### Trees Challenge 
 
 Complete [these challenges](https://github.com/thacherT1D/trees-exercises)
 
