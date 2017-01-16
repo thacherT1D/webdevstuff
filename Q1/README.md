@@ -224,20 +224,25 @@ Week 2
       </td>
     </tr>
     <tr>
-      <td rowspan="1">Wednesday</td>
-      <td rowspan="1"><a href="https://github.com/gSchool/g42_challenges_so_far">Warmup</a>
+      <td rowspan="6">Wednesday</td>
+      <td rowspan="6"><a href="https://github.com/gSchool/g42_challenges_so_far">Warmup</a>
       </td>
-      <td><a href="https://learn.galvanize.com/content/gSchool/javascript-curriculum/master/Errors.md">Error Handling In JavaScript</a>
+      <td><a href="https://github.com/gSchool/html-css-curriculum/tree/master/HTML">HTML</a>
       </td>
-      <td><a href="https://github.com/gSchool/js-common-errors">JS Common Errors</a>
+      <td><a href="https://github.com/gSchool/html-intro">HTML Intro Excercise</a>
       </td>
       <td>
       </td>
     </tr>
     <tr>
-      <td rowspan="4">Thursday</td>
-      <td rowspan="4"><a href="https://github.com/gSchool/g42_challenges_so_far">Warmup</a>
+      <td><a href="https://github.com/gSchool/html-css-curriculum/tree/master/CSS">CSS</a>
       </td>
+      <td>
+      </td>
+      <td>
+      </td>
+    </tr>
+    <tr>
       <td><a href="https://github.com/gSchool/browser-dom-curriculum/blob/master/DOM/README.md">Intro to the DOM</a>
       </td>
       <td><a href="https://github.com/gSchool/js-dom-tests">JS DOM Tests</a>
@@ -270,7 +275,7 @@ Week 2
       </td>
     </tr>
     <tr>
-      <td rowspan="2">Friday</td>
+      <td rowspan="2">Thursday</td>
       <td rowspan="2"><a href="https://github.com/gSchool/g42_challenges_so_far">Warmup</a>
       </td>
       <td><a href="https://github.com/gSchool/browser-dom-curriculum/blob/master/DOM/Events.md">DOM Events</a>
@@ -281,7 +286,18 @@ Week 2
       </td>
     </tr>
     <tr>
-      <td>Events and Async
+      <td><a href="https://learn.galvanize.com/content/gSchool/javascript-curriculum/master/Errors.md">Error Handling In JavaScript</a>
+      </td>
+      <td><a href="https://github.com/gSchool/js-common-errors">JS Common Errors</a>
+      </td>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <td rowspan="1">Friday</td>
+      <td rowspan="1"><a href="https://github.com/gSchool/g42_challenges_so_far">Warmup</a>
+      </td>
+      <td><a href="https://www.youtube.com/watch?v=8aGhZQkoFbQ&amp;t=1203s">JS Event Loop</a>
       </td>
       <td>
       </td>

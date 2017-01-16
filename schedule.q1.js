@@ -125,16 +125,12 @@ module.exports = [
     warmup: { text: "Warmup", url: "https://github.com/gSchool/g42_challenges_so_far" },
     activities: [
       {
-        article: { text: "Error Handling In JavaScript", url: "https://learn.galvanize.com/content/gSchool/javascript-curriculum/master/Errors.md"},
-        assignment: { text: "JS Common Errors", url: "https://github.com/gSchool/js-common-errors" }
-      }
-    ]
-  },
-
-  //Thursday
-  {
-    warmup: { text: "Warmup", url: "https://github.com/gSchool/g42_challenges_so_far" },
-    activities: [
+        article: { text: "HTML", url: "https://github.com/gSchool/html-css-curriculum/tree/master/HTML"},
+        assignment: { text: "HTML Intro Excercise", url: "https://github.com/gSchool/html-intro" }
+      },
+      {
+        article: { text: "CSS", url: "https://github.com/gSchool/html-css-curriculum/tree/master/CSS"}
+      },
       {
         article: { text: "Intro to the DOM", url: "https://github.com/gSchool/browser-dom-curriculum/blob/master/DOM/README.md" },
         assignment: { text: "JS DOM Tests", url: "https://github.com/gSchool/js-dom-tests" },
@@ -154,7 +150,7 @@ module.exports = [
     ]
   },
 
-  //Friday
+  //Thursday
   {
     warmup: { text: "Warmup", url: "https://github.com/gSchool/g42_challenges_so_far" },
     activities: [
@@ -165,7 +161,18 @@ module.exports = [
         stretch: { text: "Where's Waldo", url: "https://github.com/gSchool/wheres-waldo" },
       },
       {
-        article: { text: "Events and Async", url: "" }
+        article: { text: "Error Handling In JavaScript", url: "https://learn.galvanize.com/content/gSchool/javascript-curriculum/master/Errors.md"},
+        assignment: { text: "JS Common Errors", url: "https://github.com/gSchool/js-common-errors" }
+      }
+    ]
+  },
+
+  //Friday
+  {
+    warmup: { text: "Warmup", url: "https://github.com/gSchool/g42_challenges_so_far" },
+    activities: [
+      {
+        article: { text: "JS Event Loop", url: "https://www.youtube.com/watch?v=8aGhZQkoFbQ&t=1203s" }
       }
     ]
   },
