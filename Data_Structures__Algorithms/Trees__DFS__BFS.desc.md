@@ -40,7 +40,7 @@ This means that in a Tree there is always a __single path__ from the __root node
 
 ## Vocabulary
 
-Trees have a lot of __domain specific language__, you may see these terms used:
+Trees have a lot of __terms__, you may see these terms used:
 
 - Root - node at the top of the tree.
 - Parent - node above a node.
@@ -63,7 +63,6 @@ For each of these facts, write a paragraph which proves it:
 * The __height__ of a tree is equal to the longest path from root to leaf.
 * In a tree with N nodes, there will always be N-1 edges.
 * There is always a __single path__ from the __root node__ to any other node in the tree.
-
 
 # Searching Trees
 
@@ -172,26 +171,6 @@ Using at the binary search tree above:
 * Now __label each node__ with it's __position in the ordered list__.
 * Can you identify a __pattern__ in the graph to describe how this tree encodes the order?
 
-
-Make [these challenges](https://github.com/gSchool/computer-science-drills/blob/master/src/trees/binary-trees/binary_tree.js) pass.
-
-This assignment will require you to implement a binary tree with the following methods.
-
-- `insertIteratively`: inserts a node in the proper location using iteration
-- `insertRecursively`: inserts a node in the proper location using recursion
-- `containsIteratively`: checks to see if the tree contains a node iteratively
-- `containsRecursively`: checks to see if the tree contains a node recursively
-- `findLowest`: finds the lowest value in the tree
-- `findHighest`: finds the lowest value in the tree
-- `breadthFirstSearch`: traverses through the tree and returns an array of all of the values using Breadth First Search (from left to right) - you can read more about it [here](https://en.wikipedia.org/wiki/Tree_traversal#Breadth-first)
-- `DFSPreOrder`: traverses through the tree and returns an array of all of the values using Depth First Search Pre-order - you can read more [here](https://en.wikipedia.org/wiki/Tree_traversal#Depth-first)
-- `DFSInOrder`: traverses through the tree and returns an array of all of the values using Depth First Search In-order - you can read more [here](https://en.wikipedia.org/wiki/Tree_traversal#Depth-first)
-- `DFSPostOrder`: traverses through the tree and returns an array of all of the values using Depth First Search Post-order - you can read more [here](https://en.wikipedia.org/wiki/Tree_traversal#Depth-first)
-- `size `: calculates how many nodes are in the tree (do this without adding a size property to your tree! Use a traversal method to calculate this!)
-- `bfs-dfs` : Make all of these tests pass
-- `remove`: removes a node from a binary tree. Remember that this method must take into account if the node has any children and if the node is a leaf. [Here](https://www.youtube.com/watch?v=3TOl3Fv4394) is a great video that explains this process.
-
-
 ### Tries
 
 In some Trees, nodes are given meaning by the  __path__ to them from the __root node__. In such trees any __single node__ only encodes one part of the meaning; the data from all the nodes in the __path__ must be combined to extract the complete message.
@@ -208,7 +187,6 @@ A trie is a special tree used for alphabetizing strings. The root represents an 
 
 ![](https://upload.wikimedia.org/wikipedia/commons/b/be/Trie_example.svg)
 
-
 ### Bonus Trees
 
 There are __many__ more kinds of trees. Consider researching these trees on your own!
@@ -221,11 +199,9 @@ AVL (or height-balanced) binary search tree is any node-based binary search tree
 
 B-tree is a tree data structure that keeps data sorted and allows searches, sequential access, insertions, and deletions in logarithmic time. Unlike a binary tree, a node in the B-tree can have much more than two children (Comer 1979, p. 123). Unlike self-balancing binary search trees, the B-tree is optimized for systems that read and write large blocks of data. It is commonly used in databases and filesystems to make lookup of data faster.
 
+### Trees Exercises
 
-
-### Trees Challenge 
-
-Complete [these challenges](https://github.com/thacherT1D/trees-exercises)
+Complete [these challenges](https://github.com/gSchool/cs-exercises/tree/master/trees)
 
 #### Stretch Goals
 
