@@ -57,7 +57,7 @@
       </td>
       <td><a href="https://github.com/gSchool/node-curriculum/blob/master/Knex/Promises.md">Promises</a>
       </td>
-      <td><a href="https://github.com/gschool/wd-promise-fundamentals">Promise Fundamentals</a>
+      <td><a href="https://github.com/gSchool/node-curriculum/tree/master/Exercises/promise-drills/spotify-promises-frontend">Promise Fundamentals</a>
       </td>
       <td>
       </td>

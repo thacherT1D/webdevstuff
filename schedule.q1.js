@@ -214,7 +214,7 @@ module.exports = [
     activities: [
       {
         article: { text: "Promises", url: "https://github.com/gSchool/node-curriculum/blob/master/Knex/Promises.md" },
-        assignment: { text: "Promise Fundamentals", url: "https://github.com/gschool/wd-promise-fundamentals" },
+        assignment: { text: "Promise Fundamentals", url: "https://github.com/gSchool/node-curriculum/tree/master/Exercises/promise-drills/spotify-promises-frontend" },
       },
       {
         article: { text: "AJAX", url: "https://github.com/gschool/browser-dom-curriculum/blob/master/HTTP/AJAX.md" },
@@ -252,6 +252,10 @@ module.exports = [
         article: { text: "OOP Inheritance", url: "" },
         assignment: { text: "Q1 Project", url: "Projects/Q1.md" }
       },
+      {
+        article: { text: "Call, Apply and Bind", url: "https://github.com/gSchool/javascript-curriculum/blob/master/Call Apply and Bind.md"},
+        assignment: { text: "Call, Apply and Bind", url: "https://github.com/gSchool/cab_closure_exercises" }
+      },
     ]
   },
 
@@ -262,10 +266,6 @@ module.exports = [
       {
         article: { text: "ES2015: Decunstructing, Arrow Functions, Spread and Rest, etc...", url: "" },
         assignment: { text: "Q1 Project", url: "Projects/Q1.md" }
-      },
-      {
-        article: { text: "Call, Apply and Bind", url: "https://github.com/gSchool/javascript-curriculum/blob/master/Call Apply and Bind.md"},
-        assignment: { text: "Call, Apply and Bind", url: "https://github.com/gSchool/cab_closure_exercises" }
       },
     ]
   },

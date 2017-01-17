@@ -385,7 +385,7 @@ Week 3
       </td>
       <td><a href="https://github.com/gSchool/node-curriculum/blob/master/Knex/Promises.md">Promises</a>
       </td>
-      <td><a href="https://github.com/gschool/wd-promise-fundamentals">Promise Fundamentals</a>
+      <td><a href="https://github.com/gSchool/node-curriculum/tree/master/Exercises/promise-drills/spotify-promises-frontend">Promise Fundamentals</a>
       </td>
       <td>
       </td>
@@ -438,21 +438,10 @@ Week 4
   </thead>
   <tbody>
     <tr>
-      <td rowspan="1">Monday</td>
-      <td rowspan="1"><a href="">Code Review Time!</a>
+      <td rowspan="2">Monday</td>
+      <td rowspan="2"><a href="">Code Review Time!</a>
       </td>
       <td>OOP Inheritance
-      </td>
-      <td><a href="Projects/Q1.md">Q1 Project</a>
-      </td>
-      <td>
-      </td>
-    </tr>
-    <tr>
-      <td rowspan="2">Tuesday</td>
-      <td rowspan="2"><a href="https://github.com/gSchool/g42_challenges_so_far">Warmup</a>
-      </td>
-      <td>ES2015: Decunstructing, Arrow Functions, Spread and Rest, etc...
       </td>
       <td><a href="Projects/Q1.md">Q1 Project</a>
       </td>
@@ -463,6 +452,17 @@ Week 4
       <td><a href="https://github.com/gSchool/javascript-curriculum/blob/master/Call Apply and Bind.md">Call, Apply and Bind</a>
       </td>
       <td><a href="https://github.com/gSchool/cab_closure_exercises">Call, Apply and Bind</a>
+      </td>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <td rowspan="1">Tuesday</td>
+      <td rowspan="1"><a href="https://github.com/gSchool/g42_challenges_so_far">Warmup</a>
+      </td>
+      <td>ES2015: Decunstructing, Arrow Functions, Spread and Rest, etc...
+      </td>
+      <td><a href="Projects/Q1.md">Q1 Project</a>
       </td>
       <td>
       </td>
