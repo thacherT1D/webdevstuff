@@ -213,7 +213,7 @@ module.exports = [
     warmup: { text: "Warmup", url: "https://github.com/gSchool/g42_challenges_so_far" },
     activities: [
       {
-        article: { text: "Promises", url: "https://github.com/gSchool/node-curriculum/blob/master/Knex/Promises.md" },
+        article: { text: "Promises", url: "https://learn.galvanize.com/content/gSchool/node-curriculum/master/Promises/README.md" },
         assignment: { text: "Promise Fundamentals", url: "https://github.com/gSchool/node-curriculum/tree/master/Exercises/promise-drills/spotify-promises-frontend" },
       },
       {
@@ -228,7 +228,7 @@ module.exports = [
     warmup: { text: "Warmup", url: "https://github.com/gSchool/g42_challenges_so_far" },
     activities: [
       {
-        article: { text: "LocalStorage", url: "https://github.com/gSchool/browser-dom-curriculum/blob/master/Local%20Storage.md" },
+        article: { text: "LocalStorage", url: "https://learn.galvanize.com/content/gSchool/browser-dom-curriculum/master/Local%20Storage.md" },
       },
     ]
   },
@@ -289,7 +289,7 @@ module.exports = [
     warmup: { text: "", url: "" },
     activities: [
       {
-        article: { text: "Project Mangement", url: "https://github.com/gschool/productivity-curriculum/blob/master/Agile/README.md" },
+        article: { text: "Project Mangement", url: "https://learn.galvanize.com/content/gSchool/productivity-curriculum/master/Agile/README.md" },
         assignment: { text: "Q1 Project", url: "Projects/Q1.md" },
       },
     ]

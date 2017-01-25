@@ -66,7 +66,7 @@
       <td rowspan="1">Thursday</td>
       <td rowspan="1"><a href=""></a>
       </td>
-      <td><a href="https://github.com/gschool/productivity-curriculum/blob/master/Agile/README.md">Project Mangement</a>
+      <td><a href="https://learn.galvanize.com/content/gSchool/productivity-curriculum/master/Agile/README.md">Project Mangement</a>
       </td>
       <td><a href="../Projects/Q1.md">Q1 Project</a>
       </td>

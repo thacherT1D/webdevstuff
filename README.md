@@ -383,7 +383,7 @@ Week 3
       <td rowspan="2">Wednesday</td>
       <td rowspan="2"><a href="https://github.com/gSchool/g42_challenges_so_far">Warmup</a>
       </td>
-      <td><a href="https://github.com/gSchool/node-curriculum/blob/master/Knex/Promises.md">Promises</a>
+      <td><a href="https://learn.galvanize.com/content/gSchool/node-curriculum/master/Promises/README.md">Promises</a>
       </td>
       <td><a href="https://github.com/gSchool/node-curriculum/tree/master/Exercises/promise-drills/spotify-promises-frontend">Promise Fundamentals</a>
       </td>
@@ -402,7 +402,7 @@ Week 3
       <td rowspan="1">Thursday</td>
       <td rowspan="1"><a href="https://github.com/gSchool/g42_challenges_so_far">Warmup</a>
       </td>
-      <td><a href="https://github.com/gSchool/browser-dom-curriculum/blob/master/Local%20Storage.md">LocalStorage</a>
+      <td><a href="https://learn.galvanize.com/content/gSchool/browser-dom-curriculum/master/Local%20Storage.md">LocalStorage</a>
       </td>
       <td>
       </td>
@@ -490,7 +490,7 @@ Week 4
       <td rowspan="1">Thursday</td>
       <td rowspan="1"><a href=""></a>
       </td>
-      <td><a href="https://github.com/gschool/productivity-curriculum/blob/master/Agile/README.md">Project Mangement</a>
+      <td><a href="https://learn.galvanize.com/content/gSchool/productivity-curriculum/master/Agile/README.md">Project Mangement</a>
       </td>
       <td><a href="Projects/Q1.md">Q1 Project</a>
       </td>
