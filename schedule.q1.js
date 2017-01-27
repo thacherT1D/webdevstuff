@@ -254,6 +254,7 @@ module.exports = [
       },
       {
         article: { text: "Inheritance and prototypal chain", url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain" },
+        assignment: { text: "Nano OOP", url: "https://github.com/gSchool/nano-oop" }
       },
       {
         article: { text: "Object.create", url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create" },

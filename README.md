@@ -451,7 +451,7 @@ Week 4
     <tr>
       <td><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain">Inheritance and prototypal chain</a>
       </td>
-      <td>
+      <td><a href="https://github.com/gSchool/nano-oop">Nano OOP</a>
       </td>
       <td>
       </td>
