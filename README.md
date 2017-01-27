@@ -438,12 +438,36 @@ Week 4
   </thead>
   <tbody>
     <tr>
-      <td rowspan="2">Monday</td>
-      <td rowspan="2"><a href="">Code Review Time!</a>
+      <td rowspan="5">Monday</td>
+      <td rowspan="5"><a href="">Code Review Time!</a>
       </td>
-      <td>OOP Inheritance
+      <td><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Inheritance">OOP Inheritance</a>
       </td>
       <td><a href="Projects/Q1.md">Q1 Project</a>
+      </td>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <td><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain">Inheritance and prototypal chain</a>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <td><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create">Object.create</a>
+      </td>
+      <td>
+      </td>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <td><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/new">New keyword</a>
+      </td>
+      <td>
       </td>
       <td>
       </td>
@@ -457,12 +481,20 @@ Week 4
       </td>
     </tr>
     <tr>
-      <td rowspan="1">Tuesday</td>
-      <td rowspan="1"><a href="https://github.com/gSchool/g42_challenges_so_far">Warmup</a>
+      <td rowspan="2">Tuesday</td>
+      <td rowspan="2"><a href="https://github.com/gSchool/g42_challenges_so_far">Warmup</a>
       </td>
-      <td>ES2015: Decunstructing, Arrow Functions, Spread and Rest, etc...
+      <td><a href="https://rainsoft.io/how-three-dots-changed-javascript/">ES2015: Decunstructing, Spread and Rest, etc...</a>
       </td>
       <td><a href="Projects/Q1.md">Q1 Project</a>
+      </td>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <td><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">Arrow function</a>
+      </td>
+      <td>
       </td>
       <td>
       </td>

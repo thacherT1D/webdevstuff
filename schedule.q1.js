@@ -249,8 +249,17 @@ module.exports = [
     warmup: { text: "Code Review Time!", url: "" },
     activities: [
       {
-        article: { text: "OOP Inheritance", url: "" },
+        article: { text: "OOP Inheritance", url: "https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Inheritance" },
         assignment: { text: "Q1 Project", url: "Projects/Q1.md" }
+      },
+      {
+        article: { text: "Inheritance and prototypal chain", url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain" },
+      },
+      {
+        article: { text: "Object.create", url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create" },
+      },
+      {
+        article: { text: "New keyword", url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/new" },
       },
       {
         article: { text: "Call, Apply and Bind", url: "https://github.com/gSchool/javascript-curriculum/blob/master/Call Apply and Bind.md"},
@@ -264,8 +273,11 @@ module.exports = [
     warmup: { text: "Warmup", url: "https://github.com/gSchool/g42_challenges_so_far" },
     activities: [
       {
-        article: { text: "ES2015: Decunstructing, Arrow Functions, Spread and Rest, etc...", url: "" },
+        article: { text: "ES2015: Decunstructing, Spread and Rest, etc...", url: "https://rainsoft.io/how-three-dots-changed-javascript/" },
         assignment: { text: "Q1 Project", url: "Projects/Q1.md" }
+      },
+      {
+        article: { text: "Arrow function", url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions" },
       },
     ]
   },
