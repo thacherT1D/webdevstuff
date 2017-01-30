@@ -274,7 +274,11 @@ module.exports = [
     warmup: { text: "Warmup", url: "https://github.com/gSchool/g42_challenges_so_far" },
     activities: [
       {
-        article: { text: "ES2015: Decunstructing, Spread and Rest, etc...", url: "https://rainsoft.io/how-three-dots-changed-javascript/" },
+        article: { text: "ES2015: Destructuring, Spread and Rest, etc...", url: "https://rainsoft.io/how-three-dots-changed-javascript/" },
+        assignment: { text: "Q1 Project", url: "Projects/Q1.md" }
+      },
+      {
+        article: { text: "Destructuring", url: "https://hacks.mozilla.org/2015/05/es6-in-depth-destructuring/" },
         assignment: { text: "Q1 Project", url: "Projects/Q1.md" }
       },
       {

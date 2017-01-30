@@ -57,10 +57,18 @@
       </td>
     </tr>
     <tr>
-      <td rowspan="2">Tuesday</td>
-      <td rowspan="2"><a href="https://github.com/gSchool/g42_challenges_so_far">Warmup</a>
+      <td rowspan="3">Tuesday</td>
+      <td rowspan="3"><a href="https://github.com/gSchool/g42_challenges_so_far">Warmup</a>
       </td>
-      <td><a href="https://rainsoft.io/how-three-dots-changed-javascript/">ES2015: Decunstructing, Spread and Rest, etc...</a>
+      <td><a href="https://rainsoft.io/how-three-dots-changed-javascript/">ES2015: Destructuring, Spread and Rest, etc...</a>
+      </td>
+      <td><a href="../Projects/Q1.md">Q1 Project</a>
+      </td>
+      <td>
+      </td>
+    </tr>
+    <tr>
+      <td><a href="https://hacks.mozilla.org/2015/05/es6-in-depth-destructuring/">Destructuring</a>
       </td>
       <td><a href="../Projects/Q1.md">Q1 Project</a>
       </td>
