@@ -1,6 +1,8 @@
 # Angular and Unfamiliar Environments
 
-Welcome to Q3! Things are about to get interesting with new technologies and unfamiliar environments. This quarter will be structured around self-paced curriculum (with milestones/targets to hit). Weeks 1 and 2 will lay the foundation for Angular. Week 3 will tie Angular concepts in with your existing server-side knowledge and ask you to create and deploy a full stack Angular application with token-based auth. In week four, you will be exposed to several unfamiliar environments and will be challenged to find your own resources to get up to speed with them quickly.
+Welcome to Q3! Things are about to get interesting with new technologies and unfamiliar environments. This quarter will be structured around self-paced curriculum (with milestones/targets to hit).
+
+Weeks 1 and 2 will lay the foundation for Angular. Week 3 will tie Angular concepts in with your existing server-side knowledge and ask you to create and deploy a full stack Angular application with token-based auth. In week 4, you will be exposed to several unfamiliar environments and will be challenged to find your own resources to get up to speed with them quickly.
 Finally, week 5 will bring you to another group project week!
 
 ## Week 1
