@@ -4,18 +4,22 @@ Welcome to Q3! Things are about to get interesting with new technologies and unf
 Finally, week 5 will bring you to another group project week!
 
 ## Week 1
-For weeks 1-3, you will be working through this [Angular Curriculum](https://learn.galvanize.com/content/gSchool/angular-curriculum/master/readme.md). It is self-paced, but the goal is to get to (or past) the specified target by the end of each week.
+Monday: Q2 Project Presentations
+Tuesday / Wednesday: Q2 Assessment
+Thursday: Begin Angular Curriculum
 
-Target: Complete Unit 10
+From this point, through week 3, you will be working through this [Angular Curriculum](https://learn.galvanize.com/content/gSchool/angular-curriculum/master/readme.md). It is self-paced, but the goal is to get to (or past) the specified target by the end of each week.
+
+Week 1 Target: Complete Unit 10
 
 ## Week 2
 [Angular Curriculum](https://learn.galvanize.com/content/gSchool/angular-curriculum/master/readme.md)
 
-Target: Complete Unit 20
+Week 2 Target: Complete Unit 20
 ## Week 3
 [Angular Curriculum](https://learn.galvanize.com/content/gSchool/angular-curriculum/master/readme.md)
 
-Target: Complete Unit 40
+Week 3 Target: Complete Unit 40
 
 ## Week 4
 Unfamiliar environments
